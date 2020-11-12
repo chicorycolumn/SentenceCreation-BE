@@ -139,10 +139,33 @@ let nounSet = {
 let adjectiveSet = {};
 let adverbSet = {};
 let verbSet = {};
+let dummyNoun = {
+  0: {
+    lemma: "foobar_loc_only",
+    gender: "n",
+    tags: ["dummy"],
+    defective: true,
+    inflections: {
+      singular: {
+        loc: "foobar_sin_loc",
+      },
+      plural: {
+        loc: "foobar_plu_loc",
+      },
+    },
+  },
+};
+let dummyAdjective = {};
+let dummyAdverb = {};
+let dummyVerb = {};
 
 exports.wordbank = {
   nounSet,
   adjectiveSet,
   adverbSet,
   verbSet,
+  dummyNoun,
+  dummyAdjective,
+  dummyAdverb,
+  dummyVerb,
 };

@@ -24,7 +24,7 @@ exports.myErrMsgs = {
 const myErrMsgs = exports.myErrMsgs;
 
 exports.handleCustomErrors = (err, req, res, next) => {
-  console.log("handleCustomErrors says error status is " + err.status);
+  console.log("handleCustomErrors fxn says error status is " + err.status);
   if (err.status !== undefined) {
     if (err.customStatus !== undefined) {
       res.status(err.status).send({ msg: myErrMsgs[err.customStatus] });

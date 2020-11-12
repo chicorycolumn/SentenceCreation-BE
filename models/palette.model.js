@@ -3,18 +3,26 @@ const { wordbank } = require("../utils/wordbank.js");
 const { egSentences } = require("../utils/egSentences.js");
 
 exports.fetchPalette = (req) => {
-  console.log(req.body);
   let sentenceSkeletonArray = [];
   let egSentenceNumber = 50;
   let inflectionChain = ["number", "gcase"];
+  let errorInSentenceCreation = false;
 
   if (req.body.egSentenceNumber) {
     egSentenceNumber = req.body.egSentenceNumber;
   }
 
-  sentenceSkeletonArray = egSentences[req.body.egSentenceNumber];
+  if (req.body.useDummyWords) {
+    wordbank.nounSet = { ...wordbank.nounSet, ...wordbank.dummyNoun };
+    wordbank.adjectiveSet = {
+      ...wordbank.adjectiveSet,
+      ...wordbank.dummyAdjective,
+    };
+    wordbank.adverbSet = { ...wordbank.adverbSet, ...wordbank.dummyAdverb };
+    wordbank.verbSet = { ...wordbank.verbSet, ...wordbank.dummyVerb };
+  }
 
-  console.log(sentenceSkeletonArray);
+  sentenceSkeletonArray = egSentences[egSentenceNumber];
 
   //Majtki should be avoided for spec "singular".
   //Majtki should be usable for spec [].
@@ -40,23 +48,44 @@ exports.fetchPalette = (req) => {
         inflectionChain
       );
 
-      let lemmaObj = scUtils.selectRandom(matches);
-      // console.log(lemmaObj)
+      if (matches.length) {
+        let selectedLemmaObj = scUtils.selectRandom(matches);
+        console.log(
+          "palette.model.js say selectedLemmaObj is " + selectedLemmaObj.lemma
+        );
 
-      try {
-        let result = scUtils.filterWithinObjectByNestedKeys(
-          lemmaObj.inflections,
+        let selectedWord = scUtils.filterWithinObjectByNestedKeys(
+          selectedLemmaObj.inflections,
           spec,
           inflectionChain
         );
-        resultArr.push(result);
-      } catch {
-        console.log("eerrrroorr");
+        resultArr.push(selectedWord);
+      } else {
+        errorInSentenceCreation = true;
+        return false;
       }
     }
   });
 
-  return Promise.all([result]).then((array) => {
+  let finalSentence = scUtils.sentenceStringFromArray(resultArr);
+
+  console.log("-------------------------------------------->" + finalSentence);
+
+  let responseObj = { number: 1 };
+
+  if (errorInSentenceCreation) {
+    responseObj = {
+      message: "No sentence could be created from the specifications.",
+      fragment: finalSentence,
+      palette: null,
+    };
+  } else {
+    responseObj = {
+      palette: finalSentence,
+    };
+  }
+
+  return Promise.all([responseObj]).then((array) => {
     return array[0];
   });
 };

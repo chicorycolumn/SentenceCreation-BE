@@ -2,6 +2,12 @@ const { fetchPalette } = require("../models/palette.model");
 
 exports.getPalette = (req, res, next) => {
   fetchPalette(req)
-    .then((palette) => res.send({ palette }))
+    .then((responseObj) => {
+      if (responseObj.palette) {
+        res.status(200).send(responseObj);
+      } else {
+        res.status(200).send(responseObj);
+      }
+    })
     .catch((err) => next(err));
 };

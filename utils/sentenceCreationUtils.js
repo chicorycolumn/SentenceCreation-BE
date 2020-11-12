@@ -1,5 +1,11 @@
-exports.capitaliseFirst = (word) => {
-  return word[0].toUpperCase() + word.slice(1);
+exports.selectRandom = (array) => {
+  return array[Math.floor(Math.random() * array.length)];
+};
+
+const { selectRandom } = exports;
+
+exports.capitaliseFirst = (string) => {
+  return string[0].toUpperCase() + string.slice(1);
 };
 
 exports.filterByTag = (wordset, tags, mandatory) => {
@@ -16,10 +22,6 @@ exports.filterByTag = (wordset, tags, mandatory) => {
   } else {
     return lemmaObjs;
   }
-};
-
-exports.selectRandom = (array) => {
-  return array[Math.floor(Math.random() * array.length)];
 };
 
 exports.giveSetKey = (word) => {
@@ -40,6 +42,7 @@ exports.filterWithinObjectByNestedKeys = (source, specObj, inflectionChain) => {
   requirementArrs.forEach((requirementArr) => {
     source = drillDownOneLevel(source, requirementArr);
     if (!source) {
+      console.log("AAAAAAAAAAAAAAARGGGGGGGHHHHHHH");
     }
   });
 
@@ -50,8 +53,11 @@ exports.filterWithinObjectByNestedKeys = (source, specObj, inflectionChain) => {
   }
 
   function drillDownOneLevel(source, requirementArr) {
+    // console.log(">source", source);
     let sourceKeys = Object.keys(source);
     let validKeys = [];
+
+    // console.log({ sourceKeys, validKeys });
 
     if (requirementArr.length) {
       validKeys = sourceKeys.filter((key) => requirementArr.includes(key));
@@ -63,30 +69,35 @@ exports.filterWithinObjectByNestedKeys = (source, specObj, inflectionChain) => {
       return source[selectRandom(validKeys)];
     } else {
       console.log(
-        "Error in utils. No valid keys at some level of lemma object."
+        "filterWithinObjectByNestedKeys fxn says Error in utils. No valid keys at some level of lemma object."
       );
       return null;
     }
   }
 };
 
-exports.filterOutDefectiveInflections = (source, specObj, inflectionChain) => {
+exports.filterOutDefectiveInflections = (
+  sourceArr,
+  specObj,
+  inflectionChain
+) => {
   let requirementArrs = inflectionChain.map((key) => specObj[key]);
 
   //eg requirementArrs
   // [[], []]                                 Majtki should be available.
-  // [["singular"], ["nom", "acc"]]           Majtki should be REMOVED.
+  // [[], ["nom", "acc"]]                     Majtki should be available.
+  // [["singular"], []]                       Majtki should be REMOVED.
   // [["singular", "plural"], []]             Majtki should be available.
 
   return sourceArr.filter((lObj) => {
     if (!lObj.defective) {
       return true;
     } else {
-      requirementArrs.forEach((requirementArr) => {});
+      requirementArrs.forEach();
     }
   });
 
-  function drillDownOneLevel(source, requirementArr) {
+  function drillDownOneLevel(sourceObj, requirementArr) {
     let sourceKeys = Object.keys(source);
     let validKeys = [];
 
@@ -100,9 +111,13 @@ exports.filterOutDefectiveInflections = (source, specObj, inflectionChain) => {
       return source[selectRandom(validKeys)];
     } else {
       console.log(
-        "Error in utils. No valid keys at some level of lemma object."
+        "filterOutDefectiveInflections fxn says Error in utils. No valid keys at some level of lemma object."
       );
       return null;
     }
   }
+};
+
+exports.sentenceStringFromArray = (arr) => {
+  return exports.capitaliseFirst(arr.join(" ") + ".");
 };
