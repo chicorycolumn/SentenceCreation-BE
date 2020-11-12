@@ -1,8 +1,8 @@
-function capitaliseFirst(word) {
+exports.capitaliseFirst = (word) => {
   return word[0].toUpperCase() + word.slice(1);
-}
+};
 
-function filterByTag(wordset, tags, mandatory) {
+exports.filterByTag = (wordset, tags, mandatory) => {
   let lemmaObjs = Object.values(wordset);
 
   if (tags.length) {
@@ -16,25 +16,25 @@ function filterByTag(wordset, tags, mandatory) {
   } else {
     return lemmaObjs;
   }
-}
+};
 
-function selectRandom(array) {
+exports.selectRandom = (array) => {
   return array[Math.floor(Math.random() * array.length)];
-}
+};
 
-function giveSetKey(word) {
+exports.giveSetKey = (word) => {
   return word + "Set";
-}
+};
 
-function filterByKey(sourceArr, specArr, key) {
+exports.filterByKey = (sourceArr, specArr, key) => {
   if (specArr.length) {
     return sourceArr.filter((item) => specArr.includes(item[key]));
   } else {
     return sourceArr;
   }
-}
+};
 
-function filterWithinObjectByNestedKeys(source, specObj, inflectionChain) {
+exports.filterWithinObjectByNestedKeys = (source, specObj, inflectionChain) => {
   let requirementArrs = inflectionChain.map((key) => specObj[key]);
 
   requirementArrs.forEach((requirementArr) => {
@@ -50,25 +50,59 @@ function filterWithinObjectByNestedKeys(source, specObj, inflectionChain) {
   }
 
   function drillDownOneLevel(source, requirementArr) {
-    let objKeys = Object.keys(source);
+    let sourceKeys = Object.keys(source);
     let validKeys = [];
 
     if (requirementArr.length) {
-      validKeys = objKeys.filter((key) => requirementArr.includes(key));
+      validKeys = sourceKeys.filter((key) => requirementArr.includes(key));
     } else {
-      validKeys = objKeys;
+      validKeys = sourceKeys;
     }
 
     if (validKeys.length) {
       return source[selectRandom(validKeys)];
     } else {
+      console.log(
+        "Error in utils. No valid keys at some level of lemma object."
+      );
       return null;
     }
   }
-}
+};
 
-function filterOutDefectiveInflections() {
+exports.filterOutDefectiveInflections = (source, specObj, inflectionChain) => {
   let requirementArrs = inflectionChain.map((key) => specObj[key]);
 
-  requirementArrs.forEach((requirementArr) => {});
-}
+  //eg requirementArrs
+  // [[], []]                                 Majtki should be available.
+  // [["singular"], ["nom", "acc"]]           Majtki should be REMOVED.
+  // [["singular", "plural"], []]             Majtki should be available.
+
+  return sourceArr.filter((lObj) => {
+    if (!lObj.defective) {
+      return true;
+    } else {
+      requirementArrs.forEach((requirementArr) => {});
+    }
+  });
+
+  function drillDownOneLevel(source, requirementArr) {
+    let sourceKeys = Object.keys(source);
+    let validKeys = [];
+
+    if (requirementArr.length) {
+      validKeys = sourceKeys.filter((key) => requirementArr.includes(key));
+    } else {
+      validKeys = sourceKeys;
+    }
+
+    if (validKeys.length) {
+      return source[selectRandom(validKeys)];
+    } else {
+      console.log(
+        "Error in utils. No valid keys at some level of lemma object."
+      );
+      return null;
+    }
+  }
+};

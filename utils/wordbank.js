@@ -140,7 +140,7 @@ let adjectiveSet = {};
 let adverbSet = {};
 let verbSet = {};
 
-export const dict = {
+exports.wordbank = {
   nounSet,
   adjectiveSet,
   adverbSet,

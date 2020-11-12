@@ -2,9 +2,10 @@
   "name": "sentencecreation",
   "version": "1.0.0",
   "description": "Creating sentences from specifications.",
-  "main": "test.js",
+  "main": "app.js",
   "scripts": {
-    "test": "test",
+    "test-utils": "clear && mocha spec/utils.spec.js",
+    "test": "clear && mocha spec/app.spec.js",
     "start": "node listen.js",
     "dev": "nodemon listen.js localhost 9090"
   },
@@ -23,6 +24,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mocha": "^8.2.1",
-    "nodemon": "^2.0.6"
+    "nodemon": "^2.0.6",
+    "supertest": "^6.0.1"
   }
 }
