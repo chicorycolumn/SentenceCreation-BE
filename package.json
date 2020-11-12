@@ -1,0 +1,28 @@
+{
+  "name": "sentencecreation",
+  "version": "1.0.0",
+  "description": "Creating sentences from specifications.",
+  "main": "test.js",
+  "scripts": {
+    "test": "test",
+    "start": "node listen.js",
+    "dev": "nodemon listen.js localhost 9090"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chicorycolumn/SentenceCreation.git"
+  },
+  "author": "chicorycolumn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chicorycolumn/SentenceCreation/issues"
+  },
+  "homepage": "https://github.com/chicorycolumn/SentenceCreation#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mocha": "^8.2.1",
+    "nodemon": "^2.0.6"
+  }
+}

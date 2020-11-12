@@ -1,0 +1,11 @@
+{
+  "GET /api": {
+    "description": "Serves a json representation of all the available endpoints of the api."
+  },
+
+  "GET /api/palette": {
+    "description": "Serves a newly generated sentence.",
+    "queries": [],
+    "exampleResponse": null
+  }
+}
