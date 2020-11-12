@@ -17,7 +17,6 @@ describe("/api", () => {
         .expect(200)
         .then((res) => {
           expect(res.body.endpoints).to.be.an("Object");
-          //   expect(res.body.endpoints).to.eql(endpointsCopy);
         });
     });
     it("Responds 405 if any other methods are used at this endpoint", () => {
@@ -34,10 +33,6 @@ describe("/api", () => {
     });
   });
 
-  // [[], []]                                 Majtki should be available.
-  // [["singular"], ["nom", "acc"]]           Majtki should be REMOVED.
-  // [["singular", "plural"], []]             Majtki should be available.
-
   describe("/palette", () => {
     it("GET 200 Returns a sentence", () => {
       return request(app)
@@ -45,6 +40,42 @@ describe("/api", () => {
         .expect(200)
         .then((res) => {
           expect(res.body.palette).to.be.a("String");
+        });
+    });
+    it("GET 200 Returns a sentence where a tantum plurale was allowed, as no particular grammatical number was requested.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          egSentenceNumber: 51,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          expect(res.body.palette.split(" ").reverse()[0]).to.equal("majtki.");
+        });
+    });
+    it("GET 200 Returns a sentence where a tantum plurale was not allowed, as singular grammatical number was requested.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          egSentenceNumber: 52,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          expect(res.body.palette.split(" ")[0]).to.not.equal("Majtki");
+        });
+    });
+    it("GET 200 Returns a sentence where a tantum plurale was allowed, as either singular or plural grammatical number was requested.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          egSentenceNumber: 53,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          expect(res.body.palette.split(" ").reverse()[0]).to.equal("majtki.");
         });
     });
     it("Responds 405 if any other methods are used at this endpoint", () => {

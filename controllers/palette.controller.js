@@ -1,7 +1,7 @@
 const { fetchPalette } = require("../models/palette.model");
 
 exports.getPalette = (req, res, next) => {
-  fetchPalette()
+  fetchPalette(req)
     .then((palette) => res.send({ palette }))
     .catch((err) => next(err));
 };
