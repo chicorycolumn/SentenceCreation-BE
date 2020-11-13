@@ -42,11 +42,16 @@ exports.fetchPalette = (req) => {
       matches = scUtils.filterByTag(source, spec.manTags, true);
       matches = scUtils.filterByTag(matches, spec.optTags, false);
       matches = scUtils.filterByKey(matches, spec.gender, "gender");
+
+      // console.log({ matches });
+
       matches = scUtils.filterOutDefectiveInflections(
         matches,
         spec,
         inflectionChain
       );
+
+      // console.log({ matches });
 
       if (matches.length) {
         let selectedLemmaObj = scUtils.selectRandom(matches);

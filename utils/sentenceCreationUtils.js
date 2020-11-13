@@ -118,7 +118,7 @@ exports.filterOutDefectiveInflections = (
       return true;
     } else {
       let { routesByNesting, routesByLevel } = exports.extractNestedRoutes(
-        lObj
+        lObj.inflections
       );
 
       let inflectionPathsInSource = routesByNesting;
@@ -127,6 +127,8 @@ exports.filterOutDefectiveInflections = (
         requirementArrs,
         routesByLevel
       );
+
+      // console.log({ inflectionPathsInRequirements, inflectionPathsInSource });
 
       return inflectionPathsInRequirements.some((inflectionPathReq) =>
         inflectionPathsInSource.some((inflectionPathSou) => {

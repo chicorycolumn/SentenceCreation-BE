@@ -53,7 +53,7 @@ describe("/api", () => {
           expect(res.body.message).to.equal(
             "No sentence could be created from the specifications."
           );
-          //expect(res.body.palette).to.equal(null);
+          expect(res.body.palette).to.equal(null);
         });
     });
     it("#pal-02b GET 200 NO: Returns message to say no sentence could possibly be created from specifications.", () => {
@@ -67,7 +67,7 @@ describe("/api", () => {
           expect(res.body.message).to.equal(
             "No sentence could be created from the specifications."
           );
-          //expect(res.body.palette).to.equal(null);
+          expect(res.body.palette).to.equal(null);
         });
     });
     it("#pal-03a GET 200 NO: Returns message to say no sentence, if dummy noun was successfully filtered out.", () => {
@@ -82,7 +82,7 @@ describe("/api", () => {
           expect(res.body.message).to.equal(
             "No sentence could be created from the specifications."
           );
-          //expect(res.body.palette).to.equal(null);
+          expect(res.body.palette).to.equal(null);
         });
     });
     it("#pal-03b GET 200 NO: Returns message to say no sentence, if dummy noun was successfully filtered out.", () => {
@@ -97,7 +97,7 @@ describe("/api", () => {
           expect(res.body.message).to.equal(
             "No sentence could be created from the specifications."
           );
-          //expect(res.body.palette).to.equal(null);
+          expect(res.body.palette).to.equal(null);
         });
     });
     it("#pal-03c GET 200 YES: Returns sentence, as dummy noun did not need to be filtered out.", () => {
@@ -136,7 +136,7 @@ describe("/api", () => {
           expect(res.body.message).to.equal(
             "No sentence could be created from the specifications."
           );
-          //expect(res.body.palette).to.equal(null);
+          expect(res.body.palette).to.equal(null);
         });
     });
     it("#pal-03f GET 200 YES: Returns successful sentence 100% of the time, even though I've tried to trick it, by asking for Singular and Loc, and including an object that does indeed have Singular but Loc is not within, and does indeed have a Loc but it is inside Plural.", () => {
@@ -163,7 +163,7 @@ describe("/api", () => {
           expect(res.body.palette.split(" ").reverse()[0]).to.equal("majtki.");
         });
     });
-    it("#pal-04b GET 200 YES: Returns a sentence where a tantum plurale was not allowed, as singular grammatical number was requested.", () => {
+    it("#pal-04b GET 200 NO: Returns a sentence where a tantum plurale was not allowed, as singular grammatical number was requested.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -171,8 +171,10 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
-          expect(res.body.palette.split(" ")[0]).to.not.equal("Majtki");
+          expect(res.body.message).to.equal(
+            "No sentence could be created from the specifications."
+          );
+          expect(res.body.palette).to.equal(null);
         });
     });
     it("#pal-04c GET 200 YES: Returns a sentence where a tantum plurale was allowed, as either singular or plural grammatical number was requested.", () => {
