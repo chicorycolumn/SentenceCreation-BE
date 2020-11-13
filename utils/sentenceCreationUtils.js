@@ -112,17 +112,29 @@ exports.filterOutDefectiveInflections = (
 
   // return sourceArr;
   let requirementArrs = inflectionChain.map((key) => specObj[key]);
-  let inflectionPathsInRequirements = [];
 
   return sourceArr.filter((lObj) => {
     if (!lObj.defective) {
       return true;
     } else {
-      let inflectionPathsInSource = exports.giveNestedRoutes(lObj)
-        .routesByNesting;
+      let { routesByNesting, routesByLevel } = exports.extractNestedRoutes(
+        lObj
+      );
 
-      return inflectionPathsInRequirements.some((inflectionPath) =>
-        inflectionPathsInSource.includes(inflectionPath)
+      let inflectionPathsInSource = routesByNesting;
+
+      let inflectionPathsInRequirements = exports.concoctNestedRoutes(
+        requirementArrs,
+        routesByLevel
+      );
+
+      return inflectionPathsInRequirements.some((inflectionPathReq) =>
+        inflectionPathsInSource.some((inflectionPathSou) => {
+          return exports.areTwoFlatArraysEqual(
+            inflectionPathReq,
+            inflectionPathSou
+          );
+        })
       );
     }
   });
@@ -158,11 +170,52 @@ exports.filterOutDefectiveInflections = (
   // }
 };
 
+exports.areTwoFlatArraysEqual = (arr1, arr2) => {
+  return arr1.every((item, index) => arr2[index] === item);
+};
+
+exports.concoctNestedRoutes = (routesByLevelTarget, routesByLevelSource) => {
+  routesByLevelTarget.forEach((arr, index) => {
+    if (!arr.length) {
+      if (routesByLevelSource[index] && routesByLevelSource[index].length) {
+        routesByLevelTarget[index] = routesByLevelSource[index];
+      } else {
+        throw "Error. The variable routesByLevelTarget contains one or more empty arrays, which means this function cannot work.";
+      }
+    }
+  });
+
+  let res = [];
+  let arr = [];
+
+  recursivelyBuildArrays(routesByLevelTarget, arr);
+  return res;
+
+  function recursivelyBuildArrays(source, arr) {
+    if (source.length === 1) {
+      let item = source[0];
+      item.forEach((subitem) => {
+        arr.push(subitem);
+        res.push(arr.slice(0));
+        arr.pop();
+      });
+      return;
+    }
+
+    let item = source[0];
+    item.forEach((subitem) => {
+      arr.push(subitem);
+      recursivelyBuildArrays(source.slice(1), arr);
+      arr.pop();
+    });
+  }
+};
+
 exports.sentenceStringFromArray = (arr) => {
   return exports.capitaliseFirst(arr.join(" ") + ".");
 };
 
-exports.giveNestedRoutes = (source) => {
+exports.extractNestedRoutes = (source) => {
   let routesByNesting = [];
   let arr = [];
   recursivelyMapRoutes(arr, source);
