@@ -1,23 +1,23 @@
 const { expect } = require("chai");
-const { giveAllNestedRoutes } = require("../utils/sentenceCreationUtils.js");
+const { giveNestedRoutes } = require("../utils/sentenceCreationUtils.js");
 
-describe("giveAllNestedRoutes", () => {
+describe("giveNestedRoutes", () => {
   it("#scu1.1 Returns empty array for empty object.", () => {
     const input = {};
     const expected = [];
-    const actual = giveAllNestedRoutes(input);
+    const actual = giveNestedRoutes(input).routesByNesting;
     expect(actual).to.eql(expected);
   });
   it("#scu1.2 Returns key routes for object with one key at single level of nesting.", () => {
     const input = { singular: "apple" };
     const expected = [["singular"]];
-    const actual = giveAllNestedRoutes(input);
+    const actual = giveNestedRoutes(input).routesByNesting;
     expect(actual).to.eql(expected);
   });
   it("#scu1.3 Returns key routes for object with many keys at single level of nesting.", () => {
     const input = { singular: "apple", plural: "apples" };
     const expected = [["singular"], ["plural"]];
-    const actual = giveAllNestedRoutes(input);
+    const actual = giveNestedRoutes(input).routesByNesting;
     expect(actual).to.eql(expected);
   });
   it("#scu1.4 Returns key routes for object with many keys at two levels of nesting.", () => {
@@ -31,7 +31,7 @@ describe("giveAllNestedRoutes", () => {
       ["plural", "nom"],
       ["plural", "loc"],
     ];
-    const actual = giveAllNestedRoutes(input);
+    const actual = giveNestedRoutes(input).routesByNesting;
     expect(actual).to.eql(expected);
   });
   it("#scu1.5 Returns key routes for object with many keys at various levels of nesting.", () => {
@@ -74,7 +74,7 @@ describe("giveAllNestedRoutes", () => {
       ["plural", "ins"],
       ["plural", "loc"],
     ];
-    const actual = giveAllNestedRoutes(input);
+    const actual = giveNestedRoutes(input).routesByNesting;
     expect(actual).to.eql(expected);
   });
   it("#scu1.6 Returns key routes when some values are arrays and should not be mapped out.", () => {
@@ -88,7 +88,7 @@ describe("giveAllNestedRoutes", () => {
       ["plural", "nom"],
       ["plural", "acc"],
     ];
-    const actual = giveAllNestedRoutes(input);
+    const actual = giveNestedRoutes(input).routesByNesting;
     expect(actual).to.eql(expected);
   });
 });

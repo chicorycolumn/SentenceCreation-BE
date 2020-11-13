@@ -1,42 +1,42 @@
 const scUtils = require("../utils/sentenceCreationUtils.js");
 const { wordbank } = require("../utils/wordbank.js");
+const { dummyWords } = require("../utils/dummyWords.js");
 const { egSentences } = require("../utils/egSentences.js");
 
 exports.fetchPalette = (req) => {
-  let sentenceSkeletonArray = [];
-  let egSentenceNumber = 50;
   let inflectionChain = ["number", "gcase"];
   let errorInSentenceCreation = false;
+  let resultArr = [];
 
-  if (req.body.egSentenceNumber) {
-    egSentenceNumber = req.body.egSentenceNumber;
-  }
+  let defaultSentenceNumber = 50;
+  let egSentenceNumber = req.body.egSentenceNumber || defaultSentenceNumber;
+  let sentenceSkeletonArray = egSentences[egSentenceNumber];
+
+  let wordbankCopy = {};
+  let wordbankKeys = Object.keys(wordbank);
+  wordbankKeys.forEach((wordbankKey) => {
+    wordbankCopy[wordbankKey] = {
+      ...wordbank[wordbankKey],
+    };
+  });
 
   if (req.body.useDummyWords) {
-    wordbank.nounSet = { ...wordbank.nounSet, ...wordbank.dummyNoun };
-    wordbank.adjectiveSet = {
-      ...wordbank.adjectiveSet,
-      ...wordbank.dummyAdjective,
-    };
-    wordbank.adverbSet = { ...wordbank.adverbSet, ...wordbank.dummyAdverb };
-    wordbank.verbSet = { ...wordbank.verbSet, ...wordbank.dummyVerb };
+    wordbankKeys.forEach((wordbankKey) => {
+      wordbankCopy[wordbankKey] = {
+        ...wordbankCopy[wordbankKey],
+        ...dummyWords[wordbankKey],
+      };
+    });
   }
 
-  sentenceSkeletonArray = egSentences[egSentenceNumber];
+  // We take tags to be potentially multiple in both Source and Spec.
+  // We take keys to be potentially multiple in Spec, but always singular in Source.
 
-  //Majtki should be avoided for spec "singular".
-  //Majtki should be usable for spec [].
-  //Majtki should be usable for spec "plural".
-
-  //We take tags to be potentially multiple in both Source and Spec.
-  //We take keys to be potentially multiple in Spec, but always singular in Source.
-
-  let resultArr = [];
   sentenceSkeletonArray.forEach((spec) => {
     if (typeof spec === "string") {
       resultArr.push(spec);
     } else {
-      let source = wordbank[scUtils.giveSetKey(spec.type)];
+      let source = wordbankCopy[scUtils.giveSetKey(spec.type)];
       let matches = [];
 
       matches = scUtils.filterByTag(source, spec.manTags, true);
@@ -51,7 +51,7 @@ exports.fetchPalette = (req) => {
       if (matches.length) {
         let selectedLemmaObj = scUtils.selectRandom(matches);
         console.log(
-          "palette.model.js say selectedLemmaObj is " + selectedLemmaObj.lemma
+          "palette.model.js says selectedLemmaObj is " + selectedLemmaObj.lemma
         );
 
         let selectedWord = scUtils.filterWithinObjectByNestedKeys(

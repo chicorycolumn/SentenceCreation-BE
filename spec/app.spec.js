@@ -34,7 +34,7 @@ describe("/api", () => {
   });
 
   describe("/palette", () => {
-    it("#pal-01 GET 200 Returns a sentence", () => {
+    it("#pal-01 GET 200 YES: Returns a sentence", () => {
       return request(app)
         .get("/api/palette")
         .expect(200)
@@ -42,7 +42,7 @@ describe("/api", () => {
           expect(res.body.palette).to.be.a("String");
         });
     });
-    it("#pal-02a GET 200 Returns message to say no sentence, given that no sentence can be created from specifications.", () => {
+    it("#pal-02a GET 200 NO: Returns message to say no sentence can be created from specifications.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -53,9 +53,10 @@ describe("/api", () => {
           expect(res.body.message).to.equal(
             "No sentence could be created from the specifications."
           );
+          //expect(res.body.palette).to.equal(null);
         });
     });
-    it("#pal-02b GET 200 Returns message to say no sentence if no sentence could possibly be created from specifications.", () => {
+    it("#pal-02b GET 200 NO: Returns message to say no sentence could possibly be created from specifications.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -66,9 +67,10 @@ describe("/api", () => {
           expect(res.body.message).to.equal(
             "No sentence could be created from the specifications."
           );
+          //expect(res.body.palette).to.equal(null);
         });
     });
-    it("#pal-03a GET 200 Returns message to say no sentence, if dummy noun was successfully filtered out.", () => {
+    it("#pal-03a GET 200 NO: Returns message to say no sentence, if dummy noun was successfully filtered out.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -80,9 +82,10 @@ describe("/api", () => {
           expect(res.body.message).to.equal(
             "No sentence could be created from the specifications."
           );
+          //expect(res.body.palette).to.equal(null);
         });
     });
-    it("#pal-03b GET 200 Returns message to say no sentence, if dummy noun was successfully filtered out.", () => {
+    it("#pal-03b GET 200 NO: Returns message to say no sentence, if dummy noun was successfully filtered out.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -94,9 +97,10 @@ describe("/api", () => {
           expect(res.body.message).to.equal(
             "No sentence could be created from the specifications."
           );
+          //expect(res.body.palette).to.equal(null);
         });
     });
-    it.only("#pal-03c GET 200 Returns sentence, as dummy noun did not need to be filtered out.", () => {
+    it("#pal-03c GET 200 YES: Returns sentence, as dummy noun did not need to be filtered out.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -108,7 +112,7 @@ describe("/api", () => {
           expect(res.body.palette).to.be.a("String");
         });
     });
-    it.only("#pal-03d GET 200 Returns successful sentence 100% of the time, rather than 33%, as one of the dummy nouns should have been filtered out.", () => {
+    it("#pal-03d GET 200 YES: Returns successful sentence 100% of the time, rather than 33%, as one of the dummy nouns should have been filtered out.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -120,7 +124,7 @@ describe("/api", () => {
           expect(res.body.palette).to.be.a("String");
         });
     });
-    it.only("#pal-03e GET 200 Returns message to say no sentence, as dummy noun should have been filtered out.", () => {
+    it("#pal-03e GET 200 NO: Returns message to say no sentence, as dummy noun should have been filtered out.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -132,9 +136,10 @@ describe("/api", () => {
           expect(res.body.message).to.equal(
             "No sentence could be created from the specifications."
           );
+          //expect(res.body.palette).to.equal(null);
         });
     });
-    it.only("#pal-03f GET 200 Returns successful sentence 100% of the time, rather than 33%, as one of the dummy nouns should have been filtered out.", () => {
+    it("#pal-03f GET 200 YES: Returns successful sentence 100% of the time, even though I've tried to trick it, by asking for Singular and Loc, and including an object that does indeed have Singular but Loc is not within, and does indeed have a Loc but it is inside Plural.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -146,7 +151,7 @@ describe("/api", () => {
           expect(res.body.palette).to.be.a("String");
         });
     });
-    it("#pal-04a GET 200 Returns a sentence where a tantum plurale was allowed, as no particular grammatical number was requested.", () => {
+    it("#pal-04a GET 200 YES: Returns a sentence where a tantum plurale was allowed, as no particular grammatical number was requested.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -158,7 +163,7 @@ describe("/api", () => {
           expect(res.body.palette.split(" ").reverse()[0]).to.equal("majtki.");
         });
     });
-    it("#pal-04b GET 200 Returns a sentence where a tantum plurale was not allowed, as singular grammatical number was requested.", () => {
+    it("#pal-04b GET 200 YES: Returns a sentence where a tantum plurale was not allowed, as singular grammatical number was requested.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -170,7 +175,7 @@ describe("/api", () => {
           expect(res.body.palette.split(" ")[0]).to.not.equal("Majtki");
         });
     });
-    it("#pal-04c GET 200 Returns a sentence where a tantum plurale was allowed, as either singular or plural grammatical number was requested.", () => {
+    it("#pal-04c GET 200 YES: Returns a sentence where a tantum plurale was allowed, as either singular or plural grammatical number was requested.", () => {
       return request(app)
         .get("/api/palette")
         .send({

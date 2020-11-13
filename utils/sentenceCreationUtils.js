@@ -87,9 +87,6 @@ exports.filterOutDefectiveInflections = (
   specObj,
   inflectionChain
 ) => {
-  // return sourceArr;
-  let requirementArrs = inflectionChain.map((key) => specObj[key]);
-
   //I'm giving you an array of lemmaObjects.
   //I want you to check the requirementArrays, and remove any lemmaObjects that don't have at least one successful chain.
 
@@ -113,13 +110,16 @@ exports.filterOutDefectiveInflections = (
   //Make list of all inflections paths from requirementArrs.
   //Check if any coincide. If none, return false and remove this lObj from sourceArr.
 
+  // return sourceArr;
+  let requirementArrs = inflectionChain.map((key) => specObj[key]);
   let inflectionPathsInRequirements = [];
 
   return sourceArr.filter((lObj) => {
     if (!lObj.defective) {
       return true;
     } else {
-      let inflectionPathsInSource = exports.giveAllNestedRoutes(lObj);
+      let inflectionPathsInSource = exports.giveNestedRoutes(lObj)
+        .routesByNesting;
 
       return inflectionPathsInRequirements.some((inflectionPath) =>
         inflectionPathsInSource.includes(inflectionPath)
@@ -162,11 +162,26 @@ exports.sentenceStringFromArray = (arr) => {
   return exports.capitaliseFirst(arr.join(" ") + ".");
 };
 
-exports.giveAllNestedRoutes = (source) => {
-  let resArr = [];
+exports.giveNestedRoutes = (source) => {
+  let routesByNesting = [];
   let arr = [];
   recursivelyMapRoutes(arr, source);
-  return resArr;
+
+  let routesByLevel = [];
+
+  routesByNesting.forEach((routeArr) => {
+    routeArr.forEach((item, index) => {
+      if (!routesByLevel[index]) {
+        routesByLevel[index] = [item];
+      } else {
+        if (!routesByLevel[index].includes(item)) {
+          routesByLevel[index].push(item);
+        }
+      }
+    });
+  });
+
+  return { routesByNesting, routesByLevel };
 
   function recursivelyMapRoutes(arr, source) {
     if (typeof source !== "object" || Array.isArray(source)) {
@@ -180,7 +195,7 @@ exports.giveAllNestedRoutes = (source) => {
         let result = recursivelyMapRoutes(arr, source[key]);
 
         if (result) {
-          resArr.push(result);
+          routesByNesting.push(result);
         }
       });
       arr.pop();
