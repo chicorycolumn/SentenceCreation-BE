@@ -59,7 +59,13 @@ exports.fetchPalette = (req) => {
           spec,
           inflectionChain
         );
-        resultArr.push(selectedWord);
+
+        if (!selectedWord) {
+          errorInSentenceCreation = true;
+          return false;
+        } else {
+          resultArr.push(selectedWord);
+        }
       } else {
         errorInSentenceCreation = true;
         return false;

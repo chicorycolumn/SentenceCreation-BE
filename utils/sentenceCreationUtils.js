@@ -38,18 +38,24 @@ exports.filterByKey = (sourceArr, specArr, key) => {
 
 exports.filterWithinObjectByNestedKeys = (source, specObj, inflectionChain) => {
   let requirementArrs = inflectionChain.map((key) => specObj[key]);
+  let errorInDrilling = false;
 
   requirementArrs.forEach((requirementArr) => {
     source = drillDownOneLevel(source, requirementArr);
     if (!source) {
-      console.log("AAAAAAAAAAAAAAARGGGGGGGHHHHHHH");
+      errorInDrilling = true;
+      return false;
     }
   });
 
-  if (typeof source === "string") {
-    return source;
+  if (errorInDrilling) {
+    return null;
   } else {
-    return selectRandom(source);
+    if (typeof source === "string") {
+      return source;
+    } else {
+      return selectRandom(source);
+    }
   }
 
   function drillDownOneLevel(source, requirementArr) {
@@ -81,7 +87,19 @@ exports.filterOutDefectiveInflections = (
   specObj,
   inflectionChain
 ) => {
+  // return sourceArr;
   let requirementArrs = inflectionChain.map((key) => specObj[key]);
+
+  //I'm giving you an array of lemmaObjects.
+  //I want you to check the requirementArrays, and remove any lemmaObjects that don't have at least one successful chain.
+
+  //For example, if requirementArrays go ["singular"] then ["nom"]
+  //then please remove any lObjs that have no singular, or that have no nom in singular.
+
+  //For another example, if reqArrs go [] then ["nom"]
+  //then please remove any lObjs that have no nom in either singular or plural.
+
+  //All lObjs that are missing sth are marked as defective.
 
   //eg requirementArrs
   // [[], []]                                 Majtki should be available.
@@ -89,33 +107,52 @@ exports.filterOutDefectiveInflections = (
   // [["singular"], []]                       Majtki should be REMOVED.
   // [["singular", "plural"], []]             Majtki should be available.
 
+  //Make list of all inflection paths in lObj.
+  //Make list of all inflections paths from requirementArrs.
+  //Check if any coincide. If none, return false and remove this lObj from sourceArr.
+
+  let inflectionPathsInSource = [];
+  let inflectionPathsInRequirements = [];
+
   return sourceArr.filter((lObj) => {
     if (!lObj.defective) {
       return true;
     } else {
-      requirementArrs.forEach();
+      return inflectionPathsInRequirements.some((inflectionPath) =>
+        inflectionPathsInSource.includes(inflectionPath)
+      );
     }
   });
 
-  function drillDownOneLevel(sourceObj, requirementArr) {
-    let sourceKeys = Object.keys(source);
-    let validKeys = [];
+  // return sourceArr.filter((lObj) => {
+  //   if (!lObj.defective) {
+  //     return true;
+  //   } else {
+  //     requirementArrs.forEach((requirementArr) => {
+  //       // if (){}
+  //     });
+  //   }
+  // });
 
-    if (requirementArr.length) {
-      validKeys = sourceKeys.filter((key) => requirementArr.includes(key));
-    } else {
-      validKeys = sourceKeys;
-    }
+  // function drillDownOneLevel(sourceObj, requirementArr) {
+  //   let sourceKeys = Object.keys(source);
+  //   let validKeys = [];
 
-    if (validKeys.length) {
-      return source[selectRandom(validKeys)];
-    } else {
-      console.log(
-        "filterOutDefectiveInflections fxn says Error in utils. No valid keys at some level of lemma object."
-      );
-      return null;
-    }
-  }
+  //   if (requirementArr.length) {
+  //     validKeys = sourceKeys.filter((key) => requirementArr.includes(key));
+  //   } else {
+  //     validKeys = sourceKeys;
+  //   }
+
+  //   if (validKeys.length) {
+  //     return source[selectRandom(validKeys)];
+  //   } else {
+  //     console.log(
+  //       "filterOutDefectiveInflections fxn says Error in utils. No valid keys at some level of lemma object."
+  //     );
+  //     return null;
+  //   }
+  // }
 };
 
 exports.sentenceStringFromArray = (arr) => {

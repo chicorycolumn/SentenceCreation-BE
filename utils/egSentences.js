@@ -54,6 +54,39 @@ exports.egSentences = {
     },
     "should be possible even using dummy noun",
   ],
+  dummy06: [
+    {
+      type: "noun",
+      manTags: ["dummy"],
+      optTags: [],
+      gcase: ["ins"],
+      number: [],
+      gender: [],
+    },
+    "should be possible 100% of the time",
+  ],
+  dummy07: [
+    {
+      type: "noun",
+      manTags: ["dummy2"],
+      optTags: [],
+      gcase: ["loc"],
+      number: ["singular"],
+      gender: [],
+    },
+    "must surely be impossible",
+  ],
+  dummy08: [
+    {
+      type: "noun",
+      manTags: ["dummy3"],
+      optTags: [],
+      gcase: ["loc"],
+      number: ["singular"],
+      gender: [],
+    },
+    "must surely be impossible",
+  ],
   50: [
     {
       type: "noun",

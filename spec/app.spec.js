@@ -96,11 +96,47 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal-03c GET 200 Returns sentence, as dummy noun did not need to be filtered out.", () => {
+    it.only("#pal-03c GET 200 Returns sentence, as dummy noun did not need to be filtered out.", () => {
       return request(app)
         .get("/api/palette")
         .send({
           egSentenceNumber: "dummy05",
+          useDummyWords: true,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+        });
+    });
+    it.only("#pal-03d GET 200 Returns successful sentence 100% of the time, rather than 33%, as one of the dummy nouns should have been filtered out.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          egSentenceNumber: "dummy06",
+          useDummyWords: true,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+        });
+    });
+    it.only("#pal-03e GET 200 Returns no sentence, as dummy noun should have been filtered out.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          egSentenceNumber: "dummy07",
+          useDummyWords: true,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+        });
+    });
+    it.only("#pal-03f GET 200 Returns successful sentence 100% of the time, rather than 33%, as one of the dummy nouns should have been filtered out.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          egSentenceNumber: "dummy08",
           useDummyWords: true,
         })
         .expect(200)
