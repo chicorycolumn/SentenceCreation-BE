@@ -42,7 +42,7 @@ describe("/api", () => {
           expect(res.body.palette).to.be.a("String");
         });
     });
-    it("#pal-02a GET 200 Returns no content with message if no sentence could possibly be created from specifications.", () => {
+    it("#pal-02a GET 200 Returns message to say no sentence, given that no sentence can be created from specifications.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -55,7 +55,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal-02b GET 200 Returns no content with message if no sentence could possibly be created from specifications.", () => {
+    it("#pal-02b GET 200 Returns message to say no sentence if no sentence could possibly be created from specifications.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -68,7 +68,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal-03a GET 200 Returns no content with message, if dummy noun was successfully filtered out.", () => {
+    it("#pal-03a GET 200 Returns message to say no sentence, if dummy noun was successfully filtered out.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -82,7 +82,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal-03b GET 200 Returns no content with message, if dummy noun was successfully filtered out.", () => {
+    it("#pal-03b GET 200 Returns message to say no sentence, if dummy noun was successfully filtered out.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -120,7 +120,7 @@ describe("/api", () => {
           expect(res.body.palette).to.be.a("String");
         });
     });
-    it.only("#pal-03e GET 200 Returns no sentence, as dummy noun should have been filtered out.", () => {
+    it.only("#pal-03e GET 200 Returns message to say no sentence, as dummy noun should have been filtered out.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -129,7 +129,9 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
+          expect(res.body.message).to.equal(
+            "No sentence could be created from the specifications."
+          );
         });
     });
     it.only("#pal-03f GET 200 Returns successful sentence 100% of the time, rather than 33%, as one of the dummy nouns should have been filtered out.", () => {

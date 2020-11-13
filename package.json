@@ -5,7 +5,9 @@
   "main": "app.js",
   "scripts": {
     "test-utils": "clear && mocha spec/utils.spec.js",
-    "test": "clear && mocha spec/app.spec.js",
+    "test": "clear && mocha spec/*.spec.js",
+    "test-app": "clear && mocha spec/app.spec.js",
+    "test-scu": "clear && mocha spec/sentenceCreationUtils.spec.js",
     "start": "node listen.js",
     "dev": "nodemon listen.js localhost 9090"
   },

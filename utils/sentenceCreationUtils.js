@@ -102,7 +102,9 @@ exports.filterOutDefectiveInflections = (
   //All lObjs that are missing sth are marked as defective.
 
   //eg requirementArrs
-  // [[], []]                                 Majtki should be available.
+  // [[], []]                                 Majtki should be available.''
+  // Note, I want to populate the above, given empty, meaning accepts all, with all keys from lObj at that levels.
+
   // [[], ["nom", "acc"]]                     Majtki should be available.
   // [["singular"], []]                       Majtki should be REMOVED.
   // [["singular", "plural"], []]             Majtki should be available.
@@ -111,13 +113,14 @@ exports.filterOutDefectiveInflections = (
   //Make list of all inflections paths from requirementArrs.
   //Check if any coincide. If none, return false and remove this lObj from sourceArr.
 
-  let inflectionPathsInSource = [];
   let inflectionPathsInRequirements = [];
 
   return sourceArr.filter((lObj) => {
     if (!lObj.defective) {
       return true;
     } else {
+      let inflectionPathsInSource = exports.giveAllNestedRoutes(lObj);
+
       return inflectionPathsInRequirements.some((inflectionPath) =>
         inflectionPathsInSource.includes(inflectionPath)
       );
@@ -157,4 +160,30 @@ exports.filterOutDefectiveInflections = (
 
 exports.sentenceStringFromArray = (arr) => {
   return exports.capitaliseFirst(arr.join(" ") + ".");
+};
+
+exports.giveAllNestedRoutes = (source) => {
+  let resArr = [];
+  let arr = [];
+  recursivelyMapRoutes(arr, source);
+  return resArr;
+
+  function recursivelyMapRoutes(arr, source) {
+    if (typeof source !== "object" || Array.isArray(source)) {
+      let arrCopy = arr.slice();
+      arr.pop();
+      return arrCopy;
+    } else {
+      Object.keys(source).forEach((key) => {
+        arr.push(key);
+
+        let result = recursivelyMapRoutes(arr, source[key]);
+
+        if (result) {
+          resArr.push(result);
+        }
+      });
+      arr.pop();
+    }
+  }
 };
