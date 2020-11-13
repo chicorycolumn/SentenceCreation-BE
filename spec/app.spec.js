@@ -40,6 +40,7 @@ describe("/api", () => {
         .expect(200)
         .then((res) => {
           expect(res.body.palette).to.be.a("String");
+          console.log({ palette: res.body.palette });
         });
     });
     it("#pal-02a GET 200 NO: Returns message to say no sentence can be created from specifications.", () => {
@@ -110,6 +111,7 @@ describe("/api", () => {
         .expect(200)
         .then((res) => {
           expect(res.body.palette).to.be.a("String");
+          console.log({ palette: res.body.palette });
         });
     });
     it("#pal-03d GET 200 YES: Returns successful sentence 100% of the time, rather than 33%, as one of the dummy nouns should have been filtered out.", () => {
@@ -122,6 +124,7 @@ describe("/api", () => {
         .expect(200)
         .then((res) => {
           expect(res.body.palette).to.be.a("String");
+          console.log({ palette: res.body.palette });
         });
     });
     it("#pal-03e GET 200 NO: Returns message to say no sentence, as dummy noun should have been filtered out.", () => {
@@ -149,6 +152,7 @@ describe("/api", () => {
         .expect(200)
         .then((res) => {
           expect(res.body.palette).to.be.a("String");
+          console.log({ palette: res.body.palette });
         });
     });
     it("#pal-04a GET 200 YES: Returns a sentence where a tantum plurale was allowed, as no particular grammatical number was requested.", () => {
@@ -160,6 +164,7 @@ describe("/api", () => {
         .expect(200)
         .then((res) => {
           expect(res.body.palette).to.be.a("String");
+          console.log({ palette: res.body.palette });
           expect(res.body.palette.split(" ").reverse()[0]).to.equal("majtki.");
         });
     });
@@ -186,6 +191,7 @@ describe("/api", () => {
         .expect(200)
         .then((res) => {
           expect(res.body.palette).to.be.a("String");
+          console.log({ palette: res.body.palette });
           expect(res.body.palette.split(" ").reverse()[0]).to.equal("majtki.");
         });
     });

@@ -59,11 +59,8 @@ exports.filterWithinObjectByNestedKeys = (source, specObj, inflectionChain) => {
   }
 
   function drillDownOneLevel(source, requirementArr) {
-    // console.log(">source", source);
     let sourceKeys = Object.keys(source);
     let validKeys = [];
-
-    // console.log({ sourceKeys, validKeys });
 
     if (requirementArr.length) {
       validKeys = sourceKeys.filter((key) => requirementArr.includes(key));
@@ -87,30 +84,6 @@ exports.filterOutDefectiveInflections = (
   specObj,
   inflectionChain
 ) => {
-  //I'm giving you an array of lemmaObjects.
-  //I want you to check the requirementArrays, and remove any lemmaObjects that don't have at least one successful chain.
-
-  //For example, if requirementArrays go ["singular"] then ["nom"]
-  //then please remove any lObjs that have no singular, or that have no nom in singular.
-
-  //For another example, if reqArrs go [] then ["nom"]
-  //then please remove any lObjs that have no nom in either singular or plural.
-
-  //All lObjs that are missing sth are marked as defective.
-
-  //eg requirementArrs
-  // [[], []]                                 Majtki should be available.''
-  // Note, I want to populate the above, given empty, meaning accepts all, with all keys from lObj at that levels.
-
-  // [[], ["nom", "acc"]]                     Majtki should be available.
-  // [["singular"], []]                       Majtki should be REMOVED.
-  // [["singular", "plural"], []]             Majtki should be available.
-
-  //Make list of all inflection paths in lObj.
-  //Make list of all inflections paths from requirementArrs.
-  //Check if any coincide. If none, return false and remove this lObj from sourceArr.
-
-  // return sourceArr;
   let requirementArrs = inflectionChain.map((key) => specObj[key]);
 
   return sourceArr.filter((lObj) => {
@@ -140,36 +113,6 @@ exports.filterOutDefectiveInflections = (
       );
     }
   });
-
-  // return sourceArr.filter((lObj) => {
-  //   if (!lObj.defective) {
-  //     return true;
-  //   } else {
-  //     requirementArrs.forEach((requirementArr) => {
-  //       // if (){}
-  //     });
-  //   }
-  // });
-
-  // function drillDownOneLevel(sourceObj, requirementArr) {
-  //   let sourceKeys = Object.keys(source);
-  //   let validKeys = [];
-
-  //   if (requirementArr.length) {
-  //     validKeys = sourceKeys.filter((key) => requirementArr.includes(key));
-  //   } else {
-  //     validKeys = sourceKeys;
-  //   }
-
-  //   if (validKeys.length) {
-  //     return source[selectRandom(validKeys)];
-  //   } else {
-  //     console.log(
-  //       "filterOutDefectiveInflections fxn says Error in utils. No valid keys at some level of lemma object."
-  //     );
-  //     return null;
-  //   }
-  // }
 };
 
 exports.areTwoFlatArraysEqual = (arr1, arr2) => {

@@ -42,9 +42,6 @@ exports.fetchPalette = (req) => {
       matches = scUtils.filterByTag(source, spec.manTags, true);
       matches = scUtils.filterByTag(matches, spec.optTags, false);
       matches = scUtils.filterByKey(matches, spec.gender, "gender");
-
-      // console.log({ matches });
-
       matches = scUtils.filterOutDefectiveInflections(
         matches,
         spec,
@@ -55,9 +52,7 @@ exports.fetchPalette = (req) => {
 
       if (matches.length) {
         let selectedLemmaObj = scUtils.selectRandom(matches);
-        console.log(
-          "palette.model.js says selectedLemmaObj is " + selectedLemmaObj.lemma
-        );
+        // console.log("Lemma: " + selectedLemmaObj.lemma);
 
         let selectedWord = scUtils.filterWithinObjectByNestedKeys(
           selectedLemmaObj.inflections,
@@ -80,9 +75,7 @@ exports.fetchPalette = (req) => {
 
   let finalSentence = scUtils.sentenceStringFromArray(resultArr);
 
-  console.log("-------------------------------------------->" + finalSentence);
-
-  let responseObj = { number: 1 };
+  let responseObj = {};
 
   if (errorInSentenceCreation) {
     responseObj = {

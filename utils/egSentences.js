@@ -85,7 +85,7 @@ exports.egSentences = {
       number: ["singular"],
       gender: [],
     },
-    "must surely be impossible",
+    "should be possible 100% of the time",
   ],
   50: [
     {
