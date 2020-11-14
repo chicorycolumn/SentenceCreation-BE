@@ -1,6 +1,8 @@
-let nounSet = {
-  44: {
+let nounSet = [
+  {
+    translations: { EN: ["woman", "lady"] },
     lemma: "kobieta",
+    id: "pl-n-001",
     gender: "f",
     tags: ["animate", "person", "concrete"],
     defective: false,
@@ -23,8 +25,10 @@ let nounSet = {
       },
     },
   },
-  194: {
+  {
+    translations: { EN: ["boy", "boyfriend", "guy"] },
     lemma: "chłopak",
+    id: "pl-n-002",
     gender: "m1",
     tags: ["animate", "person", "concrete"],
     defective: false,
@@ -47,8 +51,36 @@ let nounSet = {
       },
     },
   },
-  250: {
+  {
+    translations: { EN: ["boy", "little boy"] },
+    lemma: "chłopiec",
+    id: "pl-n-003",
+    gender: "m1",
+    tags: ["animate", "person", "concrete"],
+    defective: false,
+    inflections: {
+      singular: {
+        nom: "chłopiec",
+        gen: "chłopca",
+        dat: "chłopcu",
+        acc: "chłopca",
+        ins: "chłopcem",
+        loc: "chłopcu",
+      },
+      plural: {
+        nom: "chłopcy",
+        gen: "chłopców",
+        dat: "chłopcom",
+        acc: "chłopców",
+        ins: "chłopcami",
+        loc: "chłopcach",
+      },
+    },
+  },
+  {
+    translations: { EN: ["onion"] },
     lemma: "cebula",
+    id: "pl-n-004",
     gender: "f",
     tags: ["inanimate", "edible", "holdable", "concrete"],
     defective: false,
@@ -71,8 +103,10 @@ let nounSet = {
       },
     },
   },
-  471: {
+  {
+    translations: { EN: ["apple"] },
     lemma: "jabłko",
+    id: "pl-n-005",
     gender: "n",
     tags: ["inanimate", "edible", "holdable", "concrete"],
     defective: false,
@@ -95,8 +129,10 @@ let nounSet = {
       },
     },
   },
-  713: {
+  {
+    translations: { EN: ["mirror"] },
     lemma: "lustro",
+    id: "pl-n-006",
     gender: "n",
     tags: ["inanimate", "holdable", "concrete"],
     defective: false,
@@ -119,8 +155,38 @@ let nounSet = {
       },
     },
   },
-  786: {
+  {
+    translations: { EN: ["mirror"] },
+    lemma: "zwierciadło",
+    id: "pl-n-007",
+    gender: "n",
+    tags: ["inanimate", "holdable", "concrete"],
+    defective: false,
+    inflections: {
+      singular: {
+        nom: "zwierciadło",
+        gen: "zwierciadła",
+        dat: "zwierciadłu",
+        acc: "zwierciadło",
+        ins: "zwierciadłem",
+        loc: "zwierciadle",
+      },
+      plural: {
+        nom: "zwierciadła",
+        gen: "zwierciadeł",
+        dat: "zwierciadłom",
+        acc: "zwierciadła",
+        ins: "zwierciadłami",
+        loc: "zwierciadłach",
+      },
+    },
+  },
+  {
+    translations: {
+      EN: ["underwear", "pants", "underpants", "briefs", "panties"],
+    },
     lemma: "majtki",
+    id: "pl-n-008",
     gender: "f",
     tags: ["inanimate", "holdable", "concrete", "wearable"],
     defective: true,
@@ -135,10 +201,10 @@ let nounSet = {
       },
     },
   },
-};
-let adjectiveSet = {};
-let adverbSet = {};
-let verbSet = {};
+];
+let adjectiveSet = [];
+let adverbSet = [];
+let verbSet = [];
 
 exports.words = {
   nounSet,

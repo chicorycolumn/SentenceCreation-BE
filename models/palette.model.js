@@ -8,7 +8,9 @@ const {
 
 exports.fetchPalette = (req) => {
   let defaultSentenceNumber = 50;
-  let selectedLevel = "level01";
+  let sentenceNumber = req.body.sentenceNumber || defaultSentenceNumber;
+  let defaultLevelNumber = "level01";
+  let levelNumber = req.body.levelNumber || defaultLevelNumber;
 
   let inflectionChain = ["number", "gcase"];
   let errorInSentenceCreation = false;
@@ -23,11 +25,11 @@ exports.fetchPalette = (req) => {
   });
 
   let sentenceFormulasCopy = {};
-  sentenceFormulasCopy[selectedLevel] = {};
-  let sentenceFormulasKeys = Object.keys(sentenceFormulas[selectedLevel]);
+  sentenceFormulasCopy[levelNumber] = {};
+  let sentenceFormulasKeys = Object.keys(sentenceFormulas[levelNumber]);
   sentenceFormulasKeys.forEach((sentenceFormulasKey) => {
-    sentenceFormulasCopy[selectedLevel][sentenceFormulasKey] = [
-      ...sentenceFormulas[selectedLevel][sentenceFormulasKey],
+    sentenceFormulasCopy[levelNumber][sentenceFormulasKey] = [
+      ...sentenceFormulas[levelNumber][sentenceFormulasKey],
     ];
   });
 
@@ -39,14 +41,13 @@ exports.fetchPalette = (req) => {
       };
     });
 
-    sentenceFormulasCopy[selectedLevel] = {
-      ...sentenceFormulasCopy[selectedLevel],
-      ...dummySentenceFormulas[selectedLevel],
+    sentenceFormulasCopy[levelNumber] = {
+      ...sentenceFormulasCopy[levelNumber],
+      ...dummySentenceFormulas[levelNumber],
     };
   }
 
-  let sentenceNumber = req.body.sentenceNumber || defaultSentenceNumber;
-  let sentenceFormula = sentenceFormulasCopy[selectedLevel][sentenceNumber];
+  let sentenceFormula = sentenceFormulasCopy[levelNumber][sentenceNumber];
 
   // We take tags to be potentially multiple in both Source and Spec.
   // We take keys to be potentially multiple in Spec, but always singular in Source.

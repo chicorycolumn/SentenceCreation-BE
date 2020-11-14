@@ -197,7 +197,19 @@ describe("/api", () => {
           expect(res.body.palette.split(" ").reverse()[0]).to.equal("majtki.");
         });
     });
-    it("#pal-05 Responds 405 if any other methods are used at this endpoint", () => {
+    it("#pal-05 GET 200 YES: Returns a sentence where end of inflection chain is array.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          sentenceNumber: 54,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          console.log({ palette: res.body.palette });
+        });
+    });
+    it("#pal-06 Responds 405 if any other methods are used at this endpoint", () => {
       const url = "/api/palette";
       return Promise.all([
         request(app).del(url),

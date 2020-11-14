@@ -1,5 +1,5 @@
-let nounSet = {
-  dummy01: {
+let nounSet = [
+  {
     lemma: "foobar_loc_only",
     gender: "n",
     tags: ["dummy"],
@@ -13,7 +13,7 @@ let nounSet = {
       },
     },
   },
-  dummy02: {
+  {
     lemma: "foobar_ins_only",
     gender: "n",
     tags: ["dummy"],
@@ -27,7 +27,7 @@ let nounSet = {
       },
     },
   },
-  dummy03: {
+  {
     lemma: "foobar_sin_ins_plu_loc_only",
     gender: "n",
     tags: ["dummy2"],
@@ -41,7 +41,7 @@ let nounSet = {
       },
     },
   },
-  dummy04: {
+  {
     lemma: "foobar_sin_ins_plu_loc_only",
     gender: "n",
     tags: ["dummy3"],
@@ -55,7 +55,7 @@ let nounSet = {
       },
     },
   },
-  dummy05: {
+  {
     lemma: "foobar_sin_loc_plu_ins_only",
     gender: "n",
     tags: ["dummy3"],
@@ -69,7 +69,7 @@ let nounSet = {
       },
     },
   },
-  dummy06: {
+  {
     lemma: "foobar_none",
     gender: "n",
     tags: ["dummy3"],
@@ -81,10 +81,10 @@ let nounSet = {
       },
     },
   },
-};
-let adjectiveSet = {};
-let adverbSet = {};
-let verbSet = {};
+];
+let adjectiveSet = [];
+let adverbSet = [];
+let verbSet = [];
 
 exports.dummyWords = {
   nounSet,
