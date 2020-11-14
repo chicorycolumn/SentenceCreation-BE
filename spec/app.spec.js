@@ -47,7 +47,8 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          egSentenceNumber: "dummy01",
+          sentenceNumber: "dummy01",
+          useDummy: true,
         })
         .expect(200)
         .then((res) => {
@@ -61,7 +62,8 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          egSentenceNumber: "dummy02",
+          sentenceNumber: "dummy02",
+          useDummy: true,
         })
         .expect(200)
         .then((res) => {
@@ -75,8 +77,8 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          egSentenceNumber: "dummy03",
-          useDummyWords: true,
+          sentenceNumber: "dummy03",
+          useDummy: true,
         })
         .expect(200)
         .then((res) => {
@@ -90,8 +92,8 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          egSentenceNumber: "dummy04",
-          useDummyWords: true,
+          sentenceNumber: "dummy04",
+          useDummy: true,
         })
         .expect(200)
         .then((res) => {
@@ -105,8 +107,8 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          egSentenceNumber: "dummy05",
-          useDummyWords: true,
+          sentenceNumber: "dummy05",
+          useDummy: true,
         })
         .expect(200)
         .then((res) => {
@@ -118,8 +120,8 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          egSentenceNumber: "dummy06",
-          useDummyWords: true,
+          sentenceNumber: "dummy06",
+          useDummy: true,
         })
         .expect(200)
         .then((res) => {
@@ -131,8 +133,8 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          egSentenceNumber: "dummy07",
-          useDummyWords: true,
+          sentenceNumber: "dummy07",
+          useDummy: true,
         })
         .expect(200)
         .then((res) => {
@@ -146,8 +148,8 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          egSentenceNumber: "dummy08",
-          useDummyWords: true,
+          sentenceNumber: "dummy08",
+          useDummy: true,
         })
         .expect(200)
         .then((res) => {
@@ -159,7 +161,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          egSentenceNumber: 51,
+          sentenceNumber: 51,
         })
         .expect(200)
         .then((res) => {
@@ -172,7 +174,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          egSentenceNumber: 52,
+          sentenceNumber: 52,
         })
         .expect(200)
         .then((res) => {
@@ -186,7 +188,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          egSentenceNumber: 53,
+          sentenceNumber: 53,
         })
         .expect(200)
         .then((res) => {

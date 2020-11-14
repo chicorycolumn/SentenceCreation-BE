@@ -140,7 +140,7 @@ let adjectiveSet = {};
 let adverbSet = {};
 let verbSet = {};
 
-exports.wordbank = {
+exports.words = {
   nounSet,
   adjectiveSet,
   adverbSet,

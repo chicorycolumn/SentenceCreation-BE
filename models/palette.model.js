@@ -1,42 +1,61 @@
 const scUtils = require("../utils/sentenceCreationUtils.js");
-const { wordbank } = require("../utils/wordbank.js");
-const { dummyWords } = require("../utils/dummyWords.js");
-const { egSentences } = require("../utils/egSentences.js");
+const { words } = require("../utils/PL/words.js");
+const { dummyWords } = require("../utils/PL/dummyWords.js");
+const { sentenceFormulas } = require("../utils/PL/sentenceFormulas.js");
+const {
+  dummySentenceFormulas,
+} = require("../utils/PL/dummySentenceFormulas.js");
 
 exports.fetchPalette = (req) => {
+  let defaultSentenceNumber = 50;
+  let selectedLevel = "level01";
+
   let inflectionChain = ["number", "gcase"];
   let errorInSentenceCreation = false;
   let resultArr = [];
 
-  let defaultSentenceNumber = 50;
-  let egSentenceNumber = req.body.egSentenceNumber || defaultSentenceNumber;
-  let sentenceSkeletonArray = egSentences[egSentenceNumber];
-
-  let wordbankCopy = {};
-  let wordbankKeys = Object.keys(wordbank);
-  wordbankKeys.forEach((wordbankKey) => {
-    wordbankCopy[wordbankKey] = {
-      ...wordbank[wordbankKey],
+  let wordsCopy = {};
+  let wordsKeys = Object.keys(words);
+  wordsKeys.forEach((wordsKey) => {
+    wordsCopy[wordsKey] = {
+      ...words[wordsKey],
     };
   });
 
-  if (req.body.useDummyWords) {
-    wordbankKeys.forEach((wordbankKey) => {
-      wordbankCopy[wordbankKey] = {
-        ...wordbankCopy[wordbankKey],
-        ...dummyWords[wordbankKey],
+  let sentenceFormulasCopy = {};
+  sentenceFormulasCopy[selectedLevel] = {};
+  let sentenceFormulasKeys = Object.keys(sentenceFormulas[selectedLevel]);
+  sentenceFormulasKeys.forEach((sentenceFormulasKey) => {
+    sentenceFormulasCopy[selectedLevel][sentenceFormulasKey] = [
+      ...sentenceFormulas[selectedLevel][sentenceFormulasKey],
+    ];
+  });
+
+  if (req.body.useDummy) {
+    wordsKeys.forEach((wordsKey) => {
+      wordsCopy[wordsKey] = {
+        ...wordsCopy[wordsKey],
+        ...dummyWords[wordsKey],
       };
     });
+
+    sentenceFormulasCopy[selectedLevel] = {
+      ...sentenceFormulasCopy[selectedLevel],
+      ...dummySentenceFormulas[selectedLevel],
+    };
   }
+
+  let sentenceNumber = req.body.sentenceNumber || defaultSentenceNumber;
+  let sentenceFormula = sentenceFormulasCopy[selectedLevel][sentenceNumber];
 
   // We take tags to be potentially multiple in both Source and Spec.
   // We take keys to be potentially multiple in Spec, but always singular in Source.
 
-  sentenceSkeletonArray.forEach((spec) => {
+  sentenceFormula.forEach((spec) => {
     if (typeof spec === "string") {
       resultArr.push(spec);
     } else {
-      let source = wordbankCopy[scUtils.giveSetKey(spec.type)];
+      let source = wordsCopy[scUtils.giveSetKey(spec.type)];
       let matches = [];
 
       matches = scUtils.filterByTag(source, spec.manTags, true);
