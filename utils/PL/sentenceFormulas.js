@@ -70,6 +70,17 @@ const level01 = {
     },
     "są męscy",
   ],
+  55: [
+    {
+      wordtype: "noun",
+      manTags: ["person"],
+      optTags: [],
+      gcase: ["nom"],
+      number: ["plural"],
+      gender: ["m1"],
+    },
+    "są męscy",
+  ],
 };
 
 exports.sentenceFormulas = { level01 };
