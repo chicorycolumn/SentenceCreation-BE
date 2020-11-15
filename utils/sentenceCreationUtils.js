@@ -158,8 +158,29 @@ exports.concoctNestedRoutes = (routesByLevelTarget, routesByLevelSource) => {
   }
 };
 
-exports.sentenceStringFromArray = (arr) => {
-  return exports.capitaliseFirst(arr.join(" ") + ".");
+exports.buildSentenceFromArray = (arr) => {
+  console.log(arr);
+
+  let selectedWords = arr.map((obj) => obj.selectedWord);
+  let selectedLemmaObjs = arr.map((obj) => obj.selectedLemmaObj);
+
+  if (
+    selectedLemmaObjs.some((lObj) => {
+      if (lObj) {
+        return lObj.agreeWith;
+      }
+    })
+  ) {
+    //I see there are agreement notes to work through.
+    //Please add any agreement info from sentenceFormula chunks to the relevant lemmaObjs.
+    //
+  } else {
+    //There are no agreement notes to work through.
+    let producedSentence = exports.capitaliseFirst(
+      selectedWords.join(" ") + "."
+    );
+    return producedSentence;
+  }
 };
 
 exports.extractNestedRoutes = (source) => {

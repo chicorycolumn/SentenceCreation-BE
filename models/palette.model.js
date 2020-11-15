@@ -16,113 +16,108 @@ exports.fetchPalette = (req) => {
     noun: ["number", "gcase"],
     adjective: ["number", "gender", "gcase"],
   };
-  let errorInSentenceCreation = false;
+  let errorInSentenceCreation = null;
   let resultArr = [];
 
   let wordsCopy = {};
-  let wordsKeys = Object.keys(words);
-  wordsKeys.forEach((wordsKey) => {
-    wordsCopy[wordsKey] = {
-      ...words[wordsKey],
-    };
+  let wordsetKeys = Object.keys(words);
+  wordsetKeys.forEach((wordsetKey) => {
+    wordsCopy[wordsetKey] = [...words[wordsetKey]];
+    // This so that /words nounSet can be merged with /dummyWords nounSet, without changing the former.
   });
 
-  let sentenceFormulasCopy = {};
-  sentenceFormulasCopy[levelNumber] = {};
-  let sentenceFormulasKeys = Object.keys(sentenceFormulas[levelNumber]);
-  sentenceFormulasKeys.forEach((sentenceFormulasKey) => {
-    sentenceFormulasCopy[levelNumber][sentenceFormulasKey] = {
-      ...sentenceFormulas[levelNumber][sentenceFormulasKey],
-    };
-  });
+  let sentenceFormulasList = sentenceFormulas;
+  // let sentenceFormulasCopy = {};
+  // sentenceFormulasCopy[levelNumber] = {};
+  // let sentenceFormulasKeys = Object.keys(sentenceFormulas[levelNumber]);
+  // sentenceFormulasKeys.forEach((sentenceFormulasKey) => {
+  //   sentenceFormulasCopy[levelNumber][sentenceFormulasKey] = {
+  //     ...sentenceFormulas[levelNumber][sentenceFormulasKey],
+  //   };
+  // });
 
   if (req.body.useDummy) {
-    wordsKeys.forEach((wordsKey) => {
-      wordsCopy[wordsKey] = {
-        ...wordsCopy[wordsKey],
-        ...dummyWords[wordsKey],
+    wordsetKeys.forEach((wordsetKey) => {
+      wordsCopy[wordsetKey] = {
+        ...wordsCopy[wordsetKey],
+        ...dummyWords[wordsetKey],
       };
     });
 
-    sentenceFormulasCopy = dummySentenceFormulas;
+    sentenceFormulasList = dummySentenceFormulas;
   }
 
-  //Get the SF by filtering the SF list by req.body.sfsymbol
-
-  //If req.body.useDummy, then do same as above but with dummySFlist to select from. No need to unite the SF lists.
-
-  //If no req.body.sfsymbol, but yes req.body.snumber, then filter for that.
-
-  //If neither, then use default snumber.
-
-  //LATER: If a level is specified, and random is specified, pick a random SF from that level.
-
-  // console.log({ levelNumber, sentenceNumber });
-  // console.log({ SFC: sentenceFormulasCopy[levelNumber][sentenceNumber] });
+  //LATER: If a level is specified, and random is specyified, pick a random SF from that level.
 
   let sentenceObject = req.body.sentenceFormulaSymbol
-    ? scUtils.findObjectInNestedObject(sentenceFormulasCopy, {
+    ? scUtils.findObjectInNestedObject(sentenceFormulasList, {
         symbol: req.body.sentenceFormulaSymbol,
       })
-    : sentenceFormulasCopy[levelNumber][sentenceNumber];
+    : sentenceFormulasList[levelNumber][sentenceNumber];
 
   let sentenceFormula = sentenceObject.formula;
 
-  // console.log({ sentenceFormula });
-
-  // We take tags to be potentially multiple in both Source and Spec.
-  // We take keys to be potentially multiple in Spec, but always singular in Source.
-
-  sentenceFormula.forEach((spec) => {
-    if (typeof spec === "string") {
-      resultArr.push(spec);
+  sentenceFormula.forEach((formulaChunk) => {
+    if (typeof formulaChunk === "string") {
+      resultArr.push({
+        selectedLemmaObj: null,
+        selectedWord: formulaChunk,
+        formulaChunk,
+      });
     } else {
-      let source = wordsCopy[scUtils.giveSetKey(spec.wordtype)];
+      let source = wordsCopy[scUtils.giveSetKey(formulaChunk.wordtype)];
       let matches = [];
 
-      matches = scUtils.filterByTag(source, spec.manTags, true);
-      matches = scUtils.filterByTag(matches, spec.optTags, false);
-      matches = scUtils.filterByKey(matches, spec.gender, "gender");
+      matches = scUtils.filterByTag(source, formulaChunk.manTags, true);
+      matches = scUtils.filterByTag(matches, formulaChunk.optTags, false);
+      matches = scUtils.filterByKey(matches, formulaChunk.gender, "gender");
       matches = scUtils.filterOutDefectiveInflections(
         matches,
-        spec,
+        formulaChunk,
         inflectionChainsPL
       );
 
-      // console.log({ matches });
-
       if (matches.length) {
-        let selectedLemmaObj = scUtils.selectRandom(matches);
-        // console.log("Lemma: " + selectedLemmaObj.lemma);
+        let selectedLemmaObj = { ...scUtils.selectRandom(matches) };
 
         let selectedWord = scUtils.filterWithinObjectByNestedKeys(
           selectedLemmaObj.inflections,
-          spec,
+          formulaChunk,
           inflectionChainsPL
         );
 
         if (!selectedWord) {
-          errorInSentenceCreation = true;
+          errorInSentenceCreation = {
+            errorMessage:
+              "A lemma object was indeed selected, but no word was found at the end of the give inflection chain.",
+          };
           return false;
         } else {
-          resultArr.push(selectedWord);
+          resultArr.push({ selectedLemmaObj, selectedWord, formulaChunk });
         }
       } else {
-        errorInSentenceCreation = true;
+        errorInSentenceCreation = {
+          errorMessage: "No matching lemma objects were found.",
+        };
         return false;
       }
     }
   });
 
-  let finalSentence = scUtils.sentenceStringFromArray(resultArr);
+  let finalSentence = scUtils.buildSentenceFromArray(resultArr);
+
+  console.log({ finalSentence });
 
   let responseObj = {};
 
   if (errorInSentenceCreation) {
+    let errorMessage = { errorInSentenceCreation };
+
     responseObj = {
       message: "No sentence could be created from the specifications.",
       fragment: finalSentence,
       palette: null,
+      errorMessage,
     };
   } else {
     responseObj = {

@@ -14,7 +14,10 @@ describe("/api", () => {
     it("#pal02-01a GET 200 YES: Returns a sentence where adjective agrees with noun in singular.", () => {
       return request(app)
         .get("/api/palette")
-        .send({ sentenceNumber: 55 })
+        .send({
+          sentenceNumber: 55,
+          // sentenceFormulaSymbol: "red apple",
+        })
         .expect(200)
         .then((res) => {
           expect(res.body.palette).to.be.a("String");
@@ -27,7 +30,10 @@ describe("/api", () => {
     it("#pal02-01b GET 200 YES: Returns a sentence where adjective agrees with noun in plural.", () => {
       return request(app)
         .get("/api/palette")
-        .send({ sentenceNumber: 56 })
+        .send({
+          sentenceNumber: 56,
+          // sentenceFormulaSymbol: "red girls",
+        })
         .expect(200)
         .then((res) => {
           expect(res.body.palette).to.be.a("String");
