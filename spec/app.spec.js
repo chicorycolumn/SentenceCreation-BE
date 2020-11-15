@@ -10,26 +10,35 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe("/", () => {
-    it("#api-01 GET 200 Serves up endpoints", () => {
+  xdescribe("/palette - Stage 2: Adjectives", () => {
+    it("#pal02-01a GET 200 YES: Returns a sentence where adjective agrees with noun in singular.", () => {
       return request(app)
-        .get("/api")
+        .get("/api/palette")
+        .send({ sentenceNumber: 55 })
         .expect(200)
         .then((res) => {
-          expect(res.body.endpoints).to.be.an("Object");
+          expect(res.body.palette).to.be.a("String");
+          expect(["Czerwona cebula.", "Czerwone jabłko."]).to.include(
+            res.body.palette
+          );
+          console.log({ palette: res.body.palette });
         });
     });
-    it("#api-02 Responds 405 if any other methods are used at this endpoint", () => {
-      const url = "/api";
-      return Promise.all([
-        request(app).del(url),
-        request(app).patch(url),
-        request(app).post(url),
-      ]).then((resArr) => {
-        resArr.forEach((response) => {
-          expect(405);
+    it("#pal02-01b GET 200 YES: Returns a sentence where adjective agrees with noun in plural.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({ sentenceNumber: 56 })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          expect([
+            "Czerwoni chłopcy.",
+            "Czerwoni chłopacy.",
+            "Czerwoni chłopaki.",
+            "Czerwone kobiety.",
+          ]).to.include(res.body.palette);
+          console.log({ palette: res.body.palette });
         });
-      });
     });
   });
 
@@ -161,7 +170,8 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceNumber: 51,
+          // sentenceNumber: 51,
+          sentenceFormulaSymbol: "girl is wearing shirt",
         })
         .expect(200)
         .then((res) => {
@@ -174,7 +184,8 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceNumber: 52,
+          // sentenceNumber: 52,
+          sentenceFormulaSymbol: "shirt is in wardrobe",
         })
         .expect(200)
         .then((res) => {
@@ -188,7 +199,8 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceNumber: 53,
+          // sentenceNumber: 53,
+          sentenceFormulaSymbol: "I often wear shirt",
         })
         .expect(200)
         .then((res) => {
@@ -201,7 +213,8 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceNumber: 54,
+          // sentenceNumber: 54,
+          sentenceFormulaSymbol: "boys are male",
         })
         .expect(200)
         .then((res) => {
@@ -223,35 +236,26 @@ describe("/api", () => {
     });
   });
 
-  describe("/palette - Stage 2: Adjectives", () => {
-    it("#pal02-01a GET 200 YES: Returns a sentence where adjective agrees with noun in singular.", () => {
+  describe("/", () => {
+    it("#api-01 GET 200 Serves up endpoints", () => {
       return request(app)
-        .get("/api/palette")
-        .send({ sentenceNumber: 55 })
+        .get("/api")
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
-          expect(["Czerwona cebula.", "Czerwone jabłko."]).to.include(
-            res.body.palette
-          );
-          console.log({ palette: res.body.palette });
+          expect(res.body.endpoints).to.be.an("Object");
         });
     });
-    it("#pal02-01b GET 200 YES: Returns a sentence where adjective agrees with noun in plural.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({ sentenceNumber: 56 })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.palette).to.be.a("String");
-          expect([
-            "Czerwoni chłopcy.",
-            "Czerwoni chłopacy.",
-            "Czerwoni chłopaki.",
-            "Czerwone kobiety.",
-          ]).to.include(res.body.palette);
-          console.log({ palette: res.body.palette });
+    it("#api-02 Responds 405 if any other methods are used at this endpoint", () => {
+      const url = "/api";
+      return Promise.all([
+        request(app).del(url),
+        request(app).patch(url),
+        request(app).post(url),
+      ]).then((resArr) => {
+        resArr.forEach((response) => {
+          expect(405);
         });
+      });
     });
   });
 });

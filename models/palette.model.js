@@ -44,10 +44,7 @@ exports.fetchPalette = (req) => {
       };
     });
 
-    // sentenceFormulasCopy[levelNumber] = {
-    //   ...sentenceFormulasCopy[levelNumber],
-    //   ...dummySentenceFormulas[levelNumber],
-    // };
+    sentenceFormulasCopy = dummySentenceFormulas;
   }
 
   //Get the SF by filtering the SF list by req.body.sfsymbol
@@ -60,9 +57,18 @@ exports.fetchPalette = (req) => {
 
   //LATER: If a level is specified, and random is specified, pick a random SF from that level.
 
-  let sentenceFormula = req.body.sentenceFormulaSymbol
-    ? req.body.sentenceFormulaSymbol
-    : sentenceFormulasCopy[levelNumber][sentenceNumber].formula;
+  // console.log({ levelNumber, sentenceNumber });
+  // console.log({ SFC: sentenceFormulasCopy[levelNumber][sentenceNumber] });
+
+  let sentenceObject = req.body.sentenceFormulaSymbol
+    ? scUtils.findObjectInNestedObject(sentenceFormulasCopy, {
+        symbol: req.body.sentenceFormulaSymbol,
+      })
+    : sentenceFormulasCopy[levelNumber][sentenceNumber];
+
+  let sentenceFormula = sentenceObject.formula;
+
+  // console.log({ sentenceFormula });
 
   // We take tags to be potentially multiple in both Source and Spec.
   // We take keys to be potentially multiple in Spec, but always singular in Source.

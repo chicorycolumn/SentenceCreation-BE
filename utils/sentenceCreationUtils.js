@@ -105,8 +105,6 @@ exports.filterOutDefectiveInflections = (
         routesByLevel
       );
 
-      // console.log({ inflectionPathsInRequirements, inflectionPathsInSource });
-
       return inflectionPathsInRequirements.some((inflectionPathReq) =>
         inflectionPathsInSource.some((inflectionPathSou) => {
           return exports.areTwoFlatArraysEqual(
@@ -205,44 +203,50 @@ exports.extractNestedRoutes = (source) => {
   }
 };
 
-exports.findFirstObjectInOnceNestedObject = (
-  source,
-  identifyingData,
-  levelsOfNesting
-) => {
-  //The values in identifyingData can only be numbers, strings, or arrays of such.
-  let result = null;
+exports.findObjectInNestedObject = (source, identifyingData) => {
+  let res = null;
+  recursivelySearch(source, identifyingData);
+  return res;
 
-  Object.keys(source).forEach((level) => {
-    if (result) {
+  function recursivelySearch(source, identifyingData) {
+    if (res) {
       return;
     }
-    // console.log(Object.values(source[level]))
-    // console.log(Object.keys(identifyingData))
 
-    result = Object.values(source[level]).find((object) => {
-      // return object === "men"
-      return Object.keys(identifyingData).every((key) => {
-        if (
-          typeof identifyingData[key] === "number" ||
-          typeof identifyingData[key] === "string"
-        ) {
-          return object[key] === identifyingData[key];
-        } else if (
-          typeof identifyingData[key] === "object" &&
-          Array.isArray(identifyingData[key]) &&
-          typeof object[key] === "object" &&
-          Array.isArray(object[key])
-        ) {
-          return (
-            object[key].every((item) => identifyingData[key].includes(item)) &&
-            identifyingData[key].every((item) => object[key].includes(item)) &&
-            object[key].length === identifyingData[key].length
-          );
+    Object.keys(source).forEach((key) => {
+      let value = source[key];
+      if (exports.isObject(value)) {
+        if (exports.doKeyValuesMatch(value, identifyingData)) {
+          res = value;
+        } else {
+          recursivelySearch(value, identifyingData);
         }
-      });
+      }
     });
-  });
+  }
+};
 
-  return result || null;
+exports.doTwoFlatArraysMatchAllValues = (arr1, arr2) => {
+  return (
+    arr1.every((item) => arr2.includes(item)) &&
+    arr2.every((item) => arr1.includes(item)) &&
+    arr1.length === arr2.length
+  );
+};
+
+exports.doKeyValuesMatch = (object, keyValues) => {
+  return Object.keys(keyValues).every((key) => {
+    if (
+      typeof keyValues[key] === "number" ||
+      typeof keyValues[key] === "string"
+    ) {
+      return object[key] === keyValues[key];
+    } else if (Array.isArray(keyValues[key]) && Array.isArray(object[key])) {
+      return exports.doTwoFlatArraysMatchAllValues(object[key], keyValues[key]);
+    }
+  });
+};
+
+exports.isObject = (item) => {
+  return typeof item === "object" && !Array.isArray(item);
 };

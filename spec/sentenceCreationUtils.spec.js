@@ -2,10 +2,10 @@ const { expect } = require("chai");
 const {
   extractNestedRoutes,
   concoctNestedRoutes,
-  findFirstObjectInOnceNestedObject,
+  findObjectInNestedObject,
 } = require("../utils/sentenceCreationUtils.js");
 
-describe.only("findFirstObjectInOnceNestedObject", () => {
+describe("findObjectInNestedObject", () => {
   let testObj1 = {
     level01: {
       1: {
@@ -50,20 +50,58 @@ describe.only("findFirstObjectInOnceNestedObject", () => {
       },
     },
   };
+  let testObj2 = {
+    1: { 2: "dwa", 3: "trzy" },
+    4: [4, 44, 444],
+    5: {
+      6: {
+        7: {
+          symbol: "my labrador",
+          formula: ["my", 123, "labrador", 456],
+        },
+        8: {
+          9: "dziewiEC",
+          10: {
+            1: {
+              symbol: "my house",
+              formula: ["my", 123, "house", 456],
+            },
+            2: {
+              symbol: "my car",
+              formula: ["my", 123, "car", 456],
+            },
+          },
+        },
+        11: "jedenaScie",
+        12: {
+          symbol: "my bird",
+          formula: ["my", 123, "bird", 456],
+        },
+      },
+      13: {
+        1: {
+          symbol: "my aunt",
+          formula: ["my", 1, "aunt", 1],
+          id: "aunt1",
+        },
+        2: {
+          symbol: "my aunt",
+          formula: ["my", 2, "aunt", 2],
+          id: "aunt2",
+        },
+      },
+    },
+  };
 
-  it("#scu3.1 Returns null when no matching object can be found.", () => {
+  it("#scu3.1 Returns null from one level of nesting, when no matching object can be found.", () => {
     const input1 = testObj1;
     const input2 = { symbol: "nonexistent symbol" };
-    const input3 = 1;
-    expect(findFirstObjectInOnceNestedObject(input1, input2, input3)).to.eql(
-      null
-    );
+    expect(findObjectInNestedObject(input1, input2)).to.eql(null);
   });
   it("#scu3.2a Correctly return object from one level of nesting, finding by matching a string.", () => {
     const input1 = testObj1;
     const input2 = { symbol: "my bird" };
-    const input3 = 1;
-    expect(findFirstObjectInOnceNestedObject(input1, input2, input3)).to.eql({
+    expect(findObjectInNestedObject(input1, input2)).to.eql({
       symbol: "my bird",
       formula: ["my", 123, "bird", 456],
     });
@@ -71,20 +109,51 @@ describe.only("findFirstObjectInOnceNestedObject", () => {
   it("#scu3.2b Correctly return object from one level of nesting, finding by matching an array.", () => {
     const input1 = testObj1;
     const input2 = { formula: ["my", 123, "house", 456] };
-    const input3 = 1;
-    expect(findFirstObjectInOnceNestedObject(input1, input2, input3)).to.eql({
+    expect(findObjectInNestedObject(input1, input2)).to.eql({
       symbol: "my house",
       formula: ["my", 123, "house", 456],
     });
   });
-  it("#scu3.2b Correctly return object from one level of nesting, finding by matching multiple values.", () => {
+  it("#scu3.2c Correctly return object from one level of nesting, finding by matching multiple values.", () => {
     const input1 = testObj1;
     const input2 = {
       symbol: "my aunt",
       formula: ["my", 2, "aunt", 2],
     };
-    const input3 = 1;
-    expect(findFirstObjectInOnceNestedObject(input1, input2, input3)).to.eql({
+    expect(findObjectInNestedObject(input1, input2)).to.eql({
+      symbol: "my aunt",
+      formula: ["my", 2, "aunt", 2],
+      id: "aunt2",
+    });
+  });
+  it("#scu3.3 Returns null from nested object when no matching object can be found.", () => {
+    const input1 = testObj2;
+    const input2 = { symbol: "nonexistent symbol" };
+    expect(findObjectInNestedObject(input1, input2)).to.eql(null);
+  });
+  it("#scu3.3a Correctly return object from multi nesting, finding by matching a string.", () => {
+    const input1 = testObj2;
+    const input2 = { symbol: "my bird" };
+    expect(findObjectInNestedObject(input1, input2)).to.eql({
+      symbol: "my bird",
+      formula: ["my", 123, "bird", 456],
+    });
+  });
+  it("#scu3.3b Correctly return object from multi nesting, finding by matching an array.", () => {
+    const input1 = testObj2;
+    const input2 = { formula: ["my", 123, "house", 456] };
+    expect(findObjectInNestedObject(input1, input2)).to.eql({
+      symbol: "my house",
+      formula: ["my", 123, "house", 456],
+    });
+  });
+  it("#scu3.3c Correctly return object from multi nesting, finding by matching multiple values.", () => {
+    const input1 = testObj2;
+    const input2 = {
+      symbol: "my aunt",
+      formula: ["my", 2, "aunt", 2],
+    };
+    expect(findObjectInNestedObject(input1, input2)).to.eql({
       symbol: "my aunt",
       formula: ["my", 2, "aunt", 2],
       id: "aunt2",
