@@ -204,3 +204,45 @@ exports.extractNestedRoutes = (source) => {
     }
   }
 };
+
+exports.findFirstObjectInOnceNestedObject = (
+  source,
+  identifyingData,
+  levelsOfNesting
+) => {
+  //Just use numbers and strings as values in identifyingData
+  let result = null;
+
+  Object.keys(source).forEach((level) => {
+    if (result) {
+      return;
+    }
+    // console.log(Object.values(source[level]))
+    // console.log(Object.keys(identifyingData))
+
+    result = Object.values(source[level]).find((object) => {
+      // return object === "men"
+      return Object.keys(identifyingData).every((key) => {
+        if (
+          typeof identifyingData[key] === "number" ||
+          typeof identifyingData[key] === "string"
+        ) {
+          return object[key] === identifyingData[key];
+        } else if (
+          typeof identifyingData[key] === "object" &&
+          Array.isArray(identifyingData[key]) &&
+          typeof object[key] === "object" &&
+          Array.isArray(object[key])
+        ) {
+          return (
+            object[key].every((item) => identifyingData[key].includes(item)) &&
+            identifyingData[key].every((item) => object[key].includes(item)) &&
+            object[key].length === identifyingData[key].length
+          );
+        }
+      });
+    });
+  });
+
+  return result;
+};

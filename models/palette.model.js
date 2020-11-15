@@ -44,14 +44,25 @@ exports.fetchPalette = (req) => {
       };
     });
 
-    sentenceFormulasCopy[levelNumber] = {
-      ...sentenceFormulasCopy[levelNumber],
-      ...dummySentenceFormulas[levelNumber],
-    };
+    // sentenceFormulasCopy[levelNumber] = {
+    //   ...sentenceFormulasCopy[levelNumber],
+    //   ...dummySentenceFormulas[levelNumber],
+    // };
   }
 
-  let sentenceFormula =
-    sentenceFormulasCopy[levelNumber][sentenceNumber].formula;
+  //Get the SF by filtering the SF list by req.body.sfsymbol
+
+  //If req.body.useDummy, then do same as above but with dummySFlist to select from. No need to unite the SF lists.
+
+  //If no req.body.sfsymbol, but yes req.body.snumber, then filter for that.
+
+  //If neither, then use default snumber.
+
+  //LATER: If a level is specified, and random is specified, pick a random SF from that level.
+
+  let sentenceFormula = req.body.sentenceFormulaSymbol
+    ? req.body.sentenceFormulaSymbol
+    : sentenceFormulasCopy[levelNumber][sentenceNumber].formula;
 
   // We take tags to be potentially multiple in both Source and Spec.
   // We take keys to be potentially multiple in Spec, but always singular in Source.

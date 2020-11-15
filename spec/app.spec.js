@@ -34,7 +34,7 @@ describe("/api", () => {
   });
 
   describe("/palette - Stage 1: Nouns", () => {
-    it("#pal-01 GET 200 YES: Returns a sentence", () => {
+    it("#pal01-01 GET 200 YES: Returns a sentence", () => {
       return request(app)
         .get("/api/palette")
         .expect(200)
@@ -43,7 +43,7 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    it("#pal-02a GET 200 NO: Returns message to say no sentence can be created from specifications.", () => {
+    it("#pal01-02a GET 200 NO: Returns message to say no sentence can be created from specifications.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -58,7 +58,7 @@ describe("/api", () => {
           expect(res.body.palette).to.equal(null);
         });
     });
-    it("#pal-02b GET 200 NO: Returns message to say no sentence could possibly be created from specifications.", () => {
+    it("#pal01-02b GET 200 NO: Returns message to say no sentence could possibly be created from specifications.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -73,7 +73,7 @@ describe("/api", () => {
           expect(res.body.palette).to.equal(null);
         });
     });
-    it("#pal-03a GET 200 NO: Returns message to say no sentence, if dummy noun was successfully filtered out.", () => {
+    it("#pal01-03a GET 200 NO: Returns message to say no sentence, if dummy noun was successfully filtered out.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -88,7 +88,7 @@ describe("/api", () => {
           expect(res.body.palette).to.equal(null);
         });
     });
-    it("#pal-03b GET 200 NO: Returns message to say no sentence, if dummy noun was successfully filtered out.", () => {
+    it("#pal01-03b GET 200 NO: Returns message to say no sentence, if dummy noun was successfully filtered out.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -103,7 +103,7 @@ describe("/api", () => {
           expect(res.body.palette).to.equal(null);
         });
     });
-    it("#pal-03c GET 200 YES: Returns sentence, as dummy noun did not need to be filtered out.", () => {
+    it("#pal01-03c GET 200 YES: Returns sentence, as dummy noun did not need to be filtered out.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -116,7 +116,7 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    it("#pal-03d GET 200 YES: Returns successful sentence 100% of the time, rather than 33%, as one of the dummy nouns should have been filtered out.", () => {
+    it("#pal01-03d GET 200 YES: Returns successful sentence 100% of the time, rather than 33%, as one of the dummy nouns should have been filtered out.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -129,7 +129,7 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    it("#pal-03e GET 200 NO: Returns message to say no sentence, as dummy noun should have been filtered out.", () => {
+    it("#pal01-03e GET 200 NO: Returns message to say no sentence, as dummy noun should have been filtered out.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -144,7 +144,7 @@ describe("/api", () => {
           expect(res.body.palette).to.equal(null);
         });
     });
-    it("#pal-03f GET 200 YES: Returns successful sentence 100% of the time, even though I've tried to trick it, by asking for Singular and Loc, and including an object that does indeed have Singular but Loc is not within, and does indeed have a Loc but it is inside Plural.", () => {
+    it("#pal01-03f GET 200 YES: Returns successful sentence 100% of the time, even though I've tried to trick it, by asking for Singular and Loc, and including an object that does indeed have Singular but Loc is not within, and does indeed have a Loc but it is inside Plural.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -157,7 +157,7 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    it("#pal-04a GET 200 YES: Returns a sentence where a tantum plurale was allowed, as no particular grammatical number was requested.", () => {
+    it("#pal01-04a GET 200 YES: Returns a sentence where a tantum plurale was allowed, as no particular grammatical number was requested.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -170,7 +170,7 @@ describe("/api", () => {
           expect(res.body.palette.split(" ").reverse()[0]).to.equal("majtki.");
         });
     });
-    it("#pal-04b GET 200 NO: Returns a sentence where a tantum plurale was not allowed, as singular grammatical number was requested.", () => {
+    it("#pal01-04b GET 200 NO: Returns a sentence where a tantum plurale was not allowed, as singular grammatical number was requested.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -184,7 +184,7 @@ describe("/api", () => {
           expect(res.body.palette).to.equal(null);
         });
     });
-    it("#pal-04c GET 200 YES: Returns a sentence where a tantum plurale was allowed, as either singular or plural grammatical number was requested.", () => {
+    it("#pal01-04c GET 200 YES: Returns a sentence where a tantum plurale was allowed, as either singular or plural grammatical number was requested.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -197,7 +197,7 @@ describe("/api", () => {
           expect(res.body.palette.split(" ").reverse()[0]).to.equal("majtki.");
         });
     });
-    it("#pal-05 GET 200 YES: Returns a sentence where end of inflection chain is array.", () => {
+    it("#pal01-05 GET 200 YES: Returns a sentence where end of inflection chain is array.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -209,7 +209,7 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    it("#pal-06 Responds 405 if any other methods are used at this endpoint", () => {
+    it("#pal01-06 Responds 405 if any other methods are used at this endpoint", () => {
       const url = "/api/palette";
       return Promise.all([
         request(app).del(url),
@@ -223,8 +223,8 @@ describe("/api", () => {
     });
   });
 
-  describe.only("/palette - Stage 2: Adjectives", () => {
-    it("#pal-01 GET 200 YES: Returns a sentence where adjective agrees with noun in singular.", () => {
+  describe("/palette - Stage 2: Adjectives", () => {
+    it.only("#pal02-01a GET 200 YES: Returns a sentence where adjective agrees with noun in singular.", () => {
       return request(app)
         .get("/api/palette")
         .send({ sentenceNumber: 55 })
@@ -234,6 +234,22 @@ describe("/api", () => {
           expect(["Czerwona cebula.", "Czerwone jabłko."]).to.include(
             res.body.palette
           );
+          console.log({ palette: res.body.palette });
+        });
+    });
+    it("#pal02-01b GET 200 YES: Returns a sentence where adjective agrees with noun in plural.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({ sentenceNumber: 56 })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          expect([
+            "Czerwoni chłopcy.",
+            "Czerwoni chłopacy.",
+            "Czerwoni chłopaki.",
+            "Czerwone kobiety.",
+          ]).to.include(res.body.palette);
           console.log({ palette: res.body.palette });
         });
     });

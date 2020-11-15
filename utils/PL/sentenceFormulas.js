@@ -105,6 +105,26 @@ const level01 = {
       },
     ],
   },
+  56: {
+    symbol: "red girls",
+    formula: [
+      {
+        wordtype: "adjective",
+        manTags: ["colour"],
+        optTags: [],
+        agreeWith: "nou-1",
+      },
+      {
+        agreeId: "nou-1",
+        wordtype: "noun",
+        manTags: ["person"],
+        optTags: [],
+        gcase: ["nom"],
+        number: ["plural"],
+        gender: [],
+      },
+    ],
+  },
 };
 
 exports.sentenceFormulas = { level01 };
