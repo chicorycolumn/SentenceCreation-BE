@@ -1,7 +1,7 @@
 const level01 = {
   dummy01: [
     {
-      type: "noun",
+      wordtype: "noun",
       manTags: ["nonexistent tag"],
       optTags: [],
       gcase: ["nom"],
@@ -12,7 +12,7 @@ const level01 = {
   ],
   dummy02: [
     {
-      type: "noun",
+      wordtype: "noun",
       manTags: [],
       optTags: [],
       gcase: ["nonexistent gcase"],
@@ -23,7 +23,7 @@ const level01 = {
   ],
   dummy03: [
     {
-      type: "noun",
+      wordtype: "noun",
       manTags: ["dummy"],
       optTags: [],
       gcase: ["nom"],
@@ -34,7 +34,7 @@ const level01 = {
   ],
   dummy04: [
     {
-      type: "noun",
+      wordtype: "noun",
       manTags: ["dummy"],
       optTags: [],
       gcase: ["nom"],
@@ -45,7 +45,7 @@ const level01 = {
   ],
   dummy05: [
     {
-      type: "noun",
+      wordtype: "noun",
       manTags: ["dummy"],
       optTags: [],
       gcase: ["nom", "loc"],
@@ -56,7 +56,7 @@ const level01 = {
   ],
   dummy06: [
     {
-      type: "noun",
+      wordtype: "noun",
       manTags: ["dummy"],
       optTags: [],
       gcase: ["ins"],
@@ -67,7 +67,7 @@ const level01 = {
   ],
   dummy07: [
     {
-      type: "noun",
+      wordtype: "noun",
       manTags: ["dummy2"],
       optTags: [],
       gcase: ["loc"],
@@ -78,7 +78,7 @@ const level01 = {
   ],
   dummy08: [
     {
-      type: "noun",
+      wordtype: "noun",
       manTags: ["dummy3"],
       optTags: [],
       gcase: ["loc"],

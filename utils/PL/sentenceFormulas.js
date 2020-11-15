@@ -1,7 +1,7 @@
 const level01 = {
   50: [
     {
-      type: "noun",
+      wordtype: "noun",
       manTags: ["person"],
       optTags: [],
       gcase: ["nom"],
@@ -10,7 +10,7 @@ const level01 = {
     },
     "je",
     {
-      type: "noun",
+      wordtype: "noun",
       manTags: ["edible"],
       optTags: [],
       gcase: ["acc"],
@@ -20,7 +20,7 @@ const level01 = {
   ],
   51: [
     {
-      type: "noun",
+      wordtype: "noun",
       manTags: ["person"],
       optTags: [],
       gcase: ["nom"],
@@ -29,7 +29,7 @@ const level01 = {
     },
     "ma na sobie",
     {
-      type: "noun",
+      wordtype: "noun",
       manTags: ["wearable"],
       optTags: [],
       gcase: ["acc"],
@@ -39,7 +39,7 @@ const level01 = {
   ],
   52: [
     {
-      type: "noun",
+      wordtype: "noun",
       manTags: ["wearable"],
       optTags: [],
       gcase: ["nom"],
@@ -51,7 +51,7 @@ const level01 = {
   53: [
     "Często noszę",
     {
-      type: "noun",
+      wordtype: "noun",
       manTags: ["wearable"],
       optTags: [],
       gcase: ["acc"],
@@ -61,7 +61,7 @@ const level01 = {
   ],
   54: [
     {
-      type: "noun",
+      wordtype: "noun",
       manTags: ["person"],
       optTags: [],
       gcase: ["nom"],

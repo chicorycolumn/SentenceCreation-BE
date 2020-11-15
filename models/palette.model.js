@@ -12,7 +12,10 @@ exports.fetchPalette = (req) => {
   let defaultLevelNumber = "level01";
   let levelNumber = req.body.levelNumber || defaultLevelNumber;
 
-  let inflectionChain = ["number", "gcase"];
+  let inflectionChainsPL = {
+    noun: ["number", "gcase"],
+    adjective: ["number", "gender", "gcase"],
+  };
   let errorInSentenceCreation = false;
   let resultArr = [];
 
@@ -56,7 +59,7 @@ exports.fetchPalette = (req) => {
     if (typeof spec === "string") {
       resultArr.push(spec);
     } else {
-      let source = wordsCopy[scUtils.giveSetKey(spec.type)];
+      let source = wordsCopy[scUtils.giveSetKey(spec.wordtype)];
       let matches = [];
 
       matches = scUtils.filterByTag(source, spec.manTags, true);
@@ -65,7 +68,7 @@ exports.fetchPalette = (req) => {
       matches = scUtils.filterOutDefectiveInflections(
         matches,
         spec,
-        inflectionChain
+        inflectionChainsPL
       );
 
       // console.log({ matches });
@@ -77,7 +80,7 @@ exports.fetchPalette = (req) => {
         let selectedWord = scUtils.filterWithinObjectByNestedKeys(
           selectedLemmaObj.inflections,
           spec,
-          inflectionChain
+          inflectionChainsPL
         );
 
         if (!selectedWord) {

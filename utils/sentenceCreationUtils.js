@@ -2,8 +2,6 @@ exports.selectRandom = (array) => {
   return array[Math.floor(Math.random() * array.length)];
 };
 
-const { selectRandom } = exports;
-
 exports.capitaliseFirst = (string) => {
   return string[0].toUpperCase() + string.slice(1);
 };
@@ -36,7 +34,12 @@ exports.filterByKey = (sourceArr, specArr, key) => {
   }
 };
 
-exports.filterWithinObjectByNestedKeys = (source, specObj, inflectionChain) => {
+exports.filterWithinObjectByNestedKeys = (
+  source,
+  specObj,
+  inflectionChainRefObj
+) => {
+  let inflectionChain = inflectionChainRefObj[specObj.wordtype];
   let requirementArrs = inflectionChain.map((key) => specObj[key]);
   let errorInDrilling = false;
 
@@ -54,7 +57,7 @@ exports.filterWithinObjectByNestedKeys = (source, specObj, inflectionChain) => {
     if (typeof source === "string") {
       return source;
     } else {
-      return selectRandom(source);
+      return exports.selectRandom(source);
     }
   }
 
@@ -69,7 +72,7 @@ exports.filterWithinObjectByNestedKeys = (source, specObj, inflectionChain) => {
     }
 
     if (validKeys.length) {
-      return source[selectRandom(validKeys)];
+      return source[exports.selectRandom(validKeys)];
     } else {
       console.log(
         "filterWithinObjectByNestedKeys fxn says Error in utils. No valid keys at some level of lemma object."
@@ -82,8 +85,9 @@ exports.filterWithinObjectByNestedKeys = (source, specObj, inflectionChain) => {
 exports.filterOutDefectiveInflections = (
   sourceArr,
   specObj,
-  inflectionChain
+  inflectionChainRefObj
 ) => {
+  let inflectionChain = inflectionChainRefObj[specObj.wordtype];
   let requirementArrs = inflectionChain.map((key) => specObj[key]);
 
   return sourceArr.filter((lObj) => {
