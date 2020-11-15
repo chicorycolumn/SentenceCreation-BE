@@ -224,7 +224,7 @@ describe("/api", () => {
   });
 
   describe("/palette - Stage 2: Adjectives", () => {
-    it.only("#pal02-01a GET 200 YES: Returns a sentence where adjective agrees with noun in singular.", () => {
+    it("#pal02-01a GET 200 YES: Returns a sentence where adjective agrees with noun in singular.", () => {
       return request(app)
         .get("/api/palette")
         .send({ sentenceNumber: 55 })

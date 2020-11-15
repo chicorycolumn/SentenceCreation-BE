@@ -2,7 +2,95 @@ const { expect } = require("chai");
 const {
   extractNestedRoutes,
   concoctNestedRoutes,
+  findFirstObjectInOnceNestedObject,
 } = require("../utils/sentenceCreationUtils.js");
+
+describe.only("findFirstObjectInOnceNestedObject", () => {
+  let testObj1 = {
+    level01: {
+      1: {
+        symbol: "my labrador",
+        formula: ["my", 123, "labrador", 456],
+      },
+      2: {
+        symbol: "my siamese",
+        formula: ["my", 123, "siamese", 456],
+      },
+    },
+    level02: {
+      1: {
+        symbol: "my fish",
+        formula: ["my", 123, "fish", 456],
+      },
+      2: {
+        symbol: "my bird",
+        formula: ["my", 123, "bird", 456],
+      },
+    },
+    level03: {
+      1: {
+        symbol: "my house",
+        formula: ["my", 123, "house", 456],
+      },
+      2: {
+        symbol: "my car",
+        formula: ["my", 123, "car", 456],
+      },
+    },
+    level04: {
+      1: {
+        symbol: "my aunt",
+        formula: ["my", 1, "aunt", 1],
+        id: "aunt1",
+      },
+      2: {
+        symbol: "my aunt",
+        formula: ["my", 2, "aunt", 2],
+        id: "aunt2",
+      },
+    },
+  };
+
+  it("#scu3.1 Returns null when no matching object can be found.", () => {
+    const input1 = testObj1;
+    const input2 = { symbol: "nonexistent symbol" };
+    const input3 = 1;
+    expect(findFirstObjectInOnceNestedObject(input1, input2, input3)).to.eql(
+      null
+    );
+  });
+  it("#scu3.2a Correctly return object from one level of nesting, finding by matching a string.", () => {
+    const input1 = testObj1;
+    const input2 = { symbol: "my bird" };
+    const input3 = 1;
+    expect(findFirstObjectInOnceNestedObject(input1, input2, input3)).to.eql({
+      symbol: "my bird",
+      formula: ["my", 123, "bird", 456],
+    });
+  });
+  it("#scu3.2b Correctly return object from one level of nesting, finding by matching an array.", () => {
+    const input1 = testObj1;
+    const input2 = { formula: ["my", 123, "house", 456] };
+    const input3 = 1;
+    expect(findFirstObjectInOnceNestedObject(input1, input2, input3)).to.eql({
+      symbol: "my house",
+      formula: ["my", 123, "house", 456],
+    });
+  });
+  it("#scu3.2b Correctly return object from one level of nesting, finding by matching multiple values.", () => {
+    const input1 = testObj1;
+    const input2 = {
+      symbol: "my aunt",
+      formula: ["my", 2, "aunt", 2],
+    };
+    const input3 = 1;
+    expect(findFirstObjectInOnceNestedObject(input1, input2, input3)).to.eql({
+      symbol: "my aunt",
+      formula: ["my", 2, "aunt", 2],
+      id: "aunt2",
+    });
+  });
+});
 
 describe("concoctNestedRoutes", () => {
   xit("#scu2.1a Throw error for empty input.", () => {

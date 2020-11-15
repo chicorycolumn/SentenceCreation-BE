@@ -210,7 +210,7 @@ exports.findFirstObjectInOnceNestedObject = (
   identifyingData,
   levelsOfNesting
 ) => {
-  //Just use numbers and strings as values in identifyingData
+  //The values in identifyingData can only be numbers, strings, or arrays of such.
   let result = null;
 
   Object.keys(source).forEach((level) => {
@@ -244,5 +244,5 @@ exports.findFirstObjectInOnceNestedObject = (
     });
   });
 
-  return result;
+  return result || null;
 };
