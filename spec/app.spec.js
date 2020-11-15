@@ -7,8 +7,8 @@ const { expect } = require("chai");
 // const endpointsCopy = require("../endpoints.json");
 
 describe("/api", () => {
-  after(() => {});
-  beforeEach(() => {});
+  // after(() => {});
+  // beforeEach(() => {});
 
   describe("/", () => {
     it("#api-01 GET 200 Serves up endpoints", () => {
@@ -33,7 +33,7 @@ describe("/api", () => {
     });
   });
 
-  describe("/palette", () => {
+  describe("/palette - Stage 1: Nouns", () => {
     it("#pal-01 GET 200 YES: Returns a sentence", () => {
       return request(app)
         .get("/api/palette")
@@ -220,6 +220,22 @@ describe("/api", () => {
           expect(405);
         });
       });
+    });
+  });
+
+  describe.only("/palette - Stage 2: Adjectives", () => {
+    it("#pal-01 GET 200 YES: Returns a sentence where adjective agrees with noun in singular.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({ sentenceNumber: 55 })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          expect(["Czerwona cebula.", "Czerwone jabłko."]).to.include(
+            res.body.palette
+          );
+          console.log({ palette: res.body.palette });
+        });
     });
   });
 });

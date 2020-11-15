@@ -31,9 +31,9 @@ exports.fetchPalette = (req) => {
   sentenceFormulasCopy[levelNumber] = {};
   let sentenceFormulasKeys = Object.keys(sentenceFormulas[levelNumber]);
   sentenceFormulasKeys.forEach((sentenceFormulasKey) => {
-    sentenceFormulasCopy[levelNumber][sentenceFormulasKey] = [
+    sentenceFormulasCopy[levelNumber][sentenceFormulasKey] = {
       ...sentenceFormulas[levelNumber][sentenceFormulasKey],
-    ];
+    };
   });
 
   if (req.body.useDummy) {
@@ -50,7 +50,8 @@ exports.fetchPalette = (req) => {
     };
   }
 
-  let sentenceFormula = sentenceFormulasCopy[levelNumber][sentenceNumber];
+  let sentenceFormula =
+    sentenceFormulasCopy[levelNumber][sentenceNumber].formula;
 
   // We take tags to be potentially multiple in both Source and Spec.
   // We take keys to be potentially multiple in Spec, but always singular in Source.
