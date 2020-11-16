@@ -26,22 +26,34 @@ exports.giveSetKey = (word) => {
   return word + "Set";
 };
 
-exports.filterByKey = (sourceArr, specArr, key) => {
-  if (specArr.length) {
-    return sourceArr.filter((item) => specArr.includes(item[key]));
+exports.filterByKey = (lemmaObjectArr, requirementsArr, key) => {
+  if (requirementsArr.length) {
+    return lemmaObjectArr.filter((lObj) => requirementsArr.includes(lObj[key]));
   } else {
-    return sourceArr;
+    return lemmaObjectArr;
   }
 };
 
 exports.filterWithinObjectByNestedKeys = (
   source,
-  specObj,
+  formulaChunk,
   inflectionChainRefObj
 ) => {
-  let inflectionChain = inflectionChainRefObj[specObj.wordtype];
-  let requirementArrs = inflectionChain.map((key) => specObj[key]);
+  // console.log({ source, formulaChunk, inflectionChainRefObj });
+
+  let inflectionChain = inflectionChainRefObj[formulaChunk.wordtype];
+  let requirementArrs = inflectionChain.map((key) => formulaChunk[key]);
   let errorInDrilling = false;
+
+  // console.log({ requirementArrs });
+
+  //Look for if anything has an agreementId, if so, select that one FIRST.
+  //THen the ones that are dependent on it, can get their reqs filled from that.
+  //So currently, requirementArrs for an adjective lObj is [undef, undef, undef],
+  //because the formulaChunk for the adjective doesn't specify a number, gender, or case.
+  //We need to get the number, gender, and case from the head noun once it's selected,
+  //then put those deets onto the formulaChunk for the adjective.
+  //Hmm... have the formulaChunk indeed been copied without ref? Yes, now it has, for this fxn.
 
   requirementArrs.forEach((requirementArr) => {
     source = drillDownOneLevel(source, requirementArr);
@@ -159,21 +171,18 @@ exports.concoctNestedRoutes = (routesByLevelTarget, routesByLevelSource) => {
 };
 
 exports.buildSentenceFromArray = (arr) => {
-  console.log(arr);
+  // console.log(arr);
 
   let selectedWords = arr.map((obj) => obj.selectedWord);
-  let selectedLemmaObjs = arr.map((obj) => obj.selectedLemmaObj);
+  let selectedLemmaObjs = arr.map(
+    (obj) => Object.keys(obj.selectedLemmaObj).length
+  );
 
-  if (
-    selectedLemmaObjs.some((lObj) => {
-      if (lObj) {
-        return lObj.agreeWith;
-      }
-    })
-  ) {
+  if (selectedLemmaObjs.some((lObj) => lObj && lObj.agreeWith)) {
+    // console.log(arr);
     //I see there are agreement notes to work through.
     //Please add any agreement info from sentenceFormula chunks to the relevant lemmaObjs.
-    //
+    //You will find all necessary information inside arr, in the right order.
   } else {
     //There are no agreement notes to work through.
     let producedSentence = exports.capitaliseFirst(

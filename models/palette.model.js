@@ -57,20 +57,62 @@ exports.fetchPalette = (req) => {
 
   let sentenceFormula = sentenceObject.formula;
 
+  //Instead of forEach, which iterates through the chunks in order,
+  //we should first select any chunk with an agreeId, and run the fxn for that.
+  //Then we insert the finished result into the result arr, AT THE SAME INDEX.
+  //So "My red shirt" where shirt is the head noun and thus has the agreeId, the shirt chunk
+  //gets processed in this loop below. It was at index 2 in sentenceFormulas, and so
+  //it gets put in at idnex 2 in res arr, so res arr looks like [undef, undef, "koszula"]
+  //Then we go to any chunks which have that agreeId string as their agreeWith value, and do the same.
+  //In the meantime, we'll need to have stored the gender number case data from shirt.
+
   sentenceFormula.forEach((formulaChunk) => {
+    getSelectedWordAndPutInArray(formulaChunk, resultArr);
+  });
+
+  let doneChunkIds = [];
+  let agreeWithIds = [];
+  sentenceFormula.forEach((chunk) => {
+    if (typeof chunk === "object" && chunk.agreeWith) {
+      agreeWithIds.push(chunk.agreeWith);
+    }
+  });
+  agreeWithIds = Array.from(new Set(agreeWithIds));
+
+  //Now, instead of the sentenceFormula.forEach up up above, we'll do this:
+  //First do all the chunks with each agreeWithId as their chunkId
+  //Then do the chunks that have "agreeWith" as a key.
+  //Then do all other chunks.
+
+  function getSelectedWordAndPutInArray(formulaChunk, resultArr) {
     if (typeof formulaChunk === "string") {
       resultArr.push({
-        selectedLemmaObj: null,
+        selectedLemmaObj: {},
         selectedWord: formulaChunk,
         formulaChunk,
       });
     } else {
+      //And in here, we look for if this has an agreeWith key, in which case
+      //we find its head word, and get the number gender case from that.
+
       let source = wordsCopy[scUtils.giveSetKey(formulaChunk.wordtype)];
       let matches = [];
 
       matches = scUtils.filterByTag(source, formulaChunk.manTags, true);
       matches = scUtils.filterByTag(matches, formulaChunk.optTags, false);
-      matches = scUtils.filterByKey(matches, formulaChunk.gender, "gender");
+
+      // console.log({ formulaChunk });
+
+      //Make this more programmatic, regarding wordtypes per language.
+
+      if (formulaChunk.wordtype === "noun") {
+        matches = scUtils.filterByKey(
+          matches,
+          formulaChunk["gender"],
+          "gender"
+        );
+      }
+
       matches = scUtils.filterOutDefectiveInflections(
         matches,
         formulaChunk,
@@ -82,7 +124,7 @@ exports.fetchPalette = (req) => {
 
         let selectedWord = scUtils.filterWithinObjectByNestedKeys(
           selectedLemmaObj.inflections,
-          formulaChunk,
+          { ...formulaChunk },
           inflectionChainsPL
         );
 
@@ -102,12 +144,11 @@ exports.fetchPalette = (req) => {
         return false;
       }
     }
-  });
+  }
+
+  console.log({ resultArr });
 
   let finalSentence = scUtils.buildSentenceFromArray(resultArr);
-
-  console.log({ finalSentence });
-
   let responseObj = {};
 
   if (errorInSentenceCreation) {

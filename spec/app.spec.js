@@ -11,6 +11,7 @@ describe("/api", () => {
   // beforeEach(() => {});
 
   xdescribe("/palette - Stage 2: Adjectives", () => {
+    // describe.only("/palette - Stage 2: Adjectives", () => {
     it("#pal02-01a GET 200 YES: Returns a sentence where adjective agrees with noun in singular.", () => {
       return request(app)
         .get("/api/palette")
@@ -27,7 +28,7 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    it("#pal02-01b GET 200 YES: Returns a sentence where adjective agrees with noun in plural.", () => {
+    xit("#pal02-01b GET 200 YES: Returns a sentence where adjective agrees with noun in plural.", () => {
       return request(app)
         .get("/api/palette")
         .send({
