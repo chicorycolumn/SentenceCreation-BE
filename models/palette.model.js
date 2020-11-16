@@ -66,10 +66,6 @@ exports.fetchPalette = (req) => {
   //Then we go to any chunks which have that agreeId string as their agreeWith value, and do the same.
   //In the meantime, we'll need to have stored the gender number case data from shirt.
 
-  sentenceFormula.forEach((formulaChunk) => {
-    getSelectedWordAndPutInArray(formulaChunk, resultArr);
-  });
-
   let doneChunkIds = [];
   let agreeWithIds = [];
   sentenceFormula.forEach((chunk) => {
@@ -79,10 +75,50 @@ exports.fetchPalette = (req) => {
   });
   agreeWithIds = Array.from(new Set(agreeWithIds));
 
-  //Now, instead of the sentenceFormula.forEach up up above, we'll do this:
-  //First do all the chunks with each agreeWithId as their chunkId
-  //Then do the chunks that have "agreeWith" as a key.
-  //Then do all other chunks.
+  //ALL STEPS (of old way)
+  sentenceFormula.forEach((formulaChunk) => {
+    getSelectedWordAndPutInArray(formulaChunk, resultArr);
+  });
+
+  //STEP ONE (of new way)
+  agreeWithIds.forEach((agreeWithId) => {
+    let chunkId = agreeWithId;
+    let headChunk = sentenceFormula.find(
+      (formulaChunk) =>
+        typeof formulaChunk === "object" && formulaChunk.chunkId === chunkId
+    );
+    doneChunkIds.push(chunkId);
+    getSelectedWordAndPutInArray(headChunk, resultArr);
+  });
+
+  //STEP TWO
+  agreeWithIds.forEach((agreeWithId) => {
+    let dependentChunks = sentenceFormula.filter(
+      (formulaChunk) =>
+        typeof formulaChunk === "object" &&
+        formulaChunk.agreeWithId === agreeWithId
+    );
+    dependentChunks.forEach((dependentChunk) => {
+      doneChunkIds.push(dependentChunk.chunkId);
+      getSelectedWordAndPutInArray(dependentChunk, resultArr);
+    });
+  });
+
+  //STEP THREE
+  sentenceFormula.forEach((formulaChunk) => {
+    if (
+      typeof formulaChunk !== "object" ||
+      !doneChunkIds.includes(formulaChunk.chunkId)
+    ) {
+      // doneChunkIds.push(formulaChunk.chunkId);
+      getSelectedWordAndPutInArray(formulaChunk, resultArr);
+    }
+  });
+
+  //Now, instead of the sentenceFormula.forEach above, we'll do this:
+  //STEP 1 do all the chunks with each agreeWithId as their chunkId
+  //STEP 2 do the chunks that have "agreeWith" as a key.
+  //STEP 3 do all other chunks.
 
   function getSelectedWordAndPutInArray(formulaChunk, resultArr) {
     if (typeof formulaChunk === "string") {
