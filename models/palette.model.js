@@ -75,10 +75,10 @@ exports.fetchPalette = (req) => {
   });
   agreeWithIds = Array.from(new Set(agreeWithIds));
 
-  //ALL STEPS (of old way)
-  sentenceFormula.forEach((formulaChunk) => {
-    getSelectedWordAndPutInArray(formulaChunk, resultArr);
-  });
+  // //ALL STEPS (of old way)
+  // sentenceFormula.forEach((formulaChunk) => {
+  //   getSelectedWordAndPutInArray(formulaChunk, resultArr);
+  // });
 
   //STEP ONE (of new way)
   agreeWithIds.forEach((agreeWithId) => {
