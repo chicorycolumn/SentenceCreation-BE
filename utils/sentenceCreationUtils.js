@@ -26,23 +26,51 @@ exports.giveSetKey = (word) => {
   return word + "Set";
 };
 
-exports.filterByKey = (lemmaObjectArr, requirementsArr, key) => {
-  if (requirementsArr.length) {
-    return lemmaObjectArr.filter((lObj) => requirementsArr.includes(lObj[key]));
+exports.filterByKey = (lemmaObjectArr, requirementArr, key) => {
+  if (requirementArr.length) {
+    return lemmaObjectArr.filter((lObj) => requirementArr.includes(lObj[key]));
   } else {
     return lemmaObjectArr;
   }
 };
 
-exports.filterWithinObjectByNestedKeys = (
-  source,
+exports.filterWithinLemmaObjectByNestedKeys = (
+  lemmaObject,
   formulaChunk,
   inflectionChainRefObj
 ) => {
-  // console.log({ source, formulaChunk, inflectionChainRefObj });
+  let source = lemmaObject.inflections;
+
+  //Move the finally chosen values all copied into the formulaChunk.
+  // YES! Alphaman say do this! Edit the formulaChunk so that instead of having requirements for manTags, optTags, number, gender, case,
+  // it instead has the specific features that the selected word has.
+  // Alphaman say I've hooked it all up in this file and also palette.model now, so that the modified formula chunk gets
+  // returned into resultArr. So all you need to do here - right now - is to make sure that all features of the finally
+  // selected word get put onto formulaChunk. Don't worry, formulaChunk is already a copy without reference.
+  // You can see that this task was started a while ago, just below.
+
+  // RESOLVED Note from Alphaman: This doesn't work, because lemmaObject only has "tags", not "manTags" or "optTags",
+  // and I wouldn't want to put all the tags from lobj as replacing formchunk mantags and opttags,
+  // because I would only want the tags that they share.
+  // Oh! Right. Okay. Just replace it with the tags that they share.
+  formulaChunk.manTags = formulaChunk.manTags.filter((tag) => {
+    lemmaObject.tags.includes(tag);
+  });
+  formulaChunk.optTags = formulaChunk.optTags.filter((tag) => {
+    lemmaObject.tags.includes(tag);
+  });
+  formulaChunk["gender"] = [lemmaObject["gender"]];
+  // WRONG formulaChunk.manTags = [...lemmaObject.manTags];
+  // WRONG formulaChunk.optTags = [...lemmaObject.optTags];
 
   let inflectionChain = inflectionChainRefObj[formulaChunk.wordtype];
-  let requirementArrs = inflectionChain.map((key) => formulaChunk[key]);
+
+  // let requirementArrs = inflectionChain.map((key) => formulaChunk[key]);
+  let requirementArrs = [];
+  inflectionChain.forEach((key) => {
+    requirementArrs.push([key, formulaChunk[key]]);
+  });
+
   let errorInDrilling = false;
 
   // console.log({ requirementArrs });
@@ -55,40 +83,63 @@ exports.filterWithinObjectByNestedKeys = (
   //then put those deets onto the formulaChunk for the adjective.
   //Hmm... have the formulaChunk indeed been copied without ref? Yes, now it has, for this fxn.
 
-  requirementArrs.forEach((requirementArr) => {
-    source = drillDownOneLevel(source, requirementArr);
+  // let recordOfSelectedRequirements = [];
+  // recordOfSelectedRequirements.push(["gender", lemmaObject["gender"]]);
+
+  requirementArrs.forEach((requirementKeyedArr) => {
+    source = drillDownOneLevel(source, requirementKeyedArr);
     if (!source) {
       errorInDrilling = true;
       return false;
     }
   });
 
+  // console.log({ recordOfSelectedRequirements });
+  //Okay great, now if the current chunk is a head word, we need to output these selected reqs, to be used by dependent chunks.
+
   if (errorInDrilling) {
     return null;
   } else {
     if (typeof source === "string") {
-      return source;
+      //Return finally selected word.
+      return {
+        selectedWord: source,
+        // recordOfSelectedRequirements,
+        modifiedFormulaChunk: formulaChunk,
+      };
     } else {
-      return exports.selectRandom(source);
+      //End of inflection chain is array, so take a finally selected word at random from it.
+      return {
+        selectedWord: exports.selectRandom(source),
+        // recordOfSelectedRequirements,
+        modifiedFormulaChunk: formulaChunk,
+      };
     }
   }
 
-  function drillDownOneLevel(source, requirementArr) {
-    let sourceKeys = Object.keys(source);
-    let validKeys = [];
+  function drillDownOneLevel(source, requirementFeatureArr) {
+    let sourceFeatures = Object.keys(source);
+    let validFeatures = [];
 
-    if (requirementArr.length) {
-      validKeys = sourceKeys.filter((key) => requirementArr.includes(key));
+    let featureKey = requirementFeatureArr[0];
+    let featureValue = requirementFeatureArr[1];
+
+    if (featureValue.length) {
+      validFeatures = sourceFeatures.filter((featureSubitem) =>
+        featureValue.includes(featureSubitem)
+      );
     } else {
-      validKeys = sourceKeys;
+      validFeatures = sourceFeatures;
     }
 
-    if (validKeys.length) {
-      return source[exports.selectRandom(validKeys)];
+    if (validFeatures.length) {
+      let selectedFeature = exports.selectRandom(validFeatures);
+      // console.log({ validFeatures });
+      // console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>", [featureKey, selectedFeature]);
+      formulaChunk[featureKey] = [selectedFeature];
+      // recordOfSelectedRequirements.push([featureKey, feature]);
+      return source[selectedFeature];
     } else {
-      console.log(
-        "filterWithinObjectByNestedKeys fxn says Error in utils. No valid keys at some level of lemma object."
-      );
       return null;
     }
   }

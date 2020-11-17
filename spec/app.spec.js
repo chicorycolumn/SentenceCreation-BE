@@ -10,8 +10,8 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
+  // describe.only("/palette - Stage 2: Adjectives", () => {
   xdescribe("/palette - Stage 2: Adjectives", () => {
-    // describe.only("/palette - Stage 2: Adjectives", () => {
     it("#pal02-01a GET 200 YES: Returns a sentence where adjective agrees with noun in singular.", () => {
       return request(app)
         .get("/api/palette")
@@ -22,7 +22,7 @@ describe("/api", () => {
         .expect(200)
         .then((res) => {
           expect(res.body.palette).to.be.a("String");
-          expect(["Czerwona cebula.", "Czerwone jabłko."]).to.include(
+          expect(["Cebula czerwona.", "Jabłko czerwone."]).to.include(
             res.body.palette
           );
           console.log({ palette: res.body.palette });
@@ -216,12 +216,25 @@ describe("/api", () => {
           expect(res.body.palette.split(" ").reverse()[0]).to.equal("majtki.");
         });
     });
-    it("#pal01-05 GET 200 YES: Returns a sentence where end of inflection chain is array.", () => {
+    it("#pal01-05 GET 200 YES: Returns a sentence where end of inflection chain could be array.", () => {
       return request(app)
         .get("/api/palette")
         .send({
           // sentenceNumber: 54,
           sentenceFormulaSymbol: "boys are male",
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          console.log({ palette: res.body.palette });
+        });
+    });
+    it.only("#pal01-05a GET 200 YES: Returns a sentence where end of inflection chain could be array.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // sentenceNumber: 57,
+          sentenceFormulaSymbol: "I have apple",
         })
         .expect(200)
         .then((res) => {

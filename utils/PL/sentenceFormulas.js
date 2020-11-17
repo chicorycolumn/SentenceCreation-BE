@@ -95,7 +95,7 @@ const level01 = {
         agreeWith: "nou-1",
       },
       {
-        agreeId: "nou-1",
+        chunkId: "nou-1",
         wordtype: "noun",
         manTags: ["edible"],
         optTags: [],
@@ -115,12 +115,27 @@ const level01 = {
         agreeWith: "nou-1",
       },
       {
-        agreeId: "nou-1",
+        chunkId: "nou-1",
         wordtype: "noun",
         manTags: ["person"],
         optTags: [],
         gcase: ["nom"],
         number: ["plural"],
+        gender: [],
+      },
+    ],
+  },
+  57: {
+    symbol: "I have apple",
+    formula: [
+      "mam",
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        manTags: ["edible"],
+        optTags: [],
+        gcase: ["acc"],
+        number: ["singular", "plural"],
         gender: [],
       },
     ],
