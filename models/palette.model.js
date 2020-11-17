@@ -27,14 +27,6 @@ exports.fetchPalette = (req) => {
   });
 
   let sentenceFormulasList = sentenceFormulas;
-  // let sentenceFormulasCopy = {};
-  // sentenceFormulasCopy[levelNumber] = {};
-  // let sentenceFormulasKeys = Object.keys(sentenceFormulas[levelNumber]);
-  // sentenceFormulasKeys.forEach((sentenceFormulasKey) => {
-  //   sentenceFormulasCopy[levelNumber][sentenceFormulasKey] = {
-  //     ...sentenceFormulas[levelNumber][sentenceFormulasKey],
-  //   };
-  // });
 
   if (req.body.useDummy) {
     wordsetKeys.forEach((wordsetKey) => {
@@ -47,7 +39,7 @@ exports.fetchPalette = (req) => {
     sentenceFormulasList = dummySentenceFormulas;
   }
 
-  //LATER: If a level is specified, and random is specyified, pick a random SF from that level.
+  //LATER: If a level is specified, and random is specified, pick a random SF from that level.
 
   let sentenceObject = req.body.sentenceFormulaSymbol
     ? scUtils.findObjectInNestedObject(sentenceFormulasList, {
@@ -57,14 +49,7 @@ exports.fetchPalette = (req) => {
 
   let sentenceFormula = [...sentenceObject.formula];
 
-  //Instead of forEach, which iterates through the chunks in order,
-  //we should first select any chunk with an agreeId, and run the fxn for that.
-  //Then we insert the finished result into the result arr, AT THE SAME INDEX.
-  //So "My red shirt" where shirt is the head noun and thus has the agreeId, the shirt chunk
-  //gets processed in this loop below. It was at index 2 in sentenceFormulas, and so
-  //it gets put in at idnex 2 in res arr, so res arr looks like [undef, undef, "koszula"]
-  //Then we go to any chunks which have that agreeId string as their agreeWith value, and do the same.
-  //In the meantime, we'll need to have stored the gender number case data from shirt.
+  //Instead of forEach, insert each finished result into the result arr, AT THE SAME INDEX.
 
   let doneChunkIds = [];
   let headIds = [];
@@ -75,17 +60,7 @@ exports.fetchPalette = (req) => {
   });
   headIds = Array.from(new Set(headIds));
 
-  // //ALL STEPS (of old way)
-  // sentenceFormula.forEach((formulaChunk) => {
-  //   getSelectedWordAndPutInArray(formulaChunk, resultArr);
-  // });
-
-  //Okay, in all of these steps,
-  //let's get the final selected features of the final selected word, each time.
-  //and put them in resultArr
-
   //STEP ONE
-
   headIds.forEach((headId) => {
     let chunkId = headId;
     let headChunk = sentenceFormula.find(
@@ -93,28 +68,34 @@ exports.fetchPalette = (req) => {
         typeof formulaChunk === "object" && formulaChunk.chunkId === chunkId
     );
     doneChunkIds.push(chunkId);
-    // let headSelectedWordFeatures = [];
 
-    getSelectedWordAndPutInArray(
-      headChunk,
-      resultArr
-      // headSelectedWordFeatures
-    );
-
-    console.log("STEP ONE", { headChunk, resultArr });
+    getSelectedWordAndPutInArray(headChunk, resultArr);
   });
 
   //STEP TWO
+
   headIds.forEach((headId) => {
     let dependentChunks = sentenceFormula.filter(
       (formulaChunk) =>
-        typeof formulaChunk === "object" && formulaChunk.agreeWithId === headId
+        typeof formulaChunk === "object" && formulaChunk.agreeWith === headId
     );
-    dependentChunks.forEach((dependentChunk) => {
-      doneChunkIds.push(dependentChunk.chunkId);
-      getSelectedWordAndPutInArray(dependentChunk, resultArr);
-      console.log("STEP TWO", { dependentChunk, resultArr });
-    });
+
+    if (dependentChunks.length) {
+      dependentChunks.forEach((dependentChunk) => {
+        let headChunk = sentenceFormula.find(
+          (formulaChunk) =>
+            typeof formulaChunk === "object" && formulaChunk.chunkId === headId
+        );
+
+        inflectionChainsPL["adjective"].forEach((featureKey) => {
+          dependentChunk[featureKey] = headChunk[featureKey];
+        });
+
+        doneChunkIds.push(dependentChunk.chunkId);
+
+        getSelectedWordAndPutInArray(dependentChunk, resultArr);
+      });
+    }
   });
 
   //STEP THREE
@@ -123,23 +104,11 @@ exports.fetchPalette = (req) => {
       typeof formulaChunk !== "object" ||
       !doneChunkIds.includes(formulaChunk.chunkId)
     ) {
-      // doneChunkIds.push(formulaChunk.chunkId);
       getSelectedWordAndPutInArray(formulaChunk, resultArr);
     }
-
-    console.log("STEP THREE", { formulaChunk, resultArr });
   });
 
-  //Now, instead of the sentenceFormula.forEach above, we'll do this:
-  //STEP 1 do all the chunks with each agreeWithId as their chunkId
-  //STEP 2 do the chunks that have "agreeWith" as a key.
-  //STEP 3 do all other chunks.
-
-  function getSelectedWordAndPutInArray(
-    formulaChunkOriginal,
-    resultArr
-    // recordOfSelectedRequirementsOutput
-  ) {
+  function getSelectedWordAndPutInArray(formulaChunkOriginal, resultArr) {
     let formulaChunk = formulaChunkOriginal;
 
     if (Array.isArray(formulaChunkOriginal)) {
@@ -153,40 +122,27 @@ exports.fetchPalette = (req) => {
         formulaChunk,
       });
     } else {
-      //And in here, we look for if this has an agreeWith key, in which case
-      //we find its head word, and get the number gender case from that.
-
       let source = wordsCopy[scUtils.giveSetKey(formulaChunk.wordtype)];
       let matches = [];
 
       matches = scUtils.filterByTag(source, formulaChunk.manTags, true);
       matches = scUtils.filterByTag(matches, formulaChunk.optTags, false);
 
-      if (formulaChunk.wordtype === "noun") {
+      // Do this for nouns because we're filtering the different noun lobjs by gender, as each noun is a diff gender.
+      // Don't do this for adjs, as gender is a key inside each individual adj lobj.
+      if (["noun"].includes(formulaChunk.wordtype)) {
         matches = scUtils.filterByKey(
           matches,
           formulaChunk["gender"],
           "gender"
         );
+
+        matches = scUtils.filterOutDefectiveInflections(
+          matches,
+          formulaChunk,
+          inflectionChainsPL
+        );
       }
-
-      // If a dependent word, then here give it the case gender number from its head word.
-
-      //Ah no, change the below. You wanna take number gender case from the final selected head word, not that word's specs.
-      // if (typeof formulaChunk === "object" && formulaChunk.agreeWith) {
-      //   let selectedWord = resultArr.find(
-      //     (item) => item.selectedLemmaObject.chunkId === formulaChunk.agreeWith
-      //   ).selectedWord;
-      //   inflectionChainsPL[formulaChunk.wordtype].forEach((key) => {
-      //     formulaChunk[key] = selectedWord[key];
-      //   });
-      // }
-
-      matches = scUtils.filterOutDefectiveInflections(
-        matches,
-        formulaChunk,
-        inflectionChainsPL
-      );
 
       if (matches.length) {
         let selectedLemmaObj = { ...scUtils.selectRandom(matches) };
@@ -206,13 +162,9 @@ exports.fetchPalette = (req) => {
         } else {
           let {
             selectedWord,
-            recordOfSelectedRequirements,
+
             modifiedFormulaChunk,
           } = filterNestedOutput;
-
-          // if (recordOfSelectedRequirementsOutput) {
-          //   recordOfSelectedRequirementsOutput = recordOfSelectedRequirements;
-          // }
 
           resultArr.push({
             selectedLemmaObj,
@@ -228,10 +180,6 @@ exports.fetchPalette = (req) => {
       }
     }
   }
-
-  resultArr.forEach((item) => {
-    console.log("------------------", item.formulaChunk);
-  });
 
   let finalSentence = scUtils.buildSentenceFromArray(resultArr);
   let responseObj = {};

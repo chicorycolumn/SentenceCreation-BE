@@ -10,8 +10,7 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  // describe.only("/palette - Stage 2: Adjectives", () => {
-  xdescribe("/palette - Stage 2: Adjectives", () => {
+  describe("/palette - Stage 2: Adjectives", () => {
     it("#pal02-01a GET 200 YES: Returns a sentence where adjective agrees with noun in singular.", () => {
       return request(app)
         .get("/api/palette")
@@ -29,6 +28,22 @@ describe("/api", () => {
         });
     });
     xit("#pal02-01b GET 200 YES: Returns a sentence where adjective agrees with noun in plural.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          sentenceNumber: "55a",
+          // sentenceFormulaSymbol: "red apples",
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          expect(["Cebula czerwona.", "Jabłko czerwone."]).to.include(
+            res.body.palette
+          );
+          console.log({ palette: res.body.palette });
+        });
+    });
+    xit("#pal02-01c GET 200 YES: Returns a sentence where adjective agrees with noun in plural.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -229,7 +244,8 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    it.only("#pal01-05a GET 200 YES: Returns a sentence where end of inflection chain could be array.", () => {
+    it("#pal01-05a GET 200 YES: Checking in console logs whether formulaChunks have indeed been updated with the features (number, gender, gcase) of the finally selected word they formulate for.", () => {
+      // it.only("#pal01-05a GET 200 YES: Checking in console logs whether formulaChunks have indeed been updated with the features (number, gender, gcase) of the finally selected word they formulate for.", () => {
       return request(app)
         .get("/api/palette")
         .send({

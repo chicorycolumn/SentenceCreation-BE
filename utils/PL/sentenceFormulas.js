@@ -93,6 +93,7 @@ const level01 = {
         manTags: ["colour"],
         optTags: [],
         agreeWith: "nou-1",
+        chunkId: "adj-1",
       },
       {
         chunkId: "nou-1",
@@ -105,6 +106,27 @@ const level01 = {
       },
     ],
   },
+  "55a": {
+    symbol: "red apples",
+    formula: [
+      {
+        wordtype: "adjective",
+        manTags: ["colour"],
+        optTags: [],
+        agreeWith: "nou-1",
+        chunkId: "adj-1",
+      },
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        manTags: ["edible"],
+        optTags: [],
+        gcase: ["nom"],
+        number: ["plural"],
+        gender: [],
+      },
+    ],
+  },
   56: {
     symbol: "red girls",
     formula: [
@@ -113,6 +135,7 @@ const level01 = {
         manTags: ["colour"],
         optTags: [],
         agreeWith: "nou-1",
+        chunkId: "adj-1",
       },
       {
         chunkId: "nou-1",
@@ -135,7 +158,7 @@ const level01 = {
         manTags: ["edible"],
         optTags: [],
         gcase: ["acc"],
-        number: ["singular", "plural"],
+        number: ["singular"],
         gender: [],
       },
     ],
