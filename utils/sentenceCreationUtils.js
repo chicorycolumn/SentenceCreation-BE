@@ -125,10 +125,10 @@ exports.getSelectedWordAndPutInArray = (
   //   formulaChunk = { ...formulaChunkOriginal };
   // }
 
-  if (typeof formulaChunk === "string") {
+  if (formulaChunk.wordtype === "fixed") {
     resultArr.push({
       selectedLemmaObj: {},
-      selectedWord: formulaChunk,
+      selectedWord: formulaChunk.value,
       formulaChunk,
     });
     return;

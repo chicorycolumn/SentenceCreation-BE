@@ -11,7 +11,6 @@ const level01 = {
         number: ["singular"],
         gender: [],
       },
-      "must surely be impossible",
     ],
   },
   dummy02: {
@@ -26,7 +25,6 @@ const level01 = {
         number: [],
         gender: [],
       },
-      "must surely be impossible",
     ],
   },
   dummy03: {
@@ -41,7 +39,6 @@ const level01 = {
         number: [],
         gender: [],
       },
-      "must be impossible when using dummy noun",
     ],
   },
   dummy04: {
@@ -56,7 +53,6 @@ const level01 = {
         number: ["singular", "plural"],
         gender: [],
       },
-      "must be impossible when using dummy noun",
     ],
   },
   dummy05: {
@@ -71,7 +67,6 @@ const level01 = {
         number: [],
         gender: [],
       },
-      "should be possible even using dummy noun",
     ],
   },
   dummy06: {
@@ -86,7 +81,6 @@ const level01 = {
         number: [],
         gender: [],
       },
-      "should be possible 100% of the time",
     ],
   },
   dummy07: {
@@ -101,7 +95,6 @@ const level01 = {
         number: ["singular"],
         gender: [],
       },
-      "must surely be impossible",
     ],
   },
   dummy08: {
@@ -116,7 +109,6 @@ const level01 = {
         number: ["singular"],
         gender: [],
       },
-      "should be possible 100% of the time",
     ],
   },
 };

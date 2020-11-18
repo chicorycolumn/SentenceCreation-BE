@@ -11,7 +11,7 @@ const level01 = {
         number: ["singular"],
         gender: [],
       },
-      "je",
+      { chunkId: "fix-1", wordtype: "fixed", value: "je" },
       {
         chunkId: "nou-2",
         wordtype: "noun",
@@ -35,7 +35,7 @@ const level01 = {
         number: ["singular"],
         gender: [],
       },
-      "ma na sobie",
+      { chunkId: "fix-1", wordtype: "fixed", value: "ma na sobie" },
       {
         chunkId: "nou-2",
         wordtype: "noun",
@@ -59,13 +59,13 @@ const level01 = {
         number: ["singular"],
         gender: [],
       },
-      "jest w szafie",
+      { chunkId: "fix-1", wordtype: "fixed", value: "jest w szafie" },
     ],
   },
   53: {
     symbol: "I often wear shirt",
     formula: [
-      "Często noszę",
+      { chunkId: "fix-1", wordtype: "fixed", value: "często noszę" },
       {
         chunkId: "nou-1",
         wordtype: "noun",
@@ -89,7 +89,7 @@ const level01 = {
         number: ["plural"],
         gender: ["m1"],
       },
-      "są męscy",
+      { chunkId: "fix-1", wordtype: "fixed", value: "są męscy" },
     ],
   },
   55: {
@@ -158,7 +158,7 @@ const level01 = {
   57: {
     symbol: "I have apple",
     formula: [
-      "mam",
+      { chunkId: "fix-1", wordtype: "fixed", value: "mam" },
       {
         chunkId: "nou-1",
         wordtype: "noun",

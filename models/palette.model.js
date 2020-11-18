@@ -121,7 +121,6 @@ exports.fetchPalette = (req) => {
   });
 
   console.log(">>End of palette.model resultArr", resultArr);
-  // console.log(">>resultArr[1].formulaChunk", resultArr[1].formulaChunk);
 
   let finalSentence = scUtils.buildSentenceFromArray(resultArr);
   let responseObj = {};

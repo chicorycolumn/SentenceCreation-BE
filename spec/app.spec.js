@@ -10,7 +10,7 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe("/palette - Stage 2: Adjectives", () => {
+  xdescribe("/palette - Stage 2: Adjectives", () => {
     it("#pal02-01a GET 200 YES: Returns a sentence where adjective agrees with noun in singular.", () => {
       return request(app)
         .get("/api/palette")
@@ -21,7 +21,7 @@ describe("/api", () => {
         .expect(200)
         .then((res) => {
           expect(res.body.palette).to.be.a("String");
-          expect(["Cebula czerwona.", "Jabłko czerwone."]).to.include(
+          expect(["Czerwona cebula.", "Czerwone jabłko."]).to.include(
             res.body.palette
           );
           console.log({ palette: res.body.palette });
