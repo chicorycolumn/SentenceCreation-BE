@@ -172,4 +172,4 @@ const level01 = {
   },
 };
 
-exports.sentenceFormulas = { level01 };
+exports.sentenceFormulasBank = { level01 };

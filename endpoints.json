@@ -6,6 +6,9 @@
   "GET /api/palette": {
     "description": "Serves a newly generated sentence.",
     "queries": [],
-    "exampleResponse": null
+    "exampleRequest": { "egSentenceNumber": "51" },
+    "exampleResponse": {
+      "palette": "Chłopak je cebulę."
+    }
   }
 }

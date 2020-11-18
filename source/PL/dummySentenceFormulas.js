@@ -121,4 +121,4 @@ const level01 = {
   },
 };
 
-exports.dummySentenceFormulas = { level01 };
+exports.dummySentenceFormulasBank = { level01 };

@@ -1,11 +1,11 @@
 const scUtils = require("../utils/sentenceCreationUtils.js");
 const gpUtils = require("../utils/generalPurposeUtils.js");
 const lfUtils = require("../utils/lemmaFilteringUtils.js");
-const { words } = require("../source/PL/words.js");
-const { dummyWords } = require("../source/PL/dummyWords.js");
-const { sentenceFormulas } = require("../source/PL/sentenceFormulas.js");
+const { wordsBank } = require("../source/PL/words.js");
+const { dummyWordsBank } = require("../source/PL/dummyWords.js");
+const { sentenceFormulasBank } = require("../source/PL/sentenceFormulas.js");
 const {
-  dummySentenceFormulas,
+  dummySentenceFormulasBank,
 } = require("../source/PL/dummySentenceFormulas.js");
 
 exports.fetchPalette = (req) => {
@@ -21,35 +21,21 @@ exports.fetchPalette = (req) => {
   let errorInSentenceCreation = {};
   let resultArr = [];
 
-  let wordsCopy = {};
-  let wordsetKeys = Object.keys(words);
-  wordsetKeys.forEach((wordsetKey) => {
-    wordsCopy[wordsetKey] = [...words[wordsetKey]];
-    // This so that /words nounSet can be merged with /dummyWords nounSet, without changing the former.
-  });
+  let words = req.body.useDummy
+    ? gpUtils.copyAndCombineWordbanks(wordsBank, dummyWordsBank)
+    : gpUtils.copyWithoutReference(wordsBank);
 
-  let sentenceFormulasList = sentenceFormulas;
-
-  if (req.body.useDummy) {
-    wordsetKeys.forEach((wordsetKey) => {
-      wordsCopy[wordsetKey] = {
-        ...wordsCopy[wordsetKey],
-        ...dummyWords[wordsetKey],
-      };
-    });
-
-    sentenceFormulasList = dummySentenceFormulas;
-  }
+  let sentenceFormulas = req.body.useDummy
+    ? gpUtils.copyWithoutReference(dummySentenceFormulasBank)
+    : gpUtils.copyWithoutReference(sentenceFormulasBank);
 
   //LATER: If a level is specified, and random is specified, pick a random SF from that level.
 
-  let sentenceObject = req.body.sentenceFormulaSymbol
-    ? scUtils.findObjectInNestedObject(sentenceFormulasList, {
+  let sentenceFormula = req.body.sentenceFormulaSymbol
+    ? scUtils.findObjectInNestedObject(sentenceFormulas, {
         symbol: req.body.sentenceFormulaSymbol,
-      })
-    : sentenceFormulasList[levelNumber][sentenceNumber];
-
-  let sentenceFormula = [...sentenceObject.formula];
+      }).formula
+    : sentenceFormulas[levelNumber][sentenceNumber].formula;
 
   //Instead of forEach, insert each finished result into the result arr, AT THE SAME INDEX.
 
@@ -71,10 +57,11 @@ exports.fetchPalette = (req) => {
     );
     doneChunkIds.push(chunkId);
 
+    console.log(">>STEP ONE", headChunk);
     scUtils.getSelectedWordAndPutInArray(
       headChunk,
       resultArr,
-      wordsCopy,
+      words,
       inflectionChainsPL,
       errorInSentenceCreation
     );
@@ -87,6 +74,8 @@ exports.fetchPalette = (req) => {
         typeof formulaChunk === "object" && formulaChunk.agreeWith === headId
     );
 
+    console.log(">>dependentChunks", dependentChunks);
+
     if (dependentChunks.length) {
       dependentChunks.forEach((dependentChunk) => {
         let headChunk = sentenceFormula.find(
@@ -94,16 +83,19 @@ exports.fetchPalette = (req) => {
             typeof formulaChunk === "object" && formulaChunk.chunkId === headId
         );
 
+        console.log(">>The headchunk of that dependent chunk is:", headChunk);
+
         inflectionChainsPL["adjective"].forEach((featureKey) => {
           dependentChunk[featureKey] = headChunk[featureKey];
         });
 
         doneChunkIds.push(dependentChunk.chunkId);
 
+        console.log(">>STEP TWO", dependentChunk);
         scUtils.getSelectedWordAndPutInArray(
           dependentChunk,
           resultArr,
-          wordsCopy,
+          words,
           inflectionChainsPL,
           errorInSentenceCreation
         );
@@ -117,15 +109,19 @@ exports.fetchPalette = (req) => {
       typeof formulaChunk !== "object" ||
       !doneChunkIds.includes(formulaChunk.chunkId)
     ) {
+      console.log(">>STEP THREE", formulaChunk);
       scUtils.getSelectedWordAndPutInArray(
         formulaChunk,
         resultArr,
-        wordsCopy,
+        words,
         inflectionChainsPL,
         errorInSentenceCreation
       );
     }
   });
+
+  console.log(">>End of palette.model resultArr", resultArr);
+  // console.log(">>resultArr[1].formulaChunk", resultArr[1].formulaChunk);
 
   let finalSentence = scUtils.buildSentenceFromArray(resultArr);
   let responseObj = {};

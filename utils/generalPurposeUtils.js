@@ -35,9 +35,51 @@ exports.doKeyValuesMatch = (object, keyValues) => {
 };
 
 exports.isObject = (item) => {
-  return typeof item === "object" && !Array.isArray(item);
+  return typeof item === "object" && item !== null && !Array.isArray(item);
 };
 
 exports.giveSetKey = (word) => {
   return word + "Set";
+};
+
+exports.copyWithoutReference = (source) => {
+  if (typeof source !== "object" || source === null) {
+    return;
+  }
+  if (Array.isArray(source)) {
+    return recursivelyCopyObject(source, []);
+  } else {
+    return recursivelyCopyObject(source, {});
+  }
+
+  function recursivelyCopyObject(input, targ) {
+    Object.keys(input).forEach((key) => {
+      let item = input[key];
+
+      if (typeof item !== "object" || item === null) {
+        targ[key] = item;
+        return;
+      } else if (Array.isArray(item)) {
+        targ[key] = [];
+        recursivelyCopyObject(item, targ[key]);
+        return;
+      } else {
+        targ[key] = {};
+        recursivelyCopyObject(item, targ[key]);
+        return;
+      }
+    });
+    return targ;
+  }
+};
+
+exports.copyAndCombineWordbanks = (wordbank1, wordbank2) => {
+  let wordbank1Copy = exports.copyWithoutReference(wordbank1);
+  let wordbank2Copy = exports.copyWithoutReference(wordbank2);
+
+  Object.keys(wordbank1Copy).forEach((key) => {
+    wordbank1Copy[key] = [...wordbank1Copy[key], ...wordbank2Copy[key]];
+  });
+
+  return wordbank1Copy;
 };

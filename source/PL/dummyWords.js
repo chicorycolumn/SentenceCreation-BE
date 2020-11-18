@@ -92,7 +92,7 @@ let adjectiveSet = [];
 let adverbSet = [];
 let verbSet = [];
 
-exports.dummyWords = {
+exports.dummyWordsBank = {
   nounSet,
   adjectiveSet,
   adverbSet,

@@ -15,8 +15,8 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceNumber: 55,
-          // sentenceFormulaSymbol: "red apple",
+          // sentenceNumber: 55,
+          sentenceFormulaSymbol: "red apple",
         })
         .expect(200)
         .then((res) => {
@@ -231,7 +231,7 @@ describe("/api", () => {
           expect(res.body.palette.split(" ").reverse()[0]).to.equal("majtki.");
         });
     });
-    it("#pal01-05 GET 200 YES: Returns a sentence where end of inflection chain could be array.", () => {
+    it("#pal01-05a GET 200 YES: Returns a sentence where end of inflection chain could be array.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -244,8 +244,7 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    it("#pal01-05a GET 200 YES: Checking in console logs whether formulaChunks have indeed been updated with the features (number, gender, gcase) of the finally selected word they formulate for.", () => {
-      // it.only("#pal01-05a GET 200 YES: Checking in console logs whether formulaChunks have indeed been updated with the features (number, gender, gcase) of the finally selected word they formulate for.", () => {
+    it("#pal01-05b GET 200 YES: Checking in console logs whether formulaChunks have indeed been updated with the features (number, gender, gcase) of the finally selected word they formulate for.", () => {
       return request(app)
         .get("/api/palette")
         .send({

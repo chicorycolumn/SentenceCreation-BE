@@ -1,7 +1,9 @@
 const gpUtils = require("./generalPurposeUtils.js");
 const scUtils = require("./sentenceCreationUtils.js");
 
-exports.filterByKey = (lemmaObjectArr, requirementArr, key) => {
+exports.filterByKey = (lemmaObjectArr, requirementArrs, key) => {
+  let requirementArr = requirementArrs[key];
+
   if (requirementArr.length) {
     return lemmaObjectArr.filter((lObj) => requirementArr.includes(lObj[key]));
   } else {

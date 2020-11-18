@@ -44,14 +44,8 @@ exports.buildSentenceFromArray = (arr) => {
     (obj) => Object.keys(obj.selectedLemmaObj).length
   );
 
-  if (selectedLemmaObjs.some((lObj) => lObj && lObj.agreeWith)) {
-    //I see there are agreement notes to work through. But these are done now.
-  } else {
-    let producedSentence = gpUtils.capitaliseFirst(
-      selectedWords.join(" ") + "."
-    );
-    return producedSentence;
-  }
+  let producedSentence = gpUtils.capitaliseFirst(selectedWords.join(" ") + ".");
+  return producedSentence;
 };
 
 exports.extractNestedRoutes = (source) => {
@@ -121,15 +115,15 @@ exports.findObjectInNestedObject = (source, identifyingData) => {
 exports.getSelectedWordAndPutInArray = (
   formulaChunkOriginal,
   resultArr,
-  wordsCopy,
+  words,
   inflectionChainsByThisLanguage,
   errorInSentenceCreation
 ) => {
   let formulaChunk = formulaChunkOriginal;
 
-  if (Array.isArray(formulaChunkOriginal)) {
-    formulaChunk = [...formulaChunkOriginal];
-  }
+  // if (gpUtils.isObject(formulaChunkOriginal)) {
+  //   formulaChunk = { ...formulaChunkOriginal };
+  // }
 
   if (typeof formulaChunk === "string") {
     resultArr.push({
@@ -137,56 +131,57 @@ exports.getSelectedWordAndPutInArray = (
       selectedWord: formulaChunk,
       formulaChunk,
     });
-  } else {
-    let source = wordsCopy[gpUtils.giveSetKey(formulaChunk.wordtype)];
-    let matches = [];
+    return;
+  }
 
-    matches = lfUtils.filterByTag(source, formulaChunk.manTags, true);
-    matches = lfUtils.filterByTag(matches, formulaChunk.optTags, false);
+  let source = words[gpUtils.giveSetKey(formulaChunk.wordtype)];
+  let matches = [];
 
-    // Do this for nouns because we're filtering the different noun lobjs by gender, as each noun is a diff gender.
-    // Don't do this for adjs, as gender is a key inside each individual adj lobj.
-    if (["noun"].includes(formulaChunk.wordtype)) {
-      matches = lfUtils.filterByKey(matches, formulaChunk["gender"], "gender");
+  matches = lfUtils.filterByTag(source, formulaChunk.manTags, true);
+  matches = lfUtils.filterByTag(matches, formulaChunk.optTags, false);
 
-      matches = lfUtils.filterOutDefectiveInflections(
-        matches,
-        formulaChunk,
-        inflectionChainsByThisLanguage
-      );
-    }
+  // Do this for nouns because we're filtering the different noun lobjs by gender, as each noun is a diff gender.
+  // Don't do this for adjs, as gender is a key inside each individual adj lobj.
+  if (["noun"].includes(formulaChunk.wordtype)) {
+    matches = lfUtils.filterByKey(matches, formulaChunk, "gender");
 
-    if (matches.length) {
-      let selectedLemmaObj = { ...gpUtils.selectRandom(matches) };
+    matches = lfUtils.filterOutDefectiveInflections(
+      matches,
+      formulaChunk,
+      inflectionChainsByThisLanguage
+    );
+  }
 
-      let filterNestedOutput = lfUtils.filterWithinLemmaObjectByNestedKeys(
-        selectedLemmaObj,
-        formulaChunk,
-        inflectionChainsByThisLanguage
-      );
+  if (matches.length) {
+    let selectedLemmaObj = gpUtils.selectRandom(matches);
 
-      if (!filterNestedOutput || !filterNestedOutput.selectedWord) {
-        errorInSentenceCreation.errorMessage =
-          "A lemma object was indeed selected, but no word was found at the end of the give inflection chain.";
+    let filterNestedOutput = lfUtils.filterWithinLemmaObjectByNestedKeys(
+      selectedLemmaObj,
+      formulaChunk,
+      inflectionChainsByThisLanguage
+    );
 
-        return false;
-      } else {
-        let {
-          selectedWord,
-
-          modifiedFormulaChunk,
-        } = filterNestedOutput;
-
-        resultArr.push({
-          selectedLemmaObj,
-          selectedWord,
-          formulaChunk: modifiedFormulaChunk,
-        });
-      }
-    } else {
+    if (!filterNestedOutput || !filterNestedOutput.selectedWord) {
       errorInSentenceCreation.errorMessage =
-        "No matching lemma objects were found.";
+        "A lemma object was indeed selected, but no word was found at the end of the give inflection chain.";
+
       return false;
+    } else {
+      let {
+        selectedWord,
+
+        modifiedFormulaChunk,
+      } = filterNestedOutput;
+
+      resultArr.push({
+        selectedLemmaObj,
+        selectedWord,
+        formulaChunk: modifiedFormulaChunk,
+      });
     }
+  } else {
+    errorInSentenceCreation.errorMessage =
+      "No matching lemma objects were found.";
+    return false;
   }
 };

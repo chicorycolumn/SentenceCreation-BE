@@ -276,7 +276,7 @@ let adjectiveSet = [
 let adverbSet = [];
 let verbSet = [];
 
-exports.words = {
+exports.wordsBank = {
   nounSet,
   adjectiveSet,
   adverbSet,
