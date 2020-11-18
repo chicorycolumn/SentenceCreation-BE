@@ -3,6 +3,7 @@ const level01 = {
     symbol: "girl eats apple",
     formula: [
       {
+        chunkId: "nou-1",
         wordtype: "noun",
         manTags: ["person"],
         optTags: [],
@@ -12,6 +13,7 @@ const level01 = {
       },
       "je",
       {
+        chunkId: "nou-2",
         wordtype: "noun",
         manTags: ["edible"],
         optTags: [],
@@ -25,6 +27,7 @@ const level01 = {
     symbol: "girl is wearing shirt",
     formula: [
       {
+        chunkId: "nou-1",
         wordtype: "noun",
         manTags: ["person"],
         optTags: [],
@@ -34,6 +37,7 @@ const level01 = {
       },
       "ma na sobie",
       {
+        chunkId: "nou-2",
         wordtype: "noun",
         manTags: ["wearable"],
         optTags: [],
@@ -47,6 +51,7 @@ const level01 = {
     symbol: "shirt is in wardrobe",
     formula: [
       {
+        chunkId: "nou-1",
         wordtype: "noun",
         manTags: ["wearable"],
         optTags: [],
@@ -62,6 +67,7 @@ const level01 = {
     formula: [
       "Często noszę",
       {
+        chunkId: "nou-1",
         wordtype: "noun",
         manTags: ["wearable"],
         optTags: [],
@@ -75,6 +81,7 @@ const level01 = {
     symbol: "boys are male",
     formula: [
       {
+        chunkId: "nou-1",
         wordtype: "noun",
         manTags: ["person"],
         optTags: [],
@@ -89,11 +96,11 @@ const level01 = {
     symbol: "red apple",
     formula: [
       {
+        chunkId: "adj-1",
+        agreeWith: "nou-1",
         wordtype: "adjective",
         manTags: ["colour"],
         optTags: [],
-        agreeWith: "nou-1",
-        chunkId: "adj-1",
       },
       {
         chunkId: "nou-1",
@@ -110,11 +117,11 @@ const level01 = {
     symbol: "red apples",
     formula: [
       {
+        chunkId: "adj-1",
+        agreeWith: "nou-1",
         wordtype: "adjective",
         manTags: ["colour"],
         optTags: [],
-        agreeWith: "nou-1",
-        chunkId: "adj-1",
       },
       {
         chunkId: "nou-1",
@@ -131,11 +138,11 @@ const level01 = {
     symbol: "red girls",
     formula: [
       {
+        chunkId: "adj-1",
+        agreeWith: "nou-1",
         wordtype: "adjective",
         manTags: ["colour"],
         optTags: [],
-        agreeWith: "nou-1",
-        chunkId: "adj-1",
       },
       {
         chunkId: "nou-1",

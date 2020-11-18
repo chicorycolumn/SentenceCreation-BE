@@ -81,7 +81,6 @@ exports.fetchPalette = (req) => {
   });
 
   //STEP TWO
-
   headIds.forEach((headId) => {
     let dependentChunks = sentenceFormula.filter(
       (formulaChunk) =>

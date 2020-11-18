@@ -1,8 +1,9 @@
 const level01 = {
   dummy01: {
-    symbol: "",
+    symbol: "dummy01",
     formula: [
       {
+        chunkId: "nou-1",
         wordtype: "noun",
         manTags: ["nonexistent tag"],
         optTags: [],
@@ -14,9 +15,10 @@ const level01 = {
     ],
   },
   dummy02: {
-    symbol: "",
+    symbol: "dummy02",
     formula: [
       {
+        chunkId: "nou-1",
         wordtype: "noun",
         manTags: [],
         optTags: [],
@@ -28,9 +30,10 @@ const level01 = {
     ],
   },
   dummy03: {
-    symbol: "",
+    symbol: "dummy03",
     formula: [
       {
+        chunkId: "nou-1",
         wordtype: "noun",
         manTags: ["dummy"],
         optTags: [],
@@ -42,9 +45,10 @@ const level01 = {
     ],
   },
   dummy04: {
-    symbol: "",
+    symbol: "dummy04",
     formula: [
       {
+        chunkId: "nou-1",
         wordtype: "noun",
         manTags: ["dummy"],
         optTags: [],
@@ -56,9 +60,10 @@ const level01 = {
     ],
   },
   dummy05: {
-    symbol: "",
+    symbol: "dummy05",
     formula: [
       {
+        chunkId: "nou-1",
         wordtype: "noun",
         manTags: ["dummy"],
         optTags: [],
@@ -70,9 +75,10 @@ const level01 = {
     ],
   },
   dummy06: {
-    symbol: "",
+    symbol: "dummy06",
     formula: [
       {
+        chunkId: "nou-1",
         wordtype: "noun",
         manTags: ["dummy"],
         optTags: [],
@@ -84,9 +90,10 @@ const level01 = {
     ],
   },
   dummy07: {
-    symbol: "",
+    symbol: "dummy07",
     formula: [
       {
+        chunkId: "nou-1",
         wordtype: "noun",
         manTags: ["dummy2"],
         optTags: [],
@@ -98,9 +105,10 @@ const level01 = {
     ],
   },
   dummy08: {
-    symbol: "",
+    symbol: "dummy08",
     formula: [
       {
+        chunkId: "nou-1",
         wordtype: "noun",
         manTags: ["dummy3"],
         optTags: [],
