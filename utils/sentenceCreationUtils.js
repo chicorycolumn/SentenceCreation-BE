@@ -117,3 +117,76 @@ exports.findObjectInNestedObject = (source, identifyingData) => {
     });
   }
 };
+
+exports.getSelectedWordAndPutInArray = (
+  formulaChunkOriginal,
+  resultArr,
+  wordsCopy,
+  inflectionChainsByThisLanguage,
+  errorInSentenceCreation
+) => {
+  let formulaChunk = formulaChunkOriginal;
+
+  if (Array.isArray(formulaChunkOriginal)) {
+    formulaChunk = [...formulaChunkOriginal];
+  }
+
+  if (typeof formulaChunk === "string") {
+    resultArr.push({
+      selectedLemmaObj: {},
+      selectedWord: formulaChunk,
+      formulaChunk,
+    });
+  } else {
+    let source = wordsCopy[gpUtils.giveSetKey(formulaChunk.wordtype)];
+    let matches = [];
+
+    matches = lfUtils.filterByTag(source, formulaChunk.manTags, true);
+    matches = lfUtils.filterByTag(matches, formulaChunk.optTags, false);
+
+    // Do this for nouns because we're filtering the different noun lobjs by gender, as each noun is a diff gender.
+    // Don't do this for adjs, as gender is a key inside each individual adj lobj.
+    if (["noun"].includes(formulaChunk.wordtype)) {
+      matches = lfUtils.filterByKey(matches, formulaChunk["gender"], "gender");
+
+      matches = lfUtils.filterOutDefectiveInflections(
+        matches,
+        formulaChunk,
+        inflectionChainsByThisLanguage
+      );
+    }
+
+    if (matches.length) {
+      let selectedLemmaObj = { ...gpUtils.selectRandom(matches) };
+
+      let filterNestedOutput = lfUtils.filterWithinLemmaObjectByNestedKeys(
+        selectedLemmaObj,
+        formulaChunk,
+        inflectionChainsByThisLanguage
+      );
+
+      if (!filterNestedOutput || !filterNestedOutput.selectedWord) {
+        errorInSentenceCreation.errorMessage =
+          "A lemma object was indeed selected, but no word was found at the end of the give inflection chain.";
+
+        return false;
+      } else {
+        let {
+          selectedWord,
+
+          modifiedFormulaChunk,
+        } = filterNestedOutput;
+
+        resultArr.push({
+          selectedLemmaObj,
+          selectedWord,
+          formulaChunk: modifiedFormulaChunk,
+        });
+      }
+    } else {
+      errorInSentenceCreation.errorMessage =
+        "No matching lemma objects were found.";
+      return false;
+    }
+  }
+};
