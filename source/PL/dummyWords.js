@@ -87,6 +87,42 @@ let nounSet = [
       },
     },
   },
+  {
+    id: "dummy-nou-007",
+    lemma: "foobar-A",
+    gender: "n",
+    tags: ["foobar-A"],
+    defective: true,
+    inflections: {
+      singular: {
+        nom: "foobar-A",
+      },
+    },
+  },
+  {
+    id: "dummy-nou-008",
+    lemma: "foobar-B",
+    gender: "n",
+    tags: ["foobar-B"],
+    defective: true,
+    inflections: {
+      singular: {
+        nom: "foobar-B",
+      },
+    },
+  },
+  {
+    id: "dummy-nou-009",
+    lemma: "foobar-C",
+    gender: "n",
+    tags: ["foobar-C"],
+    defective: true,
+    inflections: {
+      singular: {
+        nom: "foobar-C",
+      },
+    },
+  },
 ];
 let adjectiveSet = [];
 let adverbSet = [];

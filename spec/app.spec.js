@@ -10,7 +10,7 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  xdescribe("/palette - Stage 2: Adjectives", () => {
+  describe("/palette - Stage 2: Adjectives", () => {
     it("#pal02-01a GET 200 YES: Returns a sentence where adjective agrees with noun in singular.", () => {
       return request(app)
         .get("/api/palette")
@@ -257,7 +257,40 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    it("#pal01-06 Responds 405 if any other methods are used at this endpoint", () => {
+    it("#pal01-06a GET 200 YES: Check order of words in final sentence, based on one specified order.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          sentenceFormulaSymbol: "dummy09",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          expect(["Foobar-A foobar-C foobar-B."]).to.include(res.body.palette);
+          console.log({ palette: res.body.palette });
+        });
+    });
+    it("#pal01-06b GET 200 YES: Check order of words in final sentence, based on multiple specified orders.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          sentenceFormulaSymbol: "dummy10",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          expect([
+            "Foobar-A foobar-B foobar-C.",
+            "Foobar-A foobar-C foobar-B.",
+            "Foobar-B foobar-A foobar-C.",
+            "Foobar-B foobar-C foobar-A.",
+          ]).to.include(res.body.palette);
+          console.log({ palette: res.body.palette });
+        });
+    });
+    it("#pal01-07 Responds 405 if any other methods are used at this endpoint", () => {
       const url = "/api/palette";
       return Promise.all([
         request(app).del(url),

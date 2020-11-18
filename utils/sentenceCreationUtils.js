@@ -38,11 +38,31 @@ exports.concoctNestedRoutes = (routesByLevelTarget, routesByLevelSource) => {
   }
 };
 
-exports.buildSentenceFromArray = (arr) => {
-  let selectedWords = arr.map((obj) => obj.selectedWord);
-  let selectedLemmaObjs = arr.map(
-    (obj) => Object.keys(obj.selectedLemmaObj).length
-  );
+exports.buildSentenceFromArray = (unorderedArr, sentenceBigObject) => {
+  console.log("^^^sentenceBigObject", sentenceBigObject);
+
+  let orderedArr = [];
+  let selectedWords = [];
+
+  if (sentenceBigObject.primaryOrders) {
+    let order =
+      sentenceBigObject.primaryOrders.length === 1
+        ? sentenceBigObject.primaryOrders[0]
+        : gpUtils.selectRandom(sentenceBigObject.primaryOrders);
+
+    //Epsilonman say Rearrange the order of unorderedArr d'acc the order variable.
+    //We still not done yet.
+    let orderedArr = [];
+    order.forEach((chunkId) => {
+      orderedArr.push(
+        unorderedArr.find((item) => item.formulaChunk.chunkId === chunkId)
+      );
+    });
+
+    selectedWords = orderedArr.map((obj) => obj.selectedWord);
+  } else {
+    selectedWords = unorderedArr.map((obj) => obj.selectedWord);
+  }
 
   let producedSentence = gpUtils.capitaliseFirst(selectedWords.join(" ") + ".");
   return producedSentence;

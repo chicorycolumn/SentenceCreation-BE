@@ -31,11 +31,15 @@ exports.fetchPalette = (req) => {
 
   //LATER: If a level is specified, and random is specified, pick a random SF from that level.
 
-  let sentenceFormula = req.body.sentenceFormulaSymbol
+  console.log("&&&", req.body.sentenceFormulaSymbol);
+
+  let sentenceBigObject = req.body.sentenceFormulaSymbol
     ? scUtils.findObjectInNestedObject(sentenceFormulas, {
         symbol: req.body.sentenceFormulaSymbol,
-      }).formula
-    : sentenceFormulas[levelNumber][sentenceNumber].formula;
+      })
+    : sentenceFormulas[levelNumber][sentenceNumber];
+
+  let sentenceFormula = sentenceBigObject.formula;
 
   //Instead of forEach, insert each finished result into the result arr, AT THE SAME INDEX.
 
@@ -122,8 +126,12 @@ exports.fetchPalette = (req) => {
 
   console.log(">>End of palette.model resultArr", resultArr);
 
-  let finalSentence = scUtils.buildSentenceFromArray(resultArr);
   let responseObj = {};
+
+  let finalSentence = scUtils.buildSentenceFromArray(
+    resultArr,
+    sentenceBigObject
+  );
 
   if (errorInSentenceCreation.errorMessage) {
     let errorMessage = {

@@ -112,6 +112,8 @@ const level01 = {
         gender: [],
       },
     ],
+    primaryOrders: [["adj-1", "nou-1"]],
+    additionalOrders: [],
   },
   "55a": {
     symbol: "red apples",

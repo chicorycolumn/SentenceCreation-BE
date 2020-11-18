@@ -111,6 +111,83 @@ const level01 = {
       },
     ],
   },
+  dummy09: {
+    symbol: "dummy09",
+    formula: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        manTags: ["foobar-A"],
+        optTags: [],
+        gcase: ["nom"],
+        number: ["singular"],
+        gender: [],
+      },
+      {
+        chunkId: "nou-2",
+        wordtype: "noun",
+        manTags: ["foobar-B"],
+        optTags: [],
+        gcase: ["nom"],
+        number: ["singular"],
+        gender: [],
+      },
+      {
+        chunkId: "nou-3",
+        wordtype: "noun",
+        manTags: ["foobar-C"],
+        optTags: [],
+        gcase: ["nom"],
+        number: ["singular"],
+        gender: [],
+      },
+    ],
+    primaryOrders: [["nou-1", "nou-3", "nou-2"]],
+    additionalOrders: [
+      ["nou-1", "nou-2", "nou-3"],
+      ["nou-2", "nou-1", "nou-3"],
+      ["nou-2", "nou-3", "nou-1"],
+    ],
+  },
+  dummy10: {
+    symbol: "dummy10",
+    formula: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        manTags: ["foobar-A"],
+        optTags: [],
+        gcase: ["nom"],
+        number: ["singular"],
+        gender: [],
+      },
+      {
+        chunkId: "nou-2",
+        wordtype: "noun",
+        manTags: ["foobar-B"],
+        optTags: [],
+        gcase: ["nom"],
+        number: ["singular"],
+        gender: [],
+      },
+      {
+        chunkId: "nou-3",
+        wordtype: "noun",
+        manTags: ["foobar-C"],
+        optTags: [],
+        gcase: ["nom"],
+        number: ["singular"],
+        gender: [],
+      },
+    ],
+    primaryOrders: [
+      ["nou-1", "nou-3", "nou-2"],
+      ["nou-1", "nou-2", "nou-3"],
+      ["nou-2", "nou-1", "nou-3"],
+      ["nou-2", "nou-3", "nou-1"],
+    ],
+    additionalOrders: [],
+  },
 };
 
 exports.dummySentenceFormulasBank = { level01 };
