@@ -1,10 +1,12 @@
 const scUtils = require("../utils/sentenceCreationUtils.js");
-const { words } = require("../utils/PL/words.js");
-const { dummyWords } = require("../utils/PL/dummyWords.js");
-const { sentenceFormulas } = require("../utils/PL/sentenceFormulas.js");
+const gpUtils = require("../utils/generalPurposeUtils.js");
+const lfUtils = require("../utils/lemmaFilteringUtils.js");
+const { words } = require("../source/PL/words.js");
+const { dummyWords } = require("../source/PL/dummyWords.js");
+const { sentenceFormulas } = require("../source/PL/sentenceFormulas.js");
 const {
   dummySentenceFormulas,
-} = require("../utils/PL/dummySentenceFormulas.js");
+} = require("../source/PL/dummySentenceFormulas.js");
 
 exports.fetchPalette = (req) => {
   let defaultSentenceNumber = 50;
@@ -122,22 +124,22 @@ exports.fetchPalette = (req) => {
         formulaChunk,
       });
     } else {
-      let source = wordsCopy[scUtils.giveSetKey(formulaChunk.wordtype)];
+      let source = wordsCopy[gpUtils.giveSetKey(formulaChunk.wordtype)];
       let matches = [];
 
-      matches = scUtils.filterByTag(source, formulaChunk.manTags, true);
-      matches = scUtils.filterByTag(matches, formulaChunk.optTags, false);
+      matches = lfUtils.filterByTag(source, formulaChunk.manTags, true);
+      matches = lfUtils.filterByTag(matches, formulaChunk.optTags, false);
 
       // Do this for nouns because we're filtering the different noun lobjs by gender, as each noun is a diff gender.
       // Don't do this for adjs, as gender is a key inside each individual adj lobj.
       if (["noun"].includes(formulaChunk.wordtype)) {
-        matches = scUtils.filterByKey(
+        matches = lfUtils.filterByKey(
           matches,
           formulaChunk["gender"],
           "gender"
         );
 
-        matches = scUtils.filterOutDefectiveInflections(
+        matches = lfUtils.filterOutDefectiveInflections(
           matches,
           formulaChunk,
           inflectionChainsPL
@@ -145,9 +147,9 @@ exports.fetchPalette = (req) => {
       }
 
       if (matches.length) {
-        let selectedLemmaObj = { ...scUtils.selectRandom(matches) };
+        let selectedLemmaObj = { ...gpUtils.selectRandom(matches) };
 
-        let filterNestedOutput = scUtils.filterWithinLemmaObjectByNestedKeys(
+        let filterNestedOutput = lfUtils.filterWithinLemmaObjectByNestedKeys(
           selectedLemmaObj,
           formulaChunk,
           inflectionChainsPL
