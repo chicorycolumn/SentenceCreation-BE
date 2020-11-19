@@ -41,8 +41,6 @@ exports.fetchPalette = (req) => {
 
   let sentenceStructure = sentenceFormula.structure;
 
-  //Instead of forEach, insert each finished result into the result arr, AT THE SAME INDEX.
-
   let doneChunkIds = [];
   let headIds = [];
   sentenceStructure.forEach((chunk) => {

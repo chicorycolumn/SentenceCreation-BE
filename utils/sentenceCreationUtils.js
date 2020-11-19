@@ -50,8 +50,6 @@ exports.buildSentenceFromArray = (unorderedArr, sentenceFormula) => {
         ? sentenceFormula.primaryOrders[0]
         : gpUtils.selectRandom(sentenceFormula.primaryOrders);
 
-    //Epsilonman say Rearrange the order of unorderedArr d'acc the order variable.
-    //We still not done yet.
     let orderedArr = [];
     order.forEach((chunkId) => {
       orderedArr.push(

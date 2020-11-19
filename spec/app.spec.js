@@ -10,12 +10,11 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe("/palette - Stage 2: Adjectives", () => {
+  describe.only("/palette - Stage 2: Adjectives", () => {
     it("#pal02-01a GET 200 YES: Returns a sentence where adjective agrees with noun in singular.", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          // sentenceNumber: 55,
           sentenceFormulaSymbol: "red apple",
         })
         .expect(200)
@@ -27,28 +26,28 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    xit("#pal02-01b GET 200 YES: Returns a sentence where adjective agrees with noun in plural.", () => {
+    it("#pal02-01b GET 200 YES: Returns a sentence where adjective agrees with noun in nonvirile plural.", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceNumber: "55a",
-          // sentenceFormulaSymbol: "red apples",
+          // sentenceNumber: "55a",
+          sentenceFormulaSymbol: "red apples",
         })
         .expect(200)
         .then((res) => {
           expect(res.body.palette).to.be.a("String");
-          expect(["Cebula czerwona.", "Jabłko czerwone."]).to.include(
+          expect(["Czerwone cebule.", "Czerwone jabłka."]).to.include(
             res.body.palette
           );
           console.log({ palette: res.body.palette });
         });
     });
-    xit("#pal02-01c GET 200 YES: Returns a sentence where adjective agrees with noun in plural.", () => {
+    it.only("#pal02-01c GET 200 YES: Returns a sentence where adjective agrees with noun in virile or nonvirile plural.", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceNumber: 56,
-          // sentenceFormulaSymbol: "red girls",
+          // sentenceNumber: 56,
+          sentenceFormulaSymbol: "red girls",
         })
         .expect(200)
         .then((res) => {

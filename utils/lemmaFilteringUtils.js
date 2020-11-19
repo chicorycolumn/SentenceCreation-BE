@@ -24,6 +24,20 @@ exports.filterWithinLemmaObjectByNestedKeys = (
     lemmaObject.tags.includes(tag);
   });
 
+  console.log("****************************", structureChunk);
+  if (structureChunk.wordtype === "adjective") {
+    if (
+      structureChunk.number.length === 1 &&
+      structureChunk.number[0] === "plural"
+    ) {
+      exports.adjustVirileAndNonVirile(structureChunk);
+    } else {
+      console.log(
+        "Error in filterWithinLemmaObjectByNestedKeys fxn regarding adjectives, expected this adjective to have exactly one specfication as NUMBER feature."
+      );
+    }
+  }
+
   //Do this for nouns, because noun lobjs have a gender, which they can put onto structureChunk to show what choice we made.
   //Don't do this for adjs, because they are the reverse. We earlier put the head word's gender onto the structureChunk,
   //but the adj lobj has no gender key.
@@ -140,4 +154,25 @@ exports.filterByTag = (wordset, tags, mandatory) => {
   } else {
     return lemmaObjs;
   }
+};
+
+exports.adjustVirileAndNonVirile = (structureChunk) => {
+  if (structureChunk.gender.length !== 1) {
+    console.log(
+      "Error in filterWithinLemmaObjectByNestedKeys fxn regarding adjectives, expected this adjective to have exactly one specfication as GENDER feature."
+    );
+    return;
+  }
+
+  const pluralGenderRefObj = {
+    m1: "virile",
+    m2: "nonvirile",
+    m3: "nonvirile",
+    f: "nonvirile",
+    n: "nonvirile",
+  };
+
+  let pluralGender = pluralGenderRefObj[structureChunk.gender[0]];
+
+  structureChunk.gender = [pluralGender];
 };
