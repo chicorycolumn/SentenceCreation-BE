@@ -1,7 +1,14 @@
 const gpUtils = require("./generalPurposeUtils.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
+const POLUtils = require("./specificPolishUtils.js");
 
 exports.concoctNestedRoutes = (routesByLevelTarget, routesByLevelSource) => {
+  console.log(
+    "**********************************************************************************%%"
+  );
+  console.log("routesByLevelTarget", routesByLevelTarget);
+  console.log("routesByLevelSource", routesByLevelSource);
+
   routesByLevelTarget.forEach((arr, index) => {
     if (!arr.length) {
       if (routesByLevelSource[index] && routesByLevelSource[index].length) {
@@ -64,9 +71,13 @@ exports.buildSentenceFromArray = (unorderedArr, sentenceFormula) => {
 };
 
 exports.extractNestedRoutes = (source) => {
+  // console.log("extractNestedRoutes >>source", source);
+
   let routesByNesting = [];
   let arr = [];
   recursivelyMapRoutes(arr, source);
+
+  // console.log("extractNestedRoutes >>routesByNesting", routesByNesting);
 
   let routesByLevel = [];
 
@@ -90,7 +101,13 @@ exports.extractNestedRoutes = (source) => {
       arr.pop();
       return arrCopy;
     } else {
+      // console.log("recursivelyMapRoutes >>>source", source);
       Object.keys(source).forEach((key) => {
+        if (!source[key]) {
+          delete source[key];
+          return;
+        }
+
         arr.push(key);
 
         let result = recursivelyMapRoutes(arr, source[key]);
@@ -136,10 +153,6 @@ exports.getSelectedWordAndPutInArray = (
 ) => {
   let structureChunk = structureChunkOriginal;
 
-  // if (gpUtils.isObject(structureChunkOriginal)) {
-  //   structureChunk = { ...structureChunkOriginal };
-  // }
-
   if (structureChunk.wordtype === "fixed") {
     resultArr.push({
       selectedLemmaObj: {},
@@ -162,14 +175,20 @@ exports.getSelectedWordAndPutInArray = (
     // Don't do this for adjs, as gender is a key inside each individual adj lobj.
     if (["noun"].includes(structureChunk.wordtype)) {
       matches = lfUtils.filterByKey(matches, structureChunk, "gender");
-
-      matches = lfUtils.filterOutDefectiveInflections(
-        matches,
-        structureChunk,
-        inflectionChainsByThisLanguage
-      );
     }
   }
+
+  if (structureChunk.wordtype === "verb") {
+    matches.forEach((lObj) => POLUtils.fillVerbLemmaObject(lObj));
+  }
+
+  // console.log("have these verbs been filled out?", matches);
+
+  matches = lfUtils.filterOutDeficientInflections(
+    matches,
+    structureChunk,
+    inflectionChainsByThisLanguage
+  );
 
   if (matches.length) {
     let selectedLemmaObj = gpUtils.selectRandom(matches);

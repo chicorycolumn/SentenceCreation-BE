@@ -48,7 +48,7 @@ exports.filterWithinLemmaObjectByNestedKeys = (
 
   let requirementArrs = [];
   inflectionChain.forEach((key) => {
-    requirementArrs.push([key, structureChunk[key]]);
+    requirementArrs.push([key, structureChunk[key] || []]);
   });
 
   let errorInDrilling = false;
@@ -104,16 +104,16 @@ exports.filterWithinLemmaObjectByNestedKeys = (
   }
 };
 
-exports.filterOutDefectiveInflections = (
+exports.filterOutDeficientInflections = (
   sourceArr,
   specObj,
   inflectionChainRefObj
 ) => {
   let inflectionChain = inflectionChainRefObj[specObj.wordtype];
-  let requirementArrs = inflectionChain.map((key) => specObj[key]);
+  let requirementArrs = inflectionChain.map((key) => specObj[key] || []);
 
   return sourceArr.filter((lObj) => {
-    if (!lObj.defective) {
+    if (!lObj.deficient) {
       return true;
     } else {
       let { routesByNesting, routesByLevel } = scUtils.extractNestedRoutes(
@@ -126,6 +126,23 @@ exports.filterOutDefectiveInflections = (
         requirementArrs,
         routesByLevel
       );
+
+      // console.log(
+      //   "filterOutDeficientInflections --inflectionChain",
+      //   inflectionChain
+      // );
+      // console.log(
+      //   "filterOutDeficientInflections --requirementArrs",
+      //   requirementArrs
+      // );
+      // console.log(
+      //   "filterOutDeficientInflections --inflectionPathsInSource",
+      //   inflectionPathsInSource
+      // );
+      // console.log(
+      //   "filterOutDeficientInflections --inflectionPathsInRequirements",
+      //   inflectionPathsInRequirements
+      // );
 
       return inflectionPathsInRequirements.some((inflectionPathReq) =>
         inflectionPathsInSource.some((inflectionPathSou) => {

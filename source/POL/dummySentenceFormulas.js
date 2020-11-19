@@ -206,6 +206,20 @@ const level01 = {
     primaryOrders: [["fix-1", "nou-1"]],
     additionalOrders: [],
   },
+  dummy12: {
+    symbol: "shirt",
+    structure: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        manTags: ["wearable"],
+        optTags: [],
+        gcase: ["nom"],
+        number: [],
+        gender: [],
+      },
+    ],
+  },
 };
 
 exports.dummySentenceFormulasBank = { level01 };

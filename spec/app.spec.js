@@ -10,6 +10,94 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
+  describe("/palette - Stage 4: Verbs", () => {
+    // it.only("#pal04-01a GET 200 YES: Returns a sentence with a single verb, with tense specified.", () => {
+    xit("#pal04-01a GET 200 YES: Returns a sentence with a single verb, in present.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          sentenceFormulaSymbol: "I am reading",
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          expect([
+            "Czytam.",
+            "Czytasz.",
+            "Czyta.",
+            "Czytamy.",
+            "Czytacie.",
+            "Czytają.",
+          ]).to.include(res.body.palette);
+          console.log({ palette: res.body.palette });
+        });
+    });
+    it.only("#pal04-01a GET 200 YES: Returns a sentence with a single verb, with person specified.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          sentenceFormulaSymbol: "*you ?tense read",
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          expect([
+            "czytaliście",
+            "czytałyście",
+            "będziesz czytał",
+            "będziesz czytać",
+            "będziesz czytała",
+            "będziesz czytać",
+            "będziecie czytali",
+            "będziecie czytać",
+            "będziecie czytały",
+            "będziecie czytać",
+            "czytałbyś",
+            "czytałabyś",
+            "czytalibyście",
+            "czytałybyście",
+            "czytaj",
+            "czytajcie",
+          ]).to.include(res.body.palette);
+          console.log({ palette: res.body.palette });
+        });
+    });
+    it("#pal04-00 GET 200 YES: Returns a sentence with a single noun.", () => {
+      // it.only("#pal04-00 GET 200 YES: Returns a sentence with a single noun.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          sentenceFormulaSymbol: "shirt",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          console.log({ palette: res.body.palette });
+        });
+    });
+    it("#pal04-01a GET 200 YES: Returns a sentence with a noun and verb, in present.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          sentenceFormulaSymbol: "girl is reading",
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          // expect([
+          //   "Czytam.",
+          //   "Czytasz.",
+          //   "Czyta.",
+          //   "Czytamy.",
+          //   "Czytacie.",
+          //   "Czytają.",
+          // ]).to.include(res.body.palette);
+          console.log({ palette: res.body.palette });
+        });
+    });
+  });
+
   describe("/palette - Stage 3: Adjectives", () => {
     it("#pal03-01a GET 200 YES: Returns a sentence where adjective agrees with noun in singular.", () => {
       return request(app)

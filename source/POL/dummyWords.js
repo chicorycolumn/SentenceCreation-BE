@@ -4,7 +4,7 @@ let nounSet = [
     lemma: "foobar_loc_only",
     gender: "n",
     tags: ["dummy"],
-    defective: true,
+    deficient: true,
     inflections: {
       singular: {
         loc: "foobar_sin_loc",
@@ -19,7 +19,7 @@ let nounSet = [
     lemma: "foobar_ins_only",
     gender: "n",
     tags: ["dummy"],
-    defective: true,
+    deficient: true,
     inflections: {
       singular: {
         ins: "foobar_sin_ins",
@@ -34,7 +34,7 @@ let nounSet = [
     lemma: "foobar_sin_ins_plu_loc_only",
     gender: "n",
     tags: ["dummy2"],
-    defective: true,
+    deficient: true,
     inflections: {
       singular: {
         ins: "foobar_sin_ins",
@@ -49,7 +49,7 @@ let nounSet = [
     lemma: "foobar_sin_ins_plu_loc_only",
     gender: "n",
     tags: ["dummy3"],
-    defective: true,
+    deficient: true,
     inflections: {
       singular: {
         ins: "foobar_sin_ins",
@@ -64,7 +64,7 @@ let nounSet = [
     lemma: "foobar_sin_loc_plu_ins_only",
     gender: "n",
     tags: ["dummy3"],
-    defective: true,
+    deficient: true,
     inflections: {
       singular: {
         loc: "foobar_sin_loc",
@@ -79,7 +79,7 @@ let nounSet = [
     lemma: "foobar_none",
     gender: "n",
     tags: ["dummy3"],
-    defective: true,
+    deficient: true,
     inflections: {
       plural: {
         loc: "foobar_plu_loc",
@@ -92,7 +92,7 @@ let nounSet = [
     lemma: "foobar-A",
     gender: "n",
     tags: ["foobar-A"],
-    defective: true,
+    deficient: true,
     inflections: {
       singular: {
         nom: "foobar-A",
@@ -104,7 +104,7 @@ let nounSet = [
     lemma: "foobar-B",
     gender: "n",
     tags: ["foobar-B"],
-    defective: true,
+    deficient: true,
     inflections: {
       singular: {
         nom: "foobar-B",
@@ -116,7 +116,7 @@ let nounSet = [
     lemma: "foobar-C",
     gender: "n",
     tags: ["foobar-C"],
-    defective: true,
+    deficient: true,
     inflections: {
       singular: {
         nom: "foobar-C",

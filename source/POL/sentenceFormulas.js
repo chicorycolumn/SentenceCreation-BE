@@ -176,6 +176,52 @@ const level01 = {
       },
     ],
   },
+  58: {
+    symbol: "I am reading",
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        manTags: [],
+        optTags: [],
+        tense: ["present"],
+      },
+    ],
+  },
+  "58a": {
+    symbol: "*you ?tense read",
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        manTags: [],
+        optTags: [],
+        person: ["2per"],
+      },
+    ],
+  },
+  59: {
+    symbol: "girl is reading",
+    structure: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        manTags: ["person"],
+        optTags: [],
+        gcase: ["nom"],
+        number: ["singular"],
+        gender: [],
+      },
+      {
+        chunkId: "ver-1",
+        agreeWith: "nou-1",
+        wordtype: "verb",
+        tense: "present",
+        manTags: ["basic2"],
+        optTags: [],
+      },
+    ],
+  },
 };
 
 exports.sentenceFormulasBank = { level01 };
