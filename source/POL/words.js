@@ -275,18 +275,19 @@ let adjectiveSet = [
 ];
 let adverbSet = [];
 let verbSet = [
+  // chain = ["tense", "person", "number", "gender"]
+  //perfective has participles:             passive, anterior
+  //imperfective has participles:   active, passive, contemporary
   {
-    // chain = ["tense", "person", "number", "gender"]
     translations: { EN: ["have"] },
     lemma: "mieć",
-    id: "pol-ver-001",
+    id: "pol-ver-001-imp-01",
     tags: ["basic", "possession"],
     aspect: "imperfective",
-    defective: false,
+    defective: true,
     inflections: {
-      infinite: "mieć",
+      infinitive: "mieć",
       present: {
-        impersonal: "ma się",
         "1per": {
           singular: {
             m: "mam",
@@ -386,30 +387,8 @@ let verbSet = [
           },
         },
       },
-      pastAdjectivalParticiple: {
-        "1per": {
-          singular: {
-            m: "mający",
-            f: "mająca",
-            n: "mające",
-          },
-          plural: {
-            virile: "mający",
-            nonvirile: "mające",
-          },
-        },
-        "2per": {
-          singular: {
-            m: "mający",
-            f: "mająca",
-            n: "mające",
-          },
-          plural: {
-            virile: "mający",
-            nonvirile: "mające",
-          },
-        },
-        "3per": {
+      activeAdjectival: {
+        allPersons: {
           singular: {
             m: "mający",
             f: "mająca",
@@ -421,7 +400,427 @@ let verbSet = [
           },
         },
       },
-      presentAdverbialParticiple: "mając",
+      passiveAdjectival: null,
+      contemporaryAdverbial: "mając",
+      anteriorAdverbial: null,
+      verbalNoun: null,
+    },
+  },
+  {
+    translations: { EN: ["read"] },
+    lemma: "czytać",
+    id: "pol-ver-002-imp-01",
+    tags: [],
+    aspect: "imperfective",
+    defective: false,
+    inflections: {
+      infinitive: "czytać",
+      present: {
+        "1per": {
+          singular: {
+            m: "czytam",
+            f: "czytam",
+          },
+          plural: {
+            virile: "czytamy",
+            nonvirile: "czytamy",
+          },
+        },
+        "2per": {
+          singular: {
+            m: "czytasz",
+            f: "czytasz",
+          },
+          plural: {
+            virile: "czytacie",
+            nonvirile: "czytacie",
+          },
+        },
+        "3per": {
+          singular: {
+            m: "czyta",
+            f: "czyta",
+            n: "czyta",
+          },
+          plural: {
+            virile: "czytają",
+            nonvirile: "czytają",
+          },
+        },
+      },
+      past: {
+        impersonal: "czytano",
+        "1per": {
+          singular: {
+            m: "czytałem",
+            f: "czytałam",
+          },
+          plural: {
+            virile: "czytaliśmy",
+            nonvirile: "czytałyśmy",
+          },
+        },
+        "2per": {
+          singular: {
+            m: "czytałeś",
+            f: "czytałaś",
+          },
+          plural: {
+            virile: "czytaliście",
+            nonvirile: "czytałyście",
+          },
+        },
+        "3per": {
+          singular: {
+            m: "czytał",
+            f: "czytała",
+            n: "czytało",
+          },
+          plural: {
+            virile: "czytali",
+            nonvirile: "czytały",
+          },
+        },
+      },
+      imperative: {
+        "1per": {
+          singular: {
+            m: "niech czytam",
+            f: "niech czytam",
+          },
+          plural: {
+            virile: "czytajmy",
+            nonvirile: "czytajmy",
+          },
+        },
+        "2per": {
+          singular: {
+            m: "czytaj",
+            f: "czytaj",
+          },
+          plural: {
+            virile: "czytajcie",
+            nonvirile: "czytajcie",
+          },
+        },
+        "3per": {
+          singular: {
+            m: "niech czyta",
+            f: "niech czyta",
+            n: "niech czyta",
+          },
+          plural: {
+            virile: "niech czytają",
+            nonvirile: "niech czytają",
+          },
+        },
+      },
+      activeAdjectival: {
+        allPersons: {
+          singular: {
+            m: "czytający",
+            f: "czytająca",
+            n: "czytające",
+          },
+          plural: {
+            virile: "czytający",
+            nonvirile: "czytające",
+          },
+        },
+      },
+      passiveAdjectival: {
+        allPersons: {
+          singular: {
+            m: "czytany",
+            f: "czytana",
+            n: "czytane",
+          },
+          plural: {
+            virile: "czytani",
+            nonvirile: "czytane",
+          },
+        },
+      },
+      contemporaryAdverbial: "czytając",
+      anteriorAdverbial: null,
+      verbalNoun: czytanie,
+    },
+  },
+  {
+    translations: { EN: ["read"] },
+    lemma: "przeczytać",
+    id: "pol-ver-002-per-01",
+    tags: [],
+    aspect: "perfective",
+    defective: false,
+    inflections: {
+      infinitive: "przeczytać",
+      future: {
+        "1per": {
+          singular: {
+            m: "przeczytam",
+            f: "przeczytam",
+          },
+          plural: {
+            virile: "przeczytamy",
+            nonvirile: "przeczytamy",
+          },
+        },
+        "2per": {
+          singular: {
+            m: "przeczytasz",
+            f: "przeczytasz",
+          },
+          plural: {
+            virile: "przeczytacie",
+            nonvirile: "przeczytacie",
+          },
+        },
+        "3per": {
+          singular: {
+            m: "przeczyta",
+            f: "przeczyta",
+            n: "przeczyta",
+          },
+          plural: {
+            virile: "przeczytają",
+            nonvirile: "przeczytają",
+          },
+        },
+      },
+      past: {
+        impersonal: "przeczytano",
+        "1per": {
+          singular: {
+            m: "czytałem",
+            f: "czytałam",
+          },
+          plural: {
+            virile: "czytaliśmy",
+            nonvirile: "czytałyśmy",
+          },
+        },
+        "2per": {
+          singular: {
+            m: "czytałeś",
+            f: "czytałaś",
+          },
+          plural: {
+            virile: "czytaliście",
+            nonvirile: "czytałyście",
+          },
+        },
+        "3per": {
+          singular: {
+            m: "czytał",
+            f: "czytała",
+            n: "czytało",
+          },
+          plural: {
+            virile: "czytali",
+            nonvirile: "czytały",
+          },
+        },
+      },
+      imperative: {
+        "1per": {
+          singular: {
+            m: "niech przeczytam",
+            f: "niech przeczytam",
+          },
+          plural: {
+            virile: "przeczytajmy",
+            nonvirile: "przeczytajmy",
+          },
+        },
+        "2per": {
+          singular: {
+            m: "przeczytaj",
+            f: "przeczytaj",
+          },
+          plural: {
+            virile: "przeczytajcie",
+            nonvirile: "przeczytajcie",
+          },
+        },
+        "3per": {
+          singular: {
+            m: "niech przeczyta",
+            f: "niech przeczyta",
+            n: "niech przeczyta",
+          },
+          plural: {
+            virile: "niech przeczytają",
+            nonvirile: "niech przeczytają",
+          },
+        },
+      },
+      activeAdjectival: null,
+      passiveAdjectival: {
+        allPersons: {
+          singular: {
+            m: "przeczytany",
+            f: "przeczytana",
+            n: "przeczytane",
+          },
+          plural: {
+            virile: "przeczytani",
+            nonvirile: "przeczytane",
+          },
+        },
+      },
+      contemporaryAdverbial: null,
+      anteriorAdverbial: "przeczytawszy",
+      verbalNoun: null,
+    },
+  },
+  {
+    translations: { EN: ["have"] },
+    lemma: "mieć",
+    id: "pol-ver-001-imp",
+    tags: ["basic", "possession"],
+    aspect: "imperfective",
+    defective: false,
+    inflections: {
+      infinitive: "mieć",
+      present: {
+        "1per": {
+          singular: {
+            m: "mam",
+            f: "mam",
+          },
+          plural: {
+            virile: "mamy",
+            nonvirile: "mamy",
+          },
+        },
+        "2per": {
+          singular: {
+            m: "masz",
+            f: "masz",
+          },
+          plural: {
+            virile: "macie",
+            nonvirile: "macie",
+          },
+        },
+        "3per": {
+          singular: {
+            m: "ma",
+            f: "ma",
+            n: "ma",
+          },
+          plural: {
+            virile: "mają",
+            nonvirile: "mają",
+          },
+        },
+      },
+      past: {
+        impersonal: "miano",
+        "1per": {
+          singular: {
+            m: "miałem",
+            f: "miałam",
+          },
+          plural: {
+            virile: "mieliśmy",
+            nonvirile: "miałyśmy",
+          },
+        },
+        "2per": {
+          singular: {
+            m: "miałeś",
+            f: "miałaś",
+          },
+          plural: {
+            virile: "mieliście",
+            nonvirile: "miałyście",
+          },
+        },
+        "3per": {
+          singular: {
+            m: "miał",
+            f: "miała",
+            n: "miało",
+          },
+          plural: {
+            virile: "mieli",
+            nonvirile: "miały",
+          },
+        },
+      },
+      imperative: {
+        "1per": {
+          singular: {
+            m: "niech mam",
+            f: "niech mam",
+          },
+          plural: {
+            virile: "miejmy",
+            nonvirile: "miejmy",
+          },
+        },
+        "2per": {
+          singular: {
+            m: "miej",
+            f: "miej",
+          },
+          plural: {
+            virile: "miejcie",
+            nonvirile: "miejcie",
+          },
+        },
+        "3per": {
+          singular: {
+            m: "niech ma",
+            f: "niech ma",
+            n: "niech ma",
+          },
+          plural: {
+            virile: "niech mają",
+            nonvirile: "niech mają",
+          },
+        },
+      },
+      participles: {
+        activeAdjectival: {
+          "1per": {
+            singular: {
+              m: "mający",
+              f: "mająca",
+              n: "mające",
+            },
+            plural: {
+              virile: "mający",
+              nonvirile: "mające",
+            },
+          },
+          "2per": {
+            singular: {
+              m: "mający",
+              f: "mająca",
+              n: "mające",
+            },
+            plural: {
+              virile: "mający",
+              nonvirile: "mające",
+            },
+          },
+          "3per": {
+            singular: {
+              m: "mający",
+              f: "mająca",
+              n: "mające",
+            },
+            plural: {
+              virile: "mający",
+              nonvirile: "mające",
+            },
+          },
+        },
+        contemporaryAdverbial: "mając",
+      },
     },
   },
 ];

@@ -85,8 +85,8 @@ exports.filterWithinLemmaObjectByNestedKeys = (
     let featureValue = requirementFeatureArr[1];
 
     if (featureValue.length) {
-      validFeatures = sourceFeatures.filter((featureSubitem) =>
-        featureValue.includes(featureSubitem)
+      validFeatures = sourceFeatures.filter((feature) =>
+        featureValue.includes(feature)
       );
     } else {
       validFeatures = sourceFeatures;
