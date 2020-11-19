@@ -39,9 +39,6 @@ exports.concoctNestedRoutes = (routesByLevelTarget, routesByLevelSource) => {
 };
 
 exports.buildSentenceFromArray = (unorderedArr, sentenceFormula) => {
-  console.log("^^^sentenceFormula", sentenceFormula);
-
-  let orderedArr = [];
   let selectedWords = [];
 
   if (sentenceFormula.primaryOrders) {
@@ -155,19 +152,23 @@ exports.getSelectedWordAndPutInArray = (
   let source = words[gpUtils.giveSetKey(structureChunk.wordtype)];
   let matches = [];
 
-  matches = lfUtils.filterByTag(source, structureChunk.manTags, true);
-  matches = lfUtils.filterByTag(matches, structureChunk.optTags, false);
+  if (structureChunk.specificLemmas && structureChunk.specificLemmas.length) {
+    matches = lfUtils.filterByLemma(source, structureChunk);
+  } else {
+    matches = lfUtils.filterByTag(source, structureChunk.manTags, true);
+    matches = lfUtils.filterByTag(matches, structureChunk.optTags, false);
 
-  // Do this for nouns because we're filtering the different noun lobjs by gender, as each noun is a diff gender.
-  // Don't do this for adjs, as gender is a key inside each individual adj lobj.
-  if (["noun"].includes(structureChunk.wordtype)) {
-    matches = lfUtils.filterByKey(matches, structureChunk, "gender");
+    // Do this for nouns because we're filtering the different noun lobjs by gender, as each noun is a diff gender.
+    // Don't do this for adjs, as gender is a key inside each individual adj lobj.
+    if (["noun"].includes(structureChunk.wordtype)) {
+      matches = lfUtils.filterByKey(matches, structureChunk, "gender");
 
-    matches = lfUtils.filterOutDefectiveInflections(
-      matches,
-      structureChunk,
-      inflectionChainsByThisLanguage
-    );
+      matches = lfUtils.filterOutDefectiveInflections(
+        matches,
+        structureChunk,
+        inflectionChainsByThisLanguage
+      );
+    }
   }
 
   if (matches.length) {

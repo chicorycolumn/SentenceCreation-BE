@@ -24,7 +24,6 @@ exports.filterWithinLemmaObjectByNestedKeys = (
     lemmaObject.tags.includes(tag);
   });
 
-  console.log("****************************", structureChunk);
   if (structureChunk.wordtype === "adjective") {
     if (
       structureChunk.number.length === 1 &&
@@ -175,4 +174,9 @@ exports.adjustVirileAndNonVirile = (structureChunk) => {
   let pluralGender = pluralGenderRefObj[structureChunk.gender[0]];
 
   structureChunk.gender = [pluralGender];
+};
+
+exports.filterByLemma = (source, structureChunk) => {
+  let specificLemma = gpUtils.selectRandom(structureChunk.specificLemmas);
+  return source.filter((lObj) => lObj.lemma === specificLemma);
 };

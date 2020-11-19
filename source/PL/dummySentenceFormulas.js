@@ -188,6 +188,24 @@ const level01 = {
     ],
     additionalOrders: [],
   },
+  dummy11: {
+    symbol: "I have APPLE",
+    structure: [
+      { chunkId: "fix-1", wordtype: "fixed", value: "mam" },
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        manTags: [],
+        optTags: [],
+        gcase: ["nom"],
+        number: ["singular"],
+        gender: [],
+        specificLemmas: ["jabłko"], //This overrides tags and selectRandom. But still conjugates for features.
+      },
+    ],
+    primaryOrders: [["fix-1", "nou-1"]],
+    additionalOrders: [],
+  },
 };
 
 exports.dummySentenceFormulasBank = { level01 };

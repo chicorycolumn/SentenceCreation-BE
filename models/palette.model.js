@@ -31,8 +31,6 @@ exports.fetchPalette = (req) => {
 
   //LATER: If a level is specified, and random is specified, pick a random SF from that level.
 
-  console.log("&&&", req.body.sentenceFormulaSymbol);
-
   let sentenceFormula = req.body.sentenceFormulaSymbol
     ? scUtils.findObjectInNestedObject(sentenceFormulas, {
         symbol: req.body.sentenceFormulaSymbol,
@@ -59,7 +57,7 @@ exports.fetchPalette = (req) => {
     );
     doneChunkIds.push(chunkId);
 
-    console.log(">>STEP ONE", headChunk);
+    // console.log(">>STEP ONE", headChunk);
     scUtils.getSelectedWordAndPutInArray(
       headChunk,
       resultArr,
@@ -77,7 +75,7 @@ exports.fetchPalette = (req) => {
         structureChunk.agreeWith === headId
     );
 
-    console.log(">>dependentChunks", dependentChunks);
+    // console.log(">>dependentChunks", dependentChunks);
 
     if (dependentChunks.length) {
       dependentChunks.forEach((dependentChunk) => {
@@ -87,7 +85,7 @@ exports.fetchPalette = (req) => {
             structureChunk.chunkId === headId
         );
 
-        console.log(">>The headchunk of that dependent chunk is:", headChunk);
+        // console.log(">>The headchunk of that dependent chunk is:", headChunk);
 
         inflectionChainsPL["adjective"].forEach((featureKey) => {
           dependentChunk[featureKey] = headChunk[featureKey];
@@ -95,7 +93,7 @@ exports.fetchPalette = (req) => {
 
         doneChunkIds.push(dependentChunk.chunkId);
 
-        console.log(">>STEP TWO", dependentChunk);
+        // console.log(">>STEP TWO", dependentChunk);
         scUtils.getSelectedWordAndPutInArray(
           dependentChunk,
           resultArr,
@@ -113,7 +111,7 @@ exports.fetchPalette = (req) => {
       typeof structureChunk !== "object" ||
       !doneChunkIds.includes(structureChunk.chunkId)
     ) {
-      console.log(">>STEP THREE", structureChunk);
+      // console.log(">>STEP THREE", structureChunk);
       scUtils.getSelectedWordAndPutInArray(
         structureChunk,
         resultArr,

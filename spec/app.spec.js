@@ -10,8 +10,8 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe.only("/palette - Stage 2: Adjectives", () => {
-    it("#pal02-01a GET 200 YES: Returns a sentence where adjective agrees with noun in singular.", () => {
+  describe("/palette - Stage 3: Adjectives", () => {
+    it("#pal03-01a GET 200 YES: Returns a sentence where adjective agrees with noun in singular.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -26,7 +26,7 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    it("#pal02-01b GET 200 YES: Returns a sentence where adjective agrees with noun in nonvirile plural.", () => {
+    it("#pal03-01b GET 200 YES: Returns a sentence where adjective agrees with noun in nonvirile plural.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -42,7 +42,7 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    it.only("#pal02-01c GET 200 YES: Returns a sentence where adjective agrees with noun in virile or nonvirile plural.", () => {
+    it("#pal03-01c GET 200 YES: Returns a sentence where adjective agrees with noun in virile or nonvirile plural.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -63,7 +63,66 @@ describe("/api", () => {
     });
   });
 
-  describe("/palette - Stage 1: Nouns", () => {
+  describe("/palette - Stage 2: Nouns", () => {
+    it("#pal02-01a GET 200 YES: Returns a sentence where a tantum plurale was allowed, as no particular grammatical number was requested.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // sentenceNumber: 51,
+          sentenceFormulaSymbol: "girl is wearing shirt",
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          console.log({ palette: res.body.palette });
+          expect(res.body.palette.split(" ").reverse()[0]).to.equal("majtki.");
+        });
+    });
+    it("#pal02-01b GET 200 NO: Returns a sentence where a tantum plurale was not allowed, as singular grammatical number was requested.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // sentenceNumber: 52,
+          sentenceFormulaSymbol: "shirt is in wardrobe",
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.message).to.equal(
+            "No sentence could be created from the specifications."
+          );
+          expect(res.body.palette).to.equal(null);
+        });
+    });
+    it("#pal02-01c GET 200 YES: Returns a sentence where a tantum plurale was allowed, as either singular or plural grammatical number was requested.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // sentenceNumber: 53,
+          sentenceFormulaSymbol: "I often wear shirt",
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          console.log({ palette: res.body.palette });
+          expect(res.body.palette.split(" ").reverse()[0]).to.equal("majtki.");
+        });
+    });
+    it("#pal02-02a GET 200 YES: Returns a sentence where end of inflection chain could be array.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // sentenceNumber: 54,
+          sentenceFormulaSymbol: "boys are male",
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          console.log({ palette: res.body.palette });
+        });
+    });
+  });
+
+  describe("/palette - Stage 1: Basics", () => {
     it("#pal01-01 GET 200 YES: Returns a sentence", () => {
       return request(app)
         .get("/api/palette")
@@ -187,63 +246,7 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    it("#pal01-04a GET 200 YES: Returns a sentence where a tantum plurale was allowed, as no particular grammatical number was requested.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // sentenceNumber: 51,
-          sentenceFormulaSymbol: "girl is wearing shirt",
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.palette).to.be.a("String");
-          console.log({ palette: res.body.palette });
-          expect(res.body.palette.split(" ").reverse()[0]).to.equal("majtki.");
-        });
-    });
-    it("#pal01-04b GET 200 NO: Returns a sentence where a tantum plurale was not allowed, as singular grammatical number was requested.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // sentenceNumber: 52,
-          sentenceFormulaSymbol: "shirt is in wardrobe",
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.message).to.equal(
-            "No sentence could be created from the specifications."
-          );
-          expect(res.body.palette).to.equal(null);
-        });
-    });
-    it("#pal01-04c GET 200 YES: Returns a sentence where a tantum plurale was allowed, as either singular or plural grammatical number was requested.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // sentenceNumber: 53,
-          sentenceFormulaSymbol: "I often wear shirt",
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.palette).to.be.a("String");
-          console.log({ palette: res.body.palette });
-          expect(res.body.palette.split(" ").reverse()[0]).to.equal("majtki.");
-        });
-    });
-    it("#pal01-05a GET 200 YES: Returns a sentence where end of inflection chain could be array.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // sentenceNumber: 54,
-          sentenceFormulaSymbol: "boys are male",
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.palette).to.be.a("String");
-          console.log({ palette: res.body.palette });
-        });
-    });
-    it("#pal01-05b GET 200 YES: Checking in console logs whether structureChunks have indeed been updated with the features (number, gender, gcase) of the finally selected word they structure for.", () => {
+    it("#pal01-04a GET 200 YES: Checking in console logs whether structureChunks have indeed been updated with the features (number, gender, gcase) of the finally selected word they structure for.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -256,7 +259,7 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    it("#pal01-06a GET 200 YES: Check order of words in final sentence, based on one specified order.", () => {
+    it("#pal01-05a GET 200 YES: Check order of words in final sentence, based on one specified order.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -270,7 +273,7 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    it("#pal01-06b GET 200 YES: Check order of words in final sentence, based on multiple specified orders.", () => {
+    it("#pal01-05b GET 200 YES: Check order of words in final sentence, based on multiple specified orders.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -286,6 +289,21 @@ describe("/api", () => {
             "Foobar-B foobar-A foobar-C.",
             "Foobar-B foobar-C foobar-A.",
           ]).to.include(res.body.palette);
+          console.log({ palette: res.body.palette });
+        });
+    });
+    it("#pal01-06a GET 200 YES: Make sure filtering by lemma is possible.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          sentenceFormulaSymbol: "I have APPLE",
+          // sentenceNumber: "dummy11",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          expect(res.body.palette).to.equal("Mam jabłko.");
           console.log({ palette: res.body.palette });
         });
     });
