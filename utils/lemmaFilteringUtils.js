@@ -13,29 +13,29 @@ exports.filterByKey = (lemmaObjectArr, requirementArrs, key) => {
 
 exports.filterWithinLemmaObjectByNestedKeys = (
   lemmaObject,
-  formulaChunk,
+  structureChunk,
   inflectionChainRefObj
 ) => {
   let source = lemmaObject.inflections;
-  formulaChunk.manTags = formulaChunk.manTags.filter((tag) => {
+  structureChunk.manTags = structureChunk.manTags.filter((tag) => {
     lemmaObject.tags.includes(tag);
   });
-  formulaChunk.optTags = formulaChunk.optTags.filter((tag) => {
+  structureChunk.optTags = structureChunk.optTags.filter((tag) => {
     lemmaObject.tags.includes(tag);
   });
 
-  //Do this for nouns, because noun lobjs have a gender, which they can put onto formulaChunk to show what choice we made.
-  //Don't do this for adjs, because they are the reverse. We earlier put the head word's gender onto the formulaChunk,
+  //Do this for nouns, because noun lobjs have a gender, which they can put onto structureChunk to show what choice we made.
+  //Don't do this for adjs, because they are the reverse. We earlier put the head word's gender onto the structureChunk,
   //but the adj lobj has no gender key.
-  if (["noun"].includes(formulaChunk.wordtype)) {
-    formulaChunk["gender"] = [lemmaObject["gender"]];
+  if (["noun"].includes(structureChunk.wordtype)) {
+    structureChunk["gender"] = [lemmaObject["gender"]];
   }
 
-  let inflectionChain = inflectionChainRefObj[formulaChunk.wordtype];
+  let inflectionChain = inflectionChainRefObj[structureChunk.wordtype];
 
   let requirementArrs = [];
   inflectionChain.forEach((key) => {
-    requirementArrs.push([key, formulaChunk[key]]);
+    requirementArrs.push([key, structureChunk[key]]);
   });
 
   let errorInDrilling = false;
@@ -54,12 +54,12 @@ exports.filterWithinLemmaObjectByNestedKeys = (
     if (typeof source === "string") {
       return {
         selectedWord: source,
-        modifiedFormulaChunk: formulaChunk,
+        modifiedStructureChunk: structureChunk,
       };
     } else {
       return {
         selectedWord: gpUtils.selectRandom(source),
-        modifiedFormulaChunk: formulaChunk,
+        modifiedStructureChunk: structureChunk,
       };
     }
   }
@@ -82,7 +82,7 @@ exports.filterWithinLemmaObjectByNestedKeys = (
     if (validFeatures.length) {
       let selectedFeature = gpUtils.selectRandom(validFeatures);
 
-      formulaChunk[featureKey] = [selectedFeature];
+      structureChunk[featureKey] = [selectedFeature];
 
       return source[selectedFeature];
     } else {

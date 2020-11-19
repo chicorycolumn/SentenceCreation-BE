@@ -1,7 +1,7 @@
 const level01 = {
   50: {
     symbol: "girl eats apple",
-    formula: [
+    structure: [
       {
         chunkId: "nou-1",
         wordtype: "noun",
@@ -25,7 +25,7 @@ const level01 = {
   },
   51: {
     symbol: "girl is wearing shirt",
-    formula: [
+    structure: [
       {
         chunkId: "nou-1",
         wordtype: "noun",
@@ -49,7 +49,7 @@ const level01 = {
   },
   52: {
     symbol: "shirt is in wardrobe",
-    formula: [
+    structure: [
       {
         chunkId: "nou-1",
         wordtype: "noun",
@@ -64,7 +64,7 @@ const level01 = {
   },
   53: {
     symbol: "I often wear shirt",
-    formula: [
+    structure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "często noszę" },
       {
         chunkId: "nou-1",
@@ -79,7 +79,7 @@ const level01 = {
   },
   54: {
     symbol: "boys are male",
-    formula: [
+    structure: [
       {
         chunkId: "nou-1",
         wordtype: "noun",
@@ -94,7 +94,7 @@ const level01 = {
   },
   55: {
     symbol: "red apple",
-    formula: [
+    structure: [
       {
         chunkId: "adj-1",
         agreeWith: "nou-1",
@@ -117,7 +117,7 @@ const level01 = {
   },
   "55a": {
     symbol: "red apples",
-    formula: [
+    structure: [
       {
         chunkId: "adj-1",
         agreeWith: "nou-1",
@@ -138,7 +138,7 @@ const level01 = {
   },
   56: {
     symbol: "red girls",
-    formula: [
+    structure: [
       {
         chunkId: "adj-1",
         agreeWith: "nou-1",
@@ -159,7 +159,7 @@ const level01 = {
   },
   57: {
     symbol: "I have apple",
-    formula: [
+    structure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "mam" },
       {
         chunkId: "nou-1",

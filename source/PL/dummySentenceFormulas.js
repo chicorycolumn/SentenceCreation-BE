@@ -1,7 +1,7 @@
 const level01 = {
   dummy01: {
     symbol: "dummy01",
-    formula: [
+    structure: [
       {
         chunkId: "nou-1",
         wordtype: "noun",
@@ -15,7 +15,7 @@ const level01 = {
   },
   dummy02: {
     symbol: "dummy02",
-    formula: [
+    structure: [
       {
         chunkId: "nou-1",
         wordtype: "noun",
@@ -29,7 +29,7 @@ const level01 = {
   },
   dummy03: {
     symbol: "dummy03",
-    formula: [
+    structure: [
       {
         chunkId: "nou-1",
         wordtype: "noun",
@@ -43,7 +43,7 @@ const level01 = {
   },
   dummy04: {
     symbol: "dummy04",
-    formula: [
+    structure: [
       {
         chunkId: "nou-1",
         wordtype: "noun",
@@ -57,7 +57,7 @@ const level01 = {
   },
   dummy05: {
     symbol: "dummy05",
-    formula: [
+    structure: [
       {
         chunkId: "nou-1",
         wordtype: "noun",
@@ -71,7 +71,7 @@ const level01 = {
   },
   dummy06: {
     symbol: "dummy06",
-    formula: [
+    structure: [
       {
         chunkId: "nou-1",
         wordtype: "noun",
@@ -85,7 +85,7 @@ const level01 = {
   },
   dummy07: {
     symbol: "dummy07",
-    formula: [
+    structure: [
       {
         chunkId: "nou-1",
         wordtype: "noun",
@@ -99,7 +99,7 @@ const level01 = {
   },
   dummy08: {
     symbol: "dummy08",
-    formula: [
+    structure: [
       {
         chunkId: "nou-1",
         wordtype: "noun",
@@ -113,7 +113,7 @@ const level01 = {
   },
   dummy09: {
     symbol: "dummy09",
-    formula: [
+    structure: [
       {
         chunkId: "nou-1",
         wordtype: "noun",
@@ -151,7 +151,7 @@ const level01 = {
   },
   dummy10: {
     symbol: "dummy10",
-    formula: [
+    structure: [
       {
         chunkId: "nou-1",
         wordtype: "noun",

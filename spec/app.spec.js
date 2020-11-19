@@ -244,7 +244,7 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    it("#pal01-05b GET 200 YES: Checking in console logs whether formulaChunks have indeed been updated with the features (number, gender, gcase) of the finally selected word they formulate for.", () => {
+    it("#pal01-05b GET 200 YES: Checking in console logs whether structureChunks have indeed been updated with the features (number, gender, gcase) of the finally selected word they structure for.", () => {
       return request(app)
         .get("/api/palette")
         .send({

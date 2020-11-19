@@ -33,19 +33,19 @@ exports.fetchPalette = (req) => {
 
   console.log("&&&", req.body.sentenceFormulaSymbol);
 
-  let sentenceBigObject = req.body.sentenceFormulaSymbol
+  let sentenceFormula = req.body.sentenceFormulaSymbol
     ? scUtils.findObjectInNestedObject(sentenceFormulas, {
         symbol: req.body.sentenceFormulaSymbol,
       })
     : sentenceFormulas[levelNumber][sentenceNumber];
 
-  let sentenceFormula = sentenceBigObject.formula;
+  let sentenceStructure = sentenceFormula.structure;
 
   //Instead of forEach, insert each finished result into the result arr, AT THE SAME INDEX.
 
   let doneChunkIds = [];
   let headIds = [];
-  sentenceFormula.forEach((chunk) => {
+  sentenceStructure.forEach((chunk) => {
     if (typeof chunk === "object" && chunk.agreeWith) {
       headIds.push(chunk.agreeWith);
     }
@@ -55,9 +55,9 @@ exports.fetchPalette = (req) => {
   //STEP ONE
   headIds.forEach((headId) => {
     let chunkId = headId;
-    let headChunk = sentenceFormula.find(
-      (formulaChunk) =>
-        typeof formulaChunk === "object" && formulaChunk.chunkId === chunkId
+    let headChunk = sentenceStructure.find(
+      (structureChunk) =>
+        typeof structureChunk === "object" && structureChunk.chunkId === chunkId
     );
     doneChunkIds.push(chunkId);
 
@@ -73,18 +73,20 @@ exports.fetchPalette = (req) => {
 
   //STEP TWO
   headIds.forEach((headId) => {
-    let dependentChunks = sentenceFormula.filter(
-      (formulaChunk) =>
-        typeof formulaChunk === "object" && formulaChunk.agreeWith === headId
+    let dependentChunks = sentenceStructure.filter(
+      (structureChunk) =>
+        typeof structureChunk === "object" &&
+        structureChunk.agreeWith === headId
     );
 
     console.log(">>dependentChunks", dependentChunks);
 
     if (dependentChunks.length) {
       dependentChunks.forEach((dependentChunk) => {
-        let headChunk = sentenceFormula.find(
-          (formulaChunk) =>
-            typeof formulaChunk === "object" && formulaChunk.chunkId === headId
+        let headChunk = sentenceStructure.find(
+          (structureChunk) =>
+            typeof structureChunk === "object" &&
+            structureChunk.chunkId === headId
         );
 
         console.log(">>The headchunk of that dependent chunk is:", headChunk);
@@ -108,14 +110,14 @@ exports.fetchPalette = (req) => {
   });
 
   //STEP THREE
-  sentenceFormula.forEach((formulaChunk) => {
+  sentenceStructure.forEach((structureChunk) => {
     if (
-      typeof formulaChunk !== "object" ||
-      !doneChunkIds.includes(formulaChunk.chunkId)
+      typeof structureChunk !== "object" ||
+      !doneChunkIds.includes(structureChunk.chunkId)
     ) {
-      console.log(">>STEP THREE", formulaChunk);
+      console.log(">>STEP THREE", structureChunk);
       scUtils.getSelectedWordAndPutInArray(
-        formulaChunk,
+        structureChunk,
         resultArr,
         words,
         inflectionChainsPL,
@@ -130,7 +132,7 @@ exports.fetchPalette = (req) => {
 
   let finalSentence = scUtils.buildSentenceFromArray(
     resultArr,
-    sentenceBigObject
+    sentenceFormula
   );
 
   if (errorInSentenceCreation.errorMessage) {

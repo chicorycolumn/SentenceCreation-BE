@@ -38,24 +38,24 @@ exports.concoctNestedRoutes = (routesByLevelTarget, routesByLevelSource) => {
   }
 };
 
-exports.buildSentenceFromArray = (unorderedArr, sentenceBigObject) => {
-  console.log("^^^sentenceBigObject", sentenceBigObject);
+exports.buildSentenceFromArray = (unorderedArr, sentenceFormula) => {
+  console.log("^^^sentenceFormula", sentenceFormula);
 
   let orderedArr = [];
   let selectedWords = [];
 
-  if (sentenceBigObject.primaryOrders) {
+  if (sentenceFormula.primaryOrders) {
     let order =
-      sentenceBigObject.primaryOrders.length === 1
-        ? sentenceBigObject.primaryOrders[0]
-        : gpUtils.selectRandom(sentenceBigObject.primaryOrders);
+      sentenceFormula.primaryOrders.length === 1
+        ? sentenceFormula.primaryOrders[0]
+        : gpUtils.selectRandom(sentenceFormula.primaryOrders);
 
     //Epsilonman say Rearrange the order of unorderedArr d'acc the order variable.
     //We still not done yet.
     let orderedArr = [];
     order.forEach((chunkId) => {
       orderedArr.push(
-        unorderedArr.find((item) => item.formulaChunk.chunkId === chunkId)
+        unorderedArr.find((item) => item.structureChunk.chunkId === chunkId)
       );
     });
 
@@ -133,41 +133,41 @@ exports.findObjectInNestedObject = (source, identifyingData) => {
 };
 
 exports.getSelectedWordAndPutInArray = (
-  formulaChunkOriginal,
+  structureChunkOriginal,
   resultArr,
   words,
   inflectionChainsByThisLanguage,
   errorInSentenceCreation
 ) => {
-  let formulaChunk = formulaChunkOriginal;
+  let structureChunk = structureChunkOriginal;
 
-  // if (gpUtils.isObject(formulaChunkOriginal)) {
-  //   formulaChunk = { ...formulaChunkOriginal };
+  // if (gpUtils.isObject(structureChunkOriginal)) {
+  //   structureChunk = { ...structureChunkOriginal };
   // }
 
-  if (formulaChunk.wordtype === "fixed") {
+  if (structureChunk.wordtype === "fixed") {
     resultArr.push({
       selectedLemmaObj: {},
-      selectedWord: formulaChunk.value,
-      formulaChunk,
+      selectedWord: structureChunk.value,
+      structureChunk,
     });
     return;
   }
 
-  let source = words[gpUtils.giveSetKey(formulaChunk.wordtype)];
+  let source = words[gpUtils.giveSetKey(structureChunk.wordtype)];
   let matches = [];
 
-  matches = lfUtils.filterByTag(source, formulaChunk.manTags, true);
-  matches = lfUtils.filterByTag(matches, formulaChunk.optTags, false);
+  matches = lfUtils.filterByTag(source, structureChunk.manTags, true);
+  matches = lfUtils.filterByTag(matches, structureChunk.optTags, false);
 
   // Do this for nouns because we're filtering the different noun lobjs by gender, as each noun is a diff gender.
   // Don't do this for adjs, as gender is a key inside each individual adj lobj.
-  if (["noun"].includes(formulaChunk.wordtype)) {
-    matches = lfUtils.filterByKey(matches, formulaChunk, "gender");
+  if (["noun"].includes(structureChunk.wordtype)) {
+    matches = lfUtils.filterByKey(matches, structureChunk, "gender");
 
     matches = lfUtils.filterOutDefectiveInflections(
       matches,
-      formulaChunk,
+      structureChunk,
       inflectionChainsByThisLanguage
     );
   }
@@ -177,7 +177,7 @@ exports.getSelectedWordAndPutInArray = (
 
     let filterNestedOutput = lfUtils.filterWithinLemmaObjectByNestedKeys(
       selectedLemmaObj,
-      formulaChunk,
+      structureChunk,
       inflectionChainsByThisLanguage
     );
 
@@ -190,13 +190,13 @@ exports.getSelectedWordAndPutInArray = (
       let {
         selectedWord,
 
-        modifiedFormulaChunk,
+        modifiedStructureChunk,
       } = filterNestedOutput;
 
       resultArr.push({
         selectedLemmaObj,
         selectedWord,
-        formulaChunk: modifiedFormulaChunk,
+        structureChunk: modifiedStructureChunk,
       });
     }
   } else {
