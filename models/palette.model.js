@@ -1,12 +1,12 @@
 const scUtils = require("../utils/sentenceCreationUtils.js");
 const gpUtils = require("../utils/generalPurposeUtils.js");
 const lfUtils = require("../utils/lemmaFilteringUtils.js");
-const { wordsBank } = require("../source/PL/words.js");
-const { dummyWordsBank } = require("../source/PL/dummyWords.js");
-const { sentenceFormulasBank } = require("../source/PL/sentenceFormulas.js");
+const { wordsBank } = require("../source/POL/words.js");
+const { dummyWordsBank } = require("../source/POL/dummyWords.js");
+const { sentenceFormulasBank } = require("../source/POL/sentenceFormulas.js");
 const {
   dummySentenceFormulasBank,
-} = require("../source/PL/dummySentenceFormulas.js");
+} = require("../source/POL/dummySentenceFormulas.js");
 
 exports.fetchPalette = (req) => {
   let defaultSentenceNumber = 50;
@@ -14,7 +14,7 @@ exports.fetchPalette = (req) => {
   let defaultLevelNumber = "level01";
   let levelNumber = req.body.levelNumber || defaultLevelNumber;
 
-  let inflectionChainsPL = {
+  let inflectionChainsPOL = {
     noun: ["number", "gcase"],
     adjective: ["number", "gender", "gcase"],
   };
@@ -62,7 +62,7 @@ exports.fetchPalette = (req) => {
       headChunk,
       resultArr,
       words,
-      inflectionChainsPL,
+      inflectionChainsPOL,
       errorInSentenceCreation
     );
   });
@@ -87,7 +87,7 @@ exports.fetchPalette = (req) => {
 
         // console.log(">>The headchunk of that dependent chunk is:", headChunk);
 
-        inflectionChainsPL["adjective"].forEach((featureKey) => {
+        inflectionChainsPOL["adjective"].forEach((featureKey) => {
           dependentChunk[featureKey] = headChunk[featureKey];
         });
 
@@ -98,7 +98,7 @@ exports.fetchPalette = (req) => {
           dependentChunk,
           resultArr,
           words,
-          inflectionChainsPL,
+          inflectionChainsPOL,
           errorInSentenceCreation
         );
       });
@@ -116,7 +116,7 @@ exports.fetchPalette = (req) => {
         structureChunk,
         resultArr,
         words,
-        inflectionChainsPL,
+        inflectionChainsPOL,
         errorInSentenceCreation
       );
     }

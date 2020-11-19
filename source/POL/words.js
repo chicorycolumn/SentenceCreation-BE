@@ -2,7 +2,7 @@ let nounSet = [
   {
     translations: { EN: ["woman", "lady"] },
     lemma: "kobieta",
-    id: "pl-nou-001",
+    id: "pol-nou-001",
     gender: "f",
     tags: ["animate", "person", "concrete"],
     defective: false,
@@ -28,7 +28,7 @@ let nounSet = [
   {
     translations: { EN: ["boy", "boyfriend", "guy"] },
     lemma: "chłopak",
-    id: "pl-nou-002",
+    id: "pol-nou-002",
     gender: "m1",
     tags: ["animate", "person", "concrete"],
     defective: false,
@@ -54,7 +54,7 @@ let nounSet = [
   {
     translations: { EN: ["boy", "little boy"] },
     lemma: "chłopiec",
-    id: "pl-nou-003",
+    id: "pol-nou-003",
     gender: "m1",
     tags: ["animate", "person", "concrete"],
     defective: false,
@@ -80,7 +80,7 @@ let nounSet = [
   {
     translations: { EN: ["onion"] },
     lemma: "cebula",
-    id: "pl-nou-004",
+    id: "pol-nou-004",
     gender: "f",
     tags: ["inanimate", "edible", "holdable", "concrete"],
     defective: false,
@@ -106,7 +106,7 @@ let nounSet = [
   {
     translations: { EN: ["apple"] },
     lemma: "jabłko",
-    id: "pl-nou-005",
+    id: "pol-nou-005",
     gender: "n",
     tags: ["inanimate", "edible", "holdable", "concrete"],
     defective: false,
@@ -132,7 +132,7 @@ let nounSet = [
   {
     translations: { EN: ["mirror"] },
     lemma: "lustro",
-    id: "pl-nou-006",
+    id: "pol-nou-006",
     gender: "n",
     tags: ["inanimate", "holdable", "concrete"],
     defective: false,
@@ -158,7 +158,7 @@ let nounSet = [
   {
     translations: { EN: ["mirror"] },
     lemma: "zwierciadło",
-    id: "pl-nou-007",
+    id: "pol-nou-007",
     gender: "n",
     tags: ["inanimate", "holdable", "concrete"],
     defective: false,
@@ -186,7 +186,7 @@ let nounSet = [
       EN: ["underwear", "pants", "underpants", "briefs", "panties"],
     },
     lemma: "majtki",
-    id: "pl-nou-008",
+    id: "pol-nou-008",
     gender: "f",
     tags: ["inanimate", "holdable", "concrete", "wearable"],
     defective: true,
@@ -206,7 +206,7 @@ let adjectiveSet = [
   {
     translations: { EN: ["red"] },
     lemma: "czerwony",
-    id: "pl-adj-001",
+    id: "pol-adj-001",
     tags: ["colour"],
     defective: false,
     inflections: {
@@ -274,7 +274,16 @@ let adjectiveSet = [
   },
 ];
 let adverbSet = [];
-let verbSet = [];
+let verbSet = [
+  {
+    translations: { EN: ["have"] },
+    lemma: "mie¢",
+    id: "pol-ver-001",
+    tags: ["colour"],
+    defective: false,
+    inflections: {},
+  },
+];
 
 exports.wordsBank = {
   nounSet,
