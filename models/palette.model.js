@@ -17,7 +17,7 @@ exports.fetchPalette = (req) => {
   let inflectionChainsPOL = {
     noun: ["number", "gcase"],
     adjective: ["number", "gender", "gcase"],
-    verb: ["tense", "person", "number", "gender"],
+    verb: ["form", "tense", "person", "number", "gender"],
   };
   let errorInSentenceCreation = {};
   let resultArr = [];

@@ -10,9 +10,8 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe("/palette - Stage 4: Verbs", () => {
-    // it.only("#pal04-01a GET 200 YES: Returns a sentence with a single verb, with tense specified.", () => {
-    xit("#pal04-01a GET 200 YES: Returns a sentence with a single verb, in present.", () => {
+  describe.only("/palette - Stage 4: Verbs", () => {
+    it("#pal04-01a GET 200 YES: Returns a sentence with a single verb, in present.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -32,37 +31,146 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    it.only("#pal04-01a GET 200 YES: Returns a sentence with a single verb, with person specified.", () => {
+    it("#pal04-01b GET 200 YES: Returns a sentence with a single verb, with person specified.", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceFormulaSymbol: "*you ?tense read",
+          sentenceFormulaSymbol: "dummy12 2per",
+          useDummy: true,
         })
         .expect(200)
         .then((res) => {
           expect(res.body.palette).to.be.a("String");
           expect([
-            "czytaliście",
-            "czytałyście",
-            "będziesz czytał",
-            "będziesz czytać",
-            "będziesz czytała",
-            "będziesz czytać",
-            "będziecie czytali",
-            "będziecie czytać",
-            "będziecie czytały",
-            "będziecie czytać",
-            "czytałbyś",
-            "czytałabyś",
-            "czytalibyście",
-            "czytałybyście",
-            "czytaj",
-            "czytajcie",
+            "Czytasz.",
+            "Czytacie.",
+            "Czytałeś.",
+            "Czytałaś.",
+            "Czytaliście.",
+            "Czytałyście.",
+            "Będziesz czytał.",
+            "Będziesz czytać.",
+            "Będziesz czytała.",
+            "Będziesz czytać.",
+            "Będziecie czytali.",
+            "Będziecie czytać.",
+            "Będziecie czytały.",
+            "Będziecie czytać.",
+            "Czytałbyś.",
+            "Czytałabyś.",
+            "Czytalibyście.",
+            "Czytałybyście.",
+            "Czytaj.",
+            "Czytajcie.",
           ]).to.include(res.body.palette);
           console.log({ palette: res.body.palette });
         });
     });
-    it("#pal04-00 GET 200 YES: Returns a sentence with a single noun.", () => {
+    it("#pal04-01c GET 200 YES: Returns a sentence with a single verb, with tense and number specified.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          sentenceFormulaSymbol: "dummy13 conditional plural",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          expect([
+            "Czytano by.",
+            "Czytalibyśmy.",
+            "Czytałybyśmy.",
+            "Czytalibyście.",
+            "Czytałybyście.",
+            "Czytaliby.",
+            "Czytałyby.",
+          ]).to.include(res.body.palette);
+          console.log({ palette: res.body.palette });
+        });
+    });
+    it("#pal04-01d GET 200 YES: Returns a sentence with a single verb in infinitive.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          sentenceFormulaSymbol: "dummy14 infinitive",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          expect(["Czytać."]).to.include(res.body.palette);
+          console.log({ palette: res.body.palette });
+        });
+    });
+    it.only("#pal04-01e GET 200 YES: Returns a sentence with a single verb in impersonal.", () => {
+      //Imperative doesn't have an impersonal...
+      return request(app)
+        .get("/api/palette")
+        .send({
+          sentenceFormulaSymbol: "dummy15 impersonal",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          expect([
+            "Czyta się.",
+            "Czytano.",
+            "Będzie czytać się.",
+            "Czytano by.",
+          ]).to.include(res.body.palette);
+          console.log({ palette: res.body.palette });
+        });
+    });
+    it("#pal04-01f GET 200 YES: Returns a sentence with a single verb's participle.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          sentenceFormulaSymbol: "dummy16 participle",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          expect([
+            "Czytający.",
+            "Czytająca.",
+            "Czytające.",
+            "Czytający.",
+            "Czytające.",
+            "Czytany.",
+            "Czytana.",
+            "Czytane.",
+            "Czytani.",
+            "Czytane.",
+            "Czytając.",
+            "Czytanie.",
+          ]).to.include(res.body.palette);
+          console.log({ palette: res.body.palette });
+        });
+    });
+    it("#pal04-01g GET 200 YES: Returns a sentence with a single verb's participle by gender.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          sentenceFormulaSymbol: "dummy17 participle female",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          expect([
+            "Czytająca.",
+            "Czytające.",
+            "Czytana.",
+            "Czytane.",
+            "Czytając.",
+            "Czytanie.",
+          ]).to.include(res.body.palette);
+          console.log({ palette: res.body.palette });
+        });
+    });
+    xit("#pal04-00 GET 200 YES: Returns a sentence with a single noun.", () => {
       // it.only("#pal04-00 GET 200 YES: Returns a sentence with a single noun.", () => {
       return request(app)
         .get("/api/palette")
@@ -76,7 +184,7 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    it("#pal04-01a GET 200 YES: Returns a sentence with a noun and verb, in present.", () => {
+    xit("#pal04-01a GET 200 YES: Returns a sentence with a noun and verb, in present.", () => {
       return request(app)
         .get("/api/palette")
         .send({

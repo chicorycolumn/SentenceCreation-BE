@@ -54,10 +54,12 @@ exports.filterWithinLemmaObjectByNestedKeys = (
   let errorInDrilling = false;
 
   requirementArrs.forEach((requirementKeyedArr) => {
-    source = drillDownOneLevel(source, requirementKeyedArr);
-    if (!source) {
-      errorInDrilling = true;
-      return false;
+    if (typeof source !== "string") {
+      source = drillDownOneLevel(source, requirementKeyedArr);
+      if (!source) {
+        errorInDrilling = true;
+        return false;
+      }
     }
   });
 
@@ -78,6 +80,12 @@ exports.filterWithinLemmaObjectByNestedKeys = (
   }
 
   function drillDownOneLevel(source, requirementFeatureArr) {
+    console.log("drillDownOneLevel >>source", source);
+    console.log(
+      "drillDownOneLevel >>requirementFeatureArr",
+      requirementFeatureArr
+    );
+
     let sourceFeatures = Object.keys(source);
     let validFeatures = [];
 
@@ -94,6 +102,10 @@ exports.filterWithinLemmaObjectByNestedKeys = (
 
     if (validFeatures.length) {
       let selectedFeature = gpUtils.selectRandom(validFeatures);
+
+      console.log(
+        `SELECTING feature >>${selectedFeature}<< as >>${featureKey}<<.`
+      );
 
       structureChunk[featureKey] = [selectedFeature];
 

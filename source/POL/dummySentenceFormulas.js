@@ -220,6 +220,83 @@ const level01 = {
       },
     ],
   },
+  dummy12: {
+    symbol: "dummy12 2per",
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        manTags: [],
+        optTags: [],
+        form: ["verb"],
+        person: ["2per"],
+      },
+    ],
+  },
+  dummy13: {
+    symbol: "dummy13 conditional plural",
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        manTags: [],
+        optTags: [],
+        form: ["verb"],
+        tense: ["conditional"],
+        number: ["plural"],
+      },
+    ],
+  },
+  dummy14: {
+    symbol: "dummy14 infinitive",
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        manTags: [],
+        optTags: [],
+        form: ["infinitive"],
+      },
+    ],
+  },
+  dummy15: {
+    symbol: "dummy15 impersonal",
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        manTags: [],
+        optTags: [],
+        form: ["verb"],
+        person: ["impersonal"],
+      },
+    ],
+  },
+  dummy16: {
+    symbol: "dummy16 participle",
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        manTags: [],
+        optTags: [],
+        form: ["participle"],
+      },
+    ],
+  },
+  dummy17: {
+    symbol: "dummy17 participle female",
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        manTags: [],
+        optTags: [],
+        form: ["participle"],
+        gender: ["f"],
+      },
+    ],
+  },
 };
 
 exports.dummySentenceFormulasBank = { level01 };

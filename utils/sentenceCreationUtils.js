@@ -182,7 +182,7 @@ exports.getSelectedWordAndPutInArray = (
     matches.forEach((lObj) => POLUtils.fillVerbLemmaObject(lObj));
   }
 
-  // console.log("have these verbs been filled out?", matches);
+  // console.log("have these verbs been filled out?", matches[0].inflections);
 
   matches = lfUtils.filterOutDeficientInflections(
     matches,

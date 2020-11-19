@@ -12,13 +12,14 @@ exports.fillVerbLemmaObject = (lemmaObj) => {
   //To  perfective verbs,  add  futureimpersonal,  conditional
   //In both, fill out the activeAdj and passiveAdj if they are there.
 
-  let { past, infinitive } = lemmaObj.inflections;
+  let { past } = lemmaObj.inflections.verb;
+  let { infinitive } = lemmaObj.inflections;
 
   //So in general, if the key is filled out already, don't do anything. And if the key holds value false, don't do anything.
 
   if (lemmaObj.aspect === "imperfective") {
-    if (isAvailable(lemmaObj.inflections.future)) {
-      lemmaObj.inflections.future = {
+    if (isAvailable(lemmaObj.inflections.verb.future)) {
+      lemmaObj.inflections.verb.future = {
         impersonal: "będzie" + " " + infinitive + " " + "się",
         "1per": {
           singular: {
@@ -92,63 +93,64 @@ exports.fillVerbLemmaObject = (lemmaObj) => {
         },
       };
     }
-    if (isAvailable(lemmaObj.inflections.present.impersonal)) {
-      lemmaObj.inflections.present.impersonal =
-        lemmaObj.inflections.present["3per"].singular.m + " " + "się";
+    if (isAvailable(lemmaObj.inflections.verb.present.impersonal)) {
+      lemmaObj.inflections.verb.present.impersonal =
+        lemmaObj.inflections.verb.present["3per"].singular.m + " " + "się";
     }
   } else if (lemmaObj.aspect === "perfective") {
-    if (isAvailable(lemmaObj.inflections.future.impersonal)) {
-      console.log("**", lemmaObj);
-      console.log("lemmaObj.inflections.future", lemmaObj.inflections.future);
-      lemmaObj.inflections.future.impersonal =
-        lemmaObj.inflections.future["3per"].singular.m + " " + "się";
+    if (isAvailable(lemmaObj.inflections.verb.future.impersonal)) {
+      lemmaObj.inflections.verb.future.impersonal =
+        lemmaObj.inflections.verb.future["3per"].singular.m + " " + "się";
     }
   }
 
-  if (isAvailable(lemmaObj.inflections.conditional)) {
-    lemmaObj.inflections.conditional = {
-      impersonal: lemmaObj.inflections.past.impersonal + " " + "by",
+  if (isAvailable(lemmaObj.inflections.verb.conditional)) {
+    lemmaObj.inflections.verb.conditional = {
+      impersonal: lemmaObj.inflections.verb.past.impersonal + " " + "by",
       "1per": {
         singular: {
-          m: past["3per"].singular.m + " " + "bym",
-          f: past["3per"].singular.f + " " + "bym",
+          m: past["3per"].singular.m + "bym",
+          f: past["3per"].singular.f + "bym",
         },
         plural: {
-          virile: past["3per"].plural.virile + " " + "byśmy",
-          nonvirile: past["3per"].plural.nonvirile + " " + "byśmy",
+          virile: past["3per"].plural.virile + "byśmy",
+          nonvirile: past["3per"].plural.nonvirile + "byśmy",
         },
       },
       "2per": {
         singular: {
-          m: past["3per"].singular.m + " " + "byś",
-          f: past["3per"].singular.f + " " + "byś",
+          m: past["3per"].singular.m + "byś",
+          f: past["3per"].singular.f + "byś",
         },
         plural: {
-          virile: past["3per"].plural.virile + " " + "byście",
-          nonvirile: past["3per"].plural.nonvirile + " " + "byście",
+          virile: past["3per"].plural.virile + "byście",
+          nonvirile: past["3per"].plural.nonvirile + "byście",
         },
       },
       "3per": {
         singular: {
-          m: past["3per"].singular.m + " " + "by",
-          f: past["3per"].singular.f + " " + "by",
-          n: past["3per"].singular.n + " " + "by",
+          m: past["3per"].singular.m + "by",
+          f: past["3per"].singular.f + "by",
+          n: past["3per"].singular.n + "by",
         },
         plural: {
-          virile: past["3per"].plural.virile + " " + "by",
-          nonvirile: past["3per"].plural.nonvirile + " " + "by",
+          virile: past["3per"].plural.virile + "by",
+          nonvirile: past["3per"].plural.nonvirile + "by",
         },
       },
     };
   }
 
   ["activeAdjectival", "passiveAdjectival"].forEach((participleKey) => {
-    if (lemmaObj.inflections[participleKey]) {
-      let allPersons = lemmaObj.inflections[participleKey].allPersons;
+    if (lemmaObj.inflections.participle[participleKey]) {
+      let allPersons =
+        lemmaObj.inflections.participle[participleKey].allPersons;
 
-      lemmaObj.inflections[participleKey]["1per"] = allPersons;
-      lemmaObj.inflections[participleKey]["2per"] = allPersons;
-      lemmaObj.inflections[participleKey]["3per"] = allPersons;
+      lemmaObj.inflections.participle[participleKey]["1per"] = allPersons;
+      lemmaObj.inflections.participle[participleKey]["2per"] = allPersons;
+      lemmaObj.inflections.participle[participleKey]["3per"] = allPersons;
+
+      delete lemmaObj.inflections.participle[participleKey].allPersons;
     }
   });
 
