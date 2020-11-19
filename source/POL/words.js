@@ -276,12 +276,153 @@ let adjectiveSet = [
 let adverbSet = [];
 let verbSet = [
   {
+    // chain = ["tense", "person", "number", "gender"]
     translations: { EN: ["have"] },
-    lemma: "mie¢",
+    lemma: "mieć",
     id: "pol-ver-001",
-    tags: ["colour"],
+    tags: ["basic", "possession"],
+    aspect: "imperfective",
     defective: false,
-    inflections: {},
+    inflections: {
+      infinite: "mieć",
+      present: {
+        impersonal: "ma się",
+        "1per": {
+          singular: {
+            m: "mam",
+            f: "mam",
+          },
+          plural: {
+            virile: "mamy",
+            nonvirile: "mamy",
+          },
+        },
+        "2per": {
+          singular: {
+            m: "masz",
+            f: "masz",
+          },
+          plural: {
+            virile: "macie",
+            nonvirile: "macie",
+          },
+        },
+        "3per": {
+          singular: {
+            m: "ma",
+            f: "ma",
+            n: "ma",
+          },
+          plural: {
+            virile: "mają",
+            nonvirile: "mają",
+          },
+        },
+      },
+      past: {
+        impersonal: "miano",
+        "1per": {
+          singular: {
+            m: "miałem",
+            f: "miałam",
+          },
+          plural: {
+            virile: "mieliśmy",
+            nonvirile: "miałyśmy",
+          },
+        },
+        "2per": {
+          singular: {
+            m: "miałeś",
+            f: "miałaś",
+          },
+          plural: {
+            virile: "mieliście",
+            nonvirile: "miałyście",
+          },
+        },
+        "3per": {
+          singular: {
+            m: "miał",
+            f: "miała",
+            n: "miało",
+          },
+          plural: {
+            virile: "mieli",
+            nonvirile: "miały",
+          },
+        },
+      },
+      imperative: {
+        "1per": {
+          singular: {
+            m: "niech mam",
+            f: "niech mam",
+          },
+          plural: {
+            virile: "miejmy",
+            nonvirile: "miejmy",
+          },
+        },
+        "2per": {
+          singular: {
+            m: "miej",
+            f: "miej",
+          },
+          plural: {
+            virile: "miejcie",
+            nonvirile: "miejcie",
+          },
+        },
+        "3per": {
+          singular: {
+            m: "niech ma",
+            f: "niech ma",
+            n: "niech ma",
+          },
+          plural: {
+            virile: "niech mają",
+            nonvirile: "niech mają",
+          },
+        },
+      },
+      pastAdjectivalParticiple: {
+        "1per": {
+          singular: {
+            m: "mający",
+            f: "mająca",
+            n: "mające",
+          },
+          plural: {
+            virile: "mający",
+            nonvirile: "mające",
+          },
+        },
+        "2per": {
+          singular: {
+            m: "mający",
+            f: "mająca",
+            n: "mające",
+          },
+          plural: {
+            virile: "mający",
+            nonvirile: "mające",
+          },
+        },
+        "3per": {
+          singular: {
+            m: "mający",
+            f: "mająca",
+            n: "mające",
+          },
+          plural: {
+            virile: "mający",
+            nonvirile: "mające",
+          },
+        },
+      },
+      presentAdverbialParticiple: "mając",
+    },
   },
 ];
 
