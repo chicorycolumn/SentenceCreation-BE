@@ -10,7 +10,7 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe.only("/palette - Stage 4: Verbs", () => {
+  describe("/palette - Stage 4: Verbs", () => {
     it("#pal04-01a GET 200 YES: Returns a sentence with a single verb, in present.", () => {
       return request(app)
         .get("/api/palette")
@@ -102,8 +102,7 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    it.only("#pal04-01e GET 200 YES: Returns a sentence with a single verb in impersonal.", () => {
-      //Imperative doesn't have an impersonal...
+    it("#pal04-01e GET 200 YES: Returns a sentence with a single verb in impersonal.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -122,7 +121,21 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    it("#pal04-01f GET 200 YES: Returns a sentence with a single verb's participle.", () => {
+    xit("#pal04-01f GET 200 YES: Returns a sentence with a single verb in impersonal, even when plural is specified (returns only those impersonals that have plural use).", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          sentenceFormulaSymbol: "dummy15a impersonal plural",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          expect(["Czytano.", "Czytano by."]).to.include(res.body.palette);
+          console.log({ palette: res.body.palette });
+        });
+    });
+    it("#pal04-02a GET 200 YES: Returns a sentence with a single verb's participle.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -149,11 +162,27 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    it("#pal04-01g GET 200 YES: Returns a sentence with a single verb's participle by gender.", () => {
+    it("#pal04-02b GET 200 YES: Returns a sentence with a single verb's participle by gender.", () => {
       return request(app)
         .get("/api/palette")
         .send({
           sentenceFormulaSymbol: "dummy17 participle female",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          expect(["Czytająca.", "Czytana.", "Czytając."]).to.include(
+            res.body.palette
+          );
+          console.log({ palette: res.body.palette });
+        });
+    });
+    it("#pal04-02c GET 200 YES: Returns a sentence with a single verb's participle by gender, with two genders specified.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          sentenceFormulaSymbol: "dummy19 participle f nonvirile",
           useDummy: true,
         })
         .expect(200)
@@ -165,26 +194,92 @@ describe("/api", () => {
             "Czytana.",
             "Czytane.",
             "Czytając.",
-            "Czytanie.",
           ]).to.include(res.body.palette);
           console.log({ palette: res.body.palette });
         });
     });
-    xit("#pal04-00 GET 200 YES: Returns a sentence with a single noun.", () => {
-      // it.only("#pal04-00 GET 200 YES: Returns a sentence with a single noun.", () => {
+    it("#pal04-02d GET 200 YES: Returns a sentence with a single verb's participle by gender, with two genders specified.", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceFormulaSymbol: "shirt",
+          sentenceFormulaSymbol: "dummy20 participle n virile",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
           expect(res.body.palette).to.be.a("String");
+          expect([
+            "Czytające.",
+            "Czytający.",
+            "Czytane.",
+            "Czytani.",
+            "Czytając.",
+          ]).to.include(res.body.palette);
           console.log({ palette: res.body.palette });
         });
     });
-    xit("#pal04-01a GET 200 YES: Returns a sentence with a noun and verb, in present.", () => {
+    it("#pal04-02e GET 200 YES: Returns a sentence with a single verb's participle by gender and person.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          sentenceFormulaSymbol: "dummy20a participle n virile 2per",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          expect([
+            "Czytające.",
+            "Czytający.",
+            "Czytane.",
+            "Czytani.",
+            "Czytając.",
+          ]).to.include(res.body.palette);
+          console.log({ palette: res.body.palette });
+        });
+    });
+    it("#pal04-03a GET 200 YES: Returns a sentence with a single verb's verbalNoun.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          sentenceFormulaSymbol: "dummy21 verbalNoun",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          expect(["Czytanie."]).to.include(res.body.palette);
+          console.log({ palette: res.body.palette });
+        });
+    });
+    it("#pal04-03b GET 200 NO: Does not return verbalNoun, when a gender is specified, as the verbalNoun is not a verb.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          sentenceFormulaSymbol: "dummy22 verbalNoun ~f",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.equal(null);
+          console.log({ palette: res.body.palette });
+        });
+    });
+    xit("#pal04-04a GET 200 YES: Works for virile and nonvirile.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          sentenceFormulaSymbol: "",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          expect([]).to.include(res.body.palette);
+          console.log({ palette: res.body.palette });
+        });
+    });
+    xit("#pal04-05a GET 200 YES: Returns a sentence with a noun and verb, in present.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -429,11 +524,24 @@ describe("/api", () => {
           expect(res.body.palette).to.equal(null);
         });
     });
-    it("#pal01-03f GET 200 YES: Returns successful sentence 100% of the time, even though I've tried to trick it, by asking for Singular and Loc, and including an object that does indeed have Singular but Loc is not within, and does indeed have a Loc but it is inside Plural.", () => {
+    it("#pal01-03f GET 200 YES: Returns successful sentence 100% of the time, even though I've tried to trick it, by asking for Singular and Loc, and including an object that does indeed have Singular (but Loc is not within), and has Plural (with Loc within).", () => {
       return request(app)
         .get("/api/palette")
         .send({
           sentenceNumber: "dummy08",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          console.log({ palette: res.body.palette });
+        });
+    });
+    it("#pal01-03g GET 200 YES: Testing whether object traversing fxn can avoid getting stuck by going down dead-ends.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          sentenceNumber: "dummy18",
           useDummy: true,
         })
         .expect(200)

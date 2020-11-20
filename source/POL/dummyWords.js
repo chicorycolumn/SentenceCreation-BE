@@ -123,6 +123,22 @@ let nounSet = [
       },
     },
   },
+  {
+    id: "dummy-nou-010",
+    lemma: "dummy-nou-010",
+    gender: "n",
+    tags: ["dummy-nou-010"],
+    deficient: true,
+    inflections: {
+      singular: {
+        nom: "sing nom is present",
+        acc: "sing acc is present",
+      },
+      plural: {
+        nom: "plur nom is present",
+      },
+    },
+  },
 ];
 let adjectiveSet = [];
 let adverbSet = [];

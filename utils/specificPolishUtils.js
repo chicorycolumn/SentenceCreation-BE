@@ -20,7 +20,7 @@ exports.fillVerbLemmaObject = (lemmaObj) => {
   if (lemmaObj.aspect === "imperfective") {
     if (isAvailable(lemmaObj.inflections.verb.future)) {
       lemmaObj.inflections.verb.future = {
-        impersonal: "będzie" + " " + infinitive + " " + "się",
+        impersonal: { singular: "będzie" + " " + infinitive + " " + "się" },
         "1per": {
           singular: {
             m: [
@@ -93,20 +93,23 @@ exports.fillVerbLemmaObject = (lemmaObj) => {
         },
       };
     }
-    if (isAvailable(lemmaObj.inflections.verb.present.impersonal)) {
-      lemmaObj.inflections.verb.present.impersonal =
+    if (isAvailable(lemmaObj.inflections.verb.present.impersonal.singular)) {
+      lemmaObj.inflections.verb.present.impersonal.singular =
         lemmaObj.inflections.verb.present["3per"].singular.m + " " + "się";
     }
   } else if (lemmaObj.aspect === "perfective") {
-    if (isAvailable(lemmaObj.inflections.verb.future.impersonal)) {
-      lemmaObj.inflections.verb.future.impersonal =
+    if (isAvailable(lemmaObj.inflections.verb.future.impersonal.singular)) {
+      lemmaObj.inflections.verb.future.impersonal.singular =
         lemmaObj.inflections.verb.future["3per"].singular.m + " " + "się";
     }
   }
 
   if (isAvailable(lemmaObj.inflections.verb.conditional)) {
     lemmaObj.inflections.verb.conditional = {
-      impersonal: lemmaObj.inflections.verb.past.impersonal + " " + "by",
+      impersonal: {
+        singular: lemmaObj.inflections.verb.past.impersonal + " " + "by",
+        plural: lemmaObj.inflections.verb.past.impersonal + " " + "by",
+      },
       "1per": {
         singular: {
           m: past["3per"].singular.m + "bym",
@@ -146,6 +149,7 @@ exports.fillVerbLemmaObject = (lemmaObj) => {
       let allPersons =
         lemmaObj.inflections.participle[participleKey].allPersons;
 
+      lemmaObj.inflections.participle[participleKey]["impersonal"] = allPersons;
       lemmaObj.inflections.participle[participleKey]["1per"] = allPersons;
       lemmaObj.inflections.participle[participleKey]["2per"] = allPersons;
       lemmaObj.inflections.participle[participleKey]["3per"] = allPersons;
@@ -171,5 +175,20 @@ exports.fillVerbLemmaObject = (lemmaObj) => {
     // if (value) {
     //   return false;
     // }
+  }
+};
+
+exports.copyValueOfKey = (
+  navigatedObject,
+  sourceKey,
+  targetKeyArr,
+  shouldDeleteSourceKey
+) => {
+  targetKeyArr.forEach((targetKey) => {
+    navigatedObject[targetKey] = navigatedObject[sourceKey];
+  });
+
+  if (shouldDeleteSourceKey) {
+    delete navigatedObject[sourceKey];
   }
 };

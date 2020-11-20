@@ -173,6 +173,7 @@ exports.getSelectedWordAndPutInArray = (
 
     // Do this for nouns because we're filtering the different noun lobjs by gender, as each noun is a diff gender.
     // Don't do this for adjs, as gender is a key inside each individual adj lobj.
+    // Don't do this fr verbs, as gender is a key inside each individual verb lobj.
     if (["noun"].includes(structureChunk.wordtype)) {
       matches = lfUtils.filterByKey(matches, structureChunk, "gender");
     }
@@ -184,7 +185,7 @@ exports.getSelectedWordAndPutInArray = (
 
   // console.log("have these verbs been filled out?", matches[0].inflections);
 
-  matches = lfUtils.filterOutDeficientInflections(
+  matches = lfUtils.filterOutDeficientLemmaObjects(
     matches,
     structureChunk,
     inflectionChainsByThisLanguage

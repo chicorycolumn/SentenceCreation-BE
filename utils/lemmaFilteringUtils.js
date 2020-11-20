@@ -2,7 +2,9 @@ const gpUtils = require("./generalPurposeUtils.js");
 const scUtils = require("./sentenceCreationUtils.js");
 
 exports.filterByKey = (lemmaObjectArr, requirementArrs, key) => {
-  let requirementArr = requirementArrs[key];
+  // console.log({ lemmaObjectArr, requirementArrs, key });
+
+  let requirementArr = requirementArrs[key] || [];
 
   if (requirementArr.length) {
     return lemmaObjectArr.filter((lObj) => requirementArr.includes(lObj[key]));
@@ -16,6 +18,11 @@ exports.filterWithinLemmaObjectByNestedKeys = (
   structureChunk,
   inflectionChainRefObj
 ) => {
+  console.log(
+    "filterWithinLemmaObjectByNestedKeys fxn >> structureChunk",
+    structureChunk
+  );
+
   let source = lemmaObject.inflections;
   structureChunk.manTags = structureChunk.manTags.filter((tag) => {
     lemmaObject.tags.includes(tag);
@@ -51,17 +58,135 @@ exports.filterWithinLemmaObjectByNestedKeys = (
     requirementArrs.push([key, structureChunk[key] || []]);
   });
 
+  console.log(
+    "filterWithinLemmaObjectByNestedKeys fxn >> requirementArrs",
+    requirementArrs
+  );
+
+  let { routesByNesting, routesByLevel } = scUtils.extractNestedRoutes(
+    lemmaObject.inflections
+  );
+
+  let inflectionPathsInSource = routesByNesting;
+
   let errorInDrilling = false;
 
-  requirementArrs.forEach((requirementKeyedArr) => {
+  console.log("-------------------------");
+  console.log({ inflectionPathsInSource: inflectionPathsInSource.slice(20) });
+  console.log("-------------------------");
+
+  let drillPath = [];
+  requirementArrs.forEach((requirementKeyedArr, requirementArrIndex) => {
+    if (errorInDrilling) {
+      return;
+    }
+
     if (typeof source !== "string") {
-      source = drillDownOneLevel(source, requirementKeyedArr);
+      source = drillDownOneLevel_filterWithin(
+        source,
+        requirementKeyedArr,
+        requirementArrIndex
+      );
       if (!source) {
         errorInDrilling = true;
-        return false;
       }
     }
   });
+
+  function drillDownOneLevel_filterWithin(
+    source,
+    requirementFeatureArr,
+    requirementArrIndex
+  ) {
+    // console.log("drillDownOneLevel_filterWithin >>source", source);
+    console.log(
+      "drillDownOneLevel_filterWithin >>requirementFeatureArr",
+      requirementFeatureArr
+    );
+
+    let sourceFeatures = Object.keys(source);
+    let validFeatures = [];
+    let requiredFeatureCategory = requirementFeatureArr[0];
+    let requiredFeaturesArr = requirementFeatureArr[1];
+
+    if (requiredFeaturesArr.length) {
+      validFeatures = sourceFeatures.filter((feature) =>
+        requiredFeaturesArr.includes(feature)
+      );
+    } else {
+      validFeatures = sourceFeatures;
+    }
+
+    ///////////////////////////////////
+    console.log("//////////////////////////");
+    console.log("//////////////////////////");
+    console.log("//////////////////////////");
+    validFeatures = validFeatures.filter((feature_i) => {
+      let copyDrillPath = [...drillPath];
+      copyDrillPath.push(feature_i);
+
+      console.log({ copyDrillPath });
+      console.log({ inflectionPathsInSource });
+
+      let putativePathsWithDrillPathSoFar = inflectionPathsInSource.filter(
+        (inflectionPath_j) => {
+          return copyDrillPath.every(
+            (drillPathFeature, drillPathFeatureIndex) => {
+              return (
+                inflectionPath_j[drillPathFeatureIndex] === drillPathFeature
+              );
+            }
+          );
+        }
+      );
+
+      console.log({ putativePathsWithDrillPathSoFar });
+
+      let putativePathsLookingAhead = putativePathsWithDrillPathSoFar.filter(
+        (putativePath) => {
+          return requirementArrs.every(
+            (requirementArr_i, requirementArrIndex_i) => {
+              let requiredFeatureCategory_i = requirementArr_i[0];
+              let requiredFeaturesArr_i = requirementArr_i[1];
+
+              return (
+                !requiredFeaturesArr_i.length ||
+                requiredFeaturesArr_i.includes(
+                  putativePath[requirementArrIndex_i]
+                )
+              );
+            }
+          );
+        }
+      );
+
+      console.log({ putativePathsLookingAhead });
+
+      return putativePathsLookingAhead.length;
+    });
+
+    ///////////////////////////////////
+
+    console.log("***");
+    console.log({ validFeatures });
+    console.log("***");
+
+    if (validFeatures.length) {
+      let selectedFeature = gpUtils.selectRandom(validFeatures);
+
+      console.log(
+        `                                                    Selecting feature ${selectedFeature} as ${requiredFeatureCategory}.`
+      );
+
+      structureChunk[requiredFeatureCategory] = [selectedFeature];
+      drillPath.push(selectedFeature);
+      console.log("Returning TRUTHY at end of drill fxn");
+      return source[selectedFeature];
+    } else {
+      console.log("Returning NULL at end of drill fxn");
+      return null;
+    }
+  }
 
   if (errorInDrilling) {
     return null;
@@ -78,45 +203,9 @@ exports.filterWithinLemmaObjectByNestedKeys = (
       };
     }
   }
-
-  function drillDownOneLevel(source, requirementFeatureArr) {
-    console.log("drillDownOneLevel >>source", source);
-    console.log(
-      "drillDownOneLevel >>requirementFeatureArr",
-      requirementFeatureArr
-    );
-
-    let sourceFeatures = Object.keys(source);
-    let validFeatures = [];
-
-    let featureKey = requirementFeatureArr[0];
-    let featureValue = requirementFeatureArr[1];
-
-    if (featureValue.length) {
-      validFeatures = sourceFeatures.filter((feature) =>
-        featureValue.includes(feature)
-      );
-    } else {
-      validFeatures = sourceFeatures;
-    }
-
-    if (validFeatures.length) {
-      let selectedFeature = gpUtils.selectRandom(validFeatures);
-
-      console.log(
-        `SELECTING feature >>${selectedFeature}<< as >>${featureKey}<<.`
-      );
-
-      structureChunk[featureKey] = [selectedFeature];
-
-      return source[selectedFeature];
-    } else {
-      return null;
-    }
-  }
 };
 
-exports.filterOutDeficientInflections = (
+exports.filterOutDeficientLemmaObjects = (
   sourceArr,
   specObj,
   inflectionChainRefObj
@@ -134,27 +223,12 @@ exports.filterOutDeficientInflections = (
 
       let inflectionPathsInSource = routesByNesting;
 
+      console.log("***inflectionPathsInSource", inflectionPathsInSource);
+
       let inflectionPathsInRequirements = scUtils.concoctNestedRoutes(
         requirementArrs,
         routesByLevel
       );
-
-      // console.log(
-      //   "filterOutDeficientInflections --inflectionChain",
-      //   inflectionChain
-      // );
-      // console.log(
-      //   "filterOutDeficientInflections --requirementArrs",
-      //   requirementArrs
-      // );
-      // console.log(
-      //   "filterOutDeficientInflections --inflectionPathsInSource",
-      //   inflectionPathsInSource
-      // );
-      // console.log(
-      //   "filterOutDeficientInflections --inflectionPathsInRequirements",
-      //   inflectionPathsInRequirements
-      // );
 
       return inflectionPathsInRequirements.some((inflectionPathReq) =>
         inflectionPathsInSource.some((inflectionPathSou) => {

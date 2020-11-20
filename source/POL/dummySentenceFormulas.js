@@ -297,6 +297,84 @@ const level01 = {
       },
     ],
   },
+  dummy18: {
+    symbol: "dummy18",
+    structure: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        manTags: ["dummy-nou-010"],
+        optTags: [],
+        number: ["singular", "plural"],
+        gcase: ["acc"],
+      },
+    ],
+  },
+  dummy19: {
+    symbol: "dummy19 participle f nonvirile",
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        manTags: [],
+        optTags: [],
+        gender: ["f", "nonvirile"],
+        form: ["participle"],
+      },
+    ],
+  },
+  dummy20: {
+    symbol: "dummy20 participle n virile",
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        manTags: [],
+        optTags: [],
+        gender: ["n", "virile"],
+        form: ["participle"],
+      },
+    ],
+  },
+  dummy20a: {
+    symbol: "dummy20a participle n virile 2per",
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        manTags: [],
+        optTags: [],
+        gender: ["n", "virile"],
+        person: ["2per"],
+        form: ["participle"],
+      },
+    ],
+  },
+  dummy21: {
+    symbol: "dummy21 verbalNoun",
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        manTags: [],
+        optTags: [],
+        form: ["verbalNoun"],
+      },
+    ],
+  },
+  dummy22: {
+    symbol: "dummy22 verbalNoun ~f",
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        manTags: [],
+        optTags: [],
+        form: ["verbalNoun"],
+        gender: ["f"],
+      },
+    ],
+  },
 };
 
 exports.dummySentenceFormulasBank = { level01 };
