@@ -12,15 +12,18 @@ exports.fillVerbLemmaObject = (lemmaObj) => {
   //To  perfective verbs,  add  futureimpersonal,  conditional
   //In both, fill out the activeAdj and passiveAdj if they are there.
 
-  let { past } = lemmaObj.inflections.verb;
-  let { infinitive } = lemmaObj.inflections;
+  let { inflections, aspect } = lemmaObj;
+  let { past } = inflections.verb;
+  let { infinitive } = inflections;
 
   //So in general, if the key is filled out already, don't do anything. And if the key holds value false, don't do anything.
 
-  if (lemmaObj.aspect === "imperfective") {
-    if (isAvailable(lemmaObj.inflections.verb.future)) {
-      lemmaObj.inflections.verb.future = {
-        impersonal: { singular: "będzie" + " " + infinitive + " " + "się" },
+  if (aspect === "imperfective") {
+    if (isAvailable(inflections.verb.future)) {
+      inflections.verb.future = {
+        impersonal: {
+          singular: { allGenders: "będzie" + " " + infinitive + " " + "się" },
+        },
         "1per": {
           singular: {
             m: [
@@ -93,22 +96,24 @@ exports.fillVerbLemmaObject = (lemmaObj) => {
         },
       };
     }
-    if (isAvailable(lemmaObj.inflections.verb.present.impersonal.singular)) {
-      lemmaObj.inflections.verb.present.impersonal.singular =
-        lemmaObj.inflections.verb.present["3per"].singular.m + " " + "się";
+    if (isAvailable(inflections.verb.present.impersonal.singular)) {
+      inflections.verb.present.impersonal.singular = {
+        allGenders: inflections.verb.present["3per"].singular.m + " " + "się",
+      };
     }
-  } else if (lemmaObj.aspect === "perfective") {
-    if (isAvailable(lemmaObj.inflections.verb.future.impersonal.singular)) {
-      lemmaObj.inflections.verb.future.impersonal.singular =
-        lemmaObj.inflections.verb.future["3per"].singular.m + " " + "się";
+  } else if (aspect === "perfective") {
+    if (isAvailable(inflections.verb.future.impersonal.singular)) {
+      inflections.verb.future.impersonal.singular = {
+        allGenders: inflections.verb.future["3per"].singular.m + " " + "się",
+      };
     }
   }
 
-  if (isAvailable(lemmaObj.inflections.verb.conditional)) {
-    lemmaObj.inflections.verb.conditional = {
+  if (isAvailable(inflections.verb.conditional)) {
+    inflections.verb.conditional = {
       impersonal: {
-        singular: lemmaObj.inflections.verb.past.impersonal + " " + "by",
-        plural: lemmaObj.inflections.verb.past.impersonal + " " + "by",
+        singular: { allGenders: inflections.verb.past.impersonal + " " + "by" },
+        plural: { allGenders: inflections.verb.past.impersonal + " " + "by" },
       },
       "1per": {
         singular: {
@@ -145,16 +150,15 @@ exports.fillVerbLemmaObject = (lemmaObj) => {
   }
 
   ["activeAdjectival", "passiveAdjectival"].forEach((participleKey) => {
-    if (lemmaObj.inflections.participle[participleKey]) {
-      let allPersons =
-        lemmaObj.inflections.participle[participleKey].allPersons;
+    if (inflections.participle[participleKey]) {
+      let allPersons = inflections.participle[participleKey].allPersons;
 
-      lemmaObj.inflections.participle[participleKey]["impersonal"] = allPersons;
-      lemmaObj.inflections.participle[participleKey]["1per"] = allPersons;
-      lemmaObj.inflections.participle[participleKey]["2per"] = allPersons;
-      lemmaObj.inflections.participle[participleKey]["3per"] = allPersons;
+      inflections.participle[participleKey]["impersonal"] = allPersons;
+      inflections.participle[participleKey]["1per"] = allPersons;
+      inflections.participle[participleKey]["2per"] = allPersons;
+      inflections.participle[participleKey]["3per"] = allPersons;
 
-      delete lemmaObj.inflections.participle[participleKey].allPersons;
+      delete inflections.participle[participleKey].allPersons;
     }
   });
 
@@ -175,20 +179,5 @@ exports.fillVerbLemmaObject = (lemmaObj) => {
     // if (value) {
     //   return false;
     // }
-  }
-};
-
-exports.copyValueOfKey = (
-  navigatedObject,
-  sourceKey,
-  targetKeyArr,
-  shouldDeleteSourceKey
-) => {
-  targetKeyArr.forEach((targetKey) => {
-    navigatedObject[targetKey] = navigatedObject[sourceKey];
-  });
-
-  if (shouldDeleteSourceKey) {
-    delete navigatedObject[sourceKey];
   }
 };

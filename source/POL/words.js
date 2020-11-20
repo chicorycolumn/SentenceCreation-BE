@@ -293,7 +293,10 @@ let verbSet = [
       infinitive: "czytać",
       verb: {
         past: {
-          impersonal: { singular: "czytano", plural: "czytano" },
+          impersonal: {
+            singular: { allGenders: "czytano" },
+            plural: { allGenders: "czytano" },
+          },
           "1per": {
             singular: {
               m: "czytałem",
@@ -327,7 +330,7 @@ let verbSet = [
           },
         },
         present: {
-          impersonal: { singular: true, plural: false },
+          impersonal: { singular: true },
           "1per": {
             singular: {
               m: "czytam",

@@ -83,3 +83,30 @@ exports.copyAndCombineWordbanks = (wordbank1, wordbank2) => {
 
   return wordbank1Copy;
 };
+
+exports.findKeysInObjectAndExecuteCallback = (obj, soughtKey, callback) => {
+  if (obj && typeof obj === "object") {
+    Object.keys(obj).forEach((key) => {
+      if (key === soughtKey) {
+        callback(obj);
+      } else {
+        findKeysInObjectAndExecuteCallback(obj[key], soughtKey, callback);
+      }
+    });
+  }
+};
+
+exports.copyValueOfKey = (
+  navigatedObject,
+  sourceKey,
+  targetKeyArr,
+  shouldDeleteSourceKey
+) => {
+  targetKeyArr.forEach((targetKey) => {
+    navigatedObject[targetKey] = navigatedObject[sourceKey];
+  });
+
+  if (shouldDeleteSourceKey) {
+    delete navigatedObject[sourceKey];
+  }
+};
