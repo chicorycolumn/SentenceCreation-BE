@@ -3,12 +3,6 @@ const lfUtils = require("./lemmaFilteringUtils.js");
 const POLUtils = require("./specificPolishUtils.js");
 
 exports.concoctNestedRoutes = (routesByLevelTarget, routesByLevelSource) => {
-  console.log(
-    "**********************************************************************************%%"
-  );
-  console.log("routesByLevelTarget", routesByLevelTarget);
-  console.log("routesByLevelSource", routesByLevelSource);
-
   routesByLevelTarget.forEach((arr, index) => {
     if (!arr.length) {
       if (routesByLevelSource[index] && routesByLevelSource[index].length) {
