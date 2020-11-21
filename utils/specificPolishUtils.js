@@ -3,7 +3,7 @@ const scUtils = require("./sentenceCreationUtils.js");
 const gpUtils = require("./generalPurposeUtils.js");
 
 //Need to, in other files, allow m1 m2 m3 to all read as m if only m key exists and not others.
-exports.fillVerbLemmaObject = (lemmaObj) => {
+exports.fillVerbInflections = (lemmaObj) => {
   if (lemmaObj.defective) {
     return;
   }

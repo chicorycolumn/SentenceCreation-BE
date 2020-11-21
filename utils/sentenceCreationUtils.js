@@ -156,6 +156,7 @@ exports.findMatchingWordThenAddToResultArray = (
     return;
   }
 
+  //STEP ONE: Filtering lemmaObjs by features from structureChunk.
   let source = words[gpUtils.giveSetKey(structureChunk.wordtype)];
   let matches = [];
 
@@ -165,18 +166,14 @@ exports.findMatchingWordThenAddToResultArray = (
     matches = lfUtils.filterByTag(source, structureChunk.manTags, true);
     matches = lfUtils.filterByTag(matches, structureChunk.optTags, false);
 
-    // Filter lemmaObjects by requested gender.
-    // Do this for nouns because we're filtering the different noun lobjs by gender, as each noun is a diff gender.
-    // Don't do this for adjs, as gender is a key inside each individual adj lobj.
-    // Don't do this fr verbs, as gender is a key inside each individual verb lobj.
+    // Filter noun lobjs by gender (as each noun lobj is indeed a diff gender) but not for adjs/verbs, as gender is a key inside those lobjs.
     if (["noun"].includes(structureChunk.wordtype)) {
       matches = lfUtils.filterByKey(matches, structureChunk, "gender");
     }
   }
 
-  // Programmatically fill out verbs with full conjugation set.
   if (["verb"].includes(structureChunk.wordtype)) {
-    matches.forEach((lObj) => POLUtils.fillVerbLemmaObject(lObj));
+    matches.forEach((lObj) => POLUtils.fillVerbInflections(lObj));
   }
 
   if (["verb", "adjective"].includes(structureChunk.wordtype)) {
@@ -189,7 +186,8 @@ exports.findMatchingWordThenAddToResultArray = (
   // );
   // return;
 
-  //Remove lemma objects that don't have the keys that the requirements specifically ask us to traverse to.
+  //STEP TWO: Recursively traversing lemmaObjects for happy paths and dead ends to comply with structureChunk.
+
   //All lemma objects left in matches array do indeed have at least one happy path based on structureChunk requirements.
   matches = lfUtils.filterOutDeficientLemmaObjects(
     matches,
@@ -200,14 +198,12 @@ exports.findMatchingWordThenAddToResultArray = (
   if (!matches.length) {
     errorInSentenceCreation.errorMessage =
       "No matching lemma objects were found.";
-    // return false;
     return;
   }
 
   let selectedLemmaObj = gpUtils.selectRandom(matches);
 
-  //Contains fxnality to ensure that we don't randomly traverse to a dead end, and ensure we go a happy path,
-  //of which we already know at least one exists.
+  //Ensures we don't randomly traverse to a dead end, and ensure we go a happy path, of which we already know at least one exists.
   let filterNestedOutput = lfUtils.filterWithinSelectedLemmaObject(
     selectedLemmaObj,
     structureChunk,

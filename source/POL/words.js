@@ -279,7 +279,7 @@ let verbSet = [
   //perfective has participles:             passive, anterior
   //imperfective has participles:   active, passive, contemporary
 
-  //If you mark a key true, or give it a value      it will be filled out by fillVerbLemmaObject fxn.
+  //If you mark a key true, or give it a value      it will be filled out by fillVerbInflections fxn.
   //If you mark a key false, or omit it             it will not be.
 
   //NOTE: The ADVERBIAL participles should not be connected to the head noun
