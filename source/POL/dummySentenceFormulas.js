@@ -272,6 +272,20 @@ const level01 = {
       },
     ],
   },
+  dummy15a: {
+    symbol: "dummy15a impersonal plural",
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        manTags: [],
+        optTags: [],
+        form: ["verb"],
+        person: ["impersonal"],
+        number: ["plural"],
+      },
+    ],
+  },
   dummy16: {
     symbol: "dummy16 participle",
     structure: [
@@ -372,6 +386,22 @@ const level01 = {
         optTags: [],
         form: ["verbalNoun"],
         gender: ["f"],
+      },
+    ],
+  },
+  dummy23: {
+    symbol: "dummy23 past/cond 1per virile",
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        manTags: [],
+        optTags: [],
+        form: ["verb"],
+        tense: ["past", "conditional"],
+        person: ["1per"],
+        number: ["plural"],
+        gender: ["virile"],
       },
     ],
   },

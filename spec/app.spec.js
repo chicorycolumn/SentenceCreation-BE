@@ -121,7 +121,7 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    xit("#pal04-01f GET 200 YES: Returns a sentence with a single verb in impersonal, even when plural is specified (returns only those impersonals that have plural use).", () => {
+    it("#pal04-01f GET 200 YES: Returns a sentence with a single verb in impersonal, even when plural is specified (returns only those impersonals that have plural use).", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -157,7 +157,6 @@ describe("/api", () => {
             "Czytani.",
             "Czytane.",
             "Czytając.",
-            "Czytanie.",
           ]).to.include(res.body.palette);
           console.log({ palette: res.body.palette });
         });
@@ -172,9 +171,7 @@ describe("/api", () => {
         .expect(200)
         .then((res) => {
           expect(res.body.palette).to.be.a("String");
-          expect(["Czytająca.", "Czytana.", "Czytając."]).to.include(
-            res.body.palette
-          );
+          expect(["Czytająca.", "Czytana."]).to.include(res.body.palette);
           console.log({ palette: res.body.palette });
         });
     });
@@ -193,7 +190,6 @@ describe("/api", () => {
             "Czytające.",
             "Czytana.",
             "Czytane.",
-            "Czytając.",
           ]).to.include(res.body.palette);
           console.log({ palette: res.body.palette });
         });
@@ -213,7 +209,6 @@ describe("/api", () => {
             "Czytający.",
             "Czytane.",
             "Czytani.",
-            "Czytając.",
           ]).to.include(res.body.palette);
           console.log({ palette: res.body.palette });
         });
@@ -233,7 +228,6 @@ describe("/api", () => {
             "Czytający.",
             "Czytane.",
             "Czytani.",
-            "Czytając.",
           ]).to.include(res.body.palette);
           console.log({ palette: res.body.palette });
         });
@@ -265,17 +259,24 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    xit("#pal04-04a GET 200 YES: Works for virile and nonvirile.", () => {
+    it("#pal04-04a GET 200 YES: Returns verb in virile.", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceFormulaSymbol: "",
+          sentenceFormulaSymbol: "dummy23 past/cond 1per virile",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
           expect(res.body.palette).to.be.a("String");
-          expect([]).to.include(res.body.palette);
+          expect([
+            "Czytaliśmy.",
+            "Czytaliście.",
+            "Czytali.",
+            "Czytalibyśmy.",
+            "Czytalibyście.",
+            "Czytaliby.",
+          ]).to.include(res.body.palette);
           console.log({ palette: res.body.palette });
         });
     });
