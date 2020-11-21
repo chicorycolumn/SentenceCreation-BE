@@ -301,7 +301,7 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    xit("#pal04-04c GET 200 YES: Returns verb in nonvirile when two gender options are given.", () => {
+    it("#pal04-04c GET 200 YES: Returns verb in nonvirile when two gender options are given.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -322,7 +322,7 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    xit("#pal04-05a GET 200 YES: Conjugate verb as virile or nonvirile based on selected headnoun.", () => {
+    it.only("#pal04-05a GET 200 YES: Conjugate verb (as virile or nonvirile) to agree with noun in plural.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -341,7 +341,7 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    xit("#pal04-05b GET 200 YES: Returns a sentence with a noun and verb, in present. The verb must agree with the noun.", () => {
+    xit("#pal04-05b GET 200 YES: Conjugate verb to agree with noun in singular.", () => {
       return request(app)
         .get("/api/palette")
         .send({
