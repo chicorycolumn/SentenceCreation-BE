@@ -138,7 +138,7 @@ exports.findObjectInNestedObject = (source, identifyingData) => {
   }
 };
 
-exports.getSelectedWordAndPutInArray = (
+exports.findMatchingWordThenAddToResultArray = (
   structureChunkOriginal,
   resultArr,
   words,
@@ -165,6 +165,7 @@ exports.getSelectedWordAndPutInArray = (
     matches = lfUtils.filterByTag(source, structureChunk.manTags, true);
     matches = lfUtils.filterByTag(matches, structureChunk.optTags, false);
 
+    // Filter lemmaObjects by requested gender.
     // Do this for nouns because we're filtering the different noun lobjs by gender, as each noun is a diff gender.
     // Don't do this for adjs, as gender is a key inside each individual adj lobj.
     // Don't do this fr verbs, as gender is a key inside each individual verb lobj.
@@ -173,8 +174,13 @@ exports.getSelectedWordAndPutInArray = (
     }
   }
 
-  if (structureChunk.wordtype === "verb") {
+  // Programmatically fill out verbs with full conjugation set.
+  if (["verb"].includes(structureChunk.wordtype)) {
     matches.forEach((lObj) => POLUtils.fillVerbLemmaObject(lObj));
+  }
+
+  if (["verb", "adjective"].includes(structureChunk.wordtype)) {
+    POLUtils.adjustVirility(structureChunk);
   }
 
   // console.log(
@@ -183,42 +189,43 @@ exports.getSelectedWordAndPutInArray = (
   // );
   // return;
 
+  //Remove lemma objects that don't have the keys that the requirements specifically ask us to traverse to.
+  //All lemma objects left in matches array do indeed have at least one happy path based on structureChunk requirements.
   matches = lfUtils.filterOutDeficientLemmaObjects(
     matches,
     structureChunk,
     inflectionChainsByThisLanguage
   );
 
-  if (matches.length) {
-    let selectedLemmaObj = gpUtils.selectRandom(matches);
-
-    let filterNestedOutput = lfUtils.filterWithinLemmaObjectByNestedKeys(
-      selectedLemmaObj,
-      structureChunk,
-      inflectionChainsByThisLanguage
-    );
-
-    if (!filterNestedOutput || !filterNestedOutput.selectedWord) {
-      errorInSentenceCreation.errorMessage =
-        "A lemma object was indeed selected, but no word was found at the end of the give inflection chain.";
-
-      return false;
-    } else {
-      let {
-        selectedWord,
-
-        modifiedStructureChunk,
-      } = filterNestedOutput;
-
-      resultArr.push({
-        selectedLemmaObj,
-        selectedWord,
-        structureChunk: modifiedStructureChunk,
-      });
-    }
-  } else {
+  if (!matches.length) {
     errorInSentenceCreation.errorMessage =
       "No matching lemma objects were found.";
+    // return false;
+    return;
+  }
+
+  let selectedLemmaObj = gpUtils.selectRandom(matches);
+
+  //Contains fxnality to ensure that we don't randomly traverse to a dead end, and ensure we go a happy path,
+  //of which we already know at least one exists.
+  let filterNestedOutput = lfUtils.filterWithinSelectedLemmaObject(
+    selectedLemmaObj,
+    structureChunk,
+    inflectionChainsByThisLanguage
+  );
+
+  if (!filterNestedOutput || !filterNestedOutput.selectedWord) {
+    errorInSentenceCreation.errorMessage =
+      "A lemma object was indeed selected, but no word was found at the end of the give inflection chain.";
+
     return false;
+  } else {
+    let { selectedWord, updatedStructureChunk } = filterNestedOutput;
+
+    resultArr.push({
+      selectedLemmaObj,
+      selectedWord,
+      structureChunk: updatedStructureChunk,
+    });
   }
 };

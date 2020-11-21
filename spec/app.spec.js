@@ -263,7 +263,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceFormulaSymbol: "dummy23 past/cond 1per virile",
+          sentenceFormulaSymbol: "dummy23a past/cond 1per virile",
           useDummy: true,
         })
         .expect(200)
@@ -280,7 +280,50 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    xit("#pal04-05a GET 200 YES: Returns a sentence with a noun and verb, in present.", () => {
+    it.only("#pal04-04b GET 200 YES: Returns verb in nonvirile.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          sentenceFormulaSymbol: "dummy23b past/cond 1per nonvirile",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          expect([
+            "Czytałyśmy.",
+            "Czytałyście.",
+            "Czytały.",
+            "Czytałybyśmy.",
+            "Czytałybyście.",
+            "Czytałyby.",
+          ]).to.include(res.body.palette);
+          console.log({ palette: res.body.palette });
+        });
+    });
+    it("#pal04-04b GET 200 YES: Returns verb in nonvirile when gender is m2.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          sentenceFormulaSymbol: "dummy23c past/cond 1per nonvirile",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          expect([
+            "Czytałyśmy.",
+            "Czytałyście.",
+            "Czytały.",
+            "Czytałybyśmy.",
+            "Czytałybyście.",
+            "Czytałyby.",
+          ]).to.include(res.body.palette);
+          console.log({ palette: res.body.palette });
+        });
+    });
+    it("#pal04-05a GET 200 YES: Returns a sentence with a noun and verb, in present. The verb must agree with the noun.", () => {
+      //At the point where we transfer features from headnoun to dependent verb, we should change f + plural = nonvirile.
       return request(app)
         .get("/api/palette")
         .send({
@@ -289,14 +332,9 @@ describe("/api", () => {
         .expect(200)
         .then((res) => {
           expect(res.body.palette).to.be.a("String");
-          // expect([
-          //   "Czytam.",
-          //   "Czytasz.",
-          //   "Czyta.",
-          //   "Czytamy.",
-          //   "Czytacie.",
-          //   "Czytają.",
-          // ]).to.include(res.body.palette);
+          expect(["Kobieta czyta.", "Kobiety czytają."]).to.include(
+            res.body.palette
+          );
           console.log({ palette: res.body.palette });
         });
     });

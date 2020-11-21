@@ -1,6 +1,8 @@
 const scUtils = require("../utils/sentenceCreationUtils.js");
 const gpUtils = require("../utils/generalPurposeUtils.js");
 const lfUtils = require("../utils/lemmaFilteringUtils.js");
+const POLUtils = require("../utils/specificPolishUtils.js");
+
 const { wordsBank } = require("../source/POL/words.js");
 const { dummyWordsBank } = require("../source/POL/dummyWords.js");
 const { sentenceFormulasBank } = require("../source/POL/sentenceFormulas.js");
@@ -9,6 +11,7 @@ const {
 } = require("../source/POL/dummySentenceFormulas.js");
 
 exports.fetchPalette = (req) => {
+  //STEP ZERO: Get necessary components.
   let defaultSentenceNumber = 50;
   let sentenceNumber = req.body.sentenceNumber || defaultSentenceNumber;
   let defaultLevelNumber = "level01";
@@ -30,7 +33,7 @@ exports.fetchPalette = (req) => {
     ? gpUtils.copyWithoutReference(dummySentenceFormulasBank)
     : gpUtils.copyWithoutReference(sentenceFormulasBank);
 
-  //LATER: If a level is specified, and random is specified, pick a random SF from that level.
+  //If a level is specified, and random is specified, enable to pick a random SF from that level.
 
   let sentenceFormula = req.body.sentenceFormulaSymbol
     ? scUtils.findObjectInNestedObject(sentenceFormulas, {
@@ -49,7 +52,7 @@ exports.fetchPalette = (req) => {
   });
   headIds = Array.from(new Set(headIds));
 
-  //STEP ONE
+  //STEP ONE: Select headwords and add to result array.
   headIds.forEach((headId) => {
     let chunkId = headId;
     let headChunk = sentenceStructure.find(
@@ -59,7 +62,7 @@ exports.fetchPalette = (req) => {
     doneChunkIds.push(chunkId);
 
     // console.log(">>STEP ONE", headChunk);
-    scUtils.getSelectedWordAndPutInArray(
+    scUtils.findMatchingWordThenAddToResultArray(
       headChunk,
       resultArr,
       words,
@@ -68,7 +71,7 @@ exports.fetchPalette = (req) => {
     );
   });
 
-  //STEP TWO
+  //STEP TWO: Select dependent words and add to result array.
   headIds.forEach((headId) => {
     let dependentChunks = sentenceStructure.filter(
       (structureChunk) =>
@@ -95,7 +98,7 @@ exports.fetchPalette = (req) => {
         doneChunkIds.push(dependentChunk.chunkId);
 
         // console.log(">>STEP TWO", dependentChunk);
-        scUtils.getSelectedWordAndPutInArray(
+        scUtils.findMatchingWordThenAddToResultArray(
           dependentChunk,
           resultArr,
           words,
@@ -106,14 +109,14 @@ exports.fetchPalette = (req) => {
     }
   });
 
-  //STEP THREE
+  //STEP THREE: Select all other words and add to result array.
   sentenceStructure.forEach((structureChunk) => {
     if (
       typeof structureChunk !== "object" ||
       !doneChunkIds.includes(structureChunk.chunkId)
     ) {
       // console.log(">>STEP THREE", structureChunk);
-      scUtils.getSelectedWordAndPutInArray(
+      scUtils.findMatchingWordThenAddToResultArray(
         structureChunk,
         resultArr,
         words,
@@ -123,6 +126,7 @@ exports.fetchPalette = (req) => {
     }
   });
 
+  //STEP FOUR: Format and return result.
   console.log(">>End of palette.model resultArr", resultArr);
 
   let responseObj = {};

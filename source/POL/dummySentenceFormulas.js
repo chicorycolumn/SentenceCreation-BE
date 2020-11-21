@@ -389,8 +389,8 @@ const level01 = {
       },
     ],
   },
-  dummy23: {
-    symbol: "dummy23 past/cond 1per virile",
+  dummy23a: {
+    symbol: "dummy23a past/cond 1per virile",
     structure: [
       {
         chunkId: "ver-1",
@@ -401,7 +401,39 @@ const level01 = {
         tense: ["past", "conditional"],
         person: ["1per"],
         number: ["plural"],
-        gender: ["virile"],
+        gender: ["m1"],
+      },
+    ],
+  },
+  dummy23b: {
+    symbol: "dummy23b past/cond 1per nonvirile",
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        manTags: [],
+        optTags: [],
+        form: ["verb"],
+        tense: ["past", "conditional"],
+        person: ["1per"],
+        number: ["plural"],
+        gender: ["f", "n"],
+      },
+    ],
+  },
+  dummy23c: {
+    symbol: "dummy23c past/cond 1per nonvirile",
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        manTags: [],
+        optTags: [],
+        form: ["verb"],
+        tense: ["past", "conditional"],
+        person: ["1per"],
+        number: ["plural"],
+        gender: ["m2"],
       },
     ],
   },

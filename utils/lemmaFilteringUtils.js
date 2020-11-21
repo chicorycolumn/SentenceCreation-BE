@@ -1,5 +1,6 @@
 const gpUtils = require("./generalPurposeUtils.js");
 const scUtils = require("./sentenceCreationUtils.js");
+const POLUtils = require("./specificPolishUtils.js");
 
 exports.filterByKey = (lemmaObjectArr, requirementArrs, key) => {
   // console.log({ lemmaObjectArr, requirementArrs, key });
@@ -13,17 +14,18 @@ exports.filterByKey = (lemmaObjectArr, requirementArrs, key) => {
   }
 };
 
-exports.filterWithinLemmaObjectByNestedKeys = (
+exports.filterWithinSelectedLemmaObject = (
   lemmaObject,
   structureChunk,
   inflectionChainRefObj
 ) => {
   console.log(
-    "filterWithinLemmaObjectByNestedKeys fxn >> structureChunk",
+    "filterWithinSelectedLemmaObject fxn >> structureChunk",
     structureChunk
   );
 
   let source = lemmaObject.inflections;
+
   structureChunk.manTags = structureChunk.manTags.filter((tag) => {
     lemmaObject.tags.includes(tag);
   });
@@ -31,18 +33,18 @@ exports.filterWithinLemmaObjectByNestedKeys = (
     lemmaObject.tags.includes(tag);
   });
 
-  if (structureChunk.wordtype === "adjective") {
-    if (
-      structureChunk.number.length === 1 &&
-      structureChunk.number[0] === "plural"
-    ) {
-      exports.adjustVirileAndNonVirile(structureChunk);
-    } else {
-      console.log(
-        "Error in filterWithinLemmaObjectByNestedKeys fxn regarding adjectives, expected this adjective to have exactly one specfication as NUMBER feature."
-      );
-    }
-  }
+  // if (structureChunk.wordtype === "adjective") {
+  //   if (
+  //     structureChunk.number.length === 1 &&
+  //     structureChunk.number[0] === "plural"
+  //   ) {
+  //     POLUtils.adjustVirility(structureChunk);
+  //   } else {
+  //     console.log(
+  //       "Error in filterWithinSelectedLemmaObject fxn regarding adjectives, expected this adjective to have exactly one specfication as NUMBER feature."
+  //     );
+  //   }
+  // }
 
   //Do this for nouns, because noun lobjs have a gender, which they can put onto structureChunk to show what choice we made.
   //Don't do this for adjs, because they are the reverse. We earlier put the head word's gender onto the structureChunk,
@@ -59,7 +61,7 @@ exports.filterWithinLemmaObjectByNestedKeys = (
   });
 
   console.log(
-    "filterWithinLemmaObjectByNestedKeys fxn >> requirementArrs",
+    "filterWithinSelectedLemmaObject fxn >> requirementArrs",
     requirementArrs
   );
 
@@ -72,7 +74,10 @@ exports.filterWithinLemmaObjectByNestedKeys = (
   let errorInDrilling = false;
 
   console.log("-------------------------");
-  console.log({ inflectionPathsInSource: inflectionPathsInSource.slice(20) });
+  console.log(
+    "inflectionPathsInSourceSLICE",
+    inflectionPathsInSource.slice(0, 10)
+  );
   console.log("-------------------------");
 
   let drillPath = [];
@@ -117,7 +122,6 @@ exports.filterWithinLemmaObjectByNestedKeys = (
       validFeatures = sourceFeatures;
     }
 
-    ///////////////////////////////////
     console.log("//////////////////////////");
     console.log("//////////////////////////");
     console.log("//////////////////////////");
@@ -126,7 +130,10 @@ exports.filterWithinLemmaObjectByNestedKeys = (
       copyDrillPath.push(feature_i);
 
       console.log({ copyDrillPath });
-      console.log({ inflectionPathsInSource });
+      console.log(
+        "inflectionPathsInSourceSLICE",
+        inflectionPathsInSource.slice(0, 20)
+      );
 
       let putativePathsWithDrillPathSoFar = inflectionPathsInSource.filter(
         (inflectionPath_j) => {
@@ -140,7 +147,10 @@ exports.filterWithinLemmaObjectByNestedKeys = (
         }
       );
 
-      console.log({ putativePathsWithDrillPathSoFar });
+      console.log(
+        "putativePathsWithDrillPathSoFarSLICE",
+        putativePathsWithDrillPathSoFar.slice(0, 20)
+      );
 
       let putativePathsLookingAhead = putativePathsWithDrillPathSoFar.filter(
         (putativePath) => {
@@ -164,8 +174,6 @@ exports.filterWithinLemmaObjectByNestedKeys = (
 
       return putativePathsLookingAhead.length;
     });
-
-    ///////////////////////////////////
 
     console.log("***");
     console.log({ validFeatures });
@@ -194,12 +202,12 @@ exports.filterWithinLemmaObjectByNestedKeys = (
     if (typeof source === "string") {
       return {
         selectedWord: source,
-        modifiedStructureChunk: structureChunk,
+        updatedStructureChunk: structureChunk,
       };
     } else {
       return {
         selectedWord: gpUtils.selectRandom(source),
-        modifiedStructureChunk: structureChunk,
+        updatedStructureChunk: structureChunk,
       };
     }
   }
@@ -223,7 +231,10 @@ exports.filterOutDeficientLemmaObjects = (
 
       let inflectionPathsInSource = routesByNesting;
 
-      console.log("***inflectionPathsInSource", inflectionPathsInSource);
+      console.log(
+        "***inflectionPathsInSourceSLICE",
+        inflectionPathsInSourceSLICE.slice(0, 10)
+      );
 
       let inflectionPathsInRequirements = scUtils.concoctNestedRoutes(
         requirementArrs,
@@ -256,27 +267,6 @@ exports.filterByTag = (wordset, tags, mandatory) => {
   } else {
     return lemmaObjs;
   }
-};
-
-exports.adjustVirileAndNonVirile = (structureChunk) => {
-  if (structureChunk.gender.length !== 1) {
-    console.log(
-      "Error in filterWithinLemmaObjectByNestedKeys fxn regarding adjectives, expected this adjective to have exactly one specfication as GENDER feature."
-    );
-    return;
-  }
-
-  const pluralGenderRefObj = {
-    m1: "virile",
-    m2: "nonvirile",
-    m3: "nonvirile",
-    f: "nonvirile",
-    n: "nonvirile",
-  };
-
-  let pluralGender = pluralGenderRefObj[structureChunk.gender[0]];
-
-  structureChunk.gender = [pluralGender];
 };
 
 exports.filterByLemma = (source, structureChunk) => {
