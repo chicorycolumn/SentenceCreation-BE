@@ -213,6 +213,29 @@ const level01 = {
       },
     ],
   },
+  60: {
+    symbol: "girls were reading",
+    structure: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        manTags: ["person"],
+        optTags: [],
+        gcase: ["nom"],
+        number: ["plural"],
+        gender: [],
+      },
+      {
+        chunkId: "ver-1",
+        agreeWith: "nou-1",
+        wordtype: "verb",
+        tense: ["past"],
+        person: ["3per"],
+        manTags: ["basic2"],
+        optTags: [],
+      },
+    ],
+  },
 };
 
 exports.sentenceFormulasBank = { level01 };

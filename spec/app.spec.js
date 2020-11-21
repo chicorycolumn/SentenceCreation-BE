@@ -259,11 +259,11 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    it("#pal04-04a GET 200 YES: Returns verb in virile.", () => {
+    it("#pal04-04a GET 200 YES: Returns verb in virile when one gender option is given.", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceFormulaSymbol: "dummy23a past/cond 1per virile",
+          sentenceFormulaSymbol: "dummy23a past/cond 1per plural m1",
           useDummy: true,
         })
         .expect(200)
@@ -280,11 +280,11 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    it.only("#pal04-04b GET 200 YES: Returns verb in nonvirile.", () => {
+    it.only("#pal04-04b GET 200 YES: Returns verb in nonvirile when one gender option is given.", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceFormulaSymbol: "dummy23b past/cond 1per nonvirile",
+          sentenceFormulaSymbol: "dummy23b past/cond 1per plural m2",
           useDummy: true,
         })
         .expect(200)
@@ -301,11 +301,11 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    it("#pal04-04b GET 200 YES: Returns verb in nonvirile when gender is m2.", () => {
+    it("#pal04-04c GET 200 YES: Returns verb in nonvirile when two gender options are given.", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceFormulaSymbol: "dummy23c past/cond 1per nonvirile",
+          sentenceFormulaSymbol: "dummy23c past/cond 1per plural f/n",
           useDummy: true,
         })
         .expect(200)
@@ -322,8 +322,26 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    it("#pal04-05a GET 200 YES: Returns a sentence with a noun and verb, in present. The verb must agree with the noun.", () => {
-      //At the point where we transfer features from headnoun to dependent verb, we should change f + plural = nonvirile.
+    it("#pal04-05a GET 200 YES: Conjugate verb as virile or nonvirile based on selected headnoun.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          sentenceFormulaSymbol: "girls were reading",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          expect([
+            "Kobiety czytały.",
+            "Chłopcy czytali.",
+            "Chłopaki czytali.",
+            "Chłopacy czytali.",
+          ]).to.include(res.body.palette);
+          console.log({ palette: res.body.palette });
+        });
+    });
+    it("#pal04-05b GET 200 YES: Returns a sentence with a noun and verb, in present. The verb must agree with the noun.", () => {
       return request(app)
         .get("/api/palette")
         .send({
