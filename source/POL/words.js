@@ -278,9 +278,12 @@ let verbSet = [
   // chain = ["form", "tense", "person", "number", "gender"]
   //perfective has participles:             passive, anterior
   //imperfective has participles:   active, passive, contemporary
+
   //If you mark a key true, or give it a value      it will be filled out by fillVerbLemmaObject fxn.
   //If you mark a key false, or omit it             it will not be.
 
+  //NOTE: The ADVERBIAL participles should not be connected to the head noun
+  //when specifying a sentence structure, as they don't conjugate in any way.
   {
     translations: { EN: ["read"] },
     lemma: "czytać",
@@ -294,8 +297,8 @@ let verbSet = [
       verb: {
         past: {
           impersonal: {
-            singular: { allGenders: "czytano" },
-            plural: { allGenders: "czytano" },
+            singular: { allSingularGenders: "czytano" },
+            plural: { allPluralGenders: "czytano" },
           },
           "1per": {
             singular: {

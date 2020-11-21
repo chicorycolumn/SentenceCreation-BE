@@ -22,7 +22,9 @@ exports.fillVerbLemmaObject = (lemmaObj) => {
     if (isAvailable(inflections.verb.future)) {
       inflections.verb.future = {
         impersonal: {
-          singular: { allGenders: "będzie" + " " + infinitive + " " + "się" },
+          singular: {
+            allSingularGenders: "będzie" + " " + infinitive + " " + "się",
+          },
         },
         "1per": {
           singular: {
@@ -98,13 +100,15 @@ exports.fillVerbLemmaObject = (lemmaObj) => {
     }
     if (isAvailable(inflections.verb.present.impersonal.singular)) {
       inflections.verb.present.impersonal.singular = {
-        allGenders: inflections.verb.present["3per"].singular.m + " " + "się",
+        allSingularGenders:
+          inflections.verb.present["3per"].singular.m + " " + "się",
       };
     }
   } else if (aspect === "perfective") {
     if (isAvailable(inflections.verb.future.impersonal.singular)) {
       inflections.verb.future.impersonal.singular = {
-        allGenders: inflections.verb.future["3per"].singular.m + " " + "się",
+        allSingularGenders:
+          inflections.verb.future["3per"].singular.m + " " + "się",
       };
     }
   }
@@ -112,8 +116,18 @@ exports.fillVerbLemmaObject = (lemmaObj) => {
   if (isAvailable(inflections.verb.conditional)) {
     inflections.verb.conditional = {
       impersonal: {
-        singular: { allGenders: inflections.verb.past.impersonal + " " + "by" },
-        plural: { allGenders: inflections.verb.past.impersonal + " " + "by" },
+        singular: {
+          allSingularGenders:
+            inflections.verb.past.impersonal.singular.allSingularGenders +
+            " " +
+            "by",
+        },
+        plural: {
+          allPluralGenders:
+            inflections.verb.past.impersonal.plural.allPluralGenders +
+            " " +
+            "by",
+        },
       },
       "1per": {
         singular: {
@@ -149,18 +163,74 @@ exports.fillVerbLemmaObject = (lemmaObj) => {
     };
   }
 
-  ["activeAdjectival", "passiveAdjectival"].forEach((participleKey) => {
-    if (inflections.participle[participleKey]) {
-      let allPersons = inflections.participle[participleKey].allPersons;
-
-      inflections.participle[participleKey]["impersonal"] = allPersons;
-      inflections.participle[participleKey]["1per"] = allPersons;
-      inflections.participle[participleKey]["2per"] = allPersons;
-      inflections.participle[participleKey]["3per"] = allPersons;
-
-      delete inflections.participle[participleKey].allPersons;
+  gpUtils.findKeysInObjectAndExecuteCallback(
+    inflections,
+    "allSingularGenders",
+    (obj) => {
+      gpUtils.copyValueOfKey(
+        obj,
+        "allSingularGenders",
+        ["m1", "m2", "m3", "f", "n"],
+        true
+      );
     }
+  );
+
+  gpUtils.findKeysInObjectAndExecuteCallback(
+    inflections,
+    "allPluralGenders",
+    (obj) => {
+      gpUtils.copyValueOfKey(
+        obj,
+        "allPluralGenders",
+        ["virile", "nonvirile"],
+        true
+      );
+    }
+  );
+
+  gpUtils.findKeysInObjectAndExecuteCallback(
+    inflections,
+    "allPersons",
+    (obj) => {
+      gpUtils.copyValueOfKey(
+        obj,
+        "allPersons",
+        ["impersonal", "1per", "2per", "3per"],
+        true
+      );
+    }
+  );
+
+  gpUtils.findKeysInObjectAndExecuteCallback(
+    inflections,
+    "allPersonsExceptImpersonal",
+    (obj) => {
+      gpUtils.copyValueOfKey(
+        obj,
+        "allPersonsExceptImpersonal",
+        ["1per", "2per", "3per"],
+        true
+      );
+    }
+  );
+
+  gpUtils.findKeysInObjectAndExecuteCallback(inflections, "m", (obj) => {
+    gpUtils.copyValueOfKey(obj, "m", ["m1", "m2", "m3"], true);
   });
+
+  // ["activeAdjectival", "passiveAdjectival"].forEach((participleKey) => {
+  //   if (inflections.participle[participleKey]) {
+  //     let allPersons = inflections.participle[participleKey].allPersons;
+
+  //     inflections.participle[participleKey]["impersonal"] = allPersons;
+  //     inflections.participle[participleKey]["1per"] = allPersons;
+  //     inflections.participle[participleKey]["2per"] = allPersons;
+  //     inflections.participle[participleKey]["3per"] = allPersons;
+
+  //     delete inflections.participle[participleKey].allPersons;
+  //   }
+  // });
 
   function isAvailable(value) {
     //If true, fill it out.

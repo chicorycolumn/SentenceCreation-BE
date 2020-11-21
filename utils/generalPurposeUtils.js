@@ -42,9 +42,38 @@ exports.giveSetKey = (word) => {
   return word + "Set";
 };
 
+exports.copyAndCombineWordbanks = (wordbank1, wordbank2) => {
+  let wordbank1Copy = exports.copyWithoutReference(wordbank1);
+  let wordbank2Copy = exports.copyWithoutReference(wordbank2);
+
+  Object.keys(wordbank1Copy).forEach((key) => {
+    wordbank1Copy[key] = [...wordbank1Copy[key], ...wordbank2Copy[key]];
+  });
+
+  return wordbank1Copy;
+};
+
+////
+
+exports.findKeysInObjectAndExecuteCallback = (obj, soughtKey, callback) => {
+  if (obj && typeof obj === "object") {
+    Object.keys(obj).forEach((key) => {
+      if (key === soughtKey) {
+        callback(obj);
+      } else {
+        exports.findKeysInObjectAndExecuteCallback(
+          obj[key],
+          soughtKey,
+          callback
+        );
+      }
+    });
+  }
+};
+
 exports.copyWithoutReference = (source) => {
   if (typeof source !== "object" || source === null) {
-    return;
+    return source;
   }
   if (Array.isArray(source)) {
     return recursivelyCopyObject(source, []);
@@ -73,29 +102,6 @@ exports.copyWithoutReference = (source) => {
   }
 };
 
-exports.copyAndCombineWordbanks = (wordbank1, wordbank2) => {
-  let wordbank1Copy = exports.copyWithoutReference(wordbank1);
-  let wordbank2Copy = exports.copyWithoutReference(wordbank2);
-
-  Object.keys(wordbank1Copy).forEach((key) => {
-    wordbank1Copy[key] = [...wordbank1Copy[key], ...wordbank2Copy[key]];
-  });
-
-  return wordbank1Copy;
-};
-
-exports.findKeysInObjectAndExecuteCallback = (obj, soughtKey, callback) => {
-  if (obj && typeof obj === "object") {
-    Object.keys(obj).forEach((key) => {
-      if (key === soughtKey) {
-        callback(obj);
-      } else {
-        findKeysInObjectAndExecuteCallback(obj[key], soughtKey, callback);
-      }
-    });
-  }
-};
-
 exports.copyValueOfKey = (
   navigatedObject,
   sourceKey,
@@ -103,7 +109,9 @@ exports.copyValueOfKey = (
   shouldDeleteSourceKey
 ) => {
   targetKeyArr.forEach((targetKey) => {
-    navigatedObject[targetKey] = navigatedObject[sourceKey];
+    navigatedObject[targetKey] = exports.copyWithoutReference(
+      navigatedObject[sourceKey]
+    );
   });
 
   if (shouldDeleteSourceKey) {

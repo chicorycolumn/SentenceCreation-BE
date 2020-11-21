@@ -177,7 +177,11 @@ exports.getSelectedWordAndPutInArray = (
     matches.forEach((lObj) => POLUtils.fillVerbLemmaObject(lObj));
   }
 
-  // console.log("have these verbs been filled out?", matches[0].inflections);
+  // console.log(
+  //   "have these verbs been filled out?",
+  //   matches[0].inflections.participle.contemporaryAdverbial
+  // );
+  // return;
 
   matches = lfUtils.filterOutDeficientLemmaObjects(
     matches,
