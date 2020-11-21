@@ -255,31 +255,16 @@ exports.fillVerbInflections = (lemmaObj) => {
 exports.adjustVirility = (structureChunk) => {
   let { gender, number } = structureChunk;
 
-  if (
-    gender &&
-    gender.length === 1 &&
-    number &&
-    number.length === 1 &&
-    number[0] === "plural"
-  ) {
-    const pluralGenderRefObj = {
-      m1: "virile",
-      m2: "nonvirile",
-      m3: "nonvirile",
-      f: "nonvirile",
-      n: "nonvirile",
-      virile: "virile",
-      nonvirile: "nonvirile",
-    };
-
-    let pluralGender = pluralGenderRefObj[structureChunk.gender[0]];
-
-    structureChunk.gender = [pluralGender];
+  if (!number || !number.includes("plural")) {
+    return;
   }
-};
 
-exports.adjustVirilityDUPLICATE = (structureChunk) => {
-  const virilityRefObj = {
+  if (!gender || !gender.length) {
+    return;
+  }
+
+  let newGenderArray = [];
+  const pluralGenderRefObj = {
     m1: "virile",
     m2: "nonvirile",
     m3: "nonvirile",
@@ -289,7 +274,19 @@ exports.adjustVirilityDUPLICATE = (structureChunk) => {
     nonvirile: "nonvirile",
   };
 
-  if (structureChunk.number[0] === "plural" && structureChunk.gender[0]) {
-    structureChunk.gender = [virilityRefObj[structureChunk.gender]];
+  if (number.includes("singular")) {
+    gender.forEach((genderValue) => {
+      newGenderArray.push(genderValue);
+    });
   }
+
+  if (number.includes("plural")) {
+    gender.forEach((genderValue) => {
+      newGenderArray.push(pluralGenderRefObj[genderValue]);
+    });
+  }
+
+  let result = Array.from(new Set(newGenderArray));
+
+  structureChunk.gender = result;
 };
