@@ -233,7 +233,7 @@ exports.filterOutDeficientLemmaObjects = (
 
       console.log(
         "***inflectionPathsInSourceSLICE",
-        inflectionPathsInSourceSLICE.slice(0, 10)
+        inflectionPathsInSource.slice(0, 10)
       );
 
       let inflectionPathsInRequirements = scUtils.concoctNestedRoutes(

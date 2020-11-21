@@ -280,7 +280,7 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    it.only("#pal04-04b GET 200 YES: Returns verb in nonvirile when one gender option is given.", () => {
+    it("#pal04-04b GET 200 YES: Returns verb in nonvirile when one gender option is given.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -301,7 +301,7 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    it("#pal04-04c GET 200 YES: Returns verb in nonvirile when two gender options are given.", () => {
+    xit("#pal04-04c GET 200 YES: Returns verb in nonvirile when two gender options are given.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -322,7 +322,7 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    it("#pal04-05a GET 200 YES: Conjugate verb as virile or nonvirile based on selected headnoun.", () => {
+    xit("#pal04-05a GET 200 YES: Conjugate verb as virile or nonvirile based on selected headnoun.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -341,7 +341,7 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    it("#pal04-05b GET 200 YES: Returns a sentence with a noun and verb, in present. The verb must agree with the noun.", () => {
+    xit("#pal04-05b GET 200 YES: Returns a sentence with a noun and verb, in present. The verb must agree with the noun.", () => {
       return request(app)
         .get("/api/palette")
         .send({
