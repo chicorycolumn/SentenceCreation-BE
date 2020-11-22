@@ -274,6 +274,45 @@ const level01 = {
     primaryOrders: [["nou-1", "ver-1", "adj-1", "nou-2"]],
     additionalOrders: [],
   },
+  "61-neg1": {
+    symbol: "girl didn't have red apple",
+    structure: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        manTags: ["person"],
+        optTags: [],
+        gcase: ["nom"],
+      },
+      { chunkId: "fix-1", wordtype: "fixed", value: "nie" },
+      {
+        chunkId: "ver-1",
+        agreeWith: "nou-1",
+        wordtype: "verb",
+        tense: ["past"],
+        person: ["3per"],
+        manTags: [],
+        optTags: [],
+        specificLemmas: ["mieć"],
+      },
+      {
+        chunkId: "adj-1",
+        agreeWith: "nou-2",
+        wordtype: "adjective",
+        manTags: ["colour"],
+        optTags: [],
+      },
+      {
+        chunkId: "nou-2",
+        wordtype: "noun",
+        manTags: ["edible"],
+        optTags: [],
+        gcase: ["gen"],
+      },
+    ],
+    primaryOrders: [["nou-1", "fix-1", "ver-1", "adj-1", "nou-2"]],
+    additionalOrders: [],
+  },
 };
 
 exports.sentenceFormulasBank = { level01 };

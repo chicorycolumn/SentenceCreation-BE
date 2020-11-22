@@ -202,6 +202,7 @@ let nounSet = [
     },
   },
 ];
+
 let adjectiveSet = [
   {
     translations: { EN: ["red"] },
@@ -273,20 +274,20 @@ let adjectiveSet = [
     },
   },
 ];
-let adverbSet = [];
-let verbSet = [
-  //perfective has participles:             passive, anterior
-  //imperfective has participles:   active, passive, contemporary
 
-  //If you mark a key true, or give it a value      it will be filled out by fillVerbInflections fxn.
-  //If you mark a key false, or omit it             it will not be.
+//Perfective has participles:             passive, anterior
+//Imperfective has participles:   active, passive, contemporary
+
+//If you mark a key true, or give it a value      it will be filled out by fillVerbInflections fxn.
+//If you mark a key false, or omit it             it will not be.
+let verbSet = [
   {
     translations: { EN: ["have"] },
     lemma: "mieć",
     id: "pol-ver-001-imp-01",
     tags: ["basic", "possession"],
     aspect: "imperfective",
-    deficient: false,
+    deficient: true,
     defective: false,
     inflections: {
       infinitive: "mieć",
@@ -543,6 +544,8 @@ let verbSet = [
     },
   },
 ];
+
+let adverbSet = [];
 
 exports.wordsBank = {
   nounSet,

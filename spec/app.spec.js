@@ -60,6 +60,55 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
+    it("#pal05-01a GET 200 YES: Returns a negative sentence in past.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          sentenceFormulaSymbol: "girl didn't have red apple",
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          expect([
+            "Kobieta nie miała czerwonego jabłka.",
+            "Chłopiec nie miał czerwonego jabłka.",
+            "Chłopak nie miał czerwonego jabłka.",
+
+            "Kobieta nie miała czerwonych jabłek.",
+            "Chłopiec nie miał czerwonych jabłek.",
+            "Chłopak nie miał czerwonych jabłek.",
+
+            "Kobiety nie miały czerwonego jabłka.",
+            "Chłopcy nie mieli czerwonego jabłka.",
+            "Chłopacy nie mieli czerwonego jabłka.",
+            "Chłopaki nie mieli czerwonego jabłka.",
+
+            "Kobiety nie miały czerwonych jabłek.",
+            "Chłopcy nie mieli czerwonych jabłek.",
+            "Chłopacy nie mieli czerwonych jabłek.",
+            "Chłopaki nie mieli czerwonych jabłek.",
+
+            "Kobieta nie miała czerwonej cebuli.",
+            "Chłopiec nie miał czerwonej cebuli.",
+            "Chłopak nie miał czerwonej cebuli.",
+
+            "Kobieta nie miała czerwonych cebul.",
+            "Chłopiec nie miał czerwonych cebul.",
+            "Chłopak nie miał czerwonych cebul.",
+
+            "Kobiety nie miały czerwonej cebuli.",
+            "Chłopcy nie mieli czerwonej cebuli.",
+            "Chłopacy nie mieli czerwonej cebuli.",
+            "Chłopaki nie mieli czerwonej cebuli.",
+
+            "Kobiety nie miały czerwonych cebul.",
+            "Chłopcy nie mieli czerwonych cebul.",
+            "Chłopacy nie mieli czerwonych cebul.",
+            "Chłopaki nie mieli czerwonych cebul.",
+          ]).to.include(res.body.palette);
+          console.log({ palette: res.body.palette });
+        });
+    });
   });
 
   describe("/palette - Stage 4: Verbs", () => {
