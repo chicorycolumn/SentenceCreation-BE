@@ -171,6 +171,10 @@ exports.findMatchingWordThenAddToResultArray = (
     matches.forEach((lObj) => POLUtils.fillVerbInflections(lObj));
   }
 
+  if (["adjective"].includes(structureChunk.wordtype)) {
+    matches.forEach((lObj) => POLUtils.adjustMasculinityOfLemmaObject(lObj));
+  }
+
   if (["verb", "adjective"].includes(structureChunk.wordtype)) {
     POLUtils.adjustVirility(structureChunk);
   }

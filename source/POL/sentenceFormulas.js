@@ -359,6 +359,29 @@ const level01 = {
     primaryOrders: [["adj-0", "nou-1", "fix-1", "ver-1", "adj-1", "nou-2"]],
     additionalOrders: [],
   },
+  101: {
+    symbol: "101 girl is reading",
+    structure: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        manTags: ["person"],
+        optTags: [],
+        gcase: ["nom"],
+        number: ["singular", "plural"],
+        gender: ["f"],
+      },
+      {
+        chunkId: "ver-1",
+        agreeWith: "nou-1",
+        wordtype: "verb",
+        tense: ["present"],
+        person: ["3per"],
+        manTags: ["basic2"],
+        optTags: [],
+      },
+    ],
+  },
 };
 
 exports.sentenceFormulasBank = { level01 };

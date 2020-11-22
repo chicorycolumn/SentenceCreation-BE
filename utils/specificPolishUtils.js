@@ -245,6 +245,14 @@ exports.fillVerbInflections = (lemmaObj) => {
   }
 };
 
+exports.adjustMasculinityOfLemmaObject = (lemmaObj) => {
+  let { inflections } = lemmaObj;
+
+  gpUtils.findKeysInObjectAndExecuteCallback(inflections, "m", (obj) => {
+    gpUtils.copyValueOfKey(obj, "m", ["m1", "m2", "m3"], true);
+  });
+};
+
 exports.adjustVirility = (structureChunk) => {
   let { gender, number } = structureChunk;
 

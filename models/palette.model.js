@@ -45,6 +45,7 @@ exports.fetchPalette = (req) => {
 
   let doneChunkIds = [];
   let headIds = [];
+
   sentenceStructure.forEach((chunk) => {
     if (typeof chunk === "object" && chunk.agreeWith) {
       headIds.push(chunk.agreeWith);

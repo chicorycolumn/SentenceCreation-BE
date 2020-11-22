@@ -1,6 +1,6 @@
 let nounSet = [
   {
-    translations: { EN: ["woman", "lady"] },
+    translations: { ENG: ["woman", "lady"] },
     lemma: "kobieta",
     id: "pol-nou-001",
     gender: "f",
@@ -26,7 +26,7 @@ let nounSet = [
     },
   },
   {
-    translations: { EN: ["boy", "boyfriend", "guy"] },
+    translations: { ENG: ["boy", "boyfriend", "guy"] },
     lemma: "chłopak",
     id: "pol-nou-002",
     gender: "m1",
@@ -52,7 +52,7 @@ let nounSet = [
     },
   },
   {
-    translations: { EN: ["boy", "little boy"] },
+    translations: { ENG: ["boy", "little boy"] },
     lemma: "chłopiec",
     id: "pol-nou-003",
     gender: "m1",
@@ -78,7 +78,7 @@ let nounSet = [
     },
   },
   {
-    translations: { EN: ["onion"] },
+    translations: { ENG: ["onion"] },
     lemma: "cebula",
     id: "pol-nou-004",
     gender: "f",
@@ -104,7 +104,7 @@ let nounSet = [
     },
   },
   {
-    translations: { EN: ["apple"] },
+    translations: { ENG: ["apple"] },
     lemma: "jabłko",
     id: "pol-nou-005",
     gender: "n",
@@ -130,7 +130,7 @@ let nounSet = [
     },
   },
   {
-    translations: { EN: ["mirror"] },
+    translations: { ENG: ["mirror"] },
     lemma: "lustro",
     id: "pol-nou-006",
     gender: "n",
@@ -156,7 +156,7 @@ let nounSet = [
     },
   },
   {
-    translations: { EN: ["mirror"] },
+    translations: { ENG: ["mirror"] },
     lemma: "zwierciadło",
     id: "pol-nou-007",
     gender: "n",
@@ -183,7 +183,7 @@ let nounSet = [
   },
   {
     translations: {
-      EN: ["underwear", "pants", "underpants", "briefs", "panties"],
+      ENG: ["underwear", "pants", "underpants", "briefs", "panties"],
     },
     lemma: "majtki",
     id: "pol-nou-008",
@@ -203,44 +203,105 @@ let nounSet = [
   },
 ];
 
+let pronounSet = [
+  {
+    translations: { ENG: ["I"] },
+    lemma: "ja",
+    id: "pol-pro-001",
+    tags: [],
+    deficient: false,
+    person: "1per",
+    gender: ["m1", "f"],
+    inflections: {
+      singular: {
+        allSingularGendersExcludingNeuter: {
+          nom: "ja",
+          gen: "mnie",
+          dat: ["mi", "mnie"],
+          acc: "mnie",
+          ins: "mną",
+          loc: "mnie",
+        },
+      },
+      plural: {
+        allPluralGenders: {
+          nom: "my",
+          gen: "nas",
+          dat: "nam",
+          acc: "nas",
+          ins: "nami",
+          loc: "nas",
+        },
+      },
+    },
+  },
+  {
+    translations: { ENG: ["you (familiar)"] },
+    lemma: "ty",
+    id: "pol-pro-001",
+    tags: [],
+    deficient: false,
+    person: "2per",
+    gender: ["m1", "f"],
+    inflections: {
+      singular: {
+        allSingularGendersExcludingNeuter: {
+          nom: "ty",
+          gen: ["cię", "ciebie"],
+          dat: ["ci", "tobie"],
+          acc: ["cię", "ciebie"],
+          ins: "tobą",
+          loc: "ty",
+        },
+      },
+      plural: {
+        allPluralGenders: {
+          nom: "wy",
+          gen: "was",
+          dat: "wam",
+          acc: "was",
+          ins: "wami",
+          loc: "was",
+        },
+      },
+    },
+  },
+  {
+    translations: { ENG: ["he she it"] },
+    lemma: "on",
+    id: "pol-pro-001",
+    tags: [],
+    deficient: false,
+    person: "3per",
+    gender: ["m1", "m2", "m3", "f", "n"],
+    inflections: {
+      singular: {
+        m: {},
+        f: {},
+        n: {},
+      },
+      plural: {
+        virile: {},
+        nonvirile: {},
+      },
+    },
+  },
+];
+
 let adjectiveSet = [
   {
-    translations: { EN: ["red"] },
+    translations: { ENG: ["red"] },
     lemma: "czerwony",
     id: "pol-adj-001",
     tags: ["colour"],
     deficient: false,
     inflections: {
       singular: {
-        m1: {
+        m: {
           nom: "czerwony",
           gen: "czerwonego",
           dat: "czerwonemu",
           acc: "czerwonego",
-          ins: "czerwonym",
-          loc: "czerwonym",
-        },
-        m2: {
-          nom: "czerwony",
-          gen: "czerwonego",
-          dat: "czerwonemu",
-          acc: "czerwonego",
-          ins: "czerwonym",
-          loc: "czerwonym",
-        },
-        m3: {
-          nom: "czerwony",
-          gen: "czerwonego",
-          dat: "czerwonemu",
-          acc: "czerwony",
-          ins: "czerwonym",
-          loc: "czerwonym",
-        },
-        n: {
-          nom: "czerwone",
-          gen: "czerwonego",
-          dat: "czerwonemu",
-          acc: "czerwone",
           ins: "czerwonym",
           loc: "czerwonym",
         },
@@ -251,6 +312,14 @@ let adjectiveSet = [
           acc: "czerwoną",
           ins: "czerwoną",
           loc: "czerwonej",
+        },
+        n: {
+          nom: "czerwone",
+          gen: "czerwonego",
+          dat: "czerwonemu",
+          acc: "czerwone",
+          ins: "czerwonym",
+          loc: "czerwonym",
         },
       },
       plural: {
@@ -282,7 +351,7 @@ let adjectiveSet = [
 //If you mark a key false, or omit it             it will not be.
 let verbSet = [
   {
-    translations: { EN: ["have"] },
+    translations: { ENG: ["have"] },
     lemma: "mieć",
     id: "pol-ver-001-imp-01",
     tags: ["basic", "possession"],
@@ -407,7 +476,7 @@ let verbSet = [
     },
   },
   {
-    translations: { EN: ["read"] },
+    translations: { ENG: ["read"] },
     lemma: "czytać",
     id: "pol-ver-002-imp-01",
     tags: ["basic2"],
