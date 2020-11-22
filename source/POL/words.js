@@ -275,7 +275,6 @@ let adjectiveSet = [
 ];
 let adverbSet = [];
 let verbSet = [
-  // chain = ["form", "tense", "person", "number", "gender"]
   //perfective has participles:             passive, anterior
   //imperfective has participles:   active, passive, contemporary
 

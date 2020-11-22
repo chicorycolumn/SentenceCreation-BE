@@ -188,7 +188,7 @@ const level01 = {
     ],
     additionalOrders: [],
   },
-  dummy11: {
+  dummy11a: {
     symbol: "I have APPLE",
     structure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "mam" },
@@ -201,6 +201,24 @@ const level01 = {
         number: ["singular"],
         gender: [],
         specificLemmas: ["jabłko"], //This overrides tags and selectRandom. But still conjugates for features.
+      },
+    ],
+    primaryOrders: [["fix-1", "nou-1"]],
+    additionalOrders: [],
+  },
+  dummy11b: {
+    symbol: "I have APPLE/SHIRT",
+    structure: [
+      { chunkId: "fix-1", wordtype: "fixed", value: "mam" },
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        manTags: [],
+        optTags: [],
+        gcase: ["acc"],
+        number: ["plural"],
+        gender: [],
+        specificLemmas: ["jabłko", "majtki"], //This overrides tags and selectRandom. But still conjugates for features.
       },
     ],
     primaryOrders: [["fix-1", "nou-1"]],

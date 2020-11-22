@@ -693,7 +693,7 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    it("#pal01-06a GET 200 YES: Make sure filtering by lemma is possible.", () => {
+    it("#pal01-06a GET 200 YES: Filter by specified lemma.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -704,6 +704,20 @@ describe("/api", () => {
         .then((res) => {
           expect(res.body.palette).to.be.a("String");
           expect(res.body.palette).to.equal("Mam jabłko.");
+          console.log({ palette: res.body.palette });
+        });
+    });
+    it("#pal01-06b GET 200 YES: Filter by a selection of multiple specified lemmas.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          sentenceFormulaSymbol: "I have APPLE/SHIRT",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          expect(["Mam jabłka.", "Mam majtki."]).to.include(res.body.palette);
           console.log({ palette: res.body.palette });
         });
     });
