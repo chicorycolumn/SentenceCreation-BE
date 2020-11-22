@@ -355,6 +355,48 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
+    it("#pal04-06a GET 200 YES: Conjugate active adjectival participle.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          sentenceFormulaSymbol: "dummy24a activeadjectival f",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          expect(["Czytająca.", "Czytające."]).to.include(res.body.palette);
+          console.log({ palette: res.body.palette });
+        });
+    });
+    it("#pal04-06b GET 200 YES: Conjugate passive adjectival participle.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          sentenceFormulaSymbol: "dummy24b activeadjectival m1",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          expect(["Czytany.", "Czytani."]).to.include(res.body.palette);
+          console.log({ palette: res.body.palette });
+        });
+    });
+    it("#pal04-06c GET 200 YES: Conjugate contemporary adverbial participle.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          sentenceFormulaSymbol: "dummy24c contemporaryadverbial",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          expect(["Czytając."]).to.include(res.body.palette);
+          console.log({ palette: res.body.palette });
+        });
+    });
   });
 
   describe("/palette - Stage 3: Adjectives", () => {

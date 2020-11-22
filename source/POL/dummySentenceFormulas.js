@@ -437,6 +437,51 @@ const level01 = {
       },
     ],
   },
+  dummy24a: {
+    symbol: "dummy24a activeadjectival f",
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        manTags: [],
+        optTags: [],
+        form: ["participle"],
+        tense: ["activeAdjectival"],
+        person: ["1per"],
+        gender: ["f"],
+        number: ["singular", "plural"],
+      },
+    ],
+  },
+  dummy24b: {
+    symbol: "dummy24b activeadjectival m1",
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        manTags: [],
+        optTags: [],
+        form: ["participle"],
+        tense: ["passiveAdjectival"],
+        person: ["2per"],
+        gender: ["m1"],
+        number: ["singular", "plural"],
+      },
+    ],
+  },
+  dummy24c: {
+    symbol: "dummy24c contemporaryadverbial",
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        manTags: [],
+        optTags: [],
+        form: ["participle"],
+        tense: ["contemporaryAdverbial"],
+      },
+    ],
+  },
 };
 
 exports.dummySentenceFormulasBank = { level01 };
