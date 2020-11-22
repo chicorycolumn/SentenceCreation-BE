@@ -251,8 +251,8 @@ const level01 = {
       },
     ],
   },
-  dummy13: {
-    symbol: "dummy13 conditional plural",
+  dummy13a: {
+    symbol: "dummy13a conditional plural",
     structure: [
       {
         chunkId: "ver-1",
@@ -262,6 +262,22 @@ const level01 = {
         form: ["verb"],
         tense: ["conditional"],
         number: ["plural"],
+      },
+    ],
+  },
+  dummy13b: {
+    symbol: "dummy13b present 2per f",
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        manTags: [],
+        optTags: [],
+        form: ["verb"],
+        tense: ["present"],
+        person: ["2per"],
+        number: ["singular", "plural"],
+        gender: ["f"],
       },
     ],
   },

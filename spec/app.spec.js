@@ -10,6 +10,58 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
+  describe.only("/palette - Stage 5: Sentences with nouns adjectives and verbs.", () => {
+    it("#pal05-01a GET 200 YES: Returns a sentence in present.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          sentenceFormulaSymbol: "girl has red apple",
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          expect([
+            "Kobieta ma czerwone jabłko.",
+            "Chłopiec ma czerwone jabłko.",
+            "Chłopak ma czerwone jabłko.",
+
+            "Kobieta ma czerwone jabłka.",
+            "Chłopiec ma czerwone jabłka.",
+            "Chłopak ma czerwone jabłka.",
+
+            "Kobiety mają czerwone jabłko.",
+            "Chłopcy mają czerwone jabłko.",
+            "Chłopacy mają czerwone jabłko.",
+            "Chłopaki mają czerwone jabłko.",
+
+            "Kobiety mają czerwone jabłka.",
+            "Chłopcy mają czerwone jabłka.",
+            "Chłopacy mają czerwone jabłka.",
+            "Chłopaki mają czerwone jabłka.",
+
+            "Kobieta ma czerwoną cebulę.",
+            "Chłopiec ma czerwoną cebulę.",
+            "Chłopak ma czerwoną cebulę.",
+
+            "Kobieta ma czerwone cebule.",
+            "Chłopiec ma czerwone cebule.",
+            "Chłopak ma czerwone cebule.",
+
+            "Kobiety mają czerwoną cebulę.",
+            "Chłopcy mają czerwoną cebulę.",
+            "Chłopacy mają czerwoną cebulę.",
+            "Chłopaki mają czerwoną cebulę.",
+
+            "Kobiety mają czerwone cebule.",
+            "Chłopcy mają czerwone cebule.",
+            "Chłopacy mają czerwone cebule.",
+            "Chłopaki mają czerwone cebule.",
+          ]).to.include(res.body.palette);
+          console.log({ palette: res.body.palette });
+        });
+    });
+  });
+
   describe("/palette - Stage 4: Verbs", () => {
     it("#pal04-01a GET 200 YES: Returns a sentence with a single verb, in present.", () => {
       return request(app)
@@ -70,7 +122,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceFormulaSymbol: "dummy13 conditional plural",
+          sentenceFormulaSymbol: "dummy13a conditional plural",
           useDummy: true,
         })
         .expect(200)
@@ -88,7 +140,21 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    it("#pal04-01d GET 200 YES: Returns a sentence with a single verb in infinitive.", () => {
+    it("#pal04-01d GET 200 YES: Returns a sentence with a single verb, with tense number and gender specified.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          sentenceFormulaSymbol: "dummy13b present 2per f",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          expect(["Czytasz.", "Czytacie."]).to.include(res.body.palette);
+          console.log({ palette: res.body.palette });
+        });
+    });
+    it("#pal04-01e GET 200 YES: Returns a sentence with a single verb in infinitive.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -102,7 +168,7 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    it("#pal04-01e GET 200 YES: Returns a sentence with a single verb in impersonal.", () => {
+    it("#pal04-01f GET 200 YES: Returns a sentence with a single verb in impersonal.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -121,7 +187,7 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    it("#pal04-01f GET 200 YES: Returns a sentence with a single verb in impersonal, even when plural is specified (returns only those impersonals that have plural use).", () => {
+    it("#pal04-01g GET 200 YES: Returns a sentence with a single verb in impersonal, even when plural is specified (returns only those impersonals that have plural use).", () => {
       return request(app)
         .get("/api/palette")
         .send({

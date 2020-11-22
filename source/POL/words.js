@@ -281,6 +281,131 @@ let verbSet = [
   //If you mark a key true, or give it a value      it will be filled out by fillVerbInflections fxn.
   //If you mark a key false, or omit it             it will not be.
   {
+    translations: { EN: ["have"] },
+    lemma: "mieć",
+    id: "pol-ver-001-imp-01",
+    tags: ["basic", "possession"],
+    aspect: "imperfective",
+    deficient: false,
+    defective: false,
+    inflections: {
+      infinitive: "mieć",
+      verb: {
+        past: {
+          impersonal: {
+            singular: { allSingularGenders: "miano" },
+            plural: { allPluralGenders: "miano" },
+          },
+          "1per": {
+            singular: {
+              m: "miałem",
+              f: "miałam",
+            },
+            plural: {
+              virile: "mieliśmy",
+              nonvirile: "miałyśmy",
+            },
+          },
+          "2per": {
+            singular: {
+              m: "miałeś",
+              f: "miałaś",
+            },
+            plural: {
+              virile: "mieliście",
+              nonvirile: "miałyście",
+            },
+          },
+          "3per": {
+            singular: {
+              m: "miał",
+              f: "miała",
+              n: "miało",
+            },
+            plural: {
+              virile: "mieli",
+              nonvirile: "miały",
+            },
+          },
+        },
+        present: {
+          impersonal: { singular: true },
+          "1per": {
+            singular: {
+              allSingularGendersExcludingNeuter: "mam",
+            },
+            plural: {
+              allPluralGenders: "mamy",
+            },
+          },
+          "2per": {
+            singular: {
+              allSingularGendersExcludingNeuter: "masz",
+            },
+            plural: {
+              allPluralGenders: "macie",
+            },
+          },
+          "3per": {
+            singular: {
+              allSingularGenders: "ma",
+            },
+            plural: {
+              allPluralGenders: "mają",
+            },
+          },
+        },
+        future: true,
+        conditional: true,
+        imperative: {
+          "1per": {
+            singular: {
+              allSingularGendersExcludingNeuter: "niech mam",
+            },
+            plural: {
+              allPluralGenders: "miejmy",
+            },
+          },
+          "2per": {
+            singular: {
+              allSingularGendersExcludingNeuter: "miej",
+            },
+            plural: {
+              allPluralGenders: "miejcie",
+            },
+          },
+          "3per": {
+            singular: {
+              allSingularGenders: "niech ma",
+            },
+            plural: {
+              allPluralGenders: "niech mają",
+            },
+          },
+        },
+      },
+      participle: {
+        activeAdjectival: {
+          allPersons: {
+            singular: {
+              m: "mający",
+              f: "mająca",
+              n: "mające",
+            },
+            plural: {
+              virile: "mający",
+              nonvirile: "mające",
+            },
+          },
+        },
+        passiveAdjectival: false,
+        contemporaryAdverbial: "mając",
+        anteriorAdverbial: false,
+      },
+      verbalNoun: false,
+    },
+  },
+  {
     translations: { EN: ["read"] },
     lemma: "czytać",
     id: "pol-ver-002-imp-01",
@@ -332,33 +457,26 @@ let verbSet = [
           impersonal: { singular: true },
           "1per": {
             singular: {
-              m: "czytam",
-              f: "czytam",
+              allSingularGendersExcludingNeuter: "czytam",
             },
             plural: {
-              virile: "czytamy",
-              nonvirile: "czytamy",
+              allPluralGenders: "czytamy",
             },
           },
           "2per": {
             singular: {
-              m: "czytasz",
-              f: "czytasz",
+              allSingularGendersExcludingNeuter: "czytasz",
             },
             plural: {
-              virile: "czytacie",
-              nonvirile: "czytacie",
+              allPluralGenders: "czytacie",
             },
           },
           "3per": {
             singular: {
-              m: "czyta",
-              f: "czyta",
-              n: "czyta",
+              allSingularGenders: "czyta",
             },
             plural: {
-              virile: "czytają",
-              nonvirile: "czytają",
+              allPluralGenders: "czytają",
             },
           },
         },
@@ -367,33 +485,26 @@ let verbSet = [
         imperative: {
           "1per": {
             singular: {
-              m: "niech czytam",
-              f: "niech czytam",
+              allSingularGendersExcludingNeuter: "niech czytam",
             },
             plural: {
-              virile: "czytajmy",
-              nonvirile: "czytajmy",
+              allPluralGenders: "czytajmy",
             },
           },
           "2per": {
             singular: {
-              m: "czytaj",
-              f: "czytaj",
+              allSingularGendersExcludingNeuter: "czytaj",
             },
             plural: {
-              virile: "czytajcie",
-              nonvirile: "czytajcie",
+              allPluralGenders: "czytajcie",
             },
           },
           "3per": {
             singular: {
-              m: "niech czyta",
-              f: "niech czyta",
-              n: "niech czyta",
+              allSingularGenders: "niech czyta",
             },
             plural: {
-              virile: "niech czytają",
-              nonvirile: "niech czytają",
+              allPluralGenders: "niech czytają",
             },
           },
         },

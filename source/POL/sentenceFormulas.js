@@ -236,6 +236,44 @@ const level01 = {
       },
     ],
   },
+  61: {
+    symbol: "girl has red apple",
+    structure: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        manTags: ["person"],
+        optTags: [],
+        gcase: ["nom"],
+      },
+      {
+        chunkId: "ver-1",
+        agreeWith: "nou-1",
+        wordtype: "verb",
+        tense: ["present"],
+        person: ["3per"],
+        manTags: [],
+        optTags: [],
+        specificLemmas: ["mieć"],
+      },
+      {
+        chunkId: "adj-1",
+        agreeWith: "nou-2",
+        wordtype: "adjective",
+        manTags: ["colour"],
+        optTags: [],
+      },
+      {
+        chunkId: "nou-2",
+        wordtype: "noun",
+        manTags: ["edible"],
+        optTags: [],
+        gcase: ["acc"],
+      },
+    ],
+    primaryOrders: [["nou-1", "ver-1", "adj-1", "nou-2"]],
+    additionalOrders: [],
+  },
 };
 
 exports.sentenceFormulasBank = { level01 };

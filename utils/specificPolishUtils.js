@@ -101,14 +101,18 @@ exports.fillVerbInflections = (lemmaObj) => {
     if (isAvailable(inflections.verb.present.impersonal.singular)) {
       inflections.verb.present.impersonal.singular = {
         allSingularGenders:
-          inflections.verb.present["3per"].singular.m + " " + "się",
+          inflections.verb.present["3per"].singular.allSingularGenders +
+          " " +
+          "się",
       };
     }
   } else if (aspect === "perfective") {
     if (isAvailable(inflections.verb.future.impersonal.singular)) {
       inflections.verb.future.impersonal.singular = {
         allSingularGenders:
-          inflections.verb.future["3per"].singular.m + " " + "się",
+          inflections.verb.future["3per"].singular.allSingularGenders +
+          " " +
+          "się",
       };
     }
   }
@@ -171,6 +175,19 @@ exports.fillVerbInflections = (lemmaObj) => {
         obj,
         "allSingularGenders",
         ["m1", "m2", "m3", "f", "n"],
+        true
+      );
+    }
+  );
+
+  gpUtils.findKeysInObjectAndExecuteCallback(
+    inflections,
+    "allSingularGendersExcludingNeuter",
+    (obj) => {
+      gpUtils.copyValueOfKey(
+        obj,
+        "allSingularGendersExcludingNeuter",
+        ["m1", "m2", "m3", "f"],
         true
       );
     }
