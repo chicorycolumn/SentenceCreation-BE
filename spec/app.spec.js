@@ -383,7 +383,7 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    it("#pal04-06c GET 200 YES: Conjugate contemporary adverbial participle.", () => {
+    it("#pal04-06c GET 200 YES: Conjugate contemporary adverbial participle, ignoring any person or number or gender specified.", () => {
       return request(app)
         .get("/api/palette")
         .send({

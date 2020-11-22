@@ -24,6 +24,9 @@ exports.filterWithinSelectedLemmaObject = (
     structureChunk
   );
 
+  console.log("!!!!!!!!!!!!!!!!!!!!!!!");
+  console.log(lemmaObject);
+
   let source = lemmaObject.inflections;
 
   structureChunk.manTags = structureChunk.manTags.filter((tag) => {
@@ -33,25 +36,42 @@ exports.filterWithinSelectedLemmaObject = (
     lemmaObject.tags.includes(tag);
   });
 
-  // if (structureChunk.wordtype === "adjective") {
-  //   if (
-  //     structureChunk.number.length === 1 &&
-  //     structureChunk.number[0] === "plural"
-  //   ) {
-  //     POLUtils.adjustVirility(structureChunk);
-  //   } else {
-  //     console.log(
-  //       "Error in filterWithinSelectedLemmaObject fxn regarding adjectives, expected this adjective to have exactly one specfication as NUMBER feature."
-  //     );
-  //   }
-  // }
-
   //Do this for nouns, because noun lobjs have a gender, which they can put onto structureChunk to show what choice we made.
   //Don't do this for adjs, because they are the reverse. We earlier put the head word's gender onto the structureChunk,
   //but the adj lobj has no gender key.
   if (["noun"].includes(structureChunk.wordtype)) {
     structureChunk["gender"] = [lemmaObject["gender"]];
   }
+
+  console.log("111 x o x o x o x o x o x o x o x o x o x o");
+  console.log(structureChunk);
+  if (["verb"].includes(structureChunk.wordtype)) {
+    console.log("222 x o x o x o x o x o x o x o x o x o x o");
+    if (
+      structureChunk.form &&
+      structureChunk.form.includes("participle") &&
+      structureChunk.tense
+    ) {
+      console.log("333 x o x o x o x o x o x o x o x o x o x o");
+      ["contemporaryAdverbial", "anteriorAdverbial"].forEach((specialTense) => {
+        if (
+          structureChunk.tense.includes(specialTense) &&
+          lemmaObject.inflections.participle[specialTense]
+        ) {
+          console.log("444 x o x o x o x o x o x o x o x o x o x o");
+          source = lemmaObject.inflections.participle[specialTense];
+        }
+      });
+    }
+  }
+
+  if (typeof source === "string") {
+    return sendFinalisedWord(null, source, structureChunk);
+  }
+
+  console.log("x o x o x o x o x o x o x o x o x o x o");
+  console.log("x o x o x o x o x o x o x o x o x o x o");
+  console.log("x o x o x o x o x o x o x o x o x o x o");
 
   let inflectionChain = inflectionChainRefObj[structureChunk.wordtype];
 
@@ -76,16 +96,17 @@ exports.filterWithinSelectedLemmaObject = (
   console.log("-------------------------");
   console.log(
     "inflectionPathsInSourceSLICE",
-    inflectionPathsInSource.slice(0, 10)
+    inflectionPathsInSource
+    // inflectionPathsInSource.slice(0, 10)
   );
   console.log("-------------------------");
 
   let drillPath = [];
+
   requirementArrs.forEach((requirementKeyedArr, requirementArrIndex) => {
     if (errorInDrilling) {
       return;
     }
-
     if (typeof source !== "string") {
       source = drillDownOneLevel_filterWithin(
         source,
@@ -97,6 +118,26 @@ exports.filterWithinSelectedLemmaObject = (
       }
     }
   });
+
+  return sendFinalisedWord(errorInDrilling, source, structureChunk);
+
+  function sendFinalisedWord(errorInDrilling, source, structureChunk) {
+    if (errorInDrilling) {
+      return null;
+    } else {
+      if (typeof source === "string") {
+        return {
+          selectedWord: source,
+          updatedStructureChunk: structureChunk,
+        };
+      } else {
+        return {
+          selectedWord: gpUtils.selectRandom(source),
+          updatedStructureChunk: structureChunk,
+        };
+      }
+    }
+  }
 
   function drillDownOneLevel_filterWithin(
     source,
@@ -132,7 +173,8 @@ exports.filterWithinSelectedLemmaObject = (
       console.log({ copyDrillPath });
       console.log(
         "inflectionPathsInSourceSLICE",
-        inflectionPathsInSource.slice(0, 20)
+        inflectionPathsInSource
+        // inflectionPathsInSource.slice(0, 20)
       );
 
       let putativePathsWithDrillPathSoFar = inflectionPathsInSource.filter(
@@ -149,7 +191,8 @@ exports.filterWithinSelectedLemmaObject = (
 
       console.log(
         "putativePathsWithDrillPathSoFarSLICE",
-        putativePathsWithDrillPathSoFar.slice(0, 20)
+        putativePathsWithDrillPathSoFar
+        // putativePathsWithDrillPathSoFar.slice(0, 20)
       );
 
       let putativePathsLookingAhead = putativePathsWithDrillPathSoFar.filter(
@@ -195,22 +238,6 @@ exports.filterWithinSelectedLemmaObject = (
       return null;
     }
   }
-
-  if (errorInDrilling) {
-    return null;
-  } else {
-    if (typeof source === "string") {
-      return {
-        selectedWord: source,
-        updatedStructureChunk: structureChunk,
-      };
-    } else {
-      return {
-        selectedWord: gpUtils.selectRandom(source),
-        updatedStructureChunk: structureChunk,
-      };
-    }
-  }
 };
 
 exports.filterOutDeficientLemmaObjects = (
@@ -233,7 +260,8 @@ exports.filterOutDeficientLemmaObjects = (
 
       console.log(
         "***inflectionPathsInSourceSLICE",
-        inflectionPathsInSource.slice(0, 10)
+        inflectionPathsInSource
+        // inflectionPathsInSource.slice(0, 10)
       );
 
       let inflectionPathsInRequirements = scUtils.concoctNestedRoutes(
