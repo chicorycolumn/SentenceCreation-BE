@@ -10,7 +10,7 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe.only("/palette - Stage 5: Sentences with nouns adjectives and verbs.", () => {
+  describe("/palette - Stage 5: Sentences with nouns adjectives and verbs.", () => {
     it("#pal05-01a GET 200 YES: Returns a sentence in present.", () => {
       return request(app)
         .get("/api/palette")
@@ -60,7 +60,7 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    it("#pal05-01a GET 200 YES: Returns a negative sentence in past.", () => {
+    it("#pal05-01b GET 200 YES: Returns a negative sentence in past.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -105,6 +105,55 @@ describe("/api", () => {
             "Chłopcy nie mieli czerwonych cebul.",
             "Chłopacy nie mieli czerwonych cebul.",
             "Chłopaki nie mieli czerwonych cebul.",
+          ]).to.include(res.body.palette);
+          console.log({ palette: res.body.palette });
+        });
+    });
+    it("#pal05-01c GET 200 YES: Returns a negative sentence in past.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          sentenceFormulaSymbol: "red girl didn't have red apple",
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          expect([
+            "Czerwona kobieta nie miała czerwonego jabłka.",
+            "Czerwony chłopiec nie miał czerwonego jabłka.",
+            "Czerwony chłopak nie miał czerwonego jabłka.",
+
+            "Czerwona kobieta nie miała czerwonych jabłek.",
+            "Czerwony chłopiec nie miał czerwonych jabłek.",
+            "Czerwony chłopak nie miał czerwonych jabłek.",
+
+            "Czerwone kobiety nie miały czerwonego jabłka.",
+            "Czerwoni chłopcy nie mieli czerwonego jabłka.",
+            "Czerwoni chłopacy nie mieli czerwonego jabłka.",
+            "Czerwoni chłopaki nie mieli czerwonego jabłka.",
+
+            "Czerwone kobiety nie miały czerwonych jabłek.",
+            "Czerwoni chłopcy nie mieli czerwonych jabłek.",
+            "Czerwoni chłopacy nie mieli czerwonych jabłek.",
+            "Czerwoni chłopaki nie mieli czerwonych jabłek.",
+
+            "Czerwona kobieta nie miała czerwonej cebuli.",
+            "Czerwony chłopiec nie miał czerwonej cebuli.",
+            "Czerwony chłopak nie miał czerwonej cebuli.",
+
+            "Czerwona kobieta nie miała czerwonych cebul.",
+            "Czerwony chłopiec nie miał czerwonych cebul.",
+            "Czerwony chłopak nie miał czerwonych cebul.",
+
+            "Czerwone kobiety nie miały czerwonej cebuli.",
+            "Czerwoni chłopcy nie mieli czerwonej cebuli.",
+            "Czerwoni chłopacy nie mieli czerwonej cebuli.",
+            "Czerwoni chłopaki nie mieli czerwonej cebuli.",
+
+            "Czerwone kobiety nie miały czerwonych cebul.",
+            "Czerwoni chłopcy nie mieli czerwonych cebul.",
+            "Czerwoni chłopacy nie mieli czerwonych cebul.",
+            "Czerwoni chłopaki nie mieli czerwonych cebul.",
           ]).to.include(res.body.palette);
           console.log({ palette: res.body.palette });
         });

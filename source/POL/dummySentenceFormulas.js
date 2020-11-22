@@ -244,7 +244,7 @@ const level01 = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        manTags: [],
+        manTags: ["basic2"],
         optTags: [],
         form: ["verb"],
         person: ["2per"],
@@ -257,7 +257,7 @@ const level01 = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        manTags: [],
+        manTags: ["basic2"],
         optTags: [],
         form: ["verb"],
         tense: ["conditional"],
@@ -271,7 +271,7 @@ const level01 = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        manTags: [],
+        manTags: ["basic2"],
         optTags: [],
         form: ["verb"],
         tense: ["present"],
@@ -287,7 +287,7 @@ const level01 = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        manTags: [],
+        manTags: ["basic2"],
         optTags: [],
         form: ["infinitive"],
       },
@@ -299,7 +299,7 @@ const level01 = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        manTags: [],
+        manTags: ["basic2"],
         optTags: [],
         form: ["verb"],
         person: ["impersonal"],
@@ -312,7 +312,7 @@ const level01 = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        manTags: [],
+        manTags: ["basic2"],
         optTags: [],
         form: ["verb"],
         person: ["impersonal"],
@@ -326,7 +326,7 @@ const level01 = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        manTags: [],
+        manTags: ["basic2"],
         optTags: [],
         form: ["participle"],
       },
@@ -338,7 +338,7 @@ const level01 = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        manTags: [],
+        manTags: ["basic2"],
         optTags: [],
         form: ["participle"],
         gender: ["f"],
@@ -364,7 +364,7 @@ const level01 = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        manTags: [],
+        manTags: ["basic2"],
         optTags: [],
         gender: ["f", "nonvirile"],
         form: ["participle"],
@@ -377,7 +377,7 @@ const level01 = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        manTags: [],
+        manTags: ["basic2"],
         optTags: [],
         gender: ["n", "virile"],
         form: ["participle"],
@@ -390,7 +390,7 @@ const level01 = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        manTags: [],
+        manTags: ["basic2"],
         optTags: [],
         gender: ["n", "virile"],
         person: ["2per"],
@@ -404,7 +404,7 @@ const level01 = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        manTags: [],
+        manTags: ["basic2"],
         optTags: [],
         form: ["verbalNoun"],
       },
@@ -416,7 +416,7 @@ const level01 = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        manTags: [],
+        manTags: ["basic2"],
         optTags: [],
         form: ["verbalNoun"],
         gender: ["f"],
@@ -429,7 +429,7 @@ const level01 = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        manTags: [],
+        manTags: ["basic2"],
         optTags: [],
         form: ["verb"],
         tense: ["past", "conditional"],
@@ -445,7 +445,7 @@ const level01 = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        manTags: [],
+        manTags: ["basic2"],
         optTags: [],
         form: ["verb"],
         tense: ["past", "conditional"],
@@ -461,7 +461,7 @@ const level01 = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        manTags: [],
+        manTags: ["basic2"],
         optTags: [],
         form: ["verb"],
         tense: ["past", "conditional"],
@@ -477,7 +477,7 @@ const level01 = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        manTags: [],
+        manTags: ["basic2"],
         optTags: [],
         form: ["participle"],
         tense: ["activeAdjectival"],
@@ -493,7 +493,7 @@ const level01 = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        manTags: [],
+        manTags: ["basic2"],
         optTags: [],
         form: ["participle"],
         tense: ["passiveAdjectival"],
@@ -509,7 +509,7 @@ const level01 = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        manTags: [],
+        manTags: ["basic2"],
         optTags: [],
         form: ["participle"],
         person: ["1per", "2per"],
