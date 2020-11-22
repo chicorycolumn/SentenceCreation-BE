@@ -2,7 +2,7 @@ const lfUtils = require("./lemmaFilteringUtils.js");
 const scUtils = require("./sentenceCreationUtils.js");
 const gpUtils = require("./generalPurposeUtils.js");
 
-//Need to, in other files, allow m1 m2 m3 to all read as m if only m key exists and not others.
+//Alphman say: Need to, in other files, allow m1 m2 m3 to all read as m if only m key exists and not others.
 exports.fillVerbInflections = (lemmaObj) => {
   if (lemmaObj.defective) {
     return;
@@ -219,36 +219,12 @@ exports.fillVerbInflections = (lemmaObj) => {
     gpUtils.copyValueOfKey(obj, "m", ["m1", "m2", "m3"], true);
   });
 
-  // ["activeAdjectival", "passiveAdjectival"].forEach((participleKey) => {
-  //   if (inflections.participle[participleKey]) {
-  //     let allPersons = inflections.participle[participleKey].allPersons;
-
-  //     inflections.participle[participleKey]["impersonal"] = allPersons;
-  //     inflections.participle[participleKey]["1per"] = allPersons;
-  //     inflections.participle[participleKey]["2per"] = allPersons;
-  //     inflections.participle[participleKey]["3per"] = allPersons;
-
-  //     delete inflections.participle[participleKey].allPersons;
-  //   }
-  // });
-
   function isAvailable(value) {
     //If true, fill it out.
     //If false, don't fill it out.
     //If any truthy item (which isn't bool true), don't fill it out.
     //If undefined (ie not filled out), then don't fill it out.
-
     return value === true;
-
-    // if (value === true) {
-    //   return true;
-    // }
-    // if (value === false) {
-    //   return false;
-    // }
-    // if (value) {
-    //   return false;
-    // }
   }
 };
 

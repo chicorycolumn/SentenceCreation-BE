@@ -3,8 +3,6 @@ const scUtils = require("./sentenceCreationUtils.js");
 const POLUtils = require("./specificPolishUtils.js");
 
 exports.filterByKey = (lemmaObjectArr, requirementArrs, key) => {
-  // console.log({ lemmaObjectArr, requirementArrs, key });
-
   let requirementArr = requirementArrs[key] || [];
 
   if (requirementArr.length) {
@@ -19,14 +17,6 @@ exports.filterWithinSelectedLemmaObject = (
   structureChunk,
   inflectionChainRefObj
 ) => {
-  console.log(
-    "filterWithinSelectedLemmaObject fxn >> structureChunk",
-    structureChunk
-  );
-
-  console.log("!!!!!!!!!!!!!!!!!!!!!!!");
-  console.log(lemmaObject);
-
   let source = lemmaObject.inflections;
 
   structureChunk.manTags = structureChunk.manTags.filter((tag) => {
@@ -43,22 +33,17 @@ exports.filterWithinSelectedLemmaObject = (
     structureChunk["gender"] = [lemmaObject["gender"]];
   }
 
-  console.log("111 x o x o x o x o x o x o x o x o x o x o");
-  console.log(structureChunk);
   if (["verb"].includes(structureChunk.wordtype)) {
-    console.log("222 x o x o x o x o x o x o x o x o x o x o");
     if (
       structureChunk.form &&
       structureChunk.form.includes("participle") &&
       structureChunk.tense
     ) {
-      console.log("333 x o x o x o x o x o x o x o x o x o x o");
       ["contemporaryAdverbial", "anteriorAdverbial"].forEach((specialTense) => {
         if (
           structureChunk.tense.includes(specialTense) &&
           lemmaObject.inflections.participle[specialTense]
         ) {
-          console.log("444 x o x o x o x o x o x o x o x o x o x o");
           source = lemmaObject.inflections.participle[specialTense];
         }
       });
@@ -69,21 +54,12 @@ exports.filterWithinSelectedLemmaObject = (
     return sendFinalisedWord(null, source, structureChunk);
   }
 
-  console.log("x o x o x o x o x o x o x o x o x o x o");
-  console.log("x o x o x o x o x o x o x o x o x o x o");
-  console.log("x o x o x o x o x o x o x o x o x o x o");
-
   let inflectionChain = inflectionChainRefObj[structureChunk.wordtype];
 
   let requirementArrs = [];
   inflectionChain.forEach((key) => {
     requirementArrs.push([key, structureChunk[key] || []]);
   });
-
-  console.log(
-    "filterWithinSelectedLemmaObject fxn >> requirementArrs",
-    requirementArrs
-  );
 
   let { routesByNesting, routesByLevel } = scUtils.extractNestedRoutes(
     lemmaObject.inflections
@@ -92,14 +68,6 @@ exports.filterWithinSelectedLemmaObject = (
   let inflectionPathsInSource = routesByNesting;
 
   let errorInDrilling = false;
-
-  console.log("-------------------------");
-  console.log(
-    "inflectionPathsInSourceSLICE",
-    inflectionPathsInSource
-    // inflectionPathsInSource.slice(0, 10)
-  );
-  console.log("-------------------------");
 
   let drillPath = [];
 
@@ -144,12 +112,6 @@ exports.filterWithinSelectedLemmaObject = (
     requirementFeatureArr,
     requirementArrIndex
   ) {
-    // console.log("drillDownOneLevel_filterWithin >>source", source);
-    console.log(
-      "drillDownOneLevel_filterWithin >>requirementFeatureArr",
-      requirementFeatureArr
-    );
-
     let sourceFeatures = Object.keys(source);
     let validFeatures = [];
     let requiredFeatureCategory = requirementFeatureArr[0];
@@ -163,19 +125,9 @@ exports.filterWithinSelectedLemmaObject = (
       validFeatures = sourceFeatures;
     }
 
-    console.log("//////////////////////////");
-    console.log("//////////////////////////");
-    console.log("//////////////////////////");
     validFeatures = validFeatures.filter((feature_i) => {
       let copyDrillPath = [...drillPath];
       copyDrillPath.push(feature_i);
-
-      console.log({ copyDrillPath });
-      console.log(
-        "inflectionPathsInSourceSLICE",
-        inflectionPathsInSource
-        // inflectionPathsInSource.slice(0, 20)
-      );
 
       let putativePathsWithDrillPathSoFar = inflectionPathsInSource.filter(
         (inflectionPath_j) => {
@@ -187,12 +139,6 @@ exports.filterWithinSelectedLemmaObject = (
             }
           );
         }
-      );
-
-      console.log(
-        "putativePathsWithDrillPathSoFarSLICE",
-        putativePathsWithDrillPathSoFar
-        // putativePathsWithDrillPathSoFar.slice(0, 20)
       );
 
       let putativePathsLookingAhead = putativePathsWithDrillPathSoFar.filter(
@@ -213,14 +159,12 @@ exports.filterWithinSelectedLemmaObject = (
         }
       );
 
-      console.log({ putativePathsLookingAhead });
+      // console.log({ putativePathsLookingAhead });
 
       return putativePathsLookingAhead.length;
     });
 
-    console.log("***");
     console.log({ validFeatures });
-    console.log("***");
 
     if (validFeatures.length) {
       let selectedFeature = gpUtils.selectRandom(validFeatures);
@@ -231,10 +175,8 @@ exports.filterWithinSelectedLemmaObject = (
 
       structureChunk[requiredFeatureCategory] = [selectedFeature];
       drillPath.push(selectedFeature);
-      console.log("Returning TRUTHY at end of drill fxn");
       return source[selectedFeature];
     } else {
-      console.log("Returning NULL at end of drill fxn");
       return null;
     }
   }
@@ -257,12 +199,6 @@ exports.filterOutDeficientLemmaObjects = (
       );
 
       let inflectionPathsInSource = routesByNesting;
-
-      console.log(
-        "***inflectionPathsInSourceSLICE",
-        inflectionPathsInSource
-        // inflectionPathsInSource.slice(0, 10)
-      );
 
       let inflectionPathsInRequirements = scUtils.concoctNestedRoutes(
         requirementArrs,

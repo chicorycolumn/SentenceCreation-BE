@@ -652,7 +652,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          // sentenceNumber: 57,
           sentenceFormulaSymbol: "I have apple",
         })
         .expect(200)
@@ -699,7 +698,6 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           sentenceFormulaSymbol: "I have APPLE",
-          // sentenceNumber: "dummy11",
           useDummy: true,
         })
         .expect(200)

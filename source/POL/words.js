@@ -281,9 +281,6 @@ let verbSet = [
 
   //If you mark a key true, or give it a value      it will be filled out by fillVerbInflections fxn.
   //If you mark a key false, or omit it             it will not be.
-
-  //NOTE: The ADVERBIAL participles should not be connected to the head noun
-  //when specifying a sentence structure, as they don't conjugate in any way.
   {
     translations: { EN: ["read"] },
     lemma: "czytać",

@@ -65,13 +65,9 @@ exports.buildSentenceFromArray = (unorderedArr, sentenceFormula) => {
 };
 
 exports.extractNestedRoutes = (source) => {
-  // console.log("extractNestedRoutes >>source", source);
-
   let routesByNesting = [];
   let arr = [];
   recursivelyMapRoutes(arr, source);
-
-  // console.log("extractNestedRoutes >>routesByNesting", routesByNesting);
 
   let routesByLevel = [];
 
@@ -95,7 +91,6 @@ exports.extractNestedRoutes = (source) => {
       arr.pop();
       return arrCopy;
     } else {
-      // console.log("recursivelyMapRoutes >>>source", source);
       Object.keys(source).forEach((key) => {
         if (!source[key]) {
           delete source[key];
@@ -179,12 +174,6 @@ exports.findMatchingWordThenAddToResultArray = (
   if (["verb", "adjective"].includes(structureChunk.wordtype)) {
     POLUtils.adjustVirility(structureChunk);
   }
-
-  // console.log(
-  //   "have these verbs been filled out?",
-  //   matches[0].inflections.participle.contemporaryAdverbial
-  // );
-  // return;
 
   //STEP TWO: Recursively traversing lemmaObjects for happy paths and dead ends to comply with structureChunk.
 
