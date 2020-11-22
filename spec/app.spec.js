@@ -322,12 +322,11 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    it.only("#pal04-05a GET 200 YES: Conjugate verb (as virile or nonvirile) to agree with noun in plural.", () => {
+    it("#pal04-05a GET 200 YES: Conjugate verb (as virile or nonvirile) to agree with noun in plural.", () => {
       return request(app)
         .get("/api/palette")
         .send({
           sentenceFormulaSymbol: "girls were reading",
-          useDummy: true,
         })
         .expect(200)
         .then((res) => {
@@ -341,7 +340,7 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    xit("#pal04-05b GET 200 YES: Conjugate verb to agree with noun in singular.", () => {
+    it("#pal04-05b GET 200 YES: Conjugate verb to agree with noun in singular or plural.", () => {
       return request(app)
         .get("/api/palette")
         .send({
