@@ -138,7 +138,8 @@ exports.findMatchingWordThenAddToResultArray = (
   resultArr,
   words,
   inflectionChainsByThisLanguage,
-  errorInSentenceCreation
+  errorInSentenceCreation,
+  currentLanguage
 ) => {
   let structureChunk = structureChunkOriginal;
 
@@ -151,7 +152,7 @@ exports.findMatchingWordThenAddToResultArray = (
     return;
   }
 
-  //STEP ONE: Filtering lemmaObjs by features from structureChunk.
+  //STEP ONE: Filtering lemmaObjects by features from structureChunk.
   let source = words[gpUtils.giveSetKey(structureChunk.wordtype)];
   let matches = [];
 
@@ -167,16 +168,19 @@ exports.findMatchingWordThenAddToResultArray = (
     }
   }
 
-  if (["verb"].includes(structureChunk.wordtype)) {
-    matches.forEach((lObj) => POLUtils.fillVerbInflections(lObj));
-  }
+  //valve
+  if (currentLanguage === "POL") {
+    if (["verb"].includes(structureChunk.wordtype)) {
+      matches.forEach((lObj) => POLUtils.fillVerbInflections(lObj));
+    }
 
-  if (["adjective"].includes(structureChunk.wordtype)) {
-    matches.forEach((lObj) => POLUtils.adjustMasculinityOfLemmaObject(lObj));
-  }
+    if (["adjective"].includes(structureChunk.wordtype)) {
+      matches.forEach((lObj) => POLUtils.adjustMasculinityOfLemmaObject(lObj));
+    }
 
-  if (["verb", "adjective"].includes(structureChunk.wordtype)) {
-    POLUtils.adjustVirility(structureChunk);
+    if (["verb", "adjective"].includes(structureChunk.wordtype)) {
+      POLUtils.adjustVirility(structureChunk);
+    }
   }
 
   //STEP TWO: Recursively traversing lemmaObjects for happy paths and dead ends to comply with structureChunk.
@@ -200,7 +204,8 @@ exports.findMatchingWordThenAddToResultArray = (
   let filterNestedOutput = lfUtils.filterWithinSelectedLemmaObject(
     selectedLemmaObj,
     structureChunk,
-    inflectionChainsByThisLanguage
+    inflectionChainsByThisLanguage,
+    currentLanguage
   );
 
   if (!filterNestedOutput || !filterNestedOutput.selectedWord) {

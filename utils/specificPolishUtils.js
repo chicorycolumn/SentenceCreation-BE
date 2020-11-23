@@ -3,8 +3,8 @@ const scUtils = require("./sentenceCreationUtils.js");
 const gpUtils = require("./generalPurposeUtils.js");
 
 //Alphman say: Need to, in other files, allow m1 m2 m3 to all read as m if only m key exists and not others.
-exports.fillVerbInflections = (lemmaObj) => {
-  if (lemmaObj.defective) {
+exports.fillVerbInflections = (lemmaObject) => {
+  if (lemmaObject.defective) {
     return;
   }
 
@@ -12,7 +12,7 @@ exports.fillVerbInflections = (lemmaObj) => {
   //To  perfective verbs,  add  futureimpersonal,  conditional
   //In both, fill out the activeAdj and passiveAdj if they are there.
 
-  let { inflections, aspect } = lemmaObj;
+  let { inflections, aspect } = lemmaObject;
   let { past } = inflections.verb;
   let { infinitive } = inflections;
 
@@ -245,8 +245,8 @@ exports.fillVerbInflections = (lemmaObj) => {
   }
 };
 
-exports.adjustMasculinityOfLemmaObject = (lemmaObj) => {
-  let { inflections } = lemmaObj;
+exports.adjustMasculinityOfLemmaObject = (lemmaObject) => {
+  let { inflections } = lemmaObject;
 
   gpUtils.findKeysInObjectAndExecuteCallback(inflections, "m", (obj) => {
     gpUtils.copyValueOfKey(obj, "m", ["m1", "m2", "m3"], true);

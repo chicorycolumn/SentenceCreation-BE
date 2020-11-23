@@ -15,7 +15,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceFormulaSymbol: "girl has red apple",
+          sentenceSymbol: "girl has red apple",
         })
         .expect(200)
         .then((res) => {
@@ -64,7 +64,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceFormulaSymbol: "girl didn't have red apple",
+          sentenceSymbol: "girl didn't have red apple",
         })
         .expect(200)
         .then((res) => {
@@ -113,7 +113,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceFormulaSymbol: "red girl didn't have red apple",
+          sentenceSymbol: "red girl didn't have red apple",
         })
         .expect(200)
         .then((res) => {
@@ -165,7 +165,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceFormulaSymbol: "I am reading",
+          sentenceSymbol: "I am reading",
         })
         .expect(200)
         .then((res) => {
@@ -185,7 +185,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceFormulaSymbol: "dummy12 2per",
+          sentenceSymbol: "dummy12 2per",
           useDummy: true,
         })
         .expect(200)
@@ -220,7 +220,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceFormulaSymbol: "dummy13a conditional plural",
+          sentenceSymbol: "dummy13a conditional plural",
           useDummy: true,
         })
         .expect(200)
@@ -242,7 +242,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceFormulaSymbol: "dummy13b present 2per f",
+          sentenceSymbol: "dummy13b present 2per f",
           useDummy: true,
         })
         .expect(200)
@@ -256,7 +256,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceFormulaSymbol: "dummy14 infinitive",
+          sentenceSymbol: "dummy14 infinitive",
           useDummy: true,
         })
         .expect(200)
@@ -270,7 +270,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceFormulaSymbol: "dummy15 impersonal",
+          sentenceSymbol: "dummy15 impersonal",
           useDummy: true,
         })
         .expect(200)
@@ -289,7 +289,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceFormulaSymbol: "dummy15a impersonal plural",
+          sentenceSymbol: "dummy15a impersonal plural",
           useDummy: true,
         })
         .expect(200)
@@ -303,7 +303,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceFormulaSymbol: "dummy16 participle",
+          sentenceSymbol: "dummy16 participle",
           useDummy: true,
         })
         .expect(200)
@@ -329,7 +329,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceFormulaSymbol: "dummy17 participle female",
+          sentenceSymbol: "dummy17 participle female",
           useDummy: true,
         })
         .expect(200)
@@ -343,7 +343,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceFormulaSymbol: "dummy19 participle f nonvirile",
+          sentenceSymbol: "dummy19 participle f nonvirile",
           useDummy: true,
         })
         .expect(200)
@@ -362,7 +362,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceFormulaSymbol: "dummy20 participle n virile",
+          sentenceSymbol: "dummy20 participle n virile",
           useDummy: true,
         })
         .expect(200)
@@ -381,7 +381,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceFormulaSymbol: "dummy20a participle n virile 2per",
+          sentenceSymbol: "dummy20a participle n virile 2per",
           useDummy: true,
         })
         .expect(200)
@@ -400,7 +400,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceFormulaSymbol: "dummy21 verbalNoun",
+          sentenceSymbol: "dummy21 verbalNoun",
           useDummy: true,
         })
         .expect(200)
@@ -414,7 +414,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceFormulaSymbol: "dummy22 verbalNoun ~f",
+          sentenceSymbol: "dummy22 verbalNoun ~f",
           useDummy: true,
         })
         .expect(200)
@@ -427,7 +427,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceFormulaSymbol: "dummy23a past/cond 1per plural m1",
+          sentenceSymbol: "dummy23a past/cond 1per plural m1",
           useDummy: true,
         })
         .expect(200)
@@ -448,7 +448,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceFormulaSymbol: "dummy23b past/cond 1per plural m2",
+          sentenceSymbol: "dummy23b past/cond 1per plural m2",
           useDummy: true,
         })
         .expect(200)
@@ -469,7 +469,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceFormulaSymbol: "dummy23c past/cond 1per plural f/n",
+          sentenceSymbol: "dummy23c past/cond 1per plural f/n",
           useDummy: true,
         })
         .expect(200)
@@ -490,7 +490,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceFormulaSymbol: "girls were reading",
+          sentenceSymbol: "girls were reading",
         })
         .expect(200)
         .then((res) => {
@@ -508,7 +508,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceFormulaSymbol: "girl is reading",
+          sentenceSymbol: "girl is reading",
         })
         .expect(200)
         .then((res) => {
@@ -523,7 +523,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceFormulaSymbol: "dummy24a activeadjectival f",
+          sentenceSymbol: "dummy24a activeadjectival f",
           useDummy: true,
         })
         .expect(200)
@@ -537,7 +537,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceFormulaSymbol: "dummy24b activeadjectival m1",
+          sentenceSymbol: "dummy24b activeadjectival m1",
           useDummy: true,
         })
         .expect(200)
@@ -551,7 +551,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceFormulaSymbol: "dummy24c contemporaryadverbial",
+          sentenceSymbol: "dummy24c contemporaryadverbial",
           useDummy: true,
         })
         .expect(200)
@@ -568,7 +568,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceFormulaSymbol: "red apple",
+          sentenceSymbol: "red apple",
         })
         .expect(200)
         .then((res) => {
@@ -584,7 +584,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           // sentenceNumber: "55a",
-          sentenceFormulaSymbol: "red apples",
+          sentenceSymbol: "red apples",
         })
         .expect(200)
         .then((res) => {
@@ -600,7 +600,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           // sentenceNumber: 56,
-          sentenceFormulaSymbol: "red girls",
+          sentenceSymbol: "red girls",
         })
         .expect(200)
         .then((res) => {
@@ -622,7 +622,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           // sentenceNumber: 51,
-          sentenceFormulaSymbol: "girl is wearing shirt",
+          sentenceSymbol: "girl is wearing shirt",
         })
         .expect(200)
         .then((res) => {
@@ -636,7 +636,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           // sentenceNumber: 52,
-          sentenceFormulaSymbol: "shirt is in wardrobe",
+          sentenceSymbol: "shirt is in wardrobe",
         })
         .expect(200)
         .then((res) => {
@@ -651,7 +651,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           // sentenceNumber: 53,
-          sentenceFormulaSymbol: "I often wear shirt",
+          sentenceSymbol: "I often wear shirt",
         })
         .expect(200)
         .then((res) => {
@@ -665,7 +665,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           // sentenceNumber: 54,
-          sentenceFormulaSymbol: "boys are male",
+          sentenceSymbol: "boys are male",
         })
         .expect(200)
         .then((res) => {
@@ -816,7 +816,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceFormulaSymbol: "I have apple",
+          sentenceSymbol: "I have apple",
         })
         .expect(200)
         .then((res) => {
@@ -828,7 +828,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceFormulaSymbol: "dummy09",
+          sentenceSymbol: "dummy09",
           useDummy: true,
         })
         .expect(200)
@@ -842,7 +842,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceFormulaSymbol: "dummy10",
+          sentenceSymbol: "dummy10",
           useDummy: true,
         })
         .expect(200)
@@ -861,7 +861,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceFormulaSymbol: "I have APPLE",
+          sentenceSymbol: "I have APPLE",
           useDummy: true,
         })
         .expect(200)
@@ -875,7 +875,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          sentenceFormulaSymbol: "I have APPLE/SHIRT",
+          sentenceSymbol: "I have APPLE/SHIRT",
           useDummy: true,
         })
         .expect(200)

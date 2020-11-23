@@ -296,50 +296,55 @@ let adjectiveSet = [
     tags: ["colour"],
     deficient: false,
     inflections: {
-      singular: {
-        m: {
-          nom: "czerwony",
-          gen: "czerwonego",
-          dat: "czerwonemu",
-          acc: "czerwonego",
-          ins: "czerwonym",
-          loc: "czerwonym",
+      simple: {
+        singular: {
+          m: {
+            nom: "czerwony",
+            gen: "czerwonego",
+            dat: "czerwonemu",
+            acc: "czerwonego",
+            ins: "czerwonym",
+            loc: "czerwonym",
+          },
+          f: {
+            nom: "czerwona",
+            gen: "czerwonej",
+            dat: "czerwonej",
+            acc: "czerwoną",
+            ins: "czerwoną",
+            loc: "czerwonej",
+          },
+          n: {
+            nom: "czerwone",
+            gen: "czerwonego",
+            dat: "czerwonemu",
+            acc: "czerwone",
+            ins: "czerwonym",
+            loc: "czerwonym",
+          },
         },
-        f: {
-          nom: "czerwona",
-          gen: "czerwonej",
-          dat: "czerwonej",
-          acc: "czerwoną",
-          ins: "czerwoną",
-          loc: "czerwonej",
-        },
-        n: {
-          nom: "czerwone",
-          gen: "czerwonego",
-          dat: "czerwonemu",
-          acc: "czerwone",
-          ins: "czerwonym",
-          loc: "czerwonym",
+        plural: {
+          virile: {
+            nom: "czerwoni",
+            gen: "czerwonych",
+            dat: "czerwonym",
+            acc: "czerwonych",
+            ins: "czerwonymi",
+            loc: "czerwonych",
+          },
+          nonvirile: {
+            nom: "czerwone",
+            gen: "czerwonych",
+            dat: "czerwonym",
+            acc: "czerwone",
+            ins: "czerwonymi",
+            loc: "czerwonych",
+          },
         },
       },
-      plural: {
-        virile: {
-          nom: "czerwoni",
-          gen: "czerwonych",
-          dat: "czerwonym",
-          acc: "czerwonych",
-          ins: "czerwonymi",
-          loc: "czerwonych",
-        },
-        nonvirile: {
-          nom: "czerwone",
-          gen: "czerwonych",
-          dat: "czerwonym",
-          acc: "czerwone",
-          ins: "czerwonymi",
-          loc: "czerwonych",
-        },
-      },
+      comparative: ["czerwieńszy", true],
+      superlative: ["najczerwieńszy", true],
+      adverb: "czerwono",
     },
   },
 ];
@@ -614,11 +619,8 @@ let verbSet = [
   },
 ];
 
-let adverbSet = [];
-
 exports.wordsBank = {
   nounSet,
   adjectiveSet,
-  adverbSet,
   verbSet,
 };

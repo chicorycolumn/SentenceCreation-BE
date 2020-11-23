@@ -66,15 +66,11 @@ let adjectiveSet = [
       simple: "red",
       comparative: "redder",
       superlative: "reddest",
+      adverb: "redly",
     },
   },
 ];
 
-//Perfective has participles:             passive, anterior
-//Imperfective has participles:   active, passive, contemporary
-
-//If you mark a key true, or give it a value      it will be filled out by fillVerbInflections fxn.
-//If you mark a key false, or omit it             it will not be.
 let verbSet = [
   {
     translations: { ENG: ["write"], POL: ["pisać"] },
@@ -86,10 +82,16 @@ let verbSet = [
       infinitive: "write",
       v2: "wrote",
       v3: "written",
-      third: "writes",
+      thirdPS: "writes",
       gerund: "writing",
       verb: {},
-      participle: {},
+      participle: {
+        pastParticiple: "written",
+        activeAdjectival: "writing",
+        passiveAdjectival: "written",
+        contemporaryAdverbial: "writing",
+        anteriorAdverbial: "having written",
+      },
     },
   },
   {
@@ -132,12 +134,9 @@ let verbSet = [
   },
 ];
 
-let adverbSet = [];
-
 exports.wordsBank = {
   nounSet,
   adjectiveSet,
-  adverbSet,
   verbSet,
 };
 

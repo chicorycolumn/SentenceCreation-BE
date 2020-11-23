@@ -1,6 +1,8 @@
 const gpUtils = require("./generalPurposeUtils.js");
 const scUtils = require("./sentenceCreationUtils.js");
 const POLUtils = require("./specificPolishUtils.js");
+const ENGUtils = require("./specificEnglishUtils.js");
+const refObj = require("./referenceObjects.js");
 
 exports.filterByKey = (lemmaObjectArr, requirementArrs, key) => {
   let requirementArr = requirementArrs[key] || [];
@@ -15,10 +17,12 @@ exports.filterByKey = (lemmaObjectArr, requirementArrs, key) => {
 exports.filterWithinSelectedLemmaObject = (
   lemmaObject,
   structureChunk,
-  inflectionChainRefObj
+  inflectionChainRefObj,
+  currentLanguage
 ) => {
   let source = lemmaObject.inflections;
 
+  //PART ONE: Move feature from lobj to structurechunk.
   structureChunk.manTags = structureChunk.manTags.filter((tag) => {
     lemmaObject.tags.includes(tag);
   });
@@ -27,28 +31,56 @@ exports.filterWithinSelectedLemmaObject = (
   });
 
   //Do this for nouns, because noun lobjs have a gender, which they can put onto structureChunk to show what choice we made.
-  //Don't do this for adjs, because they are the reverse. We earlier put the head word's gender onto the structureChunk,
-  //but the adj lobj has no gender key.
+  //Don't do this for adjs, because they are the reverse. We earlier put the head word's gender onto the structureChunk, but the adj lobj has no gender key.
   if (["noun"].includes(structureChunk.wordtype)) {
     structureChunk["gender"] = [lemmaObject["gender"]];
   }
 
+  //PART TWO: Return immediately if requested word is an unnested participle.
   if (["verb"].includes(structureChunk.wordtype)) {
     if (
       structureChunk.form &&
       structureChunk.form.includes("participle") &&
       structureChunk.tense
     ) {
-      ["contemporaryAdverbial", "anteriorAdverbial"].forEach((specialTense) => {
-        if (
-          structureChunk.tense.includes(specialTense) &&
-          lemmaObject.inflections.participle[specialTense]
-        ) {
-          source = lemmaObject.inflections.participle[specialTense];
-        }
-      });
+      if (currentLanguage === "POL") {
+        source = getSpecialTense(structureChunk, lemmaObject, source, [
+          "contemporaryAdverbial",
+          "anteriorAdverbial",
+        ]);
+      }
+      if (currentLanguage === "ENG") {
+        ENGUtils.addSpecialVerbConjugations(lemmaObject, currentLanguage);
+
+        source = getSpecialTense(structureChunk, lemmaObject, source, [
+          "contemporaryAdverbial",
+          "anteriorAdverbial",
+          "passiveAdjectival",
+          "activeAdjectival",
+          "pastParticiple",
+        ]);
+      }
     }
   }
+
+  //PART THREE: End here if, producing the required words for any 'ad hoc' lobjs. So this is lobjs who aren't deficient, and don't hold their words already, but instead generate them programmatically.
+
+  if (currentLanguage === "ENG") {
+    if (
+      ["verb"].includes(structureChunk.wordtype) ||
+      !["participle"].includes(structureChunk.form)
+    ) {
+      source = ENGUtils.generateAndReturnSimpleVerbConjugation(
+        structureChunk,
+        lemmaObject,
+        currentLanguage
+      );
+
+      return sendFinalisedWord(errorInDrilling, source, structureChunk);
+    }
+  }
+
+  //PART FOUR: Drill down through the lobj, ensuring we don't randomly go a dead end, and extract final word.
 
   if (typeof source === "string") {
     return sendFinalisedWord(null, source, structureChunk);
@@ -180,6 +212,23 @@ exports.filterWithinSelectedLemmaObject = (
       return null;
     }
   }
+
+  function getSpecialTense(
+    structureChunk,
+    lemmaObject,
+    source,
+    specialTenseArr
+  ) {
+    specialTenseArr.forEach((specialTense) => {
+      if (
+        structureChunk.tense.includes(specialTense) &&
+        lemmaObject.inflections.participle[specialTense]
+      ) {
+        source = lemmaObject.inflections.participle[specialTense];
+      }
+    });
+    return source;
+  }
 };
 
 exports.filterOutDeficientLemmaObjects = (
@@ -218,18 +267,18 @@ exports.filterOutDeficientLemmaObjects = (
 };
 
 exports.filterByTag = (wordset, tags, mandatory) => {
-  let lemmaObjs = Object.values(wordset);
+  let lemmaObjects = Object.values(wordset);
 
   if (tags.length) {
-    return lemmaObjs.filter((lemmaObj) => {
+    return lemmaObjects.filter((lemmaObject) => {
       if (mandatory) {
-        return tags.every((tag) => lemmaObj.tags.includes(tag));
+        return tags.every((tag) => lemmaObject.tags.includes(tag));
       } else {
-        return tags.some((tag) => lemmaObj.tags.includes(tag));
+        return tags.some((tag) => lemmaObject.tags.includes(tag));
       }
     });
   } else {
-    return lemmaObjs;
+    return lemmaObjects;
   }
 };
 
