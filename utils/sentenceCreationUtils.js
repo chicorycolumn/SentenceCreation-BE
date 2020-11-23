@@ -110,13 +110,13 @@ exports.extractNestedRoutes = (source) => {
   }
 };
 
-exports.findObjectInNestedObject = (source, identifyingData) => {
-  let res = null;
+exports.findObjectInNestedObject = (source, identifyingData, alsoReturnKey) => {
+  let res = {};
   recursivelySearch(source, identifyingData);
-  return res;
+  return alsoReturnKey ? res : res.value;
 
   function recursivelySearch(source, identifyingData) {
-    if (res) {
+    if (res.value) {
       return;
     }
 
@@ -124,7 +124,8 @@ exports.findObjectInNestedObject = (source, identifyingData) => {
       let value = source[key];
       if (gpUtils.isObject(value)) {
         if (gpUtils.doKeyValuesMatch(value, identifyingData)) {
-          res = value;
+          res.value = value;
+          res.key = key;
         } else {
           recursivelySearch(value, identifyingData);
         }

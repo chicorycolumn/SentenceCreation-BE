@@ -9,11 +9,19 @@ exports.createSentence = (
   currentLanguage,
   sentenceNumber,
   sentenceSymbol,
-  useDummy
+  useDummy,
+  getTranslations
 ) => {
-  if (currentLanguage === "ENG") {
-    return;
-  }
+  console.log("createSentence fxn was given these args", {
+    currentLanguage,
+    sentenceNumber,
+    sentenceSymbol,
+    useDummy,
+  });
+
+  // if (currentLanguage === "ENG") {
+  //   return;
+  // }
 
   const { wordsBank } = require(`../source/${currentLanguage}/words.js`);
   const {
@@ -28,9 +36,6 @@ exports.createSentence = (
 
   //STEP ZERO: Get necessary components.
   let defaultSentenceNumber = 50;
-  sentenceNumber = sentenceNumber || defaultSentenceNumber;
-  // let defaultLevelNumber = "level01";
-  // levelNumber = levelNumber || defaultLevelNumber;
   let defaultSentenceSymbol = "";
   sentenceSymbol = sentenceSymbol || defaultSentenceSymbol;
   let errorInSentenceCreation = {};
@@ -44,11 +49,24 @@ exports.createSentence = (
     ? gpUtils.copyWithoutReference(dummySentenceFormulasBank)
     : gpUtils.copyWithoutReference(sentenceFormulasBank);
 
-  let sentenceFormula = sentenceSymbol
-    ? scUtils.findObjectInNestedObject(sentenceFormulas, {
+  if (sentenceNumber) {
+    sentenceFormula = sentenceFormulas[sentenceNumber];
+    sentenceSymbol = sentenceFormula.symbol;
+  } else if (sentenceSymbol) {
+    let matchingSentenceFormulaData = scUtils.findObjectInNestedObject(
+      sentenceFormulas,
+      {
         symbol: sentenceSymbol,
-      })
-    : sentenceFormulas[sentenceNumber];
+      },
+      true
+    );
+
+    sentenceFormula = matchingSentenceFormulaData.value;
+    sentenceNumber = matchingSentenceFormulaData.key;
+  } else {
+    sentenceFormula = sentenceFormulas[defaultSentenceNumber];
+    sentenceSymbol = sentenceFormula.symbol;
+  }
 
   let sentenceStructure = sentenceFormula.structure;
 
@@ -62,12 +80,44 @@ exports.createSentence = (
   });
   headIds = Array.from(new Set(headIds));
 
-  if (currentLanguage === "ENG") {
-    console.log("righty ho");
-
-    console.log("ENG sentenceStructure", sentenceStructure);
-
+  if (getTranslations) {
+    console.log("ENG-sentenceStructure", sentenceStructure);
     return;
+    // return;
+    //At this point, a Polish sentence has already been created by the app.
+    //We must harvest the features from it, that match to the chunks of this english formula.
+    //Then we make all the english translations possible.
+    /**
+     * So let's be really specific.
+     * We now have an english sentence formula. It's number 101 because that's the same sentenceNumber as the polish
+     * sentence that was created earlier.
+     * The english formula has structureChunks.
+     * Each structureChunk has features, like manTags, tense... and also a chunkId.
+     *
+     * For every chunkId that we can match to the same chunkId in formula 101 from the polish formulas,
+     * look at the chunk's connected lemmaobj (in resultArr)
+     * from that lemma object, get the EN translations,
+     * eg gwø»d» will have "nail" in its EN translations.
+     * You'll then get the english lemma objects nail nail and nail
+     * filter so same wordtype as polish lobj, leave us with nail and nail
+     * now filter by same tags (body parts vs woodwork)
+     * now we just have the english lobj nail.
+     *
+     * 1) Take the lemma from lobj nail, and put that as specificLemmas key in english chunk that has same chunkid as polish chunk connected to gwø»d».
+     *
+     * 2) Then bring over particular features.
+     *
+     * The polish noun chunk should copy its Number onto the english noun chunk.
+     *  although for tantum plurales, make Number blank (all possible) in english noun chunk.
+     *
+     * The polish adjective chunk should copy its Form onto the english adjective chunk.
+     *
+     * The polish verb chunk should copy its Form Tense Person Number all onto the english verb chunk.
+     *
+     * 3) Now allow createSentence to run, and the english translation of the polish sentence will be created.
+     *
+     * 4) Modify the recursive traverser, so that if(getTranslations), it will not just select one happy route, but rather create sentences for all happy routes.
+     */
   }
 
   //STEP ONE: Select headwords and add to result array.
@@ -149,5 +199,11 @@ exports.createSentence = (
     }
   });
 
-  return { resultArr, sentenceFormula, errorInSentenceCreation };
+  return {
+    resultArr,
+    sentenceFormula,
+    sentenceNumber,
+    sentenceSymbol,
+    errorInSentenceCreation,
+  };
 };

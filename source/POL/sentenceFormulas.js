@@ -369,7 +369,6 @@ exports.sentenceFormulasBank = {
         optTags: [],
         gcase: ["nom"],
         number: ["singular", "plural"],
-        gender: ["f"],
       },
       {
         chunkId: "ver-1",

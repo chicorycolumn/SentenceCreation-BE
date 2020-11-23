@@ -8,42 +8,54 @@ const createSentence = require("../utils/createSentence.js");
 exports.fetchPalette = (req) => {
   let { sentenceNumber, sentenceSymbol, useDummy } = req.body;
 
-  let {
-    resultArr,
-    sentenceFormula,
-    errorInSentenceCreation,
-  } = createSentence.createSentence(
+  let createdSentenceData1 = createSentence.createSentence(
     "POL",
     sentenceNumber,
     sentenceSymbol,
     useDummy
   );
 
-  console.log(">>End of palette.model resultArr", resultArr);
+  let resultArr1 = createdSentenceData1.resultArr;
+  let sentenceFormula1 = createdSentenceData1.sentenceFormula;
+  let sentenceNumber1 = createdSentenceData1.sentenceNumber;
+  let sentenceSymbol1 = createdSentenceData1.sentenceSymbol;
+  let errorInSentenceCreation1 = createdSentenceData1.errorInSentenceCreation;
+
+  console.log(
+    ">>End of palette.model>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> resultArr",
+    resultArr1
+  );
 
   let responseObj = formatFinalSentence(
-    resultArr,
-    sentenceFormula,
-    errorInSentenceCreation
+    resultArr1,
+    sentenceFormula1,
+    errorInSentenceCreation1
+  );
+
+  console.log(
+    ">>End of palette.model>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> palette",
+    responseObj.palette
   );
 
   let createdSentenceData2 = createSentence.createSentence(
     "ENG",
-    sentenceNumber,
-    null,
-    null,
-    useDummy
+    sentenceNumber1,
+    sentenceSymbol1,
+    useDummy,
+    true
   );
-
-  // let resultArr2 = createdSentenceData2.resultArr;
-  // let sentenceFormula2 = createdSentenceData2.sentenceFormula;
-  // let errorInSentenceCreation2 = createdSentenceData2.errorInSentenceCreation;
 
   // sentenceStructure.forEach((chunk) => {
   // if (chunk.wordtype === "noun") {
   // delete chunk.gender;
   // }
   // });
+
+  // let resultArr2 = createdSentenceData2.resultArr;
+  // let sentenceFormula2 = createdSentenceData2.sentenceFormula;
+  // let sentenceNumber2 = createdSentenceData2.sentenceNumber;
+  // let sentenceSymbol2 = createdSentenceData2.sentenceSymbol;
+  // let errorInSentenceCreation2 = createdSentenceData2.errorInSentenceCreation;
 
   //Now bring the features from sentenceStructure (POL) and add them to the matching chunkId chunks from ENG structure.
 

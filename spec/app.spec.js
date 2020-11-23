@@ -158,6 +158,29 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
+
+    it.only("#pal05-01d GET 200 YES: Returns a sentence in present.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          sentenceSymbol: "101 girl is reading",
+          // sentenceNumber: 101,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.palette).to.be.a("String");
+          expect([
+            "Kobieta czyta.",
+            "Chłopiec czyta.",
+            "Chłopak czyta.",
+            "Kobiety czytają.",
+            "Chłopcy czytają.",
+            "Chłopacy czytają.",
+            "Chłopaki czytają.",
+          ]).to.include(res.body.palette);
+          console.log({ palette: res.body.palette });
+        });
+    });
   });
 
   describe("/palette - Stage 4: Verbs", () => {

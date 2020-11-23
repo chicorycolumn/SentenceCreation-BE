@@ -93,12 +93,12 @@ describe("findObjectInNestedObject", () => {
     },
   };
 
-  it("#scu3.1 Returns null from one level of nesting, when no matching object can be found.", () => {
+  it("#scu3.1 NO: Returns undefined from one level of nesting, when no matching object can be found.", () => {
     const input1 = testObj1;
     const input2 = { symbol: "nonexistent symbol" };
-    expect(findObjectInNestedObject(input1, input2)).to.eql(null);
+    expect(findObjectInNestedObject(input1, input2)).to.eql(undefined);
   });
-  it("#scu3.2a Correctly return object from one level of nesting, finding by matching a string.", () => {
+  it("#scu3.2a YES: Correctly return object from one level of nesting, finding by matching a string.", () => {
     const input1 = testObj1;
     const input2 = { symbol: "my bird" };
     expect(findObjectInNestedObject(input1, input2)).to.eql({
@@ -106,7 +106,7 @@ describe("findObjectInNestedObject", () => {
       structure: ["my", 123, "bird", 456],
     });
   });
-  it("#scu3.2b Correctly return object from one level of nesting, finding by matching an array.", () => {
+  it("#scu3.2b YES: Correctly return object from one level of nesting, finding by matching an array.", () => {
     const input1 = testObj1;
     const input2 = { structure: ["my", 123, "house", 456] };
     expect(findObjectInNestedObject(input1, input2)).to.eql({
@@ -114,7 +114,7 @@ describe("findObjectInNestedObject", () => {
       structure: ["my", 123, "house", 456],
     });
   });
-  it("#scu3.2c Correctly return object from one level of nesting, finding by matching multiple values.", () => {
+  it("#scu3.2c YES: Correctly return object from one level of nesting, finding by matching multiple values.", () => {
     const input1 = testObj1;
     const input2 = {
       symbol: "my aunt",
@@ -126,10 +126,10 @@ describe("findObjectInNestedObject", () => {
       id: "aunt2",
     });
   });
-  it("#scu3.3 Returns null from nested object when no matching object can be found.", () => {
+  it("#scu3.3 NO: Returns undefined from nested object when no matching object can be found.", () => {
     const input1 = testObj2;
     const input2 = { symbol: "nonexistent symbol" };
-    expect(findObjectInNestedObject(input1, input2)).to.eql(null);
+    expect(findObjectInNestedObject(input1, input2)).to.eql(undefined);
   });
   it("#scu3.3a Correctly return object from multi nesting, finding by matching a string.", () => {
     const input1 = testObj2;
