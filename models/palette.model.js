@@ -6,7 +6,12 @@ const refObj = require("../utils/referenceObjects.js");
 const createSentence = require("../utils/createSentence.js");
 
 exports.fetchPalette = (req) => {
-  let { sentenceNumber, sentenceSymbol, useDummy } = req.body;
+  let {
+    sentenceNumber,
+    sentenceSymbol,
+    useDummy,
+    onlyGenerateQuestionSentence,
+  } = req.body;
 
   let questionSentenceData = createSentence.createSentence(
     "POL",
@@ -34,7 +39,7 @@ exports.fetchPalette = (req) => {
 
   console.log(
     ">>End of palette.model>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> palette",
-    questionResponseObj.palette
+    questionResponseObj.questionSentence
   );
 
   // questionSentenceData.resultArr.sentenceStructure.forEach((chunk) => {
@@ -42,35 +47,39 @@ exports.fetchPalette = (req) => {
   // delete chunk.gender;
   // }
   // });
+  if (!onlyGenerateQuestionSentence) {
+    let answerSentenceData = createSentence.createSentence(
+      "ENG",
+      questionSentenceData.sentenceNumber,
+      questionSentenceData.sentenceSymbol,
+      useDummy,
+      true,
+      questionSentenceData.resultArr
+    );
 
-  let answerSentenceData = createSentence.createSentence(
-    "ENG",
-    questionSentenceData.sentenceNumber,
-    questionSentenceData.sentenceSymbol,
-    useDummy,
-    true,
-    questionSentenceData.resultArr
-  );
+    console.log("Did it work??");
+    console.log("answerSentenceData", answerSentenceData);
 
-  console.log("Did it work??");
-  console.log("answerSentenceData", answerSentenceData);
+    let answerResponseObj = formatFinalSentence(
+      answerSentenceData.resultArr,
+      answerSentenceData.sentenceFormula,
+      answerSentenceData.errorInSentenceCreation
+    );
 
-  let answerResponseObj = formatFinalSentence(
-    answerSentenceData.resultArr,
-    answerSentenceData.sentenceFormula,
-    answerSentenceData.errorInSentenceCreation
-  );
+    console.log("*******");
+    console.log("***************");
+    console.log("***********************");
+    console.log(answerResponseObj.questionSentence);
+  }
 
   // answerSentenceData.resultArr;
   // answerSentenceData.sentenceFormula;
   // answerSentenceData.sentenceNumber;
   // answerSentenceData.sentenceSymbol;
   // answerSentenceData.errorInSentenceCreation;
-  console.log("*******");
-  console.log("***************");
+
+  console.log(questionResponseObj.questionSentence);
   console.log("***********************");
-  console.log(questionResponseObj.palette);
-  console.log(answerResponseObj.palette);
   console.log("***************");
   console.log("*******");
 
@@ -97,12 +106,12 @@ function formatFinalSentence(
     questionResponseObj = {
       message: "No sentence could be created from the specifications.",
       fragment: finalSentence,
-      palette: null,
+      questionSentence: null,
       errorMessage,
     };
   } else {
     questionResponseObj = {
-      palette: finalSentence,
+      questionSentence: finalSentence,
     };
   }
 

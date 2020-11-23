@@ -8,7 +8,7 @@
     "queries": [],
     "exampleRequest": { "egSentenceNumber": "51" },
     "exampleResponse": {
-      "palette": "Chłopak je cebulę."
+      "questionSentence": "Chłopak je cebulę."
     }
   }
 }

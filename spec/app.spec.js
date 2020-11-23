@@ -10,16 +10,43 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe("/palette - Stage 5: Sentences with nouns adjectives and verbs.", () => {
+  describe("/palette - Stage 6: Returning Polish with English translations of rich sentences (with nouns adjectives and verbs).", () => {
+    it("#pal06-01a GET 200 YES: Returns a sentence in present, plus English translation.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          onlyGenerateQuestionSentence: false,
+          sentenceSymbol: "101 girl is reading",
+          // sentenceNumber: 101,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.questionSentence).to.be.a("String");
+          expect([
+            "Kobieta czyta.",
+            "Chłopiec czyta.",
+            "Chłopak czyta.",
+            "Kobiety czytają.",
+            "Chłopcy czytają.",
+            "Chłopacy czytają.",
+            "Chłopaki czytają.",
+          ]).to.include(res.body.questionSentence);
+          console.log({ questionSentence: res.body.questionSentence });
+        });
+    });
+  });
+
+  describe("/palette - Stage 5: Rich sentences (with nouns adjectives and verbs).", () => {
     it("#pal05-01a GET 200 YES: Returns a sentence in present.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceSymbol: "girl has red apple",
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
+          expect(res.body.questionSentence).to.be.a("String");
           expect([
             "Kobieta ma czerwone jabłko.",
             "Chłopiec ma czerwone jabłko.",
@@ -56,19 +83,20 @@ describe("/api", () => {
             "Chłopcy mają czerwone cebule.",
             "Chłopacy mają czerwone cebule.",
             "Chłopaki mają czerwone cebule.",
-          ]).to.include(res.body.palette);
-          console.log({ palette: res.body.palette });
+          ]).to.include(res.body.questionSentence);
+          console.log({ questionSentence: res.body.questionSentence });
         });
     });
     it("#pal05-01b GET 200 YES: Returns a negative sentence in past.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceSymbol: "girl didn't have red apple",
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
+          expect(res.body.questionSentence).to.be.a("String");
           expect([
             "Kobieta nie miała czerwonego jabłka.",
             "Chłopiec nie miał czerwonego jabłka.",
@@ -105,19 +133,20 @@ describe("/api", () => {
             "Chłopcy nie mieli czerwonych cebul.",
             "Chłopacy nie mieli czerwonych cebul.",
             "Chłopaki nie mieli czerwonych cebul.",
-          ]).to.include(res.body.palette);
-          console.log({ palette: res.body.palette });
+          ]).to.include(res.body.questionSentence);
+          console.log({ questionSentence: res.body.questionSentence });
         });
     });
     it("#pal05-01c GET 200 YES: Returns a negative sentence in past.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceSymbol: "red girl didn't have red apple",
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
+          expect(res.body.questionSentence).to.be.a("String");
           expect([
             "Czerwona kobieta nie miała czerwonego jabłka.",
             "Czerwony chłopiec nie miał czerwonego jabłka.",
@@ -154,30 +183,8 @@ describe("/api", () => {
             "Czerwoni chłopcy nie mieli czerwonych cebul.",
             "Czerwoni chłopacy nie mieli czerwonych cebul.",
             "Czerwoni chłopaki nie mieli czerwonych cebul.",
-          ]).to.include(res.body.palette);
-          console.log({ palette: res.body.palette });
-        });
-    });
-    it.only("#pal05-01d GET 200 YES: Returns a sentence in present.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          sentenceSymbol: "101 girl is reading",
-          // sentenceNumber: 101,
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.palette).to.be.a("String");
-          expect([
-            "Kobieta czyta.",
-            "Chłopiec czyta.",
-            "Chłopak czyta.",
-            "Kobiety czytają.",
-            "Chłopcy czytają.",
-            "Chłopacy czytają.",
-            "Chłopaki czytają.",
-          ]).to.include(res.body.palette);
-          console.log({ palette: res.body.palette });
+          ]).to.include(res.body.questionSentence);
+          console.log({ questionSentence: res.body.questionSentence });
         });
     });
   });
@@ -187,11 +194,12 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceSymbol: "I am reading",
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
+          expect(res.body.questionSentence).to.be.a("String");
           expect([
             "Czytam.",
             "Czytasz.",
@@ -199,20 +207,21 @@ describe("/api", () => {
             "Czytamy.",
             "Czytacie.",
             "Czytają.",
-          ]).to.include(res.body.palette);
-          console.log({ palette: res.body.palette });
+          ]).to.include(res.body.questionSentence);
+          console.log({ questionSentence: res.body.questionSentence });
         });
     });
     it("#pal04-01b GET 200 YES: Returns a sentence with a single verb, with person specified.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceSymbol: "dummy12 2per",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
+          expect(res.body.questionSentence).to.be.a("String");
           expect([
             "Czytasz.",
             "Czytacie.",
@@ -234,20 +243,21 @@ describe("/api", () => {
             "Czytałybyście.",
             "Czytaj.",
             "Czytajcie.",
-          ]).to.include(res.body.palette);
-          console.log({ palette: res.body.palette });
+          ]).to.include(res.body.questionSentence);
+          console.log({ questionSentence: res.body.questionSentence });
         });
     });
     it("#pal04-01c GET 200 YES: Returns a sentence with a single verb, with tense and number specified.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceSymbol: "dummy13a conditional plural",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
+          expect(res.body.questionSentence).to.be.a("String");
           expect([
             "Czytano by.",
             "Czytalibyśmy.",
@@ -256,81 +266,90 @@ describe("/api", () => {
             "Czytałybyście.",
             "Czytaliby.",
             "Czytałyby.",
-          ]).to.include(res.body.palette);
-          console.log({ palette: res.body.palette });
+          ]).to.include(res.body.questionSentence);
+          console.log({ questionSentence: res.body.questionSentence });
         });
     });
     it("#pal04-01d GET 200 YES: Returns a sentence with a single verb, with tense number and gender specified.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceSymbol: "dummy13b present 2per f",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
-          expect(["Czytasz.", "Czytacie."]).to.include(res.body.palette);
-          console.log({ palette: res.body.palette });
+          expect(res.body.questionSentence).to.be.a("String");
+          expect(["Czytasz.", "Czytacie."]).to.include(
+            res.body.questionSentence
+          );
+          console.log({ questionSentence: res.body.questionSentence });
         });
     });
     it("#pal04-01e GET 200 YES: Returns a sentence with a single verb in infinitive.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceSymbol: "dummy14 infinitive",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
-          expect(["Czytać."]).to.include(res.body.palette);
-          console.log({ palette: res.body.palette });
+          expect(res.body.questionSentence).to.be.a("String");
+          expect(["Czytać."]).to.include(res.body.questionSentence);
+          console.log({ questionSentence: res.body.questionSentence });
         });
     });
     it("#pal04-01f GET 200 YES: Returns a sentence with a single verb in impersonal.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceSymbol: "dummy15 impersonal",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
+          expect(res.body.questionSentence).to.be.a("String");
           expect([
             "Czyta się.",
             "Czytano.",
             "Będzie czytać się.",
             "Czytano by.",
-          ]).to.include(res.body.palette);
-          console.log({ palette: res.body.palette });
+          ]).to.include(res.body.questionSentence);
+          console.log({ questionSentence: res.body.questionSentence });
         });
     });
     it("#pal04-01g GET 200 YES: Returns a sentence with a single verb in impersonal, even when plural is specified (returns just those impersonals that have plural use).", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceSymbol: "dummy15a impersonal plural",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
-          expect(["Czytano.", "Czytano by."]).to.include(res.body.palette);
-          console.log({ palette: res.body.palette });
+          expect(res.body.questionSentence).to.be.a("String");
+          expect(["Czytano.", "Czytano by."]).to.include(
+            res.body.questionSentence
+          );
+          console.log({ questionSentence: res.body.questionSentence });
         });
     });
     it("#pal04-02a GET 200 YES: Returns a sentence with a single verb's participle.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceSymbol: "dummy16 participle",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
+          expect(res.body.questionSentence).to.be.a("String");
           expect([
             "Czytający.",
             "Czytająca.",
@@ -343,118 +362,127 @@ describe("/api", () => {
             "Czytani.",
             "Czytane.",
             "Czytając.",
-          ]).to.include(res.body.palette);
-          console.log({ palette: res.body.palette });
+          ]).to.include(res.body.questionSentence);
+          console.log({ questionSentence: res.body.questionSentence });
         });
     });
     it("#pal04-02b GET 200 YES: Returns a sentence with a single verb's participle by gender.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceSymbol: "dummy17 participle female",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
-          expect(["Czytająca.", "Czytana."]).to.include(res.body.palette);
-          console.log({ palette: res.body.palette });
+          expect(res.body.questionSentence).to.be.a("String");
+          expect(["Czytająca.", "Czytana."]).to.include(
+            res.body.questionSentence
+          );
+          console.log({ questionSentence: res.body.questionSentence });
         });
     });
     it("#pal04-02c GET 200 YES: Returns a sentence with a single verb's participle by gender, with two genders specified.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceSymbol: "dummy19 participle f nonvirile",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
+          expect(res.body.questionSentence).to.be.a("String");
           expect([
             "Czytająca.",
             "Czytające.",
             "Czytana.",
             "Czytane.",
-          ]).to.include(res.body.palette);
-          console.log({ palette: res.body.palette });
+          ]).to.include(res.body.questionSentence);
+          console.log({ questionSentence: res.body.questionSentence });
         });
     });
     it("#pal04-02d GET 200 YES: Returns a sentence with a single verb's participle by gender, with two genders specified.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceSymbol: "dummy20 participle n virile",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
+          expect(res.body.questionSentence).to.be.a("String");
           expect([
             "Czytające.",
             "Czytający.",
             "Czytane.",
             "Czytani.",
-          ]).to.include(res.body.palette);
-          console.log({ palette: res.body.palette });
+          ]).to.include(res.body.questionSentence);
+          console.log({ questionSentence: res.body.questionSentence });
         });
     });
     it("#pal04-02e GET 200 YES: Returns a sentence with a single verb's participle by gender and person.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceSymbol: "dummy20a participle n virile 2per",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
+          expect(res.body.questionSentence).to.be.a("String");
           expect([
             "Czytające.",
             "Czytający.",
             "Czytane.",
             "Czytani.",
-          ]).to.include(res.body.palette);
-          console.log({ palette: res.body.palette });
+          ]).to.include(res.body.questionSentence);
+          console.log({ questionSentence: res.body.questionSentence });
         });
     });
     it("#pal04-03a GET 200 YES: Returns a sentence with a single verb's verbalNoun.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceSymbol: "dummy21 verbalNoun",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
-          expect(["Czytanie."]).to.include(res.body.palette);
-          console.log({ palette: res.body.palette });
+          expect(res.body.questionSentence).to.be.a("String");
+          expect(["Czytanie."]).to.include(res.body.questionSentence);
+          console.log({ questionSentence: res.body.questionSentence });
         });
     });
     it("#pal04-03b GET 200 NO: Does not return verbalNoun, when a gender is specified, as the verbalNoun is not a verb.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceSymbol: "dummy22 verbalNoun ~f",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.equal(null);
-          console.log({ palette: res.body.palette });
+          expect(res.body.questionSentence).to.equal(null);
+          console.log({ questionSentence: res.body.questionSentence });
         });
     });
     it("#pal04-04a GET 200 YES: Returns verb in virile when one gender option is given.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceSymbol: "dummy23a past/cond 1per plural m1",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
+          expect(res.body.questionSentence).to.be.a("String");
           expect([
             "Czytaliśmy.",
             "Czytaliście.",
@@ -462,20 +490,21 @@ describe("/api", () => {
             "Czytalibyśmy.",
             "Czytalibyście.",
             "Czytaliby.",
-          ]).to.include(res.body.palette);
-          console.log({ palette: res.body.palette });
+          ]).to.include(res.body.questionSentence);
+          console.log({ questionSentence: res.body.questionSentence });
         });
     });
     it("#pal04-04b GET 200 YES: Returns verb in nonvirile when one gender option is given.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceSymbol: "dummy23b past/cond 1per plural m2",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
+          expect(res.body.questionSentence).to.be.a("String");
           expect([
             "Czytałyśmy.",
             "Czytałyście.",
@@ -483,20 +512,21 @@ describe("/api", () => {
             "Czytałybyśmy.",
             "Czytałybyście.",
             "Czytałyby.",
-          ]).to.include(res.body.palette);
-          console.log({ palette: res.body.palette });
+          ]).to.include(res.body.questionSentence);
+          console.log({ questionSentence: res.body.questionSentence });
         });
     });
     it("#pal04-04c GET 200 YES: Returns verb in nonvirile when two gender options are given.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceSymbol: "dummy23c past/cond 1per plural f/n",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
+          expect(res.body.questionSentence).to.be.a("String");
           expect([
             "Czytałyśmy.",
             "Czytałyście.",
@@ -504,83 +534,92 @@ describe("/api", () => {
             "Czytałybyśmy.",
             "Czytałybyście.",
             "Czytałyby.",
-          ]).to.include(res.body.palette);
-          console.log({ palette: res.body.palette });
+          ]).to.include(res.body.questionSentence);
+          console.log({ questionSentence: res.body.questionSentence });
         });
     });
     it("#pal04-05a GET 200 YES: Conjugate verb (as virile or nonvirile) to agree with noun in plural.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceSymbol: "girls were reading",
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
+          expect(res.body.questionSentence).to.be.a("String");
           expect([
             "Kobiety czytały.",
             "Chłopcy czytali.",
             "Chłopaki czytali.",
             "Chłopacy czytali.",
-          ]).to.include(res.body.palette);
-          console.log({ palette: res.body.palette });
+          ]).to.include(res.body.questionSentence);
+          console.log({ questionSentence: res.body.questionSentence });
         });
     });
     it("#pal04-05b GET 200 YES: Conjugate verb to agree with noun in singular or plural.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceSymbol: "girl is reading",
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
+          expect(res.body.questionSentence).to.be.a("String");
           expect(["Kobieta czyta.", "Kobiety czytają."]).to.include(
-            res.body.palette
+            res.body.questionSentence
           );
-          console.log({ palette: res.body.palette });
+          console.log({ questionSentence: res.body.questionSentence });
         });
     });
     it("#pal04-06a GET 200 YES: Conjugate active adjectival participle.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceSymbol: "dummy24a activeadjectival f",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
-          expect(["Czytająca.", "Czytające."]).to.include(res.body.palette);
-          console.log({ palette: res.body.palette });
+          expect(res.body.questionSentence).to.be.a("String");
+          expect(["Czytająca.", "Czytające."]).to.include(
+            res.body.questionSentence
+          );
+          console.log({ questionSentence: res.body.questionSentence });
         });
     });
     it("#pal04-06b GET 200 YES: Conjugate passive adjectival participle.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceSymbol: "dummy24b activeadjectival m1",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
-          expect(["Czytany.", "Czytani."]).to.include(res.body.palette);
-          console.log({ palette: res.body.palette });
+          expect(res.body.questionSentence).to.be.a("String");
+          expect(["Czytany.", "Czytani."]).to.include(
+            res.body.questionSentence
+          );
+          console.log({ questionSentence: res.body.questionSentence });
         });
     });
     it("#pal04-06c GET 200 YES: Conjugate contemporary adverbial participle, ignoring any person or number or gender specified.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceSymbol: "dummy24c contemporaryadverbial",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
-          expect(["Czytając."]).to.include(res.body.palette);
-          console.log({ palette: res.body.palette });
+          expect(res.body.questionSentence).to.be.a("String");
+          expect(["Czytając."]).to.include(res.body.questionSentence);
+          console.log({ questionSentence: res.body.questionSentence });
         });
     });
   });
@@ -590,50 +629,53 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceSymbol: "red apple",
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
+          expect(res.body.questionSentence).to.be.a("String");
           expect(["Czerwona cebula.", "Czerwone jabłko."]).to.include(
-            res.body.palette
+            res.body.questionSentence
           );
-          console.log({ palette: res.body.palette });
+          console.log({ questionSentence: res.body.questionSentence });
         });
     });
     it("#pal03-01b GET 200 YES: Returns a sentence where adjective agrees with noun in nonvirile plural.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           // sentenceNumber: "55a",
           sentenceSymbol: "red apples",
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
+          expect(res.body.questionSentence).to.be.a("String");
           expect(["Czerwone cebule.", "Czerwone jabłka."]).to.include(
-            res.body.palette
+            res.body.questionSentence
           );
-          console.log({ palette: res.body.palette });
+          console.log({ questionSentence: res.body.questionSentence });
         });
     });
     it("#pal03-01c GET 200 YES: Returns a sentence where adjective agrees with noun in virile or nonvirile plural.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           // sentenceNumber: 56,
           sentenceSymbol: "red girls",
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
+          expect(res.body.questionSentence).to.be.a("String");
           expect([
             "Czerwoni chłopcy.",
             "Czerwoni chłopacy.",
             "Czerwoni chłopaki.",
             "Czerwone kobiety.",
-          ]).to.include(res.body.palette);
-          console.log({ palette: res.body.palette });
+          ]).to.include(res.body.questionSentence);
+          console.log({ questionSentence: res.body.questionSentence });
         });
     });
   });
@@ -643,20 +685,24 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           // sentenceNumber: 51,
           sentenceSymbol: "girl is wearing shirt",
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
-          console.log({ palette: res.body.palette });
-          expect(res.body.palette.split(" ").reverse()[0]).to.equal("majtki.");
+          expect(res.body.questionSentence).to.be.a("String");
+          console.log({ questionSentence: res.body.questionSentence });
+          expect(res.body.questionSentence.split(" ").reverse()[0]).to.equal(
+            "majtki."
+          );
         });
     });
     it("#pal02-01b GET 200 NO: Returns a sentence where a tantum plurale was not allowed, as singular grammatical number was requested.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           // sentenceNumber: 52,
           sentenceSymbol: "shirt is in wardrobe",
         })
@@ -665,34 +711,38 @@ describe("/api", () => {
           expect(res.body.message).to.equal(
             "No sentence could be created from the specifications."
           );
-          expect(res.body.palette).to.equal(null);
+          expect(res.body.questionSentence).to.equal(null);
         });
     });
     it("#pal02-01c GET 200 YES: Returns a sentence where a tantum plurale was allowed, as either singular or plural grammatical number was requested.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           // sentenceNumber: 53,
           sentenceSymbol: "I often wear shirt",
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
-          console.log({ palette: res.body.palette });
-          expect(res.body.palette.split(" ").reverse()[0]).to.equal("majtki.");
+          expect(res.body.questionSentence).to.be.a("String");
+          console.log({ questionSentence: res.body.questionSentence });
+          expect(res.body.questionSentence.split(" ").reverse()[0]).to.equal(
+            "majtki."
+          );
         });
     });
     it("#pal02-02a GET 200 YES: Returns a sentence where end of inflection chain could be array.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           // sentenceNumber: 54,
           sentenceSymbol: "boys are male",
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
-          console.log({ palette: res.body.palette });
+          expect(res.body.questionSentence).to.be.a("String");
+          console.log({ questionSentence: res.body.questionSentence });
         });
     });
   });
@@ -701,16 +751,20 @@ describe("/api", () => {
     it("#pal01-01 GET 200 YES: Returns a sentence", () => {
       return request(app)
         .get("/api/palette")
+        .send({
+          onlyGenerateQuestionSentence: true,
+        })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
-          console.log({ palette: res.body.palette });
+          expect(res.body.questionSentence).to.be.a("String");
+          console.log({ questionSentence: res.body.questionSentence });
         });
     });
     it("#pal01-02a GET 200 NO: Returns message to say no sentence can be created from specifications.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceNumber: "dummy01",
           useDummy: true,
         })
@@ -719,13 +773,14 @@ describe("/api", () => {
           expect(res.body.message).to.equal(
             "No sentence could be created from the specifications."
           );
-          expect(res.body.palette).to.equal(null);
+          expect(res.body.questionSentence).to.equal(null);
         });
     });
     it("#pal01-02b GET 200 NO: Returns message to say no sentence could possibly be created from specifications.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceNumber: "dummy02",
           useDummy: true,
         })
@@ -734,13 +789,14 @@ describe("/api", () => {
           expect(res.body.message).to.equal(
             "No sentence could be created from the specifications."
           );
-          expect(res.body.palette).to.equal(null);
+          expect(res.body.questionSentence).to.equal(null);
         });
     });
     it("#pal01-03a GET 200 NO: Returns message to say no sentence, if dummy noun was successfully filtered out.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceNumber: "dummy03",
           useDummy: true,
         })
@@ -749,13 +805,14 @@ describe("/api", () => {
           expect(res.body.message).to.equal(
             "No sentence could be created from the specifications."
           );
-          expect(res.body.palette).to.equal(null);
+          expect(res.body.questionSentence).to.equal(null);
         });
     });
     it("#pal01-03b GET 200 NO: Returns message to say no sentence, if dummy noun was successfully filtered out.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceNumber: "dummy04",
           useDummy: true,
         })
@@ -764,39 +821,42 @@ describe("/api", () => {
           expect(res.body.message).to.equal(
             "No sentence could be created from the specifications."
           );
-          expect(res.body.palette).to.equal(null);
+          expect(res.body.questionSentence).to.equal(null);
         });
     });
     it("#pal01-03c GET 200 YES: Returns sentence, as dummy noun did not need to be filtered out.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceNumber: "dummy05",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
-          console.log({ palette: res.body.palette });
+          expect(res.body.questionSentence).to.be.a("String");
+          console.log({ questionSentence: res.body.questionSentence });
         });
     });
     it("#pal01-03d GET 200 YES: Returns successful sentence 100% of the time, rather than 33%, as one of the dummy nouns should have been filtered out.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceNumber: "dummy06",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
-          console.log({ palette: res.body.palette });
+          expect(res.body.questionSentence).to.be.a("String");
+          console.log({ questionSentence: res.body.questionSentence });
         });
     });
     it("#pal01-03e GET 200 NO: Returns message to say no sentence, as dummy noun should have been filtered out.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceNumber: "dummy07",
           useDummy: true,
         })
@@ -805,106 +865,117 @@ describe("/api", () => {
           expect(res.body.message).to.equal(
             "No sentence could be created from the specifications."
           );
-          expect(res.body.palette).to.equal(null);
+          expect(res.body.questionSentence).to.equal(null);
         });
     });
     it("#pal01-03f GET 200 YES: Returns successful sentence 100% of the time, even though I've tried to trick it, by asking for Singular and Loc, and including an object that does indeed have Singular (but Loc is not within), and has Plural (with Loc within).", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceNumber: "dummy08",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
-          console.log({ palette: res.body.palette });
+          expect(res.body.questionSentence).to.be.a("String");
+          console.log({ questionSentence: res.body.questionSentence });
         });
     });
     it("#pal01-03g GET 200 YES: Testing whether object traversing fxn can avoid getting stuck by going down dead-ends.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceNumber: "dummy18",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
-          console.log({ palette: res.body.palette });
+          expect(res.body.questionSentence).to.be.a("String");
+          console.log({ questionSentence: res.body.questionSentence });
         });
     });
     it("#pal01-04a GET 200 YES: Checking in console logs whether structureChunks have indeed been updated with the features (number, gender, gcase) of the finally selected word they structure for.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceSymbol: "I have apple",
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
-          console.log({ palette: res.body.palette });
+          expect(res.body.questionSentence).to.be.a("String");
+          console.log({ questionSentence: res.body.questionSentence });
         });
     });
     it("#pal01-05a GET 200 YES: Check order of words in final sentence, based on one specified order.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceSymbol: "dummy09",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
-          expect(["Foobar-A foobar-C foobar-B."]).to.include(res.body.palette);
-          console.log({ palette: res.body.palette });
+          expect(res.body.questionSentence).to.be.a("String");
+          expect(["Foobar-A foobar-C foobar-B."]).to.include(
+            res.body.questionSentence
+          );
+          console.log({ questionSentence: res.body.questionSentence });
         });
     });
     it("#pal01-05b GET 200 YES: Check order of words in final sentence, based on multiple specified orders.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceSymbol: "dummy10",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
+          expect(res.body.questionSentence).to.be.a("String");
           expect([
             "Foobar-A foobar-B foobar-C.",
             "Foobar-A foobar-C foobar-B.",
             "Foobar-B foobar-A foobar-C.",
             "Foobar-B foobar-C foobar-A.",
-          ]).to.include(res.body.palette);
-          console.log({ palette: res.body.palette });
+          ]).to.include(res.body.questionSentence);
+          console.log({ questionSentence: res.body.questionSentence });
         });
     });
     it("#pal01-06a GET 200 YES: Filter by specified lemma.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceSymbol: "I have APPLE",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
-          expect(res.body.palette).to.equal("Mam jabłko.");
-          console.log({ palette: res.body.palette });
+          expect(res.body.questionSentence).to.be.a("String");
+          expect(res.body.questionSentence).to.equal("Mam jabłko.");
+          console.log({ questionSentence: res.body.questionSentence });
         });
     });
     it("#pal01-06b GET 200 YES: Filter by a selection of multiple specified lemmas.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          onlyGenerateQuestionSentence: true,
           sentenceSymbol: "I have APPLE/SHIRT",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.palette).to.be.a("String");
-          expect(["Mam jabłka.", "Mam majtki."]).to.include(res.body.palette);
-          console.log({ palette: res.body.palette });
+          expect(res.body.questionSentence).to.be.a("String");
+          expect(["Mam jabłka.", "Mam majtki."]).to.include(
+            res.body.questionSentence
+          );
+          console.log({ questionSentence: res.body.questionSentence });
         });
     });
     it("#pal01-07 Responds 405 if any other methods are used at this endpoint", () => {
