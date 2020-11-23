@@ -158,7 +158,6 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-
     it.only("#pal05-01d GET 200 YES: Returns a sentence in present.", () => {
       return request(app)
         .get("/api/palette")
@@ -308,7 +307,7 @@ describe("/api", () => {
           console.log({ palette: res.body.palette });
         });
     });
-    it("#pal04-01g GET 200 YES: Returns a sentence with a single verb in impersonal, even when plural is specified (returns only those impersonals that have plural use).", () => {
+    it("#pal04-01g GET 200 YES: Returns a sentence with a single verb in impersonal, even when plural is specified (returns just those impersonals that have plural use).", () => {
       return request(app)
         .get("/api/palette")
         .send({

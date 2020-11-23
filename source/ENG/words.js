@@ -56,7 +56,7 @@ let nounSet = [
   {
     translations: { ENG: ["onion"], POL: ["cebula"] },
     lemma: "onion",
-    id: "eng-nou-002",
+    id: "eng-nou-003",
     gender: "n",
     tags: ["inanimate", "edible", "holdable", "concrete"],
     deficient: false,
@@ -74,7 +74,7 @@ let nounSet = [
   {
     translations: { ENG: ["apple"], POL: ["jabłko"] },
     lemma: "apple",
-    id: "eng-nou-003",
+    id: "eng-nou-004",
     gender: "n",
     tags: ["inanimate", "edible", "holdable", "concrete"],
     deficient: false,

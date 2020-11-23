@@ -24,6 +24,31 @@ exports.generateAndReturnSimpleVerbConjugation = (
   let { inflections } = lObj;
   let inflectionChain = refObj.inflectionChainsReference[currentLanguage].verb;
 
+  ////////////////////////Alpha note: This needs to be re-specified with regard to actual POL to ENG tense translations.+
+  if (structureChunk.tense && structureChunk.tense.length) {
+    structureChunk.tense = gpUtils.selectRandom(structureChunk.tense);
+  }
+
+  if (structureChunk.tense === "present") {
+    structureChunk.tense = gpUtils.selectRandom([
+      "present simple",
+      "present continuous",
+    ]);
+  }
+  if (structureChunk.tense === "past") {
+    structureChunk.tense = gpUtils.selectRandom([
+      "past simple",
+      "past continuous",
+    ]);
+  }
+  if (structureChunk.tense === "future") {
+    structureChunk.tense = gpUtils.selectRandom([
+      "future simple",
+      "future continuous",
+    ]);
+  }
+  /////////////////////////
+
   const be = {
     past: {
       "1per": { singular: "was", plural: "were" },
@@ -77,7 +102,7 @@ exports.generateAndReturnSimpleVerbConjugation = (
     }
 
     if (!structureChunk[key]) {
-      structureChunk[key] = [gpUtils.selectRandom(value)];
+      structureChunk[key] = gpUtils.selectRandom(value);
     }
   });
 

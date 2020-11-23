@@ -37,6 +37,12 @@ exports.fetchPalette = (req) => {
     questionResponseObj.palette
   );
 
+  // questionSentenceData.resultArr.sentenceStructure.forEach((chunk) => {
+  // if (chunk.wordtype === "noun") {
+  // delete chunk.gender;
+  // }
+  // });
+
   let answerSentenceData = createSentence.createSentence(
     "ENG",
     questionSentenceData.sentenceNumber,
@@ -49,19 +55,24 @@ exports.fetchPalette = (req) => {
   console.log("Did it work??");
   console.log("answerSentenceData", answerSentenceData);
 
-  // sentenceStructure.forEach((chunk) => {
-  // if (chunk.wordtype === "noun") {
-  // delete chunk.gender;
-  // }
-  // });
+  let answerResponseObj = formatFinalSentence(
+    answerSentenceData.resultArr,
+    answerSentenceData.sentenceFormula,
+    answerSentenceData.errorInSentenceCreation
+  );
 
-  // let resultArr2 = createdSentenceData2.resultArr;
-  // let sentenceFormula2 = createdSentenceData2.sentenceFormula;
-  // let sentenceNumber2 = createdSentenceData2.sentenceNumber;
-  // let sentenceSymbol2 = createdSentenceData2.sentenceSymbol;
-  // let errorInSentenceCreation2 = createdSentenceData2.errorInSentenceCreation;
-
-  //Now bring the features from sentenceStructure (POL) and add them to the matching chunkId chunks from ENG structure.
+  // answerSentenceData.resultArr;
+  // answerSentenceData.sentenceFormula;
+  // answerSentenceData.sentenceNumber;
+  // answerSentenceData.sentenceSymbol;
+  // answerSentenceData.errorInSentenceCreation;
+  console.log("*******");
+  console.log("***************");
+  console.log("***********************");
+  console.log(questionResponseObj.palette);
+  console.log(answerResponseObj.palette);
+  console.log("***************");
+  console.log("*******");
 
   return Promise.all([questionResponseObj]).then((array) => {
     return array[0];

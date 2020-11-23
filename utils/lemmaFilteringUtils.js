@@ -20,6 +20,11 @@ exports.filterWithinSelectedLemmaObject = (
   inflectionChainRefObj,
   currentLanguage
 ) => {
+  console.log(
+    "filterWithinSelectedLemmaObject fxn was given these arguments:",
+    { lemmaObject, structureChunk, inflectionChainRefObj, currentLanguage }
+  );
+
   let source = lemmaObject.inflections;
 
   //PART ONE: Move feature from lobj to structurechunk.
@@ -67,18 +72,30 @@ exports.filterWithinSelectedLemmaObject = (
 
   if (currentLanguage === "ENG") {
     if (
-      ["verb"].includes(structureChunk.wordtype) ||
+      ["verb"].includes(structureChunk.wordtype) &&
       !["participle"].includes(structureChunk.form)
     ) {
+      console.log(555555555, { structureChunk, lemmaObject, currentLanguage });
+
+      // structureChunk.form = ["verb"];
+      //Why was form undefined? Either the key just shouldn't be there, if no one put it there.
+      //But since it has been put there, why undefined?
+
+      console.log(5555555555, structureChunk);
+
       source = ENGUtils.generateAndReturnSimpleVerbConjugation(
         structureChunk,
         lemmaObject,
         currentLanguage
       );
 
+      console.log(555555555555, { source });
+
       return sendFinalisedWord(null, source, structureChunk);
     }
   }
+
+  console.log(4444444444444444);
 
   //PART FOUR: Drill down through the lobj, ensuring we don't randomly go a dead end, and extract final word.
 
@@ -282,7 +299,7 @@ exports.filterByTag = (wordset, tags, mandatory) => {
   }
 };
 
-exports.filterByLemma = (source, structureChunk) => {
-  let specificLemma = gpUtils.selectRandom(structureChunk.specificLemmas);
-  return source.filter((lObj) => lObj.lemma === specificLemma);
-};
+// exports.filterByLemma = (source, structureChunk) => {
+//   let specificLemma = gpUtils.selectRandom(structureChunk.specificLemmas);
+//   return source.filter((lObj) => lObj.lemma === specificLemma);
+// };

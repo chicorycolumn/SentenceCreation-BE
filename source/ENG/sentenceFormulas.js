@@ -28,5 +28,7 @@ exports.sentenceFormulasBank = {
         optTags: [],
       },
     ],
+    primaryOrders: [["fix-1", "nou-1", "ver-1"]],
+    additionalOrders: [],
   },
 };

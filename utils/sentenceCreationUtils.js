@@ -169,19 +169,30 @@ exports.findMatchingWordThenAddToResultArray = (
   let source = words[gpUtils.giveSetKey(structureChunk.wordtype)];
   let matches = [];
 
-  if (structureChunk.specificLemmas && structureChunk.specificLemmas.length) {
-    matches = lfUtils.filterByLemma(source, structureChunk);
+  if (structureChunk.specificIds && structureChunk.specificIds.length) {
+    matches = source.filter((lObj) =>
+      structureChunk.specificIds.includes(lObj.id)
+    );
+  } else if (
+    structureChunk.specificLemmas &&
+    structureChunk.specificLemmas.length
+  ) {
+    matches = source.filter((lObj) =>
+      structureChunk.specificLemmas.includes(lObj.lemma)
+    );
+    // matches = lfUtils.filterByLemma(source, structureChunk);
   } else {
     matches = lfUtils.filterByTag(source, structureChunk.manTags, true);
     matches = lfUtils.filterByTag(matches, structureChunk.optTags, false);
 
     // Filter noun lobjs by gender (as each noun lobj is indeed a diff gender) but not for adjs/verbs, as gender is a key inside those lobjs.
-    if (["noun"].includes(structureChunk.wordtype)) {
-      matches = lfUtils.filterByKey(matches, structureChunk, "gender");
+    if (currentLanguage === "POL") {
+      if (["noun"].includes(structureChunk.wordtype)) {
+        matches = lfUtils.filterByKey(matches, structureChunk, "gender");
+      }
     }
   }
 
-  //valve
   if (currentLanguage === "POL") {
     if (["verb"].includes(structureChunk.wordtype)) {
       matches.forEach((lObj) => POLUtils.fillVerbInflections(lObj));
@@ -196,23 +207,28 @@ exports.findMatchingWordThenAddToResultArray = (
     }
   }
 
-  //STEP TWO: Recursively traversing lemmaObjects for happy paths and dead ends to comply with structureChunk.
+  //STEP TWO: Pre-emptively recursively traversing lemmaObjects for happy paths and dead ends to filter out any lObjs that can't fulfil structureChunk's requirements.
+  if (!(currentLanguage === "ENG" && structureChunk.wordtype === "verb")) {
+    matches = lfUtils.filterOutDeficientLemmaObjects(
+      matches,
+      structureChunk,
+      inflectionChainsByThisLanguage
+    );
 
-  //All lemma objects left in matches array do indeed have at least one happy path based on structureChunk requirements.
-  matches = lfUtils.filterOutDeficientLemmaObjects(
-    matches,
-    structureChunk,
-    inflectionChainsByThisLanguage
-  );
-
-  if (!matches.length) {
-    errorInSentenceCreation.errorMessage =
-      "No matching lemma objects were found.";
-    return;
+    if (!matches.length) {
+      errorInSentenceCreation.errorMessage =
+        "No matching lemma objects were found.";
+      return;
+    }
   }
 
   let selectedLemmaObj = gpUtils.selectRandom(matches);
 
+  console.log(3333333333333333333);
+  console.log("selectedLemmaObj", selectedLemmaObj);
+  console.log(3333333333333333333);
+
+  //STEP THREE: Traversing the finally selected lObj to pick out the specific word.
   //Ensures we don't randomly traverse to a dead end, and ensure we go a happy path, of which we already know at least one exists.
   let filterNestedOutput = lfUtils.filterWithinSelectedLemmaObject(
     selectedLemmaObj,

@@ -119,13 +119,15 @@ exports.createSentence = (
         }
       );
 
-      let selectedAnswerLemmaObject = gpUtils.selectRandom(
-        matchingAnswerLemmaObjects
-      );
+      // let selectedAnswerLemmaObject = gpUtils.selectRandom(
+      //   matchingAnswerLemmaObjects
+      // );
 
-      console.log("I found this match:");
-      console.log(selectedAnswerLemmaObject);
-      answerStructureChunk.specificLemmas = [selectedAnswerLemmaObject.lemma];
+      console.log("I found these matches:");
+      answerStructureChunk.specificIds = matchingAnswerLemmaObjects.map(
+        (lObj) => lObj.id
+      );
+      console.log(answerStructureChunk.specificIds);
       console.log("/////////////////END");
 
       console.log(
