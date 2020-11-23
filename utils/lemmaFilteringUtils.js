@@ -76,7 +76,7 @@ exports.filterWithinSelectedLemmaObject = (
         currentLanguage
       );
 
-      return sendFinalisedWord(errorInDrilling, source, structureChunk);
+      return sendFinalisedWord(null, source, structureChunk);
     }
   }
 

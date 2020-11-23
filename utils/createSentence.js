@@ -2,30 +2,35 @@ const scUtils = require("./sentenceCreationUtils.js");
 const gpUtils = require("./generalPurposeUtils.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
 const POLUtils = require("./specificPolishUtils.js");
+const ENGUtils = require("./specificEnglishUtils.js");
 const refObj = require("./referenceObjects.js");
 
-const { wordsBank } = require("../source/POL/words.js");
-const { dummyWordsBank } = require("../source/POL/dummyWords.js");
-const { sentenceFormulasBank } = require("../source/POL/sentenceFormulas.js");
-const {
-  dummySentenceFormulasBank,
-} = require("../source/POL/dummySentenceFormulas.js");
-
 exports.createSentence = (
+  currentLanguage,
   sentenceNumber,
-  levelNumber,
   sentenceSymbol,
   useDummy
 ) => {
-  //////////
-  let currentLanguage = "POL";
-  //////////
+  if (currentLanguage === "ENG") {
+    return;
+  }
+
+  const { wordsBank } = require(`../source/${currentLanguage}/words.js`);
+  const {
+    dummyWordsBank,
+  } = require(`../source/${currentLanguage}/dummyWords.js`);
+  const {
+    sentenceFormulasBank,
+  } = require(`../source/${currentLanguage}/sentenceFormulas.js`);
+  const {
+    dummySentenceFormulasBank,
+  } = require(`../source/${currentLanguage}/dummySentenceFormulas.js`);
 
   //STEP ZERO: Get necessary components.
   let defaultSentenceNumber = 50;
   sentenceNumber = sentenceNumber || defaultSentenceNumber;
-  let defaultLevelNumber = "level01";
-  levelNumber = levelNumber || defaultLevelNumber;
+  // let defaultLevelNumber = "level01";
+  // levelNumber = levelNumber || defaultLevelNumber;
   let defaultSentenceSymbol = "";
   sentenceSymbol = sentenceSymbol || defaultSentenceSymbol;
   let errorInSentenceCreation = {};
@@ -43,7 +48,7 @@ exports.createSentence = (
     ? scUtils.findObjectInNestedObject(sentenceFormulas, {
         symbol: sentenceSymbol,
       })
-    : sentenceFormulas[levelNumber][sentenceNumber];
+    : sentenceFormulas[sentenceNumber];
 
   let sentenceStructure = sentenceFormula.structure;
 
@@ -56,6 +61,14 @@ exports.createSentence = (
     }
   });
   headIds = Array.from(new Set(headIds));
+
+  if (currentLanguage === "ENG") {
+    console.log("righty ho");
+
+    console.log("ENG sentenceStructure", sentenceStructure);
+
+    return;
+  }
 
   //STEP ONE: Select headwords and add to result array.
   headIds.forEach((headId) => {
@@ -136,32 +149,5 @@ exports.createSentence = (
     }
   });
 
-  //STEP FOUR: Format and return result.
-  console.log(">>End of palette.model resultArr", resultArr);
-
-  let responseObj = {};
-
-  let finalSentence = scUtils.buildSentenceFromArray(
-    resultArr,
-    sentenceFormula
-  );
-
-  if (errorInSentenceCreation.errorMessage) {
-    let errorMessage = {
-      errorInSentenceCreation: errorInSentenceCreation.errorMessage,
-    };
-
-    responseObj = {
-      message: "No sentence could be created from the specifications.",
-      fragment: finalSentence,
-      palette: null,
-      errorMessage,
-    };
-  } else {
-    responseObj = {
-      palette: finalSentence,
-    };
-  }
-
-  return { responseObj, sentenceStructure };
+  return { resultArr, sentenceFormula, errorInSentenceCreation };
 };

@@ -1,3 +1,1 @@
-const level01 = {};
-
-exports.dummySentenceFormulasBank = { level01 };
+exports.dummySentenceFormulasBank = {};

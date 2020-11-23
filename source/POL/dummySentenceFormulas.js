@@ -1,4 +1,4 @@
-const level01 = {
+exports.dummySentenceFormulasBank = {
   dummy01: {
     symbol: "dummy01",
     structure: [
@@ -520,5 +520,3 @@ const level01 = {
     ],
   },
 };
-
-exports.dummySentenceFormulasBank = { level01 };

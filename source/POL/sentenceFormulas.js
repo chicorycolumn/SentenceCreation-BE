@@ -1,4 +1,4 @@
-const level01 = {
+exports.sentenceFormulasBank = {
   50: {
     symbol: "girl eats apple",
     structure: [
@@ -383,5 +383,3 @@ const level01 = {
     ],
   },
 };
-
-exports.sentenceFormulasBank = { level01 };
