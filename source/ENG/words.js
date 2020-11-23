@@ -18,6 +18,42 @@ let nounSet = [
     },
   },
   {
+    translations: { ENG: ["boy"], POL: ["chłopiec", "chłopak"] },
+    lemma: "boy",
+    id: "eng-nou-002",
+    gender: "m",
+    tags: ["animate", "person", "concrete"],
+    deficient: false,
+    inflections: {
+      singular: {
+        nom: "boy",
+        gen: "boy's",
+      },
+      plural: {
+        nom: "boys",
+        gen: "boys'",
+      },
+    },
+  },
+  {
+    translations: { ENG: ["boy"], POL: ["boja", "pława"] },
+    lemma: "boy",
+    id: "eng-nou-002a",
+    gender: "m",
+    tags: ["inanimate", "ocean", "concrete"],
+    deficient: false,
+    inflections: {
+      singular: {
+        nom: "buoy",
+        gen: "buoy's",
+      },
+      plural: {
+        nom: "buoys",
+        gen: "buoys'",
+      },
+    },
+  },
+  {
     translations: { ENG: ["onion"], POL: ["cebula"] },
     lemma: "onion",
     id: "eng-nou-002",
@@ -84,14 +120,8 @@ let verbSet = [
       v3: "written",
       thirdPS: "writes",
       gerund: "writing",
-      verb: {},
-      participle: {
-        pastParticiple: "written",
-        activeAdjectival: "writing",
-        passiveAdjectival: "written",
-        contemporaryAdverbial: "writing",
-        anteriorAdverbial: "having written",
-      },
+      verb: true,
+      participle: true,
     },
   },
   {
@@ -130,6 +160,22 @@ let verbSet = [
         anteriorAdverbial: "having had",
       },
       verbalNoun: "having",
+    },
+  },
+  {
+    translations: { ENG: ["read"], POL: ["czytać"] },
+    lemma: "read",
+    id: "eng-ver-003",
+    tags: ["basic2"],
+    defective: false,
+    inflections: {
+      infinitive: "read",
+      v2: "read",
+      v3: "read",
+      thirdPS: "reads",
+      gerund: "reading",
+      verb: true,
+      participle: true,
     },
   },
 ];

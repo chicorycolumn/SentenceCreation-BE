@@ -142,6 +142,18 @@ exports.findMatchingWordThenAddToResultArray = (
   errorInSentenceCreation,
   currentLanguage
 ) => {
+  console.log(
+    "findMatchingWordThenAddToResultArray fxn has been given these arguments:"
+  );
+  console.log({
+    structureChunkOriginal,
+    resultArr,
+    words,
+    inflectionChainsByThisLanguage,
+    errorInSentenceCreation,
+    currentLanguage,
+  });
+
   let structureChunk = structureChunkOriginal;
 
   if (structureChunk.wordtype === "fixed") {

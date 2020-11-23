@@ -8,42 +8,46 @@ const createSentence = require("../utils/createSentence.js");
 exports.fetchPalette = (req) => {
   let { sentenceNumber, sentenceSymbol, useDummy } = req.body;
 
-  let createdSentenceData1 = createSentence.createSentence(
+  let questionSentenceData = createSentence.createSentence(
     "POL",
     sentenceNumber,
     sentenceSymbol,
     useDummy
   );
 
-  let resultArr1 = createdSentenceData1.resultArr;
-  let sentenceFormula1 = createdSentenceData1.sentenceFormula;
-  let sentenceNumber1 = createdSentenceData1.sentenceNumber;
-  let sentenceSymbol1 = createdSentenceData1.sentenceSymbol;
-  let errorInSentenceCreation1 = createdSentenceData1.errorInSentenceCreation;
+  // questionSentenceData.resultArr;
+  // questionSentenceData.sentenceFormula;
+  // questionSentenceData.sentenceNumber;
+  // questionSentenceData.sentenceSymbol;
+  // questionSentenceData.errorInSentenceCreation;
 
   console.log(
     ">>End of palette.model>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> resultArr",
-    resultArr1
+    questionSentenceData.resultArr
   );
 
-  let responseObj = formatFinalSentence(
-    resultArr1,
-    sentenceFormula1,
-    errorInSentenceCreation1
+  let questionResponseObj = formatFinalSentence(
+    questionSentenceData.resultArr,
+    questionSentenceData.sentenceFormula,
+    questionSentenceData.errorInSentenceCreation
   );
 
   console.log(
     ">>End of palette.model>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> palette",
-    responseObj.palette
+    questionResponseObj.palette
   );
 
-  let createdSentenceData2 = createSentence.createSentence(
+  let answerSentenceData = createSentence.createSentence(
     "ENG",
-    sentenceNumber1,
-    sentenceSymbol1,
+    questionSentenceData.sentenceNumber,
+    questionSentenceData.sentenceSymbol,
     useDummy,
-    true
+    true,
+    questionSentenceData.resultArr
   );
+
+  console.log("Did it work??");
+  console.log("answerSentenceData", answerSentenceData);
 
   // sentenceStructure.forEach((chunk) => {
   // if (chunk.wordtype === "noun") {
@@ -59,7 +63,7 @@ exports.fetchPalette = (req) => {
 
   //Now bring the features from sentenceStructure (POL) and add them to the matching chunkId chunks from ENG structure.
 
-  return Promise.all([responseObj]).then((array) => {
+  return Promise.all([questionResponseObj]).then((array) => {
     return array[0];
   });
 };
@@ -79,17 +83,17 @@ function formatFinalSentence(
       errorInSentenceCreation: errorInSentenceCreation.errorMessage,
     };
 
-    responseObj = {
+    questionResponseObj = {
       message: "No sentence could be created from the specifications.",
       fragment: finalSentence,
       palette: null,
       errorMessage,
     };
   } else {
-    responseObj = {
+    questionResponseObj = {
       palette: finalSentence,
     };
   }
 
-  return responseObj;
+  return questionResponseObj;
 }

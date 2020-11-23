@@ -8,5 +8,10 @@ exports.inflectionChainsReference = {
     noun: ["number", "gcase"],
     adjective: ["form"],
     verb: ["form", "tense", "person", "number"],
+    allowableIncomingTransfers: {
+      noun: ["number"],
+      adjective: ["form"],
+      verb: ["form", "tense", "person", "number"],
+    },
   },
 };

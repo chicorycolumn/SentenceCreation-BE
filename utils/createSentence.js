@@ -10,7 +10,8 @@ exports.createSentence = (
   sentenceNumber,
   sentenceSymbol,
   useDummy,
-  getTranslations
+  generateAnswers,
+  questionResultArray
 ) => {
   console.log("createSentence fxn was given these args", {
     currentLanguage,
@@ -70,19 +71,85 @@ exports.createSentence = (
 
   let sentenceStructure = sentenceFormula.structure;
 
-  let doneChunkIds = [];
-  let headIds = [];
-
-  sentenceStructure.forEach((chunk) => {
-    if (typeof chunk === "object" && chunk.agreeWith) {
-      headIds.push(chunk.agreeWith);
-    }
-  });
-  headIds = Array.from(new Set(headIds));
-
-  if (getTranslations) {
+  if (generateAnswers) {
     console.log("ENG-sentenceStructure", sentenceStructure);
-    return;
+    console.log("POL-questionResultArray", questionResultArray);
+
+    questionResultArray.forEach((questionResArrItem) => {
+      let answerStructureChunk = sentenceStructure.find((structureChunk) => {
+        return (
+          structureChunk.chunkId === questionResArrItem.structureChunk.chunkId
+        );
+      });
+
+      if (!answerStructureChunk) {
+        return;
+      }
+
+      let questionSelectedLemmaObject = questionResArrItem.selectedLemmaObj;
+      let questionSelectedWord = questionResArrItem.selectedWord;
+      let questionStructureChunk = questionResArrItem.structureChunk;
+
+      console.log("/////////////////GO");
+      console.log(answerStructureChunk.chunkId);
+      console.log("questionSelectedLemmaObject", questionSelectedLemmaObject);
+      console.log("So, the Polish lemma chosen was");
+      console.log(questionSelectedLemmaObject.lemma);
+      console.log("and its english translations are");
+
+      let lemmasToSearch = questionSelectedLemmaObject.translations.ENG;
+
+      console.log(lemmasToSearch);
+      console.log(
+        "We will search for all ENG lemma objects with that english lemma as lemma."
+      );
+
+      let source = words[gpUtils.giveSetKey(answerStructureChunk.wordtype)];
+
+      let matchingAnswerLemmaObjects = source.filter((lObj) => {
+        return lemmasToSearch.includes(lObj.lemma);
+      });
+
+      matchingAnswerLemmaObjects = matchingAnswerLemmaObjects.filter(
+        (answerLemmaObject) => {
+          return gpUtils.areTwoFlatArraysEqual(
+            questionSelectedLemmaObject.tags,
+            answerLemmaObject.tags
+          );
+        }
+      );
+
+      let selectedAnswerLemmaObject = gpUtils.selectRandom(
+        matchingAnswerLemmaObjects
+      );
+
+      console.log("I found this match:");
+      console.log(selectedAnswerLemmaObject);
+      answerStructureChunk.specificLemmas = [selectedAnswerLemmaObject.lemma];
+      console.log("/////////////////END");
+
+      console.log(
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFTER THE SORT"
+      );
+      console.log("answerStructureChunk", answerStructureChunk);
+
+      refObj.inflectionChainsReference[
+        currentLanguage
+      ].allowableIncomingTransfers[answerStructureChunk.wordtype].forEach(
+        (featureKey) => {
+          if (questionStructureChunk[featureKey]) {
+            answerStructureChunk[featureKey] =
+              questionStructureChunk[featureKey];
+          }
+        }
+      );
+
+      console.log(
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFTER THE FEATURE TRANSFER"
+      );
+      console.log("answerStructureChunk", answerStructureChunk);
+    });
+    // return;
     // return;
     //At this point, a Polish sentence has already been created by the app.
     //We must harvest the features from it, that match to the chunks of this english formula.
@@ -116,9 +183,24 @@ exports.createSentence = (
      *
      * 3) Now allow createSentence to run, and the english translation of the polish sentence will be created.
      *
-     * 4) Modify the recursive traverser, so that if(getTranslations), it will not just select one happy route, but rather create sentences for all happy routes.
+     * 4) Modify the recursive traverser, so that if(generateAnswers), it will not just select one happy route, but rather create sentences for all happy routes.
      */
   }
+
+  console.log("-------------------------------------");
+  console.log("sentenceStructure", sentenceStructure);
+
+  let doneChunkIds = [];
+  let headIds = [];
+
+  sentenceStructure.forEach((chunk) => {
+    if (typeof chunk === "object" && chunk.agreeWith) {
+      headIds.push(chunk.agreeWith);
+    }
+  });
+  headIds = Array.from(new Set(headIds));
+
+  console.log({ headIds });
 
   //STEP ONE: Select headwords and add to result array.
   headIds.forEach((headId) => {
@@ -129,7 +211,7 @@ exports.createSentence = (
     );
     doneChunkIds.push(chunkId);
 
-    // console.log(">>STEP ONE", headChunk);
+    console.log(">>STEP ONE", headChunk);
     scUtils.findMatchingWordThenAddToResultArray(
       headChunk,
       resultArr,
@@ -138,6 +220,8 @@ exports.createSentence = (
       errorInSentenceCreation,
       currentLanguage
     );
+
+    console.log("Finished step one.");
   });
 
   //STEP TWO: Select dependent words and add to result array.
