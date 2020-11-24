@@ -5,8 +5,8 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        manTags: ["nonexistent tag"],
-        optTags: [],
+        tags: ["nonexistent tag"],
+
         gcase: ["nom"],
         number: ["singular"],
         gender: [],
@@ -19,8 +19,8 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        manTags: [],
-        optTags: [],
+        tags: [],
+
         gcase: ["nonexistent gcase"],
         number: [],
         gender: [],
@@ -33,8 +33,8 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        manTags: ["dummy"],
-        optTags: [],
+        tags: ["dummy"],
+
         gcase: ["nom"],
         number: [],
         gender: [],
@@ -47,8 +47,8 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        manTags: ["dummy"],
-        optTags: [],
+        tags: ["dummy"],
+
         gcase: ["nom"],
         number: ["singular", "plural"],
         gender: [],
@@ -61,8 +61,8 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        manTags: ["dummy"],
-        optTags: [],
+        tags: ["dummy"],
+
         gcase: ["nom", "loc"],
         number: [],
         gender: [],
@@ -75,8 +75,8 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        manTags: ["dummy"],
-        optTags: [],
+        tags: ["dummy"],
+
         gcase: ["ins"],
         number: [],
         gender: [],
@@ -89,8 +89,8 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        manTags: ["dummy2"],
-        optTags: [],
+        tags: ["dummy2"],
+
         gcase: ["loc"],
         number: ["singular"],
         gender: [],
@@ -103,8 +103,8 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        manTags: ["dummy3"],
-        optTags: [],
+        tags: ["dummy3"],
+
         gcase: ["loc"],
         number: ["singular"],
         gender: [],
@@ -117,8 +117,8 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        manTags: ["foobar-A"],
-        optTags: [],
+        tags: ["foobar-A"],
+
         gcase: ["nom"],
         number: ["singular"],
         gender: [],
@@ -126,8 +126,8 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "nou-2",
         wordtype: "noun",
-        manTags: ["foobar-B"],
-        optTags: [],
+        tags: ["foobar-B"],
+
         gcase: ["nom"],
         number: ["singular"],
         gender: [],
@@ -135,8 +135,8 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "nou-3",
         wordtype: "noun",
-        manTags: ["foobar-C"],
-        optTags: [],
+        tags: ["foobar-C"],
+
         gcase: ["nom"],
         number: ["singular"],
         gender: [],
@@ -155,8 +155,8 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        manTags: ["foobar-A"],
-        optTags: [],
+        tags: ["foobar-A"],
+
         gcase: ["nom"],
         number: ["singular"],
         gender: [],
@@ -164,8 +164,8 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "nou-2",
         wordtype: "noun",
-        manTags: ["foobar-B"],
-        optTags: [],
+        tags: ["foobar-B"],
+
         gcase: ["nom"],
         number: ["singular"],
         gender: [],
@@ -173,8 +173,8 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "nou-3",
         wordtype: "noun",
-        manTags: ["foobar-C"],
-        optTags: [],
+        tags: ["foobar-C"],
+
         gcase: ["nom"],
         number: ["singular"],
         gender: [],
@@ -195,8 +195,8 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        manTags: [],
-        optTags: [],
+        tags: [],
+
         gcase: ["nom"],
         number: ["singular"],
         gender: [],
@@ -213,8 +213,8 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        manTags: [],
-        optTags: [],
+        tags: [],
+
         gcase: ["acc"],
         number: ["plural"],
         gender: [],
@@ -230,8 +230,8 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        manTags: ["wearable"],
-        optTags: [],
+        tags: ["wearable"],
+
         gcase: ["nom"],
         number: [],
         gender: [],
@@ -244,8 +244,8 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        manTags: ["basic2"],
-        optTags: [],
+        tags: ["basic2"],
+
         form: ["verb"],
         person: ["2per"],
       },
@@ -257,8 +257,8 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        manTags: ["basic2"],
-        optTags: [],
+        tags: ["basic2"],
+
         form: ["verb"],
         tense: ["conditional"],
         number: ["plural"],
@@ -271,8 +271,8 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        manTags: ["basic2"],
-        optTags: [],
+        tags: ["basic2"],
+
         form: ["verb"],
         tense: ["present"],
         person: ["2per"],
@@ -287,8 +287,8 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        manTags: ["basic2"],
-        optTags: [],
+        tags: ["basic2"],
+
         form: ["infinitive"],
       },
     ],
@@ -299,8 +299,8 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        manTags: ["basic2"],
-        optTags: [],
+        tags: ["basic2"],
+
         form: ["verb"],
         person: ["impersonal"],
       },
@@ -312,8 +312,8 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        manTags: ["basic2"],
-        optTags: [],
+        tags: ["basic2"],
+
         form: ["verb"],
         person: ["impersonal"],
         number: ["plural"],
@@ -326,8 +326,8 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        manTags: ["basic2"],
-        optTags: [],
+        tags: ["basic2"],
+
         form: ["participle"],
       },
     ],
@@ -338,8 +338,8 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        manTags: ["basic2"],
-        optTags: [],
+        tags: ["basic2"],
+
         form: ["participle"],
         gender: ["f"],
       },
@@ -351,8 +351,8 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        manTags: ["dummy-nou-010"],
-        optTags: [],
+        tags: ["dummy-nou-010"],
+
         number: ["singular", "plural"],
         gcase: ["acc"],
       },
@@ -364,8 +364,8 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        manTags: ["basic2"],
-        optTags: [],
+        tags: ["basic2"],
+
         gender: ["f", "nonvirile"],
         form: ["participle"],
       },
@@ -377,8 +377,8 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        manTags: ["basic2"],
-        optTags: [],
+        tags: ["basic2"],
+
         gender: ["n", "virile"],
         form: ["participle"],
       },
@@ -390,8 +390,8 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        manTags: ["basic2"],
-        optTags: [],
+        tags: ["basic2"],
+
         gender: ["n", "virile"],
         person: ["2per"],
         form: ["participle"],
@@ -404,8 +404,8 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        manTags: ["basic2"],
-        optTags: [],
+        tags: ["basic2"],
+
         form: ["verbalNoun"],
       },
     ],
@@ -416,8 +416,8 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        manTags: ["basic2"],
-        optTags: [],
+        tags: ["basic2"],
+
         form: ["verbalNoun"],
         gender: ["f"],
       },
@@ -429,8 +429,8 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        manTags: ["basic2"],
-        optTags: [],
+        tags: ["basic2"],
+
         form: ["verb"],
         tense: ["past", "conditional"],
         person: ["1per"],
@@ -445,8 +445,8 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        manTags: ["basic2"],
-        optTags: [],
+        tags: ["basic2"],
+
         form: ["verb"],
         tense: ["past", "conditional"],
         person: ["1per"],
@@ -461,8 +461,8 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        manTags: ["basic2"],
-        optTags: [],
+        tags: ["basic2"],
+
         form: ["verb"],
         tense: ["past", "conditional"],
         person: ["1per"],
@@ -477,8 +477,8 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        manTags: ["basic2"],
-        optTags: [],
+        tags: ["basic2"],
+
         form: ["participle"],
         tense: ["activeAdjectival"],
         person: ["1per"],
@@ -493,8 +493,8 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        manTags: ["basic2"],
-        optTags: [],
+        tags: ["basic2"],
+
         form: ["participle"],
         tense: ["passiveAdjectival"],
         person: ["2per"],
@@ -509,8 +509,8 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        manTags: ["basic2"],
-        optTags: [],
+        tags: ["basic2"],
+
         form: ["participle"],
         person: ["1per", "2per"],
         number: ["plural"],

@@ -12,8 +12,8 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        manTags: ["person"],
-        optTags: [],
+        tags: ["person"],
+
         gcase: ["nom"],
         number: ["singular", "plural"],
         gender: [],
@@ -24,8 +24,7 @@ exports.sentenceFormulasBank = {
         wordtype: "verb",
         tense: [],
         person: ["3per"],
-        manTags: ["basic2"],
-        optTags: [],
+        tags: ["basic2"],
       },
     ],
     primaryOrders: [["fix-1", "nou-1", "ver-1"]],
@@ -44,8 +43,8 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        manTags: ["person"],
-        optTags: [],
+        tags: ["person"],
+
         gcase: ["nom"],
         number: ["singular", "plural"],
       },
@@ -55,8 +54,7 @@ exports.sentenceFormulasBank = {
         wordtype: "verb",
         tense: [],
         person: ["3per"],
-        manTags: ["basic2"],
-        optTags: [],
+        tags: ["basic2"],
       },
     ],
     primaryOrders: [["fix-1", "nou-1", "ver-1"]],
@@ -75,8 +73,8 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        manTags: ["person"],
-        optTags: [],
+        tags: ["person"],
+
         gcase: ["nom"],
         number: ["singular", "plural"],
       },
@@ -86,8 +84,7 @@ exports.sentenceFormulasBank = {
         wordtype: "verb",
         tense: [],
         person: ["3per"],
-        manTags: ["basic2"],
-        optTags: [],
+        tags: ["basic2"],
       },
       { chunkId: "fix-2", wordtype: "fixed", value: "quickly" },
     ],

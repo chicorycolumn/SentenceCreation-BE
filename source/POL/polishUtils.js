@@ -1,6 +1,6 @@
-const lfUtils = require("./lemmaFilteringUtils.js");
-const scUtils = require("./sentenceCreationUtils.js");
-const gpUtils = require("./generalPurposeUtils.js");
+const lfUtils = require("../../utils/lemmaFilteringUtils.js");
+const otUtils = require("../../utils/objectTraversingUtils.js");
+const gpUtils = require("../../utils/generalPurposeUtils.js");
 
 //Alphman say: Need to, in other files, allow m1 m2 m3 to all read as m if only m key exists and not others.
 exports.fillVerbInflections = (lemmaObject) => {

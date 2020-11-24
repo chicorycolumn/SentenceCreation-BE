@@ -3,7 +3,7 @@ const {
   extractNestedRoutes,
   concoctNestedRoutes,
   findObjectInNestedObject,
-} = require("../utils/sentenceCreationUtils.js");
+} = require("../utils/objectTraversingUtils.js");
 
 describe("findObjectInNestedObject", () => {
   let testObj1 = {

@@ -1,0 +1,329 @@
+const otUtils = require("./objectTraversingUtils.js");
+const gpUtils = require("./generalPurposeUtils.js");
+const lfUtils = require("./lemmaFilteringUtils.js");
+const POLUtils = require("../source/POL/polishUtils.js");
+const ENGUtils = require("../source/ENG/englishUtils.js");
+const refObj = require("./referenceObjects.js");
+
+exports.processSentenceFormula = (
+  currentLanguage,
+  sentenceNumber,
+  sentenceSymbol,
+  useDummy,
+  generateAnswers,
+  questionResultArray
+) => {
+  console.log("processSentenceFormula fxn was given these args", {
+    currentLanguage,
+    sentenceNumber,
+    sentenceSymbol,
+    useDummy,
+  });
+
+  //STEP ZERO: Get necessary components.
+  const { wordsBank } = require(`../source/${currentLanguage}/words.js`);
+  const {
+    dummyWordsBank,
+  } = require(`../source/${currentLanguage}/dummy/dummyWords.js`);
+  const {
+    sentenceFormulasBank,
+  } = require(`../source/${currentLanguage}/sentenceFormulas.js`);
+  const {
+    dummySentenceFormulasBank,
+  } = require(`../source/${currentLanguage}/dummy/dummySentenceFormulas.js`);
+
+  let defaultSentenceNumber = 50;
+  let defaultSentenceSymbol = "";
+  sentenceSymbol = sentenceSymbol || defaultSentenceSymbol;
+  let errorInSentenceCreation = {};
+  let resultArr = [];
+
+  let words = useDummy
+    ? gpUtils.copyAndCombineWordbanks(wordsBank, dummyWordsBank)
+    : gpUtils.copyWithoutReference(wordsBank);
+
+  let sentenceFormulas = useDummy
+    ? gpUtils.copyWithoutReference(dummySentenceFormulasBank)
+    : gpUtils.copyWithoutReference(sentenceFormulasBank);
+
+  if (sentenceNumber) {
+    sentenceFormula = sentenceFormulas[sentenceNumber];
+    sentenceSymbol = sentenceFormula.symbol;
+  } else if (sentenceSymbol) {
+    let matchingSentenceFormulaData = otUtils.findObjectInNestedObject(
+      sentenceFormulas,
+      {
+        symbol: sentenceSymbol,
+      },
+      true
+    );
+
+    sentenceFormula = matchingSentenceFormulaData.value;
+    sentenceNumber = matchingSentenceFormulaData.key;
+  } else {
+    sentenceFormula = sentenceFormulas[defaultSentenceNumber];
+    sentenceSymbol = sentenceFormula.symbol;
+  }
+
+  //STEP ZERO.FIVE: Prepare chunkIds. Optionally modify the answer's sentenceStructure to fit question's.
+
+  let sentenceStructure = sentenceFormula.structure;
+
+  if (generateAnswers) {
+    exports.conformAnswerStructureToQuestionStructure(
+      sentenceStructure,
+      questionResultArray,
+      words,
+      currentLanguage
+    );
+  }
+
+  console.log(
+    "processSentenceFormula fxn just before step one says sentenceStructure is",
+    sentenceStructure
+  );
+
+  let doneChunkIds = [];
+  let headIds = [];
+
+  sentenceStructure.forEach((chunk) => {
+    if (typeof chunk === "object" && chunk.agreeWith) {
+      headIds.push(chunk.agreeWith);
+    }
+  });
+  headIds = Array.from(new Set(headIds));
+
+  console.log({ headIds });
+
+  //STEP ONE: Select headwords and add to result array.
+  headIds.forEach((headId) => {
+    let chunkId = headId;
+    let headChunk = sentenceStructure.find(
+      (structureChunk) =>
+        typeof structureChunk === "object" && structureChunk.chunkId === chunkId
+    );
+    doneChunkIds.push(chunkId);
+
+    console.log(">>STEP ONE", headChunk);
+    otUtils.findMatchingWordThenAddToResultArray(
+      headChunk,
+      resultArr,
+      words,
+      errorInSentenceCreation,
+      currentLanguage
+    );
+
+    console.log("Finished step one.");
+  });
+
+  //STEP TWO: Select dependent words and add to result array.
+  headIds.forEach((headId) => {
+    let dependentChunks = sentenceStructure.filter(
+      (structureChunk) =>
+        typeof structureChunk === "object" &&
+        structureChunk.agreeWith === headId
+    );
+
+    if (dependentChunks.length) {
+      dependentChunks.forEach((dependentChunk) => {
+        let headChunk = sentenceStructure.find(
+          (structureChunk) =>
+            typeof structureChunk === "object" &&
+            structureChunk.chunkId === headId
+        );
+
+        refObj.inflectionChains[currentLanguage]["adjective"].forEach(
+          (featureKey) => {
+            dependentChunk[featureKey] = headChunk[featureKey];
+          }
+        );
+
+        doneChunkIds.push(dependentChunk.chunkId);
+
+        otUtils.findMatchingWordThenAddToResultArray(
+          dependentChunk,
+          resultArr,
+          words,
+          errorInSentenceCreation,
+          currentLanguage
+        );
+      });
+    }
+  });
+
+  //STEP THREE: Select all other words and add to result array.
+  sentenceStructure.forEach((structureChunk) => {
+    if (
+      typeof structureChunk !== "object" ||
+      !doneChunkIds.includes(structureChunk.chunkId)
+    ) {
+      otUtils.findMatchingWordThenAddToResultArray(
+        structureChunk,
+        resultArr,
+        words,
+        errorInSentenceCreation,
+        currentLanguage
+      );
+    }
+  });
+
+  return {
+    resultArr,
+    sentenceFormula,
+    sentenceNumber,
+    sentenceSymbol,
+    errorInSentenceCreation,
+  };
+};
+
+exports.buildSentenceFromArray = (unorderedArr, sentenceFormula) => {
+  let selectedWords = [];
+
+  if (sentenceFormula.primaryOrders) {
+    let order =
+      sentenceFormula.primaryOrders.length === 1
+        ? sentenceFormula.primaryOrders[0]
+        : gpUtils.selectRandom(sentenceFormula.primaryOrders);
+
+    let orderedArr = [];
+    order.forEach((chunkId) => {
+      orderedArr.push(
+        unorderedArr.find((item) => item.structureChunk.chunkId === chunkId)
+      );
+    });
+
+    selectedWords = orderedArr.map((obj) => obj.selectedWord);
+  } else {
+    selectedWords = unorderedArr.map((obj) => obj.selectedWord);
+  }
+
+  let producedSentence = gpUtils.capitaliseFirst(selectedWords.join(" ") + ".");
+  return producedSentence;
+};
+
+exports.formatFinalSentence = (
+  resultArr,
+  sentenceFormula,
+  errorInSentenceCreation
+) => {
+  let finalSentence = exports.buildSentenceFromArray(
+    resultArr,
+    sentenceFormula
+  );
+
+  if (errorInSentenceCreation.errorMessage) {
+    let errorMessage = {
+      errorInSentenceCreation: errorInSentenceCreation.errorMessage,
+    };
+
+    questionResponseObj = {
+      message: "No sentence could be created from the specifications.",
+      fragment: finalSentence,
+      finalSentence: null,
+      errorMessage,
+    };
+  } else {
+    questionResponseObj = {
+      finalSentence,
+    };
+  }
+
+  return questionResponseObj;
+};
+
+exports.conformAnswerStructureToQuestionStructure = (
+  sentenceStructure,
+  questionResultArray,
+  words,
+  currentLanguage
+) => {
+  console.log(
+    "conformAnswerStructureToQuestionStructure fxn, ENG-sentenceStructure",
+    sentenceStructure
+  );
+  console.log(
+    "conformAnswerStructureToQuestionStructure fxn, POL-questionResultArray",
+    questionResultArray
+  );
+
+  questionResultArray.forEach((questionResArrItem) => {
+    let answerStructureChunk = sentenceStructure.find((structureChunk) => {
+      return (
+        structureChunk.chunkId === questionResArrItem.structureChunk.chunkId
+      );
+    });
+
+    if (!answerStructureChunk) {
+      return;
+    }
+
+    let questionSelectedLemmaObject = questionResArrItem.selectedLemmaObj;
+    let questionSelectedWord = questionResArrItem.selectedWord;
+    let questionStructureChunk = questionResArrItem.structureChunk;
+
+    console.log(
+      "So, the Polish lemma chosen was",
+      questionSelectedLemmaObject.lemma
+    );
+
+    let lemmasToSearch = questionSelectedLemmaObject.translations.ENG;
+
+    console.log(
+      "Going to search for all ENG lobjs with these lemmas:",
+      lemmasToSearch
+    );
+
+    let source = words[gpUtils.giveSetKey(answerStructureChunk.wordtype)];
+
+    let matchingAnswerLemmaObjects = source.filter((lObj) => {
+      return lemmasToSearch.includes(lObj.lemma);
+    });
+
+    matchingAnswerLemmaObjects = matchingAnswerLemmaObjects.filter(
+      (answerLemmaObject) => {
+        return gpUtils.areTwoFlatArraysEqual(
+          questionSelectedLemmaObject.tags,
+          answerLemmaObject.tags
+        );
+      }
+    );
+
+    answerStructureChunk.specificIds = matchingAnswerLemmaObjects.map(
+      (lObj) => lObj.id
+    );
+
+    console.log("I found these matches:", answerStructureChunk.specificIds);
+    console.log("answerStructureChunk", answerStructureChunk);
+
+    refObj.inflectionChains[currentLanguage].allowableIncomingTransfers[ //alpha say for tantum plurales, make Number blank (all possible) in english noun chunk
+      answerStructureChunk.wordtype
+    ]
+      .forEach((featureKey) => {
+        if (questionStructureChunk[featureKey]) {
+          answerStructureChunk[featureKey] = questionStructureChunk[featureKey];
+        }
+      });
+
+    console.log(
+      "answerStructureChunk after the feature transfer",
+      answerStructureChunk
+    );
+  });
+
+  /*
+   * 1) Take the lemma from lobj nail, and put that as specificLemmas key in english chunk that has same chunkid as polish chunk connected to gwø»d».
+   *
+   * 2) Then bring over particular features.
+   *
+   * The polish noun chunk should copy its Number onto the english noun chunk.
+   *  although for tantum plurales, make Number blank (all possible) in english noun chunk.
+   *
+   * The polish adjective chunk should copy its Form onto the english adjective chunk.
+   *
+   * The polish verb chunk should copy its Form Tense Person Number all onto the english verb chunk.
+   *
+   * 3) Now allow processSentenceFormula to run, and the english translation of the polish sentence will be created.
+   *
+   * 4) Modify the recursive traverser, so that if(generateAnswers), it will not just select one happy route, but rather create sentences for all happy routes.
+   */
+};

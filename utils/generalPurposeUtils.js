@@ -1,5 +1,5 @@
 const lfUtils = require("./lemmaFilteringUtils.js");
-const scUtils = require("./sentenceCreationUtils.js");
+const otUtils = require("./objectTraversingUtils.js");
 
 exports.selectRandom = (array) => {
   return array[Math.floor(Math.random() * array.length)];

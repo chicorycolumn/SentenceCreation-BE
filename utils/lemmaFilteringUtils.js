@@ -1,7 +1,7 @@
 const gpUtils = require("./generalPurposeUtils.js");
-const scUtils = require("./sentenceCreationUtils.js");
-const POLUtils = require("./specificPolishUtils.js");
-const ENGUtils = require("./specificEnglishUtils.js");
+const otUtils = require("./objectTraversingUtils.js");
+const POLUtils = require("../source/POL/polishUtils.js");
+const ENGUtils = require("../source/ENG/englishUtils.js");
 const refObj = require("./referenceObjects.js");
 
 exports.filterByKey = (lemmaObjectArr, requirementArrs, key) => {
@@ -17,21 +17,17 @@ exports.filterByKey = (lemmaObjectArr, requirementArrs, key) => {
 exports.filterWithinSelectedLemmaObject = (
   lemmaObject,
   structureChunk,
-  inflectionChainRefObj,
   currentLanguage
 ) => {
   console.log(
     "filterWithinSelectedLemmaObject fxn was given these arguments:",
-    { lemmaObject, structureChunk, inflectionChainRefObj, currentLanguage }
+    { lemmaObject, structureChunk, currentLanguage }
   );
 
   let source = lemmaObject.inflections;
 
-  //PART ONE: Move feature from lobj to structurechunk.
-  structureChunk.manTags = structureChunk.manTags.filter((tag) => {
-    lemmaObject.tags.includes(tag);
-  });
-  structureChunk.optTags = structureChunk.optTags.filter((tag) => {
+  //PART ONE: Move features from lobj to structurechunk.
+  structureChunk.tags = structureChunk.tags.filter((tag) => {
     lemmaObject.tags.includes(tag);
   });
 
@@ -41,7 +37,7 @@ exports.filterWithinSelectedLemmaObject = (
     structureChunk["gender"] = [lemmaObject["gender"]];
   }
 
-  //PART TWO: Return immediately if requested word is an unnested participle.
+  //PART TWO: Optionally return immediately if requested word is a participle with no inflections.
   if (["verb"].includes(structureChunk.wordtype)) {
     if (
       structureChunk.form &&
@@ -49,27 +45,40 @@ exports.filterWithinSelectedLemmaObject = (
       structureChunk.tense
     ) {
       if (currentLanguage === "POL") {
-        source = getSpecialTense(structureChunk, lemmaObject, source, [
-          "contemporaryAdverbial",
-          "anteriorAdverbial",
-        ]);
-      }
-      if (currentLanguage === "ENG") {
+        let participle = exports.retrieveJustParticiple(
+          structureChunk,
+          lemmaObject,
+          ["contemporaryAdverbial", "anteriorAdverbial"]
+        );
+
+        console.log("filterWithinSelectedLemmaObject fxn part two", participle);
+        if (participle) {
+          return exports.sendFinalisedWord(null, participle, structureChunk);
+        }
+      } else if (currentLanguage === "ENG") {
         ENGUtils.addSpecialVerbConjugations(lemmaObject, currentLanguage);
 
-        source = getSpecialTense(structureChunk, lemmaObject, source, [
-          "contemporaryAdverbial",
-          "anteriorAdverbial",
-          "passiveAdjectival",
-          "activeAdjectival",
-          "pastParticiple",
-        ]);
+        let participle = exports.retrieveJustParticiple(
+          structureChunk,
+          lemmaObject,
+          [
+            "contemporaryAdverbial",
+            "anteriorAdverbial",
+            "passiveAdjectival",
+            "activeAdjectival",
+            "pastParticiple",
+          ]
+        );
+
+        console.log("filterWithinSelectedLemmaObject fxn part two", participle);
+        if (participle) {
+          return exports.sendFinalisedWord(null, participle, structureChunk);
+        }
       }
     }
   }
 
-  //PART THREE: End here if, producing the required words for any 'ad hoc' lobjs. So this is lobjs who aren't deficient, and don't hold their words already, but instead generate them programmatically.
-
+  //PART THREE: Optionally return immediately if 'ad hoc' lobj. So this is lobjs who we know aren't deficient, and will generate their words programmatically.
   if (currentLanguage === "ENG") {
     if (
       ["verb"].includes(structureChunk.wordtype) &&
@@ -78,39 +87,35 @@ exports.filterWithinSelectedLemmaObject = (
       console.log(555555555, { structureChunk, lemmaObject, currentLanguage });
 
       // structureChunk.form = ["verb"];
-      //Why was form undefined? Either the key just shouldn't be there, if no one put it there.
+      //Alpha ask: Why was form undefined? Either the key just shouldn't be there, if no one put it there.
       //But since it has been put there, why undefined?
 
-      console.log(5555555555, structureChunk);
-
-      source = ENGUtils.generateAndReturnSimpleVerbConjugation(
+      let result = ENGUtils.generateAndReturnSimpleVerbConjugation(
         structureChunk,
         lemmaObject,
         currentLanguage
       );
 
-      console.log(555555555555, { source });
-
-      return sendFinalisedWord(null, source, structureChunk);
+      if (result) {
+        return exports.sendFinalisedWord(null, result, structureChunk);
+      }
     }
   }
 
-  console.log(4444444444444444);
-
-  //PART FOUR: Drill down through the lobj, ensuring we don't randomly go a dead end, and extract final word.
-
+  //PART FOUR: Drill down through the lobj and extract final word (ensuring we don't randomly go a dead end).
   if (typeof source === "string") {
-    return sendFinalisedWord(null, source, structureChunk);
+    return exports.sendFinalisedWord(null, source, structureChunk);
   }
 
-  let inflectionChain = inflectionChainRefObj[structureChunk.wordtype];
+  let inflectionChain =
+    refObj.inflectionChains[currentLanguage][structureChunk.wordtype];
 
   let requirementArrs = [];
   inflectionChain.forEach((key) => {
     requirementArrs.push([key, structureChunk[key] || []]);
   });
 
-  let { routesByNesting, routesByLevel } = scUtils.extractNestedRoutes(
+  let { routesByNesting, routesByLevel } = otUtils.extractNestedRoutes(
     lemmaObject.inflections
   );
 
@@ -136,25 +141,7 @@ exports.filterWithinSelectedLemmaObject = (
     }
   });
 
-  return sendFinalisedWord(errorInDrilling, source, structureChunk);
-
-  function sendFinalisedWord(errorInDrilling, source, structureChunk) {
-    if (errorInDrilling) {
-      return null;
-    } else {
-      if (typeof source === "string") {
-        return {
-          selectedWord: source,
-          updatedStructureChunk: structureChunk,
-        };
-      } else {
-        return {
-          selectedWord: gpUtils.selectRandom(source),
-          updatedStructureChunk: structureChunk,
-        };
-      }
-    }
-  }
+  return exports.sendFinalisedWord(errorInDrilling, source, structureChunk);
 
   function drillDownOneLevel_filterWithin(
     source,
@@ -208,65 +195,85 @@ exports.filterWithinSelectedLemmaObject = (
         }
       );
 
-      // console.log({ putativePathsLookingAhead });
-
       return putativePathsLookingAhead.length;
     });
 
     console.log({ validFeatures });
 
-    if (validFeatures.length) {
-      let selectedFeature = gpUtils.selectRandom(validFeatures);
-
-      console.log(
-        `                                                    Selecting feature ${selectedFeature} as ${requiredFeatureCategory}.`
-      );
-
-      structureChunk[requiredFeatureCategory] = [selectedFeature];
-      drillPath.push(selectedFeature);
-      return source[selectedFeature];
-    } else {
+    if (!validFeatures.length) {
       return null;
     }
-  }
 
-  function getSpecialTense(
-    structureChunk,
-    lemmaObject,
-    source,
-    specialTenseArr
-  ) {
-    specialTenseArr.forEach((specialTense) => {
+    let selectedFeature = gpUtils.selectRandom(validFeatures);
+
+    console.log(
+      `                                                    Selecting feature ${selectedFeature} as ${requiredFeatureCategory}.`
+    );
+
+    structureChunk[requiredFeatureCategory] = [selectedFeature];
+    drillPath.push(selectedFeature);
+    return source[selectedFeature];
+  }
+};
+
+exports.retrieveJustParticiple = (
+  structureChunk,
+  lemmaObject,
+  specialTenseArr
+) => {
+  let result = null;
+
+  specialTenseArr.forEach((specialTense) => {
+    if (!result) {
       if (
         structureChunk.tense.includes(specialTense) &&
         lemmaObject.inflections.participle[specialTense]
       ) {
-        source = lemmaObject.inflections.participle[specialTense];
+        result = lemmaObject.inflections.participle[specialTense];
       }
-    });
-    return source;
+    }
+  });
+  return result;
+};
+
+exports.sendFinalisedWord = (errorInDrilling, source, structureChunk) => {
+  if (errorInDrilling) {
+    return null;
+  } else {
+    if (typeof source === "string") {
+      return {
+        selectedWord: source,
+        updatedStructureChunk: structureChunk,
+      };
+    } else {
+      return {
+        selectedWord: gpUtils.selectRandom(source),
+        updatedStructureChunk: structureChunk,
+      };
+    }
   }
 };
 
 exports.filterOutDeficientLemmaObjects = (
   sourceArr,
   specObj,
-  inflectionChainRefObj
+  currentLanguage
 ) => {
-  let inflectionChain = inflectionChainRefObj[specObj.wordtype];
+  let inflectionChain =
+    refObj.inflectionChains[currentLanguage][specObj.wordtype];
   let requirementArrs = inflectionChain.map((key) => specObj[key] || []);
 
   return sourceArr.filter((lObj) => {
     if (!lObj.deficient) {
       return true;
     } else {
-      let { routesByNesting, routesByLevel } = scUtils.extractNestedRoutes(
+      let { routesByNesting, routesByLevel } = otUtils.extractNestedRoutes(
         lObj.inflections
       );
 
       let inflectionPathsInSource = routesByNesting;
 
-      let inflectionPathsInRequirements = scUtils.concoctNestedRoutes(
+      let inflectionPathsInRequirements = otUtils.concoctNestedRoutes(
         requirementArrs,
         routesByLevel
       );
@@ -283,23 +290,14 @@ exports.filterOutDeficientLemmaObjects = (
   });
 };
 
-exports.filterByTag = (wordset, tags, mandatory) => {
+exports.filterByTag = (wordset, tags) => {
   let lemmaObjects = Object.values(wordset);
 
   if (tags.length) {
     return lemmaObjects.filter((lemmaObject) => {
-      if (mandatory) {
-        return tags.every((tag) => lemmaObject.tags.includes(tag));
-      } else {
-        return tags.some((tag) => lemmaObject.tags.includes(tag));
-      }
+      return tags.every((tag) => lemmaObject.tags.includes(tag));
     });
   } else {
     return lemmaObjects;
   }
 };
-
-// exports.filterByLemma = (source, structureChunk) => {
-//   let specificLemma = gpUtils.selectRandom(structureChunk.specificLemmas);
-//   return source.filter((lObj) => lObj.lemma === specificLemma);
-// };

@@ -5,8 +5,8 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        manTags: ["person"],
-        optTags: [],
+        tags: ["person"],
+
         gcase: ["nom"],
         number: ["singular"],
         gender: [],
@@ -15,8 +15,8 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "nou-2",
         wordtype: "noun",
-        manTags: ["edible"],
-        optTags: [],
+        tags: ["edible"],
+
         gcase: ["acc"],
         number: [],
         gender: [],
@@ -29,8 +29,8 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        manTags: ["person"],
-        optTags: [],
+        tags: ["person"],
+
         gcase: ["nom"],
         number: ["singular"],
         gender: [],
@@ -39,8 +39,8 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "nou-2",
         wordtype: "noun",
-        manTags: ["wearable"],
-        optTags: [],
+        tags: ["wearable"],
+
         gcase: ["acc"],
         number: [],
         gender: [],
@@ -53,8 +53,8 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        manTags: ["wearable"],
-        optTags: [],
+        tags: ["wearable"],
+
         gcase: ["nom"],
         number: ["singular"],
         gender: [],
@@ -69,8 +69,8 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        manTags: ["wearable"],
-        optTags: [],
+        tags: ["wearable"],
+
         gcase: ["acc"],
         number: ["singular", "plural"],
         gender: [],
@@ -83,8 +83,8 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        manTags: ["person"],
-        optTags: [],
+        tags: ["person"],
+
         gcase: ["nom"],
         number: ["plural"],
         gender: ["m1"],
@@ -99,14 +99,13 @@ exports.sentenceFormulasBank = {
         chunkId: "adj-1",
         agreeWith: "nou-1",
         wordtype: "adjective",
-        manTags: ["colour"],
-        optTags: [],
+        tags: ["colour"],
       },
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        manTags: ["edible"],
-        optTags: [],
+        tags: ["edible"],
+
         gcase: ["nom"],
         number: ["singular"],
         gender: [],
@@ -122,14 +121,13 @@ exports.sentenceFormulasBank = {
         chunkId: "adj-1",
         agreeWith: "nou-1",
         wordtype: "adjective",
-        manTags: ["colour"],
-        optTags: [],
+        tags: ["colour"],
       },
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        manTags: ["edible"],
-        optTags: [],
+        tags: ["edible"],
+
         gcase: ["nom"],
         number: ["plural"],
         gender: [],
@@ -145,14 +143,13 @@ exports.sentenceFormulasBank = {
         chunkId: "adj-1",
         agreeWith: "nou-1",
         wordtype: "adjective",
-        manTags: ["colour"],
-        optTags: [],
+        tags: ["colour"],
       },
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        manTags: ["person"],
-        optTags: [],
+        tags: ["person"],
+
         gcase: ["nom"],
         number: ["plural"],
         gender: [],
@@ -168,8 +165,8 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        manTags: ["edible"],
-        optTags: [],
+        tags: ["edible"],
+
         gcase: ["acc"],
         number: ["singular"],
         gender: [],
@@ -182,8 +179,8 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        manTags: ["basic2"],
-        optTags: [],
+        tags: ["basic2"],
+
         form: ["verb"],
         tense: ["present"],
         person: ["1per", "2per", "3per"],
@@ -196,8 +193,8 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        manTags: ["person"],
-        optTags: [],
+        tags: ["person"],
+
         gcase: ["nom"],
         number: ["singular", "plural"],
         gender: ["f"],
@@ -208,8 +205,7 @@ exports.sentenceFormulasBank = {
         wordtype: "verb",
         tense: ["present"],
         person: ["3per"],
-        manTags: ["basic2"],
-        optTags: [],
+        tags: ["basic2"],
       },
     ],
   },
@@ -219,8 +215,8 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        manTags: ["person"],
-        optTags: [],
+        tags: ["person"],
+
         gcase: ["nom"],
         number: ["plural"],
         gender: [],
@@ -231,8 +227,7 @@ exports.sentenceFormulasBank = {
         wordtype: "verb",
         tense: ["past"],
         person: ["3per"],
-        manTags: ["basic2"],
-        optTags: [],
+        tags: ["basic2"],
       },
     ],
   },
@@ -242,8 +237,8 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        manTags: ["person"],
-        optTags: [],
+        tags: ["person"],
+
         gcase: ["nom"],
       },
       {
@@ -252,22 +247,21 @@ exports.sentenceFormulasBank = {
         wordtype: "verb",
         tense: ["present"],
         person: ["3per"],
-        manTags: [],
-        optTags: [],
+        tags: [],
+
         specificLemmas: ["mieć"],
       },
       {
         chunkId: "adj-1",
         agreeWith: "nou-2",
         wordtype: "adjective",
-        manTags: ["colour"],
-        optTags: [],
+        tags: ["colour"],
       },
       {
         chunkId: "nou-2",
         wordtype: "noun",
-        manTags: ["edible"],
-        optTags: [],
+        tags: ["edible"],
+
         gcase: ["acc"],
       },
     ],
@@ -280,8 +274,8 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        manTags: ["person"],
-        optTags: [],
+        tags: ["person"],
+
         gcase: ["nom"],
       },
       { chunkId: "fix-1", wordtype: "fixed", value: "nie" },
@@ -291,22 +285,21 @@ exports.sentenceFormulasBank = {
         wordtype: "verb",
         tense: ["past"],
         person: ["3per"],
-        manTags: [],
-        optTags: [],
+        tags: [],
+
         specificLemmas: ["mieć"],
       },
       {
         chunkId: "adj-1",
         agreeWith: "nou-2",
         wordtype: "adjective",
-        manTags: ["colour"],
-        optTags: [],
+        tags: ["colour"],
       },
       {
         chunkId: "nou-2",
         wordtype: "noun",
-        manTags: ["edible"],
-        optTags: [],
+        tags: ["edible"],
+
         gcase: ["gen"],
       },
     ],
@@ -320,14 +313,13 @@ exports.sentenceFormulasBank = {
         chunkId: "adj-0",
         agreeWith: "nou-1",
         wordtype: "adjective",
-        manTags: ["colour"],
-        optTags: [],
+        tags: ["colour"],
       },
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        manTags: ["person"],
-        optTags: [],
+        tags: ["person"],
+
         gcase: ["nom"],
       },
       { chunkId: "fix-1", wordtype: "fixed", value: "nie" },
@@ -337,22 +329,21 @@ exports.sentenceFormulasBank = {
         wordtype: "verb",
         tense: ["past"],
         person: ["3per"],
-        manTags: [],
-        optTags: [],
+        tags: [],
+
         specificLemmas: ["mieć"],
       },
       {
         chunkId: "adj-1",
         agreeWith: "nou-2",
         wordtype: "adjective",
-        manTags: ["colour"],
-        optTags: [],
+        tags: ["colour"],
       },
       {
         chunkId: "nou-2",
         wordtype: "noun",
-        manTags: ["edible"],
-        optTags: [],
+        tags: ["edible"],
+
         gcase: ["gen"],
       },
     ],
@@ -365,8 +356,8 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        manTags: ["person"],
-        optTags: [],
+        tags: ["person"],
+
         gcase: ["nom"],
         number: ["singular", "plural"],
       },
@@ -376,8 +367,7 @@ exports.sentenceFormulasBank = {
         wordtype: "verb",
         tense: ["present"],
         person: ["3per"],
-        manTags: ["basic2"],
-        optTags: [],
+        tags: ["basic2"],
       },
     ],
   },
@@ -387,8 +377,8 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        manTags: ["person"],
-        optTags: [],
+        tags: ["person"],
+
         gcase: ["nom"],
         number: ["singular"],
         gender: ["f"],
@@ -399,8 +389,7 @@ exports.sentenceFormulasBank = {
         wordtype: "verb",
         tense: ["present"],
         person: ["3per"],
-        manTags: ["basic2"],
-        optTags: [],
+        tags: ["basic2"],
       },
     ],
   },
@@ -410,8 +399,8 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        manTags: ["person"],
-        optTags: [],
+        tags: ["person"],
+
         gcase: ["nom"],
         number: ["singular"],
         gender: ["f"],
@@ -422,8 +411,7 @@ exports.sentenceFormulasBank = {
         wordtype: "verb",
         tense: ["present"],
         person: ["3per"],
-        manTags: ["basic2"],
-        optTags: [],
+        tags: ["basic2"],
       },
       { chunkId: "fix-1", wordtype: "fixed", value: "szybko" },
     ],
