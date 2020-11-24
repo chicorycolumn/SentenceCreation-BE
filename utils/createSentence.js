@@ -119,10 +119,6 @@ exports.createSentence = (
         }
       );
 
-      // let selectedAnswerLemmaObject = gpUtils.selectRandom(
-      //   matchingAnswerLemmaObjects
-      // );
-
       console.log("I found these matches:");
       answerStructureChunk.specificIds = matchingAnswerLemmaObjects.map(
         (lObj) => lObj.id

@@ -359,8 +359,8 @@ exports.sentenceFormulasBank = {
     primaryOrders: [["adj-0", "nou-1", "fix-1", "ver-1", "adj-1", "nou-2"]],
     additionalOrders: [],
   },
-  101: {
-    symbol: "101 girl is reading",
+  "101a": {
+    symbol: "101a girl is reading",
     structure: [
       {
         chunkId: "nou-1",
@@ -380,5 +380,54 @@ exports.sentenceFormulasBank = {
         optTags: [],
       },
     ],
+  },
+  "101b": {
+    symbol: "101b girl f is reading",
+    structure: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        manTags: ["person"],
+        optTags: [],
+        gcase: ["nom"],
+        number: ["singular"],
+        gender: ["f"],
+      },
+      {
+        chunkId: "ver-1",
+        agreeWith: "nou-1",
+        wordtype: "verb",
+        tense: ["present"],
+        person: ["3per"],
+        manTags: ["basic2"],
+        optTags: [],
+      },
+    ],
+  },
+  "101c": {
+    symbol: "101c girl f is reading",
+    structure: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        manTags: ["person"],
+        optTags: [],
+        gcase: ["nom"],
+        number: ["singular"],
+        gender: ["f"],
+      },
+      {
+        chunkId: "ver-1",
+        agreeWith: "nou-1",
+        wordtype: "verb",
+        tense: ["present"],
+        person: ["3per"],
+        manTags: ["basic2"],
+        optTags: [],
+      },
+      { chunkId: "fix-1", wordtype: "fixed", value: "szybko" },
+    ],
+    primaryOrders: [["fix-1", "nou-1", "ver-1"]],
+    additionalOrders: [],
   },
 };

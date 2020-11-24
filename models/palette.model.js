@@ -10,8 +10,11 @@ exports.fetchPalette = (req) => {
     sentenceNumber,
     sentenceSymbol,
     useDummy,
-    onlyGenerateQuestionSentence,
+    omitAnswerSentence,
   } = req.body;
+
+  let questionResponseObj;
+  let answerResponseObj;
 
   let questionSentenceData = createSentence.createSentence(
     "POL",
@@ -31,7 +34,7 @@ exports.fetchPalette = (req) => {
     questionSentenceData.resultArr
   );
 
-  let questionResponseObj = formatFinalSentence(
+  questionResponseObj = formatFinalSentence(
     questionSentenceData.resultArr,
     questionSentenceData.sentenceFormula,
     questionSentenceData.errorInSentenceCreation
@@ -42,12 +45,17 @@ exports.fetchPalette = (req) => {
     questionResponseObj.questionSentence
   );
 
-  // questionSentenceData.resultArr.sentenceStructure.forEach((chunk) => {
-  // if (chunk.wordtype === "noun") {
-  // delete chunk.gender;
-  // }
-  // });
-  if (!onlyGenerateQuestionSentence) {
+  if (!omitAnswerSentence) {
+    // console.log(888);
+    // console.log(questionSentenceData.resultArr);
+    // return;
+
+    questionSentenceData.resultArr.forEach((resArrItem) => {
+      if (resArrItem.structureChunk.wordtype === "noun") {
+        delete resArrItem.structureChunk.gender;
+      }
+    });
+
     let answerSentenceData = createSentence.createSentence(
       "ENG",
       questionSentenceData.sentenceNumber,
@@ -60,7 +68,7 @@ exports.fetchPalette = (req) => {
     console.log("Did it work??");
     console.log("answerSentenceData", answerSentenceData);
 
-    let answerResponseObj = formatFinalSentence(
+    answerResponseObj = formatFinalSentence(
       answerSentenceData.resultArr,
       answerSentenceData.sentenceFormula,
       answerSentenceData.errorInSentenceCreation
@@ -69,7 +77,7 @@ exports.fetchPalette = (req) => {
     console.log("*******");
     console.log("***************");
     console.log("***********************");
-    console.log(answerResponseObj.questionSentence);
+    console.log(answerResponseObj.finalSentence);
   }
 
   // answerSentenceData.resultArr;
@@ -78,12 +86,41 @@ exports.fetchPalette = (req) => {
   // answerSentenceData.sentenceSymbol;
   // answerSentenceData.errorInSentenceCreation;
 
-  console.log(questionResponseObj.questionSentence);
+  console.log(questionResponseObj.finalSentence);
   console.log("***********************");
   console.log("***************");
   console.log("*******");
 
-  return Promise.all([questionResponseObj]).then((array) => {
+  console.log(questionResponseObj);
+
+  let combinedResponseObj = {};
+
+  [
+    { responseObject: questionResponseObj, key: "question" },
+    { responseObject: answerResponseObj, key: "answer" },
+  ].forEach((ref) => {
+    if (ref.responseObject) {
+      combinedResponseObj[ref.key + "Sentence"] =
+        ref.responseObject.finalSentence;
+
+      if (ref.responseObject.errorMessage) {
+        combinedResponseObj[ref.key + "ErrorMessage"] =
+          ref.responseObject.errorMessage;
+      }
+      if (ref.responseObject.message) {
+        combinedResponseObj[ref.key + "Message"] = ref.responseObject.message;
+      }
+      if (ref.responseObject.fragment) {
+        combinedResponseObj[ref.key + "Fragment"] = ref.responseObject.fragment;
+      }
+    }
+  });
+
+  console.log("....................v");
+  console.log(combinedResponseObj);
+  console.log("....................^");
+
+  return Promise.all([combinedResponseObj]).then((array) => {
     return array[0];
   });
 };
@@ -106,12 +143,12 @@ function formatFinalSentence(
     questionResponseObj = {
       message: "No sentence could be created from the specifications.",
       fragment: finalSentence,
-      questionSentence: null,
+      finalSentence: null,
       errorMessage,
     };
   } else {
     questionResponseObj = {
-      questionSentence: finalSentence,
+      finalSentence,
     };
   }
 

@@ -15,9 +15,9 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: false,
-          sentenceSymbol: "101 girl is reading",
-          // sentenceNumber: 101,
+          omitAnswerSentence: false,
+          sentenceSymbol: "101a girl is reading",
+          // sentenceNumber: "101a",
         })
         .expect(200)
         .then((res) => {
@@ -31,7 +31,51 @@ describe("/api", () => {
             "Chłopacy czytają.",
             "Chłopaki czytają.",
           ]).to.include(res.body.questionSentence);
-          console.log({ questionSentence: res.body.questionSentence });
+          console.log({ questionSentence: res.body });
+        });
+    });
+    it.only("#pal06-01b GET 200 YES: Returns a sentence in present, plus multiple English translations.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          omitAnswerSentence: false,
+          sentenceSymbol: "101b girl f is reading",
+          // sentenceNumber: "101b",
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.questionSentence).to.be.a("String");
+          expect(res.body.answerSentence).to.have.members([
+            "The woman is reading.",
+            "The woman reads.",
+          ]);
+
+          expect(["Kobieta czyta."]).to.include(res.body.questionSentence);
+          console.log({ questionSentence: res.body });
+        });
+    });
+    it("#pal06-01c GET 200 YES: Returns a sentence in present, plus multiple English translations with multiple orders.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          omitAnswerSentence: false,
+          sentenceSymbol: "101c girl f is reading quickly",
+          // sentenceNumber: "101c",
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.questionSentence).to.be.a("String");
+          expect(res.body.answerSentence).to.have.members([
+            "The woman is reading quickly.",
+            "The woman reads quickly.",
+            "The woman is quickly reading.",
+            "The woman quickly reads.",
+          ]);
+
+          expect(["Szybko kobieta czyta."]).to.include(
+            res.body.questionSentence
+          );
+          console.log({ questionSentence: res.body });
         });
     });
   });
@@ -41,7 +85,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceSymbol: "girl has red apple",
         })
         .expect(200)
@@ -91,7 +135,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceSymbol: "girl didn't have red apple",
         })
         .expect(200)
@@ -141,7 +185,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceSymbol: "red girl didn't have red apple",
         })
         .expect(200)
@@ -194,7 +238,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceSymbol: "I am reading",
         })
         .expect(200)
@@ -215,7 +259,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceSymbol: "dummy12 2per",
           useDummy: true,
         })
@@ -251,7 +295,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceSymbol: "dummy13a conditional plural",
           useDummy: true,
         })
@@ -274,7 +318,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceSymbol: "dummy13b present 2per f",
           useDummy: true,
         })
@@ -291,7 +335,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceSymbol: "dummy14 infinitive",
           useDummy: true,
         })
@@ -306,7 +350,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceSymbol: "dummy15 impersonal",
           useDummy: true,
         })
@@ -326,7 +370,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceSymbol: "dummy15a impersonal plural",
           useDummy: true,
         })
@@ -343,7 +387,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceSymbol: "dummy16 participle",
           useDummy: true,
         })
@@ -370,7 +414,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceSymbol: "dummy17 participle female",
           useDummy: true,
         })
@@ -387,7 +431,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceSymbol: "dummy19 participle f nonvirile",
           useDummy: true,
         })
@@ -407,7 +451,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceSymbol: "dummy20 participle n virile",
           useDummy: true,
         })
@@ -427,7 +471,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceSymbol: "dummy20a participle n virile 2per",
           useDummy: true,
         })
@@ -447,7 +491,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceSymbol: "dummy21 verbalNoun",
           useDummy: true,
         })
@@ -462,7 +506,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceSymbol: "dummy22 verbalNoun ~f",
           useDummy: true,
         })
@@ -476,7 +520,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceSymbol: "dummy23a past/cond 1per plural m1",
           useDummy: true,
         })
@@ -498,7 +542,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceSymbol: "dummy23b past/cond 1per plural m2",
           useDummy: true,
         })
@@ -520,7 +564,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceSymbol: "dummy23c past/cond 1per plural f/n",
           useDummy: true,
         })
@@ -542,7 +586,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceSymbol: "girls were reading",
         })
         .expect(200)
@@ -561,7 +605,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceSymbol: "girl is reading",
         })
         .expect(200)
@@ -577,7 +621,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceSymbol: "dummy24a activeadjectival f",
           useDummy: true,
         })
@@ -594,7 +638,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceSymbol: "dummy24b activeadjectival m1",
           useDummy: true,
         })
@@ -611,7 +655,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceSymbol: "dummy24c contemporaryadverbial",
           useDummy: true,
         })
@@ -629,7 +673,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceSymbol: "red apple",
         })
         .expect(200)
@@ -645,7 +689,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           // sentenceNumber: "55a",
           sentenceSymbol: "red apples",
         })
@@ -662,7 +706,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           // sentenceNumber: 56,
           sentenceSymbol: "red girls",
         })
@@ -685,7 +729,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           // sentenceNumber: 51,
           sentenceSymbol: "girl is wearing shirt",
         })
@@ -702,13 +746,13 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           // sentenceNumber: 52,
           sentenceSymbol: "shirt is in wardrobe",
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.message).to.equal(
+          expect(res.body.questionMessage).to.equal(
             "No sentence could be created from the specifications."
           );
           expect(res.body.questionSentence).to.equal(null);
@@ -718,7 +762,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           // sentenceNumber: 53,
           sentenceSymbol: "I often wear shirt",
         })
@@ -735,7 +779,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           // sentenceNumber: 54,
           sentenceSymbol: "boys are male",
         })
@@ -752,7 +796,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
         })
         .expect(200)
         .then((res) => {
@@ -764,13 +808,13 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceNumber: "dummy01",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.message).to.equal(
+          expect(res.body.questionMessage).to.equal(
             "No sentence could be created from the specifications."
           );
           expect(res.body.questionSentence).to.equal(null);
@@ -780,13 +824,13 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceNumber: "dummy02",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.message).to.equal(
+          expect(res.body.questionMessage).to.equal(
             "No sentence could be created from the specifications."
           );
           expect(res.body.questionSentence).to.equal(null);
@@ -796,13 +840,13 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceNumber: "dummy03",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.message).to.equal(
+          expect(res.body.questionMessage).to.equal(
             "No sentence could be created from the specifications."
           );
           expect(res.body.questionSentence).to.equal(null);
@@ -812,13 +856,13 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceNumber: "dummy04",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.message).to.equal(
+          expect(res.body.questionMessage).to.equal(
             "No sentence could be created from the specifications."
           );
           expect(res.body.questionSentence).to.equal(null);
@@ -828,7 +872,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceNumber: "dummy05",
           useDummy: true,
         })
@@ -842,7 +886,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceNumber: "dummy06",
           useDummy: true,
         })
@@ -856,13 +900,13 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceNumber: "dummy07",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.message).to.equal(
+          expect(res.body.questionMessage).to.equal(
             "No sentence could be created from the specifications."
           );
           expect(res.body.questionSentence).to.equal(null);
@@ -872,7 +916,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceNumber: "dummy08",
           useDummy: true,
         })
@@ -886,7 +930,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceNumber: "dummy18",
           useDummy: true,
         })
@@ -900,7 +944,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceSymbol: "I have apple",
         })
         .expect(200)
@@ -913,7 +957,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceSymbol: "dummy09",
           useDummy: true,
         })
@@ -930,7 +974,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceSymbol: "dummy10",
           useDummy: true,
         })
@@ -950,7 +994,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceSymbol: "I have APPLE",
           useDummy: true,
         })
@@ -965,7 +1009,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          onlyGenerateQuestionSentence: true,
+          omitAnswerSentence: true,
           sentenceSymbol: "I have APPLE/SHIRT",
           useDummy: true,
         })
