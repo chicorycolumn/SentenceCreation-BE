@@ -138,7 +138,7 @@ exports.processSentenceFormula = (
         // console.log("---------------------");
         // console.log("wordtype", dependentChunk.wordtype);
         // console.log(
-        //   refObj.characteristics[currentLanguage].inflectionChains[dependentChunk.wordtype]
+        //   refObj.lemmaObjCharacteristics[currentLanguage].inflectionChains[dependentChunk.wordtype]
         // );
         // console.log("dependentChunk", dependentChunk);
         // console.log("headChunk", headChunk);
@@ -146,7 +146,7 @@ exports.processSentenceFormula = (
         // console.log("--------------");
         // console.log("-------");
 
-        refObj.characteristics[currentLanguage].inflectionChains[
+        refObj.lemmaObjCharacteristics[currentLanguage].inflectionChains[
           dependentChunk.wordtype
         ].forEach((featureKey) => {
           if (headChunk[featureKey]) {
@@ -319,7 +319,7 @@ exports.conformAnswerStructureToQuestionStructure = (
     console.log("I found these matches:", answerStructureChunk.specificIds);
     console.log("answerStructureChunk", answerStructureChunk);
 
-    refObj.characteristics[
+    refObj.lemmaObjCharacteristics[
       currentLanguage
     ].inflectionChains.allowableIncomingTransfers[answerStructureChunk.wordtype] //alpha say for tantum plurales, make Number blank (all possible) in english noun chunk
       .forEach((featureKey) => {

@@ -35,7 +35,9 @@ exports.filterWithinSelectedLemmaObject = (
   //Don't do this for adjs, because they are the reverse. We earlier put the head word's gender onto the structureChunk, but the adj lobj has no gender key.
 
   let selectors =
-    refObj.characteristics[currentLanguage].selectors[structureChunk.wordtype];
+    refObj.lemmaObjCharacteristics[currentLanguage].selectors[
+      structureChunk.wordtype
+    ];
 
   if (selectors) {
     selectors.forEach((selector) => {
@@ -44,6 +46,9 @@ exports.filterWithinSelectedLemmaObject = (
   }
 
   //PART TWO: Optionally return immediately if requested word is a participle with no inflections.
+
+  //gamma Currently working to make this happen programmatically.
+
   if (["verb"].includes(structureChunk.wordtype)) {
     if (
       structureChunk.form &&
@@ -108,7 +113,7 @@ exports.filterWithinSelectedLemmaObject = (
   }
 
   let inflectionChain =
-    refObj.characteristics[currentLanguage].inflectionChains[
+    refObj.lemmaObjCharacteristics[currentLanguage].inflectionChains[
       structureChunk.wordtype
     ];
 
@@ -262,7 +267,9 @@ exports.filterOutDeficientLemmaObjects = (
   currentLanguage
 ) => {
   let inflectionChain =
-    refObj.characteristics[currentLanguage].inflectionChains[specObj.wordtype];
+    refObj.lemmaObjCharacteristics[currentLanguage].inflectionChains[
+      specObj.wordtype
+    ];
   let requirementArrs = inflectionChain.map((key) => specObj[key] || []);
 
   return sourceArr.filter((lObj) => {

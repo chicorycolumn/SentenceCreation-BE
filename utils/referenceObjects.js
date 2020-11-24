@@ -1,4 +1,4 @@
-exports.characteristics = {
+exports.lemmaObjCharacteristics = {
   POL: {
     selectors: {
       noun: ["gender"],
@@ -23,6 +23,10 @@ exports.characteristics = {
       },
     },
   },
+};
+
+exports.uninflectedVerbForms = {
+  POL: [""],
 };
 
 exports.tenseTranslations = {

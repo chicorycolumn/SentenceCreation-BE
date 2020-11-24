@@ -386,107 +386,93 @@ describe("/api", () => {
           console.log({ questionSentence: res.body.questionSentence });
         });
     });
-    it("#pal04-02a GET 200 YES: Returns a sentence with a single verb's participle.", () => {
+    xit("#pal04-02a GET 200 YES: Returns a sentence with a verb's contemporaryAdverbial participle.", () => {
       return request(app)
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "dummy16 participle",
+          sentenceSymbol: "dummy16 contemporaryAdverbial",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
           expect(res.body.questionSentence).to.be.a("String");
-          expect([
-            "Czytający.",
-            "Czytająca.",
-            "Czytające.",
-            "Czytający.",
-            "Czytające.",
-            "Czytany.",
-            "Czytana.",
-            "Czytane.",
-            "Czytani.",
-            "Czytane.",
-            "Czytając.",
-          ]).to.include(res.body.questionSentence);
+          expect(["Czytając."]).to.include(res.body.questionSentence);
           console.log({ questionSentence: res.body.questionSentence });
         });
     });
-    it("#pal04-02b GET 200 YES: Returns a sentence with a single verb's participle by gender.", () => {
+    xit("#pal04-02b GET 200 YES: Returns a sentence with a verb's contemporaryAdverbial participle, ignoring gender.", () => {
       return request(app)
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "dummy17 participle female",
+          sentenceSymbol: "dummy17 contemporaryAdverbial female",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
           expect(res.body.questionSentence).to.be.a("String");
-          expect(["Czytająca.", "Czytana."]).to.include(
-            res.body.questionSentence
-          );
+          expect(["Czytając."]).to.include(res.body.questionSentence);
           console.log({ questionSentence: res.body.questionSentence });
         });
     });
-    it("#pal04-02c GET 200 YES: Returns a sentence with a single verb's participle by gender, with two genders specified.", () => {
+    xit("#pal04-02c GET 200 YES: Returns a sentence with a verb's contemporaryAdverbial participle, ignoring gender and person.", () => {
       return request(app)
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "dummy19 participle f nonvirile",
+          sentenceSymbol: "dummy18 contemporaryAdverbial n virile 2per",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
           expect(res.body.questionSentence).to.be.a("String");
-          expect([
-            "Czytająca.",
-            "Czytające.",
-            "Czytana.",
-            "Czytane.",
-          ]).to.include(res.body.questionSentence);
+          expect(["Czytając."]).to.include(res.body.questionSentence);
           console.log({ questionSentence: res.body.questionSentence });
         });
     });
-    it("#pal04-02d GET 200 YES: Returns a sentence with a single verb's participle by gender, with two genders specified.", () => {
+    xit("#pal04-02d GET 200 YES: Returns a sentence with a verb's anteriorAdverbial participle.", () => {
       return request(app)
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "dummy20 participle n virile",
+          sentenceSymbol: "dummy16a anteriorAdverbial",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
           expect(res.body.questionSentence).to.be.a("String");
-          expect([
-            "Czytające.",
-            "Czytający.",
-            "Czytane.",
-            "Czytani.",
-          ]).to.include(res.body.questionSentence);
+          expect(["Przeczytawszy."]).to.include(res.body.questionSentence);
           console.log({ questionSentence: res.body.questionSentence });
         });
     });
-    it("#pal04-02e GET 200 YES: Returns a sentence with a single verb's participle by gender and person.", () => {
+    xit("#pal04-02e GET 200 YES: Returns a sentence with a verb's anteriorAdverbial participle, ignoring gender.", () => {
       return request(app)
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "dummy20a participle n virile 2per",
+          sentenceSymbol: "dummy17a anteriorAdverbial female",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
           expect(res.body.questionSentence).to.be.a("String");
-          expect([
-            "Czytające.",
-            "Czytający.",
-            "Czytane.",
-            "Czytani.",
-          ]).to.include(res.body.questionSentence);
+          expect(["Przeczytawszy."]).to.include(res.body.questionSentence);
+          console.log({ questionSentence: res.body.questionSentence });
+        });
+    });
+    xit("#pal04-02f GET 200 YES: Returns a sentence with a verb's anteriorAdverbial participle, ignoring gender and person.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage: "POL",
+          sentenceSymbol: "dummy18a anteriorAdverbial n virile 2per",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.questionSentence).to.be.a("String");
+          expect(["Przeczytawszy."]).to.include(res.body.questionSentence);
           console.log({ questionSentence: res.body.questionSentence });
         });
     });
@@ -617,55 +603,6 @@ describe("/api", () => {
           expect(["Kobieta czyta.", "Kobiety czytają."]).to.include(
             res.body.questionSentence
           );
-          console.log({ questionSentence: res.body.questionSentence });
-        });
-    });
-    it("#pal04-06a GET 200 YES: Conjugate active adjectival participle.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceSymbol: "dummy24a activeadjectival f",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
-          expect(["Czytająca.", "Czytające."]).to.include(
-            res.body.questionSentence
-          );
-          console.log({ questionSentence: res.body.questionSentence });
-        });
-    });
-    it("#pal04-06b GET 200 YES: Conjugate passive adjectival participle.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceSymbol: "dummy24b activeadjectival m1",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
-          expect(["Czytany.", "Czytani."]).to.include(
-            res.body.questionSentence
-          );
-          console.log({ questionSentence: res.body.questionSentence });
-        });
-    });
-    it("#pal04-06c GET 200 YES: Conjugate contemporary adverbial participle, ignoring any person or number or gender specified.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceSymbol: "dummy24c contemporaryadverbial",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
-          expect(["Czytając."]).to.include(res.body.questionSentence);
           console.log({ questionSentence: res.body.questionSentence });
         });
     });
@@ -934,7 +871,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceNumber: "dummy18",
+          sentenceNumber: "dummy19",
           useDummy: true,
         })
         .expect(200)

@@ -52,7 +52,7 @@ exports.findMatchingWordThenAddToResultArray = (
     // Filter noun lobjs by gender (as each noun lobj is indeed a diff gender) but not for adjs/verbs, as gender is a key inside those lobjs.
 
     let selectors =
-      refObj.characteristics[currentLanguage].selectors[
+      refObj.lemmaObjCharacteristics[currentLanguage].selectors[
         structureChunk.wordtype
       ];
     if (selectors) {

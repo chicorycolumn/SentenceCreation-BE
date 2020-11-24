@@ -385,9 +385,6 @@ let adjectiveSet = [
   },
 ];
 
-//Perfective has participles:             passive, anterior
-//Imperfective has participles:   active, passive, contemporary
-
 //If you mark a key true, or give it a value      it will be filled out by fillVerbInflections fxn.
 //If you mark a key false, or omit it             it will not be.
 
@@ -500,24 +497,10 @@ let verbSet = [
           },
         },
       },
-      participle: {
-        activeAdjectival: {
-          allPersons: {
-            singular: {
-              m: "mający",
-              f: "mająca",
-              n: "mające",
-            },
-            plural: {
-              virile: "mający",
-              nonvirile: "mające",
-            },
-          },
-        },
-        passiveAdjectival: false,
-        contemporaryAdverbial: "mając",
-        anteriorAdverbial: false,
-      },
+      activeAdjectival: "mający",
+      passiveAdjectival: false,
+      contemporaryAdverbial: "mając",
+      anteriorAdverbial: false,
       verbalNoun: false,
     },
   },
@@ -629,36 +612,10 @@ let verbSet = [
           },
         },
       },
-      participle: {
-        activeAdjectival: {
-          allPersons: {
-            singular: {
-              m: "czytający",
-              f: "czytająca",
-              n: "czytające",
-            },
-            plural: {
-              virile: "czytający",
-              nonvirile: "czytające",
-            },
-          },
-        },
-        passiveAdjectival: {
-          allPersons: {
-            singular: {
-              m: "czytany",
-              f: "czytana",
-              n: "czytane",
-            },
-            plural: {
-              virile: "czytani",
-              nonvirile: "czytane",
-            },
-          },
-        },
-        contemporaryAdverbial: "czytając",
-        anteriorAdverbial: false,
-      },
+      activeAdjectival: "czytający",
+      passiveAdjectival: "czytany",
+      contemporaryAdverbial: "czytając",
+      anteriorAdverbial: false,
       verbalNoun: "czytanie",
     },
   },
@@ -770,24 +727,10 @@ let verbSet = [
   //         },
   //       },
   //     },
-  //     participle: {
-  //       activeAdjectival: false,
-  //       passiveAdjectival: {
-  //         allPersons: {
-  //           singular: {
-  //             m: "przeczytany",
-  //             f: "przeczytana",
-  //             n: "przeczytane",
-  //           },
-  //           plural: {
-  //             virile: "przeczytani",
-  //             nonvirile: "przeczytane",
-  //           },
-  //         },
-  //       },
-  //       contemporaryAdverbial: false,
-  //       anteriorAdverbial: "przeczytawszy",
-  //     },
+  //     activeAdjectival: false,
+  //     passiveAdjectival: "przeczytany",
+  //     contemporaryAdverbial: false,
+  //     anteriorAdverbial: "przeczytawszy",
   //     verbalNoun: "przeczytanie",
   //   },
   // },

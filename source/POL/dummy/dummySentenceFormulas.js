@@ -6,7 +6,6 @@ exports.dummySentenceFormulasBank = {
         chunkId: "nou-1",
         wordtype: "noun",
         tags: ["nonexistent tag"],
-
         gcase: ["nom"],
         number: ["singular"],
         gender: [],
@@ -20,7 +19,6 @@ exports.dummySentenceFormulasBank = {
         chunkId: "nou-1",
         wordtype: "noun",
         tags: [],
-
         gcase: ["nonexistent gcase"],
         number: [],
         gender: [],
@@ -34,7 +32,6 @@ exports.dummySentenceFormulasBank = {
         chunkId: "nou-1",
         wordtype: "noun",
         tags: ["dummy"],
-
         gcase: ["nom"],
         number: [],
         gender: [],
@@ -48,7 +45,6 @@ exports.dummySentenceFormulasBank = {
         chunkId: "nou-1",
         wordtype: "noun",
         tags: ["dummy"],
-
         gcase: ["nom"],
         number: ["singular", "plural"],
         gender: [],
@@ -62,7 +58,6 @@ exports.dummySentenceFormulasBank = {
         chunkId: "nou-1",
         wordtype: "noun",
         tags: ["dummy"],
-
         gcase: ["nom", "loc"],
         number: [],
         gender: [],
@@ -76,7 +71,6 @@ exports.dummySentenceFormulasBank = {
         chunkId: "nou-1",
         wordtype: "noun",
         tags: ["dummy"],
-
         gcase: ["ins"],
         number: [],
         gender: [],
@@ -90,7 +84,6 @@ exports.dummySentenceFormulasBank = {
         chunkId: "nou-1",
         wordtype: "noun",
         tags: ["dummy2"],
-
         gcase: ["loc"],
         number: ["singular"],
         gender: [],
@@ -104,7 +97,6 @@ exports.dummySentenceFormulasBank = {
         chunkId: "nou-1",
         wordtype: "noun",
         tags: ["dummy3"],
-
         gcase: ["loc"],
         number: ["singular"],
         gender: [],
@@ -118,7 +110,6 @@ exports.dummySentenceFormulasBank = {
         chunkId: "nou-1",
         wordtype: "noun",
         tags: ["foobar-A"],
-
         gcase: ["nom"],
         number: ["singular"],
         gender: [],
@@ -127,7 +118,6 @@ exports.dummySentenceFormulasBank = {
         chunkId: "nou-2",
         wordtype: "noun",
         tags: ["foobar-B"],
-
         gcase: ["nom"],
         number: ["singular"],
         gender: [],
@@ -136,7 +126,6 @@ exports.dummySentenceFormulasBank = {
         chunkId: "nou-3",
         wordtype: "noun",
         tags: ["foobar-C"],
-
         gcase: ["nom"],
         number: ["singular"],
         gender: [],
@@ -156,7 +145,6 @@ exports.dummySentenceFormulasBank = {
         chunkId: "nou-1",
         wordtype: "noun",
         tags: ["foobar-A"],
-
         gcase: ["nom"],
         number: ["singular"],
         gender: [],
@@ -165,7 +153,6 @@ exports.dummySentenceFormulasBank = {
         chunkId: "nou-2",
         wordtype: "noun",
         tags: ["foobar-B"],
-
         gcase: ["nom"],
         number: ["singular"],
         gender: [],
@@ -174,7 +161,6 @@ exports.dummySentenceFormulasBank = {
         chunkId: "nou-3",
         wordtype: "noun",
         tags: ["foobar-C"],
-
         gcase: ["nom"],
         number: ["singular"],
         gender: [],
@@ -196,7 +182,6 @@ exports.dummySentenceFormulasBank = {
         chunkId: "nou-1",
         wordtype: "noun",
         tags: [],
-
         gcase: ["nom"],
         number: ["singular"],
         gender: [],
@@ -214,7 +199,6 @@ exports.dummySentenceFormulasBank = {
         chunkId: "nou-1",
         wordtype: "noun",
         tags: [],
-
         gcase: ["acc"],
         number: ["plural"],
         gender: [],
@@ -231,7 +215,6 @@ exports.dummySentenceFormulasBank = {
         chunkId: "nou-1",
         wordtype: "noun",
         tags: ["wearable"],
-
         gcase: ["nom"],
         number: [],
         gender: [],
@@ -245,7 +228,6 @@ exports.dummySentenceFormulasBank = {
         chunkId: "ver-1",
         wordtype: "verb",
         tags: ["basic2"],
-
         form: ["verb"],
         person: ["2per"],
       },
@@ -258,7 +240,6 @@ exports.dummySentenceFormulasBank = {
         chunkId: "ver-1",
         wordtype: "verb",
         tags: ["basic2"],
-
         form: ["verb"],
         tense: ["conditional"],
         number: ["plural"],
@@ -272,7 +253,6 @@ exports.dummySentenceFormulasBank = {
         chunkId: "ver-1",
         wordtype: "verb",
         tags: ["basic2"],
-
         form: ["verb"],
         tense: ["present"],
         person: ["2per"],
@@ -288,7 +268,6 @@ exports.dummySentenceFormulasBank = {
         chunkId: "ver-1",
         wordtype: "verb",
         tags: ["basic2"],
-
         form: ["infinitive"],
       },
     ],
@@ -300,7 +279,6 @@ exports.dummySentenceFormulasBank = {
         chunkId: "ver-1",
         wordtype: "verb",
         tags: ["basic2"],
-
         form: ["verb"],
         person: ["impersonal"],
       },
@@ -313,7 +291,6 @@ exports.dummySentenceFormulasBank = {
         chunkId: "ver-1",
         wordtype: "verb",
         tags: ["basic2"],
-
         form: ["verb"],
         person: ["impersonal"],
         number: ["plural"],
@@ -321,80 +298,86 @@ exports.dummySentenceFormulasBank = {
     ],
   },
   dummy16: {
-    symbol: "dummy16 participle",
+    symbol: "dummy16 contemporaryAdverbial",
     structure: [
       {
         chunkId: "ver-1",
         wordtype: "verb",
         tags: ["basic2"],
-
-        form: ["participle"],
+        form: ["contemporaryAdverbial"],
       },
     ],
   },
   dummy17: {
-    symbol: "dummy17 participle female",
+    symbol: "dummy17 contemporaryAdverbial female",
     structure: [
       {
         chunkId: "ver-1",
         wordtype: "verb",
         tags: ["basic2"],
-
-        form: ["participle"],
+        form: ["contemporaryAdverbial"],
         gender: ["f"],
       },
     ],
   },
   dummy18: {
-    symbol: "dummy18",
+    symbol: "dummy18 contemporaryAdverbial n virile 2per",
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        tags: ["basic2"],
+        gender: ["n", "virile"],
+        person: ["2per"],
+        form: ["contemporaryAdverbial"],
+      },
+    ],
+  },
+  dummy16a: {
+    symbol: "dummy16a anteriorAdverbial",
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        tags: ["basic2"],
+        form: ["anteriorAdverbial"],
+      },
+    ],
+  },
+  dummy17a: {
+    symbol: "dummy17a anteriorAdverbial female",
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        tags: ["basic2"],
+        form: ["anteriorAdverbial"],
+        gender: ["f"],
+      },
+    ],
+  },
+  dummy18a: {
+    symbol: "dummy18a anteriorAdverbial n virile 2per",
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        tags: ["basic2"],
+        gender: ["n", "virile"],
+        person: ["2per"],
+        form: ["anteriorAdverbial"],
+      },
+    ],
+  },
+  dummy19: {
+    symbol: "dummy19",
     structure: [
       {
         chunkId: "nou-1",
         wordtype: "noun",
         tags: ["dummy-nou-010"],
-
         number: ["singular", "plural"],
         gcase: ["acc"],
-      },
-    ],
-  },
-  dummy19: {
-    symbol: "dummy19 participle f nonvirile",
-    structure: [
-      {
-        chunkId: "ver-1",
-        wordtype: "verb",
-        tags: ["basic2"],
-
-        gender: ["f", "nonvirile"],
-        form: ["participle"],
-      },
-    ],
-  },
-  dummy20: {
-    symbol: "dummy20 participle n virile",
-    structure: [
-      {
-        chunkId: "ver-1",
-        wordtype: "verb",
-        tags: ["basic2"],
-
-        gender: ["n", "virile"],
-        form: ["participle"],
-      },
-    ],
-  },
-  dummy20a: {
-    symbol: "dummy20a participle n virile 2per",
-    structure: [
-      {
-        chunkId: "ver-1",
-        wordtype: "verb",
-        tags: ["basic2"],
-
-        gender: ["n", "virile"],
-        person: ["2per"],
-        form: ["participle"],
       },
     ],
   },
@@ -405,7 +388,6 @@ exports.dummySentenceFormulasBank = {
         chunkId: "ver-1",
         wordtype: "verb",
         tags: ["basic2"],
-
         form: ["verbalNoun"],
       },
     ],
@@ -417,7 +399,6 @@ exports.dummySentenceFormulasBank = {
         chunkId: "ver-1",
         wordtype: "verb",
         tags: ["basic2"],
-
         form: ["verbalNoun"],
         gender: ["f"],
       },
@@ -430,7 +411,6 @@ exports.dummySentenceFormulasBank = {
         chunkId: "ver-1",
         wordtype: "verb",
         tags: ["basic2"],
-
         form: ["verb"],
         tense: ["past", "conditional"],
         person: ["1per"],
@@ -446,7 +426,6 @@ exports.dummySentenceFormulasBank = {
         chunkId: "ver-1",
         wordtype: "verb",
         tags: ["basic2"],
-
         form: ["verb"],
         tense: ["past", "conditional"],
         person: ["1per"],
@@ -462,60 +441,11 @@ exports.dummySentenceFormulasBank = {
         chunkId: "ver-1",
         wordtype: "verb",
         tags: ["basic2"],
-
         form: ["verb"],
         tense: ["past", "conditional"],
         person: ["1per"],
         number: ["plural"],
         gender: ["n", "f"],
-      },
-    ],
-  },
-  dummy24a: {
-    symbol: "dummy24a activeadjectival f",
-    structure: [
-      {
-        chunkId: "ver-1",
-        wordtype: "verb",
-        tags: ["basic2"],
-
-        form: ["participle"],
-        tense: ["activeAdjectival"],
-        person: ["1per"],
-        gender: ["f"],
-        number: ["singular", "plural"],
-      },
-    ],
-  },
-  dummy24b: {
-    symbol: "dummy24b activeadjectival m1",
-    structure: [
-      {
-        chunkId: "ver-1",
-        wordtype: "verb",
-        tags: ["basic2"],
-
-        form: ["participle"],
-        tense: ["passiveAdjectival"],
-        person: ["2per"],
-        gender: ["m1"],
-        number: ["singular", "plural"],
-      },
-    ],
-  },
-  dummy24c: {
-    symbol: "dummy24c contemporaryadverbial",
-    structure: [
-      {
-        chunkId: "ver-1",
-        wordtype: "verb",
-        tags: ["basic2"],
-
-        form: ["participle"],
-        person: ["1per", "2per"],
-        number: ["plural"],
-        gender: ["n"],
-        tense: ["contemporaryAdverbial"],
       },
     ],
   },

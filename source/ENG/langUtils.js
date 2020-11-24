@@ -25,7 +25,7 @@ exports.generateAndReturnSimpleVerbConjugation = (
   let { infinitive, v2, v3, thirdPS, gerund } = lObj.inflections;
   let { inflections } = lObj;
   let inflectionChain =
-    refObj.characteristics[currentLanguage].inflectionChains.verb;
+    refObj.lemmaObjCharacteristics[currentLanguage].inflectionChains.verb;
 
   ////////////////////////Alpha note: This needs to be re-specified with regard to actual POL to ENG tense translations.+
   if (structureChunk.tense && structureChunk.tense.length) {
