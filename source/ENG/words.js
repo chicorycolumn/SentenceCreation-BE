@@ -1,11 +1,15 @@
 let nounSet = [
   {
+    //links
     translations: { ENG: ["woman", "lady"], POL: ["kobieta"] },
+    tags: ["animate", "person", "concrete"],
+    //selectors
     lemma: "woman",
     id: "eng-nou-001",
     gender: "f",
-    tags: ["animate", "person", "concrete"],
+    //notes
     deficient: false,
+    //inflections
     inflections: {
       singular: {
         nom: "woman",
@@ -18,12 +22,16 @@ let nounSet = [
     },
   },
   {
+    //links
     translations: { ENG: ["boy"], POL: ["chłopiec", "chłopak"] },
+    tags: ["animate", "person", "concrete"],
+    //selectors
     lemma: "boy",
     id: "eng-nou-002",
     gender: "m",
-    tags: ["animate", "person", "concrete"],
+    //notes
     deficient: false,
+    //inflections
     inflections: {
       singular: {
         nom: "boy",
@@ -36,12 +44,16 @@ let nounSet = [
     },
   },
   {
+    //links
     translations: { ENG: ["boy"], POL: ["boja", "pława"] },
+    tags: ["inanimate", "ocean", "concrete"],
+    //selectors
     lemma: "boy",
     id: "eng-nou-002a",
     gender: "m",
-    tags: ["inanimate", "ocean", "concrete"],
+    //notes
     deficient: false,
+    //inflections
     inflections: {
       singular: {
         nom: "buoy",
@@ -54,12 +66,16 @@ let nounSet = [
     },
   },
   {
+    //links
     translations: { ENG: ["onion"], POL: ["cebula"] },
+    tags: ["inanimate", "edible", "holdable", "concrete"],
+    //selectors
     lemma: "onion",
     id: "eng-nou-003",
     gender: "n",
-    tags: ["inanimate", "edible", "holdable", "concrete"],
+    //notes
     deficient: false,
+    //inflections
     inflections: {
       singular: {
         nom: "onion",
@@ -72,12 +88,16 @@ let nounSet = [
     },
   },
   {
+    //links
     translations: { ENG: ["apple"], POL: ["jabłko"] },
+    tags: ["inanimate", "edible", "holdable", "concrete"],
+    //selectors
     lemma: "apple",
     id: "eng-nou-004",
     gender: "n",
-    tags: ["inanimate", "edible", "holdable", "concrete"],
+    //notes
     deficient: false,
+    //inflections
     inflections: {
       singular: {
         nom: "apple",
@@ -93,11 +113,15 @@ let nounSet = [
 
 let adjectiveSet = [
   {
+    //links
     translations: { ENG: ["red"], PL: ["czerwony"] },
+    tags: ["colour"],
+    //selectors
     lemma: "red",
     id: "eng-adj-001",
-    tags: ["colour"],
+    //notes
     deficient: false,
+    //inflections
     inflections: {
       simple: "red",
       comparative: "redder",
@@ -109,11 +133,15 @@ let adjectiveSet = [
 
 let verbSet = [
   {
+    //links
     translations: { ENG: ["write"], POL: ["pisać"] },
+    tags: ["basic3"],
+    //selectors
     lemma: "write",
     id: "eng-ver-002",
-    tags: ["basic3"],
+    //notes
     defective: false,
+    //inflections
     inflections: {
       infinitive: "write",
       v2: "wrote",
@@ -125,11 +153,15 @@ let verbSet = [
     },
   },
   {
+    //links
     translations: { ENG: ["have"], POL: ["mieć"] },
+    tags: ["basic", "possession"],
+    //selectors
     lemma: "have",
     id: "eng-ver-001",
-    tags: ["basic", "possession"],
+    //notes
     defective: false,
+    //inflections
     inflections: {
       infinitive: "have",
       verb: {
@@ -163,11 +195,15 @@ let verbSet = [
     },
   },
   {
+    //links
     translations: { ENG: ["read"], POL: ["czytać"] },
+    tags: ["basic2"],
+    //selectors
     lemma: "read",
     id: "eng-ver-003",
-    tags: ["basic2"],
+    //notes
     defective: false,
+    //inflections
     inflections: {
       infinitive: "read",
       v2: "read",

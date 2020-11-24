@@ -1,7 +1,5 @@
 const gpUtils = require("./generalPurposeUtils.js");
 const otUtils = require("./objectTraversingUtils.js");
-const POLUtils = require("../source/POL/polishUtils.js");
-const ENGUtils = require("../source/ENG/englishUtils.js");
 const refObj = require("./referenceObjects.js");
 
 exports.filterByKey = (lemmaObjectArr, requirementArrs, key) => {
@@ -19,6 +17,8 @@ exports.filterWithinSelectedLemmaObject = (
   structureChunk,
   currentLanguage
 ) => {
+  const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
+
   console.log(
     "filterWithinSelectedLemmaObject fxn was given these arguments:",
     { lemmaObject, structureChunk, currentLanguage }
@@ -33,8 +33,14 @@ exports.filterWithinSelectedLemmaObject = (
 
   //Do this for nouns, because noun lobjs have a gender, which they can put onto structureChunk to show what choice we made.
   //Don't do this for adjs, because they are the reverse. We earlier put the head word's gender onto the structureChunk, but the adj lobj has no gender key.
-  if (["noun"].includes(structureChunk.wordtype)) {
-    structureChunk["gender"] = [lemmaObject["gender"]];
+
+  let selectors =
+    refObj.characteristics[currentLanguage].selectors[structureChunk.wordtype];
+
+  if (selectors) {
+    selectors.forEach((selector) => {
+      structureChunk[selector] = [lemmaObject[selector]];
+    });
   }
 
   //PART TWO: Optionally return immediately if requested word is a participle with no inflections.
@@ -56,7 +62,7 @@ exports.filterWithinSelectedLemmaObject = (
           return exports.sendFinalisedWord(null, participle, structureChunk);
         }
       } else if (currentLanguage === "ENG") {
-        ENGUtils.addSpecialVerbConjugations(lemmaObject, currentLanguage);
+        langUtils.addSpecialVerbConjugations(lemmaObject, currentLanguage);
 
         let participle = exports.retrieveJustParticiple(
           structureChunk,
@@ -84,7 +90,7 @@ exports.filterWithinSelectedLemmaObject = (
       ["verb"].includes(structureChunk.wordtype) &&
       !["participle"].includes(structureChunk.form)
     ) {
-      let result = ENGUtils.generateAndReturnSimpleVerbConjugation(
+      let result = langUtils.generateAndReturnSimpleVerbConjugation(
         structureChunk,
         lemmaObject,
         currentLanguage
@@ -102,7 +108,9 @@ exports.filterWithinSelectedLemmaObject = (
   }
 
   let inflectionChain =
-    refObj.inflectionChains[currentLanguage][structureChunk.wordtype];
+    refObj.characteristics[currentLanguage].inflectionChains[
+      structureChunk.wordtype
+    ];
 
   let requirementArrs = [];
   inflectionChain.forEach((key) => {
@@ -254,7 +262,7 @@ exports.filterOutDeficientLemmaObjects = (
   currentLanguage
 ) => {
   let inflectionChain =
-    refObj.inflectionChains[currentLanguage][specObj.wordtype];
+    refObj.characteristics[currentLanguage].inflectionChains[specObj.wordtype];
   let requirementArrs = inflectionChain.map((key) => specObj[key] || []);
 
   return sourceArr.filter((lObj) => {

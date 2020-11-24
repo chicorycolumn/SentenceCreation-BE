@@ -1,17 +1,26 @@
-exports.inflectionChains = {
+exports.characteristics = {
   POL: {
-    noun: ["number", "gcase"],
-    adjective: ["form", "number", "gender", "gcase"],
-    verb: ["form", "tense", "person", "number", "gender"],
+    selectors: {
+      noun: ["gender"],
+      verb: ["aspect"],
+    },
+    inflectionChains: {
+      noun: ["number", "gcase"],
+      adjective: ["form", "number", "gender", "gcase"],
+      verb: ["form", "tense", "person", "number", "gender"],
+    },
   },
   ENG: {
-    noun: ["number", "gcase"],
-    adjective: ["form"],
-    verb: ["form", "tense", "person", "number"],
-    allowableIncomingTransfers: {
-      noun: ["number"],
+    selectors: {},
+    inflectionChains: {
+      noun: ["number", "gcase"],
       adjective: ["form"],
       verb: ["form", "tense", "person", "number"],
+      allowableIncomingTransfers: {
+        noun: ["number"],
+        adjective: ["form"],
+        verb: ["form", "tense", "person", "number"],
+      },
     },
   },
 };

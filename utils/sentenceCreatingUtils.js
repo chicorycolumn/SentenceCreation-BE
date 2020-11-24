@@ -1,8 +1,6 @@
 const otUtils = require("./objectTraversingUtils.js");
 const gpUtils = require("./generalPurposeUtils.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
-const POLUtils = require("../source/POL/polishUtils.js");
-const ENGUtils = require("../source/ENG/englishUtils.js");
 const refObj = require("./referenceObjects.js");
 
 exports.processSentenceFormula = (
@@ -13,6 +11,8 @@ exports.processSentenceFormula = (
   generateAnswers,
   questionResultArray
 ) => {
+  const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
+
   console.log("processSentenceFormula fxn was given these args", {
     currentLanguage,
     sentenceNumber,
@@ -138,7 +138,7 @@ exports.processSentenceFormula = (
         // console.log("---------------------");
         // console.log("wordtype", dependentChunk.wordtype);
         // console.log(
-        //   refObj.inflectionChains[currentLanguage][dependentChunk.wordtype]
+        //   refObj.characteristics[currentLanguage].inflectionChains[dependentChunk.wordtype]
         // );
         // console.log("dependentChunk", dependentChunk);
         // console.log("headChunk", headChunk);
@@ -146,7 +146,7 @@ exports.processSentenceFormula = (
         // console.log("--------------");
         // console.log("-------");
 
-        refObj.inflectionChains[currentLanguage][
+        refObj.characteristics[currentLanguage].inflectionChains[
           dependentChunk.wordtype
         ].forEach((featureKey) => {
           if (headChunk[featureKey]) {
@@ -319,9 +319,9 @@ exports.conformAnswerStructureToQuestionStructure = (
     console.log("I found these matches:", answerStructureChunk.specificIds);
     console.log("answerStructureChunk", answerStructureChunk);
 
-    refObj.inflectionChains[currentLanguage].allowableIncomingTransfers[ //alpha say for tantum plurales, make Number blank (all possible) in english noun chunk
-      answerStructureChunk.wordtype
-    ]
+    refObj.characteristics[
+      currentLanguage
+    ].inflectionChains.allowableIncomingTransfers[answerStructureChunk.wordtype] //alpha say for tantum plurales, make Number blank (all possible) in english noun chunk
       .forEach((featureKey) => {
         if (questionStructureChunk[featureKey]) {
           answerStructureChunk[featureKey] = questionStructureChunk[featureKey];

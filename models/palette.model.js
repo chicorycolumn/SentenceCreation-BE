@@ -1,7 +1,6 @@
 const otUtils = require("../utils/objectTraversingUtils.js");
 const gpUtils = require("../utils/generalPurposeUtils.js");
 const lfUtils = require("../utils/lemmaFilteringUtils.js");
-const POLUtils = require("../source/POL/polishUtils.js");
 const refObj = require("../utils/referenceObjects.js");
 const scUtils = require("../utils/sentenceCreatingUtils.js");
 

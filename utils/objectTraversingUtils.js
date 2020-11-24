@@ -1,6 +1,5 @@
 const gpUtils = require("./generalPurposeUtils.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
-const POLUtils = require("../source/POL/polishUtils.js");
 const refObj = require("./referenceObjects.js");
 
 exports.findMatchingWordThenAddToResultArray = (
@@ -10,6 +9,8 @@ exports.findMatchingWordThenAddToResultArray = (
   errorInSentenceCreation,
   currentLanguage
 ) => {
+  const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
+
   console.log(
     "findMatchingWordThenAddToResultArray fxn has been given these arguments:"
   );
@@ -49,26 +50,19 @@ exports.findMatchingWordThenAddToResultArray = (
     matches = lfUtils.filterByTag(source, structureChunk.tags);
 
     // Filter noun lobjs by gender (as each noun lobj is indeed a diff gender) but not for adjs/verbs, as gender is a key inside those lobjs.
-    if (currentLanguage === "POL") {
-      if (["noun"].includes(structureChunk.wordtype)) {
-        matches = lfUtils.filterByKey(matches, structureChunk, "gender");
-      }
+
+    let selectors =
+      refObj.characteristics[currentLanguage].selectors[
+        structureChunk.wordtype
+      ];
+    if (selectors) {
+      selectors.forEach((selector) => {
+        matches = lfUtils.filterByKey(matches, structureChunk, selector);
+      });
     }
   }
 
-  if (currentLanguage === "POL") {
-    if (["verb"].includes(structureChunk.wordtype)) {
-      matches.forEach((lObj) => POLUtils.fillVerbInflections(lObj));
-    }
-
-    if (["adjective"].includes(structureChunk.wordtype)) {
-      matches.forEach((lObj) => POLUtils.adjustMasculinityOfLemmaObject(lObj));
-    }
-
-    if (["verb", "adjective"].includes(structureChunk.wordtype)) {
-      POLUtils.adjustVirility(structureChunk);
-    }
-  }
+  langUtils.preFilterProcessing(matches, structureChunk);
 
   //STEP TWO: Pre-emptively recursively traversing lemmaObjects to filter out any lObjs that can't dead-end structureChunk's requirements.
   if (!(currentLanguage === "ENG" && structureChunk.wordtype === "verb")) {
@@ -77,12 +71,12 @@ exports.findMatchingWordThenAddToResultArray = (
       structureChunk,
       currentLanguage
     );
+  }
 
-    if (!matches.length) {
-      errorInSentenceCreation.errorMessage =
-        "No matching lemma objects were found.";
-      return;
-    }
+  if (!matches.length) {
+    errorInSentenceCreation.errorMessage =
+      "No matching lemma objects were found.";
+    return;
   }
 
   let selectedLemmaObj = gpUtils.selectRandom(matches);

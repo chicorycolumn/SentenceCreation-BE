@@ -1,11 +1,15 @@
 let nounSet = [
   {
+    //links
     translations: { ENG: ["woman", "lady"] },
+    tags: ["animate", "person", "concrete"],
+    //selectors
     lemma: "kobieta",
     id: "pol-nou-001",
     gender: "f",
-    tags: ["animate", "person", "concrete"],
+    //notes
     deficient: false,
+    //inflections
     inflections: {
       singular: {
         nom: "kobieta",
@@ -26,12 +30,16 @@ let nounSet = [
     },
   },
   {
+    //links
     translations: { ENG: ["boy", "boyfriend", "guy"] },
+    tags: ["animate", "person", "concrete"],
+    //selectors
     lemma: "chłopak",
     id: "pol-nou-002",
     gender: "m1",
-    tags: ["animate", "person", "concrete"],
+    //notes
     deficient: false,
+    //inflections
     inflections: {
       singular: {
         nom: "chłopak",
@@ -52,12 +60,16 @@ let nounSet = [
     },
   },
   {
+    //links
     translations: { ENG: ["boy", "little boy"] },
+    tags: ["animate", "person", "concrete"],
+    //selectors
     lemma: "chłopiec",
     id: "pol-nou-003",
     gender: "m1",
-    tags: ["animate", "person", "concrete"],
+    //notes
     deficient: false,
+    //inflections
     inflections: {
       singular: {
         nom: "chłopiec",
@@ -78,12 +90,16 @@ let nounSet = [
     },
   },
   {
+    //links
     translations: { ENG: ["onion"] },
+    tags: ["inanimate", "edible", "holdable", "concrete"],
+    //selectors
     lemma: "cebula",
     id: "pol-nou-004",
     gender: "f",
-    tags: ["inanimate", "edible", "holdable", "concrete"],
+    //notes
     deficient: false,
+    //inflections
     inflections: {
       singular: {
         nom: "cebula",
@@ -104,12 +120,16 @@ let nounSet = [
     },
   },
   {
+    //links
     translations: { ENG: ["apple"] },
+    tags: ["inanimate", "edible", "holdable", "concrete"],
+    //selectors
     lemma: "jabłko",
     id: "pol-nou-005",
     gender: "n",
-    tags: ["inanimate", "edible", "holdable", "concrete"],
+    //notes
     deficient: false,
+    //inflections
     inflections: {
       singular: {
         nom: "jabłko",
@@ -130,12 +150,16 @@ let nounSet = [
     },
   },
   {
+    //links
     translations: { ENG: ["mirror"] },
+    tags: ["inanimate", "holdable", "concrete"],
+    //selectors
     lemma: "lustro",
     id: "pol-nou-006",
     gender: "n",
-    tags: ["inanimate", "holdable", "concrete"],
+    //notes
     deficient: false,
+    //inflections
     inflections: {
       singular: {
         nom: "lustro",
@@ -156,12 +180,16 @@ let nounSet = [
     },
   },
   {
+    //links
     translations: { ENG: ["mirror"] },
+    tags: ["inanimate", "holdable", "concrete"],
+    //selectors
     lemma: "zwierciadło",
     id: "pol-nou-007",
     gender: "n",
-    tags: ["inanimate", "holdable", "concrete"],
+    //notes
     deficient: false,
+    //inflections
     inflections: {
       singular: {
         nom: "zwierciadło",
@@ -182,14 +210,18 @@ let nounSet = [
     },
   },
   {
+    //links
     translations: {
       ENG: ["underwear", "pants", "underpants", "briefs", "panties"],
     },
+    tags: ["inanimate", "holdable", "concrete", "wearable"],
+    //selectors
     lemma: "majtki",
     id: "pol-nou-008",
     gender: "f",
-    tags: ["inanimate", "holdable", "concrete", "wearable"],
+    //notes
     deficient: true,
+    //inflections
     inflections: {
       plural: {
         nom: "majtki",
@@ -290,11 +322,15 @@ let pronounSet = [
 
 let adjectiveSet = [
   {
+    //links
     translations: { ENG: ["red"] },
+    tags: ["colour"],
+    //selectors
     lemma: "czerwony",
     id: "pol-adj-001",
-    tags: ["colour"],
+    //notes
     deficient: false,
+    //inflections
     inflections: {
       simple: {
         singular: {
@@ -354,15 +390,20 @@ let adjectiveSet = [
 
 //If you mark a key true, or give it a value      it will be filled out by fillVerbInflections fxn.
 //If you mark a key false, or omit it             it will not be.
+
 let verbSet = [
   {
+    //links
     translations: { ENG: ["have"] },
-    lemma: "mieć",
-    id: "pol-ver-001-imp-01",
     tags: ["basic", "possession"],
+    //selectors
+    lemma: "mieć",
+    id: "pol-ver-001-im-01",
     aspect: "imperfective",
+    //notes
     deficient: true,
     defective: false,
+    //inflections
     inflections: {
       infinitive: "mieć",
       verb: {
@@ -481,13 +522,17 @@ let verbSet = [
     },
   },
   {
+    //links
     translations: { ENG: ["read"] },
-    lemma: "czytać",
-    id: "pol-ver-002-imp-01",
     tags: ["basic2"],
+    //selectors
+    lemma: "czytać",
+    id: "pol-ver-002-im-01",
     aspect: "imperfective",
+    //notes
     deficient: false,
     defective: false,
+    //inflections
     inflections: {
       infinitive: "czytać",
       verb: {
@@ -617,6 +662,135 @@ let verbSet = [
       verbalNoun: "czytanie",
     },
   },
+  // {
+  //   //links
+  //   translations: { ENG: ["read"] },
+  //   tags: ["basic2"],
+  //   //selectors
+  //   lemma: "przeczytać",
+  //   id: "pol-ver-002-pf-01",
+  //   aspect: "perfective",
+  //   //notes
+  //   deficient: false,
+  //   defective: false,
+  //   //inflections
+  //   inflections: {
+  //     infinitive: "przeczytać",
+  //     verb: {
+  //       past: {
+  //         impersonal: {
+  //           singular: { allSingularGenders: "przeczytano" },
+  //           plural: { allPluralGenders: "przeczytano" },
+  //         },
+  //         "1per": {
+  //           singular: {
+  //             m: "przeczytałem",
+  //             f: "przeczytałam",
+  //           },
+  //           plural: {
+  //             virile: "przeczytaliśmy",
+  //             nonvirile: "przeczytałyśmy",
+  //           },
+  //         },
+  //         "2per": {
+  //           singular: {
+  //             m: "przeczytałeś",
+  //             f: "przeczytałaś",
+  //           },
+  //           plural: {
+  //             virile: "przeczytaliście",
+  //             nonvirile: "przeczytałyście",
+  //           },
+  //         },
+  //         "3per": {
+  //           singular: {
+  //             m: "przeczytał",
+  //             f: "przeczytała",
+  //             n: "przeczytało",
+  //           },
+  //           plural: {
+  //             virile: "przeczytali",
+  //             nonvirile: "przeczytały",
+  //           },
+  //         },
+  //       },
+  //       future: {
+  //         impersonal: { singular: true },
+  //         "1per": {
+  //           singular: {
+  //             allSingularGendersExcludingNeuter: "przeczytam",
+  //           },
+  //           plural: {
+  //             allPluralGenders: "przeczytamy",
+  //           },
+  //         },
+  //         "2per": {
+  //           singular: {
+  //             allSingularGendersExcludingNeuter: "przeczytasz",
+  //           },
+  //           plural: {
+  //             allPluralGenders: "przeczytacie",
+  //           },
+  //         },
+  //         "3per": {
+  //           singular: {
+  //             allSingularGenders: "przeczyta",
+  //           },
+  //           plural: {
+  //             allPluralGenders: "przeczytają",
+  //           },
+  //         },
+  //       },
+  //       present: false,
+  //       conditional: true,
+  //       imperative: {
+  //         "1per": {
+  //           singular: {
+  //             allSingularGendersExcludingNeuter: "niech przeczytam",
+  //           },
+  //           plural: {
+  //             allPluralGenders: "przeczytajmy",
+  //           },
+  //         },
+  //         "2per": {
+  //           singular: {
+  //             allSingularGendersExcludingNeuter: "przeczytaj",
+  //           },
+  //           plural: {
+  //             allPluralGenders: "przeczytajcie",
+  //           },
+  //         },
+  //         "3per": {
+  //           singular: {
+  //             allSingularGenders: "niech przeczyta",
+  //           },
+  //           plural: {
+  //             allPluralGenders: "niech przeczytają",
+  //           },
+  //         },
+  //       },
+  //     },
+  //     participle: {
+  //       activeAdjectival: false,
+  //       passiveAdjectival: {
+  //         allPersons: {
+  //           singular: {
+  //             m: "przeczytany",
+  //             f: "przeczytana",
+  //             n: "przeczytane",
+  //           },
+  //           plural: {
+  //             virile: "przeczytani",
+  //             nonvirile: "przeczytane",
+  //           },
+  //         },
+  //       },
+  //       contemporaryAdverbial: false,
+  //       anteriorAdverbial: "przeczytawszy",
+  //     },
+  //     verbalNoun: "przeczytanie",
+  //   },
+  // },
 ];
 
 exports.wordsBank = {

@@ -2,7 +2,32 @@ const lfUtils = require("../../utils/lemmaFilteringUtils.js");
 const otUtils = require("../../utils/objectTraversingUtils.js");
 const gpUtils = require("../../utils/generalPurposeUtils.js");
 
-//Alphman say: Need to, in other files, allow m1 m2 m3 to all read as m if only m key exists and not others.
+exports.preFilterProcessing = (matches, structureChunk) => {
+  if (["verb"].includes(structureChunk.wordtype)) {
+    matches.forEach((lObj) => exports.fillVerbInflections(lObj));
+  }
+
+  if (["adjective"].includes(structureChunk.wordtype)) {
+    matches.forEach((lObj) => exports.adjustMasculinityOfLemmaObject(lObj));
+  }
+
+  if (["verb", "adjective"].includes(structureChunk.wordtype)) {
+    exports.adjustVirilityOfStructureChunk(structureChunk);
+  }
+};
+
+exports.convertTenseDescriptionToFeatures = (structureChunk) => {
+  const aspectReference = { im: "imperfective", pf: "perfective" };
+
+  let tenseDescription = gpUtils.selectRandom(structureChunk.tenseDescription);
+
+  let [aspect, tense] = tenseDescription.split(" ");
+
+  structureChunk.aspect = [aspectReference[aspect]];
+  structureChunk.tense = [tense];
+};
+
+//Alphaman say: Need to, in other files, allow m1 m2 m3 to all read as m if only m key exists and not others.
 exports.fillVerbInflections = (lemmaObject) => {
   if (lemmaObject.defective) {
     return;
@@ -253,7 +278,7 @@ exports.adjustMasculinityOfLemmaObject = (lemmaObject) => {
   });
 };
 
-exports.adjustVirility = (structureChunk) => {
+exports.adjustVirilityOfStructureChunk = (structureChunk) => {
   let { gender, number } = structureChunk;
 
   if (!number || !number.includes("plural")) {

@@ -3,10 +3,12 @@ const otUtils = require("../../utils/objectTraversingUtils.js");
 const gpUtils = require("../../utils/generalPurposeUtils.js");
 const refObj = require("../../utils/referenceObjects.js");
 
-exports.addSpecialVerbConjugations = (lemmaObject, currentLanguage) => {
-  let { infinitive, v2, v3, thirdPS, gerund } = lObj.inflections;
+exports.preFilterProcessing = (matches, structureChunk) => {};
 
-  lObj.inflections.participle = {
+exports.addSpecialVerbConjugations = (lemmaObject, currentLanguage) => {
+  let { infinitive, v2, v3, thirdPS, gerund } = lemmaObject.inflections;
+
+  lemmaObject.inflections.participle = {
     pastParticiple: v3,
     activeAdjectival: gerund,
     passiveAdjectival: v3,
@@ -22,7 +24,8 @@ exports.generateAndReturnSimpleVerbConjugation = (
 ) => {
   let { infinitive, v2, v3, thirdPS, gerund } = lObj.inflections;
   let { inflections } = lObj;
-  let inflectionChain = refObj.inflectionChains[currentLanguage].verb;
+  let inflectionChain =
+    refObj.characteristics[currentLanguage].inflectionChains.verb;
 
   ////////////////////////Alpha note: This needs to be re-specified with regard to actual POL to ENG tense translations.+
   if (structureChunk.tense && structureChunk.tense.length) {
@@ -137,17 +140,19 @@ exports.generateAndReturnSimpleVerbConjugation = (
   }
 
   if (tense === "future simple") {
-    return [
-      "will" + " " + infinitive,
-      be["present"][person][number] + " " + "going to" + " " + infinitive,
-    ];
+    return "will" + " " + infinitive;
+  }
+
+  if (tense === "future simple compound") {
+    return be["present"][person][number] + " " + "going to" + " " + infinitive;
   }
 
   if (tense === "future continuous") {
-    return [
-      be.future + " " + gerund,
-      be["present"][person][number] + " " + "going to be" + " " + gerund,
-    ];
+    return be.future + " " + gerund;
+  }
+
+  if (tense === "future continuous compound") {
+    return be["present"][person][number] + " " + "going to be" + " " + gerund;
   }
 
   if (tense === "future perfect") {
