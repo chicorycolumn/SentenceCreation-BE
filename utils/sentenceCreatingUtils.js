@@ -126,17 +126,41 @@ exports.processSentenceFormula = (
 
     if (dependentChunks.length) {
       dependentChunks.forEach((dependentChunk) => {
+        console.log(">>STEP TWO", dependentChunk);
         let headChunk = sentenceStructure.find(
           (structureChunk) =>
             typeof structureChunk === "object" &&
             structureChunk.chunkId === headId
         );
 
-        refObj.inflectionChains[currentLanguage]["adjective"].forEach(
-          (featureKey) => {
+        // console.log("aaa-------");
+        // console.log("--------------");
+        // console.log("---------------------");
+        // console.log("wordtype", dependentChunk.wordtype);
+        // console.log(
+        //   refObj.inflectionChains[currentLanguage][dependentChunk.wordtype]
+        // );
+        // console.log("dependentChunk", dependentChunk);
+        // console.log("headChunk", headChunk);
+        // console.log("---------------------");
+        // console.log("--------------");
+        // console.log("-------");
+
+        refObj.inflectionChains[currentLanguage][
+          dependentChunk.wordtype
+        ].forEach((featureKey) => {
+          if (headChunk[featureKey]) {
             dependentChunk[featureKey] = headChunk[featureKey];
           }
-        );
+        });
+
+        // console.log("bbb-------");
+        // console.log("--------------");
+        // console.log("---------------------");
+        // console.log("dependentChunk", dependentChunk);
+        // console.log("---------------------");
+        // console.log("--------------");
+        // console.log("-------");
 
         doneChunkIds.push(dependentChunk.chunkId);
 

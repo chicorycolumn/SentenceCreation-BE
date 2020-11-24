@@ -84,12 +84,6 @@ exports.filterWithinSelectedLemmaObject = (
       ["verb"].includes(structureChunk.wordtype) &&
       !["participle"].includes(structureChunk.form)
     ) {
-      console.log(555555555, { structureChunk, lemmaObject, currentLanguage });
-
-      // structureChunk.form = ["verb"];
-      //Alpha ask: Why was form undefined? Either the key just shouldn't be there, if no one put it there.
-      //But since it has been put there, why undefined?
-
       let result = ENGUtils.generateAndReturnSimpleVerbConjugation(
         structureChunk,
         lemmaObject,
