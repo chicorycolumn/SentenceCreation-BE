@@ -227,6 +227,7 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
+        aspect: ["imperfective"],
         tags: ["basic2"],
         form: ["verb"],
         person: ["2per"],
@@ -239,6 +240,7 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
+        aspect: ["imperfective"],
         tags: ["basic2"],
         form: ["verb"],
         tense: ["conditional"],
@@ -252,6 +254,7 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
+        aspect: ["imperfective"],
         tags: ["basic2"],
         form: ["verb"],
         tense: ["present"],
@@ -267,6 +270,7 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
+        aspect: ["imperfective"],
         tags: ["basic2"],
         form: ["infinitive"],
       },
@@ -278,6 +282,7 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
+        aspect: ["imperfective"],
         tags: ["basic2"],
         form: ["verb"],
         person: ["impersonal"],
@@ -290,6 +295,7 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
+        aspect: ["imperfective"],
         tags: ["basic2"],
         form: ["verb"],
         person: ["impersonal"],
@@ -303,6 +309,7 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
+        aspect: ["imperfective"],
         tags: ["basic2"],
         form: ["contemporaryAdverbial"],
       },
@@ -314,6 +321,7 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
+        aspect: ["imperfective"],
         tags: ["basic2"],
         form: ["contemporaryAdverbial"],
         gender: ["f"],
@@ -326,6 +334,7 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
+        aspect: ["imperfective"],
         tags: ["basic2"],
         gender: ["n", "virile"],
         person: ["2per"],
@@ -338,7 +347,8 @@ exports.dummySentenceFormulasBank = {
     structure: [
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+        wordtype: "verb", ///////////////
+        // aspect: ["perfective"],
         tags: ["basic2"],
         form: ["anteriorAdverbial"],
       },
@@ -349,7 +359,8 @@ exports.dummySentenceFormulasBank = {
     structure: [
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+        wordtype: "verb", ///////////////
+        // aspect: ["perfective"],
         tags: ["basic2"],
         form: ["anteriorAdverbial"],
         gender: ["f"],
@@ -361,7 +372,8 @@ exports.dummySentenceFormulasBank = {
     structure: [
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+        wordtype: "verb", /////////////
+        // aspect: ["perfective"],
         tags: ["basic2"],
         gender: ["n", "virile"],
         person: ["2per"],
@@ -381,12 +393,58 @@ exports.dummySentenceFormulasBank = {
       },
     ],
   },
+  dummy20a: {
+    symbol: "dummy20a girl is reading im",
+    structure: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        tags: ["person"],
+        gcase: ["nom"],
+        number: ["singular", "plural"],
+        gender: ["f"],
+      },
+      {
+        chunkId: "ver-1",
+        agreeWith: "nou-1",
+        wordtype: "verb",
+        aspect: ["imperfective"],
+        tense: ["present"],
+        person: ["3per"],
+        tags: ["basic2"],
+      },
+    ],
+  },
+  dummy20b: {
+    symbol: "dummy20b girl will read pf",
+    structure: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        tags: ["person"],
+        gcase: ["nom"],
+        number: ["singular", "plural"],
+        gender: ["f"],
+      },
+      {
+        chunkId: "ver-1",
+        agreeWith: "nou-1",
+        wordtype: "verb",
+        aspect: ["perfective"],
+        tense: ["future"],
+        person: ["3per"],
+        tags: ["basic2"],
+      },
+    ],
+  },
+
   dummy21: {
     symbol: "dummy21 verbalNoun",
     structure: [
       {
         chunkId: "ver-1",
         wordtype: "verb",
+        aspect: ["imperfective"],
         tags: ["basic2"],
         form: ["verbalNoun"],
       },
@@ -398,6 +456,7 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
+        aspect: ["imperfective"],
         tags: ["basic2"],
         form: ["verbalNoun"],
         gender: ["f"],
@@ -410,6 +469,7 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
+        aspect: ["imperfective"],
         tags: ["basic2"],
         form: ["verb"],
         tense: ["past", "conditional"],
@@ -425,6 +485,7 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
+        aspect: ["imperfective"],
         tags: ["basic2"],
         form: ["verb"],
         tense: ["past", "conditional"],
@@ -440,6 +501,7 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
+        aspect: ["imperfective"],
         tags: ["basic2"],
         form: ["verb"],
         tense: ["past", "conditional"],

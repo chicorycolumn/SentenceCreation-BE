@@ -10,6 +10,7 @@ exports.findMatchingWordThenAddToResultArray = (
   currentLanguage
 ) => {
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
+  let lemmaObjectExtractions = null;
 
   console.log(
     "findMatchingWordThenAddToResultArray fxn has been given these arguments:"
@@ -22,16 +23,17 @@ exports.findMatchingWordThenAddToResultArray = (
     currentLanguage,
   });
 
+  //STEP ZERO: Return result array immediately if wordtype is fixed piece.
   if (structureChunk.wordtype === "fixed") {
     resultArr.push({
-      selectedLemmaObj: {},
+      selectedLemmaObject: {},
       selectedWord: structureChunk.value,
       structureChunk,
     });
     return;
   }
 
-  //STEP ONE: Filtering lemmaObjects by specificIds, specificLemmas, and tags (from structureChunk).
+  //STEP ONE: Filter lemmaObjects by specificIds OR specificLemmas OR tags and selectors.
   let source = words[gpUtils.giveSetKey(structureChunk.wordtype)];
   let matches = [];
 
@@ -49,10 +51,8 @@ exports.findMatchingWordThenAddToResultArray = (
   } else {
     matches = lfUtils.filterByTag(source, structureChunk.tags);
 
-    // Filter noun lobjs by gender (as each noun lobj is indeed a diff gender) but not for adjs/verbs, as gender is a key inside those lobjs.
-
     let selectors =
-      refObj.lemmaObjCharacteristics[currentLanguage].selectors[
+      refObj.lemmaObjectCharacteristics[currentLanguage].selectors[
         structureChunk.wordtype
       ];
     if (selectors) {
@@ -62,42 +62,82 @@ exports.findMatchingWordThenAddToResultArray = (
     }
   }
 
-  langUtils.preFilterProcessing(matches, structureChunk);
+  langUtils.preprocessLemmaObjects(matches, structureChunk);
 
-  //STEP TWO: Pre-emptively recursively traversing lemmaObjects to filter out any lObjs that can't dead-end structureChunk's requirements.
-  if (!(currentLanguage === "ENG" && structureChunk.wordtype === "verb")) {
-    matches = lfUtils.filterOutDeficientLemmaObjects(
-      matches,
+  //STEP TWO: Get word and skip Step Three, if is verb and requested form is an uninflected participle, as there's no drilling to do.
+  if (["verb"].includes(structureChunk.wordtype)) {
+    let uninflectedVerbForms = structureChunk.form.filter((form) => {
+      return refObj.uninflectedVerbForms[currentLanguage].includes(form);
+    });
+    if (uninflectedVerbForms.length) {
+      let selectedForm = gpUtils.selectRandom(uninflectedVerbForms);
+      matches = matches.filter((lObj) => {
+        return lObj.inflections[selectedForm];
+      });
+      let selectedLemmaObject = gpUtils.selectRandom(matches);
+      let selectedWord = selectedLemmaObject.inflections[selectedForm];
+
+      lfUtils.updateStructureChunk(
+        selectedLemmaObject,
+        structureChunk,
+        currentLanguage
+      );
+
+      lemmaObjectExtractions = lfUtils.sendFinalisedWord(
+        null,
+        selectedWord,
+        structureChunk
+      );
+    }
+  }
+
+  //STEP THREE
+  if (!lemmaObjectExtractions) {
+    //STEP THREE (A): Filter out lObjs that will dead-end structureChunk's requirements.
+    if (!(currentLanguage === "ENG" && structureChunk.wordtype === "verb")) {
+      matches = lfUtils.filterOutDeficientLemmaObjects(
+        matches,
+        structureChunk,
+        currentLanguage
+      );
+    }
+
+    if (!matches.length) {
+      errorInSentenceCreation.errorMessage =
+        "No matching lemma objects were found.";
+      return;
+    }
+
+    let selectedLemmaObject = gpUtils.selectRandom(matches);
+
+    //STEP THREE (B): Pick out the specific word by traversing the finally selected lObj, avoiding dead ends.
+    lfUtils.updateStructureChunk(
+      selectedLemmaObject,
+      structureChunk,
+      currentLanguage
+    );
+
+    lemmaObjectExtractions = lfUtils.filterWithinSelectedLemmaObject(
+      selectedLemmaObject,
       structureChunk,
       currentLanguage
     );
   }
 
-  if (!matches.length) {
-    errorInSentenceCreation.errorMessage =
-      "No matching lemma objects were found.";
-    return;
-  }
-
-  let selectedLemmaObj = gpUtils.selectRandom(matches);
-
-  //STEP THREE: Traversing the finally selected lObj to pick out the specific word. Ensures we don't randomly traverse to a dead end.
-  let lemmaObjectExtractions = lfUtils.filterWithinSelectedLemmaObject(
-    selectedLemmaObj,
-    structureChunk,
-    currentLanguage
-  );
-
+  //STEP FOUR: Return result array.
   if (!lemmaObjectExtractions || !lemmaObjectExtractions.selectedWord) {
     errorInSentenceCreation.errorMessage =
       "A lemma object was indeed selected, but no word was found at the end of the give inflection chain.";
-
     return false;
   } else {
-    let { selectedWord, updatedStructureChunk } = lemmaObjectExtractions;
+    let {
+      selectedWord,
+      updatedStructureChunk,
+      selectedLemmaObject,
+    } = lemmaObjectExtractions;
 
     resultArr.push({
-      selectedLemmaObj,
+      selectedLemmaObject,
       selectedWord,
       structureChunk: updatedStructureChunk,
     });

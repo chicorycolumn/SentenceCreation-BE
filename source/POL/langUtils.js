@@ -2,7 +2,17 @@ const lfUtils = require("../../utils/lemmaFilteringUtils.js");
 const otUtils = require("../../utils/objectTraversingUtils.js");
 const gpUtils = require("../../utils/generalPurposeUtils.js");
 
-exports.preFilterProcessing = (matches, structureChunk) => {
+exports.preprocessStructureChunks = (sentenceStructure) => {
+  sentenceStructure.forEach((structureChunk) => {
+    if (structureChunk.wordtype === "verb") {
+      if (structureChunk.tense && structureChunk.tense.length) {
+        structureChunk.form = ["verb"];
+      }
+    }
+  });
+};
+
+exports.preprocessLemmaObjects = (matches, structureChunk) => {
   if (["verb"].includes(structureChunk.wordtype)) {
     matches.forEach((lObj) => exports.fillVerbInflections(lObj));
   }

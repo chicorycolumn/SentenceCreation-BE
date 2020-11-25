@@ -3,7 +3,9 @@ const otUtils = require("../../utils/objectTraversingUtils.js");
 const gpUtils = require("../../utils/generalPurposeUtils.js");
 const refObj = require("../../utils/referenceObjects.js");
 
-exports.preFilterProcessing = (matches, structureChunk) => {};
+exports.preprocessStructureChunks = (sentenceStructure) => {};
+
+exports.preprocessLemmaObjects = (matches, structureChunk) => {};
 
 exports.addSpecialVerbConjugations = (lemmaObject, currentLanguage) => {
   let { infinitive, v2, v3, thirdPS, gerund } = lemmaObject.inflections;
@@ -25,7 +27,7 @@ exports.generateAndReturnSimpleVerbConjugation = (
   let { infinitive, v2, v3, thirdPS, gerund } = lObj.inflections;
   let { inflections } = lObj;
   let inflectionChain =
-    refObj.lemmaObjCharacteristics[currentLanguage].inflectionChains.verb;
+    refObj.lemmaObjectCharacteristics[currentLanguage].inflectionChains.verb;
 
   ////////////////////////Alpha note: This needs to be re-specified with regard to actual POL to ENG tense translations.+
   if (structureChunk.tense && structureChunk.tense.length) {

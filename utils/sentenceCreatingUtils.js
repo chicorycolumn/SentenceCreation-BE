@@ -20,7 +20,7 @@ exports.processSentenceFormula = (
     useDummy,
   });
 
-  //STEP ZERO: Get necessary components.
+  //STEP ZERO (A): Get necessary source materials.
   const { wordsBank } = require(`../source/${currentLanguage}/words.js`);
   const {
     dummyWordsBank,
@@ -65,7 +65,10 @@ exports.processSentenceFormula = (
     sentenceSymbol = sentenceFormula.symbol;
   }
 
-  //STEP ZERO.FIVE: Prepare chunkIds. Optionally modify the answer's sentenceStructure to fit question's.
+  //STEP ZERO (B)
+  //Prepare chunkIds.
+  //Optionally modify the answer's sentenceStructure to fit question's.
+  //Preprocess sentence structure.
 
   let sentenceStructure = sentenceFormula.structure;
 
@@ -77,6 +80,8 @@ exports.processSentenceFormula = (
       currentLanguage
     );
   }
+
+  langUtils.preprocessStructureChunks(sentenceStructure);
 
   console.log(
     "processSentenceFormula fxn just before step one says sentenceStructure is",
@@ -138,7 +143,7 @@ exports.processSentenceFormula = (
         // console.log("---------------------");
         // console.log("wordtype", dependentChunk.wordtype);
         // console.log(
-        //   refObj.lemmaObjCharacteristics[currentLanguage].inflectionChains[dependentChunk.wordtype]
+        //   refObj.lemmaObjectCharacteristics[currentLanguage].inflectionChains[dependentChunk.wordtype]
         // );
         // console.log("dependentChunk", dependentChunk);
         // console.log("headChunk", headChunk);
@@ -146,7 +151,7 @@ exports.processSentenceFormula = (
         // console.log("--------------");
         // console.log("-------");
 
-        refObj.lemmaObjCharacteristics[currentLanguage].inflectionChains[
+        refObj.lemmaObjectCharacteristics[currentLanguage].inflectionChains[
           dependentChunk.wordtype
         ].forEach((featureKey) => {
           if (headChunk[featureKey]) {
@@ -281,7 +286,7 @@ exports.conformAnswerStructureToQuestionStructure = (
       return;
     }
 
-    let questionSelectedLemmaObject = questionResArrItem.selectedLemmaObj;
+    let questionSelectedLemmaObject = questionResArrItem.selectedLemmaObject;
     let questionSelectedWord = questionResArrItem.selectedWord;
     let questionStructureChunk = questionResArrItem.structureChunk;
 
@@ -319,7 +324,7 @@ exports.conformAnswerStructureToQuestionStructure = (
     console.log("I found these matches:", answerStructureChunk.specificIds);
     console.log("answerStructureChunk", answerStructureChunk);
 
-    refObj.lemmaObjCharacteristics[
+    refObj.lemmaObjectCharacteristics[
       currentLanguage
     ].inflectionChains.allowableIncomingTransfers[answerStructureChunk.wordtype] //alpha say for tantum plurales, make Number blank (all possible) in english noun chunk
       .forEach((featureKey) => {

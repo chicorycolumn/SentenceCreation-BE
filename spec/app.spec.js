@@ -11,7 +11,7 @@ describe("/api", () => {
   // beforeEach(() => {});
 
   describe("/palette - Stage 6: Returning Polish with English translations of rich sentences (with nouns adjectives and verbs).", () => {
-    it("#pal06-01a GET 200 YES: Returns a sentence in present, plus English translation.", () => {
+    xit("#pal06-01a GET 200 YES: Returns a sentence in present, plus English translation.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -386,7 +386,7 @@ describe("/api", () => {
           console.log({ questionSentence: res.body.questionSentence });
         });
     });
-    xit("#pal04-02a GET 200 YES: Returns a sentence with a verb's contemporaryAdverbial participle.", () => {
+    it("#pal04-02a GET 200 YES: Returns a sentence with a verb's contemporaryAdverbial participle.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -401,7 +401,7 @@ describe("/api", () => {
           console.log({ questionSentence: res.body.questionSentence });
         });
     });
-    xit("#pal04-02b GET 200 YES: Returns a sentence with a verb's contemporaryAdverbial participle, ignoring gender.", () => {
+    it("#pal04-02b GET 200 YES: Returns a sentence with a verb's contemporaryAdverbial participle, ignoring gender.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -416,7 +416,7 @@ describe("/api", () => {
           console.log({ questionSentence: res.body.questionSentence });
         });
     });
-    xit("#pal04-02c GET 200 YES: Returns a sentence with a verb's contemporaryAdverbial participle, ignoring gender and person.", () => {
+    it("#pal04-02c GET 200 YES: Returns a sentence with a verb's contemporaryAdverbial participle, ignoring gender and person.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -431,7 +431,7 @@ describe("/api", () => {
           console.log({ questionSentence: res.body.questionSentence });
         });
     });
-    xit("#pal04-02d GET 200 YES: Returns a sentence with a verb's anteriorAdverbial participle.", () => {
+    it("#pal04-02d GET 200 YES: Returns a sentence with a verb's anteriorAdverbial participle.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -446,7 +446,7 @@ describe("/api", () => {
           console.log({ questionSentence: res.body.questionSentence });
         });
     });
-    xit("#pal04-02e GET 200 YES: Returns a sentence with a verb's anteriorAdverbial participle, ignoring gender.", () => {
+    it("#pal04-02e GET 200 YES: Returns a sentence with a verb's anteriorAdverbial participle, ignoring gender.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -461,7 +461,7 @@ describe("/api", () => {
           console.log({ questionSentence: res.body.questionSentence });
         });
     });
-    xit("#pal04-02f GET 200 YES: Returns a sentence with a verb's anteriorAdverbial participle, ignoring gender and person.", () => {
+    it("#pal04-02f GET 200 YES: Returns a sentence with a verb's anteriorAdverbial participle, ignoring gender and person.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -601,6 +601,40 @@ describe("/api", () => {
         .then((res) => {
           expect(res.body.questionSentence).to.be.a("String");
           expect(["Kobieta czyta.", "Kobiety czytają."]).to.include(
+            res.body.questionSentence
+          );
+          console.log({ questionSentence: res.body.questionSentence });
+        });
+    });
+    it("#pal04-06a GET 200 YES: Select a verb by the Aspect selector.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage: "POL",
+          sentenceSymbol: "dummy20a girl is reading im",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.questionSentence).to.be.a("String");
+          expect(["Kobieta czyta.", "Kobiety czytają."]).to.include(
+            res.body.questionSentence
+          );
+          console.log({ questionSentence: res.body.questionSentence });
+        });
+    });
+    it("#pal04-06b GET 200 YES: Select a verb by the Aspect selector.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage: "POL",
+          sentenceSymbol: "dummy20b girl will read pf",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.questionSentence).to.be.a("String");
+          expect(["Kobieta przeczyta.", "Kobiety przeczytają."]).to.include(
             res.body.questionSentence
           );
           console.log({ questionSentence: res.body.questionSentence });

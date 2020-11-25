@@ -217,7 +217,6 @@ exports.sentenceFormulasBank = {
         chunkId: "nou-1",
         wordtype: "noun",
         tags: ["person"],
-
         gcase: ["nom"],
         number: ["plural"],
         gender: [],

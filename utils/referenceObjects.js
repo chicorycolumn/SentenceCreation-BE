@@ -1,4 +1,4 @@
-exports.lemmaObjCharacteristics = {
+exports.lemmaObjectCharacteristics = {
   POL: {
     selectors: {
       noun: ["gender"],
@@ -26,7 +26,13 @@ exports.lemmaObjCharacteristics = {
 };
 
 exports.uninflectedVerbForms = {
-  POL: [""],
+  POL: ["contemporaryAdverbial", "anteriorAdverbial"],
+  ENG: [
+    "contemporaryAdverbial",
+    "anteriorAdverbial",
+    "activeAdjectival",
+    "passiveAdjectival",
+  ],
 };
 
 exports.tenseTranslations = {
