@@ -2,7 +2,7 @@ const gpUtils = require("./generalPurposeUtils.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
 const refObj = require("./referenceObjects.js");
 
-exports.findMatchingWordThenAddToResultArray = (
+exports.findLemmaObjectThenWord = (
   structureChunk,
   resultArr,
   words,
@@ -12,9 +12,7 @@ exports.findMatchingWordThenAddToResultArray = (
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
   let lemmaObjectExtractions = null;
 
-  console.log(
-    "findMatchingWordThenAddToResultArray fxn has been given these arguments:"
-  );
+  console.log("findLemmaObjectThenWord fxn has been given these arguments:");
   console.log({
     structureChunk,
     resultArr,

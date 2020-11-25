@@ -16,7 +16,7 @@ exports.lemmaObjectCharacteristics = {
       noun: ["number", "gcase"],
       adjective: ["form"],
       verb: ["form", "tense", "person", "number"],
-      allowableIncomingTransfers: {
+      allowableTransfersFromQuestionStructure: {
         noun: ["number"],
         adjective: ["form"],
         verb: ["form", "tense", "person", "number"],

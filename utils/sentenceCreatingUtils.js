@@ -2,6 +2,7 @@ const otUtils = require("./objectTraversingUtils.js");
 const gpUtils = require("./generalPurposeUtils.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
 const refObj = require("./referenceObjects.js");
+const allLangUtils = require("../utils/allLangUtils.js");
 
 exports.processSentenceFormula = (
   currentLanguage,
@@ -81,6 +82,7 @@ exports.processSentenceFormula = (
     );
   }
 
+  allLangUtils.preprocessStructureChunks(sentenceStructure);
   langUtils.preprocessStructureChunks(sentenceStructure);
 
   console.log(
@@ -110,7 +112,7 @@ exports.processSentenceFormula = (
     doneChunkIds.push(chunkId);
 
     console.log(">>STEP ONE", headChunk);
-    otUtils.findMatchingWordThenAddToResultArray(
+    otUtils.findLemmaObjectThenWord(
       headChunk,
       resultArr,
       words,
@@ -169,7 +171,7 @@ exports.processSentenceFormula = (
 
         doneChunkIds.push(dependentChunk.chunkId);
 
-        otUtils.findMatchingWordThenAddToResultArray(
+        otUtils.findLemmaObjectThenWord(
           dependentChunk,
           resultArr,
           words,
@@ -186,7 +188,7 @@ exports.processSentenceFormula = (
       typeof structureChunk !== "object" ||
       !doneChunkIds.includes(structureChunk.chunkId)
     ) {
-      otUtils.findMatchingWordThenAddToResultArray(
+      otUtils.findLemmaObjectThenWord(
         structureChunk,
         resultArr,
         words,
@@ -326,7 +328,9 @@ exports.conformAnswerStructureToQuestionStructure = (
 
     refObj.lemmaObjectCharacteristics[
       currentLanguage
-    ].inflectionChains.allowableIncomingTransfers[answerStructureChunk.wordtype] //alpha say for tantum plurales, make Number blank (all possible) in english noun chunk
+    ].inflectionChains.allowableTransfersFromQuestionStructure[
+      answerStructureChunk.wordtype
+    ] //alpha say for tantum plurales, make Number blank (all possible) in english noun chunk
       .forEach((featureKey) => {
         if (questionStructureChunk[featureKey]) {
           answerStructureChunk[featureKey] = questionStructureChunk[featureKey];
