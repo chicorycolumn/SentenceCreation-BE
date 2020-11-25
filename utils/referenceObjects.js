@@ -25,14 +25,21 @@ exports.lemmaObjectCharacteristics = {
   },
 };
 
-exports.uninflectedVerbForms = {
-  POL: ["contemporaryAdverbial", "anteriorAdverbial"],
-  ENG: [
-    "contemporaryAdverbial",
-    "anteriorAdverbial",
-    "activeAdjectival",
-    "passiveAdjectival",
-  ],
+exports.uninflectedForms = {
+  POL: { verb: ["contemporaryAdverbial", "anteriorAdverbial"] },
+  ENG: {
+    verb: [
+      "contemporaryAdverbial",
+      "anteriorAdverbial",
+      "activeAdjectival",
+      "passiveAdjectival",
+    ],
+  },
+};
+
+exports.adhocForms = {
+  POL: {},
+  ENG: { verb: ["verb"] },
 };
 
 exports.tenseTranslations = {

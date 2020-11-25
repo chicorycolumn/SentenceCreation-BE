@@ -64,31 +64,92 @@ exports.findMatchingWordThenAddToResultArray = (
 
   langUtils.preprocessLemmaObjects(matches, structureChunk);
 
-  //STEP TWO: Get word and skip Step Three, if is verb and requested form is an uninflected participle, as there's no drilling to do.
-  if (["verb"].includes(structureChunk.wordtype)) {
-    let uninflectedVerbForms = structureChunk.form.filter((form) => {
-      return refObj.uninflectedVerbForms[currentLanguage].includes(form);
+  //STEP TWO: Get word and skip to Step Four, if Form is uninflected or ad hoc, as there'll be no drilling to do.
+  if (structureChunk.form && structureChunk.form.length) {
+    //TWO (A): Ad hoc forms that will be generated programmatically.
+    Object.keys(refObj.adhocForms[currentLanguage]).forEach((wordtype) => {
+      if (structureChunk.wordtype === wordtype) {
+        let adhocValues = refObj.adhocForms[currentLanguage][wordtype];
+
+        let requestedAdhocForms = structureChunk.form.filter(
+          (requestedForm) => {
+            return adhocValues.includes(requestedForm);
+          }
+        );
+
+        if (requestedAdhocForms.length) {
+          let selectedAdhocForm = gpUtils.selectRandom(requestedAdhocForms);
+
+          matches = matches.filter((lObj) => {
+            return lObj.inflections[selectedAdhocForm];
+          });
+
+          let selectedLemmaObject = gpUtils.selectRandom(matches);
+
+          let selectedWord = langUtils.generateAdhocForms(
+            structureChunk,
+            selectedLemmaObject,
+            currentLanguage
+          );
+
+          lfUtils.updateStructureChunk(
+            selectedLemmaObject,
+            structureChunk,
+            currentLanguage
+          );
+
+          lemmaObjectExtractions = lfUtils.sendFinalisedWord(
+            null,
+            selectedWord,
+            structureChunk,
+            selectedLemmaObject
+          );
+        }
+      }
     });
-    if (uninflectedVerbForms.length) {
-      let selectedForm = gpUtils.selectRandom(uninflectedVerbForms);
-      matches = matches.filter((lObj) => {
-        return lObj.inflections[selectedForm];
-      });
-      let selectedLemmaObject = gpUtils.selectRandom(matches);
-      let selectedWord = selectedLemmaObject.inflections[selectedForm];
 
-      lfUtils.updateStructureChunk(
-        selectedLemmaObject,
-        structureChunk,
-        currentLanguage
-      );
+    //TWO (B): Uninflected forms.
+    Object.keys(refObj.uninflectedForms[currentLanguage]).forEach(
+      (wordtype) => {
+        if (structureChunk.wordtype === wordtype) {
+          let uninflectedValues =
+            refObj.uninflectedForms[currentLanguage][wordtype];
 
-      lemmaObjectExtractions = lfUtils.sendFinalisedWord(
-        null,
-        selectedWord,
-        structureChunk
-      );
-    }
+          let requestedUninflectedForms = structureChunk.form.filter(
+            (requestedForm) => {
+              return uninflectedValues.includes(requestedForm);
+            }
+          );
+
+          if (requestedUninflectedForms.length) {
+            let selectedUninflectedForm = gpUtils.selectRandom(
+              requestedUninflectedForms
+            );
+
+            matches = matches.filter((lObj) => {
+              return lObj.inflections[selectedUninflectedForm];
+            });
+
+            let selectedLemmaObject = gpUtils.selectRandom(matches);
+            let selectedWord =
+              selectedLemmaObject.inflections[selectedUninflectedForm];
+
+            lfUtils.updateStructureChunk(
+              selectedLemmaObject,
+              structureChunk,
+              currentLanguage
+            );
+
+            lemmaObjectExtractions = lfUtils.sendFinalisedWord(
+              null,
+              selectedWord,
+              structureChunk,
+              selectedLemmaObject
+            );
+          }
+        }
+      }
+    );
   }
 
   //STEP THREE

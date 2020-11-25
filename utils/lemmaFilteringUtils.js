@@ -66,36 +66,14 @@ exports.filterWithinSelectedLemmaObject = (
   //   }
   // }
 
-  //PART ONE: Return immediately if 'ad hoc' lobj. So this is lobjs who we know aren't deficient, and will generate their words programmatically.
-  if (currentLanguage === "ENG") {
-    if (
-      ["verb"].includes(structureChunk.wordtype) &&
-      !["participle"].includes(structureChunk.form)
-    ) {
-      let result = langUtils.generateAndReturnSimpleVerbConjugation(
-        structureChunk,
-        lemmaObject,
-        currentLanguage
-      );
-
-      if (result) {
-        return exports.sendFinalisedWord(
-          null,
-          result,
-          structureChunk,
-          lemmaObject
-        );
-      }
-    }
-  }
-
   //////////////////////// Gamma say Remove this?
   if (typeof source === "string") {
+    console.log("Ah, so this if clause does do sth s/t!");
+    return;
     return exports.sendFinalisedWord(null, source, structureChunk, lemmaObject);
   }
   ////////////////////////
 
-  //PART TWO: Drill down through the lobj to extract and return final word.
   let inflectionChain =
     refObj.lemmaObjectCharacteristics[currentLanguage].inflectionChains[
       structureChunk.wordtype

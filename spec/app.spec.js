@@ -234,7 +234,7 @@ describe("/api", () => {
           console.log({ questionSentence: res.body.questionSentence });
         });
     });
-    it.only("#pal05-02a GET 200 YES: Returns a sentence when selected by tenseDescription.", () => {
+    it("#pal05-02a GET 200 YES: Returns a sentence when selected by tenseDescription.", () => {
       return request(app)
         .get("/api/palette")
         .send({

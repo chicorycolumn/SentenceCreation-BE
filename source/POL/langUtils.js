@@ -3,8 +3,24 @@ const otUtils = require("../../utils/objectTraversingUtils.js");
 const gpUtils = require("../../utils/generalPurposeUtils.js");
 
 exports.preprocessStructureChunks = (sentenceStructure) => {
+  const aspectReference = { im: "imperfective", pf: "perfective" };
+
   sentenceStructure.forEach((structureChunk) => {
     if (structureChunk.wordtype === "verb") {
+      if (
+        structureChunk.tenseDescription &&
+        structureChunk.tenseDescription.length
+      ) {
+        structureChunk.tenseDescription.forEach((tenseDesc, index) => {
+          if (index === 0) {
+            structureChunk.tense = [];
+            structureChunk.aspect = [];
+          }
+          let [tense, aspect] = tenseDesc.split(" ");
+          structureChunk.tense.push(tense);
+          structureChunk.aspect.push(aspectReference[aspect]);
+        });
+      }
       if (structureChunk.tense && structureChunk.tense.length) {
         structureChunk.form = ["verb"];
       }
