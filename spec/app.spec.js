@@ -10,8 +10,8 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe("/palette - Stage 6: Returning Polish with English translations of rich sentences (with nouns adjectives and verbs).", () => {
-    xit("#pal06-01a GET 200 YES: Returns a sentence in present, plus English translation.", () => {
+  xdescribe("/palette - Stage 6: Returning Polish with English translations of rich sentences (with nouns adjectives and verbs).", () => {
+    it("#pal06-01a GET 200 YES: Returns a sentence in present, plus English translation.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -35,7 +35,7 @@ describe("/api", () => {
           console.log({ questionSentence: res.body });
         });
     });
-    xit("#pal06-01b GET 200 YES: Returns a sentence in present, plus multiple English translations.", () => {
+    it("#pal06-01b GET 200 YES: Returns a sentence in present, plus multiple English translations.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -56,7 +56,7 @@ describe("/api", () => {
           console.log({ questionSentence: res.body });
         });
     });
-    xit("#pal06-01c GET 200 YES: Returns a sentence in present, plus multiple English translations with multiple orders.", () => {
+    it("#pal06-01c GET 200 YES: Returns a sentence in present, plus multiple English translations with multiple orders.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -230,6 +230,103 @@ describe("/api", () => {
             "Czerwoni chłopcy nie mieli czerwonych cebul.",
             "Czerwoni chłopacy nie mieli czerwonych cebul.",
             "Czerwoni chłopaki nie mieli czerwonych cebul.",
+          ]).to.include(res.body.questionSentence);
+          console.log({ questionSentence: res.body.questionSentence });
+        });
+    });
+    it.only("#pal05-02a GET 200 YES: Returns a sentence when selected by tenseDescription.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage: "POL",
+          sentenceSymbol: "girl reads present im",
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.questionSentence).to.be.a("String");
+          expect([
+            "Kobieta czyta.",
+            "Chłopiec czyta.",
+            "Chłopak czyta.",
+
+            "Kobiety czytają.",
+            "Chłopcy czytają.",
+            "Chłopacy czytają.",
+            "Chłopaki czytają.",
+          ]).to.include(res.body.questionSentence);
+          console.log({ questionSentence: res.body.questionSentence });
+        });
+    });
+    it("#pal05-02b GET 200 YES: Returns a sentence when selected by tenseDescription.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage: "POL",
+          sentenceSymbol: "girl reads past pf",
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.questionSentence).to.be.a("String");
+          expect([
+            "Kobieta przeczytała.",
+            "Chłopiec przeczytał.",
+            "Chłopak przeczytał.",
+
+            "Kobiety przeczytały.",
+            "Chłopcy przeczytali.",
+            "Chłopacy przeczytali.",
+            "Chłopaki przeczytali.",
+          ]).to.include(res.body.questionSentence);
+          console.log({ questionSentence: res.body.questionSentence });
+        });
+    });
+    it("#pal05-02c GET 200 YES: Returns a sentence when selected by tenseDescription.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage: "POL",
+          sentenceSymbol: "girl reads future im",
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.questionSentence).to.be.a("String");
+          expect([
+            "Kobieta będzie czytała.",
+            "Chłopiec będzie czytał.",
+            "Chłopak będzie czytał.",
+
+            "Kobiety będą czytały.",
+            "Chłopcy będą czytali.",
+            "Chłopacy będą czytali.",
+            "Chłopaki będą czytali.",
+
+            "Kobieta będzie czytać.",
+            "Chłopiec będzie czytać.",
+            "Chłopak będzie czytać.",
+
+            "Kobiety będą czytać.",
+            "Chłopcy będą czytać.",
+            "Chłopacy będą czytać.",
+            "Chłopaki będą czytać.",
+          ]).to.include(res.body.questionSentence);
+          console.log({ questionSentence: res.body.questionSentence });
+        });
+    });
+    it("#pal05-02d GET 200 YES: Returns a sentence when selected by one from multiple tenseDescriptions.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage: "POL",
+          sentenceSymbol: "girl reads f conditional im pf",
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.questionSentence).to.be.a("String");
+          expect([
+            "Kobieta czytałaby.",
+            "Kobiety czytałyby.",
+            "Kobieta przeczytałaby.",
+            "Kobiety przeczytałyby.",
           ]).to.include(res.body.questionSentence);
           console.log({ questionSentence: res.body.questionSentence });
         });

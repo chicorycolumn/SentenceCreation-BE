@@ -2,27 +2,6 @@ const gpUtils = require("./generalPurposeUtils.js");
 const otUtils = require("./objectTraversingUtils.js");
 const refObj = require("./referenceObjects.js");
 
-exports.updateStructureChunk = (
-  lemmaObject,
-  structureChunk,
-  currentLanguage
-) => {
-  structureChunk.tags = structureChunk.tags.filter((tag) => {
-    lemmaObject.tags.includes(tag);
-  });
-
-  let selectors =
-    refObj.lemmaObjectCharacteristics[currentLanguage].selectors[
-      structureChunk.wordtype
-    ];
-
-  if (selectors) {
-    selectors.forEach((selector) => {
-      structureChunk[selector] = [lemmaObject[selector]];
-    });
-  }
-};
-
 exports.filterWithinSelectedLemmaObject = (
   lemmaObject,
   structureChunk,
@@ -230,6 +209,27 @@ exports.filterWithinSelectedLemmaObject = (
     structureChunk[requiredFeatureCategory] = [selectedFeature];
     drillPath.push(selectedFeature);
     return source[selectedFeature];
+  }
+};
+
+exports.updateStructureChunk = (
+  lemmaObject,
+  structureChunk,
+  currentLanguage
+) => {
+  structureChunk.tags = structureChunk.tags.filter((tag) => {
+    lemmaObject.tags.includes(tag);
+  });
+
+  let selectors =
+    refObj.lemmaObjectCharacteristics[currentLanguage].selectors[
+      structureChunk.wordtype
+    ];
+
+  if (selectors) {
+    selectors.forEach((selector) => {
+      structureChunk[selector] = [lemmaObject[selector]];
+    });
   }
 };
 

@@ -354,6 +354,92 @@ exports.sentenceFormulasBank = {
     primaryOrders: [["adj-0", "nou-1", "fix-1", "ver-1", "adj-1", "nou-2"]],
     additionalOrders: [],
   },
+  "63a": {
+    symbol: "girl reads present im",
+    structure: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        tags: ["person"],
+        gcase: ["nom"],
+      },
+      {
+        chunkId: "ver-1",
+        agreeWith: "nou-1",
+        wordtype: "verb",
+        tags: ["basic2"],
+        person: ["3per"],
+        tenseDescription: ["present im"],
+      },
+    ],
+    primaryOrders: [["nou-1", "ver-1"]],
+    additionalOrders: [],
+  },
+  "63b": {
+    symbol: "girl reads past pf",
+    structure: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        tags: ["person"],
+        gcase: ["nom"],
+      },
+      {
+        chunkId: "ver-1",
+        agreeWith: "nou-1",
+        wordtype: "verb",
+        tags: ["basic2"],
+        person: ["3per"],
+        tenseDescription: ["past pf"],
+      },
+    ],
+    primaryOrders: [["nou-1", "ver-1"]],
+    additionalOrders: [],
+  },
+  "63c": {
+    symbol: "girl reads future im",
+    structure: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        tags: ["person"],
+        gcase: ["nom"],
+      },
+      {
+        chunkId: "ver-1",
+        agreeWith: "nou-1",
+        wordtype: "verb",
+        tags: ["basic2"],
+        person: ["3per"],
+        tenseDescription: ["future im"],
+      },
+    ],
+    primaryOrders: [["nou-1", "ver-1"]],
+    additionalOrders: [],
+  },
+  "63d": {
+    symbol: "girl reads f conditional im pf",
+    structure: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        tags: ["person"],
+        gcase: ["nom"],
+        gender: ["f"],
+      },
+      {
+        chunkId: "ver-1",
+        agreeWith: "nou-1",
+        wordtype: "verb",
+        tags: ["basic2"],
+        person: ["3per"],
+        tenseDescription: ["conditional im", "conditional pf"],
+      },
+    ],
+    primaryOrders: [["nou-1", "ver-1"]],
+    additionalOrders: [],
+  },
+
   "101a": {
     symbol: "101a girl is reading",
     structure: [
@@ -361,7 +447,6 @@ exports.sentenceFormulasBank = {
         chunkId: "nou-1",
         wordtype: "noun",
         tags: ["person"],
-
         gcase: ["nom"],
         number: ["singular", "plural"],
       },
@@ -383,7 +468,6 @@ exports.sentenceFormulasBank = {
         chunkId: "nou-1",
         wordtype: "noun",
         tags: ["person"],
-
         gcase: ["nom"],
         number: ["singular"],
         gender: ["f"],
@@ -406,7 +490,6 @@ exports.sentenceFormulasBank = {
         chunkId: "nou-1",
         wordtype: "noun",
         tags: ["person"],
-
         gcase: ["nom"],
         number: ["singular"],
         gender: ["f"],

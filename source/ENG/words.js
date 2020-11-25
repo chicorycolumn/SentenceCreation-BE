@@ -134,68 +134,6 @@ let adjectiveSet = [
 let verbSet = [
   {
     //links
-    translations: { ENG: ["write"], POL: ["pisać"] },
-    tags: ["basic3"],
-    //selectors
-    lemma: "write",
-    id: "eng-ver-002",
-    //notes
-    defective: false,
-    //inflections
-    inflections: {
-      infinitive: "write",
-      v2: "wrote",
-      v3: "written",
-      thirdPS: "writes",
-      gerund: "writing",
-      verb: true,
-      participle: true,
-    },
-  },
-  {
-    //links
-    translations: { ENG: ["have"], POL: ["mieć"] },
-    tags: ["basic", "possession"],
-    //selectors
-    lemma: "have",
-    id: "eng-ver-001",
-    //notes
-    defective: false,
-    //inflections
-    inflections: {
-      infinitive: "have",
-      verb: {
-        past: {
-          allPersons: {
-            allNumbers: "had",
-          },
-        },
-        present: {
-          "1per": {
-            allNumbers: "had",
-          },
-          "2per": {
-            allNumbers: "had",
-          },
-          "3per": {
-            singular: "has",
-            plural: "have",
-          },
-        },
-        future: true,
-        conditional: true,
-      },
-      participle: {
-        activeAdjectival: "having",
-        passiveAdjectival: "had",
-        contemporaryAdverbial: "having",
-        anteriorAdverbial: "having had",
-      },
-      verbalNoun: "having",
-    },
-  },
-  {
-    //links
     translations: { ENG: ["read"], POL: ["czytać"] },
     tags: ["basic2"],
     //selectors
@@ -210,10 +148,62 @@ let verbSet = [
       v3: "read",
       thirdPS: "reads",
       gerund: "reading",
-      verb: true,
-      participle: true,
     },
   },
+  {
+    //links
+    translations: { ENG: ["write"], POL: ["pisać"] },
+    tags: ["basic3"],
+    //selectors
+    lemma: "write",
+    id: "eng-ver-002",
+    //notes
+    defective: false,
+    //inflections
+    inflections: {
+      infinitive: "write",
+      v2: "wrote",
+      v3: "written",
+      thirdPS: "writes",
+      gerund: "writing",
+    },
+  },
+  // {
+  //   //links
+  //   translations: { ENG: ["have"], POL: ["mieć"] },
+  //   tags: ["basic", "possession"],
+  //   //selectors
+  //   lemma: "have",
+  //   id: "eng-ver-001",
+  //   //notes
+  //   defective: false,
+  //   //inflections
+  //   inflections: {
+  //     infinitive: "have",
+  //     verb: {
+  //       past: {
+  //         allPersons: {
+  //           allNumbers: "had",
+  //         },
+  //       },
+  //       present: {
+  //         "1per": {
+  //           allNumbers: "had",
+  //         },
+  //         "2per": {
+  //           allNumbers: "had",
+  //         },
+  //         "3per": {
+  //           singular: "has",
+  //           plural: "have",
+  //         },
+  //       },
+  //       future: true,
+  //       conditional: true,
+  //     },
+  //     verbalNoun: "having",
+  //   },
+  // },
 ];
 
 exports.wordsBank = {

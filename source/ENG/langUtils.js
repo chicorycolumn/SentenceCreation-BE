@@ -10,13 +10,18 @@ exports.preprocessLemmaObjects = (matches, structureChunk) => {};
 exports.addSpecialVerbConjugations = (lemmaObject, currentLanguage) => {
   let { infinitive, v2, v3, thirdPS, gerund } = lemmaObject.inflections;
 
-  lemmaObject.inflections.participle = {
+  const participlesRef = {
     pastParticiple: v3,
     activeAdjectival: gerund,
     passiveAdjectival: v3,
     contemporaryAdverbial: gerund,
     anteriorAdverbial: "having" + " " + v3,
   };
+
+  Object.keys(participlesRef).forEach((key) => {
+    let value = participlesRef[key];
+    lemmaObject.inflections[key] = value;
+  });
 };
 
 exports.generateAndReturnSimpleVerbConjugation = (
