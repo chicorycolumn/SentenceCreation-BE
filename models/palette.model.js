@@ -30,9 +30,11 @@ exports.fetchPalette = (req) => {
 
   if (answerLanguage) {
     questionSentenceData.resultArr.forEach((resArrItem) => {
+      //This should now be unnec as we've told it in the refobj not to transfer gender from noun. Not allowable transfer.
       if (resArrItem.structureChunk.wordtype === "noun") {
         delete resArrItem.structureChunk.gender;
       }
+      /////
     });
 
     let answerSentenceData = scUtils.processSentenceFormula(
@@ -41,7 +43,8 @@ exports.fetchPalette = (req) => {
       questionSentenceData.sentenceSymbol,
       useDummy,
       true,
-      questionSentenceData.resultArr
+      questionSentenceData.resultArr,
+      questionLanguage
     );
 
     answerResponseObj = scUtils.formatFinalSentence(

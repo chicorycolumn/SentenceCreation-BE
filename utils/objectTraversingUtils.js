@@ -2,7 +2,7 @@ const gpUtils = require("./generalPurposeUtils.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
 const refObj = require("./referenceObjects.js");
 
-exports.findLemmaObjectThenWord = (
+exports.findMatchingLemmaObjectThenWord = (
   structureChunk,
   resultArr,
   words,
@@ -10,9 +10,13 @@ exports.findLemmaObjectThenWord = (
   currentLanguage
 ) => {
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
-  let lemmaObjectExtractions = null;
+  let lemmaObjectExtractions;
+  let selectedLemmaObject;
+  let selectedWord;
 
-  console.log("findLemmaObjectThenWord fxn has been given these arguments:");
+  console.log(
+    "findMatchingLemmaObjectThenWord fxn has been given these arguments:"
+  );
   console.log({
     structureChunk,
     resultArr,
@@ -21,7 +25,7 @@ exports.findLemmaObjectThenWord = (
     currentLanguage,
   });
 
-  //STEP ZERO: Return result array immediately if wordtype is fixed piece.
+  //STEP ONE: Return result array immediately if wordtype is fixed piece.
   if (structureChunk.wordtype === "fixed") {
     resultArr.push({
       selectedLemmaObject: {},
@@ -31,7 +35,7 @@ exports.findLemmaObjectThenWord = (
     return;
   }
 
-  //STEP ONE: Filter lemmaObjects by specificIds OR specificLemmas OR tags and selectors.
+  //STEP TWO: Filter lemmaObjects by specificIds OR specificLemmas OR tags and selectors.
   let source = words[gpUtils.giveSetKey(structureChunk.wordtype)];
   let matches = [];
 
@@ -62,51 +66,57 @@ exports.findLemmaObjectThenWord = (
 
   langUtils.preprocessLemmaObjects(matches, structureChunk);
 
-  //STEP TWO: Get word and skip to Step Four, if Form is uninflected or ad hoc, as there'll be no drilling to do.
-  if (structureChunk.form && structureChunk.form.length) {
-    //TWO (A): Ad hoc forms that will be generated programmatically.
-    Object.keys(refObj.adhocForms[currentLanguage]).forEach((wordtype) => {
-      if (structureChunk.wordtype === wordtype) {
-        let adhocValues = refObj.adhocForms[currentLanguage][wordtype];
+  console.log("****");
+  console.log("********");
+  console.log("*************");
+  console.log(structureChunk);
+  console.log("*************");
+  console.log("********");
+  console.log("****");
 
-        let requestedAdhocForms = structureChunk.form.filter(
-          (requestedForm) => {
-            return adhocValues.includes(requestedForm);
-          }
-        );
+  //STEP THREE: Return result array immediately if uninflected or ad hoc.
 
-        if (requestedAdhocForms.length) {
-          let selectedAdhocForm = gpUtils.selectRandom(requestedAdhocForms);
+  let adhocFeatureRef = refObj.adhocFeatures[currentLanguage];
+  console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>", { adhocFeatureRef });
+  //THREE (A): Ad hoc forms.
+  if (Object.keys(adhocFeatureRef).includes(structureChunk.wordtype)) {
+    console.log(111111);
+    Object.keys(adhocFeatureRef).forEach((adhocWordtype) => {
+      console.log(">>>>>>>>>>>>>>>>>>>>>", { adhocWordtype });
+      let adhocFeatureKeys = adhocFeatureRef[adhocWordtype];
 
-          matches = matches.filter((lObj) => {
-            return lObj.inflections[selectedAdhocForm];
-          });
+      adhocFeatureKeys.forEach((adhocFeatureKey) => {
+        if (
+          structureChunk[adhocFeatureKey] &&
+          structureChunk[adhocFeatureKey].length
+        ) {
+          let adhocFeature = gpUtils.selectRandom(
+            structureChunk[adhocFeatureKey]
+          );
+          console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%", { adhocFeature });
+          //Okay, we've got "present continuous" eg as our adhocFeature
 
-          let selectedLemmaObject = gpUtils.selectRandom(matches);
-
-          let selectedWord = langUtils.generateAdhocForms(
+          selectedLemmaObject = gpUtils.selectRandom(matches);
+          selectedWord = langUtils.generateAdhocForms(
             structureChunk,
             selectedLemmaObject,
             currentLanguage
           );
 
-          lfUtils.updateStructureChunk(
-            selectedLemmaObject,
-            structureChunk,
-            currentLanguage
-          );
+          // selectedWord = selectedLemmaObject["ver"]
 
-          lemmaObjectExtractions = lfUtils.sendFinalisedWord(
-            null,
+          console.log("$$$$$$$$$$$$$$$$$$$$$", {
             selectedWord,
             structureChunk,
-            selectedLemmaObject
-          );
+            selectedLemmaObject,
+          });
         }
-      }
+      });
     });
+  }
 
-    //TWO (B): Uninflected forms.
+  if (structureChunk.form && structureChunk.form.length) {
+    //THREE (B): Uninflected forms.
     Object.keys(refObj.uninflectedForms[currentLanguage]).forEach(
       (wordtype) => {
         if (structureChunk.wordtype === wordtype) {
@@ -128,78 +138,82 @@ exports.findLemmaObjectThenWord = (
               return lObj.inflections[selectedUninflectedForm];
             });
 
-            let selectedLemmaObject = gpUtils.selectRandom(matches);
-            let selectedWord =
+            selectedLemmaObject = gpUtils.selectRandom(matches);
+            selectedWord =
               selectedLemmaObject.inflections[selectedUninflectedForm];
-
-            lfUtils.updateStructureChunk(
-              selectedLemmaObject,
-              structureChunk,
-              currentLanguage
-            );
-
-            lemmaObjectExtractions = lfUtils.sendFinalisedWord(
-              null,
-              selectedWord,
-              structureChunk,
-              selectedLemmaObject
-            );
           }
         }
       }
     );
   }
 
-  //STEP THREE
-  if (!lemmaObjectExtractions) {
-    //STEP THREE (A): Filter out lObjs that will dead-end structureChunk's requirements.
-    if (!(currentLanguage === "ENG" && structureChunk.wordtype === "verb")) {
-      matches = lfUtils.filterOutDeficientLemmaObjects(
-        matches,
-        structureChunk,
-        currentLanguage
-      );
-    }
-
-    if (!matches.length) {
-      errorInSentenceCreation.errorMessage =
-        "No matching lemma objects were found.";
-      return;
-    }
-
-    let selectedLemmaObject = gpUtils.selectRandom(matches);
-
-    //STEP THREE (B): Pick out the specific word by traversing the finally selected lObj, avoiding dead ends.
+  if (selectedLemmaObject) {
     lfUtils.updateStructureChunk(
       selectedLemmaObject,
       structureChunk,
       currentLanguage
     );
 
-    lemmaObjectExtractions = lfUtils.filterWithinSelectedLemmaObject(
-      selectedLemmaObject,
+    lemmaObjectExtractions = lfUtils.sendFinalisedWord(
+      null,
+      selectedWord,
+      structureChunk,
+      selectedLemmaObject
+    );
+
+    addToResultArray(lemmaObjectExtractions, resultArr);
+    return;
+  }
+
+  //STEP FOUR: Return word after selecting by drilling down through lemma object.
+  if (!(currentLanguage === "ENG" && structureChunk.wordtype === "verb")) {
+    matches = lfUtils.filterOutDeficientLemmaObjects(
+      matches,
       structureChunk,
       currentLanguage
     );
   }
 
-  //STEP FOUR: Return result array.
-  if (!lemmaObjectExtractions || !lemmaObjectExtractions.selectedWord) {
+  if (!matches.length) {
     errorInSentenceCreation.errorMessage =
-      "A lemma object was indeed selected, but no word was found at the end of the give inflection chain.";
-    return false;
-  } else {
-    let {
-      selectedWord,
-      updatedStructureChunk,
-      selectedLemmaObject,
-    } = lemmaObjectExtractions;
+      "No matching lemma objects were found.";
+    return;
+  }
 
-    resultArr.push({
-      selectedLemmaObject,
-      selectedWord,
-      structureChunk: updatedStructureChunk,
-    });
+  selectedLemmaObject = gpUtils.selectRandom(matches);
+
+  lfUtils.updateStructureChunk(
+    selectedLemmaObject,
+    structureChunk,
+    currentLanguage
+  );
+
+  lemmaObjectExtractions = lfUtils.filterWithinSelectedLemmaObject(
+    selectedLemmaObject,
+    structureChunk,
+    currentLanguage
+  );
+
+  addToResultArray(lemmaObjectExtractions, resultArr);
+
+  function addToResultArray(lemmaObjectExtractions, resultArr) {
+    if (!lemmaObjectExtractions || !lemmaObjectExtractions.selectedWord) {
+      errorInSentenceCreation.errorMessage =
+        "A lemma object was indeed selected, but no word was found at the end of the give inflection chain.";
+      return false;
+    } else {
+      let {
+        selectedWord,
+        updatedStructureChunk,
+        selectedLemmaObject,
+      } = lemmaObjectExtractions;
+
+      resultArr.push({
+        selectedLemmaObject,
+        selectedWord,
+        structureChunk: updatedStructureChunk,
+      });
+    }
   }
 };
 

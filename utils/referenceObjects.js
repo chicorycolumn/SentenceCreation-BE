@@ -1,3 +1,5 @@
+const gpUtils = require("./generalPurposeUtils.js");
+
 exports.lemmaObjectCharacteristics = {
   POL: {
     selectors: {
@@ -9,6 +11,11 @@ exports.lemmaObjectCharacteristics = {
       adjective: ["form", "number", "gender", "gcase"],
       verb: ["form", "tense", "person", "number", "gender"],
     },
+    allowableTransfersFromQuestionStructure: {
+      noun: ["number"],
+      adjective: ["form", "number", "gender"],
+      verb: ["tenseDescription", "person", "number", "gender"],
+    },
   },
   ENG: {
     selectors: {},
@@ -19,7 +26,7 @@ exports.lemmaObjectCharacteristics = {
       allowableTransfersFromQuestionStructure: {
         noun: ["number"],
         adjective: ["form"],
-        verb: ["form", "tense", "person", "number"],
+        verb: ["tenseDescription", "person", "number"],
       },
     },
   },
@@ -37,23 +44,64 @@ exports.uninflectedForms = {
   },
 };
 
-exports.adhocForms = {
+exports.adhocFeatures = {
   POL: {},
-  ENG: { verb: ["verb"] },
+  ENG: { verb: ["tenseDescription"] },
 };
 
-exports.tenseTranslations = {
+exports.tenseDescriptionTranslation = {
   ENG: {
     POL: {
-      "past simple": ["pf past"],
-      "past continuous": ["im past"],
-      "past perfect": ["pf past"],
-      "present simple": ["im present"],
-      "present continuous": ["im present"],
-      "present perfect": ["im past"],
-      "future simple": ["pf future"],
-      "future continuous": ["compound future"],
-      "future perfect": ["pf future"],
+      "past simple": ["past pf"],
+      "past continuous": ["past im"],
+      "past perfect": ["past pf"],
+      "present simple": ["present im"],
+      "present continuous": ["present im"],
+      "present perfect": ["past im"],
+      "future simple": ["future pf"],
+      "future continuous": ["future im"],
+      "future perfect": ["future pf"],
+      //Beta say Add conditionals and any other tenses.
     },
   },
+};
+
+exports.getTranslatedTenseDescription = (
+  sourceTenseDescription,
+  sourceLanguage,
+  targetLanguage
+) => {
+  console.log("getTranslatedTenseDescription fxn was given these arguments:", {
+    sourceTenseDescription,
+    sourceLanguage,
+    targetLanguage,
+  });
+
+  let translatedTenseDescriptionsArr = [];
+  if (
+    Object.keys(exports.tenseDescriptionTranslation).includes(sourceLanguage)
+  ) {
+    translatedTenseDescriptionsArr =
+      exports.tenseDescriptionTranslation[sourceLanguage][targetLanguage][
+        sourceTenseDescription
+      ];
+  } else {
+    let translations =
+      exports.tenseDescriptionTranslation[targetLanguage][sourceLanguage];
+
+    Object.keys(translations).forEach((key) => {
+      let value = translations[key];
+
+      if (
+        value.includes(sourceTenseDescription) &&
+        !translatedTenseDescriptionsArr.includes(key)
+      ) {
+        translatedTenseDescriptionsArr.push(key);
+      }
+    });
+  }
+  console.log("getTranslatedTenseDescription fxn will return this value", {
+    translatedTenseDescriptionsArr,
+  });
+  return translatedTenseDescriptionsArr;
 };

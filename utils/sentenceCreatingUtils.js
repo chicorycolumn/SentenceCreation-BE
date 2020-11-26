@@ -10,7 +10,8 @@ exports.processSentenceFormula = (
   sentenceSymbol,
   useDummy,
   generateAnswers,
-  questionResultArray
+  questionResultArray,
+  questionLanguage
 ) => {
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
 
@@ -78,7 +79,8 @@ exports.processSentenceFormula = (
       sentenceStructure,
       questionResultArray,
       words,
-      currentLanguage
+      currentLanguage,
+      questionLanguage
     );
   }
 
@@ -112,7 +114,7 @@ exports.processSentenceFormula = (
     doneChunkIds.push(chunkId);
 
     console.log(">>STEP ONE", headChunk);
-    otUtils.findLemmaObjectThenWord(
+    otUtils.findMatchingLemmaObjectThenWord(
       headChunk,
       resultArr,
       words,
@@ -171,7 +173,7 @@ exports.processSentenceFormula = (
 
         doneChunkIds.push(dependentChunk.chunkId);
 
-        otUtils.findLemmaObjectThenWord(
+        otUtils.findMatchingLemmaObjectThenWord(
           dependentChunk,
           resultArr,
           words,
@@ -188,7 +190,7 @@ exports.processSentenceFormula = (
       typeof structureChunk !== "object" ||
       !doneChunkIds.includes(structureChunk.chunkId)
     ) {
-      otUtils.findLemmaObjectThenWord(
+      otUtils.findMatchingLemmaObjectThenWord(
         structureChunk,
         resultArr,
         words,
@@ -266,7 +268,8 @@ exports.conformAnswerStructureToQuestionStructure = (
   sentenceStructure,
   questionResultArray,
   words,
-  currentLanguage
+  answerLanguage,
+  questionLanguage
 ) => {
   console.log(
     "conformAnswerStructureToQuestionStructure fxn, ENG-sentenceStructure",
@@ -327,13 +330,26 @@ exports.conformAnswerStructureToQuestionStructure = (
     console.log("answerStructureChunk", answerStructureChunk);
 
     refObj.lemmaObjectCharacteristics[
-      currentLanguage
+      answerLanguage
     ].inflectionChains.allowableTransfersFromQuestionStructure[
       answerStructureChunk.wordtype
     ] //alpha say for tantum plurales, make Number blank (all possible) in english noun chunk
       .forEach((featureKey) => {
         if (questionStructureChunk[featureKey]) {
-          answerStructureChunk[featureKey] = questionStructureChunk[featureKey];
+          if (featureKey === "tenseDescription") {
+            let translatedTenseDescriptionArr = refObj.getTranslatedTenseDescription(
+              gpUtils.selectRandom(questionStructureChunk[featureKey]),
+              questionLanguage,
+              answerLanguage
+            );
+
+            answerStructureChunk[featureKey] = [
+              ...translatedTenseDescriptionArr,
+            ];
+          } else {
+            answerStructureChunk[featureKey] =
+              questionStructureChunk[featureKey];
+          }
         }
       });
 
@@ -342,21 +358,4 @@ exports.conformAnswerStructureToQuestionStructure = (
       answerStructureChunk
     );
   });
-
-  /*
-   * 1) Take the lemma from lobj nail, and put that as specificLemmas key in english chunk that has same chunkid as polish chunk connected to gwø»d».
-   *
-   * 2) Then bring over particular features.
-   *
-   * The polish noun chunk should copy its Number onto the english noun chunk.
-   *  although for tantum plurales, make Number blank (all possible) in english noun chunk.
-   *
-   * The polish adjective chunk should copy its Form onto the english adjective chunk.
-   *
-   * The polish verb chunk should copy its Form Tense Person Number all onto the english verb chunk.
-   *
-   * 3) Now allow processSentenceFormula to run, and the english translation of the polish sentence will be created.
-   *
-   * 4) Modify the recursive traverser, so that if(generateAnswers), it will not just select one happy route, but rather create sentences for all happy routes.
-   */
 };

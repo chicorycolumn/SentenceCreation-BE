@@ -21,9 +21,6 @@ exports.preprocessStructureChunks = (sentenceStructure) => {
           structureChunk.aspect.push(aspectReference[aspect]);
         });
       }
-      if (structureChunk.tense && structureChunk.tense.length) {
-        structureChunk.form = ["verb"];
-      }
     }
   });
 };

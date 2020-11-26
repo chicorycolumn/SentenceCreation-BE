@@ -13,7 +13,6 @@ exports.sentenceFormulasBank = {
         chunkId: "nou-1",
         wordtype: "noun",
         tags: ["person"],
-
         gcase: ["nom"],
         number: ["singular", "plural"],
         gender: [],
@@ -22,7 +21,6 @@ exports.sentenceFormulasBank = {
         chunkId: "ver-1",
         agreeWith: "nou-1",
         wordtype: "verb",
-        tense: [],
         person: ["3per"],
         tags: ["basic2"],
       },
@@ -44,7 +42,6 @@ exports.sentenceFormulasBank = {
         chunkId: "nou-1",
         wordtype: "noun",
         tags: ["person"],
-
         gcase: ["nom"],
         number: ["singular", "plural"],
       },
@@ -52,7 +49,6 @@ exports.sentenceFormulasBank = {
         chunkId: "ver-1",
         agreeWith: "nou-1",
         wordtype: "verb",
-        tense: [],
         person: ["3per"],
         tags: ["basic2"],
       },
@@ -74,7 +70,6 @@ exports.sentenceFormulasBank = {
         chunkId: "nou-1",
         wordtype: "noun",
         tags: ["person"],
-
         gcase: ["nom"],
         number: ["singular", "plural"],
       },
@@ -82,7 +77,6 @@ exports.sentenceFormulasBank = {
         chunkId: "ver-1",
         agreeWith: "nou-1",
         wordtype: "verb",
-        tense: [],
         person: ["3per"],
         tags: ["basic2"],
       },

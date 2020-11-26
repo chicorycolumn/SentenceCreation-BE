@@ -25,34 +25,51 @@ exports.addSpecialVerbConjugations = (lemmaObject, currentLanguage) => {
 };
 
 exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
+  console.log("generateAdhocForms fxn was given these arguments", {
+    structureChunk,
+    lObj,
+    currentLanguage,
+  });
+
   if (
     structureChunk.wordtype === "verb" &&
-    ["verb"].contains(structureChunk.form)
+    structureChunk.form.includes("verb")
   ) {
+    console.log(77777777777);
     let { infinitive, v2, v3, thirdPS, gerund } = lObj.inflections;
     let { inflections } = lObj;
     let inflectionChain =
       refObj.lemmaObjectCharacteristics[currentLanguage].inflectionChains.verb;
+    let selectedTenseDescription;
 
-    ////////////////////////Alpha note: This needs to be re-specified with regard to actual POL to ENG tense translations.+
-    if (structureChunk.tense && structureChunk.tense.length) {
-      structureChunk.tense = gpUtils.selectRandom(structureChunk.tense);
+    if (
+      structureChunk.tenseDescription &&
+      structureChunk.tenseDescription.length
+    ) {
+      selectedTenseDescription = gpUtils.selectRandom(
+        structureChunk.tenseDescription
+      );
+    } else {
+      return;
     }
 
-    if (structureChunk.tense === "present") {
-      structureChunk.tense = gpUtils.selectRandom([
+    // console.log(111111);
+    // console.log(selectedTenseDescription);
+    // console.log(111111);
+    if (selectedTenseDescription === "present") {
+      selectedTenseDescription = gpUtils.selectRandom([
         "present simple",
         "present continuous",
       ]);
     }
-    if (structureChunk.tense === "past") {
-      structureChunk.tense = gpUtils.selectRandom([
+    if (selectedTenseDescription === "past") {
+      selectedTenseDescription = gpUtils.selectRandom([
         "past simple",
         "past continuous",
       ]);
     }
-    if (structureChunk.tense === "future") {
-      structureChunk.tense = gpUtils.selectRandom([
+    if (selectedTenseDescription === "future") {
+      selectedTenseDescription = gpUtils.selectRandom([
         "future simple",
         "future continuous",
       ]);
@@ -87,7 +104,7 @@ exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
     let ref = {
       person: ["1per", "2per", "3per"],
       number: ["singular", "plural"],
-      tense: [
+      tenseDescription: [
         "past continuous",
         "past simple",
         "past perfect",
@@ -114,21 +131,21 @@ exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
       }
     });
 
-    let { tense, person, number } = structureChunk;
+    let { person, number } = structureChunk;
 
-    if (tense === "past simple") {
+    if (selectedTenseDescription === "past simple") {
       return v2;
     }
 
-    if (tense === "past continuous") {
+    if (selectedTenseDescription === "past continuous") {
       return be["past"][person][number] + " " + gerund;
     }
 
-    if (tense === "past perfect") {
+    if (selectedTenseDescription === "past perfect") {
       return have["past"] + " " + v3;
     }
 
-    if (tense === "present simple") {
+    if (selectedTenseDescription === "present simple") {
       if (person === "3per" && number === "singular") {
         return thirdPS;
       } else {
@@ -136,49 +153,52 @@ exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
       }
     }
 
-    if (tense === "present continuous") {
+    if (selectedTenseDescription === "present continuous") {
       return be["present"][person][number] + " " + gerund;
     }
 
-    if (tense === "present perfect") {
+    if (selectedTenseDescription === "present perfect") {
       return have["present"][person][number] + " " + v3;
     }
 
-    if (tense === "future simple") {
+    if (selectedTenseDescription === "future simple") {
       return "will" + " " + infinitive;
     }
 
-    if (tense === "future simple compound") {
+    if (selectedTenseDescription === "future simple compound") {
       return (
         be["present"][person][number] + " " + "going to" + " " + infinitive
       );
     }
 
-    if (tense === "future continuous") {
+    if (selectedTenseDescription === "future continuous") {
       return be.future + " " + gerund;
     }
 
-    if (tense === "future continuous compound") {
+    if (selectedTenseDescription === "future continuous compound") {
       return be["present"][person][number] + " " + "going to be" + " " + gerund;
     }
 
-    if (tense === "future perfect") {
+    if (selectedTenseDescription === "future perfect") {
       return have.future + " " + v3;
     }
 
-    if (tense === "conditional" || tense === "conditional simple") {
+    if (
+      selectedTenseDescription === "conditional" ||
+      selectedTenseDescription === "conditional simple"
+    ) {
       return "would" + " " + infinitive;
     }
 
-    if (tense === "conditional continuous") {
+    if (selectedTenseDescription === "conditional continuous") {
       return be.conditional + " " + gerund;
     }
 
-    if (tense === "conditional perfect") {
+    if (selectedTenseDescription === "conditional perfect") {
       return have.conditional + " " + v3;
     }
 
-    if (tense === "imperative") {
+    if (selectedTenseDescription === "imperative") {
       return infinitive;
     }
   }

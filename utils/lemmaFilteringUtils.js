@@ -20,60 +20,6 @@ exports.filterWithinSelectedLemmaObject = (
 
   let source = lemmaObject.inflections;
 
-  // exports.updateStructureChunk(lemmaObject, structureChunk, currentLanguage);
-
-  // //PART X: Optionally return immediately if requested word is a participle with no inflections.
-
-  // //gamma Currently working to make this happen programmatically.
-
-  // if (["verb"].includes(structureChunk.wordtype)) {
-  //   if (
-  //     structureChunk.form &&
-  //     structureChunk.form.includes("participle") &&
-  //     structureChunk.tense
-  //   ) {
-  //     if (currentLanguage === "POL") {
-  //       let participle = exports.retrieveJustParticiple(
-  //         structureChunk,
-  //         lemmaObject,
-  //         ["contemporaryAdverbial", "anteriorAdverbial"]
-  //       );
-
-  //       console.log("filterWithinSelectedLemmaObject fxn part two", participle);
-  //       if (participle) {
-  //         return exports.sendFinalisedWord(null, participle, structureChunk);
-  //       }
-  //     } else if (currentLanguage === "ENG") {
-  //       langUtils.addSpecialVerbConjugations(lemmaObject, currentLanguage);
-
-  //       let participle = exports.retrieveJustParticiple(
-  //         structureChunk,
-  //         lemmaObject,
-  //         [
-  //           "contemporaryAdverbial",
-  //           "anteriorAdverbial",
-  //           "passiveAdjectival",
-  //           "activeAdjectival",
-  //           "pastParticiple",
-  //         ]
-  //       );
-
-  //       console.log("filterWithinSelectedLemmaObject fxn part two", participle);
-  //       if (participle) {
-  //         return exports.sendFinalisedWord(null, participle, structureChunk);
-  //       }
-  //     }
-  //   }
-  // }
-
-  //////////////////////// Gamma say Remove this?
-  if (typeof source === "string") {
-    console.log("Ah, so this if clause does do sth s/t!");
-    return;
-    return exports.sendFinalisedWord(null, source, structureChunk, lemmaObject);
-  }
-  ////////////////////////
-
   let inflectionChain =
     refObj.lemmaObjectCharacteristics[currentLanguage].inflectionChains[
       structureChunk.wordtype
@@ -195,6 +141,12 @@ exports.updateStructureChunk = (
   structureChunk,
   currentLanguage
 ) => {
+  console.log("updateStructureChunk fxn was given these arguments:", {
+    lemmaObject,
+    structureChunk,
+    currentLanguage,
+  });
+
   structureChunk.tags = structureChunk.tags.filter((tag) => {
     lemmaObject.tags.includes(tag);
   });

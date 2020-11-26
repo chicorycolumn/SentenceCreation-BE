@@ -16,6 +16,15 @@ exports.preprocessStructureChunks = (sentenceStructure) => {
           structureChunk.person = [...headChunk.person];
         }
       }
+
+      ["tense", "tenseDescription"].forEach((verbFeatureKey) => {
+        if (
+          structureChunk[verbFeatureKey] &&
+          structureChunk[verbFeatureKey].length
+        ) {
+          structureChunk.form = ["verb"];
+        }
+      });
     }
   });
 };
