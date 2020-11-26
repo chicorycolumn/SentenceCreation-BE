@@ -11,7 +11,7 @@ describe("/api", () => {
   // beforeEach(() => {});
 
   describe("/palette - Stage 6: Returning Polish with English translations of rich sentences (with nouns adjectives and verbs).", () => {
-    it("#pal06-01a GET 200 YES: Returns a sentence in present, plus English translation.", () => {
+    it.only("#pal06-01z *interim test* GET 200 NO: Returns a sentence in present, with just one translation.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -32,27 +32,43 @@ describe("/api", () => {
             "Chłopacy czytają.",
             "Chłopaki czytają.",
           ]).to.include(res.body.questionSentence);
+          expect([
+            "The boys read.",
+            "The boys are reading.",
+            "The boy reads.",
+            "The boy is reading.",
+
+            "The women read.",
+            "The women are reading.",
+            "The woman reads.",
+            "The woman is reading.",
+          ]).to.include(res.body.answerSentence);
           console.log({ questionSentence: res.body });
         });
     });
-    xit("#pal06-02a GET 200 YES: Returns a sentence in present, plus multiple English translations.", () => {
+    it("#pal06-01a GET 200 YES: Returns a sentence in present, with all English translations.", () => {
       return request(app)
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
           answerLanguage: "ENG",
-          sentenceSymbol: "101b girl f is reading",
-          // sentenceNumber: "101b",
+          sentenceSymbol: "101a girl is reading",
+          // sentenceNumber: "101a",
         })
         .expect(200)
         .then((res) => {
           expect(res.body.questionSentence).to.be.a("String");
           expect(res.body.answerSentence).to.have.members([
-            "The woman is reading.",
-            "The woman reads.",
-          ]);
+            "The boys read.",
+            "The boys are reading.",
+            "The boy reads.",
+            "The boy is reading.",
 
-          expect(["Kobieta czyta."]).to.include(res.body.questionSentence);
+            "The women read.",
+            "The women are reading.",
+            "The woman reads.",
+            "The woman is reading.",
+          ]);
           console.log({ questionSentence: res.body });
         });
     });

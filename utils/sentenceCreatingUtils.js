@@ -119,7 +119,8 @@ exports.processSentenceFormula = (
       resultArr,
       words,
       errorInSentenceCreation,
-      currentLanguage
+      currentLanguage,
+      questionLanguage
     );
 
     console.log("Finished step one.");
@@ -178,7 +179,8 @@ exports.processSentenceFormula = (
           resultArr,
           words,
           errorInSentenceCreation,
-          currentLanguage
+          currentLanguage,
+          questionLanguage
         );
       });
     }
@@ -195,7 +197,8 @@ exports.processSentenceFormula = (
         resultArr,
         words,
         errorInSentenceCreation,
-        currentLanguage
+        currentLanguage,
+        questionLanguage
       );
     }
   });

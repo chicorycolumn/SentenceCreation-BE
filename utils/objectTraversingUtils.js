@@ -7,7 +7,8 @@ exports.findMatchingLemmaObjectThenWord = (
   resultArr,
   words,
   errorInSentenceCreation,
-  currentLanguage
+  currentLanguage,
+  questionLanguage
 ) => {
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
   let lemmaObjectExtractions;
@@ -90,20 +91,24 @@ exports.findMatchingLemmaObjectThenWord = (
           structureChunk[adhocFeatureKey] &&
           structureChunk[adhocFeatureKey].length
         ) {
-          let adhocFeature = gpUtils.selectRandom(
-            structureChunk[adhocFeatureKey]
-          );
-          console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%", { adhocFeature });
-          //Okay, we've got "present continuous" eg as our adhocFeature
+          // let adhocFeature = gpUtils.selectRandom(
+          //   structureChunk[adhocFeatureKey]
+          // );
+          // console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%", { adhocFeature });
+          // //Okay, we've got "present continuous" eg as our adhocFeature
 
           selectedLemmaObject = gpUtils.selectRandom(matches);
-          selectedWord = langUtils.generateAdhocForms(
+
+          let adhocArr = langUtils.generateAdhocForms(
             structureChunk,
             selectedLemmaObject,
-            currentLanguage
+            currentLanguage,
+            questionLanguage
           );
 
-          // selectedWord = selectedLemmaObject["ver"]
+          selectedWord = questionLanguage
+            ? adhocArr
+            : gpUtils.selectRandom(adhocArr);
 
           console.log("$$$$$$$$$$$$$$$$$$$$$", {
             selectedWord,
