@@ -50,7 +50,8 @@ exports.fetchPalette = (req) => {
     answerResponseObj = scUtils.formatFinalSentence(
       answerSentenceData.resultArr,
       answerSentenceData.sentenceFormula,
-      answerSentenceData.errorInSentenceCreation
+      answerSentenceData.errorInSentenceCreation,
+      questionLanguage
     );
   }
 

@@ -7,8 +7,8 @@ exports.filterWithinSelectedLemmaObject = (
   structureChunk,
   currentLanguage
 ) => {
+  //STEP ZERO: Get necessary materials, ie inflectionPaths and requirementArrs.
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
-
   console.log(
     "filterWithinSelectedLemmaObject fxn was given these arguments:",
     {
@@ -17,29 +17,23 @@ exports.filterWithinSelectedLemmaObject = (
       currentLanguage,
     }
   );
-
   let source = lemmaObject.inflections;
-
   let inflectionChain =
     refObj.lemmaObjectCharacteristics[currentLanguage].inflectionChains[
       structureChunk.wordtype
     ];
-
   let requirementArrs = [];
   inflectionChain.forEach((key) => {
     requirementArrs.push([key, structureChunk[key] || []]);
   });
-
   let { routesByNesting, routesByLevel } = otUtils.extractNestedRoutes(
     lemmaObject.inflections
   );
-
   let inflectionPathsInSource = routesByNesting;
-
   let errorInDrilling = false;
-
   let drillPath = [];
 
+  //STEP ONE: Drill down through lemma object.
   requirementArrs.forEach((requirementKeyedArr, requirementArrIndex) => {
     if (errorInDrilling) {
       return;
@@ -56,6 +50,7 @@ exports.filterWithinSelectedLemmaObject = (
     }
   });
 
+  //STEP TWO: Send word.
   return exports.sendFinalisedWord(
     errorInDrilling,
     source,
@@ -65,32 +60,32 @@ exports.filterWithinSelectedLemmaObject = (
 
   function drillDownOneLevel_filterWithin(
     source,
-    requirementFeatureArr,
+    requirementInflectorArr,
     requirementArrIndex
   ) {
-    let sourceFeatures = Object.keys(source);
-    let validFeatures = [];
-    let requiredFeatureCategory = requirementFeatureArr[0];
-    let requiredFeaturesArr = requirementFeatureArr[1];
+    let sourceInflectors = Object.keys(source);
+    let validInflectors = [];
+    let requiredInflectorCategory = requirementInflectorArr[0];
+    let requiredInflectorsArr = requirementInflectorArr[1];
 
-    if (requiredFeaturesArr.length) {
-      validFeatures = sourceFeatures.filter((feature) =>
-        requiredFeaturesArr.includes(feature)
+    if (requiredInflectorsArr.length) {
+      validInflectors = sourceInflectors.filter((inflector) =>
+        requiredInflectorsArr.includes(inflector)
       );
     } else {
-      validFeatures = sourceFeatures;
+      validInflectors = sourceInflectors;
     }
 
-    validFeatures = validFeatures.filter((feature_i) => {
+    validInflectors = validInflectors.filter((inflector_i) => {
       let copyDrillPath = [...drillPath];
-      copyDrillPath.push(feature_i);
+      copyDrillPath.push(inflector_i);
 
       let putativePathsWithDrillPathSoFar = inflectionPathsInSource.filter(
         (inflectionPath_j) => {
           return copyDrillPath.every(
-            (drillPathFeature, drillPathFeatureIndex) => {
+            (drillPathInflector, drillPathInflectorIndex) => {
               return (
-                inflectionPath_j[drillPathFeatureIndex] === drillPathFeature
+                inflectionPath_j[drillPathInflectorIndex] === drillPathInflector
               );
             }
           );
@@ -101,12 +96,12 @@ exports.filterWithinSelectedLemmaObject = (
         (putativePath) => {
           return requirementArrs.every(
             (requirementArr_i, requirementArrIndex_i) => {
-              let requiredFeatureCategory_i = requirementArr_i[0];
-              let requiredFeaturesArr_i = requirementArr_i[1];
+              let requiredInflectorCategory_i = requirementArr_i[0];
+              let requiredInflectorsArr_i = requirementArr_i[1];
 
               return (
-                !requiredFeaturesArr_i.length ||
-                requiredFeaturesArr_i.includes(
+                !requiredInflectorsArr_i.length ||
+                requiredInflectorsArr_i.includes(
                   putativePath[requirementArrIndex_i]
                 )
               );
@@ -118,21 +113,21 @@ exports.filterWithinSelectedLemmaObject = (
       return putativePathsLookingAhead.length;
     });
 
-    console.log({ validFeatures });
+    console.log({ validInflectors });
 
-    if (!validFeatures.length) {
+    if (!validInflectors.length) {
       return null;
     }
 
-    let selectedFeature = gpUtils.selectRandom(validFeatures);
+    let selectedInflector = gpUtils.selectRandom(validInflectors);
 
     console.log(
-      `                                                    Selecting feature ${selectedFeature} as ${requiredFeatureCategory}.`
+      `                                                    Selecting inflector ${selectedInflector} as ${requiredInflectorCategory}.`
     );
 
-    structureChunk[requiredFeatureCategory] = [selectedFeature];
-    drillPath.push(selectedFeature);
-    return source[selectedFeature];
+    structureChunk[requiredInflectorCategory] = [selectedInflector];
+    drillPath.push(selectedInflector);
+    return source[selectedInflector];
   }
 };
 

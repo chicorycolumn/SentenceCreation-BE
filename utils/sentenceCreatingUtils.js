@@ -212,6 +212,45 @@ exports.processSentenceFormula = (
   };
 };
 
+exports.formatFinalSentence = (
+  resultArr,
+  sentenceFormula,
+  errorInSentenceCreation,
+  questionLanguage
+) => {
+  if (questionLanguage) {
+    console.log(
+      "formatFinalSentence fxn says Now we should go through every permutation and make a sentence for each one."
+    );
+    console.log("resultArr", resultArr);
+    console.log("sentenceFormula", sentenceFormula);
+  } else {
+    let finalSentence = exports.buildSentenceFromArray(
+      resultArr,
+      sentenceFormula
+    );
+
+    if (errorInSentenceCreation.errorMessage) {
+      let errorMessage = {
+        errorInSentenceCreation: errorInSentenceCreation.errorMessage,
+      };
+
+      questionResponseObj = {
+        message: "No sentence could be created from the specifications.",
+        fragment: finalSentence,
+        finalSentence: null,
+        errorMessage,
+      };
+    } else {
+      questionResponseObj = {
+        finalSentence,
+      };
+    }
+
+    return questionResponseObj;
+  }
+};
+
 exports.buildSentenceFromArray = (unorderedArr, sentenceFormula) => {
   let selectedWords = [];
 
@@ -235,36 +274,6 @@ exports.buildSentenceFromArray = (unorderedArr, sentenceFormula) => {
 
   let producedSentence = gpUtils.capitaliseFirst(selectedWords.join(" ") + ".");
   return producedSentence;
-};
-
-exports.formatFinalSentence = (
-  resultArr,
-  sentenceFormula,
-  errorInSentenceCreation
-) => {
-  let finalSentence = exports.buildSentenceFromArray(
-    resultArr,
-    sentenceFormula
-  );
-
-  if (errorInSentenceCreation.errorMessage) {
-    let errorMessage = {
-      errorInSentenceCreation: errorInSentenceCreation.errorMessage,
-    };
-
-    questionResponseObj = {
-      message: "No sentence could be created from the specifications.",
-      fragment: finalSentence,
-      finalSentence: null,
-      errorMessage,
-    };
-  } else {
-    questionResponseObj = {
-      finalSentence,
-    };
-  }
-
-  return questionResponseObj;
 };
 
 exports.conformAnswerStructureToQuestionStructure = (
@@ -340,15 +349,20 @@ exports.conformAnswerStructureToQuestionStructure = (
       .forEach((featureKey) => {
         if (questionStructureChunk[featureKey]) {
           if (featureKey === "tenseDescription") {
-            let translatedTenseDescriptionArr = refObj.getTranslatedTenseDescription(
-              gpUtils.selectRandom(questionStructureChunk[featureKey]),
-              questionLanguage,
-              answerLanguage
-            );
+            answerStructureChunk["tenseDescription"] = [];
 
-            answerStructureChunk[featureKey] = [
-              ...translatedTenseDescriptionArr,
-            ];
+            questionStructureChunk["tenseDescription"].forEach((tenseDesc) => {
+              let translatedTenseDescArr = refObj.getTranslatedTenseDescription(
+                tenseDesc,
+                questionLanguage,
+                answerLanguage
+              );
+
+              answerStructureChunk["tenseDescription"] = [
+                ...answerStructureChunk["tenseDescription"],
+                ...translatedTenseDescArr,
+              ];
+            });
           } else {
             answerStructureChunk[featureKey] =
               questionStructureChunk[featureKey];

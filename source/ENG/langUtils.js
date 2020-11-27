@@ -48,7 +48,7 @@ const have = {
   future: "will have",
   conditional: "would have",
 };
-let ref = {
+let featureRef = {
   person: ["1per", "2per", "3per"],
   number: ["singular", "plural"],
   tenseDescription: [
@@ -69,17 +69,16 @@ let ref = {
 };
 
 exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
-  console.log("generateAdhocForms fxn was given these arguments", {
-    structureChunk,
-    lObj,
-    currentLanguage,
-  });
+  // console.log("generateAdhocForms fxn was given these arguments", {
+  //   structureChunk,
+  //   lObj,
+  //   currentLanguage,
+  // });
 
   if (
     structureChunk.wordtype === "verb" &&
     structureChunk.form.includes("verb")
   ) {
-    console.log(77777777777);
     let { infinitive, v2, v3, thirdPS, gerund } = lObj.inflections;
     let { inflections } = lObj;
     let inflectionChain =
@@ -96,9 +95,11 @@ exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
     let resArr = [];
     let tenseDescriptionArr = [...structureChunk.tenseDescription];
 
-    Object.keys(ref).forEach((key) => {
-      let value = ref[key];
+    Object.keys(featureRef).forEach((key) => {
+      let value = featureRef[key];
 
+      //Select random if there is NO value to a feature key. So this only applies when ENG is question language.
+      //This won't be used when ENG is answer language.
       if (!Array.isArray(structureChunk[key]) || !structureChunk[key].length) {
         structureChunk[key] = gpUtils.selectRandom(value);
       }
@@ -122,8 +123,6 @@ exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
     structureChunk.person.forEach((person) => {
       structureChunk.number.forEach((number) => {
         tenseDescriptionArr.forEach((selectedTenseDescription) => {
-          console.log("@@@", { person, number, selectedTenseDescription });
-
           if (selectedTenseDescription === "past simple") {
             resArr.push(v2);
           }
@@ -137,9 +136,6 @@ exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
           }
 
           if (selectedTenseDescription === "present simple") {
-            console.log("# # # # #");
-            console.log({ person, number });
-            console.log("# # # # #");
             if (person === "3per" && number === "singular") {
               resArr.push(thirdPS);
             } else {
@@ -148,9 +144,6 @@ exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
           }
 
           if (selectedTenseDescription === "present continuous") {
-            console.log("* * * * *");
-            console.log({ person, number });
-            console.log("* * * * *");
             resArr.push(be["present"][person][number] + " " + gerund);
           }
 

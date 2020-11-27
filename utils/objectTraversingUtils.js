@@ -91,13 +91,11 @@ exports.findMatchingLemmaObjectThenWord = (
           structureChunk[adhocFeatureKey] &&
           structureChunk[adhocFeatureKey].length
         ) {
-          // let adhocFeature = gpUtils.selectRandom(
+          // let adhocFeature = gpUtils.seeelectRandom(
           //   structureChunk[adhocFeatureKey]
           // );
           // console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%", { adhocFeature });
           // //Okay, we've got "present continuous" eg as our adhocFeature
-
-          selectedLemmaObject = gpUtils.selectRandom(matches);
 
           let adhocArr = langUtils.generateAdhocForms(
             structureChunk,
@@ -106,9 +104,13 @@ exports.findMatchingLemmaObjectThenWord = (
             questionLanguage
           );
 
+          selectedLemmaObject = gpUtils.selectRandom(matches);
+
           selectedWord = questionLanguage
             ? adhocArr
             : gpUtils.selectRandom(adhocArr);
+
+          console.log("£££££££££££££", { adhocArr });
 
           console.log("$$$$$$$$$$$$$$$$$$$$$", {
             selectedWord,
@@ -144,6 +146,7 @@ exports.findMatchingLemmaObjectThenWord = (
             });
 
             selectedLemmaObject = gpUtils.selectRandom(matches);
+
             selectedWord =
               selectedLemmaObject.inflections[selectedUninflectedForm];
           }
@@ -171,13 +174,12 @@ exports.findMatchingLemmaObjectThenWord = (
   }
 
   //STEP FOUR: Return word after selecting by drilling down through lemma object.
-  if (!(currentLanguage === "ENG" && structureChunk.wordtype === "verb")) {
-    matches = lfUtils.filterOutDeficientLemmaObjects(
-      matches,
-      structureChunk,
-      currentLanguage
-    );
-  }
+
+  matches = lfUtils.filterOutDeficientLemmaObjects(
+    matches,
+    structureChunk,
+    currentLanguage
+  );
 
   if (!matches.length) {
     errorInSentenceCreation.errorMessage =

@@ -39,18 +39,19 @@ exports.preprocessLemmaObjects = (matches, structureChunk) => {
   }
 };
 
-exports.convertTenseDescriptionToFeatures = (structureChunk) => {
-  const aspectReference = { im: "imperfective", pf: "perfective" };
+// exports.convertTenseDescriptionToFeatures = (structureChunk) => {
+//   const aspectReference = { im: "imperfective", pf: "perfective" };
 
-  let tenseDescription = gpUtils.selectRandom(structureChunk.tenseDescription);
+//   let tenseDescription = gpUtils.seeelectRandom(structureChunk.tenseDescription);
 
-  let [aspect, tense] = tenseDescription.split(" ");
+//   let [aspect, tense] = tenseDescription.split(" ");
 
-  structureChunk.aspect = [aspectReference[aspect]];
-  structureChunk.tense = [tense];
-};
+//   structureChunk.aspect = [aspectReference[aspect]];
+//   structureChunk.tense = [tense];
+// };
 
 //Alphaman say: Need to, in other files, allow m1 m2 m3 to all read as m if only m key exists and not others.
+
 exports.fillVerbInflections = (lemmaObject) => {
   if (lemmaObject.defective) {
     return;

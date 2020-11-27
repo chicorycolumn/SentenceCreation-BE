@@ -185,7 +185,7 @@ exports.dummySentenceFormulasBank = {
         gcase: ["nom"],
         number: ["singular"],
         gender: [],
-        specificLemmas: ["jabłko"], //This overrides tags and selectRandom. But still conjugates for features.
+        specificLemmas: ["jabłko"], //This overrides tags and Select Random. But still conjugates for features.
       },
     ],
     primaryOrders: [["fix-1", "nou-1"]],
@@ -202,7 +202,7 @@ exports.dummySentenceFormulasBank = {
         gcase: ["acc"],
         number: ["plural"],
         gender: [],
-        specificLemmas: ["jabłko", "majtki"], //This overrides tags and selectRandom. But still conjugates for features.
+        specificLemmas: ["jabłko", "majtki"], //This overrides tags and Select Random. But still conjugates for features.
       },
     ],
     primaryOrders: [["fix-1", "nou-1"]],
