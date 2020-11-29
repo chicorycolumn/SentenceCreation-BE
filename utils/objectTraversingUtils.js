@@ -91,20 +91,13 @@ exports.findMatchingLemmaObjectThenWord = (
           structureChunk[adhocFeatureKey] &&
           structureChunk[adhocFeatureKey].length
         ) {
-          // let adhocFeature = gpUtils.seeelectRandom(
-          //   structureChunk[adhocFeatureKey]
-          // );
-          // console.log("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%", { adhocFeature });
-          // //Okay, we've got "present continuous" eg as our adhocFeature
+          selectedLemmaObject = gpUtils.selectRandom(matches);
 
           let adhocArr = langUtils.generateAdhocForms(
             structureChunk,
             selectedLemmaObject,
-            currentLanguage,
-            questionLanguage
+            currentLanguage
           );
-
-          selectedLemmaObject = gpUtils.selectRandom(matches);
 
           selectedWord = questionLanguage
             ? adhocArr
