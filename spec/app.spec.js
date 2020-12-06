@@ -37,7 +37,6 @@ describe("/api", () => {
             "The boys are reading.",
             "The boy reads.",
             "The boy is reading.",
-
             "The women read.",
             "The women are reading.",
             "The woman reads.",
@@ -63,7 +62,6 @@ describe("/api", () => {
             "The boys are reading.",
             "The boy reads.",
             "The boy is reading.",
-
             "The women read.",
             "The women are reading.",
             "The woman reads.",

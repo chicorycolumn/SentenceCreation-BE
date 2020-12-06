@@ -2,28 +2,6 @@ const lfUtils = require("../../utils/lemmaFilteringUtils.js");
 const otUtils = require("../../utils/objectTraversingUtils.js");
 const gpUtils = require("../../utils/generalPurposeUtils.js");
 const refObj = require("../../utils/referenceObjects.js");
-
-exports.preprocessStructureChunks = (sentenceStructure) => {};
-
-exports.preprocessLemmaObjects = (matches, structureChunk) => {};
-
-exports.addSpecialVerbConjugations = (lemmaObject, currentLanguage) => {
-  let { infinitive, v2, v3, thirdPS, gerund } = lemmaObject.inflections;
-
-  const participlesRef = {
-    pastParticiple: v3,
-    activeAdjectival: gerund,
-    passiveAdjectival: v3,
-    contemporaryAdverbial: gerund,
-    anteriorAdverbial: "having" + " " + v3,
-  };
-
-  Object.keys(participlesRef).forEach((key) => {
-    let value = participlesRef[key];
-    lemmaObject.inflections[key] = value;
-  });
-};
-
 const be = {
   past: {
     "1per": { singular: "was", plural: "were" },
@@ -68,6 +46,27 @@ let featureRef = {
   ],
 };
 
+exports.preprocessStructureChunks = (sentenceStructure) => {};
+
+exports.preprocessLemmaObjects = (matches, structureChunk) => {};
+
+exports.addSpecialVerbConjugations = (lemmaObject, currentLanguage) => {
+  let { infinitive, v2, v3, thirdPS, gerund } = lemmaObject.inflections;
+
+  const participlesRef = {
+    pastParticiple: v3,
+    activeAdjectival: gerund,
+    passiveAdjectival: v3,
+    contemporaryAdverbial: gerund,
+    anteriorAdverbial: "having" + " " + v3,
+  };
+
+  Object.keys(participlesRef).forEach((key) => {
+    let value = participlesRef[key];
+    lemmaObject.inflections[key] = value;
+  });
+};
+
 exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
   // console.log("generateAdhocForms fxn was given these arguments", {
   //   structureChunk,
@@ -79,6 +78,10 @@ exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
     structureChunk.wordtype === "verb" &&
     structureChunk.form.includes("verb")
   ) {
+    //if lObj.complete, then...
+    //or maybe this should be "irregular"
+    //specifically this is lObj `be` which has different 1per singular and 2per singular forms in present and past.
+
     let { infinitive, v2, v3, thirdPS, gerund } = lObj.inflections;
     let { inflections } = lObj;
     let inflectionChain =

@@ -168,42 +168,55 @@ let verbSet = [
       gerund: "writing",
     },
   },
-  // {
-  //   //links
-  //   translations: { ENG: ["have"], POL: ["mieć"] },
-  //   tags: ["basic", "possession"],
-  //   //selectors
-  //   lemma: "have",
-  //   id: "eng-ver-001",
-  //   //notes
-  //   defective: false,
-  //   //inflections
-  //   inflections: {
-  //     infinitive: "have",
-  //     verb: {
-  //       past: {
-  //         allPersons: {
-  //           allNumbers: "had",
-  //         },
-  //       },
-  //       present: {
-  //         "1per": {
-  //           allNumbers: "had",
-  //         },
-  //         "2per": {
-  //           allNumbers: "had",
-  //         },
-  //         "3per": {
-  //           singular: "has",
-  //           plural: "have",
-  //         },
-  //       },
-  //       future: true,
-  //       conditional: true,
-  //     },
-  //     verbalNoun: "having",
-  //   },
-  // },
+  {
+    //links
+    translations: { ENG: ["have"], POL: ["mieć"] },
+    tags: ["basic", "possession"],
+    //selectors
+    lemma: "have",
+    id: "eng-ver-001",
+    //notes
+    defective: false,
+    //inflections
+    inflections: {
+      infinitive: "have",
+      v2: "had",
+      v3: "had",
+      thirdPS: "has",
+      gerund: "having",
+    },
+  },
+  {
+    //links
+    translations: { ENG: ["be"], POL: ["być"] },
+    tags: ["basic", "identity"],
+    //selectors
+    lemma: "be",
+    id: "eng-ver-000",
+    //notes
+    defective: false,
+    complete: true,
+    //inflections
+    inflections: {
+      infinitive: "be",
+      // v2: "",
+      v3: "been",
+      thirdPS: "is",
+      gerund: "being",
+      past: {
+        "1per": { singular: "was", plural: "were" },
+        "2per": { singular: "were", plural: "were" },
+        "3per": { singular: "was", plural: "were" },
+      },
+      present: {
+        "1per": { singular: "am", plural: "are" },
+        "2per": { singular: "are", plural: "are" },
+        "3per": { singular: "is", plural: "are" },
+      },
+      future: "will be",
+      conditional: "would be",
+    },
+  },
 ];
 
 exports.wordsBank = {
