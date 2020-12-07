@@ -115,8 +115,8 @@ exports.findMatchingLemmaObjectThenWord = (
     });
   }
 
+  //THREE (B): Uninflected forms.
   if (structureChunk.form && structureChunk.form.length) {
-    //THREE (B): Uninflected forms.
     Object.keys(refObj.uninflectedForms[currentLanguage]).forEach(
       (wordtype) => {
         if (structureChunk.wordtype === wordtype) {

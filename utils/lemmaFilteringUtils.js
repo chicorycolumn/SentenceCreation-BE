@@ -18,17 +18,22 @@ exports.filterWithinSelectedLemmaObject = (
     }
   );
   let source = lemmaObject.inflections;
+
   let inflectionChain =
     refObj.lemmaObjectCharacteristics[currentLanguage].inflectionChains[
       structureChunk.wordtype
     ];
+
   let requirementArrs = [];
+
   inflectionChain.forEach((key) => {
     requirementArrs.push([key, structureChunk[key] || []]);
   });
+
   let { routesByNesting, routesByLevel } = otUtils.extractNestedRoutes(
     lemmaObject.inflections
   );
+
   let inflectionPathsInSource = routesByNesting;
   let errorInDrilling = false;
   let drillPath = [];

@@ -751,6 +751,38 @@ describe("/api", () => {
           console.log({ questionSentence: res.body.questionSentence });
         });
     });
+    it.only("#pal04-07a GET 200 YES: Make two verbs agree.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage: "POL",
+          sentenceSymbol: "dummy24a I read and research",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.questionSentence).to.be.a("String");
+          expect(["Czytam i badam."]).to.include(res.body.questionSentence);
+          console.log({ questionSentence: res.body.questionSentence });
+        });
+    });
+    it.only("#pal04-07b GET 200 YES: Make two verbs agree.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage: "POL",
+          sentenceSymbol: "dummy24b I/you read and research",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.questionSentence).to.be.a("String");
+          expect(["Czytam i badam.", "Czytasz i badasz."]).to.include(
+            res.body.questionSentence
+          );
+          console.log({ questionSentence: res.body.questionSentence });
+        });
+    });
   });
 
   describe("/palette - Stage 3: Adjectives", () => {

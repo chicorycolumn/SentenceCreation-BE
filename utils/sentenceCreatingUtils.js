@@ -104,6 +104,11 @@ exports.processSentenceFormula = (
 
   console.log({ headIds });
 
+  //Make a copy of:
+  //  sentenceStructure
+  //  doneChunkIds
+  //  resultArr
+
   //STEP ONE: Select headwords and add to result array.
   headIds.forEach((headId) => {
     let chunkId = headId;
@@ -111,7 +116,6 @@ exports.processSentenceFormula = (
       (structureChunk) =>
         typeof structureChunk === "object" && structureChunk.chunkId === chunkId
     );
-    doneChunkIds.push(chunkId);
 
     console.log(">>STEP ONE", headChunk);
     otUtils.findMatchingLemmaObjectThenWord(
@@ -122,6 +126,7 @@ exports.processSentenceFormula = (
       currentLanguage,
       questionLanguage
     );
+    doneChunkIds.push(chunkId);
 
     console.log("Finished step one.");
   });
@@ -156,6 +161,7 @@ exports.processSentenceFormula = (
         // console.log("--------------");
         // console.log("-------");
 
+        //Inherit from headchunks to dependent chunks.
         refObj.lemmaObjectCharacteristics[currentLanguage].inflectionChains[
           dependentChunk.wordtype
         ].forEach((featureKey) => {
@@ -172,8 +178,6 @@ exports.processSentenceFormula = (
         // console.log("--------------");
         // console.log("-------");
 
-        doneChunkIds.push(dependentChunk.chunkId);
-
         otUtils.findMatchingLemmaObjectThenWord(
           dependentChunk,
           resultArr,
@@ -182,6 +186,7 @@ exports.processSentenceFormula = (
           currentLanguage,
           questionLanguage
         );
+        doneChunkIds.push(dependentChunk.chunkId);
       });
     }
   });
@@ -200,6 +205,7 @@ exports.processSentenceFormula = (
         currentLanguage,
         questionLanguage
       );
+      doneChunkIds.push(structureChunk.chunkId);
     }
   });
 

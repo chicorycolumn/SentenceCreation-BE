@@ -621,6 +621,121 @@ let verbSet = [
   },
   {
     //links
+    translations: { ENG: ["research"] },
+    tags: ["science"],
+    //selectors
+    lemma: "badać",
+    id: "pol-ver-003-im-01",
+    aspect: "imperfective",
+    //notes
+    deficient: false,
+    defective: false,
+    //inflections
+    inflections: {
+      infinitive: "badać",
+      verb: {
+        past: {
+          impersonal: {
+            singular: { allSingularGenders: "badano" },
+            plural: { allPluralGenders: "badano" },
+          },
+          "1per": {
+            singular: {
+              m: "badałem",
+              f: "badałam",
+            },
+            plural: {
+              virile: "badaliśmy",
+              nonvirile: "badałyśmy",
+            },
+          },
+          "2per": {
+            singular: {
+              m: "badałeś",
+              f: "badałaś",
+            },
+            plural: {
+              virile: "badaliście",
+              nonvirile: "badałyście",
+            },
+          },
+          "3per": {
+            singular: {
+              m: "badał",
+              f: "badała",
+              n: "badało",
+            },
+            plural: {
+              virile: "badali",
+              nonvirile: "badały",
+            },
+          },
+        },
+        present: {
+          impersonal: { singular: true },
+          "1per": {
+            singular: {
+              allSingularGendersExcludingNeuter: "badam",
+            },
+            plural: {
+              allPluralGenders: "badamy",
+            },
+          },
+          "2per": {
+            singular: {
+              allSingularGendersExcludingNeuter: "badasz",
+            },
+            plural: {
+              allPluralGenders: "badacie",
+            },
+          },
+          "3per": {
+            singular: {
+              allSingularGenders: "bada",
+            },
+            plural: {
+              allPluralGenders: "badają",
+            },
+          },
+        },
+        future: true,
+        conditional: true,
+        imperative: {
+          "1per": {
+            singular: {
+              allSingularGendersExcludingNeuter: "niech badam",
+            },
+            plural: {
+              allPluralGenders: "badajmy",
+            },
+          },
+          "2per": {
+            singular: {
+              allSingularGendersExcludingNeuter: "badaj",
+            },
+            plural: {
+              allPluralGenders: "badajcie",
+            },
+          },
+          "3per": {
+            singular: {
+              allSingularGenders: "niech bada",
+            },
+            plural: {
+              allPluralGenders: "niech badają",
+            },
+          },
+        },
+      },
+      activeAdjectival: "badający",
+      passiveAdjectival: "badany",
+      contemporaryAdverbial: "badając",
+      anteriorAdverbial: false,
+      verbalNoun: "badanie",
+    },
+  },
+  {
+    //links
     translations: { ENG: ["read"] },
     tags: ["basic2"],
     //selectors
