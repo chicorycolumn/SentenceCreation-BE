@@ -128,7 +128,7 @@ exports.processSentenceFormula = (
     );
     doneChunkIds.push(chunkId);
 
-    console.log("Finished step one.");
+    console.log("Finished step one.", headChunk);
   });
 
   //STEP TWO: Select dependent words and add to result array.
@@ -153,7 +153,7 @@ exports.processSentenceFormula = (
         // console.log("---------------------");
         // console.log("wordtype", dependentChunk.wordtype);
         // console.log(
-        //   refObj.lemmaObjectCharacteristics[currentLanguage].inflectionChains[dependentChunk.wordtype]
+        //   refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[dependentChunk.wordtype]
         // );
         // console.log("dependentChunk", dependentChunk);
         // console.log("headChunk", headChunk);
@@ -162,11 +162,11 @@ exports.processSentenceFormula = (
         // console.log("-------");
 
         //Inherit from headchunks to dependent chunks.
-        refObj.lemmaObjectCharacteristics[currentLanguage].inflectionChains[
+        refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
           dependentChunk.wordtype
-        ].forEach((featureKey) => {
-          if (headChunk[featureKey]) {
-            dependentChunk[featureKey] = headChunk[featureKey];
+        ].forEach((inflectorKey) => {
+          if (headChunk[inflectorKey]) {
+            dependentChunk[inflectorKey] = headChunk[inflectorKey];
           }
         });
 
@@ -347,14 +347,14 @@ exports.conformAnswerStructureToQuestionStructure = (
     console.log("I found these matches:", answerStructureChunk.specificIds);
     console.log("answerStructureChunk", answerStructureChunk);
 
-    refObj.lemmaObjectCharacteristics[
+    refObj.lemmaObjectFeatures[
       answerLanguage
     ].inflectionChains.allowableTransfersFromQuestionStructure[
       answerStructureChunk.wordtype
-    ] //alpha say for tantum plurales, make Number blank (all possible) in english noun chunk
-      .forEach((featureKey) => {
-        if (questionStructureChunk[featureKey]) {
-          if (featureKey === "tenseDescription") {
+    ] //Alphaman say for tantum plurales, make Number blank (all possible) in english noun chunk
+      .forEach((inflectorKey) => {
+        if (questionStructureChunk[inflectorKey]) {
+          if (inflectorKey === "tenseDescription") {
             answerStructureChunk["tenseDescription"] = [];
 
             questionStructureChunk["tenseDescription"].forEach((tenseDesc) => {
@@ -370,8 +370,8 @@ exports.conformAnswerStructureToQuestionStructure = (
               ];
             });
           } else {
-            answerStructureChunk[featureKey] =
-              questionStructureChunk[featureKey];
+            answerStructureChunk[inflectorKey] =
+              questionStructureChunk[inflectorKey];
           }
         }
       });

@@ -783,7 +783,7 @@ describe("/api", () => {
           console.log({ questionSentence: res.body.questionSentence });
         });
     });
-    it.only("#pal04-07c GET 200 YES: Make two verbs agree when there is a choice of person, gender, and number.", () => {
+    it("#pal04-07c GET 200 YES: Make two verbs agree when there is a choice of person, gender, and number.", () => {
       return request(app)
         .get("/api/palette")
         .send({

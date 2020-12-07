@@ -55,7 +55,7 @@ exports.findMatchingLemmaObjectThenWord = (
     matches = lfUtils.filterByTag(source, structureChunk.tags);
 
     let selectors =
-      refObj.lemmaObjectCharacteristics[currentLanguage].selectors[
+      refObj.lemmaObjectFeatures[currentLanguage].selectors[
         structureChunk.wordtype
       ];
     if (selectors) {
@@ -77,19 +77,19 @@ exports.findMatchingLemmaObjectThenWord = (
 
   //STEP THREE: Return result array immediately if uninflected or ad hoc.
 
-  let adhocFeatureRef = refObj.adhocFeatures[currentLanguage];
-  console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>", { adhocFeatureRef });
+  let adhocInflectorRef = refObj.adhocInflectors[currentLanguage];
+  // console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>", { adhocInflectorRef });
   //THREE (A): Ad hoc forms.
-  if (Object.keys(adhocFeatureRef).includes(structureChunk.wordtype)) {
+  if (Object.keys(adhocInflectorRef).includes(structureChunk.wordtype)) {
     console.log(111111);
-    Object.keys(adhocFeatureRef).forEach((adhocWordtype) => {
+    Object.keys(adhocInflectorRef).forEach((adhocWordtype) => {
       console.log(">>>>>>>>>>>>>>>>>>>>>", { adhocWordtype });
-      let adhocFeatureKeys = adhocFeatureRef[adhocWordtype];
+      let adhocInflectorKeys = adhocInflectorRef[adhocWordtype];
 
-      adhocFeatureKeys.forEach((adhocFeatureKey) => {
+      adhocInflectorKeys.forEach((adhocInflectorKey) => {
         if (
-          structureChunk[adhocFeatureKey] &&
-          structureChunk[adhocFeatureKey].length
+          structureChunk[adhocInflectorKey] &&
+          structureChunk[adhocInflectorKey].length
         ) {
           selectedLemmaObject = gpUtils.selectRandom(matches);
 
@@ -149,7 +149,7 @@ exports.findMatchingLemmaObjectThenWord = (
   }
 
   if (selectedLemmaObject) {
-    lfUtils.updateStructureChunk(
+    lfUtils.updateTagsAndSelectorsOfStructureChunk(
       selectedLemmaObject,
       structureChunk,
       currentLanguage
@@ -182,13 +182,15 @@ exports.findMatchingLemmaObjectThenWord = (
 
   selectedLemmaObject = gpUtils.selectRandom(matches);
 
-  lfUtils.updateStructureChunk(
+  lfUtils.updateTagsAndSelectorsOfStructureChunk(
     selectedLemmaObject,
     structureChunk,
     currentLanguage
+    //This updates structureChunk with tags, and selectors ('gender' for nouns and 'aspect' for verbs).
   );
 
   lemmaObjectExtractions = lfUtils.filterWithinSelectedLemmaObject(
+    //This updates structureChunk with choices from the chosen inflection path.
     selectedLemmaObject,
     structureChunk,
     currentLanguage

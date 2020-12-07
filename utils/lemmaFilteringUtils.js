@@ -20,7 +20,7 @@ exports.filterWithinSelectedLemmaObject = (
   let source = lemmaObject.inflections;
 
   let inflectionChain =
-    refObj.lemmaObjectCharacteristics[currentLanguage].inflectionChains[
+    refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
       structureChunk.wordtype
     ];
 
@@ -130,29 +130,35 @@ exports.filterWithinSelectedLemmaObject = (
       `                                                    Selecting inflector ${selectedInflector} as ${requiredInflectorCategory}.`
     );
 
+    console.log(
+      "::::::::::::::::::::::::::::::::::::::::::updating structureChunk in drillDownOneLevel_filterWithin fxn."
+    );
     structureChunk[requiredInflectorCategory] = [selectedInflector];
     drillPath.push(selectedInflector);
     return source[selectedInflector];
   }
 };
 
-exports.updateStructureChunk = (
+exports.updateTagsAndSelectorsOfStructureChunk = (
   lemmaObject,
   structureChunk,
   currentLanguage
 ) => {
-  console.log("updateStructureChunk fxn was given these arguments:", {
-    lemmaObject,
-    structureChunk,
-    currentLanguage,
-  });
+  console.log(
+    "updateTagsAndSelectorsOfStructureChunk fxn was given these arguments:",
+    {
+      lemmaObject,
+      structureChunk,
+      currentLanguage,
+    }
+  );
 
   structureChunk.tags = structureChunk.tags.filter((tag) => {
     lemmaObject.tags.includes(tag);
   });
 
   let selectors =
-    refObj.lemmaObjectCharacteristics[currentLanguage].selectors[
+    refObj.lemmaObjectFeatures[currentLanguage].selectors[
       structureChunk.wordtype
     ];
 
@@ -214,7 +220,7 @@ exports.filterOutDeficientLemmaObjects = (
   currentLanguage
 ) => {
   let inflectionChain =
-    refObj.lemmaObjectCharacteristics[currentLanguage].inflectionChains[
+    refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
       specObj.wordtype
     ];
   let requirementArrs = inflectionChain.map((key) => specObj[key] || []);

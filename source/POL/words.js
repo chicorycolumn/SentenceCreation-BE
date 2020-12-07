@@ -403,7 +403,7 @@ let verbSet = [
     //inflections
     inflections: {
       infinitive: "mieć",
-      verb: {
+      verbal: {
         past: {
           impersonal: {
             singular: { allSingularGenders: "miano" },
@@ -518,7 +518,7 @@ let verbSet = [
     //inflections
     inflections: {
       infinitive: "czytać",
-      verb: {
+      verbal: {
         past: {
           impersonal: {
             singular: { allSingularGenders: "czytano" },
@@ -633,7 +633,7 @@ let verbSet = [
     //inflections
     inflections: {
       infinitive: "badać",
-      verb: {
+      verbal: {
         past: {
           impersonal: {
             singular: { allSingularGenders: "badano" },
@@ -748,7 +748,7 @@ let verbSet = [
     //inflections
     inflections: {
       infinitive: "przeczytać",
-      verb: {
+      verbal: {
         past: {
           impersonal: {
             singular: { allSingularGenders: "przeczytano" },

@@ -1,6 +1,6 @@
 const gpUtils = require("./generalPurposeUtils.js");
 
-exports.lemmaObjectCharacteristics = {
+exports.lemmaObjectFeatures = {
   POL: {
     selectors: {
       noun: ["gender"],
@@ -44,7 +44,7 @@ exports.uninflectedForms = {
   },
 };
 
-exports.adhocFeatures = {
+exports.adhocInflectors = {
   POL: {},
   ENG: { verb: ["tenseDescription"] },
 };
@@ -61,7 +61,7 @@ exports.tenseDescriptionTranslation = {
       "future simple": ["future pf"],
       "future continuous": ["future im"],
       "future perfect": ["future pf"],
-      //Beta say Add conditionals and any other tenses.
+      //Betaman say Add conditionals and any other tenses.
     },
   },
 };

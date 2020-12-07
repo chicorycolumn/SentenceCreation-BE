@@ -39,7 +39,7 @@ exports.preprocessLemmaObjects = (matches, structureChunk) => {
   }
 };
 
-// exports.convertTenseDescriptionToFeatures = (structureChunk) => {
+// exports.convertTenseDescriptionToFeeatures = (structureChunk) => {
 //   const aspectReference = { im: "imperfective", pf: "perfective" };
 
 //   let tenseDescription = gpUtils.seeelectRandom(structureChunk.tenseDescription);
@@ -62,14 +62,14 @@ exports.fillVerbInflections = (lemmaObject) => {
   //In both, fill out the activeAdj and passiveAdj if they are there.
 
   let { inflections, aspect } = lemmaObject;
-  let { past } = inflections.verb;
+  let { past } = inflections.verbal;
   let { infinitive } = inflections;
 
   //So in general, if the key is filled out already, don't do anything. And if the key holds value false, don't do anything.
 
   if (aspect === "imperfective") {
-    if (isAvailable(inflections.verb.future)) {
-      inflections.verb.future = {
+    if (isAvailable(inflections.verbal.future)) {
+      inflections.verbal.future = {
         impersonal: {
           singular: {
             allSingularGenders: "będzie" + " " + infinitive + " " + "się",
@@ -147,37 +147,37 @@ exports.fillVerbInflections = (lemmaObject) => {
         },
       };
     }
-    if (isAvailable(inflections.verb.present.impersonal.singular)) {
-      inflections.verb.present.impersonal.singular = {
+    if (isAvailable(inflections.verbal.present.impersonal.singular)) {
+      inflections.verbal.present.impersonal.singular = {
         allSingularGenders:
-          inflections.verb.present["3per"].singular.allSingularGenders +
+          inflections.verbal.present["3per"].singular.allSingularGenders +
           " " +
           "się",
       };
     }
   } else if (aspect === "perfective") {
-    if (isAvailable(inflections.verb.future.impersonal.singular)) {
-      inflections.verb.future.impersonal.singular = {
+    if (isAvailable(inflections.verbal.future.impersonal.singular)) {
+      inflections.verbal.future.impersonal.singular = {
         allSingularGenders:
-          inflections.verb.future["3per"].singular.allSingularGenders +
+          inflections.verbal.future["3per"].singular.allSingularGenders +
           " " +
           "się",
       };
     }
   }
 
-  if (isAvailable(inflections.verb.conditional)) {
-    inflections.verb.conditional = {
+  if (isAvailable(inflections.verbal.conditional)) {
+    inflections.verbal.conditional = {
       impersonal: {
         singular: {
           allSingularGenders:
-            inflections.verb.past.impersonal.singular.allSingularGenders +
+            inflections.verbal.past.impersonal.singular.allSingularGenders +
             " " +
             "by",
         },
         plural: {
           allPluralGenders:
-            inflections.verb.past.impersonal.plural.allPluralGenders +
+            inflections.verbal.past.impersonal.plural.allPluralGenders +
             " " +
             "by",
         },

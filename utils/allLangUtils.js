@@ -17,12 +17,12 @@ exports.preprocessStructureChunks = (sentenceStructure) => {
         }
       }
 
-      ["tense", "tenseDescription"].forEach((verbFeatureKey) => {
+      ["tense", "tenseDescription"].forEach((verbInflectorKey) => {
         if (
-          structureChunk[verbFeatureKey] &&
-          structureChunk[verbFeatureKey].length
+          structureChunk[verbInflectorKey] &&
+          structureChunk[verbInflectorKey].length
         ) {
-          structureChunk.form = ["verb"];
+          structureChunk.form = ["verbal"];
         }
       });
     }

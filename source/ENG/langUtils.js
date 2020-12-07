@@ -26,7 +26,7 @@ const have = {
   future: "will have",
   conditional: "would have",
 };
-let featureRef = {
+let inflectorRef = {
   person: ["1per", "2per", "3per"],
   number: ["singular", "plural"],
   tenseDescription: [
@@ -76,7 +76,7 @@ exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
 
   if (
     structureChunk.wordtype === "verb" &&
-    structureChunk.form.includes("verb")
+    structureChunk.form.includes("verbal")
   ) {
     //if lObj.complete, then...
     //or maybe this should be "irregular"
@@ -85,7 +85,7 @@ exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
     let { infinitive, v2, v3, thirdPS, gerund } = lObj.inflections;
     let { inflections } = lObj;
     let inflectionChain =
-      refObj.lemmaObjectCharacteristics[currentLanguage].inflectionChains.verb;
+      refObj.lemmaObjectFeatures[currentLanguage].inflectionChains.verb;
     let selectedTenseDescription;
 
     if (
@@ -98,10 +98,10 @@ exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
     let resArr = [];
     let tenseDescriptionArr = [...structureChunk.tenseDescription];
 
-    Object.keys(featureRef).forEach((key) => {
-      let value = featureRef[key];
+    Object.keys(inflectorRef).forEach((key) => {
+      let value = inflectorRef[key];
 
-      //Select random if there is NO value to a feature key. So this only applies when ENG is question language.
+      //Select random if there is NO value to an inflector key. So this only applies when ENG is question language.
       //This won't be used when ENG is answer language.
       if (!Array.isArray(structureChunk[key]) || !structureChunk[key].length) {
         structureChunk[key] = gpUtils.selectRandom(value);

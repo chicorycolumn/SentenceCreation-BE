@@ -180,7 +180,7 @@ exports.sentenceFormulasBank = {
         chunkId: "ver-1",
         wordtype: "verb",
         tags: ["basic2"],
-        form: ["verb"],
+        form: ["verbal"],
         tenseDescription: ["present im"],
         person: ["1per", "2per", "3per"],
       },
