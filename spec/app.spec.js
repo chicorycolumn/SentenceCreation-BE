@@ -751,7 +751,7 @@ describe("/api", () => {
           console.log({ questionSentence: res.body.questionSentence });
         });
     });
-    it.only("#pal04-07a GET 200 YES: Make two verbs agree.", () => {
+    it("#pal04-07a GET 200 YES: Make two verbs agree.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -766,7 +766,7 @@ describe("/api", () => {
           console.log({ questionSentence: res.body.questionSentence });
         });
     });
-    it.only("#pal04-07b GET 200 YES: Make two verbs agree.", () => {
+    it("#pal04-07b GET 200 YES: Make two verbs agree when there is a choice of person.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -780,6 +780,37 @@ describe("/api", () => {
           expect(["Czytam i badam.", "Czytasz i badasz."]).to.include(
             res.body.questionSentence
           );
+          console.log({ questionSentence: res.body.questionSentence });
+        });
+    });
+    it.only("#pal04-07c GET 200 YES: Make two verbs agree when there is a choice of person, gender, and number.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage: "POL",
+          sentenceSymbol: "dummy24c read and research",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.questionSentence).to.be.a("String");
+          expect([
+            "Czytam i badam.",
+            "Czytasz i badasz.",
+
+            "Czytałem i badałem.",
+            "Czytałam i badałam.",
+            "Czytałeś i badałeś.",
+            "Czytałaś i badałaś.",
+
+            "Czytamy i badamy.",
+            "Czytacie i badacie.",
+
+            "Czytałyśmy i badałyśmy.",
+            "Czytaliśmy i badaliśmy.",
+            "Czytałyście i badałyście.",
+            "Czytaliście i badaliście.",
+          ]).to.include(res.body.questionSentence);
           console.log({ questionSentence: res.body.questionSentence });
         });
     });
