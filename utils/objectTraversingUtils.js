@@ -78,7 +78,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
   let adhocInflectorRef = refObj.adhocInflectors[currentLanguage];
   // console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>", { adhocInflectorRef });
-  //THREE (A): Ad hoc forms.
+  //THREE (A): A-PW: Pathway for Ad hoc forms.
   if (Object.keys(adhocInflectorRef).includes(structureChunk.wordtype)) {
     console.log(111111);
     Object.keys(adhocInflectorRef).forEach((adhocWordtype) => {
@@ -114,7 +114,7 @@ exports.findMatchingLemmaObjectThenWord = (
     });
   }
 
-  //THREE (B): Uninflected forms.
+  //THREE (B): U-PW: Pathway for Uninflected forms.
   if (structureChunk.form && structureChunk.form.length) {
     Object.keys(refObj.uninflectedForms[currentLanguage]).forEach(
       (wordtype) => {
@@ -157,7 +157,7 @@ exports.findMatchingLemmaObjectThenWord = (
     );
   }
 
-  //STEP FOUR: Return word after selecting by drilling down through lemma object.
+  //STEP FOUR: I-PW: Pathway for inflected forms, return word after selecting by drilling down through lemma object.
 
   matches = lfUtils.filterOutDeficientLemmaObjects(
     matches,
@@ -175,9 +175,8 @@ exports.findMatchingLemmaObjectThenWord = (
 
   let {
     errorInDrilling,
-    inflections,
+    selectedWordOrArray,
     updatedStructureChunk,
-    lemmaObject,
   } = lfUtils.filterWithinSelectedLemmaObject(
     //This updates structureChunk with choices from the chosen inflection path.
     selectedLemmaObject,
@@ -188,9 +187,9 @@ exports.findMatchingLemmaObjectThenWord = (
   return exports.createOutputUnit(
     errorInSentenceCreation,
     errorInDrilling,
-    inflections,
+    selectedWordOrArray,
     updatedStructureChunk,
-    lemmaObject
+    selectedLemmaObject
   );
 };
 

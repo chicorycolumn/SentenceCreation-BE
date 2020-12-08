@@ -24,6 +24,8 @@ exports.filterWithinSelectedLemmaObject = (
       structureChunk.wordtype
     ];
 
+  console.log(">>>inflectionChain", inflectionChain);
+
   let requirementArrs = [];
 
   inflectionChain.forEach((key) => {
@@ -37,6 +39,8 @@ exports.filterWithinSelectedLemmaObject = (
   let inflectionPathsInSource = routesByNesting;
   let errorInDrilling = false;
   let drillPath = [];
+
+  console.log(">>>inflectionPathsInSource", inflectionPathsInSource);
 
   //STEP ONE: Drill down through lemma object.
   requirementArrs.forEach((requirementKeyedArr, requirementArrIndex) => {
@@ -58,9 +62,8 @@ exports.filterWithinSelectedLemmaObject = (
   //STEP TWO: Send word.
   return {
     errorInDrilling,
-    inflections: source,
+    selectedWordOrArray: source,
     updatedStructureChunk: structureChunk,
-    lemmaObject,
   };
 
   function drillDownOneLevel_filterWithin(
@@ -130,9 +133,9 @@ exports.filterWithinSelectedLemmaObject = (
       `                                                    Selecting inflector ${selectedInflector} as ${requiredInflectorCategory}.`
     );
 
-    console.log(
-      "::::::::::::::::::::::::::::::::::::::::::updating structureChunk in drillDownOneLevel_filterWithin fxn."
-    );
+    // console.log(
+    //   "::::::::::::::::::::::::::::::::::::::::::updating structureChunk in drillDownOneLevel_filterWithin fxn."
+    // );
     structureChunk[requiredInflectorCategory] = [selectedInflector];
     drillPath.push(selectedInflector);
     return source[selectedInflector];
