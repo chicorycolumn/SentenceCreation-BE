@@ -10,7 +10,7 @@ exports.processSentenceFormula = (
   sentenceSymbol,
   useDummy,
   generateAnswers,
-  questionResultArray,
+  questionOutputArr,
   questionLanguage
 ) => {
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
@@ -38,7 +38,7 @@ exports.processSentenceFormula = (
   let defaultSentenceSymbol = "";
   sentenceSymbol = sentenceSymbol || defaultSentenceSymbol;
   let errorInSentenceCreation = {};
-  let resultArr = [];
+  let outputArr = [];
 
   let words = useDummy
     ? gpUtils.copyAndCombineWordbanks(wordsBank, dummyWordsBank)
@@ -77,7 +77,7 @@ exports.processSentenceFormula = (
   if (generateAnswers) {
     exports.conformAnswerStructureToQuestionStructure(
       sentenceStructure,
-      questionResultArray,
+      questionOutputArr,
       words,
       currentLanguage,
       questionLanguage
@@ -104,11 +104,6 @@ exports.processSentenceFormula = (
 
   console.log({ headIds });
 
-  //Make a copy of:
-  //  sentenceStructure
-  //  doneChunkIds
-  //  resultArr
-
   //STEP ONE: Select headwords and add to result array.
   headIds.forEach((headId) => {
     let chunkId = headId;
@@ -118,18 +113,27 @@ exports.processSentenceFormula = (
     );
 
     console.log(">>STEP ONE", headChunk);
-    otUtils.findMatchingLemmaObjectThenWord(
+    let outputUnit = otUtils.findMatchingLemmaObjectThenWord(
       headChunk,
-      resultArr,
       words,
       errorInSentenceCreation,
       currentLanguage,
       questionLanguage
     );
+
+    // This updates structureChunk with tags, and selectors (ie 'gender' for nouns and 'aspect' for verbs).
+    lfUtils.updateTagsAndSelectorsOfStructureChunk(outputUnit, currentLanguage);
+    outputArr.push(outputUnit);
+
     doneChunkIds.push(chunkId);
 
     console.log("Finished step one.", headChunk);
   });
+
+  //Make a copy of:
+  //  sentenceStructure
+  //  doneChunkIds
+  //  outputArr
 
   //STEP TWO: Select dependent words and add to result array.
   headIds.forEach((headId) => {
@@ -178,15 +182,21 @@ exports.processSentenceFormula = (
         // console.log("--------------");
         // console.log("-------");
 
-        otUtils.findMatchingLemmaObjectThenWord(
+        let outputUnit = otUtils.findMatchingLemmaObjectThenWord(
           dependentChunk,
-          resultArr,
           words,
           errorInSentenceCreation,
           currentLanguage,
           questionLanguage
         );
+
         doneChunkIds.push(dependentChunk.chunkId);
+
+        lfUtils.updateTagsAndSelectorsOfStructureChunk(
+          outputUnit,
+          currentLanguage
+        );
+        outputArr.push(outputUnit);
       });
     }
   });
@@ -197,20 +207,23 @@ exports.processSentenceFormula = (
       typeof structureChunk !== "object" ||
       !doneChunkIds.includes(structureChunk.chunkId)
     ) {
-      otUtils.findMatchingLemmaObjectThenWord(
+      let outputUnit = otUtils.findMatchingLemmaObjectThenWord(
         structureChunk,
-        resultArr,
         words,
         errorInSentenceCreation,
         currentLanguage,
         questionLanguage
       );
+
       doneChunkIds.push(structureChunk.chunkId);
+
+      //No need to updateTagsAndSelectorsOfStructureChunk as these chunks are neither heads nor dependents.
+      outputArr.push(outputUnit);
     }
   });
 
   return {
-    resultArr,
+    outputArr,
     sentenceFormula,
     sentenceNumber,
     sentenceSymbol,
@@ -219,7 +232,7 @@ exports.processSentenceFormula = (
 };
 
 exports.formatFinalSentence = (
-  resultArr,
+  outputArr,
   sentenceFormula,
   errorInSentenceCreation,
   questionLanguage
@@ -228,14 +241,9 @@ exports.formatFinalSentence = (
     console.log(
       "formatFinalSentence fxn says Now we should go through every permutation and make a sentence for each one."
     );
-    console.log("resultArr", resultArr);
+    console.log("outputArr", outputArr);
     console.log("sentenceFormula", sentenceFormula);
   } else {
-    let finalSentence = exports.buildSentenceFromArray(
-      resultArr,
-      sentenceFormula
-    );
-
     if (errorInSentenceCreation.errorMessage) {
       let errorMessage = {
         errorInSentenceCreation: errorInSentenceCreation.errorMessage,
@@ -243,11 +251,15 @@ exports.formatFinalSentence = (
 
       questionResponseObj = {
         message: "No sentence could be created from the specifications.",
-        fragment: finalSentence,
         finalSentence: null,
         errorMessage,
       };
     } else {
+      let finalSentence = exports.buildSentenceFromArray(
+        outputArr,
+        sentenceFormula
+      );
+
       questionResponseObj = {
         finalSentence,
       };
@@ -284,7 +296,7 @@ exports.buildSentenceFromArray = (unorderedArr, sentenceFormula) => {
 
 exports.conformAnswerStructureToQuestionStructure = (
   sentenceStructure,
-  questionResultArray,
+  questionOutputArr,
   words,
   answerLanguage,
   questionLanguage
@@ -294,14 +306,14 @@ exports.conformAnswerStructureToQuestionStructure = (
     sentenceStructure
   );
   console.log(
-    "conformAnswerStructureToQuestionStructure fxn, POL-questionResultArray",
-    questionResultArray
+    "conformAnswerStructureToQuestionStructure fxn, POL-questionOutputArr",
+    questionOutputArr
   );
 
-  questionResultArray.forEach((questionResArrItem) => {
+  questionOutputArr.forEach((questionOutputArrItem) => {
     let answerStructureChunk = sentenceStructure.find((structureChunk) => {
       return (
-        structureChunk.chunkId === questionResArrItem.structureChunk.chunkId
+        structureChunk.chunkId === questionOutputArrItem.structureChunk.chunkId
       );
     });
 
@@ -309,9 +321,9 @@ exports.conformAnswerStructureToQuestionStructure = (
       return;
     }
 
-    let questionSelectedLemmaObject = questionResArrItem.selectedLemmaObject;
-    let questionSelectedWord = questionResArrItem.selectedWord;
-    let questionStructureChunk = questionResArrItem.structureChunk;
+    let questionSelectedLemmaObject = questionOutputArrItem.selectedLemmaObject;
+    let questionSelectedWord = questionOutputArrItem.selectedWord;
+    let questionStructureChunk = questionOutputArrItem.structureChunk;
 
     console.log(
       "So, the Polish lemma chosen was",

@@ -21,7 +21,7 @@ exports.fetchPalette = (req) => {
   );
 
   let questionResponseObj = scUtils.formatFinalSentence(
-    questionSentenceData.resultArr,
+    questionSentenceData.outputArr,
     questionSentenceData.sentenceFormula,
     questionSentenceData.errorInSentenceCreation
   );
@@ -29,10 +29,10 @@ exports.fetchPalette = (req) => {
   let answerResponseObj;
 
   if (answerLanguage) {
-    questionSentenceData.resultArr.forEach((resArrItem) => {
+    questionSentenceData.outputArr.forEach((outputArrItem) => {
       //This should now be unnec as we've told it in the refobj not to transfer gender from noun. Not allowable transfer.
-      if (resArrItem.structureChunk.wordtype === "noun") {
-        delete resArrItem.structureChunk.gender;
+      if (outputArrItem.structureChunk.wordtype === "noun") {
+        delete outputArrItem.structureChunk.gender;
       }
       /////
     });
@@ -43,12 +43,12 @@ exports.fetchPalette = (req) => {
       questionSentenceData.sentenceSymbol,
       useDummy,
       true,
-      questionSentenceData.resultArr,
+      questionSentenceData.outputArr,
       questionLanguage
     );
 
     answerResponseObj = scUtils.formatFinalSentence(
-      answerSentenceData.resultArr,
+      answerSentenceData.outputArr,
       answerSentenceData.sentenceFormula,
       answerSentenceData.errorInSentenceCreation,
       questionLanguage

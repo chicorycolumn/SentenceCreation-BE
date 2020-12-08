@@ -4,7 +4,6 @@ const refObj = require("./referenceObjects.js");
 
 exports.findMatchingLemmaObjectThenWord = (
   structureChunk,
-  resultArr,
   words,
   errorInSentenceCreation,
   currentLanguage,
@@ -20,7 +19,6 @@ exports.findMatchingLemmaObjectThenWord = (
   );
   console.log({
     structureChunk,
-    resultArr,
     words,
     errorInSentenceCreation,
     currentLanguage,
@@ -28,12 +26,11 @@ exports.findMatchingLemmaObjectThenWord = (
 
   //STEP ONE: Return result array immediately if wordtype is fixed piece.
   if (structureChunk.wordtype === "fixed") {
-    resultArr.push({
+    return {
       selectedLemmaObject: {},
       selectedWord: structureChunk.value,
       structureChunk,
-    });
-    return;
+    };
   }
 
   //STEP TWO: Filter lemmaObjects by specificIds OR specificLemmas OR tags and selectors.
@@ -69,8 +66,10 @@ exports.findMatchingLemmaObjectThenWord = (
 
   console.log("****");
   console.log("********");
-  console.log("*************");
-  console.log(structureChunk);
+  console.log(
+    "************* findMatchingLemmaObjectThenWord fxn end of step two."
+  );
+  console.log("structureChunk", structureChunk);
   console.log("*************");
   console.log("********");
   console.log("****");
@@ -149,21 +148,13 @@ exports.findMatchingLemmaObjectThenWord = (
   }
 
   if (selectedLemmaObject) {
-    lfUtils.updateTagsAndSelectorsOfStructureChunk(
-      selectedLemmaObject,
-      structureChunk,
-      currentLanguage
-    );
-
-    lemmaObjectExtractions = lfUtils.sendFinalisedWord(
+    return exports.createOutputUnit(
+      errorInSentenceCreation,
       null,
       selectedWord,
       structureChunk,
       selectedLemmaObject
     );
-
-    addToResultArray(lemmaObjectExtractions, resultArr);
-    return;
   }
 
   //STEP FOUR: Return word after selecting by drilling down through lemma object.
@@ -182,41 +173,82 @@ exports.findMatchingLemmaObjectThenWord = (
 
   selectedLemmaObject = gpUtils.selectRandom(matches);
 
-  lfUtils.updateTagsAndSelectorsOfStructureChunk(
-    selectedLemmaObject,
-    structureChunk,
-    currentLanguage
-    //This updates structureChunk with tags, and selectors ('gender' for nouns and 'aspect' for verbs).
-  );
-
-  lemmaObjectExtractions = lfUtils.filterWithinSelectedLemmaObject(
+  let {
+    errorInDrilling,
+    inflections,
+    updatedStructureChunk,
+    lemmaObject,
+  } = lfUtils.filterWithinSelectedLemmaObject(
     //This updates structureChunk with choices from the chosen inflection path.
     selectedLemmaObject,
     structureChunk,
     currentLanguage
   );
 
-  addToResultArray(lemmaObjectExtractions, resultArr);
+  return exports.createOutputUnit(
+    errorInSentenceCreation,
+    errorInDrilling,
+    inflections,
+    updatedStructureChunk,
+    lemmaObject
+  );
+};
 
-  function addToResultArray(lemmaObjectExtractions, resultArr) {
-    if (!lemmaObjectExtractions || !lemmaObjectExtractions.selectedWord) {
-      errorInSentenceCreation.errorMessage =
-        "A lemma object was indeed selected, but no word was found at the end of the give inflection chain.";
-      return false;
-    } else {
-      let {
-        selectedWord,
-        updatedStructureChunk,
-        selectedLemmaObject,
-      } = lemmaObjectExtractions;
-
-      resultArr.push({
-        selectedLemmaObject,
-        selectedWord,
-        structureChunk: updatedStructureChunk,
-      });
-    }
+exports.createOutputUnit = (
+  errorInSentenceCreation,
+  errorInDrilling,
+  selectedWord,
+  structureChunk,
+  selectedLemmaObject
+) => {
+  if (errorInDrilling || !selectedWord) {
+    errorInSentenceCreation.errorMessage =
+      "A lemma object was indeed selected, but no word was found at the end of the give inflection chain.";
+    return false;
   }
+
+  if (typeof selectedWord !== "string") {
+    selectedWord = gpUtils.selectRandom(selectedWord);
+  }
+
+  return {
+    selectedLemmaObject,
+    selectedWord,
+    structureChunk,
+  };
+
+  //   if (typeof source === "string") {
+  //     return {
+  //       selectedWord: source,
+  //       updatedStructureChunk: structureChunk,
+  //       selectedLemmaObject,
+  //     };
+  //   } else {
+  //     return {
+  //       selectedWord: gpUtils.selectRandom(source),
+  //       updatedStructureChunk: structureChunk,
+  //       selectedLemmaObject,
+  //     };
+  //   }
+  // }
+
+  // if (!lemmaObjectExtractions || !lemmaObjectExtractions.selectedWord) {
+  //   errorInSentenceCreation.errorMessage =
+  //     "A lemma object was indeed selected, but no word was found at the end of the give inflection chain.";
+  //   return false;
+  // } else {
+  // let {
+  //   selectedWord,
+  //   updatedStructureChunk,
+  //   selectedLemmaObject,
+  // } = lemmaObjectExtractions;
+
+  // outputArr.push({
+  //   selectedLemmaObject,
+  //   selectedWord,
+  //   structureChunk: updatedStructureChunk,
+  // });
+  // }
 };
 
 exports.concoctNestedRoutes = (routesByLevelTarget, routesByLevelSource) => {

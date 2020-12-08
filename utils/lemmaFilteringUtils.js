@@ -56,12 +56,12 @@ exports.filterWithinSelectedLemmaObject = (
   });
 
   //STEP TWO: Send word.
-  return exports.sendFinalisedWord(
+  return {
     errorInDrilling,
-    source,
-    structureChunk,
-    lemmaObject
-  );
+    inflections: source,
+    updatedStructureChunk: structureChunk,
+    lemmaObject,
+  };
 
   function drillDownOneLevel_filterWithin(
     source,
@@ -140,21 +140,18 @@ exports.filterWithinSelectedLemmaObject = (
 };
 
 exports.updateTagsAndSelectorsOfStructureChunk = (
-  lemmaObject,
-  structureChunk,
+  outputUnit,
   currentLanguage
 ) => {
   console.log(
     "updateTagsAndSelectorsOfStructureChunk fxn was given these arguments:",
-    {
-      lemmaObject,
-      structureChunk,
-      currentLanguage,
-    }
+    { outputUnit, currentLanguage }
   );
 
+  let { selectedLemmaObject, structureChunk } = outputUnit;
+
   structureChunk.tags = structureChunk.tags.filter((tag) => {
-    lemmaObject.tags.includes(tag);
+    selectedLemmaObject.tags.includes(tag);
   });
 
   let selectors =
@@ -164,53 +161,8 @@ exports.updateTagsAndSelectorsOfStructureChunk = (
 
   if (selectors) {
     selectors.forEach((selector) => {
-      structureChunk[selector] = [lemmaObject[selector]];
+      structureChunk[selector] = [selectedLemmaObject[selector]];
     });
-  }
-};
-
-// exports.retrieveJustParticiple = (
-//   structureChunk,
-//   lemmaObject,
-//   specialTenseArr
-// ) => {
-//   let result = null;
-
-//   specialTenseArr.forEach((specialTense) => {
-//     if (!result) {
-//       if (
-//         structureChunk.tense.includes(specialTense) &&
-//         lemmaObject.inflections.participle[specialTense]
-//       ) {
-//         result = lemmaObject.inflections.participle[specialTense];
-//       }
-//     }
-//   });
-//   return result;
-// };
-
-exports.sendFinalisedWord = (
-  errorInDrilling,
-  source,
-  structureChunk,
-  selectedLemmaObject
-) => {
-  if (errorInDrilling) {
-    return null;
-  } else {
-    if (typeof source === "string") {
-      return {
-        selectedWord: source,
-        updatedStructureChunk: structureChunk,
-        selectedLemmaObject,
-      };
-    } else {
-      return {
-        selectedWord: gpUtils.selectRandom(source),
-        updatedStructureChunk: structureChunk,
-        selectedLemmaObject,
-      };
-    }
   }
 };
 
