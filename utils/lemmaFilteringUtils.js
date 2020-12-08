@@ -24,8 +24,6 @@ exports.filterWithinSelectedLemmaObject = (
       structureChunk.wordtype
     ];
 
-  console.log(">>>inflectionChain", inflectionChain);
-
   let requirementArrs = [];
 
   inflectionChain.forEach((key) => {
@@ -38,118 +36,102 @@ exports.filterWithinSelectedLemmaObject = (
 
   let inflectionPathsInSource = routesByNesting;
   let errorInDrilling = false;
-  let drillPath = [];
 
-  console.log(">>>inflectionPathsInSource", inflectionPathsInSource);
+  // console.log(">>>inflectionPathsInSource", inflectionPathsInSource);
+  // console.log(">>>requirementArrs", requirementArrs);
 
-  //STEP ONE: Drill down through lemma object.
-  requirementArrs.forEach((requirementKeyedArr, requirementArrIndex) => {
-    if (errorInDrilling) {
-      return;
-    }
-    if (typeof source !== "string") {
-      source = drillDownOneLevel_filterWithin(
-        source,
-        requirementKeyedArr,
-        requirementArrIndex
-      );
-      if (!source) {
-        errorInDrilling = true;
-      }
-    }
-  });
+  let pathRecord = [];
 
-  //STEP TWO: Send word.
+  traverseAndRecordInflections(source, requirementArrs, pathRecord);
+
+  let selectedPath = gpUtils.selectRandom(pathRecord);
+
+  if (!pathRecord || !pathRecord.length) {
+    errorInDrilling = true;
+    return false;
+  }
+
+  let { selectedWordOrArray, drillPath } = selectedPath;
+
   return {
     errorInDrilling,
-    selectedWordOrArray: source,
-    updatedStructureChunk: structureChunk,
+    selectedWordOrArray,
+    drillPath,
   };
 
-  function drillDownOneLevel_filterWithin(
+  function traverseAndRecordInflections(
     source,
-    requirementInflectorArr,
-    requirementArrIndex
+    reqArr,
+    pathRecord,
+    pathRecordMini
   ) {
-    let sourceInflectors = Object.keys(source);
-    let validInflectors = [];
-    let requiredInflectorCategory = requirementInflectorArr[0];
-    let requiredInflectorsArr = requirementInflectorArr[1];
-
-    if (requiredInflectorsArr.length) {
-      validInflectors = sourceInflectors.filter((inflector) =>
-        requiredInflectorsArr.includes(inflector)
-      );
-    } else {
-      validInflectors = sourceInflectors;
+    if (!pathRecordMini) {
+      pathRecordMini = [];
     }
 
-    validInflectors = validInflectors.filter((inflector_i) => {
-      let copyDrillPath = [...drillPath];
-      copyDrillPath.push(inflector_i);
+    let reqSubArr = reqArr[0];
 
-      let putativePathsWithDrillPathSoFar = inflectionPathsInSource.filter(
-        (inflectionPath_j) => {
-          return copyDrillPath.every(
-            (drillPathInflector, drillPathInflectorIndex) => {
-              return (
-                inflectionPath_j[drillPathInflectorIndex] === drillPathInflector
-              );
-            }
-          );
-        }
-      );
+    let reqInflectorLabel = reqSubArr[0];
+    let reqInflectorArr = reqSubArr[1];
 
-      let putativePathsLookingAhead = putativePathsWithDrillPathSoFar.filter(
-        (putativePath) => {
-          return requirementArrs.every(
-            (requirementArr_i, requirementArrIndex_i) => {
-              let requiredInflectorCategory_i = requirementArr_i[0];
-              let requiredInflectorsArr_i = requirementArr_i[1];
+    if (!reqInflectorArr.length) {
+      reqInflectorArr = Object.keys(source);
+    }
 
-              return (
-                !requiredInflectorsArr_i.length ||
-                requiredInflectorsArr_i.includes(
-                  putativePath[requirementArrIndex_i]
-                )
-              );
-            }
-          );
-        }
-      );
+    reqInflectorArr.forEach((chosenInflector) => {
+      // pathRecord.push([reqInflectorLabel, chosenInflector])
 
-      return putativePathsLookingAhead.length;
+      if (
+        typeof source[chosenInflector] === "string" ||
+        Array.isArray(source[chosenInflector])
+      ) {
+        // pathRecordMini.push(`${reqInflectorLabel.slice(0, 2)}-${chosenInflector.slice(0, 3)}-${source[chosenInflector]}`)
+
+        pathRecordMini.push([reqInflectorLabel, chosenInflector]);
+
+        pathRecord.push({
+          selectedWordOrArray: source[chosenInflector],
+          drillPath: pathRecordMini.slice(0),
+        });
+
+        pathRecordMini.pop();
+        return source[chosenInflector];
+      } else if (typeof source[chosenInflector] === "object") {
+        pathRecordMini.push([reqInflectorLabel, chosenInflector]);
+        // pathRecordMini.push(`${reqInflectorLabel.slice(0, 4)}-${chosenInflector.slice(0, 3)}`)
+        traverseAndRecordInflections(
+          source[chosenInflector],
+          reqArr.slice(1),
+          pathRecord,
+          pathRecordMini
+        );
+      }
+      pathRecordMini.pop();
     });
-
-    console.log({ validInflectors });
-
-    if (!validInflectors.length) {
-      return null;
-    }
-
-    let selectedInflector = gpUtils.selectRandom(validInflectors);
-
-    console.log(
-      `                                                    Selecting inflector ${selectedInflector} as ${requiredInflectorCategory}.`
-    );
-
-    // console.log(
-    //   "::::::::::::::::::::::::::::::::::::::::::updating structureChunk in drillDownOneLevel_filterWithin fxn."
-    // );
-    structureChunk[requiredInflectorCategory] = [selectedInflector];
-    drillPath.push(selectedInflector);
-    return source[selectedInflector];
   }
 };
 
-exports.updateTagsAndSelectorsOfStructureChunk = (
+exports.updateStructureChunkByInflections = (outputUnit, currentLanguages) => {
+  if (outputUnit.drillPath) {
+    outputUnit.drillPath.forEach((drillPathSubArr) => {
+      let requiredInflectorCategory = drillPathSubArr[0];
+      let selectedInflector = drillPathSubArr[1];
+
+      outputUnit.structureChunk[requiredInflectorCategory] = [
+        selectedInflector,
+      ];
+    });
+  }
+};
+
+exports.updateStructureChunkByTagsAndSelectors = (
   outputUnit,
   currentLanguage
 ) => {
-  console.log(
-    "updateTagsAndSelectorsOfStructureChunk fxn was given these arguments:",
-    { outputUnit, currentLanguage }
-  );
+  // console.log(
+  //   "updateStructureChunkByTagsAndSelectors fxn was given these arguments:",
+  //   { outputUnit, currentLanguage }
+  // );
 
   let { selectedLemmaObject, structureChunk } = outputUnit;
 

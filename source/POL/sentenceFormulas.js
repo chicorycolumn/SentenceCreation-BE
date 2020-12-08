@@ -6,7 +6,6 @@ exports.sentenceFormulasBank = {
         chunkId: "nou-1",
         wordtype: "noun",
         tags: ["person"],
-
         gcase: ["nom"],
         number: ["singular"],
         gender: [],
@@ -16,7 +15,6 @@ exports.sentenceFormulasBank = {
         chunkId: "nou-2",
         wordtype: "noun",
         tags: ["edible"],
-
         gcase: ["acc"],
         number: [],
         gender: [],
@@ -30,7 +28,6 @@ exports.sentenceFormulasBank = {
         chunkId: "nou-1",
         wordtype: "noun",
         tags: ["person"],
-
         gcase: ["nom"],
         number: ["singular"],
         gender: [],
@@ -40,7 +37,6 @@ exports.sentenceFormulasBank = {
         chunkId: "nou-2",
         wordtype: "noun",
         tags: ["wearable"],
-
         gcase: ["acc"],
         number: [],
         gender: [],
@@ -99,6 +95,7 @@ exports.sentenceFormulasBank = {
         chunkId: "adj-1",
         agreeWith: "nou-1",
         wordtype: "adjective",
+        form: ["simple"],
         tags: ["colour"],
       },
       {
@@ -121,6 +118,7 @@ exports.sentenceFormulasBank = {
         chunkId: "adj-1",
         agreeWith: "nou-1",
         wordtype: "adjective",
+        form: ["simple"],
         tags: ["colour"],
       },
       {
@@ -143,6 +141,7 @@ exports.sentenceFormulasBank = {
         chunkId: "adj-1",
         agreeWith: "nou-1",
         wordtype: "adjective",
+        form: ["simple"],
         tags: ["colour"],
       },
       {
@@ -193,7 +192,6 @@ exports.sentenceFormulasBank = {
         chunkId: "nou-1",
         wordtype: "noun",
         tags: ["person"],
-
         gcase: ["nom"],
         number: ["singular", "plural"],
         gender: ["f"],
@@ -253,6 +251,7 @@ exports.sentenceFormulasBank = {
         chunkId: "adj-1",
         agreeWith: "nou-2",
         wordtype: "adjective",
+        form: ["simple"],
         tags: ["colour"],
       },
       {
@@ -291,6 +290,7 @@ exports.sentenceFormulasBank = {
         chunkId: "adj-1",
         agreeWith: "nou-2",
         wordtype: "adjective",
+        form: ["simple"],
         tags: ["colour"],
       },
       {
@@ -311,6 +311,7 @@ exports.sentenceFormulasBank = {
         chunkId: "adj-0",
         agreeWith: "nou-1",
         wordtype: "adjective",
+        form: ["simple"],
         tags: ["colour"],
       },
       {
@@ -335,6 +336,7 @@ exports.sentenceFormulasBank = {
         chunkId: "adj-1",
         agreeWith: "nou-2",
         wordtype: "adjective",
+        form: ["simple"],
         tags: ["colour"],
       },
       {

@@ -6,6 +6,7 @@ const { wordsBank } = require("../source/POL/words.js");
 const lfUtils = require("../utils/lemmaFilteringUtils.js");
 
 xdescribe("filterWithinSelectedLemmaObject", () => {
+  // describe.only("filterWithinSelectedLemmaObject", () => {
   it("#scu1.1", () => {
     let structureChunk = {
       chunkId: "nou-2",
@@ -21,7 +22,7 @@ xdescribe("filterWithinSelectedLemmaObject", () => {
     let {
       errorInDrilling,
       selectedWordOrArray,
-      updatedStructureChunk,
+      drillPath,
     } = lfUtils.filterWithinSelectedLemmaObject(
       //This updates structureChunk with choices from the chosen inflection path.
       selectedLemmaObject,
@@ -29,16 +30,12 @@ xdescribe("filterWithinSelectedLemmaObject", () => {
       currentLanguage
     );
 
-    console.log("RRRRRRRRRRRRRRRRRRRRRRRRRRRRResults");
-    console.log(errorInDrilling, selectedWordOrArray, updatedStructureChunk);
-    console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
-
-    let result1 = [
+    let expectedDrillPath = [
       { word: "jabłko", path: ["singular", "acc"] },
       { word: "jabłka", path: ["plural", "acc"] },
     ];
 
-    // expect(findObjectInNestedObject(input1, input2)).to.eql(undefined);
+    expect(drillPath).to.eql(expectedDrillPath);
   });
   xit("#scu1.2", () => {
     const input1 = testObj1;

@@ -602,7 +602,7 @@ describe("/api", () => {
           console.log({ questionSentence: res.body.questionSentence });
         });
     });
-    it("#pal04-03b GET 200 NO: Does not return verbalNoun, when a gender is specified, as the verbalNoun is not a verb.", () => {
+    xit("#pal04-03b GET 200 NO: Does not return verbalNoun, when a gender is specified, as the verbalNoun is not a verb.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -890,7 +890,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal02-01b GET 200 NO: Returns a sentence where a tantum plurale was not allowed, as singular grammatical number was requested.", () => {
+    it("#pal02-01b GET 200 NO: Disallows tantum plurale, as singular grammatical number was requested.", () => {
       return request(app)
         .get("/api/palette")
         .send({

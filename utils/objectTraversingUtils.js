@@ -15,14 +15,14 @@ exports.findMatchingLemmaObjectThenWord = (
   let selectedWord;
 
   console.log(
-    "findMatchingLemmaObjectThenWord fxn has been given these arguments:"
+    "findMatchingLemmaObjectThenWord fxn has been given these arguments:",
+    {
+      structureChunk,
+      words,
+      errorInSentenceCreation,
+      currentLanguage,
+    }
   );
-  console.log({
-    structureChunk,
-    words,
-    errorInSentenceCreation,
-    currentLanguage,
-  });
 
   //STEP ONE: Return result array immediately if wordtype is fixed piece.
   if (structureChunk.wordtype === "fixed") {
@@ -64,25 +64,13 @@ exports.findMatchingLemmaObjectThenWord = (
 
   langUtils.preprocessLemmaObjects(matches, structureChunk);
 
-  console.log("****");
-  console.log("********");
-  console.log(
-    "************* findMatchingLemmaObjectThenWord fxn end of step two."
-  );
-  console.log("structureChunk", structureChunk);
-  console.log("*************");
-  console.log("********");
-  console.log("****");
-
   //STEP THREE: Return result array immediately if uninflected or ad hoc.
 
   let adhocInflectorRef = refObj.adhocInflectors[currentLanguage];
-  // console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>", { adhocInflectorRef });
+
   //THREE (A): A-PW: Pathway for Ad hoc forms.
   if (Object.keys(adhocInflectorRef).includes(structureChunk.wordtype)) {
-    console.log(111111);
     Object.keys(adhocInflectorRef).forEach((adhocWordtype) => {
-      console.log(">>>>>>>>>>>>>>>>>>>>>", { adhocWordtype });
       let adhocInflectorKeys = adhocInflectorRef[adhocWordtype];
 
       adhocInflectorKeys.forEach((adhocInflectorKey) => {
@@ -101,14 +89,6 @@ exports.findMatchingLemmaObjectThenWord = (
           selectedWord = questionLanguage
             ? adhocArr
             : gpUtils.selectRandom(adhocArr);
-
-          console.log("£££££££££££££", { adhocArr });
-
-          console.log("$$$$$$$$$$$$$$$$$$$$$", {
-            selectedWord,
-            structureChunk,
-            selectedLemmaObject,
-          });
         }
       });
     });
@@ -168,7 +148,7 @@ exports.findMatchingLemmaObjectThenWord = (
   if (!matches.length) {
     errorInSentenceCreation.errorMessage =
       "No matching lemma objects were found.";
-    return;
+    return false;
   }
 
   selectedLemmaObject = gpUtils.selectRandom(matches);
@@ -176,9 +156,10 @@ exports.findMatchingLemmaObjectThenWord = (
   let {
     errorInDrilling,
     selectedWordOrArray,
-    updatedStructureChunk,
+    drillPath,
   } = lfUtils.filterWithinSelectedLemmaObject(
-    //This updates structureChunk with choices from the chosen inflection path.
+    //This no longer updates structureChunk with choices from the chosen inflection path.
+    //We have now done it over in in SC:processSF.
     selectedLemmaObject,
     structureChunk,
     currentLanguage
@@ -188,8 +169,9 @@ exports.findMatchingLemmaObjectThenWord = (
     errorInSentenceCreation,
     errorInDrilling,
     selectedWordOrArray,
-    updatedStructureChunk,
-    selectedLemmaObject
+    structureChunk,
+    selectedLemmaObject,
+    drillPath
   );
 };
 
@@ -198,7 +180,8 @@ exports.createOutputUnit = (
   errorInDrilling,
   selectedWord,
   structureChunk,
-  selectedLemmaObject
+  selectedLemmaObject,
+  drillPath
 ) => {
   if (errorInDrilling || !selectedWord) {
     errorInSentenceCreation.errorMessage =
@@ -213,6 +196,7 @@ exports.createOutputUnit = (
   return {
     selectedLemmaObject,
     selectedWord,
+    drillPath,
     structureChunk,
   };
 

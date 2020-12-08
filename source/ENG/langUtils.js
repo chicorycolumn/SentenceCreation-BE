@@ -68,12 +68,6 @@ exports.addSpecialVerbConjugations = (lemmaObject, currentLanguage) => {
 };
 
 exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
-  // console.log("generateAdhocForms fxn was given these arguments", {
-  //   structureChunk,
-  //   lObj,
-  //   currentLanguage,
-  // });
-
   if (
     structureChunk.wordtype === "verb" &&
     structureChunk.form.includes("verbal")

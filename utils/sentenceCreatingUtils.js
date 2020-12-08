@@ -87,11 +87,6 @@ exports.processSentenceFormula = (
   allLangUtils.preprocessStructureChunks(sentenceStructure);
   langUtils.preprocessStructureChunks(sentenceStructure);
 
-  console.log(
-    "processSentenceFormula fxn just before step one says sentenceStructure is",
-    sentenceStructure
-  );
-
   let doneChunkIds = [];
   let headIds = [];
 
@@ -102,14 +97,11 @@ exports.processSentenceFormula = (
   });
   headIds = Array.from(new Set(headIds));
 
-  console.log({ headIds });
-
   //STEP ONE: Select headwords and add to result array.
   headIds.forEach((headId) => {
-    let chunkId = headId;
     let headChunk = sentenceStructure.find(
       (structureChunk) =>
-        typeof structureChunk === "object" && structureChunk.chunkId === chunkId
+        typeof structureChunk === "object" && structureChunk.chunkId === headId
     );
 
     console.log(">>STEP ONE", headChunk);
@@ -121,13 +113,11 @@ exports.processSentenceFormula = (
       questionLanguage
     );
 
-    // This updates structureChunk with tags, and selectors (ie 'gender' for nouns and 'aspect' for verbs).
-    lfUtils.updateTagsAndSelectorsOfStructureChunk(outputUnit, currentLanguage);
+    lfUtils.updateStructureChunkByTagsAndSelectors(outputUnit, currentLanguage);
+    lfUtils.updateStructureChunkByInflections(outputUnit, currentLanguage);
     outputArr.push(outputUnit);
-
-    doneChunkIds.push(chunkId);
-
-    console.log("Finished step one.", headChunk);
+    doneChunkIds.push(headId);
+    headChunk = outputUnit.structureChunk; //redundant
   });
 
   //Make a copy of:
@@ -152,19 +142,6 @@ exports.processSentenceFormula = (
             structureChunk.chunkId === headId
         );
 
-        // console.log("aaa-------");
-        // console.log("--------------");
-        // console.log("---------------------");
-        // console.log("wordtype", dependentChunk.wordtype);
-        // console.log(
-        //   refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[dependentChunk.wordtype]
-        // );
-        // console.log("dependentChunk", dependentChunk);
-        // console.log("headChunk", headChunk);
-        // console.log("---------------------");
-        // console.log("--------------");
-        // console.log("-------");
-
         //Inherit from headchunks to dependent chunks.
         refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
           dependentChunk.wordtype
@@ -174,14 +151,6 @@ exports.processSentenceFormula = (
           }
         });
 
-        // console.log("bbb-------");
-        // console.log("--------------");
-        // console.log("---------------------");
-        // console.log("dependentChunk", dependentChunk);
-        // console.log("---------------------");
-        // console.log("--------------");
-        // console.log("-------");
-
         let outputUnit = otUtils.findMatchingLemmaObjectThenWord(
           dependentChunk,
           words,
@@ -190,35 +159,47 @@ exports.processSentenceFormula = (
           questionLanguage
         );
 
-        doneChunkIds.push(dependentChunk.chunkId);
-
-        lfUtils.updateTagsAndSelectorsOfStructureChunk(
+        lfUtils.updateStructureChunkByTagsAndSelectors(
           outputUnit,
           currentLanguage
         );
+        lfUtils.updateStructureChunkByInflections(outputUnit, currentLanguage);
         outputArr.push(outputUnit);
+        doneChunkIds.push(dependentChunk.chunkId);
+        dependentChunk = outputUnit.structureChunk; //redundant
       });
     }
   });
 
   //STEP THREE: Select all other words and add to result array.
-  sentenceStructure.forEach((structureChunk) => {
+  sentenceStructure.forEach((otherChunk) => {
     if (
-      typeof structureChunk !== "object" ||
-      !doneChunkIds.includes(structureChunk.chunkId)
+      typeof otherChunk !== "object" ||
+      !doneChunkIds.includes(otherChunk.chunkId)
     ) {
       let outputUnit = otUtils.findMatchingLemmaObjectThenWord(
-        structureChunk,
+        otherChunk,
         words,
         errorInSentenceCreation,
         currentLanguage,
         questionLanguage
       );
 
-      doneChunkIds.push(structureChunk.chunkId);
+      //EPSILON: The outputUnit is coming back as undefined, which is well, as no sentence could be created from the specs here.
+      //But where is it being undefined, and how should we deal with this error.
+      //To show the right error message to the user.
+      console.log("------------------------------------------");
+      console.log("------------------------------------------");
+      console.log("outputUnit", outputUnit);
+      console.log("------------------------------------------");
+      console.log("------------------------------------------");
 
-      //No need to updateTagsAndSelectorsOfStructureChunk as these chunks are neither heads nor dependents.
+      //No need to updateStructureChunkByTagsAndSelectors as these chunks are neither heads nor dependents.
+      // lfUtils.updateStructureChunkByTagsAndSelectors(outputUnit, currentLanguage);
+      // lfUtils.updateStructureChunkByInflections(outputUnit, currentLanguage);
       outputArr.push(outputUnit);
+      doneChunkIds.push(otherChunk.chunkId);
+      otherChunk = outputUnit.structureChunk; //redundant
     }
   });
 
