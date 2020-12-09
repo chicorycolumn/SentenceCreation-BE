@@ -13,7 +13,7 @@ exports.preprocessStructureChunks = (sentenceStructure) => {
               return potentialHeadChunk.chunkId === structureChunk.agreeWith;
             }
           ));
-          structureChunk.person = [...headChunk.person];
+          structureChunk.person = headChunk.person.slice(0);
         }
       }
 

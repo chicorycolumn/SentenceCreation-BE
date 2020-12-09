@@ -52,21 +52,21 @@ exports.filterWithinSelectedLemmaObject = (
 
   if (kumquat) {
     return pathRecord.map((selectedPath) => {
-      let { selectedWordOrArray, drillPath } = selectedPath;
+      let { selectedWordArray, drillPath } = selectedPath;
       return {
         errorInDrilling,
-        selectedWordOrArray,
+        selectedWordArray,
         drillPath,
       };
     });
   } else {
     let selectedPath = gpUtils.selectRaandom(pathRecord);
 
-    let { selectedWordOrArray, drillPath } = selectedPath;
+    let { selectedWordArray, drillPath } = selectedPath;
 
     return {
       errorInDrilling,
-      selectedWordOrArray,
+      selectedWordArray,
       drillPath,
     };
   }
@@ -91,18 +91,17 @@ exports.filterWithinSelectedLemmaObject = (
     }
 
     reqInflectorArr.forEach((chosenInflector) => {
-      // pathRecord.push([reqInflectorLabel, chosenInflector])
-
       if (
         typeof source[chosenInflector] === "string" ||
         Array.isArray(source[chosenInflector])
       ) {
-        // pathRecordMini.push(`${reqInflectorLabel.slice(0, 2)}-${chosenInflector.slice(0, 3)}-${source[chosenInflector]}`)
-
         pathRecordMini.push([reqInflectorLabel, chosenInflector]);
 
         pathRecord.push({
-          selectedWordOrArray: source[chosenInflector],
+          selectedWordArray:
+            typeof source[chosenInflector] === "string"
+              ? [source[chosenInflector]]
+              : source[chosenInflector],
           drillPath: pathRecordMini.slice(0),
         });
 
@@ -110,7 +109,6 @@ exports.filterWithinSelectedLemmaObject = (
         return source[chosenInflector];
       } else if (typeof source[chosenInflector] === "object") {
         pathRecordMini.push([reqInflectorLabel, chosenInflector]);
-        // pathRecordMini.push(`${reqInflectorLabel.slice(0, 4)}-${chosenInflector.slice(0, 3)}`)
         traverseAndRecordInflections(
           source[chosenInflector],
           reqArr.slice(1),

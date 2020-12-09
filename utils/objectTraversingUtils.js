@@ -92,13 +92,11 @@ exports.findMatchingLemmaObjectThenWord = (
                 currentLanguage
               );
 
-              let selectedWord = questionLanguage
-                ? adhocArr
-                : gpUtils.selectRandom(adhocArr);
-
-              selectedFormsArray.push({
-                selectedWord,
-                selectedLemmaObject,
+              adhocArr.forEach((selectedWord) => {
+                selectedFormsArray.push({
+                  selectedWordArr: [selectedWord],
+                  selectedLemmaObject,
+                });
               });
             });
           } else {
@@ -137,17 +135,16 @@ exports.findMatchingLemmaObjectThenWord = (
           if (requestedUninflectedForms.length) {
             if (kumquat) {
               requestedUninflectedForms.forEach((selectedUninflectedForm) => {
-                matches = matches.filter((lObj) => {
+                let matchesByUninflectedForm = matches.filter((lObj) => {
                   return lObj.inflections[selectedUninflectedForm];
                 });
 
-                selectedLemmaObject = gpUtils.selectRandom(matches);
-                selectedWord =
-                  selectedLemmaObject.inflections[selectedUninflectedForm];
+                matchesByUninflectedForm.forEach((selectedLemmaObject) => {
+                  let selectedWord =
+                    selectedLemmaObject.inflections[selectedUninflectedForm];
 
-                matches.forEach((selectedLemmaObject) => {
                   selectedFormsArray.push({
-                    selectedWord,
+                    selectedWordArr: [selectedWord],
                     selectedLemmaObject,
                   });
                 });
@@ -157,11 +154,13 @@ exports.findMatchingLemmaObjectThenWord = (
                 requestedUninflectedForms
               );
 
-              matches = matches.filter((lObj) => {
+              let matchesByUninflectedForm = matches.filter((lObj) => {
                 return lObj.inflections[selectedUninflectedForm];
               });
 
-              selectedLemmaObject = gpUtils.selectRaandom(matches);
+              selectedLemmaObject = gpUtils.selectRaandom(
+                matchesByUninflectedForm
+              );
 
               selectedWord =
                 selectedLemmaObject.inflections[selectedUninflectedForm];
@@ -178,32 +177,34 @@ exports.findMatchingLemmaObjectThenWord = (
     let arrayOfAllPossibleOutputUnits = [];
 
     selectedFormsArray.forEach((selectedFormObject) => {
-      let { selectedWord, selectedLemmaObject } = selectedFormObject;
+      let { selectedWordArr, selectedLemmaObject } = selectedFormObject;
 
-      arrayOfAllPossibleOutputUnits.push(
-        exports.createOutputUnit(
-          errorInSentenceCreation,
-          null,
-          selectedWord,
-          structureChunk,
-          selectedLemmaObject
-        )
-      );
+      selectedWordArr.forEach((selectedWord) => {
+        arrayOfAllPossibleOutputUnits.push(
+          exports.createOutputUnit(
+            errorInSentenceCreation,
+            null,
+            selectedWord,
+            structureChunk,
+            selectedLemmaObject
+          )
+        );
+      });
     });
 
     return arrayOfAllPossibleOutputUnits;
   }
 
-  if (selectedLemmaObject) {
-    console.log("@@");
-    return exports.createOutputUnit(
-      errorInSentenceCreation,
-      null,
-      selectedWord,
-      structureChunk,
-      selectedLemmaObject
-    );
-  }
+  // if (selectedLemmaObject) {
+  //   console.log("@@");
+  //   return exports.createOutputUnit(
+  //     errorInSentenceCreation,
+  //     null,
+  //     selectedWord,
+  //     structureChunk,
+  //     selectedLemmaObject
+  //   );
+  // }
 
   //STEP FOUR: If-PW: Pathway for inflected forms, return word after selecting by drilling down through lemma object.
 
@@ -239,43 +240,43 @@ exports.findMatchingLemmaObjectThenWord = (
       }
 
       subArrayOfOutputUnits.forEach((unit) => {
-        let { errorInDrilling, selectedWordOrArray, drillPath } = unit;
+        let { errorInDrilling, selectedWordArray, drillPath } = unit;
 
-        let outputUnit = exports.createOutputUnit(
-          errorInSentenceCreation,
-          errorInDrilling,
-          selectedWordOrArray,
-          structureChunk,
-          selectedLemmaObject,
-          drillPath
-        );
+        selectedWordArray.forEach((selectedWord) => {
+          let outputUnit = exports.createOutputUnit(
+            errorInSentenceCreation,
+            errorInDrilling,
+            selectedWord,
+            structureChunk,
+            selectedLemmaObject,
+            drillPath
+          );
 
-        arrayOfAllPossibleOutputUnits.push(outputUnit);
+          arrayOfAllPossibleOutputUnits.push(outputUnit);
+        });
       });
     });
 
     return arrayOfAllPossibleOutputUnits;
   } else {
-    selectedLemmaObject = gpUtils.selectRaandom(matches);
-
-    let {
-      errorInDrilling,
-      selectedWordOrArray,
-      drillPath,
-    } = lfUtils.filterWithinSelectedLemmaObject(
-      selectedLemmaObject,
-      structureChunk,
-      currentLanguage
-    );
-
-    return exports.createOutputUnit(
-      errorInSentenceCreation,
-      errorInDrilling,
-      selectedWordOrArray,
-      structureChunk,
-      selectedLemmaObject,
-      drillPath
-    );
+    // selectedLemmaObject = gpUtils.selectRaandom(matches);
+    // let {
+    //   errorInDrilling,
+    //   selectedWordArray,
+    //   drillPath,
+    // } = lfUtils.filterWithinSelectedLemmaObject(
+    //   selectedLemmaObject,
+    //   structureChunk,
+    //   currentLanguage
+    // );
+    // return exports.createOutputUnit(
+    //   errorInSentenceCreation,
+    //   errorInDrilling,
+    //   selectedWordArray,
+    //   structureChunk,
+    //   selectedLemmaObject,
+    //   drillPath
+    // );
   }
 };
 
@@ -291,10 +292,6 @@ exports.createOutputUnit = (
     errorInSentenceCreation.errorMessage =
       "A lemma object was indeed selected, but no word was found at the end of the give inflection chain.";
     return false;
-  }
-
-  if (Array.isArray(selectedWord)) {
-    selectedWord = gpUtils.selectRandom(selectedWord);
   }
 
   return {

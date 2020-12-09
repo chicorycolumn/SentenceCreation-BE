@@ -72,6 +72,7 @@ exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
     structureChunk.wordtype === "verb" &&
     structureChunk.form.includes("verbal")
   ) {
+    //Generating ad hocs forms for tenseDescription ENG.
     if (
       !structureChunk.tenseDescription ||
       !structureChunk.tenseDescription.length
@@ -90,7 +91,7 @@ exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
     let selectedTenseDescription;
 
     let resArr = [];
-    let tenseDescriptionArr = [...structureChunk.tenseDescription];
+    let tenseDescriptionArr = structureChunk.tenseDescription.slice(0);
 
     Object.keys(inflectorRef).forEach((key) => {
       let value = inflectorRef[key];
@@ -98,7 +99,7 @@ exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
       //selectRaandom if there is NO value to an inflector key. So this only applies when ENG is question language.
       //This won't be used when ENG is answer language.
       if (!Array.isArray(structureChunk[key]) || !structureChunk[key].length) {
-        structureChunk[key] = gpUtils.selectRandom(value);
+        structureChunk[key] = value.slice(0);
       }
     });
 

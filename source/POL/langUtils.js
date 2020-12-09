@@ -42,7 +42,7 @@ exports.preprocessLemmaObjects = (matches, structureChunk) => {
 // exports.convertTenseDescriptionToFeeatures = (structureChunk) => {
 //   const aspectReference = { im: "imperfective", pf: "perfective" };
 
-//   let tenseDescription = gpUtils.seeelectRandom(structureChunk.tenseDescription);
+//   let tenseDescription = gpUtils.selectRaandom(structureChunk.tenseDescription);
 
 //   let [aspect, tense] = tenseDescription.split(" ");
 
