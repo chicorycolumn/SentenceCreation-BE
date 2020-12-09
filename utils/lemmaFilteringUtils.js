@@ -16,6 +16,7 @@ exports.filterWithinSelectedLemmaObject = (
       lemmaObject,
       structureChunk,
       currentLanguage,
+      kumquat,
     }
   );
   let source = lemmaObject.inflections;
@@ -64,11 +65,13 @@ exports.filterWithinSelectedLemmaObject = (
 
     let { selectedWordArray, drillPath } = selectedPath;
 
-    return {
-      errorInDrilling,
-      selectedWordArray,
-      drillPath,
-    };
+    return [
+      {
+        errorInDrilling,
+        selectedWordArray,
+        drillPath,
+      },
+    ];
   }
 
   function traverseAndRecordInflections(

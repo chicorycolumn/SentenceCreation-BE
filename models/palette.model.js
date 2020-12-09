@@ -5,6 +5,8 @@ const refObj = require("../utils/referenceObjects.js");
 const scUtils = require("../utils/sentenceCreatingUtils.js");
 
 exports.fetchPalette = (req) => {
+  let kumquat = false;
+
   let {
     sentenceNumber,
     sentenceSymbol,
@@ -17,18 +19,22 @@ exports.fetchPalette = (req) => {
     questionLanguage,
     sentenceNumber,
     sentenceSymbol,
-    useDummy
+    useDummy,
+    kumquat
   );
 
   let questionResponseObj = scUtils.formatFinalSentence(
     questionSentenceData.outputArr,
     questionSentenceData.sentenceFormula,
-    questionSentenceData.errorInSentenceCreation
+    questionSentenceData.errorInSentenceCreation,
+    kumquat
   );
 
   let answerResponseObj;
 
   if (answerLanguage) {
+    kumquat = true;
+
     questionSentenceData.outputArr.forEach((outputArrItem) => {
       //This should now be unnec as we've told it in the refobj not to transfer gender from noun. Not allowable transfer.
       if (outputArrItem.structureChunk.wordtype === "noun") {
@@ -42,7 +48,7 @@ exports.fetchPalette = (req) => {
       questionSentenceData.sentenceNumber,
       questionSentenceData.sentenceSymbol,
       useDummy,
-      true,
+      kumquat,
       questionSentenceData.outputArr,
       questionLanguage
     );
@@ -51,6 +57,7 @@ exports.fetchPalette = (req) => {
       answerSentenceData.outputArr,
       answerSentenceData.sentenceFormula,
       answerSentenceData.errorInSentenceCreation,
+      kumquat,
       questionLanguage
     );
   }

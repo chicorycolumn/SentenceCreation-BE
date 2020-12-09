@@ -9,12 +9,10 @@ exports.processSentenceFormula = (
   sentenceNumber,
   sentenceSymbol,
   useDummy,
-  generateAnswers,
+  kumquat,
   questionOutputArr,
   questionLanguage
 ) => {
-  let kumquat = true;
-
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
 
   console.log("processSentenceFormula fxn was given these args", {
@@ -76,7 +74,7 @@ exports.processSentenceFormula = (
 
   let sentenceStructure = sentenceFormula.structure;
 
-  if (generateAnswers) {
+  if (kumquat) {
     exports.conformAnswerStructureToQuestionStructure(
       sentenceStructure,
       questionOutputArr,
@@ -119,10 +117,11 @@ exports.processSentenceFormula = (
       kumquat
     );
 
-    console.log("*");
-    console.log("*head");
-    console.log(allPossibleOutputUnitsArray);
-    console.log("*");
+    console.log("**");
+    console.log("***********");
+    console.log("**************************");
+    console.log("headChunk", headChunk);
+    console.log("allPossibleOutputUnitsArray", allPossibleOutputUnitsArray);
     console.log("*");
 
     if (
@@ -188,10 +187,11 @@ exports.processSentenceFormula = (
           kumquat
         );
 
-        console.log("*");
-        console.log("*dependent");
-        console.log(allPossibleOutputUnitsArray);
-        console.log("*");
+        console.log("**");
+        console.log("***********");
+        console.log("**************************");
+        console.log("dependentChunk", dependentChunk);
+        console.log("allPossibleOutputUnitsArray", allPossibleOutputUnitsArray);
         console.log("*");
 
         if (
@@ -237,10 +237,11 @@ exports.processSentenceFormula = (
         kumquat
       );
 
-      console.log("*");
-      console.log("*other");
-      console.log(allPossibleOutputUnitsArray);
-      console.log("*");
+      console.log("**");
+      console.log("***********");
+      console.log("**************************");
+      console.log("otherChunk", otherChunk);
+      console.log("allPossibleOutputUnitsArray", allPossibleOutputUnitsArray);
       console.log("*");
 
       if (
@@ -281,6 +282,7 @@ exports.formatFinalSentence = (
   outputArr,
   sentenceFormula,
   errorInSentenceCreation,
+  kumquat,
   questionLanguage
 ) => {
   if (errorInSentenceCreation.errorMessage) {
@@ -295,7 +297,7 @@ exports.formatFinalSentence = (
     };
   }
 
-  if (questionLanguage) {
+  if (kumquat) {
     console.log(
       "formatFinalSentence fxn says THIS IS UNFINISHED. we should go through every permutation and make a sentence for each one."
     );

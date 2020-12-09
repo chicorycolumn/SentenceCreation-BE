@@ -11,10 +11,11 @@ exports.findMatchingLemmaObjectThenWord = (
   kumquat
 ) => {
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
-  let lemmaObjectExtractions;
-  let selectedLemmaObject;
-  let selectedWord;
+  // let lemmaObjectExtractions;
+  // let selectedLemmaObject;
+  // let selectedWord;
   let selectedFormsArray = [];
+  let arrayOfAllPossibleOutputUnits = [];
 
   console.log(
     "findMatchingLemmaObjectThenWord fxn has been given these arguments:",
@@ -23,6 +24,8 @@ exports.findMatchingLemmaObjectThenWord = (
       words,
       errorInSentenceCreation,
       currentLanguage,
+      questionLanguage,
+      kumquat,
     }
   );
 
@@ -100,7 +103,7 @@ exports.findMatchingLemmaObjectThenWord = (
               });
             });
           } else {
-            selectedLemmaObject = gpUtils.selectRaandom(matches);
+            let selectedLemmaObject = gpUtils.selectRaandom(matches);
 
             let adhocArr = langUtils.generateAdhocForms(
               structureChunk,
@@ -108,9 +111,12 @@ exports.findMatchingLemmaObjectThenWord = (
               currentLanguage
             );
 
-            selectedWord = questionLanguage
-              ? adhocArr
-              : gpUtils.selectRaandom(adhocArr);
+            let selectedWord = gpUtils.selectRaandom(adhocArr);
+
+            selectedFormsArray.push({
+              selectedWordArr: [selectedWord],
+              selectedLemmaObject,
+            });
           }
         }
       });
@@ -158,12 +164,17 @@ exports.findMatchingLemmaObjectThenWord = (
                 return lObj.inflections[selectedUninflectedForm];
               });
 
-              selectedLemmaObject = gpUtils.selectRaandom(
+              let selectedLemmaObject = gpUtils.selectRaandom(
                 matchesByUninflectedForm
               );
 
-              selectedWord =
+              let selectedWord =
                 selectedLemmaObject.inflections[selectedUninflectedForm];
+
+              selectedFormsArray.push({
+                selectedWordArr: [selectedWord],
+                selectedLemmaObject,
+              });
             }
           }
         }
@@ -173,8 +184,6 @@ exports.findMatchingLemmaObjectThenWord = (
 
   if (selectedFormsArray && selectedFormsArray.length) {
     console.log("%%");
-
-    let arrayOfAllPossibleOutputUnits = [];
 
     selectedFormsArray.forEach((selectedFormObject) => {
       let { selectedWordArr, selectedLemmaObject } = selectedFormObject;
@@ -223,8 +232,6 @@ exports.findMatchingLemmaObjectThenWord = (
   console.log("##If-PW");
 
   if (kumquat) {
-    let arrayOfAllPossibleOutputUnits = [];
-
     matches.forEach((selectedLemmaObject) => {
       let subArrayOfOutputUnits = lfUtils.filterWithinSelectedLemmaObject(
         selectedLemmaObject,
@@ -259,24 +266,44 @@ exports.findMatchingLemmaObjectThenWord = (
 
     return arrayOfAllPossibleOutputUnits;
   } else {
-    // selectedLemmaObject = gpUtils.selectRaandom(matches);
-    // let {
-    //   errorInDrilling,
-    //   selectedWordArray,
-    //   drillPath,
-    // } = lfUtils.filterWithinSelectedLemmaObject(
-    //   selectedLemmaObject,
-    //   structureChunk,
-    //   currentLanguage
-    // );
-    // return exports.createOutputUnit(
-    //   errorInSentenceCreation,
-    //   errorInDrilling,
-    //   selectedWordArray,
-    //   structureChunk,
-    //   selectedLemmaObject,
-    //   drillPath
-    // );
+    let selectedLemmaObject = gpUtils.selectRaandom(matches);
+
+    let subArrayOfOutputUnits = lfUtils.filterWithinSelectedLemmaObject(
+      selectedLemmaObject,
+      structureChunk,
+      currentLanguage,
+      kumquat
+    );
+
+    if (!subArrayOfOutputUnits || !subArrayOfOutputUnits.length) {
+      errorInSentenceCreation.errorMessage =
+        "The requested inflections were not found in the selected lemma objects.";
+      return false;
+    }
+
+    let unit = subArrayOfOutputUnits[0];
+
+    let { errorInDrilling, selectedWordArray, drillPath } = unit;
+
+    if (!selectedWordArray || !selectedWordArray.length) {
+      errorInSentenceCreation.errorMessage =
+        "No lemma objects were found for these specifications.";
+      return false;
+    }
+
+    let selectedWord = selectedWordArray[0];
+
+    let outputUnit = exports.createOutputUnit(
+      errorInSentenceCreation,
+      errorInDrilling,
+      selectedWord,
+      structureChunk,
+      selectedLemmaObject,
+      drillPath
+    );
+
+    arrayOfAllPossibleOutputUnits.push(outputUnit);
+    return arrayOfAllPossibleOutputUnits;
   }
 };
 
@@ -288,6 +315,15 @@ exports.createOutputUnit = (
   selectedLemmaObject,
   drillPath
 ) => {
+  console.log("createOutputUnit fxn was given these arguments:", {
+    errorInSentenceCreation,
+    errorInDrilling,
+    selectedWord,
+    structureChunk,
+    selectedLemmaObject,
+    drillPath,
+  });
+
   if (errorInDrilling || !selectedWord) {
     errorInSentenceCreation.errorMessage =
       "A lemma object was indeed selected, but no word was found at the end of the give inflection chain.";
