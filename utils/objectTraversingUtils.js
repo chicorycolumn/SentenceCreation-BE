@@ -14,6 +14,7 @@ exports.findMatchingLemmaObjectThenWord = (
   let lemmaObjectExtractions;
   let selectedLemmaObject;
   let selectedWord;
+  let selectedFormsArray = [];
 
   console.log(
     "findMatchingLemmaObjectThenWord fxn has been given these arguments:",
@@ -28,11 +29,13 @@ exports.findMatchingLemmaObjectThenWord = (
   //STEP ONE: : Fx-PW: Pathway for Fixed pieces.
   if (structureChunk.wordtype === "fixed") {
     console.log("##Fx-PW");
-    return {
-      selectedLemmaObject: {},
-      selectedWord: structureChunk.value,
-      structureChunk,
-    };
+    return [
+      {
+        selectedLemmaObject: {},
+        selectedWord: structureChunk.value,
+        structureChunk,
+      },
+    ];
   }
 
   //STEP TWO: Filter lemmaObjects by specificIds OR specificLemmas OR tags and selectors.
@@ -113,22 +116,63 @@ exports.findMatchingLemmaObjectThenWord = (
           );
 
           if (requestedUninflectedForms.length) {
-            let selectedUninflectedForm = gpUtils.selectRandom(
-              requestedUninflectedForms
-            );
+            if (kumquat) {
+              requestedUninflectedForms.forEach((selectedUninflectedForm) => {
+                matches = matches.filter((lObj) => {
+                  return lObj.inflections[selectedUninflectedForm];
+                });
 
-            matches = matches.filter((lObj) => {
-              return lObj.inflections[selectedUninflectedForm];
-            });
+                selectedLemmaObject = gpUtils.selectRandom(matches);
+                selectedWord =
+                  selectedLemmaObject.inflections[selectedUninflectedForm];
 
-            selectedLemmaObject = gpUtils.selectRandom(matches);
+                matches.forEach((selectedLemmaObject) => {
+                  selectedFormsArray.push({
+                    selectedWord,
+                    selectedLemmaObject,
+                  });
+                });
+              });
+            } else {
+              let selectedUninflectedForm = gpUtils.selectRandom(
+                requestedUninflectedForms
+              );
 
-            selectedWord =
-              selectedLemmaObject.inflections[selectedUninflectedForm];
+              matches = matches.filter((lObj) => {
+                return lObj.inflections[selectedUninflectedForm];
+              });
+
+              selectedLemmaObject = gpUtils.selectRandom(matches);
+
+              selectedWord =
+                selectedLemmaObject.inflections[selectedUninflectedForm];
+            }
           }
         }
       }
     );
+  }
+
+  if (selectedFormsArray && selectedFormsArray.length) {
+    console.log("%%");
+
+    let arrayOfAllPossibleOutputUnits = [];
+
+    selectedFormsArray.forEach((selectedFormObject) => {
+      let { selectedWord, selectedLemmaObject } = selectedFormObject;
+
+      arrayOfAllPossibleOutputUnits.push(
+        exports.createOutputUnit(
+          errorInSentenceCreation,
+          null,
+          selectedWord,
+          structureChunk,
+          selectedLemmaObject
+        )
+      );
+    });
+
+    return arrayOfAllPossibleOutputUnits;
   }
 
   if (selectedLemmaObject) {
@@ -168,6 +212,12 @@ exports.findMatchingLemmaObjectThenWord = (
         currentLanguage,
         kumquat
       );
+
+      if (!subArrayOfOutputUnits || !subArrayOfOutputUnits.length) {
+        errorInSentenceCreation.errorMessage =
+          "The requested inflections were not found in the selected lemma objects.";
+        return false;
+      }
 
       subArrayOfOutputUnits.forEach((unit) => {
         let { errorInDrilling, selectedWordOrArray, drillPath } = unit;

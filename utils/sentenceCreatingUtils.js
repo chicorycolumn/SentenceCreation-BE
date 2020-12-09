@@ -13,6 +13,8 @@ exports.processSentenceFormula = (
   questionOutputArr,
   questionLanguage
 ) => {
+  let kumquat = true;
+
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
 
   console.log("processSentenceFormula fxn was given these args", {
@@ -37,7 +39,7 @@ exports.processSentenceFormula = (
   let defaultSentenceNumber = 50;
   let defaultSentenceSymbol = "";
   sentenceSymbol = sentenceSymbol || defaultSentenceSymbol;
-  let errorInSentenceCreation = {};
+  let errorInSentenceCreation = { errorMessage: null };
   let outputArr = [];
 
   let words = useDummy
@@ -114,16 +116,28 @@ exports.processSentenceFormula = (
       errorInSentenceCreation,
       currentLanguage,
       questionLanguage,
-      true
+      kumquat
     );
 
     console.log("*");
-    console.log("*");
-    console.log("*");
+    console.log("*head");
     console.log(allPossibleOutputUnitsArray);
     console.log("*");
     console.log("*");
-    console.log("*");
+
+    if (
+      errorInSentenceCreation.errorMessage ||
+      !allPossibleOutputUnitsArray ||
+      !allPossibleOutputUnitsArray.length
+    ) {
+      return {
+        outputArr: null,
+        sentenceFormula,
+        sentenceNumber,
+        sentenceSymbol,
+        errorInSentenceCreation,
+      };
+    }
 
     let outputUnit = gpUtils.selectRandom(allPossibleOutputUnitsArray);
 
@@ -165,13 +179,36 @@ exports.processSentenceFormula = (
           }
         });
 
-        let outputUnit = otUtils.findMatchingLemmaObjectThenWord(
+        let allPossibleOutputUnitsArray = otUtils.findMatchingLemmaObjectThenWord(
           dependentChunk,
           words,
           errorInSentenceCreation,
           currentLanguage,
-          questionLanguage
+          questionLanguage,
+          kumquat
         );
+
+        console.log("*");
+        console.log("*dependent");
+        console.log(allPossibleOutputUnitsArray);
+        console.log("*");
+        console.log("*");
+
+        if (
+          errorInSentenceCreation.errorMessage ||
+          !allPossibleOutputUnitsArray ||
+          !allPossibleOutputUnitsArray.length
+        ) {
+          return {
+            outputArr: null,
+            sentenceFormula,
+            sentenceNumber,
+            sentenceSymbol,
+            errorInSentenceCreation,
+          };
+        }
+
+        let outputUnit = gpUtils.selectRandom(allPossibleOutputUnitsArray);
 
         lfUtils.updateStructureChunkByTagsAndSelectors(
           outputUnit,
@@ -191,13 +228,36 @@ exports.processSentenceFormula = (
       typeof otherChunk !== "object" ||
       !doneChunkIds.includes(otherChunk.chunkId)
     ) {
-      let outputUnit = otUtils.findMatchingLemmaObjectThenWord(
+      let allPossibleOutputUnitsArray = otUtils.findMatchingLemmaObjectThenWord(
         otherChunk,
         words,
         errorInSentenceCreation,
         currentLanguage,
-        questionLanguage
+        questionLanguage,
+        kumquat
       );
+
+      console.log("*");
+      console.log("*other");
+      console.log(allPossibleOutputUnitsArray);
+      console.log("*");
+      console.log("*");
+
+      if (
+        errorInSentenceCreation.errorMessage ||
+        !allPossibleOutputUnitsArray ||
+        !allPossibleOutputUnitsArray.length
+      ) {
+        return {
+          outputArr: null,
+          sentenceFormula,
+          sentenceNumber,
+          sentenceSymbol,
+          errorInSentenceCreation,
+        };
+      }
+
+      let outputUnit = gpUtils.selectRandom(allPossibleOutputUnitsArray);
 
       //No need to updateStructureChunkByTagsAndSelectors as these chunks are neither heads nor dependents.
       // lfUtils.updateStructureChunkByTagsAndSelectors(outputUnit, currentLanguage);
