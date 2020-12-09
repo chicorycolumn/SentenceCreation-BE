@@ -87,15 +87,17 @@ exports.processSentenceFormula = (
   allLangUtils.preprocessStructureChunks(sentenceStructure);
   langUtils.preprocessStructureChunks(sentenceStructure);
 
-  let doneChunkIds = [];
-  let headIds = [];
-
-  sentenceStructure.forEach((chunk) => {
-    if (typeof chunk === "object" && chunk.agreeWith) {
-      headIds.push(chunk.agreeWith);
-    }
-  });
-  headIds = Array.from(new Set(headIds));
+  let headIds = Array.from(
+    new Set(
+      sentenceStructure
+        .map((chunk) => {
+          if (typeof chunk === "object" && chunk.agreeWith) {
+            return chunk.agreeWith;
+          }
+        })
+        .filter((item) => item)
+    )
+  );
 
   //STEP ONE: Select headwords and add to result array.
   headIds.forEach((headId) => {
@@ -106,8 +108,6 @@ exports.processSentenceFormula = (
 
     console.log(">>STEP ONE", headChunk.chunkId);
 
-    //Now I will make this an array of all possibles.
-    //then I will selectRaandom here.
     let allPossibleOutputUnitsArray = otUtils.findMatchingLemmaObjectThenWord(
       headChunk,
       words,
@@ -148,13 +148,11 @@ exports.processSentenceFormula = (
     lfUtils.updateStructureChunkByTagsAndSelectors(outputUnit, currentLanguage);
     lfUtils.updateStructureChunkByInflections(outputUnit, currentLanguage);
     outputArr.push(outputUnit);
-    doneChunkIds.push(headId);
     headChunk = outputUnit.structureChunk; //redundant
   });
 
   //Make a copy of:
   //  sentenceStructure
-  //  doneChunkIds
   //  outputArr
 
   //STEP TWO: Select dependent words and add to result array.
@@ -225,18 +223,22 @@ exports.processSentenceFormula = (
         );
         lfUtils.updateStructureChunkByInflections(outputUnit, currentLanguage);
         outputArr.push(outputUnit);
-        doneChunkIds.push(dependentChunk.chunkId);
         dependentChunk = outputUnit.structureChunk; //redundant
       });
     }
   });
 
   //STEP THREE: Select all other words and add to result array.
-  sentenceStructure.forEach((otherChunk) => {
-    if (
-      typeof otherChunk !== "object" ||
-      !doneChunkIds.includes(otherChunk.chunkId)
-    ) {
+  sentenceStructure
+    .filter((structureChunk) => {
+      let doneChunkIds = outputArr.map((outputUnit) => {
+        return outputUnit.structureChunk.chunkId;
+      });
+
+      return !doneChunkIds.includes(structureChunk.chunkId);
+    })
+    //Filter just the ones that aren't chunkId already in
+    .forEach((otherChunk) => {
       console.log(">>STEP THREE", otherChunk.chunkId);
 
       let allPossibleOutputUnitsArray = otUtils.findMatchingLemmaObjectThenWord(
@@ -280,10 +282,8 @@ exports.processSentenceFormula = (
       // lfUtils.updateStructureChunkByTagsAndSelectors(outputUnit, currentLanguage);
       // lfUtils.updateStructureChunkByInflections(outputUnit, currentLanguage);
       outputArr.push(outputUnit);
-      doneChunkIds.push(otherChunk.chunkId);
       otherChunk = outputUnit.structureChunk; //redundant
-    }
-  });
+    });
 
   return {
     outputArr,

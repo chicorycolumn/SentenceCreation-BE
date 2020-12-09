@@ -11,7 +11,7 @@ describe("/api", () => {
   // beforeEach(() => {});
 
   describe("/palette - Stage 6: Returning Polish with English translations of rich sentences (with nouns adjectives and verbs).", () => {
-    it.only("#pal06-01z *interim test* GET 200 NO: Returns a sentence in present, with just one translation.", () => {
+    it("#pal06-01z *interim test* GET 200 NO: Returns a sentence in present, with just one translation.", () => {
       return request(app)
         .get("/api/palette")
         .send({
