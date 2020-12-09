@@ -198,14 +198,6 @@ exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
         });
       });
     });
-
-    console.log("%");
-    console.log("%");
-    console.log("%");
-    console.log(resArr);
-    console.log("%");
-    console.log("%");
-    console.log("%");
     return resArr;
   }
 };

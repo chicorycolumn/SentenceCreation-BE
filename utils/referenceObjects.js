@@ -71,11 +71,11 @@ exports.getTranslatedTenseDescription = (
   sourceLanguage,
   targetLanguage
 ) => {
-  console.log("getTranslatedTenseDescription fxn was given these arguments:", {
-    sourceTenseDescription,
-    sourceLanguage,
-    targetLanguage,
-  });
+  // console.log("getTranslatedTenseDescription fxn was given these arguments:", {
+  //   sourceTenseDescription,
+  //   sourceLanguage,
+  //   targetLanguage,
+  // });
 
   let translatedTenseDescriptionsArr = [];
   if (
@@ -100,8 +100,8 @@ exports.getTranslatedTenseDescription = (
       }
     });
   }
-  console.log("getTranslatedTenseDescription fxn will return this value", {
-    translatedTenseDescriptionsArr,
-  });
+  // console.log("getTranslatedTenseDescription fxn will return this value", {
+  //   translatedTenseDescriptionsArr,
+  // });
   return translatedTenseDescriptionsArr;
 };

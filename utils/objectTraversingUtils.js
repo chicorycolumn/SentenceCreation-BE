@@ -17,17 +17,17 @@ exports.findMatchingLemmaObjectThenWord = (
   let selectedFormsArray = [];
   let arrayOfAllPossibleOutputUnits = [];
 
-  console.log(
-    "findMatchingLemmaObjectThenWord fxn has been given these arguments:",
-    {
-      structureChunk,
-      words,
-      errorInSentenceCreation,
-      currentLanguage,
-      questionLanguage,
-      kumquat,
-    }
-  );
+  // console.log(
+  //   "findMatchingLemmaObjectThenWord fxn has been given these arguments:",
+  //   {
+  //     structureChunk,
+  //     words,
+  //     errorInSentenceCreation,
+  //     currentLanguage,
+  //     questionLanguage,
+  //     kumquat,
+  //   }
+  // );
 
   //STEP ONE: : Fx-PW: Pathway for Fixed pieces.
   if (structureChunk.wordtype === "fixed") {
@@ -78,7 +78,6 @@ exports.findMatchingLemmaObjectThenWord = (
 
   //THREE (A): Ad-PW: Pathway for Ad hoc forms.
   if (Object.keys(adhocInflectorRef).includes(structureChunk.wordtype)) {
-    console.log("##Ad-PW");
     Object.keys(adhocInflectorRef).forEach((adhocWordtype) => {
       let adhocInflectorKeys = adhocInflectorRef[adhocWordtype];
 
@@ -87,6 +86,7 @@ exports.findMatchingLemmaObjectThenWord = (
           structureChunk[adhocInflectorKey] &&
           structureChunk[adhocInflectorKey].length
         ) {
+          console.log("##Ad-PW");
           if (kumquat) {
             matches.forEach((selectedLemmaObject) => {
               let adhocArr = langUtils.generateAdhocForms(
@@ -125,7 +125,6 @@ exports.findMatchingLemmaObjectThenWord = (
 
   //THREE (B): Un-PW: Pathway for Uninflected forms.
   if (structureChunk.form && structureChunk.form.length) {
-    console.log("##Un-PW");
     Object.keys(refObj.uninflectedForms[currentLanguage]).forEach(
       (wordtype) => {
         if (structureChunk.wordtype === wordtype) {
@@ -139,6 +138,7 @@ exports.findMatchingLemmaObjectThenWord = (
           );
 
           if (requestedUninflectedForms.length) {
+            console.log("##Un-PW");
             if (kumquat) {
               requestedUninflectedForms.forEach((selectedUninflectedForm) => {
                 let matchesByUninflectedForm = matches.filter((lObj) => {
@@ -183,8 +183,6 @@ exports.findMatchingLemmaObjectThenWord = (
   }
 
   if (selectedFormsArray && selectedFormsArray.length) {
-    console.log("%%");
-
     selectedFormsArray.forEach((selectedFormObject) => {
       let { selectedWordArr, selectedLemmaObject } = selectedFormObject;
 
@@ -203,17 +201,6 @@ exports.findMatchingLemmaObjectThenWord = (
 
     return arrayOfAllPossibleOutputUnits;
   }
-
-  // if (selectedLemmaObject) {
-  //   console.log("@@");
-  //   return exports.createOutputUnit(
-  //     errorInSentenceCreation,
-  //     null,
-  //     selectedWord,
-  //     structureChunk,
-  //     selectedLemmaObject
-  //   );
-  // }
 
   //STEP FOUR: If-PW: Pathway for inflected forms, return word after selecting by drilling down through lemma object.
 
@@ -315,14 +302,14 @@ exports.createOutputUnit = (
   selectedLemmaObject,
   drillPath
 ) => {
-  console.log("createOutputUnit fxn was given these arguments:", {
-    errorInSentenceCreation,
-    errorInDrilling,
-    selectedWord,
-    structureChunk,
-    selectedLemmaObject,
-    drillPath,
-  });
+  // console.log("createOutputUnit fxn was given these arguments:", {
+  //   errorInSentenceCreation,
+  //   errorInDrilling,
+  //   selectedWord,
+  //   structureChunk,
+  //   selectedLemmaObject,
+  //   drillPath,
+  // });
 
   if (errorInDrilling || !selectedWord) {
     errorInSentenceCreation.errorMessage =

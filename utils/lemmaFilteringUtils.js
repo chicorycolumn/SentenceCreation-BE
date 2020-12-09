@@ -10,15 +10,15 @@ exports.filterWithinSelectedLemmaObject = (
 ) => {
   //STEP ZERO: Get necessary materials, ie inflectionPaths and requirementArrs.
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
-  console.log(
-    "filterWithinSelectedLemmaObject fxn was given these arguments:",
-    {
-      lemmaObject,
-      structureChunk,
-      currentLanguage,
-      kumquat,
-    }
-  );
+  // console.log(
+  //   "filterWithinSelectedLemmaObject fxn was given these arguments:",
+  //   {
+  //     lemmaObject,
+  //     structureChunk,
+  //     currentLanguage,
+  //     kumquat,
+  //   }
+  // );
   let source = lemmaObject.inflections;
 
   let inflectionChain =

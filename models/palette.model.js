@@ -85,7 +85,7 @@ exports.fetchPalette = (req) => {
     }
   });
 
-  console.log(".........v", combinedResponseObj, ".........^");
+  // console.log(".........v", combinedResponseObj, ".........^");
 
   return Promise.all([combinedResponseObj]).then((array) => {
     return array[0];

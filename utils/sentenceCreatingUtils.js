@@ -15,12 +15,12 @@ exports.processSentenceFormula = (
 ) => {
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
 
-  console.log("processSentenceFormula fxn was given these args", {
-    currentLanguage,
-    sentenceNumber,
-    sentenceSymbol,
-    useDummy,
-  });
+  // console.log("processSentenceFormula fxn was given these args", {
+  //   currentLanguage,
+  //   sentenceNumber,
+  //   sentenceSymbol,
+  //   useDummy,
+  // });
 
   //STEP ZERO (A): Get necessary source materials.
   const { wordsBank } = require(`../source/${currentLanguage}/words.js`);
@@ -104,7 +104,7 @@ exports.processSentenceFormula = (
         typeof structureChunk === "object" && structureChunk.chunkId === headId
     );
 
-    console.log(">>STEP ONE", headChunk);
+    console.log(">>STEP ONE", headChunk.chunkId);
 
     //Now I will make this an array of all possibles.
     //then I will selectRaandom here.
@@ -117,12 +117,12 @@ exports.processSentenceFormula = (
       kumquat
     );
 
-    console.log("**");
-    console.log("***********");
-    console.log("**************************");
-    console.log("headChunk", headChunk);
-    console.log("allPossibleOutputUnitsArray", allPossibleOutputUnitsArray);
-    console.log("*");
+    // console.log("**");
+    // console.log("***********");
+    // console.log("**************************");
+    // console.log("headChunk", headChunk);
+    // console.log("allPossibleOutputUnitsArray", allPossibleOutputUnitsArray);
+    // console.log("*");
 
     if (
       errorInSentenceCreation.errorMessage ||
@@ -137,6 +137,11 @@ exports.processSentenceFormula = (
         errorInSentenceCreation,
       };
     }
+
+    console.log(
+      "This HEADCHUNK has been parsed to this output array:",
+      allPossibleOutputUnitsArray
+    );
 
     let outputUnit = gpUtils.selectRandom(allPossibleOutputUnitsArray);
 
@@ -162,7 +167,7 @@ exports.processSentenceFormula = (
 
     if (dependentChunks.length) {
       dependentChunks.forEach((dependentChunk) => {
-        console.log(">>STEP TWO", dependentChunk);
+        console.log(">>STEP TWO", dependentChunk.chunkId);
         let headChunk = sentenceStructure.find(
           (structureChunk) =>
             typeof structureChunk === "object" &&
@@ -187,12 +192,12 @@ exports.processSentenceFormula = (
           kumquat
         );
 
-        console.log("**");
-        console.log("***********");
-        console.log("**************************");
-        console.log("dependentChunk", dependentChunk);
-        console.log("allPossibleOutputUnitsArray", allPossibleOutputUnitsArray);
-        console.log("*");
+        // console.log("**");
+        // console.log("***********");
+        // console.log("**************************");
+        // console.log("dependentChunk", dependentChunk);
+        // console.log("allPossibleOutputUnitsArray", allPossibleOutputUnitsArray);
+        // console.log("*");
 
         if (
           errorInSentenceCreation.errorMessage ||
@@ -207,6 +212,10 @@ exports.processSentenceFormula = (
             errorInSentenceCreation,
           };
         }
+        console.log(
+          "This DEPENDENTCHUNK has been parsed to this output array:",
+          allPossibleOutputUnitsArray
+        );
 
         let outputUnit = gpUtils.selectRandom(allPossibleOutputUnitsArray);
 
@@ -228,6 +237,8 @@ exports.processSentenceFormula = (
       typeof otherChunk !== "object" ||
       !doneChunkIds.includes(otherChunk.chunkId)
     ) {
+      console.log(">>STEP THREE", otherChunk.chunkId);
+
       let allPossibleOutputUnitsArray = otUtils.findMatchingLemmaObjectThenWord(
         otherChunk,
         words,
@@ -237,12 +248,12 @@ exports.processSentenceFormula = (
         kumquat
       );
 
-      console.log("**");
-      console.log("***********");
-      console.log("**************************");
-      console.log("otherChunk", otherChunk);
-      console.log("allPossibleOutputUnitsArray", allPossibleOutputUnitsArray);
-      console.log("*");
+      // console.log("**");
+      // console.log("***********");
+      // console.log("**************************");
+      // console.log("otherChunk", otherChunk);
+      // console.log("allPossibleOutputUnitsArray", allPossibleOutputUnitsArray);
+      // console.log("*");
 
       if (
         errorInSentenceCreation.errorMessage ||
@@ -257,6 +268,11 @@ exports.processSentenceFormula = (
           errorInSentenceCreation,
         };
       }
+
+      console.log(
+        "This OTHERCHUNK has been parsed to this output array:",
+        allPossibleOutputUnitsArray
+      );
 
       let outputUnit = gpUtils.selectRandom(allPossibleOutputUnitsArray);
 
@@ -298,11 +314,11 @@ exports.formatFinalSentence = (
   }
 
   if (kumquat) {
-    console.log(
-      "formatFinalSentence fxn says THIS IS UNFINISHED. we should go through every permutation and make a sentence for each one."
-    );
-    console.log("outputArr", outputArr);
-    console.log("sentenceFormula", sentenceFormula);
+    // console.log(
+    //   "formatFinalSentence fxn says THIS IS UNFINISHED. we should go through every permutation and make a sentence for each one."
+    // );
+    // console.log("outputArr", outputArr);
+    // console.log("sentenceFormula", sentenceFormula);
 
     let finalSentence = exports.buildSentenceFromArray(
       outputArr,
@@ -360,14 +376,14 @@ exports.conformAnswerStructureToQuestionStructure = (
   answerLanguage,
   questionLanguage
 ) => {
-  console.log(
-    "conformAnswerStructureToQuestionStructure fxn, ENG-sentenceStructure",
-    sentenceStructure
-  );
-  console.log(
-    "conformAnswerStructureToQuestionStructure fxn, POL-questionOutputArr",
-    questionOutputArr
-  );
+  // console.log(
+  //   "conformAnswerStructureToQuestionStructure fxn, ENG-sentenceStructure",
+  //   sentenceStructure
+  // );
+  // console.log(
+  //   "conformAnswerStructureToQuestionStructure fxn, POL-questionOutputArr",
+  //   questionOutputArr
+  // );
 
   questionOutputArr.forEach((questionOutputArrItem) => {
     let answerStructureChunk = sentenceStructure.find((structureChunk) => {
@@ -384,17 +400,17 @@ exports.conformAnswerStructureToQuestionStructure = (
     let questionSelectedWord = questionOutputArrItem.selectedWord;
     let questionStructureChunk = questionOutputArrItem.structureChunk;
 
-    console.log(
-      "So, the Polish lemma chosen was",
-      questionSelectedLemmaObject.lemma
-    );
+    // console.log(
+    //   "So, the Polish lemma chosen was",
+    //   questionSelectedLemmaObject.lemma
+    // );
 
     let lemmasToSearch = questionSelectedLemmaObject.translations.ENG;
 
-    console.log(
-      "Going to search for all ENG lobjs with these lemmas:",
-      lemmasToSearch
-    );
+    // console.log(
+    //   "Going to search for all ENG lobjs with these lemmas:",
+    //   lemmasToSearch
+    // );
 
     let source = words[gpUtils.giveSetKey(answerStructureChunk.wordtype)];
 
@@ -415,8 +431,8 @@ exports.conformAnswerStructureToQuestionStructure = (
       (lObj) => lObj.id
     );
 
-    console.log("I found these matches:", answerStructureChunk.specificIds);
-    console.log("answerStructureChunk", answerStructureChunk);
+    // console.log("I found these matches:", answerStructureChunk.specificIds);
+    // console.log("answerStructureChunk", answerStructureChunk);
 
     refObj.lemmaObjectFeatures[
       answerLanguage
@@ -447,9 +463,9 @@ exports.conformAnswerStructureToQuestionStructure = (
         }
       });
 
-    console.log(
-      "answerStructureChunk after the feature transfer",
-      answerStructureChunk
-    );
+    // console.log(
+    //   "answerStructureChunk after the feature transfer",
+    //   answerStructureChunk
+    // );
   });
 };
