@@ -15,6 +15,8 @@ exports.processSentenceFormula = (
 ) => {
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
 
+  let grandOutputArray = [];
+
   // console.log("processSentenceFormula fxn was given these args", {
   //   currentLanguage,
   //   sentenceNumber,
@@ -109,7 +111,7 @@ exports.processSentenceFormula = (
     console.log(">>STEP ONE", headChunk.chunkId);
 
     let allPossibleOutputUnitsArray = otUtils.findMatchingLemmaObjectThenWord(
-      headChunk,
+      gpUtils.copyWithoutReference(headChunk),
       words,
       errorInSentenceCreation,
       currentLanguage,
@@ -148,7 +150,6 @@ exports.processSentenceFormula = (
     lfUtils.updateStructureChunkByTagsAndSelectors(outputUnit, currentLanguage);
     lfUtils.updateStructureChunkByInflections(outputUnit, currentLanguage);
     outputArr.push(outputUnit);
-    headChunk = outputUnit.structureChunk; //redundant
   });
 
   //Make a copy of:
@@ -166,11 +167,15 @@ exports.processSentenceFormula = (
     if (dependentChunks.length) {
       dependentChunks.forEach((dependentChunk) => {
         console.log(">>STEP TWO", dependentChunk.chunkId);
-        let headChunk = sentenceStructure.find(
-          (structureChunk) =>
-            typeof structureChunk === "object" &&
-            structureChunk.chunkId === headId
-        );
+        let headChunk = outputArr
+          .map((outputUnit) => {
+            return outputUnit.structureChunk;
+          })
+          .find(
+            (structureChunk) =>
+              typeof structureChunk === "object" &&
+              structureChunk.chunkId === headId
+          );
 
         //Inherit from headchunks to dependent chunks.
         refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
@@ -182,7 +187,7 @@ exports.processSentenceFormula = (
         });
 
         let allPossibleOutputUnitsArray = otUtils.findMatchingLemmaObjectThenWord(
-          dependentChunk,
+          gpUtils.copyWithoutReference(dependentChunk),
           words,
           errorInSentenceCreation,
           currentLanguage,
@@ -223,7 +228,6 @@ exports.processSentenceFormula = (
         );
         lfUtils.updateStructureChunkByInflections(outputUnit, currentLanguage);
         outputArr.push(outputUnit);
-        dependentChunk = outputUnit.structureChunk; //redundant
       });
     }
   });
@@ -242,7 +246,7 @@ exports.processSentenceFormula = (
       console.log(">>STEP THREE", otherChunk.chunkId);
 
       let allPossibleOutputUnitsArray = otUtils.findMatchingLemmaObjectThenWord(
-        otherChunk,
+        gpUtils.copyWithoutReference(otherChunk),
         words,
         errorInSentenceCreation,
         currentLanguage,
@@ -282,7 +286,6 @@ exports.processSentenceFormula = (
       // lfUtils.updateStructureChunkByTagsAndSelectors(outputUnit, currentLanguage);
       // lfUtils.updateStructureChunkByInflections(outputUnit, currentLanguage);
       outputArr.push(outputUnit);
-      otherChunk = outputUnit.structureChunk; //redundant
     });
 
   return {
