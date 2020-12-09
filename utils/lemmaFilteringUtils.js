@@ -5,7 +5,8 @@ const refObj = require("./referenceObjects.js");
 exports.filterWithinSelectedLemmaObject = (
   lemmaObject,
   structureChunk,
-  currentLanguage
+  currentLanguage,
+  kumquat
 ) => {
   //STEP ZERO: Get necessary materials, ie inflectionPaths and requirementArrs.
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
@@ -44,20 +45,31 @@ exports.filterWithinSelectedLemmaObject = (
 
   traverseAndRecordInflections(source, requirementArrs, pathRecord);
 
-  let selectedPath = gpUtils.selectRandom(pathRecord);
-
   if (!pathRecord || !pathRecord.length) {
     errorInDrilling = true;
     return false;
   }
 
-  let { selectedWordOrArray, drillPath } = selectedPath;
+  if (kumquat) {
+    return pathRecord.map((selectedPath) => {
+      let { selectedWordOrArray, drillPath } = selectedPath;
+      return {
+        errorInDrilling,
+        selectedWordOrArray,
+        drillPath,
+      };
+    });
+  } else {
+    let selectedPath = gpUtils.selectRandom(pathRecord);
 
-  return {
-    errorInDrilling,
-    selectedWordOrArray,
-    drillPath,
-  };
+    let { selectedWordOrArray, drillPath } = selectedPath;
+
+    return {
+      errorInDrilling,
+      selectedWordOrArray,
+      drillPath,
+    };
+  }
 
   function traverseAndRecordInflections(
     source,

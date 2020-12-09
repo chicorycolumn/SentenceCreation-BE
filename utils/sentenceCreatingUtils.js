@@ -105,13 +105,27 @@ exports.processSentenceFormula = (
     );
 
     console.log(">>STEP ONE", headChunk);
-    let outputUnit = otUtils.findMatchingLemmaObjectThenWord(
+
+    //Now I will make this an array of all possibles.
+    //then I will selectRandom here.
+    let allPossibleOutputUnitsArray = otUtils.findMatchingLemmaObjectThenWord(
       headChunk,
       words,
       errorInSentenceCreation,
       currentLanguage,
-      questionLanguage
+      questionLanguage,
+      true
     );
+
+    console.log("*");
+    console.log("*");
+    console.log("*");
+    console.log(allPossibleOutputUnitsArray);
+    console.log("*");
+    console.log("*");
+    console.log("*");
+
+    let outputUnit = gpUtils.selectRandom(allPossibleOutputUnitsArray);
 
     lfUtils.updateStructureChunkByTagsAndSelectors(outputUnit, currentLanguage);
     lfUtils.updateStructureChunkByInflections(outputUnit, currentLanguage);
@@ -184,15 +198,6 @@ exports.processSentenceFormula = (
         currentLanguage,
         questionLanguage
       );
-
-      //EPSILON: The outputUnit is coming back as undefined, which is well, as no sentence could be created from the specs here.
-      //But where is it being undefined, and how should we deal with this error.
-      //To show the right error message to the user.
-      console.log("------------------------------------------");
-      console.log("------------------------------------------");
-      console.log("outputUnit", outputUnit);
-      console.log("------------------------------------------");
-      console.log("------------------------------------------");
 
       //No need to updateStructureChunkByTagsAndSelectors as these chunks are neither heads nor dependents.
       // lfUtils.updateStructureChunkByTagsAndSelectors(outputUnit, currentLanguage);

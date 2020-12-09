@@ -7,7 +7,8 @@ exports.findMatchingLemmaObjectThenWord = (
   words,
   errorInSentenceCreation,
   currentLanguage,
-  questionLanguage
+  questionLanguage,
+  kumquat
 ) => {
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
   let lemmaObjectExtractions;
@@ -24,8 +25,9 @@ exports.findMatchingLemmaObjectThenWord = (
     }
   );
 
-  //STEP ONE: Return result array immediately if wordtype is fixed piece.
+  //STEP ONE: : Fx-PW: Pathway for Fixed pieces.
   if (structureChunk.wordtype === "fixed") {
+    console.log("##Fx-PW");
     return {
       selectedLemmaObject: {},
       selectedWord: structureChunk.value,
@@ -68,8 +70,9 @@ exports.findMatchingLemmaObjectThenWord = (
 
   let adhocInflectorRef = refObj.adhocInflectors[currentLanguage];
 
-  //THREE (A): A-PW: Pathway for Ad hoc forms.
+  //THREE (A): Ad-PW: Pathway for Ad hoc forms.
   if (Object.keys(adhocInflectorRef).includes(structureChunk.wordtype)) {
+    console.log("##Ad-PW");
     Object.keys(adhocInflectorRef).forEach((adhocWordtype) => {
       let adhocInflectorKeys = adhocInflectorRef[adhocWordtype];
 
@@ -94,8 +97,9 @@ exports.findMatchingLemmaObjectThenWord = (
     });
   }
 
-  //THREE (B): U-PW: Pathway for Uninflected forms.
+  //THREE (B): Un-PW: Pathway for Uninflected forms.
   if (structureChunk.form && structureChunk.form.length) {
+    console.log("##Un-PW");
     Object.keys(refObj.uninflectedForms[currentLanguage]).forEach(
       (wordtype) => {
         if (structureChunk.wordtype === wordtype) {
@@ -128,6 +132,7 @@ exports.findMatchingLemmaObjectThenWord = (
   }
 
   if (selectedLemmaObject) {
+    console.log("@@");
     return exports.createOutputUnit(
       errorInSentenceCreation,
       null,
@@ -137,7 +142,7 @@ exports.findMatchingLemmaObjectThenWord = (
     );
   }
 
-  //STEP FOUR: I-PW: Pathway for inflected forms, return word after selecting by drilling down through lemma object.
+  //STEP FOUR: If-PW: Pathway for inflected forms, return word after selecting by drilling down through lemma object.
 
   matches = lfUtils.filterOutDeficientLemmaObjects(
     matches,
@@ -151,28 +156,58 @@ exports.findMatchingLemmaObjectThenWord = (
     return false;
   }
 
-  selectedLemmaObject = gpUtils.selectRandom(matches);
+  console.log("##If-PW");
 
-  let {
-    errorInDrilling,
-    selectedWordOrArray,
-    drillPath,
-  } = lfUtils.filterWithinSelectedLemmaObject(
-    //This no longer updates structureChunk with choices from the chosen inflection path.
-    //We have now done it over in in SC:processSF.
-    selectedLemmaObject,
-    structureChunk,
-    currentLanguage
-  );
+  if (kumquat) {
+    let arrayOfAllPossibleOutputUnits = [];
 
-  return exports.createOutputUnit(
-    errorInSentenceCreation,
-    errorInDrilling,
-    selectedWordOrArray,
-    structureChunk,
-    selectedLemmaObject,
-    drillPath
-  );
+    matches.forEach((selectedLemmaObject) => {
+      let subArrayOfOutputUnits = lfUtils.filterWithinSelectedLemmaObject(
+        selectedLemmaObject,
+        structureChunk,
+        currentLanguage,
+        kumquat
+      );
+
+      subArrayOfOutputUnits.forEach((unit) => {
+        let { errorInDrilling, selectedWordOrArray, drillPath } = unit;
+
+        let outputUnit = exports.createOutputUnit(
+          errorInSentenceCreation,
+          errorInDrilling,
+          selectedWordOrArray,
+          structureChunk,
+          selectedLemmaObject,
+          drillPath
+        );
+
+        arrayOfAllPossibleOutputUnits.push(outputUnit);
+      });
+    });
+
+    return arrayOfAllPossibleOutputUnits;
+  } else {
+    selectedLemmaObject = gpUtils.selectRandom(matches);
+
+    let {
+      errorInDrilling,
+      selectedWordOrArray,
+      drillPath,
+    } = lfUtils.filterWithinSelectedLemmaObject(
+      selectedLemmaObject,
+      structureChunk,
+      currentLanguage
+    );
+
+    return exports.createOutputUnit(
+      errorInSentenceCreation,
+      errorInDrilling,
+      selectedWordOrArray,
+      structureChunk,
+      selectedLemmaObject,
+      drillPath
+    );
+  }
 };
 
 exports.createOutputUnit = (
@@ -189,7 +224,7 @@ exports.createOutputUnit = (
     return false;
   }
 
-  if (typeof selectedWord !== "string") {
+  if (Array.isArray(selectedWord)) {
     selectedWord = gpUtils.selectRandom(selectedWord);
   }
 
