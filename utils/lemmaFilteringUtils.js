@@ -60,7 +60,7 @@ exports.filterWithinSelectedLemmaObject = (
       };
     });
   } else {
-    let selectedPath = gpUtils.selectRandom(pathRecord);
+    let selectedPath = gpUtils.selectRaandom(pathRecord);
 
     let { selectedWordOrArray, drillPath } = selectedPath;
 

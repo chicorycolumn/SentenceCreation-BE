@@ -72,6 +72,13 @@ exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
     structureChunk.wordtype === "verb" &&
     structureChunk.form.includes("verbal")
   ) {
+    if (
+      !structureChunk.tenseDescription ||
+      !structureChunk.tenseDescription.length
+    ) {
+      return;
+    }
+
     //if lObj.complete, then...
     //or maybe this should be "irregular"
     //specifically this is lObj `be` which has different 1per singular and 2per singular forms in present and past.
@@ -82,20 +89,13 @@ exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
       refObj.lemmaObjectFeatures[currentLanguage].inflectionChains.verb;
     let selectedTenseDescription;
 
-    if (
-      !structureChunk.tenseDescription ||
-      !structureChunk.tenseDescription.length
-    ) {
-      return;
-    }
-
     let resArr = [];
     let tenseDescriptionArr = [...structureChunk.tenseDescription];
 
     Object.keys(inflectorRef).forEach((key) => {
       let value = inflectorRef[key];
 
-      //Select random if there is NO value to an inflector key. So this only applies when ENG is question language.
+      //selectRaandom if there is NO value to an inflector key. So this only applies when ENG is question language.
       //This won't be used when ENG is answer language.
       if (!Array.isArray(structureChunk[key]) || !structureChunk[key].length) {
         structureChunk[key] = gpUtils.selectRandom(value);
@@ -198,6 +198,13 @@ exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
       });
     });
 
+    console.log("%");
+    console.log("%");
+    console.log("%");
+    console.log(resArr);
+    console.log("%");
+    console.log("%");
+    console.log("%");
     return resArr;
   }
 };

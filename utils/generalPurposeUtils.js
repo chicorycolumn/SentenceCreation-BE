@@ -5,6 +5,10 @@ exports.selectRandom = (array) => {
   return array[Math.floor(Math.random() * array.length)];
 };
 
+exports.selectRaandom = (array) => {
+  return array[Math.floor(Math.random() * array.length)];
+};
+
 exports.capitaliseFirst = (string) => {
   return string[0].toUpperCase() + string.slice(1);
 };

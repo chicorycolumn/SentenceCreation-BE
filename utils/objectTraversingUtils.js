@@ -84,17 +84,36 @@ exports.findMatchingLemmaObjectThenWord = (
           structureChunk[adhocInflectorKey] &&
           structureChunk[adhocInflectorKey].length
         ) {
-          selectedLemmaObject = gpUtils.selectRandom(matches);
+          if (kumquat) {
+            matches.forEach((selectedLemmaObject) => {
+              let adhocArr = langUtils.generateAdhocForms(
+                structureChunk,
+                selectedLemmaObject,
+                currentLanguage
+              );
 
-          let adhocArr = langUtils.generateAdhocForms(
-            structureChunk,
-            selectedLemmaObject,
-            currentLanguage
-          );
+              let selectedWord = questionLanguage
+                ? adhocArr
+                : gpUtils.selectRandom(adhocArr);
 
-          selectedWord = questionLanguage
-            ? adhocArr
-            : gpUtils.selectRandom(adhocArr);
+              selectedFormsArray.push({
+                selectedWord,
+                selectedLemmaObject,
+              });
+            });
+          } else {
+            selectedLemmaObject = gpUtils.selectRaandom(matches);
+
+            let adhocArr = langUtils.generateAdhocForms(
+              structureChunk,
+              selectedLemmaObject,
+              currentLanguage
+            );
+
+            selectedWord = questionLanguage
+              ? adhocArr
+              : gpUtils.selectRaandom(adhocArr);
+          }
         }
       });
     });
@@ -134,7 +153,7 @@ exports.findMatchingLemmaObjectThenWord = (
                 });
               });
             } else {
-              let selectedUninflectedForm = gpUtils.selectRandom(
+              let selectedUninflectedForm = gpUtils.selectRaandom(
                 requestedUninflectedForms
               );
 
@@ -142,7 +161,7 @@ exports.findMatchingLemmaObjectThenWord = (
                 return lObj.inflections[selectedUninflectedForm];
               });
 
-              selectedLemmaObject = gpUtils.selectRandom(matches);
+              selectedLemmaObject = gpUtils.selectRaandom(matches);
 
               selectedWord =
                 selectedLemmaObject.inflections[selectedUninflectedForm];
@@ -237,7 +256,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
     return arrayOfAllPossibleOutputUnits;
   } else {
-    selectedLemmaObject = gpUtils.selectRandom(matches);
+    selectedLemmaObject = gpUtils.selectRaandom(matches);
 
     let {
       errorInDrilling,
@@ -293,7 +312,7 @@ exports.createOutputUnit = (
   //     };
   //   } else {
   //     return {
-  //       selectedWord: gpUtils.selectRandom(source),
+  //       selectedWord: gpUtils.selectRaandom(source),
   //       updatedStructureChunk: structureChunk,
   //       selectedLemmaObject,
   //     };

@@ -109,7 +109,7 @@ exports.processSentenceFormula = (
     console.log(">>STEP ONE", headChunk);
 
     //Now I will make this an array of all possibles.
-    //then I will selectRandom here.
+    //then I will selectRaandom here.
     let allPossibleOutputUnitsArray = otUtils.findMatchingLemmaObjectThenWord(
       headChunk,
       words,
@@ -283,35 +283,46 @@ exports.formatFinalSentence = (
   errorInSentenceCreation,
   questionLanguage
 ) => {
+  if (errorInSentenceCreation.errorMessage) {
+    let errorMessage = {
+      errorInSentenceCreation: errorInSentenceCreation.errorMessage,
+    };
+
+    return {
+      message: "No sentence could be created from the specifications.",
+      finalSentence: null,
+      errorMessage,
+    };
+  }
+
   if (questionLanguage) {
     console.log(
-      "formatFinalSentence fxn says Now we should go through every permutation and make a sentence for each one."
+      "formatFinalSentence fxn says THIS IS UNFINISHED. we should go through every permutation and make a sentence for each one."
     );
     console.log("outputArr", outputArr);
     console.log("sentenceFormula", sentenceFormula);
+
+    let finalSentence = exports.buildSentenceFromArray(
+      outputArr,
+      sentenceFormula
+    );
+
+    let responseObj = {
+      finalSentence,
+    };
+
+    return responseObj;
   } else {
-    if (errorInSentenceCreation.errorMessage) {
-      let errorMessage = {
-        errorInSentenceCreation: errorInSentenceCreation.errorMessage,
-      };
+    let finalSentence = exports.buildSentenceFromArray(
+      outputArr,
+      sentenceFormula
+    );
 
-      questionResponseObj = {
-        message: "No sentence could be created from the specifications.",
-        finalSentence: null,
-        errorMessage,
-      };
-    } else {
-      let finalSentence = exports.buildSentenceFromArray(
-        outputArr,
-        sentenceFormula
-      );
+    let responseObj = {
+      finalSentence,
+    };
 
-      questionResponseObj = {
-        finalSentence,
-      };
-    }
-
-    return questionResponseObj;
+    return responseObj;
   }
 };
 

@@ -10,7 +10,7 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  xdescribe("/palette - Stage 6: Returning Polish with English translations of rich sentences (with nouns adjectives and verbs).", () => {
+  describe("/palette - Stage 6: Returning Polish with English translations of rich sentences (with nouns adjectives and verbs).", () => {
     it("#pal06-01z *interim test* GET 200 NO: Returns a sentence in present, with just one translation.", () => {
       return request(app)
         .get("/api/palette")
@@ -45,7 +45,7 @@ describe("/api", () => {
           console.log({ questionSentence: res.body });
         });
     });
-    it("#pal06-01a GET 200 YES: Returns a sentence in present, with all English translations.", () => {
+    xit("#pal06-01a GET 200 YES: Returns a sentence in present, with all English translations.", () => {
       return request(app)
         .get("/api/palette")
         .send({
