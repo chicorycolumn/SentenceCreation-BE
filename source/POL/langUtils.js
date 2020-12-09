@@ -50,7 +50,7 @@ exports.preprocessLemmaObjects = (matches, structureChunk) => {
 //   structureChunk.tense = [tense];
 // };
 
-//Alphaman say: Need to, in other files, allow m1 m2 m3 to all read as m if only m key exists and not others.
+//Omegaman say: Need to, in other files, allow m1 m2 m3 to all read as m if only m key exists and not others.
 
 exports.fillVerbInflections = (lemmaObject) => {
   if (lemmaObject.defective) {

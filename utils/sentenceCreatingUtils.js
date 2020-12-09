@@ -150,14 +150,8 @@ exports.processSentenceFormula = (
     lfUtils.updateStructureChunkByTagsAndSelectors(outputUnit, currentLanguage);
     lfUtils.updateStructureChunkByInflections(outputUnit, currentLanguage);
     outputArr.push(outputUnit);
-  });
 
-  //Make a copy of:
-  //  sentenceStructure
-  //  outputArr
-
-  //STEP TWO: Select dependent words and add to result array.
-  headIds.forEach((headId) => {
+    //STEP TWO NOW NESTED: Select dependent words and add to result array.
     let dependentChunks = sentenceStructure.filter(
       (structureChunk) =>
         typeof structureChunk === "object" &&
@@ -167,7 +161,7 @@ exports.processSentenceFormula = (
     if (dependentChunks.length) {
       dependentChunks.forEach((dependentChunk) => {
         console.log(">>STEP TWO", dependentChunk.chunkId);
-        let headChunk = outputArr
+        let uptodateHeadChunk = outputArr
           .map((outputUnit) => {
             return outputUnit.structureChunk;
           })
@@ -181,8 +175,8 @@ exports.processSentenceFormula = (
         refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
           dependentChunk.wordtype
         ].forEach((inflectorKey) => {
-          if (headChunk[inflectorKey]) {
-            dependentChunk[inflectorKey] = headChunk[inflectorKey];
+          if (uptodateHeadChunk[inflectorKey]) {
+            dependentChunk[inflectorKey] = uptodateHeadChunk[inflectorKey];
           }
         });
 
@@ -231,6 +225,12 @@ exports.processSentenceFormula = (
       });
     }
   });
+
+  //Make a copy of:
+  //  sentenceStructure
+  //  outputArr
+
+  //Alphaman say: For all outputArrays in grandOutputArray, run the Step Three process.
 
   //STEP THREE: Select all other words and add to result array.
   sentenceStructure
@@ -441,7 +441,7 @@ exports.conformAnswerStructureToQuestionStructure = (
       answerLanguage
     ].inflectionChains.allowableTransfersFromQuestionStructure[
       answerStructureChunk.wordtype
-    ] //Alphaman say for tantum plurales, make Number blank (all possible) in english noun chunk
+    ] //Omegaman say for tantum plurales, make Number blank (all possible) in english noun chunk
       .forEach((inflectorKey) => {
         if (questionStructureChunk[inflectorKey]) {
           if (inflectorKey === "tenseDescription") {
