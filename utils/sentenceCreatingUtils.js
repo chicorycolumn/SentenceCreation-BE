@@ -40,7 +40,6 @@ exports.processSentenceFormula = (
   let defaultSentenceSymbol = "";
   sentenceSymbol = sentenceSymbol || defaultSentenceSymbol;
   let errorInSentenceCreation = { errorMessage: null };
-  let outputArr = [];
 
   let words = useDummy
     ? gpUtils.copyAndCombineWordbanks(wordsBank, dummyWordsBank)
@@ -76,7 +75,8 @@ exports.processSentenceFormula = (
 
   let sentenceStructure = sentenceFormula.structure;
 
-  if (kumquat) {
+  if (kumquat && false) {
+    //Betaman say remove this when moving to pal06 tests.
     exports.conformAnswerStructureToQuestionStructure(
       sentenceStructure,
       questionOutputArr,
@@ -101,8 +101,10 @@ exports.processSentenceFormula = (
     )
   );
 
+  let headOutputUnitArrays = [];
+
   //STEP ONE: Select headwords and add to result array.
-  headIds.forEach((headId) => {
+  headIds.forEach((headId, headIdIndex) => {
     let headChunk = sentenceStructure.find(
       (structureChunk) =>
         typeof structureChunk === "object" && structureChunk.chunkId === headId
@@ -142,107 +144,193 @@ exports.processSentenceFormula = (
 
     console.log(
       "This HEADCHUNK has been parsed to this output array:",
-      allPossibleOutputUnitsArray
+      allPossibleOutputUnitsArray.map((outputUnit) => outputUnit.selectedWord)
     );
 
-    let outputUnit = gpUtils.selectRandom(allPossibleOutputUnitsArray);
+    headOutputUnitArrays.push(allPossibleOutputUnitsArray);
 
-    lfUtils.updateStructureChunkByTagsAndSelectors(outputUnit, currentLanguage);
-    lfUtils.updateStructureChunkByInflections(outputUnit, currentLanguage);
-    outputArr.push(outputUnit);
+    // let outputUnit = gpUtils.selectRandom(allPossibleOutputUnitsArray);
 
-    //STEP TWO NOW NESTED: Select dependent words and add to result array.
-    let dependentChunks = sentenceStructure.filter(
-      (structureChunk) =>
-        typeof structureChunk === "object" &&
-        structureChunk.agreeWith === headId
-    );
+    // let currentOutputArray = [];
+    // grandOutputArray.push(currentOutputArray);
 
-    if (dependentChunks.length) {
-      dependentChunks.forEach((dependentChunk) => {
-        console.log(">>STEP TWO", dependentChunk.chunkId);
-        let uptodateHeadChunk = outputArr
-          .map((outputUnit) => {
-            return outputUnit.structureChunk;
-          })
-          .find(
-            (structureChunk) =>
-              typeof structureChunk === "object" &&
-              structureChunk.chunkId === headId
-          );
+    // allPossibleOutputUnitsArray.forEach((outputUnit, outputUnitIndex) => {
+    //   //NOTE: headIdIndex =       0: nou-1 (person)         1: nou-2 (food)          2: nou-3 (utensil)
+    //   //NOTE: outputUnitIndex =   0: chłopiec, 1: kobieta    0: jabłko, 1: cebula     0: widelec, 1: łyz.ka
+    //   let focusedOutputArray;
+    //   if (headIdIndex === 0) {
+    //     if (outputUnitIndex === 0) {
+    //       focusedOutputArray = latestOutputArray;
+    //       grandOutputArray.push(focusedOutputArray);
+    //     } else if (outputUnitIndex > 0) {
+    //       focusedOutputArray = gpUtils.copyWithoutReference(latestOutputArray);
+    //       latestOutputArray = focusedOutputArray;
+    //       grandOutputArray.push(focusedOutputArray);
+    //     }
+    //   } else if (headIdIndex > 0) {
+    //     if (outputUnitIndex === 0) {
+    //       focusedOutputArray = latestOutputArray;
+    //     } else if (outputUnitIndex > 0) {
+    //       focusedOutputArray = gpUtils.copyWithoutReference(latestOutputArray);
+    //       latestOutputArray = focusedOutputArray;
+    //       grandOutputArray.push(focusedOutputArray);
+    //     }
+    //   }
+    //   console.log("BBB", { headIdIndex, outputUnitIndex, focusedOutputArray });
 
-        //Inherit from headchunks to dependent chunks.
-        refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
-          dependentChunk.wordtype
-        ].forEach((inflectorKey) => {
-          if (uptodateHeadChunk[inflectorKey]) {
-            dependentChunk[inflectorKey] = uptodateHeadChunk[inflectorKey];
-          }
-        });
-
-        let allPossibleOutputUnitsArray = otUtils.findMatchingLemmaObjectThenWord(
-          gpUtils.copyWithoutReference(dependentChunk),
-          words,
-          errorInSentenceCreation,
-          currentLanguage,
-          questionLanguage,
-          kumquat
-        );
-
-        // console.log("**");
-        // console.log("***********");
-        // console.log("**************************");
-        // console.log("dependentChunk", dependentChunk);
-        // console.log("allPossibleOutputUnitsArray", allPossibleOutputUnitsArray);
-        // console.log("*");
-
-        if (
-          errorInSentenceCreation.errorMessage ||
-          !allPossibleOutputUnitsArray ||
-          !allPossibleOutputUnitsArray.length
-        ) {
-          return {
-            outputArr: null,
-            sentenceFormula,
-            sentenceNumber,
-            sentenceSymbol,
-            errorInSentenceCreation,
-          };
-        }
-        console.log(
-          "This DEPENDENTCHUNK has been parsed to this output array:",
-          allPossibleOutputUnitsArray
-        );
-
-        let outputUnit = gpUtils.selectRandom(allPossibleOutputUnitsArray);
-
-        lfUtils.updateStructureChunkByTagsAndSelectors(
-          outputUnit,
-          currentLanguage
-        );
-        lfUtils.updateStructureChunkByInflections(outputUnit, currentLanguage);
-        outputArr.push(outputUnit);
-      });
-    }
+    // });
   });
 
-  //Make a copy of:
-  //  sentenceStructure
-  //  outputArr
+  // console.log(">>>>>>>>>>>>>>headOutputUnitArrays", headOutputUnitArrays);
 
-  //Alphaman say: For all outputArrays in grandOutputArray, run the Step Three process.
+  let explodedOutputArraysWithHeads = gpUtils.arrayExploder(
+    headOutputUnitArrays
+  );
 
-  //STEP THREE: Select all other words and add to result array.
-  sentenceStructure
-    .filter((structureChunk) => {
+  console.log(
+    ">>>>>>>>>>>>>>explodedOutputArraysWithHeads",
+    explodedOutputArraysWithHeads.map((arr) =>
+      arr.map((item) => item.selectedWord)
+    )
+  );
+
+  explodedOutputArraysWithHeads.forEach((outputArray) => {
+    outputArray.forEach((outputUnit) => {
+      lfUtils.updateStructureChunkByTagsAndSelectors(
+        outputUnit,
+        currentLanguage
+      );
+      lfUtils.updateStructureChunkByInflections(outputUnit, currentLanguage);
+
+      let headChunk = outputUnit.structureChunk;
+      let headId = headChunk.chunkId;
+
+      // focusedOutputArray.push(outputUnit);
+      //STEP TWO NOW NESTED: Select dependent words and add to result array.
+      let dependentChunks = sentenceStructure
+        .filter(
+          (structureChunk) =>
+            typeof structureChunk === "object" &&
+            structureChunk.agreeWith === headId
+        )
+        .map((item) => gpUtils.copyWithoutReference(item));
+
+      if (dependentChunks.length) {
+        dependentChunks.forEach((dependentChunk) => {
+          console.log(">>STEP TWO", dependentChunk.chunkId);
+
+          //Inherit from head chunk to dependent chunks.
+          refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
+            dependentChunk.wordtype
+          ].forEach((inflectorKey) => {
+            if (headChunk[inflectorKey]) {
+              //Gammaman say should actually be this.
+              // dependentChunk[inflectorKey] = gpUtils.copyWithoutReference(headChunk[inflectorKey]);
+              dependentChunk[inflectorKey] = headChunk[inflectorKey];
+            }
+          });
+          let allPossibleOutputUnitsArray = otUtils.findMatchingLemmaObjectThenWord(
+            gpUtils.copyWithoutReference(dependentChunk),
+            words,
+            errorInSentenceCreation,
+            currentLanguage,
+            questionLanguage,
+            kumquat
+          );
+          // console.log("**");
+          // console.log("***********");
+          // console.log("**************************");
+          // console.log("dependentChunk", dependentChunk);
+          // console.log("allPossibleOutputUnitsArray", allPossibleOutputUnitsArray);
+          // console.log("*");
+          if (
+            errorInSentenceCreation.errorMessage ||
+            !allPossibleOutputUnitsArray ||
+            !allPossibleOutputUnitsArray.length
+          ) {
+            return {
+              outputArr: null,
+              sentenceFormula,
+              sentenceNumber,
+              sentenceSymbol,
+              errorInSentenceCreation,
+            };
+          }
+          console.log(
+            "This DEPENDENTCHUNK has been parsed to this output array:",
+            allPossibleOutputUnitsArray.map(
+              (outputUnit) => outputUnit.selectedWord
+            )
+          );
+          // let outputUnit = gpUtils.selectRandom(allPossibleOutputUnitsArray);
+          allPossibleOutputUnitsArray.forEach(
+            (outputUnit, dependentOutputUnitIndex) => {
+              let kennedOutputArray;
+              if (dependentOutputUnitIndex === 0) {
+                kennedOutputArray = focusedOutputArray;
+              } else {
+                kennedOutputArray = gpUtils.copyWithoutReference(
+                  focusedOutputArray
+                );
+                grandOutputArray.push(kennedOutputArray);
+              }
+              lfUtils.updateStructureChunkByTagsAndSelectors(
+                outputUnit,
+                currentLanguage
+              );
+              lfUtils.updateStructureChunkByInflections(
+                outputUnit,
+                currentLanguage
+              );
+              kennedOutputArray.push(outputUnit);
+            }
+          );
+        });
+      }
+    });
+  });
+
+  // console.log("grandOutputArray:", grandOutputArray, "www");
+
+  /**
+   * [
+   *  ["chłopiec", "jabłko"]
+   *  ["chłopiec", "cebula"]
+   *  ["kobieta", "jabłko"]
+   *  ["kobeta", "cebula"]
+   *
+   *  ["chłopcy", "jabłka"]
+   *  ["chłopcy", "cebule"]
+   *  ["kobiety", "jabłka"]
+   *  ["kobety", "cebule"]
+   * ]
+   */
+
+  return;
+
+  //Alphaman say: Remember, we are still old way selectRandom for the other chunk output units. Need change.
+  grandOutputArray.forEach((outputArr) => {
+    console.log("0000000000000000000000");
+    console.log(outputArr);
+    console.log("0000000000000000000000");
+
+    //STEP THREE: Select all other words and add to result array.
+    let otherChunks = sentenceStructure.filter((structureChunk) => {
       let doneChunkIds = outputArr.map((outputUnit) => {
         return outputUnit.structureChunk.chunkId;
       });
 
       return !doneChunkIds.includes(structureChunk.chunkId);
-    })
+    });
+
+    console.log("!");
+    console.log("!");
+    console.log(otherChunks);
+    console.log("!");
+    console.log("!");
+
     //Filter just the ones that aren't chunkId already in
-    .forEach((otherChunk) => {
+    otherChunks.forEach((otherChunk) => {
       console.log(">>STEP THREE", otherChunk.chunkId);
 
       let allPossibleOutputUnitsArray = otUtils.findMatchingLemmaObjectThenWord(
@@ -277,7 +365,7 @@ exports.processSentenceFormula = (
 
       console.log(
         "This OTHERCHUNK has been parsed to this output array:",
-        allPossibleOutputUnitsArray
+        allPossibleOutputUnitsArray.map((outputUnit) => outputUnit.selectedWord)
       );
 
       let outputUnit = gpUtils.selectRandom(allPossibleOutputUnitsArray);
@@ -287,9 +375,21 @@ exports.processSentenceFormula = (
       // lfUtils.updateStructureChunkByInflections(outputUnit, currentLanguage);
       outputArr.push(outputUnit);
     });
+  });
+
+  let selectedOutputArr = gpUtils.selectRandom(grandOutputArray);
+
+  console.log(
+    "qq",
+    "£ £ £ £ £ £ £ £ £ £ £ £",
+    grandOutputArray.map((outputArray) => {
+      return outputArray.map((outputItem) => outputItem.selectedWord);
+    }),
+    "£ £ £ £ £ £ £ £ £ £ £ £"
+  );
 
   return {
-    outputArr,
+    outputArr: selectedOutputArr,
     sentenceFormula,
     sentenceNumber,
     sentenceSymbol,
@@ -304,6 +404,14 @@ exports.formatFinalSentence = (
   kumquat,
   questionLanguage
 ) => {
+  console.log("SC:formatFinalSentence fxn was given these arguments:", {
+    outputArr,
+    sentenceFormula,
+    errorInSentenceCreation,
+    kumquat,
+    questionLanguage,
+  });
+
   if (errorInSentenceCreation.errorMessage) {
     let errorMessage = {
       errorInSentenceCreation: errorInSentenceCreation.errorMessage,
@@ -348,6 +456,11 @@ exports.formatFinalSentence = (
 };
 
 exports.buildSentenceFromArray = (unorderedArr, sentenceFormula) => {
+  console.log("SC:buildSentenceFromArray fxn was given these arguments:", {
+    unorderedArr,
+    sentenceFormula,
+  });
+
   let selectedWords = [];
 
   if (sentenceFormula.primaryOrders) {

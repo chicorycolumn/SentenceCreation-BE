@@ -98,7 +98,7 @@ describe("/api", () => {
   });
 
   describe("/palette - Stage 5: Rich sentences (with nouns adjectives and verbs).", () => {
-    it("#pal05-01a GET 200 YES: Returns a sentence in present.", () => {
+    it.only("#pal05-01a GET 200 YES: Returns a sentence in present.", () => {
       return request(app)
         .get("/api/palette")
         .send({

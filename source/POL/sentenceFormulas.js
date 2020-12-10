@@ -234,7 +234,6 @@ exports.sentenceFormulasBank = {
         chunkId: "nou-1",
         wordtype: "noun",
         tags: ["person"],
-
         gcase: ["nom"],
       },
       {
@@ -244,7 +243,6 @@ exports.sentenceFormulasBank = {
         tenseDescription: ["present im"],
         person: ["3per"],
         tags: [],
-
         specificLemmas: ["mieć"],
       },
       {
@@ -258,7 +256,6 @@ exports.sentenceFormulasBank = {
         chunkId: "nou-2",
         wordtype: "noun",
         tags: ["edible"],
-
         gcase: ["acc"],
       },
     ],

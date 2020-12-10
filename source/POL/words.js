@@ -29,36 +29,36 @@ let nounSet = [
       },
     },
   },
-  {
-    //links
-    translations: { ENG: ["boy", "boyfriend", "guy"] },
-    tags: ["animate", "person", "concrete"],
-    //selectors
-    lemma: "chłopak",
-    id: "pol-nou-002",
-    gender: "m1",
-    //notes
-    deficient: false,
-    //inflections
-    inflections: {
-      singular: {
-        nom: "chłopak",
-        gen: "chłopaka",
-        dat: "chłopakowi",
-        acc: "chłopaka",
-        ins: "chłopakiem",
-        loc: "chłopaku",
-      },
-      plural: {
-        nom: ["chłopacy", "chłopaki"],
-        gen: "chłopaków",
-        dat: "chłopakom",
-        acc: "chłopaków",
-        ins: "chłopakami",
-        loc: "chłopakach",
-      },
-    },
-  },
+  // {
+  //   //links
+  //   translations: { ENG: ["boy", "boyfriend", "guy"] },
+  //   tags: ["animate", "person", "concrete"],
+  //   //selectors
+  //   lemma: "chłopak",
+  //   id: "pol-nou-002",
+  //   gender: "m1",
+  //   //notes
+  //   deficient: false,
+  //   //inflections
+  //   inflections: {
+  //     singular: {
+  //       nom: "chłopak",
+  //       gen: "chłopaka",
+  //       dat: "chłopakowi",
+  //       acc: "chłopaka",
+  //       ins: "chłopakiem",
+  //       loc: "chłopaku",
+  //     },
+  //     plural: {
+  //       nom: ["chłopacy", "chłopaki"],
+  //       gen: "chłopaków",
+  //       dat: "chłopakom",
+  //       acc: "chłopaków",
+  //       ins: "chłopakami",
+  //       loc: "chłopakach",
+  //     },
+  //   },
+  // },
   {
     //links
     translations: { ENG: ["boy", "little boy"] },

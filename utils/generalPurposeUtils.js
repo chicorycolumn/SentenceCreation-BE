@@ -120,3 +120,27 @@ exports.copyValueOfKey = (
     delete navigatedObject[sourceKey];
   }
 };
+
+exports.arrayExploder = (superArray) => {
+  let result = [];
+
+  arrayExploderRecursion(superArray, result, []);
+
+  return result;
+
+  function arrayExploderRecursion(src, res, miniRes) {
+    let arr = src[0];
+
+    arr.forEach((item, itemIndex) => {
+      miniRes.push(item);
+
+      if (src.length > 1) {
+        arrayExploderRecursion(src.slice(1), res, miniRes);
+      } else {
+        res.push(miniRes.slice(0));
+        miniRes.pop();
+      }
+    });
+    miniRes.pop();
+  }
+};

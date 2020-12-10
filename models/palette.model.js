@@ -5,7 +5,7 @@ const refObj = require("../utils/referenceObjects.js");
 const scUtils = require("../utils/sentenceCreatingUtils.js");
 
 exports.fetchPalette = (req) => {
-  let kumquat = false;
+  let kumquat = true;
 
   let {
     sentenceNumber,
@@ -29,6 +29,10 @@ exports.fetchPalette = (req) => {
     questionSentenceData.errorInSentenceCreation,
     kumquat
   );
+
+  console.log("$$$$$$$$$$$$$$$$$");
+  console.log("questionResponseObj", questionResponseObj);
+  console.log("$$$$$$$$$$$$$$$$$");
 
   let answerResponseObj;
 
