@@ -98,7 +98,37 @@ describe("/api", () => {
   });
 
   describe("/palette - Stage 5: Rich sentences (with nouns adjectives and verbs).", () => {
-    it.only("#pal05-01a GET 200 YES: Returns a sentence in present.", () => {
+    it.only("#pal05-01z GET 200 YES: Returns a sentence in present.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage: "POL",
+          sentenceSymbol: "* girl has red apple",
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.questionSentence).to.be.a("String");
+          expect([
+            "Kobieta ma czerwone jabłko.",
+            "Chłopiec ma czerwone jabłko.",
+            "Chłopak ma czerwone jabłko.",
+
+            "Kobieta ma czerwone jabłka.",
+            "Chłopiec ma czerwone jabłka.",
+            "Chłopak ma czerwone jabłka.",
+
+            "Kobieta ma czerwoną cebulę.",
+            "Chłopiec ma czerwoną cebulę.",
+            "Chłopak ma czerwoną cebulę.",
+
+            "Kobieta ma czerwone cebule.",
+            "Chłopiec ma czerwone cebule.",
+            "Chłopak ma czerwone cebule.",
+          ]).to.include(res.body.questionSentence);
+          console.log({ questionSentence: res.body.questionSentence });
+        });
+    });
+    it("#pal05-01a GET 200 YES: Returns a sentence in present.", () => {
       return request(app)
         .get("/api/palette")
         .send({

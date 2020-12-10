@@ -227,6 +227,42 @@ exports.sentenceFormulasBank = {
       },
     ],
   },
+  "61-z": {
+    symbol: "* girl has red apple",
+    structure: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        tags: ["person"],
+        gcase: ["nom"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1",
+        agreeWith: "nou-1",
+        wordtype: "verb",
+        tenseDescription: ["present im"],
+        person: ["3per"],
+        tags: [],
+        specificLemmas: ["mieć"],
+      },
+      {
+        chunkId: "adj-1",
+        agreeWith: "nou-2",
+        wordtype: "adjective",
+        form: ["simple"],
+        tags: ["colour"],
+      },
+      {
+        chunkId: "nou-2",
+        wordtype: "noun",
+        tags: ["edible"],
+        gcase: ["acc"],
+      },
+    ],
+    primaryOrders: [["nou-1", "ver-1", "adj-1", "nou-2"]],
+    additionalOrders: [],
+  },
   61: {
     symbol: "girl has red apple",
     structure: [

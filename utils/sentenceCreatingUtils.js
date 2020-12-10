@@ -112,7 +112,7 @@ exports.processSentenceFormula = (
 
     console.log(">>STEP ONE", headChunk.chunkId);
 
-    let allPossibleOutputUnitsArray = otUtils.findMatchingLemmaObjectThenWord(
+    let allPossOutputUnits_head = otUtils.findMatchingLemmaObjectThenWord(
       gpUtils.copyWithoutReference(headChunk),
       words,
       errorInSentenceCreation,
@@ -125,13 +125,13 @@ exports.processSentenceFormula = (
     // console.log("***********");
     // console.log("**************************");
     // console.log("headChunk", headChunk);
-    // console.log("allPossibleOutputUnitsArray", allPossibleOutputUnitsArray);
+    // console.log("allPossOutputUnits_head", allPossOutputUnits_head);
     // console.log("*");
 
     if (
       errorInSentenceCreation.errorMessage ||
-      !allPossibleOutputUnitsArray ||
-      !allPossibleOutputUnitsArray.length
+      !allPossOutputUnits_head ||
+      !allPossOutputUnits_head.length
     ) {
       return {
         outputArr: null,
@@ -144,17 +144,17 @@ exports.processSentenceFormula = (
 
     console.log(
       "This HEADCHUNK has been parsed to this output array:",
-      allPossibleOutputUnitsArray.map((outputUnit) => outputUnit.selectedWord)
+      allPossOutputUnits_head.map((outputUnit) => outputUnit.selectedWord)
     );
 
-    headOutputUnitArrays.push(allPossibleOutputUnitsArray);
+    headOutputUnitArrays.push(allPossOutputUnits_head);
 
-    // let outputUnit = gpUtils.selectRandom(allPossibleOutputUnitsArray);
+    // let outputUnit = gpUtils.selectRandom(allPossOutputUnits_head);
 
     // let currentOutputArray = [];
     // grandOutputArray.push(currentOutputArray);
 
-    // allPossibleOutputUnitsArray.forEach((outputUnit, outputUnitIndex) => {
+    // allPossOutputUnits_head.forEach((outputUnit, outputUnitIndex) => {
     //   //NOTE: headIdIndex =       0: nou-1 (person)         1: nou-2 (food)          2: nou-3 (utensil)
     //   //NOTE: outputUnitIndex =   0: chłopiec, 1: kobieta    0: jabłko, 1: cebula     0: widelec, 1: łyz.ka
     //   let focusedOutputArray;
@@ -229,7 +229,7 @@ exports.processSentenceFormula = (
               dependentChunk[inflectorKey] = headChunk[inflectorKey];
             }
           });
-          let allPossibleOutputUnitsArray = otUtils.findMatchingLemmaObjectThenWord(
+          let allPossOutputUnits_dependent = otUtils.findMatchingLemmaObjectThenWord(
             gpUtils.copyWithoutReference(dependentChunk),
             words,
             errorInSentenceCreation,
@@ -241,12 +241,12 @@ exports.processSentenceFormula = (
           // console.log("***********");
           // console.log("**************************");
           // console.log("dependentChunk", dependentChunk);
-          // console.log("allPossibleOutputUnitsArray", allPossibleOutputUnitsArray);
+          // console.log("allPossOutputUnits_dependent", allPossOutputUnits_dependent);
           // console.log("*");
           if (
             errorInSentenceCreation.errorMessage ||
-            !allPossibleOutputUnitsArray ||
-            !allPossibleOutputUnitsArray.length
+            !allPossOutputUnits_dependent ||
+            !allPossOutputUnits_dependent.length
           ) {
             return {
               outputArr: null,
@@ -256,14 +256,25 @@ exports.processSentenceFormula = (
               errorInSentenceCreation,
             };
           }
+
+          if ("dummy, delete this later") {
+            let dummyUnit = gpUtils.copyWithoutReference(
+              allPossOutputUnits_dependent[0]
+            );
+            dummyUnit.selectedWord = "moo" + dummyUnit.selectedWord;
+            allPossOutputUnits_dependent.push(dummyUnit);
+          }
           console.log(
             "This DEPENDENTCHUNK has been parsed to this output array:",
-            allPossibleOutputUnitsArray.map(
+            allPossOutputUnits_dependent.map(
               (outputUnit) => outputUnit.selectedWord
             )
           );
-          // let outputUnit = gpUtils.selectRandom(allPossibleOutputUnitsArray);
-          allPossibleOutputUnitsArray.forEach(
+
+          //////////////////////////////////////////////
+
+          // let outputUnit = gpUtils.selectRandom(allPossOutputUnits_dependent);
+          allPossOutputUnits_dependent.forEach(
             (outputUnit, dependentOutputUnitIndex) => {
               let kennedOutputArray;
               if (dependentOutputUnitIndex === 0) {
@@ -333,7 +344,7 @@ exports.processSentenceFormula = (
     otherChunks.forEach((otherChunk) => {
       console.log(">>STEP THREE", otherChunk.chunkId);
 
-      let allPossibleOutputUnitsArray = otUtils.findMatchingLemmaObjectThenWord(
+      let allPossOutputUnits_other = otUtils.findMatchingLemmaObjectThenWord(
         gpUtils.copyWithoutReference(otherChunk),
         words,
         errorInSentenceCreation,
@@ -346,13 +357,13 @@ exports.processSentenceFormula = (
       // console.log("***********");
       // console.log("**************************");
       // console.log("otherChunk", otherChunk);
-      // console.log("allPossibleOutputUnitsArray", allPossibleOutputUnitsArray);
+      // console.log("allPossOutputUnits_other", allPossOutputUnits_other);
       // console.log("*");
 
       if (
         errorInSentenceCreation.errorMessage ||
-        !allPossibleOutputUnitsArray ||
-        !allPossibleOutputUnitsArray.length
+        !allPossOutputUnits_other ||
+        !allPossOutputUnits_other.length
       ) {
         return {
           outputArr: null,
@@ -365,10 +376,10 @@ exports.processSentenceFormula = (
 
       console.log(
         "This OTHERCHUNK has been parsed to this output array:",
-        allPossibleOutputUnitsArray.map((outputUnit) => outputUnit.selectedWord)
+        allPossOutputUnits_other.map((outputUnit) => outputUnit.selectedWord)
       );
 
-      let outputUnit = gpUtils.selectRandom(allPossibleOutputUnitsArray);
+      let outputUnit = gpUtils.selectRandom(allPossOutputUnits_other);
 
       //No need to updateStructureChunkByTagsAndSelectors as these chunks are neither heads nor dependents.
       // lfUtils.updateStructureChunkByTagsAndSelectors(outputUnit, currentLanguage);
