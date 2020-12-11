@@ -11,23 +11,8 @@ exports.findMatchingLemmaObjectThenWord = (
   kumquat
 ) => {
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
-  // let lemmaObjectExtractions;
-  // let selectedLemmaObject;
-  // let selectedWord;
   let selectedFormsArray = [];
   let arrayOfAllPossibleOutputUnits = [];
-
-  console.log(
-    "findMatchingLemmaObjectThenWord fxn has been given these arguments:",
-    {
-      structureChunk,
-      words,
-      errorInSentenceCreation,
-      currentLanguage,
-      questionLanguage,
-      kumquat,
-    }
-  );
 
   //STEP ONE: : Fx-PW: Pathway for Fixed pieces.
   if (structureChunk.wordtype === "fixed") {
@@ -182,20 +167,20 @@ exports.findMatchingLemmaObjectThenWord = (
     );
   }
 
-  if (selectedFormsArray && selectedFormsArray.length) {
+  if (selectedFormsArray.length) {
     selectedFormsArray.forEach((selectedFormObject) => {
       let { selectedWordArr, selectedLemmaObject } = selectedFormObject;
 
       selectedWordArr.forEach((selectedWord) => {
-        arrayOfAllPossibleOutputUnits.push(
-          exports.createOutputUnit(
-            errorInSentenceCreation,
-            null,
-            selectedWord,
-            structureChunk,
-            selectedLemmaObject
-          )
+        let outputUnit = exports.createOutputUnit(
+          errorInSentenceCreation,
+          null,
+          selectedWord,
+          structureChunk,
+          selectedLemmaObject
         );
+
+        arrayOfAllPossibleOutputUnits.push(outputUnit);
       });
     });
 
@@ -266,6 +251,10 @@ exports.findMatchingLemmaObjectThenWord = (
       errorInSentenceCreation.errorMessage =
         "The requested inflections were not found in the selected lemma objects.";
       return false;
+    }
+
+    if (subArrayOfOutputUnits.length !== 1) {
+      throw "That's strange. This was expected to be an array of only one, here near the end of OT:findMatchingLemmaObjectThenWord";
     }
 
     let unit = subArrayOfOutputUnits[0];

@@ -326,6 +326,68 @@ let adjectiveSet = [
     translations: { ENG: ["red"] },
     tags: ["colour"],
     //selectors
+    lemma: "niebieski",
+    id: "pol-adj-001",
+    //notes
+    deficient: false,
+    //inflections
+    inflections: {
+      simple: {
+        singular: {
+          m: {
+            nom: "niebieski",
+            gen: "niebieskiego",
+            dat: "niebieskiemu",
+            acc: "niebieskiego",
+            ins: "niebieskim",
+            loc: "niebieskim",
+          },
+          f: {
+            nom: "niebieska",
+            gen: "niebieskiej",
+            dat: "niebieskiej",
+            acc: "niebieską",
+            ins: "niebieską",
+            loc: "niebieskiej",
+          },
+          n: {
+            nom: "niebieskie",
+            gen: "niebieskiego",
+            dat: "niebieskiemu",
+            acc: "niebieskie",
+            ins: "niebieskim",
+            loc: "niebieskim",
+          },
+        },
+        plural: {
+          virile: {
+            nom: "niebiescy",
+            gen: "niebieskich",
+            dat: "niebieskim",
+            acc: "niebieskich",
+            ins: "niebieskimi",
+            loc: "niebieskich",
+          },
+          nonvirile: {
+            nom: "niebieskie",
+            gen: "niebieskich",
+            dat: "niebieskim",
+            acc: "niebieskie",
+            ins: "niebieskimi",
+            loc: "niebieskich",
+          },
+        },
+      },
+      comparative: ["", true],
+      superlative: ["", true],
+      adverb: "niebiesko",
+    },
+  },
+  {
+    //links
+    translations: { ENG: ["red"] },
+    tags: ["colour"],
+    //selectors
     lemma: "czerwony",
     id: "pol-adj-001",
     //notes

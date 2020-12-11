@@ -2,6 +2,7 @@ const app = require("../app");
 const request = require("supertest");
 const chai = require("chai");
 const { expect } = require("chai");
+const { selectRandom } = require("../utils/generalPurposeUtils");
 // chai.use(require("sams-chai-sorted"));
 // const { myErrMsgs } = require("../errors/errors");
 // const endpointsCopy = require("../endpoints.json");
@@ -11,7 +12,7 @@ describe("/api", () => {
   // beforeEach(() => {});
 
   describe("/palette - Stage 6: Returning Polish with English translations of rich sentences (with nouns adjectives and verbs).", () => {
-    it("#pal06-01z *interim test* GET 200 NO: Returns a sentence in present, with just one translation.", () => {
+    xit("#pal06-01z *interim test* GET 200 NO: Returns a sentence in present, with just one translation.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -22,7 +23,7 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
           expect([
             "Kobieta czyta.",
             "Chłopiec czyta.",
@@ -31,7 +32,7 @@ describe("/api", () => {
             "Chłopcy czytają.",
             "Chłopacy czytają.",
             "Chłopaki czytają.",
-          ]).to.include(res.body.questionSentence);
+          ]).to.include(res.body.questionSentenceArr[0]);
           expect([
             "The boys read.",
             "The boys are reading.",
@@ -41,11 +42,11 @@ describe("/api", () => {
             "The women are reading.",
             "The woman reads.",
             "The woman is reading.",
-          ]).to.include(res.body.answerSentence);
-          console.log({ questionSentence: res.body });
+          ]).to.include(selectRandom(res.body.answerSentence));
+          console.log({ "from spec": res.body });
         });
     });
-    xit("#pal06-01a GET 200 YES: Returns a sentence in present, with all English translations.", () => {
+    it.only("#pal06-01a GET 200 YES: Returns a sentence in present, with all English translations.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -56,7 +57,7 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
           expect(res.body.answerSentence).to.have.members([
             "The boys read.",
             "The boys are reading.",
@@ -67,7 +68,7 @@ describe("/api", () => {
             "The woman reads.",
             "The woman is reading.",
           ]);
-          console.log({ questionSentence: res.body });
+          console.log({ "from spec": res.body });
         });
     });
     xit("#pal06-02b GET 200 YES: Returns a sentence in present, plus multiple English translations with multiple orders.", () => {
@@ -81,7 +82,7 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
           expect(res.body.answerSentence).to.have.members([
             "The woman is reading quickly.",
             "The woman reads quickly.",
@@ -90,15 +91,15 @@ describe("/api", () => {
           ]);
 
           expect(["Szybko kobieta czyta."]).to.include(
-            res.body.questionSentence
+            res.body.questionSentenceArr[0]
           );
-          console.log({ questionSentence: res.body });
+          console.log({ "from spec": res.body });
         });
     });
   });
 
   describe("/palette - Stage 5: Rich sentences (with nouns adjectives and verbs).", () => {
-    it.only("#pal05-01z GET 200 YES: Returns a sentence in present.", () => {
+    xit("#pal05-01z GET 200 YES: Returns a sentence in present.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -107,7 +108,7 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
           expect([
             "Kobieta ma czerwone jabłko.",
             "Chłopiec ma czerwone jabłko.",
@@ -116,8 +117,8 @@ describe("/api", () => {
             "Kobieta ma czerwoną cebulę.",
             "Chłopiec ma czerwoną cebulę.",
             "Chłopak ma czerwoną cebulę.",
-          ]).to.include(res.body.questionSentence);
-          console.log({ questionSentence: res.body.questionSentence });
+          ]).to.include(res.body.questionSentenceArr[0]);
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal05-01a GET 200 YES: Returns a sentence in present.", () => {
@@ -129,7 +130,7 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
           expect([
             "Kobieta ma czerwone jabłko.",
             "Chłopiec ma czerwone jabłko.",
@@ -166,8 +167,8 @@ describe("/api", () => {
             "Chłopcy mają czerwone cebule.",
             "Chłopacy mają czerwone cebule.",
             "Chłopaki mają czerwone cebule.",
-          ]).to.include(res.body.questionSentence);
-          console.log({ questionSentence: res.body.questionSentence });
+          ]).to.include(res.body.questionSentenceArr[0]);
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal05-01b GET 200 YES: Returns a negative sentence in past.", () => {
@@ -179,7 +180,7 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
           expect([
             "Kobieta nie miała czerwonego jabłka.",
             "Chłopiec nie miał czerwonego jabłka.",
@@ -216,8 +217,8 @@ describe("/api", () => {
             "Chłopcy nie mieli czerwonych cebul.",
             "Chłopacy nie mieli czerwonych cebul.",
             "Chłopaki nie mieli czerwonych cebul.",
-          ]).to.include(res.body.questionSentence);
-          console.log({ questionSentence: res.body.questionSentence });
+          ]).to.include(res.body.questionSentenceArr[0]);
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal05-01c GET 200 YES: Returns a negative sentence in past.", () => {
@@ -229,7 +230,7 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
           expect([
             "Czerwona kobieta nie miała czerwonego jabłka.",
             "Czerwony chłopiec nie miał czerwonego jabłka.",
@@ -266,8 +267,8 @@ describe("/api", () => {
             "Czerwoni chłopcy nie mieli czerwonych cebul.",
             "Czerwoni chłopacy nie mieli czerwonych cebul.",
             "Czerwoni chłopaki nie mieli czerwonych cebul.",
-          ]).to.include(res.body.questionSentence);
-          console.log({ questionSentence: res.body.questionSentence });
+          ]).to.include(res.body.questionSentenceArr[0]);
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal05-02a GET 200 YES: Returns a sentence when selected by tenseDescription.", () => {
@@ -279,7 +280,7 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
           expect([
             "Kobieta czyta.",
             "Chłopiec czyta.",
@@ -289,8 +290,8 @@ describe("/api", () => {
             "Chłopcy czytają.",
             "Chłopacy czytają.",
             "Chłopaki czytają.",
-          ]).to.include(res.body.questionSentence);
-          console.log({ questionSentence: res.body.questionSentence });
+          ]).to.include(res.body.questionSentenceArr[0]);
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal05-02b GET 200 YES: Returns a sentence when selected by tenseDescription.", () => {
@@ -302,7 +303,7 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
           expect([
             "Kobieta przeczytała.",
             "Chłopiec przeczytał.",
@@ -312,8 +313,8 @@ describe("/api", () => {
             "Chłopcy przeczytali.",
             "Chłopacy przeczytali.",
             "Chłopaki przeczytali.",
-          ]).to.include(res.body.questionSentence);
-          console.log({ questionSentence: res.body.questionSentence });
+          ]).to.include(res.body.questionSentenceArr[0]);
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal05-02c GET 200 YES: Returns a sentence when selected by tenseDescription.", () => {
@@ -325,7 +326,7 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
           expect([
             "Kobieta będzie czytała.",
             "Chłopiec będzie czytał.",
@@ -344,8 +345,8 @@ describe("/api", () => {
             "Chłopcy będą czytać.",
             "Chłopacy będą czytać.",
             "Chłopaki będą czytać.",
-          ]).to.include(res.body.questionSentence);
-          console.log({ questionSentence: res.body.questionSentence });
+          ]).to.include(res.body.questionSentenceArr[0]);
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal05-02d GET 200 YES: Returns a sentence when selected by one from multiple tenseDescriptions.", () => {
@@ -357,14 +358,14 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
           expect([
             "Kobieta czytałaby.",
             "Kobiety czytałyby.",
             "Kobieta przeczytałaby.",
             "Kobiety przeczytałyby.",
-          ]).to.include(res.body.questionSentence);
-          console.log({ questionSentence: res.body.questionSentence });
+          ]).to.include(res.body.questionSentenceArr[0]);
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
   });
@@ -379,7 +380,7 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
           expect([
             "Czytam.",
             "Czytasz.",
@@ -387,8 +388,8 @@ describe("/api", () => {
             "Czytamy.",
             "Czytacie.",
             "Czytają.",
-          ]).to.include(res.body.questionSentence);
-          console.log({ questionSentence: res.body.questionSentence });
+          ]).to.include(res.body.questionSentenceArr[0]);
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal04-01b GET 200 YES: Returns a sentence with a single verb, with person specified.", () => {
@@ -401,7 +402,7 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
           expect([
             "Czytasz.",
             "Czytacie.",
@@ -423,8 +424,8 @@ describe("/api", () => {
             "Czytałybyście.",
             "Czytaj.",
             "Czytajcie.",
-          ]).to.include(res.body.questionSentence);
-          console.log({ questionSentence: res.body.questionSentence });
+          ]).to.include(res.body.questionSentenceArr[0]);
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal04-01c GET 200 YES: Returns a sentence with a single verb, with tense and number specified.", () => {
@@ -437,7 +438,7 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
           expect([
             "Czytano by.",
             "Czytalibyśmy.",
@@ -446,8 +447,8 @@ describe("/api", () => {
             "Czytałybyście.",
             "Czytaliby.",
             "Czytałyby.",
-          ]).to.include(res.body.questionSentence);
-          console.log({ questionSentence: res.body.questionSentence });
+          ]).to.include(res.body.questionSentenceArr[0]);
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal04-01d GET 200 YES: Returns a sentence with a single verb, with tense number and gender specified.", () => {
@@ -460,11 +461,11 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
           expect(["Czytasz.", "Czytacie."]).to.include(
-            res.body.questionSentence
+            res.body.questionSentenceArr[0]
           );
-          console.log({ questionSentence: res.body.questionSentence });
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal04-01e GET 200 YES: Returns a sentence with a single verb in infinitive.", () => {
@@ -477,9 +478,9 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
-          expect(["Czytać."]).to.include(res.body.questionSentence);
-          console.log({ questionSentence: res.body.questionSentence });
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
+          expect(["Czytać."]).to.include(res.body.questionSentenceArr[0]);
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal04-01f GET 200 YES: Returns a sentence with a single verb in impersonal.", () => {
@@ -492,14 +493,14 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
           expect([
             "Czyta się.",
             "Czytano.",
             "Będzie czytać się.",
             "Czytano by.",
-          ]).to.include(res.body.questionSentence);
-          console.log({ questionSentence: res.body.questionSentence });
+          ]).to.include(res.body.questionSentenceArr[0]);
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal04-01g GET 200 YES: Returns a sentence with a single verb in impersonal, even when plural is specified (returns just those impersonals that have plural use).", () => {
@@ -512,11 +513,11 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
           expect(["Czytano.", "Czytano by."]).to.include(
-            res.body.questionSentence
+            res.body.questionSentenceArr[0]
           );
-          console.log({ questionSentence: res.body.questionSentence });
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal04-02a GET 200 YES: Returns a sentence with a verb's contemporaryAdverbial participle.", () => {
@@ -529,9 +530,9 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
-          expect(["Czytając."]).to.include(res.body.questionSentence);
-          console.log({ questionSentence: res.body.questionSentence });
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
+          expect(["Czytając."]).to.include(res.body.questionSentenceArr[0]);
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal04-02b GET 200 YES: Returns a sentence with a verb's contemporaryAdverbial participle, ignoring gender.", () => {
@@ -544,9 +545,9 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
-          expect(["Czytając."]).to.include(res.body.questionSentence);
-          console.log({ questionSentence: res.body.questionSentence });
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
+          expect(["Czytając."]).to.include(res.body.questionSentenceArr[0]);
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal04-02c GET 200 YES: Returns a sentence with a verb's contemporaryAdverbial participle, ignoring gender and person.", () => {
@@ -559,9 +560,9 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
-          expect(["Czytając."]).to.include(res.body.questionSentence);
-          console.log({ questionSentence: res.body.questionSentence });
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
+          expect(["Czytając."]).to.include(res.body.questionSentenceArr[0]);
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal04-02d GET 200 YES: Returns a sentence with a verb's anteriorAdverbial participle.", () => {
@@ -574,9 +575,11 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
-          expect(["Przeczytawszy."]).to.include(res.body.questionSentence);
-          console.log({ questionSentence: res.body.questionSentence });
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
+          expect(["Przeczytawszy."]).to.include(
+            res.body.questionSentenceArr[0]
+          );
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal04-02e GET 200 YES: Returns a sentence with a verb's anteriorAdverbial participle, ignoring gender.", () => {
@@ -589,9 +592,11 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
-          expect(["Przeczytawszy."]).to.include(res.body.questionSentence);
-          console.log({ questionSentence: res.body.questionSentence });
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
+          expect(["Przeczytawszy."]).to.include(
+            res.body.questionSentenceArr[0]
+          );
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal04-02f GET 200 YES: Returns a sentence with a verb's anteriorAdverbial participle, ignoring gender and person.", () => {
@@ -604,9 +609,11 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
-          expect(["Przeczytawszy."]).to.include(res.body.questionSentence);
-          console.log({ questionSentence: res.body.questionSentence });
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
+          expect(["Przeczytawszy."]).to.include(
+            res.body.questionSentenceArr[0]
+          );
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal04-03a GET 200 YES: Returns a sentence with a single verb's verbalNoun.", () => {
@@ -619,9 +626,9 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
-          expect(["Czytanie."]).to.include(res.body.questionSentence);
-          console.log({ questionSentence: res.body.questionSentence });
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
+          expect(["Czytanie."]).to.include(res.body.questionSentenceArr[0]);
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     xit("#pal04-03b GET 200 NO: Does not return verbalNoun, when a gender is specified, as the verbalNoun is not a verb.", () => {
@@ -634,8 +641,8 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.equal(null);
-          console.log({ questionSentence: res.body.questionSentence });
+          expect(res.body.questionSentenceArr[0]).to.equal(null);
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal04-04a GET 200 YES: Returns verb in virile when one gender option is given.", () => {
@@ -648,7 +655,7 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
           expect([
             "Czytaliśmy.",
             "Czytaliście.",
@@ -656,8 +663,8 @@ describe("/api", () => {
             "Czytalibyśmy.",
             "Czytalibyście.",
             "Czytaliby.",
-          ]).to.include(res.body.questionSentence);
-          console.log({ questionSentence: res.body.questionSentence });
+          ]).to.include(res.body.questionSentenceArr[0]);
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal04-04b GET 200 YES: Returns verb in nonvirile when one gender option is given.", () => {
@@ -670,7 +677,7 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
           expect([
             "Czytałyśmy.",
             "Czytałyście.",
@@ -678,8 +685,8 @@ describe("/api", () => {
             "Czytałybyśmy.",
             "Czytałybyście.",
             "Czytałyby.",
-          ]).to.include(res.body.questionSentence);
-          console.log({ questionSentence: res.body.questionSentence });
+          ]).to.include(res.body.questionSentenceArr[0]);
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal04-04c GET 200 YES: Returns verb in nonvirile when two gender options are given.", () => {
@@ -692,7 +699,7 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
           expect([
             "Czytałyśmy.",
             "Czytałyście.",
@@ -700,8 +707,8 @@ describe("/api", () => {
             "Czytałybyśmy.",
             "Czytałybyście.",
             "Czytałyby.",
-          ]).to.include(res.body.questionSentence);
-          console.log({ questionSentence: res.body.questionSentence });
+          ]).to.include(res.body.questionSentenceArr[0]);
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal04-05a GET 200 YES: Conjugate verb (as virile or nonvirile) to agree with noun in plural.", () => {
@@ -713,14 +720,14 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
           expect([
             "Kobiety czytały.",
             "Chłopcy czytali.",
             "Chłopaki czytali.",
             "Chłopacy czytali.",
-          ]).to.include(res.body.questionSentence);
-          console.log({ questionSentence: res.body.questionSentence });
+          ]).to.include(res.body.questionSentenceArr[0]);
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal04-05b GET 200 YES: Conjugate verb to agree with noun in singular or plural.", () => {
@@ -732,11 +739,11 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
           expect(["Kobieta czyta.", "Kobiety czytają."]).to.include(
-            res.body.questionSentence
+            res.body.questionSentenceArr[0]
           );
-          console.log({ questionSentence: res.body.questionSentence });
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal04-06a GET 200 YES: Select a verb by the Aspect selector.", () => {
@@ -749,11 +756,11 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
           expect(["Kobieta czyta.", "Kobiety czytają."]).to.include(
-            res.body.questionSentence
+            res.body.questionSentenceArr[0]
           );
-          console.log({ questionSentence: res.body.questionSentence });
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal04-06b GET 200 YES: Select a verb by the Aspect selector.", () => {
@@ -766,11 +773,11 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
           expect(["Kobieta przeczyta.", "Kobiety przeczytają."]).to.include(
-            res.body.questionSentence
+            res.body.questionSentenceArr[0]
           );
-          console.log({ questionSentence: res.body.questionSentence });
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal04-07a GET 200 YES: Make two verbs agree.", () => {
@@ -783,9 +790,11 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
-          expect(["Czytam i badam."]).to.include(res.body.questionSentence);
-          console.log({ questionSentence: res.body.questionSentence });
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
+          expect(["Czytam i badam."]).to.include(
+            res.body.questionSentenceArr[0]
+          );
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal04-07b GET 200 YES: Make two verbs agree when there is a choice of person.", () => {
@@ -798,11 +807,11 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
           expect(["Czytam i badam.", "Czytasz i badasz."]).to.include(
-            res.body.questionSentence
+            res.body.questionSentenceArr[0]
           );
-          console.log({ questionSentence: res.body.questionSentence });
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal04-07c GET 200 YES: Make two verbs agree when there is a choice of person, gender, and number.", () => {
@@ -815,7 +824,7 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
           expect([
             "Czytam i badam.",
             "Czytasz i badasz.",
@@ -832,8 +841,8 @@ describe("/api", () => {
             "Czytaliśmy i badaliśmy.",
             "Czytałyście i badałyście.",
             "Czytaliście i badaliście.",
-          ]).to.include(res.body.questionSentence);
-          console.log({ questionSentence: res.body.questionSentence });
+          ]).to.include(res.body.questionSentenceArr[0]);
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
   });
@@ -848,11 +857,11 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
           expect(["Czerwona cebula.", "Czerwone jabłko."]).to.include(
-            res.body.questionSentence
+            res.body.questionSentenceArr[0]
           );
-          console.log({ questionSentence: res.body.questionSentence });
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal03-01b GET 200 YES: Returns a sentence where adjective agrees with noun in nonvirile plural.", () => {
@@ -865,11 +874,11 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
           expect(["Czerwone cebule.", "Czerwone jabłka."]).to.include(
-            res.body.questionSentence
+            res.body.questionSentenceArr[0]
           );
-          console.log({ questionSentence: res.body.questionSentence });
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal03-01c GET 200 YES: Returns a sentence where adjective agrees with noun in virile or nonvirile plural.", () => {
@@ -882,14 +891,14 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
           expect([
             "Czerwoni chłopcy.",
             "Czerwoni chłopacy.",
             "Czerwoni chłopaki.",
             "Czerwone kobiety.",
-          ]).to.include(res.body.questionSentence);
-          console.log({ questionSentence: res.body.questionSentence });
+          ]).to.include(res.body.questionSentenceArr[0]);
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
   });
@@ -905,11 +914,11 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
-          console.log({ questionSentence: res.body.questionSentence });
-          expect(res.body.questionSentence.split(" ").reverse()[0]).to.equal(
-            "majtki."
-          );
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
+          expect(
+            res.body.questionSentenceArr[0].split(" ").reverse()[0]
+          ).to.equal("majtki.");
         });
     });
     it("#pal02-01b GET 200 NO: Disallows tantum plurale, as singular grammatical number was requested.", () => {
@@ -925,7 +934,7 @@ describe("/api", () => {
           expect(res.body.questionMessage).to.equal(
             "No sentence could be created from the specifications."
           );
-          expect(res.body.questionSentence).to.equal(null);
+          expect(res.body.questionSentenceArr[0]).to.equal(null);
         });
     });
     it("#pal02-01c GET 200 YES: Returns a sentence where a tantum plurale was allowed, as either singular or plural grammatical number was requested.", () => {
@@ -938,11 +947,11 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
-          console.log({ questionSentence: res.body.questionSentence });
-          expect(res.body.questionSentence.split(" ").reverse()[0]).to.equal(
-            "majtki."
-          );
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
+          expect(
+            res.body.questionSentenceArr[0].split(" ").reverse()[0]
+          ).to.equal("majtki.");
         });
     });
     it("#pal02-02a GET 200 YES: Returns a sentence where end of inflection chain could be array.", () => {
@@ -955,8 +964,8 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
-          console.log({ questionSentence: res.body.questionSentence });
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
   });
@@ -970,8 +979,8 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
-          console.log({ questionSentence: res.body.questionSentence });
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal01-02a GET 200 NO: Returns message to say no sentence can be created from specifications.", () => {
@@ -987,7 +996,7 @@ describe("/api", () => {
           expect(res.body.questionMessage).to.equal(
             "No sentence could be created from the specifications."
           );
-          expect(res.body.questionSentence).to.equal(null);
+          expect(res.body.questionSentenceArr[0]).to.equal(null);
         });
     });
     it("#pal01-02b GET 200 NO: Returns message to say no sentence could possibly be created from specifications.", () => {
@@ -1003,7 +1012,7 @@ describe("/api", () => {
           expect(res.body.questionMessage).to.equal(
             "No sentence could be created from the specifications."
           );
-          expect(res.body.questionSentence).to.equal(null);
+          expect(res.body.questionSentenceArr[0]).to.equal(null);
         });
     });
     it("#pal01-03a GET 200 NO: Returns message to say no sentence, if dummy noun was successfully filtered out.", () => {
@@ -1019,7 +1028,7 @@ describe("/api", () => {
           expect(res.body.questionMessage).to.equal(
             "No sentence could be created from the specifications."
           );
-          expect(res.body.questionSentence).to.equal(null);
+          expect(res.body.questionSentenceArr[0]).to.equal(null);
         });
     });
     it("#pal01-03b GET 200 NO: Returns message to say no sentence, if dummy noun was successfully filtered out.", () => {
@@ -1035,7 +1044,7 @@ describe("/api", () => {
           expect(res.body.questionMessage).to.equal(
             "No sentence could be created from the specifications."
           );
-          expect(res.body.questionSentence).to.equal(null);
+          expect(res.body.questionSentenceArr[0]).to.equal(null);
         });
     });
     it("#pal01-03c GET 200 YES: Returns sentence, as dummy noun did not need to be filtered out.", () => {
@@ -1048,8 +1057,8 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
-          console.log({ questionSentence: res.body.questionSentence });
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal01-03d GET 200 YES: Returns successful sentence 100% of the time, rather than 33%, as one of the dummy nouns should have been filtered out.", () => {
@@ -1062,8 +1071,8 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
-          console.log({ questionSentence: res.body.questionSentence });
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal01-03e GET 200 NO: Returns message to say no sentence, as dummy noun should have been filtered out.", () => {
@@ -1079,7 +1088,7 @@ describe("/api", () => {
           expect(res.body.questionMessage).to.equal(
             "No sentence could be created from the specifications."
           );
-          expect(res.body.questionSentence).to.equal(null);
+          expect(res.body.questionSentenceArr[0]).to.equal(null);
         });
     });
     it("#pal01-03f GET 200 YES: Returns successful sentence 100% of the time, even though I've tried to trick it, by asking for Singular and Loc, and including an object that does indeed have Singular (but Loc is not within), and has Plural (with Loc within).", () => {
@@ -1092,8 +1101,8 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
-          console.log({ questionSentence: res.body.questionSentence });
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal01-03g GET 200 YES: Testing whether object traversing fxn can avoid getting stuck by going down dead-ends.", () => {
@@ -1106,8 +1115,8 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
-          console.log({ questionSentence: res.body.questionSentence });
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal01-04a GET 200 YES: Checking in console logs whether structureChunks have indeed been updated with the features (number, gender, gcase) of the finally selected word they structure for.", () => {
@@ -1119,8 +1128,8 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
-          console.log({ questionSentence: res.body.questionSentence });
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal01-05a GET 200 YES: Check order of words in final sentence, based on one specified order.", () => {
@@ -1133,11 +1142,11 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
           expect(["Foobar-A foobar-C foobar-B."]).to.include(
-            res.body.questionSentence
+            res.body.questionSentenceArr[0]
           );
-          console.log({ questionSentence: res.body.questionSentence });
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal01-05b GET 200 YES: Check order of words in final sentence, based on multiple specified orders.", () => {
@@ -1150,14 +1159,14 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
           expect([
             "Foobar-A foobar-B foobar-C.",
             "Foobar-A foobar-C foobar-B.",
             "Foobar-B foobar-A foobar-C.",
             "Foobar-B foobar-C foobar-A.",
-          ]).to.include(res.body.questionSentence);
-          console.log({ questionSentence: res.body.questionSentence });
+          ]).to.include(res.body.questionSentenceArr[0]);
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal01-06a GET 200 YES: Filter by specified lemma.", () => {
@@ -1170,9 +1179,9 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
-          expect(res.body.questionSentence).to.equal("Mam jabłko.");
-          console.log({ questionSentence: res.body.questionSentence });
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
+          expect(res.body.questionSentenceArr[0]).to.equal("Mam jabłko.");
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal01-06b GET 200 YES: Filter by a selection of multiple specified lemmas.", () => {
@@ -1185,11 +1194,11 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentence).to.be.a("String");
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
           expect(["Mam jabłka.", "Mam majtki."]).to.include(
-            res.body.questionSentence
+            res.body.questionSentenceArr[0]
           );
-          console.log({ questionSentence: res.body.questionSentence });
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
     it("#pal01-07 Responds 405 if any other methods are used at this endpoint", () => {

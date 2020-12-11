@@ -122,6 +122,10 @@ exports.copyValueOfKey = (
 };
 
 exports.arrayExploder = (superArray) => {
+  if (!superArray || !superArray.length) {
+    return [];
+  }
+
   let result = [];
 
   arrayExploderRecursion(superArray, result, []);

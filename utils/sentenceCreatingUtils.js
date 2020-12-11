@@ -13,16 +13,21 @@ exports.processSentenceFormula = (
   questionOutputArr,
   questionLanguage
 ) => {
+  // kumquat = false;
+
+  console.log("SC:processSentenceFormula fxn was given these arguments:", {
+    currentLanguage,
+    sentenceNumber,
+    sentenceSymbol,
+    useDummy,
+    kumquat,
+    questionOutputArr,
+    questionLanguage,
+  });
+
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
 
   let grandOutputArray = [];
-
-  // console.log("processSentenceFormula fxn was given these args", {
-  //   currentLanguage,
-  //   sentenceNumber,
-  //   sentenceSymbol,
-  //   useDummy,
-  // });
 
   //STEP ZERO (A): Get necessary source materials.
   const { wordsBank } = require(`../source/${currentLanguage}/words.js`);
@@ -112,6 +117,10 @@ exports.processSentenceFormula = (
 
     console.log(">>STEP ONE", headChunk.chunkId);
 
+    //The below functions correctly with regard to:
+    //Give kumquat as true, it returns multiple outputUnit objects in allPossOutputUnits_head array.
+    //Give kumquat as false, it returns just one outputUnit object in said array.
+
     let allPossOutputUnits_head = otUtils.findMatchingLemmaObjectThenWord(
       gpUtils.copyWithoutReference(headChunk),
       words,
@@ -120,13 +129,6 @@ exports.processSentenceFormula = (
       questionLanguage,
       kumquat
     );
-
-    // console.log("**");
-    // console.log("***********");
-    // console.log("**************************");
-    // console.log("headChunk", headChunk);
-    // console.log("allPossOutputUnits_head", allPossOutputUnits_head);
-    // console.log("*");
 
     if (
       errorInSentenceCreation.errorMessage ||
@@ -148,52 +150,17 @@ exports.processSentenceFormula = (
     // );
 
     headOutputUnitArrays.push(allPossOutputUnits_head);
-
-    // let outputUnit = gpUtils.selectRandom(allPossOutputUnits_head);
-
-    // let currentOutputArray = [];
-    // grandOutputArray.push(currentOutputArray);
-
-    // allPossOutputUnits_head.forEach((outputUnit, outputUnitIndex) => {
-    //   //NOTE: headIdIndex =       0: nou-1 (person)         1: nou-2 (food)          2: nou-3 (utensil)
-    //   //NOTE: outputUnitIndex =   0: chłopiec, 1: kobieta    0: jabłko, 1: cebula     0: widelec, 1: łyz.ka
-    //   let focusedOutputArray;
-    //   if (headIdIndex === 0) {
-    //     if (outputUnitIndex === 0) {
-    //       focusedOutputArray = latestOutputArray;
-    //       grandOutputArray.push(focusedOutputArray);
-    //     } else if (outputUnitIndex > 0) {
-    //       focusedOutputArray = gpUtils.copyWithoutReference(latestOutputArray);
-    //       latestOutputArray = focusedOutputArray;
-    //       grandOutputArray.push(focusedOutputArray);
-    //     }
-    //   } else if (headIdIndex > 0) {
-    //     if (outputUnitIndex === 0) {
-    //       focusedOutputArray = latestOutputArray;
-    //     } else if (outputUnitIndex > 0) {
-    //       focusedOutputArray = gpUtils.copyWithoutReference(latestOutputArray);
-    //       latestOutputArray = focusedOutputArray;
-    //       grandOutputArray.push(focusedOutputArray);
-    //     }
-    //   }
-    //   console.log("BBB", { headIdIndex, outputUnitIndex, focusedOutputArray });
-
-    // });
   });
 
-  // console.log(">>>>>>>>>>>>>>headOutputUnitArrays", headOutputUnitArrays);
-
+  //The below functions correctly with regard to:
+  //If kumquat was true, then explodedOutputArraysWithHeads array now contains all possible arrays (of multiplied out head options).
+  // ie [ [{chłopiec}, {jabłko}], [{chłopiec}, {jabłka}], [{kobieta}, {jabłko}], [{kobieta}, {jabłka}] ]
+  //If kumquat was false, said array now contains just the one array, eg explodedOutputArraysWithHeads = [ [{chłopiec}, {jabłko}] ].
   let explodedOutputArraysWithHeads = gpUtils.copyWithoutReference(
     gpUtils.arrayExploder(headOutputUnitArrays)
   );
 
-  // console.log(
-  //   ">>>>>>>>>>>>>>explodedOutputArraysWithHeads",
-  //   explodedOutputArraysWithHeads.map((arr) =>
-  //     arr.map((item) => item.selectedWord)
-  //   )
-  // );
-
+  // Now we update the head structure chunks with the details from their respective selectedWords.
   explodedOutputArraysWithHeads.forEach((headOutputArray) => {
     headOutputArray.forEach((headOutputUnit) => {
       lfUtils.updateStructureChunkByTagsAndSelectors(
@@ -208,8 +175,7 @@ exports.processSentenceFormula = (
       let headChunk = headOutputUnit.structureChunk;
       let headId = headChunk.chunkId;
 
-      // focusedOutputArray.push(headOutputUnit);
-      //STEP TWO NOW NESTED: Select dependent words and add to result array.
+      //STEP TWO (NOW NESTED): Select dependent words and add to result array.
       let dependentChunks = sentenceStructure
         .filter(
           (structureChunk) =>
@@ -240,12 +206,7 @@ exports.processSentenceFormula = (
             questionLanguage,
             kumquat
           );
-          // console.log("**");
-          // console.log("***********");
-          // console.log("**************************");
-          // console.log("dependentChunk", dependentChunk);
-          // console.log("allPossOutputUnits_dependent", allPossOutputUnits_dependent);
-          // console.log("*");
+
           if (
             errorInSentenceCreation.errorMessage ||
             !allPossOutputUnits_dependent ||
@@ -260,13 +221,9 @@ exports.processSentenceFormula = (
             };
           }
 
-          if ("dommy, delete this later") {
-            let dommyUnit = gpUtils.copyWithoutReference(
-              allPossOutputUnits_dependent[0]
-            );
-            dommyUnit.selectedWord = "moo" + dommyUnit.selectedWord;
-            allPossOutputUnits_dependent.push(dommyUnit);
-          }
+          //The above functions correctly with regard to:
+          //Give kumquat as true, it returns multiple outputUnit objects in allPossOutputUnits_dependent array.
+          //Give kumquat as false, it returns just one outputUnit object in said array.
 
           // console.log(
           //   "For this head output unit:",
@@ -285,127 +242,38 @@ exports.processSentenceFormula = (
           headOutputUnit.possibleDependentOutputArrays.push(
             allPossOutputUnits_dependent
           );
-
-          // console.log(
-          //   "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-          // );
-          // console.log(
-          //   `::: ${dependentChunk.chunkId} depending on ${headId} :::`
-          // );
-          // console.log(
-          //   "headOutputUnit.possibleDependentOutputArrays",
-          //   headOutputUnit.possibleDependentOutputArrays.map((x) =>
-          //     x.map((y) => y.selectedWord)
-          //   )
-          // );
-          // console.log(
-          //   "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-          // );
-
-          //////////////////////////////////////////////
-
-          // let outputUnit = gpUtils.selectRandom(allPossOutputUnits_dependent);
-          // allPossOutputUnits_dependent.forEach(
-          //   (outputUnit, dependentOutputUnitIndex) => {
-          //     let kennedOutputArray;
-          //     if (dependentOutputUnitIndex === 0) {
-          //       kennedOutputArray = focusedOutputArray;
-          //     } else {
-          //       kennedOutputArray = gpUtils.copyWithoutReference(
-          //         focusedOutputArray
-          //       );
-          //       grandOutputArray.push(kennedOutputArray);
-          //     }
-          //     lfUtils.updateStructureChunkByTagsAndSelectors(
-          //       outputUnit,
-          //       currentLanguage
-          //     );
-          //     lfUtils.updateStructureChunkByInflections(
-          //       outputUnit,
-          //       currentLanguage
-          //     );
-          //     kennedOutputArray.push(outputUnit);
-          //   }
-          // );
         });
       }
     });
   });
 
-  // return;
-
-  // console.log("%");
-  // console.log("%%");
-  // console.log("%%%");
-  // // console.log("explodedOutputArraysWithHeads", explodedOutputArraysWithHeads);
-  // explodedOutputArraysWithHeads.forEach((arr) => {
-  //   console.log("--------------------------------");
-  //   arr.forEach((item) => {
-  //     console.log(item);
-  //   });
-  //   console.log("--------------------------------");
-  // });
-  // console.log("%%%");
-  // console.log("%%");
-  // console.log("%");
-
   explodedOutputArraysWithHeads.forEach((arr) => {
-    // console.log("~~~~~~~~~~~~~~~~~~~~~~~");
-    // console.log("arr:", arr);
-    // arr.forEach((unit) => {
-    //   console.log(
-    //     "unit.possibleDependentOutputArrays:",
-    //     unit.possibleDependentOutputArrays
-    //   );
-    // });
-    // console.log("~~~~~~~~~~~~~~~~~~~~~~~");
-    // return;
-
     let result = gpUtils.explodeOutputArraysByHeadsAndDependents(arr);
-
-    // console.log("**************************************************");
-    // console.log("result from explodedOutputArraysWithHeads", result);
-    // console.log("**************************************************");
-
     grandOutputArray.push(...result);
   });
 
-  console.log(
-    "grandOutputArray",
-    grandOutputArray.map((x) => x.map((y) => y.selectedWord))
-  );
+  //It all functions correctly up til here at least.
+  //If kumquat was false, then grandOutputArray = [ [ 'kobieta', 'ma', 'jabłko', 'czerwone' ] ]
+  //If kumquat was true, then grandOutputArray =  [
+  //                                                [ 'kobieta', 'ma', 'cebulę', 'niebieską' ],
+  //                                                [ 'kobieta', 'ma', 'cebulę', 'czerwoną' ],
+  //                                                [ 'kobieta', 'ma', 'jabłko', 'niebieskie' ],
+  //                                                [ 'kobieta', 'ma', 'jabłko', 'czerwone' ],
+  //                                                [ 'chłopiec', 'ma', 'cebulę', 'niebieską' ],
+  //                                                [ 'chłopiec', 'ma', 'cebulę', 'czerwoną' ],
+  //                                                [ 'chłopiec', 'ma', 'jabłko', 'niebieskie' ],
+  //                                                [ 'chłopiec', 'ma', 'jabłko', 'czerwone' ]
+  //                                             ]
 
-  // grandOutputArray.slice(0, 3).forEach((x) => {
-  //   console.log("##############");
-  //   // console.log(x.map((y) => y.selectedWord));
-  //   console.log(x);
-  //   console.log("##############");
-  // });
+  // console.log(
+  //   "grandOutputArray",
+  //   grandOutputArray.map((x) => x.map((y) => y.selectedWord))
+  // );
 
-  // return;
-
-  // console.log("grandOutputArray:", grandOutputArray, "www");
-
-  /**
-   * [
-   *  ["chłopiec", "jabłko"]
-   *  ["chłopiec", "cebula"]
-   *  ["kobieta", "jabłko"]
-   *  ["kobeta", "cebula"]
-   *
-   *  ["chłopcy", "jabłka"]
-   *  ["chłopcy", "cebule"]
-   *  ["kobiety", "jabłka"]
-   *  ["kobety", "cebule"]
-   * ]
-   */
-
-  // return;
-
-  let otherChunksRecord = [];
+  let otherChunkIds = [];
 
   grandOutputArray.forEach((outputArr, index) => {
-    let otherChunks = sentenceStructure
+    let currentOtherChunkIds = sentenceStructure
       .filter((structureChunk) => {
         let doneChunkIds = outputArr.map((outputUnit) => {
           return outputUnit.structureChunk.chunkId;
@@ -416,25 +284,18 @@ exports.processSentenceFormula = (
       .map((chunk) => chunk.chunkId);
 
     if (index === 0) {
-      otherChunksRecord = otherChunks;
+      otherChunkIds = currentOtherChunkIds;
     } else {
-      if (!gpUtils.areTwoFlatArraysEqual(otherChunksRecord, otherChunks)) {
+      if (!gpUtils.areTwoFlatArraysEqual(otherChunkIds, currentOtherChunkIds)) {
         throw "Error. There is a difference, in the grandOutputArray, between which chunks have or haven't been used yet. It should be the case that every array in the grand one have the same head ids and dep ids used, and thus the same other ids yet to be used. But this was not the case and so I have halted the process.";
       }
     }
   });
 
-  console.log("}}}}}}}}}", otherChunksRecord);
-
-  // return;
-
   let grandAllPossOutputUnits_other = [];
 
-  //Alphaman say: Remember, we are still old way selectRandom for the other chunk output units. Need change.
-  otherChunksRecord.forEach((otherChunkId) => {
+  otherChunkIds.forEach((otherChunkId) => {
     console.log(">>STEP THREE", otherChunkId);
-
-    // console.log("sentenceStructure", sentenceStructure);
 
     let otherChunk = sentenceStructure.find((structureChunk) => {
       return structureChunk.chunkId === otherChunkId;
@@ -470,50 +331,43 @@ exports.processSentenceFormula = (
       };
     }
 
-    if ("dommy, delete this later") {
-      let dommyUnit = gpUtils.copyWithoutReference(allPossOutputUnits_other[0]);
-      dommyUnit.selectedWord = "moo" + dommyUnit.selectedWord;
-      allPossOutputUnits_other.push(dommyUnit);
-    }
+    // console.log(
+    //   "This OTHERCHUNK has been parsed to this output array:",
+    //   allPossOutputUnits_other.map((outputUnit) => outputUnit.selectedWord)
+    // );
 
-    console.log(
-      "This OTHERCHUNK has been parsed to this output array:",
-      allPossOutputUnits_other.map((outputUnit) => outputUnit.selectedWord)
-    );
+    //The above functions correctly.
+    //If kumquat is true, then allPossOutputUnits_other is array of outputUnit objects, while if false, array of just one said object.
 
     grandAllPossOutputUnits_other.push(allPossOutputUnits_other);
-
-    // let outputUnit = gpUtils.selectRandom(allPossOutputUnits_other);
-
-    //No need to updateStructureChunkByTagsAndSelectors as these chunks are neither heads nor dependents.
-    // lfUtils.updateStructureChunkByTagsAndSelectors(outputUnit, currentLanguage);
-    // lfUtils.updateStructureChunkByInflections(outputUnit, currentLanguage);
-    // outputArr.push(outputUnit);
   });
 
-  grandAllPossOutputUnits_other = gpUtils.arrayExploder(
-    grandAllPossOutputUnits_other
-  );
+  if (grandAllPossOutputUnits_other.length) {
+    grandAllPossOutputUnits_other = gpUtils.arrayExploder(
+      grandAllPossOutputUnits_other
+    );
 
-  grandOutputArray = gpUtils.combineAndExplodeTwoSuperArrays(
-    grandOutputArray,
-    grandAllPossOutputUnits_other
-  );
+    grandOutputArray = gpUtils.combineAndExplodeTwoSuperArrays(
+      grandOutputArray,
+      grandAllPossOutputUnits_other
+    );
+  }
 
-  console.log(
-    "qq",
-    "£ £ £ £ £ £ £ £ £ £ £ £",
-    grandOutputArray.map((outputArray) => {
-      return outputArray.map((outputItem) => outputItem.selectedWord);
-    }),
-    "£ £ £ £ £ £ £ £ £ £ £ £"
-  );
+  // console.log(
+  //   "qq",
+  //   "£ £ £ £ £ £ £ £ £ £ £ £",
+  //   grandOutputArray.map((outputArray) => {
+  //     return outputArray.map((outputItem) => outputItem.selectedWord);
+  //   }),
+  //   "£ £ £ £ £ £ £ £ £ £ £ £"
+  // );
 
-  // return;
-  let selectedOutputArr = gpUtils.selectRandom(grandOutputArray);
+  //Everything has passed inspection in this whole fxn, as of 11/12/20.
+  //If kumquat is true, then grandOutputArray is array of all possible arrays of outputUnit combinations.
+  //And if kumquat false, then grandOutputArray is array of just one said possible array.
 
   return {
-    outputArr: selectedOutputArr,
+    arrayOfOutputArrays: grandOutputArray,
     sentenceFormula,
     sentenceNumber,
     sentenceSymbol,
@@ -522,20 +376,11 @@ exports.processSentenceFormula = (
 };
 
 exports.formatFinalSentence = (
-  outputArr,
+  arrayOfOutputArrays,
   sentenceFormula,
   errorInSentenceCreation,
-  kumquat,
-  questionLanguage
+  kumquat
 ) => {
-  console.log("SC:formatFinalSentence fxn was given these arguments:", {
-    outputArr,
-    sentenceFormula,
-    errorInSentenceCreation,
-    kumquat,
-    questionLanguage,
-  });
-
   if (errorInSentenceCreation.errorMessage) {
     let errorMessage = {
       errorInSentenceCreation: errorInSentenceCreation.errorMessage,
@@ -548,65 +393,97 @@ exports.formatFinalSentence = (
     };
   }
 
-  if (kumquat) {
-    // console.log(
-    //   "formatFinalSentence fxn says THIS IS UNFINISHED. we should go through every permutation and make a sentence for each one."
-    // );
-    // console.log("outputArr", outputArr);
-    // console.log("sentenceFormula", sentenceFormula);
-
-    let finalSentence = exports.buildSentenceFromArray(
-      outputArr,
-      sentenceFormula
-    );
-
-    let responseObj = {
-      finalSentence,
-    };
-
-    return responseObj;
-  } else {
-    let finalSentence = exports.buildSentenceFromArray(
-      outputArr,
-      sentenceFormula
-    );
-
-    let responseObj = {
-      finalSentence,
-    };
-
-    return responseObj;
+  if (!kumquat && arrayOfOutputArrays.length !== 1) {
+    throw "That's strange. We are in Question Mode, so SC:formatFinalSentence expected to be given arrayOfOutputArrays with length of 1, but it didn't.";
+    let x = gpUtils.selectRandom(arrayOfOutputArrays);
   }
+
+  let finalSentenceArr = [];
+
+  if (kumquat) {
+    arrayOfOutputArrays.forEach((outputArr) => {
+      let finalSentences = exports.buildSentenceFromArray(
+        outputArr,
+        sentenceFormula,
+        kumquat
+      );
+
+      finalSentences.forEach((finalSentence) => {
+        finalSentenceArr.push(finalSentence);
+      });
+    });
+  } else {
+    let outputArr = gpUtils.selectRandom(arrayOfOutputArrays);
+
+    let finalSentences = exports.buildSentenceFromArray(
+      outputArr,
+      sentenceFormula,
+      kumquat
+    );
+
+    finalSentences.forEach((finalSentence) => {
+      finalSentenceArr.push(finalSentence);
+    });
+  }
+
+  let answerResponseObj = {
+    finalSentenceArr,
+  };
+
+  return answerResponseObj;
 };
 
-exports.buildSentenceFromArray = (unorderedArr, sentenceFormula) => {
-  console.log("SC:buildSentenceFromArray fxn was given these arguments:", {
-    unorderedArr,
-    sentenceFormula,
-  });
+exports.buildSentenceFromArray = (unorderedArr, sentenceFormula, kumquat) => {
+  let arrayOfSelectedWordsArrays = [];
+  let producedSentences = [];
 
-  let selectedWords = [];
-
-  if (sentenceFormula.primaryOrders) {
-    let order =
-      sentenceFormula.primaryOrders.length === 1
-        ? sentenceFormula.primaryOrders[0]
-        : gpUtils.selectRandom(sentenceFormula.primaryOrders);
-
-    let orderedArr = [];
-    order.forEach((chunkId) => {
-      orderedArr.push(
-        unorderedArr.find((item) => item.structureChunk.chunkId === chunkId)
-      );
-    });
-
-    selectedWords = orderedArr.map((obj) => obj.selectedWord);
+  if (!sentenceFormula.primaryOrders || !sentenceFormula.primaryOrders.length) {
+    let selectedWordsArr = unorderedArr.map((obj) => obj.selectedWord);
+    arrayOfSelectedWordsArrays.push(selectedWordsArr);
   } else {
-    selectedWords = unorderedArr.map((obj) => obj.selectedWord);
+    if (kumquat) {
+      let allOrders = [];
+      if (sentenceFormula.primaryOrders) {
+        allOrders = [...allOrders, ...sentenceFormula.primaryOrders];
+      }
+      if (sentenceFormula.additionalOrders) {
+        allOrders = [...allOrders, ...sentenceFormula.additionalOrders];
+      }
+
+      allOrders.forEach((order) => {
+        let orderedArr = [];
+        order.forEach((chunkId) => {
+          orderedArr.push(
+            unorderedArr.find((item) => item.structureChunk.chunkId === chunkId)
+          );
+        });
+
+        let selectedWordsArr = orderedArr.map((obj) => obj.selectedWord);
+        arrayOfSelectedWordsArrays.push(selectedWordsArr);
+      });
+    } else {
+      let order = gpUtils.selectRandom(sentenceFormula.primaryOrders);
+
+      let orderedArr = [];
+      order.forEach((chunkId) => {
+        orderedArr.push(
+          unorderedArr.find((item) => item.structureChunk.chunkId === chunkId)
+        );
+      });
+
+      let selectedWordsArr = orderedArr.map((obj) => obj.selectedWord);
+      arrayOfSelectedWordsArrays.push(selectedWordsArr);
+    }
   }
 
-  let producedSentence = gpUtils.capitaliseFirst(selectedWords.join(" ") + ".");
-  return producedSentence;
+  arrayOfSelectedWordsArrays.forEach((selectedWordsArr) => {
+    let producedSentence = gpUtils.capitaliseFirst(
+      selectedWordsArr.join(" ") + "."
+    );
+    producedSentences.push(producedSentence);
+  });
+
+  return producedSentences;
 };
 
 exports.conformAnswerStructureToQuestionStructure = (

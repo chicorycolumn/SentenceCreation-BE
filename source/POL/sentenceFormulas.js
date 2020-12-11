@@ -262,8 +262,16 @@ exports.sentenceFormulasBank = {
         gcase: ["acc"],
         number: ["singular"],
       },
+      {
+        chunkId: "ver-2",
+        wordtype: "verb",
+        tags: [],
+        form: ["infinitive"],
+      },
     ],
-    primaryOrders: [["fix-1", "fix-2", "nou-1", "ver-1", "adj-1", "nou-2"]],
+    primaryOrders: [
+      ["fix-1", "fix-2", "nou-1", "ver-1", "adj-1", "nou-2", "ver-2"],
+    ],
     additionalOrders: [],
   },
   61: {

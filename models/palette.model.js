@@ -23,8 +23,22 @@ exports.fetchPalette = (req) => {
     kumquat
   );
 
+  sentenceNumber = questionSentenceData.sentenceNumber;
+  sentenceSymbol = questionSentenceData.sentenceSymbol;
+
+  // console.log(">");
+  // console.log(">>>");
+  // console.log(">>>>>");
+  // console.log("questionSentenceData.arrayOfOutputArrays", questionSentenceData.arrayOfOutputArrays.map(x => x.map(y => y.selectedWord)));
+  // console.log(">>>>>");
+  // console.log(">>>");
+  // console.log(">");
+
+  // console.log("questionSentenceData", questionSentenceData);
+  // throw "Cease.";
+
   let questionResponseObj = scUtils.formatFinalSentence(
-    questionSentenceData.outputArr,
+    questionSentenceData.arrayOfOutputArrays,
     questionSentenceData.sentenceFormula,
     questionSentenceData.errorInSentenceCreation,
     kumquat
@@ -34,37 +48,44 @@ exports.fetchPalette = (req) => {
   console.log("questionResponseObj", questionResponseObj);
   console.log("$$$$$$$$$$$$$$$$$");
 
+  // throw "Now cease.";
+
   let answerResponseObj;
 
   if (answerLanguage) {
     kumquat = true;
 
-    questionSentenceData.outputArr.forEach((outputArrItem) => {
-      //This should now be unnec as we've told it in the refobj not to transfer gender from noun. Not allowable transfer.
-      if (outputArrItem.structureChunk.wordtype === "noun") {
-        delete outputArrItem.structureChunk.gender;
-      }
-      /////
-    });
+    // outputArr.forEach((outputArrItem) => {
+    // //This should now be unnec as we've told it in the refobj not to transfer gender from noun. Not allowable transfer.
+    // if (outputArrItem.structureChunk.wordtype === "noun") {
+    //   delete outputArrItem.structureChunk.gender;
+    // }
+    // /////
+    // });
 
     let answerSentenceData = scUtils.processSentenceFormula(
       answerLanguage,
-      questionSentenceData.sentenceNumber,
-      questionSentenceData.sentenceSymbol,
+      sentenceNumber,
+      sentenceSymbol,
       useDummy,
       kumquat,
-      questionSentenceData.outputArr,
+      questionSentenceData.arrayOfOutputArrays,
       questionLanguage
     );
 
     answerResponseObj = scUtils.formatFinalSentence(
-      answerSentenceData.outputArr,
+      answerSentenceData.arrayOfOutputArrays,
       answerSentenceData.sentenceFormula,
       answerSentenceData.errorInSentenceCreation,
-      kumquat,
-      questionLanguage
+      kumquat
     );
   }
+
+  console.log("$$$$$$$$$$$$$$$$$");
+  console.log("answerResponseObj", answerResponseObj);
+  console.log("$$$$$$$$$$$$$$$$$");
+
+  // throw "Now cease.";
 
   let combinedResponseObj = {};
 
@@ -73,8 +94,8 @@ exports.fetchPalette = (req) => {
     { responseObject: answerResponseObj, key: "answer" },
   ].forEach((ref) => {
     if (ref.responseObject) {
-      combinedResponseObj[ref.key + "Sentence"] =
-        ref.responseObject.finalSentence;
+      combinedResponseObj[ref.key + "SentenceArr"] =
+        ref.responseObject.finalSentenceArr;
 
       if (ref.responseObject.errorMessage) {
         combinedResponseObj[ref.key + "ErrorMessage"] =
@@ -89,7 +110,7 @@ exports.fetchPalette = (req) => {
     }
   });
 
-  // console.log(".........v", combinedResponseObj, ".........^");
+  console.log(".........v", combinedResponseObj, ".........^");
 
   return Promise.all([combinedResponseObj]).then((array) => {
     return array[0];
