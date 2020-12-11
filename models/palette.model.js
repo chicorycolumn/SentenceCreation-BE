@@ -5,7 +5,7 @@ const refObj = require("../utils/referenceObjects.js");
 const scUtils = require("../utils/sentenceCreatingUtils.js");
 
 exports.fetchPalette = (req) => {
-  let kumquat = true;
+  let kumquat = false;
 
   let {
     sentenceNumber,
@@ -69,7 +69,7 @@ exports.fetchPalette = (req) => {
       sentenceSymbol,
       useDummy,
       kumquat,
-      questionSentenceData.arrayOfOutputArrays,
+      questionSentenceData.arrayOfOutputArrays[0],
       questionLanguage
     );
 

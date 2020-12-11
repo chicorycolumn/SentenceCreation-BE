@@ -12,40 +12,6 @@ describe("/api", () => {
   // beforeEach(() => {});
 
   describe("/palette - Stage 6: Returning Polish with English translations of rich sentences (with nouns adjectives and verbs).", () => {
-    xit("#pal06-01z *interim test* GET 200 NO: Returns a sentence in present, with just one translation.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          answerLanguage: "ENG",
-          sentenceSymbol: "101a girl is reading",
-          // sentenceNumber: "101a",
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect([
-            "Kobieta czyta.",
-            "Chłopiec czyta.",
-            "Chłopak czyta.",
-            "Kobiety czytają.",
-            "Chłopcy czytają.",
-            "Chłopacy czytają.",
-            "Chłopaki czytają.",
-          ]).to.include(res.body.questionSentenceArr[0]);
-          expect([
-            "The boys read.",
-            "The boys are reading.",
-            "The boy reads.",
-            "The boy is reading.",
-            "The women read.",
-            "The women are reading.",
-            "The woman reads.",
-            "The woman is reading.",
-          ]).to.include(selectRandom(res.body.answerSentence));
-          console.log({ "from spec": res.body });
-        });
-    });
     it.only("#pal06-01a GET 200 YES: Returns a sentence in present, with all English translations.", () => {
       return request(app)
         .get("/api/palette")
@@ -57,17 +23,38 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect(res.body.answerSentence).to.have.members([
-            "The boys read.",
-            "The boys are reading.",
-            "The boy reads.",
-            "The boy is reading.",
-            "The women read.",
-            "The women are reading.",
-            "The woman reads.",
-            "The woman is reading.",
-          ]);
+          let questionSentence = res.body.questionSentenceArr[0];
+
+          expect(questionSentence).to.be.a("String");
+
+          expect([
+            "Kobieta czyta.",
+            "Kobiety czytają.",
+            "Chłopiec czyta.",
+            "Chłopcy czytają.",
+          ]).to.include(questionSentence);
+
+          if (questionSentence === "Kobieta czyta.") {
+            expect(res.body.answerSentenceArr).to.have.members([
+              "The woman reads.",
+              "The woman is reading.",
+            ]);
+          } else if (questionSentence === "Kobiety czytają.") {
+            expect(res.body.answerSentenceArr).to.have.members([
+              "The women read.",
+              "The women are reading.",
+            ]);
+          } else if (questionSentence === "Chłopiec czyta.") {
+            expect(res.body.answerSentenceArr).to.have.members([
+              "The boy reads.",
+              "The boy is reading.",
+            ]);
+          } else if (questionSentence === "Chłopcy czytają.") {
+            expect(res.body.answerSentenceArr).to.have.members([
+              "The boys read.",
+              "The boys are reading.",
+            ]);
+          }
           console.log({ "from spec": res.body });
         });
     });
@@ -83,7 +70,7 @@ describe("/api", () => {
         .expect(200)
         .then((res) => {
           expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect(res.body.answerSentence).to.have.members([
+          expect(res.body.answerSentenceArr).to.have.members([
             "The woman is reading quickly.",
             "The woman reads quickly.",
             "The woman is quickly reading.",

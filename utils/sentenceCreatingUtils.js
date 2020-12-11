@@ -80,7 +80,7 @@ exports.processSentenceFormula = (
 
   let sentenceStructure = sentenceFormula.structure;
 
-  if (kumquat && false) {
+  if (kumquat) {
     //Betaman say remove this when moving to pal06 tests.
     exports.conformAnswerStructureToQuestionStructure(
       sentenceStructure,
