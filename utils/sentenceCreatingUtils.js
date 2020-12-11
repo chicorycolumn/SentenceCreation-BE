@@ -142,10 +142,10 @@ exports.processSentenceFormula = (
       };
     }
 
-    console.log(
-      "This HEADCHUNK has been parsed to this output array:",
-      allPossOutputUnits_head.map((outputUnit) => outputUnit.selectedWord)
-    );
+    // console.log(
+    //   "This HEADCHUNK has been parsed to this output array:",
+    //   allPossOutputUnits_head.map((outputUnit) => outputUnit.selectedWord)
+    // );
 
     headOutputUnitArrays.push(allPossOutputUnits_head);
 
@@ -183,29 +183,32 @@ exports.processSentenceFormula = (
 
   // console.log(">>>>>>>>>>>>>>headOutputUnitArrays", headOutputUnitArrays);
 
-  let explodedOutputArraysWithHeads = gpUtils.arrayExploder(
-    headOutputUnitArrays
+  let explodedOutputArraysWithHeads = gpUtils.copyWithoutReference(
+    gpUtils.arrayExploder(headOutputUnitArrays)
   );
 
-  console.log(
-    ">>>>>>>>>>>>>>explodedOutputArraysWithHeads",
-    explodedOutputArraysWithHeads.map((arr) =>
-      arr.map((item) => item.selectedWord)
-    )
-  );
+  // console.log(
+  //   ">>>>>>>>>>>>>>explodedOutputArraysWithHeads",
+  //   explodedOutputArraysWithHeads.map((arr) =>
+  //     arr.map((item) => item.selectedWord)
+  //   )
+  // );
 
-  explodedOutputArraysWithHeads.forEach((outputArray) => {
-    outputArray.forEach((outputUnit) => {
+  explodedOutputArraysWithHeads.forEach((headOutputArray) => {
+    headOutputArray.forEach((headOutputUnit) => {
       lfUtils.updateStructureChunkByTagsAndSelectors(
-        outputUnit,
+        headOutputUnit,
         currentLanguage
       );
-      lfUtils.updateStructureChunkByInflections(outputUnit, currentLanguage);
+      lfUtils.updateStructureChunkByInflections(
+        headOutputUnit,
+        currentLanguage
+      );
 
-      let headChunk = outputUnit.structureChunk;
+      let headChunk = headOutputUnit.structureChunk;
       let headId = headChunk.chunkId;
 
-      // focusedOutputArray.push(outputUnit);
+      // focusedOutputArray.push(headOutputUnit);
       //STEP TWO NOW NESTED: Select dependent words and add to result array.
       let dependentChunks = sentenceStructure
         .filter(
@@ -257,49 +260,129 @@ exports.processSentenceFormula = (
             };
           }
 
-          if ("dummy, delete this later") {
-            let dummyUnit = gpUtils.copyWithoutReference(
+          if ("dommy, delete this later") {
+            let dommyUnit = gpUtils.copyWithoutReference(
               allPossOutputUnits_dependent[0]
             );
-            dummyUnit.selectedWord = "moo" + dummyUnit.selectedWord;
-            allPossOutputUnits_dependent.push(dummyUnit);
+            dommyUnit.selectedWord = "moo" + dommyUnit.selectedWord;
+            allPossOutputUnits_dependent.push(dommyUnit);
           }
-          console.log(
-            "This DEPENDENTCHUNK has been parsed to this output array:",
-            allPossOutputUnits_dependent.map(
-              (outputUnit) => outputUnit.selectedWord
-            )
+
+          // console.log(
+          //   "For this head output unit:",
+          //   headOutputUnit,
+          //   "This DEPENDENTCHUNK has been parsed to this output array:",
+          //   allPossOutputUnits_dependent
+          //   // .map(
+          //   //   (outputUnit) => outputUnit.selectedWord
+          //   // )
+          // );
+
+          if (!headOutputUnit.possibleDependentOutputArrays) {
+            headOutputUnit.possibleDependentOutputArrays = [];
+          }
+
+          headOutputUnit.possibleDependentOutputArrays.push(
+            allPossOutputUnits_dependent
           );
+
+          // console.log(
+          //   "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+          // );
+          // console.log(
+          //   `::: ${dependentChunk.chunkId} depending on ${headId} :::`
+          // );
+          // console.log(
+          //   "headOutputUnit.possibleDependentOutputArrays",
+          //   headOutputUnit.possibleDependentOutputArrays.map((x) =>
+          //     x.map((y) => y.selectedWord)
+          //   )
+          // );
+          // console.log(
+          //   "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+          // );
 
           //////////////////////////////////////////////
 
           // let outputUnit = gpUtils.selectRandom(allPossOutputUnits_dependent);
-          allPossOutputUnits_dependent.forEach(
-            (outputUnit, dependentOutputUnitIndex) => {
-              let kennedOutputArray;
-              if (dependentOutputUnitIndex === 0) {
-                kennedOutputArray = focusedOutputArray;
-              } else {
-                kennedOutputArray = gpUtils.copyWithoutReference(
-                  focusedOutputArray
-                );
-                grandOutputArray.push(kennedOutputArray);
-              }
-              lfUtils.updateStructureChunkByTagsAndSelectors(
-                outputUnit,
-                currentLanguage
-              );
-              lfUtils.updateStructureChunkByInflections(
-                outputUnit,
-                currentLanguage
-              );
-              kennedOutputArray.push(outputUnit);
-            }
-          );
+          // allPossOutputUnits_dependent.forEach(
+          //   (outputUnit, dependentOutputUnitIndex) => {
+          //     let kennedOutputArray;
+          //     if (dependentOutputUnitIndex === 0) {
+          //       kennedOutputArray = focusedOutputArray;
+          //     } else {
+          //       kennedOutputArray = gpUtils.copyWithoutReference(
+          //         focusedOutputArray
+          //       );
+          //       grandOutputArray.push(kennedOutputArray);
+          //     }
+          //     lfUtils.updateStructureChunkByTagsAndSelectors(
+          //       outputUnit,
+          //       currentLanguage
+          //     );
+          //     lfUtils.updateStructureChunkByInflections(
+          //       outputUnit,
+          //       currentLanguage
+          //     );
+          //     kennedOutputArray.push(outputUnit);
+          //   }
+          // );
         });
       }
     });
   });
+
+  // return;
+
+  // console.log("%");
+  // console.log("%%");
+  // console.log("%%%");
+  // // console.log("explodedOutputArraysWithHeads", explodedOutputArraysWithHeads);
+  // explodedOutputArraysWithHeads.forEach((arr) => {
+  //   console.log("--------------------------------");
+  //   arr.forEach((item) => {
+  //     console.log(item);
+  //   });
+  //   console.log("--------------------------------");
+  // });
+  // console.log("%%%");
+  // console.log("%%");
+  // console.log("%");
+
+  explodedOutputArraysWithHeads.forEach((arr) => {
+    // console.log("~~~~~~~~~~~~~~~~~~~~~~~");
+    // console.log("arr:", arr);
+    // arr.forEach((unit) => {
+    //   console.log(
+    //     "unit.possibleDependentOutputArrays:",
+    //     unit.possibleDependentOutputArrays
+    //   );
+    // });
+    // console.log("~~~~~~~~~~~~~~~~~~~~~~~");
+    // return;
+
+    let result = gpUtils.explodeOutputArraysByHeadsAndDependents(arr);
+
+    // console.log("**************************************************");
+    // console.log("result from explodedOutputArraysWithHeads", result);
+    // console.log("**************************************************");
+
+    grandOutputArray.push(...result);
+  });
+
+  console.log(
+    "grandOutputArray",
+    grandOutputArray.map((x) => x.map((y) => y.selectedWord))
+  );
+
+  // grandOutputArray.slice(0, 3).forEach((x) => {
+  //   console.log("##############");
+  //   // console.log(x.map((y) => y.selectedWord));
+  //   console.log(x);
+  //   console.log("##############");
+  // });
+
+  // return;
 
   // console.log("grandOutputArray:", grandOutputArray, "www");
 
@@ -317,78 +400,105 @@ exports.processSentenceFormula = (
    * ]
    */
 
-  return;
+  // return;
 
-  //Alphaman say: Remember, we are still old way selectRandom for the other chunk output units. Need change.
-  grandOutputArray.forEach((outputArr) => {
-    console.log("0000000000000000000000");
-    console.log(outputArr);
-    console.log("0000000000000000000000");
+  let otherChunksRecord = [];
 
-    //STEP THREE: Select all other words and add to result array.
-    let otherChunks = sentenceStructure.filter((structureChunk) => {
-      let doneChunkIds = outputArr.map((outputUnit) => {
-        return outputUnit.structureChunk.chunkId;
-      });
+  grandOutputArray.forEach((outputArr, index) => {
+    let otherChunks = sentenceStructure
+      .filter((structureChunk) => {
+        let doneChunkIds = outputArr.map((outputUnit) => {
+          return outputUnit.structureChunk.chunkId;
+        });
 
-      return !doneChunkIds.includes(structureChunk.chunkId);
-    });
+        return !doneChunkIds.includes(structureChunk.chunkId);
+      })
+      .map((chunk) => chunk.chunkId);
 
-    console.log("!");
-    console.log("!");
-    console.log(otherChunks);
-    console.log("!");
-    console.log("!");
-
-    //Filter just the ones that aren't chunkId already in
-    otherChunks.forEach((otherChunk) => {
-      console.log(">>STEP THREE", otherChunk.chunkId);
-
-      let allPossOutputUnits_other = otUtils.findMatchingLemmaObjectThenWord(
-        gpUtils.copyWithoutReference(otherChunk),
-        words,
-        errorInSentenceCreation,
-        currentLanguage,
-        questionLanguage,
-        kumquat
-      );
-
-      // console.log("**");
-      // console.log("***********");
-      // console.log("**************************");
-      // console.log("otherChunk", otherChunk);
-      // console.log("allPossOutputUnits_other", allPossOutputUnits_other);
-      // console.log("*");
-
-      if (
-        errorInSentenceCreation.errorMessage ||
-        !allPossOutputUnits_other ||
-        !allPossOutputUnits_other.length
-      ) {
-        return {
-          outputArr: null,
-          sentenceFormula,
-          sentenceNumber,
-          sentenceSymbol,
-          errorInSentenceCreation,
-        };
+    if (index === 0) {
+      otherChunksRecord = otherChunks;
+    } else {
+      if (!gpUtils.areTwoFlatArraysEqual(otherChunksRecord, otherChunks)) {
+        throw "Error. There is a difference, in the grandOutputArray, between which chunks have or haven't been used yet. It should be the case that every array in the grand one have the same head ids and dep ids used, and thus the same other ids yet to be used. But this was not the case and so I have halted the process.";
       }
-
-      console.log(
-        "This OTHERCHUNK has been parsed to this output array:",
-        allPossOutputUnits_other.map((outputUnit) => outputUnit.selectedWord)
-      );
-
-      let outputUnit = gpUtils.selectRandom(allPossOutputUnits_other);
-
-      //No need to updateStructureChunkByTagsAndSelectors as these chunks are neither heads nor dependents.
-      // lfUtils.updateStructureChunkByTagsAndSelectors(outputUnit, currentLanguage);
-      // lfUtils.updateStructureChunkByInflections(outputUnit, currentLanguage);
-      outputArr.push(outputUnit);
-    });
+    }
   });
 
-  let selectedOutputArr = gpUtils.selectRandom(grandOutputArray);
+  console.log("}}}}}}}}}", otherChunksRecord);
+
+  // return;
+
+  let grandAllPossOutputUnits_other = [];
+
+  //Alphaman say: Remember, we are still old way selectRandom for the other chunk output units. Need change.
+  otherChunksRecord.forEach((otherChunkId) => {
+    console.log(">>STEP THREE", otherChunkId);
+
+    // console.log("sentenceStructure", sentenceStructure);
+
+    let otherChunk = sentenceStructure.find((structureChunk) => {
+      return structureChunk.chunkId === otherChunkId;
+    });
+
+    let allPossOutputUnits_other = otUtils.findMatchingLemmaObjectThenWord(
+      gpUtils.copyWithoutReference(otherChunk),
+      words,
+      errorInSentenceCreation,
+      currentLanguage,
+      questionLanguage,
+      kumquat
+    );
+
+    // console.log("**");
+    // console.log("***********");
+    // console.log("**************************");
+    // console.log("otherChunk", otherChunk);
+    // console.log("allPossOutputUnits_other", allPossOutputUnits_other);
+    // console.log("*");
+
+    if (
+      errorInSentenceCreation.errorMessage ||
+      !allPossOutputUnits_other ||
+      !allPossOutputUnits_other.length
+    ) {
+      return {
+        outputArr: null,
+        sentenceFormula,
+        sentenceNumber,
+        sentenceSymbol,
+        errorInSentenceCreation,
+      };
+    }
+
+    if ("dommy, delete this later") {
+      let dommyUnit = gpUtils.copyWithoutReference(allPossOutputUnits_other[0]);
+      dommyUnit.selectedWord = "moo" + dommyUnit.selectedWord;
+      allPossOutputUnits_other.push(dommyUnit);
+    }
+
+    console.log(
+      "This OTHERCHUNK has been parsed to this output array:",
+      allPossOutputUnits_other.map((outputUnit) => outputUnit.selectedWord)
+    );
+
+    grandAllPossOutputUnits_other.push(allPossOutputUnits_other);
+
+    // let outputUnit = gpUtils.selectRandom(allPossOutputUnits_other);
+
+    //No need to updateStructureChunkByTagsAndSelectors as these chunks are neither heads nor dependents.
+    // lfUtils.updateStructureChunkByTagsAndSelectors(outputUnit, currentLanguage);
+    // lfUtils.updateStructureChunkByInflections(outputUnit, currentLanguage);
+    // outputArr.push(outputUnit);
+  });
+
+  grandAllPossOutputUnits_other = gpUtils.arrayExploder(
+    grandAllPossOutputUnits_other
+  );
+
+  grandOutputArray = gpUtils.combineAndExplodeTwoSuperArrays(
+    grandOutputArray,
+    grandAllPossOutputUnits_other
+  );
 
   console.log(
     "qq",
@@ -398,6 +508,9 @@ exports.processSentenceFormula = (
     }),
     "£ £ £ £ £ £ £ £ £ £ £ £"
   );
+
+  // return;
+  let selectedOutputArr = gpUtils.selectRandom(grandOutputArray);
 
   return {
     outputArr: selectedOutputArr,

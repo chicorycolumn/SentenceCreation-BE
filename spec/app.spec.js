@@ -113,17 +113,9 @@ describe("/api", () => {
             "Chłopiec ma czerwone jabłko.",
             "Chłopak ma czerwone jabłko.",
 
-            "Kobieta ma czerwone jabłka.",
-            "Chłopiec ma czerwone jabłka.",
-            "Chłopak ma czerwone jabłka.",
-
             "Kobieta ma czerwoną cebulę.",
             "Chłopiec ma czerwoną cebulę.",
             "Chłopak ma czerwoną cebulę.",
-
-            "Kobieta ma czerwone cebule.",
-            "Chłopiec ma czerwone cebule.",
-            "Chłopak ma czerwone cebule.",
           ]).to.include(res.body.questionSentence);
           console.log({ questionSentence: res.body.questionSentence });
         });

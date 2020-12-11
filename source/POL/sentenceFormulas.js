@@ -230,6 +230,8 @@ exports.sentenceFormulasBank = {
   "61-z": {
     symbol: "* girl has red apple",
     structure: [
+      { chunkId: "fix-1", wordtype: "fixed", value: "nie," },
+      { chunkId: "fix-2", wordtype: "fixed", value: "chyba" },
       {
         chunkId: "nou-1",
         wordtype: "noun",
@@ -258,9 +260,10 @@ exports.sentenceFormulasBank = {
         wordtype: "noun",
         tags: ["edible"],
         gcase: ["acc"],
+        number: ["singular"],
       },
     ],
-    primaryOrders: [["nou-1", "ver-1", "adj-1", "nou-2"]],
+    primaryOrders: [["fix-1", "fix-2", "nou-1", "ver-1", "adj-1", "nou-2"]],
     additionalOrders: [],
   },
   61: {

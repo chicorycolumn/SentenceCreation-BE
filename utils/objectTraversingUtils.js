@@ -17,17 +17,17 @@ exports.findMatchingLemmaObjectThenWord = (
   let selectedFormsArray = [];
   let arrayOfAllPossibleOutputUnits = [];
 
-  // console.log(
-  //   "findMatchingLemmaObjectThenWord fxn has been given these arguments:",
-  //   {
-  //     structureChunk,
-  //     words,
-  //     errorInSentenceCreation,
-  //     currentLanguage,
-  //     questionLanguage,
-  //     kumquat,
-  //   }
-  // );
+  console.log(
+    "findMatchingLemmaObjectThenWord fxn has been given these arguments:",
+    {
+      structureChunk,
+      words,
+      errorInSentenceCreation,
+      currentLanguage,
+      questionLanguage,
+      kumquat,
+    }
+  );
 
   //STEP ONE: : Fx-PW: Pathway for Fixed pieces.
   if (structureChunk.wordtype === "fixed") {

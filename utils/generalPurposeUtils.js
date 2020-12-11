@@ -144,3 +144,108 @@ exports.arrayExploder = (superArray) => {
     miniRes.pop();
   }
 };
+
+exports.explodeOutputArraysByHeadsAndDependents = (justOneOutputArray) => {
+  // console.log("GP:explodeHD was given this argument:", justOneOutputArray);
+
+  // justOneOutputArray.forEach((unit) => {
+  //   console.log(">>>", unit.possibleDependentOutputArrays);
+  // });
+
+  justOneOutputArray.forEach((unit, unitIndex) => {
+    if (
+      unit.possibleDependentOutputArrays &&
+      unit.possibleDependentOutputArrays.length
+    ) {
+      unit.explodedDependentOutputArrays = exports.arrayExploder(
+        unit.possibleDependentOutputArrays
+      );
+      delete unit.possibleDependentOutputArrays;
+    }
+  });
+
+  let grandArrOfAllHeadUnits = [];
+
+  justOneOutputArray.forEach((headUnit, headUnitIndex) => {
+    let headArr = [[headUnit]];
+    let depArr = headUnit.explodedDependentOutputArrays;
+
+    let headsExplodedByDeps = exports.arrayExploder([headArr, depArr]);
+    delete headUnit.explodedDependentOutputArrays;
+
+    grandArrOfAllHeadUnits.push(headsExplodedByDeps);
+  });
+
+  let explodedGrandArray = exports.arrayExploder(grandArrOfAllHeadUnits);
+
+  // console.log("***")
+  // console.log("******")
+  // console.log(explodedGrandArray)
+  // console.log("******")
+  // console.log("***")
+
+  explodedGrandArray = explodedGrandArray.map((superArr) => {
+    let flattenedArray = [];
+
+    superArr.forEach((arr) => {
+      arr.forEach((subArr) => {
+        subArr.forEach((item) => {
+          flattenedArray.push(item);
+        });
+      });
+    });
+
+    return flattenedArray;
+  });
+
+  // console.log("*");
+  // console.log("*");
+  // console.log("*");
+  // console.log(
+  //   "explodedGrandArray",
+  //   explodedGrandArray.map((x) => x.map((y) => y.selectedWord))
+  // );
+  // console.log("*");
+  // console.log("*");
+  // console.log("*");
+
+  // return null;
+
+  return explodedGrandArray;
+
+  if (explodedGrandArray.length > 1) {
+    throw "Strange behaviour encountered in GP:explodeOutputArraysByHeadsAndDependents";
+  } else {
+    return explodedGrandArray[0];
+  }
+};
+
+exports.combineAndExplodeTwoSuperArrays = (superArr1, superArr2) => {
+  // let a = [
+  //   [ 'kobieta', 'ma', 'czerą' ],
+  //   [ 'kobieta', 'ma', 'mooczerą' ],
+  // ]
+
+  // let b = [
+  //   [ 'nie,', 'chyba' ],
+  //   [ 'nie,', 'moochyba' ],
+  // ]
+
+  // result will be [
+  //   [ 'kobieta', 'ma', 'czerą', 'nie,', 'chyba' ],
+  //   [ 'kobieta', 'ma', 'czerą', 'nie,', 'moochyba' ],
+  //   [ 'kobieta', 'ma', 'mooczerą', 'nie,', 'chyba' ],
+  //   [ 'kobieta', 'ma', 'mooczerą', 'nie,', 'moochyba' ]
+  // ]
+
+  let grandResult = [];
+
+  superArr1.forEach((arr1) => {
+    superArr2.forEach((arr2) => {
+      let result = [...arr1, ...arr2];
+      grandResult.push(result);
+    });
+  });
+
+  return grandResult;
+};
