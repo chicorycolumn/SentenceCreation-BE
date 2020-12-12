@@ -57,7 +57,8 @@ exports.sentenceFormulasBank = {
     additionalOrders: [],
   },
   "101c": {
-    symbol: "101c girl f is reading quickly",
+    symbol:
+      "101c girl *reads quickly IT WON'T MATTER THAT THIS SYMBOL IS DIFFERENT FROM ITS POL COUNTERPART",
     structure: [
       // {
       //   chunkId: "art-1",
@@ -78,11 +79,12 @@ exports.sentenceFormulasBank = {
         agreeWith: "nou-1",
         wordtype: "verb",
         person: ["3per"],
+        tenseDescription: ["present"],
         tags: ["basic2"],
       },
       { chunkId: "fix-2", wordtype: "fixed", value: "quickly" },
     ],
     primaryOrders: [["fix-1", "nou-1", "ver-1", "fix-2"]],
-    additionalOrders: [["fix-1", "nou-1", "fix-2", "ver-1"]],
+    additionalOrders: [["fix-2", "fix-1", "nou-1", "ver-1"]],
   },
 };

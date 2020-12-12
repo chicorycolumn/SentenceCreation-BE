@@ -522,15 +522,14 @@ exports.sentenceFormulasBank = {
     ],
   },
   "101c": {
-    symbol: "101c girl f is reading",
+    symbol: "101c girl *reads quickly",
     structure: [
       {
         chunkId: "nou-1",
         wordtype: "noun",
         tags: ["person"],
         gcase: ["nom"],
-        number: ["singular"],
-        gender: ["f"],
+        number: ["singular", "plural"],
       },
       {
         chunkId: "ver-1",
@@ -542,7 +541,7 @@ exports.sentenceFormulasBank = {
       },
       { chunkId: "fix-1", wordtype: "fixed", value: "szybko" },
     ],
-    primaryOrders: [["fix-1", "nou-1", "ver-1"]],
+    primaryOrders: [["nou-1", "fix-1", "ver-1"]],
     additionalOrders: [],
   },
 };

@@ -502,6 +502,10 @@ exports.conformAnswerStructureToQuestionStructure = (
   //   questionOutputArr
   // );
 
+  console.log("---------------------------------");
+  console.log(questionOutputArr);
+  console.log("---------------------------------");
+
   questionOutputArr.forEach((questionOutputArrItem) => {
     let answerStructureChunk = sentenceStructure.find((structureChunk) => {
       return (
@@ -510,6 +514,10 @@ exports.conformAnswerStructureToQuestionStructure = (
     });
 
     if (!answerStructureChunk) {
+      return;
+    }
+
+    if (questionOutputArrItem.structureChunk.wordtype === "fixed") {
       return;
     }
 
@@ -522,6 +530,7 @@ exports.conformAnswerStructureToQuestionStructure = (
     //   questionSelectedLemmaObject.lemma
     // );
 
+    console.log("questionSelectedLemmaObject", questionSelectedLemmaObject);
     let lemmasToSearch = questionSelectedLemmaObject.translations.ENG;
 
     // console.log(
