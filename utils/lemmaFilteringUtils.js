@@ -10,15 +10,7 @@ exports.filterWithinSelectedLemmaObject = (
 ) => {
   //STEP ZERO: Get necessary materials, ie inflectionPaths and requirementArrs.
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
-  // console.log(
-  //   "filterWithinSelectedLemmaObject fxn was given these arguments:",
-  //   {
-  //     lemmaObject,
-  //     structureChunk,
-  //     currentLanguage,
-  //     kumquat,
-  //   }
-  // );
+
   let source = lemmaObject.inflections;
 
   let inflectionChain =
@@ -38,9 +30,6 @@ exports.filterWithinSelectedLemmaObject = (
 
   let inflectionPathsInSource = routesByNesting;
   let errorInDrilling = false;
-
-  // console.log(">>>inflectionPathsInSource", inflectionPathsInSource);
-  // console.log(">>>requirementArrs", requirementArrs);
 
   let pathRecord = [];
 
@@ -141,11 +130,6 @@ exports.updateStructureChunkByAndTagsAndSelectors = (
   outputUnit,
   currentLanguage
 ) => {
-  // console.log(
-  //   "updateStructureChunkByAndTagsAndSelectors fxn was given these arguments:",
-  //   { outputUnit, currentLanguage }
-  // );
-
   let { selectedLemmaObject, structureChunk } = outputUnit;
 
   structureChunk.andTags = structureChunk.andTags.filter((andTag) => {

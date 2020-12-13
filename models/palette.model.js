@@ -26,20 +26,7 @@ exports.fetchPalette = (req) => {
   sentenceNumber = questionSentenceData.sentenceNumber;
   sentenceSymbol = questionSentenceData.sentenceSymbol;
 
-  // console.log(">");
-  // console.log(">>>");
-  // console.log(">>>>>");
-  // console.log("questionSentenceData.arrayOfOutputArrays", questionSentenceData.arrayOfOutputArrays.map(x => x.map(y => y.selectedWord)));
-  // console.log(">>>>>");
-  // console.log(">>>");
-  // console.log(">");
-
-  // console.log("questionSentenceData", questionSentenceData);
-  // throw "Cease.";
-
-  console.log("----------------------------");
-  console.log("questionSentenceData", questionSentenceData);
-  console.log("----------------------------");
+  console.log("palette.model > questionSentenceData", questionSentenceData);
 
   let questionResponseObj = scUtils.formatFinalSentence(
     questionSentenceData.arrayOfOutputArrays,
@@ -48,20 +35,10 @@ exports.fetchPalette = (req) => {
     kumquat
   );
 
-  // throw "Now cease.";
-
   let answerResponseObj;
 
   if (answerLanguage) {
     kumquat = true;
-
-    // outputArr.forEach((outputArrItem) => {
-    // //This should now be unnec as we've told it in the refobj not to transfer gender from noun. Not allowable transfer.
-    // if (outputArrItem.structureChunk.wordtype === "noun") {
-    //   delete outputArrItem.structureChunk.gender;
-    // }
-    // /////
-    // });
 
     let answerSentenceData = scUtils.processSentenceFormula(
       answerLanguage,
@@ -81,11 +58,7 @@ exports.fetchPalette = (req) => {
     );
   }
 
-  console.log("$$$$$$$$$$$$$$$$$");
-  console.log("answerResponseObj", answerResponseObj);
-  console.log("$$$$$$$$$$$$$$$$$");
-
-  // throw "Now cease.";
+  console.log("palette.model > answerResponseObj", answerResponseObj);
 
   let combinedResponseObj = {};
 
@@ -112,7 +85,7 @@ exports.fetchPalette = (req) => {
     }
   });
 
-  console.log(".........v", combinedResponseObj, ".........^");
+  console.log("palette.model > combinedResponseObj", combinedResponseObj);
 
   return Promise.all([combinedResponseObj]).then((array) => {
     return array[0];

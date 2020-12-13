@@ -80,6 +80,7 @@ exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
       return;
     }
 
+    //Epsilonman say:
     //if lObj.complete, then...
     //or maybe this should be "irregular"
     //specifically this is lObj `be` which has different 1per singular and 2per singular forms in present and past.
@@ -96,8 +97,6 @@ exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
     Object.keys(inflectorRef).forEach((key) => {
       let value = inflectorRef[key];
 
-      //selectRaandom if there is NO value to an inflector key. So this only applies when ENG is question language.
-      //This won't be used when ENG is answer language.
       if (!Array.isArray(structureChunk[key]) || !structureChunk[key].length) {
         structureChunk[key] = value.slice(0);
       }

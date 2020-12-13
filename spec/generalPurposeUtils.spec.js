@@ -77,9 +77,6 @@ describe("arrayExploder", () => {
     ];
 
     const actual = arrayExploder(input);
-    console.log("################");
-    console.log(actual);
-    console.log("################");
     expect(actual).to.eql(expected);
   });
   it("Explodes a superarray of two arrays, where one is empty.", () => {

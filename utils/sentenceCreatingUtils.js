@@ -13,18 +13,6 @@ exports.processSentenceFormula = (
   questionOutputArr,
   questionLanguage
 ) => {
-  // kumquat = false;
-
-  console.log("SC:processSentenceFormula fxn was given these arguments:", {
-    currentLanguage,
-    sentenceNumber,
-    sentenceSymbol,
-    useDummy,
-    kumquat,
-    questionOutputArr,
-    questionLanguage,
-  });
-
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
 
   let grandOutputArray = [];
@@ -114,7 +102,7 @@ exports.processSentenceFormula = (
         typeof structureChunk === "object" && structureChunk.chunkId === headId
     );
 
-    console.log(">>STEP ONE", headChunk.chunkId);
+    console.log("* SC:processSentenceFormula STEP ONE", headChunk.chunkId);
 
     //The below functions correctly with regard to:
     //Give kumquat as true, it returns multiple outputUnit objects in allPossOutputUnits_head array.
@@ -134,7 +122,6 @@ exports.processSentenceFormula = (
       !allPossOutputUnits_head ||
       !allPossOutputUnits_head.length
     ) {
-      console.log("EP 101");
       return {
         outputArr: null,
         sentenceFormula,
@@ -186,7 +173,10 @@ exports.processSentenceFormula = (
 
       if (dependentChunks.length) {
         dependentChunks.forEach((dependentChunk) => {
-          console.log(">>STEP TWO", dependentChunk.chunkId);
+          console.log(
+            "* SC:processSentenceFormula STEP TWO",
+            dependentChunk.chunkId
+          );
 
           //Inherit from head chunk to dependent chunks.
           refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
@@ -212,7 +202,6 @@ exports.processSentenceFormula = (
             !allPossOutputUnits_dependent ||
             !allPossOutputUnits_dependent.length
           ) {
-            console.log("EP 102");
             return {
               outputArr: null,
               sentenceFormula,
@@ -266,16 +255,9 @@ exports.processSentenceFormula = (
   //                                                [ 'chłopiec', 'ma', 'jabłko', 'czerwone' ]
   //                                             ]
 
-  // console.log(
-  //   "grandOutputArray",
-  //   grandOutputArray.map((x) => x.map((y) => y.selectedWord))
-  // );
+  // console.log("grandOutputArray", grandOutputArray.map((x) => x.map((y) => y.selectedWord)));
 
   let otherChunkIds = [];
-
-  console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-  console.log(">>>", grandOutputArray);
-  console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
   if (grandOutputArray.length) {
     grandOutputArray.forEach((outputArr, index) => {
@@ -288,10 +270,6 @@ exports.processSentenceFormula = (
           return !doneChunkIds.includes(structureChunk.chunkId);
         })
         .map((chunk) => chunk.chunkId);
-
-      console.log(":::::::::::::::::::");
-      console.log({ currentOtherChunkIds });
-      console.log(":::::::::::::::::::");
 
       if (index === 0) {
         otherChunkIds = currentOtherChunkIds;
@@ -311,12 +289,8 @@ exports.processSentenceFormula = (
 
   let grandAllPossOutputUnits_other = [];
 
-  console.log("-----------------");
-  console.log("-otherChunkIds", otherChunkIds);
-  console.log("-----------------");
-
   otherChunkIds.forEach((otherChunkId) => {
-    console.log(">>STEP THREE", otherChunkId);
+    console.log("* SC:processSentenceFormula STEP THREE", otherChunkId);
 
     let otherChunk = sentenceStructure.find((structureChunk) => {
       return structureChunk.chunkId === otherChunkId;
@@ -331,19 +305,11 @@ exports.processSentenceFormula = (
       kumquat
     );
 
-    // console.log("**");
-    // console.log("***********");
-    // console.log("**************************");
-    // console.log("otherChunk", otherChunk);
-    // console.log("allPossOutputUnits_other", allPossOutputUnits_other);
-    // console.log("*");
-
     if (
       errorInSentenceCreation.errorMessage ||
       !allPossOutputUnits_other ||
       !allPossOutputUnits_other.length
     ) {
-      console.log("EP 103");
       return {
         outputArr: null,
         sentenceFormula,
@@ -364,46 +330,21 @@ exports.processSentenceFormula = (
     grandAllPossOutputUnits_other.push(allPossOutputUnits_other);
   });
 
-  console.log({
-    "grandAllPossOutputUnits_other[0]": grandAllPossOutputUnits_other[0],
-  });
-  // throw "Cease.";
-
   if (grandAllPossOutputUnits_other.length) {
     grandAllPossOutputUnits_other = gpUtils.arrayExploder(
       grandAllPossOutputUnits_other
     );
 
-    console.log({
-      "new grandAllPossOutputUnits_other": grandAllPossOutputUnits_other[0],
-    });
-    // throw "Stop.";
-
     grandOutputArray = gpUtils.combineAndExplodeTwoSuperArrays(
       grandOutputArray,
       grandAllPossOutputUnits_other
     );
-
-    console.log({
-      "new grandOutputArray": grandOutputArray,
-    });
-    // throw "Stop.";
   }
-
-  // console.log(
-  //   "qq",
-  //   "£ £ £ £ £ £ £ £ £ £ £ £",
-  //   grandOutputArray.map((outputArray) => {
-  //     return outputArray.map((outputItem) => outputItem.selectedWord);
-  //   }),
-  //   "£ £ £ £ £ £ £ £ £ £ £ £"
-  // );
 
   //Everything has passed inspection in this whole fxn, as of 11/12/20.
   //If kumquat is true, then grandOutputArray is array of all possible arrays of outputUnit combinations.
   //And if kumquat false, then grandOutputArray is array of just one said possible array.
 
-  console.log("EP 104");
   return {
     arrayOfOutputArrays: grandOutputArray,
     sentenceFormula,
@@ -532,19 +473,6 @@ exports.conformAnswerStructureToQuestionStructure = (
   answerLanguage,
   questionLanguage
 ) => {
-  // console.log(
-  //   "conformAnswerStructureToQuestionStructure fxn, ENG-sentenceStructure",
-  //   sentenceStructure
-  // );
-  // console.log(
-  //   "conformAnswerStructureToQuestionStructure fxn, POL-questionOutputArr",
-  //   questionOutputArr
-  // );
-
-  console.log("---------------------------------");
-  console.log(questionOutputArr);
-  console.log("---------------------------------");
-
   questionOutputArr.forEach((questionOutputArrItem) => {
     let answerStructureChunk = sentenceStructure.find((structureChunk) => {
       return (
@@ -569,7 +497,10 @@ exports.conformAnswerStructureToQuestionStructure = (
     //   questionSelectedLemmaObject.lemma
     // );
 
-    console.log("questionSelectedLemmaObject", questionSelectedLemmaObject);
+    console.log(
+      "SC:conformAtoQ > questionSelectedLemmaObject",
+      questionSelectedLemmaObject
+    );
     let lemmasToSearch = questionSelectedLemmaObject.translations.ENG;
 
     // console.log(
@@ -627,10 +558,5 @@ exports.conformAnswerStructureToQuestionStructure = (
           }
         }
       });
-
-    // console.log(
-    //   "answerStructureChunk after the feature transfer",
-    //   answerStructureChunk
-    // );
   });
 };

@@ -291,15 +291,6 @@ exports.createOutputUnit = (
   selectedLemmaObject,
   drillPath
 ) => {
-  // console.log("createOutputUnit fxn was given these arguments:", {
-  //   errorInSentenceCreation,
-  //   errorInDrilling,
-  //   selectedWord,
-  //   structureChunk,
-  //   selectedLemmaObject,
-  //   drillPath,
-  // });
-
   if (errorInDrilling || !selectedWord) {
     errorInSentenceCreation.errorMessage =
       "A lemma object was indeed selected, but no word was found at the end of the give inflection chain.";
@@ -312,39 +303,6 @@ exports.createOutputUnit = (
     drillPath,
     structureChunk,
   };
-
-  //   if (typeof source === "string") {
-  //     return {
-  //       selectedWord: source,
-  //       updatedStructureChunk: structureChunk,
-  //       selectedLemmaObject,
-  //     };
-  //   } else {
-  //     return {
-  //       selectedWord: gpUtils.selectRaandom(source),
-  //       updatedStructureChunk: structureChunk,
-  //       selectedLemmaObject,
-  //     };
-  //   }
-  // }
-
-  // if (!lemmaObjectExtractions || !lemmaObjectExtractions.selectedWord) {
-  //   errorInSentenceCreation.errorMessage =
-  //     "A lemma object was indeed selected, but no word was found at the end of the give inflection chain.";
-  //   return false;
-  // } else {
-  // let {
-  //   selectedWord,
-  //   updatedStructureChunk,
-  //   selectedLemmaObject,
-  // } = lemmaObjectExtractions;
-
-  // outputArr.push({
-  //   selectedLemmaObject,
-  //   selectedWord,
-  //   structureChunk: updatedStructureChunk,
-  // });
-  // }
 };
 
 exports.concoctNestedRoutes = (routesByLevelTarget, routesByLevelSource) => {

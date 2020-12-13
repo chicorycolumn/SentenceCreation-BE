@@ -71,12 +71,6 @@ exports.getTranslatedTenseDescription = (
   sourceLanguage,
   targetLanguage
 ) => {
-  // console.log("getTranslatedTenseDescription fxn was given these arguments:", {
-  //   sourceTenseDescription,
-  //   sourceLanguage,
-  //   targetLanguage,
-  // });
-
   let translatedTenseDescriptionsArr = [];
   if (
     Object.keys(exports.tenseDescriptionTranslation).includes(sourceLanguage)
@@ -100,8 +94,6 @@ exports.getTranslatedTenseDescription = (
       }
     });
   }
-  // console.log("getTranslatedTenseDescription fxn will return this value", {
-  //   translatedTenseDescriptionsArr,
-  // });
+
   return translatedTenseDescriptionsArr;
 };
