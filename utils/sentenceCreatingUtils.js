@@ -81,7 +81,6 @@ exports.processSentenceFormula = (
   let sentenceStructure = sentenceFormula.structure;
 
   if (kumquat) {
-    //Betaman say remove this when moving to pal06 tests.
     exports.conformAnswerStructureToQuestionStructure(
       sentenceStructure,
       questionOutputArr,
@@ -163,7 +162,7 @@ exports.processSentenceFormula = (
   // Now we update the head structure chunks with the details from their respective selectedWords.
   explodedOutputArraysWithHeads.forEach((headOutputArray) => {
     headOutputArray.forEach((headOutputUnit) => {
-      lfUtils.updateStructureChunkByTagsAndSelectors(
+      lfUtils.updateStructureChunkByAndTagsAndSelectors(
         headOutputUnit,
         currentLanguage
       );

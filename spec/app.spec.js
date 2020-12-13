@@ -58,7 +58,7 @@ describe("/api", () => {
           console.log({ "from spec": res.body });
         });
     });
-    it.only("#pal06-01b GET 200 YES: Returns a sentence in present, plus multiple English translations with multiple orders.", () => {
+    it("#pal06-01b GET 200 YES: Returns a sentence in present, plus multiple English translations with multiple orders.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -107,28 +107,6 @@ describe("/api", () => {
   });
 
   describe("/palette - Stage 5: Rich sentences (with nouns adjectives and verbs).", () => {
-    xit("#pal05-01z GET 200 YES: Returns a sentence in present.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceSymbol: "* girl has red apple",
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect([
-            "Kobieta ma czerwone jabłko.",
-            "Chłopiec ma czerwone jabłko.",
-            "Chłopak ma czerwone jabłko.",
-
-            "Kobieta ma czerwoną cebulę.",
-            "Chłopiec ma czerwoną cebulę.",
-            "Chłopak ma czerwoną cebulę.",
-          ]).to.include(res.body.questionSentenceArr[0]);
-          console.log({ "from spec": res.body.questionSentenceArr[0] });
-        });
-    });
     it("#pal05-01a GET 200 YES: Returns a sentence in present.", () => {
       return request(app)
         .get("/api/palette")
@@ -856,7 +834,26 @@ describe("/api", () => {
   });
 
   describe("/palette - Stage 3: Adjectives", () => {
-    it("#pal03-01a GET 200 YES: Returns a sentence where adjective agrees with noun in singular.", () => {
+    it("#pal03-01a GET 200 YES: Returns a sentence where adjective agrees with noun in singular. Filtered by orTags.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage: "POL",
+          sentenceSymbol: "red/blue apple",
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
+          expect([
+            "Czerwona cebula.",
+            "Czerwone jabłko.",
+            "Niebieska cebula.",
+            "Niebieskie jabłko.",
+          ]).to.include(res.body.questionSentenceArr[0]);
+          console.log({ "from spec": res.body.questionSentenceArr[0] });
+        });
+    });
+    it("#pal03-02a GET 200 YES: Returns a sentence where adjective agrees with noun in singular. Filtered by andTags.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -872,7 +869,7 @@ describe("/api", () => {
           console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
-    it("#pal03-01b GET 200 YES: Returns a sentence where adjective agrees with noun in nonvirile plural.", () => {
+    it("#pal03-02b GET 200 YES: Returns a sentence where adjective agrees with noun in nonvirile plural.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -889,7 +886,7 @@ describe("/api", () => {
           console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
-    it("#pal03-01c GET 200 YES: Returns a sentence where adjective agrees with noun in virile or nonvirile plural.", () => {
+    it("#pal03-02c GET 200 YES: Returns a sentence where adjective agrees with noun in virile or nonvirile plural.", () => {
       return request(app)
         .get("/api/palette")
         .send({

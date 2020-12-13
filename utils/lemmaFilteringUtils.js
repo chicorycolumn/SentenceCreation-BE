@@ -137,20 +137,27 @@ exports.updateStructureChunkByInflections = (outputUnit, currentLanguages) => {
   }
 };
 
-exports.updateStructureChunkByTagsAndSelectors = (
+exports.updateStructureChunkByAndTagsAndSelectors = (
   outputUnit,
   currentLanguage
 ) => {
   // console.log(
-  //   "updateStructureChunkByTagsAndSelectors fxn was given these arguments:",
+  //   "updateStructureChunkByAndTagsAndSelectors fxn was given these arguments:",
   //   { outputUnit, currentLanguage }
   // );
 
   let { selectedLemmaObject, structureChunk } = outputUnit;
 
-  structureChunk.tags = structureChunk.tags.filter((tag) => {
-    selectedLemmaObject.tags.includes(tag);
+  structureChunk.andTags = structureChunk.andTags.filter((andTag) => {
+    selectedLemmaObject.tags.includes(andTag);
   });
+
+  //Deltaman say How should this work re orTags too?
+  // if (structureChunk.orTags) {
+  //   structureChunk.orTags = structureChunk.orTags.filter((orTag) => {
+  //     selectedLemmaObject.tags.includes(orTag);
+  //   });
+  // }
 
   let selectors =
     refObj.lemmaObjectFeatures[currentLanguage].selectors[
@@ -202,16 +209,24 @@ exports.filterOutDeficientLemmaObjects = (
   });
 };
 
-exports.filterByTag = (wordset, tags) => {
+exports.filterByAndTagsAndOrTags = (wordset, structureChunk) => {
   let lemmaObjects = Object.values(wordset);
 
-  if (tags.length) {
-    return lemmaObjects.filter((lemmaObject) => {
-      return tags.every((tag) => lemmaObject.tags.includes(tag));
+  let { andTags, orTags } = structureChunk;
+
+  if (andTags && andTags.length) {
+    lemmaObjects = lemmaObjects.filter((lemmaObject) => {
+      return andTags.every((andTag) => lemmaObject.tags.includes(andTag));
     });
-  } else {
-    return lemmaObjects;
   }
+
+  if (orTags && orTags.length) {
+    lemmaObjects = lemmaObjects.filter((lemmaObject) => {
+      return orTags.some((orTag) => lemmaObject.tags.includes(orTag));
+    });
+  }
+
+  return lemmaObjects;
 };
 
 exports.filterByKey = (lemmaObjectArr, requirementArrs, key) => {

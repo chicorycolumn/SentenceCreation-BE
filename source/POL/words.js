@@ -324,7 +324,7 @@ let adjectiveSet = [
   {
     //links
     translations: { ENG: ["red"] },
-    tags: ["colour"],
+    tags: ["colour2"],
     //selectors
     lemma: "niebieski",
     id: "pol-adj-001",

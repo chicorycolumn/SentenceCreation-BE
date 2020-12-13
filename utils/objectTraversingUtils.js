@@ -26,7 +26,7 @@ exports.findMatchingLemmaObjectThenWord = (
     ];
   }
 
-  //STEP TWO: Filter lemmaObjects by specificIds OR specificLemmas OR tags and selectors.
+  //STEP TWO: Filter lemmaObjects by specificIds OR specificLemmas OR andTags and selectors.
   let source = words[gpUtils.giveSetKey(structureChunk.wordtype)];
   let matches = [];
 
@@ -42,7 +42,7 @@ exports.findMatchingLemmaObjectThenWord = (
       structureChunk.specificLemmas.includes(lObj.lemma)
     );
   } else {
-    matches = lfUtils.filterByTag(source, structureChunk.tags);
+    matches = lfUtils.filterByAndTagsAndOrTags(source, structureChunk);
 
     let selectors =
       refObj.lemmaObjectFeatures[currentLanguage].selectors[
