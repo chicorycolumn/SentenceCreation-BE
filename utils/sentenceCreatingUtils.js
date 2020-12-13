@@ -387,7 +387,7 @@ exports.processSentenceFormula = (
     console.log({
       "new grandOutputArray": grandOutputArray,
     });
-    throw "Stop.";
+    // throw "Stop.";
   }
 
   // console.log(

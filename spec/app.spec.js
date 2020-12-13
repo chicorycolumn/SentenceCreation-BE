@@ -357,8 +357,7 @@ describe("/api", () => {
   });
 
   describe("/palette - Stage 4: Verbs", () => {
-    // it.only("#pal04-01a GET 200 YES: Returns a sentence with a single verb, in present.", () => {
-    xit("#pal04-01a GET 200 YES: Returns a sentence with a single verb, in present.", () => {
+    it("#pal04-01a GET 200 YES: Returns a sentence with a single verb, in present.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -628,7 +627,7 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.equal(null);
+          expect(res.body.questionSentenceArr.length).to.equal(0);
           console.log({ "from spec": res.body.questionSentenceArr[0] });
         });
     });
@@ -940,7 +939,7 @@ describe("/api", () => {
           expect(res.body.questionMessage).to.equal(
             "No sentence could be created from the specifications."
           );
-          expect(res.body.questionSentenceArr[0]).to.equal(null);
+          expect(res.body.questionSentenceArr.length).to.equal(0);
         });
     });
     it("#pal02-01c GET 200 YES: Returns a sentence where a tantum plurale was allowed, as either singular or plural grammatical number was requested.", () => {
@@ -1002,7 +1001,7 @@ describe("/api", () => {
           expect(res.body.questionMessage).to.equal(
             "No sentence could be created from the specifications."
           );
-          expect(res.body.questionSentenceArr[0]).to.equal(null);
+          expect(res.body.questionSentenceArr.length).to.equal(0);
         });
     });
     it("#pal01-02b GET 200 NO: Returns message to say no sentence could possibly be created from specifications.", () => {
@@ -1018,7 +1017,7 @@ describe("/api", () => {
           expect(res.body.questionMessage).to.equal(
             "No sentence could be created from the specifications."
           );
-          expect(res.body.questionSentenceArr[0]).to.equal(null);
+          expect(res.body.questionSentenceArr.length).to.equal(0);
         });
     });
     it("#pal01-03a GET 200 NO: Returns message to say no sentence, if dummy noun was successfully filtered out.", () => {
@@ -1034,7 +1033,7 @@ describe("/api", () => {
           expect(res.body.questionMessage).to.equal(
             "No sentence could be created from the specifications."
           );
-          expect(res.body.questionSentenceArr[0]).to.equal(null);
+          expect(res.body.questionSentenceArr.length).to.equal(0);
         });
     });
     it("#pal01-03b GET 200 NO: Returns message to say no sentence, if dummy noun was successfully filtered out.", () => {
@@ -1050,7 +1049,7 @@ describe("/api", () => {
           expect(res.body.questionMessage).to.equal(
             "No sentence could be created from the specifications."
           );
-          expect(res.body.questionSentenceArr[0]).to.equal(null);
+          expect(res.body.questionSentenceArr.length).to.equal(0);
         });
     });
     it("#pal01-03c GET 200 YES: Returns sentence, as dummy noun did not need to be filtered out.", () => {
@@ -1094,7 +1093,7 @@ describe("/api", () => {
           expect(res.body.questionMessage).to.equal(
             "No sentence could be created from the specifications."
           );
-          expect(res.body.questionSentenceArr[0]).to.equal(null);
+          expect(res.body.questionSentenceArr.length).to.equal(0);
         });
     });
     it("#pal01-03f GET 200 YES: Returns successful sentence 100% of the time, even though I've tried to trick it, by asking for Singular and Loc, and including an object that does indeed have Singular (but Loc is not within), and has Plural (with Loc within).", () => {

@@ -5,7 +5,7 @@ const {
   arrayExploder,
 } = require("../utils/generalPurposeUtils.js");
 
-describe.only("arrayExploder", () => {
+describe("arrayExploder", () => {
   it("Returns empty array when given empty array.", () => {
     const input = [];
     const expected = [];

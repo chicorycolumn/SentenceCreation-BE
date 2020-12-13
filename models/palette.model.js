@@ -89,13 +89,15 @@ exports.fetchPalette = (req) => {
 
   let combinedResponseObj = {};
 
-  [
+  let refs = [
     { responseObject: questionResponseObj, key: "question" },
     { responseObject: answerResponseObj, key: "answer" },
-  ].forEach((ref) => {
+  ];
+
+  refs.forEach((ref) => {
     if (ref.responseObject) {
       combinedResponseObj[ref.key + "SentenceArr"] =
-        ref.responseObject.finalSentenceArr;
+        ref.responseObject.finalSentenceArr || [];
 
       if (ref.responseObject.errorMessage) {
         combinedResponseObj[ref.key + "ErrorMessage"] =
