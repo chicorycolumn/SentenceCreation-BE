@@ -543,6 +543,8 @@ exports.sentenceFormulasBank = {
         andTags: ["basic2"],
       },
     ],
+    primaryOrders: [],
+    additionalOrders: [],
   },
   "101c": {
     symbol: "101c girl *reads quickly",

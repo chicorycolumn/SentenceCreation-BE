@@ -595,4 +595,15 @@ exports.dummySentenceFormulasBank = {
     ],
     primaryOrders: [["ver-1", "fix-1", "ver-2"]],
   },
+  dummy25a: {
+    symbol: "dummy25a good day",
+    structure: [{ chunkId: "fix-1", wordtype: "fixed", value: "dzień" }],
+    structure: [{ chunkId: "fix-2", wordtype: "fixed", value: "dobry" }],
+    primaryOrders: [],
+  },
+  dummy25b: {
+    symbol: "dummy25b hello",
+    structure: [{ chunkId: "fix-1", wordtype: "fixed", value: "halo" }],
+    primaryOrders: [],
+  },
 };

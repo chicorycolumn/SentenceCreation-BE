@@ -183,9 +183,9 @@ exports.processSentenceFormula = (
             dependentChunk.wordtype
           ].forEach((inflectorKey) => {
             if (headChunk[inflectorKey]) {
-              //Gammaman say should actually be this.
-              // dependentChunk[inflectorKey] = gpUtils.copyWithoutReference(headChunk[inflectorKey]);
-              dependentChunk[inflectorKey] = headChunk[inflectorKey];
+              dependentChunk[inflectorKey] = gpUtils.copyWithoutReference(
+                headChunk[inflectorKey]
+              );
             }
           });
           let allPossOutputUnits_dependent = otUtils.findMatchingLemmaObjectThenWord(
@@ -534,7 +534,7 @@ exports.conformAnswerStructureToQuestionStructure = (
       answerLanguage
     ].inflectionChains.allowableTransfersFromQuestionStructure[
       answerStructureChunk.wordtype
-    ] //Omegaman say for tantum plurales, make Number blank (all possible) in english noun chunk
+    ] //Alphaman say for tantum plurales, make Number blank (all possible) in english noun chunk
       .forEach((inflectorKey) => {
         if (questionStructureChunk[inflectorKey]) {
           if (inflectorKey === "tenseDescription") {

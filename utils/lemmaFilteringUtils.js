@@ -136,13 +136,6 @@ exports.updateStructureChunkByAndTagsAndSelectors = (
     selectedLemmaObject.tags.includes(andTag);
   });
 
-  //Deltaman say How should this work re orTags too?
-  // if (structureChunk.orTags) {
-  //   structureChunk.orTags = structureChunk.orTags.filter((orTag) => {
-  //     selectedLemmaObject.tags.includes(orTag);
-  //   });
-  // }
-
   let selectors =
     refObj.lemmaObjectFeatures[currentLanguage].selectors[
       structureChunk.wordtype
