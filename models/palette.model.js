@@ -37,16 +37,16 @@ exports.fetchPalette = (req) => {
   // console.log("questionSentenceData", questionSentenceData);
   // throw "Cease.";
 
+  console.log("----------------------------");
+  console.log("questionSentenceData", questionSentenceData);
+  console.log("----------------------------");
+
   let questionResponseObj = scUtils.formatFinalSentence(
     questionSentenceData.arrayOfOutputArrays,
     questionSentenceData.sentenceFormula,
     questionSentenceData.errorInSentenceCreation,
     kumquat
   );
-
-  console.log("$$$$$$$$$$$$$$$$$");
-  console.log("questionResponseObj", questionResponseObj);
-  console.log("$$$$$$$$$$$$$$$$$");
 
   // throw "Now cease.";
 

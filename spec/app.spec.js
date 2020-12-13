@@ -357,7 +357,8 @@ describe("/api", () => {
   });
 
   describe("/palette - Stage 4: Verbs", () => {
-    it("#pal04-01a GET 200 YES: Returns a sentence with a single verb, in present.", () => {
+    // it.only("#pal04-01a GET 200 YES: Returns a sentence with a single verb, in present.", () => {
+    xit("#pal04-01a GET 200 YES: Returns a sentence with a single verb, in present.", () => {
       return request(app)
         .get("/api/palette")
         .send({

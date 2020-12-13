@@ -122,8 +122,18 @@ exports.copyValueOfKey = (
 };
 
 exports.arrayExploder = (superArray) => {
-  if (!superArray || !superArray.length) {
+  if (!superArray) {
     return [];
+  }
+
+  superArray = superArray.filter((array) => array.length);
+
+  if (!superArray.length) {
+    return [];
+  }
+
+  if (superArray.length === 1) {
+    return superArray[0].map((item) => [item]);
   }
 
   let result = [];
@@ -150,12 +160,6 @@ exports.arrayExploder = (superArray) => {
 };
 
 exports.explodeOutputArraysByHeadsAndDependents = (justOneOutputArray) => {
-  // console.log("GP:explodeHD was given this argument:", justOneOutputArray);
-
-  // justOneOutputArray.forEach((unit) => {
-  //   console.log(">>>", unit.possibleDependentOutputArrays);
-  // });
-
   justOneOutputArray.forEach((unit, unitIndex) => {
     if (
       unit.possibleDependentOutputArrays &&
@@ -182,12 +186,6 @@ exports.explodeOutputArraysByHeadsAndDependents = (justOneOutputArray) => {
 
   let explodedGrandArray = exports.arrayExploder(grandArrOfAllHeadUnits);
 
-  // console.log("***")
-  // console.log("******")
-  // console.log(explodedGrandArray)
-  // console.log("******")
-  // console.log("***")
-
   explodedGrandArray = explodedGrandArray.map((superArr) => {
     let flattenedArray = [];
 
@@ -202,47 +200,19 @@ exports.explodeOutputArraysByHeadsAndDependents = (justOneOutputArray) => {
     return flattenedArray;
   });
 
-  // console.log("*");
-  // console.log("*");
-  // console.log("*");
-  // console.log(
-  //   "explodedGrandArray",
-  //   explodedGrandArray.map((x) => x.map((y) => y.selectedWord))
-  // );
-  // console.log("*");
-  // console.log("*");
-  // console.log("*");
-
-  // return null;
-
   return explodedGrandArray;
-
-  if (explodedGrandArray.length > 1) {
-    throw "Strange behaviour encountered in GP:explodeOutputArraysByHeadsAndDependents";
-  } else {
-    return explodedGrandArray[0];
-  }
 };
 
 exports.combineAndExplodeTwoSuperArrays = (superArr1, superArr2) => {
-  // let a = [
-  //   [ 'kobieta', 'ma', 'czerą' ],
-  //   [ 'kobieta', 'ma', 'mooczerą' ],
-  // ]
-
-  // let b = [
-  //   [ 'nie,', 'chyba' ],
-  //   [ 'nie,', 'moochyba' ],
-  // ]
-
-  // result will be [
-  //   [ 'kobieta', 'ma', 'czerą', 'nie,', 'chyba' ],
-  //   [ 'kobieta', 'ma', 'czerą', 'nie,', 'moochyba' ],
-  //   [ 'kobieta', 'ma', 'mooczerą', 'nie,', 'chyba' ],
-  //   [ 'kobieta', 'ma', 'mooczerą', 'nie,', 'moochyba' ]
-  // ]
-
   let grandResult = [];
+
+  if (!superArr1.length) {
+    return superArr2;
+  }
+
+  if (!superArr2.length) {
+    return superArr1;
+  }
 
   superArr1.forEach((arr1) => {
     superArr2.forEach((arr2) => {

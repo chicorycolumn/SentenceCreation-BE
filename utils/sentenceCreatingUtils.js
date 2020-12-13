@@ -134,6 +134,7 @@ exports.processSentenceFormula = (
       !allPossOutputUnits_head ||
       !allPossOutputUnits_head.length
     ) {
+      console.log("EP 101");
       return {
         outputArr: null,
         sentenceFormula,
@@ -211,6 +212,7 @@ exports.processSentenceFormula = (
             !allPossOutputUnits_dependent ||
             !allPossOutputUnits_dependent.length
           ) {
+            console.log("EP 102");
             return {
               outputArr: null,
               sentenceFormula,
@@ -271,27 +273,47 @@ exports.processSentenceFormula = (
 
   let otherChunkIds = [];
 
-  grandOutputArray.forEach((outputArr, index) => {
-    let currentOtherChunkIds = sentenceStructure
-      .filter((structureChunk) => {
-        let doneChunkIds = outputArr.map((outputUnit) => {
-          return outputUnit.structureChunk.chunkId;
-        });
+  console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+  console.log(">>>", grandOutputArray);
+  console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
-        return !doneChunkIds.includes(structureChunk.chunkId);
-      })
-      .map((chunk) => chunk.chunkId);
+  if (grandOutputArray.length) {
+    grandOutputArray.forEach((outputArr, index) => {
+      let currentOtherChunkIds = sentenceStructure
+        .filter((structureChunk) => {
+          let doneChunkIds = outputArr.map((outputUnit) => {
+            return outputUnit.structureChunk.chunkId;
+          });
 
-    if (index === 0) {
-      otherChunkIds = currentOtherChunkIds;
-    } else {
-      if (!gpUtils.areTwoFlatArraysEqual(otherChunkIds, currentOtherChunkIds)) {
-        throw "Error. There is a difference, in the grandOutputArray, between which chunks have or haven't been used yet. It should be the case that every array in the grand one have the same head ids and dep ids used, and thus the same other ids yet to be used. But this was not the case and so I have halted the process.";
+          return !doneChunkIds.includes(structureChunk.chunkId);
+        })
+        .map((chunk) => chunk.chunkId);
+
+      console.log(":::::::::::::::::::");
+      console.log({ currentOtherChunkIds });
+      console.log(":::::::::::::::::::");
+
+      if (index === 0) {
+        otherChunkIds = currentOtherChunkIds;
+      } else {
+        if (
+          !gpUtils.areTwoFlatArraysEqual(otherChunkIds, currentOtherChunkIds)
+        ) {
+          throw "Error. There is a difference, in the grandOutputArray, between which chunks have or haven't been used yet. It should be the case that every array in the grand one have the same head ids and dep ids used, and thus the same other ids yet to be used. But this was not the case and so I have halted the process.";
+        }
       }
-    }
-  });
+    });
+  } else {
+    otherChunkIds = sentenceStructure.map(
+      (structureChunk) => structureChunk.chunkId
+    );
+  }
 
   let grandAllPossOutputUnits_other = [];
+
+  console.log("-----------------");
+  console.log("-otherChunkIds", otherChunkIds);
+  console.log("-----------------");
 
   otherChunkIds.forEach((otherChunkId) => {
     console.log(">>STEP THREE", otherChunkId);
@@ -321,6 +343,7 @@ exports.processSentenceFormula = (
       !allPossOutputUnits_other ||
       !allPossOutputUnits_other.length
     ) {
+      console.log("EP 103");
       return {
         outputArr: null,
         sentenceFormula,
@@ -341,15 +364,30 @@ exports.processSentenceFormula = (
     grandAllPossOutputUnits_other.push(allPossOutputUnits_other);
   });
 
+  console.log({
+    "grandAllPossOutputUnits_other[0]": grandAllPossOutputUnits_other[0],
+  });
+  // throw "Cease.";
+
   if (grandAllPossOutputUnits_other.length) {
     grandAllPossOutputUnits_other = gpUtils.arrayExploder(
       grandAllPossOutputUnits_other
     );
 
+    console.log({
+      "new grandAllPossOutputUnits_other": grandAllPossOutputUnits_other[0],
+    });
+    // throw "Stop.";
+
     grandOutputArray = gpUtils.combineAndExplodeTwoSuperArrays(
       grandOutputArray,
       grandAllPossOutputUnits_other
     );
+
+    console.log({
+      "new grandOutputArray": grandOutputArray,
+    });
+    throw "Stop.";
   }
 
   // console.log(
@@ -365,6 +403,7 @@ exports.processSentenceFormula = (
   //If kumquat is true, then grandOutputArray is array of all possible arrays of outputUnit combinations.
   //And if kumquat false, then grandOutputArray is array of just one said possible array.
 
+  console.log("EP 104");
   return {
     arrayOfOutputArrays: grandOutputArray,
     sentenceFormula,
@@ -393,6 +432,7 @@ exports.formatFinalSentence = (
   }
 
   if (!kumquat && arrayOfOutputArrays.length !== 1) {
+    console.log("arrayOfOutputArrays", arrayOfOutputArrays);
     throw "That's strange. We are in Question Mode, so SC:formatFinalSentence expected to be given arrayOfOutputArrays with length of 1, but it didn't.";
     let x = gpUtils.selectRandom(arrayOfOutputArrays);
   }
