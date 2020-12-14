@@ -1,6 +1,6 @@
 exports.dummySentenceFormulasBank = {
   dummy01: {
-    symbol: "dummy01",
+    sentenceFormulaSymbol: "dummy01",
     sentenceFormulaId: "POL-dummy01",
     structure: [
       {
@@ -14,7 +14,7 @@ exports.dummySentenceFormulasBank = {
     ],
   },
   dummy02: {
-    symbol: "dummy02",
+    sentenceFormulaSymbol: "dummy02",
     sentenceFormulaId: "POL-dummy02",
     structure: [
       {
@@ -28,7 +28,7 @@ exports.dummySentenceFormulasBank = {
     ],
   },
   dummy03: {
-    symbol: "dummy03",
+    sentenceFormulaSymbol: "dummy03",
     sentenceFormulaId: "POL-dummy03",
     structure: [
       {
@@ -42,7 +42,7 @@ exports.dummySentenceFormulasBank = {
     ],
   },
   dummy04: {
-    symbol: "dummy04",
+    sentenceFormulaSymbol: "dummy04",
     sentenceFormulaId: "POL-dummy04",
     structure: [
       {
@@ -56,7 +56,7 @@ exports.dummySentenceFormulasBank = {
     ],
   },
   dummy05: {
-    symbol: "dummy05",
+    sentenceFormulaSymbol: "dummy05",
     sentenceFormulaId: "POL-dummy05",
     structure: [
       {
@@ -70,7 +70,7 @@ exports.dummySentenceFormulasBank = {
     ],
   },
   dummy06: {
-    symbol: "dummy06",
+    sentenceFormulaSymbol: "dummy06",
     sentenceFormulaId: "POL-dummy06",
     structure: [
       {
@@ -84,7 +84,7 @@ exports.dummySentenceFormulasBank = {
     ],
   },
   dummy07: {
-    symbol: "dummy07",
+    sentenceFormulaSymbol: "dummy07",
     sentenceFormulaId: "POL-dummy07",
     structure: [
       {
@@ -98,7 +98,7 @@ exports.dummySentenceFormulasBank = {
     ],
   },
   dummy08: {
-    symbol: "dummy08",
+    sentenceFormulaSymbol: "dummy08",
     sentenceFormulaId: "POL-dummy08",
     structure: [
       {
@@ -112,7 +112,7 @@ exports.dummySentenceFormulasBank = {
     ],
   },
   dummy09: {
-    symbol: "dummy09",
+    sentenceFormulaSymbol: "dummy09",
     sentenceFormulaId: "POL-dummy09",
     structure: [
       {
@@ -148,7 +148,7 @@ exports.dummySentenceFormulasBank = {
     ],
   },
   dummy10: {
-    symbol: "dummy10",
+    sentenceFormulaSymbol: "dummy10",
     sentenceFormulaId: "POL-dummy10",
     structure: [
       {
@@ -185,7 +185,7 @@ exports.dummySentenceFormulasBank = {
     additionalOrders: [],
   },
   dummy11a: {
-    symbol: "I have APPLE",
+    sentenceFormulaSymbol: "I have APPLE",
     sentenceFormulaId: "POL-dummy11a",
     structure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "mam" },
@@ -203,7 +203,7 @@ exports.dummySentenceFormulasBank = {
     additionalOrders: [],
   },
   dummy11b: {
-    symbol: "I have APPLE/SHIRT",
+    sentenceFormulaSymbol: "I have APPLE/SHIRT",
     sentenceFormulaId: "POL-dummy11b",
     structure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "mam" },
@@ -221,7 +221,7 @@ exports.dummySentenceFormulasBank = {
     additionalOrders: [],
   },
   dummy12: {
-    symbol: "shirt",
+    sentenceFormulaSymbol: "shirt",
     sentenceFormulaId: "POL-dummy12",
     structure: [
       {
@@ -235,7 +235,7 @@ exports.dummySentenceFormulasBank = {
     ],
   },
   dummy12a: {
-    symbol: "dummy12a 2per",
+    sentenceFormulaSymbol: "dummy12a 2per",
     sentenceFormulaId: "POL-dummy12a",
     structure: [
       {
@@ -249,7 +249,7 @@ exports.dummySentenceFormulasBank = {
     ],
   },
   dummy13a: {
-    symbol: "dummy13a conditional plural",
+    sentenceFormulaSymbol: "dummy13a conditional plural",
     sentenceFormulaId: "POL-dummy13a",
     sentenceFormulaId: "POL-dummy",
     structure: [
@@ -264,7 +264,7 @@ exports.dummySentenceFormulasBank = {
     ],
   },
   dummy13b: {
-    symbol: "dummy13b present 2per f",
+    sentenceFormulaSymbol: "dummy13b present 2per f",
     sentenceFormulaId: "POL-dummy13b",
     structure: [
       {
@@ -280,7 +280,7 @@ exports.dummySentenceFormulasBank = {
     ],
   },
   dummy14: {
-    symbol: "dummy14 infinitive",
+    sentenceFormulaSymbol: "dummy14 infinitive",
     sentenceFormulaId: "POL-dummy14",
     structure: [
       {
@@ -293,7 +293,7 @@ exports.dummySentenceFormulasBank = {
     ],
   },
   dummy15: {
-    symbol: "dummy15 impersonal",
+    sentenceFormulaSymbol: "dummy15 impersonal",
     sentenceFormulaId: "POL-dummy15",
     structure: [
       {
@@ -307,7 +307,7 @@ exports.dummySentenceFormulasBank = {
     ],
   },
   dummy15a: {
-    symbol: "dummy15a impersonal plural",
+    sentenceFormulaSymbol: "dummy15a impersonal plural",
     sentenceFormulaId: "POL-dummy15a",
     structure: [
       {
@@ -322,7 +322,7 @@ exports.dummySentenceFormulasBank = {
     ],
   },
   dummy16: {
-    symbol: "dummy16 contemporaryAdverbial",
+    sentenceFormulaSymbol: "dummy16 contemporaryAdverbial",
     sentenceFormulaId: "POL-dummy16",
     structure: [
       {
@@ -335,7 +335,7 @@ exports.dummySentenceFormulasBank = {
     ],
   },
   dummy17: {
-    symbol: "dummy17 contemporaryAdverbial female",
+    sentenceFormulaSymbol: "dummy17 contemporaryAdverbial female",
     sentenceFormulaId: "POL-dummy17",
     structure: [
       {
@@ -349,7 +349,7 @@ exports.dummySentenceFormulasBank = {
     ],
   },
   dummy18: {
-    symbol: "dummy18 contemporaryAdverbial n virile 2per",
+    sentenceFormulaSymbol: "dummy18 contemporaryAdverbial n virile 2per",
     sentenceFormulaId: "POL-dummy18",
     structure: [
       {
@@ -364,7 +364,7 @@ exports.dummySentenceFormulasBank = {
     ],
   },
   dummy16a: {
-    symbol: "dummy16a anteriorAdverbial",
+    sentenceFormulaSymbol: "dummy16a anteriorAdverbial",
     sentenceFormulaId: "POL-dummy16a",
     structure: [
       {
@@ -377,7 +377,7 @@ exports.dummySentenceFormulasBank = {
     ],
   },
   dummy17a: {
-    symbol: "dummy17a anteriorAdverbial female",
+    sentenceFormulaSymbol: "dummy17a anteriorAdverbial female",
     sentenceFormulaId: "POL-dummy17a",
     structure: [
       {
@@ -391,7 +391,7 @@ exports.dummySentenceFormulasBank = {
     ],
   },
   dummy18a: {
-    symbol: "dummy18a anteriorAdverbial n virile 2per",
+    sentenceFormulaSymbol: "dummy18a anteriorAdverbial n virile 2per",
     sentenceFormulaId: "POL-dummy18a",
     structure: [
       {
@@ -406,7 +406,7 @@ exports.dummySentenceFormulasBank = {
     ],
   },
   dummy19: {
-    symbol: "dummy19",
+    sentenceFormulaSymbol: "dummy19",
     sentenceFormulaId: "POL-dummy19",
     structure: [
       {
@@ -419,7 +419,7 @@ exports.dummySentenceFormulasBank = {
     ],
   },
   dummy20a: {
-    symbol: "dummy20a girl is reading im",
+    sentenceFormulaSymbol: "dummy20a girl is reading im",
     sentenceFormulaId: "POL-dummy20a",
     structure: [
       {
@@ -441,7 +441,7 @@ exports.dummySentenceFormulasBank = {
     ],
   },
   dummy20b: {
-    symbol: "dummy20b girl will read pf",
+    sentenceFormulaSymbol: "dummy20b girl will read pf",
     sentenceFormulaId: "POL-dummy20b",
     structure: [
       {
@@ -463,7 +463,7 @@ exports.dummySentenceFormulasBank = {
     ],
   },
   dummy21: {
-    symbol: "dummy21 verbalNoun",
+    sentenceFormulaSymbol: "dummy21 verbalNoun",
     sentenceFormulaId: "POL-dummy21",
     structure: [
       {
@@ -476,7 +476,7 @@ exports.dummySentenceFormulasBank = {
     ],
   },
   dummy22: {
-    symbol: "dummy22 verbalNoun ~f",
+    sentenceFormulaSymbol: "dummy22 verbalNoun ~f",
     sentenceFormulaId: "POL-dummy22",
     structure: [
       {
@@ -490,7 +490,7 @@ exports.dummySentenceFormulasBank = {
     ],
   },
   dummy23a: {
-    symbol: "dummy23a past/cond 1per plural m1",
+    sentenceFormulaSymbol: "dummy23a past/cond 1per plural m1",
     sentenceFormulaId: "POL-dummy23a",
     structure: [
       {
@@ -507,7 +507,7 @@ exports.dummySentenceFormulasBank = {
     ],
   },
   dummy23b: {
-    symbol: "dummy23b past/cond 1per plural m2",
+    sentenceFormulaSymbol: "dummy23b past/cond 1per plural m2",
     sentenceFormulaId: "POL-dummy23b",
     structure: [
       {
@@ -524,7 +524,7 @@ exports.dummySentenceFormulasBank = {
     ],
   },
   dummy23c: {
-    symbol: "dummy23c past/cond 1per plural f/n",
+    sentenceFormulaSymbol: "dummy23c past/cond 1per plural f/n",
     sentenceFormulaId: "POL-dummy23c",
     structure: [
       {
@@ -541,7 +541,7 @@ exports.dummySentenceFormulasBank = {
     ],
   },
   dummy24a: {
-    symbol: "dummy24a I read and research",
+    sentenceFormulaSymbol: "dummy24a I read and research",
     sentenceFormulaId: "POL-dummy24a",
     structure: [
       {
@@ -570,7 +570,7 @@ exports.dummySentenceFormulasBank = {
     ],
   },
   dummy24b: {
-    symbol: "dummy24b I/you read and research",
+    sentenceFormulaSymbol: "dummy24b I/you read and research",
     sentenceFormulaId: "POL-dummy24b",
     structure: [
       {
@@ -601,7 +601,7 @@ exports.dummySentenceFormulasBank = {
     primaryOrders: [["ver-1", "fix-1", "ver-2"]],
   },
   dummy24c: {
-    symbol: "dummy24c read and research",
+    sentenceFormulaSymbol: "dummy24c read and research",
     sentenceFormulaId: "POL-dummy24c",
     structure: [
       {
@@ -632,7 +632,7 @@ exports.dummySentenceFormulasBank = {
     primaryOrders: [["ver-1", "fix-1", "ver-2"]],
   },
   dummy25a: {
-    symbol: "dummy25a good day",
+    sentenceFormulaSymbol: "dummy25a good day",
     sentenceFormulaId: "POL-dummy25a",
     translations: { ENG: ["ENG-dummy25a", "ENG-dummy25b"] },
     structure: [
@@ -642,10 +642,28 @@ exports.dummySentenceFormulasBank = {
     primaryOrders: [],
   },
   dummy25b: {
-    symbol: "dummy25b hello",
+    sentenceFormulaSymbol: "dummy25b hello",
     sentenceFormulaId: "POL-dummy25b",
     translations: { ENG: ["ENG-dummy25a", "ENG-dummy25b"] },
     structure: [{ chunkId: "fix-1", wordtype: "fixed", value: "halo" }],
+    primaryOrders: [],
+  },
+  dummy26: {
+    sentenceFormulaSymbol: "dummy26",
+    sentenceFormulaId: "POL-dummy26",
+    translations: { ENG: [] },
+    structure: [
+      {
+        chunkId: "ver-1",
+        agreeWith: "nou-1",
+        wordtype: "verb",
+        andTags: ["basic2"],
+        tenseDescription: ["past im", "future pf"],
+        person: ["1per"],
+        number: ["singular"],
+        gender: ["f"],
+      },
+    ],
     primaryOrders: [],
   },
 };

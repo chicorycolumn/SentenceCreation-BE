@@ -1,6 +1,6 @@
 exports.sentenceFormulasBank = {
   "101a": {
-    symbol: "101a girl is reading",
+    sentenceFormulaSymbol: "101a girl is reading",
     sentenceFormulaId: "ENG-00-101a",
     translations: { POL: ["POL-00-101a"] },
     structure: [
@@ -31,8 +31,8 @@ exports.sentenceFormulasBank = {
     additionalOrders: [],
   },
   "101b": {
-    symbol:
-      "101b girl *reads quickly IT WON'T MATTER THAT THIS SYMBOL IS DIFFERENT FROM ITS POL COUNTERPART",
+    sentenceFormulaSymbol:
+      "101b girl *reads quickly IT WON'T MATTER THAT THIS sentenceFormulaSymbol IS DIFFERENT FROM ITS POL COUNTERPART",
     sentenceFormulaId: "ENG-00-101b",
     translations: { POL: ["POL-00-101b"] },
     structure: [
@@ -63,4 +63,22 @@ exports.sentenceFormulasBank = {
     primaryOrders: [["fix-1", "nou-1", "ver-1", "fix-2"]],
     additionalOrders: [["fix-2", "fix-1", "nou-1", "ver-1"]],
   },
+  // "102a": {
+  //   sentenceFormulaSymbol: "102a I'll read (pf fut)",
+  //   sentenceFormulaId: "ENG-00-102a",
+  //   translations: { POL: ["POL-00-102a"] },
+  //   structure: [
+  //     { chunkId: "fix-1", wordtype: "fixed", value: "I" },
+  //     {
+  //       chunkId: "ver-1",
+  //       wordtype: "verb",
+  //       andTags: ["basic2"],
+  //       tenseDescription: ["future"],
+  //       person: ["1per"],
+  //       number: ["singular"],
+  //     },
+  //   ],
+  //   primaryOrders: [["fix-1", "ver-1"]],
+  //   additionalOrders: [],
+  // },
 };

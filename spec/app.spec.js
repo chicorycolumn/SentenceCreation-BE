@@ -11,14 +11,14 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe("/palette - Stage 6: Returning Polish with English translations of rich sentences (with nouns adjectives and verbs).", () => {
+  xdescribe("/palette - Stage 6: Returning Polish with English translations of rich sentences (with nouns adjectives and verbs).", () => {
     it("#pal06-01a GET 200 YES: Returns sentence (present) with all translations.", () => {
       return request(app)
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
           answerLanguage: "ENG",
-          sentenceSymbol: "101a girl is reading",
+          sentenceFormulaSymbol: "101a girl is reading",
         })
         .expect(200)
         .then((res) => {
@@ -63,7 +63,7 @@ describe("/api", () => {
         .send({
           questionLanguage: "POL",
           answerLanguage: "ENG",
-          sentenceSymbol: "101b girl *reads quickly",
+          sentenceFormulaSymbol: "101b girl *reads quickly",
         })
         .expect(200)
         .then((res) => {
@@ -117,7 +117,7 @@ describe("/api", () => {
           useDummy: true,
           questionLanguage: "POL",
           answerLanguage: "ENG",
-          sentenceSymbol: "dummy25a good day",
+          sentenceFormulaSymbol: "dummy25a good day",
         })
         .expect(200)
         .then((res) => {
@@ -141,7 +141,7 @@ describe("/api", () => {
           useDummy: true,
           questionLanguage: "ENG",
           answerLanguage: "POL",
-          sentenceSymbol: "dummy25a good day",
+          sentenceFormulaSymbol: "dummy25a good day",
         })
         .expect(200)
         .then((res) => {
@@ -158,6 +158,63 @@ describe("/api", () => {
           console.log({ "RESULT: res.body:": res.body });
         });
     });
+    it("#pal06-03a GET 200 YES: Returns sentence with translations, POL to ENG, by tenseDescription to be translated by multiple tenseDescriptions.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage: "POL",
+          answerLanguage: "ENG",
+          sentenceFormulaSymbol: "102a I'll read (pf fut)",
+        })
+        .expect(200)
+        .then((res) => {
+          let questionSentence = res.body.questionSentenceArr[0];
+
+          expect(questionSentence).to.be.a("String");
+
+          expect(["Przeczytam."]).to.include(questionSentence);
+          expect(res.body.answerSentenceArr).to.have.members([
+            "I will read.",
+            "I will have read.",
+          ]);
+
+          console.log({ "RESULT: res.body:": res.body });
+        });
+    });
+    it("#pal06-03b GET 200 YES: Returns sentence with translations, ENG to POL, by tenseDescription to be translated by multiple tenseDescriptions.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage: "ENG",
+          answerLanguage: "POL",
+          sentenceFormulaSymbol: "I read *future",
+        })
+        .expect(200)
+        .then((res) => {
+          let questionSentence = res.body.questionSentenceArr[0];
+
+          expect(questionSentence).to.be.a("String");
+
+          expect([
+            "I will read.",
+            "I will be reading.",
+            "I will have read.",
+          ]).to.include(questionSentence);
+
+          if (questionSentence === "I will read.") {
+            expect(res.body.answerSentenceArr).to.have.members(["Przeczytam."]);
+          } else if (questionSentence === "I will be reading.") {
+            expect(res.body.answerSentenceArr).to.have.members([
+              "Będę czytał.",
+            ]);
+          } else if (questionSentence === "I will have read.") {
+            expect(res.body.answerSentenceArr).to.have.members(["Przeczytam."]);
+          }
+          console.log({ "RESULT: res.body:": res.body });
+        });
+    });
   });
 
   describe("/palette - Stage 5: Rich sentences (with nouns adjectives and verbs).", () => {
@@ -166,7 +223,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "girl has red apple",
+          sentenceFormulaSymbol: "girl has red apple",
         })
         .expect(200)
         .then((res) => {
@@ -216,7 +273,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "girl didn't have red apple",
+          sentenceFormulaSymbol: "girl didn't have red apple",
         })
         .expect(200)
         .then((res) => {
@@ -266,7 +323,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "red girl didn't have red apple",
+          sentenceFormulaSymbol: "red girl didn't have red apple",
         })
         .expect(200)
         .then((res) => {
@@ -316,7 +373,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "girl reads present im",
+          sentenceFormulaSymbol: "girl reads present im",
         })
         .expect(200)
         .then((res) => {
@@ -339,7 +396,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "girl reads past pf",
+          sentenceFormulaSymbol: "girl reads past pf",
         })
         .expect(200)
         .then((res) => {
@@ -362,7 +419,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "girl reads future im",
+          sentenceFormulaSymbol: "girl reads future im",
         })
         .expect(200)
         .then((res) => {
@@ -394,7 +451,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "girl reads f conditional im pf",
+          sentenceFormulaSymbol: "girl reads f conditional im pf",
         })
         .expect(200)
         .then((res) => {
@@ -408,6 +465,23 @@ describe("/api", () => {
           console.log({ "RESULT: res.body:": res.body.questionSentenceArr[0] });
         });
     });
+    xit("#pal05-02e GET 200 YES: Allow specification of more than one radically different tenseDescription.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage: "POL",
+          sentenceFormulaSymbol: "dummy26",
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
+          expect(["Cyztałam.", "Przecztam."]).to.include(
+            res.body.questionSentenceArr[0]
+          );
+          console.log({ "RESULT: res.body:": res.body.questionSentenceArr[0] });
+        });
+    });
   });
 
   describe("/palette - Stage 4: Verbs", () => {
@@ -416,7 +490,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "I am reading",
+          sentenceFormulaSymbol: "I am reading",
         })
         .expect(200)
         .then((res) => {
@@ -437,7 +511,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "dummy12a 2per",
+          sentenceFormulaSymbol: "dummy12a 2per",
           useDummy: true,
         })
         .expect(200)
@@ -473,7 +547,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "dummy13a conditional plural",
+          sentenceFormulaSymbol: "dummy13a conditional plural",
           useDummy: true,
         })
         .expect(200)
@@ -496,7 +570,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "dummy13b present 2per f",
+          sentenceFormulaSymbol: "dummy13b present 2per f",
           useDummy: true,
         })
         .expect(200)
@@ -513,7 +587,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "dummy14 infinitive",
+          sentenceFormulaSymbol: "dummy14 infinitive",
           useDummy: true,
         })
         .expect(200)
@@ -528,7 +602,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "dummy15 impersonal",
+          sentenceFormulaSymbol: "dummy15 impersonal",
           useDummy: true,
         })
         .expect(200)
@@ -548,7 +622,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "dummy15a impersonal plural",
+          sentenceFormulaSymbol: "dummy15a impersonal plural",
           useDummy: true,
         })
         .expect(200)
@@ -565,7 +639,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "dummy16 contemporaryAdverbial",
+          sentenceFormulaSymbol: "dummy16 contemporaryAdverbial",
           useDummy: true,
         })
         .expect(200)
@@ -580,7 +654,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "dummy17 contemporaryAdverbial female",
+          sentenceFormulaSymbol: "dummy17 contemporaryAdverbial female",
           useDummy: true,
         })
         .expect(200)
@@ -595,7 +669,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "dummy18 contemporaryAdverbial n virile 2per",
+          sentenceFormulaSymbol: "dummy18 contemporaryAdverbial n virile 2per",
           useDummy: true,
         })
         .expect(200)
@@ -610,7 +684,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "dummy16a anteriorAdverbial",
+          sentenceFormulaSymbol: "dummy16a anteriorAdverbial",
           useDummy: true,
         })
         .expect(200)
@@ -627,7 +701,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "dummy17a anteriorAdverbial female",
+          sentenceFormulaSymbol: "dummy17a anteriorAdverbial female",
           useDummy: true,
         })
         .expect(200)
@@ -644,7 +718,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "dummy18a anteriorAdverbial n virile 2per",
+          sentenceFormulaSymbol: "dummy18a anteriorAdverbial n virile 2per",
           useDummy: true,
         })
         .expect(200)
@@ -661,7 +735,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "dummy21 verbalNoun",
+          sentenceFormulaSymbol: "dummy21 verbalNoun",
           useDummy: true,
         })
         .expect(200)
@@ -676,7 +750,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "dummy22 verbalNoun ~f",
+          sentenceFormulaSymbol: "dummy22 verbalNoun ~f",
           useDummy: true,
         })
         .expect(200)
@@ -690,7 +764,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "dummy23a past/cond 1per plural m1",
+          sentenceFormulaSymbol: "dummy23a past/cond 1per plural m1",
           useDummy: true,
         })
         .expect(200)
@@ -712,7 +786,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "dummy23b past/cond 1per plural m2",
+          sentenceFormulaSymbol: "dummy23b past/cond 1per plural m2",
           useDummy: true,
         })
         .expect(200)
@@ -734,7 +808,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "dummy23c past/cond 1per plural f/n",
+          sentenceFormulaSymbol: "dummy23c past/cond 1per plural f/n",
           useDummy: true,
         })
         .expect(200)
@@ -756,7 +830,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "girls were reading",
+          sentenceFormulaSymbol: "girls were reading",
         })
         .expect(200)
         .then((res) => {
@@ -775,7 +849,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "girl is reading",
+          sentenceFormulaSymbol: "girl is reading",
         })
         .expect(200)
         .then((res) => {
@@ -791,7 +865,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "dummy20a girl is reading im",
+          sentenceFormulaSymbol: "dummy20a girl is reading im",
           useDummy: true,
         })
         .expect(200)
@@ -808,7 +882,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "dummy20b girl will read pf",
+          sentenceFormulaSymbol: "dummy20b girl will read pf",
           useDummy: true,
         })
         .expect(200)
@@ -825,7 +899,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "dummy24a I read and research",
+          sentenceFormulaSymbol: "dummy24a I read and research",
           useDummy: true,
         })
         .expect(200)
@@ -842,7 +916,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "dummy24b I/you read and research",
+          sentenceFormulaSymbol: "dummy24b I/you read and research",
           useDummy: true,
         })
         .expect(200)
@@ -859,7 +933,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "dummy24c read and research",
+          sentenceFormulaSymbol: "dummy24c read and research",
           useDummy: true,
         })
         .expect(200)
@@ -893,7 +967,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "red/blue apple",
+          sentenceFormulaSymbol: "red/blue apple",
         })
         .expect(200)
         .then((res) => {
@@ -912,7 +986,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "red apple",
+          sentenceFormulaSymbol: "red apple",
         })
         .expect(200)
         .then((res) => {
@@ -928,7 +1002,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "red apples",
+          sentenceFormulaSymbol: "red apples",
         })
         .expect(200)
         .then((res) => {
@@ -944,7 +1018,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "red girls",
+          sentenceFormulaSymbol: "red girls",
         })
         .expect(200)
         .then((res) => {
@@ -966,7 +1040,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "girl is wearing shirt",
+          sentenceFormulaSymbol: "girl is wearing shirt",
         })
         .expect(200)
         .then((res) => {
@@ -982,7 +1056,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "shirt is in wardrobe",
+          sentenceFormulaSymbol: "shirt is in wardrobe",
         })
         .expect(200)
         .then((res) => {
@@ -997,7 +1071,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "I often wear shirt",
+          sentenceFormulaSymbol: "I often wear shirt",
         })
         .expect(200)
         .then((res) => {
@@ -1013,7 +1087,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "boys are male",
+          sentenceFormulaSymbol: "boys are male",
         })
         .expect(200)
         .then((res) => {
@@ -1177,7 +1251,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "I have apple",
+          sentenceFormulaSymbol: "I have apple",
         })
         .expect(200)
         .then((res) => {
@@ -1190,7 +1264,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "dummy09",
+          sentenceFormulaSymbol: "dummy09",
           useDummy: true,
         })
         .expect(200)
@@ -1207,7 +1281,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "dummy10",
+          sentenceFormulaSymbol: "dummy10",
           useDummy: true,
         })
         .expect(200)
@@ -1227,7 +1301,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "I have APPLE",
+          sentenceFormulaSymbol: "I have APPLE",
           useDummy: true,
         })
         .expect(200)
@@ -1242,7 +1316,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "I have APPLE/SHIRT",
+          sentenceFormulaSymbol: "I have APPLE/SHIRT",
           useDummy: true,
         })
         .expect(200)

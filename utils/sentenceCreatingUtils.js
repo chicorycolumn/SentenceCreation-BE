@@ -7,7 +7,7 @@ const allLangUtils = require("../utils/allLangUtils.js");
 exports.processSentenceFormula = (
   currentLanguage,
   sentenceFormulaId,
-  sentenceSymbol,
+  sentenceFormulaSymbol,
   useDummy,
   kumquat,
   questionOutputArr,
@@ -30,8 +30,8 @@ exports.processSentenceFormula = (
   } = require(`../source/${currentLanguage}/dummy/dummySentenceFormulas.js`);
 
   let defaultSentenceFormulaId = "POL-00-50";
-  let defaultSentenceSymbol = "";
-  sentenceSymbol = sentenceSymbol || defaultSentenceSymbol;
+  let defaultsentenceFormulaSymbol = "";
+  sentenceFormulaSymbol = sentenceFormulaSymbol || defaultsentenceFormulaSymbol;
   let errorInSentenceCreation = { errorMessage: null };
 
   let words = useDummy
@@ -53,19 +53,19 @@ exports.processSentenceFormula = (
 
     sentenceFormula = matchingSentenceFormulaData.value;
     sentenceFormulaId = sentenceFormula.sentenceFormulaId;
-    sentenceSymbol = sentenceFormula.symbol;
-  } else if (sentenceSymbol) {
+    sentenceFormulaSymbol = sentenceFormula.sentenceFormulaSymbol;
+  } else if (sentenceFormulaSymbol) {
     let matchingSentenceFormulaData = otUtils.findObjectInNestedObject(
       sentenceFormulas,
       {
-        symbol: sentenceSymbol,
+        sentenceFormulaSymbol: sentenceFormulaSymbol,
       },
       true
     );
 
     sentenceFormula = matchingSentenceFormulaData.value;
     sentenceFormulaId = sentenceFormula.sentenceFormulaId;
-    sentenceSymbol = sentenceFormula.symbol;
+    sentenceFormulaSymbol = sentenceFormula.sentenceFormulaSymbol;
   } else {
     let matchingSentenceFormulaData = otUtils.findObjectInNestedObject(
       sentenceFormulas,
@@ -77,7 +77,7 @@ exports.processSentenceFormula = (
 
     sentenceFormula = matchingSentenceFormulaData.value;
     sentenceFormulaId = sentenceFormula.sentenceFormulaId;
-    sentenceSymbol = sentenceFormula.symbol;
+    sentenceFormulaSymbol = sentenceFormula.sentenceFormulaSymbol;
   }
 
   //STEP ZERO (B)
@@ -145,7 +145,7 @@ exports.processSentenceFormula = (
         outputArr: null,
         sentenceFormula,
         sentenceFormulaId,
-        sentenceSymbol,
+        sentenceFormulaSymbol,
         errorInSentenceCreation,
       };
     }
@@ -225,7 +225,7 @@ exports.processSentenceFormula = (
               outputArr: null,
               sentenceFormula,
               sentenceFormulaId,
-              sentenceSymbol,
+              sentenceFormulaSymbol,
               errorInSentenceCreation,
             };
           }
@@ -333,7 +333,7 @@ exports.processSentenceFormula = (
         outputArr: null,
         sentenceFormula,
         sentenceFormulaId,
-        sentenceSymbol,
+        sentenceFormulaSymbol,
         errorInSentenceCreation,
       };
     }
@@ -368,7 +368,7 @@ exports.processSentenceFormula = (
     arrayOfOutputArrays: grandOutputArray,
     sentenceFormula,
     sentenceFormulaId,
-    sentenceSymbol,
+    sentenceFormulaSymbol,
     errorInSentenceCreation,
   };
 };

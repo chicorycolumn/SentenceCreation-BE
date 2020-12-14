@@ -9,7 +9,7 @@ exports.fetchPalette = (req) => {
 
   let {
     sentenceFormulaId,
-    sentenceSymbol,
+    sentenceFormulaSymbol,
     useDummy,
     questionLanguage,
     answerLanguage,
@@ -18,13 +18,13 @@ exports.fetchPalette = (req) => {
   let questionSentenceData = scUtils.processSentenceFormula(
     questionLanguage,
     sentenceFormulaId,
-    sentenceSymbol,
+    sentenceFormulaSymbol,
     useDummy,
     kumquat
   );
 
   sentenceFormulaId = questionSentenceData.sentenceFormulaId;
-  sentenceSymbol = questionSentenceData.sentenceSymbol;
+  sentenceFormulaSymbol = questionSentenceData.sentenceFormulaSymbol;
 
   console.log("palette.model > questionSentenceData", questionSentenceData);
 
@@ -51,7 +51,7 @@ exports.fetchPalette = (req) => {
       let answerSentenceData = scUtils.processSentenceFormula(
         answerLanguage,
         translationSentenceFormulaId,
-        sentenceSymbol,
+        sentenceFormulaSymbol,
         useDummy,
         kumquat,
         questionSentenceData.arrayOfOutputArrays[0],
