@@ -568,6 +568,236 @@ let verbSet = [
   },
   {
     //links
+    translations: { ENG: ["write"] },
+    tags: ["basic3"],
+    //selectors
+    lemma: "pisać",
+    id: "pol-ver-004-im-01",
+    aspect: "imperfective",
+    //notes
+    deficient: false,
+    defective: false,
+    //inflections
+    inflections: {
+      infinitive: "pisać",
+      verbal: {
+        past: {
+          impersonal: {
+            singular: { allSingularGenders: "pisano" },
+            plural: { allPluralGenders: "pisano" },
+          },
+          "1per": {
+            singular: {
+              m: "pisałem",
+              f: "pisałam",
+            },
+            plural: {
+              virile: "pisaliśmy",
+              nonvirile: "pisałyśmy",
+            },
+          },
+          "2per": {
+            singular: {
+              m: "pisałeś",
+              f: "pisałaś",
+            },
+            plural: {
+              virile: "pisaliście",
+              nonvirile: "pisałyście",
+            },
+          },
+          "3per": {
+            singular: {
+              m: "pisał",
+              f: "pisała",
+              n: "pisało",
+            },
+            plural: {
+              virile: "pisali",
+              nonvirile: "pisały",
+            },
+          },
+        },
+        present: {
+          impersonal: { singular: true },
+          "1per": {
+            singular: {
+              allSingularGendersExcludingNeuter: "piszę",
+            },
+            plural: {
+              allPluralGenders: "piszemy",
+            },
+          },
+          "2per": {
+            singular: {
+              allSingularGendersExcludingNeuter: "piszesz",
+            },
+            plural: {
+              allPluralGenders: "piszecie",
+            },
+          },
+          "3per": {
+            singular: {
+              allSingularGenders: "pisze",
+            },
+            plural: {
+              allPluralGenders: "piszą",
+            },
+          },
+        },
+        future: true,
+        conditional: true,
+        imperative: {
+          "1per": {
+            singular: {
+              allSingularGendersExcludingNeuter: "niech piszę",
+            },
+            plural: {
+              allPluralGenders: "piszmy",
+            },
+          },
+          "2per": {
+            singular: {
+              allSingularGendersExcludingNeuter: "pisz",
+            },
+            plural: {
+              allPluralGenders: "piszcie",
+            },
+          },
+          "3per": {
+            singular: {
+              allSingularGenders: "niech pisze",
+            },
+            plural: {
+              allPluralGenders: "niech piszą",
+            },
+          },
+        },
+      },
+      activeAdjectival: "piszący",
+      passiveAdjectival: "pisany",
+      contemporaryAdverbial: "pisząc",
+      anteriorAdverbial: false,
+      verbalNoun: "pisanie",
+    },
+  },
+  {
+    //links
+    translations: { ENG: ["write"] },
+    tags: ["basic2"],
+    //selectors
+    lemma: "napisać",
+    id: "pol-ver-004-pf-01",
+    aspect: "perfective",
+    //notes
+    deficient: false,
+    defective: false,
+    //inflections
+    inflections: {
+      infinitive: "napisać",
+      verbal: {
+        past: {
+          impersonal: {
+            singular: { allSingularGenders: "napisano" },
+            plural: { allPluralGenders: "napisano" },
+          },
+          "1per": {
+            singular: {
+              m: "napisałem",
+              f: "napisałam",
+            },
+            plural: {
+              virile: "napisaliśmy",
+              nonvirile: "napisałyśmy",
+            },
+          },
+          "2per": {
+            singular: {
+              m: "napisałeś",
+              f: "napisałaś",
+            },
+            plural: {
+              virile: "napisaliście",
+              nonvirile: "napisałyście",
+            },
+          },
+          "3per": {
+            singular: {
+              m: "napisał",
+              f: "napisała",
+              n: "napisało",
+            },
+            plural: {
+              virile: "napisali",
+              nonvirile: "napisały",
+            },
+          },
+        },
+        future: {
+          impersonal: { singular: true },
+          "1per": {
+            singular: {
+              allSingularGendersExcludingNeuter: "napiszę",
+            },
+            plural: {
+              allPluralGenders: "napiszemy",
+            },
+          },
+          "2per": {
+            singular: {
+              allSingularGendersExcludingNeuter: "napiszesz",
+            },
+            plural: {
+              allPluralGenders: "napiszecie",
+            },
+          },
+          "3per": {
+            singular: {
+              allSingularGenders: "napisze",
+            },
+            plural: {
+              allPluralGenders: "napiszą",
+            },
+          },
+        },
+        present: false,
+        conditional: true,
+        imperative: {
+          "1per": {
+            singular: {
+              allSingularGendersExcludingNeuter: "niech napiszę",
+            },
+            plural: {
+              allPluralGenders: "napiszmy",
+            },
+          },
+          "2per": {
+            singular: {
+              allSingularGendersExcludingNeuter: "napisz",
+            },
+            plural: {
+              allPluralGenders: "napiszcie",
+            },
+          },
+          "3per": {
+            singular: {
+              allSingularGenders: "niech napisze",
+            },
+            plural: {
+              allPluralGenders: "niech napiszą",
+            },
+          },
+        },
+      },
+      activeAdjectival: false,
+      passiveAdjectival: "napisany",
+      contemporaryAdverbial: false,
+      anteriorAdverbial: "napisawszy",
+      verbalNoun: "napisanie",
+    },
+  },
+  {
+    //links
     translations: { ENG: ["read"] },
     tags: ["basic2"],
     //selectors
@@ -683,121 +913,6 @@ let verbSet = [
   },
   {
     //links
-    translations: { ENG: ["research"] },
-    tags: ["science"],
-    //selectors
-    lemma: "badać",
-    id: "pol-ver-003-im-01",
-    aspect: "imperfective",
-    //notes
-    deficient: false,
-    defective: false,
-    //inflections
-    inflections: {
-      infinitive: "badać",
-      verbal: {
-        past: {
-          impersonal: {
-            singular: { allSingularGenders: "badano" },
-            plural: { allPluralGenders: "badano" },
-          },
-          "1per": {
-            singular: {
-              m: "badałem",
-              f: "badałam",
-            },
-            plural: {
-              virile: "badaliśmy",
-              nonvirile: "badałyśmy",
-            },
-          },
-          "2per": {
-            singular: {
-              m: "badałeś",
-              f: "badałaś",
-            },
-            plural: {
-              virile: "badaliście",
-              nonvirile: "badałyście",
-            },
-          },
-          "3per": {
-            singular: {
-              m: "badał",
-              f: "badała",
-              n: "badało",
-            },
-            plural: {
-              virile: "badali",
-              nonvirile: "badały",
-            },
-          },
-        },
-        present: {
-          impersonal: { singular: true },
-          "1per": {
-            singular: {
-              allSingularGendersExcludingNeuter: "badam",
-            },
-            plural: {
-              allPluralGenders: "badamy",
-            },
-          },
-          "2per": {
-            singular: {
-              allSingularGendersExcludingNeuter: "badasz",
-            },
-            plural: {
-              allPluralGenders: "badacie",
-            },
-          },
-          "3per": {
-            singular: {
-              allSingularGenders: "bada",
-            },
-            plural: {
-              allPluralGenders: "badają",
-            },
-          },
-        },
-        future: true,
-        conditional: true,
-        imperative: {
-          "1per": {
-            singular: {
-              allSingularGendersExcludingNeuter: "niech badam",
-            },
-            plural: {
-              allPluralGenders: "badajmy",
-            },
-          },
-          "2per": {
-            singular: {
-              allSingularGendersExcludingNeuter: "badaj",
-            },
-            plural: {
-              allPluralGenders: "badajcie",
-            },
-          },
-          "3per": {
-            singular: {
-              allSingularGenders: "niech bada",
-            },
-            plural: {
-              allPluralGenders: "niech badają",
-            },
-          },
-        },
-      },
-      activeAdjectival: "badający",
-      passiveAdjectival: "badany",
-      contemporaryAdverbial: "badając",
-      anteriorAdverbial: false,
-      verbalNoun: "badanie",
-    },
-  },
-  {
-    //links
     translations: { ENG: ["read"] },
     tags: ["basic2"],
     //selectors
@@ -909,6 +1024,121 @@ let verbSet = [
       contemporaryAdverbial: false,
       anteriorAdverbial: "przeczytawszy",
       verbalNoun: "przeczytanie",
+    },
+  },
+  {
+    //links
+    translations: { ENG: ["research"] },
+    tags: ["science"],
+    //selectors
+    lemma: "badać",
+    id: "pol-ver-003-im-01",
+    aspect: "imperfective",
+    //notes
+    deficient: false,
+    defective: false,
+    //inflections
+    inflections: {
+      infinitive: "badać",
+      verbal: {
+        past: {
+          impersonal: {
+            singular: { allSingularGenders: "badano" },
+            plural: { allPluralGenders: "badano" },
+          },
+          "1per": {
+            singular: {
+              m: "badałem",
+              f: "badałam",
+            },
+            plural: {
+              virile: "badaliśmy",
+              nonvirile: "badałyśmy",
+            },
+          },
+          "2per": {
+            singular: {
+              m: "badałeś",
+              f: "badałaś",
+            },
+            plural: {
+              virile: "badaliście",
+              nonvirile: "badałyście",
+            },
+          },
+          "3per": {
+            singular: {
+              m: "badał",
+              f: "badała",
+              n: "badało",
+            },
+            plural: {
+              virile: "badali",
+              nonvirile: "badały",
+            },
+          },
+        },
+        present: {
+          impersonal: { singular: true },
+          "1per": {
+            singular: {
+              allSingularGendersExcludingNeuter: "badam",
+            },
+            plural: {
+              allPluralGenders: "badamy",
+            },
+          },
+          "2per": {
+            singular: {
+              allSingularGendersExcludingNeuter: "badasz",
+            },
+            plural: {
+              allPluralGenders: "badacie",
+            },
+          },
+          "3per": {
+            singular: {
+              allSingularGenders: "bada",
+            },
+            plural: {
+              allPluralGenders: "badają",
+            },
+          },
+        },
+        future: true,
+        conditional: true,
+        imperative: {
+          "1per": {
+            singular: {
+              allSingularGendersExcludingNeuter: "niech badam",
+            },
+            plural: {
+              allPluralGenders: "badajmy",
+            },
+          },
+          "2per": {
+            singular: {
+              allSingularGendersExcludingNeuter: "badaj",
+            },
+            plural: {
+              allPluralGenders: "badajcie",
+            },
+          },
+          "3per": {
+            singular: {
+              allSingularGenders: "niech bada",
+            },
+            plural: {
+              allPluralGenders: "niech badają",
+            },
+          },
+        },
+      },
+      activeAdjectival: "badający",
+      passiveAdjectival: "badany",
+      contemporaryAdverbial: "badając",
+      anteriorAdverbial: false,
+      verbalNoun: "badanie",
     },
   },
 ];

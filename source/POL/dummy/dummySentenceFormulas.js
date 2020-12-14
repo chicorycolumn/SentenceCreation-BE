@@ -651,11 +651,10 @@ exports.dummySentenceFormulasBank = {
   dummy26: {
     sentenceFormulaSymbol: "dummy26",
     sentenceFormulaId: "POL-dummy26",
-    translations: { ENG: [] },
+    translations: { ENG: ["ENG-dummy26"] },
     structure: [
       {
         chunkId: "ver-1",
-        agreeWith: "nou-1",
         wordtype: "verb",
         andTags: ["basic2"],
         tenseDescription: ["past im", "future pf"],

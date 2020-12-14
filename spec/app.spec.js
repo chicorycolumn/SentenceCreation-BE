@@ -465,7 +465,7 @@ describe("/api", () => {
           console.log({ "RESULT: res.body:": res.body.questionSentenceArr[0] });
         });
     });
-    xit("#pal05-02e GET 200 YES: Allow specification of more than one radically different tenseDescription.", () => {
+    it.only("#pal05-03a GET 200 YES: Allow specification of multiple radically different tenseDescriptions, without unwanted cross pollination.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -476,9 +476,74 @@ describe("/api", () => {
         .expect(200)
         .then((res) => {
           expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect(["Cyztałam.", "Przecztam."]).to.include(
+          expect(["Czytałam.", "Przeczytam."]).to.include(
             res.body.questionSentenceArr[0]
           );
+          //If "Będę czytała." or "Przeczytałam." are returned, it's because the unwanted cross pollination is happening.
+          console.log({ "RESULT: res.body:": res.body.questionSentenceArr[0] });
+        });
+    });
+    it("#pal05-03b GET 200 YES: Allow specification of multiple radically different tenseDescriptions, and then translate them. POL to ENG", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage: "POL",
+          answerLanguage: "ENG",
+          sentenceFormulaSymbol: "dummy26",
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
+          expect(["Czytałam.", "Przeczytam."]).to.include(
+            res.body.questionSentenceArr[0]
+          );
+
+          if (res.body.questionSentenceArr[0] === "Czytałam.") {
+            expect(res.body.answerSentenceArr).to.have.members([
+              "I was reading.",
+            ]);
+          } else if (res.body.questionSentenceArr[0] === "Przeczytam.") {
+            expect(res.body.answerSentenceArr).to.have.members([
+              "I will read.",
+              "I will have read.",
+            ]);
+          }
+          //If "Będę czytała." or "Przeczytałam." are returned, it's because the unwanted cross pollination is happening.
+          console.log({ "RESULT: res.body:": res.body.questionSentenceArr[0] });
+        });
+    });
+    it("#pal05-03c GET 200 YES: Allow specification of multiple radically different tenseDescriptions, and then translate them. ENG to POL", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage: "ENG",
+          answerLanguage: "POL",
+          sentenceFormulaSymbol: "dummy26",
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
+          expect([
+            "I was reading.",
+            "I will read.",
+            "I will have read.",
+          ]).to.include(res.body.questionSentenceArr[0]);
+
+          if (res.body.questionSentenceArr[0] === "I was reading.") {
+            expect(res.body.answerSentenceArr).to.have.members([
+              "Czytałam.",
+              "Czytałem.",
+            ]);
+          } else if (
+            res.body.questionSentenceArr[0] === "I will read." ||
+            res.body.questionSentenceArr[0] === "I will have read."
+          ) {
+            expect(res.body.answerSentenceArr).to.have.members(["Przeczytam."]);
+          }
+
+          //If "Będę czytała." or "Przeczytałam." are returned, it's because the unwanted cross pollination is happening.
           console.log({ "RESULT: res.body:": res.body.questionSentenceArr[0] });
         });
     });

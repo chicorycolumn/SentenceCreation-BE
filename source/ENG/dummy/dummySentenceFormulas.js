@@ -16,4 +16,24 @@ exports.dummySentenceFormulasBank = {
     structure: [{ chunkId: "fix-1", wordtype: "fixed", value: "hello" }],
     primaryOrders: [],
   },
+  dummy26: {
+    sentenceFormulaSymbol: "dummy26",
+    sentenceFormulaId: "ENG-dummy26",
+    translations: { POL: ["POL-dummy26"] },
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        andTags: ["basic2"],
+        tenseDescription: [
+          "past continuous",
+          "future simple",
+          "future perfect",
+        ],
+        person: ["1per"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [],
+  },
 };

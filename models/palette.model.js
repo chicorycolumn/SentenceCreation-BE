@@ -28,7 +28,7 @@ exports.fetchPalette = (req) => {
 
   console.log("palette.model > questionSentenceData", questionSentenceData);
 
-  let questionResponseObj = scUtils.formatFinalSentence(
+  let questionResponseObj = scUtils.giveFinalSentences(
     questionSentenceData.arrayOfOutputArrays,
     questionSentenceData.sentenceFormula,
     questionSentenceData.errorInSentenceCreation,
@@ -59,7 +59,7 @@ exports.fetchPalette = (req) => {
       );
 
       if (!answerResponseObj) {
-        answerResponseObj = scUtils.formatFinalSentence(
+        answerResponseObj = scUtils.giveFinalSentences(
           answerSentenceData.arrayOfOutputArrays,
           answerSentenceData.sentenceFormula,
           answerSentenceData.errorInSentenceCreation,
@@ -71,7 +71,7 @@ exports.fetchPalette = (req) => {
           answerResponseObj.finalSentenceArr
         );
       } else {
-        let subsequentAnswerResponseObj = scUtils.formatFinalSentence(
+        let subsequentAnswerResponseObj = scUtils.giveFinalSentences(
           answerSentenceData.arrayOfOutputArrays,
           answerSentenceData.sentenceFormula,
           answerSentenceData.errorInSentenceCreation,

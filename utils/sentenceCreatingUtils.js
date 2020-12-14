@@ -13,6 +13,16 @@ exports.processSentenceFormula = (
   questionOutputArr,
   questionLanguage
 ) => {
+  console.log("SC:processSentenceFormula was given these args:", {
+    currentLanguage,
+    sentenceFormulaId,
+    sentenceFormulaSymbol,
+    useDummy,
+    kumquat,
+    questionOutputArr,
+    questionLanguage,
+  });
+
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
 
   let grandOutputArray = [];
@@ -113,6 +123,8 @@ exports.processSentenceFormula = (
   );
 
   let headOutputUnitArrays = [];
+
+  console.log({ headIds });
 
   //STEP ONE: Select headwords and add to result array.
   headIds.forEach((headId, headIdIndex) => {
@@ -373,7 +385,7 @@ exports.processSentenceFormula = (
   };
 };
 
-exports.formatFinalSentence = (
+exports.giveFinalSentences = (
   arrayOfOutputArrays,
   sentenceFormula,
   errorInSentenceCreation,
@@ -393,7 +405,7 @@ exports.formatFinalSentence = (
 
   if (!kumquat && arrayOfOutputArrays.length !== 1) {
     console.log("arrayOfOutputArrays", arrayOfOutputArrays);
-    throw "That's strange. We are in Question Mode, so SC:formatFinalSentence expected to be given arrayOfOutputArrays with length of 1, but it didn't.";
+    throw "That's strange. We are in Question Mode, so SC:giveFinalSentences expected to be given arrayOfOutputArrays with length of 1, but it didn't.";
     let x = gpUtils.selectRandom(arrayOfOutputArrays);
   }
 
@@ -401,7 +413,7 @@ exports.formatFinalSentence = (
 
   if (kumquat) {
     arrayOfOutputArrays.forEach((outputArr) => {
-      let finalSentences = exports.buildSentenceFromArray(
+      let finalSentences = exports.buildSentenceString(
         outputArr,
         sentenceFormula,
         kumquat
@@ -414,7 +426,7 @@ exports.formatFinalSentence = (
   } else {
     let outputArr = gpUtils.selectRandom(arrayOfOutputArrays);
 
-    let finalSentences = exports.buildSentenceFromArray(
+    let finalSentences = exports.buildSentenceString(
       outputArr,
       sentenceFormula,
       kumquat
@@ -432,7 +444,7 @@ exports.formatFinalSentence = (
   return answerResponseObj;
 };
 
-exports.buildSentenceFromArray = (unorderedArr, sentenceFormula, kumquat) => {
+exports.buildSentenceString = (unorderedArr, sentenceFormula, kumquat) => {
   let arrayOfSelectedWordsArrays = [];
   let producedSentences = [];
 
