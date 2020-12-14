@@ -46,6 +46,8 @@ let inflectorRef = {
   ],
 };
 
+exports.adjustTenseDescriptions = () => {};
+
 exports.preprocessStructureChunks = (sentenceStructure) => {};
 
 exports.preprocessLemmaObjects = (matches, structureChunk) => {};

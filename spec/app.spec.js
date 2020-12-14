@@ -465,7 +465,7 @@ describe("/api", () => {
           console.log({ "RESULT: res.body:": res.body.questionSentenceArr[0] });
         });
     });
-    it.only("#pal05-03a GET 200 YES: Allow specification of multiple radically different tenseDescriptions, without unwanted cross pollination.", () => {
+    it("#pal05-03a GET 200 YES: Allow specification of multiple radically different tenseDescriptions, without unwanted cross pollination.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -483,7 +483,7 @@ describe("/api", () => {
           console.log({ "RESULT: res.body:": res.body.questionSentenceArr[0] });
         });
     });
-    it("#pal05-03b GET 200 YES: Allow specification of multiple radically different tenseDescriptions, and then translate them. POL to ENG", () => {
+    xit("#pal05-03b GET 200 YES: Allow specification of multiple radically different tenseDescriptions, and then translate them. POL to ENG", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -513,7 +513,7 @@ describe("/api", () => {
           console.log({ "RESULT: res.body:": res.body.questionSentenceArr[0] });
         });
     });
-    it("#pal05-03c GET 200 YES: Allow specification of multiple radically different tenseDescriptions, and then translate them. ENG to POL", () => {
+    xit("#pal05-03c GET 200 YES: Allow specification of multiple radically different tenseDescriptions, and then translate them. ENG to POL", () => {
       return request(app)
         .get("/api/palette")
         .send({

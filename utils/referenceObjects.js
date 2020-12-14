@@ -6,6 +6,9 @@ exports.lemmaObjectFeatures = {
       noun: ["gender"],
       verb: ["aspect"],
     },
+    hybridSelectors: {
+      verb: ["tenseDescription"],
+    },
     inflectionChains: {
       noun: ["number", "gcase"],
       adjective: ["form", "number", "gender", "gcase"],
@@ -19,6 +22,9 @@ exports.lemmaObjectFeatures = {
   },
   ENG: {
     selectors: {},
+    hybridSelectors: {
+      verb: ["tenseDescription"],
+    },
     inflectionChains: {
       noun: ["number", "gcase"],
       adjective: ["form"],

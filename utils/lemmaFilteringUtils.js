@@ -215,3 +215,18 @@ exports.filterByKey = (lemmaObjectArr, requirementArrs, key) => {
     return lemmaObjectArr;
   }
 };
+
+exports.filterBySelectors = (currentLanguage, structureChunk, matches) => {
+  let selectors =
+    refObj.lemmaObjectFeatures[currentLanguage].selectors[
+      structureChunk.wordtype
+    ];
+
+  if (selectors) {
+    selectors.forEach((selector) => {
+      matches = exports.filterByKey(matches, structureChunk, selector);
+    });
+  }
+
+  return matches;
+};

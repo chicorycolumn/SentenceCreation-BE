@@ -43,16 +43,11 @@ exports.findMatchingLemmaObjectThenWord = (
     );
   } else {
     matches = lfUtils.filterByAndTagsAndOrTags(source, structureChunk);
-
-    let selectors =
-      refObj.lemmaObjectFeatures[currentLanguage].selectors[
-        structureChunk.wordtype
-      ];
-    if (selectors) {
-      selectors.forEach((selector) => {
-        matches = lfUtils.filterByKey(matches, structureChunk, selector);
-      });
-    }
+    matches = lfUtils.filterBySelectors(
+      currentLanguage,
+      structureChunk,
+      matches
+    );
   }
 
   langUtils.preprocessLemmaObjects(matches, structureChunk);
@@ -189,22 +184,79 @@ exports.findMatchingLemmaObjectThenWord = (
 
   //STEP FOUR: If-PW: Pathway for inflected forms, return word after selecting by drilling down through lemma object.
 
-  matches = lfUtils.filterOutDeficientLemmaObjects(
-    matches,
-    structureChunk,
-    currentLanguage
-  );
+  //Epsilonman say: At this point, parse the tenseDescription, if present, to Aspect and Tense
+  //Make as many copies of the structureChunk as there are tenseDescriptions.
 
-  if (!matches.length) {
-    errorInSentenceCreation.errorMessage =
-      "No matching lemma objects were found.";
-    return false;
+  let structureChunks = [structureChunk];
+
+  if (
+    structureChunk.tenseDescription &&
+    structureChunk.tenseDescription.length
+  ) {
+    let adjustedStructureChunks = langUtils.adjustTenseDescriptions(
+      structureChunk
+    );
+    if (adjustedStructureChunks) {
+      structureChunks = adjustedStructureChunks;
+    }
   }
 
-  console.log("##If-PW");
+  structureChunks.forEach((structureChunk) => {
+    let matchesCopy = matches.slice(0);
 
-  if (kumquat) {
-    matches.forEach((selectedLemmaObject) => {
+    matchesCopy = lfUtils.filterBySelectors(
+      currentLanguage,
+      structureChunk,
+      matchesCopy
+    );
+
+    matchesCopy = lfUtils.filterOutDeficientLemmaObjects(
+      matchesCopy,
+      structureChunk,
+      currentLanguage
+    );
+
+    if (!matchesCopy.length) {
+      // errorInSentenceCreation.errorMessage =
+      //   "No matching lemma objects were found.";
+      return false;
+    }
+
+    console.log("##If-PW");
+
+    if (kumquat) {
+      matchesCopy.forEach((selectedLemmaObject) => {
+        let subArrayOfOutputUnits = lfUtils.filterWithinSelectedLemmaObject(
+          selectedLemmaObject,
+          structureChunk,
+          currentLanguage,
+          kumquat
+        );
+
+        subArrayOfOutputUnits.forEach((unit) => {
+          let { errorInDrilling, selectedWordArray, drillPath } = unit;
+
+          selectedWordArray.forEach((selectedWord) => {
+            let outputUnit = exports.createOutputUnit(
+              errorInSentenceCreation,
+              errorInDrilling,
+              selectedWord,
+              structureChunk,
+              selectedLemmaObject,
+              drillPath
+            );
+
+            // console.log("-------------------------------v");
+            // console.log("I found this output unit:");
+            // console.log(outputUnit);
+            // console.log("-------------------------------^");
+            arrayOfAllPossibleOutputUnits.push(outputUnit);
+          });
+        });
+      });
+    } else {
+      let selectedLemmaObject = gpUtils.selectRaandom(matchesCopy);
+
       let subArrayOfOutputUnits = lfUtils.filterWithinSelectedLemmaObject(
         selectedLemmaObject,
         structureChunk,
@@ -213,74 +265,65 @@ exports.findMatchingLemmaObjectThenWord = (
       );
 
       if (!subArrayOfOutputUnits || !subArrayOfOutputUnits.length) {
-        errorInSentenceCreation.errorMessage =
-          "The requested inflections were not found in the selected lemma objects.";
         return false;
       }
 
-      subArrayOfOutputUnits.forEach((unit) => {
-        let { errorInDrilling, selectedWordArray, drillPath } = unit;
+      if (subArrayOfOutputUnits.length !== 1) {
+        throw "That's strange. This was expected to be an array of only one, here near the end of OT:findMatchingLemmaObjectThenWord";
+      }
 
-        selectedWordArray.forEach((selectedWord) => {
-          let outputUnit = exports.createOutputUnit(
-            errorInSentenceCreation,
-            errorInDrilling,
-            selectedWord,
-            structureChunk,
-            selectedLemmaObject,
-            drillPath
-          );
+      let unit = subArrayOfOutputUnits[0];
 
-          arrayOfAllPossibleOutputUnits.push(outputUnit);
-        });
-      });
-    });
+      let { errorInDrilling, selectedWordArray, drillPath } = unit;
 
-    return arrayOfAllPossibleOutputUnits;
-  } else {
-    let selectedLemmaObject = gpUtils.selectRaandom(matches);
+      if (!selectedWordArray || !selectedWordArray.length) {
+        errorInSentenceCreation.errorMessage =
+          "No lemma objects were found for these specifications.";
+        return false;
+      }
 
-    let subArrayOfOutputUnits = lfUtils.filterWithinSelectedLemmaObject(
-      selectedLemmaObject,
-      structureChunk,
-      currentLanguage,
-      kumquat
-    );
+      let selectedWord = selectedWordArray[0];
 
-    if (!subArrayOfOutputUnits || !subArrayOfOutputUnits.length) {
+      let outputUnit = exports.createOutputUnit(
+        errorInSentenceCreation,
+        errorInDrilling,
+        selectedWord,
+        structureChunk,
+        selectedLemmaObject,
+        drillPath
+      );
+
+      // console.log("-------------------------------v");
+      // console.log("I found this output unit:");
+      // console.log(outputUnit);
+      // console.log("-------------------------------^");
+      arrayOfAllPossibleOutputUnits.push(outputUnit);
+    }
+  });
+
+  if (!arrayOfAllPossibleOutputUnits.length) {
+    if (!errorInSentenceCreation.errorMessage) {
       errorInSentenceCreation.errorMessage =
         "The requested inflections were not found in the selected lemma objects.";
-      return false;
     }
-
-    if (subArrayOfOutputUnits.length !== 1) {
-      throw "That's strange. This was expected to be an array of only one, here near the end of OT:findMatchingLemmaObjectThenWord";
-    }
-
-    let unit = subArrayOfOutputUnits[0];
-
-    let { errorInDrilling, selectedWordArray, drillPath } = unit;
-
-    if (!selectedWordArray || !selectedWordArray.length) {
-      errorInSentenceCreation.errorMessage =
-        "No lemma objects were found for these specifications.";
-      return false;
-    }
-
-    let selectedWord = selectedWordArray[0];
-
-    let outputUnit = exports.createOutputUnit(
-      errorInSentenceCreation,
-      errorInDrilling,
-      selectedWord,
-      structureChunk,
-      selectedLemmaObject,
-      drillPath
-    );
-
-    arrayOfAllPossibleOutputUnits.push(outputUnit);
-    return arrayOfAllPossibleOutputUnits;
+    return false;
   }
+
+  if (!kumquat && arrayOfAllPossibleOutputUnits.length > 1) {
+    console.log(
+      "At the end of OT.findMatchingLem, the arrayOfAllPossibleOutputUnits array had more than one member. This should only be because of tenseDescription parsing."
+    );
+    console.log("arrayOfAllPossibleOutputUnits", arrayOfAllPossibleOutputUnits);
+    arrayOfAllPossibleOutputUnits = [
+      gpUtils.selectRaandom(arrayOfAllPossibleOutputUnits),
+    ];
+  }
+
+  console.log("ww------------------------------------");
+  console.log(arrayOfAllPossibleOutputUnits.length);
+  console.log(arrayOfAllPossibleOutputUnits[0].structureChunk);
+
+  return arrayOfAllPossibleOutputUnits;
 };
 
 exports.createOutputUnit = (

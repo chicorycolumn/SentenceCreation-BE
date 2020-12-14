@@ -2,27 +2,32 @@ const lfUtils = require("../../utils/lemmaFilteringUtils.js");
 const otUtils = require("../../utils/objectTraversingUtils.js");
 const gpUtils = require("../../utils/generalPurposeUtils.js");
 
-exports.preprocessStructureChunks = (sentenceStructure) => {
+exports.preprocessStructureChunks = (sentenceStructure) => {};
+
+exports.adjustTenseDescriptions = (structureChunk) => {
   const aspectReference = { im: "imperfective", pf: "perfective" };
 
-  sentenceStructure.forEach((structureChunk) => {
-    if (structureChunk.wordtype === "verb") {
-      if (
-        structureChunk.tenseDescription &&
-        structureChunk.tenseDescription.length
-      ) {
-        structureChunk.tenseDescription.forEach((tenseDesc, index) => {
-          if (index === 0) {
-            structureChunk.tense = [];
-            structureChunk.aspect = [];
-          }
-          let [tense, aspect] = tenseDesc.split(" ");
-          structureChunk.tense.push(tense);
-          structureChunk.aspect.push(aspectReference[aspect]);
-        });
-      }
-    }
-  });
+  if (
+    structureChunk.wordtype === "verb" &&
+    structureChunk.tenseDescription &&
+    structureChunk.tenseDescription.length
+  ) {
+    let resultArr = [];
+
+    structureChunk.tenseDescription.forEach((tenseDesc, index) => {
+      let structureChunkCopy = gpUtils.copyWithoutReference(structureChunk);
+
+      let [tense, aspect] = tenseDesc.split(" ");
+      structureChunkCopy.tense = [tense];
+      structureChunkCopy.aspect = [aspectReference[aspect]];
+      structureChunkCopy.tenseDescription = [tenseDesc];
+      resultArr.push(structureChunkCopy);
+    });
+
+    return resultArr;
+  } else {
+    return [structureChunk];
+  }
 };
 
 exports.preprocessLemmaObjects = (matches, structureChunk) => {

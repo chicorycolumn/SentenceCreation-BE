@@ -3,6 +3,7 @@ const gpUtils = require("./generalPurposeUtils.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
 const refObj = require("./referenceObjects.js");
 const allLangUtils = require("../utils/allLangUtils.js");
+const { head } = require("../app.js");
 
 exports.processSentenceFormula = (
   currentLanguage,
@@ -193,6 +194,8 @@ exports.processSentenceFormula = (
       let headChunk = headOutputUnit.structureChunk;
       let headId = headChunk.chunkId;
 
+      console.log("headChunk", headChunk);
+
       //STEP TWO (NOW NESTED): Select dependent words and add to result array.
       let dependentChunks = sentenceStructure
         .filter(
@@ -210,15 +213,32 @@ exports.processSentenceFormula = (
           );
 
           //Inherit from head chunk to dependent chunks.
-          refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
-            dependentChunk.wordtype
-          ].forEach((inflectorKey) => {
+          let inflectorKeys =
+            refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
+              dependentChunk.wordtype
+            ];
+
+          let hybridSelectors =
+            refObj.lemmaObjectFeatures[currentLanguage].hybridSelectors[
+              dependentChunk.wordtype
+            ];
+
+          if (hybridSelectors) {
+            inflectorKeys = [...inflectorKeys, ...hybridSelectors];
+          }
+
+          inflectorKeys.forEach((inflectorKey) => {
+            //HARD CHANGE
             if (headChunk[inflectorKey]) {
               dependentChunk[inflectorKey] = gpUtils.copyWithoutReference(
                 headChunk[inflectorKey]
               );
             }
           });
+
+          console.log("dependentChunk", dependentChunk);
+          // throw "Cease.";
+
           let allPossOutputUnits_dependent = otUtils.findMatchingLemmaObjectThenWord(
             gpUtils.copyWithoutReference(dependentChunk),
             words,
@@ -578,13 +598,26 @@ exports.conformAnswerStructureToQuestionStructure = (
                 answerLanguage
               );
 
-              answerStructureChunk["tenseDescription"] = [
-                ...answerStructureChunk["tenseDescription"],
-                ...translatedTenseDescArr,
-              ];
+              let shouldHardChange = true;
+
+              if (shouldHardChange) {
+                //HARD CHANGE
+                answerStructureChunk["tenseDescription"] = [
+                  // ...answerStructureChunk["tenseDescription"],
+                  ...translatedTenseDescArr,
+                ];
+              } else {
+                //SOFT CHANGE
+                answerStructureChunk["tenseDescription"] = [
+                  ...answerStructureChunk["tenseDescription"],
+                  ...translatedTenseDescArr,
+                ];
+              }
             });
           } else {
             answerStructureChunk[inflectorKey] =
+              //Epsilon say should be this:
+              // gpUtils.copyWithoutReference(questionStructureChunk[inflectorKey]);
               questionStructureChunk[inflectorKey];
           }
         }

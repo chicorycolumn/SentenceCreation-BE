@@ -684,7 +684,7 @@ let verbSet = [
   {
     //links
     translations: { ENG: ["write"] },
-    tags: ["basic2"],
+    tags: ["basic3"],
     //selectors
     lemma: "napisać",
     id: "pol-ver-004-pf-01",
