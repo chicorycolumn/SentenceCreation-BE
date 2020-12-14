@@ -8,7 +8,7 @@ exports.fetchPalette = (req) => {
   let kumquat = false;
 
   let {
-    sentenceNumber,
+    sentenceFormulaId,
     sentenceSymbol,
     useDummy,
     questionLanguage,
@@ -17,13 +17,13 @@ exports.fetchPalette = (req) => {
 
   let questionSentenceData = scUtils.processSentenceFormula(
     questionLanguage,
-    sentenceNumber,
+    sentenceFormulaId,
     sentenceSymbol,
     useDummy,
     kumquat
   );
 
-  sentenceNumber = questionSentenceData.sentenceNumber;
+  sentenceFormulaId = questionSentenceData.sentenceFormulaId;
   sentenceSymbol = questionSentenceData.sentenceSymbol;
 
   console.log("palette.model > questionSentenceData", questionSentenceData);
@@ -40,22 +40,56 @@ exports.fetchPalette = (req) => {
   if (answerLanguage) {
     kumquat = true;
 
-    let answerSentenceData = scUtils.processSentenceFormula(
-      answerLanguage,
-      sentenceNumber,
-      sentenceSymbol,
-      useDummy,
-      kumquat,
-      questionSentenceData.arrayOfOutputArrays[0],
-      questionLanguage
-    );
+    let translations =
+      questionSentenceData.sentenceFormula.translations[answerLanguage];
 
-    answerResponseObj = scUtils.formatFinalSentence(
-      answerSentenceData.arrayOfOutputArrays,
-      answerSentenceData.sentenceFormula,
-      answerSentenceData.errorInSentenceCreation,
-      kumquat
-    );
+    if (!translations || !translations.length) {
+      throw "palette.model > I was asked to give translations, but the question sentence formula did not have any translations listed.";
+    }
+
+    translations.forEach((translationSentenceFormulaId) => {
+      let answerSentenceData = scUtils.processSentenceFormula(
+        answerLanguage,
+        translationSentenceFormulaId,
+        sentenceSymbol,
+        useDummy,
+        kumquat,
+        questionSentenceData.arrayOfOutputArrays[0],
+        questionLanguage
+      );
+
+      if (!answerResponseObj) {
+        answerResponseObj = scUtils.formatFinalSentence(
+          answerSentenceData.arrayOfOutputArrays,
+          answerSentenceData.sentenceFormula,
+          answerSentenceData.errorInSentenceCreation,
+          kumquat
+        );
+
+        console.log(
+          "#11 answerResponseObj.finalSentenceArr",
+          answerResponseObj.finalSentenceArr
+        );
+      } else {
+        let subsequentAnswerResponseObj = scUtils.formatFinalSentence(
+          answerSentenceData.arrayOfOutputArrays,
+          answerSentenceData.sentenceFormula,
+          answerSentenceData.errorInSentenceCreation,
+          kumquat
+        );
+
+        console.log(
+          "#22 subsequentAnswerResponseObj.finalSentenceArr",
+          subsequentAnswerResponseObj.finalSentenceArr
+        );
+
+        subsequentAnswerResponseObj.finalSentenceArr.forEach(
+          (finalSentence) => {
+            answerResponseObj.finalSentenceArr.push(finalSentence);
+          }
+        );
+      }
+    });
   }
 
   console.log("palette.model > answerResponseObj", answerResponseObj);

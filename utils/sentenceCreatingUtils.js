@@ -6,7 +6,7 @@ const allLangUtils = require("../utils/allLangUtils.js");
 
 exports.processSentenceFormula = (
   currentLanguage,
-  sentenceNumber,
+  sentenceFormulaId,
   sentenceSymbol,
   useDummy,
   kumquat,
@@ -29,7 +29,7 @@ exports.processSentenceFormula = (
     dummySentenceFormulasBank,
   } = require(`../source/${currentLanguage}/dummy/dummySentenceFormulas.js`);
 
-  let defaultSentenceNumber = 50;
+  let defaultSentenceFormulaId = "POL-00-50";
   let defaultSentenceSymbol = "";
   sentenceSymbol = sentenceSymbol || defaultSentenceSymbol;
   let errorInSentenceCreation = { errorMessage: null };
@@ -42,8 +42,17 @@ exports.processSentenceFormula = (
     ? gpUtils.copyWithoutReference(dummySentenceFormulasBank)
     : gpUtils.copyWithoutReference(sentenceFormulasBank);
 
-  if (sentenceNumber) {
-    sentenceFormula = sentenceFormulas[sentenceNumber];
+  if (sentenceFormulaId) {
+    let matchingSentenceFormulaData = otUtils.findObjectInNestedObject(
+      sentenceFormulas,
+      {
+        sentenceFormulaId: sentenceFormulaId,
+      },
+      true
+    );
+
+    sentenceFormula = matchingSentenceFormulaData.value;
+    sentenceFormulaId = sentenceFormula.sentenceFormulaId;
     sentenceSymbol = sentenceFormula.symbol;
   } else if (sentenceSymbol) {
     let matchingSentenceFormulaData = otUtils.findObjectInNestedObject(
@@ -55,9 +64,19 @@ exports.processSentenceFormula = (
     );
 
     sentenceFormula = matchingSentenceFormulaData.value;
-    sentenceNumber = matchingSentenceFormulaData.key;
+    sentenceFormulaId = sentenceFormula.sentenceFormulaId;
+    sentenceSymbol = sentenceFormula.symbol;
   } else {
-    sentenceFormula = sentenceFormulas[defaultSentenceNumber];
+    let matchingSentenceFormulaData = otUtils.findObjectInNestedObject(
+      sentenceFormulas,
+      {
+        sentenceFormulaId: defaultSentenceFormulaId,
+      },
+      true
+    );
+
+    sentenceFormula = matchingSentenceFormulaData.value;
+    sentenceFormulaId = sentenceFormula.sentenceFormulaId;
     sentenceSymbol = sentenceFormula.symbol;
   }
 
@@ -125,7 +144,7 @@ exports.processSentenceFormula = (
       return {
         outputArr: null,
         sentenceFormula,
-        sentenceNumber,
+        sentenceFormulaId,
         sentenceSymbol,
         errorInSentenceCreation,
       };
@@ -205,7 +224,7 @@ exports.processSentenceFormula = (
             return {
               outputArr: null,
               sentenceFormula,
-              sentenceNumber,
+              sentenceFormulaId,
               sentenceSymbol,
               errorInSentenceCreation,
             };
@@ -313,7 +332,7 @@ exports.processSentenceFormula = (
       return {
         outputArr: null,
         sentenceFormula,
-        sentenceNumber,
+        sentenceFormulaId,
         sentenceSymbol,
         errorInSentenceCreation,
       };
@@ -348,7 +367,7 @@ exports.processSentenceFormula = (
   return {
     arrayOfOutputArrays: grandOutputArray,
     sentenceFormula,
-    sentenceNumber,
+    sentenceFormulaId,
     sentenceSymbol,
     errorInSentenceCreation,
   };

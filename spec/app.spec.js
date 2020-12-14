@@ -19,7 +19,6 @@ describe("/api", () => {
           questionLanguage: "POL",
           answerLanguage: "ENG",
           sentenceSymbol: "101a girl is reading",
-          // sentenceNumber: "101a",
         })
         .expect(200)
         .then((res) => {
@@ -64,7 +63,7 @@ describe("/api", () => {
         .send({
           questionLanguage: "POL",
           answerLanguage: "ENG",
-          sentenceSymbol: "101c girl *reads quickly",
+          sentenceSymbol: "101b girl *reads quickly",
         })
         .expect(200)
         .then((res) => {
@@ -111,10 +110,11 @@ describe("/api", () => {
           console.log({ "RESULT: res.body:": res.body });
         });
     });
-    it.only("#pal06-02a GET 200 YES: Returns sentence with translations, POL to ENG, where two different sentenceFormula answers.", () => {
+    it("#pal06-02a GET 200 YES: Returns sentence with translations, POL to ENG, where two different sentenceFormula answers.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          useDummy: true,
           questionLanguage: "POL",
           answerLanguage: "ENG",
           sentenceSymbol: "dummy25a good day",
@@ -134,10 +134,11 @@ describe("/api", () => {
           console.log({ "RESULT: res.body:": res.body });
         });
     });
-    it.only("#pal06-02b GET 200 YES: Returns sentence with translations, ENG to POL, where two different sentenceFormula answers.", () => {
+    it("#pal06-02b GET 200 YES: Returns sentence with translations, ENG to POL, where two different sentenceFormula answers.", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          useDummy: true,
           questionLanguage: "ENG",
           answerLanguage: "POL",
           sentenceSymbol: "dummy25a good day",
@@ -436,7 +437,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceSymbol: "dummy12 2per",
+          sentenceSymbol: "dummy12a 2per",
           useDummy: true,
         })
         .expect(200)
@@ -927,7 +928,6 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          // sentenceNumber: "55a",
           sentenceSymbol: "red apples",
         })
         .expect(200)
@@ -944,7 +944,6 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          // sentenceNumber: 56,
           sentenceSymbol: "red girls",
         })
         .expect(200)
@@ -967,7 +966,6 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          // sentenceNumber: 51,
           sentenceSymbol: "girl is wearing shirt",
         })
         .expect(200)
@@ -984,7 +982,6 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          // sentenceNumber: 52,
           sentenceSymbol: "shirt is in wardrobe",
         })
         .expect(200)
@@ -1000,7 +997,6 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          // sentenceNumber: 53,
           sentenceSymbol: "I often wear shirt",
         })
         .expect(200)
@@ -1017,7 +1013,6 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          // sentenceNumber: 54,
           sentenceSymbol: "boys are male",
         })
         .expect(200)
@@ -1046,7 +1041,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceNumber: "dummy01",
+          sentenceFormulaId: "POL-dummy01",
           useDummy: true,
         })
         .expect(200)
@@ -1062,7 +1057,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceNumber: "dummy02",
+          sentenceFormulaId: "POL-dummy02",
           useDummy: true,
         })
         .expect(200)
@@ -1078,7 +1073,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceNumber: "dummy03",
+          sentenceFormulaId: "POL-dummy03",
           useDummy: true,
         })
         .expect(200)
@@ -1094,7 +1089,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceNumber: "dummy04",
+          sentenceFormulaId: "POL-dummy04",
           useDummy: true,
         })
         .expect(200)
@@ -1110,7 +1105,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceNumber: "dummy05",
+          sentenceFormulaId: "POL-dummy05",
           useDummy: true,
         })
         .expect(200)
@@ -1124,7 +1119,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceNumber: "dummy06",
+          sentenceFormulaId: "POL-dummy06",
           useDummy: true,
         })
         .expect(200)
@@ -1138,7 +1133,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceNumber: "dummy07",
+          sentenceFormulaId: "POL-dummy07",
           useDummy: true,
         })
         .expect(200)
@@ -1154,7 +1149,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceNumber: "dummy08",
+          sentenceFormulaId: "POL-dummy08",
           useDummy: true,
         })
         .expect(200)
@@ -1168,7 +1163,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceNumber: "dummy19",
+          sentenceFormulaId: "POL-dummy19",
           useDummy: true,
         })
         .expect(200)

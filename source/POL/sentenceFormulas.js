@@ -1,6 +1,7 @@
 exports.sentenceFormulasBank = {
   50: {
     symbol: "girl eats apple",
+    sentenceFormulaId: "POL-00-50",
     structure: [
       {
         chunkId: "nou-1",
@@ -505,6 +506,8 @@ exports.sentenceFormulasBank = {
 
   "101a": {
     symbol: "101a girl is reading",
+    sentenceFormulaId: "POL-00-101a",
+    translations: { ENG: ["ENG-00-101a"] },
     structure: [
       {
         chunkId: "nou-1",
@@ -524,30 +527,9 @@ exports.sentenceFormulasBank = {
     ],
   },
   "101b": {
-    symbol: "101b girl f is reading",
-    structure: [
-      {
-        chunkId: "nou-1",
-        wordtype: "noun",
-        andTags: ["person"],
-        gcase: ["nom"],
-        number: ["singular"],
-        gender: ["f"],
-      },
-      {
-        chunkId: "ver-1",
-        agreeWith: "nou-1",
-        wordtype: "verb",
-        tenseDescription: ["present im"],
-        person: ["3per"],
-        andTags: ["basic2"],
-      },
-    ],
-    primaryOrders: [],
-    additionalOrders: [],
-  },
-  "101c": {
-    symbol: "101c girl *reads quickly",
+    symbol: "101b girl *reads quickly",
+    sentenceFormulaId: "POL-00-101b",
+    translations: { ENG: ["ENG-00-101b"] },
     structure: [
       {
         chunkId: "nou-1",

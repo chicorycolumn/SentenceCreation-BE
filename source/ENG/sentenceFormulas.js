@@ -1,6 +1,8 @@
 exports.sentenceFormulasBank = {
   "101a": {
     symbol: "101a girl is reading",
+    sentenceFormulaId: "ENG-00-101a",
+    translations: { POL: ["POL-00-101a"] },
     structure: [
       // {
       //   chunkId: "art-1",
@@ -29,36 +31,10 @@ exports.sentenceFormulasBank = {
     additionalOrders: [],
   },
   "101b": {
-    symbol: "101b girl f is reading",
-    structure: [
-      // {
-      //   chunkId: "art-1",
-      //   wordtype: "article",
-      //   agreeWith: "nou-1",
-      //   definiteness: ["definite", "indefinite", "zero"],
-      // },
-      { chunkId: "fix-1", wordtype: "fixed", value: "the" },
-      {
-        chunkId: "nou-1",
-        wordtype: "noun",
-        andTags: ["person"],
-        gcase: ["nom"],
-        number: ["singular", "plural"],
-      },
-      {
-        chunkId: "ver-1",
-        agreeWith: "nou-1",
-        wordtype: "verb",
-        person: ["3per"],
-        andTags: ["basic2"],
-      },
-    ],
-    primaryOrders: [["fix-1", "nou-1", "ver-1"]],
-    additionalOrders: [],
-  },
-  "101c": {
     symbol:
-      "101c girl *reads quickly IT WON'T MATTER THAT THIS SYMBOL IS DIFFERENT FROM ITS POL COUNTERPART",
+      "101b girl *reads quickly IT WON'T MATTER THAT THIS SYMBOL IS DIFFERENT FROM ITS POL COUNTERPART",
+    sentenceFormulaId: "ENG-00-101b",
+    translations: { POL: ["POL-00-101b"] },
     structure: [
       // {
       //   chunkId: "art-1",
