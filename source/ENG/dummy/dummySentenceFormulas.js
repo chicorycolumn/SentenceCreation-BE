@@ -37,10 +37,10 @@ exports.dummySentenceFormulasBank = {
     ],
     primaryOrders: [["fix-1", "ver-1"]],
   },
-  dummy28: {
-    sentenceFormulaSymbol: "dummy28",
-    sentenceFormulaId: "ENG-dummy28",
-    translations: { POL: ["POL-dummy28"] },
+  dummy27: {
+    sentenceFormulaSymbol: "dummy27",
+    sentenceFormulaId: "ENG-dummy27",
+    translations: { POL: ["POL-dummy27"] },
     structure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "I" },
       {
@@ -59,17 +59,38 @@ exports.dummySentenceFormulasBank = {
     ],
     primaryOrders: [["fix-1", "ver-1"]],
   },
-  dummy27: {
-    sentenceFormulaSymbol: "dummy27",
-    sentenceFormulaId: "ENG-dummy27",
-    translations: { POL: ["POL-dummy27"] },
+  dummy28: {
+    sentenceFormulaSymbol: "dummy28",
+    sentenceFormulaId: "ENG-dummy28",
+    translations: { POL: ["POL-dummy28"] },
     structure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "I" },
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        andTags: ["basic2"],
-        tenseDescription: ["past continuous"],
+        andTags: ["basic3"],
+        tenseDescription: [],
+        person: ["1per"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [["fix-1", "ver-1"]],
+  },
+  dummy29: {
+    sentenceFormulaSymbol: "dummy29",
+    sentenceFormulaId: "ENG-dummy29",
+    translations: { POL: ["POL-dummy29"] },
+    structure: [
+      { chunkId: "fix-1", wordtype: "fixed", value: "I" },
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        andTags: ["basic3"],
+        tenseDescription: [
+          "present simple",
+          "present continuous",
+          "present perfect",
+        ],
         person: ["1per"],
         number: ["singular"],
       },
