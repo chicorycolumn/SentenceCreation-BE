@@ -396,6 +396,27 @@ exports.processSentenceFormula = (
   //If kumquat is true, then grandOutputArray is array of all possible arrays of outputUnit combinations.
   //And if kumquat false, then grandOutputArray is array of just one said possible array.
 
+  grandOutputArray.forEach((outputArray) => {
+    outputArray.forEach((outputUnit) => {
+      if (outputUnit.structureChunk.wordtype === "fixed") {
+        return;
+      }
+
+      lfUtils.updateStructureChunkByAndTagsAndSelectors(
+        outputUnit,
+        currentLanguage
+      );
+      lfUtils.updateStructureChunkByInflections(outputUnit, currentLanguage);
+    });
+
+    console.log("These structureChunk s should be updated now.");
+    console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~v");
+    outputArray.forEach((structureChunk) => {
+      console.log(structureChunk);
+    });
+    console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^");
+  });
+
   return {
     arrayOfOutputArrays: grandOutputArray,
     sentenceFormula,
@@ -543,15 +564,30 @@ exports.conformAnswerStructureToQuestionStructure = (
     let questionSelectedWord = questionOutputArrItem.selectedWord;
     let questionStructureChunk = questionOutputArrItem.structureChunk;
 
+    console.log(
+      "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$questionStructureChunk",
+      questionStructureChunk
+    );
+
+    /**
+     * This ENG questionStructureChunk has not updated, even though it decanted itself into "past continuous". 
+     * 
+     * {
+  chunkId: 'ver-1',
+  wordtype: 'verb',
+  andTags: [],
+  tenseDescription: [ 'past continuous', 'future simple', 'future perfect' ],
+  person: [ '1per' ],
+  number: [ 'singular' ],
+  form: [ 'verbal' ]
+}
+     */
+
     // console.log(
     //   "So, the Polish lemma chosen was",
     //   questionSelectedLemmaObject.lemma
     // );
 
-    console.log(
-      "SC:conformAtoQ > questionSelectedLemmaObject",
-      questionSelectedLemmaObject
-    );
     let lemmasToSearch = questionSelectedLemmaObject.translations.ENG;
 
     // console.log(
@@ -583,9 +619,7 @@ exports.conformAnswerStructureToQuestionStructure = (
 
     refObj.lemmaObjectFeatures[
       answerLanguage
-    ].inflectionChains.allowableTransfersFromQuestionStructure[
-      answerStructureChunk.wordtype
-    ] //Alphaman say for tantum plurales, make Number blank (all possible) in english noun chunk
+    ].allowableTransfersFromQuestionStructure[answerStructureChunk.wordtype] //Alphaman say for tantum plurales, make Number blank (all possible) in english noun chunk
       .forEach((inflectorKey) => {
         if (questionStructureChunk[inflectorKey]) {
           if (inflectorKey === "tenseDescription") {
@@ -620,6 +654,10 @@ exports.conformAnswerStructureToQuestionStructure = (
               // gpUtils.copyWithoutReference(questionStructureChunk[inflectorKey]);
               questionStructureChunk[inflectorKey];
           }
+          console.log(
+            "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$answerStructureChunk",
+            answerStructureChunk
+          );
         }
       });
   });

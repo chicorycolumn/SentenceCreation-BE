@@ -483,7 +483,7 @@ describe("/api", () => {
           console.log({ "RESULT: res.body:": res.body.questionSentenceArr[0] });
         });
     });
-    xit("#pal05-03b GET 200 YES: Allow specification of multiple radically different tenseDescriptions, and then translate them. POL to ENG", () => {
+    it("#pal05-03b GET 200 YES: Allow specification of multiple radically different tenseDescriptions, and then translate them. POL to ENG", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -502,6 +502,7 @@ describe("/api", () => {
           if (res.body.questionSentenceArr[0] === "Czytałam.") {
             expect(res.body.answerSentenceArr).to.have.members([
               "I was reading.",
+              "I have read.",
             ]);
           } else if (res.body.questionSentenceArr[0] === "Przeczytam.") {
             expect(res.body.answerSentenceArr).to.have.members([
@@ -513,7 +514,7 @@ describe("/api", () => {
           console.log({ "RESULT: res.body:": res.body.questionSentenceArr[0] });
         });
     });
-    xit("#pal05-03c GET 200 YES: Allow specification of multiple radically different tenseDescriptions, and then translate them. ENG to POL", () => {
+    it.only("#pal05-03c GET 200 YES: Allow specification of multiple radically different tenseDescriptions, and then translate them. ENG to POL", () => {
       return request(app)
         .get("/api/palette")
         .send({

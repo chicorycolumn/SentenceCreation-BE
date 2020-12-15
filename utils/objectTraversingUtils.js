@@ -10,6 +10,12 @@ exports.findMatchingLemmaObjectThenWord = (
   questionLanguage,
   kumquat
 ) => {
+  console.log(
+    currentLanguage +
+      ">>>>>>>>>>>>>>>>>>>>>>OT.findMatchingLem start > structureChunk:",
+    structureChunk
+  );
+
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
   let selectedFormsArray = [];
   let arrayOfAllPossibleOutputUnits = [];
@@ -59,6 +65,9 @@ exports.findMatchingLemmaObjectThenWord = (
   //THREE (A): Ad-PW: Pathway for Ad hoc forms.
   if (Object.keys(adhocInflectorRef).includes(structureChunk.wordtype)) {
     Object.keys(adhocInflectorRef).forEach((adhocWordtype) => {
+      //Epsilon say:
+      //This seems strange, the above, to go through every wordtype,
+      //when actually, surely only the wordtype that matches the current structureChunk should be focused on.
       let adhocInflectorKeys = adhocInflectorRef[adhocWordtype];
 
       adhocInflectorKeys.forEach((adhocInflectorKey) => {
@@ -74,6 +83,9 @@ exports.findMatchingLemmaObjectThenWord = (
                 selectedLemmaObject,
                 currentLanguage
               );
+
+              //ALPHA: Keep a record of what adhoc or uninflected you chose, for each
+              //because that will be needed to update the structureChunk.
 
               adhocArr.forEach((selectedWord) => {
                 selectedFormsArray.push({
@@ -171,7 +183,7 @@ exports.findMatchingLemmaObjectThenWord = (
           errorInSentenceCreation,
           null,
           selectedWord,
-          structureChunk,
+          gpUtils.copyWithoutReference(structureChunk),
           selectedLemmaObject
         );
 

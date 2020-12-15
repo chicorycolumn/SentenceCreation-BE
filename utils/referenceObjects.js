@@ -63,7 +63,7 @@ exports.tenseDescriptionTranslation = {
       "past perfect": ["past pf"],
       "present simple": ["present im"],
       "present continuous": ["present im"],
-      "present perfect": ["past im"],
+      "present perfect": ["past im", "past pf"],
       "future simple": ["future pf"],
       "future continuous": ["future im"],
       "future perfect": ["future pf"],

@@ -21,6 +21,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaId: "ENG-dummy26",
     translations: { POL: ["POL-dummy26"] },
     structure: [
+      { chunkId: "fix-1", wordtype: "fixed", value: "I" },
       {
         chunkId: "ver-1",
         wordtype: "verb",
@@ -34,6 +35,6 @@ exports.dummySentenceFormulasBank = {
         number: ["singular"],
       },
     ],
-    primaryOrders: [],
+    primaryOrders: [["fix-1", "ver-1"]],
   },
 };
