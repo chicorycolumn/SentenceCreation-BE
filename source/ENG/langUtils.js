@@ -119,82 +119,190 @@ exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
       }
     });
 
+    function addToResArr(
+      adhocLabel,
+      adhocValue,
+      selectedWordArr,
+      structureChunk
+    ) {
+      let structureChunkCopy = gpUtils.copyWithoutReference(structureChunk);
+
+      lfUtils.updateStructureChunkByAdhocOnly(
+        structureChunkCopy,
+        currentLanguage,
+        adhocLabel,
+        adhocValue
+      );
+
+      let resObj = {
+        selectedTenseDescription,
+        selectedWordArr,
+        structureChunkUpdated: structureChunkCopy,
+      };
+
+      resArr.push(resObj);
+    }
+
     structureChunk.person.forEach((person) => {
       structureChunk.number.forEach((number) => {
         tenseDescriptionArr.forEach((selectedTenseDescription) => {
           if (selectedTenseDescription === "past simple") {
-            resArr.push(v2);
+            addToResArr(
+              "tenseDescription",
+              selectedTenseDescription,
+              [v2],
+              structureChunk
+            );
           }
 
           if (selectedTenseDescription === "past continuous") {
-            resArr.push(be["past"][person][number] + " " + gerund);
+            addToResArr(
+              "tenseDescription",
+              selectedTenseDescription,
+              [be["past"][person][number] + " " + gerund],
+              structureChunk
+            );
           }
 
           if (selectedTenseDescription === "past perfect") {
-            resArr.push(have["past"] + " " + v3);
+            addToResArr(
+              "tenseDescription",
+              selectedTenseDescription,
+              [have["past"] + " " + v3],
+              structureChunk
+            );
           }
 
           if (selectedTenseDescription === "present simple") {
             if (person === "3per" && number === "singular") {
-              resArr.push(thirdPS);
+              addToResArr(
+                "tenseDescription",
+                selectedTenseDescription,
+                [thirdPS],
+                structureChunk
+              );
             } else {
-              resArr.push(infinitive);
+              addToResArr(
+                "tenseDescription",
+                selectedTenseDescription,
+                [infinitive],
+                structureChunk
+              );
             }
           }
 
           if (selectedTenseDescription === "present continuous") {
-            resArr.push(be["present"][person][number] + " " + gerund);
+            addToResArr(
+              "tenseDescription",
+              selectedTenseDescription,
+              [be["present"][person][number] + " " + gerund],
+              structureChunk
+            );
           }
 
           if (selectedTenseDescription === "present perfect") {
-            resArr.push(have["present"][person][number] + " " + v3);
+            addToResArr(
+              "tenseDescription",
+              selectedTenseDescription,
+              [have["present"][person][number] + " " + v3],
+              structureChunk
+            );
           }
 
           if (selectedTenseDescription === "future simple") {
-            resArr.push("will" + " " + infinitive);
+            addToResArr(
+              "tenseDescription",
+              selectedTenseDescription,
+              ["will" + " " + infinitive],
+              structureChunk
+            );
           }
 
           if (selectedTenseDescription === "future simple compound") {
-            resArr.push(
-              be["present"][person][number] +
-                " " +
-                "going to" +
-                " " +
-                infinitive
+            addToResArr(
+              "tenseDescription",
+              selectedTenseDescription,
+              [
+                be["present"][person][number] +
+                  " " +
+                  "going to" +
+                  " " +
+                  infinitive,
+              ],
+              structureChunk
             );
           }
 
           if (selectedTenseDescription === "future continuous") {
-            resArr.push(be.future + " " + gerund);
+            addToResArr(
+              "tenseDescription",
+              selectedTenseDescription,
+              [be.future + " " + gerund],
+              structureChunk
+            );
           }
 
           if (selectedTenseDescription === "future continuous compound") {
-            resArr.push(
-              be["present"][person][number] + " " + "going to be" + " " + gerund
+            addToResArr(
+              "tenseDescription",
+              selectedTenseDescription,
+              [
+                be["present"][person][number] +
+                  " " +
+                  "going to be" +
+                  " " +
+                  gerund,
+              ],
+              structureChunk
             );
           }
 
           if (selectedTenseDescription === "future perfect") {
-            resArr.push(have.future + " " + v3);
+            addToResArr(
+              "tenseDescription",
+              selectedTenseDescription,
+              [have.future + " " + v3],
+              structureChunk
+            );
           }
 
           if (
             selectedTenseDescription === "conditional" ||
             selectedTenseDescription === "conditional simple"
           ) {
-            resArr.push("would" + " " + infinitive);
+            addToResArr(
+              "tenseDescription",
+              selectedTenseDescription,
+              ["would" + " " + infinitive],
+              structureChunk
+            );
           }
 
           if (selectedTenseDescription === "conditional continuous") {
-            resArr.push(be.conditional + " " + gerund);
+            addToResArr(
+              "tenseDescription",
+              selectedTenseDescription,
+              [be.conditional + " " + gerund],
+              structureChunk
+            );
           }
 
           if (selectedTenseDescription === "conditional perfect") {
-            resArr.push(have.conditional + " " + v3);
+            addToResArr(
+              "tenseDescription",
+              selectedTenseDescription,
+              [have.conditional + " " + v3],
+              structureChunk
+            );
           }
 
           if (selectedTenseDescription === "imperative") {
-            resArr.push(infinitive);
+            addToResArr(
+              "tenseDescription",
+              selectedTenseDescription,
+              [infinitive],
+              structureChunk
+            );
           }
         });
       });

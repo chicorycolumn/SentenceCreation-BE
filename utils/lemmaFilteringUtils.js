@@ -113,6 +113,15 @@ exports.filterWithinSelectedLemmaObject = (
   }
 };
 
+exports.updateStructureChunkByAdhocOnly = (
+  structureChunk,
+  currentLanguage,
+  adhocLabel,
+  adhocValue
+) => {
+  structureChunk[adhocLabel] = [adhocValue];
+};
+
 exports.updateStructureChunkByInflections = (outputUnit, currentLanguages) => {
   if (outputUnit.drillPath) {
     outputUnit.drillPath.forEach((drillPathSubArr) => {

@@ -79,7 +79,7 @@ exports.findMatchingLemmaObjectThenWord = (
           if (kumquat) {
             matches.forEach((selectedLemmaObject) => {
               let adhocArr = langUtils.generateAdhocForms(
-                structureChunk,
+                gpUtils.copyWithoutReference(structureChunk),
                 selectedLemmaObject,
                 currentLanguage
               );
@@ -87,10 +87,17 @@ exports.findMatchingLemmaObjectThenWord = (
               //ALPHA: Keep a record of what adhoc or uninflected you chose, for each
               //because that will be needed to update the structureChunk.
 
-              adhocArr.forEach((selectedWord) => {
+              adhocArr.forEach((adhocResultObj) => {
+                let {
+                  selectedTenseDescription,
+                  selectedWordArr,
+                  structureChunkUpdated,
+                } = adhocResultObj;
+
                 selectedFormsArray.push({
-                  selectedWordArr: [selectedWord],
+                  selectedWordArr,
                   selectedLemmaObject,
+                  structureChunkUpdatedByAdhocOrUninflected: structureChunkUpdated,
                 });
               });
             });
@@ -98,16 +105,23 @@ exports.findMatchingLemmaObjectThenWord = (
             let selectedLemmaObject = gpUtils.selectRaandom(matches);
 
             let adhocArr = langUtils.generateAdhocForms(
-              structureChunk,
+              gpUtils.copyWithoutReference(structureChunk),
               selectedLemmaObject,
               currentLanguage
             );
 
-            let selectedWord = gpUtils.selectRaandom(adhocArr);
+            let selectedAdhocResultObj = gpUtils.selectRaandom(adhocArr);
+
+            let {
+              selectedTenseDescription,
+              selectedWordArr,
+              structureChunkUpdated,
+            } = selectedAdhocResultObj;
 
             selectedFormsArray.push({
-              selectedWordArr: [selectedWord],
+              selectedWordArr,
               selectedLemmaObject,
+              structureChunkUpdatedByAdhocOrUninflected: structureChunkUpdated,
             });
           }
         }
@@ -176,14 +190,18 @@ exports.findMatchingLemmaObjectThenWord = (
 
   if (selectedFormsArray.length) {
     selectedFormsArray.forEach((selectedFormObject) => {
-      let { selectedWordArr, selectedLemmaObject } = selectedFormObject;
+      let {
+        selectedWordArr,
+        selectedLemmaObject,
+        structureChunkUpdatedByAdhocOrUninflected,
+      } = selectedFormObject;
 
       selectedWordArr.forEach((selectedWord) => {
         let outputUnit = exports.createOutputUnit(
           errorInSentenceCreation,
           null,
           selectedWord,
-          gpUtils.copyWithoutReference(structureChunk),
+          structureChunkUpdatedByAdhocOrUninflected,
           selectedLemmaObject
         );
 
