@@ -665,4 +665,38 @@ exports.dummySentenceFormulasBank = {
     ],
     primaryOrders: [],
   },
+  dummy28: {
+    sentenceFormulaSymbol: "dummy28",
+    sentenceFormulaId: "POL-dummy28",
+    translations: { ENG: ["ENG-dummy28"] },
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        andTags: ["basic2"],
+        tenseDescription: ["present im", "future pf"],
+        person: ["1per"],
+        number: ["singular"],
+        // gender: ["f"],
+      },
+    ],
+    primaryOrders: [],
+  },
+  dummy27: {
+    sentenceFormulaSymbol: "dummy27",
+    sentenceFormulaId: "POL-dummy27",
+    translations: { ENG: ["ENG-dummy27"] },
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        andTags: ["basic2"],
+        tenseDescription: ["past im"],
+        person: ["1per"],
+        number: ["singular"],
+        gender: ["f"],
+      },
+    ],
+    primaryOrders: [],
+  },
 };
