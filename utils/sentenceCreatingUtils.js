@@ -629,7 +629,7 @@ exports.conformAnswerStructureToQuestionStructure = (
   person: [ '1per' ],
   number: [ 'singular' ],
   form: [ 'verbal' ]
-}
+    }
      */
 
     // console.log(
@@ -709,6 +709,28 @@ exports.conformAnswerStructureToQuestionStructure = (
           );
         }
       });
+
+    //Check for features-of-answer-lang-lobjs-that-aren't-features-of-question-lang-lobjs.
+    // So when going ENG to POL, that would be gender.
+    // And then, with that list of features, we will blind the answer structureChunks to these features.
+
+    let possibleInflectionsOfQuestionLobjs =
+      refObj.lemmaObjectFeatures[questionLanguage].inflectionChains[
+        answerStructureChunk.wordtype
+      ];
+
+    let possibleInflectionsOfAnswerLobjs =
+      refObj.lemmaObjectFeatures[answerLanguage].inflectionChains[
+        answerStructureChunk.wordtype
+      ];
+
+    let possibleInflectionsOfAnswerLobjsButNotQuestionLobjs = possibleInflectionsOfAnswerLobjs.filter(
+      (inflector) => !possibleInflectionsOfQuestionLobjs.includes(inflector)
+    );
+
+    possibleInflectionsOfAnswerLobjsButNotQuestionLobjs.forEach((inflector) => {
+      answerStructureChunk[inflector] = [];
+    });
   });
 };
 

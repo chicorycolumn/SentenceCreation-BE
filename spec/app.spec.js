@@ -514,7 +514,7 @@ describe("/api", () => {
           console.log({ "RESULT: res.body:": res.body.questionSentenceArr[0] });
         });
     });
-    it.only("#pal05-03c GET 200 YES: Allow specification of multiple radically different tenseDescriptions, and then translate them. ENG to POL. Works for tenseDescription.", () => {
+    it("#pal05-03c GET 200 YES: Allow specification of multiple radically different tenseDescriptions, and then translate them. ENG to POL. Works for tenseDescription.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -546,29 +546,7 @@ describe("/api", () => {
           console.log({ "RESULT: res.body:": res.body.questionSentenceArr[0] });
         });
     });
-    xit("#pal05-03d GET 200 YES: Allow specification of multiple radically different tenseDescriptions, and then translate them. ENG to POL. Works for gender.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage: "ENG",
-          answerLanguage: "POL",
-          sentenceFormulaSymbol: "dummy27",
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect(["I was reading."]).to.include(
-            res.body.questionSentenceArr[0]
-          );
-
-          expect(res.body.answerSentenceArr).to.have.members(["Czytałam."]);
-
-          //If "Będę czytała." or "Przeczytałam." are returned, it's because the unwanted cross pollination is happening.
-          console.log({ "RESULT: res.body:": res.body.questionSentenceArr[0] });
-        });
-    });
-    xit("#pal05-03e GET 200 YES: Allow specification of multiple radically different tenseDescriptions, and then translate them. ENG to POL. Works for tenseDescription and gender.", () => {
+    it("#pal05-03d GET 200 YES: Allow specification of multiple radically different tenseDescriptions, and then translate them. ENG to POL. Works for tenseDescription and gender.", () => {
       return request(app)
         .get("/api/palette")
         .send({

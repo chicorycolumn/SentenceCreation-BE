@@ -104,11 +104,11 @@ exports.fetchPalette = (req) => {
         );
       }
     });
+
+    console.log("palette.model > answerResponseObj", answerResponseObj);
+
+    scUtils.removeDuplicatesFromResponseObject(answerResponseObj);
   }
-
-  console.log("palette.model > answerResponseObj", answerResponseObj);
-
-  scUtils.removeDuplicatesFromResponseObject(answerResponseObj);
 
   let combinedResponseObj = {};
 
