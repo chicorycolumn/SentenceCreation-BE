@@ -74,7 +74,6 @@ exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
     structureChunk.wordtype === "verb" &&
     structureChunk.form.includes("verbal")
   ) {
-    //Generating ad hocs forms for tenseDescription ENG.
     if (
       !structureChunk.tenseDescription ||
       !structureChunk.tenseDescription.length

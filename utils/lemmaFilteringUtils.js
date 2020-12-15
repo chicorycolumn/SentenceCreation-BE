@@ -203,9 +203,27 @@ exports.updateStructureChunkByAndTagsAndSelectors = (
 ) => {
   let { selectedLemmaObject, structureChunk } = outputUnit;
 
-  structureChunk.andTags = structureChunk.andTags.filter((andTag) => {
-    selectedLemmaObject.tags.includes(andTag);
-  });
+  //Yellow option:
+  /**If structureChunk has any andTags, then filter that down to only
+   * the andTags that are present in the tags of the lObj.
+   */
+  if (structureChunk.andTags) {
+    structureChunk.andTags = structureChunk.andTags.filter((andTag) => {
+      selectedLemmaObject.tags.includes(andTag);
+    });
+  }
+
+  //Magenta option:
+  /**Even if structureChunk doesn't have any andTags, create such a key,
+   * and fill it with the tags from the lobj.
+   */
+  // if (structureChunk.andTags) {
+  //   structureChunk.andTags = structureChunk.andTags.filter((andTag) => {
+  //     selectedLemmaObject.tags.includes(andTag);
+  //   });
+  // } else {
+  //   structureChunk.andTags = selectedLemmaObject.tags.slice();
+  // }
 
   let selectors =
     refObj.lemmaObjectFeatures[currentLanguage].selectors[

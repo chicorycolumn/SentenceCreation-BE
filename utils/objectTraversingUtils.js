@@ -161,12 +161,26 @@ exports.findMatchingLemmaObjectThenWord = (
                 });
 
                 matchesByUninflectedForm.forEach((selectedLemmaObject) => {
-                  let selectedWord =
+                  let selectedWordArr =
                     selectedLemmaObject.inflections[selectedUninflectedForm];
 
+                  if (typeof selectedWordArr === "string") {
+                    selectedWordArr = [selectedWordArr];
+                  }
+
+                  //We here update a copy of structureChunk
+                  let structureChunkUpdatedByAdhocOrUninflected = gpUtils.copyWithoutReference(
+                    structureChunk
+                  );
+
+                  structureChunkUpdatedByAdhocOrUninflected.form = [
+                    selectedUninflectedForm,
+                  ];
+
                   selectedFormsArray.push({
-                    selectedWordArr: [selectedWord],
+                    selectedWordArr,
                     selectedLemmaObject,
+                    structureChunkUpdatedByAdhocOrUninflected,
                   });
                 });
               });
@@ -183,12 +197,26 @@ exports.findMatchingLemmaObjectThenWord = (
                 matchesByUninflectedForm
               );
 
-              let selectedWord =
+              let selectedWordArr =
                 selectedLemmaObject.inflections[selectedUninflectedForm];
 
+              if (typeof selectedWordArr === "string") {
+                selectedWordArr = [selectedWordArr];
+              }
+
+              //We here update a copy of structureChunk
+              let structureChunkUpdatedByAdhocOrUninflected = gpUtils.copyWithoutReference(
+                structureChunk
+              );
+
+              structureChunkUpdatedByAdhocOrUninflected.form = [
+                selectedUninflectedForm,
+              ];
+
               selectedFormsArray.push({
-                selectedWordArr: [selectedWord],
+                selectedWordArr,
                 selectedLemmaObject,
+                structureChunkUpdatedByAdhocOrUninflected,
               });
             }
           }
@@ -199,11 +227,17 @@ exports.findMatchingLemmaObjectThenWord = (
 
   if (selectedFormsArray.length) {
     selectedFormsArray.forEach((selectedFormObject) => {
+      console.log("-------------------------------------------------@d");
+      console.log(selectedFormObject);
+
       let {
         selectedWordArr,
         selectedLemmaObject,
         structureChunkUpdatedByAdhocOrUninflected,
       } = selectedFormObject;
+
+      console.log("-------------------------------------------------@e");
+      console.log(structureChunkUpdatedByAdhocOrUninflected);
 
       selectedWordArr.forEach((selectedWord) => {
         let outputUnit = exports.createOutputUnit(
@@ -214,6 +248,8 @@ exports.findMatchingLemmaObjectThenWord = (
           selectedLemmaObject
         );
 
+        console.log("-------------------------------------------------@f");
+        console.log(outputUnit);
         arrayOfAllPossibleOutputUnits.push(outputUnit);
       });
     });

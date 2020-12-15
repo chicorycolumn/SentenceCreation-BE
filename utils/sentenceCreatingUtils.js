@@ -434,6 +434,10 @@ exports.processSentenceFormula = (
     console.log("+");
 
     outputArray.forEach((outputUnit) => {
+      console.log("o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o");
+      console.log(outputUnit);
+      console.log("o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o");
+
       if (outputUnit.structureChunk.wordtype === "fixed") {
         return;
       }
