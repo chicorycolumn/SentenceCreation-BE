@@ -10,21 +10,6 @@ exports.findMatchingLemmaObjectThenWord = (
   questionLanguage,
   kumquat
 ) => {
-  console.log("OT:findMatchingLemmaObjectThenWord was given these args:", {
-    structureChunk,
-    words,
-    errorInSentenceCreation,
-    currentLanguage,
-    questionLanguage,
-    kumquat,
-  });
-
-  console.log(
-    currentLanguage +
-      ">>>>>>>>>>>>>>>>>>>>>>OT.findMatchingLem start > structureChunk:",
-    structureChunk
-  );
-
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
   let selectedFormsArray = [];
   let arrayOfAllPossibleOutputUnits = [];
@@ -227,17 +212,11 @@ exports.findMatchingLemmaObjectThenWord = (
 
   if (selectedFormsArray.length) {
     selectedFormsArray.forEach((selectedFormObject) => {
-      console.log("-------------------------------------------------@d");
-      console.log(selectedFormObject);
-
       let {
         selectedWordArr,
         selectedLemmaObject,
         structureChunkUpdatedByAdhocOrUninflected,
       } = selectedFormObject;
-
-      console.log("-------------------------------------------------@e");
-      console.log(structureChunkUpdatedByAdhocOrUninflected);
 
       selectedWordArr.forEach((selectedWord) => {
         let outputUnit = exports.createOutputUnit(
@@ -248,8 +227,6 @@ exports.findMatchingLemmaObjectThenWord = (
           selectedLemmaObject
         );
 
-        console.log("-------------------------------------------------@f");
-        console.log(outputUnit);
         arrayOfAllPossibleOutputUnits.push(outputUnit);
       });
     });
@@ -307,9 +284,6 @@ exports.findMatchingLemmaObjectThenWord = (
           currentLanguage,
           kumquat
         );
-        //At this point, subArrayOfOutputUnits has length 4 and they're all identical. Shouldn't.
-        console.log("@a subArrayOfOutputUnits", subArrayOfOutputUnits);
-        // throw subArrayOfOutputUnits.length + "Stop.";
 
         subArrayOfOutputUnits.forEach((unit) => {
           let { errorInDrilling, selectedWordArray, drillPath } = unit;
@@ -332,11 +306,6 @@ exports.findMatchingLemmaObjectThenWord = (
           });
         });
       });
-
-      console.log(
-        "@b arrayOfAllPossibleOutputUnits",
-        arrayOfAllPossibleOutputUnits
-      );
     } else {
       let selectedLemmaObject = gpUtils.selectRaandom(matchesCopy);
 
@@ -393,18 +362,10 @@ exports.findMatchingLemmaObjectThenWord = (
   }
 
   if (!kumquat && arrayOfAllPossibleOutputUnits.length > 1) {
-    console.log(
-      "At the end of OT.findMatchingLem, the arrayOfAllPossibleOutputUnits array had more than one member. This should only be because of tenseDescription parsing."
-    );
-    console.log("arrayOfAllPossibleOutputUnits", arrayOfAllPossibleOutputUnits);
     arrayOfAllPossibleOutputUnits = [
       gpUtils.selectRaandom(arrayOfAllPossibleOutputUnits),
     ];
   }
-
-  console.log("ww------------------------------------");
-  console.log(arrayOfAllPossibleOutputUnits.length);
-  console.log(arrayOfAllPossibleOutputUnits[0].structureChunk);
 
   return arrayOfAllPossibleOutputUnits;
 };

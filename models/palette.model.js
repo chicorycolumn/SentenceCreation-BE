@@ -26,22 +26,6 @@ exports.fetchPalette = (req) => {
   sentenceFormulaId = questionSentenceData.sentenceFormulaId;
   sentenceFormulaSymbol = questionSentenceData.sentenceFormulaSymbol;
 
-  console.log("-");
-  console.log("---");
-  console.log("-------");
-  console.log("palette.model > questionSentenceData", questionSentenceData);
-  questionSentenceData.arrayOfOutputArrays.forEach((outputArray) => {
-    console.log("~~~~~~~~~~~");
-    console.log(
-      "palette.model > questionSentenceData > outputArray",
-      outputArray
-    );
-  });
-
-  console.log("-------");
-  console.log("---");
-  console.log("-");
-
   let questionResponseObj = scUtils.giveFinalSentences(
     questionSentenceData.arrayOfOutputArrays,
     questionSentenceData.sentenceFormula,
@@ -79,22 +63,12 @@ exports.fetchPalette = (req) => {
           answerSentenceData.errorInSentenceCreation,
           kumquat
         );
-
-        console.log(
-          "#11 answerResponseObj.finalSentenceArr",
-          answerResponseObj.finalSentenceArr
-        );
       } else {
         let subsequentAnswerResponseObj = scUtils.giveFinalSentences(
           answerSentenceData.arrayOfOutputArrays,
           answerSentenceData.sentenceFormula,
           answerSentenceData.errorInSentenceCreation,
           kumquat
-        );
-
-        console.log(
-          "#22 subsequentAnswerResponseObj.finalSentenceArr",
-          subsequentAnswerResponseObj.finalSentenceArr
         );
 
         subsequentAnswerResponseObj.finalSentenceArr.forEach(
@@ -134,8 +108,6 @@ exports.fetchPalette = (req) => {
       }
     }
   });
-
-  console.log("palette.model > combinedResponseObj", combinedResponseObj);
 
   return Promise.all([combinedResponseObj]).then((array) => {
     return array[0];

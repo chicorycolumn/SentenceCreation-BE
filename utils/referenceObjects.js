@@ -29,11 +29,11 @@ exports.lemmaObjectFeatures = {
       noun: ["number", "gcase"],
       adjective: ["form"],
       verb: ["form", "tense", "person", "number"],
-      allowableTransfersFromQuestionStructure: {
-        noun: ["number"],
-        adjective: ["form"],
-        verb: ["tenseDescription", "person", "number"],
-      },
+    },
+    allowableTransfersFromQuestionStructure: {
+      noun: ["number"],
+      adjective: ["form"],
+      verb: ["tenseDescription", "person", "number"],
     },
   },
 };

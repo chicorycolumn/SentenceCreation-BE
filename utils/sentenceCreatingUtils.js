@@ -14,16 +14,6 @@ exports.processSentenceFormula = (
   questionOutputArr,
   questionLanguage
 ) => {
-  console.log("SC:processSentenceFormula was given these args:", {
-    currentLanguage,
-    sentenceFormulaId,
-    sentenceFormulaSymbol,
-    useDummy,
-    kumquat,
-    questionOutputArr,
-    questionLanguage,
-  });
-
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
 
   let grandOutputArray = [];
@@ -99,7 +89,6 @@ exports.processSentenceFormula = (
   let sentenceStructure = sentenceFormula.structure;
 
   if (kumquat) {
-    console.log("@j");
     exports.conformAnswerStructureToQuestionStructure(
       sentenceStructure,
       questionOutputArr,
@@ -107,10 +96,7 @@ exports.processSentenceFormula = (
       currentLanguage,
       questionLanguage
     );
-    console.log("@k");
   }
-
-  console.log("@l sentenceStructure", sentenceStructure);
 
   allLangUtils.preprocessStructureChunks(sentenceStructure);
   langUtils.preprocessStructureChunks(sentenceStructure);
@@ -130,11 +116,6 @@ exports.processSentenceFormula = (
   let headOutputUnitArrays = [];
 
   console.log({ headIds });
-
-  console.log(
-    "@p grandOutputArray.length before headChunk processing",
-    grandOutputArray.length
-  );
 
   //STEP ONE: Select headwords and add to result array.
   headIds.forEach((headId, headIdIndex) => {
@@ -246,7 +227,6 @@ exports.processSentenceFormula = (
           });
 
           console.log("dependentChunk", dependentChunk);
-          // throw "Cease.";
 
           let allPossOutputUnits_dependent = otUtils.findMatchingLemmaObjectThenWord(
             gpUtils.copyWithoutReference(dependentChunk),
@@ -315,13 +295,6 @@ exports.processSentenceFormula = (
   //                                                [ 'chłopiec', 'ma', 'jabłko', 'czerwone' ]
   //                                             ]
 
-  // console.log("grandOutputArray", grandOutputArray.map((x) => x.map((y) => y.selectedWord)));
-
-  console.log(
-    "@p grandOutputArray.length after head+dep processing",
-    grandOutputArray.length
-  );
-
   let otherChunkIds = [];
 
   if (grandOutputArray.length) {
@@ -352,8 +325,6 @@ exports.processSentenceFormula = (
     );
   }
 
-  // console.log("@o", { otherChunkIds });
-
   let grandAllPossOutputUnits_other = [];
 
   otherChunkIds.forEach((otherChunkId) => {
@@ -369,9 +340,6 @@ exports.processSentenceFormula = (
       questionLanguage,
       kumquat
     );
-
-    //This allPossOutputUnits_other has four duplicate items, just from one pass.
-    console.log("@q", { allPossOutputUnits_other });
 
     if (
       errorInSentenceCreation.errorMessage ||
@@ -409,35 +377,12 @@ exports.processSentenceFormula = (
     );
   }
 
-  console.log(
-    "@p grandOutputArray.length after all otherChunk processing",
-    grandOutputArray.length
-  );
-
-  //Epsilon: On test #pal05-03c the grandOutputArray right here
-  //has four outputArrays, each one the same.
-  //This generates a final answerSentenceArray of ["Pisz€", "Pisz€", "Pisz€", "Pisz€"]
-  //when that array should only be ["Pisz€"].
-
   //Everything has passed inspection in this whole fxn, as of 11/12/20.
   //If kumquat is true, then grandOutputArray is array of all possible arrays of outputUnit combinations.
   //And if kumquat false, then grandOutputArray is array of just one said possible array.
 
-  console.log("grandOutputArray.length", grandOutputArray.length);
   grandOutputArray.forEach((outputArray, outputArrayIndex) => {
-    console.log("+");
-    console.log("+++");
-    console.log("++++++");
-    console.log("outputArray.length", outputArray.length);
-    console.log("++++++");
-    console.log("+++");
-    console.log("+");
-
     outputArray.forEach((outputUnit) => {
-      console.log("o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o");
-      console.log(outputUnit);
-      console.log("o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o");
-
       if (outputUnit.structureChunk.wordtype === "fixed") {
         return;
       }
@@ -448,16 +393,6 @@ exports.processSentenceFormula = (
       );
       lfUtils.updateStructureChunkByInflections(outputUnit, currentLanguage);
     });
-
-    console.log(
-      "These structureChunks in these outputUnits should be updated now."
-    );
-    console.log({ outputArrayIndex });
-    console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~v");
-    outputArray.forEach((outputUnit) => {
-      console.log(outputUnit);
-    });
-    console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^");
   });
 
   return {
@@ -588,10 +523,6 @@ exports.conformAnswerStructureToQuestionStructure = (
   answerLanguage,
   questionLanguage
 ) => {
-  console.log("@@conformAnswerStructureToQuestionStructure start");
-  console.log("questionOutputArr", questionOutputArr);
-  // throw "Oi";
-
   questionOutputArr.forEach((questionOutputArrItem) => {
     let answerStructureChunk = sentenceStructure.find((structureChunk) => {
       return (
@@ -603,12 +534,6 @@ exports.conformAnswerStructureToQuestionStructure = (
       return;
     }
 
-    console.log(
-      "-----------------questionOutputArrItem",
-      questionOutputArrItem
-    );
-    console.log("-----------------answerStructureChunk", answerStructureChunk);
-
     if (questionOutputArrItem.structureChunk.wordtype === "fixed") {
       return;
     }
@@ -616,25 +541,6 @@ exports.conformAnswerStructureToQuestionStructure = (
     let questionSelectedLemmaObject = questionOutputArrItem.selectedLemmaObject;
     let questionSelectedWord = questionOutputArrItem.selectedWord;
     let questionStructureChunk = questionOutputArrItem.structureChunk;
-
-    console.log(
-      "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$questionStructureChunk",
-      questionStructureChunk
-    );
-
-    /**
-     * This ENG questionStructureChunk has not updated, even though it decanted itself into "past continuous". 
-     * 
-     * {
-  chunkId: 'ver-1',
-  wordtype: 'verb',
-  andTags: [],
-  tenseDescription: [ 'past continuous', 'future simple', 'future perfect' ],
-  person: [ '1per' ],
-  number: [ 'singular' ],
-  form: [ 'verbal' ]
-    }
-     */
 
     // console.log(
     //   "So, the Polish lemma chosen was",
@@ -707,10 +613,6 @@ exports.conformAnswerStructureToQuestionStructure = (
               // gpUtils.copyWithoutReference(questionStructureChunk[inflectorKey]);
               questionStructureChunk[inflectorKey];
           }
-          console.log(
-            "$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$answerStructureChunk",
-            answerStructureChunk
-          );
         }
       });
 
