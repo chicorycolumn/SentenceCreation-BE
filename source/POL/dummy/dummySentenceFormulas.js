@@ -673,7 +673,7 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        andTags: ["basic2"],
+        andTags: ["basic3"],
         tenseDescription: ["present im", "future pf"],
         person: ["1per"],
         number: ["singular"],

@@ -546,7 +546,7 @@ describe("/api", () => {
           console.log({ "RESULT: res.body:": res.body.questionSentenceArr[0] });
         });
     });
-    it.only("#pal05-03d GET 200 YES: Allow specification of multiple radically different tenseDescriptions, and then translate them. ENG to POL. Works for gender.", () => {
+    xit("#pal05-03d GET 200 YES: Allow specification of multiple radically different tenseDescriptions, and then translate them. ENG to POL. Works for gender.", () => {
       return request(app)
         .get("/api/palette")
         .send({

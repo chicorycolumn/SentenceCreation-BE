@@ -26,7 +26,21 @@ exports.fetchPalette = (req) => {
   sentenceFormulaId = questionSentenceData.sentenceFormulaId;
   sentenceFormulaSymbol = questionSentenceData.sentenceFormulaSymbol;
 
+  console.log("-");
+  console.log("---");
+  console.log("-------");
   console.log("palette.model > questionSentenceData", questionSentenceData);
+  questionSentenceData.arrayOfOutputArrays.forEach((outputArray) => {
+    console.log("~~~~~~~~~~~");
+    console.log(
+      "palette.model > questionSentenceData > outputArray",
+      outputArray
+    );
+  });
+
+  console.log("-------");
+  console.log("---");
+  console.log("-");
 
   let questionResponseObj = scUtils.giveFinalSentences(
     questionSentenceData.arrayOfOutputArrays,
@@ -93,6 +107,8 @@ exports.fetchPalette = (req) => {
   }
 
   console.log("palette.model > answerResponseObj", answerResponseObj);
+
+  scUtils.removeDuplicatesFromResponseObject(answerResponseObj);
 
   let combinedResponseObj = {};
 

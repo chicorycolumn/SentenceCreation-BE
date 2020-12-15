@@ -8,6 +8,13 @@ exports.filterWithinSelectedLemmaObject = (
   currentLanguage,
   kumquat
 ) => {
+  console.log("@c filterWithinSelectedLem was given these args:", {
+    lemmaObject,
+    structureChunk,
+    currentLanguage,
+    kumquat,
+  });
+
   //STEP ZERO: Get necessary materials, ie inflectionPaths and requirementArrs.
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
 
@@ -35,12 +42,67 @@ exports.filterWithinSelectedLemmaObject = (
 
   traverseAndRecordInflections(source, requirementArrs, pathRecord);
 
+  //And here, finally, is the issue.
+  //This only happens in kumquat as in non kumquat the pathRecord is selectRaandomed to just one.
+  //pathRecord is this:
+
+  /**[
+   
+  {
+    selectedWordArray: [ 'napiszę' ],
+    drillPath: [
+                  [ 'form', 'verbal' ],
+                  [ 'tense', 'future' ],
+                  [ 'person', '1per' ],
+                  [ 'number', 'singular' ],
+                  [ 'gender', 'm1' ]
+                ]
+  },
+
+  {
+    selectedWordArray: [ 'napiszę' ],
+    drillPath: [
+                  [ 'form', 'verbal' ],
+                  [ 'tense', 'future' ],
+                  [ 'person', '1per' ],
+                  [ 'number', 'singular' ],
+                  [ 'gender', 'm2' ]
+                ]
+  },
+
+  {
+    selectedWordArray: [ 'napiszę' ],
+    drillPath: [
+                  [ 'form', 'verbal' ],
+                  [ 'tense', 'future' ],
+                  [ 'person', '1per' ],
+                  [ 'number', 'singular' ],
+                  [ 'gender', 'm3' ]
+                ]
+  },
+
+  {
+    selectedWordArray: [ 'napiszę' ],
+    drillPath: [
+                  [ 'form', 'verbal' ],
+                  [ 'tense', 'future' ],
+                  [ 'person', '1per' ],
+                  [ 'number', 'singular' ],
+                  [ 'gender', 'f' ]
+                ]
+  }
+  
+] */
+  console.log("@d pathRecord", pathRecord);
+  pathRecord.forEach((x) => console.log(x.drillPath));
+
   if (!pathRecord || !pathRecord.length) {
     errorInDrilling = true;
     return false;
   }
 
   if (kumquat) {
+    //Zeta this could be tidied up. Just add errorInDrilling to the array and return that, instead of mapping it.
     return pathRecord.map((selectedPath) => {
       let { selectedWordArray, drillPath } = selectedPath;
       return {

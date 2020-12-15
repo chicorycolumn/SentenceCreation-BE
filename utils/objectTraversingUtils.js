@@ -10,6 +10,15 @@ exports.findMatchingLemmaObjectThenWord = (
   questionLanguage,
   kumquat
 ) => {
+  console.log("OT:findMatchingLemmaObjectThenWord was given these args:", {
+    structureChunk,
+    words,
+    errorInSentenceCreation,
+    currentLanguage,
+    questionLanguage,
+    kumquat,
+  });
+
   console.log(
     currentLanguage +
       ">>>>>>>>>>>>>>>>>>>>>>OT.findMatchingLem start > structureChunk:",
@@ -262,6 +271,9 @@ exports.findMatchingLemmaObjectThenWord = (
           currentLanguage,
           kumquat
         );
+        //At this point, subArrayOfOutputUnits has length 4 and they're all identical. Shouldn't.
+        console.log("@a subArrayOfOutputUnits", subArrayOfOutputUnits);
+        // throw subArrayOfOutputUnits.length + "Stop.";
 
         subArrayOfOutputUnits.forEach((unit) => {
           let { errorInDrilling, selectedWordArray, drillPath } = unit;
@@ -284,6 +296,11 @@ exports.findMatchingLemmaObjectThenWord = (
           });
         });
       });
+
+      console.log(
+        "@b arrayOfAllPossibleOutputUnits",
+        arrayOfAllPossibleOutputUnits
+      );
     } else {
       let selectedLemmaObject = gpUtils.selectRaandom(matchesCopy);
 
