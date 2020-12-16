@@ -38,6 +38,31 @@ exports.lemmaObjectFeatures = {
   },
 };
 
+exports.allFeatureValues = {
+  ENG: {
+    tenseDescription: [
+      "past simple",
+      "past continuous",
+      "past perfect",
+      "present simple",
+      "present continuous",
+      "present perfect",
+      "future simple",
+      "future continuous",
+      "future perfect",
+    ],
+  },
+  POL: {
+    tenseDescription: [
+      "past im",
+      "present im",
+      "future im",
+      "past pf",
+      "future pf",
+    ],
+  },
+};
+
 exports.uninflectedForms = {
   POL: { verb: ["contemporaryAdverbial", "anteriorAdverbial"] },
   ENG: {

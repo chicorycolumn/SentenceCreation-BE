@@ -11,7 +11,7 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe.only("/palette - Stage 6: Returning Polish with English translations of rich sentences (with nouns adjectives and verbs).", () => {
+  describe("/palette - Stage 6: Returning Polish with English translations of rich sentences (with nouns adjectives and verbs).", () => {
     it("#pal06-01a GET 200 YES: Returns sentence with all translations (RSWAT).", () => {
       return request(app)
         .get("/api/palette")
@@ -278,7 +278,7 @@ describe("/api", () => {
           ]);
         });
     });
-    it.only("#pal06-04a GET 200 YES: Returns just the ENG sentence, where tenseDescriptions were left blank.", () => {
+    it("#pal06-04a GET 200 YES: Returns just the ENG sentence, where tenseDescriptions were left blank.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -289,20 +289,20 @@ describe("/api", () => {
         .expect(200)
         .then((res) => {
           console.log({ "RESULT: res.body:": res.body });
-          expect(res.body.questionSentenceArr.length).to.be.greaterThan(0);
+          expect([
+            "I will write.",
+            "I will be writing.",
+            "I will have written.",
+            "I write.",
+            "I am writing.",
+            "I have written.",
+            "I wrote.",
+            "I was writing.",
+            "I had written.",
+          ]).to.contain(res.body.questionSentenceArr[0]);
           expect(res.body.questionSentenceArr).not.to.contain("I written.");
           expect(res.body.questionSentenceArr).not.to.contain("I writes.");
           expect(res.body.questionSentenceArr).not.to.contain("I writing.");
-          // let questionSentence = res.body.questionSentenceArr[0];
-
-          // expect(questionSentence).to.be.a("String");
-
-          // expect(["Napiszę."]).to.include(questionSentence);
-
-          // expect(res.body.answerSentenceArr).to.have.members([
-          //   "I will write.",
-          //   "I will have written.",
-          // ]);
         });
     });
     it("#pal06-04b GET 200 YES: Returns just the POL sentence, where tenseDescriptions were left blank.", () => {
@@ -333,25 +333,9 @@ describe("/api", () => {
             "Niech napiszę.",
             "Niech piszę.",
           ]).to.contain(res.body.questionSentenceArr[0]);
-
-          // expect(res.body.questionSentenceArr).not.to.contain([
-          //   "I written.",
-          //   "I writes.",
-          //   "I writing.",
-          // ]);
-          // let questionSentence = res.body.questionSentenceArr[0];
-
-          // expect(questionSentence).to.be.a("String");
-
-          // expect(["Napiszę."]).to.include(questionSentence);
-
-          // expect(res.body.answerSentenceArr).to.have.members([
-          //   "I will write.",
-          //   "I will have written.",
-          // ]);
         });
     });
-    it("#pal06-04c GET 200 YES: RSWAT POL to ENG, where POL tenseDescriptions are left blank.", () => {
+    xit("#pal06-04c GET 200 YES: RSWAT POL to ENG, where POL tenseDescriptions are left blank.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -376,7 +360,7 @@ describe("/api", () => {
           // ]);
         });
     });
-    it("#pal06-04d GET 200 YES: RSWAT ENG to POL, where POL tenseDescriptions are left blank.", () => {
+    xit("#pal06-04d GET 200 YES: RSWAT ENG to POL, where POL tenseDescriptions are left blank.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -401,7 +385,7 @@ describe("/api", () => {
           ]);
         });
     });
-    it("#pal06-04e GET 200 YES: RSWAT POL to ENG, where ENG tenseDescriptions are left blank.", () => {
+    xit("#pal06-04e GET 200 YES: RSWAT POL to ENG, where ENG tenseDescriptions are left blank.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -426,7 +410,7 @@ describe("/api", () => {
           ]);
         });
     });
-    it("#pal06-04f GET 200 YES: RSWAT ENG to POL, where ENG tenseDescriptions are left blank.", () => {
+    xit("#pal06-04f GET 200 YES: RSWAT ENG to POL, where ENG tenseDescriptions are left blank.", () => {
       return request(app)
         .get("/api/palette")
         .send({

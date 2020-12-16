@@ -23,6 +23,7 @@ exports.sentenceFormulasBank = {
         chunkId: "ver-1",
         agreeWith: "nou-1",
         wordtype: "verb",
+        form: ["verbal"],
         person: ["3per"],
         andTags: ["basic2"],
       },
@@ -54,6 +55,7 @@ exports.sentenceFormulasBank = {
         chunkId: "ver-1",
         agreeWith: "nou-1",
         wordtype: "verb",
+        form: ["verbal"],
         person: ["3per"],
         tenseDescription: ["present"],
         andTags: ["basic2"],
@@ -72,6 +74,7 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
+        form: ["verbal"],
         andTags: ["basic2"],
         tenseDescription: ["future"],
         person: ["1per"],
@@ -90,6 +93,7 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
+        form: ["verbal"],
         andTags: ["basic3"],
         tenseDescription: ["future"],
         person: ["1per"],
@@ -108,6 +112,7 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
+        form: ["verbal"],
         andTags: ["basic3"],
         tenseDescription: ["future"],
         person: ["1per"],
@@ -126,6 +131,7 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
+        form: ["verbal"],
         andTags: ["basic3"],
         tenseDescription: ["past"],
         person: ["1per"],
@@ -144,6 +150,7 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
+        form: ["verbal"],
         andTags: ["basic3"],
         tenseDescription: ["past"],
         person: ["1per"],

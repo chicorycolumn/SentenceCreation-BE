@@ -106,8 +106,8 @@ exports.processSentenceFormula = (
     );
   }
 
-  allLangUtils.preprocessStructureChunks(sentenceStructure);
-  langUtils.preprocessStructureChunks(sentenceStructure);
+  allLangUtils.preprocessStructureChunks(sentenceStructure, currentLanguage);
+  langUtils.preprocessStructureChunks(sentenceStructure, currentLanguage);
 
   let headIds = Array.from(
     new Set(

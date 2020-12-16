@@ -144,6 +144,7 @@ let verbSet = [
     //inflections
     inflections: {
       infinitive: "read",
+      verbal: {},
       v2: "read",
       v3: "read",
       thirdPS: "reads",
@@ -162,6 +163,7 @@ let verbSet = [
     //inflections
     inflections: {
       infinitive: "write",
+      verbal: {},
       v2: "wrote",
       v3: "written",
       thirdPS: "writes",
@@ -180,6 +182,7 @@ let verbSet = [
     //inflections
     inflections: {
       infinitive: "have",
+      verbal: {},
       v2: "had",
       v3: "had",
       thirdPS: "has",
@@ -199,6 +202,7 @@ let verbSet = [
     //inflections
     inflections: {
       infinitive: "be",
+      verbal: {},
       // v2: "",
       v3: "been",
       thirdPS: "is",
