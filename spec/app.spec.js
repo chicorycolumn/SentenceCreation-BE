@@ -335,7 +335,7 @@ describe("/api", () => {
           ]).to.contain(res.body.questionSentenceArr[0]);
         });
     });
-    xit("#pal06-04c GET 200 YES: RSWAT POL to ENG, where POL tenseDescriptions are left blank.", () => {
+    it("#pal06-04c GET 200 YES: RSWAT POL to ENG, where POL tenseDescriptions are left blank.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -348,26 +348,48 @@ describe("/api", () => {
         .then((res) => {
           console.log({ "RESULT: res.body:": res.body });
 
-          // let questionSentence = res.body.questionSentenceArr[0];
+          const ref = [
+            { POL: "Piszę.", ENG: ["I am writing.", "I write."] },
+            {
+              POL: "Pisałem.",
+              ENG: ["I was writing.", "I will have written."],
+            },
+            {
+              POL: "Pisałam.",
+              ENG: ["I was writing.", "I will have written."],
+            },
+            { POL: "Napiszę.", ENG: ["I will write.", "I will have written."] },
+            {
+              POL: "Napisałem.",
+              ENG: ["I wrote.", "I have written.", "I had written."],
+            },
+            {
+              POL: "Napisałam.",
+              ENG: ["I wrote.", "I have written.", "I had written."],
+            },
+            { POL: "Będę pisał.", ENG: ["I will be writing."] },
+            { POL: "Będę pisała.", ENG: ["I will be writing."] },
+          ];
 
-          // expect(questionSentence).to.be.a("String");
+          let QS = res.body.questionSentenceArr[0];
+          let AS = res.body.answerSentenceArr;
 
-          // expect(["Napiszę."]).to.include(questionSentence);
-
-          // expect(res.body.answerSentenceArr).to.have.members([
-          //   "I will write.",
-          //   "I will have written.",
-          // ]);
+          ref.forEach((refItem) => {
+            let { POL, ENG } = refItem;
+            if (QS === POL) {
+              expect(AS).to.have.members(ENG);
+            }
+          });
         });
     });
-    xit("#pal06-04d GET 200 YES: RSWAT ENG to POL, where POL tenseDescriptions are left blank.", () => {
+    it("#pal06-04d GET 200 YES: RSWAT ENG to POL, where POL tenseDescriptions are left blank.", () => {
       return request(app)
         .get("/api/palette")
         .send({
           // useDummy: true,
-          questionLanguage: "POL",
-          answerLanguage: "ENG",
-          sentenceFormulaSymbol: "I read *future 103c",
+          questionLanguage: "ENG",
+          answerLanguage: "POL",
+          sentenceFormulaSymbol: "I read *future 104a",
         })
         .expect(200)
         .then((res) => {
@@ -377,12 +399,24 @@ describe("/api", () => {
 
           expect(questionSentence).to.be.a("String");
 
-          expect(["Napiszę."]).to.include(questionSentence);
+          expect(["I wrote.", "I was writing.", "I had written."]).to.include(
+            questionSentence
+          );
 
-          expect(res.body.answerSentenceArr).to.have.members([
-            "I will write.",
-            "I will have written.",
-          ]);
+          if (
+            questionSentence === "I wrote." ||
+            questionSentence === "I had written."
+          ) {
+            expect(res.body.answerSentenceArr).to.have.members([
+              "Napisałem.",
+              "Napisałam.",
+            ]);
+          } else if (questionSentence === "I was writing.") {
+            expect(res.body.answerSentenceArr).to.have.members([
+              "Pisałem.",
+              "Pisałam.",
+            ]);
+          }
         });
     });
     xit("#pal06-04e GET 200 YES: RSWAT POL to ENG, where ENG tenseDescriptions are left blank.", () => {

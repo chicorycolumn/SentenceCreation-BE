@@ -48,23 +48,7 @@ let inflectorRef = {
 
 exports.adjustTenseDescriptions = () => {};
 
-exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
-  sentenceStructure.forEach((structureChunk) => {
-    if (
-      structureChunk.wordtype === "verb" &&
-      structureChunk.form.includes("verbal")
-    ) {
-      if (
-        !structureChunk.tenseDescription ||
-        !structureChunk.tenseDescription.length
-      ) {
-        structureChunk.tenseDescription = refObj.allFeatureValues[
-          currentLanguage
-        ].tenseDescription.slice(0);
-      }
-    }
-  });
-};
+exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {};
 
 exports.preprocessLemmaObjects = (matches, structureChunk) => {};
 

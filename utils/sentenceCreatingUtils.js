@@ -96,6 +96,8 @@ exports.processSentenceFormula = (
 
   let sentenceStructure = sentenceFormula.structure;
 
+  console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>sentenceStructure", sentenceStructure);
+
   if (kumquat) {
     exports.conformAnswerStructureToQuestionStructure(
       sentenceStructure,
@@ -104,10 +106,32 @@ exports.processSentenceFormula = (
       currentLanguage,
       questionLanguage
     );
+
+    console.log(
+      ">>>>>>>>>>>>>>>>>>>>>>>>>>sentenceStructure after QA conform",
+      sentenceStructure
+    );
+    // throw "Cease.";
   }
+
+  console.log("-");
+  console.log("----");
+  console.log("--------");
+  console.log("sentenceStructure", sentenceStructure);
+  console.log("--------");
+  console.log("----");
+  console.log("-");
 
   allLangUtils.preprocessStructureChunks(sentenceStructure, currentLanguage);
   langUtils.preprocessStructureChunks(sentenceStructure, currentLanguage);
+
+  console.log("~");
+  console.log("~~~~");
+  console.log("~~~~~~~~");
+  console.log("sentenceStructure PREPROCESSED", sentenceStructure);
+  console.log("~~~~~~~~");
+  console.log("~~~~");
+  console.log("~");
 
   let headIds = Array.from(
     new Set(
@@ -532,23 +556,26 @@ exports.conformAnswerStructureToQuestionStructure = (
   questionLanguage
 ) => {
   questionOutputArr.forEach((questionOutputArrItem) => {
+    let questionSelectedLemmaObject = questionOutputArrItem.selectedLemmaObject;
+    let questionSelectedWord = questionOutputArrItem.selectedWord;
+    let questionStructureChunk = questionOutputArrItem.structureChunk;
+
     let answerStructureChunk = sentenceStructure.find((structureChunk) => {
-      return (
-        structureChunk.chunkId === questionOutputArrItem.structureChunk.chunkId
-      );
+      return structureChunk.chunkId === questionStructureChunk.chunkId;
     });
 
     if (!answerStructureChunk) {
       return;
     }
 
-    if (questionOutputArrItem.structureChunk.wordtype === "fixed") {
+    if (questionStructureChunk.wordtype === "fixed") {
       return;
     }
 
-    let questionSelectedLemmaObject = questionOutputArrItem.selectedLemmaObject;
-    let questionSelectedWord = questionOutputArrItem.selectedWord;
-    let questionStructureChunk = questionOutputArrItem.structureChunk;
+    console.log("***********");
+    console.log("questionStructureChunk", questionStructureChunk);
+    console.log("answerStructureChunk", answerStructureChunk);
+    console.log("***********");
 
     // console.log(
     //   "So, the Polish lemma chosen was",
@@ -645,6 +672,10 @@ exports.conformAnswerStructureToQuestionStructure = (
     possibleInflectionsOfAnswerLobjsButNotQuestionLobjs.forEach((inflector) => {
       answerStructureChunk[inflector] = [];
     });
+
+    console.log("*-*-*-*-*-*-*-*-*-*-*");
+    console.log("UPDATED answerStructureChunk", answerStructureChunk);
+    console.log("*-*-*-*-*-*-*-*-*-*-*");
   });
 };
 

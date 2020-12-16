@@ -2,7 +2,7 @@ const lfUtils = require("../../utils/lemmaFilteringUtils.js");
 const otUtils = require("../../utils/objectTraversingUtils.js");
 const gpUtils = require("../../utils/generalPurposeUtils.js");
 
-exports.preprocessStructureChunks = (sentenceStructure) => {};
+exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {};
 
 exports.adjustTenseDescriptions = (structureChunk) => {
   const aspectReference = { im: "imperfective", pf: "perfective" };
