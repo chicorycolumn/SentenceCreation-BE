@@ -93,7 +93,7 @@ exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
     let selectedTenseDescription;
 
     let resArr = [];
-    let tenseDescriptionArr = structureChunk.tenseDescription.slice(0);
+    let tenseDescriptionArrCopy = structureChunk.tenseDescription.slice(0);
 
     Object.keys(inflectorRef).forEach((key) => {
       let value = inflectorRef[key];
@@ -103,18 +103,25 @@ exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
       }
     });
 
-    tenseDescriptionArr.forEach((selectedTenseDescription) => {
+    let tenseDescriptionArr = [];
+
+    tenseDescriptionArrCopy.forEach((selectedTenseDescription) => {
       if (selectedTenseDescription === "present") {
-        selectedTenseDescription = "present simple";
+        tenseDescriptionArr.push("present simple");
         tenseDescriptionArr.push("present continuous");
+        tenseDescriptionArr.push("present perfect");
       }
       if (selectedTenseDescription === "past") {
-        selectedTenseDescription = "past simple";
+        tenseDescriptionArr.push("past simple");
         tenseDescriptionArr.push("past continuous");
+        tenseDescriptionArr.push("past perfect");
       }
       if (selectedTenseDescription === "future") {
-        selectedTenseDescription = "future simple";
+        tenseDescriptionArr.push("future simple");
         tenseDescriptionArr.push("future continuous");
+        tenseDescriptionArr.push("future perfect");
+      } else {
+        tenseDescriptionArr.push(selectedTenseDescription);
       }
     });
 
@@ -134,7 +141,6 @@ exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
       );
 
       let resObj = {
-        selectedTenseDescription,
         selectedWordArr,
         structureChunkUpdated: structureChunkCopy,
       };

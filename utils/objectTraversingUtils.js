@@ -10,6 +10,15 @@ exports.findMatchingLemmaObjectThenWord = (
   questionLanguage,
   kumquat
 ) => {
+  console.log("OT:findMatchingLemmaObjectThenWord was given:", {
+    structureChunk,
+    words,
+    errorInSentenceCreation,
+    currentLanguage,
+    questionLanguage,
+    kumquat,
+  });
+
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
   let selectedFormsArray = [];
   let arrayOfAllPossibleOutputUnits = [];
@@ -82,11 +91,7 @@ exports.findMatchingLemmaObjectThenWord = (
               //because that will be needed to update the structureChunk.
 
               adhocArr.forEach((adhocResultObj) => {
-                let {
-                  selectedTenseDescription,
-                  selectedWordArr,
-                  structureChunkUpdated,
-                } = adhocResultObj;
+                let { selectedWordArr, structureChunkUpdated } = adhocResultObj;
 
                 selectedFormsArray.push({
                   selectedWordArr,
@@ -107,7 +112,6 @@ exports.findMatchingLemmaObjectThenWord = (
             let selectedAdhocResultObj = gpUtils.selectRaandom(adhocArr);
 
             let {
-              selectedTenseDescription,
               selectedWordArr,
               structureChunkUpdated,
             } = selectedAdhocResultObj;

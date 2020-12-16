@@ -14,6 +14,16 @@ exports.processSentenceFormula = (
   questionOutputArr,
   questionLanguage
 ) => {
+  console.log("SC:processSentenceFormula was given:", {
+    currentLanguage,
+    sentenceFormulaId,
+    sentenceFormulaSymbol,
+    useDummy,
+    kumquat,
+    questionOutputArr,
+    questionLanguage,
+  });
+
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
 
   let grandOutputArray = [];
@@ -31,8 +41,6 @@ exports.processSentenceFormula = (
   } = require(`../source/${currentLanguage}/dummy/dummySentenceFormulas.js`);
 
   let defaultSentenceFormulaId = "POL-00-50";
-  let defaultsentenceFormulaSymbol = "";
-  sentenceFormulaSymbol = sentenceFormulaSymbol || defaultsentenceFormulaSymbol;
   let errorInSentenceCreation = { errorMessage: null };
 
   let words = useDummy

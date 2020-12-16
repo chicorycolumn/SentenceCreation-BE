@@ -8,6 +8,13 @@ exports.filterWithinSelectedLemmaObject = (
   currentLanguage,
   kumquat
 ) => {
+  console.log("LF:filterWithinSelectedLemmaObject was given:", {
+    lemmaObject,
+    structureChunk,
+    currentLanguage,
+    kumquat,
+  });
+
   //STEP ZERO: Get necessary materials, ie inflectionPaths and requirementArrs.
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
 

@@ -558,10 +558,77 @@ exports.sentenceFormulasBank = {
     structure: [
       {
         chunkId: "ver-1",
-        agreeWith: "nou-1",
         wordtype: "verb",
         andTags: ["basic2"],
         tenseDescription: ["future pf"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [],
+    additionalOrders: [],
+  },
+  "103a": {
+    sentenceFormulaSymbol: "I read *future 103a",
+    sentenceFormulaId: "POL-00-103a",
+    translations: { ENG: ["ENG-00-103a"] },
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        andTags: ["basic3"],
+        tenseDescription: ["future pf", "future im"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [],
+    additionalOrders: [],
+  },
+  "103b": {
+    sentenceFormulaSymbol: "I read *future 103b",
+    sentenceFormulaId: "POL-00-103b",
+    translations: { ENG: ["ENG-00-103b"] },
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        andTags: ["basic3"],
+        tenseDescription: ["past im"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [],
+    additionalOrders: [],
+  },
+  "103c": {
+    sentenceFormulaSymbol: "I read *future 103c",
+    sentenceFormulaId: "POL-00-103c",
+    translations: { ENG: ["ENG-00-103c"] },
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        andTags: ["basic3"],
+        tenseDescription: ["future pf"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [],
+    additionalOrders: [],
+  },
+  "104a": {
+    sentenceFormulaSymbol: "I read *future 104a",
+    sentenceFormulaId: "POL-00-104a",
+    translations: { ENG: ["ENG-00-104a"] },
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        andTags: ["basic3"],
+        tenseDescription: [],
         person: ["1per"],
         number: ["singular"],
       },

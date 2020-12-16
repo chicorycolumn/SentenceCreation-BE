@@ -97,4 +97,22 @@ exports.dummySentenceFormulasBank = {
     ],
     primaryOrders: [["fix-1", "ver-1"]],
   },
+  dummy30: {
+    sentenceFormulaSymbol: "dummy30",
+    sentenceFormulaId: "ENG-dummy30",
+    translations: { POL: ["POL-dummy30"] },
+    structure: [
+      { chunkId: "fix-1", wordtype: "fixed", value: "I" },
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        form: ["verbal"],
+        andTags: ["basic3"],
+        tenseDescription: [],
+        person: ["1per"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [["fix-1", "ver-1"]],
+  },
 };

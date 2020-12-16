@@ -12,7 +12,7 @@ describe("/api", () => {
   // beforeEach(() => {});
 
   describe.only("/palette - Stage 6: Returning Polish with English translations of rich sentences (with nouns adjectives and verbs).", () => {
-    it("#pal06-01a GET 200 YES: Returns sentence (present) with all translations.", () => {
+    it("#pal06-01a GET 200 YES: Returns sentence with all translations (RSWAT).", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -57,7 +57,7 @@ describe("/api", () => {
           console.log({ "RESULT: res.body:": res.body });
         });
     });
-    it("#pal06-01b GET 200 YES: Returns sentence (present) with all translations, now with multiple orders.", () => {
+    it("#pal06-01b GET 200 YES: RSWAT with multiple orders.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -110,7 +110,7 @@ describe("/api", () => {
           console.log({ "RESULT: res.body:": res.body });
         });
     });
-    it("#pal06-02a GET 200 YES: Returns sentence with translations, POL to ENG, where two different sentenceFormula answers.", () => {
+    it("#pal06-02a GET 200 YES: RSWAT POL to ENG, where there are two different sentenceFormulas as answers.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -134,7 +134,7 @@ describe("/api", () => {
           console.log({ "RESULT: res.body:": res.body });
         });
     });
-    it("#pal06-02b GET 200 YES: Returns sentence with translations, ENG to POL, where two different sentenceFormula answers.", () => {
+    it("#pal06-02b GET 200 YES: RSWAT ENG to POL, where there are two different sentenceFormulas as answers.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -158,11 +158,10 @@ describe("/api", () => {
           console.log({ "RESULT: res.body:": res.body });
         });
     });
-    it.only("#pal06-03a GET 200 YES: Returns sentence with translations, POL to ENG, by tenseDescription to be translated by multiple tenseDescriptions.", () => {
+    it("#pal06-03a GET 200 YES: RSWAT POL to ENG, a tenseDescription must be translated by multiple such.", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          useDummy: true,
           questionLanguage: "POL",
           answerLanguage: "ENG",
           sentenceFormulaSymbol: "102a I'll read (pf fut)",
@@ -182,14 +181,14 @@ describe("/api", () => {
           console.log({ "RESULT: res.body:": res.body });
         });
     });
-    xit("#pal06-03b GET 200 YES: Returns sentence with translations, ENG to POL, by tenseDescription to be translated by multiple tenseDescriptions.", () => {
+    it("#pal06-03b GET 200 YES: RSWAT ENG to POL, a tenseDescription must be translated by multiple such.", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          useDummy: true,
+          // useDummy: true,
           questionLanguage: "ENG",
           answerLanguage: "POL",
-          sentenceFormulaSymbol: "I read *future",
+          sentenceFormulaSymbol: "I read *future 103a",
         })
         .expect(200)
         .then((res) => {
@@ -198,24 +197,261 @@ describe("/api", () => {
           expect(questionSentence).to.be.a("String");
 
           expect([
-            "I will read.",
-            "I will be reading.",
-            "I will have read.",
+            "I will write.",
+            "I will be writing.",
+            "I will have written.",
           ]).to.include(questionSentence);
 
-          if (questionSentence === "I will read.") {
-            expect(res.body.answerSentenceArr).to.have.members(["Przeczytam."]);
-          } else if (questionSentence === "I will be reading.") {
+          if (
+            questionSentence === "I will write." ||
+            questionSentence === "I will have written."
+          ) {
+            expect(res.body.answerSentenceArr).to.have.members(["Napiszę."]);
+          } else if (questionSentence === "I will be writing.") {
             expect(res.body.answerSentenceArr).to.have.members([
-              "Będę czytał.",
+              "Będę pisał.",
+              "Będę pisać.",
+              "Będę pisała.",
             ]);
-          } else if (questionSentence === "I will have read.") {
-            expect(res.body.answerSentenceArr).to.have.members(["Przeczytam."]);
           }
           console.log({ "RESULT: res.body:": res.body });
         });
     });
-    xit("#pal06-04a GET 200 YES: Returns sentence with any tense, when tenseDescription is left blank in both question and answer structures.", () => {
+    it("#pal06-03c GET 200 YES: RSWAT ENG to POL, ignoring tenseDescriptions specified in answer structure that are not translations.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // useDummy: true,
+          questionLanguage: "ENG",
+          answerLanguage: "POL",
+          sentenceFormulaSymbol: "I read *future 103b",
+        })
+        .expect(200)
+        .then((res) => {
+          let questionSentence = res.body.questionSentenceArr[0];
+
+          expect(questionSentence).to.be.a("String");
+
+          expect([
+            "I will write.",
+            "I will be writing.",
+            "I will have written.",
+          ]).to.include(questionSentence);
+
+          if (
+            questionSentence === "I will write." ||
+            questionSentence === "I will have written."
+          ) {
+            expect(res.body.answerSentenceArr).to.have.members(["Napiszę."]);
+          } else if (questionSentence === "I will be writing.") {
+            expect(res.body.answerSentenceArr).to.have.members([
+              "Będę pisał.",
+              "Będę pisać.",
+              "Będę pisała.",
+            ]);
+          }
+          console.log({ "RESULT: res.body:": res.body });
+        });
+    });
+    it("#pal06-03d GET 200 YES: RSWAT POL to ENG, ignoring tenseDescriptions specified in answer structure that are not translations.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // useDummy: true,
+          questionLanguage: "POL",
+          answerLanguage: "ENG",
+          sentenceFormulaSymbol: "I read *future 103c",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log({ "RESULT: res.body:": res.body });
+
+          let questionSentence = res.body.questionSentenceArr[0];
+
+          expect(questionSentence).to.be.a("String");
+
+          expect(["Napiszę."]).to.include(questionSentence);
+
+          expect(res.body.answerSentenceArr).to.have.members([
+            "I will write.",
+            "I will have written.",
+          ]);
+        });
+    });
+    it.only("#pal06-04a GET 200 YES: Returns just the ENG sentence, where tenseDescriptions were left blank.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage: "ENG",
+          sentenceFormulaSymbol: "dummy30",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log({ "RESULT: res.body:": res.body });
+          expect(res.body.questionSentenceArr.length).to.be.greaterThan(0);
+          expect(res.body.questionSentenceArr).not.to.contain("I written.");
+          expect(res.body.questionSentenceArr).not.to.contain("I writes.");
+          expect(res.body.questionSentenceArr).not.to.contain("I writing.");
+          // let questionSentence = res.body.questionSentenceArr[0];
+
+          // expect(questionSentence).to.be.a("String");
+
+          // expect(["Napiszę."]).to.include(questionSentence);
+
+          // expect(res.body.answerSentenceArr).to.have.members([
+          //   "I will write.",
+          //   "I will have written.",
+          // ]);
+        });
+    });
+    it("#pal06-04b GET 200 YES: Returns just the POL sentence, where tenseDescriptions were left blank.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage: "POL",
+          sentenceFormulaSymbol: "dummy30",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log({ "RESULT: res.body:": res.body });
+
+          expect([
+            "Piszę.",
+            "Pisałem.",
+            "Pisałam.",
+            "Pisałabym.",
+            "Pisałbym.",
+            "Napiszę.",
+            "Napisałem.",
+            "Napisałam.",
+            "Napisałabym.",
+            "Napisałbym.",
+            "Będę pisał.",
+            "Będę pisała.",
+            "Niech napiszę.",
+            "Niech piszę.",
+          ]).to.contain(res.body.questionSentenceArr[0]);
+
+          // expect(res.body.questionSentenceArr).not.to.contain([
+          //   "I written.",
+          //   "I writes.",
+          //   "I writing.",
+          // ]);
+          // let questionSentence = res.body.questionSentenceArr[0];
+
+          // expect(questionSentence).to.be.a("String");
+
+          // expect(["Napiszę."]).to.include(questionSentence);
+
+          // expect(res.body.answerSentenceArr).to.have.members([
+          //   "I will write.",
+          //   "I will have written.",
+          // ]);
+        });
+    });
+    it("#pal06-04c GET 200 YES: RSWAT POL to ENG, where POL tenseDescriptions are left blank.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // useDummy: true,
+          questionLanguage: "POL",
+          answerLanguage: "ENG",
+          sentenceFormulaSymbol: "I read *future 104a",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log({ "RESULT: res.body:": res.body });
+
+          // let questionSentence = res.body.questionSentenceArr[0];
+
+          // expect(questionSentence).to.be.a("String");
+
+          // expect(["Napiszę."]).to.include(questionSentence);
+
+          // expect(res.body.answerSentenceArr).to.have.members([
+          //   "I will write.",
+          //   "I will have written.",
+          // ]);
+        });
+    });
+    it("#pal06-04d GET 200 YES: RSWAT ENG to POL, where POL tenseDescriptions are left blank.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // useDummy: true,
+          questionLanguage: "POL",
+          answerLanguage: "ENG",
+          sentenceFormulaSymbol: "I read *future 103c",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log({ "RESULT: res.body:": res.body });
+
+          let questionSentence = res.body.questionSentenceArr[0];
+
+          expect(questionSentence).to.be.a("String");
+
+          expect(["Napiszę."]).to.include(questionSentence);
+
+          expect(res.body.answerSentenceArr).to.have.members([
+            "I will write.",
+            "I will have written.",
+          ]);
+        });
+    });
+    it("#pal06-04e GET 200 YES: RSWAT POL to ENG, where ENG tenseDescriptions are left blank.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // useDummy: true,
+          questionLanguage: "POL",
+          answerLanguage: "ENG",
+          sentenceFormulaSymbol: "I read *future 103c",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log({ "RESULT: res.body:": res.body });
+
+          let questionSentence = res.body.questionSentenceArr[0];
+
+          expect(questionSentence).to.be.a("String");
+
+          expect(["Napiszę."]).to.include(questionSentence);
+
+          expect(res.body.answerSentenceArr).to.have.members([
+            "I will write.",
+            "I will have written.",
+          ]);
+        });
+    });
+    it("#pal06-04f GET 200 YES: RSWAT ENG to POL, where ENG tenseDescriptions are left blank.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // useDummy: true,
+          questionLanguage: "POL",
+          answerLanguage: "ENG",
+          sentenceFormulaSymbol: "I read *future 103c",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log({ "RESULT: res.body:": res.body });
+
+          let questionSentence = res.body.questionSentenceArr[0];
+
+          expect(questionSentence).to.be.a("String");
+
+          expect(["Napiszę."]).to.include(questionSentence);
+
+          expect(res.body.answerSentenceArr).to.have.members([
+            "I will write.",
+            "I will have written.",
+          ]);
+        });
+    });
+    xit("#pal06-05a GET 200 YES: RSWAT POL to ENG, tenseDescription is left blank in both question and answer structures.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -233,7 +469,7 @@ describe("/api", () => {
           console.log({ "RESULT: res.body:": res.body });
         });
     });
-    xit("#pal06-04b GET 200 YES: Returns sentence with any tense, when tenseDescription is left blank in question structure but should be overwritten in answer.", () => {
+    xit("#pal06-05b GET 200 YES: Returns sentence with any tense, when tenseDescription is left blank in question structure but should be overwritten in answer.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -247,7 +483,7 @@ describe("/api", () => {
           let questionSentence = res.body.questionSentenceArr[0];
 
           expect(questionSentence).to.be.a("String");
-          //This should be able to return sentences that are not only present, but other tenses too.
+          //This should be able to return sentences that are not just present, but other tenses too.
           console.log({ "RESULT: res.body:": res.body });
         });
     });
