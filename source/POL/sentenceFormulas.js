@@ -653,4 +653,22 @@ exports.sentenceFormulasBank = {
     primaryOrders: [],
     additionalOrders: [],
   },
+  "104b": {
+    sentenceFormulaSymbol: "I read *future 104b",
+    sentenceFormulaId: "POL-00-104b",
+    translations: { ENG: ["ENG-00-104b"] },
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        form: ["verbal"],
+        andTags: ["basic3"],
+        tenseDescription: ["future pf", "past im"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [],
+    additionalOrders: [],
+  },
 };

@@ -160,4 +160,23 @@ exports.sentenceFormulasBank = {
     primaryOrders: [["fix-1", "ver-1"]],
     additionalOrders: [],
   },
+  "104b": {
+    sentenceFormulaSymbol: "I read *future 104b",
+    sentenceFormulaId: "ENG-00-104b",
+    translations: { POL: ["POL-00-104b"] },
+    structure: [
+      { chunkId: "fix-1", wordtype: "fixed", value: "I" },
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        form: ["verbal"],
+        andTags: ["basic3"],
+        tenseDescription: [],
+        person: ["1per"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [["fix-1", "ver-1"]],
+    additionalOrders: [],
+  },
 };
