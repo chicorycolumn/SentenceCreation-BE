@@ -1105,6 +1105,21 @@ describe("/api", () => {
           console.log({ "RESULT: res.body:": res.body });
         });
     });
+    it("#pal05-04a GET 200 YES: It's okay to specify gender: f and number: plural, even though gender will technically be nonvirile.", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage: "POL",
+          sentenceFormulaSymbol: "dummy32",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
+          expect(["Czytają."]).to.include(res.body.questionSentenceArr[0]);
+          console.log({ "RESULT: res.body:": res.body });
+        });
+    });
   });
 
   describe("/palette - Stage 4: Verbs", () => {
@@ -1537,7 +1552,8 @@ describe("/api", () => {
           console.log({ "RESULT: res.body:": res.body });
         });
     });
-    it.only("#pal04-07c GET 200 YES: Make two verbs agree when there is a choice of person, gender, and number.", () => {
+    //This below one is the one that only as it was failing Drill Virile issue.
+    it("#pal04-07c GET 200 YES: Make two verbs agree when there is a choice of person, gender, and number.", () => {
       return request(app)
         .get("/api/palette")
         .send({

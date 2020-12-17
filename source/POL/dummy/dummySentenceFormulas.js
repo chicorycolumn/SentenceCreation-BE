@@ -743,4 +743,21 @@ exports.dummySentenceFormulasBank = {
     ],
     primaryOrders: [],
   },
+  dummy32: {
+    sentenceFormulaSymbol: "dummy32",
+    sentenceFormulaId: "POL-dummy32",
+    translations: {},
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        andTags: ["basic2"],
+        tenseDescription: ["present im"],
+        person: ["3per"],
+        number: ["plural"],
+        gender: ["f"],
+      },
+    ],
+    primaryOrders: [],
+  },
 };

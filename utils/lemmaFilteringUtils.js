@@ -50,8 +50,6 @@ exports.filterWithinSelectedLemmaObject = (
 
   let errorInDrilling = false;
   let pathRecord = [];
-
-  console.log("sss source", source);
   console.log("rrr requirementArrs", requirementArrs);
 
   traverseAndRecordInflections(source, requirementArrs, pathRecord);
@@ -104,7 +102,7 @@ exports.filterWithinSelectedLemmaObject = (
   //then the drillPath is only [["number", "virile"]] or nonvirile.
   //But the drillpath should have all the others too.
 
-  throw "Cease.";
+  // throw "Cease.";
 
   /**Masculinist Agenda: Overrepresentation issue.
    *
@@ -151,6 +149,9 @@ exports.filterWithinSelectedLemmaObject = (
     pathRecord,
     pathRecordMini
   ) {
+    // console.log(reqArr);
+    // throw "Cease.";
+
     if (!pathRecordMini) {
       pathRecordMini = [];
     }
@@ -210,7 +211,7 @@ exports.updateStructureChunkByInflections = (outputUnit, currentLanguage) => {
     outputUnit.drillPath
   );
 
-  throw "Cease.";
+  // throw "Cease.";
 
   if (outputUnit.drillPath) {
     outputUnit.drillPath.forEach((drillPathSubArr) => {
@@ -350,4 +351,56 @@ exports.filterBySelectors = (currentLanguage, structureChunk, matches) => {
   }
 
   return matches;
+};
+
+exports.traverseAndRecordInflections2 = (
+  source,
+  reqArr,
+  pathRecord,
+  pathRecordMini
+) => {
+  // console.log(reqArr);
+  // throw "Cease.";
+
+  if (!pathRecordMini) {
+    pathRecordMini = [];
+  }
+
+  let reqSubArr = reqArr[0];
+
+  let reqInflectorLabel = reqSubArr[0];
+  let reqInflectorArr = reqSubArr[1];
+
+  if (!reqInflectorArr.length) {
+    reqInflectorArr = Object.keys(source);
+  }
+
+  reqInflectorArr.forEach((chosenInflector) => {
+    if (
+      typeof source[chosenInflector] === "string" ||
+      Array.isArray(source[chosenInflector])
+    ) {
+      pathRecordMini.push([reqInflectorLabel, chosenInflector]);
+
+      pathRecord.push({
+        selectedWordArray:
+          typeof source[chosenInflector] === "string"
+            ? [source[chosenInflector]]
+            : source[chosenInflector],
+        drillPath: pathRecordMini.slice(0),
+      });
+
+      pathRecordMini.pop();
+      return source[chosenInflector];
+    } else if (typeof source[chosenInflector] === "object") {
+      pathRecordMini.push([reqInflectorLabel, chosenInflector]);
+      exports.traverseAndRecordInflections2(
+        source[chosenInflector],
+        reqArr.slice(1),
+        pathRecord,
+        pathRecordMini
+      );
+    }
+    pathRecordMini.pop();
+  });
 };
