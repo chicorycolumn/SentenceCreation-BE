@@ -3,6 +3,10 @@ const refObj = require("../utils/referenceObjects.js");
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   sentenceStructure.forEach((structureChunk) => {
     if (structureChunk.wordtype === "verb") {
+      if (!structureChunk.form || !structureChunk.form.length) {
+        structureChunk.form = ["verbal"];
+      }
+
       if (structureChunk.form && structureChunk.form.includes("verbal")) {
         if (
           !structureChunk.tenseDescription ||

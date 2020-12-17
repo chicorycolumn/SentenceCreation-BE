@@ -25,7 +25,7 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        form: ["verbal"],
+
         andTags: ["basic2"],
         tenseDescription: [
           "past continuous",
@@ -47,7 +47,7 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        form: ["verbal"],
+
         andTags: ["basic3"],
         tenseDescription: [
           "present simple",
@@ -70,7 +70,7 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        form: ["verbal"],
+
         andTags: ["basic3"],
         tenseDescription: [],
         person: ["1per"],
@@ -88,7 +88,7 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        form: ["verbal"],
+
         andTags: ["basic3"],
         tenseDescription: [
           "present simple",
@@ -110,7 +110,7 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        form: ["verbal"],
+
         andTags: ["basic3"],
         tenseDescription: [],
         person: ["1per"],

@@ -243,7 +243,7 @@ exports.dummySentenceFormulasBank = {
         wordtype: "verb",
         aspect: ["imperfective"],
         andTags: ["basic2"],
-        form: ["verbal"],
+
         person: ["2per"],
       },
     ],
@@ -257,7 +257,7 @@ exports.dummySentenceFormulasBank = {
         chunkId: "ver-1",
         wordtype: "verb",
         andTags: ["basic2"],
-        form: ["verbal"],
+
         tenseDescription: ["conditional im"],
         number: ["plural"],
       },
@@ -271,7 +271,7 @@ exports.dummySentenceFormulasBank = {
         chunkId: "ver-1",
         wordtype: "verb",
         andTags: ["basic2"],
-        form: ["verbal"],
+
         tenseDescription: ["present im"],
         person: ["2per"],
         number: ["singular", "plural"],
@@ -301,7 +301,7 @@ exports.dummySentenceFormulasBank = {
         wordtype: "verb",
         aspect: ["imperfective"],
         andTags: ["basic2"],
-        form: ["verbal"],
+
         person: ["impersonal"],
       },
     ],
@@ -315,7 +315,7 @@ exports.dummySentenceFormulasBank = {
         wordtype: "verb",
         aspect: ["imperfective"],
         andTags: ["basic2"],
-        form: ["verbal"],
+
         person: ["impersonal"],
         number: ["plural"],
       },
@@ -496,7 +496,7 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        form: ["verbal"],
+
         aspect: ["imperfective"],
         tense: ["past", "conditional"],
         andTags: ["basic2"],
@@ -516,7 +516,7 @@ exports.dummySentenceFormulasBank = {
         aspect: ["imperfective"],
         tense: ["past", "conditional"],
         andTags: ["basic2"],
-        form: ["verbal"],
+
         person: ["1per"],
         number: ["plural"],
         gender: ["m2"],
@@ -533,7 +533,7 @@ exports.dummySentenceFormulasBank = {
         aspect: ["imperfective"],
         tense: ["past", "conditional"],
         andTags: ["basic2"],
-        form: ["verbal"],
+
         person: ["1per"],
         number: ["plural"],
         gender: ["n", "f"],
@@ -550,7 +550,7 @@ exports.dummySentenceFormulasBank = {
         aspect: ["imperfective"],
         tenseDescription: ["present im"],
         andTags: ["basic2"],
-        form: ["verbal"],
+
         person: ["1per"],
         number: ["singular"],
         gender: [],
@@ -562,7 +562,7 @@ exports.dummySentenceFormulasBank = {
         aspect: ["imperfective"],
         tenseDescription: ["present im"],
         andTags: ["science"],
-        form: ["verbal"],
+
         person: ["1per"],
         number: ["singular"],
         gender: [],
@@ -579,7 +579,7 @@ exports.dummySentenceFormulasBank = {
         aspect: ["imperfective"],
         tenseDescription: ["present im"],
         andTags: ["basic2"],
-        form: ["verbal"],
+
         person: ["1per", "2per"],
         number: ["singular"],
         gender: [],
@@ -592,7 +592,7 @@ exports.dummySentenceFormulasBank = {
         aspect: ["imperfective"],
         tenseDescription: ["present im"],
         andTags: ["science"],
-        form: ["verbal"],
+
         person: ["1per", "2per"],
         number: ["singular"],
         gender: [],
@@ -610,7 +610,7 @@ exports.dummySentenceFormulasBank = {
         aspect: ["imperfective"],
         tenseDescription: ["present im", "past im"],
         andTags: ["basic2"],
-        form: ["verbal"],
+
         person: ["1per", "2per"],
         number: ["singular", "plural"],
         gender: [],
@@ -623,7 +623,7 @@ exports.dummySentenceFormulasBank = {
         aspect: ["imperfective"],
         tenseDescription: ["present im", "past im"],
         andTags: ["science"],
-        form: ["verbal"],
+
         person: ["1per", "2per"],
         number: ["singular", "plural"],
         gender: [],
@@ -689,7 +689,7 @@ exports.dummySentenceFormulasBank = {
     structure: [
       {
         chunkId: "ver-1",
-        form: ["verbal"],
+
         wordtype: "verb",
         andTags: ["basic3"],
         tenseDescription: [],
@@ -727,7 +727,6 @@ exports.dummySentenceFormulasBank = {
         tenseDescription: [],
         person: ["1per"],
         number: ["singular"],
-        form: ["verbal"],
       },
     ],
     primaryOrders: [],
