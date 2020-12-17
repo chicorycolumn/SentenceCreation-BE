@@ -616,7 +616,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal06-04g GET 200 YES: RSWAT POL to ENG, tenseDescription is left blank in both question and answer structures.", () => {
+    it("#pal06-04h GET 200 YES: RSWAT POL to ENG, tenseDescription is left blank in both question and answer structures.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -636,6 +636,28 @@ describe("/api", () => {
             answerLanguage,
             "write",
             []
+          );
+        });
+    });
+    it("#pal06-05a GET 200 YES: RSWAT ENG to POL, checking the three masculines genders collapse to one for the verb.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "I was writing 105a",
+        })
+        .expect(200)
+        .then((res) => {
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "write",
+            ["I was writing."]
           );
         });
     });
@@ -1064,7 +1086,7 @@ describe("/api", () => {
           console.log({ "RESULT: res.body:": res.body });
         });
     });
-    it("#pal04-01c GET 200 YES: Returns a sentence with a single verb, with tense and number specified.", () => {
+    it.only("#pal04-01c GET 200 YES: Returns a sentence with a single verb, with tense and number specified.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -1264,20 +1286,6 @@ describe("/api", () => {
         .then((res) => {
           expect(res.body.questionSentenceArr[0]).to.be.a("String");
           expect(["Czytanie."]).to.include(res.body.questionSentenceArr[0]);
-          console.log({ "RESULT: res.body:": res.body });
-        });
-    });
-    xit("#pal04-03b GET 200 NO: Does not return verbalNoun, when a gender is specified, as the verbalNoun is not a verb.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "dummy22 verbalNoun ~f",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr.length).to.equal(0);
           console.log({ "RESULT: res.body:": res.body });
         });
     });

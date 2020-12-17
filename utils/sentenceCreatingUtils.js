@@ -96,7 +96,10 @@ exports.processSentenceFormula = (
 
   let sentenceStructure = sentenceFormula.structure;
 
-  console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>sentenceStructure", sentenceStructure);
+  console.log(
+    ">>>>>>>>>>>>>>>>>>>>>>>>>>sentenceStructure BEFORE QA conform",
+    sentenceStructure
+  );
 
   if (kumquat) {
     exports.conformAnswerStructureToQuestionStructure(
@@ -108,16 +111,15 @@ exports.processSentenceFormula = (
     );
 
     console.log(
-      ">>>>>>>>>>>>>>>>>>>>>>>>>>sentenceStructure after QA conform",
+      ">>>>>>>>>>>>>>>>>>>>>>>>>>sentenceStructure AFTER QA conform",
       sentenceStructure
     );
-    // throw "Cease.";
   }
 
   console.log("-");
   console.log("----");
   console.log("--------");
-  console.log("sentenceStructure", sentenceStructure);
+  console.log("sentenceStructure BEFORE preprocessing", sentenceStructure);
   console.log("--------");
   console.log("----");
   console.log("-");
@@ -128,7 +130,7 @@ exports.processSentenceFormula = (
   console.log("~");
   console.log("~~~~");
   console.log("~~~~~~~~");
-  console.log("sentenceStructure PREPROCESSED", sentenceStructure);
+  console.log("sentenceStructure AFTER preprocessing", sentenceStructure);
   console.log("~~~~~~~~");
   console.log("~~~~");
   console.log("~");
@@ -185,10 +187,14 @@ exports.processSentenceFormula = (
       };
     }
 
-    // console.log(
-    //   "This HEADCHUNK has been parsed to this output array:",
-    //   allPossOutputUnits_head.map((outputUnit) => outputUnit.selectedWord)
-    // );
+    console.log("|");
+    console.log("|");
+    console.log(
+      "This HEADCHUNK has been parsed to this output array:",
+      allPossOutputUnits_head.map((outputUnit) => outputUnit.selectedWord)
+    );
+    console.log("|");
+    console.log("|");
 
     headOutputUnitArrays.push(allPossOutputUnits_head);
   });
@@ -235,28 +241,12 @@ exports.processSentenceFormula = (
           );
 
           //Inherit from head chunk to dependent chunks.
-          let inflectorKeys =
-            refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
-              dependentChunk.wordtype
-            ];
 
-          let hybridSelectors =
-            refObj.lemmaObjectFeatures[currentLanguage].hybridSelectors[
-              dependentChunk.wordtype
-            ];
-
-          if (hybridSelectors) {
-            inflectorKeys = [...inflectorKeys, ...hybridSelectors];
-          }
-
-          inflectorKeys.forEach((inflectorKey) => {
-            //HARD CHANGE
-            if (headChunk[inflectorKey]) {
-              dependentChunk[inflectorKey] = gpUtils.copyWithoutReference(
-                headChunk[inflectorKey]
-              );
-            }
-          });
+          exports.inheritFromHeadToDependentChunk(
+            currentLanguage,
+            headChunk,
+            dependentChunk
+          );
 
           console.log("dependentChunk", dependentChunk);
 
@@ -287,15 +277,19 @@ exports.processSentenceFormula = (
           //Give kumquat as true, it returns multiple outputUnit objects in allPossOutputUnits_dependent array.
           //Give kumquat as false, it returns just one outputUnit object in said array.
 
-          // console.log(
-          //   "For this head output unit:",
-          //   headOutputUnit,
-          //   "This DEPENDENTCHUNK has been parsed to this output array:",
-          //   allPossOutputUnits_dependent
-          //   // .map(
-          //   //   (outputUnit) => outputUnit.selectedWord
-          //   // )
-          // );
+          console.log("|");
+          console.log("|");
+          console.log(
+            "For this head output unit:",
+            headOutputUnit,
+            "This DEPENDENTCHUNK has been parsed to this output array:",
+            allPossOutputUnits_dependent
+            // .map(
+            //   (outputUnit) => outputUnit.selectedWord
+            // )
+          );
+          console.log("|");
+          console.log("|");
 
           if (!headOutputUnit.possibleDependentOutputArrays) {
             headOutputUnit.possibleDependentOutputArrays = [];
@@ -387,10 +381,14 @@ exports.processSentenceFormula = (
       };
     }
 
-    // console.log(
-    //   "This OTHERCHUNK has been parsed to this output array:",
-    //   allPossOutputUnits_other.map((outputUnit) => outputUnit.selectedWord)
-    // );
+    console.log("|");
+    console.log("|");
+    console.log(
+      "This OTHERCHUNK has been parsed to this output array:",
+      allPossOutputUnits_other.map((outputUnit) => outputUnit.selectedWord)
+    );
+    console.log("|");
+    console.log("|");
 
     //The above functions correctly.
     //If kumquat is true, then allPossOutputUnits_other is array of outputUnit objects, while if false, array of just one said object.
@@ -689,4 +687,64 @@ exports.removeDuplicatesFromResponseObject = (respObj) => {
   });
 
   respObj.finalSentenceArr = trimmedFinalSentenceArr;
+};
+
+exports.inheritFromHeadToDependentChunk = (
+  currentLanguage,
+  headChunk,
+  dependentChunk
+) => {
+  let inflectorKeys =
+    refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
+      dependentChunk.wordtype
+    ];
+
+  let hybridSelectors =
+    refObj.lemmaObjectFeatures[currentLanguage].hybridSelectors[
+      dependentChunk.wordtype
+    ];
+
+  if (hybridSelectors) {
+    inflectorKeys = [...inflectorKeys, ...hybridSelectors];
+  }
+
+  inflectorKeys.forEach((inflectorKey) => {
+    //HARD CHANGE
+    if (headChunk[inflectorKey]) {
+      let inflectorValueArr = gpUtils.copyWithoutReference(
+        headChunk[inflectorKey]
+      );
+
+      // langUtils.chunkInheritanceAdjustments(
+      //   headChunk,
+      //   dependentChunk,
+      //   inflectorKey,
+      //   inflectorValueArr
+      // );
+
+      //We now do this in findMatching, so not nec to do it here.
+      if (false) {
+        if (dependentChunk.wordtype === "verb") {
+          if (inflectorKey === "gender") {
+            let adjustedInflectorValueArr = [];
+
+            inflectorValueArr.forEach((inflectorValue) => {
+              if (
+                ["m1", "m2", "m3"].includes(inflectorValue) &&
+                !adjustedInflectorValueArr.includes("m")
+              ) {
+                adjustedInflectorValueArr.push("m");
+              } else {
+                adjustedInflectorValueArr.push(inflectorValue);
+              }
+            });
+          }
+        }
+
+        inflectorValueArr = adjustedInflectorValueArr;
+      }
+
+      dependentChunk[inflectorKey] = inflectorValueArr;
+    }
+  });
 };

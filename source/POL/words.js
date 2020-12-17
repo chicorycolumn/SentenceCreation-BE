@@ -299,7 +299,7 @@ let pronounSet = [
     },
   },
   {
-    translations: { ENG: ["he she it"] },
+    translations: { ENG: ["he"] },
     lemma: "on",
     id: "pol-pro-001",
     tags: [],

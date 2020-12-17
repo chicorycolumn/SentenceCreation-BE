@@ -179,4 +179,22 @@ exports.sentenceFormulasBank = {
     primaryOrders: [["fix-1", "ver-1"]],
     additionalOrders: [],
   },
+  "105a": {
+    sentenceFormulaSymbol: "I was writing 105a",
+    sentenceFormulaId: "ENG-00-105a",
+    translations: { POL: ["POL-00-105a"] },
+    structure: [
+      { chunkId: "fix-1", wordtype: "fixed", value: "I" },
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        andTags: ["basic3"],
+        tenseDescription: ["past continuous"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [["fix-1", "ver-1"]],
+    additionalOrders: [],
+  },
 };

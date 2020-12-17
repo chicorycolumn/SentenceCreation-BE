@@ -243,17 +243,44 @@ exports.findMatchingLemmaObjectThenWord = (
   //Epsilonman say: At this point, parse the tenseDescription, if present, to Aspect and Tense
   //Make as many copies of the structureChunk as there are tenseDescriptions.
 
+  //fm-adjustemente
+  if (true && currentLanguage === "POL") {
+    if (structureChunk.wordtype === "verb") {
+      if (!structureChunk.gender || !structureChunk.gender.length) {
+        structureChunk.gender = ["m", "f", "n"];
+      } else {
+        let adjustedGenderArr = [];
+
+        structureChunk.gender.forEach((genderValue) => {
+          if (
+            ["m1", "m2", "m3", "m"].includes(genderValue) &&
+            !adjustedGenderArr.includes("m")
+          ) {
+            adjustedGenderArr.push("m");
+          } else {
+            adjustedGenderArr.push(genderValue);
+          }
+        });
+
+        structureChunk.gender = adjustedGenderArr;
+      }
+    }
+  }
+
   let structureChunks = [structureChunk];
 
-  if (
-    structureChunk.tenseDescription &&
-    structureChunk.tenseDescription.length
-  ) {
-    let adjustedStructureChunks = langUtils.adjustTenseDescriptions(
-      structureChunk
-    );
-    if (adjustedStructureChunks) {
-      structureChunks = adjustedStructureChunks;
+  //Tidy and merge these two fxnalities.
+  if (true) {
+    if (
+      structureChunk.tenseDescription &&
+      structureChunk.tenseDescription.length
+    ) {
+      let adjustedStructureChunks = langUtils.adjustTenseDescriptions(
+        structureChunk
+      );
+      if (adjustedStructureChunks) {
+        structureChunks = adjustedStructureChunks;
+      }
     }
   }
 
@@ -288,6 +315,13 @@ exports.findMatchingLemmaObjectThenWord = (
           currentLanguage,
           kumquat
         );
+
+        console.log("subArrayOfOutputUnits", subArrayOfOutputUnits);
+        subArrayOfOutputUnits.forEach((unit) => {
+          unit.drillPath.forEach((drill) => {
+            console.log(drill);
+          });
+        });
 
         subArrayOfOutputUnits.forEach((unit) => {
           let { errorInDrilling, selectedWordArray, drillPath } = unit;

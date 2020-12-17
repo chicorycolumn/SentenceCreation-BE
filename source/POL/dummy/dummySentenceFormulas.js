@@ -496,7 +496,6 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
-
         aspect: ["imperfective"],
         tense: ["past", "conditional"],
         andTags: ["basic2"],

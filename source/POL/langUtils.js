@@ -214,12 +214,7 @@ exports.fillVerbInflections = (lemmaObject) => {
     inflections,
     "allSingularGenders",
     (obj) => {
-      gpUtils.copyValueOfKey(
-        obj,
-        "allSingularGenders",
-        ["m1", "m2", "m3", "f", "n"],
-        true
-      );
+      gpUtils.copyValueOfKey(obj, "allSingularGenders", ["m", "f", "n"], true);
     }
   );
 
@@ -230,7 +225,7 @@ exports.fillVerbInflections = (lemmaObject) => {
       gpUtils.copyValueOfKey(
         obj,
         "allSingularGendersExcludingNeuter",
-        ["m1", "m2", "m3", "f"],
+        ["m", "f"],
         true
       );
     }
@@ -275,9 +270,10 @@ exports.fillVerbInflections = (lemmaObject) => {
     }
   );
 
-  gpUtils.findKeysInObjectAndExecuteCallback(inflections, "m", (obj) => {
-    gpUtils.copyValueOfKey(obj, "m", ["m1", "m2", "m3"], true);
-  });
+  //Masculist agenda
+  // gpUtils.findKeysInObjectAndExecuteCallback(inflections, "m", (obj) => {
+  //   gpUtils.copyValueOfKey(obj, "m", ["m1", "m2", "m3"], true);
+  // });
 
   function isAvailable(value) {
     //If true, fill it out.

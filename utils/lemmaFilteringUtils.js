@@ -31,14 +31,18 @@ exports.filterWithinSelectedLemmaObject = (
     requirementArrs.push([key, structureChunk[key] || []]);
   });
 
+  ////Zeta I think this is unused.
   let { routesByNesting, routesByLevel } = otUtils.extractNestedRoutes(
     lemmaObject.inflections
   );
 
   let inflectionPathsInSource = routesByNesting;
-  let errorInDrilling = false;
+  ////
 
+  let errorInDrilling = false;
   let pathRecord = [];
+
+  // console.log(">>>>>>>>>>>>>.source", source.verbal.past);
 
   traverseAndRecordInflections(source, requirementArrs, pathRecord);
 
@@ -49,6 +53,7 @@ exports.filterWithinSelectedLemmaObject = (
 
   if (kumquat) {
     //Zeta this could be tidied up. Just add errorInDrilling to the array and return that, instead of mapping it.
+
     return pathRecord.map((selectedPath) => {
       let { selectedWordArray, drillPath } = selectedPath;
       return {
