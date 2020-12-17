@@ -111,6 +111,12 @@ function checkSentenceTranslations(
   let { body } = res;
   let direction = `${questionLanguage}->${answerLanguage}`;
 
+  if (!allExpectedQuestionSentences.length) {
+    allExpectedQuestionSentences = translatedSentencesRef[word][direction].map(
+      (array) => array[questionLanguage]
+    );
+  }
+
   console.log({ "RESULT: res.body:": body });
 
   let questionSentence = body.questionSentenceArr[0];
@@ -127,7 +133,10 @@ function checkSentenceTranslations(
       if (questionSentence === POL) {
         expect(answerSentenceArr).to.have.members(ENG);
         console.log(
-          `-' '-._,-' '-._,-' '-._,-' '-._,-' '-._,-' '-._,${questionSentence}----was translated by`,
+          `-' '-._,-' '-._,-' '-._,-' '-._,-' '-._,-' '-._${questionSentence}`
+        );
+        console.log(
+          "  was translated by`-' '-._,-' '-._,-' '-._,-'",
           answerSentenceArr
         );
       }
@@ -135,7 +144,10 @@ function checkSentenceTranslations(
       if (questionSentence === ENG) {
         expect(answerSentenceArr).to.have.members(POL);
         console.log(
-          `-' '-._,-' '-._,-' '-._,-' '-._,-' '-._,-' '-._,${questionSentence}----was translated by`,
+          `-' '-._,-' '-._,-' '-._,-' '-._,-' '-._,-' '-._${questionSentence}`
+        );
+        console.log(
+          "  was translated by`-' '-._,-' '-._,-' '-._,-'",
           answerSentenceArr
         );
       }
@@ -511,17 +523,7 @@ describe("/api", () => {
             questionLanguage,
             answerLanguage,
             "write",
-            [
-              "Piszę.",
-              "Pisałem.",
-              "Pisałam.",
-              "Napiszę.",
-              "Napisałem.",
-              "Napisałam.",
-              "Będę pisał.",
-              "Będę pisała.",
-              "Będę pisać.",
-            ]
+            []
           );
         });
     });
@@ -587,33 +589,54 @@ describe("/api", () => {
             questionLanguage,
             answerLanguage,
             "write",
-            [
-              "I wrote.",
-              "I was writing.",
-              "I had written.",
-              "I write.",
-              "I am writing.",
-              "I have written.",
-              "I will write.",
-              "I will be writing.",
-              "I will have written.",
-            ]
+            []
           );
         });
     });
-    xit("#pal06-04g GET 200 YES: RSWAT POL to ENG, tenseDescription is left blank in both question and answer structures.", () => {
+    it("#pal06-04g GET 200 YES: RSWAT POL to ENG, tenseDescription is left blank in both question and answer structures.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
       return request(app)
         .get("/api/palette")
         .send({
+          questionLanguage,
+          answerLanguage,
           useDummy: true,
-          questionLanguage: "POL",
-          answerLanguage: "ENG",
           sentenceFormulaSymbol: "dummy28",
         })
         .expect(200)
         .then((res) => {
-          console.log({ "RESULT: res.body:": res.body });
-          throw "Unfinished test.";
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "write",
+            []
+          );
+        });
+    });
+    it("#pal06-04g GET 200 YES: RSWAT POL to ENG, tenseDescription is left blank in both question and answer structures.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          useDummy: true,
+          sentenceFormulaSymbol: "dummy28",
+        })
+        .expect(200)
+        .then((res) => {
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "write",
+            []
+          );
         });
     });
   });

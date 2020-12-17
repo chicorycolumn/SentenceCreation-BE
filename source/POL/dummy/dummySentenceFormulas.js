@@ -689,6 +689,7 @@ exports.dummySentenceFormulasBank = {
     structure: [
       {
         chunkId: "ver-1",
+        form: ["verbal"],
         wordtype: "verb",
         andTags: ["basic3"],
         tenseDescription: [],
