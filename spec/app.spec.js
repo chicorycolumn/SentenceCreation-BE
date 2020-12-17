@@ -7,7 +7,7 @@ const { selectRandom } = require("../utils/generalPurposeUtils");
 // const { myErrMsgs } = require("../errors/errors");
 // const endpointsCopy = require("../endpoints.json");
 
-const translatedSentencesRef = {
+const generalTranslatedSentencesRef = {
   write: {
     "POL->ENG": [
       { POL: "Piszę.", ENG: ["I am writing.", "I write."] },
@@ -105,7 +105,8 @@ function checkSentenceTranslations(
   questionLanguage,
   answerLanguage,
   word,
-  allExpectedQuestionSentences
+  allExpectedQuestionSentences,
+  translatedSentencesRef = generalTranslatedSentencesRef
 ) {
   let { body } = res;
   let direction = `${questionLanguage}->${answerLanguage}`;
@@ -126,7 +127,7 @@ function checkSentenceTranslations(
       if (questionSentence === POL) {
         expect(answerSentenceArr).to.have.members(ENG);
         console.log(
-          `--------------------------------------------->${questionSentence}----was translated by`,
+          `-' '-._,-' '-._,-' '-._,-' '-._,-' '-._,-' '-._,${questionSentence}----was translated by`,
           answerSentenceArr
         );
       }
@@ -134,7 +135,7 @@ function checkSentenceTranslations(
       if (questionSentence === ENG) {
         expect(answerSentenceArr).to.have.members(POL);
         console.log(
-          `---------------------------------------------${questionSentence}----was translated by`,
+          `-' '-._,-' '-._,-' '-._,-' '-._,-' '-._,-' '-._,${questionSentence}----was translated by`,
           answerSentenceArr
         );
       }
@@ -160,39 +161,42 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          let questionSentence = res.body.questionSentenceArr[0];
+          const translatedSentencesRef = {
+            current: {
+              "POL->ENG": [
+                {
+                  POL: "Kobieta czyta.",
+                  ENG: ["The woman reads.", "The woman is reading."],
+                },
+                {
+                  POL: "Kobiety czytają.",
+                  ENG: ["The women read.", "The women are reading."],
+                },
+                {
+                  POL: "Chłopiec czyta.",
+                  ENG: ["The boy reads.", "The boy is reading."],
+                },
+                {
+                  POL: "Chłopcy czytają.",
+                  ENG: ["The boys read.", "The boys are reading."],
+                },
+              ],
+            },
+          };
 
-          expect(questionSentence).to.be.a("String");
-
-          expect([
-            "Kobieta czyta.",
-            "Kobiety czytają.",
-            "Chłopiec czyta.",
-            "Chłopcy czytają.",
-          ]).to.include(questionSentence);
-
-          if (questionSentence === "Kobieta czyta.") {
-            expect(res.body.answerSentenceArr).to.have.members([
-              "The woman reads.",
-              "The woman is reading.",
-            ]);
-          } else if (questionSentence === "Kobiety czytają.") {
-            expect(res.body.answerSentenceArr).to.have.members([
-              "The women read.",
-              "The women are reading.",
-            ]);
-          } else if (questionSentence === "Chłopiec czyta.") {
-            expect(res.body.answerSentenceArr).to.have.members([
-              "The boy reads.",
-              "The boy is reading.",
-            ]);
-          } else if (questionSentence === "Chłopcy czytają.") {
-            expect(res.body.answerSentenceArr).to.have.members([
-              "The boys read.",
-              "The boys are reading.",
-            ]);
-          }
-          console.log({ "RESULT: res.body:": res.body });
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "current",
+            [
+              "Kobieta czyta.",
+              "Kobiety czytają.",
+              "Chłopiec czyta.",
+              "Chłopcy czytają.",
+            ],
+            translatedSentencesRef
+          );
         });
     });
     it("#pal06-01b GET 200 YES: RSWAT with multiple orders.", () => {
@@ -208,47 +212,62 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          let questionSentence = res.body.questionSentenceArr[0];
+          const translatedSentencesRef = {
+            current: {
+              "POL->ENG": [
+                {
+                  POL: "Kobieta szybko czyta.",
+                  ENG: [
+                    "The woman reads quickly.",
+                    "The woman is reading quickly.",
+                    "Quickly the woman reads.",
+                    "Quickly the woman is reading.",
+                  ],
+                },
+                {
+                  POL: "Kobiety szybko czytają.",
+                  ENG: [
+                    "The women read quickly.",
+                    "The women are reading quickly.",
+                    "Quickly the women read.",
+                    "Quickly the women are reading.",
+                  ],
+                },
+                {
+                  POL: "Chłopiec szybko czyta.",
+                  ENG: [
+                    "The boy reads quickly.",
+                    "The boy is reading quickly.",
+                    "Quickly the boy reads.",
+                    "Quickly the boy is reading.",
+                  ],
+                },
+                {
+                  POL: "Chłopcy szybko czytają.",
+                  ENG: [
+                    "The boys read quickly.",
+                    "The boys are reading quickly.",
+                    "Quickly the boys read.",
+                    "Quickly the boys are reading.",
+                  ],
+                },
+              ],
+            },
+          };
 
-          expect(questionSentence).to.be.a("String");
-
-          expect([
-            "Kobieta szybko czyta.",
-            "Kobiety szybko czytają.",
-            "Chłopiec szybko czyta.",
-            "Chłopcy szybko czytają.",
-          ]).to.include(questionSentence);
-
-          if (questionSentence === "Kobieta szybko czyta.") {
-            expect(res.body.answerSentenceArr).to.have.members([
-              "The woman reads quickly.",
-              "The woman is reading quickly.",
-              "Quickly the woman reads.",
-              "Quickly the woman is reading.",
-            ]);
-          } else if (questionSentence === "Kobiety szybko czytają.") {
-            expect(res.body.answerSentenceArr).to.have.members([
-              "The women read quickly.",
-              "The women are reading quickly.",
-              "Quickly the women read.",
-              "Quickly the women are reading.",
-            ]);
-          } else if (questionSentence === "Chłopiec szybko czyta.") {
-            expect(res.body.answerSentenceArr).to.have.members([
-              "The boy reads quickly.",
-              "The boy is reading quickly.",
-              "Quickly the boy reads.",
-              "Quickly the boy is reading.",
-            ]);
-          } else if (questionSentence === "Chłopcy szybko czytają.") {
-            expect(res.body.answerSentenceArr).to.have.members([
-              "The boys read quickly.",
-              "The boys are reading quickly.",
-              "Quickly the boys read.",
-              "Quickly the boys are reading.",
-            ]);
-          }
-          console.log({ "RESULT: res.body:": res.body });
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "current",
+            [
+              "Kobieta szybko czyta.",
+              "Kobiety szybko czytają.",
+              "Chłopiec szybko czyta.",
+              "Chłopcy szybko czytają.",
+            ],
+            translatedSentencesRef
+          );
         });
     });
     it("#pal06-02a GET 200 YES: RSWAT POL to ENG, where there are two different sentenceFormulas as answers.", () => {
@@ -265,17 +284,25 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          let questionSentence = res.body.questionSentenceArr[0];
+          const translatedSentencesRef = {
+            current: {
+              "POL->ENG": [
+                {
+                  POL: "Dzień dobry.",
+                  ENG: ["Hello.", "Good day."],
+                },
+              ],
+            },
+          };
 
-          expect(questionSentence).to.be.a("String");
-
-          expect(["Dzień dobry."]).to.include(questionSentence);
-          expect(res.body.answerSentenceArr).to.have.members([
-            "Good day.",
-            "Hello.",
-          ]);
-
-          console.log({ "RESULT: res.body:": res.body });
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "current",
+            ["Dzień dobry."],
+            translatedSentencesRef
+          );
         });
     });
     it("#pal06-02b GET 200 YES: RSWAT ENG to POL, where there are two different sentenceFormulas as answers.", () => {
@@ -292,17 +319,25 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          let questionSentence = res.body.questionSentenceArr[0];
+          const translatedSentencesRef = {
+            current: {
+              "ENG->POL": [
+                {
+                  POL: "Good day.",
+                  ENG: ["Dzień dobry.", "Halo."],
+                },
+              ],
+            },
+          };
 
-          expect(questionSentence).to.be.a("String");
-
-          expect(["Good day."]).to.include(questionSentence);
-          expect(res.body.answerSentenceArr).to.have.members([
-            "Dzień dobry.",
-            "Halo.",
-          ]);
-
-          console.log({ "RESULT: res.body:": res.body });
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "current",
+            ["Good day."],
+            translatedSentencesRef
+          );
         });
     });
     it("#pal06-03a GET 200 YES: RSWAT POL to ENG, a tenseDescription must be translated by multiple such.", () => {
