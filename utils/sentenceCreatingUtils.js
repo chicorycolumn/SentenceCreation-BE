@@ -694,6 +694,12 @@ exports.inheritFromHeadToDependentChunk = (
   headChunk,
   dependentChunk
 ) => {
+  // console.log("SC:inheritFromHeadToDependentChunk was given:", {
+  //   currentLanguage,
+  //   headChunk,
+  //   dependentChunk,
+  // });
+
   let inflectorKeys =
     refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
       dependentChunk.wordtype
@@ -715,14 +721,14 @@ exports.inheritFromHeadToDependentChunk = (
         headChunk[inflectorKey]
       );
 
-      // langUtils.chunkInheritanceAdjustments(
-      //   headChunk,
-      //   dependentChunk,
-      //   inflectorKey,
-      //   inflectorValueArr
-      // );
-
       dependentChunk[inflectorKey] = inflectorValueArr;
     }
   });
+
+  // console.log(
+  //   "SC:inheritFromHeadToDependentChunk should have now changed this dep chunk:",
+  //   {
+  //     dependentChunk,
+  //   }
+  // );
 };

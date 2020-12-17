@@ -51,11 +51,60 @@ exports.filterWithinSelectedLemmaObject = (
   let errorInDrilling = false;
   let pathRecord = [];
 
+  console.log("sss source", source);
   console.log("rrr requirementArrs", requirementArrs);
 
   traverseAndRecordInflections(source, requirementArrs, pathRecord);
 
-  console.log("ppp pathRecord", pathRecord);
+  if (true) {
+    console.log(
+      "qqq**************************************************************************************"
+    );
+    console.log(" ");
+    console.log(
+      "*****************************************************************************************"
+    );
+    console.log(" ");
+    console.log(
+      "*****************************************************************************************"
+    );
+    console.log(" ");
+    console.log(
+      "*****************************************************************************************"
+    );
+    console.log(" ");
+    console.log(
+      "*****************************************************************************************"
+    );
+    console.log(" ");
+    console.log(
+      "*****************************************************************************************"
+    );
+    console.log(" ");
+    console.log(
+      "*****************************************************************************************"
+    );
+    console.log(" ");
+    console.log(
+      "*****************************************************************************************"
+    );
+  }
+  pathRecord.forEach((pathRecordUnit) => {
+    console.log(
+      "pppathRecordUnit selectedWordArray:",
+      pathRecordUnit.selectedWordArray
+    );
+    console.log("pppathRecordUnit drillPath:", pathRecordUnit.drillPath);
+    console.log(" ");
+    console.log(" ");
+  });
+
+  //Drill Virile Issue:
+  //When number is plural, or perhaps when gender is virile or nonvirile,
+  //then the drillPath is only [["number", "virile"]] or nonvirile.
+  //But the drillpath should have all the others too.
+
+  throw "Cease.";
 
   /**Masculinist Agenda: Overrepresentation issue.
    *
@@ -155,7 +204,14 @@ exports.updateStructureChunkByAdhocOnly = (
   structureChunk[adhocLabel] = [adhocValue];
 };
 
-exports.updateStructureChunkByInflections = (outputUnit, currentLanguages) => {
+exports.updateStructureChunkByInflections = (outputUnit, currentLanguage) => {
+  console.log(
+    "LF:updateStructureChunkByInflections says that this drillPath should be all",
+    outputUnit.drillPath
+  );
+
+  throw "Cease.";
+
   if (outputUnit.drillPath) {
     outputUnit.drillPath.forEach((drillPathSubArr) => {
       let requiredInflectorCategory = drillPathSubArr[0];
@@ -166,6 +222,11 @@ exports.updateStructureChunkByInflections = (outputUnit, currentLanguages) => {
       ];
     });
   }
+
+  console.log(
+    "LF:updateStructureChunkByInflections FINISHED outputUnit:",
+    outputUnit
+  );
 };
 
 exports.updateStructureChunkByAndTagsAndSelectors = (

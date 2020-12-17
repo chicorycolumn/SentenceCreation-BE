@@ -608,7 +608,6 @@ exports.dummySentenceFormulasBank = {
         aspect: ["imperfective"],
         tenseDescription: ["present im", "past im"],
         andTags: ["basic2"],
-
         person: ["1per", "2per"],
         number: ["singular", "plural"],
         gender: [],
@@ -621,7 +620,6 @@ exports.dummySentenceFormulasBank = {
         aspect: ["imperfective"],
         tenseDescription: ["present im", "past im"],
         andTags: ["science"],
-
         person: ["1per", "2per"],
         number: ["singular", "plural"],
         gender: [],
