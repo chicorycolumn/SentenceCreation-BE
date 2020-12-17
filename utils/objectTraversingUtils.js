@@ -59,6 +59,7 @@ exports.findMatchingLemmaObjectThenWord = (
     );
   }
 
+  console.log("yyy");
   langUtils.preprocessLemmaObjects(matches, structureChunk);
 
   //STEP THREE: Return result array immediately if uninflected or ad hoc.
@@ -101,7 +102,7 @@ exports.findMatchingLemmaObjectThenWord = (
               });
             });
           } else {
-            let selectedLemmaObject = gpUtils.selectRaandom(matches);
+            let selectedLemmaObject = gpUtils.selectRandom(matches);
 
             let adhocArr = langUtils.generateAdhocForms(
               gpUtils.copyWithoutReference(structureChunk),
@@ -109,7 +110,7 @@ exports.findMatchingLemmaObjectThenWord = (
               currentLanguage
             );
 
-            let selectedAdhocResultObj = gpUtils.selectRaandom(adhocArr);
+            let selectedAdhocResultObj = gpUtils.selectRandom(adhocArr);
 
             let {
               selectedWordArr,
@@ -174,7 +175,7 @@ exports.findMatchingLemmaObjectThenWord = (
                 });
               });
             } else {
-              let selectedUninflectedForm = gpUtils.selectRaandom(
+              let selectedUninflectedForm = gpUtils.selectRandom(
                 requestedUninflectedForms
               );
 
@@ -182,7 +183,7 @@ exports.findMatchingLemmaObjectThenWord = (
                 return lObj.inflections[selectedUninflectedForm];
               });
 
-              let selectedLemmaObject = gpUtils.selectRaandom(
+              let selectedLemmaObject = gpUtils.selectRandom(
                 matchesByUninflectedForm
               );
 
@@ -243,33 +244,9 @@ exports.findMatchingLemmaObjectThenWord = (
   //Epsilonman say: At this point, parse the tenseDescription, if present, to Aspect and Tense
   //Make as many copies of the structureChunk as there are tenseDescriptions.
 
-  //fm-adjustemente
-  if (true && currentLanguage === "POL") {
-    if (structureChunk.wordtype === "verb") {
-      if (!structureChunk.gender || !structureChunk.gender.length) {
-        structureChunk.gender = ["m", "f", "n"];
-      } else {
-        let adjustedGenderArr = [];
-
-        structureChunk.gender.forEach((genderValue) => {
-          if (
-            ["m1", "m2", "m3", "m"].includes(genderValue) &&
-            !adjustedGenderArr.includes("m")
-          ) {
-            adjustedGenderArr.push("m");
-          } else {
-            adjustedGenderArr.push(genderValue);
-          }
-        });
-
-        structureChunk.gender = adjustedGenderArr;
-      }
-    }
-  }
-
   let structureChunks = [structureChunk];
 
-  //Tidy and merge these two fxnalities.
+  //Abstract out this fxnality.
   if (true) {
     if (
       structureChunk.tenseDescription &&
@@ -345,7 +322,7 @@ exports.findMatchingLemmaObjectThenWord = (
         });
       });
     } else {
-      let selectedLemmaObject = gpUtils.selectRaandom(matchesCopy);
+      let selectedLemmaObject = gpUtils.selectRandom(matchesCopy);
 
       let subArrayOfOutputUnits = lfUtils.filterWithinSelectedLemmaObject(
         selectedLemmaObject,
@@ -401,7 +378,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
   if (!kumquat && arrayOfAllPossibleOutputUnits.length > 1) {
     arrayOfAllPossibleOutputUnits = [
-      gpUtils.selectRaandom(arrayOfAllPossibleOutputUnits),
+      gpUtils.selectRandom(arrayOfAllPossibleOutputUnits),
     ];
   }
 

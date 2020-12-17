@@ -2,7 +2,24 @@ const lfUtils = require("../../utils/lemmaFilteringUtils.js");
 const otUtils = require("../../utils/objectTraversingUtils.js");
 const gpUtils = require("../../utils/generalPurposeUtils.js");
 
-exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {};
+exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
+  sentenceStructure.forEach((structureChunk) => {
+    if (structureChunk.gender && structureChunk.gender.length) {
+      let adjustedGenderArray = [];
+
+      //Masculinist agenda
+      structureChunk.gender.forEach((gender) => {
+        if (gender === "m") {
+          adjustedGenderArray.push("m1", "m2", "m3");
+        } else {
+          adjustedGenderArray.push(gender);
+        }
+      });
+
+      structureChunk.gender = Array.from(new Set(adjustedGenderArray));
+    }
+  });
+};
 
 exports.adjustTenseDescriptions = (structureChunk) => {
   const aspectReference = { im: "imperfective", pf: "perfective" };
@@ -36,6 +53,19 @@ exports.preprocessLemmaObjects = (matches, structureChunk) => {
   }
 
   if (["adjective"].includes(structureChunk.wordtype)) {
+    /**This says, for adjective lObjs:
+     * {
+     *    m: "whang",
+     *    f: "whee"
+     * }
+     * changes to this:
+     * {
+     *    m1: "whang",
+     *    m2: "whang",
+     *    m3: "whang",
+     *    f: "whee"
+     * }
+     */
     matches.forEach((lObj) => exports.adjustMasculinityOfLemmaObject(lObj));
   }
 
@@ -214,7 +244,12 @@ exports.fillVerbInflections = (lemmaObject) => {
     inflections,
     "allSingularGenders",
     (obj) => {
-      gpUtils.copyValueOfKey(obj, "allSingularGenders", ["m", "f", "n"], true);
+      gpUtils.copyValueOfKey(
+        obj,
+        "allSingularGenders",
+        ["m1", "m2", "m3", "f", "n"],
+        true
+      );
     }
   );
 
@@ -225,7 +260,7 @@ exports.fillVerbInflections = (lemmaObject) => {
       gpUtils.copyValueOfKey(
         obj,
         "allSingularGendersExcludingNeuter",
-        ["m", "f"],
+        ["m1", "m2", "m3", "f"],
         true
       );
     }
@@ -270,10 +305,10 @@ exports.fillVerbInflections = (lemmaObject) => {
     }
   );
 
-  //Masculist agenda
-  // gpUtils.findKeysInObjectAndExecuteCallback(inflections, "m", (obj) => {
-  //   gpUtils.copyValueOfKey(obj, "m", ["m1", "m2", "m3"], true);
-  // });
+  // Masculinist agenda
+  gpUtils.findKeysInObjectAndExecuteCallback(inflections, "m", (obj) => {
+    gpUtils.copyValueOfKey(obj, "m", ["m1", "m2", "m3"], true);
+  });
 
   function isAvailable(value) {
     //If true, fill it out.
@@ -287,6 +322,7 @@ exports.fillVerbInflections = (lemmaObject) => {
 exports.adjustMasculinityOfLemmaObject = (lemmaObject) => {
   let { inflections } = lemmaObject;
 
+  //Masculinist agenda
   gpUtils.findKeysInObjectAndExecuteCallback(inflections, "m", (obj) => {
     gpUtils.copyValueOfKey(obj, "m", ["m1", "m2", "m3"], true);
   });

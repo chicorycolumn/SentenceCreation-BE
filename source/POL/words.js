@@ -305,7 +305,7 @@ let pronounSet = [
     tags: [],
     deficient: false,
     person: "3per",
-    gender: ["m1", "m2", "m3", "f", "n"],
+    gender: ["m1", "m2", "m3"],
     inflections: {
       singular: {
         m: {},

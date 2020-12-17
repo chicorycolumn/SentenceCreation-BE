@@ -1,11 +1,26 @@
 const lfUtils = require("./lemmaFilteringUtils.js");
 const otUtils = require("./objectTraversingUtils.js");
 
-exports.selectRandom = (array) => {
-  return array[Math.floor(Math.random() * array.length)];
-};
+const masculineSubgenders = ["m1", "m2", "m3"];
 
-exports.selectRaandom = (array) => {
+exports.selectRandom = (array) => {
+  if (
+    masculineSubgenders.every((subgender) => {
+      array.includes(subgender);
+    })
+  ) {
+    array.forEach((gender) => {
+      if (!masculineSubgenders.includes(gender)) {
+        array.push(gender);
+        array.push(gender);
+      }
+    });
+    console.log(
+      "Hey! Before selecting random, I adjusted the array to this:",
+      array
+    );
+  }
+
   return array[Math.floor(Math.random() * array.length)];
 };
 

@@ -661,6 +661,29 @@ describe("/api", () => {
           );
         });
     });
+    it.only("#pal06-06a GET 200 YES: RSWAT POL to ENG, checking that feminine is selected randomly as often as masculine.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy31",
+        })
+        .expect(200)
+        .then((res) => {
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "write",
+            ["Pisałam.", "Pisałem."]
+          );
+        });
+    });
   });
 
   describe("/palette - Stage 5: Rich sentences (with nouns adjectives and verbs).", () => {
@@ -1086,7 +1109,7 @@ describe("/api", () => {
           console.log({ "RESULT: res.body:": res.body });
         });
     });
-    it.only("#pal04-01c GET 200 YES: Returns a sentence with a single verb, with tense and number specified.", () => {
+    it("#pal04-01c GET 200 YES: Returns a sentence with a single verb, with tense and number specified.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -1628,7 +1651,7 @@ describe("/api", () => {
   });
 
   describe("/palette - Stage 1: Basics", () => {
-    it("#pal01-01 GET 200 YES: Returns a sentence", () => {
+    it("#pal01-01a GET 200 YES: Returns a sentence", () => {
       return request(app)
         .get("/api/palette")
         .send({

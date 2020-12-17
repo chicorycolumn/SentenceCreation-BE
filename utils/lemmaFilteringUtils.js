@@ -42,9 +42,12 @@ exports.filterWithinSelectedLemmaObject = (
   let errorInDrilling = false;
   let pathRecord = [];
 
-  // console.log(">>>>>>>>>>>>>.source", source.verbal.past);
+  console.log("rrr requirementArrs", requirementArrs);
+  console.log("sss source", source);
 
   traverseAndRecordInflections(source, requirementArrs, pathRecord);
+
+  console.log("ppp pathRecord", pathRecord);
 
   if (!pathRecord || !pathRecord.length) {
     errorInDrilling = true;
@@ -63,7 +66,7 @@ exports.filterWithinSelectedLemmaObject = (
       };
     });
   } else {
-    let selectedPath = gpUtils.selectRaandom(pathRecord);
+    let selectedPath = gpUtils.selectRandom(pathRecord);
 
     let { selectedWordArray, drillPath } = selectedPath;
 

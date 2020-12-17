@@ -722,28 +722,6 @@ exports.inheritFromHeadToDependentChunk = (
       //   inflectorValueArr
       // );
 
-      //We now do this in findMatching, so not nec to do it here.
-      if (false) {
-        if (dependentChunk.wordtype === "verb") {
-          if (inflectorKey === "gender") {
-            let adjustedInflectorValueArr = [];
-
-            inflectorValueArr.forEach((inflectorValue) => {
-              if (
-                ["m1", "m2", "m3"].includes(inflectorValue) &&
-                !adjustedInflectorValueArr.includes("m")
-              ) {
-                adjustedInflectorValueArr.push("m");
-              } else {
-                adjustedInflectorValueArr.push(inflectorValue);
-              }
-            });
-          }
-        }
-
-        inflectorValueArr = adjustedInflectorValueArr;
-      }
-
       dependentChunk[inflectorKey] = inflectorValueArr;
     }
   });

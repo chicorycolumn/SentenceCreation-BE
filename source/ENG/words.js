@@ -50,7 +50,7 @@ let nounSet = [
     //selectors
     lemma: "boy",
     id: "eng-nou-002a",
-    gender: "m",
+    gender: "n",
     //notes
     deficient: false,
     //inflections

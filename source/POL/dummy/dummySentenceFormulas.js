@@ -196,7 +196,7 @@ exports.dummySentenceFormulasBank = {
         gcase: ["nom"],
         number: ["singular"],
         gender: [],
-        specificLemmas: ["jabłko"], //This overrides andTags and selectRaandom, and selectors. But requested inflections still work.
+        specificLemmas: ["jabłko"], //This overrides andTags and selectRandom, and selectors. But requested inflections still work.
       },
     ],
     primaryOrders: [["fix-1", "nou-1"]],
@@ -214,7 +214,7 @@ exports.dummySentenceFormulasBank = {
         gcase: ["acc"],
         number: ["plural"],
         gender: [],
-        specificLemmas: ["jabłko", "majtki"], //This overrides andTags and selectRaandom, and selectors. But requested inflections still work.
+        specificLemmas: ["jabłko", "majtki"], //This overrides andTags and selectRandom, and selectors. But requested inflections still work.
       },
     ],
     primaryOrders: [["fix-1", "nou-1"]],
@@ -257,7 +257,6 @@ exports.dummySentenceFormulasBank = {
         chunkId: "ver-1",
         wordtype: "verb",
         andTags: ["basic2"],
-
         tenseDescription: ["conditional im"],
         number: ["plural"],
       },
@@ -724,6 +723,22 @@ exports.dummySentenceFormulasBank = {
         wordtype: "verb",
         andTags: ["basic3"],
         tenseDescription: [],
+        person: ["1per"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [],
+  },
+  dummy31: {
+    sentenceFormulaSymbol: "dummy31",
+    sentenceFormulaId: "POL-dummy31",
+    translations: { ENG: ["ENG-dummy31"] },
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        andTags: ["basic3"],
+        tenseDescription: ["past im"],
         person: ["1per"],
         number: ["singular"],
       },
