@@ -8,6 +8,18 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
           !structureChunk.tenseDescription ||
           !structureChunk.tenseDescription.length
         ) {
+          //Very specific point.
+          if (currentLanguage === "POL") {
+            if (
+              structureChunk.tense &&
+              structureChunk.tense.length &&
+              structureChunk.aspect &&
+              structureChunk.aspect.length
+            ) {
+              return;
+            }
+          }
+
           structureChunk.tenseDescription = refObj.allFeatureValues[
             currentLanguage
           ].tenseDescription.slice(0);

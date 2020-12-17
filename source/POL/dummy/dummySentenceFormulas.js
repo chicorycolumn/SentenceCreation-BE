@@ -496,10 +496,10 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "ver-1",
         wordtype: "verb",
+        form: ["verbal"],
         aspect: ["imperfective"],
         tense: ["past", "conditional"],
         andTags: ["basic2"],
-        form: ["verbal"],
         person: ["1per"],
         number: ["plural"],
         gender: ["m1"],
