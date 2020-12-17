@@ -1,6 +1,7 @@
 const gpUtils = require("./generalPurposeUtils.js");
 const otUtils = require("./objectTraversingUtils.js");
 const refObj = require("./referenceObjects.js");
+const langUtils = require("./referenceObjects.js");
 
 exports.filterWithinSelectedLemmaObject = (
   lemmaObject,
@@ -8,6 +9,16 @@ exports.filterWithinSelectedLemmaObject = (
   currentLanguage,
   kumquat
 ) => {
+  const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
+
+  //Counteract Masculinist Agenda: Overrepresentation
+  if (currentLanguage === "POL") {
+    langUtils.preventMasculineOverrepresentation(
+      structureChunk,
+      currentLanguage
+    );
+  }
+
   console.log("LF:filterWithinSelectedLemmaObject was given:", {
     lemmaObject,
     structureChunk,
@@ -16,8 +27,6 @@ exports.filterWithinSelectedLemmaObject = (
   });
 
   //STEP ZERO: Get necessary materials, ie inflectionPaths and requirementArrs.
-  const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
-
   let source = lemmaObject.inflections;
 
   let inflectionChain =
@@ -43,11 +52,19 @@ exports.filterWithinSelectedLemmaObject = (
   let pathRecord = [];
 
   console.log("rrr requirementArrs", requirementArrs);
-  console.log("sss source", source);
 
   traverseAndRecordInflections(source, requirementArrs, pathRecord);
 
   console.log("ppp pathRecord", pathRecord);
+
+  /**Masculinist Agenda: Overrepresentation issue.
+   *
+   * pathRecord = [ { pisałem (m1) }, { pisałem (m2) }, { pisałem (m3) }, { pisałam (f) }  ]
+   *
+   * So see how when non-kumquat condition does selectRandom, it will choose pisałem 3/4 of the time.
+   *
+   * This happens whether structureChunk gender is blank or not.
+   */
 
   if (!pathRecord || !pathRecord.length) {
     errorInDrilling = true;

@@ -136,7 +136,7 @@ function checkSentenceTranslations(
           `-' '-._,-' '-._,-' '-._,-' '-._,-' '-._,-' '-._${questionSentence}`
         );
         console.log(
-          "  was translated by`-' '-._,-' '-._,-' '-._,-'",
+          "was translated by,-'-._,-' '-._,-' '-._,-'-._,",
           answerSentenceArr
         );
       }
@@ -352,7 +352,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal06-03a GET 200 YES: RSWAT POL to ENG, a tenseDescription must be translated by multiple such.", () => {
+    it("#pal06-03a GET 200 YES: RSWAT POL to ENG, ensure a tenseDescription can be translated by multiple such.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -374,7 +374,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal06-03b GET 200 YES: RSWAT ENG to POL, a tenseDescription must be translated by multiple such.", () => {
+    it("#pal06-03b GET 200 YES: RSWAT ENG to POL, ensure a tenseDescription can be translated by multiple such.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -593,7 +593,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal06-04g GET 200 YES: RSWAT POL to ENG, tenseDescription is left blank in both question and answer structures.", () => {
+    it("#pal06-04g GET 200 YES: RSWAT POL to ENG, where tenseDescription is left blank in both question and answer structures.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -616,7 +616,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal06-04h GET 200 YES: RSWAT POL to ENG, tenseDescription is left blank in both question and answer structures.", () => {
+    it("#pal06-04h GET 200 YES: RSWAT POL to ENG, where tenseDescription is left blank in both question and answer structures.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -639,7 +639,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal06-05a GET 200 YES: RSWAT ENG to POL, checking the three masculines genders collapse to one for the verb.", () => {
+    it("#pal06-05a GET 200 YES: RSWAT ENG to POL. Ensure three masculine genders collapse to one for the verb.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -661,28 +661,84 @@ describe("/api", () => {
           );
         });
     });
-    it.only("#pal06-06a GET 200 YES: RSWAT POL to ENG, checking that feminine is selected randomly as often as masculine.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
+    it("#pal06-06a GET 200 YES: RSWAT POL to ENG. Ensure feminine and masculine are randomly selected at ~50/50 rate, despite there being thrice as many masculine genders as feminine.", () => {
+      return Promise.all([
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+      ]).then((res) => {
+        console.log({ res });
 
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy31",
-        })
-        .expect(200)
-        .then((res) => {
-          checkSentenceTranslations(
-            res,
+        let masculineProportion =
+          res.filter((str) => str === "Pisałem.").length / res.length;
+        let feminineProportion =
+          res.filter((str) => str === "Pisałam.").length / res.length;
+
+        expect(res.length).to.equal(40);
+
+        console.log({ masculineProportion, feminineProportion });
+
+        expect(masculineProportion).to.be.at.least(0.4);
+        expect(masculineProportion).to.be.below(0.6);
+
+        expect(feminineProportion).to.be.at.least(0.4);
+        expect(feminineProportion).to.be.below(0.6);
+      });
+
+      function testOnce() {
+        const questionLanguage = "POL";
+        const answerLanguage = "ENG";
+
+        return request(app)
+          .get("/api/palette")
+          .send({
+            useDummy: true,
             questionLanguage,
             answerLanguage,
-            "write",
-            ["Pisałam.", "Pisałem."]
-          );
-        });
+            sentenceFormulaSymbol: "dummy31",
+          })
+          .expect(200)
+          .then((res) => {
+            return res.body.questionSentenceArr[0];
+          });
+      }
     });
   });
 
@@ -1481,7 +1537,7 @@ describe("/api", () => {
           console.log({ "RESULT: res.body:": res.body });
         });
     });
-    it("#pal04-07c GET 200 YES: Make two verbs agree when there is a choice of person, gender, and number.", () => {
+    it.only("#pal04-07c GET 200 YES: Make two verbs agree when there is a choice of person, gender, and number.", () => {
       return request(app)
         .get("/api/palette")
         .send({

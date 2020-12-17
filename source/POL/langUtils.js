@@ -1,22 +1,36 @@
 const lfUtils = require("../../utils/lemmaFilteringUtils.js");
 const otUtils = require("../../utils/objectTraversingUtils.js");
 const gpUtils = require("../../utils/generalPurposeUtils.js");
+const refObj = require("../../utils/referenceObjects.js");
 
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   sentenceStructure.forEach((structureChunk) => {
-    if (structureChunk.gender && structureChunk.gender.length) {
-      let adjustedGenderArray = [];
+    if (structureChunk.wordtype === "fixed") {
+      return;
+    }
 
-      //Masculinist agenda
-      structureChunk.gender.forEach((gender) => {
-        if (gender === "m") {
-          adjustedGenderArray.push("m1", "m2", "m3");
-        } else {
-          adjustedGenderArray.push(gender);
-        }
-      });
+    if (
+      //If gender is an appropriate feature of this wordtype.
+      refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
+        structureChunk.wordtype
+      ].includes("gender")
+    ) {
+      if (!structureChunk.gender || !structureChunk.gender.length) {
+        //Fill out if blank.
+        structureChunk.gender = ["m1", "m2", "m3", "f", "n"];
+      } else {
+        //Masculinist agenda
+        let adjustedGenderArray = [];
+        structureChunk.gender.forEach((gender) => {
+          if (gender === "m") {
+            adjustedGenderArray.push("m1", "m2", "m3");
+          } else {
+            adjustedGenderArray.push(gender);
+          }
+        });
 
-      structureChunk.gender = Array.from(new Set(adjustedGenderArray));
+        structureChunk.gender = Array.from(new Set(adjustedGenderArray));
+      }
     }
   });
 };
@@ -365,4 +379,45 @@ exports.adjustVirilityOfStructureChunk = (structureChunk) => {
   let result = Array.from(new Set(newGenderArray));
 
   structureChunk.gender = result;
+};
+
+exports.preventMasculineOverrepresentation = (
+  structureChunk,
+  currentLanguage
+) => {
+  if (
+    structureChunk.gender ||
+    refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
+      structureChunk.wordtype
+    ].includes("gender")
+  ) {
+    exports.bulkUpGenderArrayToPreventMasculineOverrepresentation(
+      structureChunk.gender
+    );
+  }
+};
+
+exports.bulkUpGenderArrayToPreventMasculineOverrepresentation = (array) => {
+  if (!array) {
+    return;
+  }
+
+  const masculineSubgenders = ["m1", "m2", "m3"];
+
+  if (
+    masculineSubgenders.every((subgender) => {
+      return array.includes(subgender);
+    })
+  ) {
+    array.forEach((gender) => {
+      if (!masculineSubgenders.includes(gender)) {
+        array.push(gender);
+        array.push(gender);
+      }
+    });
+    console.log(
+      "Hey! To prevent Masculinist Agenda: Overrepresentation, I adjusted the array to this:",
+      array
+    );
+  }
 };
