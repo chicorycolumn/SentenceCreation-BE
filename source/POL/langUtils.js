@@ -3,6 +3,15 @@ const otUtils = require("../../utils/objectTraversingUtils.js");
 const gpUtils = require("../../utils/generalPurposeUtils.js");
 const refObj = require("../../utils/referenceObjects.js");
 
+exports.adjustStructureChunksInIfPW = (structureChunk) => {
+  if (
+    structureChunk.tenseDescription &&
+    structureChunk.tenseDescription.length
+  ) {
+    return exports.adjustTenseDescriptions(structureChunk);
+  }
+};
+
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   sentenceStructure.forEach((structureChunk) => {
     if (structureChunk.wordtype === "fixed") {

@@ -1,9 +1,9 @@
 const { expect } = require("chai");
 const {
-  traverseAndRecordInflections2,
+  traverseAndRecordInflections,
 } = require("../utils/lemmaFilteringUtils.js");
 
-describe("traverseAndRecordInflections2", () => {
+describe("traverseAndRecordInflections", () => {
   let source = {
     infinitive: "czytać",
     verbal: {
@@ -322,7 +322,7 @@ describe("traverseAndRecordInflections2", () => {
   it("#lfu1.1a YES: Returns drills successfully (RDS) from set of single requirements.", () => {
     let pathRecord = [];
     let reqArrNo = "08";
-    traverseAndRecordInflections2(
+    traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
       pathRecord
@@ -344,7 +344,7 @@ describe("traverseAndRecordInflections2", () => {
   it("#lfu1.1b YES: RDS when gender has two requirement values.", () => {
     let pathRecord = [];
     let reqArrNo = "07";
-    traverseAndRecordInflections2(
+    traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
       pathRecord
@@ -379,7 +379,7 @@ describe("traverseAndRecordInflections2", () => {
   it("#lfu1.1c YES: RDS when gender has two requirement values which are masculine subgenders.", () => {
     let pathRecord = [];
     let reqArrNo = "06";
-    traverseAndRecordInflections2(
+    traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
       pathRecord
@@ -414,7 +414,7 @@ describe("traverseAndRecordInflections2", () => {
   it("#lfu1.2a YES: RDS when gender has two identical requirement values (feminine).", () => {
     let pathRecord = [];
     let reqArrNo = "05";
-    traverseAndRecordInflections2(
+    traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
       pathRecord
@@ -449,7 +449,7 @@ describe("traverseAndRecordInflections2", () => {
   it("#lfu1.2b YES: RDS when gender has five identical requirement values (feminine).", () => {
     let pathRecord = [];
     let reqArrNo = "04";
-    traverseAndRecordInflections2(
+    traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
       pathRecord
@@ -514,7 +514,7 @@ describe("traverseAndRecordInflections2", () => {
   it("#lfu1.2c YES: RDS when gender has five identical requirement values (feminine) and one other value (neuter).", () => {
     let pathRecord = [];
     let reqArrNo = "03";
-    traverseAndRecordInflections2(
+    traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
       pathRecord
@@ -589,7 +589,7 @@ describe("traverseAndRecordInflections2", () => {
   it("#lfu1.2d YES: RDS when gender has big mix of duplicates in gender requirements.", () => {
     let pathRecord = [];
     let reqArrNo = "02";
-    traverseAndRecordInflections2(
+    traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
       pathRecord
@@ -695,7 +695,7 @@ describe("traverseAndRecordInflections2", () => {
   it("#lfu1.3a YES: RDS >>> Nonv, Plur <<<.", () => {
     let pathRecord = [];
     let reqArrNo = "19";
-    traverseAndRecordInflections2(
+    traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
       pathRecord
@@ -722,7 +722,7 @@ describe("traverseAndRecordInflections2", () => {
   it("#lfu1.3b YES: RDS >>> Fem, Plur <<< and two person choices.", () => {
     let pathRecord = [];
     let reqArrNo = "18";
-    traverseAndRecordInflections2(
+    traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
       pathRecord
@@ -759,7 +759,7 @@ describe("traverseAndRecordInflections2", () => {
   it("#lfu1.3c YES: RDS >>> Fem, Plur <<< and two person choices, and two tense choices.", () => {
     let pathRecord = [];
     let reqArrNo = "17";
-    traverseAndRecordInflections2(
+    traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
       pathRecord
@@ -816,7 +816,7 @@ describe("traverseAndRecordInflections2", () => {
   it("#lfu1.4a YES: RDS >>> Fem+Nonv, singular <<<.", () => {
     let pathRecord = [];
     let reqArrNo = "20";
-    traverseAndRecordInflections2(
+    traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
       pathRecord
@@ -843,7 +843,7 @@ describe("traverseAndRecordInflections2", () => {
   it("#lfu1.4b YES: RDS >>> Fem, Sing+Plur <<<", () => {
     let pathRecord = [];
     let reqArrNo = "21";
-    traverseAndRecordInflections2(
+    traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
       pathRecord
@@ -870,7 +870,7 @@ describe("traverseAndRecordInflections2", () => {
   it("#lfu1.4c YES: 22 (used to fail Drill Virile issue) RDS >>> Nonv, Sing+Plur <<<.", () => {
     let pathRecord = [];
     let reqArrNo = "22";
-    traverseAndRecordInflections2(
+    traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
       pathRecord
@@ -897,7 +897,7 @@ describe("traverseAndRecordInflections2", () => {
   it("#lfu1.4d YES: 23 (used to fail Drill Virile issue) RDS >>> Fem+Nonv, Plur <<<.", () => {
     let pathRecord = [];
     let reqArrNo = "23";
-    traverseAndRecordInflections2(
+    traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
       pathRecord
@@ -924,7 +924,7 @@ describe("traverseAndRecordInflections2", () => {
   it("#lfu1.4e YES: 24 (used to fail Drill Virile issue) RDS >>> Fem+Nonv, Sing+Plur <<<.", () => {
     let pathRecord = [];
     let reqArrNo = "24";
-    traverseAndRecordInflections2(
+    traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
       pathRecord

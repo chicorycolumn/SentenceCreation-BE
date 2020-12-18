@@ -703,13 +703,23 @@ describe("/api", () => {
         testOnce(),
         testOnce(),
         testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
       ]).then((res) => {
         let masculineProportion =
           res.filter((str) => str === "Pisałem.").length / res.length;
         let feminineProportion =
           res.filter((str) => str === "Pisałam.").length / res.length;
 
-        expect(res.length).to.equal(40);
+        expect(res.length).to.equal(50);
 
         console.log({ masculineProportion, feminineProportion });
 

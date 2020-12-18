@@ -46,6 +46,8 @@ let inflectorRef = {
   ],
 };
 
+exports.adjustStructureChunksInIfPW = (structureChunk) => {};
+
 exports.adjustTenseDescriptions = () => {};
 
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {};

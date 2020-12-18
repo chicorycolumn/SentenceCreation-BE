@@ -33,43 +33,10 @@ exports.filterWithinSelectedLemmaObject = (
     requirementArrs.push([key, structureChunk[key] || []]);
   });
 
-  ////Zeta I think this is unused.
-  let { routesByNesting, routesByLevel } = otUtils.extractNestedRoutes(
-    lemmaObject.inflections
-  );
-
-  let inflectionPathsInSource = routesByNesting;
-  ////
-
   let errorInDrilling = false;
   let pathRecord = [];
 
-  exports.traverseAndRecordInflections2(source, requirementArrs, pathRecord);
-
-  //Drill Virile Issue:
-  //When number is plural, or perhaps when gender is virile or nonvirile,
-  //then the drillPath is only [["number", "virile"]] or nonvirile.
-  //But the drillpath should have all the others too.
-
-  pathRecord.forEach((pathRecordUnit) => {
-    console.log(
-      "pppathRecordUnit selectedWordArray:",
-      pathRecordUnit.selectedWordArray
-    );
-    console.log("pppathRecordUnit drillPath:", pathRecordUnit.drillPath);
-    console.log(" ");
-    console.log(" ");
-  });
-  // throw "Cease.";
-
-  /**Masculinist Agenda: Overrepresentation issue.
-   *
-   * pathRecord = [ { pisałem (m1) }, { pisałem (m2) }, { pisałem (m3) }, { pisałam (f) }  ]
-   *
-   * So see how when non-kumquat condition does selectRandom, it will choose pisałem 3/4 of the time.
-   *
-   * This happens whether structureChunk gender is blank or not.
-   */
+  exports.traverseAndRecordInflections(source, requirementArrs, pathRecord);
 
   if (!pathRecord || !pathRecord.length) {
     errorInDrilling = true;
@@ -77,16 +44,10 @@ exports.filterWithinSelectedLemmaObject = (
   }
 
   if (kumquat) {
-    //Zeta this could be tidied up. Just add errorInDrilling to the array and return that, instead of mapping it.
-
-    return pathRecord.map((selectedPath) => {
-      let { selectedWordArray, drillPath } = selectedPath;
-      return {
-        errorInDrilling,
-        selectedWordArray,
-        drillPath,
-      };
+    pathRecord.forEach((selectedPath) => {
+      selectedPath.errorInDrilling = errorInDrilling;
     });
+    return pathRecord;
   } else {
     let selectedPath = gpUtils.selectRandom(pathRecord);
 
@@ -112,13 +73,6 @@ exports.updateStructureChunkByAdhocOnly = (
 };
 
 exports.updateStructureChunkByInflections = (outputUnit, currentLanguage) => {
-  console.log(
-    "LF:updateStructureChunkByInflections says that this drillPath should be all",
-    outputUnit.drillPath
-  );
-
-  // throw "Cease.";
-
   if (outputUnit.drillPath) {
     outputUnit.drillPath.forEach((drillPathSubArr) => {
       let requiredInflectorCategory = drillPathSubArr[0];
@@ -129,11 +83,6 @@ exports.updateStructureChunkByInflections = (outputUnit, currentLanguage) => {
       ];
     });
   }
-
-  console.log(
-    "LF:updateStructureChunkByInflections FINISHED outputUnit:",
-    outputUnit
-  );
 };
 
 exports.updateStructureChunkByAndTagsAndSelectors = (
@@ -259,7 +208,7 @@ exports.filterBySelectors = (currentLanguage, structureChunk, matches) => {
   return matches;
 };
 
-exports.traverseAndRecordInflections2 = (
+exports.traverseAndRecordInflections = (
   source,
   reqArr,
   pathRecord,
@@ -347,7 +296,7 @@ exports.traverseAndRecordInflections2 = (
       // console.log("**");
       // console.log("*");
 
-      exports.traverseAndRecordInflections2(
+      exports.traverseAndRecordInflections(
         source[chosenInflector],
         reqArr.slice(1),
         pathRecord,

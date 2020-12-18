@@ -633,10 +633,9 @@ exports.conformAnswerStructureToQuestionStructure = (
               }
             });
           } else {
-            answerStructureChunk[inflectorKey] =
-              //Epsilon say should be this:
-              // gpUtils.copyWithoutReference(questionStructureChunk[inflectorKey]);
-              questionStructureChunk[inflectorKey];
+            answerStructureChunk[inflectorKey] = gpUtils.copyWithoutReference(
+              questionStructureChunk[inflectorKey]
+            );
           }
         }
       });

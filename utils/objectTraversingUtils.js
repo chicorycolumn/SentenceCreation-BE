@@ -58,63 +58,55 @@ exports.findMatchingLemmaObjectThenWord = (
 
   //THREE (A): Ad-PW: Pathway for Ad hoc forms.
   if (Object.keys(adhocInflectorRef).includes(structureChunk.wordtype)) {
-    Object.keys(adhocInflectorRef).forEach((adhocWordtype) => {
-      //Epsilon say:
-      //This seems strange, the above, to go through every wordtype,
-      //when actually, surely only the wordtype that matches the current structureChunk should be focused on.
-      let adhocInflectorKeys = adhocInflectorRef[adhocWordtype];
+    let adhocInflectorKeys = adhocInflectorRef[structureChunk.wordtype];
 
-      adhocInflectorKeys.forEach((adhocInflectorKey) => {
-        if (
-          structureChunk[adhocInflectorKey] &&
-          structureChunk[adhocInflectorKey].length
-        ) {
-          console.log("##Ad-PW");
-          if (kumquat) {
-            matches.forEach((selectedLemmaObject) => {
-              let adhocArr = langUtils.generateAdhocForms(
-                gpUtils.copyWithoutReference(structureChunk),
-                selectedLemmaObject,
-                currentLanguage
-              );
-
-              //ALPHA: Keep a record of what adhoc or uninflected you chose, for each
-              //because that will be needed to update the structureChunk.
-
-              adhocArr.forEach((adhocResultObj) => {
-                let { selectedWordArr, structureChunkUpdated } = adhocResultObj;
-
-                selectedFormsArray.push({
-                  selectedWordArr,
-                  selectedLemmaObject,
-                  structureChunkUpdatedByAdhocOrUninflected: structureChunkUpdated,
-                });
-              });
-            });
-          } else {
-            let selectedLemmaObject = gpUtils.selectRandom(matches);
-
+    adhocInflectorKeys.forEach((adhocInflectorKey) => {
+      if (
+        structureChunk[adhocInflectorKey] &&
+        structureChunk[adhocInflectorKey].length
+      ) {
+        console.log("##Ad-PW");
+        if (kumquat) {
+          matches.forEach((selectedLemmaObject) => {
             let adhocArr = langUtils.generateAdhocForms(
               gpUtils.copyWithoutReference(structureChunk),
               selectedLemmaObject,
               currentLanguage
             );
 
-            let selectedAdhocResultObj = gpUtils.selectRandom(adhocArr);
+            adhocArr.forEach((adhocResultObj) => {
+              let { selectedWordArr, structureChunkUpdated } = adhocResultObj;
 
-            let {
-              selectedWordArr,
-              structureChunkUpdated,
-            } = selectedAdhocResultObj;
-
-            selectedFormsArray.push({
-              selectedWordArr,
-              selectedLemmaObject,
-              structureChunkUpdatedByAdhocOrUninflected: structureChunkUpdated,
+              selectedFormsArray.push({
+                selectedWordArr,
+                selectedLemmaObject,
+                structureChunkUpdatedByAdhocOrUninflected: structureChunkUpdated,
+              });
             });
-          }
+          });
+        } else {
+          let selectedLemmaObject = gpUtils.selectRandom(matches);
+
+          let adhocArr = langUtils.generateAdhocForms(
+            gpUtils.copyWithoutReference(structureChunk),
+            selectedLemmaObject,
+            currentLanguage
+          );
+
+          let selectedAdhocResultObj = gpUtils.selectRandom(adhocArr);
+
+          let {
+            selectedWordArr,
+            structureChunkUpdated,
+          } = selectedAdhocResultObj;
+
+          selectedFormsArray.push({
+            selectedWordArr,
+            selectedLemmaObject,
+            structureChunkUpdatedByAdhocOrUninflected: structureChunkUpdated,
+          });
         }
-      });
+      }
     });
   }
 
@@ -231,25 +223,10 @@ exports.findMatchingLemmaObjectThenWord = (
 
   //STEP FOUR: If-PW: Pathway for inflected forms, return word after selecting by drilling down through lemma object.
 
-  //Epsilonman say: At this point, parse the tenseDescription, if present, to Aspect and Tense
-  //Make as many copies of the structureChunk as there are tenseDescriptions.
-
-  let structureChunks = [structureChunk];
-
-  //Abstract out this fxnality.
-  if (true) {
-    if (
-      structureChunk.tenseDescription &&
-      structureChunk.tenseDescription.length
-    ) {
-      let adjustedStructureChunks = langUtils.adjustTenseDescriptions(
-        structureChunk
-      );
-      if (adjustedStructureChunks) {
-        structureChunks = adjustedStructureChunks;
-      }
-    }
-  }
+  let structureChunksAdjusted = langUtils.adjustStructureChunksInIfPW(
+    structureChunk
+  );
+  let structureChunks = structureChunksAdjusted || [structureChunk];
 
   structureChunks.forEach((structureChunk) => {
     let matchesCopy = matches.slice(0);
