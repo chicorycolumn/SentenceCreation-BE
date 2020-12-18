@@ -19,13 +19,6 @@ exports.filterWithinSelectedLemmaObject = (
     );
   }
 
-  console.log("LF:filterWithinSelectedLemmaObject was given:", {
-    lemmaObject,
-    structureChunk,
-    currentLanguage,
-    kumquat,
-  });
-
   //STEP ZERO: Get necessary materials, ie inflectionPaths and requirementArrs.
   let source = lemmaObject.inflections;
 
@@ -50,43 +43,14 @@ exports.filterWithinSelectedLemmaObject = (
 
   let errorInDrilling = false;
   let pathRecord = [];
-  console.log("rrr requirementArrs", requirementArrs);
 
-  traverseAndRecordInflections(source, requirementArrs, pathRecord);
+  exports.traverseAndRecordInflections2(source, requirementArrs, pathRecord);
 
-  if (true) {
-    console.log(
-      "qqq**************************************************************************************"
-    );
-    console.log(" ");
-    console.log(
-      "*****************************************************************************************"
-    );
-    console.log(" ");
-    console.log(
-      "*****************************************************************************************"
-    );
-    console.log(" ");
-    console.log(
-      "*****************************************************************************************"
-    );
-    console.log(" ");
-    console.log(
-      "*****************************************************************************************"
-    );
-    console.log(" ");
-    console.log(
-      "*****************************************************************************************"
-    );
-    console.log(" ");
-    console.log(
-      "*****************************************************************************************"
-    );
-    console.log(" ");
-    console.log(
-      "*****************************************************************************************"
-    );
-  }
+  //Drill Virile Issue:
+  //When number is plural, or perhaps when gender is virile or nonvirile,
+  //then the drillPath is only [["number", "virile"]] or nonvirile.
+  //But the drillpath should have all the others too.
+
   pathRecord.forEach((pathRecordUnit) => {
     console.log(
       "pppathRecordUnit selectedWordArray:",
@@ -96,12 +60,6 @@ exports.filterWithinSelectedLemmaObject = (
     console.log(" ");
     console.log(" ");
   });
-
-  //Drill Virile Issue:
-  //When number is plural, or perhaps when gender is virile or nonvirile,
-  //then the drillPath is only [["number", "virile"]] or nonvirile.
-  //But the drillpath should have all the others too.
-
   // throw "Cease.";
 
   /**Masculinist Agenda: Overrepresentation issue.
@@ -141,58 +99,6 @@ exports.filterWithinSelectedLemmaObject = (
         drillPath,
       },
     ];
-  }
-
-  function traverseAndRecordInflections(
-    source,
-    reqArr,
-    pathRecord,
-    pathRecordMini
-  ) {
-    // console.log(reqArr);
-    // throw "Cease.";
-
-    if (!pathRecordMini) {
-      pathRecordMini = [];
-    }
-
-    let reqSubArr = reqArr[0];
-
-    let reqInflectorLabel = reqSubArr[0];
-    let reqInflectorArr = reqSubArr[1];
-
-    if (!reqInflectorArr.length) {
-      reqInflectorArr = Object.keys(source);
-    }
-
-    reqInflectorArr.forEach((chosenInflector) => {
-      if (
-        typeof source[chosenInflector] === "string" ||
-        Array.isArray(source[chosenInflector])
-      ) {
-        pathRecordMini.push([reqInflectorLabel, chosenInflector]);
-
-        pathRecord.push({
-          selectedWordArray:
-            typeof source[chosenInflector] === "string"
-              ? [source[chosenInflector]]
-              : source[chosenInflector],
-          drillPath: pathRecordMini.slice(0),
-        });
-
-        pathRecordMini.pop();
-        return source[chosenInflector];
-      } else if (typeof source[chosenInflector] === "object") {
-        pathRecordMini.push([reqInflectorLabel, chosenInflector]);
-        traverseAndRecordInflections(
-          source[chosenInflector],
-          reqArr.slice(1),
-          pathRecord,
-          pathRecordMini
-        );
-      }
-      pathRecordMini.pop();
-    });
   }
 };
 
@@ -359,9 +265,6 @@ exports.traverseAndRecordInflections2 = (
   pathRecord,
   pathRecordMini
 ) => {
-  // console.log(reqArr);
-  // throw "Cease.";
-
   if (!pathRecordMini) {
     pathRecordMini = [];
   }
@@ -375,12 +278,36 @@ exports.traverseAndRecordInflections2 = (
     reqInflectorArr = Object.keys(source);
   }
 
-  reqInflectorArr.forEach((chosenInflector) => {
+  reqInflectorArr.forEach((chosenInflector, reqInflectorArrIndex) => {
+    // console.log(
+    //   "#Shall I enter WHITE with chosenInflector: " + chosenInflector + "?"
+    // );
     if (
       typeof source[chosenInflector] === "string" ||
       Array.isArray(source[chosenInflector])
     ) {
+      // console.log(
+      //   "I DID enter WHITE with chosenInflector: " + chosenInflector + "."
+      // );
+      // console.log("*");
+      // console.log("**WHITE");
+      // console.log("Okay, I am going to push these things into pathRecordMini");
+      // console.log("pathRecordMini is currently:", pathRecordMini);
+      // console.log("Gonna push reqInflectorLabel as:", reqInflectorLabel);
+      // console.log("Gonna push chosenInflector as:", chosenInflector);
+
       pathRecordMini.push([reqInflectorLabel, chosenInflector]);
+
+      // console.log("pathRecordMini is now:", pathRecordMini);
+      // console.log("**");
+      // console.log("*");
+
+      // console.log("*");
+      // console.log("**RED");
+      // console.log("Okay, I am going to push these things into pathRecord");
+      // console.log("pathRecord is currently:", pathRecord);
+      // console.log("Gonna push selectedWordArray as:", source[chosenInflector]);
+      // console.log("Gonna push pathRecordMini as:", pathRecordMini);
 
       pathRecord.push({
         selectedWordArray:
@@ -390,17 +317,56 @@ exports.traverseAndRecordInflections2 = (
         drillPath: pathRecordMini.slice(0),
       });
 
+      // console.log("pathRecord is now:", pathRecord);
+      // console.log("**");
+      // console.log("*");
+
+      // console.log("*");
+      // console.log("**YELLOW");
+      // console.log("pathRecordMini is currently:", pathRecordMini);
+      // console.log("Gonna A-pop the last value.");
+
       pathRecordMini.pop();
+
+      // console.log("pathRecordMini is now:", pathRecordMini);
+      // console.log("**");
+      // console.log("*");
+
       return source[chosenInflector];
     } else if (typeof source[chosenInflector] === "object") {
+      // console.log("*");
+      // console.log("**BLUE");
+      // console.log("Okay, I am going to push these things into pathRecordMini");
+      // console.log("pathRecordMini is currently:", pathRecordMini);
+      // console.log("Gonna push reqInflectorLabel as:", reqInflectorLabel);
+      // console.log("Gonna push chosenInflector as:", chosenInflector);
+
       pathRecordMini.push([reqInflectorLabel, chosenInflector]);
+
+      // console.log("pathRecordMini is now:", pathRecordMini);
+      // console.log("**");
+      // console.log("*");
+
       exports.traverseAndRecordInflections2(
         source[chosenInflector],
         reqArr.slice(1),
         pathRecord,
         pathRecordMini
       );
+
+      // console.log("*");
+      // console.log("**GREEN");
+      // console.log(
+      //   `On this round of GREEN, the chosenInflector is: ${chosenInflector} at reqInflectorArrIndex ${reqInflectorArrIndex}.`
+      // );
+      // console.log("pathRecordMini is currently:", pathRecordMini);
+      // console.log("Gonna B-pop the last value.");
+
+      pathRecordMini.pop();
+
+      // console.log("pathRecordMini is now:", pathRecordMini);
+      // console.log("**");
+      // console.log("*");
     }
-    pathRecordMini.pop();
   });
 };

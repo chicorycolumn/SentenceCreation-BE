@@ -10,15 +10,6 @@ exports.findMatchingLemmaObjectThenWord = (
   questionLanguage,
   kumquat
 ) => {
-  console.log("OT:findMatchingLemmaObjectThenWord was given:", {
-    structureChunk,
-    words,
-    errorInSentenceCreation,
-    currentLanguage,
-    questionLanguage,
-    kumquat,
-  });
-
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
   let selectedFormsArray = [];
   let arrayOfAllPossibleOutputUnits = [];
@@ -59,7 +50,6 @@ exports.findMatchingLemmaObjectThenWord = (
     );
   }
 
-  console.log("yyy");
   langUtils.preprocessLemmaObjects(matches, structureChunk);
 
   //STEP THREE: Return result array immediately if uninflected or ad hoc.
@@ -292,13 +282,6 @@ exports.findMatchingLemmaObjectThenWord = (
           currentLanguage,
           kumquat
         );
-
-        console.log("subArrayOfOutputUnits", subArrayOfOutputUnits);
-        subArrayOfOutputUnits.forEach((unit) => {
-          unit.drillPath.forEach((drill) => {
-            console.log(drill);
-          });
-        });
 
         subArrayOfOutputUnits.forEach((unit) => {
           let { errorInDrilling, selectedWordArray, drillPath } = unit;

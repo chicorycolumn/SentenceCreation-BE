@@ -3,7 +3,7 @@ const {
   traverseAndRecordInflections2,
 } = require("../utils/lemmaFilteringUtils.js");
 
-describe.only("traverseAndRecordInflections2", () => {
+describe("traverseAndRecordInflections2", () => {
   let source = {
     infinitive: "czytać",
     verbal: {
@@ -56,6 +56,7 @@ describe.only("traverseAndRecordInflections2", () => {
             f: "czyta się",
             n: "czyta się",
           },
+          plural: { virile: "czyta się", nonvirile: "czyta się" },
         },
         "1per": {
           singular: { m1: "czytam", m2: "czytam", m3: "czytam", f: "czytam" },
@@ -89,6 +90,10 @@ describe.only("traverseAndRecordInflections2", () => {
             m3: "będzie czytać się",
             f: "będzie czytać się",
             n: "będzie czytać się",
+          },
+          plural: {
+            virile: "będzie czytać się",
+            nonvirile: "będzie czytać się",
           },
         },
         "1per": {
@@ -181,80 +186,129 @@ describe.only("traverseAndRecordInflections2", () => {
     contemporaryAdverbial: "czytając",
     verbalNoun: "czytanie",
   };
-  let requirementArrs09 = [
-    ["form", ["verbal"]],
-    ["tense", ["present"]],
-    ["person", ["1per", "2per"]],
-    ["number", ["singular", "plural"]],
-    ["gender", ["m1", "m2", "m3", "f", "n"]],
-  ];
-  let requirementArrs08 = [
-    ["form", ["verbal"]],
-    ["tense", ["present"]],
-    ["person", ["1per"]],
-    ["number", ["singular"]],
-    ["gender", ["f"]],
-  ];
-  let requirementArrs07 = [
-    ["form", ["verbal"]],
-    ["tense", ["present"]],
-    ["person", ["3per"]],
-    ["number", ["singular"]],
-    ["gender", ["f", "n"]],
-  ];
-  let requirementArrs06 = [
-    ["form", ["verbal"]],
-    ["tense", ["present"]],
-    ["person", ["3per"]],
-    ["number", ["singular"]],
-    ["gender", ["m1", "m2"]],
-  ];
-  let requirementArrs05 = [
-    ["form", ["verbal"]],
-    ["tense", ["present"]],
-    ["person", ["3per"]],
-    ["number", ["singular"]],
-    ["gender", ["f", "f"]],
-  ];
-  let requirementArrs04 = [
-    ["form", ["verbal"]],
-    ["tense", ["present"]],
-    ["person", ["3per"]],
-    ["number", ["singular"]],
-    ["gender", ["f", "f", "f", "f", "f"]],
-  ];
-  let requirementArrs03 = [
-    ["form", ["verbal"]],
-    ["tense", ["present"]],
-    ["person", ["3per"]],
-    ["number", ["singular"]],
-    ["gender", ["f", "f", "f", "f", "f", "n"]],
-  ];
-  let requirementArrs02 = [
-    ["form", ["verbal"]],
-    ["tense", ["present"]],
-    ["person", ["3per"]],
-    ["number", ["singular"]],
-    ["gender", ["m1", "m2", "m3", "f", "n", "f", "f", "n", "n"]],
-  ];
 
-  let requirementArrs20 = [
-    ["form", ["verbal"]],
-    ["tense", ["present"]],
-    ["person", ["3per"]],
-    ["number", ["singular", "plural"]],
-    ["gender", ["f", "nonvirile"]],
-  ];
-  let requirementArrs19 = [
-    ["form", ["verbal"]],
-    ["tense", ["present"]],
-    ["person", ["3per"]],
-    ["number", ["plural"]],
-    ["gender", ["nonvirile"]],
-  ];
+  let requirementArrays = {
+    "09": [
+      ["form", ["verbal"]],
+      ["tense", ["present"]],
+      ["person", ["1per", "2per"]],
+      ["number", ["singular", "plural"]],
+      ["gender", ["m1", "m2", "m3", "f", "n"]],
+    ],
+    "08": [
+      ["form", ["verbal"]],
+      ["tense", ["present"]],
+      ["person", ["1per"]],
+      ["number", ["singular"]],
+      ["gender", ["f"]],
+    ],
+    "07": [
+      ["form", ["verbal"]],
+      ["tense", ["present"]],
+      ["person", ["3per"]],
+      ["number", ["singular"]],
+      ["gender", ["f", "n"]],
+    ],
+    "06": [
+      ["form", ["verbal"]],
+      ["tense", ["present"]],
+      ["person", ["3per"]],
+      ["number", ["singular"]],
+      ["gender", ["m1", "m2"]],
+    ],
+    "05": [
+      ["form", ["verbal"]],
+      ["tense", ["present"]],
+      ["person", ["3per"]],
+      ["number", ["singular"]],
+      ["gender", ["f", "f"]],
+    ],
+    "04": [
+      ["form", ["verbal"]],
+      ["tense", ["present"]],
+      ["person", ["3per"]],
+      ["number", ["singular"]],
+      ["gender", ["f", "f", "f", "f", "f"]],
+    ],
+    "03": [
+      ["form", ["verbal"]],
+      ["tense", ["present"]],
+      ["person", ["3per"]],
+      ["number", ["singular"]],
+      ["gender", ["f", "f", "f", "f", "f", "n"]],
+    ],
+    "02": [
+      ["form", ["verbal"]],
+      ["tense", ["present"]],
+      ["person", ["3per"]],
+      ["number", ["singular"]],
+      ["gender", ["m1", "m2", "m3", "f", "n", "f", "f", "n", "n"]],
+    ],
+    17: [
+      ["form", ["verbal"]],
+      ["tense", ["present", "past"]],
+      ["person", ["2per", "3per"]],
+      ["number", ["plural"]],
+      ["gender", ["nonvirile"]],
+    ],
+    18: [
+      ["form", ["verbal"]],
+      ["tense", ["present"]],
+      ["person", ["2per", "3per"]],
+      ["number", ["plural"]],
+      ["gender", ["nonvirile"]],
+    ],
+    20: [
+      ["form", ["verbal"]],
+      ["tense", ["present"]],
+      ["person", ["3per"]],
+      ["number", ["singular"]],
+      ["gender", ["f", "nonvirile"]],
+    ],
+    21: [
+      ["form", ["verbal"]],
+      ["tense", ["present"]],
+      ["person", ["3per"]],
+      ["number", ["singular", "plural"]],
+      ["gender", ["f"]],
+    ],
+    19: [
+      ["form", ["verbal"]],
+      ["tense", ["present"]],
+      ["person", ["3per"]],
+      ["number", ["plural"]],
+      ["gender", ["nonvirile"]],
+    ],
+    22: [
+      //breaks it!
+      ["form", ["verbal"]],
+      ["tense", ["present"]],
+      ["person", ["3per"]],
+      ["number", ["singular", "plural"]],
+      ["gender", ["nonvirile"]],
+    ],
+    23: [
+      //breaks it!
+      ["form", ["verbal"]],
+      ["tense", ["present"]],
+      ["person", ["3per"]],
+      ["number", ["plural"]],
+      ["gender", ["f", "nonvirile"]],
+    ],
+    24: [
+      //breaks it!
+      ["form", ["verbal"]],
+      ["tense", ["present"]],
+      ["person", ["3per"]],
+      ["number", ["singular", "plural"]],
+      ["gender", ["f", "nonvirile"]],
+    ],
+  };
 
-  function consoleLogPathRecord(pathRecord) {
+  function consoleLogPathRecord(number, pathRecord) {
+    return;
     pathRecord.forEach((pathRecordUnit) => {
+      console.log(">>>", number);
       console.log(
         "pppathRecordUnit selectedWordArray:",
         pathRecordUnit.selectedWordArray
@@ -267,8 +321,13 @@ describe.only("traverseAndRecordInflections2", () => {
 
   it("#lfu1.1a YES: Returns drills successfully (RDS) from set of single requirements.", () => {
     let pathRecord = [];
-    traverseAndRecordInflections2(source, requirementArrs08, pathRecord);
-    consoleLogPathRecord(pathRecord);
+    let reqArrNo = "08";
+    traverseAndRecordInflections2(
+      source,
+      requirementArrays[reqArrNo],
+      pathRecord
+    );
+    consoleLogPathRecord(reqArrNo, pathRecord);
 
     expect(pathRecord.length).to.equal(1);
 
@@ -284,8 +343,13 @@ describe.only("traverseAndRecordInflections2", () => {
   });
   it("#lfu1.1b YES: RDS when gender has two requirement values.", () => {
     let pathRecord = [];
-    traverseAndRecordInflections2(source, requirementArrs07, pathRecord);
-    consoleLogPathRecord(pathRecord);
+    let reqArrNo = "07";
+    traverseAndRecordInflections2(
+      source,
+      requirementArrays[reqArrNo],
+      pathRecord
+    );
+    consoleLogPathRecord(reqArrNo, pathRecord);
 
     expect(pathRecord.length).to.equal(2);
 
@@ -314,8 +378,13 @@ describe.only("traverseAndRecordInflections2", () => {
   });
   it("#lfu1.1c YES: RDS when gender has two requirement values which are masculine subgenders.", () => {
     let pathRecord = [];
-    traverseAndRecordInflections2(source, requirementArrs06, pathRecord);
-    consoleLogPathRecord(pathRecord);
+    let reqArrNo = "06";
+    traverseAndRecordInflections2(
+      source,
+      requirementArrays[reqArrNo],
+      pathRecord
+    );
+    consoleLogPathRecord(reqArrNo, pathRecord);
 
     expect(pathRecord.length).to.equal(2);
 
@@ -344,8 +413,13 @@ describe.only("traverseAndRecordInflections2", () => {
   });
   it("#lfu1.2a YES: RDS when gender has two identical requirement values (feminine).", () => {
     let pathRecord = [];
-    traverseAndRecordInflections2(source, requirementArrs05, pathRecord);
-    consoleLogPathRecord(pathRecord);
+    let reqArrNo = "05";
+    traverseAndRecordInflections2(
+      source,
+      requirementArrays[reqArrNo],
+      pathRecord
+    );
+    consoleLogPathRecord(reqArrNo, pathRecord);
 
     expect(pathRecord.length).to.equal(2);
 
@@ -374,8 +448,13 @@ describe.only("traverseAndRecordInflections2", () => {
   });
   it("#lfu1.2b YES: RDS when gender has five identical requirement values (feminine).", () => {
     let pathRecord = [];
-    traverseAndRecordInflections2(source, requirementArrs04, pathRecord);
-    consoleLogPathRecord(pathRecord);
+    let reqArrNo = "04";
+    traverseAndRecordInflections2(
+      source,
+      requirementArrays[reqArrNo],
+      pathRecord
+    );
+    consoleLogPathRecord(reqArrNo, pathRecord);
 
     expect(pathRecord.length).to.equal(5);
 
@@ -434,8 +513,13 @@ describe.only("traverseAndRecordInflections2", () => {
   });
   it("#lfu1.2c YES: RDS when gender has five identical requirement values (feminine) and one other value (neuter).", () => {
     let pathRecord = [];
-    traverseAndRecordInflections2(source, requirementArrs03, pathRecord);
-    consoleLogPathRecord(pathRecord);
+    let reqArrNo = "03";
+    traverseAndRecordInflections2(
+      source,
+      requirementArrays[reqArrNo],
+      pathRecord
+    );
+    consoleLogPathRecord(reqArrNo, pathRecord);
 
     expect(pathRecord.length).to.equal(6);
 
@@ -504,8 +588,13 @@ describe.only("traverseAndRecordInflections2", () => {
   });
   it("#lfu1.2d YES: RDS when gender has big mix of duplicates in gender requirements.", () => {
     let pathRecord = [];
-    traverseAndRecordInflections2(source, requirementArrs02, pathRecord);
-    consoleLogPathRecord(pathRecord);
+    let reqArrNo = "02";
+    traverseAndRecordInflections2(
+      source,
+      requirementArrays[reqArrNo],
+      pathRecord
+    );
+    consoleLogPathRecord(reqArrNo, pathRecord);
 
     expect(pathRecord.length).to.equal(9);
     // return;
@@ -603,11 +692,16 @@ describe.only("traverseAndRecordInflections2", () => {
       },
     ]);
   });
-  it("#lfu1.3a YES: RDS when one gender (f), and plural.", () => {
+  it("#lfu1.3a YES: RDS >>> Nonv, Plur <<<.", () => {
     let pathRecord = [];
-    traverseAndRecordInflections2(source, requirementArrs19, pathRecord);
+    let reqArrNo = "19";
+    traverseAndRecordInflections2(
+      source,
+      requirementArrays[reqArrNo],
+      pathRecord
+    );
 
-    consoleLogPathRecord(pathRecord);
+    consoleLogPathRecord(reqArrNo, pathRecord);
 
     expect(pathRecord.length).to.equal(1);
     // return;
@@ -625,11 +719,218 @@ describe.only("traverseAndRecordInflections2", () => {
       },
     ]);
   });
-  it("#lfu1.3b YES: RDS when one gender (f), but singular and plural.", () => {
+  it("#lfu1.3b YES: RDS >>> Fem, Plur <<< and two person choices.", () => {
     let pathRecord = [];
-    traverseAndRecordInflections2(source, requirementArrs20, pathRecord);
+    let reqArrNo = "18";
+    traverseAndRecordInflections2(
+      source,
+      requirementArrays[reqArrNo],
+      pathRecord
+    );
 
-    consoleLogPathRecord(pathRecord);
+    consoleLogPathRecord(reqArrNo, pathRecord);
+
+    expect(pathRecord.length).to.equal(2);
+    // return;
+
+    expect(pathRecord).to.eql([
+      {
+        selectedWordArray: ["czytacie"],
+        drillPath: [
+          ["form", "verbal"],
+          ["tense", "present"],
+          ["person", "2per"],
+          ["number", "plural"],
+          ["gender", "nonvirile"],
+        ],
+      },
+      {
+        selectedWordArray: ["czytają"],
+        drillPath: [
+          ["form", "verbal"],
+          ["tense", "present"],
+          ["person", "3per"],
+          ["number", "plural"],
+          ["gender", "nonvirile"],
+        ],
+      },
+    ]);
+  });
+  it("#lfu1.3c YES: RDS >>> Fem, Plur <<< and two person choices, and two tense choices.", () => {
+    let pathRecord = [];
+    let reqArrNo = "17";
+    traverseAndRecordInflections2(
+      source,
+      requirementArrays[reqArrNo],
+      pathRecord
+    );
+
+    consoleLogPathRecord(reqArrNo, pathRecord);
+
+    expect(pathRecord.length).to.equal(4);
+    // return;
+
+    expect(pathRecord).to.eql([
+      {
+        selectedWordArray: ["czytacie"],
+        drillPath: [
+          ["form", "verbal"],
+          ["tense", "present"],
+          ["person", "2per"],
+          ["number", "plural"],
+          ["gender", "nonvirile"],
+        ],
+      },
+      {
+        selectedWordArray: ["czytają"],
+        drillPath: [
+          ["form", "verbal"],
+          ["tense", "present"],
+          ["person", "3per"],
+          ["number", "plural"],
+          ["gender", "nonvirile"],
+        ],
+      },
+      {
+        selectedWordArray: ["czytałyście"],
+        drillPath: [
+          ["form", "verbal"],
+          ["tense", "past"],
+          ["person", "2per"],
+          ["number", "plural"],
+          ["gender", "nonvirile"],
+        ],
+      },
+      {
+        selectedWordArray: ["czytały"],
+        drillPath: [
+          ["form", "verbal"],
+          ["tense", "past"],
+          ["person", "3per"],
+          ["number", "plural"],
+          ["gender", "nonvirile"],
+        ],
+      },
+    ]);
+  });
+  it("#lfu1.4a YES: RDS >>> Fem+Nonv, singular <<<.", () => {
+    let pathRecord = [];
+    let reqArrNo = "20";
+    traverseAndRecordInflections2(
+      source,
+      requirementArrays[reqArrNo],
+      pathRecord
+    );
+
+    consoleLogPathRecord(reqArrNo, pathRecord);
+
+    expect(pathRecord.length).to.equal(1);
+    // return;
+
+    expect(pathRecord).to.eql([
+      {
+        selectedWordArray: ["czyta"],
+        drillPath: [
+          ["form", "verbal"],
+          ["tense", "present"],
+          ["person", "3per"],
+          ["number", "singular"],
+          ["gender", "f"],
+        ],
+      },
+    ]);
+  });
+  it("#lfu1.4b YES: RDS >>> Fem, Sing+Plur <<<", () => {
+    let pathRecord = [];
+    let reqArrNo = "21";
+    traverseAndRecordInflections2(
+      source,
+      requirementArrays[reqArrNo],
+      pathRecord
+    );
+
+    consoleLogPathRecord(reqArrNo, pathRecord);
+
+    expect(pathRecord.length).to.equal(1);
+    // return;
+
+    expect(pathRecord).to.eql([
+      {
+        selectedWordArray: ["czyta"],
+        drillPath: [
+          ["form", "verbal"],
+          ["tense", "present"],
+          ["person", "3per"],
+          ["number", "singular"],
+          ["gender", "f"],
+        ],
+      },
+    ]);
+  });
+  it("#lfu1.4c YES: 22 (used to fail Drill Virile issue) RDS >>> Nonv, Sing+Plur <<<.", () => {
+    let pathRecord = [];
+    let reqArrNo = "22";
+    traverseAndRecordInflections2(
+      source,
+      requirementArrays[reqArrNo],
+      pathRecord
+    );
+
+    consoleLogPathRecord(reqArrNo, pathRecord);
+
+    expect(pathRecord.length).to.equal(1);
+    // return;
+
+    expect(pathRecord).to.eql([
+      {
+        selectedWordArray: ["czytają"],
+        drillPath: [
+          ["form", "verbal"],
+          ["tense", "present"],
+          ["person", "3per"],
+          ["number", "plural"],
+          ["gender", "nonvirile"],
+        ],
+      },
+    ]);
+  });
+  it("#lfu1.4d YES: 23 (used to fail Drill Virile issue) RDS >>> Fem+Nonv, Plur <<<.", () => {
+    let pathRecord = [];
+    let reqArrNo = "23";
+    traverseAndRecordInflections2(
+      source,
+      requirementArrays[reqArrNo],
+      pathRecord
+    );
+
+    consoleLogPathRecord(reqArrNo, pathRecord);
+
+    expect(pathRecord.length).to.equal(1);
+    // return;
+
+    expect(pathRecord).to.eql([
+      {
+        selectedWordArray: ["czytają"],
+        drillPath: [
+          ["form", "verbal"],
+          ["tense", "present"],
+          ["person", "3per"],
+          ["number", "plural"],
+          ["gender", "nonvirile"],
+        ],
+      },
+    ]);
+  });
+  it("#lfu1.4e YES: 24 (used to fail Drill Virile issue) RDS >>> Fem+Nonv, Sing+Plur <<<.", () => {
+    let pathRecord = [];
+    let reqArrNo = "24";
+    traverseAndRecordInflections2(
+      source,
+      requirementArrays[reqArrNo],
+      pathRecord
+    );
+
+    consoleLogPathRecord(reqArrNo, pathRecord);
 
     expect(pathRecord.length).to.equal(2);
     // return;

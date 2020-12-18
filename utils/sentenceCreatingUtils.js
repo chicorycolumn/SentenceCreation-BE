@@ -14,16 +14,6 @@ exports.processSentenceFormula = (
   questionOutputArr,
   questionLanguage
 ) => {
-  console.log("SC:processSentenceFormula was given:", {
-    currentLanguage,
-    sentenceFormulaId,
-    sentenceFormulaSymbol,
-    useDummy,
-    kumquat,
-    questionOutputArr,
-    questionLanguage,
-  });
-
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
 
   let grandOutputArray = [];
@@ -97,6 +87,7 @@ exports.processSentenceFormula = (
   let sentenceStructure = sentenceFormula.structure;
 
   console.log(
+    "|",
     ">>>>>>>>>>>>>>>>>>>>>>>>>>sentenceStructure BEFORE QA conform",
     sentenceStructure
   );
@@ -111,29 +102,30 @@ exports.processSentenceFormula = (
     );
 
     console.log(
-      ">>>>>>>>>>>>>>>>>>>>>>>>>>sentenceStructure AFTER QA conform",
+      "|",
+      ">>>>>>>>>>>>>>>>>>>>>>>>>sentenceStructure AFTER QA conform",
       sentenceStructure
     );
   }
 
-  console.log("-");
-  console.log("----");
-  console.log("--------");
-  console.log("sentenceStructure BEFORE preprocessing", sentenceStructure);
-  console.log("--------");
-  console.log("----");
-  console.log("-");
+  // console.log("|");
+  // console.log("----");
+  // console.log("--------");
+  // console.log("sentenceStructure BEFORE preprocessing", sentenceStructure);
+  // console.log("--------");
+  // console.log("----");
+  // console.log("|");
 
   allLangUtils.preprocessStructureChunks(sentenceStructure, currentLanguage);
   langUtils.preprocessStructureChunks(sentenceStructure, currentLanguage);
 
-  console.log("~");
-  console.log("~~~~");
-  console.log("~~~~~~~~");
-  console.log("sentenceStructure AFTER preprocessing", sentenceStructure);
-  console.log("~~~~~~~~");
-  console.log("~~~~");
-  console.log("~");
+  // console.log("|");
+  // console.log("~~~~");
+  // console.log("~~~~~~~~");
+  // console.log("sentenceStructure AFTER preprocessing", sentenceStructure);
+  // console.log("~~~~~~~~");
+  // console.log("~~~~");
+  // console.log("|");
 
   let headIds = Array.from(
     new Set(
@@ -187,14 +179,14 @@ exports.processSentenceFormula = (
       };
     }
 
-    console.log("|");
-    console.log("|");
-    console.log(
-      "This HEADCHUNK has been parsed to this output array:",
-      allPossOutputUnits_head.map((outputUnit) => outputUnit.selectedWord)
-    );
-    console.log("|");
-    console.log("|");
+    // console.log("|");
+    // console.log("|");
+    // console.log(
+    //   "This HEADCHUNK has been parsed to this output array:",
+    //   allPossOutputUnits_head.map((outputUnit) => outputUnit.selectedWord)
+    // );
+    // console.log("|");
+    // console.log("|");
 
     headOutputUnitArrays.push(allPossOutputUnits_head);
   });
@@ -277,19 +269,19 @@ exports.processSentenceFormula = (
           //Give kumquat as true, it returns multiple outputUnit objects in allPossOutputUnits_dependent array.
           //Give kumquat as false, it returns just one outputUnit object in said array.
 
-          console.log("|");
-          console.log("|");
-          console.log(
-            "For this head output unit:",
-            headOutputUnit,
-            "This DEPENDENTCHUNK has been parsed to this output array:",
-            allPossOutputUnits_dependent
-            // .map(
-            //   (outputUnit) => outputUnit.selectedWord
-            // )
-          );
-          console.log("|");
-          console.log("|");
+          // console.log("|");
+          // console.log("|");
+          // console.log(
+          //   "For this head output unit:",
+          //   headOutputUnit,
+          //   "This DEPENDENTCHUNK has been parsed to this output array:",
+          //   allPossOutputUnits_dependent
+          //   // .map(
+          //   //   (outputUnit) => outputUnit.selectedWord
+          //   // )
+          // );
+          // console.log("|");
+          // console.log("|");
 
           if (!headOutputUnit.possibleDependentOutputArrays) {
             headOutputUnit.possibleDependentOutputArrays = [];
@@ -381,14 +373,14 @@ exports.processSentenceFormula = (
       };
     }
 
-    console.log("|");
-    console.log("|");
-    console.log(
-      "This OTHERCHUNK has been parsed to this output array:",
-      allPossOutputUnits_other.map((outputUnit) => outputUnit.selectedWord)
-    );
-    console.log("|");
-    console.log("|");
+    // console.log("|");
+    // console.log("|");
+    // console.log(
+    //   "This OTHERCHUNK has been parsed to this output array:",
+    //   allPossOutputUnits_other.map((outputUnit) => outputUnit.selectedWord)
+    // );
+    // console.log("|");
+    // console.log("|");
 
     //The above functions correctly.
     //If kumquat is true, then allPossOutputUnits_other is array of outputUnit objects, while if false, array of just one said object.
@@ -570,10 +562,10 @@ exports.conformAnswerStructureToQuestionStructure = (
       return;
     }
 
-    console.log("***********");
-    console.log("questionStructureChunk", questionStructureChunk);
-    console.log("answerStructureChunk", answerStructureChunk);
-    console.log("***********");
+    // console.log("***********");
+    // console.log("questionStructureChunk", questionStructureChunk);
+    // console.log("answerStructureChunk", answerStructureChunk);
+    // console.log("***********");
 
     // console.log(
     //   "So, the Polish lemma chosen was",
@@ -671,9 +663,9 @@ exports.conformAnswerStructureToQuestionStructure = (
       answerStructureChunk[inflector] = [];
     });
 
-    console.log("*-*-*-*-*-*-*-*-*-*-*");
-    console.log("UPDATED answerStructureChunk", answerStructureChunk);
-    console.log("*-*-*-*-*-*-*-*-*-*-*");
+    // console.log("*-*-*-*-*-*-*-*-*-*-*");
+    // console.log("UPDATED answerStructureChunk", answerStructureChunk);
+    // console.log("*-*-*-*-*-*-*-*-*-*-*");
   });
 };
 

@@ -704,8 +704,6 @@ describe("/api", () => {
         testOnce(),
         testOnce(),
       ]).then((res) => {
-        console.log({ res });
-
         let masculineProportion =
           res.filter((str) => str === "Pisałem.").length / res.length;
         let feminineProportion =
@@ -1105,7 +1103,7 @@ describe("/api", () => {
           console.log({ "RESULT: res.body:": res.body });
         });
     });
-    it("#pal05-04a GET 200 YES: It's okay to specify gender: f and number: plural, even though gender will technically be nonvirile.", () => {
+    it("#pal05-04a GET 200 YES: It's okay to specify gender: f and number: plural, even though gender will technically be nonvirile. The f gender gets converted to nonvirile gender before drillPath, so the drillPaths do indeed come out correct.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -1552,7 +1550,6 @@ describe("/api", () => {
           console.log({ "RESULT: res.body:": res.body });
         });
     });
-    //This below one is the one that only as it was failing Drill Virile issue.
     it("#pal04-07c GET 200 YES: Make two verbs agree when there is a choice of person, gender, and number.", () => {
       return request(app)
         .get("/api/palette")
