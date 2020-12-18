@@ -723,11 +723,11 @@ describe("/api", () => {
 
         console.log({ masculineProportion, feminineProportion });
 
-        expect(masculineProportion).to.be.at.least(0.4);
-        expect(masculineProportion).to.be.below(0.6);
+        expect(masculineProportion).to.be.at.least(0.39);
+        expect(masculineProportion).to.be.below(0.61);
 
-        expect(feminineProportion).to.be.at.least(0.4);
-        expect(feminineProportion).to.be.below(0.6);
+        expect(feminineProportion).to.be.at.least(0.39);
+        expect(feminineProportion).to.be.below(0.61);
       });
 
       function testOnce() {
@@ -1274,9 +1274,31 @@ describe("/api", () => {
         .expect(200)
         .then((res) => {
           expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect(["Czytano.", "Czytano by."]).to.include(
-            res.body.questionSentenceArr[0]
-          );
+          expect([
+            "Czytano.",
+            "Czytano by.",
+            "Będzie czytać się.",
+            "Czyta się.",
+          ]).to.include(res.body.questionSentenceArr[0]);
+          console.log({ "RESULT: res.body:": res.body });
+        });
+    });
+    it("#pal04-01h GET 200 YES: Returns a sentence with a single verb in impersonal, even when plural is specified (returns just those impersonals that have plural use).", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage: "POL",
+          sentenceFormulaSymbol: "dummy15b impersonal plural",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
+          expect([
+            "Przeczyta się.",
+            "Przeczytano.",
+            "Przeczytano by.",
+          ]).to.include(res.body.questionSentenceArr[0]);
           console.log({ "RESULT: res.body:": res.body });
         });
     });

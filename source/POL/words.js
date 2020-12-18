@@ -504,7 +504,7 @@ let verbSet = [
           },
         },
         present: {
-          impersonal: { singular: true },
+          impersonal: { singular: true, plural: true },
           "1per": {
             singular: {
               allSingularGendersExcludingNeuter: "mam",
@@ -619,7 +619,7 @@ let verbSet = [
           },
         },
         present: {
-          impersonal: { singular: true },
+          impersonal: { singular: true, plural: true },
           "1per": {
             singular: {
               allSingularGendersExcludingNeuter: "piszę",
@@ -734,7 +734,7 @@ let verbSet = [
           },
         },
         future: {
-          impersonal: { singular: true },
+          impersonal: { singular: true, plural: true },
           "1per": {
             singular: {
               allSingularGendersExcludingNeuter: "napiszę",
@@ -849,7 +849,7 @@ let verbSet = [
           },
         },
         present: {
-          impersonal: { singular: true },
+          impersonal: { singular: true, plural: true },
           "1per": {
             singular: {
               allSingularGendersExcludingNeuter: "czytam",
@@ -964,7 +964,7 @@ let verbSet = [
           },
         },
         future: {
-          impersonal: { singular: true },
+          impersonal: { singular: true, plural: true },
           "1per": {
             singular: {
               allSingularGendersExcludingNeuter: "przeczytam",
@@ -1079,7 +1079,7 @@ let verbSet = [
           },
         },
         present: {
-          impersonal: { singular: true },
+          impersonal: { singular: true, plural: true },
           "1per": {
             singular: {
               allSingularGendersExcludingNeuter: "badam",

@@ -314,7 +314,20 @@ exports.dummySentenceFormulasBank = {
         wordtype: "verb",
         aspect: ["imperfective"],
         andTags: ["basic2"],
-
+        person: ["impersonal"],
+        number: ["plural"],
+      },
+    ],
+  },
+  dummy15b: {
+    sentenceFormulaSymbol: "dummy15b impersonal plural",
+    sentenceFormulaId: "POL-dummy15b",
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        aspect: ["perfective"],
+        andTags: ["basic2"],
         person: ["impersonal"],
         number: ["plural"],
       },

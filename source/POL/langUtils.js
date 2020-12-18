@@ -76,19 +76,6 @@ exports.preprocessLemmaObjects = (matches, structureChunk) => {
   }
 
   if (["adjective"].includes(structureChunk.wordtype)) {
-    /**This says, for adjective lObjs:
-     * {
-     *    m: "whang",
-     *    f: "whee"
-     * }
-     * changes to this:
-     * {
-     *    m1: "whang",
-     *    m2: "whang",
-     *    m3: "whang",
-     *    f: "whee"
-     * }
-     */
     matches.forEach((lObj) => exports.adjustMasculinityOfLemmaObject(lObj));
   }
 
@@ -120,6 +107,9 @@ exports.fillVerbInflections = (lemmaObject) => {
         impersonal: {
           singular: {
             allSingularGenders: "będzie" + " " + infinitive + " " + "się",
+          },
+          plural: {
+            allPluralGenders: "będzie" + " " + infinitive + " " + "się",
           },
         },
         "1per": {
@@ -202,11 +192,27 @@ exports.fillVerbInflections = (lemmaObject) => {
           "się",
       };
     }
+    if (isAvailable(inflections.verbal.present.impersonal.plural)) {
+      inflections.verbal.present.impersonal.plural = {
+        allPluralGenders:
+          inflections.verbal.present["3per"].singular.allSingularGenders + //Yes, this is meant to use Singular.
+          " " +
+          "się",
+      };
+    }
   } else if (aspect === "perfective") {
     if (isAvailable(inflections.verbal.future.impersonal.singular)) {
       inflections.verbal.future.impersonal.singular = {
         allSingularGenders:
           inflections.verbal.future["3per"].singular.allSingularGenders +
+          " " +
+          "się",
+      };
+    }
+    if (isAvailable(inflections.verbal.future.impersonal.plural)) {
+      inflections.verbal.future.impersonal.plural = {
+        allPluralGenders:
+          inflections.verbal.future["3per"].singular.allSingularGenders + //Yes, this is meant to use Singular.
           " " +
           "się",
       };
