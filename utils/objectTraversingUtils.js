@@ -43,12 +43,19 @@ exports.findMatchingLemmaObjectThenWord = (
     );
   } else {
     matches = lfUtils.filterByAndTagsAndOrTags(source, structureChunk);
+
+    lfUtils.adjustImOnlyLemmaObjects(matches); //Must be adjusted before aspect (a selector) filter is applied.
+
     matches = lfUtils.filterBySelectors(
       currentLanguage,
       structureChunk,
       matches
     );
   }
+
+  lfUtils.adjustImOnlyLemmaObjects(matches); //Must be adjusted again as may not have been in such pathway above.
+
+  console.log("sss", { matches });
 
   langUtils.preprocessLemmaObjects(matches, structureChunk);
 

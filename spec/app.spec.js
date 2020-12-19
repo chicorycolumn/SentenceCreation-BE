@@ -10,36 +10,56 @@ const { selectRandom } = require("../utils/generalPurposeUtils");
 const generalTranslatedSentencesRef = {
   be: {
     "POL->ENG": [
-      { POL: "Jestem.", ENG: ["Am."] },
-      { POL: "Jesteś.", ENG: ["Are."] },
-      { POL: "Jest.", ENG: ["Is."] },
-      { POL: "Jesteśmy.", ENG: ["Are."] },
-      { POL: "Jesteście.", ENG: ["Are."] },
-      { POL: "Są.", ENG: ["Are."] },
-      { POL: "Byłem.", ENG: ["Was."] },
-      { POL: "Byłam.", ENG: ["Was."] },
-      { POL: "Byłeś.", ENG: ["Were."] },
-      { POL: "Byłaś.", ENG: ["Were."] },
-      { POL: "Był.", ENG: ["Was."] },
-      { POL: "Była.", ENG: ["Was."] },
-      { POL: "Było.", ENG: ["Was."] },
-      { POL: "Byłyśmy.", ENG: ["Were."] },
-      { POL: "Byliśmy.", ENG: ["Were."] },
-      { POL: "Byłyście.", ENG: ["Were."] },
-      { POL: "Byliście.", ENG: ["Were."] },
-      { POL: "Były.", ENG: ["Were."] },
-      { POL: "Byli.", ENG: ["Were."] },
+      { POL: "Jestem.", ENG: ["Am.", "Am being."] },
+      { POL: "Jesteś.", ENG: ["Are.", "Are being."] },
+      { POL: "Jest.", ENG: ["Is.", "Is being."] },
+      { POL: "Jesteśmy.", ENG: ["Are.", "Are being."] },
+      { POL: "Jesteście.", ENG: ["Are.", "Are being."] },
+      { POL: "Są.", ENG: ["Are.", "Are being."] },
+      { POL: "Byłem.", ENG: ["Was.", "Was being."] },
+      { POL: "Byłam.", ENG: ["Was.", "Was being."] },
+      { POL: "Byłeś.", ENG: ["Were.", "Were being."] },
+      { POL: "Byłaś.", ENG: ["Were.", "Were being."] },
+      { POL: "Był.", ENG: ["Was.", "Was being."] },
+      { POL: "Była.", ENG: ["Was.", "Was being."] },
+      { POL: "Było.", ENG: ["Was.", "Was being."] },
+      { POL: "Byłyśmy.", ENG: ["Were.", "Were being."] },
+      { POL: "Byliśmy.", ENG: ["Were.", "Were being."] },
+      { POL: "Byłyście.", ENG: ["Were.", "Were being."] },
+      { POL: "Byliście.", ENG: ["Were.", "Were being."] },
+      { POL: "Były.", ENG: ["Were.", "Were being."] },
+      { POL: "Byli.", ENG: ["Were.", "Were being."] },
     ],
     "ENG->POL": [
       { ENG: "Am.", POL: ["Jestem."] },
+      { ENG: "Am being.", POL: ["Jestem."] },
       { ENG: "Are.", POL: ["Jesteś.", "Jesteśmy.", "Jesteście.", "Są."] },
+      { ENG: "Are being.", POL: ["Jesteś.", "Jesteśmy.", "Jesteście.", "Są."] },
       { ENG: "Is.", POL: ["Jest."] },
+      { ENG: "Is being.", POL: ["Jest."] },
       {
         ENG: "Was.",
         POL: ["Byłem.", "Byłam.", "Był.", "Była.", "Było."],
       },
       {
+        ENG: "Was being.",
+        POL: ["Byłem.", "Byłam.", "Był.", "Była.", "Było."],
+      },
+      {
         ENG: "Were.",
+        POL: [
+          "Byłeś.",
+          "Byłaś.",
+          "Byłyśmy.",
+          "Byliśmy.",
+          "Byłyście.",
+          "Byliście.",
+          "Były.",
+          "Byli.",
+        ],
+      },
+      {
+        ENG: "Were being.",
         POL: [
           "Byłeś.",
           "Byłaś.",
@@ -232,7 +252,7 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe("/palette - Stage 7: Further linguistic features.", () => {
+  describe.only("/palette - Stage 7: Further linguistic features.", () => {
     it("#pal07-01a GET 200 YES: Conjugate ENG be correctly.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -253,7 +273,7 @@ describe("/api", () => {
           );
         });
     });
-    it.only("#pal07-01b GET 200 YES: Give results for POL być even though past pf was asked for, it should nevertheless be the case that past im of być is returned, as this verb lobj is marked as im-only.", () => {
+    it("#pal07-01b GET 200 YES: Give results for POL być even though past pf was asked for, it should nevertheless be the case that past im of być is returned, as this verb lobj is marked as im only.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "POL";
 
@@ -323,7 +343,7 @@ describe("/api", () => {
           ]).to.include(res.body.questionSentenceArr[0]);
         });
     });
-    it("#pal07-01d GET 200 YES: RSWAT ENG to POL 'be' correctly.", () => {
+    it.only("#pal07-01d GET 200 YES: RSWAT ENG to POL 'be' correctly.", () => {
       //Alphaman: The issue here is that normally, ENG past simple gets translated to POL past pf.
       //But the verb być doesn't have a pf form, only im.
       //So in this case, ENG past simple should be translated to POL past >>im<< when dealing with
@@ -333,6 +353,11 @@ describe("/api", () => {
       //And if this verb is im, and has no pf forms,
       //then allow for ENG past simple to be translated by POL past im
       //Or... maybe actually just if it's deliberately marked on this lObj that it is im only?
+
+      //I have resolved the above by making a duplicate lobj for im-onlys and making it perfective.
+
+      //The issue I am on now, is that, here ENG to POL, the english be lobj is not being updated
+      // with the person and number choices.
 
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -353,7 +378,7 @@ describe("/api", () => {
             res,
             questionLanguage,
             answerLanguage,
-            word,
+            "be",
             []
           );
         });
@@ -378,7 +403,7 @@ describe("/api", () => {
             res,
             questionLanguage,
             answerLanguage,
-            word,
+            "be",
             []
           );
         });

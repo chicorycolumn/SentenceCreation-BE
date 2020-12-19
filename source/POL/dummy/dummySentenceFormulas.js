@@ -776,7 +776,7 @@ exports.dummySentenceFormulasBank = {
   dummy33: {
     sentenceFormulaSymbol: "dummy33",
     sentenceFormulaId: "POL-dummy33",
-    translations: {},
+    translations: { ENG: ["ENG-dummy33"] },
     structure: [
       {
         chunkId: "ver-1",

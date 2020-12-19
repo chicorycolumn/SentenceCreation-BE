@@ -69,11 +69,27 @@ exports.updateStructureChunkByAdhocOnly = (
   adhocLabel,
   adhocValue
 ) => {
+  console.log(
+    "updateStructureChunk ByAdhocOnly '" + structureChunk.chunkId + "'"
+  );
+
+  console.log("LF:updateStructureChunkByAdhocOnly fxn was given:", {
+    structureChunk,
+    currentLanguage,
+    adhocLabel,
+    adhocValue,
+  });
+
   structureChunk[adhocLabel] = [adhocValue];
 };
 
 exports.updateStructureChunkByInflections = (outputUnit, currentLanguage) => {
   if (outputUnit.drillPath) {
+    console.log(
+      "updateStructureChunk ByInflections '" +
+        outputUnit.structureChunk.chunkId +
+        "'"
+    );
     outputUnit.drillPath.forEach((drillPathSubArr) => {
       let requiredInflectorCategory = drillPathSubArr[0];
       let selectedInflector = drillPathSubArr[1];
@@ -90,7 +106,11 @@ exports.updateStructureChunkByAndTagsAndSelectors = (
   currentLanguage
 ) => {
   let { selectedLemmaObject, structureChunk } = outputUnit;
-
+  console.log(
+    "updateStructureChunk ByAndTagsAndSelectors '" +
+      structureChunk.chunkId +
+      "'"
+  );
   //Yellow option:
   /**If structureChunk has any andTags, then filter that down to only
    * the andTags that are present in the tags of the lObj.
@@ -316,6 +336,24 @@ exports.traverseAndRecordInflections = (
       // console.log("pathRecordMini is now:", pathRecordMini);
       // console.log("**");
       // console.log("*");
+    }
+  });
+};
+
+exports.adjustImOnlyLemmaObjects = (matches) => {
+  matches.forEach((lObj) => {
+    if (lObj["im only"] && lObj.aspect === "imperfective") {
+      let { id } = lObj;
+      console.log(
+        "Hey, heads up, I'm adjusting the lemma object '" +
+          lObj.lemma +
+          "' to have perfective Aspect instead."
+      );
+      let adjustedLemmaObject = gpUtils.copyWithoutReference(lObj);
+      adjustedLemmaObject.aspect = "perfective";
+      matches.push(adjustedLemmaObject);
+      delete lObj["im only"];
+      // matches = matches.filter((lemmaObject) => !lemmaObject.id === id);
     }
   });
 };

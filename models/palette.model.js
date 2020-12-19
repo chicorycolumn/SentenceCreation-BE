@@ -33,6 +33,41 @@ exports.fetchPalette = (req) => {
     kumquat
   );
 
+  // console.log("*");
+  // console.log("**");
+  // console.log("***");
+  // console.log(
+  //   "questionSentenceData.arrayOfOutputArrays[0][0].selectedLemmaObject",
+  //   questionSentenceData.arrayOfOutputArrays[0][0].selectedLemmaObject
+  // );
+  // console.log(
+  //   "questionSentenceData.arrayOfOutputArrays",
+  //   questionSentenceData.arrayOfOutputArrays
+  // );
+  // console.log("questionSentenceData", questionSentenceData);
+  // console.log("questionResponseObj", questionResponseObj);
+
+  if (true) {
+    console.log(
+      "-------------------************************---------------------------------------************************--------------------"
+    );
+    console.log(
+      "*******************------------------------***************************************------------------------********************"
+    );
+    console.log(
+      "-------------------************************---------------------------------------************************--------------------"
+    );
+    console.log(
+      "*******************------------------------***************************************------------------------********************"
+    );
+    console.log(
+      "-------------------************************---------------------------------------************************--------------------"
+    );
+    console.log(
+      "*******************------------------------***************************************------------------------********************"
+    );
+  }
+
   let answerResponseObj;
 
   if (answerLanguage) {
