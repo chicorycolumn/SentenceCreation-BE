@@ -151,6 +151,7 @@ exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
       let { person, number, selectedTenseDescription } = data;
       let tenseDescriptionKeyForStructureChunk = selectedTenseDescription;
 
+      //This does have to be defined in here.
       const engTenseDescriptionRef = {
         "past simple": [v2],
         "past continuous": [be["past"][person][number] + " " + gerund],
@@ -168,14 +169,42 @@ exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
           be["present"][person][number] + " " + "going to be" + " " + gerund,
         ],
         "future perfect": [have.future + " " + v3],
-        //
-        conditional: ["would" + " " + infinitive],
+        // conditional: ["would" + " " + infinitive],
         "conditional simple": ["would" + " " + infinitive],
         "conditional continuous": [be.conditional + " " + gerund],
         "conditional perfect": [have.conditional + " " + v3],
-        //
         imperative: [infinitive],
+        "negative imperative": ["don't" + " " + infinitive],
       };
+
+      const subsequentKeysRef = {
+        "cond0 condition": ["present simple"],
+        "cond0 condition 3PS": ["present simple 3PS"],
+        "cond0 outcome": ["present simple"],
+        "cond0 outcome 3PS": ["present simple 3PS"],
+
+        "cond1 condition": ["present simple"],
+        "cond1 outcome": ["future simple"],
+
+        "cond2 condition": ["past simple"],
+        "cond2 outcome": ["conditional simple"],
+
+        "cond3 condition": ["past perfect"],
+        "cond3 outcome": ["conditional perfect"],
+      };
+
+      Object.keys(subsequentKeysRef).forEach((key) => {
+        let resultKeysArray = subsequentKeysRef[key];
+
+        let resArr = [];
+        resultKeysArray.forEach((resultKey) => {
+          engTenseDescriptionRef[resultKey].forEach((result) => {
+            resArr.push(result);
+          });
+        });
+
+        engTenseDescriptionRef[key] = resArr;
+      });
 
       addToResArr(
         "tenseDescription",
@@ -195,7 +224,11 @@ exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
           };
 
           if (
-            selectedTenseDescription === "present simple" &&
+            [
+              "present simple",
+              "cond0 condition 3PS",
+              "cond0 outcome 3PS",
+            ].includes(selectedTenseDescription) &&
             person === "3per" &&
             number === "singular"
           ) {
