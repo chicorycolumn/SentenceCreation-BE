@@ -21,7 +21,7 @@ const generalTranslatedSentencesRef = {
       },
       {
         POL: "Napiszę.",
-        ENG: ["I will write.", "I will have written."],
+        ENG: ["I will write.", "I am going to write.", "I will have written."],
       },
       {
         POL: "Napisałem.",
@@ -31,9 +31,18 @@ const generalTranslatedSentencesRef = {
         POL: "Napisałam.",
         ENG: ["I wrote.", "I have written.", "I had written."],
       },
-      { POL: "Będę pisał.", ENG: ["I will be writing."] },
-      { POL: "Będę pisała.", ENG: ["I will be writing."] },
-      { POL: "Będę pisać.", ENG: ["I will be writing."] },
+      {
+        POL: "Będę pisał.",
+        ENG: ["I will be writing.", "I am going to be writing."],
+      },
+      {
+        POL: "Będę pisała.",
+        ENG: ["I will be writing.", "I am going to be writing."],
+      },
+      {
+        POL: "Będę pisać.",
+        ENG: ["I will be writing.", "I am going to be writing."],
+      },
     ],
     "ENG->POL": [
       {
@@ -46,9 +55,14 @@ const generalTranslatedSentencesRef = {
       { ENG: "I am writing.", POL: ["Piszę."] },
       { ENG: "I write.", POL: ["Piszę."] },
       { ENG: "I will write.", POL: ["Napiszę."] },
+      { ENG: "I am going to write.", POL: ["Napiszę."] },
       { ENG: "I will have written.", POL: ["Napiszę."] },
       {
         ENG: "I will be writing.",
+        POL: ["Będę pisał.", "Będę pisała.", "Będę pisać."],
+      },
+      {
+        ENG: "I am going to be writing.",
         POL: ["Będę pisał.", "Będę pisała.", "Będę pisać."],
       },
     ],
@@ -66,7 +80,7 @@ const generalTranslatedSentencesRef = {
       },
       {
         POL: "Przeczytam.",
-        ENG: ["I will read.", "I will have read."],
+        ENG: ["I will read.", "I am going to read.", "I will have read."],
       },
       {
         POL: "Przeczytałem.",
@@ -76,9 +90,18 @@ const generalTranslatedSentencesRef = {
         POL: "Przeczytałam.",
         ENG: ["I wrote.", "I have read.", "I had read."],
       },
-      { POL: "Będę czytał.", ENG: ["I will be reading."] },
-      { POL: "Będę czytała.", ENG: ["I will be reading."] },
-      { POL: "Będę czytać.", ENG: ["I will be reading."] },
+      {
+        POL: "Będę czytał.",
+        ENG: ["I will be reading.", "I am going to be reading."],
+      },
+      {
+        POL: "Będę czytała.",
+        ENG: ["I will be reading.", "I am going to be reading."],
+      },
+      {
+        POL: "Będę czytać.",
+        ENG: ["I will be reading.", "I am going to be reading."],
+      },
     ],
     "ENG->POL": [
       {
@@ -91,9 +114,14 @@ const generalTranslatedSentencesRef = {
       { ENG: "I am reading.", POL: ["Czytam."] },
       { ENG: "I read.", POL: ["Czytam."] },
       { ENG: "I will read.", POL: ["Przeczytam."] },
+      { ENG: "I am going to read.", POL: ["Przeczytam."] },
       { ENG: "I will have read.", POL: ["Przeczytam."] },
       {
         ENG: "I will be reading.",
+        POL: ["Będę czytał.", "Będę czytała.", "Będę czytać."],
+      },
+      {
+        ENG: "I am going to be reading.",
         POL: ["Będę czytał.", "Będę czytała.", "Będę czytać."],
       },
     ],
@@ -1040,6 +1068,7 @@ describe("/api", () => {
           } else if (res.body.questionSentenceArr[0] === "Przeczytam.") {
             expect(res.body.answerSentenceArr).to.have.members([
               "I will read.",
+              "I am going to read.",
               "I will have read.",
             ]);
           }

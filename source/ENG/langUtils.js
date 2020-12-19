@@ -2,6 +2,7 @@ const lfUtils = require("../../utils/lemmaFilteringUtils.js");
 const otUtils = require("../../utils/objectTraversingUtils.js");
 const gpUtils = require("../../utils/generalPurposeUtils.js");
 const refObj = require("../../utils/referenceObjects.js");
+
 const be = {
   past: {
     "1per": { singular: "was", plural: "were" },
@@ -89,36 +90,28 @@ exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
     //specifically this is lObj `be` which has different 1per singular and 2per singular forms in present and past.
 
     let { infinitive, v2, v3, thirdPS, gerund } = lObj.inflections;
-    let { inflections } = lObj;
-    let inflectionChain =
-      refObj.lemmaObjectFeatures[currentLanguage].inflectionChains.verb;
-    let selectedTenseDescription;
 
     let resArr = [];
     let tenseDescriptionArrCopy = structureChunk.tenseDescription.slice(0);
 
     Object.keys(inflectorRef).forEach((key) => {
       let value = inflectorRef[key];
-
       if (!Array.isArray(structureChunk[key]) || !structureChunk[key].length) {
         structureChunk[key] = value.slice(0);
       }
     });
 
     let tenseDescriptionArr = [];
-
     tenseDescriptionArrCopy.forEach((selectedTenseDescription) => {
       if (selectedTenseDescription === "present") {
         tenseDescriptionArr.push("present simple");
         tenseDescriptionArr.push("present continuous");
         tenseDescriptionArr.push("present perfect");
-      }
-      if (selectedTenseDescription === "past") {
+      } else if (selectedTenseDescription === "past") {
         tenseDescriptionArr.push("past simple");
         tenseDescriptionArr.push("past continuous");
         tenseDescriptionArr.push("past perfect");
-      }
-      if (selectedTenseDescription === "future") {
+      } else if (selectedTenseDescription === "future") {
         tenseDescriptionArr.push("future simple");
         tenseDescriptionArr.push("future continuous");
         tenseDescriptionArr.push("future perfect");
@@ -150,166 +143,69 @@ exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
       resArr.push(resObj);
     }
 
+    function fetchTenseDescription(
+      data,
+      structureChunk,
+      tenseDescriptionKeyForRefObj = data.selectedTenseDescription
+    ) {
+      let { person, number, selectedTenseDescription } = data;
+      let tenseDescriptionKeyForStructureChunk = selectedTenseDescription;
+
+      const engTenseDescriptionRef = {
+        "past simple": [v2],
+        "past continuous": [be["past"][person][number] + " " + gerund],
+        "past perfect": [have["past"] + " " + v3],
+        "present simple 3PS": [thirdPS],
+        "present simple": [infinitive],
+        "present continuous": [be["present"][person][number] + " " + gerund],
+        "present perfect": [have["present"][person][number] + " " + v3],
+        "future simple": ["will" + " " + infinitive],
+        "future goingto": [
+          be["present"][person][number] + " " + "going to" + " " + infinitive,
+        ],
+        "future continuous": [be.future + " " + gerund],
+        "future goingto continuous": [
+          be["present"][person][number] + " " + "going to be" + " " + gerund,
+        ],
+        "future perfect": [have.future + " " + v3],
+        //
+        conditional: ["would" + " " + infinitive],
+        "conditional simple": ["would" + " " + infinitive],
+        "conditional continuous": [be.conditional + " " + gerund],
+        "conditional perfect": [have.conditional + " " + v3],
+        //
+        imperative: [infinitive],
+      };
+
+      addToResArr(
+        "tenseDescription",
+        tenseDescriptionKeyForStructureChunk,
+        engTenseDescriptionRef[tenseDescriptionKeyForRefObj],
+        structureChunk
+      );
+    }
+
     structureChunk.person.forEach((person) => {
       structureChunk.number.forEach((number) => {
         tenseDescriptionArr.forEach((selectedTenseDescription) => {
-          if (selectedTenseDescription === "past simple") {
-            addToResArr(
-              "tenseDescription",
-              selectedTenseDescription,
-              [v2],
-              structureChunk
-            );
-          }
-
-          if (selectedTenseDescription === "past continuous") {
-            addToResArr(
-              "tenseDescription",
-              selectedTenseDescription,
-              [be["past"][person][number] + " " + gerund],
-              structureChunk
-            );
-          }
-
-          if (selectedTenseDescription === "past perfect") {
-            addToResArr(
-              "tenseDescription",
-              selectedTenseDescription,
-              [have["past"] + " " + v3],
-              structureChunk
-            );
-          }
-
-          if (selectedTenseDescription === "present simple") {
-            if (person === "3per" && number === "singular") {
-              addToResArr(
-                "tenseDescription",
-                selectedTenseDescription,
-                [thirdPS],
-                structureChunk
-              );
-            } else {
-              addToResArr(
-                "tenseDescription",
-                selectedTenseDescription,
-                [infinitive],
-                structureChunk
-              );
-            }
-          }
-
-          if (selectedTenseDescription === "present continuous") {
-            addToResArr(
-              "tenseDescription",
-              selectedTenseDescription,
-              [be["present"][person][number] + " " + gerund],
-              structureChunk
-            );
-          }
-
-          if (selectedTenseDescription === "present perfect") {
-            addToResArr(
-              "tenseDescription",
-              selectedTenseDescription,
-              [have["present"][person][number] + " " + v3],
-              structureChunk
-            );
-          }
-
-          if (selectedTenseDescription === "future simple") {
-            addToResArr(
-              "tenseDescription",
-              selectedTenseDescription,
-              ["will" + " " + infinitive],
-              structureChunk
-            );
-          }
-
-          if (selectedTenseDescription === "future simple compound") {
-            addToResArr(
-              "tenseDescription",
-              selectedTenseDescription,
-              [
-                be["present"][person][number] +
-                  " " +
-                  "going to" +
-                  " " +
-                  infinitive,
-              ],
-              structureChunk
-            );
-          }
-
-          if (selectedTenseDescription === "future continuous") {
-            addToResArr(
-              "tenseDescription",
-              selectedTenseDescription,
-              [be.future + " " + gerund],
-              structureChunk
-            );
-          }
-
-          if (selectedTenseDescription === "future continuous compound") {
-            addToResArr(
-              "tenseDescription",
-              selectedTenseDescription,
-              [
-                be["present"][person][number] +
-                  " " +
-                  "going to be" +
-                  " " +
-                  gerund,
-              ],
-              structureChunk
-            );
-          }
-
-          if (selectedTenseDescription === "future perfect") {
-            addToResArr(
-              "tenseDescription",
-              selectedTenseDescription,
-              [have.future + " " + v3],
-              structureChunk
-            );
-          }
+          let data = {
+            person,
+            number,
+            selectedTenseDescription,
+          };
 
           if (
-            selectedTenseDescription === "conditional" ||
-            selectedTenseDescription === "conditional simple"
+            selectedTenseDescription === "present simple" &&
+            person === "3per" &&
+            number === "singular"
           ) {
-            addToResArr(
-              "tenseDescription",
-              selectedTenseDescription,
-              ["would" + " " + infinitive],
-              structureChunk
+            fetchTenseDescription(
+              data,
+              structureChunk,
+              `${selectedTenseDescription} 3PS`
             );
-          }
-
-          if (selectedTenseDescription === "conditional continuous") {
-            addToResArr(
-              "tenseDescription",
-              selectedTenseDescription,
-              [be.conditional + " " + gerund],
-              structureChunk
-            );
-          }
-
-          if (selectedTenseDescription === "conditional perfect") {
-            addToResArr(
-              "tenseDescription",
-              selectedTenseDescription,
-              [have.conditional + " " + v3],
-              structureChunk
-            );
-          }
-
-          if (selectedTenseDescription === "imperative") {
-            addToResArr(
-              "tenseDescription",
-              selectedTenseDescription,
-              [infinitive],
-              structureChunk
-            );
+          } else {
+            fetchTenseDescription(data, structureChunk);
           }
         });
       });

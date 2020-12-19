@@ -84,8 +84,6 @@ exports.preprocessLemmaObjects = (matches, structureChunk) => {
   }
 };
 
-//Alphaman say: Need to, in other files, allow m1 m2 m3 to all read as m if only m key exists and not others.
-
 exports.fillVerbInflections = (lemmaObject) => {
   if (lemmaObject.defective) {
     return;

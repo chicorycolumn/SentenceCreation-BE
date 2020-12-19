@@ -84,15 +84,28 @@ exports.tenseDescriptionTranslation = {
   ENG: {
     POL: {
       "past simple": ["past pf"],
+      // "past going to": [""],
       "past continuous": ["past im"],
       "past perfect": ["past pf"],
       "present simple": ["present im"],
       "present continuous": ["present im"],
       "present perfect": ["past im", "past pf"],
       "future simple": ["future pf"],
+      "future goingto": ["future pf"],
       "future continuous": ["future im"],
+      "future goingto continuous": ["future im"],
       "future perfect": ["future pf"],
       //Betaman say Add conditionals and any other tenses.
+      imperative: ["imperative"],
+      "negative imperative": ["negative imperative"],
+      "cond0 condition": ["cond0 condition"],
+      "cond0 outcome": ["cond0 outcome"],
+      "cond1 condition": ["cond1 condition"],
+      "cond1 outcome": ["cond1 outcome"],
+      "cond2 condition": ["cond2 condition"],
+      "cond2 outcome": ["cond2 outcome"],
+      "cond3 condition": ["cond3 condition"],
+      "cond3 outcome": ["cond3 outcome"],
     },
   },
 };
