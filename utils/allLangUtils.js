@@ -2,6 +2,12 @@ const refObj = require("../utils/referenceObjects.js");
 
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   sentenceStructure.forEach((structureChunk) => {
+    if (structureChunk.wordtype === "adjective") {
+      if (!structureChunk.form || !structureChunk.form.length) {
+        structureChunk.form = ["simple"];
+      }
+    }
+
     if (structureChunk.wordtype === "verb") {
       if (!structureChunk.form || !structureChunk.form.length) {
         structureChunk.form = ["verbal"];

@@ -153,6 +153,28 @@ let nounSet = [
       },
     },
   },
+  {
+    //links
+    translations: { ENG: ["door"], POL: ["drzwi"] },
+    tags: ["inanimate", "holdable", "concrete"],
+    //selectors
+    lemma: "door",
+    id: "eng-nou-007",
+    gender: "n",
+    //notes
+    deficient: false,
+    //inflections
+    inflections: {
+      singular: {
+        nom: "door",
+        gen: "door's",
+      },
+      plural: {
+        nom: "doors",
+        gen: "doors'",
+      },
+    },
+  },
 ];
 
 let adjectiveSet = [

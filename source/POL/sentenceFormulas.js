@@ -723,4 +723,26 @@ exports.sentenceFormulasBank = {
     primaryOrders: [["fix-1", "ver-1", "nou-1", "fix-2", "fix-3", "ver-2"]],
     additionalOrders: [],
   },
+  107: {
+    sentenceFormulaSymbol: "red door",
+    sentenceFormulaId: "POL-00-107",
+    translations: { ENG: ["ENG-00-107"] },
+    structure: [
+      {
+        chunkId: "adj-1",
+        agreeWith: "nou-1",
+        wordtype: "adjective",
+        andTags: ["colour"],
+      },
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        specificLemmas: ["drzwi"],
+        gcase: ["nom"],
+        number: [],
+      },
+    ],
+    primaryOrders: [["adj-1", "nou-1"]],
+    additionalOrders: [],
+  },
 };

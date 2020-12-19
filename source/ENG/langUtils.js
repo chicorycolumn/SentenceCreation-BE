@@ -84,7 +84,7 @@ exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
       return;
     }
 
-    //Betaman say:
+    //Alphaman say:
     //if lObj.complete, then...
     //or maybe this should be "irregular"
     //specifically this is lObj `be` which has different 1per singular and 2per singular forms in present and past.

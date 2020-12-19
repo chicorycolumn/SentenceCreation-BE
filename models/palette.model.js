@@ -63,6 +63,9 @@ exports.fetchPalette = (req) => {
           answerSentenceData.errorInSentenceCreation,
           kumquat
         );
+
+        //kilo;
+        console.log("uuu answerResponseObj", answerResponseObj);
       } else {
         let subsequentAnswerResponseObj = scUtils.giveFinalSentences(
           answerSentenceData.arrayOfOutputArrays,
@@ -76,6 +79,10 @@ exports.fetchPalette = (req) => {
             answerResponseObj.finalSentenceArr.push(finalSentence);
           }
         );
+
+        //kilo;
+        console.log("vvv answerResponseObj", answerResponseObj);
+        throw "Cease.";
       }
     });
 

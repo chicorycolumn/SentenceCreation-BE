@@ -247,4 +247,26 @@ exports.sentenceFormulasBank = {
     ],
     additionalOrders: [],
   },
+  107: {
+    sentenceFormulaSymbol: "red door",
+    sentenceFormulaId: "ENG-00-107",
+    translations: { POL: ["POL-00-107"] },
+    structure: [
+      {
+        chunkId: "adj-1",
+        agreeWith: "nou-1",
+        wordtype: "adjective",
+        andTags: ["colour"],
+      },
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        specificLemmas: ["door"],
+        number: [],
+        gcase: ["nom"],
+      },
+    ],
+    primaryOrders: [["adj-1", "nou-1"]],
+    additionalOrders: [],
+  },
 };

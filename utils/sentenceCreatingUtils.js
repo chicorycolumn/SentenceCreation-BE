@@ -605,38 +605,47 @@ exports.conformAnswerStructureToQuestionStructure = (
       answerLanguage
     ].allowableTransfersFromQuestionStructure[answerStructureChunk.wordtype] //Alphaman say for tantum plurales, make Number blank (all possible) in english noun chunk
       .forEach((inflectorKey) => {
-        if (questionStructureChunk[inflectorKey]) {
-          if (inflectorKey === "tenseDescription") {
-            answerStructureChunk["tenseDescription"] = [];
+        if (!questionStructureChunk[inflectorKey]) {
+          return;
+        }
 
-            questionStructureChunk["tenseDescription"].forEach((tenseDesc) => {
-              let translatedTenseDescArr = refObj.getTranslatedTenseDescription(
-                tenseDesc,
-                questionLanguage,
-                answerLanguage
-              );
+        if (
+          questionSelectedLemmaObject.tantumPlurale &&
+          inflectorKey === "number"
+        ) {
+          return;
+        }
 
-              let shouldHardChange = true;
+        if (inflectorKey === "tenseDescription") {
+          answerStructureChunk["tenseDescription"] = [];
 
-              if (shouldHardChange) {
-                //HARD CHANGE
-                answerStructureChunk["tenseDescription"] = [
-                  // ...answerStructureChunk["tenseDescription"],
-                  ...translatedTenseDescArr,
-                ];
-              } else {
-                //SOFT CHANGE
-                answerStructureChunk["tenseDescription"] = [
-                  ...answerStructureChunk["tenseDescription"],
-                  ...translatedTenseDescArr,
-                ];
-              }
-            });
-          } else {
-            answerStructureChunk[inflectorKey] = gpUtils.copyWithoutReference(
-              questionStructureChunk[inflectorKey]
+          questionStructureChunk["tenseDescription"].forEach((tenseDesc) => {
+            let translatedTenseDescArr = refObj.getTranslatedTenseDescription(
+              tenseDesc,
+              questionLanguage,
+              answerLanguage
             );
-          }
+
+            let shouldHardChange = true;
+
+            if (shouldHardChange) {
+              //HARD CHANGE
+              answerStructureChunk["tenseDescription"] = [
+                // ...answerStructureChunk["tenseDescription"],
+                ...translatedTenseDescArr,
+              ];
+            } else {
+              //SOFT CHANGE
+              answerStructureChunk["tenseDescription"] = [
+                ...answerStructureChunk["tenseDescription"],
+                ...translatedTenseDescArr,
+              ];
+            }
+          });
+        } else {
+          answerStructureChunk[inflectorKey] = gpUtils.copyWithoutReference(
+            questionStructureChunk[inflectorKey]
+          );
         }
       });
 

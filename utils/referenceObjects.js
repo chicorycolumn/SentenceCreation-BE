@@ -84,7 +84,7 @@ exports.tenseDescriptionTranslation = {
   ENG: {
     POL: {
       "past simple": ["past pf"],
-      // "past going to": [""],
+      // "past going to": [""], //This would need to be translated by more elaborate, so should be handled within sentenceStructre.
       "past continuous": ["past im"],
       "past perfect": ["past pf"],
       "present simple": ["present im"],
@@ -95,7 +95,6 @@ exports.tenseDescriptionTranslation = {
       "future continuous": ["future im"],
       "future goingto continuous": ["future im"],
       "future perfect": ["future pf"],
-      //Betaman say Add conditionals and any other tenses.
       imperative: ["imperative"],
       "negative imperative": ["negative imperative"],
       "cond0 condition": ["cond0 condition"],

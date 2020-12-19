@@ -215,8 +215,8 @@ let nounSet = [
     tags: ["inanimate", "holdable", "concrete"],
     //selectors
     lemma: "książka",
-    id: "pol-nou-008",
-    gender: "n",
+    id: "pol-nou-009",
+    gender: "f",
     //notes
     deficient: false,
     //inflections
@@ -241,6 +241,29 @@ let nounSet = [
   },
   {
     //links
+    translations: { ENG: ["door"] },
+    tags: ["inanimate", "house", "concrete"],
+    //selectors
+    lemma: "drzwi",
+    id: "pol-nou-010",
+    gender: "nonvirile",
+    //notes
+    deficient: true,
+    tantumPlurale: true,
+    //inflections
+    inflections: {
+      plural: {
+        nom: "drzwi",
+        gen: "drzwi",
+        dat: "drzwiom",
+        acc: "drzwi",
+        ins: "drzwiami",
+        loc: "drzwiach",
+      },
+    },
+  },
+  {
+    //links
     translations: {
       ENG: ["underwear", "pants", "underpants", "briefs", "panties"],
     },
@@ -248,9 +271,10 @@ let nounSet = [
     //selectors
     lemma: "majtki",
     id: "pol-nou-008",
-    gender: "f",
+    gender: "nonvirile",
     //notes
     deficient: true,
+    tantumPlurale: true,
     //inflections
     inflections: {
       plural: {
