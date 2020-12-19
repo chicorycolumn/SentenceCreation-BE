@@ -5,8 +5,8 @@ const refObj = require("../../utils/referenceObjects.js");
 
 exports.adjustStructureChunksInIfPW = (structureChunk) => {
   if (
-    structureChunk.tenseDescription &&
-    structureChunk.tenseDescription.length
+    (structureChunk.wordtype === "verb",
+    structureChunk.tenseDescription && structureChunk.tenseDescription.length)
   ) {
     return exports.adjustTenseDescriptions(structureChunk);
   }
@@ -47,27 +47,51 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
 exports.adjustTenseDescriptions = (structureChunk) => {
   const aspectReference = { im: "imperfective", pf: "perfective" };
 
-  if (
-    structureChunk.wordtype === "verb" &&
-    structureChunk.tenseDescription &&
-    structureChunk.tenseDescription.length
-  ) {
-    let resultArr = [];
+  let resultArr = [];
 
-    structureChunk.tenseDescription.forEach((tenseDesc, index) => {
-      let structureChunkCopy = gpUtils.copyWithoutReference(structureChunk);
+  structureChunk.tenseDescription.forEach((tenseDesc, index) => {
+    let structureChunkCopy = gpUtils.copyWithoutReference(structureChunk);
 
+    let tenseDescArr = [tenseDesc];
+
+    if (tenseDesc.slice(0, 4) === "cond" && /\d/.test(tenseDesc[4])) {
+      //cond0, cond1, cond2, cond3
+      let [key, clause] = tenseDesc.split(" ");
+
+      const conditionalsRef = {
+        cond0: {
+          condition: { tenseDesc: ["future pf"] },
+          outcome: { tenseDesc: ["future pf"] },
+        },
+        cond1: {
+          condition: { tenseDesc: ["future im", "future pf"] },
+          outcome: { tenseDesc: ["future pf"] },
+        },
+        cond2: {
+          //gdyby* + past im*, cond pf/im
+          condition: { tenseDesc: [] },
+          outcome: { tenseDesc: [] },
+        },
+        cond3: {
+          //gdyby* + past im*, cond pf/im
+          condition: { tenseDesc: [] },
+          outcome: { tenseDesc: [] },
+        },
+      };
+
+      tenseDescArr = conditionalsRef[key][clause].slice(0);
+    }
+
+    tenseDescArr.forEach((tenseDesc) => {
       let [tense, aspect] = tenseDesc.split(" ");
       structureChunkCopy.tense = [tense];
       structureChunkCopy.aspect = [aspectReference[aspect]];
       structureChunkCopy.tenseDescription = [tenseDesc];
       resultArr.push(structureChunkCopy);
     });
+  });
 
-    return resultArr;
-  } else {
-    return [structureChunk];
-  }
+  return resultArr;
 };
 
 exports.preprocessLemmaObjects = (matches, structureChunk) => {
