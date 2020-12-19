@@ -83,28 +83,28 @@ exports.adhocInflectors = {
 exports.tenseDescriptionTranslation = {
   ENG: {
     POL: {
-      "past simple": ["past pf"],
+      "past simple": { regular: ["past pf"] },
       // "past going to": [""], //This would need to be translated by more elaborate, so should be handled within sentenceStructre.
-      "past continuous": ["past im"],
-      "past perfect": ["past pf"],
-      "present simple": ["present im"],
-      "present continuous": ["present im"],
-      "present perfect": ["past im", "past pf"],
-      "future simple": ["future pf"],
-      "future goingto": ["future pf"],
-      "future continuous": ["future im"],
-      "future goingto continuous": ["future im"],
-      "future perfect": ["future pf"],
-      imperative: ["imperative"],
-      "negative imperative": ["negative imperative"],
-      "cond0 condition": ["cond0 condition"],
-      "cond0 outcome": ["cond0 outcome"],
-      "cond1 condition": ["cond1 condition"],
-      "cond1 outcome": ["cond1 outcome"],
-      "cond2 condition": ["cond2 condition"],
-      "cond2 outcome": ["cond2 outcome"],
-      "cond3 condition": ["cond3 condition"],
-      "cond3 outcome": ["cond3 outcome"],
+      "past continuous": { regular: ["past im"] },
+      "past perfect": { regular: ["past pf"] },
+      "present simple": { regular: ["present im"] },
+      "present continuous": { regular: ["present im"] },
+      "present perfect": { regular: ["past im", "past pf"] },
+      "future simple": { regular: ["future pf"] },
+      "future goingto": { regular: ["future pf"] },
+      "future continuous": { regular: ["future im"] },
+      "future goingto continuous": { regular: ["future im"] },
+      "future perfect": { regular: ["future pf"] },
+      imperative: { regular: ["imperative"] },
+      "negative imperative": { regular: ["negative imperative"] },
+      "cond0 condition": { regular: ["cond0 condition"] },
+      "cond0 outcome": { regular: ["cond0 outcome"] },
+      "cond1 condition": { regular: ["cond1 condition"] },
+      "cond1 outcome": { regular: ["cond1 outcome"] },
+      "cond2 condition": { regular: ["cond2 condition"] },
+      "cond2 outcome": { regular: ["cond2 outcome"] },
+      "cond3 condition": { regular: ["cond3 condition"] },
+      "cond3 outcome": { regular: ["cond3 outcome"] },
     },
   },
 };
@@ -121,13 +121,13 @@ exports.getTranslatedTenseDescription = (
     translatedTenseDescriptionsArr =
       exports.tenseDescriptionTranslation[sourceLanguage][targetLanguage][
         sourceTenseDescription
-      ];
+      ].regular;
   } else {
     let translations =
       exports.tenseDescriptionTranslation[targetLanguage][sourceLanguage];
 
     Object.keys(translations).forEach((key) => {
-      let value = translations[key];
+      let value = translations[key].regular;
 
       if (
         value.includes(sourceTenseDescription) &&

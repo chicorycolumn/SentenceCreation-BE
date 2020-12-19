@@ -232,7 +232,7 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe.only("/palette - Stage 7: Further linguistic features.", () => {
+  describe("/palette - Stage 7: Further linguistic features.", () => {
     it("#pal07-01a GET 200 YES: Conjugate ENG be correctly.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -253,11 +253,81 @@ describe("/api", () => {
           );
         });
     });
-    it.only("#pal07-01b GET 200 YES: RSWAT ENG to POL 'be' correctly.", () => {
+    it.only("#pal07-01b GET 200 YES: Give results for POL być even though past pf was asked for, it should nevertheless be the case that past im of być is returned, as this verb lobj is marked as im-only.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage,
+          // answerLanguage,
+          sentenceFormulaSymbol: "dummy34",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          expect([
+            "Byłem.",
+            "Byłam.",
+            "Byłeś.",
+            "Byłaś.",
+            "Był.",
+            "Była.",
+            "Było.",
+            "Byłyśmy.",
+            "Byliśmy.",
+            "Byłyście.",
+            "Byliście.",
+            "Były.",
+            "Byli.",
+          ]).to.include(res.body.questionSentenceArr[0]);
+        });
+    });
+    it("#pal07-01c GET 200 YES: Conjugate POL be correctly.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage,
+          // answerLanguage,
+          sentenceFormulaSymbol: "dummy33",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          expect([
+            "Jestem.",
+            "Jesteś.",
+            "Jest.",
+            "Jesteśmy.",
+            "Jesteście.",
+            "Są.",
+            "Byłem.",
+            "Byłam.",
+            "Byłeś.",
+            "Byłaś.",
+            "Był.",
+            "Była.",
+            "Było.",
+            "Byłyśmy.",
+            "Byliśmy.",
+            "Byłyście.",
+            "Byliście.",
+            "Były.",
+            "Byli.",
+          ]).to.include(res.body.questionSentenceArr[0]);
+        });
+    });
+    it("#pal07-01d GET 200 YES: RSWAT ENG to POL 'be' correctly.", () => {
       //Alphaman: The issue here is that normally, ENG past simple gets translated to POL past pf.
-      //But the verb by¢ doesn't have a pf form, only im.
+      //But the verb być doesn't have a pf form, only im.
       //So in this case, ENG past simple should be translated to POL past >>im<< when dealing with
-      //by¢, and mie¢, and tbh, with any verbs that simply don't have a pf form.
+      //być, and mieć, and tbh, with any verbs that simply don't have a pf form.
       //So I suppose, at some point in processing, we should:
       //search for all connected verb lobjs, searching by lObj.id, pol-ver-001-im-01 look for pol-ver-001-pf-*
       //And if this verb is im, and has no pf forms,
@@ -288,7 +358,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal07-01c GET 200 YES: RSWAT POL to ENG 'be' correctly.", () => {
+    it("#pal07-01e GET 200 YES: RSWAT POL to ENG 'be' correctly.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 

@@ -507,6 +507,227 @@ let adjectiveSet = [
 let verbSet = [
   {
     //links
+    translations: { ENG: ["be"] },
+    tags: ["basic", "identity"],
+    //selectors
+    lemma: "być",
+    id: "pol-ver-000-im-01",
+    aspect: "imperfective",
+    //notes
+    deficient: true,
+    defective: false,
+    complete: true,
+    "im only": true,
+    //inflections
+    inflections: {
+      infinitive: "być",
+      verbal: {
+        past: {
+          "1per": {
+            singular: {
+              m1: "byłem",
+              m2: "byłem",
+              m3: "byłem",
+              f: "byłam",
+            },
+            plural: {
+              virile: "byliśmy",
+              nonvirile: "byłyśmy",
+            },
+          },
+          "2per": {
+            singular: {
+              m1: "byłeś",
+              m2: "byłeś",
+              m3: "byłeś",
+              f: "byłaś",
+            },
+            plural: {
+              virile: "byliście",
+              nonvirile: "byłyście",
+            },
+          },
+          "3per": {
+            singular: {
+              m1: "był",
+              m2: "był",
+              m3: "był",
+              f: "była",
+              n: "było",
+            },
+            plural: {
+              virile: "byli",
+              nonvirile: "były",
+            },
+          },
+        },
+        present: {
+          "1per": {
+            singular: {
+              m1: "jestem",
+              m2: "jestem",
+              m3: "jestem",
+              f: "jestem",
+              n: "jestem",
+            },
+            plural: {
+              virile: "jesteśmy",
+              nonvirile: "jesteśmy",
+            },
+          },
+          "2per": {
+            singular: {
+              m1: "jesteś",
+              m2: "jesteś",
+              m3: "jesteś",
+              f: "jesteś",
+              n: "jesteś",
+            },
+            plural: {
+              virile: "jesteście",
+              nonvirile: "jesteście",
+            },
+          },
+          "3per": {
+            singular: {
+              m1: "jest",
+              m2: "jest",
+              m3: "jest",
+              f: "jest",
+              n: "jest",
+            },
+            plural: {
+              virile: "są",
+              nonvirile: "są",
+            },
+          },
+        },
+        future: {
+          "1per": {
+            singular: {
+              m1: "będę",
+              m2: "będę",
+              m3: "będę",
+              f: "będę",
+            },
+            plural: {
+              virile: "będziemy",
+              nonvirile: "będziemy",
+            },
+          },
+          "2per": {
+            singular: {
+              m1: "będziesz",
+              m2: "będziesz",
+              m3: "będziesz",
+              f: "będziesz",
+            },
+            plural: {
+              virile: "będziecie",
+              nonvirile: "będziecie",
+            },
+          },
+          "3per": {
+            singular: {
+              m1: "będzie",
+              m2: "będzie",
+              m3: "będzie",
+              f: "będzie",
+              n: "będzie",
+            },
+            plural: {
+              virile: "będą",
+              nonvirile: "będą",
+            },
+          },
+        },
+        conditional: {
+          "1per": {
+            singular: {
+              m1: "byłbym",
+              m2: "byłbym",
+              m3: "byłbym",
+              f: "byłabym",
+            },
+            plural: {
+              virile: "bylibyśmy",
+              nonvirile: "byłybyśmy",
+            },
+          },
+          "2per": {
+            singular: {
+              m1: "byłbyś",
+              m2: "byłbyś",
+              m3: "byłbyś",
+              f: "byłabyś",
+            },
+            plural: {
+              virile: "bylibyście",
+              nonvirile: "byłybyście",
+            },
+          },
+          "3per": {
+            singular: {
+              m1: "byłby",
+              m2: "byłby",
+              m3: "byłby",
+              f: "byłaby",
+              n: "byłoby",
+            },
+            plural: {
+              virile: "byliby",
+              nonvirile: "byłyby",
+            },
+          },
+        },
+        imperative: {
+          "1per": {
+            singular: {
+              m1: "niech będę",
+              m2: "niech będę",
+              m3: "niech będę",
+              f: "niech będę",
+            },
+            plural: {
+              virile: "bądźmy",
+              nonvirile: "bądźmy",
+            },
+          },
+          "2per": {
+            singular: {
+              m1: "bądź",
+              m2: "bądź",
+              m3: "bądź",
+              f: "bądź",
+            },
+            plural: {
+              virile: "bądźcie",
+              nonvirile: "bądźcie",
+            },
+          },
+          "3per": {
+            singular: {
+              m1: "niech będzie",
+              m2: "niech będzie",
+              m3: "niech będzie",
+              f: "niech będzie",
+              n: "niech będzie",
+            },
+            plural: {
+              virile: "niech będą",
+              nonvirile: "niech będą",
+            },
+          },
+        },
+      },
+      activeAdjectival: "będący",
+      contemporaryAdverbial: "będąc",
+      anteriorAdverbial: "bywszy",
+      verbalNoun: "bycie",
+    },
+  },
+  {
+    //links
     translations: { ENG: ["have"] },
     tags: ["basic", "possession"],
     //selectors
@@ -516,6 +737,7 @@ let verbSet = [
     //notes
     deficient: true,
     defective: false,
+    "im only": true,
     //inflections
     inflections: {
       infinitive: "mieć",

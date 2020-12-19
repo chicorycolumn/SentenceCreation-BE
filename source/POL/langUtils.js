@@ -115,6 +115,10 @@ exports.fillVerbInflections = (lemmaObject) => {
     return;
   }
 
+  if (lemmaObject.complete) {
+    return;
+  }
+
   //To imperfective verbs, add  presentimpersonal, conditional, future
   //To  perfective verbs,  add  futureimpersonal,  conditional
   //In both, fill out the activeAdj and passiveAdj if they are there.
