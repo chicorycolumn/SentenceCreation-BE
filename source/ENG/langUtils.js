@@ -86,11 +86,6 @@ exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
       return;
     }
 
-    //Alphaman say:
-    //if lObj.complete, then...
-    //or maybe this should be "irregular"
-    //specifically this is lObj `be` which has different 1per singular and 2per singular forms in present and past.
-
     let { infinitive, v2, v3, thirdPS, gerund } = lObj.inflections;
     let tenseDescriptionArrCopy = structureChunk.tenseDescription.slice(0);
 
@@ -221,7 +216,7 @@ exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
             lObj.lemma === "be" &&
             ["past simple", "present simple"].includes(selectedTenseDescription)
           ) {
-            //Alphaman: Okay, 'be' is the only verb that is irregular in a way that doesn't fit into our system.
+            //Okay, 'be' is the only verb that is irregular in a way that doesn't fit into our system.
             //Specifically, am/are and was/were.
             //So just for this verb in ENG, we need to do all this getting differently.
 

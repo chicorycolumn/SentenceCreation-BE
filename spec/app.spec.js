@@ -8,6 +8,51 @@ const { selectRandom } = require("../utils/generalPurposeUtils");
 // const endpointsCopy = require("../endpoints.json");
 
 const generalTranslatedSentencesRef = {
+  be: {
+    "POL->ENG": [
+      { POL: "Jestem.", ENG: ["Am."] },
+      { POL: "Jesteś.", ENG: ["Are."] },
+      { POL: "Jest.", ENG: ["Is."] },
+      { POL: "Jesteśmy.", ENG: ["Are."] },
+      { POL: "Jesteście.", ENG: ["Are."] },
+      { POL: "Są.", ENG: ["Are."] },
+      { POL: "Byłem.", ENG: ["Was."] },
+      { POL: "Byłam.", ENG: ["Was."] },
+      { POL: "Byłeś.", ENG: ["Were."] },
+      { POL: "Byłaś.", ENG: ["Were."] },
+      { POL: "Był.", ENG: ["Was."] },
+      { POL: "Była.", ENG: ["Was."] },
+      { POL: "Było.", ENG: ["Was."] },
+      { POL: "Byłyśmy.", ENG: ["Were."] },
+      { POL: "Byliśmy.", ENG: ["Were."] },
+      { POL: "Byłyście.", ENG: ["Were."] },
+      { POL: "Byliście.", ENG: ["Were."] },
+      { POL: "Były.", ENG: ["Were."] },
+      { POL: "Byli.", ENG: ["Were."] },
+    ],
+    "ENG->POL": [
+      { ENG: "Am.", POL: ["Jestem."] },
+      { ENG: "Are.", POL: ["Jesteś.", "Jesteśmy.", "Jesteście.", "Są."] },
+      { ENG: "Is.", POL: ["Jest."] },
+      {
+        ENG: "Was.",
+        POL: ["Byłem.", "Byłam.", "Był.", "Była.", "Było."],
+      },
+      {
+        ENG: "Were.",
+        POL: [
+          "Byłeś.",
+          "Byłaś.",
+          "Byłyśmy.",
+          "Byliśmy.",
+          "Byłyście.",
+          "Byliście.",
+          "Były.",
+          "Byli.",
+        ],
+      },
+    ],
+  },
   write: {
     "POL->ENG": [
       { POL: "Piszę.", ENG: ["I am writing.", "I write."] },
@@ -198,13 +243,73 @@ describe("/api", () => {
           useDummy: true,
           questionLanguage,
           // answerLanguage,
-          sentenceFormulaSymbol: "dummy32",
+          sentenceFormulaSymbol: "dummy33",
         })
         .expect(200)
         .then((res) => {
           console.log(res.body);
           expect(["Am.", "Are.", "Is.", "Was.", "Were."]).to.include(
             res.body.questionSentenceArr[0]
+          );
+        });
+    });
+    it.only("#pal07-01b GET 200 YES: RSWAT ENG to POL 'be' correctly.", () => {
+      //Alphaman: The issue here is that normally, ENG past simple gets translated to POL past pf.
+      //But the verb by¢ doesn't have a pf form, only im.
+      //So in this case, ENG past simple should be translated to POL past >>im<< when dealing with
+      //by¢, and mie¢, and tbh, with any verbs that simply don't have a pf form.
+      //So I suppose, at some point in processing, we should:
+      //search for all connected verb lobjs, searching by lObj.id, pol-ver-001-im-01 look for pol-ver-001-pf-*
+      //And if this verb is im, and has no pf forms,
+      //then allow for ENG past simple to be translated by POL past im
+      //Or... maybe actually just if it's deliberately marked on this lObj that it is im only?
+
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            word,
+            []
+          );
+        });
+    });
+    it("#pal07-01c GET 200 YES: RSWAT POL to ENG 'be' correctly.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            word,
+            []
           );
         });
     });

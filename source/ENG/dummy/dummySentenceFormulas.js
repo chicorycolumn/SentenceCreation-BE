@@ -136,10 +136,10 @@ exports.dummySentenceFormulasBank = {
     ],
     primaryOrders: [["fix-1", "ver-1"]],
   },
-  dummy32: {
-    sentenceFormulaSymbol: "dummy32",
-    sentenceFormulaId: "ENG-dummy32",
-    translations: { POL: ["POL-dummy32"] },
+  dummy33: {
+    sentenceFormulaSymbol: "dummy33",
+    sentenceFormulaId: "ENG-dummy33",
+    translations: { POL: ["POL-dummy33"] },
     structure: [
       {
         chunkId: "ver-1",
