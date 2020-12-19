@@ -150,7 +150,7 @@ exports.processSentenceFormula = (
         typeof structureChunk === "object" && structureChunk.chunkId === headId
     );
 
-    console.log("* SC:processSentenceFormula STEP ONE", headChunk.chunkId);
+    console.log("~~ SC:processSentenceFormula STEP ONE", headChunk);
 
     //The below functions correctly with regard to:
     //Give kumquat as true, it returns multiple outputUnit objects in allPossOutputUnits_head array.
@@ -170,6 +170,7 @@ exports.processSentenceFormula = (
       !allPossOutputUnits_head ||
       !allPossOutputUnits_head.length
     ) {
+      console.log("smang it");
       return {
         outputArr: null,
         sentenceFormula,
@@ -228,7 +229,7 @@ exports.processSentenceFormula = (
       if (dependentChunks.length) {
         dependentChunks.forEach((dependentChunk) => {
           console.log(
-            "* SC:processSentenceFormula STEP TWO",
+            "~~ SC:processSentenceFormula STEP TWO",
             dependentChunk.chunkId
           );
 
@@ -603,51 +604,56 @@ exports.conformAnswerStructureToQuestionStructure = (
 
     refObj.lemmaObjectFeatures[
       answerLanguage
-    ].allowableTransfersFromQuestionStructure[answerStructureChunk.wordtype] //Alphaman say for tantum plurales, make Number blank (all possible) in english noun chunk
-      .forEach((inflectorKey) => {
-        if (!questionStructureChunk[inflectorKey]) {
-          return;
-        }
+    ].allowableTransfersFromQuestionStructure[
+      answerStructureChunk.wordtype
+    ].forEach((inflectorKey) => {
+      if (!questionStructureChunk[inflectorKey]) {
+        return;
+      }
 
+      if (inflectorKey === "number") {
         if (
-          questionSelectedLemmaObject.tantumPlurale &&
-          inflectorKey === "number"
+          questionSelectedLemmaObject.tantumPlurale ||
+          matchingAnswerLemmaObjects.every(
+            (answerLemmaObject) => answerLemmaObject.tantumPlurale
+          )
         ) {
           return;
         }
+      }
 
-        if (inflectorKey === "tenseDescription") {
-          answerStructureChunk["tenseDescription"] = [];
+      if (inflectorKey === "tenseDescription") {
+        answerStructureChunk["tenseDescription"] = [];
 
-          questionStructureChunk["tenseDescription"].forEach((tenseDesc) => {
-            let translatedTenseDescArr = refObj.getTranslatedTenseDescription(
-              tenseDesc,
-              questionLanguage,
-              answerLanguage
-            );
-
-            let shouldHardChange = true;
-
-            if (shouldHardChange) {
-              //HARD CHANGE
-              answerStructureChunk["tenseDescription"] = [
-                // ...answerStructureChunk["tenseDescription"],
-                ...translatedTenseDescArr,
-              ];
-            } else {
-              //SOFT CHANGE
-              answerStructureChunk["tenseDescription"] = [
-                ...answerStructureChunk["tenseDescription"],
-                ...translatedTenseDescArr,
-              ];
-            }
-          });
-        } else {
-          answerStructureChunk[inflectorKey] = gpUtils.copyWithoutReference(
-            questionStructureChunk[inflectorKey]
+        questionStructureChunk["tenseDescription"].forEach((tenseDesc) => {
+          let translatedTenseDescArr = refObj.getTranslatedTenseDescription(
+            tenseDesc,
+            questionLanguage,
+            answerLanguage
           );
-        }
-      });
+
+          let shouldHardChange = true;
+
+          if (shouldHardChange) {
+            //HARD CHANGE
+            answerStructureChunk["tenseDescription"] = [
+              // ...answerStructureChunk["tenseDescription"],
+              ...translatedTenseDescArr,
+            ];
+          } else {
+            //SOFT CHANGE
+            answerStructureChunk["tenseDescription"] = [
+              ...answerStructureChunk["tenseDescription"],
+              ...translatedTenseDescArr,
+            ];
+          }
+        });
+      } else {
+        answerStructureChunk[inflectorKey] = gpUtils.copyWithoutReference(
+          questionStructureChunk[inflectorKey]
+        );
+      }
+    });
 
     //Check for features-of-answer-lang-lobjs-that-aren't-features-of-question-lang-lobjs.
     // So when going ENG to POL, that would be gender.

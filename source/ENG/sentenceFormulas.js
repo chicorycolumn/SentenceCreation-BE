@@ -269,4 +269,26 @@ exports.sentenceFormulasBank = {
     primaryOrders: [["adj-1", "nou-1"]],
     additionalOrders: [],
   },
+  "107a": {
+    sentenceFormulaSymbol: "red door singular",
+    sentenceFormulaId: "ENG-00-107a",
+    translations: { POL: ["POL-00-107"] }, //Yes, this 107a should go to 107.
+    structure: [
+      {
+        chunkId: "adj-1",
+        agreeWith: "nou-1",
+        wordtype: "adjective",
+        andTags: ["colour"],
+      },
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        specificLemmas: ["door"],
+        number: ["singular"],
+        gcase: ["nom"],
+      },
+    ],
+    primaryOrders: [["adj-1", "nou-1"]],
+    additionalOrders: [],
+  },
 };

@@ -240,7 +240,59 @@ describe("/api", () => {
           // );
         });
     });
-    it.only("#pal07-01b GET 200 YES: Tantum plurale does not break it when ENG to POL.", () => {
+    it("#pal07-01b GET 200 YES: RSWAT for ENG sing to POL tantum plurale.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "red door singular",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          // const translatedSentencesRef = {
+          //   current: {
+          //     "POL->ENG": [
+          //       {
+          //         POL: "Kobieta czyta.",
+          //         ENG: ["The woman reads.", "The woman is reading."],
+          //       },
+          //       {
+          //         POL: "Kobiety czytają.",
+          //         ENG: ["The women read.", "The women are reading."],
+          //       },
+          //       {
+          //         POL: "Chłopiec czyta.",
+          //         ENG: ["The boy reads.", "The boy is reading."],
+          //       },
+          //       {
+          //         POL: "Chłopcy czytają.",
+          //         ENG: ["The boys read.", "The boys are reading."],
+          //       },
+          //     ],
+          //   },
+          // };
+
+          // checkSentenceTranslations(
+          //   res,
+          //   questionLanguage,
+          //   answerLanguage,
+          //   "current",
+          //   [
+          //     "Kobieta czyta.",
+          //     "Kobiety czytają.",
+          //     "Chłopiec czyta.",
+          //     "Chłopcy czytają.",
+          //   ],
+          //   translatedSentencesRef
+          // );
+        });
+    });
+    it("#pal07-01c GET 200 YES: RSWAT for ENG to POL tantum plurale.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -292,7 +344,7 @@ describe("/api", () => {
           // );
         });
     });
-    it("#pal07-02a GET 200 YES: RSWAT for First Conditional POL->ENG.", () => {
+    xit("#pal07-02a GET 200 YES: RSWAT for First Conditional POL->ENG.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -344,7 +396,7 @@ describe("/api", () => {
           // );
         });
     });
-    it("#pal07-02b GET 200 YES: RSWAT for First Conditional ENG->POL.", () => {
+    xit("#pal07-02b GET 200 YES: RSWAT for First Conditional ENG->POL.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 

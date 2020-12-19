@@ -331,7 +331,7 @@ exports.findMatchingLemmaObjectThenWord = (
   if (!arrayOfAllPossibleOutputUnits.length) {
     if (!errorInSentenceCreation.errorMessage) {
       errorInSentenceCreation.errorMessage =
-        "The requested inflections were not found in the selected lemma objects.";
+        "The rrrequested inflections were not found in the selected lemma objects.";
     }
     return false;
   }
