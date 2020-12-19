@@ -211,6 +211,36 @@ let nounSet = [
   },
   {
     //links
+    translations: { ENG: ["book"] },
+    tags: ["inanimate", "holdable", "concrete"],
+    //selectors
+    lemma: "książka",
+    id: "pol-nou-008",
+    gender: "n",
+    //notes
+    deficient: false,
+    //inflections
+    inflections: {
+      singular: {
+        nom: "książka",
+        gen: "książki",
+        dat: "książce",
+        acc: "książkę",
+        ins: "książką",
+        loc: "książce",
+      },
+      plural: {
+        nom: "książki",
+        gen: "książek",
+        dat: "książkom",
+        acc: "książki",
+        ins: "książkami",
+        loc: "książkach",
+      },
+    },
+  },
+  {
+    //links
     translations: {
       ENG: ["underwear", "pants", "underpants", "briefs", "panties"],
     },
@@ -1139,6 +1169,121 @@ let verbSet = [
       contemporaryAdverbial: "badając",
       anteriorAdverbial: false,
       verbalNoun: "badanie",
+    },
+  },
+  {
+    //links
+    translations: { ENG: ["research"] },
+    tags: ["science"],
+    //selectors
+    lemma: "zbadać",
+    id: "pol-ver-003-pf-01",
+    aspect: "perfective",
+    //notes
+    deficient: false,
+    defective: false,
+    //inflections
+    inflections: {
+      infinitive: "zbadać",
+      verbal: {
+        past: {
+          impersonal: {
+            singular: { allSingularGenders: "zbadano" },
+            plural: { allPluralGenders: "zbadano" },
+          },
+          "1per": {
+            singular: {
+              m: "zbadałem",
+              f: "zbadałam",
+            },
+            plural: {
+              virile: "zbadaliśmy",
+              nonvirile: "zbadałyśmy",
+            },
+          },
+          "2per": {
+            singular: {
+              m: "zbadałeś",
+              f: "zbadałaś",
+            },
+            plural: {
+              virile: "zbadaliście",
+              nonvirile: "zbadałyście",
+            },
+          },
+          "3per": {
+            singular: {
+              m: "zbadał",
+              f: "zbadała",
+              n: "zbadało",
+            },
+            plural: {
+              virile: "zbadali",
+              nonvirile: "zbadały",
+            },
+          },
+        },
+        present: false,
+        future: {
+          impersonal: { singular: true, plural: true },
+          "1per": {
+            singular: {
+              allSingularGendersExcludingNeuter: "zbadam",
+            },
+            plural: {
+              allPluralGenders: "zbadamy",
+            },
+          },
+          "2per": {
+            singular: {
+              allSingularGendersExcludingNeuter: "zbadasz",
+            },
+            plural: {
+              allPluralGenders: "zbadacie",
+            },
+          },
+          "3per": {
+            singular: {
+              allSingularGenders: "zbada",
+            },
+            plural: {
+              allPluralGenders: "zbadają",
+            },
+          },
+        },
+        conditional: true,
+        imperative: {
+          "1per": {
+            singular: {
+              allSingularGendersExcludingNeuter: "niech zbadam",
+            },
+            plural: {
+              allPluralGenders: "zbadajmy",
+            },
+          },
+          "2per": {
+            singular: {
+              allSingularGendersExcludingNeuter: "zbadaj",
+            },
+            plural: {
+              allPluralGenders: "zbadajcie",
+            },
+          },
+          "3per": {
+            singular: {
+              allSingularGenders: "niech zbada",
+            },
+            plural: {
+              allPluralGenders: "niech zbadają",
+            },
+          },
+        },
+      },
+      activeAdjectival: false,
+      passiveAdjectival: "zbadany",
+      contemporaryAdverbial: false,
+      anteriorAdverbial: "zbadawszy",
+      verbalNoun: "zbadanie",
     },
   },
 ];

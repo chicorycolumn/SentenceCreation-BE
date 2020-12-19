@@ -109,6 +109,50 @@ let nounSet = [
       },
     },
   },
+  {
+    //links
+    translations: { ENG: ["mirror"], POL: ["lustro", "zwierciadło"] },
+    tags: ["inanimate", "holdable", "concrete"],
+    //selectors
+    lemma: "mirror",
+    id: "eng-nou-005",
+    gender: "n",
+    //notes
+    deficient: false,
+    //inflections
+    inflections: {
+      singular: {
+        nom: "mirror",
+        gen: "mirror's",
+      },
+      plural: {
+        nom: "mirrors",
+        gen: "mirrors'",
+      },
+    },
+  },
+  {
+    //links
+    translations: { ENG: ["book"], POL: ["książka"] },
+    tags: ["inanimate", "holdable", "concrete"],
+    //selectors
+    lemma: "book",
+    id: "eng-nou-006",
+    gender: "n",
+    //notes
+    deficient: false,
+    //inflections
+    inflections: {
+      singular: {
+        nom: "book",
+        gen: "book's",
+      },
+      plural: {
+        nom: "books",
+        gen: "books'",
+      },
+    },
+  },
 ];
 
 let adjectiveSet = [
@@ -134,7 +178,7 @@ let adjectiveSet = [
 let verbSet = [
   {
     //links
-    translations: { ENG: ["read"], POL: ["czytać"] },
+    translations: { ENG: ["read"], POL: ["czytać", "przeczytać"] },
     tags: ["basic2"],
     //selectors
     lemma: "read",
@@ -153,7 +197,7 @@ let verbSet = [
   },
   {
     //links
-    translations: { ENG: ["write"], POL: ["pisać"] },
+    translations: { ENG: ["write"], POL: ["pisać", "napisać"] },
     tags: ["basic3"],
     //selectors
     lemma: "write",
@@ -168,6 +212,25 @@ let verbSet = [
       v3: "written",
       thirdPS: "writes",
       gerund: "writing",
+    },
+  },
+  {
+    //links
+    translations: { ENG: ["research"], POL: ["badać", "zbadać"] },
+    tags: ["science"],
+    //selectors
+    lemma: "research",
+    id: "eng-ver-004",
+    //notes
+    defective: false,
+    //inflections
+    inflections: {
+      infinitive: "research",
+      verbal: {},
+      v2: "researched",
+      v3: "researched",
+      thirdPS: "researches",
+      gerund: "researching",
     },
   },
   {

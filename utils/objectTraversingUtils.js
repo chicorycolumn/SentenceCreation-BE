@@ -16,7 +16,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
   //STEP ONE: : Fx-PW: Pathway for Fixed pieces.
   if (structureChunk.wordtype === "fixed") {
-    console.log("##Fx-PW");
+    console.log("##Fx-PW" + " " + structureChunk.chunkId);
     return [
       {
         selectedLemmaObject: {},
@@ -65,7 +65,7 @@ exports.findMatchingLemmaObjectThenWord = (
         structureChunk[adhocInflectorKey] &&
         structureChunk[adhocInflectorKey].length
       ) {
-        console.log("##Ad-PW");
+        console.log("##Ad-PW" + " " + structureChunk.chunkId);
         if (kumquat) {
           matches.forEach((selectedLemmaObject) => {
             let adhocArr = langUtils.generateAdhocForms(
@@ -125,7 +125,7 @@ exports.findMatchingLemmaObjectThenWord = (
           );
 
           if (requestedUninflectedForms.length) {
-            console.log("##Un-PW");
+            console.log("##Un-PW" + " " + structureChunk.chunkId);
             if (kumquat) {
               requestedUninflectedForms.forEach((selectedUninflectedForm) => {
                 let matchesByUninflectedForm = matches.filter((lObj) => {
@@ -249,7 +249,7 @@ exports.findMatchingLemmaObjectThenWord = (
       return false;
     }
 
-    console.log("##If-PW");
+    console.log("##If-PW" + " " + structureChunk.chunkId);
 
     if (kumquat) {
       matchesCopy.forEach((selectedLemmaObject) => {

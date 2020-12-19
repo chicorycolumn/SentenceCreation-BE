@@ -187,6 +187,113 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
+  describe("/palette - Stage 7: Further linguistic features.", () => {
+    it("#pal07-01a GET 200 YES: RSWAT for First Conditional POL->ENG.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "first conditional 106a",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          // const translatedSentencesRef = {
+          //   current: {
+          //     "POL->ENG": [
+          //       {
+          //         POL: "Kobieta czyta.",
+          //         ENG: ["The woman reads.", "The woman is reading."],
+          //       },
+          //       {
+          //         POL: "Kobiety czytają.",
+          //         ENG: ["The women read.", "The women are reading."],
+          //       },
+          //       {
+          //         POL: "Chłopiec czyta.",
+          //         ENG: ["The boy reads.", "The boy is reading."],
+          //       },
+          //       {
+          //         POL: "Chłopcy czytają.",
+          //         ENG: ["The boys read.", "The boys are reading."],
+          //       },
+          //     ],
+          //   },
+          // };
+
+          // checkSentenceTranslations(
+          //   res,
+          //   questionLanguage,
+          //   answerLanguage,
+          //   "current",
+          //   [
+          //     "Kobieta czyta.",
+          //     "Kobiety czytają.",
+          //     "Chłopiec czyta.",
+          //     "Chłopcy czytają.",
+          //   ],
+          //   translatedSentencesRef
+          // );
+        });
+    });
+    it.only("#pal07-01a GET 200 YES: RSWAT for First Conditional ENG->POL.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "first conditional 106a",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          // const translatedSentencesRef = {
+          //   current: {
+          //     "POL->ENG": [
+          //       {
+          //         POL: "Kobieta czyta.",
+          //         ENG: ["The woman reads.", "The woman is reading."],
+          //       },
+          //       {
+          //         POL: "Kobiety czytają.",
+          //         ENG: ["The women read.", "The women are reading."],
+          //       },
+          //       {
+          //         POL: "Chłopiec czyta.",
+          //         ENG: ["The boy reads.", "The boy is reading."],
+          //       },
+          //       {
+          //         POL: "Chłopcy czytają.",
+          //         ENG: ["The boys read.", "The boys are reading."],
+          //       },
+          //     ],
+          //   },
+          // };
+
+          // checkSentenceTranslations(
+          //   res,
+          //   questionLanguage,
+          //   answerLanguage,
+          //   "current",
+          //   [
+          //     "Kobieta czyta.",
+          //     "Kobiety czytają.",
+          //     "Chłopiec czyta.",
+          //     "Chłopcy czytają.",
+          //   ],
+          //   translatedSentencesRef
+          // );
+        });
+    });
+  });
+
   describe("/palette - Stage 6: Returning Polish with English translations of rich sentences (with nouns adjectives and verbs).", () => {
     it("#pal06-01a GET 200 YES: Returns sentence with all translations (RSWAT).", () => {
       const questionLanguage = "POL";

@@ -60,24 +60,26 @@ exports.adjustTenseDescriptions = (structureChunk) => {
 
       const conditionalsRef = {
         cond0: {
-          condition: { tenseDesc: ["future pf"] },
-          outcome: { tenseDesc: ["future pf"] },
+          condition: ["future pf"],
+          outcome: ["future pf"],
         },
         cond1: {
-          condition: { tenseDesc: ["future im", "future pf"] },
-          outcome: { tenseDesc: ["future pf"] },
+          condition: ["future im", "future pf"],
+          outcome: ["future pf"],
         },
         cond2: {
           //gdyby* + past im*, cond pf/im
-          condition: { tenseDesc: [] },
-          outcome: { tenseDesc: [] },
+          condition: [],
+          outcome: [],
         },
         cond3: {
           //gdyby* + past im*, cond pf/im
-          condition: { tenseDesc: [] },
-          outcome: { tenseDesc: [] },
+          condition: [],
+          outcome: [],
         },
       };
+
+      console.log("qq", { key, clause });
 
       tenseDescArr = conditionalsRef[key][clause].slice(0);
     }
