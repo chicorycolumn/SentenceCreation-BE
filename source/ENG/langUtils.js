@@ -73,6 +73,8 @@ exports.addSpecialVerbConjugations = (lemmaObject, currentLanguage) => {
 };
 
 exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
+  let resArr = [];
+
   if (
     structureChunk.wordtype === "verb" &&
     structureChunk.form.includes("verbal")
@@ -90,8 +92,6 @@ exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
     //specifically this is lObj `be` which has different 1per singular and 2per singular forms in present and past.
 
     let { infinitive, v2, v3, thirdPS, gerund } = lObj.inflections;
-
-    let resArr = [];
     let tenseDescriptionArrCopy = structureChunk.tenseDescription.slice(0);
 
     Object.keys(inflectorRef).forEach((key) => {
@@ -217,28 +217,46 @@ exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
     structureChunk.person.forEach((person) => {
       structureChunk.number.forEach((number) => {
         tenseDescriptionArr.forEach((selectedTenseDescription) => {
-          let data = {
-            person,
-            number,
-            selectedTenseDescription,
-          };
-
           if (
-            [
-              "present simple",
-              "cond0 condition 3PS",
-              "cond0 outcome 3PS",
-            ].includes(selectedTenseDescription) &&
-            person === "3per" &&
-            number === "singular"
+            lObj.lemma === "be" &&
+            ["past simple", "present simple"].includes(selectedTenseDescription)
           ) {
-            fetchTenseDescription(
-              data,
-              structureChunk,
-              `${selectedTenseDescription} 3PS`
+            //Alphaman: Okay, 'be' is the only verb that is irregular in a way that doesn't fit into our system.
+            //Specifically, am/are and was/were.
+            //So just for this verb in ENG, we need to do all this getting differently.
+
+            let tense = selectedTenseDescription.split(" ")[0];
+            addToResArr(
+              "tenseDescription",
+              selectedTenseDescription,
+              [be[tense][person][number]],
+              structureChunk
             );
+            return;
           } else {
-            fetchTenseDescription(data, structureChunk);
+            let data = {
+              person,
+              number,
+              selectedTenseDescription,
+            };
+
+            if (
+              [
+                "present simple",
+                "cond0 condition 3PS",
+                "cond0 outcome 3PS",
+              ].includes(selectedTenseDescription) &&
+              person === "3per" &&
+              number === "singular"
+            ) {
+              fetchTenseDescription(
+                data,
+                structureChunk,
+                `${selectedTenseDescription} 3PS`
+              );
+            } else {
+              fetchTenseDescription(data, structureChunk);
+            }
           }
         });
       });

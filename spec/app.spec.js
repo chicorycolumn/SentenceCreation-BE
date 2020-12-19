@@ -187,8 +187,28 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe("/palette - Stage 7: Further linguistic features.", () => {
-    it("#pal07-01a GET 200 YES: Tantum plurale in POL is allowed to be sing or plur in ENG.", () => {
+  describe.only("/palette - Stage 7: Further linguistic features.", () => {
+    it("#pal07-01a GET 200 YES: Conjugate ENG be correctly.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage,
+          // answerLanguage,
+          sentenceFormulaSymbol: "dummy32",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          expect(["Am.", "Are.", "Is.", "Was.", "Were."]).to.include(
+            res.body.questionSentenceArr[0]
+          );
+        });
+    });
+    it("#pal07-02a GET 200 YES: Tantum plurale in POL is allowed to be sing or plur in ENG.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -202,45 +222,15 @@ describe("/api", () => {
         .expect(200)
         .then((res) => {
           console.log(res.body);
-          // const translatedSentencesRef = {
-          //   current: {
-          //     "POL->ENG": [
-          //       {
-          //         POL: "Kobieta czyta.",
-          //         ENG: ["The woman reads.", "The woman is reading."],
-          //       },
-          //       {
-          //         POL: "Kobiety czytają.",
-          //         ENG: ["The women read.", "The women are reading."],
-          //       },
-          //       {
-          //         POL: "Chłopiec czyta.",
-          //         ENG: ["The boy reads.", "The boy is reading."],
-          //       },
-          //       {
-          //         POL: "Chłopcy czytają.",
-          //         ENG: ["The boys read.", "The boys are reading."],
-          //       },
-          //     ],
-          //   },
-          // };
-
-          // checkSentenceTranslations(
-          //   res,
-          //   questionLanguage,
-          //   answerLanguage,
-          //   "current",
-          //   [
-          //     "Kobieta czyta.",
-          //     "Kobiety czytają.",
-          //     "Chłopiec czyta.",
-          //     "Chłopcy czytają.",
-          //   ],
-          //   translatedSentencesRef
-          // );
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+          expect(["Czerwone drzwi."]).to.include(questionSentenceArr[0]);
+          expect(answerSentenceArr).to.have.members([
+            "Red door.",
+            "Red doors.",
+          ]);
         });
     });
-    it("#pal07-01b GET 200 YES: RSWAT for ENG sing to POL tantum plurale.", () => {
+    it("#pal07-02b GET 200 YES: RSWAT for ENG sing to POL tantum plurale.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -254,45 +244,12 @@ describe("/api", () => {
         .expect(200)
         .then((res) => {
           console.log(res.body);
-          // const translatedSentencesRef = {
-          //   current: {
-          //     "POL->ENG": [
-          //       {
-          //         POL: "Kobieta czyta.",
-          //         ENG: ["The woman reads.", "The woman is reading."],
-          //       },
-          //       {
-          //         POL: "Kobiety czytają.",
-          //         ENG: ["The women read.", "The women are reading."],
-          //       },
-          //       {
-          //         POL: "Chłopiec czyta.",
-          //         ENG: ["The boy reads.", "The boy is reading."],
-          //       },
-          //       {
-          //         POL: "Chłopcy czytają.",
-          //         ENG: ["The boys read.", "The boys are reading."],
-          //       },
-          //     ],
-          //   },
-          // };
-
-          // checkSentenceTranslations(
-          //   res,
-          //   questionLanguage,
-          //   answerLanguage,
-          //   "current",
-          //   [
-          //     "Kobieta czyta.",
-          //     "Kobiety czytają.",
-          //     "Chłopiec czyta.",
-          //     "Chłopcy czytają.",
-          //   ],
-          //   translatedSentencesRef
-          // );
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+          expect(["Red door."]).to.include(questionSentenceArr[0]);
+          expect(answerSentenceArr).to.have.members(["Czerwone drzwi."]);
         });
     });
-    it("#pal07-01c GET 200 YES: RSWAT for ENG to POL tantum plurale.", () => {
+    it("#pal07-02c GET 200 YES: RSWAT for ENG to POL tantum plurale.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -306,45 +263,14 @@ describe("/api", () => {
         .expect(200)
         .then((res) => {
           console.log(res.body);
-          // const translatedSentencesRef = {
-          //   current: {
-          //     "POL->ENG": [
-          //       {
-          //         POL: "Kobieta czyta.",
-          //         ENG: ["The woman reads.", "The woman is reading."],
-          //       },
-          //       {
-          //         POL: "Kobiety czytają.",
-          //         ENG: ["The women read.", "The women are reading."],
-          //       },
-          //       {
-          //         POL: "Chłopiec czyta.",
-          //         ENG: ["The boy reads.", "The boy is reading."],
-          //       },
-          //       {
-          //         POL: "Chłopcy czytają.",
-          //         ENG: ["The boys read.", "The boys are reading."],
-          //       },
-          //     ],
-          //   },
-          // };
-
-          // checkSentenceTranslations(
-          //   res,
-          //   questionLanguage,
-          //   answerLanguage,
-          //   "current",
-          //   [
-          //     "Kobieta czyta.",
-          //     "Kobiety czytają.",
-          //     "Chłopiec czyta.",
-          //     "Chłopcy czytają.",
-          //   ],
-          //   translatedSentencesRef
-          // );
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+          expect(["Red door.", "Red doors."]).to.includes(
+            questionSentenceArr[0]
+          );
+          expect(answerSentenceArr).to.have.members(["Czerwone drzwi."]);
         });
     });
-    xit("#pal07-02a GET 200 YES: RSWAT for First Conditional POL->ENG.", () => {
+    xit("#pal07-03a GET 200 YES: RSWAT for First Conditional POL->ENG.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -396,7 +322,7 @@ describe("/api", () => {
           // );
         });
     });
-    xit("#pal07-02b GET 200 YES: RSWAT for First Conditional ENG->POL.", () => {
+    xit("#pal07-03b GET 200 YES: RSWAT for First Conditional ENG->POL.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
