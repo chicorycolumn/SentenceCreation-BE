@@ -8,28 +8,64 @@ const gpUtils = require("../utils/generalPurposeUtils.js");
 // const endpointsCopy = require("../endpoints.json");
 
 const generalTranslatedSentencesRef = {
-  //Each word, eg 'be' is a Hoban Washburne style reference object.
+  //This is a Washburne style reference object.
   be: {
     "POL->ENG": [
+      //
+      //POL: present im
+      // ENG: Present Simple
+      // ENG: Present Continuous
       { POL: "Jestem.", ENG: ["Am.", "Am being."] },
       { POL: "Jesteś.", ENG: ["Are.", "Are being."] },
       { POL: "Jest.", ENG: ["Is.", "Is being."] },
       { POL: "Jesteśmy.", ENG: ["Are.", "Are being."] },
       { POL: "Jesteście.", ENG: ["Are.", "Are being."] },
       { POL: "Są.", ENG: ["Are.", "Are being."] },
-      { POL: "Byłem.", ENG: ["Was.", "Was being."] },
-      { POL: "Byłam.", ENG: ["Was.", "Was being."] },
-      { POL: "Byłeś.", ENG: ["Were.", "Were being."] },
-      { POL: "Byłaś.", ENG: ["Were.", "Were being."] },
-      { POL: "Był.", ENG: ["Was.", "Was being."] },
-      { POL: "Była.", ENG: ["Was.", "Was being."] },
-      { POL: "Było.", ENG: ["Was.", "Was being."] },
-      { POL: "Byłyśmy.", ENG: ["Were.", "Were being."] },
-      { POL: "Byliśmy.", ENG: ["Were.", "Were being."] },
-      { POL: "Byłyście.", ENG: ["Were.", "Were being."] },
-      { POL: "Byliście.", ENG: ["Were.", "Were being."] },
-      { POL: "Były.", ENG: ["Were.", "Were being."] },
-      { POL: "Byli.", ENG: ["Were.", "Were being."] },
+      //
+      //POL: past im
+      // ENG: Past Continuous
+      // ENG: Present Perfect
+      //POL: past pf            (due to 'im only' conversion)
+      // ENG: Past Simple
+      // ENG: Past Perfect
+      // ENG: Present Perfect (duplicate)
+      { POL: "Byłem.", ENG: ["Was.", "Was being.", "Have been.", "Had been."] },
+      { POL: "Byłam.", ENG: ["Was.", "Was being.", "Have been.", "Had been."] },
+      {
+        POL: "Byłeś.",
+        ENG: ["Were.", "Were being.", "Have been.", "Had been."],
+      },
+      {
+        POL: "Byłaś.",
+        ENG: ["Were.", "Were being.", "Have been.", "Had been."],
+      },
+      { POL: "Był.", ENG: ["Was.", "Was being.", "Have been.", "Had been."] },
+      { POL: "Była.", ENG: ["Was.", "Was being.", "Have been.", "Had been."] },
+      { POL: "Było.", ENG: ["Was.", "Was being.", "Have been.", "Had been."] },
+      {
+        POL: "Byłyśmy.",
+        ENG: ["Were.", "Were being.", "Have been.", "Had been."],
+      },
+      {
+        POL: "Byliśmy.",
+        ENG: ["Were.", "Were being.", "Have been.", "Had been."],
+      },
+      {
+        POL: "Byłyście.",
+        ENG: ["Were.", "Were being.", "Have been.", "Had been."],
+      },
+      {
+        POL: "Byliście.",
+        ENG: ["Were.", "Were being.", "Have been.", "Had been."],
+      },
+      {
+        POL: "Były.",
+        ENG: ["Were.", "Were being.", "Have been.", "Had been."],
+      },
+      {
+        POL: "Byli.",
+        ENG: ["Were.", "Were being.", "Have been.", "Had been."],
+      },
     ],
   },
   write: {
@@ -266,7 +302,7 @@ describe("/api", () => {
           ]).to.include(res.body.questionSentenceArr[0]);
         });
     });
-    it("#pal07-01d-specific GET 200 YES: RSWAT POL to ENG 'be' correctly.", () => {
+    it.only("#pal07-01d GET 200 YES: RSWAT POL to ENG 'be' correctly.", () => {
       //Alphaman: The issue here is that normally, ENG past simple gets translated to POL past pf.
       //But the verb być doesn't have a pf form, only im.
       //So in this case, ENG past simple should be translated to POL past >>im<< when dealing with
@@ -277,7 +313,7 @@ describe("/api", () => {
       //then allow for ENG past simple to be translated by POL past im
       //Or... maybe actually just if it's deliberately marked on this lObj that it is im only?
 
-      //I have resolved the above by making a duplicate lobj for im-onlys and making it perfective.
+      //I have resolved the above by making a duplicate lobj for 'im only's and making it perfective.
 
       //The issue I am on now, is that, here ENG to POL, the english be lobj is not being updated
       // with the person and number choices.
@@ -306,9 +342,11 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal07-01d GET 200 YES: RSWAT ENG to POL 'be' correctly.", () => {
+    it("#pal07-01e GET 200 YES: RSWAT ENG to POL 'be' correctly.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
+
+      // gpUtils.consoleLogObjectAtTwoLevels(generalTranslatedSentencesRef);
 
       return request(app)
         .get("/api/palette")
@@ -331,7 +369,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal07-01e GET 200 YES: RSWAT POL to ENG 'be' correctly.", () => {
+    it("#pal07-01f GET 200 YES: RSWAT POL to ENG 'be' correctly.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 

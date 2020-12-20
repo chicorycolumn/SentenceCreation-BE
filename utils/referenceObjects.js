@@ -81,6 +81,7 @@ exports.adhocInflectors = {
 };
 
 exports.tenseDescriptionTranslation = {
+  //Note, this is NOT a Washburne style reference object. And that's okay.
   ENG: {
     POL: {
       "past simple": { regular: ["past pf"] },

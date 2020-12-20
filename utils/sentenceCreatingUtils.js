@@ -565,10 +565,12 @@ exports.conformAnswerStructureToQuestionStructure = (
     });
 
     if (!answerStructureChunk) {
+      console.log("Ah shucks");
       return;
     }
 
     if (questionStructureChunk.wordtype === "fixed") {
+      console.log("Ah never mind");
       return;
     }
 
@@ -582,7 +584,10 @@ exports.conformAnswerStructureToQuestionStructure = (
     //   questionSelectedLemmaObject.lemma
     // );
 
-    let lemmasToSearch = questionSelectedLemmaObject.translations.ENG;
+    let lemmasToSearch =
+      questionSelectedLemmaObject.translations[answerLanguage];
+
+    // console.log("qqq matchingAnswerLemmaObjects", matchingAnswerLemmaObjects);
 
     // console.log(
     //   "Going to search for all ENG lobjs with these lemmas:",
@@ -590,11 +595,13 @@ exports.conformAnswerStructureToQuestionStructure = (
     // );
 
     let source = words[gpUtils.giveSetKey(answerStructureChunk.wordtype)];
+    lfUtils.adjustImOnlyLemmaObjects(source);
 
     let matchingAnswerLemmaObjects = source.filter((lObj) => {
       return lemmasToSearch.includes(lObj.lemma);
     });
 
+    //Should this really be for every single tags to match, otherwise it won't match them?
     matchingAnswerLemmaObjects = matchingAnswerLemmaObjects.filter(
       (answerLemmaObject) => {
         return gpUtils.areTwoFlatArraysEqual(
@@ -606,6 +613,11 @@ exports.conformAnswerStructureToQuestionStructure = (
 
     answerStructureChunk.specificIds = matchingAnswerLemmaObjects.map(
       (lObj) => lObj.id
+    );
+
+    console.log(
+      "qqq answerStructureChunk.specificIds",
+      answerStructureChunk.specificIds
     );
 
     // console.log("I found these matches:", answerStructureChunk.specificIds);
@@ -621,12 +633,18 @@ exports.conformAnswerStructureToQuestionStructure = (
       }
 
       if (inflectorKey === "number") {
+        console.log(
+          "questionSelectedLemmaObject.tantumPlurale",
+          questionSelectedLemmaObject.tantumPlurale
+        );
+        console.log("matchingAnswerLemmaObjects", matchingAnswerLemmaObjects);
         if (
           questionSelectedLemmaObject.tantumPlurale ||
           matchingAnswerLemmaObjects.every(
             (answerLemmaObject) => answerLemmaObject.tantumPlurale
           )
         ) {
+          console.log("I'm having a tantum!");
           return;
         }
       }

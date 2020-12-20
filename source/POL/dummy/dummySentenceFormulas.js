@@ -790,6 +790,23 @@ exports.dummySentenceFormulasBank = {
     ],
     primaryOrders: [],
   },
+  dummy33a: {
+    sentenceFormulaSymbol: "dummy33a",
+    sentenceFormulaId: "POL-dummy33a",
+    translations: { ENG: ["ENG-dummy33a"] },
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        specificLemmas: ["być"],
+        tenseDescription: ["present im"],
+        person: ["1per"],
+        number: [],
+        gender: [],
+      },
+    ],
+    primaryOrders: [],
+  },
   dummy34: {
     sentenceFormulaSymbol: "dummy34",
     sentenceFormulaId: "POL-dummy34",

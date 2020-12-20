@@ -28,6 +28,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
   //STEP TWO: Filter lemmaObjects by specificIds OR specificLemmas OR andTags and selectors.
   let source = words[gpUtils.giveSetKey(structureChunk.wordtype)];
+  lfUtils.adjustImOnlyLemmaObjects(source);
   let matches = [];
 
   if (structureChunk.specificIds && structureChunk.specificIds.length) {
@@ -289,6 +290,9 @@ exports.findMatchingLemmaObjectThenWord = (
         });
       });
     } else {
+      console.log("If-PW point 1, matches:", matchesCopy);
+      console.log("If-PW point 1, structureChunk:", structureChunk);
+
       let selectedLemmaObject = gpUtils.selectRandom(matchesCopy);
 
       let subArrayOfOutputUnits = lfUtils.filterWithinSelectedLemmaObject(
@@ -296,6 +300,11 @@ exports.findMatchingLemmaObjectThenWord = (
         structureChunk,
         currentLanguage,
         kumquat
+      );
+
+      console.log(
+        "If-PW point 2, subArrayOfOutputUnits:",
+        subArrayOfOutputUnits
       );
 
       if (!subArrayOfOutputUnits || !subArrayOfOutputUnits.length) {

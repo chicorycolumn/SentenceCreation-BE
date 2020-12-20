@@ -507,7 +507,7 @@ let adjectiveSet = [
 let verbSet = [
   {
     //links
-    translations: { ENG: ["be"] },
+    translations: { ENG: ["be"], POL: ["być"] },
     tags: ["basic", "identity"],
     //selectors
     lemma: "być",

@@ -351,6 +351,11 @@ exports.adjustImOnlyLemmaObjects = (matches) => {
       );
       let adjustedLemmaObject = gpUtils.copyWithoutReference(lObj);
       adjustedLemmaObject.aspect = "perfective";
+
+      let newIdArr = lObj.id.split("-");
+      newIdArr[3] = "pf";
+      adjustedLemmaObject.id = newIdArr.join("-");
+
       matches.push(adjustedLemmaObject);
       delete lObj["im only"];
       // matches = matches.filter((lemmaObject) => !lemmaObject.id === id);

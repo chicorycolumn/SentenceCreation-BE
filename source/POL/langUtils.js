@@ -26,7 +26,15 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
     ) {
       if (!structureChunk.gender || !structureChunk.gender.length) {
         //Fill out if blank.
-        structureChunk.gender = ["m1", "m2", "m3", "f", "n"];
+        structureChunk.gender = [
+          "m1",
+          "m2",
+          "m3",
+          "f",
+          "n",
+          "virile",
+          "nonvirile",
+        ];
       } else {
         //Masculinist agenda
         let adjustedGenderArray = [];
