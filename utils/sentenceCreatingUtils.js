@@ -87,20 +87,22 @@ exports.processSentenceFormula = (
   let sentenceStructure = sentenceFormula.structure;
 
   if (kumquat) {
-    console.log(
-      "|",
-      ">>>>>>>>>>>>>>>>>>>>>>>>>>sentenceStructure BEFORE QA conform",
-      sentenceStructure
-    );
+    if (true) {
+      console.log(
+        "|",
+        ">>>>>>>>>>>>>>>>>>>>>>>>>>sentenceStructure BEFORE QA conform",
+        sentenceStructure
+      );
 
-    console.log(
-      ">>>>>>>>>>>>>>>>>>>>ttt questionOutputArr.length",
-      questionOutputArr.length
-    );
-    console.log(
-      ">>>>>>>>>>>>>>>>>>>>ttt questionOutputArr[0]",
-      questionOutputArr[0]
-    );
+      console.log(
+        ">>>>>>>>>>>>>>>>>>>>ttt questionOutputArr.length",
+        questionOutputArr.length
+      );
+      console.log(
+        ">>>>>>>>>>>>>>>>>>>>ttt questionOutputArr[0]",
+        questionOutputArr[0]
+      );
+    }
 
     exports.conformAnswerStructureToQuestionStructure(
       sentenceStructure,
@@ -615,11 +617,6 @@ exports.conformAnswerStructureToQuestionStructure = (
       (lObj) => lObj.id
     );
 
-    console.log(
-      "qqq answerStructureChunk.specificIds",
-      answerStructureChunk.specificIds
-    );
-
     // console.log("I found these matches:", answerStructureChunk.specificIds);
     // console.log("answerStructureChunk", answerStructureChunk);
 
@@ -633,11 +630,6 @@ exports.conformAnswerStructureToQuestionStructure = (
       }
 
       if (inflectorKey === "number") {
-        console.log(
-          "questionSelectedLemmaObject.tantumPlurale",
-          questionSelectedLemmaObject.tantumPlurale
-        );
-        console.log("matchingAnswerLemmaObjects", matchingAnswerLemmaObjects);
         if (
           questionSelectedLemmaObject.tantumPlurale ||
           matchingAnswerLemmaObjects.every(

@@ -153,6 +153,10 @@ exports.findMatchingLemmaObjectThenWord = (
                     structureChunk
                   );
 
+                  //Betaman say Hold on. Why are we updating the Form feature on the structureChunk?
+                  //That would be eg "verbal", "simple", stuff like that.
+                  //But I think we actually want to update, like, whatever the uninflected form choice is, you know,
+                  //like, the tense or inflection chain or tenseDescrip.
                   structureChunkUpdatedByAdhocOrUninflected.form = [
                     selectedUninflectedForm,
                   ];

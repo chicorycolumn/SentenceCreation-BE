@@ -211,7 +211,7 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe.only("/palette - Stage 7: Further linguistic features.", () => {
+  xdescribe("/palette - Stage 7: Further linguistic features.", () => {
     it("#pal07-01a GET 200 YES: Conjugate ENG be correctly.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -302,7 +302,7 @@ describe("/api", () => {
           ]).to.include(res.body.questionSentenceArr[0]);
         });
     });
-    it.only("#pal07-01d GET 200 YES: RSWAT POL to ENG 'be' correctly.", () => {
+    it("#pal07-01d GET 200 YES: RSWAT POL to ENG 'be' correctly. HOMOGRAPH ISSUE.", () => {
       //Alphaman: The issue here is that normally, ENG past simple gets translated to POL past pf.
       //But the verb być doesn't have a pf form, only im.
       //So in this case, ENG past simple should be translated to POL past >>im<< when dealing with
@@ -327,7 +327,7 @@ describe("/api", () => {
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy33",
+          sentenceFormulaSymbol: "dummy33a",
         })
         .expect(200)
         .then((res) => {
