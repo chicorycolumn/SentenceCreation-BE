@@ -2,12 +2,13 @@ const app = require("../app");
 const request = require("supertest");
 const chai = require("chai");
 const { expect } = require("chai");
-const { selectRandom } = require("../utils/generalPurposeUtils");
+const gpUtils = require("../utils/generalPurposeUtils.js");
 // chai.use(require("sams-chai-sorted"));
 // const { myErrMsgs } = require("../errors/errors");
 // const endpointsCopy = require("../endpoints.json");
 
 const generalTranslatedSentencesRef = {
+  //Each word, eg 'be' is a Hoban Washburne style reference object.
   be: {
     "POL->ENG": [
       { POL: "Jestem.", ENG: ["Am.", "Am being."] },
@@ -29,48 +30,6 @@ const generalTranslatedSentencesRef = {
       { POL: "Byliście.", ENG: ["Were.", "Were being."] },
       { POL: "Były.", ENG: ["Were.", "Were being."] },
       { POL: "Byli.", ENG: ["Were.", "Were being."] },
-    ],
-    "ENG->POL": [
-      { ENG: "Am.", POL: ["Jestem."] },
-      { ENG: "Am being.", POL: ["Jestem."] },
-      { ENG: "Are.", POL: ["Jesteś.", "Jesteśmy.", "Jesteście.", "Są."] },
-      { ENG: "Are being.", POL: ["Jesteś.", "Jesteśmy.", "Jesteście.", "Są."] },
-      { ENG: "Is.", POL: ["Jest."] },
-      { ENG: "Is being.", POL: ["Jest."] },
-      {
-        ENG: "Was.",
-        POL: ["Byłem.", "Byłam.", "Był.", "Była.", "Było."],
-      },
-      {
-        ENG: "Was being.",
-        POL: ["Byłem.", "Byłam.", "Był.", "Była.", "Było."],
-      },
-      {
-        ENG: "Were.",
-        POL: [
-          "Byłeś.",
-          "Byłaś.",
-          "Byłyśmy.",
-          "Byliśmy.",
-          "Byłyście.",
-          "Byliście.",
-          "Były.",
-          "Byli.",
-        ],
-      },
-      {
-        ENG: "Were being.",
-        POL: [
-          "Byłeś.",
-          "Byłaś.",
-          "Byłyśmy.",
-          "Byliśmy.",
-          "Byłyście.",
-          "Byliście.",
-          "Były.",
-          "Byli.",
-        ],
-      },
     ],
   },
   write: {
@@ -107,28 +66,6 @@ const generalTranslatedSentencesRef = {
       {
         POL: "Będę pisać.",
         ENG: ["I will be writing.", "I am going to be writing."],
-      },
-    ],
-    "ENG->POL": [
-      {
-        ENG: "I have written.",
-        POL: ["Napisałem.", "Pisałem.", "Napisałam.", "Pisałam."],
-      },
-      { ENG: "I wrote.", POL: ["Napisałem.", "Napisałam."] },
-      { ENG: "I had written.", POL: ["Napisałem.", "Napisałam."] },
-      { ENG: "I was writing.", POL: ["Pisałem.", "Pisałam."] },
-      { ENG: "I am writing.", POL: ["Piszę."] },
-      { ENG: "I write.", POL: ["Piszę."] },
-      { ENG: "I will write.", POL: ["Napiszę."] },
-      { ENG: "I am going to write.", POL: ["Napiszę."] },
-      { ENG: "I will have written.", POL: ["Napiszę."] },
-      {
-        ENG: "I will be writing.",
-        POL: ["Będę pisał.", "Będę pisała.", "Będę pisać."],
-      },
-      {
-        ENG: "I am going to be writing.",
-        POL: ["Będę pisał.", "Będę pisała.", "Będę pisać."],
       },
     ],
   },
@@ -168,30 +105,16 @@ const generalTranslatedSentencesRef = {
         ENG: ["I will be reading.", "I am going to be reading."],
       },
     ],
-    "ENG->POL": [
-      {
-        ENG: "I have read.",
-        POL: ["Przeczytałem.", "Czytałem.", "Przeczytałam.", "Czytałam."],
-      },
-      { ENG: "I wrote.", POL: ["Przeczytałem.", "Przeczytałam."] },
-      { ENG: "I had read.", POL: ["Przeczytałem.", "Przeczytałam."] },
-      { ENG: "I was reading.", POL: ["Czytałem.", "Czytałam."] },
-      { ENG: "I am reading.", POL: ["Czytam."] },
-      { ENG: "I read.", POL: ["Czytam."] },
-      { ENG: "I will read.", POL: ["Przeczytam."] },
-      { ENG: "I am going to read.", POL: ["Przeczytam."] },
-      { ENG: "I will have read.", POL: ["Przeczytam."] },
-      {
-        ENG: "I will be reading.",
-        POL: ["Będę czytał.", "Będę czytała.", "Będę czytać."],
-      },
-      {
-        ENG: "I am going to be reading.",
-        POL: ["Będę czytał.", "Będę czytała.", "Będę czytać."],
-      },
-    ],
   },
 };
+
+gpUtils.fillOutWashburneRefObj(
+  generalTranslatedSentencesRef,
+  "POL->ENG",
+  "ENG->POL",
+  "POL",
+  "ENG"
+);
 
 function checkSentenceTranslations(
   res,
@@ -343,7 +266,7 @@ describe("/api", () => {
           ]).to.include(res.body.questionSentenceArr[0]);
         });
     });
-    it.only("#pal07-01d GET 200 YES: RSWAT ENG to POL 'be' correctly.", () => {
+    it("#pal07-01d-specific GET 200 YES: RSWAT POL to ENG 'be' correctly.", () => {
       //Alphaman: The issue here is that normally, ENG past simple gets translated to POL past pf.
       //But the verb być doesn't have a pf form, only im.
       //So in this case, ENG past simple should be translated to POL past >>im<< when dealing with
@@ -359,6 +282,31 @@ describe("/api", () => {
       //The issue I am on now, is that, here ENG to POL, the english be lobj is not being updated
       // with the person and number choices.
 
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be",
+            []
+          );
+        });
+    });
+    it("#pal07-01d GET 200 YES: RSWAT ENG to POL 'be' correctly.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 

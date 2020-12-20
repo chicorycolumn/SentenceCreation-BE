@@ -568,7 +568,6 @@ let verbSet = [
               m2: "jestem",
               m3: "jestem",
               f: "jestem",
-              n: "jestem",
             },
             plural: {
               virile: "jesteśmy",
@@ -581,7 +580,6 @@ let verbSet = [
               m2: "jesteś",
               m3: "jesteś",
               f: "jesteś",
-              n: "jesteś",
             },
             plural: {
               virile: "jesteście",

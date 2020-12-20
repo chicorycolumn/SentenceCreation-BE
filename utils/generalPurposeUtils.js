@@ -219,3 +219,105 @@ exports.combineAndExplodeTwoSuperArrays = (superArr1, superArr2) => {
 
   return grandResult;
 };
+
+exports.fillOutWashburneRefObj = (
+  refObj,
+  sourceKey,
+  targetKey,
+  subSourceKey,
+  subTargetKey
+) => {
+  // //This is one half of what a Washburne reference object looks like.
+  // //You only need to type one half of it (here that's POL->ENG).
+
+  // let egWashburneRefObj = {
+  //   stuff: {
+  //     "POL->ENG": [
+  //       { POL: "Apple.", ENG: ["Red.", "Fruit."] },
+  //       { POL: "Lemon.", ENG: ["Yellow.", "Fruit."] },
+  //       { POL: "Postbox.", ENG: ["Red.", "Metal."] },
+  //       { POL: "Goldmedal.", ENG: ["Yellow.", "Metal."] },
+  //     ],
+  //   },
+  // };
+
+  // //This fxn fills out the counterpart ENG->POL.
+
+  // fillOutWashburneRefObj(
+  //   egWashburneRefObj,
+  //   "POL->ENG",
+  //   "ENG->POL",
+  //   "POL",
+  //   "ENG"
+  // );
+
+  // //The result is this:
+
+  // egWashburneRefObj = {
+  //   stuff: {
+  //     "POL->ENG": [
+  //       { POL: "Apple.", ENG: ["Red.", "Fruit."] },
+  //       { POL: "Lemon.", ENG: ["Yellow.", "Fruit."] },
+  //       { POL: "Postbox.", ENG: ["Red.", "Metal."] },
+  //       { POL: "Goldmedal.", ENG: ["Yellow.", "Metal."] },
+  //     ],
+  //     "ENG->POL": [
+  //       { ENG: "Red.", POL: ["Apple.", "Postbox."] },
+  //       { ENG: "Fruit.", POL: ["Apple.", "Lemon."] },
+  //       { ENG: "Yellow.", POL: ["Lemon.", "Goldmedal."] },
+  //       { ENG: "Metal.", POL: ["Postbox.", "Goldmedal."] },
+  //     ],
+  //   },
+  // };
+
+  let allLemmas = Object.keys(refObj);
+  console.log(
+    "Will fill out the counterpart in this Washburne reference object, for these words:",
+    allLemmas
+  );
+
+  allLemmas.forEach((lemma) => {
+    let lemmaRefObj = refObj[lemma];
+
+    lemmaRefObj[targetKey] = [];
+
+    lemmaRefObj[sourceKey].forEach((subObj) => {
+      subObj[subTargetKey].forEach((targetValue) => {
+        let existingSubObj = lemmaRefObj[targetKey].find((subObj2) => {
+          return subObj2[subTargetKey] === targetValue;
+        });
+        if (existingSubObj) {
+          existingSubObj[subSourceKey].push(subObj[subSourceKey]);
+        } else {
+          let newSubObj = {};
+          newSubObj[subTargetKey] = targetValue;
+          newSubObj[subSourceKey] = [subObj[subSourceKey]];
+          lemmaRefObj[targetKey].push(newSubObj);
+        }
+      });
+    });
+  });
+};
+
+exports.consoleLogObjectAtOneLevel = (obj) => {
+  Object.keys(consoleLogObjectAtOneLevel).forEach((key) => {
+    let value = obj[key];
+    console.log("~~~~~~~~~~~>KEY");
+    console.log(key);
+    console.log("~~~~~~~~~~~>VALUE");
+    console.log(value);
+  });
+};
+
+exports.consoleLogObjectAtTwoLevels = (obj) => {
+  Object.keys(obj).forEach((key) => {
+    let value = obj[key];
+    Object.keys(value).forEach((key2) => {
+      let value2 = value[key2];
+      console.log("~~~~~~~~~~~>KEY");
+      console.log(key2);
+      console.log("~~~~~~~~~~~>VALUE");
+      console.log(value2);
+    });
+  });
+};

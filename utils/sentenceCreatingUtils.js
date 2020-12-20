@@ -86,13 +86,22 @@ exports.processSentenceFormula = (
 
   let sentenceStructure = sentenceFormula.structure;
 
-  console.log(
-    "|",
-    ">>>>>>>>>>>>>>>>>>>>>>>>>>sentenceStructure BEFORE QA conform",
-    sentenceStructure
-  );
-
   if (kumquat) {
+    console.log(
+      "|",
+      ">>>>>>>>>>>>>>>>>>>>>>>>>>sentenceStructure BEFORE QA conform",
+      sentenceStructure
+    );
+
+    console.log(
+      ">>>>>>>>>>>>>>>>>>>>ttt questionOutputArr.length",
+      questionOutputArr.length
+    );
+    console.log(
+      ">>>>>>>>>>>>>>>>>>>>ttt questionOutputArr[0]",
+      questionOutputArr[0]
+    );
+
     exports.conformAnswerStructureToQuestionStructure(
       sentenceStructure,
       questionOutputArr,
