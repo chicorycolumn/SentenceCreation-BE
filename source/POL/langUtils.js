@@ -135,7 +135,8 @@ exports.fillVerbInflections = (lemmaObject) => {
   let { past } = inflections.verbal;
   let { infinitive } = inflections;
 
-  //So in general, if the key is filled out already, don't do anything. And if the key holds value false, don't do anything.
+  //So in general, do nothing if the key is filled out already or holds value false.
+  //Only fill it out if the key is present and holds value true.
 
   if (aspect === "imperfective" || lemmaObject["im only"]) {
     if (isAvailable(inflections.verbal.future)) {
@@ -237,7 +238,6 @@ exports.fillVerbInflections = (lemmaObject) => {
       };
     }
   } else if (aspect === "perfective") {
-    console.log("ddd", inflections.verbal);
     if (isAvailable(inflections.verbal.future.impersonal.singular)) {
       inflections.verbal.future.impersonal.singular = {
         allSingularGenders:

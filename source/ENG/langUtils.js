@@ -55,7 +55,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {};
 
 exports.preprocessLemmaObjects = (matches, structureChunk) => {};
 
-exports.addSpecialVerbConjugations = (lemmaObject, currentLanguage) => {
+exports.addSpecialVerbForms = (lemmaObject, currentLanguage) => {
   let { infinitive, v2, v3, thirdPS, gerund } = lemmaObject.inflections;
 
   const participlesRef = {
@@ -72,10 +72,31 @@ exports.addSpecialVerbConjugations = (lemmaObject, currentLanguage) => {
   });
 };
 
-exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
+exports.generateAdhocForms = (
+  adhocInflectorKey,
+  structureChunk,
+  lObj,
+  currentLanguage
+) => {
   let resArr = [];
 
+  if (adhocInflectorKey === "form") {
+    exports.addSpecialVerbForms(lObj, currentLanguage);
+
+    structureChunk.form.forEach((selectedForm) => {
+      addToResArr(
+        "form",
+        selectedForm,
+        [lObj.inflections[selectedForm]],
+        structureChunk
+      );
+    });
+
+    return resArr;
+  }
+
   if (
+    adhocInflectorKey === "tenseDescription" &&
     structureChunk.wordtype === "verb" &&
     structureChunk.form.includes("verbal")
   ) {
@@ -83,11 +104,10 @@ exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
       !structureChunk.tenseDescription ||
       !structureChunk.tenseDescription.length
     ) {
-      return;
+      throw "This shouldn't have happened.";
     }
 
     let { infinitive, v2, v3, thirdPS, gerund } = lObj.inflections;
-    let tenseDescriptionArrCopy = structureChunk.tenseDescription.slice(0);
 
     Object.keys(inflectorRef).forEach((key) => {
       let value = inflectorRef[key];
@@ -97,7 +117,7 @@ exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
     });
 
     let tenseDescriptionArr = [];
-    tenseDescriptionArrCopy.forEach((selectedTenseDescription) => {
+    structureChunk.tenseDescription.forEach((selectedTenseDescription) => {
       if (selectedTenseDescription === "present") {
         tenseDescriptionArr.push("present simple");
         tenseDescriptionArr.push("present continuous");
@@ -191,14 +211,14 @@ exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
       Object.keys(subsequentKeysRef).forEach((key) => {
         let resultKeysArray = subsequentKeysRef[key];
 
-        let resArr = [];
+        let valuesArr = [];
         resultKeysArray.forEach((resultKey) => {
           engTenseDescriptionRef[resultKey].forEach((result) => {
-            resArr.push(result);
+            valuesArr.push(result);
           });
         });
 
-        engTenseDescriptionRef[key] = resArr;
+        engTenseDescriptionRef[key] = valuesArr;
       });
 
       addToResArr(
@@ -236,11 +256,9 @@ exports.generateAdhocForms = (structureChunk, lObj, currentLanguage) => {
             };
 
             if (
-              [
-                "present simple",
-                "cond0 condition 3PS",
-                "cond0 outcome 3PS",
-              ].includes(selectedTenseDescription) &&
+              ["present simple", "cond0 condition", "cond0 outcome"].includes(
+                selectedTenseDescription
+              ) &&
               person === "3per" &&
               number === "singular"
             ) {

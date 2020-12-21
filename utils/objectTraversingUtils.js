@@ -63,8 +63,66 @@ exports.findMatchingLemmaObjectThenWord = (
   //STEP THREE: Return result array immediately if uninflected or ad hoc.
 
   let adhocInflectorRef = refObj.adhocInflectors[currentLanguage];
+  let adhocFormRef = refObj.adhocForms[currentLanguage];
 
-  //THREE (A): Ad-PW: Pathway for Ad hoc forms.
+  //THREE (A): Ad-PW: Pathway for Ad hoc Forms and Inflections.
+
+  //(3A-1): Pathway for Ad hoc Forms.
+  if (
+    structureChunk.form &&
+    structureChunk.form.length &&
+    Object.keys(adhocFormRef).includes(structureChunk.wordtype) &&
+    structureChunk.form.some((selectedForm) => {
+      return adhocFormRef[structureChunk.wordtype].includes(selectedForm);
+    })
+  ) {
+    if (kumquat) {
+      matches.forEach((selectedLemmaObject) => {
+        let adhocArr = langUtils.generateAdhocForms(
+          "form",
+          gpUtils.copyWithoutReference(structureChunk),
+          selectedLemmaObject,
+          currentLanguage
+        );
+
+        adhocArr.forEach((adhocResultObj) => {
+          let { selectedWordArr, structureChunkUpdated } = adhocResultObj;
+
+          selectedFormsArray.push({
+            selectedWordArr,
+            selectedLemmaObject,
+            structureChunkUpdatedByAdhocOrUninflected: structureChunkUpdated,
+          });
+        });
+      });
+    } else {
+      let selectedLemmaObject = gpUtils.selectRandom(matches);
+
+      let adhocArr = langUtils.generateAdhocForms(
+        "form",
+        gpUtils.copyWithoutReference(structureChunk),
+        selectedLemmaObject,
+        currentLanguage
+      );
+
+      if (!adhocArr || !adhocArr.length) {
+        throw "No members were found in the adhocArr from OT:findMatching, path 3A-1 (ie form).";
+      }
+
+      let selectedAdhocResultObj = gpUtils.selectRandom(adhocArr);
+
+      let { selectedWordArr, structureChunkUpdated } = selectedAdhocResultObj;
+
+      selectedFormsArray.push({
+        selectedWordArr,
+        selectedLemmaObject,
+        structureChunkUpdatedByAdhocOrUninflected: structureChunkUpdated,
+      });
+    }
+    // });
+  }
+
+  //(3A-2): Pathway for Ad hoc Inflections.
   if (Object.keys(adhocInflectorRef).includes(structureChunk.wordtype)) {
     let adhocInflectorKeys = adhocInflectorRef[structureChunk.wordtype];
 
@@ -77,6 +135,7 @@ exports.findMatchingLemmaObjectThenWord = (
         if (kumquat) {
           matches.forEach((selectedLemmaObject) => {
             let adhocArr = langUtils.generateAdhocForms(
+              adhocInflectorKey,
               gpUtils.copyWithoutReference(structureChunk),
               selectedLemmaObject,
               currentLanguage
@@ -96,10 +155,15 @@ exports.findMatchingLemmaObjectThenWord = (
           let selectedLemmaObject = gpUtils.selectRandom(matches);
 
           let adhocArr = langUtils.generateAdhocForms(
+            adhocInflectorKey,
             gpUtils.copyWithoutReference(structureChunk),
             selectedLemmaObject,
             currentLanguage
           );
+
+          if (!adhocArr || !adhocArr.length) {
+            throw "No members were found in the adhocArr from OT:findMatching, path 3A-2 (ie tenseDecription).";
+          }
 
           let selectedAdhocResultObj = gpUtils.selectRandom(adhocArr);
 
@@ -119,6 +183,9 @@ exports.findMatchingLemmaObjectThenWord = (
   }
 
   //THREE (B): Un-PW: Pathway for Uninflected forms.
+  //Note, this indeed is specifically uninflected FORMS.
+  //So, activeAdjectival, anteriorAdverbial, those kinds of things, that are indeed labeled with the Form key.
+  //Remember, within eg a verb lobj, available Forms are infinitive, verbal, activeAdjectival, anterior...
   if (structureChunk.form && structureChunk.form.length) {
     Object.keys(refObj.uninflectedForms[currentLanguage]).forEach(
       (wordtype) => {
@@ -153,10 +220,7 @@ exports.findMatchingLemmaObjectThenWord = (
                     structureChunk
                   );
 
-                  //Betaman say Hold on. Why are we updating the Form feature on the structureChunk?
-                  //That would be eg "verbal", "simple", stuff like that.
-                  //But I think we actually want to update, like, whatever the uninflected form choice is, you know,
-                  //like, the tense or inflection chain or tenseDescrip.
+                  console.log("ddd", structureChunkUpdatedByAdhocOrUninflected);
                   structureChunkUpdatedByAdhocOrUninflected.form = [
                     selectedUninflectedForm,
                   ];
@@ -258,6 +322,7 @@ exports.findMatchingLemmaObjectThenWord = (
     if (!matchesCopy.length) {
       // errorInSentenceCreation.errorMessage =
       //   "No matching lemma objects were found.";
+      console.log("Ah bonsai.");
       return false;
     }
 
@@ -294,9 +359,6 @@ exports.findMatchingLemmaObjectThenWord = (
         });
       });
     } else {
-      console.log("If-PW point 1, matches:", matchesCopy);
-      console.log("If-PW point 1, structureChunk:", structureChunk);
-
       let selectedLemmaObject = gpUtils.selectRandom(matchesCopy);
 
       let subArrayOfOutputUnits = lfUtils.filterWithinSelectedLemmaObject(
@@ -304,11 +366,6 @@ exports.findMatchingLemmaObjectThenWord = (
         structureChunk,
         currentLanguage,
         kumquat
-      );
-
-      console.log(
-        "If-PW point 2, subArrayOfOutputUnits:",
-        subArrayOfOutputUnits
       );
 
       if (!subArrayOfOutputUnits || !subArrayOfOutputUnits.length) {

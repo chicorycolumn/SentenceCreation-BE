@@ -305,35 +305,48 @@ describe("traverseAndRecordInflections", () => {
     ],
   };
 
-  function consoleLogPathRecord(number, pathRecord) {
+  function consoleLogOutputUnitsWithDrillPaths(
+    number,
+    outputUnitsWithOutputUnitsWithDrillPaths
+  ) {
     return;
-    pathRecord.forEach((pathRecordUnit) => {
-      console.log(">>>", number);
-      console.log(
-        "pppathRecordUnit selectedWordArray:",
-        pathRecordUnit.selectedWordArray
-      );
-      console.log("pppathRecordUnit drillPath:", pathRecordUnit.drillPath);
-      console.log(" ");
-      console.log(" ");
-    });
+    outputUnitsWithOutputUnitsWithDrillPaths.forEach(
+      (outputUnitsWithOutputUnitsWithDrillPathsUnit) => {
+        console.log(">>>", number);
+        console.log(
+          "ppoutputUnitsWithOutputUnitsWithDrillPathsUnit selectedWordArray:",
+          outputUnitsWithOutputUnitsWithDrillPathsUnit.selectedWordArray
+        );
+        console.log(
+          "ppoutputUnitsWithOutputUnitsWithDrillPathsUnit drillPath:",
+          outputUnitsWithOutputUnitsWithDrillPathsUnit.drillPath
+        );
+        console.log(" ");
+        console.log(" ");
+      }
+    );
   }
 
   it("#lfu1.1a YES: Returns drills successfully (RDS) from set of single requirements.", () => {
-    let pathRecord = [];
+    let outputUnitsWithOutputUnitsWithDrillPaths = [];
     let reqArrNo = "08";
     traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
-      pathRecord
+      outputUnitsWithOutputUnitsWithDrillPaths
     );
-    consoleLogPathRecord(reqArrNo, pathRecord);
+    consoleLogOutputUnitsWithDrillPaths(
+      reqArrNo,
+      outputUnitsWithOutputUnitsWithDrillPaths
+    );
 
-    expect(pathRecord.length).to.equal(1);
+    expect(outputUnitsWithOutputUnitsWithDrillPaths.length).to.equal(1);
 
-    expect(pathRecord[0].selectedWordArray).to.eql(["czytam"]);
+    expect(
+      outputUnitsWithOutputUnitsWithDrillPaths[0].selectedWordArray
+    ).to.eql(["czytam"]);
 
-    expect(pathRecord[0].drillPath).to.eql([
+    expect(outputUnitsWithOutputUnitsWithDrillPaths[0].drillPath).to.eql([
       ["form", "verbal"],
       ["tense", "present"],
       ["person", "1per"],
@@ -342,18 +355,21 @@ describe("traverseAndRecordInflections", () => {
     ]);
   });
   it("#lfu1.1b YES: RDS when gender has two requirement values.", () => {
-    let pathRecord = [];
+    let outputUnitsWithOutputUnitsWithDrillPaths = [];
     let reqArrNo = "07";
     traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
-      pathRecord
+      outputUnitsWithOutputUnitsWithDrillPaths
     );
-    consoleLogPathRecord(reqArrNo, pathRecord);
+    consoleLogOutputUnitsWithDrillPaths(
+      reqArrNo,
+      outputUnitsWithOutputUnitsWithDrillPaths
+    );
 
-    expect(pathRecord.length).to.equal(2);
+    expect(outputUnitsWithOutputUnitsWithDrillPaths.length).to.equal(2);
 
-    expect(pathRecord).to.eql([
+    expect(outputUnitsWithOutputUnitsWithDrillPaths).to.eql([
       {
         selectedWordArray: ["czyta"],
         drillPath: [
@@ -377,18 +393,21 @@ describe("traverseAndRecordInflections", () => {
     ]);
   });
   it("#lfu1.1c YES: RDS when gender has two requirement values which are masculine subgenders.", () => {
-    let pathRecord = [];
+    let outputUnitsWithOutputUnitsWithDrillPaths = [];
     let reqArrNo = "06";
     traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
-      pathRecord
+      outputUnitsWithOutputUnitsWithDrillPaths
     );
-    consoleLogPathRecord(reqArrNo, pathRecord);
+    consoleLogOutputUnitsWithDrillPaths(
+      reqArrNo,
+      outputUnitsWithOutputUnitsWithDrillPaths
+    );
 
-    expect(pathRecord.length).to.equal(2);
+    expect(outputUnitsWithOutputUnitsWithDrillPaths.length).to.equal(2);
 
-    expect(pathRecord).to.eql([
+    expect(outputUnitsWithOutputUnitsWithDrillPaths).to.eql([
       {
         selectedWordArray: ["czyta"],
         drillPath: [
@@ -412,18 +431,21 @@ describe("traverseAndRecordInflections", () => {
     ]);
   });
   it("#lfu1.2a YES: RDS when gender has two identical requirement values (feminine).", () => {
-    let pathRecord = [];
+    let outputUnitsWithOutputUnitsWithDrillPaths = [];
     let reqArrNo = "05";
     traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
-      pathRecord
+      outputUnitsWithOutputUnitsWithDrillPaths
     );
-    consoleLogPathRecord(reqArrNo, pathRecord);
+    consoleLogOutputUnitsWithDrillPaths(
+      reqArrNo,
+      outputUnitsWithOutputUnitsWithDrillPaths
+    );
 
-    expect(pathRecord.length).to.equal(2);
+    expect(outputUnitsWithOutputUnitsWithDrillPaths.length).to.equal(2);
 
-    expect(pathRecord).to.eql([
+    expect(outputUnitsWithOutputUnitsWithDrillPaths).to.eql([
       {
         selectedWordArray: ["czyta"],
         drillPath: [
@@ -447,18 +469,21 @@ describe("traverseAndRecordInflections", () => {
     ]);
   });
   it("#lfu1.2b YES: RDS when gender has five identical requirement values (feminine).", () => {
-    let pathRecord = [];
+    let outputUnitsWithOutputUnitsWithDrillPaths = [];
     let reqArrNo = "04";
     traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
-      pathRecord
+      outputUnitsWithOutputUnitsWithDrillPaths
     );
-    consoleLogPathRecord(reqArrNo, pathRecord);
+    consoleLogOutputUnitsWithDrillPaths(
+      reqArrNo,
+      outputUnitsWithOutputUnitsWithDrillPaths
+    );
 
-    expect(pathRecord.length).to.equal(5);
+    expect(outputUnitsWithOutputUnitsWithDrillPaths.length).to.equal(5);
 
-    expect(pathRecord).to.eql([
+    expect(outputUnitsWithOutputUnitsWithDrillPaths).to.eql([
       {
         selectedWordArray: ["czyta"],
         drillPath: [
@@ -512,18 +537,21 @@ describe("traverseAndRecordInflections", () => {
     ]);
   });
   it("#lfu1.2c YES: RDS when gender has five identical requirement values (feminine) and one other value (neuter).", () => {
-    let pathRecord = [];
+    let outputUnitsWithOutputUnitsWithDrillPaths = [];
     let reqArrNo = "03";
     traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
-      pathRecord
+      outputUnitsWithOutputUnitsWithDrillPaths
     );
-    consoleLogPathRecord(reqArrNo, pathRecord);
+    consoleLogOutputUnitsWithDrillPaths(
+      reqArrNo,
+      outputUnitsWithOutputUnitsWithDrillPaths
+    );
 
-    expect(pathRecord.length).to.equal(6);
+    expect(outputUnitsWithOutputUnitsWithDrillPaths.length).to.equal(6);
 
-    expect(pathRecord).to.eql([
+    expect(outputUnitsWithOutputUnitsWithDrillPaths).to.eql([
       {
         selectedWordArray: ["czyta"],
         drillPath: [
@@ -587,19 +615,22 @@ describe("traverseAndRecordInflections", () => {
     ]);
   });
   it("#lfu1.2d YES: RDS when gender has big mix of duplicates in gender requirements.", () => {
-    let pathRecord = [];
+    let outputUnitsWithOutputUnitsWithDrillPaths = [];
     let reqArrNo = "02";
     traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
-      pathRecord
+      outputUnitsWithOutputUnitsWithDrillPaths
     );
-    consoleLogPathRecord(reqArrNo, pathRecord);
+    consoleLogOutputUnitsWithDrillPaths(
+      reqArrNo,
+      outputUnitsWithOutputUnitsWithDrillPaths
+    );
 
-    expect(pathRecord.length).to.equal(9);
+    expect(outputUnitsWithOutputUnitsWithDrillPaths.length).to.equal(9);
     // return;
 
-    expect(pathRecord).to.eql([
+    expect(outputUnitsWithOutputUnitsWithDrillPaths).to.eql([
       {
         selectedWordArray: ["czyta"],
         drillPath: [
@@ -693,20 +724,23 @@ describe("traverseAndRecordInflections", () => {
     ]);
   });
   it("#lfu1.3a YES: RDS >>> Nonv, Plur <<<.", () => {
-    let pathRecord = [];
+    let outputUnitsWithOutputUnitsWithDrillPaths = [];
     let reqArrNo = "19";
     traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
-      pathRecord
+      outputUnitsWithOutputUnitsWithDrillPaths
     );
 
-    consoleLogPathRecord(reqArrNo, pathRecord);
+    consoleLogOutputUnitsWithDrillPaths(
+      reqArrNo,
+      outputUnitsWithOutputUnitsWithDrillPaths
+    );
 
-    expect(pathRecord.length).to.equal(1);
+    expect(outputUnitsWithOutputUnitsWithDrillPaths.length).to.equal(1);
     // return;
 
-    expect(pathRecord).to.eql([
+    expect(outputUnitsWithOutputUnitsWithDrillPaths).to.eql([
       {
         selectedWordArray: ["czytają"],
         drillPath: [
@@ -720,20 +754,23 @@ describe("traverseAndRecordInflections", () => {
     ]);
   });
   it("#lfu1.3b YES: RDS >>> Fem, Plur <<< and two person choices.", () => {
-    let pathRecord = [];
+    let outputUnitsWithOutputUnitsWithDrillPaths = [];
     let reqArrNo = "18";
     traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
-      pathRecord
+      outputUnitsWithOutputUnitsWithDrillPaths
     );
 
-    consoleLogPathRecord(reqArrNo, pathRecord);
+    consoleLogOutputUnitsWithDrillPaths(
+      reqArrNo,
+      outputUnitsWithOutputUnitsWithDrillPaths
+    );
 
-    expect(pathRecord.length).to.equal(2);
+    expect(outputUnitsWithOutputUnitsWithDrillPaths.length).to.equal(2);
     // return;
 
-    expect(pathRecord).to.eql([
+    expect(outputUnitsWithOutputUnitsWithDrillPaths).to.eql([
       {
         selectedWordArray: ["czytacie"],
         drillPath: [
@@ -757,20 +794,23 @@ describe("traverseAndRecordInflections", () => {
     ]);
   });
   it("#lfu1.3c YES: RDS >>> Fem, Plur <<< and two person choices, and two tense choices.", () => {
-    let pathRecord = [];
+    let outputUnitsWithOutputUnitsWithDrillPaths = [];
     let reqArrNo = "17";
     traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
-      pathRecord
+      outputUnitsWithOutputUnitsWithDrillPaths
     );
 
-    consoleLogPathRecord(reqArrNo, pathRecord);
+    consoleLogOutputUnitsWithDrillPaths(
+      reqArrNo,
+      outputUnitsWithOutputUnitsWithDrillPaths
+    );
 
-    expect(pathRecord.length).to.equal(4);
+    expect(outputUnitsWithOutputUnitsWithDrillPaths.length).to.equal(4);
     // return;
 
-    expect(pathRecord).to.eql([
+    expect(outputUnitsWithOutputUnitsWithDrillPaths).to.eql([
       {
         selectedWordArray: ["czytacie"],
         drillPath: [
@@ -814,20 +854,23 @@ describe("traverseAndRecordInflections", () => {
     ]);
   });
   it("#lfu1.4a YES: RDS >>> Fem+Nonv, singular <<<.", () => {
-    let pathRecord = [];
+    let outputUnitsWithOutputUnitsWithDrillPaths = [];
     let reqArrNo = "20";
     traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
-      pathRecord
+      outputUnitsWithOutputUnitsWithDrillPaths
     );
 
-    consoleLogPathRecord(reqArrNo, pathRecord);
+    consoleLogOutputUnitsWithDrillPaths(
+      reqArrNo,
+      outputUnitsWithOutputUnitsWithDrillPaths
+    );
 
-    expect(pathRecord.length).to.equal(1);
+    expect(outputUnitsWithOutputUnitsWithDrillPaths.length).to.equal(1);
     // return;
 
-    expect(pathRecord).to.eql([
+    expect(outputUnitsWithOutputUnitsWithDrillPaths).to.eql([
       {
         selectedWordArray: ["czyta"],
         drillPath: [
@@ -841,20 +884,23 @@ describe("traverseAndRecordInflections", () => {
     ]);
   });
   it("#lfu1.4b YES: RDS >>> Fem, Sing+Plur <<<", () => {
-    let pathRecord = [];
+    let outputUnitsWithOutputUnitsWithDrillPaths = [];
     let reqArrNo = "21";
     traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
-      pathRecord
+      outputUnitsWithOutputUnitsWithDrillPaths
     );
 
-    consoleLogPathRecord(reqArrNo, pathRecord);
+    consoleLogOutputUnitsWithDrillPaths(
+      reqArrNo,
+      outputUnitsWithOutputUnitsWithDrillPaths
+    );
 
-    expect(pathRecord.length).to.equal(1);
+    expect(outputUnitsWithOutputUnitsWithDrillPaths.length).to.equal(1);
     // return;
 
-    expect(pathRecord).to.eql([
+    expect(outputUnitsWithOutputUnitsWithDrillPaths).to.eql([
       {
         selectedWordArray: ["czyta"],
         drillPath: [
@@ -868,20 +914,23 @@ describe("traverseAndRecordInflections", () => {
     ]);
   });
   it("#lfu1.4c YES: 22 (used to fail Drill Virile issue) RDS >>> Nonv, Sing+Plur <<<.", () => {
-    let pathRecord = [];
+    let outputUnitsWithOutputUnitsWithDrillPaths = [];
     let reqArrNo = "22";
     traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
-      pathRecord
+      outputUnitsWithOutputUnitsWithDrillPaths
     );
 
-    consoleLogPathRecord(reqArrNo, pathRecord);
+    consoleLogOutputUnitsWithDrillPaths(
+      reqArrNo,
+      outputUnitsWithOutputUnitsWithDrillPaths
+    );
 
-    expect(pathRecord.length).to.equal(1);
+    expect(outputUnitsWithOutputUnitsWithDrillPaths.length).to.equal(1);
     // return;
 
-    expect(pathRecord).to.eql([
+    expect(outputUnitsWithOutputUnitsWithDrillPaths).to.eql([
       {
         selectedWordArray: ["czytają"],
         drillPath: [
@@ -895,20 +944,23 @@ describe("traverseAndRecordInflections", () => {
     ]);
   });
   it("#lfu1.4d YES: 23 (used to fail Drill Virile issue) RDS >>> Fem+Nonv, Plur <<<.", () => {
-    let pathRecord = [];
+    let outputUnitsWithOutputUnitsWithDrillPaths = [];
     let reqArrNo = "23";
     traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
-      pathRecord
+      outputUnitsWithOutputUnitsWithDrillPaths
     );
 
-    consoleLogPathRecord(reqArrNo, pathRecord);
+    consoleLogOutputUnitsWithDrillPaths(
+      reqArrNo,
+      outputUnitsWithOutputUnitsWithDrillPaths
+    );
 
-    expect(pathRecord.length).to.equal(1);
+    expect(outputUnitsWithOutputUnitsWithDrillPaths.length).to.equal(1);
     // return;
 
-    expect(pathRecord).to.eql([
+    expect(outputUnitsWithOutputUnitsWithDrillPaths).to.eql([
       {
         selectedWordArray: ["czytają"],
         drillPath: [
@@ -922,20 +974,23 @@ describe("traverseAndRecordInflections", () => {
     ]);
   });
   it("#lfu1.4e YES: 24 (used to fail Drill Virile issue) RDS >>> Fem+Nonv, Sing+Plur <<<.", () => {
-    let pathRecord = [];
+    let outputUnitsWithOutputUnitsWithDrillPaths = [];
     let reqArrNo = "24";
     traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
-      pathRecord
+      outputUnitsWithOutputUnitsWithDrillPaths
     );
 
-    consoleLogPathRecord(reqArrNo, pathRecord);
+    consoleLogOutputUnitsWithDrillPaths(
+      reqArrNo,
+      outputUnitsWithOutputUnitsWithDrillPaths
+    );
 
-    expect(pathRecord.length).to.equal(2);
+    expect(outputUnitsWithOutputUnitsWithDrillPaths.length).to.equal(2);
     // return;
 
-    expect(pathRecord).to.eql([
+    expect(outputUnitsWithOutputUnitsWithDrillPaths).to.eql([
       {
         selectedWordArray: ["czyta"],
         drillPath: [

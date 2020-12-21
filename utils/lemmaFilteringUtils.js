@@ -34,22 +34,31 @@ exports.filterWithinSelectedLemmaObject = (
   });
 
   let errorInDrilling = false;
-  let pathRecord = [];
+  let outputUnitsWithOutputUnitsWithDrillPaths = [];
 
-  exports.traverseAndRecordInflections(source, requirementArrs, pathRecord);
+  exports.traverseAndRecordInflections(
+    source,
+    requirementArrs,
+    outputUnitsWithOutputUnitsWithDrillPaths
+  );
 
-  if (!pathRecord || !pathRecord.length) {
+  if (
+    !outputUnitsWithOutputUnitsWithDrillPaths ||
+    !outputUnitsWithOutputUnitsWithDrillPaths.length
+  ) {
     errorInDrilling = true;
     return false;
   }
 
   if (kumquat) {
-    pathRecord.forEach((selectedPath) => {
+    outputUnitsWithOutputUnitsWithDrillPaths.forEach((selectedPath) => {
       selectedPath.errorInDrilling = errorInDrilling;
     });
-    return pathRecord;
+    return outputUnitsWithOutputUnitsWithDrillPaths;
   } else {
-    let selectedPath = gpUtils.selectRandom(pathRecord);
+    let selectedPath = gpUtils.selectRandom(
+      outputUnitsWithOutputUnitsWithDrillPaths
+    );
 
     let { selectedWordArray, drillPath } = selectedPath;
 
@@ -231,11 +240,11 @@ exports.filterBySelectors = (currentLanguage, structureChunk, matches) => {
 exports.traverseAndRecordInflections = (
   source,
   reqArr,
-  pathRecord,
-  pathRecordMini
+  outputUnitsWithOutputUnitsWithDrillPaths,
+  outputUnitsWithOutputUnitsWithDrillPathsMini
 ) => {
-  if (!pathRecordMini) {
-    pathRecordMini = [];
+  if (!outputUnitsWithOutputUnitsWithDrillPathsMini) {
+    outputUnitsWithOutputUnitsWithDrillPathsMini = [];
   }
 
   let reqSubArr = reqArr[0];
@@ -260,44 +269,47 @@ exports.traverseAndRecordInflections = (
       // );
       // console.log("*");
       // console.log("**WHITE");
-      // console.log("Okay, I am going to push these things into pathRecordMini");
-      // console.log("pathRecordMini is currently:", pathRecordMini);
+      // console.log("Okay, I am going to push these things into outputUnitsWithOutputUnitsWithDrillPathsMini");
+      // console.log("outputUnitsWithOutputUnitsWithDrillPathsMini is currently:", outputUnitsWithOutputUnitsWithDrillPathsMini);
       // console.log("Gonna push reqInflectorLabel as:", reqInflectorLabel);
       // console.log("Gonna push chosenInflector as:", chosenInflector);
 
-      pathRecordMini.push([reqInflectorLabel, chosenInflector]);
+      outputUnitsWithOutputUnitsWithDrillPathsMini.push([
+        reqInflectorLabel,
+        chosenInflector,
+      ]);
 
-      // console.log("pathRecordMini is now:", pathRecordMini);
+      // console.log("outputUnitsWithOutputUnitsWithDrillPathsMini is now:", outputUnitsWithOutputUnitsWithDrillPathsMini);
       // console.log("**");
       // console.log("*");
 
       // console.log("*");
       // console.log("**RED");
-      // console.log("Okay, I am going to push these things into pathRecord");
-      // console.log("pathRecord is currently:", pathRecord);
+      // console.log("Okay, I am going to push these things into outputUnitsWithOutputUnitsWithDrillPaths");
+      // console.log("outputUnitsWithOutputUnitsWithDrillPaths is currently:", outputUnitsWithOutputUnitsWithDrillPaths);
       // console.log("Gonna push selectedWordArray as:", source[chosenInflector]);
-      // console.log("Gonna push pathRecordMini as:", pathRecordMini);
+      // console.log("Gonna push outputUnitsWithOutputUnitsWithDrillPathsMini as:", outputUnitsWithOutputUnitsWithDrillPathsMini);
 
-      pathRecord.push({
+      outputUnitsWithOutputUnitsWithDrillPaths.push({
         selectedWordArray:
           typeof source[chosenInflector] === "string"
             ? [source[chosenInflector]]
             : source[chosenInflector],
-        drillPath: pathRecordMini.slice(0),
+        drillPath: outputUnitsWithOutputUnitsWithDrillPathsMini.slice(0),
       });
 
-      // console.log("pathRecord is now:", pathRecord);
+      // console.log("outputUnitsWithOutputUnitsWithDrillPaths is now:", outputUnitsWithOutputUnitsWithDrillPaths);
       // console.log("**");
       // console.log("*");
 
       // console.log("*");
       // console.log("**YELLOW");
-      // console.log("pathRecordMini is currently:", pathRecordMini);
+      // console.log("outputUnitsWithOutputUnitsWithDrillPathsMini is currently:", outputUnitsWithOutputUnitsWithDrillPathsMini);
       // console.log("Gonna A-pop the last value.");
 
-      pathRecordMini.pop();
+      outputUnitsWithOutputUnitsWithDrillPathsMini.pop();
 
-      // console.log("pathRecordMini is now:", pathRecordMini);
+      // console.log("outputUnitsWithOutputUnitsWithDrillPathsMini is now:", outputUnitsWithOutputUnitsWithDrillPathsMini);
       // console.log("**");
       // console.log("*");
 
@@ -305,22 +317,25 @@ exports.traverseAndRecordInflections = (
     } else if (typeof source[chosenInflector] === "object") {
       // console.log("*");
       // console.log("**BLUE");
-      // console.log("Okay, I am going to push these things into pathRecordMini");
-      // console.log("pathRecordMini is currently:", pathRecordMini);
+      // console.log("Okay, I am going to push these things into outputUnitsWithOutputUnitsWithDrillPathsMini");
+      // console.log("outputUnitsWithOutputUnitsWithDrillPathsMini is currently:", outputUnitsWithOutputUnitsWithDrillPathsMini);
       // console.log("Gonna push reqInflectorLabel as:", reqInflectorLabel);
       // console.log("Gonna push chosenInflector as:", chosenInflector);
 
-      pathRecordMini.push([reqInflectorLabel, chosenInflector]);
+      outputUnitsWithOutputUnitsWithDrillPathsMini.push([
+        reqInflectorLabel,
+        chosenInflector,
+      ]);
 
-      // console.log("pathRecordMini is now:", pathRecordMini);
+      // console.log("outputUnitsWithOutputUnitsWithDrillPathsMini is now:", outputUnitsWithOutputUnitsWithDrillPathsMini);
       // console.log("**");
       // console.log("*");
 
       exports.traverseAndRecordInflections(
         source[chosenInflector],
         reqArr.slice(1),
-        pathRecord,
-        pathRecordMini
+        outputUnitsWithOutputUnitsWithDrillPaths,
+        outputUnitsWithOutputUnitsWithDrillPathsMini
       );
 
       // console.log("*");
@@ -328,12 +343,12 @@ exports.traverseAndRecordInflections = (
       // console.log(
       //   `On this round of GREEN, the chosenInflector is: ${chosenInflector} at reqInflectorArrIndex ${reqInflectorArrIndex}.`
       // );
-      // console.log("pathRecordMini is currently:", pathRecordMini);
+      // console.log("outputUnitsWithOutputUnitsWithDrillPathsMini is currently:", outputUnitsWithOutputUnitsWithDrillPathsMini);
       // console.log("Gonna B-pop the last value.");
 
-      pathRecordMini.pop();
+      outputUnitsWithOutputUnitsWithDrillPathsMini.pop();
 
-      // console.log("pathRecordMini is now:", pathRecordMini);
+      // console.log("outputUnitsWithOutputUnitsWithDrillPathsMini is now:", outputUnitsWithOutputUnitsWithDrillPathsMini);
       // console.log("**");
       // console.log("*");
     }

@@ -66,18 +66,26 @@ exports.allFeatureValues = {
 exports.uninflectedForms = {
   POL: { verb: ["contemporaryAdverbial", "anteriorAdverbial"] },
   ENG: {
-    verb: [
-      "contemporaryAdverbial",
-      "anteriorAdverbial",
-      "activeAdjectival",
-      "passiveAdjectival",
-    ],
+    verb: [],
   },
 };
 
 exports.adhocInflectors = {
   POL: {},
   ENG: { verb: ["tenseDescription"] },
+};
+
+exports.adhocForms = {
+  POL: {},
+  ENG: {
+    verb: [
+      "contemporaryAdverbial",
+      "anteriorAdverbial",
+      "activeAdjectival",
+      "passiveAdjectival",
+      "pastParticiple",
+    ],
+  },
 };
 
 exports.tenseDescriptionTranslation = {

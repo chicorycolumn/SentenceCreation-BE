@@ -2,6 +2,10 @@ const refObj = require("../utils/referenceObjects.js");
 
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   sentenceStructure.forEach((structureChunk) => {
+    if (structureChunk.wordtype === "fixed") {
+      return;
+    }
+
     if (structureChunk.wordtype === "adjective") {
       if (!structureChunk.form || !structureChunk.form.length) {
         structureChunk.form = ["simple"];
@@ -51,15 +55,6 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
           structureChunk.person = headChunk.person.slice(0);
         }
       }
-
-      ["tense", "tenseDescription"].forEach((verbInflectorKey) => {
-        if (
-          structureChunk[verbInflectorKey] &&
-          structureChunk[verbInflectorKey].length
-        ) {
-          structureChunk.form = ["verbal"];
-        }
-      });
     }
   });
 };

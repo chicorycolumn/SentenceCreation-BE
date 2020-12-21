@@ -1517,7 +1517,7 @@ describe("/api", () => {
           console.log({ "RESULT: res.body:": res.body });
         });
     });
-    it("#pal05-04a GET 200 YES: It's okay to specify gender: f and number: plural, even though gender will technically be nonvirile. The f gender gets converted to nonvirile gender before drillPath, so the drillPaths do indeed come out correct.", () => {
+    it("#pal05-04a GET 200 YES: It's okay to specify gender: f and number: plural, even though gender will technically be nonvirile. The f gender gets converted to nonvirile gender before drillPath, so the each drillPath does indeed come out correct.", () => {
       return request(app)
         .get("/api/palette")
         .send({
