@@ -303,7 +303,7 @@ describe("/api", () => {
         });
     });
     it("#pal07-01d GET 200 YES: RSWAT POL to ENG 'be' correctly. HOMOGRAPH ISSUE.", () => {
-      //Alphaman: The issue here is that normally, ENG past simple gets translated to POL past pf.
+      //Clone Bee issue: The issue here is that normally, ENG past simple gets translated to POL past pf.
       //But the verb być doesn't have a pf form, only im.
       //So in this case, ENG past simple should be translated to POL past >>im<< when dealing with
       //być, and mieć, and tbh, with any verbs that simply don't have a pf form.

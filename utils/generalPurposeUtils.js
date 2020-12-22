@@ -34,7 +34,7 @@ exports.doKeyValuesMatch = (object, keyValues) => {
   });
 };
 
-exports.isObject = (item) => {
+exports.isKeyValueTypeObject = (item) => {
   return typeof item === "object" && item !== null && !Array.isArray(item);
 };
 

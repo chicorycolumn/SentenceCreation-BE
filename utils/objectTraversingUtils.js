@@ -72,9 +72,9 @@ exports.findMatchingLemmaObjectThenWord = (
     structureChunk.form &&
     structureChunk.form.length &&
     Object.keys(adhocFormRef).includes(structureChunk.wordtype) &&
-    structureChunk.form.some((selectedForm) => {
-      return adhocFormRef[structureChunk.wordtype].includes(selectedForm);
-    })
+    structureChunk.form.some((selectedForm) =>
+      adhocFormRef[structureChunk.wordtype].includes(selectedForm)
+    )
   ) {
     if (kumquat) {
       matches.forEach((selectedLemmaObject) => {
@@ -194,18 +194,16 @@ exports.findMatchingLemmaObjectThenWord = (
             refObj.uninflectedForms[currentLanguage][wordtype];
 
           let requestedUninflectedForms = structureChunk.form.filter(
-            (requestedForm) => {
-              return uninflectedValues.includes(requestedForm);
-            }
+            (requestedForm) => uninflectedValues.includes(requestedForm)
           );
 
           if (requestedUninflectedForms.length) {
             console.log("##Un-PW" + " " + structureChunk.chunkId);
             if (kumquat) {
               requestedUninflectedForms.forEach((selectedUninflectedForm) => {
-                let matchesByUninflectedForm = matches.filter((lObj) => {
-                  return lObj.inflections[selectedUninflectedForm];
-                });
+                let matchesByUninflectedForm = matches.filter(
+                  (lObj) => lObj.inflections[selectedUninflectedForm]
+                );
 
                 matchesByUninflectedForm.forEach((selectedLemmaObject) => {
                   let selectedWordArr =
@@ -237,9 +235,9 @@ exports.findMatchingLemmaObjectThenWord = (
                 requestedUninflectedForms
               );
 
-              let matchesByUninflectedForm = matches.filter((lObj) => {
-                return lObj.inflections[selectedUninflectedForm];
-              });
+              let matchesByUninflectedForm = matches.filter(
+                (lObj) => lObj.inflections[selectedUninflectedForm]
+              );
 
               let selectedLemmaObject = gpUtils.selectRandom(
                 matchesByUninflectedForm
@@ -539,7 +537,7 @@ exports.findObjectInNestedObject = (source, identifyingData, alsoReturnKey) => {
 
     Object.keys(source).forEach((key) => {
       let value = source[key];
-      if (gpUtils.isObject(value)) {
+      if (gpUtils.isKeyValueTypeObject(value)) {
         if (gpUtils.doKeyValuesMatch(value, identifyingData)) {
           res.value = value;
           res.key = key;

@@ -125,9 +125,9 @@ exports.updateStructureChunkByAndTagsAndSelectors = (
    * the andTags that are present in the tags of the lObj.
    */
   if (structureChunk.andTags) {
-    structureChunk.andTags = structureChunk.andTags.filter((andTag) => {
-      selectedLemmaObject.tags.includes(andTag);
-    });
+    structureChunk.andTags = structureChunk.andTags.filter((andTag) =>
+      selectedLemmaObject.tags.includes(andTag)
+    );
   }
 
   //Magenta option:
@@ -135,9 +135,9 @@ exports.updateStructureChunkByAndTagsAndSelectors = (
    * and fill it with the tags from the lobj.
    */
   // if (structureChunk.andTags) {
-  //   structureChunk.andTags = structureChunk.andTags.filter((andTag) => {
-  //     selectedLemmaObject.tags.includes(andTag);
-  //   });
+  //   structureChunk.andTags = structureChunk.andTags.filter((andTag) =>
+  //     selectedLemmaObject.tags.includes(andTag)
+  //   );
   // } else {
   //   structureChunk.andTags = selectedLemmaObject.tags.slice();
   // }
@@ -181,12 +181,9 @@ exports.filterOutDeficientLemmaObjects = (
       );
 
       return inflectionPathsInRequirements.some((inflectionPathReq) =>
-        inflectionPathsInSource.some((inflectionPathSou) => {
-          return gpUtils.areTwoFlatArraysEqual(
-            inflectionPathReq,
-            inflectionPathSou
-          );
-        })
+        inflectionPathsInSource.some((inflectionPathSou) =>
+          gpUtils.areTwoFlatArraysEqual(inflectionPathReq, inflectionPathSou)
+        )
       );
     }
   });
@@ -198,15 +195,15 @@ exports.filterByAndTagsAndOrTags = (wordset, structureChunk) => {
   let { andTags, orTags } = structureChunk;
 
   if (andTags && andTags.length) {
-    lemmaObjects = lemmaObjects.filter((lemmaObject) => {
-      return andTags.every((andTag) => lemmaObject.tags.includes(andTag));
-    });
+    lemmaObjects = lemmaObjects.filter((lemmaObject) =>
+      andTags.every((andTag) => lemmaObject.tags.includes(andTag))
+    );
   }
 
   if (orTags && orTags.length) {
-    lemmaObjects = lemmaObjects.filter((lemmaObject) => {
-      return orTags.some((orTag) => lemmaObject.tags.includes(orTag));
-    });
+    lemmaObjects = lemmaObjects.filter((lemmaObject) =>
+      orTags.some((orTag) => lemmaObject.tags.includes(orTag))
+    );
   }
 
   return lemmaObjects;

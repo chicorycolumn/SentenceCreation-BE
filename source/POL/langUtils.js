@@ -456,11 +456,7 @@ exports.bulkUpGenderArrayToPreventMasculineOverrepresentation = (array) => {
 
   const masculineSubgenders = ["m1", "m2", "m3"];
 
-  if (
-    masculineSubgenders.every((subgender) => {
-      return array.includes(subgender);
-    })
-  ) {
+  if (masculineSubgenders.every((subgender) => array.includes(subgender))) {
     array.forEach((gender) => {
       if (!masculineSubgenders.includes(gender)) {
         array.push(gender);

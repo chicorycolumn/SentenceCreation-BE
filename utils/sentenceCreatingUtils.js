@@ -331,9 +331,9 @@ exports.processSentenceFormula = (
     grandOutputArray.forEach((outputArr, index) => {
       let currentOtherChunkIds = sentenceStructure
         .filter((structureChunk) => {
-          let doneChunkIds = outputArr.map((outputUnit) => {
-            return outputUnit.structureChunk.chunkId;
-          });
+          let doneChunkIds = outputArr.map(
+            (outputUnit) => outputUnit.structureChunk.chunkId
+          );
 
           return !doneChunkIds.includes(structureChunk.chunkId);
         })
@@ -599,18 +599,17 @@ exports.conformAnswerStructureToQuestionStructure = (
     let source = words[gpUtils.giveSetKey(answerStructureChunk.wordtype)];
     lfUtils.adjustImOnlyLemmaObjects(source);
 
-    let matchingAnswerLemmaObjects = source.filter((lObj) => {
-      return lemmasToSearch.includes(lObj.lemma);
-    });
+    let matchingAnswerLemmaObjects = source.filter((lObj) =>
+      lemmasToSearch.includes(lObj.lemma)
+    );
 
     //Should this really be for every single tags to match, otherwise it won't match them?
     matchingAnswerLemmaObjects = matchingAnswerLemmaObjects.filter(
-      (answerLemmaObject) => {
-        return gpUtils.areTwoFlatArraysEqual(
+      (answerLemmaObject) =>
+        gpUtils.areTwoFlatArraysEqual(
           questionSelectedLemmaObject.tags,
           answerLemmaObject.tags
-        );
-      }
+        )
     );
 
     answerStructureChunk.specificIds = matchingAnswerLemmaObjects.map(
