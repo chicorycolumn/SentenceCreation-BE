@@ -88,20 +88,26 @@ exports.processSentenceFormula = (
 
   if (kumquat) {
     if (true) {
+      console.log("+++++++++++++++++++++++++++++++++++fff");
+      console.log("-----------------------------------");
+      console.log("+++++++++++++++++++++++++++++++++++");
       console.log(
         "|",
-        ">>>>>>>>>>>>>>>>>>>>>>>>>>sentenceStructure BEFORE QA conform",
+        "sentenceStructure BEFORE QA conform",
         sentenceStructure
       );
 
       console.log(
-        ">>>>>>>>>>>>>>>>>>>>ttt questionOutputArr.length",
+        "questionOutputArr.length ought to be 1",
         questionOutputArr.length
       );
       console.log(
-        ">>>>>>>>>>>>>>>>>>>>ttt questionOutputArr[0]",
+        "questionOutputArr[0] which will be used to update the sentenceStructure",
         questionOutputArr[0]
       );
+      console.log("+++++++++++++++++++++++++++++++++++");
+      console.log("-----------------------------------");
+      console.log("+++++++++++++++++++++++++++++++++++");
     }
 
     exports.conformAnswerStructureToQuestionStructure(
@@ -112,11 +118,7 @@ exports.processSentenceFormula = (
       questionLanguage
     );
 
-    console.log(
-      "|",
-      ">>>>>>>>>>>>>>>>>>>>>>>>>sentenceStructure AFTER QA conform",
-      sentenceStructure
-    );
+    console.log("|", "sentenceStructure AFTER QA conform", sentenceStructure);
   }
 
   // console.log("|");
@@ -151,8 +153,6 @@ exports.processSentenceFormula = (
   );
 
   let headOutputUnitArrays = [];
-
-  console.log({ headIds });
 
   //STEP ONE: Select headwords and add to result array.
   headIds.forEach((headId, headIdIndex) => {
@@ -636,7 +636,7 @@ exports.conformAnswerStructureToQuestionStructure = (
           )
         ) {
           console.log("I'm having a tantum!");
-          return;
+          // return;
         }
       }
 

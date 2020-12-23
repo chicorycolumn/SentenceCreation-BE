@@ -87,8 +87,6 @@ exports.adjustTenseDescriptions = (structureChunk) => {
         },
       };
 
-      // console.log("qq", { key, clause });
-
       tenseDescArr = conditionalsRef[key][clause].slice(0);
     }
 

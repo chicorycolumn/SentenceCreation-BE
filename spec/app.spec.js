@@ -232,6 +232,9 @@ describe("/api", () => {
         });
     });
     it.only("#pal##-02a Check if prompt given when ENG Q sentence with two POL translations.", () => {
+      //Now, even though I'm specifying ENG as Sing Gen,
+      //these features are not being transferred to POL. Hmmmm..
+
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 

@@ -26,7 +26,6 @@ exports.fetchPalette = (req) => {
   sentenceFormulaId = questionSentenceData.sentenceFormulaId;
   sentenceFormulaSymbol = questionSentenceData.sentenceFormulaSymbol;
 
-  console.log("ttt");
   gpUtils.consoleLogObjectAtTwoLevels(questionSentenceData.arrayOfOutputArrays);
 
   let questionResponseObj = scUtils.giveFinalSentences(
@@ -35,20 +34,6 @@ exports.fetchPalette = (req) => {
     questionSentenceData.errorInSentenceCreation,
     kumquat
   );
-
-  // console.log("*");
-  // console.log("**");
-  // console.log("***");
-  // console.log(
-  //   "questionSentenceData.arrayOfOutputArrays[0][0].selectedLemmaObject",
-  //   questionSentenceData.arrayOfOutputArrays[0][0].selectedLemmaObject
-  // );
-  // console.log(
-  //   "questionSentenceData.arrayOfOutputArrays",
-  //   questionSentenceData.arrayOfOutputArrays
-  // );
-  // console.log("questionSentenceData", questionSentenceData);
-  // console.log("questionResponseObj", questionResponseObj);
 
   if (true) {
     console.log(
@@ -116,8 +101,6 @@ exports.fetchPalette = (req) => {
         );
       }
     });
-
-    console.log("palette.model > answerResponseObj", answerResponseObj);
 
     scUtils.removeDuplicatesFromResponseObject(answerResponseObj);
   }

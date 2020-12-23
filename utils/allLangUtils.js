@@ -12,6 +12,12 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
       }
     }
 
+    if (structureChunk.wordtype === "noun") {
+      if (!structureChunk.gcase || !structureChunk.gcase.length) {
+        structureChunk.gcase = ["nom"];
+      }
+    }
+
     if (structureChunk.wordtype === "verb") {
       if (!structureChunk.form || !structureChunk.form.length) {
         structureChunk.form = ["verbal"];

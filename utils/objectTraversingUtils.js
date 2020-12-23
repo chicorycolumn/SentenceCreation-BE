@@ -56,8 +56,6 @@ exports.findMatchingLemmaObjectThenWord = (
 
   lfUtils.adjustImOnlyLemmaObjects(matches); //Must be adjusted again as may not have been in such pathway above.
 
-  console.log("sss", { matches });
-
   langUtils.preprocessLemmaObjects(matches, structureChunk);
 
   //STEP THREE: Return result array immediately if uninflected or ad hoc.
@@ -218,7 +216,6 @@ exports.findMatchingLemmaObjectThenWord = (
                     structureChunk
                   );
 
-                  console.log("ddd", structureChunkUpdatedByAdhocOrUninflected);
                   structureChunkUpdatedByAdhocOrUninflected.form = [
                     selectedUninflectedForm,
                   ];
