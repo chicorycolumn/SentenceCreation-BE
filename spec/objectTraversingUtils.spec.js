@@ -11,7 +11,7 @@ describe("findSynhomographs", () => {
   it("#scu4.1 Produces empty array when no lemmaObjects given.", () => {
     const input = [];
     const expected = [];
-    let actual = findSynhomographs(input);
+    let actual = findSynhomographs(input, ["noun", "noun", "noun"], "POL");
     console.log(actual);
     expect(actual).to.eql(expected);
   });
@@ -20,7 +20,7 @@ describe("findSynhomographs", () => {
       {
         lemma: "bike",
         id: "pol-bike001",
-        wordtype: "noun",
+
         inflections: {
           singular: {
             nom: "bikey",
@@ -35,7 +35,7 @@ describe("findSynhomographs", () => {
       {
         lemma: "trike",
         id: "pol-trike001",
-        wordtype: "noun",
+
         inflections: {
           singular: {
             nom: "trikey",
@@ -49,7 +49,7 @@ describe("findSynhomographs", () => {
       },
     ];
     const expected = [];
-    let actual = findSynhomographs(input);
+    let actual = findSynhomographs(input, ["noun", "noun", "noun"], "POL");
     console.log(actual);
     expect(actual).to.eql(expected);
   });
@@ -58,7 +58,7 @@ describe("findSynhomographs", () => {
       {
         lemma: "bike",
         id: "pol-bike001",
-        wordtype: "noun",
+
         inflections: {
           singular: {
             nom: "bike",
@@ -96,7 +96,7 @@ describe("findSynhomographs", () => {
         ],
       },
     ];
-    let actual = findSynhomographs(input);
+    let actual = findSynhomographs(input, ["noun", "noun", "noun"], "POL");
     console.log(actual);
     expect(actual).to.eql(expected);
   });
@@ -105,7 +105,7 @@ describe("findSynhomographs", () => {
       {
         lemma: "bike",
         id: "pol-bike001",
-        wordtype: "noun",
+
         inflections: {
           singular: {
             nom: "11",
@@ -160,7 +160,7 @@ describe("findSynhomographs", () => {
         ],
       },
     ];
-    let actual = findSynhomographs(input);
+    let actual = findSynhomographs(input, ["noun", "noun", "noun"], "POL");
     console.log(actual);
     expect(actual).to.eql(expected);
   });
@@ -169,7 +169,7 @@ describe("findSynhomographs", () => {
       {
         lemma: "bike",
         id: "pol-bike001",
-        wordtype: "noun",
+
         inflections: {
           singular: {
             nom: "11",
@@ -192,7 +192,7 @@ describe("findSynhomographs", () => {
       {
         lemma: "trike",
         id: "pol-trike001",
-        wordtype: "noun",
+
         inflections: {
           singular: {
             nom: "trikey",
@@ -207,7 +207,7 @@ describe("findSynhomographs", () => {
       {
         lemma: "unike",
         id: "pol-unike001",
-        wordtype: "noun",
+
         inflections: {
           singular: {
             nom: "unikey",
@@ -269,7 +269,7 @@ describe("findSynhomographs", () => {
         ],
       },
     ];
-    let actual = findSynhomographs(input);
+    let actual = findSynhomographs(input, ["noun", "noun", "noun"], "POL");
     console.log(actual);
     expect(actual).to.eql(expected);
   });

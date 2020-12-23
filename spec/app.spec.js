@@ -9,6 +9,12 @@ const gpUtils = require("../utils/generalPurposeUtils.js");
 
 const generalTranslatedSentencesRef = {
   //This is a Washburne style reference object.
+  sheep: {
+    "POL->ENG": [
+      { POL: "Owca.", ENG: ["Sheep (singular)."] },
+      { POL: "Owce.", ENG: ["Sheep (plural)."] },
+    ],
+  },
   be: {
     "POL->ENG": [
       //
@@ -210,7 +216,7 @@ function checkSentenceTranslations(
 describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
-  describe("/palette - Stage 7: Further linguistic features.", () => {
+  describe("/palette - Stage #: Scratchpad testing.", () => {
     it("#pal##-01a Check if tenseDescription still there on output when ENG questionLanguage.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -218,6 +224,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           useDummy: true,
           questionLanguage,
           // answerLanguage,
@@ -231,16 +238,14 @@ describe("/api", () => {
           // );
         });
     });
-    it.only("#pal##-02a Check if prompt given when ENG Q sentence with two POL translations.", () => {
-      //Now, even though I'm specifying ENG as Sing Gen,
-      //these features are not being transferred to POL. Hmmmm..
-
+    it("#pal##-02a SHEEP: Check if prompt given when ENG Q sentence with two POL translations.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: false,
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -248,8 +253,13 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          console.log(res.body);
-          expect(["Sheep."]).to.include(res.body.questionSentenceArr[0]);
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "sheep",
+            ["Sheep (singular).", "Sheep (plural)."]
+          );
         });
     });
   });
@@ -262,6 +272,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           useDummy: true,
           questionLanguage,
           // answerLanguage,
@@ -282,6 +293,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           useDummy: true,
           questionLanguage,
           // answerLanguage,
@@ -314,6 +326,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           useDummy: true,
           questionLanguage,
           // answerLanguage,
@@ -367,6 +380,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -394,6 +408,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -419,6 +434,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -444,6 +460,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "red door",
@@ -466,6 +483,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "red door singular",
@@ -485,6 +503,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "red door",
@@ -506,6 +525,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "first conditional 106a",
@@ -558,6 +578,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "first conditional 106a",
@@ -613,6 +634,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "101a girl is reading",
@@ -664,6 +686,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "101b girl *reads quickly",
@@ -735,6 +758,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage,
           answerLanguage,
           useDummy: true,
@@ -770,6 +794,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage,
           answerLanguage,
           useDummy: true,
@@ -805,6 +830,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "102a I'll read (pf fut)",
@@ -827,6 +853,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "I read *future 103a",
@@ -849,6 +876,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "I read *future 103b",
@@ -871,6 +899,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "I read *future 103c",
@@ -893,6 +922,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage,
           answerLanguage,
           useDummy: true,
@@ -924,6 +954,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage,
           answerLanguage,
           useDummy: true,
@@ -958,6 +989,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "I read *future 104a",
@@ -980,6 +1012,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "I read *future 104a",
@@ -1002,6 +1035,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "I read *future 104b",
@@ -1024,6 +1058,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "I read *future 104b",
@@ -1046,6 +1081,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage,
           answerLanguage,
           useDummy: true,
@@ -1069,6 +1105,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage,
           answerLanguage,
           useDummy: true,
@@ -1092,6 +1129,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "I was writing 105a",
@@ -1183,6 +1221,7 @@ describe("/api", () => {
         return request(app)
           .get("/api/palette")
           .send({
+            hideClarifiers: true,
             useDummy: true,
             questionLanguage,
             answerLanguage,
@@ -1201,6 +1240,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "girl has red apple",
         })
@@ -1251,6 +1291,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "girl didn't have red apple",
         })
@@ -1301,6 +1342,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "red girl didn't have red apple",
         })
@@ -1351,6 +1393,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "girl reads present im",
         })
@@ -1374,6 +1417,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "girl reads past pf",
         })
@@ -1397,6 +1441,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "girl reads future im",
         })
@@ -1429,6 +1474,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "girl reads f conditional im pf",
         })
@@ -1448,6 +1494,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           useDummy: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "dummy26",
@@ -1466,6 +1513,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           useDummy: true,
           questionLanguage: "POL",
           answerLanguage: "ENG",
@@ -1498,6 +1546,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           useDummy: true,
           questionLanguage: "ENG",
           answerLanguage: "POL",
@@ -1530,6 +1579,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           useDummy: true,
           questionLanguage: "ENG",
           answerLanguage: "POL",
@@ -1564,6 +1614,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "dummy32",
           useDummy: true,
@@ -1582,6 +1633,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "I am reading",
         })
@@ -1603,6 +1655,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "dummy12a 2per",
           useDummy: true,
@@ -1639,6 +1692,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "dummy13a conditional plural",
           useDummy: true,
@@ -1662,6 +1716,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "dummy13b present 2per f",
           useDummy: true,
@@ -1679,6 +1734,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "dummy14 infinitive",
           useDummy: true,
@@ -1694,6 +1750,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "dummy15 impersonal",
           useDummy: true,
@@ -1714,6 +1771,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "dummy15a impersonal plural",
           useDummy: true,
@@ -1734,6 +1792,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "dummy15b impersonal plural",
           useDummy: true,
@@ -1753,6 +1812,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "dummy16 contemporaryAdverbial",
           useDummy: true,
@@ -1768,6 +1828,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "dummy17 contemporaryAdverbial female",
           useDummy: true,
@@ -1783,6 +1844,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "dummy18 contemporaryAdverbial n virile 2per",
           useDummy: true,
@@ -1798,6 +1860,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "dummy16a anteriorAdverbial",
           useDummy: true,
@@ -1815,6 +1878,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "dummy17a anteriorAdverbial female",
           useDummy: true,
@@ -1832,6 +1896,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "dummy18a anteriorAdverbial n virile 2per",
           useDummy: true,
@@ -1849,6 +1914,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "dummy21 verbalNoun",
           useDummy: true,
@@ -1864,6 +1930,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "dummy23a past/cond 1per plural m1",
           useDummy: true,
@@ -1886,6 +1953,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "dummy23b past/cond 1per plural m2",
           useDummy: true,
@@ -1908,6 +1976,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "dummy23c past/cond 1per plural f/n",
           useDummy: true,
@@ -1930,6 +1999,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "girls were reading",
         })
@@ -1949,6 +2019,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "girl is reading",
         })
@@ -1965,6 +2036,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "dummy20a girl is reading im",
           useDummy: true,
@@ -1982,6 +2054,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "dummy20b girl will read pf",
           useDummy: true,
@@ -1999,6 +2072,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "dummy24a I read and research",
           useDummy: true,
@@ -2016,6 +2090,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "dummy24b I/you read and research",
           useDummy: true,
@@ -2033,6 +2108,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "dummy24c read and research",
           useDummy: true,
@@ -2067,6 +2143,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "red/blue apple",
         })
@@ -2086,6 +2163,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "red apple",
         })
@@ -2102,6 +2180,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "red apples",
         })
@@ -2118,6 +2197,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "red girls",
         })
@@ -2140,6 +2220,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "girl is wearing shirt",
         })
@@ -2156,6 +2237,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "shirt is in wardrobe",
         })
@@ -2171,6 +2253,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "I often wear shirt",
         })
@@ -2187,6 +2270,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "boys are male",
         })
@@ -2202,9 +2286,7 @@ describe("/api", () => {
     it("#pal01-01a GET 200 YES: Returns a sentence", () => {
       return request(app)
         .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-        })
+        .send({ hideClarifiers: true, questionLanguage: "POL" })
         .expect(200)
         .then((res) => {
           expect(res.body.questionSentenceArr[0]).to.be.a("String");
@@ -2215,6 +2297,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaId: "POL-dummy01",
           useDummy: true,
@@ -2231,6 +2314,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaId: "POL-dummy02",
           useDummy: true,
@@ -2247,6 +2331,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaId: "POL-dummy03",
           useDummy: true,
@@ -2263,6 +2348,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaId: "POL-dummy04",
           useDummy: true,
@@ -2279,6 +2365,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaId: "POL-dummy05",
           useDummy: true,
@@ -2293,6 +2380,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaId: "POL-dummy06",
           useDummy: true,
@@ -2307,6 +2395,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaId: "POL-dummy07",
           useDummy: true,
@@ -2323,6 +2412,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaId: "POL-dummy08",
           useDummy: true,
@@ -2337,6 +2427,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaId: "POL-dummy19",
           useDummy: true,
@@ -2351,6 +2442,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "I have apple",
         })
@@ -2364,6 +2456,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "dummy09",
           useDummy: true,
@@ -2381,6 +2474,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "dummy10",
           useDummy: true,
@@ -2401,6 +2495,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "I have APPLE",
           useDummy: true,
@@ -2416,6 +2511,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
+          hideClarifiers: true,
           questionLanguage: "POL",
           sentenceFormulaSymbol: "I have APPLE/SHIRT",
           useDummy: true,

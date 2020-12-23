@@ -13,6 +13,7 @@ exports.fetchPalette = (req) => {
     useDummy,
     questionLanguage,
     answerLanguage,
+    hideClarifiers,
   } = req.body;
 
   let questionSentenceData = scUtils.processSentenceFormula(
@@ -26,14 +27,19 @@ exports.fetchPalette = (req) => {
   sentenceFormulaId = questionSentenceData.sentenceFormulaId;
   sentenceFormulaSymbol = questionSentenceData.sentenceFormulaSymbol;
 
+  console.log("palette.model > questionSentenceData.arrayOfOutputArrays");
   gpUtils.consoleLogObjectAtTwoLevels(questionSentenceData.arrayOfOutputArrays);
 
   let questionResponseObj = scUtils.giveFinalSentences(
     questionSentenceData.arrayOfOutputArrays,
     questionSentenceData.sentenceFormula,
     questionSentenceData.errorInSentenceCreation,
-    kumquat
+    kumquat,
+    questionLanguage,
+    hideClarifiers
   );
+
+  console.log("questionResponseObj", questionResponseObj);
 
   if (true) {
     console.log(
@@ -84,14 +90,16 @@ exports.fetchPalette = (req) => {
           answerSentenceData.arrayOfOutputArrays,
           answerSentenceData.sentenceFormula,
           answerSentenceData.errorInSentenceCreation,
-          kumquat
+          kumquat,
+          answerLanguage
         );
       } else {
         let subsequentAnswerResponseObj = scUtils.giveFinalSentences(
           answerSentenceData.arrayOfOutputArrays,
           answerSentenceData.sentenceFormula,
           answerSentenceData.errorInSentenceCreation,
-          kumquat
+          kumquat,
+          answerLanguage
         );
 
         subsequentAnswerResponseObj.finalSentenceArr.forEach(

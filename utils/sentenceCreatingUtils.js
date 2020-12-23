@@ -442,7 +442,9 @@ exports.giveFinalSentences = (
   arrayOfOutputArrays,
   sentenceFormula,
   errorInSentenceCreation,
-  kumquat
+  kumquat,
+  currentLanguage,
+  hideClarifiers
 ) => {
   if (errorInSentenceCreation.errorMessage) {
     let errorMessage = {
@@ -469,7 +471,9 @@ exports.giveFinalSentences = (
       let finalSentences = exports.buildSentenceString(
         outputArr,
         sentenceFormula,
-        kumquat
+        kumquat,
+        currentLanguage,
+        hideClarifiers
       );
 
       finalSentences.forEach((finalSentence) => {
@@ -482,7 +486,9 @@ exports.giveFinalSentences = (
     let finalSentences = exports.buildSentenceString(
       outputArr,
       sentenceFormula,
-      kumquat
+      kumquat,
+      currentLanguage,
+      hideClarifiers
     );
 
     finalSentences.forEach((finalSentence) => {
@@ -497,9 +503,27 @@ exports.giveFinalSentences = (
   return answerResponseObj;
 };
 
-exports.buildSentenceString = (unorderedArr, sentenceFormula, kumquat) => {
+exports.buildSentenceString = (
+  unorderedArr,
+  sentenceFormula,
+  kumquat,
+  currentLanguage,
+  hideClarifiers
+) => {
+  console.log("buildSentenceString was given", {
+    unorderedArr,
+    sentenceFormula,
+    kumquat,
+    currentLanguage,
+    hideClarifiers,
+  });
+
   let arrayOfSelectedWordsArrays = [];
   let producedSentences = [];
+
+  if (!kumquat && !hideClarifiers) {
+    otUtils.addClarifiers(unorderedArr, currentLanguage);
+  }
 
   if (!sentenceFormula.primaryOrders || !sentenceFormula.primaryOrders.length) {
     let selectedWordsArr = unorderedArr.map((obj) => obj.selectedWord);

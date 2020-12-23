@@ -585,21 +585,25 @@ exports.giveValueFromObjectByRoute = (obj, route) => {
   }
 };
 
-exports.findSynhomographs = (arrayOfLemmaObjects, currentLanguage) => {
-  // console.log(
-  //   "fxn findSynhomographs was given arrayOfLemmaObjects:",
-  //   arrayOfLemmaObjects
-  // );
+exports.findSynhomographs = (
+  arrayOfLemmaObjects,
+  arrayOfWordTypes,
+  currentLanguage
+) => {
+  console.log("findSynhomographs fxn was given", {
+    arrayOfLemmaObjects,
+    arrayOfWordTypes,
+    currentLanguage,
+  });
 
   let resArr = [];
 
-  arrayOfLemmaObjects.forEach((lemmaObject) => {
+  arrayOfLemmaObjects.forEach((lemmaObject, index) => {
     // console.log("kkk", lemmaObject);
 
-    currentLanguage = lemmaObject.id.slice(0, 3).toUpperCase();
     let inflectionLabelChain =
       refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
-        lemmaObject.wordtype
+        arrayOfWordTypes[index]
       ];
 
     let routesAndValues = exports.giveRoutesAndTerminalValuesFromObject(
@@ -663,4 +667,62 @@ exports.findSynhomographs = (arrayOfLemmaObjects, currentLanguage) => {
   });
 
   return resArr;
+};
+
+exports.addClarifiers = (arrayOfOutputUnits, currentLanguage) => {
+  arrayOfOutputUnits.forEach((outputUnit) => {
+    let {
+      selectedLemmaObject,
+      drillPath,
+      structureChunk,
+      selectedWord,
+    } = outputUnit;
+    // {
+    //   selectedLemmaObject: {
+    //     translations: { ENG: [Array], POL: [Array] },
+    //     tags: [ 'animate', 'animal', 'farmyard', 'concrete' ],
+    //     lemma: 'sheep',
+    //     id: 'eng-nou-008',
+    //     gender: 'n',
+    //     deficient: false,
+    //     inflections: { singular: [Object], plural: [Object] }
+    //   },
+    //   selectedWord: 'sheep',
+    //   drillPath: [ [ 'number', 'plural' ], [ 'gcase', 'nom' ] ],
+    //   structureChunk: {
+    //     chunkId: 'nou-1',
+    //     wordtype: 'noun',
+    //     andTags: [ 'farmyard' ],
+    //     gcase: [ 'nom' ],
+    //     number: [ 'plural' ]
+    //   }
+    // }
+    let synhomographData = exports.findSynhomographs(
+      [selectedLemmaObject],
+      [structureChunk.wordtype],
+      currentLanguage
+    )[0];
+
+    synhomographData.synhomographs.forEach((synhomDataUnit) => {
+      if (selectedWord === synhomDataUnit.terminalValue) {
+        // console.log(synhomDataUnit);
+        // {
+        //   terminalValue: 'sheep',
+        //   inflectionPaths: [ [ 'singular', 'nom' ], [ 'plural', 'nom' ] ],
+        //   labelsWhereTheyDiffer: [ 'number' ]
+        // }
+
+        let clarifierArr = [];
+        synhomDataUnit.labelsWhereTheyDiffer.forEach((label) => {
+          clarifierArr.push(structureChunk[label]);
+        });
+
+        outputUnit.selectedWord = `${selectedWord} (${clarifierArr.join(
+          ", "
+        )})`;
+      }
+    });
+
+    // throw "oi";
+  });
 };
