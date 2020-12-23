@@ -824,4 +824,19 @@ exports.dummySentenceFormulasBank = {
     ],
     primaryOrders: [],
   },
+  dummy36: {
+    sentenceFormulaSymbol: "dummy36",
+    sentenceFormulaId: "POL-dummy36",
+    translations: { ENG: "ENG-dummy36" },
+    structure: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        andTags: ["farmyard"],
+        // specificLemmas: [],
+        // gcase: ["nom"]
+      },
+    ],
+    primaryOrders: [],
+  },
 };

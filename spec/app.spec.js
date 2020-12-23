@@ -210,6 +210,46 @@ function checkSentenceTranslations(
 describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
+  describe("/palette - Stage 7: Further linguistic features.", () => {
+    it("#pal##-01a Check if tenseDescription still there on output when ENG questionLanguage.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage,
+          // answerLanguage,
+          sentenceFormulaSymbol: "dummy35",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          // expect(["Am.", "Are.", "Is.", "Was.", "Were."]).to.include(
+          //   res.body.questionSentenceArr[0]
+          // );
+        });
+    });
+    it.only("#pal##-02a Check if prompt given when ENG Q sentence with two POL translations.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy36",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          expect(["Sheep."]).to.include(res.body.questionSentenceArr[0]);
+        });
+    });
+  });
 
   xdescribe("/palette - Stage 7: Further linguistic features.", () => {
     it("#pal07-01a GET 200 YES: Conjugate ENG be correctly.", () => {

@@ -287,6 +287,36 @@ let nounSet = [
       },
     },
   },
+  {
+    //links
+    translations: { ENG: ["book"] },
+    tags: ["concrete", "animal", "animate", "farmyard"],
+    //selectors
+    lemma: "owca",
+    id: "pol-nou-011",
+    gender: "f",
+    //notes
+    deficient: false,
+    //inflections
+    inflections: {
+      singular: {
+        nom: "owca",
+        gen: "owcy",
+        dat: "owcy",
+        acc: "owcę",
+        ins: "owcą",
+        loc: "owcy",
+      },
+      plural: {
+        nom: "owce",
+        gen: "owiec",
+        dat: "owcom",
+        acc: "owce",
+        ins: "owcami",
+        loc: "owcach",
+      },
+    },
+  },
 ];
 
 let pronounSet = [

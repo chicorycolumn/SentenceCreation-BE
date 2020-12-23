@@ -548,3 +548,122 @@ exports.findObjectInNestedObject = (source, identifyingData, alsoReturnKey) => {
     });
   }
 };
+
+exports.giveRoutesAndTerminalValuesFromObject = (obj) => {
+  const nestedRoutes = exports.extractNestedRoutes(obj).routesByNesting;
+
+  // console.log("nnn", nestedRoutes);
+
+  let resArr = [];
+
+  nestedRoutes.forEach((nestedRoute) => {
+    let value = exports.giveValueFromObjectByRoute(obj, nestedRoute);
+
+    //Splits terminal values that are arrays, into different unit, with identical routes.
+    if (Array.isArray(value)) {
+      value.forEach((subvalue) => {
+        resArr.push({ terminalValue: subvalue, nestedRoute });
+      });
+    } else {
+      resArr.push({ terminalValue: value, nestedRoute });
+    }
+
+    //Leaves terminal values that are arrays, as is.
+    // resArr.push({ value, nestedRoute });
+  });
+
+  return resArr;
+};
+
+exports.giveValueFromObjectByRoute = (obj, route) => {
+  return interiorFunction(obj, route);
+
+  function interiorFunction(obj, route) {
+    let key = route[0];
+    if (!gpUtils.isKeyValueTypeObject(obj[key])) {
+      return obj[key];
+    } else {
+      return interiorFunction(obj[key], route.slice(1));
+    }
+  }
+};
+
+exports.findSynhomographs = (arrayOfLemmaObjects, currentLanguage) => {
+  // console.log(
+  //   "fxn findSynhomographs was given arrayOfLemmaObjects:",
+  //   arrayOfLemmaObjects
+  // );
+
+  let resArr = [];
+
+  arrayOfLemmaObjects.forEach((lemmaObject) => {
+    // console.log("kkk", lemmaObject);
+
+    currentLanguage = lemmaObject.id.slice(0, 3).toUpperCase();
+    let inflectionLabelChain =
+      refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
+        lemmaObject.wordtype
+      ];
+
+    let routesAndValues = exports.giveRoutesAndTerminalValuesFromObject(
+      lemmaObject.inflections
+    );
+
+    // console.log("lll", routesAndValues);
+
+    let tempArr = [];
+
+    routesAndValues.forEach((item) => {
+      let { terminalValue, nestedRoute } = item;
+
+      // console.log("mmm", { terminalValue, nestedRoute });
+
+      let existing = tempArr.find(
+        (item) => item.terminalValue === terminalValue
+      );
+
+      if (existing) {
+        existing.inflectionPaths.push(nestedRoute.slice(0));
+      } else {
+        tempArr.push({
+          terminalValue,
+          inflectionPaths: [nestedRoute.slice(0)],
+        });
+      }
+    });
+
+    let synhomographs = tempArr.filter(
+      (item) => item.inflectionPaths.length > 1
+    );
+
+    if (synhomographs.length) {
+      synhomographs.forEach((synhomDataUnit) => {
+        let { inflectionPaths } = synhomDataUnit;
+        let labelsWhereTheyDiffer = [];
+
+        inflectionLabelChain.forEach((inflectionLabel, index) => {
+          let allValuesForThisLabel = inflectionPaths.map(
+            (path) => path[index]
+          );
+          if (
+            !allValuesForThisLabel.every(
+              (value) => value === allValuesForThisLabel[0]
+            )
+          ) {
+            labelsWhereTheyDiffer.push(inflectionLabel);
+          }
+        });
+
+        synhomDataUnit.labelsWhereTheyDiffer = labelsWhereTheyDiffer;
+      });
+
+      resArr.push({
+        lemmaObjectID: lemmaObject.id,
+        inflectionLabelChain,
+        synhomographs,
+      });
+    }
+  });
+
+  return resArr;
+};

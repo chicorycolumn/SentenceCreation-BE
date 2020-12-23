@@ -3,7 +3,277 @@ const {
   extractNestedRoutes,
   concoctNestedRoutes,
   findObjectInNestedObject,
+  giveRoutesAndTerminalValuesFromObject,
+  findSynhomographs,
 } = require("../utils/objectTraversingUtils.js");
+
+describe("findSynhomographs", () => {
+  it("#scu4.1 Produces empty array when no lemmaObjects given.", () => {
+    const input = [];
+    const expected = [];
+    let actual = findSynhomographs(input);
+    console.log(actual);
+    expect(actual).to.eql(expected);
+  });
+  it("#scu4.2 Produces empty array when no lemmaObjects with any synhomographs are given.", () => {
+    const input = [
+      {
+        lemma: "bike",
+        id: "pol-bike001",
+        wordtype: "noun",
+        inflections: {
+          singular: {
+            nom: "bikey",
+            gen: "bikaroo",
+          },
+          plural: {
+            nom: "bikeys",
+            gen: "bikaroos",
+          },
+        },
+      },
+      {
+        lemma: "trike",
+        id: "pol-trike001",
+        wordtype: "noun",
+        inflections: {
+          singular: {
+            nom: "trikey",
+            gen: "trikaroo",
+          },
+          plural: {
+            nom: "trikeys",
+            gen: "trikaroos",
+          },
+        },
+      },
+    ];
+    const expected = [];
+    let actual = findSynhomographs(input);
+    console.log(actual);
+    expect(actual).to.eql(expected);
+  });
+  it("#scu4.3 Produces synhomographs when one pair present in one lemmaObject.", () => {
+    const input = [
+      {
+        lemma: "bike",
+        id: "pol-bike001",
+        wordtype: "noun",
+        inflections: {
+          singular: {
+            nom: "bike",
+            gen: "bikeA",
+            dat: "bikeB",
+            acc: "bikeC",
+            ins: "bikeD",
+            loc: "bikeE",
+          },
+          plural: {
+            nom: "bike",
+            gen: "bikeG",
+            dat: "bikeH",
+            acc: "bikeF",
+            ins: "bikeI",
+            loc: "bikeJ",
+          },
+        },
+      },
+    ];
+
+    const expected = [
+      {
+        lemmaObjectID: "pol-bike001",
+        inflectionLabelChain: ["number", "gcase"],
+        synhomographs: [
+          {
+            terminalValue: "bike",
+            inflectionPaths: [
+              ["singular", "nom"],
+              ["plural", "nom"],
+            ],
+            labelsWhereTheyDiffer: ["number"],
+          },
+        ],
+      },
+    ];
+    let actual = findSynhomographs(input);
+    console.log(actual);
+    expect(actual).to.eql(expected);
+  });
+  it("#scu4.4 Produces synhomographs when multiple pairs present in one lemmaObject.", () => {
+    const input = [
+      {
+        lemma: "bike",
+        id: "pol-bike001",
+        wordtype: "noun",
+        inflections: {
+          singular: {
+            nom: "11",
+            gen: "12",
+            dat: "13",
+            acc: "14",
+            ins: "11",
+            loc: "11",
+          },
+          plural: {
+            nom: "15",
+            gen: "16",
+            dat: "14",
+            acc: "16",
+            ins: "17",
+            loc: "18",
+          },
+        },
+      },
+    ];
+
+    const expected = [
+      {
+        lemmaObjectID: "pol-bike001",
+        inflectionLabelChain: ["number", "gcase"],
+        synhomographs: [
+          {
+            terminalValue: "11",
+            inflectionPaths: [
+              ["singular", "nom"],
+              ["singular", "ins"],
+              ["singular", "loc"],
+            ],
+            labelsWhereTheyDiffer: ["gcase"],
+          },
+          {
+            terminalValue: "14",
+            inflectionPaths: [
+              ["singular", "acc"],
+              ["plural", "dat"],
+            ],
+            labelsWhereTheyDiffer: ["number", "gcase"],
+          },
+          {
+            terminalValue: "16",
+            inflectionPaths: [
+              ["plural", "gen"],
+              ["plural", "acc"],
+            ],
+            labelsWhereTheyDiffer: ["gcase"],
+          },
+        ],
+      },
+    ];
+    let actual = findSynhomographs(input);
+    console.log(actual);
+    expect(actual).to.eql(expected);
+  });
+  it("#scu4.5 Produces synhomographs when multiple pairs present in multiple lemmaObjects.", () => {
+    const input = [
+      {
+        lemma: "bike",
+        id: "pol-bike001",
+        wordtype: "noun",
+        inflections: {
+          singular: {
+            nom: "11",
+            gen: "12",
+            dat: "13",
+            acc: "14",
+            ins: "11",
+            loc: "11",
+          },
+          plural: {
+            nom: "15",
+            gen: "16",
+            dat: "14",
+            acc: "16",
+            ins: "17",
+            loc: "18",
+          },
+        },
+      },
+      {
+        lemma: "trike",
+        id: "pol-trike001",
+        wordtype: "noun",
+        inflections: {
+          singular: {
+            nom: "trikey",
+            gen: "trikaroo",
+          },
+          plural: {
+            nom: "trikeys",
+            gen: "trikaroos",
+          },
+        },
+      },
+      {
+        lemma: "unike",
+        id: "pol-unike001",
+        wordtype: "noun",
+        inflections: {
+          singular: {
+            nom: "unikey",
+            acc: "unikey",
+          },
+          plural: {
+            nom: "unikeys",
+            acc: "unikey",
+          },
+        },
+      },
+    ];
+
+    const expected = [
+      {
+        lemmaObjectID: "pol-bike001",
+        inflectionLabelChain: ["number", "gcase"],
+        synhomographs: [
+          {
+            terminalValue: "11",
+            inflectionPaths: [
+              ["singular", "nom"],
+              ["singular", "ins"],
+              ["singular", "loc"],
+            ],
+            labelsWhereTheyDiffer: ["gcase"],
+          },
+          {
+            terminalValue: "14",
+            inflectionPaths: [
+              ["singular", "acc"],
+              ["plural", "dat"],
+            ],
+            labelsWhereTheyDiffer: ["number", "gcase"],
+          },
+          {
+            terminalValue: "16",
+            inflectionPaths: [
+              ["plural", "gen"],
+              ["plural", "acc"],
+            ],
+            labelsWhereTheyDiffer: ["gcase"],
+          },
+        ],
+      },
+      {
+        lemmaObjectID: "pol-unike001",
+        inflectionLabelChain: ["number", "gcase"],
+        synhomographs: [
+          {
+            terminalValue: "unikey",
+            inflectionPaths: [
+              ["singular", "nom"],
+              ["singular", "acc"],
+              ["plural", "acc"],
+            ],
+            labelsWhereTheyDiffer: ["number", "gcase"],
+          },
+        ],
+      },
+    ];
+    let actual = findSynhomographs(input);
+    console.log(actual);
+    expect(actual).to.eql(expected);
+  });
+});
 
 describe("findObjectInNestedObject", () => {
   let testObj1 = {
@@ -335,5 +605,66 @@ describe("extractNestedRoutes", () => {
     ];
     const actual = extractNestedRoutes(input).routesByNesting;
     expect(actual).to.eql(expected);
+  });
+  it("#scu2.1 get routes from kobieta.", () => {
+    const input = {
+      //links
+      translations: { ENG: ["woman", "lady"] },
+      tags: ["animate", "person", "concrete"],
+      //selectors
+      lemma: "kobieta",
+      id: "pol-nou-001",
+      gender: "f",
+      //notes
+      deficient: false,
+      //inflections
+      inflections: {
+        singular: {
+          nom: "kobieta",
+          gen: "kobiety",
+          dat: "kobiecie",
+          acc: "kobietę",
+          ins: "kobietą",
+          loc: "kobiecie",
+        },
+        plural: {
+          nom: "kobiety",
+          gen: "kobiet",
+          dat: "kobietom",
+          acc: "kobiety",
+          ins: ["kobietami", "kobietamiamiamiami"],
+          loc: "kobietach",
+        },
+      },
+    };
+
+    let res = giveRoutesAndTerminalValuesFromObject(input);
+    console.log(">>>");
+    console.log(res);
+  });
+  it("#scu2.2 get routes from read.", () => {
+    const input = {
+      //links
+      translations: { ENG: ["read"], POL: ["czytać", "przeczytać"] },
+      tags: ["basic2"],
+      //selectors
+      lemma: "read",
+      id: "eng-ver-003",
+      //notes
+      defective: false,
+      //inflections
+      inflections: {
+        infinitive: "read",
+        verbal: {},
+        v2: "read",
+        v3: "read",
+        thirdPS: "reads",
+        gerund: "reading",
+      },
+    };
+
+    let res = giveRoutesAndTerminalValuesFromObject(input);
+    console.log(">>>");
+    console.log(res);
   });
 });

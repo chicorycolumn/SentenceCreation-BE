@@ -175,6 +175,28 @@ let nounSet = [
       },
     },
   },
+  {
+    //links
+    translations: { ENG: ["sheep"], POL: ["owca"] },
+    tags: ["animate", "animal", "farmyard", "concrete"],
+    //selectors
+    lemma: "sheep",
+    id: "eng-nou-008",
+    gender: "n",
+    //notes
+    deficient: false,
+    //inflections
+    inflections: {
+      singular: {
+        nom: "sheep",
+        gen: "sheep's",
+      },
+      plural: {
+        nom: "sheep",
+        gen: "sheep's",
+      },
+    },
+  },
 ];
 
 let adjectiveSet = [

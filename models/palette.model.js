@@ -26,6 +26,9 @@ exports.fetchPalette = (req) => {
   sentenceFormulaId = questionSentenceData.sentenceFormulaId;
   sentenceFormulaSymbol = questionSentenceData.sentenceFormulaSymbol;
 
+  console.log("ttt");
+  gpUtils.consoleLogObjectAtTwoLevels(questionSentenceData.arrayOfOutputArrays);
+
   let questionResponseObj = scUtils.giveFinalSentences(
     questionSentenceData.arrayOfOutputArrays,
     questionSentenceData.sentenceFormula,
