@@ -74,6 +74,8 @@ exports.fetchPalette = (req) => {
       throw "palette.model > I was asked to give translations, but the question sentence formula did not have any translations listed.";
     }
 
+    console.log("bbb translations", translations);
+
     translations.forEach((translationSentenceFormulaId) => {
       let answerSentenceData = scUtils.processSentenceFormula(
         answerLanguage,

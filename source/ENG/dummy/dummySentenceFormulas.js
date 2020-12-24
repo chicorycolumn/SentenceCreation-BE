@@ -200,4 +200,22 @@ exports.dummySentenceFormulasBank = {
     ],
     primaryOrders: [],
   },
+  dummy37: {
+    sentenceFormulaSymbol: "dummy37",
+    sentenceFormulaId: "ENG-dummy37",
+    translations: { POL: ["POL-dummy37"] },
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        // andTags: ["farmyard"],
+        specificLemmas: ["be"],
+        number: ["singular"],
+        tenseDecription: ["present simple"],
+        person: ["2per"],
+        // nixedClarifiers: ["person"],
+      },
+    ],
+    primaryOrders: [],
+  },
 };

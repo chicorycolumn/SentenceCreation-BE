@@ -9,10 +9,22 @@ const gpUtils = require("../utils/generalPurposeUtils.js");
 
 const generalTranslatedSentencesRef = {
   //This is a Washburne style reference object.
-  sheep: {
+  be_withClarifiers_ENG_Q: {
+    "POL->ENG": [
+      { POL: "Jesteś.", ENG: ["Are (singular)."] },
+      { POL: "Jesteście.", ENG: ["Are (plural)."] },
+    ],
+  },
+  sheep_withClarifiers_ENG_Q: {
     "POL->ENG": [
       { POL: "Owca.", ENG: ["Sheep (singular)."] },
       { POL: "Owce.", ENG: ["Sheep (plural)."] },
+    ],
+  },
+  sheep_withClarifiers_POL_Q: {
+    "POL->ENG": [
+      { POL: "Owca.", ENG: ["Sheep."] },
+      { POL: "Owce (nom).", ENG: ["Sheep."] },
     ],
   },
   be: {
@@ -217,7 +229,7 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
   describe("/palette - Stage #: Scratchpad testing.", () => {
-    it("#pal##-01a Check if tenseDescription still there on output when ENG questionLanguage.", () => {
+    xit("#pal##-01a Check if tenseDescription still there on output when ENG questionLanguage.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -238,7 +250,7 @@ describe("/api", () => {
           // );
         });
     });
-    it("#pal##-02a SHEEP: Check if prompt given when ENG Q sentence with two POL translations.", () => {
+    it("#pal##-02a SHEEP: Add clarifiers to synhomographs for If-PW. ENG to POL", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -257,8 +269,32 @@ describe("/api", () => {
             res,
             questionLanguage,
             answerLanguage,
-            "sheep",
+            "sheep_withClarifiers_ENG_Q",
             ["Sheep (singular).", "Sheep (plural)."]
+          );
+        });
+    });
+    it("#pal##-02b SHEEP: Add clarifiers to synhomographs for If-PW. POL to ENG", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: false,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy36",
+        })
+        .expect(200)
+        .then((res) => {
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "sheep_withClarifiers_POL_Q",
+            ["Owce (nom).", "Owca."]
           );
         });
     });

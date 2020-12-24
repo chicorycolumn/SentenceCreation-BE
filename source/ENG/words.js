@@ -197,6 +197,54 @@ let nounSet = [
       },
     },
   },
+  {
+    //links
+    translations: { ENG: ["nut"], POL: ["orzech"] },
+    tags: ["allohom testing", "edible2"],
+    allohomClarifier: { text: "food", emoji: "🥜" },
+    hideAllohomClarifier: false,
+    //selectors
+    lemma: "nut",
+    id: "eng-nou-009",
+    gender: "n",
+    //notes
+    deficient: false,
+    //inflections
+    inflections: {
+      singular: {
+        nom: "nut",
+        gen: "nut's",
+      },
+      plural: {
+        nom: "nuts",
+        gen: "nuts'",
+      },
+    },
+  },
+  {
+    //links
+    translations: { ENG: ["nut"], POL: ["nakrętka"] },
+    tags: ["allohom testing", "toolbox"],
+    allohomClarifier: { text: "made of metal", emoji: "🔩" },
+    hideAllohomClarifier: false,
+    //selectors
+    lemma: "nut",
+    id: "eng-nou-010",
+    gender: "n",
+    //notes
+    deficient: false,
+    //inflections
+    inflections: {
+      singular: {
+        nom: "nut",
+        gen: "nut's",
+      },
+      plural: {
+        nom: "nuts",
+        gen: "nuts'",
+      },
+    },
+  },
 ];
 
 let adjectiveSet = [

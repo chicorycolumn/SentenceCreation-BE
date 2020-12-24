@@ -64,7 +64,14 @@ exports.allFeatureValues = {
 };
 
 exports.uninflectedForms = {
-  POL: { verb: ["contemporaryAdverbial", "anteriorAdverbial"] },
+  POL: {
+    verb: [
+      "contemporaryAdverbial",
+      "anteriorAdverbial",
+      // "activeAdjectival", Would need to be conjugated as an adjective.
+      // "passiveAdjectival", Would need to be conjugated as an adjective.
+    ],
+  },
   ENG: {
     verb: [],
   },

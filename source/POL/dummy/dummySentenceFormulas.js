@@ -827,13 +827,28 @@ exports.dummySentenceFormulasBank = {
   dummy36: {
     sentenceFormulaSymbol: "dummy36",
     sentenceFormulaId: "POL-dummy36",
-    translations: { ENG: "ENG-dummy36" },
+    translations: { ENG: ["ENG-dummy36"] },
     structure: [
       {
         chunkId: "nou-1",
         wordtype: "noun",
         andTags: ["farmyard"],
         // specificLemmas: [],
+        // gcase: ["nom"]
+      },
+    ],
+    primaryOrders: [],
+  },
+  dummy37: {
+    sentenceFormulaSymbol: "dummy37",
+    sentenceFormulaId: "POL-dummy37",
+    translations: { ENG: ["ENG-dummy37"] },
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        // andTags: ["farmyard"],
+        specificLemmas: ["być"],
         // gcase: ["nom"]
       },
     ],

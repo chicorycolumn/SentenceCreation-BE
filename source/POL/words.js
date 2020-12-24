@@ -289,7 +289,7 @@ let nounSet = [
   },
   {
     //links
-    translations: { ENG: ["book"] },
+    translations: { ENG: ["sheep"], POL: ["owca"] },
     tags: ["concrete", "animal", "animate", "farmyard"],
     //selectors
     lemma: "owca",
@@ -314,6 +314,66 @@ let nounSet = [
         acc: "owce",
         ins: "owcami",
         loc: "owcach",
+      },
+    },
+  },
+  {
+    //links
+    translations: { ENG: ["nut"] },
+    tags: ["allohom testing", "edible2"],
+    //selectors
+    lemma: "orzech",
+    id: "pol-nou-012",
+    gender: "m3",
+    //notes
+    deficient: false,
+    //inflections
+    inflections: {
+      singular: {
+        nom: "orzech",
+        gen: "orzecha",
+        dat: "orzechowi",
+        acc: ["orzech", "orzecha"],
+        ins: "orzechem",
+        loc: "orzechu",
+      },
+      plural: {
+        nom: "orzechy",
+        gen: "orzechów",
+        dat: "orzechom",
+        acc: "orzechy",
+        ins: "orzechami",
+        loc: "orzechach",
+      },
+    },
+  },
+  {
+    //links
+    translations: { ENG: ["nut"] },
+    tags: ["allohom testing", "toolbox"],
+    //selectors
+    lemma: "nakrętka",
+    id: "pol-nou-013",
+    gender: "f",
+    //notes
+    deficient: false,
+    //inflections
+    inflections: {
+      singular: {
+        nom: "nakrętka",
+        gen: "nakrętki",
+        dat: "nakrętce",
+        acc: "nakrętkę",
+        ins: "nakrętką",
+        loc: "nakrętce",
+      },
+      plural: {
+        nom: "nakrętki",
+        gen: "nakrętek",
+        dat: "nakrętkom",
+        acc: "nakrętki",
+        ins: "nakrętkami",
+        loc: "nakrętkach",
       },
     },
   },

@@ -703,25 +703,27 @@ exports.addClarifiers = (arrayOfOutputUnits, currentLanguage) => {
       currentLanguage
     )[0];
 
-    synhomographData.synhomographs.forEach((synhomDataUnit) => {
-      if (selectedWord === synhomDataUnit.terminalValue) {
-        // console.log(synhomDataUnit);
-        // {
-        //   terminalValue: 'sheep',
-        //   inflectionPaths: [ [ 'singular', 'nom' ], [ 'plural', 'nom' ] ],
-        //   labelsWhereTheyDiffer: [ 'number' ]
-        // }
+    if (synhomographData) {
+      synhomographData.synhomographs.forEach((synhomDataUnit) => {
+        if (selectedWord === synhomDataUnit.terminalValue) {
+          // console.log(synhomDataUnit);
+          // {
+          //   terminalValue: 'sheep',
+          //   inflectionPaths: [ [ 'singular', 'nom' ], [ 'plural', 'nom' ] ],
+          //   labelsWhereTheyDiffer: [ 'number' ]
+          // }
 
-        let clarifierArr = [];
-        synhomDataUnit.labelsWhereTheyDiffer.forEach((label) => {
-          clarifierArr.push(structureChunk[label]);
-        });
+          let clarifierArr = [];
+          synhomDataUnit.labelsWhereTheyDiffer.forEach((label) => {
+            clarifierArr.push(structureChunk[label]);
+          });
 
-        outputUnit.selectedWord = `${selectedWord} (${clarifierArr.join(
-          ", "
-        )})`;
-      }
-    });
+          outputUnit.selectedWord = `${selectedWord} (${clarifierArr.join(
+            ", "
+          )})`;
+        }
+      });
+    }
 
     // throw "oi";
   });
