@@ -36,6 +36,7 @@ exports.fetchPalette = (req) => {
     questionSentenceData.errorInSentenceCreation,
     kumquat,
     questionLanguage,
+    answerLanguage,
     hideClarifiers
   );
 
@@ -93,7 +94,8 @@ exports.fetchPalette = (req) => {
           answerSentenceData.sentenceFormula,
           answerSentenceData.errorInSentenceCreation,
           kumquat,
-          answerLanguage
+          answerLanguage,
+          null
         );
       } else {
         let subsequentAnswerResponseObj = scUtils.giveFinalSentences(
@@ -101,7 +103,8 @@ exports.fetchPalette = (req) => {
           answerSentenceData.sentenceFormula,
           answerSentenceData.errorInSentenceCreation,
           kumquat,
-          answerLanguage
+          answerLanguage,
+          null
         );
 
         subsequentAnswerResponseObj.finalSentenceArr.forEach(

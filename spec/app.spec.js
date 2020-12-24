@@ -9,6 +9,20 @@ const gpUtils = require("../utils/generalPurposeUtils.js");
 
 const generalTranslatedSentencesRef = {
   //This is a Washburne style reference object.
+  read_withClarifiers_ENG_Q: {
+    "POL->ENG": [
+      { POL: "Przeczytałem.", ENG: ["I read (past)."] },
+      { POL: "Przeczytałam.", ENG: ["I read (past)."] },
+      { POL: "Czytam.", ENG: ["I read (present)."] },
+    ],
+  },
+  read_withClarifiers_POL_Q: {
+    "POL->ENG": [
+      { POL: "Przeczytałem.", ENG: ["I read.", "I had read.", "I have read."] },
+      { POL: "Przeczytałam.", ENG: ["I read.", "I had read.", "I have read."] },
+      { POL: "Czytam.", ENG: ["I read.", "I am reading."] },
+    ],
+  },
   be_withClarifiers_ENG_Q: {
     "POL->ENG": [
       { POL: "Jesteś.", ENG: ["Are (singular)."] },
@@ -24,7 +38,7 @@ const generalTranslatedSentencesRef = {
   sheep_withClarifiers_POL_Q: {
     "POL->ENG": [
       { POL: "Owca.", ENG: ["Sheep."] },
-      { POL: "Owce (nom).", ENG: ["Sheep."] },
+      { POL: "Owce.", ENG: ["Sheep."] },
     ],
   },
   be: {
@@ -228,29 +242,8 @@ function checkSentenceTranslations(
 describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
-  describe("/palette - Stage #: Scratchpad testing.", () => {
-    xit("#pal##-01a Check if tenseDescription still there on output when ENG questionLanguage.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          // answerLanguage,
-          sentenceFormulaSymbol: "dummy35",
-        })
-        .expect(200)
-        .then((res) => {
-          console.log(res.body);
-          // expect(["Am.", "Are.", "Is.", "Was.", "Were."]).to.include(
-          //   res.body.questionSentenceArr[0]
-          // );
-        });
-    });
-    it("#pal##-02a SHEEP: Add clarifiers to synhomographs for If-PW. ENG to POL", () => {
+  describe.only("/palette - Stage 8: Synhomographs.", () => {
+    it("#pal08-01a (If-PW: clarify Inflections) 'sheep': ENG to POL. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -274,7 +267,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal##-02b SHEEP: Add clarifiers to synhomographs for If-PW. POL to ENG", () => {
+    it("#pal08-01b (If-PW: clarify Inflections) 'sheep': POL to ENG. Don't expect clarifiers.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -294,7 +287,55 @@ describe("/api", () => {
             questionLanguage,
             answerLanguage,
             "sheep_withClarifiers_POL_Q",
-            ["Owce (nom).", "Owca."]
+            ["Owce.", "Owca."]
+          );
+        });
+    });
+    it("#pal08-06a (Ad-PW: clarify hybridSelectors) 'read': ENG to POL. Expect clarifiers.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: false,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy38",
+        })
+        .expect(200)
+        .then((res) => {
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "read_withClarifiers_ENG_Q",
+            ["I read (present).", "I read (past)."]
+          );
+        });
+    });
+    it("#pal08-06b (Ad-PW: clarify hybridSelectors) 'read': POL to ENG. Don't expect clarifiers.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: false,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy38",
+        })
+        .expect(200)
+        .then((res) => {
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "read_withClarifiers_POL_Q",
+            ["Czytam.", "Przeczytałem.", "Przeczytałam."]
           );
         });
     });

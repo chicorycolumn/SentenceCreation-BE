@@ -47,6 +47,8 @@ let inflectorRef = {
   ],
 };
 
+exports.addClarifiersSpecific = () => {};
+
 exports.adjustStructureChunksInIfPW = (structureChunk) => {};
 
 exports.adjustTenseDescriptions = () => {};

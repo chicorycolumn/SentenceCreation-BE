@@ -3,7 +3,6 @@ const gpUtils = require("./generalPurposeUtils.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
 const refObj = require("./referenceObjects.js");
 const allLangUtils = require("../utils/allLangUtils.js");
-const { head } = require("../app.js");
 
 exports.processSentenceFormula = (
   currentLanguage,
@@ -444,6 +443,7 @@ exports.giveFinalSentences = (
   errorInSentenceCreation,
   kumquat,
   currentLanguage,
+  answerLanguage,
   hideClarifiers
 ) => {
   if (errorInSentenceCreation.errorMessage) {
@@ -473,6 +473,7 @@ exports.giveFinalSentences = (
         sentenceFormula,
         kumquat,
         currentLanguage,
+        null,
         hideClarifiers
       );
 
@@ -488,6 +489,7 @@ exports.giveFinalSentences = (
       sentenceFormula,
       kumquat,
       currentLanguage,
+      answerLanguage,
       hideClarifiers
     );
 
@@ -508,6 +510,7 @@ exports.buildSentenceString = (
   sentenceFormula,
   kumquat,
   currentLanguage,
+  answerLanguage,
   hideClarifiers
 ) => {
   console.log("buildSentenceString was given", {
@@ -522,7 +525,14 @@ exports.buildSentenceString = (
   let producedSentences = [];
 
   if (!kumquat && !hideClarifiers) {
-    otUtils.addClarifiers(unorderedArr, currentLanguage);
+    otUtils.addClarifiers(unorderedArr, currentLanguage, answerLanguage);
+  }
+
+  if (!kumquat && !hideClarifiers) {
+    console.log(
+      "Helga Rosenthal says unorderedArr should now have a clarifier for 'read'"
+    );
+    gpUtils.consoleLogObjectAtTwoLevels(unorderedArr);
   }
 
   if (!sentenceFormula.primaryOrders || !sentenceFormula.primaryOrders.length) {

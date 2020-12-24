@@ -160,7 +160,7 @@ exports.findMatchingLemmaObjectThenWord = (
           );
 
           if (!adhocArr || !adhocArr.length) {
-            throw "No members were found in the adhocArr from OT:findMatching, path 3A-2 (ie tenseDecription).";
+            throw "No members were found in the adhocArr from OT:findMatching, path 3A-2 (ie tenseDescription).";
           }
 
           let selectedAdhocResultObj = gpUtils.selectRandom(adhocArr);
@@ -669,7 +669,15 @@ exports.findSynhomographs = (
   return resArr;
 };
 
-exports.addClarifiers = (arrayOfOutputUnits, currentLanguage) => {
+exports.addClarifiers = (
+  arrayOfOutputUnits,
+  currentLanguage,
+  answerLanguage
+) => {
+  if (!answerLanguage) {
+    throw "OT:addClarifiers says Did you mean to call me? You didn't give me an answerLanguage argument. I am only supposed to add clarifiers to the question sentence, and in order to do that I must know what the answerLanguage is going to be.";
+  }
+
   arrayOfOutputUnits.forEach((outputUnit) => {
     let {
       selectedLemmaObject,
@@ -677,6 +685,9 @@ exports.addClarifiers = (arrayOfOutputUnits, currentLanguage) => {
       structureChunk,
       selectedWord,
     } = outputUnit;
+    //
+    //console.log(outputUnit)
+    //
     // {
     //   selectedLemmaObject: {
     //     translations: { ENG: [Array], POL: [Array] },
@@ -697,34 +708,92 @@ exports.addClarifiers = (arrayOfOutputUnits, currentLanguage) => {
     //     number: [ 'plural' ]
     //   }
     // }
-    let synhomographData = exports.findSynhomographs(
-      [selectedLemmaObject],
-      [structureChunk.wordtype],
-      currentLanguage
-    )[0];
 
-    if (synhomographData) {
-      synhomographData.synhomographs.forEach((synhomDataUnit) => {
-        if (selectedWord === synhomDataUnit.terminalValue) {
-          // console.log(synhomDataUnit);
-          // {
-          //   terminalValue: 'sheep',
-          //   inflectionPaths: [ [ 'singular', 'nom' ], [ 'plural', 'nom' ] ],
-          //   labelsWhereTheyDiffer: [ 'number' ]
-          // }
+    //allowableClarifiers. Any clarifiers not in here, don't bother adding them.
+    //We're looking ahead to the answerLanguage, and thinking, hmmmmm, well right now the currentLanguage
+    //is POL, and soon the answerLanguage will be ENG. And looking it up... ENG doesn't allow "gender" as a transfer.
+    //So from that, we can surmise that ENG doesn't care about gender, and thus, won't want it as a clarifer on the POL Q sentence.
+    let allowableClarifiers =
+      refObj.lemmaObjectFeatures[answerLanguage]
+        .allowableTransfersFromQuestionStructure[structureChunk.wordtype];
 
-          let clarifierArr = [];
-          synhomDataUnit.labelsWhereTheyDiffer.forEach((label) => {
-            clarifierArr.push(structureChunk[label]);
-          });
+    console.log("aaa");
+    console.log("allowableClarifiers", allowableClarifiers);
 
-          outputUnit.selectedWord = `${selectedWord} (${clarifierArr.join(
-            ", "
-          )})`;
+    if (currentLanguage === "ENG" && structureChunk.wordtype === "verb") {
+      if (structureChunk.tenseDescription) {
+        if (
+          selectedLemmaObject.inflections.infinitive ===
+          selectedLemmaObject.inflections.v2
+        ) {
+          console.log(
+            "Molly Urushiol says: Aha! This lemmaObject '" +
+              selectedLemmaObject.lemma +
+              "' has a v1-v2 synhomograph."
+          );
+          if (
+            structureChunk.tenseDescription &&
+            structureChunk.tenseDescription.includes("past simple")
+          ) {
+            console.log(
+              "Molly Urushiol says: I'm adding a clarifier for Past Simple."
+            );
+            console.log;
+            outputUnit.selectedWord += " " + "(past)";
+            outputUnit.preventAddingClarifiers = true; // We assume that no more clarifiers are needed.
+          } else if (
+            structureChunk.tenseDescription &&
+            structureChunk.tenseDescription.includes("present simple")
+          ) {
+            console.log(
+              "Molly Urushiol says: I'm adding a clarifier for Present Simple."
+            );
+            outputUnit.selectedWord += " " + "(present)";
+            outputUnit.preventAddingClarifiers = true; // We assume that no more clarifiers are needed.
+          }
         }
-      });
+      }
     }
 
-    // throw "oi";
+    if (!outputUnit.preventAddingClarifiers) {
+      let synhomographData = exports.findSynhomographs(
+        [selectedLemmaObject],
+        [structureChunk.wordtype],
+        currentLanguage
+      )[0];
+
+      if (synhomographData) {
+        synhomographData.synhomographs.forEach((synhomDataUnit) => {
+          if (selectedWord === synhomDataUnit.terminalValue) {
+            //
+            // console.log(synhomDataUnit);
+            //
+            // {
+            //   terminalValue: 'sheep',
+            //   inflectionPaths: [ [ 'singular', 'nom' ], [ 'plural', 'nom' ] ],
+            //   labelsWhereTheyDiffer: [ 'number' ]
+            // }
+
+            let labelsWhereTheyDiffer = synhomDataUnit.labelsWhereTheyDiffer.filter(
+              (label) => allowableClarifiers.includes(label)
+            );
+
+            let clarifierArr = [];
+            labelsWhereTheyDiffer.forEach((label) => {
+              clarifierArr.push(structureChunk[label]);
+            });
+
+            if (clarifierArr.length) {
+              outputUnit.selectedWord += ` (${clarifierArr.join(", ")})`;
+            }
+          }
+        });
+      }
+    }
   });
+
+  console.log(
+    "Molly Urushiol says Okay, now we're at the end of OT:addClarifies, so it should be that the following arrayOfOutputUnits should have 'read' now with clarifier."
+  );
+  gpUtils.consoleLogObjectAtTwoLevels(arrayOfOutputUnits);
 };

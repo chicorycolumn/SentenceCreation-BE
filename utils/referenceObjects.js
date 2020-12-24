@@ -19,6 +19,12 @@ exports.lemmaObjectFeatures = {
       adjective: ["form", "number", "gender"],
       verb: ["tenseDescription", "person", "number", "gender"],
     },
+    undesiredClarifiersFromWhateverTheQLangMayBe: {
+      //Actually we can just use allowableTransfers as the wanted clarifiers, rather than needing to specify the unwanted clarifiers.
+      // noun: [],
+      // adjective: [],
+      // verb: [],
+    },
   },
   ENG: {
     selectors: {},
@@ -34,6 +40,12 @@ exports.lemmaObjectFeatures = {
       noun: ["number"],
       adjective: ["form"],
       verb: ["tenseDescription", "person", "number"],
+    },
+    undesiredClarifiersFromWhateverTheQLangMayBe: {
+      //Actually we can just use allowableTransfers as the wanted clarifiers, rather than needing to specify the unwanted clarifiers.
+      // noun: ["gender"],
+      // adjective: ["gender"],
+      // verb: ["gender"],
     },
   },
 };
