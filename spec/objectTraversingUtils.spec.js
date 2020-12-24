@@ -7,16 +7,9 @@ const {
   findSynhomographs,
 } = require("../utils/objectTraversingUtils.js");
 
-describe.only("findSynhomographs", () => {
-  it("#otu4.1 Produces empty array when no lemmaObjects given.", () => {
-    const input = [];
-    const expected = [];
-    let actual = findSynhomographs(input, ["noun", "noun", "noun"], "POL");
-    console.log(actual);
-    expect(actual).to.eql(expected);
-  });
-  it("#otu4.2 Produces empty array when no lemmaObjects with any synhomographs are given.", () => {
-    const input = [
+describe("findSynhomographs", () => {
+  it("#otu4.1 Produces empty array when no lemmaObjects with any synhomographs are given.", () => {
+    const lobjArr = [
       {
         lemma: "bike",
         id: "pol-bike001",
@@ -48,13 +41,27 @@ describe.only("findSynhomographs", () => {
         },
       },
     ];
+    const structureChunkArr = [
+      { wordtype: "noun" },
+      { wordtype: "noun" },
+      { wordtype: "noun" },
+    ];
+
     const expected = [];
-    let actual = findSynhomographs(input, ["noun", "noun", "noun"], "POL");
+    const actual = [];
+
+    lobjArr.forEach((lobj, index) => {
+      let res = findSynhomographs(lobj, structureChunkArr[index], "POL");
+      if (res) {
+        actual.push(res);
+      }
+    });
+
     console.log(actual);
     expect(actual).to.eql(expected);
   });
-  it("#otu4.3 Produces synhomographs when one pair present in one lemmaObject.", () => {
-    const input = [
+  it("#otu4.2 Produces synhomographs when one pair present in one lemmaObject.", () => {
+    const lobjArr = [
       {
         lemma: "bike",
         id: "pol-bike001",
@@ -82,7 +89,7 @@ describe.only("findSynhomographs", () => {
 
     const expected = [
       {
-        lemmaObjectID: "pol-bike001",
+        lemmaObjectId: "pol-bike001",
         inflectionLabelChain: ["number", "gcase"],
         synhomographs: [
           {
@@ -96,12 +103,25 @@ describe.only("findSynhomographs", () => {
         ],
       },
     ];
-    let actual = findSynhomographs(input, ["noun", "noun", "noun"], "POL");
+
+    const structureChunkArr = [
+      { wordtype: "noun" },
+      { wordtype: "noun" },
+      { wordtype: "noun" },
+    ];
+    const actual = [];
+
+    lobjArr.forEach((lobj, index) => {
+      let res = findSynhomographs(lobj, structureChunkArr[index], "POL");
+      if (res) {
+        actual.push(res);
+      }
+    });
     console.log(actual);
     expect(actual).to.eql(expected);
   });
-  it("#otu4.4 Produces synhomographs when multiple pairs present in one lemmaObject.", () => {
-    const input = [
+  it("#otu4.3 Produces synhomographs when multiple pairs present in one lemmaObject.", () => {
+    const lobjArr = [
       {
         lemma: "bike",
         id: "pol-bike001",
@@ -129,7 +149,7 @@ describe.only("findSynhomographs", () => {
 
     const expected = [
       {
-        lemmaObjectID: "pol-bike001",
+        lemmaObjectId: "pol-bike001",
         inflectionLabelChain: ["number", "gcase"],
         synhomographs: [
           {
@@ -160,12 +180,24 @@ describe.only("findSynhomographs", () => {
         ],
       },
     ];
-    let actual = findSynhomographs(input, ["noun", "noun", "noun"], "POL");
+    const structureChunkArr = [
+      { wordtype: "noun" },
+      { wordtype: "noun" },
+      { wordtype: "noun" },
+    ];
+    const actual = [];
+
+    lobjArr.forEach((lobj, index) => {
+      let res = findSynhomographs(lobj, structureChunkArr[index], "POL");
+      if (res) {
+        actual.push(res);
+      }
+    });
     console.log(actual);
     expect(actual).to.eql(expected);
   });
-  it("#otu4.5 Produces synhomographs when multiple pairs present in multiple lemmaObjects.", () => {
-    const input = [
+  it("#otu4.4 Produces synhomographs when multiple pairs present in multiple lemmaObjects.", () => {
+    const lobjArr = [
       {
         lemma: "bike",
         id: "pol-bike001",
@@ -223,7 +255,7 @@ describe.only("findSynhomographs", () => {
 
     const expected = [
       {
-        lemmaObjectID: "pol-bike001",
+        lemmaObjectId: "pol-bike001",
         inflectionLabelChain: ["number", "gcase"],
         synhomographs: [
           {
@@ -254,7 +286,7 @@ describe.only("findSynhomographs", () => {
         ],
       },
       {
-        lemmaObjectID: "pol-unike001",
+        lemmaObjectId: "pol-unike001",
         inflectionLabelChain: ["number", "gcase"],
         synhomographs: [
           {
@@ -269,7 +301,19 @@ describe.only("findSynhomographs", () => {
         ],
       },
     ];
-    let actual = findSynhomographs(input, ["noun", "noun", "noun"], "POL");
+    const structureChunkArr = [
+      { wordtype: "noun" },
+      { wordtype: "noun" },
+      { wordtype: "noun" },
+    ];
+    const actual = [];
+
+    lobjArr.forEach((lobj, index) => {
+      let res = findSynhomographs(lobj, structureChunkArr[index], "POL");
+      if (res) {
+        actual.push(res);
+      }
+    });
     console.log(actual);
     expect(actual).to.eql(expected);
   });

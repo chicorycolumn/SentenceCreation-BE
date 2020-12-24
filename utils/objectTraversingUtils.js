@@ -585,88 +585,72 @@ exports.giveValueFromObjectByRoute = (obj, route) => {
   }
 };
 
-exports.findSynhomographs = (
-  arrayOfLemmaObjects,
-  arrayOfWordTypes,
-  currentLanguage
-) => {
+exports.findSynhomographs = (lemmaObject, structureChunk, currentLanguage) => {
   console.log("findSynhomographs fxn was given", {
-    arrayOfLemmaObjects,
-    arrayOfWordTypes,
+    lemmaObject,
+    structureChunk,
     currentLanguage,
   });
 
-  let resArr = [];
+  // console.log("kkk", lemmaObject);
 
-  arrayOfLemmaObjects.forEach((lemmaObject, index) => {
-    // console.log("kkk", lemmaObject);
+  let inflectionLabelChain =
+    refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
+      structureChunk.wordtype
+    ];
 
-    let inflectionLabelChain =
-      refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
-        arrayOfWordTypes[index]
-      ];
+  let routesAndValues = exports.giveRoutesAndTerminalValuesFromObject(
+    lemmaObject.inflections
+  );
 
-    let routesAndValues = exports.giveRoutesAndTerminalValuesFromObject(
-      lemmaObject.inflections
-    );
+  // console.log("lll", routesAndValues);
 
-    // console.log("lll", routesAndValues);
+  let tempArr = [];
 
-    let tempArr = [];
+  routesAndValues.forEach((item) => {
+    let { terminalValue, nestedRoute } = item;
 
-    routesAndValues.forEach((item) => {
-      let { terminalValue, nestedRoute } = item;
+    // console.log("mmm", { terminalValue, nestedRoute });
 
-      // console.log("mmm", { terminalValue, nestedRoute });
+    let existing = tempArr.find((item) => item.terminalValue === terminalValue);
 
-      let existing = tempArr.find(
-        (item) => item.terminalValue === terminalValue
-      );
-
-      if (existing) {
-        existing.inflectionPaths.push(nestedRoute.slice(0));
-      } else {
-        tempArr.push({
-          terminalValue,
-          inflectionPaths: [nestedRoute.slice(0)],
-        });
-      }
-    });
-
-    let synhomographs = tempArr.filter(
-      (item) => item.inflectionPaths.length > 1
-    );
-
-    if (synhomographs.length) {
-      synhomographs.forEach((synhomDataUnit) => {
-        let { inflectionPaths } = synhomDataUnit;
-        let labelsWhereTheyDiffer = [];
-
-        inflectionLabelChain.forEach((inflectionLabel, index) => {
-          let allValuesForThisLabel = inflectionPaths.map(
-            (path) => path[index]
-          );
-          if (
-            !allValuesForThisLabel.every(
-              (value) => value === allValuesForThisLabel[0]
-            )
-          ) {
-            labelsWhereTheyDiffer.push(inflectionLabel);
-          }
-        });
-
-        synhomDataUnit.labelsWhereTheyDiffer = labelsWhereTheyDiffer;
-      });
-
-      resArr.push({
-        lemmaObjectID: lemmaObject.id,
-        inflectionLabelChain,
-        synhomographs,
+    if (existing) {
+      existing.inflectionPaths.push(nestedRoute.slice(0));
+    } else {
+      tempArr.push({
+        terminalValue,
+        inflectionPaths: [nestedRoute.slice(0)],
       });
     }
   });
 
-  return resArr;
+  let synhomographs = tempArr.filter((item) => item.inflectionPaths.length > 1);
+
+  if (synhomographs.length) {
+    synhomographs.forEach((synhomDataUnit) => {
+      let { inflectionPaths } = synhomDataUnit;
+      let labelsWhereTheyDiffer = [];
+
+      inflectionLabelChain.forEach((inflectionLabel, index) => {
+        let allValuesForThisLabel = inflectionPaths.map((path) => path[index]);
+        if (
+          !allValuesForThisLabel.every(
+            (value) => value === allValuesForThisLabel[0]
+          )
+        ) {
+          labelsWhereTheyDiffer.push(inflectionLabel);
+        }
+      });
+
+      synhomDataUnit.labelsWhereTheyDiffer = labelsWhereTheyDiffer;
+    });
+
+    return {
+      lemmaObjectId: lemmaObject.id,
+      inflectionLabelChain,
+      synhomographs,
+    };
+  }
 };
 
 exports.addClarifiers = (
@@ -767,10 +751,10 @@ exports.addClarifiers = (
       console.log("ccc", structureChunk.chunkId);
 
       let synhomographData = exports.findSynhomographs(
-        [selectedLemmaObject],
-        [structureChunk.wordtype],
+        selectedLemmaObject,
+        structureChunk,
         currentLanguage
-      )[0];
+      );
 
       console.log("ddd", synhomographData);
 
