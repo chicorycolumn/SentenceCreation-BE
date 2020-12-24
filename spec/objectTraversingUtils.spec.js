@@ -7,15 +7,15 @@ const {
   findSynhomographs,
 } = require("../utils/objectTraversingUtils.js");
 
-describe("findSynhomographs", () => {
-  it("#scu4.1 Produces empty array when no lemmaObjects given.", () => {
+describe.only("findSynhomographs", () => {
+  it("#otu4.1 Produces empty array when no lemmaObjects given.", () => {
     const input = [];
     const expected = [];
     let actual = findSynhomographs(input, ["noun", "noun", "noun"], "POL");
     console.log(actual);
     expect(actual).to.eql(expected);
   });
-  it("#scu4.2 Produces empty array when no lemmaObjects with any synhomographs are given.", () => {
+  it("#otu4.2 Produces empty array when no lemmaObjects with any synhomographs are given.", () => {
     const input = [
       {
         lemma: "bike",
@@ -53,7 +53,7 @@ describe("findSynhomographs", () => {
     console.log(actual);
     expect(actual).to.eql(expected);
   });
-  it("#scu4.3 Produces synhomographs when one pair present in one lemmaObject.", () => {
+  it("#otu4.3 Produces synhomographs when one pair present in one lemmaObject.", () => {
     const input = [
       {
         lemma: "bike",
@@ -100,7 +100,7 @@ describe("findSynhomographs", () => {
     console.log(actual);
     expect(actual).to.eql(expected);
   });
-  it("#scu4.4 Produces synhomographs when multiple pairs present in one lemmaObject.", () => {
+  it("#otu4.4 Produces synhomographs when multiple pairs present in one lemmaObject.", () => {
     const input = [
       {
         lemma: "bike",
@@ -164,7 +164,7 @@ describe("findSynhomographs", () => {
     console.log(actual);
     expect(actual).to.eql(expected);
   });
-  it("#scu4.5 Produces synhomographs when multiple pairs present in multiple lemmaObjects.", () => {
+  it("#otu4.5 Produces synhomographs when multiple pairs present in multiple lemmaObjects.", () => {
     const input = [
       {
         lemma: "bike",
@@ -363,12 +363,12 @@ describe("findObjectInNestedObject", () => {
     },
   };
 
-  it("#scu3.1 NO: Returns undefined from one level of nesting, when no matching object can be found.", () => {
+  it("#otu3.1 NO: Returns undefined from one level of nesting, when no matching object can be found.", () => {
     const input1 = testObj1;
     const input2 = { symbol: "nonexistent symbol" };
     expect(findObjectInNestedObject(input1, input2)).to.eql(undefined);
   });
-  it("#scu3.2a YES: Correctly return object from one level of nesting, finding by matching a string.", () => {
+  it("#otu3.2a YES: Correctly return object from one level of nesting, finding by matching a string.", () => {
     const input1 = testObj1;
     const input2 = { symbol: "my bird" };
     expect(findObjectInNestedObject(input1, input2)).to.eql({
@@ -376,7 +376,7 @@ describe("findObjectInNestedObject", () => {
       structure: ["my", 123, "bird", 456],
     });
   });
-  it("#scu3.2b YES: Correctly return object from one level of nesting, finding by matching an array.", () => {
+  it("#otu3.2b YES: Correctly return object from one level of nesting, finding by matching an array.", () => {
     const input1 = testObj1;
     const input2 = { structure: ["my", 123, "house", 456] };
     expect(findObjectInNestedObject(input1, input2)).to.eql({
@@ -384,7 +384,7 @@ describe("findObjectInNestedObject", () => {
       structure: ["my", 123, "house", 456],
     });
   });
-  it("#scu3.2c YES: Correctly return object from one level of nesting, finding by matching multiple values.", () => {
+  it("#otu3.2c YES: Correctly return object from one level of nesting, finding by matching multiple values.", () => {
     const input1 = testObj1;
     const input2 = {
       symbol: "my aunt",
@@ -396,12 +396,12 @@ describe("findObjectInNestedObject", () => {
       id: "aunt2",
     });
   });
-  it("#scu3.3 NO: Returns undefined from nested object when no matching object can be found.", () => {
+  it("#otu3.3 NO: Returns undefined from nested object when no matching object can be found.", () => {
     const input1 = testObj2;
     const input2 = { symbol: "nonexistent symbol" };
     expect(findObjectInNestedObject(input1, input2)).to.eql(undefined);
   });
-  it("#scu3.3a Correctly return object from multi nesting, finding by matching a string.", () => {
+  it("#otu3.3a Correctly return object from multi nesting, finding by matching a string.", () => {
     const input1 = testObj2;
     const input2 = { symbol: "my bird" };
     expect(findObjectInNestedObject(input1, input2)).to.eql({
@@ -409,7 +409,7 @@ describe("findObjectInNestedObject", () => {
       structure: ["my", 123, "bird", 456],
     });
   });
-  it("#scu3.3b Correctly return object from multi nesting, finding by matching an array.", () => {
+  it("#otu3.3b Correctly return object from multi nesting, finding by matching an array.", () => {
     const input1 = testObj2;
     const input2 = { structure: ["my", 123, "house", 456] };
     expect(findObjectInNestedObject(input1, input2)).to.eql({
@@ -417,7 +417,7 @@ describe("findObjectInNestedObject", () => {
       structure: ["my", 123, "house", 456],
     });
   });
-  it("#scu3.3c Correctly return object from multi nesting, finding by matching multiple values.", () => {
+  it("#otu3.3c Correctly return object from multi nesting, finding by matching multiple values.", () => {
     const input1 = testObj2;
     const input2 = {
       symbol: "my aunt",
@@ -432,28 +432,28 @@ describe("findObjectInNestedObject", () => {
 });
 
 describe("concoctNestedRoutes", () => {
-  xit("#scu2.1a Throw error for empty input.", () => {
+  xit("#otu2.1a Throw error for empty input.", () => {
     const input1 = [];
     const input2 = [];
     expect(() => {
       concoctNestedRoutes(input1, input2);
     }).to.throw();
   });
-  xit("#scu2.1b Throw error for partly empty input.", () => {
+  xit("#otu2.1b Throw error for partly empty input.", () => {
     const input1 = [["singular"], []];
     const input2 = [];
     expect(() => {
       concoctNestedRoutes(input1, input2);
     }).to.throw();
   });
-  it("#scu2.2a Create nested routes for simple input.", () => {
+  it("#otu2.2a Create nested routes for simple input.", () => {
     const input1 = [["singular"], ["nom"]];
     const input2 = [];
     const expected = [["singular", "nom"]];
     const actual = concoctNestedRoutes(input1, input2);
     expect(actual).to.eql(expected);
   });
-  it("#scu2.2b Create nested routes for slightly complex input.", () => {
+  it("#otu2.2b Create nested routes for slightly complex input.", () => {
     const input1 = [
       ["singular", "plural"],
       ["nom", "gen", "dat"],
@@ -470,7 +470,7 @@ describe("concoctNestedRoutes", () => {
     const actual = concoctNestedRoutes(input1, input2);
     expect(actual).to.eql(expected);
   });
-  it("#scu2.2c Create nested routes for complex input.", () => {
+  it("#otu2.2c Create nested routes for complex input.", () => {
     const input1 = [
       ["singular", "plural"],
       ["nom", "gen", "dat", "acc"],
@@ -498,7 +498,7 @@ describe("concoctNestedRoutes", () => {
     const actual = concoctNestedRoutes(input1, input2);
     expect(actual).to.eql(expected);
   });
-  it("#scu2.3 Use second input to fill in empty arrays of first input.", () => {
+  it("#otu2.3 Use second input to fill in empty arrays of first input.", () => {
     const input1 = [["singular", "plural"], []];
     const input2 = [["singular"], ["ins", "loc"]];
     const expected = [
@@ -513,7 +513,7 @@ describe("concoctNestedRoutes", () => {
 });
 
 describe("extractNestedRoutes", () => {
-  it("#scu1.1 Returns empty array for empty object.", () => {
+  it("#otu1.1 Returns empty array for empty object.", () => {
     const input = {};
     const expected = {
       routesByNesting: [],
@@ -523,19 +523,19 @@ describe("extractNestedRoutes", () => {
     expect(actual.routesByNesting).to.eql(expected.routesByNesting);
     expect(actual.routesByLevel).to.eql(expected.routesByLevel);
   });
-  it("#scu1.2 Returns key routes for object with one key at single level of nesting.", () => {
+  it("#otu1.2 Returns key routes for object with one key at single level of nesting.", () => {
     const input = { singular: "apple" };
     const expected = [["singular"]];
     const actual = extractNestedRoutes(input).routesByNesting;
     expect(actual).to.eql(expected);
   });
-  it("#scu1.3 Returns key routes for object with many keys at single level of nesting.", () => {
+  it("#otu1.3 Returns key routes for object with many keys at single level of nesting.", () => {
     const input = { singular: "apple", plural: "apples" };
     const expected = [["singular"], ["plural"]];
     const actual = extractNestedRoutes(input).routesByNesting;
     expect(actual).to.eql(expected);
   });
-  it("#scu1.4 Returns key routes for object with many keys at two levels of nesting.", () => {
+  it("#otu1.4 Returns key routes for object with many keys at two levels of nesting.", () => {
     const input = {
       singular: { nom: "kobieta", loc: "kobiecie" },
       plural: { nom: "kobiety", loc: "kobietach" },
@@ -549,7 +549,7 @@ describe("extractNestedRoutes", () => {
     const actual = extractNestedRoutes(input).routesByNesting;
     expect(actual).to.eql(expected);
   });
-  it("#scu1.5 Returns key routes for object with many keys at various levels of nesting.", () => {
+  it("#otu1.5 Returns key routes for object with many keys at various levels of nesting.", () => {
     const input = {
       singular: {
         nom: "jabłko",
@@ -592,7 +592,7 @@ describe("extractNestedRoutes", () => {
     const actual = extractNestedRoutes(input).routesByNesting;
     expect(actual).to.eql(expected);
   });
-  it("#scu1.6 Returns key routes when some values are arrays and should not be mapped out.", () => {
+  it("#otu1.6 Returns key routes when some values are arrays and should not be mapped out.", () => {
     const input = {
       singular: { nom: "chłopak", acc: "chłopaka" },
       plural: { nom: ["chłopacy", "chłopaki"], acc: "chłopakøw" },
@@ -606,7 +606,7 @@ describe("extractNestedRoutes", () => {
     const actual = extractNestedRoutes(input).routesByNesting;
     expect(actual).to.eql(expected);
   });
-  it("#scu2.1 get routes from kobieta.", () => {
+  it("#otu2.1 get routes from kobieta.", () => {
     const input = {
       //links
       translations: { ENG: ["woman", "lady"] },
@@ -642,7 +642,7 @@ describe("extractNestedRoutes", () => {
     console.log(">>>");
     console.log(res);
   });
-  it("#scu2.2 get routes from read.", () => {
+  it("#otu2.2 get routes from read.", () => {
     const input = {
       //links
       translations: { ENG: ["read"], POL: ["czytać", "przeczytać"] },

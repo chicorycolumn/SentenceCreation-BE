@@ -237,4 +237,40 @@ exports.dummySentenceFormulasBank = {
     ],
     primaryOrders: [["fix-1", "ver-1"]],
   },
+  dummy39: {
+    sentenceFormulaSymbol: "dummy39",
+    sentenceFormulaId: "ENG-dummy39",
+    translations: { POL: ["POL-dummy39"] },
+    structure: [
+      { chunkId: "fix-1", wordtype: "fixed", value: "you" },
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        specificLemmas: ["be"],
+        number: [],
+        tenseDescription: ["present simple"],
+        person: ["2per"],
+        // nixedClarifiers: ["person"],
+      },
+    ],
+    primaryOrders: [["fix-1", "ver-1"]],
+  },
+  dummy40: {
+    sentenceFormulaSymbol: "dummy40",
+    sentenceFormulaId: "ENG-dummy40",
+    translations: { POL: ["POL-dummy40"] },
+    structure: [
+      { chunkId: "fix-1", wordtype: "fixed", value: "you" },
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        andTags: ["basic3"],
+        number: [],
+        tenseDescription: ["present simple"],
+        person: ["2per"],
+        // nixedClarifiers: ["person"],
+      },
+    ],
+    primaryOrders: [["fix-1", "ver-1"]],
+  },
 };

@@ -685,6 +685,10 @@ exports.addClarifiers = (
       structureChunk,
       selectedWord,
     } = outputUnit;
+
+    if (outputUnit.structureChunk.wordtype === "fixed") {
+      return;
+    }
     //
     //console.log(outputUnit)
     //
@@ -755,12 +759,20 @@ exports.addClarifiers = (
       }
     }
 
+    if (outputUnit.preventAddingClarifiers) {
+      console.log("addClarifiers this loop was told to cease!!!!");
+    }
+
     if (!outputUnit.preventAddingClarifiers) {
+      console.log("ccc", structureChunk.chunkId);
+
       let synhomographData = exports.findSynhomographs(
         [selectedLemmaObject],
         [structureChunk.wordtype],
         currentLanguage
       )[0];
+
+      console.log("ddd", synhomographData);
 
       if (synhomographData) {
         synhomographData.synhomographs.forEach((synhomDataUnit) => {

@@ -337,9 +337,9 @@ exports.adjustImOnlyLemmaObjects = (matches) => {
     if (lObj["im only"] && lObj.aspect === "imperfective") {
       let { id } = lObj;
       console.log(
-        "Hey, heads up, I'm adjusting the lemma object '" +
+        "Hey, heads up, I'm making a copy of lemma object '" +
           lObj.lemma +
-          "' to have perfective Aspect instead."
+          "' with perfective Aspect."
       );
       let adjustedLemmaObject = gpUtils.copyWithoutReference(lObj);
       adjustedLemmaObject.aspect = "perfective";
