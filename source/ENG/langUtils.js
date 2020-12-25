@@ -90,7 +90,9 @@ exports.generateAdhocForms = (
         "form",
         selectedForm,
         [lObj.inflections[selectedForm]],
-        structureChunk
+        structureChunk,
+        null // I am giving no dataToUpdateWith, as the choice of features specified won't affect the ENG adhoc form chosen.
+        // So in addToResArr it will make random selections for all the features in the structureChunk, as I've given null here.
       );
     });
 
@@ -119,54 +121,40 @@ exports.generateAdhocForms = (
     });
 
     let tenseDescriptionArr = [];
-    structureChunk.tenseDescription.forEach((selectedTenseDescription) => {
-      if (selectedTenseDescription === "present") {
-        tenseDescriptionArr.push("present simple");
-        tenseDescriptionArr.push("present continuous");
-        tenseDescriptionArr.push("present perfect");
-      } else if (selectedTenseDescription === "past") {
-        tenseDescriptionArr.push("past simple");
-        tenseDescriptionArr.push("past continuous");
-        tenseDescriptionArr.push("past perfect");
-      } else if (selectedTenseDescription === "future") {
-        tenseDescriptionArr.push("future simple");
-        tenseDescriptionArr.push("future continuous");
-        tenseDescriptionArr.push("future perfect");
+    structureChunk.tenseDescription.forEach((tenseDescription) => {
+      if (["past", "present", "future"].includes(tenseDescription)) {
+        ["simple", "continuous", "perfect"].forEach((tenseSuffix) => {
+          tenseDescriptionArr.push(`${tenseDescription} ${tenseSuffix}`);
+        });
       } else {
-        tenseDescriptionArr.push(selectedTenseDescription);
+        tenseDescriptionArr.push(tenseDescription);
       }
+
+      // if (tenseDescription === "present") {
+      //   tenseDescriptionArr.push("present simple");
+      //   tenseDescriptionArr.push("present continuous");
+      //   tenseDescriptionArr.push("present perfect");
+      // } else if (tenseDescription === "past") {
+      //   tenseDescriptionArr.push("past simple");
+      //   tenseDescriptionArr.push("past continuous");
+      //   tenseDescriptionArr.push("past perfect");
+      // } else if (tenseDescription === "future") {
+      //   tenseDescriptionArr.push("future simple");
+      //   tenseDescriptionArr.push("future continuous");
+      //   tenseDescriptionArr.push("future perfect");
+      // } else {
+      //   tenseDescriptionArr.push(tenseDescription);
+      // }
     });
 
-    function addToResArr(
-      adhocLabel,
-      adhocValue,
-      selectedWordArr,
-      structureChunk
-    ) {
-      let structureChunkCopy = gpUtils.copyWithoutReference(structureChunk);
-
-      lfUtils.updateStructureChunkByAdhocOnly(
-        structureChunkCopy,
-        currentLanguage,
-        adhocLabel,
-        adhocValue
-      );
-
-      let resObj = {
-        selectedWordArr,
-        structureChunkUpdated: structureChunkCopy,
-      };
-
-      resArr.push(resObj);
-    }
-
     function fetchTenseDescription(
-      data,
+      dataToUpdateWith,
       structureChunk,
-      tenseDescriptionKeyForRefObj = data.selectedTenseDescription
+      tenseDescriptionKeyForRefObj = dataToUpdateWith.tenseDescription
     ) {
-      let { person, number, selectedTenseDescription } = data;
-      let tenseDescriptionKeyForStructureChunk = selectedTenseDescription;
+      let { person, number, tenseDescription } = dataToUpdateWith; //These are used in engTenseDescriptionRef
+      let tenseDescriptionKeyForStructureChunk =
+        dataToUpdateWith.tenseDescription;
 
       //This does have to be defined in here.
       const engTenseDescriptionRef = {
@@ -227,55 +215,122 @@ exports.generateAdhocForms = (
         "tenseDescription",
         tenseDescriptionKeyForStructureChunk,
         engTenseDescriptionRef[tenseDescriptionKeyForRefObj],
-        structureChunk
+        structureChunk,
+        dataToUpdateWith
       );
     }
 
     structureChunk.person.forEach((person) => {
       structureChunk.number.forEach((number) => {
-        tenseDescriptionArr.forEach((selectedTenseDescription) => {
+        tenseDescriptionArr.forEach((tenseDescription) => {
+          let dataToUpdateWith = {
+            person,
+            number,
+            tenseDescription,
+          };
+
           if (
             lObj.lemma === "be" &&
-            ["past simple", "present simple"].includes(selectedTenseDescription)
+            ["past simple", "present simple"].includes(tenseDescription)
           ) {
-            //Okay, 'be' is the only verb that is irregular in a way that doesn't fit into our system.
-            //Specifically, am/are and was/were.
-            //So just for this verb in ENG, we need to do all this getting differently.
+            //'be' (am/are & was/were) is the only verb irregular in a way not fitting our system.
+            //So just for this verb, in ENG, we need to do all this getting differently.
 
-            let tense = selectedTenseDescription.split(" ")[0];
+            let tense = tenseDescription.split(" ")[0];
             addToResArr(
               "tenseDescription",
-              selectedTenseDescription,
+              tenseDescription,
               [be[tense][person][number]],
-              structureChunk
+              structureChunk,
+              dataToUpdateWith
             );
             return;
           } else {
-            let data = {
-              person,
-              number,
-              selectedTenseDescription,
-            };
-
             if (
               ["present simple", "cond0 condition", "cond0 outcome"].includes(
-                selectedTenseDescription
+                tenseDescription
               ) &&
               person === "3per" &&
               number === "singular"
             ) {
               fetchTenseDescription(
-                data,
+                dataToUpdateWith,
                 structureChunk,
-                `${selectedTenseDescription} 3PS`
+                `${tenseDescription} 3PS`
               );
             } else {
-              fetchTenseDescription(data, structureChunk);
+              fetchTenseDescription(dataToUpdateWith, structureChunk);
             }
           }
         });
       });
     });
     return resArr;
+  }
+
+  function addToResArr(
+    adhocLabel,
+    adhocValue,
+    selectedWordArr,
+    structureChunk,
+    dataToUpdateWith
+  ) {
+    let structureChunkCopy = gpUtils.copyWithoutReference(structureChunk);
+
+    lfUtils.updateStructureChunkByAdhocOnly(
+      structureChunkCopy,
+      currentLanguage,
+      adhocLabel,
+      adhocValue
+    );
+
+    if (dataToUpdateWith) {
+      Object.keys(dataToUpdateWith).forEach((label) => {
+        let value = dataToUpdateWith[label];
+
+        lfUtils.updateStructureChunkByAdhocOnly(
+          structureChunkCopy,
+          currentLanguage,
+          label,
+          value
+        );
+      });
+    } else {
+      //If I am given no dataToUpdateWith, then I assume you want me to select random
+      //for all features on the structureChunk, in order to lock in choices.
+
+      let allFeatureKeys = [];
+
+      let featureTypes = ["selectors", "hybridSelectors", "inflectionChains"];
+
+      featureTypes.forEach((featureType) => {
+        let featureKeys =
+          refObj.lemmaObjectFeatures[currentLanguage][featureType][
+            structureChunkCopy.wordtype
+          ];
+
+        if (featureKeys) {
+          allFeatureKeys = [...allFeatureKeys, ...featureKeys];
+        }
+      });
+
+      allFeatureKeys.forEach((featureKey) => {
+        if (
+          structureChunkCopy[featureKey] &&
+          structureChunkCopy[featureKey].length > 1
+        ) {
+          structureChunkCopy[featureKey] = gpUtils.selectRandom(
+            structureChunkCopy[featureKey]
+          );
+        }
+      });
+    }
+
+    let resObj = {
+      selectedWordArr,
+      structureChunkUpdated: structureChunkCopy,
+    };
+
+    resArr.push(resObj);
   }
 };

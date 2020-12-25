@@ -34,31 +34,26 @@ exports.filterWithinSelectedLemmaObject = (
   });
 
   let errorInDrilling = false;
-  let outputUnitsWithOutputUnitsWithDrillPaths = [];
+  let outputUnitsWithDrillPaths = [];
 
   exports.traverseAndRecordInflections(
     source,
     requirementArrs,
-    outputUnitsWithOutputUnitsWithDrillPaths
+    outputUnitsWithDrillPaths
   );
 
-  if (
-    !outputUnitsWithOutputUnitsWithDrillPaths ||
-    !outputUnitsWithOutputUnitsWithDrillPaths.length
-  ) {
+  if (!outputUnitsWithDrillPaths || !outputUnitsWithDrillPaths.length) {
     errorInDrilling = true;
     return false;
   }
 
   if (kumquat) {
-    outputUnitsWithOutputUnitsWithDrillPaths.forEach((selectedPath) => {
+    outputUnitsWithDrillPaths.forEach((selectedPath) => {
       selectedPath.errorInDrilling = errorInDrilling;
     });
-    return outputUnitsWithOutputUnitsWithDrillPaths;
+    return outputUnitsWithDrillPaths;
   } else {
-    let selectedPath = gpUtils.selectRandom(
-      outputUnitsWithOutputUnitsWithDrillPaths
-    );
+    let selectedPath = gpUtils.selectRandom(outputUnitsWithDrillPaths);
 
     let { selectedWordArray, drillPath } = selectedPath;
 
@@ -78,6 +73,14 @@ exports.updateStructureChunkByAdhocOnly = (
   adhocLabel,
   adhocValue
 ) => {
+  console.log(
+    "Karina Nguyen says: updateStructureChunkByAdhocOnly fxn has been called"
+  );
+  console.log(structureChunk.chunkId);
+  if (currentLanguage === "ENG") {
+    console.log({ structureChunk, currentLanguage, adhocLabel, adhocValue });
+  }
+
   structureChunk[adhocLabel] = [adhocValue];
 };
 
@@ -217,11 +220,11 @@ exports.filterBySelectors = (currentLanguage, structureChunk, matches) => {
 exports.traverseAndRecordInflections = (
   source,
   reqArr,
-  outputUnitsWithOutputUnitsWithDrillPaths,
-  outputUnitsWithOutputUnitsWithDrillPathsMini
+  outputUnitsWithDrillPaths,
+  outputUnitsWithDrillPathsMini
 ) => {
-  if (!outputUnitsWithOutputUnitsWithDrillPathsMini) {
-    outputUnitsWithOutputUnitsWithDrillPathsMini = [];
+  if (!outputUnitsWithDrillPathsMini) {
+    outputUnitsWithDrillPathsMini = [];
   }
 
   let reqSubArr = reqArr[0];
@@ -246,47 +249,44 @@ exports.traverseAndRecordInflections = (
       // );
       // console.log("*");
       // console.log("**WHITE");
-      // console.log("Okay, I am going to push these things into outputUnitsWithOutputUnitsWithDrillPathsMini");
-      // console.log("outputUnitsWithOutputUnitsWithDrillPathsMini is currently:", outputUnitsWithOutputUnitsWithDrillPathsMini);
+      // console.log("Okay, I am going to push these things into outputUnitsWithDrillPathsMini");
+      // console.log("outputUnitsWithDrillPathsMini is currently:", outputUnitsWithDrillPathsMini);
       // console.log("Gonna push reqInflectorLabel as:", reqInflectorLabel);
       // console.log("Gonna push chosenInflector as:", chosenInflector);
 
-      outputUnitsWithOutputUnitsWithDrillPathsMini.push([
-        reqInflectorLabel,
-        chosenInflector,
-      ]);
+      outputUnitsWithDrillPathsMini.push([reqInflectorLabel, chosenInflector]);
 
-      // console.log("outputUnitsWithOutputUnitsWithDrillPathsMini is now:", outputUnitsWithOutputUnitsWithDrillPathsMini);
+      // console.log("outputUnitsWithDrillPathsMini is now:", outputUnitsWithDrillPathsMini);
       // console.log("**");
       // console.log("*");
 
       // console.log("*");
       // console.log("**RED");
-      // console.log("Okay, I am going to push these things into outputUnitsWithOutputUnitsWithDrillPaths");
-      // console.log("outputUnitsWithOutputUnitsWithDrillPaths is currently:", outputUnitsWithOutputUnitsWithDrillPaths);
+      // console.log("Okay, I am going to push these things into outputUnitsWithDrillPaths");
+      // console.log("outputUnitsWithDrillPaths is currently:", outputUnitsWithDrillPaths);
       // console.log("Gonna push selectedWordArray as:", source[chosenInflector]);
-      // console.log("Gonna push outputUnitsWithOutputUnitsWithDrillPathsMini as:", outputUnitsWithOutputUnitsWithDrillPathsMini);
+      // console.log("Gonna push outputUnitsWithDrillPathsMini as:", outputUnitsWithDrillPathsMini);
 
-      outputUnitsWithOutputUnitsWithDrillPaths.push({
+      outputUnitsWithDrillPaths.push({
         selectedWordArray:
           typeof source[chosenInflector] === "string"
             ? [source[chosenInflector]]
             : source[chosenInflector],
-        drillPath: outputUnitsWithOutputUnitsWithDrillPathsMini.slice(0),
+        drillPath: outputUnitsWithDrillPathsMini.slice(0),
       });
 
-      // console.log("outputUnitsWithOutputUnitsWithDrillPaths is now:", outputUnitsWithOutputUnitsWithDrillPaths);
+      // console.log("outputUnitsWithDrillPaths is now:", outputUnitsWithDrillPaths);
       // console.log("**");
       // console.log("*");
 
       // console.log("*");
       // console.log("**YELLOW");
-      // console.log("outputUnitsWithOutputUnitsWithDrillPathsMini is currently:", outputUnitsWithOutputUnitsWithDrillPathsMini);
+      // console.log("outputUnitsWithDrillPathsMini is currently:", outputUnitsWithDrillPathsMini);
       // console.log("Gonna A-pop the last value.");
 
-      outputUnitsWithOutputUnitsWithDrillPathsMini.pop();
+      outputUnitsWithDrillPathsMini.pop();
 
-      // console.log("outputUnitsWithOutputUnitsWithDrillPathsMini is now:", outputUnitsWithOutputUnitsWithDrillPathsMini);
+      // console.log("outputUnitsWithDrillPathsMini is now:", outputUnitsWithDrillPathsMini);
       // console.log("**");
       // console.log("*");
 
@@ -294,25 +294,22 @@ exports.traverseAndRecordInflections = (
     } else if (typeof source[chosenInflector] === "object") {
       // console.log("*");
       // console.log("**BLUE");
-      // console.log("Okay, I am going to push these things into outputUnitsWithOutputUnitsWithDrillPathsMini");
-      // console.log("outputUnitsWithOutputUnitsWithDrillPathsMini is currently:", outputUnitsWithOutputUnitsWithDrillPathsMini);
+      // console.log("Okay, I am going to push these things into outputUnitsWithDrillPathsMini");
+      // console.log("outputUnitsWithDrillPathsMini is currently:", outputUnitsWithDrillPathsMini);
       // console.log("Gonna push reqInflectorLabel as:", reqInflectorLabel);
       // console.log("Gonna push chosenInflector as:", chosenInflector);
 
-      outputUnitsWithOutputUnitsWithDrillPathsMini.push([
-        reqInflectorLabel,
-        chosenInflector,
-      ]);
+      outputUnitsWithDrillPathsMini.push([reqInflectorLabel, chosenInflector]);
 
-      // console.log("outputUnitsWithOutputUnitsWithDrillPathsMini is now:", outputUnitsWithOutputUnitsWithDrillPathsMini);
+      // console.log("outputUnitsWithDrillPathsMini is now:", outputUnitsWithDrillPathsMini);
       // console.log("**");
       // console.log("*");
 
       exports.traverseAndRecordInflections(
         source[chosenInflector],
         reqArr.slice(1),
-        outputUnitsWithOutputUnitsWithDrillPaths,
-        outputUnitsWithOutputUnitsWithDrillPathsMini
+        outputUnitsWithDrillPaths,
+        outputUnitsWithDrillPathsMini
       );
 
       // console.log("*");
@@ -320,12 +317,12 @@ exports.traverseAndRecordInflections = (
       // console.log(
       //   `On this round of GREEN, the chosenInflector is: ${chosenInflector} at reqInflectorArrIndex ${reqInflectorArrIndex}.`
       // );
-      // console.log("outputUnitsWithOutputUnitsWithDrillPathsMini is currently:", outputUnitsWithOutputUnitsWithDrillPathsMini);
+      // console.log("outputUnitsWithDrillPathsMini is currently:", outputUnitsWithDrillPathsMini);
       // console.log("Gonna B-pop the last value.");
 
-      outputUnitsWithOutputUnitsWithDrillPathsMini.pop();
+      outputUnitsWithDrillPathsMini.pop();
 
-      // console.log("outputUnitsWithOutputUnitsWithDrillPathsMini is now:", outputUnitsWithOutputUnitsWithDrillPathsMini);
+      // console.log("outputUnitsWithDrillPathsMini is now:", outputUnitsWithDrillPathsMini);
       // console.log("**");
       // console.log("*");
     }

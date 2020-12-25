@@ -163,6 +163,10 @@ exports.findMatchingLemmaObjectThenWord = (
             throw "No members were found in the adhocArr from OT:findMatching, path 3A-2 (ie tenseDescription).";
           }
 
+          console.log(adhocArr);
+          console.log("Meera Ghir says adhocArr in OT:findMatching is:");
+          gpUtils.consoleLogObjectAtOneLevel(adhocArr);
+
           let selectedAdhocResultObj = gpUtils.selectRandom(adhocArr);
 
           let {

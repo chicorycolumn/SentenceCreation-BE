@@ -271,10 +271,6 @@ exports.fillOutWashburneRefObj = (
   // };
 
   let allLemmas = Object.keys(refObj);
-  console.log(
-    "Will fill out the counterpart in this Washburne reference object, for these words:",
-    allLemmas
-  );
 
   allLemmas.forEach((lemma) => {
     let lemmaRefObj = refObj[lemma];
@@ -300,7 +296,7 @@ exports.fillOutWashburneRefObj = (
 };
 
 exports.consoleLogObjectAtOneLevel = (obj) => {
-  Object.keys(consoleLogObjectAtOneLevel).forEach((key) => {
+  Object.keys(obj).forEach((key) => {
     let value = obj[key];
     console.log("~~~~~~~~~~~>KEY");
     console.log(key);

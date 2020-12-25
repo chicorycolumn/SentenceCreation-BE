@@ -196,7 +196,7 @@ exports.dummySentenceFormulasBank = {
         gcase: ["nom"],
         number: ["singular"],
         gender: [],
-        specificLemmas: ["jabłko"], //This overrides andTags and selectRandom, and selectors. But requested inflections still work.
+        specificLemmas: ["jabłko"], //This overrides andTags and select Random, and selectors. But requested inflections still work.
       },
     ],
     primaryOrders: [["fix-1", "nou-1"]],
@@ -214,7 +214,7 @@ exports.dummySentenceFormulasBank = {
         gcase: ["acc"],
         number: ["plural"],
         gender: [],
-        specificLemmas: ["jabłko", "majtki"], //This overrides andTags and selectRandom, and selectors. But requested inflections still work.
+        specificLemmas: ["jabłko", "majtki"], //This overrides andTags and select Random, and selectors. But requested inflections still work.
       },
     ],
     primaryOrders: [["fix-1", "nou-1"]],

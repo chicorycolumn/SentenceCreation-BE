@@ -267,7 +267,7 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
   describe.only("/palette - Stage 8: Synhomographs.", () => {
-    xit("#pal08-06a (Ad-PW: clarify Inflections) 'write': ENG to POL. Expect clarifiers.", () => {
+    it.only("#pal08-06a (Ad-PW: clarify Inflections) 'write': ENG to POL. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 

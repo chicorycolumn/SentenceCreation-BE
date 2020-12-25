@@ -592,9 +592,16 @@ exports.conformAnswerStructureToQuestionStructure = (
   questionLanguage
 ) => {
   questionOutputArr.forEach((questionOutputArrItem) => {
+    let questionStructureChunk = questionOutputArrItem.structureChunk;
+
+    if (questionStructureChunk.wordtype === "fixed") {
+      return;
+    }
+
+    console.log("uuu questionStructureChunk", questionStructureChunk);
+
     let questionSelectedLemmaObject = questionOutputArrItem.selectedLemmaObject;
     let questionSelectedWord = questionOutputArrItem.selectedWord;
-    let questionStructureChunk = questionOutputArrItem.structureChunk;
 
     let answerStructureChunk = sentenceStructure.find((structureChunk) => {
       return structureChunk.chunkId === questionStructureChunk.chunkId;
@@ -605,10 +612,7 @@ exports.conformAnswerStructureToQuestionStructure = (
       return;
     }
 
-    if (questionStructureChunk.wordtype === "fixed") {
-      console.log("Ah never mind");
-      return;
-    }
+    console.log("vvv answerStructureChunk", answerStructureChunk);
 
     // console.log("***********");
     // console.log("questionStructureChunk", questionStructureChunk);
@@ -649,6 +653,8 @@ exports.conformAnswerStructureToQuestionStructure = (
     answerStructureChunk.specificIds = matchingAnswerLemmaObjects.map(
       (lObj) => lObj.id
     );
+
+    console.log("www answerStructureChunk", answerStructureChunk);
 
     // console.log("I found these matches:", answerStructureChunk.specificIds);
     // console.log("answerStructureChunk", answerStructureChunk);
@@ -707,6 +713,8 @@ exports.conformAnswerStructureToQuestionStructure = (
       }
     });
 
+    console.log("xxx answerStructureChunk", answerStructureChunk);
+
     //Check for features-of-answer-lang-lobjs-that-aren't-features-of-question-lang-lobjs.
     // So when going ENG to POL, that would be gender.
     // And then, with that list of features, we will blind the answer structureChunks to these features.
@@ -729,9 +737,9 @@ exports.conformAnswerStructureToQuestionStructure = (
       answerStructureChunk[inflector] = [];
     });
 
-    // console.log("*-*-*-*-*-*-*-*-*-*-*");
-    // console.log("UPDATED answerStructureChunk", answerStructureChunk);
-    // console.log("*-*-*-*-*-*-*-*-*-*-*");
+    console.log("*-*-*-*-*-*-*-*-*-*-*yyy");
+    console.log("UPDATED answerStructureChunk", answerStructureChunk);
+    console.log("*-*-*-*-*-*-*-*-*-*-*");
   });
 };
 

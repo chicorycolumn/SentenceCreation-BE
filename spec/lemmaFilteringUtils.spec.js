@@ -307,46 +307,39 @@ describe("traverseAndRecordInflections", () => {
 
   function consoleLogOutputUnitsWithDrillPaths(
     number,
-    outputUnitsWithOutputUnitsWithDrillPaths
+    outputUnitsWithDrillPaths
   ) {
     return;
-    outputUnitsWithOutputUnitsWithDrillPaths.forEach(
-      (outputUnitsWithOutputUnitsWithDrillPathsUnit) => {
-        console.log(">>>", number);
-        console.log(
-          "ppoutputUnitsWithOutputUnitsWithDrillPathsUnit selectedWordArray:",
-          outputUnitsWithOutputUnitsWithDrillPathsUnit.selectedWordArray
-        );
-        console.log(
-          "ppoutputUnitsWithOutputUnitsWithDrillPathsUnit drillPath:",
-          outputUnitsWithOutputUnitsWithDrillPathsUnit.drillPath
-        );
-        console.log(" ");
-        console.log(" ");
-      }
-    );
+    outputUnitsWithDrillPaths.forEach((outputUnitsWithDrillPathsUnit) => {
+      console.log(">>>", number);
+      console.log(
+        "ppoutputUnitsWithDrillPathsUnit selectedWordArray:",
+        outputUnitsWithDrillPathsUnit.selectedWordArray
+      );
+      console.log(
+        "ppoutputUnitsWithDrillPathsUnit drillPath:",
+        outputUnitsWithDrillPathsUnit.drillPath
+      );
+      console.log(" ");
+      console.log(" ");
+    });
   }
 
   it("#lfu1.1a YES: Returns drills successfully (RDS) from set of single requirements.", () => {
-    let outputUnitsWithOutputUnitsWithDrillPaths = [];
+    let outputUnitsWithDrillPaths = [];
     let reqArrNo = "08";
     traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
-      outputUnitsWithOutputUnitsWithDrillPaths
+      outputUnitsWithDrillPaths
     );
-    consoleLogOutputUnitsWithDrillPaths(
-      reqArrNo,
-      outputUnitsWithOutputUnitsWithDrillPaths
-    );
+    consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
 
-    expect(outputUnitsWithOutputUnitsWithDrillPaths.length).to.equal(1);
+    expect(outputUnitsWithDrillPaths.length).to.equal(1);
 
-    expect(
-      outputUnitsWithOutputUnitsWithDrillPaths[0].selectedWordArray
-    ).to.eql(["czytam"]);
+    expect(outputUnitsWithDrillPaths[0].selectedWordArray).to.eql(["czytam"]);
 
-    expect(outputUnitsWithOutputUnitsWithDrillPaths[0].drillPath).to.eql([
+    expect(outputUnitsWithDrillPaths[0].drillPath).to.eql([
       ["form", "verbal"],
       ["tense", "present"],
       ["person", "1per"],
@@ -355,21 +348,18 @@ describe("traverseAndRecordInflections", () => {
     ]);
   });
   it("#lfu1.1b YES: RDS when gender has two requirement values.", () => {
-    let outputUnitsWithOutputUnitsWithDrillPaths = [];
+    let outputUnitsWithDrillPaths = [];
     let reqArrNo = "07";
     traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
-      outputUnitsWithOutputUnitsWithDrillPaths
+      outputUnitsWithDrillPaths
     );
-    consoleLogOutputUnitsWithDrillPaths(
-      reqArrNo,
-      outputUnitsWithOutputUnitsWithDrillPaths
-    );
+    consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
 
-    expect(outputUnitsWithOutputUnitsWithDrillPaths.length).to.equal(2);
+    expect(outputUnitsWithDrillPaths.length).to.equal(2);
 
-    expect(outputUnitsWithOutputUnitsWithDrillPaths).to.eql([
+    expect(outputUnitsWithDrillPaths).to.eql([
       {
         selectedWordArray: ["czyta"],
         drillPath: [
@@ -393,21 +383,18 @@ describe("traverseAndRecordInflections", () => {
     ]);
   });
   it("#lfu1.1c YES: RDS when gender has two requirement values which are masculine subgenders.", () => {
-    let outputUnitsWithOutputUnitsWithDrillPaths = [];
+    let outputUnitsWithDrillPaths = [];
     let reqArrNo = "06";
     traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
-      outputUnitsWithOutputUnitsWithDrillPaths
+      outputUnitsWithDrillPaths
     );
-    consoleLogOutputUnitsWithDrillPaths(
-      reqArrNo,
-      outputUnitsWithOutputUnitsWithDrillPaths
-    );
+    consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
 
-    expect(outputUnitsWithOutputUnitsWithDrillPaths.length).to.equal(2);
+    expect(outputUnitsWithDrillPaths.length).to.equal(2);
 
-    expect(outputUnitsWithOutputUnitsWithDrillPaths).to.eql([
+    expect(outputUnitsWithDrillPaths).to.eql([
       {
         selectedWordArray: ["czyta"],
         drillPath: [
@@ -431,21 +418,18 @@ describe("traverseAndRecordInflections", () => {
     ]);
   });
   it("#lfu1.2a YES: RDS when gender has two identical requirement values (feminine).", () => {
-    let outputUnitsWithOutputUnitsWithDrillPaths = [];
+    let outputUnitsWithDrillPaths = [];
     let reqArrNo = "05";
     traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
-      outputUnitsWithOutputUnitsWithDrillPaths
+      outputUnitsWithDrillPaths
     );
-    consoleLogOutputUnitsWithDrillPaths(
-      reqArrNo,
-      outputUnitsWithOutputUnitsWithDrillPaths
-    );
+    consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
 
-    expect(outputUnitsWithOutputUnitsWithDrillPaths.length).to.equal(2);
+    expect(outputUnitsWithDrillPaths.length).to.equal(2);
 
-    expect(outputUnitsWithOutputUnitsWithDrillPaths).to.eql([
+    expect(outputUnitsWithDrillPaths).to.eql([
       {
         selectedWordArray: ["czyta"],
         drillPath: [
@@ -469,21 +453,18 @@ describe("traverseAndRecordInflections", () => {
     ]);
   });
   it("#lfu1.2b YES: RDS when gender has five identical requirement values (feminine).", () => {
-    let outputUnitsWithOutputUnitsWithDrillPaths = [];
+    let outputUnitsWithDrillPaths = [];
     let reqArrNo = "04";
     traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
-      outputUnitsWithOutputUnitsWithDrillPaths
+      outputUnitsWithDrillPaths
     );
-    consoleLogOutputUnitsWithDrillPaths(
-      reqArrNo,
-      outputUnitsWithOutputUnitsWithDrillPaths
-    );
+    consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
 
-    expect(outputUnitsWithOutputUnitsWithDrillPaths.length).to.equal(5);
+    expect(outputUnitsWithDrillPaths.length).to.equal(5);
 
-    expect(outputUnitsWithOutputUnitsWithDrillPaths).to.eql([
+    expect(outputUnitsWithDrillPaths).to.eql([
       {
         selectedWordArray: ["czyta"],
         drillPath: [
@@ -537,21 +518,18 @@ describe("traverseAndRecordInflections", () => {
     ]);
   });
   it("#lfu1.2c YES: RDS when gender has five identical requirement values (feminine) and one other value (neuter).", () => {
-    let outputUnitsWithOutputUnitsWithDrillPaths = [];
+    let outputUnitsWithDrillPaths = [];
     let reqArrNo = "03";
     traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
-      outputUnitsWithOutputUnitsWithDrillPaths
+      outputUnitsWithDrillPaths
     );
-    consoleLogOutputUnitsWithDrillPaths(
-      reqArrNo,
-      outputUnitsWithOutputUnitsWithDrillPaths
-    );
+    consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
 
-    expect(outputUnitsWithOutputUnitsWithDrillPaths.length).to.equal(6);
+    expect(outputUnitsWithDrillPaths.length).to.equal(6);
 
-    expect(outputUnitsWithOutputUnitsWithDrillPaths).to.eql([
+    expect(outputUnitsWithDrillPaths).to.eql([
       {
         selectedWordArray: ["czyta"],
         drillPath: [
@@ -615,22 +593,19 @@ describe("traverseAndRecordInflections", () => {
     ]);
   });
   it("#lfu1.2d YES: RDS when gender has big mix of duplicates in gender requirements.", () => {
-    let outputUnitsWithOutputUnitsWithDrillPaths = [];
+    let outputUnitsWithDrillPaths = [];
     let reqArrNo = "02";
     traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
-      outputUnitsWithOutputUnitsWithDrillPaths
+      outputUnitsWithDrillPaths
     );
-    consoleLogOutputUnitsWithDrillPaths(
-      reqArrNo,
-      outputUnitsWithOutputUnitsWithDrillPaths
-    );
+    consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
 
-    expect(outputUnitsWithOutputUnitsWithDrillPaths.length).to.equal(9);
+    expect(outputUnitsWithDrillPaths.length).to.equal(9);
     // return;
 
-    expect(outputUnitsWithOutputUnitsWithDrillPaths).to.eql([
+    expect(outputUnitsWithDrillPaths).to.eql([
       {
         selectedWordArray: ["czyta"],
         drillPath: [
@@ -724,23 +699,20 @@ describe("traverseAndRecordInflections", () => {
     ]);
   });
   it("#lfu1.3a YES: RDS >>> Nonv, Plur <<<.", () => {
-    let outputUnitsWithOutputUnitsWithDrillPaths = [];
+    let outputUnitsWithDrillPaths = [];
     let reqArrNo = "19";
     traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
-      outputUnitsWithOutputUnitsWithDrillPaths
+      outputUnitsWithDrillPaths
     );
 
-    consoleLogOutputUnitsWithDrillPaths(
-      reqArrNo,
-      outputUnitsWithOutputUnitsWithDrillPaths
-    );
+    consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
 
-    expect(outputUnitsWithOutputUnitsWithDrillPaths.length).to.equal(1);
+    expect(outputUnitsWithDrillPaths.length).to.equal(1);
     // return;
 
-    expect(outputUnitsWithOutputUnitsWithDrillPaths).to.eql([
+    expect(outputUnitsWithDrillPaths).to.eql([
       {
         selectedWordArray: ["czytają"],
         drillPath: [
@@ -754,23 +726,20 @@ describe("traverseAndRecordInflections", () => {
     ]);
   });
   it("#lfu1.3b YES: RDS >>> Fem, Plur <<< and two person choices.", () => {
-    let outputUnitsWithOutputUnitsWithDrillPaths = [];
+    let outputUnitsWithDrillPaths = [];
     let reqArrNo = "18";
     traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
-      outputUnitsWithOutputUnitsWithDrillPaths
+      outputUnitsWithDrillPaths
     );
 
-    consoleLogOutputUnitsWithDrillPaths(
-      reqArrNo,
-      outputUnitsWithOutputUnitsWithDrillPaths
-    );
+    consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
 
-    expect(outputUnitsWithOutputUnitsWithDrillPaths.length).to.equal(2);
+    expect(outputUnitsWithDrillPaths.length).to.equal(2);
     // return;
 
-    expect(outputUnitsWithOutputUnitsWithDrillPaths).to.eql([
+    expect(outputUnitsWithDrillPaths).to.eql([
       {
         selectedWordArray: ["czytacie"],
         drillPath: [
@@ -794,23 +763,20 @@ describe("traverseAndRecordInflections", () => {
     ]);
   });
   it("#lfu1.3c YES: RDS >>> Fem, Plur <<< and two person choices, and two tense choices.", () => {
-    let outputUnitsWithOutputUnitsWithDrillPaths = [];
+    let outputUnitsWithDrillPaths = [];
     let reqArrNo = "17";
     traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
-      outputUnitsWithOutputUnitsWithDrillPaths
+      outputUnitsWithDrillPaths
     );
 
-    consoleLogOutputUnitsWithDrillPaths(
-      reqArrNo,
-      outputUnitsWithOutputUnitsWithDrillPaths
-    );
+    consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
 
-    expect(outputUnitsWithOutputUnitsWithDrillPaths.length).to.equal(4);
+    expect(outputUnitsWithDrillPaths.length).to.equal(4);
     // return;
 
-    expect(outputUnitsWithOutputUnitsWithDrillPaths).to.eql([
+    expect(outputUnitsWithDrillPaths).to.eql([
       {
         selectedWordArray: ["czytacie"],
         drillPath: [
@@ -854,23 +820,20 @@ describe("traverseAndRecordInflections", () => {
     ]);
   });
   it("#lfu1.4a YES: RDS >>> Fem+Nonv, singular <<<.", () => {
-    let outputUnitsWithOutputUnitsWithDrillPaths = [];
+    let outputUnitsWithDrillPaths = [];
     let reqArrNo = "20";
     traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
-      outputUnitsWithOutputUnitsWithDrillPaths
+      outputUnitsWithDrillPaths
     );
 
-    consoleLogOutputUnitsWithDrillPaths(
-      reqArrNo,
-      outputUnitsWithOutputUnitsWithDrillPaths
-    );
+    consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
 
-    expect(outputUnitsWithOutputUnitsWithDrillPaths.length).to.equal(1);
+    expect(outputUnitsWithDrillPaths.length).to.equal(1);
     // return;
 
-    expect(outputUnitsWithOutputUnitsWithDrillPaths).to.eql([
+    expect(outputUnitsWithDrillPaths).to.eql([
       {
         selectedWordArray: ["czyta"],
         drillPath: [
@@ -884,23 +847,20 @@ describe("traverseAndRecordInflections", () => {
     ]);
   });
   it("#lfu1.4b YES: RDS >>> Fem, Sing+Plur <<<", () => {
-    let outputUnitsWithOutputUnitsWithDrillPaths = [];
+    let outputUnitsWithDrillPaths = [];
     let reqArrNo = "21";
     traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
-      outputUnitsWithOutputUnitsWithDrillPaths
+      outputUnitsWithDrillPaths
     );
 
-    consoleLogOutputUnitsWithDrillPaths(
-      reqArrNo,
-      outputUnitsWithOutputUnitsWithDrillPaths
-    );
+    consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
 
-    expect(outputUnitsWithOutputUnitsWithDrillPaths.length).to.equal(1);
+    expect(outputUnitsWithDrillPaths.length).to.equal(1);
     // return;
 
-    expect(outputUnitsWithOutputUnitsWithDrillPaths).to.eql([
+    expect(outputUnitsWithDrillPaths).to.eql([
       {
         selectedWordArray: ["czyta"],
         drillPath: [
@@ -914,23 +874,20 @@ describe("traverseAndRecordInflections", () => {
     ]);
   });
   it("#lfu1.4c YES: 22 (used to fail Drill Virile issue) RDS >>> Nonv, Sing+Plur <<<.", () => {
-    let outputUnitsWithOutputUnitsWithDrillPaths = [];
+    let outputUnitsWithDrillPaths = [];
     let reqArrNo = "22";
     traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
-      outputUnitsWithOutputUnitsWithDrillPaths
+      outputUnitsWithDrillPaths
     );
 
-    consoleLogOutputUnitsWithDrillPaths(
-      reqArrNo,
-      outputUnitsWithOutputUnitsWithDrillPaths
-    );
+    consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
 
-    expect(outputUnitsWithOutputUnitsWithDrillPaths.length).to.equal(1);
+    expect(outputUnitsWithDrillPaths.length).to.equal(1);
     // return;
 
-    expect(outputUnitsWithOutputUnitsWithDrillPaths).to.eql([
+    expect(outputUnitsWithDrillPaths).to.eql([
       {
         selectedWordArray: ["czytają"],
         drillPath: [
@@ -944,23 +901,20 @@ describe("traverseAndRecordInflections", () => {
     ]);
   });
   it("#lfu1.4d YES: 23 (used to fail Drill Virile issue) RDS >>> Fem+Nonv, Plur <<<.", () => {
-    let outputUnitsWithOutputUnitsWithDrillPaths = [];
+    let outputUnitsWithDrillPaths = [];
     let reqArrNo = "23";
     traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
-      outputUnitsWithOutputUnitsWithDrillPaths
+      outputUnitsWithDrillPaths
     );
 
-    consoleLogOutputUnitsWithDrillPaths(
-      reqArrNo,
-      outputUnitsWithOutputUnitsWithDrillPaths
-    );
+    consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
 
-    expect(outputUnitsWithOutputUnitsWithDrillPaths.length).to.equal(1);
+    expect(outputUnitsWithDrillPaths.length).to.equal(1);
     // return;
 
-    expect(outputUnitsWithOutputUnitsWithDrillPaths).to.eql([
+    expect(outputUnitsWithDrillPaths).to.eql([
       {
         selectedWordArray: ["czytają"],
         drillPath: [
@@ -974,23 +928,20 @@ describe("traverseAndRecordInflections", () => {
     ]);
   });
   it("#lfu1.4e YES: 24 (used to fail Drill Virile issue) RDS >>> Fem+Nonv, Sing+Plur <<<.", () => {
-    let outputUnitsWithOutputUnitsWithDrillPaths = [];
+    let outputUnitsWithDrillPaths = [];
     let reqArrNo = "24";
     traverseAndRecordInflections(
       source,
       requirementArrays[reqArrNo],
-      outputUnitsWithOutputUnitsWithDrillPaths
+      outputUnitsWithDrillPaths
     );
 
-    consoleLogOutputUnitsWithDrillPaths(
-      reqArrNo,
-      outputUnitsWithOutputUnitsWithDrillPaths
-    );
+    consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
 
-    expect(outputUnitsWithOutputUnitsWithDrillPaths.length).to.equal(2);
+    expect(outputUnitsWithDrillPaths.length).to.equal(2);
     // return;
 
-    expect(outputUnitsWithOutputUnitsWithDrillPaths).to.eql([
+    expect(outputUnitsWithDrillPaths).to.eql([
       {
         selectedWordArray: ["czyta"],
         drillPath: [
