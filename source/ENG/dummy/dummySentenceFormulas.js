@@ -314,20 +314,22 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaId: "ENG-dummy43",
     translations: { POL: ["POL-dummy43"] },
     structure: [
+      { chunkId: "fix-1", wordtype: "fixed", value: "a" },
       {
         chunkId: "adj-1",
         agreeWith: "nou-1",
         wordtype: "adjective",
         andTags: ["size"],
+        form: ["simple"],
       },
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        specificLemmas: ["nut"],
-        andTags: ["edible2"],
+        // specificLemmas: ["nut"],
+        andTags: ["allohom testing"],
         number: ["singular"],
       },
     ],
-    primaryOrders: [["adj-1", "nou-1"]],
+    primaryOrders: [["fix-1", "adj-1", "nou-1"]],
   },
 };

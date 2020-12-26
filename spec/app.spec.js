@@ -7,6 +7,27 @@ const gpUtils = require("../utils/generalPurposeUtils.js");
 // const { myErrMsgs } = require("../errors/errors");
 // const endpointsCopy = require("../endpoints.json");
 
+const checkTranslationsOfGivenRef = (
+  res,
+  ref,
+  questionLanguage,
+  answerLanguage
+) => {
+  console.log(res.body);
+
+  let { questionSentenceArr, answerSentenceArr } = res.body;
+
+  expect(ref.map((item) => item[questionLanguage][0])).include(
+    questionSentenceArr[0]
+  );
+
+  ref.forEach((item) => {
+    if (item[questionLanguage] === questionSentenceArr[0]) {
+      expect(item[answerLanguage]).to.have.members(answerSentenceArr);
+    }
+  });
+};
+
 const generalTranslatedSentencesRef = {
   //This is a Washburne style reference object.
   read_withClarifiers_QlangENG: {
@@ -349,7 +370,7 @@ describe("/api", () => {
   // beforeEach(() => {});
 
   describe("/palette - Stage 9: Allohomographs.", () => {
-    xit("#pal09-01a.", () => {
+    it("#pal09-01a Type 1 Allohomographs: 'nut' ENG to POL. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -360,17 +381,59 @@ describe("/api", () => {
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy36",
+          sentenceFormulaSymbol: "dummy43",
         })
         .expect(200)
         .then((res) => {
-          // checkSentenceTranslations(
-          //   res,
-          //   questionLanguage,
-          //   answerLanguage,
-          //   "sheep_withClarifiers_Qlang" + questionLanguage,
-          //   ["Sheep (singular).", "Sheep (plural)."]
-          // );
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+
+          expect(questionSentenceArr.length).to.equal(1);
+          expect(answerSentenceArr.length).to.equal(1);
+
+          let ref = [
+            { ENG: ["A small nut (🥜 food)."], POL: ["Mały orzech."] },
+            { ENG: ["A small nut (🔩 metal)."], POL: ["Mała nakrętka."] },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal09-01b Type 1 Allohomographs: 'nut' POL to ENG. No clarifiers.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: false,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy43",
+        })
+        .expect(200)
+        .then((res) => {
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+
+          expect(questionSentenceArr.length).to.equal(1);
+          expect(answerSentenceArr.length).to.equal(1);
+
+          let ref = [
+            { ENG: ["A small nut."], POL: ["Mały orzech."] },
+            { ENG: ["A small nut."], POL: ["Mała nakrętka."] },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
         });
     });
   });

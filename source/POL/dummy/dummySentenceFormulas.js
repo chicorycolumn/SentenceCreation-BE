@@ -937,14 +937,15 @@ exports.dummySentenceFormulasBank = {
     structure: [
       {
         chunkId: "adj-1",
-        agreeWith: ["nou-1"],
+        agreeWith: "nou-1",
         wordtype: "adjective",
         andTags: ["size"],
       },
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        andTags: ["edible2"],
+        andTags: ["allohom testing"],
+        number: ["singular"],
       },
     ],
     primaryOrders: [["adj-1", "nou-1"]],

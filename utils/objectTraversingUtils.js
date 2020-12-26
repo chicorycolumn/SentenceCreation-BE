@@ -680,7 +680,12 @@ exports.addClarifiers = (
     //   }
     // }
 
-    //STEP ONE: Types 2-6 Synhomographs (language-specific)
+    //STEP ONE: Types 1 Allohomographs (clarifiers can be found in lobjs)
+    if (selectedLemmaObject.allohomClarifier) {
+      structureChunk.allohomClarifier = selectedLemmaObject.allohomClarifier;
+    }
+
+    //STEP TWO: Types 2-6 Synhomographs (language-specific)
     //eg ENG has some verbs with v1-v2 synhomography, and 2per ambiguous re number.
     langUtils.addSpecificClarifiers(
       structureChunk,
@@ -688,7 +693,7 @@ exports.addClarifiers = (
       selectedLemmaObject
     );
 
-    //STEP TWO: Type 1 Synhomographs (find synhoms in lobj programmatically)
+    //STEP THREE: Type 1 Synhomographs (find synhoms in lobj programmatically)
     //Find synhoms, add clarifiers if such clarifiers are allowed.
     let allowableClarifiers =
       refObj.lemmaObjectFeatures[answerLanguage]
@@ -743,6 +748,15 @@ exports.addClarifiers = (
 exports.attachClarifiers = (arrayOfOutputUnits) => {
   arrayOfOutputUnits.forEach((outputUnit) => {
     let { structureChunk } = outputUnit;
+
+    if (structureChunk.allohomClarifier) {
+      structureChunk.clarifiers.push(
+        structureChunk.allohomClarifier.emoji +
+          " " +
+          structureChunk.allohomClarifier.text
+      );
+    }
+
     if (structureChunk.clarifiers && structureChunk.clarifiers.length) {
       outputUnit.selectedWord += ` (${structureChunk.clarifiers.join(", ")})`;
     }

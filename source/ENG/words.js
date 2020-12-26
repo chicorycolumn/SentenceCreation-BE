@@ -225,7 +225,7 @@ let nounSet = [
     //links
     translations: { ENG: ["nut"], POL: ["nakrętka"] },
     tags: ["allohom testing", "toolbox"],
-    allohomClarifier: { text: "made of metal", emoji: "🔩" },
+    allohomClarifier: { text: "metal", emoji: "🔩" },
     hideAllohomClarifier: false,
     //selectors
     lemma: "nut",
@@ -250,7 +250,7 @@ let nounSet = [
 let adjectiveSet = [
   {
     //links
-    translations: { ENG: ["red"], PL: ["czerwony"] },
+    translations: { ENG: ["red"], POL: ["czerwony"] },
     tags: ["colour"],
     //selectors
     lemma: "red",
@@ -267,7 +267,7 @@ let adjectiveSet = [
   },
   {
     //links
-    translations: { ENG: ["small"], PL: ["mały"] },
+    translations: { ENG: ["small"], POL: ["mały"] },
     tags: ["size"],
     //selectors
     lemma: "small",
@@ -276,7 +276,7 @@ let adjectiveSet = [
     deficient: false,
     //inflections
     inflections: {
-      simple: "smaller",
+      simple: "small",
       comparative: "smaller",
       superlative: "smallest",
       adverb: false,
