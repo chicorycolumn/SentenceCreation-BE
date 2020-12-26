@@ -27,6 +27,42 @@ const generalTranslatedSentencesRef = {
     "POL->ENG": [
       { POL: "Piszesz.", ENG: ["You write (singular)."] },
       { POL: "Piszecie.", ENG: ["You write (plural)."] },
+      ////
+      { POL: "Napisałeś.", ENG: ["You wrote (singular)."] },
+      { POL: "Napisałaś.", ENG: ["You wrote (singular)."] },
+      { POL: "Napisaliście.", ENG: ["You wrote (plural)."] },
+      { POL: "Napisałyście.", ENG: ["You wrote (plural)."] },
+      ////
+      { POL: "Będziesz pisał.", ENG: ["You will be writing (singular)."] },
+      { POL: "Będziesz pisała.", ENG: ["You will be writing (singular)."] },
+      { POL: "Będziesz pisać.", ENG: ["You will be writing (singular)."] },
+      { POL: "Będziecie pisały.", ENG: ["You will be writing (plural)."] },
+      { POL: "Będziecie pisali.", ENG: ["You will be writing (plural)."] },
+      { POL: "Będziecie pisać.", ENG: ["You will be writing (plural)."] },
+      {
+        POL: "Będziesz pisał.",
+        ENG: ["You are going to be writing (singular)."],
+      },
+      {
+        POL: "Będziesz pisała.",
+        ENG: ["You are going to be writing (singular)."],
+      },
+      {
+        POL: "Będziesz pisać.",
+        ENG: ["You are going to be writing (singular)."],
+      },
+      {
+        POL: "Będziecie pisały.",
+        ENG: ["You are going to be writing (plural)."],
+      },
+      {
+        POL: "Będziecie pisali.",
+        ENG: ["You are going to be writing (plural)."],
+      },
+      {
+        POL: "Będziecie pisać.",
+        ENG: ["You are going to be writing (plural)."],
+      },
     ],
   },
   write_withClarifiers_QlangPOL: {
@@ -39,6 +75,48 @@ const generalTranslatedSentencesRef = {
         POL: "Piszecie.",
         ENG: ["You write.", "You are writing."],
       },
+      ////
+      {
+        POL: "Napisałeś.",
+        ENG: ["You wrote.", "You had written.", "You have written."],
+      },
+      {
+        POL: "Napisałaś.",
+        ENG: ["You wrote.", "You had written.", "You have written."],
+      },
+      {
+        POL: "Napisaliście.",
+        ENG: ["You wrote.", "You had written.", "You have written."],
+      },
+      {
+        POL: "Napisałyście.",
+        ENG: ["You wrote.", "You had written.", "You have written."],
+      },
+      ////
+      {
+        POL: "Będziesz pisał.",
+        ENG: ["You will be writing.", "You are going to be writing."],
+      },
+      {
+        POL: "Będziesz pisała.",
+        ENG: ["You will be writing.", "You are going to be writing."],
+      },
+      {
+        POL: "Będziesz pisać.",
+        ENG: ["You will be writing.", "You are going to be writing."],
+      },
+      {
+        POL: "Będziecie pisały.",
+        ENG: ["You will be writing.", "You are going to be writing."],
+      },
+      {
+        POL: "Będziecie pisali.",
+        ENG: ["You will be writing.", "You are going to be writing."],
+      },
+      {
+        POL: "Będziecie pisać.",
+        ENG: ["You will be writing.", "You are going to be writing."],
+      },
     ],
   },
   be_withClarifiers_QlangENG: {
@@ -49,8 +127,8 @@ const generalTranslatedSentencesRef = {
   },
   be_withClarifiers_QlangPOL: {
     "POL->ENG": [
-      { POL: "Jesteś.", ENG: ["You are."] },
-      { POL: "Jesteście.", ENG: ["You are."] },
+      { POL: "Jesteś.", ENG: ["You are.", "You are being."] },
+      { POL: "Jesteście.", ENG: ["You are.", "You are being."] },
     ],
   },
   sheep_withClarifiers_QlangENG: {
@@ -234,31 +312,34 @@ function checkSentenceTranslations(
 
   expect(allExpectedQuestionSentences).to.include(questionSentence);
 
-  translatedSentencesRef[word][direction].forEach((refItem) => {
+  let translations = translatedSentencesRef[word][direction];
+
+  expect(translations.map((refItem) => refItem[questionLanguage])).to.include(
+    questionSentence
+  );
+
+  translations.forEach((refItem) => {
     let { POL, ENG } = refItem;
 
-    if (questionLanguage === "POL") {
-      if (questionSentence === POL) {
-        expect(answerSentenceArr).to.have.members(ENG);
-        console.log(
-          `-' '-._,-' '-._,-' '-._,-' '-._,-' '-._,-' '-._${questionSentence}`
-        );
-        console.log(
-          "was translated by,-'-._,-' '-._,-' '-._,-'-._,",
-          answerSentenceArr
-        );
-      }
-    } else if (questionLanguage === "ENG") {
-      if (questionSentence === ENG) {
-        expect(answerSentenceArr).to.have.members(POL);
-        console.log(
-          `-' '-._,-' '-._,-' '-._,-' '-._,-' '-._,-' '-._${questionSentence}`
-        );
-        console.log(
-          "  was translated by`-' '-._,-' '-._,-' '-._,-'",
-          answerSentenceArr
-        );
-      }
+    if (questionSentence === POL) {
+      expect(answerSentenceArr).to.have.members(ENG);
+      console.log(
+        `-' '-._,-' '-._,-' '-._,-' '-._,-' '-._,-' '-._${questionSentence}`
+      );
+      console.log(
+        "was translated by,-'-._,-' '-._,-' '-._,-'-._,",
+        answerSentenceArr
+      );
+    }
+    if (questionSentence === ENG) {
+      expect(answerSentenceArr).to.have.members(POL);
+      console.log(
+        `-' '-._,-' '-._,-' '-._,-' '-._,-' '-._,-' '-._${questionSentence}`
+      );
+      console.log(
+        "  was translated by`-' '-._,-' '-._,-' '-._,-'",
+        answerSentenceArr
+      );
     }
   });
 }
@@ -267,6 +348,7 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
   describe.only("/palette - Stage 8: Synhomographs.", () => {
+    ////
     it("#pal08-06a (Ad-PW: clarify Inflections) 'write': ENG to POL. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -315,7 +397,7 @@ describe("/api", () => {
           );
         });
     });
-    xit("#pal08-06c (Ad-PW: clarify Inflections) 'be': ENG to POL. Expect clarifiers.", () => {
+    it("#pal08-06c (Ad-PW: clarify Inflections) 'be': ENG to POL. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -339,7 +421,7 @@ describe("/api", () => {
           );
         });
     });
-    xit("#pal08-06d (Ad-PW: clarify Inflections) 'be': POL to ENG. Don't expect clarifiers.", () => {
+    it("#pal08-06d (Ad-PW: clarify Inflections) 'be': POL to ENG. Don't expect clarifiers.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -363,6 +445,108 @@ describe("/api", () => {
           );
         });
     });
+    it("#pal08-06e (Ad-PW: clarify Inflections) 'write': ENG to POL. Expect clarifiers.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: false,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy41",
+        })
+        .expect(200)
+        .then((res) => {
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "write_withClarifiers_Qlang" + questionLanguage,
+            ["You wrote (singular).", "You wrote (plural)."]
+          );
+        });
+    });
+    it("#pal08-06f (Ad-PW: clarify Inflections) 'write': POL to ENG. Don't expect clarifiers.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: false,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy41",
+        })
+        .expect(200)
+        .then((res) => {
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "write_withClarifiers_Qlang" + questionLanguage,
+            ["Napisałeś.", "Napisałaś.", "Napisaliście.", "Napisałyście."]
+          );
+        });
+    });
+    it("#pal08-06g (Ad-PW: clarify Inflections) 'write': ENG to POL. Expect clarifiers.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: false,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy42",
+        })
+        .expect(200)
+        .then((res) => {
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "write_withClarifiers_Qlang" + questionLanguage,
+            ["You will be writing (singular).", "You will be writing (plural)."]
+          );
+        });
+    });
+    it("#pal08-06h (Ad-PW: clarify Inflections) 'write': POL to ENG. Don't expect clarifiers.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: false,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy42",
+        })
+        .expect(200)
+        .then((res) => {
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "write_withClarifiers_Qlang" + questionLanguage,
+            [
+              "Będziesz pisał.",
+              "Będziesz pisała.",
+              "Będziecie pisały.",
+              "Będziecie pisali.",
+            ]
+          );
+        });
+    });
+    ////
     it("#pal08-05a (Ad-PW: clarify Inflections (tenseDescription)) 'read': ENG to POL. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -411,6 +595,7 @@ describe("/api", () => {
           );
         });
     });
+    ////
     it("#pal08-01a (If-PW: clarify Inflections) 'sheep': ENG to POL. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";

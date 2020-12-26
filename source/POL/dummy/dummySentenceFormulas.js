@@ -900,4 +900,34 @@ exports.dummySentenceFormulasBank = {
     ],
     primaryOrders: [],
   },
+  dummy41: {
+    sentenceFormulaSymbol: "dummy41",
+    sentenceFormulaId: "POL-dummy41",
+    translations: { ENG: ["ENG-dummy41"] },
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        andTags: ["basic3"],
+        person: ["2per"],
+        tenseDescription: ["past pf"],
+      },
+    ],
+    primaryOrders: [],
+  },
+  dummy42: {
+    sentenceFormulaSymbol: "dummy42",
+    sentenceFormulaId: "POL-dummy42",
+    translations: { ENG: ["ENG-dummy42"] },
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        andTags: ["basic3"],
+        person: ["2per"],
+        tenseDescription: ["future im"],
+      },
+    ],
+    primaryOrders: [],
+  },
 };
