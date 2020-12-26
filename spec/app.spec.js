@@ -25,19 +25,19 @@ const generalTranslatedSentencesRef = {
   },
   write_withClarifiers_QlangENG: {
     "POL->ENG": [
-      { POL: "Piszę.", ENG: ["You write (singular)."] },
+      { POL: "Piszesz.", ENG: ["You write (singular)."] },
       { POL: "Piszecie.", ENG: ["You write (plural)."] },
     ],
   },
   write_withClarifiers_QlangPOL: {
     "POL->ENG": [
       {
-        POL: "Piszę.",
-        ENG: ["You write.", "You are writing.", "You have written."],
+        POL: "Piszesz.",
+        ENG: ["You write.", "You are writing."],
       },
       {
         POL: "Piszecie.",
-        ENG: ["You write.", "You are writing.", "You have written."],
+        ENG: ["You write.", "You are writing."],
       },
     ],
   },
@@ -267,7 +267,7 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
   describe.only("/palette - Stage 8: Synhomographs.", () => {
-    it.only("#pal08-06a (Ad-PW: clarify Inflections) 'write': ENG to POL. Expect clarifiers.", () => {
+    it("#pal08-06a (Ad-PW: clarify Inflections) 'write': ENG to POL. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -291,7 +291,7 @@ describe("/api", () => {
           );
         });
     });
-    xit("#pal08-06b (Ad-PW: clarify Inflections) 'write': POL to ENG. Don't expect clarifiers.", () => {
+    it("#pal08-06b (Ad-PW: clarify Inflections) 'write': POL to ENG. Don't expect clarifiers.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 

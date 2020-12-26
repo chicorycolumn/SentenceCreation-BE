@@ -47,7 +47,26 @@ let inflectorRef = {
   ],
 };
 
-exports.addClarifiersSpecific = () => {};
+exports.addAdhocClarifiers = (structureChunk, currentLanguage, adhocLabel) => {
+  if (structureChunk.wordtype === "verb") {
+    if (!structureChunk.person || !structureChunk.number) {
+      throw "ENG:addAdhocClarifiers expected this verb structureChunk to have a Person and Number key.";
+    }
+    if (!structureChunk.person.length > 1 || structureChunk.number.length > 1) {
+      throw "ENG:addAdhocClarifiers expected this verb structureChunk's Person and Number key to have only one value each, not more.";
+    }
+
+    let person = structureChunk.person[0];
+    let number = structureChunk.number[0];
+
+    if (person === "2per") {
+      if (!structureChunk.clarifiers) {
+        structureChunk.clarifiers = [];
+      }
+      structureChunk.clarifiers.push(number);
+    }
+  }
+};
 
 exports.adjustStructureChunksInIfPW = (structureChunk) => {};
 
@@ -279,7 +298,6 @@ exports.generateAdhocForms = (
 
     lfUtils.updateStructureChunkByAdhocOnly(
       structureChunkCopy,
-      currentLanguage,
       adhocLabel,
       adhocValue
     );
@@ -290,7 +308,6 @@ exports.generateAdhocForms = (
 
         lfUtils.updateStructureChunkByAdhocOnly(
           structureChunkCopy,
-          currentLanguage,
           label,
           value
         );
@@ -325,6 +342,8 @@ exports.generateAdhocForms = (
         }
       });
     }
+
+    exports.addAdhocClarifiers(structureChunkCopy, currentLanguage, adhocLabel);
 
     let resObj = {
       selectedWordArr,

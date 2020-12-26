@@ -67,21 +67,8 @@ exports.filterWithinSelectedLemmaObject = (
   }
 };
 
-exports.updateStructureChunkByAdhocOnly = (
-  structureChunk,
-  currentLanguage,
-  adhocLabel,
-  adhocValue
-) => {
-  console.log(
-    "Karina Nguyen says: updateStructureChunkByAdhocOnly fxn has been called"
-  );
-  console.log(structureChunk.chunkId);
-  if (currentLanguage === "ENG") {
-    console.log({ structureChunk, currentLanguage, adhocLabel, adhocValue });
-  }
-
-  structureChunk[adhocLabel] = [adhocValue];
+exports.updateStructureChunkByAdhocOnly = (structureChunk, label, value) => {
+  structureChunk[label] = [value];
 };
 
 exports.updateStructureChunkByInflections = (outputUnit, currentLanguage) => {

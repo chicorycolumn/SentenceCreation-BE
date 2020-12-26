@@ -677,6 +677,10 @@ exports.addClarifiers = (
     if (outputUnit.structureChunk.wordtype === "fixed") {
       return;
     }
+
+    if (!structureChunk.clarifiers) {
+      structureChunk.clarifiers = [];
+    }
     //
     //console.log(outputUnit)
     //
@@ -730,9 +734,9 @@ exports.addClarifiers = (
             console.log(
               "Molly Urushiol says: I'm adding a clarifier for Past Simple."
             );
-            console.log;
-            outputUnit.selectedWord += " " + "(past)";
-            outputUnit.preventAddingClarifiers = true; // We assume that no more clarifiers are needed.
+
+            structureChunk.clarifiers.push("past");
+            structureChunk.preventAddingClarifiers = true; // We assume that no more clarifiers are needed.
           } else if (
             structureChunk.tenseDescription &&
             structureChunk.tenseDescription.includes("present simple")
@@ -740,18 +744,19 @@ exports.addClarifiers = (
             console.log(
               "Molly Urushiol says: I'm adding a clarifier for Present Simple."
             );
-            outputUnit.selectedWord += " " + "(present)";
-            outputUnit.preventAddingClarifiers = true; // We assume that no more clarifiers are needed.
+
+            structureChunk.clarifiers.push("present");
+            structureChunk.preventAddingClarifiers = true; // We assume that no more clarifiers are needed.
           }
         }
       }
     }
 
-    if (outputUnit.preventAddingClarifiers) {
+    if (structureChunk.preventAddingClarifiers) {
       console.log("addClarifiers this loop was told to cease!!!!");
     }
 
-    if (!outputUnit.preventAddingClarifiers) {
+    if (!structureChunk.preventAddingClarifiers) {
       console.log("ccc", structureChunk.chunkId);
 
       let synhomographData = exports.findSynhomographs(
@@ -761,6 +766,15 @@ exports.addClarifiers = (
       );
 
       console.log("ddd", synhomographData);
+      //This is coming back null for "write".
+      //What I want is for it to work out that "you write" and "you write" (sing and plur) are synhomographs.
+      //However, because ENG verbs go through the Ad-PW, and the two things I want to find as synhoms are at the end of ad hoc inflections,
+      //it means that they aren't present in the lobj here for it to identify them as synhoms.
+
+      //Well............ I suppose in ENG (non-'be') verbs, which is the only thing currently that goes through Ad-PW,
+      //it is the case that the only area needing clarification is You singular and You plural.
+      //So we could say, for anything you decide to go through the Ad-PW, you have to manually specify its
+      //areas needing clarification.
 
       if (synhomographData) {
         synhomographData.synhomographs.forEach((synhomDataUnit) => {
@@ -778,22 +792,32 @@ exports.addClarifiers = (
               (label) => allowableClarifiers.includes(label)
             );
 
-            let clarifierArr = [];
-            labelsWhereTheyDiffer.forEach((label) => {
-              clarifierArr.push(structureChunk[label]);
-            });
-
-            if (clarifierArr.length) {
-              outputUnit.selectedWord += ` (${clarifierArr.join(", ")})`;
+            if (!structureChunk.clarifiers) {
+              structureChunk.clarifiers = [];
             }
+
+            labelsWhereTheyDiffer.forEach((label) => {
+              structureChunk.clarifiers.push(structureChunk[label]);
+            });
           }
         });
       }
     }
   });
 
+  exports.attachClarifiers(arrayOfOutputUnits);
+
   console.log(
     "Molly Urushiol says Okay, now we're at the end of OT:addClarifies, so it should be that the following arrayOfOutputUnits should have 'read' now with clarifier."
   );
   gpUtils.consoleLogObjectAtTwoLevels(arrayOfOutputUnits);
+};
+
+exports.attachClarifiers = (arrayOfOutputUnits) => {
+  arrayOfOutputUnits.forEach((outputUnit) => {
+    let { structureChunk } = outputUnit;
+    if (structureChunk.clarifiers && structureChunk.clarifiers.length) {
+      outputUnit.selectedWord += ` (${structureChunk.clarifiers.join(", ")})`;
+    }
+  });
 };
