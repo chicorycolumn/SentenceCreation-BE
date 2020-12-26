@@ -3,7 +3,7 @@ const otUtils = require("../../utils/objectTraversingUtils.js");
 const gpUtils = require("../../utils/generalPurposeUtils.js");
 const refObj = require("../../utils/referenceObjects.js");
 
-exports.addAdhocClarifiers = () => {};
+exports.addSpecificClarifiers = () => {};
 
 exports.adjustStructureChunksInIfPW = (structureChunk) => {
   if (

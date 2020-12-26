@@ -666,6 +666,8 @@ exports.addClarifiers = (
     throw "OT:addClarifiers says Did you mean to call me? You didn't give me an answerLanguage argument. I am only supposed to add clarifiers to the question sentence, and in order to do that I must know what the answerLanguage is going to be.";
   }
 
+  const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
+
   arrayOfOutputUnits.forEach((outputUnit) => {
     let {
       selectedLemmaObject,
@@ -705,76 +707,33 @@ exports.addClarifiers = (
     //   }
     // }
 
-    //allowableClarifiers. Any clarifiers not in here, don't bother adding them.
-    //We're looking ahead to the answerLanguage, and thinking, hmmmmm, well right now the currentLanguage
-    //is POL, and soon the answerLanguage will be ENG. And looking it up... ENG doesn't allow "gender" as a transfer.
-    //So from that, we can surmise that ENG doesn't care about gender, and thus, won't want it as a clarifer on the POL Q sentence.
+    //STEP ONE: Add clarifiers specific to the foibles of this language.
+    //          eg ENG has some verbs with v1-v2 synhomography, and 2per ambiguous re number.
+    langUtils.addSpecificClarifiers(
+      structureChunk,
+      currentLanguage,
+      selectedLemmaObject
+    );
+
+    //STEP TWO: Go through the lobj and find Synhomographs. Add clarifiers for them,
+    //          checking first that such clarifiers are allowed.
     let allowableClarifiers =
       refObj.lemmaObjectFeatures[answerLanguage]
         .allowableTransfersFromQuestionStructure[structureChunk.wordtype];
 
-    console.log("aaa");
-    console.log("allowableClarifiers", allowableClarifiers);
+    console.log("aaa allowableClarifiers", allowableClarifiers);
 
-    if (currentLanguage === "ENG" && structureChunk.wordtype === "verb") {
-      if (structureChunk.tenseDescription) {
-        if (
-          selectedLemmaObject.inflections.infinitive ===
-          selectedLemmaObject.inflections.v2
-        ) {
-          console.log(
-            "Molly Urushiol says: Aha! This lemmaObject '" +
-              selectedLemmaObject.lemma +
-              "' has a v1-v2 synhomograph."
-          );
-          if (
-            structureChunk.tenseDescription &&
-            structureChunk.tenseDescription.includes("past simple")
-          ) {
-            console.log(
-              "Molly Urushiol says: I'm adding a clarifier for Past Simple."
-            );
-
-            structureChunk.clarifiers.push("past");
-            structureChunk.preventAddingClarifiers = true; // We assume that no more clarifiers are needed.
-          } else if (
-            structureChunk.tenseDescription &&
-            structureChunk.tenseDescription.includes("present simple")
-          ) {
-            console.log(
-              "Molly Urushiol says: I'm adding a clarifier for Present Simple."
-            );
-
-            structureChunk.clarifiers.push("present");
-            structureChunk.preventAddingClarifiers = true; // We assume that no more clarifiers are needed.
-          }
-        }
-      }
-    }
-
-    if (structureChunk.preventAddingClarifiers) {
-      console.log("addClarifiers this loop was told to cease!!!!");
-    }
+    //allowableClarifiers. Any clarifiers not in here, don't bother adding them.
+    //We're looking ahead to the answerLanguage, and thinking, hmmmmm, well right now the currentLanguage
+    //is POL, and soon the answerLanguage will be ENG. And looking it up... ENG doesn't allow "gender" as a transfer.
+    //So from that, we can surmise that ENG doesn't care about gender, and thus, won't want it as a clarifer on the POL Q sentence.
 
     if (!structureChunk.preventAddingClarifiers) {
-      console.log("ccc", structureChunk.chunkId);
-
       let synhomographData = exports.findSynhomographs(
         selectedLemmaObject,
         structureChunk,
         currentLanguage
       );
-
-      console.log("ddd", synhomographData);
-      //This is coming back null for "write".
-      //What I want is for it to work out that "you write" and "you write" (sing and plur) are synhomographs.
-      //However, because ENG verbs go through the Ad-PW, and the two things I want to find as synhoms are at the end of ad hoc inflections,
-      //it means that they aren't present in the lobj here for it to identify them as synhoms.
-
-      //Well............ I suppose in ENG (non-'be') verbs, which is the only thing currently that goes through Ad-PW,
-      //it is the case that the only area needing clarification is You singular and You plural.
-      //So we could say, for anything you decide to go through the Ad-PW, you have to manually specify its
-      //areas needing clarification.
 
       if (synhomographData) {
         synhomographData.synhomographs.forEach((synhomDataUnit) => {
@@ -792,23 +751,21 @@ exports.addClarifiers = (
               (label) => allowableClarifiers.includes(label)
             );
 
-            if (!structureChunk.clarifiers) {
-              structureChunk.clarifiers = [];
-            }
-
             labelsWhereTheyDiffer.forEach((label) => {
               structureChunk.clarifiers.push(structureChunk[label]);
             });
           }
         });
       }
+    } else {
+      console.log("I was told not to add any further clarifiers!");
     }
   });
 
   exports.attachClarifiers(arrayOfOutputUnits);
 
   console.log(
-    "Molly Urushiol says Okay, now we're at the end of OT:addClarifies, so it should be that the following arrayOfOutputUnits should have 'read' now with clarifier."
+    "Okay, now we're at the end of OT:addClarifies, so it should be that the following arrayOfOutputUnits should have 'read' now with clarifier."
   );
   gpUtils.consoleLogObjectAtTwoLevels(arrayOfOutputUnits);
 };

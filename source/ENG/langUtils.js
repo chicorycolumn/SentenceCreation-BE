@@ -47,23 +47,48 @@ let inflectorRef = {
   ],
 };
 
-exports.addAdhocClarifiers = (structureChunk, currentLanguage, adhocLabel) => {
+exports.addSpecificClarifiers = (
+  structureChunk,
+  currentLanguage,
+  lemmaObject
+) => {
   if (structureChunk.wordtype === "verb") {
+    //Add clarifier for 2nd person, singular vs plural.
     if (!structureChunk.person || !structureChunk.number) {
-      throw "ENG:addAdhocClarifiers expected this verb structureChunk to have a Person and Number key.";
+      throw "ENG:addSpecificClarifiers expected this verb structureChunk to have a Person and Number key.";
     }
     if (!structureChunk.person.length > 1 || structureChunk.number.length > 1) {
-      throw "ENG:addAdhocClarifiers expected this verb structureChunk's Person and Number key to have only one value each, not more.";
+      throw "ENG:addSpecificClarifiers expected this verb structureChunk's Person and Number key to have only one value each, not more.";
     }
 
     let person = structureChunk.person[0];
     let number = structureChunk.number[0];
 
     if (person === "2per") {
-      if (!structureChunk.clarifiers) {
-        structureChunk.clarifiers = [];
-      }
       structureChunk.clarifiers.push(number);
+    }
+
+    //Add clarifier for verbs with v1-v2 synhomography.
+    if (structureChunk.tenseDescription) {
+      if (structureChunk.tenseDescription.length > 1) {
+        throw "ENG:addSpecificClarifiers expected this verb structureChunk's tenseDescription key to have only one value each, not more.";
+      }
+
+      if (lemmaObject.inflections.infinitive === lemmaObject.inflections.v2) {
+        if (
+          structureChunk.tenseDescription &&
+          structureChunk.tenseDescription.includes("past simple")
+        ) {
+          structureChunk.clarifiers.push("past");
+          structureChunk.preventAddingClarifiers = true; // We assume that no more clarifiers are needed.
+        } else if (
+          structureChunk.tenseDescription &&
+          structureChunk.tenseDescription.includes("present simple")
+        ) {
+          structureChunk.clarifiers.push("present");
+          structureChunk.preventAddingClarifiers = true; // We assume that no more clarifiers are needed.
+        }
+      }
     }
   }
 };
@@ -342,8 +367,6 @@ exports.generateAdhocForms = (
         }
       });
     }
-
-    exports.addAdhocClarifiers(structureChunkCopy, currentLanguage, adhocLabel);
 
     let resObj = {
       selectedWordArr,
