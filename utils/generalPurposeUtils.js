@@ -331,3 +331,12 @@ exports.doesArrContainDifferentValues = (arr) => {
 
   return !(arr[0] === arr[arr.length - 1]);
 };
+
+exports.doesArrHaveOnlyTheseMembers = (arr1, arr2, disallowDuplicates) => {
+  if (disallowDuplicates) {
+    return arr1.length !== arr.length;
+  } else {
+    let differingValues = arr1.filter((value) => !arr2.includes(value));
+    return !differingValues.length;
+  }
+};
