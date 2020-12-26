@@ -513,7 +513,12 @@ exports.extractNestedRoutes = (source) => {
   }
 };
 
-exports.findObjectInNestedObject = (source, identifyingData, alsoReturnKey) => {
+exports.findObjectInNestedObject = (
+  source,
+  identifyingData,
+  alsoReturnKey,
+  alsoSearchArrays
+) => {
   let res = {};
   recursivelySearch(source, identifyingData);
   return alsoReturnKey ? res : res.value;
@@ -525,7 +530,38 @@ exports.findObjectInNestedObject = (source, identifyingData, alsoReturnKey) => {
 
     Object.keys(source).forEach((key) => {
       let value = source[key];
-      if (gpUtils.isKeyValueTypeObject(value)) {
+      if (
+        (!alsoSearchArrays && gpUtils.isKeyValueTypeObject(value)) ||
+        (alsoSearchArrays && gpUtils.isKeyValueTypeObjectOrArray(value))
+      ) {
+        if (gpUtils.doKeyValuesMatch(value, identifyingData)) {
+          res.value = value;
+          res.key = key;
+        } else {
+          recursivelySearch(value, identifyingData);
+        }
+      }
+    });
+  }
+};
+
+exports.findObjectInNestedObjectsAndArrays = (
+  source,
+  identifyingData,
+  alsoReturnKey
+) => {
+  let res = {};
+  recursivelySearch(source, identifyingData);
+  return alsoReturnKey ? res : res.value;
+
+  function recursivelySearch(source, identifyingData) {
+    if (res.value) {
+      return;
+    }
+
+    Object.keys(source).forEach((key) => {
+      let value = source[key];
+      if (typeof value === "object" && value !== null) {
         if (gpUtils.doKeyValuesMatch(value, identifyingData)) {
           res.value = value;
           res.key = key;

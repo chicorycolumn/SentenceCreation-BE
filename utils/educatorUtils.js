@@ -4,14 +4,27 @@ const otUtils = require("./objectTraversingUtils.js");
 exports.findTypeOneHomographs = (
   currentLanguage,
   homographType,
-  showAllEvenIfAllohomClarifierAdded
+  ignoreVeeTwoVeeThreeAllohoms,
+  ignoreAllohomsAlreadyWithClarifiers
 ) => {
-  if (!["syn", "allo"].includes(homographType)) {
+  if (!["syn", "allo", "all"].includes(homographType)) {
     console.log({ homographType });
     throw "findTypeOneHomographs fxn: I don't know what type of homograph you want me to find. I've logged above what you gave me.";
   }
 
   const { wordsBank } = require(`../source/${currentLanguage}/words.js`);
+
+  let foundThing = otUtils.findObjectInNestedObject(
+    wordsBank,
+    {
+      id: "eng-ver-003",
+    },
+    false,
+    true
+  );
+  console.log({ foundThing });
+
+  return;
 
   let recordOfTerminalValuesAndPaths = [];
   let severallyAppearingTerminalValuesArr = [];
@@ -51,23 +64,44 @@ exports.findTypeOneHomographs = (
       .map((unit) => unit.nestedRoute);
   });
 
+  let allohomographs = {};
+  let synhomographs = {};
+
+  Object.keys(homographs).forEach((homographWord) => {
+    let homographRoutes = homographs[homographWord];
+
+    if (
+      gpUtils.doesArrContainDifferentValues(
+        homographRoutes.map((route) => route[0])
+      )
+    ) {
+      checkForIgnoringsAndAddToResult(
+        allohomographs,
+        homographWord,
+        homographRoutes
+      );
+    } else {
+      checkForIgnoringsAndAddToResult(
+        allohomographs,
+        homographWord,
+        homographRoutes
+      );
+    }
+  });
+
+  function checkForIgnoringsAndAddToResult(
+    resultObj,
+    homographWord,
+    homographRoutes
+  ) {
+    resultObj[homographWord] = homographRoutes;
+  }
+
   if (homographType === "allo") {
-    let allohomographs = {};
-
-    Object.keys(homographs).forEach((homographWord) => {
-      let homographRoutes = homographs[homographWord];
-
-      if (
-        gpUtils.doesArrContainDifferentValues(
-          homographRoutes.map((route) => route[0])
-        )
-      ) {
-        allohomographs[homographWord] = homographRoutes;
-      }
-    });
-
     return allohomographs;
   } else if (homographType === "syn") {
+    return synhomographs;
+  } else if (homographType === "all") {
     return homographs;
   }
 };

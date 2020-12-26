@@ -38,6 +38,10 @@ exports.isKeyValueTypeObject = (item) => {
   return typeof item === "object" && item !== null && !Array.isArray(item);
 };
 
+exports.isKeyValueTypeObjectOrArray = (item) => {
+  return typeof item === "object" && item !== null;
+};
+
 exports.giveSetKey = (word) => {
   return word + "Set";
 };
