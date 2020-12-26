@@ -3,6 +3,8 @@ const {
   traverseAndRecordInflections,
 } = require("../utils/lemmaFilteringUtils.js");
 
+const shouldConsoleLog = false;
+
 describe("traverseAndRecordInflections", () => {
   let source = {
     infinitive: "czytać",
@@ -309,15 +311,14 @@ describe("traverseAndRecordInflections", () => {
     number,
     outputUnitsWithDrillPaths
   ) {
-    return;
     outputUnitsWithDrillPaths.forEach((outputUnitsWithDrillPathsUnit) => {
       console.log(">>>", number);
       console.log(
-        "ppoutputUnitsWithDrillPathsUnit selectedWordArray:",
+        "outputUnitsWithDrillPathsUnit selectedWordArray:",
         outputUnitsWithDrillPathsUnit.selectedWordArray
       );
       console.log(
-        "ppoutputUnitsWithDrillPathsUnit drillPath:",
+        "outputUnitsWithDrillPathsUnit drillPath:",
         outputUnitsWithDrillPathsUnit.drillPath
       );
       console.log(" ");
@@ -333,7 +334,9 @@ describe("traverseAndRecordInflections", () => {
       requirementArrays[reqArrNo],
       outputUnitsWithDrillPaths
     );
-    consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+    if (shouldConsoleLog) {
+      consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+    }
 
     expect(outputUnitsWithDrillPaths.length).to.equal(1);
 
@@ -355,7 +358,9 @@ describe("traverseAndRecordInflections", () => {
       requirementArrays[reqArrNo],
       outputUnitsWithDrillPaths
     );
-    consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+    if (shouldConsoleLog) {
+      consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+    }
 
     expect(outputUnitsWithDrillPaths.length).to.equal(2);
 
@@ -390,7 +395,9 @@ describe("traverseAndRecordInflections", () => {
       requirementArrays[reqArrNo],
       outputUnitsWithDrillPaths
     );
-    consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+    if (shouldConsoleLog) {
+      consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+    }
 
     expect(outputUnitsWithDrillPaths.length).to.equal(2);
 
@@ -425,7 +432,9 @@ describe("traverseAndRecordInflections", () => {
       requirementArrays[reqArrNo],
       outputUnitsWithDrillPaths
     );
-    consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+    if (shouldConsoleLog) {
+      consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+    }
 
     expect(outputUnitsWithDrillPaths.length).to.equal(2);
 
@@ -460,7 +469,9 @@ describe("traverseAndRecordInflections", () => {
       requirementArrays[reqArrNo],
       outputUnitsWithDrillPaths
     );
-    consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+    if (shouldConsoleLog) {
+      consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+    }
 
     expect(outputUnitsWithDrillPaths.length).to.equal(5);
 
@@ -525,7 +536,9 @@ describe("traverseAndRecordInflections", () => {
       requirementArrays[reqArrNo],
       outputUnitsWithDrillPaths
     );
-    consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+    if (shouldConsoleLog) {
+      consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+    }
 
     expect(outputUnitsWithDrillPaths.length).to.equal(6);
 
@@ -600,7 +613,9 @@ describe("traverseAndRecordInflections", () => {
       requirementArrays[reqArrNo],
       outputUnitsWithDrillPaths
     );
-    consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+    if (shouldConsoleLog) {
+      consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+    }
 
     expect(outputUnitsWithDrillPaths.length).to.equal(9);
     // return;
@@ -707,7 +722,9 @@ describe("traverseAndRecordInflections", () => {
       outputUnitsWithDrillPaths
     );
 
-    consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+    if (shouldConsoleLog) {
+      consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+    }
 
     expect(outputUnitsWithDrillPaths.length).to.equal(1);
     // return;
@@ -734,7 +751,9 @@ describe("traverseAndRecordInflections", () => {
       outputUnitsWithDrillPaths
     );
 
-    consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+    if (shouldConsoleLog) {
+      consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+    }
 
     expect(outputUnitsWithDrillPaths.length).to.equal(2);
     // return;
@@ -771,7 +790,9 @@ describe("traverseAndRecordInflections", () => {
       outputUnitsWithDrillPaths
     );
 
-    consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+    if (shouldConsoleLog) {
+      consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+    }
 
     expect(outputUnitsWithDrillPaths.length).to.equal(4);
     // return;
@@ -828,7 +849,9 @@ describe("traverseAndRecordInflections", () => {
       outputUnitsWithDrillPaths
     );
 
-    consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+    if (shouldConsoleLog) {
+      consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+    }
 
     expect(outputUnitsWithDrillPaths.length).to.equal(1);
     // return;
@@ -855,7 +878,9 @@ describe("traverseAndRecordInflections", () => {
       outputUnitsWithDrillPaths
     );
 
-    consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+    if (shouldConsoleLog) {
+      consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+    }
 
     expect(outputUnitsWithDrillPaths.length).to.equal(1);
     // return;
@@ -882,7 +907,9 @@ describe("traverseAndRecordInflections", () => {
       outputUnitsWithDrillPaths
     );
 
-    consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+    if (shouldConsoleLog) {
+      consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+    }
 
     expect(outputUnitsWithDrillPaths.length).to.equal(1);
     // return;
@@ -909,7 +936,9 @@ describe("traverseAndRecordInflections", () => {
       outputUnitsWithDrillPaths
     );
 
-    consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+    if (shouldConsoleLog) {
+      consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+    }
 
     expect(outputUnitsWithDrillPaths.length).to.equal(1);
     // return;
@@ -936,7 +965,9 @@ describe("traverseAndRecordInflections", () => {
       outputUnitsWithDrillPaths
     );
 
-    consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+    if (shouldConsoleLog) {
+      consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+    }
 
     expect(outputUnitsWithDrillPaths.length).to.equal(2);
     // return;

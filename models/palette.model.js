@@ -40,7 +40,10 @@ exports.fetchPalette = (req) => {
     hideClarifiers
   );
 
-  console.log("questionResponseObj", questionResponseObj);
+  console.log(
+    "palette.model > questionResponseObj before answer is sought",
+    questionResponseObj
+  );
 
   if (true) {
     console.log(
@@ -74,8 +77,6 @@ exports.fetchPalette = (req) => {
     if (!translations || !translations.length) {
       throw "palette.model > I was asked to give translations, but the question sentence formula did not have any translations listed.";
     }
-
-    console.log("bbb translations", translations);
 
     translations.forEach((translationSentenceFormulaId) => {
       let answerSentenceData = scUtils.processSentenceFormula(

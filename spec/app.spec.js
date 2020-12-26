@@ -347,6 +347,34 @@ function checkSentenceTranslations(
 describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
+
+  describe("/palette - Stage 9: Allohomographs.", () => {
+    it("#pal09-01a.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: false,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy36",
+        })
+        .expect(200)
+        .then((res) => {
+          // checkSentenceTranslations(
+          //   res,
+          //   questionLanguage,
+          //   answerLanguage,
+          //   "sheep_withClarifiers_Qlang" + questionLanguage,
+          //   ["Sheep (singular).", "Sheep (plural)."]
+          // );
+        });
+    });
+  });
+
   describe("/palette - Stage 8: Synhomographs.", () => {
     it("#pal08-01a (Type 1 Synhomographs. If-PW: clarify Inflections) 'sheep': ENG to POL. Expect clarifiers.", () => {
       const questionLanguage = "ENG";

@@ -683,7 +683,6 @@ describe("extractNestedRoutes", () => {
     };
 
     let res = giveRoutesAndTerminalValuesFromObject(input);
-    console.log(">>>");
     console.log(res);
   });
   it("#otu2.2 get routes from read.", () => {
@@ -708,7 +707,6 @@ describe("extractNestedRoutes", () => {
     };
 
     let res = giveRoutesAndTerminalValuesFromObject(input);
-    console.log(">>>");
     console.log(res);
   });
 });

@@ -163,10 +163,6 @@ exports.findMatchingLemmaObjectThenWord = (
             throw "No members were found in the adhocArr from OT:findMatching, path 3A-2 (ie tenseDescription).";
           }
 
-          console.log(adhocArr);
-          console.log("Meera Ghir says adhocArr in OT:findMatching is:");
-          gpUtils.consoleLogObjectAtOneLevel(adhocArr);
-
           let selectedAdhocResultObj = gpUtils.selectRandom(adhocArr);
 
           let {
@@ -348,11 +344,6 @@ exports.findMatchingLemmaObjectThenWord = (
               selectedLemmaObject,
               drillPath
             );
-
-            // console.log("-------------------------------v");
-            // console.log("I found this output unit:");
-            // console.log(outputUnit);
-            // console.log("-------------------------------^");
             arrayOfAllPossibleOutputUnits.push(outputUnit);
           });
         });
@@ -396,10 +387,6 @@ exports.findMatchingLemmaObjectThenWord = (
         drillPath
       );
 
-      // console.log("-------------------------------v");
-      // console.log("I found this output unit:");
-      // console.log(outputUnit);
-      // console.log("-------------------------------^");
       arrayOfAllPossibleOutputUnits.push(outputUnit);
     }
   });
@@ -553,8 +540,6 @@ exports.findObjectInNestedObject = (source, identifyingData, alsoReturnKey) => {
 exports.giveRoutesAndTerminalValuesFromObject = (obj) => {
   const nestedRoutes = exports.extractNestedRoutes(obj).routesByNesting;
 
-  // console.log("nnn", nestedRoutes);
-
   let resArr = [];
 
   nestedRoutes.forEach((nestedRoute) => {
@@ -590,14 +575,6 @@ exports.giveValueFromObjectByRoute = (obj, route) => {
 };
 
 exports.findSynhomographs = (lemmaObject, structureChunk, currentLanguage) => {
-  console.log("findSynhomographs fxn was given", {
-    lemmaObject,
-    structureChunk,
-    currentLanguage,
-  });
-
-  // console.log("kkk", lemmaObject);
-
   let inflectionLabelChain =
     refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
       structureChunk.wordtype
@@ -607,14 +584,10 @@ exports.findSynhomographs = (lemmaObject, structureChunk, currentLanguage) => {
     lemmaObject.inflections
   );
 
-  // console.log("lll", routesAndValues);
-
   let tempArr = [];
 
   routesAndValues.forEach((item) => {
     let { terminalValue, nestedRoute } = item;
-
-    // console.log("mmm", { terminalValue, nestedRoute });
 
     let existing = tempArr.find((item) => item.terminalValue === terminalValue);
 
@@ -764,9 +737,6 @@ exports.addClarifiers = (
 
   exports.attachClarifiers(arrayOfOutputUnits);
 
-  console.log(
-    "Okay, now we're at the end of OT:addClarifies, so it should be that the following arrayOfOutputUnits should have 'read' now with clarifier."
-  );
   gpUtils.consoleLogObjectAtTwoLevels(arrayOfOutputUnits);
 };
 

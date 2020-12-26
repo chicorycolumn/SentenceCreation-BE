@@ -224,35 +224,11 @@ exports.traverseAndRecordInflections = (
   }
 
   reqInflectorArr.forEach((chosenInflector, reqInflectorArrIndex) => {
-    // console.log(
-    //   "#Shall I enter WHITE with chosenInflector: " + chosenInflector + "?"
-    // );
     if (
       typeof source[chosenInflector] === "string" ||
       Array.isArray(source[chosenInflector])
     ) {
-      // console.log(
-      //   "I DID enter WHITE with chosenInflector: " + chosenInflector + "."
-      // );
-      // console.log("*");
-      // console.log("**WHITE");
-      // console.log("Okay, I am going to push these things into outputUnitsWithDrillPathsMini");
-      // console.log("outputUnitsWithDrillPathsMini is currently:", outputUnitsWithDrillPathsMini);
-      // console.log("Gonna push reqInflectorLabel as:", reqInflectorLabel);
-      // console.log("Gonna push chosenInflector as:", chosenInflector);
-
       outputUnitsWithDrillPathsMini.push([reqInflectorLabel, chosenInflector]);
-
-      // console.log("outputUnitsWithDrillPathsMini is now:", outputUnitsWithDrillPathsMini);
-      // console.log("**");
-      // console.log("*");
-
-      // console.log("*");
-      // console.log("**RED");
-      // console.log("Okay, I am going to push these things into outputUnitsWithDrillPaths");
-      // console.log("outputUnitsWithDrillPaths is currently:", outputUnitsWithDrillPaths);
-      // console.log("Gonna push selectedWordArray as:", source[chosenInflector]);
-      // console.log("Gonna push outputUnitsWithDrillPathsMini as:", outputUnitsWithDrillPathsMini);
 
       outputUnitsWithDrillPaths.push({
         selectedWordArray:
@@ -262,35 +238,11 @@ exports.traverseAndRecordInflections = (
         drillPath: outputUnitsWithDrillPathsMini.slice(0),
       });
 
-      // console.log("outputUnitsWithDrillPaths is now:", outputUnitsWithDrillPaths);
-      // console.log("**");
-      // console.log("*");
-
-      // console.log("*");
-      // console.log("**YELLOW");
-      // console.log("outputUnitsWithDrillPathsMini is currently:", outputUnitsWithDrillPathsMini);
-      // console.log("Gonna A-pop the last value.");
-
       outputUnitsWithDrillPathsMini.pop();
-
-      // console.log("outputUnitsWithDrillPathsMini is now:", outputUnitsWithDrillPathsMini);
-      // console.log("**");
-      // console.log("*");
 
       return source[chosenInflector];
     } else if (typeof source[chosenInflector] === "object") {
-      // console.log("*");
-      // console.log("**BLUE");
-      // console.log("Okay, I am going to push these things into outputUnitsWithDrillPathsMini");
-      // console.log("outputUnitsWithDrillPathsMini is currently:", outputUnitsWithDrillPathsMini);
-      // console.log("Gonna push reqInflectorLabel as:", reqInflectorLabel);
-      // console.log("Gonna push chosenInflector as:", chosenInflector);
-
       outputUnitsWithDrillPathsMini.push([reqInflectorLabel, chosenInflector]);
-
-      // console.log("outputUnitsWithDrillPathsMini is now:", outputUnitsWithDrillPathsMini);
-      // console.log("**");
-      // console.log("*");
 
       exports.traverseAndRecordInflections(
         source[chosenInflector],
@@ -299,19 +251,7 @@ exports.traverseAndRecordInflections = (
         outputUnitsWithDrillPathsMini
       );
 
-      // console.log("*");
-      // console.log("**GREEN");
-      // console.log(
-      //   `On this round of GREEN, the chosenInflector is: ${chosenInflector} at reqInflectorArrIndex ${reqInflectorArrIndex}.`
-      // );
-      // console.log("outputUnitsWithDrillPathsMini is currently:", outputUnitsWithDrillPathsMini);
-      // console.log("Gonna B-pop the last value.");
-
       outputUnitsWithDrillPathsMini.pop();
-
-      // console.log("outputUnitsWithDrillPathsMini is now:", outputUnitsWithDrillPathsMini);
-      // console.log("**");
-      // console.log("*");
     }
   });
 };

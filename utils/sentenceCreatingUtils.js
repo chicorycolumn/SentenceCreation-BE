@@ -86,7 +86,7 @@ exports.processSentenceFormula = (
   let sentenceStructure = sentenceFormula.structure;
 
   if (kumquat) {
-    if (true) {
+    if (false) {
       console.log("+++++++++++++++++++++++++++++++++++fff");
       console.log("-----------------------------------");
       console.log("+++++++++++++++++++++++++++++++++++");
@@ -117,27 +117,23 @@ exports.processSentenceFormula = (
       questionLanguage
     );
 
-    console.log("|", "sentenceStructure AFTER QA conform", sentenceStructure);
+    console.log("sentenceStructure AFTER QA conform", sentenceStructure);
   }
 
-  // console.log("|");
   // console.log("----");
   // console.log("--------");
   // console.log("sentenceStructure BEFORE preprocessing", sentenceStructure);
   // console.log("--------");
   // console.log("----");
-  // console.log("|");
 
   allLangUtils.preprocessStructureChunks(sentenceStructure, currentLanguage);
   langUtils.preprocessStructureChunks(sentenceStructure, currentLanguage);
 
-  // console.log("|");
   // console.log("~~~~");
   // console.log("~~~~~~~~");
   // console.log("sentenceStructure AFTER preprocessing", sentenceStructure);
   // console.log("~~~~~~~~");
   // console.log("~~~~");
-  // console.log("|");
 
   let headIds = Array.from(
     new Set(
@@ -190,14 +186,10 @@ exports.processSentenceFormula = (
       };
     }
 
-    // console.log("|");
-    // console.log("|");
     // console.log(
     //   "This HEADCHUNK has been parsed to this output array:",
     //   allPossOutputUnits_head.map((outputUnit) => outputUnit.selectedWord)
     // );
-    // console.log("|");
-    // console.log("|");
 
     headOutputUnitArrays.push(allPossOutputUnits_head);
   });
@@ -225,7 +217,7 @@ exports.processSentenceFormula = (
       let headChunk = headOutputUnit.structureChunk;
       let headId = headChunk.chunkId;
 
-      console.log("headChunk", headChunk);
+      // console.log("headChunk", headChunk);
 
       //STEP TWO (NOW NESTED): Select dependent words and add to result array.
       let dependentChunks = sentenceStructure
@@ -251,7 +243,7 @@ exports.processSentenceFormula = (
             dependentChunk
           );
 
-          console.log("dependentChunk", dependentChunk);
+          // console.log("dependentChunk", dependentChunk);
 
           let allPossOutputUnits_dependent = otUtils.findMatchingLemmaObjectThenWord(
             gpUtils.copyWithoutReference(dependentChunk),
@@ -280,8 +272,6 @@ exports.processSentenceFormula = (
           //Give kumquat as true, it returns multiple outputUnit objects in allPossOutputUnits_dependent array.
           //Give kumquat as false, it returns just one outputUnit object in said array.
 
-          // console.log("|");
-          // console.log("|");
           // console.log(
           //   "For this head output unit:",
           //   headOutputUnit,
@@ -291,8 +281,6 @@ exports.processSentenceFormula = (
           //   //   (outputUnit) => outputUnit.selectedWord
           //   // )
           // );
-          // console.log("|");
-          // console.log("|");
 
           if (!headOutputUnit.possibleDependentOutputArrays) {
             headOutputUnit.possibleDependentOutputArrays = [];
@@ -384,14 +372,10 @@ exports.processSentenceFormula = (
       };
     }
 
-    // console.log("|");
-    // console.log("|");
     // console.log(
     //   "This OTHERCHUNK has been parsed to this output array:",
     //   allPossOutputUnits_other.map((outputUnit) => outputUnit.selectedWord)
     // );
-    // console.log("|");
-    // console.log("|");
 
     //The above functions correctly.
     //If kumquat is true, then allPossOutputUnits_other is array of outputUnit objects, while if false, array of just one said object.
@@ -513,26 +497,11 @@ exports.buildSentenceString = (
   answerLanguage,
   hideClarifiers
 ) => {
-  console.log("buildSentenceString was given", {
-    unorderedArr,
-    sentenceFormula,
-    kumquat,
-    currentLanguage,
-    hideClarifiers,
-  });
-
   let arrayOfSelectedWordsArrays = [];
   let producedSentences = [];
 
   if (!kumquat && !hideClarifiers) {
     otUtils.addClarifiers(unorderedArr, currentLanguage, answerLanguage);
-  }
-
-  if (!kumquat && !hideClarifiers) {
-    console.log(
-      "Helga Rosenthal says unorderedArr should now have a clarifier for 'read'"
-    );
-    gpUtils.consoleLogObjectAtTwoLevels(unorderedArr);
   }
 
   if (!sentenceFormula.primaryOrders || !sentenceFormula.primaryOrders.length) {
@@ -598,8 +567,6 @@ exports.conformAnswerStructureToQuestionStructure = (
       return;
     }
 
-    console.log("uuu questionStructureChunk", questionStructureChunk);
-
     let questionSelectedLemmaObject = questionOutputArrItem.selectedLemmaObject;
     let questionSelectedWord = questionOutputArrItem.selectedWord;
 
@@ -612,11 +579,9 @@ exports.conformAnswerStructureToQuestionStructure = (
       return;
     }
 
-    console.log("vvv answerStructureChunk", answerStructureChunk);
-
     // console.log("***********");
-    // console.log("questionStructureChunk", questionStructureChunk);
-    // console.log("answerStructureChunk", answerStructureChunk);
+    // console.log("conformAtoQ fxn: questionStructureChunk", questionStructureChunk);
+    // console.log("conformAtoQ fxn: answerStructureChunk", answerStructureChunk);
     // console.log("***********");
 
     // console.log(
@@ -654,8 +619,6 @@ exports.conformAnswerStructureToQuestionStructure = (
       (lObj) => lObj.id
     );
 
-    console.log("www answerStructureChunk", answerStructureChunk);
-
     // console.log("I found these matches:", answerStructureChunk.specificIds);
     // console.log("answerStructureChunk", answerStructureChunk);
 
@@ -675,7 +638,7 @@ exports.conformAnswerStructureToQuestionStructure = (
             (answerLemmaObject) => answerLemmaObject.tantumPlurale
           )
         ) {
-          console.log("I'm having a tantum!");
+          console.log("TANTUM DETECTED");
           // return;
         }
       }
@@ -713,8 +676,6 @@ exports.conformAnswerStructureToQuestionStructure = (
       }
     });
 
-    console.log("xxx answerStructureChunk", answerStructureChunk);
-
     //Check for features-of-answer-lang-lobjs-that-aren't-features-of-question-lang-lobjs.
     // So when going ENG to POL, that would be gender.
     // And then, with that list of features, we will blind the answer structureChunks to these features.
@@ -737,9 +698,7 @@ exports.conformAnswerStructureToQuestionStructure = (
       answerStructureChunk[inflector] = [];
     });
 
-    console.log("*-*-*-*-*-*-*-*-*-*-*yyy");
-    console.log("UPDATED answerStructureChunk", answerStructureChunk);
-    console.log("*-*-*-*-*-*-*-*-*-*-*");
+    console.log("yyy UPDATED answerStructureChunk", answerStructureChunk);
   });
 };
 
