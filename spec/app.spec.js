@@ -347,9 +347,104 @@ function checkSentenceTranslations(
 describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
-  describe.only("/palette - Stage 8: Synhomographs.", () => {
-    ////
-    it("#pal08-06a (Ad-PW: clarify Inflections) 'write': ENG to POL. Expect clarifiers.", () => {
+  describe("/palette - Stage 8: Synhomographs.", () => {
+    it("#pal08-01a (Type 1 Synhomographs. If-PW: clarify Inflections) 'sheep': ENG to POL. Expect clarifiers.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: false,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy36",
+        })
+        .expect(200)
+        .then((res) => {
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "sheep_withClarifiers_Qlang" + questionLanguage,
+            ["Sheep (singular).", "Sheep (plural)."]
+          );
+        });
+    });
+    it("#pal08-01b 'sheep': POL to ENG. No clarifiers.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: false,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy36",
+        })
+        .expect(200)
+        .then((res) => {
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "sheep_withClarifiers_Qlang" + questionLanguage,
+            ["Owce.", "Owca."]
+          );
+        });
+    });
+    it("#pal08-02a (Type 5 Synhomographs. Ad-PW: clarify Inflections (tenseDescription)) 'read': ENG to POL. Expect clarifiers.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: false,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy38",
+        })
+        .expect(200)
+        .then((res) => {
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "read_withClarifiers_Qlang" + questionLanguage,
+            ["I read (present).", "I read (past)."]
+          );
+        });
+    });
+    it("#pal08-02b (Ad-PW: clarify Inflections (tenseDescription)) 'read': POL to ENG. No clarifiers.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: false,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy38",
+        })
+        .expect(200)
+        .then((res) => {
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "read_withClarifiers_Qlang" + questionLanguage,
+            ["Czytam.", "Przeczytałem.", "Przeczytałam."]
+          );
+        });
+    });
+    it("#pal08-03a (Type 6 Synhomographs. Ad-PW: clarify Inflections) 'write': ENG to POL. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -373,7 +468,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal08-06b (Ad-PW: clarify Inflections) 'write': POL to ENG. Don't expect clarifiers.", () => {
+    it("#pal08-03b (Ad-PW: clarify Inflections) 'write': POL to ENG. No clarifiers.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -397,55 +492,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal08-06c (Ad-PW: clarify Inflections) 'be': ENG to POL. Expect clarifiers.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          hideClarifiers: false,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy39",
-        })
-        .expect(200)
-        .then((res) => {
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be_withClarifiers_Qlang" + questionLanguage,
-            ["You are (singular).", "You are (plural)."]
-          );
-        });
-    });
-    it("#pal08-06d (Ad-PW: clarify Inflections) 'be': POL to ENG. Don't expect clarifiers.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          hideClarifiers: false,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy39",
-        })
-        .expect(200)
-        .then((res) => {
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be_withClarifiers_Qlang" + questionLanguage,
-            ["Jesteś.", "Jesteście."]
-          );
-        });
-    });
-    it("#pal08-06e (Ad-PW: clarify Inflections) 'write': ENG to POL. Expect clarifiers.", () => {
+    it("#pal08-03c (Type 6 Synhomographs. Ad-PW: clarify Inflections) 'write': ENG to POL. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -469,7 +516,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal08-06f (Ad-PW: clarify Inflections) 'write': POL to ENG. Don't expect clarifiers.", () => {
+    it("#pal08-03d (Ad-PW: clarify Inflections) 'write': POL to ENG. No clarifiers.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -493,7 +540,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal08-06g (Ad-PW: clarify Inflections) 'write': ENG to POL. Expect clarifiers.", () => {
+    it("#pal08-03e (Type 6 Synhomographs. Ad-PW: clarify Inflections) 'write': ENG to POL. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -517,7 +564,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal08-06h (Ad-PW: clarify Inflections) 'write': POL to ENG. Don't expect clarifiers.", () => {
+    it("#pal08-03f (Ad-PW: clarify Inflections) 'write': POL to ENG. No clarifiers.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -546,8 +593,7 @@ describe("/api", () => {
           );
         });
     });
-    ////
-    it("#pal08-05a (Ad-PW: clarify Inflections (tenseDescription)) 'read': ENG to POL. Expect clarifiers.", () => {
+    it("#pal08-03g (Type 6 Synhomographs. Ad-PW: clarify Inflections) 'be': ENG to POL. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -558,7 +604,7 @@ describe("/api", () => {
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy38",
+          sentenceFormulaSymbol: "dummy39",
         })
         .expect(200)
         .then((res) => {
@@ -566,12 +612,12 @@ describe("/api", () => {
             res,
             questionLanguage,
             answerLanguage,
-            "read_withClarifiers_Qlang" + questionLanguage,
-            ["I read (present).", "I read (past)."]
+            "be_withClarifiers_Qlang" + questionLanguage,
+            ["You are (singular).", "You are (plural)."]
           );
         });
     });
-    it("#pal08-05b (Ad-PW: clarify Inflections (tenseDescription)) 'read': POL to ENG. Don't expect clarifiers.", () => {
+    it("#pal08-03h (Ad-PW: clarify Inflections) 'be': POL to ENG. No clarifiers.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -582,7 +628,7 @@ describe("/api", () => {
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy38",
+          sentenceFormulaSymbol: "dummy39",
         })
         .expect(200)
         .then((res) => {
@@ -590,57 +636,8 @@ describe("/api", () => {
             res,
             questionLanguage,
             answerLanguage,
-            "read_withClarifiers_Qlang" + questionLanguage,
-            ["Czytam.", "Przeczytałem.", "Przeczytałam."]
-          );
-        });
-    });
-    ////
-    it("#pal08-01a (If-PW: clarify Inflections) 'sheep': ENG to POL. Expect clarifiers.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          hideClarifiers: false,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy36",
-        })
-        .expect(200)
-        .then((res) => {
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "sheep_withClarifiers_Qlang" + questionLanguage,
-            ["Sheep (singular).", "Sheep (plural)."]
-          );
-        });
-    });
-    it("#pal08-01b (If-PW: clarify Inflections) 'sheep': POL to ENG. Don't expect clarifiers.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          hideClarifiers: false,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy36",
-        })
-        .expect(200)
-        .then((res) => {
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "sheep_withClarifiers_Qlang" + questionLanguage,
-            ["Owce.", "Owca."]
+            "be_withClarifiers_Qlang" + questionLanguage,
+            ["Jesteś.", "Jesteście."]
           );
         });
     });
@@ -1188,8 +1185,8 @@ describe("/api", () => {
             current: {
               "ENG->POL": [
                 {
-                  POL: "Good day.",
-                  ENG: ["Dzień dobry.", "Halo."],
+                  ENG: "Good day.",
+                  POL: ["Dzień dobry.", "Halo."],
                 },
               ],
             },

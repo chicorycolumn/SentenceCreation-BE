@@ -53,7 +53,14 @@ exports.addSpecificClarifiers = (
   lemmaObject
 ) => {
   if (structureChunk.wordtype === "verb") {
-    //Add clarifier for 2nd person, singular vs plural.
+    //
+    //Type 4 Synhomographs: Add clarifier for ambiguous participles (Ad-PW).
+    //Afaics, no such ambiguity in ENG verbs.
+    //
+
+    //
+    //Type 6 Synhomographs: Add clarifier for 2nd person singular vs plural. (Wasn't caught, as went through Ad-PW).
+    //
     if (!structureChunk.person || !structureChunk.number) {
       throw "ENG:addSpecificClarifiers expected this verb structureChunk to have a Person and Number key.";
     }
@@ -68,7 +75,9 @@ exports.addSpecificClarifiers = (
       structureChunk.clarifiers.push(number);
     }
 
-    //Add clarifier for verbs with v1-v2 synhomography.
+    //
+    //Type 5 Synhomographs: Add clarifier for v1-v2 synhomography verbs.
+    //
     if (structureChunk.tenseDescription) {
       if (structureChunk.tenseDescription.length > 1) {
         throw "ENG:addSpecificClarifiers expected this verb structureChunk's tenseDescription key to have only one value each, not more.";

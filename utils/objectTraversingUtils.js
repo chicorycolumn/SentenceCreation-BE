@@ -707,16 +707,16 @@ exports.addClarifiers = (
     //   }
     // }
 
-    //STEP ONE: Add clarifiers specific to the foibles of this language.
-    //          eg ENG has some verbs with v1-v2 synhomography, and 2per ambiguous re number.
+    //STEP ONE: Types 2-6 Synhomographs (language-specific)
+    //eg ENG has some verbs with v1-v2 synhomography, and 2per ambiguous re number.
     langUtils.addSpecificClarifiers(
       structureChunk,
       currentLanguage,
       selectedLemmaObject
     );
 
-    //STEP TWO: Go through the lobj and find Synhomographs. Add clarifiers for them,
-    //          checking first that such clarifiers are allowed.
+    //STEP TWO: Type 1 Synhomographs (find synhoms in lobj programmatically)
+    //Find synhoms, add clarifiers if such clarifiers are allowed.
     let allowableClarifiers =
       refObj.lemmaObjectFeatures[answerLanguage]
         .allowableTransfersFromQuestionStructure[structureChunk.wordtype];

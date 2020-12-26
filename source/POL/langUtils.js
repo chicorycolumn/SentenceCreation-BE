@@ -3,7 +3,17 @@ const otUtils = require("../../utils/objectTraversingUtils.js");
 const gpUtils = require("../../utils/generalPurposeUtils.js");
 const refObj = require("../../utils/referenceObjects.js");
 
-exports.addSpecificClarifiers = () => {};
+exports.addSpecificClarifiers = () => {
+  //
+  //Type 3 Synhomographs: Add clarifier for ambiguous verb participles (Un-PW).
+  //Afaics, no such ambiguity in POL verbs.
+  //
+  //
+  //Type 2 Synhomographs: Add clarifier for ambiguous hybridSelector results (If-PW).
+  //Afaics, no such ambiguity in POL verbs,
+  //ie there are no tense+aspect combinations that homographs of others.
+  //
+};
 
 exports.adjustStructureChunksInIfPW = (structureChunk) => {
   if (
