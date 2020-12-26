@@ -930,4 +930,23 @@ exports.dummySentenceFormulasBank = {
     ],
     primaryOrders: [],
   },
+  dummy43: {
+    sentenceFormulaSymbol: "dummy43",
+    sentenceFormulaId: "POL-dummy43",
+    translations: { ENG: ["ENG-dummy43"] },
+    structure: [
+      {
+        chunkId: "adj-1",
+        agreeWith: ["nou-1"],
+        wordtype: "adjective",
+        andTags: ["size"],
+      },
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        andTags: ["edible2"],
+      },
+    ],
+    primaryOrders: [["adj-1", "nou-1"]],
+  },
 };

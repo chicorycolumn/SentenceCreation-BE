@@ -265,6 +265,23 @@ let adjectiveSet = [
       adverb: "redly",
     },
   },
+  {
+    //links
+    translations: { ENG: ["small"], PL: ["mały"] },
+    tags: ["size"],
+    //selectors
+    lemma: "small",
+    id: "eng-adj-002",
+    //notes
+    deficient: false,
+    //inflections
+    inflections: {
+      simple: "smaller",
+      comparative: "smaller",
+      superlative: "smallest",
+      adverb: false,
+    },
+  },
 ];
 
 let verbSet = [

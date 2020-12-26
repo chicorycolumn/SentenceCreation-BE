@@ -349,7 +349,7 @@ describe("/api", () => {
   // beforeEach(() => {});
 
   describe("/palette - Stage 9: Allohomographs.", () => {
-    it("#pal09-01a.", () => {
+    xit("#pal09-01a.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 

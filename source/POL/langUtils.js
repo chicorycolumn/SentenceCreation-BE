@@ -399,8 +399,8 @@ exports.adjustMasculinityOfLemmaObject = (lemmaObject) => {
   let { inflections } = lemmaObject;
 
   //Masculinist agenda
-  gpUtils.findKeysInObjectAndExecuteCallback(inflections, "m", (obj) => {
-    gpUtils.copyValueOfKey(obj, "m", ["m1", "m2", "m3"], true);
+  gpUtils.findKeysInObjectAndExecuteCallback(inflections, "m1", (obj) => {
+    gpUtils.copyValueOfKey(obj, "m1", ["m2"], false);
   });
 };
 

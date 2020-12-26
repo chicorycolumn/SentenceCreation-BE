@@ -468,9 +468,9 @@ let adjectiveSet = [
   {
     //links
     translations: { ENG: ["red"] },
-    tags: ["colour2"],
+    tags: ["colour"],
     //selectors
-    lemma: "niebieski",
+    lemma: "czerwony",
     id: "pol-adj-001",
     //notes
     deficient: false,
@@ -478,11 +478,89 @@ let adjectiveSet = [
     inflections: {
       simple: {
         singular: {
-          m: {
+          m1: {
+            nom: "czerwony",
+            gen: "czerwonego",
+            dat: "czerwonemu",
+            acc: "czerwonego",
+            ins: "czerwonym",
+            loc: "czerwonym",
+          },
+          m3: {
+            nom: "czerwony",
+            gen: "czerwonego",
+            dat: "czerwonemu",
+            acc: "czerwony",
+            ins: "czerwonym",
+            loc: "czerwonym",
+          },
+          f: {
+            nom: "czerwona",
+            gen: "czerwonej",
+            dat: "czerwonej",
+            acc: "czerwoną",
+            ins: "czerwoną",
+            loc: "czerwonej",
+          },
+          n: {
+            nom: "czerwone",
+            gen: "czerwonego",
+            dat: "czerwonemu",
+            acc: "czerwone",
+            ins: "czerwonym",
+            loc: "czerwonym",
+          },
+        },
+        plural: {
+          virile: {
+            nom: "czerwoni",
+            gen: "czerwonych",
+            dat: "czerwonym",
+            acc: "czerwonych",
+            ins: "czerwonymi",
+            loc: "czerwonych",
+          },
+          nonvirile: {
+            nom: "czerwone",
+            gen: "czerwonych",
+            dat: "czerwonym",
+            acc: "czerwone",
+            ins: "czerwonymi",
+            loc: "czerwonych",
+          },
+        },
+      },
+      comparative: ["czerwieńszy", true],
+      superlative: ["najczerwieńszy", true],
+      adverb: "czerwono",
+    },
+  },
+  {
+    //links
+    translations: { ENG: ["red"] },
+    tags: ["colour2"],
+    //selectors
+    lemma: "niebieski",
+    id: "pol-adj-002",
+    //notes
+    deficient: false,
+    //inflections
+    inflections: {
+      simple: {
+        singular: {
+          m1: {
             nom: "niebieski",
             gen: "niebieskiego",
             dat: "niebieskiemu",
             acc: "niebieskiego",
+            ins: "niebieskim",
+            loc: "niebieskim",
+          },
+          m3: {
+            nom: "niebieski",
+            gen: "niebieskiego",
+            dat: "niebieskiemu",
+            acc: "niebieski",
             ins: "niebieskim",
             loc: "niebieskim",
           },
@@ -529,64 +607,72 @@ let adjectiveSet = [
   },
   {
     //links
-    translations: { ENG: ["red"] },
-    tags: ["colour"],
+    translations: { ENG: ["small"] },
+    tags: ["size"],
     //selectors
-    lemma: "czerwony",
-    id: "pol-adj-001",
+    lemma: "mały",
+    id: "pol-adj-003",
     //notes
     deficient: false,
     //inflections
     inflections: {
       simple: {
         singular: {
-          m: {
-            nom: "czerwony",
-            gen: "czerwonego",
-            dat: "czerwonemu",
-            acc: "czerwonego",
-            ins: "czerwonym",
-            loc: "czerwonym",
+          m1: {
+            nom: "mały",
+            gen: "małego",
+            dat: "małemu",
+            acc: "małego",
+            ins: "małym",
+            loc: "małym",
+          },
+          m3: {
+            nom: "mały",
+            gen: "małego",
+            dat: "małemu",
+            acc: "mały",
+            ins: "małym",
+            loc: "małym",
           },
           f: {
-            nom: "czerwona",
-            gen: "czerwonej",
-            dat: "czerwonej",
-            acc: "czerwoną",
-            ins: "czerwoną",
-            loc: "czerwonej",
+            nom: "mała",
+            gen: "małej",
+            dat: "małej",
+            acc: "małą",
+            ins: "małą",
+            loc: "małej",
           },
           n: {
-            nom: "czerwone",
-            gen: "czerwonego",
-            dat: "czerwonemu",
-            acc: "czerwone",
-            ins: "czerwonym",
-            loc: "czerwonym",
+            nom: "małe",
+            gen: "małego",
+            dat: "małemu",
+            acc: "małe",
+            ins: "małym",
+            loc: "małym",
           },
         },
         plural: {
           virile: {
-            nom: "czerwoni",
-            gen: "czerwonych",
-            dat: "czerwonym",
-            acc: "czerwonych",
-            ins: "czerwonymi",
-            loc: "czerwonych",
+            nom: "mali",
+            gen: "małych",
+            dat: "małym",
+            acc: "małych",
+            ins: "małymi",
+            loc: "małych",
           },
           nonvirile: {
-            nom: "czerwone",
-            gen: "czerwonych",
-            dat: "czerwonym",
-            acc: "czerwone",
-            ins: "czerwonymi",
-            loc: "czerwonych",
+            nom: "małe",
+            gen: "małych",
+            dat: "małym",
+            acc: "małe",
+            ins: "małymi",
+            loc: "małych",
           },
         },
       },
-      comparative: ["czerwieńszy", true],
-      superlative: ["najczerwieńszy", true],
-      adverb: "czerwono",
+      comparative: ["mniejszy", true],
+      superlative: ["najmniejszy", true],
+      adverb: "mało",
     },
   },
 ];
