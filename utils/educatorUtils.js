@@ -1,22 +1,16 @@
-const { preprocessStructureChunks } = require("../source/POL/langUtils.js");
 const gpUtils = require("./generalPurposeUtils.js");
 const otUtils = require("./objectTraversingUtils.js");
 
 /**
  * Gives a list of homographs (allo or syn) to the educator, so that they may take action on these.
+ * @param {boolean} testing - Should we use test wordsBank.
  * @param {string} currentLanguage
- * @param {string} homographType - "syn", "allo", or "all"
- * @param {boolean} ignoreV2V3Allohoms - Only applies to ENG lObjs.
- * @param {boolean} ignoreClarifiedAllohoms - Type 1 Allohomographs.
+ * @param {string} homographType - "syn", "allo", or "all".
+ * @param {object} ignore - What to ignore: "ignoreV2V3Synhoms", "ignoreClarifiedAllohoms"
  */
-exports.findHomographs = (
-  currentLanguage,
-  homographType,
-  ignoreV2V3Allohoms,
-  ignoreClarifiedAllohoms
-) => {
+exports.findHomographs = (testing, currentLanguage, homographType, ignore) => {
   if (currentLanguage !== "ENG") {
-    ignoreV2V3Allohoms = false;
+    ignore.ignoreV2V3Synhoms = false;
   }
 
   if (!["syn", "allo", "all"].includes(homographType)) {
@@ -24,7 +18,7 @@ exports.findHomographs = (
     throw "findHomographs fxn: I don't know what type of homograph you want me to find. I've logged above what you gave me.";
   }
 
-  const { wordsBank } = require(`../source/${currentLanguage}/words.js`);
+  const wordsBank = getWordsBank(currentLanguage, testing);
   const langUtils = require(`../source/${currentLanguage}/langUtils.js`);
 
   let recordOfTerminalValuesAndPaths = [];
@@ -94,34 +88,66 @@ exports.findHomographs = (
     }
   });
 
+  if (homographType === "allo") {
+    return allohomographs;
+  } else if (homographType === "syn") {
+    return synhomographs;
+  } else if (homographType === "all") {
+    return homographs;
+  }
+
   function checkForIgnoringsAndAddToResult(
     resultObj,
     homographWord,
     homographRoutes
   ) {
-    if (ignoreClarifiedAllohoms) {
-      let lemmaObject = otUtils.findObjectInNestedObject(
-        wordsBank,
-        {
-          id: "eng-ver-003",
-        },
-        false,
-        true
+    console.log("ppp");
+    console.log({ resultObj });
+    console.log({ homographWord });
+    console.log({ homographRoutes });
+    console.log("qqq");
+
+    let firstStepsOfRoute = homographRoutes.map((arr) => arr[0]);
+    let secondStepsOfRoute = homographRoutes.map((arr) => arr[1]);
+
+    if (
+      ignore.ignoreClarifiedAllohoms &&
+      gpUtils.doesArrContainDifferentValues(firstStepsOfRoute) //At least some are allohoms.
+    ) {
+      let isEveryAllohomAlreadyClarified = firstStepsOfRoute.every(
+        (lemmaObjectId) => {
+          let lemmaObject = otUtils.findObjectInNestedObject(
+            wordsBank,
+            {
+              id: lemmaObjectId,
+            },
+            false,
+            true
+          );
+
+          if (!lemmaObject) {
+            throw (
+              "ED:checkForIgnoringsAndAddToResult - I couldn't find a lobj for this id:" +
+              lemmaObjectId
+            );
+          }
+
+          if (
+            lemmaObject.allohomClarifier &&
+            lemmaObject.allohomClarifier.emoji &&
+            lemmaObject.allohomClarifier.text
+          ) {
+            return true;
+          }
+        }
       );
 
-      if (
-        lemmaObject.allohomClarifier &&
-        lemmaObject.allohomClarifier.emoji &&
-        lemmaObject.allohomClarifier.text
-      ) {
+      if (isEveryAllohomAlreadyClarified) {
         return;
       }
-    } else if (ignoreV2V3Allohoms) {
-      let firstStepsOfRoute = homographRoutes.map((arr) => arr[0]);
-      let secondStepsOfRoute = homographRoutes.map((arr) => arr[1]);
-
+    } else if (ignore.ignoreV2V3Synhoms) {
       if (
-        !gpUtils.doesArrContainDifferentValues(firstStepsOfRoute) &&
+        !gpUtils.doesArrContainDifferentValues(firstStepsOfRoute) && //All are synhoms.
         gpUtils.doesArrHaveOnlyTheseMembers(secondStepsOfRoute, ["v2", "v3"])
       ) {
         return;
@@ -130,11 +156,15 @@ exports.findHomographs = (
     resultObj[homographWord] = homographRoutes;
   }
 
-  if (homographType === "allo") {
-    return allohomographs;
-  } else if (homographType === "syn") {
-    return synhomographs;
-  } else if (homographType === "all") {
-    return homographs;
+  function getWordsBank(currentLanguage, testing) {
+    if (!testing) {
+      const { wordsBank } = require(`../source/${currentLanguage}/words.js`);
+      return wordsBank;
+    } else {
+      const {
+        wordsBank,
+      } = require(`../source/TEST/${currentLanguage}/words.js`);
+      return wordsBank;
+    }
   }
 };
