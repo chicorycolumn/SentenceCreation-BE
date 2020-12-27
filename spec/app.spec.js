@@ -164,6 +164,98 @@ const generalTranslatedSentencesRef = {
       { POL: "Owce.", ENG: ["Sheep."] },
     ],
   },
+  be_withPronouns: {
+    "POL->ENG": [
+      { POL: "Jestem.", ENG: ["I am.", "I am being."] },
+      { POL: "Jesteś.", ENG: ["You are.", "You are being."] },
+      { POL: "Jest.", ENG: ["She is.", "She is being."] },
+      { POL: "Jesteśmy.", ENG: ["We are.", "We are being."] },
+      { POL: "Jesteście.", ENG: ["We are.", "We are being."] },
+      { POL: "Są.", ENG: ["They are.", "They are being."] },
+      {
+        POL: "Byłem.",
+        ENG: ["I was.", "I was being.", "I have been.", "I had been."],
+      },
+      {
+        POL: "Byłam.",
+        ENG: ["I was.", "I was being.", "I have been.", "I had been."],
+      },
+      {
+        POL: "Byłeś.",
+        ENG: [
+          "You were.",
+          "You were being.",
+          "You have been.",
+          "You had been.",
+        ],
+      },
+      {
+        POL: "Byłaś.",
+        ENG: [
+          "You were.",
+          "You were being.",
+          "You have been.",
+          "You had been.",
+        ],
+      },
+      {
+        POL: "Był.",
+        ENG: ["He was.", "He was being.", "He has been.", "He had been."],
+      },
+      {
+        POL: "Była.",
+        ENG: ["She was.", "She was being.", "She has been.", "She had been."],
+      },
+      {
+        POL: "Było.",
+        ENG: ["It was.", "It was being.", "It has been.", "It had been."],
+      },
+      {
+        POL: "Byłyśmy.",
+        ENG: ["We were.", "We were being.", "We have been.", "We had been."],
+      },
+      {
+        POL: "Byliśmy.",
+        ENG: ["We were.", "We were being.", "We have been.", "We had been."],
+      },
+      {
+        POL: "Byłyście.",
+        ENG: [
+          "You were.",
+          "You were being.",
+          "You have been.",
+          "You had been.",
+        ],
+      },
+      {
+        POL: "Byliście.",
+        ENG: [
+          "You were.",
+          "You were being.",
+          "You have been.",
+          "You had been.",
+        ],
+      },
+      {
+        POL: "Były.",
+        ENG: [
+          "They were.",
+          "They were being.",
+          "They have been.",
+          "They had been.",
+        ],
+      },
+      {
+        POL: "Byli.",
+        ENG: [
+          "They were.",
+          "They were being.",
+          "They have been.",
+          "They had been.",
+        ],
+      },
+    ],
+  },
   be: {
     "POL->ENG": [
       //
@@ -1061,18 +1153,18 @@ describe("/api", () => {
           );
         });
     });
-    it.only("#pal07-01f GET 200 YES: RSWAT POL to ENG 'be' correctly, to see if both im and pf forms are translated to ENG.", () => {
+    it("#pal07-02b GET 200 YES: RSWAT POL to ENG 'be' - I.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
       return request(app)
         .get("/api/palette")
         .send({
-          hideClarifiers: true,
+          // hideClarifiers: true,
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy33",
+          sentenceFormulaSymbol: "dummy33b I am",
         })
         .expect(200)
         .then((res) => {
@@ -1082,7 +1174,111 @@ describe("/api", () => {
             res,
             questionLanguage,
             answerLanguage,
-            "be",
+            "be_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-02c GET 200 YES: RSWAT POL to ENG 'be' - You.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33c you are",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-02d GET 200 YES: RSWAT POL to ENG 'be' - She.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33d she is",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-02e GET 200 YES: RSWAT POL to ENG 'be' - We.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33e we are",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-02f GET 200 YES: RSWAT POL to ENG 'be' - They.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33f they are",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns",
             []
           );
         });
