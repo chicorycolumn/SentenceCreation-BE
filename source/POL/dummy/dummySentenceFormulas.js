@@ -807,6 +807,87 @@ exports.dummySentenceFormulasBank = {
     ],
     primaryOrders: [],
   },
+  dummy33b: {
+    sentenceFormulaSymbol: "dummy33b I am",
+    sentenceFormulaId: "POL-dummy33b",
+    translations: { ENG: ["ENG-dummy33b"] },
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        specificLemmas: ["być"],
+        tenseDescription: ["present im", "past pf"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [],
+  },
+  dummy33c: {
+    sentenceFormulaSymbol: "dummy33c you are",
+    sentenceFormulaId: "POL-dummy33c",
+    translations: { ENG: ["ENG-dummy33c"] },
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        specificLemmas: ["być"],
+        tenseDescription: ["present im", "past pf"],
+        person: ["2per"],
+        number: [],
+      },
+    ],
+    primaryOrders: [],
+  },
+  dummy33d: {
+    sentenceFormulaSymbol: "dummy33d she is",
+    sentenceFormulaId: "POL-dummy33d",
+    translations: { ENG: ["ENG-dummy33d"] },
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        specificLemmas: ["być"],
+        tenseDescription: ["present im", "past pf"],
+        person: ["3per"],
+        number: ["singular"],
+        gender: ["f"],
+      },
+    ],
+    primaryOrders: [],
+  },
+  dummy33e: {
+    sentenceFormulaSymbol: "dummy33e we are",
+    sentenceFormulaId: "POL-dummy33e",
+    translations: { ENG: ["ENG-dummy33e"] },
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        specificLemmas: ["być"],
+        tenseDescription: ["present im", "past pf"],
+        person: ["1per"],
+        number: ["plural"],
+      },
+    ],
+    primaryOrders: [],
+  },
+  dummy33f: {
+    sentenceFormulaSymbol: "dummy33f they are",
+    sentenceFormulaId: "POL-dummy33f",
+    translations: { ENG: ["ENG-dummy33f"] },
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        specificLemmas: ["być"],
+        tenseDescription: ["present im", "past pf"],
+        person: ["3per"],
+        number: ["plural"],
+      },
+    ],
+    primaryOrders: [],
+  },
   dummy34: {
     sentenceFormulaSymbol: "dummy34",
     sentenceFormulaId: "POL-dummy34",
