@@ -164,13 +164,103 @@ const generalTranslatedSentencesRef = {
       { POL: "Owce.", ENG: ["Sheep."] },
     ],
   },
+  be_withPronouns_withClarifiers_QlangPOL: {
+    "POL->ENG": [
+      { POL: "Jesteś.", ENG: ["You are.", "You are being."] },
+      { POL: "Jesteście.", ENG: ["You are.", "You are being."] },
+      {
+        POL: "Byłeś.",
+        ENG: [
+          "You were.",
+          "You were being.",
+          "You have been.",
+          "You had been.",
+        ],
+      },
+      {
+        POL: "Byłaś.",
+        ENG: [
+          "You were.",
+          "You were being.",
+          "You have been.",
+          "You had been.",
+        ],
+      },
+      {
+        POL: "Byłyście.",
+        ENG: [
+          "You were.",
+          "You were being.",
+          "You have been.",
+          "You had been.",
+        ],
+      },
+      {
+        POL: "Byliście.",
+        ENG: [
+          "You were.",
+          "You were being.",
+          "You have been.",
+          "You had been.",
+        ],
+      },
+    ],
+  },
+  be_withPronouns_withClarifiers_QlangENG: {
+    "ENG->POL": [
+      {
+        POL: "Jesteś.",
+        ENG: ["You are (singular).", "You are being (singular)."],
+      },
+      {
+        POL: "Jesteście.",
+        ENG: ["You are (plural).", "You are being (plural)."],
+      },
+      {
+        POL: "Byłeś.",
+        ENG: [
+          "You were (singular).",
+          "You were being (singular).",
+          "You have been (singular).",
+          "You had been (singular).",
+        ],
+      },
+      {
+        POL: "Byłaś.",
+        ENG: [
+          "You were (singular).",
+          "You were being (singular).",
+          "You have been (singular).",
+          "You had been (singular).",
+        ],
+      },
+      {
+        POL: "Byłyście.",
+        ENG: [
+          "You were (plural).",
+          "You were being (plural).",
+          "You have been (plural).",
+          "You had been (plural).",
+        ],
+      },
+      {
+        POL: "Byliście.",
+        ENG: [
+          "You were (plural).",
+          "You were being (plural).",
+          "You have been (plural).",
+          "You had been (plural).",
+        ],
+      },
+    ],
+  },
   be_withPronouns: {
     "POL->ENG": [
       { POL: "Jestem.", ENG: ["I am.", "I am being."] },
       { POL: "Jesteś.", ENG: ["You are.", "You are being."] },
       { POL: "Jest.", ENG: ["She is.", "She is being."] },
       { POL: "Jesteśmy.", ENG: ["We are.", "We are being."] },
-      { POL: "Jesteście.", ENG: ["We are.", "We are being."] },
+      { POL: "Jesteście.", ENG: ["You are.", "You are being."] },
       { POL: "Są.", ENG: ["They are.", "They are being."] },
       {
         POL: "Byłem.",
@@ -1153,14 +1243,14 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal07-02c GET 200 YES: RSWAT POL to ENG 'be' - You.", () => {
+    it("#pal07-02c GET 200 YES: RSWAT POL to ENG 'be' - You (with clarifiers).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
       return request(app)
         .get("/api/palette")
         .send({
-          // hideClarifiers: true,
+          hideClarifiers: true,
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -1174,7 +1264,7 @@ describe("/api", () => {
             res,
             questionLanguage,
             answerLanguage,
-            "be_withPronouns",
+            "be_withPronouns_withClarifiers_QlangPOL",
             []
           );
         });
@@ -1283,7 +1373,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal07-03c GET 200 YES: RSWAT ENG to POL 'be' - You.", () => {
+    it.only("#pal07-03c GET 200 YES: RSWAT ENG to POL 'be' - You (with clarifiers).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1304,7 +1394,7 @@ describe("/api", () => {
             res,
             questionLanguage,
             answerLanguage,
-            "be_withPronouns",
+            "be_withPronouns_withClarifiers_QlangENG",
             []
           );
         });
