@@ -71,6 +71,16 @@ exports.allFeatureValues = {
       "future im",
       "past pf",
       "future pf",
+      "imperative",
+      "negative imperative",
+      "cond0 condition",
+      "cond0 outcome",
+      "cond1 condition",
+      "cond1 outcome",
+      "cond2 condition",
+      "cond2 outcome",
+      "cond3 condition",
+      "cond3 outcome",
     ],
   },
 };
@@ -143,6 +153,7 @@ exports.getTranslatedTenseDescription = (
   targetLanguage
 ) => {
   let translatedTenseDescriptionsArr = [];
+
   if (
     Object.keys(exports.tenseDescriptionTranslation).includes(sourceLanguage)
   ) {

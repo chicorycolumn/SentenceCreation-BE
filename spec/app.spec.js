@@ -180,7 +180,7 @@ const generalTranslatedSentencesRef = {
       //POL: past im
       // ENG: Past Continuous
       // ENG: Present Perfect
-      //POL: past pf            (due to 'im only' conversion)
+      //POL: past pf            (due to 'imperfectiveOnly' conversion)
       // ENG: Past Simple
       // ENG: Past Perfect
       // ENG: Present Perfect (duplicate)
@@ -756,7 +756,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal07-01b GET 200 YES: Give results for POL być even though past pf was asked for, it should nevertheless be the case that past im of być is returned, as this verb lobj is marked as im only.", () => {
+    it("#pal07-01b GET 200 YES: Give results for POL być even though past pf was asked for, it should nevertheless be the case that past im of być is returned, as this verb lobj is marked as imperfectiveOnly.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "POL";
 
@@ -837,9 +837,9 @@ describe("/api", () => {
       //search for all connected verb lobjs, searching by lObj.id, pol-ver-001-im-01 look for pol-ver-001-pf-*
       //And if this verb is im, and has no pf forms,
       //then allow for ENG past simple to be translated by POL past im
-      //Or... maybe actually just if it's deliberately marked on this lObj that it is im only?
+      //Or... maybe actually just if it's deliberately marked on this lObj that it is imperfectiveOnly?
 
-      //I have resolved the above by making a duplicate lobj for 'im only's and making it perfective.
+      //I have resolved the above by making a duplicate lobj for 'imperfectiveOnly's and making it perfective.
 
       //The issue I am on now, is that, here ENG to POL, the english be lobj is not being updated
       // with the person and number choices.

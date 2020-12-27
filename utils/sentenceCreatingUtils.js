@@ -650,6 +650,13 @@ exports.conformAnswerStructureToQuestionStructure = (
       if (inflectorKey === "tenseDescription") {
         answerStructureChunk["tenseDescription"] = [];
 
+        let tenseDescriptions = questionStructureChunk["tenseDescription"];
+
+        langUtils.adjustTenseDescriptionsWhenTranslating(
+          tenseDescriptions,
+          questionSelectedLemmaObject
+        );
+
         questionStructureChunk["tenseDescription"].forEach((tenseDesc) => {
           let translatedTenseDescArr = refObj.getTranslatedTenseDescription(
             tenseDesc,

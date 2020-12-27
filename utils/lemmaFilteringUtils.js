@@ -258,13 +258,16 @@ exports.traverseAndRecordInflections = (
 
 exports.adjustImOnlyLemmaObjects = (matches) => {
   matches.forEach((lObj) => {
-    if (lObj["im only"] && lObj.aspect === "imperfective") {
-      let { id } = lObj;
+    if (lObj.imperfectiveOnly_unadjusted && lObj.aspect === "imperfective") {
       console.log(
         "Hey, heads up, I'm making a copy of lemma object '" +
           lObj.lemma +
           "' with perfective Aspect."
       );
+
+      lObj.imperfectiveOnly = true;
+      delete lObj.imperfectiveOnly_unadjusted;
+
       let adjustedLemmaObject = gpUtils.copyWithoutReference(lObj);
       adjustedLemmaObject.aspect = "perfective";
 
@@ -273,8 +276,6 @@ exports.adjustImOnlyLemmaObjects = (matches) => {
       adjustedLemmaObject.id = newIdArr.join("-");
 
       matches.push(adjustedLemmaObject);
-      delete lObj["im only"];
-      // matches = matches.filter((lemmaObject) => !lemmaObject.id === id);
     }
   });
 };

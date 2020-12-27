@@ -24,6 +24,29 @@ exports.adjustStructureChunksInIfPW = (structureChunk) => {
   }
 };
 
+exports.adjustTenseDescriptionsWhenTranslating = (
+  tenseDescriptions,
+  questionSelectedLemmaObject
+) => {
+  if (questionSelectedLemmaObject.imperfectiveOnly) {
+    const imperfectiveOnlyConversionRef = {
+      "past im": "past pf",
+      "past pf": "past im",
+
+      "present im": null,
+
+      "future im": "future pf",
+      "future pf": "future im",
+    };
+
+    tenseDescriptions.forEach((tenseDesc) => {
+      tenseDescriptions.push(imperfectiveOnlyConversionRef[tenseDesc]);
+    });
+  }
+
+  tenseDescriptions = Array.from(new Set(tenseDescriptions));
+};
+
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   sentenceStructure.forEach((structureChunk) => {
     if (structureChunk.wordtype === "fixed") {
@@ -154,7 +177,7 @@ exports.fillVerbInflections = (lemmaObject) => {
   //So in general, do nothing if the key is filled out already or holds value false.
   //Only fill it out if the key is present and holds value true.
 
-  if (aspect === "imperfective" || lemmaObject["im only"]) {
+  if (aspect === "imperfective" || lemmaObject.imperfectiveOnly) {
     if (isAvailable(inflections.verbal.future)) {
       inflections.verbal.future = {
         impersonal: {

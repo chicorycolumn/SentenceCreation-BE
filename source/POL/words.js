@@ -693,7 +693,7 @@ let verbSet = [
     deficient: true,
     defective: false,
     complete: true,
-    "im only": true,
+    imperfectiveOnly_unadjusted: true,
     //inflections
     inflections: {
       infinitive: "być",
@@ -911,7 +911,7 @@ let verbSet = [
     //notes
     deficient: true,
     defective: false,
-    "im only": true,
+    imperfectiveOnly_unadjusted: true,
     //inflections
     inflections: {
       infinitive: "mieć",
