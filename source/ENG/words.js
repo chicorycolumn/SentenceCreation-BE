@@ -201,8 +201,8 @@ let nounSet = [
     //links
     translations: { ENG: ["nut"], POL: ["orzech"] },
     tags: ["allohom testing", "edible2"],
-    allohomClarifier: { text: "food", emoji: "🥜" },
-    hideAllohomClarifier: false,
+    allohomographInfo: { singleWordtype: true, text: "food", emoji: "🥜" },
+
     //selectors
     lemma: "nut",
     id: "eng-nou-009",
@@ -225,8 +225,8 @@ let nounSet = [
     //links
     translations: { ENG: ["nut"], POL: ["nakrętka"] },
     tags: ["allohom testing", "toolbox"],
-    allohomClarifier: { text: "metal", emoji: "🔩" },
-    hideAllohomClarifier: false,
+    allohomographInfo: { singleWordtype: true, text: "metal", emoji: "🔩" },
+
     //selectors
     lemma: "nut",
     id: "eng-nou-010",

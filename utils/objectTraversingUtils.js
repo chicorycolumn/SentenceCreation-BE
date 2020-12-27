@@ -717,8 +717,8 @@ exports.addClarifiers = (
     // }
 
     //STEP ONE: Types 1 Allohomographs (clarifiers can be found in lobjs)
-    if (selectedLemmaObject.allohomClarifier) {
-      structureChunk.allohomClarifier = selectedLemmaObject.allohomClarifier;
+    if (selectedLemmaObject.allohomographInfo) {
+      structureChunk.allohomographInfo = selectedLemmaObject.allohomographInfo;
     }
 
     //STEP TWO: Types 2-6 Synhomographs (language-specific)
@@ -785,11 +785,11 @@ exports.attachClarifiers = (arrayOfOutputUnits) => {
   arrayOfOutputUnits.forEach((outputUnit) => {
     let { structureChunk } = outputUnit;
 
-    if (structureChunk.allohomClarifier) {
+    if (structureChunk.allohomographInfo) {
       structureChunk.clarifiers.push(
-        structureChunk.allohomClarifier.emoji +
+        structureChunk.allohomographInfo.emoji +
           " " +
-          structureChunk.allohomClarifier.text
+          structureChunk.allohomographInfo.text
       );
     }
 

@@ -1,8 +1,7 @@
 const { findHomographs } = require("../utils/educatorUtils.js");
 const { expect } = require("chai");
 
-// xdescribe("findHomographs", () => {
-describe.only("findHomographs", () => {
+describe("findHomographs", () => {
   it("#edu1.1 Gives all synhomograph lemma objects in one language.", () => {
     const currentLanguage = "ENG";
     const homographType = "syn";

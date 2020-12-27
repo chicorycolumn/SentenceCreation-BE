@@ -101,12 +101,6 @@ exports.findHomographs = (testing, currentLanguage, homographType, ignore) => {
     homographWord,
     homographRoutes
   ) {
-    console.log("ppp");
-    console.log({ resultObj });
-    console.log({ homographWord });
-    console.log({ homographRoutes });
-    console.log("qqq");
-
     let firstStepsOfRoute = homographRoutes.map((arr) => arr[0]);
     let secondStepsOfRoute = homographRoutes.map((arr) => arr[1]);
 
@@ -133,9 +127,9 @@ exports.findHomographs = (testing, currentLanguage, homographType, ignore) => {
           }
 
           if (
-            lemmaObject.allohomClarifier &&
-            lemmaObject.allohomClarifier.emoji &&
-            lemmaObject.allohomClarifier.text
+            lemmaObject.allohomographInfo &&
+            lemmaObject.allohomographInfo.emoji &&
+            lemmaObject.allohomographInfo.text
           ) {
             return true;
           }

@@ -602,8 +602,10 @@ exports.conformAnswerStructureToQuestionStructure = (
     let source = words[gpUtils.giveSetKey(answerStructureChunk.wordtype)];
     lfUtils.adjustImOnlyLemmaObjects(source);
 
-    let matchingAnswerLemmaObjects = source.filter((lObj) =>
-      lemmasToSearch.includes(lObj.lemma)
+    let matchingAnswerLemmaObjects = source.filter(
+      (lObj) => lemmasToSearch.includes(lObj.lemma)
+      //Alpha - sort out translation of multipleWordtype allohoms.
+      // && lObj.wordtype === questionStructureChunk.wordtype
     );
 
     //Should this really be for every single tags to match, otherwise it won't match them?

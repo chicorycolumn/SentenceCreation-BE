@@ -203,8 +203,8 @@ let nounSet = [
     //links
     translations: { ENG: ["nut"], POL: ["orzech"] },
     tags: ["allohom testing", "edible2"],
-    allohomClarifier: { text: "food", emoji: "🥜" },
-    hideAllohomClarifier: false,
+    allohomographInfo: { singleWordtype: true, text: "food", emoji: "🥜" },
+
     //selectors
     lemma: "nut",
     id: "eng-nou-009",
@@ -227,8 +227,8 @@ let nounSet = [
     //links
     translations: { ENG: ["nut"], POL: ["nakrętka"] },
     tags: ["allohom testing", "toolbox"],
-    allohomClarifier: { text: "metal", emoji: "🔩" },
-    hideAllohomClarifier: false,
+    allohomographInfo: { singleWordtype: true, text: "metal", emoji: "🔩" },
+
     //selectors
     lemma: "nut",
     id: "eng-nou-010",
@@ -244,6 +244,30 @@ let nounSet = [
       plural: {
         nom: "nuts",
         gen: "nuts'",
+      },
+    },
+  },
+  {
+    //links
+    translations: { ENG: ["bear"], POL: ["niedźwiedź"] },
+    tags: ["allohom testing", "animal"],
+    allohomographInfo: { multipleWordtype: true, text: "animal", emoji: "🐻" },
+
+    //selectors
+    lemma: "bear",
+    id: "eng-nou-011",
+    gender: "n",
+    //notes
+    deficient: false,
+    //inflections
+    inflections: {
+      singular: {
+        nom: "bear",
+        gen: "bear's",
+      },
+      plural: {
+        nom: "bears",
+        gen: "bears'",
       },
     },
   },
@@ -321,6 +345,30 @@ let adjectiveSet = [
 ];
 
 let verbSet = [
+  {
+    //links
+    translations: { ENG: ["bear"], POL: ["znieść"] },
+    tags: ["allohom testing", "emotions"],
+    allohomographInfo: {
+      multipleWordtype: true,
+      text: "emotional verb",
+      emoji: "😑",
+    },
+    //selectors
+    lemma: "bear",
+    id: "eng-ver-006",
+    //notes
+    defective: false,
+    //inflections
+    inflections: {
+      infinitive: "bear",
+      verbal: {},
+      v2: "beared",
+      v3: "borne",
+      thirdPS: "bears",
+      gerund: "bearing",
+    },
+  },
   {
     //links
     translations: { ENG: ["read"], POL: ["czytać", "przeczytać"] },
