@@ -655,33 +655,28 @@ exports.conformAnswerStructureToQuestionStructure = (
 
         let tenseDescriptions = questionStructureChunk["tenseDescription"];
 
+        console.log("ppp BEFORE ADJUST", { tenseDescriptions });
+
+        answerStructureChunk["tenseDescription"] = []; //hard adjust
+
         questionLangUtils.adjustTenseDescriptionsWhenTranslating(
           tenseDescriptions,
           questionSelectedLemmaObject
         );
 
-        questionStructureChunk["tenseDescription"].forEach((tenseDesc) => {
+        console.log("qqq AFTER ADJUST", { tenseDescriptions });
+
+        tenseDescriptions.forEach((tenseDesc) => {
           let translatedTenseDescArr = refObj.getTranslatedTenseDescription(
             tenseDesc,
             questionLanguage,
             answerLanguage
           );
 
-          let shouldHardChange = true;
-
-          if (shouldHardChange) {
-            //HARD CHANGE
-            answerStructureChunk["tenseDescription"] = [
-              // ...answerStructureChunk["tenseDescription"],
-              ...translatedTenseDescArr,
-            ];
-          } else {
-            //SOFT CHANGE
-            answerStructureChunk["tenseDescription"] = [
-              ...answerStructureChunk["tenseDescription"],
-              ...translatedTenseDescArr,
-            ];
-          }
+          answerStructureChunk["tenseDescription"] = [
+            ...answerStructureChunk["tenseDescription"],
+            ...translatedTenseDescArr,
+          ];
         });
       } else {
         answerStructureChunk[inflectorKey] = gpUtils.copyWithoutReference(

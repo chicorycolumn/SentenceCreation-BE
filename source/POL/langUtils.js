@@ -43,7 +43,7 @@ exports.adjustTenseDescriptionsWhenTranslating = (
       let convertedTenseDesc = imperfectiveOnlyConversionRef[tenseDesc];
 
       if (convertedTenseDesc) {
-        tenseDescriptions.push();
+        tenseDescriptions.push(convertedTenseDesc);
       }
     });
   }
