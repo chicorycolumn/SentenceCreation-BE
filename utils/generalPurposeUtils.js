@@ -340,3 +340,18 @@ exports.doesArrHaveOnlyTheseMembers = (arr1, arr2, disallowDuplicates) => {
     return !differingValues.length;
   }
 };
+
+exports.getWordtypeFromLemmaObject = (lObj) => {
+  const wordtypeRef = {
+    nou: "noun",
+    ver: "verb",
+    adj: "adjective",
+    adv: "adverb",
+    pro: "pronoun",
+    art: "article",
+  };
+
+  let wordtypeShorthand = lObj.id.split("-")[1];
+
+  return wordtypeRef[wordtypeShorthand];
+};

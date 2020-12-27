@@ -165,6 +165,14 @@ describe("findHomographs", () => {
         ["eng-adj-005", "superlative"],
         ["eng-adj-004", "superlative"],
       ],
+      bear: [
+        ["eng-nou-011", "singular", "nom"],
+        ["eng-ver-006", "infinitive"],
+      ],
+      bears: [
+        ["eng-nou-011", "plural", "nom"],
+        ["eng-ver-006", "thirdPS"],
+      ],
     };
 
     let actual = findHomographs(true, currentLanguage, homographType, ignore);
@@ -205,6 +213,14 @@ describe("findHomographs", () => {
       fastest: [
         ["eng-adj-005", "superlative"],
         ["eng-adj-004", "superlative"],
+      ],
+      bear: [
+        ["eng-nou-011", "singular", "nom"],
+        ["eng-ver-006", "infinitive"],
+      ],
+      bears: [
+        ["eng-nou-011", "plural", "nom"],
+        ["eng-ver-006", "thirdPS"],
       ],
     };
 
