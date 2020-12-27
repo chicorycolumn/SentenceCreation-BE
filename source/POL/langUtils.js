@@ -40,7 +40,11 @@ exports.adjustTenseDescriptionsWhenTranslating = (
     };
 
     tenseDescriptions.forEach((tenseDesc) => {
-      tenseDescriptions.push(imperfectiveOnlyConversionRef[tenseDesc]);
+      let convertedTenseDesc = imperfectiveOnlyConversionRef[tenseDesc];
+
+      if (convertedTenseDesc) {
+        tenseDescriptions.push();
+      }
     });
   }
 

@@ -560,6 +560,9 @@ exports.conformAnswerStructureToQuestionStructure = (
   answerLanguage,
   questionLanguage
 ) => {
+  const questionLangUtils = require(`../source/${questionLanguage}/langUtils.js`);
+  const answerLangUtils = require(`../source/${answerLanguage}/langUtils.js`);
+
   questionOutputArr.forEach((questionOutputArrItem) => {
     let questionStructureChunk = questionOutputArrItem.structureChunk;
 
@@ -652,7 +655,7 @@ exports.conformAnswerStructureToQuestionStructure = (
 
         let tenseDescriptions = questionStructureChunk["tenseDescription"];
 
-        langUtils.adjustTenseDescriptionsWhenTranslating(
+        questionLangUtils.adjustTenseDescriptionsWhenTranslating(
           tenseDescriptions,
           questionSelectedLemmaObject
         );

@@ -176,14 +176,6 @@ const generalTranslatedSentencesRef = {
       { POL: "Jesteśmy.", ENG: ["Are.", "Are being."] },
       { POL: "Jesteście.", ENG: ["Are.", "Are being."] },
       { POL: "Są.", ENG: ["Are.", "Are being."] },
-      //
-      //POL: past im
-      // ENG: Past Continuous
-      // ENG: Present Perfect
-      //POL: past pf            (due to 'imperfectiveOnly' conversion)
-      // ENG: Past Simple
-      // ENG: Past Perfect
-      // ENG: Present Perfect (duplicate)
       { POL: "Byłem.", ENG: ["Was.", "Was being.", "Have been.", "Had been."] },
       { POL: "Byłam.", ENG: ["Was.", "Was being.", "Have been.", "Had been."] },
       {
@@ -368,6 +360,180 @@ function checkSentenceTranslations(
 describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
+
+  xdescribe("/palette - Stage 10: Further linguistic features.", () => {
+    it("#pal10-01a GET 200 YES: Tantum plurale in POL is allowed to be sing or plur in ENG.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "red door",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+          expect(["Czerwone drzwi."]).to.include(questionSentenceArr[0]);
+          expect(answerSentenceArr).to.have.members([
+            "Red door.",
+            "Red doors.",
+          ]);
+        });
+    });
+    it("#pal10-01b GET 200 YES: RSWAT for ENG sing to POL tantum plurale.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "red door singular",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+          expect(["Red door."]).to.include(questionSentenceArr[0]);
+          expect(answerSentenceArr).to.have.members(["Czerwone drzwi."]);
+        });
+    });
+    it("#pal10-01c GET 200 YES: RSWAT for ENG to POL tantum plurale.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "red door",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+          expect(["Red door.", "Red doors."]).to.includes(
+            questionSentenceArr[0]
+          );
+          expect(answerSentenceArr).to.have.members(["Czerwone drzwi."]);
+        });
+    });
+    it("#pal10-02a GET 200 YES: RSWAT for First Conditional POL->ENG.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "first conditional 106a",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          // const translatedSentencesRef = {
+          //   current: {
+          //     "POL->ENG": [
+          //       {
+          //         POL: "Kobieta czyta.",
+          //         ENG: ["The woman reads.", "The woman is reading."],
+          //       },
+          //       {
+          //         POL: "Kobiety czytają.",
+          //         ENG: ["The women read.", "The women are reading."],
+          //       },
+          //       {
+          //         POL: "Chłopiec czyta.",
+          //         ENG: ["The boy reads.", "The boy is reading."],
+          //       },
+          //       {
+          //         POL: "Chłopcy czytają.",
+          //         ENG: ["The boys read.", "The boys are reading."],
+          //       },
+          //     ],
+          //   },
+          // };
+
+          // checkSentenceTranslations(
+          //   res,
+          //   questionLanguage,
+          //   answerLanguage,
+          //   "current",
+          //   [
+          //     "Kobieta czyta.",
+          //     "Kobiety czytają.",
+          //     "Chłopiec czyta.",
+          //     "Chłopcy czytają.",
+          //   ],
+          //   translatedSentencesRef
+          // );
+        });
+    });
+    it("#pal10-02b GET 200 YES: RSWAT for First Conditional ENG->POL.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "first conditional 106a",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          // const translatedSentencesRef = {
+          //   current: {
+          //     "POL->ENG": [
+          //       {
+          //         POL: "Kobieta czyta.",
+          //         ENG: ["The woman reads.", "The woman is reading."],
+          //       },
+          //       {
+          //         POL: "Kobiety czytają.",
+          //         ENG: ["The women read.", "The women are reading."],
+          //       },
+          //       {
+          //         POL: "Chłopiec czyta.",
+          //         ENG: ["The boy reads.", "The boy is reading."],
+          //       },
+          //       {
+          //         POL: "Chłopcy czytają.",
+          //         ENG: ["The boys read.", "The boys are reading."],
+          //       },
+          //     ],
+          //   },
+          // };
+
+          // checkSentenceTranslations(
+          //   res,
+          //   questionLanguage,
+          //   answerLanguage,
+          //   "current",
+          //   [
+          //     "Kobieta czyta.",
+          //     "Kobiety czytają.",
+          //     "Chłopiec czyta.",
+          //     "Chłopcy czytają.",
+          //   ],
+          //   translatedSentencesRef
+          // );
+        });
+    });
+  });
 
   describe("/palette - Stage 9: Allohomographs.", () => {
     it("#pal09-01a Type 1 Allohomographs: 'nut' ENG to POL. Expect clarifiers.", () => {
@@ -734,7 +900,7 @@ describe("/api", () => {
     });
   });
 
-  xdescribe("/palette - Stage 7: Further linguistic features.", () => {
+  describe.only("/palette - Stage 7: 'Be'/'Być'.", () => {
     it("#pal07-01a GET 200 YES: Conjugate ENG be correctly.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -756,40 +922,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal07-01b GET 200 YES: Give results for POL być even though past pf was asked for, it should nevertheless be the case that past im of być is returned, as this verb lobj is marked as imperfectiveOnly.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          // answerLanguage,
-          sentenceFormulaSymbol: "dummy34",
-        })
-        .expect(200)
-        .then((res) => {
-          console.log(res.body);
-          expect([
-            "Byłem.",
-            "Byłam.",
-            "Byłeś.",
-            "Byłaś.",
-            "Był.",
-            "Była.",
-            "Było.",
-            "Byłyśmy.",
-            "Byliśmy.",
-            "Byłyście.",
-            "Byliście.",
-            "Były.",
-            "Byli.",
-          ]).to.include(res.body.questionSentenceArr[0]);
-        });
-    });
-    it("#pal07-01c GET 200 YES: Conjugate POL be correctly.", () => {
+    it("#pal07-01b GET 200 YES: Conjugate POL be correctly.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "POL";
 
@@ -828,7 +961,40 @@ describe("/api", () => {
           ]).to.include(res.body.questionSentenceArr[0]);
         });
     });
-    it("#pal07-01d GET 200 YES: RSWAT POL to ENG 'be' correctly. HOMOGRAPH ISSUE.", () => {
+    it("#pal07-01c GET 200 YES: Conjugate POL be correctly even though past pf was asked for, it should nevertheless be the case that past im of być is returned, as this verb lobj is marked as imperfectiveOnly.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          // answerLanguage,
+          sentenceFormulaSymbol: "dummy34",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          expect([
+            "Byłem.",
+            "Byłam.",
+            "Byłeś.",
+            "Byłaś.",
+            "Był.",
+            "Była.",
+            "Było.",
+            "Byłyśmy.",
+            "Byliśmy.",
+            "Byłyście.",
+            "Byliście.",
+            "Były.",
+            "Byli.",
+          ]).to.include(res.body.questionSentenceArr[0]);
+        });
+    });
+    it("#pal07-01d GET 200 YES: RSWAT POL to ENG 'be' correctly..", () => {
       //Clone Bee issue: The issue here is that normally, ENG past simple gets translated to POL past pf.
       //But the verb być doesn't have a pf form, only im.
       //So in this case, ENG past simple should be translated to POL past >>im<< when dealing with
@@ -873,7 +1039,31 @@ describe("/api", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
-      // gpUtils.consoleLogObjectAtTwoLevels(generalTranslatedSentencesRef);
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be",
+            []
+          );
+        });
+    });
+    it.only("#pal07-01f GET 200 YES: RSWAT POL to ENG 'be' correctly, to see if both im and pf forms are translated to ENG.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
 
       return request(app)
         .get("/api/palette")
@@ -895,203 +1085,6 @@ describe("/api", () => {
             "be",
             []
           );
-        });
-    });
-    it("#pal07-01f GET 200 YES: RSWAT POL to ENG 'be' correctly.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy33",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be",
-            []
-          );
-        });
-    });
-    it("#pal07-02a GET 200 YES: Tantum plurale in POL is allowed to be sing or plur in ENG.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          hideClarifiers: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "red door",
-        })
-        .expect(200)
-        .then((res) => {
-          console.log(res.body);
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-          expect(["Czerwone drzwi."]).to.include(questionSentenceArr[0]);
-          expect(answerSentenceArr).to.have.members([
-            "Red door.",
-            "Red doors.",
-          ]);
-        });
-    });
-    it("#pal07-02b GET 200 YES: RSWAT for ENG sing to POL tantum plurale.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          hideClarifiers: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "red door singular",
-        })
-        .expect(200)
-        .then((res) => {
-          console.log(res.body);
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-          expect(["Red door."]).to.include(questionSentenceArr[0]);
-          expect(answerSentenceArr).to.have.members(["Czerwone drzwi."]);
-        });
-    });
-    it("#pal07-02c GET 200 YES: RSWAT for ENG to POL tantum plurale.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          hideClarifiers: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "red door",
-        })
-        .expect(200)
-        .then((res) => {
-          console.log(res.body);
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-          expect(["Red door.", "Red doors."]).to.includes(
-            questionSentenceArr[0]
-          );
-          expect(answerSentenceArr).to.have.members(["Czerwone drzwi."]);
-        });
-    });
-    xit("#pal07-03a GET 200 YES: RSWAT for First Conditional POL->ENG.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          hideClarifiers: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "first conditional 106a",
-        })
-        .expect(200)
-        .then((res) => {
-          console.log(res.body);
-          // const translatedSentencesRef = {
-          //   current: {
-          //     "POL->ENG": [
-          //       {
-          //         POL: "Kobieta czyta.",
-          //         ENG: ["The woman reads.", "The woman is reading."],
-          //       },
-          //       {
-          //         POL: "Kobiety czytają.",
-          //         ENG: ["The women read.", "The women are reading."],
-          //       },
-          //       {
-          //         POL: "Chłopiec czyta.",
-          //         ENG: ["The boy reads.", "The boy is reading."],
-          //       },
-          //       {
-          //         POL: "Chłopcy czytają.",
-          //         ENG: ["The boys read.", "The boys are reading."],
-          //       },
-          //     ],
-          //   },
-          // };
-
-          // checkSentenceTranslations(
-          //   res,
-          //   questionLanguage,
-          //   answerLanguage,
-          //   "current",
-          //   [
-          //     "Kobieta czyta.",
-          //     "Kobiety czytają.",
-          //     "Chłopiec czyta.",
-          //     "Chłopcy czytają.",
-          //   ],
-          //   translatedSentencesRef
-          // );
-        });
-    });
-    xit("#pal07-03b GET 200 YES: RSWAT for First Conditional ENG->POL.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          hideClarifiers: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "first conditional 106a",
-        })
-        .expect(200)
-        .then((res) => {
-          console.log(res.body);
-          // const translatedSentencesRef = {
-          //   current: {
-          //     "POL->ENG": [
-          //       {
-          //         POL: "Kobieta czyta.",
-          //         ENG: ["The woman reads.", "The woman is reading."],
-          //       },
-          //       {
-          //         POL: "Kobiety czytają.",
-          //         ENG: ["The women read.", "The women are reading."],
-          //       },
-          //       {
-          //         POL: "Chłopiec czyta.",
-          //         ENG: ["The boy reads.", "The boy is reading."],
-          //       },
-          //       {
-          //         POL: "Chłopcy czytają.",
-          //         ENG: ["The boys read.", "The boys are reading."],
-          //       },
-          //     ],
-          //   },
-          // };
-
-          // checkSentenceTranslations(
-          //   res,
-          //   questionLanguage,
-          //   answerLanguage,
-          //   "current",
-          //   [
-          //     "Kobieta czyta.",
-          //     "Kobiety czytają.",
-          //     "Chłopiec czyta.",
-          //     "Chłopcy czytają.",
-          //   ],
-          //   translatedSentencesRef
-          // );
         });
     });
   });

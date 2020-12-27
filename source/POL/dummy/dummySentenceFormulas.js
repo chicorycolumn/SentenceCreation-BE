@@ -782,7 +782,7 @@ exports.dummySentenceFormulasBank = {
         chunkId: "ver-1",
         wordtype: "verb",
         specificLemmas: ["być"],
-        tenseDescription: ["present im", "past im"],
+        tenseDescription: ["present im", "past pf"],
         person: [],
         number: [],
         gender: [],
