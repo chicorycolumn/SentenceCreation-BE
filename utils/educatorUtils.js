@@ -1,22 +1,31 @@
+const { preprocessStructureChunks } = require("../source/POL/langUtils.js");
 const gpUtils = require("./generalPurposeUtils.js");
 const otUtils = require("./objectTraversingUtils.js");
 
-exports.findTypeOneHomographs = (
+/**
+ * Gives a list of homographs (allo or syn) to the educator, so that they may take action on these.
+ * @param {string} currentLanguage
+ * @param {string} homographType - "syn", "allo", or "all"
+ * @param {boolean} ignoreV2V3Allohoms - Only applies to ENG lObjs.
+ * @param {boolean} ignoreClarifiedAllohoms - Type 1 Allohomographs.
+ */
+exports.findHomographs = (
   currentLanguage,
   homographType,
-  ignoreVeeTwoVeeThreeAllohoms,
-  ignoreAllohomsAlreadyWithClarifiers
+  ignoreV2V3Allohoms,
+  ignoreClarifiedAllohoms
 ) => {
   if (currentLanguage !== "ENG") {
-    ignoreVeeTwoVeeThreeAllohoms = false;
+    ignoreV2V3Allohoms = false;
   }
 
   if (!["syn", "allo", "all"].includes(homographType)) {
     console.log({ homographType });
-    throw "findTypeOneHomographs fxn: I don't know what type of homograph you want me to find. I've logged above what you gave me.";
+    throw "findHomographs fxn: I don't know what type of homograph you want me to find. I've logged above what you gave me.";
   }
 
   const { wordsBank } = require(`../source/${currentLanguage}/words.js`);
+  const langUtils = require(`../source/${currentLanguage}/langUtils.js`);
 
   let recordOfTerminalValuesAndPaths = [];
   let severallyAppearingTerminalValuesArr = [];
@@ -25,6 +34,10 @@ exports.findTypeOneHomographs = (
 
   Object.keys(wordsBank).forEach((wordsetKey) => {
     let wordset = wordsBank[wordsetKey];
+
+    let wordtype = wordsetKey.slice(0, -3);
+
+    langUtils.preprocessLemmaObjects(wordset, { wordtype }, true);
 
     wordset.forEach((lObj) => {
       let terminalValuesAndPathsArr = otUtils.giveRoutesAndTerminalValuesFromObject(
@@ -86,7 +99,7 @@ exports.findTypeOneHomographs = (
     homographWord,
     homographRoutes
   ) {
-    if (ignoreAllohomsAlreadyWithClarifiers) {
+    if (ignoreClarifiedAllohoms) {
       let lemmaObject = otUtils.findObjectInNestedObject(
         wordsBank,
         {
@@ -103,7 +116,7 @@ exports.findTypeOneHomographs = (
       ) {
         return;
       }
-    } else if (ignoreVeeTwoVeeThreeAllohoms) {
+    } else if (ignoreV2V3Allohoms) {
       let firstStepsOfRoute = homographRoutes.map((arr) => arr[0]);
       let secondStepsOfRoute = homographRoutes.map((arr) => arr[1]);
 

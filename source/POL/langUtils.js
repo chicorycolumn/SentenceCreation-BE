@@ -114,7 +114,11 @@ exports.adjustTenseDescriptions = (structureChunk) => {
   return resultArr;
 };
 
-exports.preprocessLemmaObjects = (matches, structureChunk) => {
+exports.preprocessLemmaObjects = (
+  matches,
+  structureChunk,
+  adjustLemmaObjectsOnly
+) => {
   if (["verb"].includes(structureChunk.wordtype)) {
     matches.forEach((lObj) => exports.fillVerbInflections(lObj));
   }
@@ -123,8 +127,10 @@ exports.preprocessLemmaObjects = (matches, structureChunk) => {
     matches.forEach((lObj) => exports.adjustMasculinityOfLemmaObject(lObj));
   }
 
-  if (["verb", "adjective"].includes(structureChunk.wordtype)) {
-    exports.adjustVirilityOfStructureChunk(structureChunk);
+  if (!adjustLemmaObjectsOnly) {
+    if (["verb", "adjective"].includes(structureChunk.wordtype)) {
+      exports.adjustVirilityOfStructureChunk(structureChunk);
+    }
   }
 };
 

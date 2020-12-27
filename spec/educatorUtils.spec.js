@@ -1,11 +1,12 @@
-const { findTypeOneHomographs } = require("../utils/educatorUtils.js");
+const { findHomographs } = require("../utils/educatorUtils.js");
 const { expect } = require("chai");
 
-describe.only("findTypeOneHomographs", () => {
+// xdescribe("findHomographs", () => {
+describe.only("findHomographs", () => {
   it("#edu1.1 Gives list of all allohomograph lemma objects in one language.", () => {
     const currentLanguage = "ENG";
 
-    let typeOneAllohomographs = findTypeOneHomographs(
+    let typeOneAllohomographs = findHomographs(
       currentLanguage,
       "syn",
       true,
