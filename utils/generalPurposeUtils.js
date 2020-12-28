@@ -9,8 +9,14 @@ exports.capitaliseFirst = (string) => {
   return string[0].toUpperCase() + string.slice(1);
 };
 
-exports.areTwoFlatArraysEqual = (arr1, arr2) => {
+exports.areTwoFlatArraysEqualAndInSameOrder = (arr1, arr2) => {
   return arr1.every((item, index) => arr2[index] === item);
+};
+
+exports.areTwoFlatArraysEqual = (arr1, arr2) => {
+  return (
+    arr1.length === arr2.length && arr1.every((item) => arr2.includes(item))
+  );
 };
 
 exports.doTwoFlatArraysMatchAllValues = (arr1, arr2) => {

@@ -117,7 +117,7 @@ exports.processSentenceFormula = (
       questionLanguage
     );
 
-    console.log("sentenceStructure AFTER QA conform", sentenceStructure);
+    // console.log("sentenceStructure AFTER QA conform", sentenceStructure);
   }
 
   // console.log("----");
@@ -586,16 +586,34 @@ exports.conformAnswerStructureToQuestionStructure = (
       return;
     }
 
-    console.log("***********");
-    console.log(
-      "conformAtoQ fxn: questionStructureChunk",
-      questionStructureChunk
-    );
-    console.log(
-      "xxx answerStructureChunk at conformAtoQ after STEP ZERO",
-      answerStructureChunk
-    );
-    console.log("***********");
+    if (true) {
+      console.log(
+        "***************************************************************"
+      );
+      console.log(
+        "***************************************************************"
+      );
+      console.log(
+        "***********conformAnswerStructureToQuestionStructure***********"
+      );
+      console.log(
+        "***************************************************************"
+      );
+      console.log(
+        "***************************START*******************************"
+      );
+      console.log(
+        "***************************************************************"
+      );
+      console.log(
+        "***************************************************************"
+      );
+      console.log("questionStructureChunk", questionStructureChunk);
+      console.log(
+        "xxx answerStructureChunk at conformAtoQ after STEP ZERO",
+        answerStructureChunk
+      );
+    }
 
     // console.log(
     //   "So, the Polish lemma chosen was",
@@ -650,17 +668,26 @@ exports.conformAnswerStructureToQuestionStructure = (
         inflectorKey === "number" &&
         questionSelectedLemmaObject.tantumPlurale
       ) {
+        console.log(
+          "Question lobj is a tantum, so we won't transfer Number feature."
+        );
         return;
       }
 
       //Don't transfer number, if all A lObjs are tantum plurale.
       //Eg if Q is "violin" we don't want to specify that A must be singular, as "skrzypce" can't be singular.
+      console.log("ddd", matchingAnswerLemmaObjects);
+
       if (
         inflectorKey === "number" &&
+        matchingAnswerLemmaObjects.length &&
         matchingAnswerLemmaObjects.every(
           (answerLemmaObject) => answerLemmaObject.tantumPlurale
         )
       ) {
+        console.log(
+          "All answer lobjs are tantum, so we won't transfer Number feature."
+        );
         return;
       }
 
@@ -701,10 +728,12 @@ exports.conformAnswerStructureToQuestionStructure = (
       );
     });
 
-    console.log(
-      "yyy answerStructureChunk at conformAtoQ after STEP ONE",
-      answerStructureChunk
-    );
+    if (true) {
+      console.log(
+        "yyy answerStructureChunk at conformAtoQ after STEP ONE",
+        answerStructureChunk
+      );
+    }
 
     //
     //PART TWO: Blinding
@@ -738,10 +767,33 @@ exports.conformAnswerStructureToQuestionStructure = (
       }
     });
 
-    console.log(
-      "zzz answerStructureChunk at conformAtoQ finally, after STEP TWO",
-      answerStructureChunk
-    );
+    if (true) {
+      console.log(
+        "zzz answerStructureChunk at conformAtoQ finally, after STEP TWO",
+        answerStructureChunk
+      );
+      console.log(
+        "***************************************************************"
+      );
+      console.log(
+        "***************************************************************"
+      );
+      console.log(
+        "***********conformAnswerStructureToQuestionStructure***********"
+      );
+      console.log(
+        "***************************************************************"
+      );
+      console.log(
+        "****************************END********************************"
+      );
+      console.log(
+        "***************************************************************"
+      );
+      console.log(
+        "***************************************************************"
+      );
+    }
   });
 };
 

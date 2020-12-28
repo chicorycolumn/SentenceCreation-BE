@@ -1082,7 +1082,7 @@ describe("/api", () => {
     });
   });
 
-  describe.only("/palette - Stage 7: 'Be'/'Być'.", () => {
+  describe("/palette - Stage 7: 'Be'/'Być'.", () => {
     xit("#pal07-01a GET 200 YES: Conjugate ENG be correctly.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
