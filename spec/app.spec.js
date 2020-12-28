@@ -8,139 +8,8 @@ const { it } = require("mocha");
 // const { myErrMsgs } = require("../errors/errors");
 // const endpointsCopy = require("../endpoints.json");
 
-const checkTranslationsOfGivenRef = (
-  res,
-  ref,
-  questionLanguage,
-  answerLanguage
-) => {
-  console.log(res.body);
-
-  let { questionSentenceArr, answerSentenceArr } = res.body;
-
-  expect(ref.map((item) => item[questionLanguage][0])).include(
-    questionSentenceArr[0]
-  );
-
-  ref.forEach((item) => {
-    if (item[questionLanguage] === questionSentenceArr[0]) {
-      expect(item[answerLanguage]).to.have.members(answerSentenceArr);
-    }
-  });
-};
-
 //This is a Washburne style reference object.
 const generalTranslatedSentencesRef = {
-  read_withClarifiers_QlangENG: {
-    "POL->ENG": [
-      { POL: "Przeczytałem.", ENG: ["I read (past)."] },
-      { POL: "Przeczytałam.", ENG: ["I read (past)."] },
-      { POL: "Czytam.", ENG: ["I read (present)."] },
-    ],
-  },
-  read_withClarifiers_QlangPOL: {
-    "POL->ENG": [
-      { POL: "Przeczytałem.", ENG: ["I read.", "I had read.", "I have read."] },
-      { POL: "Przeczytałam.", ENG: ["I read.", "I had read.", "I have read."] },
-      { POL: "Czytam.", ENG: ["I read.", "I am reading."] },
-    ],
-  },
-  write_withClarifiers_QlangENG: {
-    "POL->ENG": [
-      { POL: "Piszesz.", ENG: ["You write (singular)."] },
-      { POL: "Piszecie.", ENG: ["You write (plural)."] },
-      ////
-      { POL: "Napisałeś.", ENG: ["You wrote (singular)."] },
-      { POL: "Napisałaś.", ENG: ["You wrote (singular)."] },
-      { POL: "Napisaliście.", ENG: ["You wrote (plural)."] },
-      { POL: "Napisałyście.", ENG: ["You wrote (plural)."] },
-      ////
-      { POL: "Będziesz pisał.", ENG: ["You will be writing (singular)."] },
-      { POL: "Będziesz pisała.", ENG: ["You will be writing (singular)."] },
-      { POL: "Będziesz pisać.", ENG: ["You will be writing (singular)."] },
-      { POL: "Będziecie pisały.", ENG: ["You will be writing (plural)."] },
-      { POL: "Będziecie pisali.", ENG: ["You will be writing (plural)."] },
-      { POL: "Będziecie pisać.", ENG: ["You will be writing (plural)."] },
-      {
-        POL: "Będziesz pisał.",
-        ENG: ["You are going to be writing (singular)."],
-      },
-      {
-        POL: "Będziesz pisała.",
-        ENG: ["You are going to be writing (singular)."],
-      },
-      {
-        POL: "Będziesz pisać.",
-        ENG: ["You are going to be writing (singular)."],
-      },
-      {
-        POL: "Będziecie pisały.",
-        ENG: ["You are going to be writing (plural)."],
-      },
-      {
-        POL: "Będziecie pisali.",
-        ENG: ["You are going to be writing (plural)."],
-      },
-      {
-        POL: "Będziecie pisać.",
-        ENG: ["You are going to be writing (plural)."],
-      },
-    ],
-  },
-  write_withClarifiers_QlangPOL: {
-    "POL->ENG": [
-      {
-        POL: "Piszesz.",
-        ENG: ["You write.", "You are writing."],
-      },
-      {
-        POL: "Piszecie.",
-        ENG: ["You write.", "You are writing."],
-      },
-      ////
-      {
-        POL: "Napisałeś.",
-        ENG: ["You wrote.", "You had written.", "You have written."],
-      },
-      {
-        POL: "Napisałaś.",
-        ENG: ["You wrote.", "You had written.", "You have written."],
-      },
-      {
-        POL: "Napisaliście.",
-        ENG: ["You wrote.", "You had written.", "You have written."],
-      },
-      {
-        POL: "Napisałyście.",
-        ENG: ["You wrote.", "You had written.", "You have written."],
-      },
-      ////
-      {
-        POL: "Będziesz pisał.",
-        ENG: ["You will be writing.", "You are going to be writing."],
-      },
-      {
-        POL: "Będziesz pisała.",
-        ENG: ["You will be writing.", "You are going to be writing."],
-      },
-      {
-        POL: "Będziesz pisać.",
-        ENG: ["You will be writing.", "You are going to be writing."],
-      },
-      {
-        POL: "Będziecie pisały.",
-        ENG: ["You will be writing.", "You are going to be writing."],
-      },
-      {
-        POL: "Będziecie pisali.",
-        ENG: ["You will be writing.", "You are going to be writing."],
-      },
-      {
-        POL: "Będziecie pisać.",
-        ENG: ["You will be writing.", "You are going to be writing."],
-      },
-    ],
-  },
   be_withClarifiers_QlangENG: {
     "POL->ENG": [
       { POL: "Jesteś.", ENG: ["You are (singular)."] },
@@ -151,18 +20,6 @@ const generalTranslatedSentencesRef = {
     "POL->ENG": [
       { POL: "Jesteś.", ENG: ["You are.", "You are being."] },
       { POL: "Jesteście.", ENG: ["You are.", "You are being."] },
-    ],
-  },
-  sheep_withClarifiers_QlangENG: {
-    "POL->ENG": [
-      { POL: "Owca.", ENG: ["Sheep (singular)."] },
-      { POL: "Owce.", ENG: ["Sheep (plural)."] },
-    ],
-  },
-  sheep_withClarifiers_QlangPOL: {
-    "POL->ENG": [
-      { POL: "Owca.", ENG: ["Sheep."] },
-      { POL: "Owce.", ENG: ["Sheep."] },
     ],
   },
   be_withPronouns_withClarifiers_QlangPOL: {
@@ -257,6 +114,11 @@ const generalTranslatedSentencesRef = {
   },
   be_withPronouns: {
     "POL->ENG": [
+      {
+        POL: "Będę.",
+        ENG: ["I will be.", "I am going to be.", "I will have been."],
+      },
+
       { POL: "Jestem.", ENG: ["I am.", "I am being."] },
       { POL: "Jesteś.", ENG: ["You are.", "You are being."] },
       { POL: "Jest.", ENG: ["She is.", "She is being."] },
@@ -398,6 +260,128 @@ const generalTranslatedSentencesRef = {
       },
     ],
   },
+  sheep_withClarifiers_QlangENG: {
+    "POL->ENG": [
+      { POL: "Owca.", ENG: ["Sheep (singular)."] },
+      { POL: "Owce.", ENG: ["Sheep (plural)."] },
+    ],
+  },
+  sheep_withClarifiers_QlangPOL: {
+    "POL->ENG": [
+      { POL: "Owca.", ENG: ["Sheep."] },
+      { POL: "Owce.", ENG: ["Sheep."] },
+    ],
+  },
+  read_withClarifiers_QlangENG: {
+    "POL->ENG": [
+      { POL: "Przeczytałem.", ENG: ["I read (past)."] },
+      { POL: "Przeczytałam.", ENG: ["I read (past)."] },
+      { POL: "Czytam.", ENG: ["I read (present)."] },
+    ],
+  },
+  read_withClarifiers_QlangPOL: {
+    "POL->ENG": [
+      { POL: "Przeczytałem.", ENG: ["I read.", "I had read.", "I have read."] },
+      { POL: "Przeczytałam.", ENG: ["I read.", "I had read.", "I have read."] },
+      { POL: "Czytam.", ENG: ["I read.", "I am reading."] },
+    ],
+  },
+  write_withClarifiers_QlangENG: {
+    "POL->ENG": [
+      { POL: "Piszesz.", ENG: ["You write (singular)."] },
+      { POL: "Piszecie.", ENG: ["You write (plural)."] },
+      ////
+      { POL: "Napisałeś.", ENG: ["You wrote (singular)."] },
+      { POL: "Napisałaś.", ENG: ["You wrote (singular)."] },
+      { POL: "Napisaliście.", ENG: ["You wrote (plural)."] },
+      { POL: "Napisałyście.", ENG: ["You wrote (plural)."] },
+      ////
+      { POL: "Będziesz pisał.", ENG: ["You will be writing (singular)."] },
+      { POL: "Będziesz pisała.", ENG: ["You will be writing (singular)."] },
+      { POL: "Będziesz pisać.", ENG: ["You will be writing (singular)."] },
+      { POL: "Będziecie pisały.", ENG: ["You will be writing (plural)."] },
+      { POL: "Będziecie pisali.", ENG: ["You will be writing (plural)."] },
+      { POL: "Będziecie pisać.", ENG: ["You will be writing (plural)."] },
+      {
+        POL: "Będziesz pisał.",
+        ENG: ["You are going to be writing (singular)."],
+      },
+      {
+        POL: "Będziesz pisała.",
+        ENG: ["You are going to be writing (singular)."],
+      },
+      {
+        POL: "Będziesz pisać.",
+        ENG: ["You are going to be writing (singular)."],
+      },
+      {
+        POL: "Będziecie pisały.",
+        ENG: ["You are going to be writing (plural)."],
+      },
+      {
+        POL: "Będziecie pisali.",
+        ENG: ["You are going to be writing (plural)."],
+      },
+      {
+        POL: "Będziecie pisać.",
+        ENG: ["You are going to be writing (plural)."],
+      },
+    ],
+  },
+  write_withClarifiers_QlangPOL: {
+    "POL->ENG": [
+      {
+        POL: "Piszesz.",
+        ENG: ["You write.", "You are writing."],
+      },
+      {
+        POL: "Piszecie.",
+        ENG: ["You write.", "You are writing."],
+      },
+      ////
+      {
+        POL: "Napisałeś.",
+        ENG: ["You wrote.", "You had written.", "You have written."],
+      },
+      {
+        POL: "Napisałaś.",
+        ENG: ["You wrote.", "You had written.", "You have written."],
+      },
+      {
+        POL: "Napisaliście.",
+        ENG: ["You wrote.", "You had written.", "You have written."],
+      },
+      {
+        POL: "Napisałyście.",
+        ENG: ["You wrote.", "You had written.", "You have written."],
+      },
+      ////
+      {
+        POL: "Będziesz pisał.",
+        ENG: ["You will be writing.", "You are going to be writing."],
+      },
+      {
+        POL: "Będziesz pisała.",
+        ENG: ["You will be writing.", "You are going to be writing."],
+      },
+      {
+        POL: "Będziesz pisać.",
+        ENG: ["You will be writing.", "You are going to be writing."],
+      },
+      {
+        POL: "Będziecie pisały.",
+        ENG: ["You will be writing.", "You are going to be writing."],
+      },
+      {
+        POL: "Będziecie pisali.",
+        ENG: ["You will be writing.", "You are going to be writing."],
+      },
+      {
+        POL: "Będziecie pisać.",
+        ENG: ["You will be writing.", "You are going to be writing."],
+      },
+    ],
+  },
   write: {
     "POL->ENG": [
       { POL: "Piszę.", ENG: ["I am writing.", "I write."] },
@@ -474,75 +458,425 @@ const generalTranslatedSentencesRef = {
   },
 };
 
-gpUtils.fillOutWashburneRefObj(
-  generalTranslatedSentencesRef,
-  "POL->ENG",
-  "ENG->POL",
-  "POL",
-  "ENG"
-);
-
-function checkSentenceTranslations(
-  res,
-  questionLanguage,
-  answerLanguage,
-  word,
-  allExpectedQuestionSentences,
-  translatedSentencesRef = generalTranslatedSentencesRef
-) {
-  let { body } = res;
-  let direction = `${questionLanguage}->${answerLanguage}`;
-
-  if (!allExpectedQuestionSentences.length) {
-    allExpectedQuestionSentences = translatedSentencesRef[word][direction].map(
-      (array) => array[questionLanguage]
-    );
-  }
-
-  console.log({ "RESULT: res.body:": body });
-
-  let questionSentence = body.questionSentenceArr[0];
-  let { answerSentenceArr } = body;
-
-  expect(questionSentence).to.be.a("String");
-
-  expect(allExpectedQuestionSentences).to.include(questionSentence);
-
-  let translations = translatedSentencesRef[word][direction];
-
-  expect(translations.map((refItem) => refItem[questionLanguage])).to.include(
-    questionSentence
-  );
-
-  translations.forEach((refItem) => {
-    let { POL, ENG } = refItem;
-
-    if (questionSentence === POL) {
-      expect(answerSentenceArr).to.have.members(ENG);
-      console.log(
-        `-' '-._,-' '-._,-' '-._,-' '-._,-' '-._,-' '-._${questionSentence}`
-      );
-      console.log(
-        "was translated by,-'-._,-' '-._,-' '-._,-'-._,",
-        answerSentenceArr
-      );
-    }
-    if (questionSentence === ENG) {
-      expect(answerSentenceArr).to.have.members(POL);
-      console.log(
-        `-' '-._,-' '-._,-' '-._,-' '-._,-' '-._,-' '-._${questionSentence}`
-      );
-      console.log(
-        "  was translated by`-' '-._,-' '-._,-' '-._,-'",
-        answerSentenceArr
-      );
-    }
-  });
-}
-
 describe("/api", () => {
+  gpUtils.fillOutWashburneRefObj(
+    generalTranslatedSentencesRef,
+    "POL->ENG",
+    "ENG->POL",
+    "POL",
+    "ENG"
+  );
   // after(() => {});
   // beforeEach(() => {});
+
+  describe.only("/palette - Stage 7: 'Be'/'Być'.", () => {
+    xit("#pal07-03a GET 200 YES: RSWAT POL to ENG 'be' correctly (without pronouns).", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33a",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be",
+            []
+          );
+        });
+    });
+    xit("#pal07-03b GET 200 YES: Conjugate POL 'be' past pf, (should be treated as im and pf both, as has imperfectiveOnly key).", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          // answerLanguage,
+          sentenceFormulaSymbol: "dummy34",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          expect([
+            "Byłem.",
+            "Byłam.",
+            "Byłeś.",
+            "Byłaś.",
+            "Był.",
+            "Była.",
+            "Było.",
+            "Byłyśmy.",
+            "Byliśmy.",
+            "Byłyście.",
+            "Byliście.",
+            "Były.",
+            "Byli.",
+          ]).to.include(res.body.questionSentenceArr[0]);
+        });
+    });
+    it.only("#pal07-03c GET 200 YES: RSWAT POL to ENG 'be' future pf, (should be treated as im and pf both, as has imperfectiveOnly key).", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy34a",
+        })
+        .expect(200)
+        .then((res) => {
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns",
+            []
+          );
+        });
+    });
+    ////
+    ////
+    ////
+    it("#pal07-01a GET 200 YES: Conjugate POL be correctly without translations.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          // answerLanguage,
+          sentenceFormulaSymbol: "dummy33",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          expect([
+            "Jestem.",
+            "Jesteś.",
+            "Jest.",
+            "Jesteśmy.",
+            "Jesteście.",
+            "Są.",
+            "Byłem.",
+            "Byłam.",
+            "Byłeś.",
+            "Byłaś.",
+            "Był.",
+            "Była.",
+            "Było.",
+            "Byłyśmy.",
+            "Byliśmy.",
+            "Byłyście.",
+            "Byliście.",
+            "Były.",
+            "Byli.",
+          ]).to.include(res.body.questionSentenceArr[0]);
+        });
+    });
+    it("#pal07-01b GET 200 YES: RSWAT POL to ENG 'be' - pres simp, past simp - I.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33b I am",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-01c GET 200 YES: RSWAT POL to ENG 'be' - pres simp, past simp - You (with clarifiers).", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33c you are",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns_withClarifiers_QlangPOL",
+            []
+          );
+        });
+    });
+    it("#pal07-01d GET 200 YES: RSWAT POL to ENG 'be' - pres simp, past simp - She.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33d she is",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-01e GET 200 YES: RSWAT POL to ENG 'be' - pres simp, past simp - We.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33e we are",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-01f GET 200 YES: RSWAT POL to ENG 'be' - pres simp, past simp - They.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33f they are",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-02a GET 200 YES: Conjugate ENG be correctly without translations.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          // answerLanguage,
+          sentenceFormulaSymbol: "dummy33",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          expect(["Am.", "Are.", "Is.", "Was.", "Were."]).to.include(
+            res.body.questionSentenceArr[0]
+          );
+        });
+    });
+    it("#pal07-02b GET 200 YES: RSWAT ENG to POL 'be' - pres simp, past simp - I.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33b I am",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-02c GET 200 YES: RSWAT ENG to POL 'be' - pres simp, past simp - You (with clarifiers).", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33c you are",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns_withClarifiers_QlangENG",
+            []
+          );
+        });
+    });
+    it("#pal07-02d GET 200 YES: RSWAT ENG to POL 'be' - pres simp, past simp - She.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33d she is",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-02e GET 200 YES: RSWAT ENG to POL 'be' - pres simp, past simp - We.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33e we are",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-02f GET 200 YES: RSWAT ENG to POL 'be' - pres simp, past simp - They.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33f they are",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns",
+            []
+          );
+        });
+    });
+  });
 
   xdescribe("/palette - Stage 10: Further linguistic features.", () => {
     it("#pal10-01a GET 200 YES: Tantum plurale in POL is allowed to be sing or plur in ENG.", () => {
@@ -1078,388 +1412,6 @@ describe("/api", () => {
             answerLanguage,
             "be_withClarifiers_Qlang" + questionLanguage,
             ["Jesteś.", "Jesteście."]
-          );
-        });
-    });
-  });
-
-  describe("/palette - Stage 7: 'Be'/'Być'.", () => {
-    it("#pal07-01a GET 200 YES: Conjugate POL be correctly without translations.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          // answerLanguage,
-          sentenceFormulaSymbol: "dummy33",
-        })
-        .expect(200)
-        .then((res) => {
-          console.log(res.body);
-          expect([
-            "Jestem.",
-            "Jesteś.",
-            "Jest.",
-            "Jesteśmy.",
-            "Jesteście.",
-            "Są.",
-            "Byłem.",
-            "Byłam.",
-            "Byłeś.",
-            "Byłaś.",
-            "Był.",
-            "Była.",
-            "Było.",
-            "Byłyśmy.",
-            "Byliśmy.",
-            "Byłyście.",
-            "Byliście.",
-            "Były.",
-            "Byli.",
-          ]).to.include(res.body.questionSentenceArr[0]);
-        });
-    });
-    it("#pal07-01b GET 200 YES: RSWAT POL to ENG 'be' - I.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy33b I am",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be_withPronouns",
-            []
-          );
-        });
-    });
-    it("#pal07-01c GET 200 YES: RSWAT POL to ENG 'be' - You (with clarifiers).", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy33c you are",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be_withPronouns_withClarifiers_QlangPOL",
-            []
-          );
-        });
-    });
-    it("#pal07-01d GET 200 YES: RSWAT POL to ENG 'be' - She.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy33d she is",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be_withPronouns",
-            []
-          );
-        });
-    });
-    it("#pal07-01e GET 200 YES: RSWAT POL to ENG 'be' - We.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy33e we are",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be_withPronouns",
-            []
-          );
-        });
-    });
-    it("#pal07-01f GET 200 YES: RSWAT POL to ENG 'be' - They.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy33f they are",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be_withPronouns",
-            []
-          );
-        });
-    });
-    it("#pal07-02a GET 200 YES: Conjugate ENG be correctly without translations.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          // answerLanguage,
-          sentenceFormulaSymbol: "dummy33",
-        })
-        .expect(200)
-        .then((res) => {
-          console.log(res.body);
-          expect(["Am.", "Are.", "Is.", "Was.", "Were."]).to.include(
-            res.body.questionSentenceArr[0]
-          );
-        });
-    });
-    it("#pal07-02b GET 200 YES: RSWAT ENG to POL 'be' - I.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy33b I am",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be_withPronouns",
-            []
-          );
-        });
-    });
-    it("#pal07-02c GET 200 YES: RSWAT ENG to POL 'be' - You (with clarifiers).", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy33c you are",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be_withPronouns_withClarifiers_QlangENG",
-            []
-          );
-        });
-    });
-    it("#pal07-02d GET 200 YES: RSWAT ENG to POL 'be' - She.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy33d she is",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be_withPronouns",
-            []
-          );
-        });
-    });
-    it("#pal07-02e GET 200 YES: RSWAT ENG to POL 'be' - We.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy33e we are",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be_withPronouns",
-            []
-          );
-        });
-    });
-    it("#pal07-02f GET 200 YES: RSWAT ENG to POL 'be' - They.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy33f they are",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be_withPronouns",
-            []
-          );
-        });
-    });
-    it("#pal07-03a GET 200 YES: Conjugate POL be even though past pf was asked for, (should be trated as im and pf both, as has imperfectiveOnly key).", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          // answerLanguage,
-          sentenceFormulaSymbol: "dummy34",
-        })
-        .expect(200)
-        .then((res) => {
-          console.log(res.body);
-          expect([
-            "Byłem.",
-            "Byłam.",
-            "Byłeś.",
-            "Byłaś.",
-            "Był.",
-            "Była.",
-            "Było.",
-            "Byłyśmy.",
-            "Byliśmy.",
-            "Byłyście.",
-            "Byliście.",
-            "Były.",
-            "Byli.",
-          ]).to.include(res.body.questionSentenceArr[0]);
-        });
-    });
-    it("#pal07-03b GET 200 YES: RSWAT POL to ENG 'be' correctly (without pronouns).", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy33a",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be",
-            []
           );
         });
     });
@@ -3401,3 +3353,82 @@ describe("/api", () => {
     });
   });
 });
+
+function checkSentenceTranslations(
+  res,
+  questionLanguage,
+  answerLanguage,
+  word,
+  allExpectedQuestionSentences,
+  translatedSentencesRef = generalTranslatedSentencesRef
+) {
+  let { body } = res;
+  let direction = `${questionLanguage}->${answerLanguage}`;
+
+  if (!allExpectedQuestionSentences.length) {
+    allExpectedQuestionSentences = translatedSentencesRef[word][direction].map(
+      (array) => array[questionLanguage]
+    );
+  }
+
+  console.log({ "RESULT: res.body:": body });
+
+  let questionSentence = body.questionSentenceArr[0];
+  let { answerSentenceArr } = body;
+
+  expect(questionSentence).to.be.a("String");
+
+  expect(allExpectedQuestionSentences).to.include(questionSentence);
+
+  let translations = translatedSentencesRef[word][direction];
+
+  expect(translations.map((refItem) => refItem[questionLanguage])).to.include(
+    questionSentence
+  );
+
+  translations.forEach((refItem) => {
+    let { POL, ENG } = refItem;
+
+    if (questionSentence === POL) {
+      expect(answerSentenceArr).to.have.members(ENG);
+      console.log(
+        `-' '-._,-' '-._,-' '-._,-' '-._,-' '-._,-' '-._${questionSentence}`
+      );
+      console.log(
+        "was translated by,-'-._,-' '-._,-' '-._,-'-._,",
+        answerSentenceArr
+      );
+    }
+    if (questionSentence === ENG) {
+      expect(answerSentenceArr).to.have.members(POL);
+      console.log(
+        `-' '-._,-' '-._,-' '-._,-' '-._,-' '-._,-' '-._${questionSentence}`
+      );
+      console.log(
+        "  was translated by`-' '-._,-' '-._,-' '-._,-'",
+        answerSentenceArr
+      );
+    }
+  });
+}
+
+function checkTranslationsOfGivenRef(
+  res,
+  ref,
+  questionLanguage,
+  answerLanguage
+) {
+  console.log(res.body);
+
+  let { questionSentenceArr, answerSentenceArr } = res.body;
+
+  expect(ref.map((item) => item[questionLanguage][0])).include(
+    questionSentenceArr[0]
+  );
+
+  ref.forEach((item) => {
+    if (item[questionLanguage] === questionSentenceArr[0]) {
+      expect(item[answerLanguage]).to.have.members(answerSentenceArr);
+    }
+  });
+}
