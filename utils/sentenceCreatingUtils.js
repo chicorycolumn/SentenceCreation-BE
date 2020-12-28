@@ -564,6 +564,9 @@ exports.conformAnswerStructureToQuestionStructure = (
   const answerLangUtils = require(`../source/${answerLanguage}/langUtils.js`);
 
   questionOutputArr.forEach((questionOutputArrItem) => {
+    //
+    // STEP ZERO: Get necessary materials.
+    //
     let questionStructureChunk = questionOutputArrItem.structureChunk;
 
     if (questionStructureChunk.wordtype === "fixed") {
@@ -573,19 +576,23 @@ exports.conformAnswerStructureToQuestionStructure = (
     let questionSelectedLemmaObject = questionOutputArrItem.selectedLemmaObject;
     let questionSelectedWord = questionOutputArrItem.selectedWord;
 
-    let answerStructureChunk = sentenceStructure.find((structureChunk) => {
-      return structureChunk.chunkId === questionStructureChunk.chunkId;
-    });
+    let answerStructureChunk = sentenceStructure.find(
+      (structureChunk) =>
+        structureChunk.chunkId === questionStructureChunk.chunkId
+    );
 
     if (!answerStructureChunk) {
       console.log("Ah shucks");
       return;
     }
 
-    // console.log("***********");
-    // console.log("conformAtoQ fxn: questionStructureChunk", questionStructureChunk);
-    // console.log("conformAtoQ fxn: answerStructureChunk", answerStructureChunk);
-    // console.log("***********");
+    console.log("***********");
+    console.log(
+      "conformAtoQ fxn: questionStructureChunk",
+      questionStructureChunk
+    );
+    console.log("conformAtoQ fxn: answerStructureChunk", answerStructureChunk);
+    console.log("***********");
 
     // console.log(
     //   "So, the Polish lemma chosen was",
@@ -634,6 +641,9 @@ exports.conformAnswerStructureToQuestionStructure = (
     ].allowableTransfersFromQuestionStructure[
       answerStructureChunk.wordtype
     ].forEach((inflectorKey) => {
+      //
+      // STEP ONE: Update inflectors from list of allowable transfers.
+      //
       if (!questionStructureChunk[inflectorKey]) {
         return;
       }
@@ -647,10 +657,9 @@ exports.conformAnswerStructureToQuestionStructure = (
         ) {
           console.log("TANTUM DETECTED");
           // return;
+          //Alpha what happens if we do hit return here?
         }
-      }
-
-      if (inflectorKey === "tenseDescription") {
+      } else if (inflectorKey === "tenseDescription") {
         answerStructureChunk["tenseDescription"] = [];
 
         let tenseDescriptions = questionStructureChunk["tenseDescription"];
@@ -685,6 +694,15 @@ exports.conformAnswerStructureToQuestionStructure = (
       }
     });
 
+    console.log(
+      "xxx PARTIALLY UPDATED answerStructureChunk",
+      answerStructureChunk
+    );
+
+    //
+    //PART TWO: Blinding
+    //
+
     //Check for features-of-answer-lang-lobjs-that-aren't-features-of-question-lang-lobjs.
     // So when going ENG to POL, that would be gender.
     // And then, with that list of features, we will blind the answer structureChunks to these features.
@@ -704,7 +722,13 @@ exports.conformAnswerStructureToQuestionStructure = (
     );
 
     possibleInflectionsOfAnswerLobjsButNotQuestionLobjs.forEach((inflector) => {
-      answerStructureChunk[inflector] = [];
+      if (
+        !answerStructureChunk.importantFeatures ||
+        !answerStructureChunk.importantFeatures.includes(inflector)
+      ) {
+        //Refrain from the blinding if this inflector has been marked as important in the question structure.
+        answerStructureChunk[inflector] = [];
+      }
     });
 
     console.log("yyy UPDATED answerStructureChunk", answerStructureChunk);

@@ -28,8 +28,8 @@ const checkTranslationsOfGivenRef = (
   });
 };
 
+//This is a Washburne style reference object.
 const generalTranslatedSentencesRef = {
-  //This is a Washburne style reference object.
   read_withClarifiers_QlangENG: {
     "POL->ENG": [
       { POL: "Przeczytałem.", ENG: ["I read (past)."] },
@@ -207,7 +207,7 @@ const generalTranslatedSentencesRef = {
     ],
   },
   be_withPronouns_withClarifiers_QlangENG: {
-    "ENG->POL": [
+    "POL->ENG": [
       {
         POL: "Jesteś.",
         ENG: ["You are (singular).", "You are being (singular)."],
@@ -1373,7 +1373,7 @@ describe("/api", () => {
           );
         });
     });
-    it.only("#pal07-03c GET 200 YES: RSWAT ENG to POL 'be' - You (with clarifiers).", () => {
+    it("#pal07-03c GET 200 YES: RSWAT ENG to POL 'be' - You (with clarifiers).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1399,7 +1399,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal07-03d GET 200 YES: RSWAT ENG to POL 'be' - She.", () => {
+    it.only("#pal07-03d GET 200 YES: RSWAT ENG to POL 'be' - She.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 

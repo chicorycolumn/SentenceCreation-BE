@@ -852,6 +852,7 @@ exports.dummySentenceFormulasBank = {
         person: ["3per"],
         number: ["singular"],
         gender: ["f"],
+        importantFeatures: ["gender"],
       },
     ],
     primaryOrders: [],
