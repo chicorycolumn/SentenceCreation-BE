@@ -1049,4 +1049,19 @@ exports.dummySentenceFormulasBank = {
     ],
     primaryOrders: [["adj-1", "nou-1"]],
   },
+  dummy44: {
+    sentenceFormulaSymbol: "dummy44",
+    sentenceFormulaId: "POL-dummy44",
+    translations: { ENG: ["ENG-dummy44"] },
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        andTags: ["identity"],
+        person: ["1per"],
+        tenseDescription: ["future im"],
+      },
+    ],
+    primaryOrders: [],
+  },
 };

@@ -434,4 +434,21 @@ exports.dummySentenceFormulasBank = {
     ],
     primaryOrders: [["fix-1", "adj-1", "nou-1"]],
   },
+  dummy44: {
+    sentenceFormulaSymbol: "dummy44",
+    sentenceFormulaId: "ENG-dummy44",
+    translations: { POL: ["POL-dummy44"] },
+    structure: [
+      { chunkId: "fix-1", wordtype: "fixed", value: "I" },
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        andTags: ["identity"],
+        number: [],
+        tenseDescription: ["future"],
+        person: ["1per"],
+      },
+    ],
+    primaryOrders: [["fix-1", "ver-1"]],
+  },
 };

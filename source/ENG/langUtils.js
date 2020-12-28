@@ -184,22 +184,6 @@ exports.generateAdhocForms = (
       } else {
         tenseDescriptionArr.push(tenseDescription);
       }
-
-      // if (tenseDescription === "present") {
-      //   tenseDescriptionArr.push("present simple");
-      //   tenseDescriptionArr.push("present continuous");
-      //   tenseDescriptionArr.push("present perfect");
-      // } else if (tenseDescription === "past") {
-      //   tenseDescriptionArr.push("past simple");
-      //   tenseDescriptionArr.push("past continuous");
-      //   tenseDescriptionArr.push("past perfect");
-      // } else if (tenseDescription === "future") {
-      //   tenseDescriptionArr.push("future simple");
-      //   tenseDescriptionArr.push("future continuous");
-      //   tenseDescriptionArr.push("future perfect");
-      // } else {
-      //   tenseDescriptionArr.push(tenseDescription);
-      // }
     });
 
     function fetchTenseDescription(
@@ -283,6 +267,15 @@ exports.generateAdhocForms = (
             number,
             tenseDescription,
           };
+
+          if (
+            lObj.lemma === "be" &&
+            ["future continuous", "future goingto continuous"].includes(
+              tenseDescription
+            )
+          ) {
+            return;
+          }
 
           if (
             lObj.lemma === "be" &&

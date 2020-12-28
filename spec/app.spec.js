@@ -470,7 +470,7 @@ describe("/api", () => {
   // beforeEach(() => {});
 
   describe.only("/palette - Stage 7: 'Be'/'Być'.", () => {
-    xit("#pal07-03a GET 200 YES: RSWAT POL to ENG 'be' correctly (without pronouns).", () => {
+    it("#pal07-03a GET 200 YES: RSWAT POL to ENG 'be' correctly (without pronouns).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -496,7 +496,7 @@ describe("/api", () => {
           );
         });
     });
-    xit("#pal07-03b GET 200 YES: Conjugate POL 'be' past pf, (should be treated as im and pf both, as has imperfectiveOnly key).", () => {
+    it("#pal07-03b GET 200 YES: Conjugate POL 'be' past pf, (should be treated as im and pf both, as has imperfectiveOnly key).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -529,7 +529,28 @@ describe("/api", () => {
           ]).to.include(res.body.questionSentenceArr[0]);
         });
     });
-    it.only("#pal07-03c GET 200 YES: RSWAT POL to ENG 'be' future pf, (should be treated as im and pf both, as has imperfectiveOnly key).", () => {
+    it("#pal07-03c GET 200 YES: When you request ENG be future, it should only give you fut perf and fut simp but not fut cont.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          // answerLanguage,
+          sentenceFormulaSymbol: "dummy44",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          expect(["I will be.", "I will have been."]).to.include(
+            res.body.questionSentenceArr[0]
+          );
+        });
+    });
+    it("#pal07-03d GET 200 YES: RSWAT POL to ENG 'be' future pf, (should be treated as im and pf both, as has imperfectiveOnly key).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
