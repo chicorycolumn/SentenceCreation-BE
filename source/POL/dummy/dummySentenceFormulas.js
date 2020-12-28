@@ -1092,4 +1092,32 @@ exports.dummySentenceFormulasBank = {
     ],
     primaryOrders: [],
   },
+  dummy46a: {
+    sentenceFormulaSymbol: "dummy46a",
+    sentenceFormulaId: "POL-dummy46a",
+    translations: { ENG: ["ENG-dummy46a"] },
+    structure: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        andTags: ["allohomTesting3"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [],
+  },
+  dummy46c: {
+    sentenceFormulaSymbol: "dummy46c",
+    sentenceFormulaId: "POL-dummy46c",
+    translations: { ENG: ["ENG-dummy46c"] },
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        andTags: ["allohomTesting3"],
+        form: ["infinitive"],
+      },
+    ],
+    primaryOrders: [],
+  },
 };

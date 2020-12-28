@@ -7,7 +7,7 @@ let nounSet = [
 
     //selectors
     lemma: "nut",
-    id: "eng-nou-009",
+    id: "eng-nou-d01",
     gender: "n",
     //notes
     deficient: false,
@@ -31,7 +31,7 @@ let nounSet = [
 
     //selectors
     lemma: "nut",
-    id: "eng-nou-010",
+    id: "eng-nou-d02",
     gender: "n",
     //notes
     deficient: false,
@@ -55,7 +55,7 @@ let nounSet = [
 
     //selectors
     lemma: "bear",
-    id: "eng-nou-011",
+    id: "eng-nou-d03",
     gender: "n",
     //notes
     deficient: false,
@@ -68,6 +68,64 @@ let nounSet = [
       plural: {
         nom: "bears",
         gen: "bears'",
+      },
+    },
+  },
+  {
+    //links
+    translations: { ENG: ["tie"], POL: ["remis"] },
+    tags: ["allohomTesting3", "sports"],
+    allohomInfo: {
+      multipleWordtype: true,
+      singleWordtype: true,
+      text: "score",
+      emoji: "⚽",
+    },
+
+    //selectors
+    lemma: "tie",
+    id: "eng-nou-d04",
+    gender: "n",
+    //notes
+    deficient: false,
+    //inflections
+    inflections: {
+      singular: {
+        nom: "tie",
+        gen: "tie's",
+      },
+      plural: {
+        nom: "ties",
+        gen: "ties'",
+      },
+    },
+  },
+  {
+    //links
+    translations: { ENG: ["tie"], POL: ["krawat"] },
+    tags: ["allohomTesting3", "clothes"],
+    allohomInfo: {
+      multipleWordtype: true,
+      singleWordtype: true,
+      text: "clothes",
+      emoji: "👔",
+    },
+
+    //selectors
+    lemma: "tie",
+    id: "eng-nou-d05",
+    gender: "n",
+    //notes
+    deficient: false,
+    //inflections
+    inflections: {
+      singular: {
+        nom: "tie",
+        gen: "tie's",
+      },
+      plural: {
+        nom: "ties",
+        gen: "ties'",
       },
     },
   },
@@ -86,7 +144,7 @@ let verbSet = [
     },
     //selectors
     lemma: "bear",
-    id: "eng-ver-006",
+    id: "eng-ver-d01",
     //notes
     defective: false,
     //inflections
@@ -97,6 +155,31 @@ let verbSet = [
       v3: "borne",
       thirdPS: "bears",
       gerund: "bearing",
+    },
+  },
+  {
+    //links
+    translations: { ENG: ["tie"], POL: ["wiązać"] },
+    tags: ["allohomTesting3", "crafts"],
+    allohomInfo: {
+      multipleWordtype: true,
+      singleWordtype: true,
+      text: "with string eg",
+      emoji: "🧵",
+    },
+    //selectors
+    lemma: "tie",
+    id: "eng-ver-d01",
+    //notes
+    defective: false,
+    //inflections
+    inflections: {
+      infinitive: "tie",
+      verbal: {},
+      v2: "tied",
+      v3: "tied",
+      thirdPS: "ties",
+      gerund: "tying",
     },
   },
 ];

@@ -481,4 +481,79 @@ exports.dummySentenceFormulasBank = {
     ],
     primaryOrders: [],
   },
+  dummy45c: {
+    sentenceFormulaSymbol: "dummy45c",
+    sentenceFormulaId: "ENG-dummy45c",
+    translations: { POL: ["POL-dummy45b"] }, //Yes, this does point from c to b. It's fine...
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        andTags: ["allohomTesting2"],
+        form: ["infinitive"],
+        // pleaseShowMultipleWordtypeAllohomClarifiers: true, // ...because I'm checking I can unrequest this.
+      },
+    ],
+    primaryOrders: [],
+  },
+  dummy46a: {
+    sentenceFormulaSymbol: "dummy46a",
+    sentenceFormulaId: "ENG-dummy46a",
+    translations: { POL: ["POL-dummy46a"] },
+    structure: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        andTags: ["allohomTesting3"],
+        number: ["singular"],
+        // pleaseShowMultipleWordtypeAllohomClarifiers: true,
+      },
+    ],
+    primaryOrders: [],
+  },
+  dummy46b: {
+    sentenceFormulaSymbol: "dummy46b",
+    sentenceFormulaId: "ENG-dummy46b",
+    translations: { POL: ["POL-dummy46a"] }, //Yes, this does indeed point from b to a...
+    structure: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        andTags: ["allohomTesting3"],
+        number: ["singular"],
+        pleaseShowMultipleWordtypeAllohomClarifiers: true, // ...because I'm just testing this.
+      },
+    ],
+    primaryOrders: [],
+  },
+  dummy46c: {
+    sentenceFormulaSymbol: "dummy46c",
+    sentenceFormulaId: "ENG-dummy46c",
+    translations: { POL: ["POL-dummy46c"] },
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        andTags: ["allohomTesting3"],
+        form: ["infinitive"],
+        // pleaseShowMultipleWordtypeAllohomClarifiers: true,
+      },
+    ],
+    primaryOrders: [],
+  },
+  dummy46d: {
+    sentenceFormulaSymbol: "dummy46d",
+    sentenceFormulaId: "ENG-dummy46d",
+    translations: { POL: ["POL-dummy46c"] }, //Yes, this does indeed point from d to c...
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        andTags: ["allohomTesting3"],
+        form: ["infinitive"],
+        pleaseShowMultipleWordtypeAllohomClarifiers: true, // ...because I'm just testing this.
+      },
+    ],
+    primaryOrders: [],
+  },
 };

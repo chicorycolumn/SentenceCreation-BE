@@ -5,7 +5,7 @@ let nounSet = [
     tags: ["allohomTesting", "edible2"],
     //selectors
     lemma: "orzech",
-    id: "pol-nou-012",
+    id: "pol-nou-d01",
     gender: "m3",
     //notes
     deficient: false,
@@ -35,7 +35,7 @@ let nounSet = [
     tags: ["allohomTesting", "toolbox"],
     //selectors
     lemma: "nakrętka",
-    id: "pol-nou-013",
+    id: "pol-nou-d02",
     gender: "f",
     //notes
     deficient: false,
@@ -65,7 +65,7 @@ let nounSet = [
     tags: ["allohomTesting2", "animal"],
     //selectors
     lemma: "niedźwiedź",
-    id: "pol-nou-014",
+    id: "pol-nou-d03",
     gender: "m2",
     //notes
     deficient: false,
@@ -89,6 +89,68 @@ let nounSet = [
       },
     },
   },
+  {
+    //links
+    translations: { ENG: ["tie"] },
+    tags: ["allohomTesting3", "sports"],
+    //selectors
+    lemma: "remis",
+    id: "pol-nou-d04",
+    gender: "m3",
+    //notes
+    deficient: false,
+    //inflections
+    inflections: {
+      singular: {
+        nom: "remis",
+        gen: "remisu",
+        dat: "remisowi",
+        acc: "remis",
+        ins: "remisem",
+        loc: "remisie",
+      },
+      plural: {
+        nom: "remisy",
+        gen: "remisów",
+        dat: "remisom",
+        acc: "remisy",
+        ins: "remisami",
+        loc: "remisach",
+      },
+    },
+  },
+  {
+    //links
+    translations: { ENG: ["tie"] },
+    tags: ["allohomTesting3", "clothes"],
+    //selectors
+    lemma: "krawat",
+    id: "pol-nou-d05",
+    gender: "m3",
+    //notes
+    deficient: false,
+    //inflections
+    inflections: {
+      singular: {
+        nom: "krawat",
+        gen: ["krawata", "krawatu"],
+        // gen: "krawata",
+        dat: "krawatowi",
+        acc: "krawat",
+        ins: "krawatem",
+        loc: "krawacie",
+      },
+      plural: {
+        nom: "krawaty",
+        gen: "krawatów",
+        dat: "krawatom",
+        acc: "krawaty",
+        ins: "krawatami",
+        loc: "krawatach",
+      },
+    },
+  },
+  ////
   {
     id: "dummy-nou-001",
     lemma: "foobar_loc_only",
@@ -239,7 +301,7 @@ let verbSet = [
     tags: ["allohomTesting2", "emotions"],
     //selectors
     lemma: "znieść",
-    id: "pol-ver-005-pf-01",
+    id: "pol-ver-d01-pf-01",
     aspect: "perfective",
     //notes
     deficient: false,
@@ -346,6 +408,121 @@ let verbSet = [
       contemporaryAdverbial: false,
       anteriorAdverbial: "zniósłszy",
       verbalNoun: "zniesienie",
+    },
+  },
+  {
+    //links
+    translations: { ENG: ["tie"] },
+    tags: ["allohomTesting3", "crafts"],
+    //selectors
+    lemma: "wiązać",
+    id: "pol-ver-d02-im-01",
+    aspect: "imperfective",
+    //notes
+    deficient: false,
+    defective: false,
+    //inflections
+    inflections: {
+      infinitive: "wiązać",
+      verbal: {
+        past: {
+          impersonal: {
+            singular: { allSingularGenders: "wiązano" },
+            plural: { allPluralGenders: "wiązano" },
+          },
+          "1per": {
+            singular: {
+              m: "wiązałem",
+              f: "wiązałam",
+            },
+            plural: {
+              virile: "wiązaliśmy",
+              nonvirile: "wiązałyśmy",
+            },
+          },
+          "2per": {
+            singular: {
+              m: "wiązałeś",
+              f: "wiązałaś",
+            },
+            plural: {
+              virile: "wiązaliście",
+              nonvirile: "wiązałyście",
+            },
+          },
+          "3per": {
+            singular: {
+              m: "wiązał",
+              f: "wiązała",
+              n: "wiązało",
+            },
+            plural: {
+              virile: "wiązali",
+              nonvirile: "wiązały",
+            },
+          },
+        },
+        present: {
+          impersonal: { singular: true, plural: true },
+          "1per": {
+            singular: {
+              allSingularGendersExcludingNeuter: "wiążę",
+            },
+            plural: {
+              allPluralGenders: "wiążemy",
+            },
+          },
+          "2per": {
+            singular: {
+              allSingularGendersExcludingNeuter: "wiążesz",
+            },
+            plural: {
+              allPluralGenders: "wiążecie",
+            },
+          },
+          "3per": {
+            singular: {
+              allSingularGenders: "wiąże",
+            },
+            plural: {
+              allPluralGenders: "wiążą",
+            },
+          },
+        },
+        future: true,
+        conditional: true,
+        imperative: {
+          "1per": {
+            singular: {
+              allSingularGendersExcludingNeuter: "niech wiążę",
+            },
+            plural: {
+              allPluralGenders: "wiążmy",
+            },
+          },
+          "2per": {
+            singular: {
+              allSingularGendersExcludingNeuter: "wiąż",
+            },
+            plural: {
+              allPluralGenders: "wiążcie",
+            },
+          },
+          "3per": {
+            singular: {
+              allSingularGenders: "niech wiąże",
+            },
+            plural: {
+              allPluralGenders: "niech wiążą",
+            },
+          },
+        },
+      },
+      activeAdjectival: "wiążący",
+      passiveAdjectival: "wiązany",
+      contemporaryAdverbial: "wiążąc",
+      anteriorAdverbial: false,
+      verbalNoun: "wiązanie",
     },
   },
 ];
