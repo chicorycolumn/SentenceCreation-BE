@@ -169,7 +169,7 @@ let verbSet = [
     },
     //selectors
     lemma: "tie",
-    id: "eng-ver-d01",
+    id: "eng-ver-d02",
     //notes
     defective: false,
     //inflections

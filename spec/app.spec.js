@@ -470,35 +470,6 @@ describe("/api", () => {
   // beforeEach(() => {});
 
   describe("/palette - Stage 7: 'Be'/'Być'.", () => {
-    it("#pal07-##a GET 200 YES: We don't want compound future when requesting 'be' POL future pf.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy33a",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be",
-            []
-          );
-        });
-    });
-    ////
-    ////
-    ////
     it("#pal07-03a GET 200 YES: RSWAT POL to ENG 'be' correctly (without pronouns).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
@@ -579,7 +550,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal07-03d GET 200 YES: RSWAT POL to ENG 'be' future pf, (should be treated as im and pf both) (Clone Bee VNV issue: should NOT receive 'b€d€ by¢', but instead just 'b€d€'.).", () => {
+    it("#pal07-03d GET 200 YES: RSWAT POL to ENG 'be' future pf, (Clone Bee VNV issue: should NOT receive 'b€d€ by¢', but instead just 'b€d€'.).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -591,6 +562,30 @@ describe("/api", () => {
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "dummy34a",
+        })
+        .expect(200)
+        .then((res) => {
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-03e GET 200 YES: RSWAT POL to ENG 'be' future im, (Clone Bee VNV issue: should NOT receive 'b€d€ by¢', but instead just 'b€d€'.).", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy34b",
         })
         .expect(200)
         .then((res) => {
@@ -1103,200 +1098,6 @@ describe("/api", () => {
   });
 
   describe("/palette - Stage 9: Allohomographs.", () => {
-    it("#pal09-03a Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (noun)' ENG to POL. Textmoji Clarifier expected. Wordtype Clarifier not requested.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy46a",
-        })
-        .expect(200)
-        .then((res) => {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-
-          expect(questionSentenceArr.length).to.equal(1);
-          expect(answerSentenceArr.length).to.equal(1);
-
-          let ref = [
-            { ENG: ["Tie (⚽ score)."], POL: ["Remis."] },
-            { ENG: ["Tie (👔 clothes)."], POL: ["Krawat."] },
-          ];
-
-          checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    it("#pal09-03b Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (noun)' ENG to POL. Textmoji Clarifier expected. Wordtype Clarifier requested so also expected.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy46b",
-        })
-        .expect(200)
-        .then((res) => {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-
-          expect(questionSentenceArr.length).to.equal(1);
-          expect(answerSentenceArr.length).to.equal(1);
-
-          let ref = [
-            { ENG: ["Tie (⚽ score, noun)."], POL: ["Remis."] },
-            { ENG: ["Tie (👔 clothes, noun)."], POL: ["Krawat."] },
-          ];
-
-          checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    it("#pal09-03c Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (verb)' ENG to POL. Textmoji Clarifier expected. Wordtype Clarifier not requested.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy46c",
-        })
-        .expect(200)
-        .then((res) => {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-
-          expect(questionSentenceArr.length).to.equal(1);
-          expect(answerSentenceArr.length).to.equal(1);
-
-          let ref = [{ ENG: ["Tie (🧵 with string eg)."], POL: ["Wiązać."] }];
-
-          checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    it("#pal09-03d Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (verb)' ENG to POL. Textmoji Clarifier expected. Wordtype Clarifier requested so also expected.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy46d",
-        })
-        .expect(200)
-        .then((res) => {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-
-          expect(questionSentenceArr.length).to.equal(1);
-          expect(answerSentenceArr.length).to.equal(1);
-
-          let ref = [
-            { ENG: ["Tie (🧵 with string eg, verb)."], POL: ["Wiązać."] },
-          ];
-
-          checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    it("#pal09-03e Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (noun)' POL to ENG. No clarifiers.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy46a",
-        })
-        .expect(200)
-        .then((res) => {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-
-          expect(questionSentenceArr.length).to.equal(1);
-          expect(answerSentenceArr.length).to.equal(1);
-
-          let ref = [
-            { ENG: ["Tie."], POL: ["Remis."] },
-            { ENG: ["Tie."], POL: ["Krawat."] },
-          ];
-
-          checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    it.only("#pal09-03f Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (verb)' POL to ENG. No clarifiers.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy46c",
-        })
-        .expect(200)
-        .then((res) => {
-          console.log(res.body);
-
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-
-          expect(questionSentenceArr.length).to.equal(1);
-          expect(answerSentenceArr.length).to.equal(1);
-
-          let ref = [{ ENG: ["Tie."], POL: ["Wiązać."] }];
-
-          checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    ////
     it("#pal09-01a Type 1 Allohomographs of SingleWordtype: 'nut' ENG to POL. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -1519,6 +1320,197 @@ describe("/api", () => {
             // { ENG: ["Bear."], POL: ["Niedźwiedź."] },
             { ENG: ["Bear."], POL: ["Znieść."] },
           ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal09-03a Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (noun)' ENG to POL. Textmoji Clarifier expected. Wordtype Clarifier not requested.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy46a",
+        })
+        .expect(200)
+        .then((res) => {
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+
+          expect(questionSentenceArr.length).to.equal(1);
+          expect(answerSentenceArr.length).to.equal(1);
+
+          let ref = [
+            { ENG: ["Tie (⚽ score)."], POL: ["Remis."] },
+            { ENG: ["Tie (👔 clothes)."], POL: ["Krawat."] },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal09-03b Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (noun)' ENG to POL. Textmoji Clarifier expected. Wordtype Clarifier requested so also expected.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy46b",
+        })
+        .expect(200)
+        .then((res) => {
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+
+          expect(questionSentenceArr.length).to.equal(1);
+          expect(answerSentenceArr.length).to.equal(1);
+
+          let ref = [
+            { ENG: ["Tie (⚽ score, noun)."], POL: ["Remis."] },
+            { ENG: ["Tie (👔 clothes, noun)."], POL: ["Krawat."] },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal09-03c Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (verb)' ENG to POL. Textmoji Clarifier expected. Wordtype Clarifier not requested.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy46c",
+        })
+        .expect(200)
+        .then((res) => {
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+
+          expect(questionSentenceArr.length).to.equal(1);
+          expect(answerSentenceArr.length).to.equal(1);
+
+          let ref = [{ ENG: ["Tie (🧵 with string eg)."], POL: ["Wiązać."] }];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal09-03d Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (verb)' ENG to POL. Textmoji Clarifier expected. Wordtype Clarifier requested so also expected.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy46d",
+        })
+        .expect(200)
+        .then((res) => {
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+
+          expect(questionSentenceArr.length).to.equal(1);
+          expect(answerSentenceArr.length).to.equal(1);
+
+          let ref = [
+            { ENG: ["Tie (🧵 with string eg, verb)."], POL: ["Wiązać."] },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal09-03e Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (noun)' POL to ENG. No clarifiers.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy46a",
+        })
+        .expect(200)
+        .then((res) => {
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+
+          expect(questionSentenceArr.length).to.equal(1);
+          expect(answerSentenceArr.length).to.equal(1);
+
+          let ref = [
+            { ENG: ["Tie."], POL: ["Remis."] },
+            { ENG: ["Tie."], POL: ["Krawat."] },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal09-03f Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (verb)' POL to ENG. No clarifiers.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy46c",
+        })
+        .expect(200)
+        .then((res) => {
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+
+          expect(questionSentenceArr.length).to.equal(1);
+          expect(answerSentenceArr.length).to.equal(1);
+
+          let ref = [{ ENG: ["Tie."], POL: ["Wiązać."] }];
 
           checkTranslationsOfGivenRef(
             res,
@@ -1826,7 +1818,7 @@ describe("/api", () => {
     });
   });
 
-  describe("/palette - Stage 6: Returning Polish with English translations of rich sentences (with nouns adjectives and verbs).", () => {
+  describe("/palette - Stage 6: Translating rich sentences (nouns, adjectives, verbs).", () => {
     it("#pal06-01a GET 200 YES: Returns sentence with all translations (RSWAT).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";

@@ -376,32 +376,7 @@ let verbSet = [
           },
         },
         conditional: true,
-        imperative: {
-          "1per": {
-            singular: {
-              allSingularGendersExcludingNeuter: "niech zniosę",
-            },
-            plural: {
-              allPluralGenders: "znieśmy",
-            },
-          },
-          "2per": {
-            singular: {
-              allSingularGendersExcludingNeuter: "znieś",
-            },
-            plural: {
-              allPluralGenders: "znieście",
-            },
-          },
-          "3per": {
-            singular: {
-              allSingularGenders: "niech zniesie",
-            },
-            plural: {
-              allPluralGenders: "niech zniosą",
-            },
-          },
-        },
+        imperative: "znieś",
       },
       activeAdjectival: false,
       passiveAdjectival: "zniesiony",
@@ -491,32 +466,7 @@ let verbSet = [
         },
         future: true,
         conditional: true,
-        imperative: {
-          "1per": {
-            singular: {
-              allSingularGendersExcludingNeuter: "niech wiążę",
-            },
-            plural: {
-              allPluralGenders: "wiążmy",
-            },
-          },
-          "2per": {
-            singular: {
-              allSingularGendersExcludingNeuter: "wiąż",
-            },
-            plural: {
-              allPluralGenders: "wiążcie",
-            },
-          },
-          "3per": {
-            singular: {
-              allSingularGenders: "niech wiąże",
-            },
-            plural: {
-              allPluralGenders: "niech wiążą",
-            },
-          },
-        },
+        imperative: "wiąż",
       },
       activeAdjectival: "wiążący",
       passiveAdjectival: "wiązany",

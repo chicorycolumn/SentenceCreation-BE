@@ -923,6 +923,23 @@ exports.dummySentenceFormulasBank = {
     ],
     primaryOrders: [],
   },
+  dummy34b: {
+    sentenceFormulaSymbol: "dummy34b",
+    sentenceFormulaId: "POL-dummy34b",
+    translations: { ENG: ["ENG-dummy34a"] }, //Yes, this does indeed point from b to a...
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        specificLemmas: ["być"],
+        tenseDescription: ["future im"], // ...because I am just testing this.
+        person: ["1per"],
+        number: ["singular"],
+        gender: [],
+      },
+    ],
+    primaryOrders: [],
+  },
   dummy36: {
     sentenceFormulaSymbol: "dummy36",
     sentenceFormulaId: "POL-dummy36",

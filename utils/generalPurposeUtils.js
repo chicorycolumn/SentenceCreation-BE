@@ -318,13 +318,21 @@ exports.consoleLogObjectAtOneLevel = (obj) => {
 exports.consoleLogObjectAtTwoLevels = (obj) => {
   Object.keys(obj).forEach((key) => {
     let value = obj[key];
-    Object.keys(value).forEach((key2) => {
-      let value2 = value[key2];
-      console.log("~~~~~~~~~~~>KEY");
-      console.log(key2);
-      console.log("~~~~~~~~~~~>VALUE");
-      console.log(value2);
-    });
+
+    if (value) {
+      Object.keys(value).forEach((key2) => {
+        let value2 = value[key2];
+        console.log("~~~~~~~~~~~>SUBKEY");
+        console.log(key2);
+        console.log("~~~~~~~~~~~>SUBVALUE");
+        console.log(value2);
+      });
+    } else {
+      console.log("~~~~~>KEY");
+      console.log(key);
+      console.log("~~~~~>VALUE");
+      console.log(value);
+    }
   });
 };
 

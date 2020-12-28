@@ -105,7 +105,7 @@ exports.addSpecificClarifiers = (
   }
 };
 
-exports.adjustTenseDescriptionsWhenTranslating = () => {};
+exports.adjustTenseDescriptionsBeforeTranslating = () => {};
 
 exports.adjustStructureChunksInIfPW = (structureChunk) => {};
 

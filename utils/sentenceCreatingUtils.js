@@ -692,15 +692,13 @@ exports.conformAnswerStructureToQuestionStructure = (
       }
 
       if (inflectorKey === "tenseDescription") {
-        answerStructureChunk["tenseDescription"] = [];
+        answerStructureChunk["tenseDescription"] = []; //hard adjust
 
         let tenseDescriptions = questionStructureChunk["tenseDescription"];
 
         console.log("ppp BEFORE ADJUST", { tenseDescriptions });
 
-        answerStructureChunk["tenseDescription"] = []; //hard adjust
-
-        questionLangUtils.adjustTenseDescriptionsWhenTranslating(
+        questionLangUtils.adjustTenseDescriptionsBeforeTranslating(
           tenseDescriptions,
           questionSelectedLemmaObject
         );

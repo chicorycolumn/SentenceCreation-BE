@@ -1,5 +1,7 @@
 //Copied over on 27/12/2020
 
+const { selectRandom } = require("../../utils/generalPurposeUtils");
+
 let nounSet = [
   {
     //links
@@ -681,6 +683,7 @@ let verbSet = [
           },
         },
         present: {
+          impersonal: { singular: true, plural: true },
           "1per": {
             singular: {
               m1: "jestem",
@@ -797,45 +800,7 @@ let verbSet = [
             },
           },
         },
-        imperative: {
-          "1per": {
-            singular: {
-              m1: "niech będę",
-              m2: "niech będę",
-              m3: "niech będę",
-              f: "niech będę",
-            },
-            plural: {
-              virile: "bądźmy",
-              nonvirile: "bądźmy",
-            },
-          },
-          "2per": {
-            singular: {
-              m1: "bądź",
-              m2: "bądź",
-              m3: "bądź",
-              f: "bądź",
-            },
-            plural: {
-              virile: "bądźcie",
-              nonvirile: "bądźcie",
-            },
-          },
-          "3per": {
-            singular: {
-              m1: "niech będzie",
-              m2: "niech będzie",
-              m3: "niech będzie",
-              f: "niech będzie",
-              n: "niech będzie",
-            },
-            plural: {
-              virile: "niech będą",
-              nonvirile: "niech będą",
-            },
-          },
-        },
+        imperative: "bądź",
       },
       activeAdjectival: "będący",
       contemporaryAdverbial: "będąc",
@@ -854,6 +819,7 @@ let verbSet = [
     //notes
     deficient: true,
     defective: false,
+    complete: false,
     imperfectiveOnly_unadjusted: true,
     //inflections
     inflections: {
@@ -925,32 +891,7 @@ let verbSet = [
         },
         future: true,
         conditional: true,
-        imperative: {
-          "1per": {
-            singular: {
-              allSingularGendersExcludingNeuter: "niech mam",
-            },
-            plural: {
-              allPluralGenders: "miejmy",
-            },
-          },
-          "2per": {
-            singular: {
-              allSingularGendersExcludingNeuter: "miej",
-            },
-            plural: {
-              allPluralGenders: "miejcie",
-            },
-          },
-          "3per": {
-            singular: {
-              allSingularGenders: "niech ma",
-            },
-            plural: {
-              allPluralGenders: "niech mają",
-            },
-          },
-        },
+        imperative: "miej",
       },
       activeAdjectival: "mający",
       passiveAdjectival: false,
@@ -1040,32 +981,7 @@ let verbSet = [
         },
         future: true,
         conditional: true,
-        imperative: {
-          "1per": {
-            singular: {
-              allSingularGendersExcludingNeuter: "niech piszę",
-            },
-            plural: {
-              allPluralGenders: "piszmy",
-            },
-          },
-          "2per": {
-            singular: {
-              allSingularGendersExcludingNeuter: "pisz",
-            },
-            plural: {
-              allPluralGenders: "piszcie",
-            },
-          },
-          "3per": {
-            singular: {
-              allSingularGenders: "niech pisze",
-            },
-            plural: {
-              allPluralGenders: "niech piszą",
-            },
-          },
-        },
+        imperative: "pisz",
       },
       activeAdjectival: "piszący",
       passiveAdjectival: "pisany",
@@ -1155,32 +1071,7 @@ let verbSet = [
         },
         present: false,
         conditional: true,
-        imperative: {
-          "1per": {
-            singular: {
-              allSingularGendersExcludingNeuter: "niech napiszę",
-            },
-            plural: {
-              allPluralGenders: "napiszmy",
-            },
-          },
-          "2per": {
-            singular: {
-              allSingularGendersExcludingNeuter: "napisz",
-            },
-            plural: {
-              allPluralGenders: "napiszcie",
-            },
-          },
-          "3per": {
-            singular: {
-              allSingularGenders: "niech napisze",
-            },
-            plural: {
-              allPluralGenders: "niech napiszą",
-            },
-          },
-        },
+        imperative: "napisz",
       },
       activeAdjectival: false,
       passiveAdjectival: "napisany",
@@ -1270,32 +1161,7 @@ let verbSet = [
         },
         future: true,
         conditional: true,
-        imperative: {
-          "1per": {
-            singular: {
-              allSingularGendersExcludingNeuter: "niech czytam",
-            },
-            plural: {
-              allPluralGenders: "czytajmy",
-            },
-          },
-          "2per": {
-            singular: {
-              allSingularGendersExcludingNeuter: "czytaj",
-            },
-            plural: {
-              allPluralGenders: "czytajcie",
-            },
-          },
-          "3per": {
-            singular: {
-              allSingularGenders: "niech czyta",
-            },
-            plural: {
-              allPluralGenders: "niech czytają",
-            },
-          },
-        },
+        imperative: "czytaj",
       },
       activeAdjectival: "czytający",
       passiveAdjectival: "czytany",
@@ -1385,32 +1251,7 @@ let verbSet = [
         },
         present: false,
         conditional: true,
-        imperative: {
-          "1per": {
-            singular: {
-              allSingularGendersExcludingNeuter: "niech przeczytam",
-            },
-            plural: {
-              allPluralGenders: "przeczytajmy",
-            },
-          },
-          "2per": {
-            singular: {
-              allSingularGendersExcludingNeuter: "przeczytaj",
-            },
-            plural: {
-              allPluralGenders: "przeczytajcie",
-            },
-          },
-          "3per": {
-            singular: {
-              allSingularGenders: "niech przeczyta",
-            },
-            plural: {
-              allPluralGenders: "niech przeczytają",
-            },
-          },
-        },
+        imperative: "przeczytaj",
       },
       activeAdjectival: false,
       passiveAdjectival: "przeczytany",
@@ -1500,32 +1341,7 @@ let verbSet = [
         },
         future: true,
         conditional: true,
-        imperative: {
-          "1per": {
-            singular: {
-              allSingularGendersExcludingNeuter: "niech badam",
-            },
-            plural: {
-              allPluralGenders: "badajmy",
-            },
-          },
-          "2per": {
-            singular: {
-              allSingularGendersExcludingNeuter: "badaj",
-            },
-            plural: {
-              allPluralGenders: "badajcie",
-            },
-          },
-          "3per": {
-            singular: {
-              allSingularGenders: "niech bada",
-            },
-            plural: {
-              allPluralGenders: "niech badają",
-            },
-          },
-        },
+        imperative: "badaj",
       },
       activeAdjectival: "badający",
       passiveAdjectival: "badany",
@@ -1615,32 +1431,7 @@ let verbSet = [
           },
         },
         conditional: true,
-        imperative: {
-          "1per": {
-            singular: {
-              allSingularGendersExcludingNeuter: "niech zbadam",
-            },
-            plural: {
-              allPluralGenders: "zbadajmy",
-            },
-          },
-          "2per": {
-            singular: {
-              allSingularGendersExcludingNeuter: "zbadaj",
-            },
-            plural: {
-              allPluralGenders: "zbadajcie",
-            },
-          },
-          "3per": {
-            singular: {
-              allSingularGenders: "niech zbada",
-            },
-            plural: {
-              allPluralGenders: "niech zbadają",
-            },
-          },
-        },
+        imperative: "zbadaj",
       },
       activeAdjectival: false,
       passiveAdjectival: "zbadany",

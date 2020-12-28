@@ -24,7 +24,7 @@ exports.adjustStructureChunksInIfPW = (structureChunk) => {
   }
 };
 
-exports.adjustTenseDescriptionsWhenTranslating = (
+exports.adjustTenseDescriptionsBeforeTranslating = (
   tenseDescriptions,
   questionSelectedLemmaObject
 ) => {
@@ -162,26 +162,47 @@ exports.preprocessLemmaObjects = (
 };
 
 exports.fillVerbInflections = (lemmaObject) => {
+  console.log(
+    "fillVerbInflections fxn has been called for '" +
+      lemmaObject.lemma +
+      "' lObj."
+  );
+
   if (lemmaObject.defective) {
+    console.log(
+      "fillVerbInflections fxn will do nothing, as '" +
+        lemmaObject.lemma +
+        "' lObj is marked as DEFECTIVE."
+    );
     return;
   }
 
   if (lemmaObject.complete) {
+    console.log(
+      "fillVerbInflections fxn will do nothing, as '" +
+        lemmaObject.lemma +
+        "' lObj is marked as COMPLETE."
+    );
     return;
   }
 
-  //To imperfective verbs, add  presentimpersonal, conditional, future
-  //To  perfective verbs,  add  futureimpersonal,  conditional
-  //In both, fill out the activeAdj and passiveAdj if they are there.
+  //To imperfective verbs, add   presentimpersonal,  conditional,  future
+  //To perfective verbs,   add   futureimpersonal,   conditional
+  //In both, fill out activeAdj and passiveAdj if they are there.
 
   let { inflections, aspect } = lemmaObject;
   let { past } = inflections.verbal;
   let { infinitive } = inflections;
 
-  //So in general, do nothing if the key is filled out already or holds value false.
+  //In general, do nothing if the key is filled out already or holds value false.
   //Only fill it out if the key is present and holds value true.
 
-  if (aspect === "imperfective" || lemmaObject.imperfectiveOnly) {
+  if (
+    aspect === "imperfective" ||
+    lemmaObject.imperfectiveOnly
+    //This is indeed nec to include the impOnly pf lObjs, as im and pf lobjs go through slightly different process here below,
+    //and for these purposes, we still need to think of the pf clones of impOnly lobjs as being im, not pf.
+  ) {
     if (isAvailable(inflections.verbal.future)) {
       inflections.verbal.future = {
         impersonal: {
@@ -297,6 +318,57 @@ exports.fillVerbInflections = (lemmaObject) => {
           "się",
       };
     }
+  }
+
+  if (typeof inflections.verbal.imperative === "string") {
+    let imperativeBase = inflections.verbal.imperative;
+
+    let presentFirstSingular =
+      aspect === "imperfective" || lemmaObject.imperfectiveOnly
+        ? inflections.verbal.present["1per"].singular
+            .allSingularGendersExcludingNeuter
+        : inflections.verbal.future["1per"].singular
+            .allSingularGendersExcludingNeuter;
+
+    let presentThirdSingular =
+      aspect === "imperfective" || lemmaObject.imperfectiveOnly
+        ? inflections.verbal.present["3per"].singular.allSingularGenders
+        : inflections.verbal.future["3per"].singular.allSingularGenders;
+
+    let presentThirdPlural =
+      aspect === "imperfective" || lemmaObject.imperfectiveOnly
+        ? inflections.verbal.present["3per"].plural.allPluralGenders
+        : inflections.verbal.future["3per"].plural.allPluralGenders;
+
+    let filledOutImperatives = {
+      "1per": {
+        singular: {
+          allSingularGendersExcludingNeuter:
+            "niech" + " " + presentFirstSingular,
+        },
+        plural: {
+          allPluralGenders: imperativeBase + "my",
+        },
+      },
+      "2per": {
+        singular: {
+          allSingularGendersExcludingNeuter: imperativeBase,
+        },
+        plural: {
+          allPluralGenders: imperativeBase + "cie",
+        },
+      },
+      "3per": {
+        singular: {
+          allSingularGenders: "niech" + " " + presentThirdSingular,
+        },
+        plural: {
+          allPluralGenders: "niech" + " " + presentThirdPlural,
+        },
+      },
+    };
+
+    inflections.verbal.imperative = filledOutImperatives;
   }
 
   if (isAvailable(inflections.verbal.conditional)) {

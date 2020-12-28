@@ -32,7 +32,7 @@ exports.findMatchingLemmaObjectThenWord = (
   let matches = [];
 
   if (structureChunk.specificIds && structureChunk.specificIds.length) {
-    console.log("Get matches by specific IDs.");
+    console.log("Get matches by specific IDs:", structureChunk.specificIds);
     matches = source.filter((lObj) =>
       structureChunk.specificIds.includes(lObj.id)
     );
@@ -40,8 +40,10 @@ exports.findMatchingLemmaObjectThenWord = (
     structureChunk.specificLemmas &&
     structureChunk.specificLemmas.length
   ) {
-    console.log("Get matches by specific Lemmas.");
-    console.log("structureChunk.specificLemmas", structureChunk.specificLemmas);
+    console.log(
+      "Get matches by specific Lemmas:",
+      structureChunk.specificLemmas
+    );
     matches = source.filter((lObj) =>
       structureChunk.specificLemmas.includes(lObj.lemma)
     );
@@ -63,6 +65,14 @@ exports.findMatchingLemmaObjectThenWord = (
   lfUtils.adjustImOnlyLemmaObjects(matches); //Must be adjusted again as may not have been in such pathway above.
 
   langUtils.preprocessLemmaObjects(matches, structureChunk);
+
+  // console.log(
+  //   "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>> NNNow let's look at those preprocessed lObjs."
+  // );
+  // console.log(matches);
+  // gpUtils.consoleLogObjectAtTwoLevels(
+  //   matches.map((lObj) => lObj.inflections.verbal)
+  // );
 
   //STEP THREE: Return result array immediately if uninflected or ad hoc.
 
