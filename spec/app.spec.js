@@ -1103,7 +1103,7 @@ describe("/api", () => {
   });
 
   describe("/palette - Stage 9: Allohomographs.", () => {
-    it("#pal09-01a Type 1 Allohomographs (SingleWordtype): 'nut' ENG to POL. Expect clarifiers.", () => {
+    it("#pal09-01a Type 1 Allohomographs of SingleWordtype: 'nut' ENG to POL. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1136,7 +1136,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal09-01b Type 1 Allohomographs (SingleWordtype): 'nut' POL to ENG. No clarifiers.", () => {
+    it("#pal09-01b Type 1 Allohomographs of SingleWordtype: 'nut' POL to ENG. No clarifiers.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1169,7 +1169,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal09-02a Type 1 Allohomographs (MultipleWordtype): 'bear (noun)' ENG to POL. Expect clarifiers.", () => {
+    it("#pal09-02a Type 1 Allohomographs of MultipleWordtype: 'bear (noun)' ENG to POL. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1202,7 +1202,7 @@ describe("/api", () => {
           );
         });
     });
-    it.only("#pal09-02b Type 1 Allohomographs (MultipleWordtype): 'bear (verb)' ENG to POL. Expect clarifiers.", () => {
+    it("#pal09-02b Type 1 Allohomographs of MultipleWordtype: 'bear (verb)' ENG to POL. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1225,6 +1225,72 @@ describe("/api", () => {
           let ref = [
             // { ENG: ["Bear (noun)."], POL: ["Niedźwiedź."] },
             { ENG: ["Bear (verb)."], POL: ["Znieść."] },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal09-02c Type 1 Allohomographs of MultipleWordtype: 'bear (noun)' POL to ENG. No clarifiers.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy45a",
+        })
+        .expect(200)
+        .then((res) => {
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+
+          expect(questionSentenceArr.length).to.equal(1);
+          expect(answerSentenceArr.length).to.equal(1);
+
+          let ref = [
+            { ENG: ["Bear."], POL: ["Niedźwiedź."] },
+            // { ENG: ["Bear."], POL: ["Znieść."] },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal09-02d Type 1 Allohomographs of MultipleWordtype: 'bear (verb)' POL to ENG. No clarifiers.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy45b",
+        })
+        .expect(200)
+        .then((res) => {
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+
+          expect(questionSentenceArr.length).to.equal(1);
+          expect(answerSentenceArr.length).to.equal(1);
+
+          let ref = [
+            // { ENG: ["Bear."], POL: ["Niedźwiedź."] },
+            { ENG: ["Bear."], POL: ["Znieść."] },
           ];
 
           checkTranslationsOfGivenRef(

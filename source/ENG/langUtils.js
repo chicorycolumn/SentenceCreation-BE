@@ -52,7 +52,10 @@ exports.addSpecificClarifiers = (
   currentLanguage,
   lemmaObject
 ) => {
-  if (structureChunk.wordtype === "verb") {
+  if (
+    structureChunk.wordtype === "verb" &&
+    structureChunk.form.includes("verbal")
+  ) {
     //
     //Type 4 Synhomographs: Add clarifier for ambiguous participles (Ad-PW).
     //Afaics, no such ambiguity in ENG verbs.
