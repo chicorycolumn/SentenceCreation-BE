@@ -3,6 +3,7 @@ const request = require("supertest");
 const chai = require("chai");
 const { expect } = require("chai");
 const gpUtils = require("../utils/generalPurposeUtils.js");
+const { it } = require("mocha");
 // chai.use(require("sams-chai-sorted"));
 // const { myErrMsgs } = require("../errors/errors");
 // const endpointsCopy = require("../endpoints.json");
@@ -835,7 +836,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal08-02a (Type 5 Synhomographs. Ad-PW: clarify Inflections (tenseDescription)) 'read': ENG to POL. Expect clarifiers.", () => {
+    it("#pal08-02a (Type 2 Synhomographs. Ad-PW: clarify Inflections (tenseDescription)) 'read': ENG to POL. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -883,7 +884,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal08-03a (Type 6 Synhomographs. Ad-PW: clarify Inflections) 'write': ENG to POL. Expect clarifiers.", () => {
+    it("#pal08-03a (Type 3 Synhomographs. Ad-PW: clarify Inflections) 'write': ENG to POL. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -931,7 +932,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal08-03c (Type 6 Synhomographs. Ad-PW: clarify Inflections) 'write': ENG to POL. Expect clarifiers.", () => {
+    it("#pal08-03c (Type 3 Synhomographs. Ad-PW: clarify Inflections) 'write': ENG to POL. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -979,7 +980,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal08-03e (Type 6 Synhomographs. Ad-PW: clarify Inflections) 'write': ENG to POL. Expect clarifiers.", () => {
+    it("#pal08-03e (Type 3 Synhomographs. Ad-PW: clarify Inflections) 'write': ENG to POL. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1032,7 +1033,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal08-03g (Type 6 Synhomographs. Ad-PW: clarify Inflections) 'be': ENG to POL. Expect clarifiers.", () => {
+    it("#pal08-03g (Type 3 Synhomographs. Ad-PW: clarify Inflections) 'be': ENG to POL. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1083,28 +1084,7 @@ describe("/api", () => {
   });
 
   describe("/palette - Stage 7: 'Be'/'Być'.", () => {
-    xit("#pal07-01a GET 200 YES: Conjugate ENG be correctly.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          // answerLanguage,
-          sentenceFormulaSymbol: "dummy33",
-        })
-        .expect(200)
-        .then((res) => {
-          console.log(res.body);
-          expect(["Am.", "Are.", "Is.", "Was.", "Were."]).to.include(
-            res.body.questionSentenceArr[0]
-          );
-        });
-    });
-    xit("#pal07-01b GET 200 YES: Conjugate POL be correctly.", () => {
+    it("#pal07-01a GET 200 YES: Conjugate POL be correctly without translations.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "POL";
 
@@ -1143,9 +1123,290 @@ describe("/api", () => {
           ]).to.include(res.body.questionSentenceArr[0]);
         });
     });
-    xit("#pal07-01c GET 200 YES: Conjugate POL be correctly even though past pf was asked for, it should nevertheless be the case that past im of być is returned, as this verb lobj is marked as imperfectiveOnly.", () => {
+    it("#pal07-01b GET 200 YES: RSWAT POL to ENG 'be' - I.", () => {
       const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33b I am",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-01c GET 200 YES: RSWAT POL to ENG 'be' - You (with clarifiers).", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33c you are",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns_withClarifiers_QlangPOL",
+            []
+          );
+        });
+    });
+    it("#pal07-01d GET 200 YES: RSWAT POL to ENG 'be' - She.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33d she is",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-01e GET 200 YES: RSWAT POL to ENG 'be' - We.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33e we are",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-01f GET 200 YES: RSWAT POL to ENG 'be' - They.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33f they are",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-02a GET 200 YES: Conjugate ENG be correctly without translations.", () => {
+      const questionLanguage = "ENG";
       const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          // answerLanguage,
+          sentenceFormulaSymbol: "dummy33",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          expect(["Am.", "Are.", "Is.", "Was.", "Were."]).to.include(
+            res.body.questionSentenceArr[0]
+          );
+        });
+    });
+    it("#pal07-02b GET 200 YES: RSWAT ENG to POL 'be' - I.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33b I am",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-02c GET 200 YES: RSWAT ENG to POL 'be' - You (with clarifiers).", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33c you are",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns_withClarifiers_QlangENG",
+            []
+          );
+        });
+    });
+    it("#pal07-02d GET 200 YES: RSWAT ENG to POL 'be' - She.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33d she is",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-02e GET 200 YES: RSWAT ENG to POL 'be' - We.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33e we are",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-02f GET 200 YES: RSWAT ENG to POL 'be' - They.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33f they are",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-03a GET 200 YES: Conjugate POL be even though past pf was asked for, (should be trated as im and pf both, as has imperfectiveOnly key).", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
 
       return request(app)
         .get("/api/palette")
@@ -1176,22 +1437,7 @@ describe("/api", () => {
           ]).to.include(res.body.questionSentenceArr[0]);
         });
     });
-    xit("#pal07-01d GET 200 YES: RSWAT POL to ENG 'be' correctly..", () => {
-      //Clone Bee issue: The issue here is that normally, ENG past simple gets translated to POL past pf.
-      //But the verb być doesn't have a pf form, only im.
-      //So in this case, ENG past simple should be translated to POL past >>im<< when dealing with
-      //być, and mieć, and tbh, with any verbs that simply don't have a pf form.
-      //So I suppose, at some point in processing, we should:
-      //search for all connected verb lobjs, searching by lObj.id, pol-ver-001-im-01 look for pol-ver-001-pf-*
-      //And if this verb is im, and has no pf forms,
-      //then allow for ENG past simple to be translated by POL past im
-      //Or... maybe actually just if it's deliberately marked on this lObj that it is imperfectiveOnly?
-
-      //I have resolved the above by making a duplicate lobj for 'imperfectiveOnly's and making it perfective.
-
-      //The issue I am on now, is that, here ENG to POL, the english be lobj is not being updated
-      // with the person and number choices.
-
+    it("#pal07-03b GET 200 YES: RSWAT POL to ENG 'be' correctly (without pronouns).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1213,266 +1459,6 @@ describe("/api", () => {
             questionLanguage,
             answerLanguage,
             "be",
-            []
-          );
-        });
-    });
-    it("#pal07-02b GET 200 YES: RSWAT POL to ENG 'be' - I.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy33b I am",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be_withPronouns",
-            []
-          );
-        });
-    });
-    it("#pal07-02c GET 200 YES: RSWAT POL to ENG 'be' - You (with clarifiers).", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy33c you are",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be_withPronouns_withClarifiers_QlangPOL",
-            []
-          );
-        });
-    });
-    it("#pal07-02d GET 200 YES: RSWAT POL to ENG 'be' - She.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy33d she is",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be_withPronouns",
-            []
-          );
-        });
-    });
-    it("#pal07-02e GET 200 YES: RSWAT POL to ENG 'be' - We.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy33e we are",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be_withPronouns",
-            []
-          );
-        });
-    });
-    it("#pal07-02f GET 200 YES: RSWAT POL to ENG 'be' - They.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy33f they are",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be_withPronouns",
-            []
-          );
-        });
-    });
-    it("#pal07-03b GET 200 YES: RSWAT ENG to POL 'be' - I.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy33b I am",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be_withPronouns",
-            []
-          );
-        });
-    });
-    it("#pal07-03c GET 200 YES: RSWAT ENG to POL 'be' - You (with clarifiers).", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy33c you are",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be_withPronouns_withClarifiers_QlangENG",
-            []
-          );
-        });
-    });
-    it("#pal07-03d GET 200 YES: RSWAT ENG to POL 'be' - She.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy33d she is",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be_withPronouns",
-            []
-          );
-        });
-    });
-    it("#pal07-03e GET 200 YES: RSWAT ENG to POL 'be' - We.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy33e we are",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be_withPronouns",
-            []
-          );
-        });
-    });
-    it("#pal07-03f GET 200 YES: RSWAT ENG to POL 'be' - They.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy33f they are",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be_withPronouns",
             []
           );
         });

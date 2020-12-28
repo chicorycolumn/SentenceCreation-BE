@@ -59,7 +59,7 @@ exports.addSpecificClarifiers = (
     //
 
     //
-    //Type 6 Synhomographs: Add clarifier for 2nd person singular vs plural. (Wasn't caught, as went through Ad-PW).
+    //Type 3 Synhomographs: Add clarifier for 2nd person singular vs plural. (Wasn't caught, as went through Ad-PW).
     //
     if (!structureChunk.person || !structureChunk.number) {
       throw "ENG:addSpecificClarifiers expected this verb structureChunk to have a Person and Number key.";
@@ -76,7 +76,7 @@ exports.addSpecificClarifiers = (
     }
 
     //
-    //Type 5 Synhomographs: Add clarifier for v1-v2 synhomography verbs.
+    //Type 2 Synhomographs: Add clarifier for v1-v2 synhomography verbs.
     //
     if (structureChunk.tenseDescription) {
       if (structureChunk.tenseDescription.length > 1) {

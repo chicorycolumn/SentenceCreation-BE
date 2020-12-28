@@ -5,11 +5,11 @@ const refObj = require("../../utils/referenceObjects.js");
 
 exports.addSpecificClarifiers = () => {
   //
-  //Type 3 Synhomographs: Add clarifier for ambiguous verb participles (Un-PW).
+  //Type 6 Synhomographs: Add clarifier for ambiguous verb participles (Un-PW).
   //Afaics, no such ambiguity in POL verbs.
   //
   //
-  //Type 2 Synhomographs: Add clarifier for ambiguous hybridSelector results (If-PW).
+  //Type 5 Synhomographs: Add clarifier for ambiguous hybridSelector results (If-PW).
   //Afaics, no such ambiguity in POL verbs,
   //ie there are no tense+aspect combinations that homographs of others.
   //
