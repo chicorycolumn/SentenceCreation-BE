@@ -469,7 +469,36 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe.only("/palette - Stage 7: 'Be'/'Być'.", () => {
+  describe("/palette - Stage 7: 'Be'/'Być'.", () => {
+    it("#pal07-##a GET 200 YES: We don't want compound future when requesting 'be' POL future pf.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33a",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be",
+            []
+          );
+        });
+    });
+    ////
+    ////
+    ////
     it("#pal07-03a GET 200 YES: RSWAT POL to ENG 'be' correctly (without pronouns).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
@@ -496,7 +525,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal07-03b GET 200 YES: Conjugate POL 'be' past pf, (should be treated as im and pf both, as has imperfectiveOnly key).", () => {
+    it("#pal07-03b GET 200 YES: Conjugate POL 'be' past pf, (should be treated as im and pf both).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -529,7 +558,7 @@ describe("/api", () => {
           ]).to.include(res.body.questionSentenceArr[0]);
         });
     });
-    it("#pal07-03c GET 200 YES: When you request ENG be future, it should only give you fut perf and fut simp but not fut cont.", () => {
+    it("#pal07-03c GET 200 YES: Conjugate ENG 'be' future, it should NOT give fut cont.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -550,7 +579,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal07-03d GET 200 YES: RSWAT POL to ENG 'be' future pf, (should be treated as im and pf both, as has imperfectiveOnly key).", () => {
+    it("#pal07-03d GET 200 YES: RSWAT POL to ENG 'be' future pf, (should be treated as im and pf both) (Clone Bee VNV issue: should NOT receive 'b€d€ by¢', but instead just 'b€d€'.).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -616,7 +645,7 @@ describe("/api", () => {
           ]).to.include(res.body.questionSentenceArr[0]);
         });
     });
-    it("#pal07-01b GET 200 YES: RSWAT POL to ENG 'be' - pres simp, past simp - I.", () => {
+    it("#pal07-01b GET 200 YES: RSWAT POL to ENG 'be' - past im/pf (Type 2 Allohomograph), pres pf - I.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -642,7 +671,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal07-01c GET 200 YES: RSWAT POL to ENG 'be' - pres simp, past simp - You (with clarifiers).", () => {
+    it("#pal07-01c GET 200 YES: RSWAT POL to ENG 'be' - past im/pf (Type 2 Allohomograph), pres pf - You (with clarifiers).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -668,7 +697,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal07-01d GET 200 YES: RSWAT POL to ENG 'be' - pres simp, past simp - She.", () => {
+    it("#pal07-01d GET 200 YES: RSWAT POL to ENG 'be' - past im/pf (Type 2 Allohomograph), pres pf - She.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -694,7 +723,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal07-01e GET 200 YES: RSWAT POL to ENG 'be' - pres simp, past simp - We.", () => {
+    it("#pal07-01e GET 200 YES: RSWAT POL to ENG 'be' - past im/pf (Type 2 Allohomograph), pres pf - We.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -720,7 +749,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal07-01f GET 200 YES: RSWAT POL to ENG 'be' - pres simp, past simp - They.", () => {
+    it("#pal07-01f GET 200 YES: RSWAT POL to ENG 'be' - past im/pf (Type 2 Allohomograph), pres pf - They.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1074,7 +1103,7 @@ describe("/api", () => {
   });
 
   describe("/palette - Stage 9: Allohomographs.", () => {
-    it("#pal09-01a Type 1 Allohomographs: 'nut' ENG to POL. Expect clarifiers.", () => {
+    it("#pal09-01a Type 1 Allohomographs (SingleWordtype): 'nut' ENG to POL. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1107,7 +1136,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal09-01b Type 1 Allohomographs: 'nut' POL to ENG. No clarifiers.", () => {
+    it("#pal09-01b Type 1 Allohomographs (SingleWordtype): 'nut' POL to ENG. No clarifiers.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1130,6 +1159,72 @@ describe("/api", () => {
           let ref = [
             { ENG: ["A small nut."], POL: ["Mały orzech."] },
             { ENG: ["A small nut."], POL: ["Mała nakrętka."] },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal09-02a Type 1 Allohomographs (MultipleWordtype): 'bear (noun)' ENG to POL. Expect clarifiers.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy45a",
+        })
+        .expect(200)
+        .then((res) => {
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+
+          expect(questionSentenceArr.length).to.equal(1);
+          expect(answerSentenceArr.length).to.equal(1);
+
+          let ref = [
+            { ENG: ["Bear (noun)."], POL: ["Niedźwiedź."] },
+            // { ENG: ["Bear (verb)."], POL: ["Znieść."] },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it.only("#pal09-02b Type 1 Allohomographs (MultipleWordtype): 'bear (verb)' ENG to POL. Expect clarifiers.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy45b",
+        })
+        .expect(200)
+        .then((res) => {
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+
+          expect(questionSentenceArr.length).to.equal(1);
+          expect(answerSentenceArr.length).to.equal(1);
+
+          let ref = [
+            // { ENG: ["Bear (noun)."], POL: ["Niedźwiedź."] },
+            { ENG: ["Bear (verb)."], POL: ["Znieść."] },
           ];
 
           checkTranslationsOfGivenRef(

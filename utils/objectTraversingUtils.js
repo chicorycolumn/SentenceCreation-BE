@@ -32,6 +32,7 @@ exports.findMatchingLemmaObjectThenWord = (
   let matches = [];
 
   if (structureChunk.specificIds && structureChunk.specificIds.length) {
+    console.log("Get matches by specific IDs.");
     matches = source.filter((lObj) =>
       structureChunk.specificIds.includes(lObj.id)
     );
@@ -39,10 +40,13 @@ exports.findMatchingLemmaObjectThenWord = (
     structureChunk.specificLemmas &&
     structureChunk.specificLemmas.length
   ) {
+    console.log("Get matches by specific Lemmas.");
+    console.log("structureChunk.specificLemmas", structureChunk.specificLemmas);
     matches = source.filter((lObj) =>
       structureChunk.specificLemmas.includes(lObj.lemma)
     );
   } else {
+    console.log("Get matches by Tags and Selectors.");
     matches = lfUtils.filterByAndTagsAndOrTags(source, structureChunk);
 
     lfUtils.adjustImOnlyLemmaObjects(matches); //Must be adjusted before aspect (a selector) filter is applied.
@@ -53,6 +57,8 @@ exports.findMatchingLemmaObjectThenWord = (
       matches
     );
   }
+
+  console.log("eee", matches);
 
   lfUtils.adjustImOnlyLemmaObjects(matches); //Must be adjusted again as may not have been in such pathway above.
 
@@ -302,6 +308,8 @@ exports.findMatchingLemmaObjectThenWord = (
   structureChunks.forEach((structureChunk) => {
     let matchesCopy = matches.slice(0);
 
+    console.log("fff", matchesCopy);
+
     matchesCopy = lfUtils.filterBySelectors(
       currentLanguage,
       structureChunk,
@@ -313,6 +321,8 @@ exports.findMatchingLemmaObjectThenWord = (
       structureChunk,
       currentLanguage
     );
+
+    console.log("ggg", matchesCopy);
 
     if (!matchesCopy.length) {
       // errorInSentenceCreation.errorMessage =
@@ -678,16 +688,16 @@ exports.addClarifiers = (
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
 
   arrayOfOutputUnits.forEach((outputUnit) => {
+    if (outputUnit.structureChunk.wordtype === "fixed") {
+      return;
+    }
+
     let {
       selectedLemmaObject,
       drillPath,
       structureChunk,
       selectedWord,
     } = outputUnit;
-
-    if (outputUnit.structureChunk.wordtype === "fixed") {
-      return;
-    }
 
     if (!structureChunk.clarifiers) {
       structureChunk.clarifiers = [];
@@ -716,13 +726,43 @@ exports.addClarifiers = (
     //   }
     // }
 
-    //STEP ONE: Types 1 Allohomographs (clarifiers can be found in lobjs)
-    if (selectedLemmaObject.allohomographInfo) {
-      structureChunk.allohomographInfo = selectedLemmaObject.allohomographInfo;
+    //STEP ONE: Type 1 Allohomographs (have clarifiers)
+    //
+    //  Textmoji Clarifiers
+    //  Wordtype Clarifiers
+    //
+    //are both already on lobjs.
+
+    let { allohomInfo } = selectedLemmaObject;
+
+    if (allohomInfo && allohomInfo.singleWordtype) {
+      if (!allohomInfo.emoji || !allohomInfo.text) {
+        throw (
+          "Lemma object '" +
+          selectedLemmaObject.id +
+          "' was marked as singleWordtype but not Textmoji Clarifiers were present!"
+        );
+      }
+
+      structureChunk.clarifiers.push(
+        allohomInfo.emoji + " " + allohomInfo.text
+      );
+    }
+
+    if (allohomInfo && allohomInfo.multipleWordtype) {
+      if (structureChunk.pleaseShowMultipleWordtypeAllohomClarifiers) {
+        structureChunk.clarifiers.push(
+          gpUtils.getWordtypeFromLemmaObject(selectedLemmaObject)
+        );
+      }
     }
 
     //STEP TWO: Types 2-6 Synhomographs (language-specific)
+    //
+    //  Feature Clarifiers
+    //
     //eg ENG has some verbs with v1-v2 synhomography, and 2per ambiguous re number.
+
     langUtils.addSpecificClarifiers(
       structureChunk,
       currentLanguage,
@@ -730,7 +770,10 @@ exports.addClarifiers = (
     );
 
     //STEP THREE: Type 1 Synhomographs (find synhoms in lobj programmatically)
-    //Find synhoms, add clarifiers if such clarifiers are allowed.
+    //
+    //  Feature Clarifiers
+    //
+    //Find synhoms, add Feature Clarifiers if such clarifiers are allowed.
     let allowableClarifiers =
       refObj.lemmaObjectFeatures[answerLanguage]
         .allowableTransfersFromQuestionStructure[structureChunk.wordtype];
@@ -783,15 +826,7 @@ exports.addClarifiers = (
 
 exports.attachClarifiers = (arrayOfOutputUnits) => {
   arrayOfOutputUnits.forEach((outputUnit) => {
-    let { structureChunk } = outputUnit;
-
-    if (structureChunk.allohomographInfo) {
-      structureChunk.clarifiers.push(
-        structureChunk.allohomographInfo.emoji +
-          " " +
-          structureChunk.allohomographInfo.text
-      );
-    }
+    let { structureChunk, selectedLemmaObject } = outputUnit;
 
     if (structureChunk.clarifiers && structureChunk.clarifiers.length) {
       outputUnit.selectedWord += ` (${structureChunk.clarifiers.join(", ")})`;

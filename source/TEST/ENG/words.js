@@ -202,8 +202,8 @@ let nounSet = [
   {
     //links
     translations: { ENG: ["nut"], POL: ["orzech"] },
-    tags: ["allohom testing", "edible2"],
-    allohomographInfo: { singleWordtype: true, text: "food", emoji: "🥜" },
+    tags: ["allohomTesting", "edible2"],
+    allohomInfo: { singleWordtype: true, text: "food", emoji: "🥜" },
 
     //selectors
     lemma: "nut",
@@ -226,8 +226,8 @@ let nounSet = [
   {
     //links
     translations: { ENG: ["nut"], POL: ["nakrętka"] },
-    tags: ["allohom testing", "toolbox"],
-    allohomographInfo: { singleWordtype: true, text: "metal", emoji: "🔩" },
+    tags: ["allohomTesting", "toolbox"],
+    allohomInfo: { singleWordtype: true, text: "metal", emoji: "🔩" },
 
     //selectors
     lemma: "nut",
@@ -250,8 +250,8 @@ let nounSet = [
   {
     //links
     translations: { ENG: ["bear"], POL: ["niedźwiedź"] },
-    tags: ["allohom testing", "animal"],
-    allohomographInfo: { multipleWordtype: true, text: "animal", emoji: "🐻" },
+    tags: ["allohomTesting2", "animal"],
+    allohomInfo: { multipleWordtype: true, text: "animal", emoji: "🐻" },
 
     //selectors
     lemma: "bear",
@@ -348,8 +348,8 @@ let verbSet = [
   {
     //links
     translations: { ENG: ["bear"], POL: ["znieść"] },
-    tags: ["allohom testing", "emotions"],
-    allohomographInfo: {
+    tags: ["allohomTesting2", "emotions"],
+    allohomInfo: {
       multipleWordtype: true,
       text: "emotional verb",
       emoji: "😑",

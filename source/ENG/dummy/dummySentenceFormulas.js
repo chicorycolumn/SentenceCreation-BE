@@ -428,7 +428,7 @@ exports.dummySentenceFormulasBank = {
         chunkId: "nou-1",
         wordtype: "noun",
         // specificLemmas: ["nut"],
-        andTags: ["allohom testing"],
+        andTags: ["allohomTesting"],
         number: ["singular"],
       },
     ],
@@ -450,5 +450,35 @@ exports.dummySentenceFormulasBank = {
       },
     ],
     primaryOrders: [["fix-1", "ver-1"]],
+  },
+  dummy45a: {
+    sentenceFormulaSymbol: "dummy45a",
+    sentenceFormulaId: "ENG-dummy45a",
+    translations: { POL: ["POL-dummy45a"] },
+    structure: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        andTags: ["allohomTesting2"],
+        number: ["singular"],
+        pleaseShowMultipleWordtypeAllohomClarifiers: true, //Because this is a sentence of only one word, so could be ambiguous.
+      },
+    ],
+    primaryOrders: [],
+  },
+  dummy45b: {
+    sentenceFormulaSymbol: "dummy45b",
+    sentenceFormulaId: "ENG-dummy45b",
+    translations: { POL: ["POL-dummy45b"] },
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        andTags: ["allohomTesting2"],
+        form: ["infinitive"],
+        pleaseShowMultipleWordtypeAllohomClarifiers: true, //Because this is a sentence of only one word, so could be ambiguous.
+      },
+    ],
+    primaryOrders: [],
   },
 };

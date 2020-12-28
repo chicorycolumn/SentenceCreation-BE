@@ -34,7 +34,7 @@ let nounSet = [
   {
     //links
     translations: { ENG: ["bear"] },
-    tags: ["allohom testing", "animal"],
+    tags: ["allohomTesting2", "animal"],
     //selectors
     lemma: "niedźwiedź",
     id: "pol-nou-014",
@@ -352,7 +352,7 @@ let nounSet = [
   {
     //links
     translations: { ENG: ["nut"] },
-    tags: ["allohom testing", "edible2"],
+    tags: ["allohomTesting", "edible2"],
     //selectors
     lemma: "orzech",
     id: "pol-nou-012",
@@ -382,7 +382,7 @@ let nounSet = [
   {
     //links
     translations: { ENG: ["nut"] },
-    tags: ["allohom testing", "toolbox"],
+    tags: ["allohomTesting", "toolbox"],
     //selectors
     lemma: "nakrętka",
     id: "pol-nou-013",
@@ -1741,7 +1741,7 @@ let verbSet = [
   {
     //links
     translations: { ENG: ["bear"] },
-    tags: ["allohom testing", "emotions"],
+    tags: ["allohomTesting2", "emotions"],
     //selectors
     lemma: "znieść",
     id: "pol-ver-005-pf-01",

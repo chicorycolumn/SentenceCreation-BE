@@ -1043,7 +1043,7 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        andTags: ["allohom testing"],
+        andTags: ["allohomTesting"],
         number: ["singular"],
       },
     ],
@@ -1060,6 +1060,34 @@ exports.dummySentenceFormulasBank = {
         andTags: ["identity"],
         person: ["1per"],
         tenseDescription: ["future im"],
+      },
+    ],
+    primaryOrders: [],
+  },
+  dummy45a: {
+    sentenceFormulaSymbol: "dummy45a",
+    sentenceFormulaId: "POL-dummy45a",
+    translations: { ENG: ["ENG-dummy45a"] },
+    structure: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        andTags: ["allohomTesting2"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [],
+  },
+  dummy45b: {
+    sentenceFormulaSymbol: "dummy45b",
+    sentenceFormulaId: "POL-dummy45b",
+    translations: { ENG: ["ENG-dummy45b"] },
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        andTags: ["allohomTesting2"],
+        form: ["infinitive"],
       },
     ],
     primaryOrders: [],

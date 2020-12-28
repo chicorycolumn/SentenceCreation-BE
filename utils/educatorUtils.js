@@ -127,9 +127,9 @@ exports.findHomographs = (testing, currentLanguage, homographType, ignore) => {
           }
 
           if (
-            lemmaObject.allohomographInfo &&
-            lemmaObject.allohomographInfo.emoji &&
-            lemmaObject.allohomographInfo.text
+            lemmaObject.allohomInfo &&
+            lemmaObject.allohomInfo.emoji &&
+            lemmaObject.allohomInfo.text
           ) {
             return true;
           }

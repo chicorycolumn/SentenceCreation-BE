@@ -1,3 +1,5 @@
+//Copied over on 27/12/2020
+
 let nounSet = [
   {
     //links
@@ -200,8 +202,8 @@ let nounSet = [
   {
     //links
     translations: { ENG: ["nut"], POL: ["orzech"] },
-    tags: ["allohom testing", "edible2"],
-    allohomographInfo: { singleWordtype: true, text: "food", emoji: "🥜" },
+    tags: ["allohomTesting", "edible2"],
+    allohomInfo: { singleWordtype: true, text: "food", emoji: "🥜" },
 
     //selectors
     lemma: "nut",
@@ -224,8 +226,8 @@ let nounSet = [
   {
     //links
     translations: { ENG: ["nut"], POL: ["nakrętka"] },
-    tags: ["allohom testing", "toolbox"],
-    allohomographInfo: { singleWordtype: true, text: "metal", emoji: "🔩" },
+    tags: ["allohomTesting", "toolbox"],
+    allohomInfo: { singleWordtype: true, text: "metal", emoji: "🔩" },
 
     //selectors
     lemma: "nut",
@@ -242,6 +244,30 @@ let nounSet = [
       plural: {
         nom: "nuts",
         gen: "nuts'",
+      },
+    },
+  },
+  {
+    //links
+    translations: { ENG: ["bear"], POL: ["niedźwiedź"] },
+    tags: ["allohomTesting2", "animal"],
+    allohomInfo: { multipleWordtype: true, text: "animal", emoji: "🐻" },
+
+    //selectors
+    lemma: "bear",
+    id: "eng-nou-011",
+    gender: "n",
+    //notes
+    deficient: false,
+    //inflections
+    inflections: {
+      singular: {
+        nom: "bear",
+        gen: "bear's",
+      },
+      plural: {
+        nom: "bears",
+        gen: "bears'",
       },
     },
   },
@@ -267,6 +293,40 @@ let adjectiveSet = [
   },
   {
     //links
+    translations: { ENG: ["fast"], POL: ["mocno"] },
+    tags: ["fitting"],
+    //selectors
+    lemma: "fast",
+    id: "eng-adj-005",
+    //notes
+    deficient: false,
+    //inflections
+    inflections: {
+      simple: "fast",
+      comparative: "fast",
+      superlative: "fastest",
+      adverb: "fast",
+    },
+  },
+  {
+    //links
+    translations: { ENG: ["fast"], POL: ["szybki"] },
+    tags: ["speed"],
+    //selectors
+    lemma: "fast",
+    id: "eng-adj-004",
+    //notes
+    deficient: false,
+    //inflections
+    inflections: {
+      simple: "fast",
+      comparative: "faster",
+      superlative: "fastest",
+      adverb: "quickly",
+    },
+  },
+  {
+    //links
     translations: { ENG: ["small"], POL: ["mały"] },
     tags: ["size"],
     //selectors
@@ -285,6 +345,30 @@ let adjectiveSet = [
 ];
 
 let verbSet = [
+  {
+    //links
+    translations: { ENG: ["bear"], POL: ["znieść"] },
+    tags: ["allohomTesting2", "emotions"],
+    allohomInfo: {
+      multipleWordtype: true,
+      text: "emotional verb",
+      emoji: "😑",
+    },
+    //selectors
+    lemma: "bear",
+    id: "eng-ver-006",
+    //notes
+    defective: false,
+    //inflections
+    inflections: {
+      infinitive: "bear",
+      verbal: {},
+      v2: "beared",
+      v3: "borne",
+      thirdPS: "bears",
+      gerund: "bearing",
+    },
+  },
   {
     //links
     translations: { ENG: ["read"], POL: ["czytać", "przeczytać"] },
