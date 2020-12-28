@@ -1399,7 +1399,7 @@ describe("/api", () => {
           );
         });
     });
-    it.only("#pal07-03d GET 200 YES: RSWAT ENG to POL 'be' - She.", () => {
+    it("#pal07-03d GET 200 YES: RSWAT ENG to POL 'be' - She.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 

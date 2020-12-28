@@ -591,7 +591,10 @@ exports.conformAnswerStructureToQuestionStructure = (
       "conformAtoQ fxn: questionStructureChunk",
       questionStructureChunk
     );
-    console.log("conformAtoQ fxn: answerStructureChunk", answerStructureChunk);
+    console.log(
+      "xxx answerStructureChunk at conformAtoQ after STEP ZERO",
+      answerStructureChunk
+    );
     console.log("***********");
 
     // console.log(
@@ -601,13 +604,6 @@ exports.conformAnswerStructureToQuestionStructure = (
 
     let lemmasToSearch =
       questionSelectedLemmaObject.translations[answerLanguage];
-
-    // console.log("qqq matchingAnswerLemmaObjects", matchingAnswerLemmaObjects);
-
-    // console.log(
-    //   "Going to search for all ENG lobjs with these lemmas:",
-    //   lemmasToSearch
-    // );
 
     let source = words[gpUtils.giveSetKey(answerStructureChunk.wordtype)];
     lfUtils.adjustImOnlyLemmaObjects(source);
@@ -648,18 +644,27 @@ exports.conformAnswerStructureToQuestionStructure = (
         return;
       }
 
-      if (inflectorKey === "number") {
-        if (
-          questionSelectedLemmaObject.tantumPlurale ||
-          matchingAnswerLemmaObjects.every(
-            (answerLemmaObject) => answerLemmaObject.tantumPlurale
-          )
-        ) {
-          console.log("TANTUM DETECTED");
-          // return;
-          //Alpha what happens if we do hit return here?
-        }
-      } else if (inflectorKey === "tenseDescription") {
+      //Don't transfer number, if Q if tantum plurale.
+      //Eg if Q is "skrzypce" we'd want A to include both "violin" and "violins".
+      if (
+        inflectorKey === "number" &&
+        questionSelectedLemmaObject.tantumPlurale
+      ) {
+        return;
+      }
+
+      //Don't transfer number, if all A lObjs are tantum plurale.
+      //Eg if Q is "violin" we don't want to specify that A must be singular, as "skrzypce" can't be singular.
+      if (
+        inflectorKey === "number" &&
+        matchingAnswerLemmaObjects.every(
+          (answerLemmaObject) => answerLemmaObject.tantumPlurale
+        )
+      ) {
+        return;
+      }
+
+      if (inflectorKey === "tenseDescription") {
         answerStructureChunk["tenseDescription"] = [];
 
         let tenseDescriptions = questionStructureChunk["tenseDescription"];
@@ -687,15 +692,17 @@ exports.conformAnswerStructureToQuestionStructure = (
             ...translatedTenseDescArr,
           ];
         });
-      } else {
-        answerStructureChunk[inflectorKey] = gpUtils.copyWithoutReference(
-          questionStructureChunk[inflectorKey]
-        );
+
+        return;
       }
+
+      answerStructureChunk[inflectorKey] = gpUtils.copyWithoutReference(
+        questionStructureChunk[inflectorKey]
+      );
     });
 
     console.log(
-      "xxx PARTIALLY UPDATED answerStructureChunk",
+      "yyy answerStructureChunk at conformAtoQ after STEP ONE",
       answerStructureChunk
     );
 
@@ -731,7 +738,10 @@ exports.conformAnswerStructureToQuestionStructure = (
       }
     });
 
-    console.log("yyy UPDATED answerStructureChunk", answerStructureChunk);
+    console.log(
+      "zzz answerStructureChunk at conformAtoQ finally, after STEP TWO",
+      answerStructureChunk
+    );
   });
 };
 
