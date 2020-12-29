@@ -101,6 +101,7 @@ const generalTranslatedSentencesRef = {
           "I am going to have.",
           "I will have had.",
           "I will be having.",
+          "I am going to be having.",
         ],
       },
       {
@@ -110,6 +111,7 @@ const generalTranslatedSentencesRef = {
           "I am going to have.",
           "I will have had.",
           "I will be having.",
+          "I am going to be having.",
         ],
       },
 
@@ -702,910 +704,6 @@ describe("/api", () => {
   );
   // after(() => {});
   // beforeEach(() => {});
-
-  describe.only("/palette - Stage 7b: 'Have'/'Mieć'.", () => {
-    it("#pal07-01a GET 200 YES: Conjugate POL have correctly without translations.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          // answerLanguage,
-          sentenceFormulaSymbol: "dummy53",
-        })
-        .expect(200)
-        .then((res) => {
-          console.log(res.body);
-          expect([
-            "Mam.",
-            "Masz.",
-            "Ma.",
-            "Mamy.",
-            "Macie.",
-            "Mają.",
-            "Miałem.",
-            "Miałam.",
-            "Miałeś.",
-            "Miałaś.",
-            "Miał.",
-            "Miała.",
-            "Miało.",
-            "Miałyśmy.",
-            "Mieliśmy.",
-            "Miałyście.",
-            "Mieliście.",
-            "Miały.",
-            "Mieli.",
-          ]).to.include(res.body.questionSentenceArr[0]);
-        });
-    });
-    it("#pal07-01b GET 200 YES: RSWAT POL to ENG 'have' - past im/pf (Type 2 Allohomograph), pres pf - I.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy53b I am",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "have_withPronouns",
-            []
-          );
-        });
-    });
-    it("#pal07-01c GET 200 YES: RSWAT POL to ENG 'have' - past im/pf (Type 2 Allohomograph), pres pf - You (with clarifiers).", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy53c you are",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "have_withPronouns_withClarifiers_QlangPOL",
-            []
-          );
-        });
-    });
-    it("#pal07-01d GET 200 YES: RSWAT POL to ENG 'have' - past im/pf (Type 2 Allohomograph), pres pf - She.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy53d she is",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "have_withPronouns",
-            []
-          );
-        });
-    });
-    it("#pal07-01e GET 200 YES: RSWAT POL to ENG 'have' - past im/pf (Type 2 Allohomograph), pres pf - We.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy53e we are",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "have_withPronouns",
-            []
-          );
-        });
-    });
-    it("#pal07-01f GET 200 YES: RSWAT POL to ENG 'have' - past im/pf (Type 2 Allohomograph), pres pf - They.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy53f they are",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "have_withPronouns",
-            []
-          );
-        });
-    });
-    it("#pal07-02a GET 200 YES: Conjugate ENG have correctly without translations.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          // answerLanguage,
-          sentenceFormulaSymbol: "dummy53",
-        })
-        .expect(200)
-        .then((res) => {
-          console.log(res.body);
-          expect(["Have.", "Has.", "Had."]).to.include(
-            res.body.questionSentenceArr[0]
-          );
-        });
-    });
-    it("#pal07-02b GET 200 YES: RSWAT ENG to POL 'have' - pres simp, past simp - I.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy53b I am",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "have_withPronouns",
-            []
-          );
-        });
-    });
-    it("#pal07-02c GET 200 YES: RSWAT ENG to POL 'have' - pres simp, past simp - You (with clarifiers).", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy53c you are",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "have_withPronouns_withClarifiers_QlangENG",
-            []
-          );
-        });
-    });
-    it("#pal07-02d GET 200 YES: RSWAT ENG to POL 'have' - pres simp, past simp - She.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy53d she is",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "have_withPronouns",
-            []
-          );
-        });
-    });
-    it("#pal07-02e GET 200 YES: RSWAT ENG to POL 'have' - pres simp, past simp - We.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy53e we are",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "have_withPronouns",
-            []
-          );
-        });
-    });
-    it("#pal07-02f GET 200 YES: RSWAT ENG to POL 'have' - pres simp, past simp - They.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy53f they are",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "have_withPronouns",
-            []
-          );
-        });
-    });
-    it("#pal07-03a GET 200 YES: RSWAT POL to ENG 'have' correctly (without pronouns).", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy53a",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "have",
-            []
-          );
-        });
-    });
-    it("#pal07-03b GET 200 YES: Conjugate POL 'have' past pf, (should be treated as im and pf both).", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          // answerLanguage,
-          sentenceFormulaSymbol: "dummy54",
-        })
-        .expect(200)
-        .then((res) => {
-          console.log(res.body);
-          expect([
-            "Miałem.",
-            "Miałam.",
-            "Miałeś.",
-            "Miałaś.",
-            "Miał.",
-            "Miała.",
-            "Miało.",
-            "Miałyśmy.",
-            "Mieliśmy.",
-            "Miałyście.",
-            "Mieliście.",
-            "Miały.",
-            "Mieli.",
-          ]).to.include(res.body.questionSentenceArr[0]);
-        });
-    });
-    it("#pal07-03c GET 200 YES: Conjugate ENG 'have' future, it SHOULD give fut cont.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          // answerLanguage,
-          sentenceFormulaSymbol: "dummy54c",
-        })
-        .expect(200)
-        .then((res) => {
-          console.log(res.body);
-          expect([
-            "I will have.",
-            "I will be having.",
-            "I will have had.",
-          ]).to.include(res.body.questionSentenceArr[0]);
-        });
-    });
-    it("#pal07-03d GET 200 YES: RSWAT POL to ENG 'have' future pf, (should indeed give 'będzie miał').", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy54a",
-        })
-        .expect(200)
-        .then((res) => {
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "have_withPronouns",
-            []
-          );
-        });
-    });
-    it("#pal07-03e GET 200 YES: RSWAT POL to ENG 'have' future im, (should indeed give 'będzie miał').", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy54b",
-        })
-        .expect(200)
-        .then((res) => {
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "have_withPronouns",
-            []
-          );
-        });
-    });
-  });
-
-  describe("/palette - Stage 7a: 'Be'/'Być'.", () => {
-    it("#pal07-01a GET 200 YES: Conjugate POL be correctly without translations.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          // answerLanguage,
-          sentenceFormulaSymbol: "dummy33",
-        })
-        .expect(200)
-        .then((res) => {
-          console.log(res.body);
-          expect([
-            "Jestem.",
-            "Jesteś.",
-            "Jest.",
-            "Jesteśmy.",
-            "Jesteście.",
-            "Są.",
-            "Byłem.",
-            "Byłam.",
-            "Byłeś.",
-            "Byłaś.",
-            "Był.",
-            "Była.",
-            "Było.",
-            "Byłyśmy.",
-            "Byliśmy.",
-            "Byłyście.",
-            "Byliście.",
-            "Były.",
-            "Byli.",
-          ]).to.include(res.body.questionSentenceArr[0]);
-        });
-    });
-    it("#pal07-01b GET 200 YES: RSWAT POL to ENG 'be' - past im/pf (Type 2 Allohomograph), pres pf - I.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy33b I am",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be_withPronouns",
-            []
-          );
-        });
-    });
-    it("#pal07-01c GET 200 YES: RSWAT POL to ENG 'be' - past im/pf (Type 2 Allohomograph), pres pf - You (with clarifiers).", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy33c you are",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be_withPronouns_withClarifiers_QlangPOL",
-            []
-          );
-        });
-    });
-    it("#pal07-01d GET 200 YES: RSWAT POL to ENG 'be' - past im/pf (Type 2 Allohomograph), pres pf - She.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy33d she is",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be_withPronouns",
-            []
-          );
-        });
-    });
-    it("#pal07-01e GET 200 YES: RSWAT POL to ENG 'be' - past im/pf (Type 2 Allohomograph), pres pf - We.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy33e we are",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be_withPronouns",
-            []
-          );
-        });
-    });
-    it("#pal07-01f GET 200 YES: RSWAT POL to ENG 'be' - past im/pf (Type 2 Allohomograph), pres pf - They.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy33f they are",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be_withPronouns",
-            []
-          );
-        });
-    });
-    it("#pal07-02a GET 200 YES: Conjugate ENG be correctly without translations.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          // answerLanguage,
-          sentenceFormulaSymbol: "dummy33",
-        })
-        .expect(200)
-        .then((res) => {
-          console.log(res.body);
-          expect(["Am.", "Are.", "Is.", "Was.", "Were."]).to.include(
-            res.body.questionSentenceArr[0]
-          );
-        });
-    });
-    it("#pal07-02b GET 200 YES: RSWAT ENG to POL 'be' - pres simp, past simp - I.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy33b I am",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be_withPronouns",
-            []
-          );
-        });
-    });
-    it("#pal07-02c GET 200 YES: RSWAT ENG to POL 'be' - pres simp, past simp - You (with clarifiers).", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy33c you are",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be_withPronouns_withClarifiers_QlangENG",
-            []
-          );
-        });
-    });
-    it("#pal07-02d GET 200 YES: RSWAT ENG to POL 'be' - pres simp, past simp - She.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy33d she is",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be_withPronouns",
-            []
-          );
-        });
-    });
-    it("#pal07-02e GET 200 YES: RSWAT ENG to POL 'be' - pres simp, past simp - We.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy33e we are",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be_withPronouns",
-            []
-          );
-        });
-    });
-    it("#pal07-02f GET 200 YES: RSWAT ENG to POL 'be' - pres simp, past simp - They.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy33f they are",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be_withPronouns",
-            []
-          );
-        });
-    });
-    it("#pal07-03a GET 200 YES: RSWAT POL to ENG 'be' correctly (without pronouns).", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy33a",
-        })
-        .expect(200)
-        .then((res) => {
-          // console.log(res.body);
-
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be",
-            []
-          );
-        });
-    });
-    it("#pal07-03b GET 200 YES: Conjugate POL 'be' past pf, (should be treated as im and pf both).", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          // answerLanguage,
-          sentenceFormulaSymbol: "dummy34",
-        })
-        .expect(200)
-        .then((res) => {
-          console.log(res.body);
-          expect([
-            "Byłem.",
-            "Byłam.",
-            "Byłeś.",
-            "Byłaś.",
-            "Był.",
-            "Była.",
-            "Było.",
-            "Byłyśmy.",
-            "Byliśmy.",
-            "Byłyście.",
-            "Byliście.",
-            "Były.",
-            "Byli.",
-          ]).to.include(res.body.questionSentenceArr[0]);
-        });
-    });
-    it("#pal07-03c GET 200 YES: Conjugate ENG 'be' future, it should NOT give fut cont.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          // answerLanguage,
-          sentenceFormulaSymbol: "dummy34c",
-        })
-        .expect(200)
-        .then((res) => {
-          console.log(res.body);
-          expect(["I will be.", "I will have been."]).to.include(
-            res.body.questionSentenceArr[0]
-          );
-        });
-    });
-    it("#pal07-03d GET 200 YES: RSWAT POL to ENG 'be' future pf, (Clone Bee VNV issue: should NOT receive 'b€d€ by¢', but instead just 'b€d€'.).", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy34a",
-        })
-        .expect(200)
-        .then((res) => {
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be_withPronouns",
-            []
-          );
-        });
-    });
-    it("#pal07-03e GET 200 YES: RSWAT POL to ENG 'be' future im, (Clone Bee VNV issue: should NOT receive 'b€d€ by¢', but instead just 'b€d€'.).", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          hideClarifiers: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy34b",
-        })
-        .expect(200)
-        .then((res) => {
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be_withPronouns",
-            []
-          );
-        });
-    });
-  });
 
   xdescribe("/palette - Stage 10: Further linguistic features.", () => {
     it("#pal10-01a GET 200 YES: Tantum plurale in POL is allowed to be sing or plur in ENG.", () => {
@@ -2497,6 +1595,908 @@ describe("/api", () => {
             answerLanguage,
             "be_withClarifiers_Qlang" + questionLanguage,
             ["Jesteś.", "Jesteście."]
+          );
+        });
+    });
+  });
+
+  describe("/palette - Stage 7: 'Be' and 'Have' ENG <-> POL.", () => {
+    it("#pal07-01a GET 200 YES: Conjugate POL be correctly without translations.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          // answerLanguage,
+          sentenceFormulaSymbol: "dummy33",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          expect([
+            "Jestem.",
+            "Jesteś.",
+            "Jest.",
+            "Jesteśmy.",
+            "Jesteście.",
+            "Są.",
+            "Byłem.",
+            "Byłam.",
+            "Byłeś.",
+            "Byłaś.",
+            "Był.",
+            "Była.",
+            "Było.",
+            "Byłyśmy.",
+            "Byliśmy.",
+            "Byłyście.",
+            "Byliście.",
+            "Były.",
+            "Byli.",
+          ]).to.include(res.body.questionSentenceArr[0]);
+        });
+    });
+    it("#pal07-01b GET 200 YES: RSWAT POL to ENG 'be' - past im/pf (Type 2 Allohomograph), pres pf - I.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33b I am",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-01c GET 200 YES: RSWAT POL to ENG 'be' - past im/pf (Type 2 Allohomograph), pres pf - You (with clarifiers).", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33c you are",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns_withClarifiers_QlangPOL",
+            []
+          );
+        });
+    });
+    it("#pal07-01d GET 200 YES: RSWAT POL to ENG 'be' - past im/pf (Type 2 Allohomograph), pres pf - She.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33d she is",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-01e GET 200 YES: RSWAT POL to ENG 'be' - past im/pf (Type 2 Allohomograph), pres pf - We.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33e we are",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-01f GET 200 YES: RSWAT POL to ENG 'be' - past im/pf (Type 2 Allohomograph), pres pf - They.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33f they are",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-02a GET 200 YES: Conjugate ENG be correctly without translations.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          // answerLanguage,
+          sentenceFormulaSymbol: "dummy33",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          expect(["Am.", "Are.", "Is.", "Was.", "Were."]).to.include(
+            res.body.questionSentenceArr[0]
+          );
+        });
+    });
+    it("#pal07-02b GET 200 YES: RSWAT ENG to POL 'be' - pres simp, past simp - I.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33b I am",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-02c GET 200 YES: RSWAT ENG to POL 'be' - pres simp, past simp - You (with clarifiers).", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33c you are",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns_withClarifiers_QlangENG",
+            []
+          );
+        });
+    });
+    it("#pal07-02d GET 200 YES: RSWAT ENG to POL 'be' - pres simp, past simp - She.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33d she is",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-02e GET 200 YES: RSWAT ENG to POL 'be' - pres simp, past simp - We.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33e we are",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-02f GET 200 YES: RSWAT ENG to POL 'be' - pres simp, past simp - They.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33f they are",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-03a GET 200 YES: RSWAT POL to ENG 'be' correctly (without pronouns).", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33a",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be",
+            []
+          );
+        });
+    });
+    it("#pal07-03b GET 200 YES: Conjugate POL 'be' past pf, (should be treated as im and pf both).", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          // answerLanguage,
+          sentenceFormulaSymbol: "dummy34",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          expect([
+            "Byłem.",
+            "Byłam.",
+            "Byłeś.",
+            "Byłaś.",
+            "Był.",
+            "Była.",
+            "Było.",
+            "Byłyśmy.",
+            "Byliśmy.",
+            "Byłyście.",
+            "Byliście.",
+            "Były.",
+            "Byli.",
+          ]).to.include(res.body.questionSentenceArr[0]);
+        });
+    });
+    it("#pal07-03c GET 200 YES: Conjugate ENG 'be' future, it should NOT give fut cont.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          // answerLanguage,
+          sentenceFormulaSymbol: "dummy34c",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          expect(["I will be.", "I will have been."]).to.include(
+            res.body.questionSentenceArr[0]
+          );
+        });
+    });
+    it("#pal07-03d GET 200 YES: RSWAT POL to ENG 'be' future pf, (Clone Bee VNV issue: should NOT receive 'b€d€ by¢', but instead just 'b€d€'.).", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy34a",
+        })
+        .expect(200)
+        .then((res) => {
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-03e GET 200 YES: RSWAT POL to ENG 'be' future im, (Clone Bee VNV issue: should NOT receive 'b€d€ by¢', but instead just 'b€d€'.).", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy34b",
+        })
+        .expect(200)
+        .then((res) => {
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-04a GET 200 YES: Conjugate POL have correctly without translations.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          // answerLanguage,
+          sentenceFormulaSymbol: "dummy53",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          expect([
+            "Mam.",
+            "Masz.",
+            "Ma.",
+            "Mamy.",
+            "Macie.",
+            "Mają.",
+            "Miałem.",
+            "Miałam.",
+            "Miałeś.",
+            "Miałaś.",
+            "Miał.",
+            "Miała.",
+            "Miało.",
+            "Miałyśmy.",
+            "Mieliśmy.",
+            "Miałyście.",
+            "Mieliście.",
+            "Miały.",
+            "Mieli.",
+          ]).to.include(res.body.questionSentenceArr[0]);
+        });
+    });
+    it("#pal07-04b GET 200 YES: RSWAT POL to ENG 'have' - past im/pf (Type 2 Allohomograph), pres pf - I.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy53b I am",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "have_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-04c GET 200 YES: RSWAT POL to ENG 'have' - past im/pf (Type 2 Allohomograph), pres pf - You (with clarifiers).", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy53c you are",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "have_withPronouns_withClarifiers_QlangPOL",
+            []
+          );
+        });
+    });
+    it("#pal07-04d GET 200 YES: RSWAT POL to ENG 'have' - past im/pf (Type 2 Allohomograph), pres pf - She.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy53d she is",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "have_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-04e GET 200 YES: RSWAT POL to ENG 'have' - past im/pf (Type 2 Allohomograph), pres pf - We.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy53e we are",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "have_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-04f GET 200 YES: RSWAT POL to ENG 'have' - past im/pf (Type 2 Allohomograph), pres pf - They.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy53f they are",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "have_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-05a GET 200 YES: Conjugate ENG have correctly without translations.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          // answerLanguage,
+          sentenceFormulaSymbol: "dummy53",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          expect(["Have.", "Has.", "Had."]).to.include(
+            res.body.questionSentenceArr[0]
+          );
+        });
+    });
+    it("#pal07-05b GET 200 YES: RSWAT ENG to POL 'have' - pres simp, past simp - I.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy53b I am",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "have_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-05c GET 200 YES: RSWAT ENG to POL 'have' - pres simp, past simp - You (with clarifiers).", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy53c you are",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "have_withPronouns_withClarifiers_QlangENG",
+            []
+          );
+        });
+    });
+    it("#pal07-05d GET 200 YES: RSWAT ENG to POL 'have' - pres simp, past simp - She.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy53d she is",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "have_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-05e GET 200 YES: RSWAT ENG to POL 'have' - pres simp, past simp - We.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy53e we are",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "have_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-05f GET 200 YES: RSWAT ENG to POL 'have' - pres simp, past simp - They.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy53f they are",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "have_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-06a GET 200 YES: RSWAT POL to ENG 'have' correctly (without pronouns).", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy53a",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "have",
+            []
+          );
+        });
+    });
+    it("#pal07-06b GET 200 YES: Conjugate POL 'have' past pf, (should be treated as im and pf both).", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          // answerLanguage,
+          sentenceFormulaSymbol: "dummy54",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          expect([
+            "Miałem.",
+            "Miałam.",
+            "Miałeś.",
+            "Miałaś.",
+            "Miał.",
+            "Miała.",
+            "Miało.",
+            "Miałyśmy.",
+            "Mieliśmy.",
+            "Miałyście.",
+            "Mieliście.",
+            "Miały.",
+            "Mieli.",
+          ]).to.include(res.body.questionSentenceArr[0]);
+        });
+    });
+    it("#pal07-06c GET 200 YES: Conjugate ENG 'have' future, it SHOULD give fut cont.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          // answerLanguage,
+          sentenceFormulaSymbol: "dummy54c",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          expect([
+            "I will have.",
+            "I will be having.",
+            "I am going to be having.",
+            "I will have had.",
+          ]).to.include(res.body.questionSentenceArr[0]);
+        });
+    });
+    it("#pal07-06d GET 200 YES: RSWAT POL to ENG 'have' future pf, (should indeed give 'będzie miał').", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy54a",
+        })
+        .expect(200)
+        .then((res) => {
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "have_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-06e GET 200 YES: RSWAT POL to ENG 'have' future im, (should indeed give 'będzie miał').", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy54b",
+        })
+        .expect(200)
+        .then((res) => {
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "have_withPronouns",
+            []
           );
         });
     });
