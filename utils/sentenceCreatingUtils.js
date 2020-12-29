@@ -91,15 +91,13 @@ exports.processSentenceFormula = (
   languagesObj,
   sentenceFormula,
   words,
-  kumquat,
-  questionOutputArr
+  kumquat
 ) => {
   console.log("processSentenceFormula fxn was given:", {
     languagesObj,
     sentenceFormula,
     words,
     kumquat,
-    questionOutputArr,
   });
 
   let { currentLanguage, previousQuestionLanguage } = languagesObj;
@@ -113,43 +111,7 @@ exports.processSentenceFormula = (
   let grandOutputArray = [];
 
   //STEP ZERO
-  //Optionally modify the answer's sentenceStructure to fit question's.
   //Preprocess sentence structure.
-
-  if (kumquat) {
-    if (false) {
-      console.log("+++++++++++++++++++++++++++++++++++fff");
-      console.log("-----------------------------------");
-      console.log("+++++++++++++++++++++++++++++++++++");
-      console.log(
-        "|",
-        "sentenceStructure BEFORE QA conform",
-        sentenceStructure
-      );
-
-      console.log(
-        "questionOutputArr.length ought to be 1",
-        questionOutputArr.length
-      );
-      console.log(
-        "questionOutputArr[0] which will be used to update the sentenceStructure",
-        questionOutputArr[0]
-      );
-      console.log("+++++++++++++++++++++++++++++++++++");
-      console.log("-----------------------------------");
-      console.log("+++++++++++++++++++++++++++++++++++");
-    }
-
-    exports.conformAnswerStructureToQuestionStructure(
-      sentenceStructure,
-      questionOutputArr,
-      words,
-      currentLanguage,
-      previousQuestionLanguage
-    );
-
-    // console.log("sentenceStructure AFTER QA conform", sentenceStructure);
-  }
 
   // console.log("----");
   // console.log("--------");
@@ -595,12 +557,15 @@ exports.buildSentenceString = (
 };
 
 exports.conformAnswerStructureToQuestionStructure = (
-  sentenceStructure,
+  sentenceFormula,
   questionOutputArr,
-  words,
-  answerLanguage,
-  questionLanguage
+  languagesObj,
+  words
 ) => {
+  let { sentenceStructure } = sentenceFormula;
+  let questionLanguage = languagesObj.previousQuestionLanguage;
+  let answerLanguage = languagesObj.currentLanguage;
+
   const questionLangUtils = require(`../source/${questionLanguage}/langUtils.js`);
   const answerLangUtils = require(`../source/${answerLanguage}/langUtils.js`);
 

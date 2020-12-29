@@ -687,25 +687,41 @@ exports.findSynhomographs = (lemmaObject, structureChunk, currentLanguage) => {
 };
 
 exports.addSpecifiers = (
-  arrayOfOutputUnits,
-  currentLanguage,
-  answerLanguage
+  answerSentenceFormula,
+  questionOutputArr,
+  languagesObj
 ) => {
-  arrayOfOutputUnits.forEach((outputUnit) => {
-    let { structureChunk } = outputUnit;
+  let answerSentenceStructure = answerSentenceFormula.sentenceStructure;
+  let questionLanguage = languagesObj.previousQuestionLanguage;
+  let answerLanguage = languagesObj.currentLanguage;
 
-    if (structureChunk.wordtype === "fixed") {
+  questionOutputArr.forEach((questionOutputUnit) => {
+    let questionStructureChunk = questionOutputUnit.structureChunk;
+
+    if (questionStructureChunk.wordtype === "fixed") {
       return;
     }
 
-    if (!structureChunk.annotations) {
-      structureChunk.annotations = [];
+    let answerStructureChunk = answerSentenceStructure.find(
+      (answerStructureChunk) =>
+        answerStructureChunk.chunkId === questionStructureChunk.chunkId
+    );
+
+    if (!answerStructureChunk) {
+      console.log(
+        "OT:addSpecifiers found no answerStructureChunk for " +
+          questionStructureChunk.chunkId
+      );
+    }
+
+    if (!questionStructureChunk.annotations) {
+      questionStructureChunk.annotations = [];
     }
 
     //Adding requested Specifiers.
 
     let requestedSpecifierInstructionsArr =
-      refObj.requestedSpecifiers[currentLanguage][
+      refObj.requestedSpecifiers[questionLanguage][
         answerStructureChunk.wordtype
       ];
 
@@ -713,13 +729,20 @@ exports.addSpecifiers = (
       return;
     }
 
+    console.log(
+      "requestedSpecifierInstructionsArr",
+      requestedSpecifierInstructionsArr
+    );
+
+    console.log("answerStructureChunk", answerStructureChunk);
+
     requestedSpecifierInstructionsArr.forEach(
       (requestedSpecifierInstructions) => {
         if (
           Object.keys(requestedSpecifierInstructions.featureConditions).every(
             (featureKey) => {
               let featureValues =
-                requestedSpecifierInstructionsArr.featureConditions[featureKey];
+                requestedSpecifierInstructions.featureConditions[featureKey];
 
               return featureValues.some((featureValue) =>
                 answerStructureChunk[featureKey].includes(featureValue)
@@ -727,6 +750,7 @@ exports.addSpecifiers = (
             }
           )
         ) {
+          console.log("Entered first clause.");
           //hard change
           Object.keys(requestedSpecifierInstructions.featureActions).forEach(
             (featureActionKey) => {

@@ -2705,7 +2705,7 @@ describe("/api", () => {
   });
 
   describe("/palette - Stage 6: Translating rich sentences (nouns, adjectives, verbs).", () => {
-    it("#pal06-01a GET 200 YES: Returns sentence with all translations (RSWAT).", () => {
+    it.only("#pal06-01a GET 200 YES: Returns sentence with all translations (RSWAT).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 

@@ -17,8 +17,6 @@ exports.fetchPalette = (req) => {
     hideSpecifiers,
   } = req.body;
 
-  // console.log("2ww", answerLanguage, sentenceFormula); //sentenceFormula not defined.
-
   let { sentenceFormula, words } = scUtils.getMaterials(
     questionLanguage,
     sentenceFormulaId,
@@ -33,15 +31,8 @@ exports.fetchPalette = (req) => {
     kumquat
   );
 
-  // console.log("2xx", questionLanguage, sentenceFormula);
-
-  sentenceFormulaId = questionSentenceData.sentenceFormulaId;
-  sentenceFormulaSymbol = questionSentenceData.sentenceFormulaSymbol;
-
   console.log("palette.model > questionSentenceData.arrayOfOutputArrays");
   gpUtils.consoleLogObjectAtTwoLevels(questionSentenceData.arrayOfOutputArrays);
-
-  // console.log("2yy", answerLanguage, sentenceFormula);
 
   let questionResponseObj = scUtils.giveFinalSentences(
     questionSentenceData.arrayOfOutputArrays,
@@ -53,8 +44,6 @@ exports.fetchPalette = (req) => {
     hideClarifiers,
     hideSpecifiers
   );
-
-  // console.log("2zz", answerLanguage, sentenceFormula);
 
   console.log(
     "palette.model > questionResponseObj before answer is sought",
@@ -79,8 +68,6 @@ exports.fetchPalette = (req) => {
   let answerResponseObj;
 
   if (answerLanguage) {
-    // console.log("aaa", answerLanguage, sentenceFormula);
-
     kumquat = true;
 
     let translations =
@@ -90,31 +77,66 @@ exports.fetchPalette = (req) => {
       throw "palette.model > I was asked to give translations, but the question sentence formula did not have any translations listed.";
     }
 
-    // console.log("bbb", answerLanguage, sentenceFormula);
-
     translations.forEach((translationSentenceFormulaId) => {
-      //addSpecifiers fxn
-      //conformAtoQ fxn
-
-      //and then put it through processSentenceFormula
-      // console.log("ccc", answerLanguage, sentenceFormula);
-
       let { sentenceFormula, words } = scUtils.getMaterials(
         answerLanguage,
         translationSentenceFormulaId,
-        sentenceFormulaSymbol,
+        questionSentenceData.sentenceFormulaSymbol,
         useDummy
       );
 
+      //addSpecifiers fxn
+      //conformAtoQ fxn
+      //and then put it through processSentenceFormula
+
+      let languagesObject = {
+        currentLanguage: answerLanguage,
+        previousQuestionLanguage: questionLanguage,
+      };
+
+      if (false) {
+        console.log("+++++++++++++++++++++++++++++++++++fff");
+        console.log("-----------------------------------");
+        console.log("+++++++++++++++++++++++++++++++++++");
+        console.log(
+          "|",
+          "sentenceStructure BEFORE QA conform",
+          sentenceStructure
+        );
+
+        console.log(
+          "questionOutputArr.length ought to be 1",
+          questionOutputArr.length
+        );
+        console.log(
+          "questionOutputArr[0] which will be used to update the sentenceStructure",
+          questionOutputArr[0]
+        );
+        console.log("+++++++++++++++++++++++++++++++++++");
+        console.log("-----------------------------------");
+        console.log("+++++++++++++++++++++++++++++++++++");
+      }
+
+      otUtils.addSpecifiers(
+        sentenceFormula,
+        questionSentenceData.arrayOfOutputArrays[0],
+        languagesObject
+      );
+
+      scUtils.conformAnswerStructureToQuestionStructure(
+        sentenceFormula,
+        questionSentenceData.arrayOfOutputArrays[0],
+        languagesObject,
+        words
+      );
+
+      // console.log("sentenceStructure AFTER QA conform", sentenceStructure);
+
       let answerSentenceData = scUtils.processSentenceFormula(
-        {
-          currentLanguage: answerLanguage,
-          previousQuestionLanguage: questionLanguage,
-        },
+        languagesObject,
         sentenceFormula,
         words,
-        kumquat,
-        questionSentenceData.arrayOfOutputArrays[0]
+        kumquat
       );
 
       if (!answerResponseObj) {
@@ -124,7 +146,9 @@ exports.fetchPalette = (req) => {
           answerSentenceData.errorInSentenceCreation,
           kumquat,
           answerLanguage,
-          null
+          null,
+          hideClarifiers,
+          hideSpecifiers
         );
       } else {
         let subsequentAnswerResponseObj = scUtils.giveFinalSentences(
@@ -133,7 +157,9 @@ exports.fetchPalette = (req) => {
           answerSentenceData.errorInSentenceCreation,
           kumquat,
           answerLanguage,
-          null
+          null,
+          hideClarifiers,
+          hideSpecifiers
         );
 
         subsequentAnswerResponseObj.finalSentenceArr.forEach(
