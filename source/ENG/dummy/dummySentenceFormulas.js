@@ -3,7 +3,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy25a good day",
     sentenceFormulaId: "ENG-dummy25a",
     translations: { POL: ["POL-dummy25a", "POL-dummy25b"] },
-    structure: [
+    sentenceStructure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "good" },
       { chunkId: "fix-2", wordtype: "fixed", value: "day" },
     ],
@@ -13,14 +13,16 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy25b hello",
     sentenceFormulaId: "ENG-dummy25b",
     translations: { POL: ["POL-dummy25a", "POL-dummy25b"] },
-    structure: [{ chunkId: "fix-1", wordtype: "fixed", value: "hello" }],
+    sentenceStructure: [
+      { chunkId: "fix-1", wordtype: "fixed", value: "hello" },
+    ],
     primaryOrders: [],
   },
   dummy26: {
     sentenceFormulaSymbol: "dummy26",
     sentenceFormulaId: "ENG-dummy26",
     translations: { POL: ["POL-dummy26"] },
-    structure: [
+    sentenceStructure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "I" },
       {
         chunkId: "ver-1",
@@ -42,7 +44,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy27",
     sentenceFormulaId: "ENG-dummy27",
     translations: { POL: ["POL-dummy27"] },
-    structure: [
+    sentenceStructure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "I" },
       {
         chunkId: "ver-1",
@@ -65,7 +67,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy28",
     sentenceFormulaId: "ENG-dummy28",
     translations: { POL: ["POL-dummy28"] },
-    structure: [
+    sentenceStructure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "I" },
       {
         chunkId: "ver-1",
@@ -83,7 +85,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy29",
     sentenceFormulaId: "ENG-dummy29",
     translations: { POL: ["POL-dummy29"] },
-    structure: [
+    sentenceStructure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "I" },
       {
         chunkId: "ver-1",
@@ -105,7 +107,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy30",
     sentenceFormulaId: "ENG-dummy30",
     translations: { POL: ["POL-dummy30"] },
-    structure: [
+    sentenceStructure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "I" },
       {
         chunkId: "ver-1",
@@ -123,7 +125,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy31",
     sentenceFormulaId: "ENG-dummy31",
     translations: { POL: ["POL-dummy31"] },
-    structure: [
+    sentenceStructure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "I" },
       {
         chunkId: "ver-1",
@@ -140,7 +142,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy33",
     sentenceFormulaId: "ENG-dummy33",
     translations: { POL: ["POL-dummy33"] },
-    structure: [
+    sentenceStructure: [
       {
         chunkId: "ver-1",
         wordtype: "verb",
@@ -156,7 +158,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy33a",
     sentenceFormulaId: "ENG-dummy33a",
     translations: { POL: ["POL-dummy33a"] },
-    structure: [
+    sentenceStructure: [
       {
         chunkId: "ver-1",
         wordtype: "verb",
@@ -172,7 +174,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy33b I am",
     sentenceFormulaId: "ENG-dummy33b",
     translations: { POL: ["POL-dummy33b"] },
-    structure: [
+    sentenceStructure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "I" },
       {
         chunkId: "ver-1",
@@ -189,7 +191,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy33c you are",
     sentenceFormulaId: "ENG-dummy33c",
     translations: { POL: ["POL-dummy33c"] },
-    structure: [
+    sentenceStructure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "you" },
       {
         chunkId: "ver-1",
@@ -206,7 +208,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy33d she is",
     sentenceFormulaId: "ENG-dummy33d",
     translations: { POL: ["POL-dummy33d"] },
-    structure: [
+    sentenceStructure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "she" },
       {
         chunkId: "ver-1",
@@ -223,7 +225,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy33e we are",
     sentenceFormulaId: "ENG-dummy33e",
     translations: { POL: ["POL-dummy33e"] },
-    structure: [
+    sentenceStructure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "we" },
       {
         chunkId: "ver-1",
@@ -240,7 +242,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy33f they are",
     sentenceFormulaId: "ENG-dummy33f",
     translations: { POL: ["POL-dummy33f"] },
-    structure: [
+    sentenceStructure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "they" },
       {
         chunkId: "ver-1",
@@ -257,7 +259,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy34a they are",
     sentenceFormulaId: "ENG-dummy34a",
     translations: { POL: ["POL-dummy34a"] },
-    structure: [
+    sentenceStructure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "I" },
       {
         chunkId: "ver-1",
@@ -274,7 +276,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy34c",
     sentenceFormulaId: "ENG-dummy34c",
     translations: { POL: ["POL-dummy34c"] },
-    structure: [
+    sentenceStructure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "I" },
       {
         chunkId: "ver-1",
@@ -291,7 +293,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy34d",
     sentenceFormulaId: "ENG-dummy34d",
     translations: { POL: ["POL-dummy34d"] },
-    structure: [
+    sentenceStructure: [
       {
         chunkId: "ver-1",
         wordtype: "verb",
@@ -305,7 +307,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy35",
     sentenceFormulaId: "ENG-dummy35",
     translations: { POL: ["POL-dummy35"] },
-    structure: [
+    sentenceStructure: [
       {
         chunkId: "ver-1",
         wordtype: "verb",
@@ -322,7 +324,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy36",
     sentenceFormulaId: "ENG-dummy36",
     translations: { POL: ["POL-dummy36"] },
-    structure: [
+    sentenceStructure: [
       {
         chunkId: "nou-1",
         wordtype: "noun",
@@ -337,7 +339,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy37",
     sentenceFormulaId: "ENG-dummy37",
     translations: { POL: ["POL-dummy37"] },
-    structure: [
+    sentenceStructure: [
       {
         chunkId: "ver-1",
         wordtype: "verb",
@@ -355,7 +357,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy38",
     sentenceFormulaId: "ENG-dummy38",
     translations: { POL: ["POL-dummy38"] },
-    structure: [
+    sentenceStructure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "I" },
       {
         chunkId: "ver-1",
@@ -374,7 +376,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy39",
     sentenceFormulaId: "ENG-dummy39",
     translations: { POL: ["POL-dummy39"] },
-    structure: [
+    sentenceStructure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "you" },
       {
         chunkId: "ver-1",
@@ -392,7 +394,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy40",
     sentenceFormulaId: "ENG-dummy40",
     translations: { POL: ["POL-dummy40"] },
-    structure: [
+    sentenceStructure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "you" },
       {
         chunkId: "ver-1",
@@ -410,7 +412,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy41",
     sentenceFormulaId: "ENG-dummy41",
     translations: { POL: ["POL-dummy41"] },
-    structure: [
+    sentenceStructure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "you" },
       {
         chunkId: "ver-1",
@@ -428,7 +430,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy42",
     sentenceFormulaId: "ENG-dummy42",
     translations: { POL: ["POL-dummy42"] },
-    structure: [
+    sentenceStructure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "you" },
       {
         chunkId: "ver-1",
@@ -446,7 +448,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy43",
     sentenceFormulaId: "ENG-dummy43",
     translations: { POL: ["POL-dummy43"] },
-    structure: [
+    sentenceStructure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "a" },
       {
         chunkId: "adj-1",
@@ -469,7 +471,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy45a",
     sentenceFormulaId: "ENG-dummy45a",
     translations: { POL: ["POL-dummy45a"] },
-    structure: [
+    sentenceStructure: [
       {
         chunkId: "nou-1",
         wordtype: "noun",
@@ -484,7 +486,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy45b",
     sentenceFormulaId: "ENG-dummy45b",
     translations: { POL: ["POL-dummy45b"] },
-    structure: [
+    sentenceStructure: [
       {
         chunkId: "ver-1",
         wordtype: "verb",
@@ -499,7 +501,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy45c",
     sentenceFormulaId: "ENG-dummy45c",
     translations: { POL: ["POL-dummy45b"] }, //Yes, this does point from c to b. It's fine...
-    structure: [
+    sentenceStructure: [
       {
         chunkId: "ver-1",
         wordtype: "verb",
@@ -514,7 +516,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy46a",
     sentenceFormulaId: "ENG-dummy46a",
     translations: { POL: ["POL-dummy46a"] },
-    structure: [
+    sentenceStructure: [
       {
         chunkId: "nou-1",
         wordtype: "noun",
@@ -529,7 +531,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy46b",
     sentenceFormulaId: "ENG-dummy46b",
     translations: { POL: ["POL-dummy46a"] }, //Yes, this does indeed point from b to a...
-    structure: [
+    sentenceStructure: [
       {
         chunkId: "nou-1",
         wordtype: "noun",
@@ -544,7 +546,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy46c",
     sentenceFormulaId: "ENG-dummy46c",
     translations: { POL: ["POL-dummy46c"] },
-    structure: [
+    sentenceStructure: [
       {
         chunkId: "ver-1",
         wordtype: "verb",
@@ -559,7 +561,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy46d",
     sentenceFormulaId: "ENG-dummy46d",
     translations: { POL: ["POL-dummy46c"] }, //Yes, this does indeed point from d to c...
-    structure: [
+    sentenceStructure: [
       {
         chunkId: "ver-1",
         wordtype: "verb",
@@ -574,7 +576,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy47a",
     sentenceFormulaId: "ENG-dummy47a",
     translations: { POL: ["POL-dummy47a"] },
-    structure: [
+    sentenceStructure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "I" },
       {
         chunkId: "ver-1",
@@ -591,7 +593,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy47b",
     sentenceFormulaId: "ENG-dummy47b",
     translations: { POL: ["POL-dummy47b"] },
-    structure: [
+    sentenceStructure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "I" },
       {
         chunkId: "ver-1",
@@ -608,7 +610,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy53",
     sentenceFormulaId: "ENG-dummy53",
     translations: { POL: ["POL-dummy53"] },
-    structure: [
+    sentenceStructure: [
       {
         chunkId: "ver-1",
         wordtype: "verb",
@@ -624,7 +626,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy53a",
     sentenceFormulaId: "ENG-dummy53a",
     translations: { POL: ["POL-dummy53a"] },
-    structure: [
+    sentenceStructure: [
       {
         chunkId: "ver-1",
         wordtype: "verb",
@@ -640,7 +642,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy53b I am",
     sentenceFormulaId: "ENG-dummy53b",
     translations: { POL: ["POL-dummy53b"] },
-    structure: [
+    sentenceStructure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "I" },
       {
         chunkId: "ver-1",
@@ -657,7 +659,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy53c you are",
     sentenceFormulaId: "ENG-dummy53c",
     translations: { POL: ["POL-dummy53c"] },
-    structure: [
+    sentenceStructure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "you" },
       {
         chunkId: "ver-1",
@@ -674,7 +676,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy53d she is",
     sentenceFormulaId: "ENG-dummy53d",
     translations: { POL: ["POL-dummy53d"] },
-    structure: [
+    sentenceStructure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "she" },
       {
         chunkId: "ver-1",
@@ -691,7 +693,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy53e we are",
     sentenceFormulaId: "ENG-dummy53e",
     translations: { POL: ["POL-dummy53e"] },
-    structure: [
+    sentenceStructure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "we" },
       {
         chunkId: "ver-1",
@@ -708,7 +710,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy53f they are",
     sentenceFormulaId: "ENG-dummy53f",
     translations: { POL: ["POL-dummy53f"] },
-    structure: [
+    sentenceStructure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "they" },
       {
         chunkId: "ver-1",
@@ -725,7 +727,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy54a they are",
     sentenceFormulaId: "ENG-dummy54a",
     translations: { POL: ["POL-dummy54a"] },
-    structure: [
+    sentenceStructure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "I" },
       {
         chunkId: "ver-1",
@@ -742,7 +744,7 @@ exports.dummySentenceFormulasBank = {
     sentenceFormulaSymbol: "dummy54c",
     sentenceFormulaId: "ENG-dummy54c",
     translations: { POL: ["POL-dummy54c"] },
-    structure: [
+    sentenceStructure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "I" },
       {
         chunkId: "ver-1",

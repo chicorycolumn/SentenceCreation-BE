@@ -3,7 +3,7 @@ exports.sentenceFormulasBank = {
     sentenceFormulaSymbol: "101a girl is reading",
     sentenceFormulaId: "ENG-00-101a",
     translations: { POL: ["POL-00-101a"] },
-    structure: [
+    sentenceStructure: [
       // {
       //   chunkId: "art-1",
       //   wordtype: "article",
@@ -36,7 +36,7 @@ exports.sentenceFormulasBank = {
       "101b girl *reads quickly IT WON'T MATTER THAT THIS sentenceFormulaSymbol IS DIFFERENT FROM ITS POL COUNTERPART",
     sentenceFormulaId: "ENG-00-101b",
     translations: { POL: ["POL-00-101b"] },
-    structure: [
+    sentenceStructure: [
       // {
       //   chunkId: "art-1",
       //   wordtype: "article",
@@ -69,7 +69,7 @@ exports.sentenceFormulasBank = {
     sentenceFormulaSymbol: "102a I'll read (pf fut)",
     sentenceFormulaId: "ENG-00-102a",
     translations: { POL: ["POL-00-102a"] },
-    structure: [
+    sentenceStructure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "I" },
       {
         chunkId: "ver-1",
@@ -88,7 +88,7 @@ exports.sentenceFormulasBank = {
     sentenceFormulaSymbol: "I read *future 103a",
     sentenceFormulaId: "ENG-00-103a",
     translations: { POL: ["POL-00-103a"] },
-    structure: [
+    sentenceStructure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "I" },
       {
         chunkId: "ver-1",
@@ -107,7 +107,7 @@ exports.sentenceFormulasBank = {
     sentenceFormulaSymbol: "I read *future 103b",
     sentenceFormulaId: "ENG-00-103b",
     translations: { POL: ["POL-00-103b"] },
-    structure: [
+    sentenceStructure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "I" },
       {
         chunkId: "ver-1",
@@ -126,7 +126,7 @@ exports.sentenceFormulasBank = {
     sentenceFormulaSymbol: "I read *future 103c",
     sentenceFormulaId: "ENG-00-103c",
     translations: { POL: ["POL-00-103c"] },
-    structure: [
+    sentenceStructure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "I" },
       {
         chunkId: "ver-1",
@@ -145,7 +145,7 @@ exports.sentenceFormulasBank = {
     sentenceFormulaSymbol: "I read *future 104a",
     sentenceFormulaId: "ENG-00-104a",
     translations: { POL: ["POL-00-104a"] },
-    structure: [
+    sentenceStructure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "I" },
       {
         chunkId: "ver-1",
@@ -164,7 +164,7 @@ exports.sentenceFormulasBank = {
     sentenceFormulaSymbol: "I read *future 104b",
     sentenceFormulaId: "ENG-00-104b",
     translations: { POL: ["POL-00-104b"] },
-    structure: [
+    sentenceStructure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "I" },
       {
         chunkId: "ver-1",
@@ -183,7 +183,7 @@ exports.sentenceFormulasBank = {
     sentenceFormulaSymbol: "I was writing 105a",
     sentenceFormulaId: "ENG-00-105a",
     translations: { POL: ["POL-00-105a"] },
-    structure: [
+    sentenceStructure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "I" },
       {
         chunkId: "ver-1",
@@ -201,7 +201,7 @@ exports.sentenceFormulasBank = {
     sentenceFormulaSymbol: "first conditional 106a",
     sentenceFormulaId: "ENG-00-106a",
     translations: { POL: ["POL-00-106a"] },
-    structure: [
+    sentenceStructure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "if" },
       { chunkId: "fix-2", wordtype: "fixed", value: "I" },
       {
@@ -251,7 +251,7 @@ exports.sentenceFormulasBank = {
     sentenceFormulaSymbol: "red door",
     sentenceFormulaId: "ENG-00-107",
     translations: { POL: ["POL-00-107"] },
-    structure: [
+    sentenceStructure: [
       {
         chunkId: "adj-1",
         agreeWith: "nou-1",
@@ -273,7 +273,7 @@ exports.sentenceFormulasBank = {
     sentenceFormulaSymbol: "red door singular",
     sentenceFormulaId: "ENG-00-107a",
     translations: { POL: ["POL-00-107"] }, //Yes, this 107a should go to 107.
-    structure: [
+    sentenceStructure: [
       {
         chunkId: "adj-1",
         agreeWith: "nou-1",

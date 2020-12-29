@@ -94,6 +94,14 @@ exports.processSentenceFormula = (
   kumquat,
   questionOutputArr
 ) => {
+  console.log("processSentenceFormula fxn was given:", {
+    languagesObj,
+    sentenceFormula,
+    words,
+    kumquat,
+    questionOutputArr,
+  });
+
   let { currentLanguage, previousQuestionLanguage } = languagesObj;
   let {
     sentenceFormulaId,
