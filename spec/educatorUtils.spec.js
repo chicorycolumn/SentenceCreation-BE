@@ -1,4 +1,8 @@
-const { findHomographs } = require("../utils/educatorUtils.js");
+const {
+  findHomographs,
+  checkLemmaObjectIds,
+  checkSentenceFormulaIds,
+} = require("../utils/educatorUtils.js");
 const { expect } = require("chai");
 
 describe("findHomographs", () => {
@@ -277,5 +281,71 @@ describe("findHomographs", () => {
     let actual = findHomographs(true, currentLanguage, homographType, ignore);
     console.log("spec result >>>>", actual);
     expect(actual).to.eql(expected);
+  });
+});
+
+describe.only("checkLemmaObjectIds", () => {
+  it("#edu2.1 Gives schematic and duplicateIds. ENG", () => {
+    const currentLanguage = "ENG";
+
+    let actual = checkLemmaObjectIds(false, currentLanguage);
+
+    if (actual.duplicateIds.length) {
+      console.log(currentLanguage + " Lemma Objects >>>>", actual);
+      throw (
+        "DUPLICATE LEMMA OBJECTS IDS WERE FOUND: " +
+        actual.duplicateIds.join(", ")
+      );
+    }
+    expect(actual.duplicateIds.length).to.equal(0);
+    // expect(actual).to.eql(expected);
+  });
+  it("#edu2.2 Gives schematic and duplicateIds. POL", () => {
+    const currentLanguage = "POL";
+
+    let actual = checkLemmaObjectIds(false, currentLanguage);
+
+    if (actual.duplicateIds.length) {
+      console.log(currentLanguage + " Lemma Objects >>>>", actual);
+      throw (
+        "DUPLICATE LEMMA OBJECTS IDS WERE FOUND: " +
+        actual.duplicateIds.join(", ")
+      );
+    }
+    expect(actual.duplicateIds.length).to.equal(0);
+    // expect(actual).to.eql(expected);
+  });
+});
+
+describe.only("checkSentenceFormulaIds", () => {
+  it("#edu3.1 Gives schematic and duplicateIds. ENG", () => {
+    const currentLanguage = "ENG";
+
+    let actual = checkSentenceFormulaIds(false, currentLanguage);
+
+    if (actual.duplicateIds.length) {
+      console.log(currentLanguage + " Sentence Formulas >>>>", actual);
+      throw (
+        "DUPLICATE SENTENCE FORMULA IDS WERE FOUND: " +
+        actual.duplicateIds.join(", ")
+      );
+    }
+    expect(actual.duplicateIds.length).to.equal(0);
+    // expect(actual).to.eql(expected);
+  });
+  it("#edu3.2 Gives schematic and duplicateIds. POL", () => {
+    const currentLanguage = "POL";
+
+    let actual = checkSentenceFormulaIds(false, currentLanguage);
+
+    if (actual.duplicateIds.length) {
+      console.log(currentLanguage + " Sentence Formulas >>>>", actual);
+      throw (
+        "DUPLICATE SENTENCE FORMULA IDS WERE FOUND: " +
+        actual.duplicateIds.join(", ")
+      );
+    }
+    expect(actual.duplicateIds.length).to.equal(0);
+    // expect(actual).to.eql(expected);
   });
 });

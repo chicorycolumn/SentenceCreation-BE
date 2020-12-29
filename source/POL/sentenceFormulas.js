@@ -24,6 +24,7 @@ exports.sentenceFormulasBank = {
   },
   51: {
     sentenceFormulaSymbol: "girl is wearing shirt",
+    sentenceFormulaId: "POL-00-51",
     structure: [
       {
         chunkId: "nou-1",
@@ -46,6 +47,7 @@ exports.sentenceFormulasBank = {
   },
   52: {
     sentenceFormulaSymbol: "shirt is in wardrobe",
+    sentenceFormulaId: "POL-00-52",
     structure: [
       {
         chunkId: "nou-1",
@@ -61,6 +63,7 @@ exports.sentenceFormulasBank = {
   },
   53: {
     sentenceFormulaSymbol: "I often wear shirt",
+    sentenceFormulaId: "POL-00-53",
     structure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "często noszę" },
       {
@@ -76,6 +79,7 @@ exports.sentenceFormulasBank = {
   },
   54: {
     sentenceFormulaSymbol: "boys are male",
+    sentenceFormulaId: "POL-00-54",
     structure: [
       {
         chunkId: "nou-1",
@@ -91,6 +95,7 @@ exports.sentenceFormulasBank = {
   },
   55: {
     sentenceFormulaSymbol: "red apple",
+    sentenceFormulaId: "POL-00-55",
     structure: [
       {
         chunkId: "adj-1",
@@ -114,6 +119,7 @@ exports.sentenceFormulasBank = {
   },
   "55a": {
     sentenceFormulaSymbol: "red apples",
+    sentenceFormulaId: "POL-00-55a",
     structure: [
       {
         chunkId: "adj-1",
@@ -137,6 +143,7 @@ exports.sentenceFormulasBank = {
   },
   "55b": {
     sentenceFormulaSymbol: "red/blue apple",
+    sentenceFormulaId: "POL-00-55b",
     structure: [
       {
         chunkId: "adj-1",
@@ -160,6 +167,7 @@ exports.sentenceFormulasBank = {
   },
   56: {
     sentenceFormulaSymbol: "red girls",
+    sentenceFormulaId: "POL-00-56",
     structure: [
       {
         chunkId: "adj-1",
@@ -183,6 +191,7 @@ exports.sentenceFormulasBank = {
   },
   57: {
     sentenceFormulaSymbol: "I have apple",
+    sentenceFormulaId: "POL-00-57",
     structure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "mam" },
       {
@@ -198,6 +207,7 @@ exports.sentenceFormulasBank = {
   },
   58: {
     sentenceFormulaSymbol: "I am reading",
+    sentenceFormulaId: "POL-00-58",
     structure: [
       {
         chunkId: "ver-1",
@@ -211,6 +221,7 @@ exports.sentenceFormulasBank = {
   },
   59: {
     sentenceFormulaSymbol: "girl is reading",
+    sentenceFormulaId: "POL-00-59",
     structure: [
       {
         chunkId: "nou-1",
@@ -233,6 +244,7 @@ exports.sentenceFormulasBank = {
   },
   60: {
     sentenceFormulaSymbol: "girls were reading",
+    sentenceFormulaId: "POL-00-60",
     structure: [
       {
         chunkId: "nou-1",
@@ -255,6 +267,7 @@ exports.sentenceFormulasBank = {
   },
   "61-z": {
     sentenceFormulaSymbol: "* girl has red apple",
+    sentenceFormulaId: "POL-00-61-z",
     structure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "nie," },
       { chunkId: "fix-2", wordtype: "fixed", value: "chyba" },
@@ -303,6 +316,7 @@ exports.sentenceFormulasBank = {
   },
   61: {
     sentenceFormulaSymbol: "girl has red apple",
+    sentenceFormulaId: "POL-00-61",
     structure: [
       {
         chunkId: "nou-1",
@@ -339,6 +353,7 @@ exports.sentenceFormulasBank = {
   },
   "61-neg1": {
     sentenceFormulaSymbol: "girl didn't have red apple",
+    sentenceFormulaId: "POL-00-61-neg1",
     structure: [
       {
         chunkId: "nou-1",
@@ -379,6 +394,7 @@ exports.sentenceFormulasBank = {
   },
   "62-neg1": {
     sentenceFormulaSymbol: "red girl didn't have red apple",
+    sentenceFormulaId: "POL-00-62-neg1",
     structure: [
       {
         chunkId: "adj-0",
@@ -426,6 +442,7 @@ exports.sentenceFormulasBank = {
   },
   "63a": {
     sentenceFormulaSymbol: "girl reads present im",
+    sentenceFormulaId: "POL-00-63a",
     structure: [
       {
         chunkId: "nou-1",
@@ -448,6 +465,7 @@ exports.sentenceFormulasBank = {
   },
   "63b": {
     sentenceFormulaSymbol: "girl reads past pf",
+    sentenceFormulaId: "POL-00-63b",
     structure: [
       {
         chunkId: "nou-1",
@@ -470,6 +488,7 @@ exports.sentenceFormulasBank = {
   },
   "63c": {
     sentenceFormulaSymbol: "girl reads future im",
+    sentenceFormulaId: "POL-00-63c",
     structure: [
       {
         chunkId: "nou-1",
@@ -492,6 +511,7 @@ exports.sentenceFormulasBank = {
   },
   "63d": {
     sentenceFormulaSymbol: "girl reads f conditional im pf",
+    sentenceFormulaId: "POL-00-63d",
     structure: [
       {
         chunkId: "nou-1",

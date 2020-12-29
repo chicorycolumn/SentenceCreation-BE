@@ -18,7 +18,7 @@ exports.findHomographs = (testing, currentLanguage, homographType, ignore) => {
     throw "findHomographs fxn: I don't know what type of homograph you want me to find. I've logged above what you gave me.";
   }
 
-  const wordsBank = getWordsBank(currentLanguage, testing);
+  const wordsBank = exports.getWordsBank(currentLanguage, testing);
   const langUtils = require(`../source/${currentLanguage}/langUtils.js`);
 
   let recordOfTerminalValuesAndPaths = [];
@@ -149,16 +149,80 @@ exports.findHomographs = (testing, currentLanguage, homographType, ignore) => {
     }
     resultObj[homographWord] = homographRoutes;
   }
+};
 
-  function getWordsBank(currentLanguage, testing) {
-    if (!testing) {
-      const { wordsBank } = require(`../source/${currentLanguage}/words.js`);
-      return wordsBank;
+exports.checkLemmaObjectIds = (testing, currentLanguage) => {
+  const wordsBank = exports.getWordsBank(currentLanguage, testing);
+
+  let schematic = [];
+  Object.keys(wordsBank).forEach((wordtypeKey) => {
+    let wordsOfAType = wordsBank[wordtypeKey];
+    schematic = [
+      ...schematic,
+      ...wordsOfAType.map((lObj) => [lObj.id, lObj.lemma]),
+    ];
+  });
+
+  let tempArr = [];
+  let duplicateIds = [];
+
+  schematic.forEach((item) => {
+    if (tempArr.includes(item[0])) {
+      duplicateIds.push(item[0]);
     } else {
-      const {
-        wordsBank,
-      } = require(`../source/TEST/${currentLanguage}/words.js`);
-      return wordsBank;
+      tempArr.push(item[0]);
     }
+  });
+
+  return { schematic, duplicateIds };
+};
+
+exports.checkSentenceFormulaIds = (testing, currentLanguage) => {
+  const sentenceFormulasBank = exports.getSentenceFormulasBank(
+    currentLanguage,
+    testing
+  );
+
+  let schematic = Object.keys(
+    sentenceFormulasBank
+  ).map((sentenceFormulaKey) => [
+    sentenceFormulasBank[sentenceFormulaKey].sentenceFormulaId,
+  ]);
+
+  let tempArr = [];
+  let duplicateIds = [];
+
+  schematic.forEach((item) => {
+    if (tempArr.includes(item[0])) {
+      duplicateIds.push(item[0]);
+    } else {
+      tempArr.push(item[0]);
+    }
+  });
+
+  return { schematic, duplicateIds };
+};
+
+exports.getWordsBank = (currentLanguage, testing) => {
+  if (!testing) {
+    const { wordsBank } = require(`../source/${currentLanguage}/words.js`);
+    return wordsBank;
+  } else {
+    const { wordsBank } = require(`../source/TEST/${currentLanguage}/words.js`);
+    return wordsBank;
+  }
+};
+
+exports.getSentenceFormulasBank = (currentLanguage, testing) => {
+  if (!testing) {
+    const {
+      sentenceFormulasBank,
+    } = require(`../source/${currentLanguage}/sentenceFormulas.js`);
+    return sentenceFormulasBank;
+  } else {
+    const {
+      sentenceFormulasBank,
+    } = require(`../source/TEST/${currentLanguage}/sentenceFormulasBank.js`);
+    return sentenceFormulasBank;
   }
 };
