@@ -151,8 +151,8 @@ exports.filterOutDeficientLemmaObjects = (
       );
 
       return inflectionPathsInRequirements.some((inflectionPathReq) =>
-        inflectionPathsInSource.some((inflectionPathSou) =>
-          gpUtils.areTwoFlatArraysEqual(inflectionPathReq, inflectionPathSou)
+        inflectionPathsInSource.some((inflectionPathSource) =>
+          gpUtils.areTwoFlatArraysEqual(inflectionPathReq, inflectionPathSource)
         )
       );
     }

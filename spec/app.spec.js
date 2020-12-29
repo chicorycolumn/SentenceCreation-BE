@@ -10,6 +10,240 @@ const { it } = require("mocha");
 
 //This is a Washburne style reference object.
 const generalTranslatedSentencesRef = {
+  have_withClarifiers_QlangENG: {
+    "POL->ENG": [
+      { POL: "Masz.", ENG: ["You have (singular)."] },
+      { POL: "Macie.", ENG: ["You have (plural)."] },
+    ],
+  },
+  have_withClarifiers_QlangPOL: {
+    "POL->ENG": [
+      { POL: "Masz.", ENG: ["You have.", "You are having."] },
+      { POL: "Macie.", ENG: ["You have.", "You are having."] },
+    ],
+  },
+  have_withPronouns_withClarifiers_QlangPOL: {
+    "POL->ENG": [
+      { POL: "Masz.", ENG: ["You have.", "You are having."] },
+      { POL: "Macie.", ENG: ["You have.", "You are having."] },
+      {
+        POL: "Miałeś.",
+        ENG: ["You had.", "You were having.", "You have had.", "You had had."],
+      },
+      {
+        POL: "Miałaś.",
+        ENG: ["You had.", "You were having.", "You have had.", "You had had."],
+      },
+      {
+        POL: "Miałyście.",
+        ENG: ["You had.", "You were having.", "You have had.", "You had had."],
+      },
+      {
+        POL: "Mieliście.",
+        ENG: ["You had.", "You were having.", "You have had.", "You had had."],
+      },
+    ],
+  },
+  have_withPronouns_withClarifiers_QlangENG: {
+    "POL->ENG": [
+      {
+        POL: "Masz.",
+        ENG: ["You have (singular).", "You are having (singular)."],
+      },
+      {
+        POL: "Macie.",
+        ENG: ["You have (plural).", "You are having (plural)."],
+      },
+      {
+        POL: "Miałeś.",
+        ENG: [
+          "You had (singular).",
+          "You were having (singular).",
+          "You have had (singular).",
+          "You had had (singular).",
+        ],
+      },
+      {
+        POL: "Miałaś.",
+        ENG: [
+          "You had (singular).",
+          "You were having (singular).",
+          "You have had (singular).",
+          "You had had (singular).",
+        ],
+      },
+      {
+        POL: "Miałyście.",
+        ENG: [
+          "You had (plural).",
+          "You were having (plural).",
+          "You have had (plural).",
+          "You had had (plural).",
+        ],
+      },
+      {
+        POL: "Mieliście.",
+        ENG: [
+          "You had (plural).",
+          "You were having (plural).",
+          "You have had (plural).",
+          "You had had (plural).",
+        ],
+      },
+    ],
+  },
+  have_withPronouns: {
+    "POL->ENG": [
+      {
+        POL: "Będę miał.",
+        ENG: [
+          "I will have.",
+          "I am going to have.",
+          "I will have had.",
+          "I will be having.",
+        ],
+      },
+      {
+        POL: "Będę mieć.",
+        ENG: [
+          "I will have.",
+          "I am going to have.",
+          "I will have had.",
+          "I will be having.",
+        ],
+      },
+
+      { POL: "Mam.", ENG: ["I have.", "I am having."] },
+      { POL: "Masz.", ENG: ["You have.", "You are having."] },
+      { POL: "Ma.", ENG: ["She has.", "She is having."] },
+      { POL: "Mamy.", ENG: ["We have.", "We are having."] },
+      { POL: "Macie.", ENG: ["You have.", "You are having."] },
+      { POL: "Mają.", ENG: ["They have.", "They are having."] },
+      {
+        POL: "Miałem.",
+        ENG: ["I had.", "I was having.", "I have had.", "I had had."],
+      },
+      {
+        POL: "Miałam.",
+        ENG: ["I had.", "I was having.", "I have had.", "I had had."],
+      },
+      {
+        POL: "Miałeś.",
+        ENG: ["You had.", "You were having.", "You have had.", "You had had."],
+      },
+      {
+        POL: "Miałaś.",
+        ENG: ["You had.", "You were having.", "You have had.", "You had had."],
+      },
+      {
+        POL: "Miał.",
+        ENG: ["He had.", "He was having.", "He has had.", "He had had."],
+      },
+      {
+        POL: "Miała.",
+        ENG: ["She had.", "She was having.", "She has had.", "She had had."],
+      },
+      {
+        POL: "Miało.",
+        ENG: ["It had.", "It was having.", "It has had.", "It had had."],
+      },
+      {
+        POL: "Miałyśmy.",
+        ENG: ["We had.", "We were having.", "We have had.", "We had had."],
+      },
+      {
+        POL: "Mieliśmy.",
+        ENG: ["We had.", "We were having.", "We have had.", "We had had."],
+      },
+      {
+        POL: "Miałyście.",
+        ENG: ["You had.", "You were having.", "You have had.", "You had had."],
+      },
+      {
+        POL: "Mieliście.",
+        ENG: ["You had.", "You were having.", "You have had.", "You had had."],
+      },
+      {
+        POL: "Miały.",
+        ENG: [
+          "They had.",
+          "They were having.",
+          "They have had.",
+          "They had had.",
+        ],
+      },
+      {
+        POL: "Mieli.",
+        ENG: [
+          "They had.",
+          "They were having.",
+          "They have had.",
+          "They had had.",
+        ],
+      },
+    ],
+  },
+  have: {
+    "POL->ENG": [
+      //
+      //POL: present im
+      // ENG: Present Simple
+      // ENG: Present Continuous
+      { POL: "Mam.", ENG: ["Have.", "Am having."] },
+      { POL: "Masz.", ENG: ["Have.", "Are having."] },
+      { POL: "Ma.", ENG: ["Has.", "Is having."] },
+      { POL: "Mamy.", ENG: ["Have.", "Are having."] },
+      { POL: "Macie.", ENG: ["Have.", "Are having."] },
+      { POL: "Mają.", ENG: ["Have.", "Are having."] },
+      { POL: "Miałem.", ENG: ["Had.", "Was having.", "Have had.", "Had had."] },
+      { POL: "Miałam.", ENG: ["Had.", "Was having.", "Have had.", "Had had."] },
+      {
+        POL: "Miałeś.",
+        ENG: ["Had.", "Were having.", "Have had.", "Had had."],
+      },
+      {
+        POL: "Miałaś.",
+        ENG: ["Had.", "Were having.", "Have had.", "Had had."],
+      },
+      { POL: "Miał.", ENG: ["Had.", "Was having.", "Have had.", "Had had."] },
+      { POL: "Miała.", ENG: ["Had.", "Was having.", "Have had.", "Had had."] },
+      { POL: "Miało.", ENG: ["Had.", "Was having.", "Have had.", "Had had."] },
+      {
+        POL: "Miałyśmy.",
+        ENG: ["Had.", "Were having.", "Have had.", "Had had."],
+      },
+      {
+        POL: "Mieliśmy.",
+        ENG: ["Had.", "Were having.", "Have had.", "Had had."],
+      },
+      {
+        POL: "Miałyście.",
+        ENG: ["Had.", "Were having.", "Have had.", "Had had."],
+      },
+      {
+        POL: "Mieliście.",
+        ENG: ["Had.", "Were having.", "Have had.", "Had had."],
+      },
+      {
+        POL: "Miały.",
+        ENG: ["Had.", "Were having.", "Have had.", "Had had."],
+      },
+      {
+        POL: "Mieli.",
+        ENG: ["Had.", "Were having.", "Have had.", "Had had."],
+      },
+    ],
+  },
+
+  //////////////////
+  //////////////////
+  //////////////////
+  //////////////////
+  //////////////////
+  //////////////////
+  //////////////////
+  //////////////////
+
   be_withClarifiers_QlangENG: {
     "POL->ENG": [
       { POL: "Jesteś.", ENG: ["You are (singular)."] },
@@ -469,8 +703,73 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe("/palette - Stage 7: 'Be'/'Być'.", () => {
-    it("#pal07-03a GET 200 YES: RSWAT POL to ENG 'be' correctly (without pronouns).", () => {
+  describe.only("/palette - Stage 7b: 'Have'/'Mieć'.", () => {
+    it("#pal07-01a GET 200 YES: Conjugate POL have correctly without translations.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          // answerLanguage,
+          sentenceFormulaSymbol: "dummy53",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          expect([
+            "Mam.",
+            "Masz.",
+            "Ma.",
+            "Mamy.",
+            "Macie.",
+            "Mają.",
+            "Miałem.",
+            "Miałam.",
+            "Miałeś.",
+            "Miałaś.",
+            "Miał.",
+            "Miała.",
+            "Miało.",
+            "Miałyśmy.",
+            "Mieliśmy.",
+            "Miałyście.",
+            "Mieliście.",
+            "Miały.",
+            "Mieli.",
+          ]).to.include(res.body.questionSentenceArr[0]);
+        });
+    });
+    it("#pal07-01b GET 200 YES: RSWAT POL to ENG 'have' - past im/pf (Type 2 Allohomograph), pres pf - I.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy53b I am",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "have_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-01c GET 200 YES: RSWAT POL to ENG 'have' - past im/pf (Type 2 Allohomograph), pres pf - You (with clarifiers).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -481,7 +780,7 @@ describe("/api", () => {
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy33a",
+          sentenceFormulaSymbol: "dummy53c you are",
         })
         .expect(200)
         .then((res) => {
@@ -491,45 +790,90 @@ describe("/api", () => {
             res,
             questionLanguage,
             answerLanguage,
-            "be",
+            "have_withPronouns_withClarifiers_QlangPOL",
             []
           );
         });
     });
-    it("#pal07-03b GET 200 YES: Conjugate POL 'be' past pf, (should be treated as im and pf both).", () => {
+    it("#pal07-01d GET 200 YES: RSWAT POL to ENG 'have' - past im/pf (Type 2 Allohomograph), pres pf - She.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
       return request(app)
         .get("/api/palette")
         .send({
-          hideClarifiers: true,
+          // hideClarifiers: true,
           useDummy: true,
           questionLanguage,
-          // answerLanguage,
-          sentenceFormulaSymbol: "dummy34",
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy53d she is",
         })
         .expect(200)
         .then((res) => {
-          console.log(res.body);
-          expect([
-            "Byłem.",
-            "Byłam.",
-            "Byłeś.",
-            "Byłaś.",
-            "Był.",
-            "Była.",
-            "Było.",
-            "Byłyśmy.",
-            "Byliśmy.",
-            "Byłyście.",
-            "Byliście.",
-            "Były.",
-            "Byli.",
-          ]).to.include(res.body.questionSentenceArr[0]);
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "have_withPronouns",
+            []
+          );
         });
     });
-    it("#pal07-03c GET 200 YES: Conjugate ENG 'be' future, it should NOT give fut cont.", () => {
+    it("#pal07-01e GET 200 YES: RSWAT POL to ENG 'have' - past im/pf (Type 2 Allohomograph), pres pf - We.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy53e we are",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "have_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-01f GET 200 YES: RSWAT POL to ENG 'have' - past im/pf (Type 2 Allohomograph), pres pf - They.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy53f they are",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "have_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-02a GET 200 YES: Conjugate ENG have correctly without translations.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -540,17 +884,147 @@ describe("/api", () => {
           useDummy: true,
           questionLanguage,
           // answerLanguage,
-          sentenceFormulaSymbol: "dummy44",
+          sentenceFormulaSymbol: "dummy53",
         })
         .expect(200)
         .then((res) => {
           console.log(res.body);
-          expect(["I will be.", "I will have been."]).to.include(
+          expect(["Have.", "Has.", "Had."]).to.include(
             res.body.questionSentenceArr[0]
           );
         });
     });
-    it("#pal07-03d GET 200 YES: RSWAT POL to ENG 'be' future pf, (Clone Bee VNV issue: should NOT receive 'b€d€ by¢', but instead just 'b€d€'.).", () => {
+    it("#pal07-02b GET 200 YES: RSWAT ENG to POL 'have' - pres simp, past simp - I.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy53b I am",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "have_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-02c GET 200 YES: RSWAT ENG to POL 'have' - pres simp, past simp - You (with clarifiers).", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy53c you are",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "have_withPronouns_withClarifiers_QlangENG",
+            []
+          );
+        });
+    });
+    it("#pal07-02d GET 200 YES: RSWAT ENG to POL 'have' - pres simp, past simp - She.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy53d she is",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "have_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-02e GET 200 YES: RSWAT ENG to POL 'have' - pres simp, past simp - We.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy53e we are",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "have_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-02f GET 200 YES: RSWAT ENG to POL 'have' - pres simp, past simp - They.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy53f they are",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "have_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-03a GET 200 YES: RSWAT POL to ENG 'have' correctly (without pronouns).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -561,20 +1035,78 @@ describe("/api", () => {
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy34a",
+          sentenceFormulaSymbol: "dummy53a",
         })
         .expect(200)
         .then((res) => {
+          // console.log(res.body);
+
           checkSentenceTranslations(
             res,
             questionLanguage,
             answerLanguage,
-            "be_withPronouns",
+            "have",
             []
           );
         });
     });
-    it("#pal07-03e GET 200 YES: RSWAT POL to ENG 'be' future im, (Clone Bee VNV issue: should NOT receive 'b€d€ by¢', but instead just 'b€d€'.).", () => {
+    it("#pal07-03b GET 200 YES: Conjugate POL 'have' past pf, (should be treated as im and pf both).", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          // answerLanguage,
+          sentenceFormulaSymbol: "dummy54",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          expect([
+            "Miałem.",
+            "Miałam.",
+            "Miałeś.",
+            "Miałaś.",
+            "Miał.",
+            "Miała.",
+            "Miało.",
+            "Miałyśmy.",
+            "Mieliśmy.",
+            "Miałyście.",
+            "Mieliście.",
+            "Miały.",
+            "Mieli.",
+          ]).to.include(res.body.questionSentenceArr[0]);
+        });
+    });
+    it("#pal07-03c GET 200 YES: Conjugate ENG 'have' future, it SHOULD give fut cont.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          // answerLanguage,
+          sentenceFormulaSymbol: "dummy54c",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          expect([
+            "I will have.",
+            "I will be having.",
+            "I will have had.",
+          ]).to.include(res.body.questionSentenceArr[0]);
+        });
+    });
+    it("#pal07-03d GET 200 YES: RSWAT POL to ENG 'have' future pf, (should indeed give 'będzie miał').", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -585,7 +1117,7 @@ describe("/api", () => {
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy34b",
+          sentenceFormulaSymbol: "dummy54a",
         })
         .expect(200)
         .then((res) => {
@@ -593,14 +1125,38 @@ describe("/api", () => {
             res,
             questionLanguage,
             answerLanguage,
-            "be_withPronouns",
+            "have_withPronouns",
             []
           );
         });
     });
-    ////
-    ////
-    ////
+    it("#pal07-03e GET 200 YES: RSWAT POL to ENG 'have' future im, (should indeed give 'będzie miał').", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy54b",
+        })
+        .expect(200)
+        .then((res) => {
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "have_withPronouns",
+            []
+          );
+        });
+    });
+  });
+
+  describe("/palette - Stage 7a: 'Be'/'Być'.", () => {
     it("#pal07-01a GET 200 YES: Conjugate POL be correctly without translations.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "POL";
@@ -912,6 +1468,134 @@ describe("/api", () => {
         .then((res) => {
           // console.log(res.body);
 
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-03a GET 200 YES: RSWAT POL to ENG 'be' correctly (without pronouns).", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy33a",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be",
+            []
+          );
+        });
+    });
+    it("#pal07-03b GET 200 YES: Conjugate POL 'be' past pf, (should be treated as im and pf both).", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          // answerLanguage,
+          sentenceFormulaSymbol: "dummy34",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          expect([
+            "Byłem.",
+            "Byłam.",
+            "Byłeś.",
+            "Byłaś.",
+            "Był.",
+            "Była.",
+            "Było.",
+            "Byłyśmy.",
+            "Byliśmy.",
+            "Byłyście.",
+            "Byliście.",
+            "Były.",
+            "Byli.",
+          ]).to.include(res.body.questionSentenceArr[0]);
+        });
+    });
+    it("#pal07-03c GET 200 YES: Conjugate ENG 'be' future, it should NOT give fut cont.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          // answerLanguage,
+          sentenceFormulaSymbol: "dummy34c",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          expect(["I will be.", "I will have been."]).to.include(
+            res.body.questionSentenceArr[0]
+          );
+        });
+    });
+    it("#pal07-03d GET 200 YES: RSWAT POL to ENG 'be' future pf, (Clone Bee VNV issue: should NOT receive 'b€d€ by¢', but instead just 'b€d€'.).", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy34a",
+        })
+        .expect(200)
+        .then((res) => {
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-03e GET 200 YES: RSWAT POL to ENG 'be' future im, (Clone Bee VNV issue: should NOT receive 'b€d€ by¢', but instead just 'b€d€'.).", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy34b",
+        })
+        .expect(200)
+        .then((res) => {
           checkSentenceTranslations(
             res,
             questionLanguage,

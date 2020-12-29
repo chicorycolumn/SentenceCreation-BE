@@ -940,6 +940,21 @@ exports.dummySentenceFormulasBank = {
     ],
     primaryOrders: [],
   },
+  dummy34c: {
+    sentenceFormulaSymbol: "dummy34c",
+    sentenceFormulaId: "POL-dummy34c",
+    translations: { ENG: ["ENG-dummy34c"] },
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        specificLemmas: ["być"],
+        person: ["1per"],
+        tenseDescription: ["future im"],
+      },
+    ],
+    primaryOrders: [],
+  },
   dummy36: {
     sentenceFormulaSymbol: "dummy36",
     sentenceFormulaId: "POL-dummy36",
@@ -1066,21 +1081,6 @@ exports.dummySentenceFormulasBank = {
     ],
     primaryOrders: [["adj-1", "nou-1"]],
   },
-  dummy44: {
-    sentenceFormulaSymbol: "dummy44",
-    sentenceFormulaId: "POL-dummy44",
-    translations: { ENG: ["ENG-dummy44"] },
-    structure: [
-      {
-        chunkId: "ver-1",
-        wordtype: "verb",
-        andTags: ["identity"],
-        person: ["1per"],
-        tenseDescription: ["future im"],
-      },
-    ],
-    primaryOrders: [],
-  },
   dummy45a: {
     sentenceFormulaSymbol: "dummy45a",
     sentenceFormulaId: "POL-dummy45a",
@@ -1133,6 +1133,188 @@ exports.dummySentenceFormulasBank = {
         wordtype: "verb",
         andTags: ["allohomTesting3"],
         form: ["infinitive"],
+      },
+    ],
+    primaryOrders: [],
+  },
+  dummy53: {
+    sentenceFormulaSymbol: "dummy53",
+    sentenceFormulaId: "POL-dummy53",
+    translations: { ENG: ["ENG-dummy53"] },
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        specificLemmas: ["mieć"],
+        tenseDescription: ["present im", "past pf"],
+        person: [],
+        number: [],
+        gender: [],
+      },
+    ],
+    primaryOrders: [],
+  },
+  dummy53a: {
+    sentenceFormulaSymbol: "dummy53a",
+    sentenceFormulaId: "POL-dummy53a",
+    translations: { ENG: ["ENG-dummy53a"] },
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        specificLemmas: ["mieć"],
+        tenseDescription: ["present im"],
+        person: ["1per"],
+        number: [],
+        gender: [],
+      },
+    ],
+    primaryOrders: [],
+  },
+  dummy53b: {
+    sentenceFormulaSymbol: "dummy53b I am",
+    sentenceFormulaId: "POL-dummy53b",
+    translations: { ENG: ["ENG-dummy53b"] },
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        specificLemmas: ["mieć"],
+        tenseDescription: ["present im", "past pf"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [],
+  },
+  dummy53c: {
+    sentenceFormulaSymbol: "dummy53c you are",
+    sentenceFormulaId: "POL-dummy53c",
+    translations: { ENG: ["ENG-dummy53c"] },
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        specificLemmas: ["mieć"],
+        tenseDescription: ["present im", "past pf"],
+        person: ["2per"],
+        number: [],
+      },
+    ],
+    primaryOrders: [],
+  },
+  dummy53d: {
+    sentenceFormulaSymbol: "dummy53d she is",
+    sentenceFormulaId: "POL-dummy53d",
+    translations: { ENG: ["ENG-dummy53d"] },
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        specificLemmas: ["mieć"],
+        tenseDescription: ["present im", "past pf"],
+        person: ["3per"],
+        number: ["singular"],
+        gender: ["f"],
+        importantFeatures: ["gender"],
+      },
+    ],
+    primaryOrders: [],
+  },
+  dummy53e: {
+    sentenceFormulaSymbol: "dummy53e we are",
+    sentenceFormulaId: "POL-dummy53e",
+    translations: { ENG: ["ENG-dummy53e"] },
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        specificLemmas: ["mieć"],
+        tenseDescription: ["present im", "past pf"],
+        person: ["1per"],
+        number: ["plural"],
+      },
+    ],
+    primaryOrders: [],
+  },
+  dummy53f: {
+    sentenceFormulaSymbol: "dummy53f they are",
+    sentenceFormulaId: "POL-dummy53f",
+    translations: { ENG: ["ENG-dummy53f"] },
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        specificLemmas: ["mieć"],
+        tenseDescription: ["present im", "past pf"],
+        person: ["3per"],
+        number: ["plural"],
+      },
+    ],
+    primaryOrders: [],
+  },
+  dummy54: {
+    sentenceFormulaSymbol: "dummy54",
+    sentenceFormulaId: "POL-dummy54",
+    translations: {},
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        specificLemmas: ["mieć"],
+        tenseDescription: ["past pf"],
+        person: [],
+        number: [],
+        gender: [],
+      },
+    ],
+    primaryOrders: [],
+  },
+  dummy54a: {
+    sentenceFormulaSymbol: "dummy54a",
+    sentenceFormulaId: "POL-dummy54a",
+    translations: { ENG: ["ENG-dummy54a"] },
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        specificLemmas: ["mieć"],
+        tenseDescription: ["future pf"],
+        person: ["1per"],
+        number: ["singular"],
+        gender: [],
+      },
+    ],
+    primaryOrders: [],
+  },
+  dummy54b: {
+    sentenceFormulaSymbol: "dummy54b",
+    sentenceFormulaId: "POL-dummy54b",
+    translations: { ENG: ["ENG-dummy54a"] }, //Yes, this does indeed point from b to a...
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        specificLemmas: ["mieć"],
+        tenseDescription: ["future im"], // ...because I am just testing this.
+        person: ["1per"],
+        number: ["singular"],
+        gender: [],
+      },
+    ],
+    primaryOrders: [],
+  },
+  dummy54c: {
+    sentenceFormulaSymbol: "dummy54c",
+    sentenceFormulaId: "POL-dummy54c",
+    translations: { ENG: ["ENG-dummy54c"] },
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        specificLemmas: ["mieć"],
+        person: ["1per"],
+        tenseDescription: ["future im"],
       },
     ],
     primaryOrders: [],
