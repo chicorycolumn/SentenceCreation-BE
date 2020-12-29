@@ -570,6 +570,40 @@ exports.dummySentenceFormulasBank = {
     ],
     primaryOrders: [],
   },
+  dummy47a: {
+    sentenceFormulaSymbol: "dummy47a",
+    sentenceFormulaId: "ENG-dummy47a",
+    translations: { POL: ["POL-dummy47a"] },
+    structure: [
+      { chunkId: "fix-1", wordtype: "fixed", value: "I" },
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        specificLemmas: ["write"],
+        tenseDescription: ["past continuous"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [["fix-1", "ver-1"]],
+  },
+  dummy47b: {
+    sentenceFormulaSymbol: "dummy47b",
+    sentenceFormulaId: "ENG-dummy47b",
+    translations: { POL: ["POL-dummy47b"] },
+    structure: [
+      { chunkId: "fix-1", wordtype: "fixed", value: "I" },
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        specificLemmas: ["write"],
+        tenseDescription: ["past"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [["fix-1", "ver-1"]],
+  },
   dummy53: {
     sentenceFormulaSymbol: "dummy53",
     sentenceFormulaId: "ENG-dummy53",

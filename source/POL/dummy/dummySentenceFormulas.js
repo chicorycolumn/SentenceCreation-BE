@@ -1151,6 +1151,38 @@ exports.dummySentenceFormulasBank = {
     ],
     primaryOrders: [],
   },
+  dummy47a: {
+    sentenceFormulaSymbol: "dummy47a",
+    sentenceFormulaId: "POL-dummy47a",
+    translations: { ENG: ["ENG-dummy47a"] },
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        specificLemmas: ["pisać"],
+        tenseDescription: ["past im"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [],
+  },
+  dummy47b: {
+    sentenceFormulaSymbol: "dummy47b",
+    sentenceFormulaId: "POL-dummy47b",
+    translations: { ENG: ["ENG-dummy47b"] },
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        specificLemmas: ["pisać"],
+        tenseDescription: ["past im", "past pf"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [],
+  },
   dummy53: {
     sentenceFormulaSymbol: "dummy53",
     sentenceFormulaId: "POL-dummy53",

@@ -692,7 +692,9 @@ exports.addSpecifiers = (
   answerLanguage
 ) => {
   arrayOfOutputUnits.forEach((outputUnit) => {
-    if (outputUnit.structureChunk.wordtype === "fixed") {
+    let { structureChunk } = outputUnit;
+
+    if (structureChunk.wordtype === "fixed") {
       return;
     }
 
@@ -700,8 +702,53 @@ exports.addSpecifiers = (
       structureChunk.annotations = [];
     }
 
-    if (outputUnit.structureChunk.specifiers) {
+    //Adding requested Specifiers.
+
+    let requestedSpecifierInstructionsArr =
+      refObj.requestedSpecifiers[currentLanguage][
+        answerStructureChunk.wordtype
+      ];
+
+    if (!requestedSpecifierInstructionsArr) {
+      return;
     }
+
+    requestedSpecifierInstructionsArr.forEach(
+      (requestedSpecifierInstructions) => {
+        if (
+          Object.keys(requestedSpecifierInstructions.featureConditions).every(
+            (featureKey) => {
+              let featureValues =
+                requestedSpecifierInstructionsArr.featureConditions[featureKey];
+
+              return featureValues.some((featureValue) =>
+                answerStructureChunk[featureKey].includes(featureValue)
+              );
+            }
+          )
+        ) {
+          //hard change
+          Object.keys(requestedSpecifierInstructions.featureActions).forEach(
+            (featureActionKey) => {
+              let featureActionValues =
+                requestedSpecifierInstructions.featureActions[featureActionKey];
+
+              let featureActionValue = gpUtils.selectRandom(
+                featureActionValues
+              );
+
+              answerStructureChunk[featureActionKey] = [featureActionValue];
+              if (!questionStructureChunk.specifiers) {
+                questionStructureChunk.specifiers = [];
+              }
+              questionStructureChunk.specifiers.push({
+                featureActionKey: featureActionValue,
+              });
+            }
+          );
+        }
+      }
+    );
   });
 };
 
