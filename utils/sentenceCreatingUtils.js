@@ -4,18 +4,20 @@ const lfUtils = require("./lemmaFilteringUtils.js");
 const refObj = require("./referenceObjects.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 
-exports.processSentenceFormula = (
+exports.getMaterials = (
   currentLanguage,
   sentenceFormulaId,
   sentenceFormulaSymbol,
-  useDummy,
-  kumquat,
-  questionOutputArr,
-  questionLanguage
+  useDummy
 ) => {
-  const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
+  console.log("}} SC:getMaterials fxn was given:", {
+    currentLanguage,
+    sentenceFormulaId,
+    sentenceFormulaSymbol,
+    useDummy,
+  });
 
-  let grandOutputArray = [];
+  let sentenceFormula;
 
   //STEP ZERO (A): Get necessary source materials.
   const { wordsBank } = require(`../source/${currentLanguage}/words.js`);
@@ -30,7 +32,6 @@ exports.processSentenceFormula = (
   } = require(`../source/${currentLanguage}/dummy/dummySentenceFormulas.js`);
 
   let defaultSentenceFormulaId = "POL-00-50";
-  let errorInSentenceCreation = { errorMessage: null };
 
   let words = useDummy
     ? gpUtils.copyAndCombineWordbanks(wordsBank, dummyWordsBank)
@@ -41,6 +42,8 @@ exports.processSentenceFormula = (
     : gpUtils.copyWithoutReference(sentenceFormulasBank);
 
   if (sentenceFormulaId) {
+    // console.log("fff", sentenceFormula);
+
     let matchingSentenceFormulaData = otUtils.findObjectInNestedObject(
       sentenceFormulas,
       {
@@ -49,6 +52,9 @@ exports.processSentenceFormula = (
       true
     );
 
+    // console.log("eee", matchingSentenceFormulaData);
+
+    // return;
     sentenceFormula = matchingSentenceFormulaData.value;
     sentenceFormulaId = sentenceFormula.sentenceFormulaId;
     sentenceFormulaSymbol = sentenceFormula.sentenceFormulaSymbol;
@@ -78,12 +84,29 @@ exports.processSentenceFormula = (
     sentenceFormulaSymbol = sentenceFormula.sentenceFormulaSymbol;
   }
 
-  //STEP ZERO (B)
-  //Prepare chunkIds.
+  return { sentenceFormula, words };
+};
+
+exports.processSentenceFormula = (
+  languagesObj,
+  sentenceFormula,
+  words,
+  kumquat,
+  questionOutputArr
+) => {
+  let { currentLanguage, previousQuestionLanguage } = languagesObj;
+  let {
+    sentenceFormulaId,
+    sentenceFormulaSymbol,
+    sentenceStructure,
+  } = sentenceFormula;
+  let errorInSentenceCreation = { errorMessage: null };
+  const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
+  let grandOutputArray = [];
+
+  //STEP ZERO
   //Optionally modify the answer's sentenceStructure to fit question's.
   //Preprocess sentence structure.
-
-  let sentenceStructure = sentenceFormula.structure;
 
   if (kumquat) {
     if (false) {
@@ -114,7 +137,7 @@ exports.processSentenceFormula = (
       questionOutputArr,
       words,
       currentLanguage,
-      questionLanguage
+      previousQuestionLanguage
     );
 
     // console.log("sentenceStructure AFTER QA conform", sentenceStructure);
@@ -135,6 +158,8 @@ exports.processSentenceFormula = (
   // console.log("~~~~~~~~");
   // console.log("~~~~");
 
+  //STEP ONE: Select headwords and add to result array.
+
   let headIds = Array.from(
     new Set(
       sentenceStructure
@@ -149,7 +174,6 @@ exports.processSentenceFormula = (
 
   let headOutputUnitArrays = [];
 
-  //STEP ONE: Select headwords and add to result array.
   headIds.forEach((headId, headIdIndex) => {
     let headChunk = sentenceStructure.find(
       (structureChunk) =>
@@ -167,7 +191,7 @@ exports.processSentenceFormula = (
       words,
       errorInSentenceCreation,
       currentLanguage,
-      questionLanguage,
+      previousQuestionLanguage,
       kumquat
     );
 
@@ -250,7 +274,7 @@ exports.processSentenceFormula = (
             words,
             errorInSentenceCreation,
             currentLanguage,
-            questionLanguage,
+            previousQuestionLanguage,
             kumquat
           );
 
@@ -354,7 +378,7 @@ exports.processSentenceFormula = (
       words,
       errorInSentenceCreation,
       currentLanguage,
-      questionLanguage,
+      previousQuestionLanguage,
       kumquat
     );
 
@@ -683,7 +707,6 @@ exports.conformAnswerStructureToQuestionStructure = (
       }
 
       //Don't transfer Number, if all A lObjs are Tantum Plurale.     eg if Q is "violin" we don't want to specify that A must be singular, as "skrzypce" can't be singular.
-      console.log("ddd", matchingAnswerLemmaObjects);
 
       if (
         inflectorKey === "number" &&

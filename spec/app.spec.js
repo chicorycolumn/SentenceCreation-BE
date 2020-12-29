@@ -896,8 +896,8 @@ describe("/api", () => {
     });
   });
 
-  describe("/palette - Stage 11: Adding Specifiers.", () => {
-    it.only("#pal11-01a Check Specifier of gender is added to ENG past continuous.", () => {
+  xdescribe("/palette - Stage 11: Adding Specifiers.", () => {
+    it("#pal11-01a Check Specifier of gender is added to ENG past continuous.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 

@@ -17,19 +17,31 @@ exports.fetchPalette = (req) => {
     hideSpecifiers,
   } = req.body;
 
-  let questionSentenceData = scUtils.processSentenceFormula(
+  // console.log("2ww", answerLanguage, sentenceFormula); //sentenceFormula not defined.
+
+  let { sentenceFormula, words } = scUtils.getMaterials(
     questionLanguage,
     sentenceFormulaId,
     sentenceFormulaSymbol,
-    useDummy,
+    useDummy
+  );
+
+  let questionSentenceData = scUtils.processSentenceFormula(
+    { currentLanguage: questionLanguage },
+    sentenceFormula,
+    words,
     kumquat
   );
+
+  // console.log("2xx", questionLanguage, sentenceFormula);
 
   sentenceFormulaId = questionSentenceData.sentenceFormulaId;
   sentenceFormulaSymbol = questionSentenceData.sentenceFormulaSymbol;
 
   console.log("palette.model > questionSentenceData.arrayOfOutputArrays");
   gpUtils.consoleLogObjectAtTwoLevels(questionSentenceData.arrayOfOutputArrays);
+
+  // console.log("2yy", answerLanguage, sentenceFormula);
 
   let questionResponseObj = scUtils.giveFinalSentences(
     questionSentenceData.arrayOfOutputArrays,
@@ -41,6 +53,8 @@ exports.fetchPalette = (req) => {
     hideClarifiers,
     hideSpecifiers
   );
+
+  // console.log("2zz", answerLanguage, sentenceFormula);
 
   console.log(
     "palette.model > questionResponseObj before answer is sought",
@@ -65,6 +79,8 @@ exports.fetchPalette = (req) => {
   let answerResponseObj;
 
   if (answerLanguage) {
+    // console.log("aaa", answerLanguage, sentenceFormula);
+
     kumquat = true;
 
     let translations =
@@ -74,15 +90,31 @@ exports.fetchPalette = (req) => {
       throw "palette.model > I was asked to give translations, but the question sentence formula did not have any translations listed.";
     }
 
+    // console.log("bbb", answerLanguage, sentenceFormula);
+
     translations.forEach((translationSentenceFormulaId) => {
-      let answerSentenceData = scUtils.processSentenceFormula(
+      //addSpecifiers fxn
+      //conformAtoQ fxn
+
+      //and then put it through processSentenceFormula
+      // console.log("ccc", answerLanguage, sentenceFormula);
+
+      let { sentenceFormula, words } = scUtils.getMaterials(
         answerLanguage,
         translationSentenceFormulaId,
         sentenceFormulaSymbol,
-        useDummy,
+        useDummy
+      );
+
+      let answerSentenceData = scUtils.processSentenceFormula(
+        {
+          currentLanguage: answerLanguage,
+          previousQuestionLanguage: questionLanguage,
+        },
+        sentenceFormula,
+        words,
         kumquat,
-        questionSentenceData.arrayOfOutputArrays[0],
-        questionLanguage
+        questionSentenceData.arrayOfOutputArrays[0]
       );
 
       if (!answerResponseObj) {
