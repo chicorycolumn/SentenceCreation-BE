@@ -696,8 +696,8 @@ exports.addSpecifiers = (
       return;
     }
 
-    if (!structureChunk.clarifiers) {
-      structureChunk.clarifiers = [];
+    if (!structureChunk.annotations) {
+      structureChunk.annotations = [];
     }
 
     if (outputUnit.structureChunk.specifiers) {
@@ -728,8 +728,8 @@ exports.addClarifiers = (
       selectedWord,
     } = outputUnit;
 
-    if (!structureChunk.clarifiers) {
-      structureChunk.clarifiers = [];
+    if (!structureChunk.annotations) {
+      structureChunk.annotations = [];
     }
     //
     //console.log(outputUnit)
@@ -773,14 +773,14 @@ exports.addClarifiers = (
         );
       }
 
-      structureChunk.clarifiers.push(
+      structureChunk.annotations.push(
         allohomInfo.emoji + " " + allohomInfo.text
       );
     }
 
     if (allohomInfo && allohomInfo.multipleWordtype) {
       if (structureChunk.pleaseShowMultipleWordtypeAllohomClarifiers) {
-        structureChunk.clarifiers.push(
+        structureChunk.annotations.push(
           gpUtils.getWordtypeFromLemmaObject(selectedLemmaObject)
         );
       }
@@ -838,7 +838,7 @@ exports.addClarifiers = (
             );
 
             labelsWhereTheyDiffer.forEach((label) => {
-              structureChunk.clarifiers.push(structureChunk[label]);
+              structureChunk.annotations.push(structureChunk[label]);
             });
           }
         });
@@ -848,17 +848,17 @@ exports.addClarifiers = (
     }
   });
 
-  exports.attachClarifiers(arrayOfOutputUnits);
+  exports.attachAnnotations(arrayOfOutputUnits);
 
   gpUtils.consoleLogObjectAtTwoLevels(arrayOfOutputUnits);
 };
 
-exports.attachClarifiers = (arrayOfOutputUnits) => {
+exports.attachAnnotations = (arrayOfOutputUnits) => {
   arrayOfOutputUnits.forEach((outputUnit) => {
     let { structureChunk, selectedLemmaObject } = outputUnit;
 
-    if (structureChunk.clarifiers && structureChunk.clarifiers.length) {
-      outputUnit.selectedWord += ` (${structureChunk.clarifiers.join(", ")})`;
+    if (structureChunk.annotations && structureChunk.annotations.length) {
+      outputUnit.selectedWord += ` (${structureChunk.annotations.join(", ")})`;
     }
   });
 };

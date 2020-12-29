@@ -75,7 +75,7 @@ exports.addSpecificClarifiers = (
     let number = structureChunk.number[0];
 
     if (person === "2per") {
-      structureChunk.clarifiers.push(number);
+      structureChunk.annotations.push(number);
     }
 
     //
@@ -91,13 +91,13 @@ exports.addSpecificClarifiers = (
           structureChunk.tenseDescription &&
           structureChunk.tenseDescription.includes("past simple")
         ) {
-          structureChunk.clarifiers.push("past");
+          structureChunk.annotations.push("past");
           structureChunk.preventAddingClarifiers = true; // We assume that no more clarifiers are needed.
         } else if (
           structureChunk.tenseDescription &&
           structureChunk.tenseDescription.includes("present simple")
         ) {
-          structureChunk.clarifiers.push("present");
+          structureChunk.annotations.push("present");
           structureChunk.preventAddingClarifiers = true; // We assume that no more clarifiers are needed.
         }
       }
