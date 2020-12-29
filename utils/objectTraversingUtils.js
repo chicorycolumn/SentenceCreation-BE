@@ -686,6 +686,25 @@ exports.findSynhomographs = (lemmaObject, structureChunk, currentLanguage) => {
   }
 };
 
+exports.addSpecifiers = (
+  arrayOfOutputUnits,
+  currentLanguage,
+  answerLanguage
+) => {
+  arrayOfOutputUnits.forEach((outputUnit) => {
+    if (outputUnit.structureChunk.wordtype === "fixed") {
+      return;
+    }
+
+    if (!structureChunk.clarifiers) {
+      structureChunk.clarifiers = [];
+    }
+
+    if (outputUnit.structureChunk.specifiers) {
+    }
+  });
+};
+
 exports.addClarifiers = (
   arrayOfOutputUnits,
   currentLanguage,

@@ -14,6 +14,7 @@ exports.fetchPalette = (req) => {
     questionLanguage,
     answerLanguage,
     hideClarifiers,
+    hideSpecifiers,
   } = req.body;
 
   let questionSentenceData = scUtils.processSentenceFormula(
@@ -37,7 +38,8 @@ exports.fetchPalette = (req) => {
     kumquat,
     questionLanguage,
     answerLanguage,
-    hideClarifiers
+    hideClarifiers,
+    hideSpecifiers
   );
 
   console.log(

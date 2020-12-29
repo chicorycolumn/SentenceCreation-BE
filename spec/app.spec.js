@@ -236,16 +236,6 @@ const generalTranslatedSentencesRef = {
       },
     ],
   },
-
-  //////////////////
-  //////////////////
-  //////////////////
-  //////////////////
-  //////////////////
-  //////////////////
-  //////////////////
-  //////////////////
-
   be_withClarifiers_QlangENG: {
     "POL->ENG": [
       { POL: "Jesteś.", ENG: ["You are (singular)."] },
@@ -451,6 +441,24 @@ const generalTranslatedSentencesRef = {
       //POL: present im
       // ENG: Present Simple
       // ENG: Present Continuous
+      {
+        POL: "Będzie.",
+        ENG: ["Will be.", "Is going to be.", "Will have been."],
+      },
+      {
+        POL: "Będą.",
+        ENG: ["Will be.", "Are going to be.", "Will have been."],
+      },
+      {
+        POL: "Będziemy.",
+        ENG: ["Will be.", "Are going to be.", "Will have been."],
+      },
+      {
+        POL: "Będziecie.",
+        ENG: ["Will be.", "Are going to be.", "Will have been."],
+      },
+      { POL: "Będę.", ENG: ["Will be.", "Am going to be.", "Will have been."] },
+
       { POL: "Jestem.", ENG: ["Am.", "Am being."] },
       { POL: "Jesteś.", ENG: ["Are.", "Are being."] },
       { POL: "Jest.", ENG: ["Is.", "Is being."] },
@@ -2499,6 +2507,32 @@ describe("/api", () => {
             questionLanguage,
             answerLanguage,
             "be_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal07-04a GET 200 YES: RSWAT POL to ENG 'be' (checking there's no Clone Bee Cross Pollination issue).", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideClarifiers: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy34d",
+        })
+        .expect(200)
+        .then((res) => {
+          // console.log(res.body);
+
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be",
             []
           );
         });

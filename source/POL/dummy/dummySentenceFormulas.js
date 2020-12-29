@@ -955,6 +955,20 @@ exports.dummySentenceFormulasBank = {
     ],
     primaryOrders: [],
   },
+  dummy34d: {
+    sentenceFormulaSymbol: "dummy34d",
+    sentenceFormulaId: "POL-dummy34d",
+    translations: { ENG: ["ENG-dummy34d"] },
+    structure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        specificLemmas: ["być"],
+        tenseDescription: ["future im", "present im"],
+      },
+    ],
+    primaryOrders: [],
+  },
   dummy36: {
     sentenceFormulaSymbol: "dummy36",
     sentenceFormulaId: "POL-dummy36",

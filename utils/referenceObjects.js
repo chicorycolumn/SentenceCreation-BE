@@ -117,6 +117,51 @@ exports.adhocForms = {
   },
 };
 
+//For this Answer Language,
+//  if the Question Sentence has not specified these features
+//    please pick a random one and
+//      add Specifier to Question Sentence
+//        and update Answer StructureChunk
+exports.requestedSpecifiers = {
+  POL: {
+    //For verb answerStructureChunks...
+    verb: [
+      {
+        featureConditions: {
+          //...if the tenseDesc includes any of these
+          // AND the person includes any of these...
+          tenseDescription: [
+            "past im",
+            "future im",
+            "conditional im",
+            "past pf",
+            "conditional pf",
+          ],
+          person: ["3per"],
+        },
+        //...then randomly select one of these, and set it on Question as Specifier, and on Answer as Feature.
+        featureActions: {
+          gender: ["m1", "m2", "m3", "f", "f", "f", "n", "n", "n"],
+        },
+      },
+      {
+        featureConditions: {
+          tenseDescription: [
+            "past im",
+            "future im",
+            "conditional im",
+            "past pf",
+            "conditional pf",
+          ],
+          person: ["1per", "2per"],
+        },
+        featureActions: { gender: ["m1", "f"] },
+      },
+    ],
+  },
+  ENG: {},
+};
+
 exports.tenseDescriptionTranslation = {
   //Note, this is NOT a Washburne style reference object. And that's okay.
   ENG: {

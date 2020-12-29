@@ -284,7 +284,7 @@ describe("findHomographs", () => {
   });
 });
 
-describe.only("checkLemmaObjectIds", () => {
+describe("checkLemmaObjectIds", () => {
   it("#edu2.1 Gives schematic and duplicateIds. ENG", () => {
     const currentLanguage = "ENG";
 
@@ -317,7 +317,7 @@ describe.only("checkLemmaObjectIds", () => {
   });
 });
 
-describe.only("checkSentenceFormulaIds", () => {
+describe("checkSentenceFormulaIds", () => {
   it("#edu3.1 Gives schematic and duplicateIds. ENG", () => {
     const currentLanguage = "ENG";
 

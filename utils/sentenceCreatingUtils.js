@@ -428,7 +428,8 @@ exports.giveFinalSentences = (
   kumquat,
   currentLanguage,
   answerLanguage,
-  hideClarifiers
+  hideClarifiers,
+  hideSpecifiers
 ) => {
   if (errorInSentenceCreation.errorMessage) {
     let errorMessage = {
@@ -458,7 +459,8 @@ exports.giveFinalSentences = (
         kumquat,
         currentLanguage,
         null,
-        hideClarifiers
+        hideClarifiers,
+        hideSpecifiers
       );
 
       finalSentences.forEach((finalSentence) => {
@@ -474,7 +476,8 @@ exports.giveFinalSentences = (
       kumquat,
       currentLanguage,
       answerLanguage,
-      hideClarifiers
+      hideClarifiers,
+      hideSpecifiers
     );
 
     finalSentences.forEach((finalSentence) => {
@@ -495,13 +498,18 @@ exports.buildSentenceString = (
   kumquat,
   currentLanguage,
   answerLanguage,
-  hideClarifiers
+  hideClarifiers,
+  hideSpecifiers
 ) => {
   let arrayOfSelectedWordsArrays = [];
   let producedSentences = [];
 
   if (!kumquat && !hideClarifiers) {
     otUtils.addClarifiers(unorderedArr, currentLanguage, answerLanguage);
+  }
+
+  if (false && !kumquat && !hideSpecifiers) {
+    otUtils.addSpecifiers(unorderedArr, currentLanguage, answerLanguage);
   }
 
   if (!sentenceFormula.primaryOrders || !sentenceFormula.primaryOrders.length) {
@@ -662,8 +670,7 @@ exports.conformAnswerStructureToQuestionStructure = (
         return;
       }
 
-      //Don't transfer number, if Q if tantum plurale.
-      //Eg if Q is "skrzypce" we'd want A to include both "violin" and "violins".
+      //Don't transfer Number if Q is Tantum Plurale.     eg if Q is "skrzypce" we'd want A to include both "violin" and "violins".
       if (
         inflectorKey === "number" &&
         questionSelectedLemmaObject.tantumPlurale
@@ -674,8 +681,7 @@ exports.conformAnswerStructureToQuestionStructure = (
         return;
       }
 
-      //Don't transfer number, if all A lObjs are tantum plurale.
-      //Eg if Q is "violin" we don't want to specify that A must be singular, as "skrzypce" can't be singular.
+      //Don't transfer Number, if all A lObjs are Tantum Plurale.     eg if Q is "violin" we don't want to specify that A must be singular, as "skrzypce" can't be singular.
       console.log("ddd", matchingAnswerLemmaObjects);
 
       if (
@@ -760,14 +766,14 @@ exports.conformAnswerStructureToQuestionStructure = (
         !answerStructureChunk.importantFeatures ||
         !answerStructureChunk.importantFeatures.includes(inflector)
       ) {
-        //Refrain from the blinding if this inflector has been marked as important in the question structure.
+        //Refrain from the blinding if this inflector has been marked as important in the answer structure.
         answerStructureChunk[inflector] = [];
       }
     });
 
     if (true) {
       console.log(
-        "zzz answerStructureChunk at conformAtoQ finally, after STEP TWO",
+        "zzz answerStructureChunk at conformAtoQ after STEP TWO",
         answerStructureChunk
       );
       console.log(
@@ -790,6 +796,59 @@ exports.conformAnswerStructureToQuestionStructure = (
       );
       console.log(
         "***************************************************************"
+      );
+    }
+
+    //STEP THREE: Adding requested Specifiers.
+    if (false) {
+      let requestedSpecifierInstructionsArr =
+        refObj.requestedSpecifiers[currentLanguage][
+          answerStructureChunk.wordtype
+        ];
+
+      if (!requestedSpecifierInstructionsArr) {
+        return;
+      }
+
+      requestedSpecifierInstructionsArr.forEach(
+        (requestedSpecifierInstructions) => {
+          if (
+            Object.keys(requestedSpecifierInstructions.featureConditions).every(
+              (featureKey) => {
+                let featureValues =
+                  requestedSpecifierInstructionsArr.featureConditions[
+                    featureKey
+                  ];
+
+                return featureValues.some((featureValue) =>
+                  answerStructureChunk[featureKey].includes(featureValue)
+                );
+              }
+            )
+          ) {
+            //hard change
+            Object.keys(requestedSpecifierInstructions.featureActions).forEach(
+              (featureActionKey) => {
+                let featureActionValues =
+                  requestedSpecifierInstructions.featureActions[
+                    featureActionKey
+                  ];
+
+                let featureActionValue = gpUtils.selectRandom(
+                  featureActionValues
+                );
+
+                answerStructureChunk[featureActionKey] = [featureActionValue];
+                if (!questionStructureChunk.specifiers) {
+                  questionStructureChunk.specifiers = [];
+                }
+                questionStructureChunk.specifiers.push({
+                  featureActionKey: featureActionValue,
+                });
+              }
+            );
+          }
+        }
       );
     }
   });
