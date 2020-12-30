@@ -34,22 +34,6 @@ exports.fetchPalette = (req) => {
   console.log("palette.model > questionSentenceData.arrayOfOutputArrays");
   gpUtils.consoleLogObjectAtTwoLevels(questionSentenceData.arrayOfOutputArrays);
 
-  let questionResponseObj = scUtils.giveFinalSentences(
-    questionSentenceData.arrayOfOutputArrays,
-    questionSentenceData.sentenceFormula,
-    questionSentenceData.errorInSentenceCreation,
-    kumquat,
-    questionLanguage,
-    answerLanguage,
-    hideClarifiers,
-    hideSpecifiers
-  );
-
-  console.log(
-    "palette.model > questionResponseObj before answer is sought",
-    questionResponseObj
-  );
-
   if (true) {
     console.log(
       "▌ ║ █ ║ ▌ │ ║ ▌ │ ║ ▌ ║ ▌ █ ║ ▌ ║ █ ║ ▌ │ ║ ▌ │ ║ ▌ ║ ▌ █ ║ ▌ ║ █ ║ ▌ │"
@@ -142,7 +126,7 @@ exports.fetchPalette = (req) => {
 
       otUtils.attachAnnotations(
         questionSentenceData.arrayOfOutputArrays[0],
-        questionLanguage
+        languagesObject
       );
 
       // console.log("sentenceStructure AFTER QA conform", sentenceStructure);
@@ -187,6 +171,17 @@ exports.fetchPalette = (req) => {
 
     scUtils.removeDuplicatesFromResponseObject(answerResponseObj);
   }
+
+  let questionResponseObj = scUtils.giveFinalSentences(
+    questionSentenceData.arrayOfOutputArrays,
+    questionSentenceData.sentenceFormula,
+    questionSentenceData.errorInSentenceCreation,
+    kumquat,
+    questionLanguage,
+    answerLanguage,
+    hideClarifiers,
+    hideSpecifiers
+  );
 
   let combinedResponseObj = {};
 

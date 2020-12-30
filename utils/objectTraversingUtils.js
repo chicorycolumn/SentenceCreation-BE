@@ -963,10 +963,13 @@ exports.addClarifiers = (
   gpUtils.consoleLogObjectAtTwoLevels(arrayOfOutputUnits);
 };
 
-exports.attachAnnotations = (arrayOfOutputUnits, currentLanguage) => {
+exports.attachAnnotations = (arrayOfOutputUnits, languagesObj) => {
+  let questionLanguage = languagesObj.previousQuestionLanguage;
+  let answerLanguage = languagesObj.currentLanguage;
+
   console.log(
     "@ @ @ @ @ @ @ @ @ @ @ @ @ @ @ " +
-      currentLanguage +
+      questionLanguage +
       " @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @"
   );
   console.log(
@@ -992,13 +995,31 @@ exports.attachAnnotations = (arrayOfOutputUnits, currentLanguage) => {
     let { structureChunk, selectedLemmaObject } = outputUnit;
 
     if (structureChunk.annotations && structureChunk.annotations.length) {
-      outputUnit.selectedWord += ` (${structureChunk.annotations
-        .map((annotationUnit) => Object.values(annotationUnit)[0])
-        .join(", ")})`;
+      let formattedAnnotationArr = structureChunk.annotations.map(
+        (annotationUnit) => {
+          let annotationKey = Object.keys(annotationUnit)[0];
+          let annotationValue = Object.values(annotationUnit)[0];
+
+          if (answerLanguage === "POL" && annotationKey === "gender") {
+            const POLgenderToPlainEnglishRef = {
+              m1: "male",
+              m2: "male",
+              m3: "male",
+              f: "female",
+              n: "neuter",
+            };
+
+            return POLgenderToPlainEnglishRef[annotationValue];
+          } else {
+            return annotationValue;
+          }
+        }
+      );
+      outputUnit.selectedWord += ` (${formattedAnnotationArr.join(", ")})`;
     }
   });
 
-  if (currentLanguage === "ENG") {
+  if (questionLanguage === "ENG") {
     console.log(
       " @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ "
     );
@@ -1008,6 +1029,6 @@ exports.attachAnnotations = (arrayOfOutputUnits, currentLanguage) => {
     console.log("Finished attachAnnotations !");
 
     console.log(arrayOfOutputUnits);
-    throw "Cease.";
+    // throw "Cease.";
   }
 };
