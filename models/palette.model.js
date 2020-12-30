@@ -117,17 +117,32 @@ exports.fetchPalette = (req) => {
         console.log("+++++++++++++++++++++++++++++++++++");
       }
 
-      otUtils.addSpecifiers(
-        sentenceFormula,
-        questionSentenceData.arrayOfOutputArrays[0],
-        languagesObject
-      );
-
       scUtils.conformAnswerStructureToQuestionStructure(
         sentenceFormula,
         questionSentenceData.arrayOfOutputArrays[0],
         languagesObject,
         words
+      );
+
+      // if (!hideClarifiers) {
+      //   otUtils.addClarifiers(
+      //     questionSentenceData.arrayOfOutputArrays[0],
+      //     questionLanguage,
+      //     answerLanguage
+      //   );
+      // }
+
+      if (!hideSpecifiers) {
+        otUtils.addSpecifiers(
+          sentenceFormula,
+          questionSentenceData.arrayOfOutputArrays[0],
+          languagesObject
+        );
+      }
+
+      otUtils.attachAnnotations(
+        questionSentenceData.arrayOfOutputArrays[0],
+        questionLanguage
       );
 
       // console.log("sentenceStructure AFTER QA conform", sentenceStructure);

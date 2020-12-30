@@ -23,7 +23,6 @@ exports.sentenceFormulasBank = {
         chunkId: "ver-1",
         agreeWith: "nou-1",
         wordtype: "verb",
-
         person: ["3per"],
         andTags: ["basic2"],
       },

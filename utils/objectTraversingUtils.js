@@ -695,10 +695,27 @@ exports.addSpecifiers = (
   let questionLanguage = languagesObj.previousQuestionLanguage;
   let answerLanguage = languagesObj.currentLanguage;
 
+  console.log("-------------------------------------------------");
+  console.log("-------------------------------------------------");
+  console.log("-------------------------------------------------");
+  console.log("----------------OT:addSpecifiers-----------------");
+  console.log("-------------------------------------------------");
+  console.log("--------------------start------------------------");
+  console.log("-------------------------------------------------");
+
+  console.log(">>>answerSentenceFormula");
+  console.log(answerSentenceFormula);
+  console.log(">>>questionOutputArr");
+  console.log({ questionOutputArr });
+  gpUtils.consoleLogObjectAtTwoLevels(questionOutputArr);
+
+  // throw "Cease.";
+
   questionOutputArr.forEach((questionOutputUnit) => {
     let questionStructureChunk = questionOutputUnit.structureChunk;
 
     if (questionStructureChunk.wordtype === "fixed") {
+      console.log("RETURN! Type fixed.");
       return;
     }
 
@@ -709,9 +726,10 @@ exports.addSpecifiers = (
 
     if (!answerStructureChunk) {
       console.log(
-        "OT:addSpecifiers found no answerStructureChunk for " +
+        "RETURN! OT:addSpecifiers found no answerStructureChunk for " +
           questionStructureChunk.chunkId
       );
+      return;
     }
 
     if (!questionStructureChunk.annotations) {
@@ -721,23 +739,21 @@ exports.addSpecifiers = (
     //Adding requested Specifiers.
 
     let requestedSpecifierInstructionsArr =
-      refObj.requestedSpecifiers[questionLanguage][
-        answerStructureChunk.wordtype
-      ];
+      refObj.requestedSpecifiers[answerLanguage][answerStructureChunk.wordtype];
 
     if (!requestedSpecifierInstructionsArr) {
+      console.log("RETURN! No requestedSpecifierInstructionsArr.");
       return;
     }
 
-    console.log(
-      "requestedSpecifierInstructionsArr",
-      requestedSpecifierInstructionsArr
-    );
-
-    console.log("answerStructureChunk", answerStructureChunk);
-
     requestedSpecifierInstructionsArr.forEach(
       (requestedSpecifierInstructions) => {
+        console.log(
+          "1aa+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++About to check if first clause.",
+          { questionStructureChunk },
+          { requestedSpecifierInstructions }
+        );
+
         if (
           Object.keys(requestedSpecifierInstructions.featureConditions).every(
             (featureKey) => {
@@ -750,7 +766,11 @@ exports.addSpecifiers = (
             }
           )
         ) {
-          console.log("Entered first clause.");
+          console.log(
+            "==============================================================Entered first clause.",
+            questionStructureChunk.chunkId,
+            { requestedSpecifierInstructions }
+          );
           //hard change
           Object.keys(requestedSpecifierInstructions.featureActions).forEach(
             (featureActionKey) => {
@@ -761,19 +781,38 @@ exports.addSpecifiers = (
                 featureActionValues
               );
 
+              console.log("1bb", { featureActionKey, featureActionValue });
+
               answerStructureChunk[featureActionKey] = [featureActionValue];
-              if (!questionStructureChunk.specifiers) {
-                questionStructureChunk.specifiers = [];
+              if (!questionStructureChunk.annotations) {
+                questionStructureChunk.annotations = [];
               }
-              questionStructureChunk.specifiers.push({
-                featureActionKey: featureActionValue,
-              });
+
+              let specifierObj = {};
+              specifierObj[featureActionKey] = featureActionValue;
+
+              questionStructureChunk.annotations.push(specifierObj);
             }
           );
         }
       }
     );
   });
+
+  console.log("-------------------------------------------------");
+  console.log("-------------------------------------------------");
+  console.log("-------------------------------------------------");
+  console.log("----------------OT:addSpecifiers-----------------");
+  console.log("-------------------------------------------------");
+  console.log("---------------------end-------------------------");
+  console.log("-------------------------------------------------");
+
+  console.log(">>>answerSentenceFormula.sentenceStructure");
+  console.log(answerSentenceFormula.sentenceStructure);
+  console.log(">>>questionOutputArr");
+  gpUtils.consoleLogObjectAtTwoLevels(questionOutputArr);
+
+  // throw "Cease.";
 };
 
 exports.addClarifiers = (
@@ -919,17 +958,56 @@ exports.addClarifiers = (
     }
   });
 
-  exports.attachAnnotations(arrayOfOutputUnits);
+  // exports.attachAnnotations(arrayOfOutputUnits);
 
   gpUtils.consoleLogObjectAtTwoLevels(arrayOfOutputUnits);
 };
 
-exports.attachAnnotations = (arrayOfOutputUnits) => {
+exports.attachAnnotations = (arrayOfOutputUnits, currentLanguage) => {
+  console.log(
+    "@ @ @ @ @ @ @ @ @ @ @ @ @ @ @ " +
+      currentLanguage +
+      " @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @"
+  );
+  console.log(
+    " @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ "
+  );
+  console.log(
+    "@ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @"
+  );
+  console.log(
+    " @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ "
+  );
+  console.log(
+    "@ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @"
+  );
+  console.log("Let's attachAnnotations !");
+
+  console.log(arrayOfOutputUnits.map((unit) => unit.structureChunk));
+  console.log(
+    arrayOfOutputUnits.map((unit) => unit.structureChunk.annotations)
+  );
+
   arrayOfOutputUnits.forEach((outputUnit) => {
     let { structureChunk, selectedLemmaObject } = outputUnit;
 
     if (structureChunk.annotations && structureChunk.annotations.length) {
-      outputUnit.selectedWord += ` (${structureChunk.annotations.join(", ")})`;
+      outputUnit.selectedWord += ` (${structureChunk.annotations
+        .map((annotationUnit) => Object.values(annotationUnit)[0])
+        .join(", ")})`;
     }
   });
+
+  if (currentLanguage === "ENG") {
+    console.log(
+      " @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ "
+    );
+    console.log(
+      "@ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @"
+    );
+    console.log("Finished attachAnnotations !");
+
+    console.log(arrayOfOutputUnits);
+    throw "Cease.";
+  }
 };

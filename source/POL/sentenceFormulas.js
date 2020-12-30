@@ -550,7 +550,6 @@ exports.sentenceFormulasBank = {
         chunkId: "ver-1",
         agreeWith: "nou-1",
         wordtype: "verb",
-
         tenseDescription: ["present im"],
         person: ["3per"],
         andTags: ["basic2"],

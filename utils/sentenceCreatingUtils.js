@@ -498,14 +498,18 @@ exports.buildSentenceString = (
   let arrayOfSelectedWordsArrays = [];
   let producedSentences = [];
 
-  if (!kumquat && !hideClarifiers) {
-    otUtils.addClarifiers(unorderedArr, currentLanguage, answerLanguage);
-  }
+  //NOT HERE!
+  // if (!kumquat && !hideClarifiers) {
+  //   otUtils.addClarifiers(unorderedArr, currentLanguage, answerLanguage);
+  // }
 
-  if (!kumquat && !hideSpecifiers) {
-    //We want to give this the questionStructureChunk and the answerStructureChunk
-    otUtils.addSpecifiers(unorderedArr, currentLanguage, answerLanguage);
-  }
+  // otUtils.attachAnnotations(unorderedArr, currentLanguage);
+
+  //NOT HERE!
+  // if (!kumquat && !hideSpecifiers) {
+  //   //We want to give this the questionStructureChunk and the answerStructureChunk
+  //   otUtils.addSpecifiers(unorderedArr, currentLanguage, answerLanguage);
+  // }
 
   if (!sentenceFormula.primaryOrders || !sentenceFormula.primaryOrders.length) {
     let selectedWordsArr = unorderedArr.map((obj) => obj.selectedWord);

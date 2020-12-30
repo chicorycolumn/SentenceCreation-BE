@@ -896,8 +896,8 @@ describe("/api", () => {
     });
   });
 
-  xdescribe("/palette - Stage 11: Adding Specifiers.", () => {
-    it("#pal11-01a Check Specifier of gender is added to ENG past continuous.", () => {
+  describe("/palette - Stage 11: Adding Specifiers.", () => {
+    it.only("#pal11-01a Check Specifier of gender is added to ENG past continuous.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2705,7 +2705,7 @@ describe("/api", () => {
   });
 
   describe("/palette - Stage 6: Translating rich sentences (nouns, adjectives, verbs).", () => {
-    it.only("#pal06-01a GET 200 YES: Returns sentence with all translations (RSWAT).", () => {
+    it("#pal06-01a GET 200 YES: Returns sentence with all translations (RSWAT).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
