@@ -280,7 +280,7 @@ let nounSet = [
     id: "pol-nou-010",
     gender: "nonvirile",
     //notes
-    deficient: true,
+    lacking: true,
     tantumPlurale: true,
     //inflections
     inflections: {
@@ -305,7 +305,7 @@ let nounSet = [
     id: "pol-nou-008",
     gender: "nonvirile",
     //notes
-    deficient: true,
+    lacking: true,
     tantumPlurale: true,
     //inflections
     inflections: {
@@ -722,8 +722,8 @@ let verbSet = [
     id: "pol-ver-000-im-01",
     aspect: "imperfective",
     //notes
-    deficient: true,
-    defective: false,
+    lacking: true,
+
     complete: true,
     imperfectiveOnly_unadjusted: true,
     //inflections
@@ -903,8 +903,8 @@ let verbSet = [
     id: "pol-ver-001-im-01",
     aspect: "imperfective",
     //notes
-    deficient: true,
-    defective: false,
+    lacking: true,
+
     imperfectiveOnly_unadjusted: true,
     //inflections
     inflections: {
@@ -995,7 +995,6 @@ let verbSet = [
     aspect: "imperfective",
     //notes
 
-    defective: false,
     //inflections
     inflections: {
       infinitive: "pisać",
@@ -1085,7 +1084,6 @@ let verbSet = [
     aspect: "perfective",
     //notes
 
-    defective: false,
     //inflections
     inflections: {
       infinitive: "napisać",
@@ -1175,7 +1173,6 @@ let verbSet = [
     aspect: "imperfective",
     //notes
 
-    defective: false,
     //inflections
     inflections: {
       infinitive: "czytać",
@@ -1265,7 +1262,6 @@ let verbSet = [
     aspect: "perfective",
     //notes
 
-    defective: false,
     //inflections
     inflections: {
       infinitive: "przeczytać",
@@ -1355,7 +1351,6 @@ let verbSet = [
     aspect: "imperfective",
     //notes
 
-    defective: false,
     //inflections
     inflections: {
       infinitive: "badać",
@@ -1445,7 +1440,6 @@ let verbSet = [
     aspect: "perfective",
     //notes
 
-    defective: false,
     //inflections
     inflections: {
       infinitive: "zbadać",
@@ -1535,7 +1529,6 @@ let verbSet = [
     aspect: "perfective",
     //notes
 
-    defective: false,
     //inflections
     inflections: {
       infinitive: "znieść",

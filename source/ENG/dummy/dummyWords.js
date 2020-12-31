@@ -146,7 +146,7 @@ let verbSet = [
     lemma: "bear",
     id: "eng-ver-d01",
     //notes
-    defective: false,
+
     //inflections
     inflections: {
       infinitive: "bear",
@@ -171,7 +171,7 @@ let verbSet = [
     lemma: "tie",
     id: "eng-ver-d02",
     //notes
-    defective: false,
+
     //inflections
     inflections: {
       infinitive: "tie",

@@ -281,7 +281,7 @@ let verbSet = [
     lemma: "read",
     id: "eng-ver-003",
     //notes
-    defective: false,
+
     //inflections
     inflections: {
       infinitive: "read",
@@ -300,7 +300,7 @@ let verbSet = [
     lemma: "write",
     id: "eng-ver-002",
     //notes
-    defective: false,
+
     //inflections
     inflections: {
       infinitive: "write",
@@ -319,7 +319,7 @@ let verbSet = [
     lemma: "research",
     id: "eng-ver-004",
     //notes
-    defective: false,
+
     //inflections
     inflections: {
       infinitive: "research",
@@ -338,7 +338,7 @@ let verbSet = [
     lemma: "have",
     id: "eng-ver-001",
     //notes
-    defective: false,
+
     //inflections
     inflections: {
       infinitive: "have",
@@ -357,7 +357,7 @@ let verbSet = [
     lemma: "be",
     id: "eng-ver-000",
     //notes
-    defective: false,
+
     //inflections
     inflections: {
       infinitive: "be",

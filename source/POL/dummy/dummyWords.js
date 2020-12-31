@@ -156,7 +156,7 @@ let nounSet = [
     lemma: "foobar_loc_only",
     gender: "n",
     tags: ["dummy"],
-    deficient: true,
+    lacking: true,
     inflections: {
       singular: {
         loc: "foobar_sin_loc",
@@ -171,7 +171,7 @@ let nounSet = [
     lemma: "foobar_ins_only",
     gender: "n",
     tags: ["dummy"],
-    deficient: true,
+    lacking: true,
     inflections: {
       singular: {
         ins: "foobar_sin_ins",
@@ -186,7 +186,7 @@ let nounSet = [
     lemma: "foobar_sin_ins_plu_loc_only",
     gender: "n",
     tags: ["dummy2"],
-    deficient: true,
+    lacking: true,
     inflections: {
       singular: {
         ins: "foobar_sin_ins",
@@ -201,7 +201,7 @@ let nounSet = [
     lemma: "foobar_sin_ins_plu_loc_only",
     gender: "n",
     tags: ["dummy3"],
-    deficient: true,
+    lacking: true,
     inflections: {
       singular: {
         ins: "foobar_sin_ins",
@@ -216,7 +216,7 @@ let nounSet = [
     lemma: "foobar_sin_loc_plu_ins_only",
     gender: "n",
     tags: ["dummy3"],
-    deficient: true,
+    lacking: true,
     inflections: {
       singular: {
         loc: "foobar_sin_loc",
@@ -231,7 +231,7 @@ let nounSet = [
     lemma: "foobar_none",
     gender: "n",
     tags: ["dummy3"],
-    deficient: true,
+    lacking: true,
     inflections: {
       plural: {
         loc: "foobar_plu_loc",
@@ -244,7 +244,7 @@ let nounSet = [
     lemma: "foobar-A",
     gender: "n",
     tags: ["foobar-A"],
-    deficient: true,
+    lacking: true,
     inflections: {
       singular: {
         nom: "foobar-A",
@@ -256,7 +256,7 @@ let nounSet = [
     lemma: "foobar-B",
     gender: "n",
     tags: ["foobar-B"],
-    deficient: true,
+    lacking: true,
     inflections: {
       singular: {
         nom: "foobar-B",
@@ -268,7 +268,7 @@ let nounSet = [
     lemma: "foobar-C",
     gender: "n",
     tags: ["foobar-C"],
-    deficient: true,
+    lacking: true,
     inflections: {
       singular: {
         nom: "foobar-C",
@@ -280,7 +280,7 @@ let nounSet = [
     lemma: "dummy-nou-010",
     gender: "n",
     tags: ["dummy-nou-010"],
-    deficient: true,
+    lacking: true,
     inflections: {
       singular: {
         nom: "sing nom is present",
@@ -305,7 +305,6 @@ let verbSet = [
     aspect: "perfective",
     //notes
 
-    defective: false,
     //inflections
     inflections: {
       infinitive: "znieść",
@@ -395,7 +394,6 @@ let verbSet = [
     aspect: "imperfective",
     //notes
 
-    defective: false,
     //inflections
     inflections: {
       infinitive: "wiązać",

@@ -694,7 +694,7 @@ describe("extractNestedRoutes", () => {
       lemma: "read",
       id: "eng-ver-003",
       //notes
-      defective: false,
+
       //inflections
       inflections: {
         infinitive: "read",

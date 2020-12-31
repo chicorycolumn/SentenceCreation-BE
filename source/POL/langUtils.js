@@ -168,15 +168,6 @@ exports.fillVerbInflections = (lemmaObject) => {
       "' lObj."
   );
 
-  if (lemmaObject.defective) {
-    console.log(
-      "fillVerbInflections fxn will do nothing, as '" +
-        lemmaObject.lemma +
-        "' lObj is marked as DEFECTIVE."
-    );
-    return;
-  }
-
   if (lemmaObject.complete) {
     console.log(
       "fillVerbInflections fxn will do nothing, as '" +

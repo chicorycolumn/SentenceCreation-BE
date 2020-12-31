@@ -314,7 +314,7 @@ exports.findMatchingLemmaObjectThenWord = (
       matchesCopy
     );
 
-    matchesCopy = lfUtils.filterOutDeficientLemmaObjects(
+    matchesCopy = lfUtils.filterOutLackingLemmaObjects(
       matchesCopy,
       structureChunk,
       currentLanguage

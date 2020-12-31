@@ -124,11 +124,17 @@ exports.updateStructureChunkByAndTagsAndSelectors = (
   }
 };
 
-exports.filterOutDeficientLemmaObjects = (
+exports.filterOutLackingLemmaObjects = (
   sourceArr,
   specObj,
   currentLanguage
 ) => {
+  console.log("filterOutLackingLemmaObjects fxn was given:", {
+    sourceArr,
+    specObj,
+    currentLanguage,
+  });
+
   let inflectionChain =
     refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
       specObj.wordtype
@@ -136,7 +142,7 @@ exports.filterOutDeficientLemmaObjects = (
   let requirementArrs = inflectionChain.map((key) => specObj[key] || []);
 
   return sourceArr.filter((lObj) => {
-    if (!lObj.deficient) {
+    if (!lObj.lacking) {
       return true;
     } else {
       let { routesByNesting, routesByLevel } = otUtils.extractNestedRoutes(

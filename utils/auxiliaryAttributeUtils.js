@@ -15,7 +15,9 @@ exports.addSpecifiers = (
     let questionStructureChunk = questionOutputUnit.structureChunk;
 
     if (questionStructureChunk.wordtype === "fixed") {
-      console.log("RETURN! Type fixed.");
+      console.log(
+        "RETURN! The wordtype is 'fixed' so addSpecifiers fxn takes no action on this one."
+      );
       return;
     }
 
