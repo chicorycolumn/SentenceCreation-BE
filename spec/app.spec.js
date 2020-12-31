@@ -717,7 +717,7 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  xdescribe("/palette - Stage 12: Further linguistic features.", () => {
+  describe("/palette - Stage 12: Further linguistic features.", () => {
     it("#pal12-01a GET 200 YES: Tantum plurale in POL is allowed to be sing or plur in ENG.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
@@ -786,7 +786,7 @@ describe("/api", () => {
           expect(answerSentenceArr).to.have.members(["Czerwone drzwi."]);
         });
     });
-    it("#pal12-02a GET 200 YES: RSWAT for First Conditional POL->ENG.", () => {
+    xit("#pal12-02a GET 200 YES: RSWAT for First Conditional POL->ENG.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -840,7 +840,7 @@ describe("/api", () => {
           // );
         });
     });
-    it("#pal12-02b GET 200 YES: RSWAT for First Conditional ENG->POL.", () => {
+    xit("#pal12-02b GET 200 YES: RSWAT for First Conditional ENG->POL.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -992,7 +992,7 @@ describe("/api", () => {
     });
   });
 
-  describe("/palette - Stage 10: Allohomographs.", () => {
+  describe("/palette - Stage 10: Allohomographs (adding Clarifiers).", () => {
     it("#pal10-01a Type 1 Allohomographs of SingleWordtype: 'nut' ENG to POL. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -1430,7 +1430,7 @@ describe("/api", () => {
     });
   });
 
-  describe("/palette - Stage 9: Synhomographs.", () => {
+  describe("/palette - Stage 9: Synhomographs (adding Clarifiers).", () => {
     it("#pal09-01a (Type 1 Synhomographs. If-PW: clarify Inflections) 'sheep': ENG to POL. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -1795,8 +1795,6 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          // console.log(res.body);
-
           checkSentenceTranslations(
             res,
             questionLanguage,
@@ -1822,8 +1820,6 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          // console.log(res.body);
-
           checkSentenceTranslations(
             res,
             questionLanguage,
@@ -1849,8 +1845,6 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          // console.log(res.body);
-
           checkSentenceTranslations(
             res,
             questionLanguage,
@@ -1876,8 +1870,6 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          // console.log(res.body);
-
           checkSentenceTranslations(
             res,
             questionLanguage,
@@ -1903,8 +1895,6 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          // console.log(res.body);
-
           checkSentenceTranslations(
             res,
             questionLanguage,
@@ -1952,8 +1942,6 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          // console.log(res.body);
-
           checkSentenceTranslations(
             res,
             questionLanguage,
@@ -1979,8 +1967,6 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          // console.log(res.body);
-
           checkSentenceTranslations(
             res,
             questionLanguage,
@@ -2006,8 +1992,6 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          // console.log(res.body);
-
           checkSentenceTranslations(
             res,
             questionLanguage,
@@ -2033,8 +2017,6 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          // console.log(res.body);
-
           checkSentenceTranslations(
             res,
             questionLanguage,
@@ -2060,8 +2042,6 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          // console.log(res.body);
-
           checkSentenceTranslations(
             res,
             questionLanguage,
@@ -2087,8 +2067,6 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          // console.log(res.body);
-
           checkSentenceTranslations(
             res,
             questionLanguage,
@@ -2266,8 +2244,6 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          // console.log(res.body);
-
           checkSentenceTranslations(
             res,
             questionLanguage,
@@ -2293,8 +2269,6 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          // console.log(res.body);
-
           checkSentenceTranslations(
             res,
             questionLanguage,
@@ -2320,8 +2294,6 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          // console.log(res.body);
-
           checkSentenceTranslations(
             res,
             questionLanguage,
@@ -2347,8 +2319,6 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          // console.log(res.body);
-
           checkSentenceTranslations(
             res,
             questionLanguage,
@@ -2374,8 +2344,6 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          // console.log(res.body);
-
           checkSentenceTranslations(
             res,
             questionLanguage,
@@ -2423,8 +2391,6 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          // console.log(res.body);
-
           checkSentenceTranslations(
             res,
             questionLanguage,
@@ -2450,8 +2416,6 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          // console.log(res.body);
-
           checkSentenceTranslations(
             res,
             questionLanguage,
@@ -2477,8 +2441,6 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          // console.log(res.body);
-
           checkSentenceTranslations(
             res,
             questionLanguage,
@@ -2504,8 +2466,6 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          // console.log(res.body);
-
           checkSentenceTranslations(
             res,
             questionLanguage,
@@ -2531,8 +2491,6 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          // console.log(res.body);
-
           checkSentenceTranslations(
             res,
             questionLanguage,
@@ -2558,8 +2516,6 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          // console.log(res.body);
-
           checkSentenceTranslations(
             res,
             questionLanguage,
@@ -2691,8 +2647,6 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          // console.log(res.body);
-
           checkSentenceTranslations(
             res,
             questionLanguage,
@@ -3331,7 +3285,7 @@ describe("/api", () => {
     });
   });
 
-  describe("/palette - Stage 5: Rich sentences (with nouns adjectives and verbs).", () => {
+  describe("/palette - Stage 5: Rich sentences (nouns adjectives and verbs).", () => {
     it("#pal05-01a GET 200 YES: Returns a sentence in present.", () => {
       return request(app)
         .get("/api/palette")

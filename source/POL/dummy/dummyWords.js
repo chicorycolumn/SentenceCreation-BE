@@ -8,7 +8,7 @@ let nounSet = [
     id: "pol-nou-d01",
     gender: "m3",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       singular: {
@@ -38,7 +38,7 @@ let nounSet = [
     id: "pol-nou-d02",
     gender: "f",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       singular: {
@@ -68,7 +68,7 @@ let nounSet = [
     id: "pol-nou-d03",
     gender: "m2",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       singular: {
@@ -98,7 +98,7 @@ let nounSet = [
     id: "pol-nou-d04",
     gender: "m3",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       singular: {
@@ -128,7 +128,7 @@ let nounSet = [
     id: "pol-nou-d05",
     gender: "m3",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       singular: {
@@ -304,7 +304,7 @@ let verbSet = [
     id: "pol-ver-d01-pf-01",
     aspect: "perfective",
     //notes
-    deficient: false,
+
     defective: false,
     //inflections
     inflections: {
@@ -394,7 +394,7 @@ let verbSet = [
     id: "pol-ver-d02-im-01",
     aspect: "imperfective",
     //notes
-    deficient: false,
+
     defective: false,
     //inflections
     inflections: {

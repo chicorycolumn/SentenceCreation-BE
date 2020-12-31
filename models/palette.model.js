@@ -79,29 +79,6 @@ exports.fetchPalette = (req) => {
         questionLanguage,
       };
 
-      if (false) {
-        console.log("+++++++++++++++++++++++++++++++++++fff");
-        console.log("-----------------------------------");
-        console.log("+++++++++++++++++++++++++++++++++++");
-        console.log(
-          "|",
-          "sentenceStructure BEFORE QA conform",
-          sentenceStructure
-        );
-
-        console.log(
-          "questionOutputArr.length ought to be 1",
-          questionOutputArr.length
-        );
-        console.log(
-          "questionOutputArr[0] which will be used to update the sentenceStructure",
-          questionOutputArr[0]
-        );
-        console.log("+++++++++++++++++++++++++++++++++++");
-        console.log("-----------------------------------");
-        console.log("+++++++++++++++++++++++++++++++++++");
-      }
-
       let questionOutputArr = questionSentenceData.arrayOfOutputArrays[0];
 
       scUtils.conformAnswerStructureToQuestionStructure(
@@ -124,8 +101,6 @@ exports.fetchPalette = (req) => {
       }
 
       aaUtils.attachAnnotations(questionOutputArr, languagesObject);
-
-      // console.log("sentenceStructure AFTER QA conform", sentenceStructure);
 
       let answerSentenceData = scUtils.processSentenceFormula(
         {

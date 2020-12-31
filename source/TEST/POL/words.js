@@ -10,7 +10,7 @@ let nounSet = [
     id: "pol-nou-001",
     gender: "f",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       singular: {
@@ -40,7 +40,7 @@ let nounSet = [
     id: "pol-nou-014",
     gender: "m2",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       singular: {
@@ -70,7 +70,7 @@ let nounSet = [
   //   id: "pol-nou-002",
   //   gender: "m1",
   //   //notes
-  //   deficient: false,
+  //
   //   //inflections
   //   inflections: {
   //     singular: {
@@ -100,7 +100,7 @@ let nounSet = [
     id: "pol-nou-003",
     gender: "m1",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       singular: {
@@ -130,7 +130,7 @@ let nounSet = [
     id: "pol-nou-004",
     gender: "f",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       singular: {
@@ -160,7 +160,7 @@ let nounSet = [
     id: "pol-nou-005",
     gender: "n",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       singular: {
@@ -190,7 +190,7 @@ let nounSet = [
     id: "pol-nou-006",
     gender: "n",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       singular: {
@@ -220,7 +220,7 @@ let nounSet = [
     id: "pol-nou-007",
     gender: "n",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       singular: {
@@ -250,7 +250,7 @@ let nounSet = [
     id: "pol-nou-009",
     gender: "f",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       singular: {
@@ -328,7 +328,7 @@ let nounSet = [
     id: "pol-nou-011",
     gender: "f",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       singular: {
@@ -358,7 +358,7 @@ let nounSet = [
     id: "pol-nou-012",
     gender: "m3",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       singular: {
@@ -388,7 +388,7 @@ let nounSet = [
     id: "pol-nou-013",
     gender: "f",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       singular: {
@@ -417,7 +417,7 @@ let pronounSet = [
     lemma: "ja",
     id: "pol-pro-001",
     tags: [],
-    deficient: false,
+
     person: "1per",
     gender: ["m1", "f"],
     inflections: {
@@ -448,7 +448,7 @@ let pronounSet = [
     lemma: "ty",
     id: "pol-pro-001",
     tags: [],
-    deficient: false,
+
     person: "2per",
     gender: ["m1", "f"],
     inflections: {
@@ -479,7 +479,7 @@ let pronounSet = [
     lemma: "on",
     id: "pol-pro-001",
     tags: [],
-    deficient: false,
+
     person: "3per",
     gender: ["m1", "m2", "m3"],
     inflections: {
@@ -505,7 +505,7 @@ let adjectiveSet = [
     lemma: "czerwony",
     id: "pol-adj-001",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       simple: {
@@ -575,7 +575,7 @@ let adjectiveSet = [
     lemma: "niebieski",
     id: "pol-adj-002",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       simple: {
@@ -645,7 +645,7 @@ let adjectiveSet = [
     lemma: "mały",
     id: "pol-adj-003",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       simple: {
@@ -994,7 +994,7 @@ let verbSet = [
     id: "pol-ver-004-im-01",
     aspect: "imperfective",
     //notes
-    deficient: false,
+
     defective: false,
     //inflections
     inflections: {
@@ -1084,7 +1084,7 @@ let verbSet = [
     id: "pol-ver-004-pf-01",
     aspect: "perfective",
     //notes
-    deficient: false,
+
     defective: false,
     //inflections
     inflections: {
@@ -1174,7 +1174,7 @@ let verbSet = [
     id: "pol-ver-002-im-01",
     aspect: "imperfective",
     //notes
-    deficient: false,
+
     defective: false,
     //inflections
     inflections: {
@@ -1264,7 +1264,7 @@ let verbSet = [
     id: "pol-ver-002-pf-01",
     aspect: "perfective",
     //notes
-    deficient: false,
+
     defective: false,
     //inflections
     inflections: {
@@ -1354,7 +1354,7 @@ let verbSet = [
     id: "pol-ver-003-im-01",
     aspect: "imperfective",
     //notes
-    deficient: false,
+
     defective: false,
     //inflections
     inflections: {
@@ -1444,7 +1444,7 @@ let verbSet = [
     id: "pol-ver-003-pf-01",
     aspect: "perfective",
     //notes
-    deficient: false,
+
     defective: false,
     //inflections
     inflections: {
@@ -1534,7 +1534,7 @@ let verbSet = [
     id: "pol-ver-005-pf-01",
     aspect: "perfective",
     //notes
-    deficient: false,
+
     defective: false,
     //inflections
     inflections: {

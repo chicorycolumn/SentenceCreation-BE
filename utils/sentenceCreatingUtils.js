@@ -10,13 +10,6 @@ exports.getMaterials = (
   sentenceFormulaSymbol,
   useDummy
 ) => {
-  console.log("}} SC:getMaterials fxn was given:", {
-    currentLanguage,
-    sentenceFormulaId,
-    sentenceFormulaSymbol,
-    useDummy,
-  });
-
   let sentenceFormula;
 
   //STEP ZERO (A): Get necessary source materials.
@@ -42,8 +35,6 @@ exports.getMaterials = (
     : gpUtils.copyWithoutReference(sentenceFormulasBank);
 
   if (sentenceFormulaId) {
-    // console.log("fff", sentenceFormula);
-
     let matchingSentenceFormulaData = otUtils.findObjectInNestedObject(
       sentenceFormulas,
       {
@@ -52,9 +43,6 @@ exports.getMaterials = (
       true
     );
 
-    // console.log("eee", matchingSentenceFormulaData);
-
-    // return;
     sentenceFormula = matchingSentenceFormulaData.value;
     sentenceFormulaId = sentenceFormula.sentenceFormulaId;
     sentenceFormulaSymbol = sentenceFormula.sentenceFormulaSymbol;
@@ -93,13 +81,6 @@ exports.processSentenceFormula = (
   words,
   kumquat
 ) => {
-  console.log("processSentenceFormula fxn was given:", {
-    languagesObj,
-    sentenceFormula,
-    words,
-    kumquat,
-  });
-
   let { currentLanguage, previousQuestionLanguage } = languagesObj;
   let {
     sentenceFormulaId,
@@ -113,20 +94,8 @@ exports.processSentenceFormula = (
   //STEP ZERO
   //Preprocess sentence structure.
 
-  // console.log("----");
-  // console.log("--------");
-  // console.log("sentenceStructure BEFORE preprocessing", sentenceStructure);
-  // console.log("--------");
-  // console.log("----");
-
   allLangUtils.preprocessStructureChunks(sentenceStructure, currentLanguage);
   langUtils.preprocessStructureChunks(sentenceStructure, currentLanguage);
-
-  // console.log("~~~~");
-  // console.log("~~~~~~~~");
-  // console.log("sentenceStructure AFTER preprocessing", sentenceStructure);
-  // console.log("~~~~~~~~");
-  // console.log("~~~~");
 
   //STEP ONE: Select headwords and add to result array.
 
@@ -150,7 +119,7 @@ exports.processSentenceFormula = (
         typeof structureChunk === "object" && structureChunk.chunkId === headId
     );
 
-    console.log("~~ SC:processSentenceFormula STEP ONE", headChunk);
+    console.log("~~ SC:processSentenceFormula STEP ONE", headChunk.chunkId);
 
     //The below functions correctly with regard to:
     //Give kumquat as true, it returns multiple outputUnit objects in allPossOutputUnits_head array.
@@ -170,7 +139,7 @@ exports.processSentenceFormula = (
       !allPossOutputUnits_head ||
       !allPossOutputUnits_head.length
     ) {
-      console.log("smang it");
+      console.log("An error arose in SC:processSentenceFormula.");
       return {
         outputArr: null,
         sentenceFormula,
@@ -179,11 +148,6 @@ exports.processSentenceFormula = (
         errorInSentenceCreation,
       };
     }
-
-    // console.log(
-    //   "This HEADCHUNK has been parsed to this output array:",
-    //   allPossOutputUnits_head.map((outputUnit) => outputUnit.selectedWord)
-    // );
 
     headOutputUnitArrays.push(allPossOutputUnits_head);
   });
@@ -211,8 +175,6 @@ exports.processSentenceFormula = (
       let headChunk = headOutputUnit.structureChunk;
       let headId = headChunk.chunkId;
 
-      // console.log("headChunk", headChunk);
-
       //STEP TWO (NOW NESTED): Select dependent words and add to result array.
       let dependentChunks = sentenceStructure
         .filter(
@@ -236,8 +198,6 @@ exports.processSentenceFormula = (
             headChunk,
             dependentChunk
           );
-
-          // console.log("dependentChunk", dependentChunk);
 
           let allPossOutputUnits_dependent = otUtils.findMatchingLemmaObjectThenWord(
             gpUtils.copyWithoutReference(dependentChunk),
@@ -265,16 +225,6 @@ exports.processSentenceFormula = (
           //The above functions correctly with regard to:
           //Give kumquat as true, it returns multiple outputUnit objects in allPossOutputUnits_dependent array.
           //Give kumquat as false, it returns just one outputUnit object in said array.
-
-          // console.log(
-          //   "For this head output unit:",
-          //   headOutputUnit,
-          //   "This DEPENDENTCHUNK has been parsed to this output array:",
-          //   allPossOutputUnits_dependent
-          //   // .map(
-          //   //   (outputUnit) => outputUnit.selectedWord
-          //   // )
-          // );
 
           if (!headOutputUnit.possibleDependentOutputArrays) {
             headOutputUnit.possibleDependentOutputArrays = [];
@@ -365,11 +315,6 @@ exports.processSentenceFormula = (
         errorInSentenceCreation,
       };
     }
-
-    // console.log(
-    //   "This OTHERCHUNK has been parsed to this output array:",
-    //   allPossOutputUnits_other.map((outputUnit) => outputUnit.selectedWord)
-    // );
 
     //The above functions correctly.
     //If kumquat is true, then allPossOutputUnits_other is array of outputUnit objects, while if false, array of just one said object.
@@ -575,43 +520,11 @@ exports.conformAnswerStructureToQuestionStructure = (
     );
 
     if (!answerStructureChunk) {
-      console.log("Ah shucks");
+      console.log(
+        "No answerStructureChunk was found, in SC:conformAnswerStructureToQuestionStructure"
+      );
       return;
     }
-
-    if (true) {
-      console.log(
-        "***************************************************************"
-      );
-      console.log(
-        "***************************************************************"
-      );
-      console.log(
-        "***********conformAnswerStructureToQuestionStructure***********"
-      );
-      console.log(
-        "***************************************************************"
-      );
-      console.log(
-        "***************************START*******************************"
-      );
-      console.log(
-        "***************************************************************"
-      );
-      console.log(
-        "***************************************************************"
-      );
-      console.log("questionStructureChunk", questionStructureChunk);
-      console.log(
-        "xxx answerStructureChunk at conformAtoQ after STEP ZERO",
-        answerStructureChunk
-      );
-    }
-
-    // console.log(
-    //   "So, the Polish lemma chosen was",
-    //   questionSelectedLemmaObject.lemma
-    // );
 
     let lemmasToSearch =
       questionSelectedLemmaObject.translations[answerLanguage];
@@ -636,12 +549,16 @@ exports.conformAnswerStructureToQuestionStructure = (
         )
     );
 
+    if (!matchingAnswerLemmaObjects.length) {
+      console.log(
+        "There were no matching answer lemma objects found in SC:conformAnswerStructureToQuestionStructure"
+      );
+      return;
+    }
+
     answerStructureChunk.specificIds = matchingAnswerLemmaObjects.map(
       (lObj) => lObj.id
     );
-
-    // console.log("I found these matches:", answerStructureChunk.specificIds);
-    // console.log("answerStructureChunk", answerStructureChunk);
 
     refObj.lemmaObjectFeatures[
       answerLanguage
@@ -686,14 +603,10 @@ exports.conformAnswerStructureToQuestionStructure = (
 
         let tenseDescriptions = questionStructureChunk["tenseDescription"];
 
-        console.log("ppp BEFORE ADJUST", { tenseDescriptions });
-
         questionLangUtils.adjustTenseDescriptionsBeforeTranslating(
           tenseDescriptions,
           questionSelectedLemmaObject
         );
-
-        console.log("qqq AFTER ADJUST", { tenseDescriptions });
 
         tenseDescriptions.forEach((tenseDesc) => {
           let translatedTenseDescArr = refObj.getTranslatedTenseDescription(
@@ -715,13 +628,6 @@ exports.conformAnswerStructureToQuestionStructure = (
         questionStructureChunk[inflectorKey]
       );
     });
-
-    if (true) {
-      console.log(
-        "yyy answerStructureChunk at conformAtoQ after STEP ONE",
-        answerStructureChunk
-      );
-    }
 
     //
     //PART TWO: Blinding
@@ -754,34 +660,6 @@ exports.conformAnswerStructureToQuestionStructure = (
         answerStructureChunk[inflector] = [];
       }
     });
-
-    if (true) {
-      console.log(
-        "zzz answerStructureChunk at conformAtoQ after STEP TWO",
-        answerStructureChunk
-      );
-      console.log(
-        "***************************************************************"
-      );
-      console.log(
-        "***************************************************************"
-      );
-      console.log(
-        "***********conformAnswerStructureToQuestionStructure***********"
-      );
-      console.log(
-        "***************************************************************"
-      );
-      console.log(
-        "****************************END********************************"
-      );
-      console.log(
-        "***************************************************************"
-      );
-      console.log(
-        "***************************************************************"
-      );
-    }
   });
 };
 
@@ -802,12 +680,6 @@ exports.inheritFromHeadToDependentChunk = (
   headChunk,
   dependentChunk
 ) => {
-  // console.log("SC:inheritFromHeadToDependentChunk was given:", {
-  //   currentLanguage,
-  //   headChunk,
-  //   dependentChunk,
-  // });
-
   let inflectorKeys =
     refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
       dependentChunk.wordtype
@@ -832,11 +704,4 @@ exports.inheritFromHeadToDependentChunk = (
       dependentChunk[inflectorKey] = inflectorValueArr;
     }
   });
-
-  // console.log(
-  //   "SC:inheritFromHeadToDependentChunk should have now changed this dep chunk:",
-  //   {
-  //     dependentChunk,
-  //   }
-  // );
 };

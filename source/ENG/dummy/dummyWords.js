@@ -10,7 +10,7 @@ let nounSet = [
     id: "eng-nou-d01",
     gender: "n",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       singular: {
@@ -34,7 +34,7 @@ let nounSet = [
     id: "eng-nou-d02",
     gender: "n",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       singular: {
@@ -58,7 +58,7 @@ let nounSet = [
     id: "eng-nou-d03",
     gender: "n",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       singular: {
@@ -87,7 +87,7 @@ let nounSet = [
     id: "eng-nou-d04",
     gender: "n",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       singular: {
@@ -116,7 +116,7 @@ let nounSet = [
     id: "eng-nou-d05",
     gender: "n",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       singular: {

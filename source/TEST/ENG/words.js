@@ -10,7 +10,7 @@ let nounSet = [
     id: "eng-nou-001",
     gender: "f",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       singular: {
@@ -32,7 +32,7 @@ let nounSet = [
     id: "eng-nou-002",
     gender: "m",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       singular: {
@@ -54,7 +54,7 @@ let nounSet = [
     id: "eng-nou-002a",
     gender: "n",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       singular: {
@@ -76,7 +76,7 @@ let nounSet = [
     id: "eng-nou-003",
     gender: "n",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       singular: {
@@ -98,7 +98,7 @@ let nounSet = [
     id: "eng-nou-004",
     gender: "n",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       singular: {
@@ -120,7 +120,7 @@ let nounSet = [
     id: "eng-nou-005",
     gender: "n",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       singular: {
@@ -142,7 +142,7 @@ let nounSet = [
     id: "eng-nou-006",
     gender: "n",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       singular: {
@@ -164,7 +164,7 @@ let nounSet = [
     id: "eng-nou-007",
     gender: "n",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       singular: {
@@ -186,7 +186,7 @@ let nounSet = [
     id: "eng-nou-008",
     gender: "n",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       singular: {
@@ -210,7 +210,7 @@ let nounSet = [
     id: "eng-nou-009",
     gender: "n",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       singular: {
@@ -234,7 +234,7 @@ let nounSet = [
     id: "eng-nou-010",
     gender: "n",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       singular: {
@@ -258,7 +258,7 @@ let nounSet = [
     id: "eng-nou-011",
     gender: "n",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       singular: {
@@ -282,7 +282,7 @@ let adjectiveSet = [
     lemma: "red",
     id: "eng-adj-001",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       simple: "red",
@@ -299,7 +299,7 @@ let adjectiveSet = [
     lemma: "fast",
     id: "eng-adj-005",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       simple: "fast",
@@ -316,7 +316,7 @@ let adjectiveSet = [
     lemma: "fast",
     id: "eng-adj-004",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       simple: "fast",
@@ -333,7 +333,7 @@ let adjectiveSet = [
     lemma: "small",
     id: "eng-adj-002",
     //notes
-    deficient: false,
+
     //inflections
     inflections: {
       simple: "small",
@@ -495,7 +495,7 @@ exports.wordsBank = {
 //     lemma: "ja",
 //     id: "pol-pro-001",
 //     tags: [],
-//     deficient: false,
+//
 //     person: "1per",
 //     gender: ["m1", "f"],
 //     inflections: {

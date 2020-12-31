@@ -60,19 +60,9 @@ exports.findMatchingLemmaObjectThenWord = (
     );
   }
 
-  console.log("eee", matches);
-
   lfUtils.adjustImOnlyLemmaObjects(matches); //Must be adjusted again as may not have been in such pathway above.
 
   langUtils.preprocessLemmaObjects(matches, structureChunk);
-
-  // console.log(
-  //   "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>> NNNow let's look at those preprocessed lObjs."
-  // );
-  // console.log(matches);
-  // gpUtils.consoleLogObjectAtTwoLevels(
-  //   matches.map((lObj) => lObj.inflections.verbal)
-  // );
 
   //STEP THREE: Return result array immediately if uninflected or ad hoc.
 
@@ -318,8 +308,6 @@ exports.findMatchingLemmaObjectThenWord = (
   structureChunks.forEach((structureChunk) => {
     let matchesCopy = matches.slice(0);
 
-    console.log("fff", matchesCopy);
-
     matchesCopy = lfUtils.filterBySelectors(
       currentLanguage,
       structureChunk,
@@ -332,12 +320,12 @@ exports.findMatchingLemmaObjectThenWord = (
       currentLanguage
     );
 
-    console.log("ggg", matchesCopy);
-
     if (!matchesCopy.length) {
       // errorInSentenceCreation.errorMessage =
       //   "No matching lemma objects were found.";
-      console.log("Ah bonsai.");
+      console.log(
+        "It appears no matching lemma objects were found in OT:findMatching"
+      );
       return false;
     }
 

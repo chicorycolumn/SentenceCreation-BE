@@ -660,7 +660,7 @@ describe("extractNestedRoutes", () => {
       id: "pol-nou-001",
       gender: "f",
       //notes
-      deficient: false,
+
       //inflections
       inflections: {
         singular: {

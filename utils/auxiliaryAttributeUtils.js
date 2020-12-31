@@ -11,22 +11,6 @@ exports.addSpecifiers = (
 
   let { answerLanguage, questionLanguage } = languagesObj;
 
-  console.log("-------------------------------------------------");
-  console.log("-------------------------------------------------");
-  console.log("-------------------------------------------------");
-  console.log("----------------OT:addSpecifiers-----------------");
-  console.log("-------------------------------------------------");
-  console.log("--------------------start------------------------");
-  console.log("-------------------------------------------------");
-
-  console.log(">>>answerSentenceFormula");
-  console.log(answerSentenceFormula);
-  console.log(">>>questionOutputArr");
-  console.log({ questionOutputArr });
-  gpUtils.consoleLogObjectAtTwoLevels(questionOutputArr);
-
-  // throw "Cease.";
-
   questionOutputArr.forEach((questionOutputUnit) => {
     let questionStructureChunk = questionOutputUnit.structureChunk;
 
@@ -64,12 +48,6 @@ exports.addSpecifiers = (
 
     requestedSpecifierInstructionsArr.forEach(
       (requestedSpecifierInstructions) => {
-        console.log(
-          "1aa+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++About to check if first clause.",
-          { questionStructureChunk },
-          { requestedSpecifierInstructions }
-        );
-
         if (
           Object.keys(requestedSpecifierInstructions.featureConditions).every(
             (featureKey) => {
@@ -82,11 +60,6 @@ exports.addSpecifiers = (
             }
           )
         ) {
-          console.log(
-            "==============================================================Entered first clause.",
-            questionStructureChunk.chunkId,
-            { requestedSpecifierInstructions }
-          );
           //hard change
           Object.keys(requestedSpecifierInstructions.featureActions).forEach(
             (featureActionKey) => {
@@ -96,8 +69,6 @@ exports.addSpecifiers = (
               let featureActionValue = gpUtils.selectRandom(
                 featureActionValues
               );
-
-              console.log("1bb", { featureActionKey, featureActionValue });
 
               answerStructureChunk[featureActionKey] = [featureActionValue];
               if (!questionStructureChunk.annotations) {
@@ -113,21 +84,6 @@ exports.addSpecifiers = (
       }
     );
   });
-
-  console.log("-------------------------------------------------");
-  console.log("-------------------------------------------------");
-  console.log("-------------------------------------------------");
-  console.log("----------------OT:addSpecifiers-----------------");
-  console.log("-------------------------------------------------");
-  console.log("---------------------end-------------------------");
-  console.log("-------------------------------------------------");
-
-  console.log(">>>answerSentenceFormula.sentenceStructure");
-  console.log(answerSentenceFormula.sentenceStructure);
-  console.log(">>>questionOutputArr");
-  gpUtils.consoleLogObjectAtTwoLevels(questionOutputArr);
-
-  // throw "Cease.";
 };
 
 exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
@@ -164,7 +120,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
     //     lemma: 'sheep',
     //     id: 'eng-nou-008',
     //     gender: 'n',
-    //     deficient: false,
+    //
     //     inflections: { singular: [Object], plural: [Object] }
     //   },
     //   selectedWord: 'sheep',
@@ -231,7 +187,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
       refObj.lemmaObjectFeatures[answerLanguage]
         .allowableTransfersFromQuestionStructure[structureChunk.wordtype];
 
-    console.log("aaa allowableClarifiers", allowableClarifiers);
+    console.log("The allowableClarifiers are as follows", allowableClarifiers);
 
     //allowableClarifiers. Any clarifiers not in here, don't bother adding them.
     //We're looking ahead to the answerLanguage, and thinking, hmmmmm, well right now the questionLanguage
@@ -280,33 +236,6 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
 exports.attachAnnotations = (arrayOfOutputUnits, languagesObj) => {
   let { answerLanguage, questionLanguage } = languagesObj;
 
-  console.log(
-    "@ @ @ @ @ @ @ @ @ @ @ @ @ @ @ " +
-      questionLanguage +
-      " @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @"
-  );
-  console.log(
-    " @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ "
-  );
-  console.log(
-    "@ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @"
-  );
-  console.log(
-    " @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ "
-  );
-  console.log(
-    "@ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @"
-  );
-  console.log("Let's attachAnnotations !");
-
-  console.log(arrayOfOutputUnits.map((unit) => unit.structureChunk));
-  console.log(
-    ">>>>>>>>>>>>>>>>>>>>>>>",
-    arrayOfOutputUnits.map((unit) => unit.structureChunk.annotations)
-  );
-
-  // throw "Cease";
-
   arrayOfOutputUnits.forEach((outputUnit) => {
     let { structureChunk, selectedLemmaObject } = outputUnit;
 
@@ -336,17 +265,4 @@ exports.attachAnnotations = (arrayOfOutputUnits, languagesObj) => {
       outputUnit.selectedWord += ` (${formattedAnnotationArr.join(", ")})`;
     }
   });
-
-  if (questionLanguage === "ENG") {
-    console.log(
-      " @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ "
-    );
-    console.log(
-      "@ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @ @"
-    );
-    console.log("Finished attachAnnotations !");
-
-    console.log(arrayOfOutputUnits);
-    // throw "Cease.";
-  }
 };
