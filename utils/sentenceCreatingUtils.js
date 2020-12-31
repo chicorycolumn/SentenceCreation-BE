@@ -416,15 +416,17 @@ exports.processSentenceFormula = (
 };
 
 exports.giveFinalSentences = (
-  arrayOfOutputArrays,
-  sentenceFormula,
-  errorInSentenceCreation,
+  sentenceData,
   kumquat,
   currentLanguage,
-  answerLanguage,
-  hideClarifiers,
-  hideSpecifiers
+  answerLanguage
 ) => {
+  let {
+    arrayOfOutputArrays,
+    sentenceFormula,
+    errorInSentenceCreation,
+  } = sentenceData;
+
   if (errorInSentenceCreation.errorMessage) {
     let errorMessage = {
       errorInSentenceCreation: errorInSentenceCreation.errorMessage,
@@ -452,9 +454,7 @@ exports.giveFinalSentences = (
         sentenceFormula,
         kumquat,
         currentLanguage,
-        null,
-        hideClarifiers,
-        hideSpecifiers
+        null
       );
 
       finalSentences.forEach((finalSentence) => {
@@ -469,9 +469,7 @@ exports.giveFinalSentences = (
       sentenceFormula,
       kumquat,
       currentLanguage,
-      answerLanguage,
-      hideClarifiers,
-      hideSpecifiers
+      answerLanguage
     );
 
     finalSentences.forEach((finalSentence) => {
@@ -491,25 +489,10 @@ exports.buildSentenceString = (
   sentenceFormula,
   kumquat,
   currentLanguage,
-  answerLanguage,
-  hideClarifiers,
-  hideSpecifiers
+  answerLanguage
 ) => {
   let arrayOfSelectedWordsArrays = [];
   let producedSentences = [];
-
-  //NOT HERE!
-  // if (!kumquat && !hideClarifiers) {
-  //   otUtils.addClarifiers(unorderedArr, currentLanguage, answerLanguage);
-  // }
-
-  // otUtils.attachAnnotations(unorderedArr, currentLanguage);
-
-  //NOT HERE!
-  // if (!kumquat && !hideSpecifiers) {
-  //   //We want to give this the questionStructureChunk and the answerStructureChunk
-  //   otUtils.addSpecifiers(unorderedArr, currentLanguage, answerLanguage);
-  // }
 
   if (!sentenceFormula.primaryOrders || !sentenceFormula.primaryOrders.length) {
     let selectedWordsArr = unorderedArr.map((obj) => obj.selectedWord);
@@ -567,8 +550,8 @@ exports.conformAnswerStructureToQuestionStructure = (
   words
 ) => {
   let { sentenceStructure } = sentenceFormula;
-  let questionLanguage = languagesObj.previousQuestionLanguage;
-  let answerLanguage = languagesObj.currentLanguage;
+
+  let { questionLanguage, answerLanguage } = languagesObj;
 
   const questionLangUtils = require(`../source/${questionLanguage}/langUtils.js`);
   const answerLangUtils = require(`../source/${answerLanguage}/langUtils.js`);

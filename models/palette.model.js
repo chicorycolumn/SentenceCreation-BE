@@ -3,6 +3,7 @@ const gpUtils = require("../utils/generalPurposeUtils.js");
 const lfUtils = require("../utils/lemmaFilteringUtils.js");
 const refObj = require("../utils/referenceObjects.js");
 const scUtils = require("../utils/sentenceCreatingUtils.js");
+const aaUtils = require("../utils/auxiliaryAttributeUtils.js");
 
 exports.fetchPalette = (req) => {
   let kumquat = false;
@@ -74,8 +75,8 @@ exports.fetchPalette = (req) => {
       //and then put it through processSentenceFormula
 
       let languagesObject = {
-        currentLanguage: answerLanguage,
-        previousQuestionLanguage: questionLanguage,
+        answerLanguage,
+        questionLanguage,
       };
 
       if (false) {
@@ -101,37 +102,36 @@ exports.fetchPalette = (req) => {
         console.log("+++++++++++++++++++++++++++++++++++");
       }
 
+      let questionOutputArr = questionSentenceData.arrayOfOutputArrays[0];
+
       scUtils.conformAnswerStructureToQuestionStructure(
         sentenceFormula,
-        questionSentenceData.arrayOfOutputArrays[0],
+        questionOutputArr,
         languagesObject,
         words
       );
 
       if (!hideClarifiers) {
-        otUtils.addClarifiers(
-          questionSentenceData.arrayOfOutputArrays[0],
-          languagesObject
-        );
+        aaUtils.addClarifiers(questionOutputArr, languagesObject);
       }
 
       if (!hideSpecifiers) {
-        otUtils.addSpecifiers(
+        aaUtils.addSpecifiers(
           sentenceFormula,
-          questionSentenceData.arrayOfOutputArrays[0],
+          questionOutputArr,
           languagesObject
         );
       }
 
-      otUtils.attachAnnotations(
-        questionSentenceData.arrayOfOutputArrays[0],
-        languagesObject
-      );
+      aaUtils.attachAnnotations(questionOutputArr, languagesObject);
 
       // console.log("sentenceStructure AFTER QA conform", sentenceStructure);
 
       let answerSentenceData = scUtils.processSentenceFormula(
-        languagesObject,
+        {
+          currentLanguage: answerLanguage,
+          previousQuestionLanguage: questionLanguage,
+        },
         sentenceFormula,
         words,
         kumquat
@@ -139,25 +139,17 @@ exports.fetchPalette = (req) => {
 
       if (!answerResponseObj) {
         answerResponseObj = scUtils.giveFinalSentences(
-          answerSentenceData.arrayOfOutputArrays,
-          answerSentenceData.sentenceFormula,
-          answerSentenceData.errorInSentenceCreation,
+          answerSentenceData,
           kumquat,
           answerLanguage,
-          null,
-          hideClarifiers,
-          hideSpecifiers
+          null
         );
       } else {
         let subsequentAnswerResponseObj = scUtils.giveFinalSentences(
-          answerSentenceData.arrayOfOutputArrays,
-          answerSentenceData.sentenceFormula,
-          answerSentenceData.errorInSentenceCreation,
+          answerSentenceData,
           kumquat,
           answerLanguage,
-          null,
-          hideClarifiers,
-          hideSpecifiers
+          null
         );
 
         subsequentAnswerResponseObj.finalSentenceArr.forEach(
@@ -172,14 +164,10 @@ exports.fetchPalette = (req) => {
   }
 
   let questionResponseObj = scUtils.giveFinalSentences(
-    questionSentenceData.arrayOfOutputArrays,
-    questionSentenceData.sentenceFormula,
-    questionSentenceData.errorInSentenceCreation,
+    questionSentenceData,
     kumquat,
     questionLanguage,
-    answerLanguage,
-    hideClarifiers,
-    hideSpecifiers
+    answerLanguage
   );
 
   let combinedResponseObj = {};
