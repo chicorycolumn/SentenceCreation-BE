@@ -108,13 +108,12 @@ exports.fetchPalette = (req) => {
         words
       );
 
-      // if (!hideClarifiers) {
-      //   otUtils.addClarifiers(
-      //     questionSentenceData.arrayOfOutputArrays[0],
-      //     questionLanguage,
-      //     answerLanguage
-      //   );
-      // }
+      if (!hideClarifiers) {
+        otUtils.addClarifiers(
+          questionSentenceData.arrayOfOutputArrays[0],
+          languagesObject
+        );
+      }
 
       if (!hideSpecifiers) {
         otUtils.addSpecifiers(

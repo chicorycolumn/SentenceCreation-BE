@@ -733,7 +733,7 @@ exports.addSpecifiers = (
     }
 
     if (!questionStructureChunk.annotations) {
-      questionStructureChunk.annotations = [];
+      questionStructureChunk.annotations = {};
     }
 
     //Adding requested Specifiers.
@@ -785,13 +785,12 @@ exports.addSpecifiers = (
 
               answerStructureChunk[featureActionKey] = [featureActionValue];
               if (!questionStructureChunk.annotations) {
-                questionStructureChunk.annotations = [];
+                questionStructureChunk.annotations = {};
               }
 
-              let specifierObj = {};
-              specifierObj[featureActionKey] = featureActionValue;
-
-              questionStructureChunk.annotations.push(specifierObj);
+              questionStructureChunk.annotations[
+                featureActionKey
+              ] = featureActionValue;
             }
           );
         }
@@ -815,11 +814,10 @@ exports.addSpecifiers = (
   // throw "Cease.";
 };
 
-exports.addClarifiers = (
-  arrayOfOutputUnits,
-  currentLanguage,
-  answerLanguage
-) => {
+exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
+  let currentLanguage = languagesObj.previousQuestionLanguage;
+  let answerLanguage = languagesObj.currentLanguage;
+
   if (!answerLanguage) {
     throw "OT:addClarifiers says Did you mean to call me? You didn't give me an answerLanguage argument. I am only supposed to add clarifiers to the question sentence, and in order to do that I must know what the answerLanguage is going to be.";
   }
@@ -839,7 +837,7 @@ exports.addClarifiers = (
     } = outputUnit;
 
     if (!structureChunk.annotations) {
-      structureChunk.annotations = [];
+      structureChunk.annotations = {};
     }
     //
     //console.log(outputUnit)
@@ -883,15 +881,16 @@ exports.addClarifiers = (
         );
       }
 
-      structureChunk.annotations.push(
-        allohomInfo.emoji + " " + allohomInfo.text
-      );
+      let { emoji, text } = allohomInfo;
+
+      structureChunk.annotations.emoji = emoji;
+      structureChunk.annotations.text = text;
     }
 
     if (allohomInfo && allohomInfo.multipleWordtype) {
       if (structureChunk.pleaseShowMultipleWordtypeAllohomClarifiers) {
-        structureChunk.annotations.push(
-          gpUtils.getWordtypeFromLemmaObject(selectedLemmaObject)
+        structureChunk.annotations.wordtype = gpUtils.getWordtypeFromLemmaObject(
+          selectedLemmaObject
         );
       }
     }
@@ -902,7 +901,7 @@ exports.addClarifiers = (
     //
     //eg ENG has some verbs with v1-v2 synhomography, and 2per ambiguous re number.
 
-    langUtils.addSpecificClarifiers(
+    langUtils.addLanguageSpecificClarifiers(
       structureChunk,
       currentLanguage,
       selectedLemmaObject
@@ -948,7 +947,7 @@ exports.addClarifiers = (
             );
 
             labelsWhereTheyDiffer.forEach((label) => {
-              structureChunk.annotations.push(structureChunk[label]);
+              structureChunk.annotations[label] = structureChunk[label];
             });
           }
         });
@@ -988,17 +987,22 @@ exports.attachAnnotations = (arrayOfOutputUnits, languagesObj) => {
 
   console.log(arrayOfOutputUnits.map((unit) => unit.structureChunk));
   console.log(
+    ">>>>>>>>>>>>>>>>>>>>>>>",
     arrayOfOutputUnits.map((unit) => unit.structureChunk.annotations)
   );
+
+  // throw "Cease";
 
   arrayOfOutputUnits.forEach((outputUnit) => {
     let { structureChunk, selectedLemmaObject } = outputUnit;
 
-    if (structureChunk.annotations && structureChunk.annotations.length) {
-      let formattedAnnotationArr = structureChunk.annotations.map(
-        (annotationUnit) => {
-          let annotationKey = Object.keys(annotationUnit)[0];
-          let annotationValue = Object.values(annotationUnit)[0];
+    if (
+      structureChunk.annotations &&
+      Object.keys(structureChunk.annotations).length
+    ) {
+      let formattedAnnotationArr = Object.keys(structureChunk.annotations).map(
+        (annotationKey) => {
+          let annotationValue = structureChunk.annotations[annotationKey];
 
           if (answerLanguage === "POL" && annotationKey === "gender") {
             const POLgenderToPlainEnglishRef = {

@@ -47,7 +47,7 @@ let inflectorRef = {
   ],
 };
 
-exports.addSpecificClarifiers = (
+exports.addLanguageSpecificClarifiers = (
   structureChunk,
   currentLanguage,
   lemmaObject
@@ -65,17 +65,17 @@ exports.addSpecificClarifiers = (
     //Type 3 Synhomographs: Add clarifier for 2nd person singular vs plural. (Wasn't caught, as went through Ad-PW).
     //
     if (!structureChunk.person || !structureChunk.number) {
-      throw "ENG:addSpecificClarifiers expected this verb structureChunk to have a Person and Number key.";
+      throw "ENG:addLanguageSpecificClarifiers expected this verb structureChunk to have a Person and Number key.";
     }
     if (!structureChunk.person.length > 1 || structureChunk.number.length > 1) {
-      throw "ENG:addSpecificClarifiers expected this verb structureChunk's Person and Number key to have only one value each, not more.";
+      throw "ENG:addLanguageSpecificClarifiers expected this verb structureChunk's Person and Number key to have only one value each, not more.";
     }
 
     let person = structureChunk.person[0];
     let number = structureChunk.number[0];
 
     if (person === "2per") {
-      structureChunk.annotations.push(number);
+      structureChunk.annotations.number = number;
     }
 
     //
@@ -83,7 +83,7 @@ exports.addSpecificClarifiers = (
     //
     if (structureChunk.tenseDescription) {
       if (structureChunk.tenseDescription.length > 1) {
-        throw "ENG:addSpecificClarifiers expected this verb structureChunk's tenseDescription key to have only one value each, not more.";
+        throw "ENG:addLanguageSpecificClarifiers expected this verb structureChunk's tenseDescription key to have only one value each, not more.";
       }
 
       if (lemmaObject.inflections.infinitive === lemmaObject.inflections.v2) {
@@ -91,13 +91,13 @@ exports.addSpecificClarifiers = (
           structureChunk.tenseDescription &&
           structureChunk.tenseDescription.includes("past simple")
         ) {
-          structureChunk.annotations.push("past");
+          structureChunk.annotations.tenseDescription = "past";
           structureChunk.preventAddingClarifiers = true; // We assume that no more clarifiers are needed.
         } else if (
           structureChunk.tenseDescription &&
           structureChunk.tenseDescription.includes("present simple")
         ) {
-          structureChunk.annotations.push("present");
+          structureChunk.annotations.tenseDescription = "present";
           structureChunk.preventAddingClarifiers = true; // We assume that no more clarifiers are needed.
         }
       }

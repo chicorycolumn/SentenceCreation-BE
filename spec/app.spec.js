@@ -1015,8 +1015,8 @@ describe("/api", () => {
           expect(answerSentenceArr.length).to.equal(1);
 
           let ref = [
-            { ENG: ["A small nut (🥜 food)."], POL: ["Mały orzech."] },
-            { ENG: ["A small nut (🔩 metal)."], POL: ["Mała nakrętka."] },
+            { ENG: ["A small nut (🥜, food)."], POL: ["Mały orzech."] },
+            { ENG: ["A small nut (🔩, metal)."], POL: ["Mała nakrętka."] },
           ];
 
           checkTranslationsOfGivenRef(
@@ -1253,8 +1253,8 @@ describe("/api", () => {
           expect(answerSentenceArr.length).to.equal(1);
 
           let ref = [
-            { ENG: ["Tie (⚽ score)."], POL: ["Remis."] },
-            { ENG: ["Tie (👔 clothes)."], POL: ["Krawat."] },
+            { ENG: ["Tie (⚽, score)."], POL: ["Remis."] },
+            { ENG: ["Tie (👔, clothes)."], POL: ["Krawat."] },
           ];
 
           checkTranslationsOfGivenRef(
@@ -1287,8 +1287,8 @@ describe("/api", () => {
           expect(answerSentenceArr.length).to.equal(1);
 
           let ref = [
-            { ENG: ["Tie (⚽ score, noun)."], POL: ["Remis."] },
-            { ENG: ["Tie (👔 clothes, noun)."], POL: ["Krawat."] },
+            { ENG: ["Tie (⚽, score, noun)."], POL: ["Remis."] },
+            { ENG: ["Tie (👔, clothes, noun)."], POL: ["Krawat."] },
           ];
 
           checkTranslationsOfGivenRef(
@@ -1320,7 +1320,7 @@ describe("/api", () => {
           expect(questionSentenceArr.length).to.equal(1);
           expect(answerSentenceArr.length).to.equal(1);
 
-          let ref = [{ ENG: ["Tie (🧵 with string eg)."], POL: ["Wiązać."] }];
+          let ref = [{ ENG: ["Tie (🧵, with string eg)."], POL: ["Wiązać."] }];
 
           checkTranslationsOfGivenRef(
             res,
@@ -1352,7 +1352,7 @@ describe("/api", () => {
           expect(answerSentenceArr.length).to.equal(1);
 
           let ref = [
-            { ENG: ["Tie (🧵 with string eg, verb)."], POL: ["Wiązać."] },
+            { ENG: ["Tie (🧵, with string eg, verb)."], POL: ["Wiązać."] },
           ];
 
           checkTranslationsOfGivenRef(

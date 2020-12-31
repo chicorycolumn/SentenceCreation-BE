@@ -3,7 +3,7 @@ const otUtils = require("../../utils/objectTraversingUtils.js");
 const gpUtils = require("../../utils/generalPurposeUtils.js");
 const refObj = require("../../utils/referenceObjects.js");
 
-exports.addSpecificClarifiers = () => {
+exports.addLanguageSpecificClarifiers = () => {
   //
   //Type 6 Synhomographs: Add clarifier for ambiguous verb participles (Un-PW).
   //Afaics, no such ambiguity in POL verbs.
