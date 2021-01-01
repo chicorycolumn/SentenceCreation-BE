@@ -572,6 +572,18 @@ exports.conformAnswerStructureToQuestionStructure = (
         return;
       }
 
+      if (
+        answerStructureChunk.importantFeatures &&
+        answerStructureChunk.importantFeatures.includes(inflectorKey)
+      ) {
+        console.log(
+          "I will not transfer '" +
+            inflectorKey +
+            "' in SC:conformAtoQ step 1, as marked important in answerStCh."
+        );
+        return;
+      }
+
       //Don't transfer Number if Q is Tantum Plurale.     eg if Q is "skrzypce" we'd want A to include both "violin" and "violins".
       if (
         inflectorKey === "number" &&

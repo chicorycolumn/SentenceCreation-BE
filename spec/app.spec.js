@@ -786,7 +786,7 @@ describe("/api", () => {
           expect(answerSentenceArr).to.have.members(["Czerwone drzwi."]);
         });
     });
-    xit("#pal12-02a GET 200 YES: RSWAT for First Conditional POL->ENG.", () => {
+    it("#pal12-02a GET 200 YES: RSWAT for First Conditional POL->ENG.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -802,45 +802,34 @@ describe("/api", () => {
         .expect(200)
         .then((res) => {
           console.log(res.body);
-          // const translatedSentencesRef = {
-          //   current: {
-          //     "POL->ENG": [
-          //       {
-          //         POL: "Kobieta czyta.",
-          //         ENG: ["The woman reads.", "The woman is reading."],
-          //       },
-          //       {
-          //         POL: "Kobiety czytają.",
-          //         ENG: ["The women read.", "The women are reading."],
-          //       },
-          //       {
-          //         POL: "Chłopiec czyta.",
-          //         ENG: ["The boy reads.", "The boy is reading."],
-          //       },
-          //       {
-          //         POL: "Chłopcy czytają.",
-          //         ENG: ["The boys read.", "The boys are reading."],
-          //       },
-          //     ],
-          //   },
-          // };
+          let ref = [
+            {
+              ENG: ["If you write a book , I will research it."],
+              POL: ["Jeśli napiszesz książkę , ją zbadam."],
+            },
+            {
+              ENG: ["If you write a book , I will research it."],
+              POL: ["Jeśli będziesz pisać książkę , ją zbadam."],
+            },
+            {
+              ENG: ["If you write (male) a book , I will research it."],
+              POL: ["Jeśli będziesz pisał książkę , ją zbadam."],
+            },
+            {
+              ENG: ["If you write (female) a book , I will research it."],
+              POL: ["Jeśli będziesz pisała książkę , ją zbadam."],
+            },
+          ];
 
-          // checkSentenceTranslations(
-          //   res,
-          //   questionLanguage,
-          //   answerLanguage,
-          //   "current",
-          //   [
-          //     "Kobieta czyta.",
-          //     "Kobiety czytają.",
-          //     "Chłopiec czyta.",
-          //     "Chłopcy czytają.",
-          //   ],
-          //   translatedSentencesRef
-          // );
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
         });
     });
-    xit("#pal12-02b GET 200 YES: RSWAT for First Conditional ENG->POL.", () => {
+    it("#pal12-02b GET 200 YES: RSWAT for First Conditional ENG->POL.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -856,42 +845,31 @@ describe("/api", () => {
         .expect(200)
         .then((res) => {
           console.log(res.body);
-          // const translatedSentencesRef = {
-          //   current: {
-          //     "POL->ENG": [
-          //       {
-          //         POL: "Kobieta czyta.",
-          //         ENG: ["The woman reads.", "The woman is reading."],
-          //       },
-          //       {
-          //         POL: "Kobiety czytają.",
-          //         ENG: ["The women read.", "The women are reading."],
-          //       },
-          //       {
-          //         POL: "Chłopiec czyta.",
-          //         ENG: ["The boy reads.", "The boy is reading."],
-          //       },
-          //       {
-          //         POL: "Chłopcy czytają.",
-          //         ENG: ["The boys read.", "The boys are reading."],
-          //       },
-          //     ],
-          //   },
-          // };
+          let ref = [
+            {
+              ENG: ["If you write a book , I will research it."],
+              POL: ["Jeśli napiszesz książkę , ją zbadam."],
+            },
+            {
+              ENG: ["If you write a book , I will research it."],
+              POL: ["Jeśli będziesz pisać książkę , ją zbadam."],
+            },
+            {
+              ENG: ["If you write (male) a book , I will research it."],
+              POL: ["Jeśli będziesz pisał książkę , ją zbadam."],
+            },
+            {
+              ENG: ["If you write (female) a book , I will research it."],
+              POL: ["Jeśli będziesz pisała książkę , ją zbadam."],
+            },
+          ];
 
-          // checkSentenceTranslations(
-          //   res,
-          //   questionLanguage,
-          //   answerLanguage,
-          //   "current",
-          //   [
-          //     "Kobieta czyta.",
-          //     "Kobiety czytają.",
-          //     "Chłopiec czyta.",
-          //     "Chłopcy czytają.",
-          //   ],
-          //   translatedSentencesRef
-          // );
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
         });
     });
   });
@@ -2581,7 +2559,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal07-03d GET 200 YES: RSWAT POL to ENG 'be' future pf, (Clone Bee VNV issue: should NOT receive 'b€d€ by¢', but instead just 'b€d€'.).", () => {
+    it("#pal07-03d GET 200 YES: RSWAT POL to ENG 'be' future pf, (Clone Bee VNV issue: should NOT receive 'będę być', but instead just 'będę'.).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -2606,7 +2584,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal07-03e GET 200 YES: RSWAT POL to ENG 'be' future im, (Clone Bee VNV issue: should NOT receive 'b€d€ by¢', but instead just 'b€d€'.).", () => {
+    it("#pal07-03e GET 200 YES: RSWAT POL to ENG 'be' future im, (Clone Bee VNV issue: should NOT receive 'będę być', but instead just 'będę'.).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 

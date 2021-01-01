@@ -209,7 +209,7 @@ exports.sentenceFormulasBank = {
         specificLemmas: ["write"],
         tenseDescription: ["cond1 condition"],
         importantFeatures: ["tenseDescription"],
-        person: ["1per"],
+        person: ["2per"],
         number: ["singular"],
       },
       { chunkId: "fix-3", wordtype: "fixed", value: "a" },
