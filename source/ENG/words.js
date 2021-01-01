@@ -52,7 +52,7 @@ let nounSet = [
     //selectors
     lemma: "boy",
     id: "eng-nou-002a",
-    gender: "n",
+
     //notes
 
     //inflections
@@ -74,7 +74,7 @@ let nounSet = [
     //selectors
     lemma: "onion",
     id: "eng-nou-003",
-    gender: "n",
+
     //notes
 
     //inflections
@@ -96,7 +96,7 @@ let nounSet = [
     //selectors
     lemma: "apple",
     id: "eng-nou-004",
-    gender: "n",
+
     //notes
 
     //inflections
@@ -118,7 +118,7 @@ let nounSet = [
     //selectors
     lemma: "mirror",
     id: "eng-nou-005",
-    gender: "n",
+
     //notes
 
     //inflections
@@ -140,7 +140,7 @@ let nounSet = [
     //selectors
     lemma: "book",
     id: "eng-nou-006",
-    gender: "n",
+
     //notes
 
     //inflections
@@ -162,7 +162,7 @@ let nounSet = [
     //selectors
     lemma: "door",
     id: "eng-nou-007",
-    gender: "n",
+
     //notes
 
     //inflections
@@ -184,7 +184,7 @@ let nounSet = [
     //selectors
     lemma: "sheep",
     id: "eng-nou-008",
-    gender: "n",
+
     //notes
 
     //inflections
@@ -196,6 +196,28 @@ let nounSet = [
       plural: {
         nom: "sheep",
         gen: "sheep's",
+      },
+    },
+  },
+  {
+    //links
+    translations: { ENG: ["doctor"], POL: ["lekarz", "lekarka"] },
+    tags: ["concrete", "animate", "person", "job"],
+    //selectors
+    lemma: "doctor",
+    id: "eng-nou-012",
+    gender: true, //This means male or female.
+    //notes
+
+    //inflections
+    inflections: {
+      singular: {
+        nom: "doctor",
+        gen: "doctor's",
+      },
+      plural: {
+        nom: "doctors",
+        gen: "doctors'",
       },
     },
   },
@@ -392,6 +414,31 @@ exports.wordsBank = {
   adjectiveSet,
   verbSet,
 };
+
+let pronounSet = [
+  {
+    //links
+    translations: { ENG: ["I"], POL: ["ja"] },
+    tags: ["animate", "person"],
+    //selectors
+    lemma: "I",
+    id: "eng-pro-001",
+    gender: "f",
+    //notes
+
+    //inflections
+    inflections: {
+      singular: {
+        nom: "woman",
+        gen: "woman's",
+      },
+      plural: {
+        nom: "women",
+        gen: "women's",
+      },
+    },
+  },
+];
 
 // let pronounSet = [
 //   {

@@ -52,7 +52,7 @@ let nounSet = [
     //selectors
     lemma: "boy",
     id: "eng-nou-002a",
-    gender: "n",
+
     //notes
 
     //inflections
@@ -74,7 +74,7 @@ let nounSet = [
     //selectors
     lemma: "onion",
     id: "eng-nou-003",
-    gender: "n",
+
     //notes
 
     //inflections
@@ -96,7 +96,7 @@ let nounSet = [
     //selectors
     lemma: "apple",
     id: "eng-nou-004",
-    gender: "n",
+
     //notes
 
     //inflections
@@ -118,7 +118,7 @@ let nounSet = [
     //selectors
     lemma: "mirror",
     id: "eng-nou-005",
-    gender: "n",
+
     //notes
 
     //inflections
@@ -140,7 +140,7 @@ let nounSet = [
     //selectors
     lemma: "book",
     id: "eng-nou-006",
-    gender: "n",
+
     //notes
 
     //inflections
@@ -162,7 +162,7 @@ let nounSet = [
     //selectors
     lemma: "door",
     id: "eng-nou-007",
-    gender: "n",
+
     //notes
 
     //inflections
@@ -184,7 +184,7 @@ let nounSet = [
     //selectors
     lemma: "sheep",
     id: "eng-nou-008",
-    gender: "n",
+
     //notes
 
     //inflections
@@ -208,7 +208,7 @@ let nounSet = [
     //selectors
     lemma: "nut",
     id: "eng-nou-009",
-    gender: "n",
+
     //notes
 
     //inflections
@@ -232,7 +232,7 @@ let nounSet = [
     //selectors
     lemma: "nut",
     id: "eng-nou-010",
-    gender: "n",
+
     //notes
 
     //inflections
@@ -256,7 +256,7 @@ let nounSet = [
     //selectors
     lemma: "bear",
     id: "eng-nou-011",
-    gender: "n",
+
     //notes
 
     //inflections

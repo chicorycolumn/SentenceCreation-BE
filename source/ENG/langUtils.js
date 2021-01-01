@@ -114,7 +114,31 @@ exports.adjustTenseDescriptions = () => {};
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {};
 
 exports.preprocessLemmaObjectsMajor = (matches, structureChunk) => {};
-exports.preprocessLemmaObjectsMinor = (matches) => {};
+exports.preprocessLemmaObjectsMinor = (matches) => {
+  matches.forEach((lObj) => {
+    if (lObj.tags.includes("person")) {
+      if (!lObj.gender) {
+        throw (
+          "Error. The lObj '" +
+          lObj.id +
+          "' is a person so should have a gender key."
+        );
+      } else if (lObj.gender === true) {
+        let lObjCopy = gpUtils.copyWithoutReference(lObj);
+
+        lObj.gender = "f";
+        lObjCopy.gender = "m";
+
+        matches.push(lObjCopy);
+      }
+    } else {
+      lObj.gender = "n";
+    }
+
+    // if (gpUtils.getWordtypeFromLemmaObject(lObj) === "pronoun") {
+    // }
+  });
+};
 
 exports.addSpecialVerbForms = (lemmaObject, currentLanguage) => {
   let { infinitive, v2, v3, thirdPS, gerund } = lemmaObject.inflections;

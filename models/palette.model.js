@@ -32,6 +32,17 @@ exports.fetchPalette = (req) => {
     kumquat
   );
 
+  if (!questionSentenceData) {
+    throw "Error! ---------------> In fetchPalette the questionSentenceData came back as NOTHING.";
+  }
+
+  if (
+    !questionSentenceData.arrayOfOutputArrays ||
+    !questionSentenceData.arrayOfOutputArrays.length
+  ) {
+    throw "Error! ---------------> In fetchPalette the question arrayOfOutputArrays came back NONE.";
+  }
+
   console.log("palette.model > questionSentenceData.arrayOfOutputArrays");
   gpUtils.consoleLogObjectAtTwoLevels(questionSentenceData.arrayOfOutputArrays);
   gpUtils.consoleLogAestheticBorder(4);

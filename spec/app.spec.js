@@ -717,8 +717,8 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe.only("/palette - Stage 12: Further linguistic features.", () => {
-    it.only("#pal12-02a GET 200 YES: Singular pronouns: Verb person and number is inherited from pronoun headChunk.", () => {
+  describe("/palette - Stage 13: Further linguistic features.", () => {
+    it.only("#pal13-01a GET 200 YES: Singular pronouns: Verb person and number is inherited from pronoun headChunk.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -749,7 +749,123 @@ describe("/api", () => {
           );
         });
     });
+  });
 
+  xdescribe("/palette - Stage 12: Further linguistic features.", () => {
+    it("#pal12-05a GET 200 YES: Selection of either male or female versions of same person POL to ENG.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideSpecifiers: true,
+          hideClarifiers: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "109 doc wrote p",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              POL: "Lekarz napisał receptę.",
+              ENG: [
+                "The doctor wrote a prescription.",
+                "The doctor had written a prescription.",
+                "The doctor has written a prescription.",
+              ],
+            },
+            {
+              POL: "Lekarka napisała receptę.",
+              ENG: [
+                "The doctor wrote a prescription.",
+                "The doctor had written a prescription.",
+                "The doctor has written a prescription.",
+              ],
+            },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal12-05b GET 200 YES: Selection of either male or female versions of same person ENG to POL.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideSpecifiers: true,
+          hideClarifiers: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "109a doc was writing p",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "The doctor was writing a prescription.",
+              POL: ["Lekarz pisał receptę.", "Lekarka pisała receptę."],
+            },
+            {
+              ENG: "The doctor (male) was writing a prescription.",
+              POL: ["Lekarz pisał receptę."],
+            },
+            {
+              ENG: "The doctor (female) was writing a prescription.",
+              POL: ["Lekarka pisała receptę."],
+            },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal12-05c GET 200 YES: Selection of either male or female versions of same person ENG to POL.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // hideSpecifiers: true,
+          // hideClarifiers: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "109a doc was writing p",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "The doctor (male) was writing a prescription.",
+              POL: ["Lekarz pisał receptę."],
+            },
+            {
+              ENG: "The doctor (female) was writing a prescription.",
+              POL: ["Lekarka pisała receptę."],
+            },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
     it("#pal12-01a GET 200 YES: Tantum plurale in POL is allowed to be sing or plur in ENG.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
@@ -860,7 +976,7 @@ describe("/api", () => {
           );
         });
     });
-    xit("#pal12-##b GET 200 YES: RSWAT for First Conditional ENG->POL.", () => {
+    it("#pal12-##b GET 200 YES: RSWAT for First Conditional ENG->POL.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 

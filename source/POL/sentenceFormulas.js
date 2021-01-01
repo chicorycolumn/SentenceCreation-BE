@@ -786,4 +786,50 @@ exports.sentenceFormulasBank = {
     primaryOrders: [["pro-1", "ver-1"]],
     additionalOrders: [["ver-1"]], //See how here we're showing the pronoun is optional.
   },
+  109: {
+    sentenceFormulaSymbol: "109 doc wrote p",
+    sentenceFormulaId: "POL-00-109",
+    translations: { ENG: ["ENG-00-109"] },
+    sentenceStructure: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        andTags: ["job"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1",
+        agreeWith: "nou-1",
+        wordtype: "verb",
+        specificLemmas: ["pisać", "napisać"],
+        tenseDescription: ["past pf"],
+      },
+      { chunkId: "fix-1", wordtype: "fixed", value: "receptę" },
+    ],
+    primaryOrders: [["nou-1", "ver-1", "fix-1"]],
+    additionalOrders: [],
+  },
+  "109a": {
+    sentenceFormulaSymbol: "109a doc was writing p",
+    sentenceFormulaId: "POL-00-109a",
+    translations: { ENG: ["ENG-00-109a"] },
+    sentenceStructure: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        andTags: ["job"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1",
+        agreeWith: "nou-1",
+        wordtype: "verb",
+        specificLemmas: ["pisać", "napisać"],
+        tenseDescription: ["past im"],
+      },
+      { chunkId: "fix-1", wordtype: "fixed", value: "receptę" },
+    ],
+    primaryOrders: [["nou-1", "ver-1", "fix-1"]],
+    additionalOrders: [],
+  },
 };

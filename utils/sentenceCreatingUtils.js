@@ -11,6 +11,7 @@ exports.getMaterials = (
   useDummy
 ) => {
   let sentenceFormula;
+  const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
 
   //STEP ZERO (A): Get necessary source materials.
   const { wordsBank } = require(`../source/${currentLanguage}/words.js`);
@@ -71,6 +72,10 @@ exports.getMaterials = (
     sentenceFormulaId = sentenceFormula.sentenceFormulaId;
     sentenceFormulaSymbol = sentenceFormula.sentenceFormulaSymbol;
   }
+
+  Object.keys(words).forEach((wordtypeKey) => {
+    langUtils.preprocessLemmaObjectsMinor(words[wordtypeKey]);
+  });
 
   return { sentenceFormula, words };
 };
@@ -530,7 +535,7 @@ exports.conformAnswerStructureToQuestionStructure = (
       questionSelectedLemmaObject.translations[answerLanguage];
 
     let source = words[gpUtils.giveSetKey(answerStructureChunk.wordtype)];
-    answerLangUtils.preprocessLemmaObjectsMinor(source);
+    // answerLangUtils.preprocessLemmaObjectsMinor(source);
 
     let matchingAnswerLemmaObjects = source.filter(
       (lObj) =>
