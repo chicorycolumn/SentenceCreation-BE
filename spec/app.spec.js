@@ -717,8 +717,8 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe("/palette - Stage 13: Further linguistic features.", () => {
-    it.only("#pal13-01a GET 200 YES: Singular pronouns: Verb person and number is inherited from pronoun headChunk.", () => {
+  xdescribe("/palette - Stage 13: Further linguistic features.", () => {
+    it("#pal13-01a GET 200 YES: Singular pronouns: Verb person and number is inherited from pronoun headChunk.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -751,7 +751,7 @@ describe("/api", () => {
     });
   });
 
-  xdescribe("/palette - Stage 12: Further linguistic features.", () => {
+  describe("/palette - Stage 12: Further linguistic features.", () => {
     it("#pal12-05a GET 200 YES: Selection of either male or female versions of same person POL to ENG.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
@@ -814,14 +814,14 @@ describe("/api", () => {
               ENG: "The doctor was writing a prescription.",
               POL: ["Lekarz pisał receptę.", "Lekarka pisała receptę."],
             },
-            {
-              ENG: "The doctor (male) was writing a prescription.",
-              POL: ["Lekarz pisał receptę."],
-            },
-            {
-              ENG: "The doctor (female) was writing a prescription.",
-              POL: ["Lekarka pisała receptę."],
-            },
+            // {
+            //   ENG: "The doctor (male) was writing a prescription.",
+            //   POL: ["Lekarz pisał receptę."],
+            // },
+            // {
+            //   ENG: "The doctor (female) was writing a prescription.",
+            //   POL: ["Lekarka pisała receptę."],
+            // },
           ];
 
           checkTranslationsOfGivenRef(
@@ -832,7 +832,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal12-05c GET 200 YES: Selection of either male or female versions of same person ENG to POL.", () => {
+    xit("#pal12-05c GET 200 YES: Selection of either male or female versions of same person ENG to POL.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -866,6 +866,15 @@ describe("/api", () => {
           );
         });
     });
+
+    //
+
+    //
+
+    //
+
+    //
+
     it("#pal12-01a GET 200 YES: Tantum plurale in POL is allowed to be sing or plur in ENG.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
@@ -934,7 +943,7 @@ describe("/api", () => {
           expect(answerSentenceArr).to.have.members(["Czerwone drzwi."]);
         });
     });
-    it("#pal12-##a GET 200 YES: RSWAT for First Conditional POL->ENG.", () => {
+    xit("#pal12-##a GET 200 YES: RSWAT for First Conditional POL->ENG.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -976,15 +985,15 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal12-##b GET 200 YES: RSWAT for First Conditional ENG->POL.", () => {
+    xit("#pal12-##b GET 200 YES: RSWAT for First Conditional ENG->POL.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
         .send({
-          // hideSpecifiers: true,
-          // hideClarifiers: true,
+          hideSpecifiers: true,
+          hideClarifiers: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "first conditional 106a",
@@ -1021,8 +1030,8 @@ describe("/api", () => {
     });
   });
 
-  describe("/palette - Stage 11: Adding Specifiers.", () => {
-    it("#pal11-01a Check Specifier of gender is added to ENG past continuous.", () => {
+  xdescribe("/palette - Stage 11: Adding Specifiers.", () => {
+    xit("#pal11-01a Check Specifier of gender is added to ENG past continuous.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1067,7 +1076,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal11-01b Check Specifier of gender is added to ENG all past tenses.", () => {
+    xit("#pal11-01b Check Specifier of gender is added to ENG all past tenses.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1103,6 +1112,40 @@ describe("/api", () => {
               POL: ["Napisałam.", "Pisałam."],
             },
             { ENG: "I had written (female).", POL: ["Napisałam."] },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal11-01c Don't add Specifier if gender already present.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideSpecifiers: false,
+          hideClarifiers: false,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy47c",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            { ENG: "The woman wrote.", POL: ["Napisałam."] },
+            { ENG: "The woman was writing.", POL: ["Pisałam."] },
+            {
+              ENG: "The woman has written.",
+              POL: ["Napisałam.", "Pisałam."],
+            },
+            { ENG: "The woman had written.", POL: ["Napisałam."] },
           ];
 
           checkTranslationsOfGivenRef(

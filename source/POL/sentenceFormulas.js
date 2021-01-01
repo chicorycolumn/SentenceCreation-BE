@@ -6,7 +6,7 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        andTags: ["person"],
+        andTags: ["person", "personTest1"],
         gcase: ["nom"],
         number: ["singular"],
         gender: [],
@@ -29,7 +29,7 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        andTags: ["person"],
+        andTags: ["person", "personTest1"],
         gcase: ["nom"],
         number: ["singular"],
         gender: [],
@@ -84,7 +84,7 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        andTags: ["person"],
+        andTags: ["person", "personTest1"],
 
         gcase: ["nom"],
         number: ["plural"],
@@ -179,7 +179,7 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        andTags: ["person"],
+        andTags: ["person", "personTest1"],
 
         gcase: ["nom"],
         number: ["plural"],
@@ -226,7 +226,7 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        andTags: ["person"],
+        andTags: ["person", "personTest1"],
         gcase: ["nom"],
         number: ["singular", "plural"],
         gender: ["f"],
@@ -249,7 +249,7 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        andTags: ["person"],
+        andTags: ["person", "personTest1"],
         gcase: ["nom"],
         number: ["plural"],
         gender: [],
@@ -274,7 +274,7 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        andTags: ["person"],
+        andTags: ["person", "personTest1"],
         gcase: ["nom"],
         number: ["singular"],
       },
@@ -321,7 +321,7 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        andTags: ["person"],
+        andTags: ["person", "personTest1"],
         gcase: ["nom"],
       },
       {
@@ -358,7 +358,7 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        andTags: ["person"],
+        andTags: ["person", "personTest1"],
 
         gcase: ["nom"],
       },
@@ -406,7 +406,7 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        andTags: ["person"],
+        andTags: ["person", "personTest1"],
 
         gcase: ["nom"],
       },
@@ -447,7 +447,7 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        andTags: ["person"],
+        andTags: ["person", "personTest1"],
         gcase: ["nom"],
       },
       {
@@ -470,7 +470,7 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        andTags: ["person"],
+        andTags: ["person", "personTest1"],
         gcase: ["nom"],
       },
       {
@@ -493,7 +493,7 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        andTags: ["person"],
+        andTags: ["person", "personTest1"],
         gcase: ["nom"],
       },
       {
@@ -516,7 +516,7 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        andTags: ["person"],
+        andTags: ["person", "personTest1"],
         gcase: ["nom"],
         gender: ["f"],
       },
@@ -542,7 +542,7 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        andTags: ["person"],
+        andTags: ["person", "personTest1"],
         gcase: ["nom"],
         number: ["singular", "plural"],
       },
@@ -564,7 +564,7 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        andTags: ["person"],
+        andTags: ["person", "personTest1"],
         gcase: ["nom"],
         number: ["singular", "plural"],
       },

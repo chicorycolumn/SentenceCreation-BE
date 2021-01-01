@@ -104,26 +104,15 @@ exports.processSentenceFormula = (
 
   //STEP ONE: Select headwords and add to result array.
 
-  let headIds = Array.from(
-    new Set(
-      sentenceStructure
-        .map((chunk) => {
-          if (typeof chunk === "object" && chunk.agreeWith) {
-            return chunk.agreeWith;
-          }
-        })
-        .filter((item) => item)
-    )
-  );
+  let {
+    headChunks,
+    dependentChunks,
+    otherChunks,
+  } = exports.sortStructureChunks(sentenceStructure);
 
   let headOutputUnitArrays = [];
 
-  headIds.forEach((headId, headIdIndex) => {
-    let headChunk = sentenceStructure.find(
-      (structureChunk) =>
-        typeof structureChunk === "object" && structureChunk.chunkId === headId
-    );
-
+  headChunks.forEach((headChunk) => {
     console.log("~~ SC:processSentenceFormula STEP ONE", headChunk.chunkId);
 
     //The below functions correctly with regard to:
@@ -178,19 +167,14 @@ exports.processSentenceFormula = (
       );
 
       let headChunk = headOutputUnit.structureChunk;
-      let headId = headChunk.chunkId;
 
       //STEP TWO (NOW NESTED): Select dependent words and add to result array.
-      let dependentChunks = sentenceStructure
-        .filter(
-          (structureChunk) =>
-            typeof structureChunk === "object" &&
-            structureChunk.agreeWith === headId
-        )
-        .map((item) => gpUtils.copyWithoutReference(item));
+      let specificDependentChunks = dependentChunks
+        .filter((chunk) => chunk.agreeWith === headChunk.chunkId)
+        .map((chunk) => gpUtils.copyWithoutReference(chunk));
 
-      if (dependentChunks.length) {
-        dependentChunks.forEach((dependentChunk) => {
+      if (specificDependentChunks.length) {
+        specificDependentChunks.forEach((dependentChunk) => {
           console.log(
             "~~ SC:processSentenceFormula STEP TWO",
             dependentChunk.chunkId
@@ -261,43 +245,9 @@ exports.processSentenceFormula = (
   //                                                [ 'chłopiec', 'ma', 'jabłko', 'czerwone' ]
   //                                             ]
 
-  let otherChunkIds = [];
-
-  if (grandOutputArray.length) {
-    grandOutputArray.forEach((outputArr, index) => {
-      let currentOtherChunkIds = sentenceStructure
-        .filter((structureChunk) => {
-          let doneChunkIds = outputArr.map(
-            (outputUnit) => outputUnit.structureChunk.chunkId
-          );
-
-          return !doneChunkIds.includes(structureChunk.chunkId);
-        })
-        .map((chunk) => chunk.chunkId);
-
-      if (index === 0) {
-        otherChunkIds = currentOtherChunkIds;
-      } else {
-        if (
-          !gpUtils.areTwoFlatArraysEqual(otherChunkIds, currentOtherChunkIds)
-        ) {
-          throw "Error. There is a difference, in the grandOutputArray, between which chunks have or haven't been used yet. It should be the case that every array in the grand one have the same head ids and dep ids used, and thus the same other ids yet to be used. But this was not the case and so I have halted the process.";
-        }
-      }
-    });
-  } else {
-    otherChunkIds = sentenceStructure.map(
-      (structureChunk) => structureChunk.chunkId
-    );
-  }
-
   let grandAllPossOutputUnits_other = [];
 
-  otherChunkIds.forEach((otherChunkId) => {
-    let otherChunk = sentenceStructure.find((structureChunk) => {
-      return structureChunk.chunkId === otherChunkId;
-    });
-
+  otherChunks.forEach((otherChunk) => {
     let allPossOutputUnits_other = otUtils.findMatchingLemmaObjectThenWord(
       gpUtils.copyWithoutReference(otherChunk),
       words,
@@ -721,4 +671,36 @@ exports.inheritFromHeadToDependentChunk = (
       dependentChunk[inflectorKey] = inflectorValueArr;
     }
   });
+};
+
+exports.sortStructureChunks = (sentenceStructure) => {
+  let headChunks = Array.from(
+    //qq
+    new Set(
+      sentenceStructure
+        .map((chunk) => {
+          if (typeof chunk === "object" && chunk.agreeWith) {
+            return chunk.agreeWith;
+          }
+        })
+        .filter((item) => item)
+    )
+  ).map((headId) =>
+    sentenceStructure.find((chunk) => chunk.chunkId === headId)
+  );
+
+  let dependentChunks = sentenceStructure.filter(
+    (structureChunk) =>
+      typeof structureChunk === "object" && structureChunk.agreeWith
+  );
+
+  let otherChunks = sentenceStructure.filter(
+    (chunk) =>
+      ![
+        ...headChunks.map((chunk) => chunk.chunkId),
+        ...dependentChunks.map((chunk) => chunk.chunkId),
+      ].includes(chunk.chunkId)
+  );
+
+  return { headChunks, dependentChunks, otherChunks };
 };

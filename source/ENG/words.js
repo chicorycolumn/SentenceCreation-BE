@@ -4,7 +4,7 @@ let nounSet = [
   {
     //links
     translations: { ENG: ["woman", "lady"], POL: ["kobieta"] },
-    tags: ["animate", "person", "concrete"],
+    tags: ["animate", "person", "personTest1", "concrete"],
     //selectors
     lemma: "woman",
     id: "eng-nou-001",
@@ -26,7 +26,7 @@ let nounSet = [
   {
     //links
     translations: { ENG: ["boy"], POL: ["chłopiec", "chłopak"] },
-    tags: ["animate", "person", "concrete"],
+    tags: ["animate", "person", "personTest1", "concrete"],
     //selectors
     lemma: "boy",
     id: "eng-nou-002",
@@ -202,7 +202,7 @@ let nounSet = [
   {
     //links
     translations: { ENG: ["doctor"], POL: ["lekarz", "lekarka"] },
-    tags: ["concrete", "animate", "person", "job"],
+    tags: ["concrete", "animate", "person", "personTest2", "job"],
     //selectors
     lemma: "doctor",
     id: "eng-nou-012",
@@ -419,7 +419,7 @@ let pronounSet = [
   {
     //links
     translations: { ENG: ["I"], POL: ["ja"] },
-    tags: ["animate", "person"],
+    tags: ["animate", "person", "personTest1"],
     //selectors
     lemma: "I",
     id: "eng-pro-001",

@@ -6,7 +6,7 @@ let nounSet = [
   {
     //links
     translations: { ENG: ["woman", "lady"] },
-    tags: ["animate", "person", "concrete"],
+    tags: ["animate", "person", "personTest1", "concrete"],
     //selectors
     lemma: "kobieta",
     id: "pol-nou-001",
@@ -37,7 +37,7 @@ let nounSet = [
   // {
   //   //links
   //   translations: { ENG: ["boy", "boyfriend", "guy"] },
-  //   tags: ["animate", "person", "concrete"],
+  //   tags: ["animate", "person", "personTest1", "concrete"],
   //   //selectors
   //   lemma: "chłopak",
   //   id: "pol-nou-002",
@@ -67,7 +67,7 @@ let nounSet = [
   {
     //links
     translations: { ENG: ["boy", "little boy"] },
-    tags: ["animate", "person", "concrete"],
+    tags: ["animate", "person", "personTest1", "concrete"],
     //selectors
     lemma: "chłopiec",
     id: "pol-nou-003",
@@ -325,7 +325,7 @@ let nounSet = [
   {
     //links
     translations: { ENG: ["doctor"], POL: ["lekarz"] },
-    tags: ["concrete", "animate", "person", "job"],
+    tags: ["concrete", "animate", "person", "personTest2", "job"],
     //selectors
     lemma: "lekarz",
     id: "pol-nou-015a",
@@ -355,7 +355,7 @@ let nounSet = [
   {
     //links
     translations: { ENG: ["doctor"], POL: ["lekarka"] },
-    tags: ["concrete", "animate", "person", "job"],
+    tags: ["concrete", "animate", "person", "personTest2", "job"],
     //selectors
     lemma: "lekarka",
     id: "pol-nou-015b",

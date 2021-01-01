@@ -14,7 +14,7 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        andTags: ["person"],
+        andTags: ["person", "personTest1"],
         gcase: ["nom"],
         number: ["singular", "plural"],
         gender: [],
@@ -46,7 +46,7 @@ exports.sentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        andTags: ["person"],
+        andTags: ["person", "personTest1"],
         gcase: ["nom"],
         number: ["singular", "plural"],
       },

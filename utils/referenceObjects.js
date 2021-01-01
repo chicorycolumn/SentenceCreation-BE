@@ -122,14 +122,13 @@ exports.adhocForms = {
 //    please pick a random one and
 //      add Specifier to Question Sentence
 //        and update Answer StructureChunk
-exports.requestedSpecifiers = {
+exports.requestedSpecifiersForAnswerLang = {
   POL: {
     //For verb answerStructureChunks...
     verb: [
       {
-        featureConditions: {
-          //...if the tenseDesc includes any of these
-          // AND the person includes any of these...
+        featureConditionsOfAnswerChunk: {
+          //...if the A stCh 'tenseDesc' includes any of these...
           tenseDescription: [
             "past im",
             "future im",
@@ -137,7 +136,14 @@ exports.requestedSpecifiers = {
             "past pf",
             "conditional pf",
           ],
+        },
+        featureConditionsOfAnswerChunkOrHeadChunk: {
+          // ...and the A stCh/headCh 'person' includes any of these...
           person: ["3per"],
+        },
+        featureConditionsOfQuestionChunkOrHeadChunk: {
+          // AND the Q stCh/headCh 'gender' has NO value or empty arr...
+          gender: false,
         },
         //...then randomly select one of these, and set it on Question as Specifier, and on Answer as Feature.
         featureActions: {
@@ -145,7 +151,7 @@ exports.requestedSpecifiers = {
         },
       },
       {
-        featureConditions: {
+        featureConditionsOfSelf: {
           tenseDescription: [
             "past im",
             "future im",
@@ -153,8 +159,8 @@ exports.requestedSpecifiers = {
             "past pf",
             "conditional pf",
           ],
-          person: ["1per", "2per"],
         },
+        featureConditionsOfHead: { person: ["1per", "2per"] },
         featureActions: { gender: ["m1", "f"] },
       },
     ],

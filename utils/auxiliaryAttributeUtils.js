@@ -7,11 +7,45 @@ exports.addSpecifiers = (
   questionOutputArr,
   languagesObj
 ) => {
+  //STEP ZERO: Getting materials
+
   let answerSentenceStructure = answerSentenceFormula.sentenceStructure;
 
   let { answerLanguage, questionLanguage } = languagesObj;
 
   questionOutputArr.forEach((questionOutputUnit) => {
+    /**
+     * We have the A sentStructure, and the Q sentStructure,
+     * as well as the Q lObjs for each Q stCh.
+     *
+     * For each Q stCh, we will get ready:
+     *  --Q stCh
+     *  --Q headChunk if present
+     *  --A stCh
+     *  --A headChunk if present
+     *
+     * Get the requestedSpecifiers by the A lang and the A stCh wordtype.
+     *
+     * if every featureConditionsOfSelf is fulfilled by A stCh,
+     * and every featureConditionsOfHead is fulfilled by any of A stCh or A headCh.
+     *
+     * and if neither A stCh/headCh has the action feature
+     *
+     * then put that action feature on the A stCh, and note it in annotations of Q stCh.
+     *
+     * Ooh, what we could do -
+     *
+     * is first sort the A stCh's into heads, deps, and others,
+     * then we do the heads first.
+     * Then the deps next but they'll be skipped if they're done by proxy, via the heads.
+     *
+     * So this way, hopefully the Specifiers will end up getting added to the headCh's rather than the depCh's.
+     *
+     *
+     *
+     *
+     *
+     */
     let questionStructureChunk = questionOutputUnit.structureChunk;
 
     if (questionStructureChunk.wordtype === "fixed") {
@@ -21,9 +55,20 @@ exports.addSpecifiers = (
       return;
     }
 
+    let questionHeadChunk;
+
+    if (questionStructureChunk.agreeWith) {
+      questionHeadChunk = questionOutputArr
+        .map((questionOutputUnit) => questionOutputUnit.structureChunk)
+        .find(
+          (structureChunk) =>
+            structureChunk.chunkId === questionStructureChunk.agreeWith
+        );
+    }
+
     let answerStructureChunk = answerSentenceStructure.find(
-      (answerStructureChunk) =>
-        answerStructureChunk.chunkId === questionStructureChunk.chunkId
+      (structureChunk) =>
+        structureChunk.chunkId === questionStructureChunk.chunkId
     );
 
     if (!answerStructureChunk) {
@@ -34,11 +79,33 @@ exports.addSpecifiers = (
       return;
     }
 
+    let answerHeadChunk;
+
+    if (answerStructureChunk.agreeWith) {
+      answerHeadChunk = answerSentenceStructure.find(
+        (structureChunk) =>
+          structureChunk.chunkId === answerStructureChunk.agreeWith
+      );
+    }
+
     if (!questionStructureChunk.annotations) {
       questionStructureChunk.annotations = {};
     }
 
-    //Adding requested Specifiers.
+    console.log("&");
+    console.log("&");
+    console.log("&");
+    console.log("&");
+    console.log("answerStructureChunk", answerStructureChunk);
+    console.log("answerHeadChunk", answerHeadChunk);
+    console.log("questionStructureChunk", questionStructureChunk);
+    console.log("questionHeadChunk", questionHeadChunk);
+    console.log("&");
+    console.log("&");
+    console.log("&");
+    console.log("&");
+
+    //STEP ONE: Adding requested Specifiers
 
     let requestedSpecifierInstructionsArr =
       refObj.requestedSpecifiers[answerLanguage][answerStructureChunk.wordtype];
@@ -51,18 +118,39 @@ exports.addSpecifiers = (
     requestedSpecifierInstructionsArr.forEach(
       (requestedSpecifierInstructions) => {
         if (
-          Object.keys(requestedSpecifierInstructions.featureConditions).every(
-            (featureKey) => {
-              let featureValues =
-                requestedSpecifierInstructions.featureConditions[featureKey];
+          //If answerChunk fits the conditions...
+          //(also check its headChunk)
+          Object.keys(
+            requestedSpecifierInstructions.featureConditionsOfSelf
+          ).every((featureKey) => {
+            let featureValues =
+              requestedSpecifierInstructions.featureConditionsOfSelf[
+                featureKey
+              ];
 
-              return featureValues.some((featureValue) =>
-                answerStructureChunk[featureKey].includes(featureValue)
-              );
-            }
-          )
+            return featureValues.some((featureValue) =>
+              answerStructureChunk[featureKey].includes(featureValue)
+            );
+          }) &&
+          Object.keys(
+            requestedSpecifierInstructions.featureConditionsOfSelf
+          ).every((featureKey) => {
+            let featureValues =
+              requestedSpecifierInstructions.featureConditionsOfSelf[
+                featureKey
+              ];
+
+            return featureValues.some(
+              (featureValue) =>
+                (answerStructureChunk[featureKey] &&
+                  answerStructureChunk[featureKey].includes(featureValue)) ||
+                (answerHeadChunk &&
+                  answerHeadChunk[featureKey] &&
+                  answerHeadChunk[featureKey].includes(featureValue))
+            );
+          })
         ) {
-          //hard change
+          //...hard change the answerChunk's features and note them in questionChunk's annotations.
           Object.keys(requestedSpecifierInstructions.featureActions).forEach(
             (featureActionKey) => {
               let featureActionValues =

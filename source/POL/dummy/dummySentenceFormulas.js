@@ -437,7 +437,7 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        andTags: ["person"],
+        andTags: ["person", "personTest1"],
         gcase: ["nom"],
         number: ["singular", "plural"],
         gender: ["f"],
@@ -459,7 +459,7 @@ exports.dummySentenceFormulasBank = {
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        andTags: ["person"],
+        andTags: ["person", "personTest1"],
         gcase: ["nom"],
         number: ["singular", "plural"],
         gender: ["f"],
@@ -1182,6 +1182,29 @@ exports.dummySentenceFormulasBank = {
       },
     ],
     primaryOrders: [],
+  },
+  dummy47c: {
+    sentenceFormulaSymbol: "dummy47c",
+    sentenceFormulaId: "POL-dummy47c",
+    translations: { ENG: ["ENG-dummy47c"] },
+    sentenceStructure: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        specificLemmas: ["kobieta"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        agreeWith: "nou-1",
+        specificLemmas: ["pisać"],
+        tenseDescription: ["past im"],
+        person: ["3per"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [["nou-1", "ver-1"]],
   },
   dummy53: {
     sentenceFormulaSymbol: "dummy53",
