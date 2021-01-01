@@ -292,4 +292,26 @@ exports.sentenceFormulasBank = {
     primaryOrders: [["adj-1", "nou-1"]],
     additionalOrders: [],
   },
+  108: {
+    sentenceFormulaSymbol: "108 singular I am",
+    sentenceFormulaId: "ENG-00-108",
+    translations: { POL: ["POL-00-108"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1",
+        wordtype: "pronoun",
+        gcase: ["nom"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        agreeWith: "pro-1",
+        specificLemmas: ["be"],
+        tenseDescription: ["present simple"],
+      },
+    ],
+    primaryOrders: [["pro-1", "ver-1"]],
+    additionalOrders: [],
+  },
 };

@@ -717,7 +717,39 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe("/palette - Stage 12: Further linguistic features.", () => {
+  describe.only("/palette - Stage 12: Further linguistic features.", () => {
+    it.only("#pal12-02a GET 200 YES: Singular pronouns: Verb person and number is inherited from pronoun headChunk.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          hideSpecifiers: true,
+          hideClarifiers: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "108 singular I am",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            { ENG: "I am.", POL: ["Jestem."] },
+            { ENG: "You are.", POL: ["Jesteś."] },
+            { ENG: "He is.", POL: ["Jest."] },
+            { ENG: "She is.", POL: ["Jest."] },
+            { ENG: "It is.", POL: ["Jest."] },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+
     it("#pal12-01a GET 200 YES: Tantum plurale in POL is allowed to be sing or plur in ENG.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
@@ -786,38 +818,37 @@ describe("/api", () => {
           expect(answerSentenceArr).to.have.members(["Czerwone drzwi."]);
         });
     });
-    it("#pal12-02a GET 200 YES: RSWAT for First Conditional POL->ENG.", () => {
+    it("#pal12-##a GET 200 YES: RSWAT for First Conditional POL->ENG.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
       return request(app)
         .get("/api/palette")
         .send({
-          hideSpecifiers: true,
-          hideClarifiers: true,
+          // hideSpecifiers: true,
+          // hideClarifiers: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "first conditional 106a",
         })
         .expect(200)
         .then((res) => {
-          console.log(res.body);
           let ref = [
             {
+              POL: "Jeśli napiszesz książkę , ją zbadam.",
               ENG: ["If you write a book , I will research it."],
-              POL: ["Jeśli napiszesz książkę , ją zbadam."],
             },
             {
+              POL: "Jeśli będziesz pisać książkę , ją zbadam.",
               ENG: ["If you write a book , I will research it."],
-              POL: ["Jeśli będziesz pisać książkę , ją zbadam."],
             },
             {
+              POL: "Jeśli będziesz pisał książkę , ją zbadam.",
               ENG: ["If you write (male) a book , I will research it."],
-              POL: ["Jeśli będziesz pisał książkę , ją zbadam."],
             },
             {
+              POL: "Jeśli będziesz pisała książkę , ją zbadam.",
               ENG: ["If you write (female) a book , I will research it."],
-              POL: ["Jeśli będziesz pisała książkę , ją zbadam."],
             },
           ];
 
@@ -829,15 +860,15 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal12-02b GET 200 YES: RSWAT for First Conditional ENG->POL.", () => {
+    xit("#pal12-##b GET 200 YES: RSWAT for First Conditional ENG->POL.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
         .send({
-          hideSpecifiers: true,
-          hideClarifiers: true,
+          // hideSpecifiers: true,
+          // hideClarifiers: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "first conditional 106a",
@@ -847,19 +878,19 @@ describe("/api", () => {
           console.log(res.body);
           let ref = [
             {
-              ENG: ["If you write a book , I will research it."],
+              ENG: "If you write a book , I will research it.",
               POL: ["Jeśli napiszesz książkę , ją zbadam."],
             },
             {
-              ENG: ["If you write a book , I will research it."],
+              ENG: "If you write a book , I will research it.",
               POL: ["Jeśli będziesz pisać książkę , ją zbadam."],
             },
             {
-              ENG: ["If you write (male) a book , I will research it."],
+              ENG: "If you write (male) a book , I will research it.",
               POL: ["Jeśli będziesz pisał książkę , ją zbadam."],
             },
             {
-              ENG: ["If you write (female) a book , I will research it."],
+              ENG: "If you write (female) a book , I will research it.",
               POL: ["Jeśli będziesz pisała książkę , ją zbadam."],
             },
           ];
@@ -892,26 +923,24 @@ describe("/api", () => {
         .expect(200)
         .then((res) => {
           let { questionSentenceArr, answerSentenceArr } = res.body;
-
-          console.log(res.body);
           // expect(questionSentenceArr.length).to.equal(1);
           // expect(answerSentenceArr.length).to.equal(1);
 
           let ref = [
-            { ENG: ["I wrote (male)."], POL: ["Napisałem."] },
-            { ENG: ["I was writing (male)."], POL: ["Pisałem."] },
-            { ENG: ["I wrote (female)."], POL: ["Napisałam."] },
-            { ENG: ["I was writing (female)."], POL: ["Pisałam."] },
+            { ENG: "I wrote (male).", POL: ["Napisałem."] },
+            { ENG: "I was writing (male).", POL: ["Pisałem."] },
+            { ENG: "I wrote (female).", POL: ["Napisałam."] },
+            { ENG: "I was writing (female).", POL: ["Pisałam."] },
             {
-              ENG: ["I have written (male)."],
-              POL: ["Napisałem.", "Napisałem."],
+              ENG: "I have written (male).",
+              POL: ["Napisałem.", "Pisałem."],
             },
-            { ENG: ["I had written (male)."], POL: ["Pisałem."] },
+            { ENG: "I had written (male).", POL: ["Napisałem."] },
             {
-              ENG: ["I have written (female)."],
-              POL: ["Napisałam.", "Napisałam."],
+              ENG: "I have written (female).",
+              POL: ["Napisałam.", "Pisałam."],
             },
-            { ENG: ["I had written (female)."], POL: ["Pisałam."] },
+            { ENG: "I had written (female).", POL: ["Napisałam."] },
           ];
 
           checkTranslationsOfGivenRef(
@@ -944,20 +973,20 @@ describe("/api", () => {
           expect(answerSentenceArr.length).to.equal(1);
 
           let ref = [
-            { ENG: ["I wrote (male)."], POL: ["Napisałem."] },
-            { ENG: ["I was writing (male)."], POL: ["Pisałem."] },
-            { ENG: ["I wrote (female)."], POL: ["Napisałam."] },
-            { ENG: ["I was writing (female)."], POL: ["Pisałam."] },
+            { ENG: "I wrote (male).", POL: ["Napisałem."] },
+            { ENG: "I was writing (male).", POL: ["Pisałem."] },
+            { ENG: "I wrote (female).", POL: ["Napisałam."] },
+            { ENG: "I was writing (female).", POL: ["Pisałam."] },
             {
-              ENG: ["I have written (male)."],
-              POL: ["Napisałem.", "Napisałem."],
+              ENG: "I have written (male).",
+              POL: ["Napisałem.", "Pisałem."],
             },
-            { ENG: ["I had written (male)."], POL: ["Pisałem."] },
+            { ENG: "I had written (male).", POL: ["Napisałem."] },
             {
-              ENG: ["I have written (female)."],
-              POL: ["Napisałam.", "Napisałam."],
+              ENG: "I have written (female).",
+              POL: ["Napisałam.", "Pisałam."],
             },
-            { ENG: ["I had written (female)."], POL: ["Pisałam."] },
+            { ENG: "I had written (female).", POL: ["Napisałam."] },
           ];
 
           checkTranslationsOfGivenRef(
@@ -993,8 +1022,8 @@ describe("/api", () => {
           expect(answerSentenceArr.length).to.equal(1);
 
           let ref = [
-            { ENG: ["A small nut (🥜, food)."], POL: ["Mały orzech."] },
-            { ENG: ["A small nut (🔩, metal)."], POL: ["Mała nakrętka."] },
+            { ENG: "A small nut (🥜, food).", POL: ["Mały orzech."] },
+            { ENG: "A small nut (🔩, metal).", POL: ["Mała nakrętka."] },
           ];
 
           checkTranslationsOfGivenRef(
@@ -1027,8 +1056,8 @@ describe("/api", () => {
           expect(answerSentenceArr.length).to.equal(1);
 
           let ref = [
-            { ENG: ["A small nut."], POL: ["Mały orzech."] },
-            { ENG: ["A small nut."], POL: ["Mała nakrętka."] },
+            { POL: "Mały orzech.", ENG: ["A small nut."] },
+            { POL: "Mała nakrętka.", ENG: ["A small nut."] },
           ];
 
           checkTranslationsOfGivenRef(
@@ -1060,10 +1089,7 @@ describe("/api", () => {
           expect(questionSentenceArr.length).to.equal(1);
           expect(answerSentenceArr.length).to.equal(1);
 
-          let ref = [
-            { ENG: ["Bear (noun)."], POL: ["Niedźwiedź."] },
-            // { ENG: ["Bear (verb)."], POL: ["Znieść."] },
-          ];
+          let ref = [{ ENG: "Bear (noun).", POL: ["Niedźwiedź."] }];
 
           checkTranslationsOfGivenRef(
             res,
@@ -1094,10 +1120,7 @@ describe("/api", () => {
           expect(questionSentenceArr.length).to.equal(1);
           expect(answerSentenceArr.length).to.equal(1);
 
-          let ref = [
-            // { ENG: ["Bear (noun)."], POL: ["Niedźwiedź."] },
-            { ENG: ["Bear (verb)."], POL: ["Znieść."] },
-          ];
+          let ref = [{ ENG: "Bear (verb).", POL: ["Znieść."] }];
 
           checkTranslationsOfGivenRef(
             res,
@@ -1128,10 +1151,7 @@ describe("/api", () => {
           expect(questionSentenceArr.length).to.equal(1);
           expect(answerSentenceArr.length).to.equal(1);
 
-          let ref = [
-            // { ENG: ["Bear (noun)."], POL: ["Niedźwiedź."] },
-            { ENG: ["Bear."], POL: ["Znieść."] },
-          ];
+          let ref = [{ ENG: "Bear.", POL: ["Znieść."] }];
 
           checkTranslationsOfGivenRef(
             res,
@@ -1162,10 +1182,7 @@ describe("/api", () => {
           expect(questionSentenceArr.length).to.equal(1);
           expect(answerSentenceArr.length).to.equal(1);
 
-          let ref = [
-            { ENG: ["Bear."], POL: ["Niedźwiedź."] },
-            // { ENG: ["Bear."], POL: ["Znieść."] },
-          ];
+          let ref = [{ POL: "Niedźwiedź.", ENG: ["Bear."] }];
 
           checkTranslationsOfGivenRef(
             res,
@@ -1196,10 +1213,7 @@ describe("/api", () => {
           expect(questionSentenceArr.length).to.equal(1);
           expect(answerSentenceArr.length).to.equal(1);
 
-          let ref = [
-            // { ENG: ["Bear."], POL: ["Niedźwiedź."] },
-            { ENG: ["Bear."], POL: ["Znieść."] },
-          ];
+          let ref = [{ POL: "Znieść.", ENG: ["Bear."] }];
 
           checkTranslationsOfGivenRef(
             res,
@@ -1231,8 +1245,8 @@ describe("/api", () => {
           expect(answerSentenceArr.length).to.equal(1);
 
           let ref = [
-            { ENG: ["Tie (⚽, score)."], POL: ["Remis."] },
-            { ENG: ["Tie (👔, clothes)."], POL: ["Krawat."] },
+            { ENG: "Tie (⚽, score).", POL: ["Remis."] },
+            { ENG: "Tie (👔, clothes).", POL: ["Krawat."] },
           ];
 
           checkTranslationsOfGivenRef(
@@ -1265,8 +1279,8 @@ describe("/api", () => {
           expect(answerSentenceArr.length).to.equal(1);
 
           let ref = [
-            { ENG: ["Tie (⚽, score, noun)."], POL: ["Remis."] },
-            { ENG: ["Tie (👔, clothes, noun)."], POL: ["Krawat."] },
+            { ENG: "Tie (⚽, score, noun).", POL: ["Remis."] },
+            { ENG: "Tie (👔, clothes, noun).", POL: ["Krawat."] },
           ];
 
           checkTranslationsOfGivenRef(
@@ -1298,7 +1312,7 @@ describe("/api", () => {
           expect(questionSentenceArr.length).to.equal(1);
           expect(answerSentenceArr.length).to.equal(1);
 
-          let ref = [{ ENG: ["Tie (🧵, with string eg)."], POL: ["Wiązać."] }];
+          let ref = [{ ENG: "Tie (🧵, with string eg).", POL: ["Wiązać."] }];
 
           checkTranslationsOfGivenRef(
             res,
@@ -1330,7 +1344,7 @@ describe("/api", () => {
           expect(answerSentenceArr.length).to.equal(1);
 
           let ref = [
-            { ENG: ["Tie (🧵, with string eg, verb)."], POL: ["Wiązać."] },
+            { ENG: "Tie (🧵, with string eg, verb).", POL: ["Wiązać."] },
           ];
 
           checkTranslationsOfGivenRef(
@@ -1363,8 +1377,8 @@ describe("/api", () => {
           expect(answerSentenceArr.length).to.equal(1);
 
           let ref = [
-            { ENG: ["Tie."], POL: ["Remis."] },
-            { ENG: ["Tie."], POL: ["Krawat."] },
+            { POL: "Remis.", ENG: ["Tie."] },
+            { POL: "Krawat.", ENG: ["Tie."] },
           ];
 
           checkTranslationsOfGivenRef(
@@ -1396,7 +1410,7 @@ describe("/api", () => {
           expect(questionSentenceArr.length).to.equal(1);
           expect(answerSentenceArr.length).to.equal(1);
 
-          let ref = [{ ENG: ["Tie."], POL: ["Wiązać."] }];
+          let ref = [{ POL: "Wiązać.", ENG: ["Tie."] }];
 
           checkTranslationsOfGivenRef(
             res,
@@ -4718,17 +4732,38 @@ function checkTranslationsOfGivenRef(
   questionLanguage,
   answerLanguage
 ) {
+  //You have to specify a different ref for the different directions.
+  // let ref = [
+  //
+  //    If the Qsent is THIS... then the Asent ARRAY must be exactly THIS.
+  //    So you see, that's why this doesn't work bidirectionally.
+  //
+  //   { ENG: "I wrote (male).", POL: ["Napisałem."] },
+  //   { ENG: "I was writing (male).", POL: ["Pisałem."] },
+  //   { ENG: "I wrote (female).", POL: ["Napisałam."] },
+  //   { ENG: "I was writing (female).", POL: ["Pisałam."] },
+  // ];
+
   console.log(res.body);
 
   let { questionSentenceArr, answerSentenceArr } = res.body;
 
-  expect(ref.map((item) => item[questionLanguage][0])).include(
-    questionSentenceArr[0]
-  );
+  let actualQuestionSentence = questionSentenceArr[0];
+
+  let expectedQuestionSentences = ref.map((item) => item[questionLanguage]);
+
+  expect(expectedQuestionSentences).to.include(actualQuestionSentence);
+
+  let testActivated = false;
 
   ref.forEach((item) => {
-    if (item[questionLanguage] === questionSentenceArr[0]) {
+    if (item[questionLanguage] === actualQuestionSentence) {
       expect(item[answerLanguage]).to.have.members(answerSentenceArr);
+      testActivated = true;
     }
   });
+
+  if (!testActivated) {
+    throw "This test did not really pass, as no expect statement ran.";
+  }
 }

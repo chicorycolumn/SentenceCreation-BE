@@ -766,4 +766,24 @@ exports.sentenceFormulasBank = {
     primaryOrders: [["adj-1", "nou-1"]],
     additionalOrders: [],
   },
+  108: {
+    sentenceFormulaSymbol: "108 singular I am",
+    sentenceFormulaId: "POL-00-108",
+    translations: { ENG: ["ENG-00-108"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1",
+        wordtype: "pronoun",
+      },
+      {
+        chunkId: "ver-1",
+        agreeWith: "pro-1",
+        wordtype: "noun",
+        specificLemmas: ["być"],
+        tenseDescription: ["present im"],
+      },
+    ],
+    primaryOrders: [["pro-1", "ver-1"]],
+    additionalOrders: [["ver-1"]], //See how here we're showing the pronoun is optional.
+  },
 };
