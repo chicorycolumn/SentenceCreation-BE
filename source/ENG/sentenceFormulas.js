@@ -202,12 +202,13 @@ exports.sentenceFormulasBank = {
     translations: { POL: ["POL-00-106a"] },
     sentenceStructure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "if" },
-      { chunkId: "fix-2", wordtype: "fixed", value: "I" },
+      { chunkId: "fix-2", wordtype: "fixed", value: "you" },
       {
         chunkId: "ver-1",
         wordtype: "verb",
         specificLemmas: ["write"],
         tenseDescription: ["cond1 condition"],
+        importantFeatures: ["tenseDescription"],
         person: ["1per"],
         number: ["singular"],
       },
@@ -226,6 +227,7 @@ exports.sentenceFormulasBank = {
         wordtype: "verb",
         specificLemmas: ["research"],
         tenseDescription: ["cond1 outcome"],
+        importantFeatures: ["tenseDescription"],
         person: ["1per"],
         number: ["singular"],
       },

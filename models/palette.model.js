@@ -34,21 +34,9 @@ exports.fetchPalette = (req) => {
 
   console.log("palette.model > questionSentenceData.arrayOfOutputArrays");
   gpUtils.consoleLogObjectAtTwoLevels(questionSentenceData.arrayOfOutputArrays);
+  gpUtils.consoleLogAestheticBorder(4);
 
-  if (true) {
-    console.log(
-      "▌ ║ █ ║ ▌ │ ║ ▌ │ ║ ▌ ║ ▌ █ ║ ▌ ║ █ ║ ▌ │ ║ ▌ │ ║ ▌ ║ ▌ █ ║ ▌ ║ █ ║ ▌ │"
-    );
-    console.log(
-      "║ █ ║ ▌ │ ║ ▌ │ ║ ▌ ║ ▌ █ ║ ▌ ║ █ ║ ▌ │ ║ ▌ │ ║ ▌ ║ ▌ █ ║ ▌ ║ █ ║ ▌ │ ║"
-    );
-    console.log(
-      "█ ║ ▌ │ ║ ▌ │ ║ ▌ ║ ▌ █ ║ ▌ ║ █ ║ ▌ │ ║ ▌ │ ║ ▌ ║ ▌ █ ║ ▌ ║ █ ║ ▌ │ ║ ▌"
-    );
-    console.log(
-      "║ ▌ │ ║ ▌ │ ║ ▌ ║ ▌ █ ║ ▌ ║ █ ║ ▌ │ ║ ▌ │ ║ ▌ ║ ▌ █ ║ ▌ ║ █ ║ ▌ │ ║ ▌ │"
-    );
-  }
+  let questionOutputArr = questionSentenceData.arrayOfOutputArrays[0];
 
   let answerResponseObj;
 
@@ -78,8 +66,6 @@ exports.fetchPalette = (req) => {
         answerLanguage,
         questionLanguage,
       };
-
-      let questionOutputArr = questionSentenceData.arrayOfOutputArrays[0];
 
       scUtils.conformAnswerStructureToQuestionStructure(
         sentenceFormula,

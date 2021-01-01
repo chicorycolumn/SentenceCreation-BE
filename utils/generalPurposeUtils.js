@@ -369,3 +369,12 @@ exports.getWordtypeFromLemmaObject = (lObj) => {
 
   return wordtypeRef[wordtypeShorthand];
 };
+
+exports.consoleLogAestheticBorder = (reps) => {
+  let border =
+    " ║ █ ║ ▌ │ ║ ▌ │ ║ ▌ ║ ▌ █ ║ ▌ ║ █ ║ ▌ │ ║ ▌ │ ║ ▌ ║ ▌ █ ║ ▌ ║ █ ║ ▌ │ ▌ ║ █ ║ ▌ │ ║ ▌ │ ║";
+
+  for (let i = 0; i < reps; i++) {
+    console.log(border.slice(i, border.length - (10 - i)));
+  }
+};

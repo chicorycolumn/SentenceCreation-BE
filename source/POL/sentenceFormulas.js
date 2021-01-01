@@ -718,7 +718,7 @@ exports.sentenceFormulasBank = {
         wordtype: "verb",
         specificLemmas: ["pisać", "napisać"],
         tenseDescription: ["cond1 condition"],
-        person: ["1per"],
+        person: ["2per"],
         number: ["singular"],
       },
       {

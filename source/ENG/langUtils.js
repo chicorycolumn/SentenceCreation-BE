@@ -47,7 +47,7 @@ let inflectorRef = {
   ],
 };
 
-exports.addLanguageSpecificClarifiers = (
+exports.addLanguageParticularClarifiers = (
   structureChunk,
   currentLanguage,
   lemmaObject
@@ -65,10 +65,10 @@ exports.addLanguageSpecificClarifiers = (
     //Type 3 Synhomographs: Add clarifier for 2nd person singular vs plural. (Wasn't caught, as went through Ad-PW).
     //
     if (!structureChunk.person || !structureChunk.number) {
-      throw "ENG:addLanguageSpecificClarifiers expected this verb structureChunk to have a Person and Number key.";
+      throw "ENG:addLanguageParticularClarifiers expected this verb structureChunk to have a Person and Number key.";
     }
     if (!structureChunk.person.length > 1 || structureChunk.number.length > 1) {
-      throw "ENG:addLanguageSpecificClarifiers expected this verb structureChunk's Person and Number key to have only one value each, not more.";
+      throw "ENG:addLanguageParticularClarifiers expected this verb structureChunk's Person and Number key to have only one value each, not more.";
     }
 
     let person = structureChunk.person[0];
@@ -83,7 +83,7 @@ exports.addLanguageSpecificClarifiers = (
     //
     if (structureChunk.tenseDescription) {
       if (structureChunk.tenseDescription.length > 1) {
-        throw "ENG:addLanguageSpecificClarifiers expected this verb structureChunk's tenseDescription key to have only one value each, not more.";
+        throw "ENG:addLanguageParticularClarifiers expected this verb structureChunk's tenseDescription key to have only one value each, not more.";
       }
 
       if (lemmaObject.inflections.infinitive === lemmaObject.inflections.v2) {
@@ -113,7 +113,8 @@ exports.adjustTenseDescriptions = () => {};
 
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {};
 
-exports.preprocessLemmaObjects = (matches, structureChunk) => {};
+exports.preprocessLemmaObjectsMajor = (matches, structureChunk) => {};
+exports.preprocessLemmaObjectsMinor = (matches) => {};
 
 exports.addSpecialVerbForms = (lemmaObject, currentLanguage) => {
   let { infinitive, v2, v3, thirdPS, gerund } = lemmaObject.inflections;

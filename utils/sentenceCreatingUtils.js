@@ -495,9 +495,7 @@ exports.conformAnswerStructureToQuestionStructure = (
   words
 ) => {
   let { sentenceStructure } = sentenceFormula;
-
   let { questionLanguage, answerLanguage } = languagesObj;
-
   const questionLangUtils = require(`../source/${questionLanguage}/langUtils.js`);
   const answerLangUtils = require(`../source/${answerLanguage}/langUtils.js`);
 
@@ -521,7 +519,9 @@ exports.conformAnswerStructureToQuestionStructure = (
 
     if (!answerStructureChunk) {
       console.log(
-        "No answerStructureChunk was found, in SC:conformAnswerStructureToQuestionStructure"
+        "SC:conformAnswerStructureToQuestionStructure couldn't find any answerStructureChunk for '" +
+          questionStructureChunk.chunkId +
+          "'."
       );
       return;
     }
@@ -530,7 +530,7 @@ exports.conformAnswerStructureToQuestionStructure = (
       questionSelectedLemmaObject.translations[answerLanguage];
 
     let source = words[gpUtils.giveSetKey(answerStructureChunk.wordtype)];
-    lfUtils.adjustImOnlyLemmaObjects(source);
+    answerLangUtils.preprocessLemmaObjectsMinor(source);
 
     let matchingAnswerLemmaObjects = source.filter(
       (lObj) =>

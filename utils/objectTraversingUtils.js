@@ -28,7 +28,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
   //STEP TWO: Filter lemmaObjects by specificIds OR specificLemmas OR andTags and selectors.
   let source = words[gpUtils.giveSetKey(structureChunk.wordtype)];
-  lfUtils.adjustImOnlyLemmaObjects(source);
+  langUtils.preprocessLemmaObjectsMinor(source);
   let matches = [];
 
   if (structureChunk.specificIds && structureChunk.specificIds.length) {
@@ -51,7 +51,7 @@ exports.findMatchingLemmaObjectThenWord = (
     console.log("Get matches by Tags and Selectors.");
     matches = lfUtils.filterByAndTagsAndOrTags(source, structureChunk);
 
-    lfUtils.adjustImOnlyLemmaObjects(matches); //Must be adjusted before aspect (a selector) filter is applied.
+    langUtils.preprocessLemmaObjectsMinor(matches); //Must be adjusted before aspect (a selector) filter is applied.
 
     matches = lfUtils.filterBySelectors(
       currentLanguage,
@@ -60,9 +60,9 @@ exports.findMatchingLemmaObjectThenWord = (
     );
   }
 
-  lfUtils.adjustImOnlyLemmaObjects(matches); //Must be adjusted again as may not have been in such pathway above.
+  langUtils.preprocessLemmaObjectsMinor(matches); //Must be adjusted again as may not have been in such pathway above.
 
-  langUtils.preprocessLemmaObjects(matches, structureChunk);
+  langUtils.preprocessLemmaObjectsMajor(matches, structureChunk);
 
   //STEP THREE: Return result array immediately if uninflected or ad hoc.
 

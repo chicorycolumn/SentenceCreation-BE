@@ -31,7 +31,7 @@ exports.findHomographs = (testing, currentLanguage, homographType, ignore) => {
 
     let wordtype = wordsetKey.slice(0, -3);
 
-    langUtils.preprocessLemmaObjects(wordset, { wordtype }, true);
+    langUtils.preprocessLemmaObjectsMajor(wordset, { wordtype }, true);
 
     wordset.forEach((lObj) => {
       let terminalValuesAndPathsArr = otUtils.giveRoutesAndTerminalValuesFromObject(

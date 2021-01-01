@@ -136,12 +136,12 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
     //   }
     // }
 
-    //STEP ONE: Type 1 Allohomographs (have clarifiers)
+    //STEP ONE: Type 1 Allohomographs (get clarifiers from lObj)
     //
     //  Textmoji Clarifiers
     //  Wordtype Clarifiers
     //
-    //are both already on lobjs.
+    //          STEP 1A: singleWordtype - Textmoji clarifiers
 
     let { allohomInfo } = selectedLemmaObject;
 
@@ -160,6 +160,8 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
       structureChunk.annotations.text = text;
     }
 
+    //          STEP 1B: multipleWordtype - Wordtype clarifiers
+
     if (allohomInfo && allohomInfo.multipleWordtype) {
       if (structureChunk.pleaseShowMultipleWordtypeAllohomClarifiers) {
         structureChunk.annotations.wordtype = gpUtils.getWordtypeFromLemmaObject(
@@ -174,7 +176,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
     //
     //eg ENG has some verbs with v1-v2 synhomography, and 2per ambiguous re number.
 
-    langUtils.addLanguageSpecificClarifiers(
+    langUtils.addLanguageParticularClarifiers(
       structureChunk,
       questionLanguage,
       selectedLemmaObject

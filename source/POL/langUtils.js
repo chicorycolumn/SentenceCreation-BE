@@ -3,7 +3,7 @@ const otUtils = require("../../utils/objectTraversingUtils.js");
 const gpUtils = require("../../utils/generalPurposeUtils.js");
 const refObj = require("../../utils/referenceObjects.js");
 
-exports.addLanguageSpecificClarifiers = () => {
+exports.addLanguageParticularClarifiers = () => {
   //
   //Type 6 Synhomographs: Add clarifier for ambiguous verb participles (Un-PW).
   //Afaics, no such ambiguity in POL verbs.
@@ -141,7 +141,31 @@ exports.adjustTenseDescriptions = (structureChunk) => {
   return resultArr;
 };
 
-exports.preprocessLemmaObjects = (
+exports.preprocessLemmaObjectsMinor = (matches) => {
+  matches.forEach((lObj) => {
+    if (lObj.imperfectiveOnly_unadjusted && lObj.aspect === "imperfective") {
+      console.log(
+        "Hey, heads up, I'm making a copy of lemma object '" +
+          lObj.lemma +
+          "' with perfective Aspect."
+      );
+
+      lObj.imperfectiveOnly = true;
+      delete lObj.imperfectiveOnly_unadjusted;
+
+      let adjustedLemmaObject = gpUtils.copyWithoutReference(lObj);
+      adjustedLemmaObject.aspect = "perfective";
+
+      let newIdArr = lObj.id.split("-");
+      newIdArr[3] = "pf";
+      adjustedLemmaObject.id = newIdArr.join("-");
+
+      matches.push(adjustedLemmaObject);
+    }
+  });
+};
+
+exports.preprocessLemmaObjectsMajor = (
   matches,
   structureChunk,
   adjustLemmaObjectsOnly
