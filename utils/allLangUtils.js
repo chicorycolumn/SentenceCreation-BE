@@ -12,7 +12,10 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
       }
     }
 
-    if (structureChunk.wordtype === "noun") {
+    if (
+      structureChunk.wordtype === "noun" ||
+      structureChunk.wordtype === "pronoun"
+    ) {
       if (!structureChunk.gcase || !structureChunk.gcase.length) {
         structureChunk.gcase = ["nom"];
       }

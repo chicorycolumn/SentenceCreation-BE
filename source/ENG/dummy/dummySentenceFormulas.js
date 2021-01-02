@@ -655,6 +655,22 @@ exports.dummySentenceFormulasBank = [
     primaryOrders: [["fix-1", "ver-1"]],
   },
   {
+    sentenceFormulaSymbol: "dummy48a",
+    sentenceFormulaId: "ENG-dummy48a",
+    translations: { POL: ["POL-dummy48a"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1",
+        wordtype: "pronoun",
+        person: ["1per"],
+        number: ["singular"],
+        gender: ["m"],
+        gcase: ["nom"],
+      },
+    ],
+    primaryOrders: [],
+  },
+  {
     sentenceFormulaSymbol: "dummy53",
     sentenceFormulaId: "ENG-dummy53",
     translations: { POL: ["POL-dummy53"] },

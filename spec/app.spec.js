@@ -863,6 +863,49 @@ describe("/api", () => {
           );
         });
     });
+
+    it("#pal13-02a GET 200 YES: Give a pronoun in ENG.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          doNotSpecify: true,
+          hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          useDummy: true,
+          // answerLanguage,
+          sentenceFormulaSymbol: "dummy48a",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          expect(res.body.questionSentenceArr).to.have.length(1);
+          expect(res.body.questionSentenceArr[0]).to.equal("I.");
+        });
+    });
+    it("#pal13-02b GET 200 YES: Give a pronoun in POL.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          doNotSpecify: true,
+          hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          useDummy: true,
+          // answerLanguage,
+          sentenceFormulaSymbol: "dummy48a",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          expect(res.body.questionSentenceArr).to.have.length(1);
+          expect(res.body.questionSentenceArr[0]).to.equal("Ja.");
+        });
+    });
   });
 
   //Note, these currently fail they have pronouns as FIX stChs, whereas we're in the process of making pronouns their own.

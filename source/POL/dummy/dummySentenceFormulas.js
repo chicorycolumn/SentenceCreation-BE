@@ -1223,6 +1223,23 @@ exports.dummySentenceFormulasBank = [
     primaryOrders: [],
   },
   {
+    sentenceFormulaSymbol: "dummy48a",
+    sentenceFormulaId: "POL-dummy48a",
+    translations: { ENG: ["ENG-dummy48a"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1",
+        wordtype: "pronoun",
+        person: ["1per"],
+        number: ["singular"],
+        gender: ["m1"],
+        gcase: ["nom"],
+      },
+    ],
+    primaryOrders: [],
+  },
+
+  {
     sentenceFormulaSymbol: "dummy53",
     sentenceFormulaId: "POL-dummy53",
     translations: { ENG: ["ENG-dummy53"] },

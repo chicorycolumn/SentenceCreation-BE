@@ -1,7 +1,5 @@
 //Copied over on 27/12/2020
 
-const { selectRandom } = require("../../utils/generalPurposeUtils");
-
 let nounSet = [
   {
     //links
@@ -1469,4 +1467,5 @@ exports.wordsBank = {
   nounSet,
   adjectiveSet,
   verbSet,
+  pronounSet,
 };

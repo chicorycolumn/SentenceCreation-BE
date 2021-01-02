@@ -294,6 +294,7 @@ let nounSet = [
 ];
 let adjectiveSet = [];
 let adverbSet = [];
+let pronounSet = [];
 let verbSet = [
   {
     //links
@@ -480,4 +481,5 @@ exports.dummyWordsBank = {
   adjectiveSet,
   adverbSet,
   verbSet,
+  pronounSet,
 };

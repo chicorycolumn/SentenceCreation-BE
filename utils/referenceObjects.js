@@ -36,6 +36,7 @@ exports.lemmaObjectFeatures = {
       noun: ["number", "gcase"],
       adjective: ["form"],
       verb: ["form", "tense", "person", "number"],
+      pronoun: ["person", "number", "gender", "gcase"],
     },
     allowableTransfersFromQuestionStructure: {
       noun: ["number"],
