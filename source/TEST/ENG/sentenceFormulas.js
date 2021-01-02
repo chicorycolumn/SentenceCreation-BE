@@ -1,6 +1,6 @@
-exports.sentenceFormulasBank = {
-  "101a": {
-    sentenceFormulaSymbol: "101a girl is reading",
+exports.sentenceFormulasBank = [
+  {
+    sentenceFormulaSymbol: "symb1",
     sentenceFormulaId: "ENG-00-101a",
     translations: { POL: ["POL-00-101a"] },
     sentenceStructure: [
@@ -30,9 +30,8 @@ exports.sentenceFormulasBank = {
     primaryOrders: [["fix-1", "nou-1", "ver-1"]],
     additionalOrders: [],
   },
-  "101b": {
-    sentenceFormulaSymbol:
-      "101b girl *reads quickly IT WON'T MATTER THAT THIS sentenceFormulaSymbol IS DIFFERENT FROM ITS POL COUNTERPART",
+  {
+    sentenceFormulaSymbol: "symb1",
     sentenceFormulaId: "ENG-00-101b",
     translations: { POL: ["POL-00-101b"] },
     sentenceStructure: [
@@ -64,7 +63,7 @@ exports.sentenceFormulasBank = {
     primaryOrders: [["fix-1", "nou-1", "ver-1", "fix-2"]],
     additionalOrders: [["fix-2", "fix-1", "nou-1", "ver-1"]],
   },
-  "102a": {
+  {
     sentenceFormulaSymbol: "102a I'll read (pf fut)",
     sentenceFormulaId: "ENG-00-102a",
     translations: { POL: ["POL-00-102a"] },
@@ -83,12 +82,12 @@ exports.sentenceFormulasBank = {
     primaryOrders: [["fix-1", "ver-1"]],
     additionalOrders: [],
   },
-  "102a": {
-    sentenceFormulaSymbol: "102a I'll read (pf fut)",
+  {
+    sentenceFormulaSymbol: "102a I'll read",
     sentenceFormulaId: "ENG-00-102a",
     translations: { POL: ["POL-00-102a"] },
     sentenceStructure: [],
     primaryOrders: [],
     additionalOrders: [],
   },
-};
+];

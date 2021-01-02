@@ -208,30 +208,30 @@ exports.checkSentenceFormulaIds = (testing, currentLanguage) => {
     testing
   );
 
-  let schematic = Object.keys(
-    sentenceFormulasBank
-  ).map((sentenceFormulaKey) => [
-    sentenceFormulasBank[sentenceFormulaKey].sentenceFormulaId,
+  let schematic = sentenceFormulasBank.map((senFor) => [
+    senFor.sentenceFormulaId,
+    senFor.sentenceFormulaSymbol,
   ]);
 
-  console.log("&");
-  console.log("&");
-  console.log(schematic);
-  console.log("&");
-  console.log("&");
+  function findDuplicates(index) {
+    let tempArr = [];
+    let duplicateIds = [];
 
-  let tempArr = [];
-  let duplicateIds = [];
+    schematic.forEach((item) => {
+      if (tempArr.includes(item[index])) {
+        duplicateIds.push(item[index]);
+      } else {
+        tempArr.push(item[index]);
+      }
+    });
 
-  schematic.forEach((item) => {
-    if (tempArr.includes(item[0])) {
-      duplicateIds.push(item[0]);
-    } else {
-      tempArr.push(item[0]);
-    }
-  });
+    return duplicateIds;
+  }
 
-  return { schematic, duplicateIds };
+  let duplicateIds = findDuplicates(0);
+  let duplicateSymbols = findDuplicates(1);
+
+  return { schematic, duplicateIds, duplicateSymbols };
 };
 
 exports.getWordsBank = (currentLanguage, testing) => {

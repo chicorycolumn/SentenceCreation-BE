@@ -283,75 +283,6 @@ describe("findHomographs", () => {
     console.log("spec result >>>>", actual);
     expect(actual).to.eql(expected);
   });
-  it("REAL #edu3.1 Gives ENG synhomograph lemma objects. (Used programmatically for Type 1 Synhomos)", () => {
-    const currentLanguage = "ENG";
-    const homographType = "syn";
-    const ignore = {
-      ignoreV2V3Synhoms: true,
-      ignoreClarifiedAllohoms: true, //Should have no effect as we are asking for synhoms.
-    };
-
-    let actual = findHomographs(false, currentLanguage, homographType, ignore);
-    console.log(
-      "Educator does not need to take action on this: spec result >>>>",
-      actual
-    );
-  });
-  it("REAL #edu3.2 Gives POL synhomograph lemma objects. (Used programmatically for Type 1 Synhomos)", () => {
-    const currentLanguage = "POL";
-    const homographType = "syn";
-    const ignore = {
-      ignoreV2V3Synhoms: true,
-      ignoreClarifiedAllohoms: true, //Should have no effect as we are asking for synhoms.
-    };
-
-    let actual = findHomographs(false, currentLanguage, homographType, ignore);
-    console.log(
-      "Educator does not need to take action on this: result >>>>",
-      actual
-    );
-  });
-  it("REAL #edu4.1 Gives ENG allohomograph lemma objects.", () => {
-    const currentLanguage = "ENG";
-    const homographType = "allo";
-    const ignore = {
-      ignoreV2V3Synhoms: true,
-      ignoreClarifiedAllohoms: true,
-    };
-
-    let actual = findHomographs(false, currentLanguage, homographType, ignore);
-    console.log("spec result >>>>", actual);
-
-    if (Object.keys(actual).length) {
-      console.log(currentLanguage + " Sentence Formulas >>>>", actual);
-      throw (
-        "Action required: YOU MUST ADD CLARIFIER INFO TO THESE ALLOHOMOGRAPHS: " +
-        Object.keys(actual).join(", ")
-      );
-    }
-    expect(Object.keys(actual).length).to.equal(0);
-  });
-  it("REAL #edu4.2 Gives POL allohomograph lemma objects.", () => {
-    const currentLanguage = "POL";
-    const homographType = "allo";
-    const ignore = {
-      ignoreV2V3Synhoms: true,
-      ignoreClarifiedAllohoms: true,
-    };
-
-    let actual = findHomographs(false, currentLanguage, homographType, ignore);
-    console.log("spec result >>>>", actual);
-    let keysActual = Object.keys(actual).filter((key) => key !== "true");
-
-    if (keysActual.length) {
-      console.log(currentLanguage + " Sentence Formulas >>>>", actual);
-      throw (
-        "Action required: YOU MUST ADD CLARIFIER INFO TO THESE ALLOHOMOGRAPHS: " +
-        keysActual.join(", ")
-      );
-    }
-    expect(keysActual.length).to.equal(0);
-  });
 });
 
 describe("checkLemmaObjectIds", () => {
@@ -388,114 +319,33 @@ describe("checkLemmaObjectIds", () => {
       duplicateIds: ["eng-nou-003"],
     });
   });
-  it("REAL #edu2.1 Gives a schematic and duplicateIds. ENG", () => {
-    const currentLanguage = "ENG";
-
-    let actual = checkLemmaObjectIds(false, currentLanguage);
-
-    if (actual.duplicateIds.length) {
-      console.log(currentLanguage + " Lemma Objects >>>>", actual);
-      throw (
-        "Action required: DUPLICATE LEMMA OBJECTS IDS WERE FOUND: " +
-        actual.duplicateIds.join(", ")
-      );
-    }
-    expect(actual.duplicateIds.length).to.equal(0);
-    // expect(actual).to.eql(expected);
-  });
-  it("REAL #edu2.2 Gives a schematic and duplicateIds. POL", () => {
-    const currentLanguage = "POL";
-
-    let actual = checkLemmaObjectIds(false, currentLanguage);
-
-    if (actual.duplicateIds.length) {
-      console.log(currentLanguage + " Lemma Objects >>>>", actual);
-      throw (
-        "Action required: DUPLICATE LEMMA OBJECTS IDS WERE FOUND: " +
-        actual.duplicateIds.join(", ")
-      );
-    }
-    expect(actual.duplicateIds.length).to.equal(0);
-    // expect(actual).to.eql(expected);
-  });
 });
 
 describe("checkSentenceFormulaIds", () => {
-  it(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>#edu3.1 Gives a schematic and duplicateIds. ENG", () => {
+  it("#edu3.1 Gives a schematic and duplicateIds. ENG", () => {
     const currentLanguage = "ENG";
 
     let actual = checkSentenceFormulaIds(true, currentLanguage);
 
     console.log(actual);
 
-    // expect(actual.to.eql)
-  });
-  it("REAL #edu3.1 Gives a schematic and duplicateIds. ENG", () => {
-    const currentLanguage = "ENG";
+    const expected = {
+      schematic: [
+        ["ENG-00-101a", "symb1"],
+        ["ENG-00-101b", "symb1"],
+        ["ENG-00-102a", "102a I'll read (pf fut)"],
+        ["ENG-00-102a", "102a I'll read"],
+      ],
+      duplicateIds: ["ENG-00-102a"],
+      duplicateSymbols: ["symb1"],
+    };
 
-    let actual = checkSentenceFormulaIds(false, currentLanguage);
-
-    if (actual.duplicateIds.length) {
-      console.log(currentLanguage + " Sentence Formulas >>>>", actual);
-      throw (
-        "Action required: DUPLICATE SENTENCE FORMULA IDS WERE FOUND: " +
-        actual.duplicateIds.join(", ")
-      );
-    }
-    expect(actual.duplicateIds.length).to.equal(0);
-    // expect(actual).to.eql(expected);
-  });
-  it("REAL #edu3.2 Gives a schematic and duplicateIds. POL", () => {
-    const currentLanguage = "POL";
-
-    let actual = checkSentenceFormulaIds(false, currentLanguage);
-
-    if (actual.duplicateIds.length) {
-      console.log(currentLanguage + " Sentence Formulas >>>>", actual);
-      throw (
-        "Action required: DUPLICATE SENTENCE FORMULA IDS WERE FOUND: " +
-        actual.duplicateIds.join(", ")
-      );
-    }
-    expect(actual.duplicateIds.length).to.equal(0);
+    expect(actual).to.eql(expected);
   });
 });
 
 describe("checkWords", () => {
-  it("#edu4.1 Checks words for specific keys that might not have been specified. ENG", () => {
-    const currentLanguage = "ENG";
-
-    let actual = checkWords(true, currentLanguage);
-
-    console.log(actual);
-
-    let { nounsWithoutGender } = actual;
-
-    expect(nounsWithoutGender).to.eql([
-      ["boy", "eng-nou-002a"],
-      ["onion", "eng-nou-003"],
-      ["apple", "eng-nou-004"],
-      ["mirror", "eng-nou-005"],
-      ["book", "eng-nou-006"],
-      ["door", "eng-nou-007"],
-      ["sheep", "eng-nou-008"],
-      ["nut", "eng-nou-009"],
-      ["nut", "eng-nou-010"],
-      ["bear", "eng-nou-011"],
-    ]);
-
-    // if (nounsWithoutGender.length) {
-    //   console.log(currentLanguage + " Sentence Formulas >>>>", actual);
-    //   throw (
-    //     "Action required: YOU MUST SPECIFY A GENDER FOR THESE NOUNS: " +
-    //     nounsWithoutGender
-    //       .map((lObj) => `${lObj.lemma} (${lObj.id})`)
-    //       .join(", ")
-    //   );
-    // }
-    // expect(nounsWithoutGender.length).to.equal(0);
-  });
-  it("#edu4.2 Checks words for specific keys that might not have been specified. POL", () => {
+  it("#edu4.1 Checks words for specific keys that might not have been specified. POL", () => {
     const currentLanguage = "POL";
 
     let actual = checkWords(true, currentLanguage);
@@ -517,7 +367,159 @@ describe("checkWords", () => {
     // }
     // expect(nounsWithoutGender.length).to.equal(0);
   });
-  it("REAL #edu5.1 Checks words for specific keys that might not have been specified. ENG", () => {
+});
+
+describe("Educator Battery", () => {
+  it("#eduBat-01 Gives ENG synhomograph lemma objects. (Used programmatically for Type 1 Synhomos)", () => {
+    const currentLanguage = "ENG";
+    const homographType = "syn";
+    const ignore = {
+      ignoreV2V3Synhoms: true,
+      ignoreClarifiedAllohoms: true, //Should have no effect as we are asking for synhoms.
+    };
+
+    let actual = findHomographs(false, currentLanguage, homographType, ignore);
+    console.log(
+      "Educator does not need to take action on this: spec result >>>>",
+      actual
+    );
+  });
+  it("#eduBat-02 Gives POL synhomograph lemma objects. (Used programmatically for Type 1 Synhomos)", () => {
+    const currentLanguage = "POL";
+    const homographType = "syn";
+    const ignore = {
+      ignoreV2V3Synhoms: true,
+      ignoreClarifiedAllohoms: true, //Should have no effect as we are asking for synhoms.
+    };
+
+    let actual = findHomographs(false, currentLanguage, homographType, ignore);
+    console.log(
+      "Educator does not need to take action on this: result >>>>",
+      actual
+    );
+  });
+  it("#eduBat-03 Gives ENG allohomograph lemma objects.", () => {
+    const currentLanguage = "ENG";
+    const homographType = "allo";
+    const ignore = {
+      ignoreV2V3Synhoms: true,
+      ignoreClarifiedAllohoms: true,
+    };
+
+    let actual = findHomographs(false, currentLanguage, homographType, ignore);
+    console.log("spec result >>>>", actual);
+
+    if (Object.keys(actual).length) {
+      console.log(currentLanguage + " Sentence Formulas >>>>", actual);
+      throw (
+        "Action required: YOU MUST ADD CLARIFIER INFO TO THESE ALLOHOMOGRAPHS: " +
+        Object.keys(actual).join(", ")
+      );
+    }
+    expect(Object.keys(actual).length).to.equal(0);
+  });
+  it("#eduBat-04 Gives POL allohomograph lemma objects.", () => {
+    const currentLanguage = "POL";
+    const homographType = "allo";
+    const ignore = {
+      ignoreV2V3Synhoms: true,
+      ignoreClarifiedAllohoms: true,
+    };
+
+    let actual = findHomographs(false, currentLanguage, homographType, ignore);
+    console.log("spec result >>>>", actual);
+    let keysActual = Object.keys(actual).filter((key) => key !== "true");
+
+    if (keysActual.length) {
+      console.log(currentLanguage + " Sentence Formulas >>>>", actual);
+      throw (
+        "Action required: YOU MUST ADD CLARIFIER INFO TO THESE ALLOHOMOGRAPHS: " +
+        keysActual.join(", ")
+      );
+    }
+    expect(keysActual.length).to.equal(0);
+  });
+  it("#eduBat-05 Gives a schematic and duplicateIds. ENG", () => {
+    const currentLanguage = "ENG";
+
+    let actual = checkLemmaObjectIds(false, currentLanguage);
+
+    if (actual.duplicateIds.length) {
+      console.log(currentLanguage + " Lemma Objects >>>>", actual);
+      throw (
+        "Action required: DUPLICATE LEMMA OBJECTS IDS WERE FOUND: " +
+        actual.duplicateIds.join(", ")
+      );
+    }
+    expect(actual.duplicateIds.length).to.equal(0);
+    // expect(actual).to.eql(expected);
+  });
+  it("#eduBat-06 Gives a schematic and duplicateIds. POL", () => {
+    const currentLanguage = "POL";
+
+    let actual = checkLemmaObjectIds(false, currentLanguage);
+
+    if (actual.duplicateIds.length) {
+      console.log(currentLanguage + " Lemma Objects >>>>", actual);
+      throw (
+        "Action required: DUPLICATE LEMMA OBJECTS IDS WERE FOUND: " +
+        actual.duplicateIds.join(", ")
+      );
+    }
+    expect(actual.duplicateIds.length).to.equal(0);
+    // expect(actual).to.eql(expected);
+  });
+  it("#eduBat-07 Gives a schematic and duplicateIds. ENG", () => {
+    const currentLanguage = "ENG";
+
+    let actual = checkSentenceFormulaIds(false, currentLanguage);
+
+    let { duplicateIds, duplicateSymbols } = actual;
+
+    if (duplicateIds.length) {
+      console.log(currentLanguage + " Sentence Formulas >>>>", actual);
+      throw (
+        "Action required: DUPLICATE SENTENCE FORMULA IDS WERE FOUND: " +
+        duplicateIds.join(", ")
+      );
+    }
+    expect(duplicateIds.length).to.equal(0);
+
+    if (duplicateSymbols.length) {
+      console.log(currentLanguage + " Sentence Formulas >>>>", actual);
+      throw (
+        "Action required: DUPLICATE SENTENCE FORMULA SYMBOLS WERE FOUND: " +
+        duplicateSymbols.join(", ")
+      );
+    }
+    expect(duplicateSymbols.length).to.equal(0);
+  });
+  it("#eduBat-08 Gives a schematic and duplicateIds. POL", () => {
+    const currentLanguage = "POL";
+
+    let actual = checkSentenceFormulaIds(false, currentLanguage);
+
+    let { duplicateIds, duplicateSymbols } = actual;
+
+    if (duplicateIds.length) {
+      console.log(currentLanguage + " Sentence Formulas >>>>", actual);
+      throw (
+        "Action required: DUPLICATE SENTENCE FORMULA IDS WERE FOUND: " +
+        duplicateIds.join(", ")
+      );
+    }
+    expect(duplicateIds.length).to.equal(0);
+
+    if (duplicateSymbols.length) {
+      console.log(currentLanguage + " Sentence Formulas >>>>", actual);
+      throw (
+        "Action required: DUPLICATE SENTENCE FORMULA SYMBOLS WERE FOUND: " +
+        duplicateSymbols.join(", ")
+      );
+    }
+    expect(duplicateSymbols.length).to.equal(0);
+  });
+  it("#eduBat-09 Checks words for specific keys that might not have been specified. ENG", () => {
     const currentLanguage = "ENG";
 
     let actual = checkWords(false, currentLanguage);
@@ -535,7 +537,7 @@ describe("checkWords", () => {
     }
     expect(nounsWithoutGender.length).to.equal(0);
   });
-  it("REAL #edu5.2 Checks words for specific keys that might not have been specified. POL", () => {
+  it("#eduBat-10 Checks words for specific keys that might not have been specified. POL", () => {
     const currentLanguage = "POL";
 
     let actual = checkWords(false, currentLanguage);
