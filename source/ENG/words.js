@@ -222,6 +222,48 @@ let nounSet = [
   },
 ];
 
+let pronounSet = [
+  {
+    //links
+    translations: {},
+    tags: [],
+    //selectors
+    lemma: "ALL PRONOUNS",
+    id: "eng-pro-001",
+    //notes
+
+    //inflections
+    inflections: {
+      "1per": {
+        singular: {
+          m: {
+            nom: "I",
+            gen: "my",
+            genAdj: "mine",
+            dat: "me",
+            acc: "me",
+          },
+          f: {
+            nom: "I",
+            gen: "my",
+            dat: "me",
+            acc: "me",
+          },
+        },
+        plural: {
+          allGenders: {
+            nom: "we",
+            gen: "our",
+            genAdj: "ours",
+            dat: "us",
+            acc: "us",
+          },
+        },
+      },
+    },
+  },
+];
+
 let adjectiveSet = [
   {
     //links
@@ -379,62 +421,3 @@ exports.wordsBank = {
   adjectiveSet,
   verbSet,
 };
-
-let pronounSet = [
-  {
-    //links
-    translations: { ENG: ["I"], POL: ["ja"] },
-    tags: ["animate", "person", "personTest1"],
-    //selectors
-    lemma: "I",
-    id: "eng-pro-001",
-    gender: "f",
-    //notes
-
-    //inflections
-    inflections: {
-      singular: {
-        nom: "woman",
-        gen: "woman's",
-      },
-      plural: {
-        nom: "women",
-        gen: "women's",
-      },
-    },
-  },
-];
-
-// let pronounSet = [
-//   {
-//     translations: { ENG: ["I"] },
-//     lemma: "ja",
-//     id: "pol-pro-001",
-//     tags: [],
-//
-//     person: "1per",
-//     gender: ["m1", "f"],
-//     inflections: {
-//       singular: {
-//         allSingularGendersExcludingNeuter: {
-//           nom: "ja",
-//           gen: "mnie",
-//           dat: ["mi", "mnie"],
-//           acc: "mnie",
-//           ins: "mną",
-//           loc: "mnie",
-//         },
-//       },
-//       plural: {
-//         allPluralGenders: {
-//           nom: "my",
-//           gen: "nas",
-//           dat: "nam",
-//           acc: "nas",
-//           ins: "nami",
-//           loc: "nas",
-//         },
-//       },
-//     },
-//   },
-// ];

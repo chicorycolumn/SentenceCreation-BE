@@ -384,91 +384,6 @@ let nounSet = [
   },
 ];
 
-let pronounSet = [
-  {
-    translations: { ENG: ["I"] },
-    lemma: "ja",
-    id: "pol-pro-001",
-    tags: [],
-
-    person: "1per",
-    gender: ["m1", "f"],
-    inflections: {
-      singular: {
-        allSingularGendersExcludingNeuter: {
-          nom: "ja",
-          gen: "mnie",
-          dat: ["mi", "mnie"],
-          acc: "mnie",
-          ins: "mną",
-          loc: "mnie",
-        },
-      },
-      plural: {
-        allPluralGenders: {
-          nom: "my",
-          gen: "nas",
-          dat: "nam",
-          acc: "nas",
-          ins: "nami",
-          loc: "nas",
-        },
-      },
-    },
-  },
-  {
-    translations: { ENG: ["you (familiar)"] },
-    lemma: "ty",
-    id: "pol-pro-001",
-    tags: [],
-
-    person: "2per",
-    gender: ["m1", "f"],
-    inflections: {
-      singular: {
-        allSingularGendersExcludingNeuter: {
-          nom: "ty",
-          gen: ["cię", "ciebie"],
-          dat: ["ci", "tobie"],
-          acc: ["cię", "ciebie"],
-          ins: "tobą",
-          loc: "ty",
-        },
-      },
-      plural: {
-        allPluralGenders: {
-          nom: "wy",
-          gen: "was",
-          dat: "wam",
-          acc: "was",
-          ins: "wami",
-          loc: "was",
-        },
-      },
-    },
-  },
-  {
-    translations: { ENG: ["he"] },
-    lemma: "on",
-    id: "pol-pro-001",
-    tags: [],
-
-    person: "3per",
-    gender: ["m1", "m2", "m3"],
-    inflections: {
-      singular: {
-        m: {},
-        f: {},
-        n: {},
-      },
-      plural: {
-        virile: {},
-        nonvirile: {},
-      },
-    },
-  },
-];
-
 let adjectiveSet = [
   {
     //links
@@ -684,6 +599,60 @@ let adjectiveSet = [
 
 //If you mark a key true, or give it a value      it will be filled out by fillVerbInflections fxn.
 //If you mark a key false, or omit it             it will not be.
+
+let pronounSet = [
+  {
+    //links
+    translations: {},
+    tags: [],
+    //selectors
+    lemma: "ALL PRONOUNS",
+    id: "pol-pro-001",
+    //notes
+
+    //inflections
+    inflections: {
+      "1per": {
+        singular: {
+          m1: {
+            nom: "ja",
+            gen: "mnie",
+            dat: "mi",
+            acc: "mnie",
+            ins: "mną",
+            loc: "mnie",
+          },
+          f: {
+            nom: "ja",
+            gen: "mnie",
+            dat: "mi",
+            acc: "mnie",
+            ins: "mną",
+            loc: "mnie",
+          },
+        },
+        plural: {
+          virile: {
+            nom: "my",
+            gen: "nas",
+            dat: "nam",
+            acc: "nas",
+            ins: "nami",
+            loc: "nas",
+          },
+          nonvirile: {
+            nom: "my",
+            gen: "nas",
+            dat: "nam",
+            acc: "nas",
+            ins: "nami",
+            loc: "nas",
+          },
+        },
+      },
+    },
+  },
+];
 
 let verbSet = [
   {
