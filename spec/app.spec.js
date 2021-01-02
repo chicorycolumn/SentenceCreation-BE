@@ -1031,7 +1031,7 @@ describe("/api", () => {
   });
 
   describe("/palette - Stage 11: Adding Specifiers.", () => {
-    it.only("#pal11-01a Check Specifier of gender is added to ENG past continuous.", () => {
+    it("#pal11-01a Check Specifier of gender is added to ENG past continuous.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1047,25 +1047,21 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-          // expect(questionSentenceArr.length).to.equal(1);
-          // expect(answerSentenceArr.length).to.equal(1);
-
           let ref = [
-            { ENG: "I wrote (male).", POL: ["Napisałem."] },
-            { ENG: "I was writing (male).", POL: ["Pisałem."] },
-            { ENG: "I wrote (female).", POL: ["Napisałam."] },
-            { ENG: "I was writing (female).", POL: ["Pisałam."] },
+            { ENG: "I (male) wrote.", POL: ["Napisałem."] },
+            { ENG: "I (male) was writing.", POL: ["Pisałem."] },
+            { ENG: "I (female) wrote.", POL: ["Napisałam."] },
+            { ENG: "I (female) was writing.", POL: ["Pisałam."] },
             {
-              ENG: "I have written (male).",
+              ENG: "I (male) have written.",
               POL: ["Napisałem.", "Pisałem."],
             },
-            { ENG: "I had written (male).", POL: ["Napisałem."] },
+            { ENG: "I (male) had written.", POL: ["Napisałem."] },
             {
-              ENG: "I have written (female).",
+              ENG: "I (female) have written.",
               POL: ["Napisałam.", "Pisałam."],
             },
-            { ENG: "I had written (female).", POL: ["Napisałam."] },
+            { ENG: "I (female) had written.", POL: ["Napisałam."] },
           ];
 
           checkTranslationsOfGivenRef(
@@ -1076,7 +1072,7 @@ describe("/api", () => {
           );
         });
     });
-    xit("#pal11-01b Check Specifier of gender is added to ENG all past tenses.", () => {
+    it("#pal11-01b Check Specifier of gender is added to ENG all past tenses.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1098,20 +1094,20 @@ describe("/api", () => {
           expect(answerSentenceArr.length).to.equal(1);
 
           let ref = [
-            { ENG: "I wrote (male).", POL: ["Napisałem."] },
-            { ENG: "I was writing (male).", POL: ["Pisałem."] },
-            { ENG: "I wrote (female).", POL: ["Napisałam."] },
-            { ENG: "I was writing (female).", POL: ["Pisałam."] },
+            { ENG: "I (male) wrote.", POL: ["Napisałem."] },
+            { ENG: "I (male) was writing.", POL: ["Pisałem."] },
+            { ENG: "I (female) wrote.", POL: ["Napisałam."] },
+            { ENG: "I (female) was writing.", POL: ["Pisałam."] },
             {
-              ENG: "I have written (male).",
+              ENG: "I (male) have written.",
               POL: ["Napisałem.", "Pisałem."],
             },
-            { ENG: "I had written (male).", POL: ["Napisałem."] },
+            { ENG: "I (male) had written.", POL: ["Napisałem."] },
             {
-              ENG: "I have written (female).",
+              ENG: "I (female) have written.",
               POL: ["Napisałam.", "Pisałam."],
             },
-            { ENG: "I had written (female).", POL: ["Napisałam."] },
+            { ENG: "I (female) had written.", POL: ["Napisałam."] },
           ];
 
           checkTranslationsOfGivenRef(
@@ -1139,13 +1135,13 @@ describe("/api", () => {
         .expect(200)
         .then((res) => {
           let ref = [
-            { ENG: "The woman wrote.", POL: ["Napisałam."] },
-            { ENG: "The woman was writing.", POL: ["Pisałam."] },
+            { ENG: "The woman wrote.", POL: ["Kobieta napisała."] },
+            { ENG: "The woman was writing.", POL: ["Kobieta pisała."] },
             {
               ENG: "The woman has written.",
-              POL: ["Napisałam.", "Pisałam."],
+              POL: ["Kobieta napisała.", "Kobieta pisała."],
             },
-            { ENG: "The woman had written.", POL: ["Napisałam."] },
+            { ENG: "The woman had written.", POL: ["Kobieta napisała."] },
           ];
 
           checkTranslationsOfGivenRef(

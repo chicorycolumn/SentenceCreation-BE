@@ -51,6 +51,17 @@ exports.addSpecifiers = (
 ) => {
   //STEP ZERO: Getting materials
 
+  console.log("-----------------------");
+  console.log("-----------------------");
+  console.log("-----------------------");
+  console.log("-----------------------");
+  console.log("-----------------------");
+  console.log("----addSpecifiers------");
+  console.log("-----------------------");
+  console.log("-----------------------");
+  console.log("-----------------------");
+  console.log("-----------------------");
+
   let answerSentenceStructure = answerSentenceFormula.sentenceStructure;
   let questionSentenceStructure = questionOutputArr.map(
     (outputUnit) => outputUnit.structureChunk
@@ -97,6 +108,7 @@ exports.addSpecifiers = (
     }
 
     requestedSpecifierInstructionsArr.forEach((reqSpecInstr) => {
+      console.log("Looking at reqSpecInstr: ", reqSpecInstr);
       if (
         //If EACH condition of this reqSpecInstr is fulfilled...
 
@@ -118,9 +130,55 @@ exports.addSpecifiers = (
           );
         })
       ) {
+        console.log("Pass 1");
         //then for each action key in the reqSpecInstr...
 
         Object.keys(reqSpecInstr.action).forEach((actionKey) => {
+          //If actionKey is gender, and the A stCh we're looking at is PERSON,
+          //then abort. Gender does not need to be selected randomly here, instead
+          //it will be agreeWith-inherited from corresponding lObj after translation.
+          if (actionKey === "gender") {
+            if (
+              questionHeadChunk &&
+              gpUtils.doesKeyContainValueOnChunk(questionHeadChunk, "andTags", [
+                "person",
+              ])
+            ) {
+              return;
+            }
+
+            if (
+              questionChunk &&
+              gpUtils.doesKeyContainValueOnChunk(questionChunk, "andTags", [
+                "person",
+              ])
+            ) {
+              return;
+            }
+
+            if (
+              !questionHeadChunk &&
+              !questionChunk &&
+              answerHeadChunk &&
+              gpUtils.doesKeyContainValueOnChunk(answerHeadChunk, "andTags", [
+                "person",
+              ])
+            ) {
+              return;
+            }
+
+            if (
+              !questionHeadChunk &&
+              !questionChunk &&
+              answerChunk &&
+              gpUtils.doesKeyContainValueOnChunk(answerChunk, "andTags", [
+                "person",
+              ])
+            ) {
+              return;
+            }
+          }
+
           if (
             //...if not truthy in A depCh, nor its headCh, nor corresp Q depCh, nor that one's headCh...
 
@@ -129,6 +187,7 @@ exports.addSpecifiers = (
             !gpUtils.isKeyFilledOutOnChunk(questionChunk, actionKey) &&
             !gpUtils.isKeyFilledOutOnChunk(questionHeadChunk, actionKey)
           ) {
+            console.log("Pass 2");
             let actionValueArr = [
               gpUtils.selectRandom(reqSpecInstr.action[actionKey]),
             ];
@@ -136,14 +195,17 @@ exports.addSpecifiers = (
             //...then fill the action key with action value in A headCh if exists, else A depCh...
 
             if (answerHeadChunk) {
+              console.log("Point A");
               answerHeadChunk[actionKey] = actionValueArr;
             } else {
+              console.log("Point B");
               answerChunk[actionKey] = actionValueArr;
             }
 
             //...and note Specifier in Q headCh if exists, else Q depCh.
 
             if (questionHeadChunk) {
+              console.log("Point C");
               exports.addAnnotation(
                 questionHeadChunk,
                 actionKey,
@@ -158,6 +220,7 @@ exports.addSpecifiers = (
                   actionValueArr[0]
                 );
               }
+              console.log("Point D");
               exports.addAnnotation(questionChunk, actionKey, actionValueArr);
             }
           }
@@ -168,6 +231,9 @@ exports.addSpecifiers = (
 
   //STEP ONE: For every A depCh and its headCh, check by requested Specifiers and if so, add them.
   answerDependentChunks.forEach((answerDependentChunk) => {
+    console.log(
+      "Checking answerDependentChunk: " + answerDependentChunk.chunkId
+    );
     addRequiredSpecifiersToAnswerChunkOrHeadChunk(
       answerDependentChunk,
       answerSentenceStructure,
@@ -178,6 +244,7 @@ exports.addSpecifiers = (
 
   //STEP TWO: Do this for the otherChunks as well.
   answerOtherChunks.forEach((answerOtherChunk) => {
+    console.log("Checking answerOtherChunk: " + answerOtherChunk.chunkId);
     addRequiredSpecifiersToAnswerChunkOrHeadChunk(
       answerOtherChunk,
       answerSentenceStructure,
@@ -185,6 +252,19 @@ exports.addSpecifiers = (
       answerLanguage
     );
   });
+
+  console.log("-----------------------");
+  console.log("-----------------------");
+  console.log("-----------------------");
+  console.log("-----------------------");
+  console.log("-----------------------");
+  console.log("----addSpecifiers------");
+  console.log("---------END-----------");
+  console.log("-----------------------");
+  console.log("-----------------------");
+  console.log("-----------------------");
+  console.log("questionOutputArr", questionOutputArr);
+  console.log("answerSentenceFormula", answerSentenceFormula);
 };
 
 exports.addAnnotation = (chunk, key, value) => {

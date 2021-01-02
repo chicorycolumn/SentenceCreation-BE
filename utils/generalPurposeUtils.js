@@ -397,10 +397,25 @@ exports.isKeyFilledOutOnChunk = (chunk, featureKey) => {
   }
 };
 
-exports.doesKeyContainValueOnChunk = (chunk, featureKey, featureValue) => {
+exports.doesKeyContainValueOnChunk = (
+  chunk,
+  featureKey,
+  featureValueArr,
+  includeAll
+) => {
+  //includeAll true means every value in featureValueArr must be present.
+  //includeAll false means include any, so if any value from featureArr present.
+
   return (
     exports.isKeyFilledOutOnChunk(chunk, featureKey) &&
-    (chunk[featureKey].includes(featureValue) ||
-      chunk[featureKey] === featureValue)
+    ((!includeAll &&
+      featureValueArr.some((featureValue) =>
+        chunk[featureKey].includes(featureValue)
+      )) ||
+      (includeAll &&
+        chunk[featureKey].length === featureValueArr.length &&
+        featureValueArr.every((featureValue) =>
+          chunk[featureKey].includes(featureValue)
+        )))
   );
 };
