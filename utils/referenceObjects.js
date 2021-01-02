@@ -117,12 +117,34 @@ exports.adhocForms = {
   },
 };
 
+exports.requestedSpecifiersNew = {
+  POL: {
+    verb: [
+      //For A stCh verbs:
+      //   if they or their headCh fulfil the .condition,
+      //   AND
+      //   if they or their headCh don't have the featureKey from .action
+      //   THEN
+      //   add the featureKey and Value from action to the A stCh, and note it in headCh Specifiers.
+      {
+        condition: { person: ["1per"] },
+        action: { gender: ["m1", "f"] },
+      },
+      {
+        condition: { person: ["2per", "3per"] },
+        action: { gender: ["m1", "m2", "m3", "f", "f", "f", "n", "n", "n"] },
+      },
+    ],
+  },
+  ENG: {},
+};
+
 //For this Answer Language,
 //  if the Question Sentence has not specified these features
 //    please pick a random one and
 //      add Specifier to Question Sentence
 //        and update Answer StructureChunk
-exports.requestedSpecifiersForAnswerLang = {
+exports.whetherToAddSpecifiersForThisAnswerLang = {
   POL: {
     //For verb answerStructureChunks...
     verb: [

@@ -1,6 +1,10 @@
 const gpUtils = require("./generalPurposeUtils.js");
 const otUtils = require("./objectTraversingUtils.js");
 
+exports.checkWords = (currentLanguage, testing) => {
+  const wordsBank = exports.getWordsBank(currentLanguage, testing);
+};
+
 /**
  * Gives a list of homographs (allo or syn) to the educator, so that they may take action on these.
  * @param {boolean} testing - Should we use test wordsBank.
