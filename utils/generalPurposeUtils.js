@@ -378,3 +378,29 @@ exports.consoleLogAestheticBorder = (reps) => {
     console.log(border.slice(i, border.length - (10 - i)));
   }
 };
+
+exports.isKeyFilledOutOnChunk = (chunk, featureKey) => {
+  if (!chunk) {
+    return false;
+  }
+
+  if (!chunk[featureKey]) {
+    return false;
+  }
+
+  if (Array.isArray(chunk[featureKey]) && !chunk[featureKey].length) {
+    return false;
+  }
+
+  if (chunk[featureKey]) {
+    return true;
+  }
+};
+
+exports.doesKeyContainValueOnChunk = (chunk, featureKey, featureValue) => {
+  return (
+    exports.isKeyFilledOutOnChunk(chunk, featureKey) &&
+    (chunk[featureKey].includes(featureValue) ||
+      chunk[featureKey] === featureValue)
+  );
+};

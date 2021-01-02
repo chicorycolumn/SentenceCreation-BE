@@ -4,6 +4,46 @@ const otUtils = require("../utils/objectTraversingUtils.js");
 const refObj = require("./referenceObjects.js");
 const { head } = require("../app.js");
 
+exports.sortAnswerAndQuestionStructureChunks = (
+  questionSentenceStructure,
+  answerSentenceStructure
+) => {
+  let responseObj = {
+    answerHeadChunks: null,
+    answerDependentChunks: null,
+    answerOtherChunks: null,
+    questionHeadChunks: null,
+    questionDependentChunks: null,
+    questionOtherChunks: null,
+  };
+
+  if (true) {
+    let {
+      headChunks,
+      dependentChunks,
+      otherChunks,
+    } = scUtils.sortStructureChunks(answerSentenceStructure);
+
+    responseObj.answerHeadChunks = headChunks;
+    responseObj.answerDependentChunks = dependentChunks;
+    responseObj.answerOtherChunks = otherChunks;
+  }
+
+  if (true) {
+    let {
+      headChunks,
+      dependentChunks,
+      otherChunks,
+    } = scUtils.sortStructureChunks(questionSentenceStructure);
+
+    responseObj.questionHeadChunks = headChunks;
+    responseObj.questionDependentChunks = dependentChunks;
+    responseObj.questionOtherChunks = otherChunks;
+  }
+
+  return responseObj;
+};
+
 exports.addSpecifiers = (
   answerSentenceFormula,
   questionOutputArr,
@@ -25,143 +65,134 @@ exports.addSpecifiers = (
     questionHeadChunks,
     questionDependentChunks,
     questionOtherChunks,
-  } = sortAnswerAndQuestionStructureChunks(
+  } = exports.sortAnswerAndQuestionStructureChunks(
     questionSentenceStructure,
     answerSentenceStructure
   );
 
-  /**
-   * We have the A sentStructure, and the Q sentStructure,
-   * as well as the Q lObjs for each Q stCh.
-   *
-   * For each Q stCh, we will get ready:
-   *  --Q stCh
-   *  --Q headChunk if present
-   *  --A stCh
-   *  --A headChunk if present
-   *
-   * Get the requestedSpecifiers by the A lang and the A stCh wordtype.
-   *
-   * if every featureConditionsOfSelf is fulfilled by A stCh,
-   * and every featureConditionsOfHead is fulfilled by any of A stCh or A headCh.
-   *
-   * and if neither A stCh/headCh has the action feature
-   *
-   * then put that action feature on the A stCh, and note it in annotations of Q stCh.
-   */
-
-  const sortAnswerAndQuestionStructureChunks = (
+  function addRequiredSpecifiersToAnswerChunkOrHeadChunk(
+    answerChunk,
+    answerSentenceStructure,
     questionSentenceStructure,
-    answerSentenceStructure
-  ) => {
-    let responseObj = {
-      answerHeadChunks: null,
-      answerDependentChunks: null,
-      answerOtherChunks: null,
-      questionHeadChunks: null,
-      questionDependentChunks: null,
-      questionOtherChunks: null,
-    };
-
-    if (true) {
-      let {
-        headChunks,
-        dependentChunks,
-        otherChunks,
-      } = scUtils.sortStructureChunks(answerSentenceStructure);
-
-      responseObj.answerHeadChunks = headChunks;
-      responseObj.answerDependentChunks = dependentChunks;
-      responseObj.answerOtherChunks = otherChunks;
-    }
-
-    if (true) {
-      let {
-        headChunks,
-        dependentChunks,
-        otherChunks,
-      } = scUtils.sortStructureChunks(questionSentenceStructure);
-
-      responseObj.questionHeadChunks = headChunks;
-      responseObj.questionDependentChunks = dependentChunks;
-      responseObj.questionOtherChunks = otherChunks;
-    }
-
-    return responseObj;
-  };
-
-  questionHeadChunks.forEach((questionHeadChunk) => {
-    let answerHeadChunk = answerHeadChunks.find(
-      (chunk) => chunk.chunkId === questionHeadChunk.chunkId
+    answerLanguage
+  ) {
+    let answerHeadChunk = answerSentenceStructure.find(
+      (chunk) => chunk.id === answerChunk.agreeWith
     );
 
-    if (!questionHeadChunk.annotations) {
-      questionHeadChunk.annotations = {};
-    }
+    let questionChunk = questionSentenceStructure.find(
+      (chunk) => chunk.id === answerChunk.id
+    );
+
+    let questionHeadChunk = questionSentenceStructure.find(
+      (chunk) => chunk.id === questionChunk.agreeWith
+    );
 
     let requestedSpecifierInstructionsArr =
-      refObj.requestedSpecifiersNew[answerLanguage][answerHeadChunk.wordtype];
+      refObj.requestedSpecifiersNew[answerLanguage][answerChunk.wordtype];
 
     if (!requestedSpecifierInstructionsArr) {
       console.log("RETURN! No requestedSpecifierInstructionsArr.");
       return;
     }
-  });
 
-  //STEP ONE: Adding requested Specifiers
-
-  requestedSpecifierInstructionsArr.forEach(
-    (requestedSpecifierInstructions) => {
+    requestedSpecifierInstructionsArr.forEach((reqSpecInstr) => {
       if (
-        //If answerChunk fits the conditions...
-        //(also check its headChunk)
-        Object.keys(
-          requestedSpecifierInstructions.featureConditionsOfSelf
-        ).every((featureKey) => {
-          let featureValues =
-            requestedSpecifierInstructions.featureConditionsOfSelf[featureKey];
+        //If EACH condition of this reqSpecInstr is fulfilled...
 
-          return featureValues.some((featureValue) =>
-            answerStructureChunk[featureKey].includes(featureValue)
-          );
-        }) &&
-        Object.keys(
-          requestedSpecifierInstructions.featureConditionsOfSelf
-        ).every((featureKey) => {
-          let featureValues =
-            requestedSpecifierInstructions.featureConditionsOfSelf[featureKey];
+        Object.keys(reqSpecInstr.condition).every((reqFeatureKey) => {
+          let reqFeatureValue = reqSpecInstr.condition[reqFeatureKey];
+          return (
+            //by the A depCh or its headCh...
 
-          return featureValues.some(
-            (featureValue) =>
-              (answerStructureChunk[featureKey] &&
-                answerStructureChunk[featureKey].includes(featureValue)) ||
-              (answerHeadChunk &&
-                answerHeadChunk[featureKey] &&
-                answerHeadChunk[featureKey].includes(featureValue))
+            gpUtils.doesKeyContainValueOnChunk(
+              answerChunk,
+              reqFeatureKey,
+              reqFeatureValue
+            ) ||
+            gpUtils.doesKeyContainValueOnChunk(
+              answerHeadChunk,
+              reqFeatureKey,
+              reqFeatureValue
+            )
           );
         })
       ) {
-        //...hard change the answerChunk's features and note them in questionChunk's annotations.
-        Object.keys(requestedSpecifierInstructions.featureActions).forEach(
-          (featureActionKey) => {
-            let featureActionValues =
-              requestedSpecifierInstructions.featureActions[featureActionKey];
+        //then for each action key in the reqSpecInstr...
 
-            let featureActionValue = gpUtils.selectRandom(featureActionValues);
+        Object.keys(reqSpecInstr.action).forEach((actionKey) => {
+          if (
+            //...if not truthy in A depCh, nor its headCh, nor corresp Q depCh, nor that one's headCh...
 
-            answerStructureChunk[featureActionKey] = [featureActionValue];
-            if (!questionStructureChunk.annotations) {
-              questionStructureChunk.annotations = {};
+            !gpUtils.isKeyFilledOutOnChunk(answerChunk, actionKey) &&
+            !gpUtils.isKeyFilledOutOnChunk(answerHeadChunk, actionKey) &&
+            !gpUtils.isKeyFilledOutOnChunk(questionChunk, actionKey) &&
+            !gpUtils.isKeyFilledOutOnChunk(questionHeadChunk, actionKey)
+          ) {
+            let actionValueArr = [
+              gpUtils.selectRandom(reqSpecInstr.action[actionKey]),
+            ];
+
+            //...then fill the action key with action value in A headCh if exists, else A depCh...
+
+            if (answerHeadChunk) {
+              answerHeadChunk[actionKey] = actionValueArr;
+            } else {
+              answerChunk[actionKey] = actionValueArr;
             }
 
-            questionStructureChunk.annotations[
-              featureActionKey
-            ] = featureActionValue;
+            //...and note Specifier in Q headCh if exists, else Q depCh.
+
+            if (questionHeadChunk) {
+              exports.addAnnotation(
+                questionHeadChunk,
+                actionKey,
+                actionValueArr
+              );
+            } else {
+              if (!questionChunk) {
+                throw (
+                  "There was no corresponding questionChunk to add these Specifiers to: " +
+                  actionKey +
+                  " " +
+                  actionValueArr[0]
+                );
+              }
+              exports.addAnnotation(questionChunk, actionKey, actionValueArr);
+            }
           }
-        );
+        });
       }
-    }
-  );
+    });
+  }
+
+  //STEP ONE: For every A depCh and its headCh, check by requested Specifiers and if so, add them.
+  answerDependentChunks.forEach((answerDependentChunk) => {
+    addRequiredSpecifiersToAnswerChunkOrHeadChunk(
+      answerDependentChunk,
+      answerSentenceStructure,
+      questionSentenceStructure,
+      answerLanguage
+    );
+  });
+
+  //STEP TWO: Do this for the otherChunks as well.
+  answerOtherChunks.forEach((answerOtherChunk) => {
+    addRequiredSpecifiersToAnswerChunkOrHeadChunk(
+      answerOtherChunk,
+      answerSentenceStructure,
+      questionSentenceStructure,
+      answerLanguage
+    );
+  });
+};
+
+exports.addAnnotation = (chunk, key, value) => {
+  if (!chunk.annotations) {
+    chunk.annotations = {};
+  }
+
+  chunk.annotations[key] = value;
 };
 
 exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
