@@ -52,7 +52,6 @@ let nounSet = [
     //selectors
     lemma: "boy",
     id: "eng-nou-002a",
-
     //notes
 
     //inflections
@@ -206,7 +205,7 @@ let nounSet = [
     //selectors
     lemma: "doctor",
     id: "eng-nou-012",
-    gender: true, //This means male or female.
+    gender: "m/f",
     //notes
 
     //inflections
@@ -239,40 +238,6 @@ let adjectiveSet = [
       comparative: "redder",
       superlative: "reddest",
       adverb: "redly",
-    },
-  },
-  {
-    //links
-    translations: { ENG: ["fast"], POL: ["mocno"] },
-    tags: ["fitting"],
-    //selectors
-    lemma: "fast",
-    id: "eng-adj-005",
-    //notes
-
-    //inflections
-    inflections: {
-      simple: "fast",
-      comparative: "fast",
-      superlative: "fastest",
-      adverb: "fast",
-    },
-  },
-  {
-    //links
-    translations: { ENG: ["fast"], POL: ["szybki"] },
-    tags: ["speed"],
-    //selectors
-    lemma: "fast",
-    id: "eng-adj-004",
-    //notes
-
-    //inflections
-    inflections: {
-      simple: "fast",
-      comparative: "faster",
-      superlative: "fastest",
-      adverb: "quickly",
     },
   },
   {

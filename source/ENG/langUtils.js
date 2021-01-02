@@ -114,6 +114,7 @@ exports.adjustTenseDescriptions = () => {};
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {};
 
 exports.preprocessLemmaObjectsMajor = (matches, structureChunk) => {};
+
 exports.preprocessLemmaObjectsMinor = (matches) => {
   matches.forEach((lObj) => {
     if (lObj.tags.includes("person")) {
@@ -123,7 +124,7 @@ exports.preprocessLemmaObjectsMinor = (matches) => {
           lObj.id +
           "' is a person so should have a gender key."
         );
-      } else if (lObj.gender === true) {
+      } else if (lObj.gender === "m/f" || lObj.gender === "f/m") {
         let lObjCopy = gpUtils.copyWithoutReference(lObj);
 
         lObj.gender = "f";

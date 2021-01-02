@@ -95,7 +95,7 @@ let nounSet = [
     tags: ["inanimate", "edible", "holdable", "concrete"],
     //selectors
     lemma: "apple",
-    id: "eng-nou-004",
+    id: "eng-nou-003",
 
     //notes
 

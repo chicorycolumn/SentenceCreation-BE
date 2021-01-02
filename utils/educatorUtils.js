@@ -1,8 +1,29 @@
 const gpUtils = require("./generalPurposeUtils.js");
 const otUtils = require("./objectTraversingUtils.js");
 
-exports.checkWords = (currentLanguage, testing) => {
+exports.getLemmaObjectsWithoutGivenKey = (wordsBank, wordtype, featureKey) => {
+  return wordsBank[`${wordtype}Set`].filter((lObj) => !lObj[featureKey]);
+};
+
+exports.checkWords = (testing, currentLanguage) => {
+  const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
+
   const wordsBank = exports.getWordsBank(currentLanguage, testing);
+
+  Object.keys(wordsBank).forEach((wordtypeKey) => {
+    let words = wordsBank[wordtypeKey];
+    langUtils.preprocessLemmaObjectsMinor(words);
+  });
+
+  let nounsWithoutGender = exports.getLemmaObjectsWithoutGivenKey(
+    wordsBank,
+    "noun",
+    "gender"
+  );
+
+  return {
+    nounsWithoutGender: nounsWithoutGender.map((lObj) => [lObj.lemma, lObj.id]),
+  };
 };
 
 /**
@@ -193,6 +214,12 @@ exports.checkSentenceFormulaIds = (testing, currentLanguage) => {
     sentenceFormulasBank[sentenceFormulaKey].sentenceFormulaId,
   ]);
 
+  console.log("&");
+  console.log("&");
+  console.log(schematic);
+  console.log("&");
+  console.log("&");
+
   let tempArr = [];
   let duplicateIds = [];
 
@@ -226,7 +253,7 @@ exports.getSentenceFormulasBank = (currentLanguage, testing) => {
   } else {
     const {
       sentenceFormulasBank,
-    } = require(`../source/TEST/${currentLanguage}/sentenceFormulasBank.js`);
+    } = require(`../source/TEST/${currentLanguage}/sentenceFormulas.js`);
     return sentenceFormulasBank;
   }
 };

@@ -8,7 +8,7 @@ let nounSet = [
     //selectors
     lemma: "kobieta",
     id: "pol-nou-001",
-    gender: "f",
+    // gender: "f",
     //notes
 
     //inflections
