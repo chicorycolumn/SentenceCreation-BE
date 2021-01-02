@@ -1,5 +1,5 @@
-exports.sentenceFormulasBank = {
-  50: {
+exports.sentenceFormulasBank = [
+  {
     sentenceFormulaSymbol: "girl eats apple",
     sentenceFormulaId: "POL-00-50",
     sentenceStructure: [
@@ -22,7 +22,7 @@ exports.sentenceFormulasBank = {
       },
     ],
   },
-  51: {
+  {
     sentenceFormulaSymbol: "girl is wearing shirt",
     sentenceFormulaId: "POL-00-51",
     sentenceStructure: [
@@ -45,7 +45,7 @@ exports.sentenceFormulasBank = {
       },
     ],
   },
-  52: {
+  {
     sentenceFormulaSymbol: "shirt is in wardrobe",
     sentenceFormulaId: "POL-00-52",
     sentenceStructure: [
@@ -61,7 +61,7 @@ exports.sentenceFormulasBank = {
       { chunkId: "fix-1", wordtype: "fixed", value: "jest w szafie" },
     ],
   },
-  53: {
+  {
     sentenceFormulaSymbol: "I often wear shirt",
     sentenceFormulaId: "POL-00-53",
     sentenceStructure: [
@@ -77,7 +77,7 @@ exports.sentenceFormulasBank = {
       },
     ],
   },
-  54: {
+  {
     sentenceFormulaSymbol: "boys are male",
     sentenceFormulaId: "POL-00-54",
     sentenceStructure: [
@@ -93,7 +93,7 @@ exports.sentenceFormulasBank = {
       { chunkId: "fix-1", wordtype: "fixed", value: "są męscy" },
     ],
   },
-  55: {
+  {
     sentenceFormulaSymbol: "red apple",
     sentenceFormulaId: "POL-00-55",
     sentenceStructure: [
@@ -117,7 +117,7 @@ exports.sentenceFormulasBank = {
     primaryOrders: [["adj-1", "nou-1"]],
     additionalOrders: [],
   },
-  "55a": {
+  {
     sentenceFormulaSymbol: "red apples",
     sentenceFormulaId: "POL-00-55a",
     sentenceStructure: [
@@ -141,7 +141,7 @@ exports.sentenceFormulasBank = {
     primaryOrders: [["adj-1", "nou-1"]],
     additionalOrders: [],
   },
-  "55b": {
+  {
     sentenceFormulaSymbol: "red/blue apple",
     sentenceFormulaId: "POL-00-55b",
     sentenceStructure: [
@@ -165,7 +165,7 @@ exports.sentenceFormulasBank = {
     primaryOrders: [["adj-1", "nou-1"]],
     additionalOrders: [],
   },
-  56: {
+  {
     sentenceFormulaSymbol: "red girls",
     sentenceFormulaId: "POL-00-56",
     sentenceStructure: [
@@ -189,7 +189,7 @@ exports.sentenceFormulasBank = {
     primaryOrders: [["adj-1", "nou-1"]],
     additionalOrders: [],
   },
-  57: {
+  {
     sentenceFormulaSymbol: "I have apple",
     sentenceFormulaId: "POL-00-57",
     sentenceStructure: [
@@ -205,7 +205,7 @@ exports.sentenceFormulasBank = {
       },
     ],
   },
-  58: {
+  {
     sentenceFormulaSymbol: "I am reading",
     sentenceFormulaId: "POL-00-58",
     sentenceStructure: [
@@ -219,7 +219,7 @@ exports.sentenceFormulasBank = {
       },
     ],
   },
-  59: {
+  {
     sentenceFormulaSymbol: "girl is reading",
     sentenceFormulaId: "POL-00-59",
     sentenceStructure: [
@@ -242,7 +242,7 @@ exports.sentenceFormulasBank = {
       },
     ],
   },
-  60: {
+  {
     sentenceFormulaSymbol: "girls were reading",
     sentenceFormulaId: "POL-00-60",
     sentenceStructure: [
@@ -265,7 +265,7 @@ exports.sentenceFormulasBank = {
       },
     ],
   },
-  "61-z": {
+  {
     sentenceFormulaSymbol: "* girl has red apple",
     sentenceFormulaId: "POL-00-61-z",
     sentenceStructure: [
@@ -314,7 +314,7 @@ exports.sentenceFormulasBank = {
     ],
     additionalOrders: [],
   },
-  61: {
+  {
     sentenceFormulaSymbol: "girl has red apple",
     sentenceFormulaId: "POL-00-61",
     sentenceStructure: [
@@ -351,7 +351,7 @@ exports.sentenceFormulasBank = {
     primaryOrders: [["nou-1", "ver-1", "adj-1", "nou-2"]],
     additionalOrders: [],
   },
-  "61-neg1": {
+  {
     sentenceFormulaSymbol: "girl didn't have red apple",
     sentenceFormulaId: "POL-00-61-neg1",
     sentenceStructure: [
@@ -392,7 +392,7 @@ exports.sentenceFormulasBank = {
     primaryOrders: [["nou-1", "fix-1", "ver-1", "adj-1", "nou-2"]],
     additionalOrders: [],
   },
-  "62-neg1": {
+  {
     sentenceFormulaSymbol: "red girl didn't have red apple",
     sentenceFormulaId: "POL-00-62-neg1",
     sentenceStructure: [
@@ -440,7 +440,7 @@ exports.sentenceFormulasBank = {
     primaryOrders: [["adj-0", "nou-1", "fix-1", "ver-1", "adj-1", "nou-2"]],
     additionalOrders: [],
   },
-  "63a": {
+  {
     sentenceFormulaSymbol: "girl reads present im",
     sentenceFormulaId: "POL-00-63a",
     sentenceStructure: [
@@ -463,7 +463,7 @@ exports.sentenceFormulasBank = {
     primaryOrders: [["nou-1", "ver-1"]],
     additionalOrders: [],
   },
-  "63b": {
+  {
     sentenceFormulaSymbol: "girl reads past pf",
     sentenceFormulaId: "POL-00-63b",
     sentenceStructure: [
@@ -486,7 +486,7 @@ exports.sentenceFormulasBank = {
     primaryOrders: [["nou-1", "ver-1"]],
     additionalOrders: [],
   },
-  "63c": {
+  {
     sentenceFormulaSymbol: "girl reads future im",
     sentenceFormulaId: "POL-00-63c",
     sentenceStructure: [
@@ -509,7 +509,7 @@ exports.sentenceFormulasBank = {
     primaryOrders: [["nou-1", "ver-1"]],
     additionalOrders: [],
   },
-  "63d": {
+  {
     sentenceFormulaSymbol: "girl reads f conditional im pf",
     sentenceFormulaId: "POL-00-63d",
     sentenceStructure: [
@@ -533,8 +533,7 @@ exports.sentenceFormulasBank = {
     primaryOrders: [["nou-1", "ver-1"]],
     additionalOrders: [],
   },
-
-  "101a": {
+  {
     sentenceFormulaSymbol: "101a girl is reading",
     sentenceFormulaId: "POL-00-101a",
     translations: { ENG: ["ENG-00-101a"] },
@@ -556,7 +555,7 @@ exports.sentenceFormulasBank = {
       },
     ],
   },
-  "101b": {
+  {
     sentenceFormulaSymbol: "101b girl *reads quickly",
     sentenceFormulaId: "POL-00-101b",
     translations: { ENG: ["ENG-00-101b"] },
@@ -582,7 +581,7 @@ exports.sentenceFormulasBank = {
     primaryOrders: [["nou-1", "fix-1", "ver-1"]],
     additionalOrders: [],
   },
-  "102a": {
+  {
     sentenceFormulaSymbol: "102a I'll read (pf fut)",
     sentenceFormulaId: "POL-00-102a",
     translations: { ENG: ["ENG-00-102a"] },
@@ -600,7 +599,7 @@ exports.sentenceFormulasBank = {
     primaryOrders: [],
     additionalOrders: [],
   },
-  "103a": {
+  {
     sentenceFormulaSymbol: "I read *future 103a",
     sentenceFormulaId: "POL-00-103a",
     translations: { ENG: ["ENG-00-103a"] },
@@ -618,7 +617,7 @@ exports.sentenceFormulasBank = {
     primaryOrders: [],
     additionalOrders: [],
   },
-  "103b": {
+  {
     sentenceFormulaSymbol: "I read *future 103b",
     sentenceFormulaId: "POL-00-103b",
     translations: { ENG: ["ENG-00-103b"] },
@@ -636,7 +635,7 @@ exports.sentenceFormulasBank = {
     primaryOrders: [],
     additionalOrders: [],
   },
-  "103c": {
+  {
     sentenceFormulaSymbol: "I read *future 103c",
     sentenceFormulaId: "POL-00-103c",
     translations: { ENG: ["ENG-00-103c"] },
@@ -654,7 +653,7 @@ exports.sentenceFormulasBank = {
     primaryOrders: [],
     additionalOrders: [],
   },
-  "104a": {
+  {
     sentenceFormulaSymbol: "I read *future 104a",
     sentenceFormulaId: "POL-00-104a",
     translations: { ENG: ["ENG-00-104a"] },
@@ -672,7 +671,7 @@ exports.sentenceFormulasBank = {
     primaryOrders: [],
     additionalOrders: [],
   },
-  "104b": {
+  {
     sentenceFormulaSymbol: "I read *future 104b",
     sentenceFormulaId: "POL-00-104b",
     translations: { ENG: ["ENG-00-104b"] },
@@ -690,7 +689,7 @@ exports.sentenceFormulasBank = {
     primaryOrders: [],
     additionalOrders: [],
   },
-  "105a": {
+  {
     sentenceFormulaSymbol: "I was writing 105a",
     sentenceFormulaId: "POL-00-105a",
     translations: { ENG: ["ENG-00-105a"] },
@@ -707,7 +706,7 @@ exports.sentenceFormulasBank = {
     primaryOrders: [],
     additionalOrders: [],
   },
-  "106a": {
+  {
     sentenceFormulaSymbol: "first conditional 106a",
     sentenceFormulaId: "POL-00-106a",
     translations: { ENG: ["ENG-00-106a"] },
@@ -744,7 +743,7 @@ exports.sentenceFormulasBank = {
     primaryOrders: [["fix-1", "ver-1", "nou-1", "fix-2", "fix-3", "ver-2"]],
     additionalOrders: [],
   },
-  107: {
+  {
     sentenceFormulaSymbol: "red door",
     sentenceFormulaId: "POL-00-107",
     translations: { ENG: ["ENG-00-107"] },
@@ -766,7 +765,7 @@ exports.sentenceFormulasBank = {
     primaryOrders: [["adj-1", "nou-1"]],
     additionalOrders: [],
   },
-  108: {
+  {
     sentenceFormulaSymbol: "108 singular I am",
     sentenceFormulaId: "POL-00-108",
     translations: { ENG: ["ENG-00-108"] },
@@ -786,7 +785,7 @@ exports.sentenceFormulasBank = {
     primaryOrders: [["pro-1", "ver-1"]],
     additionalOrders: [["ver-1"]], //See how here we're showing the pronoun is optional.
   },
-  109: {
+  {
     sentenceFormulaSymbol: "109 doc wrote p",
     sentenceFormulaId: "POL-00-109",
     translations: { ENG: ["ENG-00-109"] },
@@ -809,7 +808,7 @@ exports.sentenceFormulasBank = {
     primaryOrders: [["nou-1", "ver-1", "fix-1"]],
     additionalOrders: [],
   },
-  "109a": {
+  {
     sentenceFormulaSymbol: "109a doc was writing p",
     sentenceFormulaId: "POL-00-109a",
     translations: { ENG: ["ENG-00-109a"] },
@@ -832,4 +831,4 @@ exports.sentenceFormulasBank = {
     primaryOrders: [["nou-1", "ver-1", "fix-1"]],
     additionalOrders: [],
   },
-};
+];

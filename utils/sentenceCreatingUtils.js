@@ -36,40 +36,55 @@ exports.getMaterials = (
     : gpUtils.copyWithoutReference(sentenceFormulasBank);
 
   if (sentenceFormulaId) {
-    let matchingSentenceFormulaData = otUtils.findObjectInNestedObject(
-      sentenceFormulas,
-      {
-        sentenceFormulaId: sentenceFormulaId,
-      },
-      true
+    // let matchingSentenceFormulaData = otUtils.findObjectInNestedObject(
+    //   sentenceFormulas,
+    //   {
+    //     sentenceFormulaId: sentenceFormulaId,
+    //   },
+    //   true
+    // );
+
+    // sentenceFormula = matchingSentenceFormulaData.value;
+
+    sentenceFormula = sentenceFormulas.find(
+      (senFor) => senFor.sentenceFormulaId === sentenceFormulaId
     );
 
-    sentenceFormula = matchingSentenceFormulaData.value;
-    sentenceFormulaId = sentenceFormula.sentenceFormulaId;
+    // sentenceFormulaId = sentenceFormula.sentenceFormulaId;
     sentenceFormulaSymbol = sentenceFormula.sentenceFormulaSymbol;
   } else if (sentenceFormulaSymbol) {
-    let matchingSentenceFormulaData = otUtils.findObjectInNestedObject(
-      sentenceFormulas,
-      {
-        sentenceFormulaSymbol: sentenceFormulaSymbol,
-      },
-      true
+    // let matchingSentenceFormulaData = otUtils.findObjectInNestedObject(
+    //   sentenceFormulas,
+    //   {
+    //     sentenceFormulaSymbol: sentenceFormulaSymbol,
+    //   },
+    //   true
+    // );
+
+    // sentenceFormula = matchingSentenceFormulaData.value;
+
+    sentenceFormula = sentenceFormulas.find(
+      (senFor) => senFor.sentenceFormulaSymbol === sentenceFormulaSymbol
     );
 
-    sentenceFormula = matchingSentenceFormulaData.value;
-    sentenceFormulaId = sentenceFormula.sentenceFormulaId;
-    sentenceFormulaSymbol = sentenceFormula.sentenceFormulaSymbol;
+    // sentenceFormulaId = sentenceFormula.sentenceFormulaId;
+    // sentenceFormulaSymbol = sentenceFormula.sentenceFormulaSymbol;
   } else {
-    let matchingSentenceFormulaData = otUtils.findObjectInNestedObject(
-      sentenceFormulas,
-      {
-        sentenceFormulaId: defaultSentenceFormulaId,
-      },
-      true
+    // let matchingSentenceFormulaData = otUtils.findObjectInNestedObject(
+    //   sentenceFormulas,
+    //   {
+    //     sentenceFormulaId: defaultSentenceFormulaId,
+    //   },
+    //   true
+    // );
+
+    // sentenceFormula = matchingSentenceFormulaData.value;
+
+    sentenceFormula = sentenceFormulas.find(
+      (senFor) => senFor.sentenceFormulaId === defaultSentenceFormulaId
     );
 
-    sentenceFormula = matchingSentenceFormulaData.value;
-    sentenceFormulaId = sentenceFormula.sentenceFormulaId;
+    // sentenceFormulaId = sentenceFormula.sentenceFormulaId;
     sentenceFormulaSymbol = sentenceFormula.sentenceFormulaSymbol;
   }
 

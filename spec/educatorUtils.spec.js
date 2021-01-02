@@ -421,7 +421,7 @@ describe("checkLemmaObjectIds", () => {
 });
 
 describe("checkSentenceFormulaIds", () => {
-  it.only("#edu3.1 Gives a schematic and duplicateIds. ENG", () => {
+  it(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>#edu3.1 Gives a schematic and duplicateIds. ENG", () => {
     const currentLanguage = "ENG";
 
     let actual = checkSentenceFormulaIds(true, currentLanguage);
