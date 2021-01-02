@@ -308,11 +308,29 @@ exports.findMatchingLemmaObjectThenWord = (
   structureChunks.forEach((structureChunk) => {
     let matchesCopy = matches.slice(0);
 
+    if (!matchesCopy.length) {
+      // errorInSentenceCreation.errorMessage =
+      //   "No matching lemma objects were found.";
+      console.log(
+        "It turns out no matching lemma objects were found in OT:findMatching"
+      );
+      return false;
+    }
+
     matchesCopy = lfUtils.filterBySelectors(
       currentLanguage,
       structureChunk,
       matchesCopy
     );
+
+    if (!matchesCopy.length) {
+      // errorInSentenceCreation.errorMessage =
+      //   "No matching lemma objects were found.";
+      console.log(
+        "It transpires that no matching lemma objects were found in OT:findMatching"
+      );
+      return false;
+    }
 
     matchesCopy = lfUtils.filterOutLackingLemmaObjects(
       matchesCopy,
@@ -434,7 +452,8 @@ exports.createOutputUnit = (
     selectedLemmaObject,
     selectedWord,
     drillPath,
-    structureChunk,
+    structureChunk: structureChunk,
+    // structureChunk: gpUtils.copyWithoutReference(structureChunk),
   };
 };
 

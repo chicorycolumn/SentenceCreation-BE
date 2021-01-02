@@ -107,6 +107,8 @@ exports.addSpecifiers = (
   );
 
   let { answerLanguage, questionLanguage } = languagesObj;
+  const answerLangUtils = require(`../source/${answerLanguage}/langUtils.js`);
+  const questionLangUtils = require(`../source/${questionLanguage}/langUtils.js`);
 
   let {
     answerHeadChunks,
@@ -125,16 +127,18 @@ exports.addSpecifiers = (
     answerSentenceStructure,
     questionSentenceStructure
   ) {
+    console.log("uu", { answerChunk });
+
     let answerHeadChunk = answerSentenceStructure.find(
-      (chunk) => chunk.id === answerChunk.agreeWith
+      (chunk) => chunk.chunkId === answerChunk.agreeWith
     );
 
     let questionChunk = questionSentenceStructure.find(
-      (chunk) => chunk.id === answerChunk.id
+      (chunk) => chunk.chunkId === answerChunk.chunkId
     );
 
     let questionHeadChunk = questionSentenceStructure.find(
-      (chunk) => chunk.id === questionChunk.agreeWith
+      (chunk) => chunk.chunkId === questionChunk.agreeWith
     );
 
     let questionLemmaObject;
@@ -160,7 +164,7 @@ exports.addSpecifiers = (
       }
     }
 
-    return {
+    let res = {
       answerHeadChunk,
       answerChunk,
       questionHeadChunk,
@@ -168,6 +172,10 @@ exports.addSpecifiers = (
       questionHeadLemmaObject,
       questionLemmaObject,
     };
+
+    console.log("vv", res);
+
+    return res;
   }
 
   function addRequiredSpecifiersToAnswerChunkOrHeadChunk(
@@ -305,6 +313,8 @@ exports.addSpecifiers = (
       questionSentenceStructure
     );
 
+    console.log("ww STEP ONE: ", materials);
+
     addRequiredSpecifiersToAnswerChunkOrHeadChunk(materials, answerLanguage);
   });
 
@@ -318,11 +328,61 @@ exports.addSpecifiers = (
       questionSentenceStructure
     );
 
+    console.log("ww STEP TWO: ", materials);
+
     addRequiredSpecifiersToAnswerChunkOrHeadChunk(materials, answerLanguage);
   });
 
-  //STEP THREE: Do a special thing for {gender: "both"} lObjs.
-  // if ()
+  //STEP THREE: Do a special thing for Multi Gender Nouns - that's lObjs with {gender: "both"}.
+  answerDependentChunks.forEach((answerDependentChunk) => {
+    console.log(
+      "Checking answerDependentChunk: " + answerDependentChunk.chunkId
+    );
+    let materials = getMaterialsToAddSpecifiers(
+      answerDependentChunk,
+      answerSentenceStructure,
+      questionSentenceStructure
+    );
+
+    let {
+      answerHeadChunk,
+      answerChunk,
+      questionHeadChunk,
+      questionChunk,
+      questionHeadLemmaObject,
+      questionLemmaObject,
+    } = materials;
+
+    if (questionHeadLemmaObject && questionHeadLemmaObject.gender === "both") {
+      console.log("ww STEP THREE: A", materials);
+      console.log(materials);
+
+      let selectedGenderUnformatted = gpUtils.selectRandom(["m", "f"]);
+
+      let selectedGender = answerLangUtils.formatFeatureValue(
+        "gender",
+        selectedGenderUnformatted,
+        "person"
+      );
+
+      questionHeadLemmaObject.gender = selectedGender;
+      questionHeadChunk.gender = [selectedGender];
+      answerHeadChunk.gender = [selectedGender];
+
+      exports.addAnnotation(questionHeadChunk, "gender", [selectedGender]);
+    }
+
+    if (questionLemmaObject && questionLemmaObject.gender === "both") {
+      console.log("ww STEP THREE: B", materials);
+      let selectedGender = gpUtils.selectRandom(["m", "f"]);
+
+      questionLemmaObject.gender = selectedGender;
+      questionChunk.gender = [selectedGender];
+      answerChunk.gender = [selectedGender];
+
+      exports.addAnnotation(questionChunk, "gender", [selectedGender]);
+    }
+  });
 
   console.log("-----------------------");
   console.log("-----------------------");
@@ -350,7 +410,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
   let { answerLanguage, questionLanguage } = languagesObj;
 
   if (!answerLanguage) {
-    throw "OT:addClarifiers says Did you mean to call me? You didn't give me an answerLanguage argument. I am only supposed to add clarifiers to the question sentence, and in order to do that I must know what the answerLanguage is going to be.";
+    throw "OT:addClarifiers says Do you mean to call me? You don't give me an answerLanguage argument. I am only supposed to add clarifiers to the question sentence, and in order to do that I must know what the answerLanguage is going to be.";
   }
 
   const langUtils = require("../source/" + questionLanguage + "/langUtils.js");

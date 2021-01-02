@@ -47,6 +47,8 @@ let inflectorRef = {
   ],
 };
 
+exports.formatFeatureValue = (featureKey, featureValue, note) => {};
+
 exports.addLanguageParticularClarifiers = (
   structureChunk,
   currentLanguage,

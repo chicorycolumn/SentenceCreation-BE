@@ -717,7 +717,7 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe("/palette - Stage 13: Pronouns and other Multi Gender Nouns.", () => {
+  describe.only("/palette - Stage 13: Pronouns and other Multi Gender Nouns.", () => {
     it("#pal12-05a GET 200 YES: doNotSpecify. Selection of either male or female versions of same person POL to ENG.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
@@ -798,7 +798,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal12-05c GET 200 YES: Selection of either male or female versions of same person ENG to POL.", () => {
+    it.only("#pal12-05c GET 200 YES: Selection of either male or female versions of same person ENG to POL.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -865,7 +865,7 @@ describe("/api", () => {
     });
   });
 
-  describe.only("/palette - Stage 11: Adding Specifiers.", () => {
+  describe("/palette - Stage 11: Adding Specifiers.", () => {
     it("#pal11-01a Check Specifier of gender is added to ENG past continuous.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";

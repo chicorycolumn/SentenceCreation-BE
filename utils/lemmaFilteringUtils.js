@@ -196,6 +196,12 @@ exports.filterByKey = (lemmaObjectArr, requirementArrs, key) => {
 };
 
 exports.filterBySelectors = (currentLanguage, structureChunk, matches) => {
+  console.log("LF:filterBySelectors was given:", {
+    currentLanguage,
+    structureChunk,
+    matches,
+  });
+
   let selectors =
     refObj.lemmaObjectFeatures[currentLanguage].selectors[
       structureChunk.wordtype

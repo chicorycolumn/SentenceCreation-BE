@@ -165,6 +165,15 @@ exports.preprocessLemmaObjectsMinor = (matches) => {
   });
 };
 
+exports.formatFeatureValue = (featureKey, featureValue, note) => {
+  if (featureKey === "gender") {
+    const ref = { m: "m1", f: "f", n: "n" };
+    if (note === "person") {
+      return ref[featureValue];
+    }
+  }
+};
+
 exports.preprocessLemmaObjectsMajor = (
   matches,
   structureChunk,
