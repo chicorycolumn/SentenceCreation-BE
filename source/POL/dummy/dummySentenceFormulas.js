@@ -1207,6 +1207,22 @@ exports.dummySentenceFormulasBank = [
     primaryOrders: [["nou-1", "ver-1"]],
   },
   {
+    sentenceFormulaSymbol: "dummy47d",
+    sentenceFormulaId: "POL-dummy47d",
+    translations: { ENG: ["ENG-dummy47d"] },
+    sentenceStructure: [
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        specificLemmas: ["pisać"],
+        tenseDescription: ["past im", "past pf"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [],
+  },
+  {
     sentenceFormulaSymbol: "dummy53",
     sentenceFormulaId: "POL-dummy53",
     translations: { ENG: ["ENG-dummy53"] },

@@ -44,6 +44,45 @@ exports.sortAnswerAndQuestionStructureChunks = (
   return responseObj;
 };
 
+exports.specifyQuestionChunkAndChangeAnswerChunk = (
+  chunksObj,
+  actionKey,
+  actionValueArr
+) => {
+  let {
+    answerHeadChunk,
+    answerChunk,
+    questionHeadChunk,
+    questionChunk,
+  } = chunksObj;
+
+  if (answerHeadChunk) {
+    console.log("Point A");
+    answerHeadChunk[actionKey] = actionValueArr;
+  } else {
+    console.log("Point B");
+    answerChunk[actionKey] = actionValueArr;
+  }
+
+  //...and note Specifier in Q headCh if exists, else Q depCh.
+
+  if (questionHeadChunk) {
+    console.log("Point C");
+    exports.addAnnotation(questionHeadChunk, actionKey, actionValueArr);
+  } else {
+    if (!questionChunk) {
+      throw (
+        "There was no corresponding questionChunk to add these Specifiers to: " +
+        actionKey +
+        " " +
+        actionValueArr[0]
+      );
+    }
+    console.log("Point D");
+    exports.addAnnotation(questionChunk, actionKey, actionValueArr);
+  }
+};
+
 exports.addSpecifiers = (
   answerSentenceFormula,
   questionOutputArr,
@@ -81,11 +120,10 @@ exports.addSpecifiers = (
     answerSentenceStructure
   );
 
-  function addRequiredSpecifiersToAnswerChunkOrHeadChunk(
+  function getMaterialsToAddSpecifiers(
     answerChunk,
     answerSentenceStructure,
-    questionSentenceStructure,
-    answerLanguage
+    questionSentenceStructure
   ) {
     let answerHeadChunk = answerSentenceStructure.find(
       (chunk) => chunk.id === answerChunk.agreeWith
@@ -98,6 +136,52 @@ exports.addSpecifiers = (
     let questionHeadChunk = questionSentenceStructure.find(
       (chunk) => chunk.id === questionChunk.agreeWith
     );
+
+    let questionLemmaObject;
+    let questionHeadLemmaObject;
+
+    if (questionHeadChunk) {
+      let outputUnit = questionOutputArr.find(
+        (outputUnit) =>
+          outputUnit.structureChunk.chunkId === questionHeadChunk.chunkId
+      );
+      if (outputUnit) {
+        questionHeadLemmaObject = outputUnit.selectedLemmaObject;
+      }
+    }
+
+    if (questionChunk) {
+      let outputUnit = questionOutputArr.find(
+        (outputUnit) =>
+          outputUnit.structureChunk.chunkId === questionChunk.chunkId
+      );
+      if (outputUnit) {
+        questionLemmaObject = outputUnit.selectedLemmaObject;
+      }
+    }
+
+    return {
+      answerHeadChunk,
+      answerChunk,
+      questionHeadChunk,
+      questionChunk,
+      questionHeadLemmaObject,
+      questionLemmaObject,
+    };
+  }
+
+  function addRequiredSpecifiersToAnswerChunkOrHeadChunk(
+    materials,
+    answerLanguage
+  ) {
+    let {
+      answerHeadChunk,
+      answerChunk,
+      questionHeadChunk,
+      questionChunk,
+      questionHeadLemmaObject,
+      questionLemmaObject,
+    } = materials;
 
     let requestedSpecifierInstructionsArr =
       refObj.requestedSpecifiersNew[answerLanguage][answerChunk.wordtype];
@@ -134,9 +218,9 @@ exports.addSpecifiers = (
         //then for each action key in the reqSpecInstr...
 
         Object.keys(reqSpecInstr.action).forEach((actionKey) => {
-          //If actionKey is gender, and the A stCh we're looking at is PERSON,
-          //then abort. Gender does not need to be selected randomly here, instead
-          //it will be agreeWith-inherited from corresponding lObj after translation.
+          //   ( Btw, if actionKey is gender, and the A stCh we're looking at is PERSON,
+          //     then abort. Gender does not need to be selected randomly here, instead
+          //     it will be agreeWith-inherited from corresponding lObj after translation. )
           if (actionKey === "gender") {
             if (
               questionHeadChunk &&
@@ -194,35 +278,16 @@ exports.addSpecifiers = (
 
             //...then fill the action key with action value in A headCh if exists, else A depCh...
 
-            if (answerHeadChunk) {
-              console.log("Point A");
-              answerHeadChunk[actionKey] = actionValueArr;
-            } else {
-              console.log("Point B");
-              answerChunk[actionKey] = actionValueArr;
-            }
-
-            //...and note Specifier in Q headCh if exists, else Q depCh.
-
-            if (questionHeadChunk) {
-              console.log("Point C");
-              exports.addAnnotation(
+            exports.specifyQuestionChunkAndChangeAnswerChunk(
+              {
+                answerHeadChunk,
+                answerChunk,
                 questionHeadChunk,
-                actionKey,
-                actionValueArr
-              );
-            } else {
-              if (!questionChunk) {
-                throw (
-                  "There was no corresponding questionChunk to add these Specifiers to: " +
-                  actionKey +
-                  " " +
-                  actionValueArr[0]
-                );
-              }
-              console.log("Point D");
-              exports.addAnnotation(questionChunk, actionKey, actionValueArr);
-            }
+                questionChunk,
+              },
+              actionKey,
+              actionValueArr
+            );
           }
         });
       }
@@ -234,24 +299,30 @@ exports.addSpecifiers = (
     console.log(
       "Checking answerDependentChunk: " + answerDependentChunk.chunkId
     );
-    addRequiredSpecifiersToAnswerChunkOrHeadChunk(
+    let materials = getMaterialsToAddSpecifiers(
       answerDependentChunk,
       answerSentenceStructure,
-      questionSentenceStructure,
-      answerLanguage
+      questionSentenceStructure
     );
+
+    addRequiredSpecifiersToAnswerChunkOrHeadChunk(materials, answerLanguage);
   });
 
   //STEP TWO: Do this for the otherChunks as well.
   answerOtherChunks.forEach((answerOtherChunk) => {
     console.log("Checking answerOtherChunk: " + answerOtherChunk.chunkId);
-    addRequiredSpecifiersToAnswerChunkOrHeadChunk(
+
+    let materials = getMaterialsToAddSpecifiers(
       answerOtherChunk,
       answerSentenceStructure,
-      questionSentenceStructure,
-      answerLanguage
+      questionSentenceStructure
     );
+
+    addRequiredSpecifiersToAnswerChunkOrHeadChunk(materials, answerLanguage);
   });
+
+  //STEP THREE: Do a special thing for {gender: "both"} lObjs.
+  // if ()
 
   console.log("-----------------------");
   console.log("-----------------------");

@@ -205,7 +205,7 @@ let nounSet = [
     //selectors
     lemma: "doctor",
     id: "eng-nou-012",
-    gender: "m/f",
+    gender: "both",
     //notes
 
     //inflections

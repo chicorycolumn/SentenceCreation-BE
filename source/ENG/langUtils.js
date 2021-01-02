@@ -125,12 +125,10 @@ exports.preprocessLemmaObjectsMinor = (matches) => {
           "' is a person so should have a gender key."
         );
       } else if (lObj.gender === "m/f" || lObj.gender === "f/m") {
-        let lObjCopy = gpUtils.copyWithoutReference(lObj);
-
-        lObj.gender = "f";
-        lObjCopy.gender = "m";
-
-        matches.push(lObjCopy);
+        // let lObjCopy = gpUtils.copyWithoutReference(lObj);
+        // lObj.gender = "f";
+        // lObjCopy.gender = "m";
+        // matches.push(lObjCopy);
       }
     } else {
       lObj.gender = "n";

@@ -14,8 +14,8 @@ exports.fetchPalette = (req) => {
     useDummy,
     questionLanguage,
     answerLanguage,
-    hideClarifiers,
-    hideSpecifiers,
+    hideClarifiersForTestingPurposes,
+    doNotSpecify,
   } = req.body;
 
   let { sentenceFormula, words } = scUtils.getMaterials(
@@ -89,11 +89,11 @@ exports.fetchPalette = (req) => {
         words
       );
 
-      if (!hideClarifiers) {
+      if (!hideClarifiersForTestingPurposes) {
         aaUtils.addClarifiers(questionOutputArr, languagesObject);
       }
 
-      if (!hideSpecifiers) {
+      if (!doNotSpecify) {
         aaUtils.addSpecifiers(
           sentenceFormula,
           questionOutputArr,
