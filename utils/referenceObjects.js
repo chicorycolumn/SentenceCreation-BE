@@ -1,5 +1,58 @@
 const gpUtils = require("./generalPurposeUtils.js");
 
+exports.giveAdjustedFeatureValue = (
+  questionLanguage,
+  answerLanguage,
+  featureKey,
+  featureValue
+) => {
+  if (
+    exports.lemmaObjectFeatureValueConversion[questionLanguage] &&
+    exports.lemmaObjectFeatureValueConversion[questionLanguage][answerLanguage]
+  ) {
+    let ref =
+      exports.lemmaObjectFeatureValueConversion[questionLanguage][
+        answerLanguage
+      ][featureKey];
+
+    if (ref) {
+      let adjustedFeatureValue = ref[featureValue];
+      if (adjustedFeatureValue) {
+        return adjustedFeatureValue;
+      } else {
+        throw (
+          "REF:adjustedFeatureValue found adjusted feature value for " +
+          featureValue
+        );
+      }
+    }
+  }
+  return featureValue;
+};
+
+exports.lemmaObjectFeatureValueConversion = {
+  POL: {
+    ENG: {
+      gender: {
+        n: "n",
+        f: "f",
+        m1: "m",
+        m2: "n",
+        m3: "n",
+      },
+    },
+  },
+  ENG: {
+    POL: {
+      gender: {
+        n: "n",
+        f: "f",
+        m: "m1",
+      },
+    },
+  },
+};
+
 exports.lemmaObjectFeatures = {
   POL: {
     selectors: {
@@ -19,6 +72,7 @@ exports.lemmaObjectFeatures = {
       noun: ["number"],
       adjective: ["form", "number", "gender"],
       verb: ["tenseDescription", "person", "number", "gender"],
+      pronoun: ["person", "number", "gender"],
     },
     undesiredClarifiersFromWhateverTheQLangMayBe: {
       //Actually we can just use allowableTransfers as the wanted clarifiers, rather than needing to specify the unwanted clarifiers.
@@ -42,6 +96,7 @@ exports.lemmaObjectFeatures = {
       noun: ["number"],
       adjective: ["form"],
       verb: ["tenseDescription", "person", "number"],
+      pronoun: ["person", "number", "gender"],
     },
     undesiredClarifiersFromWhateverTheQLangMayBe: {
       //Actually we can just use allowableTransfers as the wanted clarifiers, rather than needing to specify the unwanted clarifiers.

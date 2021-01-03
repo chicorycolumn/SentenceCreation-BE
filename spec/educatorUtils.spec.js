@@ -135,7 +135,7 @@ describe("findHomographs", () => {
     console.log("spec result >>>>", actual);
     expect(actual).to.eql(expected);
   });
-  it("#edu2.1 Gives all allohomograph lemma objects in one language.", () => {
+  it("#edu1.11 Gives all allohomograph lemma objects in one language.", () => {
     const currentLanguage = "ENG";
     const homographType = "allo";
     const ignore = {
@@ -184,7 +184,7 @@ describe("findHomographs", () => {
     console.log("spec result >>>>", actual);
     expect(actual).to.eql(expected);
   });
-  it("#edu2.2 Gives all allohomograph lemma objects in one language.", () => {
+  it("#edu1.12 Gives all allohomograph lemma objects in one language.", () => {
     const currentLanguage = "ENG";
     const homographType = "allo";
     const ignore = {
@@ -233,7 +233,7 @@ describe("findHomographs", () => {
     console.log("spec result >>>>", actual);
     expect(actual).to.eql(expected);
   });
-  it("#edu2.3 Gives all allohomograph lemma objects in one language.", () => {
+  it("#edu1.13 Gives all allohomograph lemma objects in one language.", () => {
     const currentLanguage = "ENG";
     const homographType = "allo";
     const ignore = {
@@ -258,7 +258,7 @@ describe("findHomographs", () => {
     console.log("spec result >>>>", actual);
     expect(actual).to.eql(expected);
   });
-  it("#edu2.4 Gives all allohomograph lemma objects in one language.", () => {
+  it("#edu1.14 Gives all allohomograph lemma objects in one language.", () => {
     const currentLanguage = "ENG";
     const homographType = "allo";
     const ignore = {
@@ -295,7 +295,6 @@ describe("checkLemmaObjectIds", () => {
       schematic: [
         ["eng-nou-001", "woman"],
         ["eng-nou-002", "boy"],
-        ["eng-nou-002a", "boy"],
         ["eng-nou-003", "onion"],
         ["eng-nou-003", "apple"],
         ["eng-nou-005", "mirror"],

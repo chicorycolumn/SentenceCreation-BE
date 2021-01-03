@@ -47,27 +47,6 @@ let nounSet = [
   },
   {
     //links
-    translations: { ENG: ["boy"], POL: ["boja", "pława"] },
-    tags: ["inanimate", "ocean", "concrete"],
-    //selectors
-    lemma: "boy",
-    id: "eng-nou-002a",
-    //notes
-
-    //inflections
-    inflections: {
-      singular: {
-        nom: "buoy",
-        gen: "buoy's",
-      },
-      plural: {
-        nom: "buoys",
-        gen: "buoys'",
-      },
-    },
-  },
-  {
-    //links
     translations: { ENG: ["onion"], POL: ["cebula"] },
     tags: ["inanimate", "edible", "holdable", "concrete"],
     //selectors

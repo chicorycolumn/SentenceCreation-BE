@@ -119,21 +119,24 @@ exports.preprocessLemmaObjectsMajor = (matches, structureChunk) => {};
 
 exports.preprocessLemmaObjectsMinor = (matches) => {
   matches.forEach((lObj) => {
-    if (lObj.tags.includes("person")) {
-      if (!lObj.gender) {
-        throw (
-          "Error. The lObj '" +
-          lObj.id +
-          "' is a person so should have a gender key."
-        );
-      } else if (lObj.gender === "m/f" || lObj.gender === "f/m") {
-        // let lObjCopy = gpUtils.copyWithoutReference(lObj);
-        // lObj.gender = "f";
-        // lObjCopy.gender = "m";
-        // matches.push(lObjCopy);
+    if (gpUtils.getWordtypeFromLemmaObject(lObj) === "noun") {
+      if (lObj.tags.includes("person")) {
+        if (!lObj.gender) {
+          throw (
+            "Error. The lObj '" +
+            lObj.id +
+            "' is a person so should have a gender key."
+          );
+        } else if (lObj.gender === "m/f" || lObj.gender === "f/m") {
+          // let lObjCopy = gpUtils.copyWithoutReference(lObj);
+          // lObj.gender = "f";
+          // lObjCopy.gender = "m";
+          // matches.push(lObjCopy);
+        }
+      } else {
+        console.log("Minor is setting gender to 'n' for " + lObj.lemma);
+        lObj.gender = "n";
       }
-    } else {
-      lObj.gender = "n";
     }
 
     // if (gpUtils.getWordtypeFromLemmaObject(lObj) === "pronoun") {

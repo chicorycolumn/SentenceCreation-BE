@@ -717,7 +717,7 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe.only("/palette - Stage 13: Pronouns and other Multi Gender Nouns.", () => {
+  describe("/palette - Stage 13: Pronouns and other Multi Gender Nouns.", () => {
     it("#pal13-01a GET 200 YES: doNotSpecify. Selection of either male or female versions of same person POL to ENG.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
@@ -863,7 +863,6 @@ describe("/api", () => {
           );
         });
     });
-
     it("#pal13-02a GET 200 YES: Give a pronoun in ENG.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -904,6 +903,50 @@ describe("/api", () => {
           console.log(res.body);
           expect(res.body.questionSentenceArr).to.have.length(1);
           expect(res.body.questionSentenceArr[0]).to.equal("Ja.");
+        });
+    });
+    it("#pal13-02c GET 200 YES: Give a pronoun in POL to ENG.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          doNotSpecify: true,
+          hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          useDummy: true,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy48a",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          expect(res.body.questionSentenceArr).to.have.length(1);
+          expect(res.body.questionSentenceArr[0]).to.equal("Ja.");
+          expect(res.body.answerSentenceArr).to.have.members(["I."]);
+        });
+    });
+    it("#pal13-02d GET 200 YES: Give a pronoun in ENG to POL.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          doNotSpecify: true,
+          hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          useDummy: true,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy48a",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          expect(res.body.questionSentenceArr).to.have.length(1);
+          expect(res.body.questionSentenceArr[0]).to.equal("I.");
+          expect(res.body.answerSentenceArr).to.have.members(["Ja."]);
         });
     });
   });
