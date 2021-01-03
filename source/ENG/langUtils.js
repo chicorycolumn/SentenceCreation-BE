@@ -115,7 +115,39 @@ exports.adjustTenseDescriptions = () => {};
 
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {};
 
-exports.preprocessLemmaObjectsMajor = (matches, structureChunk) => {};
+exports.preprocessLemmaObjectsMajor = (matches, structureChunk) => {
+  matches.forEach((lObj) => {
+    if (gpUtils.getWordtypeFromLemmaObject(lObj) === "pronoun") {
+      if (!structureChunk.wordtype === "pronoun") {
+        throw "Error------------->lObj and stCh wordtypes don't match.";
+      }
+      if (!structureChunk.gender) {
+        throw "Error------------->I expected stCh to have a gender key.";
+      }
+
+      gpUtils.findKeysInObjectAndExecuteCallback(lObj, "allGenders", (obj) => {
+        gpUtils.copyValueOfKey(
+          obj,
+          "allGenders",
+          ["virile", "nonvirile", "m", "f"], //Alpha: This is kind of kowtowing.
+          true
+        );
+      });
+
+      // let genderValueArr = structureChunk.gender;
+
+      // genderValueArr.forEach((genderValue) => {
+      //   gpUtils.findKeysInObjectAndExecuteCallback(
+      //     lemmaObject,
+      //     "allGenders",
+      //     (obj) => {
+      //       obj[genderValue] = obj["allGenders"];
+      //     }
+      //   );
+      // });
+    }
+  });
+};
 
 exports.preprocessLemmaObjectsMinor = (matches) => {
   matches.forEach((lObj) => {

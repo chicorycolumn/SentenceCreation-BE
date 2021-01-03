@@ -831,4 +831,51 @@ exports.sentenceFormulasBank = [
     primaryOrders: [["nou-1", "ver-1", "fix-1"]],
     additionalOrders: [],
   },
+
+  {
+    sentenceFormulaSymbol: "109b docs wrote p",
+    sentenceFormulaId: "POL-00-109b",
+    translations: { ENG: ["ENG-00-109b"] },
+    sentenceStructure: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        andTags: ["job"],
+        number: ["plural"],
+      },
+      {
+        chunkId: "ver-1",
+        agreeWith: "nou-1",
+        wordtype: "verb",
+        specificLemmas: ["pisać", "napisać"],
+        tenseDescription: ["past pf"],
+      },
+      { chunkId: "fix-1", wordtype: "fixed", value: "receptę" },
+    ],
+    primaryOrders: [["nou-1", "ver-1", "fix-1"]],
+    additionalOrders: [],
+  },
+  {
+    sentenceFormulaSymbol: "109c docs were writing p",
+    sentenceFormulaId: "POL-00-109c",
+    translations: { ENG: ["ENG-00-109c"] },
+    sentenceStructure: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        andTags: ["job"],
+        number: ["plural"],
+      },
+      {
+        chunkId: "ver-1",
+        agreeWith: "nou-1",
+        wordtype: "verb",
+        specificLemmas: ["pisać", "napisać"],
+        tenseDescription: ["past im"],
+      },
+      { chunkId: "fix-1", wordtype: "fixed", value: "receptę" },
+    ],
+    primaryOrders: [["nou-1", "ver-1", "fix-1"]],
+    additionalOrders: [],
+  },
 ];

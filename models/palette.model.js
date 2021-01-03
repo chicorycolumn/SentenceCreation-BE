@@ -33,14 +33,36 @@ exports.fetchPalette = (req) => {
   );
 
   if (!questionSentenceData) {
-    throw "Error! ---------------> In fetchPalette the questionSentenceData came back as NOTHING.";
+    console.log(
+      "Error! ---------------> In fetchPalette the question arrayOfOutputArrays came back NOTHING."
+    );
+
+    let questionResponseObj = scUtils.giveFinalSentences(
+      questionSentenceData,
+      kumquat,
+      questionLanguage,
+      answerLanguage
+    );
+
+    return finishAndSend(questionResponseObj, null);
   }
 
   if (
     !questionSentenceData.arrayOfOutputArrays ||
     !questionSentenceData.arrayOfOutputArrays.length
   ) {
-    throw "Error! ---------------> In fetchPalette the question arrayOfOutputArrays came back NONE.";
+    console.log(
+      "Error! ---------------> In fetchPalette the question arrayOfOutputArrays came back NONE."
+    );
+
+    let questionResponseObj = scUtils.giveFinalSentences(
+      questionSentenceData,
+      kumquat,
+      questionLanguage,
+      answerLanguage
+    );
+
+    return finishAndSend(questionResponseObj, null);
   }
 
   console.log("palette.model > questionSentenceData.arrayOfOutputArrays");
@@ -88,6 +110,16 @@ exports.fetchPalette = (req) => {
       if (!hideClarifiersForTestingPurposes) {
         aaUtils.addClarifiers(questionOutputArr, languagesObject);
       }
+
+      console.log("eee&");
+      console.log("&");
+      questionOutputArr
+        .map((outputUnit) => outputUnit.structureChunk)
+        .forEach((stCh) => {
+          console.log(stCh);
+        });
+      console.log("&");
+      console.log("&");
 
       if (!doNotSpecify) {
         aaUtils.addSpecifiers(
@@ -142,32 +174,37 @@ exports.fetchPalette = (req) => {
     answerLanguage
   );
 
-  let combinedResponseObj = {};
+  return finishAndSend(questionResponseObj, answerResponseObj);
 
-  let refs = [
-    { responseObject: questionResponseObj, key: "question" },
-    { responseObject: answerResponseObj, key: "answer" },
-  ];
+  function finishAndSend(questionResponseObj, answerResponseObj) {
+    let combinedResponseObj = {};
 
-  refs.forEach((ref) => {
-    if (ref.responseObject) {
-      combinedResponseObj[ref.key + "SentenceArr"] =
-        ref.responseObject.finalSentenceArr || [];
+    let refs = [
+      { responseObject: questionResponseObj, key: "question" },
+      { responseObject: answerResponseObj, key: "answer" },
+    ];
 
-      if (ref.responseObject.errorMessage) {
-        combinedResponseObj[ref.key + "ErrorMessage"] =
-          ref.responseObject.errorMessage;
+    refs.forEach((ref) => {
+      if (ref.responseObject) {
+        combinedResponseObj[ref.key + "SentenceArr"] =
+          ref.responseObject.finalSentenceArr || [];
+
+        if (ref.responseObject.errorMessage) {
+          combinedResponseObj[ref.key + "ErrorMessage"] =
+            ref.responseObject.errorMessage;
+        }
+        if (ref.responseObject.message) {
+          combinedResponseObj[ref.key + "Message"] = ref.responseObject.message;
+        }
+        if (ref.responseObject.fragment) {
+          combinedResponseObj[ref.key + "Fragment"] =
+            ref.responseObject.fragment;
+        }
       }
-      if (ref.responseObject.message) {
-        combinedResponseObj[ref.key + "Message"] = ref.responseObject.message;
-      }
-      if (ref.responseObject.fragment) {
-        combinedResponseObj[ref.key + "Fragment"] = ref.responseObject.fragment;
-      }
-    }
-  });
+    });
 
-  return Promise.all([combinedResponseObj]).then((array) => {
-    return array[0];
-  });
+    return Promise.all([combinedResponseObj]).then((array) => {
+      return array[0];
+    });
+  }
 };

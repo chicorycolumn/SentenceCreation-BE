@@ -184,12 +184,20 @@ exports.requestedSpecifiersNew = {
       //   THEN
       //   add the featureKey and Value from action to the A stCh, and note it in headCh Specifiers.
       {
-        condition: { person: ["1per"] },
+        condition: { person: ["1per"], number: ["singular"] },
         action: { gender: ["m1", "f"] },
       },
       {
-        condition: { person: ["2per", "3per"] },
+        condition: { person: ["2per", "3per"], number: ["singular"] },
         action: { gender: ["m1", "m2", "m3", "f", "f", "f", "n", "n", "n"] },
+      },
+      {
+        condition: { person: ["1per"], number: ["plural"] },
+        action: { gender: ["virile", "nonvirile"] },
+      },
+      {
+        condition: { person: ["2per", "3per"], number: ["plural"] },
+        action: { gender: ["nonvirile"] },
       },
     ],
   },

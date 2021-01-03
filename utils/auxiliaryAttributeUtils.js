@@ -523,9 +523,12 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
         questionLanguage
       );
 
+      console.log(111, { selectedLemmaObject });
+
       if (synhomographData) {
         synhomographData.synhomographs.forEach((synhomDataUnit) => {
           if (selectedWord === synhomDataUnit.terminalValue) {
+            console.log(222, "synhomDataUnit", synhomDataUnit);
             //
             // console.log(synhomDataUnit);
             //
@@ -540,6 +543,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
             );
 
             labelsWhereTheyDiffer.forEach((label) => {
+              console.log(333, { label });
               structureChunk.annotations[label] = structureChunk[label];
             });
           }
@@ -571,14 +575,27 @@ exports.attachAnnotations = (arrayOfOutputUnits, languagesObj) => {
 
           if (answerLanguage === "POL" && annotationKey === "gender") {
             const POLgenderToPlainEnglishRef = {
+              m: "male",
               m1: "male",
               m2: "male",
               m3: "male",
               f: "female",
               n: "neuter",
+              virile: "males",
+              nonvirile: ["mixed", "females"],
             };
 
-            return POLgenderToPlainEnglishRef[annotationValue];
+            console.log(
+              "::::::::::::::::::::::::::::::::::::::::::::::::::::",
+              { annotationValue }
+            );
+
+            let adjustedAnnotation =
+              POLgenderToPlainEnglishRef[annotationValue];
+
+            return typeof adjustedAnnotation === "string"
+              ? adjustedAnnotation
+              : gpUtils.selectRandom(adjustedAnnotation);
           } else {
             return annotationValue;
           }

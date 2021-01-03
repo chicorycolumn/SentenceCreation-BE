@@ -52,10 +52,14 @@ exports.adjustTenseDescriptionsBeforeTranslating = (
 };
 
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
+  console.log("POL:preprocessStructureChunks");
   sentenceStructure.forEach((structureChunk) => {
     if (structureChunk.wordtype === "fixed") {
       return;
     }
+
+    //Alpha this is new.
+    exports.adjustVirilityOfStructureChunk(structureChunk, true);
 
     if (
       //If gender is an appropriate feature of this wordtype.
@@ -533,7 +537,10 @@ exports.adjustMasculinityOfLemmaObject = (lemmaObject) => {
   });
 };
 
-exports.adjustVirilityOfStructureChunk = (structureChunk) => {
+exports.adjustVirilityOfStructureChunk = (structureChunk, retainOriginals) => {
+  console.log(
+    "adjusting virility of structure chunk " + structureChunk.chunkId
+  );
   let { gender, number } = structureChunk;
 
   if (!number || !number.includes("plural")) {
@@ -564,6 +571,9 @@ exports.adjustVirilityOfStructureChunk = (structureChunk) => {
   if (number.includes("plural")) {
     gender.forEach((genderValue) => {
       newGenderArray.push(pluralGenderRefObj[genderValue]);
+      if (retainOriginals) {
+        newGenderArray.push(genderValue);
+      }
     });
   }
 

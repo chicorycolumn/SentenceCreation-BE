@@ -364,4 +364,55 @@ exports.sentenceFormulasBank = [
     primaryOrders: [["fix-1", "nou-1", "ver-1", "fix-2", "fix-3"]],
     additionalOrders: [],
   },
+
+  {
+    sentenceFormulaSymbol: "109b docs wrote p",
+    sentenceFormulaId: "ENG-00-109b",
+    translations: { POL: ["POL-00-109b"] },
+    sentenceStructure: [
+      { chunkId: "fix-1", wordtype: "fixed", value: "the" },
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        number: ["plural"],
+        andTags: ["job"],
+      },
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        agreeWith: "nou-1",
+        specificLemmas: ["write"],
+        tenseDescription: ["past simple"],
+      },
+      { chunkId: "fix-2", wordtype: "fixed", value: "a" },
+      { chunkId: "fix-3", wordtype: "fixed", value: "prescription" },
+    ],
+    primaryOrders: [["fix-1", "nou-1", "ver-1", "fix-2", "fix-3"]],
+    additionalOrders: [],
+  },
+  {
+    sentenceFormulaSymbol: "109c docs were writing p",
+    sentenceFormulaId: "ENG-00-109c",
+    translations: { POL: ["POL-00-109c"] },
+    sentenceStructure: [
+      { chunkId: "fix-1", wordtype: "fixed", value: "the" },
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        number: ["plural"],
+        andTags: ["job"],
+      },
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        agreeWith: "nou-1",
+        specificLemmas: ["write"],
+        tenseDescription: ["past continuous"],
+      },
+      { chunkId: "fix-2", wordtype: "fixed", value: "a" },
+      { chunkId: "fix-3", wordtype: "fixed", value: "prescription" },
+    ],
+    primaryOrders: [["fix-1", "nou-1", "ver-1", "fix-2", "fix-3"]],
+    additionalOrders: [],
+  },
 ];

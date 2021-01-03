@@ -4,19 +4,47 @@ const refObj = require("./referenceObjects.js");
 const langUtils = require("./referenceObjects.js");
 
 exports.filterWithinSelectedLemmaObject = (
-  lemmaObject,
+  lemmaObjectOriginal,
   structureChunk,
   currentLanguage,
   kumquat
 ) => {
   console.log("filterWithinSelectedLemmaObject was given:", {
-    lemmaObject,
+    lemmaObjectOriginal,
     structureChunk,
     currentLanguage,
     kumquat,
   });
 
+  console.log(
+    "lemmaObjectOriginal.inflections",
+    lemmaObjectOriginal.inflections
+  );
+
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
+
+  let lemmaObject = gpUtils.copyWithoutReference(lemmaObjectOriginal);
+
+  if (false && structureChunk.wordtype === "pronoun") {
+    if (!lemmaObject.wordtype === "pronoun") {
+      throw "Error------------->lObj and stCh wordtypes don't match.";
+    }
+    if (!structureChunk.gender) {
+      throw "Error------------->I expected stCh to have a gender key.";
+    }
+
+    let genderValueArr = structureChunk.gender;
+
+    genderValueArr.forEach((genderValue) => {
+      gpUtils.findKeysInObjectAndExecuteCallback(
+        lemmaObject,
+        "allGenders",
+        (obj) => {
+          obj[genderValue] = obj["allGenders"];
+        }
+      );
+    });
+  }
 
   //Counteract Masculinist Agenda: Overrepresentation
   if (currentLanguage === "POL") {

@@ -717,7 +717,7 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe.only("/palette - Stage 13: Pronouns and other Multi Gender Nouns.", () => {
+  describe("/palette - Stage 13: Pronouns and other Multi Gender Nouns.", () => {
     it("#pal13-03a GET 200 YES: Inherit features from pronoun to verb (m sing).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -746,7 +746,7 @@ describe("/api", () => {
           );
         });
     });
-    it.only("#pal13-03b GET 200 YES: Inherit features from pronoun to verb (nonvir plur).", () => {
+    it("#pal13-03b GET 200 YES: Inherit features from pronoun to verb (nonvir plur).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -826,7 +826,11 @@ describe("/api", () => {
 
           let ref = [
             {
-              ENG: "We (female or mixed) wrote.",
+              ENG: "We (female) wrote.",
+              POL: ["Napisałyśmy.", "My napisałyśmy."],
+            },
+            {
+              ENG: "We (mixed) wrote.",
               POL: ["Napisałyśmy.", "My napisałyśmy."],
             },
           ];
@@ -957,7 +961,49 @@ describe("/api", () => {
           );
         });
     });
-    xit("#pal13-##a GET 200 YES: Singular pronouns: Verb person and number is inherited from pronoun headChunk.", () => {
+    it("#pal13-01d GET 200 YES: PLURAL doNotSpecify. Selection of either male or female versions of same person POL to ENG.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          doNotSpecify: true,
+          hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "109b docs wrote p",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              POL: "Lekarze napisali receptę.",
+              ENG: [
+                "The doctors wrote a prescription.",
+                "The doctors had written a prescription.",
+                "The doctors have written a prescription.",
+              ],
+            },
+            {
+              POL: "Lekarki napisały receptę.",
+              ENG: [
+                "The doctors wrote a prescription.",
+                "The doctors had written a prescription.",
+                "The doctors have written a prescription.",
+              ],
+            },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal13-01e GET 200 YES: PLURAL doNotSpecify. Selection of either male or female versions of same person ENG to POL.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -968,16 +1014,57 @@ describe("/api", () => {
           hideClarifiersForTestingPurposes: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "108 singular I am",
+          sentenceFormulaSymbol: "109c docs were writing p",
         })
         .expect(200)
         .then((res) => {
           let ref = [
-            { ENG: "I am.", POL: ["Jestem."] },
-            { ENG: "You are.", POL: ["Jesteś."] },
-            { ENG: "He is.", POL: ["Jest."] },
-            { ENG: "She is.", POL: ["Jest."] },
-            { ENG: "It is.", POL: ["Jest."] },
+            {
+              ENG: "The doctors were writing a prescription.",
+              POL: ["Lekarze pisali receptę.", "Lekarki pisały receptę."],
+            },
+            // {
+            //   ENG: "The doctor (male) was writing a prescription.",
+            //   POL: ["Lekarz pisał receptę."],
+            // },
+            // {
+            //   ENG: "The doctor (female) was writing a prescription.",
+            //   POL: ["Lekarka pisała receptę."],
+            // },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal13-01f GET 200 YES: PLURAL Selection of either male or female versions of same person ENG to POL.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // doNotSpecify: true,
+          // hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "109c docs were writing p",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "The doctors (male) were writing a prescription.",
+              POL: ["Lekarze pisali receptę."],
+            },
+            {
+              ENG: "The doctors (female) were writing a prescription.",
+              POL: ["Lekarki pisały receptę."],
+            },
           ];
 
           checkTranslationsOfGivenRef(
@@ -1074,6 +1161,37 @@ describe("/api", () => {
           expect(res.body.answerSentenceArr).to.have.members(["Ja."]);
         });
     });
+    // xit("#pal13-##a GET 200 YES: Singular pronouns: Verb person and number is inherited from pronoun headChunk.", () => {
+    //   const questionLanguage = "ENG";
+    //   const answerLanguage = "POL";
+
+    //   return request(app)
+    //     .get("/api/palette")
+    //     .send({
+    //       doNotSpecify: true,
+    //       hideClarifiersForTestingPurposes: true,
+    //       questionLanguage,
+    //       answerLanguage,
+    //       sentenceFormulaSymbol: "108 singular I am",
+    //     })
+    //     .expect(200)
+    //     .then((res) => {
+    //       let ref = [
+    //         { ENG: "I am.", POL: ["Jestem."] },
+    //         { ENG: "You are.", POL: ["Jesteś."] },
+    //         { ENG: "He is.", POL: ["Jest."] },
+    //         { ENG: "She is.", POL: ["Jest."] },
+    //         { ENG: "It is.", POL: ["Jest."] },
+    //       ];
+
+    //       checkTranslationsOfGivenRef(
+    //         res,
+    //         ref,
+    //         questionLanguage,
+    //         answerLanguage
+    //       );
+    //     });
+    // });
   });
 
   //Note, these currently fail they have pronouns as FIX stChs, whereas we're in the process of making pronouns their own.
