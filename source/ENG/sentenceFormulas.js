@@ -454,4 +454,26 @@ exports.sentenceFormulasBank = [
       ["fix-1", "nou-1", "ver-1", "fix-2", "nou-1", "fix-3", "pro-1"],
     ],
   },
+  {
+    sentenceFormulaSymbol: "111 I am",
+    sentenceFormulaId: "ENG-00-111",
+    translations: { POL: ["POL-00-111"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1",
+        wordtype: "pronoun",
+        gender: ["allPersonalGenders"],
+        // number: []
+      },
+      {
+        chunkId: "ver-1",
+        agreeWith: "pro-1",
+        wordtype: "verb",
+        specificLemmas: ["be"],
+        tenseDescription: ["present simple"],
+      },
+    ],
+    primaryOrders: [["pro-1", "ver-1"]],
+    additionalOrders: [],
+  },
 ];

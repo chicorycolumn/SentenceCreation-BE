@@ -137,6 +137,15 @@ exports.allFeatureValues = {
       "future continuous",
       "future perfect",
     ],
+    gender: [
+      "m",
+      "f",
+      "n",
+      "virile",
+      "nonvirile",
+      "allPersonalGenders",
+      "allGendersIncludingNeuter",
+    ],
   },
   POL: {
     tenseDescription: [
@@ -156,6 +165,7 @@ exports.allFeatureValues = {
       "cond3 condition",
       "cond3 outcome",
     ],
+    gender: ["m1", "m2", "m3", "f", "n", "virile", "nonvirile"],
   },
 };
 

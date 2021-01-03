@@ -61,7 +61,15 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
               return potentialHeadChunk.chunkId === structureChunk.agreeWith;
             }
           ));
-          structureChunk.person = headChunk.person.slice(0);
+
+          if (headChunk.person && headChunk.person.length) {
+            structureChunk.person = headChunk.person.slice(0);
+          } else {
+            let allGendersInThisLang =
+              refObj.allFeatureValues[currentLanguage].gender;
+
+            structureChunk.person = allGendersInThisLang.slice(0);
+          }
         }
       }
     }
