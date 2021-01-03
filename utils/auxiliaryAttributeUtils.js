@@ -574,6 +574,30 @@ exports.attachAnnotations = (arrayOfOutputUnits, languagesObj) => {
           let annotationValue = structureChunk.annotations[annotationKey];
 
           if (answerLanguage === "POL" && annotationKey === "gender") {
+            if (structureChunk.number) {
+              if (structureChunk.number.length > 1) {
+                throw "Ah no.";
+              }
+
+              const pluralVirilityConversion = {
+                m: "virile",
+                m1: "virile",
+                m2: "nonvirile",
+                m3: "nonvirile",
+                f: "nonvirile",
+                n: "nonvirile",
+                virile: "virile",
+                nonvirile: "nonvirile",
+              };
+
+              if (structureChunk.number[0] === "plural") {
+                annotationValue = pluralVirilityConversion[annotationValue];
+                if (!annotationValue) {
+                  throw "Mm no.";
+                }
+              }
+            }
+
             const POLgenderToPlainEnglishRef = {
               m: "male",
               m1: "male",

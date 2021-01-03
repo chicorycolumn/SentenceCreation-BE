@@ -113,7 +113,42 @@ exports.adjustStructureChunksInIfPW = (structureChunk) => {};
 
 exports.adjustTenseDescriptions = () => {};
 
-exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {};
+exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
+  console.log("ENG:preprocessStructureChunks");
+  sentenceStructure.forEach((structureChunk) => {
+    if (structureChunk.wordtype === "fixed") {
+      return;
+    }
+
+    if (
+      //If gender is an appropriate feature of this wordtype.
+      refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
+        structureChunk.wordtype
+      ].includes("gender")
+    ) {
+      if (!structureChunk.gender || !structureChunk.gender.length) {
+        //Fill out if blank.
+
+        if (!structureChunk.number || !structureChunk.number.length) {
+          structureChunk.gender = ["m", "f", "n", "virile", "nonvirile"];
+        } else {
+          structureChunk.gender = [];
+
+          if (structureChunk.number.includes("singular")) {
+            ["m", "f", "n"].forEach((genderValue) =>
+              structureChunk.gender.push(genderValue)
+            );
+          } //Yes, there is no 'else' between these two. They should have ability to run.
+          if (structureChunk.number.includes("plural")) {
+            ["virile", "nonvirile"].forEach((genderValue) =>
+              structureChunk.gender.push(genderValue)
+            );
+          }
+        }
+      }
+    }
+  });
+};
 
 exports.preprocessLemmaObjectsMajor = (matches, structureChunk) => {
   matches.forEach((lObj) => {

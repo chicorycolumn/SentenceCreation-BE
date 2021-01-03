@@ -717,8 +717,8 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe("/palette - Stage 13: Pronouns and other Multi Gender Nouns.", () => {
-    it("#pal13-03a GET 200 YES: Inherit features from pronoun to verb (m sing).", () => {
+  describe("/palette - Stage 13B: Pronouns and other Multi Gender Nouns: Further tests.", () => {
+    it("#pal13B-01a GET 200 YES: ENG to POL. A more interesting sentence with Pronouns.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -728,110 +728,27 @@ describe("/api", () => {
           doNotSpecify: true,
           hideClarifiersForTestingPurposes: true,
           questionLanguage,
-          useDummy: true,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy49a",
+          sentenceFormulaSymbol: "110 the woman read me a book",
         })
         .expect(200)
         .then((res) => {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-
-          let ref = [{ ENG: "I wrote.", POL: ["Napisałem.", "Ja napisałem."] }];
-
-          checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    it("#pal13-03b GET 200 YES: Inherit features from pronoun to verb (nonvir plur).", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          doNotSpecify: true,
-          hideClarifiersForTestingPurposes: true,
-          questionLanguage,
-          useDummy: true,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy49b",
-        })
-        .expect(200)
-        .then((res) => {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-
-          let ref = [
-            { ENG: "We wrote.", POL: ["Napisałyśmy.", "My napisałyśmy."] },
-          ];
-
-          checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    it("#pal13-03c GET 200 YES: WITH CLARIFIERS Inherit features from pronoun to verb (m sing).", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // doNotSpecify: true,
-          // hideClarifiersForTestingPurposes: true,
-          questionLanguage,
-          useDummy: true,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy49a",
-        })
-        .expect(200)
-        .then((res) => {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-
-          let ref = [
-            { ENG: "I (male) wrote.", POL: ["Napisałem.", "Ja napisałem."] },
-          ];
-
-          checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    it("#pal13-03d GET 200 YES: WITH CLARIFIERS Inherit features from pronoun to verb (nonvir plur).", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // doNotSpecify: true,
-          // hideClarifiersForTestingPurposes: true,
-          questionLanguage,
-          useDummy: true,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy49b",
-        })
-        .expect(200)
-        .then((res) => {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-
           let ref = [
             {
-              ENG: "We (female) wrote.",
-              POL: ["Napisałyśmy.", "My napisałyśmy."],
+              ENG: "The woman was reading me a book.",
+              POL: ["Kobieta czytała mi książkę."],
             },
             {
-              ENG: "We (mixed) wrote.",
-              POL: ["Napisałyśmy.", "My napisałyśmy."],
+              ENG: "The women were reading me a book.",
+              POL: ["Kobiety czytały mi książkę."],
+            },
+            {
+              ENG: "The woman was reading a book to me.",
+              POL: ["Kobieta czytała mi książkę."],
+            },
+            {
+              ENG: "The women were reading a book to me.",
+              POL: ["Kobiety czytały mi książkę."],
             },
           ];
 
@@ -843,11 +760,10 @@ describe("/api", () => {
           );
         });
     });
-    //
-    //
-    //
-    //
-    it("#pal13-01a GET 200 YES: doNotSpecify. Selection of either male or female versions of same person POL to ENG.", () => {
+  });
+
+  describe.only("/palette - Stage 13A: Pronouns and other Multi Gender Nouns: Basic tests.", () => {
+    it("#pal13A-01a GET 200 YES: doNotSpecify. Selection of either male or female versions of same person POL to ENG.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -889,7 +805,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13-01b GET 200 YES: doNotSpecify. Selection of either male or female versions of same person ENG to POL.", () => {
+    it("#pal13A-01b GET 200 YES: doNotSpecify. Selection of either male or female versions of same person ENG to POL.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -927,7 +843,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13-01c GET 200 YES: Selection of either male or female versions of same person ENG to POL.", () => {
+    it("#pal13A-01c GET 200 YES: Selection of either male or female versions of same person ENG to POL.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -961,7 +877,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13-01d GET 200 YES: PLURAL doNotSpecify. Selection of either male or female versions of same person POL to ENG.", () => {
+    it("#pal13A-01d GET 200 YES: PLURAL doNotSpecify. Selection of either male or female versions of same person POL to ENG.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1003,7 +919,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13-01e GET 200 YES: PLURAL doNotSpecify. Selection of either male or female versions of same person ENG to POL.", () => {
+    it("#pal13A-01e GET 200 YES: PLURAL doNotSpecify. Selection of either male or female versions of same person ENG to POL.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1041,7 +957,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13-01f GET 200 YES: PLURAL Selection of either male or female versions of same person ENG to POL.", () => {
+    it("#pal13A-01f GET 200 YES: PLURAL Selection of either male or female versions of same person ENG to POL.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1058,11 +974,11 @@ describe("/api", () => {
         .then((res) => {
           let ref = [
             {
-              ENG: "The doctors (male) were writing a prescription.",
+              ENG: "The doctors (males) were writing a prescription.",
               POL: ["Lekarze pisali receptę."],
             },
             {
-              ENG: "The doctors (female) were writing a prescription.",
+              ENG: "The doctors (females) were writing a prescription.",
               POL: ["Lekarki pisały receptę."],
             },
           ];
@@ -1075,7 +991,10 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13-02a GET 200 YES: Give a pronoun in ENG.", () => {
+    //
+    //
+    //
+    it("#pal13A-02a GET 200 YES: Give a pronoun in ENG.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1096,7 +1015,7 @@ describe("/api", () => {
           expect(res.body.questionSentenceArr[0]).to.equal("I.");
         });
     });
-    it("#pal13-02b GET 200 YES: Give a pronoun in POL.", () => {
+    it("#pal13A-02b GET 200 YES: Give a pronoun in POL.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1117,7 +1036,7 @@ describe("/api", () => {
           expect(res.body.questionSentenceArr[0]).to.equal("Ja.");
         });
     });
-    it("#pal13-02c GET 200 YES: Give a pronoun in POL to ENG.", () => {
+    it("#pal13A-02c GET 200 YES: Give a pronoun in POL to ENG.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1139,7 +1058,7 @@ describe("/api", () => {
           expect(res.body.answerSentenceArr).to.have.members(["I."]);
         });
     });
-    it("#pal13-02d GET 200 YES: Give a pronoun in ENG to POL.", () => {
+    it("#pal13A-02d GET 200 YES: Give a pronoun in ENG to POL.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1161,7 +1080,620 @@ describe("/api", () => {
           expect(res.body.answerSentenceArr).to.have.members(["Ja."]);
         });
     });
-    // xit("#pal13-##a GET 200 YES: Singular pronouns: Verb person and number is inherited from pronoun headChunk.", () => {
+    //
+    //
+    //
+    it("#pal13A-03a-a GET 200 YES: ENG to POL. Inherit features from pronoun to verb (m sing).", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          doNotSpecify: true,
+          hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          useDummy: true,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy49a",
+        })
+        .expect(200)
+        .then((res) => {
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+
+          let ref = [{ ENG: "I wrote.", POL: ["Napisałem.", "Ja napisałem."] }];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal13A-03a-b GET 200 YES: ENG to POL. Inherit features from pronoun to verb (nonvir plur).", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          doNotSpecify: true,
+          hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          useDummy: true,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy49b",
+        })
+        .expect(200)
+        .then((res) => {
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+
+          let ref = [
+            { ENG: "We wrote.", POL: ["Napisałyśmy.", "My napisałyśmy."] },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal13A-03a-c GET 200 YES: ENG to POL. WITH CLARIFIERS Inherit features from pronoun to verb (m sing).", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // doNotSpecify: true,
+          // hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          useDummy: true,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy49a",
+        })
+        .expect(200)
+        .then((res) => {
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+
+          let ref = [
+            { ENG: "I (male) wrote.", POL: ["Napisałem.", "Ja napisałem."] },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal13A-03a-d GET 200 YES: ENG to POL. WITH CLARIFIERS Inherit features from pronoun to verb (nonvir plur).", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // doNotSpecify: true,
+          // hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          useDummy: true,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy49b",
+        })
+        .expect(200)
+        .then((res) => {
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+
+          let ref = [
+            {
+              ENG: "We (females) wrote.",
+              POL: ["Napisałyśmy.", "My napisałyśmy."],
+            },
+            {
+              ENG: "We (mixed) wrote.",
+              POL: ["Napisałyśmy.", "My napisałyśmy."],
+            },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    //
+    //
+    //
+    it.only("#pal13A-03b-a GET 200 YES: ENG to POL. (No gender was specified.) Inherit features from pronoun to verb (m sing).", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          doNotSpecify: true,
+          hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          useDummy: true,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy49c",
+        })
+        .expect(200)
+        .then((res) => {
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+
+          let ref = [
+            {
+              ENG: "I wrote.",
+              POL: [
+                "Napisałem.",
+                "Ja napisałem.",
+                "Napisałam.",
+                "Ja napisałam.",
+              ],
+            },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal13A-03b-b GET 200 YES: ENG to POL. (No gender was specified.) Inherit features from pronoun to verb (nonvir plur).", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          doNotSpecify: true,
+          hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          useDummy: true,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy49d",
+        })
+        .expect(200)
+        .then((res) => {
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+
+          let ref = [
+            {
+              ENG: "We wrote.",
+              POL: [
+                "Napisałyśmy.",
+                "My napisałyśmy.",
+                "Napisaliśmy.",
+                "My napisaliśmy.",
+              ],
+            },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal13A-03b-c GET 200 YES: ENG to POL. (No gender was specified.) WITH CLARIFIERS Inherit features from pronoun to verb (m sing).", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // doNotSpecify: true,
+          // hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          useDummy: true,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy49c",
+        })
+        .expect(200)
+        .then((res) => {
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+
+          let ref = [
+            { ENG: "I (male) wrote.", POL: ["Napisałem.", "Ja napisałem."] },
+            { ENG: "I (female) wrote.", POL: ["Napisałam.", "Ja napisałam."] },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal13A-03b-d GET 200 YES: ENG to POL. (No gender was specified.) WITH CLARIFIERS Inherit features from pronoun to verb (nonvir plur).", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // doNotSpecify: true,
+          // hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          useDummy: true,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy49d",
+        })
+        .expect(200)
+        .then((res) => {
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+
+          let ref = [
+            {
+              ENG: "We (males) wrote.",
+              POL: ["Napisaliśmy.", "My napisaliśmy."],
+            },
+            {
+              ENG: "We (females) wrote.",
+              POL: ["Napisałyśmy.", "My napisałyśmy."],
+            },
+            {
+              ENG: "We (mixed) wrote.",
+              POL: ["Napisałyśmy.", "My napisałyśmy."],
+            },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    //
+    //
+    //
+    it("#pal13A-04a-a GET 200 YES: POL to ENG. Inherit features from pronoun to verb (m sing).", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          doNotSpecify: true,
+          hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          useDummy: true,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy49a",
+        })
+        .expect(200)
+        .then((res) => {
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+
+          let ref = [
+            {
+              ENG: ["I wrote.", "I had written.", "I have written."],
+              POL: "Napisałem.",
+            },
+            {
+              ENG: ["I wrote.", "I had written.", "I have written."],
+              POL: "Ja napisałem.",
+            },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal13A-04a-b GET 200 YES: POL to ENG. Inherit features from pronoun to verb (nonvir plur).", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          doNotSpecify: true,
+          hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          useDummy: true,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy49b",
+        })
+        .expect(200)
+        .then((res) => {
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+
+          let ref = [
+            {
+              ENG: ["We wrote.", "We had written.", "We have written."],
+              POL: "Napisałyśmy.",
+            },
+            {
+              ENG: ["We wrote.", "We had written.", "We have written."],
+              POL: "My napisałyśmy.",
+            },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal13A-04a-c GET 200 YES: POL to ENG. NO CLARIFIERS Inherit features from pronoun to verb (m sing).", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // doNotSpecify: true,
+          // hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          useDummy: true,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy49a",
+        })
+        .expect(200)
+        .then((res) => {
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+
+          let ref = [
+            {
+              ENG: ["I wrote.", "I had written.", "I have written."],
+              POL: "Napisałem.",
+            },
+            {
+              ENG: ["I wrote.", "I had written.", "I have written."],
+              POL: "Ja napisałem.",
+            },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal13A-04a-d GET 200 YES: POL to ENG. NO CLARIFIERS Inherit features from pronoun to verb (nonvir plur).", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // doNotSpecify: true,
+          // hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          useDummy: true,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy49b",
+        })
+        .expect(200)
+        .then((res) => {
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+
+          let ref = [
+            {
+              ENG: ["We wrote.", "We had written.", "We have written."],
+              POL: "Napisałyśmy.",
+            },
+            {
+              ENG: ["We wrote.", "We had written.", "We have written."],
+              POL: "My napisałyśmy.",
+            },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    //
+    //
+    //
+    it("#pal13A-04b-a GET 200 YES: POL to ENG. Inherit features from pronoun to verb (m sing).", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          doNotSpecify: true,
+          hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          useDummy: true,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy49c",
+        })
+        .expect(200)
+        .then((res) => {
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+
+          let ref = [
+            {
+              ENG: ["I wrote.", "I had written.", "I have written."],
+              POL: "Napisałem.",
+            },
+            {
+              ENG: ["I wrote.", "I had written.", "I have written."],
+              POL: "Ja napisałem.",
+            },
+            {
+              ENG: ["I wrote.", "I had written.", "I have written."],
+              POL: "Napisałam.",
+            },
+            {
+              ENG: ["I wrote.", "I had written.", "I have written."],
+              POL: "Ja napisałam.",
+            },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal13A-04b-b GET 200 YES: POL to ENG. Inherit features from pronoun to verb (nonvir plur).", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          doNotSpecify: true,
+          hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          useDummy: true,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy49d",
+        })
+        .expect(200)
+        .then((res) => {
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+
+          let ref = [
+            {
+              ENG: ["We wrote.", "We had written.", "We have written."],
+              POL: "Napisałyśmy.",
+            },
+            {
+              ENG: ["We wrote.", "We had written.", "We have written."],
+              POL: "My napisałyśmy.",
+            },
+            {
+              ENG: ["We wrote.", "We had written.", "We have written."],
+              POL: "Napisaliśmy.",
+            },
+            {
+              ENG: ["We wrote.", "We had written.", "We have written."],
+              POL: "My napisaliśmy.",
+            },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal13A-04b-c GET 200 YES: POL to ENG. NO CLARIFIERS Inherit features from pronoun to verb (m sing).", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // doNotSpecify: true,
+          // hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          useDummy: true,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy49c",
+        })
+        .expect(200)
+        .then((res) => {
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+
+          let ref = [
+            {
+              ENG: ["I wrote.", "I had written.", "I have written."],
+              POL: "Napisałem.",
+            },
+            {
+              ENG: ["I wrote.", "I had written.", "I have written."],
+              POL: "Ja napisałem.",
+            },
+            {
+              ENG: ["I wrote.", "I had written.", "I have written."],
+              POL: "Napisałam.",
+            },
+            {
+              ENG: ["I wrote.", "I had written.", "I have written."],
+              POL: "Ja napisałam.",
+            },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal13A-04b-d GET 200 YES: POL to ENG. NO CLARIFIERS Inherit features from pronoun to verb (nonvir plur).", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // doNotSpecify: true,
+          // hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          useDummy: true,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy49b",
+        })
+        .expect(200)
+        .then((res) => {
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+
+          let ref = [
+            {
+              ENG: ["We wrote.", "We had written.", "We have written."],
+              POL: "Napisałyśmy.",
+            },
+            {
+              ENG: ["We wrote.", "We had written.", "We have written."],
+              POL: "My napisałyśmy.",
+            },
+            {
+              ENG: ["We wrote.", "We had written.", "We have written."],
+              POL: "Napisaliśmy.",
+            },
+            {
+              ENG: ["We wrote.", "We had written.", "We have written."],
+              POL: "My napisaliśmy.",
+            },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    // xit("#pal13A-##a GET 200 YES: Singular pronouns: Verb person and number is inherited from pronoun headChunk.", () => {
     //   const questionLanguage = "ENG";
     //   const answerLanguage = "POL";
 

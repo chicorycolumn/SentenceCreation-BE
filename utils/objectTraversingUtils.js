@@ -380,12 +380,16 @@ exports.findMatchingLemmaObjectThenWord = (
 
       console.log("jjj", { selectedLemmaObject });
 
+      console.log("zzz", structureChunk.gender);
+
       let subArrayOfOutputUnits = lfUtils.filterWithinSelectedLemmaObject(
         selectedLemmaObject,
         structureChunk,
         currentLanguage,
         kumquat
       );
+
+      console.log("ccz", structureChunk.gender);
 
       console.log("kkk", subArrayOfOutputUnits);
 
@@ -398,6 +402,10 @@ exports.findMatchingLemmaObjectThenWord = (
       }
 
       let unit = subArrayOfOutputUnits[0];
+
+      console.log("ddz", "unit, is subArrayOfOutputUnits[0]", unit);
+      //By selecting this one unit, we have decanted ourselves into one gender choice.
+      //This means doNotSpecify will have no effect, re this pronoun.
 
       let { errorInDrilling, selectedWordArray, drillPath } = unit;
 

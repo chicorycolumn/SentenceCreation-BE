@@ -21,8 +21,9 @@ exports.giveAdjustedFeatureValue = (
         return adjustedFeatureValue;
       } else {
         throw (
-          "REF:adjustedFeatureValue found adjusted feature value for " +
-          featureValue
+          "Error! ------------------> REF:adjustedFeatureValue found no adjusted feature value for '" +
+          featureValue +
+          "' feature value."
         );
       }
     }
@@ -39,6 +40,8 @@ exports.lemmaObjectFeatureValueConversion = {
         m1: "m",
         m2: "n",
         m3: "n",
+        virile: "virile",
+        nonvirile: "nonvirile",
       },
     },
   },
@@ -48,6 +51,8 @@ exports.lemmaObjectFeatureValueConversion = {
         n: "n",
         f: "f",
         m: "m1",
+        virile: "virile",
+        nonvirile: "nonvirile",
       },
     },
   },

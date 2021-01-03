@@ -415,4 +415,43 @@ exports.sentenceFormulasBank = [
     primaryOrders: [["fix-1", "nou-1", "ver-1", "fix-2", "fix-3"]],
     additionalOrders: [],
   },
+  {
+    sentenceFormulaSymbol: "110 the woman read me a book",
+    sentenceFormulaId: "ENG-00-110",
+    translations: { POL: ["POL-00-110"] },
+    sentenceStructure: [
+      { chunkId: "fix-1", wordtype: "fixed", value: "the" },
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        specificLemmas: ["woman"],
+      },
+      {
+        chunkId: "ver-1",
+        agreeWith: "nou-1",
+        wordtype: "verb",
+        specificLemmas: ["read"],
+        tenseDescription: ["past continuous"],
+      },
+      {
+        chunkId: "pro-1",
+        wordtype: "pronoun",
+        person: ["1per"],
+        gcase: ["dat"],
+      },
+      { chunkId: "fix-2", wordtype: "fixed", value: "a" },
+      {
+        chunkId: "nou-2",
+        wordtype: "noun",
+        specificLemmas: ["książka"],
+        gcase: ["acc"],
+        number: ["singular"],
+      },
+      { chunkId: "fix-3", wordtype: "fixed", value: "to" },
+    ],
+    primaryOrders: [["fix-1", "nou-1", "ver-1", "pro-1", "fix-2", "nou-1"]],
+    additionalOrders: [
+      ["fix-1", "nou-1", "ver-1", "fix-2", "nou-1", "fix-3", "pro-1"],
+    ],
+  },
 ];
