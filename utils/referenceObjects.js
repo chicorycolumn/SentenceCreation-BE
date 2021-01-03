@@ -16,43 +16,55 @@ exports.giveAdjustedFeatureValue = (
       ][featureKey];
 
     if (ref) {
-      let adjustedFeatureValue = ref[featureValue];
-      if (adjustedFeatureValue) {
-        return adjustedFeatureValue;
+      let adjustedFeatureValueArr = ref[featureValue];
+      if (adjustedFeatureValueArr) {
+        return adjustedFeatureValueArr;
       } else {
         throw (
-          "Error! ------------------> REF:adjustedFeatureValue found no adjusted feature value for '" +
+          "Error! ------------------> REF:adjustedFeatureValueArr found no adjusted feature value for '" +
           featureValue +
           "' feature value."
         );
       }
     }
   }
-  return featureValue;
+  return [featureValue];
 };
 
 exports.lemmaObjectFeatureValueConversion = {
   POL: {
     ENG: {
       gender: {
-        n: "n",
-        f: "f",
-        m1: "m",
-        m2: "n",
-        m3: "n",
-        virile: "virile",
-        nonvirile: "nonvirile",
+        n: ["n"],
+        f: ["f"],
+        m1: ["m"],
+        m2: ["n"],
+        m3: ["n"],
+        virile: ["virile"],
+        nonvirile: ["nonvirile"],
       },
     },
   },
   ENG: {
     POL: {
       gender: {
-        n: "n",
-        f: "f",
-        m: "m1",
-        virile: "virile",
-        nonvirile: "nonvirile",
+        n: ["n"],
+        f: ["f"],
+        m: ["m1"],
+        virile: ["virile"],
+        nonvirile: ["nonvirile"],
+        allPersonalGenders: ["m1", "f"],
+        allGendersIncludingNeuter: [
+          "m1",
+          "m2",
+          "m3",
+          "f",
+          "f",
+          "f",
+          "n",
+          "n",
+          "n",
+        ],
       },
     },
   },

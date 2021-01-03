@@ -215,22 +215,16 @@ let pronounSet = [
     inflections: {
       "1per": {
         singular: {
-          m: {
+          allPersonalGenders: {
             nom: "I",
             gen: "my",
             genAdj: "mine",
             dat: "me",
             acc: "me",
           },
-          f: {
-            nom: "I",
-            gen: "my",
-            dat: "me",
-            acc: "me",
-          },
         },
         plural: {
-          allGenders: {
+          allPersonalGenders: {
             nom: "we",
             gen: "our",
             genAdj: "ours",

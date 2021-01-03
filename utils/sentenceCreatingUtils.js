@@ -527,7 +527,7 @@ exports.conformAnswerStructureToQuestionStructure = (
             questionStructureChunk.wordtype
       );
 
-      //Alpha: So every single tag match, otherwise won't match them?
+      //Beta: So every single tag match, otherwise won't match them?
       matchingAnswerLemmaObjects = matchingAnswerLemmaObjects.filter(
         (answerLemmaObject) =>
           gpUtils.areTwoFlatArraysEqual(
@@ -625,16 +625,20 @@ exports.conformAnswerStructureToQuestionStructure = (
         return;
       }
 
-      answerStructureChunk[inflectorKey] = questionStructureChunk[
-        inflectorKey
-      ].map((inflectorValue) =>
-        refObj.giveAdjustedFeatureValue(
+      let adjustedArr = [];
+
+      questionStructureChunk[inflectorKey].forEach((inflectorValue) => {
+        let adjustedValues = refObj.giveAdjustedFeatureValue(
           questionLanguage,
           answerLanguage,
           inflectorKey,
           inflectorValue
-        )
-      );
+        );
+
+        adjustedArr = [...adjustedArr, ...adjustedValues];
+      });
+
+      answerStructureChunk[inflectorKey] = adjustedArr;
     });
 
     //

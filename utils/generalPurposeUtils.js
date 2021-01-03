@@ -57,7 +57,7 @@ exports.copyAndCombineWordbanks = (wordbank1, wordbank2) => {
   let wordbank2Copy = exports.copyWithoutReference(wordbank2);
 
   Object.keys(wordbank1Copy).forEach((key) => {
-    //Alpha make this work even if key not present?
+    //Beta make this work even if key not present?
     wordbank1Copy[key] = [...wordbank1Copy[key], ...wordbank2Copy[key]];
   });
 

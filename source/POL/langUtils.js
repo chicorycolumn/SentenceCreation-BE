@@ -58,7 +58,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
       return;
     }
 
-    //Alpha this is new.
+    //Beta this is new.
     exports.adjustVirilityOfStructureChunk(structureChunk, true);
 
     if (

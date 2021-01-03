@@ -160,14 +160,31 @@ exports.preprocessLemmaObjectsMajor = (matches, structureChunk) => {
         throw "Error------------->I expected stCh to have a gender key.";
       }
 
-      gpUtils.findKeysInObjectAndExecuteCallback(lObj, "allGenders", (obj) => {
-        gpUtils.copyValueOfKey(
-          obj,
-          "allGenders",
-          ["virile", "nonvirile", "m", "f"], //Alpha: This is kind of kowtowing.
-          true
-        );
-      });
+      gpUtils.findKeysInObjectAndExecuteCallback(
+        lObj,
+        "allPersonalGenders",
+        (obj) => {
+          gpUtils.copyValueOfKey(
+            obj,
+            "allPersonalGenders",
+            ["virile", "nonvirile", "m", "f"], //Beta: This is kind of kowtowing.
+            false
+          );
+        }
+      );
+
+      gpUtils.findKeysInObjectAndExecuteCallback(
+        lObj,
+        "allGendersIncludingNeuter",
+        (obj) => {
+          gpUtils.copyValueOfKey(
+            obj,
+            "allGendersIncludingNeuter",
+            ["nonvirile", "m", "f", "n"], //Beta: This is kind of kowtowing.
+            false
+          );
+        }
+      );
 
       // let genderValueArr = structureChunk.gender;
 

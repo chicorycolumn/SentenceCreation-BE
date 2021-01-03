@@ -762,6 +762,54 @@ exports.dummySentenceFormulasBank = [
     ],
     primaryOrders: [["pro-1", "ver-1"]],
   },
+
+  {
+    sentenceFormulaSymbol: "dummy49e",
+    sentenceFormulaId: "ENG-dummy49e",
+    translations: { POL: ["POL-dummy49e"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1",
+        wordtype: "pronoun",
+        person: ["1per"],
+        number: ["singular"],
+        gender: ["allPersonalGenders"],
+        gcase: ["nom"],
+      },
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        agreeWith: "pro-1",
+        tenseDescription: ["past simple"],
+        specificLemmas: ["write"],
+      },
+    ],
+    primaryOrders: [["pro-1", "ver-1"]],
+  },
+  {
+    sentenceFormulaSymbol: "dummy49f",
+    sentenceFormulaId: "ENG-dummy49f",
+    translations: { POL: ["POL-dummy49f"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1",
+        wordtype: "pronoun",
+        person: ["1per"],
+        gender: ["allPersonalGenders"],
+        number: ["plural"],
+        gcase: ["nom"],
+      },
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        agreeWith: "pro-1",
+        tenseDescription: ["past simple"],
+        specificLemmas: ["write"],
+      },
+    ],
+    primaryOrders: [["pro-1", "ver-1"]],
+  },
+
   {
     sentenceFormulaSymbol: "dummy53",
     sentenceFormulaId: "ENG-dummy53",

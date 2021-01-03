@@ -717,7 +717,7 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe("/palette - Stage 13B: Pronouns and other Multi Gender Nouns: Further tests.", () => {
+  xdescribe("/palette - Stage 13B: Pronouns and other Multi Gender Nouns: Further tests.", () => {
     it("#pal13B-01a GET 200 YES: ENG to POL. A more interesting sentence with Pronouns.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -978,6 +978,10 @@ describe("/api", () => {
               POL: ["Lekarze pisali receptę."],
             },
             {
+              ENG: "The doctors (mixed) were writing a prescription.",
+              POL: ["Lekarze pisali receptę."],
+            },
+            {
               ENG: "The doctors (females) were writing a prescription.",
               POL: ["Lekarki pisały receptę."],
             },
@@ -1194,10 +1198,6 @@ describe("/api", () => {
               ENG: "We (females) wrote.",
               POL: ["Napisałyśmy.", "My napisałyśmy."],
             },
-            {
-              ENG: "We (mixed) wrote.",
-              POL: ["Napisałyśmy.", "My napisałyśmy."],
-            },
           ];
 
           checkTranslationsOfGivenRef(
@@ -1211,7 +1211,9 @@ describe("/api", () => {
     //
     //
     //
-    it.only("#pal13A-03b-a GET 200 YES: ENG to POL. (No gender was specified.) Inherit features from pronoun to verb (m sing).", () => {
+    //Note, if you want an ENG Q sentence to have both gender Robił Robiła in POL A sentences,
+    //then instead of setting no gender, you must set gender as allPersonalGenders.
+    it("#pal13A-03b-a GET 200 YES: ENG to POL. (allPersonalGenders was specified.) Inherit features from pronoun to verb (m sing).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1223,7 +1225,7 @@ describe("/api", () => {
           questionLanguage,
           useDummy: true,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy49c",
+          sentenceFormulaSymbol: "dummy49e",
         })
         .expect(200)
         .then((res) => {
@@ -1249,7 +1251,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13A-03b-b GET 200 YES: ENG to POL. (No gender was specified.) Inherit features from pronoun to verb (nonvir plur).", () => {
+    it("#pal13A-03b-b GET 200 YES: ENG to POL. (allPersonalGenders was specified.) Inherit features from pronoun to verb (nonvir plur).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1261,7 +1263,7 @@ describe("/api", () => {
           questionLanguage,
           useDummy: true,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy49d",
+          sentenceFormulaSymbol: "dummy49f",
         })
         .expect(200)
         .then((res) => {
@@ -1342,11 +1344,11 @@ describe("/api", () => {
               POL: ["Napisaliśmy.", "My napisaliśmy."],
             },
             {
-              ENG: "We (females) wrote.",
-              POL: ["Napisałyśmy.", "My napisałyśmy."],
+              ENG: "We (mixed) wrote.",
+              POL: ["Napisaliśmy.", "My napisaliśmy."],
             },
             {
-              ENG: "We (mixed) wrote.",
+              ENG: "We (females) wrote.",
               POL: ["Napisałyśmy.", "My napisałyśmy."],
             },
           ];

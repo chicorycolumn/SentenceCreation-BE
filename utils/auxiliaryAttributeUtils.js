@@ -605,8 +605,8 @@ exports.attachAnnotations = (arrayOfOutputUnits, languagesObj) => {
               m3: "male",
               f: "female",
               n: "neuter",
-              virile: "males",
-              nonvirile: ["mixed", "females"],
+              virile: ["mixed", "males"],
+              nonvirile: "females",
             };
 
             console.log(
