@@ -1238,7 +1238,54 @@ exports.dummySentenceFormulasBank = [
     ],
     primaryOrders: [],
   },
-
+  {
+    sentenceFormulaSymbol: "dummy49a",
+    sentenceFormulaId: "POL-dummy49a",
+    translations: { ENG: ["ENG-dummy49a"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1",
+        wordtype: "pronoun",
+        person: ["1per"],
+        number: ["singular"],
+        gender: ["m1"],
+        gcase: ["nom"],
+      },
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        agreeWith: "pro-1",
+        tenseDescription: ["past pf"],
+        specificLemmas: ["napisać"],
+      },
+    ],
+    primaryOrders: [["ver-1"]],
+    additionalOrders: [["pro-1", "ver-1"]],
+  },
+  {
+    sentenceFormulaSymbol: "dummy49b",
+    sentenceFormulaId: "POL-dummy49b",
+    translations: { ENG: ["ENG-dummy49b"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1",
+        wordtype: "pronoun",
+        person: ["1per"],
+        gender: ["f"],
+        number: ["plural"],
+        gcase: ["nom"],
+      },
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        agreeWith: "pro-1",
+        tenseDescription: ["past pf"],
+        specificLemmas: ["napisać"],
+      },
+    ],
+    primaryOrders: [["ver-1"]],
+    additionalOrders: [["pro-1", "ver-1"]],
+  },
   {
     sentenceFormulaSymbol: "dummy53",
     sentenceFormulaId: "POL-dummy53",

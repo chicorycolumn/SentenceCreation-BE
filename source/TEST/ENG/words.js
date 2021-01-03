@@ -341,7 +341,7 @@ let verbSet = [
     inflections: {
       infinitive: "bear",
       verbal: {},
-      v2: "beared",
+      v2: "bore",
       v3: "borne",
       thirdPS: "bears",
       gerund: "bearing",

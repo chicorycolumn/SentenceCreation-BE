@@ -9,6 +9,13 @@ exports.filterWithinSelectedLemmaObject = (
   currentLanguage,
   kumquat
 ) => {
+  console.log("filterWithinSelectedLemmaObject was given:", {
+    lemmaObject,
+    structureChunk,
+    currentLanguage,
+    kumquat,
+  });
+
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
 
   //Counteract Masculinist Agenda: Overrepresentation
@@ -41,6 +48,8 @@ exports.filterWithinSelectedLemmaObject = (
     requirementArrs,
     outputUnitsWithDrillPaths
   );
+
+  console.log("lll", { outputUnitsWithDrillPaths });
 
   if (!outputUnitsWithDrillPaths || !outputUnitsWithDrillPaths.length) {
     errorInDrilling = true;

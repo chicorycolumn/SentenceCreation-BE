@@ -143,12 +143,19 @@ exports.processSentenceFormula = (
       kumquat
     );
 
-    if (
-      errorInSentenceCreation.errorMessage ||
-      !allPossOutputUnits_head ||
-      !allPossOutputUnits_head.length
-    ) {
+    if (errorInSentenceCreation.errorMessage) {
       console.log("An error arose in SC:processSentenceFormula.");
+      return {
+        outputArr: null,
+        sentenceFormula,
+        sentenceFormulaId,
+        sentenceFormulaSymbol,
+        errorInSentenceCreation,
+      };
+    }
+
+    if (!allPossOutputUnits_head || !allPossOutputUnits_head.length) {
+      console.log("An error has arisen in SC:processSentenceFormula.");
       return {
         outputArr: null,
         sentenceFormula,

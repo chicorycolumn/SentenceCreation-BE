@@ -378,12 +378,16 @@ exports.findMatchingLemmaObjectThenWord = (
     } else {
       let selectedLemmaObject = gpUtils.selectRandom(matchesCopy);
 
+      console.log("jjj", { selectedLemmaObject });
+
       let subArrayOfOutputUnits = lfUtils.filterWithinSelectedLemmaObject(
         selectedLemmaObject,
         structureChunk,
         currentLanguage,
         kumquat
       );
+
+      console.log("kkk", subArrayOfOutputUnits);
 
       if (!subArrayOfOutputUnits || !subArrayOfOutputUnits.length) {
         return false;

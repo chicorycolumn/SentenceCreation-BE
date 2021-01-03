@@ -33,18 +33,14 @@ exports.fetchPalette = (req) => {
   );
 
   if (!questionSentenceData) {
-    console.log(
-      "Error! ---------------> In fetchPalette the questionSentenceData came back as NOTHING."
-    );
+    throw "Error! ---------------> In fetchPalette the questionSentenceData came back as NOTHING.";
   }
 
   if (
     !questionSentenceData.arrayOfOutputArrays ||
     !questionSentenceData.arrayOfOutputArrays.length
   ) {
-    console.log(
-      "Error! ---------------> In fetchPalette the question arrayOfOutputArrays came back NONE."
-    );
+    throw "Error! ---------------> In fetchPalette the question arrayOfOutputArrays came back NONE.";
   }
 
   console.log("palette.model > questionSentenceData.arrayOfOutputArrays");
