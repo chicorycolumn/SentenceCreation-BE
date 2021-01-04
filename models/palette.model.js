@@ -107,19 +107,25 @@ exports.fetchPalette = (req) => {
         words
       );
 
+      console.log("123a annotations before Clari or Speci:");
+      questionOutputArr.forEach((outputItem) => {
+        console.log([
+          outputItem.structureChunk.chunkId,
+          outputItem.structureChunk.annotations,
+        ]);
+      });
+
       if (!hideClarifiersForTestingPurposes) {
         aaUtils.addClarifiers(questionOutputArr, languagesObject);
       }
 
-      console.log("eee&");
-      console.log("&");
-      questionOutputArr
-        .map((outputUnit) => outputUnit.structureChunk)
-        .forEach((stCh) => {
-          console.log(stCh);
-        });
-      console.log("&");
-      console.log("&");
+      console.log("123b annotations after Clari but before Speci:");
+      questionOutputArr.forEach((outputItem) => {
+        console.log([
+          outputItem.structureChunk.chunkId,
+          outputItem.structureChunk.annotations,
+        ]);
+      });
 
       if (!doNotSpecify) {
         aaUtils.addSpecifiers(
@@ -128,6 +134,14 @@ exports.fetchPalette = (req) => {
           languagesObject
         );
       }
+
+      console.log("123c annotations after Clari and Speci:");
+      questionOutputArr.forEach((outputItem) => {
+        console.log([
+          outputItem.structureChunk.chunkId,
+          outputItem.structureChunk.annotations,
+        ]);
+      });
 
       aaUtils.attachAnnotations(questionOutputArr, languagesObject);
 

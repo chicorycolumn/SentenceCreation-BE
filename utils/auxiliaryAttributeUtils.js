@@ -226,6 +226,8 @@ exports.addSpecifiers = (
         //then for each action key in the reqSpecInstr...
 
         Object.keys(reqSpecInstr.action).forEach((actionKey) => {
+          //Gamma: Move this not-condition to the reqSpecInstructions in refObj.
+
           //   ( Btw, if actionKey is gender, and the A stCh we're looking at is PERSON,
           //     then abort. Gender does not need to be selected randomly here, instead
           //     it will be agreeWith-inherited from corresponding lObj after translation. )
@@ -303,6 +305,14 @@ exports.addSpecifiers = (
   }
 
   //STEP ONE: For every A depCh and its headCh, check by requested Specifiers and if so, add them.
+
+  //Now you might ask - why not run this process for first the headCh, then the depCh, then the otherCh?
+
+  //Well, it's because we only want to Specify when there will actually be a difference.
+  //Our approach is to hardcode specific depCh situations, in which we want the headCh to be Specified.
+
+  //eg if depCh is POL verb past tense, in that case, we want gender of headCh Specified,
+  //but if depCh is POL verb present tense, then no reason to Specify headCh's gender.
   answerDependentChunks.forEach((answerDependentChunk) => {
     console.log(
       "Checking answerDependentChunk: " + answerDependentChunk.chunkId
@@ -336,7 +346,8 @@ exports.addSpecifiers = (
   //STEP THREE: Do a special thing for Multi Gender Nouns - that's lObjs with {gender: "both"}.
   answerDependentChunks.forEach((answerDependentChunk) => {
     console.log(
-      "Checking answerDependentChunk: " + answerDependentChunk.chunkId
+      "STEP THREE Checking answerDependentChunk: " +
+        answerDependentChunk.chunkId
     );
     let materials = getMaterialsToAddSpecifiers(
       answerDependentChunk,
@@ -542,6 +553,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
               (label) => allowableClarifiers.includes(label)
             );
 
+            //Omega say: Could nix this if(label === "gender" && structureChunk["gender"] === "allPersonalGenders" || "allGendersIncludingNeuter")
             labelsWhereTheyDiffer.forEach((label) => {
               console.log(333, { label });
               structureChunk.annotations[label] = structureChunk[label];
@@ -560,6 +572,12 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
 };
 
 exports.attachAnnotations = (arrayOfOutputUnits, languagesObj) => {
+  console.log("% % % % % % % % % % % % % % %");
+  console.log("% % % % % % % % % % % % % % %");
+  console.log("% % % attachAnnotations % % %");
+  console.log("% % % % % % % % % % % % % % %");
+  console.log("% % % % % % % % % % % % % % %");
+
   let { answerLanguage, questionLanguage } = languagesObj;
 
   arrayOfOutputUnits.forEach((outputUnit) => {
@@ -569,6 +587,13 @@ exports.attachAnnotations = (arrayOfOutputUnits, languagesObj) => {
       structureChunk.annotations &&
       Object.keys(structureChunk.annotations).length
     ) {
+      console.log(
+        "bbb%%%%%%%%%%% structureChunk " +
+          structureChunk.chunkId +
+          " has annotations: ",
+        structureChunk.annotations
+      );
+
       let formattedAnnotationArr = Object.keys(structureChunk.annotations).map(
         (annotationKey) => {
           let annotationValue = structureChunk.annotations[annotationKey];

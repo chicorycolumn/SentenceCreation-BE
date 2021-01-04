@@ -157,7 +157,17 @@ exports.preprocessLemmaObjectsMajor = (matches, structureChunk) => {
         throw "Error------------->lObj and stCh wordtypes don't match.";
       }
       if (!structureChunk.gender) {
-        throw "Error------------->I expected stCh to have a gender key.";
+        if (
+          structureChunk.person &&
+          structureChunk.person.length &&
+          !structureChunk.person.includes("3per")
+        ) {
+          structureChunk.gender = ["allPersonalGenders"];
+        } else {
+          structureChunk.gender = ["allGendersIncludingNeuter"];
+        }
+
+        // throw "Error------------->I expected stCh to have a gender key.";
       }
 
       gpUtils.findKeysInObjectAndExecuteCallback(

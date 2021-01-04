@@ -717,7 +717,7 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe("/palette - Stage 13B: Pronouns and other Multi Gender Nouns: Further tests.", () => {
+  xdescribe("/palette - Stage 13B: Pronouns and other Multi Gender Nouns: Further tests.", () => {
     it("#pal13B-01a GET 200 YES: ENG to POL. I am.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -746,7 +746,34 @@ describe("/api", () => {
           );
         });
     });
+    it("#pal13B-01b GET 200 YES: ENG to POL. I am.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
 
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // doNotSpecify: true,
+          // hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "111 I am",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            { ENG: "I am.", POL: ["Jestem.", "Ja jestem."] },
+            { ENG: "We are.", POL: ["Jesteśmy.", "My jesteśmy."] },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
     xit("#pal13B-02a GET 200 YES: ENG to POL. A more interesting sentence with Pronouns.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -872,41 +899,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13A-01c GET 200 YES: Selection of either male or female versions of same person ENG to POL.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // doNotSpecify: true,
-          // hideClarifiersForTestingPurposes: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "109a doc was writing p",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "The doctor (male) was writing a prescription.",
-              POL: ["Lekarz pisał receptę."],
-            },
-            {
-              ENG: "The doctor (female) was writing a prescription.",
-              POL: ["Lekarka pisała receptę."],
-            },
-          ];
-
-          checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    it("#pal13A-01d GET 200 YES: PLURAL doNotSpecify. Selection of either male or female versions of same person POL to ENG.", () => {
+    it("#pal13A-01c GET 200 YES: PLURAL doNotSpecify. Selection of either male or female versions of same person POL to ENG.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -948,7 +941,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13A-01e GET 200 YES: PLURAL doNotSpecify. Selection of either male or female versions of same person ENG to POL.", () => {
+    it("#pal13A-01d GET 200 YES: PLURAL doNotSpecify. Selection of either male or female versions of same person ENG to POL.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -976,44 +969,6 @@ describe("/api", () => {
             //   ENG: "The doctor (female) was writing a prescription.",
             //   POL: ["Lekarka pisała receptę."],
             // },
-          ];
-
-          checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    it("#pal13A-01f GET 200 YES: PLURAL Selection of either male or female versions of same person ENG to POL.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // doNotSpecify: true,
-          // hideClarifiersForTestingPurposes: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "109c docs were writing p",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "The doctors (males) were writing a prescription.",
-              POL: ["Lekarze pisali receptę."],
-            },
-            {
-              ENG: "The doctors (mixed) were writing a prescription.",
-              POL: ["Lekarze pisali receptę."],
-            },
-            {
-              ENG: "The doctors (females) were writing a prescription.",
-              POL: ["Lekarki pisały receptę."],
-            },
           ];
 
           checkTranslationsOfGivenRef(
@@ -1758,8 +1713,82 @@ describe("/api", () => {
   });
 
   //Note, these currently fail they have pronouns as FIX stChs, whereas we're in the process of making pronouns their own.
-  xdescribe("/palette - Stage 11: Adding Specifiers.", () => {
-    it("#pal11-01a Check Specifier of gender is added to ENG past continuous.", () => {
+  describe("/palette - Stage 11: Adding Specifiers.", () => {
+    it("#pal11-01a GET 200 YES: SPECIFIER IS EXPECTED Selection of either male or female versions of same person ENG to POL.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // doNotSpecify: true,
+          // hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "109a doc was writing p",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "The doctor (male) was writing a prescription.",
+              POL: ["Lekarz pisał receptę."],
+            },
+            {
+              ENG: "The doctor (female) was writing a prescription.",
+              POL: ["Lekarka pisała receptę."],
+            },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal11-01b GET 200 YES: SPECIFIER IS EXPECTED Selection of PLURAL either male or female versions of same person ENG to POL.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // doNotSpecify: true,
+          // hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "109c docs were writing p",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "The doctors (males) were writing a prescription.",
+              POL: ["Lekarze pisali receptę."],
+            },
+            {
+              ENG: "The doctors (mixed) were writing a prescription.",
+              POL: ["Lekarze pisali receptę."],
+            },
+            {
+              ENG: "The doctors (females) were writing a prescription.",
+              POL: ["Lekarki pisały receptę."],
+            },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    //
+    //
+    xit("#pal11-05a Check Specifier of gender is added to ENG past continuous.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1800,7 +1829,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal11-01b Check Specifier of gender is added to ENG all past tenses.", () => {
+    xit("#pal11-05b Check Specifier of gender is added to ENG all past tenses.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1846,7 +1875,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal11-01c Don't add Specifier if gender already present.", () => {
+    xit("#pal11-05c Don't add Specifier if gender already present.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1880,7 +1909,7 @@ describe("/api", () => {
           );
         });
     });
-    it("FAILS #pal11-01d But you should add Specifier if gender present on stCh but not salient in sentence?", () => {
+    xit("FAILS #pal11-05d But you should add Specifier if gender present on stCh but not salient in sentence?", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
