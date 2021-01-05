@@ -66,18 +66,29 @@ exports.addLanguageParticularClarifiers = (
     //
     //Type 3 Synhomographs: Add clarifier for 2nd person singular vs plural. (Wasn't caught, as went through Ad-PW).
     //
-    if (!structureChunk.person || !structureChunk.number) {
-      throw "ENG:addLanguageParticularClarifiers expected this verb structureChunk to have a Person and Number key.";
-    }
-    if (!structureChunk.person.length > 1 || structureChunk.number.length > 1) {
-      throw "ENG:addLanguageParticularClarifiers expected this verb structureChunk's Person and Number key to have only one value each, not more.";
-    }
 
-    let person = structureChunk.person[0];
-    let number = structureChunk.number[0];
+    //Ah! Actually this doesn't need to be done. Because all verbs will be tied to nouns or pronouns, even when such are invisible.
+    if (false) {
+      if (!structureChunk.person || !structureChunk.number) {
+        throw "ENG:addLanguageParticularClarifiers expected this verb structureChunk to have a Person and Number key.";
+      }
+      if (
+        !structureChunk.person.length > 1 ||
+        structureChunk.number.length > 1
+      ) {
+        throw "ENG:addLanguageParticularClarifiers expected this verb structureChunk's Person and Number key to have only one value each, not more.";
+      }
 
-    if (person === "2per") {
-      structureChunk.annotations.number = number;
+      let person = structureChunk.person[0];
+      let number = structureChunk.number[0];
+
+      if (person === "2per") {
+        console.log(
+          "------------------------------------------ADDED CLARIFIER in Step 2, for Type 3 Syn",
+          number
+        );
+        structureChunk.annotations.number = number;
+      }
     }
 
     //
@@ -93,13 +104,25 @@ exports.addLanguageParticularClarifiers = (
           structureChunk.tenseDescription &&
           structureChunk.tenseDescription.includes("past simple")
         ) {
-          structureChunk.annotations.tenseDescription = "past";
+          let annotationValue = "past";
+
+          console.log(
+            "------------------------------------------ADDED  CLARIFIER in Step 2, for Type 2 Syn",
+            annotationValue
+          );
+          structureChunk.annotations.tenseDescription = annotationValue;
           structureChunk.preventAddingClarifiers = true; // We assume that no more clarifiers are needed.
         } else if (
           structureChunk.tenseDescription &&
           structureChunk.tenseDescription.includes("present simple")
         ) {
-          structureChunk.annotations.tenseDescription = "present";
+          let annotationValue = "present";
+
+          console.log(
+            "------------------------------------------ADDED  CLARIFIER in Step 2, for Type 2 Syn",
+            annotationValue
+          );
+          structureChunk.annotations.tenseDescription = annotationValue;
           structureChunk.preventAddingClarifiers = true; // We assume that no more clarifiers are needed.
         }
       }
@@ -129,22 +152,32 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
       if (!structureChunk.gender || !structureChunk.gender.length) {
         //Fill out if blank.
 
-        if (!structureChunk.number || !structureChunk.number.length) {
-          structureChunk.gender = ["m", "f", "n", "virile", "nonvirile"];
+        // if (!structureChunk.number || !structureChunk.number.length) {
+        if (
+          structureChunk.person &&
+          structureChunk.person.length &&
+          !structureChunk.person.includes("3per")
+        ) {
+          structureChunk.gender = ["allPersonalGenders"];
         } else {
-          structureChunk.gender = [];
-
-          if (structureChunk.number.includes("singular")) {
-            ["m", "f", "n"].forEach((genderValue) =>
-              structureChunk.gender.push(genderValue)
-            );
-          } //Yes, there is no 'else' between these two. They should have ability to run.
-          if (structureChunk.number.includes("plural")) {
-            ["virile", "nonvirile"].forEach((genderValue) =>
-              structureChunk.gender.push(genderValue)
-            );
-          }
+          structureChunk.gender = ["allGendersIncludingNeuter"];
         }
+
+        // structureChunk.gender = ["m", "f", "n", "virile", "nonvirile"];
+        // } else {
+        //   structureChunk.gender = [];
+
+        //   if (structureChunk.number.includes("singular")) {
+        //     ["m", "f", "n"].forEach((genderValue) =>
+        //       structureChunk.gender.push(genderValue)
+        //     );
+        //   } //Yes, there is no 'else' between these two. They should both have ability to run.
+        //   if (structureChunk.number.includes("plural")) {
+        //     ["virile", "nonvirile"].forEach((genderValue) =>
+        //       structureChunk.gender.push(genderValue)
+        //     );
+        //   }
+        // }
       }
     }
   });

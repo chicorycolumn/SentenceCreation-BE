@@ -773,6 +773,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
+        person: ["1per"],
       },
       {
         chunkId: "ver-1",
@@ -920,6 +921,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
+        person: ["1per"],
         // gender: [],
         // number: []
       },
@@ -942,6 +944,30 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
+        person: ["1per"],
+        // gender: [],
+        // number: []
+      },
+      {
+        chunkId: "ver-1",
+        agreeWith: "pro-1",
+        wordtype: "verb",
+        specificLemmas: ["być"],
+        tenseDescription: ["past im"],
+      },
+    ],
+    primaryOrders: [["ver-1"]],
+    additionalOrders: [["pro-1", "ver-1"]],
+  },
+  {
+    sentenceFormulaSymbol: "111c you were",
+    sentenceFormulaId: "POL-00-111c",
+    translations: { ENG: ["ENG-00-111c"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1",
+        wordtype: "pronoun",
+        person: ["2per"],
         // gender: [],
         // number: []
       },

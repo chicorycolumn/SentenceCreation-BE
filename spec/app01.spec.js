@@ -12,8 +12,8 @@ const { it } = require("mocha");
 const generalTranslatedSentencesRef = {
   have_withClarifiers_QlangENG: {
     "POL->ENG": [
-      { POL: "Masz.", ENG: ["You have (singular)."] },
-      { POL: "Macie.", ENG: ["You have (plural)."] },
+      { POL: "Masz.", ENG: ["You (singular) have."] },
+      { POL: "Macie.", ENG: ["You (plural) have."] },
     ],
   },
   have_withClarifiers_QlangPOL: {
@@ -48,46 +48,46 @@ const generalTranslatedSentencesRef = {
     "POL->ENG": [
       {
         POL: "Masz.",
-        ENG: ["You have (singular).", "You are having (singular)."],
+        ENG: ["You (singular) have.", "You (singular) are having."],
       },
       {
         POL: "Macie.",
-        ENG: ["You have (plural).", "You are having (plural)."],
+        ENG: ["You (plural) have.", "You (plural) are having."],
       },
       {
         POL: "Miałeś.",
         ENG: [
-          "You had (singular).",
-          "You were having (singular).",
-          "You have had (singular).",
-          "You had had (singular).",
+          "You (singular) had.",
+          "You (singular) were having.",
+          "You (singular) have had.",
+          "You (singular) had had.",
         ],
       },
       {
         POL: "Miałaś.",
         ENG: [
-          "You had (singular).",
-          "You were having (singular).",
-          "You have had (singular).",
-          "You had had (singular).",
+          "You (singular) had.",
+          "You (singular) were having.",
+          "You (singular) have had.",
+          "You (singular) had had.",
         ],
       },
       {
         POL: "Miałyście.",
         ENG: [
-          "You had (plural).",
-          "You were having (plural).",
-          "You have had (plural).",
-          "You had had (plural).",
+          "You (plural) had.",
+          "You (plural) were having.",
+          "You (plural) have had.",
+          "You (plural) had had.",
         ],
       },
       {
         POL: "Mieliście.",
         ENG: [
-          "You had (plural).",
-          "You were having (plural).",
-          "You have had (plural).",
-          "You had had (plural).",
+          "You (plural) had.",
+          "You (plural) were having.",
+          "You (plural) have had.",
+          "You (plural) had had.",
         ],
       },
     ],
@@ -238,8 +238,8 @@ const generalTranslatedSentencesRef = {
   },
   be_withClarifiers_QlangENG: {
     "POL->ENG": [
-      { POL: "Jesteś.", ENG: ["You are (singular)."] },
-      { POL: "Jesteście.", ENG: ["You are (plural)."] },
+      { POL: "Jesteś.", ENG: ["You (singular) are."] },
+      { POL: "Jesteście.", ENG: ["You (plural) are."] },
     ],
   },
   be_withClarifiers_QlangPOL: {
@@ -294,46 +294,46 @@ const generalTranslatedSentencesRef = {
     "POL->ENG": [
       {
         POL: "Jesteś.",
-        ENG: ["You are (singular).", "You are being (singular)."],
+        ENG: ["You (singular) are.", "You (singular) are being."],
       },
       {
         POL: "Jesteście.",
-        ENG: ["You are (plural).", "You are being (plural)."],
+        ENG: ["You (plural) are.", "You (plural) are being."],
       },
       {
         POL: "Byłeś.",
         ENG: [
-          "You were (singular).",
-          "You were being (singular).",
-          "You have been (singular).",
-          "You had been (singular).",
+          "You (singular) were.",
+          "You (singular) were being.",
+          "You (singular) have been.",
+          "You (singular) had been.",
         ],
       },
       {
         POL: "Byłaś.",
         ENG: [
-          "You were (singular).",
-          "You were being (singular).",
-          "You have been (singular).",
-          "You had been (singular).",
+          "You (singular) were.",
+          "You (singular) were being.",
+          "You (singular) have been.",
+          "You (singular) had been.",
         ],
       },
       {
         POL: "Byłyście.",
         ENG: [
-          "You were (plural).",
-          "You were being (plural).",
-          "You have been (plural).",
-          "You had been (plural).",
+          "You (plural) were.",
+          "You (plural) were being.",
+          "You (plural) have been.",
+          "You (plural) had been.",
         ],
       },
       {
         POL: "Byliście.",
         ENG: [
-          "You were (plural).",
-          "You were being (plural).",
-          "You have been (plural).",
-          "You had been (plural).",
+          "You (plural) were.",
+          "You (plural) were being.",
+          "You (plural) have been.",
+          "You (plural) had been.",
         ],
       },
     ],
@@ -536,43 +536,43 @@ const generalTranslatedSentencesRef = {
   },
   write_withClarifiers_QlangENG: {
     "POL->ENG": [
-      { POL: "Piszesz.", ENG: ["You write (singular)."] },
-      { POL: "Piszecie.", ENG: ["You write (plural)."] },
+      { POL: "Piszesz.", ENG: ["You (singular) write."] },
+      { POL: "Piszecie.", ENG: ["You (plural) write."] },
       ////
-      { POL: "Napisałeś.", ENG: ["You wrote (singular)."] },
-      { POL: "Napisałaś.", ENG: ["You wrote (singular)."] },
-      { POL: "Napisaliście.", ENG: ["You wrote (plural)."] },
-      { POL: "Napisałyście.", ENG: ["You wrote (plural)."] },
+      { POL: "Napisałeś.", ENG: ["You (singular) wrote."] },
+      { POL: "Napisałaś.", ENG: ["You (singular) wrote."] },
+      { POL: "Napisaliście.", ENG: ["You (plural) wrote."] },
+      { POL: "Napisałyście.", ENG: ["You (plural) wrote."] },
       ////
-      { POL: "Będziesz pisał.", ENG: ["You will be writing (singular)."] },
-      { POL: "Będziesz pisała.", ENG: ["You will be writing (singular)."] },
-      { POL: "Będziesz pisać.", ENG: ["You will be writing (singular)."] },
-      { POL: "Będziecie pisały.", ENG: ["You will be writing (plural)."] },
-      { POL: "Będziecie pisali.", ENG: ["You will be writing (plural)."] },
-      { POL: "Będziecie pisać.", ENG: ["You will be writing (plural)."] },
+      { POL: "Będziesz pisał.", ENG: ["You (singular) will be writing."] },
+      { POL: "Będziesz pisała.", ENG: ["You (singular) will be writing."] },
+      { POL: "Będziesz pisać.", ENG: ["You (singular) will be writing."] },
+      { POL: "Będziecie pisały.", ENG: ["You (plural) will be writing."] },
+      { POL: "Będziecie pisali.", ENG: ["You (plural) will be writing."] },
+      { POL: "Będziecie pisać.", ENG: ["You (plural) will be writing."] },
       {
         POL: "Będziesz pisał.",
-        ENG: ["You are going to be writing (singular)."],
+        ENG: ["You (singular) are going to be writing."],
       },
       {
         POL: "Będziesz pisała.",
-        ENG: ["You are going to be writing (singular)."],
+        ENG: ["You (singular) are going to be writing ."],
       },
       {
         POL: "Będziesz pisać.",
-        ENG: ["You are going to be writing (singular)."],
+        ENG: ["You (singular) are going to be writing."],
       },
       {
         POL: "Będziecie pisały.",
-        ENG: ["You are going to be writing (plural)."],
+        ENG: ["You (plural) are going to be writing."],
       },
       {
         POL: "Będziecie pisali.",
-        ENG: ["You are going to be writing (plural)."],
+        ENG: ["You (plural) are going to be writing."],
       },
       {
         POL: "Będziecie pisać.",
-        ENG: ["You are going to be writing (plural)."],
+        ENG: ["You (plural) are going to be writing."],
       },
     ],
   },

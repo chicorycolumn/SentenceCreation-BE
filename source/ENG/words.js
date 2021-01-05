@@ -233,6 +233,26 @@ let pronounSet = [
           },
         },
       },
+      "2per": {
+        singular: {
+          allPersonalGenders: {
+            nom: "you",
+            gen: "your",
+            genAdj: "yours",
+            dat: "you",
+            acc: "you",
+          },
+        },
+        plural: {
+          allPersonalGenders: {
+            nom: "you",
+            gen: "your",
+            genAdj: "yours",
+            dat: "you",
+            acc: "you",
+          },
+        },
+      },
     },
   },
 ];

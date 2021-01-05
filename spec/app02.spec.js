@@ -12,8 +12,8 @@ const { it } = require("mocha");
 const generalTranslatedSentencesRef = {
   have_withClarifiers_QlangENG: {
     "POL->ENG": [
-      { POL: "Masz.", ENG: ["You have (singular)."] },
-      { POL: "Macie.", ENG: ["You have (plural)."] },
+      { POL: "Masz.", ENG: ["You (singular) have."] },
+      { POL: "Macie.", ENG: ["You (plural) have."] },
     ],
   },
   have_withClarifiers_QlangPOL: {
@@ -48,46 +48,46 @@ const generalTranslatedSentencesRef = {
     "POL->ENG": [
       {
         POL: "Masz.",
-        ENG: ["You have (singular).", "You are having (singular)."],
+        ENG: ["You (singular) have.", "You (singular) are having."],
       },
       {
         POL: "Macie.",
-        ENG: ["You have (plural).", "You are having (plural)."],
+        ENG: ["You (plural) have.", "You (plural) are having."],
       },
       {
         POL: "Miałeś.",
         ENG: [
-          "You had (singular).",
-          "You were having (singular).",
-          "You have had (singular).",
-          "You had had (singular).",
+          "You (singular) had.",
+          "You (singular) were having.",
+          "You (singular) have had.",
+          "You (singular) had had.",
         ],
       },
       {
         POL: "Miałaś.",
         ENG: [
-          "You had (singular).",
-          "You were having (singular).",
-          "You have had (singular).",
-          "You had had (singular).",
+          "You (singular) had.",
+          "You (singular) were having.",
+          "You (singular) have had.",
+          "You (singular) had had.",
         ],
       },
       {
         POL: "Miałyście.",
         ENG: [
-          "You had (plural).",
-          "You were having (plural).",
-          "You have had (plural).",
-          "You had had (plural).",
+          "You (plural) had.",
+          "You (plural) were having.",
+          "You (plural) have had.",
+          "You (plural) had had.",
         ],
       },
       {
         POL: "Mieliście.",
         ENG: [
-          "You had (plural).",
-          "You were having (plural).",
-          "You have had (plural).",
-          "You had had (plural).",
+          "You (plural) had.",
+          "You (plural) were having.",
+          "You (plural) have had.",
+          "You (plural) had had.",
         ],
       },
     ],
@@ -238,8 +238,8 @@ const generalTranslatedSentencesRef = {
   },
   be_withClarifiers_QlangENG: {
     "POL->ENG": [
-      { POL: "Jesteś.", ENG: ["You are (singular)."] },
-      { POL: "Jesteście.", ENG: ["You are (plural)."] },
+      { POL: "Jesteś.", ENG: ["You (singular) are."] },
+      { POL: "Jesteście.", ENG: ["You (plural) are."] },
     ],
   },
   be_withClarifiers_QlangPOL: {
@@ -294,46 +294,46 @@ const generalTranslatedSentencesRef = {
     "POL->ENG": [
       {
         POL: "Jesteś.",
-        ENG: ["You are (singular).", "You are being (singular)."],
+        ENG: ["You (singular) are.", "You (singular) are being."],
       },
       {
         POL: "Jesteście.",
-        ENG: ["You are (plural).", "You are being (plural)."],
+        ENG: ["You (plural) are.", "You (plural) are being."],
       },
       {
         POL: "Byłeś.",
         ENG: [
-          "You were (singular).",
-          "You were being (singular).",
-          "You have been (singular).",
-          "You had been (singular).",
+          "You (singular) were.",
+          "You (singular) were being.",
+          "You (singular) have been.",
+          "You (singular) had been.",
         ],
       },
       {
         POL: "Byłaś.",
         ENG: [
-          "You were (singular).",
-          "You were being (singular).",
-          "You have been (singular).",
-          "You had been (singular).",
+          "You (singular) were.",
+          "You (singular) were being.",
+          "You (singular) have been.",
+          "You (singular) had been.",
         ],
       },
       {
         POL: "Byłyście.",
         ENG: [
-          "You were (plural).",
-          "You were being (plural).",
-          "You have been (plural).",
-          "You had been (plural).",
+          "You (plural) were.",
+          "You (plural) were being.",
+          "You (plural) have been.",
+          "You (plural) had been.",
         ],
       },
       {
         POL: "Byliście.",
         ENG: [
-          "You were (plural).",
-          "You were being (plural).",
-          "You have been (plural).",
-          "You had been (plural).",
+          "You (plural) were.",
+          "You (plural) were being.",
+          "You (plural) have been.",
+          "You (plural) had been.",
         ],
       },
     ],
@@ -536,43 +536,43 @@ const generalTranslatedSentencesRef = {
   },
   write_withClarifiers_QlangENG: {
     "POL->ENG": [
-      { POL: "Piszesz.", ENG: ["You write (singular)."] },
-      { POL: "Piszecie.", ENG: ["You write (plural)."] },
+      { POL: "Piszesz.", ENG: ["You (singular) write."] },
+      { POL: "Piszecie.", ENG: ["You (plural) write."] },
       ////
-      { POL: "Napisałeś.", ENG: ["You wrote (singular)."] },
-      { POL: "Napisałaś.", ENG: ["You wrote (singular)."] },
-      { POL: "Napisaliście.", ENG: ["You wrote (plural)."] },
-      { POL: "Napisałyście.", ENG: ["You wrote (plural)."] },
+      { POL: "Napisałeś.", ENG: ["You (singular) wrote."] },
+      { POL: "Napisałaś.", ENG: ["You (singular) wrote."] },
+      { POL: "Napisaliście.", ENG: ["You (plural) wrote."] },
+      { POL: "Napisałyście.", ENG: ["You (plural) wrote."] },
       ////
-      { POL: "Będziesz pisał.", ENG: ["You will be writing (singular)."] },
-      { POL: "Będziesz pisała.", ENG: ["You will be writing (singular)."] },
-      { POL: "Będziesz pisać.", ENG: ["You will be writing (singular)."] },
-      { POL: "Będziecie pisały.", ENG: ["You will be writing (plural)."] },
-      { POL: "Będziecie pisali.", ENG: ["You will be writing (plural)."] },
-      { POL: "Będziecie pisać.", ENG: ["You will be writing (plural)."] },
+      { POL: "Będziesz pisał.", ENG: ["You (singular) will be writing."] },
+      { POL: "Będziesz pisała.", ENG: ["You (singular) will be writing."] },
+      { POL: "Będziesz pisać.", ENG: ["You (singular) will be writing."] },
+      { POL: "Będziecie pisały.", ENG: ["You (plural) will be writing."] },
+      { POL: "Będziecie pisali.", ENG: ["You (plural) will be writing."] },
+      { POL: "Będziecie pisać.", ENG: ["You (plural) will be writing."] },
       {
         POL: "Będziesz pisał.",
-        ENG: ["You are going to be writing (singular)."],
+        ENG: ["You (singular) are going to be writing."],
       },
       {
         POL: "Będziesz pisała.",
-        ENG: ["You are going to be writing (singular)."],
+        ENG: ["You (singular) are going to be writing."],
       },
       {
         POL: "Będziesz pisać.",
-        ENG: ["You are going to be writing (singular)."],
+        ENG: ["You (singular) are going to be writing."],
       },
       {
         POL: "Będziecie pisały.",
-        ENG: ["You are going to be writing (plural)."],
+        ENG: ["You (plural) are going to be writing."],
       },
       {
         POL: "Będziecie pisali.",
-        ENG: ["You are going to be writing (plural)."],
+        ENG: ["You (plural) are going to be writing."],
       },
       {
         POL: "Będziecie pisać.",
-        ENG: ["You are going to be writing (plural)."],
+        ENG: ["You (plural) are going to be writing."],
       },
     ],
   },
@@ -717,8 +717,8 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  xdescribe("/palette - Stage 13B: Pronouns and other Multi Gender Nouns: Further tests.", () => {
-    it("#pal13B-01a GET 200 YES: ENG to POL. I am.", () => {
+  describe("/palette - Stage 13B: Pronouns and other Multi Gender Nouns: Further tests.", () => {
+    it("#pal13B-01a GET 200 YES: Specifiers not requested. ENG to POL. I am.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -746,7 +746,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13B-01b GET 200 YES: ENG to POL. I am.", () => {
+    it("#pal13B-01b GET 200 YES: Specifiers requested but should not appear. ENG to POL. I am.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -774,7 +774,7 @@ describe("/api", () => {
           );
         });
     });
-    xit("#pal13B-02a GET 200 YES: ENG to POL. A more interesting sentence with Pronouns.", () => {
+    xit("#pal13B-0#a GET 200 YES: ENG to POL. A more interesting sentence with Pronouns.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1129,7 +1129,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13A-03a-c GET 200 YES: ENG to POL. WITH CLARIFIERS Inherit features from pronoun to verb (m sing).", () => {
+    it("#pal13A-03a-c GET 200 YES: ENG to POL. WITH SPECIFIERS Inherit features from pronoun to verb (m sing).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1159,7 +1159,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13A-03a-d GET 200 YES: ENG to POL. WITH CLARIFIERS Inherit features from pronoun to verb (nonvir plur).", () => {
+    it("#pal13A-03a-d GET 200 YES: ENG to POL. WITH SPECIFIERS Inherit features from pronoun to verb (nonvir plur).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1712,9 +1712,8 @@ describe("/api", () => {
     // });
   });
 
-  //Note, these currently fail they have pronouns as FIX stChs, whereas we're in the process of making pronouns their own.
-  describe.only("/palette - Stage 11: Adding Specifiers.", () => {
-    it("#pal11-01a GET 200 YES: SPECIFIER EXPECTED Selection of either m or f versions of same person noun ENG to POL.", () => {
+  describe("/palette - Stage 11: Adding Specifiers.", () => {
+    it("#pal11-01a GET 200 YES: SPECIFIER EXPECTED. Multi Gender Noun. ENG to POL.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1748,7 +1747,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal11-01b GET 200 YES: SPECIFIER EXPECTED Selection of PLURAL either m or f versions of same person noun ENG to POL.", () => {
+    it("#pal11-01b GET 200 YES: SPECIFIER EXPECTED Multi Gender Noun PLURAL. ENG to POL.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1786,7 +1785,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal11-02a GET 200 YES: NO SPECIFIER EVEN WHEN ASKED FOR, because Jestem needs no gender. Selection of either m or f inflections of pronoun ENG to POL.", () => {
+    it("#pal11-02a GET 200 YES: NO SPECIFIER EVEN WHEN ASKED FOR. Pronoun I/WE. {pres im} needs no gender. ENG to POL.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1814,7 +1813,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal11-02b GET 200 YES: SPECIFIER EXPECTED, because Byłem does need gender. Selection of either m or f inflections of pronoun ENG to POL.", () => {
+    it("#pal11-02b GET 200 YES: SPECIFIER EXPECTED. Pronoun I/WE. {past im} does indeed need gender. ENG to POL.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1869,6 +1868,86 @@ describe("/api", () => {
               POL: ["Kobieta napisała.", "Kobieta pisała."],
             },
             { ENG: "The woman had written.", POL: ["Kobieta napisała."] },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal11-04a GET 200 YES: GIVE MULTIPLE ANSWER OPTIONS WHEN SPECIFIERS NOT REQUESTED. Pronoun I/WE. {past im} does indeed need gender. ENG to POL.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          doNotSpecify: true,
+          hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "111b I was",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "I was.",
+              POL: ["Byłem.", "Ja byłem.", "Byłam.", "Ja byłam."],
+            },
+            {
+              ENG: "We were.",
+              POL: ["Byliśmy.", "My byliśmy.", "Byłyśmy.", "My byłyśmy."],
+            },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal11-05a GET 200 YES: Gives clarifiers and specifiers. Pronoun YOU. ENG to POL.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // doNotSpecify: true,
+          // hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "111c you were",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "You (singular, male) were.",
+              POL: ["Byłeś.", "Ty byłeś."],
+            },
+            {
+              ENG: "You (singular, female) were.",
+              POL: ["Byłaś.", "Ty byłaś."],
+            },
+            {
+              ENG: "You (plural, males) were.",
+              POL: ["Byliście.", "Wy byliście."],
+            },
+            {
+              ENG: "You (plural, mixed) were.",
+              POL: ["Byliście.", "Wy byliście."],
+            },
+            {
+              ENG: "You (plural, females) were.",
+              POL: ["Byłyście.", "Wy byłyście."],
+            },
           ];
 
           checkTranslationsOfGivenRef(
@@ -2582,7 +2661,7 @@ describe("/api", () => {
             questionLanguage,
             answerLanguage,
             "write_withClarifiers_Qlang" + questionLanguage,
-            ["You write (singular).", "You write (plural)."]
+            ["You (singular) write.", "You (plural) write."]
           );
         });
     });
@@ -2632,7 +2711,7 @@ describe("/api", () => {
             questionLanguage,
             answerLanguage,
             "write_withClarifiers_Qlang" + questionLanguage,
-            ["You wrote (singular).", "You wrote (plural)."]
+            ["You (singular) wrote.", "You (plural) wrote."]
           );
         });
     });
@@ -2682,7 +2761,7 @@ describe("/api", () => {
             questionLanguage,
             answerLanguage,
             "write_withClarifiers_Qlang" + questionLanguage,
-            ["You will be writing (singular).", "You will be writing (plural)."]
+            ["You (singular) will be writing.", "You (plural) will be writing."]
           );
         });
     });
@@ -2737,7 +2816,7 @@ describe("/api", () => {
             questionLanguage,
             answerLanguage,
             "be_withClarifiers_Qlang" + questionLanguage,
-            ["You are (singular).", "You are (plural)."]
+            ["You (singular) are.", "You (plural) are."]
           );
         });
     });

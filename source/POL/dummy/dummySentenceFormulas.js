@@ -1021,14 +1021,22 @@ exports.dummySentenceFormulasBank = [
     translations: { ENG: ["ENG-dummy39"] },
     sentenceStructure: [
       {
+        chunkId: "pro-1",
+        wordtype: "pronoun",
+        person: ["2per"],
+        gender: ["allPersonalGenders"],
+        // number: []
+      },
+      {
         chunkId: "ver-1",
         wordtype: "verb",
+        agreeWith: "pro-1",
         specificLemmas: ["być"],
-        person: ["2per"],
+        // person: ["2per"],
         tenseDescription: ["present im"],
       },
     ],
-    primaryOrders: [],
+    primaryOrders: [["ver-1"]],
   },
   {
     sentenceFormulaSymbol: "dummy40",
@@ -1036,14 +1044,22 @@ exports.dummySentenceFormulasBank = [
     translations: { ENG: ["ENG-dummy40"] },
     sentenceStructure: [
       {
+        chunkId: "pro-1",
+        wordtype: "pronoun",
+        person: ["2per"],
+        gender: ["allPersonalGenders"],
+        // number: []
+      },
+      {
         chunkId: "ver-1",
         wordtype: "verb",
+        agreeWith: "pro-1",
         andTags: ["basic3"],
-        person: ["2per"],
+        // person: ["2per"],
         tenseDescription: ["present im"],
       },
     ],
-    primaryOrders: [],
+    primaryOrders: [["ver-1"]],
   },
   {
     sentenceFormulaSymbol: "dummy41",
@@ -1051,14 +1067,22 @@ exports.dummySentenceFormulasBank = [
     translations: { ENG: ["ENG-dummy41"] },
     sentenceStructure: [
       {
+        chunkId: "pro-1",
+        wordtype: "pronoun",
+        person: ["2per"],
+        gender: ["allPersonalGenders"],
+        // number: []
+      },
+      {
         chunkId: "ver-1",
         wordtype: "verb",
+        agreeWith: "pro-1",
         andTags: ["basic3"],
-        person: ["2per"],
+        // person: ["2per"],
         tenseDescription: ["past pf"],
       },
     ],
-    primaryOrders: [],
+    primaryOrders: [["ver-1"]],
   },
   {
     sentenceFormulaSymbol: "dummy42",
@@ -1066,14 +1090,22 @@ exports.dummySentenceFormulasBank = [
     translations: { ENG: ["ENG-dummy42"] },
     sentenceStructure: [
       {
+        chunkId: "pro-1",
+        wordtype: "pronoun",
+        person: ["2per"],
+        gender: ["allPersonalGenders"],
+        // number: []
+      },
+      {
         chunkId: "ver-1",
         wordtype: "verb",
+        agreeWith: "pro-1",
         andTags: ["basic3"],
-        person: ["2per"],
+        // person: ["2per"],
         tenseDescription: ["future im"],
       },
     ],
-    primaryOrders: [],
+    primaryOrders: [["ver-1"]],
   },
   {
     sentenceFormulaSymbol: "dummy43",

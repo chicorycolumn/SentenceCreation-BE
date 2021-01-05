@@ -212,7 +212,7 @@ exports.requestedSpecifiersNew = {
       //   add the featureKey and Value from action to the A stCh, and note it in headCh Specifiers.
       {
         condition: {
-          person: ["1per"],
+          person: ["1per", "2per"],
           number: ["singular"],
           tenseDescription: [
             "past im",
@@ -236,7 +236,7 @@ exports.requestedSpecifiersNew = {
       },
       {
         condition: {
-          person: ["2per", "3per"],
+          person: ["3per"],
           number: ["singular"],
           tenseDescription: [
             "past im",

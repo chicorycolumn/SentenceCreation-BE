@@ -648,6 +648,44 @@ let pronounSet = [
           },
         },
       },
+      "2per": {
+        singular: {
+          m1: {
+            nom: "ty",
+            gen: "cię",
+            dat: "ci",
+            acc: "cię",
+            ins: "tobą",
+            loc: "tobie",
+          },
+          f: {
+            nom: "ty",
+            gen: "cię",
+            dat: "ci",
+            acc: "cię",
+            ins: "tobą",
+            loc: "tobie",
+          },
+        },
+        plural: {
+          virile: {
+            nom: "wy",
+            gen: "was",
+            dat: "wam",
+            acc: "was",
+            ins: "wami",
+            loc: "was",
+          },
+          nonvirile: {
+            nom: "wy",
+            gen: "was",
+            dat: "wam",
+            acc: "was",
+            ins: "wami",
+            loc: "was",
+          },
+        },
+      },
     },
   },
 ];
