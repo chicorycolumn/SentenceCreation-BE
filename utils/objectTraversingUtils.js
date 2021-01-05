@@ -313,7 +313,7 @@ exports.findMatchingLemmaObjectThenWord = (
       // errorInSentenceCreation.errorMessage =
       //   "No matching lemma objects were found.";
       console.log(
-        "It turns out no matching lemma objects were found in OT:findMatching"
+        "#ERR It turns out no matching lemma objects were found in OT:findMatching"
       );
       return false;
     }
@@ -328,7 +328,7 @@ exports.findMatchingLemmaObjectThenWord = (
       // errorInSentenceCreation.errorMessage =
       //   "No matching lemma objects were found.";
       console.log(
-        "It transpires that no matching lemma objects were found in OT:findMatching"
+        "#ERR It transpires that no matching lemma objects were found in OT:findMatching"
       );
       return false;
     }
@@ -343,7 +343,7 @@ exports.findMatchingLemmaObjectThenWord = (
       // errorInSentenceCreation.errorMessage =
       //   "No matching lemma objects were found.";
       console.log(
-        "It appears no matching lemma objects were found in OT:findMatching"
+        "#ERR It appears no matching lemma objects were found in OT:findMatching"
       );
       return false;
     }

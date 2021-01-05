@@ -444,16 +444,51 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "nou-2",
         wordtype: "noun",
-        specificLemmas: ["książka"],
-        gcase: ["acc"],
+        specificLemmas: ["book"], //Change to BOOK. NB: What error to throw if no?
+        // gcase: ["acc"],
         number: ["singular"],
       },
       { chunkId: "fix-3", wordtype: "fixed", value: "to" },
     ],
-    primaryOrders: [["fix-1", "nou-1", "ver-1", "pro-1", "fix-2", "nou-1"]],
+    primaryOrders: [["fix-1", "nou-1", "ver-1", "pro-1", "fix-2", "nou-2"]],
     additionalOrders: [
-      ["fix-1", "nou-1", "ver-1", "fix-2", "nou-1", "fix-3", "pro-1"],
+      ["fix-1", "nou-1", "ver-1", "fix-2", "nou-2", "fix-3", "pro-1"],
     ],
+  },
+  {
+    sentenceFormulaSymbol: "112 my familymember gave me things",
+    sentenceFormulaId: "ENG-00-112",
+    translations: { POL: ["POL-00-112"] },
+    sentenceStructure: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        andTags: ["family"],
+      },
+      {
+        chunkId: "ver-1",
+        agreeWith: "nou-1",
+        wordtype: "verb",
+        specificLemmas: ["give"],
+        tenseDescription: ["past simple"],
+      },
+      {
+        chunkId: "pro-1",
+        wordtype: "pronoun",
+        person: ["1per"],
+        gcase: ["dat"],
+      },
+      {
+        chunkId: "nou-2",
+        wordtype: "noun",
+        specificLemmas: ["book", "mirror", "apple", "onion"],
+        // gcase: ["acc"],
+        number: ["plural"],
+      },
+      { chunkId: "fix-3", wordtype: "fixed", value: "to" },
+    ],
+    primaryOrders: [["nou-1", "ver-1", "pro-1", "nou-2"]],
+    additionalOrders: [["nou-1", "ver-1", "nou-2", "fix-3", "pro-1"]],
   },
   {
     sentenceFormulaSymbol: "111a I am",
@@ -464,7 +499,7 @@ exports.sentenceFormulasBank = [
         chunkId: "pro-1",
         wordtype: "pronoun",
         person: ["1per"],
-        gender: ["allPersonalGenders"],
+        // gender: ["allPersonalGenders"],
         // number: []
       },
       {
@@ -487,7 +522,7 @@ exports.sentenceFormulasBank = [
         chunkId: "pro-1",
         wordtype: "pronoun",
         person: ["1per"],
-        gender: ["allPersonalGenders"],
+        // gender: ["allPersonalGenders"],
         // number: []
       },
       {
@@ -510,7 +545,7 @@ exports.sentenceFormulasBank = [
         chunkId: "pro-1",
         wordtype: "pronoun",
         person: ["2per"],
-        gender: ["allPersonalGenders"],
+        // gender: ["allPersonalGenders"],
         // number: []
       },
       {

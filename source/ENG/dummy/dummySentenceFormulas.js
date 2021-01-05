@@ -196,7 +196,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "pro-1",
         wordtype: "pronoun",
         person: ["2per"],
-        gender: ["allPersonalGenders"],
+        // gender: ["allPersonalGenders"],
         // number: []
       },
       {
@@ -388,7 +388,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "pro-1",
         wordtype: "pronoun",
         person: ["2per"],
-        gender: ["allPersonalGenders"],
+        // gender: ["allPersonalGenders"],
         // number: []
       },
       {
@@ -413,7 +413,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "pro-1",
         wordtype: "pronoun",
         person: ["2per"],
-        gender: ["allPersonalGenders"],
+        // gender: ["allPersonalGenders"],
         // number: []
       },
       {
@@ -438,7 +438,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "pro-1",
         wordtype: "pronoun",
         person: ["2per"],
-        gender: ["allPersonalGenders"],
+        // gender: ["allPersonalGenders"],
         // number: []
       },
       {
@@ -463,7 +463,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "pro-1",
         wordtype: "pronoun",
         person: ["2per"],
-        gender: ["allPersonalGenders"],
+        // gender: ["allPersonalGenders"],
         // number: []
       },
       {
@@ -756,7 +756,7 @@ exports.dummySentenceFormulasBank = [
         wordtype: "pronoun",
         person: ["1per"],
         number: ["singular"],
-        gender: ["allPersonalGenders"],
+        // gender: ["allPersonalGenders"],
         gcase: ["nom"],
       },
       {
@@ -778,7 +778,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "pro-1",
         wordtype: "pronoun",
         person: ["1per"],
-        gender: ["allPersonalGenders"],
+        // gender: ["allPersonalGenders"],
         number: ["plural"],
         gcase: ["nom"],
       },
@@ -851,7 +851,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "pro-1",
         wordtype: "pronoun",
         person: ["2per"],
-        gender: ["allPersonalGenders"],
+        // gender: ["allPersonalGenders"],
         // number: []
       },
       {

@@ -893,7 +893,7 @@ exports.sentenceFormulasBank = [
         chunkId: "ver-1",
         agreeWith: "nou-1",
         wordtype: "verb",
-        specificLemmas: ["czytała"],
+        specificLemmas: ["czytać"],
         tenseDescription: ["past im"],
       },
       {
@@ -981,5 +981,39 @@ exports.sentenceFormulasBank = [
     ],
     primaryOrders: [["ver-1"]],
     additionalOrders: [["pro-1", "ver-1"]],
+  },
+  {
+    sentenceFormulaSymbol: "112 my familymember gave me things",
+    sentenceFormulaId: "POL-00-112",
+    translations: { ENG: ["ENG-00-112"] },
+    sentenceStructure: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        specificLemmas: ["kobieta"],
+      },
+      {
+        chunkId: "ver-1",
+        agreeWith: "nou-1",
+        wordtype: "verb",
+        specificLemmas: ["dawać", "dać"],
+        tenseDescription: ["past pf"],
+      },
+      {
+        chunkId: "pro-1",
+        wordtype: "pronoun",
+        person: ["1per"],
+        gcase: ["dat"],
+      },
+      {
+        chunkId: "nou-2",
+        wordtype: "noun",
+        specificLemmas: ["jabłko", "cebula", "lustro", "książka"],
+        gcase: ["acc"],
+        number: ["plural"],
+      },
+    ],
+    primaryOrders: [["nou-1", "ver-1", "pro-1", "nou-2"]],
+    additionalOrders: [],
   },
 ];

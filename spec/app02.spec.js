@@ -774,7 +774,7 @@ describe("/api", () => {
           );
         });
     });
-    xit("#pal13B-0#a GET 200 YES: ENG to POL. A more interesting sentence with Pronouns.", () => {
+    it("#pal13B-02a GET 200 YES: ENG to POL. A more interesting sentence with Pronouns.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -805,6 +805,84 @@ describe("/api", () => {
             {
               ENG: "The women were reading a book to me.",
               POL: ["Kobiety czytały mi książkę."],
+            },
+            {
+              ENG: "The woman was reading us a book.",
+              POL: ["Kobieta czytała nam książkę."],
+            },
+            {
+              ENG: "The women were reading us a book.",
+              POL: ["Kobiety czytały nam książkę."],
+            },
+            {
+              ENG: "The woman was reading a book to us.",
+              POL: ["Kobieta czytała nam książkę."],
+            },
+            {
+              ENG: "The women were reading a book to us.",
+              POL: ["Kobiety czytały nam książkę."],
+            },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal13B-02b GET 200 YES: POL to ENG. A more interesting sentence with Pronouns.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          doNotSpecify: true,
+          hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "110 the woman read me a book",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: [
+                "The woman was reading me a book.",
+                "The woman was reading a book to me.",
+                "The woman has read me a book.",
+                "The woman has read a book to me.",
+              ],
+              POL: "Kobieta czytała mi książkę.",
+            },
+            {
+              ENG: [
+                "The women were reading me a book.",
+                "The women were reading a book to me.",
+                "The women have read me a book.",
+                "The women have read a book to me.",
+              ],
+              POL: "Kobiety czytały mi książkę.",
+            },
+            {
+              ENG: [
+                "The woman was reading us a book.",
+                "The woman was reading a book to us.",
+                "The woman has read us a book.",
+                "The woman has read a book to us.",
+              ],
+              POL: "Kobieta czytała nam książkę.",
+            },
+            {
+              ENG: [
+                "The women were reading us a book.",
+                "The women were reading a book to us.",
+                "The women have read us a book.",
+                "The women have read a book to us.",
+              ],
+              POL: "Kobiety czytały nam książkę.",
             },
           ];
 

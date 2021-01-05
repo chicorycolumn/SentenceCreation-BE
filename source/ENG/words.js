@@ -25,6 +25,50 @@ let nounSet = [
   },
   {
     //links
+    translations: { ENG: ["father"], POL: ["ojciec"] },
+    tags: ["animate", "person", "family", "concrete"],
+    //selectors
+    lemma: "father",
+    id: "eng-nou-013",
+    gender: "m",
+    //notes
+
+    //inflections
+    inflections: {
+      singular: {
+        nom: "father",
+        gen: "father's",
+      },
+      plural: {
+        nom: "fathers",
+        gen: "fathers'",
+      },
+    },
+  },
+  {
+    //links
+    translations: { ENG: ["mother"], POL: ["matka"] },
+    tags: ["animate", "person", "family", "concrete"],
+    //selectors
+    lemma: "mother",
+    id: "eng-nou-014",
+    gender: "f",
+    //notes
+
+    //inflections
+    inflections: {
+      singular: {
+        nom: "mother",
+        gen: "mother's",
+      },
+      plural: {
+        nom: "mothers",
+        gen: "mothers'",
+      },
+    },
+  },
+  {
+    //links
     translations: { ENG: ["boy"], POL: ["chłopiec", "chłopak"] },
     tags: ["animate", "person", "personTest1", "concrete"],
     //selectors
