@@ -67,6 +67,12 @@ exports.fetchPalette = (req) => {
 
   console.log("palette.model > questionSentenceData.arrayOfOutputArrays");
   gpUtils.consoleLogObjectAtTwoLevels(questionSentenceData.arrayOfOutputArrays);
+  console.log(
+    "selectedWordsss",
+    questionSentenceData.arrayOfOutputArrays[0].map(
+      (outputUnit) => outputUnit.selectedWord
+    )
+  );
   gpUtils.consoleLogAestheticBorder(4);
 
   let questionOutputArr = questionSentenceData.arrayOfOutputArrays[0];

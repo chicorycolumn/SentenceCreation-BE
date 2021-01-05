@@ -6,6 +6,27 @@ exports.selectRandom = (array) => {
   return array[Math.floor(Math.random() * array.length)];
 };
 
+exports.keyShouldBeSpecified = (chunk, key, allowOverwrite) => {
+  return (
+    !(chunk.importantFeatures && chunk.importantFeatures.includes(key)) &&
+    (allowOverwrite ||
+      !exports.isKeyFilledOutOnChunk(chunk, key) ||
+      exports.feautureValueIsMeta(chunk, key))
+  );
+};
+
+exports.feautureValueIsMeta = (chunk, key, value) => {
+  if (!value) {
+    value = chunk[key];
+  }
+
+  if (Array.isArray(value) && value.length === 1) {
+    value = value[0];
+  }
+
+  return value.slice(0, 3) === "all";
+};
+
 exports.capitaliseFirst = (string) => {
   return string[0].toUpperCase() + string.slice(1);
 };
@@ -405,8 +426,8 @@ exports.doesKeyContainValueOnChunk = (
   featureValueArr,
   includeAll
 ) => {
-  //includeAll true means every value in featureValueArr must be present.
-  //includeAll false means include any, so if any value from featureArr present.
+  //includeAll true passes if EVERY value in featureValueArr is present.
+  //includeAll false passes if ANY value from featureArr present.
 
   return (
     exports.isKeyFilledOutOnChunk(chunk, featureKey) &&

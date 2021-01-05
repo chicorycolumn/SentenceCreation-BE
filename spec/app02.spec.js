@@ -729,7 +729,7 @@ describe("/api", () => {
           hideClarifiersForTestingPurposes: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "111 I am",
+          sentenceFormulaSymbol: "111a I am",
         })
         .expect(200)
         .then((res) => {
@@ -757,7 +757,7 @@ describe("/api", () => {
           // hideClarifiersForTestingPurposes: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "111 I am",
+          sentenceFormulaSymbol: "111a I am",
         })
         .expect(200)
         .then((res) => {
@@ -1713,8 +1713,8 @@ describe("/api", () => {
   });
 
   //Note, these currently fail they have pronouns as FIX stChs, whereas we're in the process of making pronouns their own.
-  describe("/palette - Stage 11: Adding Specifiers.", () => {
-    it("#pal11-01a GET 200 YES: SPECIFIER IS EXPECTED Selection of either male or female versions of same person ENG to POL.", () => {
+  describe.only("/palette - Stage 11: Adding Specifiers.", () => {
+    it("#pal11-01a GET 200 YES: SPECIFIER EXPECTED Selection of either m or f versions of same person noun ENG to POL.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1748,7 +1748,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal11-01b GET 200 YES: SPECIFIER IS EXPECTED Selection of PLURAL either male or female versions of same person ENG to POL.", () => {
+    it("#pal11-01b GET 200 YES: SPECIFIER EXPECTED Selection of PLURAL either m or f versions of same person noun ENG to POL.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1776,6 +1776,65 @@ describe("/api", () => {
               ENG: "The doctors (females) were writing a prescription.",
               POL: ["Lekarki pisały receptę."],
             },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal11-02a GET 200 YES: NO SPECIFIER EVEN WHEN ASKED FOR, because Jestem needs no gender. Selection of either m or f inflections of pronoun ENG to POL.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // doNotSpecify: true,
+          // hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "111a I am",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            { ENG: "I am.", POL: ["Jestem.", "Ja jestem."] },
+            { ENG: "We are.", POL: ["Jesteśmy.", "My jesteśmy."] },
+          ];
+
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal11-02b GET 200 YES: SPECIFIER EXPECTED, because Byłem does need gender. Selection of either m or f inflections of pronoun ENG to POL.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // doNotSpecify: true,
+          // hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "111b I was",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            { ENG: "I (male) was.", POL: ["Byłem.", "Ja byłem."] },
+            { ENG: "I (female) was.", POL: ["Byłam.", "Ja byłam."] },
+            { ENG: "We (males) were.", POL: ["Byliśmy.", "My byliśmy."] },
+            { ENG: "We (mixed) were.", POL: ["Byliśmy.", "My byliśmy."] },
+            { ENG: "We (females) were.", POL: ["Byłyśmy.", "My byłyśmy."] },
           ];
 
           checkTranslationsOfGivenRef(

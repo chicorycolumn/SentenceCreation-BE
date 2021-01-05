@@ -455,9 +455,9 @@ exports.sentenceFormulasBank = [
     ],
   },
   {
-    sentenceFormulaSymbol: "111 I am",
-    sentenceFormulaId: "ENG-00-111",
-    translations: { POL: ["POL-00-111"] },
+    sentenceFormulaSymbol: "111a I am",
+    sentenceFormulaId: "ENG-00-111a",
+    translations: { POL: ["POL-00-111a"] },
     sentenceStructure: [
       {
         chunkId: "pro-1",
@@ -471,6 +471,28 @@ exports.sentenceFormulasBank = [
         wordtype: "verb",
         specificLemmas: ["be"],
         tenseDescription: ["present simple"],
+      },
+    ],
+    primaryOrders: [["pro-1", "ver-1"]],
+    additionalOrders: [],
+  },
+  {
+    sentenceFormulaSymbol: "111b I was",
+    sentenceFormulaId: "ENG-00-111b",
+    translations: { POL: ["POL-00-111b"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1",
+        wordtype: "pronoun",
+        gender: ["allPersonalGenders"],
+        // number: []
+      },
+      {
+        chunkId: "ver-1",
+        agreeWith: "pro-1",
+        wordtype: "verb",
+        specificLemmas: ["be"],
+        tenseDescription: ["past simple"],
       },
     ],
     primaryOrders: [["pro-1", "ver-1"]],

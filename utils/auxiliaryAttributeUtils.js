@@ -2,7 +2,6 @@ const gpUtils = require("./generalPurposeUtils.js");
 const scUtils = require("./sentenceCreatingUtils.js");
 const otUtils = require("../utils/objectTraversingUtils.js");
 const refObj = require("./referenceObjects.js");
-const { head } = require("../app.js");
 
 exports.sortAnswerAndQuestionStructureChunks = (
   questionSentenceStructure,
@@ -238,6 +237,7 @@ exports.addSpecifiers = (
                 "person",
               ])
             ) {
+              console.log("abort1");
               return;
             }
 
@@ -247,6 +247,7 @@ exports.addSpecifiers = (
                 "person",
               ])
             ) {
+              console.log("abort2");
               return;
             }
 
@@ -258,6 +259,7 @@ exports.addSpecifiers = (
                 "person",
               ])
             ) {
+              console.log("abort3");
               return;
             }
 
@@ -269,17 +271,66 @@ exports.addSpecifiers = (
                 "person",
               ])
             ) {
+              console.log("abort4");
               return;
             }
           }
 
+          if (true) {
+            console.log(
+              "THESE FOUR MUST ALL BE TRUE TO CONTINUE TO ADDING SPECIFIER:",
+              { actionKey }
+            );
+            console.log("*");
+            console.log("*");
+            console.log("*");
+            console.log(
+              gpUtils.keyShouldBeSpecified(answerChunk, actionKey, true),
+              "gpUtils.isKeyFilledOutOnChunk(answerChunk, actionKey)"
+            );
+            console.log("answerChunk", answerChunk);
+            console.log("*");
+            console.log("*");
+            console.log("*");
+            console.log(
+              gpUtils.keyShouldBeSpecified(answerHeadChunk, actionKey, true),
+              "gpUtils.isKeyFilledOutOnChunk(answerHeadChunk, actionKey)"
+            );
+            console.log("answerHeadChunk", answerHeadChunk);
+            console.log("*");
+            console.log("*");
+            console.log("*");
+            console.log(
+              gpUtils.keyShouldBeSpecified(questionChunk, actionKey),
+              "gpUtils.isKeyFilledOutOnChunk(questionChunk, actionKey)"
+            );
+            console.log("questionChunk", questionChunk);
+            console.log("*");
+            console.log("*");
+            console.log("*");
+            console.log(
+              gpUtils.keyShouldBeSpecified(questionHeadChunk, actionKey),
+              "gpUtils.isKeyFilledOutOnChunk(questionHeadChunk, actionKey)"
+            );
+            console.log("questionHeadChunk", questionHeadChunk);
+            console.log("*");
+            console.log("*");
+            console.log("*");
+          }
+
           if (
             //...if not truthy in A depCh, nor its headCh, nor corresp Q depCh, nor that one's headCh...
+            //Alpha say - but what about overwriting, shouldn't that be allowed, nay, needed?
 
-            !gpUtils.isKeyFilledOutOnChunk(answerChunk, actionKey) &&
-            !gpUtils.isKeyFilledOutOnChunk(answerHeadChunk, actionKey) &&
-            !gpUtils.isKeyFilledOutOnChunk(questionChunk, actionKey) &&
-            !gpUtils.isKeyFilledOutOnChunk(questionHeadChunk, actionKey)
+            gpUtils.keyShouldBeSpecified(answerChunk, actionKey, true) &&
+            gpUtils.keyShouldBeSpecified(answerHeadChunk, actionKey, true) &&
+            gpUtils.keyShouldBeSpecified(questionChunk, actionKey) &&
+            gpUtils.keyShouldBeSpecified(questionHeadChunk, actionKey)
+
+            // !gpUtils.isKeyFilledOutOnChunk(answerChunk, actionKey) &&
+            // !gpUtils.isKeyFilledOutOnChunk(answerHeadChunk, actionKey) &&
+            // !gpUtils.isKeyFilledOutOnChunk(questionChunk, actionKey) &&
+            // !gpUtils.isKeyFilledOutOnChunk(questionHeadChunk, actionKey)
           ) {
             console.log("Pass 2");
             let actionValueArr = [
@@ -522,10 +573,10 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
 
     console.log("The allowableClarifiers are as follows", allowableClarifiers);
 
-    //allowableClarifiers. Any clarifiers not in here, don't bother adding them.
-    //We're looking ahead to the answerLanguage, and thinking, hmmmmm, well right now the questionLanguage
-    //is POL, and soon the answerLanguage will be ENG. And looking it up... ENG doesn't allow "gender" as a transfer.
-    //So from that, we can surmise that ENG doesn't care about gender, and thus, won't want it as a clarifer on the POL Q sentence.
+    //    allowableClarifiers. Any clarifiers not in here, don't bother adding them.
+    //    We're looking ahead to the answerLanguage, and thinking, hmmmmm, well right now the questionLanguage
+    //    is POL, and soon the answerLanguage will be ENG. And looking it up... ENG doesn't allow "gender" as a transfer.
+    //    So from that, we can surmise that ENG doesn't care about gender, and thus, won't want it as a clarifer on the POL Q sentence.
 
     if (!structureChunk.preventAddingClarifiers) {
       let synhomographData = otUtils.findSynhomographs(
@@ -556,7 +607,28 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
             //Omega say: Could nix this if(label === "gender" && structureChunk["gender"] === "allPersonalGenders" || "allGendersIncludingNeuter")
             labelsWhereTheyDiffer.forEach((label) => {
               console.log(333, { label });
-              structureChunk.annotations[label] = structureChunk[label];
+
+              let clarifierValue = structureChunk[label];
+
+              //Abort if a metaGender label is accidentally being made subject of a Clarifier.
+              if (label === "gender") {
+                if (
+                  [
+                    "allGendersIncludingNeuter",
+                    "allPersonalGenders",
+                  ].some((metaGender) =>
+                    structureChunk[label].includes(metaGender)
+                  )
+                  // ||
+                  // structureChunk[label].some(
+                  //   (gender) => gender.slice(0, 3) === "all"
+                  // )
+                ) {
+                  return;
+                }
+              }
+
+              structureChunk.annotations[label] = clarifierValue;
             });
           }
         });
