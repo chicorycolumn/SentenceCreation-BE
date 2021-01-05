@@ -8,17 +8,6 @@ exports.filterWithinSelectedLemmaObject = (
   currentLanguage,
   kumquat
 ) => {
-  console.log("filterWithinSelectedLemmaObject was given:", {
-    lemmaObject,
-    structureChunk,
-    currentLanguage,
-    kumquat,
-  });
-
-  console.log("lemmaObject.inflections", lemmaObject.inflections);
-
-  console.log("aaz", structureChunk.gender);
-
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
 
   //Counteract Masculinist Agenda: Overrepresentation
@@ -28,8 +17,6 @@ exports.filterWithinSelectedLemmaObject = (
       currentLanguage
     );
   }
-
-  console.log("bbz", structureChunk.gender);
 
   //STEP ZERO: Get necessary materials, ie inflectionPaths and requirementArrs.
   let source = lemmaObject.inflections;
@@ -53,8 +40,6 @@ exports.filterWithinSelectedLemmaObject = (
     requirementArrs,
     outputUnitsWithDrillPaths
   );
-
-  console.log("lll", { outputUnitsWithDrillPaths });
 
   if (!outputUnitsWithDrillPaths || !outputUnitsWithDrillPaths.length) {
     errorInDrilling = true;
@@ -143,12 +128,6 @@ exports.filterOutLackingLemmaObjects = (
   specObj,
   currentLanguage
 ) => {
-  console.log("filterOutLackingLemmaObjects fxn was given:", {
-    sourceArr,
-    specObj,
-    currentLanguage,
-  });
-
   let inflectionChain =
     refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
       specObj.wordtype
@@ -210,12 +189,6 @@ exports.filterByKey = (lemmaObjectArr, requirementArrs, key) => {
 };
 
 exports.filterBySelectors = (currentLanguage, structureChunk, matches) => {
-  console.log("LF:filterBySelectors was given:", {
-    currentLanguage,
-    structureChunk,
-    matches,
-  });
-
   let selectors =
     refObj.lemmaObjectFeatures[currentLanguage].selectors[
       structureChunk.wordtype

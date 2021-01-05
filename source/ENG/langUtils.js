@@ -137,7 +137,6 @@ exports.adjustStructureChunksInIfPW = (structureChunk) => {};
 exports.adjustTenseDescriptions = () => {};
 
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
-  console.log("ENG:preprocessStructureChunks");
   sentenceStructure.forEach((structureChunk) => {
     if (structureChunk.wordtype === "fixed") {
       return;
@@ -261,13 +260,9 @@ exports.preprocessLemmaObjectsMinor = (matches) => {
           // matches.push(lObjCopy);
         }
       } else {
-        console.log("Minor is setting gender to 'n' for " + lObj.lemma);
         lObj.gender = "n";
       }
     }
-
-    // if (gpUtils.getWordtypeFromLemmaObject(lObj) === "pronoun") {
-    // }
   });
 };
 

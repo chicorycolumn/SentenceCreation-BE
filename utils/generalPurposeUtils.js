@@ -156,13 +156,6 @@ exports.arrayExploder = (superArray) => {
     return [];
   }
 
-  // console.log("{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{");
-  // console.log("hhh", "superArray");
-  // superArray.forEach((item) => {
-  //   console.log(item);
-  // });
-  // console.log("}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}");
-
   superArray = superArray.filter((array) => array.length);
 
   if (!superArray.length) {
@@ -197,14 +190,6 @@ exports.arrayExploder = (superArray) => {
 };
 
 exports.explodeOutputArraysByHeadsAndDependents = (justOneOutputArray) => {
-  console.log("^");
-  console.log("^");
-  console.log("a22^");
-  console.log(justOneOutputArray);
-  console.log("^");
-  console.log("^");
-  console.log("^");
-
   justOneOutputArray.forEach((unit, unitIndex) => {
     if (
       unit.possibleDependentOutputArrays &&
@@ -222,24 +207,6 @@ exports.explodeOutputArraysByHeadsAndDependents = (justOneOutputArray) => {
   justOneOutputArray.forEach((headUnit, headUnitIndex) => {
     let headArr = [[headUnit]];
     let depArr = headUnit.explodedDependentOutputArrays;
-
-    console.log(
-      "''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''"
-    );
-    console.log(
-      "''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''"
-    );
-    console.log("a11", "headUnit", headUnit);
-    console.log(
-      "headUnit.explodedDependentOutputArrays",
-      headUnit.explodedDependentOutputArrays
-    );
-    console.log(
-      "''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''"
-    );
-    console.log(
-      "''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''"
-    );
 
     let headsExplodedByDeps = exports.arrayExploder([headArr, depArr]);
     delete headUnit.explodedDependentOutputArrays;

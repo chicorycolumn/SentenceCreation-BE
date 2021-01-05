@@ -519,8 +519,6 @@ exports.conformAnswerStructureToQuestionStructure = (
       let source = words[gpUtils.giveSetKey(answerStructureChunk.wordtype)];
       // answerLangUtils.preprocessLemmaObjectsMinor(source);
 
-      console.log("b22 matches", matchingAnswerLemmaObjects);
-
       matchingAnswerLemmaObjects = source.filter(
         (lObj) =>
           lemmasToSearch.includes(lObj.lemma) &&
@@ -528,8 +526,6 @@ exports.conformAnswerStructureToQuestionStructure = (
           gpUtils.getWordtypeFromLemmaObject(lObj) ===
             questionStructureChunk.wordtype
       );
-
-      console.log("b33 matches", matchingAnswerLemmaObjects);
 
       //Beta: So every single tag match, otherwise won't match them?
       matchingAnswerLemmaObjects = matchingAnswerLemmaObjects.filter(
@@ -539,8 +535,6 @@ exports.conformAnswerStructureToQuestionStructure = (
             answerLemmaObject.tags
           )
       );
-
-      console.log("b44 matches", matchingAnswerLemmaObjects);
 
       if (!matchingAnswerLemmaObjects.length) {
         console.log(

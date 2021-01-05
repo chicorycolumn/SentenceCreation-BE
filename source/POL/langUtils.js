@@ -52,7 +52,6 @@ exports.adjustTenseDescriptionsBeforeTranslating = (
 };
 
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
-  console.log("POL:preprocessStructureChunks");
   sentenceStructure.forEach((structureChunk) => {
     if (structureChunk.wordtype === "fixed") {
       return;
@@ -148,12 +147,6 @@ exports.adjustTenseDescriptions = (structureChunk) => {
 exports.preprocessLemmaObjectsMinor = (matches) => {
   matches.forEach((lObj) => {
     if (lObj.imperfectiveOnly_unadjusted && lObj.aspect === "imperfective") {
-      console.log(
-        "Hey, heads up, I'm making a copy of lemma object '" +
-          lObj.lemma +
-          "' with perfective Aspect."
-      );
-
       lObj.imperfectiveOnly = true;
       delete lObj.imperfectiveOnly_unadjusted;
 
@@ -199,12 +192,6 @@ exports.preprocessLemmaObjectsMajor = (
 };
 
 exports.fillVerbInflections = (lemmaObject) => {
-  console.log(
-    "fillVerbInflections fxn has been called for '" +
-      lemmaObject.lemma +
-      "' lObj."
-  );
-
   if (lemmaObject.complete) {
     console.log(
       "fillVerbInflections fxn will do nothing, as '" +
@@ -612,9 +599,9 @@ exports.bulkUpGenderArrayToPreventMasculineOverrepresentation = (array) => {
         array.push(gender);
       }
     });
-    console.log(
-      "Hey! To prevent Masculinist Agenda: Overrepresentation, I adjusted the array to this:",
-      array
-    );
+    // console.log(
+    //   "Hey! To prevent Masculinist Agenda: Overrepresentation, I adjusted the array to this:",
+    //   array
+    // );
   }
 };

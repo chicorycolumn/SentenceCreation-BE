@@ -10,11 +10,6 @@ exports.findMatchingLemmaObjectThenWord = (
   questionLanguage,
   kumquat
 ) => {
-  console.log(
-    "a33 OT:findMatchingLemmaObjectThenWord was given this stCh:",
-    structureChunk
-  );
-
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
   let selectedFormsArray = [];
   let arrayOfAllPossibleOutputUnits = [];

@@ -27,29 +27,6 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
     if (!structureChunk.annotations) {
       structureChunk.annotations = {};
     }
-    //
-    //console.log(outputUnit)
-    //
-    // {
-    //   selectedLemmaObject: {
-    //     translations: { ENG: [Array], POL: [Array] },
-    //     tags: [ 'animate', 'animal', 'farmyard', 'concrete' ],
-    //     lemma: 'sheep',
-    //     id: 'eng-nou-008',
-    //     gender: 'n',
-    //
-    //     inflections: { singular: [Object], plural: [Object] }
-    //   },
-    //   selectedWord: 'sheep',
-    //   drillPath: [ [ 'number', 'plural' ], [ 'gcase', 'nom' ] ],
-    //   structureChunk: {
-    //     chunkId: 'nou-1',
-    //     wordtype: 'noun',
-    //     andTags: [ 'farmyard' ],
-    //     gcase: [ 'nom' ],
-    //     number: [ 'plural' ]
-    //   }
-    // }
 
     //STEP ONE: Type 1 Allohomographs (get clarifiers from lObj)
     //
@@ -131,29 +108,15 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
         questionLanguage
       );
 
-      console.log(111, { selectedLemmaObject });
-
       if (synhomographData) {
         synhomographData.synhomographs.forEach((synhomDataUnit) => {
           if (selectedWord === synhomDataUnit.terminalValue) {
-            console.log(222, "synhomDataUnit", synhomDataUnit);
-            //
-            // console.log(synhomDataUnit);
-            //
-            // {
-            //   terminalValue: 'sheep',
-            //   inflectionPaths: [ [ 'singular', 'nom' ], [ 'plural', 'nom' ] ],
-            //   labelsWhereTheyDiffer: [ 'number' ]
-            // }
-
             let labelsWhereTheyDiffer = synhomDataUnit.labelsWhereTheyDiffer.filter(
               (label) => allowableClarifiers.includes(label)
             );
 
             //Omega say: Could nix this if(label === "gender" && structureChunk["gender"] === "allPersonalGenders" || "allGendersIncludingNeuter")
             labelsWhereTheyDiffer.forEach((label) => {
-              console.log(333, { label });
-
               let clarifierValue = structureChunk[label];
 
               //Abort if a metaGender label is accidentally being made subject of a Clarifier.
@@ -198,17 +161,6 @@ exports.addSpecifiers = (
 ) => {
   //STEP ZERO: Getting materials
 
-  console.log("-----------------------");
-  console.log("-----------------------");
-  console.log("-----------------------");
-  console.log("-----------------------");
-  console.log("-----------------------");
-  console.log("----addSpecifiers------");
-  console.log("-----------------------");
-  console.log("-----------------------");
-  console.log("-----------------------");
-  console.log("-----------------------");
-
   let answerSentenceStructure = answerSentenceFormula.sentenceStructure;
   let questionSentenceStructure = questionOutputArr.map(
     (outputUnit) => outputUnit.structureChunk
@@ -235,8 +187,6 @@ exports.addSpecifiers = (
     answerSentenceStructure,
     questionSentenceStructure
   ) {
-    console.log("uu", { answerChunk });
-
     let answerHeadChunk = answerSentenceStructure.find(
       (chunk) => chunk.chunkId === answerChunk.agreeWith
     );
@@ -281,8 +231,6 @@ exports.addSpecifiers = (
       questionLemmaObject,
     };
 
-    console.log("vv", res);
-
     return res;
   }
 
@@ -299,13 +247,6 @@ exports.addSpecifiers = (
       questionHeadLemmaObject,
       questionLemmaObject,
     } = materials;
-
-    console.log(
-      consoleLogLabel +
-        " " +
-        "addRequiredSpecifiersToAnswerChunkOrHeadChunk fxn was given MATERIALS arg:",
-      materials
-    );
 
     let requestedSpecifierInstructionsArr =
       refObj.requestedSpecifiersNew[answerLanguage][answerChunk.wordtype];
@@ -393,48 +334,6 @@ exports.addSpecifiers = (
             }
           }
 
-          if (true) {
-            console.log(
-              "THESE FOUR MUST ALL BE TRUE TO CONTINUE TO ADDING SPECIFIER:",
-              { actionKey }
-            );
-            console.log("*");
-            console.log("*");
-            console.log("*");
-            console.log(
-              gpUtils.keyShouldBeSpecified(answerChunk, actionKey, true),
-              "gpUtils.isKeyFilledOutOnChunk(answerChunk, actionKey)"
-            );
-            console.log("answerChunk", answerChunk);
-            console.log("*");
-            console.log("*");
-            console.log("*");
-            console.log(
-              gpUtils.keyShouldBeSpecified(answerHeadChunk, actionKey, true),
-              "gpUtils.isKeyFilledOutOnChunk(answerHeadChunk, actionKey)"
-            );
-            console.log("answerHeadChunk", answerHeadChunk);
-            console.log("*");
-            console.log("*");
-            console.log("*");
-            console.log(
-              gpUtils.keyShouldBeSpecified(questionChunk, actionKey),
-              "gpUtils.isKeyFilledOutOnChunk(questionChunk, actionKey)"
-            );
-            console.log("questionChunk", questionChunk);
-            console.log("*");
-            console.log("*");
-            console.log("*");
-            console.log(
-              gpUtils.keyShouldBeSpecified(questionHeadChunk, actionKey),
-              "gpUtils.isKeyFilledOutOnChunk(questionHeadChunk, actionKey)"
-            );
-            console.log("questionHeadChunk", questionHeadChunk);
-            console.log("*");
-            console.log("*");
-            console.log("*");
-          }
-
           if (
             //...if not truthy in A depCh, nor its headCh, nor corresp Q depCh, nor that one's headCh...
             //Alpha say - but what about overwriting, shouldn't that be allowed, nay, needed?
@@ -443,11 +342,6 @@ exports.addSpecifiers = (
             gpUtils.keyShouldBeSpecified(answerHeadChunk, actionKey, true) &&
             gpUtils.keyShouldBeSpecified(questionChunk, actionKey) &&
             gpUtils.keyShouldBeSpecified(questionHeadChunk, actionKey)
-
-            // !gpUtils.isKeyFilledOutOnChunk(answerChunk, actionKey) &&
-            // !gpUtils.isKeyFilledOutOnChunk(answerHeadChunk, actionKey) &&
-            // !gpUtils.isKeyFilledOutOnChunk(questionChunk, actionKey) &&
-            // !gpUtils.isKeyFilledOutOnChunk(questionHeadChunk, actionKey)
           ) {
             console.log("Pass 2");
             let actionValueArr = [
@@ -488,16 +382,11 @@ exports.addSpecifiers = (
   //eg if depCh is POL verb past tense, in that case, we want gender of headCh Specified,
   //but if depCh is POL verb present tense, then no reason to Specify headCh's gender.
   answerDependentChunks.forEach((answerDependentChunk) => {
-    console.log(
-      "Checking answerDependentChunk: " + answerDependentChunk.chunkId
-    );
     let materials = getMaterialsToAddSpecifiers(
       answerDependentChunk,
       answerSentenceStructure,
       questionSentenceStructure
     );
-
-    console.log("ww STEP ONE: ", materials);
 
     addRequiredSpecifiersToAnswerChunkOrHeadChunk(
       materials,
@@ -516,8 +405,6 @@ exports.addSpecifiers = (
       questionSentenceStructure
     );
 
-    console.log("ww STEP TWO: ", materials);
-
     addRequiredSpecifiersToAnswerChunkOrHeadChunk(
       materials,
       answerLanguage,
@@ -527,10 +414,6 @@ exports.addSpecifiers = (
 
   //STEP THREE: Do a special thing for Multi Gender Nouns - that's lObjs with {gender: "both"}.
   answerDependentChunks.forEach((answerDependentChunk) => {
-    console.log(
-      "STEP THREE Checking answerDependentChunk: " +
-        answerDependentChunk.chunkId
-    );
     let materials = getMaterialsToAddSpecifiers(
       answerDependentChunk,
       answerSentenceStructure,
@@ -547,9 +430,6 @@ exports.addSpecifiers = (
     } = materials;
 
     if (questionHeadLemmaObject && questionHeadLemmaObject.gender === "both") {
-      console.log("ww STEP THREE: A", materials);
-      console.log(materials);
-
       let selectedGenderUnformatted = gpUtils.selectRandom(["m", "f"]);
 
       let selectedGender = answerLangUtils.formatFeatureValue(
@@ -679,12 +559,6 @@ exports.addAnnotation = (chunk, key, value) => {
 };
 
 exports.attachAnnotations = (arrayOfOutputUnits, languagesObj) => {
-  console.log("% % % % % % % % % % % % % % %");
-  console.log("% % % % % % % % % % % % % % %");
-  console.log("% % % attachAnnotations % % %");
-  console.log("% % % % % % % % % % % % % % %");
-  console.log("% % % % % % % % % % % % % % %");
-
   let { answerLanguage, questionLanguage } = languagesObj;
 
   arrayOfOutputUnits.forEach((outputUnit) => {
@@ -694,13 +568,6 @@ exports.attachAnnotations = (arrayOfOutputUnits, languagesObj) => {
       structureChunk.annotations &&
       Object.keys(structureChunk.annotations).length
     ) {
-      console.log(
-        "bbb%%%%%%%%%%% structureChunk " +
-          structureChunk.chunkId +
-          " has annotations: ",
-        structureChunk.annotations
-      );
-
       let formattedAnnotationArr = Object.keys(structureChunk.annotations).map(
         (annotationKey) => {
           let annotationValue = structureChunk.annotations[annotationKey];
@@ -740,11 +607,6 @@ exports.attachAnnotations = (arrayOfOutputUnits, languagesObj) => {
               virile: ["mixed", "males"],
               nonvirile: "females",
             };
-
-            console.log(
-              "::::::::::::::::::::::::::::::::::::::::::::::::::::",
-              { annotationValue }
-            );
 
             let adjustedAnnotation =
               POLgenderToPlainEnglishRef[annotationValue];
