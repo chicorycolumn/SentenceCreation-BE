@@ -8,10 +8,11 @@ exports.selectRandom = (array) => {
 
 exports.keyShouldBeSpecified = (chunk, key, allowOverwrite) => {
   return (
-    !(chunk.importantFeatures && chunk.importantFeatures.includes(key)) &&
-    (allowOverwrite ||
-      !exports.isKeyFilledOutOnChunk(chunk, key) ||
-      exports.feautureValueIsMeta(chunk, key))
+    !chunk ||
+    (!(chunk.importantFeatures && chunk.importantFeatures.includes(key)) &&
+      (allowOverwrite ||
+        !exports.isKeyFilledOutOnChunk(chunk, key) ||
+        exports.feautureValueIsMeta(chunk, key)))
   );
 };
 

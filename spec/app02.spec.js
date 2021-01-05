@@ -1845,9 +1845,7 @@ describe("/api", () => {
           );
         });
     });
-    //
-    //
-    xit("#pal11-05a Check Specifier of gender is added to ENG past continuous.", () => {
+    it("#pal11-03a GET 200 YES: NO SPECIFIER EVEN WHEN ASKED FOR if noun already has gender.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1859,94 +1857,7 @@ describe("/api", () => {
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy47a",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            { ENG: "I (male) wrote.", POL: ["Napisałem."] },
-            { ENG: "I (male) was writing.", POL: ["Pisałem."] },
-            { ENG: "I (female) wrote.", POL: ["Napisałam."] },
-            { ENG: "I (female) was writing.", POL: ["Pisałam."] },
-            {
-              ENG: "I (male) have written.",
-              POL: ["Napisałem.", "Pisałem."],
-            },
-            { ENG: "I (male) had written.", POL: ["Napisałem."] },
-            {
-              ENG: "I (female) have written.",
-              POL: ["Napisałam.", "Pisałam."],
-            },
-            { ENG: "I (female) had written.", POL: ["Napisałam."] },
-          ];
-
-          checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    xit("#pal11-05b Check Specifier of gender is added to ENG all past tenses.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // doNotSpecify: true,
-          // hideClarifiersForTestingPurposes: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy47b",
-        })
-        .expect(200)
-        .then((res) => {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-
-          expect(questionSentenceArr.length).to.equal(1);
-          expect(answerSentenceArr.length).to.equal(1);
-
-          let ref = [
-            { ENG: "I (male) wrote.", POL: ["Napisałem."] },
-            { ENG: "I (male) was writing.", POL: ["Pisałem."] },
-            { ENG: "I (female) wrote.", POL: ["Napisałam."] },
-            { ENG: "I (female) was writing.", POL: ["Pisałam."] },
-            {
-              ENG: "I (male) have written.",
-              POL: ["Napisałem.", "Pisałem."],
-            },
-            { ENG: "I (male) had written.", POL: ["Napisałem."] },
-            {
-              ENG: "I (female) have written.",
-              POL: ["Napisałam.", "Pisałam."],
-            },
-            { ENG: "I (female) had written.", POL: ["Napisałam."] },
-          ];
-
-          checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    xit("#pal11-05c Don't add Specifier if gender already present.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // doNotSpecify: true,
-          // hideClarifiersForTestingPurposes: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy47c",
+          sentenceFormulaSymbol: "dummy47",
         })
         .expect(200)
         .then((res) => {
@@ -1958,40 +1869,6 @@ describe("/api", () => {
               POL: ["Kobieta napisała.", "Kobieta pisała."],
             },
             { ENG: "The woman had written.", POL: ["Kobieta napisała."] },
-          ];
-
-          checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    xit("FAILS #pal11-05d But you should add Specifier if gender present on stCh but not salient in sentence?", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // doNotSpecify: true,
-          // hideClarifiersForTestingPurposes: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy47d",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            { ENG: "I (male) wrote.", POL: ["Napisałem."] },
-            { ENG: "I (male) was writing.", POL: ["Pisałem."] },
-            {
-              ENG: "I (male) have written.",
-              POL: ["Napisałem.", "Pisałem."],
-            },
-            { ENG: "I (male) had written.", POL: ["Napisałem."] },
           ];
 
           checkTranslationsOfGivenRef(

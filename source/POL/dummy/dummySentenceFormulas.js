@@ -1152,41 +1152,9 @@ exports.dummySentenceFormulasBank = [
     primaryOrders: [],
   },
   {
-    sentenceFormulaSymbol: "dummy47a",
-    sentenceFormulaId: "POL-dummy47a",
-    translations: { ENG: ["ENG-dummy47a"] },
-    sentenceStructure: [
-      {
-        chunkId: "ver-1",
-        wordtype: "verb",
-        specificLemmas: ["pisać"],
-        tenseDescription: ["past im"],
-        person: ["1per"],
-        number: ["singular"],
-      },
-    ],
-    primaryOrders: [],
-  },
-  {
-    sentenceFormulaSymbol: "dummy47b",
-    sentenceFormulaId: "POL-dummy47b",
-    translations: { ENG: ["ENG-dummy47b"] },
-    sentenceStructure: [
-      {
-        chunkId: "ver-1",
-        wordtype: "verb",
-        specificLemmas: ["pisać"],
-        tenseDescription: ["past im", "past pf"],
-        person: ["1per"],
-        number: ["singular"],
-      },
-    ],
-    primaryOrders: [],
-  },
-  {
-    sentenceFormulaSymbol: "dummy47c",
-    sentenceFormulaId: "POL-dummy47c",
-    translations: { ENG: ["ENG-dummy47c"] },
+    sentenceFormulaSymbol: "dummy47",
+    sentenceFormulaId: "POL-dummy47",
+    translations: { ENG: ["ENG-dummy47"] },
     sentenceStructure: [
       {
         chunkId: "nou-1",
@@ -1205,22 +1173,6 @@ exports.dummySentenceFormulasBank = [
       },
     ],
     primaryOrders: [["nou-1", "ver-1"]],
-  },
-  {
-    sentenceFormulaSymbol: "dummy47d",
-    sentenceFormulaId: "POL-dummy47d",
-    translations: { ENG: ["ENG-dummy47d"] },
-    sentenceStructure: [
-      {
-        chunkId: "ver-1",
-        wordtype: "verb",
-        specificLemmas: ["pisać"],
-        tenseDescription: ["past im", "past pf"],
-        person: ["1per"],
-        number: ["singular"],
-      },
-    ],
-    primaryOrders: [],
   },
   {
     sentenceFormulaSymbol: "dummy48a",

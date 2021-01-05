@@ -573,43 +573,9 @@ exports.dummySentenceFormulasBank = [
     primaryOrders: [],
   },
   {
-    sentenceFormulaSymbol: "dummy47a",
-    sentenceFormulaId: "ENG-dummy47a",
-    translations: { POL: ["POL-dummy47a"] },
-    sentenceStructure: [
-      { chunkId: "fix-1", wordtype: "fixed", value: "I" },
-      {
-        chunkId: "ver-1",
-        wordtype: "verb",
-        specificLemmas: ["write"],
-        tenseDescription: ["past continuous"],
-        person: ["1per"],
-        number: ["singular"],
-      },
-    ],
-    primaryOrders: [["fix-1", "ver-1"]],
-  },
-  {
-    sentenceFormulaSymbol: "dummy47b",
-    sentenceFormulaId: "ENG-dummy47b",
-    translations: { POL: ["POL-dummy47b"] },
-    sentenceStructure: [
-      { chunkId: "fix-1", wordtype: "fixed", value: "I" },
-      {
-        chunkId: "ver-1",
-        wordtype: "verb",
-        specificLemmas: ["write"],
-        tenseDescription: ["past"],
-        person: ["1per"],
-        number: ["singular"],
-      },
-    ],
-    primaryOrders: [["fix-1", "ver-1"]],
-  },
-  {
-    sentenceFormulaSymbol: "dummy47c",
-    sentenceFormulaId: "ENG-dummy47c",
-    translations: { POL: ["POL-dummy47c"] },
+    sentenceFormulaSymbol: "dummy47",
+    sentenceFormulaId: "ENG-dummy47",
+    translations: { POL: ["POL-dummy47"] },
     sentenceStructure: [
       { chunkId: "fix-1", wordtype: "fixed", value: "the" },
       {
@@ -635,24 +601,6 @@ exports.dummySentenceFormulasBank = [
       },
     ],
     primaryOrders: [["fix-1", "nou-1", "ver-1"]],
-  },
-  {
-    sentenceFormulaSymbol: "dummy47d",
-    sentenceFormulaId: "ENG-dummy47d",
-    translations: { POL: ["POL-dummy47d"] },
-    sentenceStructure: [
-      { chunkId: "fix-1", wordtype: "fixed", value: "I" },
-      {
-        chunkId: "ver-1",
-        wordtype: "verb",
-        specificLemmas: ["write"],
-        tenseDescription: ["past"],
-        person: ["1per"],
-        number: ["singular"],
-        gender: ["m"],
-      },
-    ],
-    primaryOrders: [["fix-1", "ver-1"]],
   },
   {
     sentenceFormulaSymbol: "dummy48a",
