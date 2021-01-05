@@ -65,8 +65,8 @@ exports.fetchPalette = (req) => {
     return finishAndSend(questionResponseObj, null);
   }
 
-  console.log("palette.model > questionSentenceData.arrayOfOutputArrays");
-  gpUtils.consoleLogObjectAtTwoLevels(questionSentenceData.arrayOfOutputArrays);
+  // console.log("palette.model > questionSentenceData.arrayOfOutputArrays");
+  // gpUtils.consoleLogObjectAtTwoLevels(questionSentenceData.arrayOfOutputArrays);
   console.log(
     "selectedWordsss",
     questionSentenceData.arrayOfOutputArrays[0].map(

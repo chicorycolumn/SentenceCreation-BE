@@ -31,6 +31,66 @@ let nounSet = [
       },
     },
   },
+  {
+    //links
+    translations: { ENG: ["father"] },
+    tags: ["animate", "person", "family", "concrete"],
+    //selectors
+    lemma: "ojciec",
+    id: "pol-nou-016",
+    gender: "m1",
+    //notes
+
+    //inflections
+    inflections: {
+      singular: {
+        nom: "ojciec",
+        gen: "ojca",
+        dat: "ojcu",
+        acc: "ojca",
+        ins: "ojcem",
+        loc: "ojcu",
+      },
+      plural: {
+        nom: "ojcowie",
+        gen: "ojców",
+        dat: "ojcom",
+        acc: "ojców",
+        ins: "ojcami",
+        loc: "ojcach",
+      },
+    },
+  },
+  {
+    //links
+    translations: { ENG: ["mother"] },
+    tags: ["animate", "person", "family", "concrete"],
+    //selectors
+    lemma: "matka",
+    id: "pol-nou-017",
+    gender: "f",
+    //notes
+
+    //inflections
+    inflections: {
+      singular: {
+        nom: "matka",
+        gen: "matki",
+        dat: "matce",
+        acc: "matkę",
+        ins: "matką",
+        loc: "matce",
+      },
+      plural: {
+        nom: "matki",
+        gen: "matek",
+        dat: "matkom",
+        acc: "matki",
+        ins: "matkami",
+        loc: "matkach",
+      },
+    },
+  },
 
   // {
   //   //links
@@ -691,6 +751,185 @@ let pronounSet = [
 ];
 
 let verbSet = [
+  {
+    //links
+    translations: { ENG: ["give"] },
+    tags: [],
+    //selectors
+    lemma: "dawać",
+    id: "pol-ver-006-im-01",
+    aspect: "imperfective",
+    //notes
+
+    //inflections
+    inflections: {
+      infinitive: "dawać",
+      verbal: {
+        past: {
+          impersonal: {
+            singular: { allSingularGenders: "dawano" },
+            plural: { allPluralGenders: "dawano" },
+          },
+          "1per": {
+            singular: {
+              m: "dawałem",
+              f: "dawałam",
+            },
+            plural: {
+              virile: "dawaliśmy",
+              nonvirile: "dawałyśmy",
+            },
+          },
+          "2per": {
+            singular: {
+              m: "dawałeś",
+              f: "dawałaś",
+            },
+            plural: {
+              virile: "dawaliście",
+              nonvirile: "dawałyście",
+            },
+          },
+          "3per": {
+            singular: {
+              m: "dawał",
+              f: "dawała",
+              n: "dawało",
+            },
+            plural: {
+              virile: "dawali",
+              nonvirile: "dawały",
+            },
+          },
+        },
+        present: {
+          impersonal: { singular: true, plural: true },
+          "1per": {
+            singular: {
+              allSingularGendersExcludingNeuter: "daję",
+            },
+            plural: {
+              allPluralGenders: "dajemy",
+            },
+          },
+          "2per": {
+            singular: {
+              allSingularGendersExcludingNeuter: "dajesz",
+            },
+            plural: {
+              allPluralGenders: "dajecie",
+            },
+          },
+          "3per": {
+            singular: {
+              allSingularGenders: "daje",
+            },
+            plural: {
+              allPluralGenders: "dają",
+            },
+          },
+        },
+        future: true,
+        conditional: true,
+        imperative: "dawaj",
+      },
+      activeAdjectival: "dający",
+      passiveAdjectival: "dawany",
+      contemporaryAdverbial: "dając",
+      anteriorAdverbial: false,
+      verbalNoun: "dawanie",
+    },
+  },
+  {
+    //links
+    translations: { ENG: ["give"] },
+    tags: [],
+    //selectors
+    lemma: "dać",
+    id: "pol-ver-006-pf-01",
+    aspect: "perfective",
+    //notes
+
+    //inflections
+    inflections: {
+      infinitive: "dać",
+      verbal: {
+        past: {
+          impersonal: {
+            singular: { allSingularGenders: "dano" },
+            plural: { allPluralGenders: "dano" },
+          },
+          "1per": {
+            singular: {
+              m: "dałem",
+              f: "dałam",
+            },
+            plural: {
+              virile: "daliśmy",
+              nonvirile: "dałyśmy",
+            },
+          },
+          "2per": {
+            singular: {
+              m: "dałeś",
+              f: "dałaś",
+            },
+            plural: {
+              virile: "daliście",
+              nonvirile: "dałyście",
+            },
+          },
+          "3per": {
+            singular: {
+              m: "dał",
+              f: "dała",
+              n: "dało",
+            },
+            plural: {
+              virile: "dali",
+              nonvirile: "dały",
+            },
+          },
+        },
+        future: {
+          impersonal: { singular: true, plural: true },
+          "1per": {
+            singular: {
+              allSingularGendersExcludingNeuter: "dam",
+            },
+            plural: {
+              allPluralGenders: "damy",
+            },
+          },
+          "2per": {
+            singular: {
+              allSingularGendersExcludingNeuter: "dasz",
+            },
+            plural: {
+              allPluralGenders: "dacie",
+            },
+          },
+          "3per": {
+            singular: {
+              allSingularGenders: "da",
+            },
+            plural: {
+              allPluralGenders: "dadzą",
+            },
+          },
+        },
+        present: false,
+        conditional: true,
+        imperative: "daj",
+      },
+      activeAdjectival: false,
+      passiveAdjectival: "dany",
+      contemporaryAdverbial: false,
+      anteriorAdverbial: "dawszy",
+      verbalNoun: "danie",
+    },
+  },
+
   {
     //links
     translations: { ENG: ["be"], POL: ["być"] },

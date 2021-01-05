@@ -341,6 +341,25 @@ let adjectiveSet = [
 let verbSet = [
   {
     //links
+    translations: { ENG: ["give"], POL: ["dać", "dawać"] },
+    tags: [],
+    //selectors
+    lemma: "give",
+    id: "eng-ver-007",
+    //notes
+
+    //inflections
+    inflections: {
+      infinitive: "give",
+      verbal: {},
+      v2: "gave",
+      v3: "given",
+      thirdPS: "gives",
+      gerund: "giving",
+    },
+  },
+  {
+    //links
     translations: { ENG: ["read"], POL: ["czytać", "przeczytać"] },
     tags: ["basic2"],
     //selectors

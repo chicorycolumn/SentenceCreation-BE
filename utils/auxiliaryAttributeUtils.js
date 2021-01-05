@@ -188,7 +188,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
     }
   });
 
-  gpUtils.consoleLogObjectAtTwoLevels(arrayOfOutputUnits);
+  // gpUtils.consoleLogObjectAtTwoLevels(arrayOfOutputUnits);
 };
 
 exports.addSpecifiers = (

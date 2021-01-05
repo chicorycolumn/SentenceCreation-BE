@@ -10,6 +10,11 @@ exports.findMatchingLemmaObjectThenWord = (
   questionLanguage,
   kumquat
 ) => {
+  console.log(
+    "a33 OT:findMatchingLemmaObjectThenWord was given this stCh:",
+    structureChunk
+  );
+
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
   let selectedFormsArray = [];
   let arrayOfAllPossibleOutputUnits = [];
@@ -328,7 +333,8 @@ exports.findMatchingLemmaObjectThenWord = (
       // errorInSentenceCreation.errorMessage =
       //   "No matching lemma objects were found.";
       console.log(
-        "#ERR It transpires that no matching lemma objects were found in OT:findMatching"
+        "#ERR It transpires that no matching lemma objects were found in OT:findMatching",
+        structureChunk
       );
       return false;
     }
@@ -378,20 +384,12 @@ exports.findMatchingLemmaObjectThenWord = (
     } else {
       let selectedLemmaObject = gpUtils.selectRandom(matchesCopy);
 
-      console.log("jjj", { selectedLemmaObject });
-
-      console.log("zzz", structureChunk.gender);
-
       let subArrayOfOutputUnits = lfUtils.filterWithinSelectedLemmaObject(
         selectedLemmaObject,
         structureChunk,
         currentLanguage,
         kumquat
       );
-
-      console.log("ccz", structureChunk.gender);
-
-      console.log("kkk", subArrayOfOutputUnits);
 
       if (!subArrayOfOutputUnits || !subArrayOfOutputUnits.length) {
         return false;
@@ -403,7 +401,6 @@ exports.findMatchingLemmaObjectThenWord = (
 
       let unit = subArrayOfOutputUnits[0];
 
-      console.log("ddz", "unit, is subArrayOfOutputUnits[0]", unit);
       //Alpha: By selecting this one unit, we have decanted ourselves into one gender choice.
       //This means doNotSpecify will have no effect, re this pronoun.
       //Why has this not been an issue before, when using doNotSpecify?

@@ -983,14 +983,15 @@ exports.sentenceFormulasBank = [
     additionalOrders: [["pro-1", "ver-1"]],
   },
   {
-    sentenceFormulaSymbol: "112 my familymember gave me things",
+    sentenceFormulaSymbol: "112 familymember gave me things",
     sentenceFormulaId: "POL-00-112",
     translations: { ENG: ["ENG-00-112"] },
     sentenceStructure: [
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        specificLemmas: ["kobieta"],
+        andTags: ["family"],
+        number: ["singular"],
       },
       {
         chunkId: "ver-1",

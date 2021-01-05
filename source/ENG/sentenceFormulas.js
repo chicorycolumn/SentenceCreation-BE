@@ -456,41 +456,6 @@ exports.sentenceFormulasBank = [
     ],
   },
   {
-    sentenceFormulaSymbol: "112 my familymember gave me things",
-    sentenceFormulaId: "ENG-00-112",
-    translations: { POL: ["POL-00-112"] },
-    sentenceStructure: [
-      {
-        chunkId: "nou-1",
-        wordtype: "noun",
-        andTags: ["family"],
-      },
-      {
-        chunkId: "ver-1",
-        agreeWith: "nou-1",
-        wordtype: "verb",
-        specificLemmas: ["give"],
-        tenseDescription: ["past simple"],
-      },
-      {
-        chunkId: "pro-1",
-        wordtype: "pronoun",
-        person: ["1per"],
-        gcase: ["dat"],
-      },
-      {
-        chunkId: "nou-2",
-        wordtype: "noun",
-        specificLemmas: ["book", "mirror", "apple", "onion"],
-        // gcase: ["acc"],
-        number: ["plural"],
-      },
-      { chunkId: "fix-3", wordtype: "fixed", value: "to" },
-    ],
-    primaryOrders: [["nou-1", "ver-1", "pro-1", "nou-2"]],
-    additionalOrders: [["nou-1", "ver-1", "nou-2", "fix-3", "pro-1"]],
-  },
-  {
     sentenceFormulaSymbol: "111a I am",
     sentenceFormulaId: "ENG-00-111a",
     translations: { POL: ["POL-00-111a"] },
@@ -558,5 +523,43 @@ exports.sentenceFormulasBank = [
     ],
     primaryOrders: [["pro-1", "ver-1"]],
     additionalOrders: [],
+  },
+  {
+    sentenceFormulaSymbol: "112 familymember gave me things",
+    sentenceFormulaId: "ENG-00-112",
+    translations: { POL: ["POL-00-112"] },
+    sentenceStructure: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        andTags: ["family"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1",
+        agreeWith: "nou-1",
+        wordtype: "verb",
+        specificLemmas: ["give"],
+        tenseDescription: ["past simple"],
+      },
+      {
+        chunkId: "pro-1",
+        wordtype: "pronoun",
+        person: ["1per"],
+        gcase: ["dat"],
+      },
+      {
+        chunkId: "nou-2",
+        wordtype: "noun",
+        specificLemmas: ["book", "mirror", "apple", "onion"],
+        // gcase: ["acc"],
+        number: ["plural"],
+      },
+      { chunkId: "fix-3", wordtype: "fixed", value: "to" },
+    ],
+    primaryOrders: [["nou-1", "ver-1", "pro-1", "nou-2"]],
+    additionalOrders: [
+      // ["nou-1", "ver-1", "nou-2", "fix-3", "pro-1"]
+    ],
   },
 ];
