@@ -829,15 +829,23 @@ exports.dummySentenceFormulasBank = [
     translations: { ENG: ["ENG-dummy33c"] },
     sentenceStructure: [
       {
+        chunkId: "pro-1",
+        wordtype: "pronoun",
+        person: ["2per"],
+
+        // number: []
+      },
+      {
         chunkId: "ver-1",
         wordtype: "verb",
+        agreeWith: "pro-1",
         specificLemmas: ["być"],
         tenseDescription: ["present im", "past pf"],
-        person: ["2per"],
+        // person: ["2per"],
         number: [],
       },
     ],
-    primaryOrders: [],
+    primaryOrders: [["ver-1"]],
   },
   {
     sentenceFormulaSymbol: "dummy33d she is",
@@ -1024,7 +1032,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "pro-1",
         wordtype: "pronoun",
         person: ["2per"],
-        gender: ["allPersonalGenders"],
+
         // number: []
       },
       {
@@ -1047,7 +1055,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "pro-1",
         wordtype: "pronoun",
         person: ["2per"],
-        gender: ["allPersonalGenders"],
+
         // number: []
       },
       {
@@ -1070,7 +1078,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "pro-1",
         wordtype: "pronoun",
         person: ["2per"],
-        gender: ["allPersonalGenders"],
+
         // number: []
       },
       {
@@ -1093,7 +1101,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "pro-1",
         wordtype: "pronoun",
         person: ["2per"],
-        gender: ["allPersonalGenders"],
+
         // number: []
       },
       {
@@ -1424,15 +1432,22 @@ exports.dummySentenceFormulasBank = [
     translations: { ENG: ["ENG-dummy53c"] },
     sentenceStructure: [
       {
+        chunkId: "pro-1",
+        wordtype: "pronoun",
+        person: ["2per"],
+        // number: []
+      },
+      {
         chunkId: "ver-1",
         wordtype: "verb",
+        agreeWith: "pro-1",
         specificLemmas: ["mieć"],
         tenseDescription: ["present im", "past pf"],
-        person: ["2per"],
+        // person: ["2per"],
         number: [],
       },
     ],
-    primaryOrders: [],
+    primaryOrders: [["ver-1"]],
   },
   {
     sentenceFormulaSymbol: "dummy53d she is",

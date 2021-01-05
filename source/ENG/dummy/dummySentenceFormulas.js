@@ -192,17 +192,24 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy33c",
     translations: { POL: ["POL-dummy33c"] },
     sentenceStructure: [
-      { chunkId: "fix-1", wordtype: "fixed", value: "you" },
+      {
+        chunkId: "pro-1",
+        wordtype: "pronoun",
+        person: ["2per"],
+        gender: ["allPersonalGenders"],
+        // number: []
+      },
       {
         chunkId: "ver-1",
         wordtype: "verb",
+        agreeWith: "pro-1",
         specificLemmas: ["be"],
         tenseDescription: ["present simple", "past simple"],
-        person: ["2per"],
+        // person: ["2per"],
         number: [],
       },
     ],
-    primaryOrders: [["fix-1", "ver-1"]],
+    primaryOrders: [["pro-1", "ver-1"]],
   },
   {
     sentenceFormulaSymbol: "dummy33d she is",
@@ -840,17 +847,24 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy53c",
     translations: { POL: ["POL-dummy53c"] },
     sentenceStructure: [
-      { chunkId: "fix-1", wordtype: "fixed", value: "you" },
+      {
+        chunkId: "pro-1",
+        wordtype: "pronoun",
+        person: ["2per"],
+        gender: ["allPersonalGenders"],
+        // number: []
+      },
       {
         chunkId: "ver-1",
         wordtype: "verb",
+        agreeWith: "pro-1",
         specificLemmas: ["have"],
         tenseDescription: ["present simple", "past simple"],
-        person: ["2per"],
+        // person: ["2per"],
         number: [],
       },
     ],
-    primaryOrders: [["fix-1", "ver-1"]],
+    primaryOrders: [["pro-1", "ver-1"]],
   },
   {
     sentenceFormulaSymbol: "dummy53d she is",
