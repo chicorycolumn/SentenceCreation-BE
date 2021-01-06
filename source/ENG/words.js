@@ -312,7 +312,24 @@ let pronounSet = [
     //notes
 
     //inflections
-    inflections: {},
+    inflections: {
+      "1per": {
+        singular: {
+          allPersonalSingularGenders: { determiner: "my", pronoun: "mine" },
+        },
+        plural: {
+          allPluralGenders: { determiner: "our", pronoun: "ours" },
+        },
+      },
+      "2per": {
+        singular: {
+          allPersonalSingularGenders: { determiner: "your", pronoun: "yours" },
+        },
+        plural: {
+          allPluralGenders: { determiner: "your", pronoun: "yours" },
+        },
+      },
+    },
   },
 ];
 

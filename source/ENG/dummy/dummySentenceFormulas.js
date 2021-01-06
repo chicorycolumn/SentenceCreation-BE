@@ -804,7 +804,6 @@ exports.dummySentenceFormulasBank = [
     ],
     primaryOrders: [["pro-1", "ver-1"]],
   },
-
   {
     sentenceFormulaSymbol: "dummy53",
     sentenceFormulaId: "ENG-dummy53",
@@ -963,5 +962,38 @@ exports.dummySentenceFormulasBank = [
       },
     ],
     primaryOrders: [["fix-1", "ver-1"]],
+  },
+
+  {
+    sentenceFormulaSymbol: "dummy50a",
+    sentenceFormulaId: "ENG-dummy50a",
+    translations: { POL: ["POL-dummy50a"] }, //I have my apple.
+    sentenceStructure: [
+      {
+        chunkId: "pro-1",
+        wordtype: "pronoun",
+        specificLemmas: ["PERSONAL"],
+        person: ["1per"],
+      },
+      {
+        chunkId: "ver-1",
+        agreeWith: "pro-1",
+        wordtype: "verb",
+        specificLemmas: ["have"],
+      },
+      {
+        chunkId: "pro-2",
+        wordtype: "pronoun",
+        specificLemmas: ["POSSESSIVE"],
+        postHocAgreeWithPrimary: "pro-1",
+        postHocAgreeWithSecondary: "nou-1",
+      },
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        specificLemmas: ["onion"],
+      },
+    ],
+    primaryOrders: [["pro-1", "ver-1", "pro-2", "nou-1"]],
   },
 ];
