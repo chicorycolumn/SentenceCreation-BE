@@ -32,8 +32,10 @@ exports.findMatchingLemmaObjectThenWord = (
   langUtils.preprocessLemmaObjectsMinor(source);
   let matches = [];
 
+  console.log("t22", "structureChunk", structureChunk);
+
   if (structureChunk.specificIds && structureChunk.specificIds.length) {
-    console.log("Get matches by specific IDs:", structureChunk.specificIds);
+    console.log("GGGet matches by specific IDs:", structureChunk.specificIds);
     matches = source.filter((lObj) =>
       structureChunk.specificIds.includes(lObj.id)
     );
@@ -42,14 +44,14 @@ exports.findMatchingLemmaObjectThenWord = (
     structureChunk.specificLemmas.length
   ) {
     console.log(
-      "Get matches by specific Lemmas:",
+      "GGGet matches by specific Lemmas:",
       structureChunk.specificLemmas
     );
     matches = source.filter((lObj) =>
       structureChunk.specificLemmas.includes(lObj.lemma)
     );
   } else {
-    console.log("Get matches by Tags and Selectors.");
+    console.log("GGGet matches by Tags and Selectors.");
     matches = lfUtils.filterByAndTagsAndOrTags(source, structureChunk);
 
     langUtils.preprocessLemmaObjectsMinor(matches); //Must be adjusted before aspect (a selector) filter is applied.

@@ -248,10 +248,10 @@ let nounSet = [
 let pronounSet = [
   {
     //links
-    translations: {},
+    translations: { ENG: ["PERSONAL"], POL: ["PERSONAL"] },
     tags: [],
     //selectors
-    lemma: "ALL PRONOUNS",
+    lemma: "PERSONAL",
     id: "eng-pro-001",
     //notes
 
@@ -298,6 +298,21 @@ let pronounSet = [
         },
       },
     },
+  },
+  {
+    //links
+    translations: {
+      ENG: ["POSSESSIVE"],
+      POL: ["POSSESSIVE"],
+    },
+    tags: [],
+    //selectors
+    lemma: "POSSESSIVE",
+    id: "eng-pro-002",
+    //notes
+
+    //inflections
+    inflections: {},
   },
 ];
 

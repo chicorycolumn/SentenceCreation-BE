@@ -505,43 +505,34 @@ exports.conformAnswerStructureToQuestionStructure = (
 
     let matchingAnswerLemmaObjects = [];
 
-    if (questionStructureChunk.wordtype === "pronoun") {
-      //If it is a pronoun, there'll only be one lObj in source, so just grab source...
-      let source = words[gpUtils.giveSetKey(answerStructureChunk.wordtype)];
-      if (source.length !== 1) {
-        throw "Error ----------> pronounSet should have length 1, but it did not.";
-      }
-      matchingAnswerLemmaObjects = source.slice(0);
-    } else {
-      let lemmasToSearch =
-        questionSelectedLemmaObject.translations[answerLanguage];
+    let lemmasToSearch =
+      questionSelectedLemmaObject.translations[answerLanguage];
 
-      let source = words[gpUtils.giveSetKey(answerStructureChunk.wordtype)];
-      // answerLangUtils.preprocessLemmaObjectsMinor(source);
+    let source = words[gpUtils.giveSetKey(answerStructureChunk.wordtype)];
+    // answerLangUtils.preprocessLemmaObjectsMinor(source);
 
-      matchingAnswerLemmaObjects = source.filter(
-        (lObj) =>
-          lemmasToSearch.includes(lObj.lemma) &&
-          //Resolve issue of multipleWordtype allohoms.
-          gpUtils.getWordtypeFromLemmaObject(lObj) ===
-            questionStructureChunk.wordtype
+    matchingAnswerLemmaObjects = source.filter(
+      (lObj) =>
+        lemmasToSearch.includes(lObj.lemma) &&
+        //Resolve issue of multipleWordtype allohoms.
+        gpUtils.getWordtypeFromLemmaObject(lObj) ===
+          questionStructureChunk.wordtype
+    );
+
+    //Beta: So every single tag match, otherwise won't match them?
+    matchingAnswerLemmaObjects = matchingAnswerLemmaObjects.filter(
+      (answerLemmaObject) =>
+        gpUtils.areTwoFlatArraysEqual(
+          questionSelectedLemmaObject.tags,
+          answerLemmaObject.tags
+        )
+    );
+
+    if (!matchingAnswerLemmaObjects.length) {
+      console.log(
+        "There were no matching answer lemma objects found in SC:conformAnswerStructureToQuestionStructure"
       );
-
-      //Beta: So every single tag match, otherwise won't match them?
-      matchingAnswerLemmaObjects = matchingAnswerLemmaObjects.filter(
-        (answerLemmaObject) =>
-          gpUtils.areTwoFlatArraysEqual(
-            questionSelectedLemmaObject.tags,
-            answerLemmaObject.tags
-          )
-      );
-
-      if (!matchingAnswerLemmaObjects.length) {
-        console.log(
-          "There were no matching answer lemma objects found in SC:conformAnswerStructureToQuestionStructure"
-        );
-        return;
-      }
+      return;
     }
 
     //...and then for both pronouns and all other wordtypes, we get the id and set it.

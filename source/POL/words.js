@@ -661,10 +661,10 @@ let adjectiveSet = [
 let pronounSet = [
   {
     //links
-    translations: {},
+    translations: { ENG: ["PERSONAL"], POL: ["PERSONAL"] },
     tags: [],
     //selectors
-    lemma: "ALL PRONOUNS",
+    lemma: "PERSONAL",
     id: "pol-pro-001",
     //notes
 
@@ -747,6 +747,21 @@ let pronounSet = [
         },
       },
     },
+  },
+  {
+    //links
+    translations: {
+      ENG: ["POSSESSIVE"],
+      POL: ["POSSESSIVE"],
+    },
+    tags: [],
+    //selectors
+    lemma: "POSSESSIVE",
+    id: "pol-pro-002",
+    //notes
+
+    //inflections
+    inflections: {},
   },
 ];
 
