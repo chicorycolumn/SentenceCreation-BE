@@ -8,7 +8,8 @@ exports.findMatchingLemmaObjectThenWord = (
   errorInSentenceCreation,
   currentLanguage,
   questionLanguage,
-  kumquat
+  kumquat,
+  outputArray
 ) => {
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
   let selectedFormsArray = [];
@@ -31,8 +32,6 @@ exports.findMatchingLemmaObjectThenWord = (
 
   langUtils.preprocessLemmaObjectsMinor(source);
   let matches = [];
-
-  console.log("t22", "structureChunk", structureChunk);
 
   if (structureChunk.specificIds && structureChunk.specificIds.length) {
     console.log("GGGet matches by specific IDs:", structureChunk.specificIds);
@@ -303,6 +302,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
   //STEP FOUR: If-PW: Pathway for inflected forms, return word after selecting by drilling down through lemma object.
 
+  //  STEP FOUR-A: Preparing materials
   let structureChunksAdjusted = langUtils.adjustStructureChunksInIfPW(
     structureChunk
   );
@@ -351,6 +351,8 @@ exports.findMatchingLemmaObjectThenWord = (
       return false;
     }
 
+    //  STEP FOUR-B: Getting the inflected word.
+
     console.log("##If-PW" + " " + structureChunk.chunkId);
 
     if (kumquat) {
@@ -359,7 +361,8 @@ exports.findMatchingLemmaObjectThenWord = (
           selectedLemmaObject,
           structureChunk,
           currentLanguage,
-          kumquat
+          kumquat,
+          outputArray
         );
 
         subArrayOfOutputUnits.forEach((unit) => {
@@ -385,7 +388,8 @@ exports.findMatchingLemmaObjectThenWord = (
         selectedLemmaObject,
         structureChunk,
         currentLanguage,
-        kumquat
+        kumquat,
+        outputArray
       );
 
       if (!subArrayOfOutputUnits || !subArrayOfOutputUnits.length) {

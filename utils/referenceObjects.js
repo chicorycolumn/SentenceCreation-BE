@@ -70,6 +70,20 @@ exports.lemmaObjectFeatureValueConversion = {
   },
 };
 
+exports.postHocDependentChunkWordtypes = {
+  ENG: [],
+  POL: [
+    {
+      PHD_type: "POL possessive pronoun",
+      conditions: { wordtype: "pronoun", specificLemmas: ["POSSESSIVE"] },
+      inflectionChains: {
+        postHocAgreeWithPrimary: ["person", "number", "gender"],
+        postHocAgreeWithSecondary: ["number", "gender", "gcase"],
+      },
+    },
+  ],
+};
+
 exports.lemmaObjectFeatures = {
   POL: {
     selectors: {

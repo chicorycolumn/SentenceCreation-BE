@@ -980,6 +980,7 @@ exports.dummySentenceFormulasBank = [
         agreeWith: "pro-1",
         wordtype: "verb",
         specificLemmas: ["have"],
+        tenseDescription: ["present simple"],
       },
       {
         chunkId: "pro-2",

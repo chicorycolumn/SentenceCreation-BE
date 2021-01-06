@@ -254,7 +254,6 @@ exports.processSentenceFormula = (
     grandOutputArray.push(...result);
   });
 
-  //It all functions correctly up til here at least.
   //If kumquat was false, then grandOutputArray = [ [ 'kobieta', 'ma', 'jabłko', 'czerwone' ] ]
   //If kumquat was true, then grandOutputArray =  [
   //                                                [ 'kobieta', 'ma', 'cebulę', 'niebieską' ],
@@ -268,6 +267,22 @@ exports.processSentenceFormula = (
   //                                             ]
 
   let grandAllPossOutputUnits_other = [];
+  let grandAllPossOutputUnits_PHD = [];
+
+  let postHocDependentChunks = otherChunks.filter((chunk) =>
+    [
+      "postHocAgreeWithPrimary",
+      "postHocAgreeWithSecondary",
+      "postHocAgreeWithTertiary",
+    ].some((postHocAgreeWithKey) => chunk[postHocAgreeWithKey])
+  );
+
+  otherChunks = otherChunks.filter(
+    (chunk) =>
+      !postHocDependentChunks
+        .map((PHDchunk) => PHDchunk.chunkId)
+        .includes(chunk.chunkId)
+  );
 
   otherChunks.forEach((otherChunk) => {
     let allPossOutputUnits_other = otUtils.findMatchingLemmaObjectThenWord(
@@ -293,7 +308,6 @@ exports.processSentenceFormula = (
       };
     }
 
-    //The above functions correctly.
     //If kumquat is true, then allPossOutputUnits_other is array of outputUnit objects, while if false, array of just one said object.
 
     grandAllPossOutputUnits_other.push(allPossOutputUnits_other);
@@ -310,7 +324,51 @@ exports.processSentenceFormula = (
     );
   }
 
-  //Everything has passed inspection in this whole fxn, as of 11/12/20.
+  console.log("grandOutputArray", grandOutputArray);
+
+  grandOutputArray.forEach((outputArray) => {
+    postHocDependentChunks.forEach((postHocDependentChunk) => {
+      let allPossOutputUnits_PHD = otUtils.findMatchingLemmaObjectThenWord(
+        gpUtils.copyWithoutReference(postHocDependentChunk),
+        words,
+        errorInSentenceCreation,
+        currentLanguage,
+        previousQuestionLanguage,
+        kumquat,
+        outputArray
+      );
+
+      if (
+        errorInSentenceCreation.errorMessage ||
+        !allPossOutputUnits_other ||
+        !allPossOutputUnits_other.length
+      ) {
+        return {
+          outputArr: null,
+          sentenceFormula,
+          sentenceFormulaId,
+          sentenceFormulaSymbol,
+          errorInSentenceCreation,
+        };
+      }
+
+      //If kumquat is true, then allPossOutputUnits_other is array of outputUnit objects, while if false, array of just one said object.
+
+      grandAllPossOutputUnits_PHD.push(allPossOutputUnits_PHD);
+    });
+  });
+
+  // if (grandAllPossOutputUnits_PHD.length) {
+  //   grandAllPossOutputUnits_PHD = gpUtils.arrayExploder(
+  //     grandAllPossOutputUnits_PHD
+  //   );
+
+  //   grandOutputArray = gpUtils.combineAndExplodeTwoSuperArrays(
+  //     grandOutputArray,
+  //     grandAllPossOutputUnits_PHD
+  //   );
+  // }
+
   //If kumquat is true, then grandOutputArray is array of all possible arrays of outputUnit combinations.
   //And if kumquat false, then grandOutputArray is array of just one said possible array.
 
@@ -711,7 +769,6 @@ exports.inheritFromHeadToDependentChunk = (
 
 exports.sortStructureChunks = (sentenceStructure) => {
   let headChunks = Array.from(
-    //qq
     new Set(
       sentenceStructure
         .map((chunk) => {

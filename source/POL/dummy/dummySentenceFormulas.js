@@ -1595,6 +1595,7 @@ exports.dummySentenceFormulasBank = [
         agreeWith: "pro-1",
         wordtype: "verb",
         specificLemmas: ["mieć"],
+        tenseDescription: ["present im"],
       },
       {
         chunkId: "pro-2",
@@ -1607,6 +1608,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "nou-1",
         wordtype: "noun",
         specificLemmas: ["cebula"],
+        gcase: ["acc"],
       },
     ],
     primaryOrders: [["pro-1", "ver-1", "pro-2", "nou-1"]],

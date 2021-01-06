@@ -6,7 +6,8 @@ exports.filterWithinSelectedLemmaObject = (
   lemmaObject,
   structureChunk,
   currentLanguage,
-  kumquat
+  kumquat,
+  outputArray
 ) => {
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
 
@@ -21,48 +22,150 @@ exports.filterWithinSelectedLemmaObject = (
   //STEP ZERO: Get necessary materials, ie inflectionPaths and requirementArrs.
   let source = lemmaObject.inflections;
 
-  let inflectionChain =
-    refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
-      structureChunk.wordtype
-    ];
+  let PHD_type;
 
-  let requirementArrs = [];
+  refObj.postHocDependentChunkWordtypes[currentLanguage].forEach(
+    (PHD_dataObj) => {
+      if (
+        Object.keys(PHD_dataObj.conditions).every((PHD_conditionKey) => {
+          let PHD_conditionValue = PHD_dataObj.conditions[PHD_conditionKey];
 
-  inflectionChain.forEach((key) => {
-    requirementArrs.push([key, structureChunk[key] || []]);
-  });
-
-  let errorInDrilling = false;
-  let outputUnitsWithDrillPaths = [];
-
-  exports.traverseAndRecordInflections(
-    source,
-    requirementArrs,
-    outputUnitsWithDrillPaths
+          if (
+            Array.isArray(PHD_conditionValue) &&
+            PHD_conditionValue.every(
+              (arrayItem) =>
+                structureChunk[PHD_conditionKey] &&
+                structureChunk[PHD_conditionKey].includes(arrayItem)
+            )
+          ) {
+            return true;
+          } else if (structureChunk[PHD_conditionKey] === PHD_conditionValue) {
+            return true;
+          } else {
+            return false;
+          }
+        })
+      ) {
+        PHD_type = PHD_dataObj.PHD_type;
+      }
+    }
   );
 
-  if (!outputUnitsWithDrillPaths || !outputUnitsWithDrillPaths.length) {
-    errorInDrilling = true;
-    return false;
-  }
+  if (PHD_type) {
+    if (
+      !structureChunk.specificLemmas ||
+      structureChunk.specificLemmas.length !== 1
+    ) {
+      throw "#ERR ----------------------> PHD-stCh should have exactly one value in specificLemmas arr.";
+    }
 
-  if (kumquat) {
-    outputUnitsWithDrillPaths.forEach((selectedPath) => {
-      selectedPath.errorInDrilling = errorInDrilling;
+    let postHocInflectionChains = refObj.postHocDependentChunkWordtypes[
+      currentLanguage
+    ].find((PHD_dataObj) => PHD_dataObj.PHD_type === PHD_type).inflectionChains;
+
+    console.log("=========================");
+    console.log("=========================");
+    console.log("=========================");
+    console.log("outputArray", outputArray);
+    console.log("postHocInflectionChains", postHocInflectionChains);
+    console.log("=========================");
+    console.log("=========================");
+    console.log("=========================");
+
+    let sourceCopy = gpUtils.copyWithoutReference(source);
+
+    console.log({ sourceCopy });
+
+    Object.keys(postHocInflectionChains).forEach((postHocAgreeWithKey) => {
+      let postHocInflectionChain = postHocInflectionChains[postHocAgreeWithKey];
+
+      let headOutputUnit = outputArray.find(
+        (outputUnit) =>
+          outputUnit.structureChunk.chunkId ===
+          structureChunk[postHocAgreeWithKey]
+      );
+
+      let headDrillPath = gpUtils.copyWithoutReference(
+        headOutputUnit.drillPath
+      );
+
+      if (!headDrillPath) {
+        throw "This is an issue. There is no drillPath on the outputUnit with which I want to get features from the PHD stCh. Perhaps this outputUnit is one whose stCh did not go through If-PW?";
+      }
+
+      console.log({ headDrillPath });
+
+      if (headOutputUnit.selectedLemmaObject.gender) {
+        if (!headDrillPath.gender) {
+          headDrillPath.gender = [headOutputUnit.selectedLemmaObject.gender];
+        } else {
+          throw "I am unsure about which gender to use - either the one from lobj inherent, or the one from drillPath. I was thinking of using this gender for the PHD stCh.";
+        }
+      }
+
+      postHocInflectionChain.forEach((featureKey) => {
+        let featureValue = headDrillPath.find(
+          (arr) => arr[0] === featureKey
+        )[1];
+
+        sourceCopy = sourceCopy[featureValue];
+      });
+      //Get agreewithprimary stCh AND lobj
+      //Get agreewithsecondary stCh AND lobj
+      //Now use the features from them to get the right inflection from PHDstCh and PHDmatches.
     });
-    return outputUnitsWithDrillPaths;
+
+    console.log("DONE!!!", { sourceCopy });
+
+    throw "Cease..";
   } else {
-    let selectedPath = gpUtils.selectRandom(outputUnitsWithDrillPaths);
+    let inflectionChain =
+      refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
+        structureChunk.wordtype
+      ];
 
-    let { selectedWordArray, drillPath } = selectedPath;
+    console.log(">>> >>> inflectionChain", inflectionChain);
 
-    return [
-      {
-        errorInDrilling,
-        selectedWordArray,
-        drillPath,
-      },
-    ];
+    let requirementArrs = [];
+
+    inflectionChain.forEach((key) => {
+      requirementArrs.push([key, structureChunk[key] || []]);
+    });
+
+    let errorInDrilling = false;
+    let outputUnitsWithDrillPaths = [];
+
+    console.log("requirementArrs", requirementArrs);
+
+    exports.traverseAndRecordInflections(
+      source,
+      requirementArrs,
+      outputUnitsWithDrillPaths
+    );
+
+    if (!outputUnitsWithDrillPaths || !outputUnitsWithDrillPaths.length) {
+      errorInDrilling = true;
+      return false;
+    }
+
+    if (kumquat) {
+      outputUnitsWithDrillPaths.forEach((selectedPath) => {
+        selectedPath.errorInDrilling = errorInDrilling;
+      });
+      return outputUnitsWithDrillPaths;
+    } else {
+      let selectedPath = gpUtils.selectRandom(outputUnitsWithDrillPaths);
+
+      let { selectedWordArray, drillPath } = selectedPath;
+
+      return [
+        {
+          errorInDrilling,
+          selectedWordArray,
+          drillPath,
+        },
+      ];
+    }
   }
 };
 
@@ -209,6 +312,16 @@ exports.traverseAndRecordInflections = (
   outputUnitsWithDrillPaths,
   outputUnitsWithDrillPathsMini
 ) => {
+  // console.log(
+  //   ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>traverseAndRecordInflections was given:",
+  //   {
+  //     source,
+  //     reqArr,
+  //     outputUnitsWithDrillPaths,
+  //     outputUnitsWithDrillPathsMini,
+  //   }
+  // );
+
   if (!outputUnitsWithDrillPathsMini) {
     outputUnitsWithDrillPathsMini = [];
   }

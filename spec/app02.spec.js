@@ -718,9 +718,9 @@ describe("/api", () => {
   // beforeEach(() => {});
 
   describe("/palette - Stage 14: Possessive pronouns.", () => {
-    it.only("#pal14-01a GET 200 YES: ENG to POL. I have my onion.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
+    it.only("#pal14-01a GET 200 YES: POL. I have my onion.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
 
       return request(app)
         .get("/api/palette")
@@ -728,25 +728,34 @@ describe("/api", () => {
           doNotSpecify: true,
           hideClarifiersForTestingPurposes: true,
           questionLanguage,
-          answerLanguage,
+          // answerLanguage,
           sentenceFormulaSymbol: "dummy50a",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
-          let ref = [
-            { ENG: "I have my apple.", POL: ["Ja mam moją cebulę."] },
-            { ENG: "We have our apple.", POL: ["My mamy naszą cebulę."] },
-            { ENG: "I have my apples.", POL: ["Ja mam moje cebule."] },
-            { ENG: "We have our apples.", POL: ["My mamy nasze cebule."] },
-          ];
+          console.log(res.body);
 
-          checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
+          expect([
+            "Ja mam moją cebulę.",
+            "My mamy naszą cebulę.",
+            "Ja mam moje cebule.",
+            "My mamy nasze cebule.",
+          ]).to.include(res.body.questionSentenceArr[0]);
+
+          // let ref = [
+          //   { ENG: "I have my apple.", POL: ["Ja mam moją cebulę."] },
+          //   { ENG: "We have our apple.", POL: ["My mamy naszą cebulę."] },
+          //   { ENG: "I have my apples.", POL: ["Ja mam moje cebule."] },
+          //   { ENG: "We have our apples.", POL: ["My mamy nasze cebule."] },
+          // ];
+
+          // checkTranslationsOfGivenRef(
+          //   res,
+          //   ref,
+          //   questionLanguage,
+          //   answerLanguage
+          // );
         });
     });
   });
