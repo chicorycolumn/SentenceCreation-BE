@@ -10,13 +10,13 @@ exports.giveAdjustedFeatureValue = (
     exports.lemmaObjectFeatureValueConversion[questionLanguage] &&
     exports.lemmaObjectFeatureValueConversion[questionLanguage][answerLanguage]
   ) {
-    let ref =
+    let featureValueConversionRef =
       exports.lemmaObjectFeatureValueConversion[questionLanguage][
         answerLanguage
       ][featureKey];
 
-    if (ref) {
-      let adjustedFeatureValueArr = ref[featureValue];
+    if (featureValueConversionRef) {
+      let adjustedFeatureValueArr = featureValueConversionRef[featureValue];
       if (adjustedFeatureValueArr) {
         return adjustedFeatureValueArr;
       } else {
@@ -42,6 +42,12 @@ exports.lemmaObjectFeatureValueConversion = {
         m3: ["n"],
         virile: ["virile"],
         nonvirile: ["nonvirile"],
+        allPersonalGenders: ["allPersonalGenders"],
+        allGendersIncludingNeuter: ["m", "f", "n"],
+        allSingularGenders: ["m", "f", "n"],
+        allPersonalSingularGenders: ["m", "f"],
+        allPluralGenders: ["virile", "nonvirile"],
+        allGenders: ["m", "n", "f", "virile", "nonvirile"],
       },
     },
   },
@@ -64,6 +70,26 @@ exports.lemmaObjectFeatureValueConversion = {
           "n",
           "n",
           "n",
+        ],
+        allSingularGenders: ["m1", "m2", "m3", "n", "n", "n", "f", "f", "f"],
+        allPersonalSingularGenders: ["m1", "f"],
+        allPluralGenders: ["virile", "nonvirile"],
+        allGenders: [
+          "m1",
+          "m2",
+          "m3",
+          "n",
+          "n",
+          "n",
+          "f",
+          "f",
+          "f",
+          "virile",
+          "virile",
+          "virile",
+          "nonvirile",
+          "nonvirile",
+          "nonvirile",
         ],
       },
     },
