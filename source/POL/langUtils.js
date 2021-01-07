@@ -146,6 +146,7 @@ exports.adjustTenseDescriptions = (structureChunk) => {
 
 exports.preprocessLemmaObjectsMinor = (matches) => {
   matches.forEach((lObj) => {
+    //Perfective and Imperfective
     if (lObj.imperfectiveOnly_unadjusted && lObj.aspect === "imperfective") {
       lObj.imperfectiveOnly = true;
       delete lObj.imperfectiveOnly_unadjusted;
@@ -163,12 +164,37 @@ exports.preprocessLemmaObjectsMinor = (matches) => {
 };
 
 exports.formatFeatureValue = (featureKey, featureValue, note) => {
+  console.log("qqqqqqqqqqqqqqqqqqqqqqqqqq");
+  console.log("qqqqqqqqqqqqqqqqqqqqqqqqqq");
+  console.log("qqqqqqqqqqqqqqqqqqqqqqqqqq");
+  console.log({ featureKey, featureValue, note });
+  console.log("qqqqqqqqqqqqqqqqqqqqqqqqqq");
+  console.log("qqqqqqqqqqqqqqqqqqqqqqqqqq");
+  console.log("qqqqqqqqqqqqqqqqqqqqqqqqqq");
+
+  const virilityRef = {
+    plural: {
+      f: "nonvirile",
+      n: "nonvirile",
+      m3: "nonvirile",
+      m2: "nonvirile",
+      m1: "virile",
+    },
+  };
+
+  const shortHandGenderRef = { m: "m1", f: "f", n: "n" };
+
   if (featureKey === "gender") {
-    const ref = { m: "m1", f: "f", n: "n" };
-    if (note === "person") {
-      return ref[featureValue];
+    if (note === "plural") {
+      return virilityRef[note][featureValue];
+    } else {
+      if (note === "person") {
+        return shortHandGenderRef[featureValue];
+      }
     }
   }
+
+  return featureValue;
 };
 
 exports.preprocessLemmaObjectsMajor = (
@@ -176,6 +202,36 @@ exports.preprocessLemmaObjectsMajor = (
   structureChunk,
   adjustLemmaObjectsOnly
 ) => {
+  matches.forEach((lObj) => {
+    if (gpUtils.getWordtypeFromLemmaObject(lObj) === "pronoun") {
+      gpUtils.findKeysInObjectAndExecuteCallback(
+        lObj,
+        "allPersonalSingularGenders",
+        (obj) => {
+          gpUtils.copyValueOfKey(
+            obj,
+            "allPersonalSingularGenders",
+            ["m1", "f"],
+            false
+          );
+        }
+      );
+      gpUtils.findKeysInObjectAndExecuteCallback(
+        lObj,
+        "allPluralGenders",
+        (obj) => {
+          gpUtils.copyValueOfKey(
+            obj,
+            "allPluralGenders",
+            ["virile", "nonvirile"],
+            false
+          );
+        }
+      );
+    }
+  });
+
+  //Delta: Change these to testing the lObjs themselves for wordtype.
   if (["verb"].includes(structureChunk.wordtype)) {
     matches.forEach((lObj) => exports.fillVerbInflections(lObj));
   }

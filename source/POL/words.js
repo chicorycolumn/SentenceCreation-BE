@@ -798,7 +798,7 @@ let pronounSet = [
                 ins: "moim",
                 loc: "moim",
               },
-              n: {
+              f: {
                 nom: "moja",
                 gen: "mojej",
                 dat: "mojej",
@@ -862,7 +862,7 @@ let pronounSet = [
                 ins: "naszym",
                 loc: "naszym",
               },
-              n: {
+              f: {
                 nom: "nasza",
                 gen: "naszej",
                 dat: "naszej",
@@ -928,7 +928,7 @@ let pronounSet = [
                 ins: "twoim",
                 loc: "twoim",
               },
-              n: {
+              f: {
                 nom: "twoja",
                 gen: "twojej",
                 dat: "twojej",
@@ -992,7 +992,7 @@ let pronounSet = [
                 ins: "waszym",
                 loc: "waszym",
               },
-              n: {
+              f: {
                 nom: "wasza",
                 gen: "waszej",
                 dat: "waszej",

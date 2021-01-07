@@ -20,8 +20,6 @@ exports.filterWithinSelectedLemmaObject = (
   }
 
   //STEP ZERO: Get necessary materials, ie inflectionPaths and requirementArrs.
-  let source = lemmaObject.inflections;
-
   let PHD_type;
 
   refObj.postHocDependentChunkWordtypes[currentLanguage].forEach(
@@ -72,9 +70,15 @@ exports.filterWithinSelectedLemmaObject = (
     console.log("=========================");
     console.log("=========================");
 
-    let sourceCopy = gpUtils.copyWithoutReference(source);
+    let lemmaObjectCopy = gpUtils.copyWithoutReference(lemmaObject);
 
-    console.log({ sourceCopy });
+    langUtils.preprocessLemmaObjectsMajor(
+      [lemmaObjectCopy],
+      structureChunk,
+      true
+    );
+
+    let source = gpUtils.copyWithoutReference(lemmaObjectCopy.inflections);
 
     Object.keys(postHocInflectionChains).forEach((postHocAgreeWithKey) => {
       let postHocInflectionChain = postHocInflectionChains[postHocAgreeWithKey];
@@ -93,11 +97,26 @@ exports.filterWithinSelectedLemmaObject = (
         throw "This is an issue. There is no drillPath on the outputUnit with which I want to get features from the PHD stCh. Perhaps this outputUnit is one whose stCh did not go through If-PW?";
       }
 
+      console.log(1111111111);
+      console.log({ postHocAgreeWithKey });
+      console.log({ postHocInflectionChain });
       console.log({ headDrillPath });
+      console.log(1111111111);
 
       if (headOutputUnit.selectedLemmaObject.gender) {
-        if (!headDrillPath.gender) {
-          headDrillPath.gender = [headOutputUnit.selectedLemmaObject.gender];
+        if (!headDrillPath.find((arr) => arr[0] === "gender")) {
+          let numberArr = headDrillPath.find((arr) => arr[0] === "number");
+          console.log("ppp", { numberArr });
+          let numberValue = numberArr[1];
+
+          headDrillPath.push([
+            "gender",
+            langUtils.formatFeatureValue(
+              "gender",
+              headOutputUnit.selectedLemmaObject.gender,
+              numberValue
+            ),
+          ]);
         } else {
           throw "I am unsure about which gender to use - either the one from lobj inherent, or the one from drillPath. I was thinking of using this gender for the PHD stCh.";
         }
@@ -108,14 +127,26 @@ exports.filterWithinSelectedLemmaObject = (
           (arr) => arr[0] === featureKey
         )[1];
 
-        sourceCopy = sourceCopy[featureValue];
+        console.log(2222222);
+        console.log({ featureKey });
+        console.log({ featureValue });
+        console.log(2222222);
+
+        source = source[featureValue];
+        console.log("NEW sourceCopy:", source);
       });
       //Get agreewithprimary stCh AND lobj
       //Get agreewithsecondary stCh AND lobj
       //Now use the features from them to get the right inflection from PHDstCh and PHDmatches.
     });
 
-    console.log("DONE!!!", { sourceCopy });
+    if (typeof source !== "string") {
+      throw "#ERR ---------------> Expected this PHD value to be the end of a chain and thus a string.";
+    }
+
+    let selectedWord = source;
+
+    console.log("DONE!!!", { selectedWord });
 
     throw "Cease..";
   } else {
@@ -136,6 +167,8 @@ exports.filterWithinSelectedLemmaObject = (
     let outputUnitsWithDrillPaths = [];
 
     console.log("requirementArrs", requirementArrs);
+
+    let source = lemmaObject.inflections;
 
     exports.traverseAndRecordInflections(
       source,
