@@ -229,6 +229,11 @@ exports.filterWithinSelectedLemmaObject = (
     );
 
     if (!outputUnitsWithDrillPaths || !outputUnitsWithDrillPaths.length) {
+      console.log(
+        "#ERR --------------------------------------> traverseAndRecordInflections returned FALSY for " +
+          structureChunk.chunkId
+      );
+      console.log({ outputUnitsWithDrillPaths });
       errorInDrilling = true;
       return false;
     }
@@ -398,15 +403,14 @@ exports.traverseAndRecordInflections = (
   outputUnitsWithDrillPaths,
   outputUnitsWithDrillPathsMini
 ) => {
-  // console.log(
-  //   ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>traverseAndRecordInflections was given:",
-  //   {
-  //     source,
-  //     reqArr,
-  //     outputUnitsWithDrillPaths,
-  //     outputUnitsWithDrillPathsMini,
-  //   }
-  // );
+  console.log("fff>traverseAndRecordInflections was given:", {
+    source,
+    reqArr,
+    outputUnitsWithDrillPaths,
+    outputUnitsWithDrillPathsMini,
+  });
+
+  console.log("reqArr", reqArr);
 
   if (!outputUnitsWithDrillPathsMini) {
     outputUnitsWithDrillPathsMini = [];

@@ -2,54 +2,7 @@ const lfUtils = require("../../utils/lemmaFilteringUtils.js");
 const otUtils = require("../../utils/objectTraversingUtils.js");
 const gpUtils = require("../../utils/generalPurposeUtils.js");
 const refObj = require("../../utils/referenceObjects.js");
-
-exports.addLanguageParticularClarifiers = () => {
-  //
-  //Type 6 Synhomographs: Add clarifier for ambiguous verb participles (Un-PW).
-  //Afaics, no such ambiguity in POL verbs.
-  //
-  //
-  //Type 5 Synhomographs: Add clarifier for ambiguous hybridSelector results (If-PW).
-  //Afaics, no such ambiguity in POL verbs,
-  //ie there are no tense+aspect combinations that homographs of others.
-  //
-};
-
-exports.adjustStructureChunksInIfPW = (structureChunk) => {
-  if (
-    (structureChunk.wordtype === "verb",
-    structureChunk.tenseDescription && structureChunk.tenseDescription.length)
-  ) {
-    return exports.adjustTenseDescriptions(structureChunk);
-  }
-};
-
-exports.adjustTenseDescriptionsBeforeTranslating = (
-  tenseDescriptions,
-  questionSelectedLemmaObject
-) => {
-  if (questionSelectedLemmaObject.imperfectiveOnly) {
-    const imperfectiveOnlyConversionRef = {
-      "past im": "past pf",
-      "past pf": "past im",
-
-      "present im": null,
-
-      "future im": "future pf",
-      "future pf": "future im",
-    };
-
-    tenseDescriptions.forEach((tenseDesc) => {
-      let convertedTenseDesc = imperfectiveOnlyConversionRef[tenseDesc];
-
-      if (convertedTenseDesc) {
-        tenseDescriptions.push(convertedTenseDesc);
-      }
-    });
-  }
-
-  tenseDescriptions = Array.from(new Set(tenseDescriptions));
-};
+const allLangUtils = require("../../utils/allLangUtils.js");
 
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   sentenceStructure.forEach((structureChunk) => {
@@ -94,80 +47,13 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   });
 };
 
-exports.adjustTenseDescriptions = (structureChunk) => {
-  const aspectReference = { im: "imperfective", pf: "perfective" };
-
-  let resultArr = [];
-
-  structureChunk.tenseDescription.forEach((tenseDesc, index) => {
-    let structureChunkCopy = gpUtils.copyWithoutReference(structureChunk);
-
-    let tenseDescArr = [tenseDesc];
-
-    if (tenseDesc.slice(0, 4) === "cond" && /\d/.test(tenseDesc[4])) {
-      //cond0, cond1, cond2, cond3
-      let [key, clause] = tenseDesc.split(" ");
-
-      const conditionalsRef = {
-        cond0: {
-          condition: ["future pf"],
-          outcome: ["future pf"],
-        },
-        cond1: {
-          condition: ["future im", "future pf"],
-          outcome: ["future pf"],
-        },
-        cond2: {
-          //gdyby* + past im*, cond pf/im
-          condition: [],
-          outcome: [],
-        },
-        cond3: {
-          //gdyby* + past im*, cond pf/im
-          condition: [],
-          outcome: [],
-        },
-      };
-
-      tenseDescArr = conditionalsRef[key][clause].slice(0);
-    }
-
-    tenseDescArr.forEach((tenseDesc) => {
-      let [tense, aspect] = tenseDesc.split(" ");
-      structureChunkCopy.tense = [tense];
-      structureChunkCopy.aspect = [aspectReference[aspect]];
-      structureChunkCopy.tenseDescription = [tenseDesc];
-      resultArr.push(structureChunkCopy);
-    });
-  });
-
-  return resultArr;
-};
-
-exports.preprocessLemmaObjectsMinor = (matches) => {
-  matches.forEach((lObj) => {
-    //Perfective and Imperfective
-    if (lObj.imperfectiveOnly_unadjusted && lObj.aspect === "imperfective") {
-      lObj.imperfectiveOnly = true;
-      delete lObj.imperfectiveOnly_unadjusted;
-
-      let adjustedLemmaObject = gpUtils.copyWithoutReference(lObj);
-      adjustedLemmaObject.aspect = "perfective";
-
-      let newIdArr = lObj.id.split("-");
-      newIdArr[3] = "pf";
-      adjustedLemmaObject.id = newIdArr.join("-");
-
-      matches.push(adjustedLemmaObject);
-    }
-  });
-};
-
 exports.preprocessLemmaObjectsMajor = (
   matches,
   structureChunk,
   adjustLemmaObjectsOnly
 ) => {
+  allLangUtils.preprocessLemmaObjects(matches, "POL");
+
   matches.forEach((lObj) => {
     if (gpUtils.getWordtypeFromLemmaObject(lObj) === "pronoun") {
       gpUtils.findKeysInObjectAndExecuteCallback(
@@ -223,6 +109,123 @@ exports.preprocessLemmaObjectsMajor = (
       exports.adjustVirilityOfStructureChunk(structureChunk);
     }
   }
+};
+
+exports.preprocessLemmaObjectsMinor = (matches) => {
+  matches.forEach((lObj) => {
+    //Perfective and Imperfective
+    if (lObj.imperfectiveOnly_unadjusted && lObj.aspect === "imperfective") {
+      lObj.imperfectiveOnly = true;
+      delete lObj.imperfectiveOnly_unadjusted;
+
+      let adjustedLemmaObject = gpUtils.copyWithoutReference(lObj);
+      adjustedLemmaObject.aspect = "perfective";
+
+      let newIdArr = lObj.id.split("-");
+      newIdArr[3] = "pf";
+      adjustedLemmaObject.id = newIdArr.join("-");
+
+      matches.push(adjustedLemmaObject);
+    }
+  });
+};
+
+exports.addLanguageParticularClarifiers = () => {
+  //
+  //Type 6 Synhomographs: Add clarifier for ambiguous verb participles (Un-PW).
+  //Afaics, no such ambiguity in POL verbs.
+  //
+  //
+  //Type 5 Synhomographs: Add clarifier for ambiguous hybridSelector results (If-PW).
+  //Afaics, no such ambiguity in POL verbs,
+  //ie there are no tense+aspect combinations that homographs of others.
+  //
+};
+
+exports.adjustStructureChunksInIfPW = (structureChunk) => {
+  if (
+    (structureChunk.wordtype === "verb",
+    structureChunk.tenseDescription && structureChunk.tenseDescription.length)
+  ) {
+    return exports.adjustTenseDescriptions(structureChunk);
+  }
+};
+
+exports.adjustTenseDescriptionsBeforeTranslating = (
+  tenseDescriptions,
+  questionSelectedLemmaObject
+) => {
+  if (questionSelectedLemmaObject.imperfectiveOnly) {
+    const imperfectiveOnlyConversionRef = {
+      "past im": "past pf",
+      "past pf": "past im",
+
+      "present im": null,
+
+      "future im": "future pf",
+      "future pf": "future im",
+    };
+
+    tenseDescriptions.forEach((tenseDesc) => {
+      let convertedTenseDesc = imperfectiveOnlyConversionRef[tenseDesc];
+
+      if (convertedTenseDesc) {
+        tenseDescriptions.push(convertedTenseDesc);
+      }
+    });
+  }
+
+  tenseDescriptions = Array.from(new Set(tenseDescriptions));
+};
+
+exports.adjustTenseDescriptions = (structureChunk) => {
+  const aspectReference = { im: "imperfective", pf: "perfective" };
+
+  let resultArr = [];
+
+  structureChunk.tenseDescription.forEach((tenseDesc, index) => {
+    let structureChunkCopy = gpUtils.copyWithoutReference(structureChunk);
+
+    let tenseDescArr = [tenseDesc];
+
+    if (tenseDesc.slice(0, 4) === "cond" && /\d/.test(tenseDesc[4])) {
+      //cond0, cond1, cond2, cond3
+      let [key, clause] = tenseDesc.split(" ");
+
+      const conditionalsRef = {
+        cond0: {
+          condition: ["future pf"],
+          outcome: ["future pf"],
+        },
+        cond1: {
+          condition: ["future im", "future pf"],
+          outcome: ["future pf"],
+        },
+        cond2: {
+          //gdyby* + past im*, cond pf/im
+          condition: [],
+          outcome: [],
+        },
+        cond3: {
+          //gdyby* + past im*, cond pf/im
+          condition: [],
+          outcome: [],
+        },
+      };
+
+      tenseDescArr = conditionalsRef[key][clause].slice(0);
+    }
+
+    tenseDescArr.forEach((tenseDesc) => {
+      let [tense, aspect] = tenseDesc.split(" ");
+      structureChunkCopy.tense = [tense];
+      structureChunkCopy.aspect = [aspectReference[aspect]];
+      structureChunkCopy.tenseDescription = [tenseDesc];
+      resultArr.push(structureChunkCopy);
+    });
+  });
+
+  return resultArr;
 };
 
 exports.formatFeatureValue = (featureKey, featureValue, note) => {

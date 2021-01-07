@@ -31,6 +31,43 @@ exports.giveAdjustedFeatureValue = (
   return [featureValue];
 };
 
+exports.metaFeatures = {
+  ENG: {
+    gender: {
+      allPersonalGenders: ["m", "f", "virile", "nonvirile"],
+      allSingularGenders: ["m", "f", "n"],
+      allPersonalSingularGenders: ["m", "f"],
+      allPluralGenders: ["virile", "nonvirile"],
+      allGenders: ["m", "n", "f", "virile", "nonvirile"],
+    },
+  },
+  POL: {
+    gender: {
+      allPersonalGenders: ["m1", "f", "virile", "nonvirile"],
+      allSingularGenders: ["m1", "m2", "m3", "f", "f", "f", "n", "n", "n"],
+      allPersonalSingularGenders: ["m1", "f"],
+      allPluralGenders: ["virile", "nonvirile"],
+      allGenders: [
+        "m1",
+        "m2",
+        "m3",
+        "n",
+        "n",
+        "n",
+        "f",
+        "f",
+        "f",
+        "virile",
+        "virile",
+        "virile",
+        "nonvirile",
+        "nonvirile",
+        "nonvirile",
+      ],
+    },
+  },
+};
+
 exports.lemmaObjectFeatureValueConversion = {
   POL: {
     ENG: {
@@ -42,8 +79,7 @@ exports.lemmaObjectFeatureValueConversion = {
         m3: ["n"],
         virile: ["virile"],
         nonvirile: ["nonvirile"],
-        allPersonalGenders: ["allPersonalGenders"],
-        allGendersIncludingNeuter: ["m", "f", "n"],
+        allPersonalGenders: ["m", "f", "virile", "nonvirile"],
         allSingularGenders: ["m", "f", "n"],
         allPersonalSingularGenders: ["m", "f"],
         allPluralGenders: ["virile", "nonvirile"],
@@ -59,19 +95,8 @@ exports.lemmaObjectFeatureValueConversion = {
         m: ["m1"],
         virile: ["virile"],
         nonvirile: ["nonvirile"],
-        allPersonalGenders: ["m1", "f"],
-        allGendersIncludingNeuter: [
-          "m1",
-          "m2",
-          "m3",
-          "f",
-          "f",
-          "f",
-          "n",
-          "n",
-          "n",
-        ],
-        allSingularGenders: ["m1", "m2", "m3", "n", "n", "n", "f", "f", "f"],
+        allPersonalGenders: ["m1", "f", "virile", "nonvirile"],
+        allSingularGenders: ["m1", "m2", "m3", "f", "f", "f", "n", "n", "n"],
         allPersonalSingularGenders: ["m1", "f"],
         allPluralGenders: ["virile", "nonvirile"],
         allGenders: [
@@ -196,7 +221,7 @@ exports.allFeatureValues = {
       "virile",
       "nonvirile",
       "allPersonalGenders",
-      "allGendersIncludingNeuter",
+      "allSingularGenders",
     ],
   },
   POL: {

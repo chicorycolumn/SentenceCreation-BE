@@ -800,7 +800,7 @@ describe("/api", () => {
           );
         });
     });
-    xit("#pal14-01d GET 200 YES: POL to ENG. I have my onion.", () => {
+    it("#pal14-01d GET 200 YES: POL to ENG. I have my onion.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -817,10 +817,22 @@ describe("/api", () => {
         .expect(200)
         .then((res) => {
           let ref = [
-            { ENG: ["I have my onion."], POL: "Ja mam moją cebulę." },
-            { ENG: ["We have our onion."], POL: "My mamy naszą cebulę." },
-            { ENG: ["I have my onions."], POL: "Ja mam moje cebule." },
-            { ENG: ["We have our onions."], POL: "My mamy nasze cebule." },
+            {
+              ENG: ["I have my onion.", "I am having my onion."],
+              POL: "Ja mam moją cebulę.",
+            },
+            {
+              ENG: ["We have our onion.", "We are having our onion."],
+              POL: "My mamy naszą cebulę.",
+            },
+            {
+              ENG: ["I have my onions.", "I am having my onions."],
+              POL: "Ja mam moje cebule.",
+            },
+            {
+              ENG: ["We have our onions.", "We are having our onions."],
+              POL: "My mamy nasze cebule.",
+            },
           ];
           checkTranslationsOfGivenRef(
             res,

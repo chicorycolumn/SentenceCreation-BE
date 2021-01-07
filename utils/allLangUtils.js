@@ -1,4 +1,5 @@
 const refObj = require("../utils/referenceObjects.js");
+const gpUtils = require("../utils/generalPurposeUtils.js");
 
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   sentenceStructure.forEach((structureChunk) => {
@@ -73,5 +74,25 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
         }
       }
     }
+  });
+};
+
+exports.preprocessLemmaObjects = (lObjArr, currentLanguage) => {
+  lObjArr.forEach((lObj) => {
+    let featureKey = "gender";
+
+    let metaFeaturesRef = refObj.metaFeatures[currentLanguage][featureKey];
+
+    Object.keys(metaFeaturesRef).forEach((metaFeatureKey) => {
+      let metaFeatureValues = metaFeaturesRef[metaFeatureKey];
+
+      gpUtils.findKeysInObjectAndExecuteCallback(
+        lObj,
+        metaFeatureKey,
+        (obj) => {
+          gpUtils.copyValueOfKey(obj, metaFeatureKey, metaFeatureValues, false);
+        }
+      );
+    });
   });
 };

@@ -2,6 +2,7 @@ const lfUtils = require("../../utils/lemmaFilteringUtils.js");
 const otUtils = require("../../utils/objectTraversingUtils.js");
 const gpUtils = require("../../utils/generalPurposeUtils.js");
 const refObj = require("../../utils/referenceObjects.js");
+const allLangUtils = require("../../utils/allLangUtils.js");
 
 const be = {
   past: {
@@ -45,6 +46,138 @@ let inflectorRef = {
     "conditional perfect",
     "imperative",
   ],
+};
+
+exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
+  sentenceStructure.forEach((structureChunk) => {
+    if (structureChunk.wordtype === "fixed") {
+      return;
+    }
+
+    if (
+      //If gender is an appropriate feature of this wordtype.
+      refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
+        structureChunk.wordtype
+      ].includes("gender")
+    ) {
+      if (!structureChunk.gender || !structureChunk.gender.length) {
+        //Fill out if blank.
+
+        // if (!structureChunk.number || !structureChunk.number.length) {
+        if (
+          structureChunk.person &&
+          structureChunk.person.length &&
+          !structureChunk.person.includes("3per")
+        ) {
+          structureChunk.gender = ["allPersonalGenders"];
+        } else {
+          structureChunk.gender = ["allSingularGenders"];
+        }
+
+        // structureChunk.gender = ["m", "f", "n", "virile", "nonvirile"];
+        // } else {
+        //   structureChunk.gender = [];
+
+        //   if (structureChunk.number.includes("singular")) {
+        //     ["m", "f", "n"].forEach((genderValue) =>
+        //       structureChunk.gender.push(genderValue)
+        //     );
+        //   } //Yes, there is no 'else' between these two. They should both have ability to run.
+        //   if (structureChunk.number.includes("plural")) {
+        //     ["virile", "nonvirile"].forEach((genderValue) =>
+        //       structureChunk.gender.push(genderValue)
+        //     );
+        //   }
+        // }
+      }
+    }
+  });
+};
+
+exports.preprocessLemmaObjectsMajor = (matches, structureChunk) => {
+  allLangUtils.preprocessLemmaObjects(matches, "ENG");
+
+  matches.forEach((lObj) => {
+    if (gpUtils.getWordtypeFromLemmaObject(lObj) === "pronoun") {
+      if (!structureChunk.wordtype === "pronoun") {
+        throw "Error------------->lObj and stCh wordtypes don't match.";
+      }
+      if (!structureChunk.gender) {
+        if (
+          structureChunk.person &&
+          structureChunk.person.length &&
+          !structureChunk.person.includes("3per")
+        ) {
+          structureChunk.gender = ["allPersonalGenders"];
+        } else {
+          structureChunk.gender = ["allSingularGenders"];
+        }
+
+        // throw "Error------------->I expected stCh to have a gender key.";
+      }
+
+      gpUtils.findKeysInObjectAndExecuteCallback(
+        lObj,
+        "allPersonalGenders",
+        (obj) => {
+          gpUtils.copyValueOfKey(
+            obj,
+            "allPersonalGenders",
+            ["virile", "nonvirile", "m", "f"], //Beta: This is kind of kowtowing.
+            false
+          );
+        }
+      );
+
+      gpUtils.findKeysInObjectAndExecuteCallback(
+        lObj,
+        "allSingularGenders",
+        (obj) => {
+          gpUtils.copyValueOfKey(
+            obj,
+            "allSingularGenders",
+            ["nonvirile", "m", "f", "n"], //Beta: This is kind of kowtowing.
+            false
+          );
+        }
+      );
+
+      // let genderValueArr = structureChunk.gender;
+
+      // genderValueArr.forEach((genderValue) => {
+      //   gpUtils.findKeysInObjectAndExecuteCallback(
+      //     lemmaObject,
+      //     "allGenders",
+      //     (obj) => {
+      //       obj[genderValue] = obj["allGenders"];
+      //     }
+      //   );
+      // });
+    }
+  });
+};
+
+exports.preprocessLemmaObjectsMinor = (matches) => {
+  matches.forEach((lObj) => {
+    if (gpUtils.getWordtypeFromLemmaObject(lObj) === "noun") {
+      if (lObj.tags.includes("person")) {
+        if (!lObj.gender) {
+          throw (
+            "Error. The lObj '" +
+            lObj.id +
+            "' is a person so should have a gender key."
+          );
+        } else if (lObj.gender === "m/f" || lObj.gender === "f/m") {
+          // let lObjCopy = gpUtils.copyWithoutReference(lObj);
+          // lObj.gender = "f";
+          // lObjCopy.gender = "m";
+          // matches.push(lObjCopy);
+        }
+      } else {
+        lObj.gender = "n";
+      }
+    }
+  });
 };
 
 exports.formatFeatureValue = (featureKey, featureValue, note) => {
@@ -166,136 +299,6 @@ exports.adjustTenseDescriptionsBeforeTranslating = () => {};
 exports.adjustStructureChunksInIfPW = (structureChunk) => {};
 
 exports.adjustTenseDescriptions = () => {};
-
-exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
-  sentenceStructure.forEach((structureChunk) => {
-    if (structureChunk.wordtype === "fixed") {
-      return;
-    }
-
-    if (
-      //If gender is an appropriate feature of this wordtype.
-      refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
-        structureChunk.wordtype
-      ].includes("gender")
-    ) {
-      if (!structureChunk.gender || !structureChunk.gender.length) {
-        //Fill out if blank.
-
-        // if (!structureChunk.number || !structureChunk.number.length) {
-        if (
-          structureChunk.person &&
-          structureChunk.person.length &&
-          !structureChunk.person.includes("3per")
-        ) {
-          structureChunk.gender = ["allPersonalGenders"];
-        } else {
-          structureChunk.gender = ["allGendersIncludingNeuter"];
-        }
-
-        // structureChunk.gender = ["m", "f", "n", "virile", "nonvirile"];
-        // } else {
-        //   structureChunk.gender = [];
-
-        //   if (structureChunk.number.includes("singular")) {
-        //     ["m", "f", "n"].forEach((genderValue) =>
-        //       structureChunk.gender.push(genderValue)
-        //     );
-        //   } //Yes, there is no 'else' between these two. They should both have ability to run.
-        //   if (structureChunk.number.includes("plural")) {
-        //     ["virile", "nonvirile"].forEach((genderValue) =>
-        //       structureChunk.gender.push(genderValue)
-        //     );
-        //   }
-        // }
-      }
-    }
-  });
-};
-
-exports.preprocessLemmaObjectsMajor = (matches, structureChunk) => {
-  matches.forEach((lObj) => {
-    if (gpUtils.getWordtypeFromLemmaObject(lObj) === "pronoun") {
-      if (!structureChunk.wordtype === "pronoun") {
-        throw "Error------------->lObj and stCh wordtypes don't match.";
-      }
-      if (!structureChunk.gender) {
-        if (
-          structureChunk.person &&
-          structureChunk.person.length &&
-          !structureChunk.person.includes("3per")
-        ) {
-          structureChunk.gender = ["allPersonalGenders"];
-        } else {
-          structureChunk.gender = ["allGendersIncludingNeuter"];
-        }
-
-        // throw "Error------------->I expected stCh to have a gender key.";
-      }
-
-      gpUtils.findKeysInObjectAndExecuteCallback(
-        lObj,
-        "allPersonalGenders",
-        (obj) => {
-          gpUtils.copyValueOfKey(
-            obj,
-            "allPersonalGenders",
-            ["virile", "nonvirile", "m", "f"], //Beta: This is kind of kowtowing.
-            false
-          );
-        }
-      );
-
-      gpUtils.findKeysInObjectAndExecuteCallback(
-        lObj,
-        "allGendersIncludingNeuter",
-        (obj) => {
-          gpUtils.copyValueOfKey(
-            obj,
-            "allGendersIncludingNeuter",
-            ["nonvirile", "m", "f", "n"], //Beta: This is kind of kowtowing.
-            false
-          );
-        }
-      );
-
-      // let genderValueArr = structureChunk.gender;
-
-      // genderValueArr.forEach((genderValue) => {
-      //   gpUtils.findKeysInObjectAndExecuteCallback(
-      //     lemmaObject,
-      //     "allGenders",
-      //     (obj) => {
-      //       obj[genderValue] = obj["allGenders"];
-      //     }
-      //   );
-      // });
-    }
-  });
-};
-
-exports.preprocessLemmaObjectsMinor = (matches) => {
-  matches.forEach((lObj) => {
-    if (gpUtils.getWordtypeFromLemmaObject(lObj) === "noun") {
-      if (lObj.tags.includes("person")) {
-        if (!lObj.gender) {
-          throw (
-            "Error. The lObj '" +
-            lObj.id +
-            "' is a person so should have a gender key."
-          );
-        } else if (lObj.gender === "m/f" || lObj.gender === "f/m") {
-          // let lObjCopy = gpUtils.copyWithoutReference(lObj);
-          // lObj.gender = "f";
-          // lObjCopy.gender = "m";
-          // matches.push(lObjCopy);
-        }
-      } else {
-        lObj.gender = "n";
-      }
-    }
-  });
-};
 
 exports.addSpecialVerbForms = (lemmaObject, currentLanguage) => {
   let { infinitive, v2, v3, thirdPS, gerund } = lemmaObject.inflections;

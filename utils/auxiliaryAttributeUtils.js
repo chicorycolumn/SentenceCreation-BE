@@ -115,7 +115,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
               (label) => allowableClarifiers.includes(label)
             );
 
-            //Omega say: Could nix this if(label === "gender" && structureChunk["gender"] === "allPersonalGenders" || "allGendersIncludingNeuter")
+            //Omega say: Could nix this if(label === "gender" && structureChunk["gender"] === "allPersonalGenders" || "allSingularGenders")
             labelsWhereTheyDiffer.forEach((label) => {
               let clarifierValue = structureChunk[label];
 
@@ -123,7 +123,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
               if (label === "gender") {
                 if (
                   [
-                    "allGendersIncludingNeuter",
+                    "allSingularGenders",
                     "allPersonalGenders",
                   ].some((metaGender) =>
                     structureChunk[label].includes(metaGender)
