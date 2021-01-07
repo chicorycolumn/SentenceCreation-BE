@@ -340,8 +340,8 @@ exports.processSentenceFormula = (
 
       if (
         errorInSentenceCreation.errorMessage ||
-        !allPossOutputUnits_other ||
-        !allPossOutputUnits_other.length
+        !allPossOutputUnits_PHD ||
+        !allPossOutputUnits_PHD.length
       ) {
         return {
           outputArr: null,
@@ -358,16 +358,16 @@ exports.processSentenceFormula = (
     });
   });
 
-  // if (grandAllPossOutputUnits_PHD.length) {
-  //   grandAllPossOutputUnits_PHD = gpUtils.arrayExploder(
-  //     grandAllPossOutputUnits_PHD
-  //   );
+  if (grandAllPossOutputUnits_PHD.length) {
+    grandAllPossOutputUnits_PHD = gpUtils.arrayExploder(
+      grandAllPossOutputUnits_PHD
+    );
 
-  //   grandOutputArray = gpUtils.combineAndExplodeTwoSuperArrays(
-  //     grandOutputArray,
-  //     grandAllPossOutputUnits_PHD
-  //   );
-  // }
+    grandOutputArray = gpUtils.combineAndExplodeTwoSuperArrays(
+      grandOutputArray,
+      grandAllPossOutputUnits_PHD
+    );
+  }
 
   //If kumquat is true, then grandOutputArray is array of all possible arrays of outputUnit combinations.
   //And if kumquat false, then grandOutputArray is array of just one said possible array.

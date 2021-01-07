@@ -140,15 +140,30 @@ exports.filterWithinSelectedLemmaObject = (
       //Now use the features from them to get the right inflection from PHDstCh and PHDmatches.
     });
 
-    if (typeof source !== "string") {
-      throw "#ERR ---------------> Expected this PHD value to be the end of a chain and thus a string.";
+    let sourceArr = [];
+    let resArr = [];
+
+    if (Array.isArray(source)) {
+      sourceArr = source;
+    } else if (typeof source === "string") {
+      sourceArr.push(source);
+    } else {
+      throw "#ERR ---------------> Expected this PHD value to be the end of a chain and thus a string or array.";
     }
 
-    let selectedWord = source;
+    sourceArr.forEach((selectedWord) => {
+      resArr.push({
+        errorInDrilling: false,
+        selectedWordArray: [selectedWord],
+        drillPath: null,
+      });
+    });
 
-    console.log("DONE!!!", { selectedWord });
+    if (!kumquat) {
+      resArr = [gpUtils.selectRandom(resArr)];
+    }
 
-    throw "Cease..";
+    return resArr;
   } else {
     let inflectionChain =
       refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
@@ -185,6 +200,7 @@ exports.filterWithinSelectedLemmaObject = (
       outputUnitsWithDrillPaths.forEach((selectedPath) => {
         selectedPath.errorInDrilling = errorInDrilling;
       });
+
       return outputUnitsWithDrillPaths;
     } else {
       let selectedPath = gpUtils.selectRandom(outputUnitsWithDrillPaths);
