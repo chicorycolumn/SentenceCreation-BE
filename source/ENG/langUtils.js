@@ -48,6 +48,35 @@ let inflectorRef = {
 };
 
 exports.formatFeatureValue = (featureKey, featureValue, note) => {
+  console.log("ppppppppppppppp");
+  console.log("ppppppppppppppp");
+  console.log("ppppppppppppppp");
+  console.log({ featureKey, featureValue, note });
+  console.log("ppppppppppppppp");
+  console.log("ppppppppppppppp");
+  console.log("ppppppppppppppp");
+
+  const metagenderRef = {
+    allGenders: [
+      "allPersonalSingularGenders",
+      "allPersonalGenders",
+      "allSingularGenders",
+      "allPluralGenders",
+      "allGenders",
+    ],
+    allPersonalGenders: [
+      "allPersonalSingularGenders",
+      "allPluralGenders",
+      "allPersonalGenders",
+    ],
+  };
+
+  if (featureKey === "gender") {
+    if (metagenderRef[featureValue]) {
+      return metagenderRef[featureValue];
+    }
+  }
+
   return featureValue;
 };
 

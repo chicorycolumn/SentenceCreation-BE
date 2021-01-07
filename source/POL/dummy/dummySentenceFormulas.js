@@ -831,6 +831,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
+        form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
 
@@ -1032,6 +1033,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
+        form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
 
@@ -1056,6 +1058,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
+        form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
 
@@ -1080,6 +1083,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
+        form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
 
@@ -1104,6 +1108,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
+        form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
 
@@ -1227,6 +1232,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
+        form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         number: ["singular"],
@@ -1244,6 +1250,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
+        form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         number: ["singular"],
@@ -1269,6 +1276,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
+        form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         gender: ["f"],
@@ -1294,6 +1302,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
+        form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         number: ["singular"],
@@ -1319,6 +1328,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
+        form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         // gender: ["f"],
@@ -1345,6 +1355,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
+        form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         number: ["singular"],
@@ -1370,6 +1381,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
+        form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         // gender: ["f"],
@@ -1445,6 +1457,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
+        form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
         // number: []
@@ -1587,6 +1600,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
+        form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
       },
@@ -1600,6 +1614,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-2",
         wordtype: "pronoun",
+        form: ["determiner"],
         specificLemmas: ["POSSESSIVE"],
         postHocAgreeWithPrimary: "pro-1",
         postHocAgreeWithSecondary: "nou-1",

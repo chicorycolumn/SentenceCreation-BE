@@ -741,8 +741,8 @@ exports.inheritFromHeadToDependentChunk = (
   headChunk,
   dependentChunk
 ) => {
-  let inflectorKeys =
-    refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
+  let inheritableInflectorKeys =
+    refObj.lemmaObjectFeatures[currentLanguage].inheritableInflectorKeys[
       dependentChunk.wordtype
     ];
 
@@ -752,10 +752,13 @@ exports.inheritFromHeadToDependentChunk = (
     ];
 
   if (hybridSelectors) {
-    inflectorKeys = [...inflectorKeys, ...hybridSelectors];
+    inheritableInflectorKeys = [
+      ...inheritableInflectorKeys,
+      ...hybridSelectors,
+    ];
   }
 
-  inflectorKeys.forEach((inflectorKey) => {
+  inheritableInflectorKeys.forEach((inflectorKey) => {
     //HARD CHANGE
     if (headChunk[inflectorKey]) {
       let inflectorValueArr = gpUtils.copyWithoutReference(

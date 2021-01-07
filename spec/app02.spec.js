@@ -717,8 +717,8 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe("/palette - Stage 14: Possessive pronouns.", () => {
-    it.only("#pal14-01a GET 200 YES: POL. I have my onion.", () => {
+  xdescribe("/palette - Stage 14: Possessive pronouns.", () => {
+    it("#pal14-01a GET 200 YES: POL. I have my onion.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -756,6 +756,32 @@ describe("/api", () => {
           //   questionLanguage,
           //   answerLanguage
           // );
+        });
+    });
+    it("#pal14-01b GET 200 YES: ENG. I have my onion.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          doNotSpecify: true,
+          hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          // answerLanguage,
+          sentenceFormulaSymbol: "dummy50a",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+
+          expect([
+            "I have my onion.",
+            "I have my onions.",
+            "We have our onion.",
+            "We have our onions.",
+          ]).to.include(res.body.questionSentenceArr[0]);
         });
     });
   });

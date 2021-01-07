@@ -164,14 +164,6 @@ exports.preprocessLemmaObjectsMinor = (matches) => {
 };
 
 exports.formatFeatureValue = (featureKey, featureValue, note) => {
-  console.log("qqqqqqqqqqqqqqqqqqqqqqqqqq");
-  console.log("qqqqqqqqqqqqqqqqqqqqqqqqqq");
-  console.log("qqqqqqqqqqqqqqqqqqqqqqqqqq");
-  console.log({ featureKey, featureValue, note });
-  console.log("qqqqqqqqqqqqqqqqqqqqqqqqqq");
-  console.log("qqqqqqqqqqqqqqqqqqqqqqqqqq");
-  console.log("qqqqqqqqqqqqqqqqqqqqqqqqqq");
-
   const virilityRef = {
     plural: {
       f: "nonvirile",

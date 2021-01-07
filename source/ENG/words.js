@@ -257,43 +257,37 @@ let pronounSet = [
 
     //inflections
     inflections: {
-      "1per": {
-        singular: {
-          allPersonalGenders: {
-            nom: "I",
-            gen: "my",
-            genAdj: "mine",
-            dat: "me",
-            acc: "me",
+      pronoun: {
+        "1per": {
+          singular: {
+            allPersonalGenders: {
+              nom: "I",
+              dat: "me",
+              acc: "me",
+            },
+          },
+          plural: {
+            allPersonalGenders: {
+              nom: "we",
+              dat: "us",
+              acc: "us",
+            },
           },
         },
-        plural: {
-          allPersonalGenders: {
-            nom: "we",
-            gen: "our",
-            genAdj: "ours",
-            dat: "us",
-            acc: "us",
+        "2per": {
+          singular: {
+            allPersonalGenders: {
+              nom: "you",
+              dat: "you",
+              acc: "you",
+            },
           },
-        },
-      },
-      "2per": {
-        singular: {
-          allPersonalGenders: {
-            nom: "you",
-            gen: "your",
-            genAdj: "yours",
-            dat: "you",
-            acc: "you",
-          },
-        },
-        plural: {
-          allPersonalGenders: {
-            nom: "you",
-            gen: "your",
-            genAdj: "yours",
-            dat: "you",
-            acc: "you",
+          plural: {
+            allPersonalGenders: {
+              nom: "you",
+              dat: "you",
+              acc: "you",
+            },
           },
         },
       },
@@ -313,20 +307,40 @@ let pronounSet = [
 
     //inflections
     inflections: {
-      "1per": {
-        singular: {
-          allPersonalSingularGenders: { determiner: "my", pronoun: "mine" },
+      determiner: {
+        "1per": {
+          singular: {
+            allPersonalSingularGenders: "my",
+          },
+          plural: {
+            allPluralGenders: "our",
+          },
         },
-        plural: {
-          allPluralGenders: { determiner: "our", pronoun: "ours" },
+        "2per": {
+          singular: {
+            allPersonalSingularGenders: "your",
+          },
+          plural: {
+            allPluralGenders: "your",
+          },
         },
       },
-      "2per": {
-        singular: {
-          allPersonalSingularGenders: { determiner: "your", pronoun: "yours" },
+      pronoun: {
+        "1per": {
+          singular: {
+            allPersonalSingularGenders: "mine",
+          },
+          plural: {
+            allPluralGenders: "ours",
+          },
         },
-        plural: {
-          allPluralGenders: { determiner: "your", pronoun: "yours" },
+        "2per": {
+          singular: {
+            allPersonalSingularGenders: "yours",
+          },
+          plural: {
+            allPluralGenders: "yours",
+          },
         },
       },
     },

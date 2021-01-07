@@ -175,7 +175,39 @@ exports.filterWithinSelectedLemmaObject = (
     let requirementArrs = [];
 
     inflectionChain.forEach((key) => {
-      requirementArrs.push([key, structureChunk[key] || []]);
+      let inflectionValueArr = [];
+
+      if (structureChunk[key]) {
+        structureChunk[key].forEach((inflectionValue) => {
+          let formattedFeatureValue = langUtils.formatFeatureValue(
+            key,
+            inflectionValue
+          );
+
+          let formattedFeatureValueArr = [];
+
+          if (Array.isArray(formattedFeatureValue)) {
+            formattedFeatureValueArr = formattedFeatureValue;
+          } else {
+            formattedFeatureValueArr.push(formattedFeatureValue);
+          }
+
+          inflectionValueArr = [
+            ...inflectionValueArr,
+            ...formattedFeatureValueArr,
+          ];
+        });
+      }
+
+      console.log("rrrrrrrrrrrrrr");
+      console.log("rrrrrrrrrrrrrr");
+      console.log("rrrrrrrrrrrrrr");
+      console.log({ key, inflectionValueArr });
+      console.log("rrrrrrrrrrrrrr");
+      console.log("rrrrrrrrrrrrrr");
+      console.log("rrrrrrrrrrrrrr");
+
+      requirementArrs.push([key, inflectionValueArr]);
     });
 
     let errorInDrilling = false;
@@ -185,11 +217,21 @@ exports.filterWithinSelectedLemmaObject = (
 
     let source = lemmaObject.inflections;
 
+    if (structureChunk.chunkId === "pro-2") {
+      console.log("source", source);
+      throw "Throe";
+    }
+
     exports.traverseAndRecordInflections(
       source,
       requirementArrs,
       outputUnitsWithDrillPaths
     );
+
+    if (structureChunk.chunkId === "pro-2") {
+      console.log("outputUnitsWithDrillPaths", outputUnitsWithDrillPaths);
+      throw "Throe";
+    }
 
     if (!outputUnitsWithDrillPaths || !outputUnitsWithDrillPaths.length) {
       errorInDrilling = true;

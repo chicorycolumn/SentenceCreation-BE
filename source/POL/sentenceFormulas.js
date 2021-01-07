@@ -773,6 +773,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
+        form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
       },
@@ -900,6 +901,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
+        form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         gcase: ["dat"],
@@ -923,6 +925,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
+        form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         // gender: [],
@@ -947,6 +950,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
+        form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         // gender: [],
@@ -971,6 +975,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
+        form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
         // gender: [],
@@ -1008,6 +1013,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
+        form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         gcase: ["dat"],

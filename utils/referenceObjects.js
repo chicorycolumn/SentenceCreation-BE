@@ -77,7 +77,7 @@ exports.postHocDependentChunkWordtypes = {
       PHD_type: "POL possessive pronoun",
       conditions: { wordtype: "pronoun", specificLemmas: ["POSSESSIVE"] },
       inflectionChains: {
-        postHocAgreeWithPrimary: ["person", "number", "gender"],
+        postHocAgreeWithPrimary: ["form", "person", "number", "gender"],
         postHocAgreeWithSecondary: ["number", "gender", "gcase"],
       },
     },
@@ -97,6 +97,12 @@ exports.lemmaObjectFeatures = {
       noun: ["number", "gcase"],
       adjective: ["form", "number", "gender", "gcase"],
       verb: ["form", "tense", "person", "number", "gender"],
+      pronoun: ["form", "person", "number", "gender", "gcase"],
+    },
+    inheritableInflectorKeys: {
+      noun: ["number", "gcase"],
+      adjective: ["number", "gender", "gcase"],
+      verb: ["tense", "person", "number", "gender"],
       pronoun: ["person", "number", "gender", "gcase"],
     },
     allowableTransfersFromQuestionStructure: {
@@ -121,13 +127,19 @@ exports.lemmaObjectFeatures = {
       noun: ["number", "gcase"],
       adjective: ["form"],
       verb: ["form", "tense", "person", "number"],
+      pronoun: ["form", "person", "number", "gender", "gcase"],
+    },
+    inheritableInflectorKeys: {
+      noun: ["number", "gcase"],
+      adjective: [],
+      verb: ["tense", "person", "number"],
       pronoun: ["person", "number", "gender", "gcase"],
     },
     allowableTransfersFromQuestionStructure: {
       noun: ["number"],
       adjective: ["form"],
       verb: ["tenseDescription", "person", "number"],
-      pronoun: ["person", "number", "gender"],
+      pronoun: ["form", "person", "number", "gender"],
     },
     undesiredClarifiersFromWhateverTheQLangMayBe: {
       //Actually we can just use allowableTransfers as the wanted clarifiers, rather than needing to specify the unwanted clarifiers.
