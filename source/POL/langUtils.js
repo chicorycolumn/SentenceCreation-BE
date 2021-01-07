@@ -163,32 +163,6 @@ exports.preprocessLemmaObjectsMinor = (matches) => {
   });
 };
 
-exports.formatFeatureValue = (featureKey, featureValue, note) => {
-  const virilityRef = {
-    plural: {
-      f: "nonvirile",
-      n: "nonvirile",
-      m3: "nonvirile",
-      m2: "nonvirile",
-      m1: "virile",
-    },
-  };
-
-  const shortHandGenderRef = { m: "m1", f: "f", n: "n" };
-
-  if (featureKey === "gender") {
-    if (note === "plural") {
-      return virilityRef[note][featureValue];
-    } else {
-      if (note === "person") {
-        return shortHandGenderRef[featureValue];
-      }
-    }
-  }
-
-  return featureValue;
-};
-
 exports.preprocessLemmaObjectsMajor = (
   matches,
   structureChunk,
@@ -220,6 +194,18 @@ exports.preprocessLemmaObjectsMajor = (
           );
         }
       );
+      gpUtils.findKeysInObjectAndExecuteCallback(
+        lObj,
+        "pronounAndDeterminer",
+        (obj) => {
+          gpUtils.copyValueOfKey(
+            obj,
+            "pronounAndDeterminer",
+            ["pronoun", "determiner"],
+            true
+          );
+        }
+      );
     }
   });
 
@@ -237,6 +223,32 @@ exports.preprocessLemmaObjectsMajor = (
       exports.adjustVirilityOfStructureChunk(structureChunk);
     }
   }
+};
+
+exports.formatFeatureValue = (featureKey, featureValue, note) => {
+  const virilityRef = {
+    plural: {
+      f: "nonvirile",
+      n: "nonvirile",
+      m3: "nonvirile",
+      m2: "nonvirile",
+      m1: "virile",
+    },
+  };
+
+  const shortHandGenderRef = { m: "m1", f: "f", n: "n" };
+
+  if (featureKey === "gender") {
+    if (note === "plural") {
+      return virilityRef[note][featureValue];
+    } else {
+      if (note === "person") {
+        return shortHandGenderRef[featureValue];
+      }
+    }
+  }
+
+  return featureValue;
 };
 
 exports.fillVerbInflections = (lemmaObject) => {

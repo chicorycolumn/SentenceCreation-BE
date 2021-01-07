@@ -122,6 +122,11 @@ exports.filterWithinSelectedLemmaObject = (
         }
       }
 
+      console.log(
+        ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>FIRST sourceCopy:",
+        source
+      );
+
       postHocInflectionChain.forEach((featureKey) => {
         let featureValue = headDrillPath.find(
           (arr) => arr[0] === featureKey
@@ -217,21 +222,11 @@ exports.filterWithinSelectedLemmaObject = (
 
     let source = lemmaObject.inflections;
 
-    if (structureChunk.chunkId === "pro-2") {
-      console.log("source", source);
-      throw "Throe";
-    }
-
     exports.traverseAndRecordInflections(
       source,
       requirementArrs,
       outputUnitsWithDrillPaths
     );
-
-    if (structureChunk.chunkId === "pro-2") {
-      console.log("outputUnitsWithDrillPaths", outputUnitsWithDrillPaths);
-      throw "Throe";
-    }
 
     if (!outputUnitsWithDrillPaths || !outputUnitsWithDrillPaths.length) {
       errorInDrilling = true;

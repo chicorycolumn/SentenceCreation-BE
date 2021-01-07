@@ -717,7 +717,7 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  xdescribe("/palette - Stage 14: Possessive pronouns.", () => {
+  describe("/palette - Stage 14: Possessive pronouns.", () => {
     it("#pal14-01a GET 200 YES: POL. I have my onion.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
