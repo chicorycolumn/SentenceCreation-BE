@@ -324,8 +324,6 @@ exports.processSentenceFormula = (
     );
   }
 
-  console.log("grandOutputArray", grandOutputArray);
-
   grandOutputArray.forEach((outputArray) => {
     postHocDependentChunks.forEach((postHocDependentChunk) => {
       let allPossOutputUnits_PHD = otUtils.findMatchingLemmaObjectThenWord(

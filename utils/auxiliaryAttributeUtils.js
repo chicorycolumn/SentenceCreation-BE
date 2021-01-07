@@ -457,18 +457,18 @@ exports.addSpecifiers = (
     }
   });
 
-  console.log("-----------------------");
-  console.log("-----------------------");
-  console.log("-----------------------");
-  console.log("-----------------------");
-  console.log("-----------------------");
-  console.log("----addSpecifiers------");
-  console.log("---------END-----------");
-  console.log("-----------------------");
-  console.log("-----------------------");
-  console.log("-----------------------");
-  console.log("questionOutputArr", questionOutputArr);
-  console.log("answerSentenceFormula", answerSentenceFormula);
+  // console.log("-----------------------");
+  // console.log("-----------------------");
+  // console.log("-----------------------");
+  // console.log("-----------------------");
+  // console.log("-----------------------");
+  // console.log("----addSpecifiers------");
+  // console.log("---------END-----------");
+  // console.log("-----------------------");
+  // console.log("-----------------------");
+  // console.log("-----------------------");
+  // console.log("questionOutputArr", questionOutputArr);
+  // console.log("answerSentenceFormula", answerSentenceFormula);
 };
 
 exports.sortAnswerAndQuestionStructureChunks = (

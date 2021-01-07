@@ -6,7 +6,7 @@ const {
 } = require("../utils/educatorUtils.js");
 const { expect } = require("chai");
 
-describe("findHomographs", () => {
+xdescribe("findHomographs", () => {
   it("#edu1.1 Gives all synhomograph lemma objects in one language.", () => {
     const currentLanguage = "ENG";
     const homographType = "syn";
@@ -285,7 +285,7 @@ describe("findHomographs", () => {
   });
 });
 
-describe("checkLemmaObjectIds", () => {
+xdescribe("checkLemmaObjectIds", () => {
   it("#edu2.1 Gives a schematic and duplicateIds. ENG", () => {
     const currentLanguage = "ENG";
 
@@ -320,7 +320,7 @@ describe("checkLemmaObjectIds", () => {
   });
 });
 
-describe("checkSentenceFormulaIds", () => {
+xdescribe("checkSentenceFormulaIds", () => {
   it("#edu3.1 Gives a schematic and duplicateIds. ENG", () => {
     const currentLanguage = "ENG";
 
@@ -343,7 +343,7 @@ describe("checkSentenceFormulaIds", () => {
   });
 });
 
-describe("checkWords", () => {
+xdescribe("checkWords", () => {
   it("#edu4.1 Checks words for specific keys that might not have been specified. POL", () => {
     const currentLanguage = "POL";
 
@@ -368,7 +368,7 @@ describe("checkWords", () => {
   });
 });
 
-describe("Educator Battery", () => {
+xdescribe("Educator Battery", () => {
   it("#eduBat-01 Gives ENG synhomograph lemma objects. (Used programmatically for Type 1 Synhomos)", () => {
     const currentLanguage = "ENG";
     const homographType = "syn";

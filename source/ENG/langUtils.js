@@ -181,14 +181,6 @@ exports.preprocessLemmaObjectsMinor = (matches) => {
 };
 
 exports.formatFeatureValue = (featureKey, featureValue, note) => {
-  console.log("ppppppppppppppp");
-  console.log("ppppppppppppppp");
-  console.log("ppppppppppppppp");
-  console.log({ featureKey, featureValue, note });
-  console.log("ppppppppppppppp");
-  console.log("ppppppppppppppp");
-  console.log("ppppppppppppppp");
-
   const metagenderRef = {
     allGenders: [
       "allPersonalSingularGenders",

@@ -61,15 +61,6 @@ exports.filterWithinSelectedLemmaObject = (
       currentLanguage
     ].find((PHD_dataObj) => PHD_dataObj.PHD_type === PHD_type).inflectionChains;
 
-    console.log("=========================");
-    console.log("=========================");
-    console.log("=========================");
-    console.log("outputArray", outputArray);
-    console.log("postHocInflectionChains", postHocInflectionChains);
-    console.log("=========================");
-    console.log("=========================");
-    console.log("=========================");
-
     let lemmaObjectCopy = gpUtils.copyWithoutReference(lemmaObject);
 
     langUtils.preprocessLemmaObjectsMajor(
@@ -203,14 +194,6 @@ exports.filterWithinSelectedLemmaObject = (
           ];
         });
       }
-
-      console.log("rrrrrrrrrrrrrr");
-      console.log("rrrrrrrrrrrrrr");
-      console.log("rrrrrrrrrrrrrr");
-      console.log({ key, inflectionValueArr });
-      console.log("rrrrrrrrrrrrrr");
-      console.log("rrrrrrrrrrrrrr");
-      console.log("rrrrrrrrrrrrrr");
 
       requirementArrs.push([key, inflectionValueArr]);
     });
@@ -403,15 +386,6 @@ exports.traverseAndRecordInflections = (
   outputUnitsWithDrillPaths,
   outputUnitsWithDrillPathsMini
 ) => {
-  console.log("fff>traverseAndRecordInflections was given:", {
-    source,
-    reqArr,
-    outputUnitsWithDrillPaths,
-    outputUnitsWithDrillPathsMini,
-  });
-
-  console.log("reqArr", reqArr);
-
   if (!outputUnitsWithDrillPathsMini) {
     outputUnitsWithDrillPathsMini = [];
   }
