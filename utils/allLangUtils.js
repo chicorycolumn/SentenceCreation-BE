@@ -13,6 +13,12 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
       }
     }
 
+    if (structureChunk.wordtype === "pronoun") {
+      if (!structureChunk.form || !structureChunk.form.length) {
+        structureChunk.form = ["pronoun"];
+      }
+    }
+
     if (
       structureChunk.wordtype === "noun" ||
       structureChunk.wordtype === "pronoun"
@@ -52,11 +58,13 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
 
       if (structureChunk.agreeWith) {
         if (
-          structureChunk.agreeWith.slice(0, 3) === "nou" &&
+          gpUtils.getWordtypeOfAgreeWith(structureChunk) === "noun" &&
           (!structureChunk.person || !structureChunk.person.length)
         ) {
           structureChunk.person = ["3per"];
-        } else if (structureChunk.agreeWith.slice(0, 3) === "pro") {
+        } else if (
+          gpUtils.getWordtypeOfAgreeWith(structureChunk) === "pronoun"
+        ) {
           let headChunk = (structureChunk.person = sentenceStructure.find(
             (potentialHeadChunk) => {
               return potentialHeadChunk.chunkId === structureChunk.agreeWith;
@@ -94,5 +102,20 @@ exports.preprocessLemmaObjects = (lObjArr, currentLanguage) => {
         }
       );
     });
+
+    if (gpUtils.getWordtypeFromLemmaObject(lObj) === "pronoun") {
+      gpUtils.findKeysInObjectAndExecuteCallback(
+        lObj,
+        "pronounAndDeterminer",
+        (obj) => {
+          gpUtils.copyValueOfKey(
+            obj,
+            "pronounAndDeterminer",
+            ["pronoun", "determiner"],
+            true
+          );
+        }
+      );
+    }
   });
 };

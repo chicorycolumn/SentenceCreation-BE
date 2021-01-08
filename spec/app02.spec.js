@@ -842,6 +842,104 @@ describe("/api", () => {
           );
         });
     });
+    it("#pal14-02a GET 200 YES: ENG to POL. My father gave me a book.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          doNotSpecify: true,
+          hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "113 my father gave me a book",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "My father gave me a book.",
+              POL: ["Mój ojciec dał mi książkę."],
+            },
+            {
+              ENG: "My mother gave me a book.",
+              POL: ["Moja matka dała mi książkę."],
+            },
+            {
+              ENG: "Our father gave us a book.",
+              POL: ["Nasz ojciec dał nam książkę."],
+            },
+            {
+              ENG: "Our mother gave us a book.",
+              POL: ["Nasza matka dała nam książkę."],
+            },
+          ];
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal14-02b GET 200 YES: POL to ENG. My father gave me a book.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          doNotSpecify: true,
+          hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "113 my father gave me a book",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              POL: "Mój ojciec dał mi książkę.",
+              ENG: [
+                "My father gave me a book.",
+                "My father had given me a book.",
+                "My father has given me a book.",
+              ],
+            },
+            {
+              POL: "Moja matka dała mi książkę.",
+              ENG: [
+                "My mother gave me a book.",
+                "My mother had given me a book.",
+                "My mother has given me a book.",
+              ],
+            },
+            {
+              POL: "Nasz ojciec dał nam książkę.",
+              ENG: [
+                "Our father gave us a book.",
+                "Our father had given us a book.",
+                "Our father has given us a book.",
+              ],
+            },
+            {
+              POL: "Nasza matka dała nam książkę.",
+              ENG: [
+                "Our mother gave us a book.",
+                "Our mother had given us a book.",
+                "Our mother has given us a book.",
+              ],
+            },
+          ];
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
   });
 
   describe("/palette - Stage 13B: Pronouns and other Multi Gender Nouns: Further tests.", () => {

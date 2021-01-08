@@ -773,7 +773,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
-        form: ["pronoun"],
+        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
       },
@@ -901,7 +901,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
-        form: ["pronoun"],
+        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         gcase: ["dat"],
@@ -925,7 +925,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
-        form: ["pronoun"],
+        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         // gender: [],
@@ -950,7 +950,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
-        form: ["pronoun"],
+        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         // gender: [],
@@ -975,7 +975,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
-        form: ["pronoun"],
+        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
         // gender: [],
@@ -1013,7 +1013,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
-        form: ["pronoun"],
+        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         gcase: ["dat"],
@@ -1027,6 +1027,61 @@ exports.sentenceFormulasBank = [
       },
     ],
     primaryOrders: [["nou-1", "ver-1", "pro-1", "nou-2"]],
+    additionalOrders: [],
+  },
+  {
+    sentenceFormulaSymbol: "113 my father gave me a book",
+    sentenceFormulaId: "POL-00-113",
+    translations: { ENG: ["ENG-00-113"] },
+    sentenceStructure: [
+      //I, my father, gave me his book.
+      {
+        chunkId: "pro-1-invisible",
+        wordtype: "pronoun",
+        // form: ["pronoun"],
+        specificLemmas: ["PERSONAL"],
+        person: ["1per"],
+      },
+      {
+        chunkId: "pro-2",
+        wordtype: "pronoun",
+        form: ["determiner"],
+        specificLemmas: ["POSSESSIVE"],
+        postHocAgreeWithPrimary: "pro-1-invisible",
+        postHocAgreeWithSecondary: "nou-1",
+      },
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        andTags: ["family"],
+        gcase: ["nom"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1",
+        agreeWith: "nou-1",
+        wordtype: "verb",
+        specificLemmas: ["dawać", "dać"],
+        tenseDescription: ["past pf"],
+      },
+      {
+        chunkId: "pro-3",
+        wordtype: "pronoun",
+        agreeWith: "pro-1-invisible",
+        gcase: ["dat"],
+        importantFeatures: ["gcase"],
+        // form: ["pronoun"],
+        specificLemmas: ["PERSONAL"],
+      },
+      {
+        chunkId: "nou-2",
+        wordtype: "noun",
+        specificLemmas: ["książka"],
+        gcase: ["acc"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [["pro-2", "nou-1", "ver-1", "pro-3", "nou-2"]],
     additionalOrders: [],
   },
 ];

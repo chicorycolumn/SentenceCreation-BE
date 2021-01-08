@@ -391,6 +391,29 @@ exports.getWordtypeFromLemmaObject = (lObj) => {
 
   let wordtypeShorthand = lObj.id.split("-")[1];
 
+  if (!Object.keys(wordtypeRef).includes(wordtypeShorthand)) {
+    throw "#ERR -----------------> getWordtypeFromLemmaObject";
+  }
+
+  return wordtypeRef[wordtypeShorthand];
+};
+
+exports.getWordtypeOfAgreeWith = (structureChunk) => {
+  const wordtypeRef = {
+    nou: "noun",
+    ver: "verb",
+    adj: "adjective",
+    adv: "adverb",
+    pro: "pronoun",
+    art: "article",
+  };
+
+  let wordtypeShorthand = structureChunk.agreeWith.split("-")[0];
+
+  if (!Object.keys(wordtypeRef).includes(wordtypeShorthand)) {
+    throw "#ERR -----------------> getWordtypeFromLemmaObject";
+  }
+
   return wordtypeRef[wordtypeShorthand];
 };
 

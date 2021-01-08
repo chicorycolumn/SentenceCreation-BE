@@ -431,6 +431,10 @@ exports.findMatchingLemmaObjectThenWord = (
 
   if (!arrayOfAllPossibleOutputUnits.length) {
     if (!errorInSentenceCreation.errorMessage) {
+      console.log(
+        "The rrrequested inflections were not found in the selected lemma objects."
+      );
+      console.log("structureChunk", structureChunk);
       errorInSentenceCreation.errorMessage =
         "The rrrequested inflections were not found in the selected lemma objects.";
     }

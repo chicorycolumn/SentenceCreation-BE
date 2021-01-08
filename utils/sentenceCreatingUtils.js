@@ -1,6 +1,7 @@
 const otUtils = require("./objectTraversingUtils.js");
 const gpUtils = require("./generalPurposeUtils.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
+const tvUtils = require("./temporaryValidationUtils.js");
 const refObj = require("./referenceObjects.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 
@@ -91,6 +92,8 @@ exports.getMaterials = (
   Object.keys(words).forEach((wordtypeKey) => {
     langUtils.preprocessLemmaObjectsMinor(words[wordtypeKey]);
   });
+
+  tvUtils.validateSentenceFormula(sentenceFormula);
 
   return { sentenceFormula, words };
 };
@@ -758,7 +761,13 @@ exports.inheritFromHeadToDependentChunk = (
 
   inheritableInflectorKeys.forEach((inflectorKey) => {
     //HARD CHANGE
-    if (headChunk[inflectorKey]) {
+    if (
+      headChunk[inflectorKey] &&
+      !(
+        dependentChunk.importantFeatures &&
+        dependentChunk.importantFeatures.includes(inflectorKey)
+      )
+    ) {
       let inflectorValueArr = gpUtils.copyWithoutReference(
         headChunk[inflectorKey]
       );
@@ -779,9 +788,12 @@ exports.sortStructureChunks = (sentenceStructure) => {
         })
         .filter((item) => item)
     )
-  ).map((headId) =>
-    sentenceStructure.find((chunk) => chunk.chunkId === headId)
-  );
+  ).map((headId) => {
+    console.log("b22", headId);
+    return sentenceStructure.find((chunk) => chunk.chunkId === headId);
+  });
+
+  console.log("a11", headChunks);
 
   let dependentChunks = sentenceStructure.filter(
     (structureChunk) =>

@@ -52,50 +52,18 @@ exports.preprocessLemmaObjectsMajor = (
   structureChunk,
   adjustLemmaObjectsOnly
 ) => {
+  if (!matches.length) {
+    return;
+  }
+
+  if (
+    gpUtils.getWordtypeFromLemmaObject(matches[0]) !== structureChunk.wordtype
+  ) {
+    throw "#ERR ----------> POL preprocessLemmaObjectsMajor fxn, the wordtypes from stCh and lObjs didn't match.";
+  }
+
   allLangUtils.preprocessLemmaObjects(matches, "POL");
 
-  matches.forEach((lObj) => {
-    if (gpUtils.getWordtypeFromLemmaObject(lObj) === "pronoun") {
-      gpUtils.findKeysInObjectAndExecuteCallback(
-        lObj,
-        "allPersonalSingularGenders",
-        (obj) => {
-          gpUtils.copyValueOfKey(
-            obj,
-            "allPersonalSingularGenders",
-            ["m1", "f"],
-            false
-          );
-        }
-      );
-      gpUtils.findKeysInObjectAndExecuteCallback(
-        lObj,
-        "allPluralGenders",
-        (obj) => {
-          gpUtils.copyValueOfKey(
-            obj,
-            "allPluralGenders",
-            ["virile", "nonvirile"],
-            false
-          );
-        }
-      );
-      gpUtils.findKeysInObjectAndExecuteCallback(
-        lObj,
-        "pronounAndDeterminer",
-        (obj) => {
-          gpUtils.copyValueOfKey(
-            obj,
-            "pronounAndDeterminer",
-            ["pronoun", "determiner"],
-            true
-          );
-        }
-      );
-    }
-  });
-
-  //Delta: Change these to testing the lObjs themselves for wordtype.
   if (["verb"].includes(structureChunk.wordtype)) {
     matches.forEach((lObj) => exports.fillVerbInflections(lObj));
   }
@@ -113,21 +81,24 @@ exports.preprocessLemmaObjectsMajor = (
 
 exports.preprocessLemmaObjectsMinor = (matches) => {
   matches.forEach((lObj) => {
-    //Perfective and Imperfective
-    if (lObj.imperfectiveOnly_unadjusted && lObj.aspect === "imperfective") {
-      lObj.imperfectiveOnly = true;
-      delete lObj.imperfectiveOnly_unadjusted;
-
-      let adjustedLemmaObject = gpUtils.copyWithoutReference(lObj);
-      adjustedLemmaObject.aspect = "perfective";
-
-      let newIdArr = lObj.id.split("-");
-      newIdArr[3] = "pf";
-      adjustedLemmaObject.id = newIdArr.join("-");
-
-      matches.push(adjustedLemmaObject);
-    }
+    exports.adjustImperfectiveOnly(matches, lObj);
   });
+};
+
+exports.adjustImperfectiveOnly = (matches, lObj) => {
+  if (lObj.imperfectiveOnly_unadjusted && lObj.aspect === "imperfective") {
+    lObj.imperfectiveOnly = true;
+    delete lObj.imperfectiveOnly_unadjusted;
+
+    let adjustedLemmaObject = gpUtils.copyWithoutReference(lObj);
+    adjustedLemmaObject.aspect = "perfective";
+
+    let newIdArr = lObj.id.split("-");
+    newIdArr[3] = "pf";
+    adjustedLemmaObject.id = newIdArr.join("-");
+
+    matches.push(adjustedLemmaObject);
+  }
 };
 
 exports.addLanguageParticularClarifiers = () => {
@@ -499,71 +470,6 @@ exports.fillVerbInflections = (lemmaObject) => {
     };
   }
 
-  gpUtils.findKeysInObjectAndExecuteCallback(
-    inflections,
-    "allSingularGenders",
-    (obj) => {
-      gpUtils.copyValueOfKey(
-        obj,
-        "allSingularGenders",
-        ["m1", "m2", "m3", "f", "n"],
-        true
-      );
-    }
-  );
-
-  gpUtils.findKeysInObjectAndExecuteCallback(
-    inflections,
-    "allSingularGendersExcludingNeuter",
-    (obj) => {
-      gpUtils.copyValueOfKey(
-        obj,
-        "allSingularGendersExcludingNeuter",
-        ["m1", "m2", "m3", "f"],
-        true
-      );
-    }
-  );
-
-  gpUtils.findKeysInObjectAndExecuteCallback(
-    inflections,
-    "allPluralGenders",
-    (obj) => {
-      gpUtils.copyValueOfKey(
-        obj,
-        "allPluralGenders",
-        ["virile", "nonvirile"],
-        true
-      );
-    }
-  );
-
-  gpUtils.findKeysInObjectAndExecuteCallback(
-    inflections,
-    "allPersons",
-    (obj) => {
-      gpUtils.copyValueOfKey(
-        obj,
-        "allPersons",
-        ["impersonal", "1per", "2per", "3per"],
-        true
-      );
-    }
-  );
-
-  gpUtils.findKeysInObjectAndExecuteCallback(
-    inflections,
-    "allPersonsExceptImpersonal",
-    (obj) => {
-      gpUtils.copyValueOfKey(
-        obj,
-        "allPersonsExceptImpersonal",
-        ["1per", "2per", "3per"],
-        true
-      );
-    }
-  );
-
   // Masculinist agenda
   gpUtils.findKeysInObjectAndExecuteCallback(inflections, "m", (obj) => {
     gpUtils.copyValueOfKey(obj, "m", ["m1", "m2", "m3"], true);
@@ -642,29 +548,29 @@ exports.preventMasculineOverrepresentation = (
       structureChunk.wordtype
     ].includes("gender")
   ) {
-    exports.bulkUpGenderArrayToPreventMasculineOverrepresentation(
+    bulkUpGenderArrayToPreventMasculineOverrepresentation(
       structureChunk.gender
     );
   }
-};
 
-exports.bulkUpGenderArrayToPreventMasculineOverrepresentation = (array) => {
-  if (!array) {
-    return;
-  }
+  function bulkUpGenderArrayToPreventMasculineOverrepresentation(array) {
+    if (!array) {
+      return;
+    }
 
-  const masculineSubgenders = ["m1", "m2", "m3"];
+    const masculineSubgenders = ["m1", "m2", "m3"];
 
-  if (masculineSubgenders.every((subgender) => array.includes(subgender))) {
-    array.forEach((gender) => {
-      if (!masculineSubgenders.includes(gender)) {
-        array.push(gender);
-        array.push(gender);
-      }
-    });
-    // console.log(
-    //   "Hey! To prevent Masculinist Agenda: Overrepresentation, I adjusted the array to this:",
-    //   array
-    // );
+    if (masculineSubgenders.every((subgender) => array.includes(subgender))) {
+      array.forEach((gender) => {
+        if (!masculineSubgenders.includes(gender)) {
+          array.push(gender);
+          array.push(gender);
+        }
+      });
+      // console.log(
+      //   "Hey! To prevent Masculinist Agenda: Overrepresentation, I adjusted the array to this:",
+      //   array
+      // );
+    }
   }
 };

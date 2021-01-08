@@ -54,6 +54,18 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
       return;
     }
 
+    if (structureChunk.wordtype === "noun") {
+      if (structureChunk.gcase && structureChunk.gcase.length) {
+        console.log("f22", structureChunk.gcase);
+
+        structureChunk.gcase = structureChunk.gcase.map((gcaseValue) => {
+          return ["nom", "gen"].includes(gcaseValue) ? gcaseValue : "nom";
+        });
+
+        console.log("g22", structureChunk.gcase);
+      }
+    }
+
     if (
       //If gender is an appropriate feature of this wordtype.
       refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
@@ -95,8 +107,6 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
 };
 
 exports.preprocessLemmaObjectsMajor = (matches, structureChunk) => {
-  allLangUtils.preprocessLemmaObjects(matches, "ENG");
-
   matches.forEach((lObj) => {
     if (gpUtils.getWordtypeFromLemmaObject(lObj) === "pronoun") {
       if (!structureChunk.wordtype === "pronoun") {
@@ -112,49 +122,11 @@ exports.preprocessLemmaObjectsMajor = (matches, structureChunk) => {
         } else {
           structureChunk.gender = ["allSingularGenders"];
         }
-
-        // throw "Error------------->I expected stCh to have a gender key.";
       }
-
-      gpUtils.findKeysInObjectAndExecuteCallback(
-        lObj,
-        "allPersonalGenders",
-        (obj) => {
-          gpUtils.copyValueOfKey(
-            obj,
-            "allPersonalGenders",
-            ["virile", "nonvirile", "m", "f"], //Beta: This is kind of kowtowing.
-            false
-          );
-        }
-      );
-
-      gpUtils.findKeysInObjectAndExecuteCallback(
-        lObj,
-        "allSingularGenders",
-        (obj) => {
-          gpUtils.copyValueOfKey(
-            obj,
-            "allSingularGenders",
-            ["nonvirile", "m", "f", "n"], //Beta: This is kind of kowtowing.
-            false
-          );
-        }
-      );
-
-      // let genderValueArr = structureChunk.gender;
-
-      // genderValueArr.forEach((genderValue) => {
-      //   gpUtils.findKeysInObjectAndExecuteCallback(
-      //     lemmaObject,
-      //     "allGenders",
-      //     (obj) => {
-      //       obj[genderValue] = obj["allGenders"];
-      //     }
-      //   );
-      // });
     }
   });
+
+  allLangUtils.preprocessLemmaObjects(matches, "ENG");
 };
 
 exports.preprocessLemmaObjectsMinor = (matches) => {
@@ -167,11 +139,6 @@ exports.preprocessLemmaObjectsMinor = (matches) => {
             lObj.id +
             "' is a person so should have a gender key."
           );
-        } else if (lObj.gender === "m/f" || lObj.gender === "f/m") {
-          // let lObjCopy = gpUtils.copyWithoutReference(lObj);
-          // lObj.gender = "f";
-          // lObjCopy.gender = "m";
-          // matches.push(lObjCopy);
         }
       } else {
         lObj.gender = "n";

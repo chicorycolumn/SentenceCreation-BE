@@ -64,6 +64,8 @@ exports.metaFeatures = {
         "nonvirile",
         "nonvirile",
       ],
+      //
+      allSingularGendersExcludingNeuter: ["m1", "m2", "m3", "f", "f", "f"],
     },
   },
 };
