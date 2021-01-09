@@ -472,12 +472,14 @@ exports.buildSentenceString = (
   currentLanguage,
   answerLanguage
 ) => {
-  let arrayOfSelectedWordsArrays = [];
+  console.log("unorderedArr", unorderedArr);
+
+  let arrayOfOutputArrays = [];
   let producedSentences = [];
 
   if (!sentenceFormula.primaryOrders || !sentenceFormula.primaryOrders.length) {
-    let selectedWordsArr = unorderedArr.map((obj) => obj.selectedWord);
-    arrayOfSelectedWordsArrays.push(selectedWordsArr);
+    // let selectedWordsArr = unorderedArr.map((obj) => obj.selectedWord);
+    arrayOfOutputArrays.push(unorderedArr);
   } else {
     if (kumquat) {
       let allOrders = [];
@@ -496,8 +498,8 @@ exports.buildSentenceString = (
           );
         });
 
-        let selectedWordsArr = orderedArr.map((obj) => obj.selectedWord);
-        arrayOfSelectedWordsArrays.push(selectedWordsArr);
+        // let selectedWordsArr = orderedArr.map((obj) => obj.selectedWord);
+        arrayOfOutputArrays.push(orderedArr);
       });
     } else {
       let order = gpUtils.selectRandom(sentenceFormula.primaryOrders);
@@ -509,19 +511,69 @@ exports.buildSentenceString = (
         );
       });
 
-      let selectedWordsArr = orderedArr.map((obj) => obj.selectedWord);
-      arrayOfSelectedWordsArrays.push(selectedWordsArr);
+      // let selectedWordsArr = orderedArr.map((obj) => obj.selectedWord);
+      arrayOfOutputArrays.push(orderedArr);
     }
   }
 
-  arrayOfSelectedWordsArrays.forEach((selectedWordsArr) => {
-    let producedSentence = gpUtils.capitaliseFirst(
-      selectedWordsArr.join(" ") + "."
+  arrayOfOutputArrays.forEach((outputArr) => {
+    let arrOfFinalSelectedWordsArrs = exports.selectWordVersions(
+      outputArr,
+      currentLanguage
     );
-    producedSentences.push(producedSentence);
+
+    arrOfFinalSelectedWordsArrs.forEach((finalSelectedWordsArr) => {
+      let producedSentence = gpUtils.capitaliseFirst(
+        finalSelectedWordsArr.join(" ") + "."
+      );
+      producedSentences.push(producedSentence);
+    });
   });
 
   return producedSentences;
+};
+
+exports.selectWordVersions = (outputArr) => {
+  let arrOfSelectedWordsArr = [];
+
+  let selectedWordsArr = [];
+
+  outputArr.forEach((outputUnit) => {
+    let { selectedWord } = outputUnit;
+
+    if (typeof selectedWord === "string") {
+      selectedWordsArr.push(selectedWord);
+    } else if (
+      gpUtils.isKeyValueTypeObject(selectedWord) &&
+      selectedWord.isTerminus
+    ) {
+      //This is where we need to detect things...
+
+      //ENG
+      //if (outputUnit.structureChunk.wordtype === "article" && outputUnit.structureChunk.form === "indefinite"){
+      //  Check if following selectedWord begins with vowel OR lObj.beginWithVowelSound === true
+      //  and in that case, choose {preConsonant: "a", preVowel: "an", isTerminus: true} accordingly.
+      //}
+
+      //POL
+      //if("pronoun" && isTerminus){
+      //  Check if preceding structureChunk is preposition, and if so, choose "postPreposition" version.
+      //  Check if structureChunk has a version key, and if so, choose both of those each.
+      //}
+      //if("preposition"){
+      //  Check the thing where "w" and "z" should become "we" and "za".
+      //  we wschodzie...
+      //}
+
+      selectedWordsArr.push(selectedWord.unstressed);
+    } else {
+      throw "#ERR --------------------------------------> I expected either a string or a terminus object for this selectedWord.";
+    }
+  });
+
+  arrOfSelectedWordsArr.push(selectedWordsArr);
+
+  return arrOfSelectedWordsArr;
 };
 
 exports.conformAnswerStructureToQuestionStructure = (

@@ -312,6 +312,7 @@ exports.findMatchingLemmaObjectThenWord = (
     let matchesCopy = matches.slice(0);
 
     if (!matchesCopy.length) {
+      // console.log("10 errorInSentenceCreation.errorMessage: No matching lemma objects were found.")
       // errorInSentenceCreation.errorMessage =
       //   "No matching lemma objects were found.";
       console.log(
@@ -327,6 +328,7 @@ exports.findMatchingLemmaObjectThenWord = (
     );
 
     if (!matchesCopy.length) {
+      // console.log("11 errorInSentenceCreation.errorMessage: No matching lemma objects were found.")
       // errorInSentenceCreation.errorMessage =
       //   "No matching lemma objects were found.";
       console.log(
@@ -343,6 +345,7 @@ exports.findMatchingLemmaObjectThenWord = (
     );
 
     if (!matchesCopy.length) {
+      // console.log("12 errorInSentenceCreation.errorMessage: No matching lemma objects were found.")
       // errorInSentenceCreation.errorMessage =
       //   "No matching lemma objects were found.";
       console.log(
@@ -409,6 +412,9 @@ exports.findMatchingLemmaObjectThenWord = (
       let { errorInDrilling, selectedWordArray, drillPath } = unit;
 
       if (!selectedWordArray || !selectedWordArray.length) {
+        console.log(
+          "13 errorInSentenceCreation.errorMessage: No lemma objects were found for these specifications."
+        );
         errorInSentenceCreation.errorMessage =
           "No lemma objects were found for these specifications.";
         return false;
@@ -432,7 +438,7 @@ exports.findMatchingLemmaObjectThenWord = (
   if (!arrayOfAllPossibleOutputUnits.length) {
     if (!errorInSentenceCreation.errorMessage) {
       console.log(
-        "The rrrequested inflections were not found in the selected lemma objects."
+        "14 errorInSentenceCreation.errorMessage: The rrrequested inflections were not found in the selected lemma objects."
       );
       console.log("structureChunk", structureChunk);
       errorInSentenceCreation.errorMessage =
@@ -459,6 +465,9 @@ exports.createOutputUnit = (
   drillPath
 ) => {
   if (errorInDrilling || !selectedWord) {
+    console.log(
+      "15 errorInSentenceCreation.errorMessage: A lemma object was indeed selected, but no word was found at the end of the give inflection chain."
+    );
     errorInSentenceCreation.errorMessage =
       "A lemma object was indeed selected, but no word was found at the end of the give inflection chain.";
     return false;

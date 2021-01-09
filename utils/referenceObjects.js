@@ -21,7 +21,7 @@ exports.giveAdjustedFeatureValue = (
         return adjustedFeatureValueArr;
       } else {
         throw (
-          "Error! ------------------> REF:adjustedFeatureValueArr found no adjusted feature value for '" +
+          "#ERR ------------------> REF:adjustedFeatureValueArr found no adjusted feature value for '" +
           featureValue +
           "' feature value."
         );

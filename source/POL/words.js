@@ -674,7 +674,8 @@ let pronounSet = [
         "1per": {
           singular: {
             m1: {
-              nom: { unstressed: "ja" },
+              nom: { isTerminus: true, unstressed: "ja" },
+              // nom: "ja",
               gen: "mnie",
               dat: "mi",
               acc: "mnie",
@@ -682,7 +683,8 @@ let pronounSet = [
               loc: "mnie",
             },
             f: {
-              nom: "ja",
+              nom: { isTerminus: true, unstressed: "ja" },
+              // nom: "ja",
               gen: "mnie",
               dat: "mi",
               acc: "mnie",

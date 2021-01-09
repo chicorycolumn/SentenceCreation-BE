@@ -211,6 +211,8 @@ exports.filterWithinSelectedLemmaObject = (
       outputUnitsWithDrillPaths
     );
 
+    console.log("h22", "outputUnitsWithDrillPaths", outputUnitsWithDrillPaths);
+
     if (!outputUnitsWithDrillPaths || !outputUnitsWithDrillPaths.length) {
       console.log(
         "#ERR --------------------------------------> traverseAndRecordInflections returned FALSY for " +
@@ -231,6 +233,8 @@ exports.filterWithinSelectedLemmaObject = (
       let selectedPath = gpUtils.selectRandom(outputUnitsWithDrillPaths);
 
       let { selectedWordArray, drillPath } = selectedPath;
+
+      console.log("h23", selectedWordArray);
 
       return [
         {
@@ -402,22 +406,25 @@ exports.traverseAndRecordInflections = (
   reqInflectorArr.forEach((chosenInflector, reqInflectorArrIndex) => {
     if (
       typeof source[chosenInflector] === "string" ||
-      Array.isArray(source[chosenInflector])
+      Array.isArray(source[chosenInflector]) ||
+      (source[chosenInflector] && source[chosenInflector].isTerminus)
     ) {
       outputUnitsWithDrillPathsMini.push([reqInflectorLabel, chosenInflector]);
 
       outputUnitsWithDrillPaths.push({
-        selectedWordArray:
-          typeof source[chosenInflector] === "string"
-            ? [source[chosenInflector]]
-            : source[chosenInflector],
+        selectedWordArray: Array.isArray(source[chosenInflector])
+          ? source[chosenInflector]
+          : [source[chosenInflector]],
         drillPath: outputUnitsWithDrillPathsMini.slice(0),
       });
 
       outputUnitsWithDrillPathsMini.pop();
 
       return source[chosenInflector];
-    } else if (typeof source[chosenInflector] === "object") {
+    } else if (
+      gpUtils.isKeyValueTypeObject(source[chosenInflector]) &&
+      !source[chosenInflector].isTerminus
+    ) {
       outputUnitsWithDrillPathsMini.push([reqInflectorLabel, chosenInflector]);
 
       exports.traverseAndRecordInflections(

@@ -34,7 +34,7 @@ exports.fetchPalette = (req) => {
 
   if (!questionSentenceData) {
     console.log(
-      "Error! ---------------> In fetchPalette the question arrayOfOutputArrays came back NOTHING."
+      "#ERR ---------------> In fetchPalette the question arrayOfOutputArrays came back NOTHING."
     );
 
     let questionResponseObj = scUtils.giveFinalSentences(
@@ -52,7 +52,7 @@ exports.fetchPalette = (req) => {
     !questionSentenceData.arrayOfOutputArrays.length
   ) {
     console.log(
-      "Error! ---------------> In fetchPalette the question arrayOfOutputArrays came back NONE."
+      "#ERR ---------------> In fetchPalette the question arrayOfOutputArrays came back NONE."
     );
 
     let questionResponseObj = scUtils.giveFinalSentences(

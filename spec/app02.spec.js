@@ -718,7 +718,7 @@ describe("/api", () => {
   // beforeEach(() => {});
 
   describe("/palette - Stage 14: Possessive pronouns.", () => {
-    it("#pal14-01a GET 200 YES: POL. I have my onion.", () => {
+    it.only("#pal14-01a GET 200 YES: POL. I have my onion.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -800,7 +800,7 @@ describe("/api", () => {
           );
         });
     });
-    it.only("#pal14-01d GET 200 YES: POL to ENG. I have my onion.", () => {
+    it("#pal14-01d GET 200 YES: POL to ENG. I have my onion.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
