@@ -674,7 +674,7 @@ let pronounSet = [
         "1per": {
           singular: {
             m1: {
-              nom: "ja",
+              nom: { unstressed: "ja" },
               gen: "mnie",
               dat: "mi",
               acc: "mnie",
@@ -744,6 +744,44 @@ let pronounSet = [
               acc: "was",
               ins: "wami",
               loc: "was",
+            },
+          },
+        },
+        "3per": {
+          singular: {
+            m1: {
+              nom: "on",
+              gen: "mnie",
+              dat: "mi",
+              acc: "mnie",
+              ins: "mną",
+              loc: "mnie",
+            },
+            f: {
+              nom: "ja",
+              gen: "mnie",
+              dat: "mi",
+              acc: "mnie",
+              ins: "mną",
+              loc: "mnie",
+            },
+          },
+          plural: {
+            virile: {
+              nom: "my",
+              gen: "nas",
+              dat: "nam",
+              acc: "nas",
+              ins: "nami",
+              loc: "nas",
+            },
+            nonvirile: {
+              nom: "my",
+              gen: "nas",
+              dat: "nam",
+              acc: "nas",
+              ins: "nami",
+              loc: "nas",
             },
           },
         },
@@ -1020,6 +1058,100 @@ let pronounSet = [
                   acc: "wasze",
                   ins: "waszymi",
                   loc: "waszych",
+                },
+              },
+            },
+          },
+        },
+        "3per": {
+          singular: {
+            allMasculineSingularGenders: {
+              singular: {
+                allSingularGenders: {
+                  nom: "jego",
+                  gen: "jego",
+                  dat: "jego",
+                  acc: "jego",
+                  ins: "jego",
+                  loc: "jego",
+                },
+              },
+              plural: {
+                allPluralGenders: {
+                  nom: "jego",
+                  gen: "jego",
+                  dat: "jego",
+                  acc: "jego",
+                  ins: "jego",
+                  loc: "jego",
+                },
+              },
+            },
+            f: {
+              singular: {
+                allSingularGenders: {
+                  nom: "jej",
+                  gen: "jej",
+                  dat: "jej",
+                  acc: "jej",
+                  ins: "jej",
+                  loc: "jej",
+                },
+              },
+              plural: {
+                allPluralGenders: {
+                  nom: "jej",
+                  gen: "jej",
+                  dat: "jej",
+                  acc: "jej",
+                  ins: "jej",
+                  loc: "jej",
+                },
+              },
+            },
+            n: {
+              singular: {
+                allSingularGenders: {
+                  nom: "jego",
+                  gen: "jego",
+                  dat: "jego",
+                  acc: "jego",
+                  ins: "jego",
+                  loc: "jego",
+                },
+              },
+              plural: {
+                allPluralGenders: {
+                  nom: "jego",
+                  gen: "jego",
+                  dat: "jego",
+                  acc: "jego",
+                  ins: "jego",
+                  loc: "jego",
+                },
+              },
+            },
+          },
+          plural: {
+            allPluralGenders: {
+              singular: {
+                allSingularGenders: {
+                  nom: "ich",
+                  gen: "ich",
+                  dat: "ich",
+                  acc: "ich",
+                  ins: "ich",
+                  loc: "ich",
+                },
+              },
+              plural: {
+                allPluralGenders: {
+                  nom: "ich",
+                  gen: "ich",
+                  dat: "ich",
+                  acc: "ich",
+                  ins: "ich",
+                  loc: "ich",
                 },
               },
             },

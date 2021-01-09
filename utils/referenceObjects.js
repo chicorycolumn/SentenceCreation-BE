@@ -44,7 +44,18 @@ exports.metaFeatures = {
   POL: {
     gender: {
       allPersonalGenders: ["m1", "f", "virile", "nonvirile"],
-      allSingularGenders: ["m1", "m2", "m3", "f", "f", "f", "n", "n", "n"],
+      allSingularGenders: ["m1", "m2", "m3", "f", "n"],
+      allSingularGendersWithPadding: [
+        "m1",
+        "m2",
+        "m3",
+        "f",
+        "f",
+        "f",
+        "n",
+        "n",
+        "n",
+      ],
       allPersonalSingularGenders: ["m1", "f"],
       allPluralGenders: ["virile", "nonvirile"],
       allGenders: [
@@ -65,7 +76,16 @@ exports.metaFeatures = {
         "nonvirile",
       ],
       //
-      allSingularGendersExcludingNeuter: ["m1", "m2", "m3", "f", "f", "f"],
+      allSingularGendersExcludingNeuter: ["m1", "m2", "m3", "f"],
+      allSingularGendersExcludingNeuterWithPadding: [
+        "m1",
+        "m2",
+        "m3",
+        "f",
+        "f",
+        "f",
+      ],
+      allMasculineSingularGenders: ["m1", "m2", "m3"],
     },
   },
 };

@@ -800,7 +800,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal14-01d GET 200 YES: POL to ENG. I have my onion.", () => {
+    it.only("#pal14-01d GET 200 YES: POL to ENG. I have my onion.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 

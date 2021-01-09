@@ -290,6 +290,32 @@ let pronounSet = [
             },
           },
         },
+        "3per": {
+          singular: {
+            m: {
+              nom: "he",
+              dat: "him",
+              acc: "him",
+            },
+            f: {
+              nom: "she",
+              dat: "her",
+              acc: "her",
+            },
+            n: {
+              nom: "it",
+              dat: "it",
+              acc: "it",
+            },
+          },
+          plural: {
+            allPersonalGenders: {
+              nom: "they",
+              dat: "them",
+              acc: "them",
+            },
+          },
+        },
       },
     },
   },
@@ -324,6 +350,16 @@ let pronounSet = [
             allPluralGenders: "your",
           },
         },
+        "3per": {
+          singular: {
+            m: "his",
+            f: "her",
+            n: "its",
+          },
+          plural: {
+            allPluralGenders: "their",
+          },
+        },
       },
       pronoun: {
         "1per": {
@@ -340,6 +376,16 @@ let pronounSet = [
           },
           plural: {
             allPluralGenders: "yours",
+          },
+        },
+        "3per": {
+          singular: {
+            m: "his",
+            f: "hers",
+            n: "its",
+          },
+          plural: {
+            allPluralGenders: "theirs",
           },
         },
       },
