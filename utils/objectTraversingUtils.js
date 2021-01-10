@@ -11,8 +11,6 @@ exports.findMatchingLemmaObjectThenWord = (
   kumquat,
   outputArray
 ) => {
-  console.log("[1;33m " + "findMatchingLemmaObjectThenWord" + "[0m");
-
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
   let selectedFormsArray = [];
   let arrayOfAllPossibleOutputUnits = [];
@@ -313,9 +311,6 @@ exports.findMatchingLemmaObjectThenWord = (
     let matchesCopy = matches.slice(0);
 
     if (!matchesCopy.length) {
-      // console.log("10 errorInSentenceCreation.errorMessage: No matching lemma objects were found.")
-      // errorInSentenceCreation.errorMessage =
-      //   "No matching lemma objects were found.";
       console.log(
         "#ERR It turns out no matching lemma objects were found in OT:findMatching"
       );
@@ -329,9 +324,6 @@ exports.findMatchingLemmaObjectThenWord = (
     );
 
     if (!matchesCopy.length) {
-      // console.log("11 errorInSentenceCreation.errorMessage: No matching lemma objects were found.")
-      // errorInSentenceCreation.errorMessage =
-      //   "No matching lemma objects were found.";
       console.log(
         "#ERR It transpires that no matching lemma objects were found in OT:findMatching",
         structureChunk
@@ -346,9 +338,6 @@ exports.findMatchingLemmaObjectThenWord = (
     );
 
     if (!matchesCopy.length) {
-      // console.log("12 errorInSentenceCreation.errorMessage: No matching lemma objects were found.")
-      // errorInSentenceCreation.errorMessage =
-      //   "No matching lemma objects were found.";
       console.log(
         "#ERR It appears no matching lemma objects were found in OT:findMatching"
       );
@@ -396,8 +385,6 @@ exports.findMatchingLemmaObjectThenWord = (
         outputArray
       );
 
-      // console.log("k22 subArrayOfOutputUnits", subArrayOfOutputUnits);
-
       if (!subArrayOfOutputUnits || !subArrayOfOutputUnits.length) {
         return false;
       }
@@ -434,8 +421,6 @@ exports.findMatchingLemmaObjectThenWord = (
         drillPath
       );
 
-      // console.log("l22 outputUnit", outputUnit);
-
       arrayOfAllPossibleOutputUnits.push(outputUnit);
     }
   });
@@ -457,11 +442,6 @@ exports.findMatchingLemmaObjectThenWord = (
       gpUtils.selectRandom(arrayOfAllPossibleOutputUnits),
     ];
   }
-
-  // console.log(
-  //   "m22 arrayOfAllPossibleOutputUnits",
-  //   arrayOfAllPossibleOutputUnits
-  // );
 
   return arrayOfAllPossibleOutputUnits;
 };

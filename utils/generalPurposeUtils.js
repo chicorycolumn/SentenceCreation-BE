@@ -2,7 +2,7 @@ const lfUtils = require("./lemmaFilteringUtils.js");
 const otUtils = require("./objectTraversingUtils.js");
 
 exports.selectRandom = (array) => {
-  console.log("Select random from ARRAY:", array);
+  // console.log("Select random from ARRAY:", array);
   return array[Math.floor(Math.random() * array.length)];
 };
 

@@ -940,7 +940,7 @@ describe("/api", () => {
           );
         });
     });
-    it.only("#pal14-03a GET 200 YES: ENG to POL. My father gave me his book.", () => {
+    it("#pal14-03a GET 200 YES: ENG to POL. My father gave me his book.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -997,7 +997,7 @@ describe("/api", () => {
           );
         });
     });
-    it.only("#pal14-03a GET 200 YES: POL to ENG. My father gave me his book.", () => {
+    it("#pal14-03a GET 200 YES: POL to ENG. My father gave me his book.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 

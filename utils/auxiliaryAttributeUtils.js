@@ -94,8 +94,6 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
       refObj.lemmaObjectFeatures[answerLanguage]
         .allowableTransfersFromQuestionStructure[structureChunk.wordtype];
 
-    console.log("The allowableClarifiers are as follows", allowableClarifiers);
-
     //    allowableClarifiers. Any clarifiers not in here, don't bother adding them.
     //    We're looking ahead to the answerLanguage, and thinking, hmmmmm, well right now the questionLanguage
     //    is POL, and soon the answerLanguage will be ENG. And looking it up... ENG doesn't allow "gender" as a transfer.
@@ -150,8 +148,6 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
       console.log("I was told not to add any further clarifiers!");
     }
   });
-
-  // gpUtils.consoleLogObjectAtTwoLevels(arrayOfOutputUnits);
 };
 
 exports.addSpecifiers = (
@@ -257,7 +253,6 @@ exports.addSpecifiers = (
     }
 
     requestedSpecifierInstructionsArr.forEach((reqSpecInstr) => {
-      console.log("Looking at reqSpecInstr: ", reqSpecInstr);
       if (
         //If EACH condition of this reqSpecInstr is fulfilled...
 
@@ -397,8 +392,6 @@ exports.addSpecifiers = (
 
   //STEP TWO: Do this for the otherChunks as well.
   answerOtherChunks.forEach((answerOtherChunk) => {
-    console.log("Checking answerOtherChunk: " + answerOtherChunk.chunkId);
-
     let materials = getMaterialsToAddSpecifiers(
       answerOtherChunk,
       answerSentenceStructure,
@@ -446,7 +439,6 @@ exports.addSpecifiers = (
     }
 
     if (questionLemmaObject && questionLemmaObject.gender === "both") {
-      console.log("ww STEP THREE: B", materials);
       let selectedGender = gpUtils.selectRandom(["m", "f"]);
 
       questionLemmaObject.gender = selectedGender;

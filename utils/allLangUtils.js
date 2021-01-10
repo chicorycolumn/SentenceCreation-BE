@@ -3,8 +3,6 @@ const gpUtils = require("../utils/generalPurposeUtils.js");
 
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   sentenceStructure.forEach((structureChunk) => {
-    console.log("o22a structureChunk BEFORE all:preprocess", structureChunk);
-
     if (structureChunk.wordtype === "fixed") {
       return;
     }
@@ -37,8 +35,6 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
           (!structureChunk.person || !structureChunk.person.length)
         ) {
           structureChunk.person = ["3per"];
-
-          console.log("o22b", structureChunk);
         }
       }
     }
@@ -77,8 +73,6 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
           (!structureChunk.person || !structureChunk.person.length)
         ) {
           structureChunk.person = ["3per"];
-
-          console.log("o22", structureChunk);
         } else if (
           gpUtils.getWordtypeOfAgreeWith(structureChunk) === "pronoun"
         ) {
@@ -103,7 +97,6 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
         }
       }
     }
-    console.log("o22c structureChunk AFTER all:preprocess", structureChunk);
   });
 };
 

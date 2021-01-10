@@ -65,18 +65,10 @@ exports.fetchPalette = (req) => {
     return finishAndSend(questionResponseObj, null);
   }
 
-  // console.log("palette.model > questionSentenceData.arrayOfOutputArrays");
-  // gpUtils.consoleLogObjectAtTwoLevels(questionSentenceData.arrayOfOutputArrays);
   console.log(
     "selectedWordsss",
     questionSentenceData.arrayOfOutputArrays[0].map(
       (outputUnit) => outputUnit.selectedWord
-    )
-  );
-  console.log(
-    "structureChunks",
-    questionSentenceData.arrayOfOutputArrays[0].map(
-      (outputUnit) => outputUnit.structureChunk
     )
   );
   gpUtils.consoleLogAestheticBorder(4);
@@ -119,25 +111,9 @@ exports.fetchPalette = (req) => {
         words
       );
 
-      // console.log("123a annotations before Clari or Speci:");
-      // questionOutputArr.forEach((outputItem) => {
-      //   console.log([
-      //     outputItem.structureChunk.chunkId,
-      //     outputItem.structureChunk.annotations,
-      //   ]);
-      // });
-
       if (!hideClarifiersForTestingPurposes) {
         aaUtils.addClarifiers(questionOutputArr, languagesObject);
       }
-
-      // console.log("123b annotations after Clari but before Speci:");
-      // questionOutputArr.forEach((outputItem) => {
-      //   console.log([
-      //     outputItem.structureChunk.chunkId,
-      //     outputItem.structureChunk.annotations,
-      //   ]);
-      // });
 
       if (!doNotSpecify) {
         aaUtils.addSpecifiers(
@@ -146,14 +122,6 @@ exports.fetchPalette = (req) => {
           languagesObject
         );
       }
-
-      // console.log("123c annotations after Clari and Speci:");
-      // questionOutputArr.forEach((outputItem) => {
-      //   console.log([
-      //     outputItem.structureChunk.chunkId,
-      //     outputItem.structureChunk.annotations,
-      //   ]);
-      // });
 
       aaUtils.attachAnnotations(questionOutputArr, languagesObject);
 

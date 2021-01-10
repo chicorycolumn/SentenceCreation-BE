@@ -161,10 +161,6 @@ exports.processSentenceFormula = (
       kumquat
     );
 
-    console.log("n22 allPossOutputUnits_head");
-    console.log(allPossOutputUnits_head);
-    console.log(allPossOutputUnits_head.map((unit) => unit.drillPath));
-
     if (errorInSentenceCreation.errorMessage) {
       console.log(
         "#ERR -------------------------> An error arose in SC:processSentenceFormula. Returning outputArr null for headChunk: " +
@@ -207,29 +203,13 @@ exports.processSentenceFormula = (
   // Now we update the head structure chunks with the details from their respective selectedWords.
   explodedOutputArraysWithHeads.forEach((headOutputArray) => {
     headOutputArray.forEach((headOutputUnit) => {
-      console.log(
-        "r22a headOutputUnit BEFORE update",
-        headOutputUnit.structureChunk
-      );
-      console.log(
-        "headOutputUnit.selectedLemmaObject",
-        headOutputUnit.selectedLemmaObject
-      );
       lfUtils.updateStructureChunkByAndTagsAndSelectors(
         headOutputUnit,
         currentLanguage
       );
-      console.log(
-        "r22b headOutputUnit MID update",
-        headOutputUnit.structureChunk
-      );
       lfUtils.updateStructureChunkByInflections(
         headOutputUnit,
         currentLanguage
-      );
-      console.log(
-        "r22c headOutputUnit AFTER update",
-        headOutputUnit.structureChunk
       );
 
       let headChunk = headOutputUnit.structureChunk;
@@ -261,21 +241,6 @@ exports.processSentenceFormula = (
             currentLanguage,
             previousQuestionLanguage,
             kumquat
-          );
-
-          console.log("n22 allPossOutputUnits_dependent");
-
-          console.log(
-            "errorInSentenceCreation.errorMessage",
-            !!errorInSentenceCreation.errorMessage
-          );
-          console.log(
-            "!allPossOutputUnits_dependent",
-            !allPossOutputUnits_dependent
-          );
-          console.log(
-            "!allPossOutputUnits_dependent.length",
-            !allPossOutputUnits_dependent.length
           );
 
           if (
@@ -360,18 +325,6 @@ exports.processSentenceFormula = (
       kumquat
     );
 
-    console.log("n22 allPossOutputUnits_other");
-
-    console.log(
-      "errorInSentenceCreation.errorMessage",
-      !!errorInSentenceCreation.errorMessage
-    );
-    console.log("!allPossOutputUnits_other", !allPossOutputUnits_other);
-    console.log(
-      "!allPossOutputUnits_other.length",
-      !allPossOutputUnits_other.length
-    );
-
     if (
       errorInSentenceCreation.errorMessage ||
       !allPossOutputUnits_other ||
@@ -420,8 +373,6 @@ exports.processSentenceFormula = (
         outputArray
       );
 
-      console.log("n22 allPossOutputUnits_PHD");
-
       if (
         errorInSentenceCreation.errorMessage ||
         !allPossOutputUnits_PHD ||
@@ -467,13 +418,11 @@ exports.processSentenceFormula = (
         return;
       }
 
-      console.log("r22 outputUnit BEFORE update", outputUnit.structureChunk);
       lfUtils.updateStructureChunkByAndTagsAndSelectors(
         outputUnit,
         currentLanguage
       );
       lfUtils.updateStructureChunkByInflections(outputUnit, currentLanguage);
-      console.log("r22 outputUnit AFTER update", outputUnit.structureChunk);
     });
   });
 
@@ -562,13 +511,10 @@ exports.buildSentenceString = (
   currentLanguage,
   answerLanguage
 ) => {
-  // console.log("unorderedArr", unorderedArr);
-
   let arrayOfOutputArrays = [];
   let producedSentences = [];
 
   if (!sentenceFormula.primaryOrders || !sentenceFormula.primaryOrders.length) {
-    // let selectedWordsArr = unorderedArr.map((obj) => obj.selectedWord);
     arrayOfOutputArrays.push(unorderedArr);
   } else {
     if (kumquat) {
@@ -588,7 +534,6 @@ exports.buildSentenceString = (
           );
         });
 
-        // let selectedWordsArr = orderedArr.map((obj) => obj.selectedWord);
         arrayOfOutputArrays.push(orderedArr);
       });
     } else {
@@ -601,7 +546,6 @@ exports.buildSentenceString = (
         );
       });
 
-      // let selectedWordsArr = orderedArr.map((obj) => obj.selectedWord);
       arrayOfOutputArrays.push(orderedArr);
     }
   }
@@ -885,7 +829,7 @@ exports.inheritFromHeadToDependentChunk = (
   dependentChunk
 ) => {
   console.log(
-    `q22 inherit from ${headChunk.chunkId} to ${dependentChunk.chunkId}`,
+    `Inherit from ${headChunk.chunkId} to ${dependentChunk.chunkId}`,
     "dependentChunk BEFOREHAND: ",
     dependentChunk
   );
@@ -909,7 +853,7 @@ exports.inheritFromHeadToDependentChunk = (
   }
 
   inheritableInflectorKeys.forEach((inflectorKey) => {
-    console.log({ inflectorKey });
+    console.log("inherit, inflectorKey", { inflectorKey });
     //HARD CHANGE
     if (
       headChunk[inflectorKey] &&
@@ -925,7 +869,10 @@ exports.inheritFromHeadToDependentChunk = (
       dependentChunk[inflectorKey] = inflectorValueArr;
     }
   });
-  console.log("dependentChunk AFTERWARDS: ", dependentChunk);
+  console.log(
+    "dependentChunk AFTERWARDS of inheritFromHeadToDependentChunk: ",
+    dependentChunk
+  );
 };
 
 exports.sortStructureChunks = (sentenceStructure) => {
@@ -940,11 +887,8 @@ exports.sortStructureChunks = (sentenceStructure) => {
         .filter((item) => item)
     )
   ).map((headId) => {
-    // console.log("b22", headId);
     return sentenceStructure.find((chunk) => chunk.chunkId === headId);
   });
-
-  // console.log("a11", headChunks);
 
   let dependentChunks = sentenceStructure.filter(
     (structureChunk) =>

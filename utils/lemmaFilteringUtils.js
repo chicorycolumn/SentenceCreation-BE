@@ -89,12 +89,6 @@ exports.filterWithinSelectedLemmaObject = (
         throw "This is an issue. There is no drillPath on the outputUnit with which I want to get features from the PHD stCh. Perhaps this outputUnit is one whose stCh did not go through If-PW?";
       }
 
-      console.log(1111111111);
-      console.log({ postHocAgreeWithKey });
-      console.log({ postHocInflectionChain });
-      console.log({ headDrillPath });
-      console.log(1111111111);
-
       if (structureChunk.form) {
         if (structureChunk.form.length !== 1) {
           throw (
@@ -122,7 +116,6 @@ exports.filterWithinSelectedLemmaObject = (
       if (headOutputUnit.selectedLemmaObject.gender) {
         if (!headDrillPath.find((arr) => arr[0] === "gender")) {
           let numberArr = headDrillPath.find((arr) => arr[0] === "number");
-          console.log("ppp", { numberArr });
           let numberValue = numberArr[1];
 
           headDrillPath.push([
@@ -138,28 +131,14 @@ exports.filterWithinSelectedLemmaObject = (
         }
       }
 
-      // console.log(
-      //   ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>FIRST sourceCopy:",
-      //   source
-      // );
-
-      console.log("s22", { headDrillPath });
-      console.log("structureChunk", structureChunk);
-
       postHocInflectionChain.forEach((featureKey) => {
-        console.log(2222222);
-        console.log({ featureKey });
-
         let featureValue = headDrillPath.find(
           (arr) => arr[0] === featureKey
         )[1];
 
-        console.log({ featureValue });
-        console.log(2222222);
-
         source = source[featureValue];
-        // console.log("NEW sourceCopy:", source);
       });
+      //Alpha - Is this need to be done?
       //Get agreewithprimary stCh AND lobj
       //Get agreewithsecondary stCh AND lobj
       //Now use the features from them to get the right inflection from PHDstCh and PHDmatches.
@@ -196,17 +175,16 @@ exports.filterWithinSelectedLemmaObject = (
       ];
 
     console.log(">>> >>> inflectionChain", inflectionChain);
+    console.log(">>> structureChunk", structureChunk);
 
     let requirementArrs = [];
 
     inflectionChain.forEach((key) => {
       let inflectionValueArr = [];
 
-      console.log("structureChunk", structureChunk);
-
       if (structureChunk[key]) {
         structureChunk[key].forEach((inflectionValue) => {
-          console.log({ key, inflectionValue });
+          console.log(">>>", { key, inflectionValue });
 
           let formattedFeatureValue = langUtils.formatFeatureValue(
             key,
@@ -246,14 +224,6 @@ exports.filterWithinSelectedLemmaObject = (
       outputUnitsWithDrillPaths
     );
 
-    if (structureChunk.chunkId === "pro-4-His") {
-      console.log(
-        "h22",
-        "outputUnitsWithDrillPaths",
-        outputUnitsWithDrillPaths
-      );
-    }
-
     if (!outputUnitsWithDrillPaths || !outputUnitsWithDrillPaths.length) {
       console.log(
         "#ERR --------------------------------------> traverseAndRecordInflections returned FALSY for " +
@@ -277,8 +247,6 @@ exports.filterWithinSelectedLemmaObject = (
 
       let { selectedWordArray, drillPath } = selectedPath;
 
-      console.log("h23", selectedWordArray);
-
       return [
         {
           errorInDrilling,
@@ -295,11 +263,6 @@ exports.updateStructureChunkByAdhocOnly = (structureChunk, label, value) => {
 };
 
 exports.updateStructureChunkByInflections = (outputUnit, currentLanguage) => {
-  console.log(
-    "u22 updateStructureChunkByInflections drillPath arg",
-    outputUnit.drillPath
-  );
-
   if (outputUnit.drillPath) {
     outputUnit.drillPath.forEach((drillPathSubArr) => {
       let requiredInflectorCategory = drillPathSubArr[0];

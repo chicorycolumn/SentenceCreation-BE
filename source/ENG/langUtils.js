@@ -50,21 +50,15 @@ let inflectorRef = {
 
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   sentenceStructure.forEach((structureChunk) => {
-    console.log("p22a structureChunk BEFORE eng:preprocess", structureChunk);
-
     if (structureChunk.wordtype === "fixed") {
       return;
     }
 
     if (structureChunk.wordtype === "noun") {
       if (structureChunk.gcase && structureChunk.gcase.length) {
-        console.log("f22", structureChunk.gcase);
-
         structureChunk.gcase = structureChunk.gcase.map((gcaseValue) => {
           return ["nom", "gen"].includes(gcaseValue) ? gcaseValue : "nom";
         });
-
-        console.log("g22", structureChunk.gcase);
       }
     }
 
@@ -107,8 +101,6 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
         // }
       }
     }
-
-    console.log("p22c structureChunk AFTER eng:preprocess", structureChunk);
   });
 };
 
