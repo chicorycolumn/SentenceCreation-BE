@@ -260,14 +260,14 @@ let pronounSet = [
       pronoun: {
         "1per": {
           singular: {
-            allPersonalGenders: {
+            allPersonalSingularGenders: {
               nom: "I",
               dat: "me",
               acc: "me",
             },
           },
           plural: {
-            allPersonalGenders: {
+            allPluralGenders: {
               nom: "we",
               dat: "us",
               acc: "us",
@@ -276,14 +276,14 @@ let pronounSet = [
         },
         "2per": {
           singular: {
-            allPersonalGenders: {
+            allPersonalSingularGenders: {
               nom: "you",
               dat: "you",
               acc: "you",
             },
           },
           plural: {
-            allPersonalGenders: {
+            allPluralGenders: {
               nom: "you",
               dat: "you",
               acc: "you",

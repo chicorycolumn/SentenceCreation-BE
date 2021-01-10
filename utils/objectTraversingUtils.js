@@ -11,6 +11,8 @@ exports.findMatchingLemmaObjectThenWord = (
   kumquat,
   outputArray
 ) => {
+  console.log("[1;33m " + "findMatchingLemmaObjectThenWord" + "[0m");
+
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
   let selectedFormsArray = [];
   let arrayOfAllPossibleOutputUnits = [];
@@ -27,7 +29,7 @@ exports.findMatchingLemmaObjectThenWord = (
     ];
   }
 
-  //STEP TWO: Filter lemmaObjects by specificIds OR specificLemmas OR andTags and selectors.
+  //STEP TWO: Filter lemmaObjects (by specificIds OR specificLemmas OR andTags and selectors).
   let source = words[gpUtils.giveSetKey(structureChunk.wordtype)];
 
   langUtils.preprocessLemmaObjectsMinor(source);
@@ -63,7 +65,6 @@ exports.findMatchingLemmaObjectThenWord = (
   }
 
   langUtils.preprocessLemmaObjectsMinor(matches); //Must be adjusted again as may not have been in such pathway above.
-
   langUtils.preprocessLemmaObjectsMajor(matches, structureChunk);
 
   //STEP THREE: Return result array immediately if uninflected or ad hoc.

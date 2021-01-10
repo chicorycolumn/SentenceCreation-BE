@@ -957,36 +957,125 @@ describe("/api", () => {
         .then((res) => {
           let ref = [
             {
-              ENG: "My father gave me a book.",
+              ENG: "My father gave me his book.",
               POL: ["Mój ojciec dał mi jego książkę."],
             },
             {
-              ENG: "My mother gave me a book.",
+              ENG: "My mother gave me her book.",
               POL: ["Moja matka dała mi jej książkę."],
             },
             {
-              ENG: "Our father gave us a book.",
+              ENG: "Our father gave us his book.",
               POL: ["Nasz ojciec dał nam jego książkę."],
             },
             {
-              ENG: "Our mother gave us a book.",
+              ENG: "Our mother gave us her book.",
               POL: ["Nasza matka dała nam jej książkę."],
             },
             {
-              ENG: "My father gave me a book.",
+              ENG: "My fathers gave me their book.",
               POL: ["Moi ojcowie dali mi ich książkę."],
             },
             {
-              ENG: "My mother gave me a book.",
+              ENG: "My mothers gave me their book.",
               POL: ["Moje matki dały mi ich książkę."],
             },
             {
-              ENG: "Our father gave us a book.",
+              ENG: "Our fathers gave us their book.",
               POL: ["Nasi ojcowie dali nam ich książkę."],
             },
             {
-              ENG: "Our mother gave us a book.",
+              ENG: "Our mothers gave us their book.",
               POL: ["Nasze matki dały nam ich książkę."],
+            },
+          ];
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it.only("#pal14-03a GET 200 YES: POL to ENG. My father gave me his book.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          doNotSpecify: true,
+          hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "113a my father gave me his book",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              POL: "Mój ojciec dał mi jego książkę.",
+              ENG: [
+                "My father gave me his book.",
+                "My father had given me his book.",
+                "My father has given me his book.",
+              ],
+            },
+            {
+              POL: "Moja matka dała mi jej książkę.",
+              ENG: [
+                "My mother gave me her book.",
+                "My mother had given me her book.",
+                "My mother has given me her book.",
+              ],
+            },
+            {
+              POL: "Nasz ojciec dał nam jego książkę.",
+              ENG: [
+                "Our father gave us his book.",
+                "Our father had given us his book.",
+                "Our father has given us his book.",
+              ],
+            },
+            {
+              POL: "Nasza matka dała nam jej książkę.",
+              ENG: [
+                "Our mother gave us her book.",
+                "Our mother had given us her book.",
+                "Our mother has given us her book.",
+              ],
+            },
+            {
+              POL: "Moi ojcowie dali mi ich książkę.",
+              ENG: [
+                "My fathers gave me their book.",
+                "My fathers had given me their book.",
+                "My fathers have given me their book.",
+              ],
+            },
+            {
+              POL: "Moje matki dały mi ich książkę.",
+              ENG: [
+                "My mothers gave me their book.",
+                "My mothers had given me their book.",
+                "My mothers have given me their book.",
+              ],
+            },
+            {
+              POL: "Nasi ojcowie dali nam ich książkę.",
+              ENG: [
+                "Our fathers gave us their book.",
+                "Our fathers had given us their book.",
+                "Our fathers have given us their book.",
+              ],
+            },
+            {
+              POL: "Nasze matki dały nam ich książkę.",
+              ENG: [
+                "Our mothers gave us their book.",
+                "Our mothers had given us their book.",
+                "Our mothers have given us their book.",
+              ],
             },
           ];
           checkTranslationsOfGivenRef(

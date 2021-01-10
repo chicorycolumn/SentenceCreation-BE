@@ -1,3 +1,4 @@
+const { head } = require("../app.js");
 const gpUtils = require("./generalPurposeUtils.js");
 const otUtils = require("./objectTraversingUtils.js");
 const refObj = require("./referenceObjects.js");
@@ -94,6 +95,30 @@ exports.filterWithinSelectedLemmaObject = (
       console.log({ headDrillPath });
       console.log(1111111111);
 
+      if (structureChunk.form) {
+        if (structureChunk.form.length !== 1) {
+          throw (
+            "Expected structureChunk.form to have length of 1: " +
+            structureChunk.chunkId
+          );
+        }
+
+        headDrillPath.push(["form", structureChunk.form[0]]);
+      }
+
+      if (
+        gpUtils.getWordtypeOfAgreeWith(structureChunk, postHocAgreeWithKey) ===
+        "noun"
+      ) {
+        let personArr = headDrillPath.find((arr) => arr[0] === "person");
+
+        if (personArr && !personArr[1] === "3per") {
+          personArr[1] = "3per";
+        } else {
+          headDrillPath.push(["person", "3per"]);
+        }
+      }
+
       if (headOutputUnit.selectedLemmaObject.gender) {
         if (!headDrillPath.find((arr) => arr[0] === "gender")) {
           let numberArr = headDrillPath.find((arr) => arr[0] === "number");
@@ -113,12 +138,13 @@ exports.filterWithinSelectedLemmaObject = (
         }
       }
 
-      console.log(
-        ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>FIRST sourceCopy:",
-        source
-      );
+      // console.log(
+      //   ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>FIRST sourceCopy:",
+      //   source
+      // );
 
-      console.log({ headDrillPath });
+      console.log("s22", { headDrillPath });
+      console.log("structureChunk", structureChunk);
 
       postHocInflectionChain.forEach((featureKey) => {
         console.log(2222222);
@@ -132,7 +158,7 @@ exports.filterWithinSelectedLemmaObject = (
         console.log(2222222);
 
         source = source[featureValue];
-        console.log("NEW sourceCopy:", source);
+        // console.log("NEW sourceCopy:", source);
       });
       //Get agreewithprimary stCh AND lobj
       //Get agreewithsecondary stCh AND lobj
@@ -231,7 +257,9 @@ exports.filterWithinSelectedLemmaObject = (
     if (!outputUnitsWithDrillPaths || !outputUnitsWithDrillPaths.length) {
       console.log(
         "#ERR --------------------------------------> traverseAndRecordInflections returned FALSY for " +
-          structureChunk.chunkId
+          structureChunk.chunkId +
+          " in " +
+          currentLanguage
       );
       console.log({ outputUnitsWithDrillPaths });
       errorInDrilling = true;
@@ -267,6 +295,11 @@ exports.updateStructureChunkByAdhocOnly = (structureChunk, label, value) => {
 };
 
 exports.updateStructureChunkByInflections = (outputUnit, currentLanguage) => {
+  console.log(
+    "u22 updateStructureChunkByInflections drillPath arg",
+    outputUnit.drillPath
+  );
+
   if (outputUnit.drillPath) {
     outputUnit.drillPath.forEach((drillPathSubArr) => {
       let requiredInflectorCategory = drillPathSubArr[0];

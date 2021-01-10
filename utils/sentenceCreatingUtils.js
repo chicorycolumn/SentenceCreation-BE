@@ -162,6 +162,8 @@ exports.processSentenceFormula = (
     );
 
     console.log("n22 allPossOutputUnits_head");
+    console.log(allPossOutputUnits_head);
+    console.log(allPossOutputUnits_head.map((unit) => unit.drillPath));
 
     if (errorInSentenceCreation.errorMessage) {
       console.log(
@@ -206,19 +208,27 @@ exports.processSentenceFormula = (
   explodedOutputArraysWithHeads.forEach((headOutputArray) => {
     headOutputArray.forEach((headOutputUnit) => {
       console.log(
-        "r22 headOutputUnit BEFORE update",
+        "r22a headOutputUnit BEFORE update",
         headOutputUnit.structureChunk
+      );
+      console.log(
+        "headOutputUnit.selectedLemmaObject",
+        headOutputUnit.selectedLemmaObject
       );
       lfUtils.updateStructureChunkByAndTagsAndSelectors(
         headOutputUnit,
         currentLanguage
+      );
+      console.log(
+        "r22b headOutputUnit MID update",
+        headOutputUnit.structureChunk
       );
       lfUtils.updateStructureChunkByInflections(
         headOutputUnit,
         currentLanguage
       );
       console.log(
-        "r22 headOutputUnit AFTER update",
+        "r22c headOutputUnit AFTER update",
         headOutputUnit.structureChunk
       );
 

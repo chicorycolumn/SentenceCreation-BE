@@ -398,7 +398,10 @@ exports.getWordtypeFromLemmaObject = (lObj) => {
   return wordtypeRef[wordtypeShorthand];
 };
 
-exports.getWordtypeOfAgreeWith = (structureChunk) => {
+exports.getWordtypeOfAgreeWith = (
+  structureChunk,
+  agreeWithKey = "agreeWith"
+) => {
   const wordtypeRef = {
     nou: "noun",
     ver: "verb",
@@ -408,7 +411,7 @@ exports.getWordtypeOfAgreeWith = (structureChunk) => {
     art: "article",
   };
 
-  let wordtypeShorthand = structureChunk.agreeWith.split("-")[0];
+  let wordtypeShorthand = structureChunk[agreeWithKey].split("-")[0];
 
   if (!Object.keys(wordtypeRef).includes(wordtypeShorthand)) {
     throw "#ERR -----------------> getWordtypeFromLemmaObject";
