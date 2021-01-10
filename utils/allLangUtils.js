@@ -3,6 +3,8 @@ const gpUtils = require("../utils/generalPurposeUtils.js");
 
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   sentenceStructure.forEach((structureChunk) => {
+    console.log("o22a structureChunk BEFORE all:preprocess", structureChunk);
+
     if (structureChunk.wordtype === "fixed") {
       return;
     }
@@ -25,6 +27,19 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
     ) {
       if (!structureChunk.gcase || !structureChunk.gcase.length) {
         structureChunk.gcase = ["nom"];
+      }
+    }
+
+    if (structureChunk.wordtype === "pronoun") {
+      if (structureChunk.agreeWith) {
+        if (
+          gpUtils.getWordtypeOfAgreeWith(structureChunk) === "noun" &&
+          (!structureChunk.person || !structureChunk.person.length)
+        ) {
+          structureChunk.person = ["3per"];
+
+          console.log("o22b", structureChunk);
+        }
       }
     }
 
@@ -62,6 +77,8 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
           (!structureChunk.person || !structureChunk.person.length)
         ) {
           structureChunk.person = ["3per"];
+
+          console.log("o22", structureChunk);
         } else if (
           gpUtils.getWordtypeOfAgreeWith(structureChunk) === "pronoun"
         ) {
@@ -74,6 +91,8 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
           if (headChunk.person && headChunk.person.length) {
             structureChunk.person = headChunk.person.slice(0);
           } else {
+            throw "#ERR I am surprised that we entered this clause. We should delete this. ~Epsilon";
+
             let allGendersInThisLang =
               refObj.allFeatureValues[currentLanguage].gender;
 
@@ -84,6 +103,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
         }
       }
     }
+    console.log("o22c structureChunk AFTER all:preprocess", structureChunk);
   });
 };
 

@@ -130,6 +130,21 @@ exports.processSentenceFormula = (
 
   let headOutputUnitArrays = [];
 
+  console.log(
+    "headChunks",
+    headChunks.map((chunk) => chunk.chunkId)
+  );
+  console.log(
+    "dependentChunks",
+    dependentChunks.map((chunk) => chunk.chunkId)
+  );
+  console.log(
+    "otherChunks",
+    otherChunks.map((chunk) => chunk.chunkId)
+  );
+
+  delete errorInSentenceCreation.errorMessage;
+
   headChunks.forEach((headChunk) => {
     console.log("~~ SC:processSentenceFormula STEP ONE", headChunk.chunkId);
 
@@ -146,8 +161,13 @@ exports.processSentenceFormula = (
       kumquat
     );
 
+    console.log("n22 allPossOutputUnits_head");
+
     if (errorInSentenceCreation.errorMessage) {
-      console.log("An error arose in SC:processSentenceFormula.");
+      console.log(
+        "#ERR -------------------------> An error arose in SC:processSentenceFormula. Returning outputArr null for headChunk: " +
+          headChunk.chunkId
+      );
       return {
         outputArr: null,
         sentenceFormula,
@@ -158,7 +178,10 @@ exports.processSentenceFormula = (
     }
 
     if (!allPossOutputUnits_head || !allPossOutputUnits_head.length) {
-      console.log("An error has arisen in SC:processSentenceFormula.");
+      console.log(
+        "#ERR -------------------------> An error has arisen in SC:processSentenceFormula. Returning outputArr null for headChunk: " +
+          headChunk.chunkId
+      );
       return {
         outputArr: null,
         sentenceFormula,
@@ -182,6 +205,10 @@ exports.processSentenceFormula = (
   // Now we update the head structure chunks with the details from their respective selectedWords.
   explodedOutputArraysWithHeads.forEach((headOutputArray) => {
     headOutputArray.forEach((headOutputUnit) => {
+      console.log(
+        "r22 headOutputUnit BEFORE update",
+        headOutputUnit.structureChunk
+      );
       lfUtils.updateStructureChunkByAndTagsAndSelectors(
         headOutputUnit,
         currentLanguage
@@ -189,6 +216,10 @@ exports.processSentenceFormula = (
       lfUtils.updateStructureChunkByInflections(
         headOutputUnit,
         currentLanguage
+      );
+      console.log(
+        "r22 headOutputUnit AFTER update",
+        headOutputUnit.structureChunk
       );
 
       let headChunk = headOutputUnit.structureChunk;
@@ -222,11 +253,31 @@ exports.processSentenceFormula = (
             kumquat
           );
 
+          console.log("n22 allPossOutputUnits_dependent");
+
+          console.log(
+            "errorInSentenceCreation.errorMessage",
+            !!errorInSentenceCreation.errorMessage
+          );
+          console.log(
+            "!allPossOutputUnits_dependent",
+            !allPossOutputUnits_dependent
+          );
+          console.log(
+            "!allPossOutputUnits_dependent.length",
+            !allPossOutputUnits_dependent.length
+          );
+
           if (
             errorInSentenceCreation.errorMessage ||
             !allPossOutputUnits_dependent ||
             !allPossOutputUnits_dependent.length
           ) {
+            console.log(
+              "#ERR -------------------------> An error reared up in SC:processSentenceFormula. Returning outputArr null for dependentChunk: " +
+                dependentChunk.chunkId
+            );
+
             return {
               outputArr: null,
               sentenceFormula,
@@ -287,6 +338,8 @@ exports.processSentenceFormula = (
         .includes(chunk.chunkId)
   );
 
+  delete errorInSentenceCreation.errorMessage;
+
   otherChunks.forEach((otherChunk) => {
     let allPossOutputUnits_other = otUtils.findMatchingLemmaObjectThenWord(
       gpUtils.copyWithoutReference(otherChunk),
@@ -297,11 +350,28 @@ exports.processSentenceFormula = (
       kumquat
     );
 
+    console.log("n22 allPossOutputUnits_other");
+
+    console.log(
+      "errorInSentenceCreation.errorMessage",
+      !!errorInSentenceCreation.errorMessage
+    );
+    console.log("!allPossOutputUnits_other", !allPossOutputUnits_other);
+    console.log(
+      "!allPossOutputUnits_other.length",
+      !allPossOutputUnits_other.length
+    );
+
     if (
       errorInSentenceCreation.errorMessage ||
       !allPossOutputUnits_other ||
       !allPossOutputUnits_other.length
     ) {
+      console.log(
+        "#ERR -------------------------> An error loomed in SC:processSentenceFormula. Returning outputArr null for otherChunk: " +
+          otherChunk.chunkId
+      );
+
       return {
         outputArr: null,
         sentenceFormula,
@@ -312,7 +382,6 @@ exports.processSentenceFormula = (
     }
 
     //If kumquat is true, then allPossOutputUnits_other is array of outputUnit objects, while if false, array of just one said object.
-
     grandAllPossOutputUnits_other.push(allPossOutputUnits_other);
   });
 
@@ -328,6 +397,8 @@ exports.processSentenceFormula = (
   }
 
   grandOutputArray.forEach((outputArray) => {
+    delete errorInSentenceCreation.errorMessage;
+
     postHocDependentChunks.forEach((postHocDependentChunk) => {
       let allPossOutputUnits_PHD = otUtils.findMatchingLemmaObjectThenWord(
         gpUtils.copyWithoutReference(postHocDependentChunk),
@@ -339,11 +410,18 @@ exports.processSentenceFormula = (
         outputArray
       );
 
+      console.log("n22 allPossOutputUnits_PHD");
+
       if (
         errorInSentenceCreation.errorMessage ||
         !allPossOutputUnits_PHD ||
         !allPossOutputUnits_PHD.length
       ) {
+        console.log(
+          "#ERR -------------------------> An error loomed in SC:processSentenceFormula. Returning outputArr null for postHocDependentChunk: " +
+            postHocDependentChunk.chunkId
+        );
+
         return {
           outputArr: null,
           sentenceFormula,
@@ -379,11 +457,13 @@ exports.processSentenceFormula = (
         return;
       }
 
+      console.log("r22 outputUnit BEFORE update", outputUnit.structureChunk);
       lfUtils.updateStructureChunkByAndTagsAndSelectors(
         outputUnit,
         currentLanguage
       );
       lfUtils.updateStructureChunkByInflections(outputUnit, currentLanguage);
+      console.log("r22 outputUnit AFTER update", outputUnit.structureChunk);
     });
   });
 
@@ -472,7 +552,7 @@ exports.buildSentenceString = (
   currentLanguage,
   answerLanguage
 ) => {
-  console.log("unorderedArr", unorderedArr);
+  // console.log("unorderedArr", unorderedArr);
 
   let arrayOfOutputArrays = [];
   let producedSentences = [];
@@ -794,6 +874,13 @@ exports.inheritFromHeadToDependentChunk = (
   headChunk,
   dependentChunk
 ) => {
+  console.log(
+    `q22 inherit from ${headChunk.chunkId} to ${dependentChunk.chunkId}`,
+    "dependentChunk BEFOREHAND: ",
+    dependentChunk
+  );
+  console.log("headChunk", headChunk);
+
   let inheritableInflectorKeys =
     refObj.lemmaObjectFeatures[currentLanguage].inheritableInflectorKeys[
       dependentChunk.wordtype
@@ -812,6 +899,7 @@ exports.inheritFromHeadToDependentChunk = (
   }
 
   inheritableInflectorKeys.forEach((inflectorKey) => {
+    console.log({ inflectorKey });
     //HARD CHANGE
     if (
       headChunk[inflectorKey] &&
@@ -827,6 +915,7 @@ exports.inheritFromHeadToDependentChunk = (
       dependentChunk[inflectorKey] = inflectorValueArr;
     }
   });
+  console.log("dependentChunk AFTERWARDS: ", dependentChunk);
 };
 
 exports.sortStructureChunks = (sentenceStructure) => {
@@ -841,11 +930,11 @@ exports.sortStructureChunks = (sentenceStructure) => {
         .filter((item) => item)
     )
   ).map((headId) => {
-    console.log("b22", headId);
+    // console.log("b22", headId);
     return sentenceStructure.find((chunk) => chunk.chunkId === headId);
   });
 
-  console.log("a11", headChunks);
+  // console.log("a11", headChunks);
 
   let dependentChunks = sentenceStructure.filter(
     (structureChunk) =>

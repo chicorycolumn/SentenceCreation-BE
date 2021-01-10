@@ -73,6 +73,12 @@ exports.fetchPalette = (req) => {
       (outputUnit) => outputUnit.selectedWord
     )
   );
+  console.log(
+    "structureChunks",
+    questionSentenceData.arrayOfOutputArrays[0].map(
+      (outputUnit) => outputUnit.structureChunk
+    )
+  );
   gpUtils.consoleLogAestheticBorder(4);
 
   let questionOutputArr = questionSentenceData.arrayOfOutputArrays[0];

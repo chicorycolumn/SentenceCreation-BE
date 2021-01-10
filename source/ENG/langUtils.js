@@ -50,6 +50,8 @@ let inflectorRef = {
 
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   sentenceStructure.forEach((structureChunk) => {
+    console.log("p22a structureChunk BEFORE eng:preprocess", structureChunk);
+
     if (structureChunk.wordtype === "fixed") {
       return;
     }
@@ -75,15 +77,17 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
       if (!structureChunk.gender || !structureChunk.gender.length) {
         //Fill out if blank.
 
+        let metagenderRef = refObj.metaFeatures[currentLanguage].gender;
+
         // if (!structureChunk.number || !structureChunk.number.length) {
         if (
           structureChunk.person &&
           structureChunk.person.length &&
           !structureChunk.person.includes("3per")
         ) {
-          structureChunk.gender = ["allPersonalGenders"];
+          structureChunk.gender = metagenderRef["allPersonalGenders"].slice(0);
         } else {
-          structureChunk.gender = ["allSingularGenders"];
+          structureChunk.gender = metagenderRef["allSingularGenders"].slice(0);
         }
 
         // structureChunk.gender = ["m", "f", "n", "virile", "nonvirile"];
@@ -103,6 +107,8 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
         // }
       }
     }
+
+    console.log("p22c structureChunk AFTER eng:preprocess", structureChunk);
   });
 };
 

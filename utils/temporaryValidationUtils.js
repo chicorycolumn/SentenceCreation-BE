@@ -1,5 +1,5 @@
 exports.validateSentenceFormula = (sentenceFormula) => {
-  console.log("d22");
+  // console.log("d22");
 
   let arrayFeatures = [
     "specificLemmas",
@@ -26,7 +26,7 @@ exports.validateSentenceFormula = (sentenceFormula) => {
   ];
 
   sentenceFormula.sentenceStructure.forEach((structureChunk) => {
-    console.log("e22", structureChunk);
+    // console.log("e22", structureChunk);
 
     arrayFeatures.forEach((arrayFeature) => {
       if (

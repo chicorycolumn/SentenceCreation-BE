@@ -950,7 +950,7 @@ describe("/api", () => {
           doNotSpecify: true,
           hideClarifiersForTestingPurposes: true,
           questionLanguage,
-          // answerLanguage,
+          answerLanguage,
           sentenceFormulaSymbol: "113a my father gave me his book",
         })
         .expect(200)

@@ -395,6 +395,8 @@ exports.findMatchingLemmaObjectThenWord = (
         outputArray
       );
 
+      // console.log("k22 subArrayOfOutputUnits", subArrayOfOutputUnits);
+
       if (!subArrayOfOutputUnits || !subArrayOfOutputUnits.length) {
         return false;
       }
@@ -431,6 +433,8 @@ exports.findMatchingLemmaObjectThenWord = (
         drillPath
       );
 
+      // console.log("l22 outputUnit", outputUnit);
+
       arrayOfAllPossibleOutputUnits.push(outputUnit);
     }
   });
@@ -452,6 +456,11 @@ exports.findMatchingLemmaObjectThenWord = (
       gpUtils.selectRandom(arrayOfAllPossibleOutputUnits),
     ];
   }
+
+  // console.log(
+  //   "m22 arrayOfAllPossibleOutputUnits",
+  //   arrayOfAllPossibleOutputUnits
+  // );
 
   return arrayOfAllPossibleOutputUnits;
 };

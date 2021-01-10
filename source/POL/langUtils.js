@@ -6,6 +6,8 @@ const allLangUtils = require("../../utils/allLangUtils.js");
 
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   sentenceStructure.forEach((structureChunk) => {
+    console.log("p22a structureChunk BEFORE pol:preprocess", structureChunk);
+
     if (structureChunk.wordtype === "fixed") {
       return;
     }
@@ -44,6 +46,8 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
         structureChunk.gender = Array.from(new Set(adjustedGenderArray));
       }
     }
+
+    console.log("p22c structureChunk AFTER pol:preprocess", structureChunk);
   });
 };
 

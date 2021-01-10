@@ -118,13 +118,16 @@ exports.filterWithinSelectedLemmaObject = (
         source
       );
 
+      console.log({ headDrillPath });
+
       postHocInflectionChain.forEach((featureKey) => {
+        console.log(2222222);
+        console.log({ featureKey });
+
         let featureValue = headDrillPath.find(
           (arr) => arr[0] === featureKey
         )[1];
 
-        console.log(2222222);
-        console.log({ featureKey });
         console.log({ featureValue });
         console.log(2222222);
 
@@ -217,7 +220,13 @@ exports.filterWithinSelectedLemmaObject = (
       outputUnitsWithDrillPaths
     );
 
-    console.log("h22", "outputUnitsWithDrillPaths", outputUnitsWithDrillPaths);
+    if (structureChunk.chunkId === "pro-4-His") {
+      console.log(
+        "h22",
+        "outputUnitsWithDrillPaths",
+        outputUnitsWithDrillPaths
+      );
+    }
 
     if (!outputUnitsWithDrillPaths || !outputUnitsWithDrillPaths.length) {
       console.log(
@@ -275,6 +284,25 @@ exports.updateStructureChunkByAndTagsAndSelectors = (
   currentLanguage
 ) => {
   let { selectedLemmaObject, structureChunk } = outputUnit;
+
+  const pluralVirilityConversion = {
+    m: "virile",
+    m1: "virile",
+    m2: "nonvirile",
+    m3: "nonvirile",
+    f: "nonvirile",
+    n: "nonvirile",
+    virile: "virile",
+    nonvirile: "nonvirile",
+  };
+
+  //Epsilon - this had to be done for ENG, but for POL it was already done elsewhere?
+  if (selectedLemmaObject.gender) {
+    structureChunk.gender = [
+      selectedLemmaObject.gender,
+      pluralVirilityConversion[selectedLemmaObject.gender],
+    ];
+  }
 
   //Yellow option:
   /**If structureChunk has any andTags, then filter that down to only
@@ -415,6 +443,11 @@ exports.traverseAndRecordInflections = (
       Array.isArray(source[chosenInflector]) ||
       (source[chosenInflector] && source[chosenInflector].isTerminus)
     ) {
+      console.log("traverseAndRecordInflections Clause B", {
+        reqInflectorLabel,
+        chosenInflector,
+      });
+
       outputUnitsWithDrillPathsMini.push([reqInflectorLabel, chosenInflector]);
 
       outputUnitsWithDrillPaths.push({
@@ -431,6 +464,11 @@ exports.traverseAndRecordInflections = (
       gpUtils.isKeyValueTypeObject(source[chosenInflector]) &&
       !source[chosenInflector].isTerminus
     ) {
+      console.log("traverseAndRecordInflections Clause A", {
+        reqInflectorLabel,
+        chosenInflector,
+      });
+
       outputUnitsWithDrillPathsMini.push([reqInflectorLabel, chosenInflector]);
 
       exports.traverseAndRecordInflections(
@@ -441,6 +479,11 @@ exports.traverseAndRecordInflections = (
       );
 
       outputUnitsWithDrillPathsMini.pop();
+    } else {
+      console.log("traverseAndRecordInflections Clause X", {
+        reqInflectorLabel,
+        chosenInflector,
+      });
     }
   });
 };
