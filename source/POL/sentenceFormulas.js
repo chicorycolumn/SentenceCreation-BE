@@ -1000,7 +1000,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        andTags: ["family"],
+        andTags: ["person", "family"],
         number: ["singular"],
       },
       {
@@ -1053,7 +1053,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        andTags: ["family"],
+        andTags: ["person", "family"],
         gcase: ["nom"],
         number: ["singular"],
       },

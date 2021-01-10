@@ -38,7 +38,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
           !structureChunk.tenseDescription ||
           !structureChunk.tenseDescription.length
         ) {
-          //Very specific point.
+          //Epsilon: Move this to POL utils.
           if (currentLanguage === "POL") {
             if (
               structureChunk.tense &&
@@ -76,6 +76,8 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
           } else {
             let allGendersInThisLang =
               refObj.allFeatureValues[currentLanguage].gender;
+
+            console.log("j22", allGendersInThisLang);
 
             structureChunk.person = allGendersInThisLang.slice(0);
           }

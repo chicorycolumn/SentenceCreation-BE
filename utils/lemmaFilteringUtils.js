@@ -173,8 +173,12 @@ exports.filterWithinSelectedLemmaObject = (
     inflectionChain.forEach((key) => {
       let inflectionValueArr = [];
 
+      console.log("structureChunk", structureChunk);
+
       if (structureChunk[key]) {
         structureChunk[key].forEach((inflectionValue) => {
+          console.log({ key, inflectionValue });
+
           let formattedFeatureValue = langUtils.formatFeatureValue(
             key,
             inflectionValue
@@ -187,6 +191,8 @@ exports.filterWithinSelectedLemmaObject = (
           } else {
             formattedFeatureValueArr.push(formattedFeatureValue);
           }
+
+          console.log("formattedFeatureValueArr", formattedFeatureValueArr);
 
           inflectionValueArr = [
             ...inflectionValueArr,
