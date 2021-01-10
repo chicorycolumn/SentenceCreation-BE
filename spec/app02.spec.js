@@ -940,6 +940,63 @@ describe("/api", () => {
           );
         });
     });
+    it.only("#pal14-03a GET 200 YES: ENG to POL. My father gave me his book.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          doNotSpecify: true,
+          hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          // answerLanguage,
+          sentenceFormulaSymbol: "113a my father gave me his book",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "My father gave me a book.",
+              POL: ["Mój ojciec dał mi jego książkę."],
+            },
+            {
+              ENG: "My mother gave me a book.",
+              POL: ["Moja matka dała mi jej książkę."],
+            },
+            {
+              ENG: "Our father gave us a book.",
+              POL: ["Nasz ojciec dał nam jego książkę."],
+            },
+            {
+              ENG: "Our mother gave us a book.",
+              POL: ["Nasza matka dała nam jej książkę."],
+            },
+            {
+              ENG: "My father gave me a book.",
+              POL: ["Moi ojcowie dali mi ich książkę."],
+            },
+            {
+              ENG: "My mother gave me a book.",
+              POL: ["Moje matki dały mi ich książkę."],
+            },
+            {
+              ENG: "Our father gave us a book.",
+              POL: ["Nasi ojcowie dali nam ich książkę."],
+            },
+            {
+              ENG: "Our mother gave us a book.",
+              POL: ["Nasze matki dały nam ich książkę."],
+            },
+          ];
+          checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
   });
 
   describe("/palette - Stage 13B: Pronouns and other Multi Gender Nouns: Further tests.", () => {
