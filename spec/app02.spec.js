@@ -1145,7 +1145,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13B-02a GET 200 YES: ENG to POL. A more interesting sentence with Pronouns.", () => {
+    it.only("#pal13B-02a GET 200 YES: ENG to POL. A more interesting sentence with Pronouns.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 

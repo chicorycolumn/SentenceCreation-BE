@@ -37,6 +37,20 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
           structureChunk.person = ["3per"];
         }
       }
+
+      if (!structureChunk.gender || !structureChunk.gender.length) {
+        structureChunk.gender = [];
+
+        if (
+          structureChunk.number &&
+          structureChunk.number.includes("singular")
+        ) {
+          structureChunk.gender.push("allSingularGenders");
+        }
+        if (structureChunk.number && structureChunk.number.includes("plural")) {
+          structureChunk.gender.push("allPluralGenders");
+        }
+      }
     }
 
     if (structureChunk.wordtype === "verb") {

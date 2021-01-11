@@ -892,6 +892,32 @@ exports.dummySentenceFormulasBank = [
     primaryOrders: [["pro-1", "ver-1"]],
   },
   {
+    sentenceFormulaSymbol: "dummy53c-2 you are (pres)",
+    sentenceFormulaId: "ENG-dummy53c-2",
+    translations: { POL: ["POL-dummy53c-2"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1",
+        wordtype: "pronoun",
+        // form: ["pronoun"],
+        specificLemmas: ["PERSONAL"],
+        person: ["2per"],
+        // gender: ["allPersonalGenders"],
+        // number: []
+      },
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        agreeWith: "pro-1",
+        specificLemmas: ["have"],
+        tenseDescription: ["present simple"],
+        // person: ["2per"],
+        number: [],
+      },
+    ],
+    primaryOrders: [["pro-1", "ver-1"]],
+  },
+  {
     sentenceFormulaSymbol: "dummy53d she is",
     sentenceFormulaId: "ENG-dummy53d",
     translations: { POL: ["POL-dummy53d"] },

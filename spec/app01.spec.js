@@ -930,7 +930,7 @@ describe("/api", () => {
           );
         });
     });
-    it.only("#pal08-02c GET 200 YES: RSWAT ENG to POL 'have' - pres simp, past simp - You (with clarifiers).", () => {
+    it("#pal08-02c GET 200 YES: RSWAT ENG to POL 'have' - pres simp, past simp - You (with clarifiers).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -942,7 +942,7 @@ describe("/api", () => {
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy53c you are",
+          sentenceFormulaSymbol: "dummy53c-2 you are (pres)",
         })
         .expect(200)
         .then((res) => {

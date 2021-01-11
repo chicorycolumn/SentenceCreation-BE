@@ -25,9 +25,11 @@ exports.fetchPalette = (req) => {
     useDummy
   );
 
+  let questionSentenceFormula = sentenceFormula;
+
   let questionSentenceData = scUtils.processSentenceFormula(
     { currentLanguage: questionLanguage },
-    sentenceFormula,
+    questionSentenceFormula,
     words,
     kumquat
   );
@@ -75,7 +77,9 @@ exports.fetchPalette = (req) => {
 
   let questionOutputArr = questionSentenceData.arrayOfOutputArrays[0];
 
+  let answerSentenceData;
   let answerResponseObj;
+  let firstAnswerSentenceFormula;
 
   if (answerLanguage) {
     kumquat = true;
@@ -87,13 +91,19 @@ exports.fetchPalette = (req) => {
       throw "palette.model > I was asked to give translations, but the question sentence formula did not have any translations listed.";
     }
 
-    translations.forEach((translationSentenceFormulaId) => {
+    translations.forEach((translationSentenceFormulaId, index) => {
       let { sentenceFormula, words } = scUtils.getMaterials(
         answerLanguage,
         translationSentenceFormulaId,
         questionSentenceData.sentenceFormulaSymbol,
         useDummy
       );
+
+      let answerSentenceFormula = sentenceFormula;
+
+      if (index === 0) {
+        firstAnswerSentenceFormula = answerSentenceFormula;
+      }
 
       //addSpecifiers fxn
       //conformAtoQ fxn
@@ -105,34 +115,47 @@ exports.fetchPalette = (req) => {
       };
 
       scUtils.conformAnswerStructureToQuestionStructure(
-        sentenceFormula,
+        answerSentenceFormula,
         questionOutputArr,
         languagesObject,
         words
       );
 
-      if (!hideClarifiersForTestingPurposes) {
-        aaUtils.addClarifiers(questionOutputArr, languagesObject);
-      }
+      console.log(
+        "bb22 answerSentenceFormula.sentenceStructure AFTER qaConform",
+        answerSentenceFormula.sentenceStructure
+      );
 
-      if (!doNotSpecify) {
-        aaUtils.addSpecifiers(
-          sentenceFormula,
-          questionOutputArr,
-          languagesObject
+      if (true) {
+        console.log(
+          "a22a questionOutputArr BEFORE CLARI OR SPECI",
+          questionOutputArr.map((unit) => unit.structureChunk.annotations)
         );
+
+        if (true) {
+          if (!hideClarifiersForTestingPurposes) {
+            aaUtils.addClarifiers(questionOutputArr, languagesObject);
+          }
+
+          console.log(
+            "a22b questionOutputArr AFTER CLARI, BEFORE SPECI",
+            questionOutputArr.map((unit) => unit.structureChunk.annotations)
+          );
+        }
       }
-
-      aaUtils.attachAnnotations(questionOutputArr, languagesObject);
-
-      let answerSentenceData = scUtils.processSentenceFormula(
+      answerSentenceData = scUtils.processSentenceFormula(
         {
           currentLanguage: answerLanguage,
           previousQuestionLanguage: questionLanguage,
         },
-        sentenceFormula,
+        answerSentenceFormula,
         words,
         kumquat
+      );
+
+      console.log(
+        "bb23 answerSentenceFormula.sentenceStructure AFTER SC:process",
+        answerSentenceFormula.sentenceStructure
       );
 
       if (!answerResponseObj) {
@@ -160,6 +183,33 @@ exports.fetchPalette = (req) => {
 
     scUtils.removeDuplicatesFromResponseObject(answerResponseObj);
   }
+
+  let languagesObj = {
+    answerLanguage,
+    questionLanguage,
+  };
+  questionOutputArr = questionSentenceData.arrayOfOutputArrays[0];
+
+  if (true) {
+    if (!doNotSpecify) {
+      aaUtils.addSpecifiers(
+        questionSentenceFormula,
+        questionOutputArr,
+        languagesObject
+      );
+    }
+
+    console.log(
+      "a22c questionOutputArr AFTER CLARI AND SPECI",
+      questionOutputArr.map((unit) => unit.structureChunk.annotations)
+    );
+  }
+
+  aaUtils.attachAnnotations(
+    questionOutputArr,
+    languagesObj,
+    answerSentenceData
+  );
 
   let questionResponseObj = scUtils.giveFinalSentences(
     questionSentenceData,

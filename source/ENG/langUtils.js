@@ -28,6 +28,7 @@ const have = {
   future: "will have",
   conditional: "would have",
 };
+
 let inflectorRef = {
   person: ["1per", "2per", "3per"],
   number: ["singular", "plural"],
@@ -81,7 +82,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
         ) {
           structureChunk.gender = metagenderRef["allPersonalGenders"].slice(0);
         } else {
-          structureChunk.gender = metagenderRef["allSingularGenders"].slice(0);
+          structureChunk.gender = metagenderRef["allGenders"].slice(0);
         }
 
         // structureChunk.gender = ["m", "f", "n", "virile", "nonvirile"];
@@ -118,7 +119,7 @@ exports.preprocessLemmaObjectsMajor = (matches, structureChunk) => {
         ) {
           structureChunk.gender = ["allPersonalGenders"];
         } else {
-          structureChunk.gender = ["allSingularGenders"];
+          structureChunk.gender = ["allGenders"];
         }
       }
     }

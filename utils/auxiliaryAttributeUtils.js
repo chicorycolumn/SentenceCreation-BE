@@ -77,7 +77,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
     //
     //  Feature Clarifiers
     //
-    //eg ENG has some verbs with v1-v2 synhomography, and 2per ambiguous re number.
+    //ie ENG has some verbs with v1-v2 synhomography.
 
     langUtils.addLanguageParticularClarifiers(
       structureChunk,
@@ -94,6 +94,11 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
       refObj.lemmaObjectFeatures[answerLanguage]
         .allowableTransfersFromQuestionStructure[structureChunk.wordtype];
 
+    console.log(
+      { allowableClarifiers },
+      answerLanguage,
+      structureChunk.wordtype
+    );
     //    allowableClarifiers. Any clarifiers not in here, don't bother adding them.
     //    We're looking ahead to the answerLanguage, and thinking, hmmmmm, well right now the questionLanguage
     //    is POL, and soon the answerLanguage will be ENG. And looking it up... ENG doesn't allow "gender" as a transfer.
@@ -106,30 +111,33 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
         questionLanguage
       );
 
+      // console.log("synhomographData");
+      // console.log(synhomographData.lemmaObjectId);
+      // console.log(synhomographData.inflectionLabelChain);
+      // synhomographData.synhomographs.forEach((item) => {
+      //   console.log(item);
+      // });
+
       if (synhomographData) {
         synhomographData.synhomographs.forEach((synhomDataUnit) => {
+          //Zeta: Think how this will interact with the Terminus Objects.
           if (selectedWord === synhomDataUnit.terminalValue) {
+            console.log("synhomDataUnit", synhomDataUnit);
             let labelsWhereTheyDiffer = synhomDataUnit.labelsWhereTheyDiffer.filter(
               (label) => allowableClarifiers.includes(label)
             );
 
-            //Omega say: Could nix this if(label === "gender" && structureChunk["gender"] === "allPersonalGenders" || "allSingularGenders")
+            console.log({ labelsWhereTheyDiffer });
+
             labelsWhereTheyDiffer.forEach((label) => {
               let clarifierValue = structureChunk[label];
 
               //Abort if a metaGender label is accidentally being made subject of a Clarifier.
               if (label === "gender") {
                 if (
-                  [
-                    "allSingularGenders",
-                    "allPersonalGenders",
-                  ].some((metaGender) =>
-                    structureChunk[label].includes(metaGender)
+                  structureChunk[label].some(
+                    (gender) => gender.slice(0, 3) === "all"
                   )
-                  // ||
-                  // structureChunk[label].some(
-                  //   (gender) => gender.slice(0, 3) === "all"
-                  // )
                 ) {
                   return;
                 }
@@ -550,7 +558,30 @@ exports.addAnnotation = (chunk, key, value) => {
   chunk.annotations[key] = value;
 };
 
-exports.attachAnnotations = (arrayOfOutputUnits, languagesObj) => {
+exports.attachAnnotations = (
+  arrayOfOutputUnits,
+  languagesObj,
+  answerSentenceData
+) => {
+  console.log("c22~~~~~~~~~~~~~~~~~~~~~");
+  console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
+  console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
+  console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
+  console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
+  // console.log("arrayOfOutputUnits", arrayOfOutputUnits);
+  answerSentenceData.arrayOfOutputArrays.forEach((outputArr) => {
+    outputArr.forEach((outputUnit) => {
+      console.log(outputUnit);
+    });
+    console.log(
+      "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~########"
+    );
+  });
+  console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
+  console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
+  console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
+  console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
+
   let { answerLanguage, questionLanguage } = languagesObj;
 
   arrayOfOutputUnits.forEach((outputUnit) => {
@@ -560,11 +591,34 @@ exports.attachAnnotations = (arrayOfOutputUnits, languagesObj) => {
       structureChunk.annotations &&
       Object.keys(structureChunk.annotations).length
     ) {
+      console.log("b22-----------------------------------------");
+      console.log("--------------------------------------------");
+      console.log(
+        "[1;35m " + outputUnit.selectedWord + "[0m",
+        structureChunk.annotations
+      );
+      console.log("--------------------------------------------");
+      console.log("--------------------------------------------");
       let formattedAnnotationArr = Object.keys(structureChunk.annotations).map(
         (annotationKey) => {
           let annotationValue = structureChunk.annotations[annotationKey];
 
+          //So, if answer is "Masz."   gender of question will have no impact, so we shouldn't add this annotation.
+          //But if answer is "Miałem." gender of question does change it,      so we must add this annotation.
+
+          //By this point, all annotations have been put in annotations object.
+          //But we can decide which ones we want and don't want.
+
+          //If we have ENG "You have." and so we have annotations "singular" and "f".
+
+          //We can decide - well, in POL, which is the answerLang, there'll be no different between m and f in "Masz."
+          //so we shouldn't attach the Gender annotation
+
+          //Whereas there is a difference between "Masz." and "Macie.", so we should indeed attach the Number annotation.
+
           if (answerLanguage === "POL" && annotationKey === "gender") {
+            console.log("att1", annotationValue);
+            return;
             if (structureChunk.number) {
               if (structureChunk.number.length > 1) {
                 throw "Ah no.";
@@ -607,11 +661,14 @@ exports.attachAnnotations = (arrayOfOutputUnits, languagesObj) => {
               ? adjustedAnnotation
               : gpUtils.selectRandom(adjustedAnnotation);
           } else {
+            console.log("att2", annotationValue);
             return annotationValue;
           }
         }
       );
-      outputUnit.selectedWord += ` (${formattedAnnotationArr.join(", ")})`;
+      outputUnit.selectedWord += ` (${formattedAnnotationArr
+        .filter((item) => item)
+        .join(", ")})`;
     }
   });
 };
