@@ -2,6 +2,7 @@ const gpUtils = require("./generalPurposeUtils.js");
 const scUtils = require("./sentenceCreatingUtils.js");
 const otUtils = require("../utils/objectTraversingUtils.js");
 const refObj = require("./referenceObjects.js");
+const aaUtils = require("./auxiliaryAttributeUtils.js");
 
 exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
   let { answerLanguage, questionLanguage } = languagesObj;
@@ -181,7 +182,7 @@ exports.addSpecifiers = (
     questionHeadChunks,
     questionDependentChunks,
     questionOtherChunks,
-  } = exports.sortAnswerAndQuestionStructureChunks(
+  } = aaUtils.sortAnswerAndQuestionStructureChunks(
     questionSentenceStructure,
     answerSentenceStructure
   );
@@ -359,7 +360,7 @@ exports.addSpecifiers = (
                 " " +
                 actionValueArr
             );
-            exports.specifyQuestionChunkAndChangeAnswerChunk(
+            aaUtils.specifyQuestionChunkAndChangeAnswerChunk(
               {
                 answerHeadChunk,
                 answerChunk,
@@ -443,7 +444,7 @@ exports.addSpecifiers = (
       questionHeadChunk.gender = [selectedGender];
       answerHeadChunk.gender = [selectedGender];
 
-      exports.addAnnotation(questionHeadChunk, "gender", [selectedGender]);
+      aaUtils.addAnnotation(questionHeadChunk, "gender", [selectedGender]);
     }
 
     if (questionLemmaObject && questionLemmaObject.gender === "both") {
@@ -453,7 +454,7 @@ exports.addSpecifiers = (
       questionChunk.gender = [selectedGender];
       answerChunk.gender = [selectedGender];
 
-      exports.addAnnotation(questionChunk, "gender", [selectedGender]);
+      aaUtils.addAnnotation(questionChunk, "gender", [selectedGender]);
     }
   });
 
@@ -535,7 +536,7 @@ exports.specifyQuestionChunkAndChangeAnswerChunk = (
 
   if (questionHeadChunk) {
     console.log("Point C");
-    exports.addAnnotation(questionHeadChunk, actionKey, actionValueArr);
+    aaUtils.addAnnotation(questionHeadChunk, actionKey, actionValueArr);
   } else {
     if (!questionChunk) {
       throw (
@@ -546,7 +547,7 @@ exports.specifyQuestionChunkAndChangeAnswerChunk = (
       );
     }
     console.log("Point D");
-    exports.addAnnotation(questionChunk, actionKey, actionValueArr);
+    aaUtils.addAnnotation(questionChunk, actionKey, actionValueArr);
   }
 };
 

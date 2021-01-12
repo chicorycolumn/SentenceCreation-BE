@@ -1,5 +1,6 @@
 const gpUtils = require("./generalPurposeUtils.js");
 const otUtils = require("./objectTraversingUtils.js");
+const educatorUtils = require("./educatorUtils.js");
 
 exports.getLemmaObjectsWithoutGivenKey = (wordsBank, wordtype, featureKey) => {
   return wordsBank[`${wordtype}Set`].filter((lObj) => !lObj[featureKey]);
@@ -8,14 +9,14 @@ exports.getLemmaObjectsWithoutGivenKey = (wordsBank, wordtype, featureKey) => {
 exports.checkWords = (testing, currentLanguage) => {
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
 
-  const wordsBank = exports.getWordsBank(currentLanguage, testing);
+  const wordsBank = educatorUtils.getWordsBank(currentLanguage, testing);
 
   Object.keys(wordsBank).forEach((wordtypeKey) => {
     let words = wordsBank[wordtypeKey];
     langUtils.preprocessLemmaObjectsMinor(words);
   });
 
-  let nounsWithoutGender = exports.getLemmaObjectsWithoutGivenKey(
+  let nounsWithoutGender = educatorUtils.getLemmaObjectsWithoutGivenKey(
     wordsBank,
     "noun",
     "gender"
@@ -43,7 +44,7 @@ exports.findHomographs = (testing, currentLanguage, homographType, ignore) => {
     throw "findHomographs fxn: I don't know what type of homograph you want me to find. I've logged above what you gave me.";
   }
 
-  const wordsBank = exports.getWordsBank(currentLanguage, testing);
+  const wordsBank = educatorUtils.getWordsBank(currentLanguage, testing);
   const langUtils = require(`../source/${currentLanguage}/langUtils.js`);
 
   let recordOfTerminalValuesAndPaths = [];
@@ -177,7 +178,7 @@ exports.findHomographs = (testing, currentLanguage, homographType, ignore) => {
 };
 
 exports.checkLemmaObjectIds = (testing, currentLanguage) => {
-  const wordsBank = exports.getWordsBank(currentLanguage, testing);
+  const wordsBank = educatorUtils.getWordsBank(currentLanguage, testing);
 
   let schematic = [];
   Object.keys(wordsBank).forEach((wordtypeKey) => {
@@ -203,7 +204,7 @@ exports.checkLemmaObjectIds = (testing, currentLanguage) => {
 };
 
 exports.checkSentenceFormulaIds = (testing, currentLanguage) => {
-  const sentenceFormulasBank = exports.getSentenceFormulasBank(
+  const sentenceFormulasBank = educatorUtils.getSentenceFormulasBank(
     currentLanguage,
     testing
   );

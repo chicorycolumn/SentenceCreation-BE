@@ -2,6 +2,7 @@ const otUtils = require("./objectTraversingUtils.js");
 const gpUtils = require("./generalPurposeUtils.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
 const tvUtils = require("./temporaryValidationUtils.js");
+const scUtils = require("./sentenceCreatingUtils.js");
 const refObj = require("./referenceObjects.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 
@@ -126,7 +127,7 @@ exports.processSentenceFormula = (
     headChunks,
     dependentChunks,
     otherChunks,
-  } = exports.sortStructureChunks(sentenceStructure);
+  } = scUtils.sortStructureChunks(sentenceStructure);
 
   let headOutputUnitArrays = [];
 
@@ -228,7 +229,7 @@ exports.processSentenceFormula = (
 
           //Inherit from head chunk to dependent chunks.
 
-          exports.inheritFromHeadToDependentChunk(
+          scUtils.inheritFromHeadToDependentChunk(
             currentLanguage,
             headChunk,
             dependentChunk
@@ -469,7 +470,7 @@ exports.giveFinalSentences = (
 
   if (kumquat) {
     arrayOfOutputArrays.forEach((outputArr) => {
-      let finalSentences = exports.buildSentenceString(
+      let finalSentences = scUtils.buildSentenceString(
         outputArr,
         sentenceFormula,
         kumquat,
@@ -484,7 +485,7 @@ exports.giveFinalSentences = (
   } else {
     let outputArr = gpUtils.selectRandom(arrayOfOutputArrays);
 
-    let finalSentences = exports.buildSentenceString(
+    let finalSentences = scUtils.buildSentenceString(
       outputArr,
       sentenceFormula,
       kumquat,
@@ -551,7 +552,7 @@ exports.buildSentenceString = (
   }
 
   arrayOfOutputArrays.forEach((outputArr) => {
-    let arrOfFinalSelectedWordsArrs = exports.selectWordVersions(
+    let arrOfFinalSelectedWordsArrs = scUtils.selectWordVersions(
       outputArr,
       currentLanguage
     );

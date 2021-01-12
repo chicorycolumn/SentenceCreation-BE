@@ -1,6 +1,7 @@
 const gpUtils = require("./generalPurposeUtils.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
 const refObj = require("./referenceObjects.js");
+const otUtils = require("./objectTraversingUtils.js");
 
 exports.findMatchingLemmaObjectThenWord = (
   structureChunk,
@@ -284,7 +285,7 @@ exports.findMatchingLemmaObjectThenWord = (
       } = selectedFormObject;
 
       selectedWordArr.forEach((selectedWord) => {
-        let outputUnit = exports.createOutputUnit(
+        let outputUnit = otUtils.createOutputUnit(
           errorInSentenceCreation,
           null,
           selectedWord,
@@ -362,7 +363,7 @@ exports.findMatchingLemmaObjectThenWord = (
           let { errorInDrilling, selectedWordArray, drillPath } = unit;
 
           selectedWordArray.forEach((selectedWord) => {
-            let outputUnit = exports.createOutputUnit(
+            let outputUnit = otUtils.createOutputUnit(
               errorInSentenceCreation,
               errorInDrilling,
               selectedWord,
@@ -412,7 +413,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
       let selectedWord = selectedWordArray[0];
 
-      let outputUnit = exports.createOutputUnit(
+      let outputUnit = otUtils.createOutputUnit(
         errorInSentenceCreation,
         errorInDrilling,
         selectedWord,
@@ -616,12 +617,12 @@ exports.findObjectInNestedObjectsAndArrays = (
 };
 
 exports.giveRoutesAndTerminalValuesFromObject = (obj) => {
-  const nestedRoutes = exports.extractNestedRoutes(obj).routesByNesting;
+  const nestedRoutes = otUtils.extractNestedRoutes(obj).routesByNesting;
 
   let resArr = [];
 
   nestedRoutes.forEach((nestedRoute) => {
-    let value = exports.giveValueFromObjectByRoute(obj, nestedRoute);
+    let value = otUtils.giveValueFromObjectByRoute(obj, nestedRoute);
 
     //Splits terminal values that are arrays, into different unit, with identical routes.
     if (Array.isArray(value)) {
@@ -658,7 +659,7 @@ exports.findSynhomographs = (lemmaObject, structureChunk, currentLanguage) => {
       structureChunk.wordtype
     ];
 
-  let routesAndValues = exports.giveRoutesAndTerminalValuesFromObject(
+  let routesAndValues = otUtils.giveRoutesAndTerminalValuesFromObject(
     lemmaObject.inflections
   );
 

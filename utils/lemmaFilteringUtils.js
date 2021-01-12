@@ -2,6 +2,7 @@ const { head } = require("../app.js");
 const gpUtils = require("./generalPurposeUtils.js");
 const otUtils = require("./objectTraversingUtils.js");
 const refObj = require("./referenceObjects.js");
+const lfUtils = require("./lemmaFilteringUtils.js");
 
 exports.filterWithinSelectedLemmaObject = (
   lemmaObject,
@@ -218,7 +219,7 @@ exports.filterWithinSelectedLemmaObject = (
 
     let source = lemmaObject.inflections;
 
-    exports.traverseAndRecordInflections(
+    lfUtils.traverseAndRecordInflections(
       source,
       requirementArrs,
       outputUnitsWithDrillPaths
@@ -407,7 +408,7 @@ exports.filterBySelectors = (currentLanguage, structureChunk, matches) => {
 
   if (selectors) {
     selectors.forEach((selector) => {
-      matches = exports.filterByKey(matches, structureChunk, selector);
+      matches = lfUtils.filterByKey(matches, structureChunk, selector);
     });
   }
 
@@ -467,7 +468,7 @@ exports.traverseAndRecordInflections = (
 
       outputUnitsWithDrillPathsMini.push([reqInflectorLabel, chosenInflector]);
 
-      exports.traverseAndRecordInflections(
+      lfUtils.traverseAndRecordInflections(
         source[chosenInflector],
         reqArr.slice(1),
         outputUnitsWithDrillPaths,

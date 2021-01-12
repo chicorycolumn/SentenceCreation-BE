@@ -1,4 +1,5 @@
 const gpUtils = require("./generalPurposeUtils.js");
+const refObj = require("./referenceObjects.js");
 
 exports.giveAdjustedFeatureValue = (
   questionLanguage,
@@ -7,11 +8,11 @@ exports.giveAdjustedFeatureValue = (
   featureValue
 ) => {
   if (
-    exports.lemmaObjectFeatureValueConversion[questionLanguage] &&
-    exports.lemmaObjectFeatureValueConversion[questionLanguage][answerLanguage]
+    refObj.lemmaObjectFeatureValueConversion[questionLanguage] &&
+    refObj.lemmaObjectFeatureValueConversion[questionLanguage][answerLanguage]
   ) {
     let featureValueConversionRef =
-      exports.lemmaObjectFeatureValueConversion[questionLanguage][
+      refObj.lemmaObjectFeatureValueConversion[questionLanguage][
         answerLanguage
       ][featureKey];
 
@@ -499,15 +500,15 @@ exports.getTranslatedTenseDescription = (
   let translatedTenseDescriptionsArr = [];
 
   if (
-    Object.keys(exports.tenseDescriptionTranslation).includes(sourceLanguage)
+    Object.keys(refObj.tenseDescriptionTranslation).includes(sourceLanguage)
   ) {
     translatedTenseDescriptionsArr =
-      exports.tenseDescriptionTranslation[sourceLanguage][targetLanguage][
+      refObj.tenseDescriptionTranslation[sourceLanguage][targetLanguage][
         sourceTenseDescription
       ].regular;
   } else {
     let translations =
-      exports.tenseDescriptionTranslation[targetLanguage][sourceLanguage];
+      refObj.tenseDescriptionTranslation[targetLanguage][sourceLanguage];
 
     Object.keys(translations).forEach((key) => {
       let value = translations[key].regular;

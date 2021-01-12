@@ -1,5 +1,6 @@
 const lfUtils = require("./lemmaFilteringUtils.js");
 const otUtils = require("./objectTraversingUtils.js");
+const gpUtils = require("./generalPurposeUtils.js");
 
 exports.selectRandom = (array) => {
   // console.log("Select random from ARRAY:", array);
@@ -11,8 +12,8 @@ exports.keyShouldBeSpecified = (chunk, key, allowOverwrite) => {
     !chunk ||
     (!(chunk.importantFeatures && chunk.importantFeatures.includes(key)) &&
       (allowOverwrite ||
-        !exports.isKeyFilledOutOnChunk(chunk, key) ||
-        exports.feautureValueIsMeta(chunk, key)))
+        !gpUtils.isKeyFilledOutOnChunk(chunk, key) ||
+        gpUtils.feautureValueIsMeta(chunk, key)))
   );
 };
 
@@ -58,7 +59,7 @@ exports.doKeyValuesMatch = (object, keyValues) => {
     ) {
       return object[key] === keyValues[key];
     } else if (Array.isArray(keyValues[key]) && Array.isArray(object[key])) {
-      return exports.doTwoFlatArraysMatchAllValues(object[key], keyValues[key]);
+      return gpUtils.doTwoFlatArraysMatchAllValues(object[key], keyValues[key]);
     }
   });
 };
@@ -76,8 +77,8 @@ exports.giveSetKey = (word) => {
 };
 
 exports.copyAndCombineWordbanks = (wordbank1, wordbank2) => {
-  let wordbank1Copy = exports.copyWithoutReference(wordbank1);
-  let wordbank2Copy = exports.copyWithoutReference(wordbank2);
+  let wordbank1Copy = gpUtils.copyWithoutReference(wordbank1);
+  let wordbank2Copy = gpUtils.copyWithoutReference(wordbank2);
 
   Object.keys(wordbank1Copy).forEach((key) => {
     //Beta make this work even if key not present?
@@ -93,7 +94,7 @@ exports.findKeysInObjectAndExecuteCallback = (obj, soughtKey, callback) => {
       if (key === soughtKey) {
         callback(obj);
       } else {
-        exports.findKeysInObjectAndExecuteCallback(
+        gpUtils.findKeysInObjectAndExecuteCallback(
           obj[key],
           soughtKey,
           callback
@@ -141,7 +142,7 @@ exports.copyValueOfKey = (
   shouldDeleteSourceKey
 ) => {
   targetKeyArr.forEach((targetKey) => {
-    navigatedObject[targetKey] = exports.copyWithoutReference(
+    navigatedObject[targetKey] = gpUtils.copyWithoutReference(
       navigatedObject[sourceKey]
     );
   });
@@ -195,7 +196,7 @@ exports.explodeOutputArraysByHeadsAndDependents = (justOneOutputArray) => {
       unit.possibleDependentOutputArrays &&
       unit.possibleDependentOutputArrays.length
     ) {
-      unit.explodedDependentOutputArrays = exports.arrayExploder(
+      unit.explodedDependentOutputArrays = gpUtils.arrayExploder(
         unit.possibleDependentOutputArrays
       );
       delete unit.possibleDependentOutputArrays;
@@ -208,13 +209,13 @@ exports.explodeOutputArraysByHeadsAndDependents = (justOneOutputArray) => {
     let headArr = [[headUnit]];
     let depArr = headUnit.explodedDependentOutputArrays;
 
-    let headsExplodedByDeps = exports.arrayExploder([headArr, depArr]);
+    let headsExplodedByDeps = gpUtils.arrayExploder([headArr, depArr]);
     delete headUnit.explodedDependentOutputArrays;
 
     grandArrOfAllHeadUnits.push(headsExplodedByDeps);
   });
 
-  let explodedGrandArray = exports.arrayExploder(grandArrOfAllHeadUnits);
+  let explodedGrandArray = gpUtils.arrayExploder(grandArrOfAllHeadUnits);
 
   explodedGrandArray = explodedGrandArray.map((superArr) => {
     let flattenedArray = [];
@@ -457,7 +458,7 @@ exports.doesKeyContainValueOnChunk = (
   //includeAll false passes if ANY value from featureArr present.
 
   return (
-    exports.isKeyFilledOutOnChunk(chunk, featureKey) &&
+    gpUtils.isKeyFilledOutOnChunk(chunk, featureKey) &&
     ((!includeAll &&
       featureValueArr.some((featureValue) =>
         chunk[featureKey].includes(featureValue)
