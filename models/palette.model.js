@@ -195,7 +195,7 @@ exports.fetchPalette = (req) => {
       aaUtils.addSpecifiers(
         questionSentenceFormula,
         questionOutputArr,
-        languagesObject
+        languagesObj
       );
     }
 

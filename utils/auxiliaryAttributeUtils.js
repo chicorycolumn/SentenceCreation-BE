@@ -564,24 +564,26 @@ exports.attachAnnotations = (
   languagesObj,
   answerSentenceData
 ) => {
-  console.log("c22~~~~~~~~~~~~~~~~~~~~~");
-  console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
-  console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
-  console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
-  console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
-  // console.log("arrayOfOutputUnits", arrayOfOutputUnits);
-  answerSentenceData.arrayOfOutputArrays.forEach((outputArr) => {
-    outputArr.forEach((outputUnit) => {
-      console.log(outputUnit);
+  if (answerSentenceData) {
+    console.log("c22~~~~~~~~~~~~~~~~~~~~~");
+    console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
+    console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
+    console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
+    console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
+    // console.log("arrayOfOutputUnits", arrayOfOutputUnits);
+    answerSentenceData.arrayOfOutputArrays.forEach((outputArr) => {
+      outputArr.forEach((outputUnit) => {
+        console.log(outputUnit);
+      });
+      console.log(
+        "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~########"
+      );
     });
-    console.log(
-      "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~########"
-    );
-  });
-  console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
-  console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
-  console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
-  console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
+    console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
+    console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
+    console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
+    console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
+  }
 
   let { answerLanguage, questionLanguage } = languagesObj;
 
@@ -619,7 +621,7 @@ exports.attachAnnotations = (
 
           if (answerLanguage === "POL" && annotationKey === "gender") {
             console.log("att1", annotationValue);
-            return;
+            // return;
             if (structureChunk.number) {
               if (structureChunk.number.length > 1) {
                 throw "Ah no.";

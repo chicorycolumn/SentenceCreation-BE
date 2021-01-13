@@ -1145,7 +1145,7 @@ describe("/api", () => {
           );
         });
     });
-    it.only("#pal13B-02a GET 200 YES: ENG to POL. A more interesting sentence with Pronouns.", () => {
+    it("#pal13B-02a GET 200 YES: ENG to POL. A more interesting sentence with Pronouns.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2314,7 +2314,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13A-04b-c GET 200 YES: POL to ENG. NO CLARIFIERS Inherit features from pronoun to verb (m sing).", () => {
+    it.only("#pal13A-04b-c GET 200 YES: POL to ENG. NO CLARIFIERS Inherit features from pronoun to verb (m sing).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 

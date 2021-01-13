@@ -18,7 +18,14 @@ exports.findMatchingLemmaObjectThenWord = (
 
   //STEP ONE: : Fx-PW: Pathway for Fixed pieces.
   if (structureChunk.wordtype === "fixed") {
-    console.log("##Fx-PW" + " " + structureChunk.chunkId);
+    if ("console") {
+      if (kumquat) {
+        gpUtils.consoleLogYellow("##Fx-PW" + " " + structureChunk.chunkId);
+      } else {
+        gpUtils.consoleLogBlue("##Fx-PW" + " " + structureChunk.chunkId);
+      }
+    }
+
     return [
       {
         selectedLemmaObject: {},
@@ -137,7 +144,14 @@ exports.findMatchingLemmaObjectThenWord = (
         structureChunk[adhocInflectorKey] &&
         structureChunk[adhocInflectorKey].length
       ) {
-        console.log("##Ad-PW" + " " + structureChunk.chunkId);
+        if ("console") {
+          if (kumquat) {
+            gpUtils.consoleLogYellow("##Ad-PW" + " " + structureChunk.chunkId);
+          } else {
+            gpUtils.consoleLogBlue("##Ad-PW" + " " + structureChunk.chunkId);
+          }
+        }
+
         if (kumquat) {
           matches.forEach((selectedLemmaObject) => {
             let adhocArr = langUtils.generateAdhocForms(
@@ -204,7 +218,18 @@ exports.findMatchingLemmaObjectThenWord = (
           );
 
           if (requestedUninflectedForms.length) {
-            console.log("##Un-PW" + " " + structureChunk.chunkId);
+            if ("console") {
+              if (kumquat) {
+                gpUtils.consoleLogYellow(
+                  "##Un-PW" + " " + structureChunk.chunkId
+                );
+              } else {
+                gpUtils.consoleLogBlue(
+                  "##Un-PW" + " " + structureChunk.chunkId
+                );
+              }
+            }
+
             if (kumquat) {
               requestedUninflectedForms.forEach((selectedUninflectedForm) => {
                 let matchesByUninflectedForm = matches.filter(
@@ -347,7 +372,13 @@ exports.findMatchingLemmaObjectThenWord = (
 
     //  STEP FOUR-B: Getting the inflected word.
 
-    console.log("##If-PW" + " " + structureChunk.chunkId);
+    if ("console") {
+      if (kumquat) {
+        gpUtils.consoleLogYellow("##If-PW" + " " + structureChunk.chunkId);
+      } else {
+        gpUtils.consoleLogBlue("##If-PW" + " " + structureChunk.chunkId);
+      }
+    }
 
     if (kumquat) {
       matchesCopy.forEach((selectedLemmaObject) => {
