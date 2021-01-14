@@ -116,7 +116,7 @@ exports.preprocessLemmaObjectsMajor = (
   matches.forEach((lObj) => {
     if (gpUtils.getWordtypeFromLemmaObject(lObj) === "pronoun") {
       if (!structureChunk.wordtype === "pronoun") {
-        throw "Error------------->lObj and stCh wordtypes don't match.";
+        throw "#ERR------------->lObj and stCh wordtypes don't match.";
       }
       if (!structureChunk.gender) {
         if (

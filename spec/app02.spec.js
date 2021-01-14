@@ -1825,7 +1825,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13A-03a-b GET 200 YES: ENG to POL. Inherit features from pronoun to verb (nonvir plur).", () => {
+    it.only("#pal13A-03a-b GET 200 YES: ENG to POL. Inherit features from pronoun to verb (nonvir plur).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 

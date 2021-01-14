@@ -5,11 +5,7 @@ const refObj = require("../../utils/referenceObjects.js");
 const allLangUtils = require("../../utils/allLangUtils.js");
 
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
-  console.log(
-    "[1;35m " +
-      "-------------------POL preprocessStructureChunks-------------------" +
-      "[0m"
-  );
+  console.log("[1;35m " + "POL preprocessStructureChunks-------------------" + "[0m");
 
   sentenceStructure.forEach((structureChunk) => {
     if (structureChunk.wordtype === "fixed") {

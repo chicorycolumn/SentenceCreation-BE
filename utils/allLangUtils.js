@@ -3,11 +3,7 @@ const gpUtils = require("../utils/generalPurposeUtils.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
-  console.log(
-    "[1;35m " +
-      "-------------------ALL preprocessStructureChunks-------------------" +
-      "[0m"
-  );
+  console.log("[1;35m " + "ALL preprocessStructureChunks-------------------" + "[0m");
 
   let metaFeaturesRef = refObj.metaFeatures[currentLanguage];
 
@@ -144,7 +140,7 @@ exports.convertMetaFeatures = (sourceObjectArray, currentLanguage, objType) => {
     );
   }
 
-  gpUtils.consoleLogPurple("-----------convertMetaFeatures-----------");
+  gpUtils.consoleLogPurple("convertMetaFeatures-----------");
 
   let metaFeaturesRef = refObj.metaFeatures[currentLanguage];
 
