@@ -14,9 +14,6 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
 
     console.log("At first the structureChunk is", structureChunk);
 
-    //Beta this is new.
-    exports.adjustVirilityOfStructureChunk(structureChunk, true);
-
     if (
       //If gender is an appropriate feature of this wordtype.
       refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
@@ -84,7 +81,7 @@ exports.preprocessLemmaObjectsMajor = (
 
   if (!adjustLemmaObjectsOnly) {
     if (["verb", "adjective"].includes(structureChunk.wordtype)) {
-      exports.adjustVirilityOfStructureChunk(structureChunk);
+      allLangUtils.adjustVirilityOfStructureChunk(structureChunk);
     }
   }
 };
@@ -501,51 +498,6 @@ exports.copyInflectionsFromM1toM2 = (lemmaObject) => {
   gpUtils.findKeysInObjectAndExecuteCallback(inflections, "m1", (obj) => {
     gpUtils.copyValueOfKey(obj, "m1", ["m2"], false);
   });
-};
-
-exports.adjustVirilityOfStructureChunk = (structureChunk, retainOriginals) => {
-  console.log(
-    "adjusting virility of structure chunk " + structureChunk.chunkId
-  );
-  let { gender, number } = structureChunk;
-
-  if (!number || !number.includes("plural")) {
-    return;
-  }
-
-  if (!gender || !gender.length) {
-    return;
-  }
-
-  let newGenderArray = [];
-  const pluralGenderRefObj = {
-    m1: "virile",
-    m2: "nonvirile",
-    m3: "nonvirile",
-    f: "nonvirile",
-    n: "nonvirile",
-    virile: "virile",
-    nonvirile: "nonvirile",
-  };
-
-  if (number.includes("singular")) {
-    gender.forEach((genderValue) => {
-      newGenderArray.push(genderValue);
-    });
-  }
-
-  if (number.includes("plural")) {
-    gender.forEach((genderValue) => {
-      newGenderArray.push(pluralGenderRefObj[genderValue]);
-      if (retainOriginals) {
-        newGenderArray.push(genderValue);
-      }
-    });
-  }
-
-  let result = Array.from(new Set(newGenderArray));
-
-  structureChunk.gender = result;
 };
 
 exports.preventMasculineOverrepresentation = (

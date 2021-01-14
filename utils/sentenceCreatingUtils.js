@@ -462,7 +462,7 @@ exports.giveFinalSentences = (
 
   if (!kumquat && arrayOfOutputArrays.length !== 1) {
     console.log("arrayOfOutputArrays", arrayOfOutputArrays);
-    throw "That's strange. We are in Question Mode, so SC:giveFinalSentences expected to be given arrayOfOutputArrays with length of 1, but it didn't.";
+    throw "#ERR Well that's strange. We are in Question Mode, so SC:giveFinalSentences expected to be given arrayOfOutputArrays with length of 1, but it didn't.";
     let x = gpUtils.selectRandom(arrayOfOutputArrays);
   }
 

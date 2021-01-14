@@ -2,6 +2,52 @@ const refObj = require("../utils/referenceObjects.js");
 const gpUtils = require("../utils/generalPurposeUtils.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 
+exports.adjustVirilityOfStructureChunk = (structureChunk, retainOriginals) => {
+  console.log(
+    "adjusting virility of structure chunk " + structureChunk.chunkId
+  );
+  let { gender, number } = structureChunk;
+
+  if (!number || !number.includes("plural")) {
+    return;
+  }
+
+  if (!gender || !gender.length) {
+    return;
+  }
+
+  let newGenderArray = [];
+  const pluralGenderRefObj = {
+    m: "virile",
+    m1: "virile",
+    m2: "nonvirile",
+    m3: "nonvirile",
+    f: "nonvirile",
+    n: "nonvirile",
+    virile: "virile",
+    nonvirile: "nonvirile",
+  };
+
+  if (number.includes("singular")) {
+    gender.forEach((genderValue) => {
+      newGenderArray.push(genderValue);
+    });
+  }
+
+  if (number.includes("plural")) {
+    gender.forEach((genderValue) => {
+      newGenderArray.push(pluralGenderRefObj[genderValue]);
+      if (retainOriginals) {
+        newGenderArray.push(genderValue);
+      }
+    });
+  }
+
+  let newGenderArrayTrimmed = Array.from(new Set(newGenderArray));
+
+  structureChunk.gender = newGenderArrayTrimmed;
+};
+
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   console.log("[1;35m " + "ALL preprocessStructureChunks-------------------" + "[0m");
 
@@ -126,6 +172,8 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
         }
       }
     }
+
+    allLangUtils.adjustVirilityOfStructureChunk(structureChunk, true);
 
     console.log("Finally the structureChunk is", structureChunk);
   });

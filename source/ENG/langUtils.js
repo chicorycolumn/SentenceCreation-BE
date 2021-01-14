@@ -142,7 +142,7 @@ exports.preprocessLemmaObjectsMinor = (matches) => {
       if (lObj.tags.includes("person")) {
         if (!lObj.gender) {
           throw (
-            "Error. The lObj '" +
+            "#ERR. The lObj '" +
             lObj.id +
             "' is a person so should have a gender key."
           );
