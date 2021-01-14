@@ -8,25 +8,19 @@ exports.giveAdjustedFeatureValue = (
   featureValue
 ) => {
   if (
-    refObj.lemmaObjectFeatureValueConversion[questionLanguage] &&
-    refObj.lemmaObjectFeatureValueConversion[questionLanguage][answerLanguage]
+    refObj.featureValueTranslation[questionLanguage] &&
+    refObj.featureValueTranslation[questionLanguage][answerLanguage]
   ) {
-    let featureValueConversionRef =
-      refObj.lemmaObjectFeatureValueConversion[questionLanguage][
-        answerLanguage
-      ][featureKey];
+    let featureValueTranslationRef =
+      refObj.featureValueTranslation[questionLanguage][answerLanguage][
+        featureKey
+      ];
 
-    if (featureValueConversionRef) {
-      let adjustedFeatureValueArr = featureValueConversionRef[featureValue];
-      if (adjustedFeatureValueArr) {
-        return adjustedFeatureValueArr;
-      } else {
-        throw (
-          "#ERR ------------------> REF:adjustedFeatureValueArr found no adjusted feature value for '" +
-          featureValue +
-          "' feature value."
-        );
-      }
+    if (
+      featureValueTranslationRef &&
+      featureValueTranslationRef[featureValue]
+    ) {
+      return featureValueTranslationRef[featureValue].slice(0);
     }
   }
   return [featureValue];
@@ -41,6 +35,7 @@ exports.metaFeatures = {
       allPluralGenders: ["virile", "nonvirile"],
       allGenders: ["m", "n", "f", "virile", "nonvirile"],
     },
+    form: { pronounAndDeterminer: ["pronoun", "determiner"] },
   },
   POL: {
     gender: {
@@ -88,57 +83,27 @@ exports.metaFeatures = {
       ],
       allMasculineSingularGenders: ["m1", "m2", "m3"],
     },
+    form: { pronounAndDeterminer: ["pronoun", "determiner"] },
   },
 };
 
-exports.lemmaObjectFeatureValueConversion = {
+exports.featureValueTranslation = {
   POL: {
     ENG: {
       gender: {
-        n: ["n"],
-        f: ["f"],
         m1: ["m"],
         m2: ["n"],
         m3: ["n"],
-        virile: ["virile"],
-        nonvirile: ["nonvirile"],
-        allPersonalGenders: ["m", "f", "virile", "nonvirile"],
-        allSingularGenders: ["m", "f", "n"],
-        allPersonalSingularGenders: ["m", "f"],
-        allPluralGenders: ["virile", "nonvirile"],
-        allGenders: ["m", "n", "f", "virile", "nonvirile"],
+        allSingularGendersExcludingNeuter: ["allPersonalSingularGenders"],
+        allSingularGendersExcludingNeuterWithPadding: ["allSingularGenders"],
+        allMasculineSingularGenders: ["m"],
       },
     },
   },
   ENG: {
     POL: {
       gender: {
-        n: ["n"],
-        f: ["f"],
         m: ["m1"],
-        virile: ["virile"],
-        nonvirile: ["nonvirile"],
-        allPersonalGenders: ["m1", "f", "virile", "nonvirile"],
-        allSingularGenders: ["m1", "m2", "m3", "f", "f", "f", "n", "n", "n"],
-        allPersonalSingularGenders: ["m1", "f"],
-        allPluralGenders: ["virile", "nonvirile"],
-        allGenders: [
-          "m1",
-          "m2",
-          "m3",
-          "n",
-          "n",
-          "n",
-          "f",
-          "f",
-          "f",
-          "virile",
-          "virile",
-          "virile",
-          "nonvirile",
-          "nonvirile",
-          "nonvirile",
-        ],
       },
     },
   },
@@ -243,8 +208,8 @@ exports.allFeatureValues = {
       "n",
       "virile",
       "nonvirile",
-      "allPersonalGenders",
-      "allSingularGenders",
+      // "allPersonalGenders",
+      // "allSingularGenders",
     ],
   },
   POL: {

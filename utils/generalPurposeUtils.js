@@ -578,3 +578,19 @@ exports.consoleLogPurple = (text) => {
       "[0m"
   );
 };
+
+exports.throw = (msg) => {
+  console.log(
+    "[1;31m " +
+      "! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !" +
+      "[0m"
+  );
+  console.log("[1;31m                  " + msg + "[0m");
+  console.log(
+    "[1;31m " +
+      "! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !" +
+      "[0m"
+  );
+
+  throw msg;
+};

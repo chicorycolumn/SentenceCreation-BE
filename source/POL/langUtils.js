@@ -5,10 +5,18 @@ const refObj = require("../../utils/referenceObjects.js");
 const allLangUtils = require("../../utils/allLangUtils.js");
 
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
+  console.log(
+    "[1;35m " +
+      "-------------------POL preprocessStructureChunks-------------------" +
+      "[0m"
+  );
+
   sentenceStructure.forEach((structureChunk) => {
     if (structureChunk.wordtype === "fixed") {
       return;
     }
+
+    console.log("At first the structureChunk is", structureChunk);
 
     //Beta this is new.
     exports.adjustVirilityOfStructureChunk(structureChunk, true);
@@ -44,13 +52,18 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
         structureChunk.gender = Array.from(new Set(adjustedGenderArray));
       }
     }
+
+    console.log("Finally the structureChunk is", structureChunk);
   });
+
+  console.log("[1;35m " + "/POL preprocessStructureChunks" + "[0m");
 };
 
 exports.preprocessLemmaObjectsMajor = (
   matches,
   structureChunk,
-  adjustLemmaObjectsOnly
+  adjustLemmaObjectsOnly,
+  currentLanguage
 ) => {
   if (!matches.length) {
     return;
@@ -62,15 +75,16 @@ exports.preprocessLemmaObjectsMajor = (
     throw "#ERR ----------> POL preprocessLemmaObjectsMajor fxn, the wordtypes from stCh and lObjs didn't match.";
   }
 
-  allLangUtils.preprocessLemmaObjects(matches, "POL");
-
   if (["verb"].includes(structureChunk.wordtype)) {
     matches.forEach((lObj) => exports.fillVerbInflections(lObj));
   }
 
   if (["adjective"].includes(structureChunk.wordtype)) {
-    matches.forEach((lObj) => exports.adjustMasculinityOfLemmaObject(lObj));
+    matches.forEach((lObj) => exports.copyInflectionsFromM1toM2(lObj));
   }
+
+  allLangUtils.convertMetaFeatures(matches, "POL", "lObj");
+  // allLangUtils.preprocessLemmaObjects(matches, "POL");
 
   if (!adjustLemmaObjectsOnly) {
     if (["verb", "adjective"].includes(structureChunk.wordtype)) {
@@ -484,7 +498,7 @@ exports.fillVerbInflections = (lemmaObject) => {
   }
 };
 
-exports.adjustMasculinityOfLemmaObject = (lemmaObject) => {
+exports.copyInflectionsFromM1toM2 = (lemmaObject) => {
   let { inflections } = lemmaObject;
 
   //Masculinist agenda

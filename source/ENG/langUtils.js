@@ -50,6 +50,8 @@ let inflectorRef = {
 };
 
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
+  let metagenderRef = refObj.metaFeatures[currentLanguage].gender;
+
   sentenceStructure.forEach((structureChunk) => {
     if (structureChunk.wordtype === "fixed") {
       return;
@@ -71,8 +73,6 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
     ) {
       if (!structureChunk.gender || !structureChunk.gender.length) {
         //Fill out if blank.
-
-        let metagenderRef = refObj.metaFeatures[currentLanguage].gender;
 
         // if (!structureChunk.number || !structureChunk.number.length) {
         if (
@@ -105,7 +105,14 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   });
 };
 
-exports.preprocessLemmaObjectsMajor = (matches, structureChunk) => {
+exports.preprocessLemmaObjectsMajor = (
+  matches,
+  structureChunk,
+  adjustLemmaObjectsOnly,
+  currentLanguage
+) => {
+  let metagenderRef = refObj.metaFeatures[currentLanguage].gender;
+
   matches.forEach((lObj) => {
     if (gpUtils.getWordtypeFromLemmaObject(lObj) === "pronoun") {
       if (!structureChunk.wordtype === "pronoun") {
@@ -117,15 +124,16 @@ exports.preprocessLemmaObjectsMajor = (matches, structureChunk) => {
           structureChunk.person.length &&
           !structureChunk.person.includes("3per")
         ) {
-          structureChunk.gender = ["allPersonalGenders"];
+          structureChunk.gender = metagenderRef["allPersonalGenders"].slice(0);
         } else {
-          structureChunk.gender = ["allGenders"];
+          structureChunk.gender = metagenderRef["allGenders"].slice(0);
         }
       }
     }
   });
 
-  allLangUtils.preprocessLemmaObjects(matches, "ENG");
+  allLangUtils.convertMetaFeatures(matches, "ENG", "lObj");
+  // allLangUtils.preprocessLemmaObjects(matches, "ENG");
 };
 
 exports.preprocessLemmaObjectsMinor = (matches) => {
@@ -147,19 +155,23 @@ exports.preprocessLemmaObjectsMinor = (matches) => {
 };
 
 exports.formatFeatureValue = (featureKey, featureValue, note) => {
+  // const metagenderRef = {
+  //   allGenders: [
+  //     "allPersonalSingularGenders",
+  //     "allPersonalGenders",
+  //     "allSingularGenders",
+  //     "allPluralGenders",
+  //     "allGenders",
+  //   ],
+  //   allPersonalGenders: [
+  //     "allPersonalSingularGenders",
+  //     "allPluralGenders",
+  //     "allPersonalGenders",
+  //   ],
+  // };
   const metagenderRef = {
-    allGenders: [
-      "allPersonalSingularGenders",
-      "allPersonalGenders",
-      "allSingularGenders",
-      "allPluralGenders",
-      "allGenders",
-    ],
-    allPersonalGenders: [
-      "allPersonalSingularGenders",
-      "allPluralGenders",
-      "allPersonalGenders",
-    ],
+    allGenders: ["m", "f", "n", "virile", "nonvirile"],
+    allPersonalGenders: ["m", "f", "virile", "nonvirile"],
   };
 
   if (featureKey === "gender") {

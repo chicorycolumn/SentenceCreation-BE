@@ -71,7 +71,12 @@ exports.findMatchingLemmaObjectThenWord = (
   }
 
   langUtils.preprocessLemmaObjectsMinor(matches); //Must be adjusted again as may not have been in such pathway above.
-  langUtils.preprocessLemmaObjectsMajor(matches, structureChunk);
+  langUtils.preprocessLemmaObjectsMajor(
+    matches,
+    structureChunk,
+    false,
+    currentLanguage
+  );
 
   //STEP THREE: Return result array immediately if uninflected or ad hoc.
 

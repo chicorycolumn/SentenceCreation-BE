@@ -68,7 +68,8 @@ exports.filterWithinSelectedLemmaObject = (
     langUtils.preprocessLemmaObjectsMajor(
       [lemmaObjectCopy],
       structureChunk,
-      true
+      true,
+      currentLanguage
     );
 
     let source = gpUtils.copyWithoutReference(lemmaObjectCopy.inflections);

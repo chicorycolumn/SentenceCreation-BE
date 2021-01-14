@@ -1,11 +1,22 @@
 const refObj = require("../utils/referenceObjects.js");
 const gpUtils = require("../utils/generalPurposeUtils.js");
+const allLangUtils = require("../utils/allLangUtils.js");
 
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
+  console.log(
+    "[1;35m " +
+      "-------------------ALL preprocessStructureChunks-------------------" +
+      "[0m"
+  );
+
+  let metaFeaturesRef = refObj.metaFeatures[currentLanguage];
+
   sentenceStructure.forEach((structureChunk) => {
     if (structureChunk.wordtype === "fixed") {
       return;
     }
+
+    console.log("At first the structureChunk is", structureChunk);
 
     if (structureChunk.wordtype === "adjective") {
       if (!structureChunk.form || !structureChunk.form.length) {
@@ -45,10 +56,18 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
           structureChunk.number &&
           structureChunk.number.includes("singular")
         ) {
-          structureChunk.gender.push("allSingularGenders");
+          // structureChunk.gender.push("allSingularGenders");
+          structureChunk.gender = [
+            ...structureChunk.gender,
+            ...metaFeaturesRef["gender"]["allSingularGenders"],
+          ];
         }
         if (structureChunk.number && structureChunk.number.includes("plural")) {
-          structureChunk.gender.push("allPluralGenders");
+          // structureChunk.gender.push("allPluralGenders");
+          structureChunk.gender = [
+            ...structureChunk.gender,
+            ...metaFeaturesRef["gender"]["allPluralGenders"],
+          ];
         }
       }
     }
@@ -111,40 +130,76 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
         }
       }
     }
+
+    console.log("Finally the structureChunk is", structureChunk);
   });
+
+  console.log("[1;35m " + "/ALL preprocessStructureChunks" + "[0m");
 };
 
-exports.preprocessLemmaObjects = (lObjArr, currentLanguage) => {
-  lObjArr.forEach((lObj) => {
-    let featureKey = "gender";
+exports.convertMetaFeatures = (sourceObjectArray, currentLanguage, objType) => {
+  if (!["stCh", "lObj"].includes(objType)) {
+    throw (
+      "allLangUtils.convertMetaFeatures was given wrong objType: " + objType
+    );
+  }
 
-    let metaFeaturesRef = refObj.metaFeatures[currentLanguage][featureKey];
+  gpUtils.consoleLogPurple("-----------convertMetaFeatures-----------");
 
-    Object.keys(metaFeaturesRef).forEach((metaFeatureKey) => {
-      let metaFeatureValues = metaFeaturesRef[metaFeatureKey];
+  let metaFeaturesRef = refObj.metaFeatures[currentLanguage];
 
-      gpUtils.findKeysInObjectAndExecuteCallback(
-        lObj,
-        metaFeatureKey,
-        (obj) => {
-          gpUtils.copyValueOfKey(obj, metaFeatureKey, metaFeatureValues, false);
-        }
-      );
-    });
+  sourceObjectArray.forEach((sourceObject) => {
+    //sourceObject eg= a lObj or a stCh
+    Object.keys(metaFeaturesRef).forEach((featureKey) => {
+      //featureKey eg= "gender"
 
-    if (gpUtils.getWordtypeFromLemmaObject(lObj) === "pronoun") {
-      gpUtils.findKeysInObjectAndExecuteCallback(
-        lObj,
-        "pronounAndDeterminer",
-        (obj) => {
-          gpUtils.copyValueOfKey(
-            obj,
-            "pronounAndDeterminer",
-            ["pronoun", "determiner"],
-            true
+      let metaFeatureRef = metaFeaturesRef[featureKey];
+
+      // metaFeatureRef eg= {
+      //   allPersonalGenders: ["m", "f", "virile", "nonvirile"],
+      //   allSingularGenders: ["m", "f", "n"],
+      //   allPersonalSingularGenders: ["m", "f"],
+      //   allPluralGenders: ["virile", "nonvirile"],
+      //   allGenders: ["m", "n", "f", "virile", "nonvirile"],
+      // }
+
+      if (objType === "lObj") {
+        Object.keys(metaFeatureRef).forEach((metaFeature) => {
+          let regularFeaturesArr = metaFeatureRef[metaFeature];
+
+          gpUtils.findKeysInObjectAndExecuteCallback(
+            sourceObject,
+            metaFeature,
+            (sourceObject) => {
+              gpUtils.copyValueOfKey(
+                sourceObject,
+                metaFeature,
+                regularFeaturesArr,
+                true
+              );
+            }
           );
+        });
+      } else if (objType === "stCh") {
+        if (sourceObject[featureKey]) {
+          let currentValueArr = sourceObject[featureKey];
+          let newValueArr = [];
+
+          console.log(objType, { currentValueArr });
+
+          currentValueArr.forEach((value) => {
+            if (metaFeatureRef[value]) {
+              newValueArr = [...newValueArr, ...metaFeatureRef[value]];
+            } else {
+              newValueArr.push(value);
+            }
+          });
+
+          sourceObject[featureKey] = newValueArr;
+          console.log(objType, { newValueArr });
         }
-      );
-    }
+      }
+    });
   });
+  gpUtils.consoleLogPurple("/convertMetaFeatures");
 };

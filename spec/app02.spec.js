@@ -4,6 +4,7 @@ const chai = require("chai");
 const { expect } = require("chai");
 const gpUtils = require("../utils/generalPurposeUtils.js");
 const { it } = require("mocha");
+const testingUtils = require("../utils/testingUtils.js");
 // chai.use(require("sams-chai-sorted"));
 // const { myErrMsgs } = require("../errors/errors");
 // const endpointsCopy = require("../endpoints.json");
@@ -792,7 +793,7 @@ describe("/api", () => {
             { ENG: "I have my onions.", POL: ["Ja mam moje cebule."] },
             { ENG: "We have our onions.", POL: ["My mamy nasze cebule."] },
           ];
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -834,7 +835,7 @@ describe("/api", () => {
               POL: "My mamy nasze cebule.",
             },
           ];
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -875,7 +876,7 @@ describe("/api", () => {
               POL: ["Nasza matka dała nam książkę."],
             },
           ];
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -932,7 +933,7 @@ describe("/api", () => {
               ],
             },
           ];
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -989,7 +990,7 @@ describe("/api", () => {
               POL: ["Nasze matki dały nam ich książkę."],
             },
           ];
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -1078,7 +1079,7 @@ describe("/api", () => {
               ],
             },
           ];
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -1109,7 +1110,7 @@ describe("/api", () => {
             { ENG: "We are.", POL: ["Jesteśmy.", "My jesteśmy."] },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -1137,7 +1138,7 @@ describe("/api", () => {
             { ENG: "We are.", POL: ["Jesteśmy.", "My jesteśmy."] },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -1195,7 +1196,7 @@ describe("/api", () => {
             },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -1257,7 +1258,7 @@ describe("/api", () => {
             },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -1347,7 +1348,7 @@ describe("/api", () => {
             },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -1533,7 +1534,7 @@ describe("/api", () => {
             },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -1578,7 +1579,7 @@ describe("/api", () => {
             },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -1616,7 +1617,7 @@ describe("/api", () => {
             // },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -1658,7 +1659,7 @@ describe("/api", () => {
             },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -1696,7 +1697,7 @@ describe("/api", () => {
             // },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -1816,7 +1817,7 @@ describe("/api", () => {
 
           let ref = [{ ENG: "I wrote.", POL: ["Napisałem.", "Ja napisałem."] }];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -1846,7 +1847,7 @@ describe("/api", () => {
             { ENG: "We wrote.", POL: ["Napisałyśmy.", "My napisałyśmy."] },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -1876,7 +1877,7 @@ describe("/api", () => {
             { ENG: "I (male) wrote.", POL: ["Napisałem.", "Ja napisałem."] },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -1909,7 +1910,7 @@ describe("/api", () => {
             },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -1920,7 +1921,7 @@ describe("/api", () => {
     //
     //
     //
-    //Note, if you want an ENG Q sentence to have both gender Robił Robiła in POL A sentences,
+    //NOTA BENE: if you want an ENG Q sentence to have both gender Robił Robiła in POL A sentences,
     //then instead of setting no gender, you must set gender as allPersonalGenders.
     it("#pal13A-03b-a GET 200 YES: ENG to POL. (allPersonalGenders was specified.) Inherit features from pronoun to verb (m sing).", () => {
       const questionLanguage = "ENG";
@@ -1952,7 +1953,7 @@ describe("/api", () => {
             },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -1990,7 +1991,7 @@ describe("/api", () => {
             },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -2021,7 +2022,7 @@ describe("/api", () => {
             { ENG: "I (female) wrote.", POL: ["Napisałam.", "Ja napisałam."] },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -2062,7 +2063,7 @@ describe("/api", () => {
             },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -2102,7 +2103,7 @@ describe("/api", () => {
             },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -2139,7 +2140,7 @@ describe("/api", () => {
             },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -2176,7 +2177,7 @@ describe("/api", () => {
             },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -2213,7 +2214,7 @@ describe("/api", () => {
             },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -2261,7 +2262,7 @@ describe("/api", () => {
             },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -2306,7 +2307,7 @@ describe("/api", () => {
             },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -2314,7 +2315,7 @@ describe("/api", () => {
           );
         });
     });
-    it.only("#pal13A-04b-c GET 200 YES: POL to ENG. NO CLARIFIERS Inherit features from pronoun to verb (m sing).", () => {
+    it("#pal13A-04b-c GET 200 YES: POL to ENG. NO CLARIFIERS Inherit features from pronoun to verb (m sing).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -2351,7 +2352,7 @@ describe("/api", () => {
             },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -2396,7 +2397,7 @@ describe("/api", () => {
             },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -2427,7 +2428,7 @@ describe("/api", () => {
     //         { ENG: "It is.", POL: ["Jest."] },
     //       ];
 
-    //       checkTranslationsOfGivenRef(
+    //       testingUtils.checkTranslationsOfGivenRef(
     //         res,
     //         ref,
     //         questionLanguage,
@@ -2464,7 +2465,7 @@ describe("/api", () => {
             },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -2502,7 +2503,7 @@ describe("/api", () => {
             },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -2530,7 +2531,7 @@ describe("/api", () => {
             { ENG: "We are.", POL: ["Jesteśmy.", "My jesteśmy."] },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -2561,7 +2562,7 @@ describe("/api", () => {
             { ENG: "We (females) were.", POL: ["Byłyśmy.", "My byłyśmy."] },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -2595,7 +2596,7 @@ describe("/api", () => {
             { ENG: "The woman had written.", POL: ["Kobieta napisała."] },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -2629,7 +2630,7 @@ describe("/api", () => {
             },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -2675,7 +2676,7 @@ describe("/api", () => {
             },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -2788,7 +2789,7 @@ describe("/api", () => {
             },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -2831,7 +2832,7 @@ describe("/api", () => {
             },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -2868,7 +2869,7 @@ describe("/api", () => {
             { ENG: "A small nut (🔩, metal).", POL: ["Mała nakrętka."] },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -2902,7 +2903,7 @@ describe("/api", () => {
             { POL: "Mała nakrętka.", ENG: ["A small nut."] },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -2933,7 +2934,7 @@ describe("/api", () => {
 
           let ref = [{ ENG: "Bear (noun).", POL: ["Niedźwiedź."] }];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -2964,7 +2965,7 @@ describe("/api", () => {
 
           let ref = [{ ENG: "Bear (verb).", POL: ["Znieść."] }];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -2995,7 +2996,7 @@ describe("/api", () => {
 
           let ref = [{ ENG: "Bear.", POL: ["Znieść."] }];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -3026,7 +3027,7 @@ describe("/api", () => {
 
           let ref = [{ POL: "Niedźwiedź.", ENG: ["Bear."] }];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -3057,7 +3058,7 @@ describe("/api", () => {
 
           let ref = [{ POL: "Znieść.", ENG: ["Bear."] }];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -3091,7 +3092,7 @@ describe("/api", () => {
             { ENG: "Tie (👔, clothes).", POL: ["Krawat."] },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -3125,7 +3126,7 @@ describe("/api", () => {
             { ENG: "Tie (👔, clothes, noun).", POL: ["Krawat."] },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -3156,7 +3157,7 @@ describe("/api", () => {
 
           let ref = [{ ENG: "Tie (🧵, with string eg).", POL: ["Wiązać."] }];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -3189,7 +3190,7 @@ describe("/api", () => {
             { ENG: "Tie (🧵, with string eg, verb).", POL: ["Wiązać."] },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -3223,7 +3224,7 @@ describe("/api", () => {
             { POL: "Krawat.", ENG: ["Tie."] },
           ];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -3254,7 +3255,7 @@ describe("/api", () => {
 
           let ref = [{ POL: "Wiązać.", ENG: ["Tie."] }];
 
-          checkTranslationsOfGivenRef(
+          testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
             questionLanguage,
@@ -3629,46 +3630,4 @@ function checkSentenceTranslations(
       );
     }
   });
-}
-
-function checkTranslationsOfGivenRef(
-  res,
-  ref,
-  questionLanguage,
-  answerLanguage
-) {
-  //You have to specify a different ref for the different directions.
-  // let ref = [
-  //
-  //    If the Qsent is THIS... then the Asent ARRAY must be exactly THIS.
-  //    So you see, that's why this doesn't work bidirectionally.
-  //
-  //   { ENG: "I wrote (male).", POL: ["Napisałem."] },
-  //   { ENG: "I was writing (male).", POL: ["Pisałem."] },
-  //   { ENG: "I wrote (female).", POL: ["Napisałam."] },
-  //   { ENG: "I was writing (female).", POL: ["Pisałam."] },
-  // ];
-
-  console.log(res.body);
-
-  let { questionSentenceArr, answerSentenceArr } = res.body;
-
-  let actualQuestionSentence = questionSentenceArr[0];
-
-  let expectedQuestionSentences = ref.map((item) => item[questionLanguage]);
-
-  expect(expectedQuestionSentences).to.include(actualQuestionSentence);
-
-  let testActivated = false;
-
-  ref.forEach((item) => {
-    if (item[questionLanguage] === actualQuestionSentence) {
-      expect(item[answerLanguage]).to.have.members(answerSentenceArr);
-      testActivated = true;
-    }
-  });
-
-  if (!testActivated) {
-    throw "This test did not really pass, as no expect statement ran.";
-  }
 }

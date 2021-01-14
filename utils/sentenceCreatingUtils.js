@@ -809,6 +809,12 @@ exports.conformAnswerStructureToQuestionStructure = (
         answerStructureChunk[inflector] = [];
       }
     });
+
+    allLangUtils.convertMetaFeatures(
+      [answerStructureChunk],
+      answerLanguage,
+      "stCh"
+    );
   });
 };
 
