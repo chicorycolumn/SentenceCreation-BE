@@ -145,6 +145,17 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
                 }
               }
 
+              if (Array.isArray(clarifierValue)) {
+                if (clarifierValue.length === 1) {
+                  clarifierValue = clarifierValue[0];
+                } else {
+                  console.log("clarifierValue", clarifierValue);
+                  gpUtils.throw(
+                    "aa.addClarifiers --> clarifierValue had length of not 1."
+                  );
+                }
+              }
+
               console.log(
                 "------------------------------------------ADDED CLARIFIER in Step 3: ",
                 clarifierValue
@@ -445,7 +456,7 @@ exports.addSpecifiers = (
       questionHeadChunk.gender = [selectedGender];
       answerHeadChunk.gender = [selectedGender];
 
-      aaUtils.addAnnotation(questionHeadChunk, "gender", [selectedGender]);
+      aaUtils.addAnnotation(questionHeadChunk, "gender", selectedGender);
     }
 
     if (questionLemmaObject && questionLemmaObject.gender === "both") {
@@ -455,7 +466,7 @@ exports.addSpecifiers = (
       questionChunk.gender = [selectedGender];
       answerChunk.gender = [selectedGender];
 
-      aaUtils.addAnnotation(questionChunk, "gender", [selectedGender]);
+      aaUtils.addAnnotation(questionChunk, "gender", selectedGender);
     }
   });
 
@@ -518,6 +529,11 @@ exports.specifyQuestionChunkAndChangeAnswerChunk = (
   actionKey,
   actionValueArr
 ) => {
+  if (actionValueArr.length !== 1) {
+    console.log({ actionValueArr });
+    gpUtils.throw("actionValueArr had length of not 1");
+  }
+
   let {
     answerHeadChunk,
     answerChunk,
@@ -537,7 +553,7 @@ exports.specifyQuestionChunkAndChangeAnswerChunk = (
 
   if (questionHeadChunk) {
     console.log("Point C");
-    aaUtils.addAnnotation(questionHeadChunk, actionKey, actionValueArr);
+    aaUtils.addAnnotation(questionHeadChunk, actionKey, actionValueArr[0]);
   } else {
     if (!questionChunk) {
       throw (
@@ -548,13 +564,18 @@ exports.specifyQuestionChunkAndChangeAnswerChunk = (
       );
     }
     console.log("Point D");
-    aaUtils.addAnnotation(questionChunk, actionKey, actionValueArr);
+    aaUtils.addAnnotation(questionChunk, actionKey, actionValueArr[0]);
   }
 };
 
 exports.addAnnotation = (chunk, key, value) => {
   if (!chunk.annotations) {
     chunk.annotations = {};
+  }
+
+  if (typeof value !== "string") {
+    console.log({ value });
+    gpUtils.throw("aa.addAnnotation expected STRING for value");
   }
 
   chunk.annotations[key] = value;
@@ -656,9 +677,11 @@ exports.attachAnnotations = (
           )
         );
 
-        outputUnit.selectedWord += ` (${formattedAnnotationArr
-          .filter((item) => item)
-          .join(", ")})`;
+        if (formattedAnnotationArr.length) {
+          outputUnit.selectedWord += ` (${formattedAnnotationArr
+            .filter((item) => item)
+            .join(", ")})`;
+        }
       }
     });
   } else {

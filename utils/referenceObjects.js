@@ -15,18 +15,17 @@ exports.filterAnnotations = (
   let { answerLanguage, questionLanguage } = languagesObj;
 
   Object.keys(structureChunk.annotations).forEach((annotationKey) => {
-    console.log("[1;33m " + "q00" + " annotationKey: " + annotationKey + "[0m");
-    let annotationValueArr = structureChunk.annotations[annotationKey];
-    if (annotationValueArr.length !== 1) {
-      console.log({ annotationKey }, "annotationValueArr", annotationValueArr);
-      throw (
-        "refObj.filterAnnotations. stCh.annotations should have looked like this: { number: [ 'singular' ], gender: [ 'm' ] }, but one of the arrays had length of " +
-        annotationValueArr.length +
-        " instead of 1."
+    if (typeof structureChunk.annotations[annotationKey] !== "string") {
+      console.log(
+        "[1;31m " +
+          `${structureChunk.chunkId} stCh should have had STRING for annotation ${annotationKey}` +
+          "[0m"
       );
+      console.log(structureChunk.annotations[annotationKey]);
+      throw "#ERR";
     }
 
-    console.log({ annotationValueArr });
+    console.log("[1;33m " + "q00" + " annotationKey: " + annotationKey + "[0m");
 
     let conditionsOnWhichToBlockAnnotations =
       refObj.conditionsOnWhichToBlockAnnotations[answerLanguage][
@@ -80,8 +79,10 @@ exports.filterAnnotations = (
                     "On stCh " +
                     structureChunk.chunkId +
                     " I will delete the " +
-                    featureKey +
+                    annotationKey +
                     " annotation because one of the answer stChs includes " +
+                    featureKey +
+                    " of " +
                     featureValue +
                     ", which was a condition specified to block the annotation." +
                     "[0m"

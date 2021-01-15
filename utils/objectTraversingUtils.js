@@ -415,7 +415,7 @@ exports.findMatchingLemmaObjectThenWord = (
       let selectedLemmaObject = gpUtils.selectRandom(matchesCopy);
 
       console.log("If-PW selectedLemmaObject");
-      gpUtils.consoleLogObjectAtTwoLevels(selectedLemmaObject.inflections);
+      // gpUtils.consoleLogObjectAtTwoLevels(selectedLemmaObject.inflections);
 
       let subArrayOfOutputUnits = lfUtils.filterWithinSelectedLemmaObject(
         selectedLemmaObject,
