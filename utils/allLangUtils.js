@@ -305,3 +305,61 @@ exports.convertMetaFeatures = (sourceObjectArray, currentLanguage, objType) => {
   });
   gpUtils.consoleLogPurple("/convertMetaFeatures");
 };
+
+exports.specifyMGNs = (questionOutputArr, currentLanguage) => {
+  console.log("[1;35m " + "------------specifyMGNs" + "[0m");
+
+  questionOutputArr.forEach((outputUnit) => {
+    Object.keys(refObj.metaFeatures[currentLanguage]).forEach((featureKey) => {
+      console.log("p20a", featureKey);
+
+      let metaFeatureRef = refObj.metaFeatures[currentLanguage][featureKey];
+      let { structureChunk } = outputUnit;
+      if (structureChunk[featureKey]) {
+        console.log("[1;35m " + structureChunk.chunkId + "[0m");
+        console.log("p20b", structureChunk);
+
+        if (
+          structureChunk[featureKey].some((featureValue) =>
+            Object.keys(metaFeatureRef)
+              .map((metaFeature) => `${metaFeature}_selector`)
+              .includes(featureValue)
+          )
+        ) {
+          console.log("p20c", { featureKey });
+
+          let adjustedFeatureValueArr = [];
+
+          structureChunk[featureKey].forEach((featureValue) => {
+            if (
+              Object.keys(metaFeatureRef)
+                .map((metaFeature) => `${metaFeature}_selector`)
+                .includes(featureValue)
+            ) {
+              adjustedFeatureValueArr = [
+                ...adjustedFeatureValueArr,
+                ...metaFeatureRef[featureValue.split("_")[0]],
+              ];
+            } else {
+              adjustedFeatureValueArr.push(featureValue);
+            }
+          });
+
+          structureChunk[featureKey] = adjustedFeatureValueArr;
+
+          console.log("p20d", structureChunk[featureKey]);
+
+          structureChunk[featureKey] = [
+            gpUtils.selectRandom(structureChunk[featureKey]),
+          ];
+
+          console.log("p20e", structureChunk[featureKey]);
+        }
+      }
+
+      console.log("p20f", structureChunk);
+    });
+  });
+
+  console.log("[1;35m " + "/specifyMGNs" + "[0m");
+};

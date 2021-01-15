@@ -4,6 +4,7 @@ const lfUtils = require("../utils/lemmaFilteringUtils.js");
 const refObj = require("../utils/referenceObjects.js");
 const scUtils = require("../utils/sentenceCreatingUtils.js");
 const aaUtils = require("../utils/auxiliaryAttributeUtils.js");
+const allLangUtils = require("../utils/allLangUtils.js");
 
 exports.fetchPalette = (req) => {
   let kumquat = false;
@@ -16,6 +17,7 @@ exports.fetchPalette = (req) => {
     answerLanguage,
     hideClarifiersForTestingPurposes,
     doNotSpecify,
+    pleaseSpecifyMGNs,
   } = req.body;
 
   let { sentenceFormula, words } = scUtils.getMaterials(
@@ -33,6 +35,16 @@ exports.fetchPalette = (req) => {
     words,
     kumquat
   );
+
+  console.log("w29");
+
+  questionSentenceData.arrayOfOutputArrays
+    .map((outputArray) =>
+      outputArray.map((outputUnit) => outputUnit.structureChunk)
+    )
+    .forEach((item) => {
+      console.log(item);
+    });
 
   if (!questionSentenceData) {
     console.log(
@@ -77,6 +89,11 @@ exports.fetchPalette = (req) => {
 
   let questionOutputArr = questionSentenceData.arrayOfOutputArrays[0];
 
+  ///////////////////////////////////////////////kp (key point)
+  if (pleaseSpecifyMGNs) {
+    allLangUtils.specifyMGNs(questionOutputArr, questionLanguage);
+  }
+
   let answerSentenceData;
   let answerResponseObj;
   let firstAnswerSentenceFormula;
@@ -105,15 +122,12 @@ exports.fetchPalette = (req) => {
         firstAnswerSentenceFormula = answerSentenceFormula;
       }
 
-      //addSpecifiers fxn
-      //conformAtoQ fxn
-      //and then put it through processSentenceFormula
-
       let languagesObject = {
         answerLanguage,
         questionLanguage,
       };
 
+      ///////////////////////////////////////////////kp
       scUtils.conformAnswerStructureToQuestionStructure(
         answerSentenceFormula,
         questionOutputArr,
@@ -126,23 +140,21 @@ exports.fetchPalette = (req) => {
         answerSentenceFormula.sentenceStructure
       );
 
-      if (true) {
-        console.log(
-          "a22a questionOutputArr BEFORE CLARI OR SPECI",
-          questionOutputArr.map((unit) => unit.structureChunk.annotations)
-        );
+      console.log(
+        "a22a questionOutputArr BEFORE CLARI OR SPECI",
+        questionOutputArr.map((unit) => unit.structureChunk.annotations)
+      );
 
-        if (true) {
-          if (!hideClarifiersForTestingPurposes) {
-            aaUtils.addClarifiers(questionOutputArr, languagesObject);
-          }
-
-          console.log(
-            "a22b questionOutputArr AFTER CLARI, BEFORE SPECI",
-            questionOutputArr.map((unit) => unit.structureChunk.annotations)
-          );
-        }
+      if (!hideClarifiersForTestingPurposes) {
+        ///////////////////////////////////////////////kp
+        aaUtils.addClarifiers(questionOutputArr, languagesObject);
       }
+
+      console.log(
+        "a22b questionOutputArr AFTER CLARI, BEFORE SPECI",
+        questionOutputArr.map((unit) => unit.structureChunk.annotations)
+      );
+
       answerSentenceData = scUtils.processSentenceFormula(
         {
           currentLanguage: answerLanguage,
@@ -154,7 +166,7 @@ exports.fetchPalette = (req) => {
       );
 
       console.log(
-        "bb23 answerSentenceFormula.sentenceStructure AFTER SC:process",
+        "bb23a answerSentenceFormula.sentenceStructure AFTER SC:process",
         answerSentenceFormula.sentenceStructure
       );
 
@@ -184,27 +196,35 @@ exports.fetchPalette = (req) => {
     scUtils.removeDuplicatesFromResponseObject(answerResponseObj);
   }
 
+  console.log("bb23b answerSentenceData");
+
+  console.log("***");
+  console.log(answerSentenceData);
+  console.log("***");
+
+  gpUtils.consoleLogObjectAtTwoLevels(answerSentenceData.arrayOfOutputArrays);
+
   let languagesObj = {
     answerLanguage,
     questionLanguage,
   };
   questionOutputArr = questionSentenceData.arrayOfOutputArrays[0];
 
-  if (true) {
-    if (!doNotSpecify) {
-      aaUtils.addSpecifiers(
-        questionSentenceFormula,
-        questionOutputArr,
-        languagesObj
-      );
-    }
-
-    console.log(
-      "a22c questionOutputArr AFTER CLARI AND SPECI",
-      questionOutputArr.map((unit) => unit.structureChunk.annotations)
+  if (!doNotSpecify) {
+    ///////////////////////////////////////////////kp
+    aaUtils.addSpecifiers(
+      answerSentenceData.sentenceFormula,
+      questionOutputArr,
+      languagesObj
     );
   }
 
+  console.log(
+    "a22c questionOutputArr AFTER CLARI AND SPECI",
+    questionOutputArr.map((unit) => unit.structureChunk.annotations)
+  );
+
+  ///////////////////////////////////////////////kp
   aaUtils.attachAnnotations(
     questionOutputArr,
     languagesObj,

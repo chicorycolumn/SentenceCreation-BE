@@ -176,6 +176,25 @@ exports.addSpecifiers = (
   questionOutputArr,
   languagesObj
 ) => {
+  console.log("-----------------------");
+  console.log("-----------------------");
+  console.log("-----------------------");
+  console.log("-----------------------");
+  console.log("-----------------------");
+  console.log("----addSpecifiers------");
+  console.log("-----------------------");
+  console.log("-----------------------");
+  console.log("-----------------------");
+  console.log("-----------------------");
+  console.log("questionOutputArr");
+  questionOutputArr.forEach((outputUnit) => {
+    console.log(outputUnit);
+  });
+  console.log(
+    "answerSentenceFormula.sentenceStructure",
+    answerSentenceFormula.sentenceStructure
+  );
+
   //STEP ZERO: Getting materials
 
   let answerSentenceStructure = answerSentenceFormula.sentenceStructure;
@@ -426,7 +445,7 @@ exports.addSpecifiers = (
     );
   });
 
-  //STEP THREE: Do a special thing for Multi Gender Nouns - that's lObjs with {gender: "both"}.
+  //STEP THREE: Do a special thing for Multi Gender Nouns - that's lObjs with {gender: "allPersonalSingularGenders_selector"}.
   answerDependentChunks.forEach((answerDependentChunk) => {
     let materials = getMaterialsToAddSpecifiers(
       answerDependentChunk,
@@ -443,45 +462,93 @@ exports.addSpecifiers = (
       questionLemmaObject,
     } = materials;
 
-    if (questionHeadLemmaObject && questionHeadLemmaObject.gender === "both") {
-      let selectedGenderUnformatted = gpUtils.selectRandom(["m", "f"]);
+    let selectedGenderForQuestionLanguage;
 
-      let selectedGender = answerLangUtils.formatFeatureValue(
+    if (
+      questionHeadLemmaObject &&
+      questionHeadLemmaObject.gender === "allPersonalSingularGenders_selector"
+    ) {
+      if (questionHeadChunk.gender && questionHeadChunk.gender.length) {
+        selectedGenderForQuestionLanguage = gpUtils.selectRandom(
+          questionHeadChunk.gender
+        );
+      } else {
+        selectedGenderForQuestionLanguage = gpUtils.selectRandom(
+          refObj.metaFeatures[questionLanguage].gender[
+            "allPersonalSingularGenders"
+          ]
+        );
+      }
+
+      selectedGenderForAnswerLanguage = answerLangUtils.formatFeatureValue(
         "gender",
-        selectedGenderUnformatted,
+        selectedGenderForQuestionLanguage,
         "person"
       );
 
-      questionHeadLemmaObject.gender = selectedGender;
-      questionHeadChunk.gender = [selectedGender];
-      answerHeadChunk.gender = [selectedGender];
+      // questionHeadLemmaObject.gender = selectedGenderForQuestionLanguage;
+      questionHeadChunk.gender = [selectedGenderForQuestionLanguage];
+      answerHeadChunk.gender = [selectedGenderForAnswerLanguage];
 
-      aaUtils.addAnnotation(questionHeadChunk, "gender", selectedGender);
+      aaUtils.addAnnotation(
+        questionHeadChunk,
+        "gender",
+        selectedGenderForQuestionLanguage
+      );
     }
 
-    if (questionLemmaObject && questionLemmaObject.gender === "both") {
-      let selectedGender = gpUtils.selectRandom(["m", "f"]);
+    if (
+      questionLemmaObject &&
+      questionLemmaObject.gender === "allPersonalSingularGenders_selector"
+    ) {
+      if (questionChunk.gender && questionChunk.gender.length) {
+        selectedGenderForQuestionLanguage = gpUtils.selectRandom(
+          questionChunk.gender
+        );
+      } else {
+        selectedGenderForQuestionLanguage = gpUtils.selectRandom(
+          refObj.metaFeatures[questionLanguage].gender[
+            "allPersonalSingularGenders"
+          ]
+        );
+      }
 
-      questionLemmaObject.gender = selectedGender;
-      questionChunk.gender = [selectedGender];
-      answerChunk.gender = [selectedGender];
+      selectedGenderForAnswerLanguage = answerLangUtils.formatFeatureValue(
+        "gender",
+        selectedGenderForQuestionLanguage,
+        "person"
+      );
 
-      aaUtils.addAnnotation(questionChunk, "gender", selectedGender);
+      // questionLemmaObject.gender = selectedGenderForQuestionLanguage;
+      questionChunk.gender = [selectedGenderForQuestionLanguage];
+      answerChunk.gender = [selectedGenderForAnswerLanguage];
+
+      aaUtils.addAnnotation(
+        questionChunk,
+        "gender",
+        selectedGenderForQuestionLanguage
+      );
     }
   });
 
-  // console.log("-----------------------");
-  // console.log("-----------------------");
-  // console.log("-----------------------");
-  // console.log("-----------------------");
-  // console.log("-----------------------");
-  // console.log("----addSpecifiers------");
-  // console.log("---------END-----------");
-  // console.log("-----------------------");
-  // console.log("-----------------------");
-  // console.log("-----------------------");
-  // console.log("questionOutputArr", questionOutputArr);
-  // console.log("answerSentenceFormula", answerSentenceFormula);
+  console.log("-----------------------");
+  console.log("-----------------------");
+  console.log("-----------------------");
+  console.log("-----------------------");
+  console.log("-----------------------");
+  console.log("----addSpecifiers------");
+  console.log("---------END-----------");
+  console.log("-----------------------");
+  console.log("-----------------------");
+  console.log("-----------------------");
+  console.log("questionOutputArr");
+  questionOutputArr.forEach((item) => {
+    console.log(item);
+  });
+  console.log(
+    "answerSentenceFormula.sentenceStructure",
+    answerSentenceFormula.sentenceStructure
+  );
 };
 
 exports.sortAnswerAndQuestionStructureChunks = (
@@ -497,17 +564,15 @@ exports.sortAnswerAndQuestionStructureChunks = (
     questionOtherChunks: null,
   };
 
-  if (true) {
-    let {
-      headChunks,
-      dependentChunks,
-      otherChunks,
-    } = scUtils.sortStructureChunks(answerSentenceStructure);
+  let {
+    headChunks,
+    dependentChunks,
+    otherChunks,
+  } = scUtils.sortStructureChunks(answerSentenceStructure);
 
-    responseObj.answerHeadChunks = headChunks;
-    responseObj.answerDependentChunks = dependentChunks;
-    responseObj.answerOtherChunks = otherChunks;
-  }
+  responseObj.answerHeadChunks = headChunks;
+  responseObj.answerDependentChunks = dependentChunks;
+  responseObj.answerOtherChunks = otherChunks;
 
   if (true) {
     let {
@@ -519,9 +584,9 @@ exports.sortAnswerAndQuestionStructureChunks = (
     responseObj.questionHeadChunks = headChunks;
     responseObj.questionDependentChunks = dependentChunks;
     responseObj.questionOtherChunks = otherChunks;
-  }
 
-  return responseObj;
+    return responseObj;
+  }
 };
 
 exports.specifyQuestionChunkAndChangeAnswerChunk = (
@@ -586,32 +651,22 @@ exports.attachAnnotations = (
   languagesObj,
   answerSentenceData
 ) => {
+  if (!answerSentenceData) {
+    console.log("[1;31m " + "NO ANSWER SENTENCE DATA IN aa.attachAnnotations" + "[0m");
+  }
+
   if ("console" && answerSentenceData) {
-    console.log("c22~~~~~~~~~~~~~~~~~~~~~");
-    console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
-    console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
-    console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
-    console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
-    // console.log("arrayOfOutputUnits", arrayOfOutputUnits);
-    answerSentenceData.arrayOfOutputArrays.forEach((outputArr) => {
-      outputArr.forEach((outputUnit) => {
-        console.log(outputUnit);
-      });
-      console.log(
-        "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~########"
-      );
-    });
-    console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
-    console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
-    console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
-    console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
+    console.log("c22 answerSentenceData");
+    gpUtils.consoleLogObjectAtTwoLevels(answerSentenceData.arrayOfOutputArrays);
   }
   let { answerLanguage, questionLanguage } = languagesObj;
 
   if (answerSentenceData) {
-    console.log("}}}}}}}}}}1");
+    console.log("}}0");
     arrayOfOutputUnits.forEach((outputUnit) => {
       let { structureChunk, selectedLemmaObject } = outputUnit;
+
+      console.log("}}1, structureChunk", structureChunk);
 
       let { chunkId } = structureChunk;
 
@@ -650,7 +705,7 @@ exports.attachAnnotations = (
         structureChunk.annotations &&
         Object.keys(structureChunk.annotations).length
       ) {
-        if (true) {
+        if ("console") {
           console.log("b22-----------------------------------------");
           console.log("--------------------------------------------");
           console.log(
@@ -685,7 +740,7 @@ exports.attachAnnotations = (
       }
     });
   } else {
-    console.log("}}}}}}}}}}2");
+    console.log("}}2");
     arrayOfOutputUnits.forEach((outputUnit) => {
       let { structureChunk, selectedLemmaObject } = outputUnit;
 
@@ -693,7 +748,7 @@ exports.attachAnnotations = (
         structureChunk.annotations &&
         Object.keys(structureChunk.annotations).length
       ) {
-        if (true) {
+        if ("console") {
           console.log("b22-----------------------------------------");
           console.log("--------------------------------------------");
           console.log(

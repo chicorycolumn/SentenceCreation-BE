@@ -1229,15 +1229,14 @@ describe("/api", () => {
     //NOTA BENE: if you want an ENG Q sentence to have both gender Robił Robiła in POL A sentences,
     //then instead of setting no gender, you must set gender as allPersonalGenders.
     it("#pal13A-03b-a GET 200 YES: ENG to POL. (allPersonalGenders was specified.) Inherit features from pronoun to verb (m sing).", () => {
-      // it.only("#pal13A-03b-a GET 200 YES: ENG to POL. (allPersonalGenders was specified.) Inherit features from pronoun to verb (m sing).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-          hideClarifiersForTestingPurposes: true,
+          // doNotSpecify: true,
+          // hideClarifiersForTestingPurposes: true,
           questionLanguage,
           useDummy: true,
           answerLanguage,
@@ -1249,13 +1248,12 @@ describe("/api", () => {
 
           let ref = [
             {
-              ENG: "I wrote.",
-              POL: [
-                "Napisałem.",
-                "Ja napisałem.",
-                "Napisałam.",
-                "Ja napisałam.",
-              ],
+              ENG: "I (female) wrote.",
+              POL: ["Napisałam.", "Ja napisałam."],
+            },
+            {
+              ENG: "I (male) wrote.",
+              POL: ["Napisałem.", "Ja napisałem."],
             },
           ];
 
@@ -1274,8 +1272,8 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-          hideClarifiersForTestingPurposes: true,
+          // doNotSpecify: true,
+          // hideClarifiersForTestingPurposes: true,
           questionLanguage,
           useDummy: true,
           answerLanguage,
@@ -1287,13 +1285,16 @@ describe("/api", () => {
 
           let ref = [
             {
-              ENG: "We wrote.",
-              POL: [
-                "Napisałyśmy.",
-                "My napisałyśmy.",
-                "Napisaliśmy.",
-                "My napisaliśmy.",
-              ],
+              ENG: "We (males) wrote.",
+              POL: ["Napisaliśmy.", "My napisaliśmy."],
+            },
+            {
+              ENG: "We (mixed) wrote.",
+              POL: ["Napisaliśmy.", "My napisaliśmy."],
+            },
+            {
+              ENG: "We (females) wrote.",
+              POL: ["Napisałyśmy.", "My napisałyśmy."],
             },
           ];
 
@@ -1901,13 +1902,14 @@ describe("/api", () => {
   });
 
   describe("/palette - Stage 11: Adding Specifiers.", () => {
-    it("#pal11-01a GET 200 YES: SPECIFIER EXPECTED. Multi Gender Noun. ENG to POL.", () => {
+    it.only("#pal11-01a GET 200 YES: SPECIFIER EXPECTED. Multi Gender Noun. ENG to POL.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
         .send({
+          pleaseSpecifyMGNs: true,
           // doNotSpecify: true,
           // hideClarifiersForTestingPurposes: true,
           questionLanguage,

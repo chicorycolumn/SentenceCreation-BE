@@ -796,7 +796,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        andTags: ["job"],
+        andTags: ["job", "person"],
         number: ["singular"],
       },
       {
@@ -819,7 +819,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        andTags: ["job"],
+        andTags: ["job", "person"],
         number: ["singular"],
       },
       {
@@ -843,7 +843,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        andTags: ["job"],
+        andTags: ["job", "person"],
         number: ["plural"],
       },
       {
@@ -866,7 +866,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        andTags: ["job"],
+        andTags: ["job", "person"],
         number: ["plural"],
       },
       {

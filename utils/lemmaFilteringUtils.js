@@ -11,6 +11,8 @@ exports.filterWithinSelectedLemmaObject = (
   kumquat,
   outputArray
 ) => {
+  console.log("w23", structureChunk);
+
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
 
   //Counteract Masculinist Agenda: Overrepresentation
@@ -216,7 +218,8 @@ exports.filterWithinSelectedLemmaObject = (
     let errorInDrilling = false;
     let outputUnitsWithDrillPaths = [];
 
-    // console.log("requirementArrs", requirementArrs);
+    console.log("w24 requirementArrs", requirementArrs);
+    console.log("w24", structureChunk);
 
     let source = lemmaObject.inflections;
 
@@ -296,10 +299,19 @@ exports.updateStructureChunkByAndTagsAndSelectors = (
 
   //Epsilon - this had to be done for ENG, but for POL it was already done elsewhere?
   if (selectedLemmaObject.gender) {
-    structureChunk.gender = [
-      selectedLemmaObject.gender,
-      pluralVirilityConversion[selectedLemmaObject.gender],
-    ];
+    let virilityConvertedGender =
+      pluralVirilityConversion[selectedLemmaObject.gender];
+
+    structureChunk.gender = [selectedLemmaObject.gender];
+
+    if (virilityConvertedGender) {
+      structureChunk.gender.push(virilityConvertedGender);
+    } else {
+      console.log(
+        "lf.updateStructureChunkByAndTagsAndSelectors --> There was no virilityConvertedGender for " +
+          selectedLemmaObject.gender
+      );
+    }
   }
 
   //Yellow option:

@@ -162,6 +162,11 @@ exports.processSentenceFormula = (
       kumquat
     );
 
+    console.log(
+      "w28",
+      allPossOutputUnits_head.map((outputUnit) => outputUnit.structureChunk)
+    );
+
     if (errorInSentenceCreation.errorMessage) {
       console.log(
         "#ERR -------------------------> An error arose in SC:processSentenceFormula. Returning outputArr null for headChunk: " +
@@ -204,14 +209,21 @@ exports.processSentenceFormula = (
   // Now we update the head structure chunks with the details from their respective selectedWords.
   explodedOutputArraysWithHeads.forEach((headOutputArray) => {
     headOutputArray.forEach((headOutputUnit) => {
+      console.log("w28a", headOutputUnit.structureChunk);
+
       lfUtils.updateStructureChunkByAndTagsAndSelectors(
         headOutputUnit,
         currentLanguage
       );
+
+      console.log("w28b", headOutputUnit.structureChunk);
+
       lfUtils.updateStructureChunkByInflections(
         headOutputUnit,
         currentLanguage
       );
+
+      console.log("w28c", headOutputUnit.structureChunk);
 
       let headChunk = headOutputUnit.structureChunk;
 
@@ -617,6 +629,10 @@ exports.conformAnswerStructureToQuestionStructure = (
   languagesObj,
   words
 ) => {
+  console.log(
+    "[1;35m " + "-------------conformAnswerStructureToQuestionStructure" + "[0m"
+  );
+
   let { sentenceStructure } = sentenceFormula;
   let { questionLanguage, answerLanguage } = languagesObj;
   const questionLangUtils = require(`../source/${questionLanguage}/langUtils.js`);
@@ -631,6 +647,8 @@ exports.conformAnswerStructureToQuestionStructure = (
     if (questionStructureChunk.wordtype === "fixed") {
       return;
     }
+
+    console.log("questionStructureChunk", questionStructureChunk);
 
     let questionSelectedLemmaObject = questionOutputArrItem.selectedLemmaObject;
     let questionSelectedWord = questionOutputArrItem.selectedWord;
@@ -685,6 +703,20 @@ exports.conformAnswerStructureToQuestionStructure = (
     answerStructureChunk.specificIds = matchingAnswerLemmaObjects.map(
       (lObj) => lObj.id
     );
+
+    //Do actually transfer gender, for person nouns.
+    if (
+      questionStructureChunk.wordtype === "noun" &&
+      questionStructureChunk.andTags.includes("person")
+    ) {
+      adjustAndAddFeaturesToAnswerChunk(
+        questionStructureChunk,
+        answerStructureChunk,
+        "gender",
+        questionLanguage,
+        answerLanguage
+      );
+    }
 
     refObj.lemmaObjectFeatures[
       answerLanguage
@@ -762,6 +794,22 @@ exports.conformAnswerStructureToQuestionStructure = (
         return;
       }
 
+      adjustAndAddFeaturesToAnswerChunk(
+        questionStructureChunk,
+        answerStructureChunk,
+        inflectorKey,
+        questionLanguage,
+        answerLanguage
+      );
+    });
+
+    function adjustAndAddFeaturesToAnswerChunk(
+      questionStructureChunk,
+      answerStructureChunk,
+      inflectorKey,
+      questionLanguage,
+      answerLanguage
+    ) {
       let adjustedArr = [];
 
       questionStructureChunk[inflectorKey].forEach((inflectorValue) => {
@@ -776,7 +824,7 @@ exports.conformAnswerStructureToQuestionStructure = (
       });
 
       answerStructureChunk[inflectorKey] = adjustedArr;
-    });
+    }
 
     //
     //PART TWO: Blinding
@@ -816,6 +864,8 @@ exports.conformAnswerStructureToQuestionStructure = (
       "stCh"
     );
   });
+
+  console.log("[1;35m " + "/conformAnswerStructureToQuestionStructure" + "[0m");
 };
 
 exports.removeDuplicatesFromResponseObject = (respObj) => {
