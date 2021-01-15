@@ -11,8 +11,6 @@ exports.filterWithinSelectedLemmaObject = (
   kumquat,
   outputArray
 ) => {
-  // console.log("w23", structureChunk);
-
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
 
   //Counteract Masculinist Agenda: Overrepresentation
@@ -178,9 +176,6 @@ exports.filterWithinSelectedLemmaObject = (
         structureChunk.wordtype
       ];
 
-    // console.log(">>> >>> inflectionChain", inflectionChain);
-    // console.log(">>> structureChunk", structureChunk);
-
     let requirementArrs = [];
 
     inflectionChain.forEach((key) => {
@@ -188,8 +183,6 @@ exports.filterWithinSelectedLemmaObject = (
 
       if (structureChunk[key]) {
         structureChunk[key].forEach((inflectionValue) => {
-          // console.log(">>>", { key, inflectionValue });
-
           let formattedFeatureValue = langUtils.formatFeatureValue(
             key,
             inflectionValue
@@ -203,7 +196,10 @@ exports.filterWithinSelectedLemmaObject = (
             formattedFeatureValueArr.push(formattedFeatureValue);
           }
 
-          // console.log("formattedFeatureValueArr", formattedFeatureValueArr);
+          console.log(
+            "filterWithinSelectedLemmaObject: formattedFeatureValueArr",
+            formattedFeatureValueArr
+          );
 
           inflectionValueArr = [
             ...inflectionValueArr,
@@ -217,9 +213,6 @@ exports.filterWithinSelectedLemmaObject = (
 
     let errorInDrilling = false;
     let outputUnitsWithDrillPaths = [];
-
-    // console.log("w24 requirementArrs", requirementArrs);
-    // console.log("w24", structureChunk);
 
     let source = lemmaObject.inflections;
 
@@ -311,25 +304,18 @@ exports.updateStructureChunkByAndTagsAndSelectors = (
     let currentGender = selectedLemmaObject.gender;
     let currentGenderArr = [];
 
-    console.log({ currentGender });
-
     if (/_/.test(currentGender)) {
-      console.log("q11");
       currentGenderArr =
         refObj.metaFeatures[currentLanguage].gender[
           currentGender.split("_")[0]
         ];
     } else {
-      console.log("q12");
       currentGenderArr = [currentGender];
     }
-
-    console.log({ currentGenderArr });
 
     let virilityConvertedGenderArr = [];
 
     currentGenderArr.forEach((currGender) => {
-      console.log({ currGender });
       if (pluralVirilityConversionRef[currentLanguage][currGender]) {
         virilityConvertedGenderArr.push(currGender);
 

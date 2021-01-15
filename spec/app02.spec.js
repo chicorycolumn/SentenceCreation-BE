@@ -1937,7 +1937,7 @@ describe("/api", () => {
           );
         });
     });
-    it.only("#pal11-01b GET 200 YES: SPECIFIER EXPECTED Multi Gender Noun PLURAL. ENG to POL.", () => {
+    it("#pal11-01b GET 200 YES: SPECIFIER EXPECTED Multi Gender Noun PLURAL. ENG to POL.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 

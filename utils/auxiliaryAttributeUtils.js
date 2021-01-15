@@ -96,11 +96,6 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
       refObj.lemmaObjectFeatures[answerLanguage]
         .allowableTransfersFromQuestionStructure[structureChunk.wordtype];
 
-    console.log(
-      { allowableClarifiers },
-      answerLanguage,
-      structureChunk.wordtype
-    );
     //    allowableClarifiers. Any clarifiers not in here, don't bother adding them.
     //    We're looking ahead to the answerLanguage, and thinking, hmmmmm, well right now the questionLanguage
     //    is POL, and soon the answerLanguage will be ENG. And looking it up... ENG doesn't allow "gender" as a transfer.
@@ -113,18 +108,11 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
         questionLanguage
       );
 
-      // console.log("synhomographData");
-      // console.log(synhomographData.lemmaObjectId);
-      // console.log(synhomographData.inflectionLabelChain);
-      // synhomographData.synhomographs.forEach((item) => {
-      //   console.log(item);
-      // });
-
       if (synhomographData) {
         synhomographData.synhomographs.forEach((synhomDataUnit) => {
           //Zeta: Think how this will interact with the Terminus Objects.
           if (selectedWord === synhomDataUnit.terminalValue) {
-            console.log("synhomDataUnit", synhomDataUnit);
+            // console.log("synhomDataUnit", synhomDataUnit);
             let labelsWhereTheyDiffer = synhomDataUnit.labelsWhereTheyDiffer.filter(
               (label) => allowableClarifiers.includes(label)
             );
@@ -186,14 +174,14 @@ exports.addSpecifiers = (
   console.log("-----------------------");
   console.log("-----------------------");
   console.log("-----------------------");
-  console.log("questionOutputArr");
-  questionOutputArr.forEach((outputUnit) => {
-    console.log(outputUnit);
-  });
-  console.log(
-    "answerSentenceFormula.sentenceStructure",
-    answerSentenceFormula.sentenceStructure
-  );
+  // console.log("questionOutputArr");
+  // questionOutputArr.forEach((outputUnit) => {
+  //   console.log(outputUnit);
+  // });
+  // console.log(
+  //   "answerSentenceFormula.sentenceStructure",
+  //   answerSentenceFormula.sentenceStructure
+  // );
 
   //STEP ZERO: Getting materials
 
@@ -288,7 +276,9 @@ exports.addSpecifiers = (
       refObj.requestedSpecifiersNew[answerLanguage][answerChunk.wordtype];
 
     if (!requestedSpecifierInstructionsArr) {
-      console.log("RETURN! No requestedSpecifierInstructionsArr.");
+      console.log(
+        "addSpecifiers RETURN! No requestedSpecifierInstructionsArr."
+      );
       return;
     }
 
@@ -314,7 +304,7 @@ exports.addSpecifiers = (
           );
         })
       ) {
-        console.log("Pass 1");
+        console.log("addSpecifiers Pass 1");
         //then for each action key in the reqSpecInstr...
 
         Object.keys(reqSpecInstr.action).forEach((actionKey) => {
@@ -330,7 +320,7 @@ exports.addSpecifiers = (
                 "person",
               ])
             ) {
-              console.log("abort1");
+              console.log("addSpecifiers abort1");
               return;
             }
 
@@ -340,7 +330,7 @@ exports.addSpecifiers = (
                 "person",
               ])
             ) {
-              console.log("abort2");
+              console.log("addSpecifiers abort2");
               return;
             }
 
@@ -352,7 +342,7 @@ exports.addSpecifiers = (
                 "person",
               ])
             ) {
-              console.log("abort3");
+              console.log("addSpecifiers abort3");
               return;
             }
 
@@ -364,7 +354,7 @@ exports.addSpecifiers = (
                 "person",
               ])
             ) {
-              console.log("abort4");
+              console.log("addSpecifiers abort4");
               return;
             }
           }
@@ -378,7 +368,7 @@ exports.addSpecifiers = (
             gpUtils.keyShouldBeSpecified(questionChunk, actionKey) &&
             gpUtils.keyShouldBeSpecified(questionHeadChunk, actionKey)
           ) {
-            console.log("Pass 2");
+            console.log("addSpecifiers Pass 2");
             let actionValueArr = [
               gpUtils.selectRandom(reqSpecInstr.action[actionKey]),
             ];
@@ -559,14 +549,14 @@ exports.addSpecifiers = (
   console.log("-----------------------");
   console.log("-----------------------");
   console.log("-----------------------");
-  console.log("questionOutputArr");
-  questionOutputArr.forEach((item) => {
-    console.log(item);
-  });
-  console.log(
-    "answerSentenceFormula.sentenceStructure",
-    answerSentenceFormula.sentenceStructure
-  );
+  // console.log("questionOutputArr");
+  // questionOutputArr.forEach((item) => {
+  //   console.log(item);
+  // });
+  // console.log(
+  //   "answerSentenceFormula.sentenceStructure",
+  //   answerSentenceFormula.sentenceStructure
+  // );
 };
 
 exports.sortAnswerAndQuestionStructureChunks = (
@@ -625,17 +615,17 @@ exports.specifyQuestionChunkAndChangeAnswerChunk = (
   } = chunksObj;
 
   if (answerHeadChunk) {
-    console.log("Point A");
+    console.log("specifyQuestionChunkAndChangeAnswerChunk Point A");
     answerHeadChunk[actionKey] = actionValueArr;
   } else {
-    console.log("Point B");
+    console.log("specifyQuestionChunkAndChangeAnswerChunk Point B");
     answerChunk[actionKey] = actionValueArr;
   }
 
   //...and note Specifier in Q headCh if exists, else Q depCh.
 
   if (questionHeadChunk) {
-    console.log("Point C");
+    console.log("specifyQuestionChunkAndChangeAnswerChunk Point C");
     aaUtils.addAnnotation(questionHeadChunk, actionKey, actionValueArr[0]);
   } else {
     if (!questionChunk) {
@@ -646,7 +636,7 @@ exports.specifyQuestionChunkAndChangeAnswerChunk = (
         actionValueArr[0]
       );
     }
-    console.log("Point D");
+    console.log("specifyQuestionChunkAndChangeAnswerChunk Point D");
     aaUtils.addAnnotation(questionChunk, actionKey, actionValueArr[0]);
   }
 };
@@ -676,18 +666,14 @@ exports.attachAnnotations = (
     console.log("[1;31m " + "NO ANSWER SENTENCE DATA IN aa.attachAnnotations" + "[0m");
   }
 
-  if ("console" && answerSentenceData) {
-    console.log("c22 answerSentenceData");
-    // gpUtils.consoleLogObjectAtTwoLevels(answerSentenceData.arrayOfOutputArrays);
-  }
   let { answerLanguage, questionLanguage } = languagesObj;
 
   if (answerSentenceData) {
-    console.log("}}0");
+    console.log("attachAnnotations }}0");
     arrayOfOutputUnits.forEach((outputUnit) => {
       let { structureChunk, selectedLemmaObject } = outputUnit;
 
-      console.log("}}1, structureChunk", structureChunk);
+      console.log("attachAnnotations }}1, structureChunk", structureChunk);
 
       let { chunkId } = structureChunk;
 
@@ -714,29 +700,11 @@ exports.attachAnnotations = (
           }
         });
       });
-      console.log(
-        "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-      );
-      console.log("structureChunk");
-      console.log(structureChunk);
-      console.log("correspondingAnswerChunks");
-      console.log(correspondingAnswerChunks);
 
       if (
         structureChunk.annotations &&
         Object.keys(structureChunk.annotations).length
       ) {
-        if ("console") {
-          console.log("b22-----------------------------------------");
-          console.log("--------------------------------------------");
-          console.log(
-            "[1;35m " + outputUnit.selectedWord + "[0m",
-            structureChunk.annotations
-          );
-          console.log("--------------------------------------------");
-          console.log("--------------------------------------------");
-        }
-
         refObj.filterAnnotations(
           structureChunk,
           languagesObj,
@@ -761,7 +729,7 @@ exports.attachAnnotations = (
       }
     });
   } else {
-    console.log("}}2");
+    console.log("attachAnnotations }}2");
     arrayOfOutputUnits.forEach((outputUnit) => {
       let { structureChunk, selectedLemmaObject } = outputUnit;
 
@@ -769,17 +737,6 @@ exports.attachAnnotations = (
         structureChunk.annotations &&
         Object.keys(structureChunk.annotations).length
       ) {
-        if ("console") {
-          console.log("b22-----------------------------------------");
-          console.log("--------------------------------------------");
-          console.log(
-            "[1;35m " + outputUnit.selectedWord + "[0m",
-            structureChunk.annotations
-          );
-          console.log("--------------------------------------------");
-          console.log("--------------------------------------------");
-        }
-
         let formattedAnnotationArr = Object.keys(
           structureChunk.annotations
         ).map((annotationKey) =>

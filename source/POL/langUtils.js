@@ -229,22 +229,22 @@ exports.formatFeatureValue = (featureKey, featureValue, note) => {
 
   if (featureKey === "gender") {
     if (note === "plural") {
-      console.log(
-        "POL:formatFeatureValue returns virilityRef[note][featureValue] as ",
-        virilityRef[note][featureValue]
-      );
+      // console.log(
+      //   "POL:formatFeatureValue returns virilityRef[note][featureValue] as ",
+      //   virilityRef[note][featureValue]
+      // );
       return virilityRef[note][featureValue];
     } else {
       if (note === "person") {
-        console.log(
-          "POL:formatFeatureValue returns shortHandGenderRef[featureValue] as ",
-          shortHandGenderRef[featureValue]
-        );
+        // console.log(
+        //   "POL:formatFeatureValue returns shortHandGenderRef[featureValue] as ",
+        //   shortHandGenderRef[featureValue]
+        // );
         return shortHandGenderRef[featureValue];
       }
     }
   }
-  console.log("POL:formatFeatureValue returns featureValue as ", featureValue);
+  // console.log("POL:formatFeatureValue returns featureValue as ", featureValue);
   return featureValue;
 };
 

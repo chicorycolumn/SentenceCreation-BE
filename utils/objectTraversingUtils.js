@@ -444,8 +444,6 @@ exports.findMatchingLemmaObjectThenWord = (
 
       let unit = subArrayOfOutputUnits[0];
 
-      // console.log("w26", unit);
-
       //Alpha: By selecting this one unit, we have decanted ourselves into one gender choice.
       //This means doNotSpecify will have no effect, re this pronoun.
       //Why has this not been an issue before, when using doNotSpecify?
@@ -462,8 +460,6 @@ exports.findMatchingLemmaObjectThenWord = (
       }
 
       let selectedWord = selectedWordArray[0];
-
-      // console.log("w27", structureChunk);
 
       let outputUnit = otUtils.createOutputUnit(
         errorInSentenceCreation,

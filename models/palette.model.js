@@ -36,15 +36,23 @@ exports.fetchPalette = (req) => {
     kumquat
   );
 
-  // console.log("w29");
+  if ("console") {
+    console.log(
+      "[1;36m " +
+        "#SBS {{{ fetchPalette just after we get questionSentenceData back from SC:processSentenceFormula. Let's see the stChs in questionSentenceData.arrayOfOutputArrays:" +
+        "[0m"
+    );
 
-  questionSentenceData.arrayOfOutputArrays
-    .map((outputArray) =>
-      outputArray.map((outputUnit) => outputUnit.structureChunk)
-    )
-    .forEach((item) => {
-      console.log(item);
-    });
+    questionSentenceData.arrayOfOutputArrays
+      .map((outputArray) =>
+        outputArray.map((outputUnit) => outputUnit.structureChunk)
+      )
+      .forEach((stCh) => {
+        console.log(stCh);
+      });
+
+    console.log("[1;36m " + "}}}" + "[0m");
+  }
 
   if (!questionSentenceData) {
     console.log(
@@ -79,27 +87,37 @@ exports.fetchPalette = (req) => {
     return finishAndSend(questionResponseObj, null);
   }
 
-  console.log(
-    "selectedWordsss",
-    questionSentenceData.arrayOfOutputArrays[0].map(
-      (outputUnit) => outputUnit.selectedWord
-    )
-  );
-  gpUtils.consoleLogAestheticBorder(1);
+  if ("console") {
+    console.log(
+      "[1;35m " +
+        "#SBS {{{ fetchPalette just before midpoint. Let's see the selectedWordss" +
+        "[0m"
+    );
+
+    console.log(
+      questionSentenceData.arrayOfOutputArrays[0].map(
+        (outputUnit) => outputUnit.selectedWord
+      )
+    );
+
+    console.log("[1;35m " + "}}}" + "[0m");
+  }
+
+  gpUtils.consoleLogAestheticBorder(4);
 
   let questionOutputArr = questionSentenceData.arrayOfOutputArrays[0];
 
   ///////////////////////////////////////////////kp (key point)
 
-  console.log("f11 questionOutputArr BEFORE pleaseSpecifyMGNs");
-  console.log(questionOutputArr.map((outputUnit) => outputUnit.structureChunk));
+  // console.log("f11 fetchPalette, questionOutputArr BEFORE pleaseSpecifyMGNs");
+  // console.log(questionOutputArr.map((outputUnit) => outputUnit.structureChunk));
 
   if (pleaseSpecifyMGNs) {
     allLangUtils.specifyMGNs(questionOutputArr, questionLanguage);
   }
 
-  console.log("f13 questionOutputArr AFTER pleaseSpecifyMGNs");
-  console.log(questionOutputArr.map((outputUnit) => outputUnit.structureChunk));
+  // console.log("f13 fetchPalette, questionOutputArr AFTER pleaseSpecifyMGNs");
+  // console.log(questionOutputArr.map((outputUnit) => outputUnit.structureChunk));
 
   let answerSentenceData;
   let answerResponseObj;
@@ -143,12 +161,12 @@ exports.fetchPalette = (req) => {
       );
 
       console.log(
-        "bb22 answerSentenceFormula.sentenceStructure AFTER qaConform",
+        "f15 fetchPalette, answerSentenceFormula.sentenceStructure AFTER qaConform",
         answerSentenceFormula.sentenceStructure
       );
 
       console.log(
-        "a22a questionOutputArr BEFORE CLARI OR SPECI",
+        "f16 fetchPalette, questionOutputArr BEFORE CLARI OR SPECI",
         questionOutputArr.map((unit) => unit.structureChunk.annotations)
       );
 
@@ -158,7 +176,7 @@ exports.fetchPalette = (req) => {
       }
 
       console.log(
-        "a22b questionOutputArr AFTER CLARI, BEFORE SPECI",
+        "f17 fetchPalette, questionOutputArr AFTER CLARI, BEFORE SPECI",
         questionOutputArr.map((unit) => unit.structureChunk.annotations)
       );
 
@@ -172,15 +190,23 @@ exports.fetchPalette = (req) => {
         kumquat
       );
 
-      // console.log(
-      //   "d13 answerSentenceData.arrayOfOutputArrays",
-      //   answerSentenceData.arrayOfOutputArrays
-      // );
+      if ("console") {
+        console.log(
+          "[1;33m " +
+            "#SBS {{{ fetchPalette just after we get answerSentenceData back from SC:processSentenceFormula. Let's see the stChs in answerSentenceData.arrayOfOutputArrays:" +
+            "[0m"
+        );
 
-      console.log(
-        "bb23a answerSentenceFormula.sentenceStructure AFTER SC:process",
-        answerSentenceFormula.sentenceStructure
-      );
+        answerSentenceData.arrayOfOutputArrays
+          .map((outputArray) =>
+            outputArray.map((outputUnit) => outputUnit.structureChunk)
+          )
+          .forEach((stCh) => {
+            console.log(stCh);
+          });
+
+        console.log("[1;33m " + "}}}" + "[0m");
+      }
 
       if (!answerResponseObj) {
         answerResponseObj = scUtils.giveFinalSentences(
@@ -208,12 +234,6 @@ exports.fetchPalette = (req) => {
     scUtils.removeDuplicatesFromResponseObject(answerResponseObj);
   }
 
-  console.log("bb23b answerSentenceData");
-
-  console.log("***");
-  console.log(answerSentenceData);
-  console.log("***");
-
   let languagesObj = {
     answerLanguage,
     questionLanguage,
@@ -230,7 +250,7 @@ exports.fetchPalette = (req) => {
   }
 
   console.log(
-    "a22c questionOutputArr AFTER CLARI AND SPECI",
+    "f18 fetchPalette, questionOutputArr AFTER CLARI AND SPECI",
     questionOutputArr.map((unit) => unit.structureChunk.annotations)
   );
 

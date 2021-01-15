@@ -132,15 +132,15 @@ exports.processSentenceFormula = (
   let headOutputUnitArrays = [];
 
   console.log(
-    "headChunks",
+    "processSentenceFormula: headChunks",
     headChunks.map((chunk) => chunk.chunkId)
   );
   console.log(
-    "dependentChunks",
+    "processSentenceFormula: dependentChunks",
     dependentChunks.map((chunk) => chunk.chunkId)
   );
   console.log(
-    "otherChunks",
+    "processSentenceFormula: otherChunks",
     otherChunks.map((chunk) => chunk.chunkId)
   );
 
@@ -204,21 +204,15 @@ exports.processSentenceFormula = (
   // Now we update the head structure chunks with the details from their respective selectedWords.
   explodedOutputArraysWithHeads.forEach((headOutputArray) => {
     headOutputArray.forEach((headOutputUnit) => {
-      // console.log("w28a", headOutputUnit.structureChunk);
-
       lfUtils.updateStructureChunkByAndTagsAndSelectors(
         headOutputUnit,
         currentLanguage
       );
 
-      // console.log("w28b", headOutputUnit.structureChunk);
-
       lfUtils.updateStructureChunkByInflections(
         headOutputUnit,
         currentLanguage
       );
-
-      // console.log("w28c", headOutputUnit.structureChunk);
 
       let headChunk = headOutputUnit.structureChunk;
 
@@ -475,13 +469,6 @@ exports.giveFinalSentences = (
 
   let finalSentenceArr = [];
 
-  console.log("d14~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-  // console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-  // console.log("arrayOfOutputArrays");
-  // arrayOfOutputArrays.forEach((outputArray) => {
-  //   console.log(outputArray);
-  // });
-
   if (kumquat) {
     arrayOfOutputArrays.forEach((outputArr) => {
       let finalSentences = scUtils.buildSentenceString(
@@ -533,7 +520,7 @@ exports.buildSentenceString = (
   let producedSentences = [];
 
   if (!sentenceFormula.primaryOrders || !sentenceFormula.primaryOrders.length) {
-    console.log("c13 gonna push unorderedArr Clause 0");
+    console.log("buildSentenceString c13 gonna push unorderedArr Clause 0");
     arrayOfOutputArrays.push(unorderedArr);
   } else {
     if (kumquat) {
@@ -548,16 +535,18 @@ exports.buildSentenceString = (
       allOrders.forEach((order) => {
         let orderedArr = [];
         order.forEach((chunkId) => {
-          console.log({ chunkId });
+          console.log("buildSentenceString", { chunkId });
           let foundChunk = unorderedArr.find(
             (item) => item.structureChunk.chunkId === chunkId
           );
           if (!foundChunk) {
-            console.log("[1;31m " + "Could not find for " + chunkId + " [0m");
+            console.log(
+              "[1;31m " + "buildSentenceString: Could not find for " + chunkId + " [0m"
+            );
           }
           orderedArr.push(foundChunk);
         });
-        console.log("c13 gonna push orderedArr Clause 1");
+        console.log("buildSentenceString c13 gonna push orderedArr Clause 1");
         arrayOfOutputArrays.push(orderedArr);
       });
     } else {
@@ -569,7 +558,7 @@ exports.buildSentenceString = (
           unorderedArr.find((item) => item.structureChunk.chunkId === chunkId)
         );
       });
-      console.log("c13 gonna push orderedArr Clause 3");
+      console.log("buildSentenceString c13 gonna push orderedArr Clause 3");
       arrayOfOutputArrays.push(orderedArr);
     }
   }
@@ -595,8 +584,6 @@ exports.selectWordVersions = (outputArr) => {
   let arrOfSelectedWordsArr = [];
 
   let selectedWordsArr = [];
-
-  // console.log("outputArr", outputArr);
 
   outputArr.forEach((outputUnit) => {
     let { selectedWord } = outputUnit;
@@ -661,7 +648,10 @@ exports.conformAnswerStructureToQuestionStructure = (
       return;
     }
 
-    console.log("questionStructureChunk", questionStructureChunk);
+    console.log(
+      "conformAnswerStructureToQuestionStructure: questionStructureChunk",
+      questionStructureChunk
+    );
 
     let questionSelectedLemmaObject = questionOutputArrItem.selectedLemmaObject;
     let questionSelectedWord = questionOutputArrItem.selectedWord;
@@ -900,11 +890,11 @@ exports.inheritFromHeadToDependentChunk = (
   dependentChunk
 ) => {
   console.log(
-    `Inherit from ${headChunk.chunkId} to ${dependentChunk.chunkId}`,
+    `inheritFromHeadToDependentChunk: from ${headChunk.chunkId} to ${dependentChunk.chunkId}`,
     "dependentChunk BEFOREHAND: ",
     dependentChunk
   );
-  console.log("headChunk", headChunk);
+  console.log("inheritFromHeadToDependentChunk: headChunk", headChunk);
 
   let inheritableInflectorKeys =
     refObj.lemmaObjectFeatures[currentLanguage].inheritableInflectorKeys[
@@ -924,7 +914,9 @@ exports.inheritFromHeadToDependentChunk = (
   }
 
   inheritableInflectorKeys.forEach((inflectorKey) => {
-    console.log("inherit, inflectorKey", { inflectorKey });
+    console.log("inheritFromHeadToDependentChunk: inflectorKey", {
+      inflectorKey,
+    });
     //HARD CHANGE
     if (
       headChunk[inflectorKey] &&
@@ -941,7 +933,7 @@ exports.inheritFromHeadToDependentChunk = (
     }
   });
   console.log(
-    "dependentChunk AFTERWARDS of inheritFromHeadToDependentChunk: ",
+    "inheritFromHeadToDependentChunk: dependentChunk AFTERWARDS of inheritFromHeadToDependentChunk: ",
     dependentChunk
   );
 };

@@ -12,8 +12,6 @@ exports.translateAnnotationValue = (
   let annotationValue = structureChunk.annotations[annotationKey];
 
   if (annotationKey === "gender") {
-    console.log("att1", annotationValue);
-
     if (structureChunk.number) {
       if (structureChunk.number.length > 1) {
         throw "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Ah no.";
@@ -58,7 +56,6 @@ exports.translateAnnotationValue = (
       ? adjustedAnnotation
       : gpUtils.selectRandom(adjustedAnnotation);
   } else {
-    console.log("att2", annotationValue);
     return annotationValue;
   }
 };
@@ -332,15 +329,10 @@ exports.specifyMGNs = (questionOutputArr, currentLanguage) => {
 
   questionOutputArr.forEach((outputUnit) => {
     Object.keys(refObj.metaFeatures[currentLanguage]).forEach((featureKey) => {
-      console.log("p20a", featureKey);
-
       let metaFeatureRef = refObj.metaFeatures[currentLanguage][featureKey];
       let { structureChunk, selectedLemmaObject } = outputUnit;
 
       if (structureChunk[featureKey]) {
-        console.log("[1;35m " + structureChunk.chunkId + "[0m");
-        console.log("p20b", structureChunk);
-
         let featureValuesFromStChAndLObj = [...structureChunk[featureKey]];
         if (selectedLemmaObject[featureKey]) {
           featureValuesFromStChAndLObj.push(selectedLemmaObject[featureKey]);
@@ -360,8 +352,6 @@ exports.specifyMGNs = (questionOutputArr, currentLanguage) => {
             }
           })
         ) {
-          console.log("p20c", { featureKey });
-
           let adjustedFeatureValueArr = [
             ...metaFeatureRef[selectedMetaFeature.split("_")[0]],
           ];
@@ -378,7 +368,7 @@ exports.specifyMGNs = (questionOutputArr, currentLanguage) => {
         }
       }
 
-      console.log("p20f", structureChunk);
+      console.log("p20f In the end, structureChunk is:", structureChunk);
     });
   });
 

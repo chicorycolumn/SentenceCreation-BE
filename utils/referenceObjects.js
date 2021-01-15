@@ -18,14 +18,16 @@ exports.filterAnnotations = (
     if (typeof structureChunk.annotations[annotationKey] !== "string") {
       console.log(
         "[1;31m " +
-          `${structureChunk.chunkId} stCh should have had STRING for annotation ${annotationKey}` +
+          `filterAnnotations: ${structureChunk.chunkId} stCh should have had STRING for annotation ${annotationKey}` +
           "[0m"
       );
       console.log(structureChunk.annotations[annotationKey]);
       throw "#ERR";
     }
 
-    console.log("[1;33m " + "q00" + " annotationKey: " + annotationKey + "[0m");
+    console.log(
+      "[1;33m " + "filterAnnotations q00" + " annotationKey: " + annotationKey + "[0m"
+    );
 
     let conditionsOnWhichToBlockAnnotations =
       refObj.conditionsOnWhichToBlockAnnotations[answerLanguage][
@@ -33,7 +35,7 @@ exports.filterAnnotations = (
       ];
 
     console.log(
-      "conditionsOnWhichToBlockAnnotations",
+      "filterAnnotations: conditionsOnWhichToBlockAnnotations",
       conditionsOnWhichToBlockAnnotations
     );
 
@@ -41,26 +43,26 @@ exports.filterAnnotations = (
       conditionsOnWhichToBlockAnnotations &&
       conditionsOnWhichToBlockAnnotations[annotationKey]
     ) {
-      console.log("[1;33m " + "q01" + "[0m");
+      console.log("[1;33m " + "filterAnnotations: q01" + "[0m");
 
       let conditionsOnWhichToBlockAnnotationsArr =
         conditionsOnWhichToBlockAnnotations[annotationKey];
 
       if (
         conditionsOnWhichToBlockAnnotationsArr.some((conditionsObj) => {
-          console.log("[1;33m " + "q02" + "[0m");
+          console.log("[1;33m " + "filterAnnotations: q02" + "[0m");
 
           return Object.keys(conditionsObj).every((featureKey) => {
             let featureValues = conditionsObj[featureKey];
-            console.log("[1;33m " + "q03" + "[0m");
+            console.log("[1;33m " + "filterAnnotations: q03" + "[0m");
 
             //Each answerChunksObject has a headCh or depCh that fulfils this condition (at least one value from condition arr is present at condition key in headCh).
             return featureValues.some((featureValue) => {
-              console.log("[1;33m " + "q04" + "[0m");
+              console.log("[1;33m " + "filterAnnotations: q04" + "[0m");
 
               if (
                 correspondingAnswerChunks.every((answerChunksObject) => {
-                  console.log("[1;33m " + "q05" + "[0m");
+                  console.log("[1;33m " + "filterAnnotations: q05" + "[0m");
 
                   let headAndDepChunks = [
                     answerChunksObject.answerChunk,
@@ -76,7 +78,7 @@ exports.filterAnnotations = (
               ) {
                 console.log(
                   "[1;35m " +
-                    "On stCh " +
+                    "filterAnnotations: On stCh " +
                     structureChunk.chunkId +
                     " I will delete the " +
                     annotationKey +
@@ -94,7 +96,7 @@ exports.filterAnnotations = (
           });
         })
       ) {
-        console.log("[1;35m " + "Deleting it now!" + "[0m");
+        console.log("[1;35m " + "filterAnnotations: Deleting it now!" + "[0m");
         delete structureChunk.annotations[annotationKey];
       }
     }
