@@ -487,6 +487,16 @@ exports.addSpecifiers = (
       );
 
       // questionHeadLemmaObject.gender = selectedGenderForQuestionLanguage;
+      console.log(
+        "[1;35m " +
+          "#NB: Am changing questionHeadChunk.gender and answerHeadChunk.gender" +
+          "[0m"
+      );
+      console.log({
+        selectedGenderForQuestionLanguage,
+        selectedGenderForAnswerLanguage,
+      });
+
       questionHeadChunk.gender = [selectedGenderForQuestionLanguage];
       answerHeadChunk.gender = [selectedGenderForAnswerLanguage];
 
@@ -518,6 +528,14 @@ exports.addSpecifiers = (
         selectedGenderForQuestionLanguage,
         "person"
       );
+
+      console.log(
+        "[1;35m " + "#NB: Changing questionChunk.gender and answerChunk.gender" + "[0m"
+      );
+      console.log({
+        selectedGenderForQuestionLanguage,
+        selectedGenderForAnswerLanguage,
+      });
 
       // questionLemmaObject.gender = selectedGenderForQuestionLanguage;
       questionChunk.gender = [selectedGenderForQuestionLanguage];
@@ -642,6 +660,9 @@ exports.addAnnotation = (chunk, key, value) => {
     console.log({ value });
     gpUtils.throw("aa.addAnnotation expected STRING for value");
   }
+
+  console.log("[1;35m " + "Added annotation for " + chunk.chunkId + "[0m");
+  console.log({ key, value });
 
   chunk.annotations[key] = value;
 };

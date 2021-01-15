@@ -249,7 +249,7 @@ exports.convertMetaFeatures = (sourceObjectArray, currentLanguage, objType) => {
     );
   }
 
-  gpUtils.consoleLogPurple("convertMetaFeatures-----------");
+  // gpUtils.consoleLogPurple("convertMetaFeatures-----------");
 
   let metaFeaturesRef = refObj.metaFeatures[currentLanguage];
 
@@ -324,7 +324,7 @@ exports.convertMetaFeatures = (sourceObjectArray, currentLanguage, objType) => {
       }
     });
   });
-  gpUtils.consoleLogPurple("/convertMetaFeatures");
+  // gpUtils.consoleLogPurple("/convertMetaFeatures");
 };
 
 exports.specifyMGNs = (questionOutputArr, currentLanguage) => {
@@ -335,46 +335,46 @@ exports.specifyMGNs = (questionOutputArr, currentLanguage) => {
       console.log("p20a", featureKey);
 
       let metaFeatureRef = refObj.metaFeatures[currentLanguage][featureKey];
-      let { structureChunk } = outputUnit;
+      let { structureChunk, selectedLemmaObject } = outputUnit;
+
       if (structureChunk[featureKey]) {
         console.log("[1;35m " + structureChunk.chunkId + "[0m");
         console.log("p20b", structureChunk);
 
+        let featureValuesFromStChAndLObj = [...structureChunk[featureKey]];
+        if (selectedLemmaObject[featureKey]) {
+          featureValuesFromStChAndLObj.push(selectedLemmaObject[featureKey]);
+        }
+
+        let selectedMetaFeature;
+
         if (
-          structureChunk[featureKey].some((featureValue) =>
-            Object.keys(metaFeatureRef)
-              .map((metaFeature) => `${metaFeature}_selector`)
-              .includes(featureValue)
-          )
-        ) {
-          console.log("p20c", { featureKey });
-
-          let adjustedFeatureValueArr = [];
-
-          structureChunk[featureKey].forEach((featureValue) => {
+          featureValuesFromStChAndLObj.some((featureValue) => {
             if (
               Object.keys(metaFeatureRef)
                 .map((metaFeature) => `${metaFeature}_selector`)
                 .includes(featureValue)
             ) {
-              adjustedFeatureValueArr = [
-                ...adjustedFeatureValueArr,
-                ...metaFeatureRef[featureValue.split("_")[0]],
-              ];
-            } else {
-              adjustedFeatureValueArr.push(featureValue);
+              selectedMetaFeature = featureValue;
+              return true;
             }
-          });
+          })
+        ) {
+          console.log("p20c", { featureKey });
 
-          structureChunk[featureKey] = adjustedFeatureValueArr;
-
-          console.log("p20d", structureChunk[featureKey]);
-
-          structureChunk[featureKey] = [
-            gpUtils.selectRandom(structureChunk[featureKey]),
+          let adjustedFeatureValueArr = [
+            ...metaFeatureRef[selectedMetaFeature.split("_")[0]],
           ];
 
-          console.log("p20e", structureChunk[featureKey]);
+          console.log("p20d", { adjustedFeatureValueArr });
+
+          structureChunk[featureKey] = [
+            gpUtils.selectRandom(adjustedFeatureValueArr),
+          ];
+
+          console.log("p20e", {
+            "structureChunk[featureKey]": structureChunk[featureKey],
+          });
         }
       }
 

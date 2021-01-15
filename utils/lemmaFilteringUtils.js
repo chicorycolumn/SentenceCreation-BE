@@ -286,32 +286,66 @@ exports.updateStructureChunkByAndTagsAndSelectors = (
 ) => {
   let { selectedLemmaObject, structureChunk } = outputUnit;
 
-  const pluralVirilityConversion = {
-    m: "virile",
-    m1: "virile",
-    m2: "nonvirile",
-    m3: "nonvirile",
-    f: "nonvirile",
-    n: "nonvirile",
-    virile: "virile",
-    nonvirile: "nonvirile",
+  const pluralVirilityConversionRef = {
+    ENG: {
+      m: ["virile"],
+      f: ["nonvirile"],
+      n: ["nonvirile"],
+      virile: ["virile"],
+      nonvirile: ["nonvirile"],
+    },
+    POL: {
+      m: ["virile"],
+      m1: ["virile"],
+      m2: ["nonvirile"],
+      m3: ["nonvirile"],
+      f: ["nonvirile"],
+      n: ["nonvirile"],
+      virile: ["virile"],
+      nonvirile: ["nonvirile"],
+    },
   };
 
   //Epsilon - this had to be done for ENG, but for POL it was already done elsewhere?
   if (selectedLemmaObject.gender) {
-    let virilityConvertedGender =
-      pluralVirilityConversion[selectedLemmaObject.gender];
+    let currentGender = selectedLemmaObject.gender;
+    let currentGenderArr = [];
 
-    structureChunk.gender = [selectedLemmaObject.gender];
+    console.log({ currentGender });
 
-    if (virilityConvertedGender) {
-      structureChunk.gender.push(virilityConvertedGender);
+    if (/_/.test(currentGender)) {
+      console.log("q11");
+      currentGenderArr =
+        refObj.metaFeatures[currentLanguage].gender[
+          currentGender.split("_")[0]
+        ];
     } else {
-      console.log(
-        "lf.updateStructureChunkByAndTagsAndSelectors --> There was no virilityConvertedGender for " +
-          selectedLemmaObject.gender
-      );
+      console.log("q12");
+      currentGenderArr = [currentGender];
     }
+
+    console.log({ currentGenderArr });
+
+    let virilityConvertedGenderArr = [];
+
+    currentGenderArr.forEach((currGender) => {
+      console.log({ currGender });
+      if (pluralVirilityConversionRef[currentLanguage][currGender]) {
+        virilityConvertedGenderArr.push(currGender);
+
+        virilityConvertedGenderArr = [
+          ...virilityConvertedGenderArr,
+          ...pluralVirilityConversionRef[currentLanguage][currGender],
+        ];
+      } else {
+        gpUtils.throw(
+          "lf.updateStructureChunkByAndTagsAndSelectors --> There was no virilityConvertedGender for " +
+            currGender
+        );
+      }
+    });
+
+    structureChunk.gender = virilityConvertedGenderArr;
   }
 
   //Yellow option:

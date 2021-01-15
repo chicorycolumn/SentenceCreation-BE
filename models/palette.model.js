@@ -85,14 +85,21 @@ exports.fetchPalette = (req) => {
       (outputUnit) => outputUnit.selectedWord
     )
   );
-  gpUtils.consoleLogAestheticBorder(4);
+  gpUtils.consoleLogAestheticBorder(1);
 
   let questionOutputArr = questionSentenceData.arrayOfOutputArrays[0];
 
   ///////////////////////////////////////////////kp (key point)
+
+  console.log("f11 questionOutputArr BEFORE pleaseSpecifyMGNs");
+  console.log(questionOutputArr.map((outputUnit) => outputUnit.structureChunk));
+
   if (pleaseSpecifyMGNs) {
     allLangUtils.specifyMGNs(questionOutputArr, questionLanguage);
   }
+
+  console.log("f13 questionOutputArr AFTER pleaseSpecifyMGNs");
+  console.log(questionOutputArr.map((outputUnit) => outputUnit.structureChunk));
 
   let answerSentenceData;
   let answerResponseObj;

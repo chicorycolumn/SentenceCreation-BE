@@ -1946,6 +1946,7 @@ describe("/api", () => {
         .send({
           // doNotSpecify: true,
           // hideClarifiersForTestingPurposes: true,
+          pleaseSpecifyMGNs: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "109c docs were writing p",

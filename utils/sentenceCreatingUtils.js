@@ -596,7 +596,7 @@ exports.selectWordVersions = (outputArr) => {
 
   let selectedWordsArr = [];
 
-  console.log("outputArr", outputArr);
+  // console.log("outputArr", outputArr);
 
   outputArr.forEach((outputUnit) => {
     let { selectedWord } = outputUnit;
