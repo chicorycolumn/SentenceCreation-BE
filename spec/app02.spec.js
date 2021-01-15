@@ -1229,6 +1229,7 @@ describe("/api", () => {
     //NOTA BENE: if you want an ENG Q sentence to have both gender Robił Robiła in POL A sentences,
     //then instead of setting no gender, you must set gender as allPersonalGenders.
     it("#pal13A-03b-a GET 200 YES: ENG to POL. (allPersonalGenders was specified.) Inherit features from pronoun to verb (m sing).", () => {
+      // it.only("#pal13A-03b-a GET 200 YES: ENG to POL. (allPersonalGenders was specified.) Inherit features from pronoun to verb (m sing).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2072,8 +2073,8 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-          hideClarifiersForTestingPurposes: true,
+          // doNotSpecify: true,
+          // hideClarifiersForTestingPurposes: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "111b I was",
@@ -2082,12 +2083,24 @@ describe("/api", () => {
         .then((res) => {
           let ref = [
             {
-              ENG: "I was.",
-              POL: ["Byłem.", "Ja byłem.", "Byłam.", "Ja byłam."],
+              ENG: "I (male) was.",
+              POL: ["Byłem.", "Ja byłem."],
             },
             {
-              ENG: "We were.",
-              POL: ["Byliśmy.", "My byliśmy.", "Byłyśmy.", "My byłyśmy."],
+              ENG: "I (female) was.",
+              POL: ["Byłam.", "Ja byłam."],
+            },
+            {
+              ENG: "We (males) were.",
+              POL: ["Byliśmy.", "My byliśmy."],
+            },
+            {
+              ENG: "We (mixed) were.",
+              POL: ["Byliśmy.", "My byliśmy."],
+            },
+            {
+              ENG: "We (females) were.",
+              POL: ["Byłyśmy.", "My byłyśmy."],
             },
           ];
 
