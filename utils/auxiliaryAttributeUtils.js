@@ -1,8 +1,9 @@
 const gpUtils = require("./generalPurposeUtils.js");
 const scUtils = require("./sentenceCreatingUtils.js");
-const otUtils = require("../utils/objectTraversingUtils.js");
+const otUtils = require("./objectTraversingUtils.js");
 const refObj = require("./referenceObjects.js");
 const aaUtils = require("./auxiliaryAttributeUtils.js");
+const allLangUtils = require("./allLangUtils.js");
 
 exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
   let { answerLanguage, questionLanguage } = languagesObj;
@@ -564,7 +565,7 @@ exports.attachAnnotations = (
   languagesObj,
   answerSentenceData
 ) => {
-  if (answerSentenceData) {
+  if ("console" && answerSentenceData) {
     console.log("c22~~~~~~~~~~~~~~~~~~~~~");
     console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
     console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -584,94 +585,115 @@ exports.attachAnnotations = (
     console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
     console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
   }
-
   let { answerLanguage, questionLanguage } = languagesObj;
 
-  arrayOfOutputUnits.forEach((outputUnit) => {
-    let { structureChunk, selectedLemmaObject } = outputUnit;
+  if (answerSentenceData) {
+    console.log("}}}}}}}}}}1");
+    arrayOfOutputUnits.forEach((outputUnit) => {
+      let { structureChunk, selectedLemmaObject } = outputUnit;
 
-    if (
-      structureChunk.annotations &&
-      Object.keys(structureChunk.annotations).length
-    ) {
-      console.log("b22-----------------------------------------");
-      console.log("--------------------------------------------");
-      console.log(
-        "[1;35m " + outputUnit.selectedWord + "[0m",
-        structureChunk.annotations
-      );
-      console.log("--------------------------------------------");
-      console.log("--------------------------------------------");
-      let formattedAnnotationArr = Object.keys(structureChunk.annotations).map(
-        (annotationKey) => {
-          let annotationValue = structureChunk.annotations[annotationKey];
+      let { chunkId } = structureChunk;
 
-          //So, if answer is "Masz."   gender of question will have no impact, so we shouldn't add this annotation.
-          //But if answer is "Miałem." gender of question does change it,      so we must add this annotation.
+      let correspondingAnswerStructureChunks = [];
 
-          //By this point, all annotations have been put in annotations object.
-          //But we can decide which ones we want and don't want.
-
-          //If we have ENG "You have." and so we have annotations "singular" and "f".
-
-          //We can decide - well, in POL, which is the answerLang, there'll be no different between m and f in "Masz."
-          //so we shouldn't attach the Gender annotation
-
-          //Whereas there is a difference between "Masz." and "Macie.", so we should indeed attach the Number annotation.
-
-          if (answerLanguage === "POL" && annotationKey === "gender") {
-            console.log("att1", annotationValue);
-            // return;
-            if (structureChunk.number) {
-              if (structureChunk.number.length > 1) {
-                throw "Ah no.";
-              }
-
-              const pluralVirilityConversion = {
-                m: "virile",
-                m1: "virile",
-                m2: "nonvirile",
-                m3: "nonvirile",
-                f: "nonvirile",
-                n: "nonvirile",
-                virile: "virile",
-                nonvirile: "nonvirile",
-              };
-
-              if (structureChunk.number[0] === "plural") {
-                annotationValue = pluralVirilityConversion[annotationValue];
-                if (!annotationValue) {
-                  throw "Mm no.";
-                }
-              }
-            }
-
-            const POLgenderToPlainEnglishRef = {
-              m: "male",
-              m1: "male",
-              m2: "male",
-              m3: "male",
-              f: "female",
-              n: "neuter",
-              virile: ["mixed", "males"],
-              nonvirile: "females",
+      answerSentenceData.arrayOfOutputArrays.forEach((outputArray) => {
+        outputArray.forEach((outputUnit) => {
+          if (
+            outputUnit.structureChunk &&
+            outputUnit.structureChunk.chunkId === chunkId
+          ) {
+            let correspondingAnswerStructureChunkObj = {
+              answerChunk: outputUnit.structureChunk,
+              dependentAnswerChunks: [],
             };
 
-            let adjustedAnnotation =
-              POLgenderToPlainEnglishRef[annotationValue];
+            //nownowFind the dependentAnswerChunks
 
-            return typeof adjustedAnnotation === "string"
-              ? adjustedAnnotation
-              : gpUtils.selectRandom(adjustedAnnotation);
-          } else {
-            console.log("att2", annotationValue);
-            return annotationValue;
+            correspondingAnswerStructureChunks.push(
+              correspondingAnswerStructureChunkObj
+            );
+            // correspondingAnswerStructureChunks.push(outputUnit.structureChunk);
           }
-        }
+        });
+      });
+      console.log(
+        "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
       );
-      outputUnit.selectedWord += ` (${formattedAnnotationArr
-        .filter((item) => item)
-        .join(", ")})`;
-    }
-  });
+      console.log("structureChunk");
+      console.log(structureChunk);
+      console.log("correspondingAnswerStructureChunks");
+      console.log(correspondingAnswerStructureChunks);
+
+      if (
+        structureChunk.annotations &&
+        Object.keys(structureChunk.annotations).length
+      ) {
+        if (true) {
+          console.log("b22-----------------------------------------");
+          console.log("--------------------------------------------");
+          console.log(
+            "[1;35m " + outputUnit.selectedWord + "[0m",
+            structureChunk.annotations
+          );
+          console.log("--------------------------------------------");
+          console.log("--------------------------------------------");
+        }
+
+        refObj.filterAnnotations(
+          structureChunk,
+          languagesObj,
+          correspondingAnswerStructureChunks
+        );
+
+        let formattedAnnotationArr = Object.keys(
+          structureChunk.annotations
+        ).map((annotationKey) =>
+          allLangUtils.translateAnnotationValue(
+            annotationKey,
+            structureChunk,
+            languagesObj
+          )
+        );
+
+        outputUnit.selectedWord += ` (${formattedAnnotationArr
+          .filter((item) => item)
+          .join(", ")})`;
+      }
+    });
+  } else {
+    console.log("}}}}}}}}}}2");
+    arrayOfOutputUnits.forEach((outputUnit) => {
+      let { structureChunk, selectedLemmaObject } = outputUnit;
+
+      if (
+        structureChunk.annotations &&
+        Object.keys(structureChunk.annotations).length
+      ) {
+        if (true) {
+          console.log("b22-----------------------------------------");
+          console.log("--------------------------------------------");
+          console.log(
+            "[1;35m " + outputUnit.selectedWord + "[0m",
+            structureChunk.annotations
+          );
+          console.log("--------------------------------------------");
+          console.log("--------------------------------------------");
+        }
+
+        let formattedAnnotationArr = Object.keys(
+          structureChunk.annotations
+        ).map((annotationKey) =>
+          allLangUtils.translateAnnotationValue(
+            annotationKey,
+            structureChunk,
+            languagesObj
+          )
+        );
+
+        outputUnit.selectedWord += ` (${formattedAnnotationArr
+          .filter((item) => item)
+          .join(", ")})`;
+      }
+    });
+  }
 };

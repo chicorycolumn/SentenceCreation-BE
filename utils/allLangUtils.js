@@ -2,6 +2,64 @@ const refObj = require("../utils/referenceObjects.js");
 const gpUtils = require("../utils/generalPurposeUtils.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 
+exports.translateAnnotationValue = (
+  annotationKey,
+  structureChunk,
+  languagesObj
+) => {
+  let { answerLanguage, questionLanguage } = languagesObj;
+
+  let annotationValue = structureChunk.annotations[annotationKey];
+
+  if (annotationKey === "gender") {
+    console.log("att1", annotationValue);
+
+    if (structureChunk.number) {
+      if (structureChunk.number.length > 1) {
+        throw "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Ah no.";
+      }
+
+      const pluralVirilityConversion = {
+        m: "virile",
+        m1: "virile",
+        m2: "nonvirile",
+        m3: "nonvirile",
+        f: "nonvirile",
+        n: "nonvirile",
+        virile: "virile",
+        nonvirile: "nonvirile",
+      };
+
+      if (structureChunk.number[0] === "plural") {
+        annotationValue = pluralVirilityConversion[annotationValue];
+        if (!annotationValue) {
+          throw "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Mm no.";
+        }
+      }
+    }
+
+    const POLgenderToPlainEnglishRef = {
+      m: "male",
+      m1: "male",
+      m2: "male",
+      m3: "male",
+      f: "female",
+      n: "neuter",
+      virile: ["mixed", "males"],
+      nonvirile: "females",
+    };
+
+    let adjustedAnnotation = POLgenderToPlainEnglishRef[annotationValue];
+
+    return typeof adjustedAnnotation === "string"
+      ? adjustedAnnotation
+      : gpUtils.selectRandom(adjustedAnnotation);
+  } else {
+    console.log("att2", annotationValue);
+    return annotationValue;
+  }
+};
+
 exports.adjustVirilityOfStructureChunk = (structureChunk, retainOriginals) => {
   console.log(
     "adjusting virility of structure chunk " + structureChunk.chunkId

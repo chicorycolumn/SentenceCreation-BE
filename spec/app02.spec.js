@@ -1825,7 +1825,7 @@ describe("/api", () => {
           );
         });
     });
-    it.only("#pal13A-03a-b GET 200 YES: ENG to POL. Inherit features from pronoun to verb (nonvir plur).", () => {
+    it("#pal13A-03a-b GET 200 YES: ENG to POL. Inherit features from pronoun to verb (nonvir plur).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2438,6 +2438,162 @@ describe("/api", () => {
     // });
   });
 
+  describe("/palette - Stage 12: Further linguistic features.", () => {
+    it("#pal12-01a GET 200 YES: Tantum plurale in POL is allowed to be sing or plur in ENG.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          doNotSpecify: true,
+          hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "red door",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+          expect(["Czerwone drzwi."]).to.include(questionSentenceArr[0]);
+          expect(answerSentenceArr).to.have.members([
+            "Red door.",
+            "Red doors.",
+          ]);
+        });
+    });
+    it("#pal12-01b GET 200 YES: RSWAT for ENG sing to POL tantum plurale.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          doNotSpecify: true,
+          hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "red door singular",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+          expect(["Red door."]).to.include(questionSentenceArr[0]);
+          expect(answerSentenceArr).to.have.members(["Czerwone drzwi."]);
+        });
+    });
+    it("#pal12-01c GET 200 YES: RSWAT for ENG to POL tantum plurale.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          doNotSpecify: true,
+          hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "red door",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+          expect(["Red door.", "Red doors."]).to.includes(
+            questionSentenceArr[0]
+          );
+          expect(answerSentenceArr).to.have.members(["Czerwone drzwi."]);
+        });
+    });
+    xit("#pal12-##a GET 200 YES: RSWAT for First Conditional POL->ENG.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // doNotSpecify: true,
+          // hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "first conditional 106a",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              POL: "Jeśli napiszesz książkę , ją zbadam.",
+              ENG: ["If you write a book , I will research it."],
+            },
+            {
+              POL: "Jeśli będziesz pisać książkę , ją zbadam.",
+              ENG: ["If you write a book , I will research it."],
+            },
+            {
+              POL: "Jeśli będziesz pisał książkę , ją zbadam.",
+              ENG: ["If you write (male) a book , I will research it."],
+            },
+            {
+              POL: "Jeśli będziesz pisała książkę , ją zbadam.",
+              ENG: ["If you write (female) a book , I will research it."],
+            },
+          ];
+
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    xit("#pal12-##b GET 200 YES: RSWAT for First Conditional ENG->POL.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          doNotSpecify: true,
+          hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "first conditional 106a",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          let ref = [
+            {
+              ENG: "If you write a book , I will research it.",
+              POL: ["Jeśli napiszesz książkę , ją zbadam."],
+            },
+            {
+              ENG: "If you write a book , I will research it.",
+              POL: ["Jeśli będziesz pisać książkę , ją zbadam."],
+            },
+            {
+              ENG: "If you write (male) a book , I will research it.",
+              POL: ["Jeśli będziesz pisał książkę , ją zbadam."],
+            },
+            {
+              ENG: "If you write (female) a book , I will research it.",
+              POL: ["Jeśli będziesz pisała książkę , ją zbadam."],
+            },
+          ];
+
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+  });
+
   describe("/palette - Stage 11: Adding Specifiers.", () => {
     it("#pal11-01a GET 200 YES: SPECIFIER EXPECTED. Multi Gender Noun. ENG to POL.", () => {
       const questionLanguage = "ENG";
@@ -2673,162 +2829,6 @@ describe("/api", () => {
             {
               ENG: "You (plural, females) were.",
               POL: ["Byłyście.", "Wy byłyście."],
-            },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-  });
-
-  describe("/palette - Stage 12: Further linguistic features.", () => {
-    it("#pal12-01a GET 200 YES: Tantum plurale in POL is allowed to be sing or plur in ENG.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          doNotSpecify: true,
-          hideClarifiersForTestingPurposes: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "red door",
-        })
-        .expect(200)
-        .then((res) => {
-          console.log(res.body);
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-          expect(["Czerwone drzwi."]).to.include(questionSentenceArr[0]);
-          expect(answerSentenceArr).to.have.members([
-            "Red door.",
-            "Red doors.",
-          ]);
-        });
-    });
-    it("#pal12-01b GET 200 YES: RSWAT for ENG sing to POL tantum plurale.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          doNotSpecify: true,
-          hideClarifiersForTestingPurposes: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "red door singular",
-        })
-        .expect(200)
-        .then((res) => {
-          console.log(res.body);
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-          expect(["Red door."]).to.include(questionSentenceArr[0]);
-          expect(answerSentenceArr).to.have.members(["Czerwone drzwi."]);
-        });
-    });
-    it("#pal12-01c GET 200 YES: RSWAT for ENG to POL tantum plurale.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          doNotSpecify: true,
-          hideClarifiersForTestingPurposes: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "red door",
-        })
-        .expect(200)
-        .then((res) => {
-          console.log(res.body);
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-          expect(["Red door.", "Red doors."]).to.includes(
-            questionSentenceArr[0]
-          );
-          expect(answerSentenceArr).to.have.members(["Czerwone drzwi."]);
-        });
-    });
-    xit("#pal12-##a GET 200 YES: RSWAT for First Conditional POL->ENG.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // doNotSpecify: true,
-          // hideClarifiersForTestingPurposes: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "first conditional 106a",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              POL: "Jeśli napiszesz książkę , ją zbadam.",
-              ENG: ["If you write a book , I will research it."],
-            },
-            {
-              POL: "Jeśli będziesz pisać książkę , ją zbadam.",
-              ENG: ["If you write a book , I will research it."],
-            },
-            {
-              POL: "Jeśli będziesz pisał książkę , ją zbadam.",
-              ENG: ["If you write (male) a book , I will research it."],
-            },
-            {
-              POL: "Jeśli będziesz pisała książkę , ją zbadam.",
-              ENG: ["If you write (female) a book , I will research it."],
-            },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    xit("#pal12-##b GET 200 YES: RSWAT for First Conditional ENG->POL.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          doNotSpecify: true,
-          hideClarifiersForTestingPurposes: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "first conditional 106a",
-        })
-        .expect(200)
-        .then((res) => {
-          console.log(res.body);
-          let ref = [
-            {
-              ENG: "If you write a book , I will research it.",
-              POL: ["Jeśli napiszesz książkę , ją zbadam."],
-            },
-            {
-              ENG: "If you write a book , I will research it.",
-              POL: ["Jeśli będziesz pisać książkę , ją zbadam."],
-            },
-            {
-              ENG: "If you write (male) a book , I will research it.",
-              POL: ["Jeśli będziesz pisał książkę , ją zbadam."],
-            },
-            {
-              ENG: "If you write (female) a book , I will research it.",
-              POL: ["Jeśli będziesz pisała książkę , ją zbadam."],
             },
           ];
 
@@ -3265,7 +3265,7 @@ describe("/api", () => {
     });
   });
 
-  describe("/palette - Stage 9: Synhomographs (adding Clarifiers).", () => {
+  describe.only("/palette - Stage 9: Synhomographs (adding Clarifiers).", () => {
     it("#pal09-01a (Type 1 Synhomographs. If-PW: clarify Inflections) 'sheep': ENG to POL. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -3366,7 +3366,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal09-03a (Type 3 Synhomographs. Ad-PW: clarify Inflections) 'write': ENG to POL. Expect clarifiers.", () => {
+    it.only("#pal09-03a (Type 3 Synhomographs. Ad-PW: clarify Inflections) 'write': ENG to POL. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 

@@ -1,6 +1,106 @@
 const gpUtils = require("./generalPurposeUtils.js");
 const refObj = require("./referenceObjects.js");
 
+exports.filterAnnotations = (
+  structureChunk,
+  languagesObj,
+  correspondingAnswerStructureChunks
+) => {
+  console.log("[1;35m " + "filterAnnotations was given:" + "[0m");
+
+  //nownowThis currently isn't working to filter out the things
+  //because, it needs to check the tenseDescription condition from the dependent answer chunk. Whew.
+
+  console.log({
+    structureChunk,
+    languagesObj,
+    correspondingAnswerStructureChunks,
+  });
+
+  let { answerLanguage, questionLanguage } = languagesObj;
+
+  Object.keys(structureChunk.annotations).forEach((annotationKey) => {
+    let annotationValueArr = structureChunk.annotations[annotationKey];
+    if (annotationValueArr.length !== 1) {
+      throw (
+        "refObj.filterAnnotations. stCh.annotations should have looked like this: { number: [ 'singular' ], gender: [ 'm' ] }, but one of the arrays had length of " +
+        annotationValueArr.length +
+        " instead of 1."
+      );
+    }
+
+    let conditionsOnWhichToBlockAnnotations =
+      refObj.conditionsOnWhichToBlockAnnotations[answerLanguage][
+        structureChunk.wordtype
+      ];
+
+    if (
+      conditionsOnWhichToBlockAnnotations &&
+      conditionsOnWhichToBlockAnnotations[annotationKey]
+    ) {
+      let conditionsOnWhichToBlockAnnotationsArr =
+        conditionsOnWhichToBlockAnnotations[annotationKey];
+
+      if (
+        conditionsOnWhichToBlockAnnotationsArr.some((conditionsObj) => {
+          return Object.keys(conditionsObj).every((featureKey) => {
+            let featureValues = conditionsObj[featureKey];
+
+            return featureValues.some((featureValue) => {
+              if (
+                correspondingAnswerStructureChunks
+                  .map(
+                    (answerStructureChunk) => answerStructureChunk[featureKey]
+                  )
+                  .includes(featureValue)
+              ) {
+                console.log(
+                  "[1;35m " +
+                    "On stCh " +
+                    structureChunk.chunkId +
+                    " I am deleting the " +
+                    featureKey +
+                    " annotation because one of the answer stChs includes " +
+                    featureValue +
+                    ", which was a condition specified to block the annotation." +
+                    "[0m"
+                );
+
+                return true;
+              }
+            });
+          });
+        })
+      ) {
+        delete structureChunk.annotations[annotationKey];
+      }
+    }
+  });
+};
+
+exports.conditionsOnWhichToBlockAnnotations = {
+  POL: {
+    verb: {
+      //For answerChunk POL verbs,
+      //if questionLemmaObject has "gender" annotated
+      //don't attach it if answerChunk's "tenseDescription" is any of these.
+      gender: [
+        {
+          tenseDescription: [
+            "present im",
+            "imperative im",
+            "future pf",
+            "imperative pf",
+          ],
+        },
+        {
+          person: ["impersonal"],
+        },
+      ],
+    },
+  },
+};
+
 exports.giveAdjustedFeatureValue = (
   questionLanguage,
   answerLanguage,

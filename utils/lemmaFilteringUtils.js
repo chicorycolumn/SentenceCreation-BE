@@ -176,8 +176,8 @@ exports.filterWithinSelectedLemmaObject = (
         structureChunk.wordtype
       ];
 
-    console.log(">>> >>> inflectionChain", inflectionChain);
-    console.log(">>> structureChunk", structureChunk);
+    // console.log(">>> >>> inflectionChain", inflectionChain);
+    // console.log(">>> structureChunk", structureChunk);
 
     let requirementArrs = [];
 
@@ -186,7 +186,7 @@ exports.filterWithinSelectedLemmaObject = (
 
       if (structureChunk[key]) {
         structureChunk[key].forEach((inflectionValue) => {
-          console.log(">>>", { key, inflectionValue });
+          // console.log(">>>", { key, inflectionValue });
 
           let formattedFeatureValue = langUtils.formatFeatureValue(
             key,
@@ -201,7 +201,7 @@ exports.filterWithinSelectedLemmaObject = (
             formattedFeatureValueArr.push(formattedFeatureValue);
           }
 
-          console.log("formattedFeatureValueArr", formattedFeatureValueArr);
+          // console.log("formattedFeatureValueArr", formattedFeatureValueArr);
 
           inflectionValueArr = [
             ...inflectionValueArr,
@@ -216,7 +216,7 @@ exports.filterWithinSelectedLemmaObject = (
     let errorInDrilling = false;
     let outputUnitsWithDrillPaths = [];
 
-    console.log("requirementArrs", requirementArrs);
+    // console.log("requirementArrs", requirementArrs);
 
     let source = lemmaObject.inflections;
 
@@ -422,6 +422,10 @@ exports.traverseAndRecordInflections = (
   outputUnitsWithDrillPaths,
   outputUnitsWithDrillPathsMini
 ) => {
+  /////////////////////////////
+  let shouldConsoleLog = false;
+  /////////////////////////////
+
   if (!outputUnitsWithDrillPathsMini) {
     outputUnitsWithDrillPathsMini = [];
   }
@@ -441,10 +445,12 @@ exports.traverseAndRecordInflections = (
       Array.isArray(source[chosenInflector]) ||
       (source[chosenInflector] && source[chosenInflector].isTerminus)
     ) {
-      console.log("traverseAndRecordInflections Clause B", {
-        reqInflectorLabel,
-        chosenInflector,
-      });
+      if (shouldConsoleLog) {
+        console.log("traverseAndRecordInflections Clause B", {
+          reqInflectorLabel,
+          chosenInflector,
+        });
+      }
 
       outputUnitsWithDrillPathsMini.push([reqInflectorLabel, chosenInflector]);
 
@@ -462,10 +468,12 @@ exports.traverseAndRecordInflections = (
       gpUtils.isKeyValueTypeObject(source[chosenInflector]) &&
       !source[chosenInflector].isTerminus
     ) {
-      console.log("traverseAndRecordInflections Clause A", {
-        reqInflectorLabel,
-        chosenInflector,
-      });
+      if (shouldConsoleLog) {
+        console.log("traverseAndRecordInflections Clause A", {
+          reqInflectorLabel,
+          chosenInflector,
+        });
+      }
 
       outputUnitsWithDrillPathsMini.push([reqInflectorLabel, chosenInflector]);
 
@@ -478,10 +486,12 @@ exports.traverseAndRecordInflections = (
 
       outputUnitsWithDrillPathsMini.pop();
     } else {
-      console.log("traverseAndRecordInflections Clause X", {
-        reqInflectorLabel,
-        chosenInflector,
-      });
+      if (shouldConsoleLog) {
+        console.log("traverseAndRecordInflections Clause X", {
+          reqInflectorLabel,
+          chosenInflector,
+        });
+      }
     }
   });
 };

@@ -2174,7 +2174,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal06-06a GET 200 YES: RSWAT POL to ENG. Ensure feminine and masculine are randomly selected at ~50/50 rate, despite there being thrice as many masculine genders as feminine.", () => {
+    xit("#pal06-06a GET 200 YES: RSWAT POL to ENG. Ensure feminine and masculine are randomly selected at ~50/50 rate, despite there being thrice as many masculine genders as feminine.", () => {
       return Promise.all([
         testOnce(),
         testOnce(),
