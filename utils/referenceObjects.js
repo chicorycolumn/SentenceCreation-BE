@@ -4,22 +4,18 @@ const refObj = require("./referenceObjects.js");
 exports.filterAnnotations = (
   structureChunk,
   languagesObj,
-  correspondingAnswerStructureChunks
+  correspondingAnswerChunks
 ) => {
-  console.log("[1;35m " + "filterAnnotations was given:" + "[0m");
-
-  //nownowThis currently isn't working to filter out the things
-  //because, it needs to check the tenseDescription condition from the dependent answer chunk. Whew.
-
-  console.log({
-    structureChunk,
-    languagesObj,
-    correspondingAnswerStructureChunks,
-  });
+  console.log(
+    "[1;35m " +
+      "filterAnnotations>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" +
+      "[0m"
+  );
 
   let { answerLanguage, questionLanguage } = languagesObj;
 
   Object.keys(structureChunk.annotations).forEach((annotationKey) => {
+    console.log("[1;33m " + "q00" + " annotationKey: " + annotationKey + "[0m");
     let annotationValueArr = structureChunk.annotations[annotationKey];
     if (annotationValueArr.length !== 1) {
       throw (
@@ -29,36 +25,60 @@ exports.filterAnnotations = (
       );
     }
 
+    console.log({ annotationValueArr });
+
     let conditionsOnWhichToBlockAnnotations =
       refObj.conditionsOnWhichToBlockAnnotations[answerLanguage][
         structureChunk.wordtype
       ];
 
+    console.log(
+      "conditionsOnWhichToBlockAnnotations",
+      conditionsOnWhichToBlockAnnotations
+    );
+
     if (
       conditionsOnWhichToBlockAnnotations &&
       conditionsOnWhichToBlockAnnotations[annotationKey]
     ) {
+      console.log("[1;33m " + "q01" + "[0m");
+
       let conditionsOnWhichToBlockAnnotationsArr =
         conditionsOnWhichToBlockAnnotations[annotationKey];
 
       if (
         conditionsOnWhichToBlockAnnotationsArr.some((conditionsObj) => {
+          console.log("[1;33m " + "q02" + "[0m");
+
           return Object.keys(conditionsObj).every((featureKey) => {
             let featureValues = conditionsObj[featureKey];
+            console.log("[1;33m " + "q03" + "[0m");
 
+            //Each answerChunksObject has a headCh or depCh that fulfils this condition (at least one value from condition arr is present at condition key in headCh).
             return featureValues.some((featureValue) => {
+              console.log("[1;33m " + "q04" + "[0m");
+
               if (
-                correspondingAnswerStructureChunks
-                  .map(
-                    (answerStructureChunk) => answerStructureChunk[featureKey]
-                  )
-                  .includes(featureValue)
+                correspondingAnswerChunks.every((answerChunksObject) => {
+                  console.log("[1;33m " + "q05" + "[0m");
+
+                  let headAndDepChunks = [
+                    answerChunksObject.answerChunk,
+                    ...answerChunksObject.dependentAnswerChunks,
+                  ];
+
+                  return headAndDepChunks.some(
+                    (chunk) =>
+                      chunk[featureKey] &&
+                      chunk[featureKey].includes(featureValue)
+                  );
+                })
               ) {
                 console.log(
                   "[1;35m " +
                     "On stCh " +
                     structureChunk.chunkId +
-                    " I am deleting the " +
+                    " I will delete the " +
                     featureKey +
                     " annotation because one of the answer stChs includes " +
                     featureValue +
@@ -72,18 +92,33 @@ exports.filterAnnotations = (
           });
         })
       ) {
+        console.log("[1;35m " + "Deleting it now!" + "[0m");
         delete structureChunk.annotations[annotationKey];
       }
     }
   });
+  console.log("[1;35m " + "/filterAnnotations" + "[0m");
 };
 
 exports.conditionsOnWhichToBlockAnnotations = {
   POL: {
-    verb: {
-      //For answerChunk POL verbs,
-      //if questionLemmaObject has "gender" annotated
-      //don't attach it if answerChunk's "tenseDescription" is any of these.
+    noun: {
+      //For answerChunk POL nouns (yes, nouns, as these are the ones that will be clarified for their verbs),
+      gender: [
+        {
+          tenseDescription: [
+            "present im",
+            "imperative im",
+            "future pf",
+            "imperative pf",
+          ],
+        },
+        {
+          person: ["impersonal"],
+        },
+      ],
+    },
+    pronoun: {
       gender: [
         {
           tenseDescription: [

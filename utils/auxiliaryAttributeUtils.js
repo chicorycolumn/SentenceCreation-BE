@@ -594,7 +594,7 @@ exports.attachAnnotations = (
 
       let { chunkId } = structureChunk;
 
-      let correspondingAnswerStructureChunks = [];
+      let correspondingAnswerChunks = [];
 
       answerSentenceData.arrayOfOutputArrays.forEach((outputArray) => {
         outputArray.forEach((outputUnit) => {
@@ -602,17 +602,18 @@ exports.attachAnnotations = (
             outputUnit.structureChunk &&
             outputUnit.structureChunk.chunkId === chunkId
           ) {
-            let correspondingAnswerStructureChunkObj = {
-              answerChunk: outputUnit.structureChunk,
-              dependentAnswerChunks: [],
-            };
+            let answerChunk = outputUnit.structureChunk;
+            let dependentAnswerChunks = outputArray
+              .map((outputUnit) => outputUnit.structureChunk)
+              .filter(
+                (structureChunk) =>
+                  structureChunk.agreeWith === answerChunk.chunkId
+              );
 
-            //nownowFind the dependentAnswerChunks
-
-            correspondingAnswerStructureChunks.push(
-              correspondingAnswerStructureChunkObj
-            );
-            // correspondingAnswerStructureChunks.push(outputUnit.structureChunk);
+            correspondingAnswerChunks.push({
+              answerChunk,
+              dependentAnswerChunks,
+            });
           }
         });
       });
@@ -621,8 +622,8 @@ exports.attachAnnotations = (
       );
       console.log("structureChunk");
       console.log(structureChunk);
-      console.log("correspondingAnswerStructureChunks");
-      console.log(correspondingAnswerStructureChunks);
+      console.log("correspondingAnswerChunks");
+      console.log(correspondingAnswerChunks);
 
       if (
         structureChunk.annotations &&
@@ -642,7 +643,7 @@ exports.attachAnnotations = (
         refObj.filterAnnotations(
           structureChunk,
           languagesObj,
-          correspondingAnswerStructureChunks
+          correspondingAnswerChunks
         );
 
         let formattedAnnotationArr = Object.keys(
