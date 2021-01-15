@@ -540,40 +540,91 @@ const generalTranslatedSentencesRef = {
       { POL: "Piszesz.", ENG: ["You (singular) write."] },
       { POL: "Piszecie.", ENG: ["You (plural) write."] },
       ////
-      { POL: "Napisałeś.", ENG: ["You (singular) wrote."] },
-      { POL: "Napisałaś.", ENG: ["You (singular) wrote."] },
-      { POL: "Napisaliście.", ENG: ["You (plural) wrote."] },
-      { POL: "Napisałyście.", ENG: ["You (plural) wrote."] },
+      { POL: "Napisałeś.", ENG: ["You (singular, male) wrote."] },
+      { POL: "Napisałaś.", ENG: ["You (singular, female) wrote."] },
+      { POL: "Napisaliście.", ENG: ["You (plural, males) wrote."] },
+      { POL: "Napisaliście.", ENG: ["You (plural, mixed) wrote."] },
+      { POL: "Napisałyście.", ENG: ["You (plural, females) wrote."] },
       ////
-      { POL: "Będziesz pisał.", ENG: ["You (singular) will be writing."] },
-      { POL: "Będziesz pisała.", ENG: ["You (singular) will be writing."] },
-      { POL: "Będziesz pisać.", ENG: ["You (singular) will be writing."] },
-      { POL: "Będziecie pisały.", ENG: ["You (plural) will be writing."] },
-      { POL: "Będziecie pisali.", ENG: ["You (plural) will be writing."] },
-      { POL: "Będziecie pisać.", ENG: ["You (plural) will be writing."] },
       {
         POL: "Będziesz pisał.",
-        ENG: ["You (singular) are going to be writing."],
+        ENG: ["You (singular, male) will be writing."],
       },
       {
         POL: "Będziesz pisała.",
-        ENG: ["You (singular) are going to be writing."],
+        ENG: ["You (singular, female) will be writing."],
       },
       {
         POL: "Będziesz pisać.",
-        ENG: ["You (singular) are going to be writing."],
+        ENG: ["You (singular, female) will be writing."],
+      },
+      {
+        POL: "Będziesz pisać.",
+        ENG: ["You (singular, male) will be writing."],
       },
       {
         POL: "Będziecie pisały.",
-        ENG: ["You (plural) are going to be writing."],
+        ENG: ["You (plural, females) will be writing."],
       },
       {
         POL: "Będziecie pisali.",
-        ENG: ["You (plural) are going to be writing."],
+        ENG: ["You (plural, males) will be writing."],
+      },
+      {
+        POL: "Będziecie pisali.",
+        ENG: ["You (plural, mixed) will be writing."],
       },
       {
         POL: "Będziecie pisać.",
-        ENG: ["You (plural) are going to be writing."],
+        ENG: ["You (plural, males) will be writing."],
+      },
+      {
+        POL: "Będziecie pisać.",
+        ENG: ["You (plural, females) will be writing."],
+      },
+      {
+        POL: "Będziecie pisać.",
+        ENG: ["You (plural, mixed) will be writing."],
+      },
+      {
+        POL: "Będziesz pisał.",
+        ENG: ["You (singular, male) are going to be writing."],
+      },
+      {
+        POL: "Będziesz pisała.",
+        ENG: ["You (singular, female) are going to be writing."],
+      },
+      {
+        POL: "Będziesz pisać.",
+        ENG: ["You (singular, female) are going to be writing."],
+      },
+      {
+        POL: "Będziesz pisać.",
+        ENG: ["You (singular, male) are going to be writing."],
+      },
+      {
+        POL: "Będziecie pisały.",
+        ENG: ["You (plural, females) are going to be writing."],
+      },
+      {
+        POL: "Będziecie pisali.",
+        ENG: ["You (plural, males) are going to be writing."],
+      },
+      {
+        POL: "Będziecie pisali.",
+        ENG: ["You (plural, mixed) are going to be writing."],
+      },
+      {
+        POL: "Będziecie pisać.",
+        ENG: ["You (plural, males) are going to be writing."],
+      },
+      {
+        POL: "Będziecie pisać.",
+        ENG: ["You (plural, females) are going to be writing."],
+      },
+      {
+        POL: "Będziecie pisać.",
+        ENG: ["You (plural, mixed) are going to be writing."],
       },
     ],
   },
@@ -3265,7 +3316,7 @@ describe("/api", () => {
     });
   });
 
-  describe.only("/palette - Stage 9: Synhomographs (adding Clarifiers).", () => {
+  describe("/palette - Stage 9: Synhomographs (adding Clarifiers).", () => {
     it("#pal09-01a (Type 1 Synhomographs. If-PW: clarify Inflections) 'sheep': ENG to POL. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -3366,7 +3417,7 @@ describe("/api", () => {
           );
         });
     });
-    it.only("#pal09-03a (Type 3 Synhomographs. Ad-PW: clarify Inflections) 'write': ENG to POL. Expect clarifiers.", () => {
+    it("#pal09-03a (Type 3 Synhomographs. Ad-PW: clarify Inflections) 'write': ENG to POL. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -3437,7 +3488,7 @@ describe("/api", () => {
             questionLanguage,
             answerLanguage,
             "write_withClarifiers_Qlang" + questionLanguage,
-            ["You (singular) wrote.", "You (plural) wrote."]
+            []
           );
         });
     });
@@ -3487,7 +3538,7 @@ describe("/api", () => {
             questionLanguage,
             answerLanguage,
             "write_withClarifiers_Qlang" + questionLanguage,
-            ["You (singular) will be writing.", "You (plural) will be writing."]
+            []
           );
         });
     });

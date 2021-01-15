@@ -18,6 +18,7 @@ exports.filterAnnotations = (
     console.log("[1;33m " + "q00" + " annotationKey: " + annotationKey + "[0m");
     let annotationValueArr = structureChunk.annotations[annotationKey];
     if (annotationValueArr.length !== 1) {
+      console.log({ annotationKey }, "annotationValueArr", annotationValueArr);
       throw (
         "refObj.filterAnnotations. stCh.annotations should have looked like this: { number: [ 'singular' ], gender: [ 'm' ] }, but one of the arrays had length of " +
         annotationValueArr.length +
@@ -134,6 +135,7 @@ exports.conditionsOnWhichToBlockAnnotations = {
       ],
     },
   },
+  ENG: {},
 };
 
 exports.giveAdjustedFeatureValue = (

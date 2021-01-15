@@ -221,7 +221,7 @@ exports.addLanguageParticularClarifiers = (
           "------------------------------------------ADDED CLARIFIER in Step 2, for Type 3 Syn",
           number
         );
-        structureChunk.annotations.number = number;
+        structureChunk.annotations.number = [number];
       }
     }
 
@@ -244,7 +244,7 @@ exports.addLanguageParticularClarifiers = (
             "------------------------------------------ADDED  CLARIFIER in Step 2, for Type 2 Syn",
             annotationValue
           );
-          structureChunk.annotations.tenseDescription = annotationValue;
+          structureChunk.annotations.tenseDescription = [annotationValue];
           structureChunk.preventAddingClarifiers = true; // We assume that no more clarifiers are needed.
         } else if (
           structureChunk.tenseDescription &&
@@ -256,7 +256,7 @@ exports.addLanguageParticularClarifiers = (
             "------------------------------------------ADDED  CLARIFIER in Step 2, for Type 2 Syn",
             annotationValue
           );
-          structureChunk.annotations.tenseDescription = annotationValue;
+          structureChunk.annotations.tenseDescription = [annotationValue];
           structureChunk.preventAddingClarifiers = true; // We assume that no more clarifiers are needed.
         }
       }
