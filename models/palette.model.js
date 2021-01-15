@@ -166,6 +166,11 @@ exports.fetchPalette = (req) => {
       );
 
       console.log(
+        "d13 answerSentenceData.arrayOfOutputArrays",
+        answerSentenceData.arrayOfOutputArrays
+      );
+
+      console.log(
         "bb23a answerSentenceFormula.sentenceStructure AFTER SC:process",
         answerSentenceFormula.sentenceStructure
       );
@@ -201,8 +206,6 @@ exports.fetchPalette = (req) => {
   console.log("***");
   console.log(answerSentenceData);
   console.log("***");
-
-  gpUtils.consoleLogObjectAtTwoLevels(answerSentenceData.arrayOfOutputArrays);
 
   let languagesObj = {
     answerLanguage,

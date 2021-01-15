@@ -162,11 +162,6 @@ exports.processSentenceFormula = (
       kumquat
     );
 
-    console.log(
-      "w28",
-      allPossOutputUnits_head.map((outputUnit) => outputUnit.structureChunk)
-    );
-
     if (errorInSentenceCreation.errorMessage) {
       console.log(
         "#ERR -------------------------> An error arose in SC:processSentenceFormula. Returning outputArr null for headChunk: " +
@@ -480,6 +475,13 @@ exports.giveFinalSentences = (
 
   let finalSentenceArr = [];
 
+  console.log("d14~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+  console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+  console.log("arrayOfOutputArrays");
+  arrayOfOutputArrays.forEach((outputArray) => {
+    console.log(outputArray);
+  });
+
   if (kumquat) {
     arrayOfOutputArrays.forEach((outputArr) => {
       let finalSentences = scUtils.buildSentenceString(
@@ -524,10 +526,14 @@ exports.buildSentenceString = (
   currentLanguage,
   answerLanguage
 ) => {
+  console.log("[1;35m " + "buildSentenceString" + "[0m");
+  console.log("unorderedArr", unorderedArr);
+
   let arrayOfOutputArrays = [];
   let producedSentences = [];
 
   if (!sentenceFormula.primaryOrders || !sentenceFormula.primaryOrders.length) {
+    console.log("c13 gonna push unorderedArr Clause 0", unorderedArr);
     arrayOfOutputArrays.push(unorderedArr);
   } else {
     if (kumquat) {
@@ -542,11 +548,16 @@ exports.buildSentenceString = (
       allOrders.forEach((order) => {
         let orderedArr = [];
         order.forEach((chunkId) => {
-          orderedArr.push(
-            unorderedArr.find((item) => item.structureChunk.chunkId === chunkId)
+          console.log({ chunkId });
+          let foundChunk = unorderedArr.find(
+            (item) => item.structureChunk.chunkId === chunkId
           );
+          if (!foundChunk) {
+            console.log("[1;31m " + "Could not find for " + chunkId + " [0m");
+          }
+          orderedArr.push(foundChunk);
         });
-
+        console.log("c13 gonna push orderedArr Clause 1", orderedArr);
         arrayOfOutputArrays.push(orderedArr);
       });
     } else {
@@ -558,7 +569,7 @@ exports.buildSentenceString = (
           unorderedArr.find((item) => item.structureChunk.chunkId === chunkId)
         );
       });
-
+      console.log("c13 gonna push orderedArr Clause 3", orderedArr);
       arrayOfOutputArrays.push(orderedArr);
     }
   }
@@ -584,6 +595,8 @@ exports.selectWordVersions = (outputArr) => {
   let arrOfSelectedWordsArr = [];
 
   let selectedWordsArr = [];
+
+  console.log("outputArr", outputArr);
 
   outputArr.forEach((outputUnit) => {
     let { selectedWord } = outputUnit;
@@ -707,6 +720,7 @@ exports.conformAnswerStructureToQuestionStructure = (
     //Do actually transfer gender, for person nouns.
     if (
       questionStructureChunk.wordtype === "noun" &&
+      questionStructureChunk.andTags &&
       questionStructureChunk.andTags.includes("person")
     ) {
       adjustAndAddFeaturesToAnswerChunk(

@@ -343,8 +343,11 @@ exports.findMatchingLemmaObjectThenWord = (
 
     if (!matchesCopy.length) {
       console.log(
-        "#ERR It turns out no matching lemma objects were found in OT:findMatching"
+        "[1;31m " +
+          "#ERR It turns out no matching lemma objects were found in OT:findMatching" +
+          "[0m"
       );
+
       return false;
     }
 
@@ -356,9 +359,12 @@ exports.findMatchingLemmaObjectThenWord = (
 
     if (!matchesCopy.length) {
       console.log(
-        "#ERR It transpires that no matching lemma objects were found in OT:findMatching",
+        "[1;31m " +
+          "#ERR It transpires that no matching lemma objects were found in OT:findMatching" +
+          "[0m",
         structureChunk
       );
+
       return false;
     }
 
@@ -370,8 +376,11 @@ exports.findMatchingLemmaObjectThenWord = (
 
     if (!matchesCopy.length) {
       console.log(
-        "#ERR It appears no matching lemma objects were found in OT:findMatching"
+        "[1;31m " +
+          "#ERR It appears no matching lemma objects were found in OT:findMatching" +
+          "[0m"
       );
+
       return false;
     }
 

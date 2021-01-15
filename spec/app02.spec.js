@@ -892,7 +892,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13A-01b GET 200 YES: doNotSpecify. Selection of either male or female versions of same person ENG to POL.", () => {
+    it.only("#pal13A-01b GET 200 YES: doNotSpecify. Selection of either male or female versions of same person ENG to POL.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1902,7 +1902,7 @@ describe("/api", () => {
   });
 
   describe("/palette - Stage 11: Adding Specifiers.", () => {
-    it.only("#pal11-01a GET 200 YES: SPECIFIER EXPECTED. Multi Gender Noun. ENG to POL.", () => {
+    it("#pal11-01a GET 200 YES: SPECIFIER EXPECTED. Multi Gender Noun. ENG to POL.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 

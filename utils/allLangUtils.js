@@ -267,6 +267,15 @@ exports.convertMetaFeatures = (sourceObjectArray, currentLanguage, objType) => {
 
       if (objType === "lObj") {
         Object.keys(metaFeatureRef).forEach((metaFeature) => {
+          if (/_/.test(metaFeature)) {
+            console.log(
+              `Hereby changing metaFeature ${metaFeature} to ${
+                metaFeature.split("_")[0]
+              }`
+            );
+            metaFeature = metaFeature.split("_")[0];
+          }
+
           let regularFeaturesArr = metaFeatureRef[metaFeature];
 
           gpUtils.findKeysInObjectAndExecuteCallback(
@@ -290,6 +299,15 @@ exports.convertMetaFeatures = (sourceObjectArray, currentLanguage, objType) => {
           console.log(objType, { currentValueArr });
 
           currentValueArr.forEach((value) => {
+            if (/_/.test(value)) {
+              console.log(
+                `Thereby changing metaFeature ${value} to ${
+                  value.split("_")[0]
+                }`
+              );
+              value = value.split("_")[0];
+            }
+
             if (metaFeatureRef[value]) {
               newValueArr = [...newValueArr, ...metaFeatureRef[value]];
             } else {
