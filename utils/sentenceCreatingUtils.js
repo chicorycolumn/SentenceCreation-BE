@@ -204,21 +204,21 @@ exports.processSentenceFormula = (
   // Now we update the head structure chunks with the details from their respective selectedWords.
   explodedOutputArraysWithHeads.forEach((headOutputArray) => {
     headOutputArray.forEach((headOutputUnit) => {
-      console.log("w28a", headOutputUnit.structureChunk);
+      // console.log("w28a", headOutputUnit.structureChunk);
 
       lfUtils.updateStructureChunkByAndTagsAndSelectors(
         headOutputUnit,
         currentLanguage
       );
 
-      console.log("w28b", headOutputUnit.structureChunk);
+      // console.log("w28b", headOutputUnit.structureChunk);
 
       lfUtils.updateStructureChunkByInflections(
         headOutputUnit,
         currentLanguage
       );
 
-      console.log("w28c", headOutputUnit.structureChunk);
+      // console.log("w28c", headOutputUnit.structureChunk);
 
       let headChunk = headOutputUnit.structureChunk;
 
@@ -476,11 +476,11 @@ exports.giveFinalSentences = (
   let finalSentenceArr = [];
 
   console.log("d14~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-  console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-  console.log("arrayOfOutputArrays");
-  arrayOfOutputArrays.forEach((outputArray) => {
-    console.log(outputArray);
-  });
+  // console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+  // console.log("arrayOfOutputArrays");
+  // arrayOfOutputArrays.forEach((outputArray) => {
+  //   console.log(outputArray);
+  // });
 
   if (kumquat) {
     arrayOfOutputArrays.forEach((outputArr) => {
@@ -527,13 +527,13 @@ exports.buildSentenceString = (
   answerLanguage
 ) => {
   console.log("[1;35m " + "buildSentenceString" + "[0m");
-  console.log("unorderedArr", unorderedArr);
+  // console.log("unorderedArr", unorderedArr);
 
   let arrayOfOutputArrays = [];
   let producedSentences = [];
 
   if (!sentenceFormula.primaryOrders || !sentenceFormula.primaryOrders.length) {
-    console.log("c13 gonna push unorderedArr Clause 0", unorderedArr);
+    console.log("c13 gonna push unorderedArr Clause 0");
     arrayOfOutputArrays.push(unorderedArr);
   } else {
     if (kumquat) {
@@ -557,7 +557,7 @@ exports.buildSentenceString = (
           }
           orderedArr.push(foundChunk);
         });
-        console.log("c13 gonna push orderedArr Clause 1", orderedArr);
+        console.log("c13 gonna push orderedArr Clause 1");
         arrayOfOutputArrays.push(orderedArr);
       });
     } else {
@@ -569,7 +569,7 @@ exports.buildSentenceString = (
           unorderedArr.find((item) => item.structureChunk.chunkId === chunkId)
         );
       });
-      console.log("c13 gonna push orderedArr Clause 3", orderedArr);
+      console.log("c13 gonna push orderedArr Clause 3");
       arrayOfOutputArrays.push(orderedArr);
     }
   }

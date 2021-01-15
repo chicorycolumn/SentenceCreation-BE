@@ -473,7 +473,6 @@ exports.doesKeyContainValueOnChunk = (
 
 exports.consoleLogYellow = (text) => {
   console.log(" ");
-  console.log("[1;33m " + "~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~" + "[0m");
   console.log(
     "[1;33m " +
       "~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~" +
@@ -495,13 +494,11 @@ exports.consoleLogYellow = (text) => {
       "~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~" +
       "[0m"
   );
-  console.log("[1;33m " + "~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~" + "[0m");
   console.log(" ");
 };
 
 exports.consoleLogBlue = (text) => {
   console.log(" ");
-  console.log("[1;36m " + "~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~" + "[0m");
   console.log(
     "[1;36m " +
       "~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~" +
@@ -523,13 +520,11 @@ exports.consoleLogBlue = (text) => {
       "~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~" +
       "[0m"
   );
-  console.log("[1;36m " + "~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~" + "[0m");
   console.log(" ");
 };
 
 exports.consoleLogPurple = (text) => {
   console.log(" ");
-  console.log("[1;35m " + ": : : : : : : : : : : : : : : : : : : : : : " + "[0m");
   console.log(
     "[1;35m " +
       ": : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : :" +
@@ -551,7 +546,6 @@ exports.consoleLogPurple = (text) => {
       ": : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : :" +
       "[0m"
   );
-  console.log("[1;35m " + ": : : : : : : : : : : : : : : : : : : : : : " + "[0m");
   console.log(" ");
 };
 

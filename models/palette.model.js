@@ -36,7 +36,7 @@ exports.fetchPalette = (req) => {
     kumquat
   );
 
-  console.log("w29");
+  // console.log("w29");
 
   questionSentenceData.arrayOfOutputArrays
     .map((outputArray) =>
@@ -165,10 +165,10 @@ exports.fetchPalette = (req) => {
         kumquat
       );
 
-      console.log(
-        "d13 answerSentenceData.arrayOfOutputArrays",
-        answerSentenceData.arrayOfOutputArrays
-      );
+      // console.log(
+      //   "d13 answerSentenceData.arrayOfOutputArrays",
+      //   answerSentenceData.arrayOfOutputArrays
+      // );
 
       console.log(
         "bb23a answerSentenceFormula.sentenceStructure AFTER SC:process",

@@ -11,7 +11,7 @@ exports.filterWithinSelectedLemmaObject = (
   kumquat,
   outputArray
 ) => {
-  console.log("w23", structureChunk);
+  // console.log("w23", structureChunk);
 
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
 
@@ -218,8 +218,8 @@ exports.filterWithinSelectedLemmaObject = (
     let errorInDrilling = false;
     let outputUnitsWithDrillPaths = [];
 
-    console.log("w24 requirementArrs", requirementArrs);
-    console.log("w24", structureChunk);
+    // console.log("w24 requirementArrs", requirementArrs);
+    // console.log("w24", structureChunk);
 
     let source = lemmaObject.inflections;
 

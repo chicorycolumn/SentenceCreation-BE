@@ -31,10 +31,13 @@ exports.translateAnnotationValue = (
       };
 
       if (structureChunk.number[0] === "plural") {
-        annotationValue = pluralVirilityConversion[annotationValue];
-        if (!annotationValue) {
-          throw "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Mm no.";
+        if (!pluralVirilityConversion[annotationValue]) {
+          throw (
+            "Could not convert virility of annotationValue: " + annotationValue
+          );
         }
+
+        annotationValue = pluralVirilityConversion[annotationValue];
       }
     }
 

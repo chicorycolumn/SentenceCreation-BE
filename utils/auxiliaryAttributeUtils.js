@@ -657,7 +657,7 @@ exports.attachAnnotations = (
 
   if ("console" && answerSentenceData) {
     console.log("c22 answerSentenceData");
-    gpUtils.consoleLogObjectAtTwoLevels(answerSentenceData.arrayOfOutputArrays);
+    // gpUtils.consoleLogObjectAtTwoLevels(answerSentenceData.arrayOfOutputArrays);
   }
   let { answerLanguage, questionLanguage } = languagesObj;
 
