@@ -60,19 +60,35 @@ exports.translateAnnotationValue = (
   }
 };
 
-exports.adjustVirilityOfStructureChunk = (structureChunk, retainOriginals) => {
+exports.adjustVirilityOfStructureChunk = (
+  currentLanguage,
+  structureChunk,
+  retainOriginals
+) => {
+  //Not for nouns. Because m -> plural -> virile and then trying to select Ojciec, which isn't virile, it's m, so will ERR later.
+  //If stCh has number:plural, then make the genders the virilityConverted genders.
+  //If stCh has numnber:singular, then make the genders the singularConverted genders.
+
   console.log(
-    "adjusting virility of structure chunk " + structureChunk.chunkId
+    "[1;35m " + "ALL:adjustVirilityOfStructureChunk " + structureChunk.chunkId + "[0m"
   );
+
+  console.log("[1;35m " + "structureChunk start as being:" + "[0m", structureChunk);
+
   let { gender, number } = structureChunk;
 
   if (!number || !number.includes("plural")) {
+    console.log("Aborting because Number");
     return;
   }
 
   if (!gender || !gender.length) {
+    console.log("Aborting because Gender");
     return;
   }
+
+  let pluralVirilityAndSingularConversionRef =
+    refObj.pluralVirilityAndSingularConversionRef[currentLanguage];
 
   let newGenderArray = [];
   const pluralGenderRefObj = {
@@ -104,6 +120,8 @@ exports.adjustVirilityOfStructureChunk = (structureChunk, retainOriginals) => {
   let newGenderArrayTrimmed = Array.from(new Set(newGenderArray));
 
   structureChunk.gender = newGenderArrayTrimmed;
+
+  console.log("[1;35m " + "structureChunk ends up being:" + "[0m", structureChunk);
 };
 
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
@@ -231,7 +249,11 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
       }
     }
 
-    allLangUtils.adjustVirilityOfStructureChunk(structureChunk, true);
+    allLangUtils.adjustVirilityOfStructureChunk(
+      currentLanguage,
+      structureChunk,
+      true
+    );
 
     console.log("Finally the structureChunk is", structureChunk);
   });

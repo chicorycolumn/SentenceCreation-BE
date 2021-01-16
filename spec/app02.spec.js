@@ -246,6 +246,35 @@ describe("/api", () => {
           );
         });
     });
+    it("#pal14-03z GET 200 YES: ENG only. My father gave me his book.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          doNotSpecify: true,
+          hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          // answerLanguage,
+          sentenceFormulaSymbol: "113a my father gave me his book",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+
+          expect([
+            "My father gave me his book.",
+            "My mother gave me her book.",
+            "Our father gave us his book.",
+            "Our mother gave us her book.",
+            "My fathers gave me their book.",
+            "My mothers gave me their book.",
+            "Our fathers gave us their book.",
+            "Our mothers gave us their book.",
+          ]).to.include(res.body.questionSentenceArr[0]);
+        });
+    });
     it("#pal14-03a GET 200 YES: ENG to POL. My father gave me his book.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -892,7 +921,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13A-01b GET 200 YES: doNotSpecify. Selection of either male or female versions of same person ENG to POL.", () => {
+    it.only("#pal13A-01b GET 200 YES: doNotSpecify. Selection of either male or female versions of same person ENG to POL.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 

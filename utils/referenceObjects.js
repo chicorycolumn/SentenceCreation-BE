@@ -166,6 +166,47 @@ exports.giveAdjustedFeatureValue = (
   return [featureValue];
 };
 
+exports.pluralVirilityAndSingularConversionRef = {
+  ENG: {
+    singular: {
+      m: ["m"],
+      f: ["f"],
+      n: ["n"],
+      virile: ["m"],
+      nonvirile: ["f", "n"],
+    },
+    plural: {
+      m: ["virile"],
+      f: ["nonvirile"],
+      n: ["nonvirile"],
+      virile: ["virile"],
+      nonvirile: ["nonvirile"],
+    },
+  },
+  POL: {
+    singular: {
+      m: ["m"],
+      m1: ["m1"],
+      m2: ["m2"],
+      m3: ["m3"],
+      f: ["f"],
+      n: ["n"],
+      virile: ["m1"],
+      nonvirile: ["m2", "m3", "f", "n"],
+    },
+    plural: {
+      m: ["virile"],
+      m1: ["virile"],
+      m2: ["nonvirile"],
+      m3: ["nonvirile"],
+      f: ["nonvirile"],
+      n: ["nonvirile"],
+      virile: ["virile"],
+      nonvirile: ["nonvirile"],
+    },
+  },
+};
+
 exports.metaFeatures = {
   ENG: {
     gender: {

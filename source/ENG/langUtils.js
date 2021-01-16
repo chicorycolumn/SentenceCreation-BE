@@ -50,6 +50,8 @@ let inflectorRef = {
 };
 
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
+  console.log("[1;35m " + "ENG:preprocessStructureChunks-----------" + "[0m");
+
   let metagenderRef = refObj.metaFeatures[currentLanguage].gender;
 
   sentenceStructure.forEach((structureChunk) => {
@@ -103,6 +105,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
       }
     }
   });
+  console.log("[1;35m " + "/ENG:preprocessStructureChunks" + "[0m");
 };
 
 exports.preprocessLemmaObjectsMajor = (

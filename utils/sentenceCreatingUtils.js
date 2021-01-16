@@ -918,6 +918,18 @@ exports.inheritFromHeadToDependentChunk = (
       dependentChunk[inflectorKey] = inflectorValueArr;
     }
   });
+
+  console.log(
+    "At the end of inheritFromHeadToDependentChunk, we must again adjustVirility, which we also did in allLangUtils.preprocessStructureChunks earlier."
+  );
+
+  allLangUtils.adjustVirilityOfStructureChunk(currentLanguage, headChunk, true);
+  allLangUtils.adjustVirilityOfStructureChunk(
+    currentLanguage,
+    dependentChunk,
+    true
+  );
+
   console.log(
     "inheritFromHeadToDependentChunk: dependentChunk AFTERWARDS of inheritFromHeadToDependentChunk: ",
     dependentChunk

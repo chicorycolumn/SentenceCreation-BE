@@ -81,7 +81,10 @@ exports.preprocessLemmaObjectsMajor = (
 
   if (!adjustLemmaObjectsOnly) {
     if (["verb", "adjective"].includes(structureChunk.wordtype)) {
-      allLangUtils.adjustVirilityOfStructureChunk(structureChunk);
+      allLangUtils.adjustVirilityOfStructureChunk(
+        currentLanguage,
+        structureChunk
+      );
     }
   }
 };

@@ -224,11 +224,14 @@ exports.filterWithinSelectedLemmaObject = (
 
     if (!outputUnitsWithDrillPaths || !outputUnitsWithDrillPaths.length) {
       console.log(
-        "#ERR --------------------------------------> traverseAndRecordInflections returned FALSY for " +
+        "[1;31m " +
+          "#ERR --------------------------------------> traverseAndRecordInflections returned FALSY for " +
           structureChunk.chunkId +
           " in " +
-          currentLanguage
+          currentLanguage +
+          "[0m"
       );
+
       console.log({ outputUnitsWithDrillPaths });
       errorInDrilling = true;
       return false;
