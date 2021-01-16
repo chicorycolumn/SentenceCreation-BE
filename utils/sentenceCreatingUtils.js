@@ -444,7 +444,7 @@ exports.giveFinalSentences = (
   answerLanguage
 ) => {
   let {
-    arrayOfOutputArrays,
+    answerOutputArrays,
     questionOutputArr,
     sentenceFormula,
     errorInSentenceCreation,
@@ -463,16 +463,15 @@ exports.giveFinalSentences = (
       };
     }
 
-    if (!kumquat && arrayOfOutputArrays && arrayOfOutputArrays.length) {
-      throw "#ERR Well that's strange. We are in Question Mode, so SC:giveFinalSentences expected to be given questionOutputArr, not arrayOfOutputArrays.";
-      let x = gpUtils.selectRandom(arrayOfOutputArrays);
+    if (!kumquat && answerOutputArrays && answerOutputArrays.length) {
+      throw "#ERR Well that's strange. We are in Question Mode, so SC:giveFinalSentences expected to be given questionOutputArr, not answerOutputArrays.";
     }
   }
 
   let finalSentenceArr = [];
 
   if (kumquat) {
-    arrayOfOutputArrays.forEach((outputArr) => {
+    answerOutputArrays.forEach((outputArr) => {
       let finalSentences = scUtils.buildSentenceString(
         outputArr,
         sentenceFormula,
@@ -516,12 +515,12 @@ exports.buildSentenceString = (
   console.log("[1;35m " + "buildSentenceString" + "[0m");
   // console.log("unorderedArr", unorderedArr);
 
-  let arrayOfOutputArrays = [];
+  let outputArrays = [];
   let producedSentences = [];
 
   if (!sentenceFormula.primaryOrders || !sentenceFormula.primaryOrders.length) {
     console.log("buildSentenceString c13 gonna push unorderedArr Clause 0");
-    arrayOfOutputArrays.push(unorderedArr);
+    outputArrays.push(unorderedArr);
   } else {
     if (kumquat) {
       let allOrders = [];
@@ -547,7 +546,7 @@ exports.buildSentenceString = (
           orderedArr.push(foundChunk);
         });
         console.log("buildSentenceString c13 gonna push orderedArr Clause 1");
-        arrayOfOutputArrays.push(orderedArr);
+        outputArrays.push(orderedArr);
       });
     } else {
       let order = gpUtils.selectRandom(sentenceFormula.primaryOrders);
@@ -559,11 +558,11 @@ exports.buildSentenceString = (
         );
       });
       console.log("buildSentenceString c13 gonna push orderedArr Clause 3");
-      arrayOfOutputArrays.push(orderedArr);
+      outputArrays.push(orderedArr);
     }
   }
 
-  arrayOfOutputArrays.forEach((outputArr) => {
+  outputArrays.forEach((outputArr) => {
     let arrOfFinalSelectedWordsArrs = scUtils.selectWordVersions(
       outputArr,
       currentLanguage

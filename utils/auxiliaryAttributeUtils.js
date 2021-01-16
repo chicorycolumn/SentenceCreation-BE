@@ -692,7 +692,7 @@ exports.attachAnnotations = (
 
       let correspondingAnswerChunks = [];
 
-      answerSentenceData.arrayOfOutputArrays.forEach((outputArray) => {
+      answerSentenceData.answerOutputArrays.forEach((outputArray) => {
         outputArray.forEach((outputUnit) => {
           if (
             outputUnit.structureChunk &&

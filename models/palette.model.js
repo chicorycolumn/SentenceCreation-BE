@@ -71,9 +71,9 @@ exports.fetchPalette = (req) => {
     }
   }
 
+  //Decisive Decant
   questionSentenceData.questionOutputArr =
     questionSentenceData.arrayOfOutputArrays[0];
-
   delete questionSentenceData.arrayOfOutputArrays;
 
   //Can we assume that NO featureKeys have multiple values from this point forwards, apart from gender?
@@ -244,6 +244,11 @@ exports.fetchPalette = (req) => {
         kumquat
       );
 
+      //Decisive Decant parallel
+      answerSentenceData.answerOutputArrays =
+        answerSentenceData.arrayOfOutputArrays;
+      delete answerSentenceData.arrayOfOutputArrays;
+
       if ("console") {
         console.log(
           "[1;33m " +
@@ -251,7 +256,7 @@ exports.fetchPalette = (req) => {
             "[0m"
         );
 
-        answerSentenceData.arrayOfOutputArrays
+        answerSentenceData.answerOutputArrays
           .map((outputArray) =>
             outputArray.map((outputUnit) => outputUnit.structureChunk)
           )
