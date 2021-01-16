@@ -24,7 +24,7 @@ describe("/api", () => {
   describe("/palette - Stage 8: 'Have' ENG <-> POL.", () => {
     it("#pal08-01a GET 200 YES: Conjugate POL have correctly without translations.", () => {
       const questionLanguage = "POL";
-      const answerLanguage = "POL";
+      const answerLanguage = "ENG";
 
       return request(app)
         .get("/api/palette")
@@ -2080,6 +2080,12 @@ describe("/api", () => {
         });
     });
     it("#pal04-01e GET 200 YES: Returns a sentence with a single verb in infinitive.", () => {
+      //Nownow: You're retrieving an Infinitive in POL Q only. So gender is irrelevant.
+      //So tbh, when questionSentenceData comes back, the stChs should have gender key empty.
+      //As it couldn't be decanted into ONE value (because Infinitive needs no gender value)
+      //But it should be multiple values either.
+      //It should decant into zero values.
+
       return request(app)
         .get("/api/palette")
         .send({

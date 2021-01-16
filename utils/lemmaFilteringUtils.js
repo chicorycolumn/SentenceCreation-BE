@@ -260,24 +260,18 @@ exports.updateStructureChunkByAdhocOnly = (structureChunk, label, value) => {
   structureChunk[label] = [value];
 };
 
-exports.updateStructureChunkByInflections = (outputUnit, currentLanguage) => {
-  if (outputUnit.drillPath) {
-    outputUnit.drillPath.forEach((drillPathSubArr) => {
-      let requiredInflectorCategory = drillPathSubArr[0];
-      let selectedInflector = drillPathSubArr[1];
-
-      outputUnit.structureChunk[requiredInflectorCategory] = [
-        selectedInflector,
-      ];
-    });
-  }
+exports.updateStructureChunk = (outputUnit, currentLanguage) => {
+  lfUtils.updateStChByInflections(outputUnit, currentLanguage);
+  lfUtils.updateStChByAndTagsAndSelectors(outputUnit, currentLanguage);
 };
 
-exports.updateStructureChunkByAndTagsAndSelectors = (
-  outputUnit,
-  currentLanguage
-) => {
-  let { selectedLemmaObject, structureChunk } = outputUnit;
+exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
+  let {
+    selectedLemmaObject,
+    structureChunk,
+    selectedWord,
+    drillPath,
+  } = outputUnit;
 
   const pluralVirilityConversionRef = {
     ENG: {
@@ -301,37 +295,79 @@ exports.updateStructureChunkByAndTagsAndSelectors = (
 
   //Epsilon - this had to be done for ENG, but for POL it was already done elsewhere?
   if (selectedLemmaObject.gender) {
-    let currentGender = selectedLemmaObject.gender;
-    let currentGenderArr = [];
+    if ("check") {
+      if (
+        !structureChunk.number ||
+        !structureChunk.number.length ||
+        structureChunk.number.length !== 1
+      ) {
+        console.log(
+          "[1;31m " +
+            currentLanguage +
+            " structureChunk that has no Number key or such with length not 1:" +
+            "[0m"
+        );
 
-    if (/_/.test(currentGender)) {
-      currentGenderArr =
-        refObj.metaFeatures[currentLanguage].gender[
-          currentGender.split("_")[0]
-        ];
-    } else {
-      currentGenderArr = [currentGender];
-    }
-
-    let virilityConvertedGenderArr = [];
-
-    currentGenderArr.forEach((currGender) => {
-      if (pluralVirilityConversionRef[currentLanguage][currGender]) {
-        virilityConvertedGenderArr.push(currGender);
-
-        virilityConvertedGenderArr = [
-          ...virilityConvertedGenderArr,
-          ...pluralVirilityConversionRef[currentLanguage][currGender],
-        ];
-      } else {
         gpUtils.throw(
-          "lf.updateStructureChunkByAndTagsAndSelectors --> There was no virilityConvertedGender for " +
-            currGender
+          "#ERR Need to know the Number. Trzeba wiedzie¢ liczb€. Es preciso saber el numero."
         );
       }
-    });
+    }
+    //Nownow: Because I will use stCh.number to decide which [ONE] gender to update the stCh to.
+    //I must not give the stCh a gender key of ["m1", "virile"] at this point.
+    let number = structureChunk.number[0];
 
-    structureChunk.gender = virilityConvertedGenderArr;
+    if (/_/.test(selectedLemmaObject.gender)) {
+      let metaGender = selectedLemmaObject.gender.split("_")[0];
+
+      if ("check") {
+        if (
+          !structureChunk.gender ||
+          !structureChunk.gender.length ||
+          structureChunk.gender.length !== 1
+        ) {
+          console.log("selectedLemmaObject", selectedLemmaObject);
+          console.log("structureChunk", structureChunk);
+          gpUtils.throw(
+            "#ERR I ideally need Gender key to hold array of exactly 1 value."
+          );
+        }
+
+        if (
+          !refObj.metaFeatures[currentLanguage].gender[metaGender].includes(
+            structureChunk.gender[0]
+          )
+        ) {
+          console.log("selectedLemmaObject", selectedLemmaObject);
+          console.log("structureChunk", structureChunk);
+          gpUtils.throw(
+            `#ERR The lObj has metagender: ${metaGender} but I can't reconcile this with the structureChunk gender which is ${structureChunk.gender[0]}`
+          );
+        }
+      }
+
+      structureChunk.gender = structureChunk.gender; //Yes, if lObj has metaSelector gender, and stCh gender fits that, then leave as is.
+    } else {
+      structureChunk.gender = [selectedLemmaObject.gender]; //Update stCh with lObj gender.
+    }
+
+    //Actually! It's better not to convert stCh gender to, eg, "virile" here. Because then
+    //it won't be able to select Ojciec because that lObj has gender "m1", NOT gender "virile".
+
+    // if (number === "singular") {
+    //   structureChunk.gender = [currentGender];
+    // } else if (number === "plural") {
+    //   let virilityConvertedGenderArr =
+    //     pluralVirilityConversionRef[currentLanguage][currentGender];
+
+    //   if (!virilityConvertedGenderArr) {
+    //     gpUtils.throw(
+    //       "#ERR No virilityConvertedGenderArr for " + currentGender
+    //     );
+    //   } else {
+    //     structureChunk.gender = virilityConvertedGenderArr;
+    //   }
+    // }
   }
 
   //Yellow option:
@@ -364,6 +400,19 @@ exports.updateStructureChunkByAndTagsAndSelectors = (
   if (selectors) {
     selectors.forEach((selector) => {
       structureChunk[selector] = [selectedLemmaObject[selector]];
+    });
+  }
+};
+
+exports.updateStChByInflections = (outputUnit, currentLanguage) => {
+  if (outputUnit.drillPath) {
+    outputUnit.drillPath.forEach((drillPathSubArr) => {
+      let requiredInflectorCategory = drillPathSubArr[0];
+      let selectedInflector = drillPathSubArr[1];
+
+      outputUnit.structureChunk[requiredInflectorCategory] = [
+        selectedInflector,
+      ];
     });
   }
 };

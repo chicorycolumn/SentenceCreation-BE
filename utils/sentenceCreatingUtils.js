@@ -204,15 +204,7 @@ exports.processSentenceFormula = (
   // Now we update the head structure chunks with the details from their respective selectedWords.
   explodedOutputArraysWithHeads.forEach((headOutputArray) => {
     headOutputArray.forEach((headOutputUnit) => {
-      lfUtils.updateStructureChunkByAndTagsAndSelectors(
-        headOutputUnit,
-        currentLanguage
-      );
-
-      lfUtils.updateStructureChunkByInflections(
-        headOutputUnit,
-        currentLanguage
-      );
+      lfUtils.updateStructureChunk(headOutputUnit, currentLanguage);
 
       let headChunk = headOutputUnit.structureChunk;
 
@@ -419,12 +411,7 @@ exports.processSentenceFormula = (
       if (outputUnit.structureChunk.wordtype === "fixed") {
         return;
       }
-
-      lfUtils.updateStructureChunkByAndTagsAndSelectors(
-        outputUnit,
-        currentLanguage
-      );
-      lfUtils.updateStructureChunkByInflections(outputUnit, currentLanguage);
+      lfUtils.updateStructureChunk(outputUnit, currentLanguage);
     });
   });
 

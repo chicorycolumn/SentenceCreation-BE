@@ -45,12 +45,6 @@ exports.fetchPalette = (req) => {
         "#ERR ---------------> In fetchPalette the question arrayOfOutputArrays came back NONE."
       );
 
-      console.log(
-        "Going to give giveFinalSentences the questionSentenceData for NONE",
-        {
-          kumquat,
-        }
-      );
       let questionResponseObj = scUtils.giveFinalSentences(
         questionSentenceData,
         kumquat,
@@ -60,8 +54,6 @@ exports.fetchPalette = (req) => {
 
       return finishAndSend(questionResponseObj, null);
     }
-
-    console.log("a10", questionSentenceData.sentenceFormula.sentenceStructure);
 
     if (questionSentenceData.arrayOfOutputArrays.length > 1) {
       gpUtils.throw(
@@ -76,31 +68,41 @@ exports.fetchPalette = (req) => {
     questionSentenceData.arrayOfOutputArrays[0];
   delete questionSentenceData.arrayOfOutputArrays;
 
-  //Can we assume that NO featureKeys have multiple values from this point forwards, apart from gender?
-  // questionSentenceData.sentenceFormula.sentenceStructure.forEach(
-  //   (structureChunk) => {
-  //     Object.keys(structureChunk).forEach((featureKey) => {
-  //       let featureValue = structureChunk[featureKey];
+  // Can we assume that NO featureKeys have multiple values from this point forwards, apart from gender?
+  console.log("[1;35m " + "a10" + "[0m");
 
-  //       let obj = {};
-  //       obj[featureKey] = featureValue;
-  //       console.log(obj);
+  questionSentenceData.questionOutputArr.forEach((outputUnit, index) => {
+    let { structureChunk } = outputUnit;
 
-  //       if (
-  //         !["gender"].includes(featureKey) &&
-  //         Array.isArray(featureValue) &&
-  //         featureValue.length > 1
-  //       ) {
-  //         gpUtils.throw("#ERR a11 " + featureKey);
-  //       }
-  //     });
-  //   }
-  // );
+    console.log("[1;35m " + `stCh ${index}` + "[0m");
+
+    Object.keys(structureChunk).forEach((featureKey) => {
+      let featureValue = structureChunk[featureKey];
+
+      let obj = {};
+      obj[featureKey] = featureValue;
+      console.log(obj);
+
+      if (
+        ![
+          "gender",
+          "andTags",
+          "orTags",
+          "specificIds",
+          "specificLemmas",
+        ].includes(featureKey) &&
+        Array.isArray(featureValue) &&
+        featureValue.length > 1
+      ) {
+        gpUtils.throw("#ERR a11 " + featureKey);
+      }
+    });
+  });
 
   if ("console") {
     console.log(
       "[1;36m " +
-        "#SBS {{{ fetchPalette just after we get questionSentenceData back from SC:processSentenceFormula. Let's see the stChs in questionSentenceData.arrayOfOutputArrays:" +
+        "{{{ #SBS fetchPalette just after we get questionSentenceData back from SC:processSentenceFormula. Let's see the stChs in questionSentenceData.arrayOfOutputArrays:" +
         "[0m"
     );
 
@@ -114,7 +116,7 @@ exports.fetchPalette = (req) => {
 
     console.log(
       "[1;35m " +
-        "#SBS {{{ fetchPalette just before midpoint. Let's see the selectedWordss" +
+        "{{{ #SBS fetchPalette just before midpoint. Let's see the selectedWordss" +
         "[0m"
     );
 
@@ -132,13 +134,6 @@ exports.fetchPalette = (req) => {
     if (!questionSentenceData) {
       console.log(
         "#ERR ---------------> In fetchPalette the question arrayOfOutputArrays came back NOTHING."
-      );
-
-      console.log(
-        "Going to give giveFinalSentences the questionSentenceData for NOTHING",
-        {
-          kumquat,
-        }
       );
       let questionResponseObj = scUtils.giveFinalSentences(
         questionSentenceData,
@@ -207,17 +202,19 @@ exports.fetchPalette = (req) => {
         words
       );
 
-      console.log(
-        "f15 fetchPalette, answerSentenceFormula.sentenceStructure AFTER qaConform",
-        answerSentenceFormula.sentenceStructure
-      );
+      if ("console") {
+        console.log(
+          "f15 fetchPalette, answerSentenceFormula.sentenceStructure AFTER qaConform",
+          answerSentenceFormula.sentenceStructure
+        );
 
-      console.log(
-        "f16 fetchPalette, questionOutputArr BEFORE CLARI OR SPECI",
-        questionSentenceData.questionOutputArr.map(
-          (unit) => unit.structureChunk.annotations
-        )
-      );
+        console.log(
+          "f16 fetchPalette, questionOutputArr BEFORE CLARI OR SPECI",
+          questionSentenceData.questionOutputArr.map(
+            (unit) => unit.structureChunk.annotations
+          )
+        );
+      }
 
       if (!hideClarifiersForTestingPurposes) {
         ///////////////////////////////////////////////kp
@@ -227,12 +224,14 @@ exports.fetchPalette = (req) => {
         );
       }
 
-      console.log(
-        "f17 fetchPalette, questionOutputArr AFTER CLARI, BEFORE SPECI",
-        questionSentenceData.questionOutputArr.map(
-          (unit) => unit.structureChunk.annotations
-        )
-      );
+      if ("console") {
+        console.log(
+          "f17 fetchPalette, questionOutputArr AFTER CLARI, BEFORE SPECI",
+          questionSentenceData.questionOutputArr.map(
+            (unit) => unit.structureChunk.annotations
+          )
+        );
+      }
 
       answerSentenceData = scUtils.processSentenceFormula(
         {
@@ -252,7 +251,7 @@ exports.fetchPalette = (req) => {
       if ("console") {
         console.log(
           "[1;33m " +
-            "#SBS {{{ fetchPalette just after we get answerSentenceData back from SC:processSentenceFormula. Let's see the stChs in answerSentenceData.arrayOfOutputArrays:" +
+            "{{{ #SBS fetchPalette just after we get answerSentenceData back from SC:processSentenceFormula. Let's see the stChs in answerSentenceData.arrayOfOutputArrays:" +
             "[0m"
         );
 
@@ -268,12 +267,6 @@ exports.fetchPalette = (req) => {
       }
 
       if (!answerResponseObj) {
-        console.log(
-          "Going to give giveFinalSentences the answerResponseObj as OK FIRST",
-          {
-            kumquat,
-          }
-        );
         answerResponseObj = scUtils.giveFinalSentences(
           answerSentenceData,
           kumquat,
@@ -281,12 +274,6 @@ exports.fetchPalette = (req) => {
           null
         );
       } else {
-        console.log(
-          "Going to give giveFinalSentences the answerResponseObj as OK SUBSEQUENT",
-          {
-            kumquat,
-          }
-        );
         let subsequentAnswerResponseObj = scUtils.giveFinalSentences(
           answerSentenceData,
           kumquat,
@@ -319,14 +306,14 @@ exports.fetchPalette = (req) => {
     );
   }
 
-  console.log("a18", questionSentenceData.questionOutputArr);
-
-  console.log(
-    "f18 fetchPalette, questionOutputArr AFTER CLARI AND SPECI",
-    questionSentenceData.questionOutputArr.map(
-      (unit) => unit.structureChunk.annotations
-    )
-  );
+  if ("console") {
+    console.log(
+      "f18 fetchPalette, questionOutputArr AFTER CLARI AND SPECI",
+      questionSentenceData.questionOutputArr.map(
+        (unit) => unit.structureChunk.annotations
+      )
+    );
+  }
 
   ///////////////////////////////////////////////kp
   aaUtils.attachAnnotations(
@@ -335,17 +322,9 @@ exports.fetchPalette = (req) => {
     answerSentenceData
   );
 
-  console.log(
-    "Going to give giveFinalSentences the questionSentenceData as OK",
-    {
-      kumquat,
-    }
-  );
-  let kumquatTemporary = false;
-
   let questionResponseObj = scUtils.giveFinalSentences(
     questionSentenceData,
-    kumquatTemporary,
+    false,
     questionLanguage,
     answerLanguage
   );
