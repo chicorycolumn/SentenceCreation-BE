@@ -1400,6 +1400,65 @@ exports.dummySentenceFormulasBank = [
     additionalOrders: [["pro-1", "ver-1"]],
   },
   {
+    sentenceFormulaSymbol: "dummy50a",
+    sentenceFormulaId: "POL-dummy50a",
+    translations: { ENG: ["ENG-dummy50a"] }, //Ja mam moje jabłko
+    sentenceStructure: [
+      {
+        chunkId: "pro-1",
+        wordtype: "pronoun",
+        // form: ["pronoun"],
+        specificLemmas: ["PERSONAL"],
+        person: ["1per"],
+      },
+      {
+        chunkId: "ver-1",
+        agreeWith: "pro-1",
+        wordtype: "verb",
+        specificLemmas: ["mieć"],
+        tenseDescription: ["present im"],
+      },
+      {
+        chunkId: "pro-2",
+        wordtype: "pronoun",
+        form: ["determiner"],
+        specificLemmas: ["POSSESSIVE"],
+        postHocAgreeWithPrimary: "pro-1",
+        postHocAgreeWithSecondary: "nou-1",
+      },
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        specificLemmas: ["cebula"],
+        gcase: ["acc"],
+      },
+    ],
+    primaryOrders: [["pro-1", "ver-1", "pro-2", "nou-1"]],
+    additionalOrders: [],
+  },
+  {
+    sentenceFormulaSymbol: "dummy51a",
+    sentenceFormulaId: "POL-dummy51a",
+    translations: { ENG: ["ENG-dummy51a"] },
+    sentenceStructure: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        andTags: ["person", "job"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        agreeWith: "nou-1",
+        tenseDescription: ["past pf"],
+        specificLemmas: ["napisać", "przeczytać"],
+      },
+    ],
+    primaryOrders: [["nou-1", "ver-1"]],
+    additionalOrders: [],
+  },
+  {
     sentenceFormulaSymbol: "dummy53",
     sentenceFormulaId: "POL-dummy53",
     translations: { ENG: ["ENG-dummy53"] },
@@ -1616,42 +1675,5 @@ exports.dummySentenceFormulasBank = [
       },
     ],
     primaryOrders: [],
-  },
-  {
-    sentenceFormulaSymbol: "dummy50a",
-    sentenceFormulaId: "POL-dummy50a",
-    translations: { ENG: ["ENG-dummy50a"] }, //Ja mam moje jabłko
-    sentenceStructure: [
-      {
-        chunkId: "pro-1",
-        wordtype: "pronoun",
-        // form: ["pronoun"],
-        specificLemmas: ["PERSONAL"],
-        person: ["1per"],
-      },
-      {
-        chunkId: "ver-1",
-        agreeWith: "pro-1",
-        wordtype: "verb",
-        specificLemmas: ["mieć"],
-        tenseDescription: ["present im"],
-      },
-      {
-        chunkId: "pro-2",
-        wordtype: "pronoun",
-        form: ["determiner"],
-        specificLemmas: ["POSSESSIVE"],
-        postHocAgreeWithPrimary: "pro-1",
-        postHocAgreeWithSecondary: "nou-1",
-      },
-      {
-        chunkId: "nou-1",
-        wordtype: "noun",
-        specificLemmas: ["cebula"],
-        gcase: ["acc"],
-      },
-    ],
-    primaryOrders: [["pro-1", "ver-1", "pro-2", "nou-1"]],
-    additionalOrders: [],
   },
 ];

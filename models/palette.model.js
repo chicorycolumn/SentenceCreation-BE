@@ -36,6 +36,67 @@ exports.fetchPalette = (req) => {
     kumquat
   );
 
+  if ("check") {
+    if (
+      !questionSentenceData.arrayOfOutputArrays ||
+      !questionSentenceData.arrayOfOutputArrays.length
+    ) {
+      console.log(
+        "#ERR ---------------> In fetchPalette the question arrayOfOutputArrays came back NONE."
+      );
+
+      console.log(
+        "Going to give giveFinalSentences the questionSentenceData for NONE",
+        {
+          kumquat,
+        }
+      );
+      let questionResponseObj = scUtils.giveFinalSentences(
+        questionSentenceData,
+        kumquat,
+        questionLanguage,
+        answerLanguage
+      );
+
+      return finishAndSend(questionResponseObj, null);
+    }
+
+    console.log("a10", questionSentenceData.sentenceFormula.sentenceStructure);
+
+    if (questionSentenceData.arrayOfOutputArrays.length > 1) {
+      gpUtils.throw(
+        "#ERR questionSentenceData.arrayOfOutputArrays.length had length more than 1. It was " +
+          questionSentenceData.arrayOfOutputArrays.length
+      );
+    }
+  }
+
+  questionSentenceData.questionOutputArr =
+    questionSentenceData.arrayOfOutputArrays[0];
+
+  delete questionSentenceData.arrayOfOutputArrays;
+
+  //Can we assume that NO featureKeys have multiple values from this point forwards, apart from gender?
+  // questionSentenceData.sentenceFormula.sentenceStructure.forEach(
+  //   (structureChunk) => {
+  //     Object.keys(structureChunk).forEach((featureKey) => {
+  //       let featureValue = structureChunk[featureKey];
+
+  //       let obj = {};
+  //       obj[featureKey] = featureValue;
+  //       console.log(obj);
+
+  //       if (
+  //         !["gender"].includes(featureKey) &&
+  //         Array.isArray(featureValue) &&
+  //         featureValue.length > 1
+  //       ) {
+  //         gpUtils.throw("#ERR a11 " + featureKey);
+  //       }
+  //     });
+  //   }
+  // );
+
   if ("console") {
     console.log(
       "[1;36m " +
@@ -43,51 +104,14 @@ exports.fetchPalette = (req) => {
         "[0m"
     );
 
-    questionSentenceData.arrayOfOutputArrays
-      .map((outputArray) =>
-        outputArray.map((outputUnit) => outputUnit.structureChunk)
-      )
+    questionSentenceData.questionOutputArr
+      .map((outputUnit) => outputUnit.structureChunk)
       .forEach((stCh) => {
         console.log(stCh);
       });
 
     console.log("[1;36m " + "}}}" + "[0m");
-  }
 
-  if (!questionSentenceData) {
-    console.log(
-      "#ERR ---------------> In fetchPalette the question arrayOfOutputArrays came back NOTHING."
-    );
-
-    let questionResponseObj = scUtils.giveFinalSentences(
-      questionSentenceData,
-      kumquat,
-      questionLanguage,
-      answerLanguage
-    );
-
-    return finishAndSend(questionResponseObj, null);
-  }
-
-  if (
-    !questionSentenceData.arrayOfOutputArrays ||
-    !questionSentenceData.arrayOfOutputArrays.length
-  ) {
-    console.log(
-      "#ERR ---------------> In fetchPalette the question arrayOfOutputArrays came back NONE."
-    );
-
-    let questionResponseObj = scUtils.giveFinalSentences(
-      questionSentenceData,
-      kumquat,
-      questionLanguage,
-      answerLanguage
-    );
-
-    return finishAndSend(questionResponseObj, null);
-  }
-
-  if ("console") {
     console.log(
       "[1;35m " +
         "#SBS {{{ fetchPalette just before midpoint. Let's see the selectedWordss" +
@@ -95,29 +119,52 @@ exports.fetchPalette = (req) => {
     );
 
     console.log(
-      questionSentenceData.arrayOfOutputArrays[0].map(
+      questionSentenceData.questionOutputArr.map(
         (outputUnit) => outputUnit.selectedWord
       )
     );
 
     console.log("[1;35m " + "}}}" + "[0m");
+
+    gpUtils.consoleLogAestheticBorder(4);
   }
+  if ("check") {
+    if (!questionSentenceData) {
+      console.log(
+        "#ERR ---------------> In fetchPalette the question arrayOfOutputArrays came back NOTHING."
+      );
 
-  gpUtils.consoleLogAestheticBorder(4);
+      console.log(
+        "Going to give giveFinalSentences the questionSentenceData for NOTHING",
+        {
+          kumquat,
+        }
+      );
+      let questionResponseObj = scUtils.giveFinalSentences(
+        questionSentenceData,
+        kumquat,
+        questionLanguage,
+        answerLanguage
+      );
 
-  let questionOutputArr = questionSentenceData.arrayOfOutputArrays[0];
+      return finishAndSend(questionResponseObj, null);
+    }
+  }
 
   ///////////////////////////////////////////////kp (key point)
 
-  // console.log("f11 fetchPalette, questionOutputArr BEFORE pleaseSpecifyMGNs");
-  // console.log(questionOutputArr.map((outputUnit) => outputUnit.structureChunk));
+  // console.log("f11 fetchPalette, questionSentenceData.questionOutputArr BEFORE pleaseSpecifyMGNs");
+  // console.log(questionSentenceData.questionOutputArr.map((outputUnit) => outputUnit.structureChunk));
 
   if (pleaseSpecifyMGNs) {
-    allLangUtils.specifyMGNs(questionOutputArr, questionLanguage);
+    allLangUtils.specifyMGNs(
+      questionSentenceData.questionOutputArr,
+      questionLanguage
+    );
   }
 
-  // console.log("f13 fetchPalette, questionOutputArr AFTER pleaseSpecifyMGNs");
-  // console.log(questionOutputArr.map((outputUnit) => outputUnit.structureChunk));
+  // console.log("f13 fetchPalette, questionSentenceData.questionOutputArr AFTER pleaseSpecifyMGNs");
+  // console.log(questionSentenceData.questionOutputArr.map((outputUnit) => outputUnit.structureChunk));
 
   let answerSentenceData;
   let answerResponseObj;
@@ -155,7 +202,7 @@ exports.fetchPalette = (req) => {
       ///////////////////////////////////////////////kp
       scUtils.conformAnswerStructureToQuestionStructure(
         answerSentenceFormula,
-        questionOutputArr,
+        questionSentenceData.questionOutputArr,
         languagesObject,
         words
       );
@@ -167,17 +214,24 @@ exports.fetchPalette = (req) => {
 
       console.log(
         "f16 fetchPalette, questionOutputArr BEFORE CLARI OR SPECI",
-        questionOutputArr.map((unit) => unit.structureChunk.annotations)
+        questionSentenceData.questionOutputArr.map(
+          (unit) => unit.structureChunk.annotations
+        )
       );
 
       if (!hideClarifiersForTestingPurposes) {
         ///////////////////////////////////////////////kp
-        aaUtils.addClarifiers(questionOutputArr, languagesObject);
+        aaUtils.addClarifiers(
+          questionSentenceData.questionOutputArr,
+          languagesObject
+        );
       }
 
       console.log(
         "f17 fetchPalette, questionOutputArr AFTER CLARI, BEFORE SPECI",
-        questionOutputArr.map((unit) => unit.structureChunk.annotations)
+        questionSentenceData.questionOutputArr.map(
+          (unit) => unit.structureChunk.annotations
+        )
       );
 
       answerSentenceData = scUtils.processSentenceFormula(
@@ -209,6 +263,12 @@ exports.fetchPalette = (req) => {
       }
 
       if (!answerResponseObj) {
+        console.log(
+          "Going to give giveFinalSentences the answerResponseObj as OK FIRST",
+          {
+            kumquat,
+          }
+        );
         answerResponseObj = scUtils.giveFinalSentences(
           answerSentenceData,
           kumquat,
@@ -216,6 +276,12 @@ exports.fetchPalette = (req) => {
           null
         );
       } else {
+        console.log(
+          "Going to give giveFinalSentences the answerResponseObj as OK SUBSEQUENT",
+          {
+            kumquat,
+          }
+        );
         let subsequentAnswerResponseObj = scUtils.giveFinalSentences(
           answerSentenceData,
           kumquat,
@@ -238,32 +304,43 @@ exports.fetchPalette = (req) => {
     answerLanguage,
     questionLanguage,
   };
-  questionOutputArr = questionSentenceData.arrayOfOutputArrays[0];
 
   if (!doNotSpecify) {
     ///////////////////////////////////////////////kp
     aaUtils.addSpecifiers(
       answerSentenceData.sentenceFormula,
-      questionOutputArr,
+      questionSentenceData.questionOutputArr,
       languagesObj
     );
   }
 
+  console.log("a18", questionSentenceData.questionOutputArr);
+
   console.log(
     "f18 fetchPalette, questionOutputArr AFTER CLARI AND SPECI",
-    questionOutputArr.map((unit) => unit.structureChunk.annotations)
+    questionSentenceData.questionOutputArr.map(
+      (unit) => unit.structureChunk.annotations
+    )
   );
 
   ///////////////////////////////////////////////kp
   aaUtils.attachAnnotations(
-    questionOutputArr,
+    questionSentenceData.questionOutputArr,
     languagesObj,
     answerSentenceData
   );
 
+  console.log(
+    "Going to give giveFinalSentences the questionSentenceData as OK",
+    {
+      kumquat,
+    }
+  );
+  let kumquatTemporary = false;
+
   let questionResponseObj = scUtils.giveFinalSentences(
     questionSentenceData,
-    kumquat,
+    kumquatTemporary,
     questionLanguage,
     answerLanguage
   );

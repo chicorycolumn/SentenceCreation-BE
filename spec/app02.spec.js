@@ -1712,6 +1712,46 @@ describe("/api", () => {
           );
         });
     });
+    //
+    //
+    //
+    xit("#pal13A-05a GET 200 YES: ENG to POL. No gender specified in stCh for MGN.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // doNotSpecify: true,
+          // hideClarifiersForTestingPurposes: true,
+          questionLanguage,
+          useDummy: true,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy51a",
+        })
+        .expect(200)
+        .then((res) => {
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+
+          let ref = [
+            {
+              ENG: "The doctor wrote.",
+              POL: ["Lekarz napisał.", "Lekarka napisała."],
+            },
+            {
+              ENG: "The doctor read.",
+              POL: ["Lekarz przeczytał.", "Lekarka przeczytała."],
+            },
+          ];
+
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
     // xit("#pal13A-##a GET 200 YES: Singular pronouns: Verb person and number is inherited from pronoun headChunk.", () => {
     //   const questionLanguage = "ENG";
     //   const answerLanguage = "POL";

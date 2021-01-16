@@ -816,6 +816,64 @@ exports.dummySentenceFormulasBank = [
     ],
     primaryOrders: [["pro-1", "ver-1"]],
   },
+
+  {
+    sentenceFormulaSymbol: "dummy50a",
+    sentenceFormulaId: "ENG-dummy50a",
+    translations: { POL: ["POL-dummy50a"] }, //I have my apple.
+    sentenceStructure: [
+      {
+        chunkId: "pro-1",
+        wordtype: "pronoun",
+        // form: ["pronoun"],
+        specificLemmas: ["PERSONAL"],
+        person: ["1per"],
+      },
+      {
+        chunkId: "ver-1",
+        agreeWith: "pro-1",
+        wordtype: "verb",
+        specificLemmas: ["have"],
+        tenseDescription: ["present simple"],
+      },
+      {
+        chunkId: "pro-2",
+        wordtype: "pronoun",
+        form: ["determiner"],
+        specificLemmas: ["POSSESSIVE"],
+        agreeWith: "pro-1",
+      },
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        specificLemmas: ["onion"],
+      },
+    ],
+    primaryOrders: [["pro-1", "ver-1", "pro-2", "nou-1"]],
+  },
+  {
+    sentenceFormulaSymbol: "dummy51a",
+    sentenceFormulaId: "ENG-dummy51a",
+    translations: { POL: ["POL-dummy51a"] },
+    sentenceStructure: [
+      { chunkId: "fix-1", wordtype: "fixed", value: "the" },
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        andTags: ["person", "job"],
+        gender: [],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        agreeWith: "nou-1",
+        tenseDescription: ["past simple"],
+        specificLemmas: ["write", "read"],
+      },
+    ],
+    primaryOrders: [["fix-1", "nou-1", "ver-1"]],
+  },
   {
     sentenceFormulaSymbol: "dummy53",
     sentenceFormulaId: "ENG-dummy53",
@@ -1001,40 +1059,5 @@ exports.dummySentenceFormulasBank = [
       },
     ],
     primaryOrders: [["fix-1", "ver-1"]],
-  },
-
-  {
-    sentenceFormulaSymbol: "dummy50a",
-    sentenceFormulaId: "ENG-dummy50a",
-    translations: { POL: ["POL-dummy50a"] }, //I have my apple.
-    sentenceStructure: [
-      {
-        chunkId: "pro-1",
-        wordtype: "pronoun",
-        // form: ["pronoun"],
-        specificLemmas: ["PERSONAL"],
-        person: ["1per"],
-      },
-      {
-        chunkId: "ver-1",
-        agreeWith: "pro-1",
-        wordtype: "verb",
-        specificLemmas: ["have"],
-        tenseDescription: ["present simple"],
-      },
-      {
-        chunkId: "pro-2",
-        wordtype: "pronoun",
-        form: ["determiner"],
-        specificLemmas: ["POSSESSIVE"],
-        agreeWith: "pro-1",
-      },
-      {
-        chunkId: "nou-1",
-        wordtype: "noun",
-        specificLemmas: ["onion"],
-      },
-    ],
-    primaryOrders: [["pro-1", "ver-1", "pro-2", "nou-1"]],
   },
 ];

@@ -445,26 +445,28 @@ exports.giveFinalSentences = (
 ) => {
   let {
     arrayOfOutputArrays,
+    questionOutputArr,
     sentenceFormula,
     errorInSentenceCreation,
   } = sentenceData;
 
-  if (errorInSentenceCreation.errorMessage) {
-    let errorMessage = {
-      errorInSentenceCreation: errorInSentenceCreation.errorMessage,
-    };
+  if ("check") {
+    if (errorInSentenceCreation.errorMessage) {
+      let errorMessage = {
+        errorInSentenceCreation: errorInSentenceCreation.errorMessage,
+      };
 
-    return {
-      message: "No sentence could be created from the specifications.",
-      finalSentence: null,
-      errorMessage,
-    };
-  }
+      return {
+        message: "No sentence could be created from the specifications.",
+        finalSentence: null,
+        errorMessage,
+      };
+    }
 
-  if (!kumquat && arrayOfOutputArrays.length !== 1) {
-    console.log("arrayOfOutputArrays", arrayOfOutputArrays);
-    throw "#ERR Well that's strange. We are in Question Mode, so SC:giveFinalSentences expected to be given arrayOfOutputArrays with length of 1, but it didn't.";
-    let x = gpUtils.selectRandom(arrayOfOutputArrays);
+    if (!kumquat && arrayOfOutputArrays && arrayOfOutputArrays.length) {
+      throw "#ERR Well that's strange. We are in Question Mode, so SC:giveFinalSentences expected to be given questionOutputArr, not arrayOfOutputArrays.";
+      let x = gpUtils.selectRandom(arrayOfOutputArrays);
+    }
   }
 
   let finalSentenceArr = [];
@@ -484,10 +486,8 @@ exports.giveFinalSentences = (
       });
     });
   } else {
-    let outputArr = gpUtils.selectRandom(arrayOfOutputArrays);
-
     let finalSentences = scUtils.buildSentenceString(
-      outputArr,
+      questionOutputArr,
       sentenceFormula,
       kumquat,
       currentLanguage,

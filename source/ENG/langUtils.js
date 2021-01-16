@@ -236,7 +236,15 @@ exports.addLanguageParticularClarifiers = (
       if (lemmaObject.inflections.infinitive === lemmaObject.inflections.v2) {
         if (
           structureChunk.tenseDescription &&
-          structureChunk.tenseDescription.includes("past simple")
+          structureChunk.tenseDescription.includes("past simple") &&
+          !(
+            structureChunk.person &&
+            structureChunk.person.length === 1 &&
+            structureChunk.person[0] === "3per" &&
+            structureChunk.number &&
+            structureChunk.number.length === 1 &&
+            structureChunk.number[0] === "singular"
+          )
         ) {
           let annotationValue = "past";
 
@@ -248,7 +256,15 @@ exports.addLanguageParticularClarifiers = (
           structureChunk.preventAddingClarifiers = true; // We assume that no more clarifiers are needed.
         } else if (
           structureChunk.tenseDescription &&
-          structureChunk.tenseDescription.includes("present simple")
+          structureChunk.tenseDescription.includes("present simple") &&
+          !(
+            structureChunk.person &&
+            structureChunk.person.length === 1 &&
+            structureChunk.person[0] === "3per" &&
+            structureChunk.number &&
+            structureChunk.number.length === 1 &&
+            structureChunk.number[0] === "singular"
+          )
         ) {
           let annotationValue = "present";
 

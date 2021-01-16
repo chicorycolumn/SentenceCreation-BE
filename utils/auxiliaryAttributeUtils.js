@@ -112,12 +112,25 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
         synhomographData.synhomographs.forEach((synhomDataUnit) => {
           //Zeta: Think how this will interact with the Terminus Objects.
           if (selectedWord === synhomDataUnit.terminalValue) {
-            // console.log("synhomDataUnit", synhomDataUnit);
-            let labelsWhereTheyDiffer = synhomDataUnit.labelsWhereTheyDiffer.filter(
-              (label) => allowableClarifiers.includes(label)
+            console.log("synhomDataUnit", synhomDataUnit);
+
+            let labelsWhereTheyDiffer = getSinglePointMutationLabels(
+              synhomDataUnit,
+              allowableClarifiers
             );
 
-            console.log({ labelsWhereTheyDiffer });
+            function getSinglePointMutationLabels(
+              synhomDataUnit,
+              allowableClarifiers
+            ) {
+              let filteredLabels = synhomDataUnit.labelsWhereTheyDiffer.filter(
+                (label) => allowableClarifiers.includes(label)
+              );
+
+              console.log("getSinglePointMutationLabels:", { filteredLabels });
+
+              return filteredLabels;
+            }
 
             labelsWhereTheyDiffer.forEach((label) => {
               let clarifierValue = structureChunk[label];
