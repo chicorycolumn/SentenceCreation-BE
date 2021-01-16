@@ -321,6 +321,7 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
     let number = structureChunk.number[0];
 
     if (/_/.test(selectedLemmaObject.gender)) {
+      console.log("Clause P: lObj has metaSelector gender");
       let metaGender = selectedLemmaObject.gender.split("_")[0];
 
       if ("check") {
@@ -331,12 +332,20 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
         ) {
           console.log("selectedLemmaObject", selectedLemmaObject);
           console.log("structureChunk", structureChunk);
-          gpUtils.throw(
-            "#ERR I ideally need Gender key to hold array of exactly 1 value."
+          console.log(
+            "[1;31m " +
+              "structureChunk does not have gender exactly 1, but I will try to reconcile it with the metaSelector gender of lObj anyway." +
+              "[0m"
           );
+
+          // gpUtils.throw(
+          //   "#ERR: updateStChByAndTagsAndSelectors: I ideally need Gender key to hold array of exactly 1 value."
+          // );
         }
 
         if (
+          structureChunk.gender &&
+          structureChunk.gender.length &&
           !refObj.metaFeatures[currentLanguage].gender[metaGender].includes(
             structureChunk.gender[0]
           )
@@ -349,8 +358,15 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
         }
       }
 
-      structureChunk.gender = structureChunk.gender; //Yes, if lObj has metaSelector gender, and stCh gender fits that, then leave as is.
+      if (structureChunk.gender && structureChunk.gender.length) {
+        structureChunk.gender = structureChunk.gender; //Yes, if lObj has metaSelector gender, and stCh gender fits that, then leave as is.
+      } else {
+        structureChunk.gender = refObj.metaFeatures[currentLanguage].gender[
+          metaGender
+        ].slice(0);
+      }
     } else {
+      console.log("Clause Q: lObj does not have metaSelector gender");
       structureChunk.gender = [selectedLemmaObject.gender]; //Update stCh with lObj gender.
     }
 

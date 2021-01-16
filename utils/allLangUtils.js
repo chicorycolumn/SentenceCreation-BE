@@ -69,6 +69,10 @@ exports.adjustVirilityOfStructureChunk = (
   //If stCh has number:plural, then make the genders the virilityConverted genders.
   //If stCh has numnber:singular, then make the genders the singularConverted genders.
 
+  if (structureChunk.wordtype === "noun") {
+    return;
+  }
+
   console.log(
     "[1;35m " + "ALL:adjustVirilityOfStructureChunk " + structureChunk.chunkId + "[0m"
   );
