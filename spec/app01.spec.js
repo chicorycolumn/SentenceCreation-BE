@@ -995,7 +995,8 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal06-01b GET 200 YES: RSWAT with multiple orders.", () => {
+    //octavia
+    xit("#pal06-01b GET 200 YES: RSWAT with multiple orders.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 

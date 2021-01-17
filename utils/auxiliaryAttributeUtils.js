@@ -96,6 +96,8 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
       refObj.lemmaObjectFeatures[answerLanguage]
         .allowableTransfersFromQuestionStructure[structureChunk.wordtype];
 
+    console.log("e12", languagesObj, { allowableClarifiers });
+
     //    allowableClarifiers. Any clarifiers not in here, don't bother adding them.
     //    We're looking ahead to the answerLanguage, and thinking, hmmmmm, well right now the questionLanguage
     //    is POL, and soon the answerLanguage will be ENG. And looking it up... ENG doesn't allow "gender" as a transfer.

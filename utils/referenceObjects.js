@@ -29,6 +29,11 @@ exports.filterAnnotations = (
       "[1;33m " + "filterAnnotations q00" + " annotationKey: " + annotationKey + "[0m"
     );
 
+    console.log("q10", {
+      answerLanguage,
+      "structureChunk.wordtype": structureChunk.wordtype,
+    });
+
     let conditionsOnWhichToBlockAnnotations =
       refObj.conditionsOnWhichToBlockAnnotations[answerLanguage][
         structureChunk.wordtype
@@ -50,6 +55,10 @@ exports.filterAnnotations = (
 
       if (
         conditionsOnWhichToBlockAnnotationsArr.some((conditionsObj) => {
+          if (conditionsObj.allConditions) {
+            return true;
+          }
+
           console.log("[1;33m " + "filterAnnotations: q02" + "[0m");
 
           return Object.keys(conditionsObj).every((featureKey) => {
@@ -109,6 +118,8 @@ exports.conditionsOnWhichToBlockAnnotations = {
     noun: {
       //For answerChunk POL nouns (yes, nouns, as these are the ones that will be clarified for their verbs),
       gender: [
+        //So this means, if answerLang {{POL}}, if wordtype {{noun}}, please block the {{gender}} annotation,
+        //if any of these condition objects have all their conditions met, by the headCh or depCh.
         {
           tenseDescription: [
             "present im",
@@ -138,7 +149,35 @@ exports.conditionsOnWhichToBlockAnnotations = {
       ],
     },
   },
-  ENG: {},
+  ENG: {
+    noun: {
+      gender: [
+        {
+          person: ["1per", "2per"],
+        },
+        {
+          person: ["3per"],
+          number: ["plural"],
+        },
+      ],
+    },
+    pronoun: {
+      form: [
+        {
+          allConditions: true,
+        },
+      ],
+      gender: [
+        {
+          person: ["1per", "2per"],
+        },
+        {
+          person: ["3per"],
+          number: ["plural"],
+        },
+      ],
+    },
+  },
 };
 
 exports.giveAdjustedFeatureValue = (

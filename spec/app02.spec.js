@@ -107,7 +107,7 @@ describe("/api", () => {
           );
         });
     });
-    it.only("#pal14-01d GET 200 YES: POL to ENG. I have my onion.", () => {
+    it("#pal14-01d GET 200 YES: POL to ENG. I have my onion.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -115,7 +115,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           doNotSpecify: true,
-          hideClarifiersForTestingPurposes: true,
+          hideClarifiersForTestingPurposes: false,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "dummy50a",
@@ -630,7 +630,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13B-03a GET 200 YES: ENG to POL. Another more interesting sentence with Pronouns.", () => {
+    it.only("#pal13B-03a GET 200 YES: ENG to POL. Another more interesting sentence with Pronouns.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1154,7 +1154,7 @@ describe("/api", () => {
         .then((res) => {
           console.log(res.body);
           expect(res.body.questionSentenceArr).to.have.length(1);
-          expect(res.body.questionSentenceArr[0]).to.equal("I.");
+          expect(res.body.questionSentenceArr[0]).to.equal("I (male).");
           expect(res.body.answerSentenceArr).to.have.members(["Ja."]);
         });
     });
@@ -1179,7 +1179,9 @@ describe("/api", () => {
         .then((res) => {
           let { questionSentenceArr, answerSentenceArr } = res.body;
 
-          let ref = [{ ENG: "I wrote.", POL: ["Napisałem.", "Ja napisałem."] }];
+          let ref = [
+            { ENG: "I (male) wrote.", POL: ["Napisałem.", "Ja napisałem."] },
+          ];
 
           testingUtils.checkTranslationsOfGivenRef(
             res,
@@ -1208,7 +1210,10 @@ describe("/api", () => {
           let { questionSentenceArr, answerSentenceArr } = res.body;
 
           let ref = [
-            { ENG: "We wrote.", POL: ["Napisałyśmy.", "My napisałyśmy."] },
+            {
+              ENG: "We (females) wrote.",
+              POL: ["Napisałyśmy.", "My napisałyśmy."],
+            },
           ];
 
           testingUtils.checkTranslationsOfGivenRef(
