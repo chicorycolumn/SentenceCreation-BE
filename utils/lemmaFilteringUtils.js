@@ -120,14 +120,20 @@ exports.filterWithinSelectedLemmaObject = (
           let numberArr = headDrillPath.find((arr) => arr[0] === "number");
           let numberValue = numberArr[1];
 
-          headDrillPath.push([
+          let formattedFeatureValueArray = langUtils.formatFeatureValue(
             "gender",
-            langUtils.formatFeatureValue(
-              "gender",
-              headOutputUnit.selectedLemmaObject.gender,
-              numberValue
-            ),
-          ]);
+            headOutputUnit.selectedLemmaObject.gender,
+            numberValue
+          );
+
+          if (formattedFeatureValueArray.length !== 1) {
+            gpUtils.throw(
+              "#ERR lf:filterWithin expected formattedFeatureValueArray to have length 1"
+            );
+          }
+          let formattedFeatureValue = formattedFeatureValueArray[0];
+
+          headDrillPath.push(["gender", formattedFeatureValue]);
         } else {
           throw "I am unsure about which gender to use - either the one from lobj inherent, or the one from drillPath. I was thinking of using this gender for the PHD stCh.";
         }
@@ -183,18 +189,10 @@ exports.filterWithinSelectedLemmaObject = (
 
       if (structureChunk[key]) {
         structureChunk[key].forEach((inflectionValue) => {
-          let formattedFeatureValue = langUtils.formatFeatureValue(
+          let formattedFeatureValueArr = langUtils.formatFeatureValue(
             key,
             inflectionValue
           );
-
-          let formattedFeatureValueArr = [];
-
-          if (Array.isArray(formattedFeatureValue)) {
-            formattedFeatureValueArr = formattedFeatureValue;
-          } else {
-            formattedFeatureValueArr.push(formattedFeatureValue);
-          }
 
           console.log(
             "filterWithinSelectedLemmaObject: formattedFeatureValueArr",
@@ -276,26 +274,6 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
     drillPath,
   } = outputUnit;
 
-  const pluralVirilityConversionRef = {
-    ENG: {
-      m: ["virile"],
-      f: ["nonvirile"],
-      n: ["nonvirile"],
-      virile: ["virile"],
-      nonvirile: ["nonvirile"],
-    },
-    POL: {
-      m: ["virile"],
-      m1: ["virile"],
-      m2: ["nonvirile"],
-      m3: ["nonvirile"],
-      f: ["nonvirile"],
-      n: ["nonvirile"],
-      virile: ["virile"],
-      nonvirile: ["nonvirile"],
-    },
-  };
-
   //Epsilon - this had to be done for ENG, but for POL it was already done elsewhere?
   if (selectedLemmaObject.gender) {
     if ("check") {
@@ -369,24 +347,6 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
       console.log("Clause Q: lObj does not have metaSelector gender");
       structureChunk.gender = [selectedLemmaObject.gender]; //Update stCh with lObj gender.
     }
-
-    //Actually! It's better not to convert stCh gender to, eg, "virile" here. Because then
-    //it won't be able to select Ojciec because that lObj has gender "m1", NOT gender "virile".
-
-    // if (number === "singular") {
-    //   structureChunk.gender = [currentGender];
-    // } else if (number === "plural") {
-    //   let virilityConvertedGenderArr =
-    //     pluralVirilityConversionRef[currentLanguage][currentGender];
-
-    //   if (!virilityConvertedGenderArr) {
-    //     gpUtils.throw(
-    //       "#ERR No virilityConvertedGenderArr for " + currentGender
-    //     );
-    //   } else {
-    //     structureChunk.gender = virilityConvertedGenderArr;
-    //   }
-    // }
   }
 
   //Yellow option:

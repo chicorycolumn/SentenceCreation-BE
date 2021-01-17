@@ -210,33 +210,24 @@ exports.adjustTenseDescriptions = (structureChunk) => {
 };
 
 exports.formatFeatureValue = (featureKey, featureValue, note) => {
-  const virilityRef = {
-    plural: {
-      f: "nonvirile",
-      n: "nonvirile",
-      m3: "nonvirile",
-      m2: "nonvirile",
-      m1: "virile",
-      nonvirile: "nonvirile",
-      virile: "virile",
-    },
-  };
+  const pluralVirilityAndSingularConversionRef =
+    refObj.pluralVirilityAndSingularConversionRef["POL"];
 
   const shortHandGenderRef = {
-    m: "m1",
-    f: "f",
-    n: "n",
-    nonvirile: "nonvirile",
-    virile: "virile",
+    m: ["m1"],
+    f: ["f"],
+    n: ["n"],
+    nonvirile: ["nonvirile"],
+    virile: ["virile"],
   };
 
   if (featureKey === "gender") {
     if (note === "plural") {
       // console.log(
-      //   "POL:formatFeatureValue returns virilityRef[note][featureValue] as ",
-      //   virilityRef[note][featureValue]
+      //   "POL:formatFeatureValue returns pluralVirilityAndSingularConversionRef[note][featureValue] as ",
+      //   pluralVirilityAndSingularConversionRef[note][featureValue]
       // );
-      return virilityRef[note][featureValue];
+      return pluralVirilityAndSingularConversionRef[note][featureValue];
     } else {
       if (note === "person") {
         // console.log(
@@ -248,7 +239,7 @@ exports.formatFeatureValue = (featureKey, featureValue, note) => {
     }
   }
   // console.log("POL:formatFeatureValue returns featureValue as ", featureValue);
-  return featureValue;
+  return [featureValue];
 };
 
 exports.fillVerbInflections = (lemmaObject) => {

@@ -483,7 +483,7 @@ exports.addSpecifiers = (
         );
       }
 
-      selectedGenderForAnswerLanguage = answerLangUtils.formatFeatureValue(
+      selectedGenderForAnswerLanguageArr = answerLangUtils.formatFeatureValue(
         "gender",
         selectedGenderForQuestionLanguage,
         "person"
@@ -497,11 +497,11 @@ exports.addSpecifiers = (
       );
       console.log({
         selectedGenderForQuestionLanguage,
-        selectedGenderForAnswerLanguage,
+        selectedGenderForAnswerLanguageArr,
       });
 
       questionHeadChunk.gender = [selectedGenderForQuestionLanguage];
-      answerHeadChunk.gender = [selectedGenderForAnswerLanguage];
+      answerHeadChunk.gender = selectedGenderForAnswerLanguageArr;
 
       aaUtils.addAnnotation(
         questionHeadChunk,
@@ -526,7 +526,7 @@ exports.addSpecifiers = (
         );
       }
 
-      selectedGenderForAnswerLanguage = answerLangUtils.formatFeatureValue(
+      selectedGenderForAnswerLanguageArr = answerLangUtils.formatFeatureValue(
         "gender",
         selectedGenderForQuestionLanguage,
         "person"
@@ -537,12 +537,12 @@ exports.addSpecifiers = (
       );
       console.log({
         selectedGenderForQuestionLanguage,
-        selectedGenderForAnswerLanguage,
+        selectedGenderForAnswerLanguageArr,
       });
 
       // questionLemmaObject.gender = selectedGenderForQuestionLanguage;
       questionChunk.gender = [selectedGenderForQuestionLanguage];
-      answerChunk.gender = [selectedGenderForAnswerLanguage];
+      answerChunk.gender = selectedGenderForAnswerLanguageArr;
 
       aaUtils.addAnnotation(
         questionChunk,

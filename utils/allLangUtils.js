@@ -17,28 +17,24 @@ exports.translateAnnotationValue = (
         throw "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Ah no.";
       }
 
-      const pluralVirilityConversion = {
-        m: "virile",
-        m1: "virile",
-        m2: "nonvirile",
-        m3: "nonvirile",
-        f: "nonvirile",
-        n: "nonvirile",
-        virile: "virile",
-        nonvirile: "nonvirile",
-      };
+      const pluralVirilityAndSingularConversionRef =
+        refObj.pluralVirilityAndSingularConversionRef[questionLanguage];
 
       if (structureChunk.number[0] === "plural") {
-        if (!pluralVirilityConversion[annotationValue]) {
+        if (
+          !pluralVirilityAndSingularConversionRef["plural"][annotationValue]
+        ) {
           throw (
             "Could not convert virility of annotationValue: " + annotationValue
           );
         }
 
-        annotationValue = pluralVirilityConversion[annotationValue];
+        annotationValue =
+          pluralVirilityAndSingularConversionRef["plural"][annotationValue];
       }
     }
 
+    //plainref
     const POLgenderToPlainEnglishRef = {
       m: "male",
       m1: "male",
@@ -95,16 +91,6 @@ exports.adjustVirilityOfStructureChunk = (
     refObj.pluralVirilityAndSingularConversionRef[currentLanguage];
 
   let newGenderArray = [];
-  const pluralGenderRefObj = {
-    m: "virile",
-    m1: "virile",
-    m2: "nonvirile",
-    m3: "nonvirile",
-    f: "nonvirile",
-    n: "nonvirile",
-    virile: "virile",
-    nonvirile: "nonvirile",
-  };
 
   if (number.includes("singular")) {
     gender.forEach((genderValue) => {
@@ -114,7 +100,10 @@ exports.adjustVirilityOfStructureChunk = (
 
   if (number.includes("plural")) {
     gender.forEach((genderValue) => {
-      newGenderArray.push(pluralGenderRefObj[genderValue]);
+      newGenderArray = [
+        ...newGenderArray,
+        ...pluralVirilityAndSingularConversionRef["plural"][genderValue],
+      ];
       if (retainOriginals) {
         newGenderArray.push(genderValue);
       }

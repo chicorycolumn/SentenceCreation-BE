@@ -183,7 +183,7 @@ exports.formatFeatureValue = (featureKey, featureValue, note) => {
     }
   }
 
-  return featureValue;
+  return [featureValue];
 };
 
 exports.addLanguageParticularClarifiers = (

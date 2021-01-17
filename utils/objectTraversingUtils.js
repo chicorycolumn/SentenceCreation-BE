@@ -12,10 +12,6 @@ exports.findMatchingLemmaObjectThenWord = (
   kumquat,
   outputArray
 ) => {
-  if (structureChunk.chunkId === "pro-4-His") {
-    console.log("r10 If-PW structureChunk", structureChunk);
-  }
-
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
   let selectedFormsArray = [];
   let arrayOfAllPossibleOutputUnits = [];
@@ -336,10 +332,6 @@ exports.findMatchingLemmaObjectThenWord = (
 
   //STEP FOUR: If-PW: Pathway for inflected forms, return word after selecting by drilling down through lemma object.
 
-  if (structureChunk.chunkId === "pro-4-His") {
-    console.log("r13 If-PW structureChunk", structureChunk);
-  }
-
   //  STEP FOUR-A: Preparing materials
   let structureChunksAdjusted = langUtils.adjustStructureChunksInIfPW(
     structureChunk
@@ -347,10 +339,6 @@ exports.findMatchingLemmaObjectThenWord = (
   let structureChunks = structureChunksAdjusted || [structureChunk];
 
   structureChunks.forEach((structureChunk) => {
-    if (structureChunk.chunkId === "pro-4-His") {
-      console.log("r14 If-PW structureChunk", structureChunk);
-    }
-
     let matchesCopy = matches.slice(0);
 
     if (!matchesCopy.length) {
@@ -404,10 +392,6 @@ exports.findMatchingLemmaObjectThenWord = (
       } else {
         gpUtils.consoleLogBlue("##If-PW" + " " + structureChunk.chunkId);
       }
-    }
-
-    if (structureChunk.chunkId === "pro-4-His") {
-      console.log("r15 If-PW structureChunk", structureChunk);
     }
 
     if (kumquat) {
