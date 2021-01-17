@@ -118,7 +118,12 @@ exports.adjustVirilityOfStructureChunk = (
 };
 
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
-  console.log("[1;35m " + "ALL preprocessStructureChunks-------------------" + "[0m");
+  let shouldConsoleLog = false;
+  if (shouldConsoleLog) {
+    console.log("[1;35m " + "ALL preprocessStructureChunks-------------------" + "[0m");
+  } else {
+    console.log("[1;35m " + `(ALL preprocessStructureChunks)` + "[0m");
+  }
 
   let metaFeaturesRef = refObj.metaFeatures[currentLanguage];
 
@@ -127,7 +132,9 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
       return;
     }
 
-    console.log("At first the structureChunk is", structureChunk);
+    if (shouldConsoleLog) {
+      console.log("At first the structureChunk is", structureChunk);
+    }
 
     if (structureChunk.wordtype === "adjective") {
       if (!structureChunk.form || !structureChunk.form.length) {
@@ -248,10 +255,14 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
       true
     );
 
-    console.log("Finally the structureChunk is", structureChunk);
+    if (shouldConsoleLog) {
+      console.log("Finally the structureChunk is", structureChunk);
+    }
   });
 
-  console.log("[1;35m " + "/ALL preprocessStructureChunks" + "[0m");
+  if (shouldConsoleLog) {
+    console.log("[1;35m " + "/ALL preprocessStructureChunks" + "[0m");
+  }
 };
 
 exports.convertMetaFeatures = (sourceObjectArray, currentLanguage, objType) => {
@@ -311,7 +322,7 @@ exports.convertMetaFeatures = (sourceObjectArray, currentLanguage, objType) => {
           let currentValueArr = sourceObject[featureKey];
           let newValueArr = [];
 
-          console.log(objType, { currentValueArr });
+          // console.log(objType, { currentValueArr });
 
           currentValueArr.forEach((value) => {
             if (/_/.test(value)) {

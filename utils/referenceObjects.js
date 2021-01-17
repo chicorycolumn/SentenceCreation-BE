@@ -48,7 +48,7 @@ exports.filterAnnotations = (
       conditionsOnWhichToBlockAnnotations &&
       conditionsOnWhichToBlockAnnotations[annotationKey]
     ) {
-      console.log("[1;33m " + "filterAnnotations: q01" + "[0m");
+      // console.log("[1;33m " + "filterAnnotations: q01" + "[0m");
 
       let conditionsOnWhichToBlockAnnotationsArr =
         conditionsOnWhichToBlockAnnotations[annotationKey];
@@ -59,19 +59,19 @@ exports.filterAnnotations = (
             return true;
           }
 
-          console.log("[1;33m " + "filterAnnotations: q02" + "[0m");
+          // console.log("[1;33m " + "filterAnnotations: q02" + "[0m");
 
           return Object.keys(conditionsObj).every((featureKey) => {
             let featureValues = conditionsObj[featureKey];
-            console.log("[1;33m " + "filterAnnotations: q03" + "[0m");
+            // console.log("[1;33m " + "filterAnnotations: q03" + "[0m");
 
             //Each answerChunksObject has a headCh or depCh that fulfils this condition (at least one value from condition arr is present at condition key in headCh).
             return featureValues.some((featureValue) => {
-              console.log("[1;33m " + "filterAnnotations: q04" + "[0m");
+              // console.log("[1;33m " + "filterAnnotations: q04" + "[0m");
 
               if (
                 correspondingAnswerChunks.every((answerChunksObject) => {
-                  console.log("[1;33m " + "filterAnnotations: q05" + "[0m");
+                  // console.log("[1;33m " + "filterAnnotations: q05" + "[0m");
 
                   let headAndDepChunks = [
                     answerChunksObject.answerChunk,
@@ -116,10 +116,13 @@ exports.filterAnnotations = (
 exports.conditionsOnWhichToBlockAnnotations = {
   POL: {
     noun: {
-      //For answerChunk POL nouns (yes, nouns, as these are the ones that will be clarified for their verbs),
+      //Here it's answerChunk {{POL}} {{nouns}}, as the nouns are what'll be clarified for their verbs.
       gender: [
-        //So this means, if answerLang {{POL}}, if wordtype {{noun}}, please block the {{gender}} annotation,
-        //if any of these condition objects have all their conditions met, by the headCh or depCh.
+        //If answerLang {{POL}},
+        //           if wordtype {{noun}},
+        //                     please block the {{gender}} annotation...
+        //
+        //...if any of these condition objects have all their conditions met, by the headCh or depCh.
         {
           tenseDescription: [
             "present im",
@@ -146,6 +149,11 @@ exports.conditionsOnWhichToBlockAnnotations = {
         {
           person: ["impersonal"],
         },
+        {
+          person: ["1per", "2per"],
+          gcase: ["gen", "dat", "acc", "ins", "loc"],
+        },
+        { form: ["determiner"] },
       ],
     },
   },

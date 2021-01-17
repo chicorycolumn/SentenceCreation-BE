@@ -5,14 +5,21 @@ const refObj = require("../../utils/referenceObjects.js");
 const allLangUtils = require("../../utils/allLangUtils.js");
 
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
-  console.log("[1;35m " + "POL preprocessStructureChunks-------------------" + "[0m");
+  let shouldConsoleLog = false;
+  if (shouldConsoleLog) {
+    console.log("[1;35m " + "POL preprocessStructureChunks-------------------" + "[0m");
+  } else {
+    console.log("[1;35m " + `(POL preprocessStructureChunks)` + "[0m");
+  }
 
   sentenceStructure.forEach((structureChunk) => {
     if (structureChunk.wordtype === "fixed") {
       return;
     }
 
-    console.log("At first the structureChunk is", structureChunk);
+    if (shouldConsoleLog) {
+      console.log("At first the structureChunk is", structureChunk);
+    }
 
     if (
       //If gender is an appropriate feature of this wordtype.
@@ -46,10 +53,14 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
       }
     }
 
-    console.log("Finally the structureChunk is", structureChunk);
+    if (shouldConsoleLog) {
+      console.log("Finally the structureChunk is", structureChunk);
+    }
   });
 
-  console.log("[1;35m " + "/POL preprocessStructureChunks" + "[0m");
+  if (shouldConsoleLog) {
+    console.log("[1;35m " + "/POL preprocessStructureChunks" + "[0m");
+  }
 };
 
 exports.preprocessLemmaObjectsMajor = (

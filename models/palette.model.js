@@ -74,14 +74,14 @@ exports.fetchPalette = (req) => {
   questionSentenceData.questionOutputArr.forEach((outputUnit, index) => {
     let { structureChunk } = outputUnit;
 
-    console.log("[1;35m " + `stCh ${index}` + "[0m");
+    console.log("[1;35m " + `a11 stCh ${index}` + "[0m");
 
     Object.keys(structureChunk).forEach((featureKey) => {
       let featureValue = structureChunk[featureKey];
 
       let obj = {};
       obj[featureKey] = featureValue;
-      console.log(obj);
+      // console.log(obj);
 
       if (
         ![
@@ -99,7 +99,7 @@ exports.fetchPalette = (req) => {
     });
   });
 
-  if ("console") {
+  if (!"console") {
     console.log(
       "[1;36m " +
         "{{{ #SBS fetchPalette just after we get questionSentenceData back from SC:processSentenceFormula. Let's see the stChs in questionSentenceData.arrayOfOutputArrays:" +
@@ -113,7 +113,9 @@ exports.fetchPalette = (req) => {
       });
 
     console.log("[1;36m " + "}}}" + "[0m");
+  }
 
+  if ("console") {
     console.log(
       "[1;35m " +
         "{{{ #SBS fetchPalette just before midpoint. Let's see the selectedWordss" +
@@ -130,6 +132,7 @@ exports.fetchPalette = (req) => {
 
     gpUtils.consoleLogAestheticBorder(4);
   }
+
   if ("check") {
     if (!questionSentenceData) {
       console.log(
@@ -248,7 +251,7 @@ exports.fetchPalette = (req) => {
         answerSentenceData.arrayOfOutputArrays;
       delete answerSentenceData.arrayOfOutputArrays;
 
-      if ("console") {
+      if (!"console") {
         console.log(
           "[1;33m " +
             "{{{ #SBS fetchPalette just after we get answerSentenceData back from SC:processSentenceFormula. Let's see the stChs in answerSentenceData.arrayOfOutputArrays:" +

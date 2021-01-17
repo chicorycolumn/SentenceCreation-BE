@@ -50,7 +50,12 @@ let inflectorRef = {
 };
 
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
-  console.log("[1;35m " + "ENG:preprocessStructureChunks-----------" + "[0m");
+  let shouldConsoleLog = false;
+  if (shouldConsoleLog) {
+    console.log("[1;35m " + "ENG preprocessStructureChunks-------------------" + "[0m");
+  } else {
+    console.log("[1;35m " + `(ENG preprocessStructureChunks)` + "[0m");
+  }
 
   let metagenderRef = refObj.metaFeatures[currentLanguage].gender;
 
@@ -105,7 +110,9 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
       }
     }
   });
-  console.log("[1;35m " + "/ENG:preprocessStructureChunks" + "[0m");
+  if (shouldConsoleLog) {
+    console.log("[1;35m " + "/ENG:preprocessStructureChunks" + "[0m");
+  }
 };
 
 exports.preprocessLemmaObjectsMajor = (

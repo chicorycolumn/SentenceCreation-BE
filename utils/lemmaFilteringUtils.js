@@ -311,35 +311,43 @@ exports.updateStructureChunkByAdhocOnly = (structureChunk, label, value) => {
 };
 
 exports.updateStructureChunk = (outputUnit, currentLanguage) => {
-  console.log(
-    "[1;33m " +
-      `updateStructureChunk ${outputUnit.structureChunk.chunkId} ${outputUnit.selectedWord} ---------------------------` +
-      "[0m"
-  );
+  let shouldConsoleLog = false;
 
-  console.log(
-    "BEFORE UB-Inf and UB-Tag-Sel, structureChunk is:",
-    outputUnit.structureChunk
-  );
+  if (shouldConsoleLog) {
+    console.log(
+      "[1;33m " +
+        `updateStructureChunk ${outputUnit.structureChunk.chunkId} ${outputUnit.selectedWord} ---------------------------` +
+        "[0m"
+    );
+
+    console.log(
+      "BEFORE UB-Inf and UB-Tag-Sel, structureChunk is:",
+      outputUnit.structureChunk
+    );
+  }
 
   lfUtils.updateStChByInflections(outputUnit, currentLanguage);
 
-  console.log(
-    "AFTER UB-Inf but BEFORE UB-Tag-Sel, structureChunk is:",
-    outputUnit.structureChunk
-  );
+  if (shouldConsoleLog) {
+    console.log(
+      "AFTER UB-Inf but BEFORE UB-Tag-Sel, structureChunk is:",
+      outputUnit.structureChunk
+    );
+  }
 
   lfUtils.updateStChByAndTagsAndSelectors(outputUnit, currentLanguage);
 
-  console.log(
-    "AFTER UB-Inf and UB-Tag-Sel, structureChunk is:",
-    outputUnit.structureChunk
-  );
+  if (shouldConsoleLog) {
+    console.log(
+      "AFTER UB-Inf and UB-Tag-Sel, structureChunk is:",
+      outputUnit.structureChunk
+    );
 
-  console.log(
-    "[1;33m " + `/updateStructureChunk ${outputUnit.structureChunk.chunkId}` + "[0m"
-  );
-  console.log(" ");
+    console.log(
+      "[1;33m " + `/updateStructureChunk ${outputUnit.structureChunk.chunkId}` + "[0m"
+    );
+    console.log(" ");
+  }
 };
 
 exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {

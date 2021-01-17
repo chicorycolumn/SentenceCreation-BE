@@ -130,6 +130,8 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
               );
 
               console.log("getSinglePointMutationLabels:", { filteredLabels });
+              console.log("synhomDataUnit", synhomDataUnit);
+              console.log({ allowableClarifiers });
 
               return filteredLabels;
             }

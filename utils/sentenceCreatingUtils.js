@@ -615,9 +615,16 @@ exports.conformAnswerStructureToQuestionStructure = (
   languagesObj,
   words
 ) => {
-  console.log(
-    "[1;35m " + "-------------conformAnswerStructureToQuestionStructure" + "[0m"
-  );
+  let shouldConsoleLog = false;
+  if (shouldConsoleLog) {
+    console.log(
+      "[1;35m " +
+        "SC:conformAnswerStructureToQuestionStructure-------------------" +
+        "[0m"
+    );
+  } else {
+    console.log("[1;35m " + `(SC:conformAnswerStructureToQuestionStructure)` + "[0m");
+  }
 
   let { sentenceStructure } = sentenceFormula;
   let { questionLanguage, answerLanguage } = languagesObj;
@@ -634,10 +641,12 @@ exports.conformAnswerStructureToQuestionStructure = (
       return;
     }
 
-    console.log(
-      "conformAnswerStructureToQuestionStructure: questionStructureChunk",
-      questionStructureChunk
-    );
+    if (shouldConsoleLog) {
+      console.log(
+        "conformAnswerStructureToQuestionStructure: questionStructureChunk",
+        questionStructureChunk
+      );
+    }
 
     let questionSelectedLemmaObject = questionOutputArrItem.selectedLemmaObject;
     let questionSelectedWord = questionOutputArrItem.selectedWord;
@@ -649,7 +658,7 @@ exports.conformAnswerStructureToQuestionStructure = (
 
     if (!answerStructureChunk) {
       console.log(
-        "SC:conformAnswerStructureToQuestionStructure couldn't find any answerStructureChunk for '" +
+        "#NB SC:conformAnswerStructureToQuestionStructure couldn't find any answerStructureChunk for '" +
           questionStructureChunk.chunkId +
           "'."
       );
@@ -683,7 +692,7 @@ exports.conformAnswerStructureToQuestionStructure = (
 
     if (!matchingAnswerLemmaObjects.length) {
       console.log(
-        "There were no matching answer lemma objects found in SC:conformAnswerStructureToQuestionStructure"
+        "#NB There were no matching answer lemma objects found in SC:conformAnswerStructureToQuestionStructure"
       );
       return;
     }
@@ -855,7 +864,9 @@ exports.conformAnswerStructureToQuestionStructure = (
     );
   });
 
-  console.log("[1;35m " + "/conformAnswerStructureToQuestionStructure" + "[0m");
+  if (shouldConsoleLog) {
+    console.log("[1;35m " + "/conformAnswerStructureToQuestionStructure" + "[0m");
+  }
 };
 
 exports.removeDuplicatesFromResponseObject = (respObj) => {
