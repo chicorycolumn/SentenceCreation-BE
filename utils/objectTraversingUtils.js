@@ -423,8 +423,8 @@ exports.findMatchingLemmaObjectThenWord = (
     } else {
       let selectedLemmaObject = gpUtils.selectRandom(matchesCopy);
 
-      console.log("If-PW selectedLemmaObject");
-      // gpUtils.consoleLogObjectAtTwoLevels(selectedLemmaObject.inflections);
+      console.log("If-PW selectedLemmaObject for " + structureChunk.chunkId);
+      console.log(selectedLemmaObject.inflections);
 
       let subArrayOfOutputUnits = lfUtils.filterWithinSelectedLemmaObject(
         selectedLemmaObject,

@@ -540,7 +540,7 @@ exports.preventMasculineOverrepresentation = (
         }
       });
       console.log(
-        "Hey! To prevent Masculinist Agenda: Overrepresentation, I adjusted the array to this:",
+        `Hey! For stCh ${structureChunk.chunkId} I prevented Masculinist Agenda: Overrepresentation by adjusting the array to this:`,
         array
       );
     }

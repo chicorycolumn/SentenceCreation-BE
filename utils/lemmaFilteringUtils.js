@@ -52,6 +52,13 @@ exports.filterWithinSelectedLemmaObject = (
   );
 
   if (PHD_type) {
+    console.log(
+      "[1;35m " +
+        "s11 At the START lf:filterWithin PHD section, structureChunk is:" +
+        "[0m",
+      structureChunk
+    );
+
     if (
       !structureChunk.specificLemmas ||
       structureChunk.specificLemmas.length !== 1
@@ -62,6 +69,8 @@ exports.filterWithinSelectedLemmaObject = (
     let postHocInflectionChains = refObj.postHocDependentChunkWordtypes[
       currentLanguage
     ].find((PHD_dataObj) => PHD_dataObj.PHD_type === PHD_type).inflectionChains;
+
+    console.log("postHocInflectionChains", postHocInflectionChains);
 
     let lemmaObjectCopy = gpUtils.copyWithoutReference(lemmaObject);
 
@@ -75,6 +84,8 @@ exports.filterWithinSelectedLemmaObject = (
     let source = gpUtils.copyWithoutReference(lemmaObjectCopy.inflections);
 
     Object.keys(postHocInflectionChains).forEach((postHocAgreeWithKey) => {
+      console.log("[1;35m " + `Running loop for ${postHocAgreeWithKey}` + "[0m");
+
       let postHocInflectionChain = postHocInflectionChains[postHocAgreeWithKey];
 
       let headOutputUnit = outputArray.find(
@@ -83,41 +94,42 @@ exports.filterWithinSelectedLemmaObject = (
           structureChunk[postHocAgreeWithKey]
       );
 
-      let headDrillPath = gpUtils.copyWithoutReference(
+      let drillPathForPHD = gpUtils.copyWithoutReference(
         headOutputUnit.drillPath
       );
 
-      if (!headDrillPath) {
-        throw "This is an issue. There is no drillPath on the outputUnit with which I want to get features from the PHD stCh. Perhaps this outputUnit is one whose stCh did not go through If-PW?";
+      if (!drillPathForPHD) {
+        throw "#ERR There is no drillPath on the outputUnit with which I want to get features from the PHD stCh. Perhaps this outputUnit is one whose stCh did not go through If-PW?";
       }
 
       if (structureChunk.form) {
         if (structureChunk.form.length !== 1) {
           throw (
-            "Expected structureChunk.form to have length of 1: " +
+            "#ERR Expected structureChunk.form to have length of 1: " +
             structureChunk.chunkId
           );
         }
 
-        headDrillPath.push(["form", structureChunk.form[0]]);
+        drillPathForPHD.push(["form", structureChunk.form[0]]);
       }
 
       if (
         gpUtils.getWordtypeOfAgreeWith(structureChunk, postHocAgreeWithKey) ===
         "noun"
       ) {
-        let personArr = headDrillPath.find((arr) => arr[0] === "person");
+        let personArr = drillPathForPHD.find((arr) => arr[0] === "person");
 
-        if (personArr && !personArr[1] === "3per") {
+        if (!personArr) {
+          drillPathForPHD.push(["person", "3per"]);
+        } else if (personArr && !personArr[1] === "3per") {
           personArr[1] = "3per";
-        } else {
-          headDrillPath.push(["person", "3per"]);
         }
       }
 
       if (headOutputUnit.selectedLemmaObject.gender) {
-        if (!headDrillPath.find((arr) => arr[0] === "gender")) {
-          let numberArr = headDrillPath.find((arr) => arr[0] === "number");
+        if (!drillPathForPHD.find((arr) => arr[0] === "gender")) {
+          let numberArr = drillPathForPHD.find((arr) => arr[0] === "number");
+
           let numberValue = numberArr[1];
 
           let formattedFeatureValueArray = langUtils.formatFeatureValue(
@@ -133,23 +145,32 @@ exports.filterWithinSelectedLemmaObject = (
           }
           let formattedFeatureValue = formattedFeatureValueArray[0];
 
-          headDrillPath.push(["gender", formattedFeatureValue]);
+          drillPathForPHD.push(["gender", formattedFeatureValue]);
         } else {
-          throw "I am unsure about which gender to use - either the one from lobj inherent, or the one from drillPath. I was thinking of using this gender for the PHD stCh.";
+          throw "I am unsure about which gender to use - either the one from lobj inherent, or the one from drillPath. I wanted to use this gender for the PHD stCh.";
         }
       }
 
+      console.log("s13 drillPathForPHD is finally", drillPathForPHD);
+
       postHocInflectionChain.forEach((featureKey) => {
-        let featureValue = headDrillPath.find(
+        let featureValue = drillPathForPHD.find(
           (arr) => arr[0] === featureKey
         )[1];
 
+        console.log(`s14 drilling into source with ${featureValue}`);
         source = source[featureValue];
+
+        //If this is Primary, then update stCh with these featureKeys and featureValues.
+        // /.*Primary/.test(a)
+
+        if (/.*Primary/.test(postHocAgreeWithKey)) {
+          lfUtils.updateStChByInflections(
+            { structureChunk, drillPath: drillPathForPHD },
+            currentLanguage
+          );
+        }
       });
-      //Alpha - Is this need to be done?
-      //Get agreewithprimary stCh AND lobj
-      //Get agreewithsecondary stCh AND lobj
-      //Now use the features from them to get the right inflection from PHDstCh and PHDmatches.
     });
 
     let sourceArr = [];
@@ -175,85 +196,113 @@ exports.filterWithinSelectedLemmaObject = (
       resArr = [gpUtils.selectRandom(resArr)];
     }
 
+    //Okay, so, at this point, finishing the PHD section, structureChunk is like this.
+
+    //I want to, within this section, decant the gender feature (well, all features) into arr of ONE.
+
+    //Now let's think - from which PHDheadchunks should we take each feature?
+    //In this ecxact sitation, Gender should be taken from PHDawPrimary
+
+    // {
+    //   chunkId: 'pro-2',
+    //   wordtype: 'pronoun',
+    //   form: [ 'determiner' ],
+    //   specificLemmas: [ 'POSSESSIVE' ],
+    //   postHocAgreeWithPrimary: 'pro-1',
+    //   postHocAgreeWithSecondary: 'nou-1',
+    //   gcase: [ 'nom' ],
+    //   gender: [
+    //     'm1', 'm2', 'm3',        'f','n',         'virile', 'nonvirile', 'f',...etc
+    //   ]
+    // }
+
+    console.log(
+      "[1;35m " +
+        "s19 At the END lf:filterWithin PHD section, structureChunk is:" +
+        "[0m",
+      structureChunk
+    );
+    console.log("[1;35m " + "and resArr is" + "[0m", resArr);
+
     return resArr;
-  } else {
-    let inflectionChain =
-      refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
-        structureChunk.wordtype
-      ];
+  }
 
-    let requirementArrs = [];
+  let inflectionChain =
+    refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
+      structureChunk.wordtype
+    ];
 
-    inflectionChain.forEach((key) => {
-      let inflectionValueArr = [];
+  let requirementArrs = [];
 
-      if (structureChunk[key]) {
-        structureChunk[key].forEach((inflectionValue) => {
-          let formattedFeatureValueArr = langUtils.formatFeatureValue(
-            key,
-            inflectionValue
-          );
+  inflectionChain.forEach((key) => {
+    let inflectionValueArr = [];
 
-          console.log(
-            "filterWithinSelectedLemmaObject: formattedFeatureValueArr",
-            formattedFeatureValueArr
-          );
+    if (structureChunk[key]) {
+      structureChunk[key].forEach((inflectionValue) => {
+        let formattedFeatureValueArr = langUtils.formatFeatureValue(
+          key,
+          inflectionValue
+        );
 
-          inflectionValueArr = [
-            ...inflectionValueArr,
-            ...formattedFeatureValueArr,
-          ];
-        });
-      }
+        console.log(
+          "filterWithinSelectedLemmaObject: formattedFeatureValueArr",
+          formattedFeatureValueArr
+        );
 
-      requirementArrs.push([key, inflectionValueArr]);
-    });
+        inflectionValueArr = [
+          ...inflectionValueArr,
+          ...formattedFeatureValueArr,
+        ];
+      });
+    }
 
-    let errorInDrilling = false;
-    let outputUnitsWithDrillPaths = [];
+    requirementArrs.push([key, inflectionValueArr]);
+  });
 
-    let source = lemmaObject.inflections;
+  let errorInDrilling = false;
+  let outputUnitsWithDrillPaths = [];
 
-    lfUtils.traverseAndRecordInflections(
-      source,
-      requirementArrs,
-      outputUnitsWithDrillPaths
+  let source = lemmaObject.inflections;
+
+  lfUtils.traverseAndRecordInflections(
+    source,
+    requirementArrs,
+    outputUnitsWithDrillPaths
+  );
+
+  if (!outputUnitsWithDrillPaths || !outputUnitsWithDrillPaths.length) {
+    console.log(
+      "[1;31m " +
+        "#ERR --------------------------------------> traverseAndRecordInflections returned FALSY for " +
+        structureChunk.chunkId +
+        " in " +
+        currentLanguage +
+        "[0m"
     );
 
-    if (!outputUnitsWithDrillPaths || !outputUnitsWithDrillPaths.length) {
-      console.log(
-        "[1;31m " +
-          "#ERR --------------------------------------> traverseAndRecordInflections returned FALSY for " +
-          structureChunk.chunkId +
-          " in " +
-          currentLanguage +
-          "[0m"
-      );
+    console.log({ outputUnitsWithDrillPaths });
+    errorInDrilling = true;
+    return false;
+  }
 
-      console.log({ outputUnitsWithDrillPaths });
-      errorInDrilling = true;
-      return false;
-    }
+  if (kumquat) {
+    outputUnitsWithDrillPaths.forEach((selectedPath) => {
+      selectedPath.errorInDrilling = errorInDrilling;
+    });
 
-    if (kumquat) {
-      outputUnitsWithDrillPaths.forEach((selectedPath) => {
-        selectedPath.errorInDrilling = errorInDrilling;
-      });
+    return outputUnitsWithDrillPaths;
+  } else {
+    let selectedPath = gpUtils.selectRandom(outputUnitsWithDrillPaths);
 
-      return outputUnitsWithDrillPaths;
-    } else {
-      let selectedPath = gpUtils.selectRandom(outputUnitsWithDrillPaths);
+    let { selectedWordArray, drillPath } = selectedPath;
 
-      let { selectedWordArray, drillPath } = selectedPath;
-
-      return [
-        {
-          errorInDrilling,
-          selectedWordArray,
-          drillPath,
-        },
-      ];
-    }
+    return [
+      {
+        errorInDrilling,
+        selectedWordArray,
+        drillPath,
+      },
+    ];
   }
 };
 
@@ -262,8 +311,35 @@ exports.updateStructureChunkByAdhocOnly = (structureChunk, label, value) => {
 };
 
 exports.updateStructureChunk = (outputUnit, currentLanguage) => {
+  console.log(
+    "[1;33m " +
+      `updateStructureChunk ${outputUnit.structureChunk.chunkId} ${outputUnit.selectedWord} ---------------------------` +
+      "[0m"
+  );
+
+  console.log(
+    "BEFORE UB-Inf and UB-Tag-Sel, structureChunk is:",
+    outputUnit.structureChunk
+  );
+
   lfUtils.updateStChByInflections(outputUnit, currentLanguage);
+
+  console.log(
+    "AFTER UB-Inf but BEFORE UB-Tag-Sel, structureChunk is:",
+    outputUnit.structureChunk
+  );
+
   lfUtils.updateStChByAndTagsAndSelectors(outputUnit, currentLanguage);
+
+  console.log(
+    "AFTER UB-Inf and UB-Tag-Sel, structureChunk is:",
+    outputUnit.structureChunk
+  );
+
+  console.log(
+    "[1;33m " + `/updateStructureChunk ${outputUnit.structureChunk.chunkId}` + "[0m"
+  );
+  console.log(" ");
 };
 
 exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
