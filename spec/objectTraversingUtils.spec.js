@@ -5,6 +5,7 @@ const {
   findObjectInNestedObject,
   giveRoutesAndTerminalValuesFromObject,
   findSynhomographs,
+  findSinglePointMutationArray,
 } = require("../utils/objectTraversingUtils.js");
 
 describe("findSynhomographs", () => {
@@ -93,6 +94,7 @@ describe("findSynhomographs", () => {
         inflectionLabelChain: ["number", "gcase"],
         synhomographs: [
           {
+            inflectionLabelChain: ["number", "gcase"],
             terminalValue: "bike",
             inflectionPaths: [
               ["singular", "nom"],
@@ -153,6 +155,7 @@ describe("findSynhomographs", () => {
         inflectionLabelChain: ["number", "gcase"],
         synhomographs: [
           {
+            inflectionLabelChain: ["number", "gcase"],
             terminalValue: "11",
             inflectionPaths: [
               ["singular", "nom"],
@@ -162,6 +165,7 @@ describe("findSynhomographs", () => {
             labelsWhereTheyDiffer: ["gcase"],
           },
           {
+            inflectionLabelChain: ["number", "gcase"],
             terminalValue: "14",
             inflectionPaths: [
               ["singular", "acc"],
@@ -170,6 +174,7 @@ describe("findSynhomographs", () => {
             labelsWhereTheyDiffer: ["number", "gcase"],
           },
           {
+            inflectionLabelChain: ["number", "gcase"],
             terminalValue: "16",
             inflectionPaths: [
               ["plural", "gen"],
@@ -259,6 +264,7 @@ describe("findSynhomographs", () => {
         inflectionLabelChain: ["number", "gcase"],
         synhomographs: [
           {
+            inflectionLabelChain: ["number", "gcase"],
             terminalValue: "11",
             inflectionPaths: [
               ["singular", "nom"],
@@ -268,6 +274,7 @@ describe("findSynhomographs", () => {
             labelsWhereTheyDiffer: ["gcase"],
           },
           {
+            inflectionLabelChain: ["number", "gcase"],
             terminalValue: "14",
             inflectionPaths: [
               ["singular", "acc"],
@@ -276,6 +283,7 @@ describe("findSynhomographs", () => {
             labelsWhereTheyDiffer: ["number", "gcase"],
           },
           {
+            inflectionLabelChain: ["number", "gcase"],
             terminalValue: "16",
             inflectionPaths: [
               ["plural", "gen"],
@@ -290,6 +298,7 @@ describe("findSynhomographs", () => {
         inflectionLabelChain: ["number", "gcase"],
         synhomographs: [
           {
+            inflectionLabelChain: ["number", "gcase"],
             terminalValue: "unikey",
             inflectionPaths: [
               ["singular", "nom"],
@@ -708,5 +717,100 @@ describe("extractNestedRoutes", () => {
 
     let res = giveRoutesAndTerminalValuesFromObject(input);
     console.log(res);
+  });
+});
+
+describe("findSinglePointMutationArray", () => {
+  it("#otu5.0 Give empty for empty", () => {
+    let input_arrayOfArrays = [];
+    let input_currentArray = [];
+    let input_position = 0;
+
+    const actual = findSinglePointMutationArray(
+      input_currentArray,
+      input_arrayOfArrays,
+
+      input_position
+    );
+
+    const expected = false;
+
+    expect(actual).to.eql(expected);
+  });
+  it("#otu5.1", () => {
+    let input_arrayOfArrays = [
+      ["sing", "nom"],
+      ["sing", "acc"],
+      ["plur", "nom"],
+    ];
+    let input_currentArray = ["sing", "nom"];
+    let input_position = 0;
+
+    const actual = findSinglePointMutationArray(
+      input_currentArray,
+      input_arrayOfArrays,
+
+      input_position
+    );
+    const expected = true;
+
+    expect(actual).to.eql(expected);
+  });
+  it("#otu5.2", () => {
+    let input_arrayOfArrays = [
+      ["sing", "nom"],
+      ["sing", "acc"],
+      ["plur", "nom"],
+    ];
+    let input_currentArray = ["sing", "acc"];
+    let input_position = 0;
+
+    const actual = findSinglePointMutationArray(
+      input_currentArray,
+      input_arrayOfArrays,
+
+      input_position
+    );
+    const expected = false;
+
+    expect(actual).to.eql(expected);
+  });
+  it("#otu5.3", () => {
+    let input_arrayOfArrays = [
+      ["sing", "nom"],
+      ["sing", "acc"],
+      ["plur", "nom"],
+    ];
+    let input_currentArray = ["sing", "acc"];
+    let input_position = 1;
+
+    const actual = findSinglePointMutationArray(
+      input_currentArray,
+      input_arrayOfArrays,
+
+      input_position
+    );
+    const expected = true;
+
+    expect(actual).to.eql(expected);
+  });
+  it("#otu5.4", () => {
+    let input_arrayOfArrays = [
+      ["sing", "nom", "1per"],
+      ["sing", "acc", "1per"],
+      ["plur", "nom", "1per"],
+    ];
+    let input_currentArray = ["sing", "nom", "1per"];
+    let input_position = 0;
+
+    const actual = findSinglePointMutationArray(
+      input_currentArray,
+      input_arrayOfArrays,
+
+      input_position
+    );
+    const expected = true;
+
+    expect(actual).to.eql(expected);
   });
 });

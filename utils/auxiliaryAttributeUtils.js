@@ -96,7 +96,14 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
       refObj.lemmaObjectFeatures[answerLanguage]
         .allowableTransfersFromQuestionStructure[structureChunk.wordtype];
 
-    console.log("e12", languagesObj, { allowableClarifiers });
+    let allowableExtraClarifiersInSingleWordSentences =
+      refObj.lemmaObjectFeatures[answerLanguage]
+        .allowableExtraClarifiersInSingleWordSentences[structureChunk.wordtype];
+
+    console.log("e12", languagesObj, {
+      allowableClarifiers,
+      allowableExtraClarifiersInSingleWordSentences,
+    });
 
     //    allowableClarifiers. Any clarifiers not in here, don't bother adding them.
     //    We're looking ahead to the answerLanguage, and thinking, hmmmmm, well right now the questionLanguage
@@ -116,22 +123,109 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
           if (selectedWord === synhomDataUnit.terminalValue) {
             console.log("synhomDataUnit", synhomDataUnit);
 
-            let labelsWhereTheyDiffer = getSinglePointMutationLabels(
+            let labelsWhereTheyDiffer = filterDownClarifiers(
               synhomDataUnit,
               allowableClarifiers
             );
 
-            function getSinglePointMutationLabels(
-              synhomDataUnit,
-              allowableClarifiers
-            ) {
-              let filteredLabels = synhomDataUnit.labelsWhereTheyDiffer.filter(
-                (label) => allowableClarifiers.includes(label)
+            // if (!drillPath || !drillPath.length) {
+            //   gpUtils.throw("#ERR Ah, I wanted to use drillPath here.");
+            // }
+
+            function filterDownClarifiers(synhomDataUnit, allowableClarifiers) {
+              console.log("[1;35m " + `h11 filterDownClarifiers---------------` + "[0m");
+
+              console.log(
+                "We start with these labels:",
+                synhomDataUnit.labelsWhereTheyDiffer
               );
 
-              console.log("getSinglePointMutationLabels:", { filteredLabels });
-              console.log("synhomDataUnit", synhomDataUnit);
-              console.log({ allowableClarifiers });
+              let filteredLabels = synhomDataUnit.labelsWhereTheyDiffer.filter(
+                (label) => {
+                  if (
+                    allowableClarifiers.includes(label) ||
+                    (structureChunk.singleWordSentence &&
+                      allowableExtraClarifiersInSingleWordSentences.includes(
+                        label
+                      ))
+                  ) {
+                    console.log(
+                      "[1;32m " + `${label} PASSED allowableClarifiers` + "[0m"
+                    );
+                    return true;
+                  } else {
+                    console.log(
+                      "[1;30m " + `${label} FAILED allowableClarifiers` + "[0m"
+                    );
+                    return false;
+                  }
+                }
+              );
+
+              console.log("So now we have these labels:", filteredLabels);
+
+              let currentValueArr = synhomDataUnit.inflectionLabelChain.map(
+                (inflectionLabel) => {
+                  if (
+                    (inflectionLabel === "tense" &&
+                      !structureChunk[inflectionLabel]) ||
+                    !structureChunk[inflectionLabel].length
+                  ) {
+                    inflectionLabel = "tenseDescription";
+                  }
+
+                  if (
+                    !structureChunk[inflectionLabel] ||
+                    !structureChunk[inflectionLabel].length
+                  ) {
+                    console.log("#ERR g13: structureChunk", structureChunk);
+                    gpUtils.throw("#ERR g12 " + inflectionLabel);
+                  }
+                  if (structureChunk[inflectionLabel].length > 1) {
+                    console.log(
+                      "#ERR g13: structureChunk[inflectionLabel]",
+                      structureChunk[inflectionLabel]
+                    );
+                    gpUtils.throw("#ERR g13 " + inflectionLabel);
+                  }
+
+                  return structureChunk[inflectionLabel][0];
+                }
+              );
+
+              filteredLabels = filteredLabels.filter((label) => {
+                if (
+                  otUtils.findSinglePointMutationArray(
+                    currentValueArr,
+                    synhomDataUnit.inflectionPaths,
+                    synhomDataUnit.inflectionLabelChain.indexOf(label)
+                  )
+                ) {
+                  console.log(
+                    "[1;32m " + `${label} PASSED findSinglePointMutationArray` + "[0m"
+                  );
+                  return true;
+                } else {
+                  console.log(
+                    "[1;30m " + `${label} FAILED findSinglePointMutationArray` + "[0m"
+                  );
+                  return false;
+                }
+              });
+
+              console.log("And now we have these labels:", filteredLabels);
+
+              // console.log("[1;36m " + `{{{ w21 filterDownClarifiers` + "[0m");
+              // console.log({
+              //   filteredLabels,
+              //   currentValueArr,
+              //   "synhomDataUnit.inflectionLabelChain":
+              //     synhomDataUnit.inflectionLabelChain,
+              //   "synhomDataUnit.inflectionPaths":
+              //     synhomDataUnit.inflectionPaths,
+              // });
+
+              console.log("[1;35m " + `/filterDownClarifiers` + "[0m");
 
               return filteredLabels;
             }

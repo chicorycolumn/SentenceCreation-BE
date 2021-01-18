@@ -732,6 +732,8 @@ exports.findSynhomographs = (lemmaObject, structureChunk, currentLanguage) => {
 
   if (synhomographs.length) {
     synhomographs.forEach((synhomDataUnit) => {
+      synhomDataUnit.inflectionLabelChain = inflectionLabelChain;
+
       let { inflectionPaths } = synhomDataUnit;
       let labelsWhereTheyDiffer = [];
 
@@ -755,4 +757,37 @@ exports.findSynhomographs = (lemmaObject, structureChunk, currentLanguage) => {
       synhomographs,
     };
   }
+};
+
+exports.findSinglePointMutationArray = (
+  currentArray,
+  arrayOfArrays,
+  positionToExamine
+) => {
+  console.log("h12 arrayOfArrays", arrayOfArrays);
+
+  if (!arrayOfArrays.length) {
+    return false;
+  }
+
+  if (
+    !arrayOfArrays.find((arr) =>
+      arr.every((item, index) => currentArray[index] === item)
+    )
+  ) {
+    return false;
+  }
+
+  //Return true if you find an arr where:
+  //     -- value at position is different to currentArr
+  //     -- but values at all other positions are the same as currentArr
+  return !!arrayOfArrays.find((arr) =>
+    arr.every((item, index) => {
+      if (index === positionToExamine) {
+        return item !== currentArray[index];
+      } else {
+        return item === currentArray[index];
+      }
+    })
+  );
 };

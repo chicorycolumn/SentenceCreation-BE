@@ -378,11 +378,11 @@ exports.lemmaObjectFeatures = {
       verb: ["tenseDescription", "person", "number", "gender"],
       pronoun: ["person", "number", "gender"],
     },
-    undesiredClarifiersFromWhateverTheQLangMayBe: {
-      //Actually we can just use allowableTransfers as the wanted clarifiers, rather than needing to specify the unwanted clarifiers.
-      // noun: [],
-      // adjective: [],
-      // verb: [],
+    allowableExtraClarifiersInSingleWordSentences: {
+      noun: ["gcase"],
+      adjective: [],
+      verb: [],
+      pronoun: [],
     },
   },
   ENG: {
@@ -408,11 +408,11 @@ exports.lemmaObjectFeatures = {
       verb: ["tenseDescription", "person", "number"],
       pronoun: ["form", "person", "number", "gender"],
     },
-    undesiredClarifiersFromWhateverTheQLangMayBe: {
-      //Actually we can just use allowableTransfers as the wanted clarifiers, rather than needing to specify the unwanted clarifiers.
-      // noun: ["gender"],
-      // adjective: ["gender"],
-      // verb: ["gender"],
+    allowableExtraClarifiersInSingleWordSentences: {
+      noun: [],
+      adjective: [],
+      verb: [],
+      pronoun: [],
     },
   },
 };

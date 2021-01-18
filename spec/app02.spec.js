@@ -906,6 +906,192 @@ describe("/api", () => {
           );
         });
     });
+    it("#pal13B-03c GET 200 YES: POL to ENG. Another more interesting sentence with Pronouns.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          doNotSpecify: true,
+          hideClarifiersForTestingPurposes: false,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "112a familymember gave me thing",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              POL: "Ojciec dał mi jabłko.",
+              ENG: [
+                "Father gave me one apple.",
+                "Father had given me one apple.",
+                "Father has given me one apple.",
+              ],
+            },
+            {
+              POL: "Ojciec dał mi książkę.",
+              ENG: [
+                "Father gave me one book.",
+                "Father had given me one book.",
+                "Father has given me one book.",
+              ],
+            },
+            {
+              POL: "Ojciec dał mi cebulę.",
+              ENG: [
+                "Father gave me one onion.",
+                "Father had given me one onion.",
+                "Father has given me one onion.",
+              ],
+            },
+            {
+              POL: "Ojciec dał mi zwierciadło.",
+              ENG: [
+                "Father gave me one mirror.",
+                "Father had given me one mirror.",
+                "Father has given me one mirror.",
+              ],
+            },
+            {
+              POL: "Ojciec dał mi lustro.",
+              ENG: [
+                "Father gave me one mirror.",
+                "Father had given me one mirror.",
+                "Father has given me one mirror.",
+              ],
+            },
+            {
+              POL: "Ojciec dał nam jabłko.",
+              ENG: [
+                "Father gave us one apple.",
+                "Father had given us one apple.",
+                "Father has given us one apple.",
+              ],
+            },
+            {
+              POL: "Ojciec dał nam książkę.",
+              ENG: [
+                "Father gave us one book.",
+                "Father had given us one book.",
+                "Father has given us one book.",
+              ],
+            },
+            {
+              POL: "Ojciec dał nam cebulę.",
+              ENG: [
+                "Father gave us one onion.",
+                "Father had given us one onion.",
+                "Father has given us one onion.",
+              ],
+            },
+            {
+              POL: "Ojciec dał nam zwierciadło.",
+              ENG: [
+                "Father gave us one mirror.",
+                "Father had given us one mirror.",
+                "Father has given us one mirror.",
+              ],
+            },
+            {
+              POL: "Ojciec dał nam lustro.",
+              ENG: [
+                "Father gave us one mirror.",
+                "Father had given us one mirror.",
+                "Father has given us one mirror.",
+              ],
+            },
+            {
+              POL: "Matka dała mi jabłko.",
+              ENG: [
+                "Mother gave me one apple.",
+                "Mother had given me one apple.",
+                "Mother has given me one apple.",
+              ],
+            },
+            {
+              POL: "Matka dała mi książkę.",
+              ENG: [
+                "Mother gave me one book.",
+                "Mother had given me one book.",
+                "Mother has given me one book.",
+              ],
+            },
+            {
+              POL: "Matka dała mi cebulę.",
+              ENG: [
+                "Mother gave me one onion.",
+                "Mother had given me one onion.",
+                "Mother has given me one onion.",
+              ],
+            },
+            {
+              POL: "Matka dała mi zwierciadło.",
+              ENG: [
+                "Mother gave me one mirror.",
+                "Mother had given me one mirror.",
+                "Mother has given me one mirror.",
+              ],
+            },
+            {
+              POL: "Matka dała mi lustro.",
+              ENG: [
+                "Mother gave me one mirror.",
+                "Mother had given me one mirror.",
+                "Mother has given me one mirror.",
+              ],
+            },
+            {
+              POL: "Matka dała nam jabłko.",
+              ENG: [
+                "Mother gave us one apple.",
+                "Mother had given us one apple.",
+                "Mother has given us one apple.",
+              ],
+            },
+            {
+              POL: "Matka dała nam książkę.",
+              ENG: [
+                "Mother gave us one book.",
+                "Mother had given us one book.",
+                "Mother has given us one book.",
+              ],
+            },
+            {
+              POL: "Matka dała nam cebulę.",
+              ENG: [
+                "Mother gave us one onion.",
+                "Mother had given us one onion.",
+                "Mother has given us one onion.",
+              ],
+            },
+            {
+              POL: "Matka dała nam zwierciadło.",
+              ENG: [
+                "Mother gave us one mirror.",
+                "Mother had given us one mirror.",
+                "Mother has given us one mirror.",
+              ],
+            },
+            {
+              POL: "Matka dała nam lustro.",
+              ENG: [
+                "Mother gave us one mirror.",
+                "Mother had given us one mirror.",
+                "Mother has given us one mirror.",
+              ],
+            },
+          ];
+
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
   });
 
   describe("/palette - Stage 13A: Pronouns and other Multi Gender Nouns: Basic tests.", () => {

@@ -575,6 +575,47 @@ exports.sentenceFormulasBank = [
     ],
   },
   {
+    sentenceFormulaSymbol: "112a familymember gave me thing",
+    sentenceFormulaId: "ENG-00-112a",
+    translations: { POL: ["POL-00-112a"] },
+    sentenceStructure: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        andTags: ["person", "family"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1",
+        agreeWith: "nou-1",
+        wordtype: "verb",
+        specificLemmas: ["give"],
+        tenseDescription: ["past simple"],
+      },
+      {
+        chunkId: "pro-1",
+        wordtype: "pronoun",
+        // form: ["pronoun"],
+        specificLemmas: ["PERSONAL"],
+        person: ["1per"],
+        gcase: ["dat"],
+      },
+      { chunkId: "fix-1", wordtype: "fixed", value: "one" },
+      {
+        chunkId: "nou-2",
+        wordtype: "noun",
+        specificLemmas: ["book", "mirror", "apple", "onion"],
+        // gcase: ["acc"],
+        number: ["singular"],
+      },
+      { chunkId: "fix-3", wordtype: "fixed", value: "to" },
+    ],
+    primaryOrders: [["nou-1", "ver-1", "pro-1", "fix-1", "nou-2"]],
+    additionalOrders: [
+      // ["nou-1", "ver-1", "nou-2", "fix-3", "pro-1"]
+    ],
+  },
+  {
     sentenceFormulaSymbol: "113 my father gave me a book",
     sentenceFormulaId: "ENG-00-113",
     translations: { POL: ["POL-00-113"] },
