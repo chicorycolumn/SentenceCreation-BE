@@ -150,12 +150,16 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
                       ))
                   ) {
                     console.log(
-                      "[1;32m " + `${label} PASSED allowableClarifiers` + "[0m"
+                      "[1;32m " +
+                        `${structureChunk.chunkId} ABZ Early stage PASSING of ${label} in allowableClarifiers` +
+                        "[0m"
                     );
                     return true;
                   } else {
                     console.log(
-                      "[1;30m " + `${label} FAILED allowableClarifiers` + "[0m"
+                      "[1;30m " +
+                        `${structureChunk.chunkId} ABZ Early stage BLOCKING of ${label} in allowableClarifiers` +
+                        "[0m"
                     );
                     return false;
                   }
@@ -198,16 +202,46 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
                   otUtils.findSinglePointMutationArray(
                     currentValueArr,
                     synhomDataUnit.inflectionPaths,
-                    synhomDataUnit.inflectionLabelChain.indexOf(label)
+                    synhomDataUnit.inflectionLabelChain.indexOf(label),
+                    (item1, item2) => {
+                      let ref = {
+                        virile: ["m", "m1", "f", "n"],
+                        nonvirile: ["m2", "m3", "f", "n"],
+                      };
+
+                      let resultBool = false;
+
+                      if (resultBool) {
+                        return;
+                      }
+
+                      Object.keys(ref).forEach((pluralKey) => {
+                        if (
+                          (item1 === pluralKey &&
+                            ref[pluralKey].includes(item2)) ||
+                          (item2 === pluralKey &&
+                            ref[pluralKey].includes(item1))
+                        ) {
+                          console.log("[1;33m " + `WAHEY!` + "[0m");
+                          resultBool = true;
+                        }
+                      });
+
+                      return resultBool;
+                    }
                   )
                 ) {
                   console.log(
-                    "[1;32m " + `${label} PASSED findSinglePointMutationArray` + "[0m"
+                    "[1;32m " +
+                      `${structureChunk.chunkId} ABZ Early stage PASSING of ${label} in findSinglePointMutationArray` +
+                      "[0m"
                   );
                   return true;
                 } else {
                   console.log(
-                    "[1;30m " + `${label} FAILED findSinglePointMutationArray` + "[0m"
+                    "[1;30m " +
+                      `${structureChunk.chunkId} ABZ Early stage BLOCKING of ${label} in findSinglePointMutationArray` +
+                      "[0m"
                   );
                   return false;
                 }

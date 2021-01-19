@@ -762,9 +762,12 @@ exports.findSynhomographs = (lemmaObject, structureChunk, currentLanguage) => {
 exports.findSinglePointMutationArray = (
   currentArray,
   arrayOfArrays,
-  positionToExamine
+  positionToExamine,
+  specialComparisonCallback
 ) => {
-  console.log("h12 arrayOfArrays", arrayOfArrays);
+  console.log("h12 findSinglePointMutationArray was given:");
+  console.log({ currentArray, positionToExamine });
+  console.log("arrayOfArrays", arrayOfArrays);
 
   if (!arrayOfArrays.length) {
     return false;
@@ -786,7 +789,10 @@ exports.findSinglePointMutationArray = (
       if (index === positionToExamine) {
         return item !== currentArray[index];
       } else {
-        return item === currentArray[index];
+        return (
+          item === currentArray[index] ||
+          specialComparisonCallback(item, currentArray[index])
+        );
       }
     })
   );

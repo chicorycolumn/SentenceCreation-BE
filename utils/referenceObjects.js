@@ -106,7 +106,20 @@ exports.filterAnnotations = (
         })
       ) {
         console.log("[1;35m " + "filterAnnotations: Deleting it now!" + "[0m");
+
+        console.log(
+          "[1;30m " +
+            `${structureChunk.chunkId} ABZ Late stage DELETION of annotation ${annotationKey} which is ${structureChunk.annotations[annotationKey]}` +
+            "[0m"
+        );
+
         delete structureChunk.annotations[annotationKey];
+      } else {
+        console.log(
+          "[1;32m " +
+            `${structureChunk.chunkId} ABZ Late stage PASSING of annotation ${annotationKey} which is ${structureChunk.annotations[annotationKey]}` +
+            "[0m"
+        );
       }
     }
   });
