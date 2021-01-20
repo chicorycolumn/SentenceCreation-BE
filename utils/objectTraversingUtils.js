@@ -791,7 +791,8 @@ exports.findSinglePointMutationArray = (
       } else {
         return (
           item === currentArray[index] ||
-          specialComparisonCallback(item, currentArray[index])
+          (specialComparisonCallback &&
+            specialComparisonCallback(item, currentArray[index]))
         );
       }
     })
