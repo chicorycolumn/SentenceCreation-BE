@@ -16,6 +16,11 @@ exports.findMatchingLemmaObjectThenWord = (
   let selectedFormsArray = [];
   let arrayOfAllPossibleOutputUnits = [];
 
+  let allInflectorsForThisWordtype =
+    refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
+      structureChunk.wordtype
+    ];
+
   //STEP ONE: : Fx-PW: Pathway for Fixed pieces.
   if (structureChunk.wordtype === "fixed") {
     if ("console") {
@@ -85,7 +90,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
   //THREE (A): Ad-PW: Pathway for Ad hoc Forms and Inflections.
 
-  //(3A-1): Pathway for Ad hoc Forms.
+  //(Ad-PW-F): Pathway for Adhoc FORMS.
   if (
     structureChunk.form &&
     structureChunk.form.length &&
@@ -105,6 +110,20 @@ exports.findMatchingLemmaObjectThenWord = (
 
         adhocArr.forEach((adhocResultObj) => {
           let { selectedWordArr, structureChunkUpdated } = adhocResultObj;
+
+          allInflectorsForThisWordtype
+            .filter((inflectorKey) => !["form"].includes(inflectorKey))
+            .forEach((inflectorKey) => {
+              if (structureChunkUpdated["inflectorKey"]) {
+                console.log(
+                  "[1;35m " +
+                    `Deleting ${inflectorKey} from stCh ${structureChunkUpdated.chunkId} because this is #Ad-PW-F in ${currentLanguage}` +
+                    "[0m"
+                );
+              }
+
+              delete structureChunkUpdated[inflectorKey];
+            });
 
           selectedFormsArray.push({
             selectedWordArr,
@@ -131,6 +150,20 @@ exports.findMatchingLemmaObjectThenWord = (
 
       let { selectedWordArr, structureChunkUpdated } = selectedAdhocResultObj;
 
+      allInflectorsForThisWordtype
+        .filter((inflectorKey) => !["form"].includes(inflectorKey))
+        .forEach((inflectorKey) => {
+          if (structureChunkUpdated["inflectorKey"]) {
+            console.log(
+              "[1;35m " +
+                `Deleting ${inflectorKey} from stCh ${structureChunkUpdated.chunkId} because this is #Ad-PW-F in ${currentLanguage}` +
+                "[0m"
+            );
+          }
+
+          delete structureChunkUpdated[inflectorKey];
+        });
+
       selectedFormsArray.push({
         selectedWordArr,
         selectedLemmaObject,
@@ -140,7 +173,7 @@ exports.findMatchingLemmaObjectThenWord = (
     // });
   }
 
-  //(3A-2): Pathway for Ad hoc Inflections.
+  //((Ad-PW-2): Pathway for Adhoc INFLECTIONS.
   if (Object.keys(adhocInflectorRef).includes(structureChunk.wordtype)) {
     let adhocInflectorKeys = adhocInflectorRef[structureChunk.wordtype];
 
@@ -169,6 +202,20 @@ exports.findMatchingLemmaObjectThenWord = (
             adhocArr.forEach((adhocResultObj) => {
               let { selectedWordArr, structureChunkUpdated } = adhocResultObj;
 
+              allInflectorsForThisWordtype
+                .filter((inflectorKey) => !["form"].includes(inflectorKey))
+                .forEach((inflectorKey) => {
+                  if (structureChunkUpdated["inflectorKey"]) {
+                    console.log(
+                      "[1;35m " +
+                        `Deleting ${inflectorKey} from stCh ${structureChunkUpdated.chunkId} because this is #Ad-PW-I in ${currentLanguage}` +
+                        "[0m"
+                    );
+                  }
+
+                  delete structureChunkUpdated[inflectorKey];
+                });
+
               selectedFormsArray.push({
                 selectedWordArr,
                 selectedLemmaObject,
@@ -196,6 +243,20 @@ exports.findMatchingLemmaObjectThenWord = (
             selectedWordArr,
             structureChunkUpdated,
           } = selectedAdhocResultObj;
+
+          allInflectorsForThisWordtype
+            .filter((inflectorKey) => !["form"].includes(inflectorKey))
+            .forEach((inflectorKey) => {
+              if (structureChunkUpdated["inflectorKey"]) {
+                console.log(
+                  "[1;35m " +
+                    `Deleting ${inflectorKey} from stCh ${structureChunkUpdated.chunkId} because this is #Ad-PW-I in ${currentLanguage}` +
+                    "[0m"
+                );
+              }
+
+              delete structureChunkUpdated[inflectorKey];
+            });
 
           selectedFormsArray.push({
             selectedWordArr,
@@ -258,6 +319,26 @@ exports.findMatchingLemmaObjectThenWord = (
                     selectedUninflectedForm,
                   ];
 
+                  allInflectorsForThisWordtype
+                    .filter((inflectorKey) => !["form"].includes(inflectorKey))
+                    .forEach((inflectorKey) => {
+                      if (
+                        structureChunkUpdatedByAdhocOrUninflected[
+                          "inflectorKey"
+                        ]
+                      ) {
+                        console.log(
+                          "[1;35m " +
+                            `Deleting ${inflectorKey} from stCh ${structureChunkUpdatedByAdhocOrUninflected.chunkId} because this is #Un-PW in ${currentLanguage}` +
+                            "[0m"
+                        );
+                      }
+
+                      delete structureChunkUpdatedByAdhocOrUninflected[
+                        inflectorKey
+                      ];
+                    });
+
                   selectedFormsArray.push({
                     selectedWordArr,
                     selectedLemmaObject,
@@ -293,6 +374,24 @@ exports.findMatchingLemmaObjectThenWord = (
               structureChunkUpdatedByAdhocOrUninflected.form = [
                 selectedUninflectedForm,
               ];
+
+              allInflectorsForThisWordtype
+                .filter((inflectorKey) => !["form"].includes(inflectorKey))
+                .forEach((inflectorKey) => {
+                  if (
+                    structureChunkUpdatedByAdhocOrUninflected["inflectorKey"]
+                  ) {
+                    console.log(
+                      "[1;35m " +
+                        `Deleting ${inflectorKey} from stCh ${structureChunkUpdatedByAdhocOrUninflected.chunkId} because this is #Un-PW in ${currentLanguage}.` +
+                        "[0m"
+                    );
+                  }
+
+                  delete structureChunkUpdatedByAdhocOrUninflected[
+                    inflectorKey
+                  ];
+                });
 
               selectedFormsArray.push({
                 selectedWordArr,

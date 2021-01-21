@@ -168,8 +168,12 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
 
               console.log("So now we have these labels:", filteredLabels);
 
+              // console.log("t14, structureChunk", structureChunk);
+
               let currentValueArr = synhomDataUnit.inflectionLabelChain.map(
                 (inflectionLabel) => {
+                  // console.log("t15", { inflectionLabel });
+
                   if (
                     (inflectionLabel === "tense" &&
                       !structureChunk[inflectionLabel]) ||

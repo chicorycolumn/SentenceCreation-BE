@@ -85,7 +85,7 @@ exports.fetchPalette = (req) => {
 
       if (
         ![
-          "gender",
+          // "gender",
           "andTags",
           "orTags",
           "specificIds",
@@ -99,7 +99,7 @@ exports.fetchPalette = (req) => {
     });
   });
 
-  if (!"console") {
+  if (false && "console") {
     console.log(
       "[1;36m " +
         "{{{ #SBS fetchPalette just after we get questionSentenceData back from SC:processSentenceFormula. Let's see the stChs in questionSentenceData.arrayOfOutputArrays:" +

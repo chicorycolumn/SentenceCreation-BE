@@ -358,6 +358,11 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
     drillPath,
   } = outputUnit;
 
+  console.log("r11", { drillPath, structureChunk });
+  if (drillPath && !drillPath.map((arr) => arr[0]).includes("gender")) {
+    structureChunk.gender = [];
+  }
+
   //Epsilon - this had to be done for ENG, but for POL it was already done elsewhere?
   if (selectedLemmaObject.gender) {
     if ("check") {
