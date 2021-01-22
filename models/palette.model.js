@@ -68,13 +68,27 @@ exports.fetchPalette = (req) => {
     questionSentenceData.arrayOfOutputArrays[0];
   delete questionSentenceData.arrayOfOutputArrays;
 
-  // Can we assume that NO featureKeys have multiple values from this point forwards, apart from gender?
-  console.log("[1;35m " + "a10" + "[0m");
+  // Can we assume that NO featureKeys have multiple values from this point forwardss?
+  console.log("[1;35m " + "a09" + "[0m");
 
   questionSentenceData.questionOutputArr.forEach((outputUnit, index) => {
-    let { structureChunk } = outputUnit;
+    let { structureChunk, selectedLemmaObject } = outputUnit;
 
-    console.log("[1;35m " + `a11 stCh ${index}` + "[0m");
+    console.log(
+      "[1;35m " + `a10 stCh ${structureChunk.chunkId} at index ${index}` + "[0m"
+    );
+    console.log("[1;35m " + `a10 slObj ${selectedLemmaObject.lemma}` + "[0m");
+    console.log(" ");
+
+    if (selectedLemmaObject.gender === "allPersonalSingularGenders_selector") {
+      console.log(
+        "[1;35m " +
+          `Blanking structureChunk.gender of ${structureChunk.chunkId} just before Midpoint, because slObj ${selectedLemmaObject.lemma} is multi gender.` +
+          "[0m"
+      );
+
+      structureChunk.gender = [];
+    }
 
     Object.keys(structureChunk).forEach((featureKey) => {
       let featureValue = structureChunk[featureKey];
@@ -94,12 +108,13 @@ exports.fetchPalette = (req) => {
         Array.isArray(featureValue) &&
         featureValue.length > 1
       ) {
-        gpUtils.throw("#ERR a11 " + featureKey);
+        console.log("#ERR a11 structureChunk", structureChunk);
+        // gpUtils.throw("#ERR a11 featureKey: " + featureKey);
       }
     });
   });
 
-  if (false && "console") {
+  if (true && "console") {
     console.log(
       "[1;36m " +
         "{{{ #SBS fetchPalette just after we get questionSentenceData back from SC:processSentenceFormula. Let's see the stChs in questionSentenceData.arrayOfOutputArrays:" +

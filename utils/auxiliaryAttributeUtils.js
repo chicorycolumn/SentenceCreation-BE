@@ -117,10 +117,23 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
         questionLanguage
       );
 
+      if (!synhomographData) {
+        console.log("[1;35m " + `t12 No synhomographData` + "[0m");
+      } else {
+        console.log("[1;35m " + `t12 Yes synhomographData` + "[0m");
+        console.log("synhomDataUnits", synhomographData.synhomographs);
+      }
+
       if (synhomographData) {
         synhomographData.synhomographs.forEach((synhomDataUnit) => {
           //Zeta: Think how this will interact with the Terminus Objects.
           if (selectedWord === synhomDataUnit.terminalValue) {
+            console.log(
+              "[1;35m " +
+                `t13 YES enter filterDownClarifiers for selectedWord as ${selectedWord}` +
+                "[0m"
+            );
+
             console.log("synhomDataUnit", synhomDataUnit);
 
             let labelsWhereTheyDiffer = filterDownClarifiers(
@@ -168,16 +181,20 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
 
               console.log("So now we have these labels:", filteredLabels);
 
-              // console.log("t14, structureChunk", structureChunk);
+              console.log("t14, structureChunk", structureChunk);
+              console.log(
+                "t14, synhomDataUnit.inflectionLabelChain",
+                synhomDataUnit.inflectionLabelChain
+              );
 
               let currentValueArr = synhomDataUnit.inflectionLabelChain.map(
                 (inflectionLabel) => {
-                  // console.log("t15", { inflectionLabel });
+                  console.log("t15", { inflectionLabel });
 
                   if (
-                    (inflectionLabel === "tense" &&
-                      !structureChunk[inflectionLabel]) ||
-                    !structureChunk[inflectionLabel].length
+                    inflectionLabel === "tense" &&
+                    (!structureChunk[inflectionLabel] ||
+                      !structureChunk[inflectionLabel].length)
                   ) {
                     inflectionLabel = "tenseDescription";
                   }
@@ -186,9 +203,18 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
                     !structureChunk[inflectionLabel] ||
                     !structureChunk[inflectionLabel].length
                   ) {
-                    console.log("#ERR g13: structureChunk", structureChunk);
-                    gpUtils.throw("#ERR g12 " + inflectionLabel);
+                    console.log(
+                      "[1;31m " +
+                        `#ERR g12 adding null to currentValueArr for inflectionLabel ${inflectionLabel}.` +
+                        "[0m"
+                    );
+
+                    return null;
+
+                    // console.log("#ERR g12 structureChunk", structureChunk);
+                    // gpUtils.throw("#ERR g12 " + inflectionLabel);
                   }
+
                   if (structureChunk[inflectionLabel].length > 1) {
                     console.log(
                       "#ERR g13: structureChunk[inflectionLabel]",
@@ -253,16 +279,6 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
 
               console.log("And now we have these labels:", filteredLabels);
 
-              // console.log("[1;36m " + `{{{ w21 filterDownClarifiers` + "[0m");
-              // console.log({
-              //   filteredLabels,
-              //   currentValueArr,
-              //   "synhomDataUnit.inflectionLabelChain":
-              //     synhomDataUnit.inflectionLabelChain,
-              //   "synhomDataUnit.inflectionPaths":
-              //     synhomDataUnit.inflectionPaths,
-              // });
-
               console.log("[1;35m " + `/filterDownClarifiers` + "[0m");
 
               return filteredLabels;
@@ -299,6 +315,12 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
               );
               structureChunk.annotations[label] = clarifierValue;
             });
+          } else {
+            console.log(
+              "[1;35m " +
+                `t13 NOT enter filterDownClarifiers for selectedWord as ${selectedWord}` +
+                "[0m"
+            );
           }
         });
       }
