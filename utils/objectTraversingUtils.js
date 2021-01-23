@@ -23,13 +23,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
   //STEP ONE: : Fx-PW: Pathway for Fixed pieces.
   if (structureChunk.wordtype === "fixed") {
-    if ("console") {
-      if (kumquat) {
-        gpUtils.consoleLogYellow("##Fx-PW" + " " + structureChunk.chunkId);
-      } else {
-        gpUtils.consoleLogBlue("##Fx-PW" + " " + structureChunk.chunkId);
-      }
-    }
+    gpUtils.consoleLogPW("##Fx-PW", structureChunk, kumquat);
 
     return [
       {
@@ -88,7 +82,7 @@ exports.findMatchingLemmaObjectThenWord = (
   let adhocInflectorRef = refObj.adhocInflectors[currentLanguage];
   let adhocFormRef = refObj.adhocForms[currentLanguage];
 
-  //THREE (A): Ad-PW: Pathway for Ad hoc Forms and Inflections.
+  //THREE (A): Ad-PW: Pathway for Adhoc: both Forms and Inflections.
 
   //(Ad-PW-F): Pathway for Adhoc FORMS.
   if (
@@ -99,6 +93,8 @@ exports.findMatchingLemmaObjectThenWord = (
       adhocFormRef[structureChunk.wordtype].includes(selectedForm)
     )
   ) {
+    gpUtils.consoleLogPW("##Ad-PW-F", structureChunk, kumquat);
+
     if (kumquat) {
       matches.forEach((selectedLemmaObject) => {
         let adhocArr = langUtils.generateAdhocForms(
@@ -111,19 +107,11 @@ exports.findMatchingLemmaObjectThenWord = (
         adhocArr.forEach((adhocResultObj) => {
           let { selectedWordArr, structureChunkUpdated } = adhocResultObj;
 
-          allInflectorsForThisWordtype
-            .filter((inflectorKey) => !["form"].includes(inflectorKey))
-            .forEach((inflectorKey) => {
-              if (structureChunkUpdated["inflectorKey"]) {
-                console.log(
-                  "[1;35m " +
-                    `Deleting ${inflectorKey} from stCh ${structureChunkUpdated.chunkId} because this is #Ad-PW-F in ${currentLanguage}` +
-                    "[0m"
-                );
-              }
-
-              delete structureChunkUpdated[inflectorKey];
-            });
+          otUtils.stripOutFeatures(
+            currentLanguage,
+            structureChunkUpdated,
+            "Ad-PW-F"
+          );
 
           selectedFormsArray.push({
             selectedWordArr,
@@ -150,19 +138,11 @@ exports.findMatchingLemmaObjectThenWord = (
 
       let { selectedWordArr, structureChunkUpdated } = selectedAdhocResultObj;
 
-      allInflectorsForThisWordtype
-        .filter((inflectorKey) => !["form"].includes(inflectorKey))
-        .forEach((inflectorKey) => {
-          if (structureChunkUpdated["inflectorKey"]) {
-            console.log(
-              "[1;35m " +
-                `Deleting ${inflectorKey} from stCh ${structureChunkUpdated.chunkId} because this is #Ad-PW-F in ${currentLanguage}` +
-                "[0m"
-            );
-          }
-
-          delete structureChunkUpdated[inflectorKey];
-        });
+      otUtils.stripOutFeatures(
+        currentLanguage,
+        structureChunkUpdated,
+        "Ad-PW-F"
+      );
 
       selectedFormsArray.push({
         selectedWordArr,
@@ -173,7 +153,7 @@ exports.findMatchingLemmaObjectThenWord = (
     // });
   }
 
-  //((Ad-PW-2): Pathway for Adhoc INFLECTIONS.
+  //((Ad-PW-I): Pathway for Adhoc INFLECTIONS.
   if (Object.keys(adhocInflectorRef).includes(structureChunk.wordtype)) {
     let adhocInflectorKeys = adhocInflectorRef[structureChunk.wordtype];
 
@@ -182,13 +162,7 @@ exports.findMatchingLemmaObjectThenWord = (
         structureChunk[adhocInflectorKey] &&
         structureChunk[adhocInflectorKey].length
       ) {
-        if ("console") {
-          if (kumquat) {
-            gpUtils.consoleLogYellow("##Ad-PW" + " " + structureChunk.chunkId);
-          } else {
-            gpUtils.consoleLogBlue("##Ad-PW" + " " + structureChunk.chunkId);
-          }
-        }
+        gpUtils.consoleLogPW("##Ad-PW-I", structureChunk, kumquat);
 
         if (kumquat) {
           matches.forEach((selectedLemmaObject) => {
@@ -202,19 +176,11 @@ exports.findMatchingLemmaObjectThenWord = (
             adhocArr.forEach((adhocResultObj) => {
               let { selectedWordArr, structureChunkUpdated } = adhocResultObj;
 
-              allInflectorsForThisWordtype
-                .filter((inflectorKey) => !["form"].includes(inflectorKey))
-                .forEach((inflectorKey) => {
-                  if (structureChunkUpdated["inflectorKey"]) {
-                    console.log(
-                      "[1;35m " +
-                        `Deleting ${inflectorKey} from stCh ${structureChunkUpdated.chunkId} because this is #Ad-PW-I in ${currentLanguage}` +
-                        "[0m"
-                    );
-                  }
-
-                  delete structureChunkUpdated[inflectorKey];
-                });
+              otUtils.stripOutFeatures(
+                currentLanguage,
+                structureChunkUpdated,
+                "Ad-PW-I"
+              );
 
               selectedFormsArray.push({
                 selectedWordArr,
@@ -234,7 +200,7 @@ exports.findMatchingLemmaObjectThenWord = (
           );
 
           if (!adhocArr || !adhocArr.length) {
-            throw "No members were found in the adhocArr from OT:findMatching, path 3A-2 (ie tenseDescription).";
+            throw "No members were found in the adhocArr from OT:findMatching, path 3A-2 ie Ad-PW-I (ie tenseDescription).";
           }
 
           let selectedAdhocResultObj = gpUtils.selectRandom(adhocArr);
@@ -244,19 +210,11 @@ exports.findMatchingLemmaObjectThenWord = (
             structureChunkUpdated,
           } = selectedAdhocResultObj;
 
-          allInflectorsForThisWordtype
-            .filter((inflectorKey) => !["form"].includes(inflectorKey))
-            .forEach((inflectorKey) => {
-              if (structureChunkUpdated["inflectorKey"]) {
-                console.log(
-                  "[1;35m " +
-                    `Deleting ${inflectorKey} from stCh ${structureChunkUpdated.chunkId} because this is #Ad-PW-I in ${currentLanguage}` +
-                    "[0m"
-                );
-              }
-
-              delete structureChunkUpdated[inflectorKey];
-            });
+          otUtils.stripOutFeatures(
+            currentLanguage,
+            structureChunkUpdated,
+            "Ad-PW-I"
+          );
 
           selectedFormsArray.push({
             selectedWordArr,
@@ -284,17 +242,7 @@ exports.findMatchingLemmaObjectThenWord = (
           );
 
           if (requestedUninflectedForms.length) {
-            if ("console") {
-              if (kumquat) {
-                gpUtils.consoleLogYellow(
-                  "##Un-PW" + " " + structureChunk.chunkId
-                );
-              } else {
-                gpUtils.consoleLogBlue(
-                  "##Un-PW" + " " + structureChunk.chunkId
-                );
-              }
-            }
+            gpUtils.consoleLogPW("##Un-PW", structureChunk, kumquat);
 
             if (kumquat) {
               requestedUninflectedForms.forEach((selectedUninflectedForm) => {
@@ -319,25 +267,11 @@ exports.findMatchingLemmaObjectThenWord = (
                     selectedUninflectedForm,
                   ];
 
-                  allInflectorsForThisWordtype
-                    .filter((inflectorKey) => !["form"].includes(inflectorKey))
-                    .forEach((inflectorKey) => {
-                      if (
-                        structureChunkUpdatedByAdhocOrUninflected[
-                          "inflectorKey"
-                        ]
-                      ) {
-                        console.log(
-                          "[1;35m " +
-                            `Deleting ${inflectorKey} from stCh ${structureChunkUpdatedByAdhocOrUninflected.chunkId} because this is #Un-PW in ${currentLanguage}` +
-                            "[0m"
-                        );
-                      }
-
-                      delete structureChunkUpdatedByAdhocOrUninflected[
-                        inflectorKey
-                      ];
-                    });
+                  otUtils.stripOutFeatures(
+                    currentLanguage,
+                    structureChunkUpdatedByAdhocOrUninflected,
+                    "Un-PW"
+                  );
 
                   selectedFormsArray.push({
                     selectedWordArr,
@@ -375,23 +309,11 @@ exports.findMatchingLemmaObjectThenWord = (
                 selectedUninflectedForm,
               ];
 
-              allInflectorsForThisWordtype
-                .filter((inflectorKey) => !["form"].includes(inflectorKey))
-                .forEach((inflectorKey) => {
-                  if (
-                    structureChunkUpdatedByAdhocOrUninflected["inflectorKey"]
-                  ) {
-                    console.log(
-                      "[1;35m " +
-                        `Deleting ${inflectorKey} from stCh ${structureChunkUpdatedByAdhocOrUninflected.chunkId} because this is #Un-PW in ${currentLanguage}.` +
-                        "[0m"
-                    );
-                  }
-
-                  delete structureChunkUpdatedByAdhocOrUninflected[
-                    inflectorKey
-                  ];
-                });
+              otUtils.stripOutFeatures(
+                currentLanguage,
+                structureChunkUpdatedByAdhocOrUninflected,
+                "Un-PW"
+              );
 
               selectedFormsArray.push({
                 selectedWordArr,
@@ -485,13 +407,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
     //  STEP FOUR-B: Getting the inflected word.
 
-    if ("console") {
-      if (kumquat) {
-        gpUtils.consoleLogYellow("##If-PW" + " " + structureChunk.chunkId);
-      } else {
-        gpUtils.consoleLogBlue("##If-PW" + " " + structureChunk.chunkId);
-      }
-    }
+    gpUtils.consoleLogPW("##If-PW", structureChunk, kumquat);
 
     if (kumquat) {
       matchesCopy.forEach((selectedLemmaObject) => {
@@ -896,4 +812,25 @@ exports.findSinglePointMutationArray = (
       }
     })
   );
+};
+
+exports.stripOutFeatures = (currentLanguage, structureChunk, PWlabel) => {
+  let allInflectorsForThisWordtype =
+    refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
+      structureChunk.wordtype
+    ];
+
+  allInflectorsForThisWordtype
+    .filter((inflectorKey) => !["form"].includes(inflectorKey))
+    .forEach((inflectorKey) => {
+      if (structureChunk["inflectorKey"]) {
+        console.log(
+          "[1;35m " +
+            `Deleting ${inflectorKey} from stCh ${structureChunk.chunkId} because this is #${PWlabel} in ${currentLanguage}` +
+            "[0m"
+        );
+      }
+
+      delete structureChunk[inflectorKey];
+    });
 };

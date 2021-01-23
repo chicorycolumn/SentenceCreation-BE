@@ -364,6 +364,19 @@ exports.postHocDependentChunkWordtypes = {
   ],
 };
 
+exports.annotationToPlainspeakRef = {
+  gender: {
+    m: "male",
+    m1: "male",
+    m2: "male",
+    m3: "male",
+    f: "female",
+    n: "neuter",
+    virile: ["mixed", "males"],
+    nonvirile: "females",
+  },
+};
+
 exports.lemmaObjectFeatures = {
   POL: {
     selectors: {

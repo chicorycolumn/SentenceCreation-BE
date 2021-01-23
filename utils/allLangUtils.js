@@ -34,19 +34,10 @@ exports.translateAnnotationValue = (
       }
     }
 
-    //plainref
-    const POLgenderToPlainEnglishRef = {
-      m: "male",
-      m1: "male",
-      m2: "male",
-      m3: "male",
-      f: "female",
-      n: "neuter",
-      virile: ["mixed", "males"],
-      nonvirile: "females",
-    };
+    let annotationToPlainspeakRef = refObj.annotationToPlainspeakRef;
 
-    let adjustedAnnotation = POLgenderToPlainEnglishRef[annotationValue];
+    let adjustedAnnotation =
+      annotationToPlainspeakRef["gender"][annotationValue];
 
     return typeof adjustedAnnotation === "string"
       ? adjustedAnnotation

@@ -471,6 +471,14 @@ exports.doesKeyContainValueOnChunk = (
   );
 };
 
+exports.consoleLogPW = (label, structureChunk, kumquat) => {
+  if (kumquat) {
+    gpUtils.consoleLogYellow(`##${label} ${structureChunk.chunkId}`);
+  } else {
+    gpUtils.consoleLogBlue(`##${label} ${structureChunk.chunkId}`);
+  }
+};
+
 exports.consoleLogYellow = (text) => {
   console.log(" ");
   console.log(
