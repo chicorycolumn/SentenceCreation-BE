@@ -126,7 +126,6 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
 
       if (synhomographData) {
         synhomographData.synhomographs.forEach((synhomDataUnit) => {
-          //Zeta: Think how this will interact with the Terminus Objects.
           if (selectedWord === synhomDataUnit.terminalValue) {
             console.log(
               "[1;35m " +

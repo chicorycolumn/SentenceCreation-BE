@@ -15,6 +15,7 @@ exports.filterWithinSelectedLemmaObject = (
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
 
   //Counteract Masculinist Agenda: Overrepresentation
+  //Epsilon: move to POL lang utils?
   if (currentLanguage === "POL") {
     langUtils.preventMasculineOverrepresentation(
       structureChunk,
@@ -372,7 +373,6 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
   }
 
   //STEP ONE: Update stCh gender with that of lObj.
-  //Epsilon - this had to be done for ENG, but for POL it was already done elsewhere?
   if (selectedLemmaObject.gender) {
     if (!/_/.test(selectedLemmaObject.gender)) {
       //If lObj has non-meta-gender, then update stCh with lObj gender.
@@ -580,21 +580,6 @@ exports.filterBySelectors = (currentLanguage, structureChunk, matches) => {
     refObj.lemmaObjectFeatures[currentLanguage].selectors[
       structureChunk.wordtype
     ];
-
-  //temp Nownow
-  //So, for ENG nouns, the refObj now says that Gender is indeed a selector, because it is.
-  //But do we want to enforce that here, because...
-
-  //IN GENERAL:
-  //If stCh says gender: ["f"],
-  //we need to allow selection of "allSingularGenders"
-
-  //SPECIFICALLY ENG NOUNS:
-  //...
-
-  // if (currentLanguage === "ENG" && structureChunk.wordtype === "noun") {
-  //   selectors = undefined;
-  // }
 
   if (selectors) {
     selectors.forEach((selector) => {

@@ -717,6 +717,8 @@ exports.giveValueFromObjectByRoute = (obj, route) => {
 };
 
 exports.findSynhomographs = (lemmaObject, structureChunk, currentLanguage) => {
+  //Omega: How should this work re terminus objects?
+
   let inflectionLabelChain =
     refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
       structureChunk.wordtype

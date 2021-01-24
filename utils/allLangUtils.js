@@ -226,15 +226,6 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
 
           if (headChunk.person && headChunk.person.length) {
             structureChunk.person = headChunk.person.slice(0);
-          } else {
-            throw "#ERR I am surprised that we entered this clause. We should delete this. ~Epsilon";
-
-            let allGendersInThisLang =
-              refObj.allFeatureValues[currentLanguage].gender;
-
-            console.log("j22", allGendersInThisLang);
-
-            structureChunk.person = allGendersInThisLang.slice(0);
           }
         }
       }

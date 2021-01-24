@@ -787,12 +787,13 @@ exports.checkTranslationsOfGivenRef = (
 
   let { questionSentenceArr, answerSentenceArr } = res.body;
 
-  questionSentenceArr.forEach((actualQuestionSentence, index) => {
-    //Zeta: Remove this and run tests.
-    if (index) {
-      return;
-    }
+  if (questionSentenceArr.length > 1) {
+    gpUtils.throw(
+      "testingutils > checkTranslationsOfGivenRef says questionSentenceArr length over 1"
+    );
+  }
 
+  questionSentenceArr.forEach((actualQuestionSentence, index) => {
     let expectedQuestionSentences = ref.map((item) => item[questionLanguage]);
 
     expect(expectedQuestionSentences).to.include(actualQuestionSentence);
