@@ -412,7 +412,7 @@ exports.lemmaObjectFeatures = {
     },
   },
   ENG: {
-    selectors: {},
+    selectors: { noun: ["gender"] },
     hybridSelectors: {
       verb: ["tenseDescription"],
     },

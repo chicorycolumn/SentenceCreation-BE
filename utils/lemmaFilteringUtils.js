@@ -3,6 +3,7 @@ const gpUtils = require("./generalPurposeUtils.js");
 const otUtils = require("./objectTraversingUtils.js");
 const refObj = require("./referenceObjects.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
+const { convertMetaFeatures } = require("./allLangUtils.js");
 
 exports.filterWithinSelectedLemmaObject = (
   lemmaObject,
@@ -358,118 +359,92 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
     drillPath,
   } = outputUnit;
 
-  console.log("r11", { drillPath, structureChunk });
+  console.log("[1;35m " + `updateStChByAndTagsAndSelectors--------------------` + "[0m");
+  console.log("r10 structureChunk starts as", structureChunk);
+  console.log("drillPath", drillPath);
+
+  let doneSelectors = [];
+
+  //STEP ZERO: Decisive Decant
+  //Remove gender values on stCh if drillPath doesn't include gender (ie is infinitive or a participle, say).
   if (drillPath && !drillPath.map((arr) => arr[0]).includes("gender")) {
     structureChunk.gender = [];
   }
 
+  //STEP ONE: Update stCh gender with that of lObj.
   //Epsilon - this had to be done for ENG, but for POL it was already done elsewhere?
   if (selectedLemmaObject.gender) {
-    if ("check") {
-      if (
-        !structureChunk.number ||
-        !structureChunk.number.length ||
-        structureChunk.number.length !== 1
-      ) {
-        console.log(
-          "[1;31m " +
-            currentLanguage +
-            " structureChunk that has no Number key or such with length not 1:" +
-            "[0m"
-        );
+    if (!/_/.test(selectedLemmaObject.gender)) {
+      //If lObj has non-meta-gender, then update stCh with lObj gender.
 
-        gpUtils.throw(
-          "#ERR Need to know the Number. Trzeba wiedzie¢ liczb€. Es preciso saber el numero."
-        );
-      }
-    }
-    //Nownow: Because I will use stCh.number to decide which [ONE] gender to update the stCh to.
-    //I must not give the stCh a gender key of ["m1", "virile"] at this point.
-    let number = structureChunk.number[0];
+      console.log("v23 Clause R: lObj does not have metaSelector gender");
+      structureChunk.gender = [selectedLemmaObject.gender];
+      doneSelectors.push("gender");
+    } else {
+      //If lObj does have metagender, set stCh gender to converted values or filter stCh's gender by them.
 
-    if (/_/.test(selectedLemmaObject.gender)) {
-      console.log("Clause P: lObj has metaSelector gender");
+      console.log(
+        `v23 Clause S: lObj ${selectedLemmaObject.lemma} has metaSelector gender`
+      );
       let metaGender = selectedLemmaObject.gender.split("_")[0];
 
-      if ("check") {
-        if (
-          !structureChunk.gender ||
-          !structureChunk.gender.length ||
-          structureChunk.gender.length !== 1
-        ) {
-          console.log("selectedLemmaObject", selectedLemmaObject);
-          console.log("structureChunk", structureChunk);
-          console.log(
-            "[1;31m " +
-              "structureChunk does not have gender exactly 1, but I will try to reconcile it with the metaSelector gender of lObj anyway." +
-              "[0m"
-          );
-
-          // gpUtils.throw(
-          //   "#ERR: updateStChByAndTagsAndSelectors: I ideally need Gender key to hold array of exactly 1 value."
-          // );
-        }
-
-        if (
-          structureChunk.gender &&
-          structureChunk.gender.length &&
-          !refObj.metaFeatures[currentLanguage].gender[metaGender].includes(
-            structureChunk.gender[0]
-          )
-        ) {
-          console.log("selectedLemmaObject", selectedLemmaObject);
-          console.log("structureChunk", structureChunk);
-          gpUtils.throw(
-            `#ERR The lObj has metagender: ${metaGender} but I can't reconcile this with the structureChunk gender which is ${structureChunk.gender[0]}`
-          );
-        }
-      }
+      let metaGenderConverted =
+        refObj.metaFeatures[currentLanguage].gender[metaGender];
 
       if (structureChunk.gender && structureChunk.gender.length) {
-        structureChunk.gender = structureChunk.gender; //Yes, if lObj has metaSelector gender, and stCh gender fits that, then leave as is.
+        structureChunk.gender = structureChunk.gender.filter((genderValue) =>
+          metaGenderConverted.includes(genderValue)
+        );
       } else {
-        structureChunk.gender = refObj.metaFeatures[currentLanguage].gender[
-          metaGender
-        ].slice(0);
+        structureChunk.gender = metaGenderConverted.slice(0);
+        doneSelectors.push("gender");
       }
-    } else {
-      console.log("Clause Q: lObj does not have metaSelector gender");
-      structureChunk.gender = [selectedLemmaObject.gender]; //Update stCh with lObj gender.
     }
   }
 
-  //Yellow option:
-  /**If structureChunk has any andTags, then filter that down to only
-   * the andTags that are present in the tags of the lObj.
-   */
-  if (structureChunk.andTags) {
+  //STEP TWO: Update the stCh's andTags with the lObj's tags.
+  if (structureChunk.andTags && structureChunk.andTags.length) {
     structureChunk.andTags = structureChunk.andTags.filter((andTag) =>
       selectedLemmaObject.tags.includes(andTag)
     );
+  } else {
+    console.log(
+      "[1;31m " +
+        `Just to note that this stCh has no andTags, and I am adding them from lObj. Perhaps I should no nothing here instead: ${currentLanguage} ${structureChunk.chunkId}` +
+        "[0m"
+    );
+
+    structureChunk.andTags = selectedLemmaObject.tags.slice(0);
   }
 
-  //Magenta option:
-  /**Even if structureChunk doesn't have any andTags, create such a key,
-   * and fill it with the tags from the lobj.
-   */
-  // if (structureChunk.andTags) {
-  //   structureChunk.andTags = structureChunk.andTags.filter((andTag) =>
-  //     selectedLemmaObject.tags.includes(andTag)
-  //   );
-  // } else {
-  //   structureChunk.andTags = selectedLemmaObject.tags.slice();
-  // }
-
+  //STEP THREE: For all remaining selectors, update the stCh with values from lObj.
   let selectors =
     refObj.lemmaObjectFeatures[currentLanguage].selectors[
       structureChunk.wordtype
     ];
 
   if (selectors) {
-    selectors.forEach((selector) => {
-      structureChunk[selector] = [selectedLemmaObject[selector]];
-    });
+    selectors
+      .filter((selector) => !doneSelectors.includes(selector))
+      .forEach((selector) => {
+        if (/_/.test(selectedLemmaObject[selector])) {
+          gpUtils.throw(
+            `I wasn't expecting a metaFeature selector here. It shoyuld have been processed already, in step one, and then added to doneSelectors, which would have prevented it being used here. selectedLemmaObject[selector]:${selectedLemmaObject[selector]}`
+          );
+        }
+
+        structureChunk[selector] = [selectedLemmaObject[selector]];
+      });
+  } else {
+    console.log(
+      "[1;31m " +
+        `Just to note that refObj gave no selectors for currentLanguage ${currentLanguage} and structureChunk.wordtype ${structureChunk.wordtype}` +
+        "[0m"
+    );
   }
+
+  console.log("r12 structureChunk ends as", structureChunk);
+  console.log("[1;35m " + `/updateStChByAndTagsAndSelectors` + "[0m");
 };
 
 exports.updateStChByInflections = (outputUnit, currentLanguage) => {
@@ -540,11 +515,61 @@ exports.filterByAndTagsAndOrTags = (wordset, structureChunk) => {
   return lemmaObjects;
 };
 
-exports.filterByKey = (lemmaObjectArr, requirementArrs, key) => {
+exports.filterByKey = (
+  lemmaObjectArr,
+  requirementArrs,
+  key,
+  currentLanguage
+) => {
   let requirementArr = requirementArrs[key] || [];
+  let metaFeatureRef = refObj.metaFeatures[currentLanguage][key];
 
+  console.log(
+    "[1;35m " + `lf.filterByKey-------------------------- for key ${key}` + "[0m"
+  );
+  console.log("requirementArr starts as", requirementArr);
+
+  if (requirementArr) {
+    if (metaFeatureRef) {
+      requirementArr.forEach((featureValue) => {
+        //If the reqArr has a metafeature, all lObj with converted feature to pass filter.
+        if (/_/.test(featureValue)) {
+          let metaFeatureConverted = metaFeatureRef[featureValue];
+
+          if (!metaFeatureConverted) {
+            gpUtils.throw("#ERR filterByKey need converted metafeature.");
+          }
+
+          requirementArr = [...requirementArr, ...metaFeatureConverted];
+        }
+        console.log("requirementArr halfway through is", requirementArr);
+        //But also need do the inverse of this. If reqArr has 'f', then allow lObj to pass filter if lObj gender is 'allSingularGenders' eg.
+        Object.keys(metaFeatureRef).forEach((metaFeature) => {
+          let convertedMetaFeatureArr = metaFeatureRef[metaFeature];
+
+          if (convertedMetaFeatureArr.includes(featureValue)) {
+            requirementArr.push(metaFeature);
+          }
+        });
+      });
+    } else {
+      console.log(
+        "[1;31m " +
+          `lf.filterByKey saw there was no metaFeatureRef for currentLanguage ${currentLanguage} and key ${key}` +
+          "[0m"
+      );
+    }
+  }
+
+  console.log("requirementArr ends as", requirementArr);
+
+  //And finally, do said filter.
   if (requirementArr.length) {
-    return lemmaObjectArr.filter((lObj) => requirementArr.includes(lObj[key]));
+    return lemmaObjectArr.filter(
+      (lObj) =>
+        requirementArr.includes(lObj[key]) ||
+        requirementArr.includes(lObj[key].split("_")[0])
+    );
   } else {
     return lemmaObjectArr;
   }
@@ -556,9 +581,29 @@ exports.filterBySelectors = (currentLanguage, structureChunk, matches) => {
       structureChunk.wordtype
     ];
 
+  //temp Nownow
+  //So, for ENG nouns, the refObj now says that Gender is indeed a selector, because it is.
+  //But do we want to enforce that here, because...
+
+  //IN GENERAL:
+  //If stCh says gender: ["f"],
+  //we need to allow selection of "allSingularGenders"
+
+  //SPECIFICALLY ENG NOUNS:
+  //...
+
+  // if (currentLanguage === "ENG" && structureChunk.wordtype === "noun") {
+  //   selectors = undefined;
+  // }
+
   if (selectors) {
     selectors.forEach((selector) => {
-      matches = lfUtils.filterByKey(matches, structureChunk, selector);
+      matches = lfUtils.filterByKey(
+        matches,
+        structureChunk,
+        selector,
+        currentLanguage
+      );
     });
   }
 
