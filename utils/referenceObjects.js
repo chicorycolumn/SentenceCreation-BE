@@ -281,18 +281,7 @@ exports.metaFeatures = {
   POL: {
     gender: {
       allPersonalGenders: ["m1", "f", "virile", "nonvirile"],
-      allSingularGenders: ["m1", "m2", "m3", "f", "n"],
-      allSingularGendersWithPadding: [
-        "m1",
-        "m2",
-        "m3",
-        "f",
-        "f",
-        "f",
-        "n",
-        "n",
-        "n",
-      ],
+      allSingularGenders: ["m1", "m2", "m3", "f", "f", "f", "n", "n", "n"],
       allPersonalSingularGenders: ["m1", "f"],
       allPluralGenders: ["virile", "nonvirile"],
       allGenders: [
@@ -313,15 +302,7 @@ exports.metaFeatures = {
         "nonvirile",
       ],
       //
-      allSingularGendersExcludingNeuter: ["m1", "m2", "m3", "f"],
-      allSingularGendersExcludingNeuterWithPadding: [
-        "m1",
-        "m2",
-        "m3",
-        "f",
-        "f",
-        "f",
-      ],
+      allSingularGendersExcludingNeuter: ["m1", "m2", "m3", "f", "f", "f"],
       allMasculineSingularGenders: ["m1", "m2", "m3"],
     },
     form: { pronounAndDeterminer: ["pronoun", "determiner"] },
@@ -484,7 +465,23 @@ exports.allFeatureValues = {
       "cond3 condition",
       "cond3 outcome",
     ],
-    gender: ["m1", "m2", "m3", "f", "n", "virile", "nonvirile"],
+    gender: [
+      "m1",
+      "m2",
+      "m3",
+      "f",
+      "f",
+      "f",
+      "n",
+      "n",
+      "n",
+      "virile",
+      "virile",
+      "virile",
+      "nonvirile",
+      "nonvirile",
+      "nonvirile",
+    ],
   },
 };
 
@@ -679,6 +676,25 @@ exports.whetherToAddSpecifiersForThisAnswerLang = {
     ],
   },
   ENG: {},
+};
+
+exports.skipThisStepInPreprocessStructureChunks = (
+  currentLanguage,
+  key,
+  structureChunk
+) => {
+  if (currentLanguage === "POL") {
+    if (key === "tenseDescription") {
+      if (
+        structureChunk.tense &&
+        structureChunk.tense.length &&
+        structureChunk.aspect &&
+        structureChunk.aspect.length
+      ) {
+        return true;
+      }
+    }
+  }
 };
 
 exports.tenseDescriptionTranslation = {

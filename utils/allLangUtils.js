@@ -191,16 +191,14 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
           !structureChunk.tenseDescription ||
           !structureChunk.tenseDescription.length
         ) {
-          //Epsilon: Move this to POL utils.
-          if (currentLanguage === "POL") {
-            if (
-              structureChunk.tense &&
-              structureChunk.tense.length &&
-              structureChunk.aspect &&
-              structureChunk.aspect.length
-            ) {
-              return;
-            }
+          if (
+            refObj.skipThisStepInPreprocessStructureChunks(
+              currentLanguage,
+              "tenseDescription",
+              structureChunk
+            )
+          ) {
+            return;
           }
 
           structureChunk.tenseDescription = refObj.allFeatureValues[

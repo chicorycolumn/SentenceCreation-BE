@@ -14,15 +14,6 @@ exports.filterWithinSelectedLemmaObject = (
 ) => {
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
 
-  //Counteract Masculinist Agenda: Overrepresentation
-  //Epsilon: move to POL lang utils?
-  if (currentLanguage === "POL") {
-    langUtils.preventMasculineOverrepresentation(
-      structureChunk,
-      currentLanguage
-    );
-  }
-
   //STEP ZERO: Get necessary materials, ie inflectionPaths and requirementArrs.
   let PHD_type;
 
