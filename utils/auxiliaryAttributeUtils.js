@@ -454,10 +454,9 @@ exports.addSpecifiers = (
 
     requestedSpecifierInstructionsArr.forEach((reqSpecInstr) => {
       if (
-        //If EACH condition of this reqSpecInstr is fulfilled...
-
-        Object.keys(reqSpecInstr.condition).every((reqFeatureKey) => {
-          let reqFeatureValue = reqSpecInstr.condition[reqFeatureKey];
+        //If EACH positiveCondition of this reqSpecInstr is fulfilled...
+        Object.keys(reqSpecInstr.positiveCondition).every((reqFeatureKey) => {
+          let reqFeatureValue = reqSpecInstr.positiveCondition[reqFeatureKey];
           return (
             //by the A depCh or its headCh...
 
@@ -472,63 +471,31 @@ exports.addSpecifiers = (
               reqFeatureValue
             )
           );
+        }) &&
+        //and each negativeCondition is not fulfilled...
+        Object.keys(reqSpecInstr.negativeCondition).every((reqFeatureKey) => {
+          let reqFeatureValue = reqSpecInstr.negativeCondition[reqFeatureKey];
+          //...by answerCh, its headCh, nor questionCh, its headCh
+          return ![
+            answerChunk,
+            answerHeadChunk,
+            questionChunk,
+            questionHeadChunk,
+          ].some((chunk) =>
+            gpUtils.doesKeyContainValueOnChunk(
+              chunk,
+              reqFeatureKey,
+              reqFeatureValue
+            )
+          );
         })
       ) {
+        gpUtils.throw("Cease before Pass 1.");
+
         console.log("addSpecifiers Pass 1");
         //then for each action key in the reqSpecInstr...
 
         Object.keys(reqSpecInstr.action).forEach((actionKey) => {
-          //Gamma: Move this not-condition to the reqSpecInstructions in refObj.
-
-          //   ( Btw, if actionKey is gender, and the A stCh we're looking at is PERSON,
-          //     then abort. Gender does not need to be selected randomly here, instead
-          //     it will be agreeWith-inherited from corresponding lObj after translation. )
-          if (actionKey === "gender") {
-            if (
-              questionHeadChunk &&
-              gpUtils.doesKeyContainValueOnChunk(questionHeadChunk, "andTags", [
-                "person",
-              ])
-            ) {
-              console.log("addSpecifiers abort1");
-              return;
-            }
-
-            if (
-              questionChunk &&
-              gpUtils.doesKeyContainValueOnChunk(questionChunk, "andTags", [
-                "person",
-              ])
-            ) {
-              console.log("addSpecifiers abort2");
-              return;
-            }
-
-            if (
-              !questionHeadChunk &&
-              !questionChunk &&
-              answerHeadChunk &&
-              gpUtils.doesKeyContainValueOnChunk(answerHeadChunk, "andTags", [
-                "person",
-              ])
-            ) {
-              console.log("addSpecifiers abort3");
-              return;
-            }
-
-            if (
-              !questionHeadChunk &&
-              !questionChunk &&
-              answerChunk &&
-              gpUtils.doesKeyContainValueOnChunk(answerChunk, "andTags", [
-                "person",
-              ])
-            ) {
-              console.log("addSpecifiers abort4");
-              return;
-            }
-          }
-
           if (
             //...if not truthy in A depCh, nor its headCh, nor corresp Q depCh, nor that one's headCh...
             //Alpha say - but what about overwriting, shouldn't that be allowed, nay, needed?
@@ -538,19 +505,24 @@ exports.addSpecifiers = (
             gpUtils.keyShouldBeSpecified(questionChunk, actionKey) &&
             gpUtils.keyShouldBeSpecified(questionHeadChunk, actionKey)
           ) {
+            gpUtils.throw("Yes we enter this, I see!");
+
             console.log("addSpecifiers Pass 2");
-            let actionValueArr = [
+            let actionValueString = [
               gpUtils.selectRandom(reqSpecInstr.action[actionKey]),
             ];
 
             //...then fill the action key with action value in A headCh if exists, else A depCh...
-
             console.log(
-              "-----------------------------------ADDED SPECIFIER in " +
-                consoleLogLabel +
-                " " +
-                actionValueArr
+              "[1;30m " +
+                `-----------------------------------ADDED SPECIFIER in ${consoleLogLabel} is ${actionValueString}` +
+                "[0m"
             );
+
+            if (typeof actionValueString !== "string") {
+              gpUtils.throw("Not string!");
+            }
+
             aaUtils.specifyQuestionChunkAndChangeAnswerChunk(
               {
                 answerHeadChunk,
@@ -559,7 +531,7 @@ exports.addSpecifiers = (
                 questionChunk,
               },
               actionKey,
-              actionValueArr
+              actionValueString
             );
           }
         });
@@ -772,6 +744,8 @@ exports.specifyQuestionChunkAndChangeAnswerChunk = (
   actionKey,
   actionValueArr
 ) => {
+  gpUtils.throw("cease");
+
   if (actionValueArr.length !== 1) {
     console.log({ actionValueArr });
     gpUtils.throw("actionValueArr had length of not 1");

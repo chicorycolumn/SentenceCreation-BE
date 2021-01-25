@@ -525,9 +525,15 @@ exports.requestedSpecifiersNew = {
       //   AND
       //   if they or their headCh don't have the featureKey from .action
       //   THEN
-      //   add the featureKey and Value from action to the A stCh, and note it in headCh Specifiers.
+      //   add the featureKey and value from action to the A stCh, and note it in headCh Specifiers.
       {
-        condition: {
+        negativeCondition: {
+          // If actionKey is gender, and the A stCh we're looking at is PERSON,
+          // then abort. Gender does not need to be selected randomly here, instead
+          // it will be agreeWith-inherited from corresponding lObj after translation. )
+          andTags: ["person"],
+        },
+        positiveCondition: {
           person: ["1per", "2per"],
           number: ["singular"],
           tenseDescription: [
@@ -551,7 +557,8 @@ exports.requestedSpecifiersNew = {
         action: { gender: ["m1", "f"] },
       },
       {
-        condition: {
+        negativeCondition: { andTags: ["person"] },
+        positiveCondition: {
           person: ["3per"],
           number: ["singular"],
           tenseDescription: [
@@ -575,7 +582,8 @@ exports.requestedSpecifiersNew = {
         action: { gender: ["m1", "m2", "m3", "f", "f", "f", "n", "n", "n"] },
       },
       {
-        condition: {
+        negativeCondition: { andTags: ["person"] },
+        positiveCondition: {
           person: ["1per"],
           number: ["plural"],
           tenseDescription: [
@@ -599,7 +607,8 @@ exports.requestedSpecifiersNew = {
         action: { gender: ["virile", "nonvirile"] },
       },
       {
-        condition: {
+        negativeCondition: { andTags: ["person"] },
+        positiveCondition: {
           person: ["2per", "3per"],
           number: ["plural"],
           tenseDescription: [
