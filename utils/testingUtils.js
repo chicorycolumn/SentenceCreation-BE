@@ -318,19 +318,19 @@ exports.generalTranslatedSentencesRef = {
       {
         POL: "Byłyście.",
         ENG: [
-          "You (plural, females) were.",
-          "You (plural, females) were being.",
-          "You (plural, females) have been.",
-          "You (plural, females) had been.",
+          "You (females) were.",
+          "You (females) were being.",
+          "You (females) have been.",
+          "You (females) had been.",
         ],
       },
       {
         POL: "Byliście.",
         ENG: [
-          "You (plural, males) were.",
-          "You (plural, males) were being.",
-          "You (plural, males) have been.",
-          "You (plural, males) had been.",
+          "You (males) were.",
+          "You (males) were being.",
+          "You (males) have been.",
+          "You (males) had been.",
         ],
       },
       {
@@ -547,9 +547,9 @@ exports.generalTranslatedSentencesRef = {
       ////
       { POL: "Napisałeś.", ENG: ["You (singular, male) wrote."] },
       { POL: "Napisałaś.", ENG: ["You (singular, female) wrote."] },
-      { POL: "Napisaliście.", ENG: ["You (plural, males) wrote."] },
+      { POL: "Napisaliście.", ENG: ["You (males) wrote."] },
       { POL: "Napisaliście.", ENG: ["You (plural, mixed) wrote."] },
-      { POL: "Napisałyście.", ENG: ["You (plural, females) wrote."] },
+      { POL: "Napisałyście.", ENG: ["You (females) wrote."] },
       ////
       {
         POL: "Będziesz pisał.",
@@ -569,11 +569,11 @@ exports.generalTranslatedSentencesRef = {
       },
       {
         POL: "Będziecie pisały.",
-        ENG: ["You (plural, females) will be writing."],
+        ENG: ["You (females) will be writing."],
       },
       {
         POL: "Będziecie pisali.",
-        ENG: ["You (plural, males) will be writing."],
+        ENG: ["You (males) will be writing."],
       },
       {
         POL: "Będziecie pisali.",
@@ -581,11 +581,11 @@ exports.generalTranslatedSentencesRef = {
       },
       {
         POL: "Będziecie pisać.",
-        ENG: ["You (plural, males) will be writing."],
+        ENG: ["You (males) will be writing."],
       },
       {
         POL: "Będziecie pisać.",
-        ENG: ["You (plural, females) will be writing."],
+        ENG: ["You (females) will be writing."],
       },
       {
         POL: "Będziecie pisać.",
@@ -609,11 +609,11 @@ exports.generalTranslatedSentencesRef = {
       },
       {
         POL: "Będziecie pisały.",
-        ENG: ["You (plural, females) are going to be writing."],
+        ENG: ["You (females) are going to be writing."],
       },
       {
         POL: "Będziecie pisali.",
-        ENG: ["You (plural, males) are going to be writing."],
+        ENG: ["You (males) are going to be writing."],
       },
       {
         POL: "Będziecie pisali.",
@@ -621,11 +621,11 @@ exports.generalTranslatedSentencesRef = {
       },
       {
         POL: "Będziecie pisać.",
-        ENG: ["You (plural, males) are going to be writing."],
+        ENG: ["You (males) are going to be writing."],
       },
       {
         POL: "Będziecie pisać.",
-        ENG: ["You (plural, females) are going to be writing."],
+        ENG: ["You (females) are going to be writing."],
       },
       {
         POL: "Będziecie pisać.",

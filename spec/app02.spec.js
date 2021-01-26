@@ -23,7 +23,7 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe.only("/palette - Stage X: Copy of tests for requestedSpecifierInstructionsArr.", () => {
+  xdescribe("/palette - Stage X: Copy of tests for requestedSpecifierInstructionsArr.", () => {
     it("#pal13A-03a-c GET 200 YES: ENG to POL. WITH SPECIFIERS Inherit features from pronoun to verb (m sing).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -341,7 +341,7 @@ describe("/api", () => {
               POL: ["Byłaś.", "Ty byłaś."],
             },
             {
-              ENG: "You (plural, males) were.",
+              ENG: "You (males) were.",
               POL: ["Byliście.", "Wy byliście."],
             },
             {
@@ -349,7 +349,7 @@ describe("/api", () => {
               POL: ["Byliście.", "Wy byliście."],
             },
             {
-              ENG: "You (plural, females) were.",
+              ENG: "You (females) were.",
               POL: ["Byłyście.", "Wy byłyście."],
             },
           ];
@@ -2771,7 +2771,7 @@ describe("/api", () => {
               POL: ["Byłaś.", "Ty byłaś."],
             },
             {
-              ENG: "You (plural, males) were.",
+              ENG: "You (males) were.",
               POL: ["Byliście.", "Wy byliście."],
             },
             {
@@ -2779,7 +2779,7 @@ describe("/api", () => {
               POL: ["Byliście.", "Wy byliście."],
             },
             {
-              ENG: "You (plural, females) were.",
+              ENG: "You (females) were.",
               POL: ["Byłyście.", "Wy byłyście."],
             },
           ];

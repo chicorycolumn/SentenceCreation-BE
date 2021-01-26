@@ -376,6 +376,172 @@ exports.addSpecifiers = (
     answerSentenceStructure
   );
 
+  //STEP ONE: Do a special thing for Multi Gender Nouns
+  //            ie lObjs with gender: "allPersonalSingularGenders_selector"
+  answerDependentChunks.forEach((answerDependentChunk) => {
+    let materials = getMaterialsToAddSpecifiers(
+      answerDependentChunk,
+      answerSentenceStructure,
+      questionSentenceStructure
+    );
+
+    let {
+      answerHeadChunk,
+      answerChunk,
+      questionHeadChunk,
+      questionChunk,
+      questionHeadLemmaObject,
+      questionLemmaObject,
+    } = materials;
+
+    let selectedGenderForQuestionLanguage;
+
+    if (
+      questionHeadLemmaObject &&
+      questionHeadLemmaObject.gender === "allPersonalSingularGenders_selector"
+    ) {
+      if (questionHeadChunk.gender && questionHeadChunk.gender.length) {
+        selectedGenderForQuestionLanguage = gpUtils.selectRandom(
+          questionHeadChunk.gender
+        );
+      } else {
+        selectedGenderForQuestionLanguage = gpUtils.selectRandom(
+          refObj.metaFeatures[questionLanguage].gender[
+            "allPersonalSingularGenders"
+          ]
+        );
+      }
+
+      selectedGenderForAnswerLanguageArr = answerLangUtils.formatFeatureValue(
+        "gender",
+        selectedGenderForQuestionLanguage,
+        "person"
+      );
+
+      // questionHeadLemmaObject.gender = selectedGenderForQuestionLanguage;
+      console.log(
+        "[1;35m " +
+          "#NB: Am changing questionHeadChunk.gender and answerHeadChunk.gender" +
+          "[0m"
+      );
+      console.log({
+        selectedGenderForQuestionLanguage,
+        selectedGenderForAnswerLanguageArr,
+      });
+
+      questionHeadChunk.gender = [selectedGenderForQuestionLanguage];
+      answerHeadChunk.gender = selectedGenderForAnswerLanguageArr;
+
+      aaUtils.addAnnotation(
+        questionHeadChunk,
+        "gender",
+        selectedGenderForQuestionLanguage
+      );
+    }
+
+    if (
+      questionLemmaObject &&
+      questionLemmaObject.gender === "allPersonalSingularGenders_selector"
+    ) {
+      if (questionChunk.gender && questionChunk.gender.length) {
+        selectedGenderForQuestionLanguage = gpUtils.selectRandom(
+          questionChunk.gender
+        );
+      } else {
+        selectedGenderForQuestionLanguage = gpUtils.selectRandom(
+          refObj.metaFeatures[questionLanguage].gender[
+            "allPersonalSingularGenders"
+          ]
+        );
+      }
+
+      selectedGenderForAnswerLanguageArr = answerLangUtils.formatFeatureValue(
+        "gender",
+        selectedGenderForQuestionLanguage,
+        "person"
+      );
+
+      console.log(
+        "[1;35m " + "#NB: Changing questionChunk.gender and answerChunk.gender" + "[0m"
+      );
+      console.log({
+        selectedGenderForQuestionLanguage,
+        selectedGenderForAnswerLanguageArr,
+      });
+
+      // questionLemmaObject.gender = selectedGenderForQuestionLanguage;
+      questionChunk.gender = [selectedGenderForQuestionLanguage];
+      answerChunk.gender = selectedGenderForAnswerLanguageArr;
+
+      aaUtils.addAnnotation(
+        questionChunk,
+        "gender",
+        selectedGenderForQuestionLanguage
+      );
+    }
+  });
+
+  //STEPS TWO AND THREE - apparently can be skipped.
+
+  if (false) {
+    //STEP TWO: For every A depCh and its headCh, check by requested Specifiers and if so, add them.
+
+    //Now you might ask - why not run this process for first the headCh, then the depCh, then the otherCh?
+
+    //Well, it's because we only want to Specify when there will actually be a difference.
+    //Our approach is to hardcode specific depCh situations, in which we want the headCh to be Specified.
+
+    //eg if depCh is POL verb past tense, in that case, we want gender of headCh Specified,
+    //but if depCh is POL verb present tense, then no reason to Specify headCh's gender.
+    answerDependentChunks.forEach((answerDependentChunk) => {
+      let materials = getMaterialsToAddSpecifiers(
+        answerDependentChunk,
+        answerSentenceStructure,
+        questionSentenceStructure
+      );
+
+      addRequiredSpecifiersToAnswerChunkOrHeadChunk(
+        materials,
+        answerLanguage,
+        "Step 1"
+      );
+    });
+
+    //STEP THREE: Do this for the otherChunks as well.
+    answerOtherChunks.forEach((answerOtherChunk) => {
+      let materials = getMaterialsToAddSpecifiers(
+        answerOtherChunk,
+        answerSentenceStructure,
+        questionSentenceStructure
+      );
+
+      addRequiredSpecifiersToAnswerChunkOrHeadChunk(
+        materials,
+        answerLanguage,
+        "Step 2"
+      );
+    });
+  }
+
+  console.log("-----------------------");
+  console.log("-----------------------");
+  console.log("-----------------------");
+  console.log("-----------------------");
+  console.log("-----------------------");
+  console.log("----addSpecifiers------");
+  console.log("---------END-----------");
+  console.log("-----------------------");
+  console.log("-----------------------");
+  console.log("-----------------------");
+  // console.log("questionOutputArr");
+  // questionOutputArr.forEach((item) => {
+  //   console.log(item);
+  // });
+  // console.log(
+  //   "answerSentenceFormula.sentenceStructure",
+  //   answerSentenceFormula.sentenceStructure
+  // );
+
   function getMaterialsToAddSpecifiers(
     answerChunk,
     answerSentenceStructure,
@@ -490,6 +656,7 @@ exports.addSpecifiers = (
           );
         })
       ) {
+        //Nownow79: Yes, we are entering this clause.
         gpUtils.throw("Cease before Pass 1.");
 
         console.log("addSpecifiers Pass 1");
@@ -505,6 +672,7 @@ exports.addSpecifiers = (
             gpUtils.keyShouldBeSpecified(questionChunk, actionKey) &&
             gpUtils.keyShouldBeSpecified(questionHeadChunk, actionKey)
           ) {
+            //Nownow79. We are never entering this clause. Why is that not failing?
             gpUtils.throw("Yes we enter this, I see!");
 
             console.log("addSpecifiers Pass 2");
@@ -538,167 +706,6 @@ exports.addSpecifiers = (
       }
     });
   }
-
-  //STEP ONE: For every A depCh and its headCh, check by requested Specifiers and if so, add them.
-
-  //Now you might ask - why not run this process for first the headCh, then the depCh, then the otherCh?
-
-  //Well, it's because we only want to Specify when there will actually be a difference.
-  //Our approach is to hardcode specific depCh situations, in which we want the headCh to be Specified.
-
-  //eg if depCh is POL verb past tense, in that case, we want gender of headCh Specified,
-  //but if depCh is POL verb present tense, then no reason to Specify headCh's gender.
-  answerDependentChunks.forEach((answerDependentChunk) => {
-    let materials = getMaterialsToAddSpecifiers(
-      answerDependentChunk,
-      answerSentenceStructure,
-      questionSentenceStructure
-    );
-
-    addRequiredSpecifiersToAnswerChunkOrHeadChunk(
-      materials,
-      answerLanguage,
-      "Step 1"
-    );
-  });
-
-  //STEP TWO: Do this for the otherChunks as well.
-  answerOtherChunks.forEach((answerOtherChunk) => {
-    let materials = getMaterialsToAddSpecifiers(
-      answerOtherChunk,
-      answerSentenceStructure,
-      questionSentenceStructure
-    );
-
-    addRequiredSpecifiersToAnswerChunkOrHeadChunk(
-      materials,
-      answerLanguage,
-      "Step 2"
-    );
-  });
-
-  //STEP THREE: Do a special thing for Multi Gender Nouns - that's lObjs with {gender: "allPersonalSingularGenders_selector"}.
-  answerDependentChunks.forEach((answerDependentChunk) => {
-    let materials = getMaterialsToAddSpecifiers(
-      answerDependentChunk,
-      answerSentenceStructure,
-      questionSentenceStructure
-    );
-
-    let {
-      answerHeadChunk,
-      answerChunk,
-      questionHeadChunk,
-      questionChunk,
-      questionHeadLemmaObject,
-      questionLemmaObject,
-    } = materials;
-
-    let selectedGenderForQuestionLanguage;
-
-    if (
-      questionHeadLemmaObject &&
-      questionHeadLemmaObject.gender === "allPersonalSingularGenders_selector"
-    ) {
-      if (questionHeadChunk.gender && questionHeadChunk.gender.length) {
-        selectedGenderForQuestionLanguage = gpUtils.selectRandom(
-          questionHeadChunk.gender
-        );
-      } else {
-        selectedGenderForQuestionLanguage = gpUtils.selectRandom(
-          refObj.metaFeatures[questionLanguage].gender[
-            "allPersonalSingularGenders"
-          ]
-        );
-      }
-
-      selectedGenderForAnswerLanguageArr = answerLangUtils.formatFeatureValue(
-        "gender",
-        selectedGenderForQuestionLanguage,
-        "person"
-      );
-
-      // questionHeadLemmaObject.gender = selectedGenderForQuestionLanguage;
-      console.log(
-        "[1;35m " +
-          "#NB: Am changing questionHeadChunk.gender and answerHeadChunk.gender" +
-          "[0m"
-      );
-      console.log({
-        selectedGenderForQuestionLanguage,
-        selectedGenderForAnswerLanguageArr,
-      });
-
-      questionHeadChunk.gender = [selectedGenderForQuestionLanguage];
-      answerHeadChunk.gender = selectedGenderForAnswerLanguageArr;
-
-      aaUtils.addAnnotation(
-        questionHeadChunk,
-        "gender",
-        selectedGenderForQuestionLanguage
-      );
-    }
-
-    if (
-      questionLemmaObject &&
-      questionLemmaObject.gender === "allPersonalSingularGenders_selector"
-    ) {
-      if (questionChunk.gender && questionChunk.gender.length) {
-        selectedGenderForQuestionLanguage = gpUtils.selectRandom(
-          questionChunk.gender
-        );
-      } else {
-        selectedGenderForQuestionLanguage = gpUtils.selectRandom(
-          refObj.metaFeatures[questionLanguage].gender[
-            "allPersonalSingularGenders"
-          ]
-        );
-      }
-
-      selectedGenderForAnswerLanguageArr = answerLangUtils.formatFeatureValue(
-        "gender",
-        selectedGenderForQuestionLanguage,
-        "person"
-      );
-
-      console.log(
-        "[1;35m " + "#NB: Changing questionChunk.gender and answerChunk.gender" + "[0m"
-      );
-      console.log({
-        selectedGenderForQuestionLanguage,
-        selectedGenderForAnswerLanguageArr,
-      });
-
-      // questionLemmaObject.gender = selectedGenderForQuestionLanguage;
-      questionChunk.gender = [selectedGenderForQuestionLanguage];
-      answerChunk.gender = selectedGenderForAnswerLanguageArr;
-
-      aaUtils.addAnnotation(
-        questionChunk,
-        "gender",
-        selectedGenderForQuestionLanguage
-      );
-    }
-  });
-
-  console.log("-----------------------");
-  console.log("-----------------------");
-  console.log("-----------------------");
-  console.log("-----------------------");
-  console.log("-----------------------");
-  console.log("----addSpecifiers------");
-  console.log("---------END-----------");
-  console.log("-----------------------");
-  console.log("-----------------------");
-  console.log("-----------------------");
-  // console.log("questionOutputArr");
-  // questionOutputArr.forEach((item) => {
-  //   console.log(item);
-  // });
-  // console.log(
-  //   "answerSentenceFormula.sentenceStructure",
-  //   answerSentenceFormula.sentenceStructure
-  // );
 };
 
 exports.sortAnswerAndQuestionStructureChunks = (
@@ -866,8 +873,8 @@ exports.attachAnnotations = (
         );
 
         if (formattedAnnotationArr.length) {
-          outputUnit.selectedWord += ` (${formattedAnnotationArr
-            .filter((item) => item)
+          outputUnit.selectedWord += ` (${aaUtils
+            .processExactWordingOfAnnotations(formattedAnnotationArr)
             .join(", ")})`;
         }
       }
@@ -891,10 +898,20 @@ exports.attachAnnotations = (
           )
         );
 
-        outputUnit.selectedWord += ` (${formattedAnnotationArr
-          .filter((item) => item)
+        outputUnit.selectedWord += ` (${aaUtils
+          .processExactWordingOfAnnotations(formattedAnnotationArr)
           .join(", ")})`;
       }
     });
   }
+};
+
+exports.processExactWordingOfAnnotations = (annotationArr) => {
+  if (["males", "females"].some((value) => annotationArr.includes(value))) {
+    annotationArr = annotationArr.filter((anno) => anno !== "plural");
+  }
+
+  annotationArr = annotationArr.filter((item) => item);
+
+  return annotationArr;
 };
