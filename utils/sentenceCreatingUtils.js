@@ -681,7 +681,8 @@ exports.conformAnswerStructureToQuestionStructure = (
           questionStructureChunk.wordtype
     );
 
-    //Beta: So every single tag match, otherwise won't match them?
+    let matchesLengthSnapshot = matchingAnswerLemmaObjects.length;
+
     matchingAnswerLemmaObjects = matchingAnswerLemmaObjects.filter(
       (answerLemmaObject) =>
         gpUtils.areTwoFlatArraysEqual(
@@ -689,6 +690,14 @@ exports.conformAnswerStructureToQuestionStructure = (
           answerLemmaObject.tags
         )
     );
+
+    if (matchesLengthSnapshot && !matchingAnswerLemmaObjects.length) {
+      console.log(
+        "[1;31m " +
+          `#NB: There were some lemma objects, but they were filtered out because they didn't have all tags matching.` +
+          "[0m"
+      );
+    }
 
     if (!matchingAnswerLemmaObjects.length) {
       console.log(

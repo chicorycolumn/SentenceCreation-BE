@@ -599,6 +599,11 @@ exports.addSpecifiers = (
     answerLanguage,
     consoleLogLabel
   ) {
+    gpUtils.throw(
+      "Ah, so we've decided to use addRequiredSpecifiersToAnswerChunkOrHeadChunk fxn."
+    );
+    return;
+
     let {
       answerHeadChunk,
       answerChunk,
@@ -665,7 +670,7 @@ exports.addSpecifiers = (
         Object.keys(reqSpecInstr.action).forEach((actionKey) => {
           if (
             //...if not truthy in A depCh, nor its headCh, nor corresp Q depCh, nor that one's headCh...
-            //Alpha say - but what about overwriting, shouldn't that be allowed, nay, needed?
+            //Hey, what about overwriting, shouldn't that be allowed, nay, needed?
 
             gpUtils.keyShouldBeSpecified(answerChunk, actionKey, true) &&
             gpUtils.keyShouldBeSpecified(answerHeadChunk, actionKey, true) &&

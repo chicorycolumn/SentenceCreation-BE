@@ -15,8 +15,8 @@ exports.fetchPalette = (req) => {
     useDummy,
     questionLanguage,
     answerLanguage,
-    hideClarifiersForTestingPurposes,
     doNotSpecify,
+    newAndSpecialPleaseDontSpecify,
     pleaseSpecifyMGNs,
   } = req.body;
 
@@ -27,8 +27,12 @@ exports.fetchPalette = (req) => {
     useDummy
   );
 
-  let questionSentenceFormula = sentenceFormula;
+  let answerResponseObj;
+  let firstAnswerSentenceFormula;
+  let answerSentenceData;
 
+  let questionResponseObj;
+  let questionSentenceFormula = sentenceFormula;
   let questionSentenceData = scUtils.processSentenceFormula(
     { currentLanguage: questionLanguage },
     questionSentenceFormula,
@@ -36,31 +40,43 @@ exports.fetchPalette = (req) => {
     kumquat
   );
 
-  if ("check") {
-    if (
-      !questionSentenceData.arrayOfOutputArrays ||
-      !questionSentenceData.arrayOfOutputArrays.length
-    ) {
-      console.log(
-        "#ERR ---------------> In fetchPalette the question arrayOfOutputArrays came back NONE."
-      );
+  if (!questionSentenceData) {
+    console.log(
+      "#ERR ---------------> In fetchPalette the question arrayOfOutputArrays came back NOTHING."
+    );
+    let nullQuestionResponseObj = scUtils.giveFinalSentences(
+      questionSentenceData,
+      kumquat,
+      questionLanguage,
+      answerLanguage
+    );
 
-      let questionResponseObj = scUtils.giveFinalSentences(
-        questionSentenceData,
-        kumquat,
-        questionLanguage,
-        answerLanguage
-      );
+    return finishAndSend(nullQuestionResponseObj, null);
+  }
 
-      return finishAndSend(questionResponseObj, null);
-    }
+  if (
+    !questionSentenceData.arrayOfOutputArrays ||
+    !questionSentenceData.arrayOfOutputArrays.length
+  ) {
+    console.log(
+      "#ERR ---------------> In fetchPalette the question arrayOfOutputArrays came back NONE."
+    );
 
-    if (questionSentenceData.arrayOfOutputArrays.length > 1) {
-      gpUtils.throw(
-        "#ERR questionSentenceData.arrayOfOutputArrays.length had length more than 1. It was " +
-          questionSentenceData.arrayOfOutputArrays.length
-      );
-    }
+    let nullQuestionResponseObj = scUtils.giveFinalSentences(
+      questionSentenceData,
+      kumquat,
+      questionLanguage,
+      answerLanguage
+    );
+
+    return finishAndSend(nullQuestionResponseObj, null);
+  }
+
+  if (questionSentenceData.arrayOfOutputArrays.length > 1) {
+    gpUtils.throw(
+      "#ERR questionSentenceData.arrayOfOutputArrays.length had length more than 1. It was " +
+        questionSentenceData.arrayOfOutputArrays.length
+    );
   }
 
   //Decisive Decant
@@ -68,7 +84,7 @@ exports.fetchPalette = (req) => {
     questionSentenceData.arrayOfOutputArrays[0];
   delete questionSentenceData.arrayOfOutputArrays;
 
-  // Can we assume that NO featureKeys have multiple values from this point forwardss?
+  // Alpha: Can we assume that NO featureKeys have multiple values from this point forwardss?
   console.log("[1;35m " + "a09" + "[0m");
 
   questionSentenceData.questionOutputArr.forEach((outputUnit, index) => {
@@ -148,22 +164,6 @@ exports.fetchPalette = (req) => {
     gpUtils.consoleLogAestheticBorder(4);
   }
 
-  if ("check") {
-    if (!questionSentenceData) {
-      console.log(
-        "#ERR ---------------> In fetchPalette the question arrayOfOutputArrays came back NOTHING."
-      );
-      let questionResponseObj = scUtils.giveFinalSentences(
-        questionSentenceData,
-        kumquat,
-        questionLanguage,
-        answerLanguage
-      );
-
-      return finishAndSend(questionResponseObj, null);
-    }
-  }
-
   ///////////////////////////////////////////////kp (key point)
 
   // console.log("f11 fetchPalette, questionSentenceData.questionOutputArr BEFORE pleaseSpecifyMGNs");
@@ -178,10 +178,6 @@ exports.fetchPalette = (req) => {
 
   // console.log("f13 fetchPalette, questionSentenceData.questionOutputArr AFTER pleaseSpecifyMGNs");
   // console.log(questionSentenceData.questionOutputArr.map((outputUnit) => outputUnit.structureChunk));
-
-  let answerSentenceData;
-  let answerResponseObj;
-  let firstAnswerSentenceFormula;
 
   if (answerLanguage) {
     kumquat = true;
@@ -234,13 +230,11 @@ exports.fetchPalette = (req) => {
         );
       }
 
-      if (!hideClarifiersForTestingPurposes) {
-        ///////////////////////////////////////////////kp
-        aaUtils.addClarifiers(
-          questionSentenceData.questionOutputArr,
-          languagesObject
-        );
-      }
+      ///////////////////////////////////////////////kp
+      aaUtils.addClarifiers(
+        questionSentenceData.questionOutputArr,
+        languagesObject
+      );
 
       if ("console") {
         console.log(
@@ -308,39 +302,41 @@ exports.fetchPalette = (req) => {
     });
 
     scUtils.removeDuplicatesFromResponseObject(answerResponseObj);
-  }
 
-  let languagesObj = {
-    answerLanguage,
-    questionLanguage,
-  };
+    let languagesObj = {
+      answerLanguage,
+      questionLanguage,
+    };
 
-  if (!doNotSpecify) {
     ///////////////////////////////////////////////kp
-    aaUtils.addSpecifiers(
-      answerSentenceData.sentenceFormula,
+    //nownow
+    // if (!doNotSpecify) {
+    if (!newAndSpecialPleaseDontSpecify) {
+      aaUtils.addSpecifiers(
+        answerSentenceData.sentenceFormula,
+        questionSentenceData.questionOutputArr,
+        languagesObj
+      );
+    }
+
+    if ("console") {
+      console.log(
+        "f18 fetchPalette, questionOutputArr AFTER CLARI AND SPECI",
+        questionSentenceData.questionOutputArr.map(
+          (unit) => unit.structureChunk.annotations
+        )
+      );
+    }
+
+    ///////////////////////////////////////////////kp
+    aaUtils.attachAnnotations(
       questionSentenceData.questionOutputArr,
-      languagesObj
+      languagesObj,
+      answerSentenceData
     );
   }
 
-  if ("console") {
-    console.log(
-      "f18 fetchPalette, questionOutputArr AFTER CLARI AND SPECI",
-      questionSentenceData.questionOutputArr.map(
-        (unit) => unit.structureChunk.annotations
-      )
-    );
-  }
-
-  ///////////////////////////////////////////////kp
-  aaUtils.attachAnnotations(
-    questionSentenceData.questionOutputArr,
-    languagesObj,
-    answerSentenceData
-  );
-
-  let questionResponseObj = scUtils.giveFinalSentences(
+  questionResponseObj = scUtils.giveFinalSentences(
     questionSentenceData,
     false,
     questionLanguage,

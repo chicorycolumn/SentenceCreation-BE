@@ -81,8 +81,18 @@ exports.copyAndCombineWordbanks = (wordbank1, wordbank2) => {
   let wordbank2Copy = gpUtils.copyWithoutReference(wordbank2);
 
   Object.keys(wordbank1Copy).forEach((key) => {
-    //Beta make this work even if key not present?
-    wordbank1Copy[key] = [...wordbank1Copy[key], ...wordbank2Copy[key]];
+    console.log("[1;35m " + `key: ${key}` + "[0m");
+
+    if (!wordbank2Copy[key]) {
+      console.log(
+        "[1;31m " + `#NB: wordbank2 does not have key ${key} but wordbank1 does.` + "[0m"
+      );
+    }
+    if (wordbank2Copy[key] && !Array.isArray(wordbank2Copy[key])) {
+      gpUtils.throw(`#ERR: wordbank2 key ${key} holds non array value.`);
+    }
+
+    wordbank1Copy[key] = [...wordbank1Copy[key], ...(wordbank2Copy[key] || [])];
   });
 
   return wordbank1Copy;
