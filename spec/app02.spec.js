@@ -31,8 +31,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          // doNotSpecify: true,
-
           questionLanguage,
           useDummy: true,
           answerLanguage,
@@ -61,8 +59,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          // doNotSpecify: true,
-
           questionLanguage,
           useDummy: true,
           answerLanguage,
@@ -96,8 +92,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          // doNotSpecify: true,
-
           questionLanguage,
           useDummy: true,
           answerLanguage,
@@ -133,8 +127,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          // doNotSpecify: true,
-
           questionLanguage,
           useDummy: true,
           answerLanguage,
@@ -174,8 +166,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          // doNotSpecify: true,
-
           questionLanguage,
           useDummy: true,
           answerLanguage,
@@ -205,8 +195,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          // doNotSpecify: true,
-
           questionLanguage,
           useDummy: true,
           answerLanguage,
@@ -239,15 +227,13 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal11-02b GET 200 YES: SPECIFIER EXPECTED. Pronoun I/WE. {past im} does indeed need gender. ENG to POL.", () => {
+    it("#pal11A-02b GET 200 YES: SPECIFIER EXPECTED. Pronoun I/WE. {past im} does indeed need gender. ENG to POL.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
         .send({
-          // doNotSpecify: true,
-
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "111b I was",
@@ -270,15 +256,13 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal11-04a GET 200 YES: GIVE MULTIPLE ANSWER OPTIONS WHEN SPECIFIERS NOT REQUESTED. Pronoun I/WE. {past im} does indeed need gender. ENG to POL.", () => {
+    it("#pal11A-04a GET 200 YES: GIVE MULTIPLE ANSWER OPTIONS WHEN SPECIFIERS NOT REQUESTED. Pronoun I/WE. {past im} does indeed need gender. ENG to POL.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
         .send({
-          // doNotSpecify: true,
-
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "111b I was",
@@ -316,15 +300,13 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal11-05a GET 200 YES: Gives clarifiers and specifiers. Pronoun YOU. ENG to POL.", () => {
+    it("#pal11A-05a GET 200 YES: Gives clarifiers and specifiers. Pronoun YOU. ENG to POL.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
         .send({
-          // doNotSpecify: true,
-
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "111c you were",
@@ -372,8 +354,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           questionLanguage,
           // answerLanguage,
           sentenceFormulaSymbol: "dummy50a",
@@ -398,8 +378,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           questionLanguage,
           // answerLanguage,
           sentenceFormulaSymbol: "dummy50a",
@@ -425,8 +403,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "dummy50a",
@@ -455,8 +431,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "dummy50a",
@@ -497,8 +471,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "113 my father gave me a book",
@@ -538,8 +510,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "113 my father gave me a book",
@@ -595,8 +565,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           questionLanguage,
           // answerLanguage,
           sentenceFormulaSymbol: "113a my father gave me his book",
@@ -624,8 +592,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "113a my father gave me his book",
@@ -681,8 +647,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "113a my father gave me his book",
@@ -772,7 +736,7 @@ describe("/api", () => {
     //   return request(app)
     //     .get("/api/palette")
     //     .send({
-    //       doNotSpecify: true,
+    //
     //
     //       questionLanguage,
     //       answerLanguage,
@@ -802,8 +766,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "111a I am",
@@ -830,8 +792,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          // doNotSpecify: true,
-
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "111a I am",
@@ -858,8 +818,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "110 the woman read me a book",
@@ -916,8 +874,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "110 the woman read me a book",
@@ -978,8 +934,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "112 familymember gave me things",
@@ -1068,8 +1022,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "112 familymember gave me things",
@@ -1254,8 +1206,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "112a familymember gave me thing",
@@ -1436,178 +1386,16 @@ describe("/api", () => {
   });
 
   describe("/palette - Stage 13A: Pronouns and other Multi Gender Nouns: Basic tests.", () => {
-    it("#pal13A-01a GET 200 YES: doNotSpecify. Selection of either male or female versions of same person POL to ENG.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          doNotSpecify: true,
-
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "109 doc wrote p",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              POL: "Lekarz napisał receptę.",
-              ENG: [
-                "The doctor wrote a prescription.",
-                "The doctor had written a prescription.",
-                "The doctor has written a prescription.",
-              ],
-            },
-            {
-              POL: "Lekarka napisała receptę.",
-              ENG: [
-                "The doctor wrote a prescription.",
-                "The doctor had written a prescription.",
-                "The doctor has written a prescription.",
-              ],
-            },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    it.only("#pal13A-01b GET 200 YES: doNotSpecify. Selection of either male or female versions of same person ENG to POL.", () => {
+    //
+    //
+    //
+    it("#pal13A-01a GET 200 YES: Give a pronoun in ENG.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-          newAndSpecialPleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "109a doc was writing p",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "The doctor was writing a prescription.",
-              POL: ["Lekarz pisał receptę.", "Lekarka pisała receptę."],
-            },
-            // {
-            //   ENG: "The doctor (male) was writing a prescription.",
-            //   POL: ["Lekarz pisał receptę."],
-            // },
-            // {
-            //   ENG: "The doctor (female) was writing a prescription.",
-            //   POL: ["Lekarka pisała receptę."],
-            // },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    it("#pal13A-01c GET 200 YES: PLURAL doNotSpecify. Selection of either male or female versions of same person POL to ENG.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          doNotSpecify: true,
-
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "109b docs wrote p",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              POL: "Lekarze napisali receptę.",
-              ENG: [
-                "The doctors wrote a prescription.",
-                "The doctors had written a prescription.",
-                "The doctors have written a prescription.",
-              ],
-            },
-            {
-              POL: "Lekarki napisały receptę.",
-              ENG: [
-                "The doctors wrote a prescription.",
-                "The doctors had written a prescription.",
-                "The doctors have written a prescription.",
-              ],
-            },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    it.only("#pal13A-01d GET 200 YES: PLURAL doNotSpecify. Selection of either male or female versions of same person ENG to POL.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          doNotSpecify: true,
-          newAndSpecialPleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "109c docs were writing p",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "The doctors were writing a prescription.",
-              POL: ["Lekarze pisali receptę.", "Lekarki pisały receptę."],
-            },
-            // {
-            //   ENG: "The doctor (male) was writing a prescription.",
-            //   POL: ["Lekarz pisał receptę."],
-            // },
-            // {
-            //   ENG: "The doctor (female) was writing a prescription.",
-            //   POL: ["Lekarka pisała receptę."],
-            // },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    //
-    //
-    //
-    it("#pal13A-02a GET 200 YES: Give a pronoun in ENG.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          doNotSpecify: true,
-
           questionLanguage,
           useDummy: true,
           // answerLanguage,
@@ -1620,15 +1408,13 @@ describe("/api", () => {
           expect(res.body.questionSentenceArr[0]).to.equal("I.");
         });
     });
-    it("#pal13A-02b GET 200 YES: Give a pronoun in POL.", () => {
+    it("#pal13A-01b GET 200 YES: Give a pronoun in POL.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           questionLanguage,
           useDummy: true,
           // answerLanguage,
@@ -1641,15 +1427,13 @@ describe("/api", () => {
           expect(res.body.questionSentenceArr[0]).to.equal("Ja.");
         });
     });
-    it("#pal13A-02c GET 200 YES: Give a pronoun in POL to ENG.", () => {
+    it("#pal13A-01c GET 200 YES: Give a pronoun in POL to ENG.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           questionLanguage,
           useDummy: true,
           answerLanguage,
@@ -1663,15 +1447,13 @@ describe("/api", () => {
           expect(res.body.answerSentenceArr).to.have.members(["I."]);
         });
     });
-    it("#pal13A-02d GET 200 YES: Give a pronoun in ENG to POL.", () => {
+    it("#pal13A-01d GET 200 YES: Give a pronoun in ENG to POL.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           questionLanguage,
           useDummy: true,
           answerLanguage,
@@ -1688,15 +1470,13 @@ describe("/api", () => {
     //
     //
     //
-    it("#pal13A-03a-a GET 200 YES: ENG to POL. Inherit features from pronoun to verb (m sing).", () => {
+    it("#pal13A-02a GET 200 YES: ENG to POL. Inherit features from pronoun to verb (m sing).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           questionLanguage,
           useDummy: true,
           answerLanguage,
@@ -1718,15 +1498,13 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13A-03a-b GET 200 YES: ENG to POL. Inherit features from pronoun to verb (nonvir plur).", () => {
+    it("#pal13A-02b GET 200 YES: ENG to POL. Inherit features from pronoun to verb (nonvir plur).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           questionLanguage,
           useDummy: true,
           answerLanguage,
@@ -1751,15 +1529,13 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13A-03a-c GET 200 YES: ENG to POL. WITH SPECIFIERS Inherit features from pronoun to verb (m sing).", () => {
+    it("#pal13A-02c GET 200 YES: ENG to POL. WITH SPECIFIERS Inherit features from pronoun to verb (m sing).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
         .send({
-          // doNotSpecify: true,
-
           questionLanguage,
           useDummy: true,
           answerLanguage,
@@ -1781,15 +1557,13 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13A-03a-d GET 200 YES: ENG to POL. WITH SPECIFIERS Inherit features from pronoun to verb (nonvir plur).", () => {
+    it("#pal13A-02d GET 200 YES: ENG to POL. WITH SPECIFIERS Inherit features from pronoun to verb (nonvir plur).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
         .send({
-          // doNotSpecify: true,
-
           questionLanguage,
           useDummy: true,
           answerLanguage,
@@ -1819,15 +1593,13 @@ describe("/api", () => {
     //
     //NOTA BENE: if you want an ENG Q sentence to have both gender Robił Robiła in POL A sentences,
     //then instead of setting no gender, you must set gender as allPersonalGenders.
-    it("#pal13A-03b-a GET 200 YES: ENG to POL. (allPersonalGenders was specified.) Inherit features from pronoun to verb (m sing).", () => {
+    it("#pal13A-03a GET 200 YES: ENG to POL. (allPersonalGenders was specified.) Inherit features from pronoun to verb (m sing).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
         .send({
-          // doNotSpecify: true,
-
           questionLanguage,
           useDummy: true,
           answerLanguage,
@@ -1856,15 +1628,13 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13A-03b-b GET 200 YES: ENG to POL. (allPersonalGenders was specified.) Inherit features from pronoun to verb (nonvir plur).", () => {
+    it("#pal13A-03b GET 200 YES: ENG to POL. (allPersonalGenders was specified.) Inherit features from pronoun to verb (nonvir plur).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
         .send({
-          // doNotSpecify: true,
-
           questionLanguage,
           useDummy: true,
           answerLanguage,
@@ -1897,15 +1667,13 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13A-03b-c GET 200 YES: ENG to POL. (No gender was specified.) WITH CLARIFIERS Inherit features from pronoun to verb (m sing).", () => {
+    it("#pal13A-03c GET 200 YES: ENG to POL. (No gender was specified.) WITH CLARIFIERS Inherit features from pronoun to verb (m sing).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
         .send({
-          // doNotSpecify: true,
-
           questionLanguage,
           useDummy: true,
           answerLanguage,
@@ -1928,15 +1696,13 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13A-03b-d GET 200 YES: ENG to POL. (No gender was specified.) WITH CLARIFIERS Inherit features from pronoun to verb (nonvir plur).", () => {
+    it("#pal13A-03d GET 200 YES: ENG to POL. (No gender was specified.) WITH CLARIFIERS Inherit features from pronoun to verb (nonvir plur).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
         .send({
-          // doNotSpecify: true,
-
           questionLanguage,
           useDummy: true,
           answerLanguage,
@@ -1972,15 +1738,13 @@ describe("/api", () => {
     //
     //
     //
-    it("#pal13A-04a-a GET 200 YES: POL to ENG. Inherit features from pronoun to verb (m sing).", () => {
+    it("#pal13A-04a GET 200 YES: POL to ENG. Inherit features from pronoun to verb (m sing).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           questionLanguage,
           useDummy: true,
           answerLanguage,
@@ -2009,15 +1773,13 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13A-04a-b GET 200 YES: POL to ENG. Inherit features from pronoun to verb (nonvir plur).", () => {
+    it("#pal13A-04b GET 200 YES: POL to ENG. Inherit features from pronoun to verb (nonvir plur).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           questionLanguage,
           useDummy: true,
           answerLanguage,
@@ -2046,15 +1808,13 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13A-04a-c GET 200 YES: POL to ENG. NO CLARIFIERS Inherit features from pronoun to verb (m sing).", () => {
+    it("#pal13A-04c GET 200 YES: POL to ENG. NO CLARIFIERS Inherit features from pronoun to verb (m sing).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
       return request(app)
         .get("/api/palette")
         .send({
-          // doNotSpecify: true,
-
           questionLanguage,
           useDummy: true,
           answerLanguage,
@@ -2083,15 +1843,13 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13A-04a-d GET 200 YES: POL to ENG. NO CLARIFIERS Inherit features from pronoun to verb (nonvir plur).", () => {
+    it("#pal13A-04d GET 200 YES: POL to ENG. NO CLARIFIERS Inherit features from pronoun to verb (nonvir plur).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
       return request(app)
         .get("/api/palette")
         .send({
-          // doNotSpecify: true,
-
           questionLanguage,
           useDummy: true,
           answerLanguage,
@@ -2123,15 +1881,13 @@ describe("/api", () => {
     //
     //
     //
-    it("#pal13A-04b-a GET 200 YES: POL to ENG. Inherit features from pronoun to verb (m sing).", () => {
+    it("#pal13A-05a GET 200 YES: POL to ENG. Inherit features from pronoun to verb (m sing).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           questionLanguage,
           useDummy: true,
           answerLanguage,
@@ -2168,15 +1924,13 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13A-04b-b GET 200 YES: POL to ENG. Inherit features from pronoun to verb (nonvir plur).", () => {
+    it("#pal13A-05b GET 200 YES: POL to ENG. Inherit features from pronoun to verb (nonvir plur).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           questionLanguage,
           useDummy: true,
           answerLanguage,
@@ -2213,15 +1967,13 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13A-04b-c GET 200 YES: POL to ENG. NO CLARIFIERS Inherit features from pronoun to verb (m sing).", () => {
+    it("#pal13A-05c GET 200 YES: POL to ENG. NO CLARIFIERS Inherit features from pronoun to verb (m sing).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
       return request(app)
         .get("/api/palette")
         .send({
-          // doNotSpecify: true,
-
           questionLanguage,
           useDummy: true,
           answerLanguage,
@@ -2258,15 +2010,13 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13A-04b-d GET 200 YES: POL to ENG. NO CLARIFIERS Inherit features from pronoun to verb (nonvir plur).", () => {
+    it("#pal13A-05d GET 200 YES: POL to ENG. NO CLARIFIERS Inherit features from pronoun to verb (nonvir plur).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
       return request(app)
         .get("/api/palette")
         .send({
-          // doNotSpecify: true,
-
           questionLanguage,
           useDummy: true,
           answerLanguage,
@@ -2306,15 +2056,13 @@ describe("/api", () => {
     //
     //
     //
-    xit("#pal13A-05a GET 200 YES: ENG to POL. No gender specified in stCh for MGN.", () => {
+    xit("#pal13A-06a GET 200 YES: ENG to POL. No gender specified in stCh for MGN.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
         .send({
-          // doNotSpecify: true,
-
           questionLanguage,
           useDummy: true,
           answerLanguage,
@@ -2343,14 +2091,14 @@ describe("/api", () => {
           );
         });
     });
-    // xit("#pal13A-##a GET 200 YES: Singular pronouns: Verb person and number is inherited from pronoun headChunk.", () => {
+    // xit("#pal13A-7a GET 200 YES: Singular pronouns: Verb person and number is inherited from pronoun headChunk.", () => {
     //   const questionLanguage = "ENG";
     //   const answerLanguage = "POL";
 
     //   return request(app)
     //     .get("/api/palette")
     //     .send({
-    //       doNotSpecify: true,
+    //
     //
     //       questionLanguage,
     //       answerLanguage,
@@ -2384,8 +2132,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "red door",
@@ -2408,8 +2154,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "red door singular",
@@ -2429,8 +2173,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "red door",
@@ -2452,8 +2194,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          // doNotSpecify: true,
-
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "first conditional 106a",
@@ -2494,8 +2234,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "first conditional 106a",
@@ -2532,8 +2270,319 @@ describe("/api", () => {
     });
   });
 
-  describe("/palette - Stage 11: Adding Specifiers.", () => {
-    it("#pal11-01a GET 200 YES: SPECIFIER EXPECTED. Multi Gender Noun. ENG to POL.", () => {
+  describe.only("/palette - Stage 11B Not adding Specifiers, requested agnosticism.", () => {
+    it("#pal11B-01a GET 200 YES: POL to ENG. CHOOSE ONE. Singular. male or female versions of same person.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "109 doc wrote p",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              POL: "Lekarz napisał receptę.",
+              ENG: [
+                "The doctor wrote a prescription.",
+                "The doctor had written a prescription.",
+                "The doctor has written a prescription.",
+              ],
+            },
+            {
+              POL: "Lekarka napisała receptę.",
+              ENG: [
+                "The doctor wrote a prescription.",
+                "The doctor had written a prescription.",
+                "The doctor has written a prescription.",
+              ],
+            },
+          ];
+
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal11B-01b GET 200 YES: POL to ENG. CHOOSE ONE. Plural. male or female versions of same person.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "109b docs wrote p",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              POL: "Lekarze napisali receptę.",
+              ENG: [
+                "The doctors wrote a prescription.",
+                "The doctors had written a prescription.",
+                "The doctors have written a prescription.",
+              ],
+            },
+            {
+              POL: "Lekarki napisały receptę.",
+              ENG: [
+                "The doctors wrote a prescription.",
+                "The doctors had written a prescription.",
+                "The doctors have written a prescription.",
+              ],
+            },
+          ];
+
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal11B-01c GET 200 YES: POL to ENG. AGNOSTIC has no effect. Singular. male or female versions of same person.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          newAndSpecialPleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "109 doc wrote p",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              POL: "Lekarz napisał receptę.",
+              ENG: [
+                "The doctor wrote a prescription.",
+                "The doctor had written a prescription.",
+                "The doctor has written a prescription.",
+              ],
+            },
+            {
+              POL: "Lekarka napisała receptę.",
+              ENG: [
+                "The doctor wrote a prescription.",
+                "The doctor had written a prescription.",
+                "The doctor has written a prescription.",
+              ],
+            },
+          ];
+
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal11B-01d GET 200 YES: POL to ENG. AGNOSTIC has no effect. Plural. male or female versions of same person.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          newAndSpecialPleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "109b docs wrote p",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              POL: "Lekarze napisali receptę.",
+              ENG: [
+                "The doctors wrote a prescription.",
+                "The doctors had written a prescription.",
+                "The doctors have written a prescription.",
+              ],
+            },
+            {
+              POL: "Lekarki napisały receptę.",
+              ENG: [
+                "The doctors wrote a prescription.",
+                "The doctors had written a prescription.",
+                "The doctors have written a prescription.",
+              ],
+            },
+          ];
+
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal11B-02a GET 200 YES: ENG to POL. CHOOSE ONE. Singular. male or female versions of same person.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "109a doc was writing p",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            // {
+            //   ENG: "The doctor was writing a prescription.",
+            //   POL: ["Lekarz pisał receptę.", "Lekarka pisała receptę."],
+            // },
+            {
+              ENG: "The doctor (male) was writing a prescription.",
+              POL: ["Lekarz pisał receptę."],
+            },
+            {
+              ENG: "The doctor (female) was writing a prescription.",
+              POL: ["Lekarka pisała receptę."],
+            },
+          ];
+
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal11B-02b GET 200 YES: ENG to POL. CHOOSE ONE. Plural. male or female versions of same person.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "109c docs were writing p",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "The doctors (females) were writing a prescription.",
+              POL: ["Lekarki pisały receptę."],
+            },
+            {
+              ENG: "The doctors (mixed) were writing a prescription.",
+              POL: ["Lekarze pisali receptę."],
+            },
+            {
+              ENG: "The doctors (males) were writing a prescription.",
+              POL: ["Lekarze pisali receptę."],
+            },
+          ];
+
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal11B-02c GET 200 YES: ENG to POL. AGNOSTIC. Singular. male or female versions of same person.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          newAndSpecialPleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "109a doc was writing p",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "The doctor was writing a prescription.",
+              POL: ["Lekarz pisał receptę.", "Lekarka pisała receptę."],
+            },
+            // {
+            //   ENG: "The doctor (male) was writing a prescription.",
+            //   POL: ["Lekarz pisał receptę."],
+            // },
+            // {
+            //   ENG: "The doctor (female) was writing a prescription.",
+            //   POL: ["Lekarka pisała receptę."],
+            // },
+          ];
+
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal11B-02d GET 200 YES: ENG to POL. AGNOSTIC. Plural. male or female versions of same person.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          newAndSpecialPleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "109c docs were writing p",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "The doctors were writing a prescription.",
+              POL: ["Lekarze pisali receptę.", "Lekarki pisały receptę."],
+            },
+            // {
+            //   ENG: "The doctor (male) was writing a prescription.",
+            //   POL: ["Lekarz pisał receptę."],
+            // },
+            // {
+            //   ENG: "The doctor (female) was writing a prescription.",
+            //   POL: ["Lekarka pisała receptę."],
+            // },
+          ];
+
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+  });
+
+  describe("/palette - Stage 11A: Adding Specifiers.", () => {
+    it("#pal11A-01a GET 200 YES: SPECIFIER EXPECTED. Multi Gender Noun. ENG to POL.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2541,7 +2590,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           pleaseSpecifyMGNs: true,
-          // doNotSpecify: true,
+          //
 
           questionLanguage,
           answerLanguage,
@@ -2568,15 +2617,13 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal11-01b GET 200 YES: SPECIFIER EXPECTED Multi Gender Noun PLURAL. ENG to POL.", () => {
+    it("#pal11A-01b GET 200 YES: SPECIFIER EXPECTED Multi Gender Noun PLURAL. ENG to POL.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
         .send({
-          // doNotSpecify: true,
-
           pleaseSpecifyMGNs: true,
           questionLanguage,
           answerLanguage,
@@ -2607,15 +2654,13 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal11-02a GET 200 YES: NO SPECIFIER EVEN WHEN ASKED FOR. Pronoun I/WE. {pres im} needs no gender. ENG to POL.", () => {
+    it("#pal11A-02a GET 200 YES: NO SPECIFIER EVEN WHEN ASKED FOR. Pronoun I/WE. {pres im} needs no gender. ENG to POL.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
         .send({
-          // doNotSpecify: true,
-
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "111a I am",
@@ -2635,15 +2680,13 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal11-02b GET 200 YES: SPECIFIER EXPECTED. Pronoun I/WE. {past im} does indeed need gender. ENG to POL.", () => {
+    it("#pal11A-02b GET 200 YES: SPECIFIER EXPECTED. Pronoun I/WE. {past im} does indeed need gender. ENG to POL.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
         .send({
-          // doNotSpecify: true,
-
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "111b I was",
@@ -2666,15 +2709,13 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal11-03a GET 200 YES: NO SPECIFIER EVEN WHEN ASKED FOR if noun already has gender.", () => {
+    it("#pal11A-03a GET 200 YES: NO SPECIFIER EVEN WHEN ASKED FOR if noun already has gender.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
         .send({
-          // doNotSpecify: true,
-
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -2700,15 +2741,13 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal11-04a GET 200 YES: GIVE MULTIPLE ANSWER OPTIONS WHEN SPECIFIERS NOT REQUESTED. Pronoun I/WE. {past im} does indeed need gender. ENG to POL.", () => {
+    it("#pal11A-04a GET 200 YES: GIVE MULTIPLE ANSWER OPTIONS WHEN SPECIFIERS NOT REQUESTED. Pronoun I/WE. {past im} does indeed need gender. ENG to POL.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
         .send({
-          // doNotSpecify: true,
-
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "111b I was",
@@ -2746,15 +2785,13 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal11-05a GET 200 YES: Gives clarifiers and specifiers. Pronoun YOU. ENG to POL.", () => {
+    it("#pal11A-05a GET 200 YES: Gives clarifiers and specifiers. Pronoun YOU. ENG to POL.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
         .send({
-          // doNotSpecify: true,
-
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "111c you were",
@@ -2802,8 +2839,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -2836,8 +2871,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -2870,8 +2903,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -2901,8 +2932,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -2932,8 +2961,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -2963,8 +2990,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -2994,8 +3019,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -3025,8 +3048,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -3059,8 +3080,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -3093,8 +3112,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -3124,8 +3141,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -3157,8 +3172,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -3191,8 +3204,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -3225,8 +3236,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -3250,8 +3259,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -3275,8 +3282,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -3300,8 +3305,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -3325,8 +3328,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -3350,8 +3351,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -3375,8 +3374,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -3400,8 +3397,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -3425,8 +3420,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -3450,8 +3443,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -3480,8 +3471,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -3505,8 +3494,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          doNotSpecify: true,
-
           useDummy: true,
           questionLanguage,
           answerLanguage,

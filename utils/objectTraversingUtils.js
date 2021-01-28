@@ -460,8 +460,8 @@ exports.findMatchingLemmaObjectThenWord = (
       let unit = subArrayOfOutputUnits[0];
 
       //Alpha: By selecting this one unit, we have decanted ourselves into one gender choice.
-      //This means doNotSpecify will have no effect, re this pronoun.
-      //Why has this not been an issue before, when using doNotSpecify?
+      //This means doNotSpecif will have no effect, re this pronoun.
+      //Why has this not been an issue before, when using doNotSpecif?
 
       let { errorInDrilling, selectedWordArray, drillPath } = unit;
 

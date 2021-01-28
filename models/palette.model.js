@@ -15,7 +15,6 @@ exports.fetchPalette = (req) => {
     useDummy,
     questionLanguage,
     answerLanguage,
-    doNotSpecify,
     newAndSpecialPleaseDontSpecify,
     pleaseSpecifyMGNs,
   } = req.body;
@@ -310,7 +309,6 @@ exports.fetchPalette = (req) => {
 
     ///////////////////////////////////////////////kp
     //nownow
-    // if (!doNotSpecify) {
     if (!newAndSpecialPleaseDontSpecify) {
       aaUtils.addSpecifiers(
         answerSentenceData.sentenceFormula,
