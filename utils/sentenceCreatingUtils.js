@@ -580,7 +580,7 @@ exports.selectWordVersions = (outputArr) => {
       gpUtils.isKeyValueTypeObject(selectedWord) &&
       selectedWord.isTerminus
     ) {
-      //This is where we need to detect things...
+      //Epsilon: This is where we need to detect things...
 
       //ENG
       //if (outputUnit.structureChunk.wordtype === "article" && outputUnit.structureChunk.form === "indefinite"){

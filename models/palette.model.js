@@ -4,6 +4,7 @@ const lfUtils = require("../utils/lemmaFilteringUtils.js");
 const refObj = require("../utils/referenceObjects.js");
 const scUtils = require("../utils/sentenceCreatingUtils.js");
 const aaUtils = require("../utils/auxiliaryAttributeUtils.js");
+const frUtils = require("../utils/formattingResponseUtils.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 
 exports.fetchPalette = (req) => {
@@ -15,8 +16,8 @@ exports.fetchPalette = (req) => {
     useDummy,
     questionLanguage,
     answerLanguage,
-    newAndSpecialPleaseDontSpecify,
-    pleaseSpecifyMGNs,
+    pleaseDontSpecify,
+    pleaseDontDecantMGNs,
   } = req.body;
 
   let { sentenceFormula, words } = scUtils.getMaterials(
@@ -39,53 +40,53 @@ exports.fetchPalette = (req) => {
     kumquat
   );
 
-  if (!questionSentenceData) {
-    console.log(
-      "#ERR ---------------> In fetchPalette the question arrayOfOutputArrays came back NOTHING."
-    );
-    let nullQuestionResponseObj = scUtils.giveFinalSentences(
-      questionSentenceData,
-      kumquat,
-      questionLanguage,
-      answerLanguage
-    );
+  if ("check") {
+    if (!questionSentenceData) {
+      console.log(
+        "#ERR ---------------> In fetchPalette the question arrayOfOutputArrays came back NOTHING."
+      );
+      let nullQuestionResponseObj = scUtils.giveFinalSentences(
+        questionSentenceData,
+        kumquat,
+        questionLanguage,
+        answerLanguage
+      );
 
-    return finishAndSend(nullQuestionResponseObj, null);
+      return frUtils.finishAndSend(nullQuestionResponseObj, null);
+    }
+
+    if (
+      !questionSentenceData.arrayOfOutputArrays ||
+      !questionSentenceData.arrayOfOutputArrays.length
+    ) {
+      console.log(
+        "#ERR ---------------> In fetchPalette the question arrayOfOutputArrays came back NONE."
+      );
+
+      let nullQuestionResponseObj = scUtils.giveFinalSentences(
+        questionSentenceData,
+        kumquat,
+        questionLanguage,
+        answerLanguage
+      );
+
+      return frUtils.finishAndSend(nullQuestionResponseObj, null);
+    }
+
+    if (questionSentenceData.arrayOfOutputArrays.length > 1) {
+      gpUtils.throw(
+        "#ERR questionSentenceData.arrayOfOutputArrays.length had length more than 1. It was " +
+          questionSentenceData.arrayOfOutputArrays.length
+      );
+    }
+
+    //Decisive Decant
+    questionSentenceData.questionOutputArr =
+      questionSentenceData.arrayOfOutputArrays[0];
+    delete questionSentenceData.arrayOfOutputArrays;
   }
 
-  if (
-    !questionSentenceData.arrayOfOutputArrays ||
-    !questionSentenceData.arrayOfOutputArrays.length
-  ) {
-    console.log(
-      "#ERR ---------------> In fetchPalette the question arrayOfOutputArrays came back NONE."
-    );
-
-    let nullQuestionResponseObj = scUtils.giveFinalSentences(
-      questionSentenceData,
-      kumquat,
-      questionLanguage,
-      answerLanguage
-    );
-
-    return finishAndSend(nullQuestionResponseObj, null);
-  }
-
-  if (questionSentenceData.arrayOfOutputArrays.length > 1) {
-    gpUtils.throw(
-      "#ERR questionSentenceData.arrayOfOutputArrays.length had length more than 1. It was " +
-        questionSentenceData.arrayOfOutputArrays.length
-    );
-  }
-
-  //Decisive Decant
-  questionSentenceData.questionOutputArr =
-    questionSentenceData.arrayOfOutputArrays[0];
-  delete questionSentenceData.arrayOfOutputArrays;
-
-  // Alpha: Can we assume that NO featureKeys have multiple values from this point forwardss?
-  console.log("[1;35m " + "a09" + "[0m");
-
+  ///////////////////////////////////////////////kp Decisive Decant
   questionSentenceData.questionOutputArr.forEach((outputUnit, index) => {
     let { structureChunk, selectedLemmaObject } = outputUnit;
 
@@ -145,7 +146,7 @@ exports.fetchPalette = (req) => {
     console.log("[1;36m " + "}}}" + "[0m");
   }
 
-  if ("console") {
+  if (true && "console") {
     console.log(
       "[1;35m " +
         "{{{ #SBS fetchPalette just before midpoint. Let's see the selectedWordss" +
@@ -163,20 +164,13 @@ exports.fetchPalette = (req) => {
     gpUtils.consoleLogAestheticBorder(4);
   }
 
-  ///////////////////////////////////////////////kp (key point)
-
-  // console.log("f11 fetchPalette, questionSentenceData.questionOutputArr BEFORE pleaseSpecifyMGNs");
-  // console.log(questionSentenceData.questionOutputArr.map((outputUnit) => outputUnit.structureChunk));
-
-  if (pleaseSpecifyMGNs) {
+  ///////////////////////////////////////////////kp Decant MGNs
+  if (!pleaseDontDecantMGNs) {
     allLangUtils.specifyMGNs(
       questionSentenceData.questionOutputArr,
       questionLanguage
     );
   }
-
-  // console.log("f13 fetchPalette, questionSentenceData.questionOutputArr AFTER pleaseSpecifyMGNs");
-  // console.log(questionSentenceData.questionOutputArr.map((outputUnit) => outputUnit.structureChunk));
 
   if (answerLanguage) {
     kumquat = true;
@@ -207,7 +201,7 @@ exports.fetchPalette = (req) => {
         questionLanguage,
       };
 
-      ///////////////////////////////////////////////kp
+      ///////////////////////////////////////////////kp Conform
       scUtils.conformAnswerStructureToQuestionStructure(
         answerSentenceFormula,
         questionSentenceData.questionOutputArr,
@@ -215,7 +209,7 @@ exports.fetchPalette = (req) => {
         words
       );
 
-      if ("console") {
+      if (true && "console") {
         console.log(
           "f15 fetchPalette, answerSentenceFormula.sentenceStructure AFTER qaConform",
           answerSentenceFormula.sentenceStructure
@@ -229,13 +223,13 @@ exports.fetchPalette = (req) => {
         );
       }
 
-      ///////////////////////////////////////////////kp
+      ///////////////////////////////////////////////kp Clarifiers
       aaUtils.addClarifiers(
         questionSentenceData.questionOutputArr,
         languagesObject
       );
 
-      if ("console") {
+      if (true && "console") {
         console.log(
           "f17 fetchPalette, questionOutputArr AFTER CLARI, BEFORE SPECI",
           questionSentenceData.questionOutputArr.map(
@@ -254,12 +248,12 @@ exports.fetchPalette = (req) => {
         kumquat
       );
 
-      //Decisive Decant parallel
+      ///////////////////////////////////////////////kp Decisive Decant parallel
       answerSentenceData.answerOutputArrays =
         answerSentenceData.arrayOfOutputArrays;
       delete answerSentenceData.arrayOfOutputArrays;
 
-      if (!"console") {
+      if (false && "console") {
         console.log(
           "[1;33m " +
             "{{{ #SBS fetchPalette just after we get answerSentenceData back from SC:processSentenceFormula. Let's see the stChs in answerSentenceData.arrayOfOutputArrays:" +
@@ -307,9 +301,8 @@ exports.fetchPalette = (req) => {
       questionLanguage,
     };
 
-    ///////////////////////////////////////////////kp
-    //nownow
-    if (!newAndSpecialPleaseDontSpecify) {
+    ///////////////////////////////////////////////kp Specifiers
+    if (!pleaseDontSpecify) {
       aaUtils.addSpecifiers(
         answerSentenceData.sentenceFormula,
         questionSentenceData.questionOutputArr,
@@ -317,7 +310,7 @@ exports.fetchPalette = (req) => {
       );
     }
 
-    if ("console") {
+    if (true && "console") {
       console.log(
         "f18 fetchPalette, questionOutputArr AFTER CLARI AND SPECI",
         questionSentenceData.questionOutputArr.map(
@@ -326,7 +319,7 @@ exports.fetchPalette = (req) => {
       );
     }
 
-    ///////////////////////////////////////////////kp
+    ///////////////////////////////////////////////kp Attach annotations
     aaUtils.attachAnnotations(
       questionSentenceData.questionOutputArr,
       languagesObj,
@@ -341,37 +334,5 @@ exports.fetchPalette = (req) => {
     answerLanguage
   );
 
-  return finishAndSend(questionResponseObj, answerResponseObj);
-
-  function finishAndSend(questionResponseObj, answerResponseObj) {
-    let combinedResponseObj = {};
-
-    let refs = [
-      { responseObject: questionResponseObj, key: "question" },
-      { responseObject: answerResponseObj, key: "answer" },
-    ];
-
-    refs.forEach((ref) => {
-      if (ref.responseObject) {
-        combinedResponseObj[ref.key + "SentenceArr"] =
-          ref.responseObject.finalSentenceArr || [];
-
-        if (ref.responseObject.errorMessage) {
-          combinedResponseObj[ref.key + "ErrorMessage"] =
-            ref.responseObject.errorMessage;
-        }
-        if (ref.responseObject.message) {
-          combinedResponseObj[ref.key + "Message"] = ref.responseObject.message;
-        }
-        if (ref.responseObject.fragment) {
-          combinedResponseObj[ref.key + "Fragment"] =
-            ref.responseObject.fragment;
-        }
-      }
-    });
-
-    return Promise.all([combinedResponseObj]).then((array) => {
-      return array[0];
-    });
-  }
+  return frUtils.finishAndSend(questionResponseObj, answerResponseObj);
 };

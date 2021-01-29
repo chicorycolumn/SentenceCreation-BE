@@ -2270,7 +2270,7 @@ describe("/api", () => {
     });
   });
 
-  describe.only("/palette - Stage 11B Not adding Specifiers, requested agnosticism.", () => {
+  describe("/palette - Stage 11B Not adding Specifiers.", () => {
     it("#pal11B-01a GET 200 YES: POL to ENG. CHOOSE ONE. Singular. male or female versions of same person.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
@@ -2358,7 +2358,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          newAndSpecialPleaseDontSpecify: true,
+          pleaseDontSpecify: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "109 doc wrote p",
@@ -2399,7 +2399,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          newAndSpecialPleaseDontSpecify: true,
+          pleaseDontSpecify: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "109b docs wrote p",
@@ -2512,7 +2512,8 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          newAndSpecialPleaseDontSpecify: true,
+          pleaseDontSpecify: true,
+          pleaseDontDecantMGNs: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "109a doc was writing p",
@@ -2549,7 +2550,8 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          newAndSpecialPleaseDontSpecify: true,
+          pleaseDontSpecify: true,
+          pleaseDontDecantMGNs: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "109c docs were writing p",
@@ -2589,7 +2591,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          pleaseSpecifyMGNs: true,
           //
 
           questionLanguage,
@@ -2624,7 +2625,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          pleaseSpecifyMGNs: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "109c docs were writing p",
