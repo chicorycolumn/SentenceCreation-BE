@@ -403,7 +403,7 @@ exports.getWordtypeFromLemmaObject = (lObj) => {
   let wordtypeShorthand = lObj.id.split("-")[1];
 
   if (!Object.keys(wordtypeRef).includes(wordtypeShorthand)) {
-    throw "#ERR -----------------> getWordtypeFromLemmaObject";
+    gpUtils.throw("#ERR -----------------> getWordtypeFromLemmaObject");
   }
 
   return wordtypeRef[wordtypeShorthand];
@@ -425,7 +425,7 @@ exports.getWordtypeOfAgreeWith = (
   let wordtypeShorthand = structureChunk[agreeWithKey].split("-")[0];
 
   if (!Object.keys(wordtypeRef).includes(wordtypeShorthand)) {
-    throw "#ERR -----------------> getWordtypeFromLemmaObject";
+    gpUtils.throw("#ERR -----------------> getWordtypeFromLemmaObject");
   }
 
   return wordtypeRef[wordtypeShorthand];

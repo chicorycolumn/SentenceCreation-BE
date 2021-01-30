@@ -216,8 +216,9 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
 
                   if (structureChunk[inflectionLabel].length > 1) {
                     console.log(
-                      "#ERR g13: structureChunk[inflectionLabel]",
-                      structureChunk[inflectionLabel]
+                      "[1;31m " +
+                        `#ERR g13: structureChunk[inflectionLabel] ${structureChunk[inflectionLabel]}` +
+                        "[0m"
                     );
                     gpUtils.throw("#ERR g13 " + inflectionLabel);
                   }

@@ -56,7 +56,9 @@ exports.filterWithinSelectedLemmaObject = (
       !structureChunk.specificLemmas ||
       structureChunk.specificLemmas.length !== 1
     ) {
-      throw "#ERR ----------------------> PHD-stCh should have exactly one value in specificLemmas arr.";
+      gpUtils.throw(
+        "#ERR ----------------------> PHD-stCh should have exactly one value in specificLemmas arr."
+      );
     }
 
     let postHocInflectionChains = refObj.postHocDependentChunkWordtypes[
@@ -92,14 +94,16 @@ exports.filterWithinSelectedLemmaObject = (
       );
 
       if (!drillPathForPHD) {
-        throw "#ERR There is no drillPath on the outputUnit with which I want to get features from the PHD stCh. Perhaps this outputUnit is one whose stCh did not go through If-PW?";
+        gpUtils.throw(
+          "#ERR There is no drillPath on the outputUnit with which I want to get features from the PHD stCh. Perhaps this outputUnit is one whose stCh did not go through If-PW?"
+        );
       }
 
       if (structureChunk.form) {
         if (structureChunk.form.length !== 1) {
-          throw (
+          gpUtils.throw(
             "#ERR Expected structureChunk.form to have length of 1: " +
-            structureChunk.chunkId
+              structureChunk.chunkId
           );
         }
 
@@ -174,7 +178,9 @@ exports.filterWithinSelectedLemmaObject = (
     } else if (typeof source === "string") {
       sourceArr.push(source);
     } else {
-      throw "#ERR ---------------> Expected this PHD value to be the end of a chain and thus a string or array.";
+      gpUtils.throw(
+        "#ERR ---------------> Expected this PHD value to be the end of a chain and thus a string or array."
+      );
     }
 
     sourceArr.forEach((selectedWord) => {

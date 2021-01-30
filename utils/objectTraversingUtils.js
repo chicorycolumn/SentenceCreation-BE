@@ -454,7 +454,9 @@ exports.findMatchingLemmaObjectThenWord = (
       }
 
       if (subArrayOfOutputUnits.length !== 1) {
-        throw "#ERR That's strange. This was expected to be an array of only one, here near the end of OT:findMatchingLemmaObjectThenWord";
+        gpUtils.throw(
+          "#ERR That's strange. This was expected to be an array of only one, here near the end of OT:findMatchingLemmaObjectThenWord"
+        );
       }
 
       let unit = subArrayOfOutputUnits[0];

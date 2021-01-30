@@ -164,9 +164,11 @@ exports.processSentenceFormula = (
 
     if (errorInSentenceCreation.errorMessage) {
       console.log(
-        "#ERR -------------------------> An error arose in SC:processSentenceFormula. Returning outputArr null for headChunk: " +
-          headChunk.chunkId
+        "[1;31m " +
+          `#ERR -------------------------> An error arose in SC:processSentenceFormula. Returning outputArr null for headChunk: ${headChunk.chunkId}` +
+          "[0m"
       );
+
       return {
         outputArr: null,
         sentenceFormula,
@@ -178,9 +180,11 @@ exports.processSentenceFormula = (
 
     if (!allPossOutputUnits_head || !allPossOutputUnits_head.length) {
       console.log(
-        "#ERR -------------------------> An error has arisen in SC:processSentenceFormula. Returning outputArr null for headChunk: " +
-          headChunk.chunkId
+        "[1;31m " +
+          `#ERR -------------------------> An error has arisen in SC:processSentenceFormula. Returning outputArr null for headChunk: ${headChunk.chunkId}` +
+          "[0m"
       );
+
       return {
         outputArr: null,
         sentenceFormula,
@@ -243,8 +247,9 @@ exports.processSentenceFormula = (
             !allPossOutputUnits_dependent.length
           ) {
             console.log(
-              "#ERR -------------------------> An error reared up in SC:processSentenceFormula. Returning outputArr null for dependentChunk: " +
-                dependentChunk.chunkId
+              "[1;31m " +
+                `#ERR -------------------------> An error reared up in SC:processSentenceFormula. Returning outputArr null for dependentChunk:  ${dependentChunk.chunkId}` +
+                "[0m"
             );
 
             return {
@@ -325,8 +330,9 @@ exports.processSentenceFormula = (
       !allPossOutputUnits_other.length
     ) {
       console.log(
-        "#ERR -------------------------> An error loomed in SC:processSentenceFormula. Returning outputArr null for otherChunk: " +
-          otherChunk.chunkId
+        "[1;31m " +
+          `#ERR -------------------------> An error loomed in SC:processSentenceFormula. Returning outputArr null for otherChunk: ${otherChunk.chunkId}` +
+          "[0m"
       );
 
       return {
@@ -373,8 +379,9 @@ exports.processSentenceFormula = (
         !allPossOutputUnits_PHD.length
       ) {
         console.log(
-          "#ERR -------------------------> An error loomed in SC:processSentenceFormula. Returning outputArr null for postHocDependentChunk: " +
-            postHocDependentChunk.chunkId
+          "[1;31m " +
+            `#ERR -------------------------> An error loomed in SC:processSentenceFormula. Returning outputArr null for postHocDependentChunk: ${postHocDependentChunk.chunkId}` +
+            "[0m"
         );
 
         return {
@@ -451,7 +458,9 @@ exports.giveFinalSentences = (
     }
 
     if (!kumquat && answerOutputArrays && answerOutputArrays.length) {
-      throw "#ERR Well that's strange. We are in Question Mode, so SC:giveFinalSentences expected to be given questionOutputArr, not answerOutputArrays.";
+      gpUtils.throw(
+        "#ERR Well that's strange. We are in Question Mode, so SC:giveFinalSentences expected to be given questionOutputArr, not answerOutputArrays."
+      );
     }
   }
 
@@ -600,7 +609,9 @@ exports.selectWordVersions = (outputArr) => {
 
       selectedWordsArr.push(selectedWord.unstressed);
     } else {
-      throw "#ERR --------------------------------------> I expected either a string or a terminus object for this selectedWord.";
+      gpUtils.throw(
+        "#ERR --------------------------------------> I expected either a string or a terminus object for this selectedWord."
+      );
     }
   });
 

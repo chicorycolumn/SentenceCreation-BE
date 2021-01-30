@@ -22,7 +22,7 @@ exports.filterAnnotations = (
           "[0m"
       );
       console.log(structureChunk.annotations[annotationKey]);
-      throw "#ERR";
+      gpUtils.throw("#ERR");
     }
 
     console.log(

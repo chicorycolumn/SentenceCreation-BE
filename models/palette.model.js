@@ -43,8 +43,11 @@ exports.fetchPalette = (req) => {
   if ("check") {
     if (!questionSentenceData) {
       console.log(
-        "#ERR ---------------> In fetchPalette the question arrayOfOutputArrays came back NOTHING."
+        "[1;31m " +
+          `#ERR ---------------> In fetchPalette the question arrayOfOutputArrays came back NOTHING.` +
+          "[0m"
       );
+
       let nullQuestionResponseObj = scUtils.giveFinalSentences(
         questionSentenceData,
         kumquat,
@@ -60,7 +63,9 @@ exports.fetchPalette = (req) => {
       !questionSentenceData.arrayOfOutputArrays.length
     ) {
       console.log(
-        "#ERR ---------------> In fetchPalette the question arrayOfOutputArrays came back NONE."
+        "[1;31m " +
+          `#ERR ---------------> In fetchPalette the question arrayOfOutputArrays came back NONE.` +
+          "[0m"
       );
 
       let nullQuestionResponseObj = scUtils.giveFinalSentences(
@@ -124,7 +129,7 @@ exports.fetchPalette = (req) => {
         Array.isArray(featureValue) &&
         featureValue.length > 1
       ) {
-        console.log("#ERR a11 structureChunk", structureChunk);
+        console.log("[1;31m " + `#ERR a11 structureChunk is:` + "[0m", structureChunk);
         // gpUtils.throw("#ERR a11 featureKey: " + featureKey);
       }
     });

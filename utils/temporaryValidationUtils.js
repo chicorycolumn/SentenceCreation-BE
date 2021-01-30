@@ -1,3 +1,5 @@
+const gpUtils = require("./generalPurposeUtils.js");
+
 exports.validateSentenceFormula = (sentenceFormula) => {
   let arrayFeatures = [
     "specificLemmas",
@@ -29,7 +31,9 @@ exports.validateSentenceFormula = (sentenceFormula) => {
         structureChunk[arrayFeature] &&
         !Array.isArray(structureChunk[arrayFeature])
       ) {
-        throw `#ERR ----------------------------------------------------------------------> ${sentenceFormula.sentenceFormulaId} had ${structureChunk.chunkId} with ${arrayFeature} NOT an array.`;
+        gpUtils.throw(
+          `#ERR ----------------------------------------------------------------------> ${sentenceFormula.sentenceFormulaId} had ${structureChunk.chunkId} with ${arrayFeature} NOT an array.`
+        );
       }
     });
 
@@ -38,7 +42,9 @@ exports.validateSentenceFormula = (sentenceFormula) => {
         structureChunk[stringFeature] &&
         !(typeof structureChunk[stringFeature] === "string")
       ) {
-        throw `#ERR ----------------------------------------------------------------------> ${sentenceFormula.sentenceFormulaId} had ${structureChunk.chunkId}'s ***${stringFeature}*** NOT a string.`;
+        gpUtils.throw(
+          `#ERR ----------------------------------------------------------------------> ${sentenceFormula.sentenceFormulaId} had ${structureChunk.chunkId}'s ***${stringFeature}*** NOT a string.`
+        );
       }
     });
   });
