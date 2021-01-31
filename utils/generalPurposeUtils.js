@@ -481,8 +481,8 @@ exports.doesKeyContainValueOnChunk = (
   );
 };
 
-exports.consoleLogPW = (label, structureChunk, kumquat) => {
-  if (kumquat) {
+exports.consoleLogPW = (label, structureChunk, multipleMode) => {
+  if (multipleMode) {
     gpUtils.consoleLogYellow(`##${label} ${structureChunk.chunkId}`);
   } else {
     gpUtils.consoleLogBlue(`##${label} ${structureChunk.chunkId}`);

@@ -103,7 +103,7 @@ exports.processSentenceFormula = (
   languagesObj,
   sentenceFormula,
   words,
-  kumquat
+  multipleMode
 ) => {
   let { currentLanguage, previousQuestionLanguage } = languagesObj;
   let {
@@ -150,8 +150,8 @@ exports.processSentenceFormula = (
     console.log("~~ SC:processSentenceFormula STEP ONE", headChunk.chunkId);
 
     //The below functions correctly with regard to:
-    //Give kumquat as true, it returns multiple outputUnit objects in allPossOutputUnits_head array.
-    //Give kumquat as false, it returns just one outputUnit object in said array.
+    //Give multipleMode as true, it returns multiple outputUnit objects in allPossOutputUnits_head array.
+    //Give multipleMode as false, it returns just one outputUnit object in said array.
 
     let allPossOutputUnits_head = otUtils.findMatchingLemmaObjectThenWord(
       gpUtils.copyWithoutReference(headChunk),
@@ -159,7 +159,7 @@ exports.processSentenceFormula = (
       errorInSentenceCreation,
       currentLanguage,
       previousQuestionLanguage,
-      kumquat
+      multipleMode
     );
 
     if (errorInSentenceCreation.errorMessage) {
@@ -198,9 +198,9 @@ exports.processSentenceFormula = (
   });
 
   //The below functions correctly with regard to:
-  //If kumquat was true, then explodedOutputArraysWithHeads array now contains all possible arrays (of multiplied out head options).
+  //If multipleMode was true, then explodedOutputArraysWithHeads array now contains all possible arrays (of multiplied out head options).
   // ie [ [{chłopiec}, {jabłko}], [{chłopiec}, {jabłka}], [{kobieta}, {jabłko}], [{kobieta}, {jabłka}] ]
-  //If kumquat was false, said array now contains just the one array, eg explodedOutputArraysWithHeads = [ [{chłopiec}, {jabłko}] ].
+  //If multipleMode was false, said array now contains just the one array, eg explodedOutputArraysWithHeads = [ [{chłopiec}, {jabłko}] ].
   let explodedOutputArraysWithHeads = gpUtils.copyWithoutReference(
     gpUtils.arrayExploder(headOutputUnitArrays)
   );
@@ -238,7 +238,7 @@ exports.processSentenceFormula = (
             errorInSentenceCreation,
             currentLanguage,
             previousQuestionLanguage,
-            kumquat
+            multipleMode
           );
 
           if (
@@ -262,8 +262,8 @@ exports.processSentenceFormula = (
           }
 
           //The above functions correctly with regard to:
-          //Give kumquat as true, it returns multiple outputUnit objects in allPossOutputUnits_dependent array.
-          //Give kumquat as false, it returns just one outputUnit object in said array.
+          //Give multipleMode as true, it returns multiple outputUnit objects in allPossOutputUnits_dependent array.
+          //Give multipleMode as false, it returns just one outputUnit object in said array.
 
           if (!headOutputUnit.possibleDependentOutputArrays) {
             headOutputUnit.possibleDependentOutputArrays = [];
@@ -282,8 +282,8 @@ exports.processSentenceFormula = (
     grandOutputArray.push(...result);
   });
 
-  //If kumquat was false, then grandOutputArray = [ [ 'kobieta', 'ma', 'jabłko', 'czerwone' ] ]
-  //If kumquat was true, then grandOutputArray =  [
+  //If multipleMode was false, then grandOutputArray = [ [ 'kobieta', 'ma', 'jabłko', 'czerwone' ] ]
+  //If multipleMode was true, then grandOutputArray =  [
   //                                                [ 'kobieta', 'ma', 'cebulę', 'niebieską' ],
   //                                                [ 'kobieta', 'ma', 'cebulę', 'czerwoną' ],
   //                                                [ 'kobieta', 'ma', 'jabłko', 'niebieskie' ],
@@ -321,7 +321,7 @@ exports.processSentenceFormula = (
       errorInSentenceCreation,
       currentLanguage,
       previousQuestionLanguage,
-      kumquat
+      multipleMode
     );
 
     if (
@@ -344,7 +344,7 @@ exports.processSentenceFormula = (
       };
     }
 
-    //If kumquat is true, then allPossOutputUnits_other is array of outputUnit objects, while if false, array of just one said object.
+    //If multipleMode is true, then allPossOutputUnits_other is array of outputUnit objects, while if false, array of just one said object.
     grandAllPossOutputUnits_other.push(allPossOutputUnits_other);
   });
 
@@ -369,7 +369,7 @@ exports.processSentenceFormula = (
         errorInSentenceCreation,
         currentLanguage,
         previousQuestionLanguage,
-        kumquat,
+        multipleMode,
         outputArray
       );
 
@@ -393,7 +393,7 @@ exports.processSentenceFormula = (
         };
       }
 
-      //If kumquat is true, then allPossOutputUnits_other is array of outputUnit objects, while if false, array of just one said object.
+      //If multipleMode is true, then allPossOutputUnits_other is array of outputUnit objects, while if false, array of just one said object.
 
       grandAllPossOutputUnits_PHD.push(allPossOutputUnits_PHD);
     });
@@ -410,8 +410,8 @@ exports.processSentenceFormula = (
     );
   }
 
-  //If kumquat is true, then grandOutputArray is array of all possible arrays of outputUnit combinations.
-  //And if kumquat false, then grandOutputArray is array of just one said possible array.
+  //If multipleMode is true, then grandOutputArray is array of all possible arrays of outputUnit combinations.
+  //And if multipleMode false, then grandOutputArray is array of just one said possible array.
 
   grandOutputArray.forEach((outputArray, outputArrayIndex) => {
     outputArray.forEach((outputUnit) => {
@@ -433,7 +433,7 @@ exports.processSentenceFormula = (
 
 exports.giveFinalSentences = (
   sentenceData,
-  kumquat,
+  multipleMode,
   currentLanguage,
   answerLanguage
 ) => {
@@ -457,7 +457,7 @@ exports.giveFinalSentences = (
       };
     }
 
-    if (!kumquat && answerOutputArrays && answerOutputArrays.length) {
+    if (!multipleMode && answerOutputArrays && answerOutputArrays.length) {
       gpUtils.throw(
         "#ERR Well that's strange. We are in Question Mode, so SC:giveFinalSentences expected to be given questionOutputArr, not answerOutputArrays."
       );
@@ -466,12 +466,12 @@ exports.giveFinalSentences = (
 
   let finalSentenceArr = [];
 
-  if (kumquat) {
+  if (multipleMode) {
     answerOutputArrays.forEach((outputArr) => {
       let finalSentences = scUtils.buildSentenceString(
         outputArr,
         sentenceFormula,
-        kumquat,
+        multipleMode,
         currentLanguage,
         null
       );
@@ -484,7 +484,7 @@ exports.giveFinalSentences = (
     let finalSentences = scUtils.buildSentenceString(
       questionOutputArr,
       sentenceFormula,
-      kumquat,
+      multipleMode,
       currentLanguage,
       answerLanguage
     );
@@ -504,7 +504,7 @@ exports.giveFinalSentences = (
 exports.buildSentenceString = (
   unorderedArr,
   sentenceFormula,
-  kumquat,
+  multipleMode,
   currentLanguage,
   answerLanguage
 ) => {
@@ -518,7 +518,7 @@ exports.buildSentenceString = (
     console.log("buildSentenceString c13 gonna push unorderedArr Clause 0");
     outputArrays.push(unorderedArr);
   } else {
-    if (kumquat) {
+    if (multipleMode) {
       let allOrders = [];
       if (sentenceFormula.primaryOrders) {
         allOrders = [...allOrders, ...sentenceFormula.primaryOrders];

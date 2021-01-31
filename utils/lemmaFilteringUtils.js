@@ -9,7 +9,7 @@ exports.filterWithinSelectedLemmaObject = (
   lemmaObject,
   structureChunk,
   currentLanguage,
-  kumquat,
+  multipleMode,
   outputArray
 ) => {
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
@@ -191,7 +191,7 @@ exports.filterWithinSelectedLemmaObject = (
       });
     });
 
-    if (!kumquat) {
+    if (!multipleMode) {
       resArr = [gpUtils.selectRandom(resArr)];
     }
 
@@ -284,7 +284,7 @@ exports.filterWithinSelectedLemmaObject = (
     return false;
   }
 
-  if (kumquat) {
+  if (multipleMode) {
     outputUnitsWithDrillPaths.forEach((selectedPath) => {
       selectedPath.errorInDrilling = errorInDrilling;
     });

@@ -8,7 +8,7 @@ const frUtils = require("../utils/formattingResponseUtils.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 
 exports.fetchPalette = (req) => {
-  let kumquat = false;
+  let multipleMode = false;
 
   let {
     sentenceFormulaId,
@@ -37,7 +37,7 @@ exports.fetchPalette = (req) => {
     { currentLanguage: questionLanguage },
     questionSentenceFormula,
     words,
-    kumquat
+    multipleMode
   );
 
   if ("check") {
@@ -50,7 +50,7 @@ exports.fetchPalette = (req) => {
 
       let nullQuestionResponseObj = scUtils.giveFinalSentences(
         questionSentenceData,
-        kumquat,
+        multipleMode,
         questionLanguage,
         answerLanguage
       );
@@ -70,7 +70,7 @@ exports.fetchPalette = (req) => {
 
       let nullQuestionResponseObj = scUtils.giveFinalSentences(
         questionSentenceData,
-        kumquat,
+        multipleMode,
         questionLanguage,
         answerLanguage
       );
@@ -178,7 +178,7 @@ exports.fetchPalette = (req) => {
   }
 
   if (answerLanguage) {
-    kumquat = true;
+    multipleMode = true;
 
     let translations =
       questionSentenceData.sentenceFormula.translations[answerLanguage];
@@ -250,7 +250,7 @@ exports.fetchPalette = (req) => {
         },
         answerSentenceFormula,
         words,
-        kumquat
+        multipleMode
       );
 
       ///////////////////////////////////////////////kp Decisive Decant parallel
@@ -279,14 +279,14 @@ exports.fetchPalette = (req) => {
       if (!answerResponseObj) {
         answerResponseObj = scUtils.giveFinalSentences(
           answerSentenceData,
-          kumquat,
+          multipleMode,
           answerLanguage,
           null
         );
       } else {
         let subsequentAnswerResponseObj = scUtils.giveFinalSentences(
           answerSentenceData,
-          kumquat,
+          multipleMode,
           answerLanguage,
           null
         );

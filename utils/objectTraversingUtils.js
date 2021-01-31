@@ -9,7 +9,7 @@ exports.findMatchingLemmaObjectThenWord = (
   errorInSentenceCreation,
   currentLanguage,
   questionLanguage,
-  kumquat,
+  multipleMode,
   outputArray
 ) => {
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
@@ -23,7 +23,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
   //STEP ONE: : Fx-PW: Pathway for Fixed pieces.
   if (structureChunk.wordtype === "fixed") {
-    gpUtils.consoleLogPW("##Fx-PW", structureChunk, kumquat);
+    gpUtils.consoleLogPW("##Fx-PW", structureChunk, multipleMode);
 
     return [
       {
@@ -93,9 +93,9 @@ exports.findMatchingLemmaObjectThenWord = (
       adhocFormRef[structureChunk.wordtype].includes(selectedForm)
     )
   ) {
-    gpUtils.consoleLogPW("##Ad-PW-F", structureChunk, kumquat);
+    gpUtils.consoleLogPW("##Ad-PW-F", structureChunk, multipleMode);
 
-    if (kumquat) {
+    if (multipleMode) {
       matches.forEach((selectedLemmaObject) => {
         let adhocArr = langUtils.generateAdhocForms(
           "form",
@@ -162,9 +162,9 @@ exports.findMatchingLemmaObjectThenWord = (
         structureChunk[adhocInflectorKey] &&
         structureChunk[adhocInflectorKey].length
       ) {
-        gpUtils.consoleLogPW("##Ad-PW-I", structureChunk, kumquat);
+        gpUtils.consoleLogPW("##Ad-PW-I", structureChunk, multipleMode);
 
-        if (kumquat) {
+        if (multipleMode) {
           matches.forEach((selectedLemmaObject) => {
             let adhocArr = langUtils.generateAdhocForms(
               adhocInflectorKey,
@@ -242,9 +242,9 @@ exports.findMatchingLemmaObjectThenWord = (
           );
 
           if (requestedUninflectedForms.length) {
-            gpUtils.consoleLogPW("##Un-PW", structureChunk, kumquat);
+            gpUtils.consoleLogPW("##Un-PW", structureChunk, multipleMode);
 
-            if (kumquat) {
+            if (multipleMode) {
               requestedUninflectedForms.forEach((selectedUninflectedForm) => {
                 let matchesByUninflectedForm = matches.filter(
                   (lObj) => lObj.inflections[selectedUninflectedForm]
@@ -407,15 +407,15 @@ exports.findMatchingLemmaObjectThenWord = (
 
     //  STEP FOUR-B: Getting the inflected word.
 
-    gpUtils.consoleLogPW("##If-PW", structureChunk, kumquat);
+    gpUtils.consoleLogPW("##If-PW", structureChunk, multipleMode);
 
-    if (kumquat) {
+    if (multipleMode) {
       matchesCopy.forEach((selectedLemmaObject) => {
         let subArrayOfOutputUnits = lfUtils.filterWithinSelectedLemmaObject(
           selectedLemmaObject,
           structureChunk,
           currentLanguage,
-          kumquat,
+          multipleMode,
           outputArray
         );
 
@@ -445,7 +445,7 @@ exports.findMatchingLemmaObjectThenWord = (
         selectedLemmaObject,
         structureChunk,
         currentLanguage,
-        kumquat,
+        multipleMode,
         outputArray
       );
 
@@ -503,7 +503,7 @@ exports.findMatchingLemmaObjectThenWord = (
     return false;
   }
 
-  if (!kumquat && arrayOfAllPossibleOutputUnits.length > 1) {
+  if (!multipleMode && arrayOfAllPossibleOutputUnits.length > 1) {
     arrayOfAllPossibleOutputUnits = [
       gpUtils.selectRandom(arrayOfAllPossibleOutputUnits),
     ];
