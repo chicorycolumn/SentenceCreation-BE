@@ -379,6 +379,7 @@ exports.addSpecifiers = (
 
   //STEP ONE: Do a special thing for Multi Gender Nouns
   //            ie lObjs with gender: "allPersonalSingularGenders_selector"
+  //            But we will check all metaGenders.
   answerDependentChunks.forEach((answerDependentChunk) => {
     let materials = getMaterialsToAddSpecifiers(
       answerDependentChunk,
@@ -397,92 +398,94 @@ exports.addSpecifiers = (
 
     let selectedGenderForQuestionLanguage;
 
-    if (
-      questionHeadLemmaObject &&
-      questionHeadLemmaObject.gender === "allPersonalSingularGenders_selector"
-    ) {
-      if (questionHeadChunk.gender && questionHeadChunk.gender.length) {
-        selectedGenderForQuestionLanguage = gpUtils.selectRandom(
-          questionHeadChunk.gender
+    let metaGenders = Object.keys(
+      refObj.metaFeatures[questionLanguage]["gender"]
+    );
+
+    metaGenders.forEach((metaGender) => {
+      if (
+        questionHeadLemmaObject &&
+        questionHeadLemmaObject.gender === `${metaGender}_selector`
+      ) {
+        if (questionHeadChunk.gender && questionHeadChunk.gender.length) {
+          selectedGenderForQuestionLanguage = gpUtils.selectRandom(
+            questionHeadChunk.gender
+          );
+        } else {
+          selectedGenderForQuestionLanguage = gpUtils.selectRandom(
+            refObj.metaFeatures[questionLanguage].gender[metaGender]
+          );
+        }
+
+        selectedGenderForAnswerLanguageArr = answerLangUtils.formatFeatureValue(
+          "gender",
+          selectedGenderForQuestionLanguage,
+          "person"
         );
-      } else {
-        selectedGenderForQuestionLanguage = gpUtils.selectRandom(
-          refObj.metaFeatures[questionLanguage].gender[
-            "allPersonalSingularGenders"
-          ]
+
+        // questionHeadLemmaObject.gender = selectedGenderForQuestionLanguage;
+        console.log(
+          "[1;35m " +
+            "#NB: Am changing questionHeadChunk.gender and answerHeadChunk.gender" +
+            "[0m"
         );
-      }
+        console.log({
+          selectedGenderForQuestionLanguage,
+          selectedGenderForAnswerLanguageArr,
+        });
 
-      selectedGenderForAnswerLanguageArr = answerLangUtils.formatFeatureValue(
-        "gender",
-        selectedGenderForQuestionLanguage,
-        "person"
-      );
+        questionHeadChunk.gender = [selectedGenderForQuestionLanguage];
+        answerHeadChunk.gender = selectedGenderForAnswerLanguageArr;
 
-      // questionHeadLemmaObject.gender = selectedGenderForQuestionLanguage;
-      console.log(
-        "[1;35m " +
-          "#NB: Am changing questionHeadChunk.gender and answerHeadChunk.gender" +
-          "[0m"
-      );
-      console.log({
-        selectedGenderForQuestionLanguage,
-        selectedGenderForAnswerLanguageArr,
-      });
-
-      questionHeadChunk.gender = [selectedGenderForQuestionLanguage];
-      answerHeadChunk.gender = selectedGenderForAnswerLanguageArr;
-
-      aaUtils.addAnnotation(
-        questionHeadChunk,
-        "gender",
-        selectedGenderForQuestionLanguage
-      );
-    }
-
-    if (
-      questionLemmaObject &&
-      questionLemmaObject.gender === "allPersonalSingularGenders_selector"
-    ) {
-      if (questionChunk.gender && questionChunk.gender.length) {
-        selectedGenderForQuestionLanguage = gpUtils.selectRandom(
-          questionChunk.gender
-        );
-      } else {
-        selectedGenderForQuestionLanguage = gpUtils.selectRandom(
-          refObj.metaFeatures[questionLanguage].gender[
-            "allPersonalSingularGenders"
-          ]
+        aaUtils.addAnnotation(
+          questionHeadChunk,
+          "gender",
+          selectedGenderForQuestionLanguage
         );
       }
 
-      selectedGenderForAnswerLanguageArr = answerLangUtils.formatFeatureValue(
-        "gender",
-        selectedGenderForQuestionLanguage,
-        "person"
-      );
+      if (
+        questionLemmaObject &&
+        questionLemmaObject.gender === `${metaGender}_selector`
+      ) {
+        if (questionChunk.gender && questionChunk.gender.length) {
+          selectedGenderForQuestionLanguage = gpUtils.selectRandom(
+            questionChunk.gender
+          );
+        } else {
+          selectedGenderForQuestionLanguage = gpUtils.selectRandom(
+            refObj.metaFeatures[questionLanguage].gender[metaGender]
+          );
+        }
 
-      console.log(
-        "[1;35m " + "#NB: Changing questionChunk.gender and answerChunk.gender" + "[0m"
-      );
-      console.log({
-        selectedGenderForQuestionLanguage,
-        selectedGenderForAnswerLanguageArr,
-      });
+        selectedGenderForAnswerLanguageArr = answerLangUtils.formatFeatureValue(
+          "gender",
+          selectedGenderForQuestionLanguage,
+          "person"
+        );
 
-      // questionLemmaObject.gender = selectedGenderForQuestionLanguage;
-      questionChunk.gender = [selectedGenderForQuestionLanguage];
-      answerChunk.gender = selectedGenderForAnswerLanguageArr;
+        console.log(
+          "[1;35m " + "#NB: Changing questionChunk.gender and answerChunk.gender" + "[0m"
+        );
+        console.log({
+          selectedGenderForQuestionLanguage,
+          selectedGenderForAnswerLanguageArr,
+        });
 
-      aaUtils.addAnnotation(
-        questionChunk,
-        "gender",
-        selectedGenderForQuestionLanguage
-      );
-    }
+        // questionLemmaObject.gender = selectedGenderForQuestionLanguage;
+        questionChunk.gender = [selectedGenderForQuestionLanguage];
+        answerChunk.gender = selectedGenderForAnswerLanguageArr;
+
+        aaUtils.addAnnotation(
+          questionChunk,
+          "gender",
+          selectedGenderForQuestionLanguage
+        );
+      }
+    });
   });
 
-  //STEPS TWO AND THREE - apparently can be skipped.
+  //STEPS TWO AND THREE - Add specifiers according to instructions from refObj.requestedSpecifiers.
 
   if (false) {
     //STEP TWO: For every A depCh and its headCh, check by requested Specifiers and if so, add them.
@@ -501,7 +504,7 @@ exports.addSpecifiers = (
         questionSentenceStructure
       );
 
-      addRequiredSpecifiersToAnswerChunkOrHeadChunk(
+      addRequiredSpecifiersToAnswerChunkOrHeadChunk_not_used(
         materials,
         answerLanguage,
         "Step 1"
@@ -516,7 +519,7 @@ exports.addSpecifiers = (
         questionSentenceStructure
       );
 
-      addRequiredSpecifiersToAnswerChunkOrHeadChunk(
+      addRequiredSpecifiersToAnswerChunkOrHeadChunk_not_used(
         materials,
         answerLanguage,
         "Step 2"
@@ -595,13 +598,13 @@ exports.addSpecifiers = (
     return res;
   }
 
-  function addRequiredSpecifiersToAnswerChunkOrHeadChunk(
+  function addRequiredSpecifiersToAnswerChunkOrHeadChunk_not_used(
     materials,
     answerLanguage,
     consoleLogLabel
   ) {
     gpUtils.throw(
-      "Ah, so we've decided to use addRequiredSpecifiersToAnswerChunkOrHeadChunk fxn."
+      "Ah, so we've decided to use addRequiredSpecifiersToAnswerChunkOrHeadChunk_not_used fxn."
     );
     return;
 
@@ -615,7 +618,7 @@ exports.addSpecifiers = (
     } = materials;
 
     let requestedSpecifierInstructionsArr =
-      refObj.requestedSpecifiersNew[answerLanguage][answerChunk.wordtype];
+      refObj.requestedSpecifiers_not_used[answerLanguage][answerChunk.wordtype];
 
     if (!requestedSpecifierInstructionsArr) {
       console.log(
@@ -662,7 +665,6 @@ exports.addSpecifiers = (
           );
         })
       ) {
-        //Nownow79: Yes, we are entering this clause.
         gpUtils.throw("Cease before Pass 1.");
 
         console.log("addSpecifiers Pass 1");
@@ -678,7 +680,6 @@ exports.addSpecifiers = (
             gpUtils.keyShouldBeSpecified(questionChunk, actionKey) &&
             gpUtils.keyShouldBeSpecified(questionHeadChunk, actionKey)
           ) {
-            //Nownow79. We are never entering this clause. Why is that not failing?
             gpUtils.throw("Yes we enter this, I see!");
 
             console.log("addSpecifiers Pass 2");

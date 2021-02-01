@@ -517,7 +517,7 @@ exports.adhocForms = {
   },
 };
 
-exports.requestedSpecifiersNew = {
+exports.requestedSpecifiers_not_used = {
   POL: {
     verb: [
       //For A stCh verbs:
@@ -641,7 +641,7 @@ exports.requestedSpecifiersNew = {
 //    please pick a random one and
 //      add Specifier to Question Sentence
 //        and update Answer StructureChunk
-exports.whetherToAddSpecifiersForThisAnswerLang = {
+exports.whetherToAddSpecifiersForThisAnswerLang_not_used = {
   POL: {
     //For verb answerStructureChunks...
     verb: [
