@@ -453,17 +453,12 @@ exports.findMatchingLemmaObjectThenWord = (
         return false;
       }
 
-      if (subArrayOfOutputUnits.length !== 1) {
-        gpUtils.throw(
-          "#ERR That's strange. This was expected to be an array of only one, here near the end of OT:findMatchingLemmaObjectThenWord"
-        );
-      }
-
-      let unit = subArrayOfOutputUnits[0];
-
-      //Alpha: By selecting this one unit, we have decanted ourselves into one gender choice.
+      let unit = gpUtils.selectRandom(subArrayOfOutputUnits);
+      //Alpha: By selectrandoming this one unit, we have decanted ourselves into one gender choice.
       //This means doNotSpecif will have no effect, re this pronoun.
-      //Why has this not been an issue before, when using doNotSpecif?
+      //Q: Why has this not been an issue before, when using doNotSpecif?
+
+      //A: Weyyyyyyy, it is an issue now. pal11B-03a
 
       let { errorInDrilling, selectedWordArray, drillPath } = unit;
 

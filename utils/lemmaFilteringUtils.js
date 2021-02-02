@@ -191,10 +191,6 @@ exports.filterWithinSelectedLemmaObject = (
       });
     });
 
-    if (!multipleMode) {
-      resArr = [gpUtils.selectRandom(resArr)];
-    }
-
     //Okay, so, at this point, finishing the PHD section, structureChunk is like this.
 
     //I want to, within this section, decant the gender feature (well, all features) into arr of ONE.
@@ -269,6 +265,10 @@ exports.filterWithinSelectedLemmaObject = (
     outputUnitsWithDrillPaths
   );
 
+  // gpUtils.consoleLogObjectAtTwoLevels(outputUnitsWithDrillPaths);
+  // console.log(outputUnitsWithDrillPaths);
+  // gpUtils.throw("Cease.");
+
   if (!outputUnitsWithDrillPaths || !outputUnitsWithDrillPaths.length) {
     console.log(
       "[1;31m " +
@@ -284,25 +284,11 @@ exports.filterWithinSelectedLemmaObject = (
     return false;
   }
 
-  if (multipleMode) {
-    outputUnitsWithDrillPaths.forEach((selectedPath) => {
-      selectedPath.errorInDrilling = errorInDrilling;
-    });
+  outputUnitsWithDrillPaths.forEach((selectedPath) => {
+    selectedPath.errorInDrilling = errorInDrilling;
+  });
 
-    return outputUnitsWithDrillPaths;
-  } else {
-    let selectedPath = gpUtils.selectRandom(outputUnitsWithDrillPaths);
-
-    let { selectedWordArray, drillPath } = selectedPath;
-
-    return [
-      {
-        errorInDrilling,
-        selectedWordArray,
-        drillPath,
-      },
-    ];
-  }
+  return outputUnitsWithDrillPaths;
 };
 
 exports.updateStructureChunkByAdhocOnly = (structureChunk, label, value) => {
@@ -310,7 +296,7 @@ exports.updateStructureChunkByAdhocOnly = (structureChunk, label, value) => {
 };
 
 exports.updateStructureChunk = (outputUnit, currentLanguage) => {
-  let shouldConsoleLog = false;
+  let shouldConsoleLog = true;
 
   if (shouldConsoleLog) {
     console.log(
@@ -445,6 +431,14 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
 };
 
 exports.updateStChByInflections = (outputUnit, currentLanguage) => {
+  console.log(
+    "[1;30m " +
+      `f44 updateStChByInflections ${
+        outputUnit.drillPath ? outputUnit.drillPath.toString() : "no drillPath"
+      }` +
+      "[0m"
+  );
+
   if (outputUnit.drillPath) {
     outputUnit.drillPath.forEach((drillPathSubArr) => {
       let requiredInflectorCategory = drillPathSubArr[0];
@@ -598,6 +592,13 @@ exports.traverseAndRecordInflections = (
   outputUnitsWithDrillPaths,
   outputUnitsWithDrillPathsMini
 ) => {
+  // console.log(
+  //   "f22 traverseAndRecordInflections-----------------------------------------------"
+  // );
+  // console.log("source", source);
+  // console.log("reqArr", reqArr);
+  // console.log("outputUnitsWithDrillPaths", outputUnitsWithDrillPaths);
+  // console.log("outputUnitsWithDrillPathsMini", outputUnitsWithDrillPathsMini);
   /////////////////////////////
   let shouldConsoleLog = false;
   /////////////////////////////

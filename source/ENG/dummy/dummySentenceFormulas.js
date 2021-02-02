@@ -727,7 +727,7 @@ exports.dummySentenceFormulasBank = [
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         number: ["singular"],
-        // gender: ["m"],
+        // gender: ["allPersonalGenders"],
         gcase: ["nom"],
       },
       {

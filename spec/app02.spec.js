@@ -2258,7 +2258,8 @@ describe("/api", () => {
           );
         });
     });
-    it.only("#pal11B-03a GET 200 YES: ENG to POL. AGNOSTIC. Give both pronoun singular gender options in answer.", () => {
+    //nownow
+    xit("#pal11B-03a GET 200 YES: ENG to POL. AGNOSTIC. Give both pronoun singular gender options in answer.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2296,7 +2297,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal11B-03b GET 200 YES: ENG to POL. AGNOSTIC. Give both pronoun singular gender options in answer.", () => {
+    xit("#pal11B-03b GET 200 YES: ENG to POL. AGNOSTIC. Give both pronoun plural gender options in answer.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
