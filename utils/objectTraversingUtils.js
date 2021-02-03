@@ -2,6 +2,7 @@ const gpUtils = require("./generalPurposeUtils.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
 const refObj = require("./referenceObjects.js");
 const otUtils = require("./objectTraversingUtils.js");
+const { merge } = require("../app.js");
 
 exports.findMatchingLemmaObjectThenWord = (
   structureChunk,
@@ -10,7 +11,8 @@ exports.findMatchingLemmaObjectThenWord = (
   currentLanguage,
   questionLanguage,
   multipleMode,
-  outputArray
+  outputArray,
+  pleaseDontSpecifyPronounGender
 ) => {
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
   let selectedFormsArray = [];
@@ -453,12 +455,122 @@ exports.findMatchingLemmaObjectThenWord = (
         return false;
       }
 
-      let unit = gpUtils.selectRandom(subArrayOfOutputUnits);
-      //Alpha: By selectrandoming this one unit, we have decanted ourselves into one gender choice.
-      //This means doNotSpecif will have no effect, re this pronoun.
-      //Q: Why has this not been an issue before, when using doNotSpecif?
+      console.log("e33 subArrayOfOutputUnits", subArrayOfOutputUnits);
 
-      //A: Weyyyyyyy, it is an issue now. pal11B-03a
+      console.log(subArrayOfOutputUnits[0].drillPath);
+
+      // throw "Cease.";
+      //If the outputunits differ only in gender, and pleaseDontSpecifyPronounGender is true,
+      //then... use both of the output units, rather than selectrandoming one... somehow.
+
+      function doDrillPathsDifferOnlyByGender(subArrayOfOutputUnits) {
+        if (
+          subArrayOfOutputUnits.some((outputUnit) =>
+            outputUnit.drillPath.find((pathArr) => pathArr[0] === "gender")
+          )
+        ) {
+          let firstOutputUnit = subArrayOfOutputUnits[0];
+
+          if (
+            subArrayOfOutputUnits.slice(1).every((outputUnit) => {
+              if (
+                outputUnit.drillPath.find(
+                  (pathArr) => pathArr[0] === "gender"
+                )[1] !==
+                  firstOutputUnit.drillPath.find(
+                    (pathArr) => pathArr[0] === "gender"
+                  )[1] &&
+                outputUnit.drillPath
+                  .filter((pathArr) => pathArr[0] !== "gender")
+                  .every((pathArr) => {
+                    let firstDPPathArr = firstOutputUnit.drillPath.find(
+                      (urPathArr) => urPathArr[0] === pathArr[0]
+                    );
+
+                    if (firstDPPathArr && firstDPPathArr[1] === pathArr[1]) {
+                      return true;
+                    }
+                  })
+              ) {
+                return true;
+              }
+            })
+          ) {
+            return true;
+          }
+        }
+      }
+
+      function createMergedGenderOutputUnit(subArrayOfOutputUnits) {
+        let mergedOutputUnit = gpUtils.copyWithoutReference(
+          subArrayOfOutputUnits[0]
+        );
+
+        let newGenderArr = [
+          mergedOutputUnit.drillPath.find(
+            (pathArr) => pathArr[0] === "gender"
+          )[1],
+        ];
+
+        // mergedOutputUnit.drillPath.find(
+        //   (pathArr) => pathArr[0] === "gender"
+        // )[1] = "allPersonalSingularGenders";
+
+        // return mergedOutputUnit;
+
+        subArrayOfOutputUnits.slice(1).forEach((outputUnit) => {
+          let genderValue = outputUnit.drillPath.find(
+            (pathArr) => pathArr[0] === "gender"
+          )[1];
+
+          newGenderArr.push(genderValue);
+        });
+
+        console.log("o14 newGenderArr", newGenderArr);
+
+        let metaGenderRef = refObj.metaFeatures[currentLanguage]["gender"];
+
+        let metaGenderResult;
+
+        Object.keys(metaGenderRef).forEach((metaGenderKey) => {
+          if (metaGenderResult) {
+            return;
+          }
+
+          let metaGenderTranslatedArr = metaGenderRef[metaGenderKey];
+
+          if (
+            gpUtils.areTwoFlatArraysEqual(newGenderArr, metaGenderTranslatedArr)
+          ) {
+            metaGenderResult = metaGenderKey;
+          }
+        });
+
+        console.log("o15 metaGenderResult", metaGenderResult);
+
+        mergedOutputUnit.drillPath.find(
+          (pathArr) => pathArr[0] === "gender"
+        )[1] = metaGenderResult;
+
+        return mergedOutputUnit;
+      }
+
+      if (
+        pleaseDontSpecifyPronounGender &&
+        doDrillPathsDifferOnlyByGender(subArrayOfOutputUnits)
+      ) {
+        console.log("o11 subArrayOfOutputUnits", subArrayOfOutputUnits);
+
+        let mergedGenderOutputUnit = createMergedGenderOutputUnit(
+          subArrayOfOutputUnits
+        );
+
+        subArrayOfOutputUnits = [mergedGenderOutputUnit];
+      }
+
+      console.log("o12 subArrayOfOutputUnits", subArrayOfOutputUnits);
+
+      let unit = gpUtils.selectRandom(subArrayOfOutputUnits);
 
       let { errorInDrilling, selectedWordArray, drillPath } = unit;
 
@@ -498,11 +610,11 @@ exports.findMatchingLemmaObjectThenWord = (
     return false;
   }
 
-  if (!multipleMode && arrayOfAllPossibleOutputUnits.length > 1) {
-    arrayOfAllPossibleOutputUnits = [
-      gpUtils.selectRandom(arrayOfAllPossibleOutputUnits),
-    ];
-  }
+  // if (!multipleMode && arrayOfAllPossibleOutputUnits.length > 1) {
+  //   arrayOfAllPossibleOutputUnits = [
+  //     gpUtils.selectRandom(arrayOfAllPossibleOutputUnits),
+  //   ];
+  // }
 
   return arrayOfAllPossibleOutputUnits;
 };

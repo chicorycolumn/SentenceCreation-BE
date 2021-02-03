@@ -296,7 +296,7 @@ exports.updateStructureChunkByAdhocOnly = (structureChunk, label, value) => {
 };
 
 exports.updateStructureChunk = (outputUnit, currentLanguage) => {
-  let shouldConsoleLog = true;
+  let shouldConsoleLog = false;
 
   if (shouldConsoleLog) {
     console.log(

@@ -2259,7 +2259,7 @@ describe("/api", () => {
         });
     });
     //nownow
-    xit("#pal11B-03a GET 200 YES: ENG to POL. AGNOSTIC. Give both pronoun singular gender options in answer.", () => {
+    it("#pal11B-03a GET 200 YES: ENG to POL. AGNOSTIC. Give both pronoun singular gender options in answer.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2267,6 +2267,7 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage,
+          pleaseDontSpecifyPronounGender: true,
           pleaseDontDecantMGNs: true,
           pleaseDontSpecify: true,
           useDummy: true,
@@ -2297,7 +2298,7 @@ describe("/api", () => {
           );
         });
     });
-    xit("#pal11B-03b GET 200 YES: ENG to POL. AGNOSTIC. Give both pronoun plural gender options in answer.", () => {
+    it("#pal11B-03b GET 200 YES: ENG to POL. AGNOSTIC. Give both pronoun plural gender options in answer.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2305,6 +2306,9 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage,
+          pleaseDontSpecifyPronounGender: true,
+          pleaseDontDecantMGNs: true,
+          pleaseDontSpecify: true,
           useDummy: true,
           answerLanguage,
           sentenceFormulaSymbol: "dummy49d",

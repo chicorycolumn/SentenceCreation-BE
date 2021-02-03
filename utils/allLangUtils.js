@@ -78,6 +78,16 @@ exports.adjustVirilityOfStructureChunk = (
     return;
   }
 
+  if (/all.*/.test(gender)) {
+    if (gender.length !== 1) {
+      gpUtils.throw(
+        `#ERR Gender arr contained a metaGender, that's fine, but it contained other values too? That's too much. ${gender.toString()}`
+      );
+    }
+
+    gender = refObj.metaFeatures[currentLanguage]["gender"][gender];
+  }
+
   let pluralVirilityAndSingularConversionRef =
     refObj.pluralVirilityAndSingularConversionRef[currentLanguage];
 
@@ -91,6 +101,8 @@ exports.adjustVirilityOfStructureChunk = (
 
   if (number.includes("plural")) {
     gender.forEach((genderValue) => {
+      console.log({ genderValue });
+
       newGenderArray = [
         ...newGenderArray,
         ...pluralVirilityAndSingularConversionRef["plural"][genderValue],

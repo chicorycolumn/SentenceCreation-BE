@@ -18,6 +18,7 @@ exports.fetchPalette = (req) => {
     answerLanguage,
     pleaseDontSpecify,
     pleaseDontDecantMGNs,
+    pleaseDontSpecifyPronounGender,
   } = req.body;
 
   let { sentenceFormula, words } = scUtils.getMaterials(
@@ -37,7 +38,8 @@ exports.fetchPalette = (req) => {
     { currentLanguage: questionLanguage },
     questionSentenceFormula,
     words,
-    multipleMode
+    multipleMode,
+    pleaseDontSpecifyPronounGender
   );
 
   if ("check") {
@@ -90,6 +92,17 @@ exports.fetchPalette = (req) => {
       questionSentenceData.arrayOfOutputArrays[0];
     delete questionSentenceData.arrayOfOutputArrays;
   }
+
+  // questionSentenceData.questionOutputArr[0].structureChunk.gender = [
+  //   "allPersonalSingularGenders",
+  // ];
+
+  console.log(
+    "g55 questionSentenceData.questionOutputArr[0]s",
+    questionSentenceData.questionOutputArr[0]
+  );
+
+  // gpUtils.throw("Cease now.");
 
   ///////////////////////////////////////////////kp Decisive Decant
   questionSentenceData.questionOutputArr.forEach((outputUnit, index) => {
@@ -206,12 +219,31 @@ exports.fetchPalette = (req) => {
         questionLanguage,
       };
 
+      console.log(
+        "p32 questionSentenceData.questionOutputArr",
+        questionSentenceData.questionOutputArr.map(
+          (outputUnit) => outputUnit.structureChunk
+        )
+      );
+
       ///////////////////////////////////////////////kp Conform
       scUtils.conformAnswerStructureToQuestionStructure(
         answerSentenceFormula,
         questionSentenceData.questionOutputArr,
         languagesObject,
         words
+      );
+
+      console.log(
+        "p33 answerSentenceFormula.sentenceStructure",
+        answerSentenceFormula.sentenceStructure
+      );
+
+      // answerSentenceFormula.sentenceStructure[0].gender = ["f"];
+
+      console.log(
+        "p34 answerSentenceFormula.sentenceStructure",
+        answerSentenceFormula.sentenceStructure
       );
 
       if (true && "console") {
@@ -250,7 +282,8 @@ exports.fetchPalette = (req) => {
         },
         answerSentenceFormula,
         words,
-        multipleMode
+        multipleMode,
+        pleaseDontSpecifyPronounGender
       );
 
       ///////////////////////////////////////////////kp Decisive Decant parallel

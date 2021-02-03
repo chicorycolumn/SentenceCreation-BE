@@ -103,7 +103,8 @@ exports.processSentenceFormula = (
   languagesObj,
   sentenceFormula,
   words,
-  multipleMode
+  multipleMode,
+  pleaseDontSpecifyPronounGender
 ) => {
   let { currentLanguage, previousQuestionLanguage } = languagesObj;
   let {
@@ -159,7 +160,9 @@ exports.processSentenceFormula = (
       errorInSentenceCreation,
       currentLanguage,
       previousQuestionLanguage,
-      multipleMode
+      multipleMode,
+      null,
+      pleaseDontSpecifyPronounGender
     );
 
     if (errorInSentenceCreation.errorMessage) {
@@ -238,7 +241,9 @@ exports.processSentenceFormula = (
             errorInSentenceCreation,
             currentLanguage,
             previousQuestionLanguage,
-            multipleMode
+            multipleMode,
+            null,
+            pleaseDontSpecifyPronounGender
           );
 
           if (
@@ -321,7 +326,9 @@ exports.processSentenceFormula = (
       errorInSentenceCreation,
       currentLanguage,
       previousQuestionLanguage,
-      multipleMode
+      multipleMode,
+      null,
+      pleaseDontSpecifyPronounGender
     );
 
     if (
@@ -370,7 +377,8 @@ exports.processSentenceFormula = (
         currentLanguage,
         previousQuestionLanguage,
         multipleMode,
-        outputArray
+        outputArray,
+        pleaseDontSpecifyPronounGender
       );
 
       if (

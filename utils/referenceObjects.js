@@ -234,6 +234,11 @@ exports.pluralVirilityAndSingularConversionRef = {
       n: ["n"],
       virile: ["m"],
       nonvirile: ["f", "n"],
+      // allPersonalGenders: ["m", "f", "virile", "nonvirile"],
+      // allSingularGenders: ["m", "f", "n"],
+      // allPersonalSingularGenders: ["m", "f"],
+      // allPluralGenders: ["virile", "nonvirile"],
+      // allGenders: ["m", "n", "f", "virile", "nonvirile"],
     },
     plural: {
       m: ["virile"],
