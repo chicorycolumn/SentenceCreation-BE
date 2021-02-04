@@ -1352,6 +1352,29 @@ describe("/api", () => {
           );
         });
     });
+    it("#pal06-04i GET 200 YES: RSWAT POL to ENG, where tenseDescription has one that will work and one that won't.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          useDummy: true,
+          sentenceFormulaSymbol: "dummy28a",
+        })
+        .expect(200)
+        .then((res) => {
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "write",
+            []
+          );
+        });
+    });
     it("#pal06-05a GET 200 YES: RSWAT ENG to POL. Ensure three masculine genders collapse to one for the verb.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";

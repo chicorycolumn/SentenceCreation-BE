@@ -709,6 +709,23 @@ exports.dummySentenceFormulasBank = [
     primaryOrders: [],
   },
   {
+    sentenceFormulaSymbol: "dummy28a",
+    sentenceFormulaId: "POL-dummy28a",
+    translations: { ENG: ["ENG-dummy28"] },
+    sentenceStructure: [
+      {
+        chunkId: "ver-1",
+
+        wordtype: "verb",
+        andTags: ["basic3"],
+        tenseDescription: ["negative imperative", "present im"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [],
+  },
+  {
     sentenceFormulaSymbol: "dummy29",
     sentenceFormulaId: "POL-dummy29",
     translations: { ENG: ["ENG-dummy29"] },

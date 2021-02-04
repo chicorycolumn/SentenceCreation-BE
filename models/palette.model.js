@@ -81,6 +81,10 @@ exports.fetchPalette = (req) => {
     }
 
     if (questionSentenceData.arrayOfOutputArrays.length > 1) {
+      console.log(
+        "questionSentenceData.arrayOfOutputArrays",
+        questionSentenceData.arrayOfOutputArrays
+      );
       gpUtils.throw(
         "#ERR questionSentenceData.arrayOfOutputArrays.length had length more than 1. It was " +
           questionSentenceData.arrayOfOutputArrays.length

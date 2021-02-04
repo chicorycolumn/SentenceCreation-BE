@@ -14,6 +14,12 @@ exports.findMatchingLemmaObjectThenWord = (
   outputArray,
   pleaseDontSpecifyPronounGender
 ) => {
+  console.log(
+    "[1;33m " +
+      `s10 findMatchingLemmaObjectThenWord for stCh: ${structureChunk.chunkId}` +
+      "[0m"
+  );
+
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
   let selectedFormsArray = [];
   let arrayOfAllPossibleOutputUnits = [];
@@ -359,6 +365,7 @@ exports.findMatchingLemmaObjectThenWord = (
   let structureChunksAdjusted = langUtils.adjustStructureChunksInIfPW(
     structureChunk
   );
+
   let structureChunks = structureChunksAdjusted || [structureChunk];
 
   structureChunks.forEach((structureChunk) => {
@@ -410,6 +417,7 @@ exports.findMatchingLemmaObjectThenWord = (
     //  STEP FOUR-B: Getting the inflected word.
 
     gpUtils.consoleLogPW("##If-PW", structureChunk, multipleMode);
+    console.log("r55", { multipleMode });
 
     if (multipleMode) {
       matchesCopy.forEach((selectedLemmaObject) => {
@@ -456,8 +464,6 @@ exports.findMatchingLemmaObjectThenWord = (
       }
 
       console.log("e33 subArrayOfOutputUnits", subArrayOfOutputUnits);
-
-      console.log(subArrayOfOutputUnits[0].drillPath);
 
       // throw "Cease.";
       //If the outputunits differ only in gender, and pleaseDontSpecifyPronounGender is true,
@@ -585,6 +591,8 @@ exports.findMatchingLemmaObjectThenWord = (
 
       let selectedWord = selectedWordArray[0];
 
+      console.log("[1;33m " + `Selected word is ${selectedWord}` + "[0m");
+
       let outputUnit = otUtils.createOutputUnit(
         errorInSentenceCreation,
         errorInDrilling,
@@ -598,6 +606,9 @@ exports.findMatchingLemmaObjectThenWord = (
     }
   });
 
+  console.log("[1;33m " + `s12 arrayOfAllPossibleOutputUnits is:` + "[0m");
+  console.log(arrayOfAllPossibleOutputUnits);
+
   if (!arrayOfAllPossibleOutputUnits.length) {
     if (!errorInSentenceCreation.errorMessage) {
       console.log(
@@ -610,11 +621,11 @@ exports.findMatchingLemmaObjectThenWord = (
     return false;
   }
 
-  // if (!multipleMode && arrayOfAllPossibleOutputUnits.length > 1) {
-  //   arrayOfAllPossibleOutputUnits = [
-  //     gpUtils.selectRandom(arrayOfAllPossibleOutputUnits),
-  //   ];
-  // }
+  if (!multipleMode && arrayOfAllPossibleOutputUnits.length > 1) {
+    arrayOfAllPossibleOutputUnits = [
+      gpUtils.selectRandom(arrayOfAllPossibleOutputUnits),
+    ];
+  }
 
   return arrayOfAllPossibleOutputUnits;
 };
