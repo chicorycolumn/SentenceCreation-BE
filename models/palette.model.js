@@ -17,9 +17,10 @@ exports.fetchPalette = (req) => {
     questionLanguage,
     answerLanguage,
     pleaseDontSpecify,
-    pleaseDontDecantMGNs,
-    pleaseDontSpecifyPronounGender,
   } = req.body;
+
+  let pleaseDontDecantMGNs = pleaseDontSpecify;
+  let pleaseDontSpecifyPronounGender = pleaseDontSpecify;
 
   let { sentenceFormula, words } = scUtils.getMaterials(
     questionLanguage,
@@ -97,17 +98,6 @@ exports.fetchPalette = (req) => {
     delete questionSentenceData.arrayOfOutputArrays;
   }
 
-  // questionSentenceData.questionOutputArr[0].structureChunk.gender = [
-  //   "allPersonalSingularGenders",
-  // ];
-
-  console.log(
-    "g55 questionSentenceData.questionOutputArr[0]s",
-    questionSentenceData.questionOutputArr[0]
-  );
-
-  // gpUtils.throw("Cease now.");
-
   ///////////////////////////////////////////////kp Decisive Decant
   questionSentenceData.questionOutputArr.forEach((outputUnit, index) => {
     let { structureChunk, selectedLemmaObject } = outputUnit;
@@ -152,6 +142,14 @@ exports.fetchPalette = (req) => {
     });
   });
 
+  ///////////////////////////////////////////////kp Decant MGNs
+  if (!pleaseDontDecantMGNs) {
+    allLangUtils.specifyMGNs(
+      questionSentenceData.questionOutputArr,
+      questionLanguage
+    );
+  }
+
   if (true && "console") {
     console.log(
       "[1;36m " +
@@ -186,13 +184,7 @@ exports.fetchPalette = (req) => {
     gpUtils.consoleLogAestheticBorder(4);
   }
 
-  ///////////////////////////////////////////////kp Decant MGNs
-  if (!pleaseDontDecantMGNs) {
-    allLangUtils.specifyMGNs(
-      questionSentenceData.questionOutputArr,
-      questionLanguage
-    );
-  }
+  gpUtils.throw("Cease.");
 
   if (answerLanguage) {
     multipleMode = true;

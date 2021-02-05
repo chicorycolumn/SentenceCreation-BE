@@ -1213,7 +1213,7 @@ exports.sentenceFormulasBank = [
         andTags: ["person"],
         gcase: ["nom"],
         specificLemmas: ["lekarz", "lekarka"],
-        // number: ["singular"],
+        number: ["singular"],
       },
       {
         chunkId: "ver-1-Gave",
@@ -1223,7 +1223,7 @@ exports.sentenceFormulasBank = [
         tenseDescription: ["past pf"],
       },
       {
-        chunkId: "pro-3-Me",
+        chunkId: "pro-2-Me",
         wordtype: "pronoun",
         agreeWith: "pro-1-invisible-I",
         gcase: ["dat"],
@@ -1232,7 +1232,7 @@ exports.sentenceFormulasBank = [
         specificLemmas: ["PERSONAL"],
       },
       {
-        chunkId: "pro-4-Her",
+        chunkId: "pro-3-Her",
         wordtype: "pronoun",
         form: ["determiner"],
         specificLemmas: ["POSSESSIVE"],
@@ -1248,7 +1248,7 @@ exports.sentenceFormulasBank = [
       },
     ],
     primaryOrders: [
-      ["nou-1-Father", "ver-1-Gave", "pro-3-Us", "pro-4-His", "nou-2-Book"],
+      ["nou-1-Doctor", "ver-1-Gave", "pro-2-Me", "pro-3-Her", "nou-2-Book"],
     ],
     additionalOrders: [],
   },

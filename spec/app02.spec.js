@@ -446,6 +446,55 @@ describe("/api", () => {
           );
         });
     });
+    it.only("#pal14-04a GET 200 YES: ENG to POL. SPECIFIED. The doctor gave me her book.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "114 doctor gave me her book",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "The doctor (female) gave me her book.",
+              POL: ["Lekarka dała mi jej książkę."],
+            },
+            {
+              ENG: "The doctor (male) gave me his book.",
+              POL: ["Lekarz dał mi jego książkę."],
+            },
+            {
+              ENG: "The doctors (mixed) gave me their book.",
+              POL: ["Lekarze dali mi ich książkę."],
+            },
+            {
+              ENG: "The doctors (males) gave me their book.",
+              POL: ["Lekarze dali mi ich książkę."],
+            },
+            {
+              ENG: "The doctors (females) gave me their book.",
+              POL: ["Lekarki dały mi ich książkę."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    //If an ENG MGN has any pronouns that agree with it,
+    //then doNotSpecify must be barred from having effect.
+    //Otherwise we get ENG Q: "The doctor gave me his book."
+    //             and POL A: ["Lekarz dał.", "Lekarka dała."]
+    //which is WRONG.
   });
 
   describe("/palette - Stage 13B: Pronouns and other Multi Gender Nouns: Further tests.", () => {
@@ -2203,7 +2252,6 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           pleaseDontSpecify: true,
-          pleaseDontDecantMGNs: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "109a doc was writing p",
@@ -2241,7 +2289,6 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           pleaseDontSpecify: true,
-          pleaseDontDecantMGNs: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "109c docs were writing p",
@@ -2279,8 +2326,6 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage,
-          pleaseDontSpecifyPronounGender: true,
-          pleaseDontDecantMGNs: true,
           pleaseDontSpecify: true,
           useDummy: true,
           answerLanguage,
@@ -2318,8 +2363,6 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage,
-          pleaseDontSpecifyPronounGender: true,
-          pleaseDontDecantMGNs: true,
           pleaseDontSpecify: true,
           useDummy: true,
           answerLanguage,

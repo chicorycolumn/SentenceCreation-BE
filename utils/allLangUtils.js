@@ -344,6 +344,8 @@ exports.convertMetaFeatures = (sourceObjectArray, currentLanguage, objType) => {
 
 exports.specifyMGNs = (questionOutputArr, currentLanguage) => {
   console.log("[1;35m " + "------------specifyMGNs" + "[0m");
+  console.log("At the start, questionOutputArr is:");
+  gpUtils.consoleLogObjectAtTwoLevels(questionOutputArr);
 
   questionOutputArr.forEach((outputUnit) => {
     Object.keys(refObj.metaFeatures[currentLanguage]).forEach((featureKey) => {
