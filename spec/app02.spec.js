@@ -45,6 +45,10 @@ describe("/api", () => {
             "My mamy naszą cebulę.",
             "Ja mam moje cebule.",
             "My mamy nasze cebule.",
+            "Mam moją cebulę.",
+            "Mamy naszą cebulę.",
+            "Mam moje cebule.",
+            "Mamy nasze cebule.",
           ]).to.include(res.body.questionSentenceArr[0]);
         });
     });
@@ -72,8 +76,7 @@ describe("/api", () => {
           ]).to.include(res.body.questionSentenceArr[0]);
         });
     });
-    //octavia
-    xit("#pal14-01c GET 200 YES: ENG to POL. I have my onion. Clarifier for 'my' should NOT be present.", () => {
+    it("#pal14-01c GET 200 YES: ENG to POL. I have my onion. Clarifier for 'my' should NOT be present.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -88,10 +91,22 @@ describe("/api", () => {
         .expect(200)
         .then((res) => {
           let ref = [
-            { ENG: "I have my onion.", POL: ["Ja mam moją cebulę."] },
-            { ENG: "We have our onion.", POL: ["My mamy naszą cebulę."] },
-            { ENG: "I have my onions.", POL: ["Ja mam moje cebule."] },
-            { ENG: "We have our onions.", POL: ["My mamy nasze cebule."] },
+            {
+              ENG: "I have my onion.",
+              POL: ["Ja mam moją cebulę.", "Mam moją cebulę."],
+            },
+            {
+              ENG: "We have our onion.",
+              POL: ["My mamy naszą cebulę.", "Mamy naszą cebulę."],
+            },
+            {
+              ENG: "I have my onions.",
+              POL: ["Ja mam moje cebule.", "Mam moje cebule."],
+            },
+            {
+              ENG: "We have our onions.",
+              POL: ["My mamy nasze cebule.", "Mamy nasze cebule."],
+            },
           ];
           testingUtils.checkTranslationsOfGivenRef(
             res,
@@ -235,7 +250,34 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal14-03z GET 200 YES: ENG only. My father gave me his book.", () => {
+    it("#pal14-03a GET 200 YES: POL. My father gave me his book.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          // answerLanguage,
+          sentenceFormulaSymbol: "113a my father gave me his book",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+
+          expect([
+            "Mój ojciec dał mi jego książkę.",
+            "Moja matka dała mi jej książkę.",
+            "Nasz ojciec dał nam jego książkę.",
+            "Nasza matka dała nam jej książkę.",
+            "Moi ojcowie dali mi ich książkę.",
+            "Moje matki dały mi ich książkę.",
+            "Nasi ojcowie dali nam ich książkę.",
+            "Nasze matki dały nam ich książkę.",
+          ]).to.include(res.body.questionSentenceArr[0]);
+        });
+    });
+    it("#pal14-03b GET 200 YES: ENG. My father gave me his book.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -262,7 +304,7 @@ describe("/api", () => {
           ]).to.include(res.body.questionSentenceArr[0]);
         });
     });
-    it("#pal14-03a GET 200 YES: ENG to POL. My father gave me his book.", () => {
+    it("#pal14-03c GET 200 YES: ENG to POL. My father gave me his book.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -317,7 +359,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal14-03b GET 200 YES: POL to ENG. My father gave me his book.", () => {
+    it("#pal14-03d GET 200 YES: POL to ENG. My father gave me his book.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -404,35 +446,6 @@ describe("/api", () => {
           );
         });
     });
-  });
-
-  describe("/palette - Stage 13C: Pronouns and other Multi Gender Nouns: Annotation tests (post Meta-Deca Overhaul).", () => {
-    // it("#pal13C-01a GET 200 YES: Specifiers not requested. ENG to POL. I am.", () => {
-    //   const questionLanguage = "ENG";
-    //   const answerLanguage = "POL";
-    //   return request(app)
-    //     .get("/api/palette")
-    //     .send({
-    //
-    //
-    //       questionLanguage,
-    //       answerLanguage,
-    //       sentenceFormulaSymbol: "111a I am",
-    //     })
-    //     .expect(200)
-    //     .then((res) => {
-    //       let ref = [
-    //         { ENG: "I am.", POL: ["Jestem.", "Ja jestem."] },
-    //         { ENG: "We are.", POL: ["Jesteśmy.", "My jesteśmy."] },
-    //       ];
-    //       testingUtils.checkTranslationsOfGivenRef(
-    //         res,
-    //         ref,
-    //         questionLanguage,
-    //         answerLanguage
-    //       );
-    //     });
-    // });
   });
 
   describe("/palette - Stage 13B: Pronouns and other Multi Gender Nouns: Further tests.", () => {

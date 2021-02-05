@@ -1193,4 +1193,63 @@ exports.sentenceFormulasBank = [
     ],
     additionalOrders: [],
   },
+  {
+    sentenceFormulaSymbol: "114 doctor gave me her book",
+    sentenceFormulaId: "POL-00-114",
+    translations: { ENG: ["ENG-00-114"] },
+    sentenceStructure: [
+      //I, my father, gave me his book.
+      {
+        chunkId: "pro-1-invisible-I",
+        wordtype: "pronoun",
+        // form: ["pronoun"],
+        specificLemmas: ["PERSONAL"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "nou-1-Doctor",
+        wordtype: "noun",
+        andTags: ["person"],
+        gcase: ["nom"],
+        specificLemmas: ["lekarz", "lekarka"],
+        // number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-Gave",
+        agreeWith: "nou-1-Doctor",
+        wordtype: "verb",
+        specificLemmas: ["dawać", "dać"],
+        tenseDescription: ["past pf"],
+      },
+      {
+        chunkId: "pro-3-Me",
+        wordtype: "pronoun",
+        agreeWith: "pro-1-invisible-I",
+        gcase: ["dat"],
+        importantFeatures: ["gcase"],
+        // form: ["pronoun"],
+        specificLemmas: ["PERSONAL"],
+      },
+      {
+        chunkId: "pro-4-Her",
+        wordtype: "pronoun",
+        form: ["determiner"],
+        specificLemmas: ["POSSESSIVE"],
+        postHocAgreeWithPrimary: "nou-1-Doctor",
+        postHocAgreeWithSecondary: "nou-2-Book",
+      },
+      {
+        chunkId: "nou-2-Book",
+        wordtype: "noun",
+        specificLemmas: ["książka"],
+        gcase: ["acc"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [
+      ["nou-1-Father", "ver-1-Gave", "pro-3-Us", "pro-4-His", "nou-2-Book"],
+    ],
+    additionalOrders: [],
+  },
 ];

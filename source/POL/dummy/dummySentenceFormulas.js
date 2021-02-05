@@ -1451,7 +1451,7 @@ exports.dummySentenceFormulasBank = [
       },
     ],
     primaryOrders: [["pro-1", "ver-1", "pro-2", "nou-1"]],
-    additionalOrders: [],
+    additionalOrders: [["ver-1", "pro-2", "nou-1"]],
   },
   {
     sentenceFormulaSymbol: "dummy51a",
