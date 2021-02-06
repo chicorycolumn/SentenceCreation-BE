@@ -1213,7 +1213,7 @@ exports.sentenceFormulasBank = [
         andTags: ["person"],
         gcase: ["nom"],
         specificLemmas: ["lekarz", "lekarka"],
-        number: ["singular"],
+        // number: ["singular"],
       },
       {
         chunkId: "ver-1-Gave",

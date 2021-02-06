@@ -342,15 +342,16 @@ exports.convertMetaFeatures = (sourceObjectArray, currentLanguage, objType) => {
   // gpUtils.consoleLogPurple("/convertMetaFeatures");
 };
 
-exports.specifyMGNs = (questionOutputArr, currentLanguage) => {
-  console.log("[1;35m " + "------------specifyMGNs" + "[0m");
+exports.decantMGNsInOutputArray = (questionOutputArr, currentLanguage) => {
+  console.log("[1;35m " + "------------decantMGNsInOutputArray" + "[0m");
   console.log("At the start, questionOutputArr is:");
   gpUtils.consoleLogObjectAtTwoLevels(questionOutputArr);
 
   questionOutputArr.forEach((outputUnit) => {
+    let { structureChunk, selectedLemmaObject } = outputUnit;
+
     Object.keys(refObj.metaFeatures[currentLanguage]).forEach((featureKey) => {
       let metaFeatureRef = refObj.metaFeatures[currentLanguage][featureKey];
-      let { structureChunk, selectedLemmaObject } = outputUnit;
 
       if (structureChunk[featureKey]) {
         let featureValuesFromStChAndLObj = [...structureChunk[featureKey]];
@@ -392,5 +393,74 @@ exports.specifyMGNs = (questionOutputArr, currentLanguage) => {
     });
   });
 
-  console.log("[1;35m " + "/specifyMGNs" + "[0m");
+  console.log("[1;35m " + "/decantMGNsInOutputArray" + "[0m");
+};
+
+exports.decantMGNsBeforeOutputArray = (
+  structureChunk,
+  selectedLemmaObject,
+  currentLanguage
+) => {
+  if (
+    !structureChunk["gender"] &&
+    refObj
+      .validFeaturesOfStructureChunkWordtype(currentLanguage, structureChunk)
+      .includes("gender")
+  ) {
+    structureChunk["gender"] = [];
+  }
+
+  console.log("[1;35m " + "------------decantMGNsBeforeOutputArray" + "[0m");
+  console.log("At the start, structureChunk is:", structureChunk);
+  console.log("At the start, selectedLemmaObject is:", selectedLemmaObject);
+
+  Object.keys(refObj.metaFeatures[currentLanguage]).forEach((featureKey) => {
+    let metaFeatureRef = refObj.metaFeatures[currentLanguage][featureKey];
+
+    console.log("Clause 0", { featureKey, metaFeatureRef });
+
+    //if gender is a valid feature, add it if not there
+
+    if (structureChunk[featureKey]) {
+      console.log("Clause 1", { featureKey });
+      let featureValuesFromStChAndLObj = [...structureChunk[featureKey]];
+      if (selectedLemmaObject[featureKey]) {
+        featureValuesFromStChAndLObj.push(selectedLemmaObject[featureKey]);
+      }
+
+      let selectedMetaFeature;
+
+      if (
+        featureValuesFromStChAndLObj.some((featureValue) => {
+          if (
+            Object.keys(metaFeatureRef)
+              .map((metaFeature) => `${metaFeature}_selector`)
+              .includes(featureValue)
+          ) {
+            selectedMetaFeature = featureValue;
+            return true;
+          }
+        })
+      ) {
+        console.log("Clause 2", { selectedMetaFeature });
+        let adjustedFeatureValueArr = [
+          ...metaFeatureRef[selectedMetaFeature.split("_")[0]],
+        ];
+
+        console.log("p20d", { adjustedFeatureValueArr });
+
+        structureChunk[featureKey] = [
+          gpUtils.selectRandom(adjustedFeatureValueArr),
+        ];
+
+        console.log("p20e", {
+          "structureChunk[featureKey]": structureChunk[featureKey],
+        });
+      }
+    }
+
+    console.log("p20f In the end, structureChunk is:", structureChunk);
+  });
+
+  console.log("[1;35m " + "/decantMGNsBeforeOutputArray" + "[0m");
 };

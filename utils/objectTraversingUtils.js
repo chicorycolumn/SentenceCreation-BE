@@ -2,7 +2,7 @@ const gpUtils = require("./generalPurposeUtils.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
 const refObj = require("./referenceObjects.js");
 const otUtils = require("./objectTraversingUtils.js");
-const { merge } = require("../app.js");
+const allLangUtils = require("./allLangUtils.js");
 
 exports.findMatchingLemmaObjectThenWord = (
   structureChunk,
@@ -12,6 +12,7 @@ exports.findMatchingLemmaObjectThenWord = (
   questionLanguage,
   multipleMode,
   outputArray,
+  pleaseDontSpecify,
   pleaseDontSpecifyPronounGender
 ) => {
   console.log(
@@ -447,6 +448,19 @@ exports.findMatchingLemmaObjectThenWord = (
       });
     } else {
       let selectedLemmaObject = gpUtils.selectRandom(matchesCopy);
+
+      //Beta:
+      //If slObj is MGN
+      //and if !doNotSpecify
+      //then decant the MGN here instead of in palette.
+
+      if (!pleaseDontSpecify) {
+        allLangUtils.decantMGNsBeforeOutputArray(
+          structureChunk,
+          selectedLemmaObject,
+          currentLanguage
+        );
+      }
 
       console.log("If-PW selectedLemmaObject for " + structureChunk.chunkId);
       console.log(selectedLemmaObject.inflections);

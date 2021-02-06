@@ -762,7 +762,7 @@ exports.sentenceFormulasBank = [
         andTags: ["person"],
         specificLemmas: ["doctor"],
         gcase: ["nom"],
-        number: ["singular"],
+        // number: ["singular"],
       },
       {
         chunkId: "ver-1-Gave",

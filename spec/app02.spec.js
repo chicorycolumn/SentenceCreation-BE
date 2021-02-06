@@ -23,7 +23,7 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe("/palette - Stage 14: Possessive pronouns.", () => {
+  describe.only("/palette - Stage 14: Possessive pronouns.", () => {
     it("#pal14-01a GET 200 YES: POL. I have my onion.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
@@ -453,7 +453,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          // pleaseDontSpecify: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "114 doctor gave me her book",

@@ -349,26 +349,30 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
 
   let doneSelectors = [];
 
+  let lemmaObjectIsMGN = /_/.test(selectedLemmaObject.gender);
+
   //STEP ZERO: Decisive Decant
   //Remove gender values on stCh if drillPath doesn't include gender (ie is infinitive or a participle, say).
-  if (drillPath && !drillPath.map((arr) => arr[0]).includes("gender")) {
+  //But if lObj is MGN, don't do this.
+  if (
+    !lemmaObjectIsMGN &&
+    drillPath &&
+    !drillPath.map((arr) => arr[0]).includes("gender")
+  ) {
     structureChunk.gender = [];
   }
 
   //STEP ONE: Update stCh gender with that of lObj.
   if (selectedLemmaObject.gender) {
-    if (!/_/.test(selectedLemmaObject.gender)) {
-      //If lObj has non-meta-gender, then update stCh with lObj gender.
-
-      console.log("v23 Clause R: lObj does not have metaSelector gender");
-      structureChunk.gender = [selectedLemmaObject.gender];
-      doneSelectors.push("gender");
-    } else {
+    if (lemmaObjectIsMGN) {
       //If lObj does have metagender, set stCh gender to converted values or filter stCh's gender by them.
 
       console.log(
         `v23 Clause S: lObj ${selectedLemmaObject.lemma} has metaSelector gender`
       );
+      console.log(structureChunk);
+      console.log("[1;33m " + `v23-S start ${structureChunk.gender}` + "[0m");
+
       let metaGender = selectedLemmaObject.gender.split("_")[0];
 
       let metaGenderConverted =
@@ -380,8 +384,15 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
         );
       } else {
         structureChunk.gender = metaGenderConverted.slice(0);
-        doneSelectors.push("gender");
       }
+      doneSelectors.push("gender");
+      console.log("[1;33m " + `v23-S end ${structureChunk.gender}` + "[0m");
+    } else {
+      //If lObj has non-meta-gender, then update stCh with lObj gender.
+
+      console.log("v23 Clause R: lObj does not have metaSelector gender");
+      structureChunk.gender = [selectedLemmaObject.gender];
+      doneSelectors.push("gender");
     }
   }
 
@@ -405,6 +416,8 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
     refObj.lemmaObjectFeatures[currentLanguage].selectors[
       structureChunk.wordtype
     ];
+
+  console.log({ doneSelectors });
 
   if (selectors) {
     selectors

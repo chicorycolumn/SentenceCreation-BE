@@ -104,6 +104,7 @@ exports.processSentenceFormula = (
   sentenceFormula,
   words,
   multipleMode,
+  pleaseDontSpecify,
   pleaseDontSpecifyPronounGender
 ) => {
   let { currentLanguage, previousQuestionLanguage } = languagesObj;
@@ -162,6 +163,7 @@ exports.processSentenceFormula = (
       previousQuestionLanguage,
       multipleMode,
       null,
+      pleaseDontSpecify,
       pleaseDontSpecifyPronounGender
     );
 
@@ -243,6 +245,7 @@ exports.processSentenceFormula = (
             previousQuestionLanguage,
             multipleMode,
             null,
+            pleaseDontSpecify,
             pleaseDontSpecifyPronounGender
           );
 
@@ -328,6 +331,7 @@ exports.processSentenceFormula = (
       previousQuestionLanguage,
       multipleMode,
       null,
+      pleaseDontSpecify,
       pleaseDontSpecifyPronounGender
     );
 
@@ -378,6 +382,7 @@ exports.processSentenceFormula = (
         previousQuestionLanguage,
         multipleMode,
         outputArray,
+        pleaseDontSpecify,
         pleaseDontSpecifyPronounGender
       );
 

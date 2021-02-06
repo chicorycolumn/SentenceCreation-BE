@@ -5,7 +5,6 @@ const refObj = require("../utils/referenceObjects.js");
 const scUtils = require("../utils/sentenceCreatingUtils.js");
 const aaUtils = require("../utils/auxiliaryAttributeUtils.js");
 const frUtils = require("../utils/formattingResponseUtils.js");
-const allLangUtils = require("../utils/allLangUtils.js");
 
 exports.fetchPalette = (req) => {
   let multipleMode = false;
@@ -18,6 +17,10 @@ exports.fetchPalette = (req) => {
     answerLanguage,
     pleaseDontSpecify,
   } = req.body;
+
+  //Gamma
+  //If sentenceStructure has a pronoun that agrees with a MGN,
+  //enforce pleaseDontSpecify to be FALSE
 
   let pleaseDontDecantMGNs = pleaseDontSpecify;
   let pleaseDontSpecifyPronounGender = pleaseDontSpecify;
@@ -35,11 +38,13 @@ exports.fetchPalette = (req) => {
 
   let questionResponseObj;
   let questionSentenceFormula = sentenceFormula;
+
   let questionSentenceData = scUtils.processSentenceFormula(
     { currentLanguage: questionLanguage },
     questionSentenceFormula,
     words,
     multipleMode,
+    pleaseDontSpecify,
     pleaseDontSpecifyPronounGender
   );
 
@@ -91,24 +96,29 @@ exports.fetchPalette = (req) => {
           questionSentenceData.arrayOfOutputArrays.length
       );
     }
-
-    //Decisive Decant
-    questionSentenceData.questionOutputArr =
-      questionSentenceData.arrayOfOutputArrays[0];
-    delete questionSentenceData.arrayOfOutputArrays;
   }
+
+  //Decisive Decant
+  questionSentenceData.questionOutputArr =
+    questionSentenceData.arrayOfOutputArrays[0];
+  delete questionSentenceData.arrayOfOutputArrays;
 
   ///////////////////////////////////////////////kp Decisive Decant
   questionSentenceData.questionOutputArr.forEach((outputUnit, index) => {
     let { structureChunk, selectedLemmaObject } = outputUnit;
 
-    console.log(
-      "[1;35m " + `a10 stCh ${structureChunk.chunkId} at index ${index}` + "[0m"
-    );
-    console.log("[1;35m " + `a10 slObj ${selectedLemmaObject.lemma}` + "[0m");
-    console.log(" ");
+    if ("console") {
+      console.log(
+        "[1;35m " + `a10 stCh ${structureChunk.chunkId} at index ${index}` + "[0m"
+      );
+      console.log("[1;35m " + `a10 slObj ${selectedLemmaObject.lemma}` + "[0m");
+      console.log(" ");
+    }
 
-    if (selectedLemmaObject.gender === "allPersonalSingularGenders_selector") {
+    if (
+      pleaseDontSpecify &&
+      selectedLemmaObject.gender === "allPersonalSingularGenders_selector"
+    ) {
       console.log(
         "[1;35m " +
           `Blanking structureChunk.gender of ${structureChunk.chunkId} just before Midpoint, because slObj ${selectedLemmaObject.lemma} is multi gender.` +
@@ -118,37 +128,31 @@ exports.fetchPalette = (req) => {
       structureChunk.gender = [];
     }
 
-    Object.keys(structureChunk).forEach((featureKey) => {
-      let featureValue = structureChunk[featureKey];
+    if ("decisive decant check") {
+      Object.keys(structureChunk).forEach((featureKey) => {
+        let featureValue = structureChunk[featureKey];
 
-      let obj = {};
-      obj[featureKey] = featureValue;
-      // console.log(obj);
-
-      if (
-        ![
-          // "gender",
-          "andTags",
-          "orTags",
-          "specificIds",
-          "specificLemmas",
-        ].includes(featureKey) &&
-        Array.isArray(featureValue) &&
-        featureValue.length > 1
-      ) {
-        console.log("[1;31m " + `#ERR a11 structureChunk is:` + "[0m", structureChunk);
-        // gpUtils.throw("#ERR a11 featureKey: " + featureKey);
-      }
-    });
+        if (
+          !["andTags", "orTags", "specificIds", "specificLemmas"].includes(
+            featureKey
+          ) &&
+          Array.isArray(featureValue) &&
+          featureValue.length > 1
+        ) {
+          console.log("[1;31m " + `#ERR a11 structureChunk is:` + "[0m", structureChunk);
+          gpUtils.throw("#ERR a11 featureKey: " + featureKey);
+        }
+      });
+    }
   });
 
   ///////////////////////////////////////////////kp Decant MGNs
-  if (!pleaseDontDecantMGNs) {
-    allLangUtils.specifyMGNs(
-      questionSentenceData.questionOutputArr,
-      questionLanguage
-    );
-  }
+  // if (!pleaseDontDecantMGNs) {
+  //   allLangUtils.decantMGNsInOutputArray(
+  //     questionSentenceData.questionOutputArr,
+  //     questionLanguage
+  //   );
+  // }
 
   if (true && "console") {
     console.log(
@@ -184,7 +188,7 @@ exports.fetchPalette = (req) => {
     gpUtils.consoleLogAestheticBorder(4);
   }
 
-  gpUtils.throw("Cease.");
+  // gpUtils.throw("Cease.");
 
   if (answerLanguage) {
     multipleMode = true;
@@ -279,6 +283,7 @@ exports.fetchPalette = (req) => {
         answerSentenceFormula,
         words,
         multipleMode,
+        pleaseDontSpecify,
         pleaseDontSpecifyPronounGender
       );
 

@@ -363,6 +363,37 @@ exports.annotationToPlainspeakRef = {
   },
 };
 
+exports.validFeaturesOfStructureChunkWordtype = (
+  currentLanguage,
+  structureChunk,
+  featureTypes
+) => {
+  if (!featureTypes || !featureTypes.length) {
+    featureTypes = ["selectors", "hybridSelectors", "inflectionChains"];
+  }
+
+  let featuresRef = refObj.lemmaObjectFeatures[currentLanguage];
+
+  let validFeatures = [];
+
+  featureTypes.forEach((featureType) => {
+    let additionalValidFeatures =
+      featuresRef[featureType][structureChunk.wordtype];
+
+    if (additionalValidFeatures) {
+      if (!Array.isArray(additionalValidFeatures)) {
+        gpUtils.throw(
+          "additionalValidFeatures in isValidFeatureOfStructureChunkWordtype fxn should have been array."
+        );
+      }
+
+      validFeatures = [...validFeatures, ...additionalValidFeatures];
+    }
+  });
+
+  return validFeatures;
+};
+
 exports.lemmaObjectFeatures = {
   POL: {
     selectors: {
