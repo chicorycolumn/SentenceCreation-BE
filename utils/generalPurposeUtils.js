@@ -573,3 +573,7 @@ exports.throw = (msg) => {
   console.log("[1;31m " + "!   !   !   !   !   !   !   !   !   !" + "[0m");
   throw msg;
 };
+
+exports.isTerminusObject = (selectedWord) => {
+  return gpUtils.isKeyValueTypeObject(selectedWord) && selectedWord.isTerminus;
+};

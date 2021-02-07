@@ -1060,4 +1060,44 @@ exports.dummySentenceFormulasBank = [
     ],
     primaryOrders: [["fix-1", "ver-1"]],
   },
+  {
+    sentenceFormulaSymbol: "dummy55",
+    sentenceFormulaId: "ENG-dummy55",
+    translations: { POL: ["POL-dummy55"] },
+    sentenceStructure: [
+      {
+        chunkId: "pre-1",
+        wordtype: "preposition",
+        specificLemmas: ["with"],
+        connectedTo: "nou-1",
+      },
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        andTags: ["edible", "edible0"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [],
+  },
+  {
+    sentenceFormulaSymbol: "dummy56",
+    sentenceFormulaId: "ENG-dummy56",
+    translations: { POL: ["POL-dummy56"] },
+    sentenceStructure: [
+      {
+        chunkId: "art-1",
+        wordtype: "article",
+        form: ["indefinite"],
+        connectedTo: "nou-1",
+      },
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        andTags: ["edible", "edible0"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [],
+  },
 ];

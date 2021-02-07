@@ -23,7 +23,282 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe.only("/palette - Stage 14: Possessive pronouns.", () => {
+  describe.only("/palette - Stage 15: Prepositions and Articles.", () => {
+    it.only("#pal15-01a GET 200 YES: POL to ENG. Indefinite article.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy56",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["A tomato."],
+              POL: "Pomidor.",
+            },
+            {
+              ENG: ["An onion."],
+              POL: "Cebula.",
+            },
+            {
+              ENG: ["An apple."],
+              POL: "Jabłko.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it.only("#pal15-01b GET 200 YES: ENG to POL. Indefinite article.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy56",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "A tomato.",
+              POL: ["Pomidor."],
+            },
+            {
+              ENG: "An onion.",
+              POL: ["Cebula."],
+            },
+            {
+              ENG: "An apple.",
+              POL: ["Jabłko."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal15-02a GET 200 YES: POL to ENG. Either article.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy56a",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["A woman.", "The woman."],
+              POL: "Kobieta.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal15-02b GET 200 YES: ENG to POL. Either article.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy56a",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "A woman.",
+              POL: ["Kobieta."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal15-03a GET 200 YES: POL to ENG. Preposition 'with'. Articles for singular.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy55",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["With an apple.", "With the apple."],
+              POL: "Z jabłkiem.",
+            },
+            {
+              ENG: ["With a tomato.", "With the tomato."],
+              POL: "Z pomidorem.",
+            },
+            {
+              ENG: ["With an onion.", "With the onion."],
+              POL: "Z cebulą.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal15-03b GET 200 YES: POL to ENG. Preposition 'with'. Articles for plural.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy55a",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["With apples.", "With the apples."],
+              POL: "Z jabłkami.",
+            },
+            {
+              ENG: ["With tomatoes.", "With the tomatoes."],
+              POL: "Z pomidorami.",
+            },
+            {
+              ENG: ["With onions.", "With the onions."],
+              POL: "Z cebulami.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal15-04a GET 200 YES: ENG to POL. Preposition 'with'. Articles for singular.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy55",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "With an apple.",
+              POL: ["Z jabłkiem."],
+            },
+            {
+              ENG: "With a tomato.",
+              POL: ["Z pomidorem."],
+            },
+            {
+              ENG: "With an onion.",
+              POL: ["Z cebulą."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal15-04b GET 200 YES: ENG to POL. Preposition 'with'. Articles for plural.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy55a",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "With apples.",
+              POL: ["Z jabłkami."],
+            },
+            {
+              ENG: "With tomatoes.",
+              POL: ["Z pomidorami."],
+            },
+            {
+              ENG: "With onions.",
+              POL: ["Z cebulami."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+  });
+
+  describe("/palette - Stage 14: Possessive pronouns.", () => {
     it("#pal14-01a GET 200 YES: POL. I have my onion.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
@@ -446,13 +721,14 @@ describe("/api", () => {
           );
         });
     });
-    it.only("#pal14-04a GET 200 YES: ENG to POL. SPECIFIED. The doctor gave me her book.", () => {
+    it("#pal14-04a GET 200 YES: ENG to POL. SPECIFIED. The doctor gave me her book.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
         .send({
+          pleaseDontSpecify: false,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "114 doctor gave me her book",
@@ -489,11 +765,50 @@ describe("/api", () => {
           );
         });
     });
-    //If an ENG MGN has any pronouns that agree with it,
-    //then doNotSpecify must be barred from having effect.
-    //Otherwise we get ENG Q: "The doctor gave me his book."
-    //             and POL A: ["Lekarz dał.", "Lekarka dała."]
-    //which is WRONG.
+    it("#pal14-04b GET 200 YES: ENG to POL. (not allowed to be unspecified, should be identical result to previous test). The doctor gave me her book.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "114 doctor gave me her book",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "The doctor (female) gave me her book.",
+              POL: ["Lekarka dała mi jej książkę."],
+            },
+            {
+              ENG: "The doctor (male) gave me his book.",
+              POL: ["Lekarz dał mi jego książkę."],
+            },
+            {
+              ENG: "The doctors (mixed) gave me their book.",
+              POL: ["Lekarze dali mi ich książkę."],
+            },
+            {
+              ENG: "The doctors (males) gave me their book.",
+              POL: ["Lekarze dali mi ich książkę."],
+            },
+            {
+              ENG: "The doctors (females) gave me their book.",
+              POL: ["Lekarki dały mi ich książkę."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
   });
 
   describe("/palette - Stage 13B: Pronouns and other Multi Gender Nouns: Further tests.", () => {

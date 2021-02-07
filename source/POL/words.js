@@ -91,7 +91,6 @@ let nounSet = [
       },
     },
   },
-
   // {
   //   //links
   //   translations: { ENG: ["boy", "boyfriend", "guy"] },
@@ -113,7 +112,11 @@ let nounSet = [
   //       loc: "chłopaku",
   //     },
   //     plural: {
-  //       nom: ["chłopacy", "chłopaki"],
+  //       nom: {
+  // isTerminus: true,
+  // normal: "chłopacy",
+  // additionalNormal: "chłopaki",
+  //        },
   //       gen: "chłopaków",
   //       dat: "chłopakom",
   //       acc: "chłopaków",
@@ -209,6 +212,40 @@ let nounSet = [
         acc: "jabłka",
         ins: "jabłkami",
         loc: "jabłkach",
+      },
+    },
+  },
+  {
+    //links
+    translations: { POL: ["pomidor"], ENG: ["tomato"] },
+    tags: ["inanimate", "edible0", "holdable", "concrete"],
+    //selectors
+    lemma: "pomidor",
+    id: "pol-nou-016",
+    gender: "m2",
+    //notes
+
+    //inflections
+    inflections: {
+      singular: {
+        nom: "pomidor",
+        gen: "pomidora",
+        dat: "pomidorowi",
+        acc: {
+          isTerminus: true,
+          normal: "pomidor",
+          additionalNormal: "pomidora",
+        },
+        ins: "pomidorem",
+        loc: "pomidorze",
+      },
+      plural: {
+        nom: "pomidory",
+        gen: "pomidorów",
+        dat: "pomidorom",
+        acc: "pomidory",
+        ins: "pomidorami",
+        loc: "pomidorach",
       },
     },
   },
@@ -658,6 +695,26 @@ let adjectiveSet = [
 //If you mark a key true, or give it a value      it will be filled out by fillVerbInflections fxn.
 //If you mark a key false, or omit it             it will not be.
 
+let prepositionSet = [
+  {
+    //links
+    translations: { ENG: [] },
+    tags: [],
+    //selectors
+    lemma: "z",
+    id: "pol-pre-001",
+    //notes
+
+    //inflections
+    inflections: {
+      isTerminus: true,
+      normal: "z",
+      protective: "ze",
+      protectIfSubsequentStartsWithTheseRegexes: ["mn"],
+    },
+  },
+];
+
 let pronounSet = [
   {
     //links
@@ -676,7 +733,7 @@ let pronounSet = [
             m1: {
               nom: "ja",
               gen: "mnie",
-              dat: { isTerminus: true, unstressed: "mi", stressed: "mnie" },
+              dat: { isTerminus: true, normal: "mi", stressed: "mnie" },
               acc: "mnie",
               ins: "mną",
               loc: "mnie",
@@ -713,17 +770,17 @@ let pronounSet = [
           singular: {
             m1: {
               nom: "ty",
-              gen: { isTerminus: true, unstressed: "cię", stressed: "ciebie" },
-              dat: { isTerminus: true, unstressed: "ci", stressed: "tobie" },
-              acc: { isTerminus: true, unstressed: "cię", stressed: "ciebie" },
+              gen: { isTerminus: true, normal: "cię", stressed: "ciebie" },
+              dat: { isTerminus: true, normal: "ci", stressed: "tobie" },
+              acc: { isTerminus: true, normal: "cię", stressed: "ciebie" },
               ins: "tobą",
               loc: "tobie",
             },
             f: {
               nom: "ty",
-              gen: { isTerminus: true, unstressed: "cię", stressed: "ciebie" },
-              dat: { isTerminus: true, unstressed: "ci", stressed: "tobie" },
-              acc: { isTerminus: true, unstressed: "cię", stressed: "ciebie" },
+              gen: { isTerminus: true, normal: "cię", stressed: "ciebie" },
+              dat: { isTerminus: true, normal: "ci", stressed: "tobie" },
+              acc: { isTerminus: true, normal: "cię", stressed: "ciebie" },
               ins: "tobą",
               loc: "tobie",
             },
@@ -753,21 +810,21 @@ let pronounSet = [
               nom: "on",
               gen: {
                 isTerminus: true,
-                unstressed: "go",
+                normal: "go",
                 stressed: "jego",
-                postPrep: "niego",
+                postPreposition: "niego",
               },
               dat: {
                 isTerminus: true,
-                unstressed: "mu",
+                normal: "mu",
                 stressed: "jemu",
-                postPrep: "niemu",
+                postPreposition: "niemu",
               },
               acc: {
                 isTerminus: true,
-                unstressed: "go",
+                normal: "go",
                 stressed: "jego",
-                postPrep: "niego",
+                postPreposition: "niego",
               },
               ins: "nim",
               loc: "nim",
@@ -776,21 +833,21 @@ let pronounSet = [
               nom: "ona",
               gen: {
                 isTerminus: true,
-                unstressed: "jej",
+                normal: "jej",
                 stressed: "jej",
-                postPrep: "niej",
+                postPreposition: "niej",
               },
               dat: {
                 isTerminus: true,
-                unstressed: "jej",
+                normal: "jej",
                 stressed: "jej",
-                postPrep: "niej",
+                postPreposition: "niej",
               },
               acc: {
                 isTerminus: true,
-                unstressed: "ją",
+                normal: "ją",
                 stressed: "ją",
-                postPrep: "nią",
+                postPreposition: "nią",
               },
               ins: "nią",
               loc: "niej",
@@ -799,21 +856,21 @@ let pronounSet = [
               nom: "ono",
               gen: {
                 isTerminus: true,
-                unstressed: "go",
+                normal: "go",
                 stressed: "jego",
-                postPrep: "niego",
+                postPreposition: "niego",
               },
               dat: {
                 isTerminus: true,
-                unstressed: "mu",
+                normal: "mu",
                 stressed: "jemu",
-                postPrep: "niemu",
+                postPreposition: "niemu",
               },
               acc: {
                 isTerminus: true,
-                unstressed: "je",
+                normal: "je",
                 stressed: "je",
-                postPrep: "nie",
+                postPreposition: "nie",
               },
               ins: "nim",
               loc: "nim",
@@ -824,21 +881,21 @@ let pronounSet = [
               nom: "oni",
               gen: {
                 isTerminus: true,
-                unstressed: "ich",
+                normal: "ich",
                 stressed: "ich",
-                postPrep: "nich",
+                postPreposition: "nich",
               },
               dat: {
                 isTerminus: true,
-                unstressed: "im",
+                normal: "im",
                 stressed: "im",
-                postPrep: "nim",
+                postPreposition: "nim",
               },
               acc: {
                 isTerminus: true,
-                unstressed: "ich",
+                normal: "ich",
                 stressed: "ich",
-                postPrep: "nich",
+                postPreposition: "nich",
               },
               ins: "nimi",
               loc: "nich",
@@ -847,21 +904,21 @@ let pronounSet = [
               nom: "one",
               gen: {
                 isTerminus: true,
-                unstressed: "ich",
+                normal: "ich",
                 stressed: "ich",
-                postPrep: "nich",
+                postPreposition: "nich",
               },
               dat: {
                 isTerminus: true,
-                unstressed: "im",
+                normal: "im",
                 stressed: "im",
-                postPrep: "nim",
+                postPreposition: "nim",
               },
               acc: {
                 isTerminus: true,
-                unstressed: "je",
+                normal: "je",
                 stressed: "je",
-                postPrep: "nie",
+                postPreposition: "nie",
               },
               ins: "nimi",
               loc: "nich",
@@ -2240,4 +2297,5 @@ exports.wordsBank = {
   adjectiveSet,
   verbSet,
   pronounSet,
+  prepositionSet,
 };

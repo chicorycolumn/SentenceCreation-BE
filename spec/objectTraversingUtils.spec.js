@@ -352,8 +352,8 @@ describe("findObjectInNestedObject", () => {
     },
     level03: {
       1: {
-        symbol: "my house",
-        sentenceStructure: ["my", 123, "house", 456],
+        symbol: "my sharona",
+        sentenceStructure: ["my", 123, "sharona", 456],
       },
       2: {
         symbol: "my car",
@@ -386,8 +386,8 @@ describe("findObjectInNestedObject", () => {
           9: "dziewiEC",
           10: {
             1: {
-              symbol: "my house",
-              sentenceStructure: ["my", 123, "house", 456],
+              symbol: "my sharona",
+              sentenceStructure: ["my", 123, "sharona", 456],
             },
             2: {
               symbol: "my car",
@@ -431,10 +431,10 @@ describe("findObjectInNestedObject", () => {
   });
   it("#otu3.2b YES: Correctly return object from one level of nesting, finding by matching an array.", () => {
     const input1 = testObj1;
-    const input2 = { sentenceStructure: ["my", 123, "house", 456] };
+    const input2 = { sentenceStructure: ["my", 123, "sharona", 456] };
     expect(findObjectInNestedObject(input1, input2)).to.eql({
-      symbol: "my house",
-      sentenceStructure: ["my", 123, "house", 456],
+      symbol: "my sharona",
+      sentenceStructure: ["my", 123, "sharona", 456],
     });
   });
   it("#otu3.2c YES: Correctly return object from one level of nesting, finding by matching multiple values.", () => {
@@ -464,10 +464,10 @@ describe("findObjectInNestedObject", () => {
   });
   it("#otu3.3b Correctly return object from multi nesting, finding by matching an array.", () => {
     const input1 = testObj2;
-    const input2 = { sentenceStructure: ["my", 123, "house", 456] };
+    const input2 = { sentenceStructure: ["my", 123, "sharona", 456] };
     expect(findObjectInNestedObject(input1, input2)).to.eql({
-      symbol: "my house",
-      sentenceStructure: ["my", 123, "house", 456],
+      symbol: "my sharona",
+      sentenceStructure: ["my", 123, "sharona", 456],
     });
   });
   it("#otu3.3c Correctly return object from multi nesting, finding by matching multiple values.", () => {

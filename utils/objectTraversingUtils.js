@@ -449,11 +449,6 @@ exports.findMatchingLemmaObjectThenWord = (
     } else {
       let selectedLemmaObject = gpUtils.selectRandom(matchesCopy);
 
-      //Beta:
-      //If slObj is MGN
-      //and if !doNotSpecify
-      //then decant the MGN here instead of in palette.
-
       if (!pleaseDontSpecify) {
         allLangUtils.decantMGNsBeforeOutputArray(
           structureChunk,

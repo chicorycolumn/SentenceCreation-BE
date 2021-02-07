@@ -18,13 +18,6 @@ exports.fetchPalette = (req) => {
     pleaseDontSpecify,
   } = req.body;
 
-  //Gamma
-  //If sentenceStructure has a pronoun that agrees with a MGN,
-  //enforce pleaseDontSpecify to be FALSE
-
-  let pleaseDontDecantMGNs = pleaseDontSpecify;
-  let pleaseDontSpecifyPronounGender = pleaseDontSpecify;
-
   let { sentenceFormula, words } = scUtils.getMaterials(
     questionLanguage,
     sentenceFormulaId,
@@ -39,13 +32,35 @@ exports.fetchPalette = (req) => {
   let questionResponseObj;
   let questionSentenceFormula = sentenceFormula;
 
+  if (pleaseDontSpecify) {
+    //Set pleaseDontSpecify to false if 'person' noun is headNoun of any pronouns,
+    //because 'The doctor gave me his book.' must specify the MGN doctor.
+    questionSentenceFormula.sentenceStructure.forEach((potentialHeadChunk) => {
+      if (
+        pleaseDontSpecify &&
+        potentialHeadChunk.andTags &&
+        potentialHeadChunk.andTags.includes("person") &&
+        questionSentenceFormula.sentenceStructure.find(
+          (potentialDepChunk) =>
+            potentialDepChunk.wordtype === "pronoun" &&
+            potentialDepChunk.agreeWith === potentialHeadChunk.chunkId
+        )
+      ) {
+        console.log(
+          "[1;32m " + `fetchPalette setting pleaseDontSpecify to false.` + "[0m"
+        );
+        pleaseDontSpecify = false;
+      }
+    });
+  }
+
   let questionSentenceData = scUtils.processSentenceFormula(
     { currentLanguage: questionLanguage },
     questionSentenceFormula,
     words,
     multipleMode,
     pleaseDontSpecify,
-    pleaseDontSpecifyPronounGender
+    pleaseDontSpecify //pleaseDontSpecifyPronounGender
   );
 
   if ("check") {
@@ -121,7 +136,7 @@ exports.fetchPalette = (req) => {
     ) {
       console.log(
         "[1;35m " +
-          `Blanking structureChunk.gender of ${structureChunk.chunkId} just before Midpoint, because slObj ${selectedLemmaObject.lemma} is multi gender.` +
+          `Will blank structureChunk.gender of ${structureChunk.chunkId} just before Midpoint, because slObj ${selectedLemmaObject.lemma} is multi gender.` +
           "[0m"
       );
 
@@ -145,14 +160,6 @@ exports.fetchPalette = (req) => {
       });
     }
   });
-
-  ///////////////////////////////////////////////kp Decant MGNs
-  // if (!pleaseDontDecantMGNs) {
-  //   allLangUtils.decantMGNsInOutputArray(
-  //     questionSentenceData.questionOutputArr,
-  //     questionLanguage
-  //   );
-  // }
 
   if (true && "console") {
     console.log(
@@ -282,9 +289,7 @@ exports.fetchPalette = (req) => {
         },
         answerSentenceFormula,
         words,
-        multipleMode,
-        pleaseDontSpecify,
-        pleaseDontSpecifyPronounGender
+        multipleMode
       );
 
       ///////////////////////////////////////////////kp Decisive Decant parallel

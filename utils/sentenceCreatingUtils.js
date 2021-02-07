@@ -528,6 +528,11 @@ exports.buildSentenceString = (
   let producedSentences = [];
 
   if (!sentenceFormula.primaryOrders || !sentenceFormula.primaryOrders.length) {
+    console.log(
+      "[1;31m " +
+        `No primaryOrders were specified for ${sentenceFormula.sentenceFormulaSymbol} with ID ${sentenceFormula.sentenceFormulaId}. Using default order that structureChunks were defined in.` +
+        "[0m"
+    );
     console.log("buildSentenceString c13 gonna push unorderedArr Clause 0");
     outputArrays.push(unorderedArr);
   } else {
@@ -574,7 +579,8 @@ exports.buildSentenceString = (
   outputArrays.forEach((outputArr) => {
     let arrOfFinalSelectedWordsArrs = scUtils.selectWordVersions(
       outputArr,
-      currentLanguage
+      currentLanguage,
+      multipleMode
     );
 
     arrOfFinalSelectedWordsArrs.forEach((finalSelectedWordsArr) => {
@@ -588,27 +594,107 @@ exports.buildSentenceString = (
   return producedSentences;
 };
 
-exports.selectWordVersions = (outputArr) => {
+exports.selectWordVersions = (
+  orderedOutputArr,
+  currentLanguage,
+  multipleMode
+) => {
   let arrOfSelectedWordsArr = [];
 
   let selectedWordsArr = [];
 
-  outputArr.forEach((outputUnit) => {
-    let { selectedWord } = outputUnit;
+  orderedOutputArr.forEach((outputUnit, index) => {
+    let previousOutputUnit = orderedOutputArr[index - 1];
+    let subsequentOutputUnit = orderedOutputArr[index + 1];
+    let { selectedWord, structureChunk } = outputUnit;
 
     if (typeof selectedWord === "string") {
       selectedWordsArr.push(selectedWord);
-    } else if (
-      gpUtils.isKeyValueTypeObject(selectedWord) &&
-      selectedWord.isTerminus
-    ) {
+    } else if (gpUtils.isTerminusObject(selectedWord)) {
       //Epsilon: This is where we need to detect things...
 
-      //ENG
-      //if (outputUnit.structureChunk.wordtype === "article" && outputUnit.structureChunk.form === "indefinite"){
-      //  Check if following selectedWord begins with vowel OR lObj.beginWithVowelSound === true
-      //  and in that case, choose {preConsonant: "a", preVowel: "an", isTerminus: true} accordingly.
-      //}
+      //Move to engUtils.selectWordVersions()
+      if (currentLanguage === "ENG") {
+        // >>> Indefinite Article
+        if (
+          structureChunk.wordtype === "article" &&
+          structureChunk.form === "indefinite"
+        ) {
+          if (!subsequentOutputUnit) {
+            gpUtils.throw(
+              "Shouldn't there be an outputUnit subsequent to this ENG indefinite article?"
+            );
+          }
+
+          if (
+            !(
+              gpUtils.isTerminusObject(subsequentOutputUnit.selectedWord) &&
+              subsequentOutputUnit.selectedWord
+                .surprisinglyStartsWithConsonantSound
+            ) &&
+            ((gpUtils.isTerminusObject(subsequentOutputUnit.selectedWord) &&
+              subsequentOutputUnit.selectedWord
+                .surprisinglyStartsWithVowelSound) ||
+              (typeof subsequentOutputUnit.selectedWord === "string" &&
+                /aeiou/.test(subsequentOutputUnit.selectedWord[0])))
+          ) {
+            selectedWordsArr.push(selectedWord.protective);
+            return;
+          }
+        }
+      }
+
+      //Move to polUtils.selectWordVersions()
+      if (currentLanguage === "POL") {
+        if (
+          gpUtils.getWordtypeFromLemmaObject(selectedLemmaObject) === "pronoun"
+        ) {
+          // >>> Post preposition pronoun
+          if (
+            previousOutputUnit &&
+            gpUtils.getWordtypeFromLemmaObject(
+              previousOutputUnit.selectedLemmaObject
+            ) === "preposition"
+          ) {
+            selectedWordsArr.push(selectedWord.postPreposition);
+            return;
+          }
+        }
+
+        if (
+          gpUtils.getWordtypeFromLemmaObject(selectedLemmaObject) ===
+          "preposition"
+        ) {
+          if (!subsequentOutputUnit) {
+            gpUtils.throw(
+              "Shouldn't there be an outputUnit subsequent to this POL preposition?"
+            );
+          }
+
+          if (
+            selectedLemmaObject.protectIfSubsequentStartsWithTheseRegexes &&
+            selectedLemmaObject.protectIfSubsequentStartsWithTheseRegexes.some(
+              (prefix) => {
+                let prefixRegex = RegExp("^" + prefix);
+                return prefixRegex.test(subsequentOutputUnit.selectedWord);
+              }
+            )
+          ) {
+            selectedWordsArr.push(selectedWord.protective);
+            return;
+          }
+        }
+
+        selectedWordsArr.push(selectedWord.normal);
+        return;
+      }
+
+      function pushSelectedWordToArray(
+        key,
+        selectedWord,
+        selectedWordsArr,
+        multipleMode
+      ) {}
 
       //POL
       //if("pronoun" && isTerminus){
@@ -619,8 +705,6 @@ exports.selectWordVersions = (outputArr) => {
       //  Check the thing where "w" and "z" should become "we" and "za".
       //  we wschodzie...
       //}
-
-      selectedWordsArr.push(selectedWord.unstressed);
     } else {
       gpUtils.throw(
         "#ERR --------------------------------------> I expected either a string or a terminus object for this selectedWord."

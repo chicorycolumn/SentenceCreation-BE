@@ -1693,4 +1693,39 @@ exports.dummySentenceFormulasBank = [
     ],
     primaryOrders: [],
   },
+  {
+    sentenceFormulaSymbol: "dummy55",
+    sentenceFormulaId: "POL-dummy55",
+    translations: { ENG: ["ENG-dummy55"] },
+    sentenceStructure: [
+      {
+        chunkId: "pre-1",
+        wordtype: "preposition",
+        specificLemmas: ["z"],
+        connectedTo: "nou-1",
+      },
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        andTags: ["edible", "edible0"],
+        gcase: ["ins"],
+        number: [],
+      },
+    ],
+    primaryOrders: [],
+  },
+  {
+    sentenceFormulaSymbol: "dummy56",
+    sentenceFormulaId: "ENG-dummy56",
+    translations: { POL: ["POL-dummy56"] },
+    sentenceStructure: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        andTags: ["edible", "edible0"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [],
+  },
 ];

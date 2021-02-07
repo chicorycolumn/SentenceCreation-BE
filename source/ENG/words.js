@@ -135,6 +135,28 @@ let nounSet = [
   },
   {
     //links
+    translations: { ENG: ["tomato"], POL: ["pomidor"] },
+    tags: ["inanimate", "edible0", "holdable", "concrete"],
+    //selectors
+    lemma: "tomato",
+    id: "eng-nou-015",
+
+    //notes
+
+    //inflections
+    inflections: {
+      singular: {
+        nom: "tomato",
+        gen: "tomato's",
+      },
+      plural: {
+        nom: "tomatoes",
+        gen: "tomatoes'",
+      },
+    },
+  },
+  {
+    //links
     translations: { ENG: ["mirror"], POL: ["lustro", "zwierciadło"] },
     tags: ["inanimate", "holdable", "concrete"],
     //selectors
@@ -393,6 +415,39 @@ let pronounSet = [
   },
 ];
 
+let articleSet = [
+  {
+    //links
+    translations: { POL: [] },
+    tags: [],
+    //selectors
+    lemma: "ARTICLE",
+    id: "eng-art-001",
+    //notes
+
+    //inflections
+    inflections: {
+      definite: "the",
+      indefinite: { isTerminus: true, normal: "a", protective: "an" },
+    },
+  },
+];
+
+let prepositionSet = [
+  {
+    //links
+    translations: { POL: [] },
+    tags: [],
+    //selectors
+    lemma: "with",
+    id: "eng-pre-001",
+    //notes
+
+    //inflections
+    inflections: "with",
+  },
+];
+
 let adjectiveSet = [
   {
     //links
@@ -569,4 +624,5 @@ exports.wordsBank = {
   adjectiveSet,
   verbSet,
   pronounSet,
+  prepositionSet,
 };
