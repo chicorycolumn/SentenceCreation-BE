@@ -577,18 +577,17 @@ exports.buildSentenceString = (
   }
 
   outputArrays.forEach((outputArr) => {
-    let arrOfFinalSelectedWordsArrs = scUtils.selectWordVersions(
+    let finalSelectedWordsArr = scUtils.selectWordVersions(
       outputArr,
       currentLanguage,
       multipleMode
     );
 
-    arrOfFinalSelectedWordsArrs.forEach((finalSelectedWordsArr) => {
-      let producedSentence = gpUtils.capitaliseFirst(
-        finalSelectedWordsArr.join(" ") + "."
-      );
-      producedSentences.push(producedSentence);
-    });
+    let producedSentence = gpUtils.capitaliseFirst(
+      finalSelectedWordsArr.join(" ") + "."
+    );
+
+    producedSentences.push(producedSentence);
   });
 
   return producedSentences;
@@ -599,8 +598,6 @@ exports.selectWordVersions = (
   currentLanguage,
   multipleMode
 ) => {
-  let arrOfSelectedWordsArr = [];
-
   let selectedWordsArr = [];
 
   orderedOutputArr.forEach((outputUnit, index) => {
@@ -609,7 +606,12 @@ exports.selectWordVersions = (
     let { selectedWord, structureChunk } = outputUnit;
 
     if (typeof selectedWord === "string") {
-      selectedWordsArr.push(selectedWord);
+      pushSelectedWordToArray(
+        "string",
+        selectedWord,
+        selectedWordsArr,
+        multipleMode
+      );
     } else if (gpUtils.isTerminusObject(selectedWord)) {
       //Epsilon: This is where we need to detect things...
 
@@ -638,7 +640,12 @@ exports.selectWordVersions = (
               (typeof subsequentOutputUnit.selectedWord === "string" &&
                 /aeiou/.test(subsequentOutputUnit.selectedWord[0])))
           ) {
-            selectedWordsArr.push(selectedWord.protective);
+            pushSelectedWordToArray(
+              "protective",
+              selectedWord,
+              selectedWordsArr,
+              multipleMode
+            );
             return;
           }
         }
@@ -656,7 +663,12 @@ exports.selectWordVersions = (
               previousOutputUnit.selectedLemmaObject
             ) === "preposition"
           ) {
-            selectedWordsArr.push(selectedWord.postPreposition);
+            pushSelectedWordToArray(
+              "postPreposition",
+              selectedWord,
+              selectedWordsArr,
+              multipleMode
+            );
             return;
           }
         }
@@ -680,41 +692,49 @@ exports.selectWordVersions = (
               }
             )
           ) {
-            selectedWordsArr.push(selectedWord.protective);
+            pushSelectedWordToArray(
+              "protective",
+              selectedWord,
+              selectedWordsArr,
+              multipleMode
+            );
             return;
           }
         }
 
-        selectedWordsArr.push(selectedWord.normal);
-        return;
+        pushSelectedWordToArray(
+          "normal",
+          selectedWord,
+          selectedWordsArr,
+          multipleMode
+        );
       }
-
-      function pushSelectedWordToArray(
-        key,
-        selectedWord,
-        selectedWordsArr,
-        multipleMode
-      ) {}
-
-      //POL
-      //if("pronoun" && isTerminus){
-      //  Check if preceding structureChunk is preposition, and if so, choose "postPreposition" version.
-      //  Check if structureChunk has a version key, and if so, choose both of those each.
-      //}
-      //if("preposition"){
-      //  Check the thing where "w" and "z" should become "we" and "za".
-      //  we wschodzie...
-      //}
     } else {
       gpUtils.throw(
         "#ERR --------------------------------------> I expected either a string or a terminus object for this selectedWord."
       );
     }
+
+    function pushSelectedWordToArray(
+      key,
+      selectedWord,
+      selectedWordsArr,
+      multipleMode
+    ) {
+      if (key === "string") {
+        selectedWordsArr.push(selectedWord);
+        return;
+      }
+
+      if (!selectedWord[key]) {
+        gpUtils.throw(`#ERR Could not find key ${key} on selectedWord.`);
+      }
+
+      selectedWordsArr.push(selectedWord[key]);
+    }
   });
 
-  arrOfSelectedWordsArr.push(selectedWordsArr);
-
-  return arrOfSelectedWordsArr;
+  return selectedWordsArr;
 };
 
 exports.conformAnswerStructureToQuestionStructure = (

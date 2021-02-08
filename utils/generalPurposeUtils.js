@@ -398,12 +398,15 @@ exports.getWordtypeFromLemmaObject = (lObj) => {
     adv: "adverb",
     pro: "pronoun",
     art: "article",
+    pre: "preposition",
   };
 
   let wordtypeShorthand = lObj.id.split("-")[1];
 
   if (!Object.keys(wordtypeRef).includes(wordtypeShorthand)) {
-    gpUtils.throw("#ERR -----------------> getWordtypeFromLemmaObject");
+    gpUtils.throw(
+      `#ERR -----------------> getWordtypeFromLemmaObject for requested ${wordtypeShorthand}`
+    );
   }
 
   return wordtypeRef[wordtypeShorthand];

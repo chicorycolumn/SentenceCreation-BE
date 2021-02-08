@@ -23,8 +23,8 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe.only("/palette - Stage 15: Prepositions and Articles.", () => {
-    it.only("#pal15-01a GET 200 YES: POL to ENG. Indefinite article.", () => {
+  xdescribe("/palette - Stage 15: Prepositions and Articles.", () => {
+    it("#pal15-01a GET 200 YES: POL to ENG. Indefinite article.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -60,7 +60,7 @@ describe("/api", () => {
           );
         });
     });
-    it.only("#pal15-01b GET 200 YES: ENG to POL. Indefinite article.", () => {
+    it("#pal15-01b GET 200 YES: ENG to POL. Indefinite article.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -298,7 +298,7 @@ describe("/api", () => {
     });
   });
 
-  describe("/palette - Stage 14: Possessive pronouns.", () => {
+  xdescribe("/palette - Stage 14: Possessive pronouns.", () => {
     it("#pal14-01a GET 200 YES: POL. I have my onion.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
@@ -811,7 +811,7 @@ describe("/api", () => {
     });
   });
 
-  describe("/palette - Stage 13B: Pronouns and other Multi Gender Nouns: Further tests.", () => {
+  xdescribe("/palette - Stage 13B: Pronouns and other Multi Gender Nouns: Further tests.", () => {
     it("#pal13B-01a GET 200 YES: Specifiers not requested. ENG to POL. I am.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -1438,7 +1438,7 @@ describe("/api", () => {
     });
   });
 
-  describe("/palette - Stage 13A: Pronouns and other Multi Gender Nouns: Basic tests.", () => {
+  xdescribe("/palette - Stage 13A: Pronouns and other Multi Gender Nouns: Basic tests.", () => {
     //
     //
     //

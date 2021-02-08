@@ -817,6 +817,7 @@ exports.giveRoutesAndTerminalValuesFromObject = (obj) => {
     let value = otUtils.giveValueFromObjectByRoute(obj, nestedRoute);
 
     //Splits terminal values that are arrays, into different unit, with identical routes.
+    //Delta NATASHA T. What is happening here exactly?
     if (Array.isArray(value)) {
       value.forEach((subvalue) => {
         resArr.push({ terminalValue: subvalue, nestedRoute });

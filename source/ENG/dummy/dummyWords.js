@@ -185,10 +185,15 @@ let verbSet = [
   },
 ];
 
+let prepositionSet = [];
+let articleSet = [];
+
 exports.dummyWordsBank = {
   nounSet,
   adjectiveSet,
   adverbSet,
   verbSet,
   pronounSet,
+  prepositionSet,
+  articleSet,
 };

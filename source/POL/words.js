@@ -2292,10 +2292,13 @@ let verbSet = [
   },
 ];
 
+let articleSet = [];
+
 exports.wordsBank = {
   nounSet,
   adjectiveSet,
   verbSet,
   pronounSet,
   prepositionSet,
+  articleSet,
 };

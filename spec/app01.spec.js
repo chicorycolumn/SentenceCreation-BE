@@ -871,7 +871,7 @@ describe("/api", () => {
     });
   });
 
-  describe("/palette - Stage 6: Translating rich sentences (nouns, adjectives, verbs).", () => {
+  describe("/palette - Stage 6: Translate rich sentences (nouns, adjectives, verbs).", () => {
     it("#pal06-01a GET 200 YES: Returns sentence with all translations (RSWAT).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
@@ -1486,7 +1486,7 @@ describe("/api", () => {
     });
   });
 
-  describe("/palette - Stage 5: Rich sentences (nouns adjectives and verbs).", () => {
+  describe("/palette - Stage 5: Generate rich sentences (nouns adjectives and verbs).", () => {
     it("#pal05-01a GET 200 YES: Returns a sentence in present.", () => {
       return request(app)
         .get("/api/palette")

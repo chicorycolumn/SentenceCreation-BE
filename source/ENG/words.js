@@ -625,4 +625,5 @@ exports.wordsBank = {
   verbSet,
   pronounSet,
   prepositionSet,
+  articleSet,
 };

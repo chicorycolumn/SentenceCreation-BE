@@ -173,6 +173,7 @@ exports.filterWithinSelectedLemmaObject = (
     let sourceArr = [];
     let resArr = [];
 
+    //Delta, as a result of NATASHA T. We should throw error if array here. Should only be string or tobj.
     if (Array.isArray(source)) {
       sourceArr = source;
     } else if (typeof source === "string") {
@@ -631,6 +632,7 @@ exports.traverseAndRecordInflections = (
 
   reqInflectorArr.forEach((chosenInflector, reqInflectorArrIndex) => {
     if (
+      //Delta NATASHA T.
       typeof source[chosenInflector] === "string" ||
       Array.isArray(source[chosenInflector]) ||
       (source[chosenInflector] && source[chosenInflector].isTerminus)
