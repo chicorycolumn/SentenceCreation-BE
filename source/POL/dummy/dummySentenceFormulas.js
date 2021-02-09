@@ -1476,6 +1476,28 @@ exports.dummySentenceFormulasBank = [
     additionalOrders: [],
   },
   {
+    sentenceFormulaSymbol: "dummy52",
+    sentenceFormulaId: "POL-dummy52",
+    translations: { ENG: ["ENG-dummy52"] },
+    sentenceStructure: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        specificLemmas: ["kobieta"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        agreeWith: "nou-1",
+        tenseDescription: ["future im"],
+        specificLemmas: ["napisać", "pisać"],
+      },
+    ],
+    primaryOrders: [["nou-1", "ver-1"]],
+    additionalOrders: [],
+  },
+  {
     sentenceFormulaSymbol: "dummy53",
     sentenceFormulaId: "POL-dummy53",
     translations: { ENG: ["ENG-dummy53"] },

@@ -50,8 +50,10 @@ exports.translateAnnotationValue = (
 exports.adjustVirilityOfStructureChunk = (
   currentLanguage,
   structureChunk,
-  retainOriginals
+  retainOriginals,
+  consoleLogLabel
 ) => {
+  console.log(consoleLogLabel);
   //Not for nouns. Because m -> plural -> virile and then trying to select Ojciec, which isn't virile, it's m, so will ERR later.
   //If stCh has number:plural, then make the genders the virilityConverted genders.
   //If stCh has numnber:singular, then make the genders the singularConverted genders.
@@ -244,7 +246,8 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
     allLangUtils.adjustVirilityOfStructureChunk(
       currentLanguage,
       structureChunk,
-      true
+      true,
+      "structureChunk from ALL:preprocessStructureChunks"
     );
 
     if (shouldConsoleLog) {

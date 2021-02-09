@@ -94,7 +94,9 @@ exports.preprocessLemmaObjectsMajor = (
     if (["verb", "adjective"].includes(structureChunk.wordtype)) {
       allLangUtils.adjustVirilityOfStructureChunk(
         currentLanguage,
-        structureChunk
+        structureChunk,
+        false,
+        "structureChunk from POL:preprocessLemmaObjects"
       );
     }
   }

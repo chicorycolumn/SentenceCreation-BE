@@ -258,6 +258,11 @@ exports.filterWithinSelectedLemmaObject = (
   let errorInDrilling = false;
   let outputUnitsWithDrillPaths = [];
 
+  // console.log(
+  //   "y60 lemmaObject.inflections.verbal.future.1per",
+  //   lemmaObject.inflections.verbal.future["1per"]
+  // );
+
   let source = lemmaObject.inflections;
 
   lfUtils.traverseAndRecordInflections(
@@ -631,6 +636,13 @@ exports.traverseAndRecordInflections = (
   }
 
   reqInflectorArr.forEach((chosenInflector, reqInflectorArrIndex) => {
+    // if (Array.isArray(source[chosenInflector])) {
+    //   console.log(
+    //     "[1;31m " + `source[chosenInflector] ${source[chosenInflector]}` + "[0m"
+    //   );
+    //   gpUtils.throw("y61 ERR");
+    // }
+
     if (
       //Delta NATASHA T.
       typeof source[chosenInflector] === "string" ||

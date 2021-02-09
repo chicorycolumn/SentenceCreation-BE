@@ -522,7 +522,11 @@ exports.buildSentenceString = (
   answerLanguage
 ) => {
   console.log("[1;35m " + "buildSentenceString" + "[0m");
-  // console.log("unorderedArr", unorderedArr);
+  console.log(
+    "unorderedArr",
+    unorderedArr.map((outputUnit) => outputUnit.selectedWord)
+  );
+  // gpUtils.throw("cease");
 
   let outputArrays = [];
   let producedSentences = [];
@@ -1071,11 +1075,17 @@ exports.inheritFromHeadToDependentChunk = (
     "At the end of inheritFromHeadToDependentChunk, we must again adjustVirility, which we also did in allLangUtils.preprocessStructureChunks earlier."
   );
 
-  allLangUtils.adjustVirilityOfStructureChunk(currentLanguage, headChunk, true);
+  allLangUtils.adjustVirilityOfStructureChunk(
+    currentLanguage,
+    headChunk,
+    true,
+    "headChunk from SC:inheritFromHeadToDependentChunk"
+  );
   allLangUtils.adjustVirilityOfStructureChunk(
     currentLanguage,
     dependentChunk,
-    true
+    true,
+    "dependentChunk from SC:inheritFromHeadToDependentChunk"
   );
 
   console.log(

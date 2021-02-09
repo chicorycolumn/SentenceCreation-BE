@@ -2177,6 +2177,75 @@ describe("/api", () => {
     // });
   });
 
+  describe.only("/palette - Stage X: NATASHA T.", () => {
+    it("#palX-01a GET 200 YES: Are correct members of an array returned as possible answer, as they should be?", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy52",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "The woman will be writing.",
+              POL: ["Kobieta będzie pisała.", "Kobieta będzie pisać."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#palX-01b GET 200 YES: Are correct members of an array returned as possible answer, as they should be?", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy52",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: [
+                "The woman will be writing.",
+                "The woman is going to be writing.",
+              ],
+              POL: "Kobieta będzie pisała.",
+            },
+            {
+              ENG: [
+                "The woman will be writing.",
+                "The woman is going to be writing.",
+              ],
+              POL: "Kobieta będzie pisać.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+  });
+
   describe("/palette - Stage 12: Further linguistic features.", () => {
     it("#pal12-01a GET 200 YES: Tantum plurale in POL is allowed to be sing or plur in ENG.", () => {
       const questionLanguage = "POL";
