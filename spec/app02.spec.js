@@ -23,7 +23,114 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  xdescribe("/palette - Stage 15: Prepositions and Articles.", () => {
+  describe("/palette - Stage 16: NATASHA T. Checking how arrays as terminal points are handled.", () => {
+    it("#pal16-01a GET 200 YES: Are correct members of an array returned as possible ANSWER, as they should be?", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy52",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "The woman will be writing.",
+              POL: ["Kobieta będzie pisała.", "Kobieta będzie pisać."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal16-01b GET 200 YES: Are EITHER members of an array returned as possible QUESTION, as they should be?", () => {
+      return Promise.all([
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+      ]).then((allQuestionSentencesArr) => {
+        console.log({ allQuestionSentencesArr });
+        expect(allQuestionSentencesArr).to.have.length(6);
+        expect(allQuestionSentencesArr).to.include("Kobieta będzie pisała.");
+        expect(allQuestionSentencesArr).to.include("Kobieta będzie pisać.");
+      });
+
+      function testOnce() {
+        const questionLanguage = "POL";
+        const answerLanguage = "ENG";
+
+        return request(app)
+          .get("/api/palette")
+          .send({
+            questionLanguage,
+            answerLanguage,
+            sentenceFormulaSymbol: "dummy52",
+            useDummy: true,
+          })
+          .expect(200)
+          .then((res) => {
+            if (res.body.questionSentenceArr.length > 1) {
+              gpUtils.throw("res.body.questionSentenceArr had length over 1.");
+            }
+
+            return res.body.questionSentenceArr[0];
+          });
+      }
+    });
+    it("#pal16-01c GET 200 YES: Are correct answer sentences given for each of those question sentences.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy52",
+          useDummy: true,
+          // shouldThrowAtMidpoint: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: [
+                "The woman will be writing.",
+                "The woman is going to be writing.",
+              ],
+              POL: "Kobieta będzie pisała.",
+            },
+            {
+              ENG: [
+                "The woman will be writing.",
+                "The woman is going to be writing.",
+              ],
+              POL: "Kobieta będzie pisać.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+  });
+
+  describe.only("/palette - Stage 15: Prepositions and Articles.", () => {
     it("#pal15-01a GET 200 YES: POL to ENG. Indefinite article.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
@@ -96,7 +203,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal15-02a GET 200 YES: POL to ENG. Either article.", () => {
+    it.only("#pal15-02a GET 200 YES: POL to ENG. Either article.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -298,7 +405,7 @@ describe("/api", () => {
     });
   });
 
-  xdescribe("/palette - Stage 14: Possessive pronouns.", () => {
+  describe("/palette - Stage 14: Possessive pronouns.", () => {
     it("#pal14-01a GET 200 YES: POL. I have my onion.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
@@ -811,7 +918,7 @@ describe("/api", () => {
     });
   });
 
-  xdescribe("/palette - Stage 13B: Pronouns and other Multi Gender Nouns: Further tests.", () => {
+  describe("/palette - Stage 13B: Pronouns and other Multi Gender Nouns: Further tests.", () => {
     it("#pal13B-01a GET 200 YES: Specifiers not requested. ENG to POL. I am.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -1438,7 +1545,7 @@ describe("/api", () => {
     });
   });
 
-  xdescribe("/palette - Stage 13A: Pronouns and other Multi Gender Nouns: Basic tests.", () => {
+  describe("/palette - Stage 13A: Pronouns and other Multi Gender Nouns: Basic tests.", () => {
     //
     //
     //
@@ -2109,7 +2216,7 @@ describe("/api", () => {
     //
     //
     //
-    xit("#pal13A-06a GET 200 YES: ENG to POL. No gender specified in stCh for MGN.", () => {
+    it("#pal13A-06a GET 200 YES: ENG to POL. No gender specified in stCh for MGN.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2120,6 +2227,7 @@ describe("/api", () => {
           useDummy: true,
           answerLanguage,
           sentenceFormulaSymbol: "dummy51a",
+          pleaseDontSpecify: true,
         })
         .expect(200)
         .then((res) => {
@@ -2131,7 +2239,7 @@ describe("/api", () => {
               POL: ["Lekarz napisał.", "Lekarka napisała."],
             },
             {
-              ENG: "The doctor read.",
+              ENG: "The doctor read (past).",
               POL: ["Lekarz przeczytał.", "Lekarka przeczytała."],
             },
           ];
@@ -2144,41 +2252,7 @@ describe("/api", () => {
           );
         });
     });
-    // xit("#pal13A-7a GET 200 YES: Singular pronouns: Verb person and number is inherited from pronoun headChunk.", () => {
-    //   const questionLanguage = "ENG";
-    //   const answerLanguage = "POL";
-
-    //   return request(app)
-    //     .get("/api/palette")
-    //     .send({
-    //
-    //
-    //       questionLanguage,
-    //       answerLanguage,
-    //       sentenceFormulaSymbol: "108 singular I am",
-    //     })
-    //     .expect(200)
-    //     .then((res) => {
-    //       let ref = [
-    //         { ENG: "I am.", POL: ["Jestem."] },
-    //         { ENG: "You are.", POL: ["Jesteś."] },
-    //         { ENG: "He is.", POL: ["Jest."] },
-    //         { ENG: "She is.", POL: ["Jest."] },
-    //         { ENG: "It is.", POL: ["Jest."] },
-    //       ];
-
-    //       testingUtils.checkTranslationsOfGivenRef(
-    //         res,
-    //         ref,
-    //         questionLanguage,
-    //         answerLanguage
-    //       );
-    //     });
-    // });
-  });
-
-  describe.only("/palette - Stage X: NATASHA T.", () => {
-    it("#palX-01a GET 200 YES: Are correct members of an array returned as possible answer, as they should be?", () => {
+    it("#pal13A-7a GET 200 YES: Singular pronouns: Verb person and number is inherited from pronoun headChunk.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2187,55 +2261,18 @@ describe("/api", () => {
         .send({
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy52",
-          useDummy: true,
+          sentenceFormulaSymbol: "108 singular I am",
         })
         .expect(200)
         .then((res) => {
           let ref = [
-            {
-              ENG: "The woman will be writing.",
-              POL: ["Kobieta będzie pisała.", "Kobieta będzie pisać."],
-            },
+            { ENG: "I am.", POL: ["Jestem.", "Ja jestem."] },
+            { ENG: "You (singular) are.", POL: ["Jesteś.", "Ty jesteś."] },
+            { ENG: "He is.", POL: ["Jest.", "On jest."] },
+            { ENG: "She is.", POL: ["Jest.", "Ona jest."] },
+            { ENG: "It is.", POL: ["Jest.", "Ono jest."] },
           ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    it("#palX-01b GET 200 YES: Are correct members of an array returned as possible answer, as they should be?", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
 
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy52",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: [
-                "The woman will be writing.",
-                "The woman is going to be writing.",
-              ],
-              POL: "Kobieta będzie pisała.",
-            },
-            {
-              ENG: [
-                "The woman will be writing.",
-                "The woman is going to be writing.",
-              ],
-              POL: "Kobieta będzie pisać.",
-            },
-          ];
           testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,
@@ -3652,8 +3689,10 @@ describe("/api", () => {
             [
               "Będziesz pisał.",
               "Będziesz pisała.",
+              "Będziesz pisać.",
               "Będziecie pisały.",
               "Będziecie pisali.",
+              "Będziecie pisać.",
             ]
           );
         });

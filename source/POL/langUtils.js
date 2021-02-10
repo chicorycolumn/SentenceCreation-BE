@@ -294,72 +294,72 @@ exports.fillVerbInflections = (lemmaObject) => {
         },
         "1per": {
           singular: {
-            m: [
+            m: gpUtils.terminusObjectNormalArray([
               "będę" + " " + past["3per"].singular.m,
               "będę" + " " + infinitive,
-            ],
-            f: [
+            ]),
+            f: gpUtils.terminusObjectNormalArray([
               "będę" + " " + past["3per"].singular.f,
               "będę" + " " + infinitive,
-            ],
+            ]),
           },
           plural: {
-            virile: [
+            virile: gpUtils.terminusObjectNormalArray([
               "będziemy" + " " + past["3per"].plural.virile,
               "będziemy" + " " + infinitive,
-            ],
-            nonvirile: [
+            ]),
+            nonvirile: gpUtils.terminusObjectNormalArray([
               "będziemy" + " " + past["3per"].plural.nonvirile,
               "będziemy" + " " + infinitive,
-            ],
+            ]),
           },
         },
         "2per": {
           singular: {
-            m: [
+            m: gpUtils.terminusObjectNormalArray([
               "będziesz" + " " + past["3per"].singular.m,
               "będziesz" + " " + infinitive,
-            ],
-            f: [
+            ]),
+            f: gpUtils.terminusObjectNormalArray([
               "będziesz" + " " + past["3per"].singular.f,
               "będziesz" + " " + infinitive,
-            ],
+            ]),
           },
           plural: {
-            virile: [
+            virile: gpUtils.terminusObjectNormalArray([
               "będziecie" + " " + past["3per"].plural.virile,
               "będziecie" + " " + infinitive,
-            ],
-            nonvirile: [
+            ]),
+            nonvirile: gpUtils.terminusObjectNormalArray([
               "będziecie" + " " + past["3per"].plural.nonvirile,
               "będziecie" + " " + infinitive,
-            ],
+            ]),
           },
         },
         "3per": {
           singular: {
-            m: [
+            m: gpUtils.terminusObjectNormalArray([
               "będzie" + " " + past["3per"].singular.m,
               "będzie" + " " + infinitive,
-            ],
-            f: [
+            ]),
+            f: gpUtils.terminusObjectNormalArray([
               "będzie" + " " + past["3per"].singular.f,
               "będzie" + " " + infinitive,
-            ],
-            n: [
+            ]),
+            n: gpUtils.terminusObjectNormalArray([
               "będzie" + " " + past["3per"].singular.n,
               "będzie" + " " + infinitive,
-            ],
+            ]),
           },
           plural: {
-            virile: [
+            virile: gpUtils.terminusObjectNormalArray([
               "będą" + " " + past["3per"].plural.virile,
               "będą" + " " + infinitive,
-            ],
-            nonvirile: [
+            ]),
+            nonvirile: gpUtils.terminusObjectNormalArray([
               "będą" + " " + past["3per"].plural.nonvirile,
               "będą" + " " + infinitive,
-            ],
+            ]),
           },
         },
       };

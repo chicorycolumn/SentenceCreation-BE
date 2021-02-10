@@ -302,7 +302,7 @@ exports.sentenceFormulasBank = [
         wordtype: "pronoun",
         // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
-        person: ["1per"],
+        // person: ["1per"],
         gcase: ["nom"],
         number: ["singular"],
       },

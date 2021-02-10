@@ -52,6 +52,12 @@ exports.getMaterials = (
       (senFor) => senFor.sentenceFormulaId === sentenceFormulaId
     );
 
+    if (!sentenceFormula) {
+      gpUtils.throw(
+        `#ERR SC:getMaterials, no sentenceFormula for this sentenceFormulaId ${sentenceFormulaId}.`
+      );
+    }
+
     // sentenceFormulaId = sentenceFormula.sentenceFormulaId;
     sentenceFormulaSymbol = sentenceFormula.sentenceFormulaSymbol;
   } else if (sentenceFormulaSymbol) {
@@ -323,6 +329,8 @@ exports.processSentenceFormula = (
   delete errorInSentenceCreation.errorMessage;
 
   otherChunks.forEach((otherChunk) => {
+    console.log("f005", otherChunk);
+
     let allPossOutputUnits_other = otUtils.findMatchingLemmaObjectThenWord(
       gpUtils.copyWithoutReference(otherChunk),
       words,
@@ -342,7 +350,7 @@ exports.processSentenceFormula = (
     ) {
       console.log(
         "[1;31m " +
-          `#ERR -------------------------> An error loomed in SC:processSentenceFormula. Returning outputArr null for otherChunk: ${otherChunk.chunkId}` +
+          `#ERR -------------------------> An error has loomed in SC:processSentenceFormula. Returning outputArr null for otherChunk: ${otherChunk.chunkId}` +
           "[0m"
       );
 
@@ -602,12 +610,20 @@ exports.selectWordVersions = (
   currentLanguage,
   multipleMode
 ) => {
+  console.log("f55 orderedOutputArr");
+
   let selectedWordsArr = [];
 
   orderedOutputArr.forEach((outputUnit, index) => {
     let previousOutputUnit = orderedOutputArr[index - 1];
     let subsequentOutputUnit = orderedOutputArr[index + 1];
-    let { selectedWord, structureChunk } = outputUnit;
+    let { selectedWord, structureChunk, drillPath } = outputUnit;
+
+    console.log("f56--------------");
+    console.log("selectedWord", selectedWord);
+    console.log("structureChunk", structureChunk);
+    console.log("drillPath", drillPath);
+    console.log("/----------------");
 
     if (typeof selectedWord === "string") {
       pushSelectedWordToArray(
@@ -616,7 +632,10 @@ exports.selectWordVersions = (
         selectedWordsArr,
         multipleMode
       );
-    } else if (gpUtils.isTerminusObject(selectedWord)) {
+      return;
+    }
+
+    if (gpUtils.isTerminusObject(selectedWord)) {
       //Epsilon: This is where we need to detect things...
 
       //Move to engUtils.selectWordVersions()
@@ -624,7 +643,7 @@ exports.selectWordVersions = (
         // >>> Indefinite Article
         if (
           structureChunk.wordtype === "article" &&
-          structureChunk.form === "indefinite"
+          structureChunk.form.includes("indefinite")
         ) {
           if (!subsequentOutputUnit) {
             gpUtils.throw(
@@ -632,20 +651,30 @@ exports.selectWordVersions = (
             );
           }
 
+          console.log(
+            "j00 subsequentOutputUnit.selectedWord",
+            subsequentOutputUnit.selectedWord
+          );
           if (
-            !(
-              gpUtils.isTerminusObject(subsequentOutputUnit.selectedWord) &&
-              subsequentOutputUnit.selectedWord
-                .surprisinglyStartsWithConsonantSound
-            ) &&
-            ((gpUtils.isTerminusObject(subsequentOutputUnit.selectedWord) &&
-              subsequentOutputUnit.selectedWord
-                .surprisinglyStartsWithVowelSound) ||
+            !subsequentOutputUnit.selectedWord
+              .surprisinglyStartsWithConsonantSound &&
+            (subsequentOutputUnit.selectedWord
+              .surprisinglyStartsWithVowelSound ||
               (typeof subsequentOutputUnit.selectedWord === "string" &&
-                /aeiou/.test(subsequentOutputUnit.selectedWord[0])))
+                /^[aeiou]/.test(subsequentOutputUnit.selectedWord[0])))
           ) {
+            console.log("j01");
             pushSelectedWordToArray(
               "protective",
+              selectedWord,
+              selectedWordsArr,
+              multipleMode
+            );
+            return;
+          } else {
+            console.log("j02");
+            pushSelectedWordToArray(
+              "nonprotective",
               selectedWord,
               selectedWordsArr,
               multipleMode
@@ -669,6 +698,14 @@ exports.selectWordVersions = (
           ) {
             pushSelectedWordToArray(
               "postPreposition",
+              selectedWord,
+              selectedWordsArr,
+              multipleMode
+            );
+            return;
+          } else {
+            pushSelectedWordToArray(
+              "normal", //Epsilon: Changed to unstressed.
               selectedWord,
               selectedWordsArr,
               multipleMode
@@ -703,6 +740,14 @@ exports.selectWordVersions = (
               multipleMode
             );
             return;
+          } else {
+            pushSelectedWordToArray(
+              "nonprotective",
+              selectedWord,
+              selectedWordsArr,
+              multipleMode
+            );
+            return;
           }
         }
 
@@ -725,7 +770,13 @@ exports.selectWordVersions = (
       selectedWordsArr,
       multipleMode
     ) {
+      console.log(
+        "[1;30m " + `pushSelectedWordToArray-----------------with args:` + "[0m"
+      );
+      console.log({ key, selectedWord, selectedWordsArr, multipleMode });
+
       if (key === "string") {
+        console.log("[1;30m " + `Pushing ${selectedWord}` + "[0m");
         selectedWordsArr.push(selectedWord);
         return;
       }
@@ -734,8 +785,28 @@ exports.selectWordVersions = (
         gpUtils.throw(`#ERR Could not find key ${key} on selectedWord.`);
       }
 
-      selectedWordsArr.push(selectedWord[key]);
+      if (!Array.isArray(selectedWord[key])) {
+        console.log(selectedWord);
+        console.log(selectedWord[key]);
+        gpUtils.throw("Value inside tobj should have been array.");
+      }
+
+      if (selectedWord[key].length > 1) {
+        console.log(selectedWord);
+        console.log(selectedWord[key]);
+        gpUtils.throw("Multiple values inside tobj. What should I do?");
+      }
+
+      let value = selectedWord[key][0];
+
+      console.log("[1;30m " + `Pushing ${value}` + "[0m");
+      selectedWordsArr.push(value);
     }
+
+    console.log({ selectedWord });
+    gpUtils.throw(
+      `SC:selectWordVersions didn't add any word from ${structureChunk.chunkId} and see selectedWord above.`
+    );
   });
 
   return selectedWordsArr;

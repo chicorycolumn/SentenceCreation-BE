@@ -570,7 +570,7 @@ exports.consoleLogPurple = (text) => {
   console.log(" ");
 };
 
-exports.throw = (msg) => {
+exports.throw = (msg = "Cease.") => {
   console.log("[1;31m " + "!   !   !   !   !   !   !   !   !   !" + "[0m");
   console.log("[1;31m " + "!   !   ! " + msg + "[0m");
   console.log("[1;31m " + "!   !   !   !   !   !   !   !   !   !" + "[0m");
@@ -578,5 +578,13 @@ exports.throw = (msg) => {
 };
 
 exports.isTerminusObject = (selectedWord) => {
+  if (!selectedWord) {
+    return false;
+  }
+
   return gpUtils.isKeyValueTypeObject(selectedWord) && selectedWord.isTerminus;
+};
+
+exports.terminusObjectNormalArray = (normalArr) => {
+  return { isTerminus: true, normal: normalArr };
 };

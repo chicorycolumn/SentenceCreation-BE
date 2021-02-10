@@ -72,6 +72,8 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
       }
     }
 
+    console.log("w33 structureChunk.wordtype", structureChunk.wordtype);
+
     if (
       //If gender is an appropriate feature of this wordtype.
       refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[

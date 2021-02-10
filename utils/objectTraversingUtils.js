@@ -54,6 +54,9 @@ exports.findMatchingLemmaObjectThenWord = (
     matches = source.filter((lObj) =>
       structureChunk.specificIds.includes(lObj.id)
     );
+    if (!matches.length) {
+      console.log("[1;31m " + `No matches after Get matches by specific IDs.` + "[0m");
+    }
   } else if (
     structureChunk.specificLemmas &&
     structureChunk.specificLemmas.length
@@ -62,12 +65,22 @@ exports.findMatchingLemmaObjectThenWord = (
       "GGGet matches by specific Lemmas:",
       structureChunk.specificLemmas
     );
+    console.log("source", source);
     matches = source.filter((lObj) =>
       structureChunk.specificLemmas.includes(lObj.lemma)
     );
+    if (!matches.length) {
+      console.log(
+        "[1;31m " + `No matches after Get matches by specific Lemmas.` + "[0m"
+      );
+    }
   } else {
     console.log("GGGet matches by Tags and Selectors.");
     matches = lfUtils.filterByAndTagsAndOrTags(source, structureChunk);
+
+    if (!matches.length) {
+      console.log("[1;31m " + `No matches after Get matches by Tags.` + "[0m");
+    }
 
     langUtils.preprocessLemmaObjectsMinor(matches); //Must be adjusted before aspect (a selector) filter is applied.
 
@@ -76,6 +89,10 @@ exports.findMatchingLemmaObjectThenWord = (
       structureChunk,
       matches
     );
+
+    if (!matches.length) {
+      console.log("[1;31m " + `No matches after Get matches by Selectors.` + "[0m");
+    }
   }
 
   langUtils.preprocessLemmaObjectsMinor(matches); //Must be adjusted again as may not have been in such pathway above.
@@ -263,8 +280,19 @@ exports.findMatchingLemmaObjectThenWord = (
                   let selectedWordArr =
                     selectedLemmaObject.inflections[selectedUninflectedForm];
 
-                  if (typeof selectedWordArr === "string") {
+                  if (
+                    typeof selectedWordArr === "string" ||
+                    (gpUtils.isTerminusObject(selectedWordArr) &&
+                      selectedWordArr.processOnlyAtEnd)
+                  ) {
                     selectedWordArr = [selectedWordArr];
+                  }
+
+                  if (
+                    gpUtils.isTerminusObject(selectedWordArr) &&
+                    !selectedWordArr.processOnlyAtEnd
+                  ) {
+                    gpUtils.throw("Natasha, action required.");
                   }
 
                   //We here update a copy of structureChunk
@@ -305,8 +333,19 @@ exports.findMatchingLemmaObjectThenWord = (
               let selectedWordArr =
                 selectedLemmaObject.inflections[selectedUninflectedForm];
 
-              if (typeof selectedWordArr === "string") {
+              if (
+                typeof selectedWordArr === "string" ||
+                (gpUtils.isTerminusObject(selectedWordArr) &&
+                  selectedWordArr.processOnlyAtEnd)
+              ) {
                 selectedWordArr = [selectedWordArr];
+              }
+
+              if (
+                gpUtils.isTerminusObject(selectedWordArr) &&
+                !selectedWordArr.processOnlyAtEnd
+              ) {
+                gpUtils.throw("Natasha, some action required.");
               }
 
               //We here update a copy of structureChunk
@@ -370,6 +409,8 @@ exports.findMatchingLemmaObjectThenWord = (
   let structureChunks = structureChunksAdjusted || [structureChunk];
 
   structureChunks.forEach((structureChunk) => {
+    console.log("p04 structureChunk", structureChunk);
+
     let matchesCopy = matches.slice(0);
 
     if (!matchesCopy.length) {
@@ -421,6 +462,7 @@ exports.findMatchingLemmaObjectThenWord = (
     console.log("r55", { multipleMode });
 
     if (multipleMode) {
+      console.log("p05a");
       matchesCopy.forEach((selectedLemmaObject) => {
         let subArrayOfOutputUnits = lfUtils.filterWithinSelectedLemmaObject(
           selectedLemmaObject,
@@ -434,19 +476,71 @@ exports.findMatchingLemmaObjectThenWord = (
           let { errorInDrilling, selectedWordArray, drillPath } = unit;
 
           selectedWordArray.forEach((selectedWord) => {
-            let outputUnit = otUtils.createOutputUnit(
-              errorInSentenceCreation,
-              errorInDrilling,
-              selectedWord,
-              structureChunk,
-              selectedLemmaObject,
-              drillPath
-            );
-            arrayOfAllPossibleOutputUnits.push(outputUnit);
+            if ("natasha findMatching Answer mode") {
+              if (typeof selectedWord === "string") {
+                console.log("[1;33m " + `findMatching Answer IS STRING` + "[0m");
+              } else if (Array.isArray(selectedWord)) {
+                console.log("[1;33m " + `findMatching Answer IS ARRAY` + "[0m");
+                console.log(selectedWord);
+                gpUtils.throw("should not have been array.");
+              } else if (gpUtils.isTerminusObject(selectedWord)) {
+                console.log("[1;33m " + `findMatching Answer IS TOBJ` + "[0m");
+              }
+            }
+
+            if (
+              gpUtils.isTerminusObject(selectedWord) &&
+              !selectedWord.processOnlyAtEnd
+            ) {
+              console.log("Natasha, action here required.");
+            }
+
+            if (
+              typeof selectedWord === "string" ||
+              (gpUtils.isTerminusObject(selectedWord) &&
+                selectedWord.processOnlyAtEnd)
+            ) {
+              let outputUnit = otUtils.createOutputUnit(
+                errorInSentenceCreation,
+                errorInDrilling,
+                selectedWord,
+                structureChunk,
+                selectedLemmaObject,
+                drillPath
+              );
+              arrayOfAllPossibleOutputUnits.push(outputUnit);
+            } else if (gpUtils.isTerminusObject(selectedWord)) {
+              let allWords = [];
+
+              let wordsKeys = [
+                "normal",
+                "additionalFrequent",
+                "additionalInfrequent",
+              ];
+
+              wordsKeys.forEach((wordsKey) => {
+                if (selectedWord[wordsKey]) {
+                  allWords = [...allWords, ...selectedWord[wordsKey]];
+                }
+              });
+
+              allWords.forEach((word) => {
+                let outputUnit = otUtils.createOutputUnit(
+                  errorInSentenceCreation,
+                  errorInDrilling,
+                  word,
+                  structureChunk,
+                  selectedLemmaObject,
+                  drillPath
+                );
+                arrayOfAllPossibleOutputUnits.push(outputUnit);
+              });
+            }
           });
         });
       });
     } else {
+      console.log("p05b");
       let selectedLemmaObject = gpUtils.selectRandom(matchesCopy);
 
       if (!pleaseDontSpecify) {
@@ -598,9 +692,47 @@ exports.findMatchingLemmaObjectThenWord = (
         return false;
       }
 
-      let selectedWord = selectedWordArray[0];
+      // let selectedWord = selectedWordArray[0];
+      let selectedItem = gpUtils.selectRandom(selectedWordArray);
+      let selectedWord;
 
-      console.log("[1;33m " + `Selected word is ${selectedWord}` + "[0m");
+      if ("natasha findMatching Question mode") {
+        if (typeof selectedItem === "string") {
+          console.log("[1;33m " + `findMatching Question IS STRING` + "[0m");
+        } else if (Array.isArray(selectedItem)) {
+          console.log("[1;33m " + `findMatching Question IS ARRAY` + "[0m");
+          console.log(selectedItem);
+          gpUtils.throw("should not have been array.");
+        } else if (gpUtils.isTerminusObject(selectedItem)) {
+          console.log("[1;33m " + `findMatching Question IS TOBJ` + "[0m");
+        }
+      }
+
+      if (
+        typeof selectedItem === "string" ||
+        (gpUtils.isTerminusObject(selectedItem) &&
+          selectedItem.processOnlyAtEnd)
+      ) {
+        selectedWord = selectedItem;
+      } else if (
+        gpUtils.isTerminusObject(selectedItem) &&
+        !selectedItem.processOnlyAtEnd
+      ) {
+        let additionalWords = selectedItem.normal.slice(0);
+
+        if (
+          selectedItem.additionalFrequent &&
+          selectedItem.additionalFrequent.length
+        ) {
+          additionalWords = [
+            ...additionalWords,
+            ...selectedItem.additionalFrequent,
+            ...selectedItem.normal, //Giving more weight to normal.
+          ];
+        }
+
+        selectedWord = gpUtils.selectRandom(additionalWords);
+      }
 
       let outputUnit = otUtils.createOutputUnit(
         errorInSentenceCreation,
@@ -702,7 +834,7 @@ exports.concoctNestedRoutes = (routesByLevelTarget, routesByLevelSource) => {
   }
 };
 
-exports.extractNestedRoutes = (source) => {
+exports.extractNestedRoutes = (source, includeTerminusObjectKeys) => {
   let routesByNesting = [];
   let arr = [];
   recursivelyMapRoutes(arr, source);
@@ -724,11 +856,17 @@ exports.extractNestedRoutes = (source) => {
   return { routesByNesting, routesByLevel };
 
   function recursivelyMapRoutes(arr, source) {
-    if (typeof source !== "object" || Array.isArray(source)) {
+    // if (typeof source !== "object" || Array.isArray(source)) {
+    if (
+      typeof source === "string" ||
+      // Array.isArray(source) || //Remove this Natasha.
+      typeof source === "boolean" ||
+      gpUtils.isTerminusObject(source)
+    ) {
       let arrCopy = arr.slice();
       arr.pop();
       return arrCopy;
-    } else {
+    } else if (gpUtils.isKeyValueTypeObject(source)) {
       Object.keys(source).forEach((key) => {
         if (!source[key]) {
           delete source[key];
@@ -744,6 +882,14 @@ exports.extractNestedRoutes = (source) => {
         }
       });
       arr.pop();
+    } else {
+      gpUtils.throw(
+        `OT:recursivelyMapRoutes found value with wrong data type: ${
+          Array.isArray(source)
+            ? "Array"
+            : (typeof source)[0].toUpperCase() + (typeof source).slice(1)
+        }.`
+      );
     }
   }
 };
@@ -809,6 +955,10 @@ exports.findObjectInNestedObjectsAndArrays = (
 };
 
 exports.giveRoutesAndTerminalValuesFromObject = (obj) => {
+  console.log(
+    "[1;35m " + `OT:giveRoutesAndTerminalValuesFromObject-----------------------` + "[0m"
+  );
+
   const nestedRoutes = otUtils.extractNestedRoutes(obj).routesByNesting;
 
   let resArr = [];
@@ -817,7 +967,21 @@ exports.giveRoutesAndTerminalValuesFromObject = (obj) => {
     let value = otUtils.giveValueFromObjectByRoute(obj, nestedRoute);
 
     //Splits terminal values that are arrays, into different unit, with identical routes.
-    //Delta NATASHA T. What is happening here exactly?
+
+    //What is happening here exactly?
+
+    if ("natasha giveRoutes???") {
+      if (typeof value === "string") {
+        console.log("[1;33m " + `giveRoutes??? IS STRING` + "[0m");
+      } else if (Array.isArray(value)) {
+        console.log("[1;33m " + `giveRoutes??? IS ARRAY` + "[0m");
+        console.log(nestedRoute, value);
+        gpUtils.throw("should not have been array.");
+      } else if (gpUtils.isTerminusObject(value)) {
+        console.log("[1;33m " + `giveRoutes??? IS TOBJ` + "[0m");
+      }
+    }
+
     if (Array.isArray(value)) {
       value.forEach((subvalue) => {
         resArr.push({ terminalValue: subvalue, nestedRoute });

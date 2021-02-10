@@ -1105,7 +1105,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy56",
     sentenceFormulaId: "ENG-dummy56",
-    translations: { POL: ["POL-dummy56"] },
+    translations: { ENG: ["ENG-dummy56"], POL: ["POL-dummy56"] },
     sentenceStructure: [
       {
         chunkId: "art-1",
@@ -1116,7 +1116,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        andTags: ["edible", "edible0"],
+        orTags: ["edible", "edible0"],
         number: ["singular"],
       },
     ],

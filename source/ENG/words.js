@@ -1,5 +1,9 @@
 //Copied over on 27/12/2020
 
+const {
+  terminusObjectNormalArray,
+} = require("../../utils/generalPurposeUtils");
+
 let nounSet = [
   {
     //links
@@ -428,7 +432,12 @@ let articleSet = [
     //inflections
     inflections: {
       definite: "the",
-      indefinite: { isTerminus: true, normal: "a", protective: "an" },
+      indefinite: {
+        isTerminus: true,
+        processOnlyAtEnd: true,
+        nonprotective: ["a"],
+        protective: ["an"],
+      },
     },
   },
 ];
@@ -611,7 +620,7 @@ let verbSet = [
       //     allPersons: { allNumbers: "would be" },
       //   },
       // },
-      v2: ["was", "were"],
+      v2: terminusObjectNormalArray(["was", "were"]),
       v3: "been",
       thirdPS: "is",
       gerund: "being",

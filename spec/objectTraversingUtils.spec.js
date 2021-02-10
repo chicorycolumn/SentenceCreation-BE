@@ -566,7 +566,7 @@ describe("concoctNestedRoutes", () => {
 });
 
 describe("extractNestedRoutes", () => {
-  it("#otu1.1 Returns empty array for empty object.", () => {
+  it("#otu1.1a Returns empty array for empty object.", () => {
     const input = {};
     const expected = {
       routesByNesting: [],
@@ -576,19 +576,19 @@ describe("extractNestedRoutes", () => {
     expect(actual.routesByNesting).to.eql(expected.routesByNesting);
     expect(actual.routesByLevel).to.eql(expected.routesByLevel);
   });
-  it("#otu1.2 Returns key routes for object with one key at single level of nesting.", () => {
+  it("#otu1.1b Returns key routes for object with one key at single level of nesting.", () => {
     const input = { singular: "apple" };
     const expected = [["singular"]];
     const actual = extractNestedRoutes(input).routesByNesting;
     expect(actual).to.eql(expected);
   });
-  it("#otu1.3 Returns key routes for object with many keys at single level of nesting.", () => {
+  it("#otu1.1c Returns key routes for object with many keys at single level of nesting.", () => {
     const input = { singular: "apple", plural: "apples" };
     const expected = [["singular"], ["plural"]];
     const actual = extractNestedRoutes(input).routesByNesting;
     expect(actual).to.eql(expected);
   });
-  it("#otu1.4 Returns key routes for object with many keys at two levels of nesting.", () => {
+  it("#otu1.1d Returns key routes for object with many keys at two levels of nesting.", () => {
     const input = {
       singular: { nom: "kobieta", loc: "kobiecie" },
       plural: { nom: "kobiety", loc: "kobietach" },
@@ -602,7 +602,7 @@ describe("extractNestedRoutes", () => {
     const actual = extractNestedRoutes(input).routesByNesting;
     expect(actual).to.eql(expected);
   });
-  it("#otu1.5 Returns key routes for object with many keys at various levels of nesting.", () => {
+  it("#otu1.1e Returns key routes for object with many keys at various levels of nesting.", () => {
     const input = {
       singular: {
         nom: "jabłko",
@@ -614,9 +614,9 @@ describe("extractNestedRoutes", () => {
       },
       plural: {
         nom: {
-          one: { jeden: 1 },
+          one: { jeden: "1" },
           two: { dwa: { a: "obaj", b: "obie" } },
-          three: 3,
+          three: "3",
         },
         gen: "jabłek",
         dat: "jabłkom",
@@ -643,12 +643,17 @@ describe("extractNestedRoutes", () => {
       ["plural", "loc"],
     ];
     const actual = extractNestedRoutes(input).routesByNesting;
+    console.log("---------------------------------");
+    console.log(actual);
     expect(actual).to.eql(expected);
   });
-  it("#otu1.6 Returns key routes when some values are arrays and should not be mapped out.", () => {
+  it("#otu1.1f Returns key routes when some values are arrays and should not be mapped out.", () => {
     const input = {
       singular: { nom: "chłopak", acc: "chłopaka" },
-      plural: { nom: ["chłopacy", "chłopaki"], acc: "chłopakøw" },
+      plural: {
+        nom: { isTerminus: true, normal: ["chłopacy", "chłopaki"] },
+        acc: "chłopakøw",
+      },
     };
     const expected = [
       ["singular", "nom"],
@@ -659,7 +664,7 @@ describe("extractNestedRoutes", () => {
     const actual = extractNestedRoutes(input).routesByNesting;
     expect(actual).to.eql(expected);
   });
-  it("#otu2.1 get routes from kobieta.", () => {
+  it("#otu1.2a get routes from kobieta.", () => {
     const input = {
       //links
       translations: { ENG: ["woman", "lady"] },
@@ -685,16 +690,19 @@ describe("extractNestedRoutes", () => {
           gen: "kobiet",
           dat: "kobietom",
           acc: "kobiety",
-          ins: ["kobietami", "kobietamiamiamiami"],
+          ins: {
+            isTerminus: true,
+            normal: ["kobietami", "kobietamiamiamiami"],
+          },
           loc: "kobietach",
         },
       },
     };
 
-    let res = giveRoutesAndTerminalValuesFromObject(input);
+    let res = giveRoutesAndTerminalValuesFromObject(input.inflections);
     console.log(res);
   });
-  it("#otu2.2 get routes from read.", () => {
+  it("#otu1.2b get routes from read.", () => {
     const input = {
       //links
       translations: { ENG: ["read"], POL: ["czytać", "przeczytać"] },
@@ -715,7 +723,7 @@ describe("extractNestedRoutes", () => {
       },
     };
 
-    let res = giveRoutesAndTerminalValuesFromObject(input);
+    let res = giveRoutesAndTerminalValuesFromObject(input.inflections);
     console.log(res);
   });
 });

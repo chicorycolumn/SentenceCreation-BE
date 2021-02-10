@@ -16,6 +16,7 @@ exports.fetchPalette = (req) => {
     questionLanguage,
     answerLanguage,
     pleaseDontSpecify,
+    shouldThrowAtMidpoint,
   } = req.body;
 
   let { sentenceFormula, words } = scUtils.getMaterials(
@@ -195,7 +196,9 @@ exports.fetchPalette = (req) => {
     gpUtils.consoleLogAestheticBorder(4);
   }
 
-  // gpUtils.throw("Cease.");
+  if (shouldThrowAtMidpoint) {
+    gpUtils.throw("Midpoint cease.");
+  }
 
   if (answerLanguage) {
     multipleMode = true;

@@ -173,11 +173,27 @@ exports.filterWithinSelectedLemmaObject = (
     let sourceArr = [];
     let resArr = [];
 
-    //Delta, as a result of NATASHA T. We should throw error if array here. Should only be string or tobj.
+    //We should throw error if array here. Should only be string or tobj.
+    if ("natasha filterWithin") {
+      if (typeof source === "string") {
+        console.log("[1;33m " + `filterWithin IS STRING` + "[0m");
+      } else if (Array.isArray(source)) {
+        console.log("[1;33m " + `filterWithin IS ARRAY` + "[0m");
+        gpUtils.throw("should not have been array.");
+      } else if (gpUtils.isTerminusObject(source)) {
+        console.log("[1;33m " + `filterWithin IS TOBJ` + "[0m");
+      }
+    }
+
     if (Array.isArray(source)) {
       sourceArr = source;
-    } else if (typeof source === "string") {
+    } else if (
+      typeof source === "string" ||
+      (gpUtils.isTerminusObject(source) && source.processOnlyAtEnd)
+    ) {
       sourceArr.push(source);
+    } else if (gpUtils.isTerminusObject(source) && !source.processOnlyAtEnd) {
+      gpUtils.throw("Natasha, take action.");
     } else {
       gpUtils.throw(
         "#ERR ---------------> Expected this PHD value to be the end of a chain and thus a string or array."
@@ -643,11 +659,34 @@ exports.traverseAndRecordInflections = (
     //   gpUtils.throw("y61 ERR");
     // }
 
+    if ("natasha traverse") {
+      if (typeof source[chosenInflector] === "string") {
+        console.log("[1;33m " + `traverse IS STRING` + "[0m");
+      } else if (Array.isArray(source[chosenInflector])) {
+        console.log("[1;33m " + `traverse IS ARRAY` + "[0m");
+        console.log(source[chosenInflector]);
+        gpUtils.throw("should not have been array.");
+      } else if (gpUtils.isTerminusObject(source[chosenInflector])) {
+        console.log("[1;33m " + `traverse IS TOBJ` + "[0m");
+      }
+    }
+
+    //Natasha check
+    if (Array.isArray(source[chosenInflector])) {
+      gpUtils.throw("Uh oh, array.");
+    }
+
     if (
-      //Delta NATASHA T.
+      gpUtils.isTerminusObject(source[chosenInflector]) &&
+      !source[chosenInflector].processOnlyAtEnd
+    ) {
+      gpUtils.throw("Natasha, take action here.");
+    }
+
+    if (
       typeof source[chosenInflector] === "string" ||
-      Array.isArray(source[chosenInflector]) ||
-      (source[chosenInflector] && source[chosenInflector].isTerminus)
+      (gpUtils.isTerminusObject(source[chosenInflector]) &&
+        source[chosenInflector].processOnlyAtEnd)
     ) {
       if (shouldConsoleLog) {
         console.log("traverseAndRecordInflections Clause B", {

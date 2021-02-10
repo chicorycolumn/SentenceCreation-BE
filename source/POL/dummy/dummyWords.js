@@ -15,7 +15,11 @@ let nounSet = [
         nom: "orzech",
         gen: "orzecha",
         dat: "orzechowi",
-        acc: ["orzech", "orzecha"],
+        acc: {
+          isTerminus: true,
+          normal: ["orzech"],
+          additionalFrequent: ["orzecha"],
+        },
         ins: "orzechem",
         loc: "orzechu",
       },
@@ -133,8 +137,11 @@ let nounSet = [
     inflections: {
       singular: {
         nom: "krawat",
-        gen: ["krawata", "krawatu"],
-        // gen: "krawata",
+        gen: {
+          isTerminus: true,
+          normal: ["krawata"],
+          additionalInfrequent: ["krawatu"],
+        },
         dat: "krawatowi",
         acc: "krawat",
         ins: "krawatem",

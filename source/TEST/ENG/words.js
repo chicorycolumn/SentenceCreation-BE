@@ -1,5 +1,9 @@
 //Copied over on 27/12/2020
 
+const {
+  terminusObjectNormalArray,
+} = require("../../../utils/generalPurposeUtils");
+
 let nounSet = [
   {
     //links
@@ -453,7 +457,7 @@ let verbSet = [
       //     allPersons: { allNumbers: "would be" },
       //   },
       // },
-      v2: ["was", "were"],
+      v2: terminusObjectNormalArray(["was", "were"]),
       v3: "been",
       thirdPS: "is",
       gerund: "being",
