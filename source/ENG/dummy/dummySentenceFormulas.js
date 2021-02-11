@@ -1105,7 +1105,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy56",
     sentenceFormulaId: "ENG-dummy56",
-    translations: { ENG: ["ENG-dummy56"], POL: ["POL-dummy56"] },
+    translations: { POL: ["POL-dummy56"] },
     sentenceStructure: [
       {
         chunkId: "art-1",
@@ -1121,5 +1121,25 @@ exports.dummySentenceFormulasBank = [
       },
     ],
     primaryOrders: [],
+  },
+  {
+    sentenceFormulaSymbol: "dummy56a",
+    sentenceFormulaId: "ENG-dummy56a",
+    translations: { POL: ["POL-dummy56a"] },
+    sentenceStructure: [
+      {
+        chunkId: "art-1",
+        wordtype: "article",
+        form: ["both"],
+        connectedTo: "nou-1",
+      },
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        orTags: ["edible", "edible0"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [["art-1", "nou-1"]],
   },
 ];

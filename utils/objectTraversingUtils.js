@@ -24,6 +24,7 @@ exports.findMatchingLemmaObjectThenWord = (
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
   let selectedFormsArray = [];
   let arrayOfAllPossibleOutputUnits = [];
+  let temporaryMultipleMode;
 
   let allInflectorsForThisWordtype =
     refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
@@ -459,11 +460,80 @@ exports.findMatchingLemmaObjectThenWord = (
     //  STEP FOUR-B: Getting the inflected word.
 
     gpUtils.consoleLogPW("##If-PW", structureChunk, multipleMode);
-    console.log("r55", { multipleMode });
 
-    if (multipleMode) {
+    //Check for forced multiple.
+
+    let forcedMultipleRefOuter =
+      refObj.metaInflectorsToForceMultiple[currentLanguage][
+        structureChunk.wordtype
+      ];
+    let forceMultipleStructureChunks = [];
+
+    console.log("h20", {
+      forcedMultipleRefOuter,
+      currentLanguage,
+      "structureChunk.wordtype": structureChunk.wordtype,
+    });
+
+    if (forcedMultipleRefOuter) {
+      Object.keys(forcedMultipleRefOuter).forEach((featureKey) => {
+        console.log("h21", { featureKey });
+
+        let forcedMultipleRef = forcedMultipleRefOuter[featureKey];
+
+        Object.keys(forcedMultipleRef).forEach((metaInflector) => {
+          console.log("h22", { metaInflector });
+
+          if (structureChunk[featureKey].includes(metaInflector)) {
+            if (structureChunk[featureKey].length > 1) {
+              gpUtils.throw(
+                `stCh intends to use metaInflector to force multiple, specifically ${metaInflector} as ${featureKey}, but the arr containing the metaInflector had multiple values.`
+              );
+            }
+            let translatedValues = forcedMultipleRef[metaInflector];
+
+            console.log("h23", { translatedValues });
+
+            translatedValues.forEach((translatedValue, index) => {
+              if (!index) {
+                structureChunk[featureKey] = [translatedValue];
+                forceMultipleStructureChunks.push(structureChunk);
+                return;
+              }
+
+              let structureChunkCopy = gpUtils.copyWithoutReference(
+                structureChunk
+              );
+
+              structureChunkCopy[featureKey] = [translatedValue];
+              forceMultipleStructureChunks.push(structureChunkCopy);
+            });
+
+            temporaryMultipleMode = true;
+
+            console.log(
+              "h24 forceMultipleStructureChunks",
+              forceMultipleStructureChunks
+            );
+          }
+        });
+      });
+    }
+    if (temporaryMultipleMode) {
+      console.log(
+        "h25 forceMultipleStructureChunks",
+        forceMultipleStructureChunks
+      );
+      gpUtils.throw();
+      //
+      //Nownow: Put the mutlipleMode clase below into its own fxn, and call that fxn here, for every stCh in forcedstcharr.
+      //
+      temporaryMultipleMode = false;
+    } else if (multipleMode) {
       console.log("p05a");
       matchesCopy.forEach((selectedLemmaObject) => {
+        console.log("k30 selectedLemmaObject", selectedLemmaObject);
+
         let subArrayOfOutputUnits = lfUtils.filterWithinSelectedLemmaObject(
           selectedLemmaObject,
           structureChunk,

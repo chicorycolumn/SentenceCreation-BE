@@ -130,7 +130,7 @@ describe("/api", () => {
     });
   });
 
-  describe.only("/palette - Stage 15: Prepositions and Articles.", () => {
+  describe("/palette - Stage 15: Prepositions and Articles.", () => {
     it("#pal15-01a GET 200 YES: POL to ENG. Indefinite article.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
@@ -203,7 +203,7 @@ describe("/api", () => {
           );
         });
     });
-    it.only("#pal15-02a GET 200 YES: POL to ENG. Either article.", () => {
+    xit("#pal15-02a GET 200 YES: POL to ENG. Either article.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -231,7 +231,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal15-02b GET 200 YES: ENG to POL. Either article.", () => {
+    xit("#pal15-02b GET 200 YES: ENG to POL. Either article.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -259,7 +259,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal15-03a GET 200 YES: POL to ENG. Preposition 'with'. Articles for singular.", () => {
+    xit("#pal15-03a GET 200 YES: POL to ENG. Preposition 'with'. Articles for singular.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -295,7 +295,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal15-03b GET 200 YES: POL to ENG. Preposition 'with'. Articles for plural.", () => {
+    xit("#pal15-03b GET 200 YES: POL to ENG. Preposition 'with'. Articles for plural.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -331,7 +331,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal15-04a GET 200 YES: ENG to POL. Preposition 'with'. Articles for singular.", () => {
+    xit("#pal15-04a GET 200 YES: ENG to POL. Preposition 'with'. Articles for singular.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -367,7 +367,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal15-04b GET 200 YES: ENG to POL. Preposition 'with'. Articles for plural.", () => {
+    xit("#pal15-04b GET 200 YES: ENG to POL. Preposition 'with'. Articles for plural.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 

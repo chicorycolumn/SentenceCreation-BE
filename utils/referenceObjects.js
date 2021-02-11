@@ -272,6 +272,18 @@ exports.pluralVirilityAndSingularConversionRef = {
   },
 };
 
+exports.metaInflectorsToForceMultiple = {
+  ENG: {
+    article: {
+      form: {
+        both: ["definite", "indefinite"],
+        all: ["definite", "indefinite", "zero"],
+      },
+    },
+  },
+  POL: {},
+};
+
 exports.metaFeatures = {
   ENG: {
     gender: {
@@ -281,7 +293,7 @@ exports.metaFeatures = {
       allPluralGenders: ["virile", "nonvirile"],
       allGenders: ["m", "n", "f", "virile", "nonvirile"],
     },
-    form: { pronounAndDeterminer: ["pronoun", "determiner"] },
+    // form: { pronounAndDeterminer: ["pronoun", "determiner"] },
   },
   POL: {
     gender: {

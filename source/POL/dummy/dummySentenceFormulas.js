@@ -1739,7 +1739,21 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy56",
     sentenceFormulaId: "POL-dummy56",
-    translations: { POL: ["POL-dummy56"], ENG: ["ENG-dummy56"] },
+    translations: { ENG: ["ENG-dummy56"] },
+    sentenceStructure: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        orTags: ["edible", "edible0"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [],
+  },
+  {
+    sentenceFormulaSymbol: "dummy56a",
+    sentenceFormulaId: "POL-dummy56a",
+    translations: { ENG: ["ENG-dummy56a"] },
     sentenceStructure: [
       {
         chunkId: "nou-1",

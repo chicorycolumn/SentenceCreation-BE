@@ -388,7 +388,7 @@ describe("/api", () => {
           ]).to.include(res.body.questionSentenceArr[0]);
         });
     });
-    it("#pal08-03d GET 200 YES: RSWAT POL to ENG 'have' future pf, (should indeed give 'będzie miał').", () => {
+    it.only("#pal08-03d GET 200 YES: RSWAT POL to ENG 'have' future pf, (should indeed give 'będzie miał').", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 

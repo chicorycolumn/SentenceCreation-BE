@@ -431,6 +431,7 @@ let articleSet = [
 
     //inflections
     inflections: {
+      zero: "",
       definite: "the",
       indefinite: {
         isTerminus: true,
