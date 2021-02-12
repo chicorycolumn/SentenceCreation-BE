@@ -546,7 +546,7 @@ exports.findMatchingLemmaObjectThenWord = (
           let { errorInDrilling, selectedWordArray, drillPath } = unit;
 
           selectedWordArray.forEach((selectedWord) => {
-            if ("natasha findMatching Answer mode") {
+            if (!"natasha findMatching Answer mode") {
               if (typeof selectedWord === "string") {
                 console.log("[1;33m " + `findMatching Answer IS STRING` + "[0m");
               } else if (Array.isArray(selectedWord)) {
@@ -580,19 +580,10 @@ exports.findMatchingLemmaObjectThenWord = (
               );
               arrayOfAllPossibleOutputUnits.push(outputUnit);
             } else if (gpUtils.isTerminusObject(selectedWord)) {
-              let allWords = [];
-
-              let wordsKeys = [
-                "normal",
-                "additionalFrequent",
-                "additionalInfrequent",
-              ];
-
-              wordsKeys.forEach((wordsKey) => {
-                if (selectedWord[wordsKey]) {
-                  allWords = [...allWords, ...selectedWord[wordsKey]];
-                }
-              });
+              let allWords = gpUtils.getWordsFromTerminusObject(
+                selectedWord,
+                true
+              );
 
               allWords.forEach((word) => {
                 let outputUnit = otUtils.createOutputUnit(
@@ -766,7 +757,7 @@ exports.findMatchingLemmaObjectThenWord = (
       let selectedItem = gpUtils.selectRandom(selectedWordArray);
       let selectedWord;
 
-      if ("natasha findMatching Question mode") {
+      if (!"natasha findMatching Question mode") {
         if (typeof selectedItem === "string") {
           console.log("[1;33m " + `findMatching Question IS STRING` + "[0m");
         } else if (Array.isArray(selectedItem)) {
@@ -1040,7 +1031,7 @@ exports.giveRoutesAndTerminalValuesFromObject = (obj) => {
 
     //What is happening here exactly?
 
-    if ("natasha giveRoutes???") {
+    if (!"natasha giveRoutes???") {
       if (typeof value === "string") {
         console.log("[1;33m " + `giveRoutes??? IS STRING` + "[0m");
       } else if (Array.isArray(value)) {

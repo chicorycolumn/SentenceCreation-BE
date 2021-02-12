@@ -588,3 +588,19 @@ exports.isTerminusObject = (selectedWord) => {
 exports.terminusObjectNormalArray = (normalArr) => {
   return { isTerminus: true, normal: normalArr };
 };
+
+exports.getWordsFromTerminusObject = (tObj, shouldGetAll) => {
+  let allWords = [];
+
+  let wordsKeys = shouldGetAll
+    ? ["normal", "additionalFrequent", "additionalInfrequent"]
+    : ["normal", "additionalFrequent"];
+
+  wordsKeys.forEach((wordsKey) => {
+    if (tObj[wordsKey]) {
+      allWords = [...allWords, ...tObj[wordsKey]];
+    }
+  });
+
+  return allWords;
+};

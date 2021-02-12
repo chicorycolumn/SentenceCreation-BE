@@ -388,7 +388,7 @@ describe("/api", () => {
           ]).to.include(res.body.questionSentenceArr[0]);
         });
     });
-    it.only("#pal08-03d GET 200 YES: RSWAT POL to ENG 'have' future pf, (should indeed give 'będzie miał').", () => {
+    it("#pal08-03d GET 200 YES: RSWAT POL to ENG 'have' future pf, (should indeed give 'będzie miał').", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -399,9 +399,12 @@ describe("/api", () => {
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "dummy54a",
+          // shouldThrowAtMidpoint: true,
         })
         .expect(200)
         .then((res) => {
+          console.log(res.body);
+
           checkSentenceTranslations(
             res,
             questionLanguage,
@@ -425,6 +428,31 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "have_withPronouns",
+            []
+          );
+        });
+    });
+    it("#pal08-03f GET 200 YES: RSWAT ENG to POL 'have' future im, (should indeed give 'będzie miał').", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy54a they are",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log("aaa", res.body);
+
           checkSentenceTranslations(
             res,
             questionLanguage,

@@ -174,7 +174,7 @@ exports.filterWithinSelectedLemmaObject = (
     let resArr = [];
 
     //We should throw error if array here. Should only be string or tobj.
-    if ("natasha filterWithin") {
+    if (!"natasha filterWithin") {
       if (typeof source === "string") {
         console.log("[1;33m " + `filterWithin IS STRING` + "[0m");
       } else if (Array.isArray(source)) {
@@ -281,15 +281,38 @@ exports.filterWithinSelectedLemmaObject = (
 
   let source = lemmaObject.inflections;
 
+  // outputUnitsWithDrillPaths = [
+  //   {
+  //     selectedWordArray: ["będę miał"],
+  //     drillPath: [
+  //       ["form", "verbal"],
+  //       ["tense", "future"],
+  //       ["person", "1per"],
+  //       ["number", "singular"],
+  //     ],
+  //   },
+  //   {
+  //     selectedWordArray: ["będę mieć"],
+  //     drillPath: [
+  //       ["form", "verbal"],
+  //       ["tense", "future"],
+  //       ["person", "1per"],
+  //       ["number", "singular"],
+  //     ],
+  //   },
+  // ];
+
   lfUtils.traverseAndRecordInflections(
     source,
     requirementArrs,
-    outputUnitsWithDrillPaths
+    outputUnitsWithDrillPaths,
+    null,
+    multipleMode
   );
 
+  // console.log("[1;32m " + `---------------------` + "[0m");
   // gpUtils.consoleLogObjectAtTwoLevels(outputUnitsWithDrillPaths);
   // console.log(outputUnitsWithDrillPaths);
-  // gpUtils.throw("Cease.");
 
   if (!outputUnitsWithDrillPaths || !outputUnitsWithDrillPaths.length) {
     console.log(
@@ -625,21 +648,20 @@ exports.traverseAndRecordInflections = (
   source,
   reqArr,
   outputUnitsWithDrillPaths,
-  outputUnitsWithDrillPathsMini
+  outputUnitsWithDrillPathsMini,
+  multipleMode
 ) => {
-  // console.log(
-  //   "f22 traverseAndRecordInflections-----------------------------------------------"
-  // );
-  // console.log("source", source);
-  // console.log("reqArr", reqArr);
-  // console.log("outputUnitsWithDrillPaths", outputUnitsWithDrillPaths);
-  // console.log("outputUnitsWithDrillPathsMini", outputUnitsWithDrillPathsMini);
-  /////////////////////////////
   let shouldConsoleLog = false;
-  /////////////////////////////
 
   if (!outputUnitsWithDrillPathsMini) {
     outputUnitsWithDrillPathsMini = [];
+  }
+
+  if (!Array.isArray(outputUnitsWithDrillPathsMini)) {
+    console.log({ outputUnitsWithDrillPathsMini });
+    gpUtils.throw(
+      "LF:traverseAndRecordInflections found outputUnitsWithDrillPathsMini not array. See above."
+    );
   }
 
   let reqSubArr = reqArr[0];
@@ -652,35 +674,10 @@ exports.traverseAndRecordInflections = (
   }
 
   reqInflectorArr.forEach((chosenInflector, reqInflectorArrIndex) => {
-    // if (Array.isArray(source[chosenInflector])) {
-    //   console.log(
-    //     "[1;31m " + `source[chosenInflector] ${source[chosenInflector]}` + "[0m"
-    //   );
-    //   gpUtils.throw("y61 ERR");
-    // }
+    console.log("outputUnitsWithDrillPathsMini", outputUnitsWithDrillPathsMini);
 
-    if ("natasha traverse") {
-      if (typeof source[chosenInflector] === "string") {
-        console.log("[1;33m " + `traverse IS STRING` + "[0m");
-      } else if (Array.isArray(source[chosenInflector])) {
-        console.log("[1;33m " + `traverse IS ARRAY` + "[0m");
-        console.log(source[chosenInflector]);
-        gpUtils.throw("should not have been array.");
-      } else if (gpUtils.isTerminusObject(source[chosenInflector])) {
-        console.log("[1;33m " + `traverse IS TOBJ` + "[0m");
-      }
-    }
-
-    //Natasha check
     if (Array.isArray(source[chosenInflector])) {
-      gpUtils.throw("Uh oh, array.");
-    }
-
-    if (
-      gpUtils.isTerminusObject(source[chosenInflector]) &&
-      !source[chosenInflector].processOnlyAtEnd
-    ) {
-      gpUtils.throw("Natasha, take action here.");
+      gpUtils.throw("Uh oh, Natasha, array!");
     }
 
     if (
@@ -689,19 +686,59 @@ exports.traverseAndRecordInflections = (
         source[chosenInflector].processOnlyAtEnd)
     ) {
       if (shouldConsoleLog) {
-        console.log("traverseAndRecordInflections Clause B", {
-          reqInflectorLabel,
-          chosenInflector,
-        });
+        console.log(
+          "traverseAndRecordInflections Clause A: string or tObj to process at end",
+          {
+            reqInflectorLabel,
+            chosenInflector,
+          }
+        );
       }
 
       outputUnitsWithDrillPathsMini.push([reqInflectorLabel, chosenInflector]);
 
+      if (shouldConsoleLog) {
+        console.log(
+          `traverseAndRecordInflections pushing word ${source[chosenInflector]}`
+        );
+      }
+
       outputUnitsWithDrillPaths.push({
-        selectedWordArray: Array.isArray(source[chosenInflector])
-          ? source[chosenInflector]
-          : [source[chosenInflector]],
+        selectedWordArray: [source[chosenInflector]],
         drillPath: outputUnitsWithDrillPathsMini.slice(0),
+      });
+
+      outputUnitsWithDrillPathsMini.pop();
+
+      return source[chosenInflector];
+    } else if (
+      gpUtils.isTerminusObject(source[chosenInflector]) &&
+      !source[chosenInflector].processOnlyAtEnd
+    ) {
+      if (shouldConsoleLog) {
+        console.log(
+          "traverseAndRecordInflections Clause B: tObj to process now",
+          {
+            reqInflectorLabel,
+            chosenInflector,
+          }
+        );
+      }
+      outputUnitsWithDrillPathsMini.push([reqInflectorLabel, chosenInflector]);
+
+      let wordsFromTerminusObject = gpUtils.getWordsFromTerminusObject(
+        source[chosenInflector],
+        multipleMode
+      );
+
+      wordsFromTerminusObject.forEach((word) => {
+        if (shouldConsoleLog) {
+          console.log(`traverseAndRecordInflections pushing word ${word}`);
+        }
+        outputUnitsWithDrillPaths.push({
+          selectedWordArray: [word],
+          drillPath: outputUnitsWithDrillPathsMini.slice(0),
+        });
       });
 
       outputUnitsWithDrillPathsMini.pop();
@@ -712,10 +749,13 @@ exports.traverseAndRecordInflections = (
       !source[chosenInflector].isTerminus
     ) {
       if (shouldConsoleLog) {
-        console.log("traverseAndRecordInflections Clause A", {
-          reqInflectorLabel,
-          chosenInflector,
-        });
+        console.log(
+          "traverseAndRecordInflections Clause C: object for further traversal",
+          {
+            reqInflectorLabel,
+            chosenInflector,
+          }
+        );
       }
 
       outputUnitsWithDrillPathsMini.push([reqInflectorLabel, chosenInflector]);
@@ -724,16 +764,20 @@ exports.traverseAndRecordInflections = (
         source[chosenInflector],
         reqArr.slice(1),
         outputUnitsWithDrillPaths,
-        outputUnitsWithDrillPathsMini
+        outputUnitsWithDrillPathsMini,
+        multipleMode
       );
 
       outputUnitsWithDrillPathsMini.pop();
     } else {
       if (shouldConsoleLog) {
-        console.log("traverseAndRecordInflections Clause X", {
-          reqInflectorLabel,
-          chosenInflector,
-        });
+        console.log(
+          "traverseAndRecordInflections Clause X: none of the above",
+          {
+            reqInflectorLabel,
+            chosenInflector,
+          }
+        );
       }
     }
   });
