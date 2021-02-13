@@ -951,8 +951,7 @@ describe("/api", () => {
           );
         });
     });
-    //gamma
-    xit("#pal06-01b GET 200 YES: RSWAT with multiple orders.", () => {
+    it("#pal06-01b GET 200 YES: RSWAT with multiple orders.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1241,6 +1240,7 @@ describe("/api", () => {
             "Napisałbym.",
             "Będę pisał.",
             "Będę pisała.",
+            "Będę pisać.",
             "Niech napiszę.",
             "Niech piszę.",
           ]).to.contain(res.body.questionSentenceArr[0]);

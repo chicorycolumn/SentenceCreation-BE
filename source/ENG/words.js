@@ -574,6 +574,25 @@ let verbSet = [
   },
   {
     //links
+    translations: { ENG: ["see"], POL: ["widzieć", "zobaczyć"] },
+    tags: ["basic1"],
+    //selectors
+    lemma: "see",
+    id: "eng-ver-008",
+    //notes
+
+    //inflections
+    inflections: {
+      infinitive: "see",
+      verbal: {},
+      v2: "saw",
+      v3: "seen",
+      thirdPS: "sees",
+      gerund: "seeing",
+    },
+  },
+  {
+    //links
     translations: { ENG: ["have"], POL: ["mieć"] },
     tags: ["basic", "possession"],
     //selectors

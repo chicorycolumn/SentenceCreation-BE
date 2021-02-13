@@ -2353,6 +2353,184 @@ let verbSet = [
       verbalNoun: "zbadanie",
     },
   },
+  {
+    //links
+    translations: { ENG: ["see"] },
+    tags: ["basic1"],
+    //selectors
+    lemma: "widzieć",
+    id: "pol-ver-007-im-01",
+    aspect: "imperfective",
+    //notes
+
+    //inflections
+    inflections: {
+      infinitive: "widzieć",
+      verbal: {
+        past: {
+          impersonal: {
+            singular: { allSingularGenders: "widziano" },
+            plural: { allPluralGenders: "widziano" },
+          },
+          "1per": {
+            singular: {
+              m: "widziałem",
+              f: "widziałam",
+            },
+            plural: {
+              virile: "widzieliśmy",
+              nonvirile: "widziałyśmy",
+            },
+          },
+          "2per": {
+            singular: {
+              m: "widziałeś",
+              f: "widziałaś",
+            },
+            plural: {
+              virile: "widzieliście",
+              nonvirile: "widziałyście",
+            },
+          },
+          "3per": {
+            singular: {
+              m: "widział",
+              f: "widziała",
+              n: "widziało",
+            },
+            plural: {
+              virile: "widzieli",
+              nonvirile: "widziały",
+            },
+          },
+        },
+        present: {
+          impersonal: { singular: true, plural: true },
+          "1per": {
+            singular: {
+              allSingularGendersExcludingNeuter: "widzę",
+            },
+            plural: {
+              allPluralGenders: "widzimy",
+            },
+          },
+          "2per": {
+            singular: {
+              allSingularGendersExcludingNeuter: "widzisz",
+            },
+            plural: {
+              allPluralGenders: "widzicie",
+            },
+          },
+          "3per": {
+            singular: {
+              allSingularGenders: "widzi",
+            },
+            plural: {
+              allPluralGenders: "widzą",
+            },
+          },
+        },
+        future: true,
+        conditional: true,
+        imperative: "widź",
+      },
+      activeAdjectival: "	widzący",
+      passiveAdjectival: "widziany",
+      contemporaryAdverbial: "widząc",
+      anteriorAdverbial: false,
+      verbalNoun: "widzenie",
+    },
+  },
+  {
+    //links
+    translations: { ENG: ["see"] },
+    tags: ["basic1"],
+    //selectors
+    lemma: "zobaczyć",
+    id: "pol-ver-007-pf-01",
+    aspect: "perfective",
+    //notes
+
+    //inflections
+    inflections: {
+      infinitive: "zobaczyć",
+      verbal: {
+        past: {
+          impersonal: {
+            singular: { allSingularGenders: "zobaczono" },
+            plural: { allPluralGenders: "zobaczono" },
+          },
+          "1per": {
+            singular: {
+              m: "zobaczyłem",
+              f: "zobaczyłam",
+            },
+            plural: {
+              virile: "zobaczyliśmy",
+              nonvirile: "zobaczyłyśmy",
+            },
+          },
+          "2per": {
+            singular: {
+              m: "zobaczyłeś",
+              f: "zobaczyłaś",
+            },
+            plural: {
+              virile: "zobaczyliście",
+              nonvirile: "zobaczyłyście",
+            },
+          },
+          "3per": {
+            singular: {
+              m: "zobaczył",
+              f: "zobaczyła",
+              n: "zobaczyło",
+            },
+            plural: {
+              virile: "zobaczyli",
+              nonvirile: "zobaczyły",
+            },
+          },
+        },
+        present: false,
+        future: {
+          impersonal: { singular: true, plural: true },
+          "1per": {
+            singular: {
+              allSingularGendersExcludingNeuter: "zobaczę",
+            },
+            plural: {
+              allPluralGenders: "zobaczymy",
+            },
+          },
+          "2per": {
+            singular: {
+              allSingularGendersExcludingNeuter: "zobaczysz",
+            },
+            plural: {
+              allPluralGenders: "zobaczycie",
+            },
+          },
+          "3per": {
+            singular: {
+              allSingularGenders: "zobaczy",
+            },
+            plural: {
+              allPluralGenders: "zobaczą",
+            },
+          },
+        },
+        conditional: true,
+        imperative: "zobacz",
+      },
+      activeAdjectival: false,
+      passiveAdjectival: "zobaczony",
+      contemporaryAdverbial: false,
+      anteriorAdverbial: "zobaczywszy",
+      verbalNoun: "zobaczenie",
+    },
+  },
 ];
 
 let articleSet = [];

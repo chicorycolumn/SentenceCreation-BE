@@ -376,6 +376,20 @@ exports.findMatchingLemmaObjectThenWord = (
     );
   }
 
+  console.log("++++++");
+  console.log("++++++");
+  console.log("selectedFormsArray");
+  console.log(selectedFormsArray);
+  console.log("++++++");
+  console.log("++++++");
+  console.log(
+    selectedFormsArray.forEach((item) => {
+      console.log(item);
+    })
+  );
+  console.log("++++++");
+  console.log("++++++");
+
   if (selectedFormsArray.length) {
     selectedFormsArray.forEach((selectedFormObject) => {
       let {

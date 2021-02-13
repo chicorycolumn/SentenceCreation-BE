@@ -10,8 +10,6 @@ const { generalTranslatedSentencesRef } = testingUtils;
 // const { myErrMsgs } = require("../errors/errors");
 // const endpointsCopy = require("../endpoints.json");
 
-//This is a Washburne style reference object.
-
 describe("/api", () => {
   gpUtils.fillOutWashburneRefObj(
     generalTranslatedSentencesRef,
@@ -1532,6 +1530,40 @@ describe("/api", () => {
                 "Mother had given us one mirror.",
                 "Mother has given us one mirror.",
               ],
+            },
+          ];
+
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it.only("#pal13B-04a GET 200 YES: ENG to POL. Another more interesting sentence with Pronouns. Terminal object used.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          useDummy: true,
+          shouldThrowAtMidpoint: true,
+          sentenceFormulaSymbol: "dummy57",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "Women saw you (singular).",
+              POL: ["Kobiety zobaczyły cię.", "Kobiety zobaczyły ciebie."],
+            },
+            {
+              ENG: "Women saw you (plural).",
+              POL: ["Kobiety zobaczyły was."],
             },
           ];
 

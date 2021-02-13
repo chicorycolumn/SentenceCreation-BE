@@ -1764,4 +1764,35 @@ exports.dummySentenceFormulasBank = [
     ],
     primaryOrders: [],
   },
+  {
+    sentenceFormulaSymbol: "dummy57",
+    sentenceFormulaId: "POL-dummy57",
+    translations: { ENG: ["ENG-dummy57"] },
+    sentenceStructure: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        andTags: ["person"],
+        number: ["plural"],
+        specificLemmas: ["kobieta"],
+      },
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        agreeWith: "nou-1",
+        specificLemmas: ["widzieć", "zobaczyć"],
+        tenseDescription: ["past simple"],
+      },
+      {
+        chunkId: "pro-1",
+        wordtype: "pronoun",
+        specificLemmas: ["PERSONAL"],
+        person: ["2per"],
+        gcase: ["acc"],
+        // gender: ["allPersonalGenders"],
+        // number: []
+      },
+    ],
+    primaryOrders: [["nou-1", "ver-1", "pro-1"]],
+  },
 ];

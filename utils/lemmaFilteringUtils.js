@@ -173,20 +173,12 @@ exports.filterWithinSelectedLemmaObject = (
     let sourceArr = [];
     let resArr = [];
 
-    //We should throw error if array here. Should only be string or tobj.
-    if (!"natasha filterWithin") {
-      if (typeof source === "string") {
-        console.log("[1;33m " + `filterWithin IS STRING` + "[0m");
-      } else if (Array.isArray(source)) {
-        console.log("[1;33m " + `filterWithin IS ARRAY` + "[0m");
-        gpUtils.throw("should not have been array.");
-      } else if (gpUtils.isTerminusObject(source)) {
-        console.log("[1;33m " + `filterWithin IS TOBJ` + "[0m");
-      }
-    }
-
     if (Array.isArray(source)) {
-      sourceArr = source;
+      console.log({ source });
+      console.log(
+        "[1;33m " + `filterWithin, the variable called source, above, is ARRAY` + "[0m"
+      );
+      gpUtils.throw("Oh no Natasha, array!");
     } else if (
       typeof source === "string" ||
       (gpUtils.isTerminusObject(source) && source.processOnlyAtEnd)
@@ -207,26 +199,6 @@ exports.filterWithinSelectedLemmaObject = (
         drillPath: null,
       });
     });
-
-    //Okay, so, at this point, finishing the PHD section, structureChunk is like this.
-
-    //I want to, within this section, decant the gender feature (well, all features) into arr of ONE.
-
-    //Now let's think - from which PHDheadchunks should we take each feature?
-    //In this ecxact sitation, Gender should be taken from PHDawPrimary
-
-    // {
-    //   chunkId: 'pro-2',
-    //   wordtype: 'pronoun',
-    //   form: [ 'determiner' ],
-    //   specificLemmas: [ 'POSSESSIVE' ],
-    //   postHocAgreeWithPrimary: 'pro-1',
-    //   postHocAgreeWithSecondary: 'nou-1',
-    //   gcase: [ 'nom' ],
-    //   gender: [
-    //     'm1', 'm2', 'm3',        'f','n',         'virile', 'nonvirile', 'f',...etc
-    //   ]
-    // }
 
     console.log(
       "[1;35m " +
@@ -273,34 +245,7 @@ exports.filterWithinSelectedLemmaObject = (
 
   let errorInDrilling = false;
   let outputUnitsWithDrillPaths = [];
-
-  // console.log(
-  //   "y60 lemmaObject.inflections.verbal.future.1per",
-  //   lemmaObject.inflections.verbal.future["1per"]
-  // );
-
   let source = lemmaObject.inflections;
-
-  // outputUnitsWithDrillPaths = [
-  //   {
-  //     selectedWordArray: ["będę miał"],
-  //     drillPath: [
-  //       ["form", "verbal"],
-  //       ["tense", "future"],
-  //       ["person", "1per"],
-  //       ["number", "singular"],
-  //     ],
-  //   },
-  //   {
-  //     selectedWordArray: ["będę mieć"],
-  //     drillPath: [
-  //       ["form", "verbal"],
-  //       ["tense", "future"],
-  //       ["person", "1per"],
-  //       ["number", "singular"],
-  //     ],
-  //   },
-  // ];
 
   lfUtils.traverseAndRecordInflections(
     source,
@@ -309,10 +254,6 @@ exports.filterWithinSelectedLemmaObject = (
     null,
     multipleMode
   );
-
-  // console.log("[1;32m " + `---------------------` + "[0m");
-  // gpUtils.consoleLogObjectAtTwoLevels(outputUnitsWithDrillPaths);
-  // console.log(outputUnitsWithDrillPaths);
 
   if (!outputUnitsWithDrillPaths || !outputUnitsWithDrillPaths.length) {
     console.log(
@@ -677,7 +618,7 @@ exports.traverseAndRecordInflections = (
     console.log("outputUnitsWithDrillPathsMini", outputUnitsWithDrillPathsMini);
 
     if (Array.isArray(source[chosenInflector])) {
-      gpUtils.throw("Uh oh, Natasha, array!");
+      gpUtils.throw("Uh oh Natasha, array!");
     }
 
     if (

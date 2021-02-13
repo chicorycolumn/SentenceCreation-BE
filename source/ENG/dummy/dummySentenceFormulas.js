@@ -1142,4 +1142,35 @@ exports.dummySentenceFormulasBank = [
     ],
     primaryOrders: [["art-1", "nou-1"]],
   },
+  {
+    sentenceFormulaSymbol: "dummy57",
+    sentenceFormulaId: "ENG-dummy57",
+    translations: { POL: ["POL-dummy57"] },
+    sentenceStructure: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        andTags: ["person"],
+        number: ["plural"],
+        specificLemmas: ["woman"],
+      },
+      {
+        chunkId: "ver-1",
+        wordtype: "verb",
+        agreeWith: "nou-1",
+        specificLemmas: ["see"],
+        tenseDescription: ["past pf"],
+      },
+      {
+        chunkId: "pro-1",
+        wordtype: "pronoun",
+        specificLemmas: ["PERSONAL"],
+        person: ["2per"],
+        gcase: ["acc"],
+        // gender: ["allPersonalGenders"],
+        // number: []
+      },
+    ],
+    primaryOrders: [["nou-1", "ver-1", "pro-1"]],
+  },
 ];

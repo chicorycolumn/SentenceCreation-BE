@@ -617,7 +617,12 @@ exports.selectWordVersions = (
   orderedOutputArr.forEach((outputUnit, index) => {
     let previousOutputUnit = orderedOutputArr[index - 1];
     let subsequentOutputUnit = orderedOutputArr[index + 1];
-    let { selectedWord, structureChunk, drillPath } = outputUnit;
+    let {
+      selectedWord,
+      structureChunk,
+      drillPath,
+      selectedLemmaObject,
+    } = outputUnit;
 
     console.log("f56--------------");
     console.log("selectedWord", selectedWord);
