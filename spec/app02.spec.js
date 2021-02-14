@@ -1541,7 +1541,7 @@ describe("/api", () => {
           );
         });
     });
-    it.only("#pal13B-04a GET 200 YES: ENG to POL. Another more interesting sentence with Pronouns. Terminal object used.", () => {
+    xit("#pal13B-04a GET 200 YES: ENG to POL. Another more interesting sentence with Pronouns. Terminal object used.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 

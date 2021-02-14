@@ -32,7 +32,7 @@ exports.validateSentenceFormula = (sentenceFormula) => {
         !Array.isArray(structureChunk[arrayFeature])
       ) {
         gpUtils.throw(
-          `#ERR ----------------------------------------------------------------------> ${sentenceFormula.sentenceFormulaId} had ${structureChunk.chunkId} with ${arrayFeature} NOT an array.`
+          `lnqk validateSentenceFormula #ERR ----------------------------------------------------------------------> ${sentenceFormula.sentenceFormulaId} had ${structureChunk.chunkId} with ${arrayFeature} NOT an array.`
         );
       }
     });
@@ -43,7 +43,7 @@ exports.validateSentenceFormula = (sentenceFormula) => {
         !(typeof structureChunk[stringFeature] === "string")
       ) {
         gpUtils.throw(
-          `#ERR ----------------------------------------------------------------------> ${sentenceFormula.sentenceFormulaId} had ${structureChunk.chunkId}'s ***${stringFeature}*** NOT a string.`
+          `mhuk validateSentenceFormula #ERR ----------------------------------------------------------------------> ${sentenceFormula.sentenceFormulaId} had ${structureChunk.chunkId}'s ***${stringFeature}*** NOT a string.`
         );
       }
     });

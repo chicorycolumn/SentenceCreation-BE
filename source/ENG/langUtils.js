@@ -52,9 +52,11 @@ let inflectorRef = {
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   let shouldConsoleLog = false;
   if (shouldConsoleLog) {
-    console.log("[1;35m " + "ENG preprocessStructureChunks-------------------" + "[0m");
+    console.log(
+      "[1;35m " + "ywzr ENG preprocessStructureChunks-------------------" + "[0m"
+    );
   } else {
-    console.log("[1;35m " + `(ENG preprocessStructureChunks)` + "[0m");
+    console.log("[1;35m " + `(ywzr ENG preprocessStructureChunks)` + "[0m");
   }
 
   let metagenderRef = refObj.metaFeatures[currentLanguage].gender;
@@ -72,7 +74,10 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
       }
     }
 
-    console.log("w33 structureChunk.wordtype", structureChunk.wordtype);
+    console.log(
+      "fydk ENG preprocessStructureChunks structureChunk.wordtype",
+      structureChunk.wordtype
+    );
 
     if (
       //If gender is an appropriate feature of this wordtype.
@@ -230,7 +235,7 @@ exports.addLanguageParticularClarifiers = (
 
       if (person === "2per") {
         console.log(
-          "------------------------------------------ADDED CLARIFIER in Step 2, for Type 3 Syn",
+          "qjtk ENG addLanguageParticularClarifiers------------------------------------------ADDED CLARIFIER in Step 2, for Type 3 Syn",
           number
         );
         structureChunk.annotations.number = number;
@@ -261,7 +266,7 @@ exports.addLanguageParticularClarifiers = (
           let annotationValue = "past";
 
           console.log(
-            "------------------------------------------ADDED  CLARIFIER in Step 2, for Type 2 Syn",
+            "weaf ENG addLanguageParticularClarifiers------------------------------------------ADDED  CLARIFIER in Step 2, for Type 2 Syn",
             annotationValue
           );
           structureChunk.annotations.tenseDescription = annotationValue;
@@ -281,7 +286,7 @@ exports.addLanguageParticularClarifiers = (
           let annotationValue = "present";
 
           console.log(
-            "------------------------------------------ADDED  CLARIFIER in Step 2, for Type 2 Syn",
+            "befx ENG addLanguageParticularClarifiers------------------------------------------ADDED  CLARIFIER in Step 2, for Type 2 Syn",
             annotationValue
           );
           structureChunk.annotations.tenseDescription = annotationValue;

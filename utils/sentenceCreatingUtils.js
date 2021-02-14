@@ -54,7 +54,7 @@ exports.getMaterials = (
 
     if (!sentenceFormula) {
       gpUtils.throw(
-        `#ERR SC:getMaterials, no sentenceFormula for this sentenceFormulaId ${sentenceFormulaId}.`
+        `quky getMaterials #ERR SC:getMaterials, no sentenceFormula for this sentenceFormulaId ${sentenceFormulaId}.`
       );
     }
 
@@ -140,22 +140,22 @@ exports.processSentenceFormula = (
   let headOutputUnitArrays = [];
 
   console.log(
-    "processSentenceFormula: headChunks",
+    "iytd processSentenceFormula: headChunks",
     headChunks.map((chunk) => chunk.chunkId)
   );
   console.log(
-    "processSentenceFormula: dependentChunks",
+    "iytd processSentenceFormula: dependentChunks",
     dependentChunks.map((chunk) => chunk.chunkId)
   );
   console.log(
-    "processSentenceFormula: otherChunks",
+    "iytd processSentenceFormula: otherChunks",
     otherChunks.map((chunk) => chunk.chunkId)
   );
 
   delete errorInSentenceCreation.errorMessage;
 
   headChunks.forEach((headChunk) => {
-    console.log("~~ SC:processSentenceFormula STEP ONE", headChunk.chunkId);
+    console.log("evga sc:processSentenceFormula STEP ONE", headChunk.chunkId);
 
     //The below functions correctly with regard to:
     //Give multipleMode as true, it returns multiple outputUnit objects in allPossOutputUnits_head array.
@@ -176,7 +176,7 @@ exports.processSentenceFormula = (
     if (errorInSentenceCreation.errorMessage) {
       console.log(
         "[1;31m " +
-          `#ERR -------------------------> An error arose in SC:processSentenceFormula. Returning outputArr null for headChunk: ${headChunk.chunkId}` +
+          `bzck processSentenceFormula #ERR -------------------------> An error arose in SC:processSentenceFormula. Returning outputArr null for headChunk: ${headChunk.chunkId}` +
           "[0m"
       );
 
@@ -192,7 +192,7 @@ exports.processSentenceFormula = (
     if (!allPossOutputUnits_head || !allPossOutputUnits_head.length) {
       console.log(
         "[1;31m " +
-          `#ERR -------------------------> An error has arisen in SC:processSentenceFormula. Returning outputArr null for headChunk: ${headChunk.chunkId}` +
+          `ewio processSentenceFormula #ERR -------------------------> An error has arisen in SC:processSentenceFormula. Returning outputArr null for headChunk: ${headChunk.chunkId}` +
           "[0m"
       );
 
@@ -231,7 +231,7 @@ exports.processSentenceFormula = (
       if (specificDependentChunks.length) {
         specificDependentChunks.forEach((dependentChunk) => {
           console.log(
-            "~~ SC:processSentenceFormula STEP TWO",
+            "oiez sc:processSentenceFormula STEP TWO",
             dependentChunk.chunkId
           );
 
@@ -262,7 +262,7 @@ exports.processSentenceFormula = (
           ) {
             console.log(
               "[1;31m " +
-                `#ERR -------------------------> An error reared up in SC:processSentenceFormula. Returning outputArr null for dependentChunk:  ${dependentChunk.chunkId}` +
+                `fvqy #ERR -------------------------> An error reared up in SC:processSentenceFormula. Returning outputArr null for dependentChunk:  ${dependentChunk.chunkId}` +
                 "[0m"
             );
 
@@ -329,7 +329,7 @@ exports.processSentenceFormula = (
   delete errorInSentenceCreation.errorMessage;
 
   otherChunks.forEach((otherChunk) => {
-    console.log("f005", otherChunk);
+    console.log("qssh filterAnnotations", otherChunk);
 
     let allPossOutputUnits_other = otUtils.findMatchingLemmaObjectThenWord(
       gpUtils.copyWithoutReference(otherChunk),
@@ -350,7 +350,7 @@ exports.processSentenceFormula = (
     ) {
       console.log(
         "[1;31m " +
-          `#ERR -------------------------> An error has loomed in SC:processSentenceFormula. Returning outputArr null for otherChunk: ${otherChunk.chunkId}` +
+          `hyuh #ERR -------------------------> An error has loomed in SC:processSentenceFormula. Returning outputArr null for otherChunk: ${otherChunk.chunkId}` +
           "[0m"
       );
 
@@ -401,7 +401,7 @@ exports.processSentenceFormula = (
       ) {
         console.log(
           "[1;31m " +
-            `#ERR -------------------------> An error loomed in SC:processSentenceFormula. Returning outputArr null for postHocDependentChunk: ${postHocDependentChunk.chunkId}` +
+            `quek #ERR -------------------------> An error loomed in SC:processSentenceFormula. Returning outputArr null for postHocDependentChunk: ${postHocDependentChunk.chunkId}` +
             "[0m"
         );
 
@@ -480,7 +480,7 @@ exports.giveFinalSentences = (
 
     if (!multipleMode && answerOutputArrays && answerOutputArrays.length) {
       gpUtils.throw(
-        "#ERR Well that's strange. We are in Question Mode, so SC:giveFinalSentences expected to be given questionOutputArr, not answerOutputArrays."
+        "ubrz giveFinalSentences #ERR Well that's strange. We are in Question Mode, so SC:giveFinalSentences expected to be given questionOutputArr, not answerOutputArrays."
       );
     }
   }
@@ -529,12 +529,11 @@ exports.buildSentenceString = (
   currentLanguage,
   answerLanguage
 ) => {
-  console.log("[1;35m " + "buildSentenceString" + "[0m");
+  console.log("[1;35m " + "cghk buildSentenceString" + "[0m");
   console.log(
-    "unorderedArr",
+    "cghk buildSentenceString unorderedArr",
     unorderedArr.map((outputUnit) => outputUnit.selectedWord)
   );
-  // gpUtils.throw("cease");
 
   let outputArrays = [];
   let producedSentences = [];
@@ -542,10 +541,12 @@ exports.buildSentenceString = (
   if (!sentenceFormula.primaryOrders || !sentenceFormula.primaryOrders.length) {
     console.log(
       "[1;31m " +
-        `No primaryOrders were specified for ${sentenceFormula.sentenceFormulaSymbol} with ID ${sentenceFormula.sentenceFormulaId}. Using default order that structureChunks were defined in.` +
+        `npqq buildSentenceString No primaryOrders were specified for ${sentenceFormula.sentenceFormulaSymbol} with ID ${sentenceFormula.sentenceFormulaId}. Using default order that structureChunks were defined in.` +
         "[0m"
     );
-    console.log("buildSentenceString c13 gonna push unorderedArr Clause 0");
+    console.log(
+      "kfzo buildSentenceString c13 gonna push unorderedArr Clause 0"
+    );
     outputArrays.push(unorderedArr);
   } else {
     if (multipleMode) {
@@ -560,18 +561,21 @@ exports.buildSentenceString = (
       allOrders.forEach((order) => {
         let orderedArr = [];
         order.forEach((chunkId) => {
-          console.log("buildSentenceString", { chunkId });
+          console.log("gibo buildSentenceString", { chunkId });
           let foundChunk = unorderedArr.find(
             (item) => item.structureChunk.chunkId === chunkId
           );
           if (!foundChunk) {
             console.log(
-              "[1;31m " + "buildSentenceString: Could not find for " + chunkId + " [0m"
+              "[1;31m " +
+                "cyjk buildSentenceString: Could not find for " +
+                chunkId +
+                " [0m"
             );
           }
           orderedArr.push(foundChunk);
         });
-        console.log("buildSentenceString c13 gonna push orderedArr Clause 1");
+        console.log("qnob buildSentenceString Gonna push orderedArr Clause 1");
         outputArrays.push(orderedArr);
       });
     } else {
@@ -583,7 +587,7 @@ exports.buildSentenceString = (
           unorderedArr.find((item) => item.structureChunk.chunkId === chunkId)
         );
       });
-      console.log("buildSentenceString c13 gonna push orderedArr Clause 3");
+      console.log("xsqr buildSentenceString Gonna push orderedArr Clause 3");
       outputArrays.push(orderedArr);
     }
   }
@@ -610,7 +614,7 @@ exports.selectWordVersions = (
   currentLanguage,
   multipleMode
 ) => {
-  console.log("f55 orderedOutputArr");
+  console.log("ofoc selectWordVersions orderedOutputArr");
 
   let selectedWordsArr = [];
 
@@ -624,10 +628,10 @@ exports.selectWordVersions = (
       selectedLemmaObject,
     } = outputUnit;
 
-    console.log("f56--------------");
-    console.log("selectedWord", selectedWord);
-    console.log("structureChunk", structureChunk);
-    console.log("drillPath", drillPath);
+    console.log("nilu selectWordVersions--------------");
+    console.log("nilu selectWordVersions selectedWord", selectedWord);
+    console.log("nilu selectWordVersions structureChunk", structureChunk);
+    console.log("nilu selectWordVersions drillPath", drillPath);
     console.log("/----------------");
 
     if (typeof selectedWord === "string") {
@@ -652,12 +656,12 @@ exports.selectWordVersions = (
         ) {
           if (!subsequentOutputUnit) {
             gpUtils.throw(
-              "Shouldn't there be an outputUnit subsequent to this ENG indefinite article?"
+              "aqrz selectWordVersions Shouldn't there be an outputUnit subsequent to this ENG indefinite article?"
             );
           }
 
           console.log(
-            "j00 subsequentOutputUnit.selectedWord",
+            "nbra selectWordVersions subsequentOutputUnit.selectedWord",
             subsequentOutputUnit.selectedWord
           );
           if (
@@ -668,7 +672,6 @@ exports.selectWordVersions = (
               (typeof subsequentOutputUnit.selectedWord === "string" &&
                 /^[aeiou]/.test(subsequentOutputUnit.selectedWord[0])))
           ) {
-            console.log("j01");
             pushSelectedWordToArray(
               "protective",
               selectedWord,
@@ -677,7 +680,6 @@ exports.selectWordVersions = (
             );
             return;
           } else {
-            console.log("j02");
             pushSelectedWordToArray(
               "nonprotective",
               selectedWord,
@@ -725,7 +727,7 @@ exports.selectWordVersions = (
         ) {
           if (!subsequentOutputUnit) {
             gpUtils.throw(
-              "Shouldn't there be an outputUnit subsequent to this POL preposition?"
+              "mcob selectWordVersions Shouldn't there be an outputUnit subsequent to this POL preposition?"
             );
           }
 
@@ -765,7 +767,7 @@ exports.selectWordVersions = (
       }
     } else {
       gpUtils.throw(
-        "#ERR --------------------------------------> I expected either a string or a terminus object for this selectedWord."
+        "oilf selectWordVersions #ERR --------------------------------------> I expected either a string or a terminus object for this selectedWord."
       );
     }
 
@@ -776,41 +778,58 @@ exports.selectWordVersions = (
       multipleMode
     ) {
       console.log(
-        "[1;30m " + `pushSelectedWordToArray-----------------with args:` + "[0m"
+        "[1;30m " + `esbq pushSelectedWordToArray-----------------with args:` + "[0m"
       );
-      console.log({ key, selectedWord, selectedWordsArr, multipleMode });
+      console.log("esbq pushSelectedWordToArray", {
+        key,
+        selectedWord,
+        selectedWordsArr,
+        multipleMode,
+      });
 
       if (key === "string") {
-        console.log("[1;30m " + `Pushing ${selectedWord}` + "[0m");
+        console.log(
+          "[1;30m " + `uufy pushSelectedWordToArray Pushing ${selectedWord}` + "[0m"
+        );
         selectedWordsArr.push(selectedWord);
         return;
       }
 
       if (!selectedWord[key]) {
-        gpUtils.throw(`#ERR Could not find key ${key} on selectedWord.`);
+        gpUtils.throw(
+          `rgxc selectWordVersions #ERR Could not find key ${key} on selectedWord.`
+        );
       }
 
       if (!Array.isArray(selectedWord[key])) {
-        console.log(selectedWord);
-        console.log(selectedWord[key]);
-        gpUtils.throw("Value inside tobj should have been array.");
+        console.log("vcxx selectWordVersions", {
+          selectedWord,
+          "selectedWord[key]": selectedWord[key],
+        });
+        gpUtils.throw(
+          "vcxx selectWordVersions Value inside tobj should have been array."
+        );
       }
 
       if (selectedWord[key].length > 1) {
-        console.log(selectedWord);
-        console.log(selectedWord[key]);
-        gpUtils.throw("Multiple values inside tobj. What should I do?");
+        console.log("cnva selectWordVersions", {
+          selectedWord,
+          "selectedWord[key]": selectedWord[key],
+        });
+        gpUtils.throw(
+          "cnva selectWordVersions Multiple values inside tobj. What should I do?"
+        );
       }
 
       let value = selectedWord[key][0];
 
-      console.log("[1;30m " + `Pushing ${value}` + "[0m");
+      console.log("[1;30m " + `oqij selectWordVersions Pushing ${value}` + "[0m");
       selectedWordsArr.push(value);
     }
 
-    console.log({ selectedWord });
+    console.log("oadb selectWordVersions", { selectedWord });
     gpUtils.throw(
-      `SC:selectWordVersions didn't add any word from ${structureChunk.chunkId} and see selectedWord above.`
+      `oadb selectWordVersions didn't add any word from ${structureChunk.chunkId} and see selectedWord above.`
     );
   });
 
@@ -827,11 +846,13 @@ exports.conformAnswerStructureToQuestionStructure = (
   if (shouldConsoleLog) {
     console.log(
       "[1;35m " +
-        "SC:conformAnswerStructureToQuestionStructure-------------------" +
+        "dxft sc:conformAnswerStructureToQuestionStructure-------------------" +
         "[0m"
     );
   } else {
-    console.log("[1;35m " + `(SC:conformAnswerStructureToQuestionStructure)` + "[0m");
+    console.log(
+      "[1;35m " + `(aegh sc:conformAnswerStructureToQuestionStructure)` + "[0m"
+    );
   }
 
   let { sentenceStructure } = sentenceFormula;
@@ -851,7 +872,7 @@ exports.conformAnswerStructureToQuestionStructure = (
 
     if (shouldConsoleLog) {
       console.log(
-        "conformAnswerStructureToQuestionStructure: questionStructureChunk",
+        "rxez conformAnswerStructureToQuestionStructure questionStructureChunk",
         questionStructureChunk
       );
     }
@@ -866,7 +887,7 @@ exports.conformAnswerStructureToQuestionStructure = (
 
     if (!answerStructureChunk) {
       console.log(
-        "#NB SC:conformAnswerStructureToQuestionStructure couldn't find any answerStructureChunk for '" +
+        "dtph #NB sc:conformAnswerStructureToQuestionStructure couldn't find any answerStructureChunk for '" +
           questionStructureChunk.chunkId +
           "'."
       );
@@ -902,14 +923,14 @@ exports.conformAnswerStructureToQuestionStructure = (
     if (matchesLengthSnapshot && !matchingAnswerLemmaObjects.length) {
       console.log(
         "[1;31m " +
-          `#NB: There were some lemma objects, but they were filtered out because they didn't have all tags matching.` +
+          `wtlg conformAnswerStructureToQuestionStructure #NB: There were some lemma objects, but they were filtered out because they didn't have all tags matching.` +
           "[0m"
       );
     }
 
     if (!matchingAnswerLemmaObjects.length) {
       console.log(
-        "#NB There were no matching answer lemma objects found in SC:conformAnswerStructureToQuestionStructure"
+        "ltqf conformAnswerStructureToQuestionStructure #NB There were no matching answer lemma objects found in SC:conformAnswerStructureToQuestionStructure"
       );
       return;
     }
@@ -951,7 +972,7 @@ exports.conformAnswerStructureToQuestionStructure = (
         answerStructureChunk.importantFeatures.includes(inflectorKey)
       ) {
         console.log(
-          "I will not transfer '" +
+          "jngy conformAnswerStructureToQuestionStructure I will not transfer '" +
             inflectorKey +
             "' in SC:conformAtoQ step 1, as marked important in answerStCh."
         );
@@ -964,7 +985,7 @@ exports.conformAnswerStructureToQuestionStructure = (
         questionSelectedLemmaObject.tantumPlurale
       ) {
         console.log(
-          "Question lobj is a tantum, so we won't transfer Number feature."
+          "yurw conformAnswerStructureToQuestionStructure Question lobj is a tantum, so we won't transfer Number feature."
         );
         return;
       }
@@ -979,7 +1000,7 @@ exports.conformAnswerStructureToQuestionStructure = (
         )
       ) {
         console.log(
-          "All answer lobjs are tantum, so we won't transfer Number feature."
+          "kozn conformAnswerStructureToQuestionStructure All answer lobjs are tantum, so we won't transfer Number feature."
         );
         return;
       }
@@ -1104,11 +1125,11 @@ exports.inheritFromHeadToDependentChunk = (
   dependentChunk
 ) => {
   console.log(
-    `inheritFromHeadToDependentChunk: from ${headChunk.chunkId} to ${dependentChunk.chunkId}`,
+    `cmpr inheritFromHeadToDependentChunk: from ${headChunk.chunkId} to ${dependentChunk.chunkId}`,
     "dependentChunk BEFOREHAND: ",
     dependentChunk
   );
-  console.log("inheritFromHeadToDependentChunk: headChunk", headChunk);
+  console.log("cmpr inheritFromHeadToDependentChunk: headChunk", headChunk);
 
   let inheritableInflectorKeys =
     refObj.lemmaObjectFeatures[currentLanguage].inheritableInflectorKeys[
@@ -1128,7 +1149,7 @@ exports.inheritFromHeadToDependentChunk = (
   }
 
   inheritableInflectorKeys.forEach((inflectorKey) => {
-    console.log("inheritFromHeadToDependentChunk: inflectorKey", {
+    console.log("kwwm inheritFromHeadToDependentChunk: inflectorKey", {
       inflectorKey,
     });
     //HARD CHANGE
@@ -1148,7 +1169,7 @@ exports.inheritFromHeadToDependentChunk = (
   });
 
   console.log(
-    "At the end of inheritFromHeadToDependentChunk, we must again adjustVirility, which we also did in allLangUtils.preprocessStructureChunks earlier."
+    "ttez At the end of inheritFromHeadToDependentChunk, we must again adjustVirility, which we also did in allLangUtils.preprocessStructureChunks earlier."
   );
 
   allLangUtils.adjustVirilityOfStructureChunk(
@@ -1165,7 +1186,7 @@ exports.inheritFromHeadToDependentChunk = (
   );
 
   console.log(
-    "inheritFromHeadToDependentChunk: dependentChunk AFTERWARDS of inheritFromHeadToDependentChunk: ",
+    "wdim inheritFromHeadToDependentChunk: dependentChunk AFTERWARDS of inheritFromHeadToDependentChunk: ",
     dependentChunk
   );
 };

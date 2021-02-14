@@ -51,7 +51,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
       let { emoji, text } = allohomInfo;
 
       console.log(
-        "------------------------------------------ADDED  CLARIFIER in Step 1a",
+        "oozq addClarifiers------------------------------------------ADDED  CLARIFIER in Step 1a",
         emoji,
         text
       );
@@ -68,7 +68,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
         );
 
         console.log(
-          "------------------------------------------ADDED CLARIFIER in Step 1b",
+          "wbvz addClarifiers------------------------------------------ADDED CLARIFIER in Step 1b",
           annotationValue
         );
         structureChunk.annotations.wordtype = annotationValue;
@@ -100,7 +100,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
       refObj.lemmaObjectFeatures[answerLanguage]
         .allowableExtraClarifiersInSingleWordSentences[structureChunk.wordtype];
 
-    console.log("e12", languagesObj, {
+    console.log("qjho addClarifiers", languagesObj, {
       allowableClarifiers,
       allowableExtraClarifiersInSingleWordSentences,
     });
@@ -118,9 +118,9 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
       );
 
       if (!synhomographData) {
-        console.log("[1;35m " + `t12 No synhomographData` + "[0m");
+        console.log("[1;35m " + `xhqr addClarifiers No synhomographData` + "[0m");
       } else {
-        console.log("[1;35m " + `t12 Yes synhomographData` + "[0m");
+        console.log("[1;35m " + `xhqr addClarifiers Yes synhomographData` + "[0m");
         console.log("synhomDataUnits", synhomographData.synhomographs);
       }
 
@@ -129,26 +129,24 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
           if (selectedWord === synhomDataUnit.terminalValue) {
             console.log(
               "[1;35m " +
-                `t13 YES enter filterDownClarifiers for selectedWord as ${selectedWord}` +
+                `qxqf addClarifiers YES enter filterDownClarifiers for selectedWord as ${selectedWord}` +
                 "[0m"
             );
 
-            console.log("synhomDataUnit", synhomDataUnit);
+            console.log("qxqf addClarifierssynhomDataUnit", synhomDataUnit);
 
             let labelsWhereTheyDiffer = filterDownClarifiers(
               synhomDataUnit,
               allowableClarifiers
             );
 
-            // if (!drillPath || !drillPath.length) {
-            //   gpUtils.throw("#ERR Ah, I wanted to use drillPath here.");
-            // }
-
             function filterDownClarifiers(synhomDataUnit, allowableClarifiers) {
-              console.log("[1;35m " + `h11 filterDownClarifiers---------------` + "[0m");
+              console.log(
+                "[1;35m " + `pjgg filterDownClarifiers---------------` + "[0m"
+              );
 
               console.log(
-                "We start with these labels:",
+                "pjgg filterDownClarifiers We start with these labels:",
                 synhomDataUnit.labelsWhereTheyDiffer
               );
 
@@ -163,14 +161,14 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
                   ) {
                     console.log(
                       "[1;32m " +
-                        `${structureChunk.chunkId} ABZ Early stage PASSING of ${label} in allowableClarifiers` +
+                        `jpnj filterDownClarifiers ${structureChunk.chunkId} ABZ Early stage PASSING of ${label} in allowableClarifiers` +
                         "[0m"
                     );
                     return true;
                   } else {
                     console.log(
                       "[1;30m " +
-                        `${structureChunk.chunkId} ABZ Early stage BLOCKING of ${label} in allowableClarifiers` +
+                        `lmza filterDownClarifiers ${structureChunk.chunkId} ABZ Early stage BLOCKING of ${label} in allowableClarifiers` +
                         "[0m"
                     );
                     return false;
@@ -178,17 +176,22 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
                 }
               );
 
-              console.log("So now we have these labels:", filteredLabels);
-
-              console.log("t14, structureChunk", structureChunk);
               console.log(
-                "t14, synhomDataUnit.inflectionLabelChain",
+                "ahby filterDownClarifiers So now we have these labels:",
+                filteredLabels
+              );
+              console.log(
+                "ahby filterDownClarifiers, structureChunk",
+                structureChunk
+              );
+              console.log(
+                "ahby filterDownClarifiers, synhomDataUnit.inflectionLabelChain",
                 synhomDataUnit.inflectionLabelChain
               );
 
               let currentValueArr = synhomDataUnit.inflectionLabelChain.map(
                 (inflectionLabel) => {
-                  console.log("t15", { inflectionLabel });
+                  console.log("vpzx filterDownClarifiers", { inflectionLabel });
 
                   if (
                     inflectionLabel === "tense" &&
@@ -204,23 +207,22 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
                   ) {
                     console.log(
                       "[1;31m " +
-                        `#ERR g12 adding null to currentValueArr for inflectionLabel ${inflectionLabel}.` +
+                        `#ERR kxqz filterDownClarifiers adding null to currentValueArr for inflectionLabel ${inflectionLabel}.` +
                         "[0m"
                     );
 
                     return null;
-
-                    // console.log("#ERR g12 structureChunk", structureChunk);
-                    // gpUtils.throw("#ERR g12 " + inflectionLabel);
                   }
 
                   if (structureChunk[inflectionLabel].length > 1) {
                     console.log(
                       "[1;31m " +
-                        `#ERR g13: structureChunk[inflectionLabel] ${structureChunk[inflectionLabel]}` +
+                        `#ERR wqzm filterDownClarifiers: structureChunk[inflectionLabel] ${structureChunk[inflectionLabel]}` +
                         "[0m"
                     );
-                    gpUtils.throw("#ERR g13 " + inflectionLabel);
+                    gpUtils.throw(
+                      "#ERR wqzm filterDownClarifiers " + inflectionLabel
+                    );
                   }
 
                   return structureChunk[inflectionLabel][0];
@@ -252,7 +254,11 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
                           (item2 === pluralKey &&
                             ref[pluralKey].includes(item1))
                         ) {
-                          console.log("[1;33m " + `WAHEY!` + "[0m");
+                          console.log(
+                            "[1;33m " +
+                              `hsan findSinglePointMutationArray WAHEY!` +
+                              "[0m"
+                          );
                           resultBool = true;
                         }
                       });
@@ -263,21 +269,24 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
                 ) {
                   console.log(
                     "[1;32m " +
-                      `${structureChunk.chunkId} ABZ Early stage PASSING of ${label} in findSinglePointMutationArray` +
+                      `xunf findSinglePointMutationArray ${structureChunk.chunkId} ABZ Early stage PASSING of ${label} in findSinglePointMutationArray` +
                       "[0m"
                   );
                   return true;
                 } else {
                   console.log(
                     "[1;30m " +
-                      `${structureChunk.chunkId} ABZ Early stage BLOCKING of ${label} in findSinglePointMutationArray` +
+                      `dhjc findSinglePointMutationArray ${structureChunk.chunkId} ABZ Early stage BLOCKING of ${label} in findSinglePointMutationArray` +
                       "[0m"
                   );
                   return false;
                 }
               });
 
-              console.log("And now we have these labels:", filteredLabels);
+              console.log(
+                "cpkw filterDownClarifiers And now we have these labels:",
+                filteredLabels
+              );
 
               console.log("[1;35m " + `/filterDownClarifiers` + "[0m");
 
@@ -302,15 +311,18 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
                 if (clarifierValue.length === 1) {
                   clarifierValue = clarifierValue[0];
                 } else {
-                  console.log("clarifierValue", clarifierValue);
+                  console.log(
+                    "rqfh addClarifiers clarifierValue",
+                    clarifierValue
+                  );
                   gpUtils.throw(
-                    "aa.addClarifiers --> clarifierValue had length of not 1."
+                    "exej aa:addClarifiers --> clarifierValue had length of not 1."
                   );
                 }
               }
 
               console.log(
-                "------------------------------------------ADDED CLARIFIER in Step 3: ",
+                "sosu addClarifiers------------------------------------------ADDED CLARIFIER in Step 3: ",
                 clarifierValue
               );
               structureChunk.annotations[label] = clarifierValue;
@@ -318,14 +330,16 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
           } else {
             console.log(
               "[1;35m " +
-                `t13 NOT enter filterDownClarifiers for selectedWord as ${selectedWord}` +
+                `dhbb addClarifiers NOT enter filterDownClarifiers for selectedWord as ${selectedWord}` +
                 "[0m"
             );
           }
         });
       }
     } else {
-      console.log("I was told not to add any further clarifiers!");
+      console.log(
+        "wnvf addClarifiers I was told not to add any further clarifiers!"
+      );
     }
   });
 };
@@ -345,14 +359,6 @@ exports.addSpecifiers = (
   console.log("-----------------------");
   console.log("-----------------------");
   console.log("-----------------------");
-  // console.log("questionOutputArr");
-  // questionOutputArr.forEach((outputUnit) => {
-  //   console.log(outputUnit);
-  // });
-  // console.log(
-  //   "answerSentenceFormula.sentenceStructure",
-  //   answerSentenceFormula.sentenceStructure
-  // );
 
   //STEP ZERO: Getting materials
 
@@ -426,10 +432,10 @@ exports.addSpecifiers = (
         // questionHeadLemmaObject.gender = selectedGenderForQuestionLanguage;
         console.log(
           "[1;35m " +
-            "#NB: Am changing questionHeadChunk.gender and answerHeadChunk.gender" +
+            "ksxy addSpecifiers #NB: Am changing questionHeadChunk.gender and answerHeadChunk.gender" +
             "[0m"
         );
-        console.log({
+        console.log("ksxy addSpecifiers", {
           selectedGenderForQuestionLanguage,
           selectedGenderForAnswerLanguageArr,
         });
@@ -465,9 +471,11 @@ exports.addSpecifiers = (
         );
 
         console.log(
-          "[1;35m " + "#NB: Changing questionChunk.gender and answerChunk.gender" + "[0m"
+          "[1;35m " +
+            "ggpe addSpecifiers #NB: Changing questionChunk.gender and answerChunk.gender" +
+            "[0m"
         );
-        console.log({
+        console.log("ggpe", {
           selectedGenderForQuestionLanguage,
           selectedGenderForAnswerLanguageArr,
         });
@@ -537,14 +545,6 @@ exports.addSpecifiers = (
   console.log("-----------------------");
   console.log("-----------------------");
   console.log("-----------------------");
-  // console.log("questionOutputArr");
-  // questionOutputArr.forEach((item) => {
-  //   console.log(item);
-  // });
-  // console.log(
-  //   "answerSentenceFormula.sentenceStructure",
-  //   answerSentenceFormula.sentenceStructure
-  // );
 
   function getMaterialsToAddSpecifiers(
     answerChunk,
@@ -604,7 +604,7 @@ exports.addSpecifiers = (
     consoleLogLabel
   ) {
     gpUtils.throw(
-      "Ah, so we've decided to use addRequiredSpecifiersToAnswerChunkOrHeadChunk_not_used fxn."
+      "pcno Ah, so we've decided to use addRequiredSpecifiersToAnswerChunkOrHeadChunk_not_used fxn."
     );
     return;
 
@@ -758,11 +758,15 @@ exports.specifyQuestionChunkAndChangeAnswerChunk = (
   actionKey,
   actionValueArr
 ) => {
-  gpUtils.throw("cease");
+  gpUtils.throw("fjln specifyQuestionChunkAndChangeAnswerChunk Cease");
 
   if (actionValueArr.length !== 1) {
-    console.log({ actionValueArr });
-    gpUtils.throw("actionValueArr had length of not 1");
+    console.log("ujrw specifyQuestionChunkAndChangeAnswerChunk", {
+      actionValueArr,
+    });
+    gpUtils.throw(
+      "ujrw specifyQuestionChunkAndChangeAnswerChunk actionValueArr had length of not 1"
+    );
   }
 
   let {
@@ -773,28 +777,30 @@ exports.specifyQuestionChunkAndChangeAnswerChunk = (
   } = chunksObj;
 
   if (answerHeadChunk) {
-    console.log("specifyQuestionChunkAndChangeAnswerChunk Point A");
+    console.log("evuj specifyQuestionChunkAndChangeAnswerChunk Point A");
     answerHeadChunk[actionKey] = actionValueArr;
   } else {
-    console.log("specifyQuestionChunkAndChangeAnswerChunk Point B");
+    console.log("evuj specifyQuestionChunkAndChangeAnswerChunk Point B");
     answerChunk[actionKey] = actionValueArr;
   }
 
   //...and note Specifier in Q headCh if exists, else Q depCh.
 
   if (questionHeadChunk) {
-    console.log("specifyQuestionChunkAndChangeAnswerChunk Point C");
+    console.log("tbji specifyQuestionChunkAndChangeAnswerChunk Point C");
     aaUtils.addAnnotation(questionHeadChunk, actionKey, actionValueArr[0]);
   } else {
     if (!questionChunk) {
       throw (
-        "There was no corresponding questionChunk to add these Specifiers to: " +
+        "aaxj specifyQuestionChunkAndChangeAnswerChunk There was no corresponding questionChunk to add these Specifiers to: " +
         actionKey +
         " " +
         actionValueArr[0]
       );
     }
-    console.log("specifyQuestionChunkAndChangeAnswerChunk Point D");
+    console.log(
+      "lskt specifyQuestionChunkAndChangeAnswerChunk specifyQuestionChunkAndChangeAnswerChunk Point D"
+    );
     aaUtils.addAnnotation(questionChunk, actionKey, actionValueArr[0]);
   }
 };
@@ -805,12 +811,14 @@ exports.addAnnotation = (chunk, key, value) => {
   }
 
   if (typeof value !== "string") {
-    console.log({ value });
-    gpUtils.throw("aa.addAnnotation expected STRING for value");
+    console.log("nrtn addAnnotation", { value });
+    gpUtils.throw("nrtn addAnnotation expected STRING for value");
   }
 
-  console.log("[1;35m " + "Added annotation for " + chunk.chunkId + "[0m");
-  console.log({ key, value });
+  console.log(
+    "[1;35m " + "aggw addAnnotation Added annotation for " + chunk.chunkId + "[0m"
+  );
+  console.log("aggw addAnnotation", { key, value });
 
   chunk.annotations[key] = value;
 };
@@ -821,17 +829,19 @@ exports.attachAnnotations = (
   answerSentenceData
 ) => {
   if (!answerSentenceData) {
-    console.log("[1;31m " + "NO ANSWER SENTENCE DATA IN aa.attachAnnotations" + "[0m");
+    console.log(
+      "[1;31m " + "hhvv NO ANSWER SENTENCE DATA IN aa.attachAnnotations" + "[0m"
+    );
   }
 
   let { answerLanguage, questionLanguage } = languagesObj;
 
   if (answerSentenceData) {
-    console.log("attachAnnotations }}0");
+    console.log("atyh attachAnnotations }}0");
     arrayOfOutputUnits.forEach((outputUnit) => {
       let { structureChunk, selectedLemmaObject } = outputUnit;
 
-      console.log("attachAnnotations }}1, structureChunk", structureChunk);
+      console.log("xwit attachAnnotations }}1, structureChunk", structureChunk);
 
       let { chunkId } = structureChunk;
 
@@ -887,7 +897,7 @@ exports.attachAnnotations = (
       }
     });
   } else {
-    console.log("attachAnnotations }}2");
+    console.log("fxso attachAnnotations }}2");
     arrayOfOutputUnits.forEach((outputUnit) => {
       let { structureChunk, selectedLemmaObject } = outputUnit;
 

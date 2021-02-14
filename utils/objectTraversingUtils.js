@@ -17,7 +17,7 @@ exports.findMatchingLemmaObjectThenWord = (
 ) => {
   console.log(
     "[1;33m " +
-      `s10 findMatchingLemmaObjectThenWord for stCh: ${structureChunk.chunkId}` +
+      `ligw ot:findMatchingLemmaObjectThenWord for stCh: ${structureChunk.chunkId}` +
       "[0m"
   );
 
@@ -51,36 +51,51 @@ exports.findMatchingLemmaObjectThenWord = (
   let matches = [];
 
   if (structureChunk.specificIds && structureChunk.specificIds.length) {
-    console.log("GGGet matches by specific IDs:", structureChunk.specificIds);
+    console.log(
+      "obbm ot:findMatchingLemmaObjectThenWord GGGet matches by specific IDs:",
+      structureChunk.specificIds
+    );
     matches = source.filter((lObj) =>
       structureChunk.specificIds.includes(lObj.id)
     );
     if (!matches.length) {
-      console.log("[1;31m " + `No matches after Get matches by specific IDs.` + "[0m");
+      console.log(
+        "[1;31m " +
+          `czdi ot:findMatchingLemmaObjectThenWord No matches after Get matches by specific IDs.` +
+          "[0m"
+      );
     }
   } else if (
     structureChunk.specificLemmas &&
     structureChunk.specificLemmas.length
   ) {
     console.log(
-      "GGGet matches by specific Lemmas:",
+      "yyeq ot:findMatchingLemmaObjectThenWord GGGet matches by specific Lemmas:",
       structureChunk.specificLemmas
     );
-    console.log("source", source);
+    console.log("yyeq ot:findMatchingLemmaObjectThenWord source", source);
     matches = source.filter((lObj) =>
       structureChunk.specificLemmas.includes(lObj.lemma)
     );
     if (!matches.length) {
       console.log(
-        "[1;31m " + `No matches after Get matches by specific Lemmas.` + "[0m"
+        "[1;31m " +
+          `jybt ot:findMatchingLemmaObjectThenWord No matches after Get matches by specific Lemmas.` +
+          "[0m"
       );
     }
   } else {
-    console.log("GGGet matches by Tags and Selectors.");
+    console.log(
+      "vqkx ot:findMatchingLemmaObjectThenWord GGGet matches by Tags and Selectors."
+    );
     matches = lfUtils.filterByAndTagsAndOrTags(source, structureChunk);
 
     if (!matches.length) {
-      console.log("[1;31m " + `No matches after Get matches by Tags.` + "[0m");
+      console.log(
+        "[1;31m " +
+          `wvjy ot:findMatchingLemmaObjectThenWord No matches after Get matches by Tags.` +
+          "[0m"
+      );
     }
 
     langUtils.preprocessLemmaObjectsMinor(matches); //Must be adjusted before aspect (a selector) filter is applied.
@@ -92,7 +107,11 @@ exports.findMatchingLemmaObjectThenWord = (
     );
 
     if (!matches.length) {
-      console.log("[1;31m " + `No matches after Get matches by Selectors.` + "[0m");
+      console.log(
+        "[1;31m " +
+          `frpb ot:findMatchingLemmaObjectThenWord No matches after Get matches by Selectors.` +
+          "[0m"
+      );
     }
   }
 
@@ -293,7 +312,9 @@ exports.findMatchingLemmaObjectThenWord = (
                     gpUtils.isTerminusObject(selectedWordArr) &&
                     !selectedWordArr.processOnlyAtEnd
                   ) {
-                    gpUtils.throw("Natasha, action required.");
+                    gpUtils.throw(
+                      "bnle ot:findMatching Natasha, action required."
+                    );
                   }
 
                   //We here update a copy of structureChunk
@@ -346,7 +367,9 @@ exports.findMatchingLemmaObjectThenWord = (
                 gpUtils.isTerminusObject(selectedWordArr) &&
                 !selectedWordArr.processOnlyAtEnd
               ) {
-                gpUtils.throw("Natasha, some action required.");
+                gpUtils.throw(
+                  "wrha findMatching Natasha, some action required."
+                );
               }
 
               //We here update a copy of structureChunk
@@ -378,13 +401,13 @@ exports.findMatchingLemmaObjectThenWord = (
 
   console.log("++++++");
   console.log("++++++");
-  console.log("selectedFormsArray");
+  console.log("ecse ot:findMatchingLemmaObjectThenWord selectedFormsArray");
   console.log(selectedFormsArray);
   console.log("++++++");
   console.log("++++++");
   console.log(
     selectedFormsArray.forEach((item) => {
-      console.log(item);
+      console.log("qfkf ot:findMatchingLemmaObjectThenWord", item);
     })
   );
   console.log("++++++");
@@ -424,14 +447,17 @@ exports.findMatchingLemmaObjectThenWord = (
   let structureChunks = structureChunksAdjusted || [structureChunk];
 
   structureChunks.forEach((structureChunk) => {
-    console.log("p04 structureChunk", structureChunk);
+    console.log(
+      "mxcm ot:findMatchingLemmaObjectThenWord structureChunk",
+      structureChunk
+    );
 
     let matchesCopy = matches.slice(0);
 
     if (!matchesCopy.length) {
       console.log(
         "[1;31m " +
-          "#ERR It turns out no matching lemma objects were found in OT:findMatching" +
+          "btfm ot:findMatchingLemmaObjectThenWord #ERR It turns out no matching lemma objects were found in OT:findMatching" +
           "[0m"
       );
 
@@ -447,7 +473,7 @@ exports.findMatchingLemmaObjectThenWord = (
     if (!matchesCopy.length) {
       console.log(
         "[1;31m " +
-          "#ERR It transpires that no matching lemma objects were found in OT:findMatching" +
+          "gugm ot:findMatchingLemmaObjectThenWord #ERR It transpires that no matching lemma objects were found in OT:findMatching" +
           "[0m",
         structureChunk
       );
@@ -464,7 +490,7 @@ exports.findMatchingLemmaObjectThenWord = (
     if (!matchesCopy.length) {
       console.log(
         "[1;31m " +
-          "#ERR It appears no matching lemma objects were found in OT:findMatching" +
+          "yqtf ot:findMatchingLemmaObjectThenWord #ERR It appears no matching lemma objects were found in OT:findMatching" +
           "[0m"
       );
 
@@ -483,7 +509,7 @@ exports.findMatchingLemmaObjectThenWord = (
       ];
     let forceMultipleStructureChunks = [];
 
-    console.log("h20", {
+    console.log("nhiq ot:findMatchingLemmaObjectThenWord", {
       forcedMultipleRefOuter,
       currentLanguage,
       "structureChunk.wordtype": structureChunk.wordtype,
@@ -491,22 +517,26 @@ exports.findMatchingLemmaObjectThenWord = (
 
     if (forcedMultipleRefOuter) {
       Object.keys(forcedMultipleRefOuter).forEach((featureKey) => {
-        console.log("h21", { featureKey });
+        console.log("lsda ot:findMatchingLemmaObjectThenWord", { featureKey });
 
         let forcedMultipleRef = forcedMultipleRefOuter[featureKey];
 
         Object.keys(forcedMultipleRef).forEach((metaInflector) => {
-          console.log("h22", { metaInflector });
+          console.log("dxkg ot:findMatchingLemmaObjectThenWord", {
+            metaInflector,
+          });
 
           if (structureChunk[featureKey].includes(metaInflector)) {
             if (structureChunk[featureKey].length > 1) {
               gpUtils.throw(
-                `stCh intends to use metaInflector to force multiple, specifically ${metaInflector} as ${featureKey}, but the arr containing the metaInflector had multiple values.`
+                `nvth findMatching stCh intends to use metaInflector to force multiple, specifically ${metaInflector} as ${featureKey}, but the arr containing the metaInflector had multiple values.`
               );
             }
             let translatedValues = forcedMultipleRef[metaInflector];
 
-            console.log("h23", { translatedValues });
+            console.log("giww ot:findMatchingLemmaObjectThenWord", {
+              translatedValues,
+            });
 
             translatedValues.forEach((translatedValue, index) => {
               if (!index) {
@@ -526,7 +556,7 @@ exports.findMatchingLemmaObjectThenWord = (
             temporaryMultipleMode = true;
 
             console.log(
-              "h24 forceMultipleStructureChunks",
+              "rbfj ot:findMatchingLemmaObjectThenWord forceMultipleStructureChunks",
               forceMultipleStructureChunks
             );
           }
@@ -535,7 +565,7 @@ exports.findMatchingLemmaObjectThenWord = (
     }
     if (temporaryMultipleMode) {
       console.log(
-        "h25 forceMultipleStructureChunks",
+        "vfir ot:findMatchingLemmaObjectThenWord forceMultipleStructureChunks",
         forceMultipleStructureChunks
       );
       gpUtils.throw();
@@ -544,9 +574,12 @@ exports.findMatchingLemmaObjectThenWord = (
       //
       temporaryMultipleMode = false;
     } else if (multipleMode) {
-      console.log("p05a");
+      console.log("iksf ot:findMatchingLemmaObjectThenWord");
       matchesCopy.forEach((selectedLemmaObject) => {
-        console.log("k30 selectedLemmaObject", selectedLemmaObject);
+        console.log(
+          "uzsw ot:findMatchingLemmaObjectThenWord selectedLemmaObject",
+          selectedLemmaObject
+        );
 
         let subArrayOfOutputUnits = lfUtils.filterWithinSelectedLemmaObject(
           selectedLemmaObject,
@@ -562,13 +595,13 @@ exports.findMatchingLemmaObjectThenWord = (
           selectedWordArray.forEach((selectedWord) => {
             if (!"natasha findMatching Answer mode") {
               if (typeof selectedWord === "string") {
-                console.log("[1;33m " + `findMatching Answer IS STRING` + "[0m");
+                console.log("[1;33m " + `bufw findMatching Answer IS STRING` + "[0m");
               } else if (Array.isArray(selectedWord)) {
-                console.log("[1;33m " + `findMatching Answer IS ARRAY` + "[0m");
+                console.log("[1;33m " + `bufw findMatching Answer IS ARRAY` + "[0m");
                 console.log(selectedWord);
-                gpUtils.throw("should not have been array.");
+                gpUtils.throw("bufw findMatching should not have been array.");
               } else if (gpUtils.isTerminusObject(selectedWord)) {
-                console.log("[1;33m " + `findMatching Answer IS TOBJ` + "[0m");
+                console.log("[1;33m " + `bufw findMatching Answer IS TOBJ` + "[0m");
               }
             }
 
@@ -576,7 +609,9 @@ exports.findMatchingLemmaObjectThenWord = (
               gpUtils.isTerminusObject(selectedWord) &&
               !selectedWord.processOnlyAtEnd
             ) {
-              console.log("Natasha, action here required.");
+              console.log(
+                "zjnv ot:findMatchingLemmaObjectThenWord Natasha, action here required."
+              );
             }
 
             if (
@@ -615,7 +650,7 @@ exports.findMatchingLemmaObjectThenWord = (
         });
       });
     } else {
-      console.log("p05b");
+      console.log("xzjc ot:findMatchingLemmaObjectThenWord");
       let selectedLemmaObject = gpUtils.selectRandom(matchesCopy);
 
       if (!pleaseDontSpecify) {
@@ -626,8 +661,14 @@ exports.findMatchingLemmaObjectThenWord = (
         );
       }
 
-      console.log("If-PW selectedLemmaObject for " + structureChunk.chunkId);
-      console.log(selectedLemmaObject.inflections);
+      console.log(
+        "fxdn ot:findMatchingLemmaObjectThenWord If-PW selectedLemmaObject for " +
+          structureChunk.chunkId
+      );
+      console.log(
+        "fxdn ot:findMatchingLemmaObjectThenWord",
+        selectedLemmaObject.inflections
+      );
 
       let subArrayOfOutputUnits = lfUtils.filterWithinSelectedLemmaObject(
         selectedLemmaObject,
@@ -641,7 +682,10 @@ exports.findMatchingLemmaObjectThenWord = (
         return false;
       }
 
-      console.log("e33 subArrayOfOutputUnits", subArrayOfOutputUnits);
+      console.log(
+        "mrnp ot:findMatchingLemmaObjectThenWord subArrayOfOutputUnits",
+        subArrayOfOutputUnits
+      );
 
       // throw "Cease.";
       //If the outputunits differ only in gender, and pleaseDontSpecifyPronounGender is true,
@@ -710,7 +754,10 @@ exports.findMatchingLemmaObjectThenWord = (
           newGenderArr.push(genderValue);
         });
 
-        console.log("o14 newGenderArr", newGenderArr);
+        console.log(
+          "dznt ot:findMatchingLemmaObjectThenWord newGenderArr",
+          newGenderArr
+        );
 
         let metaGenderRef = refObj.metaFeatures[currentLanguage]["gender"];
 
@@ -730,7 +777,10 @@ exports.findMatchingLemmaObjectThenWord = (
           }
         });
 
-        console.log("o15 metaGenderResult", metaGenderResult);
+        console.log(
+          "zdxc ot:findMatchingLemmaObjectThenWord metaGenderResult",
+          metaGenderResult
+        );
 
         mergedOutputUnit.drillPath.find(
           (pathArr) => pathArr[0] === "gender"
@@ -743,7 +793,10 @@ exports.findMatchingLemmaObjectThenWord = (
         pleaseDontSpecifyPronounGender &&
         doDrillPathsDifferOnlyByGender(subArrayOfOutputUnits)
       ) {
-        console.log("o11 subArrayOfOutputUnits", subArrayOfOutputUnits);
+        console.log(
+          "kpos ot:findMatchingLemmaObjectThenWord subArrayOfOutputUnits",
+          subArrayOfOutputUnits
+        );
 
         let mergedGenderOutputUnit = createMergedGenderOutputUnit(
           subArrayOfOutputUnits
@@ -752,7 +805,10 @@ exports.findMatchingLemmaObjectThenWord = (
         subArrayOfOutputUnits = [mergedGenderOutputUnit];
       }
 
-      console.log("o12 subArrayOfOutputUnits", subArrayOfOutputUnits);
+      console.log(
+        "sfmo ot:findMatchingLemmaObjectThenWord subArrayOfOutputUnits",
+        subArrayOfOutputUnits
+      );
 
       let unit = gpUtils.selectRandom(subArrayOfOutputUnits);
 
@@ -760,10 +816,10 @@ exports.findMatchingLemmaObjectThenWord = (
 
       if (!selectedWordArray || !selectedWordArray.length) {
         console.log(
-          "13 errorInSentenceCreation.errorMessage: No lemma objects were found for these specifications."
+          "whhe ot:findMatchingLemmaObjectThenWord errorInSentenceCreation.errorMessage: No lemma objects were found for these specifications."
         );
         errorInSentenceCreation.errorMessage =
-          "No lemma objects were found for these specifications.";
+          "whhe ot:findMatchingLemmaObjectThenWord No lemma objects were found for these specifications.";
         return false;
       }
 
@@ -773,13 +829,27 @@ exports.findMatchingLemmaObjectThenWord = (
 
       if (!"natasha findMatching Question mode") {
         if (typeof selectedItem === "string") {
-          console.log("[1;33m " + `findMatching Question IS STRING` + "[0m");
+          console.log(
+            "[1;33m " +
+              `ozdj ot:findMatchingLemmaObjectThenWord findMatching Question IS STRING` +
+              "[0m"
+          );
         } else if (Array.isArray(selectedItem)) {
-          console.log("[1;33m " + `findMatching Question IS ARRAY` + "[0m");
-          console.log(selectedItem);
-          gpUtils.throw("should not have been array.");
+          console.log(
+            "[1;33m " +
+              `ozdj ot:findMatchingLemmaObjectThenWord findMatching Question IS ARRAY` +
+              "[0m"
+          );
+          console.log("jxny ot:findMatchingLemmaObjectThenWord", selectedItem);
+          gpUtils.throw(
+            "jxny ot:findMatchingLemmaObjectThenWord should not have been array."
+          );
         } else if (gpUtils.isTerminusObject(selectedItem)) {
-          console.log("[1;33m " + `findMatching Question IS TOBJ` + "[0m");
+          console.log(
+            "[1;33m " +
+              `ozdj ot:findMatchingLemmaObjectThenWord findMatching Question IS TOBJ` +
+              "[0m"
+          );
         }
       }
 
@@ -822,17 +892,24 @@ exports.findMatchingLemmaObjectThenWord = (
     }
   });
 
-  console.log("[1;33m " + `s12 arrayOfAllPossibleOutputUnits is:` + "[0m");
+  console.log(
+    "[1;33m " +
+      `siwr ot:findMatchingLemmaObjectThenWord arrayOfAllPossibleOutputUnits is:` +
+      "[0m"
+  );
   console.log(arrayOfAllPossibleOutputUnits);
 
   if (!arrayOfAllPossibleOutputUnits.length) {
     if (!errorInSentenceCreation.errorMessage) {
       console.log(
-        "14 errorInSentenceCreation.errorMessage: The rrrequested inflections were not found in the selected lemma objects."
+        "yzcq ot:findMatchingLemmaObjectThenWord errorInSentenceCreation.errorMessage: The rrrequested inflections were not found in the selected lemma objects."
       );
-      console.log("structureChunk", structureChunk);
+      console.log(
+        "yzcq ot:findMatchingLemmaObjectThenWord structureChunk",
+        structureChunk
+      );
       errorInSentenceCreation.errorMessage =
-        "The rrrequested inflections were not found in the selected lemma objects.";
+        "yzcq The rrrequested inflections were not found in the selected lemma objects.";
     }
     return false;
   }
@@ -856,10 +933,10 @@ exports.createOutputUnit = (
 ) => {
   if (errorInDrilling || !selectedWord) {
     console.log(
-      "15 errorInSentenceCreation.errorMessage: A lemma object was indeed selected, but no word was found at the end of the give inflection chain."
+      "acsm createOutputUnit errorInSentenceCreation.errorMessage: A lemma object was indeed selected, but no word was found at the end of the give inflection chain."
     );
     errorInSentenceCreation.errorMessage =
-      "A lemma object was indeed selected, but no word was found at the end of the give inflection chain.";
+      "acsm createOutputUnit A lemma object was indeed selected, but no word was found at the end of the give inflection chain.";
     return false;
   }
 
@@ -959,7 +1036,7 @@ exports.extractNestedRoutes = (source, includeTerminusObjectKeys) => {
       arr.pop();
     } else {
       gpUtils.throw(
-        `OT:recursivelyMapRoutes found value with wrong data type: ${
+        `kwdo ot:recursivelyMapRoutes found value with wrong data type: ${
           Array.isArray(source)
             ? "Array"
             : (typeof source)[0].toUpperCase() + (typeof source).slice(1)
@@ -1031,7 +1108,9 @@ exports.findObjectInNestedObjectsAndArrays = (
 
 exports.giveRoutesAndTerminalValuesFromObject = (obj) => {
   console.log(
-    "[1;35m " + `OT:giveRoutesAndTerminalValuesFromObject-----------------------` + "[0m"
+    "[1;35m " +
+      `xlbj ot:giveRoutesAndTerminalValuesFromObject-----------------------` +
+      "[0m"
   );
 
   const nestedRoutes = otUtils.extractNestedRoutes(obj).routesByNesting;
@@ -1047,13 +1126,13 @@ exports.giveRoutesAndTerminalValuesFromObject = (obj) => {
 
     if (!"natasha giveRoutes???") {
       if (typeof value === "string") {
-        console.log("[1;33m " + `giveRoutes??? IS STRING` + "[0m");
+        console.log("[1;33m " + `nayq giveRoutes??? IS STRING` + "[0m");
       } else if (Array.isArray(value)) {
-        console.log("[1;33m " + `giveRoutes??? IS ARRAY` + "[0m");
-        console.log(nestedRoute, value);
-        gpUtils.throw("should not have been array.");
+        console.log("[1;33m " + `nayq giveRoutes??? IS ARRAY` + "[0m");
+        console.log("nayq", nestedRoute, value);
+        gpUtils.throw("nayq giveRoutes should not have been array.");
       } else if (gpUtils.isTerminusObject(value)) {
-        console.log("[1;33m " + `giveRoutes??? IS TOBJ` + "[0m");
+        console.log("[1;33m " + `nayq giveRoutes??? IS TOBJ` + "[0m");
       }
     }
 
@@ -1151,9 +1230,9 @@ exports.findSinglePointMutationArray = (
   positionToExamine,
   specialComparisonCallback
 ) => {
-  console.log("h12 findSinglePointMutationArray was given:");
-  console.log({ currentArray, positionToExamine });
-  console.log("arrayOfArrays", arrayOfArrays);
+  console.log("ldzi findSinglePointMutationArray was given:");
+  console.log("ldzi", { currentArray, positionToExamine });
+  console.log("ldzi findSinglePointMutationArray arrayOfArrays", arrayOfArrays);
 
   if (!arrayOfArrays.length) {
     return false;
@@ -1197,7 +1276,7 @@ exports.stripOutFeatures = (currentLanguage, structureChunk, PWlabel) => {
       if (structureChunk["inflectorKey"]) {
         console.log(
           "[1;35m " +
-            `Deleting ${inflectorKey} from stCh ${structureChunk.chunkId} because this is #${PWlabel} in ${currentLanguage}` +
+            `milm stripOutFeatures Deleting ${inflectorKey} from stCh ${structureChunk.chunkId} because this is #${PWlabel} in ${currentLanguage}` +
             "[0m"
         );
       }

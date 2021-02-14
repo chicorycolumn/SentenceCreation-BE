@@ -40,7 +40,7 @@ exports.findHomographs = (testing, currentLanguage, homographType, ignore) => {
   }
 
   if (!["syn", "allo", "all"].includes(homographType)) {
-    console.log({ homographType });
+    console.log("tvgz findHomographs", { homographType });
     throw "findHomographs fxn: I don't know what type of homograph you want me to find. I've logged above what you gave me.";
   }
 

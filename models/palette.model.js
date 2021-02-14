@@ -48,7 +48,7 @@ exports.fetchPalette = (req) => {
         )
       ) {
         console.log(
-          "[1;32m " + `fetchPalette setting pleaseDontSpecify to false.` + "[0m"
+          "[1;32m " + `iirz-fetchPalette setting pleaseDontSpecify to false.` + "[0m"
         );
         pleaseDontSpecify = false;
       }
@@ -68,7 +68,7 @@ exports.fetchPalette = (req) => {
     if (!questionSentenceData) {
       console.log(
         "[1;31m " +
-          `#ERR ---------------> In fetchPalette the question arrayOfOutputArrays came back NOTHING.` +
+          `#ERR ---------------> cdqk-fetchPalette the question arrayOfOutputArrays came back NOTHING.` +
           "[0m"
       );
 
@@ -88,7 +88,7 @@ exports.fetchPalette = (req) => {
     ) {
       console.log(
         "[1;31m " +
-          `#ERR ---------------> In fetchPalette the question arrayOfOutputArrays came back NONE.` +
+          `#ERR ---------------> dwlw-fetchPalette the question arrayOfOutputArrays came back NONE.` +
           "[0m"
       );
 
@@ -104,11 +104,11 @@ exports.fetchPalette = (req) => {
 
     if (questionSentenceData.arrayOfOutputArrays.length > 1) {
       console.log(
-        "questionSentenceData.arrayOfOutputArrays",
+        "pipr-fetchPalette questionSentenceData.arrayOfOutputArrays",
         questionSentenceData.arrayOfOutputArrays
       );
       gpUtils.throw(
-        "#ERR questionSentenceData.arrayOfOutputArrays.length had length more than 1. It was " +
+        "#ERR tbvr-fetchPalette questionSentenceData.arrayOfOutputArrays.length had length more than 1. It was " +
           questionSentenceData.arrayOfOutputArrays.length
       );
     }
@@ -125,9 +125,13 @@ exports.fetchPalette = (req) => {
 
     if ("console") {
       console.log(
-        "[1;35m " + `a10 stCh ${structureChunk.chunkId} at index ${index}` + "[0m"
+        "[1;35m " +
+          `vmfg-fetchPalette stCh ${structureChunk.chunkId} at index ${index}` +
+          "[0m"
       );
-      console.log("[1;35m " + `a10 slObj ${selectedLemmaObject.lemma}` + "[0m");
+      console.log(
+        "[1;35m " + `vmfg-fetchPalette slObj ${selectedLemmaObject.lemma}` + "[0m"
+      );
       console.log(" ");
     }
 
@@ -137,7 +141,7 @@ exports.fetchPalette = (req) => {
     ) {
       console.log(
         "[1;35m " +
-          `Will blank structureChunk.gender of ${structureChunk.chunkId} just before Midpoint, because slObj ${selectedLemmaObject.lemma} is multi gender.` +
+          `mjdj-fetchPalette Will blank structureChunk.gender of ${structureChunk.chunkId} just before Midpoint, because slObj ${selectedLemmaObject.lemma} is multi gender.` +
           "[0m"
       );
 
@@ -155,8 +159,11 @@ exports.fetchPalette = (req) => {
           Array.isArray(featureValue) &&
           featureValue.length > 1
         ) {
-          console.log("[1;31m " + `#ERR a11 structureChunk is:` + "[0m", structureChunk);
-          gpUtils.throw("#ERR a11 featureKey: " + featureKey);
+          console.log(
+            "[1;31m " + `#ERR oyxp-fetchPalette structureChunk is:` + "[0m",
+            structureChunk
+          );
+          gpUtils.throw("#ERR oyxp-fetchPalette featureKey: " + featureKey);
         }
       });
     }
@@ -165,14 +172,14 @@ exports.fetchPalette = (req) => {
   if (true && "console") {
     console.log(
       "[1;36m " +
-        "{{{ #SBS fetchPalette just after we get questionSentenceData back from SC:processSentenceFormula. Let's see the stChs in questionSentenceData.arrayOfOutputArrays:" +
+        "{{{ zuwv-fetchPalette just after we get questionSentenceData back from SC:processSentenceFormula. Let's see the stChs in questionSentenceData.arrayOfOutputArrays:" +
         "[0m"
     );
 
     questionSentenceData.questionOutputArr
       .map((outputUnit) => outputUnit.structureChunk)
       .forEach((stCh) => {
-        console.log(stCh);
+        console.log("niwt-fetchPalette -fetchPalette", stCh);
       });
 
     console.log("[1;36m " + "}}}" + "[0m");
@@ -181,11 +188,12 @@ exports.fetchPalette = (req) => {
   if (true && "console") {
     console.log(
       "[1;35m " +
-        "{{{ #SBS fetchPalette just before midpoint. Let's see the selectedWordss" +
+        "{{{ cjae-fetchPalette just before midpoint. Let's see the selectedWordss" +
         "[0m"
     );
 
     console.log(
+      "odej-fetchPalette questionSentenceData.questionOutputArr.map((outputUnit) => outputUnit.selectedWord)",
       questionSentenceData.questionOutputArr.map(
         (outputUnit) => outputUnit.selectedWord
       )
@@ -230,7 +238,7 @@ exports.fetchPalette = (req) => {
       };
 
       console.log(
-        "p32 questionSentenceData.questionOutputArr",
+        "pjeg-fetchPalette questionSentenceData.questionOutputArr",
         questionSentenceData.questionOutputArr.map(
           (outputUnit) => outputUnit.structureChunk
         )
@@ -245,25 +253,18 @@ exports.fetchPalette = (req) => {
       );
 
       console.log(
-        "p33 answerSentenceFormula.sentenceStructure",
-        answerSentenceFormula.sentenceStructure
-      );
-
-      // answerSentenceFormula.sentenceStructure[0].gender = ["f"];
-
-      console.log(
-        "p34 answerSentenceFormula.sentenceStructure",
+        "rwxo-fetchPalette answerSentenceFormula.sentenceStructure",
         answerSentenceFormula.sentenceStructure
       );
 
       if (true && "console") {
         console.log(
-          "f15 fetchPalette, answerSentenceFormula.sentenceStructure AFTER qaConform",
+          "sulg-fetchPalette, answerSentenceFormula.sentenceStructure AFTER qaConform",
           answerSentenceFormula.sentenceStructure
         );
 
         console.log(
-          "f16 fetchPalette, questionOutputArr BEFORE CLARI OR SPECI",
+          "sulg-fetchPalette, questionOutputArr BEFORE CLARI OR SPECI",
           questionSentenceData.questionOutputArr.map(
             (unit) => unit.structureChunk.annotations
           )
@@ -278,7 +279,7 @@ exports.fetchPalette = (req) => {
 
       if (true && "console") {
         console.log(
-          "f17 fetchPalette, questionOutputArr AFTER CLARI, BEFORE SPECI",
+          "ggfr-fetchPalette, questionOutputArr AFTER CLARI, BEFORE SPECI",
           questionSentenceData.questionOutputArr.map(
             (unit) => unit.structureChunk.annotations
           )
@@ -303,7 +304,7 @@ exports.fetchPalette = (req) => {
       if (false && "console") {
         console.log(
           "[1;33m " +
-            "{{{ #SBS fetchPalette just after we get answerSentenceData back from SC:processSentenceFormula. Let's see the stChs in answerSentenceData.arrayOfOutputArrays:" +
+            "{{{ gwfw-fetchPalette just after we get answerSentenceData back from SC:processSentenceFormula. Let's see the stChs in answerSentenceData.arrayOfOutputArrays:" +
             "[0m"
         );
 
@@ -312,7 +313,7 @@ exports.fetchPalette = (req) => {
             outputArray.map((outputUnit) => outputUnit.structureChunk)
           )
           .forEach((stCh) => {
-            console.log(stCh);
+            console.log("pydz-fetchPalette stCh", stCh);
           });
 
         console.log("[1;33m " + "}}}" + "[0m");
@@ -359,7 +360,7 @@ exports.fetchPalette = (req) => {
 
     if (true && "console") {
       console.log(
-        "f18 fetchPalette, questionOutputArr AFTER CLARI AND SPECI",
+        "nwgk-fetchPalette, questionOutputArr AFTER CLARI AND SPECI",
         questionSentenceData.questionOutputArr.map(
           (unit) => unit.structureChunk.annotations
         )

@@ -47,7 +47,7 @@ exports.filterWithinSelectedLemmaObject = (
   if (PHD_type) {
     console.log(
       "[1;35m " +
-        "s11 At the START lf:filterWithin PHD section, structureChunk is:" +
+        "elyc lf:filterWithinSelectedLemmaObject at START, PHD section, structureChunk is:" +
         "[0m",
       structureChunk
     );
@@ -57,7 +57,7 @@ exports.filterWithinSelectedLemmaObject = (
       structureChunk.specificLemmas.length !== 1
     ) {
       gpUtils.throw(
-        "#ERR ----------------------> PHD-stCh should have exactly one value in specificLemmas arr."
+        "ohmk lf:filterWithinSelectedLemmaObject #ERR ----------------------> PHD-stCh should have exactly one value in specificLemmas arr."
       );
     }
 
@@ -65,7 +65,10 @@ exports.filterWithinSelectedLemmaObject = (
       currentLanguage
     ].find((PHD_dataObj) => PHD_dataObj.PHD_type === PHD_type).inflectionChains;
 
-    console.log("postHocInflectionChains", postHocInflectionChains);
+    console.log(
+      "srdj lf:filterWithinSelectedLemmaObject postHocInflectionChains",
+      postHocInflectionChains
+    );
 
     let lemmaObjectCopy = gpUtils.copyWithoutReference(lemmaObject);
 
@@ -79,7 +82,11 @@ exports.filterWithinSelectedLemmaObject = (
     let source = gpUtils.copyWithoutReference(lemmaObjectCopy.inflections);
 
     Object.keys(postHocInflectionChains).forEach((postHocAgreeWithKey) => {
-      console.log("[1;35m " + `Running loop for ${postHocAgreeWithKey}` + "[0m");
+      console.log(
+        "[1;35m " +
+          `nvnm lf:filterWithinSelectedLemmaObject Running loop for ${postHocAgreeWithKey}` +
+          "[0m"
+      );
 
       let postHocInflectionChain = postHocInflectionChains[postHocAgreeWithKey];
 
@@ -95,14 +102,14 @@ exports.filterWithinSelectedLemmaObject = (
 
       if (!drillPathForPHD) {
         gpUtils.throw(
-          "#ERR There is no drillPath on the outputUnit with which I want to get features from the PHD stCh. Perhaps this outputUnit is one whose stCh did not go through If-PW?"
+          "jzbx filterWithin #ERR There is no drillPath on the outputUnit with which I want to get features from the PHD stCh. Perhaps this outputUnit is one whose stCh did not go through If-PW?"
         );
       }
 
       if (structureChunk.form) {
         if (structureChunk.form.length !== 1) {
           gpUtils.throw(
-            "#ERR Expected structureChunk.form to have length of 1: " +
+            "cwyd filterWithin #ERR Expected structureChunk.form to have length of 1: " +
               structureChunk.chunkId
           );
         }
@@ -137,7 +144,7 @@ exports.filterWithinSelectedLemmaObject = (
 
           if (formattedFeatureValueArray.length !== 1) {
             gpUtils.throw(
-              "#ERR lf:filterWithin expected formattedFeatureValueArray to have length 1"
+              "ikdr #ERR lf:filterWithin expected formattedFeatureValueArray to have length 1"
             );
           }
           let formattedFeatureValue = formattedFeatureValueArray[0];
@@ -148,14 +155,19 @@ exports.filterWithinSelectedLemmaObject = (
         }
       }
 
-      console.log("s13 drillPathForPHD is finally", drillPathForPHD);
+      console.log(
+        "sayt lf:filterWithinSelectedLemmaObject drillPathForPHD is finally",
+        drillPathForPHD
+      );
 
       postHocInflectionChain.forEach((featureKey) => {
         let featureValue = drillPathForPHD.find(
           (arr) => arr[0] === featureKey
         )[1];
 
-        console.log(`s14 drilling into source with ${featureValue}`);
+        console.log(
+          `ihjy lf:filterWithinSelectedLemmaObject drilling into source with ${featureValue}`
+        );
         source = source[featureValue];
 
         //If this is Primary, then update stCh with these featureKeys and featureValues.
@@ -174,21 +186,25 @@ exports.filterWithinSelectedLemmaObject = (
     let resArr = [];
 
     if (Array.isArray(source)) {
-      console.log({ source });
       console.log(
-        "[1;33m " + `filterWithin, the variable called source, above, is ARRAY` + "[0m"
+        "[1;33m " +
+          `apcu lf:filterWithinSelectedLemmaObject, the variable called source, is ARRAY` +
+          "[0m",
+        { source }
       );
-      gpUtils.throw("Oh no Natasha, array!");
+      gpUtils.throw(
+        "apcu lf:filterWithinSelectedLemmaObject Oh no Natasha, array!"
+      );
     } else if (
       typeof source === "string" ||
       (gpUtils.isTerminusObject(source) && source.processOnlyAtEnd)
     ) {
       sourceArr.push(source);
     } else if (gpUtils.isTerminusObject(source) && !source.processOnlyAtEnd) {
-      gpUtils.throw("Natasha, take action.");
+      gpUtils.throw("svqe filterWithin Natasha, take action.");
     } else {
       gpUtils.throw(
-        "#ERR ---------------> Expected this PHD value to be the end of a chain and thus a string or array."
+        "dyqk filterWithin #ERR ---------------> Expected this PHD value to be the end of a chain and thus a string or array."
       );
     }
 
@@ -202,11 +218,14 @@ exports.filterWithinSelectedLemmaObject = (
 
     console.log(
       "[1;35m " +
-        "s19 At the END lf:filterWithin PHD section, structureChunk is:" +
+        "blij lf:filterWithinSelectedLemmaObject At the END lf:filterWithin PHD section, structureChunk is:" +
         "[0m",
       structureChunk
     );
-    console.log("[1;35m " + "and resArr is" + "[0m", resArr);
+    console.log(
+      "[1;35m " + "blij lf:filterWithinSelectedLemmaObject resArr is" + "[0m",
+      resArr
+    );
 
     return resArr;
   }
@@ -229,7 +248,7 @@ exports.filterWithinSelectedLemmaObject = (
         );
 
         console.log(
-          "filterWithinSelectedLemmaObject: formattedFeatureValueArr",
+          "afwm lf:filterWithinSelectedLemmaObject: formattedFeatureValueArr",
           formattedFeatureValueArr
         );
 
@@ -258,14 +277,16 @@ exports.filterWithinSelectedLemmaObject = (
   if (!outputUnitsWithDrillPaths || !outputUnitsWithDrillPaths.length) {
     console.log(
       "[1;31m " +
-        "#ERR --------------------------------------> traverseAndRecordInflections returned FALSY for " +
+        "iszn lf:filterWithinSelectedLemmaObject #ERR --------------------------------------> traverseAndRecordInflections returned FALSY for " +
         structureChunk.chunkId +
         " in " +
         currentLanguage +
         "[0m"
     );
 
-    console.log({ outputUnitsWithDrillPaths });
+    console.log("iszn lf:filterWithinSelectedLemmaObject", {
+      outputUnitsWithDrillPaths,
+    });
     errorInDrilling = true;
     return false;
   }
@@ -287,12 +308,12 @@ exports.updateStructureChunk = (outputUnit, currentLanguage) => {
   if (shouldConsoleLog) {
     console.log(
       "[1;33m " +
-        `updateStructureChunk ${outputUnit.structureChunk.chunkId} ${outputUnit.selectedWord} ---------------------------` +
+        `aizl updateStructureChunk ${outputUnit.structureChunk.chunkId} ${outputUnit.selectedWord} ---------------------------` +
         "[0m"
     );
 
     console.log(
-      "BEFORE UB-Inf and UB-Tag-Sel, structureChunk is:",
+      "rcws updateStructureChunk BEFORE UB-Inf and UB-Tag-Sel, structureChunk is:",
       outputUnit.structureChunk
     );
   }
@@ -301,7 +322,7 @@ exports.updateStructureChunk = (outputUnit, currentLanguage) => {
 
   if (shouldConsoleLog) {
     console.log(
-      "AFTER UB-Inf but BEFORE UB-Tag-Sel, structureChunk is:",
+      "xppx updateStructureChunk AFTER UB-Inf but BEFORE UB-Tag-Sel, structureChunk is:",
       outputUnit.structureChunk
     );
   }
@@ -310,12 +331,14 @@ exports.updateStructureChunk = (outputUnit, currentLanguage) => {
 
   if (shouldConsoleLog) {
     console.log(
-      "AFTER UB-Inf and UB-Tag-Sel, structureChunk is:",
+      "wbxe updateStructureChunk AFTER UB-Inf and UB-Tag-Sel, structureChunk is:",
       outputUnit.structureChunk
     );
 
     console.log(
-      "[1;33m " + `/updateStructureChunk ${outputUnit.structureChunk.chunkId}` + "[0m"
+      "[1;33m " +
+        `wbxe /updateStructureChunk ${outputUnit.structureChunk.chunkId}` +
+        "[0m"
     );
     console.log(" ");
   }
@@ -329,9 +352,14 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
     drillPath,
   } = outputUnit;
 
-  console.log("[1;35m " + `updateStChByAndTagsAndSelectors--------------------` + "[0m");
-  console.log("r10 structureChunk starts as", structureChunk);
-  console.log("drillPath", drillPath);
+  console.log(
+    "[1;35m " + `rakt updateStChByAndTagsAndSelectors--------------------` + "[0m"
+  );
+  console.log(
+    "rakt updateStChByAndTagsAndSelectors structureChunk starts as",
+    structureChunk
+  );
+  console.log("rakt updateStChByAndTagsAndSelectors drillPath", drillPath);
 
   let doneSelectors = [];
 
@@ -354,10 +382,14 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
       //If lObj does have metagender, set stCh gender to converted values or filter stCh's gender by them.
 
       console.log(
-        `v23 Clause S: lObj ${selectedLemmaObject.lemma} has metaSelector gender`
+        `nxej updateStChByAndTagsAndSelectors Clause S: lObj ${selectedLemmaObject.lemma} has metaSelector gender`
       );
-      console.log(structureChunk);
-      console.log("[1;33m " + `v23-S start ${structureChunk.gender}` + "[0m");
+      console.log("nxej updateStChByAndTagsAndSelectors", structureChunk);
+      console.log(
+        "[1;33m " +
+          `nxej updateStChByAndTagsAndSelectors in clause S start ${structureChunk.gender}` +
+          "[0m"
+      );
 
       let metaGender = selectedLemmaObject.gender.split("_")[0];
 
@@ -372,11 +404,17 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
         structureChunk.gender = metaGenderConverted.slice(0);
       }
       doneSelectors.push("gender");
-      console.log("[1;33m " + `v23-S end ${structureChunk.gender}` + "[0m");
+      console.log(
+        "[1;33m " +
+          `qdtx updateStChByAndTagsAndSelectors in clause S end ${structureChunk.gender}` +
+          "[0m"
+      );
     } else {
       //If lObj has non-meta-gender, then update stCh with lObj gender.
 
-      console.log("v23 Clause R: lObj does not have metaSelector gender");
+      console.log(
+        "ijfw updateStChByAndTagsAndSelectors Clause R: lObj does not have metaSelector gender"
+      );
       structureChunk.gender = [selectedLemmaObject.gender];
       doneSelectors.push("gender");
     }
@@ -390,7 +428,7 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
   } else {
     console.log(
       "[1;31m " +
-        `Just to note that this stCh has no andTags, and I am adding them from lObj. Perhaps I should no nothing here instead: ${currentLanguage} ${structureChunk.chunkId}` +
+        `vwaw updateStChByAndTagsAndSelectors Just to note that this stCh has no andTags, and I am adding them from lObj. Perhaps I should no nothing here instead: ${currentLanguage} ${structureChunk.chunkId}` +
         "[0m"
     );
 
@@ -403,7 +441,7 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
       structureChunk.wordtype
     ];
 
-  console.log({ doneSelectors });
+  console.log("abyy updateStChByAndTagsAndSelectors", { doneSelectors });
 
   if (selectors) {
     selectors
@@ -411,7 +449,7 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
       .forEach((selector) => {
         if (/_/.test(selectedLemmaObject[selector])) {
           gpUtils.throw(
-            `I wasn't expecting a metaFeature selector here. It shoyuld have been processed already, in step one, and then added to doneSelectors, which would have prevented it being used here. selectedLemmaObject[selector]:${selectedLemmaObject[selector]}`
+            `oppb updateStChByAndTagsAndSelectors I wasn't expecting a metaFeature selector here. It should have been processed already, in step one, and then added to doneSelectors, which would have prevented it being used here. selectedLemmaObject[selector]:${selectedLemmaObject[selector]}`
           );
         }
 
@@ -420,19 +458,22 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
   } else {
     console.log(
       "[1;31m " +
-        `Just to note that refObj gave no selectors for currentLanguage ${currentLanguage} and structureChunk.wordtype ${structureChunk.wordtype}` +
+        `vbob updateStChByAndTagsAndSelectors Just to note that refObj gave no selectors for currentLanguage ${currentLanguage} and structureChunk.wordtype ${structureChunk.wordtype}` +
         "[0m"
     );
   }
 
-  console.log("r12 structureChunk ends as", structureChunk);
+  console.log(
+    "ldod updateStChByAndTagsAndSelectors structureChunk ends as",
+    structureChunk
+  );
   console.log("[1;35m " + `/updateStChByAndTagsAndSelectors` + "[0m");
 };
 
 exports.updateStChByInflections = (outputUnit, currentLanguage) => {
   console.log(
     "[1;30m " +
-      `f44 updateStChByInflections ${
+      `plol updateStChByInflections ${
         outputUnit.drillPath ? outputUnit.drillPath.toString() : "no drillPath"
       }` +
       "[0m"
@@ -515,9 +556,9 @@ exports.filterByKey = (
   let metaFeatureRef = refObj.metaFeatures[currentLanguage][key];
 
   console.log(
-    "[1;35m " + `lf.filterByKey-------------------------- for key ${key}` + "[0m"
+    "[1;35m " + `opoq lf:filterByKey-------------------------- for key ${key}` + "[0m"
   );
-  console.log("requirementArr starts as", requirementArr);
+  console.log("opoq lf:filterByKey requirementArr starts as", requirementArr);
 
   if (requirementArr) {
     if (metaFeatureRef) {
@@ -527,12 +568,17 @@ exports.filterByKey = (
           let metaFeatureConverted = metaFeatureRef[featureValue];
 
           if (!metaFeatureConverted) {
-            gpUtils.throw("#ERR filterByKey need converted metafeature.");
+            gpUtils.throw(
+              "tufx lf:filterByKey #ERR filterByKey need converted metafeature."
+            );
           }
 
           requirementArr = [...requirementArr, ...metaFeatureConverted];
         }
-        console.log("requirementArr halfway through is", requirementArr);
+        console.log(
+          "sfrl lf:filterByKey requirementArr halfway through is",
+          requirementArr
+        );
         //But also need do the inverse of this. If reqArr has 'f', then allow lObj to pass filter if lObj gender is 'allSingularGenders' eg.
         Object.keys(metaFeatureRef).forEach((metaFeature) => {
           let convertedMetaFeatureArr = metaFeatureRef[metaFeature];
@@ -545,13 +591,13 @@ exports.filterByKey = (
     } else {
       console.log(
         "[1;31m " +
-          `lf.filterByKey saw there was no metaFeatureRef for currentLanguage ${currentLanguage} and key ${key}` +
+          `jwpv lf:filterByKey saw there was no metaFeatureRef for currentLanguage ${currentLanguage} and key ${key}` +
           "[0m"
       );
     }
   }
 
-  console.log("requirementArr ends as", requirementArr);
+  console.log("qyvu lf:filterByKey requirementArr ends as", requirementArr);
 
   //And finally, do said filter.
   if (requirementArr.length) {
@@ -599,9 +645,11 @@ exports.traverseAndRecordInflections = (
   }
 
   if (!Array.isArray(outputUnitsWithDrillPathsMini)) {
-    console.log({ outputUnitsWithDrillPathsMini });
+    console.log("mztl lf:traverseAndRecordInflections", {
+      outputUnitsWithDrillPathsMini,
+    });
     gpUtils.throw(
-      "LF:traverseAndRecordInflections found outputUnitsWithDrillPathsMini not array. See above."
+      "mztl lf:traverseAndRecordInflections found outputUnitsWithDrillPathsMini not array. See above."
     );
   }
 
@@ -615,10 +663,15 @@ exports.traverseAndRecordInflections = (
   }
 
   reqInflectorArr.forEach((chosenInflector, reqInflectorArrIndex) => {
-    console.log("outputUnitsWithDrillPathsMini", outputUnitsWithDrillPathsMini);
+    console.log(
+      "fxxb lf:traverseAndRecordInflections outputUnitsWithDrillPathsMini",
+      outputUnitsWithDrillPathsMini
+    );
 
     if (Array.isArray(source[chosenInflector])) {
-      gpUtils.throw("Uh oh Natasha, array!");
+      gpUtils.throw(
+        "uwmf lf:traverseAndRecordInflections Uh oh Natasha, array!"
+      );
     }
 
     if (
@@ -628,7 +681,7 @@ exports.traverseAndRecordInflections = (
     ) {
       if (shouldConsoleLog) {
         console.log(
-          "traverseAndRecordInflections Clause A: string or tObj to process at end",
+          "xuei lf:traverseAndRecordInflections Clause A: string or tObj to process at end",
           {
             reqInflectorLabel,
             chosenInflector,
@@ -640,7 +693,7 @@ exports.traverseAndRecordInflections = (
 
       if (shouldConsoleLog) {
         console.log(
-          `traverseAndRecordInflections pushing word ${source[chosenInflector]}`
+          `pkpb lf:traverseAndRecordInflections pushing word ${source[chosenInflector]}`
         );
       }
 
@@ -658,7 +711,7 @@ exports.traverseAndRecordInflections = (
     ) {
       if (shouldConsoleLog) {
         console.log(
-          "traverseAndRecordInflections Clause B: tObj to process now",
+          "qqyr lf:traverseAndRecordInflections Clause B: tObj to process now",
           {
             reqInflectorLabel,
             chosenInflector,
@@ -674,7 +727,9 @@ exports.traverseAndRecordInflections = (
 
       wordsFromTerminusObject.forEach((word) => {
         if (shouldConsoleLog) {
-          console.log(`traverseAndRecordInflections pushing word ${word}`);
+          console.log(
+            `jqbk lf:traverseAndRecordInflections pushing word ${word}`
+          );
         }
         outputUnitsWithDrillPaths.push({
           selectedWordArray: [word],
@@ -691,7 +746,7 @@ exports.traverseAndRecordInflections = (
     ) {
       if (shouldConsoleLog) {
         console.log(
-          "traverseAndRecordInflections Clause C: object for further traversal",
+          "mlgc lf:traverseAndRecordInflections Clause C: object for further traversal",
           {
             reqInflectorLabel,
             chosenInflector,
@@ -713,7 +768,7 @@ exports.traverseAndRecordInflections = (
     } else {
       if (shouldConsoleLog) {
         console.log(
-          "traverseAndRecordInflections Clause X: none of the above",
+          "eoyd lf:traverseAndRecordInflections Clause X: none of the above",
           {
             reqInflectorLabel,
             chosenInflector,

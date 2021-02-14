@@ -53,7 +53,7 @@ exports.adjustVirilityOfStructureChunk = (
   retainOriginals,
   consoleLogLabel
 ) => {
-  console.log(consoleLogLabel);
+  console.log("gxow ALL adjustVirilityOfStructureChunk", consoleLogLabel);
   //Not for nouns. Because m -> plural -> virile and then trying to select Ojciec, which isn't virile, it's m, so will ERR later.
   //If stCh has number:plural, then make the genders the virilityConverted genders.
   //If stCh has numnber:singular, then make the genders the singularConverted genders.
@@ -63,27 +63,39 @@ exports.adjustVirilityOfStructureChunk = (
   }
 
   console.log(
-    "[1;35m " + "ALL:adjustVirilityOfStructureChunk " + structureChunk.chunkId + "[0m"
+    "[1;35m " +
+      "svpi ALL adjustVirilityOfStructureChunk " +
+      structureChunk.chunkId +
+      "[0m"
   );
 
-  console.log("[1;35m " + "structureChunk start as being:" + "[0m", structureChunk);
+  console.log(
+    "[1;35m " +
+      "svpi ALL adjustVirilityOfStructureChunk structureChunk start as being:" +
+      "[0m",
+    structureChunk
+  );
 
   let { gender, number } = structureChunk;
 
   if (!number || !number.includes("plural")) {
-    console.log("Aborting because Number");
+    console.log(
+      "clsq ALL adjustVirilityOfStructureChunk Aborting because Number"
+    );
     return;
   }
 
   if (!gender || !gender.length) {
-    console.log("Aborting because Gender");
+    console.log(
+      "vlca ALL adjustVirilityOfStructureChunk Aborting because Gender"
+    );
     return;
   }
 
   if (/all.*/.test(gender)) {
     if (gender.length !== 1) {
       gpUtils.throw(
-        `#ERR Gender arr contained a metaGender, that's fine, but it contained other values too? That's too much. ${gender.toString()}`
+        `vcvl ALL:adjustVirilityOfStructureChunk #ERR Gender arr contained a metaGender, that's fine, but it contained other values too? That's too much. ${gender.toString()}`
       );
     }
 
@@ -103,7 +115,7 @@ exports.adjustVirilityOfStructureChunk = (
 
   if (number.includes("plural")) {
     gender.forEach((genderValue) => {
-      console.log({ genderValue });
+      console.log("ksdx ALL adjustVirilityOfStructureChunk", { genderValue });
 
       newGenderArray = [
         ...newGenderArray,
@@ -119,15 +131,22 @@ exports.adjustVirilityOfStructureChunk = (
 
   structureChunk.gender = newGenderArrayTrimmed;
 
-  console.log("[1;35m " + "structureChunk ends up being:" + "[0m", structureChunk);
+  console.log(
+    "[1;35m " +
+      "hutf ALL adjustVirilityOfStructureChunk structureChunk ends up being:" +
+      "[0m",
+    structureChunk
+  );
 };
 
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   let shouldConsoleLog = false;
   if (shouldConsoleLog) {
-    console.log("[1;35m " + "ALL preprocessStructureChunks-------------------" + "[0m");
+    console.log(
+      "[1;35m " + "hqij ALL preprocessStructureChunks-------------------" + "[0m"
+    );
   } else {
-    console.log("[1;35m " + `(ALL preprocessStructureChunks)` + "[0m");
+    console.log("[1;35m " + `(hqij ALL preprocessStructureChunks)` + "[0m");
   }
 
   let metaFeaturesRef = refObj.metaFeatures[currentLanguage];
@@ -138,7 +157,10 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
     }
 
     if (shouldConsoleLog) {
-      console.log("At first the structureChunk is", structureChunk);
+      console.log(
+        "zesx ALL preprocessStructureChunks At first the structureChunk is",
+        structureChunk
+      );
     }
 
     if (structureChunk.wordtype === "adjective") {
@@ -251,7 +273,10 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
     );
 
     if (shouldConsoleLog) {
-      console.log("Finally the structureChunk is", structureChunk);
+      console.log(
+        "gsgl ALL preprocessStructureChunks Finally the structureChunk is",
+        structureChunk
+      );
     }
   });
 
@@ -290,7 +315,7 @@ exports.convertMetaFeatures = (sourceObjectArray, currentLanguage, objType) => {
         Object.keys(metaFeatureRef).forEach((metaFeature) => {
           if (/_/.test(metaFeature)) {
             console.log(
-              `Hereby changing metaFeature ${metaFeature} to ${
+              `tkga ALL convertMetaFeatures Hereby changing metaFeature ${metaFeature} to ${
                 metaFeature.split("_")[0]
               }`
             );
@@ -317,12 +342,12 @@ exports.convertMetaFeatures = (sourceObjectArray, currentLanguage, objType) => {
           let currentValueArr = sourceObject[featureKey];
           let newValueArr = [];
 
-          // console.log(objType, { currentValueArr });
+          // console.log("nkzk ALL convertMetaFeatures", objType, { currentValueArr });
 
           currentValueArr.forEach((value) => {
             if (/_/.test(value)) {
               console.log(
-                `Thereby changing metaFeature ${value} to ${
+                `veeo ALL convertMetaFeatures Thereby changing metaFeature ${value} to ${
                   value.split("_")[0]
                 }`
               );
@@ -337,7 +362,7 @@ exports.convertMetaFeatures = (sourceObjectArray, currentLanguage, objType) => {
           });
 
           sourceObject[featureKey] = newValueArr;
-          console.log(objType, { newValueArr });
+          console.log("oiiw ALL convertMetaFeatures", objType, { newValueArr });
         }
       }
     });
@@ -347,8 +372,13 @@ exports.convertMetaFeatures = (sourceObjectArray, currentLanguage, objType) => {
 
 exports.decantMGNsInOutputArray = (questionOutputArr, currentLanguage) => {
   console.log("[1;35m " + "------------decantMGNsInOutputArray" + "[0m");
-  console.log("At the start, questionOutputArr is:");
-  gpUtils.consoleLogObjectAtTwoLevels(questionOutputArr);
+  console.log(
+    "qnzm decantMGNsInOutputArray At the start, questionOutputArr is:"
+  );
+  gpUtils.consoleLogObjectAtTwoLevels(
+    questionOutputArr,
+    "ALL:decantMGNsInOutputArray"
+  );
 
   questionOutputArr.forEach((outputUnit) => {
     let { structureChunk, selectedLemmaObject } = outputUnit;
@@ -380,19 +410,24 @@ exports.decantMGNsInOutputArray = (questionOutputArr, currentLanguage) => {
             ...metaFeatureRef[selectedMetaFeature.split("_")[0]],
           ];
 
-          console.log("p20d", { adjustedFeatureValueArr });
+          console.log("mcxr decantMGNsInOutputArray", {
+            adjustedFeatureValueArr,
+          });
 
           structureChunk[featureKey] = [
             gpUtils.selectRandom(adjustedFeatureValueArr),
           ];
 
-          console.log("p20e", {
+          console.log("lukh decantMGNsInOutputArray", {
             "structureChunk[featureKey]": structureChunk[featureKey],
           });
         }
       }
 
-      console.log("p20f In the end, structureChunk is:", structureChunk);
+      console.log(
+        "eldc decantMGNsInOutputArray In the end, structureChunk is:",
+        structureChunk
+      );
     });
   });
 
@@ -414,18 +449,27 @@ exports.decantMGNsBeforeOutputArray = (
   }
 
   console.log("[1;35m " + "------------decantMGNsBeforeOutputArray" + "[0m");
-  console.log("At the start, structureChunk is:", structureChunk);
-  console.log("At the start, selectedLemmaObject is:", selectedLemmaObject);
+  console.log(
+    "ubkc decantMGNsBeforeOutputArray At the start, structureChunk is:",
+    structureChunk
+  );
+  console.log(
+    "ubkc decantMGNsBeforeOutputArray At the start, selectedLemmaObject is:",
+    selectedLemmaObject
+  );
 
   Object.keys(refObj.metaFeatures[currentLanguage]).forEach((featureKey) => {
     let metaFeatureRef = refObj.metaFeatures[currentLanguage][featureKey];
 
-    console.log("Clause 0", { featureKey, metaFeatureRef });
+    console.log("poyb decantMGNsBeforeOutputArray Clause 0", {
+      featureKey,
+      metaFeatureRef,
+    });
 
     //if gender is a valid feature, add it if not there
 
     if (structureChunk[featureKey]) {
-      console.log("Clause 1", { featureKey });
+      console.log("eico decantMGNsBeforeOutputArray Clause 1", { featureKey });
       let featureValuesFromStChAndLObj = [...structureChunk[featureKey]];
       if (selectedLemmaObject[featureKey]) {
         featureValuesFromStChAndLObj.push(selectedLemmaObject[featureKey]);
@@ -445,24 +489,31 @@ exports.decantMGNsBeforeOutputArray = (
           }
         })
       ) {
-        console.log("Clause 2", { selectedMetaFeature });
+        console.log("nrvz decantMGNsBeforeOutputArray Clause 2", {
+          selectedMetaFeature,
+        });
         let adjustedFeatureValueArr = [
           ...metaFeatureRef[selectedMetaFeature.split("_")[0]],
         ];
 
-        console.log("p20d", { adjustedFeatureValueArr });
+        console.log("ewoh decantMGNsBeforeOutputArray", {
+          adjustedFeatureValueArr,
+        });
 
         structureChunk[featureKey] = [
           gpUtils.selectRandom(adjustedFeatureValueArr),
         ];
 
-        console.log("p20e", {
+        console.log("jwgf decantMGNsBeforeOutputArray ", {
           "structureChunk[featureKey]": structureChunk[featureKey],
         });
       }
     }
 
-    console.log("p20f In the end, structureChunk is:", structureChunk);
+    console.log(
+      "nqya decantMGNsBeforeOutputArray  In the end, structureChunk is:",
+      structureChunk
+    );
   });
 
   console.log("[1;35m " + "/decantMGNsBeforeOutputArray" + "[0m");

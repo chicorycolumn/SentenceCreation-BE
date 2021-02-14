@@ -7,9 +7,11 @@ const allLangUtils = require("../../utils/allLangUtils.js");
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   let shouldConsoleLog = false;
   if (shouldConsoleLog) {
-    console.log("[1;35m " + "POL preprocessStructureChunks-------------------" + "[0m");
+    console.log(
+      "[1;35m " + "pmoe POL preprocessStructureChunks-------------------" + "[0m"
+    );
   } else {
-    console.log("[1;35m " + `(POL preprocessStructureChunks)` + "[0m");
+    console.log("[1;35m " + `(pmoe POL preprocessStructureChunks)` + "[0m");
   }
 
   sentenceStructure.forEach((structureChunk) => {
@@ -18,7 +20,10 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
     }
 
     if (shouldConsoleLog) {
-      console.log("At first the structureChunk is", structureChunk);
+      console.log(
+        "guii POL preprocessStructureChunks At first the structureChunk is",
+        structureChunk
+      );
     }
 
     if (
@@ -54,7 +59,10 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
     }
 
     if (shouldConsoleLog) {
-      console.log("Finally the structureChunk is", structureChunk);
+      console.log(
+        "uccs POL preprocessStructureChunks Finally the structureChunk is",
+        structureChunk
+      );
     }
   });
 
@@ -236,29 +244,21 @@ exports.formatFeatureValue = (featureKey, featureValue, note) => {
 
   if (featureKey === "gender") {
     if (note === "plural") {
-      // console.log(
-      //   "POL:formatFeatureValue returns pluralVirilityAndSingularConversionRef[note][featureValue] as ",
-      //   pluralVirilityAndSingularConversionRef[note][featureValue]
-      // );
       return pluralVirilityAndSingularConversionRef[note][featureValue];
     } else {
       if (note === "person") {
-        // console.log(
-        //   "POL:formatFeatureValue returns shortHandGenderRef[featureValue] as ",
-        //   shortHandGenderRef[featureValue]
-        // );
         return shortHandGenderRef[featureValue];
       }
     }
   }
-  // console.log("POL:formatFeatureValue returns featureValue as ", featureValue);
+  // console.log("wpmn POL formatFeatureValue returns featureValue as ", featureValue);
   return [featureValue];
 };
 
 exports.fillVerbInflections = (lemmaObject) => {
   if (lemmaObject.complete) {
     console.log(
-      "fillVerbInflections fxn will do nothing, as '" +
+      "zzfm POL fillVerbInflections fxn will do nothing, as '" +
         lemmaObject.lemma +
         "' lObj is marked as COMPLETE."
     );

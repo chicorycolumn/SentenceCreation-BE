@@ -3,7 +3,7 @@ const otUtils = require("./objectTraversingUtils.js");
 const gpUtils = require("./generalPurposeUtils.js");
 
 exports.selectRandom = (array) => {
-  // console.log("Select random from ARRAY:", array);
+  // console.log("eveb selectRandom from", array);
   return array[Math.floor(Math.random() * array.length)];
 };
 
@@ -81,15 +81,19 @@ exports.copyAndCombineWordbanks = (wordbank1, wordbank2) => {
   let wordbank2Copy = gpUtils.copyWithoutReference(wordbank2);
 
   Object.keys(wordbank1Copy).forEach((key) => {
-    console.log("[1;35m " + `key: ${key}` + "[0m");
+    console.log("[1;35m " + `vaoi gp:copyAndCombineWordbanks key: ${key}` + "[0m");
 
     if (!wordbank2Copy[key]) {
       console.log(
-        "[1;31m " + `#NB: wordbank2 does not have key ${key} but wordbank1 does.` + "[0m"
+        "[1;31m " +
+          `udhd gp:copyAndCombineWordbanks #NB: wordbank2 does not have key ${key} but wordbank1 does.` +
+          "[0m"
       );
     }
     if (wordbank2Copy[key] && !Array.isArray(wordbank2Copy[key])) {
-      gpUtils.throw(`#ERR: wordbank2 key ${key} holds non array value.`);
+      gpUtils.throw(
+        `cocq gp:copyAndCombineWordbanks #ERR: wordbank2 key ${key} holds non array value.`
+      );
     }
 
     wordbank1Copy[key] = [...wordbank1Copy[key], ...(wordbank2Copy[key] || [])];
@@ -340,35 +344,40 @@ exports.fillOutWashburneRefObj = (
   });
 };
 
-exports.consoleLogObjectAtOneLevel = (obj) => {
+exports.consoleLogObjectAtOneLevel = (obj, label) => {
+  console.log("[1;32m " + `--Console log object at one level, from ${label}:` + "[0m");
+  console.log("[1;32m " + `------` + "[0m");
+  console.log("[1;32m " + `----------` + "[0m");
   Object.keys(obj).forEach((key) => {
     let value = obj[key];
-    console.log("~~~~~~~~~~~>KEY");
-    console.log(key);
-    console.log("~~~~~~~~~~~>VALUE");
+    console.log("[1;30m " + `${key}` + "[0m");
     console.log(value);
   });
+  console.log("[1;32m " + `----------` + "[0m");
+  console.log("[1;32m " + `------` + "[0m");
+  console.log("[1;32m " + `--` + "[0m");
 };
 
-exports.consoleLogObjectAtTwoLevels = (obj) => {
+exports.consoleLogObjectAtTwoLevels = (obj, label) => {
+  console.log("[1;32m " + `--Console log object at two levels, from ${label}:` + "[0m");
+  console.log("[1;32m " + `------` + "[0m");
+  console.log("[1;32m " + `----------` + "[0m");
   Object.keys(obj).forEach((key) => {
     let value = obj[key];
-
     if (value) {
       Object.keys(value).forEach((key2) => {
         let value2 = value[key2];
-        console.log("~~~~~~~~~~~>SUBKEY");
-        console.log(key2);
-        console.log("~~~~~~~~~~~>SUBVALUE");
-        console.log(value2);
+        console.log("[1;30m " + `${key}:${key2}` + "[0m");
+        console.log("subvalue:", value2);
       });
     } else {
-      console.log("~~~~~>KEY");
-      console.log(key);
-      console.log("~~~~~>VALUE");
-      console.log(value);
+      console.log("[1;30m " + `${key}` + "[0m");
+      console.log("value:", value);
     }
   });
+  console.log("[1;32m " + `----------` + "[0m");
+  console.log("[1;32m " + `------` + "[0m");
+  console.log("[1;32m " + `--` + "[0m");
 };
 
 exports.doesArrContainDifferentValues = (arr) => {
@@ -405,7 +414,7 @@ exports.getWordtypeFromLemmaObject = (lObj) => {
 
   if (!Object.keys(wordtypeRef).includes(wordtypeShorthand)) {
     gpUtils.throw(
-      `#ERR -----------------> getWordtypeFromLemmaObject for requested ${wordtypeShorthand}`
+      `hshc #ERR -----------------> getWordtypeFromLemmaObject for requested ${wordtypeShorthand}`
     );
   }
 
@@ -428,7 +437,7 @@ exports.getWordtypeOfAgreeWith = (
   let wordtypeShorthand = structureChunk[agreeWithKey].split("-")[0];
 
   if (!Object.keys(wordtypeRef).includes(wordtypeShorthand)) {
-    gpUtils.throw("#ERR -----------------> getWordtypeFromLemmaObject");
+    gpUtils.throw("xafb #ERR -----------------> getWordtypeFromLemmaObject");
   }
 
   return wordtypeRef[wordtypeShorthand];

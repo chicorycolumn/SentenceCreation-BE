@@ -789,7 +789,7 @@ exports.checkTranslationsOfGivenRef = (
 
   if (questionSentenceArr.length > 1) {
     gpUtils.throw(
-      "testingutils > checkTranslationsOfGivenRef says questionSentenceArr length over 1"
+      "scey testingutils > checkTranslationsOfGivenRef says questionSentenceArr length over 1"
     );
   }
 
