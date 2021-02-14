@@ -900,7 +900,7 @@ describe("/api", () => {
   });
 
   describe("/palette - Stage 6: Translate rich sentences (nouns, adjectives, verbs).", () => {
-    it("#pal06-01a GET 200 YES: Returns sentence with all translations (RSWAT).", () => {
+    it.only("#pal06-01a GET 200 YES: Returns sentence with all translations (RSWAT).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -909,6 +909,7 @@ describe("/api", () => {
         .send({
           questionLanguage,
           answerLanguage,
+          shouldThrowAtMidpoint: true,
           sentenceFormulaSymbol: "101a girl is reading",
         })
         .expect(200)

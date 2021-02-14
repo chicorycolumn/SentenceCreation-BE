@@ -4,6 +4,7 @@ const lfUtils = require("../utils/lemmaFilteringUtils.js");
 const refObj = require("../utils/reference/referenceObjects.js");
 const scUtils = require("../utils/sentenceCreatingUtils.js");
 const aaUtils = require("../utils/auxiliaryAttributeUtils.js");
+const ivUtils = require("../utils/secondOrder/inputValidationUtils.js");
 const frUtils = require("../utils/formattingResponseUtils.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 
@@ -35,6 +36,11 @@ exports.fetchPalette = (req) => {
   let questionSentenceFormula = sentenceFormula;
 
   allLangUtils.initiallyAdjustSentenceFormula(questionSentenceFormula);
+
+  //Omega: Ultimately this needn't be done here, but rather, after creating a new sentenceFormula.
+  //       Once it passes that, we know it's fine, so don't need to validate it every time down here.
+  //       Although could be worth running this validation here during multipleMode.
+  ivUtils.validateSentenceFormula(sentenceFormula, questionLanguage);
 
   if (pleaseDontSpecify) {
     //Set pleaseDontSpecify to false if 'person' noun is headNoun of any pronouns,
@@ -232,6 +238,11 @@ exports.fetchPalette = (req) => {
       let answerSentenceFormula = sentenceFormula;
 
       allLangUtils.initiallyAdjustSentenceFormula(answerSentenceFormula);
+
+      //Omega: Ultimately this needn't be done here, but rather, after creating a new sentenceFormula.
+      //       Once it passes that, we know it's fine, so don't need to validate it every time down here.
+      //       Although could be worth running this validation here during multipleMode.
+      ivUtils.validateSentenceFormula(sentenceFormula, answerLanguage);
 
       if (index === 0) {
         firstAnswerSentenceFormula = answerSentenceFormula;
