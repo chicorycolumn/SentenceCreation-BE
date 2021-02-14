@@ -1781,7 +1781,7 @@ exports.dummySentenceFormulasBank = [
         wordtype: "verb",
         agreeWith: "nou-1",
         specificLemmas: ["widzieć", "zobaczyć"],
-        tenseDescription: ["past simple"],
+        tenseDescription: ["past pf"],
       },
       {
         chunkId: "pro-1",

@@ -332,6 +332,11 @@ exports.generateAdhocForms = (
     exports.addSpecialVerbForms(lObj, currentLanguage);
 
     structureChunk.form.forEach((selectedForm) => {
+      console.log(
+        "pqdw generateAdhocForms giving addToResArr this selectedWordArr",
+        [lObj.inflections[selectedForm]]
+      );
+
       addToResArr(
         "form",
         selectedForm,
@@ -367,6 +372,9 @@ exports.generateAdhocForms = (
     });
 
     let tenseDescriptionArr = [];
+
+    console.log("xtsf structureChunk", structureChunk);
+
     structureChunk.tenseDescription.forEach((tenseDescription) => {
       if (["past", "present", "future"].includes(tenseDescription)) {
         ["simple", "continuous", "perfect"].forEach((tenseSuffix) => {
@@ -376,6 +384,8 @@ exports.generateAdhocForms = (
         tenseDescriptionArr.push(tenseDescription);
       }
     });
+
+    console.log("cesb tenseDescriptionArr", tenseDescriptionArr);
 
     function fetchTenseDescription(
       dataToUpdateWith,
@@ -441,6 +451,14 @@ exports.generateAdhocForms = (
         engTenseDescriptionRef[key] = valuesArr;
       });
 
+      console.log("eqes", { currentLanguage });
+      console.log("eqes engTenseDescriptionRef", engTenseDescriptionRef);
+      console.log(
+        "zqes generateAdhocForms giving addToResArr this selectedWordArr",
+        engTenseDescriptionRef[tenseDescriptionKeyForRefObj]
+      );
+      console.log("zqes", tenseDescriptionKeyForRefObj);
+
       addToResArr(
         "tenseDescription",
         tenseDescriptionKeyForStructureChunk,
@@ -449,6 +467,12 @@ exports.generateAdhocForms = (
         dataToUpdateWith
       );
     }
+
+    console.log("jpvb", {
+      "structureChunk.person": structureChunk.person,
+      "structureChunk.number": structureChunk.number,
+      tenseDescriptionArr,
+    });
 
     structureChunk.person.forEach((person) => {
       structureChunk.number.forEach((number) => {
@@ -476,6 +500,12 @@ exports.generateAdhocForms = (
             //So just for this verb, in ENG, we need to do all this getting differently.
 
             let tense = tenseDescription.split(" ")[0];
+
+            console.log(
+              "wmcp generateAdhocForms giving addToResArr this selectedWordArr",
+              [be[tense][person][number]]
+            );
+
             addToResArr(
               "tenseDescription",
               tenseDescription,
@@ -514,6 +544,8 @@ exports.generateAdhocForms = (
     structureChunk,
     dataToUpdateWith
   ) {
+    console.log("htrt addToResArr START selectedWordArr", selectedWordArr);
+
     let structureChunkCopy = gpUtils.copyWithoutReference(structureChunk);
 
     lfUtils.updateStructureChunkByAdhocOnly(

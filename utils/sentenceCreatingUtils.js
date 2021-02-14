@@ -1,9 +1,10 @@
 const otUtils = require("./objectTraversingUtils.js");
 const gpUtils = require("./generalPurposeUtils.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
-const tvUtils = require("./temporaryValidationUtils.js");
+const ivUtils = require("./inputValidationUtils.js");
 const scUtils = require("./sentenceCreatingUtils.js");
 const refObj = require("./referenceObjects.js");
+const refFxn = require("./referenceFunctions.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 
 exports.getMaterials = (
@@ -100,7 +101,7 @@ exports.getMaterials = (
     langUtils.preprocessLemmaObjectsMinor(words[wordtypeKey]);
   });
 
-  tvUtils.validateSentenceFormula(sentenceFormula);
+  ivUtils.validateType(sentenceFormula);
 
   return { sentenceFormula, words };
 };
@@ -329,7 +330,7 @@ exports.processSentenceFormula = (
   delete errorInSentenceCreation.errorMessage;
 
   otherChunks.forEach((otherChunk) => {
-    console.log("qssh filterAnnotations", otherChunk);
+    console.log("qssh processSentenceFormula otherChunk", otherChunk);
 
     let allPossOutputUnits_other = otUtils.findMatchingLemmaObjectThenWord(
       gpUtils.copyWithoutReference(otherChunk),
@@ -1016,7 +1017,7 @@ exports.conformAnswerStructureToQuestionStructure = (
         );
 
         tenseDescriptions.forEach((tenseDesc) => {
-          let translatedTenseDescArr = refObj.getTranslatedTenseDescription(
+          let translatedTenseDescArr = refFxn.getTranslatedTenseDescription(
             tenseDesc,
             questionLanguage,
             answerLanguage
@@ -1050,7 +1051,7 @@ exports.conformAnswerStructureToQuestionStructure = (
       let adjustedArr = [];
 
       questionStructureChunk[inflectorKey].forEach((inflectorValue) => {
-        let adjustedValues = refObj.giveAdjustedFeatureValue(
+        let adjustedValues = refFxn.giveAdjustedFeatureValue(
           questionLanguage,
           answerLanguage,
           inflectorKey,

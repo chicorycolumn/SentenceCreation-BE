@@ -73,7 +73,10 @@ exports.findMatchingLemmaObjectThenWord = (
       "yyeq ot:findMatchingLemmaObjectThenWord GGGet matches by specific Lemmas:",
       structureChunk.specificLemmas
     );
-    console.log("yyeq ot:findMatchingLemmaObjectThenWord source", source);
+    console.log(
+      "yyeq ot:findMatchingLemmaObjectThenWord source",
+      source.map((lObj) => lObj.lemma)
+    );
     matches = source.filter((lObj) =>
       structureChunk.specificLemmas.includes(lObj.lemma)
     );

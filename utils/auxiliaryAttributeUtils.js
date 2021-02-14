@@ -2,6 +2,7 @@ const gpUtils = require("./generalPurposeUtils.js");
 const scUtils = require("./sentenceCreatingUtils.js");
 const otUtils = require("./objectTraversingUtils.js");
 const refObj = require("./referenceObjects.js");
+const refFxn = require("./referenceFunctions.js");
 const aaUtils = require("./auxiliaryAttributeUtils.js");
 const allLangUtils = require("./allLangUtils.js");
 
@@ -873,7 +874,7 @@ exports.attachAnnotations = (
         structureChunk.annotations &&
         Object.keys(structureChunk.annotations).length
       ) {
-        refObj.filterAnnotations(
+        refFxn.filterAnnotations(
           structureChunk,
           languagesObj,
           correspondingAnswerChunks

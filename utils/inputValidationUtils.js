@@ -1,7 +1,10 @@
 const gpUtils = require("./generalPurposeUtils.js");
 
-exports.validateSentenceFormula = (sentenceFormula) => {
-  let arrayFeatures = [
+// exports.
+
+//All feature values must be correct types.
+exports.validateType = (sentenceFormula) => {
+  const arrayFeatures = [
     "specificLemmas",
     "specificIds",
     "tenseDescription",
@@ -15,7 +18,7 @@ exports.validateSentenceFormula = (sentenceFormula) => {
     "tense",
   ];
 
-  let stringFeatures = [
+  const stringFeatures = [
     "chunkId",
     "wordtype",
     "agreeWith",
@@ -32,7 +35,7 @@ exports.validateSentenceFormula = (sentenceFormula) => {
         !Array.isArray(structureChunk[arrayFeature])
       ) {
         gpUtils.throw(
-          `lnqk validateSentenceFormula #ERR ----------------------------------------------------------------------> ${sentenceFormula.sentenceFormulaId} had ${structureChunk.chunkId} with ${arrayFeature} NOT an array.`
+          `lnqk validateType #ERR ----------------------------------------------------------------------> ${sentenceFormula.sentenceFormulaId} had ${structureChunk.chunkId} with ${arrayFeature} NOT an array.`
         );
       }
     });
@@ -43,7 +46,7 @@ exports.validateSentenceFormula = (sentenceFormula) => {
         !(typeof structureChunk[stringFeature] === "string")
       ) {
         gpUtils.throw(
-          `mhuk validateSentenceFormula #ERR ----------------------------------------------------------------------> ${sentenceFormula.sentenceFormulaId} had ${structureChunk.chunkId}'s ***${stringFeature}*** NOT a string.`
+          `mhuk validateType #ERR ----------------------------------------------------------------------> ${sentenceFormula.sentenceFormulaId} had ${structureChunk.chunkId}'s ***${stringFeature}*** NOT a string.`
         );
       }
     });

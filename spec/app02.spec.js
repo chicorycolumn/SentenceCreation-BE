@@ -1541,6 +1541,7 @@ describe("/api", () => {
           );
         });
     });
+    //nownow.
     xit("#pal13B-04a GET 200 YES: ENG to POL. Another more interesting sentence with Pronouns. Terminal object used.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -1551,7 +1552,7 @@ describe("/api", () => {
           questionLanguage,
           answerLanguage,
           useDummy: true,
-          shouldThrowAtMidpoint: true,
+          // shouldThrowAtMidpoint: true,
           sentenceFormulaSymbol: "dummy57",
         })
         .expect(200)

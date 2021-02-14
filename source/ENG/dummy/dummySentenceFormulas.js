@@ -1159,7 +1159,7 @@ exports.dummySentenceFormulasBank = [
         wordtype: "verb",
         agreeWith: "nou-1",
         specificLemmas: ["see"],
-        tenseDescription: ["past pf"],
+        tenseDescription: ["past simple"],
       },
       {
         chunkId: "pro-1",

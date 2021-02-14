@@ -1,4 +1,5 @@
 const refObj = require("../utils/referenceObjects.js");
+const refFxn = require("./referenceFunctions.js");
 const gpUtils = require("../utils/generalPurposeUtils.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 
@@ -228,7 +229,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
           !structureChunk.tenseDescription.length
         ) {
           if (
-            refObj.skipThisStepInPreprocessStructureChunks(
+            refFxn.skipThisStepInPreprocessStructureChunks(
               currentLanguage,
               "tenseDescription",
               structureChunk
@@ -441,7 +442,7 @@ exports.decantMGNsBeforeOutputArray = (
 ) => {
   if (
     !structureChunk["gender"] &&
-    refObj
+    refFxn
       .validFeaturesOfStructureChunkWordtype(currentLanguage, structureChunk)
       .includes("gender")
   ) {
