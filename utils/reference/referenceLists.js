@@ -1,8 +1,3 @@
-//
-//
-//    LISTS
-//
-//
 exports.metaFeatures = {
   ENG: {
     gender: {
@@ -109,6 +104,185 @@ exports.lemmaObjectFeatures = {
       adjective: [],
       verb: [],
       pronoun: [],
+    },
+  },
+};
+
+exports.structureChunkFeatures = {
+  POL: {
+    //
+    //
+    //    These stCh features require validation that given values are okay.
+    //
+    //
+    specificLemmas: { expectedTypeOnStCh: "array", possibleValues: null },
+    specificIds: { expectedTypeOnStCh: "array", possibleValues: null },
+    andTags: { expectedTypeOnStCh: "array", possibleValues: null },
+    orTags: { expectedTypeOnStCh: "array", possibleValues: null },
+    form: { expectedTypeOnStCh: "array", possibleValues: null },
+    chunkId: { expectedTypeOnStCh: "string", possibleValues: null },
+    // wordtype: { expectedTypeOnStCh: "string", possibleValues: ["noun", "adjective"] },
+    agreeWith: { expectedTypeOnStCh: "string", possibleValues: null },
+    postHocAgreeWithPrimary: {
+      expectedTypeOnStCh: "string",
+      possibleValues: null,
+    },
+    postHocAgreeWithSecondary: {
+      expectedTypeOnStCh: "string",
+      possibleValues: null,
+    },
+    postHocAgreeWithTertiary: {
+      expectedTypeOnStCh: "string",
+      possibleValues: null,
+    },
+    value: { expectedTypeOnStCh: "string", possibleValues: null },
+    //
+    //
+    //    These stCh features get validation by their possibleValues arr.
+    //
+    //
+    tenseDescription: {
+      expectedTypeOnStCh: "array",
+      possibleValues: [
+        "past im",
+        "present im",
+        "future im",
+        "past pf",
+        "future pf",
+        "imperative",
+        "negative imperative",
+        "cond0 condition",
+        "cond0 outcome",
+        "cond1 condition",
+        "cond1 outcome",
+        "cond2 condition",
+        "cond2 outcome",
+        "cond3 condition",
+        "cond3 outcome",
+      ],
+    },
+    person: {
+      expectedTypeOnStCh: "array",
+      possibleValues: ["1per", "2per", "3per", "impersonal"],
+    },
+    gender: {
+      expectedTypeOnStCh: "array",
+      possibleValues: [
+        "m1",
+        "m2",
+        "m3",
+        "f",
+        "f",
+        "f",
+        "n",
+        "n",
+        "n",
+        "virile",
+        "virile",
+        "virile",
+        "nonvirile",
+        "nonvirile",
+        "nonvirile",
+      ],
+    },
+    number: {
+      expectedTypeOnStCh: "array",
+      possibleValues: ["singular", "plural"],
+    },
+    gcase: {
+      expectedTypeOnStCh: "array",
+      possibleValues: ["nom", "gen", "dac", "acc", "ins", "loc"],
+    },
+    aspect: {
+      expectedTypeOnStCh: "array",
+      possibleValues: ["imperfective", "perfective"],
+    },
+    tense: {
+      expectedTypeOnStCh: "array",
+      possibleValues: [
+        "past",
+        "present",
+        "future",
+        "conditional",
+        "imperative",
+      ],
+    },
+  },
+  ENG: {
+    //
+    //
+    //    These stCh features require validation that given values are okay.
+    //
+    //
+    specificLemmas: { expectedTypeOnStCh: "array", possibleValues: null },
+    specificIds: { expectedTypeOnStCh: "array", possibleValues: null },
+    andTags: { expectedTypeOnStCh: "array", possibleValues: null },
+    orTags: { expectedTypeOnStCh: "array", possibleValues: null },
+    form: { expectedTypeOnStCh: "array", possibleValues: null },
+    chunkId: { expectedTypeOnStCh: "string", possibleValues: null },
+    // wordtype: { expectedTypeOnStCh: "string", possibleValues: ["noun", "adjective"] },
+    agreeWith: { expectedTypeOnStCh: "string", possibleValues: null },
+    // postHocAgreeWithPrimary: {
+    //   expectedTypeOnStCh: "string",
+    //   possibleValues: null,
+    // },
+    // postHocAgreeWithSecondary: {
+    //   expectedTypeOnStCh: "string",
+    //   possibleValues: null,
+    // },
+    // postHocAgreeWithTertiary: {
+    //   expectedTypeOnStCh: "string",
+    //   possibleValues: null,
+    // },
+    value: { expectedTypeOnStCh: "string", possibleValues: null },
+    //
+    //
+    //    These stCh features get validation by their possibleValues arr.
+    //
+    //
+    tenseDescription: {
+      expectedTypeOnStCh: "array",
+      possibleValues: [
+        "past simple",
+        "past continuous",
+        "past perfect",
+        "present simple",
+        "present continuous",
+        "present perfect",
+        "future simple",
+        "future continuous",
+        "future perfect",
+      ],
+    },
+    person: {
+      expectedTypeOnStCh: "array",
+      possibleValues: ["1per", "2per", "3per"],
+    },
+    gender: {
+      expectedTypeOnStCh: "array",
+      possibleValues: ["m", "f", "n", "virile", "nonvirile"],
+    },
+    number: {
+      expectedTypeOnStCh: "array",
+      possibleValues: ["singular", "plural"],
+    },
+    gcase: {
+      expectedTypeOnStCh: "array",
+      possibleValues: ["nom", "gen", "dac", "acc"],
+    },
+    // aspect: {
+    //   expectedTypeOnStCh: "array",
+    //   possibleValues: ["imperfective", "perfective"],
+    // },
+    tense: {
+      expectedTypeOnStCh: "array",
+      possibleValues: [
+        "past",
+        "present",
+        "future",
+        "conditional",
+        "imperative",
+      ],
     },
   },
 };

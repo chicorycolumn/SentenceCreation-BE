@@ -1,8 +1,3 @@
-//
-//
-//    CONDITIONS
-//
-//
 exports.conditionsOnWhichToBlockAnnotations = {
   POL: {
     noun: {

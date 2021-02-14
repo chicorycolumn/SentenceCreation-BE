@@ -1,8 +1,3 @@
-//
-//
-//    TRANSLATIONS
-//
-//
 exports.tenseDescriptionTranslation = {
   //Note, this is NOT a Washburne style reference object. And that's okay.
   ENG: {
