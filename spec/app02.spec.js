@@ -50,8 +50,10 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal16-01b GET 200 YES: Are EITHER members of an array returned as possible QUESTION, as they should be?", () => {
+    it("#pal16-01b GET 200 YES: Battery: Are EITHER members of an array returned as possible QUESTION, as they should be?", () => {
       return Promise.all([
+        testOnce(),
+        testOnce(),
         testOnce(),
         testOnce(),
         testOnce(),
@@ -60,7 +62,7 @@ describe("/api", () => {
         testOnce(),
       ]).then((allQuestionSentencesArr) => {
         console.log({ allQuestionSentencesArr });
-        expect(allQuestionSentencesArr).to.have.length(6);
+        expect(allQuestionSentencesArr).to.have.length(8);
         expect(allQuestionSentencesArr).to.include("Kobieta będzie pisała.");
         expect(allQuestionSentencesArr).to.include("Kobieta będzie pisać.");
       });

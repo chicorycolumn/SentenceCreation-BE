@@ -115,27 +115,27 @@ exports.structureChunkFeatures = {
     //    These stCh features require validation that given values are okay.
     //
     //
-    specificLemmas: { expectedTypeOnStCh: "array", possibleValues: null },
-    specificIds: { expectedTypeOnStCh: "array", possibleValues: null },
-    andTags: { expectedTypeOnStCh: "array", possibleValues: null },
-    orTags: { expectedTypeOnStCh: "array", possibleValues: null },
-    form: { expectedTypeOnStCh: "array", possibleValues: null },
-    chunkId: { expectedTypeOnStCh: "string", possibleValues: null },
+    specificLemmas: { expectedTypeOnStCh: "array" },
+    specificIds: { expectedTypeOnStCh: "array" },
+    andTags: { expectedTypeOnStCh: "array" },
+    orTags: { expectedTypeOnStCh: "array" },
+    form: { expectedTypeOnStCh: "array" },
+    chunkId: { expectedTypeOnStCh: "string" },
     // wordtype: { expectedTypeOnStCh: "string", possibleValues: ["noun", "adjective"] },
-    agreeWith: { expectedTypeOnStCh: "string", possibleValues: null },
+    agreeWith: { expectedTypeOnStCh: "string" },
+    connectedTo: {
+      expectedTypeOnStCh: "string",
+    },
     postHocAgreeWithPrimary: {
       expectedTypeOnStCh: "string",
-      possibleValues: null,
     },
     postHocAgreeWithSecondary: {
       expectedTypeOnStCh: "string",
-      possibleValues: null,
     },
     postHocAgreeWithTertiary: {
       expectedTypeOnStCh: "string",
-      possibleValues: null,
     },
-    value: { expectedTypeOnStCh: "string", possibleValues: null },
+    value: { expectedTypeOnStCh: "string" },
     //
     //
     //    These stCh features get validation by their possibleValues arr.
@@ -152,6 +152,8 @@ exports.structureChunkFeatures = {
         "future pf",
         "imperative",
         "negative imperative",
+        "conditional im",
+        "conditional pf",
         "cond0 condition",
         "cond0 outcome",
         "cond1 condition",
@@ -196,7 +198,7 @@ exports.structureChunkFeatures = {
     gcase: {
       compatibleWordtypes: ["noun", "adjective", "pronoun"],
       expectedTypeOnStCh: "array",
-      possibleValues: ["nom", "gen", "dac", "acc", "ins", "loc"],
+      possibleValues: ["nom", "gen", "dat", "acc", "ins", "loc"],
     },
     aspect: {
       compatibleWordtypes: ["verb"],
@@ -221,27 +223,30 @@ exports.structureChunkFeatures = {
     //    These stCh features require validation that given values are okay.
     //
     //
-    specificLemmas: { expectedTypeOnStCh: "array", possibleValues: null },
-    specificIds: { expectedTypeOnStCh: "array", possibleValues: null },
-    andTags: { expectedTypeOnStCh: "array", possibleValues: null },
-    orTags: { expectedTypeOnStCh: "array", possibleValues: null },
-    form: { expectedTypeOnStCh: "array", possibleValues: null },
-    chunkId: { expectedTypeOnStCh: "string", possibleValues: null },
+    specificLemmas: { expectedTypeOnStCh: "array" },
+    specificIds: { expectedTypeOnStCh: "array" },
+    andTags: { expectedTypeOnStCh: "array" },
+    orTags: { expectedTypeOnStCh: "array" },
+    form: { expectedTypeOnStCh: "array" },
+    chunkId: { expectedTypeOnStCh: "string" },
     // wordtype: { expectedTypeOnStCh: "string", possibleValues: ["noun", "adjective"] },
-    agreeWith: { expectedTypeOnStCh: "string", possibleValues: null },
+    agreeWith: { expectedTypeOnStCh: "string" },
+    connectedTo: {
+      expectedTypeOnStCh: "string",
+    },
     // postHocAgreeWithPrimary: {
     //   expectedTypeOnStCh: "string",
-    //   possibleValues: null,
+    //
     // },
     // postHocAgreeWithSecondary: {
     //   expectedTypeOnStCh: "string",
-    //   possibleValues: null,
+    //
     // },
     // postHocAgreeWithTertiary: {
     //   expectedTypeOnStCh: "string",
-    //   possibleValues: null,
+    //
     // },
-    value: { expectedTypeOnStCh: "string", possibleValues: null },
+    value: { expectedTypeOnStCh: "string" },
     //
     //
     //    These stCh features get validation by their possibleValues arr.
@@ -251,6 +256,9 @@ exports.structureChunkFeatures = {
       compatibleWordtypes: ["verb"],
       expectedTypeOnStCh: "array",
       possibleValues: [
+        "past",
+        "present",
+        "future",
         "past simple",
         "past continuous",
         "past perfect",
@@ -280,7 +288,7 @@ exports.structureChunkFeatures = {
     gcase: {
       compatibleWordtypes: ["noun", "verb", "adjective", "pronoun"],
       expectedTypeOnStCh: "array",
-      possibleValues: ["nom", "gen", "dac", "acc"],
+      possibleValues: ["nom", "gen", "dat", "acc"],
     },
     // aspect: {
     //   expectedTypeOnStCh: "array",

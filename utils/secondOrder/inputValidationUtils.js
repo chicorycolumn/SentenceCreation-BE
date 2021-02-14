@@ -12,11 +12,19 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
     Object.keys(structureChunk).forEach((featureKey) => {
       let featureValue = structureChunk[featureKey];
 
-      if (["fixed"].includes(wordtype) || ["wordtype"].includes(featureKey)) {
+      if (
+        ["fixed"].includes(wordtype) ||
+        [
+          "wordtype",
+          "importantFeatures",
+          "pleaseShowMultipleWordtypeAllohomClarifiers",
+        ].includes(featureKey)
+      ) {
         return;
       }
 
       console.log("hsat validateSentenceFormula", {
+        currentLanguage,
         wordtype,
         featureKey,
         featureValue,
@@ -25,6 +33,10 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
       //1. Check if this featureValue is compatible with this wordtype
       let compatibleWordtypes = stChFeaturesRef[featureKey].compatibleWordtypes;
       if (compatibleWordtypes && !compatibleWordtypes.includes(wordtype)) {
+        console.log(
+          "wghd validateSentenceFormula structureChunk",
+          structureChunk
+        );
         gpUtils.throw(
           `wghd validateSentenceFormula #ERR on ${chunkId}: wordtype ${wordtype} not present in compatibleWordtypes for featureKey ${featureKey}.`
         );
@@ -36,6 +48,10 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
         expectedTypeOnStCh &&
         expectedTypeOnStCh !== gpUtils.typeof(featureValue)
       ) {
+        console.log(
+          "kchk validateSentenceFormula structureChunk",
+          structureChunk
+        );
         gpUtils.throw(
           `kchk validateSentenceFormula #ERR on ${chunkId}: Expected ${expectedTypeOnStCh} as ${featureKey} featureValue but got ${gpUtils.typeof(
             featureValue
@@ -50,6 +66,10 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
       if (possibleValues) {
         if (gpUtils.typeof(featureValue) === "string") {
           if (!possibleValues.includes(featureValue)) {
+            console.log(
+              "mkkf validateSentenceFormula structureChunk",
+              structureChunk
+            );
             gpUtils.throw(
               `mkkf validateSentenceFormula #ERR on ${chunkId}: featureValue ${featureValue} not listed as possible for wordtype ${wordtype}.`
             );
@@ -57,6 +77,10 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
         } else if (gpUtils.typeof(featureValue) === "array") {
           featureValue.forEach((featureValueItem) => {
             if (!possibleValues.includes(featureValueItem)) {
+              console.log(
+                "timm validateSentenceFormula structureChunk",
+                structureChunk
+              );
               gpUtils.throw(
                 `timm validateSentenceFormula #ERR on ${chunkId}: featureValue arr included ${featureValueItem} which was not listed as possible for wordtype ${wordtype}.`
               );
@@ -65,27 +89,5 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
         }
       }
     });
-
-    // arrayFeatures.forEach((arrayFeature) => {
-    //   if (
-    //     structureChunk[arrayFeature] &&
-    //     !Array.isArray(structureChunk[arrayFeature])
-    //   ) {
-    //     gpUtils.throw(
-    //       `lnqk validateType #ERR ----------------------------------------------------------------------> ${sentenceFormula.sentenceFormulaId} had ${structureChunk.chunkId} with ${arrayFeature} NOT an array.`
-    //     );
-    //   }
-    // });
-
-    // stringFeatures.forEach((stringFeature) => {
-    //   if (
-    //     structureChunk[stringFeature] &&
-    //     !(typeof structureChunk[stringFeature] === "string")
-    //   ) {
-    //     gpUtils.throw(
-    //       `mhuk validateType #ERR ----------------------------------------------------------------------> ${sentenceFormula.sentenceFormulaId} had ${structureChunk.chunkId}'s ***${stringFeature}*** NOT a string.`
-    //     );
-    //   }
-    // });
   });
 };

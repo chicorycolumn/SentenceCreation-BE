@@ -19,6 +19,7 @@ exports.fetchPalette = (req) => {
     answerLanguage,
     pleaseDontSpecify,
     shouldThrowAtMidpoint,
+    shouldOmitStChValidation,
   } = req.body;
 
   let { sentenceFormula, words } = scUtils.getMaterials(
@@ -40,7 +41,9 @@ exports.fetchPalette = (req) => {
   //Omega: Ultimately this needn't be done here, but rather, after creating a new sentenceFormula.
   //       Once it passes that, we know it's fine, so don't need to validate it every time down here.
   //       Although could be worth running this validation here during multipleMode.
-  ivUtils.validateSentenceFormula(sentenceFormula, questionLanguage);
+  if (!shouldOmitStChValidation) {
+    ivUtils.validateSentenceFormula(sentenceFormula, questionLanguage);
+  }
 
   if (pleaseDontSpecify) {
     //Set pleaseDontSpecify to false if 'person' noun is headNoun of any pronouns,
@@ -242,7 +245,9 @@ exports.fetchPalette = (req) => {
       //Omega: Ultimately this needn't be done here, but rather, after creating a new sentenceFormula.
       //       Once it passes that, we know it's fine, so don't need to validate it every time down here.
       //       Although could be worth running this validation here during multipleMode.
-      ivUtils.validateSentenceFormula(sentenceFormula, answerLanguage);
+      if (!shouldOmitStChValidation) {
+        ivUtils.validateSentenceFormula(sentenceFormula, answerLanguage);
+      }
 
       if (index === 0) {
         firstAnswerSentenceFormula = answerSentenceFormula;

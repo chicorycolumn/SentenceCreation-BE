@@ -1426,7 +1426,7 @@ describe("/api", () => {
           );
         });
     });
-    xit("#pal06-06a GET 200 YES: RSWAT POL to ENG. Ensure feminine and masculine are randomly selected at ~50/50 rate, despite there being thrice as many masculine genders as feminine.", () => {
+    xit("#pal06-06a GET 200 YES: Battery RSWAT POL to ENG. Ensure feminine and masculine are randomly selected at ~50/50 rate, despite there being thrice as many masculine genders as feminine.", () => {
       return Promise.all([
         testOnce(),
         testOnce(),
@@ -2477,6 +2477,7 @@ describe("/api", () => {
         .send({
           questionLanguage: "POL",
           sentenceFormulaSymbol: "shirt is in wardrobe",
+          shouldOmitStChValidation: true,
         })
         .expect(200)
         .then((res) => {
@@ -2537,6 +2538,7 @@ describe("/api", () => {
           questionLanguage: "POL",
           sentenceFormulaId: "POL-dummy01",
           useDummy: true,
+          shouldOmitStChValidation: true,
         })
         .expect(200)
         .then((res) => {
@@ -2552,6 +2554,7 @@ describe("/api", () => {
         .send({
           questionLanguage: "POL",
           sentenceFormulaId: "POL-dummy02",
+          shouldOmitStChValidation: true,
           useDummy: true,
         })
         .expect(200)
@@ -2569,6 +2572,7 @@ describe("/api", () => {
           questionLanguage: "POL",
           sentenceFormulaId: "POL-dummy03",
           useDummy: true,
+          shouldOmitStChValidation: true,
         })
         .expect(200)
         .then((res) => {
@@ -2585,6 +2589,7 @@ describe("/api", () => {
           questionLanguage: "POL",
           sentenceFormulaId: "POL-dummy04",
           useDummy: true,
+          shouldOmitStChValidation: true,
         })
         .expect(200)
         .then((res) => {
@@ -2629,6 +2634,7 @@ describe("/api", () => {
           questionLanguage: "POL",
           sentenceFormulaId: "POL-dummy07",
           useDummy: true,
+          shouldOmitStChValidation: true,
         })
         .expect(200)
         .then((res) => {
