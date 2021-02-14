@@ -379,3 +379,14 @@ exports.adhocForms = {
     ],
   },
 };
+
+exports.wordtypeShorthandTranslation = {
+  nou: "noun",
+  ver: "verb",
+  adj: "adjective",
+  adv: "adverb",
+  pro: "pronoun",
+  art: "article",
+  pre: "preposition",
+  fix: "fixed",
+};

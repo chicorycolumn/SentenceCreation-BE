@@ -3,6 +3,25 @@ const refFxn = require("../utils/reference/referenceFunctions.js");
 const gpUtils = require("../utils/generalPurposeUtils.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 
+exports.initiallyAdjustSentenceFormula = (sentenceFormula) => {
+  sentenceFormula.sentenceStructure.forEach((structureChunk) => {
+    allLangUtils.addWordtypeToStructureChunk(structureChunk);
+  });
+};
+
+exports.addWordtypeToStructureChunk = (structureChunk) => {
+  let wordtype = gpUtils.getWordtypeFromStructureChunk(structureChunk);
+
+  if (!wordtype) {
+    gpUtils.throw(
+      "bawe #ERR addWordtypeToStructureChunk wordtype came back falsy",
+      wordtype
+    );
+  }
+
+  structureChunk.wordtype = wordtype;
+};
+
 exports.translateAnnotationValue = (
   annotationKey,
   structureChunk,
@@ -146,8 +165,6 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
     console.log(
       "[1;35m " + "hqij ALL preprocessStructureChunks-------------------" + "[0m"
     );
-  } else {
-    console.log("[1;35m " + `(hqij ALL preprocessStructureChunks)` + "[0m");
   }
 
   let metaFeaturesRef = refObj.metaFeatures[currentLanguage];

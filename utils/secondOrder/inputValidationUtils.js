@@ -1,7 +1,12 @@
 const gpUtils = require("../generalPurposeUtils.js");
+const ivUtils = require("./inputValidationUtils.js");
+
+exports.validateSentenceFormula = (sentenceFormula) => {
+  ivUtils.validateValueType(sentenceFormula);
+};
 
 //All feature values must be correct types.
-exports.validateType = (sentenceFormula) => {
+exports.validateValueType = (sentenceFormula) => {
   const arrayFeatures = [
     "specificLemmas",
     "specificIds",

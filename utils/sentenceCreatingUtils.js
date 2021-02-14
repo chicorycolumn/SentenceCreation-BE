@@ -101,7 +101,10 @@ exports.getMaterials = (
     langUtils.preprocessLemmaObjectsMinor(words[wordtypeKey]);
   });
 
-  ivUtils.validateType(sentenceFormula);
+  //Omega: Ultimately this needn't be done here, but rather, after creating a new sentenceFormula.
+  //       Once it passes that, we know it's fine, so don't need to validate it every time down here.
+  //       Although could be worth running this validation here during multipleMode.
+  ivUtils.validateSentenceFormula(sentenceFormula);
 
   return { sentenceFormula, words };
 };

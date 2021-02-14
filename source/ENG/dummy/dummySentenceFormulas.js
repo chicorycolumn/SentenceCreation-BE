@@ -388,7 +388,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1",
-        wordtype: "pronoun",
+        // wordtype: "pronoun",
         // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
@@ -397,7 +397,7 @@ exports.dummySentenceFormulasBank = [
       },
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+        // wordtype: "verb",
         agreeWith: "pro-1",
         specificLemmas: ["be"],
         number: [],

@@ -5,16 +5,14 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "nou-1",
-        wordtype: "noun",
         andTags: ["person", "personTest1"],
         gcase: ["nom"],
         number: ["singular"],
         gender: [],
       },
-      { chunkId: "fix-1", wordtype: "fixed", value: "je" },
+      { chunkId: "fix-1", value: "je" },
       {
         chunkId: "nou-2",
-        wordtype: "noun",
         andTags: ["edible"],
         gcase: ["acc"],
         number: [],
@@ -28,16 +26,14 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "nou-1",
-        wordtype: "noun",
         andTags: ["person", "personTest1"],
         gcase: ["nom"],
         number: ["singular"],
         gender: [],
       },
-      { chunkId: "fix-1", wordtype: "fixed", value: "ma na sobie" },
+      { chunkId: "fix-1", value: "ma na sobie" },
       {
         chunkId: "nou-2",
-        wordtype: "noun",
         andTags: ["wearable"],
         gcase: ["acc"],
         number: [],
@@ -51,24 +47,22 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "nou-1",
-        wordtype: "noun",
         andTags: ["wearable"],
 
         gcase: ["nom"],
         number: ["singular"],
         gender: [],
       },
-      { chunkId: "fix-1", wordtype: "fixed", value: "jest w szafie" },
+      { chunkId: "fix-1", value: "jest w szafie" },
     ],
   },
   {
     sentenceFormulaSymbol: "I often wear shirt",
     sentenceFormulaId: "POL-00-53",
     sentenceStructure: [
-      { chunkId: "fix-1", wordtype: "fixed", value: "często noszę" },
+      { chunkId: "fix-1", value: "często noszę" },
       {
         chunkId: "nou-1",
-        wordtype: "noun",
         andTags: ["wearable"],
 
         gcase: ["acc"],
@@ -83,14 +77,13 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "nou-1",
-        wordtype: "noun",
         andTags: ["person", "personTest1"],
 
         gcase: ["nom"],
         number: ["plural"],
         gender: ["m1"],
       },
-      { chunkId: "fix-1", wordtype: "fixed", value: "są męscy" },
+      { chunkId: "fix-1", value: "są męscy" },
     ],
   },
   {
@@ -100,13 +93,11 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "adj-1",
         agreeWith: "nou-1",
-        wordtype: "adjective",
         form: ["simple"],
         andTags: ["colour"],
       },
       {
         chunkId: "nou-1",
-        wordtype: "noun",
         andTags: ["edible"],
 
         gcase: ["nom"],
@@ -124,13 +115,11 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "adj-1",
         agreeWith: "nou-1",
-        wordtype: "adjective",
         form: ["simple"],
         andTags: ["colour"],
       },
       {
         chunkId: "nou-1",
-        wordtype: "noun",
         andTags: ["edible"],
 
         gcase: ["nom"],
@@ -148,13 +137,11 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "adj-1",
         agreeWith: "nou-1",
-        wordtype: "adjective",
         form: ["simple"],
         orTags: ["colour", "colour2"],
       },
       {
         chunkId: "nou-1",
-        wordtype: "noun",
         andTags: ["edible"],
 
         gcase: ["nom"],
@@ -172,13 +159,11 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "adj-1",
         agreeWith: "nou-1",
-        wordtype: "adjective",
         form: ["simple"],
         andTags: ["colour"],
       },
       {
         chunkId: "nou-1",
-        wordtype: "noun",
         andTags: ["person", "personTest1"],
 
         gcase: ["nom"],
@@ -193,10 +178,9 @@ exports.sentenceFormulasBank = [
     sentenceFormulaSymbol: "I have apple",
     sentenceFormulaId: "POL-00-57",
     sentenceStructure: [
-      { chunkId: "fix-1", wordtype: "fixed", value: "mam" },
+      { chunkId: "fix-1", value: "mam" },
       {
         chunkId: "nou-1",
-        wordtype: "noun",
         andTags: ["edible"],
 
         gcase: ["acc"],
@@ -211,8 +195,6 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "ver-1",
-        wordtype: "verb",
-
         andTags: ["basic2"],
         tenseDescription: ["present im"],
         person: ["1per", "2per", "3per"],
@@ -225,7 +207,6 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "nou-1",
-        wordtype: "noun",
         andTags: ["person", "personTest1"],
         gcase: ["nom"],
         number: ["singular", "plural"],
@@ -234,8 +215,6 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "nou-1",
-        wordtype: "verb",
-
         tenseDescription: ["present im"],
         person: ["3per"],
         andTags: ["basic2"],
@@ -248,7 +227,6 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "nou-1",
-        wordtype: "noun",
         andTags: ["person", "personTest1"],
         gcase: ["nom"],
         number: ["plural"],
@@ -257,8 +235,6 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "nou-1",
-        wordtype: "verb",
-
         tenseDescription: ["past im"],
         person: ["3per"],
         andTags: ["basic2"],
@@ -269,11 +245,10 @@ exports.sentenceFormulasBank = [
     sentenceFormulaSymbol: "* girl has red apple",
     sentenceFormulaId: "POL-00-61-z",
     sentenceStructure: [
-      { chunkId: "fix-1", wordtype: "fixed", value: "nie," },
-      { chunkId: "fix-2", wordtype: "fixed", value: "chyba" },
+      { chunkId: "fix-1", value: "nie," },
+      { chunkId: "fix-2", value: "chyba" },
       {
         chunkId: "nou-1",
-        wordtype: "noun",
         andTags: ["person", "personTest1"],
         gcase: ["nom"],
         number: ["singular"],
@@ -281,8 +256,6 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "nou-1",
-        wordtype: "verb",
-
         tenseDescription: ["present im"],
         person: ["3per"],
         andTags: [],
@@ -291,20 +264,17 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "adj-1",
         agreeWith: "nou-2",
-        wordtype: "adjective",
         form: ["simple"],
         andTags: ["colour"],
       },
       {
         chunkId: "nou-2",
-        wordtype: "noun",
         andTags: ["edible"],
         gcase: ["acc"],
         number: ["singular"],
       },
       {
         chunkId: "ver-2",
-        wordtype: "verb",
         form: ["infinitive"],
         andTags: [],
       },
@@ -320,15 +290,12 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "nou-1",
-        wordtype: "noun",
         andTags: ["person", "personTest1"],
         gcase: ["nom"],
       },
       {
         chunkId: "ver-1",
         agreeWith: "nou-1",
-        wordtype: "verb",
-
         tenseDescription: ["present im"],
         person: ["3per"],
         andTags: [],
@@ -337,13 +304,11 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "adj-1",
         agreeWith: "nou-2",
-        wordtype: "adjective",
         form: ["simple"],
         andTags: ["colour"],
       },
       {
         chunkId: "nou-2",
-        wordtype: "noun",
         andTags: ["edible"],
         gcase: ["acc"],
       },
@@ -357,17 +322,14 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "nou-1",
-        wordtype: "noun",
         andTags: ["person", "personTest1"],
 
         gcase: ["nom"],
       },
-      { chunkId: "fix-1", wordtype: "fixed", value: "nie" },
+      { chunkId: "fix-1", value: "nie" },
       {
         chunkId: "ver-1",
         agreeWith: "nou-1",
-        wordtype: "verb",
-
         tenseDescription: ["past im"],
         person: ["3per"],
         andTags: [],
@@ -377,13 +339,11 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "adj-1",
         agreeWith: "nou-2",
-        wordtype: "adjective",
         form: ["simple"],
         andTags: ["colour"],
       },
       {
         chunkId: "nou-2",
-        wordtype: "noun",
         andTags: ["edible"],
 
         gcase: ["gen"],
@@ -399,23 +359,19 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "adj-0",
         agreeWith: "nou-1",
-        wordtype: "adjective",
         form: ["simple"],
         andTags: ["colour"],
       },
       {
         chunkId: "nou-1",
-        wordtype: "noun",
         andTags: ["person", "personTest1"],
 
         gcase: ["nom"],
       },
-      { chunkId: "fix-1", wordtype: "fixed", value: "nie" },
+      { chunkId: "fix-1", value: "nie" },
       {
         chunkId: "ver-1",
         agreeWith: "nou-1",
-        wordtype: "verb",
-
         tenseDescription: ["past im"],
         person: ["3per"],
         andTags: [],
@@ -425,13 +381,11 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "adj-1",
         agreeWith: "nou-2",
-        wordtype: "adjective",
         form: ["simple"],
         andTags: ["colour"],
       },
       {
         chunkId: "nou-2",
-        wordtype: "noun",
         andTags: ["edible"],
 
         gcase: ["gen"],
@@ -446,15 +400,12 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "nou-1",
-        wordtype: "noun",
         andTags: ["person", "personTest1"],
         gcase: ["nom"],
       },
       {
         chunkId: "ver-1",
         agreeWith: "nou-1",
-        wordtype: "verb",
-
         andTags: ["basic2"],
         person: ["3per"],
         tenseDescription: ["present im"],
@@ -469,15 +420,12 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "nou-1",
-        wordtype: "noun",
         andTags: ["person", "personTest1"],
         gcase: ["nom"],
       },
       {
         chunkId: "ver-1",
         agreeWith: "nou-1",
-        wordtype: "verb",
-
         andTags: ["basic2"],
         person: ["3per"],
         tenseDescription: ["past pf"],
@@ -492,15 +440,12 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "nou-1",
-        wordtype: "noun",
         andTags: ["person", "personTest1"],
         gcase: ["nom"],
       },
       {
         chunkId: "ver-1",
         agreeWith: "nou-1",
-        wordtype: "verb",
-
         andTags: ["basic2"],
         person: ["3per"],
         tenseDescription: ["future im"],
@@ -515,7 +460,6 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "nou-1",
-        wordtype: "noun",
         andTags: ["person", "personTest1"],
         gcase: ["nom"],
         gender: ["f"],
@@ -523,8 +467,6 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "nou-1",
-        wordtype: "verb",
-
         andTags: ["basic2"],
         person: ["3per"],
         tenseDescription: ["conditional im", "conditional pf"],
@@ -540,7 +482,6 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "nou-1",
-        wordtype: "noun",
         andTags: ["person", "personTest1"],
         gcase: ["nom"],
         number: ["singular", "plural"],
@@ -548,7 +489,6 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "nou-1",
-        wordtype: "verb",
         tenseDescription: ["present im"],
         person: ["3per"],
         andTags: ["basic2"],
@@ -562,7 +502,6 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "nou-1",
-        wordtype: "noun",
         andTags: ["person", "personTest1"],
         gcase: ["nom"],
         number: ["singular", "plural"],
@@ -570,13 +509,11 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "nou-1",
-        wordtype: "verb",
-
         tenseDescription: ["present im"],
         person: ["3per"],
         andTags: ["basic2"],
       },
-      { chunkId: "fix-1", wordtype: "fixed", value: "szybko" },
+      { chunkId: "fix-1", value: "szybko" },
     ],
     primaryOrders: [["nou-1", "fix-1", "ver-1"]],
     additionalOrders: [],
@@ -588,8 +525,6 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "ver-1",
-        wordtype: "verb",
-
         andTags: ["basic2"],
         tenseDescription: ["future pf"],
         person: ["1per"],
@@ -606,8 +541,6 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "ver-1",
-        wordtype: "verb",
-
         andTags: ["basic3"],
         tenseDescription: ["future pf", "future im"],
         person: ["1per"],
@@ -624,8 +557,6 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "ver-1",
-        wordtype: "verb",
-
         andTags: ["basic3"],
         tenseDescription: ["past im"],
         person: ["1per"],
@@ -642,8 +573,6 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "ver-1",
-        wordtype: "verb",
-
         andTags: ["basic3"],
         tenseDescription: ["future pf"],
         person: ["1per"],
@@ -660,8 +589,6 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "ver-1",
-        wordtype: "verb",
-
         andTags: ["basic3"],
         tenseDescription: [],
         person: ["1per"],
@@ -678,8 +605,6 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "ver-1",
-        wordtype: "verb",
-
         andTags: ["basic3"],
         tenseDescription: ["future pf", "past im"],
         person: ["1per"],
@@ -696,7 +621,6 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "ver-1",
-        wordtype: "verb",
         andTags: ["basic3"],
         tenseDescription: ["past im"],
         person: ["1per"],
@@ -711,10 +635,9 @@ exports.sentenceFormulasBank = [
     sentenceFormulaId: "POL-00-106a",
     translations: { ENG: ["ENG-00-106a"] },
     sentenceStructure: [
-      { chunkId: "fix-1", wordtype: "fixed", value: "jeśli" },
+      { chunkId: "fix-1", value: "jeśli" },
       {
         chunkId: "ver-1",
-        wordtype: "verb",
         specificLemmas: ["pisać", "napisać"],
         tenseDescription: ["cond1 condition"],
         importantFeatures: ["tenseDescription"],
@@ -723,16 +646,14 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "nou-1",
-        wordtype: "noun",
         specificLemmas: ["książka"],
         gcase: ["acc"],
         number: ["singular"],
       },
-      { chunkId: "fix-2", wordtype: "fixed", value: "," },
-      { chunkId: "fix-3", wordtype: "fixed", value: "ją" },
+      { chunkId: "fix-2", value: "," },
+      { chunkId: "fix-3", value: "ją" },
       {
         chunkId: "ver-2",
-        wordtype: "verb",
         specificLemmas: ["badać", "zbadać"],
         tenseDescription: ["cond1 outcome"],
         importantFeatures: ["tenseDescription"],
@@ -751,12 +672,10 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "adj-1",
         agreeWith: "nou-1",
-        wordtype: "adjective",
         andTags: ["colour"],
       },
       {
         chunkId: "nou-1",
-        wordtype: "noun",
         specificLemmas: ["drzwi"],
         gcase: ["nom"],
         number: [],
@@ -771,16 +690,13 @@ exports.sentenceFormulasBank = [
     translations: { ENG: ["ENG-00-108"] },
     sentenceStructure: [
       {
-        chunkId: "pro-1",
-        wordtype: "pronoun",
-        // form: ["pronoun"],
+        chunkId: "pro-1", // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         // person: ["1per"],
       },
       {
         chunkId: "ver-1",
         agreeWith: "pro-1",
-        wordtype: "verb",
         specificLemmas: ["być"],
         tenseDescription: ["present im"],
       },
@@ -795,18 +711,16 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "nou-1",
-        wordtype: "noun",
         andTags: ["job", "person"],
         number: ["singular"],
       },
       {
         chunkId: "ver-1",
         agreeWith: "nou-1",
-        wordtype: "verb",
         specificLemmas: ["pisać", "napisać"],
         tenseDescription: ["past pf"],
       },
-      { chunkId: "fix-1", wordtype: "fixed", value: "receptę" },
+      { chunkId: "fix-1", value: "receptę" },
     ],
     primaryOrders: [["nou-1", "ver-1", "fix-1"]],
     additionalOrders: [],
@@ -818,18 +732,20 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "nou-1",
-        wordtype: "noun",
         andTags: ["job", "person"],
         number: ["singular"],
       },
       {
         chunkId: "ver-1",
         agreeWith: "nou-1",
-        wordtype: "verb",
         specificLemmas: ["pisać", "napisać"],
         tenseDescription: ["past im"],
       },
-      { chunkId: "fix-1", wordtype: "fixed", value: "receptę" },
+      {
+        chunkId: "fix-1",
+        //
+        value: "receptę",
+      },
     ],
     primaryOrders: [["nou-1", "ver-1", "fix-1"]],
     additionalOrders: [],
@@ -842,18 +758,16 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "nou-1",
-        wordtype: "noun",
         andTags: ["job", "person"],
         number: ["plural"],
       },
       {
         chunkId: "ver-1",
         agreeWith: "nou-1",
-        wordtype: "verb",
         specificLemmas: ["pisać", "napisać"],
         tenseDescription: ["past pf"],
       },
-      { chunkId: "fix-1", wordtype: "fixed", value: "receptę" },
+      { chunkId: "fix-1", value: "receptę" },
     ],
     primaryOrders: [["nou-1", "ver-1", "fix-1"]],
     additionalOrders: [],
@@ -865,18 +779,16 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "nou-1",
-        wordtype: "noun",
         andTags: ["job", "person"],
         number: ["plural"],
       },
       {
         chunkId: "ver-1",
         agreeWith: "nou-1",
-        wordtype: "verb",
         specificLemmas: ["pisać", "napisać"],
         tenseDescription: ["past im"],
       },
-      { chunkId: "fix-1", wordtype: "fixed", value: "receptę" },
+      { chunkId: "fix-1", value: "receptę" },
     ],
     primaryOrders: [["nou-1", "ver-1", "fix-1"]],
     additionalOrders: [],
@@ -888,27 +800,22 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "nou-1",
-        wordtype: "noun",
         specificLemmas: ["kobieta"],
       },
       {
         chunkId: "ver-1",
         agreeWith: "nou-1",
-        wordtype: "verb",
         specificLemmas: ["czytać"],
         tenseDescription: ["past im"],
       },
       {
-        chunkId: "pro-1",
-        wordtype: "pronoun",
-        // form: ["pronoun"],
+        chunkId: "pro-1", // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         gcase: ["dat"],
       },
       {
         chunkId: "nou-2",
-        wordtype: "noun",
         specificLemmas: ["książka"],
         gcase: ["acc"],
         number: ["singular"],
@@ -923,9 +830,7 @@ exports.sentenceFormulasBank = [
     translations: { ENG: ["ENG-00-111a"] },
     sentenceStructure: [
       {
-        chunkId: "pro-1",
-        wordtype: "pronoun",
-        // form: ["pronoun"],
+        chunkId: "pro-1", // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         // gender: [],
@@ -934,7 +839,6 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "pro-1",
-        wordtype: "verb",
         specificLemmas: ["być"],
         tenseDescription: ["present im"],
       },
@@ -948,9 +852,7 @@ exports.sentenceFormulasBank = [
     translations: { ENG: ["ENG-00-111b"] },
     sentenceStructure: [
       {
-        chunkId: "pro-1",
-        wordtype: "pronoun",
-        // form: ["pronoun"],
+        chunkId: "pro-1", // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         // gender: [],
@@ -959,7 +861,6 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "pro-1",
-        wordtype: "verb",
         specificLemmas: ["być"],
         tenseDescription: ["past im"],
       },
@@ -973,9 +874,7 @@ exports.sentenceFormulasBank = [
     translations: { ENG: ["ENG-00-111c"] },
     sentenceStructure: [
       {
-        chunkId: "pro-1",
-        wordtype: "pronoun",
-        // form: ["pronoun"],
+        chunkId: "pro-1", // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
         // gender: [],
@@ -984,7 +883,6 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "pro-1",
-        wordtype: "verb",
         specificLemmas: ["być"],
         tenseDescription: ["past im"],
       },
@@ -999,28 +897,23 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "nou-1",
-        wordtype: "noun",
         andTags: ["person", "family"],
         number: ["singular"],
       },
       {
         chunkId: "ver-1",
         agreeWith: "nou-1",
-        wordtype: "verb",
         specificLemmas: ["dawać", "dać"],
         tenseDescription: ["past pf"],
       },
       {
-        chunkId: "pro-1",
-        wordtype: "pronoun",
-        // form: ["pronoun"],
+        chunkId: "pro-1", // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         gcase: ["dat"],
       },
       {
         chunkId: "nou-2",
-        wordtype: "noun",
         specificLemmas: ["jabłko", "cebula", "lustro", "książka"],
         gcase: ["acc"],
         number: ["plural"],
@@ -1036,28 +929,23 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "nou-1",
-        wordtype: "noun",
         andTags: ["person", "family"],
         number: ["singular"],
       },
       {
         chunkId: "ver-1",
         agreeWith: "nou-1",
-        wordtype: "verb",
         specificLemmas: ["dawać", "dać"],
         tenseDescription: ["past pf"],
       },
       {
-        chunkId: "pro-1",
-        wordtype: "pronoun",
-        // form: ["pronoun"],
+        chunkId: "pro-1", // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         gcase: ["dat"],
       },
       {
         chunkId: "nou-2",
-        wordtype: "noun",
         specificLemmas: ["jabłko", "cebula", "lustro", "książka"],
         gcase: ["acc"],
         number: ["singular"],
@@ -1073,15 +961,12 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       //I, my father, gave me his book.
       {
-        chunkId: "pro-1-invisible",
-        wordtype: "pronoun",
-        // form: ["pronoun"],
+        chunkId: "pro-1-invisible", // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
       },
       {
         chunkId: "pro-2",
-        wordtype: "pronoun",
         form: ["determiner"],
         specificLemmas: ["POSSESSIVE"],
         postHocAgreeWithPrimary: "pro-1-invisible",
@@ -1089,7 +974,6 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "nou-1",
-        wordtype: "noun",
         andTags: ["person", "family"],
         gcase: ["nom"],
         number: ["singular"],
@@ -1097,13 +981,11 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "nou-1",
-        wordtype: "verb",
         specificLemmas: ["dawać", "dać"],
         tenseDescription: ["past pf"],
       },
       {
         chunkId: "pro-3",
-        wordtype: "pronoun",
         agreeWith: "pro-1-invisible",
         gcase: ["dat"],
         importantFeatures: ["gcase"],
@@ -1112,7 +994,6 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "nou-2",
-        wordtype: "noun",
         specificLemmas: ["książka"],
         gcase: ["acc"],
         number: ["singular"],
@@ -1128,15 +1009,12 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       //I, my father, gave me his book.
       {
-        chunkId: "pro-1-invisible-We",
-        wordtype: "pronoun",
-        // form: ["pronoun"],
+        chunkId: "pro-1-invisible-We", // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
       },
       {
         chunkId: "pro-2-Our",
-        wordtype: "pronoun",
         form: ["determiner"],
         specificLemmas: ["POSSESSIVE"],
         postHocAgreeWithPrimary: "pro-1-invisible-We",
@@ -1144,7 +1022,6 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "nou-1-Father",
-        wordtype: "noun",
         andTags: ["person", "family"],
         gcase: ["nom"],
         // number: ["singular"],
@@ -1152,13 +1029,11 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1-Gave",
         agreeWith: "nou-1-Father",
-        wordtype: "verb",
         specificLemmas: ["dawać", "dać"],
         tenseDescription: ["past pf"],
       },
       {
         chunkId: "pro-3-Us",
-        wordtype: "pronoun",
         agreeWith: "pro-1-invisible-We",
         gcase: ["dat"],
         importantFeatures: ["gcase"],
@@ -1167,7 +1042,6 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "pro-4-His",
-        wordtype: "pronoun",
         form: ["determiner"],
         specificLemmas: ["POSSESSIVE"],
         postHocAgreeWithPrimary: "nou-1-Father",
@@ -1175,7 +1049,6 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "nou-2-Book",
-        wordtype: "noun",
         specificLemmas: ["książka"],
         gcase: ["acc"],
         number: ["singular"],
@@ -1200,16 +1073,13 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       //I, my father, gave me his book.
       {
-        chunkId: "pro-1-invisible-I",
-        wordtype: "pronoun",
-        // form: ["pronoun"],
+        chunkId: "pro-1-invisible-I", // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         number: ["singular"],
       },
       {
         chunkId: "nou-1-Doctor",
-        wordtype: "noun",
         andTags: ["person"],
         gcase: ["nom"],
         specificLemmas: ["lekarz", "lekarka"],
@@ -1218,13 +1088,11 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1-Gave",
         agreeWith: "nou-1-Doctor",
-        wordtype: "verb",
         specificLemmas: ["dawać", "dać"],
         tenseDescription: ["past pf"],
       },
       {
         chunkId: "pro-2-Me",
-        wordtype: "pronoun",
         agreeWith: "pro-1-invisible-I",
         gcase: ["dat"],
         importantFeatures: ["gcase"],
@@ -1233,7 +1101,6 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "pro-3-Her",
-        wordtype: "pronoun",
         form: ["determiner"],
         specificLemmas: ["POSSESSIVE"],
         postHocAgreeWithPrimary: "nou-1-Doctor",
@@ -1241,7 +1108,6 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "nou-2-Book",
-        wordtype: "noun",
         specificLemmas: ["książka"],
         gcase: ["acc"],
         number: ["singular"],

@@ -1,6 +1,7 @@
 const lfUtils = require("./lemmaFilteringUtils.js");
 const otUtils = require("./objectTraversingUtils.js");
 const gpUtils = require("./generalPurposeUtils.js");
+const refObj = require("./reference/referenceObjects.js");
 
 exports.selectRandom = (array) => {
   // console.log("eveb selectRandom from", array);
@@ -400,21 +401,25 @@ exports.doesArrHaveOnlyTheseMembers = (arr1, arr2, disallowDuplicates) => {
 };
 
 exports.getWordtypeFromLemmaObject = (lObj) => {
-  const wordtypeRef = {
-    nou: "noun",
-    ver: "verb",
-    adj: "adjective",
-    adv: "adverb",
-    pro: "pronoun",
-    art: "article",
-    pre: "preposition",
-  };
-
   let wordtypeShorthand = lObj.id.split("-")[1];
+  let wordtypeRef = refObj.wordtypeShorthandTranslation;
 
   if (!Object.keys(wordtypeRef).includes(wordtypeShorthand)) {
     gpUtils.throw(
       `hshc #ERR -----------------> getWordtypeFromLemmaObject for requested ${wordtypeShorthand}`
+    );
+  }
+
+  return wordtypeRef[wordtypeShorthand];
+};
+
+exports.getWordtypeFromStructureChunk = (stCh) => {
+  let wordtypeShorthand = stCh.chunkId.split("-")[0];
+  let wordtypeRef = refObj.wordtypeShorthandTranslation;
+
+  if (!Object.keys(wordtypeRef).includes(wordtypeShorthand)) {
+    gpUtils.throw(
+      `bsov #ERR -----------------> getWordtypeFromStructureChunk for requested ${wordtypeShorthand}`
     );
   }
 

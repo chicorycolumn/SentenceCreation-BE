@@ -5,6 +5,7 @@ const refObj = require("../utils/reference/referenceObjects.js");
 const scUtils = require("../utils/sentenceCreatingUtils.js");
 const aaUtils = require("../utils/auxiliaryAttributeUtils.js");
 const frUtils = require("../utils/formattingResponseUtils.js");
+const allLangUtils = require("../utils/allLangUtils.js");
 
 exports.fetchPalette = (req) => {
   let multipleMode = false;
@@ -32,6 +33,8 @@ exports.fetchPalette = (req) => {
 
   let questionResponseObj;
   let questionSentenceFormula = sentenceFormula;
+
+  allLangUtils.initiallyAdjustSentenceFormula(questionSentenceFormula);
 
   if (pleaseDontSpecify) {
     //Set pleaseDontSpecify to false if 'person' noun is headNoun of any pronouns,
@@ -227,6 +230,8 @@ exports.fetchPalette = (req) => {
       );
 
       let answerSentenceFormula = sentenceFormula;
+
+      allLangUtils.initiallyAdjustSentenceFormula(answerSentenceFormula);
 
       if (index === 0) {
         firstAnswerSentenceFormula = answerSentenceFormula;
