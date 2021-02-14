@@ -1,6 +1,4 @@
-const gpUtils = require("./generalPurposeUtils.js");
-
-// exports.
+const gpUtils = require("../generalPurposeUtils.js");
 
 //All feature values must be correct types.
 exports.validateType = (sentenceFormula) => {

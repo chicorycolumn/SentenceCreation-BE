@@ -1,4 +1,4 @@
-const gpUtils = require("./generalPurposeUtils.js");
+const gpUtils = require("../generalPurposeUtils.js");
 const refObj = require("./referenceObjects.js");
 const refFxn = require("./referenceFunctions.js");
 

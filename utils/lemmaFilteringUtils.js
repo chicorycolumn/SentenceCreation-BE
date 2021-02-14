@@ -1,7 +1,7 @@
 const { head } = require("../app.js");
 const gpUtils = require("./generalPurposeUtils.js");
 const otUtils = require("./objectTraversingUtils.js");
-const refObj = require("./referenceObjects.js");
+const refObj = require("./reference/referenceObjects.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
 const { convertMetaFeatures } = require("./allLangUtils.js");
 

@@ -1,10 +1,9 @@
-const app = require("../app");
 const request = require("supertest");
 const chai = require("chai");
 const { expect } = require("chai");
-const gpUtils = require("../utils/generalPurposeUtils.js");
+const gpUtils = require("../generalPurposeUtils.js");
 const { it } = require("mocha");
-const testingUtils = require("../utils/testingUtils.js");
+const testingUtils = require("./testingUtils.js");
 
 exports.generalTranslatedSentencesRef = {
   have_withClarifiers_QlangENG: {

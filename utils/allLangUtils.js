@@ -1,5 +1,5 @@
-const refObj = require("../utils/referenceObjects.js");
-const refFxn = require("./referenceFunctions.js");
+const refObj = require("../utils/reference/referenceObjects.js");
+const refFxn = require("../utils/reference/referenceFunctions.js");
 const gpUtils = require("../utils/generalPurposeUtils.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 

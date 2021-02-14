@@ -1,6 +1,6 @@
 const gpUtils = require("./generalPurposeUtils.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
-const refObj = require("./referenceObjects.js");
+const refObj = require("./reference/referenceObjects.js");
 const otUtils = require("./objectTraversingUtils.js");
 const allLangUtils = require("./allLangUtils.js");
 

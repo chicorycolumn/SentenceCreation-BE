@@ -4,7 +4,7 @@ const chai = require("chai");
 const { expect } = require("chai");
 const gpUtils = require("../utils/generalPurposeUtils.js");
 const { it } = require("mocha");
-const testingUtils = require("../utils/testingUtils.js");
+const testingUtils = require("../utils/secondOrder/testingUtils.js");
 const { generalTranslatedSentencesRef } = testingUtils;
 // chai.use(require("sams-chai-sorted"));
 // const { myErrMsgs } = require("../errors/errors");

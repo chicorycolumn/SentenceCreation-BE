@@ -3,7 +3,7 @@ const {
   checkLemmaObjectIds,
   checkSentenceFormulaIds,
   checkWords,
-} = require("../utils/educatorUtils.js");
+} = require("../utils/secondOrder/educatorUtils.js");
 const { expect } = require("chai");
 
 xdescribe("findHomographs", () => {

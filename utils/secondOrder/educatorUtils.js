@@ -1,5 +1,5 @@
-const gpUtils = require("./generalPurposeUtils.js");
-const otUtils = require("./objectTraversingUtils.js");
+const gpUtils = require(".././generalPurposeUtils.js");
+const otUtils = require(".././objectTraversingUtils.js");
 const educatorUtils = require("./educatorUtils.js");
 
 exports.getLemmaObjectsWithoutGivenKey = (wordsBank, wordtype, featureKey) => {

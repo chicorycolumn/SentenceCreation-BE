@@ -1,8 +1,8 @@
 const gpUtils = require("./generalPurposeUtils.js");
 const scUtils = require("./sentenceCreatingUtils.js");
 const otUtils = require("./objectTraversingUtils.js");
-const refObj = require("./referenceObjects.js");
-const refFxn = require("./referenceFunctions.js");
+const refObj = require("./reference/referenceObjects.js");
+const refFxn = require("./reference/referenceFunctions.js");
 const aaUtils = require("./auxiliaryAttributeUtils.js");
 const allLangUtils = require("./allLangUtils.js");
 

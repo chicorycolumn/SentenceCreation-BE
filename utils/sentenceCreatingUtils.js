@@ -1,10 +1,10 @@
 const otUtils = require("./objectTraversingUtils.js");
 const gpUtils = require("./generalPurposeUtils.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
-const ivUtils = require("./inputValidationUtils.js");
+const ivUtils = require("./secondOrder/inputValidationUtils.js");
 const scUtils = require("./sentenceCreatingUtils.js");
-const refObj = require("./referenceObjects.js");
-const refFxn = require("./referenceFunctions.js");
+const refObj = require("./reference/referenceObjects.js");
+const refFxn = require("./reference/referenceFunctions.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 
 exports.getMaterials = (
