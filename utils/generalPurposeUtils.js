@@ -618,3 +618,7 @@ exports.getWordsFromTerminusObject = (tObj, shouldGetAll) => {
 
   return allWords;
 };
+
+exports.typeof = (item) => {
+  return Array.isArray(item) ? "array" : typeof item;
+};
