@@ -4,6 +4,9 @@ const refObj = require("../reference/referenceObjects.js");
 
 exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
   let stChFeaturesRef = refObj.structureChunkFeatures[currentLanguage];
+  let allChunkIds = sentenceFormula.sentenceStructure.map(
+    (stCh) => stCh.chunkId
+  );
 
   sentenceFormula.sentenceStructure.forEach((structureChunk) => {
     let wordtype = structureChunk.wordtype;
@@ -30,6 +33,18 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
         featureValue,
       });
 
+      //0. Check if this featureKey is expected at all.
+      let allFeatureKeys = Object.keys(stChFeaturesRef);
+      if (!allFeatureKeys.includes(featureKey)) {
+        console.log(
+          "fneu validateSentenceFormula structureChunk",
+          structureChunk
+        );
+        gpUtils.throw(
+          `fneu validateSentenceFormula #ERR on "${chunkId}": featureKey "${featureKey}" not specified on reference object.`
+        );
+      }
+
       //1. Check if this featureValue is compatible with this wordtype
       let compatibleWordtypes = stChFeaturesRef[featureKey].compatibleWordtypes;
       if (compatibleWordtypes && !compatibleWordtypes.includes(wordtype)) {
@@ -38,7 +53,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
           structureChunk
         );
         gpUtils.throw(
-          `wghd validateSentenceFormula #ERR on ${chunkId}: wordtype ${wordtype} not present in compatibleWordtypes for featureKey ${featureKey}.`
+          `wghd validateSentenceFormula #ERR on "${chunkId}": featureKey "${featureKey}" not expected to be present on "${wordtype}".`
         );
       }
 
@@ -53,14 +68,14 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
           structureChunk
         );
         gpUtils.throw(
-          `kchk validateSentenceFormula #ERR on ${chunkId}: Expected ${expectedTypeOnStCh} as ${featureKey} featureValue but got ${gpUtils.typeof(
+          `kchk validateSentenceFormula #ERR on "${chunkId}": Expected "${expectedTypeOnStCh}" as "${featureKey}" featureValue but got "${gpUtils.typeof(
             featureValue
-          )}`
+          )}"`
         );
       }
 
       //3. Check if all values in featureValue if arr or string, are in this arr:
-      //   Remember to include metaFeatures.
+      //   Zeta: Interesting that even though it will throw error if a metafeature is present in the array, it doesn't throw.
       let possibleValues = stChFeaturesRef[featureKey].possibleValues;
 
       if (possibleValues) {
@@ -71,7 +86,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
               structureChunk
             );
             gpUtils.throw(
-              `mkkf validateSentenceFormula #ERR on ${chunkId}: featureValue ${featureValue} not listed as possible for wordtype ${wordtype}.`
+              `mkkf validateSentenceFormula #ERR on "${chunkId}": featureValue "${featureValue}" not listed as possible for wordtype "${wordtype}".`
             );
           }
         } else if (gpUtils.typeof(featureValue) === "array") {
@@ -82,10 +97,23 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
                 structureChunk
               );
               gpUtils.throw(
-                `timm validateSentenceFormula #ERR on ${chunkId}: featureValue arr included ${featureValueItem} which was not listed as possible for wordtype ${wordtype}.`
+                `timm validateSentenceFormula #ERR on "${chunkId}": featureValue arr included "${featureValueItem}" which was not listed as possible for wordtype "${wordtype}".`
               );
             }
           });
+        }
+      }
+
+      //4. Check if the value of agreeWith kind of features is actually a structureChunk chunkId.
+      if (stChFeaturesRef[featureKey].possibleValueMustBeExistingChunkId) {
+        if (!allChunkIds.includes(featureValue)) {
+          console.log(
+            "cglp validateSentenceFormula structureChunk",
+            structureChunk
+          );
+          gpUtils.throw(
+            `cglp validateSentenceFormula #ERR on ${chunkId}: featureValue ${featureValue} should have been a chunkId existing in sentenceStructure.`
+          );
         }
       }
     });

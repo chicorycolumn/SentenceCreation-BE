@@ -528,7 +528,6 @@ xdescribe("Educator Battery", () => {
     let { nounsWithoutGender } = actual;
 
     if (nounsWithoutGender.length) {
-      // console.log(nounsWithoutGender);
       throw (
         "Action required: YOU MUST SPECIFY A GENDER FOR THESE NOUNS: " +
         nounsWithoutGender.map((item) => item[0]).join(", ")
@@ -546,7 +545,6 @@ xdescribe("Educator Battery", () => {
     let { nounsWithoutGender } = actual;
 
     if (nounsWithoutGender.length) {
-      // console.log(nounsWithoutGender);
       throw (
         "Action required: YOU MUST SPECIFY A GENDER FOR THESE NOUNS: " +
         nounsWithoutGender.map((item) => item[0]).join(", ")

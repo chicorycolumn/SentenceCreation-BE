@@ -251,7 +251,7 @@ exports.formatFeatureValue = (featureKey, featureValue, note) => {
       }
     }
   }
-  // console.log("wpmn POL formatFeatureValue returns featureValue as ", featureValue);
+
   return [featureValue];
 };
 

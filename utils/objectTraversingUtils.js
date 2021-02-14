@@ -402,19 +402,10 @@ exports.findMatchingLemmaObjectThenWord = (
     );
   }
 
-  console.log("++++++");
-  console.log("++++++");
-  console.log("ecse ot:findMatchingLemmaObjectThenWord selectedFormsArray");
-  console.log(selectedFormsArray);
-  console.log("++++++");
-  console.log("++++++");
   console.log(
-    selectedFormsArray.forEach((item) => {
-      console.log("qfkf ot:findMatchingLemmaObjectThenWord", item);
-    })
+    "ecse ot:findMatchingLemmaObjectThenWord selectedFormsArray",
+    selectedFormsArray
   );
-  console.log("++++++");
-  console.log("++++++");
 
   if (selectedFormsArray.length) {
     selectedFormsArray.forEach((selectedFormObject) => {

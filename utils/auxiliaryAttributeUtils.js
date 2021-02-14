@@ -119,10 +119,12 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
       );
 
       if (!synhomographData) {
-        console.log("[1;35m " + `xhqr addClarifiers No synhomographData` + "[0m");
+        console.log("[1;35m " + `uhqr addClarifiers No synhomographData` + "[0m");
       } else {
-        console.log("[1;35m " + `xhqr addClarifiers Yes synhomographData` + "[0m");
-        console.log("synhomDataUnits", synhomographData.synhomographs);
+        console.log(
+          "[1;35m " + `uhqr addClarifiers Yes synhomographData.synhomographs` + "[0m",
+          synhomographData.synhomographs
+        );
       }
 
       if (synhomographData) {
@@ -350,16 +352,7 @@ exports.addSpecifiers = (
   questionOutputArr,
   languagesObj
 ) => {
-  console.log("-----------------------");
-  console.log("-----------------------");
-  console.log("-----------------------");
-  console.log("-----------------------");
-  console.log("-----------------------");
-  console.log("----addSpecifiers------");
-  console.log("-----------------------");
-  console.log("-----------------------");
-  console.log("-----------------------");
-  console.log("-----------------------");
+  console.log("[1;30m " + `----addSpecifiers------` + "[0m");
 
   //STEP ZERO: Getting materials
 
@@ -536,16 +529,7 @@ exports.addSpecifiers = (
     });
   }
 
-  console.log("-----------------------");
-  console.log("-----------------------");
-  console.log("-----------------------");
-  console.log("-----------------------");
-  console.log("-----------------------");
-  console.log("----addSpecifiers------");
-  console.log("---------END-----------");
-  console.log("-----------------------");
-  console.log("-----------------------");
-  console.log("-----------------------");
+  console.log("[1;30m " + `----/addSpecifiers------` + "[0m");
 
   function getMaterialsToAddSpecifiers(
     answerChunk,

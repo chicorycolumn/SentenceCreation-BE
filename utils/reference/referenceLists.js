@@ -122,18 +122,25 @@ exports.structureChunkFeatures = {
     form: { expectedTypeOnStCh: "array" },
     chunkId: { expectedTypeOnStCh: "string" },
     // wordtype: { expectedTypeOnStCh: "string", possibleValues: ["noun", "adjective"] },
-    agreeWith: { expectedTypeOnStCh: "string" },
+    agreeWith: {
+      expectedTypeOnStCh: "string",
+      possibleValueMustBeExistingChunkId: true,
+    },
     connectedTo: {
       expectedTypeOnStCh: "string",
+      possibleValueMustBeExistingChunkId: true,
     },
     postHocAgreeWithPrimary: {
       expectedTypeOnStCh: "string",
+      possibleValueMustBeExistingChunkId: true,
     },
     postHocAgreeWithSecondary: {
       expectedTypeOnStCh: "string",
+      possibleValueMustBeExistingChunkId: true,
     },
     postHocAgreeWithTertiary: {
       expectedTypeOnStCh: "string",
+      possibleValueMustBeExistingChunkId: true,
     },
     value: { expectedTypeOnStCh: "string" },
     //
@@ -230,20 +237,24 @@ exports.structureChunkFeatures = {
     form: { expectedTypeOnStCh: "array" },
     chunkId: { expectedTypeOnStCh: "string" },
     // wordtype: { expectedTypeOnStCh: "string", possibleValues: ["noun", "adjective"] },
-    agreeWith: { expectedTypeOnStCh: "string" },
+    agreeWith: {
+      expectedTypeOnStCh: "string",
+      possibleValueMustBeExistingChunkId: true,
+    },
     connectedTo: {
       expectedTypeOnStCh: "string",
+      possibleValueMustBeExistingChunkId: true,
     },
     // postHocAgreeWithPrimary: {
-    //   expectedTypeOnStCh: "string",
+    //   expectedTypeOnStCh: "string",possibleValueMustBeExistingChunkId: true,
     //
     // },
     // postHocAgreeWithSecondary: {
-    //   expectedTypeOnStCh: "string",
+    //   expectedTypeOnStCh: "string",possibleValueMustBeExistingChunkId: true,
     //
     // },
     // postHocAgreeWithTertiary: {
-    //   expectedTypeOnStCh: "string",
+    //   expectedTypeOnStCh: "string",possibleValueMustBeExistingChunkId: true,
     //
     // },
     value: { expectedTypeOnStCh: "string" },

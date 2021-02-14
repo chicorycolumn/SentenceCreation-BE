@@ -4,7 +4,6 @@ const gpUtils = require("./generalPurposeUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 
 exports.selectRandom = (array) => {
-  // console.log("eveb selectRandom from", array);
   return array[Math.floor(Math.random() * array.length)];
 };
 
@@ -82,8 +81,6 @@ exports.copyAndCombineWordbanks = (wordbank1, wordbank2) => {
   let wordbank2Copy = gpUtils.copyWithoutReference(wordbank2);
 
   Object.keys(wordbank1Copy).forEach((key) => {
-    console.log("[1;35m " + `vaoi gp:copyAndCombineWordbanks key: ${key}` + "[0m");
-
     if (!wordbank2Copy[key]) {
       console.log(
         "[1;31m " +
@@ -406,7 +403,7 @@ exports.getWordtypeFromLemmaObject = (lObj) => {
 
   if (!Object.keys(wordtypeRef).includes(wordtypeShorthand)) {
     gpUtils.throw(
-      `hshc #ERR -----------------> getWordtypeFromLemmaObject for requested ${wordtypeShorthand}`
+      `hshc #ERR -----------------> getWordtypeFromLemmaObject for requested ${lObj.id}`
     );
   }
 
@@ -419,7 +416,7 @@ exports.getWordtypeFromStructureChunk = (stCh) => {
 
   if (!Object.keys(wordtypeRef).includes(wordtypeShorthand)) {
     gpUtils.throw(
-      `bsov #ERR -----------------> getWordtypeFromStructureChunk for requested ${wordtypeShorthand}`
+      `bsov #ERR getWordtypeFromStructureChunk: wordtypeShorthand "${stCh.chunkId}" had no translated wordtype.`
     );
   }
 

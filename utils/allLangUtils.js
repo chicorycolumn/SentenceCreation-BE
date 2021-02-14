@@ -360,8 +360,6 @@ exports.convertMetaFeatures = (sourceObjectArray, currentLanguage, objType) => {
           let currentValueArr = sourceObject[featureKey];
           let newValueArr = [];
 
-          // console.log("nkzk ALL convertMetaFeatures", objType, { currentValueArr });
-
           currentValueArr.forEach((value) => {
             if (/_/.test(value)) {
               console.log(

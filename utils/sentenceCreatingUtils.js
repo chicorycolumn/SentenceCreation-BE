@@ -627,11 +627,10 @@ exports.selectWordVersions = (
       selectedLemmaObject,
     } = outputUnit;
 
-    console.log("nilu selectWordVersions--------------");
-    console.log("nilu selectWordVersions selectedWord", selectedWord);
-    console.log("nilu selectWordVersions structureChunk", structureChunk);
-    console.log("nilu selectWordVersions drillPath", drillPath);
-    console.log("/----------------");
+    console.log("[1;30m " + `nilu selectWordVersions----------------` + "[0m");
+    console.log("[1;30m " + `selectedWord` + "[0m", selectedWord);
+    console.log("[1;30m " + `drillPath` + "[0m", drillPath);
+    console.log("[1;30m " + `/nilu----------------` + "[0m");
 
     if (typeof selectedWord === "string") {
       pushSelectedWordToArray(
