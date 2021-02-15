@@ -592,17 +592,30 @@ exports.buildSentenceString = (
   }
 
   outputArrays.forEach((outputArr) => {
-    let finalSelectedWordsArr = scUtils.selectWordVersions(
+    let arrOfFinalSelectedWordsArr = scUtils.selectWordVersions(
       outputArr,
       currentLanguage,
       multipleMode
     );
 
-    let producedSentence = gpUtils.capitaliseFirst(
-      finalSelectedWordsArr.join(" ") + "."
-    );
+    if (!multipleMode && arrOfFinalSelectedWordsArr.length > 1) {
+      console.log(
+        "[1;31m " +
+          `twwe buildSentenceString NB: Randomly selecting one for question sentence.` +
+          "[0m"
+      );
+      arrOfFinalSelectedWordsArr = gpUtils.selectRandom(
+        arrOfFinalSelectedWordsArr
+      );
+    }
 
-    producedSentences.push(producedSentence);
+    arrOfFinalSelectedWordsArr.forEach((finalSelectedWordsArr) => {
+      let producedSentence = gpUtils.capitaliseFirst(
+        finalSelectedWordsArr.join(" ") + "."
+      );
+
+      producedSentences.push(producedSentence);
+    });
   });
 
   return producedSentences;
@@ -633,21 +646,16 @@ exports.selectWordVersions = (
     console.log("[1;30m " + `/nilu----------------` + "[0m");
 
     if (typeof selectedWord === "string") {
-      pushSelectedWordToArray(
-        "string",
-        selectedWord,
-        selectedWordsArr,
-        multipleMode
-      );
+      pushSelectedWordToArray("string", selectedWord, selectedWordsArr);
       return;
     }
 
     if (gpUtils.isTerminusObject(selectedWord)) {
-      //Epsilon: This is where we need to detect things...
-
       //Move to engUtils.selectWordVersions()
       if (currentLanguage === "ENG") {
+        // >>>
         // >>> Indefinite Article
+        // >>>
         if (
           structureChunk.wordtype === "article" &&
           structureChunk.form.includes("indefinite")
@@ -673,16 +681,14 @@ exports.selectWordVersions = (
             pushSelectedWordToArray(
               "protective",
               selectedWord,
-              selectedWordsArr,
-              multipleMode
+              selectedWordsArr
             );
             return;
           } else {
             pushSelectedWordToArray(
               "nonprotective",
               selectedWord,
-              selectedWordsArr,
-              multipleMode
+              selectedWordsArr
             );
             return;
           }
@@ -694,7 +700,9 @@ exports.selectWordVersions = (
         if (
           gpUtils.getWordtypeFromLemmaObject(selectedLemmaObject) === "pronoun"
         ) {
-          // >>> Post preposition pronoun
+          // >>>
+          // >>> Pronoun: post-prepositional
+          // >>>
           if (
             previousOutputUnit &&
             gpUtils.getWordtypeFromLemmaObject(
@@ -704,16 +712,36 @@ exports.selectWordVersions = (
             pushSelectedWordToArray(
               "postPreposition",
               selectedWord,
-              selectedWordsArr,
-              multipleMode
+              selectedWordsArr
             );
             return;
           } else {
+            // >>>
+            // >>> Pronoun: stressed or unstressed
+            // >>>
+
+            let combinedSelectedWordsArr = [];
+
+            if (multipleMode) {
+              combinedSelectedWordsArr = [
+                ...combinedSelectedWordsArr,
+                ...selectedWord.unstressed,
+              ];
+              combinedSelectedWordsArr = [
+                ...combinedSelectedWordsArr,
+                ...selectedWord.stressed,
+              ];
+            } else {
+              combinedSelectedWordsArr = [
+                ...combinedSelectedWordsArr,
+                ...selectedWord.unstressed,
+              ];
+            }
+
             pushSelectedWordToArray(
-              "normal", //Epsilon: Changed to unstressed.
-              selectedWord,
-              selectedWordsArr,
-              multipleMode
+              "array",
+              combinedSelectedWordsArr,
+              selectedWordsArr
             );
             return;
           }
@@ -741,27 +769,20 @@ exports.selectWordVersions = (
             pushSelectedWordToArray(
               "protective",
               selectedWord,
-              selectedWordsArr,
-              multipleMode
+              selectedWordsArr
             );
             return;
           } else {
             pushSelectedWordToArray(
               "nonprotective",
               selectedWord,
-              selectedWordsArr,
-              multipleMode
+              selectedWordsArr
             );
             return;
           }
         }
 
-        pushSelectedWordToArray(
-          "normal",
-          selectedWord,
-          selectedWordsArr,
-          multipleMode
-        );
+        pushSelectedWordToArray("normal", selectedWord, selectedWordsArr);
       }
     } else {
       gpUtils.throw(
@@ -769,12 +790,7 @@ exports.selectWordVersions = (
       );
     }
 
-    function pushSelectedWordToArray(
-      key,
-      selectedWord,
-      selectedWordsArr,
-      multipleMode
-    ) {
+    function pushSelectedWordToArray(key, selectedWord, selectedWordsArr) {
       console.log(
         "[1;30m " + `esbq pushSelectedWordToArray-----------------with args:` + "[0m"
       );
@@ -782,10 +798,17 @@ exports.selectWordVersions = (
         key,
         selectedWord,
         selectedWordsArr,
-        multipleMode,
       });
 
       if (key === "string") {
+        console.log(
+          "[1;30m " + `uufy pushSelectedWordToArray Pushing ${selectedWord}` + "[0m"
+        );
+        selectedWordsArr.push([selectedWord]);
+        return;
+      }
+
+      if (key === "array") {
         console.log(
           "[1;30m " + `uufy pushSelectedWordToArray Pushing ${selectedWord}` + "[0m"
         );
@@ -809,20 +832,10 @@ exports.selectWordVersions = (
         );
       }
 
-      if (selectedWord[key].length > 1) {
-        console.log("cnva selectWordVersions", {
-          selectedWord,
-          "selectedWord[key]": selectedWord[key],
-        });
-        gpUtils.throw(
-          "cnva selectWordVersions Multiple values inside tobj. What should I do?"
-        );
-      }
-
-      let value = selectedWord[key][0];
-
-      console.log("[1;30m " + `oqij selectWordVersions Pushing ${value}` + "[0m");
-      selectedWordsArr.push(value);
+      console.log(
+        "[1;30m " + `oqij selectWordVersions Pushing arr ${selectedWord[key]}` + "[0m"
+      );
+      selectedWordsArr.push(selectedWord[key]);
     }
 
     console.log("oadb selectWordVersions", { selectedWord });
@@ -831,7 +844,16 @@ exports.selectWordVersions = (
     );
   });
 
-  return selectedWordsArr;
+  console.log("hjoz selectWordVersions selectedWordsArr", selectedWordsArr);
+
+  let arrOfSelectedWordsArr = gpUtils.arrayExploder(selectedWordsArr);
+
+  console.log(
+    "hjoz selectWordVersions arrOfSelectedWordsArr",
+    arrOfSelectedWordsArr
+  );
+
+  return arrOfSelectedWordsArr;
 };
 
 exports.conformAnswerStructureToQuestionStructure = (

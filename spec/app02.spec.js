@@ -554,11 +554,17 @@ describe("/api", () => {
           let ref = [
             {
               ENG: "My father gave me a book.",
-              POL: ["Mój ojciec dał mi książkę."],
+              POL: [
+                "Mój ojciec dał mi książkę.",
+                "Mój ojciec dał mnie książkę.",
+              ],
             },
             {
               ENG: "My mother gave me a book.",
-              POL: ["Moja matka dała mi książkę."],
+              POL: [
+                "Moja matka dała mi książkę.",
+                "Moja matka dała mnie książkę.",
+              ],
             },
             {
               ENG: "Our father gave us a book.",
@@ -702,11 +708,31 @@ describe("/api", () => {
           let ref = [
             {
               ENG: "My father gave me his book.",
-              POL: ["Mój ojciec dał mi jego książkę."],
+              POL: [
+                "Mój ojciec dał mi jego książkę.",
+                "Mój ojciec dał mnie jego książkę.",
+              ],
             },
             {
               ENG: "My mother gave me her book.",
-              POL: ["Moja matka dała mi jej książkę."],
+              POL: [
+                "Moja matka dała mi jej książkę.",
+                "Moja matka dała mnie jej książkę.",
+              ],
+            },
+            {
+              ENG: "My fathers gave me their book.",
+              POL: [
+                "Moi ojcowie dali mi ich książkę.",
+                "Moi ojcowie dali mnie ich książkę.",
+              ],
+            },
+            {
+              ENG: "My mothers gave me their book.",
+              POL: [
+                "Moje matki dały mi ich książkę.",
+                "Moje matki dały mnie ich książkę.",
+              ],
             },
             {
               ENG: "Our father gave us his book.",
@@ -715,14 +741,6 @@ describe("/api", () => {
             {
               ENG: "Our mother gave us her book.",
               POL: ["Nasza matka dała nam jej książkę."],
-            },
-            {
-              ENG: "My fathers gave me their book.",
-              POL: ["Moi ojcowie dali mi ich książkę."],
-            },
-            {
-              ENG: "My mothers gave me their book.",
-              POL: ["Moje matki dały mi ich książkę."],
             },
             {
               ENG: "Our fathers gave us their book.",
@@ -845,23 +863,38 @@ describe("/api", () => {
           let ref = [
             {
               ENG: "The doctor (female) gave me her book.",
-              POL: ["Lekarka dała mi jej książkę."],
+              POL: [
+                "Lekarka dała mi jej książkę.",
+                "Lekarka dała mnie jej książkę.",
+              ],
             },
             {
               ENG: "The doctor (male) gave me his book.",
-              POL: ["Lekarz dał mi jego książkę."],
+              POL: [
+                "Lekarz dał mi jego książkę.",
+                "Lekarz dał mnie jego książkę.",
+              ],
             },
             {
               ENG: "The doctors (mixed) gave me their book.",
-              POL: ["Lekarze dali mi ich książkę."],
+              POL: [
+                "Lekarze dali mi ich książkę.",
+                "Lekarze dali mnie ich książkę.",
+              ],
             },
             {
               ENG: "The doctors (males) gave me their book.",
-              POL: ["Lekarze dali mi ich książkę."],
+              POL: [
+                "Lekarze dali mi ich książkę.",
+                "Lekarze dali mnie ich książkę.",
+              ],
             },
             {
               ENG: "The doctors (females) gave me their book.",
-              POL: ["Lekarki dały mi ich książkę."],
+              POL: [
+                "Lekarki dały mi ich książkę.",
+                "Lekarki dały mnie ich książkę.",
+              ],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -889,23 +922,38 @@ describe("/api", () => {
           let ref = [
             {
               ENG: "The doctor (female) gave me her book.",
-              POL: ["Lekarka dała mi jej książkę."],
+              POL: [
+                "Lekarka dała mi jej książkę.",
+                "Lekarka dała mnie jej książkę.",
+              ],
             },
             {
               ENG: "The doctor (male) gave me his book.",
-              POL: ["Lekarz dał mi jego książkę."],
+              POL: [
+                "Lekarz dał mi jego książkę.",
+                "Lekarz dał mnie jego książkę.",
+              ],
             },
             {
               ENG: "The doctors (mixed) gave me their book.",
-              POL: ["Lekarze dali mi ich książkę."],
+              POL: [
+                "Lekarze dali mi ich książkę.",
+                "Lekarze dali mnie ich książkę.",
+              ],
             },
             {
               ENG: "The doctors (males) gave me their book.",
-              POL: ["Lekarze dali mi ich książkę."],
+              POL: [
+                "Lekarze dali mi ich książkę.",
+                "Lekarze dali mnie ich książkę.",
+              ],
             },
             {
               ENG: "The doctors (females) gave me their book.",
-              POL: ["Lekarki dały mi ich książkę."],
+              POL: [
+                "Lekarki dały mi ich książkę.",
+                "Lekarki dały mnie ich książkę.",
+              ],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -987,19 +1035,31 @@ describe("/api", () => {
           let ref = [
             {
               ENG: "The woman was reading me a book.",
-              POL: ["Kobieta czytała mi książkę."],
+              POL: [
+                "Kobieta czytała mi książkę.",
+                "Kobieta czytała mnie książkę.",
+              ],
             },
             {
               ENG: "The women were reading me a book.",
-              POL: ["Kobiety czytały mi książkę."],
+              POL: [
+                "Kobiety czytały mi książkę.",
+                "Kobiety czytały mnie książkę.",
+              ],
             },
             {
               ENG: "The woman was reading a book to me.",
-              POL: ["Kobieta czytała mi książkę."],
+              POL: [
+                "Kobieta czytała mi książkę.",
+                "Kobieta czytała mnie książkę.",
+              ],
             },
             {
               ENG: "The women were reading a book to me.",
-              POL: ["Kobiety czytały mi książkę."],
+              POL: [
+                "Kobiety czytały mi książkę.",
+                "Kobiety czytały mnie książkę.",
+              ],
             },
             {
               ENG: "The woman was reading us a book.",
@@ -1103,19 +1163,25 @@ describe("/api", () => {
           let ref = [
             {
               ENG: "Father gave me apples.",
-              POL: ["Ojciec dał mi jabłka."],
+              POL: ["Ojciec dał mi jabłka.", "Ojciec dał mnie jabłka."],
             },
             {
               ENG: "Father gave me books.",
-              POL: ["Ojciec dał mi książki."],
+              POL: ["Ojciec dał mi książki.", "Ojciec dał mnie książki."],
             },
             {
               ENG: "Father gave me onions.",
-              POL: ["Ojciec dał mi cebule."],
+              POL: ["Ojciec dał mi cebule.", "Ojciec dał mnie cebule."],
             },
             {
               ENG: "Father gave me mirrors.",
-              POL: ["Ojciec dał mi zwierciadła.", "Ojciec dał mi lustra."],
+              POL: [
+                "Ojciec dał mi zwierciadła.",
+                "Ojciec dał mi lustra.",
+
+                "Ojciec dał mnie zwierciadła.",
+                "Ojciec dał mnie lustra.",
+              ],
             },
             {
               ENG: "Father gave us apples.",
@@ -1135,19 +1201,24 @@ describe("/api", () => {
             },
             {
               ENG: "Mother gave me apples.",
-              POL: ["Matka dała mi jabłka."],
+              POL: ["Matka dała mi jabłka.", "Matka dała mnie jabłka."],
             },
             {
               ENG: "Mother gave me books.",
-              POL: ["Matka dała mi książki."],
+              POL: ["Matka dała mi książki.", "Matka dała mnie książki."],
             },
             {
               ENG: "Mother gave me onions.",
-              POL: ["Matka dała mi cebule."],
+              POL: ["Matka dała mi cebule.", "Matka dała mnie cebule."],
             },
             {
               ENG: "Mother gave me mirrors.",
-              POL: ["Matka dała mi zwierciadła.", "Matka dała mi lustra."],
+              POL: [
+                "Matka dała mi zwierciadła.",
+                "Matka dała mi lustra.",
+                "Matka dała mnie zwierciadła.",
+                "Matka dała mnie lustra.",
+              ],
             },
             {
               ENG: "Mother gave us apples.",
@@ -1543,8 +1614,7 @@ describe("/api", () => {
           );
         });
     });
-    //nownow.
-    xit("#pal13B-04a GET 200 YES: ENG to POL. Another more interesting sentence with Pronouns. Terminal object used.", () => {
+    it("#pal13B-04a GET 200 YES: ENG to POL. Another more interesting sentence with Pronouns. Terminal object used.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1555,6 +1625,7 @@ describe("/api", () => {
           answerLanguage,
           useDummy: true,
           // shouldThrowAtMidpoint: true,
+          shouldOmitStChValidation: true,
           sentenceFormulaSymbol: "dummy57",
         })
         .expect(200)
