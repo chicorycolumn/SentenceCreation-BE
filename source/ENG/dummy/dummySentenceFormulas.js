@@ -1130,13 +1130,17 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "art-1",
         wordtype: "article",
-        form: ["both"],
+        form: ["definite", "indefinite"],
+        importantFeatures: ["form"],
+        //Specifying Form as an important feature, because both Answer sentences must be created,
+        //so we mustn't allow the both Form options above to be overwritten by Question formula.
         connectedTo: "nou-1",
       },
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        orTags: ["edible", "edible0"],
+        // orTags: ["edible", "edible0"],
+        specificLemmas: ["woman"],
         number: ["singular"],
       },
     ],

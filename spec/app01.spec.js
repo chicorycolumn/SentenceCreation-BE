@@ -1468,23 +1468,13 @@ describe("/api", () => {
         testOnce(),
         testOnce(),
         testOnce(),
-        testOnce(),
-        testOnce(),
-        testOnce(),
-        testOnce(),
-        testOnce(),
-        testOnce(),
-        testOnce(),
-        testOnce(),
-        testOnce(),
-        testOnce(),
       ]).then((res) => {
         let masculineProportion =
           res.filter((str) => str === "Pisałem.").length / res.length;
         let feminineProportion =
           res.filter((str) => str === "Pisałam.").length / res.length;
 
-        expect(res.length).to.equal(50);
+        expect(res.length).to.equal(40);
 
         console.log({ masculineProportion, feminineProportion });
 
@@ -1506,6 +1496,7 @@ describe("/api", () => {
             questionLanguage,
             answerLanguage,
             sentenceFormulaSymbol: "dummy31",
+            shouldOmitStChValidation: true,
           })
           .expect(200)
           .then((res) => {

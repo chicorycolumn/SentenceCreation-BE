@@ -203,7 +203,7 @@ describe("/api", () => {
           );
         });
     });
-    xit("#pal15-02a GET 200 YES: POL to ENG. Either article.", () => {
+    it("#pal15-02a GET 200 YES: POL to ENG. Either article.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -231,9 +231,9 @@ describe("/api", () => {
           );
         });
     });
-    xit("#pal15-02b GET 200 YES: ENG to POL. Either article.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
+    it("#pal15-02b GET 200 YES: ENG to POL. Either article.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
@@ -248,6 +248,10 @@ describe("/api", () => {
           let ref = [
             {
               ENG: "A woman.",
+              POL: ["Kobieta."],
+            },
+            {
+              ENG: "The woman.",
               POL: ["Kobieta."],
             },
           ];

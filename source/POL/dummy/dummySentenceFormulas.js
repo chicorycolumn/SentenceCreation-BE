@@ -1758,7 +1758,8 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        orTags: ["edible", "edible0"],
+        // orTags: ["edible", "edible0"],
+        specificLemmas: ["kobieta"],
         number: ["singular"],
       },
     ],

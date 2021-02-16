@@ -495,12 +495,13 @@ exports.findMatchingLemmaObjectThenWord = (
 
     gpUtils.consoleLogPW("##If-PW", structureChunk, multipleMode);
 
-    //Check for forced multiple.
+    ///////////////////INTERIM STEP: Check for forced multiple.
 
     let forcedMultipleRefOuter =
       refObj.metaInflectorsToForceMultiple[currentLanguage][
         structureChunk.wordtype
       ];
+
     let forceMultipleStructureChunks = [];
 
     console.log("nhiq ot:findMatchingLemmaObjectThenWord", {
@@ -564,7 +565,8 @@ exports.findMatchingLemmaObjectThenWord = (
       );
       gpUtils.throw();
       //
-      //Nownow: Put the mutlipleMode clase below into its own fxn, and call that fxn here, for every stCh in forcedstcharr.
+      //Nownow: Put the mutlipleMode clause below into its own fxn, and call that fxn here,
+      //for every stCh in forcedstcharr.
       //
       temporaryMultipleMode = false;
     } else if (multipleMode) {
