@@ -96,7 +96,7 @@ exports.findMatchingLemmaObjectThenWord = (
     if (!matches.length) {
       console.log(
         "[1;31m " +
-          `wvjy ot:findMatchingLemmaObjectThenWord No matches after Get matches by Tags.` +
+          `wvjy ot:findMatchingLemmaObjectThenWord No matches after Get matches by Tags. Eg you may have put multiple unfulfillable andTags?` +
           "[0m"
       );
     }
@@ -495,81 +495,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
     gpUtils.consoleLogPW("##If-PW", structureChunk, multipleMode);
 
-    ///////////////////INTERIM STEP: Check for forced multiple.
-
-    let forcedMultipleRefOuter =
-      refObj.metaInflectorsToForceMultiple[currentLanguage][
-        structureChunk.wordtype
-      ];
-
-    let forceMultipleStructureChunks = [];
-
-    console.log("nhiq ot:findMatchingLemmaObjectThenWord", {
-      forcedMultipleRefOuter,
-      currentLanguage,
-      "structureChunk.wordtype": structureChunk.wordtype,
-    });
-
-    if (forcedMultipleRefOuter) {
-      Object.keys(forcedMultipleRefOuter).forEach((featureKey) => {
-        console.log("lsda ot:findMatchingLemmaObjectThenWord", { featureKey });
-
-        let forcedMultipleRef = forcedMultipleRefOuter[featureKey];
-
-        Object.keys(forcedMultipleRef).forEach((metaInflector) => {
-          console.log("dxkg ot:findMatchingLemmaObjectThenWord", {
-            metaInflector,
-          });
-
-          if (structureChunk[featureKey].includes(metaInflector)) {
-            if (structureChunk[featureKey].length > 1) {
-              gpUtils.throw(
-                `nvth findMatching stCh intends to use metaInflector to force multiple, specifically ${metaInflector} as ${featureKey}, but the arr containing the metaInflector had multiple values.`
-              );
-            }
-            let translatedValues = forcedMultipleRef[metaInflector];
-
-            console.log("giww ot:findMatchingLemmaObjectThenWord", {
-              translatedValues,
-            });
-
-            translatedValues.forEach((translatedValue, index) => {
-              if (!index) {
-                structureChunk[featureKey] = [translatedValue];
-                forceMultipleStructureChunks.push(structureChunk);
-                return;
-              }
-
-              let structureChunkCopy = gpUtils.copyWithoutReference(
-                structureChunk
-              );
-
-              structureChunkCopy[featureKey] = [translatedValue];
-              forceMultipleStructureChunks.push(structureChunkCopy);
-            });
-
-            temporaryMultipleMode = true;
-
-            console.log(
-              "rbfj ot:findMatchingLemmaObjectThenWord forceMultipleStructureChunks",
-              forceMultipleStructureChunks
-            );
-          }
-        });
-      });
-    }
-    if (temporaryMultipleMode) {
-      console.log(
-        "vfir ot:findMatchingLemmaObjectThenWord forceMultipleStructureChunks",
-        forceMultipleStructureChunks
-      );
-      gpUtils.throw();
-      //
-      //Nownow: Put the mutlipleMode clause below into its own fxn, and call that fxn here,
-      //for every stCh in forcedstcharr.
-      //
-      temporaryMultipleMode = false;
-    } else if (multipleMode) {
+    if (multipleMode) {
       console.log("iksf ot:findMatchingLemmaObjectThenWord");
       matchesCopy.forEach((selectedLemmaObject) => {
         console.log(

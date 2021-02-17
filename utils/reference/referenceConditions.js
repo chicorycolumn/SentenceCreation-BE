@@ -73,18 +73,6 @@ exports.conditionsOnWhichToBlockAnnotations = {
   },
 };
 
-exports.metaInflectorsToForceMultiple = {
-  ENG: {
-    article: {
-      form: {
-        both: ["definite", "indefinite"],
-        all: ["definite", "indefinite", "zero"],
-      },
-    },
-  },
-  POL: {},
-};
-
 exports.postHocDependentChunkWordtypes = {
   ENG: [],
   POL: [

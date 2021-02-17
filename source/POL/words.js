@@ -421,6 +421,36 @@ exports.wordsBank = {
     },
     {
       //links
+      translations: { ENG: ["rat"], POL: ["szczur"] },
+      tags: ["concrete", "animal", "animate", "pet"],
+      //selectors
+      lemma: "szczur",
+      id: "pol-nou-019",
+      gender: "m2",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "szczur",
+          gen: "szczura",
+          dat: "szczurowi",
+          acc: "szczura",
+          ins: "szczurem",
+          loc: "szczurze",
+        },
+        plural: {
+          nom: "szczury",
+          gen: "szczurów",
+          dat: "szczurom",
+          acc: "szczury",
+          ins: "szczurami",
+          loc: "szczurach",
+        },
+      },
+    },
+    {
+      //links
       translations: { ENG: ["doctor"], POL: ["lekarz"] },
       tags: ["concrete", "animate", "person", "personTest2", "job"],
       //selectors
@@ -2528,11 +2558,13 @@ exports.wordsBank = {
 
       //inflections
       inflections: {
-        isTerminus: true,
-        processOnlyAtEnd: true,
-        nonprotective: ["z"],
-        protective: ["ze"],
-        protectIfSubsequentStartsWithTheseRegexes: ["mn"],
+        onlyForm: {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["z"],
+          protective: ["ze"],
+          protectIfSubsequentStartsWithTheseRegexes: ["mn", "szcz"],
+        },
       },
     },
   ],

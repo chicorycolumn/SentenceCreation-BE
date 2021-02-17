@@ -1729,12 +1729,12 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        andTags: ["edible", "edible0"],
+        orTags: ["edible", "edible0"],
         gcase: ["ins"],
-        number: [],
+        number: ["singular"],
       },
     ],
-    primaryOrders: [],
+    primaryOrders: [["pre-1", "nou-1"]],
   },
   {
     sentenceFormulaSymbol: "dummy56",

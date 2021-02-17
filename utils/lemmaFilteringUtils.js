@@ -262,6 +262,14 @@ exports.filterWithinSelectedLemmaObject = (
     requirementArrs.push([key, inflectionValueArr]);
   });
 
+  if (!requirementArrs.length) {
+    console.log("zyan filterWithin structureChunk", structureChunk);
+    console.log("zyan filterWithin inflectionChain", inflectionChain);
+    gpUtils.throw(
+      "zyan filterWithin requirementArrs ended with length 0, so the above fxn didn't do anything. I have console logged inflectionChain above, to help."
+    );
+  }
+
   let errorInDrilling = false;
   let outputUnitsWithDrillPaths = [];
   let source = lemmaObject.inflections;
@@ -271,7 +279,8 @@ exports.filterWithinSelectedLemmaObject = (
     requirementArrs,
     outputUnitsWithDrillPaths,
     null,
-    multipleMode
+    multipleMode,
+    "filterWithin" //deletable
   );
 
   if (!outputUnitsWithDrillPaths || !outputUnitsWithDrillPaths.length) {
@@ -636,8 +645,20 @@ exports.traverseAndRecordInflections = (
   reqArr,
   outputUnitsWithDrillPaths,
   outputUnitsWithDrillPathsMini,
-  multipleMode
+  multipleMode,
+  consoleLabel
 ) => {
+  console.log(
+    `gswg traverseAndRecordInflections called by "${consoleLabel}" reqArr`,
+    reqArr
+  );
+
+  if (!reqArr || !reqArr.length) {
+    gpUtils.throw(
+      `loii #ERR traverseAndRecordInflections reqArr bad: [${reqArr}]`
+    );
+  }
+
   let shouldConsoleLog = false;
 
   if (!outputUnitsWithDrillPathsMini) {
@@ -761,7 +782,8 @@ exports.traverseAndRecordInflections = (
         reqArr.slice(1),
         outputUnitsWithDrillPaths,
         outputUnitsWithDrillPathsMini,
-        multipleMode
+        multipleMode,
+        "traverseAndRecordInflections" // deletable
       );
 
       outputUnitsWithDrillPathsMini.pop();

@@ -626,7 +626,7 @@ exports.selectWordVersions = (
   currentLanguage,
   multipleMode
 ) => {
-  console.log("ofoc selectWordVersions orderedOutputArr");
+  console.log("ofoc selectWordVersions orderedOutputArr", orderedOutputArr);
 
   let selectedWordsArr = [];
 
@@ -640,10 +640,10 @@ exports.selectWordVersions = (
       selectedLemmaObject,
     } = outputUnit;
 
-    console.log("[1;30m " + `nilu selectWordVersions----------------` + "[0m");
-    console.log("[1;30m " + `selectedWord` + "[0m", selectedWord);
-    console.log("[1;30m " + `drillPath` + "[0m", drillPath);
-    console.log("[1;30m " + `/nilu----------------` + "[0m");
+    console.log("[1;33m " + `nilu selectWordVersions----------------` + "[0m");
+    console.log("[1;33m " + `selectedWord` + "[0m", selectedWord);
+    console.log("[1;33m " + `drillPath` + "[0m", drillPath);
+    console.log("[1;33m " + `/nilu----------------` + "[0m");
 
     if (typeof selectedWord === "string") {
       pushSelectedWordToArray("string", selectedWord, selectedWordsArr);

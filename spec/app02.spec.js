@@ -263,7 +263,7 @@ describe("/api", () => {
           );
         });
     });
-    xit("#pal15-03a GET 200 YES: POL to ENG. Preposition 'with'. Articles for singular.", () => {
+    it("#pal15-03a GET 200 YES: POL to ENG. Preposition 'with'. Articles for singular.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -299,7 +299,39 @@ describe("/api", () => {
           );
         });
     });
-    xit("#pal15-03b GET 200 YES: POL to ENG. Preposition 'with'. Articles for plural.", () => {
+    xit("#pal15-03b GET 200 YES: POL to ENG. Preposition 'with'. Articles for singular. Checking POL protective preposition form.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy55a",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["With a sheep.", "With the sheep."],
+              POL: "Z owcą.",
+            },
+            {
+              ENG: ["With a rat.", "With the rat."],
+              POL: "Ze szczurem.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    xit("#pal15-03c GET 200 YES: POL to ENG. Preposition 'with'. Articles for plural.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 

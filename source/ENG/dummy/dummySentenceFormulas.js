@@ -1089,18 +1089,22 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pre-1",
-        wordtype: "preposition",
         specificLemmas: ["with"],
         connectedTo: "nou-1",
       },
       {
+        chunkId: "art-1",
+        form: ["definite", "indefinite"],
+        importantFeatures: ["form"],
+        connectedTo: "nou-1",
+      },
+      {
         chunkId: "nou-1",
-        wordtype: "noun",
-        andTags: ["edible", "edible0"],
+        orTags: ["edible", "edible0"],
         number: ["singular"],
       },
     ],
-    primaryOrders: [],
+    primaryOrders: [["pre-1", "art-1", "nou-1"]],
   },
   {
     sentenceFormulaSymbol: "dummy56",

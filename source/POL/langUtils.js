@@ -6,17 +6,18 @@ const allLangUtils = require("../../utils/allLangUtils.js");
 
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   let shouldConsoleLog = false;
-  if (shouldConsoleLog) {
-    console.log(
-      "[1;35m " + "pmoe POL preprocessStructureChunks-------------------" + "[0m"
-    );
-  } else {
-    console.log("[1;35m " + `(pmoe POL preprocessStructureChunks)` + "[0m");
-  }
+
+  console.log(
+    "[1;35m " + "pmoe POL preprocessStructureChunks-------------------" + "[0m"
+  );
 
   sentenceStructure.forEach((structureChunk) => {
     if (structureChunk.wordtype === "fixed") {
       return;
+    }
+
+    if (structureChunk.wordtype === "preposition") {
+      structureChunk.form = ["onlyForm"];
     }
 
     if (shouldConsoleLog) {

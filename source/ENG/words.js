@@ -248,6 +248,28 @@ exports.wordsBank = {
     },
     {
       //links
+      translations: { ENG: ["rat"], POL: ["szczur"] },
+      tags: ["animate", "animal", "pet", "concrete"],
+      //selectors
+      lemma: "rat",
+      id: "eng-nou-016",
+
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "rat",
+          gen: "rat's",
+        },
+        plural: {
+          nom: "rats",
+          gen: "rats'",
+        },
+      },
+    },
+    {
+      //links
       translations: { ENG: ["doctor"], POL: ["lekarz", "lekarka"] },
       tags: ["concrete", "animate", "person", "personTest2", "job"],
       //selectors
@@ -615,7 +637,7 @@ exports.wordsBank = {
       //notes
 
       //inflections
-      inflections: "with",
+      inflections: { onlyForm: "with" },
     },
   ],
   articleSet: [

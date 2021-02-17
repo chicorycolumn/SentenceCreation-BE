@@ -55,6 +55,7 @@ exports.lemmaObjectFeatures = {
       verb: ["form", "tense", "person", "number", "gender"],
       pronoun: ["form", "person", "number", "gender", "gcase"],
       // article: NONE
+      preposition: ["form"],
     },
     inheritableInflectorKeys: {
       noun: ["number", "gcase"],
@@ -86,6 +87,7 @@ exports.lemmaObjectFeatures = {
       verb: ["form", "tense", "person", "number"],
       pronoun: ["form", "person", "number", "gender", "gcase"],
       article: ["form"],
+      preposition: ["form"],
     },
     inheritableInflectorKeys: {
       noun: ["number", "gcase"],
