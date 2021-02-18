@@ -642,6 +642,7 @@ exports.selectWordVersions = (
 
     console.log("[1;33m " + `nilu selectWordVersions----------------` + "[0m");
     console.log("[1;33m " + `selectedWord` + "[0m", selectedWord);
+    console.log("[1;33m " + `structureChunk` + "[0m", structureChunk);
     console.log("[1;33m " + `drillPath` + "[0m", drillPath);
     console.log("[1;33m " + `/nilu----------------` + "[0m");
 
@@ -666,10 +667,28 @@ exports.selectWordVersions = (
             );
           }
 
-          console.log(
-            "nbra selectWordVersions subsequentOutputUnit.selectedWord",
-            subsequentOutputUnit.selectedWord
-          );
+          console.log("nbra selectWordVersions", {
+            "subsequentOutputUnit.selectedWord":
+              subsequentOutputUnit.selectedWord,
+            "subsequentOutputUnit.structureChunk":
+              subsequentOutputUnit.structureChunk,
+          });
+
+          if (
+            subsequentOutputUnit.structureChunk.number &&
+            subsequentOutputUnit.structureChunk.number.includes("plural")
+          ) {
+            if (subsequentOutputUnit.structureChunk.number.length > 1) {
+              gpUtils.throw(
+                "pudk selectWordVersions #ERR subsequentOutputUnit.structureChunk.number had length over 1."
+              );
+            }
+            console.log(
+              "fzxm selectWordVersions skipping pushSelectedWordToArray as plural noun means no indefinite article."
+            );
+            return;
+          }
+
           if (
             !subsequentOutputUnit.selectedWord
               .surprisinglyStartsWithConsonantSound &&
@@ -757,10 +776,20 @@ exports.selectWordVersions = (
             );
           }
 
+          console.log(
+            "pxlz selectWordVersions test subsequentOutputUnit.selectedWord for following prefixes.",
+            {
+              "subsequentOutputUnit.selectedWord":
+                subsequentOutputUnit.selectedWord,
+            }
+          );
+
           if (
-            selectedLemmaObject.protectIfSubsequentStartsWithTheseRegexes &&
-            selectedLemmaObject.protectIfSubsequentStartsWithTheseRegexes.some(
+            selectedWord.protectIfSubsequentStartsWithTheseRegexes &&
+            selectedWord.protectIfSubsequentStartsWithTheseRegexes.some(
               (prefix) => {
+                console.log("spez selectWordVersions", { prefix });
+
                 let prefixRegex = RegExp("^" + prefix);
                 return prefixRegex.test(subsequentOutputUnit.selectedWord);
               }
@@ -792,13 +821,13 @@ exports.selectWordVersions = (
 
     function pushSelectedWordToArray(key, selectedWord, selectedWordsArr) {
       console.log(
-        "[1;30m " + `esbq pushSelectedWordToArray-----------------with args:` + "[0m"
+        "[1;30m " + `esbq pushSelectedWordToArray-----------------with args:` + "[0m",
+        {
+          key,
+          selectedWord,
+          selectedWordsArr,
+        }
       );
-      console.log("esbq pushSelectedWordToArray", {
-        key,
-        selectedWord,
-        selectedWordsArr,
-      });
 
       if (key === "string") {
         console.log(
@@ -829,6 +858,12 @@ exports.selectWordVersions = (
         });
         gpUtils.throw(
           "vcxx selectWordVersions Value inside tobj should have been array."
+        );
+      }
+
+      if (!selectedWord[key]) {
+        gpUtils.throw(
+          "ztgp selectWordVersions #ERR selectedWord[key] was falsy."
         );
       }
 

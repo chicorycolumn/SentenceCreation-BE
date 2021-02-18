@@ -227,7 +227,7 @@ exports.wordsBank = {
     {
       //links
       translations: { ENG: ["sheep"], POL: ["owca"] },
-      tags: ["animate", "animal", "farmyard", "concrete"],
+      tags: ["animate", "animal0", "farmyard", "concrete"],
       //selectors
       lemma: "sheep",
       id: "eng-nou-008",

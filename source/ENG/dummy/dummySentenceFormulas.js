@@ -1107,6 +1107,102 @@ exports.dummySentenceFormulasBank = [
     primaryOrders: [["pre-1", "art-1", "nou-1"]],
   },
   {
+    sentenceFormulaSymbol: "dummy55a",
+    sentenceFormulaId: "ENG-dummy55a",
+    translations: { POL: ["POL-dummy55a"] },
+    sentenceStructure: [
+      {
+        chunkId: "pre-1",
+        specificLemmas: ["with"],
+        connectedTo: "nou-1",
+      },
+      {
+        chunkId: "art-1",
+        form: ["definite", "indefinite"],
+        importantFeatures: ["form"],
+        connectedTo: "nou-1",
+      },
+      {
+        chunkId: "nou-1",
+        orTags: ["animal"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [["pre-1", "art-1", "nou-1"]],
+  },
+  {
+    sentenceFormulaSymbol: "dummy55b",
+    sentenceFormulaId: "ENG-dummy55b",
+    translations: { POL: ["POL-dummy55b"] },
+    sentenceStructure: [
+      {
+        chunkId: "pre-1",
+        specificLemmas: ["with"],
+        connectedTo: "nou-1",
+      },
+      {
+        chunkId: "art-1",
+        form: ["definite", "indefinite"],
+        importantFeatures: ["form"],
+        connectedTo: "nou-1",
+      },
+      {
+        chunkId: "nou-1",
+        orTags: ["animal"],
+        number: ["plural"],
+      },
+    ],
+    primaryOrders: [["pre-1", "art-1", "nou-1"]],
+  },
+  {
+    sentenceFormulaSymbol: "dummy55c",
+    sentenceFormulaId: "ENG-dummy55c",
+    translations: { POL: ["POL-dummy55c"] },
+    sentenceStructure: [
+      {
+        chunkId: "pre-1",
+        specificLemmas: ["with"],
+        connectedTo: "nou-1",
+      },
+      {
+        chunkId: "art-1",
+        form: ["definite", "indefinite"],
+        importantFeatures: ["form"],
+        connectedTo: "nou-1",
+      },
+      {
+        chunkId: "nou-1",
+        specificLemmas: ["sheep"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [["pre-1", "art-1", "nou-1"]],
+  },
+  {
+    sentenceFormulaSymbol: "dummy55d",
+    sentenceFormulaId: "ENG-dummy55d",
+    translations: { POL: ["POL-dummy55d"] },
+    sentenceStructure: [
+      {
+        chunkId: "pre-1",
+        specificLemmas: ["with"],
+        connectedTo: "nou-1",
+      },
+      {
+        chunkId: "art-1",
+        form: ["definite", "indefinite"],
+        importantFeatures: ["form"],
+        connectedTo: "nou-1",
+      },
+      {
+        chunkId: "nou-1",
+        specificLemmas: ["sheep"],
+        number: ["plural"],
+      },
+    ],
+    primaryOrders: [["pre-1", "art-1", "nou-1"]],
+  },
+  {
     sentenceFormulaSymbol: "dummy56",
     sentenceFormulaId: "ENG-dummy56",
     translations: { POL: ["POL-dummy56"] },

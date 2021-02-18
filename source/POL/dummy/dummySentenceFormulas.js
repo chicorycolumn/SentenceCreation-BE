@@ -1737,6 +1737,90 @@ exports.dummySentenceFormulasBank = [
     primaryOrders: [["pre-1", "nou-1"]],
   },
   {
+    sentenceFormulaSymbol: "dummy55a",
+    sentenceFormulaId: "POL-dummy55a",
+    translations: { ENG: ["ENG-dummy55a"] },
+    sentenceStructure: [
+      {
+        chunkId: "pre-1",
+        wordtype: "preposition",
+        specificLemmas: ["z"],
+        connectedTo: "nou-1",
+      },
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        orTags: ["animal"],
+        gcase: ["ins"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [["pre-1", "nou-1"]],
+  },
+  {
+    sentenceFormulaSymbol: "dummy55b",
+    sentenceFormulaId: "POL-dummy55b",
+    translations: { ENG: ["ENG-dummy55b"] },
+    sentenceStructure: [
+      {
+        chunkId: "pre-1",
+        wordtype: "preposition",
+        specificLemmas: ["z"],
+        connectedTo: "nou-1",
+      },
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        orTags: ["animal"],
+        gcase: ["ins"],
+        number: ["plural"],
+      },
+    ],
+    primaryOrders: [["pre-1", "nou-1"]],
+  },
+  {
+    sentenceFormulaSymbol: "dummy55c",
+    sentenceFormulaId: "POL-dummy55c",
+    translations: { ENG: ["ENG-dummy55c"] },
+    sentenceStructure: [
+      {
+        chunkId: "pre-1",
+        wordtype: "preposition",
+        specificLemmas: ["z"],
+        connectedTo: "nou-1",
+      },
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        specificLemmas: ["owca"],
+        gcase: ["ins"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [["pre-1", "nou-1"]],
+  },
+  {
+    sentenceFormulaSymbol: "dummy55d",
+    sentenceFormulaId: "POL-dummy55d",
+    translations: { ENG: ["ENG-dummy55d"] },
+    sentenceStructure: [
+      {
+        chunkId: "pre-1",
+        wordtype: "preposition",
+        specificLemmas: ["z"],
+        connectedTo: "nou-1",
+      },
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        specificLemmas: ["owca"],
+        gcase: ["ins"],
+        number: ["plural"],
+      },
+    ],
+    primaryOrders: [["pre-1", "nou-1"]],
+  },
+  {
     sentenceFormulaSymbol: "dummy56",
     sentenceFormulaId: "POL-dummy56",
     translations: { ENG: ["ENG-dummy56"] },

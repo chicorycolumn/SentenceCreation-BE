@@ -130,7 +130,7 @@ describe("/api", () => {
     });
   });
 
-  describe("/palette - Stage 15: Prepositions and Articles.", () => {
+  describe.only("/palette - Stage 15: Prepositions and Articles.", () => {
     it("#pal15-01a GET 200 YES: POL to ENG. Indefinite article.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
@@ -263,7 +263,295 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal15-03a GET 200 YES: POL to ENG. Preposition 'with'. Articles for singular.", () => {
+    it.only("#pal15-03a GET 200 YES: POL to ENG. Preposition 'with'. SHEEP (checking clarifiers) Articles for singular. Checking POL protective preposition form.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy55c",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["With a sheep.", "With the sheep (singular)."],
+              POL: "Z owcą.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal15-03b GET 200 YES: ENG to POL. Preposition 'with'. SHEEP (checking clarifiers) Articles for singular. Checking POL protective preposition form.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy55c",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "With the sheep (singular).",
+              POL: ["Z owcą."],
+            },
+            {
+              ENG: "With a sheep.",
+              POL: ["Z owcą."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal15-03c GET 200 YES: POL to ENG. Preposition 'with'. SHEEP (checking clarifiers) Articles for plural.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy55d",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["With sheep.", "With the sheep (plural)."],
+              POL: "Z owcami.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal15-03d GET 200 YES: ENG to POL. Preposition 'with'. SHEEP (checking clarifiers) Articles for plural.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy55d",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "With the sheep (plural).",
+              POL: ["Z owcami."],
+            },
+            {
+              ENG: "With sheep.",
+              POL: ["Z owcami."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal15-04a GET 200 YES: POL to ENG. Preposition 'with'. Articles for singular. Checking POL protective preposition form.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy55a",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["With a sheep.", "With the sheep."],
+              POL: "Z owcą.",
+            },
+            {
+              ENG: ["With a rat.", "With the rat."],
+              POL: "Ze szczurem.",
+            },
+            {
+              ENG: ["With a bear.", "With the bear."],
+              POL: "Z niedźwiedziem.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal15-04b GET 200 YES: ENG to POL. Preposition 'with'. Articles for singular. Checking POL protective preposition form.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy55a",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "With the sheep.",
+              POL: ["Z owcą."],
+            },
+            {
+              ENG: "With a sheep.",
+              POL: ["Z owcą."],
+            },
+            {
+              ENG: "With the rat.",
+              POL: ["Ze szczurem."],
+            },
+            {
+              ENG: "With a rat.",
+              POL: ["Ze szczurem."],
+            },
+            {
+              ENG: "With the bear.",
+              POL: ["Z niedźwiedziem."],
+            },
+            {
+              ENG: "With a bear.",
+              POL: ["Z niedźwiedziem."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal15-04c GET 200 YES: POL to ENG. Preposition 'with'. Articles for plural.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy55b",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["With sheep.", "With the sheep."],
+              POL: "Z owcami.",
+            },
+            {
+              ENG: ["With rats.", "With the rats."],
+              POL: "Ze szczurami.",
+            },
+            {
+              ENG: ["With bears.", "With the bears."],
+              POL: "Z niedźwiedziami.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal15-04d GET 200 YES: ENG to POL. Preposition 'with'. Articles for plural.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy55b",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "With the sheep.",
+              POL: ["Z owcami."],
+            },
+            {
+              ENG: "With sheep.",
+              POL: ["Z owcami."],
+            },
+            {
+              ENG: "With the rats.",
+              POL: ["Ze szczurami."],
+            },
+            {
+              ENG: "With rats.",
+              POL: ["Ze szczurami."],
+            },
+            {
+              ENG: "With the bears.",
+              POL: ["Z niedźwiedziami."],
+            },
+            {
+              ENG: "With bears.",
+              POL: ["Z niedźwiedziami."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal15-04e GET 200 YES: POL to ENG. Preposition 'with'. Articles for singular.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -299,75 +587,7 @@ describe("/api", () => {
           );
         });
     });
-    xit("#pal15-03b GET 200 YES: POL to ENG. Preposition 'with'. Articles for singular. Checking POL protective preposition form.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy55a",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["With a sheep.", "With the sheep."],
-              POL: "Z owcą.",
-            },
-            {
-              ENG: ["With a rat.", "With the rat."],
-              POL: "Ze szczurem.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    xit("#pal15-03c GET 200 YES: POL to ENG. Preposition 'with'. Articles for plural.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy55a",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["With apples.", "With the apples."],
-              POL: "Z jabłkami.",
-            },
-            {
-              ENG: ["With tomatoes.", "With the tomatoes."],
-              POL: "Z pomidorami.",
-            },
-            {
-              ENG: ["With onions.", "With the onions."],
-              POL: "Z cebulami.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    xit("#pal15-04a GET 200 YES: ENG to POL. Preposition 'with'. Articles for singular.", () => {
+    it("#pal15-04f GET 200 YES: ENG to POL. Preposition 'with'. Articles for singular.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -381,54 +601,31 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
+          //Gamma: Change so that only indefinite is generated as Q sent, but both used as A sent?
           let ref = [
+            {
+              ENG: "With the apple.",
+              POL: ["Z jabłkiem."],
+            },
             {
               ENG: "With an apple.",
               POL: ["Z jabłkiem."],
+            },
+            {
+              ENG: "With the tomato.",
+              POL: ["Z pomidorem."],
             },
             {
               ENG: "With a tomato.",
               POL: ["Z pomidorem."],
             },
             {
-              ENG: "With an onion.",
+              ENG: "With the onion.",
               POL: ["Z cebulą."],
             },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    xit("#pal15-04b GET 200 YES: ENG to POL. Preposition 'with'. Articles for plural.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy55a",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
             {
-              ENG: "With apples.",
-              POL: ["Z jabłkami."],
-            },
-            {
-              ENG: "With tomatoes.",
-              POL: ["Z pomidorami."],
-            },
-            {
-              ENG: "With onions.",
-              POL: ["Z cebulami."],
+              ENG: "With an onion.",
+              POL: ["Z cebulą."],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
