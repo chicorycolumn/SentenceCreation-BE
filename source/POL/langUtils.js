@@ -85,7 +85,9 @@ exports.preprocessLemmaObjectsMajor = (
   if (
     gpUtils.getWordtypeFromLemmaObject(matches[0]) !== structureChunk.wordtype
   ) {
-    throw "#ERR ----------> POL preprocessLemmaObjectsMajor fxn, the wordtypes from stCh and lObjs didn't match.";
+    gpUtils.throw(
+      "#ERR wkpu POL:preprocessLemmaObjectsMajor. The wordtypes from stCh and lObjs didn't match."
+    );
   }
 
   if (["verb"].includes(structureChunk.wordtype)) {

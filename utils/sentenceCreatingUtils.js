@@ -55,7 +55,7 @@ exports.getMaterials = (
 
     if (!sentenceFormula) {
       gpUtils.throw(
-        `quky getMaterials #ERR SC:getMaterials, no sentenceFormula for this sentenceFormulaId ${sentenceFormulaId}.`
+        `#ERR quky sc:getMaterials. No sentenceFormula for this sentenceFormulaId "${sentenceFormulaId}".`
       );
     }
 
@@ -175,7 +175,7 @@ exports.processSentenceFormula = (
     if (errorInSentenceCreation.errorMessage) {
       console.log(
         "[1;31m " +
-          `bzck processSentenceFormula #ERR -------------------------> An error arose in SC:processSentenceFormula. Returning outputArr null for headChunk: ${headChunk.chunkId}` +
+          `#WARN bzck processSentenceFormula. An error arose in SC:processSentenceFormula. Returning outputArr null for headChunk: "${headChunk.chunkId}"` +
           "[0m"
       );
 
@@ -191,7 +191,7 @@ exports.processSentenceFormula = (
     if (!allPossOutputUnits_head || !allPossOutputUnits_head.length) {
       console.log(
         "[1;31m " +
-          `ewio processSentenceFormula #ERR -------------------------> An error has arisen in SC:processSentenceFormula. Returning outputArr null for headChunk: ${headChunk.chunkId}` +
+          `#WARN ewio processSentenceFormula. An error has arisen in SC:processSentenceFormula. Returning outputArr null for headChunk: "${headChunk.chunkId}"` +
           "[0m"
       );
 
@@ -261,7 +261,7 @@ exports.processSentenceFormula = (
           ) {
             console.log(
               "[1;31m " +
-                `fvqy #ERR -------------------------> An error reared up in SC:processSentenceFormula. Returning outputArr null for dependentChunk:  ${dependentChunk.chunkId}` +
+                `#WARN fvqy. An error reared up in SC:processSentenceFormula. Returning outputArr null for dependentChunk:  "${dependentChunk.chunkId}"` +
                 "[0m"
             );
 
@@ -349,7 +349,7 @@ exports.processSentenceFormula = (
     ) {
       console.log(
         "[1;31m " +
-          `hyuh #ERR -------------------------> An error has loomed in SC:processSentenceFormula. Returning outputArr null for otherChunk: ${otherChunk.chunkId}` +
+          `#WARN hyuh. An error has loomed in SC:processSentenceFormula. Returning outputArr null for otherChunk: "${otherChunk.chunkId}"` +
           "[0m"
       );
 
@@ -400,7 +400,7 @@ exports.processSentenceFormula = (
       ) {
         console.log(
           "[1;31m " +
-            `quek #ERR -------------------------> An error loomed in SC:processSentenceFormula. Returning outputArr null for postHocDependentChunk: ${postHocDependentChunk.chunkId}` +
+            `#WARN quek. An error loomed in SC:processSentenceFormula. Returning outputArr null for postHocDependentChunk: "${postHocDependentChunk.chunkId}"` +
             "[0m"
         );
 
@@ -479,7 +479,7 @@ exports.giveFinalSentences = (
 
     if (!multipleMode && answerOutputArrays && answerOutputArrays.length) {
       gpUtils.throw(
-        "ubrz giveFinalSentences #ERR Well that's strange. We are in Question Mode, so SC:giveFinalSentences expected to be given questionOutputArr, not answerOutputArrays."
+        "#ERR ubrz giveFinalSentences. Well that's strange. We are in Question Mode, so SC:giveFinalSentences expected to be given questionOutputArr, not answerOutputArrays."
       );
     }
   }
@@ -540,7 +540,7 @@ exports.buildSentenceString = (
   if (!sentenceFormula.primaryOrders || !sentenceFormula.primaryOrders.length) {
     console.log(
       "[1;31m " +
-        `npqq buildSentenceString No primaryOrders were specified for ${sentenceFormula.sentenceFormulaSymbol} with ID ${sentenceFormula.sentenceFormulaId}. Using default order that structureChunks were defined in.` +
+        `npqq buildSentenceString No primaryOrders were specified for "${sentenceFormula.sentenceFormulaSymbol}" with ID "${sentenceFormula.sentenceFormulaId}". Using default order that structureChunks were defined in.` +
         "[0m"
     );
     console.log(
@@ -680,7 +680,7 @@ exports.selectWordVersions = (
           ) {
             if (subsequentOutputUnit.structureChunk.number.length > 1) {
               gpUtils.throw(
-                "pudk selectWordVersions #ERR subsequentOutputUnit.structureChunk.number had length over 1."
+                "#ERR pudk selectWordVersions. subsequentOutputUnit.structureChunk.number had length over 1."
               );
             }
             console.log(
@@ -815,7 +815,7 @@ exports.selectWordVersions = (
       }
     } else {
       gpUtils.throw(
-        "oilf selectWordVersions #ERR --------------------------------------> I expected either a string or a terminus object for this selectedWord."
+        "#ERR oilf selectWordVersions. I expected either a string or a terminus object for this selectedWord."
       );
     }
 
@@ -831,7 +831,7 @@ exports.selectWordVersions = (
 
       if (key === "string") {
         console.log(
-          "[1;30m " + `uufy pushSelectedWordToArray Pushing ${selectedWord}` + "[0m"
+          "[1;30m " + `uufy pushSelectedWordToArray Pushing "${selectedWord}"` + "[0m"
         );
         selectedWordsArr.push([selectedWord]);
         return;
@@ -839,7 +839,7 @@ exports.selectWordVersions = (
 
       if (key === "array") {
         console.log(
-          "[1;30m " + `uufy pushSelectedWordToArray Pushing ${selectedWord}` + "[0m"
+          "[1;30m " + `uufy pushSelectedWordToArray Pushing "${selectedWord}"` + "[0m"
         );
         selectedWordsArr.push(selectedWord);
         return;
@@ -847,7 +847,7 @@ exports.selectWordVersions = (
 
       if (!selectedWord[key]) {
         gpUtils.throw(
-          `rgxc selectWordVersions #ERR Could not find key ${key} on selectedWord.`
+          `#ERR rgxc selectWordVersions. Could not find key "${key}" on selectedWord.`
         );
       }
 
@@ -863,19 +863,19 @@ exports.selectWordVersions = (
 
       if (!selectedWord[key]) {
         gpUtils.throw(
-          "ztgp selectWordVersions #ERR selectedWord[key] was falsy."
+          "#ERR ztgp selectWordVersions. selectedWord[key] was falsy."
         );
       }
 
       console.log(
-        "[1;30m " + `oqij selectWordVersions Pushing arr ${selectedWord[key]}` + "[0m"
+        "[1;30m " + `oqij selectWordVersions Pushing arr "${selectedWord[key]}"` + "[0m"
       );
       selectedWordsArr.push(selectedWord[key]);
     }
 
     console.log("oadb selectWordVersions", { selectedWord });
     gpUtils.throw(
-      `oadb selectWordVersions didn't add any word from ${structureChunk.chunkId} and see selectedWord above.`
+      `oadb selectWordVersions didn't add any word from "${structureChunk.chunkId}" and see selectedWord above.`
     );
   });
 
@@ -1180,7 +1180,7 @@ exports.inheritFromHeadToDependentChunk = (
   dependentChunk
 ) => {
   console.log(
-    `cmpr inheritFromHeadToDependentChunk: from ${headChunk.chunkId} to ${dependentChunk.chunkId}`,
+    `cmpr inheritFromHeadToDependentChunk: from "${headChunk.chunkId}" to "${dependentChunk.chunkId}"`,
     "dependentChunk BEFOREHAND: ",
     dependentChunk
   );

@@ -132,7 +132,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
           if (selectedWord === synhomDataUnit.terminalValue) {
             console.log(
               "[1;35m " +
-                `qxqf addClarifiers YES enter filterDownClarifiers for selectedWord as ${selectedWord}` +
+                `qxqf addClarifiers YES enter filterDownClarifiers for selectedWord as "${selectedWord}"` +
                 "[0m"
             );
 
@@ -164,14 +164,14 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
                   ) {
                     console.log(
                       "[1;32m " +
-                        `jpnj filterDownClarifiers ${structureChunk.chunkId} ABZ Early stage PASSING of ${label} in allowableClarifiers` +
+                        `jpnj filterDownClarifiers "${structureChunk.chunkId}" ABZ Early stage PASSING of "${label}" in allowableClarifiers` +
                         "[0m"
                     );
                     return true;
                   } else {
                     console.log(
                       "[1;30m " +
-                        `lmza filterDownClarifiers ${structureChunk.chunkId} ABZ Early stage BLOCKING of ${label} in allowableClarifiers` +
+                        `lmza filterDownClarifiers "${structureChunk.chunkId}" ABZ Early stage BLOCKING of "${label}" in allowableClarifiers` +
                         "[0m"
                     );
                     return false;
@@ -210,7 +210,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
                   ) {
                     console.log(
                       "[1;31m " +
-                        `#ERR kxqz filterDownClarifiers adding null to currentValueArr for inflectionLabel ${inflectionLabel}.` +
+                        `#WARN kxqz filterDownClarifiers. Adding null to currentValueArr for inflectionLabel "${inflectionLabel}".` +
                         "[0m"
                     );
 
@@ -220,11 +220,12 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
                   if (structureChunk[inflectionLabel].length > 1) {
                     console.log(
                       "[1;31m " +
-                        `#ERR wqzm filterDownClarifiers: structureChunk[inflectionLabel] ${structureChunk[inflectionLabel]}` +
+                        `#WARN wqzm filterDownClarifiers. structureChunk[inflectionLabel] "${structureChunk[inflectionLabel]}"` +
                         "[0m"
                     );
                     gpUtils.throw(
-                      "#ERR wqzm filterDownClarifiers " + inflectionLabel
+                      "#ERR wqzm filterDownClarifiers. inflectionLabel: " +
+                        inflectionLabel
                     );
                   }
 
@@ -272,14 +273,14 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
                 ) {
                   console.log(
                     "[1;32m " +
-                      `xunf findSinglePointMutationArray ${structureChunk.chunkId} ABZ Early stage PASSING of ${label} in findSinglePointMutationArray` +
+                      `xunf findSinglePointMutationArray "${structureChunk.chunkId}" ABZ Early stage PASSING of "${label}" in findSinglePointMutationArray` +
                       "[0m"
                   );
                   return true;
                 } else {
                   console.log(
                     "[1;30m " +
-                      `dhjc findSinglePointMutationArray ${structureChunk.chunkId} ABZ Early stage BLOCKING of ${label} in findSinglePointMutationArray` +
+                      `dhjc findSinglePointMutationArray "${structureChunk.chunkId}" ABZ Early stage BLOCKING of "${label}" in findSinglePointMutationArray` +
                       "[0m"
                   );
                   return false;
@@ -333,7 +334,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
           } else {
             console.log(
               "[1;35m " +
-                `dhbb addClarifiers NOT enter filterDownClarifiers for selectedWord as ${selectedWord}` +
+                `dhbb addClarifiers NOT enter filterDownClarifiers for selectedWord as "${selectedWord}"` +
                 "[0m"
             );
           }

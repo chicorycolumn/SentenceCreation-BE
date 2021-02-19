@@ -42,7 +42,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
           structureChunk
         );
         gpUtils.throw(
-          `fneu validateSentenceFormula #ERR on "${chunkId}": featureKey "${featureKey}" not specified on reference object.`
+          `#ERR fneu validateSentenceFormula. stCh "${chunkId}": featureKey "${featureKey}" not specified on reference object.`
         );
       }
 
@@ -54,7 +54,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
           structureChunk
         );
         gpUtils.throw(
-          `wghd validateSentenceFormula #ERR on "${chunkId}": featureKey "${featureKey}" not expected to be present on "${wordtype}".`
+          `#ERR wghd validateSentenceFormula. stCh "${chunkId}": featureKey "${featureKey}" not expected to be present on "${wordtype}".`
         );
       }
 
@@ -69,7 +69,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
           structureChunk
         );
         gpUtils.throw(
-          `kchk validateSentenceFormula #ERR on "${chunkId}": Expected "${expectedTypeOnStCh}" as "${featureKey}" featureValue but got "${gpUtils.typeof(
+          `#ERR kchk validateSentenceFormula. stCh "${chunkId}": Expected "${expectedTypeOnStCh}" as "${featureKey}" featureValue but got "${gpUtils.typeof(
             featureValue
           )}"`
         );
@@ -87,7 +87,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
               structureChunk
             );
             gpUtils.throw(
-              `mkkf validateSentenceFormula #ERR on "${chunkId}": featureValue "${featureValue}" not listed as possible for wordtype "${wordtype}".`
+              `#ERR mkkf validateSentenceFormula. stCh "${chunkId}": featureValue "${featureValue}" not listed as possible for wordtype "${wordtype}".`
             );
           }
         } else if (gpUtils.typeof(featureValue) === "array") {
@@ -98,7 +98,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
                 structureChunk
               );
               gpUtils.throw(
-                `timm validateSentenceFormula #ERR on "${chunkId}": featureValue arr included "${featureValueItem}" which was not listed as possible for wordtype "${wordtype}".`
+                `#ERR timm validateSentenceFormula. stCh "${chunkId}": featureValue arr included "${featureValueItem}" which was not listed as possible for wordtype "${wordtype}".`
               );
             }
           });
@@ -113,7 +113,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
             structureChunk
           );
           gpUtils.throw(
-            `cglp validateSentenceFormula #ERR on ${chunkId}: featureValue ${featureValue} should have been a chunkId existing in sentenceStructure.`
+            `#ERR cglp validateSentenceFormula. stCh "${chunkId}": featureValue "${featureValue}" should have been a chunkId existing in sentenceStructure.`
           );
         }
       }

@@ -263,6 +263,7 @@ describe("/api", () => {
           );
         });
     });
+    // it("#pal15-03a GET 200 YES: POL to ENG. Preposition 'with'. SHEEP (checking clarifiers) Articles for singular. Checking POL protective preposition form.", () => {
     it.only("#pal15-03a GET 200 YES: POL to ENG. Preposition 'with'. SHEEP (checking clarifiers) Articles for singular. Checking POL protective preposition form.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";

@@ -134,7 +134,9 @@ exports.preprocessLemmaObjectsMajor = (
   matches.forEach((lObj) => {
     if (gpUtils.getWordtypeFromLemmaObject(lObj) === "pronoun") {
       if (!structureChunk.wordtype === "pronoun") {
-        throw "#ERR------------->lObj and stCh wordtypes don't match.";
+        gpUtils.throw(
+          "#ERR hcio preprocessLemmaObjectsMajor. lObj and stCh wordtypes don't match."
+        );
       }
       if (!structureChunk.gender) {
         if (
@@ -159,10 +161,10 @@ exports.preprocessLemmaObjectsMinor = (matches) => {
     if (gpUtils.getWordtypeFromLemmaObject(lObj) === "noun") {
       if (lObj.tags.includes("person")) {
         if (!lObj.gender) {
-          throw (
-            "#ERR. The lObj '" +
-            lObj.id +
-            "' is a person so should have a gender key."
+          gpUtils.throw(
+            "#ERR vuww preprocessLemmaObjectsMinor. The lObj '" +
+              lObj.id +
+              "' is a person so should have a gender key."
           );
         }
       } else {

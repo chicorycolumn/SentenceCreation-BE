@@ -84,13 +84,13 @@ exports.copyAndCombineWordbanks = (wordbank1, wordbank2) => {
     if (!wordbank2Copy[key]) {
       console.log(
         "[1;31m " +
-          `udhd gp:copyAndCombineWordbanks #NB: wordbank2 does not have key ${key} but wordbank1 does.` +
+          `udhd gp:copyAndCombineWordbanks #NB: wordbank2 does not have key "${key}" but wordbank1 does.` +
           "[0m"
       );
     }
     if (wordbank2Copy[key] && !Array.isArray(wordbank2Copy[key])) {
       gpUtils.throw(
-        `cocq gp:copyAndCombineWordbanks #ERR: wordbank2 key ${key} holds non array value.`
+        `#ERR cocq gp:copyAndCombineWordbanks. wordbank2 key "${key}" holds non array value.`
       );
     }
 
@@ -343,7 +343,7 @@ exports.fillOutWashburneRefObj = (
 };
 
 exports.consoleLogObjectAtOneLevel = (obj, label) => {
-  console.log("[1;32m " + `--Console log object at one level, from ${label}:` + "[0m");
+  console.log("[1;32m " + `--Console log object at one level, from "${label}":` + "[0m");
   console.log("[1;32m " + `------` + "[0m");
   console.log("[1;32m " + `----------` + "[0m");
   Object.keys(obj).forEach((key) => {
@@ -357,7 +357,9 @@ exports.consoleLogObjectAtOneLevel = (obj, label) => {
 };
 
 exports.consoleLogObjectAtTwoLevels = (obj, label) => {
-  console.log("[1;32m " + `--Console log object at two levels, from ${label}:` + "[0m");
+  console.log(
+    "[1;32m " + `--Console log object at two levels, from "${label}":` + "[0m"
+  );
   console.log("[1;32m " + `------` + "[0m");
   console.log("[1;32m " + `----------` + "[0m");
   Object.keys(obj).forEach((key) => {
@@ -403,7 +405,7 @@ exports.getWordtypeFromLemmaObject = (lObj) => {
 
   if (!Object.keys(wordtypeRef).includes(wordtypeShorthand)) {
     gpUtils.throw(
-      `hshc #ERR -----------------> getWordtypeFromLemmaObject for requested ${lObj.id}`
+      `#ERR hshc getWordtypeFromLemmaObject. Called with lObj of lObj.id: "${lObj.id}"`
     );
   }
 
@@ -416,7 +418,7 @@ exports.getWordtypeFromStructureChunk = (stCh) => {
 
   if (!Object.keys(wordtypeRef).includes(wordtypeShorthand)) {
     gpUtils.throw(
-      `bsov #ERR getWordtypeFromStructureChunk: wordtypeShorthand "${stCh.chunkId}" had no translated wordtype.`
+      `#ERR bsov getWordtypeFromStructureChunk. wordtypeShorthand "${stCh.chunkId}" had no translated wordtype.`
     );
   }
 
@@ -439,7 +441,9 @@ exports.getWordtypeOfAgreeWith = (
   let wordtypeShorthand = structureChunk[agreeWithKey].split("-")[0];
 
   if (!Object.keys(wordtypeRef).includes(wordtypeShorthand)) {
-    gpUtils.throw("xafb #ERR -----------------> getWordtypeFromLemmaObject");
+    gpUtils.throw(
+      `#ERR xafb getWordtypeFromLemmaObject. Object.keys(wordtypeRef) did not include wordtypeShorthand: "${wordtypeShorthand}"`
+    );
   }
 
   return wordtypeRef[wordtypeShorthand];

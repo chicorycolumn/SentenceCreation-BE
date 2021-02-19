@@ -80,7 +80,7 @@ exports.fetchPalette = (req) => {
     if (!questionSentenceData) {
       console.log(
         "[1;31m " +
-          `#ERR ---------------> cdqk-fetchPalette the question arrayOfOutputArrays came back NOTHING.` +
+          `#WARN cdqk fetchPalette. The question arrayOfOutputArrays came back NOTHING.` +
           "[0m"
       );
 
@@ -100,7 +100,7 @@ exports.fetchPalette = (req) => {
     ) {
       console.log(
         "[1;31m " +
-          `#ERR ---------------> dwlw-fetchPalette the question arrayOfOutputArrays came back NONE.` +
+          `#WARN dwlw fetchPalette. The question arrayOfOutputArrays came back NONE.` +
           "[0m"
       );
 
@@ -116,11 +116,11 @@ exports.fetchPalette = (req) => {
 
     if (questionSentenceData.arrayOfOutputArrays.length > 1) {
       console.log(
-        "pipr-fetchPalette questionSentenceData.arrayOfOutputArrays",
+        "pipr-fetchPalette. questionSentenceData.arrayOfOutputArrays",
         questionSentenceData.arrayOfOutputArrays
       );
       gpUtils.throw(
-        "#ERR tbvr-fetchPalette questionSentenceData.arrayOfOutputArrays.length had length more than 1. It was " +
+        "#ERR tbvr fetchPalette. questionSentenceData.arrayOfOutputArrays.length had length more than 1. It was " +
           questionSentenceData.arrayOfOutputArrays.length
       );
     }
@@ -138,11 +138,11 @@ exports.fetchPalette = (req) => {
     if ("console") {
       console.log(
         "[1;35m " +
-          `vmfg-fetchPalette stCh ${structureChunk.chunkId} at index ${index}` +
+          `vmfg-fetchPalette stCh "${structureChunk.chunkId}" at index "${index}"` +
           "[0m"
       );
       console.log(
-        "[1;35m " + `vmfg-fetchPalette slObj ${selectedLemmaObject.lemma}` + "[0m"
+        "[1;35m " + `vmfg-fetchPalette slObj "${selectedLemmaObject.lemma}"` + "[0m"
       );
       console.log(" ");
     }
@@ -153,7 +153,7 @@ exports.fetchPalette = (req) => {
     ) {
       console.log(
         "[1;35m " +
-          `mjdj-fetchPalette Will blank structureChunk.gender of ${structureChunk.chunkId} just before Midpoint, because slObj ${selectedLemmaObject.lemma} is multi gender.` +
+          `mjdj-fetchPalette Will blank structureChunk.gender of "${structureChunk.chunkId}" just before Midpoint, because slObj "${selectedLemmaObject.lemma}" is multi gender.` +
           "[0m"
       );
 
@@ -172,10 +172,10 @@ exports.fetchPalette = (req) => {
           featureValue.length > 1
         ) {
           console.log(
-            "[1;31m " + `#ERR oyxp-fetchPalette structureChunk is:` + "[0m",
+            "[1;31m " + `#WARN oyxp fetchPalette. structureChunk is:` + "[0m",
             structureChunk
           );
-          gpUtils.throw("#ERR oyxp-fetchPalette featureKey: " + featureKey);
+          gpUtils.throw("#ERR oyxp fetchPalette. featureKey: " + featureKey);
         }
       });
     }

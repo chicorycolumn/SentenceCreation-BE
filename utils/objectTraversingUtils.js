@@ -17,7 +17,7 @@ exports.findMatchingLemmaObjectThenWord = (
 ) => {
   console.log(
     "[1;33m " +
-      `ligw ot:findMatchingLemmaObjectThenWord for stCh: ${structureChunk.chunkId}` +
+      `ligw ot:findMatchingLemmaObjectThenWord for stCh: "${structureChunk.chunkId}"` +
       "[0m"
   );
 
@@ -451,7 +451,7 @@ exports.findMatchingLemmaObjectThenWord = (
     if (!matchesCopy.length) {
       console.log(
         "[1;31m " +
-          "btfm ot:findMatchingLemmaObjectThenWord #ERR It turns out no matching lemma objects were found in OT:findMatching" +
+          "#WARN btfm ot:findMatchingLemmaObjectThenWord. It turns out no matching lemma objects were found in OT:findMatching" +
           "[0m"
       );
 
@@ -467,7 +467,7 @@ exports.findMatchingLemmaObjectThenWord = (
     if (!matchesCopy.length) {
       console.log(
         "[1;31m " +
-          "gugm ot:findMatchingLemmaObjectThenWord #ERR It transpires that no matching lemma objects were found in OT:findMatching" +
+          "#NB gugm ot:findMatchingLemmaObjectThenWord. It transpires that no matching lemma objects were found in OT:findMatching" +
           "[0m",
         structureChunk
       );
@@ -484,7 +484,7 @@ exports.findMatchingLemmaObjectThenWord = (
     if (!matchesCopy.length) {
       console.log(
         "[1;31m " +
-          "yqtf ot:findMatchingLemmaObjectThenWord #ERR It appears no matching lemma objects were found in OT:findMatching" +
+          "#WARN yqtf ot:findMatchingLemmaObjectThenWord. It appears no matching lemma objects were found in OT:findMatching" +
           "[0m"
       );
 
@@ -958,11 +958,11 @@ exports.extractNestedRoutes = (source, includeTerminusObjectKeys) => {
       arr.pop();
     } else {
       gpUtils.throw(
-        `kwdo ot:recursivelyMapRoutes found value with wrong data type: ${
+        `kwdo ot:recursivelyMapRoutes found value with wrong data type: "${
           Array.isArray(source)
             ? "Array"
             : (typeof source)[0].toUpperCase() + (typeof source).slice(1)
-        }.`
+        }".`
       );
     }
   }
@@ -1198,7 +1198,7 @@ exports.stripOutFeatures = (currentLanguage, structureChunk, PWlabel) => {
       if (structureChunk["inflectorKey"]) {
         console.log(
           "[1;35m " +
-            `milm stripOutFeatures Deleting ${inflectorKey} from stCh ${structureChunk.chunkId} because this is #${PWlabel} in ${currentLanguage}` +
+            `milm stripOutFeatures Deleting "${inflectorKey}" from stCh "${structureChunk.chunkId}" because this is #${PWlabel} in ${currentLanguage}` +
             "[0m"
         );
       }

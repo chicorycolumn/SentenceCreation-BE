@@ -127,14 +127,12 @@ exports.filterAnnotations = (
     if (typeof structureChunk.annotations[annotationKey] !== "string") {
       console.log(
         "[1;31m " +
-          `ylam filterAnnotations: ${structureChunk.chunkId} stCh should have had STRING for annotation ${annotationKey}` +
+          `ylam filterAnnotations: "${structureChunk.chunkId}" stCh should have had STRING for annotationKey "${annotationKey}"` +
           "[0m"
       );
-      console.log(
-        "ylam filterAnnotations",
-        structureChunk.annotations[annotationKey]
+      gpUtils.throw(
+        `#ERR ylam filterAnnotations. structureChunk.annotations[annotationKey]: "${structureChunk.annotations[annotationKey]}"`
       );
-      gpUtils.throw("ylam filterAnnotations #ERR");
     }
 
     console.log(
@@ -216,7 +214,7 @@ exports.filterAnnotations = (
 
         console.log(
           "[1;30m " +
-            `vfge filterAnnotations ${structureChunk.chunkId} ABZ Late stage DELETION of annotation ${annotationKey} which is ${structureChunk.annotations[annotationKey]}` +
+            `vfge filterAnnotations "${structureChunk.chunkId}" ABZ Late stage DELETION of annotation "${annotationKey}" which is "${structureChunk.annotations[annotationKey]}"` +
             "[0m"
         );
 
@@ -224,7 +222,7 @@ exports.filterAnnotations = (
       } else {
         console.log(
           "[1;32m " +
-            `dyzx filterAnnotations ${structureChunk.chunkId} ABZ Late stage PASSING of annotation ${annotationKey} which is ${structureChunk.annotations[annotationKey]}` +
+            `dyzx filterAnnotations "${structureChunk.chunkId}" ABZ Late stage PASSING of annotation "${annotationKey}" which is "${structureChunk.annotations[annotationKey]}"` +
             "[0m"
         );
       }

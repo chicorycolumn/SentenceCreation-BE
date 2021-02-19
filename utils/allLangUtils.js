@@ -14,7 +14,7 @@ exports.addWordtypeToStructureChunk = (structureChunk) => {
 
   if (!wordtype) {
     gpUtils.throw(
-      "bawe #ERR addWordtypeToStructureChunk wordtype came back falsy",
+      "#ERR bawe addWordtypeToStructureChunk. wordtype came back falsy",
       wordtype
     );
   }
@@ -115,7 +115,7 @@ exports.adjustVirilityOfStructureChunk = (
   if (/all.*/.test(gender)) {
     if (gender.length !== 1) {
       gpUtils.throw(
-        `vcvl ALL:adjustVirilityOfStructureChunk #ERR Gender arr contained a metaGender, that's fine, but it contained other values too? That's too much. ${gender.toString()}`
+        `#ERR vcvl ALL:adjustVirilityOfStructureChunk. Gender arr contained a metaGender, that's fine, but it contained other values too? That's too much. "${gender.toString()}"`
       );
     }
 
@@ -333,9 +333,9 @@ exports.convertMetaFeatures = (sourceObjectArray, currentLanguage, objType) => {
         Object.keys(metaFeatureRef).forEach((metaFeature) => {
           if (/_/.test(metaFeature)) {
             console.log(
-              `tkga ALL convertMetaFeatures Hereby changing metaFeature ${metaFeature} to ${
+              `tkga ALL convertMetaFeatures Hereby changing metaFeature "${metaFeature}" to "${
                 metaFeature.split("_")[0]
-              }`
+              }"`
             );
             metaFeature = metaFeature.split("_")[0];
           }
@@ -363,9 +363,9 @@ exports.convertMetaFeatures = (sourceObjectArray, currentLanguage, objType) => {
           currentValueArr.forEach((value) => {
             if (/_/.test(value)) {
               console.log(
-                `veeo ALL convertMetaFeatures Thereby changing metaFeature ${value} to ${
+                `veeo ALL convertMetaFeatures Thereby changing metaFeature "${value}" to "${
                   value.split("_")[0]
-                }`
+                }"`
               );
               value = value.split("_")[0];
             }
