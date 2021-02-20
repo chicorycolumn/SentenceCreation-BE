@@ -34,7 +34,7 @@ exports.translateAnnotationValue = (
   if (annotationKey === "gender") {
     if (structureChunk.number) {
       if (structureChunk.number.length > 1) {
-        throw "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Ah no.";
+        gpUtils.throw("cshb #ERR ALL:translateAnnotationValue.");
       }
 
       const pluralVirilityAndSingularConversionRef =
@@ -44,8 +44,9 @@ exports.translateAnnotationValue = (
         if (
           !pluralVirilityAndSingularConversionRef["plural"][annotationValue]
         ) {
-          throw (
-            "Could not convert virility of annotationValue: " + annotationValue
+          gpUtils.throw(
+            "mkow #ERR ALL:translateAnnotationValue. Could not convert virility of annotationValue: " +
+              annotationValue
           );
         }
 

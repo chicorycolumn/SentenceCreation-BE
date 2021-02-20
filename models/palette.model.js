@@ -387,20 +387,14 @@ exports.fetchPalette = (req) => {
         )
       );
     }
-
-    ///////////////////////////////////////////////kp Attach annotations
-    aaUtils.attachAnnotations(
-      questionSentenceData.questionOutputArr,
-      languagesObj,
-      answerSentenceData
-    );
   }
 
   questionResponseObj = scUtils.giveFinalSentences(
     questionSentenceData,
     false,
     questionLanguage,
-    answerLanguage
+    answerLanguage,
+    answerSentenceData
   );
 
   return frUtils.finishAndSend(questionResponseObj, answerResponseObj);

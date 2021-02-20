@@ -809,25 +809,30 @@ exports.addAnnotation = (chunk, key, value) => {
   chunk.annotations[key] = value;
 };
 
-exports.attachAnnotations = (
+exports.firstStageEvaluateAnnotations = (
   arrayOfOutputUnits,
   languagesObj,
   answerSentenceData
 ) => {
   if (!answerSentenceData) {
     console.log(
-      "[1;31m " + "hhvv NO ANSWER SENTENCE DATA IN aa.attachAnnotations" + "[0m"
+      "[1;31m " +
+        "hhvv NO ANSWER SENTENCE DATA IN aa.firstStageEvaluateAnnotations" +
+        "[0m"
     );
   }
 
   let { answerLanguage, questionLanguage } = languagesObj;
 
   if (answerSentenceData) {
-    console.log("atyh attachAnnotations }}0");
+    console.log("atyh firstStageEvaluateAnnotations 0");
     arrayOfOutputUnits.forEach((outputUnit) => {
       let { structureChunk, selectedLemmaObject } = outputUnit;
 
-      console.log("xwit attachAnnotations }}1, structureChunk", structureChunk);
+      console.log(
+        "xwit firstStageEvaluateAnnotations 1, structureChunk",
+        structureChunk
+      );
 
       let { chunkId } = structureChunk;
 
@@ -876,14 +881,18 @@ exports.attachAnnotations = (
         );
 
         if (formattedAnnotationArr.length) {
-          outputUnit.selectedWord += ` (${aaUtils
-            .processExactWordingOfAnnotations(formattedAnnotationArr)
-            .join(", ")})`;
+          outputUnit.firstStagePassingAnnotationsArr = aaUtils.processExactWordingOfAnnotations(
+            formattedAnnotationArr
+          );
+
+          // outputUnit.selectedWord += ` (${aaUtils
+          //   .processExactWordingOfAnnotations(formattedAnnotationArr)
+          //   .join(", ")})`;
         }
       }
     });
   } else {
-    console.log("fxso attachAnnotations }}2");
+    console.log("fxso firstStageEvaluateAnnotations 2");
     arrayOfOutputUnits.forEach((outputUnit) => {
       let { structureChunk, selectedLemmaObject } = outputUnit;
 
@@ -901,9 +910,13 @@ exports.attachAnnotations = (
           )
         );
 
-        outputUnit.selectedWord += ` (${aaUtils
-          .processExactWordingOfAnnotations(formattedAnnotationArr)
-          .join(", ")})`;
+        outputUnit.firstStagePassingAnnotationsArr = aaUtils.processExactWordingOfAnnotations(
+          formattedAnnotationArr
+        );
+
+        // outputUnit.selectedWord += ` (${aaUtils
+        //   .processExactWordingOfAnnotations(formattedAnnotationArr)
+        //   .join(", ")})`;
       }
     });
   }

@@ -130,7 +130,7 @@ describe("/api", () => {
     });
   });
 
-  describe.only("/palette - Stage 15: Prepositions and Articles.", () => {
+  describe("/palette - Stage 15: Prepositions and Articles.", () => {
     it("#pal15-01a GET 200 YES: POL to ENG. Indefinite article.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
@@ -263,8 +263,7 @@ describe("/api", () => {
           );
         });
     });
-    // it("#pal15-03a GET 200 YES: POL to ENG. Preposition 'with'. SHEEP (checking clarifiers) Articles for singular. Checking POL protective preposition form.", () => {
-    it.only("#pal15-03a GET 200 YES: POL to ENG. Preposition 'with'. SHEEP (checking clarifiers) Articles for singular. Checking POL protective preposition form.", () => {
+    it("#pal15-03a GET 200 YES: POL to ENG. Preposition 'with'. SHEEP (checking clarifiers) Articles for singular. Checking POL protective preposition form.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -280,7 +279,7 @@ describe("/api", () => {
         .then((res) => {
           let ref = [
             {
-              ENG: ["With a sheep.", "With the sheep (singular)."],
+              ENG: ["With a sheep.", "With the sheep."],
               POL: "Z owcą.",
             },
           ];
@@ -340,7 +339,7 @@ describe("/api", () => {
         .then((res) => {
           let ref = [
             {
-              ENG: ["With sheep.", "With the sheep (plural)."],
+              ENG: ["With sheep.", "With the sheep."],
               POL: "Z owcami.",
             },
           ];
@@ -372,7 +371,7 @@ describe("/api", () => {
               POL: ["Z owcami."],
             },
             {
-              ENG: "With sheep.",
+              ENG: "With sheep (plural).",
               POL: ["Z owcami."],
             },
           ];

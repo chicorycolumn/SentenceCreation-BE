@@ -2,6 +2,7 @@ const otUtils = require("./objectTraversingUtils.js");
 const gpUtils = require("./generalPurposeUtils.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
 const ivUtils = require("./secondOrder/inputValidationUtils.js");
+const aaUtils = require("./auxiliaryAttributeUtils.js");
 const scUtils = require("./sentenceCreatingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 const refFxn = require("./reference/referenceFunctions.js");
@@ -455,8 +456,19 @@ exports.giveFinalSentences = (
   sentenceData,
   multipleMode,
   currentLanguage,
-  answerLanguage
+  answerLanguage,
+  answerSentenceData
 ) => {
+  if (answerLanguage) {
+    let { questionOutputArr } = sentenceData;
+
+    aaUtils.firstStageEvaluateAnnotations(
+      questionOutputArr,
+      { answerLanguage, questionLanguage: currentLanguage },
+      answerSentenceData
+    );
+  }
+
   let {
     answerOutputArrays,
     questionOutputArr,
@@ -514,11 +526,11 @@ exports.giveFinalSentences = (
     });
   }
 
-  let answerResponseObj = {
+  let responseObj = {
     finalSentenceArr,
   };
 
-  return answerResponseObj;
+  return responseObj;
 };
 
 exports.buildSentenceString = (
@@ -537,6 +549,7 @@ exports.buildSentenceString = (
   let outputArrays = [];
   let producedSentences = [];
 
+  // STEP 0: Get orders.
   if (!sentenceFormula.primaryOrders || !sentenceFormula.primaryOrders.length) {
     console.log(
       "[1;31m " +
@@ -591,6 +604,7 @@ exports.buildSentenceString = (
     }
   }
 
+  // STEP 1: Select word versions for each.
   outputArrays.forEach((outputArr) => {
     let arrOfFinalSelectedWordsArr = scUtils.selectWordVersions(
       outputArr,
@@ -638,6 +652,7 @@ exports.selectWordVersions = (
       structureChunk,
       drillPath,
       selectedLemmaObject,
+      firstStagePassingAnnotationsArr,
     } = outputUnit;
 
     console.log("[1;33m " + `nilu selectWordVersions----------------` + "[0m");
@@ -647,7 +662,12 @@ exports.selectWordVersions = (
     console.log("[1;33m " + `/nilu----------------` + "[0m");
 
     if (typeof selectedWord === "string") {
-      pushSelectedWordToArray("string", selectedWord, selectedWordsArr);
+      pushSelectedWordToArray(
+        "string",
+        selectedWord,
+        selectedWordsArr,
+        firstStagePassingAnnotationsArr
+      );
       return;
     }
 
@@ -666,6 +686,35 @@ exports.selectWordVersions = (
               "aqrz selectWordVersions Shouldn't there be an outputUnit subsequent to this ENG indefinite article?"
             );
           }
+
+          console.log(
+            "shnj selectWordVersions. subsequentOutputUnit.firstStagePassingAnnotationsArr BEFORE",
+            subsequentOutputUnit.firstStagePassingAnnotationsArr
+          );
+
+          if (
+            subsequentOutputUnit &&
+            subsequentOutputUnit.firstStagePassingAnnotationsArr
+          ) {
+            subsequentOutputUnit.firstStagePassingAnnotationsArr.forEach(
+              (item, index) => {
+                if (item === "singular") {
+                  console.log(
+                    `yuox selectWordVersions. Removing "singular" annotation from subsequent outputUnit, as current output unit is ENG indefinite article.`
+                  );
+                  subsequentOutputUnit.firstStagePassingAnnotationsArr.splice(
+                    index,
+                    (index = 1)
+                  );
+                }
+              }
+            );
+          }
+
+          console.log(
+            "shnj selectWordVersions. subsequentOutputUnit.firstStagePassingAnnotationsArr AFTER",
+            subsequentOutputUnit.firstStagePassingAnnotationsArr
+          );
 
           console.log("nbra selectWordVersions", {
             "subsequentOutputUnit.selectedWord":
@@ -700,14 +749,16 @@ exports.selectWordVersions = (
             pushSelectedWordToArray(
               "protective",
               selectedWord,
-              selectedWordsArr
+              selectedWordsArr,
+              firstStagePassingAnnotationsArr
             );
             return;
           } else {
             pushSelectedWordToArray(
               "nonprotective",
               selectedWord,
-              selectedWordsArr
+              selectedWordsArr,
+              firstStagePassingAnnotationsArr
             );
             return;
           }
@@ -731,7 +782,8 @@ exports.selectWordVersions = (
             pushSelectedWordToArray(
               "postPreposition",
               selectedWord,
-              selectedWordsArr
+              selectedWordsArr,
+              firstStagePassingAnnotationsArr
             );
             return;
           } else {
@@ -760,7 +812,8 @@ exports.selectWordVersions = (
             pushSelectedWordToArray(
               "array",
               combinedSelectedWordsArr,
-              selectedWordsArr
+              selectedWordsArr,
+              firstStagePassingAnnotationsArr
             );
             return;
           }
@@ -798,20 +851,27 @@ exports.selectWordVersions = (
             pushSelectedWordToArray(
               "protective",
               selectedWord,
-              selectedWordsArr
+              selectedWordsArr,
+              firstStagePassingAnnotationsArr
             );
             return;
           } else {
             pushSelectedWordToArray(
               "nonprotective",
               selectedWord,
-              selectedWordsArr
+              selectedWordsArr,
+              firstStagePassingAnnotationsArr
             );
             return;
           }
         }
 
-        pushSelectedWordToArray("normal", selectedWord, selectedWordsArr);
+        pushSelectedWordToArray(
+          "normal",
+          selectedWord,
+          selectedWordsArr,
+          firstStagePassingAnnotationsArr
+        );
       }
     } else {
       gpUtils.throw(
@@ -819,21 +879,42 @@ exports.selectWordVersions = (
       );
     }
 
-    function pushSelectedWordToArray(key, selectedWord, selectedWordsArr) {
+    function pushSelectedWordToArray(
+      key,
+      selectedWord,
+      selectedWordsArr,
+      annoArr
+    ) {
       console.log(
         "[1;30m " + `esbq pushSelectedWordToArray-----------------with args:` + "[0m",
         {
           key,
           selectedWord,
           selectedWordsArr,
+          annoArr,
         }
       );
+
+      function addAnnotationsAndPush(wordInOwnArr, selectedWordsArr, annoArr) {
+        if (annoArr && annoArr.length) {
+          if (wordInOwnArr.length !== 1) {
+            gpUtils.throw(
+              `bapr #ERR addAnnotationsAndPush. To add annotation from [${annoArr}] but there are multiple/none selected words: [${wordInOwnArr}].`
+            );
+          }
+
+          wordInOwnArr[0] += ` (${annoArr.join(", ")})`;
+        }
+
+        selectedWordsArr.push(wordInOwnArr);
+      }
 
       if (key === "string") {
         console.log(
           "[1;30m " + `uufy pushSelectedWordToArray Pushing "${selectedWord}"` + "[0m"
         );
-        selectedWordsArr.push([selectedWord]);
+
+        addAnnotationsAndPush([selectedWord], selectedWordsArr, annoArr);
         return;
       }
 
@@ -841,7 +922,7 @@ exports.selectWordVersions = (
         console.log(
           "[1;30m " + `uufy pushSelectedWordToArray Pushing "${selectedWord}"` + "[0m"
         );
-        selectedWordsArr.push(selectedWord);
+        addAnnotationsAndPush(selectedWord, selectedWordsArr, annoArr);
         return;
       }
 
@@ -870,7 +951,7 @@ exports.selectWordVersions = (
       console.log(
         "[1;30m " + `oqij selectWordVersions Pushing arr "${selectedWord[key]}"` + "[0m"
       );
-      selectedWordsArr.push(selectedWord[key]);
+      addAnnotationsAndPush(selectedWord[key], selectedWordsArr, annoArr);
     }
 
     console.log("oadb selectWordVersions", { selectedWord });
