@@ -354,17 +354,6 @@ xdescribe("checkWords", () => {
     console.log(actual);
 
     expect(nounsWithoutGender).to.eql([["kobieta", "pol-nou-001"]]);
-
-    // if (nounsWithoutGender.length) {
-    //   console.log(currentLanguage + " Sentence Formulas >>>>", actual);
-    //   throw (
-    //     "Action required: YOU MUST SPECIFY A GENDER FOR THESE NOUNS: " +
-    //     nounsWithoutGender
-    //       .map((lObj) => `${lObj.lemma} (${lObj.id})`)
-    //       .join(", ")
-    //   );
-    // }
-    // expect(nounsWithoutGender.length).to.equal(0);
   });
 });
 
@@ -451,7 +440,6 @@ xdescribe("Educator Battery", () => {
       );
     }
     expect(actual.duplicateIds.length).to.equal(0);
-    // expect(actual).to.eql(expected);
   });
   it("#eduBat-06 Gives a schematic and duplicateIds. POL", () => {
     const currentLanguage = "POL";
@@ -466,7 +454,6 @@ xdescribe("Educator Battery", () => {
       );
     }
     expect(actual.duplicateIds.length).to.equal(0);
-    // expect(actual).to.eql(expected);
   });
   it("#eduBat-07 Gives a schematic and duplicateIds. ENG", () => {
     const currentLanguage = "ENG";

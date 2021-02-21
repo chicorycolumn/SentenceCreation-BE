@@ -454,24 +454,6 @@ exports.wordsBank = {
       //inflections
       inflections: {
         infinitive: "be",
-        // verbal: {
-        //   past: {
-        //     "1per": { singular: "was", plural: "were" },
-        //     "2per": { singular: "were", plural: "were" },
-        //     "3per": { singular: "was", plural: "were" },
-        //   },
-        //   present: {
-        //     "1per": { singular: "am", plural: "are" },
-        //     "2per": { singular: "are", plural: "are" },
-        //     "3per": { singular: "is", plural: "are" },
-        //   },
-        //   future: {
-        //     allPersons: { allNumbers: "will be" },
-        //   },
-        //   conditional: {
-        //     allPersons: { allNumbers: "would be" },
-        //   },
-        // },
         v2: terminusObjectNormalArray(["was", "were"]),
         v3: "been",
         thirdPS: "is",

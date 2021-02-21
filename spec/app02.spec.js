@@ -6,9 +6,6 @@ const gpUtils = require("../utils/generalPurposeUtils.js");
 const { it } = require("mocha");
 const testingUtils = require("../utils/secondOrder/testingUtils.js");
 const { generalTranslatedSentencesRef } = testingUtils;
-// chai.use(require("sams-chai-sorted"));
-// const { myErrMsgs } = require("../errors/errors");
-// const endpointsCopy = require("../endpoints.json");
 
 describe("/api", () => {
   gpUtils.fillOutWashburneRefObj(
@@ -100,7 +97,6 @@ describe("/api", () => {
           answerLanguage,
           sentenceFormulaSymbol: "dummy52",
           useDummy: true,
-          // shouldThrowAtMidpoint: true,
         })
         .expect(200)
         .then((res) => {
@@ -647,7 +643,6 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage,
-          // answerLanguage,
           sentenceFormulaSymbol: "dummy50a",
           useDummy: true,
         })
@@ -675,7 +670,6 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage,
-          // answerLanguage,
           sentenceFormulaSymbol: "dummy50a",
           useDummy: true,
         })
@@ -879,7 +873,6 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage,
-          // answerLanguage,
           sentenceFormulaSymbol: "113a my father gave me his book",
         })
         .expect(200)
@@ -906,7 +899,6 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           questionLanguage,
-          // answerLanguage,
           sentenceFormulaSymbol: "113a my father gave me his book",
         })
         .expect(200)
@@ -1857,7 +1849,6 @@ describe("/api", () => {
           questionLanguage,
           answerLanguage,
           useDummy: true,
-          // shouldThrowAtMidpoint: true,
           shouldOmitStChValidation: true,
           sentenceFormulaSymbol: "dummy57",
         })
@@ -1885,9 +1876,6 @@ describe("/api", () => {
   });
 
   describe("/palette - Stage 13A: Pronouns and other Multi Gender Nouns: Basic tests.", () => {
-    //
-    //
-    //
     it("#pal13A-01a GET 200 YES: Give a pronoun in ENG.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -1897,7 +1885,6 @@ describe("/api", () => {
         .send({
           questionLanguage,
           useDummy: true,
-          // answerLanguage,
           sentenceFormulaSymbol: "dummy48a",
         })
         .expect(200)
@@ -1916,7 +1903,6 @@ describe("/api", () => {
         .send({
           questionLanguage,
           useDummy: true,
-          // answerLanguage,
           sentenceFormulaSymbol: "dummy48a",
         })
         .expect(200)
@@ -1966,9 +1952,6 @@ describe("/api", () => {
           expect(res.body.answerSentenceArr).to.have.members(["Ja."]);
         });
     });
-    //
-    //
-    //
     it("#pal13A-02a GET 200 YES: ENG to POL. Inherit features from pronoun to verb (m sing).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -2087,10 +2070,8 @@ describe("/api", () => {
           );
         });
     });
-    //
-    //
-    //
-    //NOTA BENE: if you want an ENG Q sentence to have both gender Robił Robiła in POL A sentences,
+    //Delta: Is this still true?
+    //NOTA BENE: If you want an ENG Q sentence to have both gender Robił Robiła in POL A sentences,
     //then instead of setting no gender, you must set gender as allPersonalGenders.
     it("#pal13A-03a GET 200 YES: ENG to POL. (allPersonalGenders was specified.) Inherit features from pronoun to verb (m sing).", () => {
       const questionLanguage = "ENG";
@@ -2234,9 +2215,6 @@ describe("/api", () => {
           );
         });
     });
-    //
-    //
-    //
     it("#pal13A-04a GET 200 YES: POL to ENG. Inherit features from pronoun to verb (m sing).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
@@ -2377,9 +2355,6 @@ describe("/api", () => {
           );
         });
     });
-    //
-    //
-    //
     it("#pal13A-05a GET 200 YES: POL to ENG. Inherit features from pronoun to verb (m sing).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
@@ -2552,9 +2527,6 @@ describe("/api", () => {
           );
         });
     });
-    //
-    //
-    //
     it("#pal13A-06a GET 200 YES: ENG to POL. No gender specified in stCh for MGN.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -2945,10 +2917,6 @@ describe("/api", () => {
         .expect(200)
         .then((res) => {
           let ref = [
-            // {
-            //   ENG: "The doctor was writing a prescription.",
-            //   POL: ["Lekarz pisał receptę.", "Lekarka pisała receptę."],
-            // },
             {
               ENG: "The doctor (male) was writing a prescription.",
               POL: ["Lekarz pisał receptę."],
@@ -3022,14 +2990,6 @@ describe("/api", () => {
               ENG: "The doctor was writing a prescription.",
               POL: ["Lekarz pisał receptę.", "Lekarka pisała receptę."],
             },
-            // {
-            //   ENG: "The doctor (male) was writing a prescription.",
-            //   POL: ["Lekarz pisał receptę."],
-            // },
-            // {
-            //   ENG: "The doctor (female) was writing a prescription.",
-            //   POL: ["Lekarka pisała receptę."],
-            // },
           ];
 
           testingUtils.checkTranslationsOfGivenRef(
@@ -3059,14 +3019,6 @@ describe("/api", () => {
               ENG: "The doctors were writing a prescription.",
               POL: ["Lekarze pisali receptę.", "Lekarki pisały receptę."],
             },
-            // {
-            //   ENG: "The doctor (male) was writing a prescription.",
-            //   POL: ["Lekarz pisał receptę."],
-            // },
-            // {
-            //   ENG: "The doctor (female) was writing a prescription.",
-            //   POL: ["Lekarka pisała receptę."],
-            // },
           ];
 
           testingUtils.checkTranslationsOfGivenRef(
@@ -3161,8 +3113,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          //
-
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "109a doc was writing p",

@@ -110,6 +110,7 @@ exports.lemmaObjectFeatures = {
   },
 };
 
+//Zeta: Check the commented out code here.
 exports.structureChunkFeatures = {
   POL: {
     //
@@ -334,15 +335,7 @@ exports.allFeatureValues = {
       "future continuous",
       "future perfect",
     ],
-    gender: [
-      "m",
-      "f",
-      "n",
-      "virile",
-      "nonvirile",
-      // "allPersonalGenders",
-      // "allSingularGenders",
-    ],
+    gender: ["m", "f", "n", "virile", "nonvirile"],
   },
   POL: {
     tenseDescription: [

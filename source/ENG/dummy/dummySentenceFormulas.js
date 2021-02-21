@@ -195,11 +195,8 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
-        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
-        // gender: ["allPersonalGenders"],
-        // number: []
       },
       {
         chunkId: "ver-1",
@@ -207,7 +204,6 @@ exports.dummySentenceFormulasBank = [
         agreeWith: "pro-1",
         specificLemmas: ["be"],
         tenseDescription: ["present simple", "past simple"],
-        // person: ["2per"],
         number: [],
       },
     ],
@@ -321,7 +317,6 @@ exports.dummySentenceFormulasBank = [
         chunkId: "ver-1",
         wordtype: "verb",
         andTags: ["basic3"],
-        // specificLemmas: [""],
         tenseDescription: ["past simple", "future perfect"],
         person: [],
         number: [],
@@ -338,8 +333,6 @@ exports.dummySentenceFormulasBank = [
         chunkId: "nou-1",
         wordtype: "noun",
         andTags: ["farmyard"],
-        // specificLemmas: [""],
-        // number: ["singular"],
       },
     ],
     primaryOrders: [],
@@ -352,12 +345,10 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        // andTags: ["farmyard"],
         specificLemmas: ["be"],
         number: ["singular"],
         tenseDescription: ["present simple"],
         person: ["2per"],
-        // nixedClarifiers: ["person"],
       },
     ],
     primaryOrders: [],
@@ -371,12 +362,10 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        // specificLemmas: ["read"],
         andTags: ["basic2"],
         number: ["singular"],
         tenseDescription: ["present simple", "past simple"],
         person: ["1per"],
-        // nixedClarifiers: ["person"],
       },
     ],
     primaryOrders: [["fix-1", "ver-1"]],
@@ -388,22 +377,15 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1",
-        // wordtype: "pronoun",
-        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
-        // gender: ["allPersonalGenders"],
-        // number: []
       },
       {
         chunkId: "ver-1",
-        // wordtype: "verb",
         agreeWith: "pro-1",
         specificLemmas: ["be"],
         number: [],
         tenseDescription: ["present simple"],
-        // person: ["2per"],
-        // nixedClarifiers: ["person"],
       },
     ],
     primaryOrders: [["pro-1", "ver-1"]],
@@ -416,11 +398,8 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
-        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
-        // gender: ["allPersonalGenders"],
-        // number: []
       },
       {
         chunkId: "ver-1",
@@ -429,8 +408,6 @@ exports.dummySentenceFormulasBank = [
         andTags: ["basic3"],
         number: [],
         tenseDescription: ["present simple"],
-        // person: ["2per"],
-        // nixedClarifiers: ["person"],
       },
     ],
     primaryOrders: [["pro-1", "ver-1"]],
@@ -443,11 +420,8 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
-        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
-        // gender: ["allPersonalGenders"],
-        // number: []
       },
       {
         chunkId: "ver-1",
@@ -456,8 +430,6 @@ exports.dummySentenceFormulasBank = [
         andTags: ["basic3"],
         number: [],
         tenseDescription: ["past simple"],
-        // person: ["2per"],
-        // nixedClarifiers: ["person"],
       },
     ],
     primaryOrders: [["pro-1", "ver-1"]],
@@ -470,11 +442,8 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
-        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
-        // gender: ["allPersonalGenders"],
-        // number: []
       },
       {
         chunkId: "ver-1",
@@ -483,8 +452,6 @@ exports.dummySentenceFormulasBank = [
         andTags: ["basic3"],
         number: [],
         tenseDescription: ["future continuous"],
-        // person: ["2per"],
-        // nixedClarifiers: ["person"],
       },
     ],
     primaryOrders: [["pro-1", "ver-1"]],
@@ -505,7 +472,6 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        // specificLemmas: ["nut"],
         andTags: ["allohomTesting"],
         number: ["singular"],
       },
@@ -545,14 +511,13 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy45c",
     sentenceFormulaId: "ENG-dummy45c",
-    translations: { POL: ["POL-dummy45b"] }, //Yes, this does point from c to b. It's fine...
+    translations: { POL: ["POL-dummy45b"] }, //Yes, this does point from c to b.
     sentenceStructure: [
       {
         chunkId: "ver-1",
         wordtype: "verb",
         andTags: ["allohomTesting2"],
         form: ["infinitive"],
-        // pleaseShowMultipleWordtypeAllohomClarifiers: true, // ...because I'm checking I can unrequest this.
       },
     ],
     primaryOrders: [],
@@ -567,7 +532,6 @@ exports.dummySentenceFormulasBank = [
         wordtype: "noun",
         andTags: ["allohomTesting3"],
         number: ["singular"],
-        // pleaseShowMultipleWordtypeAllohomClarifiers: true,
       },
     ],
     primaryOrders: [],
@@ -575,14 +539,14 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy46b",
     sentenceFormulaId: "ENG-dummy46b",
-    translations: { POL: ["POL-dummy46a"] }, //Yes, this does indeed point from b to a...
+    translations: { POL: ["POL-dummy46a"] }, //Yes, this does indeed point from b to a.
     sentenceStructure: [
       {
         chunkId: "nou-1",
         wordtype: "noun",
         andTags: ["allohomTesting3"],
         number: ["singular"],
-        pleaseShowMultipleWordtypeAllohomClarifiers: true, // ...because I'm just testing this.
+        pleaseShowMultipleWordtypeAllohomClarifiers: true,
       },
     ],
     primaryOrders: [],
@@ -597,7 +561,6 @@ exports.dummySentenceFormulasBank = [
         wordtype: "verb",
         andTags: ["allohomTesting3"],
         form: ["infinitive"],
-        // pleaseShowMultipleWordtypeAllohomClarifiers: true,
       },
     ],
     primaryOrders: [],
@@ -605,14 +568,14 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy46d",
     sentenceFormulaId: "ENG-dummy46d",
-    translations: { POL: ["POL-dummy46c"] }, //Yes, this does indeed point from d to c...
+    translations: { POL: ["POL-dummy46c"] }, //Yes, this does indeed point from d to c.
     sentenceStructure: [
       {
         chunkId: "ver-1",
         wordtype: "verb",
         andTags: ["allohomTesting3"],
         form: ["infinitive"],
-        pleaseShowMultipleWordtypeAllohomClarifiers: true, // ...because I'm just testing this.
+        pleaseShowMultipleWordtypeAllohomClarifiers: true,
       },
     ],
     primaryOrders: [],
@@ -655,7 +618,6 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
-        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         number: ["singular"],
@@ -673,7 +635,6 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
-        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         number: ["singular"],
@@ -698,7 +659,6 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
-        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         gender: ["f"],
@@ -723,11 +683,9 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
-        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         number: ["singular"],
-        // gender: ["allPersonalGenders"],
         gcase: ["nom"],
       },
       {
@@ -748,10 +706,8 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
-        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
-        // gender: ["f"],
         number: ["plural"],
         gcase: ["nom"],
       },
@@ -774,11 +730,9 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
-        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         number: ["singular"],
-        // gender: ["allPersonalGenders"],
         gcase: ["nom"],
       },
       {
@@ -799,10 +753,8 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
-        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
-        // gender: ["allPersonalGenders"],
         number: ["plural"],
         gcase: ["nom"],
       },
@@ -820,12 +772,11 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy50a",
     sentenceFormulaId: "ENG-dummy50a",
-    translations: { POL: ["POL-dummy50a"] }, //I have my apple.
+    translations: { POL: ["POL-dummy50a"] },
     sentenceStructure: [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
-        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
       },
@@ -953,11 +904,8 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
-        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
-        // gender: ["allPersonalGenders"],
-        // number: []
       },
       {
         chunkId: "ver-1",
@@ -965,7 +913,6 @@ exports.dummySentenceFormulasBank = [
         agreeWith: "pro-1",
         specificLemmas: ["have"],
         tenseDescription: ["present simple", "past simple"],
-        // person: ["2per"],
         number: [],
       },
     ],
@@ -979,11 +926,8 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
-        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
-        // gender: ["allPersonalGenders"],
-        // number: []
       },
       {
         chunkId: "ver-1",
@@ -991,7 +935,6 @@ exports.dummySentenceFormulasBank = [
         agreeWith: "pro-1",
         specificLemmas: ["have"],
         tenseDescription: ["present simple"],
-        // person: ["2per"],
         number: [],
       },
     ],
@@ -1231,15 +1174,17 @@ exports.dummySentenceFormulasBank = [
         chunkId: "art-1",
         wordtype: "article",
         form: ["definite", "indefinite"],
-        importantFeatures: ["form"],
+        // importantFeatures: ["form"],
+
+        //Delta: But doesn't need to be done?
+
         //Specifying Form as an important feature, because both Answer sentences must be created,
-        //so we mustn't allow the both Form options above to be overwritten by Question formula.
+        //so we must allow the both Form options above to remain, not be overwritten by Question formula.
         connectedTo: "nou-1",
       },
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        // orTags: ["edible", "edible0"],
         specificLemmas: ["woman"],
         number: ["singular"],
       },
@@ -1271,8 +1216,6 @@ exports.dummySentenceFormulasBank = [
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
         gcase: ["acc"],
-        // gender: ["allPersonalGenders"],
-        // number: []
       },
     ],
     primaryOrders: [["nou-1", "ver-1", "pro-1"]],

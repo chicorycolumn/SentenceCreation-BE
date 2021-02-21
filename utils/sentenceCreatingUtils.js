@@ -40,16 +40,6 @@ exports.getMaterials = (
     : gpUtils.copyWithoutReference(sentenceFormulasBank);
 
   if (sentenceFormulaId) {
-    // let matchingSentenceFormulaData = otUtils.findObjectInNestedObject(
-    //   sentenceFormulas,
-    //   {
-    //     sentenceFormulaId: sentenceFormulaId,
-    //   },
-    //   true
-    // );
-
-    // sentenceFormula = matchingSentenceFormulaData.value;
-
     sentenceFormula = sentenceFormulas.find(
       (senFor) => senFor.sentenceFormulaId === sentenceFormulaId
     );
@@ -60,41 +50,16 @@ exports.getMaterials = (
       );
     }
 
-    // sentenceFormulaId = sentenceFormula.sentenceFormulaId;
     sentenceFormulaSymbol = sentenceFormula.sentenceFormulaSymbol;
   } else if (sentenceFormulaSymbol) {
-    // let matchingSentenceFormulaData = otUtils.findObjectInNestedObject(
-    //   sentenceFormulas,
-    //   {
-    //     sentenceFormulaSymbol: sentenceFormulaSymbol,
-    //   },
-    //   true
-    // );
-
-    // sentenceFormula = matchingSentenceFormulaData.value;
-
     sentenceFormula = sentenceFormulas.find(
       (senFor) => senFor.sentenceFormulaSymbol === sentenceFormulaSymbol
     );
-
-    // sentenceFormulaId = sentenceFormula.sentenceFormulaId;
-    // sentenceFormulaSymbol = sentenceFormula.sentenceFormulaSymbol;
   } else {
-    // let matchingSentenceFormulaData = otUtils.findObjectInNestedObject(
-    //   sentenceFormulas,
-    //   {
-    //     sentenceFormulaId: defaultSentenceFormulaId,
-    //   },
-    //   true
-    // );
-
-    // sentenceFormula = matchingSentenceFormulaData.value;
-
     sentenceFormula = sentenceFormulas.find(
       (senFor) => senFor.sentenceFormulaId === defaultSentenceFormulaId
     );
 
-    // sentenceFormulaId = sentenceFormula.sentenceFormulaId;
     sentenceFormulaSymbol = sentenceFormula.sentenceFormulaSymbol;
   }
 
@@ -157,10 +122,6 @@ exports.processSentenceFormula = (
   headChunks.forEach((headChunk) => {
     console.log("evga sc:processSentenceFormula STEP ONE", headChunk.chunkId);
 
-    //The below functions correctly with regard to:
-    //Give multipleMode as true, it returns multiple outputUnit objects in allPossOutputUnits_head array.
-    //Give multipleMode as false, it returns just one outputUnit object in said array.
-
     let allPossOutputUnits_head = otUtils.findMatchingLemmaObjectThenWord(
       gpUtils.copyWithoutReference(headChunk),
       words,
@@ -208,10 +169,6 @@ exports.processSentenceFormula = (
     headOutputUnitArrays.push(allPossOutputUnits_head);
   });
 
-  //The below functions correctly with regard to:
-  //If multipleMode was true, then explodedOutputArraysWithHeads array now contains all possible arrays (of multiplied out head options).
-  // ie [ [{chłopiec}, {jabłko}], [{chłopiec}, {jabłka}], [{kobieta}, {jabłko}], [{kobieta}, {jabłka}] ]
-  //If multipleMode was false, said array now contains just the one array, eg explodedOutputArraysWithHeads = [ [{chłopiec}, {jabłko}] ].
   let explodedOutputArraysWithHeads = gpUtils.copyWithoutReference(
     gpUtils.arrayExploder(headOutputUnitArrays)
   );
@@ -234,8 +191,6 @@ exports.processSentenceFormula = (
             "oiez sc:processSentenceFormula STEP TWO",
             dependentChunk.chunkId
           );
-
-          //Inherit from head chunk to dependent chunks.
 
           scUtils.inheritFromHeadToDependentChunk(
             currentLanguage,
@@ -275,10 +230,6 @@ exports.processSentenceFormula = (
             };
           }
 
-          //The above functions correctly with regard to:
-          //Give multipleMode as true, it returns multiple outputUnit objects in allPossOutputUnits_dependent array.
-          //Give multipleMode as false, it returns just one outputUnit object in said array.
-
           if (!headOutputUnit.possibleDependentOutputArrays) {
             headOutputUnit.possibleDependentOutputArrays = [];
           }
@@ -295,18 +246,6 @@ exports.processSentenceFormula = (
     let result = gpUtils.explodeOutputArraysByHeadsAndDependents(arr);
     grandOutputArray.push(...result);
   });
-
-  //If multipleMode was false, then grandOutputArray = [ [ 'kobieta', 'ma', 'jabłko', 'czerwone' ] ]
-  //If multipleMode was true, then grandOutputArray =  [
-  //                                                [ 'kobieta', 'ma', 'cebulę', 'niebieską' ],
-  //                                                [ 'kobieta', 'ma', 'cebulę', 'czerwoną' ],
-  //                                                [ 'kobieta', 'ma', 'jabłko', 'niebieskie' ],
-  //                                                [ 'kobieta', 'ma', 'jabłko', 'czerwone' ],
-  //                                                [ 'chłopiec', 'ma', 'cebulę', 'niebieską' ],
-  //                                                [ 'chłopiec', 'ma', 'cebulę', 'czerwoną' ],
-  //                                                [ 'chłopiec', 'ma', 'jabłko', 'niebieskie' ],
-  //                                                [ 'chłopiec', 'ma', 'jabłko', 'czerwone' ]
-  //                                             ]
 
   let grandAllPossOutputUnits_other = [];
   let grandAllPossOutputUnits_PHD = [];
@@ -1127,7 +1066,6 @@ exports.conformAnswerStructureToQuestionStructure = (
       }
 
       //Don't transfer Number, if all A lObjs are Tantum Plurale.     eg if Q is "violin" we don't want to specify that A must be singular, as "skrzypce" can't be singular.
-
       if (
         inflectorKey === "number" &&
         matchingAnswerLemmaObjects.length &&
@@ -1142,7 +1080,7 @@ exports.conformAnswerStructureToQuestionStructure = (
       }
 
       if (inflectorKey === "tenseDescription") {
-        answerStructureChunk["tenseDescription"] = []; //hard adjust
+        answerStructureChunk["tenseDescription"] = []; //Hard adjust.
 
         let tenseDescriptions = questionStructureChunk["tenseDescription"];
 
@@ -1226,7 +1164,6 @@ exports.conformAnswerStructureToQuestionStructure = (
         !answerStructureChunk.importantFeatures ||
         !answerStructureChunk.importantFeatures.includes(inflector)
       ) {
-        //Refrain from the blinding if this inflector has been marked as important in the answer structure.
         answerStructureChunk[inflector] = [];
       }
     });
@@ -1288,7 +1225,7 @@ exports.inheritFromHeadToDependentChunk = (
     console.log("kwwm inheritFromHeadToDependentChunk: inflectorKey", {
       inflectorKey,
     });
-    //HARD CHANGE
+    //Hard change.
     if (
       headChunk[inflectorKey] &&
       !(

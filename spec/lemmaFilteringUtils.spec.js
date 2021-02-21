@@ -618,7 +618,6 @@ describe("traverseAndRecordInflections", () => {
     }
 
     expect(outputUnitsWithDrillPaths.length).to.equal(9);
-    // return;
 
     expect(outputUnitsWithDrillPaths).to.eql([
       {
@@ -727,7 +726,6 @@ describe("traverseAndRecordInflections", () => {
     }
 
     expect(outputUnitsWithDrillPaths.length).to.equal(1);
-    // return;
 
     expect(outputUnitsWithDrillPaths).to.eql([
       {
@@ -756,7 +754,6 @@ describe("traverseAndRecordInflections", () => {
     }
 
     expect(outputUnitsWithDrillPaths.length).to.equal(2);
-    // return;
 
     expect(outputUnitsWithDrillPaths).to.eql([
       {
@@ -795,7 +792,6 @@ describe("traverseAndRecordInflections", () => {
     }
 
     expect(outputUnitsWithDrillPaths.length).to.equal(4);
-    // return;
 
     expect(outputUnitsWithDrillPaths).to.eql([
       {
@@ -854,7 +850,6 @@ describe("traverseAndRecordInflections", () => {
     }
 
     expect(outputUnitsWithDrillPaths.length).to.equal(1);
-    // return;
 
     expect(outputUnitsWithDrillPaths).to.eql([
       {
@@ -883,7 +878,6 @@ describe("traverseAndRecordInflections", () => {
     }
 
     expect(outputUnitsWithDrillPaths.length).to.equal(1);
-    // return;
 
     expect(outputUnitsWithDrillPaths).to.eql([
       {
@@ -912,7 +906,6 @@ describe("traverseAndRecordInflections", () => {
     }
 
     expect(outputUnitsWithDrillPaths.length).to.equal(1);
-    // return;
 
     expect(outputUnitsWithDrillPaths).to.eql([
       {
@@ -941,7 +934,6 @@ describe("traverseAndRecordInflections", () => {
     }
 
     expect(outputUnitsWithDrillPaths.length).to.equal(1);
-    // return;
 
     expect(outputUnitsWithDrillPaths).to.eql([
       {
@@ -970,7 +962,6 @@ describe("traverseAndRecordInflections", () => {
     }
 
     expect(outputUnitsWithDrillPaths.length).to.equal(2);
-    // return;
 
     expect(outputUnitsWithDrillPaths).to.eql([
       {

@@ -171,7 +171,6 @@ exports.filterWithinSelectedLemmaObject = (
         source = source[featureValue];
 
         //If this is Primary, then update stCh with these featureKeys and featureValues.
-        // /.*Primary/.test(a)
 
         if (/.*Primary/.test(postHocAgreeWithKey)) {
           lfUtils.updateStChByInflections(

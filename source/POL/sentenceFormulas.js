@@ -690,9 +690,8 @@ exports.sentenceFormulasBank = [
     translations: { ENG: ["ENG-00-108"] },
     sentenceStructure: [
       {
-        chunkId: "pro-1", // form: ["pronoun"],
+        chunkId: "pro-1",
         specificLemmas: ["PERSONAL"],
-        // person: ["1per"],
       },
       {
         chunkId: "ver-1",
@@ -743,7 +742,6 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "fix-1",
-        //
         value: "receptę",
       },
     ],
@@ -809,7 +807,7 @@ exports.sentenceFormulasBank = [
         tenseDescription: ["past im"],
       },
       {
-        chunkId: "pro-1", // form: ["pronoun"],
+        chunkId: "pro-1",
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         gcase: ["dat"],
@@ -830,11 +828,9 @@ exports.sentenceFormulasBank = [
     translations: { ENG: ["ENG-00-111a"] },
     sentenceStructure: [
       {
-        chunkId: "pro-1", // form: ["pronoun"],
+        chunkId: "pro-1",
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
-        // gender: [],
-        // number: []
       },
       {
         chunkId: "ver-1",
@@ -852,11 +848,9 @@ exports.sentenceFormulasBank = [
     translations: { ENG: ["ENG-00-111b"] },
     sentenceStructure: [
       {
-        chunkId: "pro-1", // form: ["pronoun"],
+        chunkId: "pro-1",
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
-        // gender: [],
-        // number: []
       },
       {
         chunkId: "ver-1",
@@ -874,11 +868,9 @@ exports.sentenceFormulasBank = [
     translations: { ENG: ["ENG-00-111c"] },
     sentenceStructure: [
       {
-        chunkId: "pro-1", // form: ["pronoun"],
+        chunkId: "pro-1",
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
-        // gender: [],
-        // number: []
       },
       {
         chunkId: "ver-1",
@@ -907,7 +899,7 @@ exports.sentenceFormulasBank = [
         tenseDescription: ["past pf"],
       },
       {
-        chunkId: "pro-1", // form: ["pronoun"],
+        chunkId: "pro-1",
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         gcase: ["dat"],
@@ -939,7 +931,7 @@ exports.sentenceFormulasBank = [
         tenseDescription: ["past pf"],
       },
       {
-        chunkId: "pro-1", // form: ["pronoun"],
+        chunkId: "pro-1",
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         gcase: ["dat"],
@@ -959,9 +951,8 @@ exports.sentenceFormulasBank = [
     sentenceFormulaId: "POL-00-113",
     translations: { ENG: ["ENG-00-113"] },
     sentenceStructure: [
-      //I, my father, gave me his book.
       {
-        chunkId: "pro-1-invisible", // form: ["pronoun"],
+        chunkId: "pro-1-invisible",
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
       },
@@ -989,7 +980,6 @@ exports.sentenceFormulasBank = [
         agreeWith: "pro-1-invisible",
         gcase: ["dat"],
         importantFeatures: ["gcase"],
-        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
       },
       {
@@ -1007,9 +997,8 @@ exports.sentenceFormulasBank = [
     sentenceFormulaId: "POL-00-113a",
     translations: { ENG: ["ENG-00-113a"] },
     sentenceStructure: [
-      //I, my father, gave me his book.
       {
-        chunkId: "pro-1-invisible-We", // form: ["pronoun"],
+        chunkId: "pro-1-invisible-We",
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
       },
@@ -1024,7 +1013,6 @@ exports.sentenceFormulasBank = [
         chunkId: "nou-1-Father",
         andTags: ["person", "family"],
         gcase: ["nom"],
-        // number: ["singular"],
       },
       {
         chunkId: "ver-1-Gave",
@@ -1037,7 +1025,6 @@ exports.sentenceFormulasBank = [
         agreeWith: "pro-1-invisible-We",
         gcase: ["dat"],
         importantFeatures: ["gcase"],
-        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
       },
       {
@@ -1071,9 +1058,8 @@ exports.sentenceFormulasBank = [
     sentenceFormulaId: "POL-00-114",
     translations: { ENG: ["ENG-00-114"] },
     sentenceStructure: [
-      //I, my father, gave me his book.
       {
-        chunkId: "pro-1-invisible-I", // form: ["pronoun"],
+        chunkId: "pro-1-invisible-I",
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         number: ["singular"],
@@ -1083,7 +1069,6 @@ exports.sentenceFormulasBank = [
         andTags: ["person"],
         gcase: ["nom"],
         specificLemmas: ["lekarz", "lekarka"],
-        // number: ["singular"],
       },
       {
         chunkId: "ver-1-Gave",
@@ -1096,7 +1081,6 @@ exports.sentenceFormulasBank = [
         agreeWith: "pro-1-invisible-I",
         gcase: ["dat"],
         importantFeatures: ["gcase"],
-        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
       },
       {

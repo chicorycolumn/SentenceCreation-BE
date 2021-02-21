@@ -4,11 +4,6 @@ exports.sentenceFormulasBank = [
     sentenceFormulaId: "ENG-00-101a",
     translations: { POL: ["POL-00-101a"] },
     sentenceStructure: [
-      // {
-      //   chunkId: "art-1",
-      //   agreeWith: "nou-1",
-      //   definiteness: ["definite", "indefinite", "zero"],
-      // },
       { chunkId: "fix-1", value: "the" },
       {
         chunkId: "nou-1",
@@ -33,11 +28,6 @@ exports.sentenceFormulasBank = [
     sentenceFormulaId: "ENG-00-101b",
     translations: { POL: ["POL-00-101b"] },
     sentenceStructure: [
-      // {
-      //   chunkId: "art-1",
-      //   agreeWith: "nou-1",
-      //   definiteness: ["definite", "indefinite", "zero"],
-      // },
       { chunkId: "fix-1", value: "the" },
       {
         chunkId: "nou-1",
@@ -271,9 +261,8 @@ exports.sentenceFormulasBank = [
     translations: { POL: ["POL-00-108"] },
     sentenceStructure: [
       {
-        chunkId: "pro-1", // form: ["pronoun"],
+        chunkId: "pro-1",
         specificLemmas: ["PERSONAL"],
-        // person: ["1per"],
         gcase: ["nom"],
         number: ["singular"],
       },
@@ -329,12 +318,10 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "fix-2",
-        //
         value: "a",
       },
       {
         chunkId: "fix-3",
-        //
         value: "prescription",
       },
     ],
@@ -405,7 +392,7 @@ exports.sentenceFormulasBank = [
         tenseDescription: ["past continuous"],
       },
       {
-        chunkId: "pro-1", // form: ["pronoun"],
+        chunkId: "pro-1",
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         gcase: ["dat"],
@@ -413,8 +400,7 @@ exports.sentenceFormulasBank = [
       { chunkId: "fix-2", value: "a" },
       {
         chunkId: "nou-2",
-        specificLemmas: ["book"], //Change to BOOK. NB: What error to throw if no?
-        // gcase: ["acc"],
+        specificLemmas: ["book"],
         number: ["singular"],
       },
       { chunkId: "fix-3", value: "to" },
@@ -430,11 +416,9 @@ exports.sentenceFormulasBank = [
     translations: { POL: ["POL-00-111a"] },
     sentenceStructure: [
       {
-        chunkId: "pro-1", // form: ["pronoun"],
+        chunkId: "pro-1",
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
-        // gender: ["allPersonalGenders"],
-        // number: []
       },
       {
         chunkId: "ver-1",
@@ -452,11 +436,9 @@ exports.sentenceFormulasBank = [
     translations: { POL: ["POL-00-111b"] },
     sentenceStructure: [
       {
-        chunkId: "pro-1", // form: ["pronoun"],
+        chunkId: "pro-1",
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
-        // gender: ["allPersonalGenders"],
-        // number: []
       },
       {
         chunkId: "ver-1",
@@ -474,11 +456,9 @@ exports.sentenceFormulasBank = [
     translations: { POL: ["POL-00-111c"] },
     sentenceStructure: [
       {
-        chunkId: "pro-1", // form: ["pronoun"],
+        chunkId: "pro-1",
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
-        // gender: ["allPersonalGenders"],
-        // number: []
       },
       {
         chunkId: "ver-1",
@@ -507,7 +487,7 @@ exports.sentenceFormulasBank = [
         tenseDescription: ["past simple"],
       },
       {
-        chunkId: "pro-1", // form: ["pronoun"],
+        chunkId: "pro-1",
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         gcase: ["dat"],
@@ -515,7 +495,6 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "nou-2",
         specificLemmas: ["book", "mirror", "apple", "onion"],
-        // gcase: ["acc"],
         number: ["plural"],
       },
       { chunkId: "fix-3", value: "to" },
@@ -542,7 +521,7 @@ exports.sentenceFormulasBank = [
         tenseDescription: ["past simple"],
       },
       {
-        chunkId: "pro-1", // form: ["pronoun"],
+        chunkId: "pro-1",
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         gcase: ["dat"],
@@ -551,7 +530,6 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "nou-2",
         specificLemmas: ["book", "mirror", "apple", "onion"],
-        // gcase: ["acc"],
         number: ["singular"],
       },
       { chunkId: "fix-3", value: "to" },
@@ -566,9 +544,8 @@ exports.sentenceFormulasBank = [
     sentenceFormulaId: "ENG-00-113",
     translations: { POL: ["POL-00-113"] },
     sentenceStructure: [
-      //I, my father, gave me his book.
       {
-        chunkId: "pro-1-invisible", // form: ["pronoun"],
+        chunkId: "pro-1-invisible",
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
       },
@@ -595,7 +572,6 @@ exports.sentenceFormulasBank = [
         agreeWith: "pro-1-invisible",
         gcase: ["dat"],
         importantFeatures: ["gcase"],
-        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
       },
       { chunkId: "fix-1", value: "a" },
@@ -614,9 +590,8 @@ exports.sentenceFormulasBank = [
     sentenceFormulaId: "ENG-00-113a",
     translations: { POL: ["POL-00-113a"] },
     sentenceStructure: [
-      //I, my father, gave me his book.
       {
-        chunkId: "pro-1-invisible-We", // form: ["pronoun"],
+        chunkId: "pro-1-invisible-We",
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
       },
@@ -630,7 +605,6 @@ exports.sentenceFormulasBank = [
         chunkId: "nou-1-Father",
         andTags: ["person", "family"],
         gcase: ["nom"],
-        // number: ["singular"],
       },
       {
         chunkId: "ver-1-Gave",
@@ -643,7 +617,6 @@ exports.sentenceFormulasBank = [
         agreeWith: "pro-1-invisible-We",
         gcase: ["dat"],
         importantFeatures: ["gcase"],
-        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
       },
       {
@@ -676,11 +649,10 @@ exports.sentenceFormulasBank = [
     sentenceFormulaId: "ENG-00-114",
     translations: { POL: ["POL-00-114"] },
     sentenceStructure: [
-      //I, my father, gave me his book.
       { chunkId: "fix-1a", value: "the" },
       { chunkId: "fix-1b", value: "a" },
       {
-        chunkId: "pro-1-invisible-I", // form: ["pronoun"],
+        chunkId: "pro-1-invisible-I",
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         number: ["singular"],
@@ -690,7 +662,6 @@ exports.sentenceFormulasBank = [
         andTags: ["person"],
         specificLemmas: ["doctor"],
         gcase: ["nom"],
-        // number: ["singular"],
       },
       {
         chunkId: "ver-1-Gave",
@@ -703,7 +674,6 @@ exports.sentenceFormulasBank = [
         agreeWith: "pro-1-invisible-I",
         gcase: ["dat"],
         importantFeatures: ["gcase"],
-        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
       },
       {

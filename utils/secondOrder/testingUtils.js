@@ -770,18 +770,6 @@ exports.checkTranslationsOfGivenRef = (
 ) => {
   let testActivated = false;
 
-  //You have to specify a different ref for the different directions.
-  // let ref = [
-  //
-  //    If the Qsent is THIS... then the Asent ARRAY must be exactly THIS.
-  //    So you see, that's why this doesn't work bidirectionally.
-  //
-  //   { ENG: "I wrote (male).", POL: ["Napisałem."] },
-  //   { ENG: "I was writing (male).", POL: ["Pisałem."] },
-  //   { ENG: "I wrote (female).", POL: ["Napisałam."] },
-  //   { ENG: "I was writing (female).", POL: ["Pisałam."] },
-  // ];
-
   console.log(res.body);
 
   let { questionSentenceArr, answerSentenceArr } = res.body;

@@ -6,9 +6,6 @@ const gpUtils = require("../utils/generalPurposeUtils.js");
 const { it } = require("mocha");
 const testingUtils = require("../utils/secondOrder/testingUtils.js");
 const { generalTranslatedSentencesRef } = testingUtils;
-// chai.use(require("sams-chai-sorted"));
-// const { myErrMsgs } = require("../errors/errors");
-// const endpointsCopy = require("../endpoints.json");
 
 describe("/api", () => {
   gpUtils.fillOutWashburneRefObj(
@@ -31,7 +28,6 @@ describe("/api", () => {
         .send({
           useDummy: true,
           questionLanguage,
-          // answerLanguage,
           sentenceFormulaSymbol: "dummy53",
         })
         .expect(200)
@@ -184,7 +180,6 @@ describe("/api", () => {
         .send({
           useDummy: true,
           questionLanguage,
-          // answerLanguage,
           sentenceFormulaSymbol: "dummy53",
         })
         .expect(200)
@@ -342,7 +337,6 @@ describe("/api", () => {
         .send({
           useDummy: true,
           questionLanguage,
-          // answerLanguage,
           sentenceFormulaSymbol: "dummy54",
         })
         .expect(200)
@@ -374,7 +368,6 @@ describe("/api", () => {
         .send({
           useDummy: true,
           questionLanguage,
-          // answerLanguage,
           sentenceFormulaSymbol: "dummy54c",
         })
         .expect(200)
@@ -399,7 +392,6 @@ describe("/api", () => {
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "dummy54a",
-          // shouldThrowAtMidpoint: true,
         })
         .expect(200)
         .then((res) => {
@@ -474,7 +466,6 @@ describe("/api", () => {
         .send({
           useDummy: true,
           questionLanguage,
-          // answerLanguage,
           sentenceFormulaSymbol: "dummy33",
         })
         .expect(200)
@@ -627,7 +618,6 @@ describe("/api", () => {
         .send({
           useDummy: true,
           questionLanguage,
-          // answerLanguage,
           sentenceFormulaSymbol: "dummy33",
         })
         .expect(200)
@@ -785,7 +775,6 @@ describe("/api", () => {
         .send({
           useDummy: true,
           questionLanguage,
-          // answerLanguage,
           sentenceFormulaSymbol: "dummy34",
         })
         .expect(200)
@@ -817,7 +806,6 @@ describe("/api", () => {
         .send({
           useDummy: true,
           questionLanguage,
-          // answerLanguage,
           sentenceFormulaSymbol: "dummy34c",
         })
         .expect(200)
@@ -909,7 +897,6 @@ describe("/api", () => {
         .send({
           questionLanguage,
           answerLanguage,
-          // shouldThrowAtMidpoint: true,
           sentenceFormulaSymbol: "101a girl is reading",
         })
         .expect(200)

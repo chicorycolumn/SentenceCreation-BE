@@ -424,7 +424,6 @@ exports.addSpecifiers = (
           "person"
         );
 
-        // questionHeadLemmaObject.gender = selectedGenderForQuestionLanguage;
         console.log(
           "[1;35m " +
             "ksxy addSpecifiers #NB: Am changing questionHeadChunk.gender and answerHeadChunk.gender" +
@@ -475,7 +474,6 @@ exports.addSpecifiers = (
           selectedGenderForAnswerLanguageArr,
         });
 
-        // questionLemmaObject.gender = selectedGenderForQuestionLanguage;
         questionChunk.gender = [selectedGenderForQuestionLanguage];
         answerChunk.gender = selectedGenderForAnswerLanguageArr;
 
@@ -487,48 +485,6 @@ exports.addSpecifiers = (
       }
     });
   });
-
-  //STEPS TWO AND THREE - Add specifiers according to instructions from refObj.requestedSpecifiers.
-
-  if (false) {
-    //STEP TWO: For every A depCh and its headCh, check by requested Specifiers and if so, add them.
-
-    //Now you might ask - why not run this process for first the headCh, then the depCh, then the otherCh?
-
-    //Well, it's because we only want to Specify when there will actually be a difference.
-    //Our approach is to hardcode specific depCh situations, in which we want the headCh to be Specified.
-
-    //eg if depCh is POL verb past tense, in that case, we want gender of headCh Specified,
-    //but if depCh is POL verb present tense, then no reason to Specify headCh's gender.
-    answerDependentChunks.forEach((answerDependentChunk) => {
-      let materials = getMaterialsToAddSpecifiers(
-        answerDependentChunk,
-        answerSentenceStructure,
-        questionSentenceStructure
-      );
-
-      addRequiredSpecifiersToAnswerChunkOrHeadChunk_not_used(
-        materials,
-        answerLanguage,
-        "Step 1"
-      );
-    });
-
-    //STEP THREE: Do this for the otherChunks as well.
-    answerOtherChunks.forEach((answerOtherChunk) => {
-      let materials = getMaterialsToAddSpecifiers(
-        answerOtherChunk,
-        answerSentenceStructure,
-        questionSentenceStructure
-      );
-
-      addRequiredSpecifiersToAnswerChunkOrHeadChunk_not_used(
-        materials,
-        answerLanguage,
-        "Step 2"
-      );
-    });
-  }
 
   console.log("[1;30m " + `----/addSpecifiers------` + "[0m");
 
@@ -582,122 +538,6 @@ exports.addSpecifiers = (
     };
 
     return res;
-  }
-
-  function addRequiredSpecifiersToAnswerChunkOrHeadChunk_not_used(
-    materials,
-    answerLanguage,
-    consoleLogLabel
-  ) {
-    gpUtils.throw(
-      "pcno Ah, so we've decided to use addRequiredSpecifiersToAnswerChunkOrHeadChunk_not_used fxn."
-    );
-    return;
-
-    let {
-      answerHeadChunk,
-      answerChunk,
-      questionHeadChunk,
-      questionChunk,
-      questionHeadLemmaObject,
-      questionLemmaObject,
-    } = materials;
-
-    let requestedSpecifierInstructionsArr =
-      refObj.requestedSpecifiers_not_used[answerLanguage][answerChunk.wordtype];
-
-    if (!requestedSpecifierInstructionsArr) {
-      console.log(
-        "addSpecifiers RETURN! No requestedSpecifierInstructionsArr."
-      );
-      return;
-    }
-
-    requestedSpecifierInstructionsArr.forEach((reqSpecInstr) => {
-      if (
-        //If EACH positiveCondition of this reqSpecInstr is fulfilled...
-        Object.keys(reqSpecInstr.positiveCondition).every((reqFeatureKey) => {
-          let reqFeatureValue = reqSpecInstr.positiveCondition[reqFeatureKey];
-          return (
-            //by the A depCh or its headCh...
-
-            gpUtils.doesKeyContainValueOnChunk(
-              answerChunk,
-              reqFeatureKey,
-              reqFeatureValue
-            ) ||
-            gpUtils.doesKeyContainValueOnChunk(
-              answerHeadChunk,
-              reqFeatureKey,
-              reqFeatureValue
-            )
-          );
-        }) &&
-        //and each negativeCondition is not fulfilled...
-        Object.keys(reqSpecInstr.negativeCondition).every((reqFeatureKey) => {
-          let reqFeatureValue = reqSpecInstr.negativeCondition[reqFeatureKey];
-          //...by answerCh, its headCh, nor questionCh, its headCh
-          return ![
-            answerChunk,
-            answerHeadChunk,
-            questionChunk,
-            questionHeadChunk,
-          ].some((chunk) =>
-            gpUtils.doesKeyContainValueOnChunk(
-              chunk,
-              reqFeatureKey,
-              reqFeatureValue
-            )
-          );
-        })
-      ) {
-        gpUtils.throw("Cease before Pass 1.");
-
-        console.log("addSpecifiers Pass 1");
-        //then for each action key in the reqSpecInstr...
-
-        Object.keys(reqSpecInstr.action).forEach((actionKey) => {
-          if (
-            //...if not truthy in A depCh, nor its headCh, nor corresp Q depCh, nor that one's headCh...
-            //Hey, what about overwriting, shouldn't that be allowed, nay, needed?
-
-            gpUtils.keyShouldBeSpecified(answerChunk, actionKey, true) &&
-            gpUtils.keyShouldBeSpecified(answerHeadChunk, actionKey, true) &&
-            gpUtils.keyShouldBeSpecified(questionChunk, actionKey) &&
-            gpUtils.keyShouldBeSpecified(questionHeadChunk, actionKey)
-          ) {
-            gpUtils.throw("Yes we enter this, I see!");
-
-            console.log("addSpecifiers Pass 2");
-            let actionValueString = [
-              gpUtils.selectRandom(reqSpecInstr.action[actionKey]),
-            ];
-
-            //...then fill the action key with action value in A headCh if exists, else A depCh...
-            console.log(
-              "[1;30m " +
-                `-----------------------------------ADDED SPECIFIER in ${consoleLogLabel} is ${actionValueString}` +
-                "[0m"
-            );
-
-            if (typeof actionValueString !== "string") {
-              gpUtils.throw("Not string!");
-            }
-
-            aaUtils.specifyQuestionChunkAndChangeAnswerChunk(
-              {
-                answerHeadChunk,
-                answerChunk,
-                questionHeadChunk,
-                questionChunk,
-              },
-              actionKey,
-              actionValueString
-            );
-          }
-        });
-      }
-    });
   }
 };
 
@@ -884,10 +724,6 @@ exports.firstStageEvaluateAnnotations = (
           outputUnit.firstStagePassingAnnotationsArr = aaUtils.processExactWordingOfAnnotations(
             formattedAnnotationArr
           );
-
-          // outputUnit.selectedWord += ` (${aaUtils
-          //   .processExactWordingOfAnnotations(formattedAnnotationArr)
-          //   .join(", ")})`;
         }
       }
     });
@@ -913,10 +749,6 @@ exports.firstStageEvaluateAnnotations = (
         outputUnit.firstStagePassingAnnotationsArr = aaUtils.processExactWordingOfAnnotations(
           formattedAnnotationArr
         );
-
-        // outputUnit.selectedWord += ` (${aaUtils
-        //   .processExactWordingOfAnnotations(formattedAnnotationArr)
-        //   .join(", ")})`;
       }
     });
   }

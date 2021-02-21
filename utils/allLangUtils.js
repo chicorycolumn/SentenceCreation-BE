@@ -75,11 +75,9 @@ exports.adjustVirilityOfStructureChunk = (
   consoleLogLabel
 ) => {
   console.log("gxow ALL adjustVirilityOfStructureChunk", consoleLogLabel);
-  //Not for nouns. Because m -> plural -> virile and then trying to select Ojciec, which isn't virile, it's m, so will ERR later.
-  //If stCh has number:plural, then make the genders the virilityConverted genders.
-  //If stCh has numnber:singular, then make the genders the singularConverted genders.
 
   if (structureChunk.wordtype === "noun") {
+    // Because m -> plural -> virile and then trying to select Ojciec, which isn't virile, it's m, so will ERR later.
     return;
   }
 
@@ -220,14 +218,12 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
           structureChunk.number &&
           structureChunk.number.includes("singular")
         ) {
-          // structureChunk.gender.push("allSingularGenders");
           structureChunk.gender = [
             ...structureChunk.gender,
             ...metaFeaturesRef["gender"]["allSingularGenders"],
           ];
         }
         if (structureChunk.number && structureChunk.number.includes("plural")) {
-          // structureChunk.gender.push("allPluralGenders");
           structureChunk.gender = [
             ...structureChunk.gender,
             ...metaFeaturesRef["gender"]["allPluralGenders"],
@@ -311,8 +307,6 @@ exports.convertMetaFeatures = (sourceObjectArray, currentLanguage, objType) => {
     );
   }
 
-  // gpUtils.consoleLogPurple("convertMetaFeatures-----------");
-
   let metaFeaturesRef = refObj.metaFeatures[currentLanguage];
 
   sourceObjectArray.forEach((sourceObject) => {
@@ -384,7 +378,6 @@ exports.convertMetaFeatures = (sourceObjectArray, currentLanguage, objType) => {
       }
     });
   });
-  // gpUtils.consoleLogPurple("/convertMetaFeatures");
 };
 
 exports.decantMGNsInOutputArray = (questionOutputArr, currentLanguage) => {

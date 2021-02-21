@@ -89,7 +89,6 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
       if (!structureChunk.gender || !structureChunk.gender.length) {
         //Fill out if blank.
 
-        // if (!structureChunk.number || !structureChunk.number.length) {
         if (
           structureChunk.person &&
           structureChunk.person.length &&
@@ -99,22 +98,6 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
         } else {
           structureChunk.gender = metagenderRef["allGenders"].slice(0);
         }
-
-        // structureChunk.gender = ["m", "f", "n", "virile", "nonvirile"];
-        // } else {
-        //   structureChunk.gender = [];
-
-        //   if (structureChunk.number.includes("singular")) {
-        //     ["m", "f", "n"].forEach((genderValue) =>
-        //       structureChunk.gender.push(genderValue)
-        //     );
-        //   } //Yes, there is no 'else' between these two. They should both have ability to run.
-        //   if (structureChunk.number.includes("plural")) {
-        //     ["virile", "nonvirile"].forEach((genderValue) =>
-        //       structureChunk.gender.push(genderValue)
-        //     );
-        //   }
-        // }
       }
     }
   });
@@ -175,20 +158,6 @@ exports.preprocessLemmaObjectsMinor = (matches) => {
 };
 
 exports.formatFeatureValue = (featureKey, featureValue, note) => {
-  // const metagenderRef = {
-  //   allGenders: [
-  //     "allPersonalSingularGenders",
-  //     "allPersonalGenders",
-  //     "allSingularGenders",
-  //     "allPluralGenders",
-  //     "allGenders",
-  //   ],
-  //   allPersonalGenders: [
-  //     "allPersonalSingularGenders",
-  //     "allPluralGenders",
-  //     "allPersonalGenders",
-  //   ],
-  // };
   const metagenderRef = {
     allGenders: ["m", "f", "n", "virile", "nonvirile"],
     allPersonalGenders: ["m", "f", "virile", "nonvirile"],
@@ -219,31 +188,8 @@ exports.addLanguageParticularClarifiers = (
 
     //
     //Type 3 Synhomographs: Add clarifier for 2nd person singular vs plural. (Wasn't caught, as went through Ad-PW).
+    //Doesn't need to be done. Because all verbs will be tied to nouns or pronouns, even when such are invisible.
     //
-
-    //Ah! Actually this doesn't need to be done. Because all verbs will be tied to nouns or pronouns, even when such are invisible.
-    if (false) {
-      if (!structureChunk.person || !structureChunk.number) {
-        throw "ENG:addLanguageParticularClarifiers expected this verb structureChunk to have a Person and Number key.";
-      }
-      if (
-        !structureChunk.person.length > 1 ||
-        structureChunk.number.length > 1
-      ) {
-        throw "ENG:addLanguageParticularClarifiers expected this verb structureChunk's Person and Number key to have only one value each, not more.";
-      }
-
-      let person = structureChunk.person[0];
-      let number = structureChunk.number[0];
-
-      if (person === "2per") {
-        console.log(
-          "qjtk ENG addLanguageParticularClarifiers------------------------------------------ADDED CLARIFIER in Step 2, for Type 3 Syn",
-          number
-        );
-        structureChunk.annotations.number = number;
-      }
-    }
 
     //
     //Type 2 Synhomographs: Add clarifier for v1-v2 synhomography verbs.

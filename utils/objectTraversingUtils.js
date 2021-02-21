@@ -101,7 +101,7 @@ exports.findMatchingLemmaObjectThenWord = (
       );
     }
 
-    langUtils.preprocessLemmaObjectsMinor(matches); //Must be adjusted before aspect (a selector) filter is applied.
+    langUtils.preprocessLemmaObjectsMinor(matches);
 
     matches = lfUtils.filterBySelectors(
       currentLanguage,
@@ -199,7 +199,6 @@ exports.findMatchingLemmaObjectThenWord = (
         structureChunkUpdatedByAdhocOrUninflected: structureChunkUpdated,
       });
     }
-    // });
   }
 
   //((Ad-PW-I): Pathway for Adhoc INFLECTIONS.
@@ -609,7 +608,7 @@ exports.findMatchingLemmaObjectThenWord = (
         subArrayOfOutputUnits
       );
 
-      // throw "Cease.";
+      // Gamma: Is this done, then?
       //If the outputunits differ only in gender, and pleaseDontSpecifyPronounGender is true,
       //then... use both of the output units, rather than selectrandoming one... somehow.
 
@@ -661,12 +660,6 @@ exports.findMatchingLemmaObjectThenWord = (
             (pathArr) => pathArr[0] === "gender"
           )[1],
         ];
-
-        // mergedOutputUnit.drillPath.find(
-        //   (pathArr) => pathArr[0] === "gender"
-        // )[1] = "allPersonalSingularGenders";
-
-        // return mergedOutputUnit;
 
         subArrayOfOutputUnits.slice(1).forEach((outputUnit) => {
           let genderValue = outputUnit.drillPath.find(
@@ -745,7 +738,6 @@ exports.findMatchingLemmaObjectThenWord = (
         return false;
       }
 
-      // let selectedWord = selectedWordArray[0];
       let selectedItem = gpUtils.selectRandom(selectedWordArray);
       let selectedWord;
 
@@ -867,7 +859,6 @@ exports.createOutputUnit = (
     selectedWord,
     drillPath,
     structureChunk: structureChunk,
-    // structureChunk: gpUtils.copyWithoutReference(structureChunk),
   };
 };
 
@@ -930,10 +921,8 @@ exports.extractNestedRoutes = (source, includeTerminusObjectKeys) => {
   return { routesByNesting, routesByLevel };
 
   function recursivelyMapRoutes(arr, source) {
-    // if (typeof source !== "object" || Array.isArray(source)) {
     if (
       typeof source === "string" ||
-      // Array.isArray(source) || //Remove this Natasha.
       typeof source === "boolean" ||
       gpUtils.isTerminusObject(source)
     ) {
@@ -1065,9 +1054,6 @@ exports.giveRoutesAndTerminalValuesFromObject = (obj) => {
     } else {
       resArr.push({ terminalValue: value, nestedRoute });
     }
-
-    //Leaves terminal values that are arrays, as is.
-    // resArr.push({ value, nestedRoute });
   });
 
   return resArr;
@@ -1087,7 +1073,7 @@ exports.giveValueFromObjectByRoute = (obj, route) => {
 };
 
 exports.findSynhomographs = (lemmaObject, structureChunk, currentLanguage) => {
-  //Omega: How should this work re terminus objects?
+  //Gamma: How should this work re terminus objects?
 
   let inflectionLabelChain =
     refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[

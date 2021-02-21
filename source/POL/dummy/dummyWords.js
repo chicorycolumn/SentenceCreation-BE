@@ -157,7 +157,6 @@ let nounSet = [
       },
     },
   },
-  ////
   {
     id: "dummy-nou-001",
     lemma: "foobar_loc_only",

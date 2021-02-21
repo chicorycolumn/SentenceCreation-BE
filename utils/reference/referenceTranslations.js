@@ -36,6 +36,7 @@ exports.pluralVirilityAndSingularConversionRef = {
       n: ["n"],
       virile: ["m"],
       nonvirile: ["f", "n"],
+      //Epsilon: So is this deletable?
       // allPersonalGenders: ["m", "f", "virile", "nonvirile"],
       // allSingularGenders: ["m", "f", "n"],
       // allPersonalSingularGenders: ["m", "f"],

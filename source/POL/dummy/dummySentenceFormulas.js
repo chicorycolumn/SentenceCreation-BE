@@ -196,7 +196,7 @@ exports.dummySentenceFormulasBank = [
         gcase: ["nom"],
         number: ["singular"],
         gender: [],
-        specificLemmas: ["jabłko"], //This overrides andTags and select Random, and selectors. But requested inflections still work.
+        specificLemmas: ["jabłko"],
       },
     ],
     primaryOrders: [["fix-1", "nou-1"]],
@@ -214,7 +214,7 @@ exports.dummySentenceFormulasBank = [
         gcase: ["acc"],
         number: ["plural"],
         gender: [],
-        specificLemmas: ["jabłko", "majtki"], //This overrides andTags and select Random, and selectors. But requested inflections still work.
+        specificLemmas: ["jabłko", "majtki"],
       },
     ],
     primaryOrders: [["fix-1", "nou-1"]],
@@ -381,8 +381,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "ver-1",
-        wordtype: "verb", ///////////////
-        // aspect: ["perfective"],
+        wordtype: "verb",
         andTags: ["basic2"],
         form: ["anteriorAdverbial"],
       },
@@ -394,8 +393,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "ver-1",
-        wordtype: "verb", ///////////////
-        // aspect: ["perfective"],
+        wordtype: "verb",
         andTags: ["basic2"],
         form: ["anteriorAdverbial"],
         gender: ["f"],
@@ -408,8 +406,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "ver-1",
-        wordtype: "verb", /////////////
-        // aspect: ["perfective"],
+        wordtype: "verb",
         andTags: ["basic2"],
         gender: ["n", "virile"],
         person: ["2per"],
@@ -848,11 +845,8 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
-        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
-
-        // number: []
       },
       {
         chunkId: "ver-1",
@@ -860,7 +854,6 @@ exports.dummySentenceFormulasBank = [
         agreeWith: "pro-1",
         specificLemmas: ["być"],
         tenseDescription: ["present im", "past pf"],
-        // person: ["2per"],
         number: [],
       },
     ],
@@ -953,13 +946,13 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy34b",
     sentenceFormulaId: "POL-dummy34b",
-    translations: { ENG: ["ENG-dummy34a"] }, //Yes, this does indeed point from b to a...
+    translations: { ENG: ["ENG-dummy34a"] }, //Yes, this does indeed point from b to a.
     sentenceStructure: [
       {
         chunkId: "ver-1",
         wordtype: "verb",
         specificLemmas: ["być"],
-        tenseDescription: ["future im"], // ...because I am just testing this.
+        tenseDescription: ["future im"],
         person: ["1per"],
         number: ["singular"],
         gender: [],
@@ -1005,8 +998,6 @@ exports.dummySentenceFormulasBank = [
         chunkId: "nou-1",
         wordtype: "noun",
         andTags: ["farmyard"],
-        // specificLemmas: [],
-        // gcase: ["nom"]
       },
     ],
     primaryOrders: [],
@@ -1019,9 +1010,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "ver-1",
         wordtype: "verb",
-        // andTags: ["farmyard"],
         specificLemmas: ["być"],
-        // gcase: ["nom"]
       },
     ],
     primaryOrders: [],
@@ -1049,19 +1038,13 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1",
-        // wordtype: "pronoun",
-        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
-
-        // number: []
       },
       {
         chunkId: "ver-1",
-        // wordtype: "verb",
         agreeWith: "pro-1",
         specificLemmas: ["być"],
-        // person: ["2per"],
         tenseDescription: ["present im"],
       },
     ],
@@ -1075,18 +1058,14 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
-        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
-
-        // number: []
       },
       {
         chunkId: "ver-1",
         wordtype: "verb",
         agreeWith: "pro-1",
         andTags: ["basic3"],
-        // person: ["2per"],
         tenseDescription: ["present im"],
       },
     ],
@@ -1100,18 +1079,14 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
-        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
-
-        // number: []
       },
       {
         chunkId: "ver-1",
         wordtype: "verb",
         agreeWith: "pro-1",
         andTags: ["basic3"],
-        // person: ["2per"],
         tenseDescription: ["past pf"],
       },
     ],
@@ -1125,18 +1100,14 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
-        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
-
-        // number: []
       },
       {
         chunkId: "ver-1",
         wordtype: "verb",
         agreeWith: "pro-1",
         andTags: ["basic3"],
-        // person: ["2per"],
         tenseDescription: ["future im"],
       },
     ],
@@ -1249,7 +1220,6 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
-        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         number: ["singular"],
@@ -1267,7 +1237,6 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
-        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         number: ["singular"],
@@ -1293,7 +1262,6 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
-        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         gender: ["f"],
@@ -1319,11 +1287,9 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
-        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         number: ["singular"],
-        // gender: ["m1"],
         gcase: ["nom"],
       },
       {
@@ -1345,10 +1311,8 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
-        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
-        // gender: ["f"],
         number: ["plural"],
         gcase: ["nom"],
       },
@@ -1372,11 +1336,9 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
-        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         number: ["singular"],
-        // gender: ["m1"],
         gcase: ["nom"],
       },
       {
@@ -1398,10 +1360,8 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
-        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
-        // gender: ["f"],
         number: ["plural"],
         gcase: ["nom"],
       },
@@ -1419,12 +1379,11 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy50a",
     sentenceFormulaId: "POL-dummy50a",
-    translations: { ENG: ["ENG-dummy50a"] }, //Ja mam moje jabłko
+    translations: { ENG: ["ENG-dummy50a"] },
     sentenceStructure: [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
-        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
       },
@@ -1555,10 +1514,8 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
-        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
-        // number: []
       },
       {
         chunkId: "ver-1",
@@ -1566,7 +1523,6 @@ exports.dummySentenceFormulasBank = [
         agreeWith: "pro-1",
         specificLemmas: ["mieć"],
         tenseDescription: ["present im", "past pf"],
-        // person: ["2per"],
         number: [],
       },
     ],
@@ -1580,10 +1536,8 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         wordtype: "pronoun",
-        // form: ["pronoun"],
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
-        // number: []
       },
       {
         chunkId: "ver-1",
@@ -1591,7 +1545,6 @@ exports.dummySentenceFormulasBank = [
         agreeWith: "pro-1",
         specificLemmas: ["mieć"],
         tenseDescription: ["present im"],
-        // person: ["2per"],
         number: [],
       },
     ],
@@ -1685,13 +1638,13 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy54b",
     sentenceFormulaId: "POL-dummy54b",
-    translations: { ENG: ["ENG-dummy54a"] }, //Yes, this does indeed point from b to a...
+    translations: { ENG: ["ENG-dummy54a"] }, //Yes, this does indeed point from b to a.
     sentenceStructure: [
       {
         chunkId: "ver-1",
         wordtype: "verb",
         specificLemmas: ["mieć"],
-        tenseDescription: ["future im"], // ...because I am just testing this.
+        tenseDescription: ["future im"],
         person: ["1per"],
         number: ["singular"],
         gender: ["m1"],
@@ -1842,7 +1795,6 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "nou-1",
         wordtype: "noun",
-        // orTags: ["edible", "edible0"],
         specificLemmas: ["kobieta"],
         number: ["singular"],
       },
@@ -1874,8 +1826,6 @@ exports.dummySentenceFormulasBank = [
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
         gcase: ["acc"],
-        // gender: ["allPersonalGenders"],
-        // number: []
       },
     ],
     primaryOrders: [["nou-1", "ver-1", "pro-1"]],
