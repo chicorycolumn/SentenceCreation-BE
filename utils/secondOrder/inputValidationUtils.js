@@ -77,6 +77,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
 
       //3. Check if all values in featureValue if arr or string, are in this arr:
       //   Zeta: Interesting that even though it will throw error if a metafeature is present in the array, it doesn't throw.
+      //   That's because there are no sentenceFormulas that use any metaFeature values.
       let possibleValues = stChFeaturesRef[featureKey].possibleValues;
 
       if (possibleValues) {

@@ -18,6 +18,37 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
+  describe("/palette - Stage 17: Late February pickup.", () => {
+    it.only("#pal17-01a GET 200 YES: Select one gender, for MGN.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy58 doctor f",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "Doctor.",
+              POL: ["Lekarka."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+  });
+
   describe("/palette - Stage 16: NATASHA T. Checking how arrays as terminal points are handled.", () => {
     it("#pal16-01a GET 200 YES: Are correct members of an array returned as possible ANSWER, as they should be?", () => {
       const questionLanguage = "ENG";
@@ -1078,7 +1109,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          pleaseDontSpecify: false,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "114 doctor gave me her book",
@@ -1849,7 +1879,7 @@ describe("/api", () => {
           questionLanguage,
           answerLanguage,
           useDummy: true,
-          shouldOmitStChValidation: true,
+          devSaysOmitStChValidation: true,
           sentenceFormulaSymbol: "dummy57",
         })
         .expect(200)

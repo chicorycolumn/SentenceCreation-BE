@@ -106,7 +106,8 @@ exports.findMatchingLemmaObjectThenWord = (
     matches = lfUtils.filterBySelectors(
       currentLanguage,
       structureChunk,
-      matches
+      matches,
+      "matches line 106"
     );
 
     if (!matches.length) {
@@ -433,6 +434,8 @@ exports.findMatchingLemmaObjectThenWord = (
   //STEP FOUR: If-PW: Pathway for inflected forms, return word after selecting by drilling down through lemma object.
 
   //  STEP FOUR-A: Preparing materials
+
+  // A new stCh array. Eg in POL, split differential conditional tense+aspect into separate copies of one stCh.
   let structureChunksAdjusted = langUtils.adjustStructureChunksInIfPW(
     structureChunk
   );
@@ -460,7 +463,8 @@ exports.findMatchingLemmaObjectThenWord = (
     matchesCopy = lfUtils.filterBySelectors(
       currentLanguage,
       structureChunk,
-      matchesCopy
+      matchesCopy,
+      "matches 465"
     );
 
     if (!matchesCopy.length) {

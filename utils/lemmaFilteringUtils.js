@@ -619,14 +619,26 @@ exports.filterByKey = (
   }
 };
 
-exports.filterBySelectors = (currentLanguage, structureChunk, matches) => {
+exports.filterBySelectors = (
+  currentLanguage,
+  structureChunk,
+  matches,
+  consoleLogLabel
+) => {
   let selectors =
     refObj.lemmaObjectFeatures[currentLanguage].selectors[
       structureChunk.wordtype
     ];
 
+  console.log(
+    `rcwo filterBySelectors called from ${consoleLogLabel}. selectors are [${selectors}]`
+  );
+
   if (selectors) {
     selectors.forEach((selector) => {
+      console.log(
+        `bnxo filterBySelectors. Will call filterByKey for selector "${selector}"`
+      );
       matches = lfUtils.filterByKey(
         matches,
         structureChunk,

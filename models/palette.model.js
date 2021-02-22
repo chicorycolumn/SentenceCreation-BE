@@ -18,8 +18,8 @@ exports.fetchPalette = (req) => {
     questionLanguage,
     answerLanguage,
     pleaseDontSpecify,
-    shouldThrowAtMidpoint,
-    shouldOmitStChValidation,
+    devSaysThrowAtMidpoint,
+    devSaysOmitStChValidation,
   } = req.body;
 
   let { sentenceFormula, words } = scUtils.getMaterials(
@@ -41,7 +41,7 @@ exports.fetchPalette = (req) => {
   //Omega: Ultimately this needn't be done here, but rather, after creating a new sentenceFormula.
   //       Once it passes that, we know it's fine, so don't need to validate it every time down here.
   //       Although could be worth running this validation here during multipleMode.
-  if (!shouldOmitStChValidation) {
+  if (!devSaysOmitStChValidation) {
     ivUtils.validateSentenceFormula(sentenceFormula, questionLanguage);
   }
 
@@ -216,7 +216,7 @@ exports.fetchPalette = (req) => {
     gpUtils.consoleLogAestheticBorder(4);
   }
 
-  if (shouldThrowAtMidpoint) {
+  if (devSaysThrowAtMidpoint) {
     gpUtils.throw("Midpoint cease.");
   }
 
@@ -245,7 +245,7 @@ exports.fetchPalette = (req) => {
       //Omega: Ultimately this needn't be done here, but rather, after creating a new sentenceFormula.
       //       Once it passes that, we know it's fine, so don't need to validate it every time down here.
       //       Although could be worth running this validation here during multipleMode.
-      if (!shouldOmitStChValidation) {
+      if (!devSaysOmitStChValidation) {
         ivUtils.validateSentenceFormula(sentenceFormula, answerLanguage);
       }
 
