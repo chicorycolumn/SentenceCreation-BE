@@ -510,9 +510,29 @@ exports.decantMGNsBeforeOutputArray = (
           adjustedFeatureValueArr,
         });
 
-        structureChunk[featureKey] = [
-          gpUtils.selectRandom(adjustedFeatureValueArr),
-        ];
+        if (structureChunk[featureKey] && structureChunk[featureKey].length) {
+          let featureValuesInBothStChAndAdjustedArr = structureChunk[
+            featureKey
+          ].filter((featureValue) =>
+            adjustedFeatureValueArr.includes(featureValue)
+          );
+
+          if (!featureValuesInBothStChAndAdjustedArr.length) {
+            console.log(
+              "[1;31m " +
+                `nzig WARNING decantMGNsBeforeOutputArray. The featureValues for "${featureKey}" on stCh ${structureChunk.chunkId} were such that none matched any value in adjusted array.` +
+                "[0m"
+            );
+          }
+
+          structureChunk[featureKey] = [
+            gpUtils.selectRandom(featureValuesInBothStChAndAdjustedArr),
+          ];
+        } else {
+          structureChunk[featureKey] = [
+            gpUtils.selectRandom(adjustedFeatureValueArr),
+          ];
+        }
 
         console.log("jwgf decantMGNsBeforeOutputArray ", {
           "structureChunk[featureKey]": structureChunk[featureKey],

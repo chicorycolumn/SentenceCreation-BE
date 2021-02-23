@@ -554,8 +554,7 @@ exports.filterByAndTagsAndOrTags = (wordset, structureChunk) => {
   return lemmaObjects;
 };
 
-exports.filterByKey = (
-  lemmaObjectArr,
+exports.padOutRequirementArrWithMetaFeatures = (
   requirementArrs,
   key,
   currentLanguage
@@ -568,51 +567,74 @@ exports.filterByKey = (
   );
   console.log("opoq lf:filterByKey requirementArr starts as", requirementArr);
 
-  if (requirementArr) {
-    if (metaFeatureRef) {
-      requirementArr.forEach((featureValue) => {
-        //If the reqArr has a metafeature, all lObj with converted feature to pass filter.
-        if (/_/.test(featureValue)) {
-          let metaFeatureConverted = metaFeatureRef[featureValue];
+  if (metaFeatureRef) {
+    requirementArr.forEach((featureValue) => {
+      //If the reqArr has a metafeature, all lObj with converted feature to pass filter.
+      if (/_/.test(featureValue)) {
+        let metaFeatureConverted = metaFeatureRef[featureValue];
 
-          if (!metaFeatureConverted) {
-            gpUtils.throw(
-              "#ERR tufx lf:filterByKey. filterByKey need converted metafeature."
-            );
-          }
-
-          requirementArr = [...requirementArr, ...metaFeatureConverted];
+        if (!metaFeatureConverted) {
+          gpUtils.throw(
+            "#ERR tufx lf:filterByKey. filterByKey need converted metafeature."
+          );
         }
         console.log(
-          "sfrl lf:filterByKey requirementArr halfway through is",
-          requirementArr
+          `ndew filterByKey. Gonna push metaFeatureConverted [${metaFeatureConverted}]`
         );
-        //But also need do the inverse of this. If reqArr has 'f', then allow lObj to pass filter if lObj gender is 'allSingularGenders' eg.
-        Object.keys(metaFeatureRef).forEach((metaFeature) => {
-          let convertedMetaFeatureArr = metaFeatureRef[metaFeature];
+        requirementArr = [...requirementArr, ...metaFeatureConverted];
+      }
 
-          if (convertedMetaFeatureArr.includes(featureValue)) {
-            requirementArr.push(metaFeature);
-          }
-        });
+      //But also need do the inverse of this. If reqArr has 'f', then allow lObj to pass filter if lObj gender is 'allSingularGenders' eg.
+      Object.keys(metaFeatureRef).forEach((metaFeature) => {
+        let convertedMetaFeatureArr = metaFeatureRef[metaFeature];
+
+        if (
+          convertedMetaFeatureArr.includes(featureValue) &&
+          !requirementArr.includes(metaFeature)
+        ) {
+          console.log(
+            `exnh filterByKey. Gonna push metafeature "${metaFeature}"`
+          );
+          requirementArr.push(metaFeature);
+        }
       });
-    } else {
+
       console.log(
-        "[1;31m " +
-          `jwpv lf:filterByKey saw there was no metaFeatureRef for currentLanguage "${currentLanguage}" and key "${key}"` +
-          "[0m"
+        "sfrl lf:filterByKey requirementArr inside #requirementArr.forEach((featureValue)# is",
+        requirementArr
       );
-    }
+    });
+  } else {
+    console.log(
+      "[1;31m " +
+        `jwpv lf:filterByKey saw there was no metaFeatureRef for currentLanguage "${currentLanguage}" and key "${key}"` +
+        "[0m"
+    );
   }
 
   console.log("qyvu lf:filterByKey requirementArr ends as", requirementArr);
 
+  return requirementArr;
+};
+
+exports.filterByKey = (
+  lemmaObjectArr,
+  requirementArrs,
+  key,
+  currentLanguage
+) => {
+  let paddedRequirementArr = lfUtils.padOutRequirementArrWithMetaFeatures(
+    requirementArrs,
+    key,
+    currentLanguage
+  );
+
   //And finally, do said filter.
-  if (requirementArr.length) {
+  if (paddedRequirementArr.length) {
     return lemmaObjectArr.filter(
       (lObj) =>
-        requirementArr.includes(lObj[key]) ||
-        requirementArr.includes(lObj[key].split("_")[0])
+        paddedRequirementArr.includes(lObj[key]) ||
+        paddedRequirementArr.includes(lObj[key].split("_")[0])
     );
   } else {
     return lemmaObjectArr;
