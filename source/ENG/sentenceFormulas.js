@@ -710,4 +710,60 @@ exports.sentenceFormulasBank = [
       ],
     ],
   },
+  {
+    sentenceFormulaSymbol: "115 I saw my doctor and her doctor",
+    sentenceFormulaId: "ENG-115",
+    translations: { POL: ["POL-115"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificLemmas: ["PERSONAL"],
+        person: ["1per"],
+      },
+      {
+        chunkId: "ver-1-see",
+        agreeWith: "pro-1-I",
+        specificLemmas: ["see"],
+        tenseDescription: ["past simple"],
+      },
+      {
+        chunkId: "pro-2-my",
+        form: ["determiner"],
+        specificLemmas: ["POSSESSIVE"],
+        agreeWith: "pro-1-I",
+      },
+      {
+        chunkId: "nou-1-doctor",
+        andTags: ["person"],
+        gcase: ["nom"],
+        number: ["singular"],
+        specificLemmas: ["doctor"],
+      },
+      { chunkId: "fix-1-and", value: "and" },
+      {
+        chunkId: "pro-3-his",
+        form: ["determiner"],
+        specificLemmas: ["POSSESSIVE"],
+        agreeWith: "nou-1-doctor",
+      },
+      {
+        chunkId: "nou-2-doctor",
+        andTags: ["person"],
+        gcase: ["nom"],
+        number: ["singular"],
+        specificLemmas: ["doctor"],
+      },
+    ],
+    primaryOrders: [
+      [
+        "pro-1-I",
+        "ver-1-see",
+        "pro-2-my",
+        "nou-1-doctor",
+        "fix-1-and",
+        "pro-3-his",
+        "nou-2-doctor",
+      ],
+    ],
+  },
 ];

@@ -1219,6 +1219,66 @@ describe("/api", () => {
           );
         });
     });
+    it.only("#pal14-05a GET 200 YES: ENG to POL. I saw my doctor and his doctor.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "115 I saw my doctor and her doctor",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "I (m) saw my doctor (m) and his doctor (m).",
+              POL: ["Widziałem mojego lekarza i jego lekarza."],
+            },
+            {
+              ENG: "I (f) saw my doctor (m) and his doctor (m).",
+              POL: ["Widziałam mojego lekarza i jego lekarza."],
+            },
+            //
+            {
+              ENG: "I (m) saw my doctor (m) and his doctor (f).",
+              POL: ["Widziałem mojego lekarza i jego lekarkę."],
+            },
+            {
+              ENG: "I (f) saw my doctor (m) and his doctor (f).",
+              POL: ["Widziałam mojego lekarza i jego lekarkę."],
+            },
+            //
+            {
+              ENG: "I (m) saw my doctor (f) and her doctor (m).",
+              POL: ["Widziałem moją lekarkę i jej lekarza."],
+            },
+            {
+              ENG: "I (f) saw my doctor (f) and her doctor (m).",
+              POL: ["Widziałam moją lekarkę i jej lekarza."],
+            },
+            //
+            {
+              ENG: "I (m) saw my doctor (f) and her doctor (f).",
+              POL: ["Widziałem moją lekarkę i jej lekarkę."],
+            },
+            {
+              ENG: "I (f) saw my doctor (f) and her doctor (f).",
+              POL: ["Widziałam moją lekarkę i jej lekarkę."],
+            },
+            //
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
   });
 
   describe("/palette - Stage 13B: Pronouns and other Multi Gender Nouns: Further tests.", () => {
