@@ -1111,6 +1111,7 @@ exports.sentenceFormulasBank = [
         chunkId: "pro-1-I",
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
+        number: ["singular"],
       },
       {
         chunkId: "ver-1-see",
@@ -1152,7 +1153,7 @@ exports.sentenceFormulasBank = [
     ],
     primaryOrders: [
       [
-        "pro-1-I",
+        // "pro-1-I",
         "ver-1-see",
         "pro-2-my",
         "nou-1-doctor",

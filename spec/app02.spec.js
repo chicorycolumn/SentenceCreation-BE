@@ -19,7 +19,7 @@ describe("/api", () => {
   // beforeEach(() => {});
 
   describe("/palette - Stage 17: Late February pickup.", () => {
-    it.only("#pal17-01a GET 200 YES: Select one gender, for MGN.", () => {
+    it("#pal17-01a GET 200 YES: Select one gender, for MGN.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1226,7 +1226,7 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          pleaseDontSpecify: true,
+          // pleaseDontSpecify: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "115 I saw my doctor and her doctor",
@@ -1235,39 +1235,39 @@ describe("/api", () => {
         .then((res) => {
           let ref = [
             {
-              ENG: "I (m) saw my doctor (m) and his doctor (m).",
-              POL: ["Widziałem mojego lekarza i jego lekarza."],
+              ENG: "I (male) saw my doctor (male) and his doctor (male).",
+              POL: ["Zobaczyłem mojego lekarza i jego lekarza."],
             },
             {
-              ENG: "I (f) saw my doctor (m) and his doctor (m).",
-              POL: ["Widziałam mojego lekarza i jego lekarza."],
-            },
-            //
-            {
-              ENG: "I (m) saw my doctor (m) and his doctor (f).",
-              POL: ["Widziałem mojego lekarza i jego lekarkę."],
-            },
-            {
-              ENG: "I (f) saw my doctor (m) and his doctor (f).",
-              POL: ["Widziałam mojego lekarza i jego lekarkę."],
+              ENG: "I (female) saw my doctor (male) and his doctor (male).",
+              POL: ["Zobaczyłam mojego lekarza i jego lekarza."],
             },
             //
             {
-              ENG: "I (m) saw my doctor (f) and her doctor (m).",
-              POL: ["Widziałem moją lekarkę i jej lekarza."],
+              ENG: "I (male) saw my doctor (male) and his doctor (female).",
+              POL: ["Zobaczyłem mojego lekarza i jego lekarkę."],
             },
             {
-              ENG: "I (f) saw my doctor (f) and her doctor (m).",
-              POL: ["Widziałam moją lekarkę i jej lekarza."],
+              ENG: "I (female) saw my doctor (male) and his doctor (female).",
+              POL: ["Zobaczyłam mojego lekarza i jego lekarkę."],
             },
             //
             {
-              ENG: "I (m) saw my doctor (f) and her doctor (f).",
-              POL: ["Widziałem moją lekarkę i jej lekarkę."],
+              ENG: "I (male) saw my doctor (female) and her doctor (male).",
+              POL: ["Zobaczyłem moją lekarkę i jej lekarza."],
             },
             {
-              ENG: "I (f) saw my doctor (f) and her doctor (f).",
-              POL: ["Widziałam moją lekarkę i jej lekarkę."],
+              ENG: "I (female) saw my doctor (female) and her doctor (male).",
+              POL: ["Zobaczyłam moją lekarkę i jej lekarza."],
+            },
+            //
+            {
+              ENG: "I (male) saw my doctor (female) and her doctor (female).",
+              POL: ["Zobaczyłem moją lekarkę i jej lekarkę."],
+            },
+            {
+              ENG: "I (female) saw my doctor (female) and her doctor (female).",
+              POL: ["Zobaczyłam moją lekarkę i jej lekarkę."],
             },
             //
           ];
