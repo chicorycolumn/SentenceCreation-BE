@@ -1279,6 +1279,34 @@ describe("/api", () => {
           );
         });
     });
+    it.only("#pal14-05c GET 200 YES: ENG to POL. My doctor was a woman. Testing possibility of nouns agreeing with nouns.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "116 My doctor was a woman",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "My doctor was a woman.",
+              POL: ["Moja lekarka była lekarką."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
   });
 
   describe("/palette - Stage 13B: Pronouns and other Multi Gender Nouns: Further tests.", () => {

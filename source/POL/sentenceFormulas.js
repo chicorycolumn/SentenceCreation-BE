@@ -1163,4 +1163,55 @@ exports.sentenceFormulasBank = [
       ],
     ],
   },
+  {
+    sentenceFormulaSymbol: "116 My doctor was a woman",
+    sentenceFormulaId: "POL-116",
+    translations: { ENG: ["ENG-116"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificLemmas: ["PERSONAL"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "pro-2-my",
+        form: ["determiner"],
+        specificLemmas: ["POSSESSIVE"],
+        postHocAgreeWithPrimary: "pro-1-I",
+        postHocAgreeWithSecondary: "nou-1-doctor",
+      },
+      {
+        chunkId: "nou-1-doctor",
+        andTags: ["person"],
+        gcase: ["nom"],
+        number: ["singular"],
+        specificLemmas: ["lekarz", "lekarka"],
+        gcase: ["acc"],
+        gender: ["f"],
+      },
+      {
+        chunkId: "ver-1-was",
+        agreeWith: "nou-1-doctor",
+        specificLemmas: ["być"],
+        tenseDescription: ["past pf"],
+      },
+      {
+        chunkId: "nou-2-woman",
+        andTags: ["person"],
+        gcase: ["ins"],
+        number: ["singular"],
+        specificLemmas: ["kobieta"],
+      },
+    ],
+    primaryOrders: [
+      [
+        // "pro-1-I",
+        "pro-2-my",
+        "nou-1-doctor",
+        "ver-1-was",
+        "nou-2-woman",
+      ],
+    ],
+  },
 ];
