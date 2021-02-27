@@ -791,6 +791,7 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
         specificLemmas: ["doctor"],
         gender: ["f"],
+        shouldOverrideClarifiers: true, //Because in this specific sentenceFormula, we the educator know gender will be clear from context.
       },
       {
         chunkId: "ver-1-was",

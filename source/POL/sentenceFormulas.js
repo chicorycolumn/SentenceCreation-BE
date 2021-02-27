@@ -1187,7 +1187,7 @@ exports.sentenceFormulasBank = [
         gcase: ["nom"],
         number: ["singular"],
         specificLemmas: ["lekarz", "lekarka"],
-        gcase: ["acc"],
+        gcase: ["nom"],
         gender: ["f"],
       },
       {

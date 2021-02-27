@@ -243,6 +243,11 @@ exports.processSentenceFormula = (
   });
 
   explodedOutputArraysWithHeads.forEach((arr) => {
+    console.log(
+      "mocu processSentenceFormula explodedOutputArraysWithHeads arr:",
+      arr
+    );
+
     let result = gpUtils.explodeOutputArraysByHeadsAndDependents(arr);
     grandOutputArray.push(...result);
   });
@@ -605,7 +610,8 @@ exports.selectWordVersions = (
         "string",
         selectedWord,
         selectedWordsArr,
-        firstStagePassingAnnotationsArr
+        firstStagePassingAnnotationsArr,
+        structureChunk
       );
       return;
     }
@@ -689,7 +695,8 @@ exports.selectWordVersions = (
               "protective",
               selectedWord,
               selectedWordsArr,
-              firstStagePassingAnnotationsArr
+              firstStagePassingAnnotationsArr,
+              structureChunk
             );
             return;
           } else {
@@ -697,7 +704,8 @@ exports.selectWordVersions = (
               "nonprotective",
               selectedWord,
               selectedWordsArr,
-              firstStagePassingAnnotationsArr
+              firstStagePassingAnnotationsArr,
+              structureChunk
             );
             return;
           }
@@ -722,7 +730,8 @@ exports.selectWordVersions = (
               "postPreposition",
               selectedWord,
               selectedWordsArr,
-              firstStagePassingAnnotationsArr
+              firstStagePassingAnnotationsArr,
+              structureChunk
             );
             return;
           } else {
@@ -752,7 +761,8 @@ exports.selectWordVersions = (
               "array",
               combinedSelectedWordsArr,
               selectedWordsArr,
-              firstStagePassingAnnotationsArr
+              firstStagePassingAnnotationsArr,
+              structureChunk
             );
             return;
           }
@@ -791,7 +801,8 @@ exports.selectWordVersions = (
               "protective",
               selectedWord,
               selectedWordsArr,
-              firstStagePassingAnnotationsArr
+              firstStagePassingAnnotationsArr,
+              structureChunk
             );
             return;
           } else {
@@ -799,7 +810,8 @@ exports.selectWordVersions = (
               "nonprotective",
               selectedWord,
               selectedWordsArr,
-              firstStagePassingAnnotationsArr
+              firstStagePassingAnnotationsArr,
+              structureChunk
             );
             return;
           }
@@ -809,7 +821,8 @@ exports.selectWordVersions = (
           "normal",
           selectedWord,
           selectedWordsArr,
-          firstStagePassingAnnotationsArr
+          firstStagePassingAnnotationsArr,
+          structureChunk
         );
       }
     } else {
@@ -822,7 +835,8 @@ exports.selectWordVersions = (
       key,
       selectedWord,
       selectedWordsArr,
-      annoArr
+      annoArr,
+      structureChunk
     ) {
       console.log(
         "[1;30m " + `esbq pushSelectedWordToArray-----------------with args:` + "[0m",
@@ -834,7 +848,13 @@ exports.selectWordVersions = (
         }
       );
 
-      function addAnnotationsAndPush(wordInOwnArr, selectedWordsArr, annoArr) {
+      function addAnnotationsAndPush(
+        wordInOwnArr,
+        selectedWordsArr,
+        annoArr,
+        structureChunk
+      ) {
+        console.log("ceku addAnnotationsAndPush " + wordInOwnArr);
         if (annoArr && annoArr.length) {
           if (wordInOwnArr.length !== 1) {
             gpUtils.throw(
@@ -842,7 +862,18 @@ exports.selectWordVersions = (
             );
           }
 
-          wordInOwnArr[0] += ` (${annoArr.join(", ")})`;
+          if (structureChunk.shouldOverrideClarifiers) {
+            console.log(
+              `mcik addAnnotationsAndPush will not add clarifiers [${annoArr}] as "shouldOverrideClarifiers" true.`
+            );
+          } else {
+            console.log(
+              "vprg pushSelectedWordToArray addAnnotationsAndPush. Adding these annotations:" +
+                annoArr.join(", ")
+            );
+
+            wordInOwnArr[0] += ` (${annoArr.join(", ")})`;
+          }
         }
 
         selectedWordsArr.push(wordInOwnArr);
@@ -853,7 +884,12 @@ exports.selectWordVersions = (
           "[1;30m " + `uufy pushSelectedWordToArray Pushing "${selectedWord}"` + "[0m"
         );
 
-        addAnnotationsAndPush([selectedWord], selectedWordsArr, annoArr);
+        addAnnotationsAndPush(
+          [selectedWord],
+          selectedWordsArr,
+          annoArr,
+          structureChunk
+        );
         return;
       }
 
@@ -861,7 +897,12 @@ exports.selectWordVersions = (
         console.log(
           "[1;30m " + `uufy pushSelectedWordToArray Pushing "${selectedWord}"` + "[0m"
         );
-        addAnnotationsAndPush(selectedWord, selectedWordsArr, annoArr);
+        addAnnotationsAndPush(
+          selectedWord,
+          selectedWordsArr,
+          annoArr,
+          structureChunk
+        );
         return;
       }
 
@@ -890,7 +931,12 @@ exports.selectWordVersions = (
       console.log(
         "[1;30m " + `oqij selectWordVersions Pushing arr "${selectedWord[key]}"` + "[0m"
       );
-      addAnnotationsAndPush(selectedWord[key], selectedWordsArr, annoArr);
+      addAnnotationsAndPush(
+        selectedWord[key],
+        selectedWordsArr,
+        annoArr,
+        structureChunk
+      );
     }
 
     console.log("oadb selectWordVersions", { selectedWord });

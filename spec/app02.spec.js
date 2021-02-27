@@ -1219,7 +1219,10 @@ describe("/api", () => {
           );
         });
     });
-    it.only("#pal14-05a GET 200 YES: ENG to POL. I saw my doctor and his doctor.", () => {
+    //
+    //
+    //
+    it("#pal14-05a GET 200 YES: ENG to POL. I saw my doctor and his doctor.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1296,7 +1299,7 @@ describe("/api", () => {
           let ref = [
             {
               ENG: "My doctor was a woman.",
-              POL: ["Moja lekarka była lekarką."],
+              POL: ["Moja lekarka była kobietą."],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
