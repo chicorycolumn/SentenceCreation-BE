@@ -1282,6 +1282,66 @@ describe("/api", () => {
           );
         });
     });
+    it("#pal14-05b GET 200 YES: POL to ENG. I saw my doctor and his doctor.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "115 I saw my doctor and her doctor",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["I saw my doctor and his doctor."],
+              POL: "Zobaczyłem mojego lekarza i jego lekarza.",
+            },
+            {
+              ENG: ["I saw my doctor and his doctor."],
+              POL: "Zobaczyłam mojego lekarza i jego lekarza.",
+            },
+            //
+            {
+              ENG: ["I saw my doctor and his doctor."],
+              POL: "Zobaczyłem mojego lekarza i jego lekarkę.",
+            },
+            {
+              ENG: ["I saw my doctor and his doctor."],
+              POL: "Zobaczyłam mojego lekarza i jego lekarkę.",
+            },
+            //
+            {
+              ENG: ["I saw my doctor and her doctor."],
+              POL: "Zobaczyłem moją lekarkę i jej lekarza.",
+            },
+            {
+              ENG: ["I saw my doctor and her doctor."],
+              POL: "Zobaczyłam moją lekarkę i jej lekarza.",
+            },
+            //
+            {
+              ENG: ["I saw my doctor and her doctor."],
+              POL: "Zobaczyłem moją lekarkę i jej lekarkę.",
+            },
+            {
+              ENG: ["I saw my doctor and her doctor."],
+              POL: "Zobaczyłam moją lekarkę i jej lekarkę.",
+            },
+            //
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
     it.only("#pal14-05c GET 200 YES: ENG to POL. My doctor was a woman. Testing possibility of nouns agreeing with nouns.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
