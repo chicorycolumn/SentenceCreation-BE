@@ -812,4 +812,118 @@ exports.sentenceFormulasBank = [
       ["pro-2-my", "nou-1-doctor", "ver-1-was", "fix-1-a", "nou-2-woman"],
     ],
   },
+  {
+    sentenceFormulaSymbol: "118 My doctor and his book",
+    sentenceFormulaId: "ENG-118",
+    translations: { POL: ["POL-118"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-0-I-invisible",
+        specificLemmas: ["PERSONAL"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "pro-1-my",
+        form: ["determiner"],
+        specificLemmas: ["POSSESSIVE"],
+        agreeWith: "pro-0-I-invisible",
+      },
+      {
+        chunkId: "nou-1-doctor",
+        andTags: ["person"],
+        gcase: ["nom"],
+        number: ["singular"],
+        specificLemmas: ["doctor"],
+        // gender: ["f"],
+      },
+      { chunkId: "fix-1-and", value: "and" },
+      {
+        chunkId: "pro-2-his",
+        form: ["determiner"],
+        specificLemmas: ["POSSESSIVE"],
+        agreeWith: "nou-1-doctor",
+      },
+      {
+        chunkId: "nou-2-book",
+        gcase: ["nom"],
+        number: ["singular"],
+        specificLemmas: ["book"],
+      },
+    ],
+    primaryOrders: [
+      ["pro-1-my", "nou-1-doctor", "fix-1-and", "pro-2-his", "nou-2-book"],
+    ],
+  },
+  {
+    sentenceFormulaSymbol: "118a My doctor and my book",
+    sentenceFormulaId: "ENG-118a",
+    translations: { POL: ["POL-118a"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-0-I-invisible",
+        specificLemmas: ["PERSONAL"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "pro-1-my",
+        form: ["determiner"],
+        specificLemmas: ["POSSESSIVE"],
+        agreeWith: "pro-0-I-invisible",
+      },
+      {
+        chunkId: "nou-1-doctor",
+        andTags: ["person"],
+        gcase: ["nom"],
+        number: ["singular"],
+        specificLemmas: ["doctor"],
+        // gender: ["f"],
+      },
+      { chunkId: "fix-1-and", value: "and" },
+      {
+        chunkId: "pro-2-my",
+        form: ["determiner"],
+        specificLemmas: ["POSSESSIVE"],
+        agreeWith: "pro-0-I-invisible",
+      },
+      {
+        chunkId: "nou-2-book",
+        gcase: ["nom"],
+        number: ["singular"],
+        specificLemmas: ["book"],
+      },
+    ],
+    primaryOrders: [
+      ["pro-1-my", "nou-1-doctor", "fix-1-and", "pro-2-my", "nou-2-book"],
+    ],
+  },
+  {
+    sentenceFormulaSymbol: "118b My doctor",
+    sentenceFormulaId: "ENG-118b",
+    translations: { POL: ["POL-118b"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-0-I-invisible",
+        specificLemmas: ["PERSONAL"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "pro-1-my",
+        form: ["determiner"],
+        specificLemmas: ["POSSESSIVE"],
+        agreeWith: "pro-0-I-invisible",
+      },
+      {
+        chunkId: "nou-1-doctor",
+        andTags: ["person"],
+        gcase: ["nom"],
+        number: ["singular"],
+        specificLemmas: ["doctor"],
+        // gender: ["f"],
+      },
+    ],
+    primaryOrders: [["pro-1-my", "nou-1-doctor"]],
+  },
 ];

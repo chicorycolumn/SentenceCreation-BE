@@ -18,7 +18,7 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe("/palette - Stage 17: Late February pickup.", () => {
+  describe.only("/palette - Stage 17: Possessive pronouns and MGNs.", () => {
     it("#pal17-01a GET 200 YES: Select one gender, for MGN.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -37,6 +37,256 @@ describe("/api", () => {
             {
               ENG: "Doctor.",
               POL: ["Lekarka."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    //
+    //
+    //
+    it("#pal17-02a GET 200 YES: ENG to POL. MGN and agreeing possessive pronoun. No clarifier as connected pronoun REVEALS the gender of MGN.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "118 My doctor and his book",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "My doctor and his book.",
+              POL: ["Mój lekarz i jego książka."],
+            },
+            {
+              ENG: "My doctor and her book.",
+              POL: ["Moja lekarka i jej książka."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal17-02b GET 200 YES: ENG to POL. MGN and agreeing possessive pronoun. Yes clarifier as connected pronoun DOESN'T reveal the gender of MGN.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "118a My doctor and my book",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "My doctor (male) and my book.",
+              POL: ["Mój lekarz i moja książka."],
+            },
+            {
+              ENG: "My doctor (female) and my book.",
+              POL: ["Moja lekarka i moja książka."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal17-02c GET 200 YES: ENG to POL. MGN and agreeing possessive pronoun. Yes clarifier as connected pronoun DOESN'T reveal the gender of MGN.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "118b My doctor",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "My doctor (male).",
+              POL: ["Mój lekarz."],
+            },
+            {
+              ENG: "My doctor (female).",
+              POL: ["Moja lekarka."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    //
+    //
+    //
+    it("#pal17-03a GET 200 YES: ENG to POL. Sentence with 2 of same MGN. Do specify.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "115 I saw my doctor and her doctor",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "I (male) saw my doctor (male) and his doctor (male).",
+              POL: ["Zobaczyłem mojego lekarza i jego lekarza."],
+            },
+            {
+              ENG: "I (female) saw my doctor (male) and his doctor (male).",
+              POL: ["Zobaczyłam mojego lekarza i jego lekarza."],
+            },
+            //
+            {
+              ENG: "I (male) saw my doctor (male) and his doctor (female).",
+              POL: ["Zobaczyłem mojego lekarza i jego lekarkę."],
+            },
+            {
+              ENG: "I (female) saw my doctor (male) and his doctor (female).",
+              POL: ["Zobaczyłam mojego lekarza i jego lekarkę."],
+            },
+            //
+            {
+              ENG: "I (male) saw my doctor (female) and her doctor (male).",
+              POL: ["Zobaczyłem moją lekarkę i jej lekarza."],
+            },
+            {
+              ENG: "I (female) saw my doctor (female) and her doctor (male).",
+              POL: ["Zobaczyłam moją lekarkę i jej lekarza."],
+            },
+            //
+            {
+              ENG: "I (male) saw my doctor (female) and her doctor (female).",
+              POL: ["Zobaczyłem moją lekarkę i jej lekarkę."],
+            },
+            {
+              ENG: "I (female) saw my doctor (female) and her doctor (female).",
+              POL: ["Zobaczyłam moją lekarkę i jej lekarkę."],
+            },
+            //
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal17-03b GET 200 YES: POL to ENG. Sentence with 2 of same MGN. Do specify.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "115 I saw my doctor and her doctor",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["I saw my doctor and his doctor."],
+              POL: "Zobaczyłem mojego lekarza i jego lekarza.",
+            },
+            {
+              ENG: ["I saw my doctor and his doctor."],
+              POL: "Zobaczyłam mojego lekarza i jego lekarza.",
+            },
+            //
+            {
+              ENG: ["I saw my doctor and his doctor."],
+              POL: "Zobaczyłem mojego lekarza i jego lekarkę.",
+            },
+            {
+              ENG: ["I saw my doctor and his doctor."],
+              POL: "Zobaczyłam mojego lekarza i jego lekarkę.",
+            },
+            //
+            {
+              ENG: ["I saw my doctor and her doctor."],
+              POL: "Zobaczyłem moją lekarkę i jej lekarza.",
+            },
+            {
+              ENG: ["I saw my doctor and her doctor."],
+              POL: "Zobaczyłam moją lekarkę i jej lekarza.",
+            },
+            //
+            {
+              ENG: ["I saw my doctor and her doctor."],
+              POL: "Zobaczyłem moją lekarkę i jej lekarkę.",
+            },
+            {
+              ENG: ["I saw my doctor and her doctor."],
+              POL: "Zobaczyłam moją lekarkę i jej lekarkę.",
+            },
+            //
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal17-04a GET 200 YES: ENG to POL. My doctor was a woman. Testing possibility of nouns agreeing with nouns.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "116 My doctor was a woman",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "My doctor was a woman.",
+              POL: ["Moja lekarka była kobietą."],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -1209,157 +1459,6 @@ describe("/api", () => {
                 "Lekarki dały mi ich książkę.",
                 "Lekarki dały mnie ich książkę.",
               ],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    //
-    //
-    //
-    it("#pal14-05a GET 200 YES: ENG to POL. I saw my doctor and his doctor.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "115 I saw my doctor and her doctor",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "I (male) saw my doctor (male) and his doctor (male).",
-              POL: ["Zobaczyłem mojego lekarza i jego lekarza."],
-            },
-            {
-              ENG: "I (female) saw my doctor (male) and his doctor (male).",
-              POL: ["Zobaczyłam mojego lekarza i jego lekarza."],
-            },
-            //
-            {
-              ENG: "I (male) saw my doctor (male) and his doctor (female).",
-              POL: ["Zobaczyłem mojego lekarza i jego lekarkę."],
-            },
-            {
-              ENG: "I (female) saw my doctor (male) and his doctor (female).",
-              POL: ["Zobaczyłam mojego lekarza i jego lekarkę."],
-            },
-            //
-            {
-              ENG: "I (male) saw my doctor (female) and her doctor (male).",
-              POL: ["Zobaczyłem moją lekarkę i jej lekarza."],
-            },
-            {
-              ENG: "I (female) saw my doctor (female) and her doctor (male).",
-              POL: ["Zobaczyłam moją lekarkę i jej lekarza."],
-            },
-            //
-            {
-              ENG: "I (male) saw my doctor (female) and her doctor (female).",
-              POL: ["Zobaczyłem moją lekarkę i jej lekarkę."],
-            },
-            {
-              ENG: "I (female) saw my doctor (female) and her doctor (female).",
-              POL: ["Zobaczyłam moją lekarkę i jej lekarkę."],
-            },
-            //
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    it("#pal14-05b GET 200 YES: POL to ENG. I saw my doctor and his doctor.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "115 I saw my doctor and her doctor",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["I saw my doctor and his doctor."],
-              POL: "Zobaczyłem mojego lekarza i jego lekarza.",
-            },
-            {
-              ENG: ["I saw my doctor and his doctor."],
-              POL: "Zobaczyłam mojego lekarza i jego lekarza.",
-            },
-            //
-            {
-              ENG: ["I saw my doctor and his doctor."],
-              POL: "Zobaczyłem mojego lekarza i jego lekarkę.",
-            },
-            {
-              ENG: ["I saw my doctor and his doctor."],
-              POL: "Zobaczyłam mojego lekarza i jego lekarkę.",
-            },
-            //
-            {
-              ENG: ["I saw my doctor and her doctor."],
-              POL: "Zobaczyłem moją lekarkę i jej lekarza.",
-            },
-            {
-              ENG: ["I saw my doctor and her doctor."],
-              POL: "Zobaczyłam moją lekarkę i jej lekarza.",
-            },
-            //
-            {
-              ENG: ["I saw my doctor and her doctor."],
-              POL: "Zobaczyłem moją lekarkę i jej lekarkę.",
-            },
-            {
-              ENG: ["I saw my doctor and her doctor."],
-              POL: "Zobaczyłam moją lekarkę i jej lekarkę.",
-            },
-            //
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    it.only("#pal14-05c GET 200 YES: ENG to POL. My doctor was a woman. Testing possibility of nouns agreeing with nouns.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "116 My doctor was a woman",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "My doctor was a woman.",
-              POL: ["Moja lekarka była kobietą."],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
