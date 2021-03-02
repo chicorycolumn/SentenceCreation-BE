@@ -146,6 +146,70 @@ describe("/api", () => {
           );
         });
     });
+    it("#pal17-02d GET 200 YES: POL to ENG. MGN and agreeing possessive pronoun.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "118a My doctor and my book",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["My doctor and my book."],
+              POL: "Mój lekarz i moja książka.",
+            },
+            {
+              ENG: ["My doctor and my book."],
+              POL: "Moja lekarka i moja książka.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal17-02e GET 200 YES: POL to ENG. MGN and agreeing possessive pronoun.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "118b My doctor",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["My doctor."],
+              POL: "Mój lekarz.",
+            },
+            {
+              ENG: ["My doctor."],
+              POL: "Moja lekarka.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
     //
     //
     //
