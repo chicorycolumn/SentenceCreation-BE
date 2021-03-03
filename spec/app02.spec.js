@@ -361,6 +361,34 @@ describe("/api", () => {
           );
         });
     });
+    it("#pal17-04a GET 200 YES: POL to ENG. My doctor was a woman. Testing possibility of nouns agreeing with nouns.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "116 My doctor was a woman",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["My doctor was a woman."],
+              POL: "Moja lekarka była kobietą.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
   });
 
   describe("/palette - Stage 16: NATASHA T. Checking how arrays as terminal points are handled.", () => {
