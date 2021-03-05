@@ -110,7 +110,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal17-02b GET 200 YES: ENG to POL. MGN and agreeing possessive pronoun. Yes clarifier as connected pronoun DOESN'T reveal the gender of MGN.", () => {
+    it.only("#pal17-02b GET 200 YES: ENG to POL. MGN and agreeing possessive pronoun. Yes clarifier as connected pronoun DOESN'T reveal the gender of MGN.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -142,7 +142,38 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal17-02c GET 200 YES: ENG to POL. MGN and agreeing possessive pronoun. Yes clarifier as connected pronoun DOESN'T reveal the gender of MGN.", () => {
+    it("#pal17-02c GET 200 YES: ENG to POL. MGN and agreeing possessive pronoun. Asked not to specify.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "118a My doctor and my book",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "My doctor and my book.",
+              POL: [
+                "Mój lekarz i moja książka.",
+                "Moja lekarka i moja książka.",
+              ],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal17-02d GET 200 YES: ENG to POL. MGN and agreeing possessive pronoun. Yes clarifier as connected pronoun DOESN'T reveal the gender of MGN.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -174,7 +205,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal17-02d GET 200 YES: POL to ENG. MGN and agreeing possessive pronoun.", () => {
+    it("#pal17-02e GET 200 YES: POL to ENG. MGN and agreeing possessive pronoun.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -206,7 +237,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal17-02e GET 200 YES: POL to ENG. MGN and agreeing possessive pronoun.", () => {
+    it("#pal17-02f GET 200 YES: POL to ENG. MGN and agreeing possessive pronoun.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -361,6 +392,9 @@ describe("/api", () => {
           );
         });
     });
+    //
+    //
+    //
     it("#pal17-04a GET 200 YES: ENG to POL. My doctor was a woman. Testing possibility of nouns agreeing with nouns.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
