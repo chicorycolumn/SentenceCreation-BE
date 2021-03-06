@@ -353,7 +353,10 @@ exports.addSpecifiers = (
   questionOutputArr,
   languagesObj
 ) => {
-  console.log("[1;30m " + `----addSpecifiers------` + "[0m");
+  console.log("[1;30m " + `----addSpecifiers------liht` + "[0m");
+  console.log("liht answerSentenceFormula", answerSentenceFormula);
+  console.log("liht questionOutputArr", questionOutputArr);
+  console.log("liht languagesObj", languagesObj);
 
   //STEP ZERO: Getting materials
 
@@ -378,10 +381,25 @@ exports.addSpecifiers = (
     answerSentenceStructure
   );
 
-  //STEP ONE: Do a special thing for Multi Gender Nouns
+  console.log("pplp answerDependentChunks", answerDependentChunks);
+
+  //STEP ONE: Do a special thing for Multi Gender Nouns via answerDependentChunks.
   //            ie lObjs with gender: "allPersonalSingularGenders_selector"
   //            But we will check all metaGenders.
   answerDependentChunks.forEach((answerDependentChunk) => {
+    if (
+      ["fixed", "article"].includes(
+        gpUtils.getWordtypeFromStructureChunk(answerDependentChunk)
+      )
+    ) {
+      return;
+    }
+
+    console.log(" ");
+    console.log(
+      `     wdma addSpecifiers. answerDependentChunk                    "${answerDependentChunk.chunkId}"`
+    );
+
     let materials = getMaterialsToAddSpecifiers(
       answerDependentChunk,
       answerSentenceStructure,
@@ -404,10 +422,29 @@ exports.addSpecifiers = (
     );
 
     metaGenders.forEach((metaGender) => {
+      console.log("          wdme addSpecifiers. metaGender ", metaGender);
+
+      //STEP ONE-A: Let's check the QH lObj.
+      //
+      //
+      console.log(" ");
+      console.log(
+        "[1;30m " + `vmei addSpecifiers STEP 1A (questionHeadLemmaObject)` + "[0m"
+      );
       if (
         questionHeadLemmaObject &&
         questionHeadLemmaObject.gender === `${metaGender}_selector`
       ) {
+        if (
+          questionHeadChunk.importantFeatures &&
+          questionHeadChunk.importantFeatures.includes("gender")
+        ) {
+          console.log(
+            "adsk addSpecifiers. Aborting as importantFeatures includes gender, so will not specify this MGN."
+          );
+          return;
+        }
+
         if (questionHeadChunk.gender && questionHeadChunk.gender.length) {
           selectedGenderForQuestionLanguage = gpUtils.selectRandom(
             questionHeadChunk.gender
@@ -437,17 +474,43 @@ exports.addSpecifiers = (
         questionHeadChunk.gender = [selectedGenderForQuestionLanguage];
         answerHeadChunk.gender = selectedGenderForAnswerLanguageArr;
 
+        console.log("wdmi addSpecifiers. Will addAnnotation ");
         aaUtils.addAnnotation(
           questionHeadChunk,
           "gender",
           selectedGenderForQuestionLanguage
         );
+      } else {
+        console.log("wdmx addSpecifiers. Did nothing as null.", {
+          questionHeadLemmaObject,
+          "questionHeadLemmaObject.gender": questionHeadLemmaObject
+            ? questionHeadLemmaObject.gender
+            : null,
+        });
       }
+
+      //STEP ONE-B: Let's check the Q lObj.
+      //
+      //
+      console.log(" ");
+      console.log(
+        "[1;30m " + `vmei addSpecifiers STEP 1B (questionLemmaObject)` + "[0m"
+      );
 
       if (
         questionLemmaObject &&
         questionLemmaObject.gender === `${metaGender}_selector`
       ) {
+        if (
+          questionChunk.importantFeatures &&
+          questionChunk.importantFeatures.includes("gender")
+        ) {
+          console.log(
+            "adsk addSpecifiers. Aborting as importantFeatures includes gender, so will not specify this MGN."
+          );
+          return;
+        }
+
         if (questionChunk.gender && questionChunk.gender.length) {
           selectedGenderForQuestionLanguage = gpUtils.selectRandom(
             questionChunk.gender
@@ -477,6 +540,111 @@ exports.addSpecifiers = (
         questionChunk.gender = [selectedGenderForQuestionLanguage];
         answerChunk.gender = selectedGenderForAnswerLanguageArr;
 
+        console.log("wdmo addSpecifiers. Will addAnnotation ");
+        aaUtils.addAnnotation(
+          questionChunk,
+          "gender",
+          selectedGenderForQuestionLanguage
+        );
+      } else {
+        console.log("wdmx addSpecifiers. Did nothing as null.", {
+          questionLemmaObject,
+          "questionLemmaObject.gender": questionLemmaObject
+            ? questionLemmaObject.gender
+            : null,
+        });
+      }
+    });
+  });
+
+  //STEP TWO: Do a special thing for Multi Gender Nouns via answerOtherChunks.
+  //            ie lObjs with gender: "allPersonalSingularGenders_selector"
+  //            But we will check all metaGenders.
+  answerOtherChunks.forEach((answerOtherChunk) => {
+    if (
+      ["fixed", "article"].includes(
+        gpUtils.getWordtypeFromStructureChunk(answerOtherChunk)
+      )
+    ) {
+      return;
+    }
+
+    console.log(" ");
+    console.log(
+      `     cvkk addSpecifiers. answerOtherChunk                    "${answerOtherChunk.chunkId}"`
+    );
+    console.log(answerOtherChunk);
+
+    let materials = getMaterialsToAddSpecifiers(
+      answerOtherChunk,
+      answerSentenceStructure,
+      questionSentenceStructure
+    );
+
+    let {
+      answerHeadChunk,
+      answerChunk,
+      questionHeadChunk,
+      questionChunk,
+      questionHeadLemmaObject,
+      questionLemmaObject,
+    } = materials;
+
+    console.log("cvka addSpecifiers", { questionLemmaObject });
+
+    let selectedGenderForQuestionLanguage;
+
+    let metaGenders = Object.keys(
+      refObj.metaFeatures[questionLanguage]["gender"]
+    );
+
+    metaGenders.forEach((metaGender) => {
+      console.log("          cvke addSpecifiers. metaGender ", metaGender);
+
+      if (
+        questionLemmaObject &&
+        questionLemmaObject.gender === `${metaGender}_selector`
+      ) {
+        if (
+          questionChunk.importantFeatures &&
+          questionChunk.importantFeatures.includes("gender")
+        ) {
+          console.log(
+            "adsk addSpecifiers. Aborting as importantFeatures includes gender, so will not specify this MGN."
+          );
+          return;
+        }
+
+        if (questionChunk.gender && questionChunk.gender.length) {
+          selectedGenderForQuestionLanguage = gpUtils.selectRandom(
+            questionChunk.gender
+          );
+        } else {
+          selectedGenderForQuestionLanguage = gpUtils.selectRandom(
+            refObj.metaFeatures[questionLanguage].gender[metaGender]
+          );
+        }
+
+        selectedGenderForAnswerLanguageArr = answerLangUtils.formatFeatureValue(
+          "gender",
+          selectedGenderForQuestionLanguage,
+          "person"
+        );
+
+        console.log(
+          "[1;35m " +
+            "ccpe addSpecifiers #NB: Changing questionChunk.gender and answerChunk.gender" +
+            "[0m"
+        );
+        console.log("ggpe", {
+          selectedGenderForQuestionLanguage,
+          selectedGenderForAnswerLanguageArr,
+        });
+
+        questionChunk.gender = [selectedGenderForQuestionLanguage];
+        answerChunk.gender = selectedGenderForAnswerLanguageArr;
+
+        console.log("cvki addSpecifiers. Will addAnnotation ");
         aaUtils.addAnnotation(
           questionChunk,
           "gender",
@@ -670,7 +838,8 @@ exports.firstStageEvaluateAnnotations = (
       let { structureChunk, selectedLemmaObject } = outputUnit;
 
       console.log(
-        "xwit firstStageEvaluateAnnotations 1, structureChunk",
+        { "selectedLemmaObject.lemma": selectedLemmaObject.lemma },
+        "xwta firstStageEvaluateAnnotations 1, structureChunk",
         structureChunk
       );
 
@@ -680,10 +849,30 @@ exports.firstStageEvaluateAnnotations = (
 
       answerSentenceData.answerOutputArrays.forEach((outputArray) => {
         outputArray.forEach((outputUnit) => {
+          // console.log(" ");
+          // console.log(
+          //   "               vrif firstStageEvaluateAnnotations. outputUnit.selectedWord",
+          //   outputUnit.selectedWord
+          // );
+          //
+          // if (!outputUnit.structureChunk) {
+          //   console.log(
+          //     "               vrif But this outputUnit has no structureChunk"
+          //   );
+          // }
+          //
+          // console.log(
+          //   "               vrig outputUnit.structureChunk.chunkId",
+          //   outputUnit.structureChunk.chunkId
+          // );
+          // console.log("               vrig chunkId", chunkId);
+
           if (
             outputUnit.structureChunk &&
             outputUnit.structureChunk.chunkId === chunkId
           ) {
+            console.log("[1;32m " + `vrih MATCHED chunkId "${chunkId}".` + "[0m");
+
             let answerChunk = outputUnit.structureChunk;
             let dependentAnswerChunks = outputArray
               .map((outputUnit) => outputUnit.structureChunk)
@@ -704,6 +893,10 @@ exports.firstStageEvaluateAnnotations = (
         structureChunk.annotations &&
         Object.keys(structureChunk.annotations).length
       ) {
+        console.log(
+          "xwte firstStageEvaluateAnnotations. Yes, there are structureChunk.annotations"
+        );
+
         refFxn.filterAnnotations(
           structureChunk,
           languagesObj,
@@ -721,14 +914,26 @@ exports.firstStageEvaluateAnnotations = (
         );
 
         if (formattedAnnotationArr.length) {
+          console.log(
+            `vfoa firstStageEvaluateAnnotations. Adding firstStagePassingAnnotationsArr to "${structureChunk.chunkId}".`
+          );
+
           outputUnit.firstStagePassingAnnotationsArr = aaUtils.processExactWordingOfAnnotations(
             formattedAnnotationArr
           );
+        } else {
+          console.log(
+            `vfoe firstStageEvaluateAnnotations. NOT adding firstStagePassingAnnotationsArr to "${structureChunk.chunkId}".`
+          );
         }
+      } else {
+        console.log(
+          "xwti firstStageEvaluateAnnotations. There are NO structureChunk.annotations"
+        );
       }
     });
   } else {
-    console.log("fxso firstStageEvaluateAnnotations 2");
+    console.log("fxsa firstStageEvaluateAnnotations 2");
     arrayOfOutputUnits.forEach((outputUnit) => {
       let { structureChunk, selectedLemmaObject } = outputUnit;
 
@@ -746,8 +951,16 @@ exports.firstStageEvaluateAnnotations = (
           )
         );
 
+        console.log(
+          `fxse firstStageEvaluateAnnotations. Adding firstStagePassingAnnotationsArr to "${structureChunk.chunkId}".`
+        );
+
         outputUnit.firstStagePassingAnnotationsArr = aaUtils.processExactWordingOfAnnotations(
           formattedAnnotationArr
+        );
+      } else {
+        console.log(
+          `fxsi firstStageEvaluateAnnotations. NOT adding firstStagePassingAnnotationsArr to "${structureChunk.chunkId}".`
         );
       }
     });

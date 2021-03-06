@@ -382,9 +382,10 @@ exports.fetchPalette = (req) => {
     if (true && "console") {
       console.log(
         "nwgk-fetchPalette, questionOutputArr AFTER CLARI AND SPECI",
-        questionSentenceData.questionOutputArr.map(
-          (unit) => unit.structureChunk.annotations
-        )
+        questionSentenceData.questionOutputArr.map((unit) => [
+          unit.selectedLemmaObject.lemma,
+          unit.structureChunk.annotations,
+        ])
       );
     }
   }

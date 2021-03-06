@@ -584,7 +584,7 @@ exports.selectWordVersions = (
   currentLanguage,
   multipleMode
 ) => {
-  console.log("ofoc selectWordVersions orderedOutputArr", orderedOutputArr);
+  // console.log("ofoc selectWordVersions orderedOutputArr", orderedOutputArr);
 
   let selectedWordsArr = [];
 
@@ -854,26 +854,30 @@ exports.selectWordVersions = (
         annoArr,
         structureChunk
       ) {
-        console.log("ceku addAnnotationsAndPush " + wordInOwnArr);
+        console.log("vprr addAnnotationsAndPush " + wordInOwnArr);
         if (annoArr && annoArr.length) {
           if (wordInOwnArr.length !== 1) {
             gpUtils.throw(
-              `bapr #ERR addAnnotationsAndPush. To add annotation from [${annoArr}] but there are multiple/none selected words: [${wordInOwnArr}].`
+              `vpra #ERR addAnnotationsAndPush. To add annotation from [${annoArr}] but there are multiple/none selected words: [${wordInOwnArr}].`
             );
           }
 
+          console.log("vpre addAnnotationsAndPush. annoArr is " + annoArr);
+
           if (structureChunk.shouldOverrideClarifiers) {
             console.log(
-              `mcik addAnnotationsAndPush will not add clarifiers [${annoArr}] as "shouldOverrideClarifiers" true.`
+              `vpri addAnnotationsAndPush will not add clarifiers [${annoArr}] as "shouldOverrideClarifiers" true.`
             );
           } else {
             console.log(
-              "vprg pushSelectedWordToArray addAnnotationsAndPush. Adding these annotations:" +
+              "vpro pushSelectedWordToArray addAnnotationsAndPush. Adding these annotations:" +
                 annoArr.join(", ")
             );
 
             wordInOwnArr[0] += ` (${annoArr.join(", ")})`;
           }
+        } else {
+          console.log("vpru addAnnotationsAndPush. No annoArr");
         }
 
         selectedWordsArr.push(wordInOwnArr);

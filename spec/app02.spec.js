@@ -18,8 +18,8 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe.only("/palette - Stage 17: Possessive pronouns and MGNs.", () => {
-    it("#pal17-01a GET 200 YES: Select one gender, for MGN.", () => {
+  describe("/palette - Stage 17: Possessive pronouns and MGNs.", () => {
+    it("#pal17-01a GET 200 YES: Select one gender, for MGN. ENG to POL. This is just for sentences where the educator knows that this MGN will need no clarifying. Eg 'my doctor is a woman'.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -28,7 +28,7 @@ describe("/api", () => {
         .send({
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy58 doctor f",
+          sentenceFormulaSymbol: "dummy58a doctor f",
           useDummy: true,
         })
         .expect(200)
@@ -47,7 +47,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal17-01b GET 200 YES: Select one gender, for MGN.", () => {
+    it("#pal17-01b GET 200 YES: Select one gender, for MGN. POL to ENG.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -56,7 +56,7 @@ describe("/api", () => {
         .send({
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy58 doctor f",
+          sentenceFormulaSymbol: "dummy58a doctor f",
           useDummy: true,
         })
         .expect(200)
@@ -75,10 +75,103 @@ describe("/api", () => {
           );
         });
     });
+    it("#pal17-01c GET 200 YES: MGN as sole word. ENG to POL. pleaseDontSpecify.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy58 doctor",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "Doctor.",
+              POL: ["Lekarka.", "Lekarz."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal17-01d GET 200 YES: MGN as sole word. ENG to POL. Add specifiers.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy58 doctor",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "Doctor (female).",
+              POL: ["Lekarka."],
+            },
+            {
+              ENG: "Doctor (male).",
+              POL: ["Lekarz."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal17-01e GET 200 YES: MGN as sole word. POL to ENG.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy58 doctor",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["Doctor."],
+              POL: "Lekarka.",
+            },
+            {
+              ENG: ["Doctor."],
+              POL: "Lekarz.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
     //
     //
     //
-    it("#pal17-02a GET 200 YES: ENG to POL. MGN and agreeing possessive pronoun. No clarifier as connected pronoun REVEALS the gender of MGN.", () => {
+    it.only("#pal17-02a GET 200 YES: ENG to POL. MGN and agreeing possessive pronoun. No clarifier as connected pronoun REVEALS the gender of MGN.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -110,7 +203,7 @@ describe("/api", () => {
           );
         });
     });
-    it.only("#pal17-02b GET 200 YES: ENG to POL. MGN and agreeing possessive pronoun. Yes clarifier as connected pronoun DOESN'T reveal the gender of MGN.", () => {
+    xit("#pal17-02b GET 200 YES: ENG to POL. MGN and agreeing possessive pronoun. Yes clarifier as connected pronoun DOESN'T reveal the gender of MGN.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -142,7 +235,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal17-02c GET 200 YES: ENG to POL. MGN and agreeing possessive pronoun. Asked not to specify.", () => {
+    xit("#pal17-02c GET 200 YES: ENG to POL. MGN and agreeing possessive pronoun. Asked not to specify.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -173,7 +266,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal17-02d GET 200 YES: ENG to POL. MGN and agreeing possessive pronoun. Yes clarifier as connected pronoun DOESN'T reveal the gender of MGN.", () => {
+    xit("#pal17-02d GET 200 YES: ENG to POL. MGN and agreeing possessive pronoun. Yes clarifier as connected pronoun DOESN'T reveal the gender of MGN.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -205,7 +298,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal17-02e GET 200 YES: POL to ENG. MGN and agreeing possessive pronoun.", () => {
+    xit("#pal17-02e GET 200 YES: POL to ENG. MGN and agreeing possessive pronoun.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -237,7 +330,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal17-02f GET 200 YES: POL to ENG. MGN and agreeing possessive pronoun.", () => {
+    xit("#pal17-02f GET 200 YES: POL to ENG. MGN and agreeing possessive pronoun.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -272,7 +365,7 @@ describe("/api", () => {
     //
     //
     //
-    it("#pal17-03a GET 200 YES: ENG to POL. Sentence with 2 of same MGN. Do specify.", () => {
+    xit("#pal17-03a GET 200 YES: ENG to POL. Sentence with 2 of same MGN. Do specify.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -332,7 +425,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal17-03b GET 200 YES: POL to ENG. Sentence with 2 of same MGN. Do specify.", () => {
+    xit("#pal17-03b GET 200 YES: POL to ENG. Sentence with 2 of same MGN. Do specify.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -395,7 +488,7 @@ describe("/api", () => {
     //
     //
     //
-    it("#pal17-04a GET 200 YES: ENG to POL. My doctor was a woman. Testing possibility of nouns agreeing with nouns.", () => {
+    xit("#pal17-04a GET 200 YES: ENG to POL. My doctor was a woman. Testing possibility of nouns agreeing with nouns.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -423,7 +516,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal17-04a GET 200 YES: POL to ENG. My doctor was a woman. Testing possibility of nouns agreeing with nouns.", () => {
+    xit("#pal17-04a GET 200 YES: POL to ENG. My doctor was a woman. Testing possibility of nouns agreeing with nouns.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1032,7 +1125,7 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          //Gamma: Change so that only indefinite is generated as Q sent, but both used as A sent?
+          //Gamma: Change so that solely indefinite is generated as Q sent, but both used as A sent?
           let ref = [
             {
               ENG: "With the apple.",
