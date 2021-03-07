@@ -823,6 +823,32 @@ exports.addAnnotation = (chunk, key, value) => {
   chunk.annotations[key] = value;
 };
 
+exports.getFormattedAnnoObj = (
+  structureChunk,
+  languagesObj,
+  answerSentenceData
+) => {
+  refFxn.filterAnnotationsOnStCh(
+    structureChunk,
+    languagesObj,
+    answerSentenceData
+  );
+
+  let annoObj = {};
+
+  Object.keys(structureChunk.annotations).forEach((annoKey) => {
+    let formattedAnnoValue = allLangUtils.translateAnnotationValue(
+      annoKey,
+      structureChunk,
+      languagesObj
+    );
+
+    annoObj[annoKey] = formattedAnnoValue;
+  });
+
+  return aaUtils.trimAnnotations(annoObj);
+};
+
 exports.firstStageEvaluateAnnotations = (
   arrayOfOutputUnits,
   languagesObj,
@@ -831,154 +857,57 @@ exports.firstStageEvaluateAnnotations = (
   if (!answerSentenceData) {
     console.log(
       "[1;31m " +
-        "hhvv NO ANSWER SENTENCE DATA IN aa.firstStageEvaluateAnnotations" +
+        "hhvv NB: NO ANSWER SENTENCE DATA IN aa.firstStageEvaluateAnnotations" +
         "[0m"
     );
   }
 
-  let { answerLanguage, questionLanguage } = languagesObj;
+  arrayOfOutputUnits.forEach((outputUnit) => {
+    let { structureChunk, selectedLemmaObject } = outputUnit;
 
-  if (answerSentenceData) {
-    console.log("atyh firstStageEvaluateAnnotations 0");
-    arrayOfOutputUnits.forEach((outputUnit) => {
-      let { structureChunk, selectedLemmaObject } = outputUnit;
-
+    if (
+      !structureChunk.annotations ||
+      !Object.keys(structureChunk.annotations).length
+    ) {
       console.log(
-        { "selectedLemmaObject.lemma": selectedLemmaObject.lemma },
-        "xwta firstStageEvaluateAnnotations 1, structureChunk",
-        structureChunk
+        `dhca firstStageEvaluateAnnotations "${structureChunk.chunkId}" has no annotations.`
       );
+      return;
+    }
 
-      let { chunkId } = structureChunk;
+    let formattedAnnoObj = aaUtils.getFormattedAnnoObj(
+      structureChunk,
+      languagesObj,
+      answerSentenceData
+    );
 
-      let correspondingAnswerChunks = [];
+    if (!Object.values(formattedAnnoObj).length) {
+      gpUtils.throw(
+        `dhce firstStageEvaluateAnnotations. There were annotations on stCh, but none after formatting. "${structureChunk.chunkId}".`
+      );
+    }
 
-      answerSentenceData.answerOutputArrays.forEach((outputArray) => {
-        outputArray.forEach((outputUnit) => {
-          // console.log(" ");
-          // console.log(
-          //   "               vrif firstStageEvaluateAnnotations. outputUnit.selectedWord",
-          //   outputUnit.selectedWord
-          // );
-          //
-          // if (!outputUnit.structureChunk) {
-          //   console.log(
-          //     "               vrif But this outputUnit has no structureChunk"
-          //   );
-          // }
-          //
-          // console.log(
-          //   "               vrig outputUnit.structureChunk.chunkId",
-          //   outputUnit.structureChunk.chunkId
-          // );
-          // console.log("               vrig chunkId", chunkId);
+    console.log(
+      `dhci firstStageEvaluateAnnotations. Adding firstStageAnnotationsObj to "${structureChunk.chunkId}".`
+    );
 
-          if (
-            outputUnit.structureChunk &&
-            outputUnit.structureChunk.chunkId === chunkId
-          ) {
-            console.log("[1;32m " + `vrih MATCHED chunkId "${chunkId}".` + "[0m");
-
-            let answerChunk = outputUnit.structureChunk;
-            let dependentAnswerChunks = outputArray
-              .map((outputUnit) => outputUnit.structureChunk)
-              .filter(
-                (structureChunk) =>
-                  structureChunk.agreeWith === answerChunk.chunkId
-              );
-
-            correspondingAnswerChunks.push({
-              answerChunk,
-              dependentAnswerChunks,
-            });
-          }
-        });
-      });
-
-      if (
-        structureChunk.annotations &&
-        Object.keys(structureChunk.annotations).length
-      ) {
-        console.log(
-          "xwte firstStageEvaluateAnnotations. Yes, there are structureChunk.annotations"
-        );
-
-        refFxn.filterAnnotations(
-          structureChunk,
-          languagesObj,
-          correspondingAnswerChunks
-        );
-
-        let formattedAnnotationArr = Object.keys(
-          structureChunk.annotations
-        ).map((annotationKey) =>
-          allLangUtils.translateAnnotationValue(
-            annotationKey,
-            structureChunk,
-            languagesObj
-          )
-        );
-
-        if (formattedAnnotationArr.length) {
-          console.log(
-            `vfoa firstStageEvaluateAnnotations. Adding firstStagePassingAnnotationsArr to "${structureChunk.chunkId}".`
-          );
-
-          outputUnit.firstStagePassingAnnotationsArr = aaUtils.processExactWordingOfAnnotations(
-            formattedAnnotationArr
-          );
-        } else {
-          console.log(
-            `vfoe firstStageEvaluateAnnotations. NOT adding firstStagePassingAnnotationsArr to "${structureChunk.chunkId}".`
-          );
-        }
-      } else {
-        console.log(
-          "xwti firstStageEvaluateAnnotations. There are NO structureChunk.annotations"
-        );
-      }
-    });
-  } else {
-    console.log("fxsa firstStageEvaluateAnnotations 2");
-    arrayOfOutputUnits.forEach((outputUnit) => {
-      let { structureChunk, selectedLemmaObject } = outputUnit;
-
-      if (
-        structureChunk.annotations &&
-        Object.keys(structureChunk.annotations).length
-      ) {
-        let formattedAnnotationArr = Object.keys(
-          structureChunk.annotations
-        ).map((annotationKey) =>
-          allLangUtils.translateAnnotationValue(
-            annotationKey,
-            structureChunk,
-            languagesObj
-          )
-        );
-
-        console.log(
-          `fxse firstStageEvaluateAnnotations. Adding firstStagePassingAnnotationsArr to "${structureChunk.chunkId}".`
-        );
-
-        outputUnit.firstStagePassingAnnotationsArr = aaUtils.processExactWordingOfAnnotations(
-          formattedAnnotationArr
-        );
-      } else {
-        console.log(
-          `fxsi firstStageEvaluateAnnotations. NOT adding firstStagePassingAnnotationsArr to "${structureChunk.chunkId}".`
-        );
-      }
-    });
-  }
+    outputUnit.firstStageAnnotationsObj = formattedAnnoObj;
+  });
 };
 
-exports.processExactWordingOfAnnotations = (annotationArr) => {
-  if (["males", "females"].some((value) => annotationArr.includes(value))) {
-    annotationArr = annotationArr.filter((anno) => anno !== "plural");
-  }
+exports.trimAnnotations = (annotationObj) => {
+  Object.keys(annotationObj).forEach((annoKey) => {
+    let annoValue = annotationObj[annoKey];
 
-  annotationArr = annotationArr.filter((item) => item);
+    if (annoKey === "gender" && ["males", "females"].includes(annoValue)) {
+      delete annotationObj.number;
+    }
 
-  return annotationArr;
+    if (!annoValue) {
+      gpUtils.throw("vmkp");
+      delete annotationObj[annoKeyy];
+    }
+  });
+
+  return annotationObj;
 };

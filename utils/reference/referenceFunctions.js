@@ -110,40 +110,67 @@ exports.giveAdjustedFeatureValue = (
   return [featureValue];
 };
 
-exports.filterAnnotations = (
+exports.filterAnnotationsOnStCh = (
   structureChunk,
   languagesObj,
-  correspondingAnswerChunks
+  answerSentenceData
 ) => {
+  if (!structureChunk.annotations || !answerSentenceData) {
+    return;
+  }
+
+  let correspondingAnswerChunks = [];
+  let { chunkId } = structureChunk;
+  let { answerLanguage, questionLanguage } = languagesObj;
+
+  answerSentenceData.answerOutputArrays.forEach((outputArray) => {
+    outputArray.forEach((outputUnit) => {
+      if (
+        outputUnit.structureChunk &&
+        outputUnit.structureChunk.chunkId === chunkId
+      ) {
+        let answerChunk = outputUnit.structureChunk;
+        let dependentAnswerChunks = outputArray
+          .map((outputUnit) => outputUnit.structureChunk)
+          .filter(
+            (structureChunk) => structureChunk.agreeWith === answerChunk.chunkId
+          );
+
+        correspondingAnswerChunks.push({
+          answerChunk,
+          dependentAnswerChunks,
+        });
+      }
+    });
+  });
+
   console.log(
     "[1;35m " +
-      "lbbq filterAnnotations>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" +
+      "lbbq filterAnnotationsOnStCh>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" +
       "[0m"
   );
-
-  let { answerLanguage, questionLanguage } = languagesObj;
 
   Object.keys(structureChunk.annotations).forEach((annotationKey) => {
     if (typeof structureChunk.annotations[annotationKey] !== "string") {
       console.log(
         "[1;31m " +
-          `ylam filterAnnotations: "${structureChunk.chunkId}" stCh should have had STRING for annotationKey "${annotationKey}"` +
+          `ylam filterAnnotationsOnStCh: "${structureChunk.chunkId}" stCh should have had STRING for annotationKey "${annotationKey}"` +
           "[0m"
       );
       gpUtils.throw(
-        `#ERR ylam filterAnnotations. structureChunk.annotations[annotationKey]: "${structureChunk.annotations[annotationKey]}"`
+        `#ERR ylam filterAnnotationsOnStCh. structureChunk.annotations[annotationKey]: "${structureChunk.annotations[annotationKey]}"`
       );
     }
 
     console.log(
       "[1;33m " +
-        "pzlz filterAnnotations q00" +
+        "pzlz filterAnnotationsOnStCh q00" +
         " annotationKey: " +
         annotationKey +
         "[0m"
     );
 
-    console.log("zkyb filterAnnotations", {
+    console.log("zkyb filterAnnotationsOnStCh", {
       answerLanguage,
       "structureChunk.wordtype": structureChunk.wordtype,
     });
@@ -154,7 +181,7 @@ exports.filterAnnotations = (
       ];
 
     console.log(
-      "duqy filterAnnotations: conditionsOnWhichToBlockAnnotations",
+      "duqy filterAnnotationsOnStCh: conditionsOnWhichToBlockAnnotations",
       conditionsOnWhichToBlockAnnotations
     );
 
@@ -192,7 +219,7 @@ exports.filterAnnotations = (
               ) {
                 console.log(
                   "[1;35m " +
-                    "nyjw filterAnnotations: On stCh " +
+                    "nyjw filterAnnotationsOnStCh: On stCh " +
                     structureChunk.chunkId +
                     " I will delete the " +
                     annotationKey +
@@ -210,11 +237,13 @@ exports.filterAnnotations = (
           });
         })
       ) {
-        console.log("[1;35m " + "amnf filterAnnotations: Deleting it now!" + "[0m");
+        console.log(
+          "[1;35m " + "amnf filterAnnotationsOnStCh: Deleting it now!" + "[0m"
+        );
 
         console.log(
           "[1;30m " +
-            `vfge filterAnnotations "${structureChunk.chunkId}" ABZ Late stage DELETION of annotation "${annotationKey}" which is "${structureChunk.annotations[annotationKey]}"` +
+            `vfge filterAnnotationsOnStCh "${structureChunk.chunkId}" ABZ Late stage DELETION of annotation "${annotationKey}" which is "${structureChunk.annotations[annotationKey]}"` +
             "[0m"
         );
 
@@ -222,11 +251,11 @@ exports.filterAnnotations = (
       } else {
         console.log(
           "[1;32m " +
-            `dyzx filterAnnotations "${structureChunk.chunkId}" ABZ Late stage PASSING of annotation "${annotationKey}" which is "${structureChunk.annotations[annotationKey]}"` +
+            `dyzx filterAnnotationsOnStCh "${structureChunk.chunkId}" ABZ Late stage PASSING of annotation "${annotationKey}" which is "${structureChunk.annotations[annotationKey]}"` +
             "[0m"
         );
       }
     }
   });
-  console.log("[1;35m " + "/filterAnnotations" + "[0m");
+  console.log("[1;35m " + "/filterAnnotationsOnStCh" + "[0m");
 };

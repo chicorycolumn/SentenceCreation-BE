@@ -596,7 +596,7 @@ exports.selectWordVersions = (
       structureChunk,
       drillPath,
       selectedLemmaObject,
-      firstStagePassingAnnotationsArr,
+      firstStageAnnotationsObj,
     } = outputUnit;
 
     console.log("[1;33m " + `nilu selectWordVersions----------------` + "[0m");
@@ -610,7 +610,7 @@ exports.selectWordVersions = (
         "string",
         selectedWord,
         selectedWordsArr,
-        firstStagePassingAnnotationsArr,
+        firstStageAnnotationsObj,
         structureChunk
       );
       return;
@@ -633,32 +633,33 @@ exports.selectWordVersions = (
           }
 
           console.log(
-            "shnj selectWordVersions. subsequentOutputUnit.firstStagePassingAnnotationsArr BEFORE",
-            subsequentOutputUnit.firstStagePassingAnnotationsArr
+            "shnj selectWordVersions. subsequentOutputUnit.firstStageAnnotationsObj BEFORE",
+            subsequentOutputUnit.firstStageAnnotationsObj
           );
 
           if (
             subsequentOutputUnit &&
-            subsequentOutputUnit.firstStagePassingAnnotationsArr
+            subsequentOutputUnit.firstStageAnnotationsObj
           ) {
-            subsequentOutputUnit.firstStagePassingAnnotationsArr.forEach(
-              (item, index) => {
-                if (item === "singular") {
+            Object.keys(subsequentOutputUnit.firstStageAnnotationsObj).forEach(
+              (annoKey) => {
+                let annoValue =
+                  subsequentOutputUnit.firstStageAnnotationsObj[annoKey];
+
+                if (annoValue === "singular") {
                   console.log(
                     `yuox selectWordVersions. Removing "singular" annotation from subsequent outputUnit, as current output unit is ENG indefinite article.`
                   );
-                  subsequentOutputUnit.firstStagePassingAnnotationsArr.splice(
-                    index,
-                    (index = 1)
-                  );
+
+                  delete subsequentOutputUnit.firstStageAnnotationsObj[annoKey];
                 }
               }
             );
           }
 
           console.log(
-            "shnj selectWordVersions. subsequentOutputUnit.firstStagePassingAnnotationsArr AFTER",
-            subsequentOutputUnit.firstStagePassingAnnotationsArr
+            "shnj selectWordVersions. subsequentOutputUnit.firstStageAnnotationsObj AFTER",
+            subsequentOutputUnit.firstStageAnnotationsObj
           );
 
           console.log("nbra selectWordVersions", {
@@ -695,7 +696,7 @@ exports.selectWordVersions = (
               "protective",
               selectedWord,
               selectedWordsArr,
-              firstStagePassingAnnotationsArr,
+              firstStageAnnotationsObj,
               structureChunk
             );
             return;
@@ -704,7 +705,7 @@ exports.selectWordVersions = (
               "nonprotective",
               selectedWord,
               selectedWordsArr,
-              firstStagePassingAnnotationsArr,
+              firstStageAnnotationsObj,
               structureChunk
             );
             return;
@@ -730,7 +731,7 @@ exports.selectWordVersions = (
               "postPreposition",
               selectedWord,
               selectedWordsArr,
-              firstStagePassingAnnotationsArr,
+              firstStageAnnotationsObj,
               structureChunk
             );
             return;
@@ -761,7 +762,7 @@ exports.selectWordVersions = (
               "array",
               combinedSelectedWordsArr,
               selectedWordsArr,
-              firstStagePassingAnnotationsArr,
+              firstStageAnnotationsObj,
               structureChunk
             );
             return;
@@ -801,7 +802,7 @@ exports.selectWordVersions = (
               "protective",
               selectedWord,
               selectedWordsArr,
-              firstStagePassingAnnotationsArr,
+              firstStageAnnotationsObj,
               structureChunk
             );
             return;
@@ -810,7 +811,7 @@ exports.selectWordVersions = (
               "nonprotective",
               selectedWord,
               selectedWordsArr,
-              firstStagePassingAnnotationsArr,
+              firstStageAnnotationsObj,
               structureChunk
             );
             return;
@@ -821,7 +822,7 @@ exports.selectWordVersions = (
           "normal",
           selectedWord,
           selectedWordsArr,
-          firstStagePassingAnnotationsArr,
+          firstStageAnnotationsObj,
           structureChunk
         );
       }
@@ -835,7 +836,7 @@ exports.selectWordVersions = (
       key,
       selectedWord,
       selectedWordsArr,
-      annoArr,
+      annoObj,
       structureChunk
     ) {
       console.log(
@@ -844,41 +845,44 @@ exports.selectWordVersions = (
           key,
           selectedWord,
           selectedWordsArr,
-          annoArr,
+          annoObj,
         }
       );
 
       function addAnnotationsAndPush(
         wordInOwnArr,
         selectedWordsArr,
-        annoArr,
+        annoObj,
         structureChunk
       ) {
         console.log("vprr addAnnotationsAndPush " + wordInOwnArr);
-        if (annoArr && annoArr.length) {
+        if (annoObj && Object.values(annoObj).length) {
           if (wordInOwnArr.length !== 1) {
             gpUtils.throw(
-              `vpra #ERR addAnnotationsAndPush. To add annotation from [${annoArr}] but there are multiple/none selected words: [${wordInOwnArr}].`
+              `vpra #ERR addAnnotationsAndPush. To add annotation from [${Object.values(
+                annoObj
+              )}] but there are multiple/none selected words: [${wordInOwnArr}].`
             );
           }
 
-          console.log("vpre addAnnotationsAndPush. annoArr is " + annoArr);
+          console.log("vpre addAnnotationsAndPush. annoObj is " + annoObj);
 
           if (structureChunk.educatorBlocksAnnotationsForTheseFeatures) {
-            gpUtils.throw();
             console.log(
-              `vpri addAnnotationsAndPush will not add clarifiers [${annoArr}] as "educatorBlocksAnnotationsForTheseFeatures" true.`
+              `vpri addAnnotationsAndPush will not add clarifiers [${Object.values(
+                annoObj
+              )}] as "educatorBlocksAnnotationsForTheseFeatures" true.`
             );
           } else {
             console.log(
               "vpro pushSelectedWordToArray addAnnotationsAndPush. Adding these annotations:" +
-                annoArr.join(", ")
+                Object.values(annoObj).join(", ")
             );
 
-            wordInOwnArr[0] += ` (${annoArr.join(", ")})`;
+            wordInOwnArr[0] += ` (${Object.values(annoObj).join(", ")})`;
           }
         } else {
-          console.log("vpru addAnnotationsAndPush. No annoArr");
+          console.log("vpru addAnnotationsAndPush. No annoObj");
         }
 
         selectedWordsArr.push(wordInOwnArr);
@@ -892,7 +896,7 @@ exports.selectWordVersions = (
         addAnnotationsAndPush(
           [selectedWord],
           selectedWordsArr,
-          annoArr,
+          annoObj,
           structureChunk
         );
         return;
@@ -905,7 +909,7 @@ exports.selectWordVersions = (
         addAnnotationsAndPush(
           selectedWord,
           selectedWordsArr,
-          annoArr,
+          annoObj,
           structureChunk
         );
         return;
@@ -939,7 +943,7 @@ exports.selectWordVersions = (
       addAnnotationsAndPush(
         selectedWord[key],
         selectedWordsArr,
-        annoArr,
+        annoObj,
         structureChunk
       );
     }

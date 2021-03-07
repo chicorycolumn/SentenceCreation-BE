@@ -18,8 +18,8 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe("/palette - Stage 17: Possessive pronouns and MGNs.", () => {
-    it.only("#pal17-01a GET 200 YES: Select one gender, for MGN. ENG to POL. This is just for sentences where the educator knows that this MGN will need no clarifying. Eg 'my doctor is a woman'.", () => {
+  describe.only("/palette - Stage 17: Possessive pronouns and MGNs.", () => {
+    it("#pal17-01a GET 200 YES: Select one gender, for MGN. ENG to POL. This is just for sentences where the educator knows that this MGN will need no clarifying. Eg 'my doctor is a woman'.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
