@@ -19,7 +19,7 @@ describe("/api", () => {
   // beforeEach(() => {});
 
   describe("/palette - Stage 17: Possessive pronouns and MGNs.", () => {
-    it("#pal17-01a GET 200 YES: Select one gender, for MGN. ENG to POL. This is just for sentences where the educator knows that this MGN will need no clarifying. Eg 'my doctor is a woman'.", () => {
+    it.only("#pal17-01a GET 200 YES: Select one gender, for MGN. ENG to POL. This is just for sentences where the educator knows that this MGN will need no clarifying. Eg 'my doctor is a woman'.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -171,7 +171,7 @@ describe("/api", () => {
     //
     //
     //
-    it.only("#pal17-02a GET 200 YES: ENG to POL. MGN and agreeing possessive pronoun. No clarifier as connected pronoun REVEALS the gender of MGN.", () => {
+    it("#pal17-02a GET 200 YES: ENG to POL. MGN and agreeing possessive pronoun. No clarifier as connected pronoun REVEALS the gender of MGN.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 

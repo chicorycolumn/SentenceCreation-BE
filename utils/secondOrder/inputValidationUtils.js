@@ -22,7 +22,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
           "importantFeatures",
           "pleaseShowMultipleWordtypeAllohomClarifiers",
           "forceThisFeatureWhenIsAnswer",
-          "shouldOverrideClarifiers",
+          "educatorBlocksAnnotationsForTheseFeatures",
         ].includes(featureKey)
       ) {
         return;

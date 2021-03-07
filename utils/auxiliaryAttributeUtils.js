@@ -435,15 +435,17 @@ exports.addSpecifiers = (
         questionHeadLemmaObject &&
         questionHeadLemmaObject.gender === `${metaGender}_selector`
       ) {
-        if (
-          questionHeadChunk.importantFeatures &&
-          questionHeadChunk.importantFeatures.includes("gender")
-        ) {
-          console.log(
-            "adsk addSpecifiers. Aborting as importantFeatures includes gender, so will not specify this MGN."
-          );
-          return;
-        }
+        // if (
+        //   questionHeadChunk.educatorBlocksAnnotationsForTheseFeatures &&
+        //   questionHeadChunk.educatorBlocksAnnotationsForTheseFeatures.includes(
+        //     "gender"
+        //   )
+        // ) {
+        //   console.log(
+        //     "adsk addSpecifiers. Aborting as educatorBlocksAnnotationsForTheseFeatures includes gender, so will not specify this MGN."
+        //   );
+        //   return;
+        // }
 
         if (questionHeadChunk.gender && questionHeadChunk.gender.length) {
           selectedGenderForQuestionLanguage = gpUtils.selectRandom(
@@ -501,15 +503,17 @@ exports.addSpecifiers = (
         questionLemmaObject &&
         questionLemmaObject.gender === `${metaGender}_selector`
       ) {
-        if (
-          questionChunk.importantFeatures &&
-          questionChunk.importantFeatures.includes("gender")
-        ) {
-          console.log(
-            "adsk addSpecifiers. Aborting as importantFeatures includes gender, so will not specify this MGN."
-          );
-          return;
-        }
+        // if (
+        //   questionChunk.educatorBlocksAnnotationsForTheseFeatures &&
+        //   questionChunk.educatorBlocksAnnotationsForTheseFeatures.includes(
+        //     "gender"
+        //   )
+        // ) {
+        //   console.log(
+        //     "adsk addSpecifiers. Aborting as educatorBlocksAnnotationsForTheseFeatures includes gender, so will not specify this MGN."
+        //   );
+        //   return;
+        // }
 
         if (questionChunk.gender && questionChunk.gender.length) {
           selectedGenderForQuestionLanguage = gpUtils.selectRandom(
@@ -605,15 +609,17 @@ exports.addSpecifiers = (
         questionLemmaObject &&
         questionLemmaObject.gender === `${metaGender}_selector`
       ) {
-        if (
-          questionChunk.importantFeatures &&
-          questionChunk.importantFeatures.includes("gender")
-        ) {
-          console.log(
-            "adsk addSpecifiers. Aborting as importantFeatures includes gender, so will not specify this MGN."
-          );
-          return;
-        }
+        // if (
+        //   questionChunk.educatorBlocksAnnotationsForTheseFeatures &&
+        //   questionChunk.educatorBlocksAnnotationsForTheseFeatures.includes(
+        //     "gender"
+        //   )
+        // ) {
+        //   console.log(
+        //     "adsk addSpecifiers. Aborting as educatorBlocksAnnotationsForTheseFeatures includes gender, so will not specify this MGN."
+        //   );
+        //   return;
+        // }
 
         if (questionChunk.gender && questionChunk.gender.length) {
           selectedGenderForQuestionLanguage = gpUtils.selectRandom(

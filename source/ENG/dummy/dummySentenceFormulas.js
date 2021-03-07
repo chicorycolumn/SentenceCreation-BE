@@ -1247,6 +1247,7 @@ exports.dummySentenceFormulasBank = [
         number: ["singular"],
         gender: ["f"],
         importantFeatures: ["gender"],
+        educatorBlocksAnnotationsForTheseFeatures: ["gender"],
       },
     ],
     primaryOrders: [],

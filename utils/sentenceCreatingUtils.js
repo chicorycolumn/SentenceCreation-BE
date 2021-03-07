@@ -864,9 +864,10 @@ exports.selectWordVersions = (
 
           console.log("vpre addAnnotationsAndPush. annoArr is " + annoArr);
 
-          if (structureChunk.shouldOverrideClarifiers) {
+          if (structureChunk.educatorBlocksAnnotationsForTheseFeatures) {
+            gpUtils.throw();
             console.log(
-              `vpri addAnnotationsAndPush will not add clarifiers [${annoArr}] as "shouldOverrideClarifiers" true.`
+              `vpri addAnnotationsAndPush will not add clarifiers [${annoArr}] as "educatorBlocksAnnotationsForTheseFeatures" true.`
             );
           } else {
             console.log(
