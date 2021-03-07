@@ -928,4 +928,34 @@ exports.sentenceFormulasBank = [
     ],
     primaryOrders: [["pro-1-my", "nou-1-doctor"]],
   },
+  {
+    sentenceFormulaSymbol: "118c My onion",
+    sentenceFormulaId: "ENG-118c",
+    translations: { POL: ["POL-118c"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-0-I-invisible",
+        wordtype: "pronoun",
+        specificLemmas: ["PERSONAL"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "pro-1-my",
+        wordtype: "pronoun",
+        form: ["determiner"],
+        specificLemmas: ["POSSESSIVE"],
+        agreeWith: "pro-0-I-invisible",
+      },
+      {
+        chunkId: "nou-1-onion",
+        // andTags: ["person"],
+        // gcase: ["nom"],
+        number: ["singular"],
+        specificLemmas: ["onion"],
+        // gender: ["f"],
+      },
+    ],
+    primaryOrders: [["pro-1-my", "nou-1-onion"]],
+  },
 ];

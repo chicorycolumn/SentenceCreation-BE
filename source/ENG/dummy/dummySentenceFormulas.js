@@ -721,7 +721,6 @@ exports.dummySentenceFormulasBank = [
     ],
     primaryOrders: [["pro-1", "ver-1"]],
   },
-
   {
     sentenceFormulaSymbol: "dummy49e",
     sentenceFormulaId: "ENG-dummy49e",
@@ -801,6 +800,34 @@ exports.dummySentenceFormulasBank = [
       },
     ],
     primaryOrders: [["pro-1", "ver-1", "pro-2", "nou-1"]],
+  },
+  {
+    sentenceFormulaSymbol: "dummy50b",
+    sentenceFormulaId: "ENG-dummy50b",
+    translations: { POL: ["POL-dummy50b"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1",
+        wordtype: "pronoun",
+        specificLemmas: ["PERSONAL"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "pro-2",
+        wordtype: "pronoun",
+        form: ["determiner"],
+        specificLemmas: ["POSSESSIVE"],
+        agreeWith: "pro-1",
+      },
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        specificLemmas: ["onion"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [["pro-2", "nou-1"]],
   },
   {
     sentenceFormulaSymbol: "dummy51a",

@@ -1413,6 +1413,35 @@ exports.dummySentenceFormulasBank = [
     additionalOrders: [["ver-1", "pro-2", "nou-1"]],
   },
   {
+    sentenceFormulaSymbol: "dummy50b",
+    sentenceFormulaId: "POL-dummy50b",
+    translations: { ENG: ["ENG-dummy50b"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1",
+        wordtype: "pronoun",
+        specificLemmas: ["PERSONAL"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "pro-2",
+        wordtype: "pronoun",
+        form: ["determiner"],
+        specificLemmas: ["POSSESSIVE"],
+        postHocAgreeWithPrimary: "pro-1",
+        postHocAgreeWithSecondary: "nou-1",
+      },
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        specificLemmas: ["cebula"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [["pro-2", "nou-1"]],
+  },
+  {
     sentenceFormulaSymbol: "dummy51a",
     sentenceFormulaId: "POL-dummy51a",
     translations: { ENG: ["ENG-dummy51a"] },

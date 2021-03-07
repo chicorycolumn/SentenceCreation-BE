@@ -285,10 +285,7 @@ exports.filterWithinSelectedLemmaObject = (
   if (!outputUnitsWithDrillPaths || !outputUnitsWithDrillPaths.length) {
     console.log(
       "[1;31m " +
-        "#WARN iszn lf:filterWithinSelectedLemmaObject. traverseAndRecordInflections returned FALSY for " +
-        structureChunk.chunkId +
-        " in " +
-        currentLanguage +
+        `#WARN iszn lf:filterWithinSelectedLemmaObject. traverseAndRecordInflections returned FALSY for "${structureChunk.chunkId}" in "${currentLanguage}".` +
         "[0m"
     );
 
@@ -728,6 +725,8 @@ exports.traverseAndRecordInflections = (
       outputUnitsWithDrillPathsMini
     );
 
+    console.log("fxxb1");
+
     if (Array.isArray(source[chosenInflector])) {
       gpUtils.throw(
         "uwmf lf:traverseAndRecordInflections Uh oh Natasha, array!"
@@ -739,6 +738,8 @@ exports.traverseAndRecordInflections = (
       (gpUtils.isTerminusObject(source[chosenInflector]) &&
         source[chosenInflector].processOnlyAtEnd)
     ) {
+      console.log("fxxb2");
+
       if (shouldConsoleLog) {
         console.log(
           "xuei lf:traverseAndRecordInflections Clause A: string or tObj to process at end",
@@ -762,6 +763,8 @@ exports.traverseAndRecordInflections = (
         drillPath: outputUnitsWithDrillPathsMini.slice(0),
       });
 
+      console.log("fxxb3");
+
       outputUnitsWithDrillPathsMini.pop();
 
       return source[chosenInflector];
@@ -769,6 +772,8 @@ exports.traverseAndRecordInflections = (
       gpUtils.isTerminusObject(source[chosenInflector]) &&
       !source[chosenInflector].processOnlyAtEnd
     ) {
+      console.log("fxxb4");
+
       if (shouldConsoleLog) {
         console.log(
           "qqyr lf:traverseAndRecordInflections Clause B: tObj to process now",
@@ -778,12 +783,15 @@ exports.traverseAndRecordInflections = (
           }
         );
       }
+
       outputUnitsWithDrillPathsMini.push([reqInflectorLabel, chosenInflector]);
 
       let wordsFromTerminusObject = gpUtils.getWordsFromTerminusObject(
         source[chosenInflector],
         multipleMode
       );
+
+      console.log("fxxb5");
 
       wordsFromTerminusObject.forEach((word) => {
         if (shouldConsoleLog) {
@@ -799,11 +807,15 @@ exports.traverseAndRecordInflections = (
 
       outputUnitsWithDrillPathsMini.pop();
 
+      console.log("fxxb6");
+
       return source[chosenInflector];
     } else if (
       gpUtils.isKeyValueTypeObject(source[chosenInflector]) &&
       !source[chosenInflector].isTerminus
     ) {
+      console.log("fxxb7");
+
       if (shouldConsoleLog) {
         console.log(
           "mlgc lf:traverseAndRecordInflections Clause C: object for further traversal",
@@ -825,8 +837,11 @@ exports.traverseAndRecordInflections = (
         "traverseAndRecordInflections" // deletable
       );
 
+      console.log("fxxb8");
+
       outputUnitsWithDrillPathsMini.pop();
     } else {
+      console.log("fxxb9");
       if (shouldConsoleLog) {
         console.log(
           "eoyd lf:traverseAndRecordInflections Clause X: none of the above",
