@@ -296,6 +296,12 @@ exports.filterWithinSelectedLemmaObject = (
       outputUnitsWithDrillPaths,
     });
     errorInDrilling = true;
+
+    // let blah = structureChunk.chunkId.split("-");
+    // if (blah[blah.length - 1] === "my") {
+    //   gpUtils.throw();
+    // }
+
     return false;
   }
 

@@ -171,71 +171,7 @@ describe("/api", () => {
     //
     //
     //
-    it("#pal17-02a GET 200 YES: ENG to POL. MGN and agreeing possessive pronoun. No clarifier as connected pronoun REVEALS the gender of MGN.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "118 My doctor and his book",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "My doctor and his book.",
-              POL: ["Mój lekarz i jego książka."],
-            },
-            {
-              ENG: "My doctor and her book.",
-              POL: ["Moja lekarka i jej książka."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    xit("#pal17-02b GET 200 YES: ENG to POL. MGN and agreeing possessive pronoun. Yes clarifier as connected pronoun DOESN'T reveal the gender of MGN.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "118a My doctor and my book",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "My doctor (male) and my book.",
-              POL: ["Mój lekarz i moja książka."],
-            },
-            {
-              ENG: "My doctor (female) and my book.",
-              POL: ["Moja lekarka i moja książka."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    xit("#pal17-02c GET 200 YES: ENG to POL. MGN and agreeing possessive pronoun. Asked not to specify.", () => {
+    it.only("#pal17-02a GET 200 YES: ENG to POL. Very simple test of possessive pronoun.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -245,17 +181,14 @@ describe("/api", () => {
           pleaseDontSpecify: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "118a My doctor and my book",
+          sentenceFormulaSymbol: "118c My onion",
         })
         .expect(200)
         .then((res) => {
           let ref = [
             {
-              ENG: "My doctor and my book.",
-              POL: [
-                "Mój lekarz i moja książka.",
-                "Moja lekarka i moja książka.",
-              ],
+              ENG: "My onion.",
+              POL: ["Moja cebula."],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -266,7 +199,35 @@ describe("/api", () => {
           );
         });
     });
-    xit("#pal17-02d GET 200 YES: ENG to POL. MGN and agreeing possessive pronoun. Yes clarifier as connected pronoun DOESN'T reveal the gender of MGN.", () => {
+    it.only("#pal17-02b GET 200 YES: POL to ENG. Very simple test of possessive pronoun. MGN and agreeing possessive pronoun.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "118c My onion",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["My onion."],
+              POL: "Moja cebula.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal17-02c GET 200 YES: ENG to POL. Very simple test of possessive pronoun. MGN and agreeing possessive pronoun. Yes clarifier as connected pronoun DOESN'T reveal the gender of MGN.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -298,39 +259,7 @@ describe("/api", () => {
           );
         });
     });
-    xit("#pal17-02e GET 200 YES: POL to ENG. MGN and agreeing possessive pronoun.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "118a My doctor and my book",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["My doctor and my book."],
-              POL: "Mój lekarz i moja książka.",
-            },
-            {
-              ENG: ["My doctor and my book."],
-              POL: "Moja lekarka i moja książka.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    xit("#pal17-02f GET 200 YES: POL to ENG. MGN and agreeing possessive pronoun.", () => {
+    it("#pal17-02d GET 200 YES: POL to ENG. Very simple test of possessive pronoun. MGN and agreeing possessive pronoun.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -352,6 +281,136 @@ describe("/api", () => {
             {
               ENG: ["My doctor."],
               POL: "Moja lekarka.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    //
+    //
+    //
+    it("#pal17-03a GET 200 YES: ENG to POL. MGN and agreeing possessive pronoun. No clarifier as connected pronoun REVEALS the gender of MGN.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "118 My doctor and his book",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "My doctor and his book.",
+              POL: ["Mój lekarz i jego książka."],
+            },
+            {
+              ENG: "My doctor and her book.",
+              POL: ["Moja lekarka i jej książka."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal17-03b GET 200 YES: ENG to POL. MGN and agreeing possessive pronoun. Yes clarifier as connected pronoun DOESN'T reveal the gender of MGN.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "118a My doctor and my book",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "My doctor (male) and my book.",
+              POL: ["Mój lekarz i moja książka."],
+            },
+            {
+              ENG: "My doctor (female) and my book.",
+              POL: ["Moja lekarka i moja książka."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal17-03c GET 200 YES: ENG to POL. MGN and agreeing possessive pronoun. Asked not to specify.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "118a My doctor and my book",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "My doctor and my book.",
+              POL: [
+                "Mój lekarz i moja książka.",
+                "Moja lekarka i moja książka.",
+              ],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal17-03d GET 200 YES: POL to ENG. MGN and agreeing possessive pronoun.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "118a My doctor and my book",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["My doctor and my book."],
+              POL: "Mój lekarz i moja książka.",
+            },
+            {
+              ENG: ["My doctor and my book."],
+              POL: "Moja lekarka i moja książka.",
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(

@@ -28,12 +28,12 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
         return;
       }
 
-      console.log("hsat validateSentenceFormula", {
-        currentLanguage,
-        wordtype,
-        featureKey,
-        featureValue,
-      });
+      // console.log("hsat validateSentenceFormula", {
+      //   currentLanguage,
+      //   wordtype,
+      //   featureKey,
+      //   featureValue,
+      // });
 
       //0. Check if this featureKey is expected at all.
       let allFeatureKeys = Object.keys(stChFeaturesRef);

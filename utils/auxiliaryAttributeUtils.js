@@ -882,8 +882,10 @@ exports.firstStageEvaluateAnnotations = (
     );
 
     if (!Object.values(formattedAnnoObj).length) {
-      gpUtils.throw(
-        `dhce firstStageEvaluateAnnotations. There were annotations on stCh, but none after formatting. "${structureChunk.chunkId}".`
+      console.log(
+        "[1;31m " +
+          `dhce NB: firstStageEvaluateAnnotations. There were annotations on stCh, but none after formatting. "${structureChunk.chunkId}".` +
+          "[0m"
       );
     }
 

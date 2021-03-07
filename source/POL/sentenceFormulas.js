@@ -1239,6 +1239,7 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
         specificLemmas: ["lekarz", "lekarka"],
         gcase: ["nom"],
+        educatorBlocksAnnotationsForTheseFeatures: ["gender", "number"],
         // gender: ["f"],
       },
       { chunkId: "fix-1-and", value: "i" },

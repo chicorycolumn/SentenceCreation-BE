@@ -165,9 +165,13 @@ exports.fetchPalette = (req) => {
         let featureValue = structureChunk[featureKey];
 
         if (
-          !["andTags", "orTags", "specificIds", "specificLemmas"].includes(
-            featureKey
-          ) &&
+          ![
+            "andTags",
+            "orTags",
+            "specificIds",
+            "specificLemmas",
+            "educatorBlocksAnnotationsForTheseFeatures",
+          ].includes(featureKey) &&
           Array.isArray(featureValue) &&
           featureValue.length > 1
         ) {

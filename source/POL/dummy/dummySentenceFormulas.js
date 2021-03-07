@@ -1855,7 +1855,7 @@ exports.dummySentenceFormulasBank = [
         wordtype: "noun",
         andTags: ["person", "job"],
         number: ["singular"],
-        // gender: ["f"],
+        gender: ["f"],
         importantFeatures: ["gender"],
         educatorBlocksAnnotationsForTheseFeatures: ["gender"],
       },
