@@ -22,6 +22,9 @@ exports.fetchPalette = (req) => {
     devSaysOmitStChValidation,
   } = req.body;
 
+  //nownow
+  // pleaseDontSpecify = false;
+
   let { sentenceFormula, words } = scUtils.getMaterials(
     questionLanguage,
     sentenceFormulaId,
@@ -46,11 +49,10 @@ exports.fetchPalette = (req) => {
   }
 
   if (pleaseDontSpecify) {
-    //Set pleaseDontSpecify to false if 'person' noun is headNoun of any pronouns,
+    //Set to false if 'person' noun is headNoun of any pronouns,
     //because 'The doctor gave me his book.' must specify the MGN doctor.
     questionSentenceFormula.sentenceStructure.forEach((potentialHeadChunk) => {
       if (
-        pleaseDontSpecify &&
         potentialHeadChunk.andTags &&
         potentialHeadChunk.andTags.includes("person") &&
         questionSentenceFormula.sentenceStructure.find(
@@ -160,7 +162,8 @@ exports.fetchPalette = (req) => {
       structureChunk.gender = [];
     }
 
-    if ("decisive decant check") {
+    //nowno
+    if (false && "decisive decant check") {
       Object.keys(structureChunk).forEach((featureKey) => {
         let featureValue = structureChunk[featureKey];
 
@@ -375,6 +378,7 @@ exports.fetchPalette = (req) => {
     };
 
     ///////////////////////////////////////////////kp Specifiers
+    //nownow
     if (!pleaseDontSpecify) {
       aaUtils.addSpecifiers(
         answerSentenceData.sentenceFormula,

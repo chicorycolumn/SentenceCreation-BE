@@ -246,10 +246,10 @@ exports.filterWithinSelectedLemmaObject = (
           inflectionValue
         );
 
-        console.log(
-          "afwm lf:filterWithinSelectedLemmaObject: formattedFeatureValueArr",
-          formattedFeatureValueArr
-        );
+        // console.log(
+        //   "afwm lf:filterWithinSelectedLemmaObject: formattedFeatureValueArr",
+        //   formattedFeatureValueArr
+        // );
 
         inflectionValueArr = [
           ...inflectionValueArr,
@@ -363,14 +363,14 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
     drillPath,
   } = outputUnit;
 
-  console.log(
-    "[1;35m " + `rakt updateStChByAndTagsAndSelectors--------------------` + "[0m"
-  );
-  console.log(
-    "rakt updateStChByAndTagsAndSelectors structureChunk starts as",
-    structureChunk
-  );
-  console.log("rakt updateStChByAndTagsAndSelectors drillPath", drillPath);
+  // console.log(
+  //   "[1;35m " + `rakt updateStChByAndTagsAndSelectors--------------------` + "[0m"
+  // );
+  // console.log(
+  //   "rakt updateStChByAndTagsAndSelectors structureChunk starts as",
+  //   structureChunk
+  // );
+  // console.log("rakt updateStChByAndTagsAndSelectors drillPath", drillPath);
 
   let doneSelectors = [];
 
@@ -482,13 +482,17 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
 };
 
 exports.updateStChByInflections = (outputUnit, currentLanguage) => {
-  console.log(
-    "[1;30m " +
-      `plol updateStChByInflections "${
-        outputUnit.drillPath ? outputUnit.drillPath.toString() : "no drillPath"
-      }"` +
-      "[0m"
-  );
+  if (false) {
+    console.log(
+      "[1;30m " +
+        `plol updateStChByInflections "${
+          outputUnit.drillPath
+            ? outputUnit.drillPath.toString()
+            : "no drillPath"
+        }"` +
+        "[0m"
+    );
+  }
 
   if (outputUnit.drillPath) {
     outputUnit.drillPath.forEach((drillPathSubArr) => {
@@ -685,9 +689,11 @@ exports.traverseAndRecordInflections = (
   consoleLabel
 ) => {
   console.log(
-    `gswg traverseAndRecordInflections called by "${consoleLabel}" reqArr`,
+    `kyde traverseAndRecordInflections called by "${consoleLabel}" reqArr`,
     reqArr
   );
+  console.log("kyde source", source);
+  console.log(" ");
 
   if (!reqArr || !reqArr.length) {
     gpUtils.throw(
@@ -720,12 +726,11 @@ exports.traverseAndRecordInflections = (
   }
 
   reqInflectorArr.forEach((chosenInflector, reqInflectorArrIndex) => {
-    console.log(
-      "fxxb lf:traverseAndRecordInflections outputUnitsWithDrillPathsMini",
-      outputUnitsWithDrillPathsMini
-    );
-
-    console.log("fxxb1");
+    // console.log(
+    //   "fxxb lf:traverseAndRecordInflections outputUnitsWithDrillPathsMini",
+    //   outputUnitsWithDrillPathsMini
+    // );
+    // console.log("fxxb1");
 
     if (Array.isArray(source[chosenInflector])) {
       gpUtils.throw(
@@ -738,7 +743,7 @@ exports.traverseAndRecordInflections = (
       (gpUtils.isTerminusObject(source[chosenInflector]) &&
         source[chosenInflector].processOnlyAtEnd)
     ) {
-      console.log("fxxb2");
+      // console.log("fxxb2");
 
       if (shouldConsoleLog) {
         console.log(
@@ -763,7 +768,7 @@ exports.traverseAndRecordInflections = (
         drillPath: outputUnitsWithDrillPathsMini.slice(0),
       });
 
-      console.log("fxxb3");
+      // console.log("fxxb3");
 
       outputUnitsWithDrillPathsMini.pop();
 
@@ -772,7 +777,7 @@ exports.traverseAndRecordInflections = (
       gpUtils.isTerminusObject(source[chosenInflector]) &&
       !source[chosenInflector].processOnlyAtEnd
     ) {
-      console.log("fxxb4");
+      // console.log("fxxb4");
 
       if (shouldConsoleLog) {
         console.log(
@@ -791,7 +796,7 @@ exports.traverseAndRecordInflections = (
         multipleMode
       );
 
-      console.log("fxxb5");
+      // console.log("fxxb5");
 
       wordsFromTerminusObject.forEach((word) => {
         if (shouldConsoleLog) {
@@ -807,14 +812,14 @@ exports.traverseAndRecordInflections = (
 
       outputUnitsWithDrillPathsMini.pop();
 
-      console.log("fxxb6");
+      // console.log("fxxb6");
 
       return source[chosenInflector];
     } else if (
       gpUtils.isKeyValueTypeObject(source[chosenInflector]) &&
       !source[chosenInflector].isTerminus
     ) {
-      console.log("fxxb7");
+      // console.log("fxxb7");
 
       if (shouldConsoleLog) {
         console.log(
@@ -837,11 +842,11 @@ exports.traverseAndRecordInflections = (
         "traverseAndRecordInflections" // deletable
       );
 
-      console.log("fxxb8");
+      // console.log("fxxb8");
 
       outputUnitsWithDrillPathsMini.pop();
     } else {
-      console.log("fxxb9");
+      // console.log("fxxb9");
       if (shouldConsoleLog) {
         console.log(
           "eoyd lf:traverseAndRecordInflections Clause X: none of the above",

@@ -578,6 +578,7 @@ exports.findMatchingLemmaObjectThenWord = (
       console.log("xzjc ot:findMatchingLemmaObjectThenWord");
       let selectedLemmaObject = gpUtils.selectRandom(matchesCopy);
 
+      //nownow
       if (!pleaseDontSpecify) {
         allLangUtils.decantMGNsBeforeOutputArray(
           structureChunk,
@@ -604,6 +605,7 @@ exports.findMatchingLemmaObjectThenWord = (
       );
 
       if (!subArrayOfOutputUnits || !subArrayOfOutputUnits.length) {
+        console.log("uyie");
         return false;
       }
 
@@ -810,12 +812,12 @@ exports.findMatchingLemmaObjectThenWord = (
     }
   });
 
-  console.log(
-    "[1;33m " +
-      `siwr ot:findMatchingLemmaObjectThenWord arrayOfAllPossibleOutputUnits is:` +
-      "[0m"
-  );
-  console.log(arrayOfAllPossibleOutputUnits);
+  // console.log(
+  //   "[1;33m " +
+  //     `siwr ot:findMatchingLemmaObjectThenWord arrayOfAllPossibleOutputUnits is:` +
+  //     "[0m"
+  // );
+  // console.log(arrayOfAllPossibleOutputUnits);
 
   if (!arrayOfAllPossibleOutputUnits.length) {
     if (!errorInSentenceCreation.errorMessage) {

@@ -75,7 +75,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal17-01c GET 200 YES: MGN as sole word. ENG to POL. pleaseDontSpecify.", () => {
+    xit("#pal17-01c GET 200 YES: MGN as sole word. ENG to POL. pleaseDontSpecify.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -171,62 +171,6 @@ describe("/api", () => {
     //
     //
     //
-    xit("#pal17-02a GET 200 YES: ENG to POL. Very simple test of possessive pronoun. Should not be broken by pleaseDontSpecify: true.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "118c My onion",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "My onion.",
-              POL: ["Moja cebula."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    xit("#pal17-02b GET 200 YES: POL to ENG. Very simple test of possessive pronoun. MGN and agreeing possessive pronoun. Should not be broken by pleaseDontSpecify: true.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "118c My onion",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["My onion."],
-              POL: "Moja cebula.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
     it("#pal17-02c GET 200 YES: ENG to POL. Very simple test of possessive pronoun. MGN and agreeing possessive pronoun. Yes clarifier as connected pronoun DOESN'T reveal the gender of MGN.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -291,16 +235,16 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal17-02e GET 200 YES: ENG to POL. Very simple test of possessive pronoun. pleaseDontSpecify MGN and agreeing possessive pronoun. Yes clarifier as connected pronoun DOESN'T reveal the gender of MGN.", () => {
+    it.only("#pal17-02e GET 200 YES: ENG to POL. Very simple test of possessive pronoun. pleaseDontSpecify MGN and agreeing possessive pronoun. Yes clarifier as connected pronoun DOESN'T reveal the gender of MGN.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
         .send({
-          pleaseDontSpecify: true,
+          // pleaseDontSpecify: true,
           questionLanguage,
-          answerLanguage,
+          // answerLanguage,
           sentenceFormulaSymbol: "118b My doctor",
         })
         .expect(200)
@@ -354,7 +298,7 @@ describe("/api", () => {
     //
     //
     //
-    it("#pal17-03a GET 200 YES: ENG to POL. MGN and agreeing possessive pronoun. No clarifier as connected pronoun REVEALS the gender of MGN.", () => {
+    xit("#pal17-03a GET 200 YES: ENG to POL. MGN and agreeing possessive pronoun. No clarifier as connected pronoun REVEALS the gender of MGN.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -386,7 +330,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal17-03b GET 200 YES: ENG to POL. MGN and agreeing possessive pronoun. Yes clarifier as connected pronoun DOESN'T reveal the gender of MGN.", () => {
+    xit("#pal17-03b GET 200 YES: ENG to POL. MGN and agreeing possessive pronoun. Yes clarifier as connected pronoun DOESN'T reveal the gender of MGN.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -418,7 +362,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal17-03c GET 200 YES: ENG to POL. MGN and agreeing possessive pronoun. Asked not to specify.", () => {
+    xit("#pal17-03c GET 200 YES: ENG to POL. MGN and agreeing possessive pronoun. Asked not to specify.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -449,7 +393,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal17-03d GET 200 YES: POL to ENG. MGN and agreeing possessive pronoun.", () => {
+    xit("#pal17-03d GET 200 YES: POL to ENG. MGN and agreeing possessive pronoun.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -635,7 +579,7 @@ describe("/api", () => {
           );
         });
     });
-    xit("#pal17-04a GET 200 YES: POL to ENG. My doctor was a woman. Testing possibility of nouns agreeing with nouns.", () => {
+    xit("#pal17-04b GET 200 YES: POL to ENG. My doctor was a woman. Testing possibility of nouns agreeing with nouns.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -653,6 +597,129 @@ describe("/api", () => {
             {
               ENG: ["My doctor was a woman."],
               POL: "Moja lekarka była kobietą.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    xit("#pal17-04c GET 200 YES: ENG to POL. My doctor's doctor was a woman. Testing possibility of nouns agreeing with nouns.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "116a My doctor's doctor was a woman",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "My doctor's (male) doctor was a woman.",
+              POL: ["Lekarka mojego lekarza była kobietą."],
+            },
+            {
+              ENG: "My doctor's (female) doctor was a woman.",
+              POL: ["Lekarka mojej lekarki była kobietą."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    xit("#pal17-04d GET 200 YES: POL to ENG. My doctor was a woman. Testing possibility of nouns agreeing with nouns.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "116a My doctor's doctor was a woman",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["My doctor was a woman."],
+              POL: "Lekarka mojego lekarza była kobietą.",
+            },
+            {
+              ENG: ["My doctor was a woman."],
+              POL: "Lekarka mojej lekarki była kobietą.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    //
+    //
+    //
+    xit("#pal17-02a GET 200 YES: ENG to POL. Very simple test of possessive pronoun. Should not be broken by pleaseDontSpecify: true.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "118c My onion",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "My onion.",
+              POL: ["Moja cebula."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    xit("#pal17-02b GET 200 YES: POL to ENG. Very simple test of possessive pronoun. MGN and agreeing possessive pronoun. Should not be broken by pleaseDontSpecify: true.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "118c My onion",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["My onion."],
+              POL: "Moja cebula.",
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(

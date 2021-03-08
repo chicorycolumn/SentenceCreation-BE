@@ -118,14 +118,14 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
         questionLanguage
       );
 
-      if (!synhomographData) {
-        console.log("[1;35m " + `uhqr addClarifiers No synhomographData` + "[0m");
-      } else {
-        console.log(
-          "[1;35m " + `uhqr addClarifiers Yes synhomographData.synhomographs` + "[0m",
-          synhomographData.synhomographs
-        );
-      }
+      // if (!synhomographData) {
+      //   console.log("[1;35m " + `uhqr addClarifiers No synhomographData` + "[0m");
+      // } else {
+      //   console.log(
+      //     "[1;35m " + `uhqr addClarifiers Yes synhomographData.synhomographs` + "[0m",
+      //     synhomographData.synhomographs
+      //   );
+      // }
 
       if (synhomographData) {
         synhomographData.synhomographs.forEach((synhomDataUnit) => {

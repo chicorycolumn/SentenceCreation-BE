@@ -78,6 +78,9 @@ exports.processSentenceFormula = (
   pleaseDontSpecify,
   pleaseDontSpecifyPronounGender
 ) => {
+  // pleaseDontSpecify = false;
+  // pleaseDontSpecifyPronounGender = false;
+
   let { currentLanguage, previousQuestionLanguage } = languagesObj;
   let {
     sentenceFormulaId,
@@ -122,6 +125,7 @@ exports.processSentenceFormula = (
   headChunks.forEach((headChunk) => {
     console.log("evga sc:processSentenceFormula STEP ONE", headChunk.chunkId);
 
+    console.log(`weoa headChunk "${headChunk.chunkId}"`);
     let allPossOutputUnits_head = otUtils.findMatchingLemmaObjectThenWord(
       gpUtils.copyWithoutReference(headChunk),
       words,
@@ -198,6 +202,7 @@ exports.processSentenceFormula = (
             dependentChunk
           );
 
+          console.log(`weoe dependentChunk "${dependentChunk.chunkId}"`);
           let allPossOutputUnits_dependent = otUtils.findMatchingLemmaObjectThenWord(
             gpUtils.copyWithoutReference(dependentChunk),
             words,
@@ -275,6 +280,7 @@ exports.processSentenceFormula = (
   otherChunks.forEach((otherChunk) => {
     console.log("qssh processSentenceFormula otherChunk", otherChunk);
 
+    console.log(`weoi otherChunk "${otherChunk.chunkId}"`);
     let allPossOutputUnits_other = otUtils.findMatchingLemmaObjectThenWord(
       gpUtils.copyWithoutReference(otherChunk),
       words,
@@ -285,6 +291,10 @@ exports.processSentenceFormula = (
       null,
       pleaseDontSpecify,
       pleaseDontSpecifyPronounGender
+      // otherChunk.chunkId === "nou-1-doctor" ? true : pleaseDontSpecify,
+      // otherChunk.chunkId === "nou-1-doctor"
+      //   ? true
+      //   : pleaseDontSpecifyPronounGender
     );
 
     if (
@@ -326,6 +336,9 @@ exports.processSentenceFormula = (
     delete errorInSentenceCreation.errorMessage;
 
     postHocDependentChunks.forEach((postHocDependentChunk) => {
+      console.log(
+        `weoo postHocDependentChunk "${postHocDependentChunk.chunkId}"`
+      );
       let allPossOutputUnits_PHD = otUtils.findMatchingLemmaObjectThenWord(
         gpUtils.copyWithoutReference(postHocDependentChunk),
         words,
