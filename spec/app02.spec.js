@@ -639,38 +639,6 @@ describe("/api", () => {
           );
         });
     });
-    xit("#pal17-04d GET 200 YES: POL to ENG. My doctor was a woman. Testing possibility of nouns agreeing with nouns.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "116a My doctor's doctor was a woman",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["My doctor was a woman."],
-              POL: "Lekarka mojego lekarza była kobietą.",
-            },
-            {
-              ENG: ["My doctor was a woman."],
-              POL: "Lekarka mojej lekarki była kobietą.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
     //
     //
     //

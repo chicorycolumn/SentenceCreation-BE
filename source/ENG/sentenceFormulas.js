@@ -814,6 +814,66 @@ exports.sentenceFormulasBank = [
     ],
   },
   {
+    sentenceFormulaSymbol: "116a My doctor's doctor was a woman",
+    sentenceFormulaId: "ENG-116a",
+    translations: { POL: ["POL-116a"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificLemmas: ["PERSONAL"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "pro-2-my",
+        form: ["determiner"],
+        specificLemmas: ["POSSESSIVE"],
+        agreeWith: "pro-1-I",
+      },
+      {
+        chunkId: "nou-1-doctor's",
+        andTags: ["person"],
+        gcase: ["gen"],
+        number: ["singular"],
+        specificLemmas: ["doctor"],
+        // gender: []
+      },
+      {
+        chunkId: "nou-2-doctor",
+        andTags: ["person"],
+        gcase: ["nom"],
+        number: ["singular"],
+        specificLemmas: ["doctor"],
+        gender: ["f"],
+        educatorBlocksAnnotationsForTheseFeatures: ["gender"],
+      },
+      {
+        chunkId: "ver-1-was",
+        agreeWith: "nou-2-doctor",
+        specificLemmas: ["be"],
+        tenseDescription: ["past simple"],
+      },
+      { chunkId: "fix-1-a", value: "a" },
+      {
+        chunkId: "nou-3-woman",
+        andTags: ["person"],
+        gcase: ["nom"],
+        number: ["singular"],
+        specificLemmas: ["woman"],
+      },
+    ],
+    primaryOrders: [
+      [
+        "pro-2-my",
+        "nou-1-doctor's",
+        "nou-2-doctor",
+        "ver-1-was",
+        "fix-1-a",
+        "nou-3-woman",
+      ],
+    ],
+  },
+  {
     sentenceFormulaSymbol: "118 My doctor and his book",
     sentenceFormulaId: "ENG-118",
     translations: { POL: ["POL-118"] },
