@@ -702,6 +702,38 @@ describe("/api", () => {
           );
         });
     });
+    xit("#pal17-05b GET 200 YES: ENG to POL. I was a doctor. MGN to agree with pronoun.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "117 I was a doctor",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["I was a doctor."],
+              POL: "Byłem lekarzem.",
+            },
+            {
+              ENG: ["I was a doctor."],
+              POL: "Byłam lekarką.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
     //
     //
     //
