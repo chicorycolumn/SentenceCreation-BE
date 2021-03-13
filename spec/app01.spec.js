@@ -56,7 +56,7 @@ describe("/api", () => {
           ]).to.include(res.body.questionSentenceArr[0]);
         });
     });
-    it("#pal08-01b GET 200 YES: RSWAT POL to ENG 'have' - past im/pf (Type 2 Allohomograph), pres pf - I.", () => {
+    it("#pal08-01b GET 200 YES: RSWAT Poleng 'have' - past im/pf (Type 2 Allohomograph), pres pf - I.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -79,7 +79,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal08-01c GET 200 YES: RSWAT POL to ENG 'have' - past im/pf (Type 2 Allohomograph), pres pf - You (with clarifiers).", () => {
+    it("#pal08-01c GET 200 YES: RSWAT Poleng 'have' - past im/pf (Type 2 Allohomograph), pres pf - You (with clarifiers).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -102,7 +102,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal08-01d GET 200 YES: RSWAT POL to ENG 'have' - past im/pf (Type 2 Allohomograph), pres pf - She.", () => {
+    it("#pal08-01d GET 200 YES: RSWAT Poleng 'have' - past im/pf (Type 2 Allohomograph), pres pf - She.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -125,7 +125,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal08-01e GET 200 YES: RSWAT POL to ENG 'have' - past im/pf (Type 2 Allohomograph), pres pf - We.", () => {
+    it("#pal08-01e GET 200 YES: RSWAT Poleng 'have' - past im/pf (Type 2 Allohomograph), pres pf - We.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -148,7 +148,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal08-01f GET 200 YES: RSWAT POL to ENG 'have' - past im/pf (Type 2 Allohomograph), pres pf - They.", () => {
+    it("#pal08-01f GET 200 YES: RSWAT Poleng 'have' - past im/pf (Type 2 Allohomograph), pres pf - They.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -190,7 +190,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal08-02b GET 200 YES: RSWAT ENG to POL 'have' - pres simp, past simp - I.", () => {
+    it("#pal08-02b GET 200 YES: RSWAT Engpol 'have' - pres simp, past simp - I.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -213,7 +213,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal08-02c GET 200 YES: RSWAT ENG to POL 'have' - pres simp, past simp - You (with clarifiers).", () => {
+    it("#pal08-02c GET 200 YES: RSWAT Engpol 'have' - pres simp, past simp - You (with clarifiers).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -236,7 +236,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal08-02d GET 200 YES: RSWAT ENG to POL 'have' - pres simp, past simp - She.", () => {
+    it("#pal08-02d GET 200 YES: RSWAT Engpol 'have' - pres simp, past simp - She.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -259,7 +259,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal08-02e GET 200 YES: RSWAT ENG to POL 'have' - pres simp, past simp - We.", () => {
+    it("#pal08-02e GET 200 YES: RSWAT Engpol 'have' - pres simp, past simp - We.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -282,7 +282,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal08-02f GET 200 YES: RSWAT ENG to POL 'have' - pres simp, past simp - They.", () => {
+    it("#pal08-02f GET 200 YES: RSWAT Engpol 'have' - pres simp, past simp - They.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -305,7 +305,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal08-03a GET 200 YES: RSWAT POL to ENG 'have' correctly (without pronouns).", () => {
+    it("#pal08-03a GET 200 YES: RSWAT Poleng 'have' correctly (without pronouns).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -381,7 +381,7 @@ describe("/api", () => {
           ]).to.include(res.body.questionSentenceArr[0]);
         });
     });
-    it("#pal08-03d GET 200 YES: RSWAT POL to ENG 'have' future pf, (should indeed give 'będzie miał').", () => {
+    it("#pal08-03d GET 200 YES: RSWAT Poleng 'have' future pf, (should indeed give 'będzie miał').", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -406,7 +406,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal08-03e GET 200 YES: RSWAT POL to ENG 'have' future im, (should indeed give 'będzie miał').", () => {
+    it("#pal08-03e GET 200 YES: RSWAT Poleng 'have' future im, (should indeed give 'będzie miał').", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -429,7 +429,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal08-03f GET 200 YES: RSWAT ENG to POL 'have' future im, (should indeed give 'będzie miał').", () => {
+    it("#pal08-03f GET 200 YES: RSWAT Engpol 'have' future im, (should indeed give 'będzie miał').", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -494,7 +494,7 @@ describe("/api", () => {
           ]).to.include(res.body.questionSentenceArr[0]);
         });
     });
-    it("#pal07-01b GET 200 YES: RSWAT POL to ENG 'be' - past im/pf (Type 2 Allohomograph), pres pf - I.", () => {
+    it("#pal07-01b GET 200 YES: RSWAT Poleng 'be' - past im/pf (Type 2 Allohomograph), pres pf - I.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -517,7 +517,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal07-01c GET 200 YES: RSWAT POL to ENG 'be' - past im/pf (Type 2 Allohomograph), pres pf - You (with clarifiers).", () => {
+    it("#pal07-01c GET 200 YES: RSWAT Poleng 'be' - past im/pf (Type 2 Allohomograph), pres pf - You (with clarifiers).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -540,7 +540,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal07-01d GET 200 YES: RSWAT POL to ENG 'be' - past im/pf (Type 2 Allohomograph), pres pf - She.", () => {
+    it("#pal07-01d GET 200 YES: RSWAT Poleng 'be' - past im/pf (Type 2 Allohomograph), pres pf - She.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -563,7 +563,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal07-01e GET 200 YES: RSWAT POL to ENG 'be' - past im/pf (Type 2 Allohomograph), pres pf - We.", () => {
+    it("#pal07-01e GET 200 YES: RSWAT Poleng 'be' - past im/pf (Type 2 Allohomograph), pres pf - We.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -586,7 +586,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal07-01f GET 200 YES: RSWAT POL to ENG 'be' - past im/pf (Type 2 Allohomograph), pres pf - They.", () => {
+    it("#pal07-01f GET 200 YES: RSWAT Poleng 'be' - past im/pf (Type 2 Allohomograph), pres pf - They.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -628,7 +628,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal07-02b GET 200 YES: RSWAT ENG to POL 'be' - pres simp, past simp - I.", () => {
+    it("#pal07-02b GET 200 YES: RSWAT Engpol 'be' - pres simp, past simp - I.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -651,7 +651,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal07-02c GET 200 YES: RSWAT ENG to POL 'be' - pres simp, past simp - You (with clarifiers).", () => {
+    it("#pal07-02c GET 200 YES: RSWAT Engpol 'be' - pres simp, past simp - You (with clarifiers).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -674,7 +674,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal07-02d GET 200 YES: RSWAT ENG to POL 'be' - pres simp, past simp - She.", () => {
+    it("#pal07-02d GET 200 YES: RSWAT Engpol 'be' - pres simp, past simp - She.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -697,7 +697,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal07-02e GET 200 YES: RSWAT ENG to POL 'be' - pres simp, past simp - We.", () => {
+    it("#pal07-02e GET 200 YES: RSWAT Engpol 'be' - pres simp, past simp - We.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -720,7 +720,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal07-02f GET 200 YES: RSWAT ENG to POL 'be' - pres simp, past simp - They.", () => {
+    it("#pal07-02f GET 200 YES: RSWAT Engpol 'be' - pres simp, past simp - They.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -743,7 +743,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal07-03a GET 200 YES: RSWAT POL to ENG 'be' correctly (without pronouns).", () => {
+    it("#pal07-03a GET 200 YES: RSWAT Poleng 'be' correctly (without pronouns).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -816,7 +816,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal07-03d GET 200 YES: RSWAT POL to ENG 'be' future pf, (Clone Bee VNV issue: should NOT receive 'będę być', but instead just 'będę'.).", () => {
+    it("#pal07-03d GET 200 YES: RSWAT Poleng 'be' future pf, (Clone Bee VNV issue: should NOT receive 'będę być', but instead just 'będę'.).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -839,7 +839,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal07-03e GET 200 YES: RSWAT POL to ENG 'be' future im, (Clone Bee VNV issue: should NOT receive 'będę być', but instead just 'będę'.).", () => {
+    it("#pal07-03e GET 200 YES: RSWAT Poleng 'be' future im, (Clone Bee VNV issue: should NOT receive 'będę być', but instead just 'będę'.).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -862,7 +862,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal07-04a GET 200 YES: RSWAT POL to ENG 'be' (checking there's no Clone Bee Cross Pollination issue).", () => {
+    it("#pal07-04a GET 200 YES: RSWAT Poleng 'be' (checking there's no Clone Bee Cross Pollination issue).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1010,7 +1010,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal06-02a GET 200 YES: RSWAT POL to ENG, where there are two different sentenceFormulas as answers.", () => {
+    it("#pal06-02a GET 200 YES: RSWAT Poleng, where there are two different sentenceFormulas as answers.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1045,7 +1045,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal06-02b GET 200 YES: RSWAT ENG to POL, where there are two different sentenceFormulas as answers.", () => {
+    it("#pal06-02b GET 200 YES: RSWAT Engpol, where there are two different sentenceFormulas as answers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1080,7 +1080,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal06-03a GET 200 YES: RSWAT POL to ENG, ensure a tenseDescription can be translated by multiple such.", () => {
+    it("#pal06-03a GET 200 YES: RSWAT Poleng, ensure a tenseDescription can be translated by multiple such.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1102,7 +1102,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal06-03b GET 200 YES: RSWAT ENG to POL, ensure a tenseDescription can be translated by multiple such.", () => {
+    it("#pal06-03b GET 200 YES: RSWAT Engpol, ensure a tenseDescription can be translated by multiple such.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1124,7 +1124,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal06-03c GET 200 YES: RSWAT ENG to POL, ignoring tenseDescriptions specified in answer structure that are not translations.", () => {
+    it("#pal06-03c GET 200 YES: RSWAT Engpol, ignoring tenseDescriptions specified in answer structure that are not translations.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1146,7 +1146,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal06-03d GET 200 YES: RSWAT POL to ENG, ignoring tenseDescriptions specified in answer structure that are not translations.", () => {
+    it("#pal06-03d GET 200 YES: RSWAT Poleng, ignoring tenseDescriptions specified in answer structure that are not translations.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1234,7 +1234,7 @@ describe("/api", () => {
           ]).to.contain(res.body.questionSentenceArr[0]);
         });
     });
-    it("#pal06-04c GET 200 YES: RSWAT POL to ENG, where POL tenseDescriptions are left blank.", () => {
+    it("#pal06-04c GET 200 YES: RSWAT Poleng, where POL tenseDescriptions are left blank.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1256,7 +1256,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal06-04d GET 200 YES: RSWAT ENG to POL, where POL tenseDescriptions are left blank.", () => {
+    it("#pal06-04d GET 200 YES: RSWAT Engpol, where POL tenseDescriptions are left blank.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1278,7 +1278,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal06-04e GET 200 YES: RSWAT POL to ENG, where ENG tenseDescriptions are left blank.", () => {
+    it("#pal06-04e GET 200 YES: RSWAT Poleng, where ENG tenseDescriptions are left blank.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1300,7 +1300,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal06-04f GET 200 YES: RSWAT ENG to POL, where ENG tenseDescriptions are left blank.", () => {
+    it("#pal06-04f GET 200 YES: RSWAT Engpol, where ENG tenseDescriptions are left blank.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1322,7 +1322,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal06-04g GET 200 YES: RSWAT POL to ENG, where tenseDescription is left blank in both question and answer structures.", () => {
+    it("#pal06-04g GET 200 YES: RSWAT Poleng, where tenseDescription is left blank in both question and answer structures.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1345,7 +1345,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal06-04h GET 200 YES: RSWAT POL to ENG, where tenseDescription is left blank in both question and answer structures.", () => {
+    it("#pal06-04h GET 200 YES: RSWAT Poleng, where tenseDescription is left blank in both question and answer structures.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1368,7 +1368,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal06-04i GET 200 YES: RSWAT POL to ENG, where tenseDescription has one that will work and one that won't.", () => {
+    it("#pal06-04i GET 200 YES: RSWAT Poleng, where tenseDescription has one that will work and one that won't.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1391,7 +1391,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal06-05a GET 200 YES: RSWAT ENG to POL. Ensure three masculine genders collapse to one for the verb.", () => {
+    it("#pal06-05a GET 200 YES: RSWAT Engpol. Ensure three masculine genders collapse to one for the verb.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1413,7 +1413,7 @@ describe("/api", () => {
           );
         });
     });
-    xit("#pal06-06a GET 200 YES: Battery RSWAT POL to ENG. Ensure feminine and masculine are randomly selected at ~50/50 rate, despite there being thrice as many masculine genders as feminine.", () => {
+    xit("#pal06-06a GET 200 YES: Battery RSWAT Poleng. Ensure feminine and masculine are randomly selected at ~50/50 rate, despite there being thrice as many masculine genders as feminine.", () => {
       return Promise.all([
         testOnce(),
         testOnce(),
@@ -1759,7 +1759,7 @@ describe("/api", () => {
           console.log({ "RESULT: res.body:": res.body });
         });
     });
-    it("#pal05-03b GET 200 YES: Allow specification of multiple radically different tenseDescriptions, and then translate them. POL to ENG", () => {
+    it("#pal05-03b GET 200 YES: Allow specification of multiple radically different tenseDescriptions, and then translate them. Poleng", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -1791,7 +1791,7 @@ describe("/api", () => {
           console.log({ "RESULT: res.body:": res.body });
         });
     });
-    it("#pal05-03c GET 200 YES: Allow specification of multiple radically different tenseDescriptions, and then translate them. ENG to POL. Works for tenseDescription.", () => {
+    it("#pal05-03c GET 200 YES: Allow specification of multiple radically different tenseDescriptions, and then translate them. Engpol. Works for tenseDescription.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -1823,7 +1823,7 @@ describe("/api", () => {
           console.log({ "RESULT: res.body:": res.body });
         });
     });
-    it("#pal05-03d GET 200 YES: Allow specification of multiple radically different tenseDescriptions, and then translate them. ENG to POL. Works for tenseDescription and gender.", () => {
+    it("#pal05-03d GET 200 YES: Allow specification of multiple radically different tenseDescriptions, and then translate them. Engpol. Works for tenseDescription and gender.", () => {
       return request(app)
         .get("/api/palette")
         .send({

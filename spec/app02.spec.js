@@ -7,6 +7,12 @@ const { it } = require("mocha");
 const testingUtils = require("../utils/secondOrder/testingUtils.js");
 const { generalTranslatedSentencesRef } = testingUtils;
 
+// Legendkey
+//
+// MGN:            Multi-gender noun. Eg doctor in ENG can be either male or female.
+// ProsMgn:        "My doctor and her book." Connected pronoun reveals gender of MGN. Doesn't need an annotation for doctor as clearly must be lekarka.
+// EdusMgn:        "My doctor is a man."     Educator specifies MGN's gender. Sentence where educator knows that this MGN will need no clarifying.
+
 describe("/api", () => {
   gpUtils.fillOutWashburneRefObj(
     generalTranslatedSentencesRef,
@@ -18,53 +24,30 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe("/palette - Stage 17: Possessive pronouns and MGNs.", () => {
-    it("#pal17-01a GET 200 YES: Select one gender, for MGN. ENG to POL. This is just for sentences where the educator knows that this MGN will need no clarifying. Eg 'my doctor is a woman'.", () => {
+  describe.only("/palette - Stage 17-i: Possessive pronouns and MGNs. Pre-testing.", () => {
+    it("#pal17-01a GET 200 YES: Engpol. MGN as sole word, annotation expected.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
         .send({
+          // pleaseDontSpecify: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy58a doctor f",
+          sentenceFormulaSymbol: "dummy58 doctor",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
           let ref = [
             {
-              ENG: "Doctor.",
+              ENG: "Doctor (female).",
               POL: ["Lekarka."],
             },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    it("#pal17-01b GET 200 YES: Select one gender, for MGN. POL to ENG.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy58a doctor f",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
             {
-              ENG: ["Doctor."],
-              POL: "Lekarka.",
+              ENG: "Doctor (male).",
+              POL: ["Lekarz."],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -75,7 +58,7 @@ describe("/api", () => {
           );
         });
     });
-    xit("#pal17-01c GET 200 YES: MGN as sole word. ENG to POL. pleaseDontSpecify.", () => {
+    it("#pal17-01b GET 200 YES: Engpol. MGN as sole word, pleaseDontSpecify.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -104,39 +87,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal17-01d GET 200 YES: MGN as sole word. ENG to POL. Add specifiers.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy58 doctor",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "Doctor (female).",
-              POL: ["Lekarka."],
-            },
-            {
-              ENG: "Doctor (male).",
-              POL: ["Lekarz."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    it("#pal17-01e GET 200 YES: MGN as sole word. POL to ENG.", () => {
+    it("#pal17-01c GET 200 YES: Poleng. MGN as sole word, annotation wouldn't appear anyway.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -168,10 +119,96 @@ describe("/api", () => {
           );
         });
     });
-    //
-    //
-    //
-    it("#pal17-02c GET 200 YES: ENG to POL. Very simple test of possessive pronoun. MGN and agreeing possessive pronoun. Yes clarifier as connected pronoun DOESN'T reveal the gender of MGN.", () => {
+    it("#pal17-01d GET 200 YES: Poleng. MGN as sole word, pleaseDontSpecify but annotation wouldn't appear anyway.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy58 doctor",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["Doctor."],
+              POL: "Lekarka.",
+            },
+            {
+              ENG: ["Doctor."],
+              POL: "Lekarz.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    xit("#pal17-02a GET 200 YES: Engpol. Simple possessive pronoun sentence. Should not be broken by pleaseDontSpecify.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "118c My onion",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "My onion.",
+              POL: ["Moja cebula."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    xit("#pal17-02b GET 200 YES: Poleng. Simple possessive pronoun sentence. Should not be broken by pleaseDontSpecify.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "118c My onion",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["My onion."],
+              POL: "Moja cebula.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal17-03a GET 200 YES: Engpol. Possessive pronoun above MGN. Annotation expected as this isn't actually a ProsMgn.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -203,48 +240,16 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal17-02d GET 200 YES: POL to ENG. Very simple test of possessive pronoun. MGN and agreeing possessive pronoun.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "118b My doctor",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["My doctor."],
-              POL: "Mój lekarz.",
-            },
-            {
-              ENG: ["My doctor."],
-              POL: "Moja lekarka.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    it.only("#pal17-02e GET 200 YES: ENG to POL. Very simple test of possessive pronoun. pleaseDontSpecify MGN and agreeing possessive pronoun. Yes clarifier as connected pronoun DOESN'T reveal the gender of MGN.", () => {
+    it("#pal17-03b GET 200 YES: Engpol. Possessive pronoun above MGN. pleaseDontSpecify.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
         .send({
-          // pleaseDontSpecify: true,
+          pleaseDontSpecify: true,
           questionLanguage,
-          // answerLanguage,
+          answerLanguage,
           sentenceFormulaSymbol: "118b My doctor",
         })
         .expect(200)
@@ -263,7 +268,39 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal17-02f GET 200 YES: POL to ENG. Very simple test of possessive pronoun. pleaseDontSpecify MGN and agreeing possessive pronoun.", () => {
+    it("#pal17-03c GET 200 YES: Poleng. Possessive pronoun above MGN. Annotation wouldn't appear anyway.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "118b My doctor",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["My doctor."],
+              POL: "Mój lekarz.",
+            },
+            {
+              ENG: ["My doctor."],
+              POL: "Moja lekarka.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal17-03d GET 200 YES: Poleng. Possessive pronoun above MGN. pleaseDontSpecify but annotation wouldn't appear anyway.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -295,140 +332,10 @@ describe("/api", () => {
           );
         });
     });
-    //
-    //
-    //
-    xit("#pal17-03a GET 200 YES: ENG to POL. MGN and agreeing possessive pronoun. No clarifier as connected pronoun REVEALS the gender of MGN.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
+  });
 
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "118 My doctor and his book",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "My doctor and his book.",
-              POL: ["Mój lekarz i jego książka."],
-            },
-            {
-              ENG: "My doctor and her book.",
-              POL: ["Moja lekarka i jej książka."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    xit("#pal17-03b GET 200 YES: ENG to POL. MGN and agreeing possessive pronoun. Yes clarifier as connected pronoun DOESN'T reveal the gender of MGN.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "118a My doctor and my book",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "My doctor (male) and my book.",
-              POL: ["Mój lekarz i moja książka."],
-            },
-            {
-              ENG: "My doctor (female) and my book.",
-              POL: ["Moja lekarka i moja książka."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    xit("#pal17-03c GET 200 YES: ENG to POL. MGN and agreeing possessive pronoun. Asked not to specify.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "118a My doctor and my book",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "My doctor and my book.",
-              POL: [
-                "Mój lekarz i moja książka.",
-                "Moja lekarka i moja książka.",
-              ],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    xit("#pal17-03d GET 200 YES: POL to ENG. MGN and agreeing possessive pronoun.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          // pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "118a My doctor and my book",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["My doctor and my book."],
-              POL: "Mój lekarz i moja książka.",
-            },
-            {
-              ENG: ["My doctor and my book."],
-              POL: "Moja lekarka i moja książka.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    //
-    //
-    //
-    xit("#pal17-03a GET 200 YES: ENG to POL. Sentence with 2 of same MGN. Do specify.", () => {
+  xdescribe("/palette - Stage 17-ii: Possessive pronouns and MGNs. PP below MGN. ProsMgn.", () => {
+    it("#pal17-04a GET 200 YES: Engpol. Sentence with 2 of same MGN. Annotations expected. Eventually this should fail so that 4b succeeds.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -488,7 +395,104 @@ describe("/api", () => {
           );
         });
     });
-    xit("#pal17-03b GET 200 YES: POL to ENG. Sentence with 2 of same MGN. Do specify.", () => {
+    it("#pal17-04b GET 200 YES: Engpol. Sentence with 2 of same MGN. Some annotations expected. But eventually, this should succeed, as ProsMgn.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "115 I saw my doctor and her doctor",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "I (male) saw my doctor and his doctor (male).",
+              POL: ["Zobaczyłem mojego lekarza i jego lekarza."],
+            },
+            {
+              ENG: "I (female) saw my doctor and his doctor (male).",
+              POL: ["Zobaczyłam mojego lekarza i jego lekarza."],
+            },
+            //
+            {
+              ENG: "I (male) saw my doctor and his doctor (female).",
+              POL: ["Zobaczyłem mojego lekarza i jego lekarkę."],
+            },
+            {
+              ENG: "I (female) saw my doctor and his doctor (female).",
+              POL: ["Zobaczyłam mojego lekarza i jego lekarkę."],
+            },
+            //
+            {
+              ENG: "I (male) saw my doctor and her doctor (male).",
+              POL: ["Zobaczyłem moją lekarkę i jej lekarza."],
+            },
+            {
+              ENG: "I (female) saw my doctor and her doctor (male).",
+              POL: ["Zobaczyłam moją lekarkę i jej lekarza."],
+            },
+            //
+            {
+              ENG: "I (male) saw my doctor and her doctor (female).",
+              POL: ["Zobaczyłem moją lekarkę i jej lekarkę."],
+            },
+            {
+              ENG: "I (female) saw my doctor and her doctor (female).",
+              POL: ["Zobaczyłam moją lekarkę i jej lekarkę."],
+            },
+            //
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal17-04c GET 200 YES: Engpol. Sentence with 2 of same MGN. pleaseDontSpecify should be blocked for ProsMgn MGN but not for other MGN.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "115 I saw my doctor and her doctor",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "I saw my doctor and his doctor.",
+              POL: [
+                "Zobaczyłem mojego lekarza i jego lekarza.",
+                "Zobaczyłam mojego lekarza i jego lekarza.",
+                "Zobaczyłem mojego lekarza i jego lekarkę.",
+                "Zobaczyłam mojego lekarza i jego lekarkę.",
+                "Zobaczyłem moją lekarkę i jej lekarza.",
+                "Zobaczyłam moją lekarkę i jej lekarza.",
+                "Zobaczyłem moją lekarkę i jej lekarkę.",
+                "Zobaczyłam moją lekarkę i jej lekarkę.",
+              ],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal17-04d GET 200 YES: Poleng. Sentence with 2 of same MGN. Annotations wouldn't appear anyway.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -548,10 +552,381 @@ describe("/api", () => {
           );
         });
     });
-    //
-    //
-    //
-    xit("#pal17-04a GET 200 YES: ENG to POL. My doctor was a woman. Testing possibility of nouns agreeing with nouns.", () => {
+    it("#pal17-04e GET 200 YES: Poleng. Sentence with 2 of same MGN. pleaseDontSpecify but annotations wouldn't appear anyway.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "115 I saw my doctor and her doctor",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["I saw my doctor and his doctor."],
+              POL: "Zobaczyłem mojego lekarza i jego lekarza.",
+            },
+            {
+              ENG: ["I saw my doctor and his doctor."],
+              POL: "Zobaczyłam mojego lekarza i jego lekarza.",
+            },
+            //
+            {
+              ENG: ["I saw my doctor and his doctor."],
+              POL: "Zobaczyłem mojego lekarza i jego lekarkę.",
+            },
+            {
+              ENG: ["I saw my doctor and his doctor."],
+              POL: "Zobaczyłam mojego lekarza i jego lekarkę.",
+            },
+            //
+            {
+              ENG: ["I saw my doctor and her doctor."],
+              POL: "Zobaczyłem moją lekarkę i jej lekarza.",
+            },
+            {
+              ENG: ["I saw my doctor and her doctor."],
+              POL: "Zobaczyłam moją lekarkę i jej lekarza.",
+            },
+            //
+            {
+              ENG: ["I saw my doctor and her doctor."],
+              POL: "Zobaczyłem moją lekarkę i jej lekarkę.",
+            },
+            {
+              ENG: ["I saw my doctor and her doctor."],
+              POL: "Zobaczyłam moją lekarkę i jej lekarkę.",
+            },
+            //
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal17-05a GET 200 YES: Engpol. Possessive pronoun below MGN. No annotation as ProsMgn.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "118 My doctor and his book",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "My doctor and his book.",
+              POL: ["Mój lekarz i jego książka."],
+            },
+            {
+              ENG: "My doctor and her book.",
+              POL: ["Moja lekarka i jej książka."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal17-05b GET 200 YES: Engpol. Possessive pronoun below MGN. pleaseDontSpecify should be BLOCKED for ProsMgn MGN.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "118 My doctor and his book",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "My doctor and his book.",
+              POL: ["Mój lekarz i jego książka."],
+            },
+            {
+              ENG: "My doctor and her book.",
+              POL: ["Moja lekarka i jej książka."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal17-05c GET 200 YES: Poleng. Possessive pronoun below MGN. Annotations wouldn't appear anyway.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "118 My doctor and his book",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["My doctor and his book."],
+              POL: "Mój lekarz i jego książka.",
+            },
+            {
+              ENG: ["My doctor and her book."],
+              POL: "Moja lekarka i jej książka.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal17-05d GET 200 YES: Poleng. Possessive pronoun below MGN. pleaseDontSpecify but annotations wouldn't appear anyway.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "118 My doctor and his book",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["My doctor and his book."],
+              POL: "Mój lekarz i jego książka.",
+            },
+            {
+              ENG: ["My doctor and her book."],
+              POL: "Moja lekarka i jej książka.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal17-06a GET 200 YES: Engpol. Annotation expected as this isn't actually a ProsMgn.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "118a My doctor and my book",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "My doctor (male) and my book.",
+              POL: ["Mój lekarz i moja książka."],
+            },
+            {
+              ENG: "My doctor (female) and my book.",
+              POL: ["Moja lekarka i moja książka."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal17-06b GET 200 YES: Engpol. pleaseDontSpecify.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "118a My doctor and my book",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "My doctor and my book.",
+              POL: [
+                "Mój lekarz i moja książka.",
+                "Moja lekarka i moja książka.",
+              ],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal17-06c GET 200 YES: Poleng. Annotations wouldn't appear anyway.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "118a My doctor and my book",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["My doctor and my book."],
+              POL: "Mój lekarz i moja książka.",
+            },
+            {
+              ENG: ["My doctor and my book."],
+              POL: "Moja lekarka i moja książka.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal17-06c GET 200 YES: Poleng. pleaseDontSpecify but annotations wouldn't appear anyway.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "118a My doctor and my book",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["My doctor and my book."],
+              POL: "Mój lekarz i moja książka.",
+            },
+            {
+              ENG: ["My doctor and my book."],
+              POL: "Moja lekarka i moja książka.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+  });
+
+  xdescribe("/palette - Stage 17-iii: Possessive pronouns and MGNs. EdusMgn", () => {
+    it("#pal17-07a GET 200 YES: Engpol. Hard-specify an MGN's gender (EdusMgn dummy run).", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy58a doctor f",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "Doctor.",
+              POL: ["Lekarka."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal17-07b GET 200 YES: Poleng. Hard-specify an MGN's gender (EdusMgn dummy run).", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy58a doctor f",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["Doctor."],
+              POL: "Lekarka.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal17-08a GET 200 YES: Engpol. No annotations as EdusMgn.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -579,7 +954,35 @@ describe("/api", () => {
           );
         });
     });
-    xit("#pal17-04b GET 200 YES: POL to ENG. My doctor was a woman. Testing possibility of nouns agreeing with nouns.", () => {
+    it("#pal17-08b GET 200 YES: Engpol. pleaseDontSpecify but no annotations anyway as EdusMgn.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "116 My doctor was a woman",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "My doctor was a woman.",
+              POL: ["Moja lekarka była kobietą."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal17-08c GET 200 YES: Poleng. No annotations anyway, aside from this being EdusMgn.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -607,7 +1010,35 @@ describe("/api", () => {
           );
         });
     });
-    xit("#pal17-04c GET 200 YES: ENG to POL. My doctor's doctor was a woman. Testing possibility of nouns agreeing with nouns.", () => {
+    it("#pal17-08d GET 200 YES: Poleng. pleaseDontSpecify but no annotations anyway, aside from this being EdusMgn.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "116 My doctor was a woman",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["My doctor was a woman."],
+              POL: "Moja lekarka była kobietą.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal17-09a GET 200 YES: Engpol. One annotation absent as EdusMgn.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -639,7 +1070,38 @@ describe("/api", () => {
           );
         });
     });
-    xit("#pal17-04d GET 200 YES: POL to ENG. My doctor was a woman. Testing possibility of nouns agreeing with nouns.", () => {
+    it("#pal17-09b GET 200 YES: Engpol. pleaseDontSpecify. EdusMgn.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "116a My doctor's doctor was a woman",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "My doctor's doctor was a woman.",
+              POL: [
+                "Lekarka mojego lekarza była kobietą.",
+                "Lekarka mojej lekarki była kobietą.",
+              ],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal17-09c GET 200 YES: Poleng. No annotations anyway, aside from this being EdusMgn.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -671,10 +1133,42 @@ describe("/api", () => {
           );
         });
     });
-    //
-    //
-    //
-    xit("#pal17-05a GET 200 YES: ENG to POL. I was a doctor. MGN to agree with pronoun.", () => {
+    it("#pal17-09d GET 200 YES: Poleng. pleaseDontSpecify but no annotations anyway, aside from this being EdusMgn.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "116a My doctor's doctor was a woman",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["My doctor was a woman."],
+              POL: "Lekarka mojego lekarza była kobietą.",
+            },
+            {
+              ENG: ["My doctor was a woman."],
+              POL: "Lekarka mojej lekarki była kobietą.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+  });
+
+  xdescribe("/palette - Stage 17-iv: Possessive pronouns and MGNs. MGN to agree with pronoun.", () => {
+    it("#pal17-10a GET 200 YES: Engpol. I was a doctor. MGN to agree with pronoun.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -702,7 +1196,7 @@ describe("/api", () => {
           );
         });
     });
-    xit("#pal17-05b GET 200 YES: ENG to POL. I was a doctor. MGN to agree with pronoun.", () => {
+    it("#pal17-10b GET 200 YES: Engpol. I was a doctor. MGN to agree with pronoun.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -734,68 +1228,9 @@ describe("/api", () => {
           );
         });
     });
-    //
-    //
-    //
-    xit("#pal17-02a GET 200 YES: ENG to POL. Very simple test of possessive pronoun. Should not be broken by pleaseDontSpecify: true.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "118c My onion",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "My onion.",
-              POL: ["Moja cebula."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    xit("#pal17-02b GET 200 YES: POL to ENG. Very simple test of possessive pronoun. MGN and agreeing possessive pronoun. Should not be broken by pleaseDontSpecify: true.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "118c My onion",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["My onion."],
-              POL: "Moja cebula.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
   });
 
-  describe("/palette - Stage 16: NATASHA T. Checking how arrays as terminal points are handled.", () => {
+  xdescribe("/palette - Stage 16: NATASHA T. Checking how arrays as terminal points are handled.", () => {
     it("#pal16-01a GET 200 YES: Are correct members of an array returned as possible ANSWER, as they should be?", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -904,7 +1339,7 @@ describe("/api", () => {
   });
 
   describe("/palette - Stage 15: Prepositions and Articles.", () => {
-    it("#pal15-01a GET 200 YES: POL to ENG. Indefinite article.", () => {
+    it("#pal15-01a GET 200 YES: Poleng. Indefinite article.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -940,7 +1375,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal15-01b GET 200 YES: ENG to POL. Indefinite article.", () => {
+    it("#pal15-01b GET 200 YES: Engpol. Indefinite article.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -976,7 +1411,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal15-02a GET 200 YES: POL to ENG. Either article.", () => {
+    it("#pal15-02a GET 200 YES: Poleng. Either article.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1004,7 +1439,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal15-02b GET 200 YES: ENG to POL. Either article.", () => {
+    it("#pal15-02b GET 200 YES: Engpol. Either article.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1036,7 +1471,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal15-03a GET 200 YES: POL to ENG. Preposition 'with'. SHEEP (checking clarifiers) Articles for singular. Checking POL protective preposition form.", () => {
+    it("#pal15-03a GET 200 YES: Poleng. Preposition 'with'. SHEEP (checking clarifiers) Articles for singular. Checking POL protective preposition form.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1064,7 +1499,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal15-03b GET 200 YES: ENG to POL. Preposition 'with'. SHEEP (checking clarifiers) Articles for singular. Checking POL protective preposition form.", () => {
+    it("#pal15-03b GET 200 YES: Engpol. Preposition 'with'. SHEEP (checking clarifiers) Articles for singular. Checking POL protective preposition form.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1096,7 +1531,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal15-03c GET 200 YES: POL to ENG. Preposition 'with'. SHEEP (checking clarifiers) Articles for plural.", () => {
+    it("#pal15-03c GET 200 YES: Poleng. Preposition 'with'. SHEEP (checking clarifiers) Articles for plural.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1124,7 +1559,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal15-03d GET 200 YES: ENG to POL. Preposition 'with'. SHEEP (checking clarifiers) Articles for plural.", () => {
+    it("#pal15-03d GET 200 YES: Engpol. Preposition 'with'. SHEEP (checking clarifiers) Articles for plural.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1156,7 +1591,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal15-04a GET 200 YES: POL to ENG. Preposition 'with'. Articles for singular. Checking POL protective preposition form.", () => {
+    it("#pal15-04a GET 200 YES: Poleng. Preposition 'with'. Articles for singular. Checking POL protective preposition form.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1192,7 +1627,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal15-04b GET 200 YES: ENG to POL. Preposition 'with'. Articles for singular. Checking POL protective preposition form.", () => {
+    it("#pal15-04b GET 200 YES: Engpol. Preposition 'with'. Articles for singular. Checking POL protective preposition form.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1240,7 +1675,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal15-04c GET 200 YES: POL to ENG. Preposition 'with'. Articles for plural.", () => {
+    it("#pal15-04c GET 200 YES: Poleng. Preposition 'with'. Articles for plural.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1276,7 +1711,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal15-04d GET 200 YES: ENG to POL. Preposition 'with'. Articles for plural.", () => {
+    it("#pal15-04d GET 200 YES: Engpol. Preposition 'with'. Articles for plural.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1324,7 +1759,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal15-04e GET 200 YES: POL to ENG. Preposition 'with'. Articles for singular.", () => {
+    it("#pal15-04e GET 200 YES: Poleng. Preposition 'with'. Articles for singular.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1360,7 +1795,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal15-04f GET 200 YES: ENG to POL. Preposition 'with'. Articles for singular.", () => {
+    it("#pal15-04f GET 200 YES: Engpol. Preposition 'with'. Articles for singular.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1462,7 +1897,7 @@ describe("/api", () => {
           ]).to.include(res.body.questionSentenceArr[0]);
         });
     });
-    it("#pal14-01c GET 200 YES: ENG to POL. I have my onion. Clarifier for 'my' should NOT be present.", () => {
+    it("#pal14-01c GET 200 YES: Engpol. I have my onion. Clarifier for 'my' should NOT be present.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1502,7 +1937,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal14-01d GET 200 YES: POL to ENG. I have my onion.", () => {
+    it("#pal14-01d GET 200 YES: Poleng. I have my onion.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1542,7 +1977,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal14-01e GET 200 YES: ENG to POL. My onion.", () => {
+    it("#pal14-01e GET 200 YES: Engpol. My onion.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1570,7 +2005,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal14-01f GET 200 YES: POL to ENG. My onion.", () => {
+    it("#pal14-01f GET 200 YES: Poleng. My onion.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1598,7 +2033,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal14-02a GET 200 YES: ENG to POL. My father gave me a book.", () => {
+    it("#pal14-02a GET 200 YES: Engpol. My father gave me a book.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1643,7 +2078,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal14-02b GET 200 YES: POL to ENG. My father gave me a book.", () => {
+    it("#pal14-02b GET 200 YES: Poleng. My father gave me a book.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1750,7 +2185,7 @@ describe("/api", () => {
           ]).to.include(res.body.questionSentenceArr[0]);
         });
     });
-    it("#pal14-03c GET 200 YES: ENG to POL. My father gave me his book.", () => {
+    it("#pal14-03c GET 200 YES: Engpol. My father gave me his book.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1817,7 +2252,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal14-03d GET 200 YES: POL to ENG. My father gave me his book.", () => {
+    it("#pal14-03d GET 200 YES: Poleng. My father gave me his book.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1904,7 +2339,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal14-04a GET 200 YES: ENG to POL. SPECIFIED. The doctor gave me her book.", () => {
+    it("#pal14-04a GET 200 YES: Engpol. SPECIFIED. The doctor gave me her book.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1962,7 +2397,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal14-04b GET 200 YES: ENG to POL. (not allowed to be unspecified, should be identical result to previous test). The doctor gave me her book.", () => {
+    it("#pal14-04b GET 200 YES: Engpol. (not allowed to be unspecified, should be identical result to previous test). The doctor gave me her book.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2024,7 +2459,7 @@ describe("/api", () => {
   });
 
   describe("/palette - Stage 13B: Pronouns and other Multi Gender Nouns: Further tests.", () => {
-    it("#pal13B-01a GET 200 YES: Specifiers not requested. ENG to POL. I am.", () => {
+    it("#pal13B-01a GET 200 YES: Specifiers not requested. Engpol. I am.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2050,7 +2485,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13B-01b GET 200 YES: Specifiers requested but should not appear. ENG to POL. I am.", () => {
+    it("#pal13B-01b GET 200 YES: Specifiers requested but should not appear. Engpol. I am.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2076,7 +2511,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13B-02a GET 200 YES: ENG to POL. A more interesting sentence with Pronouns.", () => {
+    it("#pal13B-02a GET 200 YES: Engpol. A more interesting sentence with Pronouns.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2144,7 +2579,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13B-02b GET 200 YES: POL to ENG. A more interesting sentence with Pronouns.", () => {
+    it("#pal13B-02b GET 200 YES: Poleng. A more interesting sentence with Pronouns.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -2204,7 +2639,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13B-03a GET 200 YES: ENG to POL. Another more interesting sentence with Pronouns.", () => {
+    it("#pal13B-03a GET 200 YES: Engpol. Another more interesting sentence with Pronouns.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2303,7 +2738,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13B-03b GET 200 YES: POL to ENG. Another more interesting sentence with Pronouns.", () => {
+    it("#pal13B-03b GET 200 YES: Poleng. Another more interesting sentence with Pronouns.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -2487,7 +2922,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13B-03c GET 200 YES: POL to ENG. Another more interesting sentence with Pronouns.", () => {
+    it("#pal13B-03c GET 200 YES: Poleng. Another more interesting sentence with Pronouns.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -2671,7 +3106,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13B-04a GET 200 YES: ENG to POL. Another more interesting sentence with Pronouns. Terminal object used.", () => {
+    it("#pal13B-04a GET 200 YES: Engpol. Another more interesting sentence with Pronouns. Terminal object used.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2744,7 +3179,7 @@ describe("/api", () => {
           expect(res.body.questionSentenceArr[0]).to.equal("Ja.");
         });
     });
-    it("#pal13A-01c GET 200 YES: Give a pronoun in POL to ENG.", () => {
+    it("#pal13A-01c GET 200 YES: Give a pronoun in Poleng.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -2764,7 +3199,7 @@ describe("/api", () => {
           expect(res.body.answerSentenceArr).to.have.members(["I."]);
         });
     });
-    it("#pal13A-01d GET 200 YES: Give a pronoun in ENG to POL.", () => {
+    it("#pal13A-01d GET 200 YES: Give a pronoun in Engpol.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2784,7 +3219,7 @@ describe("/api", () => {
           expect(res.body.answerSentenceArr).to.have.members(["Ja."]);
         });
     });
-    it("#pal13A-02a GET 200 YES: ENG to POL. Inherit features from pronoun to verb (m sing).", () => {
+    it("#pal13A-02a GET 200 YES: Engpol. Inherit features from pronoun to verb (m sing).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2812,7 +3247,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13A-02b GET 200 YES: ENG to POL. Inherit features from pronoun to verb (nonvir plur).", () => {
+    it("#pal13A-02b GET 200 YES: Engpol. Inherit features from pronoun to verb (nonvir plur).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2843,7 +3278,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13A-02c GET 200 YES: ENG to POL. WITH SPECIFIERS Inherit features from pronoun to verb (m sing).", () => {
+    it("#pal13A-02c GET 200 YES: Engpol. WITH SPECIFIERS Inherit features from pronoun to verb (m sing).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2871,7 +3306,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13A-02d GET 200 YES: ENG to POL. WITH SPECIFIERS Inherit features from pronoun to verb (nonvir plur).", () => {
+    it("#pal13A-02d GET 200 YES: Engpol. WITH SPECIFIERS Inherit features from pronoun to verb (nonvir plur).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2905,7 +3340,7 @@ describe("/api", () => {
     //Delta: Is this still true?
     //NOTA BENE: If you want an ENG Q sentence to have both gender Robił Robiła in POL A sentences,
     //then instead of setting no gender, you must set gender as allPersonalGenders.
-    it("#pal13A-03a GET 200 YES: ENG to POL. (allPersonalGenders was specified.) Inherit features from pronoun to verb (m sing).", () => {
+    it("#pal13A-03a GET 200 YES: Engpol. (allPersonalGenders was specified.) Inherit features from pronoun to verb (m sing).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2940,7 +3375,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13A-03b GET 200 YES: ENG to POL. (allPersonalGenders was specified.) Inherit features from pronoun to verb (nonvir plur).", () => {
+    it("#pal13A-03b GET 200 YES: Engpol. (allPersonalGenders was specified.) Inherit features from pronoun to verb (nonvir plur).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2979,7 +3414,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13A-03c GET 200 YES: ENG to POL. (No gender was specified.) WITH CLARIFIERS Inherit features from pronoun to verb (m sing).", () => {
+    it("#pal13A-03c GET 200 YES: Engpol. (No gender was specified.) WITH CLARIFIERS Inherit features from pronoun to verb (m sing).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -3008,7 +3443,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13A-03d GET 200 YES: ENG to POL. (No gender was specified.) WITH CLARIFIERS Inherit features from pronoun to verb (nonvir plur).", () => {
+    it("#pal13A-03d GET 200 YES: Engpol. (No gender was specified.) WITH CLARIFIERS Inherit features from pronoun to verb (nonvir plur).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -3047,7 +3482,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13A-04a GET 200 YES: POL to ENG. Inherit features from pronoun to verb (m sing).", () => {
+    it("#pal13A-04a GET 200 YES: Poleng. Inherit features from pronoun to verb (m sing).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -3082,7 +3517,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13A-04b GET 200 YES: POL to ENG. Inherit features from pronoun to verb (nonvir plur).", () => {
+    it("#pal13A-04b GET 200 YES: Poleng. Inherit features from pronoun to verb (nonvir plur).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -3117,7 +3552,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13A-04c GET 200 YES: POL to ENG. NO CLARIFIERS Inherit features from pronoun to verb (m sing).", () => {
+    it("#pal13A-04c GET 200 YES: Poleng. NO CLARIFIERS Inherit features from pronoun to verb (m sing).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -3152,7 +3587,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13A-04d GET 200 YES: POL to ENG. NO CLARIFIERS Inherit features from pronoun to verb (nonvir plur).", () => {
+    it("#pal13A-04d GET 200 YES: Poleng. NO CLARIFIERS Inherit features from pronoun to verb (nonvir plur).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -3187,7 +3622,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13A-05a GET 200 YES: POL to ENG. Inherit features from pronoun to verb (m sing).", () => {
+    it("#pal13A-05a GET 200 YES: Poleng. Inherit features from pronoun to verb (m sing).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -3230,7 +3665,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13A-05b GET 200 YES: POL to ENG. Inherit features from pronoun to verb (nonvir plur).", () => {
+    it("#pal13A-05b GET 200 YES: Poleng. Inherit features from pronoun to verb (nonvir plur).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -3273,7 +3708,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13A-05c GET 200 YES: POL to ENG. NO CLARIFIERS Inherit features from pronoun to verb (m sing).", () => {
+    it("#pal13A-05c GET 200 YES: Poleng. NO CLARIFIERS Inherit features from pronoun to verb (m sing).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -3316,7 +3751,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13A-05d GET 200 YES: POL to ENG. NO CLARIFIERS Inherit features from pronoun to verb (nonvir plur).", () => {
+    it("#pal13A-05d GET 200 YES: Poleng. NO CLARIFIERS Inherit features from pronoun to verb (nonvir plur).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -3359,7 +3794,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13A-06a GET 200 YES: ENG to POL. No gender specified in stCh for MGN.", () => {
+    it("#pal13A-06a GET 200 YES: Engpol. No gender specified in stCh for MGN.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -3468,7 +3903,7 @@ describe("/api", () => {
           expect(answerSentenceArr).to.have.members(["Czerwone drzwi."]);
         });
     });
-    it("#pal12-01c GET 200 YES: RSWAT for ENG to POL tantum plurale.", () => {
+    it("#pal12-01c GET 200 YES: RSWAT for Engpol tantum plurale.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -3573,7 +4008,7 @@ describe("/api", () => {
   });
 
   describe("/palette - Stage 11B Not adding Specifiers.", () => {
-    it("#pal11B-01a GET 200 YES: POL to ENG. CHOOSE ONE. Singular. male or female versions of same person.", () => {
+    it("#pal11B-01a GET 200 YES: Poleng. CHOOSE ONE. Singular. male or female versions of same person.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -3613,7 +4048,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal11B-01b GET 200 YES: POL to ENG. CHOOSE ONE. Plural. male or female versions of same person.", () => {
+    it("#pal11B-01b GET 200 YES: Poleng. CHOOSE ONE. Plural. male or female versions of same person.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -3653,7 +4088,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal11B-01c GET 200 YES: POL to ENG. AGNOSTIC has no effect. Singular. male or female versions of same person.", () => {
+    it("#pal11B-01c GET 200 YES: Poleng. AGNOSTIC has no effect. Singular. male or female versions of same person.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -3694,7 +4129,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal11B-01d GET 200 YES: POL to ENG. AGNOSTIC has no effect. Plural. male or female versions of same person.", () => {
+    it("#pal11B-01d GET 200 YES: Poleng. AGNOSTIC has no effect. Plural. male or female versions of same person.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -3735,7 +4170,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal11B-02a GET 200 YES: ENG to POL. CHOOSE ONE. Singular. male or female versions of same person.", () => {
+    it("#pal11B-02a GET 200 YES: Engpol. CHOOSE ONE. Singular. male or female versions of same person.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -3767,7 +4202,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal11B-02b GET 200 YES: ENG to POL. CHOOSE ONE. Plural. male or female versions of same person.", () => {
+    it("#pal11B-02b GET 200 YES: Engpol. CHOOSE ONE. Plural. male or female versions of same person.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -3803,7 +4238,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal11B-02c GET 200 YES: ENG to POL. AGNOSTIC. Singular. male or female versions of same person.", () => {
+    it("#pal11B-02c GET 200 YES: Engpol. AGNOSTIC. Singular. male or female versions of same person.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -3832,7 +4267,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal11B-02d GET 200 YES: ENG to POL. AGNOSTIC. Plural. male or female versions of same person.", () => {
+    it("#pal11B-02d GET 200 YES: Engpol. AGNOSTIC. Plural. male or female versions of same person.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -3861,7 +4296,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal11B-03a GET 200 YES: ENG to POL. AGNOSTIC. Give both pronoun singular gender options in answer.", () => {
+    it("#pal11B-03a GET 200 YES: Engpol. AGNOSTIC. Give both pronoun singular gender options in answer.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -3898,7 +4333,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal11B-03b GET 200 YES: ENG to POL. AGNOSTIC. Give both pronoun plural gender options in answer.", () => {
+    it("#pal11B-03b GET 200 YES: Engpol. AGNOSTIC. Give both pronoun plural gender options in answer.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -3938,7 +4373,7 @@ describe("/api", () => {
   });
 
   describe("/palette - Stage 11A: Adding Specifiers.", () => {
-    it("#pal11A-01a GET 200 YES: SPECIFIER EXPECTED. Multi Gender Noun. ENG to POL.", () => {
+    it("#pal11A-01a GET 200 YES: SPECIFIER EXPECTED. Multi Gender Noun. Engpol.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -3970,7 +4405,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal11A-01b GET 200 YES: SPECIFIER EXPECTED Multi Gender Noun PLURAL. ENG to POL.", () => {
+    it("#pal11A-01b GET 200 YES: SPECIFIER EXPECTED Multi Gender Noun PLURAL. Engpol.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -4006,7 +4441,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal11A-02a GET 200 YES: NO SPECIFIER EVEN WHEN ASKED FOR. Pronoun I/WE. {pres im} needs no gender. ENG to POL.", () => {
+    it("#pal11A-02a GET 200 YES: NO SPECIFIER EVEN WHEN ASKED FOR. Pronoun I/WE. {pres im} needs no gender. Engpol.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -4032,7 +4467,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal11A-02b GET 200 YES: SPECIFIER EXPECTED. Pronoun I/WE. {past im} does indeed need gender. ENG to POL.", () => {
+    it("#pal11A-02b GET 200 YES: SPECIFIER EXPECTED. Pronoun I/WE. {past im} does indeed need gender. Engpol.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -4093,7 +4528,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal11A-04a GET 200 YES: GIVE MULTIPLE ANSWER OPTIONS WHEN SPECIFIERS NOT REQUESTED. Pronoun I/WE. {past im} does indeed need gender. ENG to POL.", () => {
+    it("#pal11A-04a GET 200 YES: GIVE MULTIPLE ANSWER OPTIONS WHEN SPECIFIERS NOT REQUESTED. Pronoun I/WE. {past im} does indeed need gender. Engpol.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -4137,7 +4572,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal11A-05a GET 200 YES: Gives clarifiers and specifiers. Pronoun YOU. ENG to POL.", () => {
+    it("#pal11A-05a GET 200 YES: Gives clarifiers and specifiers. Pronoun YOU. Engpol.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -4184,7 +4619,7 @@ describe("/api", () => {
   });
 
   describe("/palette - Stage 10: Allohomographs (adding Clarifiers).", () => {
-    it("#pal10-01a Type 1 Allohomographs of SingleWordtype: 'nut' ENG to POL. Expect clarifiers.", () => {
+    it("#pal10-01a Type 1 Allohomographs of SingleWordtype: 'nut' Engpol. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -4216,7 +4651,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal10-01b Type 1 Allohomographs of SingleWordtype: 'nut' POL to ENG. No clarifiers.", () => {
+    it("#pal10-01b Type 1 Allohomographs of SingleWordtype: 'nut' Poleng. No clarifiers.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -4248,7 +4683,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal10-02a Type 1 Allohomographs of MultipleWordtype: 'bear (noun)' ENG to POL. Expect clarifiers as requested allo-multi-clarifiers in structureChunk.", () => {
+    it("#pal10-02a Type 1 Allohomographs of MultipleWordtype: 'bear (noun)' Engpol. Expect clarifiers as requested allo-multi-clarifiers in structureChunk.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -4277,7 +4712,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal10-02b Type 1 Allohomographs of MultipleWordtype: 'bear (verb)' ENG to POL. Expect clarifiers as requested allo-multi-clarifiers in structureChunk.", () => {
+    it("#pal10-02b Type 1 Allohomographs of MultipleWordtype: 'bear (verb)' Engpol. Expect clarifiers as requested allo-multi-clarifiers in structureChunk.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -4306,7 +4741,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal10-02c Type 1 Allohomographs of MultipleWordtype: 'bear (verb)' ENG to POL. Did NOT request allo-multi-clarifiers in structureChunk.", () => {
+    it("#pal10-02c Type 1 Allohomographs of MultipleWordtype: 'bear (verb)' Engpol. Did NOT request allo-multi-clarifiers in structureChunk.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -4335,7 +4770,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal10-02d Type 1 Allohomographs of MultipleWordtype: 'bear (noun)' POL to ENG. No clarifiers.", () => {
+    it("#pal10-02d Type 1 Allohomographs of MultipleWordtype: 'bear (noun)' Poleng. No clarifiers.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -4364,7 +4799,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal10-02e Type 1 Allohomographs of MultipleWordtype: 'bear (verb)' POL to ENG. No clarifiers.", () => {
+    it("#pal10-02e Type 1 Allohomographs of MultipleWordtype: 'bear (verb)' Poleng. No clarifiers.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -4393,7 +4828,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal10-03a Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (noun)' ENG to POL. Textmoji Clarifier expected. Wordtype Clarifier not requested.", () => {
+    it("#pal10-03a Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (noun)' Engpol. Textmoji Clarifier expected. Wordtype Clarifier not requested.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -4425,7 +4860,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal10-03b Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (noun)' ENG to POL. Textmoji Clarifier expected. Wordtype Clarifier requested so also expected.", () => {
+    it("#pal10-03b Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (noun)' Engpol. Textmoji Clarifier expected. Wordtype Clarifier requested so also expected.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -4457,7 +4892,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal10-03c Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (verb)' ENG to POL. Textmoji Clarifier expected. Wordtype Clarifier not requested.", () => {
+    it("#pal10-03c Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (verb)' Engpol. Textmoji Clarifier expected. Wordtype Clarifier not requested.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -4486,7 +4921,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal10-03d Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (verb)' ENG to POL. Textmoji Clarifier expected. Wordtype Clarifier requested so also expected.", () => {
+    it("#pal10-03d Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (verb)' Engpol. Textmoji Clarifier expected. Wordtype Clarifier requested so also expected.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -4517,7 +4952,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal10-03e Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (noun)' POL to ENG. No clarifiers.", () => {
+    it("#pal10-03e Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (noun)' Poleng. No clarifiers.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -4549,7 +4984,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal10-03f Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (verb)' POL to ENG. No clarifiers.", () => {
+    it("#pal10-03f Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (verb)' Poleng. No clarifiers.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -4581,7 +5016,7 @@ describe("/api", () => {
   });
 
   describe("/palette - Stage 9: Synhomographs (adding Clarifiers).", () => {
-    it("#pal09-01a (Type 1 Synhomographs. If-PW: clarify Inflections) 'sheep': ENG to POL. Expect clarifiers.", () => {
+    it("#pal09-01a (Type 1 Synhomographs. If-PW: clarify Inflections) 'sheep': Engpol. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -4604,7 +5039,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal09-01b 'sheep': POL to ENG. No clarifiers.", () => {
+    it("#pal09-01b 'sheep': Poleng. No clarifiers.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -4627,7 +5062,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal09-02a (Type 2 Synhomographs. Ad-PW: clarify Inflections (tenseDescription)) 'read': ENG to POL. Expect clarifiers.", () => {
+    it("#pal09-02a (Type 2 Synhomographs. Ad-PW: clarify Inflections (tenseDescription)) 'read': Engpol. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -4650,7 +5085,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal09-02b (Ad-PW: clarify Inflections (tenseDescription)) 'read': POL to ENG. No clarifiers.", () => {
+    it("#pal09-02b (Ad-PW: clarify Inflections (tenseDescription)) 'read': Poleng. No clarifiers.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -4673,7 +5108,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal09-03a (Type 3 Synhomographs. Ad-PW: clarify Inflections) 'write': ENG to POL. Expect clarifiers.", () => {
+    it("#pal09-03a (Type 3 Synhomographs. Ad-PW: clarify Inflections) 'write': Engpol. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -4696,7 +5131,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal09-03b (Ad-PW: clarify Inflections) 'write': POL to ENG. No clarifiers.", () => {
+    it("#pal09-03b (Ad-PW: clarify Inflections) 'write': Poleng. No clarifiers.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -4719,7 +5154,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal09-03c (Type 3 Synhomographs. Ad-PW: clarify Inflections) 'write': ENG to POL. Expect clarifiers.", () => {
+    it("#pal09-03c (Type 3 Synhomographs. Ad-PW: clarify Inflections) 'write': Engpol. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -4742,7 +5177,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal09-03d (Ad-PW: clarify Inflections) 'write': POL to ENG. No clarifiers.", () => {
+    it("#pal09-03d (Ad-PW: clarify Inflections) 'write': Poleng. No clarifiers.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -4765,7 +5200,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal09-03e (Type 3 Synhomographs. Ad-PW: clarify Inflections) 'write': ENG to POL. Expect clarifiers.", () => {
+    it("#pal09-03e (Type 3 Synhomographs. Ad-PW: clarify Inflections) 'write': Engpol. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -4788,7 +5223,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal09-03f (Ad-PW: clarify Inflections) 'write': POL to ENG. No clarifiers.", () => {
+    it("#pal09-03f (Ad-PW: clarify Inflections) 'write': Poleng. No clarifiers.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -4818,7 +5253,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal09-03g (Type 3 Synhomographs. Ad-PW: clarify Inflections) 'be': ENG to POL. Expect clarifiers.", () => {
+    it("#pal09-03g (Type 3 Synhomographs. Ad-PW: clarify Inflections) 'be': Engpol. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -4841,7 +5276,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal09-03h (Ad-PW: clarify Inflections) 'be': POL to ENG. No clarifiers.", () => {
+    it("#pal09-03h (Ad-PW: clarify Inflections) 'be': Poleng. No clarifiers.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
