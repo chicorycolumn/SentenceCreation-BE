@@ -580,6 +580,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
       //nownow
       if (!pleaseDontSpecify) {
+        //PDSXblue
         allLangUtils.decantMGNsBeforeOutputArray(
           structureChunk,
           selectedLemmaObject,
@@ -614,113 +615,22 @@ exports.findMatchingLemmaObjectThenWord = (
         subArrayOfOutputUnits
       );
 
-      // Gamma: Is this done, then?
-      //If the outputunits differ only in gender, and pleaseDontSpecifyPronounGender is true,
-      //then... use both of the output units, rather than selectrandoming one... somehow.
-
-      function doDrillPathsDifferOnlyByGender(subArrayOfOutputUnits) {
-        if (
-          subArrayOfOutputUnits.some((outputUnit) =>
-            outputUnit.drillPath.find((pathArr) => pathArr[0] === "gender")
-          )
-        ) {
-          let firstOutputUnit = subArrayOfOutputUnits[0];
-
-          if (
-            subArrayOfOutputUnits.slice(1).every((outputUnit) => {
-              if (
-                outputUnit.drillPath.find(
-                  (pathArr) => pathArr[0] === "gender"
-                )[1] !==
-                  firstOutputUnit.drillPath.find(
-                    (pathArr) => pathArr[0] === "gender"
-                  )[1] &&
-                outputUnit.drillPath
-                  .filter((pathArr) => pathArr[0] !== "gender")
-                  .every((pathArr) => {
-                    let firstDPPathArr = firstOutputUnit.drillPath.find(
-                      (urPathArr) => urPathArr[0] === pathArr[0]
-                    );
-
-                    if (firstDPPathArr && firstDPPathArr[1] === pathArr[1]) {
-                      return true;
-                    }
-                  })
-              ) {
-                return true;
-              }
-            })
-          ) {
-            return true;
-          }
-        }
-      }
-
-      function createMergedGenderOutputUnit(subArrayOfOutputUnits) {
-        let mergedOutputUnit = gpUtils.copyWithoutReference(
-          subArrayOfOutputUnits[0]
-        );
-
-        let newGenderArr = [
-          mergedOutputUnit.drillPath.find(
-            (pathArr) => pathArr[0] === "gender"
-          )[1],
-        ];
-
-        subArrayOfOutputUnits.slice(1).forEach((outputUnit) => {
-          let genderValue = outputUnit.drillPath.find(
-            (pathArr) => pathArr[0] === "gender"
-          )[1];
-
-          newGenderArr.push(genderValue);
-        });
-
-        console.log(
-          "dznt ot:findMatchingLemmaObjectThenWord newGenderArr",
-          newGenderArr
-        );
-
-        let metaGenderRef = refObj.metaFeatures[currentLanguage]["gender"];
-
-        let metaGenderResult;
-
-        Object.keys(metaGenderRef).forEach((metaGenderKey) => {
-          if (metaGenderResult) {
-            return;
-          }
-
-          let metaGenderTranslatedArr = metaGenderRef[metaGenderKey];
-
-          if (
-            gpUtils.areTwoFlatArraysEqual(newGenderArr, metaGenderTranslatedArr)
-          ) {
-            metaGenderResult = metaGenderKey;
-          }
-        });
-
-        console.log(
-          "zdxc ot:findMatchingLemmaObjectThenWord metaGenderResult",
-          metaGenderResult
-        );
-
-        mergedOutputUnit.drillPath.find(
-          (pathArr) => pathArr[0] === "gender"
-        )[1] = metaGenderResult;
-
-        return mergedOutputUnit;
-      }
-
+      //PDSXred
+      // If the outputunits differ only in gender, and pleaseDontSpecifyPronounGender is true,
+      // then merge the outputunits, so ENG Q "I wrote" can be POL A ["Napisałem.", "Napisałam."]
+      // #pal11B-03a, #pal11B-03b
       if (
         pleaseDontSpecifyPronounGender &&
-        doDrillPathsDifferOnlyByGender(subArrayOfOutputUnits)
+        otUtils.doDrillPathsDifferOnlyByGender(subArrayOfOutputUnits)
       ) {
         console.log(
           "kpos ot:findMatchingLemmaObjectThenWord subArrayOfOutputUnits",
           subArrayOfOutputUnits
         );
 
-        let mergedGenderOutputUnit = createMergedGenderOutputUnit(
-          subArrayOfOutputUnits
+        let mergedGenderOutputUnit = otUtils.createMergedGenderOutputUnit(
+          subArrayOfOutputUnits,
+          currentLanguage
         );
 
         subArrayOfOutputUnits = [mergedGenderOutputUnit];
@@ -1197,4 +1107,91 @@ exports.stripOutFeatures = (currentLanguage, structureChunk, PWlabel) => {
 
       delete structureChunk[inflectorKey];
     });
+};
+
+exports.doDrillPathsDifferOnlyByGender = (subArrayOfOutputUnits) => {
+  if (
+    subArrayOfOutputUnits.some((outputUnit) =>
+      outputUnit.drillPath.find((pathArr) => pathArr[0] === "gender")
+    )
+  ) {
+    let firstOutputUnit = subArrayOfOutputUnits[0];
+
+    if (
+      subArrayOfOutputUnits.slice(1).every((outputUnit) => {
+        if (
+          outputUnit.drillPath.find((pathArr) => pathArr[0] === "gender")[1] !==
+            firstOutputUnit.drillPath.find(
+              (pathArr) => pathArr[0] === "gender"
+            )[1] &&
+          outputUnit.drillPath
+            .filter((pathArr) => pathArr[0] !== "gender")
+            .every((pathArr) => {
+              let firstDPPathArr = firstOutputUnit.drillPath.find(
+                (urPathArr) => urPathArr[0] === pathArr[0]
+              );
+
+              if (firstDPPathArr && firstDPPathArr[1] === pathArr[1]) {
+                return true;
+              }
+            })
+        ) {
+          return true;
+        }
+      })
+    ) {
+      return true;
+    }
+  }
+};
+
+exports.createMergedGenderOutputUnit = (
+  subArrayOfOutputUnits,
+  currentLanguage
+) => {
+  let mergedOutputUnit = gpUtils.copyWithoutReference(subArrayOfOutputUnits[0]);
+
+  let newGenderArr = [
+    mergedOutputUnit.drillPath.find((pathArr) => pathArr[0] === "gender")[1],
+  ];
+
+  subArrayOfOutputUnits.slice(1).forEach((outputUnit) => {
+    let genderValue = outputUnit.drillPath.find(
+      (pathArr) => pathArr[0] === "gender"
+    )[1];
+
+    newGenderArr.push(genderValue);
+  });
+
+  console.log(
+    "dznt ot:findMatchingLemmaObjectThenWord newGenderArr",
+    newGenderArr
+  );
+
+  let metaGenderRef = refObj.metaFeatures[currentLanguage]["gender"];
+
+  let metaGenderResult;
+
+  Object.keys(metaGenderRef).forEach((metaGenderKey) => {
+    if (metaGenderResult) {
+      return;
+    }
+
+    let metaGenderTranslatedArr = metaGenderRef[metaGenderKey];
+
+    if (gpUtils.areTwoFlatArraysEqual(newGenderArr, metaGenderTranslatedArr)) {
+      metaGenderResult = metaGenderKey;
+    }
+  });
+
+  console.log(
+    "zdxc ot:findMatchingLemmaObjectThenWord metaGenderResult",
+    metaGenderResult
+  );
+
+  mergedOutputUnit.drillPath.find(
+    (pathArr) => pathArr[0] === "gender"
+  )[1] = metaGenderResult;
+
+  return mergedOutputUnit;
 };

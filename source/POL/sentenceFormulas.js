@@ -1189,6 +1189,7 @@ exports.sentenceFormulasBank = [
         specificLemmas: ["lekarz", "lekarka"],
         gcase: ["nom"],
         gender: ["f"],
+        //alpha - add EBA for symmetry and check it doesn't break anything
       },
       {
         chunkId: "ver-1-was",
@@ -1211,6 +1212,57 @@ exports.sentenceFormulasBank = [
         "nou-1-doctor",
         "ver-1-was",
         "nou-2-woman",
+      ],
+    ],
+  },
+  {
+    sentenceFormulaSymbol: "116x My doctor was a woman",
+    sentenceFormulaId: "POL-116x",
+    translations: { ENG: ["ENG-116x"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificLemmas: ["PERSONAL"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "pro-2-my",
+        form: ["determiner"],
+        specificLemmas: ["POSSESSIVE"],
+        postHocAgreeWithPrimary: "pro-1-I",
+        postHocAgreeWithSecondary: "nou-1-doctor",
+      },
+      {
+        chunkId: "nou-1-doctor",
+        andTags: ["person"],
+        gcase: ["nom"],
+        number: ["singular"],
+        specificLemmas: ["lekarz", "lekarka"],
+        gcase: ["nom"],
+        gender: ["f"],
+      },
+      // {
+      //   chunkId: "ver-1-was",
+      //   agreeWith: "nou-1-doctor",
+      //   specificLemmas: ["być"],
+      //   tenseDescription: ["past pf"],
+      // },
+      // {
+      //   chunkId: "nou-2-woman",
+      //   andTags: ["person"],
+      //   gcase: ["ins"],
+      //   number: ["singular"],
+      //   specificLemmas: ["kobieta"],
+      // },
+    ],
+    primaryOrders: [
+      [
+        // "pro-1-I",
+        "pro-2-my",
+        "nou-1-doctor",
+        // "ver-1-was",
+        // "nou-2-woman",
       ],
     ],
   },

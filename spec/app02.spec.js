@@ -24,7 +24,7 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe.only("/palette - Stage 17-i: Possessive pronouns and MGNs. Pre-testing.", () => {
+  xdescribe("/palette - Stage 17-i: Possessive pronouns and MGNs. Pre-testing.", () => {
     it("#pal17-01a GET 200 YES: Engpol. MGN as sole word, annotation expected.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -32,7 +32,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          // pleaseDontSpecify: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "dummy58 doctor",
@@ -215,7 +214,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          // pleaseDontSpecify: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "118b My doctor",
@@ -275,7 +273,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          // pleaseDontSpecify: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "118b My doctor",
@@ -342,7 +339,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          // pleaseDontSpecify: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "115 I saw my doctor and her doctor",
@@ -402,7 +398,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          // pleaseDontSpecify: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "115 I saw my doctor and her doctor",
@@ -499,7 +494,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          // pleaseDontSpecify: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "115 I saw my doctor and her doctor",
@@ -619,7 +613,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          // pleaseDontSpecify: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "118 My doctor and his book",
@@ -683,7 +676,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          // pleaseDontSpecify: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "118 My doctor and his book",
@@ -747,7 +739,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          // pleaseDontSpecify: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "118a My doctor and my book",
@@ -810,7 +801,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          // pleaseDontSpecify: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "118a My doctor and my book",
@@ -869,7 +859,7 @@ describe("/api", () => {
     });
   });
 
-  xdescribe("/palette - Stage 17-iii: Possessive pronouns and MGNs. EdusMgn", () => {
+  describe("/palette - Stage 17-iii: Possessive pronouns and MGNs. EdusMgn", () => {
     it("#pal17-07a GET 200 YES: Engpol. Hard-specify an MGN's gender (EdusMgn dummy run).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -926,7 +916,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal17-08a GET 200 YES: Engpol. No annotations as EdusMgn.", () => {
+    it.only("#pal17-08x GET 200 YES: Engpol. pleaseDontSpecify shouldn't override sentenceStructure that wants f only.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -934,6 +924,34 @@ describe("/api", () => {
         .get("/api/palette")
         .send({
           // pleaseDontSpecify: true,
+          devSaysThrowAtMidpoint: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "116x My doctor was a woman",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "My doctor was a woman.",
+              POL: ["Moja lekarka była kobietą."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal17-08a GET 200 YES: Engpol. No annotations as EdusMgn.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "116 My doctor was a woman",
@@ -989,7 +1007,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          // pleaseDontSpecify: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "116 My doctor was a woman",
@@ -1045,7 +1062,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          // pleaseDontSpecify: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "116a My doctor's doctor was a woman",
@@ -1108,7 +1124,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          // pleaseDontSpecify: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "116a My doctor's doctor was a woman",
@@ -1175,7 +1190,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          // pleaseDontSpecify: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "117 I was a doctor",
@@ -1203,7 +1217,6 @@ describe("/api", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          // pleaseDontSpecify: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "117 I was a doctor",

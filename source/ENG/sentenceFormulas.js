@@ -791,8 +791,8 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
         specificLemmas: ["doctor"],
         gender: ["f"],
-        educatorBlocksAnnotationsForTheseFeatures: ["gender"], //Because in this specific sentenceFormula, we the educator know gender will be clear from context.
-        // shouldOverrideClarifiers: true, //Replaced by above.
+        educatorBlocksAnnotationsForTheseFeatures: ["gender"],
+        // ^ Because here the educator knows that context makes this MGN's gender unambiguous.
       },
       {
         chunkId: "ver-1-was",
@@ -811,6 +811,56 @@ exports.sentenceFormulasBank = [
     ],
     primaryOrders: [
       ["pro-2-my", "nou-1-doctor", "ver-1-was", "fix-1-a", "nou-2-woman"],
+    ],
+  },
+  {
+    sentenceFormulaSymbol: "116x My doctor was a woman",
+    sentenceFormulaId: "ENG-116x",
+    translations: { POL: ["POL-116x"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificLemmas: ["PERSONAL"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "pro-2-my",
+        form: ["determiner"],
+        specificLemmas: ["POSSESSIVE"],
+        agreeWith: "pro-1-I",
+      },
+      {
+        chunkId: "nou-1-doctor",
+        andTags: ["person"],
+        gcase: ["nom"],
+        number: ["singular"],
+        specificLemmas: ["doctor"],
+        gender: ["f"],
+        // educatorBlocksAnnotationsForTheseFeatures: ["gender"],
+        // ^ Because here the educator knows that context makes this MGN's gender unambiguous.
+      },
+      // {
+      //   chunkId: "ver-1-was",
+      //   agreeWith: "nou-1-doctor",
+      //   specificLemmas: ["be"],
+      //   tenseDescription: ["past simple"],
+      // },
+      // { chunkId: "fix-1-a", value: "a" },
+      // {
+      //   chunkId: "nou-2-woman",
+      //   andTags: ["person"],
+      //   gcase: ["nom"],
+      //   number: ["singular"],
+      //   specificLemmas: ["woman"],
+      // },
+    ],
+    primaryOrders: [
+      [
+        "pro-2-my",
+        "nou-1-doctor",
+        // "ver-1-was", "fix-1-a", "nou-2-woman"
+      ],
     ],
   },
   {

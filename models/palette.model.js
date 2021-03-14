@@ -49,8 +49,9 @@ exports.fetchPalette = (req) => {
   }
 
   if (pleaseDontSpecify) {
-    //Set to false if 'person' noun is headNoun of any pronouns,
-    //because 'The doctor gave me his book.' must specify the MGN doctor.
+    //PDSXyellow
+    // Set to false if 'person' noun is headNoun of any pronouns,
+    // because 'The doctor gave me his book.' must specify the MGN doctor.
     questionSentenceFormula.sentenceStructure.forEach((potentialHeadChunk) => {
       if (
         potentialHeadChunk.andTags &&
@@ -150,6 +151,8 @@ exports.fetchPalette = (req) => {
     }
 
     if (
+      //PDSXgreen
+      // If PDS, then blank the stCh gender in any cases where slObj is MGN.
       pleaseDontSpecify &&
       selectedLemmaObject.gender === "allPersonalSingularGenders_selector"
     ) {
@@ -380,6 +383,7 @@ exports.fetchPalette = (req) => {
     ///////////////////////////////////////////////kp Specifiers
     //nownow
     if (!pleaseDontSpecify) {
+      //PDSXpurple
       aaUtils.addSpecifiers(
         answerSentenceData.sentenceFormula,
         questionSentenceData.questionOutputArr,
