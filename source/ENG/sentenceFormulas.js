@@ -836,7 +836,7 @@ exports.sentenceFormulasBank = [
         gcase: ["nom"],
         number: ["singular"],
         specificLemmas: ["doctor"],
-        gender: ["f"],
+        // gender: ["f"],
         // educatorBlocksAnnotationsForTheseFeatures: ["gender"],
         // ^ Because here the educator knows that context makes this MGN's gender unambiguous.
       },

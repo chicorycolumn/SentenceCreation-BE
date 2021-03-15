@@ -586,6 +586,12 @@ exports.findMatchingLemmaObjectThenWord = (
           selectedLemmaObject,
           currentLanguage
         );
+      } else {
+        console.log(
+          "[1;30m " +
+            `-----------------------------------------------------------------------------------------------------------------------------------PDSblue` +
+            "[0m"
+        );
       }
 
       console.log(
@@ -623,6 +629,11 @@ exports.findMatchingLemmaObjectThenWord = (
         pleaseDontSpecifyPronounGender &&
         otUtils.doDrillPathsDifferOnlyByGender(subArrayOfOutputUnits)
       ) {
+        console.log(
+          "[1;30m " +
+            `-----------------------------------------------------------------------------------------------------------------------------------PDSred` +
+            "[0m"
+        );
         console.log(
           "kpos ot:findMatchingLemmaObjectThenWord subArrayOfOutputUnits",
           subArrayOfOutputUnits

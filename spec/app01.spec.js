@@ -457,7 +457,7 @@ describe("/api", () => {
   });
 
   describe("/palette - Stage 7: 'Be' ENG <-> POL.", () => {
-    it("#pal07-01a GET 200 YES: Conjugate POL be correctly without translations.", () => {
+    it.only("#pal07-01a GET 200 YES: Conjugate POL be correctly without translations.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "POL";
 

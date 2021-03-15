@@ -273,13 +273,20 @@ exports.filterWithinSelectedLemmaObject = (
   let outputUnitsWithDrillPaths = [];
   let source = lemmaObject.inflections;
 
+  console.log(
+    "pazk filterWithin now entering traverseAndRecordInflections with args:"
+  );
+  console.log("paz'k source", source);
+  console.log("paz'k requirementArrs", requirementArrs);
+
   lfUtils.traverseAndRecordInflections(
     source,
     requirementArrs,
     outputUnitsWithDrillPaths,
     null,
     multipleMode,
-    "filterWithin" //deletable
+    "filterWithin", //deletable
+    structureChunk.chunkId
   );
 
   if (!outputUnitsWithDrillPaths || !outputUnitsWithDrillPaths.length) {
@@ -686,33 +693,41 @@ exports.traverseAndRecordInflections = (
   outputUnitsWithDrillPaths,
   outputUnitsWithDrillPathsMini,
   multipleMode,
-  consoleLabel
+  consoleLabel,
+  chunkId
 ) => {
   console.log(
-    `kyde traverseAndRecordInflections called by "${consoleLabel}" reqArr`,
-    reqArr
+    `zbbg lf.traverseAndRecordInflections starting for "${chunkId}", and source is:`,
+    source
   );
-  console.log("kyde source", source);
-  console.log(" ");
+
+  let shouldConsoleLog = false;
+
+  if (shouldConsoleLog) {
+    console.log(
+      `kyde traverseAndRecordInflections for "${chunkId}" called by "${consoleLabel}" reqArr`,
+      reqArr
+    );
+    console.log(`kyde for "${chunkId}" source`, source);
+    console.log(" ");
+  }
 
   if (!reqArr || !reqArr.length) {
     gpUtils.throw(
-      `#ERR loii traverseAndRecordInflections. reqArr bad: [${reqArr}]`
+      `#ERR loii traverseAndRecordInflections for "${chunkId}". reqArr bad: [${reqArr}]`
     );
   }
-
-  let shouldConsoleLog = false;
 
   if (!outputUnitsWithDrillPathsMini) {
     outputUnitsWithDrillPathsMini = [];
   }
 
   if (!Array.isArray(outputUnitsWithDrillPathsMini)) {
-    console.log("mztl lf:traverseAndRecordInflections", {
+    console.log(`mztl lf:traverseAndRecordInflections for "${chunkId}"`, {
       outputUnitsWithDrillPathsMini,
     });
     gpUtils.throw(
-      "mztl lf:traverseAndRecordInflections found outputUnitsWithDrillPathsMini not array. See above."
+      `mztl lf:traverseAndRecordInflections for "${chunkId}" found outputUnitsWithDrillPathsMini not array. See above.`
     );
   }
 
@@ -722,19 +737,20 @@ exports.traverseAndRecordInflections = (
   let reqInflectorArr = reqSubArr[1];
 
   if (!reqInflectorArr.length) {
+    console.log(
+      `xcmg lf:traverseAndRecordInflections for "${chunkId}" setting reqInflectorArr to [${Object.keys(
+        source
+      )}]`
+    );
     reqInflectorArr = Object.keys(source);
   }
 
-  reqInflectorArr.forEach((chosenInflector, reqInflectorArrIndex) => {
-    // console.log(
-    //   "fxxb lf:traverseAndRecordInflections outputUnitsWithDrillPathsMini",
-    //   outputUnitsWithDrillPathsMini
-    // );
-    // console.log("fxxb1");
+  let countOfValuesWhichDrilledThisLevelSuccessfully = 0;
 
+  reqInflectorArr.forEach((chosenInflector) => {
     if (Array.isArray(source[chosenInflector])) {
       gpUtils.throw(
-        "uwmf lf:traverseAndRecordInflections Uh oh Natasha, array!"
+        `uwmf lf:traverseAndRecordInflections for "${chunkId}" Uh oh Natasha, array!`
       );
     }
 
@@ -747,7 +763,7 @@ exports.traverseAndRecordInflections = (
 
       if (shouldConsoleLog) {
         console.log(
-          "xuei lf:traverseAndRecordInflections Clause A: string or tObj to process at end",
+          `xuei lf:traverseAndRecordInflections for "${chunkId}" Clause A: string or tObj to process at end`,
           {
             reqInflectorLabel,
             chosenInflector,
@@ -756,10 +772,11 @@ exports.traverseAndRecordInflections = (
       }
 
       outputUnitsWithDrillPathsMini.push([reqInflectorLabel, chosenInflector]);
+      countOfValuesWhichDrilledThisLevelSuccessfully++;
 
       if (shouldConsoleLog) {
         console.log(
-          `pkpb lf:traverseAndRecordInflections pushing word "${source[chosenInflector]}"`
+          `pkpb lf:traverseAndRecordInflections for "${chunkId}" pushing word "${source[chosenInflector]}"`
         );
       }
 
@@ -781,7 +798,7 @@ exports.traverseAndRecordInflections = (
 
       if (shouldConsoleLog) {
         console.log(
-          "qqyr lf:traverseAndRecordInflections Clause B: tObj to process now",
+          `qqyr lf:traverseAndRecordInflections for "${chunkId}" Clause B: tObj to process now`,
           {
             reqInflectorLabel,
             chosenInflector,
@@ -790,6 +807,7 @@ exports.traverseAndRecordInflections = (
       }
 
       outputUnitsWithDrillPathsMini.push([reqInflectorLabel, chosenInflector]);
+      countOfValuesWhichDrilledThisLevelSuccessfully++;
 
       let wordsFromTerminusObject = gpUtils.getWordsFromTerminusObject(
         source[chosenInflector],
@@ -801,9 +819,10 @@ exports.traverseAndRecordInflections = (
       wordsFromTerminusObject.forEach((word) => {
         if (shouldConsoleLog) {
           console.log(
-            `jqbk lf:traverseAndRecordInflections pushing word "${word}"`
+            `jqbk lf:traverseAndRecordInflections for "${chunkId}" pushing word "${word}"`
           );
         }
+
         outputUnitsWithDrillPaths.push({
           selectedWordArray: [word],
           drillPath: outputUnitsWithDrillPathsMini.slice(0),
@@ -823,7 +842,7 @@ exports.traverseAndRecordInflections = (
 
       if (shouldConsoleLog) {
         console.log(
-          "mlgc lf:traverseAndRecordInflections Clause C: object for further traversal",
+          `mlgc lf:traverseAndRecordInflections for "${chunkId}" Clause C: object for further traversal`,
           {
             reqInflectorLabel,
             chosenInflector,
@@ -832,6 +851,7 @@ exports.traverseAndRecordInflections = (
       }
 
       outputUnitsWithDrillPathsMini.push([reqInflectorLabel, chosenInflector]);
+      countOfValuesWhichDrilledThisLevelSuccessfully++;
 
       lfUtils.traverseAndRecordInflections(
         source[chosenInflector],
@@ -839,23 +859,23 @@ exports.traverseAndRecordInflections = (
         outputUnitsWithDrillPaths,
         outputUnitsWithDrillPathsMini,
         multipleMode,
-        "traverseAndRecordInflections" // deletable
+        "traverseAndRecordInflections", // deletable
+        chunkId
       );
 
       // console.log("fxxb8");
 
       outputUnitsWithDrillPathsMini.pop();
     } else {
-      // console.log("fxxb9");
-      if (shouldConsoleLog) {
-        console.log(
-          "eoyd lf:traverseAndRecordInflections Clause X: none of the above",
-          {
-            reqInflectorLabel,
-            chosenInflector,
-          }
-        );
-      }
+      console.log(
+        `buwt #NB lf.traverseAndRecordInflections for "${chunkId}" found no matching values during drilling for ${reqInflectorLabel}: "${chosenInflector}".`
+      );
     }
   });
+
+  if (!countOfValuesWhichDrilledThisLevelSuccessfully) {
+    gpUtils.throw(
+      `noiv #ERR lf.traverseAndRecordInflections for "${chunkId}" found no matching values at all during drilling for ${reqInflectorLabel}: [${reqInflectorArr}].`
+    );
+  }
 };

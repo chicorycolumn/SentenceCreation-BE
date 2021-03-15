@@ -1240,7 +1240,7 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
         specificLemmas: ["lekarz", "lekarka"],
         gcase: ["nom"],
-        gender: ["f"],
+        // gender: ["f"],
       },
       // {
       //   chunkId: "ver-1-was",

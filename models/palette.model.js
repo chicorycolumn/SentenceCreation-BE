@@ -49,6 +49,11 @@ exports.fetchPalette = (req) => {
   }
 
   if (pleaseDontSpecify) {
+    console.log(
+      "[1;30m " +
+        `-----------------------------------------------------------------------------------------------------------------------------------PDSyellow` +
+        "[0m"
+    );
     //PDSXyellow
     // Set to false if 'person' noun is headNoun of any pronouns,
     // because 'The doctor gave me his book.' must specify the MGN doctor.
@@ -156,6 +161,11 @@ exports.fetchPalette = (req) => {
       pleaseDontSpecify &&
       selectedLemmaObject.gender === "allPersonalSingularGenders_selector"
     ) {
+      console.log(
+        "[1;30m " +
+          `-----------------------------------------------------------------------------------------------------------------------------------PDSgreen` +
+          "[0m"
+      );
       console.log(
         "[1;35m " +
           `mjdj-fetchPalette Will blank structureChunk.gender of "${structureChunk.chunkId}" just before Midpoint, because slObj "${selectedLemmaObject.lemma}" is multi gender.` +
@@ -388,6 +398,12 @@ exports.fetchPalette = (req) => {
         answerSentenceData.sentenceFormula,
         questionSentenceData.questionOutputArr,
         languagesObj
+      );
+    } else {
+      console.log(
+        "[1;30m " +
+          `-----------------------------------------------------------------------------------------------------------------------------------PDSpurple` +
+          "[0m"
       );
     }
 

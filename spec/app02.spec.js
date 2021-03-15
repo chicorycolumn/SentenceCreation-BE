@@ -151,7 +151,7 @@ describe("/api", () => {
           );
         });
     });
-    xit("#pal17-02a GET 200 YES: Engpol. Simple possessive pronoun sentence. Should not be broken by pleaseDontSpecify.", () => {
+    it("#pal17-02a GET 200 YES: Engpol. Simple possessive pronoun sentence. Should not be broken by pleaseDontSpecify.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -179,7 +179,7 @@ describe("/api", () => {
           );
         });
     });
-    xit("#pal17-02b GET 200 YES: Poleng. Simple possessive pronoun sentence. Should not be broken by pleaseDontSpecify.", () => {
+    it("#pal17-02b GET 200 YES: Poleng. Simple possessive pronoun sentence. Should not be broken by pleaseDontSpecify.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -859,7 +859,7 @@ describe("/api", () => {
     });
   });
 
-  describe("/palette - Stage 17-iii: Possessive pronouns and MGNs. EdusMgn", () => {
+  xdescribe("/palette - Stage 17-iii: Possessive pronouns and MGNs. EdusMgn", () => {
     it("#pal17-07a GET 200 YES: Engpol. Hard-specify an MGN's gender (EdusMgn dummy run).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -916,15 +916,15 @@ describe("/api", () => {
           );
         });
     });
-    it.only("#pal17-08x GET 200 YES: Engpol. pleaseDontSpecify shouldn't override sentenceStructure that wants f only.", () => {
+    it("#pal17-08x GET 200 YES: Engpol. pleaseDontSpecify shouldn't override sentenceStructure that wants f only.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
         .send({
-          // pleaseDontSpecify: true,
-          devSaysThrowAtMidpoint: true,
+          pleaseDontSpecify: true,
+          // devSaysThrowAtMidpoint: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "116x My doctor was a woman",
