@@ -13,11 +13,11 @@ exports.keyShouldBeSpecified = (chunk, key, allowOverwrite) => {
     (!(chunk.importantFeatures && chunk.importantFeatures.includes(key)) &&
       (allowOverwrite ||
         !gpUtils.isKeyFilledOutOnChunk(chunk, key) ||
-        gpUtils.feautureValueIsMeta(chunk, key)))
+        gpUtils.featureValueIsMeta(chunk, key)))
   );
 };
 
-exports.feautureValueIsMeta = (chunk, key, value) => {
+exports.featureValueIsMeta = (chunk, key, value) => {
   if (!value) {
     value = chunk[key];
   }
@@ -621,5 +621,47 @@ exports.getWordsFromTerminusObject = (tObj, shouldGetAll) => {
 };
 
 exports.typeof = (item) => {
-  return Array.isArray(item) ? "array" : typeof item;
+  return Array.isArray(item)
+    ? "array"
+    : item === null
+    ? "null"
+    : typeof item === "object"
+    ? "keyValueObject"
+    : typeof item;
+};
+
+exports.areTwoObjectsEqual = (obj1, obj2) => {
+  if (gpUtils.typeof(obj1) !== gpUtils.typeof(obj2)) {
+    return false;
+  }
+
+  if (!["keyValueObject", "array"].includes(gpUtils.typeof(obj1))) {
+    return obj1 === obj2;
+  }
+
+  if (Object.keys(obj1).length !== Object.keys(obj2).length) {
+    return false;
+  }
+
+  return Object.keys(obj1).every((obj1Key) => {
+    return gpUtils.areTwoObjectsEqual(obj1[obj1Key], obj2[obj1Key]);
+  });
+};
+
+exports.checkEachSequentialPairing = (arr, checkFxn, allowArrayOfZeroOrOne) => {
+  if (arr.length < 2) {
+    return !!allowArrayOfZeroOrOne;
+  }
+
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (!checkFxn(arr[i], arr[i + 1])) {
+      return false;
+    }
+  }
+
+  return true;
+};
+
+exports.oneStepCheck = (n1, n2) => {
+  return Math.abs(n1 - n2) === 1;
 };

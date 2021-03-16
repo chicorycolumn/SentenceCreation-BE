@@ -3,7 +3,452 @@ const {
   copyWithoutReference,
   combineAndExplodeTwoSuperArrays,
   arrayExploder,
+  checkEachSequentialPairing,
+  areTwoObjectsEqual,
 } = require("../utils/generalPurposeUtils.js");
+
+const gpUtils = require("../utils/generalPurposeUtils.js");
+
+describe("areTwoObjectsEqual", () => {
+  it("True with flat objects.", () => {
+    const input1 = { name: "Norbert", age: 30 };
+    const input2 = { name: "Norbert", age: 30 };
+
+    const actual = areTwoObjectsEqual(input1, input2);
+
+    expect(actual).to.be.true;
+  });
+  it("False with flat objects.", () => {
+    const input1 = { name: "Norbert", age: 30 };
+    const input2 = { name: "Norbert", age: 31 };
+
+    const actual = areTwoObjectsEqual(input1, input2);
+
+    expect(actual).to.be.false;
+  });
+  it("False for unequal number of keys a.", () => {
+    const input1 = { name: "Norbert", age: 30, likes: ["dogs"] };
+    const input2 = { name: "Norbert", age: 31 };
+
+    const actual = areTwoObjectsEqual(input1, input2);
+
+    expect(actual).to.be.false;
+  });
+  it("False for unequal number of keys b.", () => {
+    const input1 = { name: "Norbert", age: 30 };
+    const input2 = { name: "Norbert", age: 31, weight: 70 };
+
+    const actual = areTwoObjectsEqual(input1, input2);
+
+    expect(actual).to.be.false;
+  });
+  it("True with slightly complex objects.", () => {
+    const input1 = { name: "Norbert", age: 30, likes: ["dogs", "cats"] };
+    const input2 = { name: "Norbert", age: 30, likes: ["dogs", "cats"] };
+
+    const actual = areTwoObjectsEqual(input1, input2);
+
+    expect(actual).to.be.true;
+  });
+  it("False with slightly complex objects a.", () => {
+    const input1 = { name: "Norbert", age: 30, likes: ["dogs", "cats"] };
+    const input2 = { name: "Norbert", age: 30, likes: ["dogs", "birds"] };
+
+    const actual = areTwoObjectsEqual(input1, input2);
+
+    expect(actual).to.be.false;
+  });
+  it("False with slightly complex objects b.", () => {
+    const input1 = { name: "Norbert", age: 30, likes: ["dogs", "cats"] };
+    const input2 = {
+      name: "Norbert",
+      age: 30,
+      likes: ["dogs", "cats", "bees"],
+    };
+
+    const actual = areTwoObjectsEqual(input1, input2);
+
+    expect(actual).to.be.false;
+  });
+  it("True with complex objects.", () => {
+    const input1 = {
+      name: "Norbert",
+      likes: [
+        null,
+        undefined,
+        "birds",
+        {
+          friends: [{ name: "Lee", age: 22 }, { name: "Dee", age: 32 }, [], {}],
+        },
+        14,
+      ],
+      greetings: ["hi", "hello", "howdy"],
+      age: 30,
+    };
+    const input2 = {
+      name: "Norbert",
+      likes: [
+        null,
+        undefined,
+        "birds",
+        {
+          friends: [{ name: "Lee", age: 22 }, { name: "Dee", age: 32 }, [], {}],
+        },
+        14,
+      ],
+      greetings: ["hi", "hello", "howdy"],
+      age: 30,
+    };
+
+    const actual = areTwoObjectsEqual(input1, input2);
+
+    expect(actual).to.be.true;
+  });
+  it("False with complex objects a. (Lee's age differs).", () => {
+    const input1 = {
+      name: "Norbert",
+      likes: [
+        null,
+        undefined,
+        "birds",
+        {
+          friends: [{ name: "Lee", age: 22 }, { name: "Dee", age: 32 }, [], {}],
+        },
+        14,
+      ],
+      greetings: ["hi", "hello", "howdy"],
+      age: 30,
+    };
+    const input2 = {
+      name: "Norbert",
+      likes: [
+        null,
+        undefined,
+        "birds",
+        {
+          friends: [{ name: "Lee", age: 21 }, { name: "Dee", age: 32 }, [], {}],
+        },
+        14,
+      ],
+      greetings: ["hi", "hello", "howdy"],
+      age: 30,
+    };
+
+    const actual = areTwoObjectsEqual(input1, input2);
+
+    expect(actual).to.be.false;
+  });
+  it("False with complex objects b. (Extra friend Jethro).", () => {
+    const input1 = {
+      name: "Norbert",
+      likes: [
+        null,
+        undefined,
+        "birds",
+        {
+          friends: [{ name: "Lee", age: 22 }, { name: "Dee", age: 32 }, [], {}],
+        },
+        14,
+      ],
+      greetings: ["hi", "hello", "howdy"],
+      age: 30,
+    };
+    const input2 = {
+      name: "Norbert",
+      likes: [
+        null,
+        undefined,
+        "birds",
+        {
+          friends: [
+            { name: "Lee", age: 22 },
+            { name: "Dee", age: 32 },
+            [],
+            { name: "Jethro" },
+          ],
+        },
+        14,
+      ],
+      greetings: ["hi", "hello", "howdy"],
+      age: 30,
+    };
+
+    const actual = areTwoObjectsEqual(input1, input2);
+
+    expect(actual).to.be.false;
+  });
+});
+
+describe("checkEachSequentialPairing", () => {
+  it("Empty positive a. Callback is oneStepCheck", () => {
+    const inputArr = [];
+    const inputAllowArrayOfZeroOrOne = true;
+    const actual = checkEachSequentialPairing(
+      inputArr,
+      gpUtils.oneStepCheck,
+      inputAllowArrayOfZeroOrOne
+    );
+    expect(actual).to.be.true;
+  });
+  it("Empty positive b. Callback is oneStepCheck", () => {
+    const inputArr = [1];
+    const inputAllowArrayOfZeroOrOne = true;
+    const actual = checkEachSequentialPairing(
+      inputArr,
+      gpUtils.oneStepCheck,
+      inputAllowArrayOfZeroOrOne
+    );
+    expect(actual).to.be.true;
+  });
+  it("Empty negative a. Callback is oneStepCheck", () => {
+    const inputArr = [];
+    const inputAllowArrayOfZeroOrOne = false;
+    const actual = checkEachSequentialPairing(
+      inputArr,
+      gpUtils.oneStepCheck,
+      inputAllowArrayOfZeroOrOne
+    );
+    expect(actual).to.be.false;
+  });
+  it("Empty negative b. Callback is oneStepCheck", () => {
+    const inputArr = [1];
+    const inputAllowArrayOfZeroOrOne = false;
+    const actual = checkEachSequentialPairing(
+      inputArr,
+      gpUtils.oneStepCheck,
+      inputAllowArrayOfZeroOrOne
+    );
+    expect(actual).to.be.false;
+  });
+  it("Positive a. Callback is oneStepCheck", () => {
+    const inputArr = [1, 2, 3, 4, 5];
+    const actual = checkEachSequentialPairing(inputArr, gpUtils.oneStepCheck);
+    expect(actual).to.be.true;
+  });
+  it("Positive b. Callback is oneStepCheck", () => {
+    const inputArr = [105, 106];
+    const actual = checkEachSequentialPairing(inputArr, gpUtils.oneStepCheck);
+    expect(actual).to.be.true;
+  });
+  it("Negative a. Callback is oneStepCheck", () => {
+    const inputArr = [1, 2, 5, 4, 5];
+    const actual = checkEachSequentialPairing(inputArr, gpUtils.oneStepCheck);
+    expect(actual).to.be.false;
+  });
+  it("Negative b. Callback is oneStepCheck", () => {
+    const inputArr = [1, 2, 3, 4, 6];
+    const actual = checkEachSequentialPairing(inputArr, gpUtils.oneStepCheck);
+    expect(actual).to.be.false;
+  });
+  it("Positive. Callback is areTwoObjectsEqual.", () => {
+    const inputArr = [
+      {
+        name: "Norbert",
+        likes: [
+          null,
+          undefined,
+          "birds",
+          {
+            friends: [
+              { name: "Lee", age: 22 },
+              { name: "Dee", age: 32 },
+              [],
+              {},
+            ],
+          },
+          14,
+        ],
+        greetings: ["hi", "hello", "howdy"],
+        age: 30,
+      },
+      {
+        name: "Norbert",
+        likes: [
+          null,
+          undefined,
+          "birds",
+          {
+            friends: [
+              { name: "Lee", age: 22 },
+              { name: "Dee", age: 32 },
+              [],
+              {},
+            ],
+          },
+          14,
+        ],
+        greetings: ["hi", "hello", "howdy"],
+        age: 30,
+      },
+      {
+        name: "Norbert",
+        likes: [
+          null,
+          undefined,
+          "birds",
+          {
+            friends: [
+              { name: "Lee", age: 22 },
+              { name: "Dee", age: 32 },
+              [],
+              {},
+            ],
+          },
+          14,
+        ],
+        greetings: ["hi", "hello", "howdy"],
+        age: 30,
+      },
+      {
+        name: "Norbert",
+        likes: [
+          null,
+          undefined,
+          "birds",
+          {
+            friends: [
+              { name: "Lee", age: 22 },
+              { name: "Dee", age: 32 },
+              [],
+              {},
+            ],
+          },
+          14,
+        ],
+        greetings: ["hi", "hello", "howdy"],
+        age: 30,
+      },
+      {
+        name: "Norbert",
+        likes: [
+          null,
+          undefined,
+          "birds",
+          {
+            friends: [
+              { name: "Lee", age: 22 },
+              { name: "Dee", age: 32 },
+              [],
+              {},
+            ],
+          },
+          14,
+        ],
+        greetings: ["hi", "hello", "howdy"],
+        age: 30,
+      },
+    ];
+    const actual = checkEachSequentialPairing(
+      inputArr,
+      gpUtils.areTwoObjectsEqual
+    );
+    expect(actual).to.be.true;
+  });
+  it("Negative. Callback is areTwoObjectsEqual.", () => {
+    const inputArr = [
+      {
+        name: "Norbert",
+        likes: [
+          null,
+          undefined,
+          "birds",
+          {
+            friends: [
+              { name: "Lee", age: 22 },
+              { name: "Dee", age: 32 },
+              [],
+              {},
+            ],
+          },
+          14,
+        ],
+        greetings: ["hi", "hello", "howdy"],
+        age: 30,
+      },
+      {
+        name: "Norbert",
+        likes: [
+          null,
+          undefined,
+          "birds",
+          {
+            friends: [
+              { name: "Lee", age: 22 },
+              { name: "Dee", age: 32 },
+              [],
+              {},
+            ],
+          },
+          14,
+        ],
+        greetings: ["hi", "hello", "howdy"],
+        age: 30,
+      },
+      {
+        name: "Norbert",
+        likes: [
+          null,
+          undefined,
+          "birds",
+          {
+            friends: [
+              { name: "Lee", age: 21 },
+              { name: "Dee", age: 32 },
+              [],
+              {},
+            ],
+          },
+          14,
+        ],
+        greetings: ["hi", "hello", "howdy"],
+        age: 30,
+      },
+      {
+        name: "Norbert",
+        likes: [
+          null,
+          undefined,
+          "birds",
+          {
+            friends: [
+              { name: "Lee", age: 22 },
+              { name: "Dee", age: 32 },
+              [],
+              {},
+            ],
+          },
+          14,
+        ],
+        greetings: ["hi", "hello", "howdy"],
+        age: 30,
+      },
+      {
+        name: "Norbert",
+        likes: [
+          null,
+          undefined,
+          "birds",
+          {
+            friends: [
+              { name: "Lee", age: 22 },
+              { name: "Dee", age: 32 },
+              [],
+              {},
+            ],
+          },
+          14,
+        ],
+        greetings: ["hi", "hello", "howdy"],
+        age: 30,
+      },
+    ];
+    const actual = checkEachSequentialPairing(
+      inputArr,
+      gpUtils.areTwoObjectsEqual
+    );
+    expect(actual).to.be.false;
+  });
+});
 
 describe("arrayExploder", () => {
   it("Returns empty array when given empty array.", () => {

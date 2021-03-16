@@ -24,7 +24,7 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  xdescribe("/palette - Stage 17-i: Possessive pronouns and MGNs. Pre-testing.", () => {
+  describe.only("/palette - Stage 17-i: Possessive pronouns and MGNs. Pre-testing.", () => {
     it("#pal17-01a GET 200 YES: Engpol. MGN as sole word, annotation expected.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -238,7 +238,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal17-03b GET 200 YES: Engpol. Possessive pronoun above MGN. pleaseDontSpecify.", () => {
+    it.only("#pal17-03b GET 200 YES: Engpol. Possessive pronoun above MGN. pleaseDontSpecify.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 

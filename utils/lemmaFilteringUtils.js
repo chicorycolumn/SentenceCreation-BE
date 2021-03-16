@@ -3,7 +3,6 @@ const gpUtils = require("./generalPurposeUtils.js");
 const otUtils = require("./objectTraversingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
-const { convertMetaFeatures } = require("./allLangUtils.js");
 
 exports.filterWithinSelectedLemmaObject = (
   lemmaObject,
@@ -80,6 +79,8 @@ exports.filterWithinSelectedLemmaObject = (
     );
 
     let source = gpUtils.copyWithoutReference(lemmaObjectCopy.inflections);
+
+    console.log("giuy filterWithin. source", source);
 
     Object.keys(postHocInflectionChains).forEach((postHocAgreeWithKey) => {
       console.log(
@@ -160,14 +161,26 @@ exports.filterWithinSelectedLemmaObject = (
         drillPathForPHD
       );
 
+      console.log("ylur filterWithin. source", source);
+
       postHocInflectionChain.forEach((featureKey) => {
         let featureValue = drillPathForPHD.find(
           (arr) => arr[0] === featureKey
         )[1];
 
+        if (featureValue.slice(0, 3) === "all" && !source[featureValue]) {
+          featureValue = otUtils.switchMetaFeatureForAWorkableConvertedFeature(
+            featureKey,
+            featureValue,
+            source,
+            currentLanguage
+          );
+        }
+
         console.log(
           `ihjy lf:filterWithinSelectedLemmaObject drilling into source with "${featureValue}"`
         );
+
         source = source[featureValue];
 
         //If this is Primary, then update stCh with these featureKeys and featureValues.
@@ -208,6 +221,10 @@ exports.filterWithinSelectedLemmaObject = (
     }
 
     sourceArr.forEach((selectedWord) => {
+      console.log(
+        `rzcs filterWithin. Pushing this selectedWord "${selectedWord}" with drillPath null.`
+      );
+
       resArr.push({
         errorInDrilling: false,
         selectedWordArray: [selectedWord],
@@ -286,25 +303,28 @@ exports.filterWithinSelectedLemmaObject = (
     null,
     multipleMode,
     "filterWithin", //deletable
-    structureChunk.chunkId
+    structureChunk.chunkId,
+    currentLanguage
   );
 
   if (!outputUnitsWithDrillPaths || !outputUnitsWithDrillPaths.length) {
     console.log(
+      "\n\n\n iszn I failed when looked for values according to these requirementArrs",
+      requirementArrs,
+      "\n\n\n iszn when I was looking inside this source"
+    );
+    gpUtils.consoleLogObjectAtTwoLevels(source);
+    console.log("\n\n\n");
+
+    // console.log(
+    gpUtils.throw(
+      //xpublish: This should not be a throw when in PROD.
       "[1;31m " +
-        `#WARN iszn lf:filterWithinSelectedLemmaObject. traverseAndRecordInflections returned FALSY for "${structureChunk.chunkId}" in "${currentLanguage}".` +
+        `#WARN iszn lf:filterWithinSelectedLemmaObject. traverseAndRecordInflections returned FALSY for "${structureChunk.chunkId}" in "${currentLanguage}". See requirementArrs above.` +
         "[0m"
     );
 
-    console.log("iszn lf:filterWithinSelectedLemmaObject", {
-      outputUnitsWithDrillPaths,
-    });
     errorInDrilling = true;
-
-    // let blah = structureChunk.chunkId.split("-");
-    // if (blah[blah.length - 1] === "my") {
-    //   gpUtils.throw();
-    // }
 
     return false;
   }
@@ -694,14 +714,15 @@ exports.traverseAndRecordInflections = (
   outputUnitsWithDrillPathsMini,
   multipleMode,
   consoleLabel,
-  chunkId
+  chunkId,
+  currentLanguage
 ) => {
   console.log(
     `zbbg lf.traverseAndRecordInflections starting for "${chunkId}", and source is:`,
     source
   );
 
-  let shouldConsoleLog = false;
+  let shouldConsoleLog = true;
 
   if (shouldConsoleLog) {
     console.log(
@@ -745,9 +766,16 @@ exports.traverseAndRecordInflections = (
     reqInflectorArr = Object.keys(source);
   }
 
-  let countOfValuesWhichDrilledThisLevelSuccessfully = 0;
-
   reqInflectorArr.forEach((chosenInflector) => {
+    if (chosenInflector.slice(0, 3) === "all" && !source[chosenInflector]) {
+      chosenInflector = otUtils.switchMetaFeatureForAWorkableConvertedFeature(
+        reqInflectorLabel,
+        chosenInflector,
+        source,
+        currentLanguage
+      );
+    }
+
     if (Array.isArray(source[chosenInflector])) {
       gpUtils.throw(
         `uwmf lf:traverseAndRecordInflections for "${chunkId}" Uh oh Natasha, array!`
@@ -772,7 +800,6 @@ exports.traverseAndRecordInflections = (
       }
 
       outputUnitsWithDrillPathsMini.push([reqInflectorLabel, chosenInflector]);
-      countOfValuesWhichDrilledThisLevelSuccessfully++;
 
       if (shouldConsoleLog) {
         console.log(
@@ -807,7 +834,6 @@ exports.traverseAndRecordInflections = (
       }
 
       outputUnitsWithDrillPathsMini.push([reqInflectorLabel, chosenInflector]);
-      countOfValuesWhichDrilledThisLevelSuccessfully++;
 
       let wordsFromTerminusObject = gpUtils.getWordsFromTerminusObject(
         source[chosenInflector],
@@ -851,7 +877,6 @@ exports.traverseAndRecordInflections = (
       }
 
       outputUnitsWithDrillPathsMini.push([reqInflectorLabel, chosenInflector]);
-      countOfValuesWhichDrilledThisLevelSuccessfully++;
 
       lfUtils.traverseAndRecordInflections(
         source[chosenInflector],
@@ -860,7 +885,8 @@ exports.traverseAndRecordInflections = (
         outputUnitsWithDrillPathsMini,
         multipleMode,
         "traverseAndRecordInflections", // deletable
-        chunkId
+        chunkId,
+        currentLanguage
       );
 
       // console.log("fxxb8");
@@ -868,14 +894,10 @@ exports.traverseAndRecordInflections = (
       outputUnitsWithDrillPathsMini.pop();
     } else {
       console.log(
-        `buwt #NB lf.traverseAndRecordInflections for "${chunkId}" found no matching values during drilling for ${reqInflectorLabel}: "${chosenInflector}".`
+        "[1;33m " +
+          `buwt #NB lf.traverseAndRecordInflections for "${chunkId}" found no matching values during drilling for ${reqInflectorLabel}: "${chosenInflector}".` +
+          "[0m"
       );
     }
   });
-
-  if (!countOfValuesWhichDrilledThisLevelSuccessfully) {
-    gpUtils.throw(
-      `noiv #ERR lf.traverseAndRecordInflections for "${chunkId}" found no matching values at all during drilling for ${reqInflectorLabel}: [${reqInflectorArr}].`
-    );
-  }
 };

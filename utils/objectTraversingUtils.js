@@ -648,9 +648,11 @@ exports.findMatchingLemmaObjectThenWord = (
       }
 
       console.log(
-        "sfmo ot:findMatchingLemmaObjectThenWord subArrayOfOutputUnits",
-        subArrayOfOutputUnits
+        "sfmo ot:findMatchingLemmaObjectThenWord subArrayOfOutputUnits"
       );
+      subArrayOfOutputUnits.forEach((x) => {
+        console.log(x);
+      });
 
       let unit = gpUtils.selectRandom(subArrayOfOutputUnits);
 
@@ -1122,9 +1124,12 @@ exports.stripOutFeatures = (currentLanguage, structureChunk, PWlabel) => {
 
 exports.doDrillPathsDifferOnlyByGender = (subArrayOfOutputUnits) => {
   if (
-    subArrayOfOutputUnits.some((outputUnit) =>
-      outputUnit.drillPath.find((pathArr) => pathArr[0] === "gender")
-    )
+    subArrayOfOutputUnits.some((outputUnit) => {
+      return (
+        outputUnit.drillPath &&
+        outputUnit.drillPath.find((pathArr) => pathArr[0] === "gender")
+      );
+    })
   ) {
     let firstOutputUnit = subArrayOfOutputUnits[0];
 
@@ -1196,8 +1201,7 @@ exports.createMergedGenderOutputUnit = (
   });
 
   console.log(
-    "zdxc ot:findMatchingLemmaObjectThenWord metaGenderResult",
-    metaGenderResult
+    `zdxc ot:findMatchingLemmaObjectThenWord metaGenderResult: "${metaGenderResult}"`
   );
 
   mergedOutputUnit.drillPath.find(
@@ -1205,4 +1209,78 @@ exports.createMergedGenderOutputUnit = (
   )[1] = metaGenderResult;
 
   return mergedOutputUnit;
+};
+
+exports.switchMetaFeatureForAWorkableConvertedFeature = (
+  inflectorLabel,
+  inflectorValue,
+  source,
+  currentLanguage
+) => {
+  console.log(
+    "[1;33m " +
+      `ivuw traverseAndRecordInflections. >>unkeyed metaFeature clause<<. inflectorValue is a metaFeature: "${inflectorValue}", but there is no such key on the source. So, we should check if the source has corresponding feature keys, eg allPersonalGenders -> [m, f], and if they hold all the same values, then we should let this work.` +
+      "[0m"
+  );
+
+  let convertedMetaFeatures =
+    refObj.metaFeatures[currentLanguage][inflectorLabel][inflectorValue];
+
+  console.log(
+    "[1;33m " + `ivuw convertedMetaFeatures [${convertedMetaFeatures}]` + "[0m"
+  );
+
+  if (!convertedMetaFeatures || !convertedMetaFeatures.length) {
+    gpUtils.throw(
+      `ejrb #ERR traverseAndRecordInflections >>unkeyed metaFeature clause<<. Found no convertedMetaFeatures for "${inflectorValue}".`
+    );
+  }
+
+  if (convertedMetaFeatures.length === 1) {
+    let selectedConvertedMetaFeature = convertedMetaFeatures[0];
+
+    console.log(
+      "[1;33m " +
+        `lbro traverseAndRecordInflections >>unkeyed metaFeature clause<<. Setting inflectorValue to "${selectedConvertedMetaFeature}". Will now continue with main fxn.` +
+        "[0m"
+    );
+
+    return selectedConvertedMetaFeature;
+  }
+
+  let drillResultsOfConvertedMetaFeatures = [];
+
+  convertedMetaFeatures.forEach((convertedMetaFeature) => {
+    if (source[convertedMetaFeature]) {
+      drillResultsOfConvertedMetaFeatures.push(source[convertedMetaFeature]);
+    }
+  });
+
+  if (!drillResultsOfConvertedMetaFeatures.length) {
+    gpUtils.throw(
+      `rlul #ERR traverseAndRecordInflections >>unkeyed metaFeature clause<<. Found no drillResultsOfConvertedMetaFeatures for convertedMetaFeatures: [${convertedMetaFeatures}].`
+    );
+  }
+
+  if (
+    gpUtils.checkEachSequentialPairing(
+      drillResultsOfConvertedMetaFeatures,
+      gpUtils.areTwoObjectsEqual,
+      true
+    )
+  ) {
+    let selectedConvertedMetaFeature = convertedMetaFeatures[0];
+
+    console.log(
+      "[1;33m " +
+        `ksfc traverseAndRecordInflections >>unkeyed metaFeature clause<<. Setting inflectorValue to "${selectedConvertedMetaFeature}". Will now continue with main fxn.` +
+        "[0m"
+    );
+
+    return selectedConvertedMetaFeature;
+  } else {
+    gpUtils.throw(
+      `aqsa #ERR traverseAndRecordInflections >>unkeyed metaFeature clause<<. Trying to set a metaFeature to one of its convertedFeatures. This is provided the drilled values with ultimately be the same in source, but that specifically was false.`
+    );
+  }
 };
