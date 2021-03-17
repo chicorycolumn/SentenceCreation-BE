@@ -1,6 +1,7 @@
 const lfUtils = require("../../utils/lemmaFilteringUtils.js");
 const otUtils = require("../../utils/objectTraversingUtils.js");
 const gpUtils = require("../../utils/generalPurposeUtils.js");
+const clUtils = require("../../utils/zerothOrder/consoleLoggingUtils.js");
 const refObj = require("../../utils/reference/referenceObjects.js");
 const allLangUtils = require("../../utils/allLangUtils.js");
 
@@ -117,7 +118,7 @@ exports.preprocessLemmaObjectsMajor = (
   matches.forEach((lObj) => {
     if (gpUtils.getWordtypeFromLemmaObject(lObj) === "pronoun") {
       if (!structureChunk.wordtype === "pronoun") {
-        gpUtils.throw(
+        clUtils.throw(
           "#ERR hcio preprocessLemmaObjectsMajor. lObj and stCh wordtypes don't match."
         );
       }
@@ -144,7 +145,7 @@ exports.preprocessLemmaObjectsMinor = (matches) => {
     if (gpUtils.getWordtypeFromLemmaObject(lObj) === "noun") {
       if (lObj.tags.includes("person")) {
         if (!lObj.gender) {
-          gpUtils.throw(
+          clUtils.throw(
             "#ERR vuww preprocessLemmaObjectsMinor. The lObj '" +
               lObj.id +
               "' is a person so should have a gender key."

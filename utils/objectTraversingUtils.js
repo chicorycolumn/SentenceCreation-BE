@@ -1,4 +1,5 @@
 const gpUtils = require("./generalPurposeUtils.js");
+const clUtils = require("./zerothOrder/consoleLoggingUtils.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 const otUtils = require("./objectTraversingUtils.js");
@@ -33,7 +34,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
   //STEP ONE: : Fx-PW: Pathway for Fixed pieces.
   if (structureChunk.wordtype === "fixed") {
-    gpUtils.consoleLogPW("##Fx-PW", structureChunk, multipleMode);
+    clUtils.consoleLogPW("##Fx-PW", structureChunk, multipleMode);
 
     return [
       {
@@ -143,7 +144,7 @@ exports.findMatchingLemmaObjectThenWord = (
       adhocFormRef[structureChunk.wordtype].includes(selectedForm)
     )
   ) {
-    gpUtils.consoleLogPW("##Ad-PW-F", structureChunk, multipleMode);
+    clUtils.consoleLogPW("##Ad-PW-F", structureChunk, multipleMode);
 
     if (multipleMode) {
       matches.forEach((selectedLemmaObject) => {
@@ -211,7 +212,7 @@ exports.findMatchingLemmaObjectThenWord = (
         structureChunk[adhocInflectorKey] &&
         structureChunk[adhocInflectorKey].length
       ) {
-        gpUtils.consoleLogPW("##Ad-PW-I", structureChunk, multipleMode);
+        clUtils.consoleLogPW("##Ad-PW-I", structureChunk, multipleMode);
 
         if (multipleMode) {
           matches.forEach((selectedLemmaObject) => {
@@ -291,7 +292,7 @@ exports.findMatchingLemmaObjectThenWord = (
           );
 
           if (requestedUninflectedForms.length) {
-            gpUtils.consoleLogPW("##Un-PW", structureChunk, multipleMode);
+            clUtils.consoleLogPW("##Un-PW", structureChunk, multipleMode);
 
             if (multipleMode) {
               requestedUninflectedForms.forEach((selectedUninflectedForm) => {
@@ -315,7 +316,7 @@ exports.findMatchingLemmaObjectThenWord = (
                     gpUtils.isTerminusObject(selectedWordArr) &&
                     !selectedWordArr.processOnlyAtEnd
                   ) {
-                    gpUtils.throw(
+                    clUtils.throw(
                       "bnle ot:findMatching Natasha, action required."
                     );
                   }
@@ -370,7 +371,7 @@ exports.findMatchingLemmaObjectThenWord = (
                 gpUtils.isTerminusObject(selectedWordArr) &&
                 !selectedWordArr.processOnlyAtEnd
               ) {
-                gpUtils.throw(
+                clUtils.throw(
                   "wrha findMatching Natasha, some action required."
                 );
               }
@@ -496,7 +497,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
     //  STEP FOUR-B: Getting the inflected word.
 
-    gpUtils.consoleLogPW("##If-PW", structureChunk, multipleMode);
+    clUtils.consoleLogPW("##If-PW", structureChunk, multipleMode);
 
     if (multipleMode) {
       console.log("iksf ot:findMatchingLemmaObjectThenWord");
@@ -524,7 +525,7 @@ exports.findMatchingLemmaObjectThenWord = (
               } else if (Array.isArray(selectedWord)) {
                 console.log("[1;33m " + `bufw findMatching Answer IS ARRAY` + "[0m");
                 console.log(selectedWord);
-                gpUtils.throw("bufw findMatching should not have been array.");
+                clUtils.throw("bufw findMatching should not have been array.");
               } else if (gpUtils.isTerminusObject(selectedWord)) {
                 console.log("[1;33m " + `bufw findMatching Answer IS TOBJ` + "[0m");
               }
@@ -684,7 +685,7 @@ exports.findMatchingLemmaObjectThenWord = (
               "[0m"
           );
           console.log("jxny ot:findMatchingLemmaObjectThenWord", selectedItem);
-          gpUtils.throw(
+          clUtils.throw(
             "jxny ot:findMatchingLemmaObjectThenWord should not have been array."
           );
         } else if (gpUtils.isTerminusObject(selectedItem)) {
@@ -875,7 +876,7 @@ exports.extractNestedRoutes = (source, includeTerminusObjectKeys) => {
       });
       arr.pop();
     } else {
-      gpUtils.throw(
+      clUtils.throw(
         `kwdo ot:recursivelyMapRoutes found value with wrong data type: "${
           Array.isArray(source)
             ? "Array"
@@ -970,7 +971,7 @@ exports.giveRoutesAndTerminalValuesFromObject = (obj) => {
       } else if (Array.isArray(value)) {
         console.log("[1;33m " + `nayq giveRoutes??? IS ARRAY` + "[0m");
         console.log("nayq", nestedRoute, value);
-        gpUtils.throw("nayq giveRoutes should not have been array.");
+        clUtils.throw("nayq giveRoutes should not have been array.");
       } else if (gpUtils.isTerminusObject(value)) {
         console.log("[1;33m " + `nayq giveRoutes??? IS TOBJ` + "[0m");
       }
@@ -1231,7 +1232,7 @@ exports.switchMetaFeatureForAWorkableConvertedFeature = (
   );
 
   if (!convertedMetaFeatures || !convertedMetaFeatures.length) {
-    gpUtils.throw(
+    clUtils.throw(
       `ejrb #ERR traverseAndRecordInflections >>unkeyed metaFeature clause<<. Found no convertedMetaFeatures for "${inflectorValue}".`
     );
   }
@@ -1257,7 +1258,7 @@ exports.switchMetaFeatureForAWorkableConvertedFeature = (
   });
 
   if (!drillResultsOfConvertedMetaFeatures.length) {
-    gpUtils.throw(
+    clUtils.throw(
       `rlul #ERR traverseAndRecordInflections >>unkeyed metaFeature clause<<. Found no drillResultsOfConvertedMetaFeatures for convertedMetaFeatures: [${convertedMetaFeatures}].`
     );
   }
@@ -1279,7 +1280,7 @@ exports.switchMetaFeatureForAWorkableConvertedFeature = (
 
     return selectedConvertedMetaFeature;
   } else {
-    gpUtils.throw(
+    clUtils.throw(
       `aqsa #ERR traverseAndRecordInflections >>unkeyed metaFeature clause<<. Trying to set a metaFeature to one of its convertedFeatures. This is provided the drilled values with ultimately be the same in source, but that specifically was false.`
     );
   }

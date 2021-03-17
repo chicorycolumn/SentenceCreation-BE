@@ -3,6 +3,7 @@ const request = require("supertest");
 const chai = require("chai");
 const { expect } = require("chai");
 const gpUtils = require("../utils/generalPurposeUtils.js");
+const clUtils = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const { it } = require("mocha");
 const testingUtils = require("../utils/secondOrder/testingUtils.js");
 const { generalTranslatedSentencesRef } = testingUtils;
@@ -1304,7 +1305,7 @@ describe("/api", () => {
           .expect(200)
           .then((res) => {
             if (res.body.questionSentenceArr.length > 1) {
-              gpUtils.throw("res.body.questionSentenceArr had length over 1.");
+              clUtils.throw("res.body.questionSentenceArr had length over 1.");
             }
 
             return res.body.questionSentenceArr[0];

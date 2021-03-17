@@ -2,6 +2,7 @@ const request = require("supertest");
 const chai = require("chai");
 const { expect } = require("chai");
 const gpUtils = require("../generalPurposeUtils.js");
+const clUtils = require("../zerothOrder/consoleLoggingUtils.js");
 const { it } = require("mocha");
 const testingUtils = require("./testingUtils.js");
 
@@ -775,7 +776,7 @@ exports.checkTranslationsOfGivenRef = (
   let { questionSentenceArr, answerSentenceArr } = res.body;
 
   if (questionSentenceArr.length > 1) {
-    gpUtils.throw(
+    clUtils.throw(
       "scey testingutils > checkTranslationsOfGivenRef says questionSentenceArr length over 1"
     );
   }

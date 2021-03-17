@@ -1,6 +1,7 @@
 const lfUtils = require("./lemmaFilteringUtils.js");
 const otUtils = require("./objectTraversingUtils.js");
 const gpUtils = require("./generalPurposeUtils.js");
+const clUtils = require("./zerothOrder/consoleLoggingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 
 exports.selectRandom = (array) => {
@@ -89,7 +90,7 @@ exports.copyAndCombineWordbanks = (wordbank1, wordbank2) => {
       );
     }
     if (wordbank2Copy[key] && !Array.isArray(wordbank2Copy[key])) {
-      gpUtils.throw(
+      clUtils.throw(
         `#ERR cocq gp:copyAndCombineWordbanks. wordbank2 key "${key}" holds non array value.`
       );
     }
@@ -342,44 +343,6 @@ exports.fillOutWashburneRefObj = (
   });
 };
 
-exports.consoleLogObjectAtOneLevel = (obj, label) => {
-  console.log("[1;32m " + `--Console log object at one level, from "${label}":` + "[0m");
-  console.log("[1;32m " + `------` + "[0m");
-  console.log("[1;32m " + `----------` + "[0m");
-  Object.keys(obj).forEach((key) => {
-    let value = obj[key];
-    console.log("[1;30m " + `${key}` + "[0m");
-    console.log(value);
-  });
-  console.log("[1;32m " + `----------` + "[0m");
-  console.log("[1;32m " + `------` + "[0m");
-  console.log("[1;32m " + `--` + "[0m");
-};
-
-exports.consoleLogObjectAtTwoLevels = (obj, label) => {
-  console.log(
-    "[1;32m " + `--Console log object at two levels, from "${label}":` + "[0m"
-  );
-  console.log("[1;32m " + `------` + "[0m");
-  console.log("[1;32m " + `----------` + "[0m");
-  Object.keys(obj).forEach((key) => {
-    let value = obj[key];
-    if (value) {
-      Object.keys(value).forEach((key2) => {
-        let value2 = value[key2];
-        console.log("[1;30m " + `${key}:${key2}` + "[0m");
-        console.log("subvalue:", value2);
-      });
-    } else {
-      console.log("[1;30m " + `${key}` + "[0m");
-      console.log("value:", value);
-    }
-  });
-  console.log("[1;32m " + `----------` + "[0m");
-  console.log("[1;32m " + `------` + "[0m");
-  console.log("[1;32m " + `--` + "[0m");
-};
-
 exports.doesArrContainDifferentValues = (arr) => {
   if (!arr.length) {
     return false;
@@ -404,7 +367,7 @@ exports.getWordtypeFromLemmaObject = (lObj) => {
   let wordtypeRef = refObj.wordtypeShorthandTranslation;
 
   if (!Object.keys(wordtypeRef).includes(wordtypeShorthand)) {
-    gpUtils.throw(
+    clUtils.throw(
       `#ERR hshc getWordtypeFromLemmaObject. Called with lObj of lObj.id: "${lObj.id}"`
     );
   }
@@ -417,7 +380,7 @@ exports.getWordtypeFromStructureChunk = (stCh) => {
   let wordtypeRef = refObj.wordtypeShorthandTranslation;
 
   if (!Object.keys(wordtypeRef).includes(wordtypeShorthand)) {
-    gpUtils.throw(
+    clUtils.throw(
       `#ERR bsov getWordtypeFromStructureChunk. wordtypeShorthand "${stCh.chunkId}" had no translated wordtype.`
     );
   }
@@ -441,21 +404,12 @@ exports.getWordtypeOfAgreeWith = (
   let wordtypeShorthand = structureChunk[agreeWithKey].split("-")[0];
 
   if (!Object.keys(wordtypeRef).includes(wordtypeShorthand)) {
-    gpUtils.throw(
+    clUtils.throw(
       `#ERR xafb getWordtypeFromLemmaObject. Object.keys(wordtypeRef) did not include wordtypeShorthand: "${wordtypeShorthand}"`
     );
   }
 
   return wordtypeRef[wordtypeShorthand];
-};
-
-exports.consoleLogAestheticBorder = (reps) => {
-  let border =
-    " │ ║ ▌ │ ║ ▌ ║ ▌ █ ║ ▌ ║ █ ║ ▌ │ ║ ▌ │ ║ ▌ ║ █ ║ ▌ │ ║ ▌ │ ║ ▌ ║ ▌ █ ║ ▌ ║ █ ║ ▌ │ ║ ▌ │ ║ ▌ ║ ▌ █ ║ ▌ ║ █ ║ ▌ │ ▌ ║ █ ║ ▌ │ ║ ▌ │ ║";
-
-  for (let i = 0; i < reps; i++) {
-    console.log(border.slice(i, border.length - (10 - i)));
-  }
 };
 
 exports.isKeyFilledOutOnChunk = (chunk, featureKey) => {
@@ -497,99 +451,6 @@ exports.doesKeyContainValueOnChunk = (
           chunk[featureKey].includes(featureValue)
         )))
   );
-};
-
-exports.consoleLogPW = (label, structureChunk, multipleMode) => {
-  if (multipleMode) {
-    gpUtils.consoleLogYellow(`##${label} ${structureChunk.chunkId}`);
-  } else {
-    gpUtils.consoleLogBlue(`##${label} ${structureChunk.chunkId}`);
-  }
-};
-
-exports.consoleLogYellow = (text) => {
-  console.log(" ");
-  console.log(
-    "[1;33m " +
-      "~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~" +
-      "[0m"
-  );
-  console.log(
-    "[1;33m " +
-      "~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~" +
-      "[0m"
-  );
-  console.log("                   " + text);
-  console.log(
-    "[1;33m " +
-      "~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~" +
-      "[0m"
-  );
-  console.log(
-    "[1;33m " +
-      "~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~" +
-      "[0m"
-  );
-  console.log(" ");
-};
-
-exports.consoleLogBlue = (text) => {
-  console.log(" ");
-  console.log(
-    "[1;36m " +
-      "~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~" +
-      "[0m"
-  );
-  console.log(
-    "[1;36m " +
-      "~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~" +
-      "[0m"
-  );
-  console.log("                   " + text);
-  console.log(
-    "[1;36m " +
-      "~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~" +
-      "[0m"
-  );
-  console.log(
-    "[1;36m " +
-      "~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~" +
-      "[0m"
-  );
-  console.log(" ");
-};
-
-exports.consoleLogPurple = (text) => {
-  console.log(" ");
-  console.log(
-    "[1;35m " +
-      ": : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : :" +
-      "[0m"
-  );
-  console.log(
-    "[1;35m " +
-      ": : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : :" +
-      "[0m"
-  );
-  console.log("                   " + text);
-  console.log(
-    "[1;35m " +
-      ": : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : :" +
-      "[0m"
-  );
-  console.log(
-    "[1;35m " +
-      ": : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : :" +
-      "[0m"
-  );
-  console.log(" ");
-};
-
-exports.throw = (msg = "Cease.") => {
-  console.log("[1;31m " + "!   !   !   !   !   !   !   !   !   !" + "[0m");
-  console.log("[1;31m " + "!   !   ! " + msg + "[0m");
-  console.log("[1;31m " + "!   !   !   !   !   !   !   !   !   !" + "[0m");
-  throw msg;
 };
 
 exports.isTerminusObject = (selectedWord) => {

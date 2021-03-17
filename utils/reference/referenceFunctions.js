@@ -1,4 +1,5 @@
 const gpUtils = require("../generalPurposeUtils.js");
+const clUtils = require("../zerothOrder/consoleLoggingUtils.js");
 const refObj = require("./referenceObjects.js");
 const refFxn = require("./referenceFunctions.js");
 
@@ -73,7 +74,7 @@ exports.validFeaturesOfStructureChunkWordtype = (
 
     if (additionalValidFeatures) {
       if (!Array.isArray(additionalValidFeatures)) {
-        gpUtils.throw(
+        clUtils.throw(
           "twnl additionalValidFeatures in isValidFeatureOfStructureChunkWordtype fxn should have been array."
         );
       }
@@ -157,7 +158,7 @@ exports.filterAnnotationsOnStCh = (
           `ylam filterAnnotationsOnStCh: "${structureChunk.chunkId}" stCh should have had STRING for annotationKey "${annotationKey}"` +
           "[0m"
       );
-      gpUtils.throw(
+      clUtils.throw(
         `#ERR ylam filterAnnotationsOnStCh. structureChunk.annotations[annotationKey]: "${structureChunk.annotations[annotationKey]}"`
       );
     }

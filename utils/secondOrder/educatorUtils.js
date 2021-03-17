@@ -1,4 +1,5 @@
 const gpUtils = require(".././generalPurposeUtils.js");
+const clUtils = require(".././zerothOrder/consoleLoggingUtils.js");
 const otUtils = require(".././objectTraversingUtils.js");
 const educatorUtils = require("./educatorUtils.js");
 

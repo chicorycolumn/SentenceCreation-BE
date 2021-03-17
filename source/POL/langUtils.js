@@ -1,6 +1,7 @@
 const lfUtils = require("../../utils/lemmaFilteringUtils.js");
 const otUtils = require("../../utils/objectTraversingUtils.js");
 const gpUtils = require("../../utils/generalPurposeUtils.js");
+const clUtils = require("../../utils/zerothOrder/consoleLoggingUtils.js");
 const refObj = require("../../utils/reference/referenceObjects.js");
 const allLangUtils = require("../../utils/allLangUtils.js");
 
@@ -85,7 +86,7 @@ exports.preprocessLemmaObjectsMajor = (
   if (
     gpUtils.getWordtypeFromLemmaObject(matches[0]) !== structureChunk.wordtype
   ) {
-    gpUtils.throw(
+    clUtils.throw(
       "#ERR wkpu POL:preprocessLemmaObjectsMajor. The wordtypes from stCh and lObjs didn't match."
     );
   }

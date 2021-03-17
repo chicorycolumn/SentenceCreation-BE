@@ -1,4 +1,5 @@
 const gpUtils = require("./generalPurposeUtils.js");
+const clUtils = require("./zerothOrder/consoleLoggingUtils.js");
 const scUtils = require("./sentenceCreatingUtils.js");
 const otUtils = require("./objectTraversingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
@@ -223,7 +224,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
                         `#WARN wqzm filterDownClarifiers. structureChunk[inflectionLabel] "${structureChunk[inflectionLabel]}"` +
                         "[0m"
                     );
-                    gpUtils.throw(
+                    clUtils.throw(
                       "#ERR wqzm filterDownClarifiers. inflectionLabel: " +
                         inflectionLabel
                     );
@@ -319,7 +320,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
                     "rqfh addClarifiers clarifierValue",
                     clarifierValue
                   );
-                  gpUtils.throw(
+                  clUtils.throw(
                     "exej aa:addClarifiers --> clarifierValue had length of not 1."
                   );
                 }
@@ -758,13 +759,13 @@ exports.specifyQuestionChunkAndChangeAnswerChunk = (
   actionKey,
   actionValueArr
 ) => {
-  gpUtils.throw("fjln specifyQuestionChunkAndChangeAnswerChunk Cease");
+  clUtils.throw("fjln specifyQuestionChunkAndChangeAnswerChunk Cease");
 
   if (actionValueArr.length !== 1) {
     console.log("ujrw specifyQuestionChunkAndChangeAnswerChunk", {
       actionValueArr,
     });
-    gpUtils.throw(
+    clUtils.throw(
       "ujrw specifyQuestionChunkAndChangeAnswerChunk actionValueArr had length of not 1"
     );
   }
@@ -812,7 +813,7 @@ exports.addAnnotation = (chunk, key, value) => {
 
   if (typeof value !== "string") {
     console.log("nrtn addAnnotation", { value });
-    gpUtils.throw("nrtn addAnnotation expected STRING for value");
+    clUtils.throw("nrtn addAnnotation expected STRING for value");
   }
 
   console.log(
@@ -906,7 +907,7 @@ exports.trimAnnotations = (annotationObj) => {
     }
 
     if (!annoValue) {
-      gpUtils.throw("vmkp");
+      clUtils.throw("vmkp");
       delete annotationObj[annoKeyy];
     }
   });

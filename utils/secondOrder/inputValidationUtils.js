@@ -1,4 +1,5 @@
 const gpUtils = require("../generalPurposeUtils.js");
+const clUtils = require("../zerothOrder/consoleLoggingUtils.js");
 const ivUtils = require("./inputValidationUtils.js");
 const refObj = require("../reference/referenceObjects.js");
 
@@ -42,7 +43,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
           "fneu validateSentenceFormula structureChunk",
           structureChunk
         );
-        gpUtils.throw(
+        clUtils.throw(
           `#ERR fneu validateSentenceFormula. stCh "${chunkId}": featureKey "${featureKey}" not specified on reference object.`
         );
       }
@@ -54,7 +55,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
           "wghd validateSentenceFormula structureChunk",
           structureChunk
         );
-        gpUtils.throw(
+        clUtils.throw(
           `#ERR wghd validateSentenceFormula. stCh "${chunkId}": featureKey "${featureKey}" not expected to be present on "${wordtype}".`
         );
       }
@@ -69,7 +70,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
           "kchk validateSentenceFormula structureChunk",
           structureChunk
         );
-        gpUtils.throw(
+        clUtils.throw(
           `#ERR kchk validateSentenceFormula. stCh "${chunkId}": Expected "${expectedTypeOnStCh}" as "${featureKey}" featureValue but got "${gpUtils.typeof(
             featureValue
           )}"`
@@ -88,7 +89,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
               "mkkf validateSentenceFormula structureChunk",
               structureChunk
             );
-            gpUtils.throw(
+            clUtils.throw(
               `#ERR mkkf validateSentenceFormula. stCh "${chunkId}": featureValue "${featureValue}" not listed as possible for wordtype "${wordtype}".`
             );
           }
@@ -99,7 +100,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
                 "timm validateSentenceFormula structureChunk",
                 structureChunk
               );
-              gpUtils.throw(
+              clUtils.throw(
                 `#ERR timm validateSentenceFormula. stCh "${chunkId}": featureValue arr included "${featureValueItem}" which was not listed as possible for wordtype "${wordtype}".`
               );
             }
@@ -114,7 +115,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
             "cglp validateSentenceFormula structureChunk",
             structureChunk
           );
-          gpUtils.throw(
+          clUtils.throw(
             `#ERR cglp validateSentenceFormula. stCh "${chunkId}": featureValue "${featureValue}" should have been a chunkId existing in sentenceStructure.`
           );
         }

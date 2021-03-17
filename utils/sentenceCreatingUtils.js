@@ -1,5 +1,6 @@
 const otUtils = require("./objectTraversingUtils.js");
 const gpUtils = require("./generalPurposeUtils.js");
+const clUtils = require("./zerothOrder/consoleLoggingUtils.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
 const ivUtils = require("./secondOrder/inputValidationUtils.js");
 const aaUtils = require("./auxiliaryAttributeUtils.js");
@@ -45,7 +46,7 @@ exports.getMaterials = (
     );
 
     if (!sentenceFormula) {
-      gpUtils.throw(
+      clUtils.throw(
         `#ERR quky sc:getMaterials. No sentenceFormula for this sentenceFormulaId "${sentenceFormulaId}".`
       );
     }
@@ -447,7 +448,7 @@ exports.giveFinalSentences = (
     }
 
     if (!multipleMode && answerOutputArrays && answerOutputArrays.length) {
-      gpUtils.throw(
+      clUtils.throw(
         "#ERR ubrz giveFinalSentences. Well that's strange. We are in Question Mode, so SC:giveFinalSentences expected to be given questionOutputArr, not answerOutputArrays."
       );
     }
@@ -640,7 +641,7 @@ exports.selectWordVersions = (
           structureChunk.form.includes("indefinite")
         ) {
           if (!subsequentOutputUnit) {
-            gpUtils.throw(
+            clUtils.throw(
               "aqrz selectWordVersions Shouldn't there be an outputUnit subsequent to this ENG indefinite article?"
             );
           }
@@ -687,7 +688,7 @@ exports.selectWordVersions = (
             subsequentOutputUnit.structureChunk.number.includes("plural")
           ) {
             if (subsequentOutputUnit.structureChunk.number.length > 1) {
-              gpUtils.throw(
+              clUtils.throw(
                 "#ERR pudk selectWordVersions. subsequentOutputUnit.structureChunk.number had length over 1."
               );
             }
@@ -787,7 +788,7 @@ exports.selectWordVersions = (
           "preposition"
         ) {
           if (!subsequentOutputUnit) {
-            gpUtils.throw(
+            clUtils.throw(
               "mcob selectWordVersions Shouldn't there be an outputUnit subsequent to this POL preposition?"
             );
           }
@@ -840,7 +841,7 @@ exports.selectWordVersions = (
         );
       }
     } else {
-      gpUtils.throw(
+      clUtils.throw(
         "#ERR oilf selectWordVersions. I expected either a string or a terminus object for this selectedWord."
       );
     }
@@ -871,7 +872,7 @@ exports.selectWordVersions = (
         console.log("vprr addAnnotationsAndPush " + wordInOwnArr);
         if (annoObj && Object.values(annoObj).length) {
           if (wordInOwnArr.length !== 1) {
-            gpUtils.throw(
+            clUtils.throw(
               `vpra #ERR addAnnotationsAndPush. To add annotation from [${Object.values(
                 annoObj
               )}] but there are multiple/none selected words: [${wordInOwnArr}].`
@@ -929,7 +930,7 @@ exports.selectWordVersions = (
       }
 
       if (!selectedWord[key]) {
-        gpUtils.throw(
+        clUtils.throw(
           `#ERR rgxc selectWordVersions. Could not find key "${key}" on selectedWord.`
         );
       }
@@ -939,13 +940,13 @@ exports.selectWordVersions = (
           selectedWord,
           "selectedWord[key]": selectedWord[key],
         });
-        gpUtils.throw(
+        clUtils.throw(
           "vcxx selectWordVersions Value inside tobj should have been array."
         );
       }
 
       if (!selectedWord[key]) {
-        gpUtils.throw(
+        clUtils.throw(
           "#ERR ztgp selectWordVersions. selectedWord[key] was falsy."
         );
       }
@@ -962,7 +963,7 @@ exports.selectWordVersions = (
     }
 
     console.log("oadb selectWordVersions", { selectedWord });
-    gpUtils.throw(
+    clUtils.throw(
       `oadb selectWordVersions didn't add any word from "${structureChunk.chunkId}" and see selectedWord above.`
     );
   });

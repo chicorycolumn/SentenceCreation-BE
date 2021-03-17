@@ -1,5 +1,6 @@
 const { head } = require("../app.js");
 const gpUtils = require("./generalPurposeUtils.js");
+const clUtils = require("./zerothOrder/consoleLoggingUtils.js");
 const otUtils = require("./objectTraversingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
@@ -55,7 +56,7 @@ exports.filterWithinSelectedLemmaObject = (
       !structureChunk.specificLemmas ||
       structureChunk.specificLemmas.length !== 1
     ) {
-      gpUtils.throw(
+      clUtils.throw(
         "#ERR ohmk lf:filterWithinSelectedLemmaObject. PHD-stCh should have exactly one value in specificLemmas arr."
       );
     }
@@ -102,14 +103,14 @@ exports.filterWithinSelectedLemmaObject = (
       );
 
       if (!drillPathForPHD) {
-        gpUtils.throw(
+        clUtils.throw(
           "#ERR jzbx filterWithin. There is no drillPath on the outputUnit with which I want to get features from the PHD stCh. Perhaps this outputUnit is one whose stCh did not go through If-PW?"
         );
       }
 
       if (structureChunk.form) {
         if (structureChunk.form.length !== 1) {
-          gpUtils.throw(
+          clUtils.throw(
             "#ERR cwyd filterWithin. Expected structureChunk.form to have length of 1: " +
               structureChunk.chunkId
           );
@@ -144,7 +145,7 @@ exports.filterWithinSelectedLemmaObject = (
           );
 
           if (formattedFeatureValueArray.length !== 1) {
-            gpUtils.throw(
+            clUtils.throw(
               "#ERR ikdr lf:filterWithin. Expected formattedFeatureValueArray to have length 1"
             );
           }
@@ -204,7 +205,7 @@ exports.filterWithinSelectedLemmaObject = (
           "[0m",
         { source }
       );
-      gpUtils.throw(
+      clUtils.throw(
         "apcu lf:filterWithinSelectedLemmaObject Oh no Natasha, array!"
       );
     } else if (
@@ -213,9 +214,9 @@ exports.filterWithinSelectedLemmaObject = (
     ) {
       sourceArr.push(source);
     } else if (gpUtils.isTerminusObject(source) && !source.processOnlyAtEnd) {
-      gpUtils.throw("svqe filterWithin Natasha, take action.");
+      clUtils.throw("svqe filterWithin Natasha, take action.");
     } else {
-      gpUtils.throw(
+      clUtils.throw(
         "#ERR dyqk filterWithin. Expected this PHD value to be the end of a chain and thus a string or array."
       );
     }
@@ -281,7 +282,7 @@ exports.filterWithinSelectedLemmaObject = (
   if (!requirementArrs.length) {
     console.log("zyan filterWithin structureChunk", structureChunk);
     console.log("zyan filterWithin inflectionChain", inflectionChain);
-    gpUtils.throw(
+    clUtils.throw(
       "zyan filterWithin requirementArrs ended with length 0, so the above fxn didn't do anything. I have console logged inflectionChain above, to help."
     );
   }
@@ -313,11 +314,11 @@ exports.filterWithinSelectedLemmaObject = (
       requirementArrs,
       "\n\n\n iszn when I was looking inside this source"
     );
-    gpUtils.consoleLogObjectAtTwoLevels(source);
+    clUtils.consoleLogObjectAtTwoLevels(source);
     console.log("\n\n\n");
 
     // console.log(
-    gpUtils.throw(
+    clUtils.throw(
       //xpublish: This should not be a throw when in PROD.
       "[1;31m " +
         `#WARN iszn lf:filterWithinSelectedLemmaObject. traverseAndRecordInflections returned FALSY for "${structureChunk.chunkId}" in "${currentLanguage}". See requirementArrs above.` +
@@ -486,7 +487,7 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
       .filter((selector) => !doneSelectors.includes(selector))
       .forEach((selector) => {
         if (/_/.test(selectedLemmaObject[selector])) {
-          gpUtils.throw(
+          clUtils.throw(
             `oppb updateStChByAndTagsAndSelectors I wasn't expecting a metaFeature selector here. It should have been processed already, in step one, and then added to doneSelectors, which would have prevented it being used here. selectedLemmaObject[selector]:"${selectedLemmaObject[selector]}"`
           );
         }
@@ -608,7 +609,7 @@ exports.padOutRequirementArrWithMetaFeatures = (
         let metaFeatureConverted = metaFeatureRef[featureValue];
 
         if (!metaFeatureConverted) {
-          gpUtils.throw(
+          clUtils.throw(
             "#ERR tufx lf:filterByKey. filterByKey need converted metafeature."
           );
         }
@@ -734,7 +735,7 @@ exports.traverseAndRecordInflections = (
   }
 
   if (!reqArr || !reqArr.length) {
-    gpUtils.throw(
+    clUtils.throw(
       `#ERR loii traverseAndRecordInflections for "${chunkId}". reqArr bad: [${reqArr}]`
     );
   }
@@ -747,7 +748,7 @@ exports.traverseAndRecordInflections = (
     console.log(`mztl lf:traverseAndRecordInflections for "${chunkId}"`, {
       outputUnitsWithDrillPathsMini,
     });
-    gpUtils.throw(
+    clUtils.throw(
       `mztl lf:traverseAndRecordInflections for "${chunkId}" found outputUnitsWithDrillPathsMini not array. See above.`
     );
   }
@@ -777,7 +778,7 @@ exports.traverseAndRecordInflections = (
     }
 
     if (Array.isArray(source[chosenInflector])) {
-      gpUtils.throw(
+      clUtils.throw(
         `uwmf lf:traverseAndRecordInflections for "${chunkId}" Uh oh Natasha, array!`
       );
     }

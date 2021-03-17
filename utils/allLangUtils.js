@@ -1,6 +1,7 @@
 const refObj = require("../utils/reference/referenceObjects.js");
 const refFxn = require("../utils/reference/referenceFunctions.js");
 const gpUtils = require("../utils/generalPurposeUtils.js");
+const clUtils = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 
 exports.initiallyAdjustSentenceFormula = (sentenceFormula) => {
@@ -13,7 +14,7 @@ exports.addWordtypeToStructureChunk = (structureChunk) => {
   let wordtype = gpUtils.getWordtypeFromStructureChunk(structureChunk);
 
   if (!wordtype) {
-    gpUtils.throw(
+    clUtils.throw(
       "#ERR bawe addWordtypeToStructureChunk. wordtype came back falsy",
       wordtype
     );
@@ -34,7 +35,7 @@ exports.translateAnnotationValue = (
   if (annotationKey === "gender") {
     if (structureChunk.number) {
       if (structureChunk.number.length > 1) {
-        gpUtils.throw("cshb #ERR ALL:translateAnnotationValue.");
+        clUtils.throw("cshb #ERR ALL:translateAnnotationValue.");
       }
 
       const pluralVirilityAndSingularConversionRef =
@@ -44,7 +45,7 @@ exports.translateAnnotationValue = (
         if (
           !pluralVirilityAndSingularConversionRef["plural"][annotationValue]
         ) {
-          gpUtils.throw(
+          clUtils.throw(
             "mkow #ERR ALL:translateAnnotationValue. Could not convert virility of annotationValue: " +
               annotationValue
           );
@@ -113,7 +114,7 @@ exports.adjustVirilityOfStructureChunk = (
 
   if (/all.*/.test(gender)) {
     if (gender.length !== 1) {
-      gpUtils.throw(
+      clUtils.throw(
         `#ERR vcvl ALL:adjustVirilityOfStructureChunk. Gender arr contained a metaGender, that's fine, but it contained other values too? That's too much. "${gender.toString()}"`
       );
     }
@@ -385,7 +386,7 @@ exports.decantMGNsInOutputArray = (questionOutputArr, currentLanguage) => {
   console.log(
     "qnzm decantMGNsInOutputArray At the start, questionOutputArr is:"
   );
-  gpUtils.consoleLogObjectAtTwoLevels(
+  clUtils.consoleLogObjectAtTwoLevels(
     questionOutputArr,
     "ALL:decantMGNsInOutputArray"
   );

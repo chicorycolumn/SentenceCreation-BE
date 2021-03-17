@@ -1,5 +1,6 @@
 const otUtils = require("../utils/objectTraversingUtils.js");
 const gpUtils = require("../utils/generalPurposeUtils.js");
+const clUtils = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const lfUtils = require("../utils/lemmaFilteringUtils.js");
 const refObj = require("../utils/reference/referenceObjects.js");
 const scUtils = require("../utils/sentenceCreatingUtils.js");
@@ -127,7 +128,7 @@ exports.fetchPalette = (req) => {
         "pipr-fetchPalette. questionSentenceData.arrayOfOutputArrays",
         questionSentenceData.arrayOfOutputArrays
       );
-      gpUtils.throw(
+      clUtils.throw(
         "#ERR tbvr fetchPalette. questionSentenceData.arrayOfOutputArrays.length had length more than 1. It was " +
           questionSentenceData.arrayOfOutputArrays.length
       );
@@ -195,7 +196,7 @@ exports.fetchPalette = (req) => {
             "[1;31m " + `#WARN oyxp fetchPalette. structureChunk is:` + "[0m",
             structureChunk
           );
-          gpUtils.throw("#ERR oyxp fetchPalette. featureKey: " + featureKey);
+          clUtils.throw("#ERR oyxp fetchPalette. featureKey: " + featureKey);
         }
       });
     }
@@ -233,11 +234,11 @@ exports.fetchPalette = (req) => {
 
     console.log("[1;35m " + "}}}" + "[0m");
 
-    gpUtils.consoleLogAestheticBorder(4);
+    clUtils.consoleLogAestheticBorder(4);
   }
 
   if (devSaysThrowAtMidpoint) {
-    gpUtils.throw("Midpoint cease.");
+    clUtils.throw("Midpoint cease.");
   }
 
   if (answerLanguage) {
