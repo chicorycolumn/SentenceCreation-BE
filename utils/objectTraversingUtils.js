@@ -635,10 +635,10 @@ exports.findMatchingLemmaObjectThenWord = (
             `-----------------------------------------------------------------------------------------------------------------------------------PDSred` +
             "[0m"
         );
-        console.log(
-          "kpos ot:findMatchingLemmaObjectThenWord subArrayOfOutputUnits",
-          subArrayOfOutputUnits
-        );
+        console.log("kpos PDSred subArrayOfOutputUnits before adjustment.");
+        subArrayOfOutputUnits.forEach((x) => {
+          console.log(x);
+        });
 
         let mergedGenderOutputUnit = otUtils.createMergedGenderOutputUnit(
           subArrayOfOutputUnits,
@@ -646,6 +646,11 @@ exports.findMatchingLemmaObjectThenWord = (
         );
 
         subArrayOfOutputUnits = [mergedGenderOutputUnit];
+
+        console.log("cxmo PDSred subArrayOfOutputUnits after adjustment.");
+        subArrayOfOutputUnits.forEach((x) => {
+          console.log(x);
+        });
       }
 
       console.log(
@@ -655,7 +660,7 @@ exports.findMatchingLemmaObjectThenWord = (
         console.log(x);
       });
 
-      let unit = gpUtils.selectRandom(subArrayOfOutputUnits);
+      let unit = gpUtils.selectRandom(subArrayOfOutputUnits); //epsilon - What is this selran doing?
 
       let { errorInDrilling, selectedWordArray, drillPath } = unit;
 
@@ -1124,6 +1129,10 @@ exports.stripOutFeatures = (currentLanguage, structureChunk, PWlabel) => {
 };
 
 exports.doDrillPathsDifferOnlyByGender = (subArrayOfOutputUnits) => {
+  if (!subArrayOfOutputUnits || subArrayOfOutputUnits.length < 2) {
+    return false;
+  }
+
   if (
     subArrayOfOutputUnits.some((outputUnit) => {
       return (
@@ -1216,11 +1225,14 @@ exports.switchMetaFeatureForAWorkableConvertedFeature = (
   inflectorLabel,
   inflectorValue,
   source,
-  currentLanguage
+  currentLanguage,
+  consoleLogLabel
 ) => {
   console.log(
     "[1;33m " +
-      `ivuw traverseAndRecordInflections. >>unkeyed metaFeature clause<<. inflectorValue is a metaFeature: "${inflectorValue}", but there is no such key on the source. So, we should check if the source has corresponding feature keys, eg allPersonalGenders -> [m, f], and if they hold all the same values, then we should let this work.` +
+      `ivwa ` +
+      consoleLogLabel +
+      `. >>unkeyed metaFeature clause<<. inflectorValue is a metaFeature: "${inflectorValue}", but there is no such key on the source. So, we should check if the source has corresponding feature keys, eg allPersonalGenders -> [m, f], and if they hold all the same values, then we should let this work.` +
       "[0m"
   );
 
@@ -1228,7 +1240,7 @@ exports.switchMetaFeatureForAWorkableConvertedFeature = (
     refObj.metaFeatures[currentLanguage][inflectorLabel][inflectorValue];
 
   console.log(
-    "[1;33m " + `ivuw convertedMetaFeatures [${convertedMetaFeatures}]` + "[0m"
+    "[1;33m " + `ivwe convertedMetaFeatures [${convertedMetaFeatures}]` + "[0m"
   );
 
   if (!convertedMetaFeatures || !convertedMetaFeatures.length) {

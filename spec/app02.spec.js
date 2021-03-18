@@ -250,6 +250,7 @@ describe("/api", () => {
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "118b My doctor",
+          devSaysThrowAtMidpoint: true,
         })
         .expect(200)
         .then((res) => {

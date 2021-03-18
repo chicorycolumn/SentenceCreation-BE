@@ -478,8 +478,6 @@ exports.decantMGNsBeforeOutputArray = (
       metaFeatureRef,
     });
 
-    //if gender is a valid feature, add it if not there
-
     if (structureChunk[featureKey]) {
       console.log("eico decantMGNsBeforeOutputArray Clause 1", { featureKey });
       let featureValuesFromStChAndLObj = [...structureChunk[featureKey]];

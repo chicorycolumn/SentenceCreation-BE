@@ -162,7 +162,7 @@ exports.filterWithinSelectedLemmaObject = (
         drillPathForPHD
       );
 
-      console.log("ylur filterWithin. source", source);
+      // console.log("ylur filterWithin. source", source);
 
       postHocInflectionChain.forEach((featureKey) => {
         let featureValue = drillPathForPHD.find(
@@ -174,7 +174,8 @@ exports.filterWithinSelectedLemmaObject = (
             featureKey,
             featureValue,
             source,
-            currentLanguage
+            currentLanguage,
+            "filterWithin -> postHocInflectionChain.forEach"
           );
         }
 
@@ -768,25 +769,29 @@ exports.traverseAndRecordInflections = (
   }
 
   reqInflectorArr.forEach((chosenInflector) => {
+    let chosenInflectorTrue = chosenInflector;
+    let chosenInflectorAdjusted = chosenInflector;
+
     if (chosenInflector.slice(0, 3) === "all" && !source[chosenInflector]) {
-      chosenInflector = otUtils.switchMetaFeatureForAWorkableConvertedFeature(
+      chosenInflectorAdjusted = otUtils.switchMetaFeatureForAWorkableConvertedFeature(
         reqInflectorLabel,
         chosenInflector,
         source,
-        currentLanguage
+        currentLanguage,
+        "traverseAndRecordInflections -> reqInflectorArr.forEach"
       );
     }
 
-    if (Array.isArray(source[chosenInflector])) {
+    if (Array.isArray(source[chosenInflectorAdjusted])) {
       clUtils.throw(
         `uwmf lf:traverseAndRecordInflections for "${chunkId}" Uh oh Natasha, array!`
       );
     }
 
     if (
-      typeof source[chosenInflector] === "string" ||
-      (gpUtils.isTerminusObject(source[chosenInflector]) &&
-        source[chosenInflector].processOnlyAtEnd)
+      typeof source[chosenInflectorAdjusted] === "string" ||
+      (gpUtils.isTerminusObject(source[chosenInflectorAdjusted]) &&
+        source[chosenInflectorAdjusted].processOnlyAtEnd)
     ) {
       // console.log("fxxb2");
 
@@ -795,21 +800,24 @@ exports.traverseAndRecordInflections = (
           `xuei lf:traverseAndRecordInflections for "${chunkId}" Clause A: string or tObj to process at end`,
           {
             reqInflectorLabel,
-            chosenInflector,
+            chosenInflectorAdjusted,
           }
         );
       }
 
-      outputUnitsWithDrillPathsMini.push([reqInflectorLabel, chosenInflector]);
+      outputUnitsWithDrillPathsMini.push([
+        reqInflectorLabel,
+        chosenInflectorTrue,
+      ]);
 
       if (shouldConsoleLog) {
         console.log(
-          `pkpb lf:traverseAndRecordInflections for "${chunkId}" pushing word "${source[chosenInflector]}"`
+          `pkpb lf:traverseAndRecordInflections for "${chunkId}" pushing word "${source[chosenInflectorAdjusted]}"`
         );
       }
 
       outputUnitsWithDrillPaths.push({
-        selectedWordArray: [source[chosenInflector]],
+        selectedWordArray: [source[chosenInflectorAdjusted]],
         drillPath: outputUnitsWithDrillPathsMini.slice(0),
       });
 
@@ -817,10 +825,10 @@ exports.traverseAndRecordInflections = (
 
       outputUnitsWithDrillPathsMini.pop();
 
-      return source[chosenInflector];
+      return source[chosenInflectorAdjusted];
     } else if (
-      gpUtils.isTerminusObject(source[chosenInflector]) &&
-      !source[chosenInflector].processOnlyAtEnd
+      gpUtils.isTerminusObject(source[chosenInflectorAdjusted]) &&
+      !source[chosenInflectorAdjusted].processOnlyAtEnd
     ) {
       // console.log("fxxb4");
 
@@ -829,15 +837,18 @@ exports.traverseAndRecordInflections = (
           `qqyr lf:traverseAndRecordInflections for "${chunkId}" Clause B: tObj to process now`,
           {
             reqInflectorLabel,
-            chosenInflector,
+            chosenInflectorAdjusted,
           }
         );
       }
 
-      outputUnitsWithDrillPathsMini.push([reqInflectorLabel, chosenInflector]);
+      outputUnitsWithDrillPathsMini.push([
+        reqInflectorLabel,
+        chosenInflectorTrue,
+      ]);
 
       let wordsFromTerminusObject = gpUtils.getWordsFromTerminusObject(
-        source[chosenInflector],
+        source[chosenInflectorAdjusted],
         multipleMode
       );
 
@@ -860,10 +871,10 @@ exports.traverseAndRecordInflections = (
 
       // console.log("fxxb6");
 
-      return source[chosenInflector];
+      return source[chosenInflectorAdjusted];
     } else if (
-      gpUtils.isKeyValueTypeObject(source[chosenInflector]) &&
-      !source[chosenInflector].isTerminus
+      gpUtils.isKeyValueTypeObject(source[chosenInflectorAdjusted]) &&
+      !source[chosenInflectorAdjusted].isTerminus
     ) {
       // console.log("fxxb7");
 
@@ -872,15 +883,18 @@ exports.traverseAndRecordInflections = (
           `mlgc lf:traverseAndRecordInflections for "${chunkId}" Clause C: object for further traversal`,
           {
             reqInflectorLabel,
-            chosenInflector,
+            chosenInflectorAdjusted,
           }
         );
       }
 
-      outputUnitsWithDrillPathsMini.push([reqInflectorLabel, chosenInflector]);
+      outputUnitsWithDrillPathsMini.push([
+        reqInflectorLabel,
+        chosenInflectorTrue,
+      ]);
 
       lfUtils.traverseAndRecordInflections(
-        source[chosenInflector],
+        source[chosenInflectorAdjusted],
         reqArr.slice(1),
         outputUnitsWithDrillPaths,
         outputUnitsWithDrillPathsMini,
@@ -896,7 +910,7 @@ exports.traverseAndRecordInflections = (
     } else {
       console.log(
         "[1;33m " +
-          `buwt #NB lf.traverseAndRecordInflections for "${chunkId}" found no matching values during drilling for ${reqInflectorLabel}: "${chosenInflector}".` +
+          `buwt #NB lf.traverseAndRecordInflections for "${chunkId}" found no matching values during drilling for ${reqInflectorLabel}: "${chosenInflectorAdjusted}".` +
           "[0m"
       );
     }
