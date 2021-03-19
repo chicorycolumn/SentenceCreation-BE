@@ -82,6 +82,8 @@ exports.processSentenceFormula = (
   // pleaseDontSpecify = false;
   // pleaseDontSpecifyPronounGender = false;
 
+  console.log("hbbhey START processSentenceFormula");
+
   let { currentLanguage, previousQuestionLanguage } = languagesObj;
   let {
     sentenceFormulaId,
@@ -106,27 +108,38 @@ exports.processSentenceFormula = (
     otherChunks,
   } = scUtils.sortStructureChunks(sentenceStructure);
 
+  if (multipleMode) {
+    clUtils.throw();
+  }
+
+  console.log("hbblay", { headChunks, dependentChunks, otherChunks });
+
+  if (multipleMode) {
+    clUtils.throw("oi");
+  }
+
   let headOutputUnitArrays = [];
 
-  console.log(
-    "iytd processSentenceFormula: headChunks",
-    headChunks.map((chunk) => chunk.chunkId)
-  );
-  console.log(
-    "iytd processSentenceFormula: dependentChunks",
-    dependentChunks.map((chunk) => chunk.chunkId)
-  );
-  console.log(
-    "iytd processSentenceFormula: otherChunks",
-    otherChunks.map((chunk) => chunk.chunkId)
-  );
+  if ("console") {
+    console.log(
+      "iytd processSentenceFormula: headChunks",
+      headChunks.map((chunk) => chunk.chunkId)
+    );
+    console.log(
+      "iytd processSentenceFormula: dependentChunks",
+      dependentChunks.map((chunk) => chunk.chunkId)
+    );
+    console.log(
+      "iytd processSentenceFormula: otherChunks",
+      otherChunks.map((chunk) => chunk.chunkId)
+    );
+  }
 
   delete errorInSentenceCreation.errorMessage;
 
   headChunks.forEach((headChunk) => {
     console.log("evga sc:processSentenceFormula STEP ONE", headChunk.chunkId);
 
-    console.log(`weoa headChunk "${headChunk.chunkId}"`);
     let allPossOutputUnits_head = otUtils.findMatchingLemmaObjectThenWord(
       gpUtils.copyWithoutReference(headChunk),
       words,
@@ -179,13 +192,16 @@ exports.processSentenceFormula = (
   );
 
   // Now we update the head structure chunks with the details from their respective selectedWords.
+
+  //STEP TWO (NESTED BELOW): Select dependent words and add to result array.
   explodedOutputArraysWithHeads.forEach((headOutputArray) => {
     headOutputArray.forEach((headOutputUnit) => {
+      lfUtils.updateStructureChunk(headOutputUnit, currentLanguage);
       lfUtils.updateStructureChunk(headOutputUnit, currentLanguage);
 
       let headChunk = headOutputUnit.structureChunk;
 
-      //STEP TWO (NOW NESTED): Select dependent words and add to result array.
+      // Step two begins here.
       let specificDependentChunks = dependentChunks
         .filter((chunk) => chunk.agreeWith === headChunk.chunkId)
         .map((chunk) => gpUtils.copyWithoutReference(chunk));
@@ -247,6 +263,11 @@ exports.processSentenceFormula = (
       }
     });
   });
+
+  console.log(
+    "wvmo explodedOutputArraysWithHeads",
+    explodedOutputArraysWithHeads
+  );
 
   explodedOutputArraysWithHeads.forEach((arr) => {
     console.log(
@@ -332,6 +353,14 @@ exports.processSentenceFormula = (
       grandAllPossOutputUnits_other
     );
   }
+
+  if (multipleMode) {
+    console.log("hbbhay grandAllPossOutputUnits_other");
+    clUtils.consoleLogObjectAtTwoLevels(grandAllPossOutputUnits_other);
+    // clUtils.throw();
+  }
+
+  console.log("hbbway");
 
   grandOutputArray.forEach((outputArray) => {
     delete errorInSentenceCreation.errorMessage;
@@ -470,6 +499,7 @@ exports.giveFinalSentences = (
         finalSentenceArr.push(finalSentence);
       });
     });
+    clUtils.throw("nownow");
   } else {
     let finalSentences = scUtils.buildSentenceString(
       questionOutputArr,
@@ -503,6 +533,8 @@ exports.buildSentenceString = (
     "cghk buildSentenceString unorderedArr",
     unorderedArr.map((outputUnit) => outputUnit.selectedWord)
   );
+  //nownow
+  // return [];
 
   let outputArrays = [];
   let producedSentences = [];
@@ -1334,7 +1366,7 @@ exports.inheritFromHeadToDependentChunk = (
 };
 
 exports.sortStructureChunks = (sentenceStructure) => {
-  let headChunks = Array.from(
+  let headIds = Array.from(
     new Set(
       sentenceStructure
         .map((chunk) => {
@@ -1344,9 +1376,38 @@ exports.sortStructureChunks = (sentenceStructure) => {
         })
         .filter((item) => item)
     )
-  ).map((headId) => {
+  );
+
+  let PHDheadIds = [];
+
+  sentenceStructure.forEach((chunk) => {
+    if (typeof chunk === "object") {
+      [
+        "agreeWith",
+        "postHocAgreeWithPrimary",
+        "postHocAgreeWithSecondary",
+        "postHocAgreeWithTertiary",
+      ].forEach((agreeKey) => {
+        if (chunk[agreeKey]) {
+          PHDheadIds.push(chunk[agreeKey]);
+        }
+      });
+    }
+  });
+
+  PHDheadIds = Array.from(new Set(PHDheadIds));
+
+  let uniqueCombinedHeadIds = Array.from(new Set([...headIds, ...PHDheadIds]));
+
+  let headChunks = uniqueCombinedHeadIds.map((headId) => {
     return sentenceStructure.find((chunk) => chunk.chunkId === headId);
   });
+
+  ///////////////
+  // let headChunks = headIds.map((headId) => {
+  //   return sentenceStructure.find((chunk) => chunk.chunkId === headId);
+  // });
+  ///////////////
 
   let dependentChunks = sentenceStructure.filter(
     (structureChunk) =>
@@ -1360,6 +1421,14 @@ exports.sortStructureChunks = (sentenceStructure) => {
         ...dependentChunks.map((chunk) => chunk.chunkId),
       ].includes(chunk.chunkId)
   );
+
+  console.log("fafo sortStructureChunks END", {
+    headChunks,
+    dependentChunks,
+    otherChunks,
+  });
+
+  clUtils.throw();
 
   return { headChunks, dependentChunks, otherChunks };
 };

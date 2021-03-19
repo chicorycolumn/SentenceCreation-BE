@@ -25,7 +25,7 @@ describe("/api", () => {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe.only("/palette - Stage 17-i: Possessive pronouns and MGNs. Pre-testing.", () => {
+  xdescribe("/palette - Stage 17-i: Possessive pronouns and MGNs. Pre-testing.", () => {
     it("#pal17-01a GET 200 YES: Engpol. MGN as sole word, annotation expected.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -239,7 +239,7 @@ describe("/api", () => {
           );
         });
     });
-    it.only("#pal17-03b GET 200 YES: Engpol. Possessive pronoun above MGN. pleaseDontSpecify.", () => {
+    it("#pal17-03b GET 200 YES: Engpol. Possessive pronoun above MGN. pleaseDontSpecify.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -250,7 +250,7 @@ describe("/api", () => {
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "118b My doctor",
-          devSaysThrowAtMidpoint: true,
+          // devSaysThrowAtMidpoint: true,
         })
         .expect(200)
         .then((res) => {
@@ -1862,7 +1862,7 @@ describe("/api", () => {
   });
 
   describe("/palette - Stage 14: Possessive pronouns.", () => {
-    it("#pal14-01a GET 200 YES: POL. I have my onion.", () => {
+    it.only("#pal14-01a GET 200 YES: POL. I have my onion.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
