@@ -12,6 +12,20 @@ exports.filterWithinSelectedLemmaObject = (
   multipleMode,
   outputArray
 ) => {
+  if (outputArray) {
+    console.log(
+      "[1;33m " +
+        `nvnl filterWithinSelectedLemmaObject outputArray: [${outputArray.map(
+          (x) => x.selectedWord
+        )}]` +
+        "[0m"
+    );
+  } else {
+    console.log(
+      "[1;33m " + `nvnl filterWithinSelectedLemmaObject outputArray null` + "[0m"
+    );
+  }
+
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
 
   //STEP ZERO: Get necessary materials, ie inflectionPaths and requirementArrs.
@@ -89,6 +103,11 @@ exports.filterWithinSelectedLemmaObject = (
           `nvnm lf:filterWithinSelectedLemmaObject Running loop for "${postHocAgreeWithKey}"` +
           "[0m"
       );
+      console.log(
+        "[1;33m " + `outputArray: [${outputArray.map((x) => x.selectedWord)}]` + "[0m"
+      );
+
+      // clUtils.consoleLogObjectAtTwoLevels(outputArray, "outputArray");
 
       let postHocInflectionChain = postHocInflectionChains[postHocAgreeWithKey];
 

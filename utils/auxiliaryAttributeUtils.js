@@ -720,6 +720,8 @@ exports.sortAnswerAndQuestionStructureChunks = (
   questionSentenceStructure,
   answerSentenceStructure
 ) => {
+  console.log("bsat sortAnswerAndQuestionStructureChunks");
+
   let responseObj = {
     answerHeadChunks: null,
     answerDependentChunks: null,

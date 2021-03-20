@@ -204,6 +204,15 @@ exports.arrayExploder = (superArray) => {
 };
 
 exports.explodeOutputArraysByHeadsAndDependents = (justOneOutputArray) => {
+  console.log(
+    "mdpu explodeOutputArraysByHeadsAndDependents START. justOneOutputArray"
+  );
+  // clUtils.consoleLogObjectAtTwoLevels(
+  //   justOneOutputArray,
+  //   "justOneOutputArray",
+  //   "explodeOutputArraysByHeadsAndDependents"
+  // );
+
   justOneOutputArray.forEach((unit, unitIndex) => {
     if (
       unit.possibleDependentOutputArrays &&
@@ -218,14 +227,19 @@ exports.explodeOutputArraysByHeadsAndDependents = (justOneOutputArray) => {
 
   let grandArrOfAllHeadUnits = [];
 
-  justOneOutputArray.forEach((headUnit, headUnitIndex) => {
+  justOneOutputArray.forEach((headUnit) => {
     let headArr = [[headUnit]];
-    let depArr = headUnit.explodedDependentOutputArrays;
 
-    let headsExplodedByDeps = gpUtils.arrayExploder([headArr, depArr]);
-    delete headUnit.explodedDependentOutputArrays;
+    if (headUnit.explodedDependentOutputArrays) {
+      let depArr = headUnit.explodedDependentOutputArrays;
 
-    grandArrOfAllHeadUnits.push(headsExplodedByDeps);
+      let headsExplodedByDeps = gpUtils.arrayExploder([headArr, depArr]);
+      delete headUnit.explodedDependentOutputArrays;
+
+      grandArrOfAllHeadUnits.push(headsExplodedByDeps);
+    } else {
+      grandArrOfAllHeadUnits.push([headArr]);
+    }
   });
 
   let explodedGrandArray = gpUtils.arrayExploder(grandArrOfAllHeadUnits);
@@ -243,6 +257,12 @@ exports.explodeOutputArraysByHeadsAndDependents = (justOneOutputArray) => {
 
     return flattenedArray;
   });
+
+  clUtils.consoleLogObjectAtTwoLevels(
+    explodedGrandArray,
+    "explodedGrandArray",
+    "mdpy explodeOutputArraysByHeadsAndDependents END"
+  );
 
   return explodedGrandArray;
 };

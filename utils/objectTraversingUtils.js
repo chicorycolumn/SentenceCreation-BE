@@ -507,6 +507,18 @@ exports.findMatchingLemmaObjectThenWord = (
           selectedLemmaObject
         );
 
+        if (outputArray) {
+          console.log(
+            "[1;33m " +
+              `nvnĸ findMatching outputArray: [${outputArray.map(
+                (x) => x.selectedWord
+              )}]` +
+              "[0m"
+          );
+        } else {
+          console.log("[1;33m " + `nvnĸ findMatching outputArray null` + "[0m");
+        }
+
         let subArrayOfOutputUnits = lfUtils.filterWithinSelectedLemmaObject(
           selectedLemmaObject,
           structureChunk,
@@ -603,6 +615,27 @@ exports.findMatchingLemmaObjectThenWord = (
         "fxdn ot:findMatchingLemmaObjectThenWord",
         selectedLemmaObject.inflections
       );
+
+      console.log("- * - * - * - * - * - * - * - * - * - * - * - * -");
+      if (outputArray) {
+        console.log(
+          "[1;33m " +
+            `nvnk findMatching outputArray: [${outputArray.map(
+              (x) => x.selectedWord
+            )}]` +
+            "[0m"
+        );
+      } else {
+        console.log("[1;33m " + `nvnk findMatching outputArray null` + "[0m");
+      }
+      console.log({
+        selectedLemmaObject,
+        structureChunk,
+        currentLanguage,
+        multipleMode,
+        outputArray,
+      });
+      console.log("- * - * - * - * - * - * -");
 
       let subArrayOfOutputUnits = lfUtils.filterWithinSelectedLemmaObject(
         selectedLemmaObject,

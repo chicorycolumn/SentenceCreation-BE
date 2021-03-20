@@ -94,8 +94,7 @@ exports.processSentenceFormula = (
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
   let grandOutputArray = [];
 
-  //STEP ZERO
-  //Preprocess sentence structure.
+  //STEP ZERO: Preprocess sentence structure.
 
   allLangUtils.preprocessStructureChunks(sentenceStructure, currentLanguage);
   langUtils.preprocessStructureChunks(sentenceStructure, currentLanguage);
@@ -106,17 +105,9 @@ exports.processSentenceFormula = (
     headChunks,
     dependentChunks,
     otherChunks,
-  } = scUtils.sortStructureChunks(sentenceStructure);
-
-  if (multipleMode) {
-    clUtils.throw();
-  }
+  } = scUtils.sortStructureChunks(sentenceStructure, false);
 
   console.log("hbblay", { headChunks, dependentChunks, otherChunks });
-
-  if (multipleMode) {
-    clUtils.throw("oi");
-  }
 
   let headOutputUnitArrays = [];
 
@@ -197,7 +188,6 @@ exports.processSentenceFormula = (
   explodedOutputArraysWithHeads.forEach((headOutputArray) => {
     headOutputArray.forEach((headOutputUnit) => {
       lfUtils.updateStructureChunk(headOutputUnit, currentLanguage);
-      lfUtils.updateStructureChunk(headOutputUnit, currentLanguage);
 
       let headChunk = headOutputUnit.structureChunk;
 
@@ -260,6 +250,10 @@ exports.processSentenceFormula = (
             allPossOutputUnits_dependent
           );
         });
+      } else {
+        console.log(
+          "zvvs processSentenceFormula explodedOutputArraysWithHeads. specificDependentChunks had no length."
+        );
       }
     });
   });
@@ -276,6 +270,9 @@ exports.processSentenceFormula = (
     );
 
     let result = gpUtils.explodeOutputArraysByHeadsAndDependents(arr);
+
+    console.log("result of explodedOutputArraysWithHeads:", result);
+
     grandOutputArray.push(...result);
   });
 
@@ -354,13 +351,15 @@ exports.processSentenceFormula = (
     );
   }
 
-  if (multipleMode) {
-    console.log("hbbhay grandAllPossOutputUnits_other");
-    clUtils.consoleLogObjectAtTwoLevels(grandAllPossOutputUnits_other);
-    // clUtils.throw();
-  }
+  // clUtils.consoleLogObjectAtTwoLevels(
+  //   grandOutputArray,
+  //   "grandOutputArray",
+  //   "processSF"
+  // );
+  // console.log("postHocDependentChunks", postHocDependentChunks);
+  // clUtils.throw("rrre");
 
-  console.log("hbbway");
+  //STEP THREE (NESTED BELOW): Select PHD words and add to result array.
 
   grandOutputArray.forEach((outputArray) => {
     delete errorInSentenceCreation.errorMessage;
@@ -499,7 +498,7 @@ exports.giveFinalSentences = (
         finalSentenceArr.push(finalSentence);
       });
     });
-    clUtils.throw("nownow");
+    // clUtils.throw("nownow");
   } else {
     let finalSentences = scUtils.buildSentenceString(
       questionOutputArr,
@@ -1365,7 +1364,7 @@ exports.inheritFromHeadToDependentChunk = (
   );
 };
 
-exports.sortStructureChunks = (sentenceStructure) => {
+exports.sortStructureChunks = (sentenceStructure, devSaysDoFirstWay) => {
   let headIds = Array.from(
     new Set(
       sentenceStructure
@@ -1378,36 +1377,40 @@ exports.sortStructureChunks = (sentenceStructure) => {
     )
   );
 
-  let PHDheadIds = [];
+  let headChunks = [];
 
-  sentenceStructure.forEach((chunk) => {
-    if (typeof chunk === "object") {
-      [
-        "agreeWith",
-        "postHocAgreeWithPrimary",
-        "postHocAgreeWithSecondary",
-        "postHocAgreeWithTertiary",
-      ].forEach((agreeKey) => {
-        if (chunk[agreeKey]) {
-          PHDheadIds.push(chunk[agreeKey]);
-        }
-      });
-    }
-  });
+  if (devSaysDoFirstWay) {
+    headChunks = headIds.map((headId) => {
+      return sentenceStructure.find((chunk) => chunk.chunkId === headId);
+    });
+  } else {
+    let PHDheadIds = [];
 
-  PHDheadIds = Array.from(new Set(PHDheadIds));
+    sentenceStructure.forEach((chunk) => {
+      if (typeof chunk === "object") {
+        [
+          "agreeWith",
+          "postHocAgreeWithPrimary",
+          "postHocAgreeWithSecondary",
+          "postHocAgreeWithTertiary",
+        ].forEach((agreeKey) => {
+          if (chunk[agreeKey]) {
+            PHDheadIds.push(chunk[agreeKey]);
+          }
+        });
+      }
+    });
 
-  let uniqueCombinedHeadIds = Array.from(new Set([...headIds, ...PHDheadIds]));
+    PHDheadIds = Array.from(new Set(PHDheadIds));
 
-  let headChunks = uniqueCombinedHeadIds.map((headId) => {
-    return sentenceStructure.find((chunk) => chunk.chunkId === headId);
-  });
+    let uniqueCombinedHeadIds = Array.from(
+      new Set([...headIds, ...PHDheadIds])
+    );
 
-  ///////////////
-  // let headChunks = headIds.map((headId) => {
-  //   return sentenceStructure.find((chunk) => chunk.chunkId === headId);
-  // });
-  ///////////////
+    headChunks = uniqueCombinedHeadIds.map((headId) => {
+      return sentenceStructure.find((chunk) => chunk.chunkId === headId);
+    });
+  }
 
   let dependentChunks = sentenceStructure.filter(
     (structureChunk) =>
@@ -1428,7 +1431,7 @@ exports.sortStructureChunks = (sentenceStructure) => {
     otherChunks,
   });
 
-  clUtils.throw();
+  // clUtils.throw("jeve");
 
   return { headChunks, dependentChunks, otherChunks };
 };

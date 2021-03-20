@@ -1,7 +1,9 @@
 const clUtils = require("./consoleLoggingUtils.js");
 
-exports.consoleLogObjectAtOneLevel = (obj, label) => {
-  console.log("[1;32m " + `--Console log object at one level, from "${label}":` + "[0m");
+exports.consoleLogObjectAtOneLevel = (obj, label, originLabel) => {
+  console.log(
+    "[1;33m " + `--Console log "${label}" at one level, from "${originLabel}":` + "[0m"
+  );
   console.log("[1;32m " + `------` + "[0m");
   console.log("[1;32m " + `----------` + "[0m");
   Object.keys(obj).forEach((key) => {
@@ -14,9 +16,9 @@ exports.consoleLogObjectAtOneLevel = (obj, label) => {
   console.log("[1;32m " + `--` + "[0m");
 };
 
-exports.consoleLogObjectAtTwoLevels = (obj, label) => {
+exports.consoleLogObjectAtTwoLevels = (obj, label, originLabel) => {
   console.log(
-    "[1;32m " + `--Console log object at two levels, from "${label}":` + "[0m"
+    "[1;33m " + `--Console log "${label}" at two levels, from "${originLabel}":` + "[0m"
   );
   console.log("[1;32m " + `------` + "[0m");
   console.log("[1;32m " + `----------` + "[0m");
