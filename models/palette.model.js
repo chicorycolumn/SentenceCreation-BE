@@ -397,6 +397,14 @@ exports.fetchPalette = (req) => {
       questionLanguage,
     };
 
+    console.log(
+      "nwgj-fetchPalette, questionOutputArr AFTER CLARI BEFORE SPECI",
+      questionSentenceData.questionOutputArr.map((unit) => [
+        unit.selectedLemmaObject.lemma,
+        unit.structureChunk.annotations,
+      ])
+    );
+
     ///////////////////////////////////////////////kp Specifiers
     if (!pleaseDontSpecify) {
       //PDSXpurple

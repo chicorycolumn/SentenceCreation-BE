@@ -384,6 +384,11 @@ exports.addSpecifiers = (
 
   console.log("pplp answerDependentChunks", answerDependentChunks);
 
+  //'doctor' is not being done here,
+  //because in 118b, it's not a normal headChunk, but rather a PHD Headchunk
+  //so it's not being found in the two loops below.
+  //nownow
+
   //STEP ONE: Do a special thing for Multi Gender Nouns via answerDependentChunks.
   //            ie lObjs with gender: "allPersonalSingularGenders_selector"
   //            But we will check all metaGenders.

@@ -105,7 +105,7 @@ exports.processSentenceFormula = (
     headChunks,
     dependentChunks,
     otherChunks,
-  } = scUtils.sortStructureChunks(sentenceStructure, false);
+  } = scUtils.sortStructureChunks(sentenceStructure);
 
   console.log("hbblay", { headChunks, dependentChunks, otherChunks });
 
@@ -318,11 +318,6 @@ exports.processSentenceFormula = (
       console.log(
         `weoo postHocDependentChunk "${postHocDependentChunk.chunkId}"`
       );
-
-      //Nownow. This is the actual issue.
-      //møj is for lekarz, and moja is for lekarka.
-      //So møj and moja shouldn't be exploded willy nilly, which they currently are.
-      //They should only go into the arrays with the appropriate head.
 
       let allPossOutputUnits_PHD = otUtils.findMatchingLemmaObjectThenWord(
         gpUtils.copyWithoutReference(postHocDependentChunk),
@@ -1424,7 +1419,7 @@ exports.inheritFromHeadToDependentChunk = (
   );
 };
 
-exports.sortStructureChunks = (sentenceStructure, devSaysDoFirstWay) => {
+exports.sortStructureChunks = (sentenceStructure) => {
   let headIds = Array.from(
     new Set(
       sentenceStructure
@@ -1439,38 +1434,30 @@ exports.sortStructureChunks = (sentenceStructure, devSaysDoFirstWay) => {
 
   let headChunks = [];
 
-  if (devSaysDoFirstWay) {
-    headChunks = headIds.map((headId) => {
-      return sentenceStructure.find((chunk) => chunk.chunkId === headId);
-    });
-  } else {
-    let PHDheadIds = [];
+  let PHDheadIds = [];
 
-    sentenceStructure.forEach((chunk) => {
-      if (typeof chunk === "object") {
-        [
-          "agreeWith",
-          "postHocAgreeWithPrimary",
-          "postHocAgreeWithSecondary",
-          "postHocAgreeWithTertiary",
-        ].forEach((agreeKey) => {
-          if (chunk[agreeKey]) {
-            PHDheadIds.push(chunk[agreeKey]);
-          }
-        });
-      }
-    });
+  sentenceStructure.forEach((chunk) => {
+    if (typeof chunk === "object") {
+      [
+        "agreeWith",
+        "postHocAgreeWithPrimary",
+        "postHocAgreeWithSecondary",
+        "postHocAgreeWithTertiary",
+      ].forEach((agreeKey) => {
+        if (chunk[agreeKey]) {
+          PHDheadIds.push(chunk[agreeKey]);
+        }
+      });
+    }
+  });
 
-    PHDheadIds = Array.from(new Set(PHDheadIds));
+  PHDheadIds = Array.from(new Set(PHDheadIds));
 
-    let uniqueCombinedHeadIds = Array.from(
-      new Set([...headIds, ...PHDheadIds])
-    );
+  let uniqueCombinedHeadIds = Array.from(new Set([...headIds, ...PHDheadIds]));
 
-    headChunks = uniqueCombinedHeadIds.map((headId) => {
-      return sentenceStructure.find((chunk) => chunk.chunkId === headId);
-    });
-  }
+  headChunks = uniqueCombinedHeadIds.map((headId) => {
+    return sentenceStructure.find((chunk) => chunk.chunkId === headId);
+  });
 
   let dependentChunks = sentenceStructure.filter(
     (structureChunk) =>
