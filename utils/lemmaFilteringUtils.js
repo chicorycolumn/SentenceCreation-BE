@@ -5,7 +5,7 @@ const otUtils = require("./objectTraversingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
 
-exports.filterWithinSelectedLemmaObject = (
+exports.filterWithin_PHD = (
   lemmaObject,
   structureChunk,
   currentLanguage,
@@ -28,7 +28,6 @@ exports.filterWithinSelectedLemmaObject = (
 
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
 
-  //STEP ZERO: Get necessary materials, ie inflectionPaths and requirementArrs.
   let PHD_type;
 
   refObj.postHocDependentChunkWordtypes[currentLanguage].forEach(
@@ -58,10 +57,16 @@ exports.filterWithinSelectedLemmaObject = (
     }
   );
 
-  if (PHD_type) {
+  if ("check") {
+    if (!PHD_type) {
+      clUtils.throw(
+        "pwir filterWithinSelectedLemmaObject_PHD. Failed  postHocDependentChunkWordtypes[currentLanguage].forEach(PHD_dataObj => passing the PHD_dataObj.conditions)"
+      );
+    }
+
     console.log(
       "[1;35m " +
-        "elyc lf:filterWithinSelectedLemmaObject at START, PHD section, structureChunk is:" +
+        `eylc lf:filterWithinSelectedLemmaObject at START, "${PHD_type}" PHD section, structureChunk is:` +
         "[0m",
       structureChunk
     );
@@ -74,198 +79,233 @@ exports.filterWithinSelectedLemmaObject = (
         "#ERR ohmk lf:filterWithinSelectedLemmaObject. PHD-stCh should have exactly one value in specificLemmas arr."
       );
     }
+  }
 
-    let postHocInflectionChains = refObj.postHocDependentChunkWordtypes[
-      currentLanguage
-    ].find((PHD_dataObj) => PHD_dataObj.PHD_type === PHD_type).inflectionChains;
+  let postHocInflectionChains = refObj.postHocDependentChunkWordtypes[
+    currentLanguage
+  ].find((PHD_dataObj) => PHD_dataObj.PHD_type === PHD_type).inflectionChains;
 
+  console.log(
+    "srdj lf:filterWithinSelectedLemmaObject postHocInflectionChains",
+    postHocInflectionChains
+  );
+
+  let lemmaObjectCopy = gpUtils.copyWithoutReference(lemmaObject);
+
+  langUtils.preprocessLemmaObjectsMajor(
+    [lemmaObjectCopy],
+    structureChunk,
+    true,
+    currentLanguage
+  );
+
+  let source = gpUtils.copyWithoutReference(lemmaObjectCopy.inflections);
+
+  console.log("giuy filterWithin. source", source);
+
+  Object.keys(postHocInflectionChains).forEach((postHocAgreeWithKey) => {
     console.log(
-      "srdj lf:filterWithinSelectedLemmaObject postHocInflectionChains",
-      postHocInflectionChains
+      "[1;35m " +
+        `nvnm lf:filterWithinSelectedLemmaObject Running loop for "${postHocAgreeWithKey}"` +
+        "[0m"
+    );
+    console.log(
+      "[1;33m " + `outputArray: [${outputArray.map((x) => x.selectedWord)}]` + "[0m"
+    );
+    // clUtils.consoleLogObjectAtTwoLevels(outputArray, "outputArray");
+
+    let postHocInflectionChain = postHocInflectionChains[postHocAgreeWithKey];
+
+    let headOutputUnit = outputArray.find(
+      (outputUnit) =>
+        outputUnit.structureChunk.chunkId ===
+        structureChunk[postHocAgreeWithKey]
     );
 
-    let lemmaObjectCopy = gpUtils.copyWithoutReference(lemmaObject);
-
-    langUtils.preprocessLemmaObjectsMajor(
-      [lemmaObjectCopy],
-      structureChunk,
-      true,
-      currentLanguage
+    let drillPathForPHD = gpUtils.copyWithoutReference(
+      headOutputUnit.drillPath
     );
 
-    let source = gpUtils.copyWithoutReference(lemmaObjectCopy.inflections);
-
-    console.log("giuy filterWithin. source", source);
-
-    Object.keys(postHocInflectionChains).forEach((postHocAgreeWithKey) => {
-      console.log(
-        "[1;35m " +
-          `nvnm lf:filterWithinSelectedLemmaObject Running loop for "${postHocAgreeWithKey}"` +
-          "[0m"
-      );
-      console.log(
-        "[1;33m " + `outputArray: [${outputArray.map((x) => x.selectedWord)}]` + "[0m"
-      );
-
-      // clUtils.consoleLogObjectAtTwoLevels(outputArray, "outputArray");
-
-      let postHocInflectionChain = postHocInflectionChains[postHocAgreeWithKey];
-
-      let headOutputUnit = outputArray.find(
-        (outputUnit) =>
-          outputUnit.structureChunk.chunkId ===
-          structureChunk[postHocAgreeWithKey]
-      );
-
-      let drillPathForPHD = gpUtils.copyWithoutReference(
-        headOutputUnit.drillPath
-      );
-
-      if (!drillPathForPHD) {
-        clUtils.throw(
-          "#ERR jzbx filterWithin. There is no drillPath on the outputUnit with which I want to get features from the PHD stCh. Perhaps this outputUnit is one whose stCh did not go through If-PW?"
-        );
-      }
-
-      if (structureChunk.form) {
-        if (structureChunk.form.length !== 1) {
-          clUtils.throw(
-            "#ERR cwyd filterWithin. Expected structureChunk.form to have length of 1: " +
-              structureChunk.chunkId
-          );
-        }
-
-        drillPathForPHD.push(["form", structureChunk.form[0]]);
-      }
-
-      if (
-        gpUtils.getWordtypeOfAgreeWith(structureChunk, postHocAgreeWithKey) ===
-        "noun"
-      ) {
-        let personArr = drillPathForPHD.find((arr) => arr[0] === "person");
-
-        if (!personArr) {
-          drillPathForPHD.push(["person", "3per"]);
-        } else if (personArr && !personArr[1] === "3per") {
-          personArr[1] = "3per";
-        }
-      }
-
-      if (headOutputUnit.selectedLemmaObject.gender) {
-        if (!drillPathForPHD.find((arr) => arr[0] === "gender")) {
-          let numberArr = drillPathForPHD.find((arr) => arr[0] === "number");
-
-          let numberValue = numberArr[1];
-
-          let formattedFeatureValueArray = langUtils.formatFeatureValue(
-            "gender",
-            headOutputUnit.selectedLemmaObject.gender,
-            numberValue
-          );
-
-          if (formattedFeatureValueArray.length !== 1) {
-            clUtils.throw(
-              "#ERR ikdr lf:filterWithin. Expected formattedFeatureValueArray to have length 1"
-            );
-          }
-          let formattedFeatureValue = formattedFeatureValueArray[0];
-
-          drillPathForPHD.push(["gender", formattedFeatureValue]);
-        } else {
-          throw "I am unsure about which gender to use - either the one from lobj inherent, or the one from drillPath. I wanted to use this gender for the PHD stCh.";
-        }
-      }
-
-      console.log(
-        "sayt lf:filterWithinSelectedLemmaObject drillPathForPHD is finally",
-        drillPathForPHD
-      );
-
-      // console.log("ylur filterWithin. source", source);
-
-      postHocInflectionChain.forEach((featureKey) => {
-        let featureValue = drillPathForPHD.find(
-          (arr) => arr[0] === featureKey
-        )[1];
-
-        if (featureValue.slice(0, 3) === "all" && !source[featureValue]) {
-          featureValue = otUtils.switchMetaFeatureForAWorkableConvertedFeature(
-            featureKey,
-            featureValue,
-            source,
-            currentLanguage,
-            "filterWithin -> postHocInflectionChain.forEach"
-          );
-        }
-
-        console.log(
-          `ihjy lf:filterWithinSelectedLemmaObject drilling into source with "${featureValue}"`
-        );
-
-        source = source[featureValue];
-
-        //If this is Primary, then update stCh with these featureKeys and featureValues.
-
-        if (/.*Primary/.test(postHocAgreeWithKey)) {
-          lfUtils.updateStChByInflections(
-            { structureChunk, drillPath: drillPathForPHD },
-            currentLanguage
-          );
-        }
-      });
-    });
-
-    let sourceArr = [];
-    let resArr = [];
-
-    if (Array.isArray(source)) {
-      console.log(
-        "[1;33m " +
-          `apcu lf:filterWithinSelectedLemmaObject, the variable called source, is ARRAY` +
-          "[0m",
-        { source }
-      );
+    if (!drillPathForPHD) {
       clUtils.throw(
-        "apcu lf:filterWithinSelectedLemmaObject Oh no Natasha, array!"
-      );
-    } else if (
-      typeof source === "string" ||
-      (gpUtils.isTerminusObject(source) && source.processOnlyAtEnd)
-    ) {
-      sourceArr.push(source);
-    } else if (gpUtils.isTerminusObject(source) && !source.processOnlyAtEnd) {
-      clUtils.throw("svqe filterWithin Natasha, take action.");
-    } else {
-      clUtils.throw(
-        "#ERR dyqk filterWithin. Expected this PHD value to be the end of a chain and thus a string or array."
+        "#ERR jzbx filterWithin. There is no drillPath on the outputUnit with which I want to get features from the PHD stCh. Perhaps this outputUnit is one whose stCh did not go through If-PW?"
       );
     }
 
-    sourceArr.forEach((selectedWord) => {
+    if (structureChunk.form) {
+      if (structureChunk.form.length !== 1) {
+        clUtils.throw(
+          "#ERR cwyd filterWithin. Expected structureChunk.form to have length of 1: " +
+            structureChunk.chunkId
+        );
+      }
+
+      drillPathForPHD.push(["form", structureChunk.form[0]]);
+    }
+
+    if (
+      gpUtils.getWordtypeOfAgreeWith(structureChunk, postHocAgreeWithKey) ===
+      "noun"
+    ) {
+      let personArr = drillPathForPHD.find((arr) => arr[0] === "person");
+
+      if (!personArr) {
+        drillPathForPHD.push(["person", "3per"]);
+      } else if (personArr && !personArr[1] === "3per") {
+        personArr[1] = "3per";
+      }
+    }
+
+    if (headOutputUnit.selectedLemmaObject.gender) {
+      if (!drillPathForPHD.find((arr) => arr[0] === "gender")) {
+        let numberArr = drillPathForPHD.find((arr) => arr[0] === "number");
+
+        let numberValue = numberArr[1];
+
+        let formattedFeatureValueArray = langUtils.formatFeatureValue(
+          "gender",
+          headOutputUnit.selectedLemmaObject.gender,
+          numberValue
+        );
+
+        if (formattedFeatureValueArray.length !== 1) {
+          clUtils.throw(
+            "#ERR ikdr lf:filterWithin. Expected formattedFeatureValueArray to have length 1"
+          );
+        }
+        let formattedFeatureValue = formattedFeatureValueArray[0];
+
+        drillPathForPHD.push(["gender", formattedFeatureValue]);
+      } else {
+        throw "I am unsure about which gender to use - either the one from lobj inherent, or the one from drillPath. I wanted to use this gender for the PHD stCh.";
+      }
+    }
+
+    console.log(
+      "sayt lf:filterWithinSelectedLemmaObject drillPathForPHD is finally",
+      drillPathForPHD
+    );
+    // console.log("ylur filterWithin. source", source);
+
+    postHocInflectionChain.forEach((featureKey) => {
+      let featureValue = drillPathForPHD.find(
+        (arr) => arr[0] === featureKey
+      )[1];
+
+      if (featureValue.slice(0, 3) === "all" && !source[featureValue]) {
+        featureValue = otUtils.switchMetaFeatureForAWorkableConvertedFeature(
+          featureKey,
+          featureValue,
+          source,
+          currentLanguage,
+          "filterWithin -> postHocInflectionChain.forEach"
+        );
+      }
+
       console.log(
-        `rzcs filterWithin. Pushing this selectedWord "${selectedWord}" with drillPath null.`
+        `ihjy lf:filterWithinSelectedLemmaObject drilling into source with "${featureValue}"`
       );
 
-      resArr.push({
-        errorInDrilling: false,
-        selectedWordArray: [selectedWord],
-        drillPath: null,
-      });
+      source = source[featureValue];
+
+      //If this is Primary, then update stCh with these featureKeys and featureValues.
+
+      if (/.*Primary/.test(postHocAgreeWithKey)) {
+        lfUtils.updateStChByInflections(
+          { structureChunk, drillPath: drillPathForPHD },
+          currentLanguage
+        );
+      }
     });
+  });
 
+  let sourceArr = [];
+  let resArr = [];
+
+  if (Array.isArray(source)) {
     console.log(
-      "[1;35m " +
-        "blij lf:filterWithinSelectedLemmaObject At the END lf:filterWithin PHD section, structureChunk is:" +
+      "[1;33m " +
+        `apcu lf:filterWithinSelectedLemmaObject, the variable called source, is ARRAY` +
         "[0m",
-      structureChunk
+      { source }
     );
+    clUtils.throw(
+      "apcu lf:filterWithinSelectedLemmaObject Oh no Natasha, array!"
+    );
+  } else if (
+    typeof source === "string" ||
+    (gpUtils.isTerminusObject(source) && source.processOnlyAtEnd)
+  ) {
+    sourceArr.push(source);
+  } else if (gpUtils.isTerminusObject(source) && !source.processOnlyAtEnd) {
+    clUtils.throw("svqe filterWithin Natasha, take action.");
+  } else {
+    clUtils.throw(
+      "#ERR dyqk filterWithin. Expected this PHD value to be the end of a chain and thus a string or array."
+    );
+  }
+
+  sourceArr.forEach((selectedWord) => {
     console.log(
-      "[1;35m " + "blij lf:filterWithinSelectedLemmaObject resArr is" + "[0m",
-      resArr
+      `rzcs filterWithin. Pushing this selectedWord "${selectedWord}" with drillPath null.`
     );
 
-    return resArr;
+    resArr.push({
+      errorInDrilling: false,
+      selectedWordArray: [selectedWord],
+      drillPath: null,
+    });
+  });
+
+  console.log(
+    "[1;35m " +
+      "blij lf:filterWithinSelectedLemmaObject At the END lf:filterWithin PHD section, structureChunk is:" +
+      "[0m",
+    structureChunk
+  );
+  console.log(
+    "[1;35m " + "blij lf:filterWithinSelectedLemmaObject resArr is" + "[0m",
+    resArr
+  );
+
+  return resArr;
+};
+
+exports.filterWithinSelectedLemmaObject = (
+  lemmaObject,
+  structureChunk,
+  currentLanguage,
+  multipleMode,
+  outputArray,
+  isPHD
+) => {
+  if (outputArray) {
+    console.log(
+      "[1;33m " +
+        `nvnl filterWithinSelectedLemmaObject outputArray: [${outputArray.map(
+          (x) => x.selectedWord
+        )}]` +
+        "[0m"
+    );
+  } else {
+    console.log(
+      "[1;33m " + `nvnl filterWithinSelectedLemmaObject outputArray null` + "[0m"
+    );
   }
+
+  if (isPHD) {
+    return lfUtils.filterWithin_PHD(
+      lemmaObject,
+      structureChunk,
+      currentLanguage,
+      multipleMode,
+      outputArray
+    );
+  }
+
+  const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
+
+  //STEP ZERO: Get necessary materials, ie inflectionPaths and requirementArrs.
 
   let inflectionChain =
     refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[

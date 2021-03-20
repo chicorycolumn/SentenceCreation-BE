@@ -14,7 +14,8 @@ exports.findMatchingLemmaObjectThenWord = (
   multipleMode,
   outputArray,
   pleaseDontSpecify,
-  pleaseDontSpecifyPronounGender
+  pleaseDontSpecifyPronounGender,
+  isPHD
 ) => {
   console.log(
     "[1;33m " +
@@ -32,7 +33,7 @@ exports.findMatchingLemmaObjectThenWord = (
       structureChunk.wordtype
     ];
 
-  //STEP ONE: : Fx-PW: Pathway for Fixed pieces.
+  //STEP ONE: Fx-PW: Pathway for Fixed pieces.
   if (structureChunk.wordtype === "fixed") {
     clUtils.consoleLogPW("##Fx-PW", structureChunk, multipleMode);
 
@@ -129,13 +130,12 @@ exports.findMatchingLemmaObjectThenWord = (
   );
 
   //STEP THREE: Return result array immediately if uninflected or ad hoc.
-
   let adhocInflectorRef = refObj.adhocInflectors[currentLanguage];
   let adhocFormRef = refObj.adhocForms[currentLanguage];
 
-  //THREE (A): Ad-PW: Pathway for Adhoc: both Forms and Inflections.
+  //    THREE (A): Ad-PW: Pathway for Adhoc: both Forms and Inflections.
 
-  //(Ad-PW-F): Pathway for Adhoc FORMS.
+  //    (Ad-PW-F): Pathway for Adhoc FORMS.
   if (
     structureChunk.form &&
     structureChunk.form.length &&
@@ -203,7 +203,7 @@ exports.findMatchingLemmaObjectThenWord = (
     }
   }
 
-  //((Ad-PW-I): Pathway for Adhoc INFLECTIONS.
+  //    (Ad-PW-I): Pathway for Adhoc INFLECTIONS.
   if (Object.keys(adhocInflectorRef).includes(structureChunk.wordtype)) {
     let adhocInflectorKeys = adhocInflectorRef[structureChunk.wordtype];
 
@@ -276,10 +276,12 @@ exports.findMatchingLemmaObjectThenWord = (
     });
   }
 
-  //THREE (B): Un-PW: Pathway for Uninflected forms.
+  //    THREE (B): Un-PW: Pathway for Uninflected forms.
+
   //Note, this indeed is specifically uninflected FORMS.
   //So, activeAdjectival, anteriorAdverbial, those kinds of things, that are indeed labeled with the Form key.
   //Remember, within eg a verb lobj, available Forms are infinitive, verbal, activeAdjectival, anterior...
+
   if (structureChunk.form && structureChunk.form.length) {
     Object.keys(refObj.uninflectedForms[currentLanguage]).forEach(
       (wordtype) => {
@@ -434,7 +436,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
   //STEP FOUR: If-PW: Pathway for inflected forms, return word after selecting by drilling down through lemma object.
 
-  //  STEP FOUR-A: Preparing materials
+  //    STEP FOUR-A: Preparing materials
 
   // A new stCh array. Eg in POL, split differential conditional tense+aspect into separate copies of one stCh.
   let structureChunksAdjusted = langUtils.adjustStructureChunksInIfPW(
@@ -495,7 +497,7 @@ exports.findMatchingLemmaObjectThenWord = (
       return false;
     }
 
-    //  STEP FOUR-B: Getting the inflected word.
+    //    STEP FOUR-B: Getting the inflected word.
 
     clUtils.consoleLogPW("##If-PW", structureChunk, multipleMode);
 
@@ -524,7 +526,8 @@ exports.findMatchingLemmaObjectThenWord = (
           structureChunk,
           currentLanguage,
           multipleMode,
-          outputArray
+          outputArray,
+          isPHD
         );
 
         subArrayOfOutputUnits.forEach((unit) => {
@@ -642,7 +645,8 @@ exports.findMatchingLemmaObjectThenWord = (
         structureChunk,
         currentLanguage,
         multipleMode,
-        outputArray
+        outputArray,
+        isPHD
       );
 
       if (!subArrayOfOutputUnits || !subArrayOfOutputUnits.length) {
@@ -773,13 +777,6 @@ exports.findMatchingLemmaObjectThenWord = (
       arrayOfAllPossibleOutputUnits.push(outputUnit);
     }
   });
-
-  // console.log(
-  //   "[1;33m " +
-  //     `siwr ot:findMatchingLemmaObjectThenWord arrayOfAllPossibleOutputUnits is:` +
-  //     "[0m"
-  // );
-  // console.log(arrayOfAllPossibleOutputUnits);
 
   if (!arrayOfAllPossibleOutputUnits.length) {
     if (!errorInSentenceCreation.errorMessage) {

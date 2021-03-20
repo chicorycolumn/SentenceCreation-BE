@@ -99,7 +99,7 @@ exports.processSentenceFormula = (
   allLangUtils.preprocessStructureChunks(sentenceStructure, currentLanguage);
   langUtils.preprocessStructureChunks(sentenceStructure, currentLanguage);
 
-  //STEP ONE: Select headwords and add to result array.
+  //STEP ONE: Select HEAD words and add to result array.
 
   let {
     headChunks,
@@ -182,11 +182,10 @@ exports.processSentenceFormula = (
     gpUtils.arrayExploder(headOutputUnitArrays)
   );
 
-  // Now we update the head structure chunks with the details from their respective selectedWords.
-
-  //STEP TWO (NESTED BELOW): Select dependent words and add to result array.
+  //STEP TWO: Select DEPENDENT words and add to result array.
   explodedOutputArraysWithHeads.forEach((headOutputArray) => {
     headOutputArray.forEach((headOutputUnit) => {
+      // Now we update the head structure chunks with the details from their respective selectedWords.
       lfUtils.updateStructureChunk(headOutputUnit, currentLanguage);
 
       let headChunk = headOutputUnit.structureChunk;
@@ -287,6 +286,89 @@ exports.processSentenceFormula = (
     ].some((postHocAgreeWithKey) => chunk[postHocAgreeWithKey])
   );
 
+  // console.log("jeph allPossOutputUnits_PHD", postHocDependentChunks);
+  // if (postHocDependentChunks.length) {
+  //   clUtils.throw("jeph");
+  // }
+
+  // clUtils.consoleLogObjectAtTwoLevels(
+  //   grandOutputArray,
+  //   "grandOutputArray",
+  //   "processSF"
+  // );
+  // console.log("postHocDependentChunks", postHocDependentChunks);
+  // clUtils.throw("rrre");
+
+  //STEP THREE: Select PHD words and add to result array.
+
+  grandOutputArray.forEach((outputArray) => {
+    delete errorInSentenceCreation.errorMessage;
+
+    postHocDependentChunks.forEach((postHocDependentChunk) => {
+      console.log(
+        `weoo postHocDependentChunk "${postHocDependentChunk.chunkId}"`
+      );
+
+      //nownow
+      // scUtils.inheritFromHeadToDependentChunk(
+      //   currentLanguage,
+      //   headChunk,
+      //   postHocDependentChunk
+      // );
+
+      let allPossOutputUnits_PHD = otUtils.findMatchingLemmaObjectThenWord(
+        gpUtils.copyWithoutReference(postHocDependentChunk),
+        words,
+        errorInSentenceCreation,
+        currentLanguage,
+        previousQuestionLanguage,
+        multipleMode,
+        outputArray,
+        pleaseDontSpecify,
+        pleaseDontSpecifyPronounGender,
+        true
+      );
+
+      console.log("keph allPossOutputUnits_PHD", allPossOutputUnits_PHD);
+
+      if (
+        errorInSentenceCreation.errorMessage ||
+        !allPossOutputUnits_PHD ||
+        !allPossOutputUnits_PHD.length
+      ) {
+        console.log(
+          "[1;31m " +
+            `#WARN quek. An error loomed in SC:processSentenceFormula. Returning outputArr null for postHocDependentChunk: "${postHocDependentChunk.chunkId}"` +
+            "[0m"
+        );
+
+        return {
+          outputArr: null,
+          sentenceFormula,
+          sentenceFormulaId,
+          sentenceFormulaSymbol,
+          errorInSentenceCreation,
+        };
+      }
+
+      //If multipleMode is true, then allPossOutputUnits_other is array of outputUnit objects, while if false, array of just one said object.
+
+      grandAllPossOutputUnits_PHD.push(allPossOutputUnits_PHD);
+    });
+  });
+
+  if (grandAllPossOutputUnits_PHD.length) {
+    grandAllPossOutputUnits_PHD = gpUtils.arrayExploder(
+      grandAllPossOutputUnits_PHD
+    );
+
+    grandOutputArray = gpUtils.combineAndExplodeTwoSuperArrays(
+      grandOutputArray,
+      grandAllPossOutputUnits_PHD
+    );
+  }
+
+  //STEP FOUR: Select OTHER words and add to result array.
   otherChunks = otherChunks.filter(
     (chunk) =>
       !postHocDependentChunks
@@ -348,72 +430,6 @@ exports.processSentenceFormula = (
     grandOutputArray = gpUtils.combineAndExplodeTwoSuperArrays(
       grandOutputArray,
       grandAllPossOutputUnits_other
-    );
-  }
-
-  // clUtils.consoleLogObjectAtTwoLevels(
-  //   grandOutputArray,
-  //   "grandOutputArray",
-  //   "processSF"
-  // );
-  // console.log("postHocDependentChunks", postHocDependentChunks);
-  // clUtils.throw("rrre");
-
-  //STEP THREE (NESTED BELOW): Select PHD words and add to result array.
-
-  grandOutputArray.forEach((outputArray) => {
-    delete errorInSentenceCreation.errorMessage;
-
-    postHocDependentChunks.forEach((postHocDependentChunk) => {
-      console.log(
-        `weoo postHocDependentChunk "${postHocDependentChunk.chunkId}"`
-      );
-      let allPossOutputUnits_PHD = otUtils.findMatchingLemmaObjectThenWord(
-        gpUtils.copyWithoutReference(postHocDependentChunk),
-        words,
-        errorInSentenceCreation,
-        currentLanguage,
-        previousQuestionLanguage,
-        multipleMode,
-        outputArray,
-        pleaseDontSpecify,
-        pleaseDontSpecifyPronounGender
-      );
-
-      if (
-        errorInSentenceCreation.errorMessage ||
-        !allPossOutputUnits_PHD ||
-        !allPossOutputUnits_PHD.length
-      ) {
-        console.log(
-          "[1;31m " +
-            `#WARN quek. An error loomed in SC:processSentenceFormula. Returning outputArr null for postHocDependentChunk: "${postHocDependentChunk.chunkId}"` +
-            "[0m"
-        );
-
-        return {
-          outputArr: null,
-          sentenceFormula,
-          sentenceFormulaId,
-          sentenceFormulaSymbol,
-          errorInSentenceCreation,
-        };
-      }
-
-      //If multipleMode is true, then allPossOutputUnits_other is array of outputUnit objects, while if false, array of just one said object.
-
-      grandAllPossOutputUnits_PHD.push(allPossOutputUnits_PHD);
-    });
-  });
-
-  if (grandAllPossOutputUnits_PHD.length) {
-    grandAllPossOutputUnits_PHD = gpUtils.arrayExploder(
-      grandAllPossOutputUnits_PHD
-    );
-
-    grandOutputArray = gpUtils.combineAndExplodeTwoSuperArrays(
-      grandOutputArray,
-      grandAllPossOutputUnits_PHD
     );
   }
 

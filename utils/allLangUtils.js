@@ -450,7 +450,8 @@ exports.decantMGNsBeforeOutputArray = (
   selectedLemmaObject,
   currentLanguage
 ) => {
-  console.log(`swde ${structureChunk.chunkId} ${currentLanguage}`);
+  console.log(`skho ${structureChunk.chunkId} ${currentLanguage}`);
+
   if (
     !structureChunk["gender"] &&
     refFxn
