@@ -1430,6 +1430,7 @@ exports.sentenceFormulasBank = [
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         number: ["singular"],
+        gender: ["m1"],
       },
       {
         chunkId: "pro-1-my",

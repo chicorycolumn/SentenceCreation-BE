@@ -258,11 +258,11 @@ exports.explodeOutputArraysByHeadsAndDependents = (justOneOutputArray) => {
     return flattenedArray;
   });
 
-  clUtils.consoleLogObjectAtTwoLevels(
-    explodedGrandArray,
-    "explodedGrandArray",
-    "mdpy explodeOutputArraysByHeadsAndDependents END"
-  );
+  // clUtils.consoleLogObjectAtTwoLevels(
+  //   explodedGrandArray,
+  //   "explodedGrandArray",
+  //   "mdpy explodeOutputArraysByHeadsAndDependents END"
+  // );
 
   return explodedGrandArray;
 };
@@ -545,4 +545,8 @@ exports.checkEachSequentialPairing = (arr, checkFxn, allowArrayOfZeroOrOne) => {
 
 exports.oneStepCheck = (n1, n2) => {
   return Math.abs(n1 - n2) === 1;
+};
+
+exports.returnArrayWithoutItemAtIndex = (arr, indexToRemove) => {
+  return [...arr.slice(0, indexToRemove), ...arr.slice(indexToRemove + 1)];
 };

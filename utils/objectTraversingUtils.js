@@ -594,7 +594,6 @@ exports.findMatchingLemmaObjectThenWord = (
       console.log("xzjc ot:findMatchingLemmaObjectThenWord");
       let selectedLemmaObject = gpUtils.selectRandom(matchesCopy);
 
-      //nownow
       if (!pleaseDontSpecify) {
         //PDSXblue
         allLangUtils.decantMGNsBeforeOutputArray(

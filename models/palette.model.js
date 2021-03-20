@@ -23,9 +23,6 @@ exports.fetchPalette = (req) => {
     devSaysOmitStChValidation,
   } = req.body;
 
-  //nownow
-  // pleaseDontSpecify = false;
-
   let { sentenceFormula, words } = scUtils.getMaterials(
     questionLanguage,
     sentenceFormulaId,
@@ -401,7 +398,6 @@ exports.fetchPalette = (req) => {
     };
 
     ///////////////////////////////////////////////kp Specifiers
-    //nownow
     if (!pleaseDontSpecify) {
       //PDSXpurple
       aaUtils.addSpecifiers(

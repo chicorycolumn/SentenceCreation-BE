@@ -12,20 +12,6 @@ exports.filterWithin_PHD = (
   multipleMode,
   outputArray
 ) => {
-  if (outputArray) {
-    console.log(
-      "[1;33m " +
-        `nvnl filterWithinSelectedLemmaObject outputArray: [${outputArray.map(
-          (x) => x.selectedWord
-        )}]` +
-        "[0m"
-    );
-  } else {
-    console.log(
-      "[1;33m " + `nvnl filterWithinSelectedLemmaObject outputArray null` + "[0m"
-    );
-  }
-
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
 
   let PHD_type;
@@ -60,23 +46,16 @@ exports.filterWithin_PHD = (
   if ("check") {
     if (!PHD_type) {
       clUtils.throw(
-        "pwir filterWithinSelectedLemmaObject_PHD. Failed  postHocDependentChunkWordtypes[currentLanguage].forEach(PHD_dataObj => passing the PHD_dataObj.conditions)"
+        "pwir filterWithin_PHD. Failed  postHocDependentChunkWordtypes[currentLanguage].forEach(PHD_dataObj => passing the PHD_dataObj.conditions)"
       );
     }
-
-    console.log(
-      "[1;35m " +
-        `eylc lf:filterWithinSelectedLemmaObject at START, "${PHD_type}" PHD section, structureChunk is:` +
-        "[0m",
-      structureChunk
-    );
 
     if (
       !structureChunk.specificLemmas ||
       structureChunk.specificLemmas.length !== 1
     ) {
       clUtils.throw(
-        "#ERR ohmk lf:filterWithinSelectedLemmaObject. PHD-stCh should have exactly one value in specificLemmas arr."
+        "#ERR ohmk lf:filterWithin_PHD. PHD-stCh should have exactly one value in specificLemmas arr."
       );
     }
   }
@@ -84,11 +63,6 @@ exports.filterWithin_PHD = (
   let postHocInflectionChains = refObj.postHocDependentChunkWordtypes[
     currentLanguage
   ].find((PHD_dataObj) => PHD_dataObj.PHD_type === PHD_type).inflectionChains;
-
-  console.log(
-    "srdj lf:filterWithinSelectedLemmaObject postHocInflectionChains",
-    postHocInflectionChains
-  );
 
   let lemmaObjectCopy = gpUtils.copyWithoutReference(lemmaObject);
 
@@ -99,20 +73,34 @@ exports.filterWithin_PHD = (
     currentLanguage
   );
 
+  console.log("terx filterWithin_PHD", {
+    lemmaObjectCopy,
+    structureChunk,
+    currentLanguage,
+    multipleMode,
+    outputArray,
+    PHD_type,
+    postHocInflectionChains,
+  });
+  // clUtils.consoleLogObjectAtTwoLevels(
+  //   outputArray,
+  //   "outputArray",
+  //   "filterWithin_PHD"
+  // );
+
   let source = gpUtils.copyWithoutReference(lemmaObjectCopy.inflections);
 
-  console.log("giuy filterWithin. source", source);
+  console.log("giuy filterWithin_PHD. source", source);
 
   Object.keys(postHocInflectionChains).forEach((postHocAgreeWithKey) => {
     console.log(
       "[1;35m " +
-        `nvnm lf:filterWithinSelectedLemmaObject Running loop for "${postHocAgreeWithKey}"` +
+        `nvnm lf:filterWithin_PHD Running loop for "${postHocAgreeWithKey}"` +
         "[0m"
     );
     console.log(
       "[1;33m " + `outputArray: [${outputArray.map((x) => x.selectedWord)}]` + "[0m"
     );
-    // clUtils.consoleLogObjectAtTwoLevels(outputArray, "outputArray");
 
     let postHocInflectionChain = postHocInflectionChains[postHocAgreeWithKey];
 
@@ -126,16 +114,23 @@ exports.filterWithin_PHD = (
       headOutputUnit.drillPath
     );
 
+    console.log("nvnn lf:filterWithin_PHD");
+    // clUtils.consoleLogObjectAtOneLevel(
+    //   headOutputUnit,
+    //   "headOutputUnit",
+    //   "This is for a PHD"
+    // );
+
     if (!drillPathForPHD) {
       clUtils.throw(
-        "#ERR jzbx filterWithin. There is no drillPath on the outputUnit with which I want to get features from the PHD stCh. Perhaps this outputUnit is one whose stCh did not go through If-PW?"
+        "#ERR jzbx filterWithin_PHD. There is no drillPath on the outputUnit with which I want to get features from the PHD stCh. Perhaps this outputUnit is one whose stCh did not go through If-PW?"
       );
     }
 
     if (structureChunk.form) {
       if (structureChunk.form.length !== 1) {
         clUtils.throw(
-          "#ERR cwyd filterWithin. Expected structureChunk.form to have length of 1: " +
+          "#ERR cwyd filterWithin_PHD. Expected structureChunk.form to have length of 1: " +
             structureChunk.chunkId
         );
       }
@@ -156,6 +151,8 @@ exports.filterWithin_PHD = (
       }
     }
 
+    // console.log("dxxd headOutputUnit", headOutputUnit);
+
     if (headOutputUnit.selectedLemmaObject.gender) {
       if (!drillPathForPHD.find((arr) => arr[0] === "gender")) {
         let numberArr = drillPathForPHD.find((arr) => arr[0] === "number");
@@ -170,10 +167,12 @@ exports.filterWithin_PHD = (
 
         if (formattedFeatureValueArray.length !== 1) {
           clUtils.throw(
-            "#ERR ikdr lf:filterWithin. Expected formattedFeatureValueArray to have length 1"
+            "#ERR ikdr lf:filterWithin_PHD. Expected formattedFeatureValueArray to have length 1"
           );
         }
         let formattedFeatureValue = formattedFeatureValueArray[0];
+
+        // console.log("dxxf formattedFeatureValue", formattedFeatureValue);
 
         drillPathForPHD.push(["gender", formattedFeatureValue]);
       } else {
@@ -181,11 +180,11 @@ exports.filterWithin_PHD = (
       }
     }
 
-    console.log(
-      "sayt lf:filterWithinSelectedLemmaObject drillPathForPHD is finally",
-      drillPathForPHD
-    );
-    // console.log("ylur filterWithin. source", source);
+    // console.log(
+    //   `dxxg lf:filterWithin_PHD. After "${postHocAgreeWithKey}" for "${structureChunk.chunkId}" the drillPathForPHD is finally`,
+    //   drillPathForPHD
+    // );
+    // console.log("ylur filterWithin_PHD. source", source);
 
     postHocInflectionChain.forEach((featureKey) => {
       let featureValue = drillPathForPHD.find(
@@ -198,15 +197,17 @@ exports.filterWithin_PHD = (
           featureValue,
           source,
           currentLanguage,
-          "filterWithin -> postHocInflectionChain.forEach"
+          "filterWithin_PHD -> postHocInflectionChain.forEach"
         );
       }
 
-      console.log(
-        `ihjy lf:filterWithinSelectedLemmaObject drilling into source with "${featureValue}"`
-      );
-
       source = source[featureValue];
+
+      console.log(
+        `\nihjy lf:filterWithin_PHD "${postHocAgreeWithKey}" drilling into source with "${featureValue}" so source is now`,
+        // source,
+        "\n"
+      );
 
       //If this is Primary, then update stCh with these featureKeys and featureValues.
 
@@ -225,29 +226,27 @@ exports.filterWithin_PHD = (
   if (Array.isArray(source)) {
     console.log(
       "[1;33m " +
-        `apcu lf:filterWithinSelectedLemmaObject, the variable called source, is ARRAY` +
+        `apcu lf:filterWithin_PHD, the variable called source, is ARRAY` +
         "[0m",
       { source }
     );
-    clUtils.throw(
-      "apcu lf:filterWithinSelectedLemmaObject Oh no Natasha, array!"
-    );
+    clUtils.throw("apcu lf:filterWithin_PHD Oh no Natasha, array!");
   } else if (
     typeof source === "string" ||
     (gpUtils.isTerminusObject(source) && source.processOnlyAtEnd)
   ) {
     sourceArr.push(source);
   } else if (gpUtils.isTerminusObject(source) && !source.processOnlyAtEnd) {
-    clUtils.throw("svqe filterWithin Natasha, take action.");
+    clUtils.throw("svqe filterWithin_PHD Natasha, take action.");
   } else {
     clUtils.throw(
-      "#ERR dyqk filterWithin. Expected this PHD value to be the end of a chain and thus a string or array."
+      "#ERR dyqk filterWithin_PHD. Expected this PHD value to be the end of a chain and thus a string or array."
     );
   }
 
   sourceArr.forEach((selectedWord) => {
     console.log(
-      `rzcs filterWithin. Pushing this selectedWord "${selectedWord}" with drillPath null.`
+      `rzcs filterWithin_PHD. Pushing this selectedWord "${selectedWord}" with drillPath null.`
     );
 
     resArr.push({
@@ -259,14 +258,11 @@ exports.filterWithin_PHD = (
 
   console.log(
     "[1;35m " +
-      "blij lf:filterWithinSelectedLemmaObject At the END lf:filterWithin PHD section, structureChunk is:" +
+      "blij lf:filterWithin_PHD At the END lf:filterWithin PHD section, structureChunk is:" +
       "[0m",
     structureChunk
   );
-  console.log(
-    "[1;35m " + "blij lf:filterWithinSelectedLemmaObject resArr is" + "[0m",
-    resArr
-  );
+  console.log("[1;35m " + "blij lf:filterWithin_PHD resArr is" + "[0m", resArr);
 
   return resArr;
 };

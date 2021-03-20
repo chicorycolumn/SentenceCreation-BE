@@ -301,20 +301,28 @@ exports.processSentenceFormula = (
 
   //STEP THREE: Select PHD words and add to result array.
 
-  grandOutputArray.forEach((outputArray) => {
+  console.log("shia grandOutputArray before PHD processing", grandOutputArray);
+
+  grandOutputArray.forEach((outputArray, outputArrayIndex) => {
+    let PHDoutputUnitsForThisParticularOutputArray = [];
+
     delete errorInSentenceCreation.errorMessage;
+
+    console.log("rhib grandOutputArray.length", grandOutputArray.length);
+    console.log(
+      "rhic postHocDependentChunks.length",
+      postHocDependentChunks.length
+    );
 
     postHocDependentChunks.forEach((postHocDependentChunk) => {
       console.log(
         `weoo postHocDependentChunk "${postHocDependentChunk.chunkId}"`
       );
 
-      //nownow
-      // scUtils.inheritFromHeadToDependentChunk(
-      //   currentLanguage,
-      //   headChunk,
-      //   postHocDependentChunk
-      // );
+      //Nownow. This is the actual issue.
+      //møj is for lekarz, and moja is for lekarka.
+      //So møj and moja shouldn't be exploded willy nilly, which they currently are.
+      //They should only go into the arrays with the appropriate head.
 
       let allPossOutputUnits_PHD = otUtils.findMatchingLemmaObjectThenWord(
         gpUtils.copyWithoutReference(postHocDependentChunk),
@@ -353,20 +361,59 @@ exports.processSentenceFormula = (
 
       //If multipleMode is true, then allPossOutputUnits_other is array of outputUnit objects, while if false, array of just one said object.
 
-      grandAllPossOutputUnits_PHD.push(allPossOutputUnits_PHD);
+      PHDoutputUnitsForThisParticularOutputArray.push(allPossOutputUnits_PHD);
     });
+
+    if (PHDoutputUnitsForThisParticularOutputArray.length) {
+      console.log(
+        "shiv PHDoutputUnitsForThisParticularOutputArray",
+        PHDoutputUnitsForThisParticularOutputArray
+      );
+
+      PHDoutputUnitsForThisParticularOutputArray = gpUtils.arrayExploder(
+        PHDoutputUnitsForThisParticularOutputArray
+      );
+
+      console.log(
+        "shiw PHDoutputUnitsForThisParticularOutputArray",
+        PHDoutputUnitsForThisParticularOutputArray
+      );
+
+      console.log("shix outputArray", outputArray);
+
+      thisParticularOutputArrayExplodedWithItsPHDs = gpUtils.combineAndExplodeTwoSuperArrays(
+        [outputArray],
+        PHDoutputUnitsForThisParticularOutputArray
+      );
+
+      console.log(
+        "shiy thisParticularOutputArrayExplodedWithItsPHDs",
+        thisParticularOutputArrayExplodedWithItsPHDs
+      );
+
+      console.log("shiz grandOutputArray", grandOutputArray);
+
+      thisParticularOutputArrayExplodedWithItsPHDs.forEach(
+        (individualOutputArrayExplodedWithItsPHDs, index) => {
+          if (!index) {
+            grandOutputArray[
+              outputArrayIndex
+            ] = individualOutputArrayExplodedWithItsPHDs;
+          } else {
+            grandOutputArray.push(individualOutputArrayExplodedWithItsPHDs);
+          }
+        }
+      );
+
+      console.log("shiz grandOutputArray", grandOutputArray);
+    }
   });
 
-  if (grandAllPossOutputUnits_PHD.length) {
-    grandAllPossOutputUnits_PHD = gpUtils.arrayExploder(
-      grandAllPossOutputUnits_PHD
-    );
+  console.log("shib grandOutputArray after PHD processing", grandOutputArray);
 
-    grandOutputArray = gpUtils.combineAndExplodeTwoSuperArrays(
-      grandOutputArray,
-      grandAllPossOutputUnits_PHD
-    );
-  }
+  // if (postHocDependentChunks && postHocDependentChunks.length) {
+  //   clUtils.throw("neep");
+  // }
 
   //STEP FOUR: Select OTHER words and add to result array.
   otherChunks = otherChunks.filter(
@@ -514,7 +561,6 @@ exports.giveFinalSentences = (
         finalSentenceArr.push(finalSentence);
       });
     });
-    // clUtils.throw("nownow");
   } else {
     let finalSentences = scUtils.buildSentenceString(
       questionOutputArr,
@@ -548,8 +594,6 @@ exports.buildSentenceString = (
     "cghk buildSentenceString unorderedArr",
     unorderedArr.map((outputUnit) => outputUnit.selectedWord)
   );
-  //nownow
-  // return [];
 
   let outputArrays = [];
   let producedSentences = [];
