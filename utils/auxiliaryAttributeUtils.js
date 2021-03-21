@@ -7,6 +7,628 @@ const refFxn = require("./reference/referenceFunctions.js");
 const aaUtils = require("./auxiliaryAttributeUtils.js");
 const allLangUtils = require("./allLangUtils.js");
 
+exports.addSpecifiersToMGNs = (
+  answerSentenceData,
+  questionSentenceData,
+  languagesObj
+) => {
+  let { questionOutputArr } = questionSentenceData;
+
+  // console.log("nibs answerSentenceData", answerSentenceData);
+  // clUtils.throw();
+
+  let { answerOutputArr } = answerSentenceData;
+
+  let { questionLanguage, answerLanguage } = languagesObj;
+  const questionLangUtils = require(`../source/${questionLanguage}/langUtils.js`);
+  const answerLangUtils = require(`../source/${answerLanguage}/langUtils.js`);
+
+  let metaGenders = Object.keys(
+    refObj.metaFeatures[questionLanguage]["gender"]
+  );
+
+  let questionMGNunits = questionOutputArr.filter((unit) => {
+    return (
+      unit.selectedLemmaObject &&
+      unit.selectedLemmaObject.gender &&
+      metaGenders
+        .map((metaGender) => `${metaGender}_selector`)
+        .includes(unit.selectedLemmaObject.gender)
+    );
+  });
+
+  questionMGNunits.forEach((questionMGNunit) => {
+    // let correspondingAnswerUnit = answerOutputArr.find(
+    //   (unit) =>
+    //     unit.structureChunk.chunkId === questionMGNunit.structureChunk.chunkId
+    // );
+
+    // if (!correspondingAnswerUnit) {
+    //   console.log("tlae questionMGNunit", questionMGNunit);
+    //   clUtils.throw(
+    //     `tlae addSpecifiersToMGNs #ERR No correspondingAnswerUnit for questionMGNunit printed above.`
+    //   );
+    // }
+    let metaGender = questionMGNunit.selectedLemmaObject.gender.split("_")[0];
+
+    let selectedGenderForQuestionLanguage;
+    let selectedGenderForAnswerLanguageArr;
+
+    if (
+      questionMGNunit.structureChunk.gender &&
+      questionMGNunit.structureChunk.gender.length
+    ) {
+      selectedGenderForQuestionLanguage = gpUtils.selectRandom(
+        questionMGNunit.structureChunk.gender
+      );
+
+      if (
+        !refObj.metaFeatures[questionLanguage].gender[metaGender].includes(
+          selectedGenderForQuestionLanguage
+        )
+      ) {
+        console.log(
+          "questionMGNunit.structureChunk.gender",
+          questionMGNunit.structureChunk.gender
+        );
+        console.log(
+          "refObj.metaFeatures[questionLanguage].gender[metaGender]",
+          refObj.metaFeatures[questionLanguage].gender[metaGender]
+        );
+        clUtils.throw(
+          "knmo addSpecifiersToMGNs #ERR I expected the question chunk's gender to be present in the translated genders array for the question lObj's metagender selector."
+        );
+      }
+    } else {
+      selectedGenderForQuestionLanguage = gpUtils.selectRandom(
+        refObj.metaFeatures[questionLanguage].gender[metaGender]
+      );
+    }
+
+    selectedGenderForAnswerLanguageArr = answerLangUtils.formatFeatureValue(
+      "gender",
+      selectedGenderForQuestionLanguage,
+      "person"
+    );
+
+    console.log(
+      "[1;35m " +
+        `ksxy addSpecifiersToMGNs #NB: Am changing questionMGNunit.structureChunk.gender and correspondingAnswerUnit.structureChunk.gender` +
+        "[0m"
+    );
+    console.log(`ksxy addSpecifiersToMGNs`, {
+      selectedGenderForQuestionLanguage,
+      selectedGenderForAnswerLanguageArr,
+    });
+
+    questionMGNunit.structureChunk.gender = [selectedGenderForQuestionLanguage];
+    // correspondingAnswerUnit.structureChunk.gender = selectedGenderForAnswerLanguageArr;
+
+    console.log("wdmi addSpecifiers. Will addAnnotation ");
+    aaUtils.addAnnotation(
+      questionMGNunit.structureChunk,
+      "gender",
+      selectedGenderForQuestionLanguage
+    );
+  });
+};
+
+exports.addSpecifiers = (
+  answerSentenceFormula,
+  questionOutputArr,
+  languagesObj
+) => {
+  console.log("[1;30m " + `----addSpecifiers------liht` + "[0m");
+  console.log("liht answerSentenceFormula", answerSentenceFormula);
+  console.log("liht questionOutputArr", questionOutputArr);
+  console.log("liht languagesObj", languagesObj);
+
+  //STEP ZERO: Getting materials
+
+  let answerSentenceStructure = answerSentenceFormula.sentenceStructure;
+  let questionSentenceStructure = questionOutputArr.map(
+    (outputUnit) => outputUnit.structureChunk
+  );
+
+  let {
+    answerHeadChunks,
+    answerDependentChunks,
+    answerOtherChunks,
+    questionHeadChunks,
+    questionDependentChunks,
+    questionOtherChunks,
+  } = aaUtils.sortAnswerAndQuestionStructureChunks(
+    questionSentenceStructure,
+    answerSentenceStructure
+  );
+
+  //'doctor' is not being done here,
+  //because in 118b, it's not a normal headChunk, but rather a PHD Headchunk
+  //so it's not being found in the two loops below.
+  //nownow
+
+  //STEP EXPERIMENTAL:
+  aaUtils.addSpecifiersInner1(
+    questionOutputArr,
+    answerSentenceStructure,
+    [answerSentenceStructure, questionSentenceStructure],
+    languagesObj,
+    2,
+    "Step Experimental: via all chunks"
+  );
+
+  //STEP ONE:   Specifiers for MGNs via answerDEPENDENTChunks.
+  //            (lObjs with gender: "allPersonalSingularGenders_selector" but we will check all metaGenders)
+  //
+  // Do a HEADS run (questionHeadLemmaObject, questionHeadChunk, answerHeadChunk)
+  // And OTHER run  (questionLemmaObject, questionChunk, answerChunk)
+
+  // aaUtils.addSpecifiersInner1(
+  //   questionOutputArr,
+  //   answerDependentChunks,
+  //   [answerSentenceStructure, questionSentenceStructure],
+  //   languagesObj,
+  //   true,
+  //   "Step One: via answerDEPENDENTChunks"
+  // );
+
+  // //STEP TWO:   Specifiers for MGNs via answerOTHERChunks.
+  // //            (lObjs with gender: "allPersonalSingularGenders_selector" but we will check all metaGenders)
+  // //
+  // // Do OTHER run  (questionLemmaObject, questionChunk, answerChunk)
+
+  // aaUtils.addSpecifiersInner1(
+  //   questionOutputArr,
+  //   answerOtherChunks,
+  //   [answerSentenceStructure, questionSentenceStructure],
+  //   languagesObj,
+  //   false,
+  //   "Step Two: via answerOTHERChunks"
+  // );
+
+  console.log("[1;30m " + `----/addSpecifiers------` + "[0m");
+};
+
+exports.addSpecifiersInner1 = (
+  questionOutputArr,
+  answerChkArray,
+  getMaterialsToAddSpecifiersArgsArray,
+  languagesObj,
+  doTwoRuns,
+  consoleLabel
+) => {
+  let { questionLanguage, answerLanguage } = languagesObj;
+
+  answerChkArray.forEach((answerChk) => {
+    if (
+      ["fixed", "article"].includes(
+        gpUtils.getWordtypeFromStructureChunk(answerChk)
+      )
+    ) {
+      return;
+    }
+
+    console.log(" ");
+    console.log(
+      `     wdma addSpecifiers ${consoleLabel} answerChk                    "${answerChk.chunkId}"`
+    );
+
+    let materials = aaUtils.getMaterialsToAddSpecifiers(
+      questionOutputArr,
+      answerChk,
+      ...getMaterialsToAddSpecifiersArgsArray
+    );
+
+    let {
+      answerHeadChunk,
+      answerChunk,
+      questionHeadChunk,
+      questionChunk,
+      questionHeadLemmaObject,
+      questionLemmaObject,
+    } = materials;
+
+    console.log(`wdmæ addSpecifiers ${consoleLabel}`, { questionLemmaObject });
+    console.log({
+      answerHeadChunk,
+      answerChunk,
+      questionHeadChunk,
+      questionChunk,
+      questionHeadLemmaObject,
+      questionLemmaObject,
+    });
+
+    let metaGenders = Object.keys(
+      refObj.metaFeatures[questionLanguage]["gender"]
+    );
+
+    if (doTwoRuns > 1) {
+      metaGenders.forEach((metaGender) => {
+        if (questionChunk) {
+          //STEP ONE-A: Let's check the Q lObj.
+          aaUtils.addSpecifiersInner2(
+            questionLemmaObject,
+            questionChunk,
+            answerChunk,
+            metaGender,
+            languagesObj,
+            `${consoleLabel} Run A - checks Q lObj`
+          );
+        }
+
+        if (questionHeadChunk) {
+          //STEP ONE-B: Let's check the QH lObj.
+          aaUtils.addSpecifiersInner2(
+            questionHeadLemmaObject,
+            questionHeadChunk,
+            answerHeadChunk,
+            metaGender,
+            languagesObj,
+            `${consoleLabel} Run B - checks QHead lObj`
+          );
+        }
+      });
+    } else {
+      metaGenders.forEach((metaGender) => {
+        //STEP ONE-A: Let's check the Q lObj.
+        aaUtils.addSpecifiersInner2(
+          questionLemmaObject,
+          questionChunk,
+          answerChunk,
+          metaGender,
+          languagesObj,
+          `${consoleLabel} Run A - checks Q lObj`
+        );
+
+        if (doTwoRuns) {
+          //STEP ONE-B: Let's check the QH lObj.
+          aaUtils.addSpecifiersInner2(
+            questionHeadLemmaObject,
+            questionHeadChunk,
+            answerHeadChunk,
+            metaGender,
+            languagesObj,
+            `${consoleLabel} Run B - checks QHead lObj`
+          );
+        }
+      });
+    }
+  });
+};
+
+exports.addSpecifiersInner2 = (
+  questionlObj,
+  questionChk,
+  answerChk,
+  metaGender,
+  languagesObj,
+  consoleLabels
+) => {
+  console.log(`cwpo addSpecifiersInner2 ${consoleLabels}`);
+  console.log({
+    questionlObj,
+    questionChk,
+    answerChk,
+    metaGender,
+    languagesObj,
+  });
+
+  let selectedGenderForQuestionLanguage;
+  let { questionLanguage, answerLanguage } = languagesObj;
+
+  const questionLangUtils = require(`../source/${questionLanguage}/langUtils.js`);
+  const answerLangUtils = require(`../source/${answerLanguage}/langUtils.js`);
+
+  if (questionlObj && questionlObj.gender === `${metaGender}_selector`) {
+    if (questionChk.gender && questionChk.gender.length) {
+      selectedGenderForQuestionLanguage = gpUtils.selectRandom(
+        questionChk.gender
+      );
+
+      if (
+        !refObj.metaFeatures[questionLanguage].gender[metaGender].includes(
+          selectedGenderForQuestionLanguage
+        )
+      ) {
+        console.log("questionChk.gender", questionChk.gender);
+        console.log(
+          "refObj.metaFeatures[questionLanguage].gender[metaGender]",
+          refObj.metaFeatures[questionLanguage].gender[metaGender]
+        );
+        clUtils.throw(
+          "knmo addSpecifiersInner2 #ERR I expected the question chunk's gender to be present in the translated genders array for the question lObj's metagender selector."
+        );
+      }
+    } else {
+      selectedGenderForQuestionLanguage = gpUtils.selectRandom(
+        refObj.metaFeatures[questionLanguage].gender[metaGender]
+      );
+    }
+
+    selectedGenderForAnswerLanguageArr = answerLangUtils.formatFeatureValue(
+      "gender",
+      selectedGenderForQuestionLanguage,
+      "person"
+    );
+
+    console.log(
+      "[1;35m " +
+        `ksxy addSpecifiersInner2 ${consoleLabels} #NB: Am changing questionChk.gender and answerHeadChunk.gender` +
+        "[0m"
+    );
+    console.log(`ksxy addSpecifiersInner2 ${consoleLabels}`, {
+      selectedGenderForQuestionLanguage,
+      selectedGenderForAnswerLanguageArr,
+    });
+
+    questionChk.gender = [selectedGenderForQuestionLanguage];
+    answerChk.gender = selectedGenderForAnswerLanguageArr;
+
+    console.log("wdmi addSpecifiers. Will addAnnotation ");
+    aaUtils.addAnnotation(
+      questionChk,
+      "gender",
+      selectedGenderForQuestionLanguage
+    );
+  } else {
+    console.log(
+      `wdmx addSpecifiersInner2 ${consoleLabels}. Did nothing as questionlObj did is not MGN.`
+    );
+  }
+};
+
+exports.getMaterialsToAddSpecifiers = (
+  questionOutputArr,
+  answerChunk,
+  answerSentenceStructure,
+  questionSentenceStructure
+) => {
+  let answerHeadChunk = answerSentenceStructure.find(
+    (chunk) => chunk.chunkId === answerChunk.agreeWith
+  );
+
+  let questionChunk = questionSentenceStructure.find(
+    (chunk) => chunk.chunkId === answerChunk.chunkId
+  );
+
+  let questionHeadChunk = questionSentenceStructure.find(
+    (chunk) => chunk.chunkId === questionChunk.agreeWith
+  );
+
+  let questionLemmaObject;
+  let questionHeadLemmaObject;
+
+  if (questionHeadChunk) {
+    let outputUnit = questionOutputArr.find(
+      (outputUnit) =>
+        outputUnit.structureChunk.chunkId === questionHeadChunk.chunkId
+    );
+    if (outputUnit) {
+      questionHeadLemmaObject = outputUnit.selectedLemmaObject;
+    }
+  }
+
+  if (questionChunk) {
+    let outputUnit = questionOutputArr.find(
+      (outputUnit) =>
+        outputUnit.structureChunk.chunkId === questionChunk.chunkId
+    );
+    if (outputUnit) {
+      questionLemmaObject = outputUnit.selectedLemmaObject;
+    }
+  }
+
+  return {
+    answerHeadChunk,
+    answerChunk,
+    questionHeadChunk,
+    questionChunk,
+    questionHeadLemmaObject,
+    questionLemmaObject,
+  };
+};
+
+exports.sortAnswerAndQuestionStructureChunks = (
+  questionSentenceStructure,
+  answerSentenceStructure
+) => {
+  console.log("bsat sortAnswerAndQuestionStructureChunks");
+
+  let responseObj = {
+    answerHeadChunks: null,
+    answerDependentChunks: null,
+    answerOtherChunks: null,
+    questionHeadChunks: null,
+    questionDependentChunks: null,
+    questionOtherChunks: null,
+  };
+
+  let {
+    headChunks,
+    dependentChunks,
+    otherChunks,
+  } = scUtils.sortStructureChunks(answerSentenceStructure);
+
+  responseObj.answerHeadChunks = headChunks;
+  responseObj.answerDependentChunks = dependentChunks;
+  responseObj.answerOtherChunks = otherChunks;
+
+  if (true) {
+    let {
+      headChunks,
+      dependentChunks,
+      otherChunks,
+    } = scUtils.sortStructureChunks(questionSentenceStructure);
+
+    responseObj.questionHeadChunks = headChunks;
+    responseObj.questionDependentChunks = dependentChunks;
+    responseObj.questionOtherChunks = otherChunks;
+
+    return responseObj;
+  }
+};
+
+exports.specifyQuestionChunkAndChangeAnswerChunk = (
+  chunksObj,
+  actionKey,
+  actionValueArr
+) => {
+  clUtils.throw("fjln specifyQuestionChunkAndChangeAnswerChunk Cease");
+
+  if (actionValueArr.length !== 1) {
+    console.log("ujrw specifyQuestionChunkAndChangeAnswerChunk", {
+      actionValueArr,
+    });
+    clUtils.throw(
+      "ujrw specifyQuestionChunkAndChangeAnswerChunk actionValueArr had length of not 1"
+    );
+  }
+
+  let {
+    answerHeadChunk,
+    answerChunk,
+    questionHeadChunk,
+    questionChunk,
+  } = chunksObj;
+
+  if (answerHeadChunk) {
+    console.log("evuj specifyQuestionChunkAndChangeAnswerChunk Point A");
+    answerHeadChunk[actionKey] = actionValueArr;
+  } else {
+    console.log("evuj specifyQuestionChunkAndChangeAnswerChunk Point B");
+    answerChunk[actionKey] = actionValueArr;
+  }
+
+  //...and note Specifier in Q headCh if exists, else Q depCh.
+
+  if (questionHeadChunk) {
+    console.log("tbji specifyQuestionChunkAndChangeAnswerChunk Point C");
+    aaUtils.addAnnotation(questionHeadChunk, actionKey, actionValueArr[0]);
+  } else {
+    if (!questionChunk) {
+      throw (
+        "aaxj specifyQuestionChunkAndChangeAnswerChunk There was no corresponding questionChunk to add these Specifiers to: " +
+        actionKey +
+        " " +
+        actionValueArr[0]
+      );
+    }
+    console.log(
+      "lskt specifyQuestionChunkAndChangeAnswerChunk specifyQuestionChunkAndChangeAnswerChunk Point D"
+    );
+    aaUtils.addAnnotation(questionChunk, actionKey, actionValueArr[0]);
+  }
+};
+
+exports.addAnnotation = (chunk, key, value) => {
+  if (!chunk.annotations) {
+    chunk.annotations = {};
+  }
+
+  if (typeof value !== "string") {
+    console.log("nrtn addAnnotation", { value });
+    clUtils.throw("nrtn addAnnotation expected STRING for value");
+  }
+
+  console.log(
+    "[1;35m " + "aggw addAnnotation Added annotation for " + chunk.chunkId + "[0m"
+  );
+  console.log("aggw addAnnotation", { key, value });
+
+  chunk.annotations[key] = value;
+};
+
+exports.getFormattedAnnoObj = (
+  structureChunk,
+  languagesObj,
+  answerSentenceData
+) => {
+  refFxn.filterAnnotationsOnStCh(
+    structureChunk,
+    languagesObj,
+    answerSentenceData
+  );
+
+  let annoObj = {};
+
+  Object.keys(structureChunk.annotations).forEach((annoKey) => {
+    let formattedAnnoValue = allLangUtils.translateAnnotationValue(
+      annoKey,
+      structureChunk,
+      languagesObj
+    );
+
+    annoObj[annoKey] = formattedAnnoValue;
+  });
+
+  return aaUtils.trimAnnotations(annoObj);
+};
+
+exports.firstStageEvaluateAnnotations = (
+  arrayOfOutputUnits,
+  languagesObj,
+  answerSentenceData
+) => {
+  if (!answerSentenceData) {
+    console.log(
+      "[1;31m " +
+        "hhvv NB: NO ANSWER SENTENCE DATA IN aa.firstStageEvaluateAnnotations" +
+        "[0m"
+    );
+  }
+
+  arrayOfOutputUnits.forEach((outputUnit) => {
+    let { structureChunk, selectedLemmaObject } = outputUnit;
+
+    if (
+      !structureChunk.annotations ||
+      !Object.keys(structureChunk.annotations).length
+    ) {
+      console.log(
+        `dhca firstStageEvaluateAnnotations "${structureChunk.chunkId}" has no annotations.`
+      );
+      return;
+    }
+
+    let formattedAnnoObj = aaUtils.getFormattedAnnoObj(
+      structureChunk,
+      languagesObj,
+      answerSentenceData
+    );
+
+    if (!Object.values(formattedAnnoObj).length) {
+      console.log(
+        "[1;31m " +
+          `dhce NB: firstStageEvaluateAnnotations. There were annotations on stCh, but none after formatting. "${structureChunk.chunkId}".` +
+          "[0m"
+      );
+    }
+
+    console.log(
+      `dhci firstStageEvaluateAnnotations. Adding firstStageAnnotationsObj to "${structureChunk.chunkId}".`
+    );
+
+    outputUnit.firstStageAnnotationsObj = formattedAnnoObj;
+  });
+};
+
+exports.trimAnnotations = (annotationObj) => {
+  Object.keys(annotationObj).forEach((annoKey) => {
+    let annoValue = annotationObj[annoKey];
+
+    if (annoKey === "gender" && ["males", "females"].includes(annoValue)) {
+      delete annotationObj.number;
+    }
+
+    if (!annoValue) {
+      clUtils.throw("vmkp");
+      delete annotationObj[annoKeyy];
+    }
+  });
+
+  return annotationObj;
+};
+
 exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
   let { answerLanguage, questionLanguage } = languagesObj;
 
@@ -347,466 +969,4 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
       );
     }
   });
-};
-
-exports.addSpecifiers = (
-  answerSentenceFormula,
-  questionOutputArr,
-  languagesObj
-) => {
-  console.log("[1;30m " + `----addSpecifiers------liht` + "[0m");
-  console.log("liht answerSentenceFormula", answerSentenceFormula);
-  console.log("liht questionOutputArr", questionOutputArr);
-  console.log("liht languagesObj", languagesObj);
-
-  //STEP ZERO: Getting materials
-
-  let answerSentenceStructure = answerSentenceFormula.sentenceStructure;
-  let questionSentenceStructure = questionOutputArr.map(
-    (outputUnit) => outputUnit.structureChunk
-  );
-
-  let {
-    answerHeadChunks,
-    answerDependentChunks,
-    answerOtherChunks,
-    questionHeadChunks,
-    questionDependentChunks,
-    questionOtherChunks,
-  } = aaUtils.sortAnswerAndQuestionStructureChunks(
-    questionSentenceStructure,
-    answerSentenceStructure
-  );
-
-  //'doctor' is not being done here,
-  //because in 118b, it's not a normal headChunk, but rather a PHD Headchunk
-  //so it's not being found in the two loops below.
-  //nownow
-
-  //STEP ONE:   Specifiers for MGNs via answerDEPENDENTChunks.
-  //            (lObjs with gender: "allPersonalSingularGenders_selector" but we will check all metaGenders)
-  //
-  // Do a HEADS run (questionHeadLemmaObject, questionHeadChunk, answerHeadChunk)
-  // And OTHER run  (questionLemmaObject, questionChunk, answerChunk)
-
-  aaUtils.addSpecifiersInner1(
-    questionOutputArr,
-    answerDependentChunks,
-    [answerSentenceStructure, questionSentenceStructure],
-    languagesObj,
-    true,
-    "Step One: via answerDEPENDENTChunks"
-  );
-
-  //STEP TWO:   Specifiers for MGNs via answerOTHERChunks.
-  //            (lObjs with gender: "allPersonalSingularGenders_selector" but we will check all metaGenders)
-  //
-  // Do OTHER run  (questionLemmaObject, questionChunk, answerChunk)
-
-  aaUtils.addSpecifiersInner1(
-    questionOutputArr,
-    answerOtherChunks,
-    [answerSentenceStructure, questionSentenceStructure],
-    languagesObj,
-    false,
-    "Step Two: via answerOTHERChunks"
-  );
-
-  console.log("[1;30m " + `----/addSpecifiers------` + "[0m");
-};
-
-exports.addSpecifiersInner1 = (
-  questionOutputArr,
-  answerChkArray,
-  getMaterialsToAddSpecifiersArgsArray,
-  languagesObj,
-  doTwoRuns,
-  consoleLabel
-) => {
-  let { questionLanguage, answerLanguage } = languagesObj;
-
-  answerChkArray.forEach((answerChk) => {
-    if (
-      ["fixed", "article"].includes(
-        gpUtils.getWordtypeFromStructureChunk(answerChk)
-      )
-    ) {
-      return;
-    }
-
-    console.log(" ");
-    console.log(
-      `     wdma addSpecifiers ${consoleLabel} answerChk                    "${answerChk.chunkId}"`
-    );
-
-    let materials = aaUtils.getMaterialsToAddSpecifiers(
-      questionOutputArr,
-      answerChk,
-      ...getMaterialsToAddSpecifiersArgsArray
-    );
-
-    let {
-      answerHeadChunk,
-      answerChunk,
-      questionHeadChunk,
-      questionChunk,
-      questionHeadLemmaObject,
-      questionLemmaObject,
-    } = materials;
-
-    console.log(`wdmæ addSpecifiers ${consoleLabel}`, { questionLemmaObject });
-
-    let metaGenders = Object.keys(
-      refObj.metaFeatures[questionLanguage]["gender"]
-    );
-
-    metaGenders.forEach((metaGender) => {
-      //STEP ONE-A: Let's check the Q lObj.
-      aaUtils.addSpecifiersInner2(
-        questionLemmaObject,
-        questionChunk,
-        answerChunk,
-        metaGender,
-        languagesObj,
-        consoleLabel,
-        "Run A - checks Q lObj"
-      );
-
-      if (doTwoRuns) {
-        //STEP ONE-B: Let's check the QH lObj.
-        aaUtils.addSpecifiersInner2(
-          questionHeadLemmaObject,
-          questionHeadChunk,
-          answerHeadChunk,
-          metaGender,
-          languagesObj,
-          consoleLabel,
-          "Run B - checks QHead lObj"
-        );
-      }
-    });
-  });
-};
-
-exports.addSpecifiersInner2 = (
-  questionlObj,
-  questionChk,
-  answerChk,
-  metaGender,
-  languagesObj,
-  consoleLabelStep,
-  consoleLabelRun
-) => {
-  console.log(
-    `cwpo addSpecifiersInner2 ${consoleLabelStep} ${consoleLabelRun}`
-  );
-
-  let selectedGenderForQuestionLanguage;
-  let { questionLanguage, answerLanguage } = languagesObj;
-
-  const questionLangUtils = require(`../source/${questionLanguage}/langUtils.js`);
-  const answerLangUtils = require(`../source/${answerLanguage}/langUtils.js`);
-
-  if (questionlObj && questionlObj.gender === `${metaGender}_selector`) {
-    if (questionChk.gender && questionChk.gender.length) {
-      selectedGenderForQuestionLanguage = gpUtils.selectRandom(
-        questionChk.gender
-      );
-    } else {
-      selectedGenderForQuestionLanguage = gpUtils.selectRandom(
-        refObj.metaFeatures[questionLanguage].gender[metaGender]
-      );
-    }
-
-    selectedGenderForAnswerLanguageArr = answerLangUtils.formatFeatureValue(
-      "gender",
-      selectedGenderForQuestionLanguage,
-      "person"
-    );
-
-    console.log(
-      "[1;35m " +
-        `ksxy addSpecifiersInner2 ${consoleLabelStep} ${consoleLabelRun} #NB: Am changing questionChk.gender and answerHeadChunk.gender` +
-        "[0m"
-    );
-    console.log(
-      `ksxy addSpecifiersInner2 ${consoleLabelStep} ${consoleLabelRun}`,
-      {
-        selectedGenderForQuestionLanguage,
-        selectedGenderForAnswerLanguageArr,
-      }
-    );
-
-    questionChk.gender = [selectedGenderForQuestionLanguage];
-    answerChk.gender = selectedGenderForAnswerLanguageArr;
-
-    console.log("wdmi addSpecifiers. Will addAnnotation ");
-    aaUtils.addAnnotation(
-      questionChk,
-      "gender",
-      selectedGenderForQuestionLanguage
-    );
-  } else {
-    console.log(
-      `wdmx addSpecifiersInner2 ${consoleLabelStep} ${consoleLabelRun}. Did nothing as null.`,
-      {
-        questionlObj,
-        "questionlObj.gender": questionlObj ? questionlObj.gender : null,
-      }
-    );
-  }
-};
-
-exports.getMaterialsToAddSpecifiers = (
-  questionOutputArr,
-  answerChunk,
-  answerSentenceStructure,
-  questionSentenceStructure
-) => {
-  let answerHeadChunk = answerSentenceStructure.find(
-    (chunk) => chunk.chunkId === answerChunk.agreeWith
-  );
-
-  let questionChunk = questionSentenceStructure.find(
-    (chunk) => chunk.chunkId === answerChunk.chunkId
-  );
-
-  let questionHeadChunk = questionSentenceStructure.find(
-    (chunk) => chunk.chunkId === questionChunk.agreeWith
-  );
-
-  let questionLemmaObject;
-  let questionHeadLemmaObject;
-
-  if (questionHeadChunk) {
-    let outputUnit = questionOutputArr.find(
-      (outputUnit) =>
-        outputUnit.structureChunk.chunkId === questionHeadChunk.chunkId
-    );
-    if (outputUnit) {
-      questionHeadLemmaObject = outputUnit.selectedLemmaObject;
-    }
-  }
-
-  if (questionChunk) {
-    let outputUnit = questionOutputArr.find(
-      (outputUnit) =>
-        outputUnit.structureChunk.chunkId === questionChunk.chunkId
-    );
-    if (outputUnit) {
-      questionLemmaObject = outputUnit.selectedLemmaObject;
-    }
-  }
-
-  let res = {
-    answerHeadChunk,
-    answerChunk,
-    questionHeadChunk,
-    questionChunk,
-    questionHeadLemmaObject,
-    questionLemmaObject,
-  };
-
-  return res;
-};
-
-exports.sortAnswerAndQuestionStructureChunks = (
-  questionSentenceStructure,
-  answerSentenceStructure
-) => {
-  console.log("bsat sortAnswerAndQuestionStructureChunks");
-
-  let responseObj = {
-    answerHeadChunks: null,
-    answerDependentChunks: null,
-    answerOtherChunks: null,
-    questionHeadChunks: null,
-    questionDependentChunks: null,
-    questionOtherChunks: null,
-  };
-
-  let {
-    headChunks,
-    dependentChunks,
-    otherChunks,
-  } = scUtils.sortStructureChunks(answerSentenceStructure);
-
-  responseObj.answerHeadChunks = headChunks;
-  responseObj.answerDependentChunks = dependentChunks;
-  responseObj.answerOtherChunks = otherChunks;
-
-  if (true) {
-    let {
-      headChunks,
-      dependentChunks,
-      otherChunks,
-    } = scUtils.sortStructureChunks(questionSentenceStructure);
-
-    responseObj.questionHeadChunks = headChunks;
-    responseObj.questionDependentChunks = dependentChunks;
-    responseObj.questionOtherChunks = otherChunks;
-
-    return responseObj;
-  }
-};
-
-exports.specifyQuestionChunkAndChangeAnswerChunk = (
-  chunksObj,
-  actionKey,
-  actionValueArr
-) => {
-  clUtils.throw("fjln specifyQuestionChunkAndChangeAnswerChunk Cease");
-
-  if (actionValueArr.length !== 1) {
-    console.log("ujrw specifyQuestionChunkAndChangeAnswerChunk", {
-      actionValueArr,
-    });
-    clUtils.throw(
-      "ujrw specifyQuestionChunkAndChangeAnswerChunk actionValueArr had length of not 1"
-    );
-  }
-
-  let {
-    answerHeadChunk,
-    answerChunk,
-    questionHeadChunk,
-    questionChunk,
-  } = chunksObj;
-
-  if (answerHeadChunk) {
-    console.log("evuj specifyQuestionChunkAndChangeAnswerChunk Point A");
-    answerHeadChunk[actionKey] = actionValueArr;
-  } else {
-    console.log("evuj specifyQuestionChunkAndChangeAnswerChunk Point B");
-    answerChunk[actionKey] = actionValueArr;
-  }
-
-  //...and note Specifier in Q headCh if exists, else Q depCh.
-
-  if (questionHeadChunk) {
-    console.log("tbji specifyQuestionChunkAndChangeAnswerChunk Point C");
-    aaUtils.addAnnotation(questionHeadChunk, actionKey, actionValueArr[0]);
-  } else {
-    if (!questionChunk) {
-      throw (
-        "aaxj specifyQuestionChunkAndChangeAnswerChunk There was no corresponding questionChunk to add these Specifiers to: " +
-        actionKey +
-        " " +
-        actionValueArr[0]
-      );
-    }
-    console.log(
-      "lskt specifyQuestionChunkAndChangeAnswerChunk specifyQuestionChunkAndChangeAnswerChunk Point D"
-    );
-    aaUtils.addAnnotation(questionChunk, actionKey, actionValueArr[0]);
-  }
-};
-
-exports.addAnnotation = (chunk, key, value) => {
-  if (!chunk.annotations) {
-    chunk.annotations = {};
-  }
-
-  if (typeof value !== "string") {
-    console.log("nrtn addAnnotation", { value });
-    clUtils.throw("nrtn addAnnotation expected STRING for value");
-  }
-
-  console.log(
-    "[1;35m " + "aggw addAnnotation Added annotation for " + chunk.chunkId + "[0m"
-  );
-  console.log("aggw addAnnotation", { key, value });
-
-  chunk.annotations[key] = value;
-};
-
-exports.getFormattedAnnoObj = (
-  structureChunk,
-  languagesObj,
-  answerSentenceData
-) => {
-  refFxn.filterAnnotationsOnStCh(
-    structureChunk,
-    languagesObj,
-    answerSentenceData
-  );
-
-  let annoObj = {};
-
-  Object.keys(structureChunk.annotations).forEach((annoKey) => {
-    let formattedAnnoValue = allLangUtils.translateAnnotationValue(
-      annoKey,
-      structureChunk,
-      languagesObj
-    );
-
-    annoObj[annoKey] = formattedAnnoValue;
-  });
-
-  return aaUtils.trimAnnotations(annoObj);
-};
-
-exports.firstStageEvaluateAnnotations = (
-  arrayOfOutputUnits,
-  languagesObj,
-  answerSentenceData
-) => {
-  if (!answerSentenceData) {
-    console.log(
-      "[1;31m " +
-        "hhvv NB: NO ANSWER SENTENCE DATA IN aa.firstStageEvaluateAnnotations" +
-        "[0m"
-    );
-  }
-
-  arrayOfOutputUnits.forEach((outputUnit) => {
-    let { structureChunk, selectedLemmaObject } = outputUnit;
-
-    if (
-      !structureChunk.annotations ||
-      !Object.keys(structureChunk.annotations).length
-    ) {
-      console.log(
-        `dhca firstStageEvaluateAnnotations "${structureChunk.chunkId}" has no annotations.`
-      );
-      return;
-    }
-
-    let formattedAnnoObj = aaUtils.getFormattedAnnoObj(
-      structureChunk,
-      languagesObj,
-      answerSentenceData
-    );
-
-    if (!Object.values(formattedAnnoObj).length) {
-      console.log(
-        "[1;31m " +
-          `dhce NB: firstStageEvaluateAnnotations. There were annotations on stCh, but none after formatting. "${structureChunk.chunkId}".` +
-          "[0m"
-      );
-    }
-
-    console.log(
-      `dhci firstStageEvaluateAnnotations. Adding firstStageAnnotationsObj to "${structureChunk.chunkId}".`
-    );
-
-    outputUnit.firstStageAnnotationsObj = formattedAnnoObj;
-  });
-};
-
-exports.trimAnnotations = (annotationObj) => {
-  Object.keys(annotationObj).forEach((annoKey) => {
-    let annoValue = annotationObj[annoKey];
-
-    if (annoKey === "gender" && ["males", "females"].includes(annoValue)) {
-      delete annotationObj.number;
-    }
-
-    if (!annoValue) {
-      clUtils.throw("vmkp");
-      delete annotationObj[annoKeyy];
-    }
-  });
-
-  return annotationObj;
 };

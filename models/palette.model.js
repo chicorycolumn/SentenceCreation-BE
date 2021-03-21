@@ -408,9 +408,9 @@ exports.fetchPalette = (req) => {
     ///////////////////////////////////////////////kp Specifiers
     if (!pleaseDontSpecify) {
       //PDSXpurple
-      aaUtils.addSpecifiers(
-        answerSentenceData.sentenceFormula,
-        questionSentenceData.questionOutputArr,
+      aaUtils.addSpecifiersToMGNs(
+        answerSentenceData,
+        questionSentenceData,
         languagesObj
       );
     } else {
