@@ -1419,7 +1419,10 @@ exports.inheritFromHeadToDependentChunk = (
   );
 };
 
-exports.sortStructureChunks = (sentenceStructure) => {
+exports.sortStructureChunks = (
+  sentenceStructure,
+  separateDependentsAndPHDs
+) => {
   let headIds = Array.from(
     new Set(
       sentenceStructure
@@ -1464,21 +1467,38 @@ exports.sortStructureChunks = (sentenceStructure) => {
       typeof structureChunk === "object" && structureChunk.agreeWith
   );
 
+  let PHDChunks = sentenceStructure.filter(
+    (structureChunk) =>
+      typeof structureChunk === "object" &&
+      [
+        "postHocAgreeWithPrimary",
+        "postHocAgreeWithSecondary",
+        "postHocAgreeWithTertiary",
+      ].some((agreeKey) => structureChunk[agreeKey])
+  );
+
   let otherChunks = sentenceStructure.filter(
     (chunk) =>
       ![
         ...headChunks.map((chunk) => chunk.chunkId),
         ...dependentChunks.map((chunk) => chunk.chunkId),
+        ...PHDChunks.map((chunk) => chunk.chunkId),
       ].includes(chunk.chunkId)
   );
 
   console.log("fafo sortStructureChunks END", {
     headChunks,
     dependentChunks,
+    PHDChunks,
     otherChunks,
   });
 
   // clUtils.throw("jeve");
 
-  return { headChunks, dependentChunks, otherChunks };
+  if (separateDependentsAndPHDs) {
+    return { headChunks, dependentChunks, PHDChunks, otherChunks };
+  } else {
+    otherChunks = [...otherChunks, ...PHDChunks];
+    return { headChunks, dependentChunks, otherChunks };
+  }
 };
