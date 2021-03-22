@@ -14,9 +14,6 @@ exports.addSpecifiersToMGNs = (
 ) => {
   let { questionOutputArr } = questionSentenceData;
 
-  // console.log("nibs answerSentenceData", answerSentenceData);
-  // clUtils.throw();
-
   let { answerOutputArr } = answerSentenceData;
 
   let { questionLanguage, answerLanguage } = languagesObj;
@@ -541,12 +538,14 @@ exports.addAnnotation = (chunk, key, value) => {
 exports.getFormattedAnnoObj = (
   structureChunk,
   languagesObj,
-  answerSentenceData
+  answerSentenceData,
+  questionOutputArr
 ) => {
   refFxn.filterAnnotationsOnStCh(
     structureChunk,
     languagesObj,
-    answerSentenceData
+    answerSentenceData,
+    questionOutputArr
   );
 
   let annoObj = {};
@@ -565,7 +564,7 @@ exports.getFormattedAnnoObj = (
 };
 
 exports.firstStageEvaluateAnnotations = (
-  arrayOfOutputUnits,
+  questionOutputArr,
   languagesObj,
   answerSentenceData
 ) => {
@@ -577,7 +576,7 @@ exports.firstStageEvaluateAnnotations = (
     );
   }
 
-  arrayOfOutputUnits.forEach((outputUnit) => {
+  questionOutputArr.forEach((outputUnit) => {
     let { structureChunk, selectedLemmaObject } = outputUnit;
 
     if (
@@ -593,7 +592,8 @@ exports.firstStageEvaluateAnnotations = (
     let formattedAnnoObj = aaUtils.getFormattedAnnoObj(
       structureChunk,
       languagesObj,
-      answerSentenceData
+      answerSentenceData,
+      questionOutputArr
     );
 
     if (!Object.values(formattedAnnoObj).length) {

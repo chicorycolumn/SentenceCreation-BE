@@ -1255,6 +1255,7 @@ exports.switchMetaFeatureForAWorkableConvertedFeature = (
   inflectorValue,
   source,
   currentLanguage,
+  structureChunk,
   consoleLogLabel
 ) => {
   console.log(
@@ -1265,8 +1266,11 @@ exports.switchMetaFeatureForAWorkableConvertedFeature = (
       "[0m"
   );
 
-  let convertedMetaFeatures =
-    refObj.metaFeatures[currentLanguage][inflectorLabel][inflectorValue];
+  let convertedMetaFeatures = refObj.metaFeatures[currentLanguage][
+    inflectorLabel
+  ][inflectorValue].filter(
+    (convertedMetaFeature) => source[convertedMetaFeature]
+  );
 
   console.log(
     "[1;33m " + `ivwe convertedMetaFeatures [${convertedMetaFeatures}]` + "[0m"
@@ -1290,19 +1294,13 @@ exports.switchMetaFeatureForAWorkableConvertedFeature = (
     return selectedConvertedMetaFeature;
   }
 
-  let drillResultsOfConvertedMetaFeatures = [];
+  let drillResultsOfConvertedMetaFeatures = convertedMetaFeatures.map(
+    (convertedMetaFeature) => source[convertedMetaFeature]
+  );
 
-  convertedMetaFeatures.forEach((convertedMetaFeature) => {
-    if (source[convertedMetaFeature]) {
-      drillResultsOfConvertedMetaFeatures.push(source[convertedMetaFeature]);
-    }
-  });
-
-  if (!drillResultsOfConvertedMetaFeatures.length) {
-    clUtils.throw(
-      `rlul #ERR traverseAndRecordInflections >>unkeyed metaFeature clause<<. Found no drillResultsOfConvertedMetaFeatures for convertedMetaFeatures: [${convertedMetaFeatures}].`
-    );
-  }
+  let selectedConvertedMetaFeature = gpUtils.selectRandom(
+    convertedMetaFeatures
+  );
 
   if (
     gpUtils.checkEachSequentialPairing(
@@ -1311,18 +1309,26 @@ exports.switchMetaFeatureForAWorkableConvertedFeature = (
       true
     )
   ) {
-    let selectedConvertedMetaFeature = convertedMetaFeatures[0];
-
     console.log(
       "[1;33m " +
-        `ksfc traverseAndRecordInflections >>unkeyed metaFeature clause<<. Setting inflectorValue to "${selectedConvertedMetaFeature}". Will now continue with main fxn.` +
+        `ksfc traverseAndRecordInflections >>unkeyed metaFeature clause<<. Final Clause A. Setting inflectorValue to "${selectedConvertedMetaFeature}". Do not need to adjust stCh as all converted values for this metafeature result in the same from source, eg "allPersonalSingularGenders" = m --> "you", f --> "you". Will now continue with main fxn.` +
         "[0m"
     );
 
     return selectedConvertedMetaFeature;
   } else {
-    clUtils.throw(
-      `aqsa #ERR traverseAndRecordInflections >>unkeyed metaFeature clause<<. Trying to set a metaFeature to one of its convertedFeatures. This is provided the drilled values with ultimately be the same in source, but that specifically was false.`
+    console.log(
+      `aqsa traverseAndRecordInflections >>unkeyed metaFeature clause<<. 
+      Final Clause B. Trying to set a metaFeature to one of its convertedFeatures. 
+      But the drilled values were not ultimately be the same in source, therefore we cannot obey doNotSpecify. 
+      For example, the stCh asks for allPersonalSingularGenders, 
+      and while sometimes the results could be m --> "I", f --> "I", in which case it would have gone to Final Clause A. 
+      But in this case, eg, m1 --> kupiłem, f --> kupiłam. So they are not the same. 
+      So I'll pick one, and make sure to set the stCh to acknowledge this.`
     );
+
+    structureChunk.gender = [selectedConvertedMetaFeature];
+
+    return selectedConvertedMetaFeature;
   }
 };

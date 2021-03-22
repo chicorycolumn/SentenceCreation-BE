@@ -333,8 +333,8 @@ describe("/api", () => {
     });
   });
 
-  xdescribe("/palette - Stage 17-ii: Possessive pronouns and MGNs. PP below MGN. ProsMgn.", () => {
-    it("#pal17-04a GET 200 YES: Engpol. Sentence with 2 of same MGN. Annotations expected. Eventually this should fail so that 4b succeeds.", () => {
+  describe("/palette - Stage 17-ii: Possessive pronouns and MGNs. PP below MGN. ProsMgn.", () => {
+    it.only("#pal17-04a GET 200 YES: Engpol. Sentence with 2 of same MGN. Annotations expected. Eventually this should fail so that 4b succeeds.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -393,7 +393,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal17-04b GET 200 YES: Engpol. Sentence with 2 of same MGN. Some annotations expected. But eventually, this should succeed, as ProsMgn.", () => {
+    it.only("#pal17-04b GET 200 YES: Engpol. Sentence with 2 of same MGN. Some annotations expected. But eventually, this should succeed, as ProsMgn.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -504,41 +504,69 @@ describe("/api", () => {
         .then((res) => {
           let ref = [
             {
-              ENG: ["I saw my doctor and his doctor."],
+              ENG: [
+                "I saw my doctor and his doctor.",
+                "I had seen my doctor and his doctor.",
+                "I have seen my doctor and his doctor.",
+              ],
               POL: "Zobaczyłem mojego lekarza i jego lekarza.",
             },
             {
-              ENG: ["I saw my doctor and his doctor."],
+              ENG: [
+                "I saw my doctor and his doctor.",
+                "I had seen my doctor and his doctor.",
+                "I have seen my doctor and his doctor.",
+              ],
               POL: "Zobaczyłam mojego lekarza i jego lekarza.",
             },
-            //
             {
-              ENG: ["I saw my doctor and his doctor."],
+              ENG: [
+                "I saw my doctor and his doctor.",
+                "I had seen my doctor and his doctor.",
+                "I have seen my doctor and his doctor.",
+              ],
               POL: "Zobaczyłem mojego lekarza i jego lekarkę.",
             },
             {
-              ENG: ["I saw my doctor and his doctor."],
+              ENG: [
+                "I saw my doctor and his doctor.",
+                "I had seen my doctor and his doctor.",
+                "I have seen my doctor and his doctor.",
+              ],
               POL: "Zobaczyłam mojego lekarza i jego lekarkę.",
             },
-            //
             {
-              ENG: ["I saw my doctor and her doctor."],
+              ENG: [
+                "I saw my doctor and her doctor.",
+                "I had seen my doctor and her doctor.",
+                "I have seen my doctor and her doctor.",
+              ],
               POL: "Zobaczyłem moją lekarkę i jej lekarza.",
             },
             {
-              ENG: ["I saw my doctor and her doctor."],
+              ENG: [
+                "I saw my doctor and her doctor.",
+                "I had seen my doctor and her doctor.",
+                "I have seen my doctor and her doctor.",
+              ],
               POL: "Zobaczyłam moją lekarkę i jej lekarza.",
             },
-            //
             {
-              ENG: ["I saw my doctor and her doctor."],
+              ENG: [
+                "I saw my doctor and her doctor.",
+                "I had seen my doctor and her doctor.",
+                "I have seen my doctor and her doctor.",
+              ],
               POL: "Zobaczyłem moją lekarkę i jej lekarkę.",
             },
             {
-              ENG: ["I saw my doctor and her doctor."],
+              ENG: [
+                "I saw my doctor and her doctor.",
+                "I had seen my doctor and her doctor.",
+                "I have seen my doctor and her doctor.",
+              ],
               POL: "Zobaczyłam moją lekarkę i jej lekarkę.",
             },
-            //
           ];
           testingUtils.checkTranslationsOfGivenRef(
             res,
@@ -564,41 +592,69 @@ describe("/api", () => {
         .then((res) => {
           let ref = [
             {
-              ENG: ["I saw my doctor and his doctor."],
+              ENG: [
+                "I saw my doctor and his doctor.",
+                "I had seen my doctor and his doctor.",
+                "I have seen my doctor and his doctor.",
+              ],
               POL: "Zobaczyłem mojego lekarza i jego lekarza.",
             },
             {
-              ENG: ["I saw my doctor and his doctor."],
+              ENG: [
+                "I saw my doctor and his doctor.",
+                "I had seen my doctor and his doctor.",
+                "I have seen my doctor and his doctor.",
+              ],
               POL: "Zobaczyłam mojego lekarza i jego lekarza.",
             },
-            //
             {
-              ENG: ["I saw my doctor and his doctor."],
+              ENG: [
+                "I saw my doctor and his doctor.",
+                "I had seen my doctor and his doctor.",
+                "I have seen my doctor and his doctor.",
+              ],
               POL: "Zobaczyłem mojego lekarza i jego lekarkę.",
             },
             {
-              ENG: ["I saw my doctor and his doctor."],
+              ENG: [
+                "I saw my doctor and his doctor.",
+                "I had seen my doctor and his doctor.",
+                "I have seen my doctor and his doctor.",
+              ],
               POL: "Zobaczyłam mojego lekarza i jego lekarkę.",
             },
-            //
             {
-              ENG: ["I saw my doctor and her doctor."],
+              ENG: [
+                "I saw my doctor and her doctor.",
+                "I had seen my doctor and her doctor.",
+                "I have seen my doctor and her doctor.",
+              ],
               POL: "Zobaczyłem moją lekarkę i jej lekarza.",
             },
             {
-              ENG: ["I saw my doctor and her doctor."],
+              ENG: [
+                "I saw my doctor and her doctor.",
+                "I had seen my doctor and her doctor.",
+                "I have seen my doctor and her doctor.",
+              ],
               POL: "Zobaczyłam moją lekarkę i jej lekarza.",
             },
-            //
             {
-              ENG: ["I saw my doctor and her doctor."],
+              ENG: [
+                "I saw my doctor and her doctor.",
+                "I had seen my doctor and her doctor.",
+                "I have seen my doctor and her doctor.",
+              ],
               POL: "Zobaczyłem moją lekarkę i jej lekarkę.",
             },
             {
-              ENG: ["I saw my doctor and her doctor."],
+              ENG: [
+                "I saw my doctor and her doctor.",
+                "I had seen my doctor and her doctor.",
+                "I have seen my doctor and her doctor.",
+              ],
               POL: "Zobaczyłam moją lekarkę i jej lekarkę.",
             },
-            //
           ];
           testingUtils.checkTranslationsOfGivenRef(
             res,
@@ -1861,7 +1917,7 @@ describe("/api", () => {
     });
   });
 
-  describe.only("/palette - Stage 14: Possessive pronouns.", () => {
+  describe("/palette - Stage 14: Possessive pronouns.", () => {
     it("#pal14-01a GET 200 YES: POL. I have my onion.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";

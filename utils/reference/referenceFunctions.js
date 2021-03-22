@@ -114,11 +114,33 @@ exports.giveAdjustedFeatureValue = (
 exports.filterAnnotationsOnStCh = (
   structureChunk,
   languagesObj,
-  answerSentenceData
+  answerSentenceData,
+  questionOutputArr
 ) => {
   if (!structureChunk.annotations || !answerSentenceData) {
     return;
   }
+
+  //nownow prosMGN
+  //I would like to add a conditionsOnWhichToBlockAnnotation, to both languages.
+  //Where if there is a connected pronoun, which will reveal the gender, so "his" "her" "its", but not "their"
+
+  //Ideally this would go on ref conditionsOnWhichToBlockAnnotations, but it's just too fiddly.
+  //
+  //So what we need to do is:
+  //
+  //1. For this stCh, get all q output units that are Dependent/PHD of this.
+  //2. Filter to just the ones with wordtype pronoun.
+  //3. If the selectedWord in any of those units is unique between genders in its lemma object
+  //   (eg "his" is unique as no other gender key holds this value, whereas "their" is not unique as two genders keys hold it)
+  //   then delete/block the gender annotation.
+
+  console.log("weer", {
+    structureChunk,
+    languagesObj,
+    answerSentenceData,
+    questionOutputArr,
+  });
 
   let correspondingAnswerChunks = [];
   let { chunkId } = structureChunk;

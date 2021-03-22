@@ -1,4 +1,8 @@
 exports.conditionsOnWhichToBlockAnnotations = {
+  //nownow prosMGN
+  //I would like to add a conditionsOnWhichToBlockAnnotation, to both languages.
+  //Where if there is a connected pronoun, which will reveal the gender, so "his" "her" "its", but not "their"
+
   POL: {
     noun: {
       //Here it's answerChunk {{POL}} {{nouns}}, as the nouns are what'll be clarified for their verbs.

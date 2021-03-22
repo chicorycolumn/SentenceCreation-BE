@@ -197,6 +197,7 @@ exports.filterWithin_PHD = (
           featureValue,
           source,
           currentLanguage,
+          structureChunk,
           "filterWithin_PHD -> postHocInflectionChain.forEach"
         );
       }
@@ -358,10 +359,10 @@ exports.filterWithinSelectedLemmaObject = (
     requirementArrs,
     outputUnitsWithDrillPaths,
     null,
+    structureChunk,
     multipleMode,
-    "filterWithin", //deletable
-    structureChunk.chunkId,
-    currentLanguage
+    currentLanguage,
+    "filterWithin" //deletable
   );
 
   if (!outputUnitsWithDrillPaths || !outputUnitsWithDrillPaths.length) {
@@ -769,11 +770,13 @@ exports.traverseAndRecordInflections = (
   reqArr,
   outputUnitsWithDrillPaths,
   outputUnitsWithDrillPathsMini,
+  structureChunk,
   multipleMode,
-  consoleLabel,
-  chunkId,
-  currentLanguage
+  currentLanguage,
+  consoleLabel
 ) => {
+  let chunkId = structureChunk ? structureChunk.chunkId : "???";
+
   console.log(
     `zbbg lf.traverseAndRecordInflections starting for "${chunkId}", and source is:`,
     source
@@ -833,6 +836,7 @@ exports.traverseAndRecordInflections = (
         chosenInflector,
         source,
         currentLanguage,
+        structureChunk,
         "traverseAndRecordInflections -> reqInflectorArr.forEach"
       );
     }
@@ -953,10 +957,10 @@ exports.traverseAndRecordInflections = (
         reqArr.slice(1),
         outputUnitsWithDrillPaths,
         outputUnitsWithDrillPathsMini,
+        structureChunk,
         multipleMode,
-        "traverseAndRecordInflections", // deletable
-        chunkId,
-        currentLanguage
+        currentLanguage,
+        "traverseAndRecordInflections" // deletable
       );
 
       // console.log("fxxb8");
