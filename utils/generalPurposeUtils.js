@@ -550,3 +550,11 @@ exports.oneStepCheck = (n1, n2) => {
 exports.returnArrayWithoutItemAtIndex = (arr, indexToRemove) => {
   return [...arr.slice(0, indexToRemove), ...arr.slice(indexToRemove + 1)];
 };
+
+exports.doesObjectExistAndNonEmpty = (object) => {
+  if (!object) {
+    return false;
+  }
+
+  return !!Object.keys(object).length;
+};

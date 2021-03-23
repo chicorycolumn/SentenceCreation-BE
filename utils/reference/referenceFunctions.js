@@ -111,12 +111,127 @@ exports.giveAdjustedFeatureValue = (
   return [featureValue];
 };
 
-exports.filterAnnotationsOnStCh = (
-  structureChunk,
+exports.removeAnnotationsByAOCs = (
+  questionOutputUnit,
   languagesObj,
   answerSentenceData,
   questionOutputArr
 ) => {
+  //AOC = Annotation-obviating connected (allDependent) word.
+
+  //The doctor (f) and her book.    --> 'doctor' has an allDependent 'her' which obviates its gender annotation.
+  //The sheep (sing.) and its grass. --> 'sheep' has an allDependent 'its' which obviates its number annotation.
+
+  let headWordtype = "noun";
+  let allDependentWordtype = "pronoun";
+
+  if (
+    !gpUtils.doesObjectExistAndNonEmpty(
+      questionOutputUnit.structureChunk.annotations
+    )
+  ) {
+    return;
+  }
+
+  if (
+    gpUtils.getWordtypeFromStructureChunk(questionOutputUnit.structureChunk) ===
+    headWordtype
+  ) {
+    let headChunkId = questionOutputUnit.structureChunk.chunkId;
+
+    let allDependentOutputUnitsOfWordtype = questionOutputArr
+      .filter((unit) =>
+        [
+          "agreeWith",
+          "postHocAgreeWithPrimary",
+          "postHocAgreeWithSecondary",
+          "postHocAgreeWithTertiary",
+        ].some(
+          (agreeWithKey) => unit.structureChunk[agreeWithKey] === headChunkId
+        )
+      )
+      .filter(
+        (unit) =>
+          gpUtils.getWordtypeFromStructureChunk(unit.structureChunk) ===
+          allDependentWordtype
+      );
+
+    console.log(
+      "ttta questionOutputUnit.structureChunk.annotations",
+      questionOutputUnit.structureChunk.annotations
+    );
+    console.log(
+      "tttb allDependentOutputUnitsOfWordtype",
+      allDependentOutputUnitsOfWordtype.map((unit) => unit.drillPath)
+    );
+
+    Object.keys(questionOutputUnit.structureChunk.annotations).forEach(
+      (featureKey) => {
+        let annoValue =
+          questionOutputUnit.structureChunk.annotations[featureKey];
+
+        allDependentOutputUnitsOfWordtype.forEach((depUnit) => {
+          if (
+            !questionOutputUnit.structureChunk.annotations[featureKey] || //ie we've now deleted it so abort loop.
+            !depUnit.drillPath
+          ) {
+            return;
+          }
+
+          console.log("meef", depUnit);
+
+          //The below logic assumes that the drillPath is where we want to find these
+          //but there could, say with another language, be situations where we want values from drillPathSecondary or -Tertiary.
+          //Such fxnality is not yet implemented.
+
+          let featureValue = depUnit.drillPath.find(
+            (arr) => arr[0] === featureKey
+          )[1];
+
+          if (
+            otUtils.isThisValueUniqueInLemmaObject(
+              lObj,
+              featureKey,
+              featureValue
+            )
+          ) {
+            delete questionOutputUnit.structureChunk.annotations[featureKey];
+          }
+
+          /**If any dep unit holds a value at featureKey that is unique in its lObj,
+           * then this pronoun obviates the need for that specifier, so delete it from annotations.
+           * and set featureHasBeenDeleted to true.
+           */
+        });
+      }
+    );
+  }
+
+  let pronounObviatesAnnotationsConditions = {
+    POL: {
+      //For all nouns...
+      noun: [
+        {
+          //...if there is a connected pronoun
+          wordtypeOfConnectedWord: ["pronoun"],
+          // and it is unique in its lObj re such feature (eg "his" is unique for gender but "their" is not)
+          potentiallyObviatedAnnotations: ["gender", "number"],
+          // ...then block that annotation.
+        },
+      ],
+    },
+  };
+};
+
+exports.filterAnnotationsOnStCh = (
+  questionOutputUnit,
+  languagesObj,
+  answerSentenceData,
+  questionOutputArr
+) => {
+  let { structureChunk } = questionOutputUnit;
+  //Zeta: Change structureChunk all mentions to questionStructureChunk
+
   if (!structureChunk.annotations || !answerSentenceData) {
     return;
   }

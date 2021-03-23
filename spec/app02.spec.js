@@ -334,7 +334,7 @@ describe("/api", () => {
   });
 
   describe("/palette - Stage 17-ii: Possessive pronouns and MGNs. PP below MGN. ProsMgn.", () => {
-    it.only("#pal17-04a GET 200 YES: Engpol. Sentence with 2 of same MGN. Annotations expected. Eventually this should fail so that 4b succeeds.", () => {
+    it("#pal17-04a GET 200 YES: Engpol. Sentence with 2 of same MGN. Annotations expected. Eventually this should fail so that 4b succeeds.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -393,7 +393,8 @@ describe("/api", () => {
           );
         });
     });
-    it.only("#pal17-04b GET 200 YES: Engpol. Sentence with 2 of same MGN. Some annotations expected. But eventually, this should succeed, as ProsMgn.", () => {
+    //nownow
+    it("#pal17-04b GET 200 YES: Engpol. Sentence with 2 of same MGN. Some annotations expected. But eventually, this should succeed, as ProsMgn.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1918,7 +1919,7 @@ describe("/api", () => {
   });
 
   describe("/palette - Stage 14: Possessive pronouns.", () => {
-    it("#pal14-01a GET 200 YES: POL. I have my onion.", () => {
+    it.only("#pal14-01a GET 200 YES: POL. I have my onion.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 

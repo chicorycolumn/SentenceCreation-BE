@@ -12,6 +12,12 @@ exports.filterWithin_PHD = (
   multipleMode,
   outputArray
 ) => {
+  console.log("pebb");
+
+  let drillPath = [];
+  let drillPathSecondary = [];
+  let drillPathTertiary = [];
+
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
 
   let PHD_type;
@@ -110,7 +116,7 @@ exports.filterWithin_PHD = (
         structureChunk[postHocAgreeWithKey]
     );
 
-    let drillPathForPHD = gpUtils.copyWithoutReference(
+    let drillPathOfHead = gpUtils.copyWithoutReference(
       headOutputUnit.drillPath
     );
 
@@ -121,7 +127,7 @@ exports.filterWithin_PHD = (
     //   "This is for a PHD"
     // );
 
-    if (!drillPathForPHD) {
+    if (!drillPathOfHead) {
       clUtils.throw(
         "#ERR jzbx filterWithin_PHD. There is no drillPath on the outputUnit with which I want to get features from the PHD stCh. Perhaps this outputUnit is one whose stCh did not go through If-PW?"
       );
@@ -135,17 +141,23 @@ exports.filterWithin_PHD = (
         );
       }
 
-      drillPathForPHD.push(["form", structureChunk.form[0]]);
+      console.log(
+        `ijef filterWithin_PHD. Updating drillPathOfHead with form "${structureChunk.form[0]}"`
+      );
+      drillPathOfHead.push(["form", structureChunk.form[0]]);
     }
 
     if (
       gpUtils.getWordtypeOfAgreeWith(structureChunk, postHocAgreeWithKey) ===
       "noun"
     ) {
-      let personArr = drillPathForPHD.find((arr) => arr[0] === "person");
+      let personArr = drillPathOfHead.find((arr) => arr[0] === "person");
 
       if (!personArr) {
-        drillPathForPHD.push(["person", "3per"]);
+        console.log(
+          `ijeg filterWithin_PHD. Updating drillPathOfHead with person "3per"`
+        );
+        drillPathOfHead.push(["person", "3per"]);
       } else if (personArr && !personArr[1] === "3per") {
         personArr[1] = "3per";
       }
@@ -154,8 +166,8 @@ exports.filterWithin_PHD = (
     // console.log("dxxd headOutputUnit", headOutputUnit);
 
     if (headOutputUnit.selectedLemmaObject.gender) {
-      if (!drillPathForPHD.find((arr) => arr[0] === "gender")) {
-        let numberArr = drillPathForPHD.find((arr) => arr[0] === "number");
+      if (!drillPathOfHead.find((arr) => arr[0] === "gender")) {
+        let numberArr = drillPathOfHead.find((arr) => arr[0] === "number");
 
         let numberValue = numberArr[1];
 
@@ -172,22 +184,23 @@ exports.filterWithin_PHD = (
         }
         let formattedFeatureValue = formattedFeatureValueArray[0];
 
-        // console.log("dxxf formattedFeatureValue", formattedFeatureValue);
-
-        drillPathForPHD.push(["gender", formattedFeatureValue]);
+        console.log(
+          `ijeg filterWithin_PHD. Updating drillPathOfHead with gender "${formattedFeatureValue}"`
+        );
+        drillPathOfHead.push(["gender", formattedFeatureValue]);
       } else {
         throw "I am unsure about which gender to use - either the one from lobj inherent, or the one from drillPath. I wanted to use this gender for the PHD stCh.";
       }
     }
 
     // console.log(
-    //   `dxxg lf:filterWithin_PHD. After "${postHocAgreeWithKey}" for "${structureChunk.chunkId}" the drillPathForPHD is finally`,
-    //   drillPathForPHD
+    //   `dxxg lf:filterWithin_PHD. After "${postHocAgreeWithKey}" for "${structureChunk.chunkId}" the drillPathOfHead is finally`,
+    //   drillPathOfHead
     // );
     // console.log("ylur filterWithin_PHD. source", source);
 
     postHocInflectionChain.forEach((featureKey) => {
-      let featureValue = drillPathForPHD.find(
+      let featureValue = drillPathOfHead.find(
         (arr) => arr[0] === featureKey
       )[1];
 
@@ -210,12 +223,23 @@ exports.filterWithin_PHD = (
         "\n"
       );
 
-      //If this is Primary, then update stCh with these featureKeys and featureValues.
+      //Update drillPath, for both ...Pri and ...Sec
 
+      //Update stCh with these featureKeys and featureValues, but just for postHocAgreeWithPrimary.
       if (/.*Primary/.test(postHocAgreeWithKey)) {
         lfUtils.updateStChByInflections(
-          { structureChunk, drillPath: drillPathForPHD },
+          { structureChunk, drillPath: drillPathOfHead },
           currentLanguage
+        );
+
+        drillPath.push([featureKey, featureValue]);
+      } else if (/.*Secondary/.test(postHocAgreeWithKey)) {
+        drillPathSecondary.push([featureKey, featureValue]);
+      } else if (/.*Tertiary/.test(postHocAgreeWithKey)) {
+        drillPathTertiary.push([featureKey, featureValue]);
+      } else {
+        clUtils.throw(
+          `mezp filterWithin_PHD. Malformed postHocAgreeWithKey: "${postHocAgreeWithKey}".`
         );
       }
     });
@@ -247,14 +271,29 @@ exports.filterWithin_PHD = (
 
   sourceArr.forEach((selectedWord) => {
     console.log(
-      `rzcs filterWithin_PHD. Pushing this selectedWord "${selectedWord}" with drillPath null.`
+      `rzcs filterWithin_PHD. Pushing this selectedWord "${selectedWord}" with drillPath ${drillPath}.`
     );
 
-    resArr.push({
+    let resultingOutputUnit = {
       errorInDrilling: false,
       selectedWordArray: [selectedWord],
-      drillPath: null,
-    });
+      drillPath,
+    };
+
+    if (drillPathSecondary.length) {
+      resultingOutputUnit.drillPathSecondary = drillPathSecondary;
+    }
+
+    if (drillPathTertiary.length) {
+      resultingOutputUnit.drillPathTertiary = drillPathTertiary;
+    }
+
+    console.log(
+      "iqoe filterWithin_PHD. resultingOutputUnit",
+      resultingOutputUnit
+    );
+
+    resArr.push(resultingOutputUnit);
   });
 
   console.log(

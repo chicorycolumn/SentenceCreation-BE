@@ -54,6 +54,9 @@ exports.lemmaObjectFeatures = {
       adjective: ["form", "number", "gender", "gcase"],
       verb: ["form", "tense", "person", "number", "gender"],
       pronoun: ["form", "person", "number", "gender", "gcase"],
+      //Beta
+      // pronounPERSONAL: ["form", "person", "number", "gender", "gcase"],
+      // pronounPOSSESSIVE: ["form", "person", "number", "gender", "number", "gender", "gcase"],
       // article: NONE
       preposition: ["form"],
     },

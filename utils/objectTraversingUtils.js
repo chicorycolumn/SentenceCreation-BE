@@ -698,7 +698,13 @@ exports.findMatchingLemmaObjectThenWord = (
 
       let unit = gpUtils.selectRandom(subArrayOfOutputUnits); //epsilon - What is this selran doing?
 
-      let { errorInDrilling, selectedWordArray, drillPath } = unit;
+      let {
+        errorInDrilling,
+        selectedWordArray,
+        drillPath,
+        drillPathSecondary,
+        drillPathTertiary,
+      } = unit;
 
       if (!selectedWordArray || !selectedWordArray.length) {
         console.log(
@@ -770,7 +776,9 @@ exports.findMatchingLemmaObjectThenWord = (
         selectedWord,
         structureChunk,
         selectedLemmaObject,
-        drillPath
+        drillPath,
+        drillPathSecondary,
+        drillPathTertiary
       );
 
       arrayOfAllPossibleOutputUnits.push(outputUnit);
@@ -807,7 +815,9 @@ exports.createOutputUnit = (
   selectedWord,
   structureChunk,
   selectedLemmaObject,
-  drillPath
+  drillPath,
+  drillPathSecondary,
+  drillPathTertiary
 ) => {
   if (errorInDrilling || !selectedWord) {
     console.log(
@@ -818,12 +828,22 @@ exports.createOutputUnit = (
     return false;
   }
 
-  return {
+  let resultingOutputUnit = {
     selectedLemmaObject,
     selectedWord,
     drillPath,
     structureChunk: structureChunk,
   };
+
+  if (drillPathSecondary) {
+    resultingOutputUnit.drillPathSecondary = drillPathSecondary;
+  }
+
+  if (drillPathTertiary) {
+    resultingOutputUnit.drillPathTertiary = drillPathTertiary;
+  }
+
+  return resultingOutputUnit;
 };
 
 exports.concoctNestedRoutes = (routesByLevelTarget, routesByLevelSource) => {
@@ -1332,3 +1352,5 @@ exports.switchMetaFeatureForAWorkableConvertedFeature = (
     return selectedConvertedMetaFeature;
   }
 };
+
+exports.doeslObjDifferAtThisInflectionKey = () => {};

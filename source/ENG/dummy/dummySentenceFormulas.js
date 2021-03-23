@@ -778,6 +778,8 @@ exports.dummySentenceFormulasBank = [
         wordtype: "pronoun",
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
+        // gender: ["m"],
+        // number: ["singular"],
       },
       {
         chunkId: "ver-1",

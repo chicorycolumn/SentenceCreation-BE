@@ -536,13 +536,23 @@ exports.addAnnotation = (chunk, key, value) => {
 };
 
 exports.getFormattedAnnoObj = (
-  structureChunk,
+  questionOutputUnit,
   languagesObj,
   answerSentenceData,
   questionOutputArr
 ) => {
+  let { structureChunk } = questionOutputUnit;
+  //Zeta: Change structureChunk all mentions to questionStructureChunk
+
+  refFxn.removeAnnotationsByAOCs(
+    questionOutputUnit,
+    languagesObj,
+    answerSentenceData,
+    questionOutputArr
+  );
+
   refFxn.filterAnnotationsOnStCh(
-    structureChunk,
+    questionOutputUnit,
     languagesObj,
     answerSentenceData,
     questionOutputArr
@@ -590,7 +600,7 @@ exports.firstStageEvaluateAnnotations = (
     }
 
     let formattedAnnoObj = aaUtils.getFormattedAnnoObj(
-      structureChunk,
+      outputUnit,
       languagesObj,
       answerSentenceData,
       questionOutputArr
@@ -610,6 +620,8 @@ exports.firstStageEvaluateAnnotations = (
 
     outputUnit.firstStageAnnotationsObj = formattedAnnoObj;
   });
+
+  clUtils.throw("cease");
 };
 
 exports.trimAnnotations = (annotationObj) => {
