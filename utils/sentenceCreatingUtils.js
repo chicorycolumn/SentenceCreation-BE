@@ -2,7 +2,6 @@ const otUtils = require("./objectTraversingUtils.js");
 const gpUtils = require("./generalPurposeUtils.js");
 const clUtils = require("./zerothOrder/consoleLoggingUtils.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
-const ivUtils = require("./secondOrder/inputValidationUtils.js");
 const aaUtils = require("./auxiliaryAttributeUtils.js");
 const scUtils = require("./sentenceCreatingUtils.js");
 const refObj = require("./reference/referenceObjects.js");

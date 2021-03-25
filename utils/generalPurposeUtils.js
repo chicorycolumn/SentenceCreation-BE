@@ -1,5 +1,3 @@
-const lfUtils = require("./lemmaFilteringUtils.js");
-const otUtils = require("./objectTraversingUtils.js");
 const gpUtils = require("./generalPurposeUtils.js");
 const clUtils = require("./zerothOrder/consoleLoggingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
