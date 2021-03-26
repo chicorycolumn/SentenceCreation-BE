@@ -229,10 +229,9 @@ exports.filterAnnotationsOnStCh = (
   answerSentenceData,
   questionOutputArr
 ) => {
-  let { structureChunk } = questionOutputUnit;
-  //Zeta: Change structureChunk all mentions to questionStructureChunk
+  let questionStructureChunk = questionOutputUnit.structureChunk;
 
-  if (!structureChunk.annotations || !answerSentenceData) {
+  if (!questionStructureChunk.annotations || !answerSentenceData) {
     return;
   }
 
@@ -251,14 +250,14 @@ exports.filterAnnotationsOnStCh = (
   //   then delete/block the gender annotation.
 
   console.log("weer", {
-    structureChunk,
+    questionStructureChunk,
     languagesObj,
     answerSentenceData,
     questionOutputArr,
   });
 
   let correspondingAnswerChunks = [];
-  let { chunkId } = structureChunk;
+  let { chunkId } = questionStructureChunk;
   let { answerLanguage, questionLanguage } = languagesObj;
 
   answerSentenceData.answerOutputArrays.forEach((outputArray) => {
@@ -288,15 +287,15 @@ exports.filterAnnotationsOnStCh = (
       "[0m"
   );
 
-  Object.keys(structureChunk.annotations).forEach((annotationKey) => {
-    if (typeof structureChunk.annotations[annotationKey] !== "string") {
+  Object.keys(questionStructureChunk.annotations).forEach((annotationKey) => {
+    if (typeof questionStructureChunk.annotations[annotationKey] !== "string") {
       console.log(
         "[1;31m " +
-          `ylam filterAnnotationsOnStCh: "${structureChunk.chunkId}" stCh should have had STRING for annotationKey "${annotationKey}"` +
+          `ylam filterAnnotationsOnStCh: "${questionStructureChunk.chunkId}" stCh should have had STRING for annotationKey "${annotationKey}"` +
           "[0m"
       );
       clUtils.throw(
-        `#ERR ylam filterAnnotationsOnStCh. structureChunk.annotations[annotationKey]: "${structureChunk.annotations[annotationKey]}"`
+        `#ERR ylam filterAnnotationsOnStCh. questionStructureChunk.annotations[annotationKey]: "${questionStructureChunk.annotations[annotationKey]}"`
       );
     }
 
@@ -310,12 +309,12 @@ exports.filterAnnotationsOnStCh = (
 
     console.log("zkyb filterAnnotationsOnStCh", {
       answerLanguage,
-      "structureChunk.wordtype": structureChunk.wordtype,
+      "questionStructureChunk.wordtype": questionStructureChunk.wordtype,
     });
 
     let conditionsOnWhichToBlockAnnotations =
       refObj.conditionsOnWhichToBlockAnnotations[answerLanguage][
-        structureChunk.wordtype
+        questionStructureChunk.wordtype
       ];
 
     console.log(
@@ -358,7 +357,7 @@ exports.filterAnnotationsOnStCh = (
                 console.log(
                   "[1;35m " +
                     "nyjw filterAnnotationsOnStCh: On stCh " +
-                    structureChunk.chunkId +
+                    questionStructureChunk.chunkId +
                     " I will delete the " +
                     annotationKey +
                     " annotation because one of the answer stChs includes " +
@@ -381,15 +380,15 @@ exports.filterAnnotationsOnStCh = (
 
         console.log(
           "[1;30m " +
-            `vfge filterAnnotationsOnStCh "${structureChunk.chunkId}" ABZ Late stage DELETION of annotation "${annotationKey}" which is "${structureChunk.annotations[annotationKey]}"` +
+            `vfge filterAnnotationsOnStCh "${questionStructureChunk.chunkId}" ABZ Late stage DELETION of annotation "${annotationKey}" which is "${questionStructureChunk.annotations[annotationKey]}"` +
             "[0m"
         );
 
-        delete structureChunk.annotations[annotationKey];
+        delete questionStructureChunk.annotations[annotationKey];
       } else {
         console.log(
           "[1;32m " +
-            `dyzx filterAnnotationsOnStCh "${structureChunk.chunkId}" ABZ Late stage PASSING of annotation "${annotationKey}" which is "${structureChunk.annotations[annotationKey]}"` +
+            `dyzx filterAnnotationsOnStCh "${questionStructureChunk.chunkId}" ABZ Late stage PASSING of annotation "${annotationKey}" which is "${questionStructureChunk.annotations[annotationKey]}"` +
             "[0m"
         );
       }
