@@ -1338,7 +1338,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "ver-1-was",
-        agreeWith: "nou-1-doctor",
+        agreeWith: "nou-2-doctor",
         specificLemmas: ["być"],
         tenseDescription: ["past pf"],
       },

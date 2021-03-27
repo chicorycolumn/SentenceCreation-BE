@@ -863,7 +863,7 @@ describe("/api", () => {
     });
   });
 
-  describe.only("/palette - Stage 17-iii: Possessive pronouns and MGNs. EdusMgn", () => {
+  describe("/palette - Stage 17-iii: Possessive pronouns and MGNs. EdusMgn", () => {
     it("#pal17-07a GET 200 YES: Engpol. Hard-specify an MGN's gender (EdusMgn dummy run).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -1102,7 +1102,7 @@ describe("/api", () => {
           );
         });
     });
-    it.only("#pal17-09a GET 200 YES: Engpol. One annotation absent as EdusMgn.", () => {
+    it("#pal17-09a GET 200 YES: Engpol. One annotation absent as EdusMgn.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1179,11 +1179,21 @@ describe("/api", () => {
         .then((res) => {
           let ref = [
             {
-              ENG: ["My doctor was a woman."],
+              ENG: [
+                "My doctor's doctor was a woman.",
+                "My doctor's doctor had been a woman.",
+                "My doctor's doctor has been a woman.",
+                "My doctor's doctor was being a woman.",
+              ],
               POL: "Lekarka mojego lekarza była kobietą.",
             },
             {
-              ENG: ["My doctor was a woman."],
+              ENG: [
+                "My doctor's doctor was a woman.",
+                "My doctor's doctor had been a woman.",
+                "My doctor's doctor has been a woman.",
+                "My doctor's doctor was being a woman.",
+              ],
               POL: "Lekarka mojej lekarki była kobietą.",
             },
           ];
@@ -1211,14 +1221,25 @@ describe("/api", () => {
         .then((res) => {
           let ref = [
             {
-              ENG: ["My doctor was a woman."],
+              ENG: [
+                "My doctor's doctor was a woman.",
+                "My doctor's doctor had been a woman.",
+                "My doctor's doctor has been a woman.",
+                "My doctor's doctor was being a woman.",
+              ],
               POL: "Lekarka mojego lekarza była kobietą.",
             },
             {
-              ENG: ["My doctor was a woman."],
+              ENG: [
+                "My doctor's doctor was a woman.",
+                "My doctor's doctor had been a woman.",
+                "My doctor's doctor has been a woman.",
+                "My doctor's doctor was being a woman.",
+              ],
               POL: "Lekarka mojej lekarki była kobietą.",
             },
           ];
+
           testingUtils.checkTranslationsOfGivenRef(
             res,
             ref,

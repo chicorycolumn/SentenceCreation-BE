@@ -155,6 +155,7 @@ exports.fetchPalette = (req) => {
       console.log(" ");
     }
 
+    //gamma
     if (false && "decisive decant check") {
       Object.keys(structureChunk).forEach((featureKey) => {
         let featureValue = structureChunk[featureKey];
