@@ -325,8 +325,6 @@ exports.fetchPalette = (req) => {
           return x.map((y) => y.selectedWord);
         })
       );
-      // console.log("hbb2", answerSentenceData.sentenceFormula.sentenceStructure);
-      // clUtils.throw();
 
       ///////////////////////////////////////////////kp Decisive Decant parallel
       answerSentenceData.answerOutputArrays =

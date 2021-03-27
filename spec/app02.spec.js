@@ -2787,7 +2787,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13B-03a GET 200 YES: Engpol. Another more interesting sentence with Pronouns.", () => {
+    it.only("#pal13B-03a GET 200 YES: Engpol. Another more interesting sentence with Pronouns.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2874,6 +2874,81 @@ describe("/api", () => {
             },
             {
               ENG: "Mother gave us mirrors.",
+              POL: ["Matka dała nam zwierciadła.", "Matka dała nam lustra."],
+            },
+            //
+            {
+              ENG: "Father gave apples to me.",
+              POL: ["Ojciec dał mi jabłka.", "Ojciec dał mnie jabłka."],
+            },
+            {
+              ENG: "Father gave books to me.",
+              POL: ["Ojciec dał mi książki.", "Ojciec dał mnie książki."],
+            },
+            {
+              ENG: "Father gave onions to me.",
+              POL: ["Ojciec dał mi cebule.", "Ojciec dał mnie cebule."],
+            },
+            {
+              ENG: "Father gave mirrors to me.",
+              POL: [
+                "Ojciec dał mi zwierciadła.",
+                "Ojciec dał mi lustra.",
+                "Ojciec dał mnie zwierciadła.",
+                "Ojciec dał mnie lustra.",
+              ],
+            },
+            {
+              ENG: "Father gave apples to us.",
+              POL: ["Ojciec dał nam jabłka."],
+            },
+            {
+              ENG: "Father gave books to us.",
+              POL: ["Ojciec dał nam książki."],
+            },
+            {
+              ENG: "Father gave onions to us.",
+              POL: ["Ojciec dał nam cebule."],
+            },
+            {
+              ENG: "Father gave mirrors to us.",
+              POL: ["Ojciec dał nam zwierciadła.", "Ojciec dał nam lustra."],
+            },
+            {
+              ENG: "Mother gave apples to me.",
+              POL: ["Matka dała mi jabłka.", "Matka dała mnie jabłka."],
+            },
+            {
+              ENG: "Mother gave books to me.",
+              POL: ["Matka dała mi książki.", "Matka dała mnie książki."],
+            },
+            {
+              ENG: "Mother gave onions to me.",
+              POL: ["Matka dała mi cebule.", "Matka dała mnie cebule."],
+            },
+            {
+              ENG: "Mother gave mirrors to me.",
+              POL: [
+                "Matka dała mi zwierciadła.",
+                "Matka dała mi lustra.",
+                "Matka dała mnie zwierciadła.",
+                "Matka dała mnie lustra.",
+              ],
+            },
+            {
+              ENG: "Mother gave apples to us.",
+              POL: ["Matka dała nam jabłka."],
+            },
+            {
+              ENG: "Mother gave books to us.",
+              POL: ["Matka dała nam książki."],
+            },
+            {
+              ENG: "Mother gave onions to us.",
+              POL: ["Matka dała nam cebule."],
+            },
+            {
+              ENG: "Mother gave mirrors to us.",
               POL: ["Matka dała nam zwierciadła.", "Matka dała nam lustra."],
             },
           ];

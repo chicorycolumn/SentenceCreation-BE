@@ -238,7 +238,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "red door singular",
     sentenceFormulaId: "ENG-00-107a",
-    translations: { POL: ["POL-00-107"] }, //Yes, this 107a should go to 107.
+    translations: { POL: ["POL-00-107"] },
     sentenceStructure: [
       {
         chunkId: "adj-1",
@@ -500,9 +500,7 @@ exports.sentenceFormulasBank = [
       { chunkId: "fix-3", value: "to" },
     ],
     primaryOrders: [["nou-1", "ver-1", "pro-1", "nou-2"]],
-    additionalOrders: [
-      // ["nou-1", "ver-1", "nou-2", "fix-3", "pro-1"]
-    ],
+    additionalOrders: [["nou-1", "ver-1", "nou-2", "fix-3", "pro-1"]],
   },
   {
     sentenceFormulaSymbol: "112a familymember gave me thing",
