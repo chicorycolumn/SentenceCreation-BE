@@ -123,6 +123,12 @@ exports.removeAnnotationsByAOCs = (
   //The doctor (f) and her book.    --> 'doctor' has an allDependent 'her' which obviates its gender annotation.
   //The sheep (sing.) and its grass. --> 'sheep' has an allDependent 'its' which obviates its number annotation.
 
+  //prosMGN
+  //1. For this stCh, get all q output units that are Dependent/PHD of this.
+  //2. Filter to just the ones with wordtype pronoun.
+  //3. If the selectedWord in any of those units is unique between genders in its lemma object
+  //   (eg "his" is unique as no other gender key holds this value, whereas "their" is not unique as two genders keys hold it)
+  //   then delete/block the gender annotation.
   let headWordtype = "noun";
   let allDependentWordtype = "pronoun";
 
@@ -222,8 +228,11 @@ exports.removeAnnotationsByAOCs = (
               )
             ) {
               console.log(
-                `mekw removeAnnotationsByAOCs. Removing "${inflectionTyype}" anno from ${questionOutputUnit.structureChunk.chunkId}`
+                "[1;30m " +
+                  `kzia removeAnnotationsByAOCs "${questionOutputUnit.structureChunk.chunkId}" ABZ Late stage DELETION of annotation "${inflectionTyype}" which is "${questionOutputUnit.structureChunk.annotations[inflectionTyype]}"` +
+                  "[0m"
               );
+
               delete questionOutputUnit.structureChunk.annotations[
                 inflectionTyype
               ];
@@ -233,24 +242,9 @@ exports.removeAnnotationsByAOCs = (
       }
     );
   }
-
-  let pronounObviatesAnnotationsConditions = {
-    POL: {
-      //For all nouns...
-      noun: [
-        {
-          //...if there is a connected pronoun
-          wordtypeOfConnectedWord: ["pronoun"],
-          // and it is unique in its lObj re such feature (eg "his" is unique for gender but "their" is not)
-          potentiallyObviatedAnnotations: ["gender", "number"],
-          // ...then block that annotation.
-        },
-      ],
-    },
-  };
 };
 
-exports.filterAnnotationsOnStCh = (
+exports.removeAnnotationsByRefConditions = (
   questionOutputUnit,
   languagesObj,
   answerSentenceData,
@@ -261,27 +255,6 @@ exports.filterAnnotationsOnStCh = (
   if (!questionStructureChunk.annotations || !answerSentenceData) {
     return;
   }
-
-  //nownow prosMGN
-  //I would like to add a conditionsOnWhichToBlockAnnotation, to both languages.
-  //Where if there is a connected pronoun, which will reveal the gender, so "his" "her" "its", but not "their"
-
-  //Ideally this would go on ref conditionsOnWhichToBlockAnnotations, but it's just too fiddly.
-  //
-  //So what we need to do is:
-  //
-  //1. For this stCh, get all q output units that are Dependent/PHD of this.
-  //2. Filter to just the ones with wordtype pronoun.
-  //3. If the selectedWord in any of those units is unique between genders in its lemma object
-  //   (eg "his" is unique as no other gender key holds this value, whereas "their" is not unique as two genders keys hold it)
-  //   then delete/block the gender annotation.
-
-  console.log("weer", {
-    questionStructureChunk,
-    languagesObj,
-    answerSentenceData,
-    questionOutputArr,
-  });
 
   let correspondingAnswerChunks = [];
   let { chunkId } = questionStructureChunk;
@@ -310,7 +283,7 @@ exports.filterAnnotationsOnStCh = (
 
   console.log(
     "[1;35m " +
-      "lbbq filterAnnotationsOnStCh>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" +
+      "lbbq removeAnnotationsByRefConditions>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" +
       "[0m"
   );
 
@@ -318,23 +291,23 @@ exports.filterAnnotationsOnStCh = (
     if (typeof questionStructureChunk.annotations[annotationKey] !== "string") {
       console.log(
         "[1;31m " +
-          `ylam filterAnnotationsOnStCh: "${questionStructureChunk.chunkId}" stCh should have had STRING for annotationKey "${annotationKey}"` +
+          `ylam removeAnnotationsByRefConditions: "${questionStructureChunk.chunkId}" stCh should have had STRING for annotationKey "${annotationKey}"` +
           "[0m"
       );
       clUtils.throw(
-        `#ERR ylam filterAnnotationsOnStCh. questionStructureChunk.annotations[annotationKey]: "${questionStructureChunk.annotations[annotationKey]}"`
+        `#ERR ylam removeAnnotationsByRefConditions. questionStructureChunk.annotations[annotationKey]: "${questionStructureChunk.annotations[annotationKey]}"`
       );
     }
 
     console.log(
       "[1;33m " +
-        "pzlz filterAnnotationsOnStCh q00" +
+        "pzlz removeAnnotationsByRefConditions q00" +
         " annotationKey: " +
         annotationKey +
         "[0m"
     );
 
-    console.log("zkyb filterAnnotationsOnStCh", {
+    console.log("zkyb removeAnnotationsByRefConditions", {
       answerLanguage,
       "questionStructureChunk.wordtype": questionStructureChunk.wordtype,
     });
@@ -345,7 +318,7 @@ exports.filterAnnotationsOnStCh = (
       ];
 
     console.log(
-      "duqy filterAnnotationsOnStCh: conditionsOnWhichToBlockAnnotations",
+      "duqy removeAnnotationsByRefConditions: conditionsOnWhichToBlockAnnotations",
       conditionsOnWhichToBlockAnnotations
     );
 
@@ -382,8 +355,7 @@ exports.filterAnnotationsOnStCh = (
                 })
               ) {
                 console.log(
-                  "[1;35m " +
-                    "nyjw filterAnnotationsOnStCh: On stCh " +
+                  "nyjw removeAnnotationsByRefConditions: On stCh " +
                     questionStructureChunk.chunkId +
                     " I will delete the " +
                     annotationKey +
@@ -391,8 +363,7 @@ exports.filterAnnotationsOnStCh = (
                     featureKey +
                     " of " +
                     featureValue +
-                    ", which was a condition specified to block the annotation." +
-                    "[0m"
+                    ", which was a condition specified to block the annotation."
                 );
 
                 return true;
@@ -402,12 +373,8 @@ exports.filterAnnotationsOnStCh = (
         })
       ) {
         console.log(
-          "[1;35m " + "amnf filterAnnotationsOnStCh: Deleting it now!" + "[0m"
-        );
-
-        console.log(
           "[1;30m " +
-            `vfge filterAnnotationsOnStCh "${questionStructureChunk.chunkId}" ABZ Late stage DELETION of annotation "${annotationKey}" which is "${questionStructureChunk.annotations[annotationKey]}"` +
+            `kzib removeAnnotationsByRefConditions "${questionStructureChunk.chunkId}" ABZ Late stage DELETION of annotation "${annotationKey}" which is "${questionStructureChunk.annotations[annotationKey]}"` +
             "[0m"
         );
 
@@ -415,11 +382,11 @@ exports.filterAnnotationsOnStCh = (
       } else {
         console.log(
           "[1;32m " +
-            `dyzx filterAnnotationsOnStCh "${questionStructureChunk.chunkId}" ABZ Late stage PASSING of annotation "${annotationKey}" which is "${questionStructureChunk.annotations[annotationKey]}"` +
+            `kzic removeAnnotationsByRefConditions "${questionStructureChunk.chunkId}" ABZ Late stage PASSING of annotation "${annotationKey}" which is "${questionStructureChunk.annotations[annotationKey]}"` +
             "[0m"
         );
       }
     }
   });
-  console.log("[1;35m " + "/filterAnnotationsOnStCh" + "[0m");
+  console.log("[1;35m " + "/removeAnnotationsByRefConditions" + "[0m");
 };

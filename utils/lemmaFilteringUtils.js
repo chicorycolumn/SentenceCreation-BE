@@ -6,7 +6,7 @@ const lfUtils = require("./lemmaFilteringUtils.js");
 
 exports.filterWithin_PHD = (
   lemmaObject,
-  structureChunk,
+  PHDstructureChunk,
   currentLanguage,
   multipleMode,
   outputArray
@@ -31,12 +31,14 @@ exports.filterWithin_PHD = (
             Array.isArray(PHD_conditionValue) &&
             PHD_conditionValue.every(
               (arrayItem) =>
-                structureChunk[PHD_conditionKey] &&
-                structureChunk[PHD_conditionKey].includes(arrayItem)
+                PHDstructureChunk[PHD_conditionKey] &&
+                PHDstructureChunk[PHD_conditionKey].includes(arrayItem)
             )
           ) {
             return true;
-          } else if (structureChunk[PHD_conditionKey] === PHD_conditionValue) {
+          } else if (
+            PHDstructureChunk[PHD_conditionKey] === PHD_conditionValue
+          ) {
             return true;
           } else {
             return false;
@@ -51,13 +53,13 @@ exports.filterWithin_PHD = (
   if ("check") {
     if (!PHD_type) {
       clUtils.throw(
-        "pwir filterWithin_PHD. Failed  postHocDependentChunkWordtypes[currentLanguage].forEach(PHD_dataObj => passing the PHD_dataObj.conditions)"
+        "pwir filterWithin_PHD. Failed postHocDependentChunkWordtypes[currentLanguage].forEach(PHD_dataObj => passing the PHD_dataObj.conditions)"
       );
     }
 
     if (
-      !structureChunk.specificLemmas ||
-      structureChunk.specificLemmas.length !== 1
+      !PHDstructureChunk.specificLemmas ||
+      PHDstructureChunk.specificLemmas.length !== 1
     ) {
       clUtils.throw(
         "#ERR ohmk lf:filterWithin_PHD. PHD-stCh should have exactly one value in specificLemmas arr."
@@ -73,14 +75,14 @@ exports.filterWithin_PHD = (
 
   langUtils.preprocessLemmaObjectsMajor(
     [lemmaObjectCopy],
-    structureChunk,
+    PHDstructureChunk,
     true,
     currentLanguage
   );
 
   console.log("terx filterWithin_PHD", {
     lemmaObjectCopy,
-    structureChunk,
+    PHDstructureChunk,
     currentLanguage,
     multipleMode,
     outputArray,
@@ -112,7 +114,7 @@ exports.filterWithin_PHD = (
     let headOutputUnit = outputArray.find(
       (outputUnit) =>
         outputUnit.structureChunk.chunkId ===
-        structureChunk[postHocAgreeWithKey]
+        PHDstructureChunk[postHocAgreeWithKey]
     );
 
     let drillPathOfHead = gpUtils.copyWithoutReference(
@@ -132,22 +134,22 @@ exports.filterWithin_PHD = (
       );
     }
 
-    if (structureChunk.form) {
-      if (structureChunk.form.length !== 1) {
+    if (PHDstructureChunk.form) {
+      if (PHDstructureChunk.form.length !== 1) {
         clUtils.throw(
-          "#ERR cwyd filterWithin_PHD. Expected structureChunk.form to have length of 1: " +
-            structureChunk.chunkId
+          "#ERR cwyd filterWithin_PHD. Expected PHDstructureChunk.form to have length of 1: " +
+            PHDstructureChunk.chunkId
         );
       }
 
       console.log(
-        `ijef filterWithin_PHD. Updating drillPathOfHead with form "${structureChunk.form[0]}"`
+        `ijef filterWithin_PHD. Updating drillPathOfHead with form "${PHDstructureChunk.form[0]}"`
       );
-      drillPathOfHead.push(["form", structureChunk.form[0]]);
+      drillPathOfHead.push(["form", PHDstructureChunk.form[0]]);
     }
 
     if (
-      gpUtils.getWordtypeOfAgreeWith(structureChunk, postHocAgreeWithKey) ===
+      gpUtils.getWordtypeOfAgreeWith(PHDstructureChunk, postHocAgreeWithKey) ===
       "noun"
     ) {
       let personArr = drillPathOfHead.find((arr) => arr[0] === "person");
@@ -193,7 +195,7 @@ exports.filterWithin_PHD = (
     }
 
     // console.log(
-    //   `dxxg lf:filterWithin_PHD. After "${postHocAgreeWithKey}" for "${structureChunk.chunkId}" the drillPathOfHead is finally`,
+    //   `dxxg lf:filterWithin_PHD. After "${postHocAgreeWithKey}" for "${PHDstructureChunk.chunkId}" the drillPathOfHead is finally`,
     //   drillPathOfHead
     // );
     // console.log("ylur filterWithin_PHD. source", source);
@@ -209,7 +211,7 @@ exports.filterWithin_PHD = (
           featureValue,
           source,
           currentLanguage,
-          structureChunk,
+          PHDstructureChunk,
           "filterWithin_PHD -> postHocInflectionChain.forEach"
         );
       }
@@ -224,14 +226,13 @@ exports.filterWithin_PHD = (
 
       //Update drillPath, for both ...Pri and ...Sec
 
-      //Update stCh with these featureKeys and featureValues, but just for postHocAgreeWithPrimary.
+      console.log("viko", { postHocAgreeWithKey }, drillPathOfHead);
+
       if (/.*Primary/.test(postHocAgreeWithKey)) {
         lfUtils.updateStChByInflections(
-          { structureChunk, drillPath: drillPathOfHead },
+          { structureChunk: PHDstructureChunk, drillPath: drillPathOfHead },
           currentLanguage
         );
-
-        drillPath.push([featureKey, featureValue]);
       } else if (/.*Secondary/.test(postHocAgreeWithKey)) {
         drillPathSecondary.push([featureKey, featureValue]);
       } else if (/.*Tertiary/.test(postHocAgreeWithKey)) {
@@ -241,8 +242,32 @@ exports.filterWithin_PHD = (
           `mezp filterWithin_PHD. Malformed postHocAgreeWithKey: "${postHocAgreeWithKey}".`
         );
       }
+
+      //Update stCh with these featureKeys and featureValues, but just for postHocAgreeWithPrimary.
+      // if (/.*Primary/.test(postHocAgreeWithKey)) {
+      //   lfUtils.updateStChByInflections(
+      //     { structureChunk: PHDstructureChunk, drillPath: drillPathOfHead },
+      //     currentLanguage
+      //   );
+
+      //   drillPath.push([featureKey, featureValue]);
+      // } else if (/.*Secondary/.test(postHocAgreeWithKey)) {
+      //   drillPathSecondary.push([featureKey, featureValue]);
+      // } else if (/.*Tertiary/.test(postHocAgreeWithKey)) {
+      //   drillPathTertiary.push([featureKey, featureValue]);
+      // } else {
+      //   clUtils.throw(
+      //     `mezp filterWithin_PHD. Malformed postHocAgreeWithKey: "${postHocAgreeWithKey}".`
+      //   );
+      // }
     });
   });
+
+  console.log("-----------------------tiko");
+  console.log("drillPath", drillPath);
+  console.log("drillPathSecondary", drillPathSecondary);
+  console.log("drillPathTertiary", drillPathTertiary);
+  console.log("--------------------------");
 
   let sourceArr = [];
   let resArr = [];
@@ -297,12 +322,13 @@ exports.filterWithin_PHD = (
 
   console.log(
     "[1;35m " +
-      "blij lf:filterWithin_PHD At the END lf:filterWithin PHD section, structureChunk is:" +
+      "blij lf:filterWithin_PHD At the END lf:filterWithin PHD section, PHDstructureChunk is:" +
       "[0m",
-    structureChunk
+    PHDstructureChunk
   );
   console.log("[1;35m " + "blij lf:filterWithin_PHD resArr is" + "[0m", resArr);
 
+  // clUtils.throw("niko");
   return resArr;
 };
 

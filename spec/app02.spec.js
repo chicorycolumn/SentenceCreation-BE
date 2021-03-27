@@ -333,8 +333,8 @@ describe("/api", () => {
     });
   });
 
-  describe("/palette - Stage 17-ii: Possessive pronouns and MGNs. PP below MGN. ProsMgn.", () => {
-    it("#pal17-04a GET 200 YES: Engpol. Sentence with 2 of same MGN. Annotations expected. Eventually this should fail so that 4b succeeds.", () => {
+  describe.only("/palette - Stage 17-ii: Possessive pronouns and MGNs. PP below MGN. ProsMgn.", () => {
+    xit("#pal17-04a GET 200 YES: Engpol. Sentence with 2 of same MGN. Annotations expected. Eventually this should fail so that 4b succeeds.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -394,7 +394,7 @@ describe("/api", () => {
         });
     });
     //nownow
-    it.only("#pal17-04b GET 200 YES: Engpol. Sentence with 2 of same MGN. Some annotations expected. But eventually, this should succeed, as ProsMgn.", () => {
+    it("#pal17-04b GET 200 YES: Engpol. Sentence with 2 of same MGN. Some annotations expected. But eventually, this should succeed, as ProsMgn.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -453,7 +453,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal17-04c GET 200 YES: Engpol. Sentence with 2 of same MGN. pleaseDontSpecify should be blocked for ProsMgn MGN but not for other MGN.", () => {
+    it.only("#pal17-04c GET 200 YES: Engpol. Sentence with 2 of same MGN. pleaseDontSpecify should be blocked for ProsMgn MGN but not for other MGN.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -475,6 +475,11 @@ describe("/api", () => {
                 "Zobaczyłam mojego lekarza i jego lekarza.",
                 "Zobaczyłem mojego lekarza i jego lekarkę.",
                 "Zobaczyłam mojego lekarza i jego lekarkę.",
+              ],
+            },
+            {
+              ENG: "I saw my doctor and her doctor.",
+              POL: [
                 "Zobaczyłem moją lekarkę i jej lekarza.",
                 "Zobaczyłam moją lekarkę i jej lekarza.",
                 "Zobaczyłem moją lekarkę i jej lekarkę.",
@@ -2411,7 +2416,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal14-04a GET 200 YES: Engpol. SPECIFIED. The doctor gave me her book.", () => {
+    it("#pal14-04a GET 200 YES: Engpol. The doctor gave me her book. Gender annotation is added when there's no AOC, because pronoun is 'their' so doesn't reveal gender. However in singular, the pronouns 'her' and 'his' reveal the gender (are AOCs) so no gender annotation.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2426,14 +2431,14 @@ describe("/api", () => {
         .then((res) => {
           let ref = [
             {
-              ENG: "The doctor (female) gave me her book.",
+              ENG: "The doctor gave me her book.",
               POL: [
                 "Lekarka dała mi jej książkę.",
                 "Lekarka dała mnie jej książkę.",
               ],
             },
             {
-              ENG: "The doctor (male) gave me his book.",
+              ENG: "The doctor gave me his book.",
               POL: [
                 "Lekarz dał mi jego książkę.",
                 "Lekarz dał mnie jego książkę.",
@@ -2485,14 +2490,16 @@ describe("/api", () => {
         .then((res) => {
           let ref = [
             {
-              ENG: "The doctor (female) gave me her book.",
+              // ENG: "The doctor (female) gave me her book.",
+              ENG: "The doctor gave me her book.",
               POL: [
                 "Lekarka dała mi jej książkę.",
                 "Lekarka dała mnie jej książkę.",
               ],
             },
             {
-              ENG: "The doctor (male) gave me his book.",
+              // ENG: "The doctor (male) gave me his book.",
+              ENG: "The doctor gave me his book.",
               POL: [
                 "Lekarz dał mi jego książkę.",
                 "Lekarz dał mnie jego książkę.",

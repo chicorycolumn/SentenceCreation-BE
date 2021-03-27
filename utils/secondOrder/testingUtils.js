@@ -788,7 +788,7 @@ exports.checkTranslationsOfGivenRef = (
 
     ref.forEach((item) => {
       if (item[questionLanguage] === actualQuestionSentence) {
-        expect(item[answerLanguage]).to.have.members(answerSentenceArr);
+        expect(answerSentenceArr).to.have.members(item[answerLanguage]);
         testActivated = true;
       }
     });

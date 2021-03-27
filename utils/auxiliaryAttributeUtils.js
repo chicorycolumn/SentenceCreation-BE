@@ -229,19 +229,22 @@ exports.getFormattedAnnoObj = (
   let { structureChunk } = questionOutputUnit;
   //Zeta: Change structureChunk all mentions to questionStructureChunk
 
+  console.log("bbbc");
   refFxn.removeAnnotationsByAOCs(
     questionOutputUnit,
     languagesObj,
     answerSentenceData,
     questionOutputArr
   );
+  console.log("bbbd");
 
-  refFxn.filterAnnotationsOnStCh(
+  refFxn.removeAnnotationsByRefConditions(
     questionOutputUnit,
     languagesObj,
     answerSentenceData,
     questionOutputArr
   );
+  console.log("bbbe");
 
   let annoObj = {};
 
