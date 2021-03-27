@@ -1250,7 +1250,7 @@ describe("/api", () => {
     });
   });
 
-  xdescribe("/palette - Stage 17-iv: Possessive pronouns and MGNs. MGN to agree with pronoun.", () => {
+  describe.only("/palette - Stage 17-iv: Possessive pronouns and MGNs. MGN to agree with pronoun.", () => {
     it("#pal17-10a GET 200 YES: Engpol. I was a doctor. MGN to agree with pronoun.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -1278,13 +1278,77 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal17-10b GET 200 YES: Engpol. I was a doctor. MGN to agree with pronoun.", () => {
+    it("#pal17-10b GET 200 YES: Engpol. I was a doctor. MGN to agree with pronoun. pleaseDontSpecify", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "117 I was a doctor",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "I (male) was a doctor.",
+              POL: ["Byłem lekarzem."],
+            },
+            {
+              ENG: "I (female) was a doctor.",
+              POL: ["Byłam lekarką."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal17-10c GET 200 YES: Poleng. I was a doctor. MGN to agree with pronoun.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
       return request(app)
         .get("/api/palette")
         .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "117 I was a doctor",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["I was a doctor."],
+              POL: "Byłem lekarzem.",
+            },
+            {
+              ENG: ["I was a doctor."],
+              POL: "Byłam lekarką.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal17-10d GET 200 YES: Poleng. I was a doctor. MGN to agree with pronoun. pleaseDontSpecify but with no effect expected.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "117 I was a doctor",

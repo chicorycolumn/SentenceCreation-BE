@@ -1189,7 +1189,7 @@ exports.sentenceFormulasBank = [
         specificLemmas: ["lekarz", "lekarka"],
         gcase: ["nom"],
         gender: ["f"],
-        //alpha - add EBA for symmetry and check it doesn't break anything
+        educatorBlocksAnnotationsForTheseFeatures: ["gender"], //Just for symmetry and so I know it doesn't break anything.
       },
       {
         chunkId: "ver-1-was",
@@ -1277,6 +1277,7 @@ exports.sentenceFormulasBank = [
         specificLemmas: ["lekarz", "lekarka"],
         gcase: ["nom"],
         gender: ["f"],
+        educatorBlocksAnnotationsForTheseFeatures: ["gender"], //Just for symmetry and so I know it doesn't break anything.
       },
       {
         chunkId: "ver-1-was",
@@ -1335,6 +1336,7 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
         specificLemmas: ["lekarz", "lekarka"],
         gender: ["f"],
+        educatorBlocksAnnotationsForTheseFeatures: ["gender"], //Just for symmetry and so I know it doesn't break anything.
       },
       {
         chunkId: "ver-1-was",

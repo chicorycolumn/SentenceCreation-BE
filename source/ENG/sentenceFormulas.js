@@ -837,8 +837,6 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
         specificLemmas: ["doctor"],
         gender: ["f"],
-        // educatorBlocksAnnotationsForTheseFeatures: ["gender"],
-        // ^ Because here the educator knows that context makes this MGN's gender unambiguous.
       },
     ],
     primaryOrders: [["pro-2-my", "nou-1-doctor"]],
