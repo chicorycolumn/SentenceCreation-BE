@@ -2,6 +2,7 @@ const gpUtils = require("./generalPurposeUtils.js");
 const uUtils = require("./universalUtils.js");
 const clUtils = require("./zerothOrder/consoleLoggingUtils.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
+const frUtils = require("./formattingResponseUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 const otUtils = require("./objectTraversingUtils.js");
 const allLangUtils = require("./allLangUtils.js");
@@ -420,7 +421,7 @@ exports.findMatchingLemmaObjectThenWord = (
       } = selectedFormObject;
 
       selectedWordArr.forEach((selectedWord) => {
-        let outputUnit = otUtils.createOutputUnit(
+        let outputUnit = frUtils.createOutputUnit(
           errorInSentenceCreation,
           null,
           selectedWord,
@@ -561,7 +562,7 @@ exports.findMatchingLemmaObjectThenWord = (
               (gpUtils.isTerminusObject(selectedWord) &&
                 selectedWord.processOnlyAtEnd)
             ) {
-              let outputUnit = otUtils.createOutputUnit(
+              let outputUnit = frUtils.createOutputUnit(
                 errorInSentenceCreation,
                 errorInDrilling,
                 selectedWord,
@@ -577,7 +578,7 @@ exports.findMatchingLemmaObjectThenWord = (
               );
 
               allWords.forEach((word) => {
-                let outputUnit = otUtils.createOutputUnit(
+                let outputUnit = frUtils.createOutputUnit(
                   errorInSentenceCreation,
                   errorInDrilling,
                   word,
@@ -682,7 +683,7 @@ exports.findMatchingLemmaObjectThenWord = (
           console.log(x);
         });
 
-        let mergedGenderOutputUnit = otUtils.createMergedGenderOutputUnit(
+        let mergedGenderOutputUnit = frUtils.createMergedGenderOutputUnit(
           subArrayOfOutputUnits,
           currentLanguage
         );
@@ -776,7 +777,7 @@ exports.findMatchingLemmaObjectThenWord = (
         selectedWord = uUtils.selectRandom(additionalWords);
       }
 
-      let outputUnit = otUtils.createOutputUnit(
+      let outputUnit = frUtils.createOutputUnit(
         errorInSentenceCreation,
         errorInDrilling,
         selectedWord,
@@ -813,43 +814,6 @@ exports.findMatchingLemmaObjectThenWord = (
   }
 
   return arrayOfAllPossibleOutputUnits;
-};
-
-exports.createOutputUnit = (
-  errorInSentenceCreation,
-  errorInDrilling,
-  selectedWord,
-  structureChunk,
-  selectedLemmaObject,
-  drillPath,
-  drillPathSecondary,
-  drillPathTertiary
-) => {
-  if (errorInDrilling || !selectedWord) {
-    console.log(
-      "acsm createOutputUnit errorInSentenceCreation.errorMessage: A lemma object was indeed selected, but no word was found at the end of the give inflection chain."
-    );
-    errorInSentenceCreation.errorMessage =
-      "acsm createOutputUnit A lemma object was indeed selected, but no word was found at the end of the give inflection chain.";
-    return false;
-  }
-
-  let resultingOutputUnit = {
-    selectedLemmaObject,
-    selectedWord,
-    drillPath,
-    structureChunk: structureChunk,
-  };
-
-  if (drillPathSecondary) {
-    resultingOutputUnit.drillPathSecondary = drillPathSecondary;
-  }
-
-  if (drillPathTertiary) {
-    resultingOutputUnit.drillPathTertiary = drillPathTertiary;
-  }
-
-  return resultingOutputUnit;
 };
 
 exports.concoctNestedRoutes = (routesByLevelTarget, routesByLevelSource) => {
@@ -1224,56 +1188,6 @@ exports.doDrillPathsDifferOnlyByGender = (subArrayOfOutputUnits) => {
       return true;
     }
   }
-};
-
-exports.createMergedGenderOutputUnit = (
-  subArrayOfOutputUnits,
-  currentLanguage
-) => {
-  let mergedOutputUnit = uUtils.copyWithoutReference(subArrayOfOutputUnits[0]);
-
-  let newGenderArr = [
-    mergedOutputUnit.drillPath.find((pathArr) => pathArr[0] === "gender")[1],
-  ];
-
-  subArrayOfOutputUnits.slice(1).forEach((outputUnit) => {
-    let genderValue = outputUnit.drillPath.find(
-      (pathArr) => pathArr[0] === "gender"
-    )[1];
-
-    newGenderArr.push(genderValue);
-  });
-
-  console.log(
-    "dznt ot:findMatchingLemmaObjectThenWord newGenderArr",
-    newGenderArr
-  );
-
-  let metaGenderRef = refObj.metaFeatures[currentLanguage]["gender"];
-
-  let metaGenderResult;
-
-  Object.keys(metaGenderRef).forEach((metaGenderKey) => {
-    if (metaGenderResult) {
-      return;
-    }
-
-    let metaGenderTranslatedArr = metaGenderRef[metaGenderKey];
-
-    if (uUtils.areTwoFlatArraysEqual(newGenderArr, metaGenderTranslatedArr)) {
-      metaGenderResult = metaGenderKey;
-    }
-  });
-
-  console.log(
-    `zdxc ot:findMatchingLemmaObjectThenWord metaGenderResult: "${metaGenderResult}"`
-  );
-
-  mergedOutputUnit.drillPath.find(
-    (pathArr) => pathArr[0] === "gender"
-  )[1] = metaGenderResult;
-
-  return mergedOutputUnit;
 };
 
 exports.switchMetaFeatureForAWorkableConvertedFeature = (
