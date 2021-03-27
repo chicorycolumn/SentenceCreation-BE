@@ -6,7 +6,333 @@ const {
   giveRoutesAndTerminalValuesFromObject,
   findSynhomographs,
   findSinglePointMutationArray,
+  isThisValueUniqueAtThisLevelInLemmaObject,
 } = require("../utils/objectTraversingUtils.js");
+
+describe("isThisValueUniqueAtThisLevelInLemmaObject", () => {
+  let inputlObj1 = {
+    //links
+    translations: { ENG: ["PERSONAL"], POL: ["PERSONAL"] },
+    tags: [],
+    //selectors
+    lemma: "PERSONAL",
+    id: "pol-pro-001",
+    //notes
+
+    //inflections
+    inflections: {
+      pronoun: {
+        "1per": {
+          singular: {
+            m1: {
+              nom: "ja",
+              gen: "mnie",
+              dat: {
+                isTerminus: true,
+                processOnlyAtEnd: true,
+                unstressed: ["mi"],
+                stressed: ["mnie"],
+              },
+              acc: "mnie",
+              ins: "mną",
+              loc: "mnie",
+            },
+            f: {
+              nom: "ja",
+              gen: "mnie",
+              dat: {
+                isTerminus: true,
+                processOnlyAtEnd: true,
+                unstressed: ["mi"],
+                stressed: ["mnie"],
+              },
+              acc: "mnie",
+              ins: "mną",
+              loc: "mnie",
+            },
+          },
+          plural: {
+            virile: {
+              nom: "my",
+              gen: "nas",
+              dat: "nam",
+              acc: "nas",
+              ins: "nami",
+              loc: "nas",
+            },
+            nonvirile: {
+              nom: "my",
+              gen: "nas",
+              dat: "nam",
+              acc: "nas",
+              ins: "nami",
+              loc: "nas",
+            },
+          },
+        },
+        "2per": {
+          singular: {
+            m1: {
+              nom: "ty",
+              gen: {
+                isTerminus: true,
+                processOnlyAtEnd: true,
+                unstressed: ["cię"],
+                stressed: ["ciebie"],
+              },
+              dat: {
+                isTerminus: true,
+                processOnlyAtEnd: true,
+                unstressed: ["ci"],
+                stressed: ["tobie"],
+              },
+              acc: {
+                isTerminus: true,
+                processOnlyAtEnd: true,
+                unstressed: ["cię"],
+                stressed: ["ciebie"],
+              },
+              ins: "tobą",
+              loc: "tobie",
+            },
+            f: {
+              nom: "ty",
+              gen: {
+                isTerminus: true,
+                processOnlyAtEnd: true,
+                unstressed: ["cię"],
+                stressed: ["ciebie"],
+              },
+              dat: {
+                isTerminus: true,
+                processOnlyAtEnd: true,
+                unstressed: ["ci"],
+                stressed: ["tobie"],
+              },
+              acc: {
+                isTerminus: true,
+                processOnlyAtEnd: true,
+                unstressed: ["cię"],
+                stressed: ["ciebie"],
+              },
+              ins: "tobą",
+              loc: "tobie",
+            },
+          },
+          plural: {
+            virile: {
+              nom: "wy",
+              gen: "was",
+              dat: "wam",
+              acc: "was",
+              ins: "wami",
+              loc: "was",
+            },
+            nonvirile: {
+              nom: "wy",
+              gen: "was",
+              dat: "wam",
+              acc: "was",
+              ins: "wami",
+              loc: "was",
+            },
+          },
+        },
+        "3per": {
+          singular: {
+            allMasculineSingularGenders: {
+              nom: "on",
+              gen: {
+                isTerminus: true,
+                processOnlyAtEnd: true,
+                unstressed: ["go"],
+                stressed: ["jego"],
+                postPreposition: ["niego"],
+              },
+              dat: {
+                isTerminus: true,
+                processOnlyAtEnd: true,
+                unstressed: ["mu"],
+                stressed: ["jemu"],
+                postPreposition: ["niemu"],
+              },
+              acc: {
+                isTerminus: true,
+                processOnlyAtEnd: true,
+                unstressed: ["go"],
+                stressed: ["jego"],
+                postPreposition: ["niego"],
+              },
+              ins: "nim",
+              loc: "nim",
+            },
+            f: {
+              nom: "ona",
+              gen: {
+                isTerminus: true,
+                processOnlyAtEnd: true,
+                unstressed: ["jej"],
+                stressed: ["jej"],
+                postPreposition: ["niej"],
+              },
+              dat: {
+                isTerminus: true,
+                processOnlyAtEnd: true,
+                unstressed: ["jej"],
+                stressed: ["jej"],
+                postPreposition: ["niej"],
+              },
+              acc: {
+                isTerminus: true,
+                processOnlyAtEnd: true,
+                unstressed: ["ją"],
+                stressed: ["ją"],
+                postPreposition: ["nią"],
+              },
+              ins: "nią",
+              loc: "niej",
+            },
+            n: {
+              nom: "ono",
+              gen: {
+                isTerminus: true,
+                processOnlyAtEnd: true,
+                unstressed: ["go"],
+                stressed: ["jego"],
+                postPreposition: ["niego"],
+              },
+              dat: {
+                isTerminus: true,
+                processOnlyAtEnd: true,
+                unstressed: ["mu"],
+                stressed: ["jemu"],
+                postPreposition: ["niemu"],
+              },
+              acc: {
+                isTerminus: true,
+                processOnlyAtEnd: true,
+                unstressed: ["je"],
+                stressed: ["je"],
+                postPreposition: ["nie"],
+              },
+              ins: "nim",
+              loc: "nim",
+            },
+          },
+          plural: {
+            virile: {
+              nom: "oni",
+              gen: {
+                isTerminus: true,
+                processOnlyAtEnd: true,
+                unstressed: ["ich"],
+                stressed: ["ich"],
+                postPreposition: ["nich"],
+              },
+              dat: {
+                isTerminus: true,
+                processOnlyAtEnd: true,
+                unstressed: ["im"],
+                stressed: ["im"],
+                postPreposition: ["nim"],
+              },
+              acc: {
+                isTerminus: true,
+                processOnlyAtEnd: true,
+                unstressed: ["ich"],
+                stressed: ["ich"],
+                postPreposition: ["nich"],
+              },
+              ins: "nimi",
+              loc: "nich",
+            },
+            nonvirile: {
+              nom: "one",
+              gen: {
+                isTerminus: true,
+                processOnlyAtEnd: true,
+                unstressed: ["ich"],
+                stressed: ["ich"],
+                postPreposition: ["nich"],
+              },
+              dat: {
+                isTerminus: true,
+                processOnlyAtEnd: true,
+                unstressed: ["im"],
+                stressed: ["im"],
+                postPreposition: ["nim"],
+              },
+              acc: {
+                isTerminus: true,
+                processOnlyAtEnd: true,
+                unstressed: ["je"],
+                stressed: ["je"],
+                postPreposition: ["nie"],
+              },
+              ins: "nimi",
+              loc: "nich",
+            },
+          },
+        },
+      },
+    },
+  };
+
+  it("Not unique, as gender inflectionKeyy 'f' holds 'ja', which 'm1' also does.", () => {
+    let inputInflectionTyype = "gender";
+
+    let inputDrillPath = [
+      ["form", "pronoun"],
+      ["person", "1per"],
+      ["number", "singular"],
+      ["gender", "f"],
+    ];
+
+    const actual = isThisValueUniqueAtThisLevelInLemmaObject(
+      inputlObj1,
+      inputInflectionTyype,
+      inputDrillPath
+    );
+
+    expect(actual).to.be.false;
+  });
+  it("Indeed unique, as gender inflectionKeyy 'f' holds 'ona', which no other inflectionKeyy does.", () => {
+    let inputInflectionTyype = "gender";
+
+    let inputDrillPath = [
+      ["form", "pronoun"],
+      ["person", "3per"],
+      ["number", "singular"],
+      ["gender", "f"],
+    ];
+
+    const actual = isThisValueUniqueAtThisLevelInLemmaObject(
+      inputlObj1,
+      inputInflectionTyype,
+      inputDrillPath
+    );
+
+    expect(actual).to.be.true;
+  });
+  it("Indeed unique, as gender inflectionKeyy 'singular' holds values which 'plural' doesn't.", () => {
+    let inputInflectionTyype = "number";
+
+    let inputDrillPath = [
+      ["form", "pronoun"],
+      ["person", "3per"],
+      ["number", "singular"],
+      ["gender", "f"],
+    ];
+
+    const actual = isThisValueUniqueAtThisLevelInLemmaObject(
+      inputlObj1,
+      inputInflectionTyype,
+      inputDrillPath
+    );
+
+    expect(actual).to.be.true;
+  });
+});
 
 describe("findSynhomographs", () => {
   it("#otu4.1 Produces empty array when no lemmaObjects with any synhomographs are given.", () => {

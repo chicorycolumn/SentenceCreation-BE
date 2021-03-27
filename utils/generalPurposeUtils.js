@@ -380,6 +380,10 @@ exports.doesArrHaveOnlyTheseMembers = (arr1, arr2, disallowDuplicates) => {
   }
 };
 
+exports.getLanguageFromLemmaObject = (lObj) => {
+  return lObj.id.split("-")[0].toUpperCase();
+};
+
 exports.getWordtypeFromLemmaObject = (lObj) => {
   let wordtypeShorthand = lObj.id.split("-")[1];
   let wordtypeRef = refObj.wordtypeShorthandTranslation;
@@ -555,4 +559,8 @@ exports.doesObjectExistAndNonEmpty = (object) => {
   }
 
   return !!Object.keys(object).length;
+};
+
+exports.isThisObjectInThisArrayOfObjects = (obj, arr) => {
+  return arr.some((objFromArr) => gpUtils.areTwoObjectsEqual(objFromArr, obj));
 };

@@ -1353,4 +1353,72 @@ exports.switchMetaFeatureForAWorkableConvertedFeature = (
   }
 };
 
-exports.doeslObjDifferAtThisInflectionKey = () => {};
+exports.isThisValueUniqueAtThisLevelInLemmaObject = (
+  lObj,
+  chosenInflectionTyype,
+  drillPath
+) => {
+  let inflectionChain =
+    refObj.lemmaObjectFeatures[gpUtils.getLanguageFromLemmaObject(lObj)]
+      .inflectionChains[gpUtils.getWordtypeFromLemmaObject(lObj)];
+
+  function getInflectionKeyyFromDrillPath(inflectionTyype, drillPath) {
+    let inflectionKeyy = drillPath.find((arr) => arr[0] === inflectionTyype)[1];
+    return inflectionKeyy;
+  }
+
+  let chosenInflectionKeyy = getInflectionKeyyFromDrillPath(
+    chosenInflectionTyype,
+    drillPath
+  );
+
+  let lObjAtRelevantLevel = gpUtils.copyWithoutReference(lObj.inflections);
+
+  let stopSwitch = false;
+
+  inflectionChain.forEach((inflectionTyype) => {
+    if (inflectionTyype === chosenInflectionTyype) {
+      stopSwitch = true;
+    }
+
+    if (stopSwitch) {
+      return;
+    }
+
+    let inflectionKeyy = getInflectionKeyyFromDrillPath(
+      inflectionTyype,
+      drillPath
+    );
+
+    if (lObjAtRelevantLevel[inflectionKeyy]) {
+      lObjAtRelevantLevel = lObjAtRelevantLevel[inflectionKeyy];
+    } else {
+      clUtils.throw(
+        "mlck #ERR isThisValueUniqueAtThisLevelInLemmaObject. That inflectionKeyy was not on lObj at this level."
+      );
+    }
+  });
+
+  let allInflectionKeyysAtThisLevel = Object.keys(lObjAtRelevantLevel);
+
+  console.log({ allInflectionKeyysAtThisLevel });
+
+  if (!allInflectionKeyysAtThisLevel.includes(chosenInflectionKeyy)) {
+    clUtils.throw(
+      "mlcl #ERR isThisValueUniqueAtThisLevelInLemmaObject. The chosen inflectionKeyy should have been in lObj at this level."
+    );
+  }
+
+  let chosenInflectionValyye = lObjAtRelevantLevel[chosenInflectionKeyy];
+
+  let allOtherInflectionValyyesAtThisLevel = allInflectionKeyysAtThisLevel
+    .filter((inflectionKeyy) => inflectionKeyy !== chosenInflectionKeyy)
+    .map((inflectionKeyy) => lObjAtRelevantLevel[inflectionKeyy]);
+
+  let itIsUnique = !gpUtils.isThisObjectInThisArrayOfObjects(
+    chosenInflectionValyye,
+    allOtherInflectionValyyesAtThisLevel
+  );
+
+  return itIsUnique;
+};

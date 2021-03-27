@@ -1,5 +1,6 @@
 const gpUtils = require("../generalPurposeUtils.js");
 const clUtils = require("../zerothOrder/consoleLoggingUtils.js");
+const otUtils = require("../objectTraversingUtils.js");
 const refObj = require("./referenceObjects.js");
 const refFxn = require("./referenceFunctions.js");
 
@@ -139,70 +140,96 @@ exports.removeAnnotationsByAOCs = (
   ) {
     let headChunkId = questionOutputUnit.structureChunk.chunkId;
 
-    let allDependentOutputUnitsOfWordtype = questionOutputArr
-      .filter((unit) =>
-        [
-          "agreeWith",
-          "postHocAgreeWithPrimary",
-          "postHocAgreeWithSecondary",
-          "postHocAgreeWithTertiary",
-        ].some(
-          (agreeWithKey) => unit.structureChunk[agreeWithKey] === headChunkId
+    let primaryDepUnits = getDepUnits(questionOutputArr, headChunkId, [
+      "agreeWith",
+      "postHocAgreeWithPrimary",
+    ]);
+
+    let secondaryDepUnits = getDepUnits(questionOutputArr, headChunkId, [
+      "postHocAgreeWithSeconday",
+    ]);
+
+    let tertiaryDepUnits = getDepUnits(questionOutputArr, headChunkId, [
+      "postHocAgreeWithTertiary",
+    ]);
+
+    function getDepUnits(questionOutputArr, headChunkId, agreeKeys) {
+      return questionOutputArr
+        .filter((unit) =>
+          agreeKeys.some(
+            (agreeWithKey) => unit.structureChunk[agreeWithKey] === headChunkId
+          )
         )
-      )
-      .filter(
-        (unit) =>
-          gpUtils.getWordtypeFromStructureChunk(unit.structureChunk) ===
-          allDependentWordtype
-      );
+        .filter(
+          (unit) =>
+            gpUtils.getWordtypeFromStructureChunk(unit.structureChunk) ===
+            allDependentWordtype
+        );
+    }
 
     console.log(
       "ttta questionOutputUnit.structureChunk.annotations",
       questionOutputUnit.structureChunk.annotations
     );
     console.log(
-      "tttb allDependentOutputUnitsOfWordtype",
-      allDependentOutputUnitsOfWordtype.map((unit) => unit.drillPath)
+      "tttb primaryDepUnits",
+      primaryDepUnits.map((unit) => unit.drillPath)
+    );
+    console.log(
+      "tttb secondaryDepUnits",
+      secondaryDepUnits.map((unit) => unit.drillPath)
+    );
+    console.log(
+      "tttb tertiaryDepUnits",
+      tertiaryDepUnits.map((unit) => unit.drillPath)
     );
 
     Object.keys(questionOutputUnit.structureChunk.annotations).forEach(
-      (featureKey) => {
+      (inflectionTyype) => {
         let annoValue =
-          questionOutputUnit.structureChunk.annotations[featureKey];
+          questionOutputUnit.structureChunk.annotations[inflectionTyype];
 
-        allDependentOutputUnitsOfWordtype.forEach((depUnit) => {
-          if (
-            !questionOutputUnit.structureChunk.annotations[featureKey] || //ie we've now deleted it so abort loop.
-            !depUnit.drillPath
-          ) {
-            return;
-          }
+        //Imagine "Ja, moje jabłko."
+        //drillPath reveals info about 'Ja'
+        //drillPathSecondary reveals info about 'jabłko'
+        //
+        //So if we're looking at secondaryDeps, then we'll look in drillPathSecondary, and so on.
+        lemon(primaryDepUnits, "drillPath");
+        lemon(secondaryDepUnits, "drillPathSecondary");
+        lemon(tertiaryDepUnits, "drillPathTertiary");
 
-          console.log("meef", depUnit);
+        function lemon(depUnits, drillPathKey) {
+          depUnits.forEach((depUnit) => {
+            if (
+              !questionOutputUnit.structureChunk.annotations[inflectionTyype] || //ie we've now deleted it so abort loop.
+              !depUnit[drillPathKey]
+            ) {
+              return;
+            }
 
-          //The below logic assumes that the drillPath is where we want to find these
-          //but there could, say with another language, be situations where we want values from drillPathSecondary or -Tertiary.
-          //Such fxnality is not yet implemented.
+            console.log("meef", depUnit);
 
-          let featureValue = depUnit.drillPath.find(
-            (arr) => arr[0] === featureKey
-          )[1];
-
-          if (
-            otUtils.isThisValueUniqueInLemmaObject(
-              lObj,
-              featureKey,
-              featureValue
-            )
-          ) {
-            delete questionOutputUnit.structureChunk.annotations[featureKey];
-          }
-
-          /**If any dep unit holds a value at featureKey that is unique in its lObj,
-           * then this pronoun obviates the need for that specifier, so delete it from annotations.
-           * and set featureHasBeenDeleted to true.
-           */
-        });
+            //nownow
+            /**If any dep unit holds a value at inflectionTyype that is unique in its lObj,
+             * then this pronoun obviates the need for that specifier, so delete it from annotations.
+             * and set featureHasBeenDeleted to true.
+             */
+            if (
+              otUtils.isThisValueUniqueAtThisLevelInLemmaObject(
+                depUnit.selectedLemmaObject,
+                inflectionTyype,
+                depUnit[drillPathKey]
+              )
+            ) {
+              console.log(
+                `mekw removeAnnotationsByAOCs. Removing "${inflectionTyype}" anno from ${questionOutputUnit.structureChunk.chunkId}`
+              );
+              delete questionOutputUnit.structureChunk.annotations[
+                inflectionTyype
+              ];
+            }
+          });
+        }
       }
     );
   }

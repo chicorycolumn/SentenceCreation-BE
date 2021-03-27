@@ -305,8 +305,6 @@ exports.firstStageEvaluateAnnotations = (
 
     outputUnit.firstStageAnnotationsObj = formattedAnnoObj;
   });
-
-  clUtils.throw("cease");
 };
 
 exports.trimAnnotations = (annotationObj) => {
