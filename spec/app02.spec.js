@@ -1250,7 +1250,7 @@ describe("/api", () => {
     });
   });
 
-  describe.only("/palette - Stage 17-iv: Possessive pronouns and MGNs. MGN to agree with pronoun.", () => {
+  xdescribe("/palette - Stage 17-iv: Possessive pronouns and MGNs. MGN to agree with pronoun.", () => {
     it("#pal17-10a GET 200 YES: Engpol. I was a doctor. MGN to agree with pronoun.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
