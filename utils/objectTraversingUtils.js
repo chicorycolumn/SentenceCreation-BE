@@ -15,8 +15,6 @@ exports.findMatchingLemmaObjectThenWord = (
   questionLanguage,
   multipleMode,
   outputArray,
-  pleaseDontSpecify,
-  pleaseDontSpecifyPronounGender,
   isPHD
 ) => {
   console.log(
@@ -664,7 +662,7 @@ exports.findMatchingLemmaObjectThenWord = (
       );
 
       //PDSXred
-      // If the outputunits differ only in gender, and pleaseDontSpecifyPronounGender is true,
+      // If the outputunits differ only in gender, and p'leaseDontSpecifyPronounGender is true,
       // then merge the outputunits, so ENG Q "I wrote" can be POL A ["Napisałem.", "Napisałam."]
       // #pal11B-03a, #pal11B-03b
 

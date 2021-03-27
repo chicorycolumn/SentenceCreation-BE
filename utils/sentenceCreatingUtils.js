@@ -75,13 +75,8 @@ exports.processSentenceFormula = (
   languagesObj,
   sentenceFormula,
   words,
-  multipleMode,
-  pleaseDontSpecify,
-  pleaseDontSpecifyPronounGender
+  multipleMode
 ) => {
-  // pleaseDontSpecify = false;
-  // pleaseDontSpecifyPronounGender = false;
-
   console.log("hbbhey START processSentenceFormula");
 
   let { currentLanguage, previousQuestionLanguage } = languagesObj;
@@ -138,9 +133,7 @@ exports.processSentenceFormula = (
       currentLanguage,
       previousQuestionLanguage,
       multipleMode,
-      null,
-      pleaseDontSpecify,
-      pleaseDontSpecifyPronounGender
+      null
     );
 
     if (errorInSentenceCreation.errorMessage) {
@@ -216,9 +209,7 @@ exports.processSentenceFormula = (
             currentLanguage,
             previousQuestionLanguage,
             multipleMode,
-            null,
-            pleaseDontSpecify,
-            pleaseDontSpecifyPronounGender
+            null
           );
 
           if (
@@ -327,8 +318,6 @@ exports.processSentenceFormula = (
         previousQuestionLanguage,
         multipleMode,
         outputArray,
-        pleaseDontSpecify,
-        pleaseDontSpecifyPronounGender,
         true
       );
 
@@ -431,13 +420,7 @@ exports.processSentenceFormula = (
       currentLanguage,
       previousQuestionLanguage,
       multipleMode,
-      null,
-      pleaseDontSpecify,
-      pleaseDontSpecifyPronounGender
-      // otherChunk.chunkId === "nou-1-doctor" ? true : pleaseDontSpecify,
-      // otherChunk.chunkId === "nou-1-doctor"
-      //   ? true
-      //   : pleaseDontSpecifyPronounGender
+      null
     );
 
     if (

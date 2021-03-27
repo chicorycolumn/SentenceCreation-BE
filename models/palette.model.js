@@ -64,9 +64,6 @@ exports.fetchPalette = (req) => {
             potentialDepChunk.agreeWith === qChunk.chunkId
         )
       ) {
-        console.log(
-          "[1;32m " + `iirz-fetchPalette setting pleaseDontSpecify to false.` + "[0m"
-        );
         qChunk.dontSpecifyOnThisChunk = false;
       } else if (qChunk.gender && qChunk.gender.length) {
         qChunk.dontSpecifyOnThisChunk = false;
@@ -80,9 +77,7 @@ exports.fetchPalette = (req) => {
     { currentLanguage: questionLanguage },
     questionSentenceFormula,
     words,
-    multipleMode,
-    pleaseDontSpecify,
-    pleaseDontSpecify //pleaseDontSpecifyPronounGender
+    multipleMode
   );
 
   if ("check") {
