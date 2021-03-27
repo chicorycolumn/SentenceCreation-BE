@@ -1,6 +1,7 @@
 const refObj = require("../utils/reference/referenceObjects.js");
 const refFxn = require("../utils/reference/referenceFunctions.js");
 const gpUtils = require("../utils/generalPurposeUtils.js");
+const uUtils = require("../utils/universalUtils.js");
 const clUtils = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 
@@ -63,7 +64,7 @@ exports.translateAnnotationValue = (
 
     return typeof adjustedAnnotation === "string"
       ? adjustedAnnotation
-      : gpUtils.selectRandom(adjustedAnnotation);
+      : uUtils.selectRandom(adjustedAnnotation);
   } else {
     return annotationValue;
   }
@@ -338,11 +339,11 @@ exports.convertMetaFeatures = (sourceObjectArray, currentLanguage, objType) => {
 
           let regularFeaturesArr = metaFeatureRef[metaFeature];
 
-          gpUtils.findKeysInObjectAndExecuteCallback(
+          uUtils.findKeysInObjectAndExecuteCallback(
             sourceObject,
             metaFeature,
             (sourceObject) => {
-              gpUtils.copyValueOfKey(
+              uUtils.copyValueOfKey(
                 sourceObject,
                 metaFeature,
                 regularFeaturesArr,
@@ -426,7 +427,7 @@ exports.decantMGNsInOutputArray = (questionOutputArr, currentLanguage) => {
           });
 
           structureChunk[featureKey] = [
-            gpUtils.selectRandom(adjustedFeatureValueArr),
+            uUtils.selectRandom(adjustedFeatureValueArr),
           ];
 
           console.log("lukh decantMGNsInOutputArray", {
@@ -527,11 +528,11 @@ exports.decantMGNsBeforeOutputArray = (
           }
 
           structureChunk[featureKey] = [
-            gpUtils.selectRandom(featureValuesInBothStChAndAdjustedArr),
+            uUtils.selectRandom(featureValuesInBothStChAndAdjustedArr),
           ];
         } else {
           structureChunk[featureKey] = [
-            gpUtils.selectRandom(adjustedFeatureValueArr),
+            uUtils.selectRandom(adjustedFeatureValueArr),
           ];
         }
 

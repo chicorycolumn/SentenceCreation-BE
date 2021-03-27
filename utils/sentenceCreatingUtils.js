@@ -1,4 +1,5 @@
 const otUtils = require("./objectTraversingUtils.js");
+const uUtils = require("./universalUtils.js");
 const gpUtils = require("./generalPurposeUtils.js");
 const clUtils = require("./zerothOrder/consoleLoggingUtils.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
@@ -33,11 +34,11 @@ exports.getMaterials = (
 
   let words = useDummy
     ? gpUtils.copyAndCombineWordbanks(wordsBank, dummyWordsBank)
-    : gpUtils.copyWithoutReference(wordsBank);
+    : uUtils.copyWithoutReference(wordsBank);
 
   let sentenceFormulas = useDummy
-    ? gpUtils.copyWithoutReference(dummySentenceFormulasBank)
-    : gpUtils.copyWithoutReference(sentenceFormulasBank);
+    ? uUtils.copyWithoutReference(dummySentenceFormulasBank)
+    : uUtils.copyWithoutReference(sentenceFormulasBank);
 
   if (sentenceFormulaId) {
     sentenceFormula = sentenceFormulas.find(
@@ -131,7 +132,7 @@ exports.processSentenceFormula = (
     console.log("evga sc:processSentenceFormula STEP ONE", headChunk.chunkId);
 
     let allPossOutputUnits_head = otUtils.findMatchingLemmaObjectThenWord(
-      gpUtils.copyWithoutReference(headChunk),
+      uUtils.copyWithoutReference(headChunk),
       words,
       errorInSentenceCreation,
       currentLanguage,
@@ -177,8 +178,8 @@ exports.processSentenceFormula = (
     headOutputUnitArrays.push(allPossOutputUnits_head);
   });
 
-  let explodedOutputArraysWithHeads = gpUtils.copyWithoutReference(
-    gpUtils.arrayExploder(headOutputUnitArrays)
+  let explodedOutputArraysWithHeads = uUtils.copyWithoutReference(
+    uUtils.arrayExploder(headOutputUnitArrays)
   );
 
   //STEP TWO: Select DEPENDENT words and add to result array.
@@ -192,7 +193,7 @@ exports.processSentenceFormula = (
       // Step two begins here.
       let specificDependentChunks = dependentChunks
         .filter((chunk) => chunk.agreeWith === headChunk.chunkId)
-        .map((chunk) => gpUtils.copyWithoutReference(chunk));
+        .map((chunk) => uUtils.copyWithoutReference(chunk));
 
       if (specificDependentChunks.length) {
         specificDependentChunks.forEach((dependentChunk) => {
@@ -209,7 +210,7 @@ exports.processSentenceFormula = (
 
           console.log(`weoe dependentChunk "${dependentChunk.chunkId}"`);
           let allPossOutputUnits_dependent = otUtils.findMatchingLemmaObjectThenWord(
-            gpUtils.copyWithoutReference(dependentChunk),
+            uUtils.copyWithoutReference(dependentChunk),
             words,
             errorInSentenceCreation,
             currentLanguage,
@@ -319,7 +320,7 @@ exports.processSentenceFormula = (
       );
 
       let allPossOutputUnits_PHD = otUtils.findMatchingLemmaObjectThenWord(
-        gpUtils.copyWithoutReference(postHocDependentChunk),
+        uUtils.copyWithoutReference(postHocDependentChunk),
         words,
         errorInSentenceCreation,
         currentLanguage,
@@ -364,7 +365,7 @@ exports.processSentenceFormula = (
         PHDoutputUnitsForThisParticularOutputArray
       );
 
-      PHDoutputUnitsForThisParticularOutputArray = gpUtils.arrayExploder(
+      PHDoutputUnitsForThisParticularOutputArray = uUtils.arrayExploder(
         PHDoutputUnitsForThisParticularOutputArray
       );
 
@@ -424,7 +425,7 @@ exports.processSentenceFormula = (
 
     console.log(`weoi otherChunk "${otherChunk.chunkId}"`);
     let allPossOutputUnits_other = otUtils.findMatchingLemmaObjectThenWord(
-      gpUtils.copyWithoutReference(otherChunk),
+      uUtils.copyWithoutReference(otherChunk),
       words,
       errorInSentenceCreation,
       currentLanguage,
@@ -464,7 +465,7 @@ exports.processSentenceFormula = (
   });
 
   if (grandAllPossOutputUnits_other.length) {
-    grandAllPossOutputUnits_other = gpUtils.arrayExploder(
+    grandAllPossOutputUnits_other = uUtils.arrayExploder(
       grandAllPossOutputUnits_other
     );
 
@@ -634,7 +635,7 @@ exports.buildSentenceString = (
         outputArrays.push(orderedArr);
       });
     } else {
-      let order = gpUtils.selectRandom(sentenceFormula.primaryOrders);
+      let order = uUtils.selectRandom(sentenceFormula.primaryOrders);
 
       let orderedArr = [];
       order.forEach((chunkId) => {
@@ -661,13 +662,13 @@ exports.buildSentenceString = (
           `twwe buildSentenceString NB: Randomly selecting one for question sentence.` +
           "[0m"
       );
-      arrOfFinalSelectedWordsArr = gpUtils.selectRandom(
+      arrOfFinalSelectedWordsArr = uUtils.selectRandom(
         arrOfFinalSelectedWordsArr
       );
     }
 
     arrOfFinalSelectedWordsArr.forEach((finalSelectedWordsArr) => {
-      let producedSentence = gpUtils.capitaliseFirst(
+      let producedSentence = uUtils.capitaliseFirst(
         finalSelectedWordsArr.join(" ") + "."
       );
 
@@ -1055,7 +1056,7 @@ exports.selectWordVersions = (
 
   console.log("hjoz selectWordVersions selectedWordsArr", selectedWordsArr);
 
-  let arrOfSelectedWordsArr = gpUtils.arrayExploder(selectedWordsArr);
+  let arrOfSelectedWordsArr = uUtils.arrayExploder(selectedWordsArr);
 
   console.log(
     "hjoz selectWordVersions arrOfSelectedWordsArr",
@@ -1143,7 +1144,7 @@ exports.conformAnswerStructureToQuestionStructure = (
 
     matchingAnswerLemmaObjects = matchingAnswerLemmaObjects.filter(
       (answerLemmaObject) =>
-        gpUtils.areTwoFlatArraysEqual(
+        uUtils.areTwoFlatArraysEqual(
           questionSelectedLemmaObject.tags,
           answerLemmaObject.tags
         )
@@ -1387,7 +1388,7 @@ exports.inheritFromHeadToDependentChunk = (
         dependentChunk.importantFeatures.includes(inflectorKey)
       )
     ) {
-      let inflectorValueArr = gpUtils.copyWithoutReference(
+      let inflectorValueArr = uUtils.copyWithoutReference(
         headChunk[inflectorKey]
       );
 

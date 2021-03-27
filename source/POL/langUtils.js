@@ -1,6 +1,7 @@
 const lfUtils = require("../../utils/lemmaFilteringUtils.js");
 const otUtils = require("../../utils/objectTraversingUtils.js");
 const gpUtils = require("../../utils/generalPurposeUtils.js");
+const uUtils = require("../../utils/universalUtils.js");
 const clUtils = require("../../utils/zerothOrder/consoleLoggingUtils.js");
 const refObj = require("../../utils/reference/referenceObjects.js");
 const allLangUtils = require("../../utils/allLangUtils.js");
@@ -125,7 +126,7 @@ exports.adjustImperfectiveOnly = (matches, lObj) => {
     lObj.imperfectiveOnly = true;
     delete lObj.imperfectiveOnly_unadjusted;
 
-    let adjustedLemmaObject = gpUtils.copyWithoutReference(lObj);
+    let adjustedLemmaObject = uUtils.copyWithoutReference(lObj);
     adjustedLemmaObject.aspect = "perfective";
 
     let newIdArr = lObj.id.split("-");
@@ -190,7 +191,7 @@ exports.adjustTenseDescriptions = (structureChunk) => {
   let resultArr = [];
 
   structureChunk.tenseDescription.forEach((tenseDesc, index) => {
-    let structureChunkCopy = gpUtils.copyWithoutReference(structureChunk);
+    let structureChunkCopy = uUtils.copyWithoutReference(structureChunk);
 
     let tenseDescArr = [tenseDesc];
 
@@ -505,8 +506,8 @@ exports.fillVerbInflections = (lemmaObject) => {
   }
 
   // Masculinist agenda
-  gpUtils.findKeysInObjectAndExecuteCallback(inflections, "m", (obj) => {
-    gpUtils.copyValueOfKey(obj, "m", ["m1", "m2", "m3"], true);
+  uUtils.findKeysInObjectAndExecuteCallback(inflections, "m", (obj) => {
+    uUtils.copyValueOfKey(obj, "m", ["m1", "m2", "m3"], true);
   });
 
   function isAvailable(value) {
@@ -522,7 +523,7 @@ exports.copyInflectionsFromM1toM2 = (lemmaObject) => {
   let { inflections } = lemmaObject;
 
   //Masculinist agenda
-  gpUtils.findKeysInObjectAndExecuteCallback(inflections, "m1", (obj) => {
-    gpUtils.copyValueOfKey(obj, "m1", ["m2"], false);
+  uUtils.findKeysInObjectAndExecuteCallback(inflections, "m1", (obj) => {
+    uUtils.copyValueOfKey(obj, "m1", ["m2"], false);
   });
 };

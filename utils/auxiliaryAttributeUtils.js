@@ -1,4 +1,5 @@
 const gpUtils = require("./generalPurposeUtils.js");
+const uUtils = require("./universalUtils.js");
 const clUtils = require("./zerothOrder/consoleLoggingUtils.js");
 const scUtils = require("./sentenceCreatingUtils.js");
 const otUtils = require("./objectTraversingUtils.js");
@@ -28,7 +29,7 @@ exports.removeAnnotationsByAOCs = (
   let allDependentWordtype = "pronoun";
 
   if (
-    !gpUtils.doesObjectExistAndNonEmpty(
+    !uUtils.doesObjectExistAndNonEmpty(
       questionOutputUnit.structureChunk.annotations
     )
   ) {
@@ -339,7 +340,7 @@ exports.addSpecifiersToMGNs = (
       questionMGNunit.structureChunk.gender &&
       questionMGNunit.structureChunk.gender.length
     ) {
-      selectedGenderForQuestionLanguage = gpUtils.selectRandom(
+      selectedGenderForQuestionLanguage = uUtils.selectRandom(
         questionMGNunit.structureChunk.gender
       );
 
@@ -361,7 +362,7 @@ exports.addSpecifiersToMGNs = (
         );
       }
     } else {
-      selectedGenderForQuestionLanguage = gpUtils.selectRandom(
+      selectedGenderForQuestionLanguage = uUtils.selectRandom(
         refObj.metaFeatures[questionLanguage].gender[metaGender]
       );
     }

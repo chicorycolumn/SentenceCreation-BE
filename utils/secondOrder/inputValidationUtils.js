@@ -1,4 +1,5 @@
 const gpUtils = require("../generalPurposeUtils.js");
+const uUtils = require("../universalUtils.js");
 const clUtils = require("../zerothOrder/consoleLoggingUtils.js");
 const ivUtils = require("./inputValidationUtils.js");
 const refObj = require("../reference/referenceObjects.js");
@@ -64,14 +65,14 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
       let expectedTypeOnStCh = stChFeaturesRef[featureKey].expectedTypeOnStCh;
       if (
         expectedTypeOnStCh &&
-        expectedTypeOnStCh !== gpUtils.typeof(featureValue)
+        expectedTypeOnStCh !== uUtils.typeof(featureValue)
       ) {
         console.log(
           "kchk validateSentenceFormula structureChunk",
           structureChunk
         );
         clUtils.throw(
-          `#ERR kchk validateSentenceFormula. stCh "${chunkId}": Expected "${expectedTypeOnStCh}" as "${featureKey}" featureValue but got "${gpUtils.typeof(
+          `#ERR kchk validateSentenceFormula. stCh "${chunkId}": Expected "${expectedTypeOnStCh}" as "${featureKey}" featureValue but got "${uUtils.typeof(
             featureValue
           )}"`
         );
@@ -83,7 +84,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
       let possibleValues = stChFeaturesRef[featureKey].possibleValues;
 
       if (possibleValues) {
-        if (gpUtils.typeof(featureValue) === "string") {
+        if (uUtils.typeof(featureValue) === "string") {
           if (!possibleValues.includes(featureValue)) {
             console.log(
               "mkkf validateSentenceFormula structureChunk",
@@ -93,7 +94,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
               `#ERR mkkf validateSentenceFormula. stCh "${chunkId}": featureValue "${featureValue}" not listed as possible for wordtype "${wordtype}".`
             );
           }
-        } else if (gpUtils.typeof(featureValue) === "array") {
+        } else if (uUtils.typeof(featureValue) === "array") {
           featureValue.forEach((featureValueItem) => {
             if (!possibleValues.includes(featureValueItem)) {
               console.log(

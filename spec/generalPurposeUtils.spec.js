@@ -1,13 +1,17 @@
 const { expect } = require("chai");
 const {
-  copyWithoutReference,
   combineAndExplodeTwoSuperArrays,
+} = require("../utils/generalPurposeUtils.js");
+
+const {
+  copyWithoutReference,
   arrayExploder,
   checkEachSequentialPairing,
   areTwoObjectsEqual,
-} = require("../utils/generalPurposeUtils.js");
+} = require("../utils/universalUtils.js");
 
 const gpUtils = require("../utils/generalPurposeUtils.js");
+const uUtils = require("../utils/universalUtils.js");
 
 describe("areTwoObjectsEqual", () => {
   it("True with flat objects.", () => {
@@ -185,7 +189,7 @@ describe("checkEachSequentialPairing", () => {
     const inputAllowArrayOfZeroOrOne = true;
     const actual = checkEachSequentialPairing(
       inputArr,
-      gpUtils.oneStepCheck,
+      uUtils.oneStepCheck,
       inputAllowArrayOfZeroOrOne
     );
     expect(actual).to.be.true;
@@ -195,7 +199,7 @@ describe("checkEachSequentialPairing", () => {
     const inputAllowArrayOfZeroOrOne = true;
     const actual = checkEachSequentialPairing(
       inputArr,
-      gpUtils.oneStepCheck,
+      uUtils.oneStepCheck,
       inputAllowArrayOfZeroOrOne
     );
     expect(actual).to.be.true;
@@ -205,7 +209,7 @@ describe("checkEachSequentialPairing", () => {
     const inputAllowArrayOfZeroOrOne = false;
     const actual = checkEachSequentialPairing(
       inputArr,
-      gpUtils.oneStepCheck,
+      uUtils.oneStepCheck,
       inputAllowArrayOfZeroOrOne
     );
     expect(actual).to.be.false;
@@ -215,29 +219,29 @@ describe("checkEachSequentialPairing", () => {
     const inputAllowArrayOfZeroOrOne = false;
     const actual = checkEachSequentialPairing(
       inputArr,
-      gpUtils.oneStepCheck,
+      uUtils.oneStepCheck,
       inputAllowArrayOfZeroOrOne
     );
     expect(actual).to.be.false;
   });
   it("Positive a. Callback is oneStepCheck", () => {
     const inputArr = [1, 2, 3, 4, 5];
-    const actual = checkEachSequentialPairing(inputArr, gpUtils.oneStepCheck);
+    const actual = checkEachSequentialPairing(inputArr, uUtils.oneStepCheck);
     expect(actual).to.be.true;
   });
   it("Positive b. Callback is oneStepCheck", () => {
     const inputArr = [105, 106];
-    const actual = checkEachSequentialPairing(inputArr, gpUtils.oneStepCheck);
+    const actual = checkEachSequentialPairing(inputArr, uUtils.oneStepCheck);
     expect(actual).to.be.true;
   });
   it("Negative a. Callback is oneStepCheck", () => {
     const inputArr = [1, 2, 5, 4, 5];
-    const actual = checkEachSequentialPairing(inputArr, gpUtils.oneStepCheck);
+    const actual = checkEachSequentialPairing(inputArr, uUtils.oneStepCheck);
     expect(actual).to.be.false;
   });
   it("Negative b. Callback is oneStepCheck", () => {
     const inputArr = [1, 2, 3, 4, 6];
-    const actual = checkEachSequentialPairing(inputArr, gpUtils.oneStepCheck);
+    const actual = checkEachSequentialPairing(inputArr, uUtils.oneStepCheck);
     expect(actual).to.be.false;
   });
   it("Positive. Callback is areTwoObjectsEqual.", () => {
@@ -340,7 +344,7 @@ describe("checkEachSequentialPairing", () => {
     ];
     const actual = checkEachSequentialPairing(
       inputArr,
-      gpUtils.areTwoObjectsEqual
+      uUtils.areTwoObjectsEqual
     );
     expect(actual).to.be.true;
   });
@@ -444,7 +448,7 @@ describe("checkEachSequentialPairing", () => {
     ];
     const actual = checkEachSequentialPairing(
       inputArr,
-      gpUtils.areTwoObjectsEqual
+      uUtils.areTwoObjectsEqual
     );
     expect(actual).to.be.false;
   });

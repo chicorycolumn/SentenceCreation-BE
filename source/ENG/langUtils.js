@@ -1,6 +1,7 @@
 const lfUtils = require("../../utils/lemmaFilteringUtils.js");
 const otUtils = require("../../utils/objectTraversingUtils.js");
 const gpUtils = require("../../utils/generalPurposeUtils.js");
+const uUtils = require("../../utils/universalUtils.js");
 const clUtils = require("../../utils/zerothOrder/consoleLoggingUtils.js");
 const refObj = require("../../utils/reference/referenceObjects.js");
 const allLangUtils = require("../../utils/allLangUtils.js");
@@ -496,7 +497,7 @@ exports.generateAdhocForms = (
   ) {
     console.log("htrt addToResArr START selectedWordArr", selectedWordArr);
 
-    let structureChunkCopy = gpUtils.copyWithoutReference(structureChunk);
+    let structureChunkCopy = uUtils.copyWithoutReference(structureChunk);
 
     lfUtils.updateStructureChunkByAdhocOnly(
       structureChunkCopy,
@@ -538,7 +539,7 @@ exports.generateAdhocForms = (
           structureChunkCopy[featureKey] &&
           structureChunkCopy[featureKey].length > 1
         ) {
-          structureChunkCopy[featureKey] = gpUtils.selectRandom(
+          structureChunkCopy[featureKey] = uUtils.selectRandom(
             structureChunkCopy[featureKey]
           );
         }

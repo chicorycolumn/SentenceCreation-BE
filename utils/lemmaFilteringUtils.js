@@ -1,4 +1,5 @@
 const gpUtils = require("./generalPurposeUtils.js");
+const uUtils = require("./universalUtils.js");
 const clUtils = require("./zerothOrder/consoleLoggingUtils.js");
 const otUtils = require("./objectTraversingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
@@ -71,7 +72,7 @@ exports.filterWithin_PHD = (
     currentLanguage
   ].find((PHD_dataObj) => PHD_dataObj.PHD_type === PHD_type).inflectionChains;
 
-  let lemmaObjectCopy = gpUtils.copyWithoutReference(lemmaObject);
+  let lemmaObjectCopy = uUtils.copyWithoutReference(lemmaObject);
 
   langUtils.preprocessLemmaObjectsMajor(
     [lemmaObjectCopy],
@@ -95,7 +96,7 @@ exports.filterWithin_PHD = (
   //   "filterWithin_PHD"
   // );
 
-  let source = gpUtils.copyWithoutReference(lemmaObjectCopy.inflections);
+  let source = uUtils.copyWithoutReference(lemmaObjectCopy.inflections);
 
   console.log("giuy filterWithin_PHD. source", source);
 
@@ -117,9 +118,7 @@ exports.filterWithin_PHD = (
         PHDstructureChunk[postHocAgreeWithKey]
     );
 
-    let drillPathOfHead = gpUtils.copyWithoutReference(
-      headOutputUnit.drillPath
-    );
+    let drillPathOfHead = uUtils.copyWithoutReference(headOutputUnit.drillPath);
 
     console.log("nvnn lf:filterWithin_PHD");
     // clUtils.consoleLogObjectAtOneLevel(
@@ -683,7 +682,7 @@ exports.filterOutLackingLemmaObjects = (
 
       return inflectionPathsInRequirements.some((inflectionPathReq) =>
         inflectionPathsInSource.some((inflectionPathSource) =>
-          gpUtils.areTwoFlatArraysEqual(inflectionPathReq, inflectionPathSource)
+          uUtils.areTwoFlatArraysEqual(inflectionPathReq, inflectionPathSource)
         )
       );
     }
@@ -996,7 +995,7 @@ exports.traverseAndRecordInflections = (
 
       return source[chosenInflectorAdjusted];
     } else if (
-      gpUtils.isKeyValueTypeObject(source[chosenInflectorAdjusted]) &&
+      uUtils.isKeyValueTypeObject(source[chosenInflectorAdjusted]) &&
       !source[chosenInflectorAdjusted].isTerminus
     ) {
       // console.log("fxxb7");

@@ -1,4 +1,5 @@
 const gpUtils = require("./generalPurposeUtils.js");
+const uUtils = require("./universalUtils.js");
 const clUtils = require("./zerothOrder/consoleLoggingUtils.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
 const refObj = require("./reference/referenceObjects.js");
@@ -150,7 +151,7 @@ exports.findMatchingLemmaObjectThenWord = (
       matches.forEach((selectedLemmaObject) => {
         let adhocArr = langUtils.generateAdhocForms(
           "form",
-          gpUtils.copyWithoutReference(structureChunk),
+          uUtils.copyWithoutReference(structureChunk),
           selectedLemmaObject,
           currentLanguage
         );
@@ -172,11 +173,11 @@ exports.findMatchingLemmaObjectThenWord = (
         });
       });
     } else {
-      let selectedLemmaObject = gpUtils.selectRandom(matches);
+      let selectedLemmaObject = uUtils.selectRandom(matches);
 
       let adhocArr = langUtils.generateAdhocForms(
         "form",
-        gpUtils.copyWithoutReference(structureChunk),
+        uUtils.copyWithoutReference(structureChunk),
         selectedLemmaObject,
         currentLanguage
       );
@@ -185,7 +186,7 @@ exports.findMatchingLemmaObjectThenWord = (
         throw "No members were found in the adhocArr from OT:findMatching, path 3A-1 (ie form).";
       }
 
-      let selectedAdhocResultObj = gpUtils.selectRandom(adhocArr);
+      let selectedAdhocResultObj = uUtils.selectRandom(adhocArr);
 
       let { selectedWordArr, structureChunkUpdated } = selectedAdhocResultObj;
 
@@ -218,7 +219,7 @@ exports.findMatchingLemmaObjectThenWord = (
           matches.forEach((selectedLemmaObject) => {
             let adhocArr = langUtils.generateAdhocForms(
               adhocInflectorKey,
-              gpUtils.copyWithoutReference(structureChunk),
+              uUtils.copyWithoutReference(structureChunk),
               selectedLemmaObject,
               currentLanguage
             );
@@ -240,11 +241,11 @@ exports.findMatchingLemmaObjectThenWord = (
             });
           });
         } else {
-          let selectedLemmaObject = gpUtils.selectRandom(matches);
+          let selectedLemmaObject = uUtils.selectRandom(matches);
 
           let adhocArr = langUtils.generateAdhocForms(
             adhocInflectorKey,
-            gpUtils.copyWithoutReference(structureChunk),
+            uUtils.copyWithoutReference(structureChunk),
             selectedLemmaObject,
             currentLanguage
           );
@@ -253,7 +254,7 @@ exports.findMatchingLemmaObjectThenWord = (
             throw "No members were found in the adhocArr from OT:findMatching, path 3A-2 ie Ad-PW-I (ie tenseDescription).";
           }
 
-          let selectedAdhocResultObj = gpUtils.selectRandom(adhocArr);
+          let selectedAdhocResultObj = uUtils.selectRandom(adhocArr);
 
           let {
             selectedWordArr,
@@ -324,7 +325,7 @@ exports.findMatchingLemmaObjectThenWord = (
                   }
 
                   //We here update a copy of structureChunk
-                  let structureChunkUpdatedByAdhocOrUninflected = gpUtils.copyWithoutReference(
+                  let structureChunkUpdatedByAdhocOrUninflected = uUtils.copyWithoutReference(
                     structureChunk
                   );
 
@@ -346,7 +347,7 @@ exports.findMatchingLemmaObjectThenWord = (
                 });
               });
             } else {
-              let selectedUninflectedForm = gpUtils.selectRandom(
+              let selectedUninflectedForm = uUtils.selectRandom(
                 requestedUninflectedForms
               );
 
@@ -354,7 +355,7 @@ exports.findMatchingLemmaObjectThenWord = (
                 (lObj) => lObj.inflections[selectedUninflectedForm]
               );
 
-              let selectedLemmaObject = gpUtils.selectRandom(
+              let selectedLemmaObject = uUtils.selectRandom(
                 matchesByUninflectedForm
               );
 
@@ -379,7 +380,7 @@ exports.findMatchingLemmaObjectThenWord = (
               }
 
               //We here update a copy of structureChunk
-              let structureChunkUpdatedByAdhocOrUninflected = gpUtils.copyWithoutReference(
+              let structureChunkUpdatedByAdhocOrUninflected = uUtils.copyWithoutReference(
                 structureChunk
               );
 
@@ -592,7 +593,7 @@ exports.findMatchingLemmaObjectThenWord = (
       });
     } else {
       console.log("xzjc ot:findMatchingLemmaObjectThenWord");
-      let selectedLemmaObject = gpUtils.selectRandom(matchesCopy);
+      let selectedLemmaObject = uUtils.selectRandom(matchesCopy);
 
       if (!structureChunk.dontSpecifyOnThisChunk) {
         //PDSXblue
@@ -701,7 +702,7 @@ exports.findMatchingLemmaObjectThenWord = (
         console.log(x);
       });
 
-      let unit = gpUtils.selectRandom(subArrayOfOutputUnits); //epsilon - What is this selran doing?
+      let unit = uUtils.selectRandom(subArrayOfOutputUnits); //epsilon - What is this selran doing?
 
       let {
         errorInDrilling,
@@ -720,7 +721,7 @@ exports.findMatchingLemmaObjectThenWord = (
         return false;
       }
 
-      let selectedItem = gpUtils.selectRandom(selectedWordArray);
+      let selectedItem = uUtils.selectRandom(selectedWordArray);
       let selectedWord;
 
       if (!"natasha findMatching Question mode") {
@@ -772,7 +773,7 @@ exports.findMatchingLemmaObjectThenWord = (
           ];
         }
 
-        selectedWord = gpUtils.selectRandom(additionalWords);
+        selectedWord = uUtils.selectRandom(additionalWords);
       }
 
       let outputUnit = otUtils.createOutputUnit(
@@ -807,7 +808,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
   if (!multipleMode && arrayOfAllPossibleOutputUnits.length > 1) {
     arrayOfAllPossibleOutputUnits = [
-      gpUtils.selectRandom(arrayOfAllPossibleOutputUnits),
+      uUtils.selectRandom(arrayOfAllPossibleOutputUnits),
     ];
   }
 
@@ -918,7 +919,7 @@ exports.extractNestedRoutes = (source, includeTerminusObjectKeys) => {
       let arrCopy = arr.slice();
       arr.pop();
       return arrCopy;
-    } else if (gpUtils.isKeyValueTypeObject(source)) {
+    } else if (uUtils.isKeyValueTypeObject(source)) {
       Object.keys(source).forEach((key) => {
         if (!source[key]) {
           delete source[key];
@@ -964,10 +965,10 @@ exports.findObjectInNestedObject = (
     Object.keys(source).forEach((key) => {
       let value = source[key];
       if (
-        (!alsoSearchArrays && gpUtils.isKeyValueTypeObject(value)) ||
-        (alsoSearchArrays && gpUtils.isKeyValueTypeObjectOrArray(value))
+        (!alsoSearchArrays && uUtils.isKeyValueTypeObject(value)) ||
+        (alsoSearchArrays && uUtils.isKeyValueTypeObjectOrArray(value))
       ) {
-        if (gpUtils.doKeyValuesMatch(value, identifyingData)) {
+        if (uUtils.doKeyValuesMatch(value, identifyingData)) {
           res.value = value;
           res.key = key;
         } else {
@@ -995,7 +996,7 @@ exports.findObjectInNestedObjectsAndArrays = (
     Object.keys(source).forEach((key) => {
       let value = source[key];
       if (typeof value === "object" && value !== null) {
-        if (gpUtils.doKeyValuesMatch(value, identifyingData)) {
+        if (uUtils.doKeyValuesMatch(value, identifyingData)) {
           res.value = value;
           res.key = key;
         } else {
@@ -1053,7 +1054,7 @@ exports.giveValueFromObjectByRoute = (obj, route) => {
 
   function interiorFunction(obj, route) {
     let key = route[0];
-    if (!gpUtils.isKeyValueTypeObject(obj[key])) {
+    if (!uUtils.isKeyValueTypeObject(obj[key])) {
       return obj[key];
     } else {
       return interiorFunction(obj[key], route.slice(1));
@@ -1229,7 +1230,7 @@ exports.createMergedGenderOutputUnit = (
   subArrayOfOutputUnits,
   currentLanguage
 ) => {
-  let mergedOutputUnit = gpUtils.copyWithoutReference(subArrayOfOutputUnits[0]);
+  let mergedOutputUnit = uUtils.copyWithoutReference(subArrayOfOutputUnits[0]);
 
   let newGenderArr = [
     mergedOutputUnit.drillPath.find((pathArr) => pathArr[0] === "gender")[1],
@@ -1259,7 +1260,7 @@ exports.createMergedGenderOutputUnit = (
 
     let metaGenderTranslatedArr = metaGenderRef[metaGenderKey];
 
-    if (gpUtils.areTwoFlatArraysEqual(newGenderArr, metaGenderTranslatedArr)) {
+    if (uUtils.areTwoFlatArraysEqual(newGenderArr, metaGenderTranslatedArr)) {
       metaGenderResult = metaGenderKey;
     }
   });
@@ -1323,14 +1324,12 @@ exports.switchMetaFeatureForAWorkableConvertedFeature = (
     (convertedMetaFeature) => source[convertedMetaFeature]
   );
 
-  let selectedConvertedMetaFeature = gpUtils.selectRandom(
-    convertedMetaFeatures
-  );
+  let selectedConvertedMetaFeature = uUtils.selectRandom(convertedMetaFeatures);
 
   if (
-    gpUtils.checkEachSequentialPairing(
+    uUtils.checkEachSequentialPairing(
       drillResultsOfConvertedMetaFeatures,
-      gpUtils.areTwoObjectsEqual,
+      uUtils.areTwoObjectsEqual,
       true
     )
   ) {
@@ -1377,7 +1376,7 @@ exports.isThisValueUniqueAtThisLevelInLemmaObject = (
     drillPath
   );
 
-  let lObjAtRelevantLevel = gpUtils.copyWithoutReference(lObj.inflections);
+  let lObjAtRelevantLevel = uUtils.copyWithoutReference(lObj.inflections);
 
   let stopSwitch = false;
 
@@ -1420,7 +1419,7 @@ exports.isThisValueUniqueAtThisLevelInLemmaObject = (
     .filter((inflectionKeyy) => inflectionKeyy !== chosenInflectionKeyy)
     .map((inflectionKeyy) => lObjAtRelevantLevel[inflectionKeyy]);
 
-  let itIsUnique = !gpUtils.isThisObjectInThisArrayOfObjects(
+  let itIsUnique = !uUtils.isThisObjectInThisArrayOfObjects(
     chosenInflectionValyye,
     allOtherInflectionValyyesAtThisLevel
   );
