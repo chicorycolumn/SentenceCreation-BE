@@ -594,8 +594,11 @@ exports.findMatchingLemmaObjectThenWord = (
       console.log("xzjc ot:findMatchingLemmaObjectThenWord");
       let selectedLemmaObject = gpUtils.selectRandom(matchesCopy);
 
-      if (!pleaseDontSpecify) {
+      if (!structureChunk.dontSpecifyOnThisChunk) {
         //PDSXblue
+
+        //Decant only the MGNs who have structureChunk PDS: false.
+        //The structureChunk is definitely QstCh because we're inside !multipleMode clause.
         allLangUtils.decantMGNsBeforeOutputArray(
           structureChunk,
           selectedLemmaObject,
@@ -662,8 +665,10 @@ exports.findMatchingLemmaObjectThenWord = (
       // If the outputunits differ only in gender, and pleaseDontSpecifyPronounGender is true,
       // then merge the outputunits, so ENG Q "I wrote" can be POL A ["Napisałem.", "Napisałam."]
       // #pal11B-03a, #pal11B-03b
+
+      //The structureChunk is definitely QstCh because we're inside !multipleMode clause.
       if (
-        pleaseDontSpecifyPronounGender &&
+        structureChunk.dontSpecifyOnThisChunk &&
         otUtils.doDrillPathsDifferOnlyByGender(subArrayOfOutputUnits)
       ) {
         console.log(

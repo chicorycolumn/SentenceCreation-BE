@@ -333,67 +333,7 @@ describe("/api", () => {
     });
   });
 
-  describe.only("/palette - Stage 17-ii: Possessive pronouns and MGNs. PP below MGN. ProsMgn.", () => {
-    xit("#pal17-04a GET 200 YES: Engpol. Sentence with 2 of same MGN. Annotations expected. Eventually this should fail so that 4b succeeds.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "115 I saw my doctor and her doctor",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "I (male) saw my doctor (male) and his doctor (male).",
-              POL: ["Zobaczyłem mojego lekarza i jego lekarza."],
-            },
-            {
-              ENG: "I (female) saw my doctor (male) and his doctor (male).",
-              POL: ["Zobaczyłam mojego lekarza i jego lekarza."],
-            },
-            //
-            {
-              ENG: "I (male) saw my doctor (male) and his doctor (female).",
-              POL: ["Zobaczyłem mojego lekarza i jego lekarkę."],
-            },
-            {
-              ENG: "I (female) saw my doctor (male) and his doctor (female).",
-              POL: ["Zobaczyłam mojego lekarza i jego lekarkę."],
-            },
-            //
-            {
-              ENG: "I (male) saw my doctor (female) and her doctor (male).",
-              POL: ["Zobaczyłem moją lekarkę i jej lekarza."],
-            },
-            {
-              ENG: "I (female) saw my doctor (female) and her doctor (male).",
-              POL: ["Zobaczyłam moją lekarkę i jej lekarza."],
-            },
-            //
-            {
-              ENG: "I (male) saw my doctor (female) and her doctor (female).",
-              POL: ["Zobaczyłem moją lekarkę i jej lekarkę."],
-            },
-            {
-              ENG: "I (female) saw my doctor (female) and her doctor (female).",
-              POL: ["Zobaczyłam moją lekarkę i jej lekarkę."],
-            },
-            //
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    //nownow
+  describe("/palette - Stage 17-ii: Possessive pronouns and MGNs. PP below MGN. ProsMgn.", () => {
     it("#pal17-04b GET 200 YES: Engpol. Sentence with 2 of same MGN. Some annotations expected. But eventually, this should succeed, as ProsMgn.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -453,7 +393,7 @@ describe("/api", () => {
           );
         });
     });
-    it.only("#pal17-04c GET 200 YES: Engpol. Sentence with 2 of same MGN. pleaseDontSpecify should be blocked for ProsMgn MGN but not for other MGN.", () => {
+    it("#pal17-04c GET 200 YES: Engpol. Sentence with 2 of same MGN. pleaseDontSpecify should be blocked for ProsMgn MGN but not for other MGN. This tests the change where pleaseDontSpecify is done per stCh and not as a broader variable.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -923,7 +863,7 @@ describe("/api", () => {
     });
   });
 
-  xdescribe("/palette - Stage 17-iii: Possessive pronouns and MGNs. EdusMgn", () => {
+  describe.only("/palette - Stage 17-iii: Possessive pronouns and MGNs. EdusMgn", () => {
     it("#pal17-07a GET 200 YES: Engpol. Hard-specify an MGN's gender (EdusMgn dummy run).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -970,6 +910,39 @@ describe("/api", () => {
             {
               ENG: ["Doctor."],
               POL: "Lekarka.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal17-08y GET 200 YES: Engpol. pleaseDontSpecify shouldn't override sentenceStructure that wants f only. And further, we need an annotation, so PDS should be ignored here also.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true, //Should be ignored.
+          // devSaysThrowAtMidpoint: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "116y My doctor",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "My doctor (female).",
+              POL: ["Moja lekarka."],
+            },
+            {
+              ENG: "My doctor (male).",
+              POL: ["Moja lekarz."],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -1079,7 +1052,12 @@ describe("/api", () => {
         .then((res) => {
           let ref = [
             {
-              ENG: ["My doctor was a woman."],
+              ENG: [
+                "My doctor was a woman.",
+                "My doctor had been a woman.",
+                "My doctor has been a woman.",
+                "My doctor was being a woman.",
+              ],
               POL: "Moja lekarka była kobietą.",
             },
           ];
@@ -1107,7 +1085,12 @@ describe("/api", () => {
         .then((res) => {
           let ref = [
             {
-              ENG: ["My doctor was a woman."],
+              ENG: [
+                "My doctor was a woman.",
+                "My doctor had been a woman.",
+                "My doctor has been a woman.",
+                "My doctor was being a woman.",
+              ],
               POL: "Moja lekarka była kobietą.",
             },
           ];
@@ -1119,7 +1102,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal17-09a GET 200 YES: Engpol. One annotation absent as EdusMgn.", () => {
+    it.only("#pal17-09a GET 200 YES: Engpol. One annotation absent as EdusMgn.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 

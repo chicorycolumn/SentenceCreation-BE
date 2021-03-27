@@ -49,23 +49,28 @@ exports.fetchPalette = (req) => {
         `-----------------------------------------------------------------------------------------------------------------------------------PDSyellow` +
         "[0m"
     );
+
     //PDSXyellow
-    // Set to false if 'person' noun is headNoun of any pronouns,
+    // Set PDS: false on this specific qChunk if 'person' noun is headNoun of any pronouns,
     // because 'The doctor gave me his book.' must specify the MGN doctor.
-    questionSentenceFormula.sentenceStructure.forEach((potentialHeadChunk) => {
+    questionSentenceFormula.sentenceStructure.forEach((qChunk) => {
       if (
-        potentialHeadChunk.andTags &&
-        potentialHeadChunk.andTags.includes("person") &&
+        qChunk.andTags &&
+        qChunk.andTags.includes("person") &&
         questionSentenceFormula.sentenceStructure.find(
           (potentialDepChunk) =>
             potentialDepChunk.wordtype === "pronoun" &&
-            potentialDepChunk.agreeWith === potentialHeadChunk.chunkId
+            potentialDepChunk.agreeWith === qChunk.chunkId
         )
       ) {
         console.log(
           "[1;32m " + `iirz-fetchPalette setting pleaseDontSpecify to false.` + "[0m"
         );
-        pleaseDontSpecify = false;
+        qChunk.dontSpecifyOnThisChunk = false;
+      } else if (qChunk.gender && qChunk.gender.length) {
+        qChunk.dontSpecifyOnThisChunk = false;
+      } else {
+        qChunk.dontSpecifyOnThisChunk = true;
       }
     });
   }
@@ -150,27 +155,6 @@ exports.fetchPalette = (req) => {
       console.log(" ");
     }
 
-    if (
-      //PDSXgreen
-      // If PDS, then blank the stCh gender in any cases where slObj is MGN.
-      pleaseDontSpecify &&
-      selectedLemmaObject.gender === "allPersonalSingularGenders_selector"
-    ) {
-      console.log(
-        "[1;30m " +
-          `-----------------------------------------------------------------------------------------------------------------------------------PDSgreen` +
-          "[0m"
-      );
-      console.log(
-        "[1;35m " +
-          `mjdj-fetchPalette Will blank structureChunk.gender of "${structureChunk.chunkId}" just before Midpoint, because slObj "${selectedLemmaObject.lemma}" is multi gender.` +
-          "[0m"
-      );
-
-      structureChunk.gender = [];
-    }
-
-    //nowno
     if (false && "decisive decant check") {
       Object.keys(structureChunk).forEach((featureKey) => {
         let featureValue = structureChunk[featureKey];
@@ -409,20 +393,13 @@ exports.fetchPalette = (req) => {
     );
 
     ///////////////////////////////////////////////kp Specifiers
-    if (!pleaseDontSpecify) {
-      //PDSXpurple
-      aaUtils.addSpecifiersToMGNs(
-        answerSentenceData,
-        questionSentenceData,
-        languagesObj
-      );
-    } else {
-      console.log(
-        "[1;30m " +
-          `-----------------------------------------------------------------------------------------------------------------------------------PDSpurple` +
-          "[0m"
-      );
-    }
+    //PDSXpurple
+    //This below fxn only runs the logic for Qunits with PDS: false.
+    aaUtils.addSpecifiersToMGNs(
+      questionSentenceData,
+      answerSentenceData,
+      languagesObj
+    );
 
     if (true && "console") {
       console.log(

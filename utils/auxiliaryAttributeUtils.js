@@ -8,8 +8,8 @@ const aaUtils = require("./auxiliaryAttributeUtils.js");
 const allLangUtils = require("./allLangUtils.js");
 
 exports.addSpecifiersToMGNs = (
-  answerSentenceData,
   questionSentenceData,
+  answerSentenceData,
   languagesObj
 ) => {
   let { questionOutputArr } = questionSentenceData;
@@ -24,7 +24,12 @@ exports.addSpecifiersToMGNs = (
     refObj.metaFeatures[questionLanguage]["gender"]
   );
 
-  let questionMGNunits = questionOutputArr.filter((unit) => {
+  //pdsxpurple Only run this for qUnits where PDS is false.
+  let questionUnitsToSpecify = questionOutputArr.filter(
+    (qUnit) => !qUnit.structureChunk.dontSpecifyOnThisChunk
+  );
+
+  let questionMGNunits = questionUnitsToSpecify.filter((unit) => {
     return (
       unit.selectedLemmaObject &&
       unit.selectedLemmaObject.gender &&
