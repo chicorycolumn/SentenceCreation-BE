@@ -2787,7 +2787,7 @@ describe("/api", () => {
           );
         });
     });
-    it.only("#pal13B-03a GET 200 YES: Engpol. Another more interesting sentence with Pronouns.", () => {
+    it("#pal13B-03a GET 200 YES: Engpol. Another more interesting sentence with Pronouns.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2961,7 +2961,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal13B-03b GET 200 YES: Poleng. Another more interesting sentence with Pronouns.", () => {
+    it.only("#pal13B-03b GET 200 YES: Poleng. Another more interesting sentence with Pronouns.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -2981,6 +2981,9 @@ describe("/api", () => {
                 "Father gave me apples.",
                 "Father had given me apples.",
                 "Father has given me apples.",
+                "Father gave apples to me.",
+                "Father had given apples to me.",
+                "Father has given apples to me.",
               ],
             },
             {
@@ -2989,6 +2992,9 @@ describe("/api", () => {
                 "Father gave me books.",
                 "Father had given me books.",
                 "Father has given me books.",
+                "Father gave books to me.",
+                "Father had given books to me.",
+                "Father has given books to me.",
               ],
             },
             {
@@ -2997,6 +3003,9 @@ describe("/api", () => {
                 "Father gave me onions.",
                 "Father had given me onions.",
                 "Father has given me onions.",
+                "Father gave onions to me.",
+                "Father had given onions to me.",
+                "Father has given onions to me.",
               ],
             },
             {
@@ -3005,6 +3014,9 @@ describe("/api", () => {
                 "Father gave me mirrors.",
                 "Father had given me mirrors.",
                 "Father has given me mirrors.",
+                "Father gave mirrors to me.",
+                "Father had given mirrors to me.",
+                "Father has given mirrors to me.",
               ],
             },
             {
@@ -3013,6 +3025,9 @@ describe("/api", () => {
                 "Father gave me mirrors.",
                 "Father had given me mirrors.",
                 "Father has given me mirrors.",
+                "Father gave mirrors to me.",
+                "Father had given mirrors to me.",
+                "Father has given mirrors to me.",
               ],
             },
             {
@@ -3021,6 +3036,9 @@ describe("/api", () => {
                 "Father gave us apples.",
                 "Father had given us apples.",
                 "Father has given us apples.",
+                "Father gave apples to us.",
+                "Father had given apples to us.",
+                "Father has given apples to us.",
               ],
             },
             {
@@ -3029,6 +3047,9 @@ describe("/api", () => {
                 "Father gave us books.",
                 "Father had given us books.",
                 "Father has given us books.",
+                "Father gave books to us.",
+                "Father had given books to us.",
+                "Father has given books to us.",
               ],
             },
             {
@@ -3037,6 +3058,9 @@ describe("/api", () => {
                 "Father gave us onions.",
                 "Father had given us onions.",
                 "Father has given us onions.",
+                "Father gave onions to us.",
+                "Father had given onions to us.",
+                "Father has given onions to us.",
               ],
             },
             {
@@ -3045,6 +3069,9 @@ describe("/api", () => {
                 "Father gave us mirrors.",
                 "Father had given us mirrors.",
                 "Father has given us mirrors.",
+                "Father gave mirrors to us.",
+                "Father had given mirrors to us.",
+                "Father has given mirrors to us.",
               ],
             },
             {
@@ -3053,6 +3080,9 @@ describe("/api", () => {
                 "Father gave us mirrors.",
                 "Father had given us mirrors.",
                 "Father has given us mirrors.",
+                "Father gave mirrors to us.",
+                "Father had given mirrors to us.",
+                "Father has given mirrors to us.",
               ],
             },
             {
@@ -3061,6 +3091,9 @@ describe("/api", () => {
                 "Mother gave me apples.",
                 "Mother had given me apples.",
                 "Mother has given me apples.",
+                "Mother gave apples to me.",
+                "Mother had given apples to me.",
+                "Mother has given apples to me.",
               ],
             },
             {
@@ -3069,6 +3102,9 @@ describe("/api", () => {
                 "Mother gave me books.",
                 "Mother had given me books.",
                 "Mother has given me books.",
+                "Mother gave books to me.",
+                "Mother had given books to me.",
+                "Mother has given books to me.",
               ],
             },
             {
@@ -3077,6 +3113,9 @@ describe("/api", () => {
                 "Mother gave me onions.",
                 "Mother had given me onions.",
                 "Mother has given me onions.",
+                "Mother gave onions to me.",
+                "Mother had given onions to me.",
+                "Mother has given onions to me.",
               ],
             },
             {
@@ -3085,6 +3124,9 @@ describe("/api", () => {
                 "Mother gave me mirrors.",
                 "Mother had given me mirrors.",
                 "Mother has given me mirrors.",
+                "Mother gave mirrors to me.",
+                "Mother had given mirrors to me.",
+                "Mother has given mirrors to me.",
               ],
             },
             {
@@ -3093,6 +3135,9 @@ describe("/api", () => {
                 "Mother gave me mirrors.",
                 "Mother had given me mirrors.",
                 "Mother has given me mirrors.",
+                "Mother gave mirrors to me.",
+                "Mother had given mirrors to me.",
+                "Mother has given mirrors to me.",
               ],
             },
             {
@@ -3101,6 +3146,9 @@ describe("/api", () => {
                 "Mother gave us apples.",
                 "Mother had given us apples.",
                 "Mother has given us apples.",
+                "Mother gave apples to us.",
+                "Mother had given apples to us.",
+                "Mother has given apples to us.",
               ],
             },
             {
@@ -3109,6 +3157,9 @@ describe("/api", () => {
                 "Mother gave us books.",
                 "Mother had given us books.",
                 "Mother has given us books.",
+                "Mother gave books to us.",
+                "Mother had given books to us.",
+                "Mother has given books to us.",
               ],
             },
             {
@@ -3117,6 +3168,9 @@ describe("/api", () => {
                 "Mother gave us onions.",
                 "Mother had given us onions.",
                 "Mother has given us onions.",
+                "Mother gave onions to us.",
+                "Mother had given onions to us.",
+                "Mother has given onions to us.",
               ],
             },
             {
@@ -3125,6 +3179,9 @@ describe("/api", () => {
                 "Mother gave us mirrors.",
                 "Mother had given us mirrors.",
                 "Mother has given us mirrors.",
+                "Mother gave mirrors to us.",
+                "Mother had given mirrors to us.",
+                "Mother has given mirrors to us.",
               ],
             },
             {
@@ -3133,6 +3190,9 @@ describe("/api", () => {
                 "Mother gave us mirrors.",
                 "Mother had given us mirrors.",
                 "Mother has given us mirrors.",
+                "Mother gave mirrors to us.",
+                "Mother had given mirrors to us.",
+                "Mother has given mirrors to us.",
               ],
             },
           ];
