@@ -973,10 +973,31 @@ exports.sentenceFormulasBank = [
         andTags: ["person"],
         number: ["singular"],
         specificLemmas: ["doctor"],
-        agreeWith: "pro-1-I", //nownow Is this okay to do?
+        agreeWith: "pro-1-I",
       },
     ],
     primaryOrders: [["pro-1-I", "ver-1-was", "art-1-a", "nou-1-doctor"]],
+  },
+  {
+    sentenceFormulaSymbol: "117a I was here",
+    sentenceFormulaId: "POL-117a",
+    translations: { ENG: ["ENG-117a"], POL: ["POL-117a"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificLemmas: ["PERSONAL"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-was",
+        agreeWith: "pro-1-I",
+        specificLemmas: ["be"],
+        tenseDescription: ["past simple"],
+      },
+      { chunkId: "fix-1-here", value: "here" },
+    ],
+    primaryOrders: [["pro-1-I", "ver-1-was", "fix-1-here"]],
   },
   {
     sentenceFormulaSymbol: "118 My doctor and his book",

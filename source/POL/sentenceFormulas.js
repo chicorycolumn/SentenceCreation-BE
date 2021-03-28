@@ -1386,12 +1386,41 @@ exports.sentenceFormulasBank = [
         gcase: ["ins"],
         importantFeatures: ["gcase"],
         number: ["singular"],
-        // gender: ["f"],
         specificLemmas: ["lekarz", "lekarka"],
-        agreeWith: "pro-1-I", //nownow Is this okay to do?
+        agreeWith: "pro-1-I",
       },
     ],
     primaryOrders: [["ver-1-was", "nou-1-doctor"]],
+  },
+  {
+    sentenceFormulaSymbol: "117a I was here",
+    sentenceFormulaId: "POL-117a",
+    translations: { ENG: ["ENG-117a"], POL: ["POL-117a"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificLemmas: ["PERSONAL"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-was",
+        agreeWith: "pro-1-I",
+        specificLemmas: ["być"],
+        tenseDescription: ["past pf"],
+      },
+      {
+        chunkId: "nou-1-doctor",
+        andTags: ["person"],
+        gcase: ["ins"],
+        importantFeatures: ["gcase"],
+        number: ["singular"],
+        specificLemmas: ["lekarz", "lekarka"],
+        agreeWith: "pro-1-I",
+      },
+      { chunkId: "fix-1-here", value: "tutaj" },
+    ],
+    primaryOrders: [["ver-1-was", "fix-1-here"]],
   },
   {
     sentenceFormulaSymbol: "118 My doctor and his book",

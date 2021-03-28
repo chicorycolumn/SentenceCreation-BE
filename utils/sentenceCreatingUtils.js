@@ -1347,7 +1347,7 @@ exports.inheritFromHeadToDependentChunk = (
       dependentChunk.wordtype
     ];
 
-  let inheritableInflectorKeys = IIKref.values.slice(0);
+  let normalinheritableInflectorKeys = IIKref.values;
 
   let specialInheritableInflectorKeys = IIKref.getSpecial
     ? IIKref.getSpecial(dependentChunk)
@@ -1358,10 +1358,10 @@ exports.inheritFromHeadToDependentChunk = (
       dependentChunk.wordtype
     ] || [];
 
-  inheritableInflectorKeys = [
-    ...inheritableInflectorKeys,
-    ...hybridSelectors,
+  let inheritableInflectorKeys = [
+    ...normalinheritableInflectorKeys,
     ...specialInheritableInflectorKeys,
+    ...hybridSelectors,
   ];
 
   inheritableInflectorKeys.forEach((inflectorKey) => {
