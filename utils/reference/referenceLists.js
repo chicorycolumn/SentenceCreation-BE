@@ -1,3 +1,5 @@
+const { lObjisMGN } = require("../generalPurposeUtils");
+
 exports.metaFeatures = {
   ENG: {
     gender: {
@@ -61,10 +63,29 @@ exports.lemmaObjectFeatures = {
       preposition: ["form"],
     },
     inheritableInflectorKeys: {
-      noun: ["number", "gcase"],
-      adjective: ["number", "gender", "gcase"],
-      verb: ["tense", "person", "number", "gender"],
-      pronoun: ["person", "number", "gender", "gcase"],
+      noun: {
+        values: ["number", "gcase"],
+        getSpecial: (stCh, lObj) => {
+          let specialInflectorKeys = [];
+
+          if (stCh) {
+            if (stCh.andTags && stCh.andTags.includes("person")) {
+              specialInflectorKeys.push("gender");
+            }
+          }
+
+          if (lObj) {
+            if (lObjisMGN(lObj)) {
+              specialInflectorKeys.push("gender");
+            }
+          }
+
+          return Array.from(new Set(specialInflectorKeys));
+        },
+      }, //But gender is inheritable if this is MGN.
+      adjective: { values: ["number", "gender", "gcase"] },
+      verb: { values: ["tense", "person", "number", "gender"] },
+      pronoun: { values: ["person", "number", "gender", "gcase"] },
     },
     allowableTransfersFromQuestionStructure: {
       noun: ["number"],
@@ -93,10 +114,10 @@ exports.lemmaObjectFeatures = {
       preposition: ["form"],
     },
     inheritableInflectorKeys: {
-      noun: ["number", "gcase"],
-      adjective: [],
-      verb: ["tense", "person", "number"],
-      pronoun: ["person", "number", "gender", "gcase"],
+      noun: { values: ["number", "gcase"] },
+      adjective: { values: [] },
+      verb: { values: ["tense", "person", "number"] },
+      pronoun: { values: ["person", "number", "gender", "gcase"] },
     },
     allowableTransfersFromQuestionStructure: {
       noun: ["number"],

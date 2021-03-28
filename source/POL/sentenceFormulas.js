@@ -1364,6 +1364,36 @@ exports.sentenceFormulasBank = [
     ],
   },
   {
+    sentenceFormulaSymbol: "117 I was a doctor",
+    sentenceFormulaId: "POL-117",
+    translations: { ENG: ["ENG-117"], POL: ["POL-117"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificLemmas: ["PERSONAL"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-was",
+        agreeWith: "pro-1-I",
+        specificLemmas: ["być"],
+        tenseDescription: ["past pf"],
+      },
+      {
+        chunkId: "nou-1-doctor",
+        andTags: ["person"],
+        gcase: ["ins"],
+        importantFeatures: ["gcase"],
+        number: ["singular"],
+        // gender: ["f"],
+        specificLemmas: ["lekarz", "lekarka"],
+        agreeWith: "pro-1-I", //nownow Is this okay to do?
+      },
+    ],
+    primaryOrders: [["ver-1-was", "nou-1-doctor"]],
+  },
+  {
     sentenceFormulaSymbol: "118 My doctor and his book",
     sentenceFormulaId: "POL-118",
     translations: { ENG: ["ENG-118"] },

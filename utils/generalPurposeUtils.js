@@ -335,3 +335,7 @@ exports.getWordsFromTerminusObject = (tObj, shouldGetAll) => {
 
   return allWords;
 };
+
+exports.lObjisMGN = (lObj) => {
+  return /_/.test(lObj.gender);
+};

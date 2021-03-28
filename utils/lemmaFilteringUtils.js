@@ -522,7 +522,7 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
 
   let doneSelectors = [];
 
-  let lemmaObjectIsMGN = /_/.test(selectedLemmaObject.gender);
+  let lemmaObjectIsMGN = gpUtils.lObjisMGN(selectedLemmaObject);
 
   //STEP ZERO: Decisive Decant
   //Remove gender values on stCh if drillPath doesn't include gender (ie is infinitive or a participle, say).

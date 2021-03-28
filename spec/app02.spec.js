@@ -1252,13 +1252,14 @@ describe("/api", () => {
   });
 
   xdescribe("/palette - Stage 17-iv: Possessive pronouns and MGNs. MGN to agree with pronoun.", () => {
-    it("#pal17-10a GET 200 YES: Engpol. I was a doctor. MGN to agree with pronoun.", () => {
+    it("#pal17-10a GET 200 YES: Engpol. I was a doctor. MGN to agree with pronoun. pleaseDontSpecify", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
         .send({
+          pleaseDontSpecify: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "117 I was a doctor",
@@ -1279,14 +1280,13 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal17-10b GET 200 YES: Engpol. I was a doctor. MGN to agree with pronoun. pleaseDontSpecify", () => {
+    it("#pal17-10b GET 200 YES: Engpol. I was a doctor. MGN to agree with pronoun.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
         .send({
-          pleaseDontSpecify: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "117 I was a doctor",
@@ -2961,7 +2961,7 @@ describe("/api", () => {
           );
         });
     });
-    it.only("#pal13B-03b GET 200 YES: Poleng. Another more interesting sentence with Pronouns.", () => {
+    it("#pal13B-03b GET 200 YES: Poleng. Another more interesting sentence with Pronouns.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 

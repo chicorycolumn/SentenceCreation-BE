@@ -1336,33 +1336,38 @@ exports.inheritFromHeadToDependentChunk = (
   dependentChunk
 ) => {
   console.log(
-    `cmpr inheritFromHeadToDependentChunk: from "${headChunk.chunkId}" to "${dependentChunk.chunkId}"`,
+    `wdil inheritFromHeadToDependentChunk: "${headChunk.chunkId}" to "${dependentChunk.chunkId}"`,
     "dependentChunk BEFOREHAND: ",
     dependentChunk
   );
-  console.log("cmpr inheritFromHeadToDependentChunk: headChunk", headChunk);
+  console.log("w'dil inheritFromHeadToDependentChunk: headChunk", headChunk);
 
-  let inheritableInflectorKeys =
+  let IIKref =
     refObj.lemmaObjectFeatures[currentLanguage].inheritableInflectorKeys[
       dependentChunk.wordtype
     ];
 
+  let inheritableInflectorKeys = IIKref.values.slice(0);
+
+  let specialInheritableInflectorKeys = IIKref.getSpecial
+    ? IIKref.getSpecial(dependentChunk)
+    : [];
+
   let hybridSelectors =
     refObj.lemmaObjectFeatures[currentLanguage].hybridSelectors[
       dependentChunk.wordtype
-    ];
+    ] || [];
 
-  if (hybridSelectors) {
-    inheritableInflectorKeys = [
-      ...inheritableInflectorKeys,
-      ...hybridSelectors,
-    ];
-  }
+  inheritableInflectorKeys = [
+    ...inheritableInflectorKeys,
+    ...hybridSelectors,
+    ...specialInheritableInflectorKeys,
+  ];
 
   inheritableInflectorKeys.forEach((inflectorKey) => {
-    console.log("kwwm inheritFromHeadToDependentChunk: inflectorKey", {
-      inflectorKey,
-    });
+    console.log(
+      `kwwm inheritFromHeadToDependentChunk: "${headChunk.chunkId}" to "${dependentChunk.chunkId}". inflectorKey "${inflectorKey}".`
+    );
     //Hard change.
     if (
       headChunk[inflectorKey] &&
