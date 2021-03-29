@@ -67,6 +67,8 @@ exports.fetchPalette = (req) => {
         qChunk.dontSpecifyOnThisChunk = false;
       } else if (qChunk.gender && qChunk.gender.length) {
         qChunk.dontSpecifyOnThisChunk = false;
+        // } else if (qChunk.chunkId === "verb-1-am") {
+        //   qChunk.dontSpecifyOnThisChunk = false;
       } else {
         qChunk.dontSpecifyOnThisChunk = true;
       }

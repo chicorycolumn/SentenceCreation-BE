@@ -1000,6 +1000,27 @@ exports.sentenceFormulasBank = [
     primaryOrders: [["pro-1-I", "ver-1-was", "fix-1-here"]],
   },
   {
+    sentenceFormulaSymbol: "117b I am here",
+    sentenceFormulaId: "ENG-117b",
+    translations: { ENG: ["ENG-117b"], POL: ["POL-117b"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificLemmas: ["PERSONAL"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-am",
+        agreeWith: "pro-1-I",
+        specificLemmas: ["be"],
+        tenseDescription: ["present simple"],
+      },
+      { chunkId: "fix-1-here", value: "here" },
+    ],
+    primaryOrders: [["pro-1-I", "ver-1-am", "fix-1-here"]],
+  },
+  {
     sentenceFormulaSymbol: "118 My doctor and his book",
     sentenceFormulaId: "ENG-118",
     translations: { POL: ["POL-118"] },

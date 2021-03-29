@@ -1252,7 +1252,7 @@ describe("/api", () => {
   });
 
   describe.only("/palette - Stage 17-iv: Possessive pronouns and MGNs. MGN to agree with pronoun.", () => {
-    it.only("#pal17-10a GET 200 YES: Engpol. I was here. Testing annotations.", () => {
+    xit("#pal17-10a GET 200 YES: Engpol. I was here. Testing annotations.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1283,7 +1283,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal17-10b GET 200 YES: Engpol. I was here. Testing annotations. pleaseDontSpecify", () => {
+    xit("#pal17-10b GET 200 YES: Engpol. I was here. Testing annotations. pleaseDontSpecify", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1311,7 +1311,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal17-10c GET 200 YES: Poleng. I was here. Testing annotations.", () => {
+    xit("#pal17-10c GET 200 YES: Poleng. I was here. Testing annotations.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1342,7 +1342,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal17-10d GET 200 YES: Poleng. I was here. Testing annotations. pleaseDontSpecify but with no effect expected.", () => {
+    xit("#pal17-10d GET 200 YES: Poleng. I was here. Testing annotations. pleaseDontSpecify but with no effect expected.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1372,6 +1372,126 @@ describe("/api", () => {
             questionLanguage,
             answerLanguage
           );
+        });
+    });
+    it("#pal17-10e GET 200 YES: Engpol. I am here. Testing annotations.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "117b I am here",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "I am here.",
+              POL: ["Jestem tutaj."],
+            },
+            {
+              ENG: "I am here.",
+              POL: ["Jestem tutaj."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal17-10f GET 200 YES: Engpol. I am here. Testing annotations. pleaseDontSpecify", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "117b I am here",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "I am here.",
+              POL: ["Jestem tutaj."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal17-10g GET 200 YES: Poleng. I am here. Testing annotations.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "117b I am here",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["I am here.", "I am being here."],
+              POL: "Jestem tutaj.",
+            },
+            {
+              ENG: ["I am here.", "I am being here."],
+              POL: "Jestem tutaj.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it.only("#pal17-10h GET 200 YES: Poleng. I am here. Testing annotations. pleaseDontSpecify but with no effect expected.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // pleaseDontSpecify: true,
+          questionLanguage,
+          // answerLanguage,
+          sentenceFormulaSymbol: "117b I am here",
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.questionSentenceArr).to.eql(["Jestem tutaj."]);
+
+          // let ref = [
+          //   {
+          //     ENG: ["I am here.", "I am being here."],
+          //     POL: "Jestem tutaj.",
+          //   },
+          // ];
+          // testingUtils.checkTranslationsOfGivenRef(
+          //   res,
+          //   ref,
+          //   questionLanguage,
+          //   answerLanguage
+          // );
         });
     });
     xit("#pal17-11a GET 200 YES: Engpol. I was a doctor. MGN to agree with pronoun.", () => {
@@ -1496,6 +1616,7 @@ describe("/api", () => {
           );
         });
     });
+    //And then having done 17-11, make that vary for number as well.
   });
 
   xdescribe("/palette - Stage 16: NATASHA T. Checking how arrays as terminal points are handled.", () => {
