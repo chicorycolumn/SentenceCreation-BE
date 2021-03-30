@@ -664,10 +664,10 @@ exports.findMatchingLemmaObjectThenWord = (
       //PDSXred
       // If the outputunits differ only in gender, and p'leaseDontSpecifyPronounGender is true,
       // then merge the outputunits, so ENG Q "I wrote" can be POL A ["Napisałem.", "Napisałam."]
-      // #pal11B-03a, #pal11B-03b
 
       //The structureChunk is definitely QstCh because we're inside !multipleMode clause.
       if (
+        false &&
         structureChunk.dontSpecifyOnThisChunk &&
         otUtils.doDrillPathsDifferOnlyByGender(subArrayOfOutputUnits)
       ) {

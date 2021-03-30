@@ -980,7 +980,7 @@ exports.sentenceFormulasBank = [
   },
   {
     sentenceFormulaSymbol: "117a I was here",
-    sentenceFormulaId: "POL-117a",
+    sentenceFormulaId: "ENG-117a",
     translations: { ENG: ["ENG-117a"], POL: ["POL-117a"] },
     sentenceStructure: [
       {

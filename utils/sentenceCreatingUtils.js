@@ -102,8 +102,6 @@ exports.processSentenceFormula = (
     otherChunks,
   } = scUtils.sortStructureChunks(sentenceStructure);
 
-  console.log("hbblay", { headChunks, dependentChunks, otherChunks });
-
   let headOutputUnitArrays = [];
 
   if ("console") {

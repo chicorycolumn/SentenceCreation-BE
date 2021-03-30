@@ -394,6 +394,7 @@ describe("/api", () => {
           );
         });
     });
+    //Changed test as PDSred has been nixed.
     it("#pal17-04c GET 200 YES: Engpol. Sentence with 2 of same MGN. pleaseDontSpecify should be blocked for ProsMgn MGN but not for other MGN. This tests the change where pleaseDontSpecify is done per stCh and not as a broader variable.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -410,21 +411,31 @@ describe("/api", () => {
         .then((res) => {
           let ref = [
             {
-              ENG: "I saw my doctor and his doctor.",
+              ENG: "I (male) saw my doctor and his doctor.",
               POL: [
                 "Zobaczyłem mojego lekarza i jego lekarza.",
-                "Zobaczyłam mojego lekarza i jego lekarza.",
                 "Zobaczyłem mojego lekarza i jego lekarkę.",
-                "Zobaczyłam mojego lekarza i jego lekarkę.",
               ],
             },
             {
-              ENG: "I saw my doctor and her doctor.",
+              ENG: "I (male) saw my doctor and her doctor.",
               POL: [
                 "Zobaczyłem moją lekarkę i jej lekarza.",
-                "Zobaczyłam moją lekarkę i jej lekarza.",
                 "Zobaczyłem moją lekarkę i jej lekarkę.",
+              ],
+            },
+            {
+              ENG: "I (female) saw my doctor and her doctor.",
+              POL: [
+                "Zobaczyłam moją lekarkę i jej lekarza.",
                 "Zobaczyłam moją lekarkę i jej lekarkę.",
+              ],
+            },
+            {
+              ENG: "I (female) saw my doctor and his doctor.",
+              POL: [
+                "Zobaczyłam mojego lekarza i jego lekarza.",
+                "Zobaczyłam mojego lekarza i jego lekarkę.",
               ],
             },
           ];
@@ -1251,8 +1262,8 @@ describe("/api", () => {
     });
   });
 
-  describe.only("/palette - Stage 17-iv: Possessive pronouns and MGNs. MGN to agree with pronoun.", () => {
-    xit("#pal17-10a GET 200 YES: Engpol. I was here. Testing annotations.", () => {
+  describe("/palette - Stage 17-iv: Possessive pronouns and MGNs. MGN to agree with pronoun.", () => {
+    it("#pal17-10a GET 200 YES: Engpol. I was here. Testing annotations.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1283,7 +1294,8 @@ describe("/api", () => {
           );
         });
     });
-    xit("#pal17-10b GET 200 YES: Engpol. I was here. Testing annotations. pleaseDontSpecify", () => {
+    //Changed test as PDSred has been nixed.
+    it("#pal17-10b GET 200 YES: Engpol. I was here. Testing annotations. pleaseDontSpecify", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1299,8 +1311,12 @@ describe("/api", () => {
         .then((res) => {
           let ref = [
             {
-              ENG: "I was here.",
-              POL: ["Byłam tutaj.", "Byłem tutaj."],
+              ENG: "I (male) was here.",
+              POL: ["Byłem tutaj."],
+            },
+            {
+              ENG: "I (female) was here.",
+              POL: ["Byłam tutaj."],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -1311,7 +1327,7 @@ describe("/api", () => {
           );
         });
     });
-    xit("#pal17-10c GET 200 YES: Poleng. I was here. Testing annotations.", () => {
+    it("#pal17-10c GET 200 YES: Poleng. I was here. Testing annotations.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1326,11 +1342,21 @@ describe("/api", () => {
         .then((res) => {
           let ref = [
             {
-              ENG: ["I was here."],
+              ENG: [
+                "I was here.",
+                "I had been here.",
+                "I have been here.",
+                "I was being here.",
+              ],
               POL: "Byłem tutaj.",
             },
             {
-              ENG: ["I was here."],
+              ENG: [
+                "I was here.",
+                "I had been here.",
+                "I have been here.",
+                "I was being here.",
+              ],
               POL: "Byłam tutaj.",
             },
           ];
@@ -1342,7 +1368,7 @@ describe("/api", () => {
           );
         });
     });
-    xit("#pal17-10d GET 200 YES: Poleng. I was here. Testing annotations. pleaseDontSpecify but with no effect expected.", () => {
+    it("#pal17-10d GET 200 YES: Poleng. I was here. Testing annotations. pleaseDontSpecify but with no effect expected.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1358,11 +1384,21 @@ describe("/api", () => {
         .then((res) => {
           let ref = [
             {
-              ENG: ["I was here."],
+              ENG: [
+                "I was here.",
+                "I had been here.",
+                "I have been here.",
+                "I was being here.",
+              ],
               POL: "Byłem tutaj.",
             },
             {
-              ENG: ["I was here."],
+              ENG: [
+                "I was here.",
+                "I had been here.",
+                "I have been here.",
+                "I was being here.",
+              ],
               POL: "Byłam tutaj.",
             },
           ];
@@ -1464,37 +1500,35 @@ describe("/api", () => {
           );
         });
     });
-    it.only("#pal17-10h GET 200 YES: Poleng. I am here. Testing annotations. pleaseDontSpecify but with no effect expected.", () => {
+    it("#pal17-10h GET 200 YES: Poleng. I am here. Testing annotations. pleaseDontSpecify but with no effect expected.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
       return request(app)
         .get("/api/palette")
         .send({
-          // pleaseDontSpecify: true,
+          pleaseDontSpecify: true,
           questionLanguage,
-          // answerLanguage,
+          answerLanguage,
           sentenceFormulaSymbol: "117b I am here",
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionSentenceArr).to.eql(["Jestem tutaj."]);
-
-          // let ref = [
-          //   {
-          //     ENG: ["I am here.", "I am being here."],
-          //     POL: "Jestem tutaj.",
-          //   },
-          // ];
-          // testingUtils.checkTranslationsOfGivenRef(
-          //   res,
-          //   ref,
-          //   questionLanguage,
-          //   answerLanguage
-          // );
+          let ref = [
+            {
+              ENG: ["I am here.", "I am being here."],
+              POL: "Jestem tutaj.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
         });
     });
-    xit("#pal17-11a GET 200 YES: Engpol. I was a doctor. MGN to agree with pronoun.", () => {
+    it.only("#pal17-11a GET 200 YES: Engpol. I was a doctor. MGN to agree with pronoun.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1617,6 +1651,7 @@ describe("/api", () => {
         });
     });
     //And then having done 17-11, make that vary for number as well.
+    //Add "The doctor was here." sentence with tests.
   });
 
   xdescribe("/palette - Stage 16: NATASHA T. Checking how arrays as terminal points are handled.", () => {
@@ -4822,7 +4857,8 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal11B-03a GET 200 YES: Engpol. AGNOSTIC. Give both pronoun singular gender options in answer.", () => {
+    //Removing this fxnality, as PDSred has been nixed.
+    xit("#pal11B-03a GET 200 YES: Engpol. AGNOSTIC. Give both pronoun singular gender options in answer.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -4837,8 +4873,6 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-
           let ref = [
             {
               ENG: "I wrote.",
@@ -4859,7 +4893,8 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal11B-03b GET 200 YES: Engpol. AGNOSTIC. Give both pronoun plural gender options in answer.", () => {
+    //Removing this fxnality, as PDSred has been nixed.
+    xit("#pal11B-03b GET 200 YES: Engpol. AGNOSTIC. Give both pronoun plural gender options in answer.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
