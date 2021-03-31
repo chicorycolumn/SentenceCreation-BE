@@ -1272,7 +1272,7 @@ describe("/api", () => {
         .send({
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "117a I was here",
+          sentenceFormulaSymbol: "117b I was here",
         })
         .expect(200)
         .then((res) => {
@@ -1305,7 +1305,7 @@ describe("/api", () => {
           pleaseDontSpecify: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "117a I was here",
+          sentenceFormulaSymbol: "117b I was here",
         })
         .expect(200)
         .then((res) => {
@@ -1336,7 +1336,7 @@ describe("/api", () => {
         .send({
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "117a I was here",
+          sentenceFormulaSymbol: "117b I was here",
         })
         .expect(200)
         .then((res) => {
@@ -1378,7 +1378,7 @@ describe("/api", () => {
           pleaseDontSpecify: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "117a I was here",
+          sentenceFormulaSymbol: "117b I was here",
         })
         .expect(200)
         .then((res) => {
@@ -1419,7 +1419,7 @@ describe("/api", () => {
         .send({
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "117b I am here",
+          sentenceFormulaSymbol: "117c I am here",
         })
         .expect(200)
         .then((res) => {
@@ -1451,7 +1451,7 @@ describe("/api", () => {
           pleaseDontSpecify: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "117b I am here",
+          sentenceFormulaSymbol: "117c I am here",
         })
         .expect(200)
         .then((res) => {
@@ -1478,7 +1478,7 @@ describe("/api", () => {
         .send({
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "117b I am here",
+          sentenceFormulaSymbol: "117c I am here",
         })
         .expect(200)
         .then((res) => {
@@ -1510,7 +1510,7 @@ describe("/api", () => {
           pleaseDontSpecify: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "117b I am here",
+          sentenceFormulaSymbol: "117c I am here",
         })
         .expect(200)
         .then((res) => {
@@ -1652,6 +1652,49 @@ describe("/api", () => {
     });
     //And then having done 17-11, make that vary for number as well.
     //Add "The doctor was here." sentence with tests.
+    it("#pal17-11e GET 200 YES: Engpol. I* was a doctor. MGN to agree with pronoun.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "117a I* was a doctor",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "I (male) was a doctor.",
+              POL: ["Byłem lekarzem."],
+            },
+            {
+              ENG: "I (female) was a doctor.",
+              POL: ["Byłam lekarką."],
+            },
+            {
+              ENG: "We (females) were doctors.",
+              POL: ["Byłyśmy lekarkami."],
+            },
+            {
+              ENG: "We (males) were doctors.",
+              POL: ["Byliśmy lekarzami."],
+            },
+            {
+              ENG: "We (mixed) were doctors.",
+              POL: ["Byliśmy lekarzami."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
   });
 
   xdescribe("/palette - Stage 16: NATASHA T. Checking how arrays as terminal points are handled.", () => {

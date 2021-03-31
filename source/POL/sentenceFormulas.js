@@ -1393,9 +1393,37 @@ exports.sentenceFormulasBank = [
     primaryOrders: [["ver-1-was", "nou-1-doctor"]],
   },
   {
-    sentenceFormulaSymbol: "117a I was here",
+    sentenceFormulaSymbol: "117a I* was a doctor",
     sentenceFormulaId: "POL-117a",
     translations: { ENG: ["ENG-117a"], POL: ["POL-117a"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificLemmas: ["PERSONAL"],
+        person: ["1per"],
+      },
+      {
+        chunkId: "ver-1-was",
+        agreeWith: "pro-1-I",
+        specificLemmas: ["być"],
+        tenseDescription: ["past pf"],
+      },
+      {
+        chunkId: "nou-1-doctor",
+        andTags: ["person"],
+        gcase: ["ins"],
+        importantFeatures: ["gcase"],
+        number: ["singular"],
+        specificLemmas: ["lekarz", "lekarka"],
+        agreeWith: "pro-1-I",
+      },
+    ],
+    primaryOrders: [["ver-1-was", "nou-1-doctor"]],
+  },
+  {
+    sentenceFormulaSymbol: "117b I was here",
+    sentenceFormulaId: "POL-117b",
+    translations: { ENG: ["ENG-117b"], POL: ["POL-117b"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1414,9 +1442,9 @@ exports.sentenceFormulasBank = [
     primaryOrders: [["ver-1-was", "fix-1-here"]],
   },
   {
-    sentenceFormulaSymbol: "117b I am here",
-    sentenceFormulaId: "POL-117b",
-    translations: { ENG: ["ENG-117b"], POL: ["POL-117b"] },
+    sentenceFormulaSymbol: "117c I am here",
+    sentenceFormulaId: "POL-117c",
+    translations: { ENG: ["ENG-117c"], POL: ["POL-117c"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-I",

@@ -979,9 +979,41 @@ exports.sentenceFormulasBank = [
     primaryOrders: [["pro-1-I", "ver-1-was", "art-1-a", "nou-1-doctor"]],
   },
   {
-    sentenceFormulaSymbol: "117a I was here",
-    sentenceFormulaId: "ENG-117a",
+    sentenceFormulaSymbol: "117a I* was a doctor",
+    sentenceFormulaId: "POL-117a",
     translations: { ENG: ["ENG-117a"], POL: ["POL-117a"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificLemmas: ["PERSONAL"],
+        person: ["1per"],
+      },
+      {
+        chunkId: "ver-1-was",
+        agreeWith: "pro-1-I",
+        specificLemmas: ["be"],
+        tenseDescription: ["past simple"],
+      },
+      {
+        chunkId: "art-1-a",
+        wordtype: "article",
+        form: ["indefinite"],
+        connectedTo: "pro-1-I",
+      },
+      {
+        chunkId: "nou-1-doctor",
+        andTags: ["person"],
+        number: ["singular"],
+        specificLemmas: ["doctor"],
+        agreeWith: "pro-1-I",
+      },
+    ],
+    primaryOrders: [["pro-1-I", "ver-1-was", "art-1-a", "nou-1-doctor"]],
+  },
+  {
+    sentenceFormulaSymbol: "117b I was here",
+    sentenceFormulaId: "ENG-117b",
+    translations: { ENG: ["ENG-117b"], POL: ["POL-117b"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1000,9 +1032,9 @@ exports.sentenceFormulasBank = [
     primaryOrders: [["pro-1-I", "ver-1-was", "fix-1-here"]],
   },
   {
-    sentenceFormulaSymbol: "117b I am here",
-    sentenceFormulaId: "ENG-117b",
-    translations: { ENG: ["ENG-117b"], POL: ["POL-117b"] },
+    sentenceFormulaSymbol: "117c I am here",
+    sentenceFormulaId: "ENG-117c",
+    translations: { ENG: ["ENG-117c"], POL: ["POL-117c"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
