@@ -1652,7 +1652,7 @@ describe("/api", () => {
     });
     //And then having done 17-11, make that vary for number as well.
     //Add "The doctor was here." sentence with tests.
-    it("#pal17-11e GET 200 YES: Engpol. I* was a doctor. MGN to agree with pronoun.", () => {
+    xit("#pal17-11e GET 200 YES: Engpol. I* was a doctor. MGN to agree with pronoun.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1685,6 +1685,116 @@ describe("/api", () => {
             {
               ENG: "We (mixed) were doctors.",
               POL: ["Byliśmy lekarzami."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    xit("#pal17-11f GET 200 YES: Engpol. I* was a doctor. MGN to agree with pronoun. pleaseDontSpecify", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "117a I* was a doctor",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "I was a doctor.",
+              POL: ["Byłem lekarzem.", "Byłam lekarką."],
+            },
+            {
+              ENG: "We were doctors.",
+              POL: ["Byłyśmy lekarkami.", "Byliśmy lekarzami."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    xit("#pal17-11g GET 200 YES: Poleng. I* was a doctor. MGN to agree with pronoun.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "117a I* was a doctor",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["I was a doctor."],
+              POL: "Byłem lekarzem.",
+            },
+            {
+              ENG: ["I was a doctor."],
+              POL: "Byłam lekarką.",
+            },
+            {
+              ENG: ["We were doctors."],
+              POL: "Byłyßmy lekarkami.",
+            },
+            {
+              ENG: ["We were doctors."],
+              POL: "Bylißmy lekarzami.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    xit("#pal17-11h GET 200 YES: Poleng. I* was a doctor. MGN to agree with pronoun. pleaseDontSpecify but with no effect expected.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "117a I* was a doctor",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["I was a doctor."],
+              POL: "Byłem lekarzem.",
+            },
+            {
+              ENG: ["I was a doctor."],
+              POL: "Byłam lekarką.",
+            },
+            {
+              ENG: ["We were doctors."],
+              POL: "Byłyßmy lekarkami.",
+            },
+            {
+              ENG: ["We were doctors."],
+              POL: "Bylißmy lekarzami.",
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
