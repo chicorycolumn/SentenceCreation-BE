@@ -709,7 +709,7 @@ exports.filterByAndTagsAndOrTags = (wordset, structureChunk) => {
   return lemmaObjects;
 };
 
-exports.padOutRequirementArrWithMetaFeatures = (
+exports.padOutRequirementArrWithMetaFeaturesIfNecessary = (
   requirementArrs,
   key,
   currentLanguage
@@ -755,7 +755,7 @@ exports.padOutRequirementArrWithMetaFeatures = (
       });
 
       console.log(
-        "sfrl lf:filterByKey requirementArr inside #requirementArr.forEach((featureValue)# is",
+        "sfrl lf:filterByKey requirementArr inside ```requirementArr.forEach((featureValue)``` is",
         requirementArr
       );
     });
@@ -774,23 +774,41 @@ exports.padOutRequirementArrWithMetaFeatures = (
 
 exports.filterByKey = (
   lemmaObjectArr,
-  requirementArrs,
+  structureChunk,
   key,
   currentLanguage
 ) => {
-  let paddedRequirementArr = lfUtils.padOutRequirementArrWithMetaFeatures(
-    requirementArrs,
+  let requirementArray = lfUtils.padOutRequirementArrWithMetaFeaturesIfNecessary(
+    structureChunk,
     key,
     currentLanguage
   );
 
   //And finally, do said filter.
-  if (paddedRequirementArr.length) {
-    return lemmaObjectArr.filter(
-      (lObj) =>
-        paddedRequirementArr.includes(lObj[key]) ||
-        paddedRequirementArr.includes(lObj[key].split("_")[0])
-    );
+  if (requirementArray.length) {
+    return lemmaObjectArr.filter((lObj) => {
+      let lObjSelectorValues = [lObj[key], lObj[key].split("_")[0]];
+
+      if (key === "gender") {
+        structureChunk.number.forEach((numberValue) => {
+          let extraVirilityConvertedValues =
+            refObj.pluralVirilityAndSingularConversionRef[currentLanguage][
+              numberValue
+            ][lObj[key]];
+
+          if (extraVirilityConvertedValues) {
+            lObjSelectorValues = [
+              ...lObjSelectorValues,
+              ...extraVirilityConvertedValues,
+            ];
+          }
+        });
+      }
+
+      return lObjSelectorValues.some((lObjSelectorValue) =>
+        requirementArray.includes(lObjSelectorValue)
+      );
+    });
   } else {
     return lemmaObjectArr;
   }

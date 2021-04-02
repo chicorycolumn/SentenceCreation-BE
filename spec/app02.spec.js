@@ -1747,7 +1747,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal17-11g GET 200 YES: Poleng. I* was a doctor. MGN to agree with pronoun.", () => {
+    xit("#pal17-11g GET 200 YES: Poleng. I* was a doctor. MGN to agree with pronoun.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1806,7 +1806,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal17-11h GET 200 YES: Poleng. I* was a doctor. MGN to agree with pronoun. pleaseDontSpecify but with no effect expected.", () => {
+    xit("#pal17-11h GET 200 YES: Poleng. I* was a doctor. MGN to agree with pronoun. pleaseDontSpecify but with no effect expected.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 

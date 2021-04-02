@@ -175,6 +175,10 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
       return;
     }
 
+    if (!structureChunk.number || !structureChunk.number.length) {
+      structureChunk.number = ["singular", "plural"];
+    }
+
     if (shouldConsoleLog) {
       console.log(
         "zesx ALL preprocessStructureChunks At first the structureChunk is",

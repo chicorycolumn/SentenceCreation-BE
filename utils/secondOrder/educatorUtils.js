@@ -26,7 +26,7 @@ exports.checkOutputArrayForMissingUnits = (
     console.log("dwke primaryOrders", primaryOrders);
     console.log("dwke outputChunkIds", outputChunkIds);
     clUtils.throw(
-      `dwke checkOutputArrayForMissingUnits. The ${label}-${currentLanguage} outputArray didn't have all the requisite units. See above.`
+      `dwke checkOutputArrayForMissingUnits. "${label}-${currentLanguage}" outputArray didn't have all the requisite units. See above.`
     );
   }
 };

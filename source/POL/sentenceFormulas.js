@@ -467,6 +467,7 @@ exports.sentenceFormulasBank = [
         chunkId: "nou-1",
         andTags: ["person", "personTest1"],
         gcase: ["nom"],
+        number: [],
         gender: ["f"],
       },
       {
