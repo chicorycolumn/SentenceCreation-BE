@@ -1262,7 +1262,7 @@ describe("/api", () => {
     });
   });
 
-  describe("/palette - Stage 17-iv: Possessive pronouns and MGNs. MGN to agree with pronoun.", () => {
+  xdescribe("/palette - Stage 17-iv: Possessive pronouns and MGNs. MGN to agree with pronoun.", () => {
     it("#pal17-10a GET 200 YES: Engpol. I was here. Testing annotations.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -1528,7 +1528,7 @@ describe("/api", () => {
           );
         });
     });
-    it.only("#pal17-11a GET 200 YES: Engpol. I was a doctor. MGN to agree with pronoun.", () => {
+    it("#pal17-11a GET 200 YES: Engpol. I was a doctor. MGN to agree with pronoun.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1559,7 +1559,7 @@ describe("/api", () => {
           );
         });
     });
-    xit("#pal17-11b GET 200 YES: Engpol. I was a doctor. MGN to agree with pronoun. pleaseDontSpecify", () => {
+    it("#pal17-11b GET 200 YES: Engpol. I was a doctor. MGN to agree with pronoun. pleaseDontSpecify", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1587,7 +1587,7 @@ describe("/api", () => {
           );
         });
     });
-    xit("#pal17-11c GET 200 YES: Poleng. I was a doctor. MGN to agree with pronoun.", () => {
+    it("#pal17-11c GET 200 YES: Poleng. I was a doctor. MGN to agree with pronoun.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1602,11 +1602,21 @@ describe("/api", () => {
         .then((res) => {
           let ref = [
             {
-              ENG: ["I was a doctor."],
+              ENG: [
+                "I was a doctor.",
+                "I had been a doctor.",
+                "I have been a doctor.",
+                "I was being a doctor.",
+              ],
               POL: "Byłem lekarzem.",
             },
             {
-              ENG: ["I was a doctor."],
+              ENG: [
+                "I was a doctor.",
+                "I had been a doctor.",
+                "I have been a doctor.",
+                "I was being a doctor.",
+              ],
               POL: "Byłam lekarką.",
             },
           ];
@@ -1618,7 +1628,7 @@ describe("/api", () => {
           );
         });
     });
-    xit("#pal17-11d GET 200 YES: Poleng. I was a doctor. MGN to agree with pronoun. pleaseDontSpecify but with no effect expected.", () => {
+    it("#pal17-11d GET 200 YES: Poleng. I was a doctor. MGN to agree with pronoun. pleaseDontSpecify but with no effect expected.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1634,11 +1644,21 @@ describe("/api", () => {
         .then((res) => {
           let ref = [
             {
-              ENG: ["I was a doctor."],
+              ENG: [
+                "I was a doctor.",
+                "I had been a doctor.",
+                "I have been a doctor.",
+                "I was being a doctor.",
+              ],
               POL: "Byłem lekarzem.",
             },
             {
-              ENG: ["I was a doctor."],
+              ENG: [
+                "I was a doctor.",
+                "I had been a doctor.",
+                "I have been a doctor.",
+                "I was being a doctor.",
+              ],
               POL: "Byłam lekarką.",
             },
           ];
@@ -1727,7 +1747,7 @@ describe("/api", () => {
           );
         });
     });
-    xit("#pal17-11g GET 200 YES: Poleng. I* was a doctor. MGN to agree with pronoun.", () => {
+    it("#pal17-11g GET 200 YES: Poleng. I* was a doctor. MGN to agree with pronoun.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1742,20 +1762,40 @@ describe("/api", () => {
         .then((res) => {
           let ref = [
             {
-              ENG: ["I was a doctor."],
+              ENG: [
+                "I was a doctor.",
+                "I had been a doctor.",
+                "I have been a doctor.",
+                "I was being a doctor.",
+              ],
               POL: "Byłem lekarzem.",
             },
             {
-              ENG: ["I was a doctor."],
+              ENG: [
+                "I was a doctor.",
+                "I had been a doctor.",
+                "I have been a doctor.",
+                "I was being a doctor.",
+              ],
               POL: "Byłam lekarką.",
             },
             {
-              ENG: ["We were doctors."],
-              POL: "Byłyßmy lekarkami.",
+              ENG: [
+                "We were doctors.",
+                "We had been doctors.",
+                "We have been doctors.",
+                "We were being doctors.",
+              ],
+              POL: "Byłyśmy lekarkami.",
             },
             {
-              ENG: ["We were doctors."],
-              POL: "Bylißmy lekarzami.",
+              ENG: [
+                "We were doctors.",
+                "We had been doctors.",
+                "We have been doctors.",
+                "We were being doctors.",
+              ],
+              POL: "Byliśmy lekarzami.",
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -1766,7 +1806,7 @@ describe("/api", () => {
           );
         });
     });
-    xit("#pal17-11h GET 200 YES: Poleng. I* was a doctor. MGN to agree with pronoun. pleaseDontSpecify but with no effect expected.", () => {
+    it("#pal17-11h GET 200 YES: Poleng. I* was a doctor. MGN to agree with pronoun. pleaseDontSpecify but with no effect expected.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 

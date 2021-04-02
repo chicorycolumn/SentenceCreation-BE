@@ -19,6 +19,7 @@ exports.sentenceFormulasBank = [
         gender: [],
       },
     ],
+    primaryOrders: [["nou-1", "fix-1", "nou-2"]],
   },
   {
     sentenceFormulaSymbol: "girl is wearing shirt",
@@ -40,6 +41,7 @@ exports.sentenceFormulasBank = [
         gender: [],
       },
     ],
+    primaryOrders: [["nou-1", "fix-1", "nou-2"]],
   },
   {
     sentenceFormulaSymbol: "shirt is in wardrobe",
@@ -48,13 +50,13 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "nou-1",
         andTags: ["wearable"],
-
         gcase: ["nom"],
         number: ["singular"],
         gender: [],
       },
       { chunkId: "fix-1", value: "jest w szafie" },
     ],
+    primaryOrders: [["nou-1", "fix-1"]],
   },
   {
     sentenceFormulaSymbol: "I often wear shirt",
@@ -64,12 +66,12 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "nou-1",
         andTags: ["wearable"],
-
         gcase: ["acc"],
         number: ["singular", "plural"],
         gender: [],
       },
     ],
+    primaryOrders: [["fix-1", "nou-1"]],
   },
   {
     sentenceFormulaSymbol: "boys are male",
@@ -78,13 +80,13 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "nou-1",
         andTags: ["person", "personTest1"],
-
         gcase: ["nom"],
         number: ["plural"],
         gender: ["m1"],
       },
       { chunkId: "fix-1", value: "są męscy" },
     ],
+    primaryOrders: [["nou-1", "fix-1"]],
   },
   {
     sentenceFormulaSymbol: "red apple",
@@ -182,12 +184,12 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "nou-1",
         andTags: ["edible"],
-
         gcase: ["acc"],
         number: ["singular"],
         gender: [],
       },
     ],
+    primaryOrders: [["fix-1", "nou-1"]],
   },
   {
     sentenceFormulaSymbol: "I am reading",
@@ -200,6 +202,7 @@ exports.sentenceFormulasBank = [
         person: ["1per", "2per", "3per"],
       },
     ],
+    primaryOrders: [["ver-1"]],
   },
   {
     sentenceFormulaSymbol: "girl is reading",
@@ -220,6 +223,7 @@ exports.sentenceFormulasBank = [
         andTags: ["basic2"],
       },
     ],
+    primaryOrders: [["nou-1", "ver-1"]],
   },
   {
     sentenceFormulaSymbol: "girls were reading",
@@ -240,6 +244,7 @@ exports.sentenceFormulasBank = [
         andTags: ["basic2"],
       },
     ],
+    primaryOrders: [["nou-1", "ver-1"]],
   },
   {
     sentenceFormulaSymbol: "* girl has red apple",
@@ -494,6 +499,7 @@ exports.sentenceFormulasBank = [
         andTags: ["basic2"],
       },
     ],
+    primaryOrders: [["nou-1", "ver-1"]],
   },
   {
     sentenceFormulaSymbol: "101b girl *reads quickly",
@@ -531,7 +537,7 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
       },
     ],
-    primaryOrders: [],
+    primaryOrders: [["ver-1"]],
     additionalOrders: [],
   },
   {
@@ -547,7 +553,7 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
       },
     ],
-    primaryOrders: [],
+    primaryOrders: [["ver-1"]],
     additionalOrders: [],
   },
   {
@@ -563,7 +569,7 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
       },
     ],
-    primaryOrders: [],
+    primaryOrders: [["ver-1"]],
     additionalOrders: [],
   },
   {
@@ -579,7 +585,7 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
       },
     ],
-    primaryOrders: [],
+    primaryOrders: [["ver-1"]],
     additionalOrders: [],
   },
   {
@@ -595,7 +601,7 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
       },
     ],
-    primaryOrders: [],
+    primaryOrders: [["ver-1"]],
     additionalOrders: [],
   },
   {
@@ -611,7 +617,7 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
       },
     ],
-    primaryOrders: [],
+    primaryOrders: [["ver-1"]],
     additionalOrders: [],
   },
   {
@@ -627,7 +633,7 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
       },
     ],
-    primaryOrders: [],
+    primaryOrders: [["ver-1"]],
     additionalOrders: [],
   },
   {
@@ -1385,7 +1391,6 @@ exports.sentenceFormulasBank = [
         andTags: ["person"],
         gcase: ["ins"],
         importantFeatures: ["gcase"],
-        number: ["singular"],
         specificLemmas: ["lekarz", "lekarka"],
         agreeWith: "pro-1-I",
       },

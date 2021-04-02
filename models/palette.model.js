@@ -1,6 +1,7 @@
 const gpUtils = require("../utils/generalPurposeUtils.js");
 const uUtils = require("../utils/universalUtils.js");
 const clUtils = require("../utils/zerothOrder/consoleLoggingUtils.js");
+const edUtils = require("../utils/secondOrder/educatorUtils.js");
 const scUtils = require("../utils/sentenceCreatingUtils.js");
 const aaUtils = require("../utils/auxiliaryAttributeUtils.js");
 const ivUtils = require("../utils/secondOrder/inputValidationUtils.js");
@@ -136,6 +137,15 @@ exports.fetchPalette = (req) => {
   questionSentenceData.questionOutputArr =
     questionSentenceData.arrayOfOutputArrays[0];
   delete questionSentenceData.arrayOfOutputArrays;
+
+  //Alphaman Check if all stChs in Q formula have a corresponding outputunit. If not, throw.
+  edUtils.checkOutputArrayForMissingUnits(
+    questionSentenceData.sentenceFormula,
+    questionSentenceData.questionOutputArr,
+    questionLanguage,
+    "question",
+    useDummy
+  );
 
   ///////////////////////////////////////////////kp Decisive Decant
   questionSentenceData.questionOutputArr.forEach((outputUnit, index) => {
@@ -332,6 +342,16 @@ exports.fetchPalette = (req) => {
       answerSentenceData.answerOutputArrays =
         answerSentenceData.arrayOfOutputArrays;
       delete answerSentenceData.arrayOfOutputArrays;
+
+      answerSentenceData.answerOutputArrays.forEach((answerOutputArray) => {
+        edUtils.checkOutputArrayForMissingUnits(
+          answerSentenceData.sentenceFormula,
+          answerOutputArray,
+          answerLanguage,
+          "answer",
+          useDummy
+        );
+      });
 
       if (false && "console") {
         console.log(

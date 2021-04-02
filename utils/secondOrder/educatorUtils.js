@@ -4,6 +4,33 @@ const clUtils = require(".././zerothOrder/consoleLoggingUtils.js");
 const otUtils = require(".././objectTraversingUtils.js");
 const educatorUtils = require("./educatorUtils.js");
 
+exports.checkOutputArrayForMissingUnits = (
+  sentenceFormula,
+  outputArray,
+  currentLanguage,
+  label,
+  useDummy
+) => {
+  if (useDummy) {
+    return;
+  }
+
+  let primaryOrders = sentenceFormula.primaryOrders;
+  let outputChunkIds = outputArray.map((unit) => unit.structureChunk.chunkId);
+
+  if (
+    !primaryOrders.some((order) =>
+      order.every((chunkId) => outputChunkIds.includes(chunkId))
+    )
+  ) {
+    console.log("dwke primaryOrders", primaryOrders);
+    console.log("dwke outputChunkIds", outputChunkIds);
+    clUtils.throw(
+      `dwke checkOutputArrayForMissingUnits. The ${label}-${currentLanguage} outputArray didn't have all the requisite units. See above.`
+    );
+  }
+};
+
 exports.getLemmaObjectsWithoutGivenKey = (wordsBank, wordtype, featureKey) => {
   return wordsBank[`${wordtype}Set`].filter((lObj) => !lObj[featureKey]);
 };

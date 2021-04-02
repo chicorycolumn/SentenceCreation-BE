@@ -947,7 +947,7 @@ exports.sentenceFormulasBank = [
   },
   {
     sentenceFormulaSymbol: "117 I was a doctor",
-    sentenceFormulaId: "POL-117",
+    sentenceFormulaId: "ENG-117",
     translations: { ENG: ["ENG-117"], POL: ["POL-117"] },
     sentenceStructure: [
       {
@@ -971,7 +971,6 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "nou-1-doctor",
         andTags: ["person"],
-        number: ["singular"],
         specificLemmas: ["doctor"],
         agreeWith: "pro-1-I",
       },
@@ -980,7 +979,7 @@ exports.sentenceFormulasBank = [
   },
   {
     sentenceFormulaSymbol: "117a I* was a doctor",
-    sentenceFormulaId: "POL-117a",
+    sentenceFormulaId: "ENG-117a",
     translations: { ENG: ["ENG-117a"], POL: ["POL-117a"] },
     sentenceStructure: [
       {
@@ -996,7 +995,6 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "art-1-a",
-        wordtype: "article",
         form: ["indefinite"],
         connectedTo: "pro-1-I",
       },

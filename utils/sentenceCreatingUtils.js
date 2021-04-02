@@ -485,10 +485,8 @@ exports.giveFinalSentences = (
   answerSentenceData
 ) => {
   if (answerLanguage) {
-    let { questionOutputArr } = sentenceData;
-
     aaUtils.firstStageEvaluateAnnotations(
-      questionOutputArr,
+      sentenceData.questionOutputArr,
       { answerLanguage, questionLanguage: currentLanguage },
       answerSentenceData
     );
@@ -538,6 +536,8 @@ exports.giveFinalSentences = (
       });
     });
   } else {
+    console.log("jfuc questionOutputArr", questionOutputArr);
+
     let finalSentences = scUtils.buildSentenceString(
       questionOutputArr,
       sentenceFormula,
@@ -665,9 +665,9 @@ exports.selectWordVersions = (
   currentLanguage,
   multipleMode
 ) => {
-  // console.log("ofoc selectWordVersions orderedOutputArr", orderedOutputArr);
-
   let selectedWordsArr = [];
+
+  // console.log("efsj selectWordVersions. orderedOutputArr", orderedOutputArr);
 
   orderedOutputArr.forEach((outputUnit, index) => {
     let previousOutputUnit = orderedOutputArr[index - 1];
@@ -698,7 +698,7 @@ exports.selectWordVersions = (
     }
 
     if (gpUtils.isTerminusObject(selectedWord)) {
-      //Move to engUtils.selectWordVersions()
+      //Move to engUtils.selectWordVersions() //zeta
       if (currentLanguage === "ENG") {
         // >>>
         // >>> Indefinite Article
@@ -794,7 +794,7 @@ exports.selectWordVersions = (
         }
       }
 
-      //Move to polUtils.selectWordVersions()
+      //Move to polUtils.selectWordVersions() //zeta
       if (currentLanguage === "POL") {
         if (
           gpUtils.getWordtypeFromLemmaObject(selectedLemmaObject) === "pronoun"
