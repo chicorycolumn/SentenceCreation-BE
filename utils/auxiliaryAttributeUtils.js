@@ -152,6 +152,11 @@ exports.removeAnnotationsByRefConditions = (
     return;
   }
 
+  console.log(
+    `kmei removeAnnotationsByRefConditions START for "${questionOutputUnit.structureChunk.chunkId}" ${languagesObj.questionLanguage}`
+  );
+  console.log("questionStructureChunk", questionStructureChunk);
+
   let correspondingAnswerChunks = [];
   let { chunkId } = questionStructureChunk;
   let { answerLanguage, questionLanguage } = languagesObj;
@@ -251,15 +256,7 @@ exports.removeAnnotationsByRefConditions = (
                 })
               ) {
                 console.log(
-                  "nyjw removeAnnotationsByRefConditions: On stCh " +
-                    questionStructureChunk.chunkId +
-                    " I will delete the " +
-                    annotationKey +
-                    " annotation because one of the answer stChs includes " +
-                    featureKey +
-                    " of " +
-                    featureValue +
-                    ", which was a condition specified to block the annotation."
+                  `nyjw removeAnnotationsByRefConditions: On stCh ""${questionStructureChunk.chunkId}"" I will potentially delete the ""${annotationKey}"" annotation because one of the answer stChs includes ""${featureKey}"" of ""${featureValue}"", which was a condition specified to block the annotation.`
                 );
 
                 return true;
@@ -505,6 +502,45 @@ exports.addAnnotation = (chunk, key, value) => {
   chunk.annotations[key] = value;
 };
 
+exports.removeAnnotationsByCounterfactualAnswerSentences = (
+  questionOutputUnit,
+  languagesObj,
+  answerSentenceData,
+  questionOutputArr
+) => {
+  let questionSentenceStructure = questionOutputArr.map(
+    (unit) => unit.structureChunk
+  );
+  let questionSelectedWords = questionOutputArr.map(
+    (unit) => unit.selectedWord
+  );
+
+  let arrayOfAnswerSelectedWords = answerSentenceData.answerOutputArrays.map(
+    (outputArr) => outputArr.map((unit) => unit.selectedWord)
+  );
+
+  console.log(
+    "ddfe questionOutputUnit.annotations",
+    questionOutputUnit.annotations
+  );
+  console.log("ddfe questionSentenceStructure", questionSentenceStructure);
+  console.log("ddfe questionSelectedWords", questionSelectedWords);
+  console.log("ddfe arrayOfAnswerSelectedWords", arrayOfAnswerSelectedWords);
+  clUtils.throw(445);
+
+  Object.keys(questionOutputUnit.annotations).forEach((annoKey) => {
+    let annoValue = questionOutputUnit.annotations[annoKey];
+
+    // let allPossibleValuesForThisFeature = refObj[]
+  });
+
+  /**
+   * Okay, so here's what we'll do:
+   *
+   * Get all possible values for
+   */
+};
+
 exports.getFormattedAnnoObj = (
   questionOutputUnit,
   languagesObj,
@@ -523,12 +559,44 @@ exports.getFormattedAnnoObj = (
   );
   console.log("bbbd");
 
-  aaUtils.removeAnnotationsByRefConditions(
+  aaUtils.removeAnnotationsByCounterfactualAnswerSentences(
     questionOutputUnit,
     languagesObj,
     answerSentenceData,
     questionOutputArr
   );
+
+  /**
+   * You know, a more sensible thing to do here...
+   *
+   * Would be, instead of having to manually specify the conditions on which to remove annotations,
+   *
+   * let's say we have Qsent ENG: I {male} am here.
+   *
+   * (NB: Why does I have gender anno, and not numebr anno, and why do any words have annos?
+   *      It's because I is a synhom re gender. I {female} and I {male} are both I. So it got gender anno added.)
+   *
+   * Now, do we want to keep that annotation, eh?
+   *
+   * It would be nice if we could check what the Asent would be with a different gender, and if different, keep the
+   * anno, and if not, remove it.
+   *
+   * I {male} am here. --> Jestem tutaj.
+   * So let's get the other poss values for gender --> [m, f]
+   * and let's get the answer sentence again, but with gender f. --> Jestem tutaj.
+   *
+   * Oh cool, they're the same, so we'll remove the gender anno.
+   *
+   * Whereas I {male} was here. --> Byłem tutaj. RERUN --> Byłam tutaj.
+   *
+   * Aha! They're different. So we will keep that gender anno.
+   */
+  // aaUtils.removeAnnotationsByRefConditions(
+  //   questionOutputUnit,
+  //   languagesObj,
+  //   answerSentenceData,
+  //   questionOutputArr
+  // );
   console.log("bbbe");
 
   let annoObj = {};

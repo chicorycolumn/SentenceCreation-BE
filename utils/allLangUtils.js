@@ -258,9 +258,9 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
             return;
           }
 
-          structureChunk.tenseDescription = refObj.allFeatureValues[
+          structureChunk.tenseDescription = refObj.structureChunkFeatures[
             currentLanguage
-          ].tenseDescription.slice(0);
+          ].tenseDescription.possibleValues.slice(0);
         }
       }
 

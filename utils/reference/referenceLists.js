@@ -346,59 +346,6 @@ exports.structureChunkFeatures = {
   },
 };
 
-exports.allFeatureValues = {
-  ENG: {
-    tenseDescription: [
-      "past simple",
-      "past continuous",
-      "past perfect",
-      "present simple",
-      "present continuous",
-      "present perfect",
-      "future simple",
-      "future continuous",
-      "future perfect",
-    ],
-    gender: ["m", "f", "n", "virile", "nonvirile"],
-  },
-  POL: {
-    tenseDescription: [
-      "past im",
-      "present im",
-      "future im",
-      "past pf",
-      "future pf",
-      "imperative",
-      "negative imperative",
-      "cond0 condition",
-      "cond0 outcome",
-      "cond1 condition",
-      "cond1 outcome",
-      "cond2 condition",
-      "cond2 outcome",
-      "cond3 condition",
-      "cond3 outcome",
-    ],
-    gender: [
-      "m1",
-      "m2",
-      "m3",
-      "f",
-      "f",
-      "f",
-      "n",
-      "n",
-      "n",
-      "virile",
-      "virile",
-      "virile",
-      "nonvirile",
-      "nonvirile",
-      "nonvirile",
-    ],
-  },
-};
-
 exports.uninflectedForms = {
   POL: {
     verb: [
