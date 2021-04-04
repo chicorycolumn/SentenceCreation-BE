@@ -3,6 +3,99 @@ const uUtils = require("./universalUtils.js");
 const clUtils = require("./zerothOrder/consoleLoggingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 
+exports.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder = (
+  arrayA,
+  arrayB
+) => {
+  //Eg these two arrays are EQUAL.
+  //
+  // const input1 = [
+  //
+  //   [
+  //     "I",
+  //     "aint",
+  //     {
+  //       isTerminus: true,
+  //       processOnlyAtEnd: true,
+  //       nonprotective: ["a"],
+  //       protective: ["an"],
+  //     },
+  //     "human",
+  //   ],
+  //
+  //   [
+  //     "I",
+  //     "am",
+  //     {
+  //       isTerminus: true,
+  //       processOnlyAtEnd: true,
+  //       nonprotective: ["my"],
+  //       protective: ["mine"],
+  //     },
+  //     "human",
+  //   ],
+  //
+  // ];
+  //
+  // const input2 = [
+  //
+  //   [
+  //     {
+  //       isTerminus: true,
+  //       processOnlyAtEnd: true,
+  //       nonprotective: ["my"],
+  //       protective: ["mine"],
+  //     },
+  //     "am",
+  //     "I",
+  //     "human",
+  //   ],
+  //
+  //   [
+  //     "human",
+  //     "I",
+  //     "aint",
+  //     {
+  //       isTerminus: true,
+  //       processOnlyAtEnd: true,
+  //       nonprotective: ["a"],
+  //       protective: ["an"],
+  //     },
+  //   ],
+  //
+  // ];
+
+  if (arrayA.length !== arrayB.length) {
+    return false;
+  }
+
+  return arrayA.every((subArrFromA) => {
+    let matchingSubArrFromB = arrayB.find((subArrFromB) => {
+      if (subArrFromA.length !== subArrFromB.length) {
+        return false;
+      }
+
+      return subArrFromA.every((valueFromA) => {
+        if (typeof valueFromA === "string") {
+          return subArrFromB.includes(valueFromA);
+        } else if (typeof valueFromA === "object") {
+          return subArrFromB.find(
+            (valueFromB) =>
+              typeof valueFromB === "object" &&
+              uUtils.areTwoObjectsEqual(valueFromA, valueFromB)
+          );
+        } else {
+          clUtils.throw(
+            `erql areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder. Unexpected typeof for a selected words array value "${typeof valueFromA}".`
+          );
+        }
+      });
+    });
+
+    return matchingSubArrFromB;
+  });
+};
+
 exports.updateSentenceFormulaWithNewStructureChunksFromOutputUnits = (
   rawSentenceFormula,
   outputArr
@@ -12,8 +105,9 @@ exports.updateSentenceFormulaWithNewStructureChunksFromOutputUnits = (
       (stCh) => stCh.chunkId === unit.structureChunk.chunkId
     );
 
-    rawSentenceFormula.sentenceStructure[indexOfStChToChange] =
-      unit.structureChunk;
+    rawSentenceFormula.sentenceStructure[
+      indexOfStChToChange
+    ] = uUtils.copyWithoutReference(unit.structureChunk);
   });
 };
 

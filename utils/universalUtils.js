@@ -17,15 +17,9 @@ exports.areTwoFlatArraysEqualAndInSameOrder = (arr1, arr2) => {
 
 exports.areTwoFlatArraysEqual = (arr1, arr2) => {
   return (
-    arr1.length === arr2.length && arr1.every((item) => arr2.includes(item))
-  );
-};
-
-exports.doTwoFlatArraysMatchAllValues = (arr1, arr2) => {
-  return (
+    arr1.length === arr2.length &&
     arr1.every((item) => arr2.includes(item)) &&
-    arr2.every((item) => arr1.includes(item)) &&
-    arr1.length === arr2.length
+    arr2.every((item) => arr1.includes(item))
   );
 };
 
@@ -37,7 +31,7 @@ exports.doKeyValuesMatch = (object, keyValues) => {
     ) {
       return object[key] === keyValues[key];
     } else if (Array.isArray(keyValues[key]) && Array.isArray(object[key])) {
-      return uUtils.doTwoFlatArraysMatchAllValues(object[key], keyValues[key]);
+      return uUtils.areTwoFlatArraysEqual(object[key], keyValues[key]);
     }
   });
 };

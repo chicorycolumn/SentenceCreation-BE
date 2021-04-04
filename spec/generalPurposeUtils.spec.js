@@ -1,6 +1,10 @@
 const { expect } = require("chai");
+const gpUtils = require("../utils/generalPurposeUtils.js");
+const uUtils = require("../utils/universalUtils.js");
+
 const {
   combineAndExplodeTwoSuperArrays,
+  areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder,
 } = require("../utils/generalPurposeUtils.js");
 
 const {
@@ -10,8 +14,789 @@ const {
   areTwoObjectsEqual,
 } = require("../utils/universalUtils.js");
 
-const gpUtils = require("../utils/generalPurposeUtils.js");
-const uUtils = require("../utils/universalUtils.js");
+describe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder", () => {
+  it("Two singleton arrays in same order, strings. Equal.", () => {
+    const input1 = [["my", "name", "is", "norbs"]];
+    const input2 = [["my", "name", "is", "norbs"]];
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+      input1,
+      input2
+    );
+    expect(actual).to.be.true;
+  });
+  it("Two singleton arrays in same order, strings. Unequal.", () => {
+    const input1 = [["my", "name", "is", "norbs"]];
+    const input2 = [["my", "name", "aint", "norbs"]];
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+      input1,
+      input2
+    );
+    expect(actual).to.be.false;
+  });
+  it("Two singleton arrays in different order, strings. Equal.", () => {
+    const input1 = [["my", "name", "is", "norbs"]];
+    const input2 = [["is", "norbs", "my", "name"]];
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+      input1,
+      input2
+    );
+    expect(actual).to.be.true;
+  });
+  it("Two singleton arrays in different order, strings. Unequal.", () => {
+    const input1 = [["my", "name", "is", "norbs"]];
+    const input2 = [["aint", "norbs", "my", "name"]];
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+      input1,
+      input2
+    );
+    expect(actual).to.be.false;
+  });
+  //
+  it("Two singleton arrays in same order, strings and terminus objects. Equal.", () => {
+    const input1 = [
+      [
+        "I",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["a"],
+          protective: ["an"],
+        },
+        "human",
+      ],
+    ];
+    const input2 = [
+      [
+        "I",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["a"],
+          protective: ["an"],
+        },
+        "human",
+      ],
+    ];
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+      input1,
+      input2
+    );
+    expect(actual).to.be.true;
+  });
+  it("Two singleton arrays in same order, strings and terminus objects. Unequal re string.", () => {
+    const input1 = [
+      [
+        "I",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["a"],
+          protective: ["an"],
+        },
+        "human",
+      ],
+    ];
+    const input2 = [
+      [
+        "I",
+        "aint",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["a"],
+          protective: ["an"],
+        },
+        "human",
+      ],
+    ];
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+      input1,
+      input2
+    );
+    expect(actual).to.be.false;
+  });
+  it("Two singleton arrays in same order, strings and terminus objects. Unequal re terminus object.", () => {
+    const input1 = [
+      [
+        "I",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["the"],
+          protective: ["the"],
+        },
+        "human",
+      ],
+    ];
+    const input2 = [
+      [
+        "I",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["thy"],
+          protective: ["thine"],
+        },
+        "human",
+      ],
+    ];
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+      input1,
+      input2
+    );
+    expect(actual).to.be.false;
+  });
+  it("Two singleton arrays in different order, strings and terminus objects. Equal.", () => {
+    const input1 = [
+      [
+        "I",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["a"],
+          protective: ["an"],
+        },
+        "human",
+      ],
+    ];
+    const input2 = [
+      [
+        "I",
+        "human",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["a"],
+          protective: ["an"],
+        },
+      ],
+    ];
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+      input1,
+      input2
+    );
+    expect(actual).to.be.true;
+  });
+  it("Two singleton arrays in different order, strings and terminus objects. Unequal re string.", () => {
+    const input1 = [
+      [
+        "I",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["a"],
+          protective: ["an"],
+        },
+        "human",
+      ],
+    ];
+    const input2 = [
+      [
+        "I",
+        "human",
+        "aint",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["a"],
+          protective: ["an"],
+        },
+      ],
+    ];
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+      input1,
+      input2
+    );
+    expect(actual).to.be.false;
+  });
+  it("Two singleton arrays in different order, strings and terminus objects. Unequal re terminus object.", () => {
+    const input1 = [
+      [
+        "I",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["a"],
+          protective: ["an"],
+        },
+        "human",
+      ],
+    ];
+    const input2 = [
+      [
+        "I",
+        "human",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: false,
+          nonprotective: ["a"],
+          protective: ["an"],
+        },
+      ],
+    ];
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+      input1,
+      input2
+    );
+    expect(actual).to.be.false;
+  });
+  //
+  it("Two singleton arrays in same order, strings. Unequal re length.", () => {
+    const input1 = [["my", "name", "is", "norbs"]];
+    const input2 = [["my", "name", "is", "norbs", "truly"]];
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+      input1,
+      input2
+    );
+    expect(actual).to.be.false;
+  });
+  //
+  it("Two longer arrays in same order, strings. Equal.", () => {
+    const input1 = [
+      ["my", "name", "is", "norbs"],
+      ["my", "nickname", "is", "norbs"],
+    ];
+    const input2 = [
+      ["my", "name", "is", "norbs"],
+      ["my", "nickname", "is", "norbs"],
+    ];
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+      input1,
+      input2
+    );
+    expect(actual).to.be.true;
+  });
+  it("Two longer arrays in same order, strings. Unequal.", () => {
+    const input1 = [
+      ["my", "name", "is", "norbs"],
+      ["my", "nickname", "is", "norbs"],
+    ];
+    const input2 = [
+      ["my", "name", "is", "norbs"],
+      ["my", "nickname", "aint", "norbs"],
+    ];
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+      input1,
+      input2
+    );
+    expect(actual).to.be.false;
+  });
+  it("Two longer arrays in different order, strings. Equal.", () => {
+    const input1 = [
+      ["my", "name", "is", "norbs"],
+      ["my", "nickname", "is", "norbs"],
+    ];
+    const input2 = [
+      ["is", "norbs", "my", "name"],
+      ["is", "my", "norbs", "nickname"],
+    ];
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+      input1,
+      input2
+    );
+    expect(actual).to.be.true;
+  });
+  it("Two longer arrays in different array order, strings. Equal.", () => {
+    const input1 = [
+      ["my", "name", "is", "norbs"],
+      ["my", "nickname", "is", "norbs"],
+    ];
+    const input2 = [
+      ["is", "my", "norbs", "nickname"],
+      ["is", "norbs", "my", "name"],
+    ];
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+      input1,
+      input2
+    );
+    expect(actual).to.be.true;
+  });
+  it("Two longer arrays in different order, strings. Unequal.", () => {
+    const input1 = [
+      ["my", "name", "is", "norbs"],
+      ["my", "nickname", "is", "norbs"],
+    ];
+    const input2 = [
+      ["aint", "norbs", "my", "name"],
+      ["aint", "norbs", "nickname", "my"],
+    ];
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+      input1,
+      input2
+    );
+    expect(actual).to.be.false;
+  });
+  //
+  it("Two longer arrays in same order, strings and terminus objects. Equal.", () => {
+    const input1 = [
+      [
+        "I",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["a"],
+          protective: ["an"],
+        },
+        "human",
+      ],
+      [
+        "I",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["aa"],
+          protective: ["aan"],
+        },
+        "human",
+      ],
+    ];
+    const input2 = [
+      [
+        "I",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["a"],
+          protective: ["an"],
+        },
+        "human",
+      ],
+      [
+        "I",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["aa"],
+          protective: ["aan"],
+        },
+        "human",
+      ],
+    ];
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+      input1,
+      input2
+    );
+    expect(actual).to.be.true;
+  });
+  it("Two longer arrays in same order, strings and terminus objects. Unequal re string.", () => {
+    const input1 = [
+      [
+        "I",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["a"],
+          protective: ["an"],
+        },
+        "human",
+      ],
+      [
+        "I",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["aa"],
+          protective: ["aan"],
+        },
+        "human",
+      ],
+    ];
+    const input2 = [
+      [
+        "I",
+        "aint",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["a"],
+          protective: ["an"],
+        },
+        "human",
+      ],
+      [
+        "I",
+        "aint",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["aa"],
+          protective: ["aan"],
+        },
+        "human",
+      ],
+    ];
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+      input1,
+      input2
+    );
+    expect(actual).to.be.false;
+  });
+  it("Two longer arrays in same order, strings and terminus objects. Unequal re terminus object.", () => {
+    const input1 = [
+      [
+        "I",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["the"],
+          protective: ["the"],
+        },
+        "human",
+      ],
+      [
+        "I",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["my"],
+          protective: ["mine"],
+        },
+        "human",
+      ],
+    ];
+    const input2 = [
+      [
+        "I",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["thy"],
+          protective: ["thine"],
+        },
+        "human",
+      ],
+      [
+        "I",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["my"],
+          protective: ["mine"],
+        },
+        "human",
+      ],
+    ];
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+      input1,
+      input2
+    );
+    expect(actual).to.be.false;
+  });
+  it("Two longer arrays in different order, strings and terminus objects. Equal.", () => {
+    const input1 = [
+      [
+        "I",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["a"],
+          protective: ["an"],
+        },
+        "human",
+      ],
+      [
+        "I",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["my"],
+          protective: ["mine"],
+        },
+        "human",
+      ],
+    ];
+    const input2 = [
+      [
+        "I",
+        "human",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["a"],
+          protective: ["an"],
+        },
+      ],
+      [
+        "I",
+        "human",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["my"],
+          protective: ["mine"],
+        },
+      ],
+    ];
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+      input1,
+      input2
+    );
+    expect(actual).to.be.true;
+  });
+  it("Two longer arrays in different array order, strings and terminus objects. Equal.", () => {
+    const input1 = [
+      [
+        "I",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["a"],
+          protective: ["an"],
+        },
+        "human",
+      ],
+      [
+        "I",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["my"],
+          protective: ["mine"],
+        },
+        "human",
+      ],
+    ];
+    const input2 = [
+      [
+        "I",
+        "human",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["my"],
+          protective: ["mine"],
+        },
+      ],
+      [
+        "I",
+        "human",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["a"],
+          protective: ["an"],
+        },
+      ],
+    ];
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+      input1,
+      input2
+    );
+    expect(actual).to.be.true;
+  });
+  it("Two longer arrays in another different array order, strings and terminus objects. Equal.", () => {
+    const input1 = [
+      [
+        "I",
+        "aint",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["a"],
+          protective: ["an"],
+        },
+        "human",
+      ],
+
+      [
+        "I",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["my"],
+          protective: ["mine"],
+        },
+        "human",
+      ],
+    ];
+
+    const input2 = [
+      [
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["my"],
+          protective: ["mine"],
+        },
+        "am",
+        "I",
+        "human",
+      ],
+
+      [
+        "human",
+        "I",
+        "aint",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["a"],
+          protective: ["an"],
+        },
+      ],
+    ];
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+      input1,
+      input2
+    );
+    expect(actual).to.be.true;
+  });
+  it("Two longer arrays in different order, strings and terminus objects. Unequal re string.", () => {
+    const input1 = [
+      [
+        "I",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["a"],
+          protective: ["an"],
+        },
+        "human",
+      ],
+      [
+        "I",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["aa"],
+          protective: ["aan"],
+        },
+        "human",
+      ],
+    ];
+    const input2 = [
+      [
+        "I",
+        "human",
+        "aint",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["a"],
+          protective: ["an"],
+        },
+      ],
+      [
+        "I",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["aa"],
+          protective: ["aan"],
+        },
+        "human",
+      ],
+    ];
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+      input1,
+      input2
+    );
+    expect(actual).to.be.false;
+  });
+  it("Two longer arrays in different order, strings and terminus objects. Unequal re terminus object.", () => {
+    const input1 = [
+      [
+        "I",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["a"],
+          protective: ["an"],
+        },
+        "human",
+      ],
+      [
+        "I",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["aa"],
+          protective: ["aan"],
+        },
+        "human",
+      ],
+    ];
+    const input2 = [
+      [
+        "I",
+        "human",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: false,
+          nonprotective: ["a"],
+          protective: ["an"],
+        },
+      ],
+      [
+        "I",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["aa"],
+          protective: ["aan"],
+        },
+        "human",
+      ],
+    ];
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+      input1,
+      input2
+    );
+    expect(actual).to.be.false;
+  });
+  //
+  it("Two longer arrays in same order, strings. Unequal re length.", () => {
+    const input1 = [
+      ["my", "name", "is", "norbs"],
+      ["my", "nickname", "is", "norbs"],
+    ];
+    const input2 = [
+      ["my", "name", "is", "norbs", "truly"],
+      ["my", "nickname", "is", "norbs"],
+    ];
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+      input1,
+      input2
+    );
+    expect(actual).to.be.false;
+  });
+});
 
 describe("areTwoObjectsEqual", () => {
   it("True with flat objects.", () => {

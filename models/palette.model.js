@@ -96,13 +96,6 @@ exports.fetchPalette = (req) => {
   //This questionSentenceData could come back as nullResponse kind of object.
   //In which case... we should skip straight to the end.
 
-  console.log(
-    "veve questionSentenceData.arrayOfOutputArrays",
-    questionSentenceData.arrayOfOutputArrays.map((arr) =>
-      arr.map((unit) => unit.structureChunk.chunkId)
-    )
-  );
-
   if ("check") {
     if (
       !questionSentenceData ||
@@ -128,6 +121,13 @@ exports.fetchPalette = (req) => {
         return frUtils.finishAndSend(nullQuestionResponseObj, null);
       }
     }
+
+    console.log(
+      "veve questionSentenceData.arrayOfOutputArrays",
+      questionSentenceData.arrayOfOutputArrays.map((arr) =>
+        arr.map((unit) => unit.structureChunk.chunkId)
+      )
+    );
 
     if (questionSentenceData.arrayOfOutputArrays.length > 1) {
       console.log(
@@ -447,10 +447,10 @@ exports.fetchPalette = (req) => {
   }
 
   if (arrayOfCounterfactualResultsForThisAnnotation) {
-    arrayOfCounterfactualResultsForThisAnnotation.push(
+    arrayOfCounterfactualResultsForThisAnnotation.push({
       questionSentenceData,
-      answerSentenceData
-    );
+      answerSentenceData,
+    });
     return;
   }
 

@@ -511,31 +511,54 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   rawQuestionSentenceFormula,
   reqBody
 ) => {
+  let shouldConsoleLog = false;
+
   let questionSentenceStructure = questionOutputArr.map(
     (unit) => unit.structureChunk
   );
-  let questionSelectedWords = questionOutputArr.map(
+  let originalQuestionSelectedWords = questionOutputArr.map(
     (unit) => unit.selectedWord
   );
-
+  let originalAnswerSelectedWords = [];
+  answerSentenceData.answerOutputArrays.forEach((answerOutputArray) => {
+    originalAnswerSelectedWords.push(
+      answerOutputArray.map((outputUnit) => outputUnit.selectedWord)
+    );
+  });
   let arrayOfAnswerSelectedWords = answerSentenceData.answerOutputArrays.map(
     (outputArr) => outputArr.map((unit) => unit.selectedWord)
   );
 
-  console.log("ddfz questionOutputUnit", questionOutputUnit);
+  if (shouldConsoleLog) {
+    console.log("ddfz questionOutputUnit", questionOutputUnit);
+    console.log(
+      "ddfa questionOutputUnit.structureChunk.annotations",
+      questionOutputUnit.structureChunk.annotations
+    );
+    console.log("ddfa questionSentenceStructure", questionSentenceStructure);
+    console.log(
+      "ddfa originalQuestionSelectedWords",
+      originalQuestionSelectedWords
+    );
+    console.log("ddfa arrayOfAnswerSelectedWords", arrayOfAnswerSelectedWords);
+  }
+
   console.log(
-    "ddfa questionOutputUnit.structureChunk.annotations",
+    "myxa questionOutputUnit.structureChunk.annotations",
     questionOutputUnit.structureChunk.annotations
   );
-  console.log("ddfa questionSentenceStructure", questionSentenceStructure);
-  console.log("ddfa questionSelectedWords", questionSelectedWords);
-  console.log("ddfa arrayOfAnswerSelectedWords", arrayOfAnswerSelectedWords);
+
+  console.log(
+    "[1;35m " +
+      `\nmyxa removeAnnotationsByCounterfax START. "${questionOutputUnit.structureChunk.chunkId}" has the annotations shown above.` +
+      "[0m"
+  );
 
   Object.keys(questionOutputUnit.structureChunk.annotations).forEach(
     (annoKey) => {
-      let arrayOfCounterfactualResultsForThisAnnotation = [];
-
       let annoValue = questionOutputUnit.structureChunk.annotations[annoKey];
+
+      let arrayOfCounterfactualResultsForThisAnnotation = [];
 
       let allPossibleValuesForThisFeature = refObj.structureChunkFeatures[
         languagesObj.questionLanguage
@@ -548,12 +571,15 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       );
 
       console.log(
-        "ddfb counterfactualValuesForThisFeature",
-        counterfactualValuesForThisFeature
+        `myxe removeAnnotationsByCounterfax FOREACH START. Examining ${questionOutputUnit.structureChunk.chunkId}'s annotation ${annoKey} = ${annoValue} so the counterfactual values are [${counterfactualValuesForThisFeature}].`
       );
 
       counterfactualValuesForThisFeature.forEach(
         (counterfactualValueForThisFeature) => {
+          console.log(
+            `myxe removeAnnotationsByCounterfax FOREACH-2 START. Will do a run with counterfactual value "${counterfactualValueForThisFeature}".`
+          );
+
           let counterfactualQuestionSentenceFormula = uUtils.copyWithoutReference(
             rawQuestionSentenceFormula
           );
@@ -573,17 +599,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             );
           }
 
-          console.log(
-            "[1;35m " +
-              `koew removeAnnotationsByCounterfactualAnswerSentences. The stCh for the original Qsent has "${annoKey} of ${stChToChange[annoKey]}"` +
-              "[0m"
-          );
-
           stChToChange[annoKey] = [counterfactualValueForThisFeature];
-
-          console.log(
-            "[1;35m " + `and I've just changed it to ${stChToChange[annoKey]}` + "[0m"
-          );
 
           counterfactualQuestionSentenceFormula.sentenceStructure.forEach(
             (stCh) => {
@@ -613,19 +629,74 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       );
 
       console.log(
-        `pozo. The annoKey was "${annoKey}" and here is the counterfactual results:`
+        `\nmyxi removeAnnotationsByCounterfax. Run where we changed "${questionOutputUnit.structureChunk.chunkId}" to counterfactual "${annoKey}" arrayOfCounterfactualResultsForThisAnnotation came back with ${arrayOfCounterfactualResultsForThisAnnotation.length} results.`
       );
-      clUtils.consoleLogObjectAtOneLevel(
-        arrayOfCounterfactualResultsForThisAnnotation
+
+      let counterfactualQuestionSelectedWordsSets = arrayOfCounterfactualResultsForThisAnnotation.map(
+        (counterfactual) =>
+          counterfactual.questionSentenceData.questionOutputArr.map(
+            (outputUnit) => outputUnit.selectedWord
+          )
       );
+      let counterfactualAnswerSelectedWordsSets = [];
+      arrayOfCounterfactualResultsForThisAnnotation.forEach(
+        (counterfactual) => {
+          counterfactual.answerSentenceData.answerOutputArrays.forEach(
+            (answerOutputArray) => {
+              counterfactualAnswerSelectedWordsSets.push(
+                answerOutputArray.map((outputUnit) => outputUnit.selectedWord)
+              );
+            }
+          );
+        }
+      );
+      if (shouldConsoleLog) {
+        console.log(
+          "\n klwe removeAnnotationsByCounterfax. questionOutputUnit.structureChunk.annotations",
+          questionOutputUnit.structureChunk.annotations
+        );
+        console.log(
+          "[1;33m" +
+            `klwe removeAnnotationsByCounterfax. We made counterfactuals for question stCh "${questionOutputUnit.structureChunk.chunkId}" based on its annotations, shown above.` +
+            "[0m"
+        );
+        console.log(
+          "originalQuestionSelectedWords",
+          originalQuestionSelectedWords
+        );
+        console.log("originalAnswerSelectedWords", originalAnswerSelectedWords);
+        console.log(
+          "counterfactualQuestionSelectedWordsSets",
+          counterfactualQuestionSelectedWordsSets
+        );
+        console.log(
+          "counterfactualAnswerSelectedWordsSets",
+          counterfactualAnswerSelectedWordsSets
+        );
+      }
+
+      if (
+        gpUtils.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+          originalAnswerSelectedWords,
+          counterfactualAnswerSelectedWordsSets
+        )
+      ) {
+        console.log(
+          "[1;35m " +
+            `myxo removeAnnotationsByCounterfax END. I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual answer selected words came back THE SAME AS original answer selected words.\nThis means that this feature has no impact, even if we flip it, so annotation is not needed. \nDeleting annotation "${annoKey}" = "${questionOutputUnit.structureChunk.annotations[annoKey]}" now.` +
+            "[0m"
+        );
+
+        delete questionOutputUnit.structureChunk.annotations[annoKey];
+      } else {
+        console.log(
+          "[1;35m " +
+            `myxo removeAnnotationsByCounterfax END. I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual answer selected words came back DIFFERENT FROM original answer selected words.\nThis means I'll keep annotation "${annoKey}" = "${questionOutputUnit.structureChunk.annotations[annoKey]}".` +
+            "[0m"
+        );
+      }
     }
   );
-  clUtils.throw(353);
-  /**
-   * Okay, so here's what we'll do:
-   *
-   * Get all possible values for
-   */
 };
 
 exports.getFormattedAnnoObj = (
@@ -656,8 +727,6 @@ exports.getFormattedAnnoObj = (
     questionSentenceFormula,
     reqBody
   );
-
-  clUtils.throw(445);
 
   /**
    * You know, a more sensible thing to do here...

@@ -236,7 +236,7 @@ exports.processSentenceFormula = (
                   "[0m"
               );
 
-              explodedOutputArraysWithHeads = returnArrayWithoutItemAtIndex(
+              explodedOutputArraysWithHeads = uUtils.returnArrayWithoutItemAtIndex(
                 explodedOutputArraysWithHeads,
                 headOutputArrayIndex
               );
