@@ -11,8 +11,13 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
   );
 
   sentenceFormula.sentenceStructure.forEach((structureChunk) => {
-    let wordtype = structureChunk.wordtype;
-    let { chunkId } = structureChunk;
+    let { chunkId, wordtype } = structureChunk;
+
+    if (!wordtype) {
+      clUtils.throw(
+        `#ERR esxo validateSentenceFormula. stCh "${chunkId}" has falsy wordtype.`
+      );
+    }
 
     Object.keys(structureChunk).forEach((featureKey) => {
       let featureValue = structureChunk[featureKey];

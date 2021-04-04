@@ -20,6 +20,8 @@ exports.fetchPalette = (req) => {
     pleaseDontSpecify,
     devSaysThrowAtMidpoint,
     devSaysOmitStChValidation,
+    arrayOfCounterfactualResultsForThisAnnotation,
+    counterfactualQuestionSentenceFormula,
   } = req.body;
 
   let { sentenceFormula, words } = scUtils.getMaterials(
@@ -34,7 +36,9 @@ exports.fetchPalette = (req) => {
   let answerSentenceData;
 
   let questionResponseObj;
-  let questionSentenceFormula = sentenceFormula;
+  let questionSentenceFormula = counterfactualQuestionSentenceFormula
+    ? counterfactualQuestionSentenceFormula
+    : sentenceFormula;
 
   allLangUtils.initiallyAdjustSentenceFormula(questionSentenceFormula);
 
@@ -42,7 +46,7 @@ exports.fetchPalette = (req) => {
   //       Once it passes that, we know it's fine, so don't need to validate it every time down here.
   //       Although could be worth running this validation here during multipleMode.
   if (!devSaysOmitStChValidation) {
-    ivUtils.validateSentenceFormula(sentenceFormula, questionLanguage);
+    ivUtils.validateSentenceFormula(questionSentenceFormula, questionLanguage);
   }
 
   if (pleaseDontSpecify) {
@@ -76,6 +80,11 @@ exports.fetchPalette = (req) => {
     });
   }
 
+  console.log(
+    "veva questionSentenceFormula.sentenceStructure",
+    questionSentenceFormula.sentenceStructure.map((stCh) => stCh.chunkId)
+  );
+
   let questionSentenceData = scUtils.processSentenceFormula(
     { currentLanguage: questionLanguage },
     questionSentenceFormula,
@@ -83,42 +92,41 @@ exports.fetchPalette = (req) => {
     multipleMode
   );
 
+  //nownow
+  //This questionSentenceData could come back as nullResponse kind of object.
+  //In which case... we should skip straight to the end.
+
+  console.log(
+    "veve questionSentenceData.arrayOfOutputArrays",
+    questionSentenceData.arrayOfOutputArrays.map((arr) =>
+      arr.map((unit) => unit.structureChunk.chunkId)
+    )
+  );
+
   if ("check") {
-    if (!questionSentenceData) {
+    if (
+      !questionSentenceData ||
+      !questionSentenceData.arrayOfOutputArrays ||
+      !questionSentenceData.arrayOfOutputArrays.length
+    ) {
       console.log(
         "[1;31m " +
           `#WARN cdqk fetchPalette. The question arrayOfOutputArrays came back NOTHING.` +
           "[0m"
       );
 
-      let nullQuestionResponseObj = scUtils.giveFinalSentences(
-        questionSentenceData,
-        multipleMode,
-        questionLanguage,
-        answerLanguage
-      );
+      if (arrayOfCounterfactualResultsForThisAnnotation) {
+        return;
+      } else {
+        let nullQuestionResponseObj = scUtils.giveFinalSentences(
+          questionSentenceData,
+          multipleMode,
+          questionLanguage,
+          answerLanguage
+        );
 
-      return frUtils.finishAndSend(nullQuestionResponseObj, null);
-    }
-
-    if (
-      !questionSentenceData.arrayOfOutputArrays ||
-      !questionSentenceData.arrayOfOutputArrays.length
-    ) {
-      console.log(
-        "[1;31m " +
-          `#WARN dwlw fetchPalette. The question arrayOfOutputArrays came back NONE.` +
-          "[0m"
-      );
-
-      let nullQuestionResponseObj = scUtils.giveFinalSentences(
-        questionSentenceData,
-        multipleMode,
-        questionLanguage,
-        answerLanguage
-      );
-
-      return frUtils.finishAndSend(nullQuestionResponseObj, null);
+        return frUtils.finishAndSend(nullQuestionResponseObj, null);
+      }
     }
 
     if (questionSentenceData.arrayOfOutputArrays.length > 1) {
@@ -260,7 +268,7 @@ exports.fetchPalette = (req) => {
       //       Once it passes that, we know it's fine, so don't need to validate it every time down here.
       //       Although could be worth running this validation here during multipleMode.
       if (!devSaysOmitStChValidation) {
-        ivUtils.validateSentenceFormula(sentenceFormula, answerLanguage);
+        ivUtils.validateSentenceFormula(answerSentenceFormula, answerLanguage);
       }
 
       if (index === 0) {
@@ -331,12 +339,21 @@ exports.fetchPalette = (req) => {
         multipleMode
       );
 
-      console.log("hbbh answerSentenceData");
-      console.log(
-        answerSentenceData.arrayOfOutputArrays.map((x) => {
-          return x.map((y) => y.selectedWord);
-        })
-      );
+      if ("check") {
+        if (
+          !answerSentenceData ||
+          !answerSentenceData.arrayOfOutputArrays ||
+          !answerSentenceData.arrayOfOutputArrays.length
+        ) {
+          console.log(
+            "[1;31m " +
+              `#WARN cdqk fetchPalette. The answer arrayOfOutputArrays came back NOTHING.` +
+              "[0m"
+          );
+
+          return;
+        }
+      }
 
       ///////////////////////////////////////////////kp Decisive Decant parallel
       answerSentenceData.answerOutputArrays =
@@ -429,12 +446,22 @@ exports.fetchPalette = (req) => {
     }
   }
 
+  if (arrayOfCounterfactualResultsForThisAnnotation) {
+    arrayOfCounterfactualResultsForThisAnnotation.push(
+      questionSentenceData,
+      answerSentenceData
+    );
+    return;
+  }
+
   questionResponseObj = scUtils.giveFinalSentences(
     questionSentenceData,
     false,
     questionLanguage,
     answerLanguage,
-    answerSentenceData
+    answerSentenceData,
+    questionSentenceFormula,
+    req.body
   );
 
   return frUtils.finishAndSend(questionResponseObj, answerResponseObj);

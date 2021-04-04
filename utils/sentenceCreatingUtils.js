@@ -121,7 +121,13 @@ exports.processSentenceFormula = (
 
   delete errorInSentenceCreation.errorMessage;
 
+  let nullResultObj;
+
   headChunks.forEach((headChunk) => {
+    if (nullResultObj) {
+      return;
+    }
+
     console.log("evga sc:processSentenceFormula STEP ONE", headChunk.chunkId);
 
     let allPossOutputUnits_head = otUtils.findMatchingLemmaObjectThenWord(
@@ -134,117 +140,196 @@ exports.processSentenceFormula = (
       null
     );
 
-    if (errorInSentenceCreation.errorMessage) {
+    if (
+      errorInSentenceCreation.errorMessage ||
+      !allPossOutputUnits_head ||
+      !allPossOutputUnits_head.length
+    ) {
       console.log(
         "[1;31m " +
-          `#WARN bzck processSentenceFormula. An error arose in SC:processSentenceFormula. Returning outputArr null for headChunk: "${headChunk.chunkId}"` +
-          "[0m"
+          `klya processSentenceFormula. This run has FAILED, due to headChunk: "${headChunk.chunkId}" failing in findMatchingLemmaObjectThenWord. \nThis happened in "STEP ONE: Select HEAD words and add to result array."` +
+          +"[0m"
       );
 
-      return {
-        outputArr: null,
+      nullResultObj = {
+        arrayOfOutputArrays: null,
         sentenceFormula,
         sentenceFormulaId,
         sentenceFormulaSymbol,
-        errorInSentenceCreation,
+        errorInSentenceCreation, //epsilon - specific error msg?
       };
+    } else {
+      headOutputUnitArrays.push(allPossOutputUnits_head);
     }
-
-    if (!allPossOutputUnits_head || !allPossOutputUnits_head.length) {
-      console.log(
-        "[1;31m " +
-          `#WARN ewio processSentenceFormula. An error has arisen in SC:processSentenceFormula. Returning outputArr null for headChunk: "${headChunk.chunkId}"` +
-          "[0m"
-      );
-
-      return {
-        outputArr: null,
-        sentenceFormula,
-        sentenceFormulaId,
-        sentenceFormulaSymbol,
-        errorInSentenceCreation,
-      };
-    }
-
-    headOutputUnitArrays.push(allPossOutputUnits_head);
   });
+
+  if (nullResultObj) {
+    console.log(
+      "[1;31m " +
+        `\n#ERR bcka processSentenceFormula ${currentLanguage}. headOutputUnitArrays had no successful members. 'klya' only had to fail once, and it did.` +
+        "[0m"
+    );
+
+    return nullResultObj;
+  }
 
   let explodedOutputArraysWithHeads = uUtils.copyWithoutReference(
     uUtils.arrayExploder(headOutputUnitArrays)
   );
 
   //STEP TWO: Select DEPENDENT words and add to result array.
-  explodedOutputArraysWithHeads.forEach((headOutputArray) => {
-    headOutputArray.forEach((headOutputUnit) => {
-      // Now we update the head structure chunks with the details from their respective selectedWords.
-      lfUtils.updateStructureChunk(headOutputUnit, currentLanguage);
+  explodedOutputArraysWithHeads.forEach(
+    (headOutputArray, headOutputArrayIndex) => {
+      let thisHeadOutputArrayIsDeleted;
 
-      let headChunk = headOutputUnit.structureChunk;
+      headOutputArray.forEach((headOutputUnit) => {
+        if (thisHeadOutputArrayIsDeleted) {
+          return;
+        }
 
-      // Step two begins here.
-      let specificDependentChunks = dependentChunks
-        .filter((chunk) => chunk.agreeWith === headChunk.chunkId)
-        .map((chunk) => uUtils.copyWithoutReference(chunk));
+        // Now we update the head structure chunks with the details from their respective selectedWords.
+        lfUtils.updateStructureChunk(headOutputUnit, currentLanguage);
 
-      if (specificDependentChunks.length) {
-        specificDependentChunks.forEach((dependentChunk) => {
-          console.log(
-            "oiez sc:processSentenceFormula STEP TWO",
-            dependentChunk.chunkId
-          );
+        let headChunk = headOutputUnit.structureChunk;
 
-          scUtils.inheritFromHeadToDependentChunk(
-            currentLanguage,
-            headChunk,
-            dependentChunk
-          );
+        // Step two begins here.
+        let specificDependentChunks = dependentChunks
+          .filter((chunk) => chunk.agreeWith === headChunk.chunkId)
+          .map((chunk) => uUtils.copyWithoutReference(chunk));
 
-          console.log(`weoe dependentChunk "${dependentChunk.chunkId}"`);
-          let allPossOutputUnits_dependent = otUtils.findMatchingLemmaObjectThenWord(
-            uUtils.copyWithoutReference(dependentChunk),
-            words,
-            errorInSentenceCreation,
-            currentLanguage,
-            previousQuestionLanguage,
-            multipleMode,
-            null
-          );
+        if (specificDependentChunks.length) {
+          specificDependentChunks.forEach((dependentChunk) => {
+            if (thisHeadOutputArrayIsDeleted) {
+              return;
+            }
 
-          if (
-            errorInSentenceCreation.errorMessage ||
-            !allPossOutputUnits_dependent ||
-            !allPossOutputUnits_dependent.length
-          ) {
             console.log(
-              "[1;31m " +
-                `#WARN fvqy. An error reared up in SC:processSentenceFormula. Returning outputArr null for dependentChunk:  "${dependentChunk.chunkId}"` +
-                "[0m"
+              "oiez sc:processSentenceFormula STEP TWO",
+              dependentChunk.chunkId
             );
 
-            return {
-              outputArr: null,
-              sentenceFormula,
-              sentenceFormulaId,
-              sentenceFormulaSymbol,
+            scUtils.inheritFromHeadToDependentChunk(
+              currentLanguage,
+              headChunk,
+              dependentChunk
+            );
+
+            console.log(`weoe dependentChunk "${dependentChunk.chunkId}"`);
+            let allPossOutputUnits_dependent = otUtils.findMatchingLemmaObjectThenWord(
+              uUtils.copyWithoutReference(dependentChunk),
+              words,
               errorInSentenceCreation,
-            };
-          }
+              currentLanguage,
+              previousQuestionLanguage,
+              multipleMode,
+              null
+            );
 
-          if (!headOutputUnit.possibleDependentOutputArrays) {
-            headOutputUnit.possibleDependentOutputArrays = [];
-          }
+            if (
+              errorInSentenceCreation.errorMessage ||
+              !allPossOutputUnits_dependent ||
+              !allPossOutputUnits_dependent.length
+            ) {
+              console.log(
+                "[1;31m " +
+                  `klye trimArrayOfExplodedOutputArraysByFailures. explodedOutputArraysWithHeads has ${explodedOutputArraysWithHeads.length} members. Deleting headOutputArray at index ${headOutputArrayIndex} because no results were found for depCh "${dependentChunk.chunkId}" in this headOutputArray. \nThis happened in "STEP TWO: Select DEPENDENT words and add to result array."` +
+                  "[0m"
+              );
 
-          headOutputUnit.possibleDependentOutputArrays.push(
-            allPossOutputUnits_dependent
+              explodedOutputArraysWithHeads = returnArrayWithoutItemAtIndex(
+                explodedOutputArraysWithHeads,
+                headOutputArrayIndex
+              );
+
+              thisHeadOutputArrayIsDeleted = true;
+            } else {
+              if (!headOutputUnit.possibleDependentOutputArrays) {
+                headOutputUnit.possibleDependentOutputArrays = [];
+              }
+
+              headOutputUnit.possibleDependentOutputArrays.push(
+                allPossOutputUnits_dependent
+              );
+            }
+          });
+        } else {
+          console.log(
+            "zvvs processSentenceFormula explodedOutputArraysWithHeads. specificDependentChunks had no length."
           );
-        });
-      } else {
-        console.log(
-          "zvvs processSentenceFormula explodedOutputArraysWithHeads. specificDependentChunks had no length."
-        );
-      }
-    });
-  });
+        }
+      });
+    }
+  );
+
+  /**For every headOutputUnit in every headOutputArray in every explodedOutputArraysWithHeads...
+   *
+   * Or rather
+   *
+   * Delete any headOutputArray in explodedOutputArraysWithHeads if...
+   *
+   * it has any headOutputUnits who are calculated to have dependent chunks, but
+   * possibleDependentOutputArrays, which should contain arrays of deps, where each array corresponds to
+   * one dep chunk.
+   *
+   * But, if the requisite arrays are not all there,
+   *
+   * then delete this headOutputArray.
+   *
+   * And finally, if explodedOutputArraysWithHeads ends up with nothing in it
+   * then return error.
+   */
+  // explodedOutputArraysWithHeads.forEach(
+  //   (headOutputArray, headOutputArrayIndex) => {
+  //     headOutputArray.forEach((headOutputUnit) => {
+  //       let headChunk = headOutputUnit.structureChunk;
+
+  //       // Step two begins here.
+  //       let specificDependentChunks = dependentChunks
+  //         .filter((chunk) => chunk.agreeWith === headChunk.chunkId)
+  //         .map((chunk) => uUtils.copyWithoutReference(chunk));
+
+  //       if (specificDependentChunks.length) {
+  //         specificDependentChunks.forEach((dependentChunk) => {
+  //           //Is this depCh represented in headOutputUnit.possibleDependentOutputArrays?
+
+  //           let depOutputArray = headOutputUnit.possibleDependentOutputArrays.find(
+  //             (arr) =>
+  //               arr.length &&
+  //               arr[0].structureChunk.chunkId === dependentChunk.chunkId
+  //           );
+
+  //           if (!depOutputArray || !depOutputArray.length) {
+  //             console.log(
+  //               `k'lye trimArrayOfExplodedOutputArraysByFailures. explodedOutputArraysWithHeads has ${explodedOutputArraysWithHeads.length} members. Deleting headOutputArray at index ${headOutputArrayIndex} because no results were found for depCh "${dependentChunk.chunkId}" in this headOutputArray.`
+  //             );
+
+  //             explodedOutputArraysWithHeads = returnArrayWithoutItemAtIndex(
+  //               explodedOutputArraysWithHeads,
+  //               headOutputArrayIndex
+  //             );
+  //           }
+  //         });
+  //       }
+  //     });
+  //   }
+  // );
+
+  if (!explodedOutputArraysWithHeads.length) {
+    console.log(
+      "[1;31m " +
+        `\n#ERR bcke processSentenceFormula ${currentLanguage}. This run has FAILED due to explodedOutputArraysWithHeads having no successful members. 'klye' must have deleted all members of explodedOutputArraysWithHeads arr.` +
+        "[0m"
+    );
+
+    nullResultObj = {
+      arrayOfOutputArrays: null,
+      sentenceFormula,
+      sentenceFormulaId,
+      sentenceFormulaSymbol,
+      errorInSentenceCreation, //Epsilon - Make this error msg specific? Like, explodedOutputArraysWithHeads k'lye...
+    };
+    return nullResultObj;
+  }
 
   console.log(
     "wvmo explodedOutputArraysWithHeads",
@@ -275,24 +360,13 @@ exports.processSentenceFormula = (
     ].some((postHocAgreeWithKey) => chunk[postHocAgreeWithKey])
   );
 
-  // console.log("jeph allPossOutputUnits_PHD", postHocDependentChunks);
-  // if (postHocDependentChunks.length) {
-  //   clUtils.throw("jeph");
-  // }
-
-  // clUtils.consoleLogObjectAtTwoLevels(
-  //   grandOutputArray,
-  //   "grandOutputArray",
-  //   "processSF"
-  // );
-  // console.log("postHocDependentChunks", postHocDependentChunks);
-  // clUtils.throw("rrre");
-
   //STEP THREE: Select PHD words and add to result array.
 
   console.log("shia grandOutputArray before PHD processing", grandOutputArray);
 
   grandOutputArray.forEach((outputArray, outputArrayIndex) => {
+    let thisOutputArrayIsDeleted;
+
     let PHDoutputUnitsForThisParticularOutputArray = [];
 
     delete errorInSentenceCreation.errorMessage;
@@ -304,6 +378,10 @@ exports.processSentenceFormula = (
     );
 
     postHocDependentChunks.forEach((postHocDependentChunk) => {
+      if (thisOutputArrayIsDeleted) {
+        return;
+      }
+
       console.log(
         `weoo postHocDependentChunk "${postHocDependentChunk.chunkId}"`
       );
@@ -328,25 +406,26 @@ exports.processSentenceFormula = (
       ) {
         console.log(
           "[1;31m " +
-            `#WARN quek. An error loomed in SC:processSentenceFormula. Returning outputArr null for postHocDependentChunk: "${postHocDependentChunk.chunkId}"` +
+            `klyi trimArrayOfExplodedOutputArraysByFailures. grandOutputArray has ${grandOutputArray.length} members. Deleting headOutputArray at index ${outputArrayIndex} because no results were found for PHDchunk "${postHocDependentChunk.chunkId}" in this outputArray. \nThis happened in "STEP THREE: Select PHD words and add to result array."` +
             "[0m"
         );
 
-        return {
-          outputArr: null,
-          sentenceFormula,
-          sentenceFormulaId,
-          sentenceFormulaSymbol,
-          errorInSentenceCreation,
-        };
+        grandOutputArray = returnArrayWithoutItemAtIndex(
+          grandOutputArray,
+          outputArrayIndex
+        );
+
+        thisOutputArrayIsDeleted = true;
+      } else {
+        //If multipleMode is true, then allPossOutputUnits_other is array of outputUnit objects, while if false, array of just one said object.
+        PHDoutputUnitsForThisParticularOutputArray.push(allPossOutputUnits_PHD);
       }
-
-      //If multipleMode is true, then allPossOutputUnits_other is array of outputUnit objects, while if false, array of just one said object.
-
-      PHDoutputUnitsForThisParticularOutputArray.push(allPossOutputUnits_PHD);
     });
 
-    if (PHDoutputUnitsForThisParticularOutputArray.length) {
+    if (
+      !thisOutputArrayIsDeleted &&
+      PHDoutputUnitsForThisParticularOutputArray.length
+    ) {
       console.log(
         "shiv PHDoutputUnitsForThisParticularOutputArray",
         PHDoutputUnitsForThisParticularOutputArray
@@ -391,11 +470,24 @@ exports.processSentenceFormula = (
     }
   });
 
-  console.log("shib grandOutputArray after PHD processing", grandOutputArray);
+  if (!grandOutputArray.length) {
+    console.log(
+      "[1;31m " +
+        `\n#ERR bcki processSentenceFormula ${currentLanguage}. grandOutputArray had no successful members. 'klyi' must have removed all members from grandOutputArray.` +
+        "[0m"
+    );
 
-  // if (postHocDependentChunks && postHocDependentChunks.length) {
-  //   clUtils.throw("neep");
-  // }
+    nullResultObj = {
+      arrayOfOutputArrays: null,
+      sentenceFormula,
+      sentenceFormulaId,
+      sentenceFormulaSymbol,
+      errorInSentenceCreation, //Epsilon - Make this error msg specific? Like, grandOutputArray k'lye...
+    };
+    return nullResultObj;
+  }
+
+  console.log("shib grandOutputArray after PHD processing", grandOutputArray);
 
   //STEP FOUR: Select OTHER words and add to result array.
   otherChunks = otherChunks.filter(
@@ -408,6 +500,10 @@ exports.processSentenceFormula = (
   delete errorInSentenceCreation.errorMessage;
 
   otherChunks.forEach((otherChunk) => {
+    if (nullResultObj) {
+      return;
+    }
+
     console.log("qssh processSentenceFormula otherChunk", otherChunk);
 
     console.log(`weoi otherChunk "${otherChunk.chunkId}"`);
@@ -428,12 +524,12 @@ exports.processSentenceFormula = (
     ) {
       console.log(
         "[1;31m " +
-          `#WARN hyuh. An error has loomed in SC:processSentenceFormula. Returning outputArr null for otherChunk: "${otherChunk.chunkId}"` +
-          "[0m"
+          `klyo processSentenceFormula. This run has FAILED, due to otherChunk: "${otherChunk.chunkId}" failing in findMatchingLemmaObjectThenWord. \nThis happened in "STEP FOUR: Select OTHER words and add to result array."` +
+          +"[0m"
       );
 
-      return {
-        outputArr: null,
+      nullResultObj = {
+        arrayOfOutputArrays: null,
         sentenceFormula,
         sentenceFormulaId,
         sentenceFormulaSymbol,
@@ -444,6 +540,16 @@ exports.processSentenceFormula = (
     //If multipleMode is true, then allPossOutputUnits_other is array of outputUnit objects, while if false, array of just one said object.
     grandAllPossOutputUnits_other.push(allPossOutputUnits_other);
   });
+
+  if (nullResultObj) {
+    console.log(
+      "[1;31m " +
+        `\n#ERR bcko processSentenceFormula ${currentLanguage}. allPossOutputUnits_other had no successful members. 'klyo' only had to fail once, and it did.` +
+        "[0m"
+    );
+
+    return nullResultObj;
+  }
 
   if (grandAllPossOutputUnits_other.length) {
     grandAllPossOutputUnits_other = uUtils.arrayExploder(
@@ -482,13 +588,17 @@ exports.giveFinalSentences = (
   multipleMode,
   currentLanguage,
   answerLanguage,
-  answerSentenceData
+  answerSentenceData,
+  questionSentenceFormula,
+  reqBody
 ) => {
   if (answerLanguage) {
     aaUtils.firstStageEvaluateAnnotations(
       sentenceData.questionOutputArr,
       { answerLanguage, questionLanguage: currentLanguage },
-      answerSentenceData
+      answerSentenceData,
+      questionSentenceFormula,
+      reqBody
     );
   }
 

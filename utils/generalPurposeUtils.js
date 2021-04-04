@@ -3,6 +3,20 @@ const uUtils = require("./universalUtils.js");
 const clUtils = require("./zerothOrder/consoleLoggingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 
+exports.updateSentenceFormulaWithNewStructureChunksFromOutputUnits = (
+  rawSentenceFormula,
+  outputArr
+) => {
+  outputArr.forEach((unit) => {
+    let indexOfStChToChange = rawSentenceFormula.sentenceStructure.findIndex(
+      (stCh) => stCh.chunkId === unit.structureChunk.chunkId
+    );
+
+    rawSentenceFormula.sentenceStructure[indexOfStChToChange] =
+      unit.structureChunk;
+  });
+};
+
 exports.keyShouldBeSpecified = (chunk, key, allowOverwrite) => {
   return (
     !chunk ||

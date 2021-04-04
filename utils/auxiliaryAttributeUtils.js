@@ -7,6 +7,7 @@ const refObj = require("./reference/referenceObjects.js");
 const refFxn = require("./reference/referenceFunctions.js");
 const aaUtils = require("./auxiliaryAttributeUtils.js");
 const allLangUtils = require("./allLangUtils.js");
+const palette = require("../models/palette.model.js");
 
 exports.removeAnnotationsByAOCs = (
   questionOutputUnit,
@@ -506,7 +507,9 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   questionOutputUnit,
   languagesObj,
   answerSentenceData,
-  questionOutputArr
+  questionOutputArr,
+  rawQuestionSentenceFormula,
+  reqBody
 ) => {
   let questionSentenceStructure = questionOutputArr.map(
     (unit) => unit.structureChunk
@@ -519,21 +522,105 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
     (outputArr) => outputArr.map((unit) => unit.selectedWord)
   );
 
+  console.log("ddfz questionOutputUnit", questionOutputUnit);
   console.log(
-    "ddfe questionOutputUnit.annotations",
-    questionOutputUnit.annotations
+    "ddfa questionOutputUnit.structureChunk.annotations",
+    questionOutputUnit.structureChunk.annotations
   );
-  console.log("ddfe questionSentenceStructure", questionSentenceStructure);
-  console.log("ddfe questionSelectedWords", questionSelectedWords);
-  console.log("ddfe arrayOfAnswerSelectedWords", arrayOfAnswerSelectedWords);
-  clUtils.throw(445);
+  console.log("ddfa questionSentenceStructure", questionSentenceStructure);
+  console.log("ddfa questionSelectedWords", questionSelectedWords);
+  console.log("ddfa arrayOfAnswerSelectedWords", arrayOfAnswerSelectedWords);
 
-  Object.keys(questionOutputUnit.annotations).forEach((annoKey) => {
-    let annoValue = questionOutputUnit.annotations[annoKey];
+  Object.keys(questionOutputUnit.structureChunk.annotations).forEach(
+    (annoKey) => {
+      let arrayOfCounterfactualResultsForThisAnnotation = [];
 
-    // let allPossibleValuesForThisFeature = refObj[]
-  });
+      let annoValue = questionOutputUnit.structureChunk.annotations[annoKey];
 
+      let allPossibleValuesForThisFeature = refObj.structureChunkFeatures[
+        languagesObj.questionLanguage
+      ][annoKey].possibleValues.slice(0);
+
+      let counterfactualValuesForThisFeature = Array.from(
+        new Set(
+          allPossibleValuesForThisFeature.filter((value) => value !== annoValue)
+        )
+      );
+
+      console.log(
+        "ddfb counterfactualValuesForThisFeature",
+        counterfactualValuesForThisFeature
+      );
+
+      counterfactualValuesForThisFeature.forEach(
+        (counterfactualValueForThisFeature) => {
+          let counterfactualQuestionSentenceFormula = uUtils.copyWithoutReference(
+            rawQuestionSentenceFormula
+          );
+
+          gpUtils.updateSentenceFormulaWithNewStructureChunksFromOutputUnits(
+            counterfactualQuestionSentenceFormula,
+            questionOutputArr
+          );
+
+          let stChToChange = counterfactualQuestionSentenceFormula.sentenceStructure.find(
+            (stCh) => stCh.chunkId === questionOutputUnit.structureChunk.chunkId
+          );
+
+          if (!stChToChange) {
+            clUtils.throw(
+              "sopx removeAnnotationsByCounterfactualAnswerSentences. Couldn't find a stCh to change for counterfactual."
+            );
+          }
+
+          console.log(
+            "[1;35m " +
+              `koew removeAnnotationsByCounterfactualAnswerSentences. The stCh for the original Qsent has "${annoKey} of ${stChToChange[annoKey]}"` +
+              "[0m"
+          );
+
+          stChToChange[annoKey] = [counterfactualValueForThisFeature];
+
+          console.log(
+            "[1;35m " + `and I've just changed it to ${stChToChange[annoKey]}` + "[0m"
+          );
+
+          counterfactualQuestionSentenceFormula.sentenceStructure.forEach(
+            (stCh) => {
+              delete stCh.annotations;
+            }
+          );
+
+          let newReqBody = {
+            arrayOfCounterfactualResultsForThisAnnotation,
+            counterfactualQuestionSentenceFormula,
+
+            sentenceFormulaId:
+              counterfactualQuestionSentenceFormula.sentenceFormulaId,
+            sentenceFormulaSymbol:
+              counterfactualQuestionSentenceFormula.sentenceFormulaSymbol,
+
+            useDummy: reqBody.useDummy,
+            questionLanguage: reqBody.questionLanguage,
+            answerLanguage: reqBody.answerLanguage,
+            pleaseDontSpecify: reqBody.pleaseDontSpecify,
+            devSaysThrowAtMidpoint: reqBody.devSaysThrowAtMidpoint,
+            devSaysOmitStChValidation: reqBody.devSaysOmitStChValidation,
+          };
+
+          palette.fetchPalette({ body: newReqBody });
+        }
+      );
+
+      console.log(
+        `pozo. The annoKey was "${annoKey}" and here is the counterfactual results:`
+      );
+      clUtils.consoleLogObjectAtOneLevel(
+        arrayOfCounterfactualResultsForThisAnnotation
+      );
+    }
+  );
+  clUtils.throw(353);
   /**
    * Okay, so here's what we'll do:
    *
@@ -545,7 +632,9 @@ exports.getFormattedAnnoObj = (
   questionOutputUnit,
   languagesObj,
   answerSentenceData,
-  questionOutputArr
+  questionOutputArr,
+  questionSentenceFormula,
+  reqBody
 ) => {
   let { structureChunk } = questionOutputUnit;
   //Zeta: Change structureChunk all mentions to questionStructureChunk
@@ -563,8 +652,12 @@ exports.getFormattedAnnoObj = (
     questionOutputUnit,
     languagesObj,
     answerSentenceData,
-    questionOutputArr
+    questionOutputArr,
+    questionSentenceFormula,
+    reqBody
   );
+
+  clUtils.throw(445);
 
   /**
    * You know, a more sensible thing to do here...
@@ -617,7 +710,9 @@ exports.getFormattedAnnoObj = (
 exports.firstStageEvaluateAnnotations = (
   questionOutputArr,
   languagesObj,
-  answerSentenceData
+  answerSentenceData,
+  questionSentenceFormula,
+  reqBody
 ) => {
   if (!answerSentenceData) {
     console.log(
@@ -644,7 +739,9 @@ exports.firstStageEvaluateAnnotations = (
       outputUnit,
       languagesObj,
       answerSentenceData,
-      questionOutputArr
+      questionOutputArr,
+      questionSentenceFormula,
+      reqBody
     );
 
     if (!Object.values(formattedAnnoObj).length) {

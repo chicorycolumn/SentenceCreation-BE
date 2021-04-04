@@ -314,12 +314,12 @@ exports.structureChunkFeatures = {
       possibleValues: ["1per", "2per", "3per"],
     },
     gender: {
-      compatibleWordtypes: ["noun", "verb", "adjective", "pronoun"],
+      compatibleWordtypes: ["noun", "verb", "adjective", "pronoun", "article"],
       expectedTypeOnStCh: "array",
       possibleValues: ["m", "f", "n", "virile", "nonvirile"],
     },
     number: {
-      compatibleWordtypes: ["noun", "verb", "adjective", "pronoun"],
+      compatibleWordtypes: ["noun", "verb", "adjective", "pronoun", "article"],
       expectedTypeOnStCh: "array",
       possibleValues: ["singular", "plural"],
     },

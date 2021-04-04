@@ -437,11 +437,11 @@ exports.filterWithinSelectedLemmaObject = (
     clUtils.consoleLogObjectAtTwoLevels(source);
     console.log("\n\n\n");
 
-    // console.log(
-    clUtils.throw(
+    console.log(
+      // clUtils.throw(
       //xpublish: This should not be a throw when in PROD.
       "[1;31m " +
-        `#WARN iszn lf:filterWithinSelectedLemmaObject. traverseAndRecordInflections returned FALSY for "${structureChunk.chunkId}" in "${currentLanguage}". See requirementArrs above.` +
+        `#WARN/#ERR iszn lf:filterWithinSelectedLemmaObject. traverseAndRecordInflections returned FALSY for "${structureChunk.chunkId}" in "${currentLanguage}". See requirementArrs above.` +
         "[0m"
     );
 

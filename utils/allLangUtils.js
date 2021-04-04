@@ -21,6 +21,9 @@ exports.addWordtypeToStructureChunk = (structureChunk) => {
     );
   }
 
+  console.log(
+    `jiro addWordtypeToStructureChunk. "${structureChunk.chunkId}" received wordtype "${wordtype}".`
+  );
   structureChunk.wordtype = wordtype;
 };
 
