@@ -15,7 +15,9 @@ const { generalTranslatedSentencesRef } = testingUtils;
 // ProsMgn:        "My doctor and her book." Connected pronoun reveals gender of MGN. Doesn't need an annotation for doctor as clearly must be lekarka.
 // EdusMgn:        "My doctor is a man."     Educator specifies MGN's gender. Sentence where educator knows that this MGN will need no clarifying.
 
-describe("/api", () => {
+describe("/api", function () {
+  this.timeout(5000);
+
   gpUtils.fillOutWashburneRefObj(
     generalTranslatedSentencesRef,
     "POL->ENG",
@@ -1262,7 +1264,7 @@ describe("/api", () => {
     });
   });
 
-  describe("/palette - Stage 17-iv: Possessive pronouns and MGNs. MGN to agree with pronoun.", () => {
+  describe.only("/palette - Stage 17-iv: Possessive pronouns and MGNs. MGN to agree with pronoun.", () => {
     it("#pal17-10a GET 200 YES: Engpol. I was here. Testing annotations.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -1667,7 +1669,7 @@ describe("/api", () => {
     });
     //And then having done 17-11, make that vary for number as well.
     //Add "The doctor was here." sentence with tests.
-    it.only("#pal17-11e GET 200 YES: Engpol. I* was a doctor. MGN to agree with pronoun.", () => {
+    it("#pal17-11e GET 200 YES: Engpol. I* was a doctor. MGN to agree with pronoun.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1742,7 +1744,7 @@ describe("/api", () => {
           );
         });
     });
-    it("#pal17-11g GET 200 YES: Poleng. I* was a doctor. MGN to agree with pronoun.", () => {
+    it.only("#pal17-11g GET 200 YES: Poleng. I* was a doctor. MGN to agree with pronoun.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 

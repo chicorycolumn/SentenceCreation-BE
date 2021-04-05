@@ -15,7 +15,8 @@ exports.firstStageEvaluateAnnotations = (
   answerSentenceData,
   questionSentenceFormula,
   reqBody,
-  answerSelectedWordsSetsHaveChanged
+  answerSelectedWordsSetsHaveChanged,
+  additionalRunsRecord
 ) => {
   if (!answerSentenceData) {
     console.log(
@@ -48,7 +49,8 @@ exports.firstStageEvaluateAnnotations = (
       questionSentenceFormula,
       reqBody,
       answerSelectedWordsSetsHaveChanged,
-      questionOutputUnitsThatHaveBeenCounterfactualed
+      questionOutputUnitsThatHaveBeenCounterfactualed,
+      additionalRunsRecord
     );
 
     if (!Object.values(formattedAnnoObj).length) {
@@ -75,7 +77,8 @@ exports.getFormattedAnnoObj = (
   questionSentenceFormula,
   reqBody,
   answerSelectedWordsSetsHaveChanged,
-  questionOutputUnitsThatHaveBeenCounterfactualed
+  questionOutputUnitsThatHaveBeenCounterfactualed,
+  additionalRunsRecord
 ) => {
   let { structureChunk } = questionOutputUnit;
   //Zeta: Change structureChunk all mentions to questionStructureChunk
@@ -97,40 +100,9 @@ exports.getFormattedAnnoObj = (
     questionSentenceFormula,
     reqBody,
     answerSelectedWordsSetsHaveChanged,
-    questionOutputUnitsThatHaveBeenCounterfactualed
+    questionOutputUnitsThatHaveBeenCounterfactualed,
+    additionalRunsRecord
   );
-
-  /**
-   * You know, a more sensible thing to do here...
-   *
-   * Would be, instead of having to manually specify the conditions on which to remove annotations,
-   *
-   * let's say we have Qsent ENG: I {male} am here.
-   *
-   * (NB: Why does I have gender anno, and not numebr anno, and why do any words have annos?
-   *      It's because I is a synhom re gender. I {female} and I {male} are both I. So it got gender anno added.)
-   *
-   * Now, do we want to keep that annotation, eh?
-   *
-   * It would be nice if we could check what the Asent would be with a different gender, and if different, keep the
-   * anno, and if not, remove it.
-   *
-   * I {male} am here. --> Jestem tutaj.
-   * So let's get the other poss values for gender --> [m, f]
-   * and let's get the answer sentence again, but with gender f. --> Jestem tutaj.
-   *
-   * Oh cool, they're the same, so we'll remove the gender anno.
-   *
-   * Whereas I {male} was here. --> Byłem tutaj. RERUN --> Byłam tutaj.
-   *
-   * Aha! They're different. So we will keep that gender anno.
-   */
-  // aaUtils.removeAnnotationsByRefConditions(
-  //   questionOutputUnit,
-  //   languagesObj,
-  //   answerSentenceData,
-  //   questionOutputArr
-  // );
   console.log("bbbe");
 
   let annoObj = {};
@@ -156,7 +128,8 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   rawQuestionSentenceFormula,
   reqBody,
   answerSelectedWordsSetsHaveChanged,
-  questionOutputUnitsThatHaveBeenCounterfactualed
+  questionOutputUnitsThatHaveBeenCounterfactualed,
+  additionalRunsRecord
 ) => {
   function removeAnnotationsIfHeadChunkHasBeenCounterfaxed(
     questionOutputUnitsThatHaveBeenCounterfactualed,
@@ -279,7 +252,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         )
       );
 
-      //Save time by removing gender values incompatible with number value.
+      //Save time by removing gender values incompatible with number value. //Omega too specific for these langs.
       if (
         questionOutputUnit.structureChunk.number &&
         questionOutputUnit.structureChunk.number.length
@@ -292,6 +265,21 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         if (!questionOutputUnit.structureChunk.number.includes("singular")) {
           counterfactualValuesForThisFeature = counterfactualValuesForThisFeature.filter(
             (value) => !["m", "m1", "m2", "m3", "f", "n"].includes(value)
+          );
+        }
+      }
+
+      //Save time by removing gender values incompatible with person value. //Omega too specific for these langs.
+      if (
+        questionOutputUnit.structureChunk.person &&
+        questionOutputUnit.structureChunk.person.length
+      ) {
+        if (
+          questionOutputUnit.structureChunk.person.includes("1per") ||
+          questionOutputUnit.structureChunk.person.includes("2per")
+        ) {
+          counterfactualValuesForThisFeature = counterfactualValuesForThisFeature.filter(
+            (value) => !["m2", "m3", "n"].includes(value)
           );
         }
       }
@@ -357,6 +345,12 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             devSaysThrowAtMidpoint: reqBody.devSaysThrowAtMidpoint,
             devSaysOmitStChValidation: reqBody.devSaysOmitStChValidation,
           };
+
+          additionalRunsRecord.push([
+            questionOutputUnit.structureChunk.chunkId,
+            annoKey,
+            counterfactualValueForThisFeature,
+          ]);
 
           palette.fetchPalette({ body: newReqBody });
         }

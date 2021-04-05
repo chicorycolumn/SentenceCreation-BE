@@ -462,6 +462,8 @@ exports.fetchPalette = (req) => {
 
   let answerSelectedWordsSetsHaveChanged = { value: false };
 
+  let additionalRunsRecord = [];
+
   questionResponseObj = scUtils.giveFinalSentences(
     questionSentenceData,
     false,
@@ -470,7 +472,8 @@ exports.fetchPalette = (req) => {
     answerSentenceData,
     questionSentenceFormula,
     req.body,
-    answerSelectedWordsSetsHaveChanged
+    answerSelectedWordsSetsHaveChanged,
+    additionalRunsRecord
   );
 
   if (answerSelectedWordsSetsHaveChanged.value) {
@@ -511,5 +514,9 @@ exports.fetchPalette = (req) => {
     scUtils.removeDuplicatesFromResponseObject(answerResponseObj);
   }
 
-  return frUtils.finishAndSend(questionResponseObj, answerResponseObj);
+  return frUtils.finishAndSend(
+    questionResponseObj,
+    answerResponseObj,
+    additionalRunsRecord
+  );
 };

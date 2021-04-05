@@ -588,7 +588,8 @@ exports.giveFinalSentences = (
   answerSentenceData,
   questionSentenceFormula,
   reqBody,
-  answerSelectedWordsSetsHaveChanged
+  answerSelectedWordsSetsHaveChanged,
+  additionalRunsRecord
 ) => {
   if (answerLanguage) {
     clUtils.consoleLogObjectAtTwoLevels(
@@ -596,7 +597,6 @@ exports.giveFinalSentences = (
       "sentenceData.questionOutputArr",
       "giveFinal"
     );
-    // clUtils.throw(334);
 
     aaUtils.firstStageEvaluateAnnotations(
       sentenceData.questionOutputArr,
@@ -604,7 +604,8 @@ exports.giveFinalSentences = (
       answerSentenceData,
       questionSentenceFormula,
       reqBody,
-      answerSelectedWordsSetsHaveChanged
+      answerSelectedWordsSetsHaveChanged,
+      additionalRunsRecord
     );
   }
 

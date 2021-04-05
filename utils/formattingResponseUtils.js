@@ -2,8 +2,12 @@ const frUtils = require("./formattingResponseUtils.js");
 const uUtils = require("./universalUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 
-exports.finishAndSend = (questionResponseObj, answerResponseObj) => {
-  let combinedResponseObj = {};
+exports.finishAndSend = (
+  questionResponseObj,
+  answerResponseObj,
+  additionalRunsRecord
+) => {
+  let combinedResponseObj = { additionalRunsRecord };
 
   let refs = [
     { responseObject: questionResponseObj, key: "question" },
