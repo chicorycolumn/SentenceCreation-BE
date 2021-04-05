@@ -221,7 +221,7 @@ exports.addLanguageParticularClarifiers = (
             annotationValue
           );
           structureChunk.annotations.tenseDescription = annotationValue;
-          structureChunk.preventAddingClarifiers = true; // We assume that no more clarifiers are needed.
+          structureChunk.preventAddingFurtherClarifiers = true; // We assume that no more clarifiers are needed.
         } else if (
           structureChunk.tenseDescription &&
           structureChunk.tenseDescription.includes("present simple") &&
@@ -241,7 +241,7 @@ exports.addLanguageParticularClarifiers = (
             annotationValue
           );
           structureChunk.annotations.tenseDescription = annotationValue;
-          structureChunk.preventAddingClarifiers = true; // We assume that no more clarifiers are needed.
+          structureChunk.preventAddingFurtherClarifiers = true; // We assume that no more clarifiers are needed.
         }
       }
     }

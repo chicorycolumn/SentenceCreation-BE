@@ -136,12 +136,13 @@ exports.lemmaObjectFeatures = {
 
 //Zeta: Check the commented out code here.
 exports.structureChunkFeatures = {
-  POL: {
+  ALL: {
     //
     //
     //    These stCh features require validation that given values are okay.
     //
     //
+    preventAddingFurtherClarifiers: { expectedTypeOnStCh: "boolean" },
     counterfactuallyImportantFeatures: { expectedTypeOnStCh: "array" },
     dontSpecifyOnThisChunk: { expectedTypeOnStCh: "boolean" },
     specificLemmas: { expectedTypeOnStCh: "array" },
@@ -159,6 +160,14 @@ exports.structureChunkFeatures = {
       expectedTypeOnStCh: "string",
       possibleValueMustBeExistingChunkId: true,
     },
+    value: { expectedTypeOnStCh: "string" },
+  },
+  POL: {
+    //
+    //
+    //    These stCh features require validation that given values are okay.
+    //
+    //
     postHocAgreeWithPrimary: {
       expectedTypeOnStCh: "string",
       possibleValueMustBeExistingChunkId: true,
@@ -171,7 +180,6 @@ exports.structureChunkFeatures = {
       expectedTypeOnStCh: "string",
       possibleValueMustBeExistingChunkId: true,
     },
-    value: { expectedTypeOnStCh: "string" },
     //
     //
     //    These stCh features get validation by their possibleValues arr.
@@ -259,23 +267,6 @@ exports.structureChunkFeatures = {
     //    These stCh features require validation that given values are okay.
     //
     //
-    counterfactuallyImportantFeatures: { expectedTypeOnStCh: "array" },
-    dontSpecifyOnThisChunk: { expectedTypeOnStCh: "boolean" },
-    specificLemmas: { expectedTypeOnStCh: "array" },
-    specificIds: { expectedTypeOnStCh: "array" },
-    andTags: { expectedTypeOnStCh: "array" },
-    orTags: { expectedTypeOnStCh: "array" },
-    form: { expectedTypeOnStCh: "array" },
-    chunkId: { expectedTypeOnStCh: "string" },
-    // wordtype: { expectedTypeOnStCh: "string", possibleValues: ["noun", "adjective"] },
-    agreeWith: {
-      expectedTypeOnStCh: "string",
-      possibleValueMustBeExistingChunkId: true,
-    },
-    connectedTo: {
-      expectedTypeOnStCh: "string",
-      possibleValueMustBeExistingChunkId: true,
-    },
     // postHocAgreeWithPrimary: {
     //   expectedTypeOnStCh: "string",possibleValueMustBeExistingChunkId: true,
     //
@@ -288,7 +279,6 @@ exports.structureChunkFeatures = {
     //   expectedTypeOnStCh: "string",possibleValueMustBeExistingChunkId: true,
     //
     // },
-    value: { expectedTypeOnStCh: "string" },
     //
     //
     //    These stCh features get validation by their possibleValues arr.

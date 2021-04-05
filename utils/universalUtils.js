@@ -3,6 +3,33 @@ const uUtils = require("./universalUtils.js");
 const clUtils = require("./zerothOrder/consoleLoggingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 
+exports.combineTwoKeyValueObjectsCarefully = (obj1, obj2) => {
+  Object.keys(obj1).forEach((obj1Key) => {
+    if (Object.keys(obj2).includes(obj1Key)) {
+      throw `qoko combineTwoObjectsCarefully. Oh no, "${obj1Key}" present in both objects.`;
+    }
+  });
+  Object.keys(obj2).forEach((obj2Key) => {
+    if (Object.keys(obj1).includes(obj2Key)) {
+      throw `qoko combineTwoObjectsCarefully. Oh no, "${obj2Key}" present in both objects.`;
+    }
+  });
+
+  let combinedObj = {};
+
+  Object.keys(obj1).forEach((obj1Key) => {
+    let obj1Value = obj1[obj1Key];
+    combinedObj[obj1Key] = obj1Value; //copywithoutref
+  });
+
+  Object.keys(obj2).forEach((obj2Key) => {
+    obj2Value = obj2[obj2Key];
+    combinedObj[obj2Key] = obj2Value; //copywithoutref
+  });
+
+  return combinedObj;
+};
+
 exports.addToArrayAtKey = (object, key, value) => {
   if (!object[key]) {
     object[key] = [value];

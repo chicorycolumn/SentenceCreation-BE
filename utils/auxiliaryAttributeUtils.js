@@ -242,9 +242,14 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
       let arrayOfCounterfactualResultsForThisAnnotation = [];
 
-      let allPossibleValuesForThisFeature = refObj.structureChunkFeatures[
-        languagesObj.questionLanguage
-      ][annoKey].possibleValues.slice(0);
+      let stChFeaturesCombined = uUtils.combineTwoKeyValueObjectsCarefully(
+        refObj.structureChunkFeatures[languagesObj.questionLanguage],
+        refObj.structureChunkFeatures["ALL"]
+      );
+
+      let allPossibleValuesForThisFeature = stChFeaturesCombined[
+        annoKey
+      ].possibleValues.slice(0);
 
       let counterfactualValuesForThisFeature = Array.from(
         new Set(
@@ -1119,7 +1124,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
     //    is POL, and soon the answerLanguage will be ENG. And looking it up... ENG doesn't allow "gender" as a transfer.
     //    So from that, we can surmise that ENG doesn't care about gender, and thus, won't want it as a clarifer on the POL Q sentence.
 
-    if (!structureChunk.preventAddingClarifiers) {
+    if (!structureChunk.preventAddingFurtherClarifiers) {
       let synhomographData = otUtils.findSynhomographs(
         selectedLemmaObject,
         structureChunk,
