@@ -165,9 +165,9 @@ exports.processSentenceFormula = (
 
   if (nullResultObj) {
     console.log(
-      "[1;31m " +
-        `\n#ERR bcka processSentenceFormula ${currentLanguage}. headOutputUnitArrays had no successful members. 'klya' only had to fail once, and it did.` +
-        "[0m"
+      "[1;31m \n" +
+        `#ERR bcka processSentenceFormula ${currentLanguage}. headOutputUnitArrays had no successful members. 'klya' only had to fail once, and it did.` +
+        "\n[0m"
     );
 
     return nullResultObj;
@@ -261,64 +261,61 @@ exports.processSentenceFormula = (
     }
   );
 
-  /**For every headOutputUnit in every headOutputArray in every explodedOutputArraysWithHeads...
-   *
-   * Or rather
-   *
-   * Delete any headOutputArray in explodedOutputArraysWithHeads if...
-   *
-   * it has any headOutputUnits who are calculated to have dependent chunks, but
-   * possibleDependentOutputArrays, which should contain arrays of deps, where each array corresponds to
-   * one dep chunk.
-   *
-   * But, if the requisite arrays are not all there,
-   *
-   * then delete this headOutputArray.
-   *
-   * And finally, if explodedOutputArraysWithHeads ends up with nothing in it
-   * then return error.
-   */
-  // explodedOutputArraysWithHeads.forEach(
-  //   (headOutputArray, headOutputArrayIndex) => {
-  //     headOutputArray.forEach((headOutputUnit) => {
-  //       let headChunk = headOutputUnit.structureChunk;
+  if ("delete") {
+    /**For every headOutputUnit in every headOutputArray in every explodedOutputArraysWithHeads...
+     *
+     * Or rather
+     *
+     * Delete any headOutputArray in explodedOutputArraysWithHeads if...
+     *
+     * it has any headOutputUnits who are calculated to have dependent chunks, but
+     * possibleDependentOutputArrays, which should contain arrays of deps, where each array corresponds to
+     * one dep chunk.
+     *
+     * But, if the requisite arrays are not all there,
+     *
+     * then delete this headOutputArray.
+     *
+     * And finally, if explodedOutputArraysWithHeads ends up with nothing in it
+     * then return error.
+     */
+    // explodedOutputArraysWithHeads.forEach(
+    //   (headOutputArray, headOutputArrayIndex) => {
+    //     headOutputArray.forEach((headOutputUnit) => {
+    //       let headChunk = headOutputUnit.structureChunk;
+    //       // Step two begins here.
+    //       let specificDependentChunks = dependentChunks
+    //         .filter((chunk) => chunk.agreeWith === headChunk.chunkId)
+    //         .map((chunk) => uUtils.copyWithoutReference(chunk));
+    //       if (specificDependentChunks.length) {
+    //         specificDependentChunks.forEach((dependentChunk) => {
+    //           //Is this depCh represented in headOutputUnit.possibleDependentOutputArrays?
+    //           let depOutputArray = headOutputUnit.possibleDependentOutputArrays.find(
+    //             (arr) =>
+    //               arr.length &&
+    //               arr[0].structureChunk.chunkId === dependentChunk.chunkId
+    //           );
+    //           if (!depOutputArray || !depOutputArray.length) {
+    //             console.log(
+    //               `k'lye trimArrayOfExplodedOutputArraysByFailures. explodedOutputArraysWithHeads has ${explodedOutputArraysWithHeads.length} members. Deleting headOutputArray at index ${headOutputArrayIndex} because no results were found for depCh "${dependentChunk.chunkId}" in this headOutputArray.`
+    //             );
+    //             explodedOutputArraysWithHeads = returnArrayWithoutItemAtIndex(
+    //               explodedOutputArraysWithHeads,
+    //               headOutputArrayIndex
+    //             );
+    //           }
+    //         });
+    //       }
+    //     });
+    //   }
+    // );
+  }
 
-  //       // Step two begins here.
-  //       let specificDependentChunks = dependentChunks
-  //         .filter((chunk) => chunk.agreeWith === headChunk.chunkId)
-  //         .map((chunk) => uUtils.copyWithoutReference(chunk));
-
-  //       if (specificDependentChunks.length) {
-  //         specificDependentChunks.forEach((dependentChunk) => {
-  //           //Is this depCh represented in headOutputUnit.possibleDependentOutputArrays?
-
-  //           let depOutputArray = headOutputUnit.possibleDependentOutputArrays.find(
-  //             (arr) =>
-  //               arr.length &&
-  //               arr[0].structureChunk.chunkId === dependentChunk.chunkId
-  //           );
-
-  //           if (!depOutputArray || !depOutputArray.length) {
-  //             console.log(
-  //               `k'lye trimArrayOfExplodedOutputArraysByFailures. explodedOutputArraysWithHeads has ${explodedOutputArraysWithHeads.length} members. Deleting headOutputArray at index ${headOutputArrayIndex} because no results were found for depCh "${dependentChunk.chunkId}" in this headOutputArray.`
-  //             );
-
-  //             explodedOutputArraysWithHeads = returnArrayWithoutItemAtIndex(
-  //               explodedOutputArraysWithHeads,
-  //               headOutputArrayIndex
-  //             );
-  //           }
-  //         });
-  //       }
-  //     });
-  //   }
-  // );
-
-  if (!explodedOutputArraysWithHeads.length) {
+  if (headChunks.length && !explodedOutputArraysWithHeads.length) {
     console.log(
-      "[1;31m " +
-        `\n#ERR bcke processSentenceFormula ${currentLanguage}. This run has FAILED due to explodedOutputArraysWithHeads having no successful members. 'klye' must have deleted all members of explodedOutputArraysWithHeads arr.` +
-        "[0m"
+      "[1;31m \n" +
+        `#ERR bcke processSentenceFormula ${currentLanguage}. This run has FAILED due to explodedOutputArraysWithHeads having no successful members. 'klye' must have deleted all members of explodedOutputArraysWithHeads arr.` +
+        "\n[0m"
     );
 
     nullResultObj = {
@@ -470,11 +467,11 @@ exports.processSentenceFormula = (
     }
   });
 
-  if (!grandOutputArray.length) {
+  if ([...headChunks, ...dependentChunks].length && !grandOutputArray.length) {
     console.log(
-      "[1;31m " +
-        `\n#ERR bcki processSentenceFormula ${currentLanguage}. grandOutputArray had no successful members. 'klyi' must have removed all members from grandOutputArray.` +
-        "[0m"
+      "[1;31m \n" +
+        `#ERR bcki processSentenceFormula ${currentLanguage}. grandOutputArray had no successful members. 'klyi' must have removed all members from grandOutputArray.` +
+        "\n[0m"
     );
 
     nullResultObj = {
@@ -543,9 +540,9 @@ exports.processSentenceFormula = (
 
   if (nullResultObj) {
     console.log(
-      "[1;31m " +
-        `\n#ERR bcko processSentenceFormula ${currentLanguage}. allPossOutputUnits_other had no successful members. 'klyo' only had to fail once, and it did.` +
-        "[0m"
+      "[1;31m \n" +
+        `#ERR bcko processSentenceFormula ${currentLanguage}. allPossOutputUnits_other had no successful members. 'klyo' only had to fail once, and it did.` +
+        "\n[0m"
     );
 
     return nullResultObj;
@@ -594,6 +591,13 @@ exports.giveFinalSentences = (
   answerSelectedWordsSetsHaveChanged
 ) => {
   if (answerLanguage) {
+    clUtils.consoleLogObjectAtTwoLevels(
+      sentenceData.questionOutputArr,
+      "sentenceData.questionOutputArr",
+      "giveFinal"
+    );
+    // clUtils.throw(334);
+
     aaUtils.firstStageEvaluateAnnotations(
       sentenceData.questionOutputArr,
       { answerLanguage, questionLanguage: currentLanguage },

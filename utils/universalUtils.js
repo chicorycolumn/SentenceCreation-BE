@@ -3,6 +3,14 @@ const uUtils = require("./universalUtils.js");
 const clUtils = require("./zerothOrder/consoleLoggingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 
+exports.addToArrayAtKey = (object, key, value) => {
+  if (!object[key]) {
+    object[key] = [value];
+  } else {
+    object[key].push(value);
+  }
+};
+
 exports.selectRandom = (array) => {
   return array[Math.floor(Math.random() * array.length)];
 };

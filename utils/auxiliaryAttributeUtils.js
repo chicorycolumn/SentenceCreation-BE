@@ -9,6 +9,507 @@ const aaUtils = require("./auxiliaryAttributeUtils.js");
 const allLangUtils = require("./allLangUtils.js");
 const palette = require("../models/palette.model.js");
 
+exports.firstStageEvaluateAnnotations = (
+  questionOutputArr,
+  languagesObj,
+  answerSentenceData,
+  questionSentenceFormula,
+  reqBody,
+  answerSelectedWordsSetsHaveChanged
+) => {
+  if (!answerSentenceData) {
+    console.log(
+      "[1;31m " +
+        "hhvv NB: NO ANSWER SENTENCE DATA IN aa.firstStageEvaluateAnnotations" +
+        "[0m"
+    );
+  }
+
+  let questionOutputUnitsThatHaveBeenCounterfactualed = {};
+
+  questionOutputArr.forEach((outputUnit) => {
+    let { structureChunk, selectedLemmaObject } = outputUnit;
+
+    if (
+      !structureChunk.annotations ||
+      !Object.keys(structureChunk.annotations).length
+    ) {
+      console.log(
+        `dhca firstStageEvaluateAnnotations "${structureChunk.chunkId}" has no annotations.`
+      );
+      return;
+    }
+
+    let formattedAnnoObj = aaUtils.getFormattedAnnoObj(
+      outputUnit,
+      languagesObj,
+      answerSentenceData,
+      questionOutputArr,
+      questionSentenceFormula,
+      reqBody,
+      answerSelectedWordsSetsHaveChanged,
+      questionOutputUnitsThatHaveBeenCounterfactualed
+    );
+
+    if (!Object.values(formattedAnnoObj).length) {
+      console.log(
+        "[1;31m " +
+          `dhce NB: firstStageEvaluateAnnotations. There were annotations on stCh, but none after formatting. "${structureChunk.chunkId}".` +
+          "[0m"
+      );
+    }
+
+    console.log(
+      `dhci firstStageEvaluateAnnotations. Adding firstStageAnnotationsObj to "${structureChunk.chunkId}".`
+    );
+
+    outputUnit.firstStageAnnotationsObj = formattedAnnoObj;
+  });
+};
+
+exports.getFormattedAnnoObj = (
+  questionOutputUnit,
+  languagesObj,
+  answerSentenceData,
+  questionOutputArr,
+  questionSentenceFormula,
+  reqBody,
+  answerSelectedWordsSetsHaveChanged,
+  questionOutputUnitsThatHaveBeenCounterfactualed
+) => {
+  let { structureChunk } = questionOutputUnit;
+  //Zeta: Change structureChunk all mentions to questionStructureChunk
+
+  console.log("bbbc");
+  aaUtils.removeAnnotationsByAOCs(
+    questionOutputUnit,
+    languagesObj,
+    answerSentenceData,
+    questionOutputArr
+  );
+  console.log("bbbd");
+
+  aaUtils.removeAnnotationsByCounterfactualAnswerSentences(
+    questionOutputUnit,
+    languagesObj,
+    answerSentenceData,
+    questionOutputArr,
+    questionSentenceFormula,
+    reqBody,
+    answerSelectedWordsSetsHaveChanged,
+    questionOutputUnitsThatHaveBeenCounterfactualed
+  );
+
+  /**
+   * You know, a more sensible thing to do here...
+   *
+   * Would be, instead of having to manually specify the conditions on which to remove annotations,
+   *
+   * let's say we have Qsent ENG: I {male} am here.
+   *
+   * (NB: Why does I have gender anno, and not numebr anno, and why do any words have annos?
+   *      It's because I is a synhom re gender. I {female} and I {male} are both I. So it got gender anno added.)
+   *
+   * Now, do we want to keep that annotation, eh?
+   *
+   * It would be nice if we could check what the Asent would be with a different gender, and if different, keep the
+   * anno, and if not, remove it.
+   *
+   * I {male} am here. --> Jestem tutaj.
+   * So let's get the other poss values for gender --> [m, f]
+   * and let's get the answer sentence again, but with gender f. --> Jestem tutaj.
+   *
+   * Oh cool, they're the same, so we'll remove the gender anno.
+   *
+   * Whereas I {male} was here. --> Byłem tutaj. RERUN --> Byłam tutaj.
+   *
+   * Aha! They're different. So we will keep that gender anno.
+   */
+  // aaUtils.removeAnnotationsByRefConditions(
+  //   questionOutputUnit,
+  //   languagesObj,
+  //   answerSentenceData,
+  //   questionOutputArr
+  // );
+  console.log("bbbe");
+
+  let annoObj = {};
+
+  Object.keys(structureChunk.annotations).forEach((annoKey) => {
+    let formattedAnnoValue = allLangUtils.translateAnnotationValue(
+      annoKey,
+      structureChunk,
+      languagesObj
+    );
+
+    annoObj[annoKey] = formattedAnnoValue;
+  });
+
+  return aaUtils.trimAnnotations(annoObj);
+};
+
+exports.removeAnnotationsByCounterfactualAnswerSentences = (
+  questionOutputUnit,
+  languagesObj,
+  answerSentenceData,
+  questionOutputArr,
+  rawQuestionSentenceFormula,
+  reqBody,
+  answerSelectedWordsSetsHaveChanged,
+  questionOutputUnitsThatHaveBeenCounterfactualed
+) => {
+  function removeAnnotationsIfHeadChunkHasBeenCounterfaxed(
+    questionOutputUnitsThatHaveBeenCounterfactualed,
+    questionOutputUnit
+  ) {
+    return (
+      innerRemoveAnnotationsIfHeadChunkHasBeenCounterfaxed(
+        questionOutputUnitsThatHaveBeenCounterfactualed,
+        questionOutputUnit,
+        "agreeWith"
+      ) ||
+      innerRemoveAnnotationsIfHeadChunkHasBeenCounterfaxed(
+        questionOutputUnitsThatHaveBeenCounterfactualed,
+        questionOutputUnit,
+        "postHocAgreeWithPrimary"
+      )
+    );
+
+    function innerRemoveAnnotationsIfHeadChunkHasBeenCounterfaxed(
+      questionOutputUnitsThatHaveBeenCounterfactualed,
+      questionOutputUnit,
+      agreeKey
+    ) {
+      if (
+        questionOutputUnitsThatHaveBeenCounterfactualed[
+          questionOutputUnit.structureChunk[agreeKey]
+        ]
+      ) {
+        console.log(questionOutputUnit.structureChunk.annotations);
+        console.log(
+          "[1;33m " +
+            `mioc removeAnnotationsByCounterfax. Aha! We are examining "${
+              questionOutputUnit.structureChunk.chunkId
+            }" which has the annotations shown above. But this chunk agrees with "${
+              questionOutputUnit.structureChunk[agreeKey]
+            }" which has already been processed by counterfax, re these annotations: [${
+              questionOutputUnitsThatHaveBeenCounterfactualed[
+                questionOutputUnit.structureChunk[agreeKey]
+              ]
+            }].` +
+            "[0m"
+        );
+
+        questionOutputUnitsThatHaveBeenCounterfactualed[
+          questionOutputUnit.structureChunk[agreeKey]
+        ].forEach((annoKey) => {
+          console.log(
+            "[1;33m " +
+              `mioc So I'm deleting "${annoKey}" from "${questionOutputUnit.structureChunk.chunkId}"'s annotations.` +
+              "[0m"
+          );
+
+          delete questionOutputUnit.structureChunk.annotations[annoKey];
+        });
+        return true;
+      }
+    }
+  }
+
+  if (
+    removeAnnotationsIfHeadChunkHasBeenCounterfaxed(
+      questionOutputUnitsThatHaveBeenCounterfactualed,
+      questionOutputUnit
+    )
+  ) {
+    //If this QstCh agrees with a stCh that we've already run through counterfaxing, then return here.
+    //Also, remove that specific annotation from this QstCh.
+    return;
+  }
+
+  let shouldConsoleLog = false;
+
+  let questionSentenceStructure = questionOutputArr.map(
+    (unit) => unit.structureChunk
+  );
+  let originalQuestionSelectedWords = questionOutputArr.map(
+    (unit) => unit.selectedWord
+  );
+  let originalAnswerSelectedWords = [];
+  answerSentenceData.answerOutputArrays.forEach((answerOutputArray) => {
+    originalAnswerSelectedWords.push(
+      answerOutputArray.map((outputUnit) => outputUnit.selectedWord)
+    );
+  });
+  let arrayOfAnswerSelectedWords = answerSentenceData.answerOutputArrays.map(
+    (outputArr) => outputArr.map((unit) => unit.selectedWord)
+  );
+
+  console.log("myxz questionOutputUnit", questionOutputUnit);
+
+  console.log(
+    "myxa questionOutputUnit.structureChunk.annotations",
+    questionOutputUnit.structureChunk.annotations
+  );
+
+  console.log(
+    "[1;35m " +
+      `\nmyxa removeAnnotationsByCounterfax START. "${questionOutputUnit.structureChunk.chunkId}" has the annotations shown above.` +
+      "[0m"
+  );
+
+  Object.keys(questionOutputUnit.structureChunk.annotations).forEach(
+    (annoKey) => {
+      //Don't bother running counterfactuals for wordtype annotations, as they'll always be needed.
+      if (annoKey === "wordtype") {
+        return;
+      }
+
+      let annoValue = questionOutputUnit.structureChunk.annotations[annoKey];
+
+      let arrayOfCounterfactualResultsForThisAnnotation = [];
+
+      let allPossibleValuesForThisFeature = refObj.structureChunkFeatures[
+        languagesObj.questionLanguage
+      ][annoKey].possibleValues.slice(0);
+
+      let counterfactualValuesForThisFeature = Array.from(
+        new Set(
+          allPossibleValuesForThisFeature.filter((value) => value !== annoValue)
+        )
+      );
+
+      //Save time by removing gender values incompatible with number value.
+      if (
+        questionOutputUnit.structureChunk.number &&
+        questionOutputUnit.structureChunk.number.length
+      ) {
+        if (!questionOutputUnit.structureChunk.number.includes("plural")) {
+          counterfactualValuesForThisFeature = counterfactualValuesForThisFeature.filter(
+            (value) => !["virile", "nonvirile"].includes(value)
+          );
+        }
+        if (!questionOutputUnit.structureChunk.number.includes("singular")) {
+          counterfactualValuesForThisFeature = counterfactualValuesForThisFeature.filter(
+            (value) => !["m", "m1", "m2", "m3", "f", "n"].includes(value)
+          );
+        }
+      }
+
+      console.log(
+        `myxe removeAnnotationsByCounterfax FOREACH START. Examining ${questionOutputUnit.structureChunk.chunkId}'s annotation ${annoKey} = ${annoValue} so the counterfactual values are [${counterfactualValuesForThisFeature}].`
+      );
+
+      // if (questionOutputUnit.structureChunk.chunkId === "nou-1-doctor") {
+      //   clUtils.throw(221);
+      // }
+
+      counterfactualValuesForThisFeature.forEach(
+        (counterfactualValueForThisFeature) => {
+          console.log(
+            `myxe removeAnnotationsByCounterfax FOREACH-2 START. Will do a run with counterfactual value "${counterfactualValueForThisFeature}".`
+          );
+
+          let counterfactualQuestionSentenceFormula = uUtils.copyWithoutReference(
+            rawQuestionSentenceFormula
+          );
+
+          gpUtils.updateSentenceFormulaWithNewStructureChunksFromOutputUnits(
+            counterfactualQuestionSentenceFormula,
+            questionOutputArr
+          );
+
+          let stChToChange = counterfactualQuestionSentenceFormula.sentenceStructure.find(
+            (stCh) => stCh.chunkId === questionOutputUnit.structureChunk.chunkId
+          );
+
+          if (!stChToChange) {
+            clUtils.throw(
+              "sopx removeAnnotationsByCounterfactualAnswerSentences. Couldn't find a stCh to change for counterfactual."
+            );
+          }
+
+          stChToChange[annoKey] = [counterfactualValueForThisFeature];
+
+          counterfactualQuestionSentenceFormula.sentenceStructure.forEach(
+            (stCh) => {
+              delete stCh.annotations;
+            }
+          );
+
+          let counterfactualFeature = {};
+          counterfactualFeature[annoKey] = counterfactualValueForThisFeature;
+
+          let newReqBody = {
+            arrayOfCounterfactualResultsForThisAnnotation,
+            counterfactualQuestionSentenceFormula,
+            counterfactualFeature,
+
+            sentenceFormulaId:
+              counterfactualQuestionSentenceFormula.sentenceFormulaId,
+            sentenceFormulaSymbol:
+              counterfactualQuestionSentenceFormula.sentenceFormulaSymbol,
+
+            useDummy: reqBody.useDummy,
+            questionLanguage: reqBody.questionLanguage,
+            answerLanguage: reqBody.answerLanguage,
+            pleaseDontSpecify: reqBody.pleaseDontSpecify,
+            devSaysThrowAtMidpoint: reqBody.devSaysThrowAtMidpoint,
+            devSaysOmitStChValidation: reqBody.devSaysOmitStChValidation,
+          };
+
+          palette.fetchPalette({ body: newReqBody });
+        }
+      );
+
+      console.log(
+        `\nmyxi removeAnnotationsByCounterfax. Run where we changed "${questionOutputUnit.structureChunk.chunkId}" to counterfactual "${annoKey}" arrayOfCounterfactualResultsForThisAnnotation came back with ${arrayOfCounterfactualResultsForThisAnnotation.length} results.`
+      );
+
+      let counterfactualQuestionSelectedWordsSets = arrayOfCounterfactualResultsForThisAnnotation.map(
+        (counterfactual) =>
+          counterfactual.questionSentenceData.questionOutputArr.map(
+            (outputUnit) => outputUnit.selectedWord
+          )
+      );
+      let counterfactualAnswerSelectedWordsSets = [];
+      let counterfactualAnswerOutputArrays = [];
+      arrayOfCounterfactualResultsForThisAnnotation.forEach(
+        (counterfactual) => {
+          counterfactual.answerSentenceData.answerOutputArrays.forEach(
+            (answerOutputArray) => {
+              counterfactualAnswerOutputArrays.push(answerOutputArray);
+
+              counterfactualAnswerSelectedWordsSets.push(
+                answerOutputArray.map((outputUnit) => outputUnit.selectedWord)
+              );
+            }
+          );
+        }
+      );
+      let counterfactualFeatures = arrayOfCounterfactualResultsForThisAnnotation.map(
+        (counterfactual) => {
+          {
+            if (
+              Object.keys(counterfactual.counterfactualFeature).length !== 1
+            ) {
+              clUtils.throw("iejr removeAnnotationsByCounterfax");
+            }
+
+            if (
+              Object.keys(counterfactual.counterfactualFeature)[0] !== annoKey
+            ) {
+              clUtils.throw("dckm removeAnnotationsByCounterfax");
+            }
+
+            return counterfactual.counterfactualFeature[annoKey];
+          }
+        }
+      );
+
+      if (shouldConsoleLog) {
+        console.log(
+          "\n klwe removeAnnotationsByCounterfax. questionOutputUnit.structureChunk.annotations",
+          questionOutputUnit.structureChunk.annotations
+        );
+        console.log(
+          "[1;33m" +
+            `klwe removeAnnotationsByCounterfax. We made counterfactuals for question stCh "${questionOutputUnit.structureChunk.chunkId}" based on its annotations, shown above.` +
+            "[0m"
+        );
+        console.log(
+          "originalQuestionSelectedWords",
+          originalQuestionSelectedWords
+        );
+        console.log("originalAnswerSelectedWords", originalAnswerSelectedWords);
+        console.log(
+          "counterfactualQuestionSelectedWordsSets",
+          counterfactualQuestionSelectedWordsSets
+        );
+        console.log(
+          "counterfactualAnswerSelectedWordsSets",
+          counterfactualAnswerSelectedWordsSets
+        );
+      }
+
+      console.log("originalAnswerSelectedWords", originalAnswerSelectedWords);
+      console.log(
+        "counterfactualAnswerSelectedWordsSets",
+        counterfactualAnswerSelectedWordsSets
+      );
+
+      if (
+        gpUtils.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
+          originalAnswerSelectedWords,
+          counterfactualAnswerSelectedWordsSets
+        )
+      ) {
+        console.log(
+          "[1;35m " +
+            `myxo removeAnnotationsByCounterfax END. I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual answer selected words came back THE SAME AS original answer selected words.\nThis means that this feature has no impact, even if we flip it, so annotation is not needed. \nDeleting annotation "${annoKey}" = "${questionOutputUnit.structureChunk.annotations[annoKey]}" now.` +
+            "[0m"
+        );
+
+        delete questionOutputUnit.structureChunk.annotations[annoKey];
+      } else {
+        console.log(
+          "[1;35m " +
+            `myxo removeAnnotationsByCounterfax END. I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual answer selected words came back DIFFERENT FROM original answer selected words.\nThis means I'll keep annotation "${annoKey}" = "${questionOutputUnit.structureChunk.annotations[annoKey]}".` +
+            "[0m"
+        );
+
+        if (questionOutputUnit.structureChunk.dontSpecifyOnThisChunk) {
+          let combinedAnswerSelectedWordsSets = [
+            ...originalAnswerSelectedWords,
+            ...counterfactualAnswerSelectedWordsSets,
+          ];
+
+          let combinedFeatures = [
+            ...questionOutputUnit.structureChunk[annoKey],
+            ...counterfactualFeatures,
+          ];
+
+          console.log({ annoValue });
+          console.log(
+            "combinedAnswerSelectedWordsSets",
+            combinedAnswerSelectedWordsSets
+          );
+          console.log("combinedFeatures", combinedFeatures);
+
+          answerSelectedWordsSetsHaveChanged.value = true;
+
+          answerSentenceData.answerOutputArrays = [
+            ...answerSentenceData.answerOutputArrays,
+            ...counterfactualAnswerOutputArrays,
+          ];
+
+          delete questionOutputUnit.structureChunk.annotations[annoKey];
+          questionOutputUnit.structureChunk[annoKey] = combinedFeatures;
+
+          if (
+            !questionOutputUnit.structureChunk.counterfactuallyImportantFeatures
+          ) {
+            questionOutputUnit.structureChunk.counterfactuallyImportantFeatures = [
+              annoKey,
+            ];
+          } else {
+            questionOutputUnit.structureChunk.counterfactuallyImportantFeatures.push(
+              annoKey
+            );
+          }
+        }
+      }
+
+      uUtils.addToArrayAtKey(
+        questionOutputUnitsThatHaveBeenCounterfactualed,
+        questionOutputUnit.structureChunk.chunkId,
+        annoKey
+      );
+    }
+  );
+  // clUtils.throw(465);
+};
+
 exports.removeAnnotationsByAOCs = (
   questionOutputUnit,
   languagesObj,
@@ -500,411 +1001,6 @@ exports.addAnnotation = (chunk, key, value) => {
   console.log("aggw addAnnotation", { key, value });
 
   chunk.annotations[key] = value;
-};
-
-exports.removeAnnotationsByCounterfactualAnswerSentences = (
-  questionOutputUnit,
-  languagesObj,
-  answerSentenceData,
-  questionOutputArr,
-  rawQuestionSentenceFormula,
-  reqBody,
-  answerSelectedWordsSetsHaveChanged
-) => {
-  let shouldConsoleLog = false;
-
-  let questionSentenceStructure = questionOutputArr.map(
-    (unit) => unit.structureChunk
-  );
-  let originalQuestionSelectedWords = questionOutputArr.map(
-    (unit) => unit.selectedWord
-  );
-  let originalAnswerSelectedWords = [];
-  answerSentenceData.answerOutputArrays.forEach((answerOutputArray) => {
-    originalAnswerSelectedWords.push(
-      answerOutputArray.map((outputUnit) => outputUnit.selectedWord)
-    );
-  });
-  let arrayOfAnswerSelectedWords = answerSentenceData.answerOutputArrays.map(
-    (outputArr) => outputArr.map((unit) => unit.selectedWord)
-  );
-
-  if (shouldConsoleLog) {
-    console.log("ddfz questionOutputUnit", questionOutputUnit);
-    console.log(
-      "ddfa questionOutputUnit.structureChunk.annotations",
-      questionOutputUnit.structureChunk.annotations
-    );
-    console.log("ddfa questionSentenceStructure", questionSentenceStructure);
-    console.log(
-      "ddfa originalQuestionSelectedWords",
-      originalQuestionSelectedWords
-    );
-    console.log("ddfa arrayOfAnswerSelectedWords", arrayOfAnswerSelectedWords);
-  }
-
-  console.log(
-    "myxa questionOutputUnit.structureChunk.annotations",
-    questionOutputUnit.structureChunk.annotations
-  );
-
-  console.log(
-    "[1;35m " +
-      `\nmyxa removeAnnotationsByCounterfax START. "${questionOutputUnit.structureChunk.chunkId}" has the annotations shown above.` +
-      "[0m"
-  );
-
-  Object.keys(questionOutputUnit.structureChunk.annotations).forEach(
-    (annoKey) => {
-      let annoValue = questionOutputUnit.structureChunk.annotations[annoKey];
-
-      let arrayOfCounterfactualResultsForThisAnnotation = [];
-
-      let allPossibleValuesForThisFeature = refObj.structureChunkFeatures[
-        languagesObj.questionLanguage
-      ][annoKey].possibleValues.slice(0);
-
-      let counterfactualValuesForThisFeature = Array.from(
-        new Set(
-          allPossibleValuesForThisFeature.filter((value) => value !== annoValue)
-        )
-      );
-
-      console.log(
-        `myxe removeAnnotationsByCounterfax FOREACH START. Examining ${questionOutputUnit.structureChunk.chunkId}'s annotation ${annoKey} = ${annoValue} so the counterfactual values are [${counterfactualValuesForThisFeature}].`
-      );
-
-      counterfactualValuesForThisFeature.forEach(
-        (counterfactualValueForThisFeature) => {
-          console.log(
-            `myxe removeAnnotationsByCounterfax FOREACH-2 START. Will do a run with counterfactual value "${counterfactualValueForThisFeature}".`
-          );
-
-          let counterfactualQuestionSentenceFormula = uUtils.copyWithoutReference(
-            rawQuestionSentenceFormula
-          );
-
-          gpUtils.updateSentenceFormulaWithNewStructureChunksFromOutputUnits(
-            counterfactualQuestionSentenceFormula,
-            questionOutputArr
-          );
-
-          let stChToChange = counterfactualQuestionSentenceFormula.sentenceStructure.find(
-            (stCh) => stCh.chunkId === questionOutputUnit.structureChunk.chunkId
-          );
-
-          if (!stChToChange) {
-            clUtils.throw(
-              "sopx removeAnnotationsByCounterfactualAnswerSentences. Couldn't find a stCh to change for counterfactual."
-            );
-          }
-
-          stChToChange[annoKey] = [counterfactualValueForThisFeature];
-
-          counterfactualQuestionSentenceFormula.sentenceStructure.forEach(
-            (stCh) => {
-              delete stCh.annotations;
-            }
-          );
-
-          let counterfactualFeature = {};
-          counterfactualFeature[annoKey] = counterfactualValueForThisFeature;
-
-          let newReqBody = {
-            arrayOfCounterfactualResultsForThisAnnotation,
-            counterfactualQuestionSentenceFormula,
-            counterfactualFeature,
-
-            sentenceFormulaId:
-              counterfactualQuestionSentenceFormula.sentenceFormulaId,
-            sentenceFormulaSymbol:
-              counterfactualQuestionSentenceFormula.sentenceFormulaSymbol,
-
-            useDummy: reqBody.useDummy,
-            questionLanguage: reqBody.questionLanguage,
-            answerLanguage: reqBody.answerLanguage,
-            pleaseDontSpecify: reqBody.pleaseDontSpecify,
-            devSaysThrowAtMidpoint: reqBody.devSaysThrowAtMidpoint,
-            devSaysOmitStChValidation: reqBody.devSaysOmitStChValidation,
-          };
-
-          palette.fetchPalette({ body: newReqBody });
-        }
-      );
-
-      console.log(
-        `\nmyxi removeAnnotationsByCounterfax. Run where we changed "${questionOutputUnit.structureChunk.chunkId}" to counterfactual "${annoKey}" arrayOfCounterfactualResultsForThisAnnotation came back with ${arrayOfCounterfactualResultsForThisAnnotation.length} results.`
-      );
-
-      let counterfactualQuestionSelectedWordsSets = arrayOfCounterfactualResultsForThisAnnotation.map(
-        (counterfactual) =>
-          counterfactual.questionSentenceData.questionOutputArr.map(
-            (outputUnit) => outputUnit.selectedWord
-          )
-      );
-      let counterfactualAnswerSelectedWordsSets = [];
-      let counterfactualAnswerOutputArrays = [];
-      arrayOfCounterfactualResultsForThisAnnotation.forEach(
-        (counterfactual) => {
-          counterfactual.answerSentenceData.answerOutputArrays.forEach(
-            (answerOutputArray) => {
-              counterfactualAnswerOutputArrays.push(answerOutputArray);
-
-              counterfactualAnswerSelectedWordsSets.push(
-                answerOutputArray.map((outputUnit) => outputUnit.selectedWord)
-              );
-            }
-          );
-        }
-      );
-      let counterfactualFeatures = arrayOfCounterfactualResultsForThisAnnotation.map(
-        (counterfactual) => {
-          {
-            if (
-              Object.keys(counterfactual.counterfactualFeature).length !== 1
-            ) {
-              clUtils.throw("iejr removeAnnotationsByCounterfax");
-            }
-
-            if (
-              Object.keys(counterfactual.counterfactualFeature)[0] !== annoKey
-            ) {
-              clUtils.throw("dckm removeAnnotationsByCounterfax");
-            }
-
-            return counterfactual.counterfactualFeature[annoKey];
-          }
-        }
-      );
-      if (shouldConsoleLog) {
-        console.log(
-          "\n klwe removeAnnotationsByCounterfax. questionOutputUnit.structureChunk.annotations",
-          questionOutputUnit.structureChunk.annotations
-        );
-        console.log(
-          "[1;33m" +
-            `klwe removeAnnotationsByCounterfax. We made counterfactuals for question stCh "${questionOutputUnit.structureChunk.chunkId}" based on its annotations, shown above.` +
-            "[0m"
-        );
-        console.log(
-          "originalQuestionSelectedWords",
-          originalQuestionSelectedWords
-        );
-        console.log("originalAnswerSelectedWords", originalAnswerSelectedWords);
-        console.log(
-          "counterfactualQuestionSelectedWordsSets",
-          counterfactualQuestionSelectedWordsSets
-        );
-        console.log(
-          "counterfactualAnswerSelectedWordsSets",
-          counterfactualAnswerSelectedWordsSets
-        );
-      }
-
-      console.log("originalAnswerSelectedWords", originalAnswerSelectedWords);
-      console.log(
-        "counterfactualAnswerSelectedWordsSets",
-        counterfactualAnswerSelectedWordsSets
-      );
-
-      if (
-        gpUtils.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
-          originalAnswerSelectedWords,
-          counterfactualAnswerSelectedWordsSets
-        )
-      ) {
-        console.log(
-          "[1;35m " +
-            `myxo removeAnnotationsByCounterfax END. I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual answer selected words came back THE SAME AS original answer selected words.\nThis means that this feature has no impact, even if we flip it, so annotation is not needed. \nDeleting annotation "${annoKey}" = "${questionOutputUnit.structureChunk.annotations[annoKey]}" now.` +
-            "[0m"
-        );
-
-        delete questionOutputUnit.structureChunk.annotations[annoKey];
-      } else {
-        console.log(
-          "[1;35m " +
-            `myxo removeAnnotationsByCounterfax END. I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual answer selected words came back DIFFERENT FROM original answer selected words.\nThis means I'll keep annotation "${annoKey}" = "${questionOutputUnit.structureChunk.annotations[annoKey]}".` +
-            "[0m"
-        );
-
-        if (questionOutputUnit.structureChunk.dontSpecifyOnThisChunk) {
-          let combinedAnswerSelectedWordsSets = [
-            ...originalAnswerSelectedWords,
-            ...counterfactualAnswerSelectedWordsSets,
-          ];
-
-          let combinedFeatures = [
-            ...questionOutputUnit.structureChunk[annoKey],
-            ...counterfactualFeatures,
-          ];
-
-          console.log({ annoValue });
-          console.log(
-            "combinedAnswerSelectedWordsSets",
-            combinedAnswerSelectedWordsSets
-          );
-          console.log("combinedFeatures", combinedFeatures);
-
-          answerSelectedWordsSetsHaveChanged.value = true;
-
-          answerSentenceData.answerOutputArrays = [
-            ...answerSentenceData.answerOutputArrays,
-            ...counterfactualAnswerOutputArrays,
-          ];
-
-          delete questionOutputUnit.structureChunk.annotations[annoKey];
-          questionOutputUnit.structureChunk[annoKey] = combinedFeatures;
-
-          if (
-            !questionOutputUnit.structureChunk.counterfactuallyImportantFeatures
-          ) {
-            questionOutputUnit.structureChunk.counterfactuallyImportantFeatures = [
-              annoKey,
-            ];
-          } else {
-            questionOutputUnit.structureChunk.counterfactuallyImportantFeatures.push(
-              annoKey
-            );
-          }
-        }
-      }
-    }
-  );
-  // clUtils.throw(465);
-};
-
-exports.getFormattedAnnoObj = (
-  questionOutputUnit,
-  languagesObj,
-  answerSentenceData,
-  questionOutputArr,
-  questionSentenceFormula,
-  reqBody,
-  answerSelectedWordsSetsHaveChanged
-) => {
-  let { structureChunk } = questionOutputUnit;
-  //Zeta: Change structureChunk all mentions to questionStructureChunk
-
-  console.log("bbbc");
-  aaUtils.removeAnnotationsByAOCs(
-    questionOutputUnit,
-    languagesObj,
-    answerSentenceData,
-    questionOutputArr
-  );
-  console.log("bbbd");
-
-  aaUtils.removeAnnotationsByCounterfactualAnswerSentences(
-    questionOutputUnit,
-    languagesObj,
-    answerSentenceData,
-    questionOutputArr,
-    questionSentenceFormula,
-    reqBody,
-    answerSelectedWordsSetsHaveChanged
-  );
-
-  /**
-   * You know, a more sensible thing to do here...
-   *
-   * Would be, instead of having to manually specify the conditions on which to remove annotations,
-   *
-   * let's say we have Qsent ENG: I {male} am here.
-   *
-   * (NB: Why does I have gender anno, and not numebr anno, and why do any words have annos?
-   *      It's because I is a synhom re gender. I {female} and I {male} are both I. So it got gender anno added.)
-   *
-   * Now, do we want to keep that annotation, eh?
-   *
-   * It would be nice if we could check what the Asent would be with a different gender, and if different, keep the
-   * anno, and if not, remove it.
-   *
-   * I {male} am here. --> Jestem tutaj.
-   * So let's get the other poss values for gender --> [m, f]
-   * and let's get the answer sentence again, but with gender f. --> Jestem tutaj.
-   *
-   * Oh cool, they're the same, so we'll remove the gender anno.
-   *
-   * Whereas I {male} was here. --> Byłem tutaj. RERUN --> Byłam tutaj.
-   *
-   * Aha! They're different. So we will keep that gender anno.
-   */
-  // aaUtils.removeAnnotationsByRefConditions(
-  //   questionOutputUnit,
-  //   languagesObj,
-  //   answerSentenceData,
-  //   questionOutputArr
-  // );
-  console.log("bbbe");
-
-  let annoObj = {};
-
-  Object.keys(structureChunk.annotations).forEach((annoKey) => {
-    let formattedAnnoValue = allLangUtils.translateAnnotationValue(
-      annoKey,
-      structureChunk,
-      languagesObj
-    );
-
-    annoObj[annoKey] = formattedAnnoValue;
-  });
-
-  return aaUtils.trimAnnotations(annoObj);
-};
-
-exports.firstStageEvaluateAnnotations = (
-  questionOutputArr,
-  languagesObj,
-  answerSentenceData,
-  questionSentenceFormula,
-  reqBody,
-  answerSelectedWordsSetsHaveChanged
-) => {
-  if (!answerSentenceData) {
-    console.log(
-      "[1;31m " +
-        "hhvv NB: NO ANSWER SENTENCE DATA IN aa.firstStageEvaluateAnnotations" +
-        "[0m"
-    );
-  }
-
-  questionOutputArr.forEach((outputUnit) => {
-    let { structureChunk, selectedLemmaObject } = outputUnit;
-
-    if (
-      !structureChunk.annotations ||
-      !Object.keys(structureChunk.annotations).length
-    ) {
-      console.log(
-        `dhca firstStageEvaluateAnnotations "${structureChunk.chunkId}" has no annotations.`
-      );
-      return;
-    }
-
-    let formattedAnnoObj = aaUtils.getFormattedAnnoObj(
-      outputUnit,
-      languagesObj,
-      answerSentenceData,
-      questionOutputArr,
-      questionSentenceFormula,
-      reqBody,
-      answerSelectedWordsSetsHaveChanged
-    );
-
-    if (!Object.values(formattedAnnoObj).length) {
-      console.log(
-        "[1;31m " +
-          `dhce NB: firstStageEvaluateAnnotations. There were annotations on stCh, but none after formatting. "${structureChunk.chunkId}".` +
-          "[0m"
-      );
-    }
-
-    console.log(
-      `dhci firstStageEvaluateAnnotations. Adding firstStageAnnotationsObj to "${structureChunk.chunkId}".`
-    );
-
-    outputUnit.firstStageAnnotationsObj = formattedAnnoObj;
-  });
 };
 
 exports.trimAnnotations = (annotationObj) => {

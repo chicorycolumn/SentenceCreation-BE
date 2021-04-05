@@ -1667,7 +1667,7 @@ describe("/api", () => {
     });
     //And then having done 17-11, make that vary for number as well.
     //Add "The doctor was here." sentence with tests.
-    it("#pal17-11e GET 200 YES: Engpol. I* was a doctor. MGN to agree with pronoun.", () => {
+    it.only("#pal17-11e GET 200 YES: Engpol. I* was a doctor. MGN to agree with pronoun.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2817,6 +2817,7 @@ describe("/api", () => {
           ]).to.include(res.body.questionSentenceArr[0]);
         });
     });
+    // it.only("#pal14-03c GET 200 YES: Engpol. My father gave me his book.", () => {
     it("#pal14-03c GET 200 YES: Engpol. My father gave me his book.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -3984,7 +3985,7 @@ describe("/api", () => {
         .then((res) => {
           console.log(res.body);
           expect(res.body.questionSentenceArr).to.have.length(1);
-          expect(res.body.questionSentenceArr[0]).to.equal("I (male).");
+          expect(res.body.questionSentenceArr[0]).to.equal("I.");
           expect(res.body.answerSentenceArr).to.have.members(["Ja."]);
         });
     });
@@ -5877,7 +5878,7 @@ describe("/api", () => {
           );
         });
     });
-    it.only("#pal09-03a (Type 3 Synhomographs. Ad-PW: clarify Inflections) 'write': Engpol. Expect clarifiers.", () => {
+    it("#pal09-03a (Type 3 Synhomographs. Ad-PW: clarify Inflections) 'write': Engpol. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
