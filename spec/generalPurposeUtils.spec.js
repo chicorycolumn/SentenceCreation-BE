@@ -4,7 +4,7 @@ const uUtils = require("../utils/universalUtils.js");
 
 const {
   combineAndExplodeTwoSuperArrays,
-  areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder,
+  areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual,
 } = require("../utils/generalPurposeUtils.js");
 
 const {
@@ -14,45 +14,71 @@ const {
   areTwoObjectsEqual,
 } = require("../utils/universalUtils.js");
 
-describe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder", () => {
-  it("Two singleton arrays in same order, strings. Equal.", () => {
+describe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual", () => {
+  it("A. Two singleton arrays in same order, strings. Equal.", () => {
     const input1 = [["my", "name", "is", "norbs"]];
     const input2 = [["my", "name", "is", "norbs"]];
-    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
       input1,
       input2
     );
     expect(actual).to.be.true;
   });
-  it("Two singleton arrays in same order, strings. Unequal.", () => {
+  it("B. Two singleton arrays in same order, strings. Unequal.", () => {
     const input1 = [["my", "name", "is", "norbs"]];
     const input2 = [["my", "name", "aint", "norbs"]];
-    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
       input1,
       input2
     );
     expect(actual).to.be.false;
   });
-  it("Two singleton arrays in different order, strings. Equal.", () => {
+  it("C. Two singleton arrays in different order, strings. Equal.", () => {
     const input1 = [["my", "name", "is", "norbs"]];
     const input2 = [["is", "norbs", "my", "name"]];
-    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
       input1,
       input2
     );
     expect(actual).to.be.true;
   });
-  it("Two singleton arrays in different order, strings. Unequal.", () => {
+  it("D. Two singleton arrays in different order, strings, duplicates inside arrays. Equal.", () => {
+    const input1 = [["my", "name", "is", "norbs"]];
+    const input2 = [
+      ["is", "norbs", "my", "name"],
+      ["is", "norbs", "my", "name"],
+    ];
+    const actualA = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
+      input1,
+      input2
+    );
+    const actualB = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
+      input2,
+      input1
+    );
+    expect(actualA).to.be.true;
+    expect(actualB).to.be.true;
+  });
+  it("E. Two singleton arrays in different order, strings, duplicates inside subarrays. Unequal.", () => {
+    const input1 = [["norbs", "my", "name", "is", "norbs"]];
+    const input2 = [["is", "norbs", "my", "my", "my", "name"]];
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
+      input1,
+      input2
+    );
+    expect(actual).to.be.false;
+  });
+  it("F. Two singleton arrays in different order, strings. Unequal.", () => {
     const input1 = [["my", "name", "is", "norbs"]];
     const input2 = [["aint", "norbs", "my", "name"]];
-    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
       input1,
       input2
     );
     expect(actual).to.be.false;
   });
   //
-  it("Two singleton arrays in same order, strings and terminus objects. Equal.", () => {
+  it("G. Two singleton arrays in same order, strings and terminus objects. Equal.", () => {
     const input1 = [
       [
         "I",
@@ -79,13 +105,57 @@ describe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqu
         "human",
       ],
     ];
-    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
       input1,
       input2
     );
     expect(actual).to.be.true;
   });
-  it("Two singleton arrays in same order, strings and terminus objects. Unequal re string.", () => {
+  it("H. Two singleton arrays in same order, strings and terminus objects, duplicates inside arrays. Equal.", () => {
+    const input1 = [
+      [
+        "I",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["a"],
+          protective: ["an"],
+        },
+        "human",
+      ],
+      [
+        "I",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["a"],
+          protective: ["an"],
+        },
+        "human",
+      ],
+    ];
+    const input2 = [
+      [
+        "I",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["a"],
+          protective: ["an"],
+        },
+        "human",
+      ],
+    ];
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
+      input1,
+      input2
+    );
+    expect(actual).to.be.true;
+  });
+  it("I. Two singleton arrays in same order, strings and terminus objects. Unequal re string.", () => {
     const input1 = [
       [
         "I",
@@ -112,13 +182,13 @@ describe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqu
         "human",
       ],
     ];
-    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
       input1,
       input2
     );
     expect(actual).to.be.false;
   });
-  it("Two singleton arrays in same order, strings and terminus objects. Unequal re terminus object.", () => {
+  it("J. Two singleton arrays in same order, strings and terminus objects. Unequal re terminus object.", () => {
     const input1 = [
       [
         "I",
@@ -145,13 +215,13 @@ describe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqu
         "human",
       ],
     ];
-    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
       input1,
       input2
     );
     expect(actual).to.be.false;
   });
-  it("Two singleton arrays in different order, strings and terminus objects. Equal.", () => {
+  it("K. Two singleton arrays in different order, strings and terminus objects. Equal.", () => {
     const input1 = [
       [
         "I",
@@ -178,13 +248,13 @@ describe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqu
         },
       ],
     ];
-    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
       input1,
       input2
     );
     expect(actual).to.be.true;
   });
-  it("Two singleton arrays in different order, strings and terminus objects. Unequal re string.", () => {
+  it("L. Two singleton arrays in different order, strings and terminus objects. Unequal re string.", () => {
     const input1 = [
       [
         "I",
@@ -211,13 +281,13 @@ describe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqu
         },
       ],
     ];
-    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
       input1,
       input2
     );
     expect(actual).to.be.false;
   });
-  it("Two singleton arrays in different order, strings and terminus objects. Unequal re terminus object.", () => {
+  it("M. Two singleton arrays in different order, strings and terminus objects. Unequal re terminus object.", () => {
     const input1 = [
       [
         "I",
@@ -244,24 +314,29 @@ describe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqu
         },
       ],
     ];
-    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
       input1,
       input2
     );
     expect(actual).to.be.false;
   });
   //
-  it("Two singleton arrays in same order, strings. Unequal re length.", () => {
+  it("N. Two singleton arrays in same order, strings. Unequal re length.", () => {
     const input1 = [["my", "name", "is", "norbs"]];
     const input2 = [["my", "name", "is", "norbs", "truly"]];
-    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+    const actualA = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
       input1,
       input2
     );
-    expect(actual).to.be.false;
+    const actualB = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
+      input2,
+      input1
+    );
+    expect(actualA).to.be.false;
+    expect(actualB).to.be.false;
   });
   //
-  it("Two longer arrays in same order, strings. Equal.", () => {
+  it("O. Two longer arrays in same order, strings. Equal.", () => {
     const input1 = [
       ["my", "name", "is", "norbs"],
       ["my", "nickname", "is", "norbs"],
@@ -270,13 +345,31 @@ describe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqu
       ["my", "name", "is", "norbs"],
       ["my", "nickname", "is", "norbs"],
     ];
-    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
       input1,
       input2
     );
     expect(actual).to.be.true;
   });
-  it("Two longer arrays in same order, strings. Unequal.", () => {
+  it("P. Two longer arrays in same order, strings, duplicates inside arrays. Equal.", () => {
+    const input1 = [
+      ["my", "name", "is", "norbs"],
+      ["my", "nickname", "is", "norbs"],
+    ];
+    const input2 = [
+      ["my", "name", "is", "norbs"],
+      ["my", "name", "is", "norbs"],
+      ["my", "name", "is", "norbs"],
+      ["my", "name", "is", "norbs"],
+      ["my", "nickname", "is", "norbs"],
+    ];
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
+      input1,
+      input2
+    );
+    expect(actual).to.be.true;
+  });
+  it("Q. Two longer arrays in same order, strings. Unequal.", () => {
     const input1 = [
       ["my", "name", "is", "norbs"],
       ["my", "nickname", "is", "norbs"],
@@ -285,13 +378,13 @@ describe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqu
       ["my", "name", "is", "norbs"],
       ["my", "nickname", "aint", "norbs"],
     ];
-    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
       input1,
       input2
     );
     expect(actual).to.be.false;
   });
-  it("Two longer arrays in different order, strings. Equal.", () => {
+  it("R. Two longer arrays in different order, strings. Equal.", () => {
     const input1 = [
       ["my", "name", "is", "norbs"],
       ["my", "nickname", "is", "norbs"],
@@ -300,13 +393,13 @@ describe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqu
       ["is", "norbs", "my", "name"],
       ["is", "my", "norbs", "nickname"],
     ];
-    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
       input1,
       input2
     );
     expect(actual).to.be.true;
   });
-  it("Two longer arrays in different array order, strings. Equal.", () => {
+  it("S. Two longer arrays in different array order, strings. Equal.", () => {
     const input1 = [
       ["my", "name", "is", "norbs"],
       ["my", "nickname", "is", "norbs"],
@@ -315,13 +408,13 @@ describe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqu
       ["is", "my", "norbs", "nickname"],
       ["is", "norbs", "my", "name"],
     ];
-    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
       input1,
       input2
     );
     expect(actual).to.be.true;
   });
-  it("Two longer arrays in different order, strings. Unequal.", () => {
+  it("T. Two longer arrays in different order, strings. Unequal.", () => {
     const input1 = [
       ["my", "name", "is", "norbs"],
       ["my", "nickname", "is", "norbs"],
@@ -330,14 +423,14 @@ describe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqu
       ["aint", "norbs", "my", "name"],
       ["aint", "norbs", "nickname", "my"],
     ];
-    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
       input1,
       input2
     );
     expect(actual).to.be.false;
   });
   //
-  it("Two longer arrays in same order, strings and terminus objects. Equal.", () => {
+  it("U. Two longer arrays in same order, strings and terminus objects. Equal.", () => {
     const input1 = [
       [
         "I",
@@ -386,13 +479,13 @@ describe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqu
         "human",
       ],
     ];
-    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
       input1,
       input2
     );
     expect(actual).to.be.true;
   });
-  it("Two longer arrays in same order, strings and terminus objects. Unequal re string.", () => {
+  it("V. Two longer arrays in same order, strings and terminus objects. Unequal re string.", () => {
     const input1 = [
       [
         "I",
@@ -441,13 +534,13 @@ describe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqu
         "human",
       ],
     ];
-    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
       input1,
       input2
     );
     expect(actual).to.be.false;
   });
-  it("Two longer arrays in same order, strings and terminus objects. Unequal re terminus object.", () => {
+  it("W. Two longer arrays in same order, strings and terminus objects. Unequal re terminus object.", () => {
     const input1 = [
       [
         "I",
@@ -496,13 +589,13 @@ describe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqu
         "human",
       ],
     ];
-    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
       input1,
       input2
     );
     expect(actual).to.be.false;
   });
-  it("Two longer arrays in different order, strings and terminus objects. Equal.", () => {
+  it("X. Two longer arrays in different order, strings and terminus objects. Equal.", () => {
     const input1 = [
       [
         "I",
@@ -551,13 +644,13 @@ describe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqu
         },
       ],
     ];
-    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
       input1,
       input2
     );
     expect(actual).to.be.true;
   });
-  it("Two longer arrays in different array order, strings and terminus objects. Equal.", () => {
+  it("Y. Two longer arrays in different array order, strings and terminus objects. Equal.", () => {
     const input1 = [
       [
         "I",
@@ -606,13 +699,13 @@ describe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqu
         },
       ],
     ];
-    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
       input1,
       input2
     );
     expect(actual).to.be.true;
   });
-  it("Two longer arrays in another different array order, strings and terminus objects. Equal.", () => {
+  it("Z. Two longer arrays in another different array order, strings and terminus objects. Equal.", () => {
     const input1 = [
       [
         "I",
@@ -664,13 +757,102 @@ describe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqu
         },
       ],
     ];
-    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
       input1,
       input2
     );
     expect(actual).to.be.true;
   });
-  it("Two longer arrays in different order, strings and terminus objects. Unequal re string.", () => {
+  it("Æ. Two longer arrays in another different array order, strings and terminus objects, duplicates inside arrays. Equal.", () => {
+    const input1 = [
+      [
+        "I",
+        "aint",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["a"],
+          protective: ["an"],
+        },
+        "human",
+      ],
+      [
+        "I",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["my"],
+          protective: ["mine"],
+        },
+        "human",
+      ],
+      [
+        "I",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["my"],
+          protective: ["mine"],
+        },
+        "human",
+      ],
+      [
+        "human",
+        "am",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["my"],
+          protective: ["mine"],
+        },
+        "I",
+      ],
+    ];
+
+    const input2 = [
+      [
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["my"],
+          protective: ["mine"],
+        },
+        "am",
+        "I",
+        "human",
+      ],
+      [
+        "human",
+        "I",
+        "aint",
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["a"],
+          protective: ["an"],
+        },
+      ],
+      [
+        {
+          isTerminus: true,
+          processOnlyAtEnd: true,
+          nonprotective: ["a"],
+          protective: ["an"],
+        },
+        "human",
+        "I",
+        "aint",
+      ],
+    ];
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
+      input1,
+      input2
+    );
+    expect(actual).to.be.true;
+  });
+  it("Ð. Two longer arrays in different order, strings and terminus objects. Unequal re string.", () => {
     const input1 = [
       [
         "I",
@@ -719,13 +901,13 @@ describe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqu
         "human",
       ],
     ];
-    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
       input1,
       input2
     );
     expect(actual).to.be.false;
   });
-  it("Two longer arrays in different order, strings and terminus objects. Unequal re terminus object.", () => {
+  it("Ŋ. Two longer arrays in different order, strings and terminus objects. Unequal re terminus object.", () => {
     const input1 = [
       [
         "I",
@@ -774,14 +956,14 @@ describe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqu
         "human",
       ],
     ];
-    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
       input1,
       input2
     );
     expect(actual).to.be.false;
   });
   //
-  it("Two longer arrays in same order, strings. Unequal re length.", () => {
+  it("Ħ. Two longer arrays in same order, strings. Unequal re length.", () => {
     const input1 = [
       ["my", "name", "is", "norbs"],
       ["my", "nickname", "is", "norbs"],
@@ -790,11 +972,56 @@ describe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqu
       ["my", "name", "is", "norbs", "truly"],
       ["my", "nickname", "is", "norbs"],
     ];
-    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+    const actual = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
       input1,
       input2
     );
     expect(actual).to.be.false;
+  });
+  it("Ł. Two longer arrays in same order, strings. Unequal re array length.", () => {
+    const input1 = [
+      ["my", "name", "is", "norbs"],
+      ["my", "nickname", "is", "norbs"],
+    ];
+    const input2 = [
+      ["my", "name", "is", "norbs"],
+      ["my", "nickname", "is", "norbs"],
+      ["I", "have", "no", "match", "in", "input1"],
+    ];
+    const actualA = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
+      input1,
+      input2
+    );
+    const actualB = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
+      input2,
+      input1
+    );
+    expect(actualA).to.be.false;
+    expect(actualB).to.be.false;
+  });
+  it("µ. Two longer arrays in same order, strings, duplicates inside array. Unequal re array length.", () => {
+    const input1 = [
+      ["my", "name", "is", "norbs"],
+      ["my", "nickname", "is", "norbs"],
+    ];
+    const input2 = [
+      ["my", "name", "is", "norbs"],
+      ["norbs", "my", "nickname", "is"],
+      ["my", "name", "norbs", "is"],
+      ["my", "nickname", "is", "norbs"],
+      ["I", "have", "no", "match", "in", "input1"],
+      ["I", "no", "have", "match", "in", "input1"],
+    ];
+    const actualA = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
+      input1,
+      input2
+    );
+    const actualB = areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
+      input2,
+      input1
+    );
+    expect(actualA).to.be.false;
+    expect(actualB).to.be.false;
   });
 });
 

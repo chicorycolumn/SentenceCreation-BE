@@ -701,8 +701,14 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         );
       }
 
+      console.log("originalAnswerSelectedWords", originalAnswerSelectedWords);
+      console.log(
+        "counterfactualAnswerSelectedWordsSets",
+        counterfactualAnswerSelectedWordsSets
+      );
+
       if (
-        gpUtils.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqualIgnoringOrder(
+        gpUtils.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
           originalAnswerSelectedWords,
           counterfactualAnswerSelectedWordsSets
         )
