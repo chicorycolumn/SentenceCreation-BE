@@ -302,7 +302,6 @@ exports.addSpecifiersToMGNs = (
     refObj.metaFeatures[questionLanguage]["gender"]
   );
 
-  //pdsxpurple Only run this for qUnits where PDS is false.
   let questionUnitsToSpecify = questionOutputArr.filter(
     (qUnit) => !qUnit.structureChunk.dontSpecifyOnThisChunk
   );
@@ -509,7 +508,8 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   answerSentenceData,
   questionOutputArr,
   rawQuestionSentenceFormula,
-  reqBody
+  reqBody,
+  answerSelectedWordsSetsHaveChanged
 ) => {
   let shouldConsoleLog = false;
 
@@ -607,9 +607,13 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             }
           );
 
+          let counterfactualFeature = {};
+          counterfactualFeature[annoKey] = counterfactualValueForThisFeature;
+
           let newReqBody = {
             arrayOfCounterfactualResultsForThisAnnotation,
             counterfactualQuestionSentenceFormula,
+            counterfactualFeature,
 
             sentenceFormulaId:
               counterfactualQuestionSentenceFormula.sentenceFormulaId,
@@ -639,15 +643,37 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           )
       );
       let counterfactualAnswerSelectedWordsSets = [];
+      let counterfactualAnswerOutputArrays = [];
       arrayOfCounterfactualResultsForThisAnnotation.forEach(
         (counterfactual) => {
           counterfactual.answerSentenceData.answerOutputArrays.forEach(
             (answerOutputArray) => {
+              counterfactualAnswerOutputArrays.push(answerOutputArray);
+
               counterfactualAnswerSelectedWordsSets.push(
                 answerOutputArray.map((outputUnit) => outputUnit.selectedWord)
               );
             }
           );
+        }
+      );
+      let counterfactualFeatures = arrayOfCounterfactualResultsForThisAnnotation.map(
+        (counterfactual) => {
+          {
+            if (
+              Object.keys(counterfactual.counterfactualFeature).length !== 1
+            ) {
+              clUtils.throw("iejr removeAnnotationsByCounterfax");
+            }
+
+            if (
+              Object.keys(counterfactual.counterfactualFeature)[0] !== annoKey
+            ) {
+              clUtils.throw("dckm removeAnnotationsByCounterfax");
+            }
+
+            return counterfactual.counterfactualFeature[annoKey];
+          }
         }
       );
       if (shouldConsoleLog) {
@@ -694,9 +720,51 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             `myxo removeAnnotationsByCounterfax END. I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual answer selected words came back DIFFERENT FROM original answer selected words.\nThis means I'll keep annotation "${annoKey}" = "${questionOutputUnit.structureChunk.annotations[annoKey]}".` +
             "[0m"
         );
+
+        if (questionOutputUnit.structureChunk.dontSpecifyOnThisChunk) {
+          let combinedAnswerSelectedWordsSets = [
+            ...originalAnswerSelectedWords,
+            ...counterfactualAnswerSelectedWordsSets,
+          ];
+
+          let combinedFeatures = [
+            ...questionOutputUnit.structureChunk[annoKey],
+            ...counterfactualFeatures,
+          ];
+
+          console.log({ annoValue });
+          console.log(
+            "combinedAnswerSelectedWordsSets",
+            combinedAnswerSelectedWordsSets
+          );
+          console.log("combinedFeatures", combinedFeatures);
+
+          answerSelectedWordsSetsHaveChanged.value = true;
+
+          answerSentenceData.answerOutputArrays = [
+            ...answerSentenceData.answerOutputArrays,
+            ...counterfactualAnswerOutputArrays,
+          ];
+
+          delete questionOutputUnit.structureChunk.annotations[annoKey];
+          questionOutputUnit.structureChunk[annoKey] = combinedFeatures;
+
+          if (
+            !questionOutputUnit.structureChunk.counterfactuallyImportantFeatures
+          ) {
+            questionOutputUnit.structureChunk.counterfactuallyImportantFeatures = [
+              annoKey,
+            ];
+          } else {
+            questionOutputUnit.structureChunk.counterfactuallyImportantFeatures.push(
+              annoKey
+            );
+          }
+        }
       }
     }
   );
+  // clUtils.throw(465);
 };
 
 exports.getFormattedAnnoObj = (
@@ -705,7 +773,8 @@ exports.getFormattedAnnoObj = (
   answerSentenceData,
   questionOutputArr,
   questionSentenceFormula,
-  reqBody
+  reqBody,
+  answerSelectedWordsSetsHaveChanged
 ) => {
   let { structureChunk } = questionOutputUnit;
   //Zeta: Change structureChunk all mentions to questionStructureChunk
@@ -725,7 +794,8 @@ exports.getFormattedAnnoObj = (
     answerSentenceData,
     questionOutputArr,
     questionSentenceFormula,
-    reqBody
+    reqBody,
+    answerSelectedWordsSetsHaveChanged
   );
 
   /**
@@ -781,7 +851,8 @@ exports.firstStageEvaluateAnnotations = (
   languagesObj,
   answerSentenceData,
   questionSentenceFormula,
-  reqBody
+  reqBody,
+  answerSelectedWordsSetsHaveChanged
 ) => {
   if (!answerSentenceData) {
     console.log(
@@ -810,7 +881,8 @@ exports.firstStageEvaluateAnnotations = (
       answerSentenceData,
       questionOutputArr,
       questionSentenceFormula,
-      reqBody
+      reqBody,
+      answerSelectedWordsSetsHaveChanged
     );
 
     if (!Object.values(formattedAnnoObj).length) {

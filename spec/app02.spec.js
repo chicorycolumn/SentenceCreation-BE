@@ -1262,7 +1262,7 @@ describe("/api", () => {
     });
   });
 
-  describe.only("/palette - Stage 17-iv: Possessive pronouns and MGNs. MGN to agree with pronoun.", () => {
+  describe("/palette - Stage 17-iv: Possessive pronouns and MGNs. MGN to agree with pronoun.", () => {
     it("#pal17-10a GET 200 YES: Engpol. I was here. Testing annotations.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -1294,7 +1294,6 @@ describe("/api", () => {
           );
         });
     });
-    //Changed test as PDSred has been nixed.
     it("#pal17-10b GET 200 YES: Engpol. I was here. Testing annotations. pleaseDontSpecify", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -1311,12 +1310,8 @@ describe("/api", () => {
         .then((res) => {
           let ref = [
             {
-              ENG: "I (male) was here.",
-              POL: ["Byłem tutaj."],
-            },
-            {
-              ENG: "I (female) was here.",
-              POL: ["Byłam tutaj."],
+              ENG: "I was here.",
+              POL: ["Byłem tutaj.", "Byłam tutaj."],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(

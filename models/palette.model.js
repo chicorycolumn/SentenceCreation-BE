@@ -22,6 +22,7 @@ exports.fetchPalette = (req) => {
     devSaysOmitStChValidation,
     arrayOfCounterfactualResultsForThisAnnotation,
     counterfactualQuestionSentenceFormula,
+    counterfactualFeature,
   } = req.body;
 
   let { sentenceFormula, words } = scUtils.getMaterials(
@@ -56,9 +57,11 @@ exports.fetchPalette = (req) => {
         "[0m"
     );
 
-    //PDSXyellow
-    // Set PDS: false on this specific qChunk if 'person' noun is headNoun of any pronouns,
-    // because 'The doctor gave me his book.' must specify the MGN doctor.
+    //PDSX1-yellow-set
+    //
+    //If PDS from req, then add PDS:true to each Q stCh.
+    //Unless stCh is 'person' noun and headNoun of pronoun stCh. 'The doctor gave me his book.' must specify MGN doctor.
+    //
     questionSentenceFormula.sentenceStructure.forEach((qChunk) => {
       if (
         qChunk.andTags &&
@@ -427,8 +430,10 @@ exports.fetchPalette = (req) => {
     );
 
     ///////////////////////////////////////////////kp Specifiers
-    //PDSXpurple
-    //This below fxn only runs the logic for Qunits with PDS: false.
+    //PDSX3-purple-false
+    //
+    //Add specifiers to MGNs if their stCh has PDS:false.
+    //
     aaUtils.addSpecifiersToMGNs(
       questionSentenceData,
       answerSentenceData,
@@ -448,11 +453,14 @@ exports.fetchPalette = (req) => {
 
   if (arrayOfCounterfactualResultsForThisAnnotation) {
     arrayOfCounterfactualResultsForThisAnnotation.push({
+      counterfactualFeature,
       questionSentenceData,
       answerSentenceData,
     });
     return;
   }
+
+  let answerSelectedWordsSetsHaveChanged = { value: false };
 
   questionResponseObj = scUtils.giveFinalSentences(
     questionSentenceData,
@@ -461,8 +469,47 @@ exports.fetchPalette = (req) => {
     answerLanguage,
     answerSentenceData,
     questionSentenceFormula,
-    req.body
+    req.body,
+    answerSelectedWordsSetsHaveChanged
   );
+
+  if (answerSelectedWordsSetsHaveChanged.value) {
+    if (!answerResponseObj) {
+      answerResponseObj = scUtils.giveFinalSentences(
+        answerSentenceData,
+        true,
+        answerLanguage,
+        null
+      );
+    } else {
+      clUtils.consoleLogObjectAtOneLevel(
+        answerSentenceData,
+        "answerSentenceData",
+        "fetchPalette"
+      );
+
+      // clUtils.throw(646);
+
+      let subsequentAnswerResponseObj = scUtils.giveFinalSentences(
+        answerSentenceData,
+        true,
+        answerLanguage,
+        null
+      );
+
+      clUtils.consoleLogObjectAtOneLevel(
+        subsequentAnswerResponseObj,
+        "subsequentAnswerResponseObj",
+        "fetchPalette"
+      );
+
+      subsequentAnswerResponseObj.finalSentenceArr.forEach((finalSentence) => {
+        answerResponseObj.finalSentenceArr.push(finalSentence);
+      });
+    }
+
+    scUtils.removeDuplicatesFromResponseObject(answerResponseObj);
+  }
 
   return frUtils.finishAndSend(questionResponseObj, answerResponseObj);
 };

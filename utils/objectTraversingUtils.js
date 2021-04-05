@@ -595,11 +595,11 @@ exports.findMatchingLemmaObjectThenWord = (
       let selectedLemmaObject = uUtils.selectRandom(matchesCopy);
 
       if (!structureChunk.dontSpecifyOnThisChunk) {
-        //PDSXblue
-
-        //Decant only the MGNs who have structureChunk PDS: false.
-        //The structureChunk is definitely QstCh because we're inside !multipleMode clause.
-        allLangUtils.decantMGNsBeforeOutputArray(
+        //PDSX2-blue-false
+        //
+        //Decant the MGNs that have PDS:false. These are Q stChs as we're in !multipleMode clause.
+        //
+        allLangUtils.decantMGNsBeforeFetchingOutputArray(
           structureChunk,
           selectedLemmaObject,
           currentLanguage
@@ -612,35 +612,37 @@ exports.findMatchingLemmaObjectThenWord = (
         );
       }
 
-      console.log(
-        "fxdn ot:findMatchingLemmaObjectThenWord If-PW selectedLemmaObject for " +
-          structureChunk.chunkId
-      );
-      console.log(
-        "fxdn ot:findMatchingLemmaObjectThenWord",
-        selectedLemmaObject.inflections
-      );
-
-      console.log("- * - * - * - * - * - * - * - * - * - * - * - * -");
-      if (outputArray) {
+      if ("console") {
         console.log(
-          "[1;33m " +
-            `nvnk findMatching outputArray: [${outputArray.map(
-              (x) => x.selectedWord
-            )}]` +
-            "[0m"
+          "fxdn ot:findMatchingLemmaObjectThenWord If-PW selectedLemmaObject for " +
+            structureChunk.chunkId
         );
-      } else {
-        console.log("[1;33m " + `nvnk findMatching outputArray null` + "[0m");
+        console.log(
+          "fxdn ot:findMatchingLemmaObjectThenWord",
+          selectedLemmaObject.inflections
+        );
+
+        console.log("- * - * - * - * - * - * - * - * - * - * - * - * -");
+        if (outputArray) {
+          console.log(
+            "[1;33m " +
+              `nvnk findMatching outputArray: [${outputArray.map(
+                (x) => x.selectedWord
+              )}]` +
+              "[0m"
+          );
+        } else {
+          console.log("[1;33m " + `nvnk findMatching outputArray null` + "[0m");
+        }
+        console.log({
+          selectedLemmaObject,
+          structureChunk,
+          currentLanguage,
+          multipleMode,
+          outputArray,
+        });
+        console.log("- * - * - * - * - * - * -");
       }
-      console.log({
-        selectedLemmaObject,
-        structureChunk,
-        currentLanguage,
-        multipleMode,
-        outputArray,
-      });
-      console.log("- * - * - * - * - * - * -");
 
       let subArrayOfOutputUnits = lfUtils.filterWithinSelectedLemmaObject(
         selectedLemmaObject,
@@ -661,45 +663,43 @@ exports.findMatchingLemmaObjectThenWord = (
         subArrayOfOutputUnits
       );
 
-      //PDSXred
-      // If the outputunits differ only in gender, and p'leaseDontSpecifyPronounGender is true,
-      // then merge the outputunits, so ENG Q "I wrote" can be POL A ["Napisałem.", "Napisałam."]
+      // //P D S X 3 -red
+      // // If the outputunits differ only in gender, and p'leaseDontSpecifyPronounGender is true,
+      // // then merge the outputunits, so ENG Q "I wrote" can be POL A ["Napisałem.", "Napisałam."]
 
-      //The structureChunk is definitely QstCh because we're inside !multipleMode clause.
-      if (
-        false &&
-        structureChunk.dontSpecifyOnThisChunk &&
-        otUtils.doDrillPathsDifferOnlyByGender(subArrayOfOutputUnits)
-      ) {
-        console.log(
-          "[1;30m " +
-            `-----------------------------------------------------------------------------------------------------------------------------------PDSred` +
-            "[0m"
-        );
-        console.log("kpos PDSred subArrayOfOutputUnits before adjustment.");
-        subArrayOfOutputUnits.forEach((x) => {
-          console.log(x);
-        });
+      // //The structureChunk is definitely QstCh because we're inside !multipleMode clause.
+      // if (
+      //   false &&
+      //   structureChunk.dontSpecifyOnThisChunk &&
+      //   otUtils.doDrillPathsDifferOnlyByGender(subArrayOfOutputUnits)
+      // ) {
+      //   console.log(
+      //     "[1;30m " +
+      //       `-----------------------------------------------------------------------------------------------------------------------------------PDSred` +
+      //       "[0m"
+      //   );
+      //   console.log("kpos PDSred subArrayOfOutputUnits before adjustment.");
+      //   subArrayOfOutputUnits.forEach((x) => {
+      //     console.log(x);
+      //   });
 
-        let mergedGenderOutputUnit = frUtils.createMergedGenderOutputUnit(
-          subArrayOfOutputUnits,
-          currentLanguage
-        );
+      //   let mergedGenderOutputUnit = frUtils.createMergedGenderOutputUnit(
+      //     subArrayOfOutputUnits,
+      //     currentLanguage
+      //   );
 
-        subArrayOfOutputUnits = [mergedGenderOutputUnit];
+      //   subArrayOfOutputUnits = [mergedGenderOutputUnit];
 
-        console.log("cxmo PDSred subArrayOfOutputUnits after adjustment.");
-        subArrayOfOutputUnits.forEach((x) => {
-          console.log(x);
-        });
-      }
+      //   console.log("cxmo PDSred subArrayOfOutputUnits after adjustment.");
+      //   subArrayOfOutputUnits.forEach((x) => {
+      //     console.log(x);
+      //   });
+      // }
 
       console.log(
         "sfmo ot:findMatchingLemmaObjectThenWord subArrayOfOutputUnits"
       );
-      subArrayOfOutputUnits.forEach((x) => {
-        console.log(x);
-      });
+      clUtils.consoleLogObjectAtOneLevel(subArrayOfOutputUnits);
 
       let unit = uUtils.selectRandom(subArrayOfOutputUnits); //epsilon - What is this selran doing?
 

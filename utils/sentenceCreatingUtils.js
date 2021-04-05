@@ -590,7 +590,8 @@ exports.giveFinalSentences = (
   answerLanguage,
   answerSentenceData,
   questionSentenceFormula,
-  reqBody
+  reqBody,
+  answerSelectedWordsSetsHaveChanged
 ) => {
   if (answerLanguage) {
     aaUtils.firstStageEvaluateAnnotations(
@@ -598,7 +599,8 @@ exports.giveFinalSentences = (
       { answerLanguage, questionLanguage: currentLanguage },
       answerSentenceData,
       questionSentenceFormula,
-      reqBody
+      reqBody,
+      answerSelectedWordsSetsHaveChanged
     );
   }
 
@@ -608,6 +610,8 @@ exports.giveFinalSentences = (
     sentenceFormula,
     errorInSentenceCreation,
   } = sentenceData;
+
+  console.log("shen answerOutputArrays", answerOutputArrays);
 
   if ("check") {
     if (errorInSentenceCreation.errorMessage) {

@@ -142,6 +142,8 @@ exports.structureChunkFeatures = {
     //    These stCh features require validation that given values are okay.
     //
     //
+    counterfactuallyImportantFeatures: { expectedTypeOnStCh: "array" },
+    dontSpecifyOnThisChunk: { expectedTypeOnStCh: "boolean" },
     specificLemmas: { expectedTypeOnStCh: "array" },
     specificIds: { expectedTypeOnStCh: "array" },
     andTags: { expectedTypeOnStCh: "array" },
@@ -257,6 +259,8 @@ exports.structureChunkFeatures = {
     //    These stCh features require validation that given values are okay.
     //
     //
+    counterfactuallyImportantFeatures: { expectedTypeOnStCh: "array" },
+    dontSpecifyOnThisChunk: { expectedTypeOnStCh: "boolean" },
     specificLemmas: { expectedTypeOnStCh: "array" },
     specificIds: { expectedTypeOnStCh: "array" },
     andTags: { expectedTypeOnStCh: "array" },
