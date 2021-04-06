@@ -2819,8 +2819,7 @@ describe("/api", function () {
           ]).to.include(res.body.questionSentenceArr[0]);
         });
     });
-    // it.only("#pal14-03c GET 200 YES: Engpol. My father gave me his book.", () => {
-    it("#pal14-03c GET 200 YES: Engpol. My father gave me his book.", () => {
+    it.only("#pal14-03c GET 200 YES: Engpol. My father gave me his book.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -5834,7 +5833,7 @@ describe("/api", function () {
           );
         });
     });
-    it.only("#pal09-02a (Type 2 Synhomographs. Ad-PW: clarify Inflections (tenseDescription)) 'read': Engpol. Expect clarifiers.", () => {
+    it("#pal09-02a (Type 2 Synhomographs. Ad-PW: clarify Inflections (tenseDescription)) 'read': Engpol. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 

@@ -131,72 +131,16 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   questionOutputUnitsThatHaveBeenCounterfactualed,
   additionalRunsRecord
 ) => {
-  function removeAnnotationsIfHeadChunkHasBeenCounterfaxed(
-    questionOutputUnitsThatHaveBeenCounterfactualed,
-    questionOutputUnit
-  ) {
-    return (
-      innerRemoveAnnotationsIfHeadChunkHasBeenCounterfaxed(
-        questionOutputUnitsThatHaveBeenCounterfactualed,
-        questionOutputUnit,
-        "agreeWith"
-      ) ||
-      innerRemoveAnnotationsIfHeadChunkHasBeenCounterfaxed(
-        questionOutputUnitsThatHaveBeenCounterfactualed,
-        questionOutputUnit,
-        "postHocAgreeWithPrimary"
-      )
-    );
-
-    function innerRemoveAnnotationsIfHeadChunkHasBeenCounterfaxed(
-      questionOutputUnitsThatHaveBeenCounterfactualed,
-      questionOutputUnit,
-      agreeKey
-    ) {
-      if (
-        questionOutputUnitsThatHaveBeenCounterfactualed[
-          questionOutputUnit.structureChunk[agreeKey]
-        ]
-      ) {
-        console.log(questionOutputUnit.structureChunk.annotations);
-        console.log(
-          "[1;33m " +
-            `mioc removeAnnotationsByCounterfax. Aha! We are examining "${
-              questionOutputUnit.structureChunk.chunkId
-            }" which has the annotations shown above. But this chunk agrees with "${
-              questionOutputUnit.structureChunk[agreeKey]
-            }" which has already been processed by counterfax, re these annotations: [${
-              questionOutputUnitsThatHaveBeenCounterfactualed[
-                questionOutputUnit.structureChunk[agreeKey]
-              ]
-            }].` +
-            "[0m"
-        );
-
-        questionOutputUnitsThatHaveBeenCounterfactualed[
-          questionOutputUnit.structureChunk[agreeKey]
-        ].forEach((annoKey) => {
-          console.log(
-            "[1;33m " +
-              `mioc So I'm deleting "${annoKey}" from "${questionOutputUnit.structureChunk.chunkId}"'s annotations.` +
-              "[0m"
-          );
-
-          delete questionOutputUnit.structureChunk.annotations[annoKey];
-        });
-        return true;
-      }
-    }
-  }
+  //Abortcuts for this fxn: Search ACX.
 
   if (
-    removeAnnotationsIfHeadChunkHasBeenCounterfaxed(
+    aaUtils.removeAnnotationsIfHeadChunkHasBeenCounterfaxed(
       questionOutputUnitsThatHaveBeenCounterfactualed,
       questionOutputUnit
     )
   ) {
-    //If this QstCh agrees with a stCh that we've already run through counterfaxing, then return here.
-    //Also, remove that specific annotation from this QstCh.
+    //ACX1: If this QstCh agrees with a stCh that we've already run through counterfaxing,
+    //then remove that specific annotation from this QstCh, and return.
     return;
   }
 
@@ -233,8 +177,9 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
   Object.keys(questionOutputUnit.structureChunk.annotations).forEach(
     (annoKey) => {
-      //Don't bother running counterfactuals for wordtype annotations, as they'll always be needed.
-      if (annoKey === "wordtype") {
+      //ACX2A: Don't bother running counterfactuals for wordtype/emoji/text annotations, as they'll always be needed.
+      //ACX2B: Don't bother running counterfactuals for tenseDes annotations, as they'll take so long, because there are so many alternate values, and we can reasonably presume that the tenseDesc anno will be necessary.
+      if (["wordtype", "emoji", "text", "tenseDescription"].includes(annoKey)) {
         return;
       }
 
@@ -257,7 +202,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         )
       );
 
-      //Save time by removing gender values incompatible with number value. //Omega too specific for these langs.
+      //ACX3A: Save time by removing gender values incompatible with number value. //Omega too specific for these langs.
       if (
         questionOutputUnit.structureChunk.number &&
         questionOutputUnit.structureChunk.number.length
@@ -274,7 +219,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         }
       }
 
-      //Save time by removing gender values incompatible with person value. //Omega too specific for these langs.
+      //ACX3B: Save time by removing gender values incompatible with person value. //Omega too specific for these langs.
       if (
         questionOutputUnit.structureChunk.person &&
         questionOutputUnit.structureChunk.person.length
@@ -292,10 +237,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       console.log(
         `myxe removeAnnotationsByCounterfax FOREACH START. Examining ${questionOutputUnit.structureChunk.chunkId}'s annotation ${annoKey} = ${annoValue} so the counterfactual values are [${counterfactualValuesForThisFeature}].`
       );
-
-      // if (questionOutputUnit.structureChunk.chunkId === "nou-1-doctor") {
-      //   clUtils.throw(221);
-      // }
 
       counterfactualValuesForThisFeature.forEach(
         (counterfactualValueForThisFeature) => {
@@ -509,6 +450,64 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   // clUtils.throw(465);
 };
 
+exports.removeAnnotationsIfHeadChunkHasBeenCounterfaxed = (
+  questionOutputUnitsThatHaveBeenCounterfactualed,
+  questionOutputUnit
+) => {
+  return (
+    innerRemoveAnnotationsIfHeadChunkHasBeenCounterfaxed(
+      questionOutputUnitsThatHaveBeenCounterfactualed,
+      questionOutputUnit,
+      "agreeWith"
+    ) ||
+    innerRemoveAnnotationsIfHeadChunkHasBeenCounterfaxed(
+      questionOutputUnitsThatHaveBeenCounterfactualed,
+      questionOutputUnit,
+      "postHocAgreeWithPrimary"
+    )
+  );
+
+  function innerRemoveAnnotationsIfHeadChunkHasBeenCounterfaxed(
+    questionOutputUnitsThatHaveBeenCounterfactualed,
+    questionOutputUnit,
+    agreeKey
+  ) {
+    if (
+      questionOutputUnitsThatHaveBeenCounterfactualed[
+        questionOutputUnit.structureChunk[agreeKey]
+      ]
+    ) {
+      console.log(questionOutputUnit.structureChunk.annotations);
+      console.log(
+        "[1;33m " +
+          `mioc removeAnnotationsByCounterfax. Aha! We are examining "${
+            questionOutputUnit.structureChunk.chunkId
+          }" which has the annotations shown above. But this chunk agrees with "${
+            questionOutputUnit.structureChunk[agreeKey]
+          }" which has already been processed by counterfax, re these annotations: [${
+            questionOutputUnitsThatHaveBeenCounterfactualed[
+              questionOutputUnit.structureChunk[agreeKey]
+            ]
+          }].` +
+          "[0m"
+      );
+
+      questionOutputUnitsThatHaveBeenCounterfactualed[
+        questionOutputUnit.structureChunk[agreeKey]
+      ].forEach((annoKey) => {
+        console.log(
+          "[1;33m " +
+            `mioc So I'm deleting "${annoKey}" from "${questionOutputUnit.structureChunk.chunkId}"'s annotations.` +
+            "[0m"
+        );
+
+        delete questionOutputUnit.structureChunk.annotations[annoKey];
+      });
+      return true;
+    }
+  }
+};
+
 exports.removeAnnotationsByAOCs = (
   questionOutputUnit,
   languagesObj,
@@ -639,150 +638,6 @@ exports.removeAnnotationsByAOCs = (
       }
     );
   }
-};
-
-exports.removeAnnotationsByRefConditions = (
-  questionOutputUnit,
-  languagesObj,
-  answerSentenceData,
-  questionOutputArr
-) => {
-  let questionStructureChunk = questionOutputUnit.structureChunk;
-
-  if (!questionStructureChunk.annotations || !answerSentenceData) {
-    return;
-  }
-
-  console.log(
-    `kmei removeAnnotationsByRefConditions START for "${questionOutputUnit.structureChunk.chunkId}" ${languagesObj.questionLanguage}`
-  );
-  console.log("questionStructureChunk", questionStructureChunk);
-
-  let correspondingAnswerChunks = [];
-  let { chunkId } = questionStructureChunk;
-  let { answerLanguage, questionLanguage } = languagesObj;
-
-  answerSentenceData.answerOutputArrays.forEach((outputArray) => {
-    outputArray.forEach((outputUnit) => {
-      if (
-        outputUnit.structureChunk &&
-        outputUnit.structureChunk.chunkId === chunkId
-      ) {
-        let answerChunk = outputUnit.structureChunk;
-        let dependentAnswerChunks = outputArray
-          .map((outputUnit) => outputUnit.structureChunk)
-          .filter(
-            (structureChunk) => structureChunk.agreeWith === answerChunk.chunkId
-          );
-
-        correspondingAnswerChunks.push({
-          answerChunk,
-          dependentAnswerChunks,
-        });
-      }
-    });
-  });
-
-  console.log(
-    "[1;35m " +
-      "lbbq removeAnnotationsByRefConditions>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" +
-      "[0m"
-  );
-
-  Object.keys(questionStructureChunk.annotations).forEach((annotationKey) => {
-    if (typeof questionStructureChunk.annotations[annotationKey] !== "string") {
-      console.log(
-        "[1;31m " +
-          `ylam removeAnnotationsByRefConditions: "${questionStructureChunk.chunkId}" stCh should have had STRING for annotationKey "${annotationKey}"` +
-          "[0m"
-      );
-      clUtils.throw(
-        `#ERR ylam removeAnnotationsByRefConditions. questionStructureChunk.annotations[annotationKey]: "${questionStructureChunk.annotations[annotationKey]}"`
-      );
-    }
-
-    console.log(
-      "[1;33m " +
-        "pzlz removeAnnotationsByRefConditions q00" +
-        " annotationKey: " +
-        annotationKey +
-        "[0m"
-    );
-
-    console.log("zkyb removeAnnotationsByRefConditions", {
-      answerLanguage,
-      "questionStructureChunk.wordtype": questionStructureChunk.wordtype,
-    });
-
-    let conditionsOnWhichToBlockAnnotations =
-      refObj.conditionsOnWhichToBlockAnnotations[answerLanguage][
-        questionStructureChunk.wordtype
-      ];
-
-    console.log(
-      "duqy removeAnnotationsByRefConditions: conditionsOnWhichToBlockAnnotations",
-      conditionsOnWhichToBlockAnnotations
-    );
-
-    if (
-      conditionsOnWhichToBlockAnnotations &&
-      conditionsOnWhichToBlockAnnotations[annotationKey]
-    ) {
-      let conditionsOnWhichToBlockAnnotationsArr =
-        conditionsOnWhichToBlockAnnotations[annotationKey];
-
-      if (
-        conditionsOnWhichToBlockAnnotationsArr.some((conditionsObj) => {
-          if (conditionsObj.allConditions) {
-            return true;
-          }
-
-          return Object.keys(conditionsObj).every((featureKey) => {
-            let featureValues = conditionsObj[featureKey];
-
-            //Each answerChunksObject has a headCh or depCh that fulfils this condition (at least one value from condition arr is present at condition key in headCh).
-            return featureValues.some((featureValue) => {
-              if (
-                correspondingAnswerChunks.every((answerChunksObject) => {
-                  let headAndDepChunks = [
-                    answerChunksObject.answerChunk,
-                    ...answerChunksObject.dependentAnswerChunks,
-                  ];
-
-                  return headAndDepChunks.some(
-                    (chunk) =>
-                      chunk[featureKey] &&
-                      chunk[featureKey].includes(featureValue)
-                  );
-                })
-              ) {
-                console.log(
-                  `nyjw removeAnnotationsByRefConditions: On stCh ""${questionStructureChunk.chunkId}"" I will potentially delete the ""${annotationKey}"" annotation because one of the answer stChs includes ""${featureKey}"" of ""${featureValue}"", which was a condition specified to block the annotation.`
-                );
-
-                return true;
-              }
-            });
-          });
-        })
-      ) {
-        console.log(
-          "[1;30m " +
-            `kzib removeAnnotationsByRefConditions "${questionStructureChunk.chunkId}" ABZ Late stage DELETION of annotation "${annotationKey}" which is "${questionStructureChunk.annotations[annotationKey]}"` +
-            "[0m"
-        );
-
-        delete questionStructureChunk.annotations[annotationKey];
-      } else {
-        console.log(
-          "[1;32m " +
-            `kzic removeAnnotationsByRefConditions "${questionStructureChunk.chunkId}" ABZ Late stage PASSING of annotation "${annotationKey}" which is "${questionStructureChunk.annotations[annotationKey]}"` +
-            "[0m"
-        );
-      }
-    }
-  });
-  console.log("[1;35m " + "/removeAnnotationsByRefConditions" + "[0m");
 };
 
 exports.addSpecifiersToMGNs = (
