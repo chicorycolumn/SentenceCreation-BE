@@ -43,6 +43,21 @@ exports.fetchPalette = (req) => {
 
   allLangUtils.initiallyAdjustSentenceFormula(questionSentenceFormula);
 
+  let originalQuestionSentenceFormula = counterfactualQuestionSentenceFormula
+    ? null
+    : uUtils.copyWithoutReference(questionSentenceFormula);
+
+  //Nownow. It seems to be that when an MGN ie doctor has no gender key,
+  //then it correctly gets both answer sentences.
+  //But if gender key is present, even if with ["m", "f"] then it won't, and just chooses one.
+  // if (arrayOfCounterfactualResultsForThisAnnotation) {
+  //   delete questionSentenceFormula.sentenceStructure.find(
+  //     (chunk) => chunk.chunkId === "nou-2-doctor"
+  //   ).gender;
+  //   console.log("cmoo", questionSentenceFormula.sentenceStructure);
+  //   // clUtils.throw(755);
+  // }
+
   //Omega: Ultimately this needn't be done here, but rather, after creating a new sentenceFormula.
   //       Once it passes that, we know it's fine, so don't need to validate it every time down here.
   //       Although could be worth running this validation here during multipleMode.
@@ -62,7 +77,12 @@ exports.fetchPalette = (req) => {
     //If PDS from req, then add PDS:true to each Q stCh.
     //Unless stCh is 'person' noun and headNoun of pronoun stCh. 'The doctor gave me his book.' must specify MGN doctor.
     //
+    //But if qChunk.gender holds all the poss gender values for this lang>wordtype
+    //(bearing in mind if person andTag)
+    //then do allow it to be qChunk.dontSpecifyOnThisChunk = true.
     questionSentenceFormula.sentenceStructure.forEach((qChunk) => {
+      qChunk.dontSpecifyOnThisChunk = true;
+
       if (
         qChunk.andTags &&
         qChunk.andTags.includes("person") &&
@@ -72,14 +92,43 @@ exports.fetchPalette = (req) => {
             potentialDepChunk.agreeWith === qChunk.chunkId
         )
       ) {
+        console.log(qChunk.chunkId + " shep1");
         qChunk.dontSpecifyOnThisChunk = false;
       } else if (qChunk.gender && qChunk.gender.length) {
-        qChunk.dontSpecifyOnThisChunk = false;
-        // } else if (qChunk.chunkId === "verb-1-am") {
-        //   qChunk.dontSpecifyOnThisChunk = false;
-      } else {
-        qChunk.dontSpecifyOnThisChunk = true;
+        //BOSTON
+        let allGenderValuesForPersonNouns = {
+          POL: ["m1", "f"],
+          ENG: ["m", "f"],
+        };
+        let allGenderValuesForPlainNouns = {
+          POL: ["m2", "m3", "f", "n"],
+          ENG: ["m", "f", "n"],
+        };
+
+        if (qChunk.andTags && qChunk.andTags.includes("person")) {
+          if (
+            !allGenderValuesForPersonNouns[questionLanguage].every((value) =>
+              qChunk.gender.includes(value)
+            )
+          ) {
+            console.log(qChunk.chunkId + " shep2a");
+            qChunk.dontSpecifyOnThisChunk = false;
+          }
+        } else {
+          if (
+            !allGenderValuesForPlainNouns[currentLanguage].every((value) =>
+              qChunk.gender.includes(value)
+            )
+          ) {
+            console.log(qChunk.chunkId + " shep2b");
+            qChunk.dontSpecifyOnThisChunk = false;
+          }
+        }
       }
+
+      console.log(
+        `PDSyellow qChunk.dontSpecifyOnThisChunk for "${qChunk.chunkId}=${qChunk.dontSpecifyOnThisChunk}"`
+      );
     });
   }
 
@@ -452,6 +501,18 @@ exports.fetchPalette = (req) => {
   }
 
   if (arrayOfCounterfactualResultsForThisAnnotation) {
+    // clUtils.consoleLogObjectAtTwoLevels(
+    //   answerSentenceData,
+    //   "answerSentenceData",
+    //   "fetchPalette"
+    // );
+    console.log(
+      answerSentenceData.answerOutputArrays.map(
+        (outputArr) => `[${outputArr.map((unit) => unit.selectedWord)}]`
+      )
+    );
+    clUtils.throw(633);
+
     arrayOfCounterfactualResultsForThisAnnotation.push({
       counterfactualFeature,
       questionSentenceData,
@@ -473,7 +534,8 @@ exports.fetchPalette = (req) => {
     questionSentenceFormula,
     req.body,
     answerSelectedWordsSetsHaveChanged,
-    additionalRunsRecord
+    additionalRunsRecord,
+    originalQuestionSentenceFormula
   );
 
   if (answerSelectedWordsSetsHaveChanged.value) {

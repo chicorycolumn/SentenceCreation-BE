@@ -1893,4 +1893,38 @@ exports.dummySentenceFormulasBank = [
     ],
     primaryOrders: [],
   },
+  {
+    sentenceFormulaSymbol: "dummy59a doctor",
+    sentenceFormulaId: "POL-dummy59a",
+    translations: { ENG: ["ENG-dummy59a"] },
+    sentenceStructure: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        andTags: ["person", "job"],
+        number: ["singular"],
+        // gender: ["f"],
+        // importantFeatures: ["gender"],
+        // educatorBlocksAnnotationsForTheseFeatures: ["gender"],
+      },
+    ],
+    primaryOrders: [],
+  },
+  {
+    sentenceFormulaSymbol: "dummy59b doctor",
+    sentenceFormulaId: "POL-dummy59b",
+    translations: { ENG: ["ENG-dummy59b"] },
+    sentenceStructure: [
+      {
+        chunkId: "nou-1",
+        wordtype: "noun",
+        andTags: ["person", "job"],
+        number: ["singular"],
+        gender: ["m1", "f"],
+        // importantFeatures: ["gender"],
+        // educatorBlocksAnnotationsForTheseFeatures: ["gender"],
+      },
+    ],
+    primaryOrders: [],
+  },
 ];

@@ -589,7 +589,8 @@ exports.giveFinalSentences = (
   questionSentenceFormula,
   reqBody,
   answerSelectedWordsSetsHaveChanged,
-  additionalRunsRecord
+  additionalRunsRecord,
+  originalQuestionSentenceFormula
 ) => {
   if (answerLanguage) {
     clUtils.consoleLogObjectAtTwoLevels(
@@ -605,7 +606,8 @@ exports.giveFinalSentences = (
       questionSentenceFormula,
       reqBody,
       answerSelectedWordsSetsHaveChanged,
-      additionalRunsRecord
+      additionalRunsRecord,
+      originalQuestionSentenceFormula
     );
   }
 

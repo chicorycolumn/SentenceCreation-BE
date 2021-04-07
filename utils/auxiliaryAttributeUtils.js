@@ -16,7 +16,8 @@ exports.firstStageEvaluateAnnotations = (
   questionSentenceFormula,
   reqBody,
   answerSelectedWordsSetsHaveChanged,
-  additionalRunsRecord
+  additionalRunsRecord,
+  originalQuestionSentenceFormula
 ) => {
   if (!answerSentenceData) {
     console.log(
@@ -50,7 +51,8 @@ exports.firstStageEvaluateAnnotations = (
       reqBody,
       answerSelectedWordsSetsHaveChanged,
       questionOutputUnitsThatHaveBeenCounterfactualed,
-      additionalRunsRecord
+      additionalRunsRecord,
+      originalQuestionSentenceFormula
     );
 
     if (!Object.values(formattedAnnoObj).length) {
@@ -78,7 +80,8 @@ exports.getFormattedAnnoObj = (
   reqBody,
   answerSelectedWordsSetsHaveChanged,
   questionOutputUnitsThatHaveBeenCounterfactualed,
-  additionalRunsRecord
+  additionalRunsRecord,
+  originalQuestionSentenceFormula
 ) => {
   let { structureChunk } = questionOutputUnit;
   //Zeta: Change structureChunk all mentions to questionStructureChunk
@@ -101,7 +104,8 @@ exports.getFormattedAnnoObj = (
     reqBody,
     answerSelectedWordsSetsHaveChanged,
     questionOutputUnitsThatHaveBeenCounterfactualed,
-    additionalRunsRecord
+    additionalRunsRecord,
+    originalQuestionSentenceFormula
   );
   console.log("bbbe");
 
@@ -129,8 +133,16 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   reqBody,
   answerSelectedWordsSetsHaveChanged,
   questionOutputUnitsThatHaveBeenCounterfactualed,
-  additionalRunsRecord
+  additionalRunsRecord,
+  originalQuestionSentenceFormula
 ) => {
+  // clUtils.consoleLogObjectAtOneLevel(
+  //   questionOutputArr,
+  //   "questionOutputArr",
+  //   "removeAnnotationsByCounterfactualAnswerSentences"
+  // );
+  // clUtils.throw(112);
+
   //Abortcuts for this fxn: Search ACX.
 
   if (
@@ -248,6 +260,9 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             rawQuestionSentenceFormula
           );
 
+          //Nownow. Do we want to send updated question formula for counterfax run,
+          //or originalQuestionSentenceFormula ?
+
           gpUtils.updateSentenceFormulaWithNewStructureChunksFromOutputUnits(
             counterfactualQuestionSentenceFormula,
             questionOutputArr
@@ -273,6 +288,13 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
           let counterfactualFeature = {};
           counterfactualFeature[annoKey] = counterfactualValueForThisFeature;
+
+          // clUtils.consoleLogObjectAtOneLevel(
+          //   counterfactualQuestionSentenceFormula,
+          //   "counterfactualQuestionSentenceFormula",
+          //   "RACX"
+          // );
+          // clUtils.throw(233);
 
           let newReqBody = {
             arrayOfCounterfactualResultsForThisAnnotation,
@@ -303,7 +325,29 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       );
 
       console.log(
-        `\nmyxi removeAnnotationsByCounterfax. Run where we changed "${questionOutputUnit.structureChunk.chunkId}" to counterfactual "${annoKey}" arrayOfCounterfactualResultsForThisAnnotation came back with ${arrayOfCounterfactualResultsForThisAnnotation.length} results.`
+        "[1;33m \n" +
+          `myxi removeAnnotationsByCounterfax. \nRun where we changed "${
+            questionOutputUnit.structureChunk.chunkId
+          }" to counterfactual "${annoKey}=${annoValue}" and arrayOfCounterfactualResultsForThisAnnotation came back with "${
+            arrayOfCounterfactualResultsForThisAnnotation.length
+          }" results. \nTo be specific, here's how many counterfactual.answerSentenceData.answerOutputArrays there are in each counterfactual result: [${arrayOfCounterfactualResultsForThisAnnotation.map(
+            (counterfactual) =>
+              counterfactual.answerSentenceData.answerOutputArrays.length
+          )}].` +
+          "[0m"
+      );
+      console.log(
+        "[1;33m" +
+          `${arrayOfCounterfactualResultsForThisAnnotation.map(
+            (counterfactual, CFindex) =>
+              counterfactual.answerSentenceData.answerOutputArrays.map(
+                (outputArr, AOAindex) =>
+                  `\nanswerOutputArray ${CFindex}.${AOAindex} = [${outputArr.map(
+                    (unit) => unit.selectedWord
+                  )}]`
+              )
+          )}` +
+          "[0m"
       );
 
       let counterfactualQuestionSelectedWordsSets = arrayOfCounterfactualResultsForThisAnnotation.map(
@@ -314,6 +358,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       );
       let counterfactualAnswerSelectedWordsSets = [];
       let counterfactualAnswerOutputArrays = [];
+
       arrayOfCounterfactualResultsForThisAnnotation.forEach(
         (counterfactual) => {
           counterfactual.answerSentenceData.answerOutputArrays.forEach(
@@ -327,6 +372,9 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           );
         }
       );
+
+      clUtils.throw(332);
+
       let counterfactualFeatures = arrayOfCounterfactualResultsForThisAnnotation.map(
         (counterfactual) => {
           {

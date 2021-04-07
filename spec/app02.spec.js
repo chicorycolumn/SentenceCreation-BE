@@ -28,6 +28,67 @@ describe("/api", function () {
   // after(() => {});
   // beforeEach(() => {});
 
+  describe.only("/palette - Stage X: Extra testing.", () => {
+    it("#palX-1a GET 200 YES: MGN re stCh.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy59a doctor",
+          useDummy: true,
+          pleaseDontSpecify: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "Doctor.",
+              POL: ["Lekarka.", "Lekarz."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#palX-1b GET 200 YES: MGN re stCh.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy59b doctor",
+          useDummy: true,
+          pleaseDontSpecify: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "Doctor.",
+              POL: ["Lekarka.", "Lekarz."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+  });
+
   describe("/palette - Stage 17-i: Possessive pronouns and MGNs. Pre-testing.", () => {
     it("#pal17-01a GET 200 YES: Engpol. MGN as sole word, annotation expected.", () => {
       const questionLanguage = "ENG";
@@ -396,8 +457,8 @@ describe("/api", function () {
           );
         });
     });
-    //Changed test as PDSred has been nixed.
     it("#pal17-04c GET 200 YES: Engpol. Sentence with 2 of same MGN. pleaseDontSpecify should be blocked for ProsMgn MGN but not for other MGN. This tests the change where pleaseDontSpecify is done per stCh and not as a broader variable.", () => {
+      // it.only("#pal17-04c GET 200 YES: Engpol. Sentence with 2 of same MGN. pleaseDontSpecify should be blocked for ProsMgn MGN but not for other MGN. This tests the change where pleaseDontSpecify is done per stCh and not as a broader variable.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -413,31 +474,21 @@ describe("/api", function () {
         .then((res) => {
           let ref = [
             {
-              ENG: "I (male) saw my doctor and his doctor.",
+              ENG: "I saw my doctor and his doctor.",
               POL: [
                 "Zobaczyłem mojego lekarza i jego lekarza.",
                 "Zobaczyłem mojego lekarza i jego lekarkę.",
-              ],
-            },
-            {
-              ENG: "I (male) saw my doctor and her doctor.",
-              POL: [
-                "Zobaczyłem moją lekarkę i jej lekarza.",
-                "Zobaczyłem moją lekarkę i jej lekarkę.",
-              ],
-            },
-            {
-              ENG: "I (female) saw my doctor and her doctor.",
-              POL: [
-                "Zobaczyłam moją lekarkę i jej lekarza.",
-                "Zobaczyłam moją lekarkę i jej lekarkę.",
-              ],
-            },
-            {
-              ENG: "I (female) saw my doctor and his doctor.",
-              POL: [
                 "Zobaczyłam mojego lekarza i jego lekarza.",
                 "Zobaczyłam mojego lekarza i jego lekarkę.",
+              ],
+            },
+            {
+              ENG: "I saw my doctor and her doctor.",
+              POL: [
+                "Zobaczyłem mojej lekarkę i jej lekarza.",
+                "Zobaczyłem mojej lekarkę i jej lekarkę.",
+                "Zobaczyłam mojej lekarkę i jej lekarza.",
+                "Zobaczyłam mojej lekarkę i jej lekarkę.",
               ],
             },
           ];
@@ -2819,7 +2870,7 @@ describe("/api", function () {
           ]).to.include(res.body.questionSentenceArr[0]);
         });
     });
-    it.only("#pal14-03c GET 200 YES: Engpol. My father gave me his book.", () => {
+    it("#pal14-03c GET 200 YES: Engpol. My father gave me his book.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
