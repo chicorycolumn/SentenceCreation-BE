@@ -47,17 +47,6 @@ exports.fetchPalette = (req) => {
     ? null
     : uUtils.copyWithoutReference(questionSentenceFormula);
 
-  //Nownow. It seems to be that when an MGN ie doctor has no gender key,
-  //then it correctly gets both answer sentences.
-  //But if gender key is present, even if with ["m", "f"] then it won't, and just chooses one.
-  // if (arrayOfCounterfactualResultsForThisAnnotation) {
-  //   delete questionSentenceFormula.sentenceStructure.find(
-  //     (chunk) => chunk.chunkId === "nou-2-doctor"
-  //   ).gender;
-  //   console.log("cmoo", questionSentenceFormula.sentenceStructure);
-  //   // clUtils.throw(755);
-  // }
-
   //Omega: Ultimately this needn't be done here, but rather, after creating a new sentenceFormula.
   //       Once it passes that, we know it's fine, so don't need to validate it every time down here.
   //       Although could be worth running this validation here during multipleMode.
@@ -116,7 +105,7 @@ exports.fetchPalette = (req) => {
           }
         } else {
           if (
-            !allGenderValuesForPlainNouns[currentLanguage].every((value) =>
+            !allGenderValuesForPlainNouns[questionLanguage].every((value) =>
               qChunk.gender.includes(value)
             )
           ) {
@@ -143,10 +132,6 @@ exports.fetchPalette = (req) => {
     words,
     multipleMode
   );
-
-  //nownow
-  //This questionSentenceData could come back as nullResponse kind of object.
-  //In which case... we should skip straight to the end.
 
   if ("check") {
     if (
@@ -501,18 +486,6 @@ exports.fetchPalette = (req) => {
   }
 
   if (arrayOfCounterfactualResultsForThisAnnotation) {
-    // clUtils.consoleLogObjectAtTwoLevels(
-    //   answerSentenceData,
-    //   "answerSentenceData",
-    //   "fetchPalette"
-    // );
-    console.log(
-      answerSentenceData.answerOutputArrays.map(
-        (outputArr) => `[${outputArr.map((unit) => unit.selectedWord)}]`
-      )
-    );
-    clUtils.throw(633);
-
     arrayOfCounterfactualResultsForThisAnnotation.push({
       counterfactualFeature,
       questionSentenceData,

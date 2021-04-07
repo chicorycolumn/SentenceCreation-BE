@@ -373,8 +373,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         }
       );
 
-      clUtils.throw(332);
-
       let counterfactualFeatures = arrayOfCounterfactualResultsForThisAnnotation.map(
         (counterfactual) => {
           {
@@ -617,22 +615,24 @@ exports.removeAnnotationsByAOCs = (
         );
     }
 
-    console.log(
-      "ttta questionOutputUnit.structureChunk.annotations",
-      questionOutputUnit.structureChunk.annotations
-    );
-    console.log(
-      "tttb primaryDepUnits",
-      primaryDepUnits.map((unit) => unit.drillPath)
-    );
-    console.log(
-      "tttb secondaryDepUnits",
-      secondaryDepUnits.map((unit) => unit.drillPath)
-    );
-    console.log(
-      "tttb tertiaryDepUnits",
-      tertiaryDepUnits.map((unit) => unit.drillPath)
-    );
+    if ("console") {
+      console.log(
+        "ttta questionOutputUnit.structureChunk.annotations",
+        questionOutputUnit.structureChunk.annotations
+      );
+      console.log(
+        "tttb primaryDepUnits",
+        primaryDepUnits.map((unit) => unit.drillPath)
+      );
+      console.log(
+        "tttb secondaryDepUnits",
+        secondaryDepUnits.map((unit) => unit.drillPath)
+      );
+      console.log(
+        "tttb tertiaryDepUnits",
+        tertiaryDepUnits.map((unit) => unit.drillPath)
+      );
+    }
 
     Object.keys(questionOutputUnit.structureChunk.annotations).forEach(
       (inflectionTyype) => {
@@ -659,7 +659,6 @@ exports.removeAnnotationsByAOCs = (
 
             console.log("meef", depUnit);
 
-            //nownow
             /**If any dep unit holds a value at inflectionTyype that is unique in its lObj,
              * then this pronoun obviates the need for that specifier, so delete it from annotations.
              * and set featureHasBeenDeleted to true.

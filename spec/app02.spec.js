@@ -28,7 +28,7 @@ describe("/api", function () {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe.only("/palette - Stage X: Extra testing.", () => {
+  describe("/palette - Stage X: Extra testing.", () => {
     it("#palX-1a GET 200 YES: MGN re stCh.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -458,7 +458,6 @@ describe("/api", function () {
         });
     });
     it("#pal17-04c GET 200 YES: Engpol. Sentence with 2 of same MGN. pleaseDontSpecify should be blocked for ProsMgn MGN but not for other MGN. This tests the change where pleaseDontSpecify is done per stCh and not as a broader variable.", () => {
-      // it.only("#pal17-04c GET 200 YES: Engpol. Sentence with 2 of same MGN. pleaseDontSpecify should be blocked for ProsMgn MGN but not for other MGN. This tests the change where pleaseDontSpecify is done per stCh and not as a broader variable.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -485,10 +484,10 @@ describe("/api", function () {
             {
               ENG: "I saw my doctor and her doctor.",
               POL: [
-                "Zobaczyłem mojej lekarkę i jej lekarza.",
-                "Zobaczyłem mojej lekarkę i jej lekarkę.",
-                "Zobaczyłam mojej lekarkę i jej lekarza.",
-                "Zobaczyłam mojej lekarkę i jej lekarkę.",
+                "Zobaczyłem moją lekarkę i jej lekarza.",
+                "Zobaczyłem moją lekarkę i jej lekarkę.",
+                "Zobaczyłam moją lekarkę i jej lekarza.",
+                "Zobaczyłam moją lekarkę i jej lekarkę.",
               ],
             },
           ];
