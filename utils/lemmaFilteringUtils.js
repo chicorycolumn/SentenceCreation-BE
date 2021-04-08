@@ -511,18 +511,23 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
     drillPath,
   } = outputUnit;
 
-  // console.log(
-  //   "[1;35m " + `rakt updateStChByAndTagsAndSelectors--------------------` + "[0m"
-  // );
-  // console.log(
-  //   "rakt updateStChByAndTagsAndSelectors structureChunk starts as",
-  //   structureChunk
-  // );
+  console.log(
+    "[1;35m " + `rakt updateStChByAndTagsAndSelectors--------------------` + "[0m"
+  );
+  console.log(
+    "rakt updateStChByAndTagsAndSelectors structureChunk starts as",
+    structureChunk
+  );
   // console.log("rakt updateStChByAndTagsAndSelectors drillPath", drillPath);
 
   let doneSelectors = [];
 
-  let lemmaObjectIsMGN = gpUtils.lObjisMGN(selectedLemmaObject);
+  let lemmaObjectIsMGN = gpUtils.lObjIsMGN(selectedLemmaObject);
+
+  let stChFeatures = uUtils.combineTwoKeyValueObjectsCarefully(
+    refObj.structureChunkFeatures[currentLanguage],
+    refObj.structureChunkFeatures["ALL"]
+  );
 
   //STEP ZERO: Decisive Decant
   //Remove gender values on stCh if drillPath doesn't include gender (ie is infinitive or a participle, say).
@@ -530,7 +535,10 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
   if (
     !lemmaObjectIsMGN &&
     drillPath &&
-    !drillPath.map((arr) => arr[0]).includes("gender")
+    !drillPath.map((arr) => arr[0]).includes("gender") &&
+    stChFeatures["gender"].compatibleWordtypes.includes(
+      selectedLemmaObject.wordtype
+    )
   ) {
     structureChunk.gender = [];
   }
@@ -620,6 +628,12 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
         `vbob updateStChByAndTagsAndSelectors Just to note that refObj gave no selectors for currentLanguage "${currentLanguage}" and structureChunk.wordtype "${structureChunk.wordtype}"` +
         "[0m"
     );
+  }
+
+  //STEP FOUR: Selectors that must be handled specially.
+
+  if (structureChunk.specificLemmas && structureChunk.specificLemmas.length) {
+    structureChunk.specificLemmas = [selectedLemmaObject.lemma];
   }
 
   console.log(

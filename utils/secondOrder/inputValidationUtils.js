@@ -7,7 +7,7 @@ const refObj = require("../reference/referenceObjects.js");
 exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
   let stChFeaturesRefByLang = refObj.structureChunkFeatures[currentLanguage];
   let stChFeaturesRefAll = refObj.structureChunkFeatures["ALL"];
-  let stChFeaturesCombined = uUtils.combineTwoKeyValueObjectsCarefully(
+  let stChFeatures = uUtils.combineTwoKeyValueObjectsCarefully(
     stChFeaturesRefByLang,
     stChFeaturesRefAll
   );
@@ -49,7 +49,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
       // });
 
       //0. Check if this featureKey is expected at all.
-      let allFeatureKeys = Object.keys(stChFeaturesCombined);
+      let allFeatureKeys = Object.keys(stChFeatures);
 
       if (!allFeatureKeys.includes(featureKey)) {
         console.log(
@@ -63,8 +63,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
 
       //1. Check if this featureValue is compatible with this wordtype
       console.log({ featureKey });
-      let compatibleWordtypes =
-        stChFeaturesCombined[featureKey].compatibleWordtypes;
+      let compatibleWordtypes = stChFeatures[featureKey].compatibleWordtypes;
 
       if (compatibleWordtypes && !compatibleWordtypes.includes(wordtype)) {
         console.log(
@@ -77,8 +76,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
       }
 
       //2. Check if featureValue is string or array d'acc
-      let expectedTypeOnStCh =
-        stChFeaturesCombined[featureKey].expectedTypeOnStCh;
+      let expectedTypeOnStCh = stChFeatures[featureKey].expectedTypeOnStCh;
 
       if (
         expectedTypeOnStCh &&
@@ -98,7 +96,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
       //3. Check if all values in featureValue if arr or string, are in this arr:
       //   Zeta: Interesting that even though it will throw error if a metafeature is present in the array, it doesn't throw.
       //   That's because there are no sentenceFormulas that use any metaFeature values.
-      let possibleValues = stChFeaturesCombined[featureKey].possibleValues;
+      let possibleValues = stChFeatures[featureKey].possibleValues;
 
       if (possibleValues) {
         if (uUtils.typeof(featureValue) === "string") {
@@ -127,7 +125,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
       }
 
       //4. Check if the value of agreeWith kind of features is actually a structureChunk chunkId.
-      if (stChFeaturesCombined[featureKey].possibleValueMustBeExistingChunkId) {
+      if (stChFeatures[featureKey].possibleValueMustBeExistingChunkId) {
         if (!allChunkIds.includes(featureValue)) {
           console.log(
             "cglp validateSentenceFormula structureChunk",

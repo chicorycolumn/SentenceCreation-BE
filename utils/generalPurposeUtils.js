@@ -449,6 +449,6 @@ exports.getWordsFromTerminusObject = (tObj, shouldGetAll) => {
   return allWords;
 };
 
-exports.lObjisMGN = (lObj) => {
+exports.lObjIsMGN = (lObj) => {
   return /_/.test(lObj.gender);
 };

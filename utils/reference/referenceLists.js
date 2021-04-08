@@ -1,4 +1,4 @@
-const { lObjisMGN } = require("../generalPurposeUtils");
+const { lObjIsMGN } = require("../generalPurposeUtils");
 
 exports.metaFeatures = {
   ENG: {
@@ -75,7 +75,7 @@ exports.lemmaObjectFeatures = {
           }
 
           if (lObj) {
-            if (lObjisMGN(lObj)) {
+            if (lObjIsMGN(lObj)) {
               specialInflectorKeys.push("gender");
             }
           }

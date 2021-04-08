@@ -192,24 +192,23 @@ exports.fetchPalette = (req) => {
     useDummy
   );
 
-  ///////////////////////////////////////////////kp Decisive Decant
-  questionSentenceData.questionOutputArr.forEach((outputUnit, index) => {
-    let { structureChunk, selectedLemmaObject } = outputUnit;
+  ///////////////////////////////////////////////kp Decisive Decant Check
+  if (false) {
+    questionSentenceData.questionOutputArr.forEach((outputUnit, index) => {
+      let { structureChunk, selectedLemmaObject } = outputUnit;
 
-    if ("console") {
-      console.log(
-        "[1;35m " +
-          `vmfg-fetchPalette stCh "${structureChunk.chunkId}" at index "${index}"` +
-          "[0m"
-      );
-      console.log(
-        "[1;35m " + `vmfg-fetchPalette slObj "${selectedLemmaObject.lemma}"` + "[0m"
-      );
-      console.log(" ");
-    }
+      if ("console") {
+        console.log(
+          "[1;35m " +
+            `vmfg-fetchPalette stCh "${structureChunk.chunkId}" at index "${index}"` +
+            "[0m"
+        );
+        console.log(
+          "[1;35m " + `vmfg-fetchPalette slObj "${selectedLemmaObject.lemma}"` + "[0m"
+        );
+        console.log(" ");
+      }
 
-    //gamma
-    if (false && "decisive decant check") {
       Object.keys(structureChunk).forEach((featureKey) => {
         let featureValue = structureChunk[featureKey];
 
@@ -231,8 +230,8 @@ exports.fetchPalette = (req) => {
           clUtils.throw("#ERR oyxp fetchPalette. featureKey: " + featureKey);
         }
       });
-    }
-  });
+    });
+  }
 
   if (true && "console") {
     console.log(

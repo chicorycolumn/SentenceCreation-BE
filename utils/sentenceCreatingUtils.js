@@ -78,7 +78,6 @@ exports.processSentenceFormula = (
   multipleMode
 ) => {
   console.log("hbbhey START processSentenceFormula");
-
   let { currentLanguage, previousQuestionLanguage } = languagesObj;
   let {
     sentenceFormulaId,
@@ -90,12 +89,10 @@ exports.processSentenceFormula = (
   let grandOutputArray = [];
 
   //STEP ZERO: Preprocess sentence structure.
-
   allLangUtils.preprocessStructureChunks(sentenceStructure, currentLanguage);
   langUtils.preprocessStructureChunks(sentenceStructure, currentLanguage);
 
   //STEP ONE: Select HEAD words and add to result array.
-
   let {
     headChunks,
     dependentChunks,

@@ -164,6 +164,11 @@ exports.adjustVirilityOfStructureChunk = (
 };
 
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
+  let stChFeatures = uUtils.combineTwoKeyValueObjectsCarefully(
+    refObj.structureChunkFeatures[currentLanguage],
+    refObj.structureChunkFeatures["ALL"]
+  );
+
   let shouldConsoleLog = false;
   if (shouldConsoleLog) {
     console.log(
@@ -178,8 +183,15 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
       return;
     }
 
-    if (!structureChunk.number || !structureChunk.number.length) {
-      structureChunk.number = ["singular", "plural"];
+    if (
+      stChFeatures["number"].compatibleWordtypes.includes(
+        structureChunk.wordtype
+      ) &&
+      (!structureChunk.number || !structureChunk.number.length)
+    ) {
+      structureChunk.number = uUtils.copyWithoutReference(
+        stChFeatures["number"].possibleValues
+      );
     }
 
     if (shouldConsoleLog) {

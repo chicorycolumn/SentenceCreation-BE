@@ -199,12 +199,12 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
       let arrayOfCounterfactualResultsForThisAnnotation = [];
 
-      let stChFeaturesCombined = uUtils.combineTwoKeyValueObjectsCarefully(
+      let stChFeatures = uUtils.combineTwoKeyValueObjectsCarefully(
         refObj.structureChunkFeatures[languagesObj.questionLanguage],
         refObj.structureChunkFeatures["ALL"]
       );
 
-      let allPossibleValuesForThisFeature = stChFeaturesCombined[
+      let allPossibleValuesForThisFeature = stChFeatures[
         annoKey
       ].possibleValues.slice(0);
 
@@ -289,12 +289,11 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           let counterfactualFeature = {};
           counterfactualFeature[annoKey] = counterfactualValueForThisFeature;
 
-          // clUtils.consoleLogObjectAtOneLevel(
-          //   counterfactualQuestionSentenceFormula,
-          //   "counterfactualQuestionSentenceFormula",
-          //   "RACX"
-          // );
-          // clUtils.throw(233);
+          clUtils.consoleLogObjectAtOneLevel(
+            counterfactualQuestionSentenceFormula,
+            "counterfactualQuestionSentenceFormula",
+            "RACX"
+          );
 
           let newReqBody = {
             arrayOfCounterfactualResultsForThisAnnotation,
