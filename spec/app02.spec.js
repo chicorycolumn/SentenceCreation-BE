@@ -984,7 +984,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal17-08y GET 200 YES: Engpol. pleaseDontSpecify shouldn't override sentenceStructure that wants f only. And further, we need an annotation, so PDS should be ignored here also.", () => {
+    it("#pal17-08y GET 200 YES: Engpol. pleaseDontSpecify shouldn't override sentenceStructure that wants f solely. And further, we need an annotation, so PDS should be ignored here also.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1017,7 +1017,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal17-08x GET 200 YES: Engpol. pleaseDontSpecify shouldn't override sentenceStructure that wants f only.", () => {
+    it("#pal17-08x GET 200 YES: Engpol. pleaseDontSpecify shouldn't override sentenceStructure that wants f solely.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 

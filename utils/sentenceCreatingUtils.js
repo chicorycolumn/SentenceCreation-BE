@@ -1350,6 +1350,16 @@ exports.conformAnswerStructureToQuestionStructure = (
             answerLanguage
           );
 
+          console.log(
+            `poji conformAnswerStructureToQuestionStructure. ${questionLanguage} ${questionStructureChunk.chunkId}'s tenseDesc "${tenseDesc}" give these translatedTenseDescArr for ${answerLanguage}: [${translatedTenseDescArr}].`
+          );
+
+          if (!translatedTenseDescArr || !translatedTenseDescArr.length) {
+            clUtils.throw(
+              `poji. translatedTenseDescArr came back blank, see above.`
+            );
+          }
+
           answerStructureChunk["tenseDescription"] = [
             ...answerStructureChunk["tenseDescription"],
             ...translatedTenseDescArr,

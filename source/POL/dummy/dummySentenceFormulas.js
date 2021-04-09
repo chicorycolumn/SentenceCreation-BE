@@ -541,7 +541,6 @@ exports.dummySentenceFormulasBank = [
         aspect: ["imperfective"],
         tense: ["past", "conditional"],
         andTags: ["basic2"],
-
         person: ["1per"],
         number: ["plural"],
         gender: ["n", "f"],
