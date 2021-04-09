@@ -164,10 +164,7 @@ exports.adjustVirilityOfStructureChunk = (
 };
 
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
-  let stChFeatures = uUtils.combineTwoKeyValueObjectsCarefully(
-    refObj.structureChunkFeatures[currentLanguage],
-    refObj.structureChunkFeatures["ALL"]
-  );
+  let stChFeatures = refFxn.getStructureChunkFeatures(currentLanguage);
 
   let shouldConsoleLog = false;
   if (shouldConsoleLog) {

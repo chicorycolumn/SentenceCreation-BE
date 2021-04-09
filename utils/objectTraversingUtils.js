@@ -715,8 +715,9 @@ exports.findMatchingLemmaObjectThenWord = (
         console.log(
           "whhe ot:findMatchingLemmaObjectThenWord errorInSentenceCreation.errorMessage: No lemma objects were found for these specifications."
         );
-        errorInSentenceCreation.errorMessage =
-          "whhe ot:findMatchingLemmaObjectThenWord No lemma objects were found for these specifications.";
+        errorInSentenceCreation.errorMessage = [
+          "whhe ot:findMatchingLemmaObjectThenWord No lemma objects were found for these specifications.",
+        ];
         return false;
       }
 
@@ -799,8 +800,9 @@ exports.findMatchingLemmaObjectThenWord = (
         "yzcq ot:findMatchingLemmaObjectThenWord structureChunk",
         structureChunk
       );
-      errorInSentenceCreation.errorMessage =
-        "yzcq The rrrequested inflections were not found in the selected lemma objects.";
+      errorInSentenceCreation.errorMessage = [
+        "yzcq The rrrequested inflections were not found in the selected lemma objects.",
+      ];
     }
     return false;
   }

@@ -166,7 +166,6 @@ exports.lemmaObjectFeatures = {
   },
 };
 
-//Zeta: Check the commented out code here.
 exports.structureChunkFeatures = {
   ALL: {
     //
@@ -183,7 +182,19 @@ exports.structureChunkFeatures = {
     orTags: { expectedTypeOnStCh: "array" },
     form: { expectedTypeOnStCh: "array" },
     chunkId: { expectedTypeOnStCh: "string" },
-    // wordtype: { expectedTypeOnStCh: "string", possibleValues: ["noun", "adjective"] },
+    wordtype: {
+      expectedTypeOnStCh: "string",
+      possibleValues: [
+        "noun",
+        "adjective",
+        "verb",
+        "adverb",
+        "pronoun",
+        "preposition",
+        "article",
+        "fixed",
+      ],
+    },
     agreeWith: {
       expectedTypeOnStCh: "string",
       possibleValueMustBeExistingChunkId: true,
@@ -296,23 +307,6 @@ exports.structureChunkFeatures = {
   ENG: {
     //
     //
-    //    These stCh features require validation that given values are okay.
-    //
-    //
-    // postHocAgreeWithPrimary: {
-    //   expectedTypeOnStCh: "string",possibleValueMustBeExistingChunkId: true,
-    //
-    // },
-    // postHocAgreeWithSecondary: {
-    //   expectedTypeOnStCh: "string",possibleValueMustBeExistingChunkId: true,
-    //
-    // },
-    // postHocAgreeWithTertiary: {
-    //   expectedTypeOnStCh: "string",possibleValueMustBeExistingChunkId: true,
-    //
-    // },
-    //
-    //
     //    These stCh features get validation by their possibleValues arr.
     //
     //
@@ -354,10 +348,6 @@ exports.structureChunkFeatures = {
       expectedTypeOnStCh: "array",
       possibleValues: ["nom", "gen", "dat", "acc"],
     },
-    // aspect: {
-    //   expectedTypeOnStCh: "array",
-    //   possibleValues: ["imperfective", "perfective"],
-    // },
     tense: {
       compatibleWordtypes: ["verb"],
       expectedTypeOnStCh: "array",

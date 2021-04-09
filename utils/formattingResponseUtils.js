@@ -20,8 +20,9 @@ exports.finishAndSend = (
         ref.responseObject.finalSentenceArr || [];
 
       if (ref.responseObject.errorMessage) {
-        combinedResponseObj[ref.key + "ErrorMessage"] =
-          ref.responseObject.errorMessage;
+        combinedResponseObj[ref.key + "ErrorMessage"] = [
+          ref.responseObject.errorMessage,
+        ];
       }
       if (ref.responseObject.message) {
         combinedResponseObj[ref.key + "Message"] = ref.responseObject.message;
@@ -101,8 +102,9 @@ exports.createOutputUnit = (
     console.log(
       "acsm createOutputUnit errorInSentenceCreation.errorMessage: A lemma object was indeed selected, but no word was found at the end of the give inflection chain."
     );
-    errorInSentenceCreation.errorMessage =
-      "acsm createOutputUnit A lemma object was indeed selected, but no word was found at the end of the give inflection chain.";
+    errorInSentenceCreation.errorMessage = [
+      "acsm createOutputUnit A lemma object was indeed selected, but no word was found at the end of the give inflection chain.",
+    ];
     return false;
   }
 

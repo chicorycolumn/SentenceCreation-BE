@@ -84,7 +84,6 @@ exports.getFormattedAnnoObj = (
   originalQuestionSentenceFormula
 ) => {
   let questionStructureChunk = questionOutputUnit.structureChunk;
-  //Zeta: Change structureChunk all mentions to questionStructureChunk
 
   console.log("bbbc");
   aaUtils.removeAnnotationsByAOCs(
@@ -136,6 +135,8 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   additionalRunsRecord,
   originalQuestionSentenceFormula
 ) => {
+  let questionLanguage = languagesObj.questionLanguage;
+
   // clUtils.consoleLogObjectAtOneLevel(
   //   questionOutputArr,
   //   "questionOutputArr",
@@ -190,7 +191,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   Object.keys(questionOutputUnit.structureChunk.annotations).forEach(
     (annoKey) => {
       //ACX2A: Don't bother running counterfactuals for wordtype/emoji/text annotations, as they'll always be needed.
-      //ACX2B: Don't bother running counterfactuals for tenseDes annotations, as they'll take so long, because there are so many alternate values, and we can reasonably presume that the tenseDesc anno will be necessary.
+      //ACX2B: Don't bother running counterfactuals for tenseDesc annotations, as they'll take so long, because there are so many alternate values, and we can reasonably presume that the tenseDesc anno will be necessary.
       if (["wordtype", "emoji", "text", "tenseDescription"].includes(annoKey)) {
         return;
       }
@@ -199,10 +200,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
       let arrayOfCounterfactualResultsForThisAnnotation = [];
 
-      let stChFeatures = uUtils.combineTwoKeyValueObjectsCarefully(
-        refObj.structureChunkFeatures[languagesObj.questionLanguage],
-        refObj.structureChunkFeatures["ALL"]
-      );
+      let stChFeatures = refFxn.getStructureChunkFeatures(questionLanguage);
 
       let allPossibleValuesForThisFeature = stChFeatures[
         annoKey
@@ -217,7 +215,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       let pseudoStCh = {};
       pseudoStCh[annoKey] = counterfactualValuesForThisFeature;
       counterfactualValuesForThisFeature = refFxn.removeIncompatibleFeatures(
-        languagesObj.questionLanguage,
+        questionLanguage,
         questionOutputUnit.structureChunk,
         pseudoStCh
       )[annoKey];
@@ -236,7 +234,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             rawQuestionSentenceFormula
           );
 
-          //Nownow. Do we want to send updated question formula for counterfax run,
+          //Alpha. Do we want to send updated question formula for counterfax run,
           //or originalQuestionSentenceFormula ?
 
           gpUtils.updateSentenceFormulaWithNewStructureChunksFromOutputUnits(
@@ -468,7 +466,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       );
     }
   );
-  // clUtils.throw(465);
 };
 
 exports.removeAnnotationsIfHeadChunkHasBeenCounterfaxed = (

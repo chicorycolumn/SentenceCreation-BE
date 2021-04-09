@@ -1,6 +1,15 @@
 const clUtils = require("./consoleLoggingUtils.js");
 
 exports.consoleLogObjectAtOneLevel = (obj, label, originLabel) => {
+  if (!obj) {
+    console.log(
+      "[1;33m " +
+        `--Console log "${label}" at one level, from "${originLabel}" but FALSY.` +
+        "[0m"
+    );
+    return;
+  }
+
   console.log(
     "[1;33m " + `--Console log "${label}" at one level, from "${originLabel}":` + "[0m"
   );
@@ -17,6 +26,15 @@ exports.consoleLogObjectAtOneLevel = (obj, label, originLabel) => {
 };
 
 exports.consoleLogObjectAtTwoLevels = (obj, label, originLabel) => {
+  if (!obj) {
+    console.log(
+      "[1;33m " +
+        `--Console log "${label}" at two levels, from "${originLabel}" but FALSY.` +
+        "[0m"
+    );
+    return;
+  }
+
   console.log(
     "[1;33m " + `--Console log "${label}" at two levels, from "${originLabel}":` + "[0m"
   );

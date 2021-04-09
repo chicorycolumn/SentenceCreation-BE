@@ -3,14 +3,10 @@ const uUtils = require("../universalUtils.js");
 const clUtils = require("../zerothOrder/consoleLoggingUtils.js");
 const ivUtils = require("./inputValidationUtils.js");
 const refObj = require("../reference/referenceObjects.js");
+const refFxn = require("../reference/referenceFunctions.js");
 
 exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
-  let stChFeaturesRefByLang = refObj.structureChunkFeatures[currentLanguage];
-  let stChFeaturesRefAll = refObj.structureChunkFeatures["ALL"];
-  let stChFeatures = uUtils.combineTwoKeyValueObjectsCarefully(
-    stChFeaturesRefByLang,
-    stChFeaturesRefAll
-  );
+  let stChFeatures = refFxn.getStructureChunkFeatures(currentLanguage);
 
   let allChunkIds = sentenceFormula.sentenceStructure.map(
     (stCh) => stCh.chunkId
@@ -31,7 +27,6 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
       if (
         ["fixed"].includes(wordtype) ||
         [
-          "wordtype",
           "importantFeatures",
           "pleaseShowMultipleWordtypeAllohomClarifiers",
           "forceThisFeatureWhenIsAnswer",
@@ -40,13 +35,6 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
       ) {
         return;
       }
-
-      // console.log("hsat validateSentenceFormula", {
-      //   currentLanguage,
-      //   wordtype,
-      //   featureKey,
-      //   featureValue,
-      // });
 
       //0. Check if this featureKey is expected at all.
       let allFeatureKeys = Object.keys(stChFeatures);
@@ -75,7 +63,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
         );
       }
 
-      //2. Check if featureValue is string or array d'acc
+      //2. Check if featureValue is string or array
       let expectedTypeOnStCh = stChFeatures[featureKey].expectedTypeOnStCh;
 
       if (
@@ -93,9 +81,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
         );
       }
 
-      //3. Check if all values in featureValue if arr or string, are in this arr:
-      //   Zeta: Interesting that even though it will throw error if a metafeature is present in the array, it doesn't throw.
-      //   That's because there are no sentenceFormulas that use any metaFeature values.
+      //3. Check if values are acceptable
       let possibleValues = stChFeatures[featureKey].possibleValues;
 
       if (possibleValues) {
@@ -124,7 +110,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
         }
       }
 
-      //4. Check if the value of agreeWith kind of features is actually a structureChunk chunkId.
+      //4. Check if the value of agreeKeys is an existing chunkId.
       if (stChFeatures[featureKey].possibleValueMustBeExistingChunkId) {
         if (!allChunkIds.includes(featureValue)) {
           console.log(

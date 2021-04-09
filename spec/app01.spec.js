@@ -2461,9 +2461,10 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionMessage).to.equal(
-            "No sentence could be created from the specifications."
-          );
+          expect([
+            "No sentence could be created from the specifications in Q.",
+            "No sentence could be created from the specifications in A.",
+          ]).to.include(res.body.questionMessage);
           expect(res.body.questionSentenceArr.length).to.equal(0);
         });
     });
@@ -2522,9 +2523,10 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionMessage).to.equal(
-            "No sentence could be created from the specifications."
-          );
+          expect([
+            "No sentence could be created from the specifications in Q.",
+            "No sentence could be created from the specifications in A.",
+          ]).to.include(res.body.questionMessage);
           expect(res.body.questionSentenceArr.length).to.equal(0);
         });
     });
@@ -2539,9 +2541,10 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionMessage).to.equal(
-            "No sentence could be created from the specifications."
-          );
+          expect([
+            "No sentence could be created from the specifications in Q.",
+            "No sentence could be created from the specifications in A.",
+          ]).to.include(res.body.questionMessage);
           expect(res.body.questionSentenceArr.length).to.equal(0);
         });
     });
@@ -2556,9 +2559,10 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionMessage).to.equal(
-            "No sentence could be created from the specifications."
-          );
+          expect([
+            "No sentence could be created from the specifications in Q.",
+            "No sentence could be created from the specifications in A.",
+          ]).to.include(res.body.questionMessage);
           expect(res.body.questionSentenceArr.length).to.equal(0);
         });
     });
@@ -2573,9 +2577,10 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionMessage).to.equal(
-            "No sentence could be created from the specifications."
-          );
+          expect([
+            "No sentence could be created from the specifications in Q.",
+            "No sentence could be created from the specifications in A.",
+          ]).to.include(res.body.questionMessage);
           expect(res.body.questionSentenceArr.length).to.equal(0);
         });
     });
@@ -2618,9 +2623,10 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
-          expect(res.body.questionMessage).to.equal(
-            "No sentence could be created from the specifications."
-          );
+          expect([
+            "No sentence could be created from the specifications in Q.",
+            "No sentence could be created from the specifications in A.",
+          ]).to.include(res.body.questionMessage);
           expect(res.body.questionSentenceArr.length).to.equal(0);
         });
     });

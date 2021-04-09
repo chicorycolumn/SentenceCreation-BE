@@ -149,12 +149,23 @@ exports.processSentenceFormula = (
           +"[0m"
       );
 
+      if (!errorInSentenceCreation.errorMessage) {
+        errorInSentenceCreation.errorMessage = [];
+      }
+      let newErrMsgs = [
+        `k'lya processSentenceFormula. This run has FAILED, due to headChunk: "${headChunk.chunkId}" failing in findMatchingLemmaObjectThenWord. \nThis happened in "STEP ONE: Select HEAD words and add to result array."`,
+        `#ERR b'cka processSentenceFormula ${currentLanguage}. headOutputUnitArrays had no successful members. 'k'lya' only had to fail once, and it did.`,
+      ];
+      newErrMsgs.forEach((errMsg) => {
+        errorInSentenceCreation.errorMessage.push(errMsg);
+      });
+
       nullResultObj = {
         arrayOfOutputArrays: null,
         sentenceFormula,
         sentenceFormulaId,
         sentenceFormulaSymbol,
-        errorInSentenceCreation, //epsilon - specific error msg?
+        errorInSentenceCreation,
       };
     } else {
       headOutputUnitArrays.push(allPossOutputUnits_head);
@@ -259,56 +270,6 @@ exports.processSentenceFormula = (
     }
   );
 
-  if ("delete") {
-    /**For every headOutputUnit in every headOutputArray in every explodedOutputArraysWithHeads...
-     *
-     * Or rather
-     *
-     * Delete any headOutputArray in explodedOutputArraysWithHeads if...
-     *
-     * it has any headOutputUnits who are calculated to have dependent chunks, but
-     * possibleDependentOutputArrays, which should contain arrays of deps, where each array corresponds to
-     * one dep chunk.
-     *
-     * But, if the requisite arrays are not all there,
-     *
-     * then delete this headOutputArray.
-     *
-     * And finally, if explodedOutputArraysWithHeads ends up with nothing in it
-     * then return error.
-     */
-    // explodedOutputArraysWithHeads.forEach(
-    //   (headOutputArray, headOutputArrayIndex) => {
-    //     headOutputArray.forEach((headOutputUnit) => {
-    //       let headChunk = headOutputUnit.structureChunk;
-    //       // Step two begins here.
-    //       let specificDependentChunks = dependentChunks
-    //         .filter((chunk) => chunk.agreeWith === headChunk.chunkId)
-    //         .map((chunk) => uUtils.copyWithoutReference(chunk));
-    //       if (specificDependentChunks.length) {
-    //         specificDependentChunks.forEach((dependentChunk) => {
-    //           //Is this depCh represented in headOutputUnit.possibleDependentOutputArrays?
-    //           let depOutputArray = headOutputUnit.possibleDependentOutputArrays.find(
-    //             (arr) =>
-    //               arr.length &&
-    //               arr[0].structureChunk.chunkId === dependentChunk.chunkId
-    //           );
-    //           if (!depOutputArray || !depOutputArray.length) {
-    //             console.log(
-    //               `k'lye trimArrayOfExplodedOutputArraysByFailures. explodedOutputArraysWithHeads has ${explodedOutputArraysWithHeads.length} members. Deleting headOutputArray at index ${headOutputArrayIndex} because no results were found for depCh "${dependentChunk.chunkId}" in this headOutputArray.`
-    //             );
-    //             explodedOutputArraysWithHeads = returnArrayWithoutItemAtIndex(
-    //               explodedOutputArraysWithHeads,
-    //               headOutputArrayIndex
-    //             );
-    //           }
-    //         });
-    //       }
-    //     });
-    //   }
-    // );
-  }
-
   if (headChunks.length && !explodedOutputArraysWithHeads.length) {
     console.log(
       "[1;31m \n" +
@@ -316,12 +277,23 @@ exports.processSentenceFormula = (
         "\n[0m"
     );
 
+    if (!errorInSentenceCreation.errorMessage) {
+      errorInSentenceCreation.errorMessage = [];
+    }
+    let newErrMsgs = [
+      `#ERR b'cke processSentenceFormula ${currentLanguage}. This run has FAILED due to explodedOutputArraysWithHeads having no successful members. 'k'lye' must have deleted all members of explodedOutputArraysWithHeads arr.`,
+      `k'lye trimArrayOfExplodedOutputArraysByFailures. explodedOutputArraysWithHeads has ${explodedOutputArraysWithHeads.length} members. Deleting a headOutputArray because no results were found for a depCh in this headOutputArray. \nThis happened in "STEP TWO: Select DEPENDENT words and add to result array."`,
+    ];
+    newErrMsgs.forEach((errMsg) => {
+      errorInSentenceCreation.errorMessage.push(errMsg);
+    });
+
     nullResultObj = {
       arrayOfOutputArrays: null,
       sentenceFormula,
       sentenceFormulaId,
       sentenceFormulaSymbol,
-      errorInSentenceCreation, //Epsilon - Make this error msg specific? Like, explodedOutputArraysWithHeads k'lye...
+      errorInSentenceCreation,
     };
     return nullResultObj;
   }
@@ -472,12 +444,23 @@ exports.processSentenceFormula = (
         "\n[0m"
     );
 
+    if (!errorInSentenceCreation.errorMessage) {
+      errorInSentenceCreation.errorMessage = [];
+    }
+    let newErrMsgs = [
+      `#ERR b'cki processSentenceFormula ${currentLanguage}. grandOutputArray had no successful members. 'k'lyi' must have removed all members from grandOutputArray.`,
+      `k'lyi trimArrayOfExplodedOutputArraysByFailures. grandOutputArray has ${grandOutputArray.length} members. Deleting a headOutputArray because no results were found for a PHDchunk in this outputArray. \nThis happened in "STEP THREE: Select PHD words and add to result array."`,
+    ];
+    newErrMsgs.forEach((errMsg) => {
+      errorInSentenceCreation.errorMessage.push(errMsg);
+    });
+
     nullResultObj = {
       arrayOfOutputArrays: null,
       sentenceFormula,
       sentenceFormulaId,
       sentenceFormulaSymbol,
-      errorInSentenceCreation, //Epsilon - Make this error msg specific? Like, grandOutputArray k'lye...
+      errorInSentenceCreation,
     };
     return nullResultObj;
   }
@@ -522,6 +505,17 @@ exports.processSentenceFormula = (
           `klyo processSentenceFormula. This run has FAILED, due to otherChunk: "${otherChunk.chunkId}" failing in findMatchingLemmaObjectThenWord. \nThis happened in "STEP FOUR: Select OTHER words and add to result array."` +
           +"[0m"
       );
+
+      if (!errorInSentenceCreation.errorMessage) {
+        errorInSentenceCreation.errorMessage = [];
+      }
+      let newErrMsgs = [
+        `k'lyo processSentenceFormula. This run has FAILED, due to otherChunk: "${otherChunk.chunkId}" failing in findMatchingLemmaObjectThenWord. \nThis happened in "STEP FOUR: Select OTHER words and add to result array."`,
+        `#ERR b'cko processSentenceFormula ${currentLanguage}. allPossOutputUnits_other had no successful members. 'k'lyo' only had to fail once, and it did.`,
+      ];
+      newErrMsgs.forEach((errMsg) => {
+        errorInSentenceCreation.errorMessage.push(errMsg);
+      });
 
       nullResultObj = {
         arrayOfOutputArrays: null,
@@ -590,6 +584,49 @@ exports.giveFinalSentences = (
   additionalRunsRecord,
   originalQuestionSentenceFormula
 ) => {
+  let {
+    answerOutputArrays,
+    questionOutputArr,
+    sentenceFormula,
+    errorInSentenceCreation,
+  } = sentenceData;
+
+  if ("check") {
+    if (!multipleMode && answerOutputArrays && answerOutputArrays.length) {
+      clUtils.throw(
+        "#ERR ubrz giveFinalSentences. Well that's strange. We are in Question Mode, so SC:giveFinalSentences expected to be given questionOutputArr, not answerOutputArrays."
+      );
+    }
+
+    if (errorInSentenceCreation.errorMessage) {
+      let errorMessage = {
+        errorInSentenceCreation: errorInSentenceCreation.errorMessage,
+      };
+
+      return {
+        message: "No sentence could be created from the specifications in Q.",
+        finalSentence: null,
+        errorMessage,
+      };
+    }
+
+    if (
+      answerSentenceData &&
+      answerSentenceData.errorInSentenceCreation.errorMessage
+    ) {
+      let errorMessage = {
+        errorInSentenceCreation:
+          answerSentenceData.errorInSentenceCreation.errorMessage,
+      };
+
+      return {
+        message: "No sentence could be created from the specifications in A.",
+        finalSentence: null,
+        errorMessage,
+      };
+    }
+  }
+
   if (answerLanguage) {
     clUtils.consoleLogObjectAtTwoLevels(
       sentenceData.questionOutputArr,
@@ -609,34 +646,7 @@ exports.giveFinalSentences = (
     );
   }
 
-  let {
-    answerOutputArrays,
-    questionOutputArr,
-    sentenceFormula,
-    errorInSentenceCreation,
-  } = sentenceData;
-
   console.log("shen answerOutputArrays", answerOutputArrays);
-
-  if ("check") {
-    if (errorInSentenceCreation.errorMessage) {
-      let errorMessage = {
-        errorInSentenceCreation: errorInSentenceCreation.errorMessage,
-      };
-
-      return {
-        message: "No sentence could be created from the specifications.",
-        finalSentence: null,
-        errorMessage,
-      };
-    }
-
-    if (!multipleMode && answerOutputArrays && answerOutputArrays.length) {
-      clUtils.throw(
-        "#ERR ubrz giveFinalSentences. Well that's strange. We are in Question Mode, so SC:giveFinalSentences expected to be given questionOutputArr, not answerOutputArrays."
-      );
-    }
-  }
 
   let finalSentenceArr = [];
 

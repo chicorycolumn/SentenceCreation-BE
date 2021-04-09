@@ -5,6 +5,16 @@ const otUtils = require("../objectTraversingUtils.js");
 const refObj = require("./referenceObjects.js");
 const refFxn = require("./referenceFunctions.js");
 
+exports.getStructureChunkFeatures = (currentLanguage) => {
+  let stChFeaturesRefByLang = refObj.structureChunkFeatures[currentLanguage];
+  let stChFeaturesRefAll = refObj.structureChunkFeatures["ALL"];
+
+  return uUtils.combineTwoKeyValueObjectsCarefully(
+    stChFeaturesRefByLang,
+    stChFeaturesRefAll
+  );
+};
+
 exports.removeIncompatibleFeatures = (
   currentLanguage,
   stChToCheckBy,

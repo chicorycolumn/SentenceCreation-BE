@@ -133,6 +133,7 @@ exports.fetchPalette = (req) => {
     multipleMode
   );
 
+  console.log("questionSentenceData", questionSentenceData);
   if ("check") {
     if (
       !questionSentenceData ||

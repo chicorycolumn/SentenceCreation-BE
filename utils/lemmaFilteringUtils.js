@@ -3,6 +3,7 @@ const uUtils = require("./universalUtils.js");
 const clUtils = require("./zerothOrder/consoleLoggingUtils.js");
 const otUtils = require("./objectTraversingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
+const refFxn = require("./reference/referenceFunctions.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
 
 exports.filterWithin_PHD = (
@@ -524,10 +525,7 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
 
   let lemmaObjectIsMGN = gpUtils.lObjIsMGN(selectedLemmaObject);
 
-  let stChFeatures = uUtils.combineTwoKeyValueObjectsCarefully(
-    refObj.structureChunkFeatures[currentLanguage],
-    refObj.structureChunkFeatures["ALL"]
-  );
+  let stChFeatures = refFxn.getStructureChunkFeatures(currentLanguage);
 
   //STEP ZERO: Decisive Decant
   //Remove gender values on stCh if drillPath doesn't include gender (ie is infinitive or a participle, say).
