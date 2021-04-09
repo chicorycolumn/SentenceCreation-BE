@@ -1009,6 +1009,37 @@ exports.sentenceFormulasBank = [
     primaryOrders: [["pro-1-I", "ver-1-was", "art-1-a", "nou-1-doctor"]],
   },
   {
+    sentenceFormulaSymbol: "117aa I** was a doctor",
+    sentenceFormulaId: "ENG-117aa",
+    translations: { ENG: ["ENG-117aa"], POL: ["POL-117aa"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificLemmas: ["PERSONAL"],
+        person: ["1per"],
+      },
+      {
+        chunkId: "ver-1-was",
+        agreeWith: "pro-1-I",
+        specificLemmas: ["be"],
+        tenseDescription: ["past simple"],
+      },
+      {
+        chunkId: "art-1-a",
+        form: ["indefinite"],
+        connectedTo: "pro-1-I",
+      },
+      {
+        chunkId: "nou-1-doctor",
+        andTags: ["person"],
+        // number: ["singular"],
+        specificLemmas: ["doctor"],
+        agreeWith: "pro-1-I",
+      },
+    ],
+    primaryOrders: [["pro-1-I", "ver-1-was", "art-1-a", "nou-1-doctor"]],
+  },
+  {
     sentenceFormulaSymbol: "117b I was here",
     sentenceFormulaId: "ENG-117b",
     translations: { ENG: ["ENG-117b"], POL: ["POL-117b"] },

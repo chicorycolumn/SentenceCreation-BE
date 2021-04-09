@@ -1,5 +1,37 @@
 const { lObjIsMGN } = require("../generalPurposeUtils");
 
+exports.incompatibleFeaturesRef = {
+  POL: {
+    //If we're examining gender feature.
+    gender: {
+      //Check the "number" feature...
+      number: {
+        //...and if the number does not include "singular", remove these values from the gender array.
+        singular: ["m", "m1", "m2", "m3", "f", "n"],
+        //...and if the number does not include "plural", remove these values from the gender array.
+        plural: ["virile", "nonvirile"],
+      },
+      //Check the "person" feature...
+      person: {
+        //...and if the person does not include "3per", remove these values from the gender array.
+        "3per": ["m2", "m3", "n"],
+      },
+    },
+  },
+  ENG: {
+    //If we're examining gender feature.
+    gender: {
+      //Check the number feature...
+      number: {
+        //...and if the number does not include singular, remove these values from the gender array.
+        singular: ["m", "f", "n"],
+        ///...and if the number does not include plural, remove these values from the gender array.
+        plural: ["virile", "nonvirile"],
+      },
+    },
+  },
+};
+
 exports.metaFeatures = {
   ENG: {
     gender: {

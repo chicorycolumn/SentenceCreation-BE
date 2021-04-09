@@ -1,5 +1,6 @@
 const lfUtils = require("../../utils/lemmaFilteringUtils.js");
 const otUtils = require("../../utils/objectTraversingUtils.js");
+const frUtils = require("../../utils/formattingResponseUtils.js");
 const gpUtils = require("../../utils/generalPurposeUtils.js");
 const uUtils = require("../../utils/universalUtils.js");
 const clUtils = require("../../utils/zerothOrder/consoleLoggingUtils.js");
@@ -49,6 +50,104 @@ let inflectorRef = {
     "conditional perfect",
     "imperative",
   ],
+};
+
+exports.selectWordVersions = (
+  structureChunk,
+  subsequentOutputUnit,
+  selectedWord,
+  selectedWordsArr,
+  firstStageAnnotationsObj,
+  selectedLemmaObject,
+  previousOutputUnit,
+  multipleMode
+) => {
+  // >>>
+  // >>> Indefinite Article
+  // >>>
+  if (
+    structureChunk.wordtype === "article" &&
+    structureChunk.form.includes("indefinite")
+  ) {
+    if (!subsequentOutputUnit) {
+      clUtils.throw(
+        "aqrz selectWordVersions Shouldn't there be an outputUnit subsequent to this ENG indefinite article?"
+      );
+    }
+
+    console.log(
+      "shnj selectWordVersions. subsequentOutputUnit.firstStageAnnotationsObj BEFORE",
+      subsequentOutputUnit.firstStageAnnotationsObj
+    );
+
+    if (subsequentOutputUnit && subsequentOutputUnit.firstStageAnnotationsObj) {
+      Object.keys(subsequentOutputUnit.firstStageAnnotationsObj).forEach(
+        (annoKey) => {
+          let annoValue =
+            subsequentOutputUnit.firstStageAnnotationsObj[annoKey];
+
+          if (annoValue === "singular") {
+            console.log(
+              `yuox selectWordVersions. Removing "singular" annotation from subsequent outputUnit, as current output unit is ENG indefinite article.`
+            );
+
+            delete subsequentOutputUnit.firstStageAnnotationsObj[annoKey];
+          }
+        }
+      );
+    }
+
+    console.log(
+      "shnj selectWordVersions. subsequentOutputUnit.firstStageAnnotationsObj AFTER",
+      subsequentOutputUnit.firstStageAnnotationsObj
+    );
+
+    console.log("nbra selectWordVersions", {
+      "subsequentOutputUnit.selectedWord": subsequentOutputUnit.selectedWord,
+      "subsequentOutputUnit.structureChunk":
+        subsequentOutputUnit.structureChunk,
+    });
+
+    if (
+      subsequentOutputUnit.structureChunk.number &&
+      subsequentOutputUnit.structureChunk.number.includes("plural")
+    ) {
+      if (subsequentOutputUnit.structureChunk.number.length > 1) {
+        clUtils.throw(
+          "#ERR pudk selectWordVersions. subsequentOutputUnit.structureChunk.number had length over 1."
+        );
+      }
+      console.log(
+        "fzxm selectWordVersions skipping pushSelectedWordToArray as plural noun means no indefinite article."
+      );
+      return true;
+    }
+
+    if (
+      !subsequentOutputUnit.selectedWord.surprisinglyStartsWithConsonantSound &&
+      (subsequentOutputUnit.selectedWord.surprisinglyStartsWithVowelSound ||
+        (typeof subsequentOutputUnit.selectedWord === "string" &&
+          /^[aeiou]/.test(subsequentOutputUnit.selectedWord[0])))
+    ) {
+      frUtils.pushSelectedWordToArray(
+        "protective",
+        selectedWord,
+        selectedWordsArr,
+        firstStageAnnotationsObj,
+        structureChunk
+      );
+      return true;
+    } else {
+      frUtils.pushSelectedWordToArray(
+        "nonprotective",
+        selectedWord,
+        selectedWordsArr,
+        firstStageAnnotationsObj,
+        structureChunk
+      );
+      return true;
+    }
+  }
 };
 
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {

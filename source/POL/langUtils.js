@@ -1,10 +1,127 @@
 const lfUtils = require("../../utils/lemmaFilteringUtils.js");
 const otUtils = require("../../utils/objectTraversingUtils.js");
+const frUtils = require("../../utils/formattingResponseUtils.js");
 const gpUtils = require("../../utils/generalPurposeUtils.js");
 const uUtils = require("../../utils/universalUtils.js");
 const clUtils = require("../../utils/zerothOrder/consoleLoggingUtils.js");
 const refObj = require("../../utils/reference/referenceObjects.js");
 const allLangUtils = require("../../utils/allLangUtils.js");
+
+exports.selectWordVersions = (
+  structureChunk,
+  subsequentOutputUnit,
+  selectedWord,
+  selectedWordsArr,
+  firstStageAnnotationsObj,
+  selectedLemmaObject,
+  previousOutputUnit,
+  multipleMode
+) => {
+  if (gpUtils.getWordtypeFromLemmaObject(selectedLemmaObject) === "pronoun") {
+    // >>>
+    // >>> Pronoun: post-prepositional
+    // >>>
+    if (
+      previousOutputUnit &&
+      gpUtils.getWordtypeFromLemmaObject(
+        previousOutputUnit.selectedLemmaObject
+      ) === "preposition"
+    ) {
+      frUtils.pushSelectedWordToArray(
+        "postPreposition",
+        selectedWord,
+        selectedWordsArr,
+        firstStageAnnotationsObj,
+        structureChunk
+      );
+      return true;
+    } else {
+      // >>>
+      // >>> Pronoun: stressed or unstressed
+      // >>>
+
+      let combinedSelectedWordsArr = [];
+
+      if (multipleMode) {
+        combinedSelectedWordsArr = [
+          ...combinedSelectedWordsArr,
+          ...selectedWord.unstressed,
+        ];
+        combinedSelectedWordsArr = [
+          ...combinedSelectedWordsArr,
+          ...selectedWord.stressed,
+        ];
+      } else {
+        combinedSelectedWordsArr = [
+          ...combinedSelectedWordsArr,
+          ...selectedWord.unstressed,
+        ];
+      }
+
+      frUtils.pushSelectedWordToArray(
+        "array",
+        combinedSelectedWordsArr,
+        selectedWordsArr,
+        firstStageAnnotationsObj,
+        structureChunk
+      );
+      return true;
+    }
+  }
+
+  if (
+    gpUtils.getWordtypeFromLemmaObject(selectedLemmaObject) === "preposition"
+  ) {
+    if (!subsequentOutputUnit) {
+      clUtils.throw(
+        "mcob selectWordVersions Shouldn't there be an outputUnit subsequent to this POL preposition?"
+      );
+    }
+
+    console.log(
+      "pxlz selectWordVersions test subsequentOutputUnit.selectedWord for following prefixes.",
+      {
+        "subsequentOutputUnit.selectedWord": subsequentOutputUnit.selectedWord,
+      }
+    );
+
+    if (
+      selectedWord.protectIfSubsequentStartsWithTheseRegexes &&
+      selectedWord.protectIfSubsequentStartsWithTheseRegexes.some((prefix) => {
+        console.log("spez selectWordVersions", { prefix });
+
+        let prefixRegex = RegExp("^" + prefix);
+        return prefixRegex.test(subsequentOutputUnit.selectedWord);
+      })
+    ) {
+      frUtils.pushSelectedWordToArray(
+        "protective",
+        selectedWord,
+        selectedWordsArr,
+        firstStageAnnotationsObj,
+        structureChunk
+      );
+      return true;
+    } else {
+      frUtils.pushSelectedWordToArray(
+        "nonprotective",
+        selectedWord,
+        selectedWordsArr,
+        firstStageAnnotationsObj,
+        structureChunk
+      );
+      return true;
+    }
+  }
+
+  frUtils.pushSelectedWordToArray(
+    "normal",
+    selectedWord,
+    selectedWordsArr,
+    firstStageAnnotationsObj,
+    structureChunk
+  );
+};
 
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   let shouldConsoleLog = false;

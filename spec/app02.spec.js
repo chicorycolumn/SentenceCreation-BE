@@ -28,67 +28,6 @@ describe("/api", function () {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe("/palette - Stage X: Extra testing.", () => {
-    it("#palX-1a GET 200 YES: MGN re stCh.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy59a doctor",
-          useDummy: true,
-          pleaseDontSpecify: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "Doctor.",
-              POL: ["Lekarka.", "Lekarz."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    it("#palX-1b GET 200 YES: MGN re stCh.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy59b doctor",
-          useDummy: true,
-          pleaseDontSpecify: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "Doctor.",
-              POL: ["Lekarka.", "Lekarz."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-  });
-
   describe("/palette - Stage 17-i: Possessive pronouns and MGNs. Pre-testing.", () => {
     it("#pal17-01a GET 200 YES: Engpol. MGN as sole word, annotation expected.", () => {
       const questionLanguage = "ENG";
@@ -1314,7 +1253,7 @@ describe("/api", function () {
     });
   });
 
-  xdescribe("/palette - Stage 17-iv: Possessive pronouns and MGNs. MGN to agree with pronoun.", () => {
+  describe("/palette - Stage 17-iv: Possessive pronouns and MGNs. MGN to agree with pronoun.", () => {
     it("#pal17-10a GET 200 YES: Engpol. I was here. Testing annotations.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -1717,8 +1656,6 @@ describe("/api", function () {
           );
         });
     });
-    //And then having done 17-11, make that vary for number as well.
-    //Add "The doctor was here." sentence with tests.
     it("#pal17-11e GET 200 YES: Engpol. I* was a doctor. MGN to agree with pronoun.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -1912,10 +1849,204 @@ describe("/api", function () {
           );
         });
     });
+    it("#pal17-11i GET 200 YES: Engpol. I** was a doctor. MGN to agree with pronoun.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "117aa I** was a doctor",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "I (male) was a doctor.",
+              POL: ["Byłem lekarzem."],
+            },
+            {
+              ENG: "I (female) was a doctor.",
+              POL: ["Byłam lekarką."],
+            },
+            {
+              ENG: "We (females) were doctors.",
+              POL: ["Byłyśmy lekarkami."],
+            },
+            {
+              ENG: "We (males) were doctors.",
+              POL: ["Byliśmy lekarzami."],
+            },
+            {
+              ENG: "We (mixed) were doctors.",
+              POL: ["Byliśmy lekarzami."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal17-11j GET 200 YES: Engpol. I** was a doctor. MGN to agree with pronoun. pleaseDontSpecify", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "117aa I** was a doctor",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "I was a doctor.",
+              POL: ["Byłem lekarzem.", "Byłam lekarką."],
+            },
+            {
+              ENG: "We were doctors.",
+              POL: ["Byłyśmy lekarkami.", "Byliśmy lekarzami."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal17-11k GET 200 YES: Poleng. I** was a doctor. MGN to agree with pronoun.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "117aa I** was a doctor",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: [
+                "I was a doctor.",
+                "I had been a doctor.",
+                "I have been a doctor.",
+                "I was being a doctor.",
+              ],
+              POL: "Byłem lekarzem.",
+            },
+            {
+              ENG: [
+                "I was a doctor.",
+                "I had been a doctor.",
+                "I have been a doctor.",
+                "I was being a doctor.",
+              ],
+              POL: "Byłam lekarką.",
+            },
+            {
+              ENG: [
+                "We were doctors.",
+                "We had been doctors.",
+                "We have been doctors.",
+                "We were being doctors.",
+              ],
+              POL: "Byłyśmy lekarkami.",
+            },
+            {
+              ENG: [
+                "We were doctors.",
+                "We had been doctors.",
+                "We have been doctors.",
+                "We were being doctors.",
+              ],
+              POL: "Byliśmy lekarzami.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal17-11l GET 200 YES: Poleng. I** was a doctor. MGN to agree with pronoun. pleaseDontSpecify but with no effect expected.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "117aa I** was a doctor",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: [
+                "I was a doctor.",
+                "I had been a doctor.",
+                "I have been a doctor.",
+                "I was being a doctor.",
+              ],
+              POL: "Byłem lekarzem.",
+            },
+            {
+              ENG: [
+                "I was a doctor.",
+                "I had been a doctor.",
+                "I have been a doctor.",
+                "I was being a doctor.",
+              ],
+              POL: "Byłam lekarką.",
+            },
+            {
+              ENG: [
+                "We were doctors.",
+                "We had been doctors.",
+                "We have been doctors.",
+                "We were being doctors.",
+              ],
+              POL: "Byłyśmy lekarkami.",
+            },
+            {
+              ENG: [
+                "We were doctors.",
+                "We had been doctors.",
+                "We have been doctors.",
+                "We were being doctors.",
+              ],
+              POL: "Byliśmy lekarzami.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    //Add "The doctor was here." sentence with tests.
   });
 
-  xdescribe("/palette - Stage 16: NATASHA T. Checking how arrays as terminal points are handled.", () => {
-    it("#pal16-01a GET 200 YES: Are correct members of an array returned as possible ANSWER, as they should be?", () => {
+  describe("/palette - Stage 16: NATASHA T. Checking how arrays as terminal points are handled. +extra", () => {
+    it("#pal16-01a GET 200 YES: NATASHA T. Are correct members of an array returned as possible ANSWER, as they should be?", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1943,7 +2074,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal16-01b GET 200 YES: Battery: Are EITHER members of an array returned as possible QUESTION, as they should be?", () => {
+    it("#pal16-01b GET 200 YES: NATASHA T. Battery: Are EITHER members of an array returned as possible QUESTION, as they should be?", () => {
       return Promise.all([
         testOnce(),
         testOnce(),
@@ -1982,7 +2113,7 @@ describe("/api", function () {
           });
       }
     });
-    it("#pal16-01c GET 200 YES: Are correct answer sentences given for each of those question sentences.", () => {
+    it("#pal16-01c GET 200 YES: NATASHA T. Are correct answer sentences given for each of those question sentences.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -2010,6 +2141,64 @@ describe("/api", function () {
                 "The woman is going to be writing.",
               ],
               POL: "Kobieta będzie pisać.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal16-02a GET 200 YES: MGN re stCh. Engpol. PDS.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy59a doctor",
+          useDummy: true,
+          pleaseDontSpecify: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "Doctor.",
+              POL: ["Lekarka.", "Lekarz."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal16-02b GET 200 YES: MGN re stCh. Engpol. PDS.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy59b doctor",
+          useDummy: true,
+          pleaseDontSpecify: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "Doctor.",
+              POL: ["Lekarka.", "Lekarz."],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(

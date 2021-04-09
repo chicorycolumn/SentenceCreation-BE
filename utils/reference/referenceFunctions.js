@@ -5,6 +5,61 @@ const otUtils = require("../objectTraversingUtils.js");
 const refObj = require("./referenceObjects.js");
 const refFxn = require("./referenceFunctions.js");
 
+exports.removeIncompatibleFeatures = (
+  currentLanguage,
+  stChToCheckBy,
+  stChToChange
+) => {
+  console.log(311, stChToCheckBy);
+  //(note, the two stChs in args are likely the same stCh, but best to do as their names suggest)
+
+  //Eg We're examining gender feature, so check the "number" feature, and
+  //if the number does not include "singular", then remove "m", "m1", "m2", "m3", "f", "n" from the gender array.
+
+  let incompatibleFeaturesRef = refObj.incompatibleFeaturesRef[currentLanguage];
+
+  console.log({ currentLanguage });
+  console.log({ incompatibleFeaturesRef });
+
+  Object.keys(stChToChange).forEach((traitKeyy) => {
+    //eg traitKeyy = "gender"
+    if (!incompatibleFeaturesRef[traitKeyy]) {
+      return;
+    }
+
+    Object.keys(incompatibleFeaturesRef[traitKeyy]).forEach(
+      (traitKeyyToCheckBy) => {
+        //eg traitKeyyToCheckBy = "number"
+        if (
+          stChToCheckBy[traitKeyyToCheckBy] &&
+          stChToCheckBy[traitKeyyToCheckBy].length
+        ) {
+          Object.keys(
+            incompatibleFeaturesRef[traitKeyy][traitKeyyToCheckBy]
+          ).forEach((traitValyyeToCheckBy) => {
+            if (
+              !stChToCheckBy[traitKeyyToCheckBy].includes(traitValyyeToCheckBy)
+            ) {
+              let compatibleTraitValyyes =
+                incompatibleFeaturesRef[traitKeyy][traitKeyyToCheckBy][
+                  traitValyyeToCheckBy
+                ];
+              //eg compatibleTraitValyyes = ["virile", "nonvirile"]
+
+              stChToChange[traitKeyy] = stChToChange[traitKeyy].filter(
+                (value) => !compatibleTraitValyyes.includes(value)
+              );
+            }
+          });
+          //eg traitValyyeToCheckBy = "plural"
+        }
+      }
+    );
+  });
+  console.log(315, stChToChange);
+  return stChToChange;
+};
+
 exports.getTranslatedTenseDescription = (
   sourceTenseDescription,
   sourceLanguage,

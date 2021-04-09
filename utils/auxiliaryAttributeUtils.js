@@ -83,7 +83,7 @@ exports.getFormattedAnnoObj = (
   additionalRunsRecord,
   originalQuestionSentenceFormula
 ) => {
-  let { structureChunk } = questionOutputUnit;
+  let questionStructureChunk = questionOutputUnit.structureChunk;
   //Zeta: Change structureChunk all mentions to questionStructureChunk
 
   console.log("bbbc");
@@ -111,10 +111,10 @@ exports.getFormattedAnnoObj = (
 
   let annoObj = {};
 
-  Object.keys(structureChunk.annotations).forEach((annoKey) => {
+  Object.keys(questionStructureChunk.annotations).forEach((annoKey) => {
     let formattedAnnoValue = allLangUtils.translateAnnotationValue(
       annoKey,
-      structureChunk,
+      questionStructureChunk,
       languagesObj
     );
 
@@ -214,37 +214,13 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         )
       );
 
-      //ACX3A: Save time by removing gender values incompatible with number value. //Omega too specific for these langs.
-      if (
-        questionOutputUnit.structureChunk.number &&
-        questionOutputUnit.structureChunk.number.length
-      ) {
-        if (!questionOutputUnit.structureChunk.number.includes("plural")) {
-          counterfactualValuesForThisFeature = counterfactualValuesForThisFeature.filter(
-            (value) => !["virile", "nonvirile"].includes(value)
-          );
-        }
-        if (!questionOutputUnit.structureChunk.number.includes("singular")) {
-          counterfactualValuesForThisFeature = counterfactualValuesForThisFeature.filter(
-            (value) => !["m", "m1", "m2", "m3", "f", "n"].includes(value)
-          );
-        }
-      }
-
-      //ACX3B: Save time by removing gender values incompatible with person value. //Omega too specific for these langs.
-      if (
-        questionOutputUnit.structureChunk.person &&
-        questionOutputUnit.structureChunk.person.length
-      ) {
-        if (
-          questionOutputUnit.structureChunk.person.includes("1per") ||
-          questionOutputUnit.structureChunk.person.includes("2per")
-        ) {
-          counterfactualValuesForThisFeature = counterfactualValuesForThisFeature.filter(
-            (value) => !["m2", "m3", "n"].includes(value)
-          );
-        }
-      }
+      let pseudoStCh = {};
+      pseudoStCh[annoKey] = counterfactualValuesForThisFeature;
+      counterfactualValuesForThisFeature = refFxn.removeIncompatibleFeatures(
+        languagesObj.questionLanguage,
+        questionOutputUnit.structureChunk,
+        pseudoStCh
+      )[annoKey];
 
       console.log(
         `myxe removeAnnotationsByCounterfax FOREACH START. Examining ${questionOutputUnit.structureChunk.chunkId}'s annotation ${annoKey} = ${annoValue} so the counterfactual values are [${counterfactualValuesForThisFeature}].`

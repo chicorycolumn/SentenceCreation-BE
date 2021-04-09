@@ -3,6 +3,7 @@ const uUtils = require("./universalUtils.js");
 const gpUtils = require("./generalPurposeUtils.js");
 const clUtils = require("./zerothOrder/consoleLoggingUtils.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
+const frUtils = require("./formattingResponseUtils.js");
 const aaUtils = require("./auxiliaryAttributeUtils.js");
 const scUtils = require("./sentenceCreatingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
@@ -785,6 +786,8 @@ exports.selectWordVersions = (
 ) => {
   let selectedWordsArr = [];
 
+  const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
+
   // console.log("efsj selectWordVersions. orderedOutputArr", orderedOutputArr);
 
   orderedOutputArr.forEach((outputUnit, index) => {
@@ -805,7 +808,7 @@ exports.selectWordVersions = (
     console.log("[1;33m " + `/nilu----------------` + "[0m");
 
     if (typeof selectedWord === "string") {
-      pushSelectedWordToArray(
+      frUtils.pushSelectedWordToArray(
         "string",
         selectedWord,
         selectedWordsArr,
@@ -816,334 +819,23 @@ exports.selectWordVersions = (
     }
 
     if (gpUtils.isTerminusObject(selectedWord)) {
-      //Move to engUtils.selectWordVersions() //zeta
-      if (currentLanguage === "ENG") {
-        // >>>
-        // >>> Indefinite Article
-        // >>>
-        if (
-          structureChunk.wordtype === "article" &&
-          structureChunk.form.includes("indefinite")
-        ) {
-          if (!subsequentOutputUnit) {
-            clUtils.throw(
-              "aqrz selectWordVersions Shouldn't there be an outputUnit subsequent to this ENG indefinite article?"
-            );
-          }
-
-          console.log(
-            "shnj selectWordVersions. subsequentOutputUnit.firstStageAnnotationsObj BEFORE",
-            subsequentOutputUnit.firstStageAnnotationsObj
-          );
-
-          if (
-            subsequentOutputUnit &&
-            subsequentOutputUnit.firstStageAnnotationsObj
-          ) {
-            Object.keys(subsequentOutputUnit.firstStageAnnotationsObj).forEach(
-              (annoKey) => {
-                let annoValue =
-                  subsequentOutputUnit.firstStageAnnotationsObj[annoKey];
-
-                if (annoValue === "singular") {
-                  console.log(
-                    `yuox selectWordVersions. Removing "singular" annotation from subsequent outputUnit, as current output unit is ENG indefinite article.`
-                  );
-
-                  delete subsequentOutputUnit.firstStageAnnotationsObj[annoKey];
-                }
-              }
-            );
-          }
-
-          console.log(
-            "shnj selectWordVersions. subsequentOutputUnit.firstStageAnnotationsObj AFTER",
-            subsequentOutputUnit.firstStageAnnotationsObj
-          );
-
-          console.log("nbra selectWordVersions", {
-            "subsequentOutputUnit.selectedWord":
-              subsequentOutputUnit.selectedWord,
-            "subsequentOutputUnit.structureChunk":
-              subsequentOutputUnit.structureChunk,
-          });
-
-          if (
-            subsequentOutputUnit.structureChunk.number &&
-            subsequentOutputUnit.structureChunk.number.includes("plural")
-          ) {
-            if (subsequentOutputUnit.structureChunk.number.length > 1) {
-              clUtils.throw(
-                "#ERR pudk selectWordVersions. subsequentOutputUnit.structureChunk.number had length over 1."
-              );
-            }
-            console.log(
-              "fzxm selectWordVersions skipping pushSelectedWordToArray as plural noun means no indefinite article."
-            );
-            return;
-          }
-
-          if (
-            !subsequentOutputUnit.selectedWord
-              .surprisinglyStartsWithConsonantSound &&
-            (subsequentOutputUnit.selectedWord
-              .surprisinglyStartsWithVowelSound ||
-              (typeof subsequentOutputUnit.selectedWord === "string" &&
-                /^[aeiou]/.test(subsequentOutputUnit.selectedWord[0])))
-          ) {
-            pushSelectedWordToArray(
-              "protective",
-              selectedWord,
-              selectedWordsArr,
-              firstStageAnnotationsObj,
-              structureChunk
-            );
-            return;
-          } else {
-            pushSelectedWordToArray(
-              "nonprotective",
-              selectedWord,
-              selectedWordsArr,
-              firstStageAnnotationsObj,
-              structureChunk
-            );
-            return;
-          }
-        }
-      }
-
-      //Move to polUtils.selectWordVersions() //zeta
-      if (currentLanguage === "POL") {
-        if (
-          gpUtils.getWordtypeFromLemmaObject(selectedLemmaObject) === "pronoun"
-        ) {
-          // >>>
-          // >>> Pronoun: post-prepositional
-          // >>>
-          if (
-            previousOutputUnit &&
-            gpUtils.getWordtypeFromLemmaObject(
-              previousOutputUnit.selectedLemmaObject
-            ) === "preposition"
-          ) {
-            pushSelectedWordToArray(
-              "postPreposition",
-              selectedWord,
-              selectedWordsArr,
-              firstStageAnnotationsObj,
-              structureChunk
-            );
-            return;
-          } else {
-            // >>>
-            // >>> Pronoun: stressed or unstressed
-            // >>>
-
-            let combinedSelectedWordsArr = [];
-
-            if (multipleMode) {
-              combinedSelectedWordsArr = [
-                ...combinedSelectedWordsArr,
-                ...selectedWord.unstressed,
-              ];
-              combinedSelectedWordsArr = [
-                ...combinedSelectedWordsArr,
-                ...selectedWord.stressed,
-              ];
-            } else {
-              combinedSelectedWordsArr = [
-                ...combinedSelectedWordsArr,
-                ...selectedWord.unstressed,
-              ];
-            }
-
-            pushSelectedWordToArray(
-              "array",
-              combinedSelectedWordsArr,
-              selectedWordsArr,
-              firstStageAnnotationsObj,
-              structureChunk
-            );
-            return;
-          }
-        }
-
-        if (
-          gpUtils.getWordtypeFromLemmaObject(selectedLemmaObject) ===
-          "preposition"
-        ) {
-          if (!subsequentOutputUnit) {
-            clUtils.throw(
-              "mcob selectWordVersions Shouldn't there be an outputUnit subsequent to this POL preposition?"
-            );
-          }
-
-          console.log(
-            "pxlz selectWordVersions test subsequentOutputUnit.selectedWord for following prefixes.",
-            {
-              "subsequentOutputUnit.selectedWord":
-                subsequentOutputUnit.selectedWord,
-            }
-          );
-
-          if (
-            selectedWord.protectIfSubsequentStartsWithTheseRegexes &&
-            selectedWord.protectIfSubsequentStartsWithTheseRegexes.some(
-              (prefix) => {
-                console.log("spez selectWordVersions", { prefix });
-
-                let prefixRegex = RegExp("^" + prefix);
-                return prefixRegex.test(subsequentOutputUnit.selectedWord);
-              }
-            )
-          ) {
-            pushSelectedWordToArray(
-              "protective",
-              selectedWord,
-              selectedWordsArr,
-              firstStageAnnotationsObj,
-              structureChunk
-            );
-            return;
-          } else {
-            pushSelectedWordToArray(
-              "nonprotective",
-              selectedWord,
-              selectedWordsArr,
-              firstStageAnnotationsObj,
-              structureChunk
-            );
-            return;
-          }
-        }
-
-        pushSelectedWordToArray(
-          "normal",
+      if (
+        langUtils.selectWordVersions(
+          structureChunk,
+          subsequentOutputUnit,
           selectedWord,
           selectedWordsArr,
           firstStageAnnotationsObj,
-          structureChunk
-        );
+          selectedLemmaObject,
+          previousOutputUnit,
+          multipleMode
+        )
+      ) {
+        return;
       }
     } else {
       clUtils.throw(
         "#ERR oilf selectWordVersions. I expected either a string or a terminus object for this selectedWord."
-      );
-    }
-
-    function pushSelectedWordToArray(
-      key,
-      selectedWord,
-      selectedWordsArr,
-      annoObj,
-      structureChunk
-    ) {
-      console.log(
-        "[1;30m " + `esbq pushSelectedWordToArray-----------------with args:` + "[0m",
-        {
-          key,
-          selectedWord,
-          selectedWordsArr,
-          annoObj,
-        }
-      );
-
-      function addAnnotationsAndPush(
-        wordInOwnArr,
-        selectedWordsArr,
-        annoObj,
-        structureChunk
-      ) {
-        console.log("vprr addAnnotationsAndPush " + wordInOwnArr);
-        if (annoObj && Object.values(annoObj).length) {
-          if (wordInOwnArr.length !== 1) {
-            clUtils.throw(
-              `vpra #ERR addAnnotationsAndPush. To add annotation from [${Object.values(
-                annoObj
-              )}] but there are multiple/none selected words: [${wordInOwnArr}].`
-            );
-          }
-
-          console.log("vpre addAnnotationsAndPush. annoObj is " + annoObj);
-
-          if (structureChunk.educatorBlocksAnnotationsForTheseFeatures) {
-            console.log(
-              `vpri addAnnotationsAndPush will not add clarifiers [${Object.values(
-                annoObj
-              )}] as "educatorBlocksAnnotationsForTheseFeatures" true.`
-            );
-          } else {
-            console.log(
-              "vpro pushSelectedWordToArray addAnnotationsAndPush. Adding these annotations:" +
-                Object.values(annoObj).join(", ")
-            );
-
-            wordInOwnArr[0] += ` (${Object.values(annoObj).join(", ")})`;
-          }
-        } else {
-          console.log("vpru addAnnotationsAndPush. No annoObj");
-        }
-
-        selectedWordsArr.push(wordInOwnArr);
-      }
-
-      if (key === "string") {
-        console.log(
-          "[1;30m " + `uufy pushSelectedWordToArray Pushing "${selectedWord}"` + "[0m"
-        );
-
-        addAnnotationsAndPush(
-          [selectedWord],
-          selectedWordsArr,
-          annoObj,
-          structureChunk
-        );
-        return;
-      }
-
-      if (key === "array") {
-        console.log(
-          "[1;30m " + `uufy pushSelectedWordToArray Pushing "${selectedWord}"` + "[0m"
-        );
-        addAnnotationsAndPush(
-          selectedWord,
-          selectedWordsArr,
-          annoObj,
-          structureChunk
-        );
-        return;
-      }
-
-      if (!selectedWord[key]) {
-        clUtils.throw(
-          `#ERR rgxc selectWordVersions. Could not find key "${key}" on selectedWord.`
-        );
-      }
-
-      if (!Array.isArray(selectedWord[key])) {
-        console.log("vcxx selectWordVersions", {
-          selectedWord,
-          "selectedWord[key]": selectedWord[key],
-        });
-        clUtils.throw(
-          "vcxx selectWordVersions Value inside tobj should have been array."
-        );
-      }
-
-      if (!selectedWord[key]) {
-        clUtils.throw(
-          "#ERR ztgp selectWordVersions. selectedWord[key] was falsy."
-        );
-      }
-
-      console.log(
-        "[1;30m " + `oqij selectWordVersions Pushing arr "${selectedWord[key]}"` + "[0m"
-      );
-      addAnnotationsAndPush(
-        selectedWord[key],
-        selectedWordsArr,
-        annoObj,
-        structureChunk
       );
     }
 

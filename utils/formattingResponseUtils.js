@@ -123,3 +123,117 @@ exports.createOutputUnit = (
 
   return resultingOutputUnit;
 };
+
+exports.pushSelectedWordToArray = (
+  key,
+  selectedWord,
+  selectedWordsArr,
+  annoObj,
+  structureChunk
+) => {
+  console.log(
+    "[1;30m " + `esbq pushSelectedWordToArray-----------------with args:` + "[0m",
+    {
+      key,
+      selectedWord,
+      selectedWordsArr,
+      annoObj,
+    }
+  );
+
+  function addAnnotationsAndPush(
+    wordInOwnArr,
+    selectedWordsArr,
+    annoObj,
+    structureChunk
+  ) {
+    console.log("vprr addAnnotationsAndPush " + wordInOwnArr);
+    if (annoObj && Object.values(annoObj).length) {
+      if (wordInOwnArr.length !== 1) {
+        clUtils.throw(
+          `vpra #ERR addAnnotationsAndPush. To add annotation from [${Object.values(
+            annoObj
+          )}] but there are multiple/none selected words: [${wordInOwnArr}].`
+        );
+      }
+
+      console.log("vpre addAnnotationsAndPush. annoObj is " + annoObj);
+
+      if (structureChunk.educatorBlocksAnnotationsForTheseFeatures) {
+        console.log(
+          `vpri addAnnotationsAndPush will not add clarifiers [${Object.values(
+            annoObj
+          )}] as "educatorBlocksAnnotationsForTheseFeatures" true.`
+        );
+      } else {
+        console.log(
+          "vpro pushSelectedWordToArray addAnnotationsAndPush. Adding these annotations:" +
+            Object.values(annoObj).join(", ")
+        );
+
+        wordInOwnArr[0] += ` (${Object.values(annoObj).join(", ")})`;
+      }
+    } else {
+      console.log("vpru addAnnotationsAndPush. No annoObj");
+    }
+
+    selectedWordsArr.push(wordInOwnArr);
+  }
+
+  if (key === "string") {
+    console.log(
+      "[1;30m " + `uufy pushSelectedWordToArray Pushing "${selectedWord}"` + "[0m"
+    );
+
+    addAnnotationsAndPush(
+      [selectedWord],
+      selectedWordsArr,
+      annoObj,
+      structureChunk
+    );
+    return;
+  }
+
+  if (key === "array") {
+    console.log(
+      "[1;30m " + `uufy pushSelectedWordToArray Pushing "${selectedWord}"` + "[0m"
+    );
+    addAnnotationsAndPush(
+      selectedWord,
+      selectedWordsArr,
+      annoObj,
+      structureChunk
+    );
+    return;
+  }
+
+  if (!selectedWord[key]) {
+    clUtils.throw(
+      `#ERR rgxc selectWordVersions. Could not find key "${key}" on selectedWord.`
+    );
+  }
+
+  if (!Array.isArray(selectedWord[key])) {
+    console.log("vcxx selectWordVersions", {
+      selectedWord,
+      "selectedWord[key]": selectedWord[key],
+    });
+    clUtils.throw(
+      "vcxx selectWordVersions Value inside tobj should have been array."
+    );
+  }
+
+  if (!selectedWord[key]) {
+    clUtils.throw("#ERR ztgp selectWordVersions. selectedWord[key] was falsy.");
+  }
+
+  console.log(
+    "[1;30m " + `oqij selectWordVersions Pushing arr "${selectedWord[key]}"` + "[0m"
+  );
+  addAnnotationsAndPush(
+    selectedWord[key],
+    selectedWordsArr,
+    annoObj,
+    structureChunk
+  );
+};
