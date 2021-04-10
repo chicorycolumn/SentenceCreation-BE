@@ -1069,6 +1069,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "art-1",
         form: ["definite", "indefinite"],
         importantFeatures: ["form"],
+        preferredChoicesForQuestionSentence: { form: "indefinite" },
         connectedTo: "nou-1",
       },
       {

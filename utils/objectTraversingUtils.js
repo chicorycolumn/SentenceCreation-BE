@@ -658,10 +658,30 @@ exports.findMatchingLemmaObjectThenWord = (
         return false;
       }
 
-      // console.log(
-      //   "sfmo ot:findMatchingLemmaObjectThenWord subArrayOfOutputUnits"
-      // );
-      // clUtils.consoleLogObjectAtOneLevel(subArrayOfOutputUnits);
+      console.log(
+        "sfmo ot:findMatchingLemmaObjectThenWord subArrayOfOutputUnits"
+      );
+      clUtils.consoleLogObjectAtOneLevel(subArrayOfOutputUnits);
+
+      if (
+        structureChunk.preferredChoicesForQuestionSentence &&
+        Object.keys(structureChunk.preferredChoicesForQuestionSentence).length
+      ) {
+        Object.keys(structureChunk.preferredChoicesForQuestionSentence).forEach(
+          (traitKeyy) => {
+            let traitValyye =
+              structureChunk.preferredChoicesForQuestionSentence[traitKeyy];
+
+            subArrayOfOutputUnits = subArrayOfOutputUnits.filter(
+              (unit) =>
+                unit.drillPath &&
+                unit.drillPath.find(
+                  (drillPathSubArr) => drillPathSubArr[0] === traitKeyy
+                )[1] === traitValyye
+            );
+          }
+        );
+      }
 
       let unit = uUtils.selectRandom(subArrayOfOutputUnits);
       /**Why selran here? Because we're in Q mode.

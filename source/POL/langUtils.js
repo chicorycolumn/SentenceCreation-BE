@@ -40,23 +40,9 @@ exports.selectWordVersions = (
       // >>> Pronoun: stressed or unstressed
       // >>>
 
-      let combinedSelectedWordsArr = [];
-
-      if (multipleMode) {
-        combinedSelectedWordsArr = [
-          ...combinedSelectedWordsArr,
-          ...selectedWord.unstressed,
-        ];
-        combinedSelectedWordsArr = [
-          ...combinedSelectedWordsArr,
-          ...selectedWord.stressed,
-        ];
-      } else {
-        combinedSelectedWordsArr = [
-          ...combinedSelectedWordsArr,
-          ...selectedWord.unstressed,
-        ];
-      }
+      let combinedSelectedWordsArr = multipleMode
+        ? [...selectedWord.unstressed, ...selectedWord.stressed]
+        : [...selectedWord.unstressed];
 
       frUtils.pushSelectedWordToArray(
         "array",

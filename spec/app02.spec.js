@@ -2682,27 +2682,14 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
-          //Gamma: Change so that solely indefinite is generated as Q sent, but both used as A sent?
           let ref = [
-            {
-              ENG: "With the apple.",
-              POL: ["Z jabłkiem."],
-            },
             {
               ENG: "With an apple.",
               POL: ["Z jabłkiem."],
             },
             {
-              ENG: "With the tomato.",
-              POL: ["Z pomidorem."],
-            },
-            {
               ENG: "With a tomato.",
               POL: ["Z pomidorem."],
-            },
-            {
-              ENG: "With the onion.",
-              POL: ["Z cebulą."],
             },
             {
               ENG: "With an onion.",

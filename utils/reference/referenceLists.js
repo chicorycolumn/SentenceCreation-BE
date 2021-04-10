@@ -182,6 +182,9 @@ exports.structureChunkFeatures = {
     orTags: { expectedTypeOnStCh: "array" },
     form: { expectedTypeOnStCh: "array" },
     chunkId: { expectedTypeOnStCh: "string" },
+    preferredChoicesForQuestionSentence: {
+      expectedTypeOnStCh: "keyValueObject",
+    },
     wordtype: {
       expectedTypeOnStCh: "string",
       possibleValues: [
