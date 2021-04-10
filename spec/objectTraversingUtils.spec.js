@@ -891,7 +891,7 @@ describe("concoctNestedRoutes", () => {
   });
 });
 
-describe("extractNestedRoutes", () => {
+describe.only("extractNestedRoutes", () => {
   it("#otu1.1a Returns empty array for empty object.", () => {
     const input = {};
     const expected = {
@@ -1025,8 +1025,24 @@ describe("extractNestedRoutes", () => {
       },
     };
 
-    let res = giveRoutesAndTerminalValuesFromObject(input.inflections);
-    console.log(res);
+    let expected = [
+      { terminalValue: "kobieta", nestedRoute: ["singular", "nom"] },
+      { terminalValue: "kobiety", nestedRoute: ["singular", "gen"] },
+      { terminalValue: "kobiecie", nestedRoute: ["singular", "dat"] },
+      { terminalValue: "kobietę", nestedRoute: ["singular", "acc"] },
+      { terminalValue: "kobietą", nestedRoute: ["singular", "ins"] },
+      { terminalValue: "kobiecie", nestedRoute: ["singular", "loc"] },
+      { terminalValue: "kobiety", nestedRoute: ["plural", "nom"] },
+      { terminalValue: "kobiet", nestedRoute: ["plural", "gen"] },
+      { terminalValue: "kobietom", nestedRoute: ["plural", "dat"] },
+      { terminalValue: "kobiety", nestedRoute: ["plural", "acc"] },
+      { terminalValue: undefined, nestedRoute: ["plural", "ins"] },
+      { terminalValue: "kobietach", nestedRoute: ["plural", "loc"] },
+    ];
+
+    let actual = giveRoutesAndTerminalValuesFromObject(input.inflections);
+    console.log(actual);
+    expect(actual).to.eql(expected);
   });
   it("#otu1.2b get routes from read.", () => {
     const input = {
@@ -1046,6 +1062,70 @@ describe("extractNestedRoutes", () => {
         v3: "read",
         thirdPS: "reads",
         gerund: "reading",
+      },
+    };
+
+    let expected = [
+      { terminalValue: "read", nestedRoute: ["infinitive"] },
+      { terminalValue: "read", nestedRoute: ["v2"] },
+      { terminalValue: "read", nestedRoute: ["v3"] },
+      { terminalValue: "reads", nestedRoute: ["thirdPS"] },
+      { terminalValue: "reading", nestedRoute: ["gerund"] },
+    ];
+
+    let actual = giveRoutesAndTerminalValuesFromObject(input.inflections);
+    console.log(actual);
+    expect(actual).to.eql(expected);
+  });
+  it("#otu1.2b get routes from read.", () => {
+    const input = {
+      //links
+      translations: { ENG: ["read"], POL: ["czytać", "przeczytać"] },
+      tags: ["basic2"],
+      //selectors
+      lemma: "read",
+      id: "eng-ver-003",
+      //notes
+
+      //inflections
+      inflections: {
+        infinitive: "read",
+        verbal: {},
+        v2: "read",
+        v3: "read",
+        thirdPS: "reads",
+        gerund: "reading",
+      },
+    };
+
+    let expected = [
+      { terminalValue: "read", nestedRoute: ["infinitive"] },
+      { terminalValue: "read", nestedRoute: ["v2"] },
+      { terminalValue: "read", nestedRoute: ["v3"] },
+      { terminalValue: "reads", nestedRoute: ["thirdPS"] },
+      { terminalValue: "reading", nestedRoute: ["gerund"] },
+    ];
+
+    let actual = giveRoutesAndTerminalValuesFromObject(input.inflections);
+    console.log(actual);
+    expect(actual).to.eql(expected);
+  });
+  xit("#otu1.3a get routes from tObj.", () => {
+    const input = {
+      //links
+      translations: { ENG: ["read"], POL: ["czytać", "przeczytać"] },
+      tags: ["basic2"],
+      //selectors
+      lemma: "read",
+      id: "eng-ver-003",
+      //notes
+
+      //inflections
+      inflections: {
+        isTerminus: true,
+        processOnlyAtEnd: true,
+        nonprotective: ["wib"],
+        protective: ["wob"],
       },
     };
 

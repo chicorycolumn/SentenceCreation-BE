@@ -74,7 +74,7 @@ exports.findHomographs = (testing, currentLanguage, homographType, ignore) => {
   }
 
   const wordsBank = educatorUtils.getWordsBank(currentLanguage, testing);
-  const langUtils = require(`../source/${currentLanguage}/langUtils.js`);
+  const langUtils = require(`../../source/${currentLanguage}/langUtils.js`);
 
   let recordOfTerminalValuesAndPaths = [];
   let severallyAppearingTerminalValuesArr = [];
@@ -104,6 +104,8 @@ exports.findHomographs = (testing, currentLanguage, homographType, ignore) => {
       });
     });
   });
+
+  console.log("recordOfTerminalValuesAndPaths", recordOfTerminalValuesAndPaths);
 
   recordOfTerminalValuesAndPaths.forEach((unit) => {
     let { terminalValue } = unit;
@@ -271,10 +273,12 @@ exports.checkSentenceFormulaIds = (testing, currentLanguage) => {
 
 exports.getWordsBank = (currentLanguage, testing) => {
   if (!testing) {
-    const { wordsBank } = require(`../source/${currentLanguage}/words.js`);
+    const { wordsBank } = require(`../../source/${currentLanguage}/words.js`);
     return wordsBank;
   } else {
-    const { wordsBank } = require(`../source/TEST/${currentLanguage}/words.js`);
+    const {
+      wordsBank,
+    } = require(`../../source/TEST/${currentLanguage}/words.js`);
     return wordsBank;
   }
 };
@@ -283,12 +287,12 @@ exports.getSentenceFormulasBank = (currentLanguage, testing) => {
   if (!testing) {
     const {
       sentenceFormulasBank,
-    } = require(`../source/${currentLanguage}/sentenceFormulas.js`);
+    } = require(`../../source/${currentLanguage}/sentenceFormulas.js`);
     return sentenceFormulasBank;
   } else {
     const {
       sentenceFormulasBank,
-    } = require(`../source/TEST/${currentLanguage}/sentenceFormulas.js`);
+    } = require(`../../source/TEST/${currentLanguage}/sentenceFormulas.js`);
     return sentenceFormulasBank;
   }
 };

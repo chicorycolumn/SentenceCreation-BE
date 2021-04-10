@@ -275,6 +275,40 @@ let adjectiveSet = [
   },
   {
     //links
+    translations: { ENG: ["wibbly"], POL: ["łybli"] },
+    tags: ["wibbly"],
+    //selectors
+    lemma: "wibbly",
+    id: "eng-adj-100",
+    //notes
+
+    //inflections
+    inflections: {
+      isTerminus: true,
+      processOnlyAtEnd: true,
+      nonprotective: ["wib"],
+      protective: ["wob"],
+    },
+  },
+  {
+    //links
+    translations: { ENG: ["wobbly"], POL: ["łobli"] },
+    tags: ["wobbly"],
+    //selectors
+    lemma: "wobbly",
+    id: "eng-adj-101",
+    //notes
+
+    //inflections
+    inflections: {
+      isTerminus: true,
+      processOnlyAtEnd: true,
+      nonprotective: ["wob"],
+      protective: ["wobb"],
+    },
+  },
+  {
+    //links
     translations: { ENG: ["fast"], POL: ["mocno"] },
     tags: ["fitting"],
     //selectors

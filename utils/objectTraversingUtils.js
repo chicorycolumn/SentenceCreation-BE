@@ -687,6 +687,8 @@ exports.findMatchingLemmaObjectThenWord = (
       /**Why selran here? Because we're in Q mode.
        * So if matka and matki are possibles, then of course we must choose one for the one Q sentence,
        * so ultimately Q sentence is "Matki dały mi støł." but it could have equally been "Matka dała mi støł."
+       *
+       * But see above, we can take preferredChoicesForQuestionSentence from stCh into account.
        */
 
       //eg subArrayOfOutputUnits [{
