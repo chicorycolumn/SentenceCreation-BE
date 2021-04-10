@@ -1339,6 +1339,7 @@ exports.dummySentenceFormulasBank = [
         person: ["1per"],
         number: ["singular"],
         gcase: ["nom"],
+        gender: [],
       },
       {
         chunkId: "ver-1",

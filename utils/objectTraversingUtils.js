@@ -550,7 +550,7 @@ exports.findMatchingLemmaObjectThenWord = (
               gpUtils.isTerminusObject(selectedWord) &&
               !selectedWord.processOnlyAtEnd
             ) {
-              console.log(
+              clUtils.throw(
                 "zjnv ot:findMatchingLemmaObjectThenWord Natasha, action here required."
               );
             }
@@ -654,54 +654,117 @@ exports.findMatchingLemmaObjectThenWord = (
       );
 
       if (!subArrayOfOutputUnits || !subArrayOfOutputUnits.length) {
-        console.log("uyie");
+        console.log("uyie !subArrayOfOutputUnits/length");
         return false;
       }
 
-      console.log(
-        "mrnp ot:findMatchingLemmaObjectThenWord subArrayOfOutputUnits",
-        subArrayOfOutputUnits
-      );
+      // console.log(
+      //   "sfmo ot:findMatchingLemmaObjectThenWord subArrayOfOutputUnits"
+      // );
+      // clUtils.consoleLogObjectAtOneLevel(subArrayOfOutputUnits);
 
-      // //P D S X 3 -red
-      // // If the outputunits differ only in gender, and p'leaseDontSpecifyPronounGender is true,
-      // // then merge the outputunits, so ENG Q "I wrote" can be POL A ["Napisałem.", "Napisałam."]
+      let unit = uUtils.selectRandom(subArrayOfOutputUnits);
+      /**Why selran here? Because we're in Q mode.
+       * So if matka and matki are possibles, then of course we must choose one for the one Q sentence,
+       * so ultimately Q sentence is "Matki dały mi støł." but it could have equally been "Matka dała mi støł."
+       */
 
-      // //The structureChunk is definitely QstCh because we're inside !multipleMode clause.
-      // if (
-      //   false &&
-      //   structureChunk.dontSpecifyOnThisChunk &&
-      //   otUtils.doDrillPathsDifferOnlyByGender(subArrayOfOutputUnits)
-      // ) {
-      //   console.log(
-      //     "[1;30m " +
-      //       `-----------------------------------------------------------------------------------------------------------------------------------PDSred` +
-      //       "[0m"
-      //   );
-      //   console.log("kpos PDSred subArrayOfOutputUnits before adjustment.");
-      //   subArrayOfOutputUnits.forEach((x) => {
-      //     console.log(x);
-      //   });
+      //eg subArrayOfOutputUnits [{
+      //   selectedWordArray: [ 'I' ],
+      //   drillPath: [
+      //     [ 'form', 'pronoun' ],
+      //     [ 'person', '1per' ],
+      //     [ 'number', 'singular' ],
+      //     [ 'gender', 'm' ],
+      //     [ 'gcase', 'nom' ]
+      //   ],
+      //   errorInDrilling: false
+      // },
+      // {
+      //   selectedWordArray: [ 'I' ],
+      //   drillPath: [
+      //     [ 'form', 'pronoun' ],
+      //     [ 'person', '1per' ],
+      //     [ 'number', 'singular' ],
+      //     [ 'gender', 'f' ],
+      //     [ 'gcase', 'nom' ]
+      //   ],
+      //   errorInDrilling: false
+      // }]
 
-      //   let mergedGenderOutputUnit = frUtils.createMergedGenderOutputUnit(
-      //     subArrayOfOutputUnits,
-      //     currentLanguage
-      //   );
+      //eg [{
+      //   selectedWordArray: [ 'the' ],
+      //   drillPath: [ [ 'form', 'definite' ] ],
+      //   errorInDrilling: false
+      // },
+      // {
+      //   selectedWordArray: [
+      //     {
+      //       isTerminus: true,
+      //       processOnlyAtEnd: true,
+      //       nonprotective: [Array],
+      //       protective: [Array]
+      //     }
+      //   ],
+      //   drillPath: [ [ 'form', 'indefinite' ] ],
+      //   errorInDrilling: false
+      // }]
 
-      //   subArrayOfOutputUnits = [mergedGenderOutputUnit];
+      //eg [{
+      //   selectedWordArray: [ 'matka' ],
+      //   drillPath: [ [ 'number', 'singular' ], [ 'gcase', 'nom' ] ],
+      //   errorInDrilling: false
+      // },
+      // {
+      //   selectedWordArray: [ 'matki' ],
+      //   drillPath: [ [ 'number', 'plural' ], [ 'gcase', 'nom' ] ],
+      //   errorInDrilling: false
+      // }]
 
-      //   console.log("cxmo PDSred subArrayOfOutputUnits after adjustment.");
-      //   subArrayOfOutputUnits.forEach((x) => {
-      //     console.log(x);
-      //   });
-      // }
-
-      console.log(
-        "sfmo ot:findMatchingLemmaObjectThenWord subArrayOfOutputUnits"
-      );
-      clUtils.consoleLogObjectAtOneLevel(subArrayOfOutputUnits);
-
-      let unit = uUtils.selectRandom(subArrayOfOutputUnits); //epsilon - What is this selran doing?
+      //eg [{
+      //   selectedWordArray: [ 'I' ],
+      //   drillPath: [
+      //     [ 'form', 'pronoun' ],
+      //     [ 'person', '1per' ],
+      //     [ 'number', 'singular' ],
+      //     [ 'gender', 'm' ],
+      //     [ 'gcase', 'nom' ]
+      //   ],
+      //   errorInDrilling: false
+      // },
+      // {
+      //   selectedWordArray: [ 'I' ],
+      //   drillPath: [
+      //     [ 'form', 'pronoun' ],
+      //     [ 'person', '1per' ],
+      //     [ 'number', 'singular' ],
+      //     [ 'gender', 'f' ],
+      //     [ 'gcase', 'nom' ]
+      //   ],
+      //   errorInDrilling: false
+      // },
+      // {
+      //   selectedWordArray: [ 'we' ],
+      //   drillPath: [
+      //     [ 'form', 'pronoun' ],
+      //     [ 'person', '1per' ],
+      //     [ 'number', 'plural' ],
+      //     [ 'gender', 'virile' ],
+      //     [ 'gcase', 'nom' ]
+      //   ],
+      //   errorInDrilling: false
+      // },
+      // {
+      //   selectedWordArray: [ 'we' ],
+      //   drillPath: [
+      //     [ 'form', 'pronoun' ],
+      //     [ 'person', '1per' ],
+      //     [ 'number', 'plural' ],
+      //     [ 'gender', 'nonvirile' ],
+      //     [ 'gcase', 'nom' ]
+      //   ],
+      //   errorInDrilling: false
+      // }]
 
       let {
         errorInDrilling,

@@ -268,8 +268,9 @@ exports.addLanguageParticularClarifiers = () => {
 
 exports.adjustStructureChunksInIfPW = (structureChunk) => {
   if (
-    (structureChunk.wordtype === "verb",
-    structureChunk.tenseDescription && structureChunk.tenseDescription.length)
+    structureChunk.wordtype === "verb" &&
+    structureChunk.tenseDescription &&
+    structureChunk.tenseDescription.length
   ) {
     return exports.adjustTenseDescriptions(structureChunk);
   }

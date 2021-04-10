@@ -733,6 +733,7 @@ exports.dummySentenceFormulasBank = [
         person: ["1per"],
         number: ["singular"],
         gcase: ["nom"],
+        gender: [],
       },
       {
         chunkId: "ver-1",
@@ -1203,12 +1204,6 @@ exports.dummySentenceFormulasBank = [
         chunkId: "art-1",
         wordtype: "article",
         form: ["definite", "indefinite"],
-        // importantFeatures: ["form"],
-
-        //Delta: But doesn't need to be done?
-
-        //Specifying Form as an important feature, because both Answer sentences must be created,
-        //so we must allow the both Form options above to remain, not be overwritten by Question formula.
         connectedTo: "nou-1",
       },
       {
