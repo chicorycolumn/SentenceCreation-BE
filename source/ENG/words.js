@@ -275,7 +275,7 @@ exports.wordsBank = {
       //selectors
       lemma: "doctor",
       id: "eng-npe-012",
-      gender: "allPersonalSingularGenders_selector",
+      gender: "allPersonalGenders_selector",
       //notes
 
       //inflections

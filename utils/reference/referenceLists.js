@@ -32,6 +32,61 @@ exports.incompatibleFeaturesRef = {
   },
 };
 
+exports.metaCorrectionRef = {
+  ENG: {
+    gender: [
+      {
+        condition: { number: "singular" },
+        changeRef: {
+          allGenders: "allSingularGenders",
+          allSingularGenders: "allSingularGenders",
+          allPluralGenders: false,
+          allPersonalGenders: "allPersonalSingularGenders",
+          allPersonalSingularGenders: "allPersonalSingularGenders",
+          allPersonalPluralGenders: false,
+        },
+      },
+      {
+        condition: { number: "plural" },
+        changeRef: {
+          allGenders: "allPluralGenders",
+          allSingularGenders: false,
+          allPluralGenders: "allPluralGenders",
+          allPersonalGenders: "allPersonalPluralGenders",
+          allPersonalSingularGenders: false,
+          allPersonalPluralGenders: "allPersonalPluralGenders",
+        },
+      },
+    ],
+  },
+  POL: {
+    gender: [
+      {
+        condition: { number: "singular" },
+        changeRef: {
+          allGenders: "allSingularGenders",
+          allSingularGenders: "allSingularGenders",
+          allPluralGenders: false,
+          allPersonalGenders: "allPersonalSingularGenders",
+          allPersonalSingularGenders: "allPersonalSingularGenders",
+          allPersonalPluralGenders: false,
+        },
+      },
+      {
+        condition: { number: "plural" },
+        changeRef: {
+          allGenders: "allPluralGenders",
+          allSingularGenders: false,
+          allPluralGenders: "allPluralGenders",
+          allPersonalGenders: "allPersonalPluralGenders",
+          allPersonalSingularGenders: false,
+          allPersonalPluralGenders: "allPersonalPluralGenders",
+        },
+      },
+    ],
+  },
+};
+
 exports.metaFeatures = {
   ENG: {
     gender: {

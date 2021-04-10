@@ -74,7 +74,7 @@ exports.fetchPalette = (req) => {
 
       if (
         //bostonX
-        gpUtils.getWorrdtypeStCh(qChunk) === "noun-person" &&
+        gpUtils.getWorrdtypeStCh(qChunk, true) === "noun-person" &&
         questionSentenceFormula.sentenceStructure.find(
           (potentialDepChunk) =>
             gpUtils.getWorrdtypeStCh(potentialDepChunk) === "pronoun" &&
@@ -94,7 +94,7 @@ exports.fetchPalette = (req) => {
           ENG: ["m", "f", "n"],
         };
 
-        if (gpUtils.getWorrdtypeStCh(qChunk) === "noun-person") {
+        if (gpUtils.getWorrdtypeStCh(qChunk, true) === "noun-person") {
           //bostonX
           if (
             !allGenderValuesForPersonNouns[questionLanguage].every((value) =>

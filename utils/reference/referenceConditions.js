@@ -78,7 +78,7 @@ exports.postHocDependentChunkWordtypes = {
   POL: [
     {
       PHD_type: "POL possessive pronoun",
-      conditions: { wordtype: "pronoun", specificLemmas: ["POSSESSIVE"] },
+      conditions: { wordtype: ["pronoun"], specificLemmas: ["POSSESSIVE"] },
       inflectionChains: {
         postHocAgreeWithPrimary: ["form", "person", "number", "gender"],
         postHocAgreeWithSecondary: ["number", "gender", "gcase"],

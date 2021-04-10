@@ -9,7 +9,7 @@ const { it } = require("mocha");
 const testingUtils = require("../utils/secondOrder/testingUtils.js");
 const { generalTranslatedSentencesRef } = testingUtils;
 
-describe.only("/api", () => {
+describe("/api", () => {
   gpUtils.fillOutWashburneRefObj(
     generalTranslatedSentencesRef,
     "POL->ENG",
@@ -2531,7 +2531,7 @@ describe.only("/api", () => {
           expect(res.body.questionSentenceArr.length).to.equal(0);
         });
     });
-    xit("#pal01-02b GET 200 NO: Returns message to say no sentence could possibly be created from specifications. This fails when in DEV, as I put a throw. But in PROD the throw will be removed.", () => {
+    it("#pal01-02b GET 200 NO: Returns message to say no sentence could possibly be created from specifications. This fails when in DEV, as I put a throw. But in PROD the throw will be removed.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -2542,6 +2542,7 @@ describe.only("/api", () => {
         })
         .expect(200)
         .then((res) => {
+          console.log(res.body);
           expect([
             "No sentence could be created from the specifications in Q.",
             "No sentence could be created from the specifications in A.",

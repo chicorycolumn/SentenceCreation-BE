@@ -15,7 +15,7 @@ const { generalTranslatedSentencesRef } = testingUtils;
 // ProsMgn:        "My doctor and her book." Connected pronoun reveals gender of MGN. Doesn't need an annotation for doctor as clearly must be lekarka.
 // EdusMgn:        "My doctor is a man."     Educator specifies MGN's gender. Sentence where educator knows that this MGN will need no clarifying.
 
-describe("/api", function () {
+describe.only("/api", function () {
   this.timeout(5000);
 
   gpUtils.fillOutWashburneRefObj(
@@ -29,7 +29,7 @@ describe("/api", function () {
   // beforeEach(() => {});
 
   describe("/palette - Stage 17-i: Possessive pronouns and MGNs. Pre-testing.", () => {
-    it("#pal17-01a GET 200 YES: Engpol. MGN as sole word, annotation expected.", () => {
+    it.only("#pal17-01a GET 200 YES: Engpol. MGN as sole word, annotation expected.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1797,6 +1797,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          pleaseDontSpecify: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "117a I* was a doctor",
@@ -1990,6 +1991,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          pleaseDontSpecify: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "117aa I** was a doctor",

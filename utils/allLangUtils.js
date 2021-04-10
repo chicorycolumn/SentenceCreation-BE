@@ -202,7 +202,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
     if (gpUtils.getWorrdtypeStCh(structureChunk) === "pronoun") {
       if (structureChunk.agreeWith) {
         if (
-          gpUtils.getWorrdtypeAgree(structureChunk).split("-")[0] === "noun" &&
+          gpUtils.getWorrdtypeAgree(structureChunk) === "noun" &&
           (!structureChunk.person || !structureChunk.person.length)
         ) {
           structureChunk.person = ["3per"];
@@ -258,7 +258,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
 
       if (structureChunk.agreeWith) {
         if (
-          gpUtils.getWorrdtypeAgree(structureChunk).split("-")[0] === "noun" &&
+          gpUtils.getWorrdtypeAgree(structureChunk) === "noun" &&
           (!structureChunk.person || !structureChunk.person.length)
         ) {
           structureChunk.person = ["3per"];
@@ -440,7 +440,7 @@ exports.decantMGNsInOutputArray = (questionOutputArr, currentLanguage) => {
   console.log("[1;35m " + "/decantMGNsInOutputArray" + "[0m");
 };
 
-exports.decantMGNsBeforeFetchingOutputArray = (
+exports.decantMetaContainingChunksEgMGNsBeforeFetchingOutputArray = (
   structureChunk,
   selectedLemmaObject,
   currentLanguage
@@ -456,14 +456,33 @@ exports.decantMGNsBeforeFetchingOutputArray = (
     structureChunk["gender"] = [];
   }
 
+  function correctMetagenderInMGNs(
+    structureChunk,
+    selectedLemmaObject,
+    currentLanguag
+  ) {
+    let featureKey = "gender";
+
+    if (
+      selectedLemmaObject[featureKey] &&
+      selectedLemmaObject[featureKey].slice(0, 3) === "all"
+    ) {
+      //nownow
+    }
+  }
+
   if ("console") {
-    console.log("[1;35m " + "------------decantMGNsBeforeFetchingOutputArray" + "[0m");
     console.log(
-      "ubkc decantMGNsBeforeFetchingOutputArray At the start, structureChunk is:",
+      "[1;35m " +
+        "------------decantMetaContainingChunksEgMGNsBeforeFetchingOutputArray" +
+        "[0m"
+    );
+    console.log(
+      "ubkc decantMetaContainingChunksEgMGNsBeforeFetchingOutputArray At the start, structureChunk is:",
       structureChunk
     );
     console.log(
-      "ubkc decantMGNsBeforeFetchingOutputArray At the start, selectedLemmaObject is:",
+      "ubkc decantMetaContainingChunksEgMGNsBeforeFetchingOutputArray At the start, selectedLemmaObject is:",
       selectedLemmaObject
     );
   }
@@ -471,15 +490,21 @@ exports.decantMGNsBeforeFetchingOutputArray = (
   Object.keys(refObj.metaFeatures[currentLanguage]).forEach((featureKey) => {
     let metaFeatureRef = refObj.metaFeatures[currentLanguage][featureKey];
 
-    console.log("poyb decantMGNsBeforeFetchingOutputArray Clause 0", {
-      featureKey,
-      metaFeatureRef,
-    });
+    console.log(
+      "poyb decantMetaContainingChunksEgMGNsBeforeFetchingOutputArray Clause 0",
+      {
+        featureKey,
+        metaFeatureRef,
+      }
+    );
 
     if (structureChunk[featureKey]) {
-      console.log("eico decantMGNsBeforeFetchingOutputArray Clause 1", {
-        featureKey,
-      });
+      console.log(
+        "eico decantMetaContainingChunksEgMGNsBeforeFetchingOutputArray Clause 1",
+        {
+          featureKey,
+        }
+      );
       let featureValuesFromStChAndLObj = [...structureChunk[featureKey]];
       if (selectedLemmaObject[featureKey]) {
         featureValuesFromStChAndLObj.push(selectedLemmaObject[featureKey]);
@@ -499,16 +524,22 @@ exports.decantMGNsBeforeFetchingOutputArray = (
           }
         })
       ) {
-        console.log("nrvz decantMGNsBeforeFetchingOutputArray Clause 2", {
-          selectedMetaFeature,
-        });
+        console.log(
+          "nrvz decantMetaContainingChunksEgMGNsBeforeFetchingOutputArray Clause 2",
+          {
+            selectedMetaFeature,
+          }
+        );
         let adjustedFeatureValueArr = [
           ...metaFeatureRef[selectedMetaFeature.split("_")[0]],
         ];
 
-        console.log("ewoh decantMGNsBeforeFetchingOutputArray", {
-          adjustedFeatureValueArr,
-        });
+        console.log(
+          "ewoh decantMetaContainingChunksEgMGNsBeforeFetchingOutputArray",
+          {
+            adjustedFeatureValueArr,
+          }
+        );
 
         if (structureChunk[featureKey] && structureChunk[featureKey].length) {
           let featureValuesInBothStChAndAdjustedArr = structureChunk[
@@ -520,7 +551,7 @@ exports.decantMGNsBeforeFetchingOutputArray = (
           if (!featureValuesInBothStChAndAdjustedArr.length) {
             console.log(
               "[1;31m " +
-                `nzig WARNING decantMGNsBeforeFetchingOutputArray. The featureValues for "${featureKey}" on stCh ${structureChunk.chunkId} were such that none matched any value in adjusted array.` +
+                `nzig WARNING decantMetaContainingChunksEgMGNsBeforeFetchingOutputArray. The featureValues for "${featureKey}" on stCh ${structureChunk.chunkId} were such that none matched any value in adjusted array.` +
                 "[0m"
             );
           }
@@ -534,17 +565,22 @@ exports.decantMGNsBeforeFetchingOutputArray = (
           ];
         }
 
-        console.log("jwgf decantMGNsBeforeFetchingOutputArray ", {
-          "structureChunk[featureKey]": structureChunk[featureKey],
-        });
+        console.log(
+          "jwgf decantMetaContainingChunksEgMGNsBeforeFetchingOutputArray ",
+          {
+            "structureChunk[featureKey]": structureChunk[featureKey],
+          }
+        );
       }
     }
 
     console.log(
-      "nqya decantMGNsBeforeFetchingOutputArray  In the end, structureChunk is:",
+      "nqya decantMetaContainingChunksEgMGNsBeforeFetchingOutputArray  In the end, structureChunk is:",
       structureChunk
     );
   });
 
-  console.log("[1;35m " + "/decantMGNsBeforeFetchingOutputArray" + "[0m");
+  console.log(
+    "[1;35m " + "/decantMetaContainingChunksEgMGNsBeforeFetchingOutputArray" + "[0m"
+  );
 };

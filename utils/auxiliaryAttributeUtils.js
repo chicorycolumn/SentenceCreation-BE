@@ -212,6 +212,8 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         )
       );
 
+      console.log("veem", counterfactualValuesForThisFeature);
+      //ACX3: eg If plural then remove m, f. If person, remove n.
       let pseudoStCh = {};
       pseudoStCh[annoKey] = counterfactualValuesForThisFeature;
       counterfactualValuesForThisFeature = refFxn.removeIncompatibleFeatures(
@@ -219,7 +221,8 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         questionOutputUnit.structureChunk,
         pseudoStCh
       )[annoKey];
-
+      console.log("veen", counterfactualValuesForThisFeature);
+      clUtils.throw(334);
       console.log(
         `myxe removeAnnotationsByCounterfax FOREACH START. Examining ${questionOutputUnit.structureChunk.chunkId}'s annotation ${annoKey} = ${annoValue} so the counterfactual values are [${counterfactualValuesForThisFeature}].`
       );
@@ -309,19 +312,19 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           )}].` +
           "[0m"
       );
-      console.log(
-        "[1;33m" +
-          `${arrayOfCounterfactualResultsForThisAnnotation.map(
-            (counterfactual, CFindex) =>
-              counterfactual.answerSentenceData.answerOutputArrays.map(
-                (outputArr, AOAindex) =>
-                  `\nanswerOutputArray ${CFindex}.${AOAindex} = [${outputArr.map(
-                    (unit) => unit.selectedWord
-                  )}]`
-              )
-          )}` +
-          "[0m"
-      );
+
+      if ("console") {
+        let logToConsole = arrayOfCounterfactualResultsForThisAnnotation.map(
+          (counterfactual, CFindex) =>
+            counterfactual.answerSentenceData.answerOutputArrays.map(
+              (outputArr, AOAindex) =>
+                `\nanswerOutputArray ${CFindex}.${AOAindex} = [${outputArr.map(
+                  (unit) => unit.selectedWord
+                )}]`
+            )
+        );
+        console.log("[1;33m" + `${logToConsole}` + "[0m");
+      }
 
       let counterfactualQuestionSelectedWordsSets = arrayOfCounterfactualResultsForThisAnnotation.map(
         (counterfactual) =>
@@ -666,9 +669,7 @@ exports.addSpecifiersToMGNs = (
   languagesObj
 ) => {
   let { questionOutputArr } = questionSentenceData;
-
   let { answerOutputArr } = answerSentenceData;
-
   let { questionLanguage, answerLanguage } = languagesObj;
   const questionLangUtils = require(`../source/${questionLanguage}/langUtils.js`);
   const answerLangUtils = require(`../source/${answerLanguage}/langUtils.js`);
@@ -1007,15 +1008,6 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
         structureChunk,
         questionLanguage
       );
-
-      // if (!synhomographData) {
-      //   console.log("[1;35m " + `uhqr addClarifiers No synhomographData` + "[0m");
-      // } else {
-      //   console.log(
-      //     "[1;35m " + `uhqr addClarifiers Yes synhomographData.synhomographs` + "[0m",
-      //     synhomographData.synhomographs
-      //   );
-      // }
 
       if (synhomographData) {
         synhomographData.synhomographs.forEach((synhomDataUnit) => {

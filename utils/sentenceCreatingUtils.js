@@ -631,13 +631,13 @@ exports.giveFinalSentences = (
 
   if (answerLanguage) {
     clUtils.consoleLogObjectAtTwoLevels(
-      sentenceData.questionOutputArr,
+      questionOutputArr,
       "sentenceData.questionOutputArr",
       "giveFinal"
     );
 
     aaUtils.firstStageEvaluateAnnotations(
-      sentenceData.questionOutputArr,
+      questionOutputArr,
       { answerLanguage, questionLanguage: currentLanguage },
       answerSentenceData,
       questionSentenceFormula,
@@ -977,7 +977,7 @@ exports.conformAnswerStructureToQuestionStructure = (
     //Do actually transfer gender, for person nouns.
     if (
       gpUtils.getWorrdtypeStCh(questionStructureChunk) === "noun" &&
-      gpUtils.getWorrdtypeStCh(questionStructureChunk) === "noun-person"
+      gpUtils.getWorrdtypeStCh(questionStructureChunk, true) === "noun-person"
     ) {
       adjustAndAddFeaturesToAnswerChunk(
         questionStructureChunk,

@@ -13,7 +13,14 @@ exports.filterWithin_PHD = (
   multipleMode,
   outputArray
 ) => {
-  console.log("pebb");
+  console.log("pebb", {
+    lemmaObject,
+    PHDstructureChunk,
+    currentLanguage,
+    multipleMode,
+  });
+
+  PHDstructureChunk["wordtype"] = gpUtils.getWorrdtypeStCh(PHDstructureChunk);
 
   let drillPath = [];
   let drillPathSecondary = [];
@@ -27,23 +34,22 @@ exports.filterWithin_PHD = (
     (PHD_dataObj) => {
       if (
         Object.keys(PHD_dataObj.conditions).every((PHD_conditionKey) => {
-          let PHD_conditionValue = PHD_dataObj.conditions[PHD_conditionKey];
+          let PHD_conditionValueArr = PHD_dataObj.conditions[PHD_conditionKey];
 
           if (
-            Array.isArray(PHD_conditionValue) &&
-            PHD_conditionValue.every(
-              (arrayItem) =>
+            PHD_conditionValueArr.some((arrayItem) => {
+              if (
                 PHDstructureChunk[PHD_conditionKey] &&
+                Array.isArray(PHDstructureChunk[PHD_conditionKey]) &&
                 PHDstructureChunk[PHD_conditionKey].includes(arrayItem)
-            )
+              ) {
+                return true;
+              } else if (PHDstructureChunk[PHD_conditionKey] === arrayItem) {
+                return true;
+              }
+            })
           ) {
             return true;
-          } else if (
-            PHDstructureChunk[PHD_conditionKey] === PHD_conditionValue
-          ) {
-            return true;
-          } else {
-            return false;
           }
         })
       ) {
@@ -51,6 +57,8 @@ exports.filterWithin_PHD = (
       }
     }
   );
+
+  delete PHDstructureChunk["wordtype"];
 
   if ("check") {
     if (!PHD_type) {
@@ -149,9 +157,8 @@ exports.filterWithin_PHD = (
     }
 
     if (
-      gpUtils
-        .getWorrdtypeAgree(PHDstructureChunk, postHocAgreeWithKey)
-        .split("-")[0] === "noun"
+      gpUtils.getWorrdtypeAgree(PHDstructureChunk, postHocAgreeWithKey) ===
+      "noun"
     ) {
       let personArr = drillPathOfHead.find((arr) => arr[0] === "person");
 
@@ -795,10 +802,36 @@ exports.filterByKey = (
     currentLanguage
   );
 
+  let additionalRequirementArrayValues = [];
+
+  requirementArray.forEach((reqValue) => {
+    if (reqValue.slice(0, 3) === "all") {
+      let convertedMetaValues =
+        refObj.metaFeatures[currentLanguage][key][reqValue];
+
+      if (convertedMetaValues) {
+        additionalRequirementArrayValues = [
+          ...additionalRequirementArrayValues,
+          ...convertedMetaValues,
+        ];
+      }
+    }
+  });
+
+  additionalRequirementArrayValues = Array.from(
+    new Set(additionalRequirementArrayValues)
+  );
+
+  requirementArray = [...requirementArray, ...additionalRequirementArrayValues];
+
+  console.log("wdet filterByKey. requirementArray", requirementArray);
+
   //And finally, do said filter.
   if (requirementArray.length) {
     return lemmaObjectArr.filter((lObj) => {
       let lObjSelectorValues = [lObj[key], lObj[key].split("_")[0]];
+
+      console.log("wdeu . lObjSelectorValues", lObjSelectorValues);
 
       if (key === "gender") {
         structureChunk.number.forEach((numberValue) => {
@@ -806,6 +839,17 @@ exports.filterByKey = (
             refObj.pluralVirilityAndSingularConversionRef[currentLanguage][
               numberValue
             ][lObj[key]];
+
+          console.log({
+            currentLanguage,
+            numberValue,
+            key,
+            "lObj[key]": lObj[key],
+          });
+          console.log(
+            "wdee . extraVirilityConvertedValues",
+            extraVirilityConvertedValues
+          );
 
           if (extraVirilityConvertedValues) {
             lObjSelectorValues = [
@@ -815,6 +859,8 @@ exports.filterByKey = (
           }
         });
       }
+
+      console.log("wdev . lObjSelectorValues", lObjSelectorValues);
 
       return lObjSelectorValues.some((lObjSelectorValue) =>
         requirementArray.includes(lObjSelectorValue)
