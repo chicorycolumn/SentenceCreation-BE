@@ -105,11 +105,15 @@ exports.lemmaObjectFeatures = {
       "noun-person": ["number", "gcase", "gender"], //BOSTON0
       "noun-proper": ["number", "gcase"],
       adjective: ["number", "gender", "gcase"],
-      verb: ["tense", "person", "number", "gender", "aspect"],
+      verb: [
+        "tense",
+        "person",
+        "number",
+        "gender",
+        "aspect",
+        "tenseDescription",
+      ],
       pronoun: ["person", "number", "gender", "gcase"],
-    },
-    inflectorKeysToRemoveAfterInheritingInheritables: {
-      verb: ["tenseDescription"],
     },
     allowableTransfersFromQuestionStructure: {
       noun: ["number"], //boston-?
@@ -144,9 +148,6 @@ exports.lemmaObjectFeatures = {
       adjective: [],
       verb: ["tense", "person", "number"],
       pronoun: ["person", "number", "gender", "gcase"],
-    },
-    inflectorKeysToRemoveAfterInheritingInheritables: {
-      //alpha should english too?
     },
     allowableTransfersFromQuestionStructure: {
       noun: ["number"], //boston-?
