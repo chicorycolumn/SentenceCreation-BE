@@ -184,7 +184,6 @@ exports.fetchPalette = (req) => {
     questionSentenceData.arrayOfOutputArrays[0];
   delete questionSentenceData.arrayOfOutputArrays;
 
-  //Alphaman Check if all stChs in Q formula have a corresponding outputunit. If not, throw.
   edUtils.checkOutputArrayForMissingUnits(
     questionSentenceData.sentenceFormula,
     questionSentenceData.questionOutputArr,

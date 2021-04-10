@@ -14,7 +14,7 @@ const {
   areTwoObjectsEqual,
 } = require("../utils/universalUtils.js");
 
-describe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual", () => {
+xdescribe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual", () => {
   it("A. Two singleton arrays in same order, strings. Equal.", () => {
     const input1 = [["my", "name", "is", "norbs"]];
     const input2 = [["my", "name", "is", "norbs"]];
@@ -1025,7 +1025,7 @@ describe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqu
   });
 });
 
-describe("areTwoObjectsEqual", () => {
+xdescribe("areTwoObjectsEqual", () => {
   it("True with flat objects.", () => {
     const input1 = { name: "Norbert", age: 30 };
     const input2 = { name: "Norbert", age: 30 };
@@ -1195,7 +1195,7 @@ describe("areTwoObjectsEqual", () => {
   });
 });
 
-describe("checkEachSequentialPairing", () => {
+xdescribe("checkEachSequentialPairing", () => {
   it("Empty positive a. Callback is oneStepCheck", () => {
     const inputArr = [];
     const inputAllowArrayOfZeroOrOne = true;
@@ -1466,7 +1466,7 @@ describe("checkEachSequentialPairing", () => {
   });
 });
 
-describe("arrayExploder", () => {
+xdescribe("arrayExploder", () => {
   it("Returns empty array when given empty array.", () => {
     const input = [];
     const expected = [];
@@ -1578,7 +1578,7 @@ describe("arrayExploder", () => {
   });
 });
 
-describe("combineAndExplodeTwoSuperArrays", () => {
+xdescribe("combineAndExplodeTwoSuperArrays", () => {
   it("Returns empty array when given two empty arrays.", () => {
     const input1 = [];
     const input2 = [];
@@ -1625,7 +1625,7 @@ describe("combineAndExplodeTwoSuperArrays", () => {
   });
 });
 
-describe("copyWithoutReference", () => {
+xdescribe("copyWithoutReference", () => {
   it("Returns empty object when given empty array.", () => {
     const input = {};
     const actual = copyWithoutReference(input);

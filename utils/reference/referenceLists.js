@@ -88,7 +88,7 @@ exports.lemmaObjectFeatures = {
       adjective: ["form", "number", "gender", "gcase"],
       verb: ["form", "tense", "person", "number", "gender"],
       pronoun: ["form", "person", "number", "gender", "gcase"],
-      //Beta
+      //BOSTON
       // pronounPERSONAL: ["form", "person", "number", "gender", "gcase"],
       // pronounPOSSESSIVE: ["form", "person", "number", "gender", "number", "gender", "gcase"],
       // article: NONE
@@ -398,7 +398,9 @@ exports.adhocForms = {
 };
 
 exports.wordtypeShorthandTranslation = {
-  nou: "noun",
+  nco: "nounCommon",
+  npe: "nounPerson",
+  npr: "nounProper",
   ver: "verb",
   adj: "adjective",
   adv: "adverb",

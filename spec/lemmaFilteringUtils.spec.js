@@ -5,7 +5,7 @@ const {
 
 const shouldConsoleLog = false;
 
-describe("traverseAndRecordInflections", () => {
+xdescribe("traverseAndRecordInflections", () => {
   let source = {
     infinitive: "czytać",
     verbal: {

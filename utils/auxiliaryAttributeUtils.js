@@ -234,7 +234,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             rawQuestionSentenceFormula
           );
 
-          //Alpha. Do we want to send updated question formula for counterfax run,
+          //(I). Do we want to send updated question formula for counterfax run,
           //or originalQuestionSentenceFormula ?
 
           gpUtils.updateSentenceFormulaWithNewStructureChunksFromOutputUnits(

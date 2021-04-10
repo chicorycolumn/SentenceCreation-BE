@@ -9,7 +9,7 @@ const {
   isThisValueUniqueAtThisLevelInLemmaObject,
 } = require("../utils/objectTraversingUtils.js");
 
-describe("isThisValueUniqueAtThisLevelInLemmaObject", () => {
+xdescribe("isThisValueUniqueAtThisLevelInLemmaObject", () => {
   let inputlObj1 = {
     //links
     translations: { ENG: ["PERSONAL"], POL: ["PERSONAL"] },
@@ -334,7 +334,7 @@ describe("isThisValueUniqueAtThisLevelInLemmaObject", () => {
   });
 });
 
-describe("findSynhomographs", () => {
+xdescribe("findSynhomographs", () => {
   it("#otu4.1 Produces empty array when no lemmaObjects with any synhomographs are given.", () => {
     const lobjArr = [
       {
@@ -654,7 +654,7 @@ describe("findSynhomographs", () => {
   });
 });
 
-describe("findObjectInNestedObject", () => {
+xdescribe("findObjectInNestedObject", () => {
   let testObj1 = {
     level01: {
       1: {
@@ -810,7 +810,7 @@ describe("findObjectInNestedObject", () => {
   });
 });
 
-describe("concoctNestedRoutes", () => {
+xdescribe("concoctNestedRoutes", () => {
   it("#otu2.1a Throw error for empty input.", () => {
     const input1 = [];
     const input2 = [];
@@ -891,7 +891,7 @@ describe("concoctNestedRoutes", () => {
   });
 });
 
-describe("extractNestedRoutes", () => {
+xdescribe("extractNestedRoutes", () => {
   it("#otu1.1a Returns empty array for empty object.", () => {
     const input = {};
     const expected = {
@@ -1168,7 +1168,7 @@ describe("extractNestedRoutes", () => {
   });
 });
 
-describe("findSinglePointMutationArray", () => {
+xdescribe("findSinglePointMutationArray", () => {
   it("#otu5.0 Give empty for empty", () => {
     let input_arrayOfArrays = [];
     let input_currentArray = [];
