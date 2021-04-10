@@ -904,18 +904,16 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
   const langUtils = require("../source/" + questionLanguage + "/langUtils.js");
 
   arrayOfOutputUnits.forEach((outputUnit) => {
-    let { structureChunk } = outputUnit;
-
-    if (gpUtils.getWorrdtypeStCh(structureChunk) === "fixed") {
-      return;
-    }
-
     let {
       selectedLemmaObject,
       drillPath,
       structureChunk,
       selectedWord,
     } = outputUnit;
+
+    if (gpUtils.getWorrdtypeStCh(structureChunk) === "fixed") {
+      return;
+    }
 
     if (!structureChunk.annotations) {
       structureChunk.annotations = {};

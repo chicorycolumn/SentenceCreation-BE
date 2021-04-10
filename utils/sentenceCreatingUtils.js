@@ -1172,6 +1172,12 @@ exports.inheritFromHeadToDependentChunk = (
   );
   console.log("w'dil inheritFromHeadToDependentChunk: headChunk", headChunk);
 
+  let inflectorKeysToRemoveAfterInheritingInheritables =
+    refObj.lemmaObjectFeatures[currentLanguage]
+      .inflectorKeysToRemoveAfterInheritingInheritables[
+      gpUtils.getWorrdtypeStCh(dependentChunk, true)
+    ] || [];
+
   let normalinheritableInflectorKeys =
     refObj.lemmaObjectFeatures[currentLanguage].inheritableInflectorKeys[
       gpUtils.getWorrdtypeStCh(dependentChunk, true)
@@ -1206,6 +1212,12 @@ exports.inheritFromHeadToDependentChunk = (
       dependentChunk[inflectorKey] = inflectorValueArr;
     }
   });
+
+  inflectorKeysToRemoveAfterInheritingInheritables.forEach(
+    (inflectorKeyToRemoveAfterInheritingInheritables) => {
+      delete dependentChunk[inflectorKeyToRemoveAfterInheritingInheritables];
+    }
+  );
 
   console.log(
     "ttez At the end of inheritFromHeadToDependentChunk, we must again adjustVirility, which we also did in allLangUtils.preprocessStructureChunks earlier."

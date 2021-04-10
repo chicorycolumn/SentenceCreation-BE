@@ -613,7 +613,6 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "ver-1",
-
         aspect: ["imperfective"],
         tenseDescription: ["present im", "past im"],
         andTags: ["basic2"],
@@ -625,7 +624,6 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "ver-2",
         agreeWith: "ver-1",
-
         aspect: ["imperfective"],
         tenseDescription: ["present im", "past im"],
         andTags: ["science"],

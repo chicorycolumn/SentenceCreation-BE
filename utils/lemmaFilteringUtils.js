@@ -669,16 +669,12 @@ exports.updateStChByInflections = (outputUnit, currentLanguage) => {
   }
 };
 
-exports.filterOutLackingLemmaObjects = (
-  sourceArr,
-  specObj,
-  currentLanguage
-) => {
+exports.filterOutLackingLemmaObjects = (sourceArr, stCh, currentLanguage) => {
   let inflectionChain =
     refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
-      gpUtils.getWorrdtypeLObj(specObj)
+      gpUtils.getWorrdtypeStCh(stCh)
     ];
-  let requirementArrs = inflectionChain.map((key) => specObj[key] || []);
+  let requirementArrs = inflectionChain.map((key) => stCh[key] || []);
 
   return sourceArr.filter((lObj) => {
     if (!lObj.lacking) {

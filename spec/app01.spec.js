@@ -9,7 +9,7 @@ const { it } = require("mocha");
 const testingUtils = require("../utils/secondOrder/testingUtils.js");
 const { generalTranslatedSentencesRef } = testingUtils;
 
-describe("/api", () => {
+describe.only("/api", () => {
   gpUtils.fillOutWashburneRefObj(
     generalTranslatedSentencesRef,
     "POL->ENG",
@@ -2328,7 +2328,7 @@ describe("/api", () => {
           console.log({ "RESULT: res.body:": res.body });
         });
     });
-    it("#pal04-07c GET 200 YES: Make two verbs agree when there is a choice of person, gender, and number.", () => {
+    it.only("#pal04-07c GET 200 YES: Make two verbs agree when there is a choice of person, gender, and number.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -2338,6 +2338,7 @@ describe("/api", () => {
         })
         .expect(200)
         .then((res) => {
+          console.log(res.body);
           expect(res.body.questionSentenceArr[0]).to.be.a("String");
           expect([
             "Czytam i badam.",
