@@ -90,20 +90,17 @@ exports.metaCorrectionRef = {
 exports.metaFeatures = {
   ENG: {
     gender: {
-      allPersonalGenders: ["m", "f", "virile", "nonvirile"],
-      allSingularGenders: ["m", "f", "n"],
-      allPersonalSingularGenders: ["m", "f"],
-      allPluralGenders: ["virile", "nonvirile"],
       allGenders: ["m", "n", "f", "virile", "nonvirile"],
+      allSingularGenders: ["m", "f", "n"],
+      allPluralGenders: ["virile", "nonvirile"],
+      allPersonalGenders: ["m", "f", "virile", "nonvirile"],
+      allPersonalSingularGenders: ["m", "f"],
+      allPersonalPluralGenders: ["virile", "nonvirile"],
     },
     // form: { pronounAndDeterminer: ["pronoun", "determiner"] },
   },
   POL: {
     gender: {
-      allPersonalGenders: ["m1", "f", "virile", "nonvirile"],
-      allSingularGenders: ["m1", "m2", "m3", "f", "f", "f", "n", "n", "n"],
-      allPersonalSingularGenders: ["m1", "f"],
-      allPluralGenders: ["virile", "nonvirile"],
       allGenders: [
         "m1",
         "m2",
@@ -121,6 +118,11 @@ exports.metaFeatures = {
         "nonvirile",
         "nonvirile",
       ],
+      allSingularGenders: ["m1", "m2", "m3", "f", "f", "f", "n", "n", "n"],
+      allPluralGenders: ["virile", "nonvirile"],
+      allPersonalGenders: ["m1", "f", "virile", "nonvirile"],
+      allPersonalSingularGenders: ["m1", "f"],
+      allPersonalPluralGenders: ["virile", "nonvirile"],
       //
       allSingularGendersExcludingNeuter: ["m1", "m2", "m3", "f", "f", "f"],
       allMasculineSingularGenders: ["m1", "m2", "m3"],
