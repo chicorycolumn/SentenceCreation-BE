@@ -939,6 +939,22 @@ exports.concoctNestedRoutes = (routesByLevelTarget, routesByLevelSource) => {
 };
 
 exports.extractNestedRoutes = (source, includeTerminusObjectKeys) => {
+  if (source.isTerminus) {
+    let routesByNesting = [];
+    let routesByLevel = [[]];
+
+    Object.keys(source).forEach((tObjKey) => {
+      let tObjValue = source[tObjKey];
+
+      if (typeof tObjValue !== "boolean") {
+        routesByNesting.push([tObjKey]);
+        routesByLevel[0].push(tObjKey);
+      }
+    });
+
+    return { routesByNesting, routesByLevel };
+  }
+
   let routesByNesting = [];
   let arr = [];
   recursivelyMapRoutes(arr, source);
@@ -1064,7 +1080,6 @@ exports.giveRoutesAndTerminalValuesFromObject = (obj) => {
   );
 
   const nestedRoutes = otUtils.extractNestedRoutes(obj).routesByNesting;
-
   let resArr = [];
 
   nestedRoutes.forEach((nestedRoute) => {
@@ -1112,8 +1127,6 @@ exports.giveValueFromObjectByRoute = (obj, route) => {
 };
 
 exports.findSynhomographs = (lemmaObject, structureChunk, currentLanguage) => {
-  //Gamma: How should this work re terminus objects?
-
   let inflectionLabelChain =
     refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
       structureChunk.wordtype

@@ -6,7 +6,7 @@ const {
 } = require("../utils/secondOrder/educatorUtils.js");
 const { expect } = require("chai");
 
-describe("findHomographs", () => {
+xdescribe("findHomographs", () => {
   it("#edu1.1 Gives all synhomograph lemma objects in one language.", () => {
     const currentLanguage = "ENG";
     const homographType = "syn";
@@ -50,7 +50,6 @@ describe("findHomographs", () => {
     const ignore = {
       ignoreV2V3Synhoms: true,
       ignoreClarifiedAllohoms: false,
-      ignoreTerminusObjects: true,
     };
 
     const expected = {
@@ -79,7 +78,6 @@ describe("findHomographs", () => {
     const ignore = {
       ignoreV2V3Synhoms: false,
       ignoreClarifiedAllohoms: true, //Should have no effect as we are asking for synhoms.
-      ignoreTerminusObjects: true,
     };
 
     const expected = {
@@ -116,7 +114,6 @@ describe("findHomographs", () => {
     const ignore = {
       ignoreV2V3Synhoms: true,
       ignoreClarifiedAllohoms: true, //Should have no effect as we are asking for synhoms.
-      ignoreTerminusObjects: true,
     };
 
     const expected = {
@@ -145,10 +142,13 @@ describe("findHomographs", () => {
     const ignore = {
       ignoreV2V3Synhoms: false,
       ignoreClarifiedAllohoms: false,
-      ignoreTerminusObjects: true,
     };
 
     const expected = {
+      wob: [
+        ["eng-adj-100", "protective"],
+        ["eng-adj-101", "nonprotective"],
+      ],
       nut: [
         ["eng-nou-009", "singular", "nom"],
         ["eng-nou-010", "singular", "nom"],
@@ -195,10 +195,13 @@ describe("findHomographs", () => {
     const ignore = {
       ignoreV2V3Synhoms: true, //Should have no effect as we are asking for allohoms.
       ignoreClarifiedAllohoms: false,
-      ignoreTerminusObjects: true,
     };
 
     const expected = {
+      wob: [
+        ["eng-adj-100", "protective"],
+        ["eng-adj-101", "nonprotective"],
+      ],
       nut: [
         ["eng-nou-009", "singular", "nom"],
         ["eng-nou-010", "singular", "nom"],
@@ -245,10 +248,13 @@ describe("findHomographs", () => {
     const ignore = {
       ignoreV2V3Synhoms: false,
       ignoreClarifiedAllohoms: true,
-      ignoreTerminusObjects: true,
     };
 
     const expected = {
+      wob: [
+        ["eng-adj-100", "protective"],
+        ["eng-adj-101", "nonprotective"],
+      ],
       fast: [
         ["eng-adj-005", "simple"],
         ["eng-adj-005", "comparative"],
@@ -271,10 +277,13 @@ describe("findHomographs", () => {
     const ignore = {
       ignoreV2V3Synhoms: true,
       ignoreClarifiedAllohoms: true,
-      ignoreTerminusObjects: true,
     };
 
     const expected = {
+      wob: [
+        ["eng-adj-100", "protective"],
+        ["eng-adj-101", "nonprotective"],
+      ],
       fast: [
         ["eng-adj-005", "simple"],
         ["eng-adj-005", "comparative"],
@@ -297,7 +306,6 @@ describe("findHomographs", () => {
     const ignore = {
       ignoreV2V3Synhoms: true,
       ignoreClarifiedAllohoms: true,
-      ignoreTerminusObjects: false,
     };
 
     const expected = {
@@ -318,7 +326,7 @@ describe("findHomographs", () => {
     };
 
     let actual = findHomographs(true, currentLanguage, homographType, ignore);
-    console.log("spec result >>>>", actual);
+    console.log(actual);
     expect(actual).to.eql(expected);
   });
 });

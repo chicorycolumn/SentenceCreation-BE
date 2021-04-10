@@ -811,14 +811,14 @@ describe("findObjectInNestedObject", () => {
 });
 
 describe("concoctNestedRoutes", () => {
-  xit("#otu2.1a Throw error for empty input.", () => {
+  it("#otu2.1a Throw error for empty input.", () => {
     const input1 = [];
     const input2 = [];
     expect(() => {
       concoctNestedRoutes(input1, input2);
     }).to.throw();
   });
-  xit("#otu2.1b Throw error for partly empty input.", () => {
+  it("#otu2.1b Throw error for partly empty input.", () => {
     const input1 = [["singular"], []];
     const input2 = [];
     expect(() => {
@@ -891,7 +891,7 @@ describe("concoctNestedRoutes", () => {
   });
 });
 
-describe.only("extractNestedRoutes", () => {
+describe("extractNestedRoutes", () => {
   it("#otu1.1a Returns empty array for empty object.", () => {
     const input = {};
     const expected = {
@@ -1110,7 +1110,7 @@ describe.only("extractNestedRoutes", () => {
     console.log(actual);
     expect(actual).to.eql(expected);
   });
-  xit("#otu1.3a get routes from tObj.", () => {
+  it("#otu1.3a get routes from tObj.", () => {
     const input = {
       //links
       translations: { ENG: ["read"], POL: ["czytać", "przeczytać"] },
@@ -1129,8 +1129,42 @@ describe.only("extractNestedRoutes", () => {
       },
     };
 
-    let res = giveRoutesAndTerminalValuesFromObject(input.inflections);
-    console.log(res);
+    const expected = {
+      routesByNesting: [["nonprotective"], ["protective"]],
+      routesByLevel: [["nonprotective", "protective"]],
+    };
+
+    let actual = extractNestedRoutes(input.inflections);
+    console.log(actual);
+    expect(actual).to.eql(expected);
+  });
+  it("#otu1.3b get routes from tObj.", () => {
+    const input = {
+      //links
+      translations: { ENG: ["read"], POL: ["czytać", "przeczytać"] },
+      tags: ["basic2"],
+      //selectors
+      lemma: "read",
+      id: "eng-ver-003",
+      //notes
+
+      //inflections
+      inflections: {
+        isTerminus: true,
+        processOnlyAtEnd: true,
+        nonprotective: ["wib"],
+        protective: ["wob"],
+      },
+    };
+
+    let expected = [
+      { terminalValue: "wib", nestedRoute: ["nonprotective"] },
+      { terminalValue: "wob", nestedRoute: ["protective"] },
+    ];
+
+    let actual = giveRoutesAndTerminalValuesFromObject(input.inflections);
+    console.log(actual);
+    expect(actual).to.eql(expected);
   });
 });
 
