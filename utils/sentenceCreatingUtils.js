@@ -556,7 +556,9 @@ exports.processSentenceFormula = (
 
   grandOutputArray.forEach((outputArray, outputArrayIndex) => {
     outputArray.forEach((outputUnit) => {
-      if (outputUnit.structureChunk.wordtype === "fixed") {
+      let { structureChunk } = outputUnit;
+
+      if (gpUtils.getWorrdtypeStCh(structureChunk) === "fixed") {
         return;
       }
       lfUtils.updateStructureChunk(outputUnit, currentLanguage);
@@ -897,7 +899,7 @@ exports.conformAnswerStructureToQuestionStructure = (
     //
     let questionStructureChunk = questionOutputArrItem.structureChunk;
 
-    if (questionStructureChunk.wordtype === "fixed") {
+    if (gpUtils.getWorrdtypeStCh(questionStructureChunk) === "fixed") {
       return;
     }
 
@@ -930,15 +932,16 @@ exports.conformAnswerStructureToQuestionStructure = (
     let lemmasToSearch =
       questionSelectedLemmaObject.translations[answerLanguage];
 
-    let source = words[gpUtils.giveSetKey(answerStructureChunk.wordtype)];
+    let source =
+      words[gpUtils.giveSetKey(gpUtils.getWorrdtypeStCh(answerStructureChunk))];
     // answerLangUtils.preprocessLemmaObjectsMinor(source);
 
     matchingAnswerLemmaObjects = source.filter(
       (lObj) =>
         lemmasToSearch.includes(lObj.lemma) &&
         //Resolve issue of multipleWordtype allohoms.
-        gpUtils.getWordtypeFromLemmaObject(lObj) ===
-          questionStructureChunk.wordtype
+        gpUtils.getWorrdtypeLObj(lObj) ===
+          gpUtils.getWorrdtypeStCh(questionStructureChunk)
     );
 
     let matchesLengthSnapshot = matchingAnswerLemmaObjects.length;
@@ -966,16 +969,15 @@ exports.conformAnswerStructureToQuestionStructure = (
       return;
     }
 
-    //...and then for both pronouns and all other wordtypes, we get the id and set it.
+    //...and then for both pronouns and all other worrdtypes, we get the id and set it.
     answerStructureChunk.specificIds = matchingAnswerLemmaObjects.map(
       (lObj) => lObj.id
     );
 
     //Do actually transfer gender, for person nouns.
     if (
-      questionStructureChunk.wordtype === "noun" &&
-      questionStructureChunk.andTags &&
-      questionStructureChunk.andTags.includes("person")
+      gpUtils.getWorrdtypeStCh(questionStructureChunk) === "noun" &&
+      gpUtils.getWorrdtypeStCh(questionStructureChunk) === "noun-person"
     ) {
       adjustAndAddFeaturesToAnswerChunk(
         questionStructureChunk,
@@ -989,7 +991,7 @@ exports.conformAnswerStructureToQuestionStructure = (
     refObj.lemmaObjectFeatures[
       answerLanguage
     ].allowableTransfersFromQuestionStructure[
-      answerStructureChunk.wordtype
+      gpUtils.getWorrdtypeStCh(answerStructureChunk)
     ].forEach((inflectorKey) => {
       //
       // STEP ONE: Update inflectors from list of allowable transfers.
@@ -1113,12 +1115,12 @@ exports.conformAnswerStructureToQuestionStructure = (
 
     let possibleInflectionsOfQuestionLobjs =
       refObj.lemmaObjectFeatures[questionLanguage].inflectionChains[
-        answerStructureChunk.wordtype
+        gpUtils.getWorrdtypeStCh(answerStructureChunk)
       ];
 
     let possibleInflectionsOfAnswerLobjs =
       refObj.lemmaObjectFeatures[answerLanguage].inflectionChains[
-        answerStructureChunk.wordtype
+        gpUtils.getWorrdtypeStCh(answerStructureChunk)
       ];
 
     let possibleInflectionsOfAnswerLobjsButNotQuestionLobjs = possibleInflectionsOfAnswerLobjs.filter(
@@ -1170,25 +1172,18 @@ exports.inheritFromHeadToDependentChunk = (
   );
   console.log("w'dil inheritFromHeadToDependentChunk: headChunk", headChunk);
 
-  let IIKref =
+  let normalinheritableInflectorKeys =
     refObj.lemmaObjectFeatures[currentLanguage].inheritableInflectorKeys[
-      dependentChunk.wordtype
+      gpUtils.getWorrdtypeStCh(dependentChunk, true)
     ];
-
-  let normalinheritableInflectorKeys = IIKref.values;
-
-  let specialInheritableInflectorKeys = IIKref.getSpecial
-    ? IIKref.getSpecial(dependentChunk)
-    : [];
 
   let hybridSelectors =
     refObj.lemmaObjectFeatures[currentLanguage].hybridSelectors[
-      dependentChunk.wordtype
+      (gpUtils.getWorrdtypeStCh(dependentChunk), true)
     ] || [];
 
   let inheritableInflectorKeys = [
     ...normalinheritableInflectorKeys,
-    ...specialInheritableInflectorKeys,
     ...hybridSelectors,
   ];
 

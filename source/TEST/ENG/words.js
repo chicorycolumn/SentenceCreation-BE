@@ -8,10 +8,10 @@ let nounSet = [
   {
     //links
     translations: { ENG: ["woman", "lady"], POL: ["kobieta"] },
-    tags: ["animate", "person", "personTest1", "concrete"],
+    tags: ["animate", "personTest1", "concrete"],
     //selectors
     lemma: "woman",
-    id: "eng-nou-001",
+    id: "eng-npe-001",
     gender: "f",
     //notes
 
@@ -30,10 +30,10 @@ let nounSet = [
   {
     //links
     translations: { ENG: ["boy"], POL: ["chłopiec", "chłopak"] },
-    tags: ["animate", "person", "personTest1", "concrete"],
+    tags: ["animate", "personTest1", "concrete"],
     //selectors
     lemma: "boy",
-    id: "eng-nou-002",
+    id: "eng-npe-002",
     gender: "m",
     //notes
 
@@ -55,7 +55,7 @@ let nounSet = [
     tags: ["inanimate", "edible", "holdable", "concrete"],
     //selectors
     lemma: "onion",
-    id: "eng-nou-003",
+    id: "eng-nco-003",
 
     //notes
 
@@ -77,7 +77,7 @@ let nounSet = [
     tags: ["inanimate", "edible", "holdable", "concrete"],
     //selectors
     lemma: "apple",
-    id: "eng-nou-003",
+    id: "eng-nco-003",
 
     //notes
 
@@ -99,7 +99,7 @@ let nounSet = [
     tags: ["inanimate", "holdable", "concrete"],
     //selectors
     lemma: "mirror",
-    id: "eng-nou-005",
+    id: "eng-nco-005",
 
     //notes
 
@@ -121,7 +121,7 @@ let nounSet = [
     tags: ["inanimate", "holdable", "concrete"],
     //selectors
     lemma: "book",
-    id: "eng-nou-006",
+    id: "eng-nco-006",
 
     //notes
 
@@ -143,7 +143,7 @@ let nounSet = [
     tags: ["inanimate", "holdable", "concrete"],
     //selectors
     lemma: "door",
-    id: "eng-nou-007",
+    id: "eng-nco-007",
 
     //notes
 
@@ -165,7 +165,7 @@ let nounSet = [
     tags: ["animate", "animal", "farmyard", "concrete"],
     //selectors
     lemma: "sheep",
-    id: "eng-nou-008",
+    id: "eng-nco-008",
 
     //notes
 
@@ -189,7 +189,7 @@ let nounSet = [
 
     //selectors
     lemma: "nut",
-    id: "eng-nou-009",
+    id: "eng-nco-009",
 
     //notes
 
@@ -213,7 +213,7 @@ let nounSet = [
 
     //selectors
     lemma: "nut",
-    id: "eng-nou-010",
+    id: "eng-nco-010",
 
     //notes
 
@@ -237,7 +237,7 @@ let nounSet = [
 
     //selectors
     lemma: "bear",
-    id: "eng-nou-011",
+    id: "eng-nco-011",
 
     //notes
 

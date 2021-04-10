@@ -555,8 +555,8 @@ exports.removeAnnotationsByAOCs = (
   }
 
   if (
-    gpUtils.getWordtypeFromStructureChunk(questionOutputUnit.structureChunk) ===
-    headWordtype
+    //gamma Change this to questionOutputUnit.s'tructureChunk.worrdtype
+    gpUtils.getWorrdtypeStCh(questionOutputUnit.structureChunk) === headWordtype
   ) {
     let headChunkId = questionOutputUnit.structureChunk.chunkId;
 
@@ -582,7 +582,8 @@ exports.removeAnnotationsByAOCs = (
         )
         .filter(
           (unit) =>
-            gpUtils.getWordtypeFromStructureChunk(unit.structureChunk) ===
+            //gamma Change this to questionOutputUnit.s'tructureChunk.worrdtype
+            gpUtils.getWorrdtypeStCh(unit.structureChunk) ===
             allDependentWordtype
         );
     }
@@ -903,7 +904,9 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
   const langUtils = require("../source/" + questionLanguage + "/langUtils.js");
 
   arrayOfOutputUnits.forEach((outputUnit) => {
-    if (outputUnit.structureChunk.wordtype === "fixed") {
+    let { structureChunk } = outputUnit;
+
+    if (gpUtils.getWorrdtypeStCh(structureChunk) === "fixed") {
       return;
     }
 
@@ -951,9 +954,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
 
     if (allohomInfo && allohomInfo.multipleWordtype) {
       if (structureChunk.pleaseShowMultipleWordtypeAllohomClarifiers) {
-        let annotationValue = gpUtils.getWordtypeFromLemmaObject(
-          selectedLemmaObject
-        );
+        let annotationValue = gpUtils.getWorrdtypeLObj(selectedLemmaObject);
 
         console.log(
           "wbvz addClarifiers------------------------------------------ADDED CLARIFIER in Step 1b",
@@ -982,11 +983,15 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
     //Find synhoms, add Feature Clarifiers if such clarifiers are allowed.
     let allowableClarifiers =
       refObj.lemmaObjectFeatures[answerLanguage]
-        .allowableTransfersFromQuestionStructure[structureChunk.wordtype];
+        .allowableTransfersFromQuestionStructure[
+        gpUtils.getWorrdtypeStCh(structureChunk)
+      ];
 
     let allowableExtraClarifiersInSingleWordSentences =
       refObj.lemmaObjectFeatures[answerLanguage]
-        .allowableExtraClarifiersInSingleWordSentences[structureChunk.wordtype];
+        .allowableExtraClarifiersInSingleWordSentences[
+        gpUtils.getWorrdtypeStCh(structureChunk)
+      ];
 
     console.log("qjho addClarifiers", languagesObj, {
       allowableClarifiers,

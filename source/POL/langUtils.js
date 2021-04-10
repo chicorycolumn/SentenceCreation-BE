@@ -17,15 +17,14 @@ exports.selectWordVersions = (
   previousOutputUnit,
   multipleMode
 ) => {
-  if (gpUtils.getWordtypeFromLemmaObject(selectedLemmaObject) === "pronoun") {
+  if (gpUtils.getWorrdtypeLObj(selectedLemmaObject) === "pronoun") {
     // >>>
     // >>> Pronoun: post-prepositional
     // >>>
     if (
       previousOutputUnit &&
-      gpUtils.getWordtypeFromLemmaObject(
-        previousOutputUnit.selectedLemmaObject
-      ) === "preposition"
+      gpUtils.getWorrdtypeLObj(previousOutputUnit.selectedLemmaObject) ===
+        "preposition"
     ) {
       frUtils.pushSelectedWordToArray(
         "postPreposition",
@@ -55,9 +54,7 @@ exports.selectWordVersions = (
     }
   }
 
-  if (
-    gpUtils.getWordtypeFromLemmaObject(selectedLemmaObject) === "preposition"
-  ) {
+  if (gpUtils.getWorrdtypeLObj(selectedLemmaObject) === "preposition") {
     if (!subsequentOutputUnit) {
       clUtils.throw(
         "mcob selectWordVersions Shouldn't there be an outputUnit subsequent to this POL preposition?"
@@ -117,11 +114,11 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   );
 
   sentenceStructure.forEach((structureChunk) => {
-    if (structureChunk.wordtype === "fixed") {
+    if (gpUtils.getWorrdtypeStCh(structureChunk) === "fixed") {
       return;
     }
 
-    if (structureChunk.wordtype === "preposition") {
+    if (gpUtils.getWorrdtypeStCh(structureChunk) === "preposition") {
       structureChunk.form = ["onlyForm"];
     }
 
@@ -133,9 +130,9 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
     }
 
     if (
-      //If gender is an appropriate feature of this wordtype.
+      //If gender is an appropriate feature of this worrdtype.
       refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
-        structureChunk.wordtype
+        gpUtils.getWorrdtypeStCh(structureChunk)
       ].includes("gender")
     ) {
       if (!structureChunk.gender || !structureChunk.gender.length) {
@@ -188,18 +185,19 @@ exports.preprocessLemmaObjectsMajor = (
   }
 
   if (
-    gpUtils.getWordtypeFromLemmaObject(matches[0]) !== structureChunk.wordtype
+    gpUtils.getWorrdtypeLObj(matches[0]) !==
+    gpUtils.getWorrdtypeStCh(structureChunk)
   ) {
     clUtils.throw(
-      "#ERR wkpu POL:preprocessLemmaObjectsMajor. The wordtypes from stCh and lObjs didn't match."
+      "#ERR wkpu POL:preprocessLemmaObjectsMajor. The worrdtypes from stCh and lObjs didn't match."
     );
   }
 
-  if (["verb"].includes(structureChunk.wordtype)) {
+  if (["verb"].includes(gpUtils.getWorrdtypeStCh(structureChunk))) {
     matches.forEach((lObj) => exports.fillVerbInflections(lObj));
   }
 
-  if (["adjective"].includes(structureChunk.wordtype)) {
+  if (["adjective"].includes(gpUtils.getWorrdtypeStCh(structureChunk))) {
     matches.forEach((lObj) => exports.copyInflectionsFromM1toM2(lObj));
   }
 
@@ -207,7 +205,9 @@ exports.preprocessLemmaObjectsMajor = (
   // allLangUtils.preprocessLemmaObjects(matches, "POL");
 
   if (!adjustLemmaObjectsOnly) {
-    if (["verb", "adjective"].includes(structureChunk.wordtype)) {
+    if (
+      ["verb", "adjective"].includes(gpUtils.getWorrdtypeStCh(structureChunk))
+    ) {
       allLangUtils.adjustVirilityOfStructureChunk(
         currentLanguage,
         structureChunk,
@@ -254,7 +254,7 @@ exports.addLanguageParticularClarifiers = () => {
 
 exports.adjustStructureChunksInIfPW = (structureChunk) => {
   if (
-    structureChunk.wordtype === "verb" &&
+    gpUtils.getWorrdtypeStCh(structureChunk) === "verb" &&
     structureChunk.tenseDescription &&
     structureChunk.tenseDescription.length
   ) {

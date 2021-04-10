@@ -4,8 +4,8 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy25a",
     translations: { POL: ["POL-dummy25a", "POL-dummy25b"] },
     sentenceStructure: [
-      { chunkId: "fix-1", wordtype: "fixed", value: "good" },
-      { chunkId: "fix-2", wordtype: "fixed", value: "day" },
+      { chunkId: "fix-1", value: "good" },
+      { chunkId: "fix-2", value: "day" },
     ],
     primaryOrders: [],
   },
@@ -13,9 +13,7 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaSymbol: "dummy25b hello",
     sentenceFormulaId: "ENG-dummy25b",
     translations: { POL: ["POL-dummy25a", "POL-dummy25b"] },
-    sentenceStructure: [
-      { chunkId: "fix-1", wordtype: "fixed", value: "hello" },
-    ],
+    sentenceStructure: [{ chunkId: "fix-1", value: "hello" }],
     primaryOrders: [],
   },
   {
@@ -23,10 +21,9 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy26",
     translations: { POL: ["POL-dummy26"] },
     sentenceStructure: [
-      { chunkId: "fix-1", wordtype: "fixed", value: "I" },
+      { chunkId: "fix-1", value: "I" },
       {
         chunkId: "ver-1",
-        wordtype: "verb",
 
         andTags: ["basic2"],
         tenseDescription: [
@@ -45,10 +42,9 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy27",
     translations: { POL: ["POL-dummy27"] },
     sentenceStructure: [
-      { chunkId: "fix-1", wordtype: "fixed", value: "I" },
+      { chunkId: "fix-1", value: "I" },
       {
         chunkId: "ver-1",
-        wordtype: "verb",
 
         andTags: ["basic3"],
         tenseDescription: [
@@ -68,10 +64,9 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy28",
     translations: { POL: ["POL-dummy28"] },
     sentenceStructure: [
-      { chunkId: "fix-1", wordtype: "fixed", value: "I" },
+      { chunkId: "fix-1", value: "I" },
       {
         chunkId: "ver-1",
-        wordtype: "verb",
 
         andTags: ["basic3"],
         tenseDescription: [],
@@ -86,10 +81,9 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy29",
     translations: { POL: ["POL-dummy29"] },
     sentenceStructure: [
-      { chunkId: "fix-1", wordtype: "fixed", value: "I" },
+      { chunkId: "fix-1", value: "I" },
       {
         chunkId: "ver-1",
-        wordtype: "verb",
 
         andTags: ["basic3"],
         tenseDescription: [
@@ -108,10 +102,9 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy30",
     translations: { POL: ["POL-dummy30"] },
     sentenceStructure: [
-      { chunkId: "fix-1", wordtype: "fixed", value: "I" },
+      { chunkId: "fix-1", value: "I" },
       {
         chunkId: "ver-1",
-        wordtype: "verb",
 
         andTags: ["basic3"],
         tenseDescription: [],
@@ -126,10 +119,10 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy31",
     translations: { POL: ["POL-dummy31"] },
     sentenceStructure: [
-      { chunkId: "fix-1", wordtype: "fixed", value: "I" },
+      { chunkId: "fix-1", value: "I" },
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+
         andTags: ["basic3"],
         tenseDescription: ["past continuous"],
         person: ["1per"],
@@ -145,7 +138,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+
         specificLemmas: ["be"],
         tenseDescription: ["present simple", "past simple"],
         person: [],
@@ -161,7 +154,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+
         specificLemmas: ["be"],
         tenseDescription: ["present simple"],
         person: ["1per"],
@@ -175,10 +168,10 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy33b",
     translations: { POL: ["POL-dummy33b"] },
     sentenceStructure: [
-      { chunkId: "fix-1", wordtype: "fixed", value: "I" },
+      { chunkId: "fix-1", value: "I" },
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+
         specificLemmas: ["be"],
         tenseDescription: ["present simple", "past simple"],
         person: ["1per"],
@@ -194,13 +187,13 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1",
-        wordtype: "pronoun",
+
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
       },
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+
         agreeWith: "pro-1",
         specificLemmas: ["be"],
         tenseDescription: ["present simple", "past simple"],
@@ -214,10 +207,10 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy33d",
     translations: { POL: ["POL-dummy33d"] },
     sentenceStructure: [
-      { chunkId: "fix-1", wordtype: "fixed", value: "she" },
+      { chunkId: "fix-1", value: "she" },
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+
         specificLemmas: ["be"],
         tenseDescription: ["present simple", "past simple"],
         person: ["3per"],
@@ -231,10 +224,10 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy33e",
     translations: { POL: ["POL-dummy33e"] },
     sentenceStructure: [
-      { chunkId: "fix-1", wordtype: "fixed", value: "we" },
+      { chunkId: "fix-1", value: "we" },
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+
         specificLemmas: ["be"],
         tenseDescription: ["present simple", "past simple"],
         person: ["1per"],
@@ -248,10 +241,10 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy33f",
     translations: { POL: ["POL-dummy33f"] },
     sentenceStructure: [
-      { chunkId: "fix-1", wordtype: "fixed", value: "they" },
+      { chunkId: "fix-1", value: "they" },
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+
         specificLemmas: ["be"],
         tenseDescription: ["present simple", "past simple"],
         person: ["3per"],
@@ -265,10 +258,10 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy34a",
     translations: { POL: ["POL-dummy34a"] },
     sentenceStructure: [
-      { chunkId: "fix-1", wordtype: "fixed", value: "I" },
+      { chunkId: "fix-1", value: "I" },
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+
         specificLemmas: ["be"],
         tenseDescription: ["future simple"],
         person: ["1per"],
@@ -282,10 +275,10 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy34c",
     translations: { POL: ["POL-dummy34c"] },
     sentenceStructure: [
-      { chunkId: "fix-1", wordtype: "fixed", value: "I" },
+      { chunkId: "fix-1", value: "I" },
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+
         specificLemmas: ["be"],
         number: [],
         tenseDescription: ["future"],
@@ -301,7 +294,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+
         specificLemmas: ["be"],
         tenseDescription: [],
       },
@@ -315,7 +308,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+
         andTags: ["basic3"],
         tenseDescription: ["past simple", "future perfect"],
         person: [],
@@ -330,8 +323,8 @@ exports.dummySentenceFormulasBank = [
     translations: { POL: ["POL-dummy36"] },
     sentenceStructure: [
       {
-        chunkId: "nou-1",
-        wordtype: "noun",
+        chunkId: "nco-1",
+
         andTags: ["farmyard"],
       },
     ],
@@ -344,7 +337,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+
         specificLemmas: ["be"],
         number: ["singular"],
         tenseDescription: ["present simple"],
@@ -358,10 +351,10 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy38",
     translations: { POL: ["POL-dummy38"] },
     sentenceStructure: [
-      { chunkId: "fix-1", wordtype: "fixed", value: "I" },
+      { chunkId: "fix-1", value: "I" },
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+
         andTags: ["basic2"],
         number: ["singular"],
         tenseDescription: ["present simple", "past simple"],
@@ -397,13 +390,13 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1",
-        wordtype: "pronoun",
+
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
       },
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+
         agreeWith: "pro-1",
         andTags: ["basic3"],
         number: [],
@@ -419,13 +412,13 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1",
-        wordtype: "pronoun",
+
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
       },
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+
         agreeWith: "pro-1",
         andTags: ["basic3"],
         number: [],
@@ -441,13 +434,13 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1",
-        wordtype: "pronoun",
+
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
       },
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+
         agreeWith: "pro-1",
         andTags: ["basic3"],
         number: [],
@@ -461,22 +454,22 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy43",
     translations: { POL: ["POL-dummy43"] },
     sentenceStructure: [
-      { chunkId: "fix-1", wordtype: "fixed", value: "a" },
+      { chunkId: "fix-1", value: "a" },
       {
         chunkId: "adj-1",
-        agreeWith: "nou-1",
-        wordtype: "adjective",
+        agreeWith: "nco-1",
+
         andTags: ["size"],
         form: ["simple"],
       },
       {
-        chunkId: "nou-1",
-        wordtype: "noun",
+        chunkId: "nco-1",
+
         andTags: ["allohomTesting"],
         number: ["singular"],
       },
     ],
-    primaryOrders: [["fix-1", "adj-1", "nou-1"]],
+    primaryOrders: [["fix-1", "adj-1", "nco-1"]],
   },
   {
     sentenceFormulaSymbol: "dummy45a",
@@ -484,8 +477,8 @@ exports.dummySentenceFormulasBank = [
     translations: { POL: ["POL-dummy45a"] },
     sentenceStructure: [
       {
-        chunkId: "nou-1",
-        wordtype: "noun",
+        chunkId: "nco-1",
+
         andTags: ["allohomTesting2"],
         number: ["singular"],
         pleaseShowMultipleWordtypeAllohomClarifiers: true, //Because this is a sentence of only one word, so could be ambiguous.
@@ -500,7 +493,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+
         andTags: ["allohomTesting2"],
         form: ["infinitive"],
         pleaseShowMultipleWordtypeAllohomClarifiers: true, //Because this is a sentence of only one word, so could be ambiguous.
@@ -515,7 +508,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+
         andTags: ["allohomTesting2"],
         form: ["infinitive"],
       },
@@ -528,8 +521,8 @@ exports.dummySentenceFormulasBank = [
     translations: { POL: ["POL-dummy46a"] },
     sentenceStructure: [
       {
-        chunkId: "nou-1",
-        wordtype: "noun",
+        chunkId: "nco-1",
+
         andTags: ["allohomTesting3"],
         number: ["singular"],
       },
@@ -542,8 +535,8 @@ exports.dummySentenceFormulasBank = [
     translations: { POL: ["POL-dummy46a"] }, //Yes, this does indeed point from b to a.
     sentenceStructure: [
       {
-        chunkId: "nou-1",
-        wordtype: "noun",
+        chunkId: "nco-1",
+
         andTags: ["allohomTesting3"],
         number: ["singular"],
         pleaseShowMultipleWordtypeAllohomClarifiers: true,
@@ -558,7 +551,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+
         andTags: ["allohomTesting3"],
         form: ["infinitive"],
       },
@@ -572,7 +565,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+
         andTags: ["allohomTesting3"],
         form: ["infinitive"],
         pleaseShowMultipleWordtypeAllohomClarifiers: true,
@@ -585,11 +578,14 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy47",
     translations: { POL: ["POL-dummy47"] },
     sentenceStructure: [
-      { chunkId: "fix-1", wordtype: "fixed", value: "the" },
+      { chunkId: "fix-1", value: "the" },
       {
-        chunkId: "nou-1",
-        wordtype: "noun",
-        andTags: ["person"], // You must specify this. I know we've specified 'woman' in another way,
+        chunkId: "npe-1",
+
+        // andTags: ["person"],
+        //bostonX: This is now done via npe as opposed to nco.
+
+        //You must specify this andTags person. I know we've specified 'woman' in another way,
         // but all the way left in fetchPalette->addSpecifiers, way before we enter processSF->findMatching,
         // which is where we'd find the lObjs, it is the case that all the way left there, we need to know
         // that this chunk is a PERSON.
@@ -600,15 +596,15 @@ exports.dummySentenceFormulasBank = [
       },
       {
         chunkId: "ver-1",
-        agreeWith: "nou-1",
-        wordtype: "verb",
+        agreeWith: "npe-1",
+
         specificLemmas: ["write"],
         tenseDescription: ["past"],
         person: ["3per"],
         number: ["singular"],
       },
     ],
-    primaryOrders: [["fix-1", "nou-1", "ver-1"]],
+    primaryOrders: [["fix-1", "npe-1", "ver-1"]],
   },
   {
     sentenceFormulaSymbol: "dummy48a",
@@ -617,7 +613,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1",
-        wordtype: "pronoun",
+
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         number: ["singular"],
@@ -634,7 +630,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1",
-        wordtype: "pronoun",
+
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         number: ["singular"],
@@ -643,7 +639,7 @@ exports.dummySentenceFormulasBank = [
       },
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+
         agreeWith: "pro-1",
         tenseDescription: ["past simple"],
         specificLemmas: ["write"],
@@ -658,7 +654,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1",
-        wordtype: "pronoun",
+
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         gender: ["f"],
@@ -667,7 +663,7 @@ exports.dummySentenceFormulasBank = [
       },
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+
         agreeWith: "pro-1",
         tenseDescription: ["past simple"],
         specificLemmas: ["write"],
@@ -682,7 +678,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1",
-        wordtype: "pronoun",
+
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         number: ["singular"],
@@ -690,7 +686,7 @@ exports.dummySentenceFormulasBank = [
       },
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+
         agreeWith: "pro-1",
         tenseDescription: ["past simple"],
         specificLemmas: ["write"],
@@ -705,7 +701,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1",
-        wordtype: "pronoun",
+
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         number: ["plural"],
@@ -713,7 +709,7 @@ exports.dummySentenceFormulasBank = [
       },
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+
         agreeWith: "pro-1",
         tenseDescription: ["past simple"],
         specificLemmas: ["write"],
@@ -728,7 +724,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1",
-        wordtype: "pronoun",
+
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         number: ["singular"],
@@ -737,7 +733,7 @@ exports.dummySentenceFormulasBank = [
       },
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+
         agreeWith: "pro-1",
         tenseDescription: ["past simple"],
         specificLemmas: ["write"],
@@ -752,7 +748,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1",
-        wordtype: "pronoun",
+
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         number: ["plural"],
@@ -760,7 +756,7 @@ exports.dummySentenceFormulasBank = [
       },
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+
         agreeWith: "pro-1",
         tenseDescription: ["past simple"],
         specificLemmas: ["write"],
@@ -776,7 +772,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1",
-        wordtype: "pronoun",
+
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         // gender: ["m"],
@@ -785,24 +781,24 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "pro-1",
-        wordtype: "verb",
+
         specificLemmas: ["have"],
         tenseDescription: ["present simple"],
       },
       {
         chunkId: "pro-2",
-        wordtype: "pronoun",
+
         form: ["determiner"],
         specificLemmas: ["POSSESSIVE"],
         agreeWith: "pro-1",
       },
       {
-        chunkId: "nou-1",
-        wordtype: "noun",
+        chunkId: "nco-1",
+
         specificLemmas: ["onion"],
       },
     ],
-    primaryOrders: [["pro-1", "ver-1", "pro-2", "nou-1"]],
+    primaryOrders: [["pro-1", "ver-1", "pro-2", "nco-1"]],
   },
   {
     sentenceFormulaSymbol: "dummy50b",
@@ -811,71 +807,71 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1",
-        wordtype: "pronoun",
+
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         number: ["singular"],
       },
       {
         chunkId: "pro-2",
-        wordtype: "pronoun",
+
         form: ["determiner"],
         specificLemmas: ["POSSESSIVE"],
         agreeWith: "pro-1",
       },
       {
-        chunkId: "nou-1",
-        wordtype: "noun",
+        chunkId: "nco-1",
+
         specificLemmas: ["onion"],
         number: ["singular"],
       },
     ],
-    primaryOrders: [["pro-2", "nou-1"]],
+    primaryOrders: [["pro-2", "nco-1"]],
   },
   {
     sentenceFormulaSymbol: "dummy51a",
     sentenceFormulaId: "ENG-dummy51a",
     translations: { POL: ["POL-dummy51a"] },
     sentenceStructure: [
-      { chunkId: "fix-1", wordtype: "fixed", value: "the" },
+      { chunkId: "fix-1", value: "the" },
       {
-        chunkId: "nou-1",
-        wordtype: "noun",
-        andTags: ["person", "job"],
+        chunkId: "npe-1",
+
+        andTags: ["job"],
         gender: [],
         number: ["singular"],
       },
       {
         chunkId: "ver-1",
-        wordtype: "verb",
-        agreeWith: "nou-1",
+
+        agreeWith: "npe-1",
         tenseDescription: ["past simple"],
         specificLemmas: ["write", "read"],
       },
     ],
-    primaryOrders: [["fix-1", "nou-1", "ver-1"]],
+    primaryOrders: [["fix-1", "npe-1", "ver-1"]],
   },
   {
     sentenceFormulaSymbol: "dummy52",
     sentenceFormulaId: "ENG-dummy52",
     translations: { POL: ["POL-dummy52"] },
     sentenceStructure: [
-      { chunkId: "fix-1", wordtype: "fixed", value: "the" },
+      { chunkId: "fix-1", value: "the" },
       {
-        chunkId: "nou-1",
-        wordtype: "noun",
+        chunkId: "npe-1",
+
         specificLemmas: ["woman"],
         number: ["singular"],
       },
       {
         chunkId: "ver-1",
-        wordtype: "verb",
-        agreeWith: "nou-1",
+
+        agreeWith: "npe-1",
         tenseDescription: ["future continuous"],
         specificLemmas: ["write"],
       },
     ],
-    primaryOrders: [["fix-1", "nou-1", "ver-1"]],
+    primaryOrders: [["fix-1", "npe-1", "ver-1"]],
   },
   {
     sentenceFormulaSymbol: "dummy53",
@@ -884,7 +880,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+
         specificLemmas: ["have"],
         tenseDescription: ["present simple", "past simple"],
         person: [],
@@ -900,7 +896,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+
         specificLemmas: ["have"],
         tenseDescription: ["present simple"],
         person: ["1per"],
@@ -914,10 +910,10 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy53b",
     translations: { POL: ["POL-dummy53b"] },
     sentenceStructure: [
-      { chunkId: "fix-1", wordtype: "fixed", value: "I" },
+      { chunkId: "fix-1", value: "I" },
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+
         specificLemmas: ["have"],
         tenseDescription: ["present simple", "past simple"],
         person: ["1per"],
@@ -933,13 +929,13 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1",
-        wordtype: "pronoun",
+
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
       },
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+
         agreeWith: "pro-1",
         specificLemmas: ["have"],
         tenseDescription: ["present simple", "past simple"],
@@ -955,13 +951,13 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1",
-        wordtype: "pronoun",
+
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
       },
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+
         agreeWith: "pro-1",
         specificLemmas: ["have"],
         tenseDescription: ["present simple"],
@@ -975,10 +971,10 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy53d",
     translations: { POL: ["POL-dummy53d"] },
     sentenceStructure: [
-      { chunkId: "fix-1", wordtype: "fixed", value: "she" },
+      { chunkId: "fix-1", value: "she" },
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+
         specificLemmas: ["have"],
         tenseDescription: ["present simple", "past simple"],
         person: ["3per"],
@@ -992,10 +988,10 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy53e",
     translations: { POL: ["POL-dummy53e"] },
     sentenceStructure: [
-      { chunkId: "fix-1", wordtype: "fixed", value: "we" },
+      { chunkId: "fix-1", value: "we" },
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+
         specificLemmas: ["have"],
         tenseDescription: ["present simple", "past simple"],
         person: ["1per"],
@@ -1009,10 +1005,10 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy53f",
     translations: { POL: ["POL-dummy53f"] },
     sentenceStructure: [
-      { chunkId: "fix-1", wordtype: "fixed", value: "they" },
+      { chunkId: "fix-1", value: "they" },
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+
         specificLemmas: ["have"],
         tenseDescription: ["present simple", "past simple"],
         person: ["3per"],
@@ -1026,10 +1022,10 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy54a",
     translations: { POL: ["POL-dummy54a"] },
     sentenceStructure: [
-      { chunkId: "fix-1", wordtype: "fixed", value: "I" },
+      { chunkId: "fix-1", value: "I" },
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+
         specificLemmas: ["have"],
         tenseDescription: ["future simple"],
         person: ["1per"],
@@ -1043,10 +1039,10 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy54c",
     translations: { POL: ["POL-dummy54c"] },
     sentenceStructure: [
-      { chunkId: "fix-1", wordtype: "fixed", value: "I" },
+      { chunkId: "fix-1", value: "I" },
       {
         chunkId: "ver-1",
-        wordtype: "verb",
+
         specificLemmas: ["have"],
         number: [],
         tenseDescription: ["future"],
@@ -1063,22 +1059,22 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pre-1",
         specificLemmas: ["with"],
-        connectedTo: "nou-1",
+        connectedTo: "nco-1",
       },
       {
         chunkId: "art-1",
         form: ["definite", "indefinite"],
         importantFeatures: ["form"],
         preferredChoicesForQuestionSentence: { form: "indefinite" },
-        connectedTo: "nou-1",
+        connectedTo: "nco-1",
       },
       {
-        chunkId: "nou-1",
+        chunkId: "nco-1",
         orTags: ["edible", "edible0"],
         number: ["singular"],
       },
     ],
-    primaryOrders: [["pre-1", "art-1", "nou-1"]],
+    primaryOrders: [["pre-1", "art-1", "nco-1"]],
   },
   {
     sentenceFormulaSymbol: "dummy55a",
@@ -1088,21 +1084,21 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pre-1",
         specificLemmas: ["with"],
-        connectedTo: "nou-1",
+        connectedTo: "nco-1",
       },
       {
         chunkId: "art-1",
         form: ["definite", "indefinite"],
         importantFeatures: ["form"],
-        connectedTo: "nou-1",
+        connectedTo: "nco-1",
       },
       {
-        chunkId: "nou-1",
+        chunkId: "nco-1",
         orTags: ["animal"],
         number: ["singular"],
       },
     ],
-    primaryOrders: [["pre-1", "art-1", "nou-1"]],
+    primaryOrders: [["pre-1", "art-1", "nco-1"]],
   },
   {
     sentenceFormulaSymbol: "dummy55b",
@@ -1112,21 +1108,21 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pre-1",
         specificLemmas: ["with"],
-        connectedTo: "nou-1",
+        connectedTo: "nco-1",
       },
       {
         chunkId: "art-1",
         form: ["definite", "indefinite"],
         importantFeatures: ["form"],
-        connectedTo: "nou-1",
+        connectedTo: "nco-1",
       },
       {
-        chunkId: "nou-1",
+        chunkId: "nco-1",
         orTags: ["animal"],
         number: ["plural"],
       },
     ],
-    primaryOrders: [["pre-1", "art-1", "nou-1"]],
+    primaryOrders: [["pre-1", "art-1", "nco-1"]],
   },
   {
     sentenceFormulaSymbol: "dummy55c",
@@ -1136,21 +1132,21 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pre-1",
         specificLemmas: ["with"],
-        connectedTo: "nou-1",
+        connectedTo: "nco-1",
       },
       {
         chunkId: "art-1",
         form: ["definite", "indefinite"],
         importantFeatures: ["form"],
-        connectedTo: "nou-1",
+        connectedTo: "nco-1",
       },
       {
-        chunkId: "nou-1",
+        chunkId: "nco-1",
         specificLemmas: ["sheep"],
         number: ["singular"],
       },
     ],
-    primaryOrders: [["pre-1", "art-1", "nou-1"]],
+    primaryOrders: [["pre-1", "art-1", "nco-1"]],
   },
   {
     sentenceFormulaSymbol: "dummy55d",
@@ -1160,21 +1156,21 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pre-1",
         specificLemmas: ["with"],
-        connectedTo: "nou-1",
+        connectedTo: "nco-1",
       },
       {
         chunkId: "art-1",
         form: ["definite", "indefinite"],
         importantFeatures: ["form"],
-        connectedTo: "nou-1",
+        connectedTo: "nco-1",
       },
       {
-        chunkId: "nou-1",
+        chunkId: "nco-1",
         specificLemmas: ["sheep"],
         number: ["plural"],
       },
     ],
-    primaryOrders: [["pre-1", "art-1", "nou-1"]],
+    primaryOrders: [["pre-1", "art-1", "nco-1"]],
   },
   {
     sentenceFormulaSymbol: "dummy56",
@@ -1183,13 +1179,13 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "art-1",
-        wordtype: "article",
+
         form: ["indefinite"],
-        connectedTo: "nou-1",
+        connectedTo: "nco-1",
       },
       {
-        chunkId: "nou-1",
-        wordtype: "noun",
+        chunkId: "nco-1",
+
         orTags: ["edible", "edible0"],
         number: ["singular"],
       },
@@ -1203,18 +1199,18 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "art-1",
-        wordtype: "article",
+
         form: ["definite", "indefinite"],
-        connectedTo: "nou-1",
+        connectedTo: "npe-1",
       },
       {
-        chunkId: "nou-1",
-        wordtype: "noun",
+        chunkId: "npe-1",
+
         specificLemmas: ["woman"],
         number: ["singular"],
       },
     ],
-    primaryOrders: [["art-1", "nou-1"]],
+    primaryOrders: [["art-1", "npe-1"]],
   },
   {
     sentenceFormulaSymbol: "dummy57",
@@ -1222,28 +1218,27 @@ exports.dummySentenceFormulasBank = [
     translations: { POL: ["POL-dummy57"] },
     sentenceStructure: [
       {
-        chunkId: "nou-1",
-        wordtype: "noun",
-        andTags: ["person"],
+        chunkId: "npe-1",
+
         number: ["plural"],
         specificLemmas: ["woman"],
       },
       {
         chunkId: "ver-1",
-        wordtype: "verb",
-        agreeWith: "nou-1",
+
+        agreeWith: "npe-1",
         specificLemmas: ["see"],
         tenseDescription: ["past simple"],
       },
       {
         chunkId: "pro-1",
-        wordtype: "pronoun",
+
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
         gcase: ["acc"],
       },
     ],
-    primaryOrders: [["nou-1", "ver-1", "pro-1"]],
+    primaryOrders: [["npe-1", "ver-1", "pro-1"]],
   },
   {
     sentenceFormulaSymbol: "dummy58 doctor",
@@ -1251,9 +1246,9 @@ exports.dummySentenceFormulasBank = [
     translations: { POL: ["POL-dummy58"] },
     sentenceStructure: [
       {
-        chunkId: "nou-1",
-        wordtype: "noun",
-        andTags: ["person", "job"],
+        chunkId: "npe-1",
+
+        andTags: ["job"],
         number: ["singular"],
         // gender: ["f"],
       },
@@ -1266,9 +1261,9 @@ exports.dummySentenceFormulasBank = [
     translations: { POL: ["POL-dummy58a"] },
     sentenceStructure: [
       {
-        chunkId: "nou-1",
-        wordtype: "noun",
-        andTags: ["person", "job"],
+        chunkId: "npe-1",
+
+        andTags: ["job"],
         number: ["singular"],
         gender: ["f"],
         importantFeatures: ["gender"],
@@ -1283,9 +1278,9 @@ exports.dummySentenceFormulasBank = [
     translations: { POL: ["POL-dummy59a"] },
     sentenceStructure: [
       {
-        chunkId: "nou-1",
-        wordtype: "noun",
-        andTags: ["person", "job"],
+        chunkId: "npe-1",
+
+        andTags: ["job"],
         number: ["singular"],
         // gender: ["f"],
         // importantFeatures: ["gender"],
@@ -1300,9 +1295,9 @@ exports.dummySentenceFormulasBank = [
     translations: { POL: ["POL-dummy59b"] },
     sentenceStructure: [
       {
-        chunkId: "nou-1",
-        wordtype: "noun",
-        andTags: ["person", "job"],
+        chunkId: "npe-1",
+
+        andTags: ["job"],
         number: ["singular"],
         gender: ["m", "f"],
         // importantFeatures: ["gender"],

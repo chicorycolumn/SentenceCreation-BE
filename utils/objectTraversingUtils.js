@@ -30,11 +30,11 @@ exports.findMatchingLemmaObjectThenWord = (
 
   let allInflectorsForThisWordtype =
     refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
-      structureChunk.wordtype
+      gpUtils.getWorrdtypeStCh(structureChunk)
     ];
 
   //STEP ONE: Fx-PW: Pathway for Fixed pieces.
-  if (structureChunk.wordtype === "fixed") {
+  if (gpUtils.getWorrdtypeStCh(structureChunk) === "fixed") {
     clUtils.consoleLogPW("##Fx-PW", structureChunk, multipleMode);
 
     return [
@@ -47,7 +47,8 @@ exports.findMatchingLemmaObjectThenWord = (
   }
 
   //STEP TWO: Filter lemmaObjects (by specificIds OR specificLemmas OR andTags and selectors).
-  let source = words[gpUtils.giveSetKey(structureChunk.wordtype)];
+  let source =
+    words[gpUtils.giveSetKey(gpUtils.getWorrdtypeStCh(structureChunk))];
 
   langUtils.preprocessLemmaObjectsMinor(source);
   let matches = [];
@@ -139,9 +140,13 @@ exports.findMatchingLemmaObjectThenWord = (
   if (
     structureChunk.form &&
     structureChunk.form.length &&
-    Object.keys(adhocFormRef).includes(structureChunk.wordtype) &&
+    Object.keys(adhocFormRef).includes(
+      gpUtils.getWorrdtypeStCh(structureChunk)
+    ) &&
     structureChunk.form.some((selectedForm) =>
-      adhocFormRef[structureChunk.wordtype].includes(selectedForm)
+      adhocFormRef[gpUtils.getWorrdtypeStCh(structureChunk)].includes(
+        selectedForm
+      )
     )
   ) {
     clUtils.consoleLogPW("##Ad-PW-F", structureChunk, multipleMode);
@@ -204,8 +209,13 @@ exports.findMatchingLemmaObjectThenWord = (
   }
 
   //    (Ad-PW-I): Pathway for Adhoc INFLECTIONS.
-  if (Object.keys(adhocInflectorRef).includes(structureChunk.wordtype)) {
-    let adhocInflectorKeys = adhocInflectorRef[structureChunk.wordtype];
+  if (
+    Object.keys(adhocInflectorRef).includes(
+      gpUtils.getWorrdtypeStCh(structureChunk)
+    )
+  ) {
+    let adhocInflectorKeys =
+      adhocInflectorRef[gpUtils.getWorrdtypeStCh(structureChunk)];
 
     adhocInflectorKeys.forEach((adhocInflectorKey) => {
       if (
@@ -285,7 +295,7 @@ exports.findMatchingLemmaObjectThenWord = (
   if (structureChunk.form && structureChunk.form.length) {
     Object.keys(refObj.uninflectedForms[currentLanguage]).forEach(
       (wordtype) => {
-        if (structureChunk.wordtype === wordtype) {
+        if (gpUtils.getWorrdtypeStCh(structureChunk) === wordtype) {
           let uninflectedValues =
             refObj.uninflectedForms[currentLanguage][wordtype];
 
@@ -1129,7 +1139,7 @@ exports.giveValueFromObjectByRoute = (obj, route) => {
 exports.findSynhomographs = (lemmaObject, structureChunk, currentLanguage) => {
   let inflectionLabelChain =
     refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
-      structureChunk.wordtype
+      gpUtils.getWorrdtypeStCh(structureChunk)
     ];
 
   let routesAndValues = otUtils.giveRoutesAndTerminalValuesFromObject(
@@ -1227,7 +1237,7 @@ exports.findSinglePointMutationArray = (
 exports.stripOutFeatures = (currentLanguage, structureChunk, PWlabel) => {
   let allInflectorsForThisWordtype =
     refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
-      structureChunk.wordtype
+      gpUtils.getWorrdtypeStCh(structureChunk)
     ];
 
   allInflectorsForThisWordtype
@@ -1376,7 +1386,7 @@ exports.isThisValueUniqueAtThisLevelInLemmaObject = (
 ) => {
   let inflectionChain =
     refObj.lemmaObjectFeatures[gpUtils.getLanguageFromLemmaObject(lObj)]
-      .inflectionChains[gpUtils.getWordtypeFromLemmaObject(lObj)];
+      .inflectionChains[gpUtils.getWorrdtypeLObj(lObj)];
 
   function getInflectionKeyyFromDrillPath(inflectionTyype, drillPath) {
     let inflectionKeyy = drillPath.find((arr) => arr[0] === inflectionTyype)[1];

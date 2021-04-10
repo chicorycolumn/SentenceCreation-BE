@@ -7,10 +7,10 @@ exports.wordsBank = {
     {
       //links
       translations: { ENG: ["woman", "lady"], POL: ["kobieta"] },
-      tags: ["animate", "person", "personTest1", "concrete"],
+      tags: ["animate", "personTest1", "concrete"],
       //selectors
       lemma: "woman",
-      id: "eng-nou-001",
+      id: "eng-npe-001",
       gender: "f",
       //notes
 
@@ -29,10 +29,10 @@ exports.wordsBank = {
     {
       //links
       translations: { ENG: ["father"], POL: ["ojciec"] },
-      tags: ["animate", "person", "family", "concrete"],
+      tags: ["animate", "family", "concrete"],
       //selectors
       lemma: "father",
-      id: "eng-nou-013",
+      id: "eng-npe-013",
       gender: "m",
       //notes
 
@@ -51,10 +51,10 @@ exports.wordsBank = {
     {
       //links
       translations: { ENG: ["mother"], POL: ["matka"] },
-      tags: ["animate", "person", "family", "concrete"],
+      tags: ["animate", "family", "concrete"],
       //selectors
       lemma: "mother",
-      id: "eng-nou-014",
+      id: "eng-npe-014",
       gender: "f",
       //notes
 
@@ -73,10 +73,10 @@ exports.wordsBank = {
     {
       //links
       translations: { ENG: ["boy"], POL: ["chłopiec", "chłopak"] },
-      tags: ["animate", "person", "personTest1", "concrete"],
+      tags: ["animate", "personTest1", "concrete"],
       //selectors
       lemma: "boy",
-      id: "eng-nou-002",
+      id: "eng-npe-002",
       gender: "m",
       //notes
 
@@ -98,7 +98,7 @@ exports.wordsBank = {
       tags: ["inanimate", "edible", "holdable", "concrete"],
       //selectors
       lemma: "onion",
-      id: "eng-nou-003",
+      id: "eng-nco-003",
 
       //notes
 
@@ -120,7 +120,7 @@ exports.wordsBank = {
       tags: ["inanimate", "edible", "holdable", "concrete"],
       //selectors
       lemma: "apple",
-      id: "eng-nou-004",
+      id: "eng-nco-004",
 
       //notes
 
@@ -142,7 +142,7 @@ exports.wordsBank = {
       tags: ["inanimate", "edible0", "holdable", "concrete"],
       //selectors
       lemma: "tomato",
-      id: "eng-nou-015",
+      id: "eng-nco-015",
 
       //notes
 
@@ -164,7 +164,7 @@ exports.wordsBank = {
       tags: ["inanimate", "holdable", "concrete"],
       //selectors
       lemma: "mirror",
-      id: "eng-nou-005",
+      id: "eng-nco-005",
 
       //notes
 
@@ -186,7 +186,7 @@ exports.wordsBank = {
       tags: ["inanimate", "holdable", "concrete"],
       //selectors
       lemma: "book",
-      id: "eng-nou-006",
+      id: "eng-nco-006",
 
       //notes
 
@@ -208,7 +208,7 @@ exports.wordsBank = {
       tags: ["inanimate", "house", "concrete"],
       //selectors
       lemma: "door",
-      id: "eng-nou-007",
+      id: "eng-nco-007",
 
       //notes
 
@@ -230,7 +230,7 @@ exports.wordsBank = {
       tags: ["animate", "animal0", "farmyard", "concrete"],
       //selectors
       lemma: "sheep",
-      id: "eng-nou-008",
+      id: "eng-nco-008",
 
       //notes
 
@@ -252,7 +252,7 @@ exports.wordsBank = {
       tags: ["animate", "animal", "pet", "concrete"],
       //selectors
       lemma: "rat",
-      id: "eng-nou-016",
+      id: "eng-nco-016",
 
       //notes
 
@@ -271,10 +271,10 @@ exports.wordsBank = {
     {
       //links
       translations: { ENG: ["doctor"], POL: ["lekarz", "lekarka"] },
-      tags: ["concrete", "animate", "person", "personTest2", "job"],
+      tags: ["concrete", "animate", "personTest2", "job"],
       //selectors
       lemma: "doctor",
-      id: "eng-nou-012",
+      id: "eng-npe-012",
       gender: "allPersonalSingularGenders_selector",
       //notes
 

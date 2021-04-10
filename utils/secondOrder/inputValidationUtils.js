@@ -13,11 +13,11 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
   );
 
   sentenceFormula.sentenceStructure.forEach((structureChunk) => {
-    let { chunkId, wordtype } = structureChunk;
+    let { chunkId } = structureChunk;
 
-    if (!wordtype) {
+    if (!gpUtils.getWorrdtypeStCh(structureChunk)) {
       clUtils.throw(
-        `#ERR esxo validateSentenceFormula. stCh "${chunkId}" has falsy wordtype.`
+        `#ERR esxo validateSentenceFormula. stCh "${chunkId}" has falsy worrdtype.`
       );
     }
 
@@ -25,7 +25,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
       let featureValue = structureChunk[featureKey];
 
       if (
-        ["fixed"].includes(wordtype) ||
+        ["fixed"].includes(gpUtils.getWorrdtypeStCh(structureChunk)) ||
         [
           "importantFeatures",
           "pleaseShowMultipleWordtypeAllohomClarifiers",
@@ -49,17 +49,22 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
         );
       }
 
-      //1. Check if this featureValue is compatible with this wordtype
+      //1. Check if this featureValue is compatible with this worrdtype
       console.log({ featureKey });
       let compatibleWordtypes = stChFeatures[featureKey].compatibleWordtypes;
 
-      if (compatibleWordtypes && !compatibleWordtypes.includes(wordtype)) {
+      if (
+        compatibleWordtypes &&
+        !compatibleWordtypes.includes(gpUtils.getWorrdtypeStCh(structureChunk))
+      ) {
         console.log(
           "wghd validateSentenceFormula structureChunk",
           structureChunk
         );
         clUtils.throw(
-          `#ERR wghd validateSentenceFormula. stCh "${chunkId}": featureKey "${featureKey}" not expected to be present on "${wordtype}".`
+          `#ERR wghd validateSentenceFormula. stCh "${chunkId}": featureKey "${featureKey}" not expected to be present on "${gpUtils.getWorrdtypeStCh(
+            structureChunk
+          )}".`
         );
       }
 
@@ -92,7 +97,9 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
               structureChunk
             );
             clUtils.throw(
-              `#ERR mkkf validateSentenceFormula. stCh "${chunkId}": featureValue "${featureValue}" not listed as possible for wordtype "${wordtype}".`
+              `#ERR mkkf validateSentenceFormula. stCh "${chunkId}": featureValue "${featureValue}" not listed as possible for worrdtype "${gpUtils.getWorrdtypeStCh(
+                structureChunk
+              )}".`
             );
           }
         } else if (uUtils.typeof(featureValue) === "array") {
@@ -103,7 +110,9 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
                 structureChunk
               );
               clUtils.throw(
-                `#ERR timm validateSentenceFormula. stCh "${chunkId}": featureValue arr included "${featureValueItem}" which was not listed as possible for wordtype "${wordtype}".`
+                `#ERR timm validateSentenceFormula. stCh "${chunkId}": featureValue arr included "${featureValueItem}" which was not listed as possible for worrdtype "${gpUtils.getWorrdtypeStCh(
+                  structureChunk
+                )}".`
               );
             }
           });

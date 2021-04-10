@@ -330,54 +330,54 @@ exports.getLanguageFromLemmaObject = (lObj) => {
   return lObj.id.split("-")[0].toUpperCase();
 };
 
-exports.getWordtypeFromLemmaObject = (lObj) => {
+exports.getWorrdtypeLObj = (lObj, returnFullWordtype) => {
   let wordtypeShorthand = lObj.id.split("-")[1];
   let wordtypeRef = refObj.wordtypeShorthandTranslation;
 
   if (!Object.keys(wordtypeRef).includes(wordtypeShorthand)) {
     clUtils.throw(
-      `#ERR hshc getWordtypeFromLemmaObject. Called with lObj of lObj.id: "${lObj.id}"`
+      `#ERR hshc getWorrdtypeLObj. Called with lObj of lObj.id: "${lObj.id}"`
     );
   }
 
-  return wordtypeRef[wordtypeShorthand];
+  let fullWordtype = wordtypeRef[wordtypeShorthand];
+  let baseWordtype = fullWordtype.split("-")[0];
+  return returnFullWordtype ? fullWordtype : baseWordtype;
 };
 
-exports.getWordtypeFromStructureChunk = (stCh) => {
+exports.getWorrdtypeStCh = (stCh, returnFullWordtype) => {
   let wordtypeShorthand = stCh.chunkId.split("-")[0];
-  let wordtypeRef = refObj.wordtypeShorthandTranslation;
 
-  if (!Object.keys(wordtypeRef).includes(wordtypeShorthand)) {
+  let fullWordtype = refObj.wordtypeShorthandTranslation[wordtypeShorthand];
+
+  if (!fullWordtype) {
     clUtils.throw(
-      `#ERR bsov getWordtypeFromStructureChunk. wordtypeShorthand "${stCh.chunkId}" had no translated wordtype.`
+      `#ERR bsov getWorrdtypeStCh. wordtypeShorthand "${stCh.chunkId}" had no translated wordtype.`
     );
   }
 
-  return wordtypeRef[wordtypeShorthand];
+  let baseWordtype = fullWordtype.split("-")[0];
+  return returnFullWordtype ? fullWordtype : baseWordtype;
 };
 
-exports.getWordtypeOfAgreeWith = (
+exports.getWorrdtypeAgree = (
   structureChunk,
-  agreeWithKey = "agreeWith"
+  agreeWithKey = "agreeWith",
+  returnFullWordtype
 ) => {
-  const wordtypeRef = {
-    nou: "noun",
-    ver: "verb",
-    adj: "adjective",
-    adv: "adverb",
-    pro: "pronoun",
-    art: "article",
-  };
+  const wordtypeRef = refObj.wordtypeShorthandTranslation;
 
   let wordtypeShorthand = structureChunk[agreeWithKey].split("-")[0];
 
   if (!Object.keys(wordtypeRef).includes(wordtypeShorthand)) {
     clUtils.throw(
-      `#ERR xafb getWordtypeFromLemmaObject. Object.keys(wordtypeRef) did not include wordtypeShorthand: "${wordtypeShorthand}"`
+      `#ERR xafb getWorrdtypeLObj. Object.keys(wordtypeRef) did not include wordtypeShorthand: "${wordtypeShorthand}"`
     );
   }
 
-  return wordtypeRef[wordtypeShorthand];
+  let fullWordtype = wordtypeRef[wordtypeShorthand];
+  let baseWordtype = fullWordtype.split("-")[0];
+  return returnFullWordtype ? fullWordtype : baseWordtype;
 };
 
 exports.isKeyFilledOutOnChunk = (chunk, featureKey) => {

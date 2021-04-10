@@ -7,7 +7,7 @@ let nounSet = [
 
     //selectors
     lemma: "nut",
-    id: "eng-nou-d01",
+    id: "eng-nco-d01",
 
     //notes
 
@@ -31,7 +31,7 @@ let nounSet = [
 
     //selectors
     lemma: "nut",
-    id: "eng-nou-d02",
+    id: "eng-nco-d02",
 
     //notes
 
@@ -55,7 +55,7 @@ let nounSet = [
 
     //selectors
     lemma: "bear",
-    id: "eng-nou-d03",
+    id: "eng-nco-d03",
 
     //notes
 
@@ -84,7 +84,7 @@ let nounSet = [
 
     //selectors
     lemma: "tie",
-    id: "eng-nou-d04",
+    id: "eng-nco-d04",
 
     //notes
 
@@ -113,7 +113,7 @@ let nounSet = [
 
     //selectors
     lemma: "tie",
-    id: "eng-nou-d05",
+    id: "eng-nco-d05",
 
     //notes
 

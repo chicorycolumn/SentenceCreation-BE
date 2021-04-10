@@ -66,18 +66,18 @@ exports.fetchPalette = (req) => {
     //If PDS from req, then add PDS:true to each Q stCh.
     //Unless stCh is 'person' noun and headNoun of pronoun stCh. 'The doctor gave me his book.' must specify MGN doctor.
     //
-    //But if qChunk.gender holds all the poss gender values for this lang>wordtype
+    //But if qChunk.gender holds all the poss gender values for this lang>worrdtype
     //(bearing in mind if person andTag)
     //then do allow it to be qChunk.dontSpecifyOnThisChunk = true.
     questionSentenceFormula.sentenceStructure.forEach((qChunk) => {
       qChunk.dontSpecifyOnThisChunk = true;
 
       if (
-        qChunk.andTags &&
-        qChunk.andTags.includes("person") &&
+        //bostonX
+        gpUtils.getWorrdtypeStCh(qChunk) === "noun-person" &&
         questionSentenceFormula.sentenceStructure.find(
           (potentialDepChunk) =>
-            potentialDepChunk.wordtype === "pronoun" &&
+            gpUtils.getWorrdtypeStCh(potentialDepChunk) === "pronoun" &&
             potentialDepChunk.agreeWith === qChunk.chunkId
         )
       ) {
@@ -94,7 +94,8 @@ exports.fetchPalette = (req) => {
           ENG: ["m", "f", "n"],
         };
 
-        if (qChunk.andTags && qChunk.andTags.includes("person")) {
+        if (gpUtils.getWorrdtypeStCh(qChunk) === "noun-person") {
+          //bostonX
           if (
             !allGenderValuesForPersonNouns[questionLanguage].every((value) =>
               qChunk.gender.includes(value)

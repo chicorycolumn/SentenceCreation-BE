@@ -369,9 +369,9 @@ xdescribe("findSynhomographs", () => {
       },
     ];
     const structureChunkArr = [
-      { wordtype: "noun" },
-      { wordtype: "noun" },
-      { wordtype: "noun" },
+      { wordtype: "noun", chunkId: "nco-1" },
+      { wordtype: "noun", chunkId: "nco-2" },
+      { wordtype: "noun", chunkId: "nco-3" },
     ];
 
     const expected = [];
@@ -433,9 +433,9 @@ xdescribe("findSynhomographs", () => {
     ];
 
     const structureChunkArr = [
-      { wordtype: "noun" },
-      { wordtype: "noun" },
-      { wordtype: "noun" },
+      { wordtype: "noun", chunkId: "nco-1" },
+      { wordtype: "noun", chunkId: "nco-2" },
+      { wordtype: "noun", chunkId: "nco-3" },
     ];
     const actual = [];
 
@@ -512,9 +512,9 @@ xdescribe("findSynhomographs", () => {
       },
     ];
     const structureChunkArr = [
-      { wordtype: "noun" },
-      { wordtype: "noun" },
-      { wordtype: "noun" },
+      { wordtype: "noun", chunkId: "nco-1" },
+      { wordtype: "noun", chunkId: "nco-2" },
+      { wordtype: "noun", chunkId: "nco-3" },
     ];
     const actual = [];
 
@@ -637,9 +637,9 @@ xdescribe("findSynhomographs", () => {
       },
     ];
     const structureChunkArr = [
-      { wordtype: "noun" },
-      { wordtype: "noun" },
-      { wordtype: "noun" },
+      { wordtype: "noun", chunkId: "nco-1" },
+      { wordtype: "noun", chunkId: "nco-2" },
+      { wordtype: "noun", chunkId: "nco-3" },
     ];
     const actual = [];
 
@@ -994,10 +994,10 @@ xdescribe("extractNestedRoutes", () => {
     const input = {
       //links
       translations: { ENG: ["woman", "lady"] },
-      tags: ["animate", "person", "concrete"],
+      tags: ["animate", "concrete"],
       //selectors
       lemma: "kobieta",
-      id: "pol-nou-001",
+      id: "pol-npe-001",
       gender: "f",
       //notes
 

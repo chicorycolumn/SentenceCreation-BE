@@ -18,12 +18,12 @@ xdescribe("findHomographs", () => {
 
     const expected = {
       sheep: [
-        ["eng-nou-008", "singular", "nom"],
-        ["eng-nou-008", "plural", "nom"],
+        ["eng-nco-008", "singular", "nom"],
+        ["eng-nco-008", "plural", "nom"],
       ],
       "sheep's": [
-        ["eng-nou-008", "singular", "gen"],
-        ["eng-nou-008", "plural", "gen"],
+        ["eng-nco-008", "singular", "gen"],
+        ["eng-nco-008", "plural", "gen"],
       ],
       read: [
         ["eng-ver-003", "infinitive"],
@@ -54,12 +54,12 @@ xdescribe("findHomographs", () => {
 
     const expected = {
       sheep: [
-        ["eng-nou-008", "singular", "nom"],
-        ["eng-nou-008", "plural", "nom"],
+        ["eng-nco-008", "singular", "nom"],
+        ["eng-nco-008", "plural", "nom"],
       ],
       "sheep's": [
-        ["eng-nou-008", "singular", "gen"],
-        ["eng-nou-008", "plural", "gen"],
+        ["eng-nco-008", "singular", "gen"],
+        ["eng-nco-008", "plural", "gen"],
       ],
       read: [
         ["eng-ver-003", "infinitive"],
@@ -82,12 +82,12 @@ xdescribe("findHomographs", () => {
 
     const expected = {
       sheep: [
-        ["eng-nou-008", "singular", "nom"],
-        ["eng-nou-008", "plural", "nom"],
+        ["eng-nco-008", "singular", "nom"],
+        ["eng-nco-008", "plural", "nom"],
       ],
       "sheep's": [
-        ["eng-nou-008", "singular", "gen"],
-        ["eng-nou-008", "plural", "gen"],
+        ["eng-nco-008", "singular", "gen"],
+        ["eng-nco-008", "plural", "gen"],
       ],
       read: [
         ["eng-ver-003", "infinitive"],
@@ -118,12 +118,12 @@ xdescribe("findHomographs", () => {
 
     const expected = {
       sheep: [
-        ["eng-nou-008", "singular", "nom"],
-        ["eng-nou-008", "plural", "nom"],
+        ["eng-nco-008", "singular", "nom"],
+        ["eng-nco-008", "plural", "nom"],
       ],
       "sheep's": [
-        ["eng-nou-008", "singular", "gen"],
-        ["eng-nou-008", "plural", "gen"],
+        ["eng-nco-008", "singular", "gen"],
+        ["eng-nco-008", "plural", "gen"],
       ],
       read: [
         ["eng-ver-003", "infinitive"],
@@ -150,20 +150,20 @@ xdescribe("findHomographs", () => {
         ["eng-adj-101", "nonprotective"],
       ],
       nut: [
-        ["eng-nou-009", "singular", "nom"],
-        ["eng-nou-010", "singular", "nom"],
+        ["eng-nco-009", "singular", "nom"],
+        ["eng-nco-010", "singular", "nom"],
       ],
       "nut's": [
-        ["eng-nou-009", "singular", "gen"],
-        ["eng-nou-010", "singular", "gen"],
+        ["eng-nco-009", "singular", "gen"],
+        ["eng-nco-010", "singular", "gen"],
       ],
       nuts: [
-        ["eng-nou-009", "plural", "nom"],
-        ["eng-nou-010", "plural", "nom"],
+        ["eng-nco-009", "plural", "nom"],
+        ["eng-nco-010", "plural", "nom"],
       ],
       "nuts'": [
-        ["eng-nou-009", "plural", "gen"],
-        ["eng-nou-010", "plural", "gen"],
+        ["eng-nco-009", "plural", "gen"],
+        ["eng-nco-010", "plural", "gen"],
       ],
       fast: [
         ["eng-adj-005", "simple"],
@@ -176,11 +176,11 @@ xdescribe("findHomographs", () => {
         ["eng-adj-004", "superlative"],
       ],
       bear: [
-        ["eng-nou-011", "singular", "nom"],
+        ["eng-nco-011", "singular", "nom"],
         ["eng-ver-006", "infinitive"],
       ],
       bears: [
-        ["eng-nou-011", "plural", "nom"],
+        ["eng-nco-011", "plural", "nom"],
         ["eng-ver-006", "thirdPS"],
       ],
     };
@@ -203,20 +203,20 @@ xdescribe("findHomographs", () => {
         ["eng-adj-101", "nonprotective"],
       ],
       nut: [
-        ["eng-nou-009", "singular", "nom"],
-        ["eng-nou-010", "singular", "nom"],
+        ["eng-nco-009", "singular", "nom"],
+        ["eng-nco-010", "singular", "nom"],
       ],
       "nut's": [
-        ["eng-nou-009", "singular", "gen"],
-        ["eng-nou-010", "singular", "gen"],
+        ["eng-nco-009", "singular", "gen"],
+        ["eng-nco-010", "singular", "gen"],
       ],
       nuts: [
-        ["eng-nou-009", "plural", "nom"],
-        ["eng-nou-010", "plural", "nom"],
+        ["eng-nco-009", "plural", "nom"],
+        ["eng-nco-010", "plural", "nom"],
       ],
       "nuts'": [
-        ["eng-nou-009", "plural", "gen"],
-        ["eng-nou-010", "plural", "gen"],
+        ["eng-nco-009", "plural", "gen"],
+        ["eng-nco-010", "plural", "gen"],
       ],
       fast: [
         ["eng-adj-005", "simple"],
@@ -229,11 +229,11 @@ xdescribe("findHomographs", () => {
         ["eng-adj-004", "superlative"],
       ],
       bear: [
-        ["eng-nou-011", "singular", "nom"],
+        ["eng-nco-011", "singular", "nom"],
         ["eng-ver-006", "infinitive"],
       ],
       bears: [
-        ["eng-nou-011", "plural", "nom"],
+        ["eng-nco-011", "plural", "nom"],
         ["eng-ver-006", "thirdPS"],
       ],
     };
@@ -339,17 +339,17 @@ xdescribe("checkLemmaObjectIds", () => {
 
     expect(actual).to.eql({
       schematic: [
-        ["eng-nou-001", "woman"],
-        ["eng-nou-002", "boy"],
-        ["eng-nou-003", "onion"],
-        ["eng-nou-003", "apple"],
-        ["eng-nou-005", "mirror"],
-        ["eng-nou-006", "book"],
-        ["eng-nou-007", "door"],
-        ["eng-nou-008", "sheep"],
-        ["eng-nou-009", "nut"],
-        ["eng-nou-010", "nut"],
-        ["eng-nou-011", "bear"],
+        ["eng-npe-001", "woman"],
+        ["eng-npe-002", "boy"],
+        ["eng-nco-003", "onion"],
+        ["eng-nco-003", "apple"],
+        ["eng-nco-005", "mirror"],
+        ["eng-nco-006", "book"],
+        ["eng-nco-007", "door"],
+        ["eng-nco-008", "sheep"],
+        ["eng-nco-009", "nut"],
+        ["eng-nco-010", "nut"],
+        ["eng-nco-011", "bear"],
         ["eng-adj-001", "red"],
         ["eng-adj-005", "fast"],
         ["eng-adj-004", "fast"],
@@ -361,7 +361,7 @@ xdescribe("checkLemmaObjectIds", () => {
         ["eng-ver-001", "have"],
         ["eng-ver-000", "be"],
       ],
-      duplicateIds: ["eng-nou-003"],
+      duplicateIds: ["eng-nco-003"],
     });
   });
 });
@@ -399,7 +399,7 @@ xdescribe("checkWords", () => {
 
     console.log(actual);
 
-    expect(nounsWithoutGender).to.eql([["kobieta", "pol-nou-001"]]);
+    expect(nounsWithoutGender).to.eql([["kobieta", "pol-npe-001"]]);
   });
 });
 

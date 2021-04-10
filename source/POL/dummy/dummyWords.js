@@ -5,7 +5,7 @@ let nounSet = [
     tags: ["allohomTesting", "edible2"],
     //selectors
     lemma: "orzech",
-    id: "pol-nou-d01",
+    id: "pol-nco-d01",
     gender: "m3",
     //notes
 
@@ -39,7 +39,7 @@ let nounSet = [
     tags: ["allohomTesting", "toolbox"],
     //selectors
     lemma: "nakrętka",
-    id: "pol-nou-d02",
+    id: "pol-nco-d02",
     gender: "f",
     //notes
 
@@ -69,7 +69,7 @@ let nounSet = [
     tags: ["allohomTesting2", "animal"],
     //selectors
     lemma: "niedźwiedź",
-    id: "pol-nou-d03",
+    id: "pol-nco-d03",
     gender: "m2",
     //notes
 
@@ -99,7 +99,7 @@ let nounSet = [
     tags: ["allohomTesting3", "sports"],
     //selectors
     lemma: "remis",
-    id: "pol-nou-d04",
+    id: "pol-nco-d04",
     gender: "m3",
     //notes
 
@@ -129,7 +129,7 @@ let nounSet = [
     tags: ["allohomTesting3", "clothes"],
     //selectors
     lemma: "krawat",
-    id: "pol-nou-d05",
+    id: "pol-nco-d05",
     gender: "m3",
     //notes
 
@@ -158,7 +158,7 @@ let nounSet = [
     },
   },
   {
-    id: "dummy-nou-001",
+    id: "dummy-nco-001",
     lemma: "foobar_loc_only",
     gender: "n",
     tags: ["dummy"],
@@ -173,7 +173,7 @@ let nounSet = [
     },
   },
   {
-    id: "dummy-nou-002",
+    id: "dummy-nco-002",
     lemma: "foobar_ins_only",
     gender: "n",
     tags: ["dummy"],
@@ -188,7 +188,7 @@ let nounSet = [
     },
   },
   {
-    id: "dummy-nou-003",
+    id: "dummy-nco-003",
     lemma: "foobar_sin_ins_plu_loc_only",
     gender: "n",
     tags: ["dummy2"],
@@ -203,7 +203,7 @@ let nounSet = [
     },
   },
   {
-    id: "dummy-nou-004",
+    id: "dummy-nco-004",
     lemma: "foobar_sin_ins_plu_loc_only",
     gender: "n",
     tags: ["dummy3"],
@@ -218,7 +218,7 @@ let nounSet = [
     },
   },
   {
-    id: "dummy-nou-005",
+    id: "dummy-nco-005",
     lemma: "foobar_sin_loc_plu_ins_only",
     gender: "n",
     tags: ["dummy3"],
@@ -233,7 +233,7 @@ let nounSet = [
     },
   },
   {
-    id: "dummy-nou-006",
+    id: "dummy-nco-006",
     lemma: "foobar_none",
     gender: "n",
     tags: ["dummy3"],
@@ -246,7 +246,7 @@ let nounSet = [
     },
   },
   {
-    id: "dummy-nou-007",
+    id: "dummy-nco-007",
     lemma: "foobar-A",
     gender: "n",
     tags: ["foobar-A"],
@@ -258,7 +258,7 @@ let nounSet = [
     },
   },
   {
-    id: "dummy-nou-008",
+    id: "dummy-nco-008",
     lemma: "foobar-B",
     gender: "n",
     tags: ["foobar-B"],
@@ -270,7 +270,7 @@ let nounSet = [
     },
   },
   {
-    id: "dummy-nou-009",
+    id: "dummy-nco-009",
     lemma: "foobar-C",
     gender: "n",
     tags: ["foobar-C"],
@@ -282,10 +282,10 @@ let nounSet = [
     },
   },
   {
-    id: "dummy-nou-010",
-    lemma: "dummy-nou-010",
+    id: "dummy-nco-010",
+    lemma: "dummy-nco-010",
     gender: "n",
-    tags: ["dummy-nou-010"],
+    tags: ["dummy-nco-010"],
     lacking: true,
     inflections: {
       singular: {

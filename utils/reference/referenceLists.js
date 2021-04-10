@@ -1,4 +1,4 @@
-const { lObjIsMGN } = require("../generalPurposeUtils");
+const { lObjIsMGN, getWorrdtypeStCh } = require("../generalPurposeUtils");
 
 exports.incompatibleFeaturesRef = {
   POL: {
@@ -78,6 +78,9 @@ exports.lemmaObjectFeatures = {
   POL: {
     selectors: {
       noun: ["gender"],
+      "noun-common": ["gender"],
+      "noun-person": ["gender"],
+      "noun-proper": ["gender"],
       verb: ["aspect"],
     },
     hybridSelectors: {
@@ -85,42 +88,28 @@ exports.lemmaObjectFeatures = {
     },
     inflectionChains: {
       noun: ["number", "gcase"],
+      "noun-common": ["number", "gcase"],
+      "noun-person": ["number", "gcase"],
+      "noun-proper": ["number", "gcase"],
       adjective: ["form", "number", "gender", "gcase"],
       verb: ["form", "tense", "person", "number", "gender"],
       pronoun: ["form", "person", "number", "gender", "gcase"],
-      //BOSTON
+      //MASSACHEUSETTS
       // pronounPERSONAL: ["form", "person", "number", "gender", "gcase"],
       // pronounPOSSESSIVE: ["form", "person", "number", "gender", "number", "gender", "gcase"],
       // article: NONE
       preposition: ["form"],
     },
     inheritableInflectorKeys: {
-      noun: {
-        values: ["number", "gcase"],
-        getSpecial: (stCh, lObj) => {
-          let specialInflectorKeys = [];
-
-          if (stCh) {
-            if (stCh.andTags && stCh.andTags.includes("person")) {
-              specialInflectorKeys.push("gender");
-            }
-          }
-
-          if (lObj) {
-            if (lObjIsMGN(lObj)) {
-              specialInflectorKeys.push("gender");
-            }
-          }
-
-          return Array.from(new Set(specialInflectorKeys));
-        },
-      }, //But gender is inheritable if this is MGN.
-      adjective: { values: ["number", "gender", "gcase"] },
-      verb: { values: ["tense", "person", "number", "gender"] },
-      pronoun: { values: ["person", "number", "gender", "gcase"] },
+      "noun-common": ["number", "gcase"],
+      "noun-person": ["number", "gcase", "gender"], //BOSTON0
+      "noun-proper": ["number", "gcase"],
+      adjective: ["number", "gender", "gcase"],
+      verb: ["tense", "person", "number", "gender"],
+      pronoun: ["person", "number", "gender", "gcase"],
     },
     allowableTransfersFromQuestionStructure: {
-      noun: ["number"],
+      noun: ["number"], //boston-?
       adjective: ["form", "number", "gender"],
       verb: ["tenseDescription", "person", "number", "gender"],
       pronoun: ["person", "number", "gender"],
@@ -146,13 +135,15 @@ exports.lemmaObjectFeatures = {
       preposition: ["form"],
     },
     inheritableInflectorKeys: {
-      noun: { values: ["number", "gcase"] },
-      adjective: { values: [] },
-      verb: { values: ["tense", "person", "number"] },
-      pronoun: { values: ["person", "number", "gender", "gcase"] },
+      "noun-common": ["number", "gcase"],
+      "noun-person": ["number", "gcase", "gender"],
+      "noun-proper": ["number", "gcase"],
+      adjective: [],
+      verb: ["tense", "person", "number"],
+      pronoun: ["person", "number", "gender", "gcase"],
     },
     allowableTransfersFromQuestionStructure: {
-      noun: ["number"],
+      noun: ["number"], //boston-?
       adjective: ["form"],
       verb: ["tenseDescription", "person", "number"],
       pronoun: ["form", "person", "number", "gender"],
@@ -185,19 +176,19 @@ exports.structureChunkFeatures = {
     preferredChoicesForQuestionSentence: {
       expectedTypeOnStCh: "keyValueObject",
     },
-    wordtype: {
-      expectedTypeOnStCh: "string",
-      possibleValues: [
-        "noun",
-        "adjective",
-        "verb",
-        "adverb",
-        "pronoun",
-        "preposition",
-        "article",
-        "fixed",
-      ],
-    },
+    // wordtype: {
+    //   expectedTypeOnStCh: "string",
+    //   possibleValues: [
+    //     "noun",
+    //     "adjective",
+    //     "verb",
+    //     "adverb",
+    //     "pronoun",
+    //     "preposition",
+    //     "article",
+    //     "fixed",
+    //   ],
+    // },
     agreeWith: {
       expectedTypeOnStCh: "string",
       possibleValueMustBeExistingChunkId: true,
@@ -398,9 +389,10 @@ exports.adhocForms = {
 };
 
 exports.wordtypeShorthandTranslation = {
-  nco: "nounCommon",
-  npe: "nounPerson",
-  npr: "nounProper",
+  //boston0
+  nco: "noun-common",
+  npe: "noun-person",
+  npr: "noun-proper",
   ver: "verb",
   adj: "adjective",
   adv: "adverb",

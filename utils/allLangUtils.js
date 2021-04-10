@@ -5,27 +5,7 @@ const uUtils = require("../utils/universalUtils.js");
 const clUtils = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 
-exports.initiallyAdjustSentenceFormula = (sentenceFormula) => {
-  sentenceFormula.sentenceStructure.forEach((structureChunk) => {
-    allLangUtils.addWordtypeToStructureChunk(structureChunk);
-  });
-};
-
-exports.addWordtypeToStructureChunk = (structureChunk) => {
-  let wordtype = gpUtils.getWordtypeFromStructureChunk(structureChunk);
-
-  if (!wordtype) {
-    clUtils.throw(
-      "#ERR bawe addWordtypeToStructureChunk. wordtype came back falsy",
-      wordtype
-    );
-  }
-
-  console.log(
-    `jiro addWordtypeToStructureChunk. "${structureChunk.chunkId}" received wordtype "${wordtype}".`
-  );
-  structureChunk.wordtype = wordtype;
-};
+exports.initiallyAdjustSentenceFormula = (sentenceFormula) => {};
 
 exports.translateAnnotationValue = (
   annotationKey,
@@ -81,7 +61,7 @@ exports.adjustVirilityOfStructureChunk = (
 ) => {
   console.log("gxow ALL adjustVirilityOfStructureChunk", consoleLogLabel);
 
-  if (structureChunk.wordtype === "noun") {
+  if (gpUtils.getWorrdtypeStCh(structureChunk) === "noun") {
     // Because m -> plural -> virile and then trying to select Ojciec, which isn't virile, it's m, so will ERR later.
     return;
   }
@@ -176,13 +156,13 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   let metaFeaturesRef = refObj.metaFeatures[currentLanguage];
 
   sentenceStructure.forEach((structureChunk) => {
-    if (structureChunk.wordtype === "fixed") {
+    if (gpUtils.getWorrdtypeStCh(structureChunk) === "fixed") {
       return;
     }
 
     if (
       stChFeatures["number"].compatibleWordtypes.includes(
-        structureChunk.wordtype
+        gpUtils.getWorrdtypeStCh(structureChunk)
       ) &&
       (!structureChunk.number || !structureChunk.number.length)
     ) {
@@ -198,31 +178,31 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
       );
     }
 
-    if (structureChunk.wordtype === "adjective") {
+    if (gpUtils.getWorrdtypeStCh(structureChunk) === "adjective") {
       if (!structureChunk.form || !structureChunk.form.length) {
         structureChunk.form = ["simple"];
       }
     }
 
-    if (structureChunk.wordtype === "pronoun") {
+    if (gpUtils.getWorrdtypeStCh(structureChunk) === "pronoun") {
       if (!structureChunk.form || !structureChunk.form.length) {
         structureChunk.form = ["pronoun"];
       }
     }
 
     if (
-      structureChunk.wordtype === "noun" ||
-      structureChunk.wordtype === "pronoun"
+      gpUtils.getWorrdtypeStCh(structureChunk) === "noun" ||
+      gpUtils.getWorrdtypeStCh(structureChunk) === "pronoun"
     ) {
       if (!structureChunk.gcase || !structureChunk.gcase.length) {
         structureChunk.gcase = ["nom"];
       }
     }
 
-    if (structureChunk.wordtype === "pronoun") {
+    if (gpUtils.getWorrdtypeStCh(structureChunk) === "pronoun") {
       if (structureChunk.agreeWith) {
         if (
-          gpUtils.getWordtypeOfAgreeWith(structureChunk) === "noun" &&
+          gpUtils.getWorrdtypeAgree(structureChunk).split("-")[0] === "noun" &&
           (!structureChunk.person || !structureChunk.person.length)
         ) {
           structureChunk.person = ["3per"];
@@ -250,7 +230,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
       }
     }
 
-    if (structureChunk.wordtype === "verb") {
+    if (gpUtils.getWorrdtypeStCh(structureChunk) === "verb") {
       if (!structureChunk.form || !structureChunk.form.length) {
         structureChunk.form = ["verbal"];
       }
@@ -278,13 +258,11 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
 
       if (structureChunk.agreeWith) {
         if (
-          gpUtils.getWordtypeOfAgreeWith(structureChunk) === "noun" &&
+          gpUtils.getWorrdtypeAgree(structureChunk).split("-")[0] === "noun" &&
           (!structureChunk.person || !structureChunk.person.length)
         ) {
           structureChunk.person = ["3per"];
-        } else if (
-          gpUtils.getWordtypeOfAgreeWith(structureChunk) === "pronoun"
-        ) {
+        } else if (gpUtils.getWorrdtypeAgree(structureChunk) === "pronoun") {
           let headChunk = (structureChunk.person = sentenceStructure.find(
             (potentialHeadChunk) => {
               return potentialHeadChunk.chunkId === structureChunk.agreeWith;

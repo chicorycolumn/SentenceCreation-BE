@@ -149,8 +149,9 @@ exports.filterWithin_PHD = (
     }
 
     if (
-      gpUtils.getWordtypeOfAgreeWith(PHDstructureChunk, postHocAgreeWithKey) ===
-      "noun"
+      gpUtils
+        .getWorrdtypeAgree(PHDstructureChunk, postHocAgreeWithKey)
+        .split("-")[0] === "noun"
     ) {
       let personArr = drillPathOfHead.find((arr) => arr[0] === "person");
 
@@ -370,7 +371,7 @@ exports.filterWithinSelectedLemmaObject = (
 
   let inflectionChain =
     refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
-      structureChunk.wordtype
+      gpUtils.getWorrdtypeStCh(structureChunk)
     ];
 
   let requirementArrs = [];
@@ -535,7 +536,7 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
     drillPath &&
     !drillPath.map((arr) => arr[0]).includes("gender") &&
     stChFeatures["gender"].compatibleWordtypes.includes(
-      selectedLemmaObject.wordtype
+      gpUtils.getWorrdtypeLObj(selectedLemmaObject)
     )
   ) {
     structureChunk.gender = [];
@@ -603,7 +604,7 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
   //STEP THREE: For all remaining selectors, update the stCh with values from lObj.
   let selectors =
     refObj.lemmaObjectFeatures[currentLanguage].selectors[
-      structureChunk.wordtype
+      gpUtils.getWorrdtypeStCh(structureChunk)
     ];
 
   console.log("abyy updateStChByAndTagsAndSelectors", { doneSelectors });
@@ -623,7 +624,9 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
   } else {
     console.log(
       "[1;31m " +
-        `vbob updateStChByAndTagsAndSelectors Just to note that refObj gave no selectors for currentLanguage "${currentLanguage}" and structureChunk.wordtype "${structureChunk.wordtype}"` +
+        `vbob updateStChByAndTagsAndSelectors Just to note that refObj gave no selectors for currentLanguage "${currentLanguage}" and s'tructureChunk.worrdtype "${gpUtils.getWorrdtypeStCh(
+          structureChunk
+        )}"` +
         "[0m"
     );
   }
@@ -673,7 +676,7 @@ exports.filterOutLackingLemmaObjects = (
 ) => {
   let inflectionChain =
     refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
-      specObj.wordtype
+      gpUtils.getWorrdtypeLObj(specObj)
     ];
   let requirementArrs = inflectionChain.map((key) => specObj[key] || []);
 
@@ -834,7 +837,7 @@ exports.filterBySelectors = (
 ) => {
   let selectors =
     refObj.lemmaObjectFeatures[currentLanguage].selectors[
-      structureChunk.wordtype
+      gpUtils.getWorrdtypeStCh(structureChunk)
     ];
 
   console.log(

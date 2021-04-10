@@ -137,7 +137,7 @@ exports.validFeaturesOfStructureChunkWordtype = (
 
   featureTypes.forEach((featureType) => {
     let additionalValidFeatures =
-      featuresRef[featureType][structureChunk.wordtype];
+      featuresRef[featureType][gpUtils.getWorrdtypeStCh(structureChunk)];
 
     if (additionalValidFeatures) {
       if (!Array.isArray(additionalValidFeatures)) {

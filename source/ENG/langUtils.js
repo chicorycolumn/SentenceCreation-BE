@@ -66,7 +66,7 @@ exports.selectWordVersions = (
   // >>> Indefinite Article
   // >>>
   if (
-    structureChunk.wordtype === "article" &&
+    gpUtils.getWorrdtypeStCh(structureChunk) === "article" &&
     structureChunk.form.includes("indefinite")
   ) {
     if (!subsequentOutputUnit) {
@@ -160,15 +160,15 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   let metagenderRef = refObj.metaFeatures[currentLanguage].gender;
 
   sentenceStructure.forEach((structureChunk) => {
-    if (structureChunk.wordtype === "fixed") {
+    if (gpUtils.getWorrdtypeStCh(structureChunk) === "fixed") {
       return;
     }
 
-    if (structureChunk.wordtype === "preposition") {
+    if (gpUtils.getWorrdtypeStCh(structureChunk) === "preposition") {
       structureChunk.form = ["onlyForm"];
     }
 
-    if (structureChunk.wordtype === "noun") {
+    if (gpUtils.getWorrdtypeStCh(structureChunk) === "noun") {
       if (structureChunk.gcase && structureChunk.gcase.length) {
         structureChunk.gcase = structureChunk.gcase.map((gcaseValue) => {
           return ["nom", "gen"].includes(gcaseValue) ? gcaseValue : "nom";
@@ -177,14 +177,14 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
     }
 
     console.log(
-      "fydk ENG preprocessStructureChunks structureChunk.wordtype",
-      structureChunk.wordtype
+      "fydk ENG preprocessStructureChunks s'tructureChunk.worrdtype",
+      gpUtils.getWorrdtypeStCh(structureChunk)
     );
 
     if (
-      //If gender is an appropriate feature of this wordtype.
+      //If gender is an appropriate feature of this worrdtype.
       refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
-        structureChunk.wordtype
+        gpUtils.getWorrdtypeStCh(structureChunk)
       ].includes("gender")
     ) {
       if (!structureChunk.gender || !structureChunk.gender.length) {
@@ -216,10 +216,10 @@ exports.preprocessLemmaObjectsMajor = (
   let metagenderRef = refObj.metaFeatures[currentLanguage].gender;
 
   matches.forEach((lObj) => {
-    if (gpUtils.getWordtypeFromLemmaObject(lObj) === "pronoun") {
-      if (!structureChunk.wordtype === "pronoun") {
+    if (gpUtils.getWorrdtypeLObj(lObj) === "pronoun") {
+      if (!gpUtils.getWorrdtypeStCh(structureChunk) === "pronoun") {
         clUtils.throw(
-          "#ERR hcio preprocessLemmaObjectsMajor. lObj and stCh wordtypes don't match."
+          "#ERR hcio preprocessLemmaObjectsMajor. lObj and stCh worrdtypes don't match."
         );
       }
       if (!structureChunk.gender) {
@@ -242,13 +242,14 @@ exports.preprocessLemmaObjectsMajor = (
 
 exports.preprocessLemmaObjectsMinor = (matches) => {
   matches.forEach((lObj) => {
-    if (gpUtils.getWordtypeFromLemmaObject(lObj) === "noun") {
-      if (lObj.tags.includes("person")) {
+    if (gpUtils.getWorrdtypeLObj(lObj).split("-")[0] === "noun") {
+      if (gpUtils.getWorrdtypeLObj(lObj) === "noun-person") {
+        //bostonX
         if (!lObj.gender) {
           clUtils.throw(
             "#ERR vuww preprocessLemmaObjectsMinor. The lObj '" +
               lObj.id +
-              "' is a person so should have a gender key."
+              "' is a noun-person so should have a gender key."
           );
         }
       } else {
@@ -279,7 +280,7 @@ exports.addLanguageParticularClarifiers = (
   lemmaObject
 ) => {
   if (
-    structureChunk.wordtype === "verb" &&
+    gpUtils.getWorrdtypeStCh(structureChunk) === "verb" &&
     structureChunk.form.includes("verbal")
   ) {
     //
@@ -402,7 +403,7 @@ exports.generateAdhocForms = (
 
   if (
     adhocInflectorKey === "tenseDescription" &&
-    structureChunk.wordtype === "verb" &&
+    gpUtils.getWorrdtypeStCh(structureChunk) === "verb" &&
     structureChunk.form.includes("verbal")
   ) {
     if (
@@ -625,7 +626,7 @@ exports.generateAdhocForms = (
       featureTypes.forEach((featureType) => {
         let featureKeys =
           refObj.lemmaObjectFeatures[currentLanguage][featureType][
-            structureChunkCopy.wordtype
+            gpUtils.getWorrdtypeStCh(structureChunkCopy)
           ];
 
         if (featureKeys) {

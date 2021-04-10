@@ -4,10 +4,10 @@ let nounSet = [
   {
     //links
     translations: { ENG: ["woman", "lady"] },
-    tags: ["animate", "person", "personTest1", "concrete"],
+    tags: ["animate", "personTest1", "concrete"],
     //selectors
     lemma: "kobieta",
-    id: "pol-nou-001",
+    id: "pol-npe-001",
     // gender: "f",
     //notes
 
@@ -37,7 +37,7 @@ let nounSet = [
     tags: ["allohomTesting2", "animal"],
     //selectors
     lemma: "niedźwiedź",
-    id: "pol-nou-014",
+    id: "pol-nco-014",
     gender: "m2",
     //notes
 
@@ -64,10 +64,10 @@ let nounSet = [
   // {
   //   //links
   //   translations: { ENG: ["boy", "boyfriend", "guy"] },
-  //   tags: ["animate", "person", "personTest1", "concrete"],
+  //   tags: ["animate",  "personTest1", "concrete"],
   //   //selectors
   //   lemma: "chłopak",
-  //   id: "pol-nou-002",
+  //   id: "pol-npe-002",
   //   gender: "m1",
   //   //notes
   //
@@ -94,10 +94,10 @@ let nounSet = [
   {
     //links
     translations: { ENG: ["boy", "little boy"] },
-    tags: ["animate", "person", "personTest1", "concrete"],
+    tags: ["animate", "personTest1", "concrete"],
     //selectors
     lemma: "chłopiec",
-    id: "pol-nou-003",
+    id: "pol-npe-003",
     gender: "m1",
     //notes
 
@@ -127,7 +127,7 @@ let nounSet = [
     tags: ["inanimate", "edible", "holdable", "concrete"],
     //selectors
     lemma: "cebula",
-    id: "pol-nou-004",
+    id: "pol-nco-004",
     gender: "f",
     //notes
 
@@ -157,7 +157,7 @@ let nounSet = [
     tags: ["inanimate", "edible", "holdable", "concrete"],
     //selectors
     lemma: "jabłko",
-    id: "pol-nou-005",
+    id: "pol-nco-005",
     gender: "n",
     //notes
 
@@ -187,7 +187,7 @@ let nounSet = [
     tags: ["inanimate", "holdable", "concrete"],
     //selectors
     lemma: "lustro",
-    id: "pol-nou-006",
+    id: "pol-nco-006",
     gender: "n",
     //notes
 
@@ -217,7 +217,7 @@ let nounSet = [
     tags: ["inanimate", "holdable", "concrete"],
     //selectors
     lemma: "zwierciadło",
-    id: "pol-nou-007",
+    id: "pol-nco-007",
     gender: "n",
     //notes
 
@@ -247,7 +247,7 @@ let nounSet = [
     tags: ["inanimate", "holdable", "concrete"],
     //selectors
     lemma: "książka",
-    id: "pol-nou-009",
+    id: "pol-nco-009",
     gender: "f",
     //notes
 
@@ -277,7 +277,7 @@ let nounSet = [
     tags: ["inanimate", "house", "concrete"],
     //selectors
     lemma: "drzwi",
-    id: "pol-nou-010",
+    id: "pol-nco-010",
     gender: "nonvirile",
     //notes
     lacking: true,
@@ -302,7 +302,7 @@ let nounSet = [
     tags: ["inanimate", "holdable", "concrete", "wearable"],
     //selectors
     lemma: "majtki",
-    id: "pol-nou-008",
+    id: "pol-nco-008",
     gender: "nonvirile",
     //notes
     lacking: true,
@@ -325,7 +325,7 @@ let nounSet = [
     tags: ["concrete", "animal", "animate", "farmyard"],
     //selectors
     lemma: "owca",
-    id: "pol-nou-011",
+    id: "pol-nco-011",
     gender: "f",
     //notes
 
@@ -355,7 +355,7 @@ let nounSet = [
     tags: ["allohomTesting", "edible2"],
     //selectors
     lemma: "orzech",
-    id: "pol-nou-012",
+    id: "pol-nco-012",
     gender: "m3",
     //notes
 
@@ -389,7 +389,7 @@ let nounSet = [
     tags: ["allohomTesting", "toolbox"],
     //selectors
     lemma: "nakrętka",
-    id: "pol-nou-013",
+    id: "pol-nco-013",
     gender: "f",
     //notes
 
