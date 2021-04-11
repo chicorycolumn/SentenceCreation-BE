@@ -446,6 +446,42 @@ exports.decantMGNsBeforeFetchingOutputArray = (
   selectedLemmaObject,
   currentLanguage
 ) => {
+  if ("check") {
+    if (
+      !selectedLemmaObject.gender ||
+      !selectedLemmaObject.gender.slice(0, 3) === "all"
+    ) {
+      return;
+    }
+    if (
+      !refFxn
+        .validFeaturesOfStructureChunkWordtype(currentLanguage, structureChunk)
+        .includes("gender")
+    ) {
+      clUtils.throw(
+        `wpoh lObj has metagender, but gender is not an appropriate feature for this stCh wordtype?`
+      );
+    }
+  }
+
+  console.log(
+    `jowc correctMGNsBeforeFetchingOutputArray. ${structureChunk.chunkId} ${currentLanguage}. stCh.gender STARTS as:`,
+    structureChunk.gender
+  );
+
+  structureChunk.gender = [uUtils.selectRandom(structureChunk.gender)];
+
+  console.log(
+    `jowd correctMGNsBeforeFetchingOutputArray. ${structureChunk.chunkId} ${currentLanguage}. stCh.gender ENDS as:`,
+    structureChunk.gender
+  );
+};
+
+exports.correctMGNsBeforeFetchingOutputArray = (
+  structureChunk,
+  selectedLemmaObject,
+  currentLanguage
+) => {
   //0 Only run this for MGNs, ie stChs where matching lObj is metagender.
   if ("check") {
     if (
@@ -466,7 +502,7 @@ exports.decantMGNsBeforeFetchingOutputArray = (
   }
 
   console.log(
-    `wpoi decantMGNsBeforeFetchingOutputArray. ${structureChunk.chunkId} ${currentLanguage}. stCh STARTS as:`,
+    `wpoi correctMGNsBeforeFetchingOutputArray. ${structureChunk.chunkId} ${currentLanguage}. stCh STARTS as:`,
     structureChunk
   );
 
@@ -519,7 +555,7 @@ exports.decantMGNsBeforeFetchingOutputArray = (
   }
 
   console.log(
-    `wpon decantMGNsBeforeFetchingOutputArray. ${structureChunk.chunkId} ${currentLanguage}. stCh ENDS as:`,
+    `wpon correctMGNsBeforeFetchingOutputArray. ${structureChunk.chunkId} ${currentLanguage}. stCh ENDS as:`,
     structureChunk
   );
 };

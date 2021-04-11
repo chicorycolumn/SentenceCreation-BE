@@ -796,33 +796,13 @@ exports.filterByKey = (
   key,
   currentLanguage
 ) => {
+  console.log("wdwe filterByKey START. structureChunk", structureChunk);
+
   let requirementArray = lfUtils.padOutRequirementArrWithMetaFeaturesIfNecessary(
     structureChunk,
     key,
     currentLanguage
   );
-
-  let additionalRequirementArrayValues = [];
-
-  requirementArray.forEach((reqValue) => {
-    if (reqValue.slice(0, 3) === "all") {
-      let convertedMetaValues =
-        refObj.metaFeatures[currentLanguage][key][reqValue];
-
-      if (convertedMetaValues) {
-        additionalRequirementArrayValues = [
-          ...additionalRequirementArrayValues,
-          ...convertedMetaValues,
-        ];
-      }
-    }
-  });
-
-  additionalRequirementArrayValues = Array.from(
-    new Set(additionalRequirementArrayValues)
-  );
-
-  requirementArray = [...requirementArray, ...additionalRequirementArrayValues];
 
   console.log("wdet filterByKey. requirementArray", requirementArray);
 
@@ -891,12 +871,14 @@ exports.filterBySelectors = (
       console.log(
         `bnxo filterBySelectors. Will call filterByKey for selector "${selector}"`
       );
+      console.log(`bnxo matches before filterByKey "${selector}" is:`, matches);
       matches = lfUtils.filterByKey(
         matches,
         structureChunk,
         selector,
         currentLanguage
       );
+      console.log(`bnxu matches AFTER filterByKey "${selector}" is:`, matches);
     });
   }
 

@@ -137,13 +137,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 ) => {
   let questionLanguage = languagesObj.questionLanguage;
 
-  // clUtils.consoleLogObjectAtOneLevel(
-  //   questionOutputArr,
-  //   "questionOutputArr",
-  //   "removeAnnotationsByCounterfactualAnswerSentences"
-  // );
-  // clUtils.throw(112);
-
   //Abortcuts for this fxn: Search ACX.
 
   if (
@@ -212,7 +205,10 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         )
       );
 
-      console.log("veem", counterfactualValuesForThisFeature);
+      console.log(
+        "veem counterfactualValuesForThisFeature",
+        counterfactualValuesForThisFeature
+      );
       //ACX3: eg If plural then remove m, f. If person, remove n.
       let pseudoStCh = {};
       pseudoStCh[annoKey] = counterfactualValuesForThisFeature;
@@ -221,8 +217,10 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         questionOutputUnit.structureChunk,
         pseudoStCh
       )[annoKey];
-      console.log("veen", counterfactualValuesForThisFeature);
-      clUtils.throw(334);
+      console.log(
+        "veen counterfactualValuesForThisFeature",
+        counterfactualValuesForThisFeature
+      );
       console.log(
         `myxe removeAnnotationsByCounterfax FOREACH START. Examining ${questionOutputUnit.structureChunk.chunkId}'s annotation ${annoKey} = ${annoValue} so the counterfactual values are [${counterfactualValuesForThisFeature}].`
       );

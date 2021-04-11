@@ -609,11 +609,28 @@ exports.findMatchingLemmaObjectThenWord = (
         //
         //Decant the MGNs that have PDS:false. These are Q stChs as we're in !multipleMode clause.
         //
+        allLangUtils.correctMGNsBeforeFetchingOutputArray(
+          structureChunk,
+          selectedLemmaObject,
+          currentLanguage
+        );
+
         allLangUtils.decantMGNsBeforeFetchingOutputArray(
           structureChunk,
           selectedLemmaObject,
           currentLanguage
         );
+      } else {
+        //////////////beta this may not be necessary
+        allLangUtils.correctMGNsBeforeFetchingOutputArray(
+          structureChunk,
+          selectedLemmaObject,
+          currentLanguage
+        );
+        //////////////
+      }
+
+      if (!structureChunk.dontSpecifyOnThisChunk) {
       } else {
         console.log(
           "[1;30m " +
