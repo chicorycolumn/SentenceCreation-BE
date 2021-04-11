@@ -290,7 +290,7 @@ exports.fetchPalette = (req) => {
     }
 
     console.log(
-      "sulg fetchPalette. questionOutputArr BEFORE CLARI OR SPECI",
+      "znuj fetchPalette. questionOutputArr BEFORE CLARI OR SPECI",
       questionSentenceData.questionOutputArr.map((unit) => [
         `${unit.selectedLemmaObject.lemma}-->${unit.selectedWord}`,
         unit.structureChunk.annotations,
@@ -304,7 +304,7 @@ exports.fetchPalette = (req) => {
     });
 
     console.log(
-      "ggfr-fetchPalette, questionOutputArr AFTER CLARI, BEFORE SPECI",
+      "znuk-fetchPalette, questionOutputArr AFTER CLARI, BEFORE SPECI",
       questionSentenceData.questionOutputArr.map(
         (unit) => unit.structureChunk.annotations
       )
@@ -321,12 +321,27 @@ exports.fetchPalette = (req) => {
     });
 
     console.log(
-      "nwgk-fetchPalette, questionOutputArr AFTER CLARI AND SPECI",
+      "znul-fetchPalette, questionOutputArr AFTER CLARI AND SPECI",
       questionSentenceData.questionOutputArr.map((unit) => [
         `${unit.selectedLemmaObject.lemma}-->${unit.selectedWord}`,
         unit.structureChunk.annotations,
       ])
     );
+
+    aaUtils.specialAdjustmentToAnnotations(questionSentenceData, {
+      answerLanguage,
+      questionLanguage,
+    });
+
+    console.log(
+      "znul-fetchPalette, questionOutputArr AFTER CLARI, SPECI, and SPECIALADJUST",
+      questionSentenceData.questionOutputArr.map((unit) => [
+        `${unit.selectedLemmaObject.lemma}-->${unit.selectedWord}`,
+        unit.structureChunk.annotations,
+      ])
+    );
+
+    // clUtils.throw(399);
 
     translations.forEach((translationSentenceFormulaId, index) => {
       let { sentenceFormula, words } = scUtils.getMaterials(

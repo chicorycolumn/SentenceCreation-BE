@@ -8,6 +8,7 @@ const refFxn = require("./reference/referenceFunctions.js");
 const aaUtils = require("./auxiliaryAttributeUtils.js");
 const allLangUtils = require("./allLangUtils.js");
 const palette = require("../models/palette.model.js");
+const { head } = require("../app.js");
 
 exports.firstStageEvaluateAnnotations = (
   questionOutputArr,
@@ -666,6 +667,51 @@ exports.removeAnnotationsByAOCs = (
   }
 };
 
+exports.specialAdjustmentToAnnotations = (
+  questionSentenceData,
+  languagesObj
+) => {
+  let { questionOutputArr } = questionSentenceData;
+  let { questionLanguage, answerLanguage } = languagesObj;
+  const questionLangUtils = require(`../source/${questionLanguage}/langUtils.js`);
+  const answerLangUtils = require(`../source/${answerLanguage}/langUtils.js`);
+
+  questionSentenceData.questionOutputArr.forEach((outputUnit) => {
+    let { structureChunk } = outputUnit;
+
+    if (
+      structureChunk.annotations &&
+      Object.keys(structureChunk.annotations).includes("gender") &&
+      structureChunk.agreeWith
+    ) {
+      let headChunk = questionSentenceData.questionOutputArr.find(
+        (unit) => unit.structureChunk.chunkId === structureChunk.agreeWith
+      ).structureChunk;
+
+      if (!headChunk) {
+        clUtils.throw("ojiq");
+      }
+
+      if (
+        headChunk.annotations &&
+        headChunk.annotations.gender &&
+        headChunk.annotations.gender !== structureChunk.annotations.gender
+      ) {
+        clUtils.throw(
+          "cjow The depCh and its headCh have different values as gender anno?"
+        );
+      }
+
+      headChunk.annotations.gender = structureChunk.annotations.gender;
+
+      delete structureChunk.annotations.gender;
+      //If the stCh has a gender anno,
+      //and it agrees with anything,
+      //then transfer the gender anno to the headChunk, and remove from this chunk.
+    }
+  });
+};
+
 exports.addSpecifiersToMGNs = (questionSentenceData, languagesObj) => {
   let { questionOutputArr } = questionSentenceData;
   let { questionLanguage, answerLanguage } = languagesObj;
@@ -972,6 +1018,16 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
         .allowableTransfersFromQuestionStructure[
         gpUtils.getWorrdtypeStCh(structureChunk)
       ];
+
+    console.log(
+      `cicw allowableClarifiers are`,
+      allowableClarifiers,
+      `because structureChunk=${
+        structureChunk.chunkId
+      } answerLanguage=${answerLanguage}, stChWordtype=${gpUtils.getWorrdtypeStCh(
+        structureChunk
+      )}.`
+    );
 
     let allowableExtraClarifiersInSingleWordSentences =
       refObj.lemmaObjectFeatures[answerLanguage]

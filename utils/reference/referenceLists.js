@@ -209,7 +209,7 @@ exports.lemmaObjectFeatures = {
     allowableTransfersFromQuestionStructure: {
       noun: ["number"], //boston-?
       adjective: ["form"],
-      verb: ["tenseDescription", "person", "number"],
+      verb: ["tenseDescription", "person", "number", "gender"],
       pronoun: ["form", "person", "number", "gender"],
     },
     allowableExtraClarifiersInSingleWordSentences: {
