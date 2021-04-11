@@ -289,6 +289,45 @@ exports.fetchPalette = (req) => {
       throw "palette.model > I was asked to give translations, but the question sentence formula did not have any translations listed.";
     }
 
+    console.log(
+      "sulg fetchPalette. questionOutputArr BEFORE CLARI OR SPECI",
+      questionSentenceData.questionOutputArr.map((unit) => [
+        `${unit.selectedLemmaObject.lemma}-->${unit.selectedWord}`,
+        unit.structureChunk.annotations,
+      ])
+    );
+
+    ///////////////////////////////////////////////kp Clarifiers
+    aaUtils.addClarifiers(questionSentenceData.questionOutputArr, {
+      answerLanguage,
+      questionLanguage,
+    });
+
+    console.log(
+      "ggfr-fetchPalette, questionOutputArr AFTER CLARI, BEFORE SPECI",
+      questionSentenceData.questionOutputArr.map(
+        (unit) => unit.structureChunk.annotations
+      )
+    );
+
+    ///////////////////////////////////////////////kp Specifiers
+    //PDSX3-purple-false
+    //
+    //Add specifiers to MGNs if their stCh has PDS:false.
+    //
+    aaUtils.addSpecifiersToMGNs(questionSentenceData, {
+      answerLanguage,
+      questionLanguage,
+    });
+
+    console.log(
+      "nwgk-fetchPalette, questionOutputArr AFTER CLARI AND SPECI",
+      questionSentenceData.questionOutputArr.map((unit) => [
+        `${unit.selectedLemmaObject.lemma}-->${unit.selectedWord}`,
+        unit.structureChunk.annotations,
+      ])
+    );
+
     translations.forEach((translationSentenceFormulaId, index) => {
       let { sentenceFormula, words } = scUtils.getMaterials(
         answerLanguage,
@@ -312,59 +351,37 @@ exports.fetchPalette = (req) => {
         firstAnswerSentenceFormula = answerSentenceFormula;
       }
 
-      let languagesObject = {
-        answerLanguage,
-        questionLanguage,
-      };
-
-      console.log(
-        "pjeg-fetchPalette questionSentenceData.questionOutputArr",
-        questionSentenceData.questionOutputArr.map(
-          (outputUnit) => outputUnit.structureChunk
-        )
-      );
+      if ("console") {
+        console.log(
+          `pjeg fetchPalette. Just BEFORE qaConform, let's see the Q and A structures:`
+        );
+        console.log(
+          "p'jeg answerSentenceFormula.sentenceStructure",
+          answerSentenceFormula.sentenceStructure
+        );
+        console.log(
+          "p'jeg questionSentenceData...{sentenceStructure}",
+          questionSentenceData.questionOutputArr.map(
+            (outputUnit) => outputUnit.structureChunk
+          )
+        );
+      }
 
       ///////////////////////////////////////////////kp Conform
       scUtils.conformAnswerStructureToQuestionStructure(
         answerSentenceFormula,
         questionSentenceData.questionOutputArr,
-        languagesObject,
+        {
+          answerLanguage,
+          questionLanguage,
+        },
         words
       );
 
       console.log(
-        "rwxo-fetchPalette answerSentenceFormula.sentenceStructure",
+        "pjeh fetchPalette. answerSentenceFormula.sentenceStructure AFTER qaConform",
         answerSentenceFormula.sentenceStructure
       );
-
-      if (true && "console") {
-        console.log(
-          "sulg-fetchPalette, answerSentenceFormula.sentenceStructure AFTER qaConform",
-          answerSentenceFormula.sentenceStructure
-        );
-
-        console.log(
-          "sulg-fetchPalette, questionOutputArr BEFORE CLARI OR SPECI",
-          questionSentenceData.questionOutputArr.map(
-            (unit) => unit.structureChunk.annotations
-          )
-        );
-      }
-
-      ///////////////////////////////////////////////kp Clarifiers
-      aaUtils.addClarifiers(
-        questionSentenceData.questionOutputArr,
-        languagesObject
-      );
-
-      if (true && "console") {
-        console.log(
-          "ggfr-fetchPalette, questionOutputArr AFTER CLARI, BEFORE SPECI",
-          questionSentenceData.questionOutputArr.map(
-            (unit) => unit.structureChunk.annotations
-          )
-        );
-      }
 
       answerSentenceData = scUtils.processSentenceFormula(
         {
@@ -407,24 +424,6 @@ exports.fetchPalette = (req) => {
         );
       });
 
-      if (false && "console") {
-        console.log(
-          "[1;33m " +
-            "{{{ gwfw-fetchPalette just after we get answerSentenceData back from SC:processSentenceFormula. Let's see the stChs in answerSentenceData.arrayOfOutputArrays:" +
-            "[0m"
-        );
-
-        answerSentenceData.answerOutputArrays
-          .map((outputArray) =>
-            outputArray.map((outputUnit) => outputUnit.structureChunk)
-          )
-          .forEach((stCh) => {
-            console.log("pydz-fetchPalette stCh", stCh);
-          });
-
-        console.log("[1;33m " + "}}}" + "[0m");
-      }
-
       if (!answerResponseObj) {
         answerResponseObj = scUtils.giveFinalSentences(
           answerSentenceData,
@@ -449,40 +448,6 @@ exports.fetchPalette = (req) => {
     });
 
     scUtils.removeDuplicatesFromResponseObject(answerResponseObj);
-
-    let languagesObj = {
-      answerLanguage,
-      questionLanguage,
-    };
-
-    console.log(
-      "nwgj-fetchPalette, questionOutputArr AFTER CLARI BEFORE SPECI",
-      questionSentenceData.questionOutputArr.map((unit) => [
-        `${unit.selectedLemmaObject.lemma}-->${unit.selectedWord}`,
-        unit.structureChunk.annotations,
-      ])
-    );
-
-    ///////////////////////////////////////////////kp Specifiers
-    //PDSX3-purple-false
-    //
-    //Add specifiers to MGNs if their stCh has PDS:false.
-    //
-    aaUtils.addSpecifiersToMGNs(
-      questionSentenceData,
-      answerSentenceData,
-      languagesObj
-    );
-
-    if (true && "console") {
-      console.log(
-        "nwgk-fetchPalette, questionOutputArr AFTER CLARI AND SPECI",
-        questionSentenceData.questionOutputArr.map((unit) => [
-          `${unit.selectedLemmaObject.lemma}-->${unit.selectedWord}`,
-          unit.structureChunk.annotations,
-        ])
-      );
-    }
   }
 
   if (arrayOfCounterfactualResultsForThisAnnotation) {
@@ -495,7 +460,6 @@ exports.fetchPalette = (req) => {
   }
 
   let answerSelectedWordsSetsHaveChanged = { value: false };
-
   let additionalRunsRecord = [];
 
   questionResponseObj = scUtils.giveFinalSentences(
@@ -520,25 +484,11 @@ exports.fetchPalette = (req) => {
         null
       );
     } else {
-      clUtils.consoleLogObjectAtOneLevel(
-        answerSentenceData,
-        "answerSentenceData",
-        "fetchPalette"
-      );
-
-      // clUtils.throw(646);
-
       let subsequentAnswerResponseObj = scUtils.giveFinalSentences(
         answerSentenceData,
         true,
         answerLanguage,
         null
-      );
-
-      clUtils.consoleLogObjectAtOneLevel(
-        subsequentAnswerResponseObj,
-        "subsequentAnswerResponseObj",
-        "fetchPalette"
       );
 
       subsequentAnswerResponseObj.finalSentenceArr.forEach((finalSentence) => {

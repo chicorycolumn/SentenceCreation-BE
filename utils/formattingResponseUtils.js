@@ -1,5 +1,6 @@
 const frUtils = require("./formattingResponseUtils.js");
 const uUtils = require("./universalUtils.js");
+const clUtils = require("./zerothOrder/consoleLoggingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 
 exports.finishAndSend = (

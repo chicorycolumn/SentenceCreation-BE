@@ -1990,4 +1990,26 @@ exports.dummySentenceFormulasBank = [
     primaryOrders: [["ver-1"]],
     additionalOrders: [["pro-1", "ver-1"]],
   },
+  {
+    sentenceFormulaSymbol: "dummy61",
+    sentenceFormulaId: "POL-dummy61",
+    translations: { ENG: ["ENG-dummy61"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1",
+        specificLemmas: ["PERSONAL"],
+        gcase: ["nom"],
+        number: ["singular"],
+        person: ["3per"],
+      },
+      {
+        chunkId: "ver-1",
+        agreeWith: "pro-1",
+        andTags: ["basic2"],
+        tenseDescription: ["present im"],
+      },
+    ],
+    primaryOrders: [["ver-1"]],
+    additionalOrders: [["pro-1", "ver-1"]],
+  },
 ];

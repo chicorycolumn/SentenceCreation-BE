@@ -28,6 +28,117 @@ describe("/api", function () {
   // after(() => {});
   // beforeEach(() => {});
 
+  xdescribe("/palette - Stage 18: Poleng annotations.", () => {
+    xit("#pal18-01a GET 200 YES: Engpol.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy61",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "She reads.",
+              POL: ["Czyta.", "Ona czyta."],
+            },
+            {
+              ENG: "He reads.",
+              POL: ["Czyta.", "On czyta."],
+            },
+            {
+              ENG: "It reads.",
+              POL: ["Czyta.", "Ono czyta."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    xit("#pal18-01b GET 200 YES: Poleng.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy61",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["She reads.", "She is reading."],
+              POL: "Czyta (female).",
+            },
+            {
+              ENG: ["He reads.", "He is reading."],
+              POL: "Czyta (male).",
+            },
+            {
+              ENG: ["It reads.", "It is reading."],
+              POL: "Czyta (neuter).",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal18-01b GET 200 YES: Poleng PDS.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy61",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: [
+                "She reads.",
+                "He reads.",
+                "It reads.",
+                "She is reading.",
+                "He is reading.",
+                "It is reading.",
+              ],
+              POL: "Czyta.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+  });
+
   describe("/palette - Stage 17-i: Possessive pronouns and MGNs. Pre-testing.", () => {
     it("#pal17-01a GET 200 YES: Engpol. MGN as sole word, annotation expected.", () => {
       const questionLanguage = "ENG";

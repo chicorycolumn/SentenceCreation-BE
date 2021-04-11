@@ -1304,8 +1304,6 @@ exports.sortStructureChunks = (
     otherChunks,
   });
 
-  // clUtils.throw("jeve");
-
   if (separateDependentsAndPHDs) {
     return { headChunks, dependentChunks, PHDChunks, otherChunks };
   } else {

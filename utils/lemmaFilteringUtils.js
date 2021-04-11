@@ -335,8 +335,6 @@ exports.filterWithin_PHD = (
     PHDstructureChunk
   );
   console.log("[1;35m " + "blij lf:filterWithin_PHD resArr is" + "[0m", resArr);
-
-  // clUtils.throw("niko");
   return resArr;
 };
 

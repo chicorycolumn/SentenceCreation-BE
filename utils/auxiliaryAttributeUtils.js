@@ -19,6 +19,8 @@ exports.firstStageEvaluateAnnotations = (
   additionalRunsRecord,
   originalQuestionSentenceFormula
 ) => {
+  console.log(questionOutputArr.map((unit) => unit.structureChunk));
+
   if (!answerSentenceData) {
     console.log(
       "[1;31m " +
@@ -135,6 +137,9 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   additionalRunsRecord,
   originalQuestionSentenceFormula
 ) => {
+  // console.log(questionOutputUnit.structureChunk);
+  // clUtils.throw(445);
+
   let questionLanguage = languagesObj.questionLanguage;
 
   //Abortcuts for this fxn: Search ACX.
@@ -661,13 +666,8 @@ exports.removeAnnotationsByAOCs = (
   }
 };
 
-exports.addSpecifiersToMGNs = (
-  questionSentenceData,
-  answerSentenceData,
-  languagesObj
-) => {
+exports.addSpecifiersToMGNs = (questionSentenceData, languagesObj) => {
   let { questionOutputArr } = questionSentenceData;
-  let { answerOutputArr } = answerSentenceData;
   let { questionLanguage, answerLanguage } = languagesObj;
   const questionLangUtils = require(`../source/${questionLanguage}/langUtils.js`);
   const answerLangUtils = require(`../source/${answerLanguage}/langUtils.js`);
@@ -691,17 +691,6 @@ exports.addSpecifiersToMGNs = (
   });
 
   questionMGNunits.forEach((questionMGNunit) => {
-    // let correspondingAnswerUnit = answerOutputArr.find(
-    //   (unit) =>
-    //     unit.structureChunk.chunkId === questionMGNunit.structureChunk.chunkId
-    // );
-
-    // if (!correspondingAnswerUnit) {
-    //   console.log("tlae questionMGNunit", questionMGNunit);
-    //   clUtils.throw(
-    //     `tlae addSpecifiersToMGNs #ERR No correspondingAnswerUnit for questionMGNunit printed above.`
-    //   );
-    // }
     let metaGender = questionMGNunit.selectedLemmaObject.gender.split("_")[0];
 
     let selectedGenderForQuestionLanguage;
