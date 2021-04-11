@@ -1306,4 +1306,70 @@ exports.dummySentenceFormulasBank = [
     ],
     primaryOrders: [],
   },
+  {
+    sentenceFormulaSymbol: "dummy60",
+    sentenceFormulaId: "ENG-dummy60",
+    translations: { POL: ["POL-dummy60"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1",
+        specificLemmas: ["PERSONAL"],
+        gcase: ["nom"],
+        number: ["singular"],
+        person: ["1per"],
+      },
+      {
+        chunkId: "ver-1",
+        agreeWith: "pro-1",
+        andTags: ["basic1"],
+        tenseDescription: [
+          "present simple",
+          // "past simple"
+        ],
+      },
+    ],
+    primaryOrders: [["pro-1", "ver-1"]],
+  },
+  {
+    sentenceFormulaSymbol: "dummy60a",
+    sentenceFormulaId: "ENG-dummy60a",
+    translations: { POL: ["POL-dummy60a"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1",
+        specificLemmas: ["PERSONAL"],
+        gcase: ["nom"],
+        number: ["singular"],
+        person: ["1per"],
+      },
+      {
+        chunkId: "ver-1",
+        agreeWith: "pro-1",
+        andTags: ["basic1"],
+        tenseDescription: ["past simple"],
+      },
+    ],
+    primaryOrders: [["pro-1", "ver-1"]],
+  },
+  {
+    sentenceFormulaSymbol: "dummy60b",
+    sentenceFormulaId: "ENG-dummy60b",
+    translations: { POL: ["POL-dummy60b"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1",
+        specificLemmas: ["PERSONAL"],
+        gcase: ["nom"],
+        number: ["singular"],
+        person: ["1per"],
+      },
+      {
+        chunkId: "ver-1",
+        agreeWith: "pro-1",
+        andTags: ["basic2"],
+        tenseDescription: ["present simple", "past simple"],
+      },
+    ],
+    primaryOrders: [["pro-1", "ver-1"]],
+  },
 ];

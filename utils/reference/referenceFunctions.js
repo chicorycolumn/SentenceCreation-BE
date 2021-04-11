@@ -25,10 +25,24 @@ exports.removeIncompatibleFeatures = (
 
   //ACX3A: If npe then remove neuter from gender.
   if (gpUtils.getWorrdtypeStCh(stChToCheckBy, true) === "noun-person") {
+    console.log(
+      "vvvx removeIncompatibleFeatures. Removing 'n' if present as is noun-person."
+    );
     stChToChange.gender = stChToChange.gender.filter((value) => value !== "n");
   }
 
-  //ACX3B: Eg We're examining gender feature, so check the "number" feature, and
+  //ACX3B: If 1per then remove neuter from gender.
+  if (
+    stChToCheckBy.person &&
+    !stChToCheckBy.person.filter((value) => value !== "1per").length
+  ) {
+    console.log(
+      "vvvy removeIncompatibleFeatures. Removing 'n' if present as only person value is '1per'."
+    );
+    stChToChange.gender = stChToChange.gender.filter((value) => value !== "n");
+  }
+
+  //ACX3C: Eg We're examining gender feature, so check the "number" feature, and
   //if the number does not include "singular", then remove "m", "m1", "m2", "m3", "f", "n" from the gender array.
 
   let incompatibleFeaturesRef = refObj.incompatibleFeaturesRef[currentLanguage];
