@@ -38,7 +38,7 @@ describe.only("/api", function () {
         .send({
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy58 doctor",
+          sentenceFormulaSymbol: "dummy58* doctor",
           useDummy: true,
         })
         .expect(200)
@@ -51,6 +51,18 @@ describe.only("/api", function () {
             {
               ENG: "Doctor (male).",
               POL: ["Lekarz."],
+            },
+            {
+              ENG: "Doctors (females).",
+              POL: ["Lekarki."],
+            },
+            {
+              ENG: "Doctor (males).",
+              POL: ["Lekarze."],
+            },
+            {
+              ENG: "Doctor (mixed).",
+              POL: ["Lekarze."],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(

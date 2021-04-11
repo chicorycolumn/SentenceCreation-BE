@@ -1256,6 +1256,21 @@ exports.dummySentenceFormulasBank = [
     primaryOrders: [],
   },
   {
+    sentenceFormulaSymbol: "dummy58* doctor",
+    sentenceFormulaId: "ENG-dummy58*",
+    translations: { POL: ["POL-dummy58*"] },
+    sentenceStructure: [
+      {
+        chunkId: "npe-1",
+
+        andTags: ["job"],
+        // number: ["singular"],
+        // gender: ["f"],
+      },
+    ],
+    primaryOrders: [],
+  },
+  {
     sentenceFormulaSymbol: "dummy58a doctor f",
     sentenceFormulaId: "ENG-dummy58a",
     translations: { POL: ["POL-dummy58a"] },

@@ -377,6 +377,7 @@ exports.convertMetaFeatures = (sourceObjectArray, currentLanguage, objType) => {
 };
 
 exports.decantMGNsInOutputArray = (questionOutputArr, currentLanguage) => {
+  //unused
   console.log("[1;35m " + "------------decantMGNsInOutputArray" + "[0m");
   console.log(
     "qnzm decantMGNsInOutputArray At the start, questionOutputArr is:"
@@ -440,147 +441,85 @@ exports.decantMGNsInOutputArray = (questionOutputArr, currentLanguage) => {
   console.log("[1;35m " + "/decantMGNsInOutputArray" + "[0m");
 };
 
-exports.decantMetaContainingChunksEgMGNsBeforeFetchingOutputArray = (
+exports.decantMGNsBeforeFetchingOutputArray = (
   structureChunk,
   selectedLemmaObject,
   currentLanguage
 ) => {
-  console.log(`skho ${structureChunk.chunkId} ${currentLanguage}`);
-
-  if (
-    !structureChunk["gender"] &&
-    refFxn
-      .validFeaturesOfStructureChunkWordtype(currentLanguage, structureChunk)
-      .includes("gender")
-  ) {
-    structureChunk["gender"] = [];
-  }
-
-  function correctMetagenderInMGNs(
-    structureChunk,
-    selectedLemmaObject,
-    currentLanguag
-  ) {
-    let featureKey = "gender";
-
+  //0 Only run this for MGNs, ie stChs where matching lObj is metagender.
+  if ("check") {
     if (
-      selectedLemmaObject[featureKey] &&
-      selectedLemmaObject[featureKey].slice(0, 3) === "all"
+      !selectedLemmaObject.gender ||
+      !selectedLemmaObject.gender.slice(0, 3) === "all"
     ) {
-      //nownow
+      return;
     }
-  }
-
-  if ("console") {
-    console.log(
-      "[1;35m " +
-        "------------decantMetaContainingChunksEgMGNsBeforeFetchingOutputArray" +
-        "[0m"
-    );
-    console.log(
-      "ubkc decantMetaContainingChunksEgMGNsBeforeFetchingOutputArray At the start, structureChunk is:",
-      structureChunk
-    );
-    console.log(
-      "ubkc decantMetaContainingChunksEgMGNsBeforeFetchingOutputArray At the start, selectedLemmaObject is:",
-      selectedLemmaObject
-    );
-  }
-
-  Object.keys(refObj.metaFeatures[currentLanguage]).forEach((featureKey) => {
-    let metaFeatureRef = refObj.metaFeatures[currentLanguage][featureKey];
-
-    console.log(
-      "poyb decantMetaContainingChunksEgMGNsBeforeFetchingOutputArray Clause 0",
-      {
-        featureKey,
-        metaFeatureRef,
-      }
-    );
-
-    if (structureChunk[featureKey]) {
-      console.log(
-        "eico decantMetaContainingChunksEgMGNsBeforeFetchingOutputArray Clause 1",
-        {
-          featureKey,
-        }
+    if (
+      !refFxn
+        .validFeaturesOfStructureChunkWordtype(currentLanguage, structureChunk)
+        .includes("gender")
+    ) {
+      clUtils.throw(
+        `wpoh lObj has metagender, but gender is not an appropriate feature for this stCh wordtype?`
       );
-      let featureValuesFromStChAndLObj = [...structureChunk[featureKey]];
-      if (selectedLemmaObject[featureKey]) {
-        featureValuesFromStChAndLObj.push(selectedLemmaObject[featureKey]);
-      }
-
-      let selectedMetaFeature;
-
-      if (
-        featureValuesFromStChAndLObj.some((featureValue) => {
-          if (
-            Object.keys(metaFeatureRef)
-              .map((metaFeature) => `${metaFeature}_selector`)
-              .includes(featureValue)
-          ) {
-            selectedMetaFeature = featureValue;
-            return true;
-          }
-        })
-      ) {
-        console.log(
-          "nrvz decantMetaContainingChunksEgMGNsBeforeFetchingOutputArray Clause 2",
-          {
-            selectedMetaFeature,
-          }
-        );
-        let adjustedFeatureValueArr = [
-          ...metaFeatureRef[selectedMetaFeature.split("_")[0]],
-        ];
-
-        console.log(
-          "ewoh decantMetaContainingChunksEgMGNsBeforeFetchingOutputArray",
-          {
-            adjustedFeatureValueArr,
-          }
-        );
-
-        if (structureChunk[featureKey] && structureChunk[featureKey].length) {
-          let featureValuesInBothStChAndAdjustedArr = structureChunk[
-            featureKey
-          ].filter((featureValue) =>
-            adjustedFeatureValueArr.includes(featureValue)
-          );
-
-          if (!featureValuesInBothStChAndAdjustedArr.length) {
-            console.log(
-              "[1;31m " +
-                `nzig WARNING decantMetaContainingChunksEgMGNsBeforeFetchingOutputArray. The featureValues for "${featureKey}" on stCh ${structureChunk.chunkId} were such that none matched any value in adjusted array.` +
-                "[0m"
-            );
-          }
-
-          structureChunk[featureKey] = [
-            uUtils.selectRandom(featureValuesInBothStChAndAdjustedArr),
-          ];
-        } else {
-          structureChunk[featureKey] = [
-            uUtils.selectRandom(adjustedFeatureValueArr),
-          ];
-        }
-
-        console.log(
-          "jwgf decantMetaContainingChunksEgMGNsBeforeFetchingOutputArray ",
-          {
-            "structureChunk[featureKey]": structureChunk[featureKey],
-          }
-        );
-      }
     }
-
-    console.log(
-      "nqya decantMetaContainingChunksEgMGNsBeforeFetchingOutputArray  In the end, structureChunk is:",
-      structureChunk
-    );
-  });
+  }
 
   console.log(
-    "[1;35m " + "/decantMetaContainingChunksEgMGNsBeforeFetchingOutputArray" + "[0m"
+    `wpoi decantMGNsBeforeFetchingOutputArray. ${structureChunk.chunkId} ${currentLanguage}. stCh STARTS as:`,
+    structureChunk
+  );
+
+  //1 Get the lObj metagender key.
+  let lObjMetagender = selectedLemmaObject.gender;
+
+  if (!structureChunk.number || !structureChunk.number.length) {
+    clUtils.throw(
+      "wpoj Cannot correctMetagenderByNumberInMGNs with no number key."
+    );
+  }
+
+  if (structureChunk.number.length > 1) {
+    structureChunk.number = [uUtils.selectRandom(structureChunk.number)];
+  }
+
+  console.log(
+    `wpok correctMetagenderByNumberInMGNs. "${structureChunk.chunkId}" has gender "${structureChunk.gender}", while selectedLemmaObject gender is "${lObjMetagender}".`
+  );
+
+  let metagenderCorrectedByNumberRef = refObj.metaCorrectionRef[
+    currentLanguage
+  ]["gender"].find(
+    (obj) =>
+      Object.keys(obj.condition).includes("number") &&
+      obj.condition.number === structureChunk.number[0]
+  ).changeRef;
+
+  console.log(
+    `wpol correctMetagenderByNumberInMGNs. ${structureChunk.number[0]} changeRef is:`,
+    metagenderCorrectedByNumberRef
+  );
+
+  //2 Adjust lObjMetagender by number from stCh.
+  // eg if stCh number singular, lObjMetagender goes from "allPersonalGenders" to "allPersonalSingularGenders".
+  lObjMetagender = metagenderCorrectedByNumberRef[lObjMetagender.split("_")[0]];
+
+  //3 Now convert that. let convertedLObjMetagenderArr = ["m1", "f"]
+  let convertedLObjMetagenderArr =
+    refObj.metaFeatures[currentLanguage]["gender"][lObjMetagender];
+
+  //4 If stCh has gender, then filter down so only the ones present in convertedLObjMetagenderArr remain.
+  //  and if it doesn't have gender, set it as that.
+  if (structureChunk.gender && structureChunk.gender.length) {
+    structureChunk.gender = structureChunk.gender.filter((value) =>
+      convertedLObjMetagenderArr.includes(value)
+    );
+  } else {
+    structureChunk.gender = convertedLObjMetagenderArr.slice(0);
+  }
+
+  console.log(
+    `wpon decantMGNsBeforeFetchingOutputArray. ${structureChunk.chunkId} ${currentLanguage}. stCh ENDS as:`,
+    structureChunk
   );
 };

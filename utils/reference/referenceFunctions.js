@@ -23,7 +23,12 @@ exports.removeIncompatibleFeatures = (
   console.log(311, stChToCheckBy);
   //(note, the two stChs in args are likely the same stCh, but best to do as their names suggest)
 
-  //Eg We're examining gender feature, so check the "number" feature, and
+  //ACX3A: If npe then remove neuter from gender.
+  if (gpUtils.getWorrdtypeStCh(stChToCheckBy, true) === "noun-person") {
+    stChToChange.gender = stChToChange.gender.filter((value) => value !== "n");
+  }
+
+  //ACX3B: Eg We're examining gender feature, so check the "number" feature, and
   //if the number does not include "singular", then remove "m", "m1", "m2", "m3", "f", "n" from the gender array.
 
   let incompatibleFeaturesRef = refObj.incompatibleFeaturesRef[currentLanguage];
@@ -44,9 +49,16 @@ exports.removeIncompatibleFeatures = (
           stChToCheckBy[traitKeyyToCheckBy] &&
           stChToCheckBy[traitKeyyToCheckBy].length
         ) {
+          if (stChToCheckBy[traitKeyyToCheckBy].length > 1) {
+            clUtils.throw(
+              `ckos Unsure how to handle multiple values for ${traitKeyyToCheckBy}`
+            );
+          }
+
           Object.keys(
             incompatibleFeaturesRef[traitKeyy][traitKeyyToCheckBy]
           ).forEach((traitValyyeToCheckBy) => {
+            //eg traitValyyeToCheckBy = "plural"
             if (
               !stChToCheckBy[traitKeyyToCheckBy].includes(traitValyyeToCheckBy)
             ) {
@@ -56,12 +68,13 @@ exports.removeIncompatibleFeatures = (
                 ];
               //eg compatibleTraitValyyes = ["virile", "nonvirile"]
 
+              //eg stChToChange["number"] is ["plural"],
+              //so remove any values from gender that don't fit with that.
               stChToChange[traitKeyy] = stChToChange[traitKeyy].filter(
                 (value) => !compatibleTraitValyyes.includes(value)
               );
             }
           });
-          //eg traitValyyeToCheckBy = "plural"
         }
       }
     );

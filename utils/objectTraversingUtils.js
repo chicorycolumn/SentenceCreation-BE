@@ -609,7 +609,7 @@ exports.findMatchingLemmaObjectThenWord = (
         //
         //Decant the MGNs that have PDS:false. These are Q stChs as we're in !multipleMode clause.
         //
-        allLangUtils.decantMetaContainingChunksEgMGNsBeforeFetchingOutputArray(
+        allLangUtils.decantMGNsBeforeFetchingOutputArray(
           structureChunk,
           selectedLemmaObject,
           currentLanguage
