@@ -1249,21 +1249,6 @@ exports.dummySentenceFormulasBank = [
         chunkId: "npe-1",
 
         andTags: ["job"],
-        number: ["singular"],
-        // gender: ["f"],
-      },
-    ],
-    primaryOrders: [],
-  },
-  {
-    sentenceFormulaSymbol: "dummy58* doctor",
-    sentenceFormulaId: "ENG-dummy58*",
-    translations: { POL: ["POL-dummy58*"] },
-    sentenceStructure: [
-      {
-        chunkId: "npe-1",
-
-        andTags: ["job"],
         // number: ["singular"],
         // gender: ["f"],
       },

@@ -15,7 +15,7 @@ const { generalTranslatedSentencesRef } = testingUtils;
 // ProsMgn:        "My doctor and her book." Connected pronoun reveals gender of MGN. Doesn't need an annotation for doctor as clearly must be lekarka.
 // EdusMgn:        "My doctor is a man."     Educator specifies MGN's gender. Sentence where educator knows that this MGN will need no clarifying.
 
-describe.only("/api", function () {
+describe("/api", function () {
   this.timeout(5000);
 
   gpUtils.fillOutWashburneRefObj(
@@ -93,6 +93,10 @@ describe.only("/api", function () {
               ENG: "Doctor.",
               POL: ["Lekarka.", "Lekarz."],
             },
+            {
+              ENG: "Doctors.",
+              POL: ["Lekarki.", "Lekarze."],
+            },
           ];
           testingUtils.checkTranslationsOfGivenRef(
             res,
@@ -102,7 +106,7 @@ describe.only("/api", function () {
           );
         });
     });
-    it.only("#pal17-01c GET 200 YES: Poleng. MGN as sole word, annotation wouldn't appear anyway.", () => {
+    it("#pal17-01c GET 200 YES: Poleng. MGN as sole word, annotation wouldn't appear anyway.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -124,6 +128,14 @@ describe.only("/api", function () {
             {
               ENG: ["Doctor."],
               POL: "Lekarz.",
+            },
+            {
+              ENG: ["Doctors."],
+              POL: "Lekarki.",
+            },
+            {
+              ENG: ["Doctors."],
+              POL: "Lekarze.",
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -157,6 +169,14 @@ describe.only("/api", function () {
             {
               ENG: ["Doctor."],
               POL: "Lekarz.",
+            },
+            {
+              ENG: ["Doctors."],
+              POL: "Lekarki.",
+            },
+            {
+              ENG: ["Doctors."],
+              POL: "Lekarze.",
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(

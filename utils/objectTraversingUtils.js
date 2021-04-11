@@ -620,14 +620,6 @@ exports.findMatchingLemmaObjectThenWord = (
           selectedLemmaObject,
           currentLanguage
         );
-      } else {
-        //////////////beta this may not be necessary
-        allLangUtils.correctMGNsBeforeFetchingOutputArray(
-          structureChunk,
-          selectedLemmaObject,
-          currentLanguage
-        );
-        //////////////
       }
 
       if (!structureChunk.dontSpecifyOnThisChunk) {
