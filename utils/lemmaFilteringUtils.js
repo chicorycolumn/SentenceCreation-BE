@@ -167,7 +167,7 @@ exports.filterWithin_PHD = (
           `ijeg filterWithin_PHD. Updating drillPathOfHead with person "3per"`
         );
         drillPathOfHead.push(["person", "3per"]);
-      } else if (personArr && !personArr[1] === "3per") {
+      } else if (personArr && personArr[1] !== "3per") {
         personArr[1] = "3per";
       }
     }

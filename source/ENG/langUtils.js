@@ -217,7 +217,7 @@ exports.preprocessLemmaObjectsMajor = (
 
   matches.forEach((lObj) => {
     if (gpUtils.getWorrdtypeLObj(lObj) === "pronoun") {
-      if (!gpUtils.getWorrdtypeStCh(structureChunk) === "pronoun") {
+      if (gpUtils.getWorrdtypeStCh(structureChunk) !== "pronoun") {
         clUtils.throw(
           "#ERR hcio preprocessLemmaObjectsMajor. lObj and stCh worrdtypes don't match."
         );

@@ -29,7 +29,7 @@ describe.only("/api", function () {
   // beforeEach(() => {});
 
   describe("/palette - Stage 17-i: Possessive pronouns and MGNs. Pre-testing.", () => {
-    it.only("#pal17-01a GET 200 YES: Engpol. MGN as sole word, annotation expected.", () => {
+    it("#pal17-01a GET 200 YES: Engpol. MGN as sole word, annotation expected.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -102,7 +102,7 @@ describe.only("/api", function () {
           );
         });
     });
-    it("#pal17-01c GET 200 YES: Poleng. MGN as sole word, annotation wouldn't appear anyway.", () => {
+    it.only("#pal17-01c GET 200 YES: Poleng. MGN as sole word, annotation wouldn't appear anyway.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 

@@ -449,7 +449,7 @@ exports.decantMGNsBeforeFetchingOutputArray = (
   if ("check") {
     if (
       !selectedLemmaObject.gender ||
-      !selectedLemmaObject.gender.slice(0, 3) === "all"
+      selectedLemmaObject.gender.slice(0, 3) !== "all"
     ) {
       return;
     }
@@ -486,8 +486,9 @@ exports.correctMGNsBeforeFetchingOutputArray = (
   if ("check") {
     if (
       !selectedLemmaObject.gender ||
-      !selectedLemmaObject.gender.slice(0, 3) === "all"
+      selectedLemmaObject.gender.slice(0, 3) !== "all"
     ) {
+      console.log("neem");
       return;
     }
     if (
