@@ -331,6 +331,27 @@ exports.dummySentenceFormulasBank = [
     primaryOrders: [],
   },
   {
+    //nowww
+    sentenceFormulaSymbol: "dummy36a",
+    sentenceFormulaId: "ENG-dummy36a",
+    translations: { POL: ["POL-dummy36a"] },
+    sentenceStructure: [
+      { chunkId: "art-1-the", form: ["definite"], connectedTo: "nco-1-sheep" },
+      {
+        chunkId: "nco-1-sheep",
+        andTags: ["farmyard"],
+      },
+      {
+        chunkId: "ver-1-is",
+        specificLemmas: ["be"],
+        tenseDescription: ["present simple"],
+        agreeWith: "nco-1-sheep",
+      },
+      { chunkId: "fix-1-here", value: "here" },
+    ],
+    primaryOrders: [["art-1-the", "nco-1-sheep", "ver-1-is", "fix-1-here"]],
+  },
+  {
     sentenceFormulaSymbol: "dummy37",
     sentenceFormulaId: "ENG-dummy37",
     translations: { POL: ["POL-dummy37"] },

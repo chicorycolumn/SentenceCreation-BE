@@ -3682,7 +3682,7 @@ describe("/api", function () {
     });
   });
 
-  describe("/palette - Stage 9: Synhomographs (adding Clarifiers).", () => {
+  describe.only("/palette - Stage 9: Synhomographs (adding Clarifiers).", () => {
     it("#pal09-01a (Type 1 Synhomographs. If-PW: clarify Inflections) 'sheep': Engpol. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -3690,6 +3690,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          // devSaysThrowAfterAnnoSalvo: true,
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -3726,6 +3727,150 @@ describe("/api", function () {
             answerLanguage,
             "sheep_withClarifiers_Qlang" + questionLanguage,
             ["Owce.", "Owca."]
+          );
+        });
+    });
+    it("#pal09-01c (Type 1 Synhomographs. If-PW: clarify Inflections) 'sheep': Engpol. Expect clarifiers. PDS makes it agnostic between singular and plural.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy36",
+        })
+        .expect(200)
+        .then((res) => {
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "sheep_withoutClarifiers_Qlang" + questionLanguage,
+            ["Sheep."]
+          );
+        });
+    });
+    it("#pal09-01d 'sheep': Poleng. No clarifiers. PDS should have no effect.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy36",
+        })
+        .expect(200)
+        .then((res) => {
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "sheep_withClarifiers_Qlang" + questionLanguage,
+            ["Owce.", "Owca."]
+          );
+        });
+    });
+    it("#pal09-01e (Type 1 Synhomographs. If-PW: clarify Inflections) 'Sheep are* here.': Engpol. Expect clarifiers.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // devSaysThrowAfterAnnoSalvo: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy36a",
+        })
+        .expect(200)
+        .then((res) => {
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "sheeps_withClarifiers_Qlang" + questionLanguage,
+            []
+          );
+        });
+    });
+    it("#pal09-01f 'Sheep are* here.': Poleng. No clarifiers.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy36a",
+        })
+        .expect(200)
+        .then((res) => {
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "sheeps_withClarifiers_Qlang" + questionLanguage,
+            []
+          );
+        });
+    });
+    it("#pal09-01g (Type 1 Synhomographs. If-PW: clarify Inflections) 'Sheep are* here.': Engpol. Expect clarifiers. PDS makes it agnostic between singular and plural.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // devSaysThrowAfterAnnoSalvo: true,
+          pleaseDontSpecify: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy36a",
+        })
+        .expect(200)
+        .then((res) => {
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "sheeps_withClarifiers_Qlang" + questionLanguage,
+            []
+          );
+        });
+    });
+    it("#pal09-01h 'Sheep are* here.': Poleng. No clarifiers. PDS should have no effect.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy36a",
+        })
+        .expect(200)
+        .then((res) => {
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "sheeps_withClarifiers_Qlang" + questionLanguage,
+            []
           );
         });
     });
@@ -3782,6 +3927,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          // devSaysThrowAfterAnnoSalvo: true,
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -4382,7 +4528,7 @@ function checkSentenceTranslations(
     );
   }
 
-  console.log({ "RESULT: res.body:": body });
+  console.log(res.body);
 
   let questionSentence = body.questionSentenceArr[0];
   let { answerSentenceArr } = body;

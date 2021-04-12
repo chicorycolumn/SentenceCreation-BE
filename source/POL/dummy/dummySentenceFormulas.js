@@ -998,6 +998,26 @@ exports.dummySentenceFormulasBank = [
     primaryOrders: [],
   },
   {
+    //nowww
+    sentenceFormulaSymbol: "dummy36a",
+    sentenceFormulaId: "POL-dummy36a",
+    translations: { ENG: ["ENG-dummy36a"] },
+    sentenceStructure: [
+      {
+        chunkId: "nco-1-sheep",
+        andTags: ["farmyard"],
+      },
+      {
+        chunkId: "ver-1-is",
+        specificLemmas: ["być"],
+        tenseDescription: ["present im"],
+        agreeWith: "nco-1-sheep",
+      },
+      { chunkId: "fix-1-here", value: "tutaj" },
+    ],
+    primaryOrders: [["nco-1-sheep", "ver-1-is", "fix-1-here"]],
+  },
+  {
     sentenceFormulaSymbol: "dummy37",
     sentenceFormulaId: "POL-dummy37",
     translations: { ENG: ["ENG-dummy37"] },

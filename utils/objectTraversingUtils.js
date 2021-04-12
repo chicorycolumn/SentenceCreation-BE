@@ -620,9 +620,6 @@ exports.findMatchingLemmaObjectThenWord = (
           selectedLemmaObject,
           currentLanguage
         );
-      }
-
-      if (!structureChunk.dontSpecifyOnThisChunk) {
       } else {
         console.log(
           "[1;30m " +

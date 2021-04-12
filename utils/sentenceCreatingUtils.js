@@ -245,7 +245,7 @@ exports.processSentenceFormula = (
                   "[0m"
               );
 
-              explodedOutputArraysWithHeads = uUtils.returnArrayWithoutItemAtIndex(
+              explodedOutputArraysWithHeads = uUtils.returnArrayWithItemAtIndexRemoved(
                 explodedOutputArraysWithHeads,
                 headOutputArrayIndex
               );
@@ -377,7 +377,7 @@ exports.processSentenceFormula = (
             "[0m"
         );
 
-        grandOutputArray = returnArrayWithoutItemAtIndex(
+        grandOutputArray = returnArrayWithItemAtIndexRemoved(
           grandOutputArray,
           outputArrayIndex
         );
@@ -593,48 +593,12 @@ exports.giveFinalSentences = (
     errorInSentenceCreation,
   } = sentenceData;
 
-  if ("check") {
-    if (!multipleMode && answerOutputArrays && answerOutputArrays.length) {
-      clUtils.throw(
-        "#ERR ubrz giveFinalSentences. Well that's strange. We are in Question Mode, so SC:giveFinalSentences expected to be given questionOutputArr, not answerOutputArrays."
-      );
-    }
-
-    if (errorInSentenceCreation.errorMessage) {
-      let errorMessage = {
-        errorInSentenceCreation: errorInSentenceCreation.errorMessage,
-      };
-
-      return {
-        message: "No sentence could be created from the specifications in Q.",
-        finalSentence: null,
-        errorMessage,
-      };
-    }
-
-    if (
-      answerSentenceData &&
-      answerSentenceData.errorInSentenceCreation.errorMessage
-    ) {
-      let errorMessage = {
-        errorInSentenceCreation:
-          answerSentenceData.errorInSentenceCreation.errorMessage,
-      };
-
-      return {
-        message: "No sentence could be created from the specifications in A.",
-        finalSentence: null,
-        errorMessage,
-      };
-    }
-  }
-
   if (answerLanguage) {
-    clUtils.consoleLogObjectAtTwoLevels(
-      questionOutputArr,
-      "sentenceData.questionOutputArr",
-      "giveFinal"
+    console.log(
+      "shem questionOutputArr",
+      questionOutputArr.map((unit) => unit.structureChunk)
     );
+    // clUtils.throw(667);
 
     aaUtils.firstStageEvaluateAnnotations(
       questionOutputArr,

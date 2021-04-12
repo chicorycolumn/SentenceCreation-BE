@@ -521,10 +521,34 @@ exports.generalTranslatedSentencesRef = {
       { POL: "Owce.", ENG: ["Sheep (plural)."] },
     ],
   },
+  sheep_withoutClarifiers_QlangENG: {
+    "POL->ENG": [
+      { POL: "Owca.", ENG: ["Sheep."] },
+      { POL: "Owce.", ENG: ["Sheep."] },
+    ],
+  },
   sheep_withClarifiers_QlangPOL: {
     "POL->ENG": [
       { POL: "Owca.", ENG: ["Sheep."] },
       { POL: "Owce.", ENG: ["Sheep."] },
+    ],
+  },
+  sheeps_withClarifiers_QlangPOL: {
+    "POL->ENG": [
+      {
+        POL: "Owce są tutaj.",
+        ENG: ["The sheep are here.", "The sheep are being here."],
+      },
+      {
+        POL: "Owca jest tutaj.",
+        ENG: ["The sheep is here.", "The sheep is being here."],
+      },
+    ],
+  },
+  sheeps_withClarifiers_QlangENG: {
+    "POL->ENG": [
+      { POL: "Owce są tutaj.", ENG: ["The sheep are here."] },
+      { POL: "Owca jest tutaj.", ENG: ["The sheep is here."] },
     ],
   },
   read_withClarifiers_QlangENG: {

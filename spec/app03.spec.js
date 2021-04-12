@@ -2374,7 +2374,7 @@ function checkSentenceTranslations(
     );
   }
 
-  console.log({ "RESULT: res.body:": body });
+  console.log(res.body);
 
   let questionSentence = body.questionSentenceArr[0];
   let { answerSentenceArr } = body;

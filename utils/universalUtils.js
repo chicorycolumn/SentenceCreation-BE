@@ -246,8 +246,13 @@ exports.oneStepCheck = (n1, n2) => {
   return Math.abs(n1 - n2) === 1;
 };
 
-exports.returnArrayWithoutItemAtIndex = (arr, indexToRemove) => {
+exports.returnArrayWithItemAtIndexRemoved = (arr, indexToRemove) => {
   return [...arr.slice(0, indexToRemove), ...arr.slice(indexToRemove + 1)];
+};
+
+exports.returnArrayWithItemAtIndexReplaced = (arr, indexToRemove, newValue) => {
+  arr.splice(indexToRemove, 1, newValue);
+  return arr;
 };
 
 exports.doesObjectExistAndNonEmpty = (object) => {

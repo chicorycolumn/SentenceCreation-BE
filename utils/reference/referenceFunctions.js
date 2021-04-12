@@ -15,34 +15,36 @@ exports.getStructureChunkFeatures = (currentLanguage) => {
   );
 };
 
-exports.removeIncompatibleFeatures = (
-  currentLanguage,
-  stChToCheckBy,
-  stChToChange
-) => {
-  console.log(311, stChToCheckBy);
+exports.removeIncompatibleFeatures = (currentLanguage, structureChunk) => {
+  //VITO-TEMP-removeIncompatibleFeatures
+
+  console.log(311, structureChunk);
   //(note, the two stChs in args are likely the same stCh, but best to do as their names suggest)
 
   //ACX3A: If npe then remove neuter from gender.
-  if (gpUtils.getWorrdtypeStCh(stChToCheckBy, true) === "noun-person") {
+  if (gpUtils.getWorrdtypeStCh(structureChunk, true) === "noun-person") {
     console.log(
       "vvvx removeIncompatibleFeatures. Removing 'n' if present as is noun-person."
     );
-    stChToChange.gender = stChToChange.gender.filter((value) => value !== "n");
+    structureChunk.gender = structureChunk.gender.filter(
+      (value) => value !== "n"
+    );
   }
 
   //ACX3B: If 1per then remove neuter from gender.
   if (
-    stChToCheckBy.person &&
-    !stChToCheckBy.person.filter((value) => value !== "1per").length
+    structureChunk.person &&
+    !structureChunk.person.filter((value) => value !== "1per").length
   ) {
     console.log(
       "vvvy removeIncompatibleFeatures. Removing 'n' if present as only person value is '1per'."
     );
-    stChToChange.gender = stChToChange.gender.filter((value) => value !== "n");
+    structureChunk.gender = structureChunk.gender.filter(
+      (value) => value !== "n"
+    );
   }
 
-  //ACX3C: Eg We're examining gender feature, so check the "number" feature, and
+  //ACX3C: If we're examining gender feature, check the "number" feature, and
   //if the number does not include "singular", then remove "m", "m1", "m2", "m3", "f", "n" from the gender array.
 
   let incompatibleFeaturesRef = refObj.incompatibleFeaturesRef[currentLanguage];
@@ -50,7 +52,7 @@ exports.removeIncompatibleFeatures = (
   console.log({ currentLanguage });
   console.log({ incompatibleFeaturesRef });
 
-  Object.keys(stChToChange).forEach((traitKeyy) => {
+  Object.keys(structureChunk).forEach((traitKeyy) => {
     //eg traitKeyy = "gender"
     if (!incompatibleFeaturesRef[traitKeyy]) {
       return;
@@ -60,10 +62,10 @@ exports.removeIncompatibleFeatures = (
       (traitKeyyToCheckBy) => {
         //eg traitKeyyToCheckBy = "number"
         if (
-          stChToCheckBy[traitKeyyToCheckBy] &&
-          stChToCheckBy[traitKeyyToCheckBy].length
+          structureChunk[traitKeyyToCheckBy] &&
+          structureChunk[traitKeyyToCheckBy].length
         ) {
-          if (stChToCheckBy[traitKeyyToCheckBy].length > 1) {
+          if (structureChunk[traitKeyyToCheckBy].length > 1) {
             clUtils.throw(
               `ckos Unsure how to handle multiple values for ${traitKeyyToCheckBy}`
             );
@@ -74,7 +76,7 @@ exports.removeIncompatibleFeatures = (
           ).forEach((traitValyyeToCheckBy) => {
             //eg traitValyyeToCheckBy = "plural"
             if (
-              !stChToCheckBy[traitKeyyToCheckBy].includes(traitValyyeToCheckBy)
+              !structureChunk[traitKeyyToCheckBy].includes(traitValyyeToCheckBy)
             ) {
               let compatibleTraitValyyes =
                 incompatibleFeaturesRef[traitKeyy][traitKeyyToCheckBy][
@@ -82,9 +84,9 @@ exports.removeIncompatibleFeatures = (
                 ];
               //eg compatibleTraitValyyes = ["virile", "nonvirile"]
 
-              //eg stChToChange["number"] is ["plural"],
+              //eg structureChunk["number"] is ["plural"],
               //so remove any values from gender that don't fit with that.
-              stChToChange[traitKeyy] = stChToChange[traitKeyy].filter(
+              structureChunk[traitKeyy] = structureChunk[traitKeyy].filter(
                 (value) => !compatibleTraitValyyes.includes(value)
               );
             }
@@ -93,8 +95,9 @@ exports.removeIncompatibleFeatures = (
       }
     );
   });
-  console.log(315, stChToChange);
-  return stChToChange;
+
+  console.log(315, structureChunk);
+  return structureChunk;
 };
 
 exports.getTranslatedTenseDescription = (

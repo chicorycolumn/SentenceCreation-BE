@@ -20,6 +20,7 @@ exports.fetchPalette = (req) => {
     pleaseDontSpecify,
     devSaysThrowAtMidpoint,
     devSaysOmitStChValidation,
+    devSaysThrowAfterAnnoSalvo,
     arrayOfCounterfactualResultsForThisAnnotation,
     counterfactualQuestionSentenceFormula,
     counterfactualFeature,
@@ -290,7 +291,7 @@ exports.fetchPalette = (req) => {
     }
 
     console.log(
-      "znuj fetchPalette. questionOutputArr BEFORE CLARI OR SPECI",
+      "[1;36m " + `znuj fetchPalette. questionOutputArr BEFORE CLARI OR SPECI` + "[0m\n",
       questionSentenceData.questionOutputArr.map((unit) => [
         `${unit.selectedLemmaObject.lemma}-->${unit.selectedWord}`,
         unit.structureChunk.annotations,
@@ -304,7 +305,9 @@ exports.fetchPalette = (req) => {
     });
 
     console.log(
-      "znuk-fetchPalette, questionOutputArr AFTER CLARI, BEFORE SPECI",
+      "[1;36m " +
+        `znuk-fetchPalette, questionOutputArr AFTER CLARI, BEFORE SPECI` +
+        "[0m\n",
       questionSentenceData.questionOutputArr.map(
         (unit) => unit.structureChunk.annotations
       )
@@ -321,7 +324,7 @@ exports.fetchPalette = (req) => {
     });
 
     console.log(
-      "znul-fetchPalette, questionOutputArr AFTER CLARI AND SPECI",
+      "[1;36m " + `znul-fetchPalette, questionOutputArr AFTER CLARI AND SPECI` + "[0m\n",
       questionSentenceData.questionOutputArr.map((unit) => [
         `${unit.selectedLemmaObject.lemma}-->${unit.selectedWord}`,
         unit.structureChunk.annotations,
@@ -334,14 +337,16 @@ exports.fetchPalette = (req) => {
     });
 
     console.log(
-      "znul-fetchPalette, questionOutputArr AFTER CLARI, SPECI, and SPECIALADJUST",
+      "[1;36m " + `znul-fetchPalette, questionOutputArr AFTER SPECIALADJUST\n` + "[0m",
       questionSentenceData.questionOutputArr.map((unit) => [
         `${unit.selectedLemmaObject.lemma}-->${unit.selectedWord}`,
         unit.structureChunk.annotations,
       ])
     );
 
-    // clUtils.throw(399);
+    if (devSaysThrowAfterAnnoSalvo) {
+      clUtils.throw("mhji devSaysThrowAfterAnnoSalvo");
+    }
 
     translations.forEach((translationSentenceFormulaId, index) => {
       let { sentenceFormula, words } = scUtils.getMaterials(
@@ -476,6 +481,11 @@ exports.fetchPalette = (req) => {
 
   let answerSelectedWordsSetsHaveChanged = { value: false };
   let additionalRunsRecord = [];
+
+  console.log(
+    `csej fetchPalette. questionSentenceData`,
+    questionSentenceData.questionOutputArr.map((unit) => unit.structureChunk)
+  );
 
   questionResponseObj = scUtils.giveFinalSentences(
     questionSentenceData,
