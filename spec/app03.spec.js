@@ -28,8 +28,8 @@ describe("/api", function () {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe.only("/palette - Stage 18: Poleng annotations.", () => {
-    xit("#pal18-01a GET 200 YES: Engpol.", () => {
+  describe("/palette - Stage 18: Further annotations.", () => {
+    xit("#pal18-01a GET 200 YES: Engpol. 'she reads'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -65,7 +65,7 @@ describe("/api", function () {
           );
         });
     });
-    xit("#pal18-01b GET 200 YES: Poleng.", () => {
+    xit("#pal18-01b GET 200 YES: Poleng annotations. 'she reads'", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -101,7 +101,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal18-01b GET 200 YES: Poleng PDS.", () => {
+    it("#pal18-01c GET 200 YES: Poleng PDS. 'she reads'", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 

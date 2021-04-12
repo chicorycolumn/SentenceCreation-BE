@@ -671,11 +671,12 @@ exports.specialAdjustmentToAnnotations = (
   questionSentenceData,
   languagesObj
 ) => {
-  let { questionOutputArr } = questionSentenceData;
   let { questionLanguage, answerLanguage } = languagesObj;
   const questionLangUtils = require(`../source/${questionLanguage}/langUtils.js`);
   const answerLangUtils = require(`../source/${answerLanguage}/langUtils.js`);
 
+  //Part 1: If a stCh has a gender anno, and this stCh is a depCh,
+  //then transfer the gender anno to its headCh, and remove the anno from this depCh.
   questionSentenceData.questionOutputArr.forEach((outputUnit) => {
     let { structureChunk } = outputUnit;
 
@@ -684,9 +685,12 @@ exports.specialAdjustmentToAnnotations = (
       Object.keys(structureChunk.annotations).includes("gender") &&
       structureChunk.agreeWith
     ) {
-      let headChunk = questionSentenceData.questionOutputArr.find(
+      let headOutputUnit = questionSentenceData.questionOutputArr.find(
         (unit) => unit.structureChunk.chunkId === structureChunk.agreeWith
-      ).structureChunk;
+      );
+
+      let headChunk = headOutputUnit.structureChunk;
+      let headLObj = headOutputUnit.selectedLemmaObject;
 
       if (!headChunk) {
         clUtils.throw("ojiq");
@@ -702,12 +706,34 @@ exports.specialAdjustmentToAnnotations = (
         );
       }
 
-      headChunk.annotations.gender = structureChunk.annotations.gender;
+      if (headLObj.gender && !(headLObj.gender.slice(0, 3) === "all")) {
+        console.log({
+          questionLanguage: languagesObj.questionLanguage,
+          headLObjgender: headLObj.gender,
+        });
+
+        let virilityPaddedLObjGenderArr = [
+          headLObj.gender,
+          ...refObj.pluralVirilityAndSingularConversionRef[
+            languagesObj.questionLanguage
+          ]["plural"][headLObj.gender],
+        ];
+
+        if (
+          !virilityPaddedLObjGenderArr.includes(
+            structureChunk.annotations.gender
+          )
+        ) {
+          clUtils.throw(
+            `evjo The depCh gender anno "${structureChunk.annotations.gender}" should have matched its headCh's lObj gender "${headLObj.gender}"?`
+          );
+        }
+        //Part 2: But if the headCh's lObj has a gender, then don't transfer the gender anno.
+      } else {
+        headChunk.annotations.gender = structureChunk.annotations.gender;
+      }
 
       delete structureChunk.annotations.gender;
-      //If the stCh has a gender anno,
-      //and it agrees with anything,
-      //then transfer the gender anno to the headChunk, and remove from this chunk.
     }
   });
 };
