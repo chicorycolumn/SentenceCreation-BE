@@ -27,13 +27,14 @@ describe("/api", function () {
   // beforeEach(() => {});
 
   describe.only("/palette - Stage 18: Further annotations.", () => {
-    it("#pal18-01a GET 200 YES: Engpol. 'she reads'", () => {
+    it.only("#pal18-01a GET 200 YES: Engpol. 'she reads'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
         .send({
+          // devSaysThrowAfterAnnoSalvo: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "dummy61",

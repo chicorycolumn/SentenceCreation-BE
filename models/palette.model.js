@@ -290,6 +290,26 @@ exports.fetchPalette = (req) => {
       throw "palette.model > I was asked to give translations, but the question sentence formula did not have any translations listed.";
     }
 
+    questionSentenceData.questionOutputArr.forEach((outputUnit) => {
+      if (
+        ["agreeWith"].some(
+          //epsilon Should use other agreeKeys too?
+          (agreeKey) => outputUnit.structureChunk[agreeKey]
+        )
+      ) {
+        let depCh = outputUnit.structureChunk;
+
+        scUtils.inheritFromHeadToDependentChunk(
+          questionLanguage,
+          null,
+          depCh,
+          questionSentenceData.questionOutputArr.map(
+            (unit) => unit.structureChunk
+          )
+        );
+      }
+    });
+
     console.log(
       "[1;36m " + `znuj fetchPalette. questionOutputArr BEFORE CLARI OR SPECI` + "[0m\n",
       questionSentenceData.questionOutputArr.map((unit) => [
@@ -337,7 +357,7 @@ exports.fetchPalette = (req) => {
     });
 
     console.log(
-      "[1;36m " + `znul-fetchPalette, questionOutputArr AFTER SPECIALADJUST\n` + "[0m",
+      "[1;36m " + `znum-fetchPalette, questionOutputArr AFTER SPECIALADJUST\n` + "[0m",
       questionSentenceData.questionOutputArr.map((unit) => [
         `${unit.selectedLemmaObject.lemma}-->${unit.selectedWord}`,
         unit.structureChunk.annotations,

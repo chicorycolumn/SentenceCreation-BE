@@ -1169,8 +1169,15 @@ exports.removeDuplicatesFromResponseObject = (respObj) => {
 exports.inheritFromHeadToDependentChunk = (
   currentLanguage,
   headChunk,
-  dependentChunk
+  dependentChunk,
+  sentenceStructure
 ) => {
+  if (!headChunk) {
+    headChunk = sentenceStructure.find(
+      (stCh) => stCh.chunkId === dependentChunk.agreeWith
+    );
+  }
+
   console.log(
     `wdil inheritFromHeadToDependentChunk: "${headChunk.chunkId}" to "${dependentChunk.chunkId}"`,
     "dependentChunk BEFOREHAND: ",

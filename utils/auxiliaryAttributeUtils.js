@@ -889,7 +889,6 @@ exports.specialAdjustmentToAnnotations = (
       } else {
         headChunk.annotations.gender = structureChunk.annotations.gender;
       }
-
       delete structureChunk.annotations.gender;
     }
   }

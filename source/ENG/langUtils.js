@@ -334,6 +334,8 @@ exports.addLanguageParticularClarifiers = (
             structureChunk.number[0] === "singular"
           )
         ) {
+          console.log("befx structureChunk", structureChunk);
+          clUtils.throw(666);
           let annotationValue = "present";
 
           console.log(
