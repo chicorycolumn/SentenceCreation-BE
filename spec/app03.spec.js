@@ -28,7 +28,7 @@ describe("/api", function () {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe("/palette - Stage 18: Further annotations.", () => {
+  describe.only("/palette - Stage 18: Further annotations.", () => {
     xit("#pal18-01a GET 200 YES: Engpol. 'she reads'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";

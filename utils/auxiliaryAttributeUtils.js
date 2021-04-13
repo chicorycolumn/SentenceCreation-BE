@@ -158,17 +158,10 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
   let shouldConsoleLog = false;
 
-  let questionSentenceStructure = questionOutputArr.map(
-    (unit) => unit.structureChunk
-  );
-  let originalQuestionSelectedWords = [
-    questionOutputArr.map((unit) => unit.selectedWord),
-  ];
-  let originalAnswerSelectedWords = [];
+  let originalQuestionOutputArrays = [questionOutputArr];
+  let originalAnswerOutputArrays = [];
   answerSentenceData.answerOutputArrays.forEach((answerOutputArray) => {
-    originalAnswerSelectedWords.push(
-      answerOutputArray.map((outputUnit) => outputUnit.selectedWord)
-    );
+    originalAnswerOutputArrays.push(answerOutputArray);
   });
   let arrayOfAnswerSelectedWords = answerSentenceData.answerOutputArrays.map(
     (outputArr) => outputArr.map((unit) => unit.selectedWord)
@@ -338,13 +331,10 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         console.log("[1;33m" + `${logToConsole}` + "[0m");
       }
 
-      let counterfactualQuestionSelectedWordsSets = arrayOfCounterfactualResultsForThisAnnotation.map(
+      let counterfactualQuestionOutputArrays = arrayOfCounterfactualResultsForThisAnnotation.map(
         (counterfactual) =>
-          counterfactual.questionSentenceData.questionOutputArr.map(
-            (outputUnit) => outputUnit.selectedWord
-          )
+          counterfactual.questionSentenceData.questionOutputArr
       );
-      let counterfactualAnswerSelectedWordsSets = [];
       let counterfactualAnswerOutputArrays = [];
 
       arrayOfCounterfactualResultsForThisAnnotation.forEach(
@@ -352,10 +342,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           counterfactual.answerSentenceData.answerOutputArrays.forEach(
             (answerOutputArray) => {
               counterfactualAnswerOutputArrays.push(answerOutputArray);
-
-              counterfactualAnswerSelectedWordsSets.push(
-                answerOutputArray.map((outputUnit) => outputUnit.selectedWord)
-              );
             }
           );
         }
@@ -392,29 +378,108 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             "[0m"
         );
         console.log(
-          "originalQuestionSelectedWords",
-          originalQuestionSelectedWords
-        );
-        console.log("originalAnswerSelectedWords", originalAnswerSelectedWords);
-        console.log(
-          "counterfactualQuestionSelectedWordsSets",
-          counterfactualQuestionSelectedWordsSets
+          "originalQuestionOutputArrays...selectedWords",
+          originalQuestionOutputArrays.map((outputArr) =>
+            outputArr.map((unit) => unit.selectedWord)
+          )
         );
         console.log(
-          "counterfactualAnswerSelectedWordsSets",
-          counterfactualAnswerSelectedWordsSets
+          "originalAnswerOutputArrays...selectedWords",
+          originalAnswerOutputArrays.map((outputArr) =>
+            outputArr.map((unit) => unit.selectedWord)
+          )
         );
-        console.log("originalAnswerSelectedWords", originalAnswerSelectedWords);
         console.log(
-          "counterfactualAnswerSelectedWordsSets",
-          counterfactualAnswerSelectedWordsSets
+          "counterfactualQuestionOutputArrays...selectedWords",
+          counterfactualQuestionOutputArrays.map((outputArr) =>
+            outputArr.map((unit) => unit.selectedWord)
+          )
+        );
+        console.log(
+          "counterfactualAnswerOutputArrays...selectedWords",
+          counterfactualAnswerOutputArrays.map((outputArr) =>
+            outputArr.map((unit) => unit.selectedWord)
+          )
         );
       }
 
+      //
+      /** Okay, we're about to compare pseudosentences (ie the arrays of selectedWords).
+       *  If answer pseudosentences are same, or question pseudosentences are different, we delete the anno.
+       *
+       *  However, we're just working with PSEUDOsentences. Why is this a potential issue?
+       *
+       *  Because the sentences are not finally formatting, so comparison may not be accurate in specific cases. Eg:
+       *
+       *  Q original: "On czyta."     Q counterfax: "Ona czyta."
+       *
+       *  This logic would say, ah, Qs are DIFFERENT, so delete the anno. But what it doesn't know, is that
+       *  when these pseudosentences are actually formatted, they will be the SAME, because pro-1 is not included.
+       *
+       *  So...
+       *
+       *  One option is to actually convert all the pseudosentences to real sentences prior to the comparing below,
+       *  in the normal way via scUtils.buildSentenceString.
+       *
+       *  However... this will involve extra processing time, so for now, let's just check the pseudosentences against
+       *  primaryOrders, so that we at least catch the "On czyta." --> "Czyta." issue.
+       */
+
+      console.log(answerSentenceData.sentenceFormula.primaryOrders);
+      console.log(rawQuestionSentenceFormula.primaryOrders);
+
+      function makePseudoSentences(outputArrays, primaryOrders) {
+        //This doesn't do the full processing, ie 'a' --> 'an'
+        //but it does trim the list of selected words according to sentenceFormula.primaryOrders,
+        //ie "On czyta." and "Ona czyta." both become "Czyta.".
+
+        let orderAdjustedOutputArrs = [];
+
+        primaryOrders.forEach((primaryOrder) => {
+          outputArrays.forEach((outputArray) => {
+            let orderAdjustedOutputArr = [];
+            primaryOrder.forEach((chunkId) => {
+              let correspondingOutputUnit = outputArray.find(
+                (unit) => unit.structureChunk.chunkId === chunkId
+              );
+
+              if (!correspondingOutputUnit) {
+                clUtils.throw("ocii");
+              }
+
+              orderAdjustedOutputArr.push(correspondingOutputUnit);
+            });
+
+            orderAdjustedOutputArrs.push(orderAdjustedOutputArr);
+          });
+        });
+
+        return orderAdjustedOutputArrs.map((outputArr) =>
+          outputArr.map((unit) => unit.selectedWord)
+        );
+      }
+
+      let originalAnswerPseudoSentences = makePseudoSentences(
+        originalAnswerOutputArrays,
+        answerSentenceData.sentenceFormula.primaryOrders
+      );
+      let counterfactualAnswerPseudoSentences = makePseudoSentences(
+        counterfactualAnswerOutputArrays,
+        answerSentenceData.sentenceFormula.primaryOrders
+      );
+      let originalQuestionPseudoSentences = makePseudoSentences(
+        originalQuestionOutputArrays,
+        rawQuestionSentenceFormula.primaryOrders
+      );
+      let counterfactualQuestionPseudoSentences = makePseudoSentences(
+        counterfactualQuestionOutputArrays,
+        rawQuestionSentenceFormula.primaryOrders
+      );
+
       if (
         gpUtils.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
-          originalAnswerSelectedWords,
-          counterfactualAnswerSelectedWordsSets
+          originalAnswerPseudoSentences,
+          counterfactualAnswerPseudoSentences
         )
       ) {
         console.log(
@@ -422,16 +487,16 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             `myxo-clauseA [tl;dr answersame so deleting anno] removeAnnotationsByCounterfax END. I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual ANSWER selected words came back SAME as original answer selected words.\nThis means that this feature has no impact, even if we flip it, so annotation is not needed. \nDeleting annotation "${annoKey}" = "${questionOutputUnit.structureChunk.annotations[annoKey]}" now.` +
             "[0m",
           {
-            originalAnswerSelectedWords,
-            counterfactualAnswerSelectedWordsSets,
+            originalAnswerPseudoSentences,
+            counterfactualAnswerPseudoSentences,
           }
         );
 
         delete questionOutputUnit.structureChunk.annotations[annoKey];
       } else if (
         !gpUtils.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
-          originalQuestionSelectedWords,
-          counterfactualQuestionSelectedWordsSets
+          originalQuestionPseudoSentences,
+          counterfactualQuestionPseudoSentences
         )
       ) {
         console.log(
@@ -439,8 +504,8 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             `myxo-clauseB [tl;dr questiondifferent so deleting anno] removeAnnotationsByCounterfax END. I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual QUESTION selected words came back DIFFERENT original question selected words.\nThis means that this feature has no impact, even if we flip it, so annotation is not needed. \nDeleting annotation "${annoKey}" = "${questionOutputUnit.structureChunk.annotations[annoKey]}" now.` +
             "[0m",
           {
-            originalQuestionSelectedWords,
-            counterfactualQuestionSelectedWordsSets,
+            originalQuestionPseudoSentences,
+            counterfactualQuestionPseudoSentences,
           }
         );
 
@@ -451,31 +516,19 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             `myxo-clauseC [tl;dr !answersame && !questiondifferent so keeping anno] removeAnnotationsByCounterfax END. I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual answer selected words came back DIFFERENT FROM original answer selected words.\nThis means I'll keep annotation "${annoKey}" = "${questionOutputUnit.structureChunk.annotations[annoKey]}".` +
             "[0m",
           {
-            originalQuestionSelectedWords,
-            counterfactualQuestionSelectedWordsSets,
-            originalQuestionSelectedWords,
-            counterfactualQuestionSelectedWordsSets,
+            originalAnswerPseudoSentences,
+            counterfactualAnswerPseudoSentences,
+            originalQuestionPseudoSentences,
+            counterfactualQuestionPseudoSentences,
           }
         );
 
         //PDSX4-orange-true
         if (questionOutputUnit.structureChunk.dontSpecifyOnThisChunk) {
-          let combinedAnswerSelectedWordsSets = [
-            ...originalAnswerSelectedWords,
-            ...counterfactualAnswerSelectedWordsSets,
-          ];
-
           let combinedFeatures = [
             ...questionOutputUnit.structureChunk[annoKey],
             ...counterfactualFeatures,
           ];
-
-          console.log({ annoValue });
-          console.log(
-            "combinedAnswerSelectedWordsSets",
-            combinedAnswerSelectedWordsSets
-          );
-          console.log("combinedFeatures", combinedFeatures);
 
           answerSelectedWordsSetsHaveChanged.value = true;
 
@@ -483,6 +536,10 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             ...answerSentenceData.answerOutputArrays,
             ...counterfactualAnswerOutputArrays,
           ];
+
+          console.log(
+            `PDSX-orange. Agglomerating the answer output arrays and deleting annoValue "${annoValue}", and questionOutputUnit.structureChunk[${annoKey}] is now [${combinedFeatures}]`
+          );
 
           delete questionOutputUnit.structureChunk.annotations[annoKey];
           questionOutputUnit.structureChunk[annoKey] = combinedFeatures;
