@@ -717,11 +717,11 @@ exports.removeAnnotationsByAOCs = (
         //drillPathSecondary reveals info about 'jabłko'
         //
         //So if we're looking at secondaryDeps, then we'll look in drillPathSecondary, and so on.
-        lemon(primaryDepUnits, "drillPath");
-        lemon(secondaryDepUnits, "drillPathSecondary");
-        lemon(tertiaryDepUnits, "drillPathTertiary");
+        deleteByAOC(primaryDepUnits, "drillPath");
+        deleteByAOC(secondaryDepUnits, "drillPathSecondary");
+        deleteByAOC(tertiaryDepUnits, "drillPathTertiary");
 
-        function lemon(depUnits, drillPathKey) {
+        function deleteByAOC(depUnits, drillPathKey) {
           depUnits.forEach((depUnit) => {
             if (
               !questionOutputUnit.structureChunk.annotations[inflectionTyype] || //ie we've now deleted it so abort loop.
