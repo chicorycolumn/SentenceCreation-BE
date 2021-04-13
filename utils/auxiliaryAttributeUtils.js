@@ -180,6 +180,10 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       "[0m"
   );
 
+  let counterfactualQuestionSentenceFormula = uUtils.copyWithoutReference(
+    rawQuestionSentenceFormula
+  );
+
   Object.keys(questionOutputUnit.structureChunk.annotations).forEach(
     (annoKey) => {
       //ACX2A: Don't bother running counterfactuals for wordtype/emoji/text annotations, as they'll always be needed.
@@ -226,40 +230,26 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
       counterfactualValuesForThisFeature.forEach(
         (counterfactualValueForThisFeature) => {
-          let counterfaxedStChCopy = uUtils.copyWithoutReference(
-            counterfaxedStCh
-          );
-
           console.log(
             `myxe removeAnnotationsByCounterfax FOREACH-2 START. Will do a run with counterfactual value "${counterfactualValueForThisFeature}".`
           );
 
-          let counterfactualQuestionSentenceFormula = uUtils.copyWithoutReference(
-            rawQuestionSentenceFormula
-          );
+          counterfaxedStCh[annoKey] = [counterfactualValueForThisFeature];
 
           //(IOTA). Do we want to send updated question formula for counterfax run,
           //or originalQuestionSentenceFormula ?
 
           gpUtils.updateSentenceFormulaWithNewStructureChunksFromOutputUnits(
-            counterfactualQuestionSentenceFormula,
+            counterfactualQuestionSentenceFormula.sentenceStructure,
             questionOutputArr
           );
 
-          let indexOfCounterfaxedStCh = counterfactualQuestionSentenceFormula.sentenceStructure.findIndex(
-            (stCh) => stCh.chunkId === counterfaxedStChCopy.chunkId
-          );
-
-          if (indexOfCounterfaxedStCh === -1) {
-            clUtils.throw(
-              "sopx removeAnnotationsByCounterfactualAnswerSentences. Couldn't find a stCh to change for counterfactual."
-            );
-          }
-
           uUtils.returnArrayWithItemAtIndexReplaced(
             counterfactualQuestionSentenceFormula.sentenceStructure,
-            indexOfCounterfaxedStCh,
-            counterfaxedStChCopy
+            counterfactualQuestionSentenceFormula.sentenceStructure.findIndex(
+              (stCh) => stCh.chunkId === counterfaxedStCh.chunkId
+            ),
+            counterfaxedStCh
           );
 
           counterfactualQuestionSentenceFormula.sentenceStructure.forEach(
@@ -367,7 +357,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         }
       );
 
-      if (shouldConsoleLog) {
+      if ("console") {
         console.log(
           "\n klwe removeAnnotationsByCounterfax. questionOutputUnit.structureChunk.annotations",
           questionOutputUnit.structureChunk.annotations
@@ -377,6 +367,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             `klwe removeAnnotationsByCounterfax. We made counterfactuals for question stCh "${questionOutputUnit.structureChunk.chunkId}" based on its annotations, shown above.` +
             "[0m"
         );
+        console.log({ additionalRunsRecord });
         console.log(
           "originalQuestionOutputArrays...selectedWords",
           originalQuestionOutputArrays.map((outputArr) =>

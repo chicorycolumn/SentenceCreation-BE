@@ -102,17 +102,17 @@ exports.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual
 };
 
 exports.updateSentenceFormulaWithNewStructureChunksFromOutputUnits = (
-  rawSentenceFormula,
+  sentenceStructure,
   outputArr
 ) => {
   outputArr.forEach((unit) => {
-    let indexOfStChToChange = rawSentenceFormula.sentenceStructure.findIndex(
+    let indexOfStChToChange = sentenceStructure.findIndex(
       (stCh) => stCh.chunkId === unit.structureChunk.chunkId
     );
 
-    rawSentenceFormula.sentenceStructure[
-      indexOfStChToChange
-    ] = uUtils.copyWithoutReference(unit.structureChunk);
+    sentenceStructure[indexOfStChToChange] = uUtils.copyWithoutReference(
+      unit.structureChunk
+    );
   });
 };
 

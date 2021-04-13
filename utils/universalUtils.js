@@ -251,6 +251,12 @@ exports.returnArrayWithItemAtIndexRemoved = (arr, indexToRemove) => {
 };
 
 exports.returnArrayWithItemAtIndexReplaced = (arr, indexToRemove, newValue) => {
+  if (indexToRemove === -1) {
+    clUtils.throw(
+      "sopx returnArrayWithItemAtIndexReplaced. If you tried to give me an index made with a find method, then that has failed to find anything."
+    );
+  }
+
   arr.splice(indexToRemove, 1, newValue);
   return arr;
 };
