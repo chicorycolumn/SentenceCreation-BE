@@ -236,18 +236,22 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           //(IOTA). Do we want to send updated question formula for counterfax run,
           //or originalQuestionSentenceFormula ?
 
-          gpUtils.updateSentenceFormulaWithNewStructureChunksFromOutputUnits(
+          gpUtils.updateSentenceStructureWithNewStructureChunksFromOutputUnits(
             counterfactualQuestionSentenceFormula.sentenceStructure,
             questionOutputArr
           );
 
-          uUtils.returnArrayWithItemAtIndexReplaced(
-            counterfactualQuestionSentenceFormula.sentenceStructure,
-            counterfactualQuestionSentenceFormula.sentenceStructure.findIndex(
-              (stCh) => stCh.chunkId === counterfaxedStCh.chunkId
-            ),
-            counterfaxedStCh
+          let indexOfStChToChange = counterfactualQuestionSentenceFormula.sentenceStructure.findIndex(
+            (stCh) => stCh.chunkId === counterfaxedStCh.chunkId
           );
+
+          if (indexOfStChToChange === -1) {
+            clUtils.throw("mizd");
+          }
+
+          counterfactualQuestionSentenceFormula.sentenceStructure[
+            indexOfStChToChange
+          ] = counterfaxedStCh;
 
           counterfactualQuestionSentenceFormula.sentenceStructure.forEach(
             (stCh) => {
@@ -354,7 +358,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         }
       );
 
-      if ("console") {
+      if (shouldConsoleLog) {
         console.log(
           "\n klwe removeAnnotationsByCounterfax. questionOutputUnit.structureChunk.annotations",
           questionOutputUnit.structureChunk.annotations
@@ -413,12 +417,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
        *  primaryOrders, so that we at least catch the "On czyta." --> "Czyta." issue.
        */
 
-      console.log(answerSentenceData.sentenceFormula.primaryOrders);
-      console.log(rawQuestionSentenceFormula.primaryOrders);
-
       function makePseudoSentences(outputArrays, primaryOrders) {
-        console.log(`jfii makePseudoSentences. primaryOrders`, primaryOrders);
-
         //This doesn't do the full processing, ie 'a' --> 'an'
         //but it does trim the list of selected words according to sentenceFormula.primaryOrders,
         //ie "On czyta." and "Ona czyta." both become "Czyta.".
@@ -471,12 +470,12 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         counterfactualQuestionOutputArrays,
         rawQuestionSentenceFormula.primaryOrders
       );
-      console.log("vnai", {
-        originalAnswerPseudoSentences,
-        counterfactualAnswerPseudoSentences,
-        originalQuestionPseudoSentences,
-        counterfactualQuestionPseudoSentences,
-      });
+      // console.log("vnai", {
+      //   originalAnswerPseudoSentences,
+      //   counterfactualAnswerPseudoSentences,
+      //   originalQuestionPseudoSentences,
+      //   counterfactualQuestionPseudoSentences,
+      // });
 
       if (
         gpUtils.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
@@ -1237,6 +1236,10 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
       );
 
       if (synhomographData) {
+        // console.log(
+        //   "djeu synhomographData.synhomographs",
+        //   synhomographData.synhomographs
+        // );
         synhomographData.synhomographs.forEach((synhomDataUnit) => {
           if (selectedWord === synhomDataUnit.terminalValue) {
             console.log(
@@ -1440,12 +1443,6 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
               );
               structureChunk.annotations[label] = clarifierValue;
             });
-          } else {
-            console.log(
-              "[1;35m " +
-                `dhbb addClarifiers NOT enter filterDownClarifiers for selectedWord as "${selectedWord}"` +
-                "[0m"
-            );
           }
         });
       }

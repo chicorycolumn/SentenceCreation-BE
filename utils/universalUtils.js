@@ -1,5 +1,5 @@
 const gpUtils = require("./generalPurposeUtils.js");
-const uUtils = require("./universalUtils.js");
+const this = require("./universalUtils.js");
 const clUtils = require("./zerothOrder/consoleLoggingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 
@@ -19,12 +19,12 @@ exports.combineTwoKeyValueObjectsCarefully = (obj1, obj2) => {
 
   Object.keys(obj1).forEach((obj1Key) => {
     let obj1Value = obj1[obj1Key];
-    combinedObj[obj1Key] = obj1Value; //copywithoutref
+    combinedObj[obj1Key] = this.copyWithoutReference(obj1Value); //copywithoutref
   });
 
   Object.keys(obj2).forEach((obj2Key) => {
     obj2Value = obj2[obj2Key];
-    combinedObj[obj2Key] = obj2Value; //copywithoutref
+    combinedObj[obj2Key] = this.copyWithoutReference(obj2Value); //copywithoutref
   });
 
   return combinedObj;
@@ -66,7 +66,7 @@ exports.doKeyValuesMatch = (object, keyValues) => {
     ) {
       return object[key] === keyValues[key];
     } else if (Array.isArray(keyValues[key]) && Array.isArray(object[key])) {
-      return uUtils.areTwoFlatArraysEqual(object[key], keyValues[key]);
+      return this.areTwoFlatArraysEqual(object[key], keyValues[key]);
     }
   });
 };
@@ -85,11 +85,7 @@ exports.findKeysInObjectAndExecuteCallback = (obj, soughtKey, callback) => {
       if (key === soughtKey) {
         callback(obj);
       } else {
-        uUtils.findKeysInObjectAndExecuteCallback(
-          obj[key],
-          soughtKey,
-          callback
-        );
+        this.findKeysInObjectAndExecuteCallback(obj[key], soughtKey, callback);
       }
     });
   }
@@ -133,7 +129,7 @@ exports.copyValueOfKey = (
   shouldDeleteSourceKey
 ) => {
   targetKeyArr.forEach((targetKey) => {
-    navigatedObject[targetKey] = uUtils.copyWithoutReference(
+    navigatedObject[targetKey] = this.copyWithoutReference(
       navigatedObject[sourceKey]
     );
   });
@@ -211,11 +207,11 @@ exports.typeof = (item) => {
 };
 
 exports.areTwoObjectsEqual = (obj1, obj2) => {
-  if (uUtils.typeof(obj1) !== uUtils.typeof(obj2)) {
+  if (this.typeof(obj1) !== this.typeof(obj2)) {
     return false;
   }
 
-  if (!["keyValueObject", "array"].includes(uUtils.typeof(obj1))) {
+  if (!["keyValueObject", "array"].includes(this.typeof(obj1))) {
     return obj1 === obj2;
   }
 
@@ -224,7 +220,7 @@ exports.areTwoObjectsEqual = (obj1, obj2) => {
   }
 
   return Object.keys(obj1).every((obj1Key) => {
-    return uUtils.areTwoObjectsEqual(obj1[obj1Key], obj2[obj1Key]);
+    return this.areTwoObjectsEqual(obj1[obj1Key], obj2[obj1Key]);
   });
 };
 
@@ -250,17 +246,6 @@ exports.returnArrayWithItemAtIndexRemoved = (arr, indexToRemove) => {
   return [...arr.slice(0, indexToRemove), ...arr.slice(indexToRemove + 1)];
 };
 
-exports.returnArrayWithItemAtIndexReplaced = (arr, indexToRemove, newValue) => {
-  if (indexToRemove === -1) {
-    clUtils.throw(
-      "sopx returnArrayWithItemAtIndexReplaced. If you tried to give me an index made with a find method, then that has failed to find anything."
-    );
-  }
-
-  arr.splice(indexToRemove, 1, newValue);
-  return arr;
-};
-
 exports.doesObjectExistAndNonEmpty = (object) => {
   if (!object) {
     return false;
@@ -270,5 +255,5 @@ exports.doesObjectExistAndNonEmpty = (object) => {
 };
 
 exports.isThisObjectInThisArrayOfObjects = (obj, arr) => {
-  return arr.some((objFromArr) => uUtils.areTwoObjectsEqual(objFromArr, obj));
+  return arr.some((objFromArr) => this.areTwoObjectsEqual(objFromArr, obj));
 };

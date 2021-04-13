@@ -7,11 +7,6 @@ exports.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual
   array1,
   array2
 ) => {
-  console.log(
-    "urxe areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual will compare:",
-    array1,
-    array2
-  );
   //Ignores order.
   //Ignores duplicates.
 
@@ -106,7 +101,7 @@ exports.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual
   }
 };
 
-exports.updateSentenceFormulaWithNewStructureChunksFromOutputUnits = (
+exports.updateSentenceStructureWithNewStructureChunksFromOutputUnits = (
   sentenceStructure,
   outputArr
 ) => {

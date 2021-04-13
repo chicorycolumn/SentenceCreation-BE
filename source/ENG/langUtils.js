@@ -502,14 +502,6 @@ exports.generateAdhocForms = (
         engTenseDescriptionRef[key] = valuesArr;
       });
 
-      console.log("eqes", { currentLanguage });
-      console.log("eqes engTenseDescriptionRef", engTenseDescriptionRef);
-      console.log(
-        "zqes generateAdhocForms giving addToResArr this selectedWordArr",
-        engTenseDescriptionRef[tenseDescriptionKeyForRefObj]
-      );
-      console.log("zqes", tenseDescriptionKeyForRefObj);
-
       addToResArr(
         "tenseDescription",
         tenseDescriptionKeyForStructureChunk,

@@ -14,7 +14,7 @@ const { generalTranslatedSentencesRef } = testingUtils;
 // EdusMgn:        "My doctor is a man."     Educator specifies MGN's gender. Sentence where educator knows that this MGN will need no clarifying.
 
 describe("/api", function () {
-  this.timeout(5000);
+  this.timeout(7000);
 
   gpUtils.fillOutWashburneRefObj(
     generalTranslatedSentencesRef,
@@ -2217,7 +2217,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal16-01b GET 200 YES: NATASHA T. Battery: Are EITHER members of an array returned as possible QUESTION, as they should be?", () => {
+    it.only("#pal16-01b GET 200 YES: NATASHA T. Battery: Are EITHER members of an array returned as possible QUESTION, as they should be?", () => {
       return Promise.all([
         testOnce(),
         testOnce(),

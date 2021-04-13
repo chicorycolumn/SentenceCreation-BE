@@ -415,10 +415,10 @@ exports.findMatchingLemmaObjectThenWord = (
     );
   }
 
-  console.log(
-    "ecse ot:findMatchingLemmaObjectThenWord selectedFormsArray",
-    selectedFormsArray
-  );
+  // console.log(
+  //   "ecse ot:findMatchingLemmaObjectThenWord selectedFormsArray",
+  //   selectedFormsArray
+  // );
 
   if (selectedFormsArray.length) {
     selectedFormsArray.forEach((selectedFormObject) => {
@@ -1206,9 +1206,9 @@ exports.findSinglePointMutationArray = (
   positionToExamine,
   specialComparisonCallback
 ) => {
-  console.log("ldzi findSinglePointMutationArray was given:");
-  console.log("ldzi", { currentArray, positionToExamine });
-  console.log("ldzi findSinglePointMutationArray arrayOfArrays", arrayOfArrays);
+  // console.log("ldzi findSinglePointMutationArray was given:");
+  // console.log("ldzi", { currentArray, positionToExamine });
+  // console.log("ldzi findSinglePointMutationArray arrayOfArrays", arrayOfArrays);
 
   if (!arrayOfArrays.length) {
     return false;

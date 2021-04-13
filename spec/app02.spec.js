@@ -14,7 +14,7 @@ const { generalTranslatedSentencesRef } = testingUtils;
 // EdusMgn:        "My doctor is a man."     Educator specifies MGN's gender. Sentence where educator knows that this MGN will need no clarifying.
 
 describe("/api", function () {
-  this.timeout(5000);
+  this.timeout(7000);
 
   gpUtils.fillOutWashburneRefObj(
     generalTranslatedSentencesRef,
@@ -753,7 +753,7 @@ describe("/api", function () {
           );
         });
     });
-    it.only("#pal14-02b GET 200 YES: Poleng. My father gave me a book.", () => {
+    it("#pal14-02b GET 200 YES: Poleng. My father gave me a book.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 

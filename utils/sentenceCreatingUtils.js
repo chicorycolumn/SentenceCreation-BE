@@ -298,20 +298,20 @@ exports.processSentenceFormula = (
     return nullResultObj;
   }
 
-  console.log(
-    "wvmo explodedOutputArraysWithHeads",
-    explodedOutputArraysWithHeads
-  );
+  // console.log(
+  //   "wvmo explodedOutputArraysWithHeads",
+  //   explodedOutputArraysWithHeads
+  // );
 
   explodedOutputArraysWithHeads.forEach((arr) => {
-    console.log(
-      "mocu processSentenceFormula explodedOutputArraysWithHeads arr:",
-      arr
-    );
+    // console.log(
+    //   "mocu processSentenceFormula explodedOutputArraysWithHeads arr:",
+    //   arr
+    // );
 
     let result = gpUtils.explodeOutputArraysByHeadsAndDependents(arr);
 
-    console.log("result of explodedOutputArraysWithHeads:", result);
+    // console.log("result of explodedOutputArraysWithHeads:", result);
 
     grandOutputArray.push(...result);
   });
@@ -329,7 +329,7 @@ exports.processSentenceFormula = (
 
   //STEP THREE: Select PHD words and add to result array.
 
-  console.log("shia grandOutputArray before PHD processing", grandOutputArray);
+  // console.log("shia grandOutputArray before PHD processing", grandOutputArray);
 
   grandOutputArray.forEach((outputArray, outputArrayIndex) => {
     let thisOutputArrayIsDeleted;
@@ -465,7 +465,7 @@ exports.processSentenceFormula = (
     return nullResultObj;
   }
 
-  console.log("shib grandOutputArray after PHD processing", grandOutputArray);
+  // console.log("shib grandOutputArray after PHD processing", grandOutputArray);
 
   //STEP FOUR: Select OTHER words and add to result array.
   otherChunks = otherChunks.filter(
@@ -612,7 +612,7 @@ exports.giveFinalSentences = (
     );
   }
 
-  console.log("shen answerOutputArrays", answerOutputArrays);
+  // console.log("shen answerOutputArrays", answerOutputArrays);
 
   if ("check") {
     if (!multipleMode && answerOutputArrays && answerOutputArrays.length) {
@@ -667,7 +667,7 @@ exports.giveFinalSentences = (
       });
     });
   } else {
-    console.log("jfuc questionOutputArr", questionOutputArr);
+    // console.log("jfuc questionOutputArr", questionOutputArr);
 
     let finalSentences = scUtils.buildSentenceString(
       questionOutputArr,
@@ -796,6 +796,8 @@ exports.selectWordVersions = (
   currentLanguage,
   multipleMode
 ) => {
+  let shouldConsoleLog = false;
+
   let selectedWordsArr = [];
 
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
@@ -813,11 +815,13 @@ exports.selectWordVersions = (
       firstStageAnnotationsObj,
     } = outputUnit;
 
-    console.log("[1;33m " + `nilu selectWordVersions----------------` + "[0m");
-    console.log("[1;33m " + `selectedWord` + "[0m", selectedWord);
-    console.log("[1;33m " + `structureChunk` + "[0m", structureChunk);
-    console.log("[1;33m " + `drillPath` + "[0m", drillPath);
-    console.log("[1;33m " + `/nilu----------------` + "[0m");
+    if (shouldConsoleLog) {
+      console.log("[1;33m " + `nilu selectWordVersions----------------` + "[0m");
+      console.log("[1;33m " + `selectedWord` + "[0m", selectedWord);
+      console.log("[1;33m " + `structureChunk` + "[0m", structureChunk);
+      console.log("[1;33m " + `drillPath` + "[0m", drillPath);
+      console.log("[1;33m " + `/nilu----------------` + "[0m");
+    }
 
     if (typeof selectedWord === "string") {
       frUtils.pushSelectedWordToArray(
@@ -857,14 +861,16 @@ exports.selectWordVersions = (
     );
   });
 
-  console.log("hjoz selectWordVersions selectedWordsArr", selectedWordsArr);
+  shouldConsoleLog &&
+    console.log("hjoz selectWordVersions selectedWordsArr", selectedWordsArr);
 
   let arrOfSelectedWordsArr = uUtils.arrayExploder(selectedWordsArr);
 
-  console.log(
-    "hjoz selectWordVersions arrOfSelectedWordsArr",
-    arrOfSelectedWordsArr
-  );
+  shouldConsoleLog &&
+    console.log(
+      "hjoz selectWordVersions arrOfSelectedWordsArr",
+      arrOfSelectedWordsArr
+    );
 
   return arrOfSelectedWordsArr;
 };

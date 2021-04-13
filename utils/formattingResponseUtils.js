@@ -150,7 +150,7 @@ exports.pushSelectedWordToArray = (
     annoObj,
     structureChunk
   ) {
-    console.log("vprr addAnnotationsAndPush " + wordInOwnArr);
+    console.log(`vprr addAnnotationsAndPush "${wordInOwnArr}"`);
     if (annoObj && Object.values(annoObj).length) {
       if (wordInOwnArr.length !== 1) {
         clUtils.throw(

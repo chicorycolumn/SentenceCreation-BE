@@ -265,11 +265,11 @@ exports.fetchPalette = (req) => {
       )
     );
 
-    clUtils.consoleLogObjectAtTwoLevels(
-      questionSentenceData.questionOutputArr,
-      "questionSentenceData.questionOutputArr",
-      "odek-fetchPalette."
-    );
+    // clUtils.consoleLogObjectAtTwoLevels(
+    //   questionSentenceData.questionOutputArr,
+    //   "questionSentenceData.questionOutputArr",
+    //   "odek-fetchPalette."
+    // );
 
     console.log("[1;35m " + "}}}" + "[0m");
 
