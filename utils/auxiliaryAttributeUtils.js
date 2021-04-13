@@ -138,9 +138,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   additionalRunsRecord,
   originalQuestionSentenceFormula
 ) => {
-  // console.log(questionOutputUnit.structureChunk);
-  // clUtils.throw(445);
-
   let questionLanguage = languagesObj.questionLanguage;
 
   //Abortcuts for this fxn: Search ACX.
@@ -420,11 +417,19 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       console.log(rawQuestionSentenceFormula.primaryOrders);
 
       function makePseudoSentences(outputArrays, primaryOrders) {
+        console.log(`jfii makePseudoSentences. primaryOrders`, primaryOrders);
+
         //This doesn't do the full processing, ie 'a' --> 'an'
         //but it does trim the list of selected words according to sentenceFormula.primaryOrders,
         //ie "On czyta." and "Ona czyta." both become "Czyta.".
 
         let orderAdjustedOutputArrs = [];
+
+        if (!primaryOrders || !primaryOrders.length) {
+          return outputArrays.map((outputArray) =>
+            outputArray.map((unit) => unit.selectedWord)
+          );
+        }
 
         primaryOrders.forEach((primaryOrder) => {
           outputArrays.forEach((outputArray) => {
@@ -466,6 +471,12 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         counterfactualQuestionOutputArrays,
         rawQuestionSentenceFormula.primaryOrders
       );
+      console.log("vnai", {
+        originalAnswerPseudoSentences,
+        counterfactualAnswerPseudoSentences,
+        originalQuestionPseudoSentences,
+        counterfactualQuestionPseudoSentences,
+      });
 
       if (
         gpUtils.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(

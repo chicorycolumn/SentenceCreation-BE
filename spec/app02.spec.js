@@ -9,8 +9,6 @@ const { it } = require("mocha");
 const testingUtils = require("../utils/secondOrder/testingUtils.js");
 const { generalTranslatedSentencesRef } = testingUtils;
 
-// Legendkey
-//
 // MGN:            Multi-gender noun. Eg doctor in ENG can be either male or female.
 // ProsMgn:        "My doctor and her book." Connected pronoun reveals gender of MGN. Doesn't need an annotation for doctor as clearly must be lekarka.
 // EdusMgn:        "My doctor is a man."     Educator specifies MGN's gender. Sentence where educator knows that this MGN will need no clarifying.
@@ -755,7 +753,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal14-02b GET 200 YES: Poleng. My father gave me a book.", () => {
+    it.only("#pal14-02b GET 200 YES: Poleng. My father gave me a book.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 

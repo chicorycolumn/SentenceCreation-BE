@@ -9,8 +9,6 @@ const { it } = require("mocha");
 const testingUtils = require("../utils/secondOrder/testingUtils.js");
 const { generalTranslatedSentencesRef } = testingUtils;
 
-// Legendkey
-//
 // MGN:            Multi-gender noun. Eg doctor in ENG can be either male or female.
 // ProsMgn:        "My doctor and her book." Connected pronoun reveals gender of MGN. Doesn't need an annotation for doctor as clearly must be lekarka.
 // EdusMgn:        "My doctor is a man."     Educator specifies MGN's gender. Sentence where educator knows that this MGN will need no clarifying.
@@ -28,8 +26,8 @@ describe("/api", function () {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe.only("/palette - Stage 18: Further annotations.", () => {
-    xit("#pal18-01a GET 200 YES: Engpol. 'she reads'", () => {
+  xdescribe("/palette - Stage 18: Further annotations.", () => {
+    it("#pal18-01a GET 200 YES: Engpol. 'she reads'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -65,7 +63,7 @@ describe("/api", function () {
           );
         });
     });
-    xit("#pal18-01b GET 200 YES: Poleng annotations. 'she reads'", () => {
+    it("#pal18-01b GET 200 YES: Poleng annotations. 'she reads'", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 

@@ -9,7 +9,13 @@ const { it } = require("mocha");
 const testingUtils = require("../utils/secondOrder/testingUtils.js");
 const { generalTranslatedSentencesRef } = testingUtils;
 
-describe("/api", () => {
+// MGN:            Multi-gender noun. Eg doctor in ENG can be either male or female.
+// ProsMgn:        "My doctor and her book." Connected pronoun reveals gender of MGN. Doesn't need an annotation for doctor as clearly must be lekarka.
+// EdusMgn:        "My doctor is a man."     Educator specifies MGN's gender. Sentence where educator knows that this MGN will need no clarifying.
+
+describe("/api", function () {
+  this.timeout(5000);
+
   gpUtils.fillOutWashburneRefObj(
     generalTranslatedSentencesRef,
     "POL->ENG",
