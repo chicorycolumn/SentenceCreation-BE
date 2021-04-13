@@ -3682,7 +3682,7 @@ describe("/api", function () {
     });
   });
 
-  describe.only("/palette - Stage 9: Synhomographs (adding Clarifiers).", () => {
+  describe("/palette - Stage 9: Synhomographs (adding Clarifiers).", () => {
     it("#pal09-01a (Type 1 Synhomographs. If-PW: clarify Inflections) 'sheep': Engpol. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";

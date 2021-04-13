@@ -427,10 +427,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           }
         );
 
-        if (annoKey === "number") {
-          clUtils.throw(393);
-        }
-
         delete questionOutputUnit.structureChunk.annotations[annoKey];
       } else if (
         !gpUtils.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
@@ -447,10 +443,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             counterfactualQuestionSelectedWordsSets,
           }
         );
-
-        if (annoKey === "number") {
-          clUtils.throw(393);
-        }
 
         delete questionOutputUnit.structureChunk.annotations[annoKey];
       } else {

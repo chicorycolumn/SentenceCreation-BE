@@ -2452,7 +2452,7 @@ describe("/api", () => {
           ).to.equal("majtki.");
         });
     });
-    it("#pal02-01b GET 200 NO: Disallows tantum plurale, as singular grammatical number was requested.", () => {
+    it.only("#pal02-01b GET 200 NO: Disallows tantum plurale, as singular grammatical number was requested.", () => {
       return request(app)
         .get("/api/palette")
         .send({

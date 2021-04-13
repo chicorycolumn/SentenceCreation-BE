@@ -614,6 +614,42 @@ exports.giveFinalSentences = (
 
   console.log("shen answerOutputArrays", answerOutputArrays);
 
+  if ("check") {
+    if (!multipleMode && answerOutputArrays && answerOutputArrays.length) {
+      clUtils.throw(
+        "#ERR ubrz giveFinalSentences. Well that's strange. We are in Question Mode, so SC:giveFinalSentences expected to be given questionOutputArr, not answerOutputArrays."
+      );
+    }
+
+    if (errorInSentenceCreation.errorMessage) {
+      let errorMessage = {
+        errorInSentenceCreation: errorInSentenceCreation.errorMessage,
+      };
+
+      return {
+        message: "No sentence could be created from the specifications in Q.",
+        finalSentence: null,
+        errorMessage,
+      };
+    }
+
+    if (
+      answerSentenceData &&
+      answerSentenceData.errorInSentenceCreation.errorMessage
+    ) {
+      let errorMessage = {
+        errorInSentenceCreation:
+          answerSentenceData.errorInSentenceCreation.errorMessage,
+      };
+
+      return {
+        message: "No sentence could be created from the specifications in A.",
+        finalSentence: null,
+        errorMessage,
+      };
+    }
+  }
+
   let finalSentenceArr = [];
 
   if (multipleMode) {
