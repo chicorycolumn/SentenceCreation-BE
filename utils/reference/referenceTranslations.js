@@ -95,8 +95,8 @@ exports.annotationToPlainspeakRef = {
   gender: {
     m: "male",
     m1: "male",
-    m2: "male",
-    m3: "male",
+    m2: "neuter",
+    m3: "neuter",
     f: "female",
     n: "neuter",
     virile: ["mixed", "males"],

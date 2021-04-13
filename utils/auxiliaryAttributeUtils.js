@@ -771,68 +771,7 @@ exports.specialAdjustmentToAnnotations = (
   //then transfer the gender anno to its headCh, and remove the anno from this depCh.
   questionSentenceData.questionOutputArr.forEach((outputUnit) => {
     trimAnnoIfGenderRevealedByGenderedNoun(outputUnit, languagesObj);
-    // trimAnnoIfNumberRevealedByInflectedVerb(outputUnit, languagesObj);
   });
-
-  function trimAnnoIfNumberRevealedByInflectedVerb(outputUnit, languagesObj) {
-    let { structureChunk } = outputUnit;
-
-    if (
-      structureChunk.annotations &&
-      Object.keys(structureChunk.annotations).includes("number") &&
-      structureChunk.agreeWith
-    ) {
-      let headOutputUnit = questionSentenceData.questionOutputArr.find(
-        (unit) => unit.structureChunk.chunkId === structureChunk.agreeWith
-      );
-
-      let headChunk = headOutputUnit.structureChunk;
-      let headLObj = headOutputUnit.selectedLemmaObject;
-
-      if (!headChunk) {
-        clUtils.throw("ojiq");
-      }
-
-      if (
-        headChunk.annotations &&
-        headChunk.annotations.gender &&
-        headChunk.annotations.gender !== structureChunk.annotations.gender
-      ) {
-        clUtils.throw(
-          "cjow The depCh and its headCh have different values as gender anno?"
-        );
-      }
-
-      if (headLObj.gender && !(headLObj.gender.slice(0, 3) === "all")) {
-        console.log({
-          questionLanguage: languagesObj.questionLanguage,
-          headLObjgender: headLObj.gender,
-        });
-
-        let virilityPaddedLObjGenderArr = [
-          headLObj.gender,
-          ...refObj.pluralVirilityAndSingularConversionRef[
-            languagesObj.questionLanguage
-          ]["plural"][headLObj.gender],
-        ];
-
-        if (
-          !virilityPaddedLObjGenderArr.includes(
-            structureChunk.annotations.gender
-          )
-        ) {
-          clUtils.throw(
-            `evjo The depCh gender anno "${structureChunk.annotations.gender}" should have matched its headCh's lObj gender "${headLObj.gender}"?`
-          );
-        }
-        //Part 1-B: But if the headCh's lObj has a gender, then don't transfer the gender anno.
-      } else {
-        headChunk.annotations.gender = structureChunk.annotations.gender;
-      }
-
-      delete structureChunk.annotations.gender;
-    }
-  }
 
   function trimAnnoIfGenderRevealedByGenderedNoun(outputUnit, languagesObj) {
     let { structureChunk } = outputUnit;
