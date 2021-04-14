@@ -594,12 +594,6 @@ exports.giveFinalSentences = (
   } = sentenceData;
 
   if (answerLanguage) {
-    console.log(
-      "shem questionOutputArr",
-      questionOutputArr.map((unit) => unit.structureChunk)
-    );
-    // clUtils.throw(667);
-
     aaUtils.firstStageEvaluateAnnotations(
       questionOutputArr,
       { answerLanguage, questionLanguage: currentLanguage },
@@ -726,6 +720,8 @@ exports.buildSentenceString = (
         allOrders = [...allOrders, ...sentenceFormula.additionalOrders];
       }
 
+      //nownow: How to keep annotations from stChs that won't be present.
+
       allOrders.forEach((order) => {
         let orderedArr = [];
         order.forEach((chunkId) => {
@@ -758,6 +754,42 @@ exports.buildSentenceString = (
       console.log("xsqr buildSentenceString Gonna push orderedArr Clause 3");
       outputArrays.push(orderedArr);
     }
+  }
+
+  //STEP 0.5: In Q mode, for each outputArr, if there is a chunk with annos but that didn't make it in there, keep the annos.
+
+  if (!multipleMode) {
+    console.log("outputArrays", outputArrays);
+    console.log("unorderedArr", unorderedArr);
+    // clUtils.throw(431);
+
+    outputArrays.forEach((outputArr) => {
+      unorderedArr.forEach((originalUnit) => {
+        if (
+          !outputArr.find(
+            (unit) =>
+              unit.structureChunk.chunkId ===
+              originalUnit.structureChunk.chunkId
+          )
+        ) {
+          if (
+            originalUnit.structureChunk.annotations &&
+            Object.keys(originalUnit.structureChunk.annotations).length
+          ) {
+            let skeletonOutputUnit = {
+              isSkeleton: true,
+              structureChunk: {
+                annotations: originalUnit.structureChunk.annotations,
+                chunkId: originalUnit.structureChunk.chunkId,
+              },
+            };
+
+            // clUtils.throw(131);
+            outputArr.unshift(skeletonOutputUnit);
+          }
+        }
+      });
+    });
   }
 
   // STEP 1: Select word versions for each.
@@ -803,6 +835,93 @@ exports.selectWordVersions = (
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
 
   // console.log("efsj selectWordVersions. orderedOutputArr", orderedOutputArr);
+
+  //In Q mode, bring annos in from skeleton units.
+  if (!multipleMode) {
+    orderedOutputArr.forEach((outputUnit, outputUnitIndex) => {
+      if (outputUnit.isSkeleton) {
+        let skeletonOutputUnit = outputUnit;
+
+        let depUnits = [];
+
+        let agreeKeys = [
+          "agreeWith",
+          "agreeWithSecondary",
+          "agreeWithTertiary",
+          "connectedTo",
+        ];
+
+        agreeKeys.forEach((agreeKey) => {
+          orderedOutputArr.forEach((unit) => {
+            //Skeleton Clause
+            if (
+              unit.structureChunk[agreeKey] ===
+              skeletonOutputUnit.structureChunk.chunkId
+            )
+              depUnits.push(unit);
+          });
+        });
+
+        let doneAnnoKeys = [];
+
+        Object.keys(skeletonOutputUnit.structureChunk.annotations).forEach(
+          (annoKey) => {
+            let annoValue =
+              skeletonOutputUnit.structureChunk.annotations[annoKey];
+
+            let thisAnnoKeyIsDone = false;
+
+            depUnits.forEach((depUnit) => {
+              if (thisAnnoKeyIsDone) {
+                return;
+              }
+
+              if (
+                //If the annoKey from the skeleton outputUnit's annos is an allowable transfer to this depCh,
+                refObj.lemmaObjectFeatures[
+                  currentLanguage
+                ].inheritableInflectorKeys[
+                  gpUtils.getWorrdtypeStCh(depUnit.structureChunk, true)
+                ].includes(annoKey)
+              ) {
+                if (!depUnit.firstStageAnnotationsObj) {
+                  depUnit.firstStageAnnotationsObj = {};
+                }
+
+                if (
+                  depUnit.firstStageAnnotationsObj[annoKey] &&
+                  depUnit.firstStageAnnotationsObj[annoKey] !== annoValue
+                ) {
+                  clUtils.throw(
+                    `ioev selectWordVersions Skeleton Clause. I'm trying to transfer in annos from an outputunit that didn't make it into this outputarr. But I'm looking at one of its depChs, and this depCh has an anno with a different value?\nFor annoKey "${annoKey}", skeleton "${skeletonOutputUnit.structureChunk.chunkId}" had "${annoValue}" while depCh "${depCh.chunkId}" had "${depCh.annotations[annoKey]}".`
+                  );
+                }
+
+                //then transfer it to the depUnit.
+                depUnit.firstStageAnnotationsObj[annoKey] = annoValue;
+                doneAnnoKeys.push(annoKey);
+                thisAnnoKeyIsDone = true;
+              }
+            });
+          }
+        );
+
+        let abandonedAnnoKeys = Object.keys(
+          skeletonOutputUnit.structureChunk.annotations
+        ).filter((annoKey) => !doneAnnoKeys.includes(annoKey));
+
+        if (abandonedAnnoKeys.length) {
+          clUtils.throw(
+            `wtsu selectWordVersions Skeleton Clause. These annoKeys from skeleton "${skeletonOutputUnit.structureChunk.chunkId}" did not make it into outputArr in any way! [${abandonedAnnoKeys}].`
+          );
+        }
+
+        //Removing skeleton unit.
+        orderedOutputArr.splice(outputUnitIndex, 1);
+        return;
+      }
+    });
+  }
 
   orderedOutputArr.forEach((outputUnit, index) => {
     let previousOutputUnit = orderedOutputArr[index - 1];
