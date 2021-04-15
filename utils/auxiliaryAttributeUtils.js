@@ -39,13 +39,10 @@ exports.firstStageEvaluateAnnotations = (
       !structureChunk.annotations ||
       !Object.keys(structureChunk.annotations).length
     ) {
-      console.log(
-        `dhca firstStageEvaluateAnnotations "${structureChunk.chunkId}" has no annotations.`
-      );
       return;
     }
 
-    let formattedAnnoObj = aaUtils.getFormattedAnnoObj(
+    let formattedAnnoObj = aaUtils.whittleAnnotationsAndConvertToPlainspeak(
       outputUnit,
       languagesObj,
       answerSentenceData,
@@ -74,7 +71,7 @@ exports.firstStageEvaluateAnnotations = (
   });
 };
 
-exports.getFormattedAnnoObj = (
+exports.whittleAnnotationsAndConvertToPlainspeak = (
   questionOutputUnit,
   languagesObj,
   answerSentenceData,
@@ -86,6 +83,8 @@ exports.getFormattedAnnoObj = (
   additionalRunsRecord,
   originalQuestionSentenceFormula
 ) => {
+  //This fxn removes annotations and then translates into plainspeak.
+
   let questionStructureChunk = questionOutputUnit.structureChunk;
 
   console.log("bbbc");

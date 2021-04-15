@@ -5,8 +5,6 @@ const uUtils = require("../utils/universalUtils.js");
 const clUtils = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 
-exports.initiallyAdjustSentenceFormula = (sentenceFormula) => {};
-
 exports.translateAnnotationValue = (
   annotationKey,
   structureChunk,

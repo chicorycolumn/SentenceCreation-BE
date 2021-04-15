@@ -593,21 +593,6 @@ exports.giveFinalSentences = (
     errorInSentenceCreation,
   } = sentenceData;
 
-  if (answerLanguage) {
-    aaUtils.firstStageEvaluateAnnotations(
-      questionOutputArr,
-      { answerLanguage, questionLanguage: currentLanguage },
-      answerSentenceData,
-      questionSentenceFormula,
-      reqBody,
-      answerSelectedWordsSetsHaveChanged,
-      additionalRunsRecord,
-      originalQuestionSentenceFormula
-    );
-  }
-
-  // console.log("shen answerOutputArrays", answerOutputArrays);
-
   if ("check") {
     if (!multipleMode && answerOutputArrays && answerOutputArrays.length) {
       clUtils.throw(
@@ -646,21 +631,20 @@ exports.giveFinalSentences = (
 
   let finalSentenceArr = [];
 
-  if (multipleMode) {
-    answerOutputArrays.forEach((outputArr) => {
-      let finalSentences = scUtils.buildSentenceString(
-        outputArr,
-        sentenceFormula,
-        multipleMode,
-        currentLanguage,
-        null
+  if (!multipleMode) {
+    if (answerLanguage) {
+      aaUtils.firstStageEvaluateAnnotations(
+        questionOutputArr,
+        { answerLanguage, questionLanguage: currentLanguage },
+        answerSentenceData,
+        questionSentenceFormula,
+        reqBody,
+        answerSelectedWordsSetsHaveChanged,
+        additionalRunsRecord,
+        originalQuestionSentenceFormula
       );
+    }
 
-      finalSentences.forEach((finalSentence) => {
-        finalSentenceArr.push(finalSentence);
-      });
-    });
-  } else {
     // console.log("jfuc questionOutputArr", questionOutputArr);
 
     let finalSentences = scUtils.buildSentenceString(
@@ -673,6 +657,20 @@ exports.giveFinalSentences = (
 
     finalSentences.forEach((finalSentence) => {
       finalSentenceArr.push(finalSentence);
+    });
+  } else {
+    answerOutputArrays.forEach((outputArr) => {
+      let finalSentences = scUtils.buildSentenceString(
+        outputArr,
+        sentenceFormula,
+        multipleMode,
+        currentLanguage,
+        null
+      );
+
+      finalSentences.forEach((finalSentence) => {
+        finalSentenceArr.push(finalSentence);
+      });
     });
   }
 

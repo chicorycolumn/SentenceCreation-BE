@@ -42,8 +42,6 @@ exports.fetchPalette = (req) => {
     ? counterfactualQuestionSentenceFormula
     : sentenceFormula;
 
-  allLangUtils.initiallyAdjustSentenceFormula(questionSentenceFormula);
-
   let originalQuestionSentenceFormula = counterfactualQuestionSentenceFormula
     ? null
     : uUtils.copyWithoutReference(questionSentenceFormula);
@@ -311,6 +309,21 @@ exports.fetchPalette = (req) => {
     });
 
     console.log(
+      questionSentenceData.questionOutputArr.map((unit) => unit.structureChunk)
+    );
+    questionSentenceData.questionOutputArr.forEach((unit) => {
+      Object.keys(unit.structureChunk).forEach((traitKeyy) => {
+        let traitValyye = unit.structureChunk[traitKeyy];
+
+        if (Array.isArray(traitValyye) && traitValyye.length > 1) {
+          clUtils.throw(
+            `oije. "${unit.structureChunk.chunkId}" with "${traitKeyy}" of "${traitValyye}". This should have been streamlined down to one value, eg in updateStCh fxn.`
+          );
+        }
+      });
+    });
+
+    console.log(
       "[1;36m " + `znuj fetchPalette. questionOutputArr BEFORE CLARI OR SPECI` + "[0m\n",
       questionSentenceData.questionOutputArr.map((unit) => [
         `${unit.selectedLemmaObject.lemma}-->${unit.selectedWord}`,
@@ -377,8 +390,6 @@ exports.fetchPalette = (req) => {
       );
 
       let answerSentenceFormula = sentenceFormula;
-
-      allLangUtils.initiallyAdjustSentenceFormula(answerSentenceFormula);
 
       //Omega: Ultimately this needn't be done here, but rather, after creating a new sentenceFormula.
       //       Once it passes that, we know it's fine, so don't need to validate it every time down here.
