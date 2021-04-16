@@ -39,56 +39,6 @@ exports.finishAndSend = (
   });
 };
 
-exports.createMergedGenderOutputUnit = (
-  subArrayOfOutputUnits,
-  currentLanguage
-) => {
-  let mergedOutputUnit = uUtils.copyWithoutReference(subArrayOfOutputUnits[0]);
-
-  let newGenderArr = [
-    mergedOutputUnit.drillPath.find((pathArr) => pathArr[0] === "gender")[1],
-  ];
-
-  subArrayOfOutputUnits.slice(1).forEach((outputUnit) => {
-    let genderValue = outputUnit.drillPath.find(
-      (pathArr) => pathArr[0] === "gender"
-    )[1];
-
-    newGenderArr.push(genderValue);
-  });
-
-  console.log(
-    "dznt ot:findMatchingLemmaObjectThenWord newGenderArr",
-    newGenderArr
-  );
-
-  let metaGenderRef = refObj.metaFeatures[currentLanguage]["gender"];
-
-  let metaGenderResult;
-
-  Object.keys(metaGenderRef).forEach((metaGenderKey) => {
-    if (metaGenderResult) {
-      return;
-    }
-
-    let metaGenderTranslatedArr = metaGenderRef[metaGenderKey];
-
-    if (uUtils.areTwoFlatArraysEqual(newGenderArr, metaGenderTranslatedArr)) {
-      metaGenderResult = metaGenderKey;
-    }
-  });
-
-  console.log(
-    `zdxc ot:findMatchingLemmaObjectThenWord metaGenderResult: "${metaGenderResult}"`
-  );
-
-  mergedOutputUnit.drillPath.find(
-    (pathArr) => pathArr[0] === "gender"
-  )[1] = metaGenderResult;
-
-  return mergedOutputUnit;
-};
-
 exports.createOutputUnit = (
   errorInSentenceCreation,
   errorInDrilling,
