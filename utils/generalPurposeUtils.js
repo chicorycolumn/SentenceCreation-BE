@@ -122,20 +122,8 @@ exports.keyShouldBeSpecified = (chunk, key, allowOverwrite) => {
     (!(chunk.importantFeatures && chunk.importantFeatures.includes(key)) &&
       (allowOverwrite ||
         !gpUtils.isKeyFilledOutOnChunk(chunk, key) ||
-        gpUtils.featureValueIsMeta(chunk, key)))
+        gpUtils.featureValueIsMeta(null, chunk, key)))
   );
-};
-
-exports.featureValueIsMeta = (chunk, key, value) => {
-  if (!value) {
-    value = chunk[key];
-  }
-
-  if (Array.isArray(value) && value.length === 1) {
-    value = value[0];
-  }
-
-  return value.slice(0, 3) === "all";
 };
 
 exports.giveSetKey = (word) => {
@@ -450,5 +438,26 @@ exports.getWordsFromTerminusObject = (tObj, shouldGetAll) => {
 };
 
 exports.lObjIsMGN = (lObj) => {
-  return /_/.test(lObj.gender);
+  let testResults = [/_/.test(lObj.gender), lObj.gender.slice(0, 3) === "all"];
+
+  if (
+    (testResults[0] && !testResults[1]) ||
+    (!testResults[0] && testResults[1])
+  ) {
+    clUtils.throw(`sjie lObjIsMGN.`);
+  }
+
+  return testResults[0] && testResults[1];
+};
+
+exports.featureValueIsMeta = (value, chunk, key) => {
+  if (!value) {
+    value = chunk[key];
+  }
+
+  if (Array.isArray(value) && value.length === 1) {
+    value = value[0];
+  }
+
+  return value.slice(0, 3) === "all";
 };
