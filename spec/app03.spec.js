@@ -136,6 +136,115 @@ describe("/api", function () {
           );
         });
     });
+    it("#pal18-02a GET 200 YES: Engpol. 'she writes'", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          // devSaysThrowAfterAnnoSalvo: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy61a",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "She writes.",
+              POL: ["Pisze.", "Ona pisze."],
+            },
+            {
+              ENG: "He writes.",
+              POL: ["Pisze.", "On pisze."],
+            },
+            {
+              ENG: "It writes.",
+              POL: ["Pisze.", "Ono pisze."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal18-02b GET 200 YES: Poleng annotations. 'she writes'", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy61a",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["She writes.", "She is writing."],
+              POL: "Pisze (female).",
+            },
+            {
+              ENG: ["He writes.", "He is writing."],
+              POL: "Pisze (male).",
+            },
+            {
+              ENG: ["It writes.", "It is writing."],
+              POL: "Pisze (neuter).",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal18-02c GET 200 YES: Poleng PDS. 'she writes'", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy61a",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: [
+                "She writes.",
+                "He writes.",
+                "It writes.",
+                "She is writing.",
+                "He is writing.",
+                "It is writing.",
+              ],
+              POL: "Pisze.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
   });
 
   describe("/palette - Stage 17-i: Possessive pronouns and MGNs. Pre-testing.", () => {
