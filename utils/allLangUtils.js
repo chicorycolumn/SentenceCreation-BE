@@ -447,7 +447,7 @@ exports.decantMGNsBeforeFetchingOutputArray = (
   if ("check") {
     if (
       !selectedLemmaObject.gender ||
-      selectedLemmaObject.gender.slice(0, 3) !== "all"
+      gpUtils.featureValueIsMeta(selectedLemmaObject.gender)
     ) {
       return;
     }
@@ -484,7 +484,7 @@ exports.correctMGNsBeforeFetchingOutputArray = (
   if ("check") {
     if (
       !selectedLemmaObject.gender ||
-      selectedLemmaObject.gender.slice(0, 3) !== "all"
+      gpUtils.featureValueIsMeta(selectedLemmaObject.gender)
     ) {
       console.log("neem");
       return;

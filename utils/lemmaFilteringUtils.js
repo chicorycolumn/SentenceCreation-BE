@@ -213,7 +213,7 @@ exports.filterWithin_PHD = (
         (arr) => arr[0] === featureKey
       )[1];
 
-      if (featureValue.slice(0, 3) === "all" && !source[featureValue]) {
+      if (gpUtils.featureValueIsMeta(featureValue) && !source[featureValue]) {
         featureValue = otUtils.switchMetaFeatureForAWorkableConvertedFeature(
           featureKey,
           featureValue,
@@ -948,7 +948,10 @@ exports.traverseAndRecordInflections = (
     let chosenInflectorTrue = chosenInflector;
     let chosenInflectorAdjusted = chosenInflector;
 
-    if (chosenInflector.slice(0, 3) === "all" && !source[chosenInflector]) {
+    if (
+      gpUtils.featureValueIsMeta(chosenInflector) &&
+      !source[chosenInflector]
+    ) {
       chosenInflectorAdjusted = otUtils.switchMetaFeatureForAWorkableConvertedFeature(
         reqInflectorLabel,
         chosenInflector,

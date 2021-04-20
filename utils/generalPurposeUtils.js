@@ -438,7 +438,10 @@ exports.getWordsFromTerminusObject = (tObj, shouldGetAll) => {
 };
 
 exports.lObjIsMGN = (lObj) => {
-  let testResults = [/_/.test(lObj.gender), lObj.gender.slice(0, 3) === "all"];
+  let testResults = [
+    /_/.test(lObj.gender),
+    this.featureValueIsMeta(lObj.gender),
+  ];
 
   if (
     (testResults[0] && !testResults[1]) ||

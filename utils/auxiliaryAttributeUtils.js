@@ -801,7 +801,7 @@ exports.specialAdjustmentToAnnotations = (
         );
       }
 
-      if (headLObj.gender && !(headLObj.gender.slice(0, 3) === "all")) {
+      if (headLObj.gender && !gpUtils.featureValueIsMeta(headLObj.gender)) {
         console.log({
           questionLanguage: languagesObj.questionLanguage,
           headLObjgender: headLObj.gender,
@@ -1352,8 +1352,8 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
               //Abort if a metaGender label is accidentally being made subject of a Clarifier.
               if (label === "gender") {
                 if (
-                  structureChunk[label].some(
-                    (gender) => gender.slice(0, 3) === "all"
+                  structureChunk[label].some((gender) =>
+                    gpUtils.featureValueIsMeta(gender)
                   )
                 ) {
                   return;
