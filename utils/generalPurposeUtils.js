@@ -1,4 +1,3 @@
-const gpUtils = require("./generalPurposeUtils.js");
 const uUtils = require("./universalUtils.js");
 const clUtils = require("./zerothOrder/consoleLoggingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
@@ -121,8 +120,8 @@ exports.keyShouldBeSpecified = (chunk, key, allowOverwrite) => {
     !chunk ||
     (!(chunk.importantFeatures && chunk.importantFeatures.includes(key)) &&
       (allowOverwrite ||
-        !gpUtils.isKeyFilledOutOnChunk(chunk, key) ||
-        gpUtils.featureValueIsMeta(null, chunk, key)))
+        !this.isKeyFilledOutOnChunk(chunk, key) ||
+        this.featureValueIsMeta(null, chunk, key)))
   );
 };
 
@@ -158,11 +157,6 @@ exports.explodeOutputArraysByHeadsAndDependents = (justOneOutputArray) => {
   console.log(
     "mdpu explodeOutputArraysByHeadsAndDependents START. justOneOutputArray"
   );
-  // clUtils.consoleLogObjectAtTwoLevels(
-  //   justOneOutputArray,
-  //   "justOneOutputArray",
-  //   "explodeOutputArraysByHeadsAndDependents"
-  // );
 
   justOneOutputArray.forEach((unit, unitIndex) => {
     if (
@@ -208,12 +202,6 @@ exports.explodeOutputArraysByHeadsAndDependents = (justOneOutputArray) => {
 
     return flattenedArray;
   });
-
-  // clUtils.consoleLogObjectAtTwoLevels(
-  //   explodedGrandArray,
-  //   "explodedGrandArray",
-  //   "mdpy explodeOutputArraysByHeadsAndDependents END"
-  // );
 
   return explodedGrandArray;
 };
@@ -390,13 +378,10 @@ exports.doesKeyContainValueOnChunk = (
   chunk,
   featureKey,
   featureValueArr,
-  includeAll
+  includeAll //includeAll true/false passes if EVERY/ANY value in featureValueArr is present.
 ) => {
-  //includeAll true passes if EVERY value in featureValueArr is present.
-  //includeAll false passes if ANY value from featureArr present.
-
   return (
-    gpUtils.isKeyFilledOutOnChunk(chunk, featureKey) &&
+    this.isKeyFilledOutOnChunk(chunk, featureKey) &&
     ((!includeAll &&
       featureValueArr.some((featureValue) =>
         chunk[featureKey].includes(featureValue)
