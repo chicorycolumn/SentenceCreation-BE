@@ -245,6 +245,39 @@ describe("/api", function () {
           );
         });
     });
+    it("#pal18-03a GET 200 YES: Engpol. Sentence with 'sheep' should not be disrupted by PDS.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy55c",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "With the sheep (singular).",
+              POL: ["Z owcą."],
+            },
+            {
+              ENG: "With a sheep.",
+              POL: ["Z owcą."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
   });
 
   describe("/palette - Stage 17-i: Possessive pronouns and MGNs. Pre-testing.", () => {
