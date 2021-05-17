@@ -24,7 +24,6 @@ exports.dummySentenceFormulasBank = [
       { chunkId: "fix-1", value: "I" },
       {
         chunkId: "ver-1",
-
         andTags: ["basic2"],
         tenseDescription: [
           "past continuous",
@@ -45,7 +44,6 @@ exports.dummySentenceFormulasBank = [
       { chunkId: "fix-1", value: "I" },
       {
         chunkId: "ver-1",
-
         andTags: ["basic3"],
         tenseDescription: [
           "present simple",
@@ -67,7 +65,6 @@ exports.dummySentenceFormulasBank = [
       { chunkId: "fix-1", value: "I" },
       {
         chunkId: "ver-1",
-
         andTags: ["basic3"],
         tenseDescription: [],
         person: ["1per"],
@@ -84,7 +81,6 @@ exports.dummySentenceFormulasBank = [
       { chunkId: "fix-1", value: "I" },
       {
         chunkId: "ver-1",
-
         andTags: ["basic3"],
         tenseDescription: [
           "present simple",
@@ -105,7 +101,6 @@ exports.dummySentenceFormulasBank = [
       { chunkId: "fix-1", value: "I" },
       {
         chunkId: "ver-1",
-
         andTags: ["basic3"],
         tenseDescription: [],
         person: ["1per"],
@@ -122,7 +117,6 @@ exports.dummySentenceFormulasBank = [
       { chunkId: "fix-1", value: "I" },
       {
         chunkId: "ver-1",
-
         andTags: ["basic3"],
         tenseDescription: ["past continuous"],
         person: ["1per"],
@@ -138,7 +132,6 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "ver-1",
-
         specificLemmas: ["be"],
         tenseDescription: ["present simple", "past simple"],
         person: [],
@@ -154,7 +147,6 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "ver-1",
-
         specificLemmas: ["be"],
         tenseDescription: ["present simple"],
         person: ["1per"],
@@ -171,7 +163,6 @@ exports.dummySentenceFormulasBank = [
       { chunkId: "fix-1", value: "I" },
       {
         chunkId: "ver-1",
-
         specificLemmas: ["be"],
         tenseDescription: ["present simple", "past simple"],
         person: ["1per"],
@@ -187,13 +178,11 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1",
-
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
       },
       {
         chunkId: "ver-1",
-
         agreeWith: "pro-1",
         specificLemmas: ["be"],
         tenseDescription: ["present simple", "past simple"],
@@ -210,7 +199,6 @@ exports.dummySentenceFormulasBank = [
       { chunkId: "fix-1", value: "she" },
       {
         chunkId: "ver-1",
-
         specificLemmas: ["be"],
         tenseDescription: ["present simple", "past simple"],
         person: ["3per"],
@@ -227,7 +215,6 @@ exports.dummySentenceFormulasBank = [
       { chunkId: "fix-1", value: "we" },
       {
         chunkId: "ver-1",
-
         specificLemmas: ["be"],
         tenseDescription: ["present simple", "past simple"],
         person: ["1per"],
@@ -244,7 +231,6 @@ exports.dummySentenceFormulasBank = [
       { chunkId: "fix-1", value: "they" },
       {
         chunkId: "ver-1",
-
         specificLemmas: ["be"],
         tenseDescription: ["present simple", "past simple"],
         person: ["3per"],
@@ -261,7 +247,6 @@ exports.dummySentenceFormulasBank = [
       { chunkId: "fix-1", value: "I" },
       {
         chunkId: "ver-1",
-
         specificLemmas: ["be"],
         tenseDescription: ["future simple"],
         person: ["1per"],
@@ -278,7 +263,6 @@ exports.dummySentenceFormulasBank = [
       { chunkId: "fix-1", value: "I" },
       {
         chunkId: "ver-1",
-
         specificLemmas: ["be"],
         number: [],
         tenseDescription: ["future"],
@@ -294,7 +278,6 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "ver-1",
-
         specificLemmas: ["be"],
         tenseDescription: [],
       },
@@ -308,7 +291,6 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "ver-1",
-
         andTags: ["basic3"],
         tenseDescription: ["past simple", "future perfect"],
         person: [],
@@ -324,7 +306,6 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "nco-1",
-
         andTags: ["farmyard"],
       },
     ],
@@ -358,7 +339,6 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "ver-1",
-
         specificLemmas: ["be"],
         number: ["singular"],
         tenseDescription: ["present simple"],
@@ -375,7 +355,6 @@ exports.dummySentenceFormulasBank = [
       { chunkId: "fix-1", value: "I" },
       {
         chunkId: "ver-1",
-
         andTags: ["basic2"],
         number: ["singular"],
         tenseDescription: ["present simple", "past simple"],
@@ -411,13 +390,11 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1",
-
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
       },
       {
         chunkId: "ver-1",
-
         agreeWith: "pro-1",
         andTags: ["basic3"],
         number: [],
@@ -433,13 +410,11 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1",
-
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
       },
       {
         chunkId: "ver-1",
-
         agreeWith: "pro-1",
         andTags: ["basic3"],
         number: [],
@@ -455,13 +430,11 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1",
-
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
       },
       {
         chunkId: "ver-1",
-
         agreeWith: "pro-1",
         andTags: ["basic3"],
         number: [],
@@ -479,13 +452,11 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "adj-1",
         agreeWith: "nco-1",
-
         andTags: ["size"],
         form: ["simple"],
       },
       {
         chunkId: "nco-1",
-
         andTags: ["allohomTesting"],
         number: ["singular"],
       },
@@ -499,7 +470,6 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "nco-1",
-
         andTags: ["allohomTesting2"],
         number: ["singular"],
         pleaseShowMultipleWordtypeAllohomClarifiers: true, //Because this is a sentence of only one word, so could be ambiguous.
@@ -514,7 +484,6 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "ver-1",
-
         andTags: ["allohomTesting2"],
         form: ["infinitive"],
         pleaseShowMultipleWordtypeAllohomClarifiers: true, //Because this is a sentence of only one word, so could be ambiguous.
@@ -529,7 +498,6 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "ver-1",
-
         andTags: ["allohomTesting2"],
         form: ["infinitive"],
       },
@@ -543,7 +511,6 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "nco-1",
-
         andTags: ["allohomTesting3"],
         number: ["singular"],
       },
@@ -557,7 +524,6 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "nco-1",
-
         andTags: ["allohomTesting3"],
         number: ["singular"],
         pleaseShowMultipleWordtypeAllohomClarifiers: true,
@@ -572,7 +538,6 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "ver-1",
-
         andTags: ["allohomTesting3"],
         form: ["infinitive"],
       },
@@ -586,7 +551,6 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "ver-1",
-
         andTags: ["allohomTesting3"],
         form: ["infinitive"],
         pleaseShowMultipleWordtypeAllohomClarifiers: true,
@@ -618,7 +582,6 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "npe-1",
-
         specificLemmas: ["write"],
         tenseDescription: ["past"],
         person: ["3per"],
