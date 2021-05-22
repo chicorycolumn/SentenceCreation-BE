@@ -313,7 +313,12 @@ exports.fetchPalette = (req) => {
       questionSentenceData.questionOutputArr.map((unit) => unit.structureChunk)
     );
 
+    //Check that all chunks are appropriately decanted.
     questionSentenceData.questionOutputArr.forEach((unit) => {
+      if (unit.structureChunk.dontSpecifyOnThisChunk) {
+        return;
+      }
+
       Object.keys(unit.structureChunk).forEach((traitKeyy) => {
         let traitValyye = unit.structureChunk[traitKeyy];
 
@@ -326,8 +331,9 @@ exports.fetchPalette = (req) => {
           !reference.ultimatelyMultipleValuesOkay &&
           traitValyye.length > 1
         ) {
+          consol.log(">>", unit);
           consol.throw(
-            `oije. ${questionLanguage} "${unit.structureChunk.chunkId}" with "${traitKeyy}" of "${traitValyye}". This should have been streamlined down to one value, eg in updateStCh fxn.`
+            `oije. (>> unit above) questionLanguage=${questionLanguage} "${unit.structureChunk.chunkId}" with "${traitKeyy}" of "${traitValyye}". This should have been streamlined down to one value, eg in updateStCh fxn.`
           );
         }
       });

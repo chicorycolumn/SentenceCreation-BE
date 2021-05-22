@@ -4,10 +4,6 @@ exports.log = (...args) => {
   // console.log(...args);
 };
 
-exports.logAlways = (...args) => {
-  console.log(...args);
-};
-
 exports.consoleLogObjectAtOneLevel = (obj, label, originLabel) => {
   if (!obj) {
     consol.log(
@@ -31,6 +27,10 @@ exports.consoleLogObjectAtOneLevel = (obj, label, originLabel) => {
   consol.log("[1;32m " + `----------` + "[0m");
   consol.log("[1;32m " + `------` + "[0m");
   consol.log("[1;32m " + `--` + "[0m");
+};
+
+exports.logAlways = (...args) => {
+  console.log(...args);
 };
 
 exports.consoleLogObjectAtTwoLevels = (obj, label, originLabel) => {

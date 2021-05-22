@@ -2528,7 +2528,7 @@ describe("/api", function () {
     });
   });
 
-  describe("/palette - Stage 12: Further linguistic features.", () => {
+  describe.only("/palette - Stage 12: Further linguistic features.", () => {
     it("#pal12-01a GET 200 YES: Tantum plurale in POL is allowed to be sing or plur in ENG.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
@@ -3037,7 +3037,7 @@ describe("/api", function () {
     });
   });
 
-  describe.only("/palette - Stage 11A: Adding Specifiers.", () => {
+  describe("/palette - Stage 11A: Adding Specifiers.", () => {
     it("#pal11A-01a GET 200 YES: SPECIFIER EXPECTED. Multi Gender Noun. Engpol.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
