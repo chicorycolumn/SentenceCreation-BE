@@ -566,6 +566,10 @@ exports.processSentenceFormula = (
         outputArray.map((outputUnit) => outputUnit.structureChunk)
       );
     otherChunks.forEach((otherChunk) => {
+      if (otherChunk.dontSpecifyOnThisChunk) {
+        return;
+      }
+
       Object.keys(otherChunk).forEach((traitKeyy) => {
         let traitValyye = otherChunk[traitKeyy];
 
@@ -578,6 +582,7 @@ exports.processSentenceFormula = (
           !reference.ultimatelyMultipleValuesOkay &&
           traitValyye.length > 1
         ) {
+          consol.log(`pqoi Decanting "${otherChunk.chunkId}" "${traitKeyy}".`);
           otherChunk[traitKeyy] = [uUtils.selectRandom(otherChunk[traitKeyy])];
         }
       });

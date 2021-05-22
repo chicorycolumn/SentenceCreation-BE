@@ -13,7 +13,7 @@ const { generalTranslatedSentencesRef } = testingUtils;
 // ProsMgn:        "My doctor and her book." Connected pronoun reveals gender of MGN. Doesn't need an annotation for doctor as clearly must be lekarka.
 // EdusMgn:        "My doctor is a man."     Educator specifies MGN's gender. Sentence where educator knows that this MGN will need no clarifying.
 
-describe("/api", function () {
+describe.only("/api", function () {
   this.timeout(7000);
 
   gpUtils.fillOutWashburneRefObj(
@@ -2528,7 +2528,7 @@ describe("/api", function () {
     });
   });
 
-  describe.only("/palette - Stage 12: Further linguistic features.", () => {
+  describe("/palette - Stage 12: Further linguistic features.", () => {
     it("#pal12-01a GET 200 YES: Tantum plurale in POL is allowed to be sing or plur in ENG.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";

@@ -514,6 +514,10 @@ exports.fetchPalette = (req) => {
       }
     });
 
+    if (!answerResponseObj) {
+      consol.throw("ennm answerResponseObj is falsy");
+    }
+
     scUtils.removeDuplicatesFromResponseObject(answerResponseObj);
   }
 
