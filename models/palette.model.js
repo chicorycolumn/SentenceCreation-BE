@@ -292,7 +292,7 @@ exports.fetchPalette = (req) => {
     questionSentenceData.questionOutputArr.forEach((outputUnit) => {
       if (
         ["agreeWith"].some(
-          //epsilon Should use other agreeKeys too?
+          //possible screwpoint: Should use other agreeKeys too?
           (agreeKey) => outputUnit.structureChunk[agreeKey]
         )
       ) {

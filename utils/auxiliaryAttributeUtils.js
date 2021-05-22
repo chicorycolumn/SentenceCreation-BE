@@ -653,7 +653,6 @@ exports.removeAnnotationsByAOCs = (
   }
 
   if (
-    //gamma Change this to questionOutputUnit.s'tructureChunk.worrdtype
     gpUtils.getWorrdtypeStCh(questionOutputUnit.structureChunk) === headWordtype
   ) {
     let headChunkId = questionOutputUnit.structureChunk.chunkId;
@@ -680,7 +679,6 @@ exports.removeAnnotationsByAOCs = (
         )
         .filter(
           (unit) =>
-            //gamma Change this to questionOutputUnit.s'tructureChunk.worrdtype
             gpUtils.getWorrdtypeStCh(unit.structureChunk) ===
             allDependentWordtype
         );
