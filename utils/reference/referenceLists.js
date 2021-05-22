@@ -412,7 +412,7 @@ exports.structureChunkFeatures = {
       possibleValues: ["1per", "2per", "3per"],
     },
     gender: {
-      compatibleWordtypes: ["noun", "verb", "adjective", "pronoun", "article"], //alpha remove ver adj and art.
+      compatibleWordtypes: ["noun", "pronoun"],
       expectedTypeOnStCh: "array",
       possibleValues: ["m", "f", "n", "virile", "nonvirile"],
     },
@@ -422,7 +422,7 @@ exports.structureChunkFeatures = {
       possibleValues: ["singular", "plural"],
     },
     gcase: {
-      compatibleWordtypes: ["noun", "verb", "adjective", "pronoun"],
+      compatibleWordtypes: ["noun", "pronoun"],
       expectedTypeOnStCh: "array",
       possibleValues: ["nom", "gen", "dat", "acc"],
     },
