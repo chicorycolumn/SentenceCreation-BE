@@ -1367,13 +1367,11 @@ exports.inheritFromHeadToDependentChunk = (
   allLangUtils.adjustVirilityOfStructureChunk(
     currentLanguage,
     headChunk,
-    false,
     "headChunk from SC:inheritFromHeadToDependentChunk"
   );
   allLangUtils.adjustVirilityOfStructureChunk(
     currentLanguage,
     dependentChunk,
-    false, //nownow make false
     "dependentChunk from SC:inheritFromHeadToDependentChunk"
   );
 

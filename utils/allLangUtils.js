@@ -54,12 +54,9 @@ exports.translateAnnotationValue = (
 exports.adjustVirilityOfStructureChunk = (
   currentLanguage,
   structureChunk,
-  retainOriginals,
   consoleLogLabel
 ) => {
-  consol.log("gxow ALL adjustVirilityOfStructureChunk", consoleLogLabel, {
-    retainOriginals,
-  });
+  consol.log("gxow ALL adjustVirilityOfStructureChunk", consoleLogLabel);
 
   if (gpUtils.getWorrdtypeStCh(structureChunk) === "noun") {
     // Because m -> plural -> virile and then trying to select Ojciec, which isn't virile, it's m, so will ERR later.
@@ -125,9 +122,9 @@ exports.adjustVirilityOfStructureChunk = (
         ...newGenderArray,
         ...pluralVirilityAndSingularConversionRef["plural"][genderValue],
       ];
-      if (retainOriginals) {
-        newGenderArray.push(genderValue);
-      }
+      // if (shouldRetainOriginals) {
+      //   newGenderArray.push(genderValue);
+      // }
     });
   }
 
@@ -280,7 +277,6 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
     allLangUtils.adjustVirilityOfStructureChunk(
       currentLanguage,
       structureChunk,
-      true,
       "structureChunk from ALL:preprocessStructureChunks"
     );
 
