@@ -80,11 +80,8 @@ exports.processSentenceFormula = (
 ) => {
   console.log("hbbhey START processSentenceFormula");
   let { currentLanguage, previousQuestionLanguage } = languagesObj;
-  let {
-    sentenceFormulaId,
-    sentenceFormulaSymbol,
-    sentenceStructure,
-  } = sentenceFormula;
+  let { sentenceFormulaId, sentenceFormulaSymbol, sentenceStructure } =
+    sentenceFormula;
   let errorInSentenceCreation = { errorMessage: null };
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
   let grandOutputArray = [];
@@ -94,11 +91,8 @@ exports.processSentenceFormula = (
   langUtils.preprocessStructureChunks(sentenceStructure, currentLanguage);
 
   //STEP ONE: Select HEAD words and add to result array.
-  let {
-    headChunks,
-    dependentChunks,
-    otherChunks,
-  } = scUtils.sortStructureChunks(sentenceStructure);
+  let { headChunks, dependentChunks, otherChunks } =
+    scUtils.sortStructureChunks(sentenceStructure);
 
   let headOutputUnitArrays = [];
 
@@ -224,15 +218,16 @@ exports.processSentenceFormula = (
             );
 
             console.log(`weoe dependentChunk "${dependentChunk.chunkId}"`);
-            let allPossOutputUnits_dependent = otUtils.findMatchingLemmaObjectThenWord(
-              uUtils.copyWithoutReference(dependentChunk),
-              words,
-              errorInSentenceCreation,
-              currentLanguage,
-              previousQuestionLanguage,
-              multipleMode,
-              null
-            );
+            let allPossOutputUnits_dependent =
+              otUtils.findMatchingLemmaObjectThenWord(
+                uUtils.copyWithoutReference(dependentChunk),
+                words,
+                errorInSentenceCreation,
+                currentLanguage,
+                previousQuestionLanguage,
+                multipleMode,
+                null
+              );
 
             if (
               errorInSentenceCreation.errorMessage ||
@@ -245,10 +240,11 @@ exports.processSentenceFormula = (
                   "[0m"
               );
 
-              explodedOutputArraysWithHeads = uUtils.returnArrayWithItemAtIndexRemoved(
-                explodedOutputArraysWithHeads,
-                headOutputArrayIndex
-              );
+              explodedOutputArraysWithHeads =
+                uUtils.returnArrayWithItemAtIndexRemoved(
+                  explodedOutputArraysWithHeads,
+                  headOutputArrayIndex
+                );
 
               thisHeadOutputArrayIsDeleted = true;
             } else {
@@ -409,10 +405,11 @@ exports.processSentenceFormula = (
 
       console.log("shix outputArray", outputArray);
 
-      thisParticularOutputArrayExplodedWithItsPHDs = gpUtils.combineAndExplodeTwoSuperArrays(
-        [outputArray],
-        PHDoutputUnitsForThisParticularOutputArray
-      );
+      thisParticularOutputArrayExplodedWithItsPHDs =
+        gpUtils.combineAndExplodeTwoSuperArrays(
+          [outputArray],
+          PHDoutputUnitsForThisParticularOutputArray
+        );
 
       console.log(
         "shiy thisParticularOutputArrayExplodedWithItsPHDs",
@@ -424,9 +421,8 @@ exports.processSentenceFormula = (
       thisParticularOutputArrayExplodedWithItsPHDs.forEach(
         (individualOutputArrayExplodedWithItsPHDs, index) => {
           if (!index) {
-            grandOutputArray[
-              outputArrayIndex
-            ] = individualOutputArrayExplodedWithItsPHDs;
+            grandOutputArray[outputArrayIndex] =
+              individualOutputArrayExplodedWithItsPHDs;
           } else {
             grandOutputArray.push(individualOutputArrayExplodedWithItsPHDs);
           }
@@ -1246,9 +1242,10 @@ exports.conformAnswerStructureToQuestionStructure = (
         gpUtils.getWorrdtypeStCh(answerStructureChunk)
       ];
 
-    let possibleInflectionsOfAnswerLobjsButNotQuestionLobjs = possibleInflectionsOfAnswerLobjs.filter(
-      (inflector) => !possibleInflectionsOfQuestionLobjs.includes(inflector)
-    );
+    let possibleInflectionsOfAnswerLobjsButNotQuestionLobjs =
+      possibleInflectionsOfAnswerLobjs.filter(
+        (inflector) => !possibleInflectionsOfQuestionLobjs.includes(inflector)
+      );
 
     possibleInflectionsOfAnswerLobjsButNotQuestionLobjs.forEach((inflector) => {
       if (
@@ -1350,7 +1347,7 @@ exports.inheritFromHeadToDependentChunk = (
   allLangUtils.adjustVirilityOfStructureChunk(
     currentLanguage,
     dependentChunk,
-    true,
+    true, //nownow make false
     "dependentChunk from SC:inheritFromHeadToDependentChunk"
   );
 

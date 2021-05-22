@@ -245,7 +245,8 @@ exports.findMatchingLemmaObjectThenWord = (
               selectedFormsArray.push({
                 selectedWordArr,
                 selectedLemmaObject,
-                structureChunkUpdatedByAdhocOrUninflected: structureChunkUpdated,
+                structureChunkUpdatedByAdhocOrUninflected:
+                  structureChunkUpdated,
               });
             });
           });
@@ -265,10 +266,8 @@ exports.findMatchingLemmaObjectThenWord = (
 
           let selectedAdhocResultObj = uUtils.selectRandom(adhocArr);
 
-          let {
-            selectedWordArr,
-            structureChunkUpdated,
-          } = selectedAdhocResultObj;
+          let { selectedWordArr, structureChunkUpdated } =
+            selectedAdhocResultObj;
 
           otUtils.stripOutFeatures(
             currentLanguage,
@@ -334,9 +333,8 @@ exports.findMatchingLemmaObjectThenWord = (
                   }
 
                   //We here update a copy of structureChunk
-                  let structureChunkUpdatedByAdhocOrUninflected = uUtils.copyWithoutReference(
-                    structureChunk
-                  );
+                  let structureChunkUpdatedByAdhocOrUninflected =
+                    uUtils.copyWithoutReference(structureChunk);
 
                   structureChunkUpdatedByAdhocOrUninflected.form = [
                     selectedUninflectedForm,
@@ -389,9 +387,8 @@ exports.findMatchingLemmaObjectThenWord = (
               }
 
               //We here update a copy of structureChunk
-              let structureChunkUpdatedByAdhocOrUninflected = uUtils.copyWithoutReference(
-                structureChunk
-              );
+              let structureChunkUpdatedByAdhocOrUninflected =
+                uUtils.copyWithoutReference(structureChunk);
 
               structureChunkUpdatedByAdhocOrUninflected.form = [
                 selectedUninflectedForm,
@@ -449,9 +446,8 @@ exports.findMatchingLemmaObjectThenWord = (
   //    STEP FOUR-A: Preparing materials
 
   // A new stCh array. Eg in POL, split differential conditional tense+aspect into separate copies of one stCh.
-  let structureChunksAdjusted = langUtils.adjustStructureChunksInIfPW(
-    structureChunk
-  );
+  let structureChunksAdjusted =
+    langUtils.adjustStructureChunksInIfPW(structureChunk);
 
   let structureChunks = structureChunksAdjusted || [structureChunk];
 

@@ -511,21 +511,21 @@ exports.updateStructureChunk = (outputUnit, currentLanguage) => {
 };
 
 exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
-  let {
-    selectedLemmaObject,
-    structureChunk,
-    selectedWord,
-    drillPath,
-  } = outputUnit;
+  let { selectedLemmaObject, structureChunk, selectedWord, drillPath } =
+    outputUnit;
 
   console.log(
     "[1;35m " + `rakt updateStChByAndTagsAndSelectors--------------------` + "[0m"
   );
   console.log(
-    "rakt updateStChByAndTagsAndSelectors structureChunk starts as",
+    `updateStChByAndTagsAndSelectors "${structureChunk.chunkId}" starts as`,
     structureChunk
   );
-  // console.log("rakt updateStChByAndTagsAndSelectors drillPath", drillPath);
+  console.log(
+    "updateStChByAndTagsAndSelectors selectedLemmaObject is",
+    selectedLemmaObject
+  );
+  // console.log("updateStChByAndTagsAndSelectors drillPath", drillPath);
 
   let doneSelectors = [];
 
@@ -643,7 +643,7 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
   }
 
   console.log(
-    "ldod updateStChByAndTagsAndSelectors structureChunk ends as",
+    `raku updateStChByAndTagsAndSelectors "${structureChunk.chunkId}" ends as`,
     structureChunk
   );
   console.log("[1;35m " + `/updateStChByAndTagsAndSelectors` + "[0m");
@@ -796,11 +796,12 @@ exports.filterByKey = (
 ) => {
   console.log("wdwe filterByKey START. structureChunk", structureChunk);
 
-  let requirementArray = lfUtils.padOutRequirementArrWithMetaFeaturesIfNecessary(
-    structureChunk,
-    key,
-    currentLanguage
-  );
+  let requirementArray =
+    lfUtils.padOutRequirementArrWithMetaFeaturesIfNecessary(
+      structureChunk,
+      key,
+      currentLanguage
+    );
 
   console.log("wdet filterByKey. requirementArray", requirementArray);
 
@@ -952,14 +953,15 @@ exports.traverseAndRecordInflections = (
       gpUtils.featureValueIsMeta(chosenInflector) &&
       !source[chosenInflector]
     ) {
-      chosenInflectorAdjusted = otUtils.switchMetaFeatureForAWorkableConvertedFeature(
-        reqInflectorLabel,
-        chosenInflector,
-        source,
-        currentLanguage,
-        structureChunk,
-        "traverseAndRecordInflections -> reqInflectorArr.forEach"
-      );
+      chosenInflectorAdjusted =
+        otUtils.switchMetaFeatureForAWorkableConvertedFeature(
+          reqInflectorLabel,
+          chosenInflector,
+          source,
+          currentLanguage,
+          structureChunk,
+          "traverseAndRecordInflections -> reqInflectorArr.forEach"
+        );
     }
 
     if (Array.isArray(source[chosenInflectorAdjusted])) {

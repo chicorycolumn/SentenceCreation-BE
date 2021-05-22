@@ -2,103 +2,101 @@ const uUtils = require("./universalUtils.js");
 const clUtils = require("./zerothOrder/consoleLoggingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 
-exports.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual = (
-  array1,
-  array2
-) => {
-  //Ignores order.
-  //Ignores duplicates.
+exports.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual =
+  (array1, array2) => {
+    //Ignores order.
+    //Ignores duplicates.
 
-  //Eg these two arrays are EQUAL.
-  //
-  // const input1 = [
-  //
-  //   [
-  //     "I",
-  //     "aint",
-  //     {
-  //       isTerminus: true,
-  //       processOnlyAtEnd: true,
-  //       nonprotective: ["a"],
-  //       protective: ["an"],
-  //     },
-  //     "human",
-  //   ],
-  //
-  //   [
-  //     "I",
-  //     "am",
-  //     {
-  //       isTerminus: true,
-  //       processOnlyAtEnd: true,
-  //       nonprotective: ["my"],
-  //       protective: ["mine"],
-  //     },
-  //     "human",
-  //   ],
-  //
-  // ];
-  //
-  // const input2 = [
-  //
-  //   [
-  //     {
-  //       isTerminus: true,
-  //       processOnlyAtEnd: true,
-  //       nonprotective: ["my"],
-  //       protective: ["mine"],
-  //     },
-  //     "am",
-  //     "I",
-  //     "human",
-  //   ],
-  //
-  //   [
-  //     "human",
-  //     "I",
-  //     "aint",
-  //     {
-  //       isTerminus: true,
-  //       processOnlyAtEnd: true,
-  //       nonprotective: ["a"],
-  //       protective: ["an"],
-  //     },
-  //   ],
-  //
-  // ];
+    //Eg these two arrays are EQUAL.
+    //
+    // const input1 = [
+    //
+    //   [
+    //     "I",
+    //     "aint",
+    //     {
+    //       isTerminus: true,
+    //       processOnlyAtEnd: true,
+    //       nonprotective: ["a"],
+    //       protective: ["an"],
+    //     },
+    //     "human",
+    //   ],
+    //
+    //   [
+    //     "I",
+    //     "am",
+    //     {
+    //       isTerminus: true,
+    //       processOnlyAtEnd: true,
+    //       nonprotective: ["my"],
+    //       protective: ["mine"],
+    //     },
+    //     "human",
+    //   ],
+    //
+    // ];
+    //
+    // const input2 = [
+    //
+    //   [
+    //     {
+    //       isTerminus: true,
+    //       processOnlyAtEnd: true,
+    //       nonprotective: ["my"],
+    //       protective: ["mine"],
+    //     },
+    //     "am",
+    //     "I",
+    //     "human",
+    //   ],
+    //
+    //   [
+    //     "human",
+    //     "I",
+    //     "aint",
+    //     {
+    //       isTerminus: true,
+    //       processOnlyAtEnd: true,
+    //       nonprotective: ["a"],
+    //       protective: ["an"],
+    //     },
+    //   ],
+    //
+    // ];
 
-  return (
-    findMatchingSubArr(array1, array2) && findMatchingSubArr(array2, array1)
-  );
+    return (
+      findMatchingSubArr(array1, array2) && findMatchingSubArr(array2, array1)
+    );
 
-  function findMatchingSubArr(arrayA, arrayB) {
-    return arrayA.every((subArrFromA) => {
-      let matchingSubArrFromB = arrayB.find((subArrFromB) => {
-        if (subArrFromA.length !== subArrFromB.length) {
-          return false;
-        }
-
-        return subArrFromA.every((valueFromA) => {
-          if (typeof valueFromA === "string") {
-            return subArrFromB.includes(valueFromA);
-          } else if (typeof valueFromA === "object") {
-            return subArrFromB.find(
-              (valueFromB) =>
-                typeof valueFromB === "object" &&
-                uUtils.areTwoObjectsEqual(valueFromA, valueFromB)
-            );
-          } else {
-            clUtils.throw(
-              `erql areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual. Unexpected typeof for a selected words array value "${typeof valueFromA}".`
-            );
+    function findMatchingSubArr(arrayA, arrayB) {
+      return arrayA.every((subArrFromA) => {
+        let matchingSubArrFromB = arrayB.find((subArrFromB) => {
+          if (subArrFromA.length !== subArrFromB.length) {
+            return false;
           }
-        });
-      });
 
-      return matchingSubArrFromB;
-    });
-  }
-};
+          return subArrFromA.every((valueFromA) => {
+            if (typeof valueFromA === "string") {
+              return subArrFromB.includes(valueFromA);
+            } else if (typeof valueFromA === "object") {
+              return subArrFromB.find(
+                (valueFromB) =>
+                  typeof valueFromB === "object" &&
+                  uUtils.areTwoObjectsEqual(valueFromA, valueFromB)
+              );
+            } else {
+              clUtils.throw(
+                `erql areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual. Unexpected typeof for a selected words array value "${typeof valueFromA}".`
+              );
+            }
+          });
+        });
+
+        return matchingSubArrFromB;
+      });
+    }
+  };
 
 exports.updateSentenceStructureWithNewStructureChunksFromOutputUnits = (
   sentenceStructure,
@@ -423,6 +421,10 @@ exports.getWordsFromTerminusObject = (tObj, shouldGetAll) => {
 };
 
 exports.lObjIsMGN = (lObj) => {
+  if (!lObj.gender) {
+    return false;
+  }
+
   let testResults = [
     /_/.test(lObj.gender),
     this.featureValueIsMeta(lObj.gender),

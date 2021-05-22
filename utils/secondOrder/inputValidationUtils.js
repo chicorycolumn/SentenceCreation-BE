@@ -50,7 +50,6 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
       }
 
       //1. Check if this featureValue is compatible with this worrdtype
-      console.log({ featureKey });
       let compatibleWordtypes = stChFeatures[featureKey].compatibleWordtypes;
 
       if (

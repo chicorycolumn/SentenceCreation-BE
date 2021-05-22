@@ -57,7 +57,9 @@ exports.adjustVirilityOfStructureChunk = (
   retainOriginals,
   consoleLogLabel
 ) => {
-  console.log("gxow ALL adjustVirilityOfStructureChunk", consoleLogLabel);
+  console.log("gxow ALL adjustVirilityOfStructureChunk", consoleLogLabel, {
+    retainOriginals,
+  });
 
   if (gpUtils.getWorrdtypeStCh(structureChunk) === "noun") {
     // Because m -> plural -> virile and then trying to select Ojciec, which isn't virile, it's m, so will ERR later.
@@ -248,9 +250,10 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
             return;
           }
 
-          structureChunk.tenseDescription = refObj.structureChunkFeatures[
-            currentLanguage
-          ].tenseDescription.possibleValues.slice(0);
+          structureChunk.tenseDescription =
+            refObj.structureChunkFeatures[
+              currentLanguage
+            ].tenseDescription.possibleValues.slice(0);
         }
       }
 
@@ -447,7 +450,7 @@ exports.decantMGNsBeforeFetchingOutputArray = (
   if ("check") {
     if (
       !selectedLemmaObject.gender ||
-      gpUtils.featureValueIsMeta(selectedLemmaObject.gender)
+      !gpUtils.featureValueIsMeta(selectedLemmaObject.gender)
     ) {
       return;
     }
@@ -484,7 +487,7 @@ exports.correctMGNsBeforeFetchingOutputArray = (
   if ("check") {
     if (
       !selectedLemmaObject.gender ||
-      gpUtils.featureValueIsMeta(selectedLemmaObject.gender)
+      !gpUtils.featureValueIsMeta(selectedLemmaObject.gender)
     ) {
       console.log("neem");
       return;
@@ -498,12 +501,12 @@ exports.correctMGNsBeforeFetchingOutputArray = (
         `wpoh lObj has metagender, but gender is not an appropriate feature for this stCh wordtype?`
       );
     }
-  }
 
-  console.log(
-    `wpoi correctMGNsBeforeFetchingOutputArray. ${structureChunk.chunkId} ${currentLanguage}. stCh STARTS as:`,
-    structureChunk
-  );
+    console.log(
+      `wpoi correctMGNsBeforeFetchingOutputArray. ${structureChunk.chunkId} ${currentLanguage}. stCh STARTS as:`,
+      structureChunk
+    );
+  }
 
   //1 Get the lObj metagender key.
   let lObjMetagender = selectedLemmaObject.gender;
@@ -531,7 +534,7 @@ exports.correctMGNsBeforeFetchingOutputArray = (
   ).changeRef;
 
   console.log(
-    `wpol correctMetagenderByNumberInMGNs. ${structureChunk.number[0]} changeRef is:`,
+    `wpol correctMetagenderByNumberInMGNs. "${structureChunk.number[0]}" changeRef is:`,
     metagenderCorrectedByNumberRef
   );
 
