@@ -312,13 +312,14 @@ exports.fetchPalette = (req) => {
     consol.log(
       questionSentenceData.questionOutputArr.map((unit) => unit.structureChunk)
     );
+
     questionSentenceData.questionOutputArr.forEach((unit) => {
       Object.keys(unit.structureChunk).forEach((traitKeyy) => {
         let traitValyye = unit.structureChunk[traitKeyy];
 
         let reference =
-          refObj.structureChunkFeatures["ALL"][traitKeyy] ||
-          refObj.structureChunkFeatures[questionLanguage][traitKeyy];
+          refObj.structureChunkFeatures[questionLanguage][traitKeyy] ||
+          refObj.structureChunkFeatures["ALL"][traitKeyy];
 
         if (
           reference.expectedTypeOnStCh === "array" &&

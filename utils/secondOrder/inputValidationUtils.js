@@ -25,8 +25,8 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
       let featureValue = structureChunk[featureKey];
 
       let reference =
-        refObj.structureChunkFeatures["ALL"][featureKey] ||
-        refObj.structureChunkFeatures[currentLanguage][featureKey];
+        refObj.structureChunkFeatures[currentLanguage][featureKey] ||
+        refObj.structureChunkFeatures["ALL"][featureKey];
 
       if (
         ["fixed"].includes(gpUtils.getWorrdtypeStCh(structureChunk)) ||

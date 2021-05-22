@@ -3037,7 +3037,7 @@ describe("/api", function () {
     });
   });
 
-  describe("/palette - Stage 11A: Adding Specifiers.", () => {
+  describe.only("/palette - Stage 11A: Adding Specifiers.", () => {
     it("#pal11A-01a GET 200 YES: SPECIFIER EXPECTED. Multi Gender Noun. Engpol.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -3283,7 +3283,7 @@ describe("/api", function () {
     });
   });
 
-  describe.only("/palette - Stage 10: Allohomographs (adding Clarifiers).", () => {
+  describe("/palette - Stage 10: Allohomographs (adding Clarifiers).", () => {
     it("#pal10-01a Type 1 Allohomographs of SingleWordtype: 'nut' Engpol. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";

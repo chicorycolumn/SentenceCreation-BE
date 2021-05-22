@@ -559,6 +559,29 @@ exports.processSentenceFormula = (
       }
       lfUtils.updateStructureChunk(outputUnit, currentLanguage);
     });
+
+    //Decanting otherChunks if they have multiple values.
+    let { headChunks, dependentChunks, otherChunks } =
+      scUtils.sortStructureChunks(
+        outputArray.map((outputUnit) => outputUnit.structureChunk)
+      );
+    otherChunks.forEach((otherChunk) => {
+      Object.keys(otherChunk).forEach((traitKeyy) => {
+        let traitValyye = otherChunk[traitKeyy];
+
+        let reference =
+          refObj.structureChunkFeatures[currentLanguage][traitKeyy] ||
+          refObj.structureChunkFeatures["ALL"][traitKeyy];
+
+        if (
+          reference.expectedTypeOnStCh === "array" &&
+          !reference.ultimatelyMultipleValuesOkay &&
+          traitValyye.length > 1
+        ) {
+          otherChunk[traitKeyy] = [uUtils.selectRandom(otherChunk[traitKeyy])];
+        }
+      });
+    });
   });
 
   return {
