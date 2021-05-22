@@ -319,15 +319,6 @@ exports.convertMetaFeatures = (sourceObjectArray, currentLanguage, objType) => {
 
       if (objType === "lObj") {
         Object.keys(metaFeatureRef).forEach((metaFeature) => {
-          if (/_/.test(metaFeature)) {
-            consol.log(
-              `tkga ALL convertMetaFeatures Hereby changing metaFeature "${metaFeature}" to "${
-                metaFeature.split("_")[0]
-              }"`
-            );
-            metaFeature = metaFeature.split("_")[0];
-          }
-
           let regularFeaturesArr = metaFeatureRef[metaFeature];
 
           uUtils.findKeysInObjectAndExecuteCallback(
@@ -349,15 +340,6 @@ exports.convertMetaFeatures = (sourceObjectArray, currentLanguage, objType) => {
           let newValueArr = [];
 
           currentValueArr.forEach((value) => {
-            if (/_/.test(value)) {
-              consol.log(
-                `veeo ALL convertMetaFeatures Thereby changing metaFeature "${value}" to "${
-                  value.split("_")[0]
-                }"`
-              );
-              value = value.split("_")[0];
-            }
-
             if (metaFeatureRef[value]) {
               newValueArr = [...newValueArr, ...metaFeatureRef[value]];
             } else {
@@ -402,8 +384,7 @@ exports.decantMGNsInOutputArray = (questionOutputArr, currentLanguage) => {
           featureValuesFromStChAndLObj.some((featureValue) => {
             if (
               Object.keys(metaFeatureRef)
-                .map((metaFeature) => `${metaFeature}_selector`)
-                .includes(featureValue)
+              .includes(featureValue)
             ) {
               selectedMetaFeature = featureValue;
               return true;
@@ -411,7 +392,7 @@ exports.decantMGNsInOutputArray = (questionOutputArr, currentLanguage) => {
           })
         ) {
           let adjustedFeatureValueArr = [
-            ...metaFeatureRef[selectedMetaFeature.split("_")[0]],
+            ...metaFeatureRef[selectedMetaFeature],
           ];
 
           consol.log("mcxr decantMGNsInOutputArray", {
@@ -536,7 +517,7 @@ exports.correctMGNsBeforeFetchingOutputArray = (
 
   //2 Adjust lObjMetagender by number from stCh.
   // eg if stCh number singular, lObjMetagender goes from "allPersonalGenders" to "allPersonalSingularGenders".
-  lObjMetagender = metagenderCorrectedByNumberRef[lObjMetagender.split("_")[0]];
+  lObjMetagender = metagenderCorrectedByNumberRef[lObjMetagender];
 
   //3 Now convert that. let convertedLObjMetagenderArr = ["m1", "f"]
   let convertedLObjMetagenderArr =

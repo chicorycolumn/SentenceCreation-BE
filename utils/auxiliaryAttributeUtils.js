@@ -847,14 +847,12 @@ exports.addSpecifiersToMGNs = (questionSentenceData, languagesObj) => {
     return (
       unit.selectedLemmaObject &&
       unit.selectedLemmaObject.gender &&
-      metaGenders
-        .map((metaGender) => `${metaGender}_selector`)
-        .includes(unit.selectedLemmaObject.gender)
+      metaGenders.includes(unit.selectedLemmaObject.gender)
     );
   });
 
   questionMGNunits.forEach((questionMGNunit) => {
-    let metaGender = questionMGNunit.selectedLemmaObject.gender.split("_")[0];
+    let metaGender = questionMGNunit.selectedLemmaObject.gender;
 
     let selectedGenderForQuestionLanguage;
     let selectedGenderForAnswerLanguageArr;

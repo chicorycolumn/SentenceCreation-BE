@@ -428,22 +428,14 @@ exports.lObjIsMGN = (lObj) => {
     return false;
   }
 
-  let testResults = [
-    /_/.test(lObj.gender),
-    this.featureValueIsMeta(lObj.gender),
-  ];
-
-  if (
-    (testResults[0] && !testResults[1]) ||
-    (!testResults[0] && testResults[1])
-  ) {
-    consol.throw(`sjie lObjIsMGN.`);
-  }
-
-  return testResults[0];
+  return this.featureValueIsMeta(lObj.gender);
 };
 
 exports.featureValueIsMeta = (value, chunk, key) => {
+  if (!value && !chunk && !key) {
+    consol.throw("ertt No arguments to use.");
+  }
+
   if (!value) {
     value = chunk[key];
   }

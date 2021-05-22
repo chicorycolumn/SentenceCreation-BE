@@ -562,7 +562,7 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
           "[0m"
       );
 
-      let metaGender = selectedLemmaObject.gender.split("_")[0];
+      let metaGender = selectedLemmaObject.gender;
 
       let metaGenderConverted =
         refObj.metaFeatures[currentLanguage].gender[metaGender];
@@ -618,7 +618,7 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
     selectors
       .filter((selector) => !doneSelectors.includes(selector))
       .forEach((selector) => {
-        if (/_/.test(selectedLemmaObject[selector])) {
+        if (gpUtils.featureValueIsMeta(selectedLemmaObject[selector])) {
           consol.throw(
             `oppb updateStChByAndTagsAndSelectors I wasn't expecting a metaFeature selector here. It should have been processed already, in step one, and then added to doneSelectors, which would have prevented it being used here. selectedLemmaObject[selector]:"${selectedLemmaObject[selector]}"`
           );
@@ -741,7 +741,7 @@ exports.padOutRequirementArrWithMetaFeaturesIfNecessary = (
   if (metaFeatureRef) {
     requirementArr.forEach((featureValue) => {
       //If the reqArr has a metafeature, all lObj with converted feature to pass filter.
-      if (/_/.test(featureValue)) {
+      if (gpUtils.featureValueIsMeta(featureValue)) {
         let metaFeatureConverted = metaFeatureRef[featureValue];
 
         if (!metaFeatureConverted) {
@@ -808,7 +808,7 @@ exports.filterByKey = (
   //And finally, do said filter.
   if (requirementArray.length) {
     return lemmaObjectArr.filter((lObj) => {
-      let lObjSelectorValues = [lObj[key], lObj[key].split("_")[0]];
+      let lObjSelectorValues = [lObj[key]];
 
       consol.log("wdeu . lObjSelectorValues", lObjSelectorValues);
 
