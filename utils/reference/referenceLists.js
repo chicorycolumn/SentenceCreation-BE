@@ -229,12 +229,32 @@ exports.structureChunkFeatures = {
     //
     //
     preventAddingFurtherClarifiers: { expectedTypeOnStCh: "boolean" },
-    counterfactuallyImportantFeatures: { expectedTypeOnStCh: "array" },
+    pleaseShowMultipleWordtypeAllohomClarifiers: {
+      expectedTypeOnStCh: "boolean",
+      needsNoValidation: true,
+    },
+    educatorBlocksAnnotationsForTheseFeatures: {
+      expectedTypeOnStCh: "array",
+      ultimatelyMultipleValuesOkay: true,
+      needsNoValidation: true,
+    },
+    formulaImportantFeatures: {
+      expectedTypeOnStCh: "array",
+      ultimatelyMultipleValuesOkay: true,
+      needsNoValidation: true,
+    },
+    counterfactuallyImportantFeatures: {
+      expectedTypeOnStCh: "array",
+      ultimatelyMultipleValuesOkay: true,
+    },
     dontSpecifyOnThisChunk: { expectedTypeOnStCh: "boolean" },
     specificLemmas: { expectedTypeOnStCh: "array" },
     specificIds: { expectedTypeOnStCh: "array" },
-    andTags: { expectedTypeOnStCh: "array" },
-    orTags: { expectedTypeOnStCh: "array" },
+    andTags: {
+      expectedTypeOnStCh: "array",
+      ultimatelyMultipleValuesOkay: true,
+    },
+    orTags: { expectedTypeOnStCh: "array", ultimatelyMultipleValuesOkay: true },
     form: { expectedTypeOnStCh: "array" },
     chunkId: { expectedTypeOnStCh: "string" },
     preferredChoicesForQuestionSentence: {

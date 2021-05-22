@@ -464,7 +464,7 @@ describe("/api", function () {
     });
   });
 
-  describe("/palette - Stage 7: 'Be' ENG <-> POL.", () => {
+  describe.only("/palette - Stage 7: 'Be' ENG <-> POL.", () => {
     it("#pal07-01a GET 200 YES: Conjugate POL be correctly without translations.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "POL";
@@ -1377,7 +1377,7 @@ describe("/api", function () {
           );
         });
     });
-    xit("#pal06-04i GET 200 YES: RSWAT Poleng, where tenseDescription has one that will work and one that won't.", () => {
+    xit("#pal06-04i GET 200 NEGATIVE IMPERATIVE. YES: RSWAT Poleng, where tenseDescription has one that will work and one that won't.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1731,7 +1731,7 @@ describe("/api", function () {
           clUtils.log(res.body);
         });
     });
-    xit("#pal05-02d GET 200 YES: Returns a sentence when selected by one from multiple tenseDescriptions.", () => {
+    xit("#pal05-02d GET 200 YES: CONDITIONAL Returns a sentence when selected by one from multiple tenseDescriptions.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -1941,7 +1941,7 @@ describe("/api", function () {
           clUtils.log(res.body);
         });
     });
-    xit("#pal04-01c GET 200 YES: Returns a sentence with a single verb, with tense and number specified.", () => {
+    xit("#pal04-01c GET 200 YES: CONDITIONAL Returns a sentence with a single verb, with tense and number specified.", () => {
       return request(app)
         .get("/api/palette")
         .send({

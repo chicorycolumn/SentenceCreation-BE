@@ -647,7 +647,7 @@ exports.sentenceFormulasBank = [
         chunkId: "ver-1",
         specificLemmas: ["pisać", "napisać"],
         tenseDescription: ["cond1 condition"],
-        importantFeatures: ["tenseDescription"],
+        formulaImportantFeatures: ["tenseDescription"],
         person: ["2per"],
         number: ["singular"],
       },
@@ -663,7 +663,7 @@ exports.sentenceFormulasBank = [
         chunkId: "ver-2",
         specificLemmas: ["badać", "zbadać"],
         tenseDescription: ["cond1 outcome"],
-        importantFeatures: ["tenseDescription"],
+        formulaImportantFeatures: ["tenseDescription"],
         person: ["1per"],
         number: ["singular"],
       },
@@ -986,7 +986,7 @@ exports.sentenceFormulasBank = [
         chunkId: "pro-3",
         agreeWith: "pro-1-invisible",
         gcase: ["dat"],
-        importantFeatures: ["gcase"],
+        formulaImportantFeatures: ["gcase"],
         specificLemmas: ["PERSONAL"],
       },
       {
@@ -1031,7 +1031,7 @@ exports.sentenceFormulasBank = [
         chunkId: "pro-3-Us",
         agreeWith: "pro-1-invisible-We",
         gcase: ["dat"],
-        importantFeatures: ["gcase"],
+        formulaImportantFeatures: ["gcase"],
         specificLemmas: ["PERSONAL"],
       },
       {
@@ -1087,7 +1087,7 @@ exports.sentenceFormulasBank = [
         chunkId: "pro-2-Me",
         agreeWith: "pro-1-invisible-I",
         gcase: ["dat"],
-        importantFeatures: ["gcase"],
+        formulaImportantFeatures: ["gcase"],
         specificLemmas: ["PERSONAL"],
       },
       {
@@ -1388,7 +1388,7 @@ exports.sentenceFormulasBank = [
         chunkId: "npe-1-doctor",
 
         gcase: ["ins"],
-        importantFeatures: ["gcase"],
+        formulaImportantFeatures: ["gcase"],
         specificLemmas: ["lekarz", "lekarka"],
         agreeWith: "pro-1-I",
       },
@@ -1415,7 +1415,7 @@ exports.sentenceFormulasBank = [
         chunkId: "npe-1-doctor",
 
         gcase: ["ins"],
-        importantFeatures: ["gcase"],
+        formulaImportantFeatures: ["gcase"],
         number: ["singular"],
         specificLemmas: ["lekarz", "lekarka"],
         agreeWith: "pro-1-I",
@@ -1443,7 +1443,7 @@ exports.sentenceFormulasBank = [
         chunkId: "npe-1-doctor",
 
         gcase: ["ins"],
-        importantFeatures: ["gcase"],
+        formulaImportantFeatures: ["gcase"],
         // number: ["singular"],
         specificLemmas: ["lekarz", "lekarka"],
         agreeWith: "pro-1-I",

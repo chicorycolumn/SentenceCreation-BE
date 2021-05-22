@@ -6,6 +6,7 @@ const scUtils = require("../utils/sentenceCreatingUtils.js");
 const aaUtils = require("../utils/auxiliaryAttributeUtils.js");
 const ivUtils = require("../utils/secondOrder/inputValidationUtils.js");
 const frUtils = require("../utils/formattingResponseUtils.js");
+const refObj = require("../utils/reference/referenceObjects.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 
 exports.fetchPalette = (req) => {
@@ -315,7 +316,15 @@ exports.fetchPalette = (req) => {
       Object.keys(unit.structureChunk).forEach((traitKeyy) => {
         let traitValyye = unit.structureChunk[traitKeyy];
 
-        if (Array.isArray(traitValyye) && traitValyye.length > 1) {
+        let reference =
+          refObj.structureChunkFeatures["ALL"][traitKeyy] ||
+          refObj.structureChunkFeatures[questionLanguage][traitKeyy];
+
+        if (
+          reference.expectedTypeOnStCh === "array" &&
+          !reference.ultimatelyMultipleValuesOkay &&
+          traitValyye.length > 1
+        ) {
           clUtils.throw(
             `oije. "${unit.structureChunk.chunkId}" with "${traitKeyy}" of "${traitValyye}". This should have been streamlined down to one value, eg in updateStCh fxn.`
           );

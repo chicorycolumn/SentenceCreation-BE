@@ -116,7 +116,10 @@ exports.updateSentenceStructureWithNewStructureChunksFromOutputUnits = (
 exports.keyShouldBeSpecified = (chunk, key, allowOverwrite) => {
   return (
     !chunk ||
-    (!(chunk.importantFeatures && chunk.importantFeatures.includes(key)) &&
+    (!(
+      chunk.formulaImportantFeatures &&
+      chunk.formulaImportantFeatures.includes(key)
+    ) &&
       (allowOverwrite ||
         !this.isKeyFilledOutOnChunk(chunk, key) ||
         this.featureValueIsMeta(null, chunk, key)))
@@ -437,7 +440,7 @@ exports.lObjIsMGN = (lObj) => {
     clUtils.throw(`sjie lObjIsMGN.`);
   }
 
-  return testResults[0] && testResults[1];
+  return testResults[0];
 };
 
 exports.featureValueIsMeta = (value, chunk, key) => {

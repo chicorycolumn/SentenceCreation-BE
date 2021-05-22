@@ -1048,7 +1048,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "art-1",
         form: ["definite", "indefinite"],
-        importantFeatures: ["form"],
+        formulaImportantFeatures: ["form"],
         preferredChoicesForQuestionSentence: { form: "indefinite" },
         connectedTo: "nco-1",
       },
@@ -1073,7 +1073,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "art-1",
         form: ["definite", "indefinite"],
-        importantFeatures: ["form"],
+        formulaImportantFeatures: ["form"],
         connectedTo: "nco-1",
       },
       {
@@ -1097,7 +1097,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "art-1",
         form: ["definite", "indefinite"],
-        importantFeatures: ["form"],
+        formulaImportantFeatures: ["form"],
         connectedTo: "nco-1",
       },
       {
@@ -1121,7 +1121,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "art-1",
         form: ["definite", "indefinite"],
-        importantFeatures: ["form"],
+        formulaImportantFeatures: ["form"],
         connectedTo: "nco-1",
       },
       {
@@ -1145,7 +1145,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "art-1",
         form: ["definite", "indefinite"],
-        importantFeatures: ["form"],
+        formulaImportantFeatures: ["form"],
         connectedTo: "nco-1",
       },
       {
@@ -1250,7 +1250,7 @@ exports.dummySentenceFormulasBank = [
         andTags: ["job"],
         number: ["singular"],
         gender: ["f"],
-        importantFeatures: ["gender"],
+        formulaImportantFeatures: ["gender"],
         educatorBlocksAnnotationsForTheseFeatures: ["gender"],
       },
     ],
@@ -1267,7 +1267,7 @@ exports.dummySentenceFormulasBank = [
         andTags: ["job"],
         number: ["singular"],
         // gender: ["f"],
-        // importantFeatures: ["gender"],
+        // formulaImportantFeatures: ["gender"],
         // educatorBlocksAnnotationsForTheseFeatures: ["gender"],
       },
     ],
@@ -1284,7 +1284,7 @@ exports.dummySentenceFormulasBank = [
         andTags: ["job"],
         number: ["singular"],
         gender: ["m", "f"],
-        // importantFeatures: ["gender"],
+        // formulaImportantFeatures: ["gender"],
         // educatorBlocksAnnotationsForTheseFeatures: ["gender"],
       },
     ],

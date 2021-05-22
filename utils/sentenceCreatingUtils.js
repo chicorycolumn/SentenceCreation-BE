@@ -1120,8 +1120,8 @@ exports.conformAnswerStructureToQuestionStructure = (
       }
 
       if (
-        answerStructureChunk.importantFeatures &&
-        answerStructureChunk.importantFeatures.includes(inflectorKey)
+        answerStructureChunk.formulaImportantFeatures &&
+        answerStructureChunk.formulaImportantFeatures.includes(inflectorKey)
       ) {
         clUtils.log(
           "jngy conformAnswerStructureToQuestionStructure I will not transfer '" +
@@ -1249,8 +1249,8 @@ exports.conformAnswerStructureToQuestionStructure = (
 
     possibleInflectionsOfAnswerLobjsButNotQuestionLobjs.forEach((inflector) => {
       if (
-        !answerStructureChunk.importantFeatures ||
-        !answerStructureChunk.importantFeatures.includes(inflector)
+        !answerStructureChunk.formulaImportantFeatures ||
+        !answerStructureChunk.formulaImportantFeatures.includes(inflector)
       ) {
         answerStructureChunk[inflector] = [];
       }
@@ -1322,8 +1322,8 @@ exports.inheritFromHeadToDependentChunk = (
     if (
       headChunk[inflectorKey] &&
       !(
-        dependentChunk.importantFeatures &&
-        dependentChunk.importantFeatures.includes(inflectorKey)
+        dependentChunk.formulaImportantFeatures &&
+        dependentChunk.formulaImportantFeatures.includes(inflectorKey)
       )
     ) {
       let inflectorValueArr = uUtils.copyWithoutReference(
@@ -1341,13 +1341,13 @@ exports.inheritFromHeadToDependentChunk = (
   allLangUtils.adjustVirilityOfStructureChunk(
     currentLanguage,
     headChunk,
-    true,
+    false,
     "headChunk from SC:inheritFromHeadToDependentChunk"
   );
   allLangUtils.adjustVirilityOfStructureChunk(
     currentLanguage,
     dependentChunk,
-    true, //nownow make false
+    false, //nownow make false
     "dependentChunk from SC:inheritFromHeadToDependentChunk"
   );
 

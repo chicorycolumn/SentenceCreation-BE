@@ -24,14 +24,13 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
     Object.keys(structureChunk).forEach((featureKey) => {
       let featureValue = structureChunk[featureKey];
 
+      let reference =
+        refObj.structureChunkFeatures["ALL"][featureKey] ||
+        refObj.structureChunkFeatures[currentLanguage][featureKey];
+
       if (
         ["fixed"].includes(gpUtils.getWorrdtypeStCh(structureChunk)) ||
-        [
-          "importantFeatures",
-          "pleaseShowMultipleWordtypeAllohomClarifiers",
-          "forceThisFeatureWhenIsAnswer",
-          "educatorBlocksAnnotationsForTheseFeatures",
-        ].includes(featureKey)
+        reference.needsNoValidation
       ) {
         return;
       }
