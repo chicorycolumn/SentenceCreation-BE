@@ -1,7 +1,7 @@
 const consol = require("./consoleLoggingUtils.js");
 
 exports.log = (...args) => {
-  // console.log(...args);
+  console.log(...args);
 };
 
 exports.consoleLogObjectAtOneLevel = (obj, label, originLabel) => {

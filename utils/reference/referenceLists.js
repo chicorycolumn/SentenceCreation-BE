@@ -177,6 +177,7 @@ exports.lemmaObjectFeatures = {
       adjective: ["form", "number", "gender"],
       verb: ["tenseDescription", "person", "number", "gender"],
       pronoun: ["person", "number", "gender"],
+      preposition: [],
     },
     allowableExtraClarifiersInSingleWordSentences: {
       noun: ["gcase"],
@@ -195,7 +196,7 @@ exports.lemmaObjectFeatures = {
       adjective: ["form"],
       verb: ["form", "tense", "person", "number"],
       pronoun: ["form", "person", "number", "gender", "gcase"],
-      article: ["form"],
+      article: ["form", "number"],
       preposition: ["form"],
     },
     inheritableInflectorKeys: {
@@ -205,12 +206,15 @@ exports.lemmaObjectFeatures = {
       adjective: [],
       verb: ["tense", "person", "number"],
       pronoun: ["person", "number", "gender", "gcase"],
+      article: ["number"],
     },
     allowableTransfersFromQuestionStructure: {
       noun: ["number"], //boston-?
       adjective: ["form"],
       verb: ["tenseDescription", "person", "number", "gender"],
       pronoun: ["form", "person", "number", "gender"],
+      article: [],
+      preposition: [],
     },
     allowableExtraClarifiersInSingleWordSentences: {
       noun: [],

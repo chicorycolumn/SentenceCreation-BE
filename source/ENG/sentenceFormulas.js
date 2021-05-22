@@ -954,7 +954,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "art-1-a",
         form: ["indefinite"],
-        connectedTo: "pro-1-I",
+        agreeWith: "pro-1-I",
       },
       {
         chunkId: "npe-1-doctor",
@@ -983,7 +983,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "art-1-a",
         form: ["indefinite"],
-        connectedTo: "pro-1-I",
+        agreeWith: "pro-1-I",
       },
       {
         chunkId: "npe-1-doctor",
@@ -1013,7 +1013,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "art-1-a",
         form: ["indefinite"],
-        connectedTo: "pro-1-I",
+        agreeWith: "pro-1-I",
       },
       {
         chunkId: "npe-1-doctor",

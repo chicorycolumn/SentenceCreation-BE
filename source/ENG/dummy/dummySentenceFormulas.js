@@ -317,7 +317,7 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy36a",
     translations: { POL: ["POL-dummy36a"] },
     sentenceStructure: [
-      { chunkId: "art-1-the", form: ["definite"], connectedTo: "nco-1-sheep" },
+      { chunkId: "art-1-the", form: ["definite"], agreeWith: "nco-1-sheep" },
       {
         chunkId: "nco-1-sheep",
         andTags: ["farmyard"],
@@ -1050,7 +1050,7 @@ exports.dummySentenceFormulasBank = [
         form: ["definite", "indefinite"],
         formulaImportantFeatures: ["form"],
         preferredChoicesForQuestionSentence: { form: "indefinite" },
-        connectedTo: "nco-1",
+        agreeWith: "nco-1",
       },
       {
         chunkId: "nco-1",
@@ -1074,7 +1074,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "art-1",
         form: ["definite", "indefinite"],
         formulaImportantFeatures: ["form"],
-        connectedTo: "nco-1",
+        agreeWith: "nco-1",
       },
       {
         chunkId: "nco-1",
@@ -1098,7 +1098,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "art-1",
         form: ["definite", "indefinite"],
         formulaImportantFeatures: ["form"],
-        connectedTo: "nco-1",
+        agreeWith: "nco-1",
       },
       {
         chunkId: "nco-1",
@@ -1122,7 +1122,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "art-1",
         form: ["definite", "indefinite"],
         formulaImportantFeatures: ["form"],
-        connectedTo: "nco-1",
+        agreeWith: "nco-1",
       },
       {
         chunkId: "nco-1",
@@ -1146,7 +1146,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "art-1",
         form: ["definite", "indefinite"],
         formulaImportantFeatures: ["form"],
-        connectedTo: "nco-1",
+        agreeWith: "nco-1",
       },
       {
         chunkId: "nco-1",
@@ -1165,7 +1165,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "art-1",
 
         form: ["indefinite"],
-        connectedTo: "nco-1",
+        agreeWith: "nco-1",
       },
       {
         chunkId: "nco-1",
@@ -1174,7 +1174,7 @@ exports.dummySentenceFormulasBank = [
         number: ["singular"],
       },
     ],
-    primaryOrders: [],
+    primaryOrders: [["art-1", "nco-1"]],
   },
   {
     sentenceFormulaSymbol: "dummy56a",
@@ -1185,7 +1185,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "art-1",
 
         form: ["definite", "indefinite"],
-        connectedTo: "npe-1",
+        agreeWith: "npe-1",
       },
       {
         chunkId: "npe-1",

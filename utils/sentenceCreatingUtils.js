@@ -943,6 +943,8 @@ exports.selectWordVersions = (
     });
   }
 
+  console.log("deff orderedOutputArr", orderedOutputArr);
+
   orderedOutputArr.forEach((outputUnit, index) => {
     let previousOutputUnit = orderedOutputArr[index - 1];
     let subsequentOutputUnit = orderedOutputArr[index + 1];

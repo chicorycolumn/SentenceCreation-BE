@@ -26,7 +26,7 @@ describe("/api", function () {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe("/palette - Stage 15: Prepositions and Articles.", () => {
+  describe.only("/palette - Stage 15: Prepositions and Articles.", () => {
     it("#pal15-01a GET 200 YES: Poleng. Indefinite article.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
@@ -187,7 +187,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal15-03b GET 200 YES: Engpol. Preposition 'with'. SHEEP (checking clarifiers) Articles for singular. Checking POL protective preposition form.", () => {
+    it.only("#pal15-03b GET 200 YES: Engpol. Preposition 'with'. SHEEP (checking clarifiers) Articles for singular. Checking POL protective preposition form.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 

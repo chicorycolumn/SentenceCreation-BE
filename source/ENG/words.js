@@ -633,16 +633,35 @@ exports.wordsBank = {
       //notes
 
       //inflections
+      //
       inflections: {
         zero: "",
-        definite: "the",
+        definite: {
+          singular: "the",
+          plural: "the",
+        },
         indefinite: {
-          isTerminus: true,
-          processOnlyAtEnd: true,
-          nonprotective: ["a"],
-          protective: ["an"],
+          singular: {
+            isTerminus: true,
+            processOnlyAtEnd: true,
+            nonprotective: ["a"],
+            protective: ["an"],
+          },
+          plural: "",
         },
       },
+      //
+      // inflections: {
+      //   zero: "",
+      //   definite: "the",
+      //   indefinite: {
+      //     isTerminus: true,
+      //     processOnlyAtEnd: true,
+      //     nonprotective: ["a"],
+      //     protective: ["an"],
+      //   },
+      // },
+      //
     },
   ],
 };
