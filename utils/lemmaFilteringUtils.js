@@ -1,6 +1,6 @@
 const gpUtils = require("./generalPurposeUtils.js");
 const uUtils = require("./universalUtils.js");
-const clUtils = require("./zerothOrder/consoleLoggingUtils.js");
+const consol = require("./zerothOrder/consoleLoggingUtils.js");
 const otUtils = require("./objectTraversingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 const refFxn = require("./reference/referenceFunctions.js");
@@ -13,7 +13,7 @@ exports.filterWithin_PHD = (
   multipleMode,
   outputArray
 ) => {
-  clUtils.log("pebb", {
+  consol.log("pebb", {
     lemmaObject,
     PHDstructureChunk,
     currentLanguage,
@@ -62,7 +62,7 @@ exports.filterWithin_PHD = (
 
   if ("check") {
     if (!PHD_type) {
-      clUtils.throw(
+      consol.throw(
         "pwir filterWithin_PHD. Failed postHocDependentChunkWordtypes[currentLanguage].forEach(PHD_dataObj => passing the PHD_dataObj.conditions)"
       );
     }
@@ -71,7 +71,7 @@ exports.filterWithin_PHD = (
       !PHDstructureChunk.specificLemmas ||
       PHDstructureChunk.specificLemmas.length !== 1
     ) {
-      clUtils.throw(
+      consol.throw(
         "#ERR ohmk lf:filterWithin_PHD. PHD-stCh should have exactly one value in specificLemmas arr."
       );
     }
@@ -90,7 +90,7 @@ exports.filterWithin_PHD = (
     currentLanguage
   );
 
-  clUtils.log("terx filterWithin_PHD", {
+  consol.log("terx filterWithin_PHD", {
     lemmaObjectCopy,
     PHDstructureChunk,
     currentLanguage,
@@ -99,7 +99,7 @@ exports.filterWithin_PHD = (
     PHD_type,
     postHocInflectionChains,
   });
-  // clUtils.consoleLogObjectAtTwoLevels(
+  // consol.consoleLogObjectAtTwoLevels(
   //   outputArray,
   //   "outputArray",
   //   "filterWithin_PHD"
@@ -107,15 +107,15 @@ exports.filterWithin_PHD = (
 
   let source = uUtils.copyWithoutReference(lemmaObjectCopy.inflections);
 
-  clUtils.log("giuy filterWithin_PHD. source", source);
+  consol.log("giuy filterWithin_PHD. source", source);
 
   Object.keys(postHocInflectionChains).forEach((postHocAgreeWithKey) => {
-    clUtils.log(
+    consol.log(
       "[1;35m " +
         `nvnm lf:filterWithin_PHD Running loop for "${postHocAgreeWithKey}"` +
         "[0m"
     );
-    clUtils.log(
+    consol.log(
       "[1;33m " + `outputArray: [${outputArray.map((x) => x.selectedWord)}]` + "[0m"
     );
 
@@ -129,28 +129,28 @@ exports.filterWithin_PHD = (
 
     let drillPathOfHead = uUtils.copyWithoutReference(headOutputUnit.drillPath);
 
-    clUtils.log("nvnn lf:filterWithin_PHD");
-    // clUtils.consoleLogObjectAtOneLevel(
+    consol.log("nvnn lf:filterWithin_PHD");
+    // consol.consoleLogObjectAtOneLevel(
     //   headOutputUnit,
     //   "headOutputUnit",
     //   "This is for a PHD"
     // );
 
     if (!drillPathOfHead) {
-      clUtils.throw(
+      consol.throw(
         "#ERR jzbx filterWithin_PHD. There is no drillPath on the outputUnit with which I want to get features from the PHD stCh. Perhaps this outputUnit is one whose stCh did not go through If-PW?"
       );
     }
 
     if (PHDstructureChunk.form) {
       if (PHDstructureChunk.form.length !== 1) {
-        clUtils.throw(
+        consol.throw(
           "#ERR cwyd filterWithin_PHD. Expected PHDstructureChunk.form to have length of 1: " +
             PHDstructureChunk.chunkId
         );
       }
 
-      clUtils.log(
+      consol.log(
         `ijef filterWithin_PHD. Updating drillPathOfHead with form "${PHDstructureChunk.form[0]}"`
       );
       drillPathOfHead.push(["form", PHDstructureChunk.form[0]]);
@@ -163,7 +163,7 @@ exports.filterWithin_PHD = (
       let personArr = drillPathOfHead.find((arr) => arr[0] === "person");
 
       if (!personArr) {
-        clUtils.log(
+        consol.log(
           `ijeg filterWithin_PHD. Updating drillPathOfHead with person "3per"`
         );
         drillPathOfHead.push(["person", "3per"]);
@@ -172,7 +172,7 @@ exports.filterWithin_PHD = (
       }
     }
 
-    // clUtils.log("dxxd headOutputUnit", headOutputUnit);
+    // consol.log("dxxd headOutputUnit", headOutputUnit);
 
     if (headOutputUnit.selectedLemmaObject.gender) {
       if (!drillPathOfHead.find((arr) => arr[0] === "gender")) {
@@ -187,13 +187,13 @@ exports.filterWithin_PHD = (
         );
 
         if (formattedFeatureValueArray.length !== 1) {
-          clUtils.throw(
+          consol.throw(
             "#ERR ikdr lf:filterWithin_PHD. Expected formattedFeatureValueArray to have length 1"
           );
         }
         let formattedFeatureValue = formattedFeatureValueArray[0];
 
-        clUtils.log(
+        consol.log(
           `ijeg filterWithin_PHD. Updating drillPathOfHead with gender "${formattedFeatureValue}"`
         );
         drillPathOfHead.push(["gender", formattedFeatureValue]);
@@ -202,11 +202,11 @@ exports.filterWithin_PHD = (
       }
     }
 
-    // clUtils.log(
+    // consol.log(
     //   `dxxg lf:filterWithin_PHD. After "${postHocAgreeWithKey}" for "${PHDstructureChunk.chunkId}" the drillPathOfHead is finally`,
     //   drillPathOfHead
     // );
-    // clUtils.log("ylur filterWithin_PHD. source", source);
+    // consol.log("ylur filterWithin_PHD. source", source);
 
     postHocInflectionChain.forEach((featureKey) => {
       let featureValue = drillPathOfHead.find(
@@ -226,7 +226,7 @@ exports.filterWithin_PHD = (
 
       source = source[featureValue];
 
-      clUtils.log(
+      consol.log(
         `\nihjy lf:filterWithin_PHD "${postHocAgreeWithKey}" drilling into source with "${featureValue}" so source is now`,
         // source,
         "\n"
@@ -234,7 +234,7 @@ exports.filterWithin_PHD = (
 
       //Update drillPath, for both ...Pri and ...Sec
 
-      clUtils.log("viko", { postHocAgreeWithKey }, drillPathOfHead);
+      consol.log("viko", { postHocAgreeWithKey }, drillPathOfHead);
 
       if (/.*Primary/.test(postHocAgreeWithKey)) {
         lfUtils.updateStChByInflections(
@@ -246,7 +246,7 @@ exports.filterWithin_PHD = (
       } else if (/.*Tertiary/.test(postHocAgreeWithKey)) {
         drillPathTertiary.push([featureKey, featureValue]);
       } else {
-        clUtils.throw(
+        consol.throw(
           `mezp filterWithin_PHD. Malformed postHocAgreeWithKey: "${postHocAgreeWithKey}".`
         );
       }
@@ -264,45 +264,45 @@ exports.filterWithin_PHD = (
       // } else if (/.*Tertiary/.test(postHocAgreeWithKey)) {
       //   drillPathTertiary.push([featureKey, featureValue]);
       // } else {
-      //   clUtils.throw(
+      //   consol.throw(
       //     `mezp filterWithin_PHD. Malformed postHocAgreeWithKey: "${postHocAgreeWithKey}".`
       //   );
       // }
     });
   });
 
-  clUtils.log("-----------------------tiko");
-  clUtils.log("drillPath", drillPath);
-  clUtils.log("drillPathSecondary", drillPathSecondary);
-  clUtils.log("drillPathTertiary", drillPathTertiary);
-  clUtils.log("--------------------------");
+  consol.log("-----------------------tiko");
+  consol.log("drillPath", drillPath);
+  consol.log("drillPathSecondary", drillPathSecondary);
+  consol.log("drillPathTertiary", drillPathTertiary);
+  consol.log("--------------------------");
 
   let sourceArr = [];
   let resArr = [];
 
   if (Array.isArray(source)) {
-    clUtils.log(
+    consol.log(
       "[1;33m " +
         `apcu lf:filterWithin_PHD, the variable called source, is ARRAY` +
         "[0m",
       { source }
     );
-    clUtils.throw("apcu lf:filterWithin_PHD Oh no Natasha, array!");
+    consol.throw("apcu lf:filterWithin_PHD Oh no Natasha, array!");
   } else if (
     typeof source === "string" ||
     (gpUtils.isTerminusObject(source) && source.processOnlyAtEnd)
   ) {
     sourceArr.push(source);
   } else if (gpUtils.isTerminusObject(source) && !source.processOnlyAtEnd) {
-    clUtils.throw("svqe filterWithin_PHD Natasha, take action.");
+    consol.throw("svqe filterWithin_PHD Natasha, take action.");
   } else {
-    clUtils.throw(
+    consol.throw(
       "#ERR dyqk filterWithin_PHD. Expected this PHD value to be the end of a chain and thus a string or array."
     );
   }
 
   sourceArr.forEach((selectedWord) => {
-    clUtils.log(
+    consol.log(
       `rzcs filterWithin_PHD. Pushing this selectedWord "${selectedWord}" with drillPath ${drillPath}.`
     );
 
@@ -320,7 +320,7 @@ exports.filterWithin_PHD = (
       resultingOutputUnit.drillPathTertiary = drillPathTertiary;
     }
 
-    clUtils.log(
+    consol.log(
       "iqoe filterWithin_PHD. resultingOutputUnit",
       resultingOutputUnit
     );
@@ -328,13 +328,13 @@ exports.filterWithin_PHD = (
     resArr.push(resultingOutputUnit);
   });
 
-  clUtils.log(
+  consol.log(
     "[1;35m " +
       "blij lf:filterWithin_PHD At the END lf:filterWithin PHD section, PHDstructureChunk is:" +
       "[0m",
     PHDstructureChunk
   );
-  clUtils.log("[1;35m " + "blij lf:filterWithin_PHD resArr is" + "[0m", resArr);
+  consol.log("[1;35m " + "blij lf:filterWithin_PHD resArr is" + "[0m", resArr);
   return resArr;
 };
 
@@ -347,7 +347,7 @@ exports.filterWithinSelectedLemmaObject = (
   isPHD
 ) => {
   if (outputArray) {
-    clUtils.log(
+    consol.log(
       "[1;33m " +
         `nvnl filterWithinSelectedLemmaObject outputArray: [${outputArray.map(
           (x) => x.selectedWord
@@ -355,7 +355,7 @@ exports.filterWithinSelectedLemmaObject = (
         "[0m"
     );
   } else {
-    clUtils.log(
+    consol.log(
       "[1;33m " + `nvnl filterWithinSelectedLemmaObject outputArray null` + "[0m"
     );
   }
@@ -391,7 +391,7 @@ exports.filterWithinSelectedLemmaObject = (
           inflectionValue
         );
 
-        // clUtils.log(
+        // consol.log(
         //   "afwm lf:filterWithinSelectedLemmaObject: formattedFeatureValueArr",
         //   formattedFeatureValueArr
         // );
@@ -407,9 +407,9 @@ exports.filterWithinSelectedLemmaObject = (
   });
 
   if (!requirementArrs.length) {
-    clUtils.log("zyan filterWithin structureChunk", structureChunk);
-    clUtils.log("zyan filterWithin inflectionChain", inflectionChain);
-    clUtils.throw(
+    consol.log("zyan filterWithin structureChunk", structureChunk);
+    consol.log("zyan filterWithin inflectionChain", inflectionChain);
+    consol.throw(
       "zyan filterWithin requirementArrs ended with length 0, so the above fxn didn't do anything. I have console logged inflectionChain above, to help."
     );
   }
@@ -418,11 +418,11 @@ exports.filterWithinSelectedLemmaObject = (
   let outputUnitsWithDrillPaths = [];
   let source = lemmaObject.inflections;
 
-  clUtils.log(
+  consol.log(
     "pazk filterWithin now entering traverseAndRecordInflections with args:"
   );
-  clUtils.log("paz'k source", source);
-  clUtils.log("paz'k requirementArrs", requirementArrs);
+  consol.log("paz'k source", source);
+  consol.log("paz'k requirementArrs", requirementArrs);
 
   lfUtils.traverseAndRecordInflections(
     source,
@@ -436,16 +436,16 @@ exports.filterWithinSelectedLemmaObject = (
   );
 
   if (!outputUnitsWithDrillPaths || !outputUnitsWithDrillPaths.length) {
-    clUtils.log(
+    consol.log(
       "\n\n\n iszn I failed when looked for values according to these requirementArrs",
       requirementArrs,
       "\n\n\n iszn when I was looking inside this source"
     );
-    clUtils.consoleLogObjectAtTwoLevels(source);
-    clUtils.log("\n\n\n");
+    consol.consoleLogObjectAtTwoLevels(source);
+    consol.log("\n\n\n");
 
-    clUtils.log(
-      // clUtils.throw(
+    consol.log(
+      // consol.throw(
       //xpublish: This should not be a throw when in PROD.
       "[1;31m " +
         `#WARN/#ERR iszn lf:filterWithinSelectedLemmaObject. traverseAndRecordInflections returned FALSY for "${structureChunk.chunkId}" in "${currentLanguage}". See requirementArrs above.` +
@@ -472,13 +472,13 @@ exports.updateStructureChunk = (outputUnit, currentLanguage) => {
   let shouldConsoleLog = false;
 
   if (shouldConsoleLog) {
-    clUtils.log(
+    consol.log(
       "[1;33m " +
         `aizl updateStructureChunk "${outputUnit.structureChunk.chunkId}" "${outputUnit.selectedWord}" ---------------------------` +
         "[0m"
     );
 
-    clUtils.log(
+    consol.log(
       "rcws updateStructureChunk BEFORE UB-Inf and UB-Tag-Sel, structureChunk is:",
       outputUnit.structureChunk
     );
@@ -487,7 +487,7 @@ exports.updateStructureChunk = (outputUnit, currentLanguage) => {
   lfUtils.updateStChByInflections(outputUnit, currentLanguage);
 
   if (shouldConsoleLog) {
-    clUtils.log(
+    consol.log(
       "xppx updateStructureChunk AFTER UB-Inf but BEFORE UB-Tag-Sel, structureChunk is:",
       outputUnit.structureChunk
     );
@@ -496,17 +496,17 @@ exports.updateStructureChunk = (outputUnit, currentLanguage) => {
   lfUtils.updateStChByAndTagsAndSelectors(outputUnit, currentLanguage);
 
   if (shouldConsoleLog) {
-    clUtils.log(
+    consol.log(
       "wbxe updateStructureChunk AFTER UB-Inf and UB-Tag-Sel, structureChunk is:",
       outputUnit.structureChunk
     );
 
-    clUtils.log(
+    consol.log(
       "[1;33m " +
         `wbxe /updateStructureChunk "${outputUnit.structureChunk.chunkId}"` +
         "[0m"
     );
-    clUtils.log(" ");
+    consol.log(" ");
   }
 };
 
@@ -514,18 +514,18 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
   let { selectedLemmaObject, structureChunk, selectedWord, drillPath } =
     outputUnit;
 
-  clUtils.log(
+  consol.log(
     "[1;35m " + `rakt updateStChByAndTagsAndSelectors--------------------` + "[0m"
   );
-  clUtils.log(
+  consol.log(
     `updateStChByAndTagsAndSelectors "${structureChunk.chunkId}" starts as`,
     structureChunk
   );
-  clUtils.log(
+  consol.log(
     "updateStChByAndTagsAndSelectors selectedLemmaObject is",
     selectedLemmaObject
   );
-  // clUtils.log("updateStChByAndTagsAndSelectors drillPath", drillPath);
+  // consol.log("updateStChByAndTagsAndSelectors drillPath", drillPath);
 
   let doneSelectors = [];
 
@@ -552,11 +552,11 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
     if (lemmaObjectIsMGN) {
       //If lObj does have metagender, set stCh gender to converted values or filter stCh's gender by them.
 
-      clUtils.log(
+      consol.log(
         `nxej updateStChByAndTagsAndSelectors Clause S: lObj "${selectedLemmaObject.lemma}" has metaSelector gender`
       );
-      clUtils.log("nxej updateStChByAndTagsAndSelectors", structureChunk);
-      clUtils.log(
+      consol.log("nxej updateStChByAndTagsAndSelectors", structureChunk);
+      consol.log(
         "[1;33m " +
           `nxej updateStChByAndTagsAndSelectors in clause S start "${structureChunk.gender}"` +
           "[0m"
@@ -575,7 +575,7 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
         structureChunk.gender = metaGenderConverted.slice(0);
       }
       doneSelectors.push("gender");
-      clUtils.log(
+      consol.log(
         "[1;33m " +
           `qdtx updateStChByAndTagsAndSelectors in clause S end "${structureChunk.gender}"` +
           "[0m"
@@ -583,7 +583,7 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
     } else {
       //If lObj has non-meta-gender, then update stCh with lObj gender.
 
-      clUtils.log(
+      consol.log(
         "ijfw updateStChByAndTagsAndSelectors Clause R: lObj does not have metaSelector gender"
       );
       structureChunk.gender = [selectedLemmaObject.gender];
@@ -597,7 +597,7 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
       selectedLemmaObject.tags.includes(andTag)
     );
   } else {
-    clUtils.log(
+    consol.log(
       "[1;31m " +
         `vwaw updateStChByAndTagsAndSelectors Just to note that this stCh has no andTags, and I am adding them from lObj. Perhaps I should no nothing here instead: "${currentLanguage}" "${structureChunk.chunkId}"` +
         "[0m"
@@ -612,14 +612,14 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
       gpUtils.getWorrdtypeStCh(structureChunk)
     ];
 
-  clUtils.log("abyy updateStChByAndTagsAndSelectors", { doneSelectors });
+  consol.log("abyy updateStChByAndTagsAndSelectors", { doneSelectors });
 
   if (selectors) {
     selectors
       .filter((selector) => !doneSelectors.includes(selector))
       .forEach((selector) => {
         if (/_/.test(selectedLemmaObject[selector])) {
-          clUtils.throw(
+          consol.throw(
             `oppb updateStChByAndTagsAndSelectors I wasn't expecting a metaFeature selector here. It should have been processed already, in step one, and then added to doneSelectors, which would have prevented it being used here. selectedLemmaObject[selector]:"${selectedLemmaObject[selector]}"`
           );
         }
@@ -627,7 +627,7 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
         structureChunk[selector] = [selectedLemmaObject[selector]];
       });
   } else {
-    clUtils.log(
+    consol.log(
       "[1;31m " +
         `vbob updateStChByAndTagsAndSelectors Just to note that refObj gave no selectors for currentLanguage "${currentLanguage}" and s'tructureChunk.worrdtype "${gpUtils.getWorrdtypeStCh(
           structureChunk
@@ -642,16 +642,16 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
     structureChunk.specificLemmas = [selectedLemmaObject.lemma];
   }
 
-  clUtils.log(
+  consol.log(
     `raku updateStChByAndTagsAndSelectors "${structureChunk.chunkId}" ends as`,
     structureChunk
   );
-  clUtils.log("[1;35m " + `/updateStChByAndTagsAndSelectors` + "[0m");
+  consol.log("[1;35m " + `/updateStChByAndTagsAndSelectors` + "[0m");
 };
 
 exports.updateStChByInflections = (outputUnit, currentLanguage) => {
   if (false) {
-    clUtils.log(
+    consol.log(
       "[1;30m " +
         `plol updateStChByInflections "${
           outputUnit.drillPath
@@ -733,10 +733,10 @@ exports.padOutRequirementArrWithMetaFeaturesIfNecessary = (
   let requirementArr = requirementArrs[key] || [];
   let metaFeatureRef = refObj.metaFeatures[currentLanguage][key];
 
-  clUtils.log(
+  consol.log(
     "[1;35m " + `opoq lf:filterByKey-------------------------- for key "${key}"` + "[0m"
   );
-  clUtils.log("opoq lf:filterByKey requirementArr starts as", requirementArr);
+  consol.log("opoq lf:filterByKey requirementArr starts as", requirementArr);
 
   if (metaFeatureRef) {
     requirementArr.forEach((featureValue) => {
@@ -745,11 +745,11 @@ exports.padOutRequirementArrWithMetaFeaturesIfNecessary = (
         let metaFeatureConverted = metaFeatureRef[featureValue];
 
         if (!metaFeatureConverted) {
-          clUtils.throw(
+          consol.throw(
             "#ERR tufx lf:filterByKey. filterByKey need converted metafeature."
           );
         }
-        clUtils.log(
+        consol.log(
           `ndew filterByKey. Gonna push metaFeatureConverted [${metaFeatureConverted}]`
         );
         requirementArr = [...requirementArr, ...metaFeatureConverted];
@@ -763,27 +763,27 @@ exports.padOutRequirementArrWithMetaFeaturesIfNecessary = (
           convertedMetaFeatureArr.includes(featureValue) &&
           !requirementArr.includes(metaFeature)
         ) {
-          clUtils.log(
+          consol.log(
             `exnh filterByKey. Gonna push metafeature "${metaFeature}"`
           );
           requirementArr.push(metaFeature);
         }
       });
 
-      clUtils.log(
+      consol.log(
         "sfrl lf:filterByKey requirementArr inside ```requirementArr.forEach((featureValue)``` is",
         requirementArr
       );
     });
   } else {
-    clUtils.log(
+    consol.log(
       "[1;31m " +
         `jwpv lf:filterByKey saw there was no metaFeatureRef for currentLanguage "${currentLanguage}" and key "${key}"` +
         "[0m"
     );
   }
 
-  clUtils.log("qyvu lf:filterByKey requirementArr ends as", requirementArr);
+  consol.log("qyvu lf:filterByKey requirementArr ends as", requirementArr);
 
   return requirementArr;
 };
@@ -794,7 +794,7 @@ exports.filterByKey = (
   key,
   currentLanguage
 ) => {
-  clUtils.log("wdwe filterByKey START. structureChunk", structureChunk);
+  consol.log("wdwe filterByKey START. structureChunk", structureChunk);
 
   let requirementArray =
     lfUtils.padOutRequirementArrWithMetaFeaturesIfNecessary(
@@ -803,14 +803,14 @@ exports.filterByKey = (
       currentLanguage
     );
 
-  clUtils.log("wdet filterByKey. requirementArray", requirementArray);
+  consol.log("wdet filterByKey. requirementArray", requirementArray);
 
   //And finally, do said filter.
   if (requirementArray.length) {
     return lemmaObjectArr.filter((lObj) => {
       let lObjSelectorValues = [lObj[key], lObj[key].split("_")[0]];
 
-      clUtils.log("wdeu . lObjSelectorValues", lObjSelectorValues);
+      consol.log("wdeu . lObjSelectorValues", lObjSelectorValues);
 
       if (key === "gender") {
         structureChunk.number.forEach((numberValue) => {
@@ -819,13 +819,13 @@ exports.filterByKey = (
               numberValue
             ][lObj[key]];
 
-          clUtils.log({
+          consol.log({
             currentLanguage,
             numberValue,
             key,
             "lObj[key]": lObj[key],
           });
-          clUtils.log(
+          consol.log(
             "wdee . extraVirilityConvertedValues",
             extraVirilityConvertedValues
           );
@@ -839,7 +839,7 @@ exports.filterByKey = (
         });
       }
 
-      clUtils.log("wdev . lObjSelectorValues", lObjSelectorValues);
+      consol.log("wdev . lObjSelectorValues", lObjSelectorValues);
 
       return lObjSelectorValues.some((lObjSelectorValue) =>
         requirementArray.includes(lObjSelectorValue)
@@ -861,23 +861,23 @@ exports.filterBySelectors = (
       gpUtils.getWorrdtypeStCh(structureChunk)
     ];
 
-  clUtils.log(
+  consol.log(
     `rcwo filterBySelectors called from ${consoleLogLabel}. selectors are [${selectors}]`
   );
 
   if (selectors) {
     selectors.forEach((selector) => {
-      clUtils.log(
+      consol.log(
         `bnxo filterBySelectors. Will call filterByKey for selector "${selector}"`
       );
-      clUtils.log(`bnxo matches before filterByKey "${selector}" is:`, matches);
+      consol.log(`bnxo matches before filterByKey "${selector}" is:`, matches);
       matches = lfUtils.filterByKey(
         matches,
         structureChunk,
         selector,
         currentLanguage
       );
-      clUtils.log(`bnxu matches AFTER filterByKey "${selector}" is:`, matches);
+      consol.log(`bnxu matches AFTER filterByKey "${selector}" is:`, matches);
     });
   }
 
@@ -896,7 +896,7 @@ exports.traverseAndRecordInflections = (
 ) => {
   let chunkId = structureChunk ? structureChunk.chunkId : "???";
 
-  clUtils.log(
+  consol.log(
     `zbbg lf.traverseAndRecordInflections starting for "${chunkId}", and source is:`,
     source
   );
@@ -904,16 +904,16 @@ exports.traverseAndRecordInflections = (
   let shouldConsoleLog = true;
 
   if (shouldConsoleLog) {
-    clUtils.log(
+    consol.log(
       `kyde traverseAndRecordInflections for "${chunkId}" called by "${consoleLabel}" reqArr`,
       reqArr
     );
-    clUtils.log(`kyde for "${chunkId}" source`, source);
-    clUtils.log(" ");
+    consol.log(`kyde for "${chunkId}" source`, source);
+    consol.log(" ");
   }
 
   if (!reqArr || !reqArr.length) {
-    clUtils.throw(
+    consol.throw(
       `#ERR loii traverseAndRecordInflections for "${chunkId}". reqArr bad: [${reqArr}]`
     );
   }
@@ -923,10 +923,10 @@ exports.traverseAndRecordInflections = (
   }
 
   if (!Array.isArray(outputUnitsWithDrillPathsMini)) {
-    clUtils.log(`mztl lf:traverseAndRecordInflections for "${chunkId}"`, {
+    consol.log(`mztl lf:traverseAndRecordInflections for "${chunkId}"`, {
       outputUnitsWithDrillPathsMini,
     });
-    clUtils.throw(
+    consol.throw(
       `mztl lf:traverseAndRecordInflections for "${chunkId}" found outputUnitsWithDrillPathsMini not array. See above.`
     );
   }
@@ -937,7 +937,7 @@ exports.traverseAndRecordInflections = (
   let reqInflectorArr = reqSubArr[1];
 
   if (!reqInflectorArr.length) {
-    clUtils.log(
+    consol.log(
       `xcmg lf:traverseAndRecordInflections for "${chunkId}" setting reqInflectorArr to [${Object.keys(
         source
       )}]`
@@ -965,7 +965,7 @@ exports.traverseAndRecordInflections = (
     }
 
     if (Array.isArray(source[chosenInflectorAdjusted])) {
-      clUtils.throw(
+      consol.throw(
         `uwmf lf:traverseAndRecordInflections for "${chunkId}" Uh oh Natasha, array!`
       );
     }
@@ -975,10 +975,10 @@ exports.traverseAndRecordInflections = (
       (gpUtils.isTerminusObject(source[chosenInflectorAdjusted]) &&
         source[chosenInflectorAdjusted].processOnlyAtEnd)
     ) {
-      // clUtils.log("fxxb2");
+      // consol.log("fxxb2");
 
       if (shouldConsoleLog) {
-        clUtils.log(
+        consol.log(
           `xuei lf:traverseAndRecordInflections for "${chunkId}" Clause A: string or tObj to process at end`,
           {
             reqInflectorLabel,
@@ -993,7 +993,7 @@ exports.traverseAndRecordInflections = (
       ]);
 
       if (shouldConsoleLog) {
-        clUtils.log(
+        consol.log(
           `pkpb lf:traverseAndRecordInflections for "${chunkId}" pushing word "${source[chosenInflectorAdjusted]}"`
         );
       }
@@ -1003,7 +1003,7 @@ exports.traverseAndRecordInflections = (
         drillPath: outputUnitsWithDrillPathsMini.slice(0),
       });
 
-      // clUtils.log("fxxb3");
+      // consol.log("fxxb3");
 
       outputUnitsWithDrillPathsMini.pop();
 
@@ -1012,10 +1012,10 @@ exports.traverseAndRecordInflections = (
       gpUtils.isTerminusObject(source[chosenInflectorAdjusted]) &&
       !source[chosenInflectorAdjusted].processOnlyAtEnd
     ) {
-      // clUtils.log("fxxb4");
+      // consol.log("fxxb4");
 
       if (shouldConsoleLog) {
-        clUtils.log(
+        consol.log(
           `qqyr lf:traverseAndRecordInflections for "${chunkId}" Clause B: tObj to process now`,
           {
             reqInflectorLabel,
@@ -1034,11 +1034,11 @@ exports.traverseAndRecordInflections = (
         multipleMode
       );
 
-      // clUtils.log("fxxb5");
+      // consol.log("fxxb5");
 
       wordsFromTerminusObject.forEach((word) => {
         if (shouldConsoleLog) {
-          clUtils.log(
+          consol.log(
             `jqbk lf:traverseAndRecordInflections for "${chunkId}" pushing word "${word}"`
           );
         }
@@ -1051,17 +1051,17 @@ exports.traverseAndRecordInflections = (
 
       outputUnitsWithDrillPathsMini.pop();
 
-      // clUtils.log("fxxb6");
+      // consol.log("fxxb6");
 
       return source[chosenInflectorAdjusted];
     } else if (
       uUtils.isKeyValueTypeObject(source[chosenInflectorAdjusted]) &&
       !source[chosenInflectorAdjusted].isTerminus
     ) {
-      // clUtils.log("fxxb7");
+      // consol.log("fxxb7");
 
       if (shouldConsoleLog) {
-        clUtils.log(
+        consol.log(
           `mlgc lf:traverseAndRecordInflections for "${chunkId}" Clause C: object for further traversal`,
           {
             reqInflectorLabel,
@@ -1086,11 +1086,11 @@ exports.traverseAndRecordInflections = (
         "traverseAndRecordInflections" // deletable
       );
 
-      // clUtils.log("fxxb8");
+      // consol.log("fxxb8");
 
       outputUnitsWithDrillPathsMini.pop();
     } else {
-      clUtils.log(
+      consol.log(
         "[1;33m " +
           `buwt #NB lf.traverseAndRecordInflections for "${chunkId}" found no matching values during drilling for ${reqInflectorLabel}: "${chosenInflectorAdjusted}".` +
           "[0m"

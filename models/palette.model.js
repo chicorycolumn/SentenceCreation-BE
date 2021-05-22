@@ -1,6 +1,6 @@
 const gpUtils = require("../utils/generalPurposeUtils.js");
 const uUtils = require("../utils/universalUtils.js");
-const clUtils = require("../utils/zerothOrder/consoleLoggingUtils.js");
+const consol = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const edUtils = require("../utils/secondOrder/educatorUtils.js");
 const scUtils = require("../utils/sentenceCreatingUtils.js");
 const aaUtils = require("../utils/auxiliaryAttributeUtils.js");
@@ -55,7 +55,7 @@ exports.fetchPalette = (req) => {
   }
 
   if (pleaseDontSpecify) {
-    clUtils.log(
+    consol.log(
       "[1;30m " +
         `-----------------------------------------------------------------------------------------------------------------------------------PDSyellow` +
         "[0m"
@@ -81,7 +81,7 @@ exports.fetchPalette = (req) => {
             potentialDepChunk.agreeWith === qChunk.chunkId
         )
       ) {
-        clUtils.log(qChunk.chunkId + " shep1");
+        consol.log(qChunk.chunkId + " shep1");
         qChunk.dontSpecifyOnThisChunk = false;
       } else if (qChunk.gender && qChunk.gender.length) {
         //BOSTON
@@ -101,7 +101,7 @@ exports.fetchPalette = (req) => {
               qChunk.gender.includes(value)
             )
           ) {
-            clUtils.log(qChunk.chunkId + " shep2a");
+            consol.log(qChunk.chunkId + " shep2a");
             qChunk.dontSpecifyOnThisChunk = false;
           }
         } else {
@@ -110,19 +110,19 @@ exports.fetchPalette = (req) => {
               qChunk.gender.includes(value)
             )
           ) {
-            clUtils.log(qChunk.chunkId + " shep2b");
+            consol.log(qChunk.chunkId + " shep2b");
             qChunk.dontSpecifyOnThisChunk = false;
           }
         }
       }
 
-      clUtils.log(
+      consol.log(
         `PDSyellow qChunk.dontSpecifyOnThisChunk for "${qChunk.chunkId}=${qChunk.dontSpecifyOnThisChunk}"`
       );
     });
   }
 
-  clUtils.log(
+  consol.log(
     "veva questionSentenceFormula.sentenceStructure",
     questionSentenceFormula.sentenceStructure.map((stCh) => stCh.chunkId)
   );
@@ -134,14 +134,14 @@ exports.fetchPalette = (req) => {
     multipleMode
   );
 
-  clUtils.log("questionSentenceData", questionSentenceData);
+  consol.log("questionSentenceData", questionSentenceData);
   if ("check") {
     if (
       !questionSentenceData ||
       !questionSentenceData.arrayOfOutputArrays ||
       !questionSentenceData.arrayOfOutputArrays.length
     ) {
-      clUtils.log(
+      consol.log(
         "[1;31m " +
           `#WARN cdqk fetchPalette. The question arrayOfOutputArrays came back NOTHING.` +
           "[0m"
@@ -161,7 +161,7 @@ exports.fetchPalette = (req) => {
       }
     }
 
-    clUtils.log(
+    consol.log(
       "veve questionSentenceData.arrayOfOutputArrays",
       questionSentenceData.arrayOfOutputArrays.map((arr) =>
         arr.map((unit) => unit.structureChunk.chunkId)
@@ -169,11 +169,11 @@ exports.fetchPalette = (req) => {
     );
 
     if (questionSentenceData.arrayOfOutputArrays.length > 1) {
-      clUtils.log(
+      consol.log(
         "pipr-fetchPalette. questionSentenceData.arrayOfOutputArrays",
         questionSentenceData.arrayOfOutputArrays
       );
-      clUtils.throw(
+      consol.throw(
         "#ERR tbvr fetchPalette. questionSentenceData.arrayOfOutputArrays.length had length more than 1. It was " +
           questionSentenceData.arrayOfOutputArrays.length
       );
@@ -199,15 +199,15 @@ exports.fetchPalette = (req) => {
       let { structureChunk, selectedLemmaObject } = outputUnit;
 
       if ("console") {
-        clUtils.log(
+        consol.log(
           "[1;35m " +
             `vmfg-fetchPalette stCh "${structureChunk.chunkId}" at index "${index}"` +
             "[0m"
         );
-        clUtils.log(
+        consol.log(
           "[1;35m " + `vmfg-fetchPalette slObj "${selectedLemmaObject.lemma}"` + "[0m"
         );
-        clUtils.log(" ");
+        consol.log(" ");
       }
 
       Object.keys(structureChunk).forEach((featureKey) => {
@@ -224,18 +224,18 @@ exports.fetchPalette = (req) => {
           Array.isArray(featureValue) &&
           featureValue.length > 1
         ) {
-          clUtils.log(
+          consol.log(
             "[1;31m " + `#WARN oyxp fetchPalette. structureChunk is:` + "[0m",
             structureChunk
           );
-          clUtils.throw("#ERR oyxp fetchPalette. featureKey: " + featureKey);
+          consol.throw("#ERR oyxp fetchPalette. featureKey: " + featureKey);
         }
       });
     });
   }
 
   if (true && "console") {
-    clUtils.log(
+    consol.log(
       "[1;36m " +
         "{{{ zuwv-fetchPalette just after we get questionSentenceData back from SC:processSentenceFormula. Let's see the stChs in questionSentenceData.arrayOfOutputArrays:" +
         "[0m"
@@ -244,39 +244,39 @@ exports.fetchPalette = (req) => {
     questionSentenceData.questionOutputArr
       .map((outputUnit) => outputUnit.structureChunk)
       .forEach((stCh) => {
-        clUtils.log("niwt-fetchPalette -fetchPalette", stCh);
+        consol.log("niwt-fetchPalette -fetchPalette", stCh);
       });
 
-    clUtils.log("[1;36m " + "}}}" + "[0m");
+    consol.log("[1;36m " + "}}}" + "[0m");
   }
 
   if (true && "console") {
-    clUtils.log(
+    consol.log(
       "[1;35m " +
         "{{{ cjae-fetchPalette just before midpoint. Let's see the selectedWordss" +
         "[0m"
     );
 
-    clUtils.log(
+    consol.log(
       "odej-fetchPalette questionSentenceData.questionOutputArr.map((outputUnit) => outputUnit.selectedWord)",
       questionSentenceData.questionOutputArr.map(
         (outputUnit) => outputUnit.selectedWord
       )
     );
 
-    // clUtils.consoleLogObjectAtTwoLevels(
+    // consol.consoleLogObjectAtTwoLevels(
     //   questionSentenceData.questionOutputArr,
     //   "questionSentenceData.questionOutputArr",
     //   "odek-fetchPalette."
     // );
 
-    clUtils.log("[1;35m " + "}}}" + "[0m");
+    consol.log("[1;35m " + "}}}" + "[0m");
 
-    clUtils.consoleLogAestheticBorder(4);
+    consol.consoleLogAestheticBorder(4);
   }
 
   if (devSaysThrowAtMidpoint) {
-    clUtils.throw("Midpoint cease.");
+    consol.throw("Midpoint cease.");
   }
 
   if (answerLanguage) {
@@ -309,7 +309,7 @@ exports.fetchPalette = (req) => {
       }
     });
 
-    clUtils.log(
+    consol.log(
       questionSentenceData.questionOutputArr.map((unit) => unit.structureChunk)
     );
     questionSentenceData.questionOutputArr.forEach((unit) => {
@@ -325,14 +325,14 @@ exports.fetchPalette = (req) => {
           !reference.ultimatelyMultipleValuesOkay &&
           traitValyye.length > 1
         ) {
-          clUtils.throw(
+          consol.throw(
             `oije. "${unit.structureChunk.chunkId}" with "${traitKeyy}" of "${traitValyye}". This should have been streamlined down to one value, eg in updateStCh fxn.`
           );
         }
       });
     });
 
-    clUtils.log(
+    consol.log(
       "[1;36m " + `znuj fetchPalette. questionOutputArr BEFORE CLARI OR SPECI` + "[0m\n",
       questionSentenceData.questionOutputArr.map((unit) => [
         `${unit.selectedLemmaObject.lemma}-->${unit.selectedWord}`,
@@ -346,7 +346,7 @@ exports.fetchPalette = (req) => {
       questionLanguage,
     });
 
-    clUtils.log(
+    consol.log(
       "[1;36m " +
         `znuk-fetchPalette, questionOutputArr AFTER CLARI, BEFORE SPECI` +
         "[0m\n",
@@ -365,7 +365,7 @@ exports.fetchPalette = (req) => {
       questionLanguage,
     });
 
-    clUtils.log(
+    consol.log(
       "[1;36m " + `znul-fetchPalette, questionOutputArr AFTER CLARI AND SPECI` + "[0m\n",
       questionSentenceData.questionOutputArr.map((unit) => [
         `${unit.selectedLemmaObject.lemma}-->${unit.selectedWord}`,
@@ -378,7 +378,7 @@ exports.fetchPalette = (req) => {
       questionLanguage,
     });
 
-    clUtils.log(
+    consol.log(
       "[1;36m " + `znum-fetchPalette, questionOutputArr AFTER SPECIALADJUST\n` + "[0m",
       questionSentenceData.questionOutputArr.map((unit) => [
         `${unit.selectedLemmaObject.lemma}-->${unit.selectedWord}`,
@@ -387,7 +387,7 @@ exports.fetchPalette = (req) => {
     );
 
     if (devSaysThrowAfterAnnoSalvo) {
-      clUtils.throw("mhji devSaysThrowAfterAnnoSalvo");
+      consol.throw("mhji devSaysThrowAfterAnnoSalvo");
     }
 
     translations.forEach((translationSentenceFormulaId, index) => {
@@ -412,14 +412,14 @@ exports.fetchPalette = (req) => {
       }
 
       if ("console") {
-        clUtils.log(
+        consol.log(
           `pjeg fetchPalette. Just BEFORE qaConform, let's see the Q and A structures:`
         );
-        clUtils.log(
+        consol.log(
           "p'jeg answerSentenceFormula.sentenceStructure",
           answerSentenceFormula.sentenceStructure
         );
-        clUtils.log(
+        consol.log(
           "p'jeg questionSentenceData...{sentenceStructure}",
           questionSentenceData.questionOutputArr.map(
             (outputUnit) => outputUnit.structureChunk
@@ -438,7 +438,7 @@ exports.fetchPalette = (req) => {
         words
       );
 
-      clUtils.log(
+      consol.log(
         "pjeh fetchPalette. answerSentenceFormula.sentenceStructure AFTER qaConform",
         answerSentenceFormula.sentenceStructure
       );
@@ -459,7 +459,7 @@ exports.fetchPalette = (req) => {
           !answerSentenceData.arrayOfOutputArrays ||
           !answerSentenceData.arrayOfOutputArrays.length
         ) {
-          clUtils.log(
+          consol.log(
             "[1;31m " +
               `#WARN cdqk fetchPalette. The answer arrayOfOutputArrays came back NOTHING.` +
               "[0m"
@@ -522,7 +522,7 @@ exports.fetchPalette = (req) => {
   let answerSelectedWordsSetsHaveChanged = { value: false };
   let additionalRunsRecord = [];
 
-  clUtils.log(
+  consol.log(
     `csej fetchPalette. questionSentenceData`,
     questionSentenceData.questionOutputArr.map((unit) => unit.structureChunk)
   );

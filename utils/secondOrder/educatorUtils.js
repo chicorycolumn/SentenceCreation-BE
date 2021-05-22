@@ -1,6 +1,6 @@
 const gpUtils = require(".././generalPurposeUtils.js");
 const uUtils = require(".././universalUtils.js");
-const clUtils = require(".././zerothOrder/consoleLoggingUtils.js");
+const consol = require(".././zerothOrder/consoleLoggingUtils.js");
 const otUtils = require(".././objectTraversingUtils.js");
 const educatorUtils = require("./educatorUtils.js");
 
@@ -23,9 +23,9 @@ exports.checkOutputArrayForMissingUnits = (
       order.every((chunkId) => outputChunkIds.includes(chunkId))
     )
   ) {
-    clUtils.log("dwke primaryOrders", primaryOrders);
-    clUtils.log("dwke outputChunkIds", outputChunkIds);
-    clUtils.throw(
+    consol.log("dwke primaryOrders", primaryOrders);
+    consol.log("dwke outputChunkIds", outputChunkIds);
+    consol.throw(
       `dwke checkOutputArrayForMissingUnits. "${label}" "${currentLanguage}" outputArray didn't have all the requisite units. See above.`
     );
   }
@@ -69,7 +69,7 @@ exports.findHomographs = (testing, currentLanguage, homographType, ignore) => {
   }
 
   if (!["syn", "allo", "all"].includes(homographType)) {
-    clUtils.log("tvgz findHomographs", { homographType });
+    consol.log("tvgz findHomographs", { homographType });
     throw "findHomographs fxn: I don't know what type of homograph you want me to find. I've logged above what you gave me.";
   }
 
@@ -104,7 +104,7 @@ exports.findHomographs = (testing, currentLanguage, homographType, ignore) => {
     });
   });
 
-  clUtils.log("recordOfTerminalValuesAndPaths", recordOfTerminalValuesAndPaths);
+  consol.log("recordOfTerminalValuesAndPaths", recordOfTerminalValuesAndPaths);
 
   recordOfTerminalValuesAndPaths.forEach((unit) => {
     let { terminalValue } = unit;

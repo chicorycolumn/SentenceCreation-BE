@@ -3,7 +3,7 @@ const otUtils = require("../../utils/objectTraversingUtils.js");
 const frUtils = require("../../utils/formattingResponseUtils.js");
 const gpUtils = require("../../utils/generalPurposeUtils.js");
 const uUtils = require("../../utils/universalUtils.js");
-const clUtils = require("../../utils/zerothOrder/consoleLoggingUtils.js");
+const consol = require("../../utils/zerothOrder/consoleLoggingUtils.js");
 const refObj = require("../../utils/reference/referenceObjects.js");
 const allLangUtils = require("../../utils/allLangUtils.js");
 
@@ -56,12 +56,12 @@ exports.selectWordVersions = (
 
   if (gpUtils.getWorrdtypeLObj(selectedLemmaObject) === "preposition") {
     if (!subsequentOutputUnit) {
-      clUtils.throw(
+      consol.throw(
         "mcob selectWordVersions Shouldn't there be an outputUnit subsequent to this POL preposition?"
       );
     }
 
-    clUtils.log(
+    consol.log(
       "pxlz selectWordVersions test subsequentOutputUnit.selectedWord for following prefixes.",
       {
         "subsequentOutputUnit.selectedWord": subsequentOutputUnit.selectedWord,
@@ -71,7 +71,7 @@ exports.selectWordVersions = (
     if (
       selectedWord.protectIfSubsequentStartsWithTheseRegexes &&
       selectedWord.protectIfSubsequentStartsWithTheseRegexes.some((prefix) => {
-        clUtils.log("spez selectWordVersions", { prefix });
+        consol.log("spez selectWordVersions", { prefix });
 
         let prefixRegex = RegExp("^" + prefix);
         return prefixRegex.test(subsequentOutputUnit.selectedWord);
@@ -109,7 +109,7 @@ exports.selectWordVersions = (
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   let shouldConsoleLog = false;
 
-  clUtils.log(
+  consol.log(
     "[1;35m " + "pmoe POL preprocessStructureChunks-------------------" + "[0m"
   );
 
@@ -123,7 +123,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
     }
 
     if (shouldConsoleLog) {
-      clUtils.log(
+      consol.log(
         "guii POL preprocessStructureChunks At first the structureChunk is",
         structureChunk
       );
@@ -162,7 +162,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
     }
 
     if (shouldConsoleLog) {
-      clUtils.log(
+      consol.log(
         "uccs POL preprocessStructureChunks Finally the structureChunk is",
         structureChunk
       );
@@ -170,7 +170,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   });
 
   if (shouldConsoleLog) {
-    clUtils.log("[1;35m " + "/POL preprocessStructureChunks" + "[0m");
+    consol.log("[1;35m " + "/POL preprocessStructureChunks" + "[0m");
   }
 };
 
@@ -188,7 +188,7 @@ exports.preprocessLemmaObjectsMajor = (
     gpUtils.getWorrdtypeLObj(matches[0]) !==
     gpUtils.getWorrdtypeStCh(structureChunk)
   ) {
-    clUtils.throw(
+    consol.throw(
       "#ERR wkpu POL:preprocessLemmaObjectsMajor. The worrdtypes from stCh and lObjs didn't match."
     );
   }
@@ -366,7 +366,7 @@ exports.formatFeatureValue = (featureKey, featureValue, note) => {
 
 exports.fillVerbInflections = (lemmaObject) => {
   if (lemmaObject.complete) {
-    clUtils.log(
+    consol.log(
       "zzfm POL fillVerbInflections fxn will do nothing, as '" +
         lemmaObject.lemma +
         "' lObj is marked as COMPLETE."

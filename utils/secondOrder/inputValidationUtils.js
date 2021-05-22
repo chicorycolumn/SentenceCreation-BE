@@ -1,6 +1,6 @@
 const gpUtils = require("../generalPurposeUtils.js");
 const uUtils = require("../universalUtils.js");
-const clUtils = require("../zerothOrder/consoleLoggingUtils.js");
+const consol = require("../zerothOrder/consoleLoggingUtils.js");
 const ivUtils = require("./inputValidationUtils.js");
 const refObj = require("../reference/referenceObjects.js");
 const refFxn = require("../reference/referenceFunctions.js");
@@ -16,7 +16,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
     let { chunkId } = structureChunk;
 
     if (!gpUtils.getWorrdtypeStCh(structureChunk)) {
-      clUtils.throw(
+      consol.throw(
         `#ERR esxo validateSentenceFormula. stCh "${chunkId}" has falsy worrdtype.`
       );
     }
@@ -39,11 +39,11 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
       let allFeatureKeys = Object.keys(stChFeatures);
 
       if (!allFeatureKeys.includes(featureKey)) {
-        clUtils.log(
+        consol.log(
           "fneu validateSentenceFormula structureChunk",
           structureChunk
         );
-        clUtils.throw(
+        consol.throw(
           `#ERR fneu validateSentenceFormula. stCh "${chunkId}": featureKey "${featureKey}" not specified on reference object.`
         );
       }
@@ -55,11 +55,11 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
         compatibleWordtypes &&
         !compatibleWordtypes.includes(gpUtils.getWorrdtypeStCh(structureChunk))
       ) {
-        clUtils.log(
+        consol.log(
           "wghd validateSentenceFormula structureChunk",
           structureChunk
         );
-        clUtils.throw(
+        consol.throw(
           `#ERR wghd validateSentenceFormula. stCh "${chunkId}": featureKey "${featureKey}" not expected to be present on "${gpUtils.getWorrdtypeStCh(
             structureChunk
           )}".`
@@ -73,11 +73,11 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
         expectedTypeOnStCh &&
         expectedTypeOnStCh !== uUtils.typeof(featureValue)
       ) {
-        clUtils.log(
+        consol.log(
           "kchk validateSentenceFormula structureChunk",
           structureChunk
         );
-        clUtils.throw(
+        consol.throw(
           `#ERR kchk validateSentenceFormula. stCh "${chunkId}": Expected "${expectedTypeOnStCh}" as "${featureKey}" featureValue but got "${uUtils.typeof(
             featureValue
           )}"`
@@ -90,11 +90,11 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
       if (possibleValues) {
         if (uUtils.typeof(featureValue) === "string") {
           if (!possibleValues.includes(featureValue)) {
-            clUtils.log(
+            consol.log(
               "mkkf validateSentenceFormula structureChunk",
               structureChunk
             );
-            clUtils.throw(
+            consol.throw(
               `#ERR mkkf validateSentenceFormula. stCh "${chunkId}": featureValue "${featureValue}" not listed as possible for worrdtype "${gpUtils.getWorrdtypeStCh(
                 structureChunk
               )}".`
@@ -103,11 +103,11 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
         } else if (uUtils.typeof(featureValue) === "array") {
           featureValue.forEach((featureValueItem) => {
             if (!possibleValues.includes(featureValueItem)) {
-              clUtils.log(
+              consol.log(
                 "timm validateSentenceFormula structureChunk",
                 structureChunk
               );
-              clUtils.throw(
+              consol.throw(
                 `#ERR timm validateSentenceFormula. stCh "${chunkId}": featureValue arr included "${featureValueItem}" which was not listed as possible for worrdtype "${gpUtils.getWorrdtypeStCh(
                   structureChunk
                 )}".`
@@ -120,11 +120,11 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
       //4. Check if the value of agreeKeys is an existing chunkId.
       if (stChFeatures[featureKey].possibleValueMustBeExistingChunkId) {
         if (!allChunkIds.includes(featureValue)) {
-          clUtils.log(
+          consol.log(
             "cglp validateSentenceFormula structureChunk",
             structureChunk
           );
-          clUtils.throw(
+          consol.throw(
             `#ERR cglp validateSentenceFormula. stCh "${chunkId}": featureValue "${featureValue}" should have been a chunkId existing in sentenceStructure.`
           );
         }

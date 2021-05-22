@@ -1,7 +1,7 @@
 const otUtils = require("./objectTraversingUtils.js");
 const uUtils = require("./universalUtils.js");
 const gpUtils = require("./generalPurposeUtils.js");
-const clUtils = require("./zerothOrder/consoleLoggingUtils.js");
+const consol = require("./zerothOrder/consoleLoggingUtils.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
 const frUtils = require("./formattingResponseUtils.js");
 const aaUtils = require("./auxiliaryAttributeUtils.js");
@@ -47,7 +47,7 @@ exports.getMaterials = (
     );
 
     if (!sentenceFormula) {
-      clUtils.throw(
+      consol.throw(
         `#ERR quky sc:getMaterials. No sentenceFormula for this sentenceFormulaId "${sentenceFormulaId}".`
       );
     }
@@ -78,7 +78,7 @@ exports.processSentenceFormula = (
   words,
   multipleMode
 ) => {
-  clUtils.log("hbbhey START processSentenceFormula");
+  consol.log("hbbhey START processSentenceFormula");
   let { currentLanguage, previousQuestionLanguage } = languagesObj;
   let { sentenceFormulaId, sentenceFormulaSymbol, sentenceStructure } =
     sentenceFormula;
@@ -97,15 +97,15 @@ exports.processSentenceFormula = (
   let headOutputUnitArrays = [];
 
   if ("console") {
-    clUtils.log(
+    consol.log(
       "iytd processSentenceFormula: headChunks",
       headChunks.map((chunk) => chunk.chunkId)
     );
-    clUtils.log(
+    consol.log(
       "iytd processSentenceFormula: dependentChunks",
       dependentChunks.map((chunk) => chunk.chunkId)
     );
-    clUtils.log(
+    consol.log(
       "iytd processSentenceFormula: otherChunks",
       otherChunks.map((chunk) => chunk.chunkId)
     );
@@ -120,7 +120,7 @@ exports.processSentenceFormula = (
       return;
     }
 
-    clUtils.log("evga sc:processSentenceFormula STEP ONE", headChunk.chunkId);
+    consol.log("evga sc:processSentenceFormula STEP ONE", headChunk.chunkId);
 
     let allPossOutputUnits_head = otUtils.findMatchingLemmaObjectThenWord(
       uUtils.copyWithoutReference(headChunk),
@@ -137,7 +137,7 @@ exports.processSentenceFormula = (
       !allPossOutputUnits_head ||
       !allPossOutputUnits_head.length
     ) {
-      clUtils.log(
+      consol.log(
         "[1;31m " +
           `klya processSentenceFormula. This run has FAILED, due to headChunk: "${headChunk.chunkId}" failing in findMatchingLemmaObjectThenWord. \nThis happened in "STEP ONE: Select HEAD words and add to result array."` +
           +"[0m"
@@ -167,7 +167,7 @@ exports.processSentenceFormula = (
   });
 
   if (nullResultObj) {
-    clUtils.log(
+    consol.log(
       "[1;31m \n" +
         `#ERR bcka processSentenceFormula ${currentLanguage}. headOutputUnitArrays had no successful members. 'klya' only had to fail once, and it did.` +
         "\n[0m"
@@ -206,7 +206,7 @@ exports.processSentenceFormula = (
               return;
             }
 
-            clUtils.log(
+            consol.log(
               "oiez sc:processSentenceFormula STEP TWO",
               dependentChunk.chunkId
             );
@@ -217,7 +217,7 @@ exports.processSentenceFormula = (
               dependentChunk
             );
 
-            clUtils.log(`weoe dependentChunk "${dependentChunk.chunkId}"`);
+            consol.log(`weoe dependentChunk "${dependentChunk.chunkId}"`);
             let allPossOutputUnits_dependent =
               otUtils.findMatchingLemmaObjectThenWord(
                 uUtils.copyWithoutReference(dependentChunk),
@@ -234,7 +234,7 @@ exports.processSentenceFormula = (
               !allPossOutputUnits_dependent ||
               !allPossOutputUnits_dependent.length
             ) {
-              clUtils.log(
+              consol.log(
                 "[1;31m " +
                   `klye trimArrayOfExplodedOutputArraysByFailures. explodedOutputArraysWithHeads has ${explodedOutputArraysWithHeads.length} members. Deleting headOutputArray at index ${headOutputArrayIndex} because no results were found for depCh "${dependentChunk.chunkId}" in this headOutputArray. \nThis happened in "STEP TWO: Select DEPENDENT words and add to result array."` +
                   "[0m"
@@ -258,7 +258,7 @@ exports.processSentenceFormula = (
             }
           });
         } else {
-          clUtils.log(
+          consol.log(
             "zvvs processSentenceFormula explodedOutputArraysWithHeads. specificDependentChunks had no length."
           );
         }
@@ -267,7 +267,7 @@ exports.processSentenceFormula = (
   );
 
   if (headChunks.length && !explodedOutputArraysWithHeads.length) {
-    clUtils.log(
+    consol.log(
       "[1;31m \n" +
         `#ERR bcke processSentenceFormula ${currentLanguage}. This run has FAILED due to explodedOutputArraysWithHeads having no successful members. 'klye' must have deleted all members of explodedOutputArraysWithHeads arr.` +
         "\n[0m"
@@ -294,20 +294,20 @@ exports.processSentenceFormula = (
     return nullResultObj;
   }
 
-  // clUtils.log(
+  // consol.log(
   //   "wvmo explodedOutputArraysWithHeads",
   //   explodedOutputArraysWithHeads
   // );
 
   explodedOutputArraysWithHeads.forEach((arr) => {
-    // clUtils.log(
+    // consol.log(
     //   "mocu processSentenceFormula explodedOutputArraysWithHeads arr:",
     //   arr
     // );
 
     let result = gpUtils.explodeOutputArraysByHeadsAndDependents(arr);
 
-    // clUtils.log("result of explodedOutputArraysWithHeads:", result);
+    // consol.log("result of explodedOutputArraysWithHeads:", result);
 
     grandOutputArray.push(...result);
   });
@@ -325,7 +325,7 @@ exports.processSentenceFormula = (
 
   //STEP THREE: Select PHD words and add to result array.
 
-  // clUtils.log("shia grandOutputArray before PHD processing", grandOutputArray);
+  // consol.log("shia grandOutputArray before PHD processing", grandOutputArray);
 
   grandOutputArray.forEach((outputArray, outputArrayIndex) => {
     let thisOutputArrayIsDeleted;
@@ -334,8 +334,8 @@ exports.processSentenceFormula = (
 
     delete errorInSentenceCreation.errorMessage;
 
-    clUtils.log("rhib grandOutputArray.length", grandOutputArray.length);
-    clUtils.log(
+    consol.log("rhib grandOutputArray.length", grandOutputArray.length);
+    consol.log(
       "rhic postHocDependentChunks.length",
       postHocDependentChunks.length
     );
@@ -345,7 +345,7 @@ exports.processSentenceFormula = (
         return;
       }
 
-      clUtils.log(
+      consol.log(
         `weoo postHocDependentChunk "${postHocDependentChunk.chunkId}"`
       );
 
@@ -360,14 +360,14 @@ exports.processSentenceFormula = (
         true
       );
 
-      clUtils.log("keph allPossOutputUnits_PHD", allPossOutputUnits_PHD);
+      consol.log("keph allPossOutputUnits_PHD", allPossOutputUnits_PHD);
 
       if (
         errorInSentenceCreation.errorMessage ||
         !allPossOutputUnits_PHD ||
         !allPossOutputUnits_PHD.length
       ) {
-        clUtils.log(
+        consol.log(
           "[1;31m " +
             `klyi trimArrayOfExplodedOutputArraysByFailures. grandOutputArray has ${grandOutputArray.length} members. Deleting headOutputArray at index ${outputArrayIndex} because no results were found for PHDchunk "${postHocDependentChunk.chunkId}" in this outputArray. \nThis happened in "STEP THREE: Select PHD words and add to result array."` +
             "[0m"
@@ -389,7 +389,7 @@ exports.processSentenceFormula = (
       !thisOutputArrayIsDeleted &&
       PHDoutputUnitsForThisParticularOutputArray.length
     ) {
-      clUtils.log(
+      consol.log(
         "shiv PHDoutputUnitsForThisParticularOutputArray",
         PHDoutputUnitsForThisParticularOutputArray
       );
@@ -398,12 +398,12 @@ exports.processSentenceFormula = (
         PHDoutputUnitsForThisParticularOutputArray
       );
 
-      clUtils.log(
+      consol.log(
         "shiw PHDoutputUnitsForThisParticularOutputArray",
         PHDoutputUnitsForThisParticularOutputArray
       );
 
-      clUtils.log("shix outputArray", outputArray);
+      consol.log("shix outputArray", outputArray);
 
       thisParticularOutputArrayExplodedWithItsPHDs =
         gpUtils.combineAndExplodeTwoSuperArrays(
@@ -411,12 +411,12 @@ exports.processSentenceFormula = (
           PHDoutputUnitsForThisParticularOutputArray
         );
 
-      clUtils.log(
+      consol.log(
         "shiy thisParticularOutputArrayExplodedWithItsPHDs",
         thisParticularOutputArrayExplodedWithItsPHDs
       );
 
-      clUtils.log("shiz grandOutputArray", grandOutputArray);
+      consol.log("shiz grandOutputArray", grandOutputArray);
 
       thisParticularOutputArrayExplodedWithItsPHDs.forEach(
         (individualOutputArrayExplodedWithItsPHDs, index) => {
@@ -429,12 +429,12 @@ exports.processSentenceFormula = (
         }
       );
 
-      clUtils.log("shiz grandOutputArray", grandOutputArray);
+      consol.log("shiz grandOutputArray", grandOutputArray);
     }
   });
 
   if ([...headChunks, ...dependentChunks].length && !grandOutputArray.length) {
-    clUtils.log(
+    consol.log(
       "[1;31m \n" +
         `#ERR bcki processSentenceFormula ${currentLanguage}. grandOutputArray had no successful members. 'klyi' must have removed all members from grandOutputArray.` +
         "\n[0m"
@@ -461,7 +461,7 @@ exports.processSentenceFormula = (
     return nullResultObj;
   }
 
-  // clUtils.log("shib grandOutputArray after PHD processing", grandOutputArray);
+  // consol.log("shib grandOutputArray after PHD processing", grandOutputArray);
 
   //STEP FOUR: Select OTHER words and add to result array.
   otherChunks = otherChunks.filter(
@@ -478,9 +478,9 @@ exports.processSentenceFormula = (
       return;
     }
 
-    clUtils.log("qssh processSentenceFormula otherChunk", otherChunk);
+    consol.log("qssh processSentenceFormula otherChunk", otherChunk);
 
-    clUtils.log(`weoi otherChunk "${otherChunk.chunkId}"`);
+    consol.log(`weoi otherChunk "${otherChunk.chunkId}"`);
     let allPossOutputUnits_other = otUtils.findMatchingLemmaObjectThenWord(
       uUtils.copyWithoutReference(otherChunk),
       words,
@@ -496,7 +496,7 @@ exports.processSentenceFormula = (
       !allPossOutputUnits_other ||
       !allPossOutputUnits_other.length
     ) {
-      clUtils.log(
+      consol.log(
         "[1;31m " +
           `klyo processSentenceFormula. This run has FAILED, due to otherChunk: "${otherChunk.chunkId}" failing in findMatchingLemmaObjectThenWord. \nThis happened in "STEP FOUR: Select OTHER words and add to result array."` +
           +"[0m"
@@ -527,7 +527,7 @@ exports.processSentenceFormula = (
   });
 
   if (nullResultObj) {
-    clUtils.log(
+    consol.log(
       "[1;31m \n" +
         `#ERR bcko processSentenceFormula ${currentLanguage}. allPossOutputUnits_other had no successful members. 'klyo' only had to fail once, and it did.` +
         "\n[0m"
@@ -591,7 +591,7 @@ exports.giveFinalSentences = (
 
   if ("check") {
     if (!multipleMode && answerOutputArrays && answerOutputArrays.length) {
-      clUtils.throw(
+      consol.throw(
         "#ERR ubrz giveFinalSentences. Well that's strange. We are in Question Mode, so SC:giveFinalSentences expected to be given questionOutputArr, not answerOutputArrays."
       );
     }
@@ -641,7 +641,7 @@ exports.giveFinalSentences = (
       );
     }
 
-    // clUtils.log("jfuc questionOutputArr", questionOutputArr);
+    // consol.log("jfuc questionOutputArr", questionOutputArr);
 
     let finalSentences = scUtils.buildSentenceString(
       questionOutputArr,
@@ -684,8 +684,8 @@ exports.buildSentenceString = (
   currentLanguage,
   answerLanguage
 ) => {
-  clUtils.log("[1;35m " + "cghk buildSentenceString" + "[0m");
-  clUtils.log(
+  consol.log("[1;35m " + "cghk buildSentenceString" + "[0m");
+  consol.log(
     "cghk buildSentenceString unorderedArr",
     unorderedArr.map((outputUnit) => outputUnit.selectedWord)
   );
@@ -695,14 +695,12 @@ exports.buildSentenceString = (
 
   // STEP 0: Get orders.
   if (!sentenceFormula.primaryOrders || !sentenceFormula.primaryOrders.length) {
-    clUtils.log(
+    consol.log(
       "[1;31m " +
         `npqq buildSentenceString No primaryOrders were specified for "${sentenceFormula.sentenceFormulaSymbol}" with ID "${sentenceFormula.sentenceFormulaId}". Using default order that structureChunks were defined in.` +
         "[0m"
     );
-    clUtils.log(
-      "kfzo buildSentenceString c13 gonna push unorderedArr Clause 0"
-    );
+    consol.log("kfzo buildSentenceString c13 gonna push unorderedArr Clause 0");
     outputArrays.push(unorderedArr);
   } else {
     if (multipleMode) {
@@ -719,12 +717,12 @@ exports.buildSentenceString = (
       allOrders.forEach((order) => {
         let orderedArr = [];
         order.forEach((chunkId) => {
-          clUtils.log("gibo buildSentenceString", { chunkId });
+          consol.log("gibo buildSentenceString", { chunkId });
           let foundChunk = unorderedArr.find(
             (item) => item.structureChunk.chunkId === chunkId
           );
           if (!foundChunk) {
-            clUtils.log(
+            consol.log(
               "[1;31m " +
                 "cyjk buildSentenceString: Could not find for " +
                 chunkId +
@@ -733,7 +731,7 @@ exports.buildSentenceString = (
           }
           orderedArr.push(foundChunk);
         });
-        clUtils.log("qnob buildSentenceString Gonna push orderedArr Clause 1");
+        consol.log("qnob buildSentenceString Gonna push orderedArr Clause 1");
         outputArrays.push(orderedArr);
       });
     } else {
@@ -745,7 +743,7 @@ exports.buildSentenceString = (
           unorderedArr.find((item) => item.structureChunk.chunkId === chunkId)
         );
       });
-      clUtils.log("xsqr buildSentenceString Gonna push orderedArr Clause 3");
+      consol.log("xsqr buildSentenceString Gonna push orderedArr Clause 3");
       outputArrays.push(orderedArr);
     }
   }
@@ -753,9 +751,9 @@ exports.buildSentenceString = (
   //STEP 0.5: In Q mode, for each outputArr, if there is a chunk with annos but that didn't make it in there, keep the annos.
 
   if (!multipleMode) {
-    clUtils.log("outputArrays", outputArrays);
-    clUtils.log("unorderedArr", unorderedArr);
-    // clUtils.throw(431);
+    consol.log("outputArrays", outputArrays);
+    consol.log("unorderedArr", unorderedArr);
+    // consol.throw(431);
 
     outputArrays.forEach((outputArr) => {
       unorderedArr.forEach((originalUnit) => {
@@ -778,7 +776,7 @@ exports.buildSentenceString = (
               },
             };
 
-            // clUtils.throw(131);
+            // consol.throw(131);
             outputArr.unshift(skeletonOutputUnit);
           }
         }
@@ -795,7 +793,7 @@ exports.buildSentenceString = (
     );
 
     if (!multipleMode && arrOfFinalSelectedWordsArr.length > 1) {
-      clUtils.log(
+      consol.log(
         "[1;31m " +
           `twwe buildSentenceString NB: Randomly selecting one for question sentence.` +
           "[0m"
@@ -828,7 +826,7 @@ exports.selectWordVersions = (
 
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
 
-  // clUtils.log("efsj selectWordVersions. orderedOutputArr", orderedOutputArr);
+  // consol.log("efsj selectWordVersions. orderedOutputArr", orderedOutputArr);
 
   //In Q mode, bring annos in from skeleton units.
   if (!multipleMode) {
@@ -886,7 +884,7 @@ exports.selectWordVersions = (
                   depUnit.firstStageAnnotationsObj[annoKey] &&
                   depUnit.firstStageAnnotationsObj[annoKey] !== annoValue
                 ) {
-                  clUtils.throw(
+                  consol.throw(
                     `ioev selectWordVersions Skeleton Clause. I'm trying to transfer in annos from an outputunit that didn't make it into this outputarr. But I'm looking at one of its depChs, and this depCh has an anno with a different value?\nFor annoKey "${annoKey}", skeleton "${skeletonOutputUnit.structureChunk.chunkId}" had "${annoValue}" while depCh "${depCh.chunkId}" had "${depCh.annotations[annoKey]}".`
                   );
                 }
@@ -905,7 +903,7 @@ exports.selectWordVersions = (
         ).filter((annoKey) => !doneAnnoKeys.includes(annoKey));
 
         if (abandonedAnnoKeys.length) {
-          clUtils.throw(
+          consol.throw(
             `wtsu selectWordVersions Skeleton Clause. These annoKeys from skeleton "${skeletonOutputUnit.structureChunk.chunkId}" did not make it into outputArr in any way! [${abandonedAnnoKeys}].`
           );
         }
@@ -929,11 +927,11 @@ exports.selectWordVersions = (
     } = outputUnit;
 
     if (shouldConsoleLog) {
-      clUtils.log("[1;33m " + `nilu selectWordVersions----------------` + "[0m");
-      clUtils.log("[1;33m " + `selectedWord` + "[0m", selectedWord);
-      clUtils.log("[1;33m " + `structureChunk` + "[0m", structureChunk);
-      clUtils.log("[1;33m " + `drillPath` + "[0m", drillPath);
-      clUtils.log("[1;33m " + `/nilu----------------` + "[0m");
+      consol.log("[1;33m " + `nilu selectWordVersions----------------` + "[0m");
+      consol.log("[1;33m " + `selectedWord` + "[0m", selectedWord);
+      consol.log("[1;33m " + `structureChunk` + "[0m", structureChunk);
+      consol.log("[1;33m " + `drillPath` + "[0m", drillPath);
+      consol.log("[1;33m " + `/nilu----------------` + "[0m");
     }
 
     if (typeof selectedWord === "string") {
@@ -963,24 +961,24 @@ exports.selectWordVersions = (
         return;
       }
     } else {
-      clUtils.throw(
+      consol.throw(
         "#ERR oilf selectWordVersions. I expected either a string or a terminus object for this selectedWord."
       );
     }
 
-    clUtils.log("oadb selectWordVersions", { selectedWord });
-    clUtils.throw(
+    consol.log("oadb selectWordVersions", { selectedWord });
+    consol.throw(
       `oadb selectWordVersions didn't add any word from "${structureChunk.chunkId}" and see selectedWord above.`
     );
   });
 
   shouldConsoleLog &&
-    clUtils.log("hjoz selectWordVersions selectedWordsArr", selectedWordsArr);
+    consol.log("hjoz selectWordVersions selectedWordsArr", selectedWordsArr);
 
   let arrOfSelectedWordsArr = uUtils.arrayExploder(selectedWordsArr);
 
   shouldConsoleLog &&
-    clUtils.log(
+    consol.log(
       "hjoz selectWordVersions arrOfSelectedWordsArr",
       arrOfSelectedWordsArr
     );
@@ -996,13 +994,13 @@ exports.conformAnswerStructureToQuestionStructure = (
 ) => {
   let shouldConsoleLog = false;
   if (shouldConsoleLog) {
-    clUtils.log(
+    consol.log(
       "[1;35m " +
         "dxft sc:conformAnswerStructureToQuestionStructure-------------------" +
         "[0m"
     );
   } else {
-    clUtils.log(
+    consol.log(
       "[1;35m " + `(aegh sc:conformAnswerStructureToQuestionStructure)` + "[0m"
     );
   }
@@ -1023,7 +1021,7 @@ exports.conformAnswerStructureToQuestionStructure = (
     }
 
     if (shouldConsoleLog) {
-      clUtils.log(
+      consol.log(
         "rxez conformAnswerStructureToQuestionStructure questionStructureChunk",
         questionStructureChunk
       );
@@ -1038,7 +1036,7 @@ exports.conformAnswerStructureToQuestionStructure = (
     );
 
     if (!answerStructureChunk) {
-      clUtils.log(
+      consol.log(
         "dtph #NB sc:conformAnswerStructureToQuestionStructure couldn't find any answerStructureChunk for '" +
           questionStructureChunk.chunkId +
           "'."
@@ -1074,7 +1072,7 @@ exports.conformAnswerStructureToQuestionStructure = (
     );
 
     if (matchesLengthSnapshot && !matchingAnswerLemmaObjects.length) {
-      clUtils.log(
+      consol.log(
         "[1;31m " +
           `wtlg conformAnswerStructureToQuestionStructure #NB: There were some lemma objects, but they were filtered out because they didn't have all tags matching.` +
           "[0m"
@@ -1082,7 +1080,7 @@ exports.conformAnswerStructureToQuestionStructure = (
     }
 
     if (!matchingAnswerLemmaObjects.length) {
-      clUtils.log(
+      consol.log(
         "ltqf conformAnswerStructureToQuestionStructure #NB There were no matching answer lemma objects found in SC:conformAnswerStructureToQuestionStructure"
       );
       return;
@@ -1123,7 +1121,7 @@ exports.conformAnswerStructureToQuestionStructure = (
         answerStructureChunk.formulaImportantFeatures &&
         answerStructureChunk.formulaImportantFeatures.includes(inflectorKey)
       ) {
-        clUtils.log(
+        consol.log(
           "jngy conformAnswerStructureToQuestionStructure I will not transfer '" +
             inflectorKey +
             "' in SC:conformAtoQ step 1, as marked important in answerStCh."
@@ -1136,7 +1134,7 @@ exports.conformAnswerStructureToQuestionStructure = (
         inflectorKey === "number" &&
         questionSelectedLemmaObject.tantumPlurale
       ) {
-        clUtils.log(
+        consol.log(
           "yurw conformAnswerStructureToQuestionStructure Question lobj is a tantum, so we won't transfer Number feature."
         );
         return;
@@ -1150,7 +1148,7 @@ exports.conformAnswerStructureToQuestionStructure = (
           (answerLemmaObject) => answerLemmaObject.tantumPlurale
         )
       ) {
-        clUtils.log(
+        consol.log(
           "kozn conformAnswerStructureToQuestionStructure All answer lobjs are tantum, so we won't transfer Number feature."
         );
         return;
@@ -1173,12 +1171,12 @@ exports.conformAnswerStructureToQuestionStructure = (
             answerLanguage
           );
 
-          clUtils.log(
+          consol.log(
             `poji conformAnswerStructureToQuestionStructure. ${questionLanguage} ${questionStructureChunk.chunkId}'s tenseDesc "${tenseDesc}" give these translatedTenseDescArr for ${answerLanguage}: [${translatedTenseDescArr}].`
           );
 
           if (!translatedTenseDescArr || !translatedTenseDescArr.length) {
-            clUtils.throw(
+            consol.throw(
               `poji. translatedTenseDescArr came back blank, see above.`
             );
           }
@@ -1264,7 +1262,7 @@ exports.conformAnswerStructureToQuestionStructure = (
   });
 
   if (shouldConsoleLog) {
-    clUtils.log("[1;35m " + "/conformAnswerStructureToQuestionStructure" + "[0m");
+    consol.log("[1;35m " + "/conformAnswerStructureToQuestionStructure" + "[0m");
   }
 };
 
@@ -1292,12 +1290,12 @@ exports.inheritFromHeadToDependentChunk = (
     );
   }
 
-  clUtils.log(
+  consol.log(
     `wdil inheritFromHeadToDependentChunk: "${headChunk.chunkId}" to "${dependentChunk.chunkId}"`,
     "dependentChunk BEFOREHAND: ",
     dependentChunk
   );
-  clUtils.log("w'dil inheritFromHeadToDependentChunk: headChunk", headChunk);
+  consol.log("w'dil inheritFromHeadToDependentChunk: headChunk", headChunk);
 
   let normalinheritableInflectorKeys =
     refObj.lemmaObjectFeatures[currentLanguage].inheritableInflectorKeys[
@@ -1315,7 +1313,7 @@ exports.inheritFromHeadToDependentChunk = (
   ];
 
   inheritableInflectorKeys.forEach((inflectorKey) => {
-    clUtils.log(
+    consol.log(
       `kwwm inheritFromHeadToDependentChunk: "${headChunk.chunkId}" to "${dependentChunk.chunkId}". inflectorKey "${inflectorKey}".`
     );
     //Hard change.
@@ -1334,7 +1332,7 @@ exports.inheritFromHeadToDependentChunk = (
     }
   });
 
-  clUtils.log(
+  consol.log(
     "ttez At the end of inheritFromHeadToDependentChunk, we must again adjustVirility, which we also did in allLangUtils.preprocessStructureChunks earlier."
   );
 
@@ -1351,7 +1349,7 @@ exports.inheritFromHeadToDependentChunk = (
     "dependentChunk from SC:inheritFromHeadToDependentChunk"
   );
 
-  clUtils.log(
+  consol.log(
     "wdim inheritFromHeadToDependentChunk: dependentChunk AFTERWARDS of inheritFromHeadToDependentChunk: ",
     dependentChunk
   );
@@ -1424,7 +1422,7 @@ exports.sortStructureChunks = (
       ].includes(chunk.chunkId)
   );
 
-  clUtils.log("fafo sortStructureChunks END", {
+  consol.log("fafo sortStructureChunks END", {
     headChunks,
     dependentChunks,
     PHDChunks,

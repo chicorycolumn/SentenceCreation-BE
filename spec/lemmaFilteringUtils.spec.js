@@ -312,17 +312,17 @@ xdescribe("traverseAndRecordInflections", () => {
     outputUnitsWithDrillPaths
   ) {
     outputUnitsWithDrillPaths.forEach((outputUnitsWithDrillPathsUnit) => {
-      clUtils.log(">>>", number);
-      clUtils.log(
+      consol.log(">>>", number);
+      consol.log(
         "outputUnitsWithDrillPathsUnit selectedWordArray:",
         outputUnitsWithDrillPathsUnit.selectedWordArray
       );
-      clUtils.log(
+      consol.log(
         "outputUnitsWithDrillPathsUnit drillPath:",
         outputUnitsWithDrillPathsUnit.drillPath
       );
-      clUtils.log(" ");
-      clUtils.log(" ");
+      consol.log(" ");
+      consol.log(" ");
     });
   }
 

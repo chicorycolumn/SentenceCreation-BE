@@ -3,7 +3,7 @@ const otUtils = require("../../utils/objectTraversingUtils.js");
 const frUtils = require("../../utils/formattingResponseUtils.js");
 const gpUtils = require("../../utils/generalPurposeUtils.js");
 const uUtils = require("../../utils/universalUtils.js");
-const clUtils = require("../../utils/zerothOrder/consoleLoggingUtils.js");
+const consol = require("../../utils/zerothOrder/consoleLoggingUtils.js");
 const refObj = require("../../utils/reference/referenceObjects.js");
 const allLangUtils = require("../../utils/allLangUtils.js");
 
@@ -70,12 +70,12 @@ exports.selectWordVersions = (
     structureChunk.form.includes("indefinite")
   ) {
     if (!subsequentOutputUnit) {
-      clUtils.throw(
+      consol.throw(
         "aqrz selectWordVersions Shouldn't there be an outputUnit subsequent to this ENG indefinite article?"
       );
     }
 
-    clUtils.log(
+    consol.log(
       "shnj selectWordVersions. subsequentOutputUnit.firstStageAnnotationsObj BEFORE",
       subsequentOutputUnit.firstStageAnnotationsObj
     );
@@ -87,7 +87,7 @@ exports.selectWordVersions = (
             subsequentOutputUnit.firstStageAnnotationsObj[annoKey];
 
           if (annoValue === "singular") {
-            clUtils.log(
+            consol.log(
               `yuox selectWordVersions. Removing "singular" annotation from subsequent outputUnit, as current output unit is ENG indefinite article.`
             );
 
@@ -97,12 +97,12 @@ exports.selectWordVersions = (
       );
     }
 
-    clUtils.log(
+    consol.log(
       "shnj selectWordVersions. subsequentOutputUnit.firstStageAnnotationsObj AFTER",
       subsequentOutputUnit.firstStageAnnotationsObj
     );
 
-    clUtils.log("nbra selectWordVersions", {
+    consol.log("nbra selectWordVersions", {
       "subsequentOutputUnit.selectedWord": subsequentOutputUnit.selectedWord,
       "subsequentOutputUnit.structureChunk":
         subsequentOutputUnit.structureChunk,
@@ -113,11 +113,11 @@ exports.selectWordVersions = (
       subsequentOutputUnit.structureChunk.number.includes("plural")
     ) {
       if (subsequentOutputUnit.structureChunk.number.length > 1) {
-        clUtils.throw(
+        consol.throw(
           "#ERR pudk selectWordVersions. subsequentOutputUnit.structureChunk.number had length over 1."
         );
       }
-      clUtils.log(
+      consol.log(
         "fzxm selectWordVersions skipping pushSelectedWordToArray as plural noun means no indefinite article."
       );
       return true;
@@ -153,7 +153,7 @@ exports.selectWordVersions = (
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   let shouldConsoleLog = false;
 
-  clUtils.log(
+  consol.log(
     "[1;35m " + "ywzr ENG preprocessStructureChunks-------------------" + "[0m"
   );
 
@@ -176,7 +176,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
       }
     }
 
-    clUtils.log(
+    consol.log(
       "fydk ENG preprocessStructureChunks s'tructureChunk.worrdtype",
       gpUtils.getWorrdtypeStCh(structureChunk)
     );
@@ -203,7 +203,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
     }
   });
   if (shouldConsoleLog) {
-    clUtils.log("[1;35m " + "/ENG:preprocessStructureChunks" + "[0m");
+    consol.log("[1;35m " + "/ENG:preprocessStructureChunks" + "[0m");
   }
 };
 
@@ -218,7 +218,7 @@ exports.preprocessLemmaObjectsMajor = (
   matches.forEach((lObj) => {
     if (gpUtils.getWorrdtypeLObj(lObj) === "pronoun") {
       if (gpUtils.getWorrdtypeStCh(structureChunk) !== "pronoun") {
-        clUtils.throw(
+        consol.throw(
           "#ERR hcio preprocessLemmaObjectsMajor. lObj and stCh worrdtypes don't match."
         );
       }
@@ -246,7 +246,7 @@ exports.preprocessLemmaObjectsMinor = (matches) => {
       if (gpUtils.getWorrdtypeLObj(lObj, true) === "noun-person") {
         //bostonX
         if (!lObj.gender) {
-          clUtils.throw(
+          consol.throw(
             "#ERR vuww preprocessLemmaObjectsMinor. The lObj '" +
               lObj.id +
               "' is a noun-person so should have a gender key."
@@ -316,7 +316,7 @@ exports.addLanguageParticularClarifiers = (
         ) {
           let annotationValue = "past";
 
-          clUtils.log(
+          consol.log(
             "weaf ENG addLanguageParticularClarifiers------------------------------------------ADDED  CLARIFIER in Step 2, for Type 2 Syn",
             annotationValue
           );
@@ -334,11 +334,11 @@ exports.addLanguageParticularClarifiers = (
             structureChunk.number[0] === "singular"
           )
         ) {
-          clUtils.log("befx structureChunk", structureChunk);
-          clUtils.throw(666);
+          consol.log("befx structureChunk", structureChunk);
+          consol.throw(666);
           let annotationValue = "present";
 
-          clUtils.log(
+          consol.log(
             "befx ENG addLanguageParticularClarifiers------------------------------------------ADDED  CLARIFIER in Step 2, for Type 2 Syn",
             annotationValue
           );
@@ -385,7 +385,7 @@ exports.generateAdhocForms = (
     exports.addSpecialVerbForms(lObj, currentLanguage);
 
     structureChunk.form.forEach((selectedForm) => {
-      clUtils.log(
+      consol.log(
         "pqdw generateAdhocForms giving addToResArr this selectedWordArr",
         [lObj.inflections[selectedForm]]
       );
@@ -426,7 +426,7 @@ exports.generateAdhocForms = (
 
     let tenseDescriptionArr = [];
 
-    clUtils.log("xtsf structureChunk", structureChunk);
+    consol.log("xtsf structureChunk", structureChunk);
 
     structureChunk.tenseDescription.forEach((tenseDescription) => {
       if (["past", "present", "future"].includes(tenseDescription)) {
@@ -438,7 +438,7 @@ exports.generateAdhocForms = (
       }
     });
 
-    clUtils.log("cesb tenseDescriptionArr", tenseDescriptionArr);
+    consol.log("cesb tenseDescriptionArr", tenseDescriptionArr);
 
     function fetchTenseDescription(
       dataToUpdateWith,
@@ -513,7 +513,7 @@ exports.generateAdhocForms = (
       );
     }
 
-    clUtils.log("jpvb", {
+    consol.log("jpvb", {
       "structureChunk.person": structureChunk.person,
       "structureChunk.number": structureChunk.number,
       tenseDescriptionArr,
@@ -546,7 +546,7 @@ exports.generateAdhocForms = (
 
             let tense = tenseDescription.split(" ")[0];
 
-            clUtils.log(
+            consol.log(
               "wmcp generateAdhocForms giving addToResArr this selectedWordArr",
               [be[tense][person][number]]
             );
@@ -589,7 +589,7 @@ exports.generateAdhocForms = (
     structureChunk,
     dataToUpdateWith
   ) {
-    clUtils.log("htrt addToResArr START selectedWordArr", selectedWordArr);
+    consol.log("htrt addToResArr START selectedWordArr", selectedWordArr);
 
     let structureChunkCopy = uUtils.copyWithoutReference(structureChunk);
 

@@ -1,6 +1,6 @@
 const frUtils = require("./formattingResponseUtils.js");
 const uUtils = require("./universalUtils.js");
-const clUtils = require("./zerothOrder/consoleLoggingUtils.js");
+const consol = require("./zerothOrder/consoleLoggingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 
 exports.finishAndSend = (
@@ -50,7 +50,7 @@ exports.createOutputUnit = (
   drillPathTertiary
 ) => {
   if (errorInDrilling || !selectedWord) {
-    clUtils.log(
+    consol.log(
       "acsm createOutputUnit errorInSentenceCreation.errorMessage: A lemma object was indeed selected, but no word was found at the end of the give inflection chain."
     );
     errorInSentenceCreation.errorMessage = [
@@ -84,7 +84,7 @@ exports.pushSelectedWordToArray = (
   annoObj,
   structureChunk
 ) => {
-  clUtils.log(
+  consol.log(
     "[1;30m " + `esbq pushSelectedWordToArray-----------------with args:` + "[0m",
     {
       key,
@@ -100,26 +100,26 @@ exports.pushSelectedWordToArray = (
     annoObj,
     structureChunk
   ) {
-    clUtils.log(`vprr addAnnotationsAndPush "${wordInOwnArr}"`);
+    consol.log(`vprr addAnnotationsAndPush "${wordInOwnArr}"`);
     if (annoObj && Object.values(annoObj).length) {
       if (wordInOwnArr.length !== 1) {
-        clUtils.throw(
+        consol.throw(
           `vpra #ERR addAnnotationsAndPush. To add annotation from [${Object.values(
             annoObj
           )}] but there are multiple/none selected words: [${wordInOwnArr}].`
         );
       }
 
-      clUtils.log("vpre addAnnotationsAndPush. annoObj is " + annoObj);
+      consol.log("vpre addAnnotationsAndPush. annoObj is " + annoObj);
 
       if (structureChunk.educatorBlocksAnnotationsForTheseFeatures) {
-        clUtils.log(
+        consol.log(
           `vpri addAnnotationsAndPush will not add clarifiers [${Object.values(
             annoObj
           )}] as "educatorBlocksAnnotationsForTheseFeatures" true.`
         );
       } else {
-        clUtils.log(
+        consol.log(
           "vpro pushSelectedWordToArray addAnnotationsAndPush. Adding these annotations:" +
             Object.values(annoObj).join(", ")
         );
@@ -127,14 +127,14 @@ exports.pushSelectedWordToArray = (
         wordInOwnArr[0] += ` (${Object.values(annoObj).join(", ")})`;
       }
     } else {
-      clUtils.log("vpru addAnnotationsAndPush. No annoObj");
+      consol.log("vpru addAnnotationsAndPush. No annoObj");
     }
 
     selectedWordsArr.push(wordInOwnArr);
   }
 
   if (key === "string") {
-    clUtils.log(
+    consol.log(
       "[1;30m " + `uufy pushSelectedWordToArray Pushing "${selectedWord}"` + "[0m"
     );
 
@@ -148,7 +148,7 @@ exports.pushSelectedWordToArray = (
   }
 
   if (key === "array") {
-    clUtils.log(
+    consol.log(
       "[1;30m " + `uufy pushSelectedWordToArray Pushing "${selectedWord}"` + "[0m"
     );
     addAnnotationsAndPush(
@@ -161,26 +161,26 @@ exports.pushSelectedWordToArray = (
   }
 
   if (!selectedWord[key]) {
-    clUtils.throw(
+    consol.throw(
       `#ERR rgxc selectWordVersions. Could not find key "${key}" on selectedWord.`
     );
   }
 
   if (!Array.isArray(selectedWord[key])) {
-    clUtils.log("vcxx selectWordVersions", {
+    consol.log("vcxx selectWordVersions", {
       selectedWord,
       "selectedWord[key]": selectedWord[key],
     });
-    clUtils.throw(
+    consol.throw(
       "vcxx selectWordVersions Value inside tobj should have been array."
     );
   }
 
   if (!selectedWord[key]) {
-    clUtils.throw("#ERR ztgp selectWordVersions. selectedWord[key] was falsy.");
+    consol.throw("#ERR ztgp selectWordVersions. selectedWord[key] was falsy.");
   }
 
-  clUtils.log(
+  consol.log(
     "[1;30m " + `oqij selectWordVersions Pushing arr "${selectedWord[key]}"` + "[0m"
   );
   addAnnotationsAndPush(

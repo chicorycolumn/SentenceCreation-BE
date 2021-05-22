@@ -1,6 +1,6 @@
 const gpUtils = require("../generalPurposeUtils.js");
 const uUtils = require("../universalUtils.js");
-const clUtils = require("../zerothOrder/consoleLoggingUtils.js");
+const consol = require("../zerothOrder/consoleLoggingUtils.js");
 const otUtils = require("../objectTraversingUtils.js");
 const refObj = require("./referenceObjects.js");
 const refFxn = require("./referenceFunctions.js");
@@ -18,12 +18,12 @@ exports.getStructureChunkFeatures = (currentLanguage) => {
 exports.removeIncompatibleFeatures = (currentLanguage, structureChunk) => {
   //VITO-TEMP-removeIncompatibleFeatures
 
-  clUtils.log(311, structureChunk);
+  consol.log(311, structureChunk);
   //(note, the two stChs in args are likely the same stCh, but best to do as their names suggest)
 
   //ACX3A: If npe then remove neuter from gender.
   if (gpUtils.getWorrdtypeStCh(structureChunk, true) === "noun-person") {
-    clUtils.log(
+    consol.log(
       "vvvx removeIncompatibleFeatures. Removing 'n' if present as is noun-person."
     );
     structureChunk.gender = structureChunk.gender.filter(
@@ -36,7 +36,7 @@ exports.removeIncompatibleFeatures = (currentLanguage, structureChunk) => {
     structureChunk.person &&
     !structureChunk.person.filter((value) => value !== "1per").length
   ) {
-    clUtils.log(
+    consol.log(
       "vvvy removeIncompatibleFeatures. Removing 'n' if present as only person value is '1per'."
     );
     structureChunk.gender = structureChunk.gender.filter(
@@ -49,8 +49,8 @@ exports.removeIncompatibleFeatures = (currentLanguage, structureChunk) => {
 
   let incompatibleFeaturesRef = refObj.incompatibleFeaturesRef[currentLanguage];
 
-  clUtils.log({ currentLanguage });
-  clUtils.log({ incompatibleFeaturesRef });
+  consol.log({ currentLanguage });
+  consol.log({ incompatibleFeaturesRef });
 
   Object.keys(structureChunk).forEach((traitKeyy) => {
     //eg traitKeyy = "gender"
@@ -66,7 +66,7 @@ exports.removeIncompatibleFeatures = (currentLanguage, structureChunk) => {
           structureChunk[traitKeyyToCheckBy].length
         ) {
           if (structureChunk[traitKeyyToCheckBy].length > 1) {
-            clUtils.throw(
+            consol.throw(
               `ckos Unsure how to handle multiple values for ${traitKeyyToCheckBy}`
             );
           }
@@ -96,7 +96,7 @@ exports.removeIncompatibleFeatures = (currentLanguage, structureChunk) => {
     );
   });
 
-  clUtils.log(315, structureChunk);
+  consol.log(315, structureChunk);
   return structureChunk;
 };
 
@@ -171,7 +171,7 @@ exports.validFeaturesOfStructureChunkWordtype = (
 
     if (additionalValidFeatures) {
       if (!Array.isArray(additionalValidFeatures)) {
-        clUtils.throw(
+        consol.throw(
           "twnl additionalValidFeatures in isValidFeatureOfStructureChunkWordtype fxn should have been array."
         );
       }

@@ -4,7 +4,7 @@ const chai = require("chai");
 const { expect } = require("chai");
 const gpUtils = require("../utils/generalPurposeUtils.js");
 const uUtils = require("../utils/universalUtils.js");
-const clUtils = require("../utils/zerothOrder/consoleLoggingUtils.js");
+const consol = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const { it } = require("mocha");
 const testingUtils = require("../utils/secondOrder/testingUtils.js");
 const { generalTranslatedSentencesRef } = testingUtils;
@@ -535,7 +535,7 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
-          clUtils.log(res.body);
+          consol.log(res.body);
 
           expect([
             "Ja mam moją cebulę.",
@@ -562,7 +562,7 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
-          clUtils.log(res.body);
+          consol.log(res.body);
 
           expect([
             "I have my onion.",
@@ -820,7 +820,7 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
-          clUtils.log(res.body);
+          consol.log(res.body);
 
           expect([
             "Mój ojciec dał mi jego książkę.",
@@ -846,7 +846,7 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
-          clUtils.log(res.body);
+          consol.log(res.body);
 
           expect([
             "My father gave me his book.",
@@ -1968,7 +1968,7 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
-          clUtils.log(res.body);
+          consol.log(res.body);
           expect(res.body.questionSentenceArr).to.have.length(1);
           expect(res.body.questionSentenceArr[0]).to.equal("I.");
         });
@@ -1986,7 +1986,7 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
-          clUtils.log(res.body);
+          consol.log(res.body);
           expect(res.body.questionSentenceArr).to.have.length(1);
           expect(res.body.questionSentenceArr[0]).to.equal("Ja.");
         });
@@ -2005,7 +2005,7 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
-          clUtils.log(res.body);
+          consol.log(res.body);
           expect(res.body.questionSentenceArr).to.have.length(1);
           expect(res.body.questionSentenceArr[0]).to.equal("Ja.");
           expect(res.body.answerSentenceArr).to.have.members(["I."]);
@@ -2025,7 +2025,7 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
-          clUtils.log(res.body);
+          consol.log(res.body);
           expect(res.body.questionSentenceArr).to.have.length(1);
           expect(res.body.questionSentenceArr[0]).to.equal("I.");
           expect(res.body.answerSentenceArr).to.have.members(["Ja."]);
@@ -2542,7 +2542,7 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
-          clUtils.log(res.body);
+          consol.log(res.body);
           let { questionSentenceArr, answerSentenceArr } = res.body;
           expect(["Czerwone drzwi."]).to.include(questionSentenceArr[0]);
           expect(answerSentenceArr).to.have.members([
@@ -2564,7 +2564,7 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
-          clUtils.log(res.body);
+          consol.log(res.body);
           let { questionSentenceArr, answerSentenceArr } = res.body;
           expect(["Red door."]).to.include(questionSentenceArr[0]);
           expect(answerSentenceArr).to.have.members(["Czerwone drzwi."]);
@@ -2583,7 +2583,7 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
-          clUtils.log(res.body);
+          consol.log(res.body);
           let { questionSentenceArr, answerSentenceArr } = res.body;
           expect(["Red door.", "Red doors."]).to.includes(
             questionSentenceArr[0]
@@ -2644,7 +2644,7 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
-          clUtils.log(res.body);
+          consol.log(res.body);
           let ref = [
             {
               ENG: "If you write a book , I will research it.",
@@ -4526,7 +4526,7 @@ function checkSentenceTranslations(
     );
   }
 
-  clUtils.log(res.body);
+  consol.log(res.body);
 
   let questionSentence = body.questionSentenceArr[0];
   let { answerSentenceArr } = body;
@@ -4546,20 +4546,20 @@ function checkSentenceTranslations(
 
     if (questionSentence === POL) {
       expect(answerSentenceArr).to.have.members(ENG);
-      clUtils.log(
+      consol.log(
         `-' '-._,-' '-._,-' '-._,-' '-._,-' '-._,-' '-._${questionSentence}`
       );
-      clUtils.log(
+      consol.log(
         "was translated by,-'-._,-' '-._,-' '-._,-'-._,",
         answerSentenceArr
       );
     }
     if (questionSentence === ENG) {
       expect(answerSentenceArr).to.have.members(POL);
-      clUtils.log(
+      consol.log(
         `-' '-._,-' '-._,-' '-._,-' '-._,-' '-._,-' '-._${questionSentence}`
       );
-      clUtils.log(
+      consol.log(
         "  was translated by`-' '-._,-' '-._,-' '-._,-'",
         answerSentenceArr
       );

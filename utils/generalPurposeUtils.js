@@ -1,5 +1,5 @@
 const uUtils = require("./universalUtils.js");
-const clUtils = require("./zerothOrder/consoleLoggingUtils.js");
+const consol = require("./zerothOrder/consoleLoggingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 
 exports.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual =
@@ -86,7 +86,7 @@ exports.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual
                   uUtils.areTwoObjectsEqual(valueFromA, valueFromB)
               );
             } else {
-              clUtils.throw(
+              consol.throw(
                 `erql areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual. Unexpected typeof for a selected words array value "${typeof valueFromA}".`
               );
             }
@@ -136,14 +136,14 @@ exports.copyAndCombineWordbanks = (wordbank1, wordbank2) => {
 
   Object.keys(wordbank1Copy).forEach((key) => {
     if (!wordbank2Copy[key]) {
-      clUtils.log(
+      consol.log(
         "[1;31m " +
           `udhd gp:copyAndCombineWordbanks #NB: wordbank2 does not have key "${key}" but wordbank1 does.` +
           "[0m"
       );
     }
     if (wordbank2Copy[key] && !Array.isArray(wordbank2Copy[key])) {
-      clUtils.throw(
+      consol.throw(
         `#ERR cocq gp:copyAndCombineWordbanks. wordbank2 key "${key}" holds non array value.`
       );
     }
@@ -155,7 +155,7 @@ exports.copyAndCombineWordbanks = (wordbank1, wordbank2) => {
 };
 
 exports.explodeOutputArraysByHeadsAndDependents = (justOneOutputArray) => {
-  clUtils.log(
+  consol.log(
     "mdpu explodeOutputArraysByHeadsAndDependents START. justOneOutputArray"
   );
 
@@ -312,7 +312,7 @@ exports.getWorrdtypeLObj = (lObj, returnFullWordtype) => {
   let wordtypeRef = refObj.wordtypeShorthandTranslation;
 
   if (!Object.keys(wordtypeRef).includes(wordtypeShorthand)) {
-    clUtils.throw(
+    consol.throw(
       `#ERR hshc getWorrdtypeLObj. Called with lObj of lObj.id: "${lObj.id}"`
     );
   }
@@ -328,7 +328,7 @@ exports.getWorrdtypeStCh = (stCh, returnFullWordtype) => {
   let fullWordtype = refObj.wordtypeShorthandTranslation[wordtypeShorthand];
 
   if (!fullWordtype) {
-    clUtils.throw(
+    consol.throw(
       `#ERR bsov getWorrdtypeStCh. wordtypeShorthand "${stCh.chunkId}" had no translated wordtype.`
     );
   }
@@ -347,7 +347,7 @@ exports.getWorrdtypeAgree = (
   let wordtypeShorthand = structureChunk[agreeWithKey].split("-")[0];
 
   if (!Object.keys(wordtypeRef).includes(wordtypeShorthand)) {
-    clUtils.throw(
+    consol.throw(
       `#ERR xafb getWorrdtypeLObj. Object.keys(wordtypeRef) did not include wordtypeShorthand: "${wordtypeShorthand}"`
     );
   }
@@ -437,7 +437,7 @@ exports.lObjIsMGN = (lObj) => {
     (testResults[0] && !testResults[1]) ||
     (!testResults[0] && testResults[1])
   ) {
-    clUtils.throw(`sjie lObjIsMGN.`);
+    consol.throw(`sjie lObjIsMGN.`);
   }
 
   return testResults[0];

@@ -3,7 +3,7 @@ const chai = require("chai");
 const { expect } = require("chai");
 const gpUtils = require("../generalPurposeUtils.js");
 const uUtils = require("../universalUtils.js");
-const clUtils = require("../zerothOrder/consoleLoggingUtils.js");
+const consol = require("../zerothOrder/consoleLoggingUtils.js");
 const { it } = require("mocha");
 const testingUtils = require("./testingUtils.js");
 
@@ -796,12 +796,12 @@ exports.checkTranslationsOfGivenRef = (
 ) => {
   let testActivated = false;
 
-  clUtils.log(res.body);
+  consol.log(res.body);
 
   let { questionSentenceArr, answerSentenceArr } = res.body;
 
   if (questionSentenceArr.length > 1) {
-    clUtils.throw(
+    consol.throw(
       "scey testingutils > checkTranslationsOfGivenRef says questionSentenceArr length over 1"
     );
   }

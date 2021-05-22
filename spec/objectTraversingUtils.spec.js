@@ -384,7 +384,7 @@ xdescribe("findSynhomographs", () => {
       }
     });
 
-    clUtils.log(actual);
+    consol.log(actual);
     expect(actual).to.eql(expected);
   });
   it("#otu4.2 Produces synhomographs when one pair present in one lemmaObject.", () => {
@@ -445,7 +445,7 @@ xdescribe("findSynhomographs", () => {
         actual.push(res);
       }
     });
-    clUtils.log(actual);
+    consol.log(actual);
     expect(actual).to.eql(expected);
   });
   it("#otu4.3 Produces synhomographs when multiple pairs present in one lemmaObject.", () => {
@@ -524,7 +524,7 @@ xdescribe("findSynhomographs", () => {
         actual.push(res);
       }
     });
-    clUtils.log(actual);
+    consol.log(actual);
     expect(actual).to.eql(expected);
   });
   it("#otu4.4 Produces synhomographs when multiple pairs present in multiple lemmaObjects.", () => {
@@ -649,7 +649,7 @@ xdescribe("findSynhomographs", () => {
         actual.push(res);
       }
     });
-    clUtils.log(actual);
+    consol.log(actual);
     expect(actual).to.eql(expected);
   });
 });
@@ -969,8 +969,8 @@ xdescribe("extractNestedRoutes", () => {
       ["plural", "loc"],
     ];
     const actual = extractNestedRoutes(input).routesByNesting;
-    clUtils.log("---------------------------------");
-    clUtils.log(actual);
+    consol.log("---------------------------------");
+    consol.log(actual);
     expect(actual).to.eql(expected);
   });
   it("#otu1.1f Returns key routes when some values are arrays and should not be mapped out.", () => {
@@ -1041,7 +1041,7 @@ xdescribe("extractNestedRoutes", () => {
     ];
 
     let actual = giveRoutesAndTerminalValuesFromObject(input.inflections);
-    clUtils.log(actual);
+    consol.log(actual);
     expect(actual).to.eql(expected);
   });
   it("#otu1.2b get routes from read.", () => {
@@ -1074,7 +1074,7 @@ xdescribe("extractNestedRoutes", () => {
     ];
 
     let actual = giveRoutesAndTerminalValuesFromObject(input.inflections);
-    clUtils.log(actual);
+    consol.log(actual);
     expect(actual).to.eql(expected);
   });
   it("#otu1.2b get routes from read.", () => {
@@ -1107,7 +1107,7 @@ xdescribe("extractNestedRoutes", () => {
     ];
 
     let actual = giveRoutesAndTerminalValuesFromObject(input.inflections);
-    clUtils.log(actual);
+    consol.log(actual);
     expect(actual).to.eql(expected);
   });
   it("#otu1.3a get routes from tObj.", () => {
@@ -1135,7 +1135,7 @@ xdescribe("extractNestedRoutes", () => {
     };
 
     let actual = extractNestedRoutes(input.inflections);
-    clUtils.log(actual);
+    consol.log(actual);
     expect(actual).to.eql(expected);
   });
   it("#otu1.3b get routes from tObj.", () => {
@@ -1163,7 +1163,7 @@ xdescribe("extractNestedRoutes", () => {
     ];
 
     let actual = giveRoutesAndTerminalValuesFromObject(input.inflections);
-    clUtils.log(actual);
+    consol.log(actual);
     expect(actual).to.eql(expected);
   });
 });

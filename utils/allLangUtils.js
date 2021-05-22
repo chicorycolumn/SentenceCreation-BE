@@ -2,7 +2,7 @@ const refObj = require("../utils/reference/referenceObjects.js");
 const refFxn = require("../utils/reference/referenceFunctions.js");
 const gpUtils = require("../utils/generalPurposeUtils.js");
 const uUtils = require("../utils/universalUtils.js");
-const clUtils = require("../utils/zerothOrder/consoleLoggingUtils.js");
+const consol = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 
 exports.translateAnnotationValue = (
@@ -17,7 +17,7 @@ exports.translateAnnotationValue = (
   if (annotationKey === "gender") {
     if (structureChunk.number) {
       if (structureChunk.number.length > 1) {
-        clUtils.throw("cshb #ERR ALL:translateAnnotationValue.");
+        consol.throw("cshb #ERR ALL:translateAnnotationValue.");
       }
 
       const pluralVirilityAndSingularConversionRef =
@@ -27,7 +27,7 @@ exports.translateAnnotationValue = (
         if (
           !pluralVirilityAndSingularConversionRef["plural"][annotationValue]
         ) {
-          clUtils.throw(
+          consol.throw(
             "mkow #ERR ALL:translateAnnotationValue. Could not convert virility of annotationValue: " +
               annotationValue
           );
@@ -57,7 +57,7 @@ exports.adjustVirilityOfStructureChunk = (
   retainOriginals,
   consoleLogLabel
 ) => {
-  clUtils.log("gxow ALL adjustVirilityOfStructureChunk", consoleLogLabel, {
+  consol.log("gxow ALL adjustVirilityOfStructureChunk", consoleLogLabel, {
     retainOriginals,
   });
 
@@ -66,14 +66,14 @@ exports.adjustVirilityOfStructureChunk = (
     return;
   }
 
-  clUtils.log(
+  consol.log(
     "[1;35m " +
       "svpi ALL adjustVirilityOfStructureChunk " +
       structureChunk.chunkId +
       "[0m"
   );
 
-  clUtils.log(
+  consol.log(
     "[1;35m " +
       "svpi ALL adjustVirilityOfStructureChunk structureChunk start as being:" +
       "[0m",
@@ -83,14 +83,14 @@ exports.adjustVirilityOfStructureChunk = (
   let { gender, number } = structureChunk;
 
   if (!number || !number.includes("plural")) {
-    clUtils.log(
+    consol.log(
       "clsq ALL adjustVirilityOfStructureChunk Aborting because Number"
     );
     return;
   }
 
   if (!gender || !gender.length) {
-    clUtils.log(
+    consol.log(
       "vlca ALL adjustVirilityOfStructureChunk Aborting because Gender"
     );
     return;
@@ -98,7 +98,7 @@ exports.adjustVirilityOfStructureChunk = (
 
   if (/all.*/.test(gender)) {
     if (gender.length !== 1) {
-      clUtils.throw(
+      consol.throw(
         `#ERR vcvl ALL:adjustVirilityOfStructureChunk. Gender arr contained a metaGender, that's fine, but it contained other values too? That's too much. "${gender.toString()}"`
       );
     }
@@ -119,7 +119,7 @@ exports.adjustVirilityOfStructureChunk = (
 
   if (number.includes("plural")) {
     gender.forEach((genderValue) => {
-      clUtils.log("ksdx ALL adjustVirilityOfStructureChunk", { genderValue });
+      consol.log("ksdx ALL adjustVirilityOfStructureChunk", { genderValue });
 
       newGenderArray = [
         ...newGenderArray,
@@ -135,7 +135,7 @@ exports.adjustVirilityOfStructureChunk = (
 
   structureChunk.gender = newGenderArrayTrimmed;
 
-  clUtils.log(
+  consol.log(
     "[1;35m " +
       "hutf ALL adjustVirilityOfStructureChunk structureChunk ends up being:" +
       "[0m",
@@ -148,7 +148,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
 
   let shouldConsoleLog = false;
   if (shouldConsoleLog) {
-    clUtils.log(
+    consol.log(
       "[1;35m " + "hqij ALL preprocessStructureChunks-------------------" + "[0m"
     );
   }
@@ -172,7 +172,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
     }
 
     if (shouldConsoleLog) {
-      clUtils.log(
+      consol.log(
         "zesx ALL preprocessStructureChunks At first the structureChunk is",
         structureChunk
       );
@@ -285,7 +285,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
     );
 
     if (shouldConsoleLog) {
-      clUtils.log(
+      consol.log(
         "gsgl ALL preprocessStructureChunks Finally the structureChunk is",
         structureChunk
       );
@@ -293,7 +293,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   });
 
   if (shouldConsoleLog) {
-    clUtils.log("[1;35m " + "/ALL preprocessStructureChunks" + "[0m");
+    consol.log("[1;35m " + "/ALL preprocessStructureChunks" + "[0m");
   }
 };
 
@@ -324,7 +324,7 @@ exports.convertMetaFeatures = (sourceObjectArray, currentLanguage, objType) => {
       if (objType === "lObj") {
         Object.keys(metaFeatureRef).forEach((metaFeature) => {
           if (/_/.test(metaFeature)) {
-            clUtils.log(
+            consol.log(
               `tkga ALL convertMetaFeatures Hereby changing metaFeature "${metaFeature}" to "${
                 metaFeature.split("_")[0]
               }"`
@@ -354,7 +354,7 @@ exports.convertMetaFeatures = (sourceObjectArray, currentLanguage, objType) => {
 
           currentValueArr.forEach((value) => {
             if (/_/.test(value)) {
-              clUtils.log(
+              consol.log(
                 `veeo ALL convertMetaFeatures Thereby changing metaFeature "${value}" to "${
                   value.split("_")[0]
                 }"`
@@ -370,7 +370,7 @@ exports.convertMetaFeatures = (sourceObjectArray, currentLanguage, objType) => {
           });
 
           sourceObject[featureKey] = newValueArr;
-          clUtils.log("oiiw ALL convertMetaFeatures", objType, { newValueArr });
+          consol.log("oiiw ALL convertMetaFeatures", objType, { newValueArr });
         }
       }
     });
@@ -379,11 +379,11 @@ exports.convertMetaFeatures = (sourceObjectArray, currentLanguage, objType) => {
 
 exports.decantMGNsInOutputArray = (questionOutputArr, currentLanguage) => {
   //unused
-  clUtils.log("[1;35m " + "------------decantMGNsInOutputArray" + "[0m");
-  clUtils.log(
+  consol.log("[1;35m " + "------------decantMGNsInOutputArray" + "[0m");
+  consol.log(
     "qnzm decantMGNsInOutputArray At the start, questionOutputArr is:"
   );
-  clUtils.consoleLogObjectAtTwoLevels(
+  consol.consoleLogObjectAtTwoLevels(
     questionOutputArr,
     "ALL:decantMGNsInOutputArray"
   );
@@ -418,7 +418,7 @@ exports.decantMGNsInOutputArray = (questionOutputArr, currentLanguage) => {
             ...metaFeatureRef[selectedMetaFeature.split("_")[0]],
           ];
 
-          clUtils.log("mcxr decantMGNsInOutputArray", {
+          consol.log("mcxr decantMGNsInOutputArray", {
             adjustedFeatureValueArr,
           });
 
@@ -426,20 +426,20 @@ exports.decantMGNsInOutputArray = (questionOutputArr, currentLanguage) => {
             uUtils.selectRandom(adjustedFeatureValueArr),
           ];
 
-          clUtils.log("lukh decantMGNsInOutputArray", {
+          consol.log("lukh decantMGNsInOutputArray", {
             "structureChunk[featureKey]": structureChunk[featureKey],
           });
         }
       }
 
-      clUtils.log(
+      consol.log(
         "eldc decantMGNsInOutputArray In the end, structureChunk is:",
         structureChunk
       );
     });
   });
 
-  clUtils.log("[1;35m " + "/decantMGNsInOutputArray" + "[0m");
+  consol.log("[1;35m " + "/decantMGNsInOutputArray" + "[0m");
 };
 
 exports.decantMGNsBeforeFetchingOutputArray = (
@@ -459,20 +459,20 @@ exports.decantMGNsBeforeFetchingOutputArray = (
         .validFeaturesOfStructureChunkWordtype(currentLanguage, structureChunk)
         .includes("gender")
     ) {
-      clUtils.throw(
+      consol.throw(
         `wpoh lObj has metagender, but gender is not an appropriate feature for this stCh wordtype?`
       );
     }
   }
 
-  clUtils.log(
+  consol.log(
     `jowc correctMGNsBeforeFetchingOutputArray. ${structureChunk.chunkId} ${currentLanguage}. stCh.gender STARTS as:`,
     structureChunk.gender
   );
 
   structureChunk.gender = [uUtils.selectRandom(structureChunk.gender)];
 
-  clUtils.log(
+  consol.log(
     `jowd correctMGNsBeforeFetchingOutputArray. ${structureChunk.chunkId} ${currentLanguage}. stCh.gender ENDS as:`,
     structureChunk.gender
   );
@@ -489,7 +489,7 @@ exports.correctMGNsBeforeFetchingOutputArray = (
       !selectedLemmaObject.gender ||
       !gpUtils.featureValueIsMeta(selectedLemmaObject.gender)
     ) {
-      clUtils.log("neem");
+      consol.log("neem");
       return;
     }
     if (
@@ -497,12 +497,12 @@ exports.correctMGNsBeforeFetchingOutputArray = (
         .validFeaturesOfStructureChunkWordtype(currentLanguage, structureChunk)
         .includes("gender")
     ) {
-      clUtils.throw(
+      consol.throw(
         `wpoh lObj has metagender, but gender is not an appropriate feature for this stCh wordtype?`
       );
     }
 
-    clUtils.log(
+    consol.log(
       `wpoi correctMGNsBeforeFetchingOutputArray. ${structureChunk.chunkId} ${currentLanguage}. stCh STARTS as:`,
       structureChunk
     );
@@ -512,7 +512,7 @@ exports.correctMGNsBeforeFetchingOutputArray = (
   let lObjMetagender = selectedLemmaObject.gender;
 
   if (!structureChunk.number || !structureChunk.number.length) {
-    clUtils.throw(
+    consol.throw(
       "wpoj Cannot correctMetagenderByNumberInMGNs with no number key."
     );
   }
@@ -521,7 +521,7 @@ exports.correctMGNsBeforeFetchingOutputArray = (
     structureChunk.number = [uUtils.selectRandom(structureChunk.number)];
   }
 
-  clUtils.log(
+  consol.log(
     `wpok correctMetagenderByNumberInMGNs. "${structureChunk.chunkId}" has gender "${structureChunk.gender}", while selectedLemmaObject gender is "${lObjMetagender}".`
   );
 
@@ -533,7 +533,7 @@ exports.correctMGNsBeforeFetchingOutputArray = (
       obj.condition.number === structureChunk.number[0]
   ).changeRef;
 
-  clUtils.log(
+  consol.log(
     `wpol correctMetagenderByNumberInMGNs. "${structureChunk.number[0]}" changeRef is:`,
     metagenderCorrectedByNumberRef
   );
@@ -556,7 +556,7 @@ exports.correctMGNsBeforeFetchingOutputArray = (
     structureChunk.gender = convertedLObjMetagenderArr.slice(0);
   }
 
-  clUtils.log(
+  consol.log(
     `wpon correctMGNsBeforeFetchingOutputArray. ${structureChunk.chunkId} ${currentLanguage}. stCh ENDS as:`,
     structureChunk
   );

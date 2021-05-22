@@ -1,4 +1,4 @@
-const clUtils = require("../utils/zerothOrder/consoleLoggingUtils.js");
+const consol = require("../utils/zerothOrder/consoleLoggingUtils.js");
 
 exports.myErrMsgs = {
   400: "400 Bad request: Generic error message.",
@@ -26,7 +26,7 @@ exports.myErrMsgs = {
 const myErrMsgs = exports.myErrMsgs;
 
 exports.handleCustomErrors = (err, req, res, next) => {
-  clUtils.log("handleCustomErrors fxn says error status is " + err.status);
+  consol.log("handleCustomErrors fxn says error status is " + err.status);
   if (err.status !== undefined) {
     if (err.customStatus !== undefined) {
       res.status(err.status).send({ msg: myErrMsgs[err.customStatus] });

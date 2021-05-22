@@ -1,6 +1,6 @@
 const gpUtils = require("./generalPurposeUtils.js");
 const uUtils = require("./universalUtils.js");
-const clUtils = require("./zerothOrder/consoleLoggingUtils.js");
+const consol = require("./zerothOrder/consoleLoggingUtils.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
 const frUtils = require("./formattingResponseUtils.js");
 const refObj = require("./reference/referenceObjects.js");
@@ -17,7 +17,7 @@ exports.findMatchingLemmaObjectThenWord = (
   outputArray,
   isPHD
 ) => {
-  clUtils.log(
+  consol.log(
     "[1;33m " +
       `ligw ot:findMatchingLemmaObjectThenWord for stCh: "${structureChunk.chunkId}"` +
       "[0m"
@@ -35,7 +35,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
   //STEP ONE: Fx-PW: Pathway for Fixed pieces.
   if (gpUtils.getWorrdtypeStCh(structureChunk) === "fixed") {
-    clUtils.consoleLogPW("##Fx-PW", structureChunk, multipleMode);
+    consol.consoleLogPW("##Fx-PW", structureChunk, multipleMode);
 
     return [
       {
@@ -54,7 +54,7 @@ exports.findMatchingLemmaObjectThenWord = (
   let matches = [];
 
   if (structureChunk.specificIds && structureChunk.specificIds.length) {
-    clUtils.log(
+    consol.log(
       "obbm ot:findMatchingLemmaObjectThenWord GGGet matches by specific IDs:",
       structureChunk.specificIds
     );
@@ -62,7 +62,7 @@ exports.findMatchingLemmaObjectThenWord = (
       structureChunk.specificIds.includes(lObj.id)
     );
     if (!matches.length) {
-      clUtils.log(
+      consol.log(
         "[1;31m " +
           `czdi ot:findMatchingLemmaObjectThenWord No matches after Get matches by specific IDs.` +
           "[0m"
@@ -72,11 +72,11 @@ exports.findMatchingLemmaObjectThenWord = (
     structureChunk.specificLemmas &&
     structureChunk.specificLemmas.length
   ) {
-    clUtils.log(
+    consol.log(
       "yyeq ot:findMatchingLemmaObjectThenWord GGGet matches by specific Lemmas:",
       structureChunk.specificLemmas
     );
-    clUtils.log(
+    consol.log(
       "yyeq ot:findMatchingLemmaObjectThenWord source",
       source.map((lObj) => lObj.lemma)
     );
@@ -84,20 +84,20 @@ exports.findMatchingLemmaObjectThenWord = (
       structureChunk.specificLemmas.includes(lObj.lemma)
     );
     if (!matches.length) {
-      clUtils.log(
+      consol.log(
         "[1;31m " +
           `jybt ot:findMatchingLemmaObjectThenWord No matches after Get matches by specific Lemmas.` +
           "[0m"
       );
     }
   } else {
-    clUtils.log(
+    consol.log(
       "vqkx ot:findMatchingLemmaObjectThenWord GGGet matches by Tags and Selectors."
     );
     matches = lfUtils.filterByAndTagsAndOrTags(source, structureChunk);
 
     if (!matches.length) {
-      clUtils.log(
+      consol.log(
         "[1;31m " +
           `wvjy ot:findMatchingLemmaObjectThenWord No matches after Get matches by Tags. Eg you may have put multiple unfulfillable andTags?` +
           "[0m"
@@ -114,7 +114,7 @@ exports.findMatchingLemmaObjectThenWord = (
     );
 
     if (!matches.length) {
-      clUtils.log(
+      consol.log(
         "[1;31m " +
           `frpb ot:findMatchingLemmaObjectThenWord No matches after Get matches by Selectors.` +
           "[0m"
@@ -149,7 +149,7 @@ exports.findMatchingLemmaObjectThenWord = (
       )
     )
   ) {
-    clUtils.consoleLogPW("##Ad-PW-F", structureChunk, multipleMode);
+    consol.consoleLogPW("##Ad-PW-F", structureChunk, multipleMode);
 
     if (multipleMode) {
       matches.forEach((selectedLemmaObject) => {
@@ -222,7 +222,7 @@ exports.findMatchingLemmaObjectThenWord = (
         structureChunk[adhocInflectorKey] &&
         structureChunk[adhocInflectorKey].length
       ) {
-        clUtils.consoleLogPW("##Ad-PW-I", structureChunk, multipleMode);
+        consol.consoleLogPW("##Ad-PW-I", structureChunk, multipleMode);
 
         if (multipleMode) {
           matches.forEach((selectedLemmaObject) => {
@@ -303,7 +303,7 @@ exports.findMatchingLemmaObjectThenWord = (
           );
 
           if (requestedUninflectedForms.length) {
-            clUtils.consoleLogPW("##Un-PW", structureChunk, multipleMode);
+            consol.consoleLogPW("##Un-PW", structureChunk, multipleMode);
 
             if (multipleMode) {
               requestedUninflectedForms.forEach((selectedUninflectedForm) => {
@@ -327,7 +327,7 @@ exports.findMatchingLemmaObjectThenWord = (
                     gpUtils.isTerminusObject(selectedWordArr) &&
                     !selectedWordArr.processOnlyAtEnd
                   ) {
-                    clUtils.throw(
+                    consol.throw(
                       "bnle ot:findMatching Natasha, action required."
                     );
                   }
@@ -381,7 +381,7 @@ exports.findMatchingLemmaObjectThenWord = (
                 gpUtils.isTerminusObject(selectedWordArr) &&
                 !selectedWordArr.processOnlyAtEnd
               ) {
-                clUtils.throw(
+                consol.throw(
                   "wrha findMatching Natasha, some action required."
                 );
               }
@@ -412,7 +412,7 @@ exports.findMatchingLemmaObjectThenWord = (
     );
   }
 
-  // clUtils.log(
+  // consol.log(
   //   "ecse ot:findMatchingLemmaObjectThenWord selectedFormsArray",
   //   selectedFormsArray
   // );
@@ -452,7 +452,7 @@ exports.findMatchingLemmaObjectThenWord = (
   let structureChunks = structureChunksAdjusted || [structureChunk];
 
   structureChunks.forEach((structureChunk) => {
-    clUtils.log(
+    consol.log(
       "mxcm ot:findMatchingLemmaObjectThenWord structureChunk",
       structureChunk
     );
@@ -460,7 +460,7 @@ exports.findMatchingLemmaObjectThenWord = (
     let matchesCopy = matches.slice(0);
 
     if (!matchesCopy.length) {
-      clUtils.log(
+      consol.log(
         "[1;31m " +
           "#WARN btfm ot:findMatchingLemmaObjectThenWord. It turns out no matching lemma objects were found in OT:findMatching" +
           "[0m"
@@ -477,7 +477,7 @@ exports.findMatchingLemmaObjectThenWord = (
     );
 
     if (!matchesCopy.length) {
-      clUtils.log(
+      consol.log(
         "[1;31m " +
           "#NB gugm ot:findMatchingLemmaObjectThenWord. It transpires that no matching lemma objects were found in OT:findMatching" +
           "[0m",
@@ -494,7 +494,7 @@ exports.findMatchingLemmaObjectThenWord = (
     );
 
     if (!matchesCopy.length) {
-      clUtils.log(
+      consol.log(
         "[1;31m " +
           "#WARN yqtf ot:findMatchingLemmaObjectThenWord. It appears no matching lemma objects were found in OT:findMatching" +
           "[0m"
@@ -505,18 +505,18 @@ exports.findMatchingLemmaObjectThenWord = (
 
     //    STEP FOUR-B: Getting the inflected word.
 
-    clUtils.consoleLogPW("##If-PW", structureChunk, multipleMode);
+    consol.consoleLogPW("##If-PW", structureChunk, multipleMode);
 
     if (multipleMode) {
-      clUtils.log("iksf ot:findMatchingLemmaObjectThenWord");
+      consol.log("iksf ot:findMatchingLemmaObjectThenWord");
       matchesCopy.forEach((selectedLemmaObject) => {
-        clUtils.log(
+        consol.log(
           "uzsw ot:findMatchingLemmaObjectThenWord selectedLemmaObject",
           selectedLemmaObject
         );
 
         if (outputArray) {
-          clUtils.log(
+          consol.log(
             "[1;33m " +
               `nvnĸ findMatching outputArray: [${outputArray.map(
                 (x) => x.selectedWord
@@ -524,7 +524,7 @@ exports.findMatchingLemmaObjectThenWord = (
               "[0m"
           );
         } else {
-          clUtils.log("[1;33m " + `nvnĸ findMatching outputArray null` + "[0m");
+          consol.log("[1;33m " + `nvnĸ findMatching outputArray null` + "[0m");
         }
 
         let subArrayOfOutputUnits = lfUtils.filterWithinSelectedLemmaObject(
@@ -542,13 +542,13 @@ exports.findMatchingLemmaObjectThenWord = (
           selectedWordArray.forEach((selectedWord) => {
             if (!"natasha findMatching Answer mode") {
               if (typeof selectedWord === "string") {
-                clUtils.log("[1;33m " + `bufw findMatching Answer IS STRING` + "[0m");
+                consol.log("[1;33m " + `bufw findMatching Answer IS STRING` + "[0m");
               } else if (Array.isArray(selectedWord)) {
-                clUtils.log("[1;33m " + `bufw findMatching Answer IS ARRAY` + "[0m");
-                clUtils.log(selectedWord);
-                clUtils.throw("bufw findMatching should not have been array.");
+                consol.log("[1;33m " + `bufw findMatching Answer IS ARRAY` + "[0m");
+                consol.log(selectedWord);
+                consol.throw("bufw findMatching should not have been array.");
               } else if (gpUtils.isTerminusObject(selectedWord)) {
-                clUtils.log("[1;33m " + `bufw findMatching Answer IS TOBJ` + "[0m");
+                consol.log("[1;33m " + `bufw findMatching Answer IS TOBJ` + "[0m");
               }
             }
 
@@ -556,7 +556,7 @@ exports.findMatchingLemmaObjectThenWord = (
               gpUtils.isTerminusObject(selectedWord) &&
               !selectedWord.processOnlyAtEnd
             ) {
-              clUtils.throw(
+              consol.throw(
                 "zjnv ot:findMatchingLemmaObjectThenWord Natasha, action here required."
               );
             }
@@ -597,7 +597,7 @@ exports.findMatchingLemmaObjectThenWord = (
         });
       });
     } else {
-      clUtils.log("xzjc ot:findMatchingLemmaObjectThenWord");
+      consol.log("xzjc ot:findMatchingLemmaObjectThenWord");
       let selectedLemmaObject = uUtils.selectRandom(matchesCopy);
 
       if (!structureChunk.dontSpecifyOnThisChunk) {
@@ -617,7 +617,7 @@ exports.findMatchingLemmaObjectThenWord = (
           currentLanguage
         );
       } else {
-        clUtils.log(
+        consol.log(
           "[1;30m " +
             `-----------------------------------------------------------------------------------------------------------------------------------PDSblue` +
             "[0m"
@@ -625,18 +625,18 @@ exports.findMatchingLemmaObjectThenWord = (
       }
 
       if ("console") {
-        clUtils.log(
+        consol.log(
           "fxdn ot:findMatchingLemmaObjectThenWord If-PW selectedLemmaObject for " +
             structureChunk.chunkId
         );
-        clUtils.log(
+        consol.log(
           "fxdn ot:findMatchingLemmaObjectThenWord",
           selectedLemmaObject.inflections
         );
 
-        clUtils.log("- * - * - * - * - * - * - * - * - * - * - * - * -");
+        consol.log("- * - * - * - * - * - * - * - * - * - * - * - * -");
         if (outputArray) {
-          clUtils.log(
+          consol.log(
             "[1;33m " +
               `nvnk findMatching outputArray: [${outputArray.map(
                 (x) => x.selectedWord
@@ -644,16 +644,16 @@ exports.findMatchingLemmaObjectThenWord = (
               "[0m"
           );
         } else {
-          clUtils.log("[1;33m " + `nvnk findMatching outputArray null` + "[0m");
+          consol.log("[1;33m " + `nvnk findMatching outputArray null` + "[0m");
         }
-        clUtils.log({
+        consol.log({
           selectedLemmaObject,
           structureChunk,
           currentLanguage,
           multipleMode,
           outputArray,
         });
-        clUtils.log("- * - * - * - * - * - * -");
+        consol.log("- * - * - * - * - * - * -");
       }
 
       let subArrayOfOutputUnits = lfUtils.filterWithinSelectedLemmaObject(
@@ -666,14 +666,14 @@ exports.findMatchingLemmaObjectThenWord = (
       );
 
       if (!subArrayOfOutputUnits || !subArrayOfOutputUnits.length) {
-        clUtils.log("uyie !subArrayOfOutputUnits/length");
+        consol.log("uyie !subArrayOfOutputUnits/length");
         return false;
       }
 
-      clUtils.log(
+      consol.log(
         "sfmo ot:findMatchingLemmaObjectThenWord subArrayOfOutputUnits"
       );
-      clUtils.consoleLogObjectAtOneLevel(subArrayOfOutputUnits);
+      consol.consoleLogObjectAtOneLevel(subArrayOfOutputUnits);
 
       if (
         structureChunk.preferredChoicesForQuestionSentence &&
@@ -809,7 +809,7 @@ exports.findMatchingLemmaObjectThenWord = (
       } = unit;
 
       if (!selectedWordArray || !selectedWordArray.length) {
-        clUtils.log(
+        consol.log(
           "whhe ot:findMatchingLemmaObjectThenWord errorInSentenceCreation.errorMessage: No lemma objects were found for these specifications."
         );
         errorInSentenceCreation.errorMessage = [
@@ -823,23 +823,23 @@ exports.findMatchingLemmaObjectThenWord = (
 
       if (!"natasha findMatching Question mode") {
         if (typeof selectedItem === "string") {
-          clUtils.log(
+          consol.log(
             "[1;33m " +
               `ozdj ot:findMatchingLemmaObjectThenWord findMatching Question IS STRING` +
               "[0m"
           );
         } else if (Array.isArray(selectedItem)) {
-          clUtils.log(
+          consol.log(
             "[1;33m " +
               `ozdj ot:findMatchingLemmaObjectThenWord findMatching Question IS ARRAY` +
               "[0m"
           );
-          clUtils.log("jxny ot:findMatchingLemmaObjectThenWord", selectedItem);
-          clUtils.throw(
+          consol.log("jxny ot:findMatchingLemmaObjectThenWord", selectedItem);
+          consol.throw(
             "jxny ot:findMatchingLemmaObjectThenWord should not have been array."
           );
         } else if (gpUtils.isTerminusObject(selectedItem)) {
-          clUtils.log(
+          consol.log(
             "[1;33m " +
               `ozdj ot:findMatchingLemmaObjectThenWord findMatching Question IS TOBJ` +
               "[0m"
@@ -890,10 +890,10 @@ exports.findMatchingLemmaObjectThenWord = (
 
   if (!arrayOfAllPossibleOutputUnits.length) {
     if (!errorInSentenceCreation.errorMessage) {
-      clUtils.log(
+      consol.log(
         "yzcq ot:findMatchingLemmaObjectThenWord errorInSentenceCreation.errorMessage: The rrrequested inflections were not found in the selected lemma objects."
       );
-      clUtils.log(
+      consol.log(
         "yzcq ot:findMatchingLemmaObjectThenWord structureChunk",
         structureChunk
       );
@@ -1013,7 +1013,7 @@ exports.extractNestedRoutes = (source, includeTerminusObjectKeys) => {
       });
       arr.pop();
     } else {
-      clUtils.throw(
+      consol.throw(
         `kwdo ot:recursivelyMapRoutes found value with wrong data type: "${
           Array.isArray(source)
             ? "Array"
@@ -1085,7 +1085,7 @@ exports.findObjectInNestedObjectsAndArrays = (
 };
 
 exports.giveRoutesAndTerminalValuesFromObject = (obj) => {
-  clUtils.log(
+  consol.log(
     "[1;35m " +
       `xlbj ot:giveRoutesAndTerminalValuesFromObject-----------------------` +
       "[0m"
@@ -1103,13 +1103,13 @@ exports.giveRoutesAndTerminalValuesFromObject = (obj) => {
 
     if (!"natasha giveRoutes???") {
       if (typeof value === "string") {
-        clUtils.log("[1;33m " + `nayq giveRoutes??? IS STRING` + "[0m");
+        consol.log("[1;33m " + `nayq giveRoutes??? IS STRING` + "[0m");
       } else if (Array.isArray(value)) {
-        clUtils.log("[1;33m " + `nayq giveRoutes??? IS ARRAY` + "[0m");
-        clUtils.log("nayq", nestedRoute, value);
-        clUtils.throw("nayq giveRoutes should not have been array.");
+        consol.log("[1;33m " + `nayq giveRoutes??? IS ARRAY` + "[0m");
+        consol.log("nayq", nestedRoute, value);
+        consol.throw("nayq giveRoutes should not have been array.");
       } else if (gpUtils.isTerminusObject(value)) {
-        clUtils.log("[1;33m " + `nayq giveRoutes??? IS TOBJ` + "[0m");
+        consol.log("[1;33m " + `nayq giveRoutes??? IS TOBJ` + "[0m");
       }
     }
 
@@ -1202,9 +1202,9 @@ exports.findSinglePointMutationArray = (
   positionToExamine,
   specialComparisonCallback
 ) => {
-  // clUtils.log("ldzi findSinglePointMutationArray was given:");
-  // clUtils.log("ldzi", { currentArray, positionToExamine });
-  // clUtils.log("ldzi findSinglePointMutationArray arrayOfArrays", arrayOfArrays);
+  // consol.log("ldzi findSinglePointMutationArray was given:");
+  // consol.log("ldzi", { currentArray, positionToExamine });
+  // consol.log("ldzi findSinglePointMutationArray arrayOfArrays", arrayOfArrays);
 
   if (!arrayOfArrays.length) {
     return false;
@@ -1246,7 +1246,7 @@ exports.stripOutFeatures = (currentLanguage, structureChunk, PWlabel) => {
     .filter((inflectorKey) => !["form"].includes(inflectorKey))
     .forEach((inflectorKey) => {
       if (structureChunk["inflectorKey"]) {
-        clUtils.log(
+        consol.log(
           "[1;35m " +
             `milm stripOutFeatures Deleting "${inflectorKey}" from stCh "${structureChunk.chunkId}" because this is #${PWlabel} in ${currentLanguage}` +
             "[0m"
@@ -1308,7 +1308,7 @@ exports.switchMetaFeatureForAWorkableConvertedFeature = (
   structureChunk,
   consoleLogLabel
 ) => {
-  clUtils.log(
+  consol.log(
     "[1;33m " +
       `ivwa ` +
       consoleLogLabel +
@@ -1322,12 +1322,12 @@ exports.switchMetaFeatureForAWorkableConvertedFeature = (
     (convertedMetaFeature) => source[convertedMetaFeature]
   );
 
-  clUtils.log(
+  consol.log(
     "[1;33m " + `ivwe convertedMetaFeatures [${convertedMetaFeatures}]` + "[0m"
   );
 
   if (!convertedMetaFeatures || !convertedMetaFeatures.length) {
-    clUtils.throw(
+    consol.throw(
       `ejrb #ERR traverseAndRecordInflections >>unkeyed metaFeature clause<<. Found no convertedMetaFeatures for "${inflectorValue}".`
     );
   }
@@ -1335,7 +1335,7 @@ exports.switchMetaFeatureForAWorkableConvertedFeature = (
   if (convertedMetaFeatures.length === 1) {
     let selectedConvertedMetaFeature = convertedMetaFeatures[0];
 
-    clUtils.log(
+    consol.log(
       "[1;33m " +
         `lbro traverseAndRecordInflections >>unkeyed metaFeature clause<<. Setting inflectorValue to "${selectedConvertedMetaFeature}". Will now continue with main fxn.` +
         "[0m"
@@ -1357,7 +1357,7 @@ exports.switchMetaFeatureForAWorkableConvertedFeature = (
       true
     )
   ) {
-    clUtils.log(
+    consol.log(
       "[1;33m " +
         `ksfc traverseAndRecordInflections >>unkeyed metaFeature clause<<. Final Clause A. Setting inflectorValue to "${selectedConvertedMetaFeature}". Do not need to adjust stCh as all converted values for this metafeature result in the same from source, eg "allPersonalSingularGenders" = m --> "you", f --> "you". Will now continue with main fxn.` +
         "[0m"
@@ -1365,7 +1365,7 @@ exports.switchMetaFeatureForAWorkableConvertedFeature = (
 
     return selectedConvertedMetaFeature;
   } else {
-    clUtils.log(
+    consol.log(
       `aqsa traverseAndRecordInflections >>unkeyed metaFeature clause<<. 
       Final Clause B. Trying to set a metaFeature to one of its convertedFeatures. 
       But the drilled values were not ultimately be the same in source, therefore we cannot obey doNotSpecify. 
@@ -1421,7 +1421,7 @@ exports.isThisValueUniqueAtThisLevelInLemmaObject = (
     if (lObjAtRelevantLevel[inflectionKeyy]) {
       lObjAtRelevantLevel = lObjAtRelevantLevel[inflectionKeyy];
     } else {
-      clUtils.throw(
+      consol.throw(
         "mlck #ERR isThisValueUniqueAtThisLevelInLemmaObject. That inflectionKeyy was not on lObj at this level."
       );
     }
@@ -1429,10 +1429,10 @@ exports.isThisValueUniqueAtThisLevelInLemmaObject = (
 
   let allInflectionKeyysAtThisLevel = Object.keys(lObjAtRelevantLevel);
 
-  clUtils.log({ allInflectionKeyysAtThisLevel });
+  consol.log({ allInflectionKeyysAtThisLevel });
 
   if (!allInflectionKeyysAtThisLevel.includes(chosenInflectionKeyy)) {
-    clUtils.throw(
+    consol.throw(
       "mlcl #ERR isThisValueUniqueAtThisLevelInLemmaObject. The chosen inflectionKeyy should have been in lObj at this level."
     );
   }

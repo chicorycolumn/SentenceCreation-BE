@@ -4,7 +4,7 @@ const chai = require("chai");
 const { expect } = require("chai");
 const gpUtils = require("../utils/generalPurposeUtils.js");
 const uUtils = require("../utils/universalUtils.js");
-const clUtils = require("../utils/zerothOrder/consoleLoggingUtils.js");
+const consol = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const { it } = require("mocha");
 const testingUtils = require("../utils/secondOrder/testingUtils.js");
 const { generalTranslatedSentencesRef } = testingUtils;
@@ -2468,7 +2468,7 @@ describe("/api", function () {
         testOnce(),
         testOnce(),
       ]).then((allQuestionSentencesArr) => {
-        clUtils.log({ allQuestionSentencesArr });
+        consol.log({ allQuestionSentencesArr });
         expect(allQuestionSentencesArr).to.have.length(8);
         expect(allQuestionSentencesArr).to.include("Kobieta będzie pisała.");
         expect(allQuestionSentencesArr).to.include("Kobieta będzie pisać.");
@@ -2489,7 +2489,7 @@ describe("/api", function () {
           .expect(200)
           .then((res) => {
             if (res.body.questionSentenceArr.length > 1) {
-              clUtils.throw("res.body.questionSentenceArr had length over 1.");
+              consol.throw("res.body.questionSentenceArr had length over 1.");
             }
 
             return res.body.questionSentenceArr[0];
@@ -2612,7 +2612,7 @@ function checkSentenceTranslations(
     );
   }
 
-  clUtils.log(res.body);
+  consol.log(res.body);
 
   let questionSentence = body.questionSentenceArr[0];
   let { answerSentenceArr } = body;
@@ -2632,20 +2632,20 @@ function checkSentenceTranslations(
 
     if (questionSentence === POL) {
       expect(answerSentenceArr).to.have.members(ENG);
-      clUtils.log(
+      consol.log(
         `-' '-._,-' '-._,-' '-._,-' '-._,-' '-._,-' '-._${questionSentence}`
       );
-      clUtils.log(
+      consol.log(
         "was translated by,-'-._,-' '-._,-' '-._,-'-._,",
         answerSentenceArr
       );
     }
     if (questionSentence === ENG) {
       expect(answerSentenceArr).to.have.members(POL);
-      clUtils.log(
+      consol.log(
         `-' '-._,-' '-._,-' '-._,-' '-._,-' '-._,-' '-._${questionSentence}`
       );
-      clUtils.log(
+      consol.log(
         "  was translated by`-' '-._,-' '-._,-' '-._,-'",
         answerSentenceArr
       );
