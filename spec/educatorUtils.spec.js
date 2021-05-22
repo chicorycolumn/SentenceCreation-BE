@@ -41,7 +41,7 @@ xdescribe("findHomographs", () => {
     };
 
     let actual = findHomographs(true, currentLanguage, homographType, ignore);
-    console.log("spec result >>>>", actual);
+    clUtils.log("spec result >>>>", actual);
     expect(actual).to.eql(expected);
   });
   it("#edu1.2 Gives all synhomograph lemma objects in one language.", () => {
@@ -69,7 +69,7 @@ xdescribe("findHomographs", () => {
     };
 
     let actual = findHomographs(true, currentLanguage, homographType, ignore);
-    console.log("spec result >>>>", actual);
+    clUtils.log("spec result >>>>", actual);
     expect(actual).to.eql(expected);
   });
   it("#edu1.3 Gives all synhomograph lemma objects in one language.", () => {
@@ -105,7 +105,7 @@ xdescribe("findHomographs", () => {
     };
 
     let actual = findHomographs(true, currentLanguage, homographType, ignore);
-    console.log("spec result >>>>", actual);
+    clUtils.log("spec result >>>>", actual);
     expect(actual).to.eql(expected);
   });
   it("#edu1.4 Gives all synhomograph lemma objects in one language.", () => {
@@ -133,7 +133,7 @@ xdescribe("findHomographs", () => {
     };
 
     let actual = findHomographs(true, currentLanguage, homographType, ignore);
-    console.log("spec result >>>>", actual);
+    clUtils.log("spec result >>>>", actual);
     expect(actual).to.eql(expected);
   });
   it("#edu1.11 Gives all allohomograph lemma objects in one language.", () => {
@@ -186,7 +186,7 @@ xdescribe("findHomographs", () => {
     };
 
     let actual = findHomographs(true, currentLanguage, homographType, ignore);
-    console.log("spec result >>>>", actual);
+    clUtils.log("spec result >>>>", actual);
     expect(actual).to.eql(expected);
   });
   it("#edu1.12 Gives all allohomograph lemma objects in one language.", () => {
@@ -239,7 +239,7 @@ xdescribe("findHomographs", () => {
     };
 
     let actual = findHomographs(true, currentLanguage, homographType, ignore);
-    console.log("spec result >>>>", actual);
+    clUtils.log("spec result >>>>", actual);
     expect(actual).to.eql(expected);
   });
   it("#edu1.13 Gives all allohomograph lemma objects in one language.", () => {
@@ -268,7 +268,7 @@ xdescribe("findHomographs", () => {
     };
 
     let actual = findHomographs(true, currentLanguage, homographType, ignore);
-    console.log("spec result >>>>", actual);
+    clUtils.log("spec result >>>>", actual);
     expect(actual).to.eql(expected);
   });
   it("#edu1.14 Gives all allohomograph lemma objects in one language.", () => {
@@ -297,7 +297,7 @@ xdescribe("findHomographs", () => {
     };
 
     let actual = findHomographs(true, currentLanguage, homographType, ignore);
-    console.log("spec result >>>>", actual);
+    clUtils.log("spec result >>>>", actual);
     expect(actual).to.eql(expected);
   });
   it("#edu1.15 Includes tObjs. Gives all allohomograph lemma objects in one language.", () => {
@@ -326,7 +326,7 @@ xdescribe("findHomographs", () => {
     };
 
     let actual = findHomographs(true, currentLanguage, homographType, ignore);
-    console.log(actual);
+    clUtils.log(actual);
     expect(actual).to.eql(expected);
   });
 });
@@ -372,7 +372,7 @@ xdescribe("checkSentenceFormulaIds", () => {
 
     let actual = checkSentenceFormulaIds(true, currentLanguage);
 
-    console.log(actual);
+    clUtils.log(actual);
 
     const expected = {
       schematic: [
@@ -397,7 +397,7 @@ xdescribe("checkWords", () => {
 
     let { nounsWithoutGender } = actual;
 
-    console.log(actual);
+    clUtils.log(actual);
 
     expect(nounsWithoutGender).to.eql([["kobieta", "pol-npe-001"]]);
   });
@@ -413,7 +413,7 @@ xdescribe("Educator Battery", () => {
     };
 
     let actual = findHomographs(false, currentLanguage, homographType, ignore);
-    console.log(
+    clUtils.log(
       "Educator does not need to take action on this: spec result >>>>",
       actual
     );
@@ -427,7 +427,7 @@ xdescribe("Educator Battery", () => {
     };
 
     let actual = findHomographs(false, currentLanguage, homographType, ignore);
-    console.log(
+    clUtils.log(
       "Educator does not need to take action on this: result >>>>",
       actual
     );
@@ -441,10 +441,10 @@ xdescribe("Educator Battery", () => {
     };
 
     let actual = findHomographs(false, currentLanguage, homographType, ignore);
-    console.log("spec result >>>>", actual);
+    clUtils.log("spec result >>>>", actual);
 
     if (Object.keys(actual).length) {
-      console.log(currentLanguage + " Sentence Formulas >>>>", actual);
+      clUtils.log(currentLanguage + " Sentence Formulas >>>>", actual);
       throw (
         "Action required: YOU MUST ADD CLARIFIER INFO TO THESE ALLOHOMOGRAPHS: " +
         Object.keys(actual).join(", ")
@@ -461,11 +461,11 @@ xdescribe("Educator Battery", () => {
     };
 
     let actual = findHomographs(false, currentLanguage, homographType, ignore);
-    console.log("spec result >>>>", actual);
+    clUtils.log("spec result >>>>", actual);
     let keysActual = Object.keys(actual).filter((key) => key !== "true");
 
     if (keysActual.length) {
-      console.log(currentLanguage + " Sentence Formulas >>>>", actual);
+      clUtils.log(currentLanguage + " Sentence Formulas >>>>", actual);
       throw (
         "Action required: YOU MUST ADD CLARIFIER INFO TO THESE ALLOHOMOGRAPHS: " +
         keysActual.join(", ")
@@ -479,7 +479,7 @@ xdescribe("Educator Battery", () => {
     let actual = checkLemmaObjectIds(false, currentLanguage);
 
     if (actual.duplicateIds.length) {
-      console.log(currentLanguage + " Lemma Objects >>>>", actual);
+      clUtils.log(currentLanguage + " Lemma Objects >>>>", actual);
       throw (
         "Action required: DUPLICATE LEMMA OBJECTS IDS WERE FOUND: " +
         actual.duplicateIds.join(", ")
@@ -493,7 +493,7 @@ xdescribe("Educator Battery", () => {
     let actual = checkLemmaObjectIds(false, currentLanguage);
 
     if (actual.duplicateIds.length) {
-      console.log(currentLanguage + " Lemma Objects >>>>", actual);
+      clUtils.log(currentLanguage + " Lemma Objects >>>>", actual);
       throw (
         "Action required: DUPLICATE LEMMA OBJECTS IDS WERE FOUND: " +
         actual.duplicateIds.join(", ")
@@ -509,7 +509,7 @@ xdescribe("Educator Battery", () => {
     let { duplicateIds, duplicateSymbols } = actual;
 
     if (duplicateIds.length) {
-      console.log(currentLanguage + " Sentence Formulas >>>>", actual);
+      clUtils.log(currentLanguage + " Sentence Formulas >>>>", actual);
       throw (
         "Action required: DUPLICATE SENTENCE FORMULA IDS WERE FOUND: " +
         duplicateIds.join(", ")
@@ -518,7 +518,7 @@ xdescribe("Educator Battery", () => {
     expect(duplicateIds.length).to.equal(0);
 
     if (duplicateSymbols.length) {
-      console.log(currentLanguage + " Sentence Formulas >>>>", actual);
+      clUtils.log(currentLanguage + " Sentence Formulas >>>>", actual);
       throw (
         "Action required: DUPLICATE SENTENCE FORMULA SYMBOLS WERE FOUND: " +
         duplicateSymbols.join(", ")
@@ -534,7 +534,7 @@ xdescribe("Educator Battery", () => {
     let { duplicateIds, duplicateSymbols } = actual;
 
     if (duplicateIds.length) {
-      console.log(currentLanguage + " Sentence Formulas >>>>", actual);
+      clUtils.log(currentLanguage + " Sentence Formulas >>>>", actual);
       throw (
         "Action required: DUPLICATE SENTENCE FORMULA IDS WERE FOUND: " +
         duplicateIds.join(", ")
@@ -543,7 +543,7 @@ xdescribe("Educator Battery", () => {
     expect(duplicateIds.length).to.equal(0);
 
     if (duplicateSymbols.length) {
-      console.log(currentLanguage + " Sentence Formulas >>>>", actual);
+      clUtils.log(currentLanguage + " Sentence Formulas >>>>", actual);
       throw (
         "Action required: DUPLICATE SENTENCE FORMULA SYMBOLS WERE FOUND: " +
         duplicateSymbols.join(", ")
@@ -556,7 +556,7 @@ xdescribe("Educator Battery", () => {
 
     let actual = checkWords(false, currentLanguage);
 
-    console.log(actual);
+    clUtils.log(actual);
 
     let { nounsWithoutGender } = actual;
 
@@ -573,7 +573,7 @@ xdescribe("Educator Battery", () => {
 
     let actual = checkWords(false, currentLanguage);
 
-    console.log(actual);
+    clUtils.log(actual);
 
     let { nounsWithoutGender } = actual;
 

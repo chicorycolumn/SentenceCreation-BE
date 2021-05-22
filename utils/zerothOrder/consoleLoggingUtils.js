@@ -1,8 +1,17 @@
 const clUtils = require("./consoleLoggingUtils.js");
 
+exports.log = (...args) => {
+  return;
+  console.log(...args);
+};
+
+exports.logAlways = (...args) => {
+  console.log(...args);
+};
+
 exports.consoleLogObjectAtOneLevel = (obj, label, originLabel) => {
   if (!obj) {
-    console.log(
+    clUtils.log(
       "[1;33m " +
         `--Console log "${label}" at one level, from "${originLabel}" but FALSY.` +
         "[0m"
@@ -10,24 +19,24 @@ exports.consoleLogObjectAtOneLevel = (obj, label, originLabel) => {
     return;
   }
 
-  console.log(
+  clUtils.log(
     "[1;33m " + `--Console log "${label}" at one level, from "${originLabel}":` + "[0m"
   );
-  console.log("[1;32m " + `------` + "[0m");
-  console.log("[1;32m " + `----------` + "[0m");
+  clUtils.log("[1;32m " + `------` + "[0m");
+  clUtils.log("[1;32m " + `----------` + "[0m");
   Object.keys(obj).forEach((key) => {
     let value = obj[key];
-    console.log("[1;30m " + `${key}` + "[0m");
-    console.log(value);
+    clUtils.log("[1;30m " + `${key}` + "[0m");
+    clUtils.log(value);
   });
-  console.log("[1;32m " + `----------` + "[0m");
-  console.log("[1;32m " + `------` + "[0m");
-  console.log("[1;32m " + `--` + "[0m");
+  clUtils.log("[1;32m " + `----------` + "[0m");
+  clUtils.log("[1;32m " + `------` + "[0m");
+  clUtils.log("[1;32m " + `--` + "[0m");
 };
 
 exports.consoleLogObjectAtTwoLevels = (obj, label, originLabel) => {
   if (!obj) {
-    console.log(
+    clUtils.log(
       "[1;33m " +
         `--Console log "${label}" at two levels, from "${originLabel}" but FALSY.` +
         "[0m"
@@ -35,27 +44,27 @@ exports.consoleLogObjectAtTwoLevels = (obj, label, originLabel) => {
     return;
   }
 
-  console.log(
+  clUtils.log(
     "[1;33m " + `--Console log "${label}" at two levels, from "${originLabel}":` + "[0m"
   );
-  console.log("[1;32m " + `------` + "[0m");
-  console.log("[1;32m " + `----------` + "[0m");
+  clUtils.log("[1;32m " + `------` + "[0m");
+  clUtils.log("[1;32m " + `----------` + "[0m");
   Object.keys(obj).forEach((key) => {
     let value = obj[key];
     if (value) {
       Object.keys(value).forEach((key2) => {
         let value2 = value[key2];
-        console.log("[1;30m " + `${key}:${key2}` + "[0m");
-        console.log("subvalue:", value2);
+        clUtils.log("[1;30m " + `${key}:${key2}` + "[0m");
+        clUtils.log("subvalue:", value2);
       });
     } else {
-      console.log("[1;30m " + `${key}` + "[0m");
-      console.log("value:", value);
+      clUtils.log("[1;30m " + `${key}` + "[0m");
+      clUtils.log("value:", value);
     }
   });
-  console.log("[1;32m " + `----------` + "[0m");
-  console.log("[1;32m " + `------` + "[0m");
-  console.log("[1;32m " + `--` + "[0m");
+  clUtils.log("[1;32m " + `----------` + "[0m");
+  clUtils.log("[1;32m " + `------` + "[0m");
+  clUtils.log("[1;32m " + `--` + "[0m");
 };
 
 exports.consoleLogAestheticBorder = (reps) => {
@@ -63,7 +72,7 @@ exports.consoleLogAestheticBorder = (reps) => {
     " │ ║ ▌ │ ║ ▌ ║ ▌ █ ║ ▌ ║ █ ║ ▌ │ ║ ▌ │ ║ ▌ ║ █ ║ ▌ │ ║ ▌ │ ║ ▌ ║ ▌ █ ║ ▌ ║ █ ║ ▌ │ ║ ▌ │ ║ ▌ ║ ▌ █ ║ ▌ ║ █ ║ ▌ │ ▌ ║ █ ║ ▌ │ ║ ▌ │ ║";
 
   for (let i = 0; i < reps; i++) {
-    console.log(border.slice(i, border.length - (10 - i)));
+    clUtils.log(border.slice(i, border.length - (10 - i)));
   }
 };
 
@@ -76,86 +85,86 @@ exports.consoleLogPW = (label, structureChunk, multipleMode) => {
 };
 
 exports.consoleLogYellowWithBorder = (text) => {
-  console.log(" ");
-  console.log(
+  clUtils.log(" ");
+  clUtils.log(
     "[1;33m " +
       "~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~" +
       "[0m"
   );
-  console.log(
+  clUtils.log(
     "[1;33m " +
       "~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~" +
       "[0m"
   );
-  console.log("                   " + text);
-  console.log(
+  clUtils.log("                   " + text);
+  clUtils.log(
     "[1;33m " +
       "~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~" +
       "[0m"
   );
-  console.log(
+  clUtils.log(
     "[1;33m " +
       "~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~" +
       "[0m"
   );
-  console.log(" ");
+  clUtils.log(" ");
 };
 
 exports.consoleLogBlueWithBorder = (text) => {
-  console.log(" ");
-  console.log(
+  clUtils.log(" ");
+  clUtils.log(
     "[1;36m " +
       "~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~" +
       "[0m"
   );
-  console.log(
+  clUtils.log(
     "[1;36m " +
       "~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~" +
       "[0m"
   );
-  console.log("                   " + text);
-  console.log(
+  clUtils.log("                   " + text);
+  clUtils.log(
     "[1;36m " +
       "~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~" +
       "[0m"
   );
-  console.log(
+  clUtils.log(
     "[1;36m " +
       "~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~" +
       "[0m"
   );
-  console.log(" ");
+  clUtils.log(" ");
 };
 
 exports.consoleLogPurpleWithBorder = (text) => {
-  console.log(" ");
-  console.log(
+  clUtils.log(" ");
+  clUtils.log(
     "[1;35m " +
       ": : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : :" +
       "[0m"
   );
-  console.log(
+  clUtils.log(
     "[1;35m " +
       ": : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : :" +
       "[0m"
   );
-  console.log("                   " + text);
-  console.log(
+  clUtils.log("                   " + text);
+  clUtils.log(
     "[1;35m " +
       ": : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : :" +
       "[0m"
   );
-  console.log(
+  clUtils.log(
     "[1;35m " +
       ": : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : :" +
       "[0m"
   );
-  console.log(" ");
+  clUtils.log(" ");
 };
 
 exports.throw = (msg = "Cease.") => {
-  console.log("[1;31m " + "!   !   !   !   !   !   !   !   !   !" + "[0m");
-  console.log("[1;31m " + "!   !   ! " + msg + "[0m");
-  console.log("[1;31m " + "!   !   !   !   !   !   !   !   !   !" + "[0m");
+  clUtils.log("[1;31m " + "!   !   !   !   !   !   !   !   !   !" + "[0m");
+  clUtils.log("[1;31m " + "!   !   ! " + msg + "[0m");
+  clUtils.log("[1;31m " + "!   !   !   !   !   !   !   !   !   !" + "[0m");
   throw msg;
 };

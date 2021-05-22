@@ -54,7 +54,7 @@ exports.fetchPalette = (req) => {
   }
 
   if (pleaseDontSpecify) {
-    console.log(
+    clUtils.log(
       "[1;30m " +
         `-----------------------------------------------------------------------------------------------------------------------------------PDSyellow` +
         "[0m"
@@ -80,7 +80,7 @@ exports.fetchPalette = (req) => {
             potentialDepChunk.agreeWith === qChunk.chunkId
         )
       ) {
-        console.log(qChunk.chunkId + " shep1");
+        clUtils.log(qChunk.chunkId + " shep1");
         qChunk.dontSpecifyOnThisChunk = false;
       } else if (qChunk.gender && qChunk.gender.length) {
         //BOSTON
@@ -100,7 +100,7 @@ exports.fetchPalette = (req) => {
               qChunk.gender.includes(value)
             )
           ) {
-            console.log(qChunk.chunkId + " shep2a");
+            clUtils.log(qChunk.chunkId + " shep2a");
             qChunk.dontSpecifyOnThisChunk = false;
           }
         } else {
@@ -109,19 +109,19 @@ exports.fetchPalette = (req) => {
               qChunk.gender.includes(value)
             )
           ) {
-            console.log(qChunk.chunkId + " shep2b");
+            clUtils.log(qChunk.chunkId + " shep2b");
             qChunk.dontSpecifyOnThisChunk = false;
           }
         }
       }
 
-      console.log(
+      clUtils.log(
         `PDSyellow qChunk.dontSpecifyOnThisChunk for "${qChunk.chunkId}=${qChunk.dontSpecifyOnThisChunk}"`
       );
     });
   }
 
-  console.log(
+  clUtils.log(
     "veva questionSentenceFormula.sentenceStructure",
     questionSentenceFormula.sentenceStructure.map((stCh) => stCh.chunkId)
   );
@@ -133,14 +133,14 @@ exports.fetchPalette = (req) => {
     multipleMode
   );
 
-  console.log("questionSentenceData", questionSentenceData);
+  clUtils.log("questionSentenceData", questionSentenceData);
   if ("check") {
     if (
       !questionSentenceData ||
       !questionSentenceData.arrayOfOutputArrays ||
       !questionSentenceData.arrayOfOutputArrays.length
     ) {
-      console.log(
+      clUtils.log(
         "[1;31m " +
           `#WARN cdqk fetchPalette. The question arrayOfOutputArrays came back NOTHING.` +
           "[0m"
@@ -160,7 +160,7 @@ exports.fetchPalette = (req) => {
       }
     }
 
-    console.log(
+    clUtils.log(
       "veve questionSentenceData.arrayOfOutputArrays",
       questionSentenceData.arrayOfOutputArrays.map((arr) =>
         arr.map((unit) => unit.structureChunk.chunkId)
@@ -168,7 +168,7 @@ exports.fetchPalette = (req) => {
     );
 
     if (questionSentenceData.arrayOfOutputArrays.length > 1) {
-      console.log(
+      clUtils.log(
         "pipr-fetchPalette. questionSentenceData.arrayOfOutputArrays",
         questionSentenceData.arrayOfOutputArrays
       );
@@ -198,15 +198,15 @@ exports.fetchPalette = (req) => {
       let { structureChunk, selectedLemmaObject } = outputUnit;
 
       if ("console") {
-        console.log(
+        clUtils.log(
           "[1;35m " +
             `vmfg-fetchPalette stCh "${structureChunk.chunkId}" at index "${index}"` +
             "[0m"
         );
-        console.log(
+        clUtils.log(
           "[1;35m " + `vmfg-fetchPalette slObj "${selectedLemmaObject.lemma}"` + "[0m"
         );
-        console.log(" ");
+        clUtils.log(" ");
       }
 
       Object.keys(structureChunk).forEach((featureKey) => {
@@ -223,7 +223,7 @@ exports.fetchPalette = (req) => {
           Array.isArray(featureValue) &&
           featureValue.length > 1
         ) {
-          console.log(
+          clUtils.log(
             "[1;31m " + `#WARN oyxp fetchPalette. structureChunk is:` + "[0m",
             structureChunk
           );
@@ -234,7 +234,7 @@ exports.fetchPalette = (req) => {
   }
 
   if (true && "console") {
-    console.log(
+    clUtils.log(
       "[1;36m " +
         "{{{ zuwv-fetchPalette just after we get questionSentenceData back from SC:processSentenceFormula. Let's see the stChs in questionSentenceData.arrayOfOutputArrays:" +
         "[0m"
@@ -243,20 +243,20 @@ exports.fetchPalette = (req) => {
     questionSentenceData.questionOutputArr
       .map((outputUnit) => outputUnit.structureChunk)
       .forEach((stCh) => {
-        console.log("niwt-fetchPalette -fetchPalette", stCh);
+        clUtils.log("niwt-fetchPalette -fetchPalette", stCh);
       });
 
-    console.log("[1;36m " + "}}}" + "[0m");
+    clUtils.log("[1;36m " + "}}}" + "[0m");
   }
 
   if (true && "console") {
-    console.log(
+    clUtils.log(
       "[1;35m " +
         "{{{ cjae-fetchPalette just before midpoint. Let's see the selectedWordss" +
         "[0m"
     );
 
-    console.log(
+    clUtils.log(
       "odej-fetchPalette questionSentenceData.questionOutputArr.map((outputUnit) => outputUnit.selectedWord)",
       questionSentenceData.questionOutputArr.map(
         (outputUnit) => outputUnit.selectedWord
@@ -269,7 +269,7 @@ exports.fetchPalette = (req) => {
     //   "odek-fetchPalette."
     // );
 
-    console.log("[1;35m " + "}}}" + "[0m");
+    clUtils.log("[1;35m " + "}}}" + "[0m");
 
     clUtils.consoleLogAestheticBorder(4);
   }
@@ -308,7 +308,7 @@ exports.fetchPalette = (req) => {
       }
     });
 
-    console.log(
+    clUtils.log(
       questionSentenceData.questionOutputArr.map((unit) => unit.structureChunk)
     );
     questionSentenceData.questionOutputArr.forEach((unit) => {
@@ -323,7 +323,7 @@ exports.fetchPalette = (req) => {
       });
     });
 
-    console.log(
+    clUtils.log(
       "[1;36m " + `znuj fetchPalette. questionOutputArr BEFORE CLARI OR SPECI` + "[0m\n",
       questionSentenceData.questionOutputArr.map((unit) => [
         `${unit.selectedLemmaObject.lemma}-->${unit.selectedWord}`,
@@ -337,7 +337,7 @@ exports.fetchPalette = (req) => {
       questionLanguage,
     });
 
-    console.log(
+    clUtils.log(
       "[1;36m " +
         `znuk-fetchPalette, questionOutputArr AFTER CLARI, BEFORE SPECI` +
         "[0m\n",
@@ -356,7 +356,7 @@ exports.fetchPalette = (req) => {
       questionLanguage,
     });
 
-    console.log(
+    clUtils.log(
       "[1;36m " + `znul-fetchPalette, questionOutputArr AFTER CLARI AND SPECI` + "[0m\n",
       questionSentenceData.questionOutputArr.map((unit) => [
         `${unit.selectedLemmaObject.lemma}-->${unit.selectedWord}`,
@@ -369,7 +369,7 @@ exports.fetchPalette = (req) => {
       questionLanguage,
     });
 
-    console.log(
+    clUtils.log(
       "[1;36m " + `znum-fetchPalette, questionOutputArr AFTER SPECIALADJUST\n` + "[0m",
       questionSentenceData.questionOutputArr.map((unit) => [
         `${unit.selectedLemmaObject.lemma}-->${unit.selectedWord}`,
@@ -403,14 +403,14 @@ exports.fetchPalette = (req) => {
       }
 
       if ("console") {
-        console.log(
+        clUtils.log(
           `pjeg fetchPalette. Just BEFORE qaConform, let's see the Q and A structures:`
         );
-        console.log(
+        clUtils.log(
           "p'jeg answerSentenceFormula.sentenceStructure",
           answerSentenceFormula.sentenceStructure
         );
-        console.log(
+        clUtils.log(
           "p'jeg questionSentenceData...{sentenceStructure}",
           questionSentenceData.questionOutputArr.map(
             (outputUnit) => outputUnit.structureChunk
@@ -429,7 +429,7 @@ exports.fetchPalette = (req) => {
         words
       );
 
-      console.log(
+      clUtils.log(
         "pjeh fetchPalette. answerSentenceFormula.sentenceStructure AFTER qaConform",
         answerSentenceFormula.sentenceStructure
       );
@@ -450,7 +450,7 @@ exports.fetchPalette = (req) => {
           !answerSentenceData.arrayOfOutputArrays ||
           !answerSentenceData.arrayOfOutputArrays.length
         ) {
-          console.log(
+          clUtils.log(
             "[1;31m " +
               `#WARN cdqk fetchPalette. The answer arrayOfOutputArrays came back NOTHING.` +
               "[0m"
@@ -513,7 +513,7 @@ exports.fetchPalette = (req) => {
   let answerSelectedWordsSetsHaveChanged = { value: false };
   let additionalRunsRecord = [];
 
-  console.log(
+  clUtils.log(
     `csej fetchPalette. questionSentenceData`,
     questionSentenceData.questionOutputArr.map((unit) => unit.structureChunk)
   );

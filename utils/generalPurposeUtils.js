@@ -133,7 +133,7 @@ exports.copyAndCombineWordbanks = (wordbank1, wordbank2) => {
 
   Object.keys(wordbank1Copy).forEach((key) => {
     if (!wordbank2Copy[key]) {
-      console.log(
+      clUtils.log(
         "[1;31m " +
           `udhd gp:copyAndCombineWordbanks #NB: wordbank2 does not have key "${key}" but wordbank1 does.` +
           "[0m"
@@ -152,7 +152,7 @@ exports.copyAndCombineWordbanks = (wordbank1, wordbank2) => {
 };
 
 exports.explodeOutputArraysByHeadsAndDependents = (justOneOutputArray) => {
-  console.log(
+  clUtils.log(
     "mdpu explodeOutputArraysByHeadsAndDependents START. justOneOutputArray"
   );
 

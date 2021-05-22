@@ -2468,7 +2468,7 @@ describe("/api", function () {
         testOnce(),
         testOnce(),
       ]).then((allQuestionSentencesArr) => {
-        console.log({ allQuestionSentencesArr });
+        clUtils.log({ allQuestionSentencesArr });
         expect(allQuestionSentencesArr).to.have.length(8);
         expect(allQuestionSentencesArr).to.include("Kobieta będzie pisała.");
         expect(allQuestionSentencesArr).to.include("Kobieta będzie pisać.");
@@ -2612,7 +2612,7 @@ function checkSentenceTranslations(
     );
   }
 
-  console.log(res.body);
+  clUtils.log(res.body);
 
   let questionSentence = body.questionSentenceArr[0];
   let { answerSentenceArr } = body;
@@ -2632,20 +2632,20 @@ function checkSentenceTranslations(
 
     if (questionSentence === POL) {
       expect(answerSentenceArr).to.have.members(ENG);
-      console.log(
+      clUtils.log(
         `-' '-._,-' '-._,-' '-._,-' '-._,-' '-._,-' '-._${questionSentence}`
       );
-      console.log(
+      clUtils.log(
         "was translated by,-'-._,-' '-._,-' '-._,-'-._,",
         answerSentenceArr
       );
     }
     if (questionSentence === ENG) {
       expect(answerSentenceArr).to.have.members(POL);
-      console.log(
+      clUtils.log(
         `-' '-._,-' '-._,-' '-._,-' '-._,-' '-._,-' '-._${questionSentence}`
       );
-      console.log(
+      clUtils.log(
         "  was translated by`-' '-._,-' '-._,-' '-._,-'",
         answerSentenceArr
       );

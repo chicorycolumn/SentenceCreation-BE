@@ -50,7 +50,7 @@ exports.createOutputUnit = (
   drillPathTertiary
 ) => {
   if (errorInDrilling || !selectedWord) {
-    console.log(
+    clUtils.log(
       "acsm createOutputUnit errorInSentenceCreation.errorMessage: A lemma object was indeed selected, but no word was found at the end of the give inflection chain."
     );
     errorInSentenceCreation.errorMessage = [
@@ -84,7 +84,7 @@ exports.pushSelectedWordToArray = (
   annoObj,
   structureChunk
 ) => {
-  console.log(
+  clUtils.log(
     "[1;30m " + `esbq pushSelectedWordToArray-----------------with args:` + "[0m",
     {
       key,
@@ -100,7 +100,7 @@ exports.pushSelectedWordToArray = (
     annoObj,
     structureChunk
   ) {
-    console.log(`vprr addAnnotationsAndPush "${wordInOwnArr}"`);
+    clUtils.log(`vprr addAnnotationsAndPush "${wordInOwnArr}"`);
     if (annoObj && Object.values(annoObj).length) {
       if (wordInOwnArr.length !== 1) {
         clUtils.throw(
@@ -110,16 +110,16 @@ exports.pushSelectedWordToArray = (
         );
       }
 
-      console.log("vpre addAnnotationsAndPush. annoObj is " + annoObj);
+      clUtils.log("vpre addAnnotationsAndPush. annoObj is " + annoObj);
 
       if (structureChunk.educatorBlocksAnnotationsForTheseFeatures) {
-        console.log(
+        clUtils.log(
           `vpri addAnnotationsAndPush will not add clarifiers [${Object.values(
             annoObj
           )}] as "educatorBlocksAnnotationsForTheseFeatures" true.`
         );
       } else {
-        console.log(
+        clUtils.log(
           "vpro pushSelectedWordToArray addAnnotationsAndPush. Adding these annotations:" +
             Object.values(annoObj).join(", ")
         );
@@ -127,14 +127,14 @@ exports.pushSelectedWordToArray = (
         wordInOwnArr[0] += ` (${Object.values(annoObj).join(", ")})`;
       }
     } else {
-      console.log("vpru addAnnotationsAndPush. No annoObj");
+      clUtils.log("vpru addAnnotationsAndPush. No annoObj");
     }
 
     selectedWordsArr.push(wordInOwnArr);
   }
 
   if (key === "string") {
-    console.log(
+    clUtils.log(
       "[1;30m " + `uufy pushSelectedWordToArray Pushing "${selectedWord}"` + "[0m"
     );
 
@@ -148,7 +148,7 @@ exports.pushSelectedWordToArray = (
   }
 
   if (key === "array") {
-    console.log(
+    clUtils.log(
       "[1;30m " + `uufy pushSelectedWordToArray Pushing "${selectedWord}"` + "[0m"
     );
     addAnnotationsAndPush(
@@ -167,7 +167,7 @@ exports.pushSelectedWordToArray = (
   }
 
   if (!Array.isArray(selectedWord[key])) {
-    console.log("vcxx selectWordVersions", {
+    clUtils.log("vcxx selectWordVersions", {
       selectedWord,
       "selectedWord[key]": selectedWord[key],
     });
@@ -180,7 +180,7 @@ exports.pushSelectedWordToArray = (
     clUtils.throw("#ERR ztgp selectWordVersions. selectedWord[key] was falsy.");
   }
 
-  console.log(
+  clUtils.log(
     "[1;30m " + `oqij selectWordVersions Pushing arr "${selectedWord[key]}"` + "[0m"
   );
   addAnnotationsAndPush(

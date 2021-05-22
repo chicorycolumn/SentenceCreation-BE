@@ -23,8 +23,8 @@ exports.checkOutputArrayForMissingUnits = (
       order.every((chunkId) => outputChunkIds.includes(chunkId))
     )
   ) {
-    console.log("dwke primaryOrders", primaryOrders);
-    console.log("dwke outputChunkIds", outputChunkIds);
+    clUtils.log("dwke primaryOrders", primaryOrders);
+    clUtils.log("dwke outputChunkIds", outputChunkIds);
     clUtils.throw(
       `dwke checkOutputArrayForMissingUnits. "${label}" "${currentLanguage}" outputArray didn't have all the requisite units. See above.`
     );
@@ -69,7 +69,7 @@ exports.findHomographs = (testing, currentLanguage, homographType, ignore) => {
   }
 
   if (!["syn", "allo", "all"].includes(homographType)) {
-    console.log("tvgz findHomographs", { homographType });
+    clUtils.log("tvgz findHomographs", { homographType });
     throw "findHomographs fxn: I don't know what type of homograph you want me to find. I've logged above what you gave me.";
   }
 
@@ -94,9 +94,8 @@ exports.findHomographs = (testing, currentLanguage, homographType, ignore) => {
     );
 
     wordset.forEach((lObj) => {
-      let terminalValuesAndPathsArr = otUtils.giveRoutesAndTerminalValuesFromObject(
-        lObj.inflections
-      );
+      let terminalValuesAndPathsArr =
+        otUtils.giveRoutesAndTerminalValuesFromObject(lObj.inflections);
 
       terminalValuesAndPathsArr.forEach((terminalValuesAndPathsUnit) => {
         terminalValuesAndPathsUnit.nestedRoute.unshift(lObj.id);
@@ -105,7 +104,7 @@ exports.findHomographs = (testing, currentLanguage, homographType, ignore) => {
     });
   });
 
-  console.log("recordOfTerminalValuesAndPaths", recordOfTerminalValuesAndPaths);
+  clUtils.log("recordOfTerminalValuesAndPaths", recordOfTerminalValuesAndPaths);
 
   recordOfTerminalValuesAndPaths.forEach((unit) => {
     let { terminalValue } = unit;

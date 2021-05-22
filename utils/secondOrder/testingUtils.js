@@ -796,7 +796,7 @@ exports.checkTranslationsOfGivenRef = (
 ) => {
   let testActivated = false;
 
-  console.log(res.body);
+  clUtils.log(res.body);
 
   let { questionSentenceArr, answerSentenceArr } = res.body;
 

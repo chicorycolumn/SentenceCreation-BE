@@ -61,7 +61,7 @@ exports.selectWordVersions = (
       );
     }
 
-    console.log(
+    clUtils.log(
       "pxlz selectWordVersions test subsequentOutputUnit.selectedWord for following prefixes.",
       {
         "subsequentOutputUnit.selectedWord": subsequentOutputUnit.selectedWord,
@@ -71,7 +71,7 @@ exports.selectWordVersions = (
     if (
       selectedWord.protectIfSubsequentStartsWithTheseRegexes &&
       selectedWord.protectIfSubsequentStartsWithTheseRegexes.some((prefix) => {
-        console.log("spez selectWordVersions", { prefix });
+        clUtils.log("spez selectWordVersions", { prefix });
 
         let prefixRegex = RegExp("^" + prefix);
         return prefixRegex.test(subsequentOutputUnit.selectedWord);
@@ -109,7 +109,7 @@ exports.selectWordVersions = (
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   let shouldConsoleLog = false;
 
-  console.log(
+  clUtils.log(
     "[1;35m " + "pmoe POL preprocessStructureChunks-------------------" + "[0m"
   );
 
@@ -123,7 +123,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
     }
 
     if (shouldConsoleLog) {
-      console.log(
+      clUtils.log(
         "guii POL preprocessStructureChunks At first the structureChunk is",
         structureChunk
       );
@@ -162,7 +162,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
     }
 
     if (shouldConsoleLog) {
-      console.log(
+      clUtils.log(
         "uccs POL preprocessStructureChunks Finally the structureChunk is",
         structureChunk
       );
@@ -170,7 +170,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   });
 
   if (shouldConsoleLog) {
-    console.log("[1;35m " + "/POL preprocessStructureChunks" + "[0m");
+    clUtils.log("[1;35m " + "/POL preprocessStructureChunks" + "[0m");
   }
 };
 
@@ -366,7 +366,7 @@ exports.formatFeatureValue = (featureKey, featureValue, note) => {
 
 exports.fillVerbInflections = (lemmaObject) => {
   if (lemmaObject.complete) {
-    console.log(
+    clUtils.log(
       "zzfm POL fillVerbInflections fxn will do nothing, as '" +
         lemmaObject.lemma +
         "' lObj is marked as COMPLETE."

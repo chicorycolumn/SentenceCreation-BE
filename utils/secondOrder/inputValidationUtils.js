@@ -40,7 +40,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
       let allFeatureKeys = Object.keys(stChFeatures);
 
       if (!allFeatureKeys.includes(featureKey)) {
-        console.log(
+        clUtils.log(
           "fneu validateSentenceFormula structureChunk",
           structureChunk
         );
@@ -56,7 +56,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
         compatibleWordtypes &&
         !compatibleWordtypes.includes(gpUtils.getWorrdtypeStCh(structureChunk))
       ) {
-        console.log(
+        clUtils.log(
           "wghd validateSentenceFormula structureChunk",
           structureChunk
         );
@@ -74,7 +74,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
         expectedTypeOnStCh &&
         expectedTypeOnStCh !== uUtils.typeof(featureValue)
       ) {
-        console.log(
+        clUtils.log(
           "kchk validateSentenceFormula structureChunk",
           structureChunk
         );
@@ -91,7 +91,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
       if (possibleValues) {
         if (uUtils.typeof(featureValue) === "string") {
           if (!possibleValues.includes(featureValue)) {
-            console.log(
+            clUtils.log(
               "mkkf validateSentenceFormula structureChunk",
               structureChunk
             );
@@ -104,7 +104,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
         } else if (uUtils.typeof(featureValue) === "array") {
           featureValue.forEach((featureValueItem) => {
             if (!possibleValues.includes(featureValueItem)) {
-              console.log(
+              clUtils.log(
                 "timm validateSentenceFormula structureChunk",
                 structureChunk
               );
@@ -121,7 +121,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
       //4. Check if the value of agreeKeys is an existing chunkId.
       if (stChFeatures[featureKey].possibleValueMustBeExistingChunkId) {
         if (!allChunkIds.includes(featureValue)) {
-          console.log(
+          clUtils.log(
             "cglp validateSentenceFormula structureChunk",
             structureChunk
           );

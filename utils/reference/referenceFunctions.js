@@ -18,12 +18,12 @@ exports.getStructureChunkFeatures = (currentLanguage) => {
 exports.removeIncompatibleFeatures = (currentLanguage, structureChunk) => {
   //VITO-TEMP-removeIncompatibleFeatures
 
-  console.log(311, structureChunk);
+  clUtils.log(311, structureChunk);
   //(note, the two stChs in args are likely the same stCh, but best to do as their names suggest)
 
   //ACX3A: If npe then remove neuter from gender.
   if (gpUtils.getWorrdtypeStCh(structureChunk, true) === "noun-person") {
-    console.log(
+    clUtils.log(
       "vvvx removeIncompatibleFeatures. Removing 'n' if present as is noun-person."
     );
     structureChunk.gender = structureChunk.gender.filter(
@@ -36,7 +36,7 @@ exports.removeIncompatibleFeatures = (currentLanguage, structureChunk) => {
     structureChunk.person &&
     !structureChunk.person.filter((value) => value !== "1per").length
   ) {
-    console.log(
+    clUtils.log(
       "vvvy removeIncompatibleFeatures. Removing 'n' if present as only person value is '1per'."
     );
     structureChunk.gender = structureChunk.gender.filter(
@@ -49,8 +49,8 @@ exports.removeIncompatibleFeatures = (currentLanguage, structureChunk) => {
 
   let incompatibleFeaturesRef = refObj.incompatibleFeaturesRef[currentLanguage];
 
-  console.log({ currentLanguage });
-  console.log({ incompatibleFeaturesRef });
+  clUtils.log({ currentLanguage });
+  clUtils.log({ incompatibleFeaturesRef });
 
   Object.keys(structureChunk).forEach((traitKeyy) => {
     //eg traitKeyy = "gender"
@@ -96,7 +96,7 @@ exports.removeIncompatibleFeatures = (currentLanguage, structureChunk) => {
     );
   });
 
-  console.log(315, structureChunk);
+  clUtils.log(315, structureChunk);
   return structureChunk;
 };
 

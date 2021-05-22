@@ -20,10 +20,10 @@ exports.firstStageEvaluateAnnotations = (
   additionalRunsRecord,
   originalQuestionSentenceFormula
 ) => {
-  console.log(questionOutputArr.map((unit) => unit.structureChunk));
+  clUtils.log(questionOutputArr.map((unit) => unit.structureChunk));
 
   if (!answerSentenceData) {
-    console.log(
+    clUtils.log(
       "[1;31m " +
         "hhvv NB: NO ANSWER SENTENCE DATA IN aa.firstStageEvaluateAnnotations" +
         "[0m"
@@ -56,14 +56,14 @@ exports.firstStageEvaluateAnnotations = (
     );
 
     if (!Object.values(formattedAnnoObj).length) {
-      console.log(
+      clUtils.log(
         "[1;31m " +
           `dhce NB: firstStageEvaluateAnnotations. There were annotations on stCh, but none after formatting. "${structureChunk.chunkId}".` +
           "[0m"
       );
     }
 
-    console.log(
+    clUtils.log(
       `dhci firstStageEvaluateAnnotations. Adding firstStageAnnotationsObj to "${structureChunk.chunkId}".`
     );
 
@@ -87,14 +87,14 @@ exports.whittleAnnotationsAndConvertToPlainspeak = (
 
   let questionStructureChunk = questionOutputUnit.structureChunk;
 
-  console.log("bbbc");
+  clUtils.log("bbbc");
   aaUtils.removeAnnotationsByAOCs(
     questionOutputUnit,
     languagesObj,
     answerSentenceData,
     questionOutputArr
   );
-  console.log("bbbd");
+  clUtils.log("bbbd");
 
   aaUtils.removeAnnotationsByCounterfactualAnswerSentences(
     questionOutputUnit,
@@ -108,7 +108,7 @@ exports.whittleAnnotationsAndConvertToPlainspeak = (
     additionalRunsRecord,
     originalQuestionSentenceFormula
   );
-  console.log("bbbe");
+  clUtils.log("bbbe");
 
   let annoObj = {};
 
@@ -163,14 +163,14 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
     (outputArr) => outputArr.map((unit) => unit.selectedWord)
   );
 
-  console.log("myxz questionOutputUnit", questionOutputUnit);
+  clUtils.log("myxz questionOutputUnit", questionOutputUnit);
 
-  console.log(
+  clUtils.log(
     "myxa questionOutputUnit.structureChunk.annotations",
     questionOutputUnit.structureChunk.annotations
   );
 
-  console.log(
+  clUtils.log(
     "[1;35m " +
       `\nmyxa removeAnnotationsByCounterfax START. "${questionOutputUnit.structureChunk.chunkId}" has the annotations shown above.` +
       "[0m"
@@ -194,9 +194,8 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
       let stChFeatures = refFxn.getStructureChunkFeatures(questionLanguage);
 
-      let allPossibleValuesForThisFeature = stChFeatures[
-        annoKey
-      ].possibleValues.slice(0);
+      let allPossibleValuesForThisFeature =
+        stChFeatures[annoKey].possibleValues.slice(0);
 
       let counterfactualValuesForThisFeature = Array.from(
         new Set(
@@ -204,7 +203,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         )
       );
 
-      console.log(
+      clUtils.log(
         "veem counterfactualValuesForThisFeature",
         counterfactualValuesForThisFeature
       );
@@ -220,13 +219,13 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         counterfaxedStCh
       )[annoKey];
 
-      console.log(
+      clUtils.log(
         `myxe removeAnnotationsByCounterfax FOREACH START. Examining ${questionOutputUnit.structureChunk.chunkId}'s annotation ${annoKey} = ${annoValue} so the counterfactual values are [${counterfactualValuesForThisFeature}].`
       );
 
       counterfactualValuesForThisFeature.forEach(
         (counterfactualValueForThisFeature) => {
-          console.log(
+          clUtils.log(
             `myxe removeAnnotationsByCounterfax FOREACH-2 START. Will do a run with counterfactual value "${counterfactualValueForThisFeature}".`
           );
 
@@ -240,9 +239,10 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             questionOutputArr
           );
 
-          let indexOfStChToChange = counterfactualQuestionSentenceFormula.sentenceStructure.findIndex(
-            (stCh) => stCh.chunkId === counterfaxedStCh.chunkId
-          );
+          let indexOfStChToChange =
+            counterfactualQuestionSentenceFormula.sentenceStructure.findIndex(
+              (stCh) => stCh.chunkId === counterfaxedStCh.chunkId
+            );
 
           if (indexOfStChToChange === -1) {
             clUtils.throw("mizd");
@@ -296,7 +296,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       );
 
       if ("console") {
-        console.log(
+        clUtils.log(
           "[1;33m \n" +
             `myxi removeAnnotationsByCounterfax. \nRun where we changed "${
               questionOutputUnit.structureChunk.chunkId
@@ -318,13 +318,14 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
                 )}]`
             )
         );
-        console.log("[1;33m" + `${logToConsole}` + "[0m");
+        clUtils.log("[1;33m" + `${logToConsole}` + "[0m");
       }
 
-      let counterfactualQuestionOutputArrays = arrayOfCounterfactualResultsForThisAnnotation.map(
-        (counterfactual) =>
-          counterfactual.questionSentenceData.questionOutputArr
-      );
+      let counterfactualQuestionOutputArrays =
+        arrayOfCounterfactualResultsForThisAnnotation.map(
+          (counterfactual) =>
+            counterfactual.questionSentenceData.questionOutputArr
+        );
       let counterfactualAnswerOutputArrays = [];
 
       arrayOfCounterfactualResultsForThisAnnotation.forEach(
@@ -337,8 +338,8 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         }
       );
 
-      let counterfactualFeatures = arrayOfCounterfactualResultsForThisAnnotation.map(
-        (counterfactual) => {
+      let counterfactualFeatures =
+        arrayOfCounterfactualResultsForThisAnnotation.map((counterfactual) => {
           {
             if (
               Object.keys(counterfactual.counterfactualFeature).length !== 1
@@ -354,39 +355,38 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
             return counterfactual.counterfactualFeature[annoKey];
           }
-        }
-      );
+        });
 
       if (shouldConsoleLog) {
-        console.log(
+        clUtils.log(
           "\n klwe removeAnnotationsByCounterfax. questionOutputUnit.structureChunk.annotations",
           questionOutputUnit.structureChunk.annotations
         );
-        console.log(
+        clUtils.log(
           "[1;33m" +
             `klwe removeAnnotationsByCounterfax. We made counterfactuals for question stCh "${questionOutputUnit.structureChunk.chunkId}" based on its annotations, shown above.` +
             "[0m"
         );
-        console.log({ additionalRunsRecord });
-        console.log(
+        clUtils.log({ additionalRunsRecord });
+        clUtils.log(
           "originalQuestionOutputArrays...selectedWords",
           originalQuestionOutputArrays.map((outputArr) =>
             outputArr.map((unit) => unit.selectedWord)
           )
         );
-        console.log(
+        clUtils.log(
           "originalAnswerOutputArrays...selectedWords",
           originalAnswerOutputArrays.map((outputArr) =>
             outputArr.map((unit) => unit.selectedWord)
           )
         );
-        console.log(
+        clUtils.log(
           "counterfactualQuestionOutputArrays...selectedWords",
           counterfactualQuestionOutputArrays.map((outputArr) =>
             outputArr.map((unit) => unit.selectedWord)
           )
         );
-        console.log(
+        clUtils.log(
           "counterfactualAnswerOutputArrays...selectedWords",
           counterfactualAnswerOutputArrays.map((outputArr) =>
             outputArr.map((unit) => unit.selectedWord)
@@ -469,7 +469,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         counterfactualQuestionOutputArrays,
         rawQuestionSentenceFormula.primaryOrders
       );
-      // console.log("vnai", {
+      // clUtils.log("vnai", {
       //   originalAnswerPseudoSentences,
       //   counterfactualAnswerPseudoSentences,
       //   originalQuestionPseudoSentences,
@@ -482,7 +482,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           counterfactualAnswerPseudoSentences
         )
       ) {
-        console.log(
+        clUtils.log(
           "[1;35m " +
             `myxo-clauseA [tl;dr answersame so deleting anno] removeAnnotationsByCounterfax END. I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual ANSWER selected words came back SAME as original answer selected words.\nThis means that this feature has no impact, even if we flip it, so annotation is not needed. \nDeleting annotation "${annoKey}" = "${questionOutputUnit.structureChunk.annotations[annoKey]}" now.` +
             "[0m",
@@ -499,7 +499,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           counterfactualQuestionPseudoSentences
         )
       ) {
-        console.log(
+        clUtils.log(
           "[1;35m " +
             `myxo-clauseB [tl;dr questiondifferent so deleting anno] removeAnnotationsByCounterfax END. I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual QUESTION selected words came back DIFFERENT original question selected words.\nThis means that this feature has no impact, even if we flip it, so annotation is not needed. \nDeleting annotation "${annoKey}" = "${questionOutputUnit.structureChunk.annotations[annoKey]}" now.` +
             "[0m",
@@ -511,7 +511,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
         delete questionOutputUnit.structureChunk.annotations[annoKey];
       } else {
-        console.log(
+        clUtils.log(
           "[1;35m " +
             `myxo-clauseC [tl;dr !answersame && !questiondifferent so keeping anno] removeAnnotationsByCounterfax END. I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual answer selected words came back DIFFERENT FROM original answer selected words.\nThis means I'll keep annotation "${annoKey}" = "${questionOutputUnit.structureChunk.annotations[annoKey]}".` +
             "[0m",
@@ -537,7 +537,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             ...counterfactualAnswerOutputArrays,
           ];
 
-          console.log(
+          clUtils.log(
             `PDSX-orange. Agglomerating the answer output arrays and deleting annoValue "${annoValue}", and questionOutputUnit.structureChunk[${annoKey}] is now [${combinedFeatures}]`
           );
 
@@ -547,9 +547,8 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           if (
             !questionOutputUnit.structureChunk.counterfactuallyImportantFeatures
           ) {
-            questionOutputUnit.structureChunk.counterfactuallyImportantFeatures = [
-              annoKey,
-            ];
+            questionOutputUnit.structureChunk.counterfactuallyImportantFeatures =
+              [annoKey];
           } else {
             questionOutputUnit.structureChunk.counterfactuallyImportantFeatures.push(
               annoKey
@@ -594,8 +593,8 @@ exports.removeAnnotationsIfHeadChunkHasBeenCounterfaxed = (
         questionOutputUnit.structureChunk[agreeKey]
       ]
     ) {
-      console.log(questionOutputUnit.structureChunk.annotations);
-      console.log(
+      clUtils.log(questionOutputUnit.structureChunk.annotations);
+      clUtils.log(
         "[1;33m " +
           `mioc removeAnnotationsByCounterfax. Aha! We are examining "${
             questionOutputUnit.structureChunk.chunkId
@@ -612,7 +611,7 @@ exports.removeAnnotationsIfHeadChunkHasBeenCounterfaxed = (
       questionOutputUnitsThatHaveBeenCounterfactualed[
         questionOutputUnit.structureChunk[agreeKey]
       ].forEach((annoKey) => {
-        console.log(
+        clUtils.log(
           "[1;33m " +
             `mioc So I'm deleting "${annoKey}" from "${questionOutputUnit.structureChunk.chunkId}"'s annotations.` +
             "[0m"
@@ -688,19 +687,19 @@ exports.removeAnnotationsByAOCs = (
     }
 
     if ("console") {
-      console.log(
+      clUtils.log(
         "ttta questionOutputUnit.structureChunk.annotations",
         questionOutputUnit.structureChunk.annotations
       );
-      console.log(
+      clUtils.log(
         "tttb primaryDepUnits",
         primaryDepUnits.map((unit) => unit.drillPath)
       );
-      console.log(
+      clUtils.log(
         "tttb secondaryDepUnits",
         secondaryDepUnits.map((unit) => unit.drillPath)
       );
-      console.log(
+      clUtils.log(
         "tttb tertiaryDepUnits",
         tertiaryDepUnits.map((unit) => unit.drillPath)
       );
@@ -729,7 +728,7 @@ exports.removeAnnotationsByAOCs = (
               return;
             }
 
-            console.log("meef", depUnit);
+            clUtils.log("meef", depUnit);
 
             /**If any dep unit holds a value at inflectionTyype that is unique in its lObj,
              * then this pronoun obviates the need for that specifier, so delete it from annotations.
@@ -742,7 +741,7 @@ exports.removeAnnotationsByAOCs = (
                 depUnit[drillPathKey]
               )
             ) {
-              console.log(
+              clUtils.log(
                 "[1;30m " +
                   `kzia removeAnnotationsByAOCs "${questionOutputUnit.structureChunk.chunkId}" ABZ Late stage DELETION of annotation "${inflectionTyype}" which is "${questionOutputUnit.structureChunk.annotations[inflectionTyype]}"` +
                   "[0m"
@@ -802,7 +801,7 @@ exports.specialAdjustmentToAnnotations = (
       }
 
       if (headLObj.gender && !gpUtils.featureValueIsMeta(headLObj.gender)) {
-        console.log({
+        clUtils.log({
           questionLanguage: languagesObj.questionLanguage,
           headLObjgender: headLObj.gender,
         });
@@ -875,11 +874,11 @@ exports.addSpecifiersToMGNs = (questionSentenceData, languagesObj) => {
           selectedGenderForQuestionLanguage
         )
       ) {
-        console.log(
+        clUtils.log(
           "questionMGNunit.structureChunk.gender",
           questionMGNunit.structureChunk.gender
         );
-        console.log(
+        clUtils.log(
           "refObj.metaFeatures[questionLanguage].gender[metaGender]",
           refObj.metaFeatures[questionLanguage].gender[metaGender]
         );
@@ -899,12 +898,12 @@ exports.addSpecifiersToMGNs = (questionSentenceData, languagesObj) => {
       "person"
     );
 
-    console.log(
+    clUtils.log(
       "[1;35m " +
         `ksxy addSpecifiersToMGNs #NB: Am changing questionMGNunit.structureChunk.gender and correspondingAnswerUnit.structureChunk.gender` +
         "[0m"
     );
-    console.log(`ksxy addSpecifiersToMGNs`, {
+    clUtils.log(`ksxy addSpecifiersToMGNs`, {
       selectedGenderForQuestionLanguage,
       selectedGenderForAnswerLanguageArr,
     });
@@ -912,7 +911,7 @@ exports.addSpecifiersToMGNs = (questionSentenceData, languagesObj) => {
     questionMGNunit.structureChunk.gender = [selectedGenderForQuestionLanguage];
     // correspondingAnswerUnit.structureChunk.gender = selectedGenderForAnswerLanguageArr;
 
-    console.log("wdmi addSpecifiers. Will addAnnotation ");
+    clUtils.log("wdmi addSpecifiers. Will addAnnotation ");
     aaUtils.addAnnotation(
       questionMGNunit.structureChunk,
       "gender",
@@ -925,7 +924,7 @@ exports.sortAnswerAndQuestionStructureChunks = (
   questionSentenceStructure,
   answerSentenceStructure
 ) => {
-  console.log("bsat sortAnswerAndQuestionStructureChunks");
+  clUtils.log("bsat sortAnswerAndQuestionStructureChunks");
 
   let responseObj = {
     answerHeadChunks: null,
@@ -936,22 +935,16 @@ exports.sortAnswerAndQuestionStructureChunks = (
     questionOtherChunks: null,
   };
 
-  let {
-    headChunks,
-    dependentChunks,
-    otherChunks,
-  } = scUtils.sortStructureChunks(answerSentenceStructure);
+  let { headChunks, dependentChunks, otherChunks } =
+    scUtils.sortStructureChunks(answerSentenceStructure);
 
   responseObj.answerHeadChunks = headChunks;
   responseObj.answerDependentChunks = dependentChunks;
   responseObj.answerOtherChunks = otherChunks;
 
   if (true) {
-    let {
-      headChunks,
-      dependentChunks,
-      otherChunks,
-    } = scUtils.sortStructureChunks(questionSentenceStructure);
+    let { headChunks, dependentChunks, otherChunks } =
+      scUtils.sortStructureChunks(questionSentenceStructure);
 
     responseObj.questionHeadChunks = headChunks;
     responseObj.questionDependentChunks = dependentChunks;
@@ -969,7 +962,7 @@ exports.specifyQuestionChunkAndChangeAnswerChunk = (
   clUtils.throw("fjln specifyQuestionChunkAndChangeAnswerChunk Cease");
 
   if (actionValueArr.length !== 1) {
-    console.log("ujrw specifyQuestionChunkAndChangeAnswerChunk", {
+    clUtils.log("ujrw specifyQuestionChunkAndChangeAnswerChunk", {
       actionValueArr,
     });
     clUtils.throw(
@@ -977,25 +970,21 @@ exports.specifyQuestionChunkAndChangeAnswerChunk = (
     );
   }
 
-  let {
-    answerHeadChunk,
-    answerChunk,
-    questionHeadChunk,
-    questionChunk,
-  } = chunksObj;
+  let { answerHeadChunk, answerChunk, questionHeadChunk, questionChunk } =
+    chunksObj;
 
   if (answerHeadChunk) {
-    console.log("evuj specifyQuestionChunkAndChangeAnswerChunk Point A");
+    clUtils.log("evuj specifyQuestionChunkAndChangeAnswerChunk Point A");
     answerHeadChunk[actionKey] = actionValueArr;
   } else {
-    console.log("evuj specifyQuestionChunkAndChangeAnswerChunk Point B");
+    clUtils.log("evuj specifyQuestionChunkAndChangeAnswerChunk Point B");
     answerChunk[actionKey] = actionValueArr;
   }
 
   //...and note Specifier in Q headCh if exists, else Q depCh.
 
   if (questionHeadChunk) {
-    console.log("tbji specifyQuestionChunkAndChangeAnswerChunk Point C");
+    clUtils.log("tbji specifyQuestionChunkAndChangeAnswerChunk Point C");
     aaUtils.addAnnotation(questionHeadChunk, actionKey, actionValueArr[0]);
   } else {
     if (!questionChunk) {
@@ -1006,7 +995,7 @@ exports.specifyQuestionChunkAndChangeAnswerChunk = (
         actionValueArr[0]
       );
     }
-    console.log(
+    clUtils.log(
       "lskt specifyQuestionChunkAndChangeAnswerChunk specifyQuestionChunkAndChangeAnswerChunk Point D"
     );
     aaUtils.addAnnotation(questionChunk, actionKey, actionValueArr[0]);
@@ -1019,14 +1008,14 @@ exports.addAnnotation = (chunk, key, value) => {
   }
 
   if (typeof value !== "string") {
-    console.log("nrtn addAnnotation", { value });
+    clUtils.log("nrtn addAnnotation", { value });
     clUtils.throw("nrtn addAnnotation expected STRING for value");
   }
 
-  console.log(
+  clUtils.log(
     "[1;35m " + "aggw addAnnotation Added annotation for " + chunk.chunkId + "[0m"
   );
-  console.log("aggw addAnnotation", { key, value });
+  clUtils.log("aggw addAnnotation", { key, value });
 
   chunk.annotations[key] = value;
 };
@@ -1058,12 +1047,8 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
   const langUtils = require("../source/" + questionLanguage + "/langUtils.js");
 
   arrayOfOutputUnits.forEach((outputUnit) => {
-    let {
-      selectedLemmaObject,
-      drillPath,
-      structureChunk,
-      selectedWord,
-    } = outputUnit;
+    let { selectedLemmaObject, drillPath, structureChunk, selectedWord } =
+      outputUnit;
 
     if (gpUtils.getWorrdtypeStCh(structureChunk) === "fixed") {
       return;
@@ -1093,7 +1078,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
 
       let { emoji, text } = allohomInfo;
 
-      console.log(
+      clUtils.log(
         "oozq addClarifiers------------------------------------------ADDED  CLARIFIER in Step 1a",
         emoji,
         text
@@ -1108,7 +1093,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
       if (structureChunk.pleaseShowMultipleWordtypeAllohomClarifiers) {
         let annotationValue = gpUtils.getWorrdtypeLObj(selectedLemmaObject);
 
-        console.log(
+        clUtils.log(
           "wbvz addClarifiers------------------------------------------ADDED CLARIFIER in Step 1b",
           annotationValue
         );
@@ -1139,7 +1124,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
         gpUtils.getWorrdtypeStCh(structureChunk)
       ];
 
-    console.log(
+    clUtils.log(
       `cicw allowableClarifiers are`,
       allowableClarifiers,
       `because structureChunk=${
@@ -1155,7 +1140,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
         gpUtils.getWorrdtypeStCh(structureChunk)
       ];
 
-    console.log("qjho addClarifiers", languagesObj, {
+    clUtils.log("qjho addClarifiers", languagesObj, {
       allowableClarifiers,
       allowableExtraClarifiersInSingleWordSentences,
     });
@@ -1173,19 +1158,19 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
       );
 
       if (synhomographData) {
-        // console.log(
+        // clUtils.log(
         //   "djeu synhomographData.synhomographs",
         //   synhomographData.synhomographs
         // );
         synhomographData.synhomographs.forEach((synhomDataUnit) => {
           if (selectedWord === synhomDataUnit.terminalValue) {
-            console.log(
+            clUtils.log(
               "[1;35m " +
                 `qxqf addClarifiers YES enter filterDownClarifiers for selectedWord as "${selectedWord}"` +
                 "[0m"
             );
 
-            console.log("qxqf addClarifierssynhomDataUnit", synhomDataUnit);
+            clUtils.log("qxqf addClarifierssynhomDataUnit", synhomDataUnit);
 
             let labelsWhereTheyDiffer = filterDownClarifiers(
               synhomDataUnit,
@@ -1193,11 +1178,11 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
             );
 
             function filterDownClarifiers(synhomDataUnit, allowableClarifiers) {
-              console.log(
+              clUtils.log(
                 "[1;35m " + `pjgg filterDownClarifiers---------------` + "[0m"
               );
 
-              console.log(
+              clUtils.log(
                 "pjgg filterDownClarifiers We start with these labels:",
                 synhomDataUnit.labelsWhereTheyDiffer
               );
@@ -1211,14 +1196,14 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
                         label
                       ))
                   ) {
-                    console.log(
+                    clUtils.log(
                       "[1;32m " +
                         `jpnj filterDownClarifiers "${structureChunk.chunkId}" ABZ Early stage PASSING of "${label}" in allowableClarifiers` +
                         "[0m"
                     );
                     return true;
                   } else {
-                    console.log(
+                    clUtils.log(
                       "[1;30m " +
                         `lmza filterDownClarifiers "${structureChunk.chunkId}" ABZ Early stage BLOCKING of "${label}" in allowableClarifiers` +
                         "[0m"
@@ -1228,22 +1213,22 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
                 }
               );
 
-              console.log(
+              clUtils.log(
                 "ahby filterDownClarifiers So now we have these labels:",
                 filteredLabels
               );
-              console.log(
+              clUtils.log(
                 "ahby filterDownClarifiers, structureChunk",
                 structureChunk
               );
-              console.log(
+              clUtils.log(
                 "ahby filterDownClarifiers, synhomDataUnit.inflectionLabelChain",
                 synhomDataUnit.inflectionLabelChain
               );
 
               let currentValueArr = synhomDataUnit.inflectionLabelChain.map(
                 (inflectionLabel) => {
-                  console.log("vpzx filterDownClarifiers", { inflectionLabel });
+                  clUtils.log("vpzx filterDownClarifiers", { inflectionLabel });
 
                   if (
                     inflectionLabel === "tense" &&
@@ -1257,7 +1242,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
                     !structureChunk[inflectionLabel] ||
                     !structureChunk[inflectionLabel].length
                   ) {
-                    console.log(
+                    clUtils.log(
                       "[1;31m " +
                         `#WARN kxqz filterDownClarifiers. Adding null to currentValueArr for inflectionLabel "${inflectionLabel}".` +
                         "[0m"
@@ -1267,7 +1252,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
                   }
 
                   if (structureChunk[inflectionLabel].length > 1) {
-                    console.log(
+                    clUtils.log(
                       "[1;31m " +
                         `#WARN wqzm filterDownClarifiers. structureChunk[inflectionLabel] "${structureChunk[inflectionLabel]}"` +
                         "[0m"
@@ -1307,7 +1292,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
                           (item2 === pluralKey &&
                             ref[pluralKey].includes(item1))
                         ) {
-                          console.log(
+                          clUtils.log(
                             "[1;33m " +
                               `hsan findSinglePointMutationArray WAHEY!` +
                               "[0m"
@@ -1320,14 +1305,14 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
                     }
                   )
                 ) {
-                  console.log(
+                  clUtils.log(
                     "[1;32m " +
                       `xunf findSinglePointMutationArray "${structureChunk.chunkId}" ABZ Early stage PASSING of "${label}" in findSinglePointMutationArray` +
                       "[0m"
                   );
                   return true;
                 } else {
-                  console.log(
+                  clUtils.log(
                     "[1;30m " +
                       `dhjc findSinglePointMutationArray "${structureChunk.chunkId}" ABZ Early stage BLOCKING of "${label}" in findSinglePointMutationArray` +
                       "[0m"
@@ -1336,12 +1321,12 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
                 }
               });
 
-              console.log(
+              clUtils.log(
                 "cpkw filterDownClarifiers And now we have these labels:",
                 filteredLabels
               );
 
-              console.log("[1;35m " + `/filterDownClarifiers` + "[0m");
+              clUtils.log("[1;35m " + `/filterDownClarifiers` + "[0m");
 
               return filteredLabels;
             }
@@ -1364,7 +1349,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
                 if (clarifierValue.length === 1) {
                   clarifierValue = clarifierValue[0];
                 } else {
-                  console.log(
+                  clUtils.log(
                     "rqfh addClarifiers clarifierValue",
                     clarifierValue
                   );
@@ -1374,7 +1359,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
                 }
               }
 
-              console.log(
+              clUtils.log(
                 "sosu addClarifiers------------------------------------------ADDED CLARIFIER in Step 3: ",
                 clarifierValue
               );
@@ -1384,7 +1369,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
         });
       }
     } else {
-      console.log(
+      clUtils.log(
         "wnvf addClarifiers I was told not to add any further clarifiers!"
       );
     }

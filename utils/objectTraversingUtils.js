@@ -17,7 +17,7 @@ exports.findMatchingLemmaObjectThenWord = (
   outputArray,
   isPHD
 ) => {
-  console.log(
+  clUtils.log(
     "[1;33m " +
       `ligw ot:findMatchingLemmaObjectThenWord for stCh: "${structureChunk.chunkId}"` +
       "[0m"
@@ -54,7 +54,7 @@ exports.findMatchingLemmaObjectThenWord = (
   let matches = [];
 
   if (structureChunk.specificIds && structureChunk.specificIds.length) {
-    console.log(
+    clUtils.log(
       "obbm ot:findMatchingLemmaObjectThenWord GGGet matches by specific IDs:",
       structureChunk.specificIds
     );
@@ -62,7 +62,7 @@ exports.findMatchingLemmaObjectThenWord = (
       structureChunk.specificIds.includes(lObj.id)
     );
     if (!matches.length) {
-      console.log(
+      clUtils.log(
         "[1;31m " +
           `czdi ot:findMatchingLemmaObjectThenWord No matches after Get matches by specific IDs.` +
           "[0m"
@@ -72,11 +72,11 @@ exports.findMatchingLemmaObjectThenWord = (
     structureChunk.specificLemmas &&
     structureChunk.specificLemmas.length
   ) {
-    console.log(
+    clUtils.log(
       "yyeq ot:findMatchingLemmaObjectThenWord GGGet matches by specific Lemmas:",
       structureChunk.specificLemmas
     );
-    console.log(
+    clUtils.log(
       "yyeq ot:findMatchingLemmaObjectThenWord source",
       source.map((lObj) => lObj.lemma)
     );
@@ -84,20 +84,20 @@ exports.findMatchingLemmaObjectThenWord = (
       structureChunk.specificLemmas.includes(lObj.lemma)
     );
     if (!matches.length) {
-      console.log(
+      clUtils.log(
         "[1;31m " +
           `jybt ot:findMatchingLemmaObjectThenWord No matches after Get matches by specific Lemmas.` +
           "[0m"
       );
     }
   } else {
-    console.log(
+    clUtils.log(
       "vqkx ot:findMatchingLemmaObjectThenWord GGGet matches by Tags and Selectors."
     );
     matches = lfUtils.filterByAndTagsAndOrTags(source, structureChunk);
 
     if (!matches.length) {
-      console.log(
+      clUtils.log(
         "[1;31m " +
           `wvjy ot:findMatchingLemmaObjectThenWord No matches after Get matches by Tags. Eg you may have put multiple unfulfillable andTags?` +
           "[0m"
@@ -114,7 +114,7 @@ exports.findMatchingLemmaObjectThenWord = (
     );
 
     if (!matches.length) {
-      console.log(
+      clUtils.log(
         "[1;31m " +
           `frpb ot:findMatchingLemmaObjectThenWord No matches after Get matches by Selectors.` +
           "[0m"
@@ -412,7 +412,7 @@ exports.findMatchingLemmaObjectThenWord = (
     );
   }
 
-  // console.log(
+  // clUtils.log(
   //   "ecse ot:findMatchingLemmaObjectThenWord selectedFormsArray",
   //   selectedFormsArray
   // );
@@ -452,7 +452,7 @@ exports.findMatchingLemmaObjectThenWord = (
   let structureChunks = structureChunksAdjusted || [structureChunk];
 
   structureChunks.forEach((structureChunk) => {
-    console.log(
+    clUtils.log(
       "mxcm ot:findMatchingLemmaObjectThenWord structureChunk",
       structureChunk
     );
@@ -460,7 +460,7 @@ exports.findMatchingLemmaObjectThenWord = (
     let matchesCopy = matches.slice(0);
 
     if (!matchesCopy.length) {
-      console.log(
+      clUtils.log(
         "[1;31m " +
           "#WARN btfm ot:findMatchingLemmaObjectThenWord. It turns out no matching lemma objects were found in OT:findMatching" +
           "[0m"
@@ -477,7 +477,7 @@ exports.findMatchingLemmaObjectThenWord = (
     );
 
     if (!matchesCopy.length) {
-      console.log(
+      clUtils.log(
         "[1;31m " +
           "#NB gugm ot:findMatchingLemmaObjectThenWord. It transpires that no matching lemma objects were found in OT:findMatching" +
           "[0m",
@@ -494,7 +494,7 @@ exports.findMatchingLemmaObjectThenWord = (
     );
 
     if (!matchesCopy.length) {
-      console.log(
+      clUtils.log(
         "[1;31m " +
           "#WARN yqtf ot:findMatchingLemmaObjectThenWord. It appears no matching lemma objects were found in OT:findMatching" +
           "[0m"
@@ -508,15 +508,15 @@ exports.findMatchingLemmaObjectThenWord = (
     clUtils.consoleLogPW("##If-PW", structureChunk, multipleMode);
 
     if (multipleMode) {
-      console.log("iksf ot:findMatchingLemmaObjectThenWord");
+      clUtils.log("iksf ot:findMatchingLemmaObjectThenWord");
       matchesCopy.forEach((selectedLemmaObject) => {
-        console.log(
+        clUtils.log(
           "uzsw ot:findMatchingLemmaObjectThenWord selectedLemmaObject",
           selectedLemmaObject
         );
 
         if (outputArray) {
-          console.log(
+          clUtils.log(
             "[1;33m " +
               `nvnĸ findMatching outputArray: [${outputArray.map(
                 (x) => x.selectedWord
@@ -524,7 +524,7 @@ exports.findMatchingLemmaObjectThenWord = (
               "[0m"
           );
         } else {
-          console.log("[1;33m " + `nvnĸ findMatching outputArray null` + "[0m");
+          clUtils.log("[1;33m " + `nvnĸ findMatching outputArray null` + "[0m");
         }
 
         let subArrayOfOutputUnits = lfUtils.filterWithinSelectedLemmaObject(
@@ -542,13 +542,13 @@ exports.findMatchingLemmaObjectThenWord = (
           selectedWordArray.forEach((selectedWord) => {
             if (!"natasha findMatching Answer mode") {
               if (typeof selectedWord === "string") {
-                console.log("[1;33m " + `bufw findMatching Answer IS STRING` + "[0m");
+                clUtils.log("[1;33m " + `bufw findMatching Answer IS STRING` + "[0m");
               } else if (Array.isArray(selectedWord)) {
-                console.log("[1;33m " + `bufw findMatching Answer IS ARRAY` + "[0m");
-                console.log(selectedWord);
+                clUtils.log("[1;33m " + `bufw findMatching Answer IS ARRAY` + "[0m");
+                clUtils.log(selectedWord);
                 clUtils.throw("bufw findMatching should not have been array.");
               } else if (gpUtils.isTerminusObject(selectedWord)) {
-                console.log("[1;33m " + `bufw findMatching Answer IS TOBJ` + "[0m");
+                clUtils.log("[1;33m " + `bufw findMatching Answer IS TOBJ` + "[0m");
               }
             }
 
@@ -597,7 +597,7 @@ exports.findMatchingLemmaObjectThenWord = (
         });
       });
     } else {
-      console.log("xzjc ot:findMatchingLemmaObjectThenWord");
+      clUtils.log("xzjc ot:findMatchingLemmaObjectThenWord");
       let selectedLemmaObject = uUtils.selectRandom(matchesCopy);
 
       if (!structureChunk.dontSpecifyOnThisChunk) {
@@ -617,7 +617,7 @@ exports.findMatchingLemmaObjectThenWord = (
           currentLanguage
         );
       } else {
-        console.log(
+        clUtils.log(
           "[1;30m " +
             `-----------------------------------------------------------------------------------------------------------------------------------PDSblue` +
             "[0m"
@@ -625,18 +625,18 @@ exports.findMatchingLemmaObjectThenWord = (
       }
 
       if ("console") {
-        console.log(
+        clUtils.log(
           "fxdn ot:findMatchingLemmaObjectThenWord If-PW selectedLemmaObject for " +
             structureChunk.chunkId
         );
-        console.log(
+        clUtils.log(
           "fxdn ot:findMatchingLemmaObjectThenWord",
           selectedLemmaObject.inflections
         );
 
-        console.log("- * - * - * - * - * - * - * - * - * - * - * - * -");
+        clUtils.log("- * - * - * - * - * - * - * - * - * - * - * - * -");
         if (outputArray) {
-          console.log(
+          clUtils.log(
             "[1;33m " +
               `nvnk findMatching outputArray: [${outputArray.map(
                 (x) => x.selectedWord
@@ -644,16 +644,16 @@ exports.findMatchingLemmaObjectThenWord = (
               "[0m"
           );
         } else {
-          console.log("[1;33m " + `nvnk findMatching outputArray null` + "[0m");
+          clUtils.log("[1;33m " + `nvnk findMatching outputArray null` + "[0m");
         }
-        console.log({
+        clUtils.log({
           selectedLemmaObject,
           structureChunk,
           currentLanguage,
           multipleMode,
           outputArray,
         });
-        console.log("- * - * - * - * - * - * -");
+        clUtils.log("- * - * - * - * - * - * -");
       }
 
       let subArrayOfOutputUnits = lfUtils.filterWithinSelectedLemmaObject(
@@ -666,11 +666,11 @@ exports.findMatchingLemmaObjectThenWord = (
       );
 
       if (!subArrayOfOutputUnits || !subArrayOfOutputUnits.length) {
-        console.log("uyie !subArrayOfOutputUnits/length");
+        clUtils.log("uyie !subArrayOfOutputUnits/length");
         return false;
       }
 
-      console.log(
+      clUtils.log(
         "sfmo ot:findMatchingLemmaObjectThenWord subArrayOfOutputUnits"
       );
       clUtils.consoleLogObjectAtOneLevel(subArrayOfOutputUnits);
@@ -809,7 +809,7 @@ exports.findMatchingLemmaObjectThenWord = (
       } = unit;
 
       if (!selectedWordArray || !selectedWordArray.length) {
-        console.log(
+        clUtils.log(
           "whhe ot:findMatchingLemmaObjectThenWord errorInSentenceCreation.errorMessage: No lemma objects were found for these specifications."
         );
         errorInSentenceCreation.errorMessage = [
@@ -823,23 +823,23 @@ exports.findMatchingLemmaObjectThenWord = (
 
       if (!"natasha findMatching Question mode") {
         if (typeof selectedItem === "string") {
-          console.log(
+          clUtils.log(
             "[1;33m " +
               `ozdj ot:findMatchingLemmaObjectThenWord findMatching Question IS STRING` +
               "[0m"
           );
         } else if (Array.isArray(selectedItem)) {
-          console.log(
+          clUtils.log(
             "[1;33m " +
               `ozdj ot:findMatchingLemmaObjectThenWord findMatching Question IS ARRAY` +
               "[0m"
           );
-          console.log("jxny ot:findMatchingLemmaObjectThenWord", selectedItem);
+          clUtils.log("jxny ot:findMatchingLemmaObjectThenWord", selectedItem);
           clUtils.throw(
             "jxny ot:findMatchingLemmaObjectThenWord should not have been array."
           );
         } else if (gpUtils.isTerminusObject(selectedItem)) {
-          console.log(
+          clUtils.log(
             "[1;33m " +
               `ozdj ot:findMatchingLemmaObjectThenWord findMatching Question IS TOBJ` +
               "[0m"
@@ -890,10 +890,10 @@ exports.findMatchingLemmaObjectThenWord = (
 
   if (!arrayOfAllPossibleOutputUnits.length) {
     if (!errorInSentenceCreation.errorMessage) {
-      console.log(
+      clUtils.log(
         "yzcq ot:findMatchingLemmaObjectThenWord errorInSentenceCreation.errorMessage: The rrrequested inflections were not found in the selected lemma objects."
       );
-      console.log(
+      clUtils.log(
         "yzcq ot:findMatchingLemmaObjectThenWord structureChunk",
         structureChunk
       );
@@ -1085,7 +1085,7 @@ exports.findObjectInNestedObjectsAndArrays = (
 };
 
 exports.giveRoutesAndTerminalValuesFromObject = (obj) => {
-  console.log(
+  clUtils.log(
     "[1;35m " +
       `xlbj ot:giveRoutesAndTerminalValuesFromObject-----------------------` +
       "[0m"
@@ -1103,13 +1103,13 @@ exports.giveRoutesAndTerminalValuesFromObject = (obj) => {
 
     if (!"natasha giveRoutes???") {
       if (typeof value === "string") {
-        console.log("[1;33m " + `nayq giveRoutes??? IS STRING` + "[0m");
+        clUtils.log("[1;33m " + `nayq giveRoutes??? IS STRING` + "[0m");
       } else if (Array.isArray(value)) {
-        console.log("[1;33m " + `nayq giveRoutes??? IS ARRAY` + "[0m");
-        console.log("nayq", nestedRoute, value);
+        clUtils.log("[1;33m " + `nayq giveRoutes??? IS ARRAY` + "[0m");
+        clUtils.log("nayq", nestedRoute, value);
         clUtils.throw("nayq giveRoutes should not have been array.");
       } else if (gpUtils.isTerminusObject(value)) {
-        console.log("[1;33m " + `nayq giveRoutes??? IS TOBJ` + "[0m");
+        clUtils.log("[1;33m " + `nayq giveRoutes??? IS TOBJ` + "[0m");
       }
     }
 
@@ -1202,9 +1202,9 @@ exports.findSinglePointMutationArray = (
   positionToExamine,
   specialComparisonCallback
 ) => {
-  // console.log("ldzi findSinglePointMutationArray was given:");
-  // console.log("ldzi", { currentArray, positionToExamine });
-  // console.log("ldzi findSinglePointMutationArray arrayOfArrays", arrayOfArrays);
+  // clUtils.log("ldzi findSinglePointMutationArray was given:");
+  // clUtils.log("ldzi", { currentArray, positionToExamine });
+  // clUtils.log("ldzi findSinglePointMutationArray arrayOfArrays", arrayOfArrays);
 
   if (!arrayOfArrays.length) {
     return false;
@@ -1246,7 +1246,7 @@ exports.stripOutFeatures = (currentLanguage, structureChunk, PWlabel) => {
     .filter((inflectorKey) => !["form"].includes(inflectorKey))
     .forEach((inflectorKey) => {
       if (structureChunk["inflectorKey"]) {
-        console.log(
+        clUtils.log(
           "[1;35m " +
             `milm stripOutFeatures Deleting "${inflectorKey}" from stCh "${structureChunk.chunkId}" because this is #${PWlabel} in ${currentLanguage}` +
             "[0m"
@@ -1308,7 +1308,7 @@ exports.switchMetaFeatureForAWorkableConvertedFeature = (
   structureChunk,
   consoleLogLabel
 ) => {
-  console.log(
+  clUtils.log(
     "[1;33m " +
       `ivwa ` +
       consoleLogLabel +
@@ -1322,7 +1322,7 @@ exports.switchMetaFeatureForAWorkableConvertedFeature = (
     (convertedMetaFeature) => source[convertedMetaFeature]
   );
 
-  console.log(
+  clUtils.log(
     "[1;33m " + `ivwe convertedMetaFeatures [${convertedMetaFeatures}]` + "[0m"
   );
 
@@ -1335,7 +1335,7 @@ exports.switchMetaFeatureForAWorkableConvertedFeature = (
   if (convertedMetaFeatures.length === 1) {
     let selectedConvertedMetaFeature = convertedMetaFeatures[0];
 
-    console.log(
+    clUtils.log(
       "[1;33m " +
         `lbro traverseAndRecordInflections >>unkeyed metaFeature clause<<. Setting inflectorValue to "${selectedConvertedMetaFeature}". Will now continue with main fxn.` +
         "[0m"
@@ -1357,7 +1357,7 @@ exports.switchMetaFeatureForAWorkableConvertedFeature = (
       true
     )
   ) {
-    console.log(
+    clUtils.log(
       "[1;33m " +
         `ksfc traverseAndRecordInflections >>unkeyed metaFeature clause<<. Final Clause A. Setting inflectorValue to "${selectedConvertedMetaFeature}". Do not need to adjust stCh as all converted values for this metafeature result in the same from source, eg "allPersonalSingularGenders" = m --> "you", f --> "you". Will now continue with main fxn.` +
         "[0m"
@@ -1365,7 +1365,7 @@ exports.switchMetaFeatureForAWorkableConvertedFeature = (
 
     return selectedConvertedMetaFeature;
   } else {
-    console.log(
+    clUtils.log(
       `aqsa traverseAndRecordInflections >>unkeyed metaFeature clause<<. 
       Final Clause B. Trying to set a metaFeature to one of its convertedFeatures. 
       But the drilled values were not ultimately be the same in source, therefore we cannot obey doNotSpecify. 
@@ -1429,7 +1429,7 @@ exports.isThisValueUniqueAtThisLevelInLemmaObject = (
 
   let allInflectionKeyysAtThisLevel = Object.keys(lObjAtRelevantLevel);
 
-  console.log({ allInflectionKeyysAtThisLevel });
+  clUtils.log({ allInflectionKeyysAtThisLevel });
 
   if (!allInflectionKeyysAtThisLevel.includes(chosenInflectionKeyy)) {
     clUtils.throw(
