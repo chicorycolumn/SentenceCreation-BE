@@ -1,8 +1,7 @@
 const consol = require("./consoleLoggingUtils.js");
 
 exports.log = (...args) => {
-  return;
-  console.log(...args);
+  // console.log(...args);
 };
 
 exports.logAlways = (...args) => {

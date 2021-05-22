@@ -3283,7 +3283,7 @@ describe("/api", function () {
     });
   });
 
-  describe("/palette - Stage 10: Allohomographs (adding Clarifiers).", () => {
+  describe.only("/palette - Stage 10: Allohomographs (adding Clarifiers).", () => {
     it("#pal10-01a Type 1 Allohomographs of SingleWordtype: 'nut' Engpol. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";

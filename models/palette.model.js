@@ -326,7 +326,7 @@ exports.fetchPalette = (req) => {
           traitValyye.length > 1
         ) {
           consol.throw(
-            `oije. "${unit.structureChunk.chunkId}" with "${traitKeyy}" of "${traitValyye}". This should have been streamlined down to one value, eg in updateStCh fxn.`
+            `oije. ${questionLanguage} "${unit.structureChunk.chunkId}" with "${traitKeyy}" of "${traitValyye}". This should have been streamlined down to one value, eg in updateStCh fxn.`
           );
         }
       });
