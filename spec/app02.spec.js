@@ -26,7 +26,7 @@ describe("/api", function () {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe.only("/palette - Stage 15: Prepositions and Articles.", () => {
+  describe("/palette - Stage 15: Prepositions and Articles.", () => {
     it("#pal15-01a GET 200 YES: Poleng. Indefinite article.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
@@ -247,7 +247,7 @@ describe("/api", function () {
           );
         });
     });
-    it.only("#pal15-03d GET 200 YES: Engpol. Preposition 'with'. SHEEP (checking clarifiers) Articles for plural.", () => {
+    it("#pal15-03d GET 200 YES: Engpol. Preposition 'with'. SHEEP (checking clarifiers) Articles for plural.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -267,7 +267,7 @@ describe("/api", function () {
               POL: ["Z owcami."],
             },
             {
-              ENG: "With sheep (plural).",
+              ENG: "With sheep.",
               POL: ["Z owcami."],
             },
           ];

@@ -633,7 +633,6 @@ exports.wordsBank = {
       //notes
 
       //inflections
-      //
       inflections: {
         zero: "",
         definite: {
@@ -650,18 +649,6 @@ exports.wordsBank = {
           plural: "∅",
         },
       },
-      //
-      // inflections: {
-      //   zero: "",
-      //   definite: "the",
-      //   indefinite: {
-      //     isTerminus: true,
-      //     processOnlyAtEnd: true,
-      //     nonprotective: ["a"],
-      //     protective: ["an"],
-      //   },
-      // },
-      //
     },
   ],
 };
