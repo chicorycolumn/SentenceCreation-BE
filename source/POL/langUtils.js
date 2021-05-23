@@ -338,7 +338,7 @@ exports.adjustTenseDescriptions = (structureChunk) => {
   return resultArr;
 };
 
-exports.formatFeatureValue = (featureKey, featureValue, note) => {
+exports.formatTraitValyye = (traitKeyy, traitValyye, note) => {
   const pluralVirilityAndSingularConversionRef =
     refObj.pluralVirilityAndSingularConversionRef["POL"];
 
@@ -350,17 +350,17 @@ exports.formatFeatureValue = (featureKey, featureValue, note) => {
     virile: ["virile"],
   };
 
-  if (featureKey === "gender") {
+  if (traitKeyy === "gender") {
     if (note === "plural") {
-      return pluralVirilityAndSingularConversionRef[note][featureValue];
+      return pluralVirilityAndSingularConversionRef[note][traitValyye];
     } else {
       if (note === "person") {
-        return shortHandGenderRef[featureValue];
+        return shortHandGenderRef[traitValyye];
       }
     }
   }
 
-  return [featureValue];
+  return [traitValyye];
 };
 
 exports.fillVerbInflections = (lemmaObject) => {

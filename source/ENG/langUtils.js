@@ -259,19 +259,19 @@ exports.preprocessLemmaObjectsMinor = (matches) => {
   });
 };
 
-exports.formatFeatureValue = (featureKey, featureValue, note) => {
+exports.formatTraitValyye = (traitKeyy, traitValyye, note) => {
   const metagenderRef = {
     allGenders: ["m", "f", "n", "virile", "nonvirile"],
     allPersonalGenders: ["m", "f", "virile", "nonvirile"],
   };
 
-  if (featureKey === "gender") {
-    if (metagenderRef[featureValue]) {
-      return metagenderRef[featureValue];
+  if (traitKeyy === "gender") {
+    if (metagenderRef[traitValyye]) {
+      return metagenderRef[traitValyye];
     }
   }
 
-  return [featureValue];
+  return [traitValyye];
 };
 
 exports.addLanguageParticularClarifiers = (

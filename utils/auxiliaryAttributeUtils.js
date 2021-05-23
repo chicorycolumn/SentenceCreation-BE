@@ -799,7 +799,7 @@ exports.specialAdjustmentToAnnotations = (
         );
       }
 
-      if (headLObj.gender && !gpUtils.featureValueIsMeta(headLObj.gender)) {
+      if (headLObj.gender && !gpUtils.traitValyyeIsMeta(headLObj.gender)) {
         consol.log({
           questionLanguage: languagesObj.questionLanguage,
           headLObjgender: headLObj.gender,
@@ -889,7 +889,7 @@ exports.addSpecifiersToMGNs = (questionSentenceData, languagesObj) => {
       );
     }
 
-    selectedGenderForAnswerLanguageArr = answerLangUtils.formatFeatureValue(
+    selectedGenderForAnswerLanguageArr = answerLangUtils.formatTraitValyye(
       "gender",
       selectedGenderForQuestionLanguage,
       "person"
@@ -1332,7 +1332,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
               if (label === "gender") {
                 if (
                   structureChunk[label].some((gender) =>
-                    gpUtils.featureValueIsMeta(gender)
+                    gpUtils.traitValyyeIsMeta(gender)
                   )
                 ) {
                   return;

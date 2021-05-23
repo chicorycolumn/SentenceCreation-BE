@@ -304,10 +304,10 @@ exports.convertMetaFeatures = (sourceObjectArray, currentLanguage, objType) => {
 
   sourceObjectArray.forEach((sourceObject) => {
     //sourceObject eg= a lObj or a stCh
-    Object.keys(metaFeaturesRef).forEach((featureKey) => {
-      //featureKey eg= "gender"
+    Object.keys(metaFeaturesRef).forEach((traitKeyy) => {
+      //traitKeyy eg= "gender"
 
-      let metaFeatureRef = metaFeaturesRef[featureKey];
+      let metaFeatureRef = metaFeaturesRef[traitKeyy];
 
       // metaFeatureRef eg= {
       //   allPersonalGenders: ["m", "f", "virile", "nonvirile"],
@@ -335,8 +335,8 @@ exports.convertMetaFeatures = (sourceObjectArray, currentLanguage, objType) => {
           );
         });
       } else if (objType === "stCh") {
-        if (sourceObject[featureKey]) {
-          let currentValueArr = sourceObject[featureKey];
+        if (sourceObject[traitKeyy]) {
+          let currentValueArr = sourceObject[traitKeyy];
           let newValueArr = [];
 
           currentValueArr.forEach((value) => {
@@ -347,76 +347,12 @@ exports.convertMetaFeatures = (sourceObjectArray, currentLanguage, objType) => {
             }
           });
 
-          sourceObject[featureKey] = newValueArr;
+          sourceObject[traitKeyy] = newValueArr;
           consol.log("oiiw ALL convertMetaFeatures", objType, { newValueArr });
         }
       }
     });
   });
-};
-
-exports.decantMGNsInOutputArray = (questionOutputArr, currentLanguage) => {
-  //unused
-  consol.log("[1;35m " + "------------decantMGNsInOutputArray" + "[0m");
-  consol.log(
-    "qnzm decantMGNsInOutputArray At the start, questionOutputArr is:"
-  );
-  consol.consoleLogObjectAtTwoLevels(
-    questionOutputArr,
-    "ALL:decantMGNsInOutputArray"
-  );
-
-  questionOutputArr.forEach((outputUnit) => {
-    let { structureChunk, selectedLemmaObject } = outputUnit;
-
-    Object.keys(refObj.metaFeatures[currentLanguage]).forEach((featureKey) => {
-      let metaFeatureRef = refObj.metaFeatures[currentLanguage][featureKey];
-
-      if (structureChunk[featureKey]) {
-        let featureValuesFromStChAndLObj = [...structureChunk[featureKey]];
-        if (selectedLemmaObject[featureKey]) {
-          featureValuesFromStChAndLObj.push(selectedLemmaObject[featureKey]);
-        }
-
-        let selectedMetaFeature;
-
-        if (
-          featureValuesFromStChAndLObj.some((featureValue) => {
-            if (
-              Object.keys(metaFeatureRef)
-              .includes(featureValue)
-            ) {
-              selectedMetaFeature = featureValue;
-              return true;
-            }
-          })
-        ) {
-          let adjustedFeatureValueArr = [
-            ...metaFeatureRef[selectedMetaFeature],
-          ];
-
-          consol.log("mcxr decantMGNsInOutputArray", {
-            adjustedFeatureValueArr,
-          });
-
-          structureChunk[featureKey] = [
-            uUtils.selectRandom(adjustedFeatureValueArr),
-          ];
-
-          consol.log("lukh decantMGNsInOutputArray", {
-            "structureChunk[featureKey]": structureChunk[featureKey],
-          });
-        }
-      }
-
-      consol.log(
-        "eldc decantMGNsInOutputArray In the end, structureChunk is:",
-        structureChunk
-      );
-    });
-  });
-
-  consol.log("[1;35m " + "/decantMGNsInOutputArray" + "[0m");
 };
 
 exports.decantMGNsBeforeFetchingOutputArray = (
@@ -427,7 +363,7 @@ exports.decantMGNsBeforeFetchingOutputArray = (
   if ("check") {
     if (
       !selectedLemmaObject.gender ||
-      !gpUtils.featureValueIsMeta(selectedLemmaObject.gender)
+      !gpUtils.traitValyyeIsMeta(selectedLemmaObject.gender)
     ) {
       return;
     }
@@ -464,7 +400,7 @@ exports.correctMGNsBeforeFetchingOutputArray = (
   if ("check") {
     if (
       !selectedLemmaObject.gender ||
-      !gpUtils.featureValueIsMeta(selectedLemmaObject.gender)
+      !gpUtils.traitValyyeIsMeta(selectedLemmaObject.gender)
     ) {
       consol.log("neem");
       return;

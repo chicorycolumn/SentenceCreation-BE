@@ -180,7 +180,7 @@ exports.filterWithin_PHD = (
 
         let numberValue = numberArr[1];
 
-        let formattedFeatureValueArray = langUtils.formatFeatureValue(
+        let formattedFeatureValueArray = langUtils.formatTraitValyye(
           "gender",
           headOutputUnit.selectedLemmaObject.gender,
           numberValue
@@ -213,7 +213,7 @@ exports.filterWithin_PHD = (
         (arr) => arr[0] === featureKey
       )[1];
 
-      if (gpUtils.featureValueIsMeta(featureValue) && !source[featureValue]) {
+      if (gpUtils.traitValyyeIsMeta(featureValue) && !source[featureValue]) {
         featureValue = otUtils.switchMetaFeatureForAWorkableConvertedFeature(
           featureKey,
           featureValue,
@@ -386,7 +386,7 @@ exports.filterWithinSelectedLemmaObject = (
 
     if (structureChunk[key]) {
       structureChunk[key].forEach((inflectionValue) => {
-        let formattedFeatureValueArr = langUtils.formatFeatureValue(
+        let formattedFeatureValueArr = langUtils.formatTraitValyye(
           key,
           inflectionValue
         );
@@ -618,7 +618,7 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
     selectors
       .filter((selector) => !doneSelectors.includes(selector))
       .forEach((selector) => {
-        if (gpUtils.featureValueIsMeta(selectedLemmaObject[selector])) {
+        if (gpUtils.traitValyyeIsMeta(selectedLemmaObject[selector])) {
           consol.throw(
             `oppb updateStChByAndTagsAndSelectors I wasn't expecting a metaFeature selector here. It should have been processed already, in step one, and then added to doneSelectors, which would have prevented it being used here. selectedLemmaObject[selector]:"${selectedLemmaObject[selector]}"`
           );
@@ -741,7 +741,7 @@ exports.padOutRequirementArrWithMetaFeaturesIfNecessary = (
   if (metaFeatureRef) {
     requirementArr.forEach((featureValue) => {
       //If the reqArr has a metafeature, all lObj with converted feature to pass filter.
-      if (gpUtils.featureValueIsMeta(featureValue)) {
+      if (gpUtils.traitValyyeIsMeta(featureValue)) {
         let metaFeatureConverted = metaFeatureRef[featureValue];
 
         if (!metaFeatureConverted) {
@@ -950,7 +950,7 @@ exports.traverseAndRecordInflections = (
     let chosenInflectorAdjusted = chosenInflector;
 
     if (
-      gpUtils.featureValueIsMeta(chosenInflector) &&
+      gpUtils.traitValyyeIsMeta(chosenInflector) &&
       !source[chosenInflector]
     ) {
       chosenInflectorAdjusted =
