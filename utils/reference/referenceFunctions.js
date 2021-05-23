@@ -183,27 +183,24 @@ exports.validFeaturesOfStructureChunkWordtype = (
   return validFeatures;
 };
 
-exports.giveAdjustedFeatureValue = (
+exports.giveAdjustedTraitValyye = (
   questionLanguage,
   answerLanguage,
-  featureKey,
-  featureValue
+  traitKeyy,
+  traitValyye
 ) => {
   if (
-    refObj.featureValueTranslation[questionLanguage] &&
-    refObj.featureValueTranslation[questionLanguage][answerLanguage]
+    refObj.traitValyyeTranslation[questionLanguage] &&
+    refObj.traitValyyeTranslation[questionLanguage][answerLanguage]
   ) {
-    let featureValueTranslationRef =
-      refObj.featureValueTranslation[questionLanguage][answerLanguage][
-        featureKey
+    let traitValyyeTranslationRef =
+      refObj.traitValyyeTranslation[questionLanguage][answerLanguage][
+        traitKeyy
       ];
 
-    if (
-      featureValueTranslationRef &&
-      featureValueTranslationRef[featureValue]
-    ) {
-      return featureValueTranslationRef[featureValue].slice(0);
+    if (traitValyyeTranslationRef && traitValyyeTranslationRef[traitValyye]) {
+      return traitValyyeTranslationRef[traitValyye].slice(0);
     }
   }
-  return [featureValue];
+  return [traitValyye];
 };

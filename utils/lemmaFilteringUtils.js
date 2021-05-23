@@ -129,13 +129,6 @@ exports.filterWithin_PHD = (
 
     let drillPathOfHead = uUtils.copyWithoutReference(headOutputUnit.drillPath);
 
-    consol.log("nvnn lf:filterWithin_PHD");
-    // consol.consoleLogObjectAtOneLevel(
-    //   headOutputUnit,
-    //   "headOutputUnit",
-    //   "This is for a PHD"
-    // );
-
     if (!drillPathOfHead) {
       consol.throw(
         "#ERR jzbx filterWithin_PHD. There is no drillPath on the outputUnit with which I want to get features from the PHD stCh. Perhaps this outputUnit is one whose stCh did not go through If-PW?"
@@ -180,43 +173,40 @@ exports.filterWithin_PHD = (
 
         let numberValue = numberArr[1];
 
-        let formattedFeatureValueArray = langUtils.formatTraitValyye(
+        let formattedInflectionKeyyArray = langUtils.formatTraitValyye(
           "gender",
           headOutputUnit.selectedLemmaObject.gender,
           numberValue
         );
 
-        if (formattedFeatureValueArray.length !== 1) {
+        if (formattedInflectionKeyyArray.length !== 1) {
           consol.throw(
-            "#ERR ikdr lf:filterWithin_PHD. Expected formattedFeatureValueArray to have length 1"
+            "#ERR ikdr lf:filterWithin_PHD. Expected formattedInflectionKeyyArray to have length 1"
           );
         }
-        let formattedFeatureValue = formattedFeatureValueArray[0];
+        let formattedInflectionKeyy = formattedInflectionKeyyArray[0];
 
         consol.log(
-          `ijeg filterWithin_PHD. Updating drillPathOfHead with gender "${formattedFeatureValue}"`
+          `ijeg filterWithin_PHD. Updating drillPathOfHead with gender "${formattedInflectionKeyy}"`
         );
-        drillPathOfHead.push(["gender", formattedFeatureValue]);
+        drillPathOfHead.push(["gender", formattedInflectionKeyy]);
       } else {
         throw "I am unsure about which gender to use - either the one from lobj inherent, or the one from drillPath. I wanted to use this gender for the PHD stCh.";
       }
     }
 
-    // consol.log(
-    //   `dxxg lf:filterWithin_PHD. After "${postHocAgreeWithKey}" for "${PHDstructureChunk.chunkId}" the drillPathOfHead is finally`,
-    //   drillPathOfHead
-    // );
-    // consol.log("ylur filterWithin_PHD. source", source);
-
-    postHocInflectionChain.forEach((featureKey) => {
-      let featureValue = drillPathOfHead.find(
-        (arr) => arr[0] === featureKey
+    postHocInflectionChain.forEach((inflectionCategoryy) => {
+      let inflectionKeyy = drillPathOfHead.find(
+        (arr) => arr[0] === inflectionCategoryy
       )[1];
 
-      if (gpUtils.traitValyyeIsMeta(featureValue) && !source[featureValue]) {
-        featureValue = otUtils.switchMetaFeatureForAWorkableConvertedFeature(
-          featureKey,
-          featureValue,
+      if (
+        gpUtils.traitValyyeIsMeta(inflectionKeyy) &&
+        !source[inflectionKeyy]
+      ) {
+        inflectionKeyy = otUtils.switchMetaFeatureForAWorkableConvertedFeature(
+          inflectionCategoryy,
+          inflectionKeyy,
           source,
           currentLanguage,
           PHDstructureChunk,
@@ -224,10 +214,10 @@ exports.filterWithin_PHD = (
         );
       }
 
-      source = source[featureValue];
+      source = source[inflectionKeyy];
 
       consol.log(
-        `\nihjy lf:filterWithin_PHD "${postHocAgreeWithKey}" drilling into source with "${featureValue}" so source is now`,
+        `\nihjy lf:filterWithin_PHD "${postHocAgreeWithKey}" drilling into source with "${inflectionKeyy}" so source is now`,
         // source,
         "\n"
       );
@@ -242,27 +232,27 @@ exports.filterWithin_PHD = (
           currentLanguage
         );
       } else if (/.*Secondary/.test(postHocAgreeWithKey)) {
-        drillPathSecondary.push([featureKey, featureValue]);
+        drillPathSecondary.push([inflectionCategoryy, inflectionKeyy]);
       } else if (/.*Tertiary/.test(postHocAgreeWithKey)) {
-        drillPathTertiary.push([featureKey, featureValue]);
+        drillPathTertiary.push([inflectionCategoryy, inflectionKeyy]);
       } else {
         consol.throw(
           `mezp filterWithin_PHD. Malformed postHocAgreeWithKey: "${postHocAgreeWithKey}".`
         );
       }
 
-      //Update stCh with these featureKeys and featureValues, but just for postHocAgreeWithPrimary.
+      //Update stCh with these inflectionCategoryys and inflectionKeyys, but just for postHocAgreeWithPrimary.
       // if (/.*Primary/.test(postHocAgreeWithKey)) {
       //   lfUtils.updateStChByInflections(
       //     { structureChunk: PHDstructureChunk, drillPath: drillPathOfHead },
       //     currentLanguage
       //   );
 
-      //   drillPath.push([featureKey, featureValue]);
+      //   drillPath.push([inflectionCategoryy, inflectionKeyy]);
       // } else if (/.*Secondary/.test(postHocAgreeWithKey)) {
-      //   drillPathSecondary.push([featureKey, featureValue]);
+      //   drillPathSecondary.push([inflectionCategoryy, inflectionKeyy]);
       // } else if (/.*Tertiary/.test(postHocAgreeWithKey)) {
-      //   drillPathTertiary.push([featureKey, featureValue]);
+      //   drillPathTertiary.push([inflectionCategoryy, inflectionKeyy]);
       // } else {
       //   consol.throw(
       //     `mezp filterWithin_PHD. Malformed postHocAgreeWithKey: "${postHocAgreeWithKey}".`

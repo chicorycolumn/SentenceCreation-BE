@@ -26,8 +26,8 @@ exports.checkDecisiveDecant = (questionSentenceData) => {
       consol.log(" ");
     }
 
-    Object.keys(structureChunk).forEach((featureKey) => {
-      let featureValue = structureChunk[featureKey];
+    Object.keys(structureChunk).forEach((traitKeyy) => {
+      let traitValyye = structureChunk[traitKeyy];
 
       if (
         ![
@@ -36,15 +36,15 @@ exports.checkDecisiveDecant = (questionSentenceData) => {
           "specificIds",
           "specificLemmas",
           "educatorBlocksAnnotationsForTheseFeatures",
-        ].includes(featureKey) &&
-        Array.isArray(featureValue) &&
-        featureValue.length > 1
+        ].includes(traitKeyy) &&
+        Array.isArray(traitValyye) &&
+        traitValyye.length > 1
       ) {
         consol.log(
           "[1;31m " + `#WARN oyxp fetchPalette. structureChunk is:` + "[0m",
           structureChunk
         );
-        consol.throw("#ERR oyxp fetchPalette. featureKey: " + featureKey);
+        consol.throw("#ERR oyxp fetchPalette. traitKeyy: " + traitKeyy);
       }
     });
   });

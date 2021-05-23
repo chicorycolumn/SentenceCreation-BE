@@ -31,8 +31,12 @@ exports.checkOutputArrayForMissingUnits = (
   }
 };
 
-exports.getLemmaObjectsWithoutGivenKey = (wordsBank, wordtype, featureKey) => {
-  return wordsBank[`${wordtype}Set`].filter((lObj) => !lObj[featureKey]);
+exports.getLemmaObjectsWithoutGivenKey = (
+  wordsBank,
+  wordtype,
+  selectorKeyy
+) => {
+  return wordsBank[`${wordtype}Set`].filter((lObj) => !lObj[selectorKeyy]);
 };
 
 exports.checkWords = (testing, currentLanguage) => {

@@ -1236,7 +1236,7 @@ exports.conformAnswerStructureToQuestionStructure = (
       let adjustedArr = [];
 
       questionStructureChunk[inflectorKey].forEach((inflectorValue) => {
-        let adjustedValues = refFxn.giveAdjustedFeatureValue(
+        let adjustedValues = refFxn.giveAdjustedTraitValyye(
           questionLanguage,
           answerLanguage,
           inflectorKey,
