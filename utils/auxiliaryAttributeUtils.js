@@ -8,7 +8,6 @@ const refFxn = require("./reference/referenceFunctions.js");
 const aaUtils = require("./auxiliaryAttributeUtils.js");
 const allLangUtils = require("./allLangUtils.js");
 const palette = require("../models/palette.model.js");
-const { head } = require("../app.js");
 
 exports.firstStageEvaluateAnnotations = (
   questionOutputArr,
@@ -410,7 +409,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
        *  So...
        *
        *  One option is to actually convert all the pseudosentences to real sentences prior to the comparing below,
-       *  in the normal way via scUtils.buildSentenceString.
+       *  in the normal way via scUtils.b'uildSentenceString.
        *
        *  However... this will involve extra processing time, so for now, let's just check the pseudosentences against
        *  primaryOrders, so that we at least catch the "On czyta." --> "Czyta." issue.
@@ -1120,15 +1119,18 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
         gpUtils.getWorrdtypeStCh(structureChunk)
       ];
 
-    consol.log(
-      `cicw allowableClarifiers are`,
-      allowableClarifiers,
-      `because structureChunk=${
-        structureChunk.chunkId
-      } answerLanguage=${answerLanguage}, stChWordtype=${gpUtils.getWorrdtypeStCh(
-        structureChunk
-      )}.`
-    );
+    if (!allowableClarifiers) {
+      consol.log(
+        "[1;31m " + `cicw allowableClarifiers are`,
+        allowableClarifiers,
+        `because structureChunk=${
+          structureChunk.chunkId
+        } answerLanguage=${answerLanguage}, stChWordtype=${gpUtils.getWorrdtypeStCh(
+          structureChunk
+        )}.` + "[0m"
+      );
+      allowableClarifiers = [];
+    }
 
     let allowableExtraClarifiersInSingleWordSentences =
       refObj.lemmaObjectFeatures[answerLanguage]
@@ -1154,10 +1156,6 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
       );
 
       if (synhomographData) {
-        // consol.log(
-        //   "djeu synhomographData.synhomographs",
-        //   synhomographData.synhomographs
-        // );
         synhomographData.synhomographs.forEach((synhomDataUnit) => {
           if (selectedWord === synhomDataUnit.terminalValue) {
             consol.log(

@@ -647,7 +647,7 @@ exports.wordsBank = {
             nonprotective: ["a"],
             protective: ["an"],
           },
-          plural: "",
+          plural: "∅",
         },
       },
       //

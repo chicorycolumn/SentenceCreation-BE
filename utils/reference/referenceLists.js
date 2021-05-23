@@ -421,7 +421,7 @@ exports.structureChunkFeatures = {
       possibleValues: ["m", "f", "n", "virile", "nonvirile"],
     },
     number: {
-      compatibleWordtypes: ["noun", "verb", "pronoun"],
+      compatibleWordtypes: ["noun", "verb", "pronoun", "article"],
       expectedTypeOnStCh: "array",
       possibleValues: ["singular", "plural"],
     },

@@ -978,7 +978,7 @@ xdescribe("extractNestedRoutes", () => {
       singular: { nom: "chłopak", acc: "chłopaka" },
       plural: {
         nom: { isTerminus: true, normal: ["chłopacy", "chłopaki"] },
-        acc: "chłopakøw",
+        acc: "chłopaków",
       },
     };
     const expected = [

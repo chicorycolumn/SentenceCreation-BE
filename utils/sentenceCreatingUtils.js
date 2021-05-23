@@ -740,8 +740,6 @@ exports.buildSentenceString = (
         allOrders = [...allOrders, ...sentenceFormula.additionalOrders];
       }
 
-      //nownow: How to keep annotations from stChs that won't be present.
-
       allOrders.forEach((order) => {
         let orderedArr = [];
         order.forEach((chunkId) => {
@@ -776,13 +774,9 @@ exports.buildSentenceString = (
     }
   }
 
-  //STEP 0.5: In Q mode, for each outputArr, if there is a chunk with annos but that didn't make it in there, keep the annos.
+  //STEP 1: In Q mode, for each outputArr, if there is a chunk with annos but that didn't make it in there, keep the annos.
 
   if (!multipleMode) {
-    consol.log("outputArrays", outputArrays);
-    consol.log("unorderedArr", unorderedArr);
-    // consol.throw(431);
-
     outputArrays.forEach((outputArr) => {
       unorderedArr.forEach((originalUnit) => {
         if (
@@ -804,7 +798,6 @@ exports.buildSentenceString = (
               },
             };
 
-            // consol.throw(131);
             outputArr.unshift(skeletonOutputUnit);
           }
         }
@@ -812,7 +805,7 @@ exports.buildSentenceString = (
     });
   }
 
-  // STEP 1: Select word versions for each.
+  // STEP 2: Select word versions for each.
   outputArrays.forEach((outputArr) => {
     let arrOfFinalSelectedWordsArr = scUtils.selectWordVersions(
       outputArr,
@@ -849,14 +842,10 @@ exports.selectWordVersions = (
   multipleMode
 ) => {
   let shouldConsoleLog = false;
-
   let selectedWordsArr = [];
-
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
 
-  // consol.log("efsj selectWordVersions. orderedOutputArr", orderedOutputArr);
-
-  //In Q mode, bring annos in from skeleton units.
+  //STEP 0: If in Q mode, bring annos in from skeleton units.
   if (!multipleMode) {
     orderedOutputArr.forEach((outputUnit, outputUnitIndex) => {
       if (outputUnit.isSkeleton) {
@@ -943,9 +932,16 @@ exports.selectWordVersions = (
     });
   }
 
-  consol.log("deff orderedOutputArr", orderedOutputArr);
+  //STEP 1: Select and push.
 
   orderedOutputArr.forEach((outputUnit, index) => {
+    //Effectively delete any zeroType selectedWords, ie the zero article.
+    if (outputUnit.selectedWord === "∅") {
+      return;
+    }
+
+    //1A: If string, push to array.
+
     let previousOutputUnit = orderedOutputArr[index - 1];
     let subsequentOutputUnit = orderedOutputArr[index + 1];
     let {
@@ -975,6 +971,7 @@ exports.selectWordVersions = (
       return;
     }
 
+    //1B: If tObj, push to array via language specific selectWordVersions.
     if (gpUtils.isTerminusObject(selectedWord)) {
       if (
         langUtils.selectWordVersions(

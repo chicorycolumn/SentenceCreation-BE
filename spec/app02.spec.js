@@ -187,7 +187,7 @@ describe("/api", function () {
           );
         });
     });
-    it.only("#pal15-03b GET 200 YES: Engpol. Preposition 'with'. SHEEP (checking clarifiers) Articles for singular. Checking POL protective preposition form.", () => {
+    it("#pal15-03b GET 200 YES: Engpol. Preposition 'with'. SHEEP (checking clarifiers) Articles for singular. Checking POL protective preposition form.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -247,7 +247,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal15-03d GET 200 YES: Engpol. Preposition 'with'. SHEEP (checking clarifiers) Articles for plural.", () => {
+    it.only("#pal15-03d GET 200 YES: Engpol. Preposition 'with'. SHEEP (checking clarifiers) Articles for plural.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 

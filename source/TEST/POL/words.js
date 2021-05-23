@@ -1568,7 +1568,7 @@ let verbSet = [
           },
           "1per": {
             singular: {
-              m: "zniøsłem",
+              m: "zniósłem",
               f: "zniosłam",
             },
             plural: {
@@ -1578,7 +1578,7 @@ let verbSet = [
           },
           "2per": {
             singular: {
-              m: "zniøsłeś",
+              m: "zniósłeś",
               f: "zniosłaś",
             },
             plural: {
@@ -1588,7 +1588,7 @@ let verbSet = [
           },
           "3per": {
             singular: {
-              m: "zniøsł",
+              m: "zniósł",
               f: "zniosła",
               n: "zniosło",
             },
