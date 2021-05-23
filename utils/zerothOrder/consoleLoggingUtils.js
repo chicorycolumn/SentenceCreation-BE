@@ -1,7 +1,9 @@
 const consol = require("./consoleLoggingUtils.js");
 
 exports.log = (...args) => {
-  console.log(...args);
+  if (!process.argv.includes("q")) {
+    console.log(...args);
+  }
 };
 
 exports.consoleLogObjectAtOneLevel = (obj, label, originLabel) => {
@@ -27,10 +29,6 @@ exports.consoleLogObjectAtOneLevel = (obj, label, originLabel) => {
   consol.log("[1;32m " + `----------` + "[0m");
   consol.log("[1;32m " + `------` + "[0m");
   consol.log("[1;32m " + `--` + "[0m");
-};
-
-exports.logAlways = (...args) => {
-  console.log(...args);
 };
 
 exports.consoleLogObjectAtTwoLevels = (obj, label, originLabel) => {

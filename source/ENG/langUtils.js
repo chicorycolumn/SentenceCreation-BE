@@ -70,7 +70,6 @@ exports.selectWordVersions = (
     structureChunk.form.includes("indefinite")
   ) {
     if (!subsequentOutputUnit) {
-      console.log(swde);
       consol.throw(
         "aqrz selectWordVersions Shouldn't there be an outputUnit subsequent to this ENG indefinite article?"
       );

@@ -54,3 +54,8 @@ General instructions for taking a **project with a PSQL database** and hosting i
 
 - [Mocha](https://mochajs.org/) - The testing framework
 - [Chai](https://www.chaijs.com/) - The testing library
+
+## Testing
+
+To test the program with logs, run `npm t` (t stands for 'test').
+To test the program without logs, run `npm t q` (q stands for 'quiet').
