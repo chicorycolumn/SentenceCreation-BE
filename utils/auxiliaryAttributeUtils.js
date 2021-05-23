@@ -703,9 +703,9 @@ exports.removeAnnotationsByAOCs = (
     }
 
     Object.keys(questionOutputUnit.structureChunk.annotations).forEach(
-      (inflectionTyype) => {
+      (inflectionCategoryy) => {
         let annoValue =
-          questionOutputUnit.structureChunk.annotations[inflectionTyype];
+          questionOutputUnit.structureChunk.annotations[inflectionCategoryy];
 
         //Imagine "Ja, moje jabłko."
         //drillPath reveals info about 'Ja'
@@ -719,7 +719,9 @@ exports.removeAnnotationsByAOCs = (
         function deleteByAOC(depUnits, drillPathKey) {
           depUnits.forEach((depUnit) => {
             if (
-              !questionOutputUnit.structureChunk.annotations[inflectionTyype] || //ie we've now deleted it so abort loop.
+              !questionOutputUnit.structureChunk.annotations[
+                inflectionCategoryy
+              ] || //ie we've now deleted it so abort loop.
               !depUnit[drillPathKey]
             ) {
               return;
@@ -727,25 +729,25 @@ exports.removeAnnotationsByAOCs = (
 
             consol.log("meef", depUnit);
 
-            /**If any dep unit holds a value at inflectionTyype that is unique in its lObj,
+            /**If any dep unit holds a value at inflectionCategoryy that is unique in its lObj,
              * then this pronoun obviates the need for that specifier, so delete it from annotations.
              * and set featureHasBeenDeleted to true.
              */
             if (
               otUtils.isThisValueUniqueAtThisLevelInLemmaObject(
                 depUnit.selectedLemmaObject,
-                inflectionTyype,
+                inflectionCategoryy,
                 depUnit[drillPathKey]
               )
             ) {
               consol.log(
                 "[1;30m " +
-                  `kzia removeAnnotationsByAOCs "${questionOutputUnit.structureChunk.chunkId}" ABZ Late stage DELETION of annotation "${inflectionTyype}" which is "${questionOutputUnit.structureChunk.annotations[inflectionTyype]}"` +
+                  `kzia removeAnnotationsByAOCs "${questionOutputUnit.structureChunk.chunkId}" ABZ Late stage DELETION of annotation "${inflectionCategoryy}" which is "${questionOutputUnit.structureChunk.annotations[inflectionCategoryy]}"` +
                   "[0m"
               );
 
               delete questionOutputUnit.structureChunk.annotations[
-                inflectionTyype
+                inflectionCategoryy
               ];
             }
           });

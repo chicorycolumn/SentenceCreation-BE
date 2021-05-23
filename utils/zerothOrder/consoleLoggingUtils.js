@@ -1,7 +1,7 @@
 const consol = require("./consoleLoggingUtils.js");
 
 exports.log = (...args) => {
-  if (!process.argv.includes("q")) {
+  if (!process.argv.includes("r")) {
     console.log(...args);
   }
 };

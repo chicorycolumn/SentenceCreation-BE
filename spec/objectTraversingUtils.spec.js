@@ -279,7 +279,7 @@ xdescribe("isThisValueUniqueAtThisLevelInLemmaObject", () => {
   };
 
   it("Not unique, as gender inflectionKeyy 'f' holds 'ja', which 'm1' also does.", () => {
-    let inputInflectionTyype = "gender";
+    let inputInflectionCategoryy = "gender";
 
     let inputDrillPath = [
       ["form", "pronoun"],
@@ -290,14 +290,14 @@ xdescribe("isThisValueUniqueAtThisLevelInLemmaObject", () => {
 
     const actual = isThisValueUniqueAtThisLevelInLemmaObject(
       inputlObj1,
-      inputInflectionTyype,
+      inputInflectionCategoryy,
       inputDrillPath
     );
 
     expect(actual).to.be.false;
   });
   it("Indeed unique, as gender inflectionKeyy 'f' holds 'ona', which no other inflectionKeyy does.", () => {
-    let inputInflectionTyype = "gender";
+    let inputInflectionCategoryy = "gender";
 
     let inputDrillPath = [
       ["form", "pronoun"],
@@ -308,14 +308,14 @@ xdescribe("isThisValueUniqueAtThisLevelInLemmaObject", () => {
 
     const actual = isThisValueUniqueAtThisLevelInLemmaObject(
       inputlObj1,
-      inputInflectionTyype,
+      inputInflectionCategoryy,
       inputDrillPath
     );
 
     expect(actual).to.be.true;
   });
   it("Indeed unique, as gender inflectionKeyy 'singular' holds values which 'plural' doesn't.", () => {
-    let inputInflectionTyype = "number";
+    let inputInflectionCategoryy = "number";
 
     let inputDrillPath = [
       ["form", "pronoun"],
@@ -326,7 +326,7 @@ xdescribe("isThisValueUniqueAtThisLevelInLemmaObject", () => {
 
     const actual = isThisValueUniqueAtThisLevelInLemmaObject(
       inputlObj1,
-      inputInflectionTyype,
+      inputInflectionCategoryy,
       inputDrillPath
     );
 

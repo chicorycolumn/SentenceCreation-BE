@@ -5,6 +5,7 @@ const edUtils = require("../utils/secondOrder/educatorUtils.js");
 const scUtils = require("../utils/sentenceCreatingUtils.js");
 const aaUtils = require("../utils/auxiliaryAttributeUtils.js");
 const ivUtils = require("../utils/secondOrder/inputValidationUtils.js");
+const pvUtils = require("../utils/secondOrder/processValidationUtils.js");
 const frUtils = require("../utils/formattingResponseUtils.js");
 const refObj = require("../utils/reference/referenceObjects.js");
 const allLangUtils = require("../utils/allLangUtils.js");
@@ -194,61 +195,7 @@ exports.fetchPalette = (req) => {
   );
 
   ///////////////////////////////////////////////kp Decisive Decant Check
-  if (false) {
-    questionSentenceData.questionOutputArr.forEach((outputUnit, index) => {
-      let { structureChunk, selectedLemmaObject } = outputUnit;
-
-      if ("console") {
-        consol.log(
-          "[1;35m " +
-            `vmfg-fetchPalette stCh "${structureChunk.chunkId}" at index "${index}"` +
-            "[0m"
-        );
-        consol.log(
-          "[1;35m " + `vmfg-fetchPalette slObj "${selectedLemmaObject.lemma}"` + "[0m"
-        );
-        consol.log(" ");
-      }
-
-      Object.keys(structureChunk).forEach((featureKey) => {
-        let featureValue = structureChunk[featureKey];
-
-        if (
-          ![
-            "andTags",
-            "orTags",
-            "specificIds",
-            "specificLemmas",
-            "educatorBlocksAnnotationsForTheseFeatures",
-          ].includes(featureKey) &&
-          Array.isArray(featureValue) &&
-          featureValue.length > 1
-        ) {
-          consol.log(
-            "[1;31m " + `#WARN oyxp fetchPalette. structureChunk is:` + "[0m",
-            structureChunk
-          );
-          consol.throw("#ERR oyxp fetchPalette. featureKey: " + featureKey);
-        }
-      });
-    });
-  }
-
-  if (true && "console") {
-    consol.log(
-      "[1;36m " +
-        "{{{ zuwv-fetchPalette just after we get questionSentenceData back from SC:processSentenceFormula. Let's see the stChs in questionSentenceData.arrayOfOutputArrays:" +
-        "[0m"
-    );
-
-    questionSentenceData.questionOutputArr
-      .map((outputUnit) => outputUnit.structureChunk)
-      .forEach((stCh) => {
-        consol.log("niwt-fetchPalette -fetchPalette", stCh);
-      });
-
-    consol.log("[1;36m " + "}}}" + "[0m");
-  }
+  pvUtils.checkDecisiveDecant(questionSentenceData);
 
   if (true && "console") {
     consol.log(
@@ -264,17 +211,10 @@ exports.fetchPalette = (req) => {
       )
     );
 
-    // consol.consoleLogObjectAtTwoLevels(
-    //   questionSentenceData.questionOutputArr,
-    //   "questionSentenceData.questionOutputArr",
-    //   "odek-fetchPalette."
-    // );
-
     consol.log("[1;35m " + "}}}" + "[0m");
 
     consol.consoleLogAestheticBorder(4);
   }
-
   if (devSaysThrowAtMidpoint) {
     consol.throw("Midpoint cease.");
   }

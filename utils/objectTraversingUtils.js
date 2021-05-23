@@ -1383,20 +1383,22 @@ exports.switchMetaFeatureForAWorkableConvertedFeature = (
 
 exports.isThisValueUniqueAtThisLevelInLemmaObject = (
   lObj,
-  chosenInflectionTyype,
+  chosenInflectionCategoryy,
   drillPath
 ) => {
   let inflectionChain =
     refObj.lemmaObjectFeatures[gpUtils.getLanguageFromLemmaObject(lObj)]
       .inflectionChains[gpUtils.getWorrdtypeLObj(lObj)];
 
-  function getInflectionKeyyFromDrillPath(inflectionTyype, drillPath) {
-    let inflectionKeyy = drillPath.find((arr) => arr[0] === inflectionTyype)[1];
+  function getInflectionKeyyFromDrillPath(inflectionCategoryy, drillPath) {
+    let inflectionKeyy = drillPath.find(
+      (arr) => arr[0] === inflectionCategoryy
+    )[1];
     return inflectionKeyy;
   }
 
   let chosenInflectionKeyy = getInflectionKeyyFromDrillPath(
-    chosenInflectionTyype,
+    chosenInflectionCategoryy,
     drillPath
   );
 
@@ -1404,8 +1406,8 @@ exports.isThisValueUniqueAtThisLevelInLemmaObject = (
 
   let stopSwitch = false;
 
-  inflectionChain.forEach((inflectionTyype) => {
-    if (inflectionTyype === chosenInflectionTyype) {
+  inflectionChain.forEach((inflectionCategoryy) => {
+    if (inflectionCategoryy === chosenInflectionCategoryy) {
       stopSwitch = true;
     }
 
@@ -1414,7 +1416,7 @@ exports.isThisValueUniqueAtThisLevelInLemmaObject = (
     }
 
     let inflectionKeyy = getInflectionKeyyFromDrillPath(
-      inflectionTyype,
+      inflectionCategoryy,
       drillPath
     );
 

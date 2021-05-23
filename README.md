@@ -58,4 +58,4 @@ General instructions for taking a **project with a PSQL database** and hosting i
 ## Testing
 
 To test the program with logs, run `npm t` (t stands for 'test').
-To test the program without logs, run `npm t q` (q stands for 'quiet').
+To test the program without logs, run `npm t r` (r stands for 'refrain').
