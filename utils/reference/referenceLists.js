@@ -225,7 +225,7 @@ exports.lemmaObjectTraitKeyys = {
   },
 };
 
-exports.structureChunkFeatures = {
+exports.structureChunkTraits = {
   ALL: {
     //
     //
@@ -237,17 +237,17 @@ exports.structureChunkFeatures = {
       expectedTypeOnStCh: "boolean",
       needsNoValidation: true,
     },
-    educatorBlocksAnnotationsForTheseFeatures: {
+    educatorBlocksAnnotationsForTheseTraitKeyys: {
       expectedTypeOnStCh: "array",
       ultimatelyMultipleValuesOkay: true,
       needsNoValidation: true,
     },
-    formulaImportantFeatures: {
+    formulaImportantTraitKeyys: {
       expectedTypeOnStCh: "array",
       ultimatelyMultipleValuesOkay: true,
       needsNoValidation: true,
     },
-    counterfactuallyImportantFeatures: {
+    counterfactuallyImportantTraitKeyys: {
       expectedTypeOnStCh: "array",
       ultimatelyMultipleValuesOkay: true,
     },
@@ -266,7 +266,7 @@ exports.structureChunkFeatures = {
     },
     // wordtype: {
     //   expectedTypeOnStCh: "string",
-    //   possibleValues: [
+    //   possibleTraitValyyes: [
     //     "noun",
     //     "adjective",
     //     "verb",
@@ -307,13 +307,13 @@ exports.structureChunkFeatures = {
     },
     //
     //
-    //    These stCh features get validation by their possibleValues arr.
+    //    These stCh features get validation by their possibleTraitValyyes arr.
     //
     //
     tenseDescription: {
       compatibleWordtypes: ["verb"],
       expectedTypeOnStCh: "array",
-      possibleValues: [
+      possibleTraitValyyes: [
         "past im",
         "present im",
         "future im",
@@ -336,12 +336,12 @@ exports.structureChunkFeatures = {
     person: {
       compatibleWordtypes: ["noun", "verb", "pronoun"],
       expectedTypeOnStCh: "array",
-      possibleValues: ["1per", "2per", "3per", "impersonal"],
+      possibleTraitValyyes: ["1per", "2per", "3per", "impersonal"],
     },
     gender: {
       compatibleWordtypes: ["noun", "verb", "adjective", "pronoun"],
       expectedTypeOnStCh: "array",
-      possibleValues: [
+      possibleTraitValyyes: [
         "m1",
         "m2",
         "m3",
@@ -362,22 +362,22 @@ exports.structureChunkFeatures = {
     number: {
       compatibleWordtypes: ["noun", "verb", "adjective", "pronoun"],
       expectedTypeOnStCh: "array",
-      possibleValues: ["singular", "plural"],
+      possibleTraitValyyes: ["singular", "plural"],
     },
     gcase: {
       compatibleWordtypes: ["noun", "adjective", "pronoun"],
       expectedTypeOnStCh: "array",
-      possibleValues: ["nom", "gen", "dat", "acc", "ins", "loc"],
+      possibleTraitValyyes: ["nom", "gen", "dat", "acc", "ins", "loc"],
     },
     aspect: {
       compatibleWordtypes: ["verb"],
       expectedTypeOnStCh: "array",
-      possibleValues: ["imperfective", "perfective"],
+      possibleTraitValyyes: ["imperfective", "perfective"],
     },
     tense: {
       compatibleWordtypes: ["verb"],
       expectedTypeOnStCh: "array",
-      possibleValues: [
+      possibleTraitValyyes: [
         "past",
         "present",
         "future",
@@ -389,13 +389,13 @@ exports.structureChunkFeatures = {
   ENG: {
     //
     //
-    //    These stCh features get validation by their possibleValues arr.
+    //    These stCh features get validation by their possibleTraitValyyes arr.
     //
     //
     tenseDescription: {
       compatibleWordtypes: ["verb"],
       expectedTypeOnStCh: "array",
-      possibleValues: [
+      possibleTraitValyyes: [
         "past",
         "present",
         "future",
@@ -413,27 +413,27 @@ exports.structureChunkFeatures = {
     person: {
       compatibleWordtypes: ["noun", "verb", "pronoun"],
       expectedTypeOnStCh: "array",
-      possibleValues: ["1per", "2per", "3per"],
+      possibleTraitValyyes: ["1per", "2per", "3per"],
     },
     gender: {
       compatibleWordtypes: ["noun", "pronoun"],
       expectedTypeOnStCh: "array",
-      possibleValues: ["m", "f", "n", "virile", "nonvirile"],
+      possibleTraitValyyes: ["m", "f", "n", "virile", "nonvirile"],
     },
     number: {
       compatibleWordtypes: ["noun", "verb", "pronoun", "article"],
       expectedTypeOnStCh: "array",
-      possibleValues: ["singular", "plural"],
+      possibleTraitValyyes: ["singular", "plural"],
     },
     gcase: {
       compatibleWordtypes: ["noun", "pronoun"],
       expectedTypeOnStCh: "array",
-      possibleValues: ["nom", "gen", "dat", "acc"],
+      possibleTraitValyyes: ["nom", "gen", "dat", "acc"],
     },
     tense: {
       compatibleWordtypes: ["verb"],
       expectedTypeOnStCh: "array",
-      possibleValues: [
+      possibleTraitValyyes: [
         "past",
         "present",
         "future",

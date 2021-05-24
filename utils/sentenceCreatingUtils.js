@@ -574,8 +574,8 @@ exports.processSentenceFormula = (
         let traitValyye = otherChunk[traitKeyy];
 
         let reference =
-          refObj.structureChunkFeatures[currentLanguage][traitKeyy] ||
-          refObj.structureChunkFeatures["ALL"][traitKeyy];
+          refObj.structureChunkTraits[currentLanguage][traitKeyy] ||
+          refObj.structureChunkTraits["ALL"][traitKeyy];
 
         if (
           reference.expectedTypeOnStCh === "array" &&
@@ -1145,8 +1145,8 @@ exports.conformAnswerStructureToQuestionStructure = (
       }
 
       if (
-        answerStructureChunk.formulaImportantFeatures &&
-        answerStructureChunk.formulaImportantFeatures.includes(inflectorKey)
+        answerStructureChunk.formulaImportantTraitKeyys &&
+        answerStructureChunk.formulaImportantTraitKeyys.includes(inflectorKey)
       ) {
         consol.log(
           "jngy conformAnswerStructureToQuestionStructure I will not transfer '" +
@@ -1274,8 +1274,8 @@ exports.conformAnswerStructureToQuestionStructure = (
 
     possibleInflectionsOfAnswerLobjsButNotQuestionLobjs.forEach((inflector) => {
       if (
-        !answerStructureChunk.formulaImportantFeatures ||
-        !answerStructureChunk.formulaImportantFeatures.includes(inflector)
+        !answerStructureChunk.formulaImportantTraitKeyys ||
+        !answerStructureChunk.formulaImportantTraitKeyys.includes(inflector)
       ) {
         answerStructureChunk[inflector] = [];
       }
@@ -1347,8 +1347,8 @@ exports.inheritFromHeadToDependentChunk = (
     if (
       headChunk[inflectorKey] &&
       !(
-        dependentChunk.formulaImportantFeatures &&
-        dependentChunk.formulaImportantFeatures.includes(inflectorKey)
+        dependentChunk.formulaImportantTraitKeyys &&
+        dependentChunk.formulaImportantTraitKeyys.includes(inflectorKey)
       )
     ) {
       let inflectorValueArr = uUtils.copyWithoutReference(

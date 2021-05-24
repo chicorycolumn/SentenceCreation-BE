@@ -177,7 +177,7 @@ exports.sentenceFormulasBank = [
         chunkId: "ver-1",
         specificLemmas: ["write"],
         tenseDescription: ["cond1 condition"],
-        formulaImportantFeatures: ["tenseDescription"],
+        formulaImportantTraitKeyys: ["tenseDescription"],
         person: ["2per"],
         number: ["singular"],
       },
@@ -194,7 +194,7 @@ exports.sentenceFormulasBank = [
         chunkId: "ver-2",
         specificLemmas: ["research"],
         tenseDescription: ["cond1 outcome"],
-        formulaImportantFeatures: ["tenseDescription"],
+        formulaImportantTraitKeyys: ["tenseDescription"],
         person: ["1per"],
         number: ["singular"],
       },
@@ -569,7 +569,7 @@ exports.sentenceFormulasBank = [
         chunkId: "pro-3",
         agreeWith: "pro-1-invisible",
         gcase: ["dat"],
-        formulaImportantFeatures: ["gcase"],
+        formulaImportantTraitKeyys: ["gcase"],
         specificLemmas: ["PERSONAL"],
       },
       { chunkId: "fix-1", value: "a" },
@@ -614,7 +614,7 @@ exports.sentenceFormulasBank = [
         chunkId: "pro-3-Us",
         agreeWith: "pro-1-invisible-We",
         gcase: ["dat"],
-        formulaImportantFeatures: ["gcase"],
+        formulaImportantTraitKeyys: ["gcase"],
         specificLemmas: ["PERSONAL"],
       },
       {
@@ -670,7 +670,7 @@ exports.sentenceFormulasBank = [
         chunkId: "pro-2-Me",
         agreeWith: "pro-1-invisible-I",
         gcase: ["dat"],
-        formulaImportantFeatures: ["gcase"],
+        formulaImportantTraitKeyys: ["gcase"],
         specificLemmas: ["PERSONAL"],
       },
       {
@@ -785,7 +785,7 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
         specificLemmas: ["doctor"],
         gender: ["f"],
-        educatorBlocksAnnotationsForTheseFeatures: ["gender"],
+        educatorBlocksAnnotationsForTheseTraitKeyys: ["gender"],
         // ^ Because here the educator knows that context makes this MGN's gender unambiguous.
       },
       {
@@ -856,7 +856,7 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
         specificLemmas: ["doctor"],
         gender: ["f"],
-        educatorBlocksAnnotationsForTheseFeatures: ["gender"],
+        educatorBlocksAnnotationsForTheseTraitKeyys: ["gender"],
         // ^ Because here the educator knows that context makes this MGN's gender unambiguous.
       },
       {
@@ -907,7 +907,7 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
         specificLemmas: ["doctor"],
         gender: ["f"],
-        educatorBlocksAnnotationsForTheseFeatures: ["gender"],
+        educatorBlocksAnnotationsForTheseTraitKeyys: ["gender"],
       },
       {
         chunkId: "ver-1-was",
@@ -1088,7 +1088,7 @@ exports.sentenceFormulasBank = [
         gcase: ["nom"],
         number: ["singular"],
         specificLemmas: ["doctor"],
-        educatorBlocksAnnotationsForTheseFeatures: ["gender", "number"],
+        educatorBlocksAnnotationsForTheseTraitKeyys: ["gender", "number"],
         // gender: ["f"],
       },
       { chunkId: "fix-1-and", value: "and" },

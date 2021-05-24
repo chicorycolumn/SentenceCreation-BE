@@ -1048,7 +1048,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "art-1",
         form: ["definite", "indefinite"],
-        formulaImportantFeatures: ["form"],
+        formulaImportantTraitKeyys: ["form"],
         preferredChoicesForQuestionSentence: { form: "indefinite" },
         agreeWith: "nco-1",
       },
@@ -1073,7 +1073,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "art-1",
         form: ["definite", "indefinite"],
-        formulaImportantFeatures: ["form"],
+        formulaImportantTraitKeyys: ["form"],
         agreeWith: "nco-1",
       },
       {
@@ -1097,7 +1097,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "art-1",
         form: ["definite", "indefinite"],
-        formulaImportantFeatures: ["form"],
+        formulaImportantTraitKeyys: ["form"],
         agreeWith: "nco-1",
       },
       {
@@ -1121,7 +1121,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "art-1",
         form: ["definite", "indefinite"],
-        formulaImportantFeatures: ["form"],
+        formulaImportantTraitKeyys: ["form"],
         agreeWith: "nco-1",
       },
       {
@@ -1145,7 +1145,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "art-1",
         form: ["definite", "indefinite"],
-        formulaImportantFeatures: ["form"],
+        formulaImportantTraitKeyys: ["form"],
         agreeWith: "nco-1",
       },
       {
@@ -1250,8 +1250,8 @@ exports.dummySentenceFormulasBank = [
         andTags: ["job"],
         number: ["singular"],
         gender: ["f"],
-        formulaImportantFeatures: ["gender"],
-        educatorBlocksAnnotationsForTheseFeatures: ["gender"],
+        formulaImportantTraitKeyys: ["gender"],
+        educatorBlocksAnnotationsForTheseTraitKeyys: ["gender"],
       },
     ],
     primaryOrders: [],
@@ -1267,8 +1267,8 @@ exports.dummySentenceFormulasBank = [
         andTags: ["job"],
         number: ["singular"],
         // gender: ["f"],
-        // formulaImportantFeatures: ["gender"],
-        // educatorBlocksAnnotationsForTheseFeatures: ["gender"],
+        // formulaImportantTraitKeyys: ["gender"],
+        // educatorBlocksAnnotationsForTheseTraitKeyys: ["gender"],
       },
     ],
     primaryOrders: [],
@@ -1284,8 +1284,8 @@ exports.dummySentenceFormulasBank = [
         andTags: ["job"],
         number: ["singular"],
         gender: ["m", "f"],
-        // formulaImportantFeatures: ["gender"],
-        // educatorBlocksAnnotationsForTheseFeatures: ["gender"],
+        // formulaImportantTraitKeyys: ["gender"],
+        // educatorBlocksAnnotationsForTheseTraitKeyys: ["gender"],
       },
     ],
     primaryOrders: [],

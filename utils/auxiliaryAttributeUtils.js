@@ -191,38 +191,40 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
       let arrayOfCounterfactualResultsForThisAnnotation = [];
 
-      let stChFeatures = refFxn.getStructureChunkFeatures(questionLanguage);
+      let stChTraits = refFxn.getstructureChunkTraits(questionLanguage);
 
-      let allPossibleValuesForThisFeature =
-        stChFeatures[annoKey].possibleValues.slice(0);
+      let allPossibleTraitValyyesForThisFeature =
+        stChTraits[annoKey].possibleTraitValyyes.slice(0);
 
-      let counterfactualValuesForThisFeature = Array.from(
+      let counterfactualTraitValyyesForThisTraitKeyy = Array.from(
         new Set(
-          allPossibleValuesForThisFeature.filter((value) => value !== annoValue)
+          allPossibleTraitValyyesForThisFeature.filter(
+            (value) => value !== annoValue
+          )
         )
       );
 
       consol.log(
-        "veem counterfactualValuesForThisFeature",
-        counterfactualValuesForThisFeature
+        "veem counterfactualTraitValyyesForThisTraitKeyy",
+        counterfactualTraitValyyesForThisTraitKeyy
       );
       //ACX3: eg If plural then remove m, f. If person, remove n.
       let counterfaxedStCh = uUtils.copyWithoutReference(
         questionOutputUnit.structureChunk
       );
 
-      counterfaxedStCh[annoKey] = counterfactualValuesForThisFeature;
+      counterfaxedStCh[annoKey] = counterfactualTraitValyyesForThisTraitKeyy;
 
-      counterfactualValuesForThisFeature = refFxn.removeIncompatibleFeatures(
-        questionLanguage,
-        counterfaxedStCh
-      )[annoKey];
+      counterfactualTraitValyyesForThisTraitKeyy =
+        refFxn.removeIncompatibleFeatures(questionLanguage, counterfaxedStCh)[
+          annoKey
+        ];
 
       consol.log(
-        `myxe removeAnnotationsByCounterfax FOREACH START. Examining ${questionOutputUnit.structureChunk.chunkId}'s annotation ${annoKey} = ${annoValue} so the counterfactual values are [${counterfactualValuesForThisFeature}].`
+        `myxe removeAnnotationsByCounterfax FOREACH START. Examining ${questionOutputUnit.structureChunk.chunkId}'s annotation ${annoKey} = ${annoValue} so the counterfactual values are [${counterfactualTraitValyyesForThisTraitKeyy}].`
       );
 
-      counterfactualValuesForThisFeature.forEach(
+      counterfactualTraitValyyesForThisTraitKeyy.forEach(
         (counterfactualValueForThisFeature) => {
           consol.log(
             `myxe removeAnnotationsByCounterfax FOREACH-2 START. Will do a run with counterfactual value "${counterfactualValueForThisFeature}".`
@@ -544,12 +546,13 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           questionOutputUnit.structureChunk[annoKey] = combinedFeatures;
 
           if (
-            !questionOutputUnit.structureChunk.counterfactuallyImportantFeatures
+            !questionOutputUnit.structureChunk
+              .counterfactuallyImportantTraitKeyys
           ) {
-            questionOutputUnit.structureChunk.counterfactuallyImportantFeatures =
+            questionOutputUnit.structureChunk.counterfactuallyImportantTraitKeyys =
               [annoKey];
           } else {
-            questionOutputUnit.structureChunk.counterfactuallyImportantFeatures.push(
+            questionOutputUnit.structureChunk.counterfactuallyImportantTraitKeyys.push(
               annoKey
             );
           }

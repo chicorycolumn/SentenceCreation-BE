@@ -112,11 +112,11 @@ exports.pushSelectedWordToArray = (
 
       consol.log("vpre addAnnotationsAndPush. annoObj is " + annoObj);
 
-      if (structureChunk.educatorBlocksAnnotationsForTheseFeatures) {
+      if (structureChunk.educatorBlocksAnnotationsForTheseTraitKeyys) {
         consol.log(
           `vpri addAnnotationsAndPush will not add clarifiers [${Object.values(
             annoObj
-          )}] as "educatorBlocksAnnotationsForTheseFeatures" true.`
+          )}] as "educatorBlocksAnnotationsForTheseTraitKeyys" true.`
         );
       } else {
         consol.log(

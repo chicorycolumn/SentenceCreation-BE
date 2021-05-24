@@ -6,7 +6,7 @@ const refObj = require("../reference/referenceObjects.js");
 const refFxn = require("../reference/referenceFunctions.js");
 
 exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
-  let stChFeatures = refFxn.getStructureChunkFeatures(currentLanguage);
+  let stChTraits = refFxn.getstructureChunkTraits(currentLanguage);
 
   let allChunkIds = sentenceFormula.sentenceStructure.map(
     (stCh) => stCh.chunkId
@@ -25,8 +25,8 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
       let traitValyye = structureChunk[traitKeyy];
 
       let reference =
-        refObj.structureChunkFeatures[currentLanguage][traitKeyy] ||
-        refObj.structureChunkFeatures["ALL"][traitKeyy];
+        refObj.structureChunkTraits[currentLanguage][traitKeyy] ||
+        refObj.structureChunkTraits["ALL"][traitKeyy];
 
       if (
         ["fixed"].includes(gpUtils.getWorrdtypeStCh(structureChunk)) ||
@@ -36,7 +36,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
       }
 
       //0. Check if this traitKeyy is expected at all.
-      let allTraitKeyys = Object.keys(stChFeatures);
+      let allTraitKeyys = Object.keys(stChTraits);
 
       if (!allTraitKeyys.includes(traitKeyy)) {
         consol.log(
@@ -49,7 +49,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
       }
 
       //1. Check if this traitValyye is compatible with this worrdtype
-      let compatibleWordtypes = stChFeatures[traitKeyy].compatibleWordtypes;
+      let compatibleWordtypes = stChTraits[traitKeyy].compatibleWordtypes;
 
       if (
         compatibleWordtypes &&
@@ -67,7 +67,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
       }
 
       //2. Check if traitValyye is string or array
-      let expectedTypeOnStCh = stChFeatures[traitKeyy].expectedTypeOnStCh;
+      let expectedTypeOnStCh = stChTraits[traitKeyy].expectedTypeOnStCh;
 
       if (
         expectedTypeOnStCh &&
@@ -85,11 +85,11 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
       }
 
       //3. Check if values are acceptable
-      let possibleValues = stChFeatures[traitKeyy].possibleValues;
+      let possibleTraitValyyes = stChTraits[traitKeyy].possibleTraitValyyes;
 
-      if (possibleValues) {
+      if (possibleTraitValyyes) {
         if (uUtils.typeof(traitValyye) === "string") {
-          if (!possibleValues.includes(traitValyye)) {
+          if (!possibleTraitValyyes.includes(traitValyye)) {
             consol.log(
               "mkkf validateSentenceFormula structureChunk",
               structureChunk
@@ -102,7 +102,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
           }
         } else if (uUtils.typeof(traitValyye) === "array") {
           traitValyye.forEach((traitValyyeItem) => {
-            if (!possibleValues.includes(traitValyyeItem)) {
+            if (!possibleTraitValyyes.includes(traitValyyeItem)) {
               consol.log(
                 "timm validateSentenceFormula structureChunk",
                 structureChunk
@@ -118,7 +118,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
       }
 
       //4. Check if the value of agreeKeys is an existing chunkId.
-      if (stChFeatures[traitKeyy].possibleValueMustBeExistingChunkId) {
+      if (stChTraits[traitKeyy].possibleValueMustBeExistingChunkId) {
         if (!allChunkIds.includes(traitValyye)) {
           consol.log(
             "cglp validateSentenceFormula structureChunk",

@@ -647,7 +647,7 @@ exports.sentenceFormulasBank = [
         chunkId: "ver-1",
         specificLemmas: ["pisać", "napisać"],
         tenseDescription: ["cond1 condition"],
-        formulaImportantFeatures: ["tenseDescription"],
+        formulaImportantTraitKeyys: ["tenseDescription"],
         person: ["2per"],
         number: ["singular"],
       },
@@ -663,7 +663,7 @@ exports.sentenceFormulasBank = [
         chunkId: "ver-2",
         specificLemmas: ["badać", "zbadać"],
         tenseDescription: ["cond1 outcome"],
-        formulaImportantFeatures: ["tenseDescription"],
+        formulaImportantTraitKeyys: ["tenseDescription"],
         person: ["1per"],
         number: ["singular"],
       },
@@ -986,7 +986,7 @@ exports.sentenceFormulasBank = [
         chunkId: "pro-3",
         agreeWith: "pro-1-invisible",
         gcase: ["dat"],
-        formulaImportantFeatures: ["gcase"],
+        formulaImportantTraitKeyys: ["gcase"],
         specificLemmas: ["PERSONAL"],
       },
       {
@@ -1031,7 +1031,7 @@ exports.sentenceFormulasBank = [
         chunkId: "pro-3-Us",
         agreeWith: "pro-1-invisible-We",
         gcase: ["dat"],
-        formulaImportantFeatures: ["gcase"],
+        formulaImportantTraitKeyys: ["gcase"],
         specificLemmas: ["PERSONAL"],
       },
       {
@@ -1087,7 +1087,7 @@ exports.sentenceFormulasBank = [
         chunkId: "pro-2-Me",
         agreeWith: "pro-1-invisible-I",
         gcase: ["dat"],
-        formulaImportantFeatures: ["gcase"],
+        formulaImportantTraitKeyys: ["gcase"],
         specificLemmas: ["PERSONAL"],
       },
       {
@@ -1195,7 +1195,7 @@ exports.sentenceFormulasBank = [
         specificLemmas: ["lekarz", "lekarka"],
         gcase: ["nom"],
         gender: ["f"],
-        educatorBlocksAnnotationsForTheseFeatures: ["gender"], //Just for symmetry and so I know it doesn't break anything.
+        educatorBlocksAnnotationsForTheseTraitKeyys: ["gender"], //Just for symmetry and so I know it doesn't break anything.
       },
       {
         chunkId: "ver-1-was",
@@ -1281,7 +1281,7 @@ exports.sentenceFormulasBank = [
         specificLemmas: ["lekarz", "lekarka"],
         gcase: ["nom"],
         gender: ["f"],
-        educatorBlocksAnnotationsForTheseFeatures: ["gender"], //Just for symmetry and so I know it doesn't break anything.
+        educatorBlocksAnnotationsForTheseTraitKeyys: ["gender"], //Just for symmetry and so I know it doesn't break anything.
       },
       {
         chunkId: "ver-1-was",
@@ -1340,7 +1340,7 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
         specificLemmas: ["lekarz", "lekarka"],
         gender: ["f"],
-        educatorBlocksAnnotationsForTheseFeatures: ["gender"], //Just for symmetry and so I know it doesn't break anything.
+        educatorBlocksAnnotationsForTheseTraitKeyys: ["gender"], //Just for symmetry and so I know it doesn't break anything.
       },
       {
         chunkId: "ver-1-was",
@@ -1388,7 +1388,7 @@ exports.sentenceFormulasBank = [
         chunkId: "npe-1-doctor",
 
         gcase: ["ins"],
-        formulaImportantFeatures: ["gcase"],
+        formulaImportantTraitKeyys: ["gcase"],
         specificLemmas: ["lekarz", "lekarka"],
         agreeWith: "pro-1-I",
       },
@@ -1415,7 +1415,7 @@ exports.sentenceFormulasBank = [
         chunkId: "npe-1-doctor",
 
         gcase: ["ins"],
-        formulaImportantFeatures: ["gcase"],
+        formulaImportantTraitKeyys: ["gcase"],
         number: ["singular"],
         specificLemmas: ["lekarz", "lekarka"],
         agreeWith: "pro-1-I",
@@ -1443,7 +1443,7 @@ exports.sentenceFormulasBank = [
         chunkId: "npe-1-doctor",
 
         gcase: ["ins"],
-        formulaImportantFeatures: ["gcase"],
+        formulaImportantTraitKeyys: ["gcase"],
         // number: ["singular"],
         specificLemmas: ["lekarz", "lekarka"],
         agreeWith: "pro-1-I",
@@ -1518,7 +1518,7 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
         specificLemmas: ["lekarz", "lekarka"],
         gcase: ["nom"],
-        educatorBlocksAnnotationsForTheseFeatures: ["gender", "number"],
+        educatorBlocksAnnotationsForTheseTraitKeyys: ["gender", "number"],
         // gender: ["f"],
       },
       { chunkId: "fix-1-and", value: "i" },

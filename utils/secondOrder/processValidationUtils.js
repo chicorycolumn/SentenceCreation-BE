@@ -35,7 +35,7 @@ exports.checkDecisiveDecant = (questionSentenceData) => {
           "orTags",
           "specificIds",
           "specificLemmas",
-          "educatorBlocksAnnotationsForTheseFeatures",
+          "educatorBlocksAnnotationsForTheseTraitKeyys",
         ].includes(traitKeyy) &&
         Array.isArray(traitValyye) &&
         traitValyye.length > 1

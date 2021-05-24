@@ -524,7 +524,7 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
 
   let lemmaObjectIsMGN = gpUtils.lObjIsMGN(selectedLemmaObject);
 
-  let stChFeatures = refFxn.getStructureChunkFeatures(currentLanguage);
+  let stChTraits = refFxn.getstructureChunkTraits(currentLanguage);
 
   //STEP ZERO: Decisive Decant
   //Remove gender values on stCh if drillPath doesn't include gender (ie is infinitive or a participle, say).
@@ -533,7 +533,7 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
     !lemmaObjectIsMGN &&
     drillPath &&
     !drillPath.map((arr) => arr[0]).includes("gender") &&
-    stChFeatures["gender"].compatibleWordtypes.includes(
+    stChTraits["gender"].compatibleWordtypes.includes(
       gpUtils.getWorrdtypeLObj(selectedLemmaObject)
     )
   ) {

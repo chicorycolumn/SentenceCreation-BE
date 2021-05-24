@@ -117,8 +117,8 @@ exports.keyShouldBeSpecified = (chunk, key, allowOverwrite) => {
   return (
     !chunk ||
     (!(
-      chunk.formulaImportantFeatures &&
-      chunk.formulaImportantFeatures.includes(key)
+      chunk.formulaImportantTraitKeyys &&
+      chunk.formulaImportantTraitKeyys.includes(key)
     ) &&
       (allowOverwrite ||
         !this.isKeyFilledOutOnChunk(chunk, key) ||

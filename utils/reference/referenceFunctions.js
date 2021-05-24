@@ -5,13 +5,13 @@ const otUtils = require("../objectTraversingUtils.js");
 const refObj = require("./referenceObjects.js");
 const refFxn = require("./referenceFunctions.js");
 
-exports.getStructureChunkFeatures = (currentLanguage) => {
-  let stChFeaturesRefByLang = refObj.structureChunkFeatures[currentLanguage];
-  let stChFeaturesRefAll = refObj.structureChunkFeatures["ALL"];
+exports.getstructureChunkTraits = (currentLanguage) => {
+  let stChTraitsRefByLang = refObj.structureChunkTraits[currentLanguage];
+  let stChTraitsRefAll = refObj.structureChunkTraits["ALL"];
 
   return uUtils.combineTwoKeyValueObjectsCarefully(
-    stChFeaturesRefByLang,
-    stChFeaturesRefAll
+    stChTraitsRefByLang,
+    stChTraitsRefAll
   );
 };
 

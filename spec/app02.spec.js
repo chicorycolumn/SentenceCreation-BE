@@ -2031,7 +2031,7 @@ describe("/api", function () {
           expect(res.body.answerSentenceArr).to.have.members(["Ja."]);
         });
     });
-    it("#pal13A-02a GET 200 YES: Engpol. Inherit features from pronoun to verb (m sing).", () => {
+    it("#pal13A-02a GET 200 YES: Engpol. Inherit from pronoun to verb (m sing).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2059,7 +2059,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal13A-02b GET 200 YES: Engpol. Inherit features from pronoun to verb (nonvir plur).", () => {
+    it("#pal13A-02b GET 200 YES: Engpol. Inherit from pronoun to verb (nonvir plur).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2090,7 +2090,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal13A-02c GET 200 YES: Engpol. WITH SPECIFIERS Inherit features from pronoun to verb (m sing).", () => {
+    it("#pal13A-02c GET 200 YES: Engpol. WITH SPECIFIERS Inherit from pronoun to verb (m sing).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2118,7 +2118,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal13A-02d GET 200 YES: Engpol. WITH SPECIFIERS Inherit features from pronoun to verb (nonvir plur).", () => {
+    it("#pal13A-02d GET 200 YES: Engpol. WITH SPECIFIERS Inherit from pronoun to verb (nonvir plur).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2149,7 +2149,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal13A-04a GET 200 YES: Poleng. Inherit features from pronoun to verb (m sing).", () => {
+    it("#pal13A-04a GET 200 YES: Poleng. Inherit from pronoun to verb (m sing).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -2184,7 +2184,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal13A-04b GET 200 YES: Poleng. Inherit features from pronoun to verb (nonvir plur).", () => {
+    it("#pal13A-04b GET 200 YES: Poleng. Inherit from pronoun to verb (nonvir plur).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -2219,7 +2219,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal13A-04c GET 200 YES: Poleng. NO CLARIFIERS Inherit features from pronoun to verb (m sing).", () => {
+    it("#pal13A-04c GET 200 YES: Poleng. NO CLARIFIERS Inherit from pronoun to verb (m sing).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -2254,7 +2254,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal13A-04d GET 200 YES: Poleng. NO CLARIFIERS Inherit features from pronoun to verb (nonvir plur).", () => {
+    it("#pal13A-04d GET 200 YES: Poleng. NO CLARIFIERS Inherit from pronoun to verb (nonvir plur).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -2289,7 +2289,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal13A-05a GET 200 YES: Poleng. Inherit features from pronoun to verb (m sing).", () => {
+    it("#pal13A-05a GET 200 YES: Poleng. Inherit from pronoun to verb (m sing).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -2332,7 +2332,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal13A-05b GET 200 YES: Poleng. Inherit features from pronoun to verb (nonvir plur).", () => {
+    it("#pal13A-05b GET 200 YES: Poleng. Inherit from pronoun to verb (nonvir plur).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -2375,7 +2375,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal13A-05c GET 200 YES: Poleng. NO CLARIFIERS Inherit features from pronoun to verb (m sing).", () => {
+    it("#pal13A-05c GET 200 YES: Poleng. NO CLARIFIERS Inherit from pronoun to verb (m sing).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -2418,7 +2418,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal13A-05d GET 200 YES: Poleng. NO CLARIFIERS Inherit features from pronoun to verb (nonvir plur).", () => {
+    it("#pal13A-05d GET 200 YES: Poleng. NO CLARIFIERS Inherit from pronoun to verb (nonvir plur).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 

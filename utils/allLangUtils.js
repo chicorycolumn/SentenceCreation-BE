@@ -141,7 +141,7 @@ exports.adjustVirilityOfStructureChunk = (
 };
 
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
-  let stChFeatures = refFxn.getStructureChunkFeatures(currentLanguage);
+  let stChTraits = refFxn.getstructureChunkTraits(currentLanguage);
 
   let shouldConsoleLog = false;
   if (shouldConsoleLog) {
@@ -158,13 +158,13 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
     }
 
     if (
-      stChFeatures["number"].compatibleWordtypes.includes(
+      stChTraits["number"].compatibleWordtypes.includes(
         gpUtils.getWorrdtypeStCh(structureChunk)
       ) &&
       (!structureChunk.number || !structureChunk.number.length)
     ) {
       structureChunk.number = uUtils.copyWithoutReference(
-        stChFeatures["number"].possibleValues
+        stChTraits["number"].possibleTraitValyyes
       );
     }
 
@@ -248,9 +248,9 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
           }
 
           structureChunk.tenseDescription =
-            refObj.structureChunkFeatures[
+            refObj.structureChunkTraits[
               currentLanguage
-            ].tenseDescription.possibleValues.slice(0);
+            ].tenseDescription.possibleTraitValyyes.slice(0);
         }
       }
 

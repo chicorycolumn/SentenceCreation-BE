@@ -263,8 +263,8 @@ exports.fetchPalette = (req) => {
         let traitValyye = unit.structureChunk[traitKeyy];
 
         let reference =
-          refObj.structureChunkFeatures[questionLanguage][traitKeyy] ||
-          refObj.structureChunkFeatures["ALL"][traitKeyy];
+          refObj.structureChunkTraits[questionLanguage][traitKeyy] ||
+          refObj.structureChunkTraits["ALL"][traitKeyy];
 
         if (
           reference.expectedTypeOnStCh === "array" &&
