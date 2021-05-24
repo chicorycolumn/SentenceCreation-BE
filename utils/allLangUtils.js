@@ -100,7 +100,7 @@ exports.adjustVirilityOfStructureChunk = (
       );
     }
 
-    gender = refObj.metaFeatures[currentLanguage]["gender"][gender];
+    gender = refObj.metaTraitValyyes[currentLanguage]["gender"][gender];
   }
 
   let pluralVirilityAndSingularConversionRef =
@@ -150,7 +150,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
     );
   }
 
-  let metaFeaturesRef = refObj.metaFeatures[currentLanguage];
+  let metaTraitValyyesRef = refObj.metaTraitValyyes[currentLanguage];
 
   sentenceStructure.forEach((structureChunk) => {
     if (gpUtils.getWorrdtypeStCh(structureChunk) === "fixed") {
@@ -215,13 +215,13 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
         ) {
           structureChunk.gender = [
             ...structureChunk.gender,
-            ...metaFeaturesRef["gender"]["allSingularGenders"],
+            ...metaTraitValyyesRef["gender"]["allSingularGenders"],
           ];
         }
         if (structureChunk.number && structureChunk.number.includes("plural")) {
           structureChunk.gender = [
             ...structureChunk.gender,
-            ...metaFeaturesRef["gender"]["allPluralGenders"],
+            ...metaTraitValyyesRef["gender"]["allPluralGenders"],
           ];
         }
       }
@@ -293,23 +293,27 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   }
 };
 
-exports.convertMetaFeatures = (sourceObjectArray, currentLanguage, objType) => {
+exports.convertmetaTraitValyyes = (
+  sourceObjectArray,
+  currentLanguage,
+  objType
+) => {
   if (!["stCh", "lObj"].includes(objType)) {
     throw (
-      "allLangUtils.convertMetaFeatures was given wrong objType: " + objType
+      "allLangUtils.convertmetaTraitValyyes was given wrong objType: " + objType
     );
   }
 
-  let metaFeaturesRef = refObj.metaFeatures[currentLanguage];
+  let metaTraitValyyesRef = refObj.metaTraitValyyes[currentLanguage];
 
   sourceObjectArray.forEach((sourceObject) => {
     //sourceObject eg= a lObj or a stCh
-    Object.keys(metaFeaturesRef).forEach((traitKeyy) => {
+    Object.keys(metaTraitValyyesRef).forEach((traitKeyy) => {
       //traitKeyy eg= "gender"
 
-      let metaFeatureRef = metaFeaturesRef[traitKeyy];
+      let metaTraitValyyeRef = metaTraitValyyesRef[traitKeyy];
 
-      // metaFeatureRef eg= {
+      // metaTraitValyyeRef eg= {
       //   allPersonalGenders: ["m", "f", "virile", "nonvirile"],
       //   allSingularGenders: ["m", "f", "n"],
       //   allPersonalSingularGenders: ["m", "f"],
@@ -318,16 +322,16 @@ exports.convertMetaFeatures = (sourceObjectArray, currentLanguage, objType) => {
       // }
 
       if (objType === "lObj") {
-        Object.keys(metaFeatureRef).forEach((metaFeature) => {
-          let regularFeaturesArr = metaFeatureRef[metaFeature];
+        Object.keys(metaTraitValyyeRef).forEach((metaTraitValyye) => {
+          let regularFeaturesArr = metaTraitValyyeRef[metaTraitValyye];
 
           uUtils.findKeysInObjectAndExecuteCallback(
             sourceObject,
-            metaFeature,
+            metaTraitValyye,
             (sourceObject) => {
               uUtils.copyValueOfKey(
                 sourceObject,
-                metaFeature,
+                metaTraitValyye,
                 regularFeaturesArr,
                 true
               );
@@ -340,15 +344,17 @@ exports.convertMetaFeatures = (sourceObjectArray, currentLanguage, objType) => {
           let newValueArr = [];
 
           currentValueArr.forEach((value) => {
-            if (metaFeatureRef[value]) {
-              newValueArr = [...newValueArr, ...metaFeatureRef[value]];
+            if (metaTraitValyyeRef[value]) {
+              newValueArr = [...newValueArr, ...metaTraitValyyeRef[value]];
             } else {
               newValueArr.push(value);
             }
           });
 
           sourceObject[traitKeyy] = newValueArr;
-          consol.log("oiiw ALL convertMetaFeatures", objType, { newValueArr });
+          consol.log("oiiw ALL convertmetaTraitValyyes", objType, {
+            newValueArr,
+          });
         }
       }
     });
@@ -463,7 +469,7 @@ exports.correctMGNsBeforeFetchingOutputArray = (
 
   //3 Now convert that. let convertedLObjMetagenderArr = ["m1", "f"]
   let convertedLObjMetagenderArr =
-    refObj.metaFeatures[currentLanguage]["gender"][lObjMetagender];
+    refObj.metaTraitValyyes[currentLanguage]["gender"][lObjMetagender];
 
   //4 If stCh has gender, then filter down so only the ones present in convertedLObjMetagenderArr remain.
   //  and if it doesn't have gender, set it as that.

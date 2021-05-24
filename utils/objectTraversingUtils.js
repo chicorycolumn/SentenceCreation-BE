@@ -1300,7 +1300,7 @@ exports.doDrillPathsDifferOnlyByGender = (subArrayOfOutputUnits) => {
   }
 };
 
-exports.switchMetaFeatureForAWorkableConvertedFeature = (
+exports.switchmetaTraitValyyeForAWorkableConvertedFeature = (
   inflectorLabel,
   inflectorValue,
   source,
@@ -1312,62 +1312,64 @@ exports.switchMetaFeatureForAWorkableConvertedFeature = (
     "[1;33m " +
       `ivwa ` +
       consoleLogLabel +
-      `. >>unkeyed metaFeature clause<<. inflectorValue is a metaFeature: "${inflectorValue}", but there is no such key on the source. So, we should check if the source has corresponding feature keys, eg allPersonalGenders -> [m, f], and if they hold all the same values, then we should let this work.` +
+      `. >>unkeyed metaTraitValyye clause<<. inflectorValue is a metaTraitValyye: "${inflectorValue}", but there is no such key on the source. So, we should check if the source has corresponding feature keys, eg allPersonalGenders -> [m, f], and if they hold all the same values, then we should let this work.` +
       "[0m"
   );
 
-  let convertedMetaFeatures = refObj.metaFeatures[currentLanguage][
+  let convertedmetaTraitValyyes = refObj.metaTraitValyyes[currentLanguage][
     inflectorLabel
   ][inflectorValue].filter(
-    (convertedMetaFeature) => source[convertedMetaFeature]
+    (convertedmetaTraitValyye) => source[convertedmetaTraitValyye]
   );
 
   consol.log(
-    "[1;33m " + `ivwe convertedMetaFeatures [${convertedMetaFeatures}]` + "[0m"
+    "[1;33m " + `ivwe convertedmetaTraitValyyes [${convertedmetaTraitValyyes}]` + "[0m"
   );
 
-  if (!convertedMetaFeatures || !convertedMetaFeatures.length) {
+  if (!convertedmetaTraitValyyes || !convertedmetaTraitValyyes.length) {
     consol.throw(
-      `ejrb #ERR traverseAndRecordInflections >>unkeyed metaFeature clause<<. Found no convertedMetaFeatures for "${inflectorValue}".`
+      `ejrb #ERR traverseAndRecordInflections >>unkeyed metaTraitValyye clause<<. Found no convertedmetaTraitValyyes for "${inflectorValue}".`
     );
   }
 
-  if (convertedMetaFeatures.length === 1) {
-    let selectedConvertedMetaFeature = convertedMetaFeatures[0];
+  if (convertedmetaTraitValyyes.length === 1) {
+    let selectedConvertedmetaTraitValyye = convertedmetaTraitValyyes[0];
 
     consol.log(
       "[1;33m " +
-        `lbro traverseAndRecordInflections >>unkeyed metaFeature clause<<. Setting inflectorValue to "${selectedConvertedMetaFeature}". Will now continue with main fxn.` +
+        `lbro traverseAndRecordInflections >>unkeyed metaTraitValyye clause<<. Setting inflectorValue to "${selectedConvertedmetaTraitValyye}". Will now continue with main fxn.` +
         "[0m"
     );
 
-    return selectedConvertedMetaFeature;
+    return selectedConvertedmetaTraitValyye;
   }
 
-  let drillResultsOfConvertedMetaFeatures = convertedMetaFeatures.map(
-    (convertedMetaFeature) => source[convertedMetaFeature]
+  let drillResultsOfConvertedmetaTraitValyyes = convertedmetaTraitValyyes.map(
+    (convertedmetaTraitValyye) => source[convertedmetaTraitValyye]
   );
 
-  let selectedConvertedMetaFeature = uUtils.selectRandom(convertedMetaFeatures);
+  let selectedConvertedmetaTraitValyye = uUtils.selectRandom(
+    convertedmetaTraitValyyes
+  );
 
   if (
     uUtils.checkEachSequentialPairing(
-      drillResultsOfConvertedMetaFeatures,
+      drillResultsOfConvertedmetaTraitValyyes,
       uUtils.areTwoObjectsEqual,
       true
     )
   ) {
     consol.log(
       "[1;33m " +
-        `ksfc traverseAndRecordInflections >>unkeyed metaFeature clause<<. Final Clause A. Setting inflectorValue to "${selectedConvertedMetaFeature}". Do not need to adjust stCh as all converted values for this metafeature result in the same from source, eg "allPersonalSingularGenders" = m --> "you", f --> "you". Will now continue with main fxn.` +
+        `ksfc traverseAndRecordInflections >>unkeyed metaTraitValyye clause<<. Final Clause A. Setting inflectorValue to "${selectedConvertedmetaTraitValyye}". Do not need to adjust stCh as all converted values for this metaTraitValyye result in the same from source, eg "allPersonalSingularGenders" = m --> "you", f --> "you". Will now continue with main fxn.` +
         "[0m"
     );
 
-    return selectedConvertedMetaFeature;
+    return selectedConvertedmetaTraitValyye;
   } else {
     consol.log(
-      `aqsa traverseAndRecordInflections >>unkeyed metaFeature clause<<. 
-      Final Clause B. Trying to set a metaFeature to one of its convertedFeatures. 
+      `aqsa traverseAndRecordInflections >>unkeyed metaTraitValyye clause<<. 
+      Final Clause B. Trying to set a metaTraitValyye to one of its convertedFeatures. 
       But the drilled values were not ultimately be the same in source, therefore we cannot obey doNotSpecify. 
       For example, the stCh asks for allPersonalSingularGenders, 
       and while sometimes the results could be m --> "I", f --> "I", in which case it would have gone to Final Clause A. 
@@ -1375,9 +1377,9 @@ exports.switchMetaFeatureForAWorkableConvertedFeature = (
       So I'll pick one, and make sure to set the stCh to acknowledge this.`
     );
 
-    structureChunk.gender = [selectedConvertedMetaFeature];
+    structureChunk.gender = [selectedConvertedmetaTraitValyye];
 
-    return selectedConvertedMetaFeature;
+    return selectedConvertedmetaTraitValyye;
   }
 };
 

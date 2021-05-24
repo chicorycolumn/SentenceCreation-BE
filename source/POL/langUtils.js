@@ -201,7 +201,7 @@ exports.preprocessLemmaObjectsMajor = (
     matches.forEach((lObj) => exports.copyInflectionsFromM1toM2(lObj));
   }
 
-  allLangUtils.convertMetaFeatures(matches, "POL", "lObj");
+  allLangUtils.convertmetaTraitValyyes(matches, "POL", "lObj");
   // allLangUtils.preprocessLemmaObjects(matches, "POL");
 
   if (!adjustLemmaObjectsOnly) {

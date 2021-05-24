@@ -837,7 +837,7 @@ exports.addSpecifiersToMGNs = (questionSentenceData, languagesObj) => {
   const answerLangUtils = require(`../source/${answerLanguage}/langUtils.js`);
 
   let metaGenders = Object.keys(
-    refObj.metaFeatures[questionLanguage]["gender"]
+    refObj.metaTraitValyyes[questionLanguage]["gender"]
   );
 
   let questionUnitsToSpecify = questionOutputArr.filter(
@@ -867,7 +867,7 @@ exports.addSpecifiersToMGNs = (questionSentenceData, languagesObj) => {
       );
 
       if (
-        !refObj.metaFeatures[questionLanguage].gender[metaGender].includes(
+        !refObj.metaTraitValyyes[questionLanguage].gender[metaGender].includes(
           selectedGenderForQuestionLanguage
         )
       ) {
@@ -876,8 +876,8 @@ exports.addSpecifiersToMGNs = (questionSentenceData, languagesObj) => {
           questionMGNunit.structureChunk.gender
         );
         consol.log(
-          "refObj.metaFeatures[questionLanguage].gender[metaGender]",
-          refObj.metaFeatures[questionLanguage].gender[metaGender]
+          "refObj.metaTraitValyyes[questionLanguage].gender[metaGender]",
+          refObj.metaTraitValyyes[questionLanguage].gender[metaGender]
         );
         consol.throw(
           "knmo addSpecifiersToMGNs #ERR I expected the question chunk's gender to be present in the translated genders array for the question lObj's metagender selector."
@@ -885,7 +885,7 @@ exports.addSpecifiersToMGNs = (questionSentenceData, languagesObj) => {
       }
     } else {
       selectedGenderForQuestionLanguage = uUtils.selectRandom(
-        refObj.metaFeatures[questionLanguage].gender[metaGender]
+        refObj.metaTraitValyyes[questionLanguage].gender[metaGender]
       );
     }
 

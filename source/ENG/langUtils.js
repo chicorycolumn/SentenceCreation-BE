@@ -157,7 +157,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
     "[1;35m " + "ywzr ENG preprocessStructureChunks-------------------" + "[0m"
   );
 
-  let metagenderRef = refObj.metaFeatures[currentLanguage].gender;
+  let metagenderRef = refObj.metaTraitValyyes[currentLanguage].gender;
 
   sentenceStructure.forEach((structureChunk) => {
     if (gpUtils.getWorrdtypeStCh(structureChunk) === "fixed") {
@@ -213,7 +213,7 @@ exports.preprocessLemmaObjectsMajor = (
   adjustLemmaObjectsOnly,
   currentLanguage
 ) => {
-  let metagenderRef = refObj.metaFeatures[currentLanguage].gender;
+  let metagenderRef = refObj.metaTraitValyyes[currentLanguage].gender;
 
   matches.forEach((lObj) => {
     if (gpUtils.getWorrdtypeLObj(lObj) === "pronoun") {
@@ -236,7 +236,7 @@ exports.preprocessLemmaObjectsMajor = (
     }
   });
 
-  allLangUtils.convertMetaFeatures(matches, "ENG", "lObj");
+  allLangUtils.convertmetaTraitValyyes(matches, "ENG", "lObj");
   // allLangUtils.preprocessLemmaObjects(matches, "ENG");
 };
 

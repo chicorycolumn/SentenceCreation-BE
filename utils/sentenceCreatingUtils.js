@@ -1281,7 +1281,7 @@ exports.conformAnswerStructureToQuestionStructure = (
       }
     });
 
-    allLangUtils.convertMetaFeatures(
+    allLangUtils.convertmetaTraitValyyes(
       [answerStructureChunk],
       answerLanguage,
       "stCh"

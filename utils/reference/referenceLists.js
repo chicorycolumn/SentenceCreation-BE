@@ -87,7 +87,7 @@ exports.metaCorrectionRef = {
   },
 };
 
-exports.metaFeatures = {
+exports.metaTraitValyyes = {
   ENG: {
     gender: {
       allGenders: ["m", "n", "f", "virile", "nonvirile"],

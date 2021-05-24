@@ -204,14 +204,15 @@ exports.filterWithin_PHD = (
         gpUtils.traitValyyeIsMeta(inflectionKeyy) &&
         !source[inflectionKeyy]
       ) {
-        inflectionKeyy = otUtils.switchMetaFeatureForAWorkableConvertedFeature(
-          inflectionCategoryy,
-          inflectionKeyy,
-          source,
-          currentLanguage,
-          PHDstructureChunk,
-          "filterWithin_PHD -> postHocInflectionChain.forEach"
-        );
+        inflectionKeyy =
+          otUtils.switchmetaTraitValyyeForAWorkableConvertedFeature(
+            inflectionCategoryy,
+            inflectionKeyy,
+            source,
+            currentLanguage,
+            PHDstructureChunk,
+            "filterWithin_PHD -> postHocInflectionChain.forEach"
+          );
       }
 
       source = source[inflectionKeyy];
@@ -336,18 +337,20 @@ exports.filterWithinSelectedLemmaObject = (
   outputArray,
   isPHD
 ) => {
-  if (outputArray) {
-    consol.log(
-      "[1;33m " +
-        `nvnl filterWithinSelectedLemmaObject outputArray: [${outputArray.map(
-          (x) => x.selectedWord
-        )}]` +
-        "[0m"
-    );
-  } else {
-    consol.log(
-      "[1;33m " + `nvnl filterWithinSelectedLemmaObject outputArray null` + "[0m"
-    );
+  if ("console") {
+    if (outputArray) {
+      consol.log(
+        "[1;33m " +
+          `nvnl filterWithinSelectedLemmaObject outputArray: [${outputArray.map(
+            (x) => x.selectedWord
+          )}]` +
+          "[0m"
+      );
+    } else {
+      consol.log(
+        "[1;33m " + `nvnl filterWithinSelectedLemmaObject outputArray null` + "[0m"
+      );
+    }
   }
 
   if (isPHD) {
@@ -371,29 +374,29 @@ exports.filterWithinSelectedLemmaObject = (
 
   let requirementArrs = [];
 
-  inflectionChain.forEach((key) => {
-    let inflectionValueArr = [];
+  inflectionChain.forEach((inflectionCategoryy) => {
+    let inflectionKeyyArr = [];
 
-    if (structureChunk[key]) {
-      structureChunk[key].forEach((inflectionValue) => {
-        let formattedFeatureValueArr = langUtils.formatTraitValyye(
-          key,
-          inflectionValue
+    if (structureChunk[inflectionCategoryy]) {
+      structureChunk[inflectionCategoryy].forEach((inflectionKeyy) => {
+        let formattedInflectionKeyyArr = langUtils.formatTraitValyye(
+          inflectionCategoryy,
+          inflectionKeyy
         );
 
         // consol.log(
-        //   "afwm lf:filterWithinSelectedLemmaObject: formattedFeatureValueArr",
-        //   formattedFeatureValueArr
+        //   "afwm lf:filterWithinSelectedLemmaObject: formattedInflectionKeyyArr",
+        //   formattedInflectionKeyyArr
         // );
 
-        inflectionValueArr = [
-          ...inflectionValueArr,
-          ...formattedFeatureValueArr,
+        inflectionKeyyArr = [
+          ...inflectionKeyyArr,
+          ...formattedInflectionKeyyArr,
         ];
       });
     }
 
-    requirementArrs.push([key, inflectionValueArr]);
+    requirementArrs.push([inflectionCategoryy, inflectionKeyyArr]);
   });
 
   if (!requirementArrs.length) {
@@ -555,7 +558,7 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
       let metaGender = selectedLemmaObject.gender;
 
       let metaGenderConverted =
-        refObj.metaFeatures[currentLanguage].gender[metaGender];
+        refObj.metaTraitValyyes[currentLanguage].gender[metaGender];
 
       if (structureChunk.gender && structureChunk.gender.length) {
         structureChunk.gender = structureChunk.gender.filter((genderValue) =>
@@ -610,7 +613,7 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
       .forEach((selector) => {
         if (gpUtils.traitValyyeIsMeta(selectedLemmaObject[selector])) {
           consol.throw(
-            `oppb updateStChByAndTagsAndSelectors I wasn't expecting a metaFeature selector here. It should have been processed already, in step one, and then added to doneSelectors, which would have prevented it being used here. selectedLemmaObject[selector]:"${selectedLemmaObject[selector]}"`
+            `oppb updateStChByAndTagsAndSelectors I wasn't expecting a metaTraitValyye selector here. It should have been processed already, in step one, and then added to doneSelectors, which would have prevented it being used here. selectedLemmaObject[selector]:"${selectedLemmaObject[selector]}"`
           );
         }
 
@@ -715,60 +718,62 @@ exports.filterByAndTagsAndOrTags = (wordset, structureChunk) => {
   return lemmaObjects;
 };
 
-exports.padOutRequirementArrWithMetaFeaturesIfNecessary = (
+exports.padOutRequirementArrWithmetaTraitValyyesIfNecessary = (
   requirementArrs,
-  key,
+  traitKeyy,
   currentLanguage
 ) => {
-  let requirementArr = requirementArrs[key] || [];
-  let metaFeatureRef = refObj.metaFeatures[currentLanguage][key];
+  let requirementArr = requirementArrs[traitKeyy] || [];
+  let metaTraitValyyeRef = refObj.metaTraitValyyes[currentLanguage][traitKeyy];
 
   consol.log(
-    "[1;35m " + `opoq lf:filterByKey-------------------------- for key "${key}"` + "[0m"
+    "[1;35m " +
+      `opoq lf:filterByKey-------------------------- for traitKeyy "${traitKeyy}"` +
+      "[0m"
   );
   consol.log("opoq lf:filterByKey requirementArr starts as", requirementArr);
 
-  if (metaFeatureRef) {
-    requirementArr.forEach((featureValue) => {
-      //If the reqArr has a metafeature, all lObj with converted feature to pass filter.
-      if (gpUtils.traitValyyeIsMeta(featureValue)) {
-        let metaFeatureConverted = metaFeatureRef[featureValue];
+  if (metaTraitValyyeRef) {
+    requirementArr.forEach((traitValyye) => {
+      //If the reqArr has a metaTraitValyye, all lObj with converted feature to pass filter.
+      if (gpUtils.traitValyyeIsMeta(traitValyye)) {
+        let metaTraitValyyeConverted = metaTraitValyyeRef[traitValyye];
 
-        if (!metaFeatureConverted) {
+        if (!metaTraitValyyeConverted) {
           consol.throw(
-            "#ERR tufx lf:filterByKey. filterByKey need converted metafeature."
+            "#ERR tufx lf:filterByKey. filterByKey need converted metaTraitValyye."
           );
         }
         consol.log(
-          `ndew filterByKey. Gonna push metaFeatureConverted [${metaFeatureConverted}]`
+          `ndew filterByKey. Gonna push metaTraitValyyeConverted [${metaTraitValyyeConverted}]`
         );
-        requirementArr = [...requirementArr, ...metaFeatureConverted];
+        requirementArr = [...requirementArr, ...metaTraitValyyeConverted];
       }
 
       //But also need do the inverse of this. If reqArr has 'f', then allow lObj to pass filter if lObj gender is 'allSingularGenders' eg.
-      Object.keys(metaFeatureRef).forEach((metaFeature) => {
-        let convertedMetaFeatureArr = metaFeatureRef[metaFeature];
+      Object.keys(metaTraitValyyeRef).forEach((metaTraitValyye) => {
+        let convertedMetaTraitValyyeArr = metaTraitValyyeRef[metaTraitValyye];
 
         if (
-          convertedMetaFeatureArr.includes(featureValue) &&
-          !requirementArr.includes(metaFeature)
+          convertedMetaTraitValyyeArr.includes(traitValyye) &&
+          !requirementArr.includes(metaTraitValyye)
         ) {
           consol.log(
-            `exnh filterByKey. Gonna push metafeature "${metaFeature}"`
+            `exnh filterByKey. Gonna push metaTraitValyye "${metaTraitValyye}"`
           );
-          requirementArr.push(metaFeature);
+          requirementArr.push(metaTraitValyye);
         }
       });
 
       consol.log(
-        "sfrl lf:filterByKey requirementArr inside ```requirementArr.forEach((featureValue)``` is",
+        "sfrl lf:filterByKey requirementArr inside ```requirementArr.forEach((traitValyye)``` is",
         requirementArr
       );
     });
   } else {
     consol.log(
       "[1;31m " +
-        `jwpv lf:filterByKey saw there was no metaFeatureRef for currentLanguage "${currentLanguage}" and key "${key}"` +
+        `jwpv lf:filterByKey saw there was no metaTraitValyyeRef for currentLanguage "${currentLanguage}" and traitKeyy "${traitKeyy}"` +
         "[0m"
     );
   }
@@ -781,15 +786,15 @@ exports.padOutRequirementArrWithMetaFeaturesIfNecessary = (
 exports.filterByKey = (
   lemmaObjectArr,
   structureChunk,
-  key,
+  traitKeyy,
   currentLanguage
 ) => {
   consol.log("wdwe filterByKey START. structureChunk", structureChunk);
 
   let requirementArray =
-    lfUtils.padOutRequirementArrWithMetaFeaturesIfNecessary(
+    lfUtils.padOutRequirementArrWithmetaTraitValyyesIfNecessary(
       structureChunk,
-      key,
+      traitKeyy,
       currentLanguage
     );
 
@@ -798,41 +803,41 @@ exports.filterByKey = (
   //And finally, do said filter.
   if (requirementArray.length) {
     return lemmaObjectArr.filter((lObj) => {
-      let lObjSelectorValues = [lObj[key]];
+      let lObjSelectorValyyes = [lObj[traitKeyy]];
 
-      consol.log("wdeu . lObjSelectorValues", lObjSelectorValues);
+      consol.log("wdeu lObjSelectorValyyes", lObjSelectorValyyes);
 
-      if (key === "gender") {
-        structureChunk.number.forEach((numberValue) => {
-          let extraVirilityConvertedValues =
+      if (traitKeyy === "gender") {
+        structureChunk.number.forEach((numberKeyy) => {
+          let extraVirilityConvertedValyyes =
             refObj.pluralVirilityAndSingularConversionRef[currentLanguage][
-              numberValue
-            ][lObj[key]];
+              numberKeyy
+            ][lObj[traitKeyy]];
 
           consol.log({
             currentLanguage,
-            numberValue,
-            key,
-            "lObj[key]": lObj[key],
+            numberKeyy,
+            traitKeyy,
+            "lObj[traitKeyy]": lObj[traitKeyy],
           });
           consol.log(
-            "wdee . extraVirilityConvertedValues",
-            extraVirilityConvertedValues
+            "wdee . extraVirilityConvertedValyyes",
+            extraVirilityConvertedValyyes
           );
 
-          if (extraVirilityConvertedValues) {
-            lObjSelectorValues = [
-              ...lObjSelectorValues,
-              ...extraVirilityConvertedValues,
+          if (extraVirilityConvertedValyyes) {
+            lObjSelectorValyyes = [
+              ...lObjSelectorValyyes,
+              ...extraVirilityConvertedValyyes,
             ];
           }
         });
       }
 
-      consol.log("wdev . lObjSelectorValues", lObjSelectorValues);
+      consol.log("wdev . lObjSelectorValyyes", lObjSelectorValyyes);
 
-      return lObjSelectorValues.some((lObjSelectorValue) =>
-        requirementArray.includes(lObjSelectorValue)
+      return lObjSelectorValyyes.some((lObjSelectorValyye) =>
+        requirementArray.includes(lObjSelectorValyye)
       );
     });
   } else {
@@ -944,7 +949,7 @@ exports.traverseAndRecordInflections = (
       !source[chosenInflector]
     ) {
       chosenInflectorAdjusted =
-        otUtils.switchMetaFeatureForAWorkableConvertedFeature(
+        otUtils.switchmetaTraitValyyeForAWorkableConvertedFeature(
           reqInflectorLabel,
           chosenInflector,
           source,
