@@ -205,7 +205,7 @@ exports.filterWithin_PHD = (
         !source[inflectionKeyy]
       ) {
         inflectionKeyy =
-          otUtils.switchmetaTraitValyyeForAWorkableConvertedFeature(
+          otUtils.switchMetaTraitValyyeForAWorkableConvertedTraitValyye(
             inflectionCategoryy,
             inflectionKeyy,
             source,
@@ -752,10 +752,10 @@ exports.padOutRequirementArrWithmetaTraitValyyesIfNecessary = (
 
       //But also need do the inverse of this. If reqArr has 'f', then allow lObj to pass filter if lObj gender is 'allSingularGenders' eg.
       Object.keys(metaTraitValyyeRef).forEach((metaTraitValyye) => {
-        let convertedMetaTraitValyyeArr = metaTraitValyyeRef[metaTraitValyye];
+        let ConvertedMetaTraitValyyeArr = metaTraitValyyeRef[metaTraitValyye];
 
         if (
-          convertedMetaTraitValyyeArr.includes(traitValyye) &&
+          ConvertedMetaTraitValyyeArr.includes(traitValyye) &&
           !requirementArr.includes(metaTraitValyye)
         ) {
           consol.log(
@@ -949,7 +949,7 @@ exports.traverseAndRecordInflections = (
       !source[chosenInflector]
     ) {
       chosenInflectorAdjusted =
-        otUtils.switchmetaTraitValyyeForAWorkableConvertedFeature(
+        otUtils.switchMetaTraitValyyeForAWorkableConvertedTraitValyye(
           reqInflectorLabel,
           chosenInflector,
           source,

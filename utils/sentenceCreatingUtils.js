@@ -889,7 +889,7 @@ exports.selectWordVersions = (
                 //If the annoKey from the skeleton outputUnit's annos is an allowable transfer to this depCh,
                 refObj.lemmaObjectTraitKeyys[
                   currentLanguage
-                ].inheritableInflectorKeys[
+                ].inheritableInflectionKeyys[
                   gpUtils.getWorrdtypeStCh(depUnit.structureChunk, true)
                 ].includes(annoKey)
               ) {
@@ -1136,31 +1136,28 @@ exports.conformAnswerStructureToQuestionStructure = (
       answerLanguage
     ].allowableTransfersFromQuestionStructure[
       gpUtils.getWorrdtypeStCh(answerStructureChunk)
-    ].forEach((inflectorKey) => {
+    ].forEach((traitKeyy) => {
       //
       // STEP ONE: Update inflectors from list of allowable transfers.
       //
-      if (!questionStructureChunk[inflectorKey]) {
+      if (!questionStructureChunk[traitKeyy]) {
         return;
       }
 
       if (
         answerStructureChunk.formulaImportantTraitKeyys &&
-        answerStructureChunk.formulaImportantTraitKeyys.includes(inflectorKey)
+        answerStructureChunk.formulaImportantTraitKeyys.includes(traitKeyy)
       ) {
         consol.log(
           "jngy conformAnswerStructureToQuestionStructure I will not transfer '" +
-            inflectorKey +
+            traitKeyy +
             "' in SC:conformAtoQ step 1, as marked important in answerStCh."
         );
         return;
       }
 
       //Don't transfer Number if Q is Tantum Plurale.     eg if Q is "skrzypce" we'd want A to include both "violin" and "violins".
-      if (
-        inflectorKey === "number" &&
-        questionSelectedLemmaObject.tantumPlurale
-      ) {
+      if (traitKeyy === "number" && questionSelectedLemmaObject.tantumPlurale) {
         consol.log(
           "yurw conformAnswerStructureToQuestionStructure Question lobj is a tantum, so we won't transfer Number feature."
         );
@@ -1169,7 +1166,7 @@ exports.conformAnswerStructureToQuestionStructure = (
 
       //Don't transfer Number, if all A lObjs are Tantum Plurale.     eg if Q is "violin" we don't want to specify that A must be singular, as "skrzypce" can't be singular.
       if (
-        inflectorKey === "number" &&
+        traitKeyy === "number" &&
         matchingAnswerLemmaObjects.length &&
         matchingAnswerLemmaObjects.every(
           (answerLemmaObject) => answerLemmaObject.tantumPlurale
@@ -1181,7 +1178,7 @@ exports.conformAnswerStructureToQuestionStructure = (
         return;
       }
 
-      if (inflectorKey === "tenseDescription") {
+      if (traitKeyy === "tenseDescription") {
         answerStructureChunk["tenseDescription"] = []; //Hard adjust.
 
         let tenseDescriptions = questionStructureChunk["tenseDescription"];
@@ -1220,7 +1217,7 @@ exports.conformAnswerStructureToQuestionStructure = (
       adjustAndAddFeaturesToAnswerChunk(
         questionStructureChunk,
         answerStructureChunk,
-        inflectorKey,
+        traitKeyy,
         questionLanguage,
         answerLanguage
       );
@@ -1229,24 +1226,24 @@ exports.conformAnswerStructureToQuestionStructure = (
     function adjustAndAddFeaturesToAnswerChunk(
       questionStructureChunk,
       answerStructureChunk,
-      inflectorKey,
+      traitKeyy,
       questionLanguage,
       answerLanguage
     ) {
       let adjustedArr = [];
 
-      questionStructureChunk[inflectorKey].forEach((inflectorValue) => {
+      questionStructureChunk[traitKeyy].forEach((traitValyye) => {
         let adjustedValues = refFxn.giveAdjustedTraitValyye(
           questionLanguage,
           answerLanguage,
-          inflectorKey,
-          inflectorValue
+          traitKeyy,
+          traitValyye
         );
 
         adjustedArr = [...adjustedArr, ...adjustedValues];
       });
 
-      answerStructureChunk[inflectorKey] = adjustedArr;
+      answerStructureChunk[traitKeyy] = adjustedArr;
     }
 
     //
@@ -1324,8 +1321,8 @@ exports.inheritFromHeadToDependentChunk = (
   );
   consol.log("w'dil inheritFromHeadToDependentChunk: headChunk", headChunk);
 
-  let normalinheritableInflectorKeys =
-    refObj.lemmaObjectTraitKeyys[currentLanguage].inheritableInflectorKeys[
+  let normalinheritableInflectionKeyys =
+    refObj.lemmaObjectTraitKeyys[currentLanguage].inheritableInflectionKeyys[
       gpUtils.getWorrdtypeStCh(dependentChunk, true)
     ];
 
@@ -1334,28 +1331,26 @@ exports.inheritFromHeadToDependentChunk = (
       (gpUtils.getWorrdtypeStCh(dependentChunk), true)
     ] || [];
 
-  let inheritableInflectorKeys = [
-    ...normalinheritableInflectorKeys,
+  let inheritableInflectionKeyys = [
+    ...normalinheritableInflectionKeyys,
     ...hybridSelectors,
   ];
 
-  inheritableInflectorKeys.forEach((inflectorKey) => {
+  inheritableInflectionKeyys.forEach((traitKeyy) => {
     consol.log(
-      `kwwm inheritFromHeadToDependentChunk: "${headChunk.chunkId}" to "${dependentChunk.chunkId}". inflectorKey "${inflectorKey}".`
+      `kwwm inheritFromHeadToDependentChunk: "${headChunk.chunkId}" to "${dependentChunk.chunkId}". traitKeyy "${traitKeyy}".`
     );
     //Hard change.
     if (
-      headChunk[inflectorKey] &&
+      headChunk[traitKeyy] &&
       !(
         dependentChunk.formulaImportantTraitKeyys &&
-        dependentChunk.formulaImportantTraitKeyys.includes(inflectorKey)
+        dependentChunk.formulaImportantTraitKeyys.includes(traitKeyy)
       )
     ) {
-      let inflectorValueArr = uUtils.copyWithoutReference(
-        headChunk[inflectorKey]
-      );
+      let traitValyyeArr = uUtils.copyWithoutReference(headChunk[traitKeyy]);
 
-      dependentChunk[inflectorKey] = inflectorValueArr;
+      dependentChunk[traitKeyy] = traitValyyeArr;
     }
   });
 

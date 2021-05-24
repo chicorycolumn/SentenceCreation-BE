@@ -130,7 +130,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
     }
 
     if (
-      //If gender is an appropriate feature of this worrdtype.
+      //If gender is an appropriate traitKeyy of this worrdtype.
       refObj.lemmaObjectTraitKeyys[currentLanguage].inflectionChains[
         gpUtils.getWorrdtypeStCh(structureChunk)
       ].includes("gender")

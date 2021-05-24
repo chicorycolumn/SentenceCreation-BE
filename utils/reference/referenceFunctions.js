@@ -15,8 +15,8 @@ exports.getstructureChunkTraits = (currentLanguage) => {
   );
 };
 
-exports.removeIncompatibleFeatures = (currentLanguage, structureChunk) => {
-  //VITO-TEMP-removeIncompatibleFeatures
+exports.removeincompatibleTraits = (currentLanguage, structureChunk) => {
+  //VITO-TEMP-removeincompatibleTraits
 
   consol.log(311, structureChunk);
   //(note, the two stChs in args are likely the same stCh, but best to do as their names suggest)
@@ -24,7 +24,7 @@ exports.removeIncompatibleFeatures = (currentLanguage, structureChunk) => {
   //ACX3A: If npe then remove neuter from gender.
   if (gpUtils.getWorrdtypeStCh(structureChunk, true) === "noun-person") {
     consol.log(
-      "vvvx removeIncompatibleFeatures. Removing 'n' if present as is noun-person."
+      "vvvx removeincompatibleTraits. Removing 'n' if present as is noun-person."
     );
     structureChunk.gender = structureChunk.gender.filter(
       (value) => value !== "n"
@@ -37,28 +37,28 @@ exports.removeIncompatibleFeatures = (currentLanguage, structureChunk) => {
     !structureChunk.person.filter((value) => value !== "1per").length
   ) {
     consol.log(
-      "vvvy removeIncompatibleFeatures. Removing 'n' if present as only person value is '1per'."
+      "vvvy removeincompatibleTraits. Removing 'n' if present as only person value is '1per'."
     );
     structureChunk.gender = structureChunk.gender.filter(
       (value) => value !== "n"
     );
   }
 
-  //ACX3C: If we're examining gender feature, check the "number" feature, and
-  //if the number does not include "singular", then remove "m", "m1", "m2", "m3", "f", "n" from the gender array.
+  //ACX3C: If we're examining gender trait, check the "number" trait, and
+  //if the number traitValyyes do not include "singular", then remove "m", "m1", "m2", "m3", "f", "n" from the gender array.
 
-  let incompatibleFeaturesRef = refObj.incompatibleFeaturesRef[currentLanguage];
+  let incompatibleTraitsRef = refObj.incompatibleTraitsRef[currentLanguage];
 
   consol.log({ currentLanguage });
-  consol.log({ incompatibleFeaturesRef });
+  consol.log({ incompatibleTraitsRef });
 
   Object.keys(structureChunk).forEach((traitKeyy) => {
     //eg traitKeyy = "gender"
-    if (!incompatibleFeaturesRef[traitKeyy]) {
+    if (!incompatibleTraitsRef[traitKeyy]) {
       return;
     }
 
-    Object.keys(incompatibleFeaturesRef[traitKeyy]).forEach(
+    Object.keys(incompatibleTraitsRef[traitKeyy]).forEach(
       (traitKeyyToCheckBy) => {
         //eg traitKeyyToCheckBy = "number"
         if (
@@ -72,14 +72,14 @@ exports.removeIncompatibleFeatures = (currentLanguage, structureChunk) => {
           }
 
           Object.keys(
-            incompatibleFeaturesRef[traitKeyy][traitKeyyToCheckBy]
+            incompatibleTraitsRef[traitKeyy][traitKeyyToCheckBy]
           ).forEach((traitValyyeToCheckBy) => {
             //eg traitValyyeToCheckBy = "plural"
             if (
               !structureChunk[traitKeyyToCheckBy].includes(traitValyyeToCheckBy)
             ) {
               let compatibleTraitValyyes =
-                incompatibleFeaturesRef[traitKeyy][traitKeyyToCheckBy][
+                incompatibleTraitsRef[traitKeyy][traitKeyyToCheckBy][
                   traitValyyeToCheckBy
                 ];
               //eg compatibleTraitValyyes = ["virile", "nonvirile"]
@@ -178,7 +178,7 @@ exports.validTraitKeyysPerStructureChunkWordtype = (
     if (additionalValidTraitKeyys) {
       if (!Array.isArray(additionalValidTraitKeyys)) {
         consol.throw(
-          "twnl additionalValidTraitKeyys in isValidFeatureOfStructureChunkWordtype fxn should have been array."
+          "twnl additionalValidTraitKeyys in validTraitKeyysPerStructureChunkWordtype fxn should have been array."
         );
       }
 

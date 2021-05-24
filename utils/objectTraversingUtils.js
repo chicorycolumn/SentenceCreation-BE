@@ -131,7 +131,7 @@ exports.findMatchingLemmaObjectThenWord = (
   );
 
   //STEP THREE: Return result array immediately if uninflected or ad hoc.
-  let adhocInflectorRef = refObj.adhocInflectors[currentLanguage];
+  let adhocInflectorRef = refObj.adhocInflectionKeyys[currentLanguage];
   let adhocFormRef = refObj.adhocForms[currentLanguage];
 
   //    THREE (A): Ad-PW: Pathway for Adhoc: both Forms and Inflections.
@@ -163,7 +163,7 @@ exports.findMatchingLemmaObjectThenWord = (
         adhocArr.forEach((adhocResultObj) => {
           let { selectedWordArr, structureChunkUpdated } = adhocResultObj;
 
-          otUtils.stripOutFeatures(
+          otUtils.stripOutInflectionCategoryys(
             currentLanguage,
             structureChunkUpdated,
             "Ad-PW-F"
@@ -194,7 +194,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
       let { selectedWordArr, structureChunkUpdated } = selectedAdhocResultObj;
 
-      otUtils.stripOutFeatures(
+      otUtils.stripOutInflectionCategoryys(
         currentLanguage,
         structureChunkUpdated,
         "Ad-PW-F"
@@ -214,20 +214,20 @@ exports.findMatchingLemmaObjectThenWord = (
       gpUtils.getWorrdtypeStCh(structureChunk)
     )
   ) {
-    let adhocInflectorKeys =
+    let adhocInflectionKeyys =
       adhocInflectorRef[gpUtils.getWorrdtypeStCh(structureChunk)];
 
-    adhocInflectorKeys.forEach((adhocInflectorKey) => {
+    adhocInflectionKeyys.forEach((adhocInflectionKeyy) => {
       if (
-        structureChunk[adhocInflectorKey] &&
-        structureChunk[adhocInflectorKey].length
+        structureChunk[adhocInflectionKeyy] &&
+        structureChunk[adhocInflectionKeyy].length
       ) {
         consol.consoleLogPW("##Ad-PW-I", structureChunk, multipleMode);
 
         if (multipleMode) {
           matches.forEach((selectedLemmaObject) => {
             let adhocArr = langUtils.generateAdhocForms(
-              adhocInflectorKey,
+              adhocInflectionKeyy,
               uUtils.copyWithoutReference(structureChunk),
               selectedLemmaObject,
               currentLanguage
@@ -236,7 +236,7 @@ exports.findMatchingLemmaObjectThenWord = (
             adhocArr.forEach((adhocResultObj) => {
               let { selectedWordArr, structureChunkUpdated } = adhocResultObj;
 
-              otUtils.stripOutFeatures(
+              otUtils.stripOutInflectionCategoryys(
                 currentLanguage,
                 structureChunkUpdated,
                 "Ad-PW-I"
@@ -254,7 +254,7 @@ exports.findMatchingLemmaObjectThenWord = (
           let selectedLemmaObject = uUtils.selectRandom(matches);
 
           let adhocArr = langUtils.generateAdhocForms(
-            adhocInflectorKey,
+            adhocInflectionKeyy,
             uUtils.copyWithoutReference(structureChunk),
             selectedLemmaObject,
             currentLanguage
@@ -269,7 +269,7 @@ exports.findMatchingLemmaObjectThenWord = (
           let { selectedWordArr, structureChunkUpdated } =
             selectedAdhocResultObj;
 
-          otUtils.stripOutFeatures(
+          otUtils.stripOutInflectionCategoryys(
             currentLanguage,
             structureChunkUpdated,
             "Ad-PW-I"
@@ -340,7 +340,7 @@ exports.findMatchingLemmaObjectThenWord = (
                     selectedUninflectedForm,
                   ];
 
-                  otUtils.stripOutFeatures(
+                  otUtils.stripOutInflectionCategoryys(
                     currentLanguage,
                     structureChunkUpdatedByAdhocOrUninflected,
                     "Un-PW"
@@ -394,7 +394,7 @@ exports.findMatchingLemmaObjectThenWord = (
                 selectedUninflectedForm,
               ];
 
-              otUtils.stripOutFeatures(
+              otUtils.stripOutInflectionCategoryys(
                 currentLanguage,
                 structureChunkUpdatedByAdhocOrUninflected,
                 "Un-PW"
@@ -1236,24 +1236,28 @@ exports.findSinglePointMutationArray = (
   );
 };
 
-exports.stripOutFeatures = (currentLanguage, structureChunk, PWlabel) => {
-  let allInflectorsForThisWordtype =
+exports.stripOutInflectionCategoryys = (
+  currentLanguage,
+  structureChunk,
+  PWlabel
+) => {
+  let allInflectionCategoryysForThisWordtype =
     refObj.lemmaObjectTraitKeyys[currentLanguage].inflectionChains[
       gpUtils.getWorrdtypeStCh(structureChunk)
     ];
 
-  allInflectorsForThisWordtype
-    .filter((inflectorKey) => !["form"].includes(inflectorKey))
-    .forEach((inflectorKey) => {
-      if (structureChunk["inflectorKey"]) {
+  allInflectionCategoryysForThisWordtype
+    .filter((inflectionCategoryy) => !["form"].includes(inflectionCategoryy))
+    .forEach((inflectionCategoryy) => {
+      if (structureChunk["inflectionCategoryy"]) {
         consol.log(
           "[1;35m " +
-            `milm stripOutFeatures Deleting "${inflectorKey}" from stCh "${structureChunk.chunkId}" because this is #${PWlabel} in ${currentLanguage}` +
+            `milm stripOutInflectionCategoryys Deleting "${inflectionCategoryy}" from stCh "${structureChunk.chunkId}" because this is #${PWlabel} in ${currentLanguage}` +
             "[0m"
         );
       }
 
-      delete structureChunk[inflectorKey];
+      delete structureChunk[inflectionCategoryy];
     });
 };
 
@@ -1300,9 +1304,9 @@ exports.doDrillPathsDifferOnlyByGender = (subArrayOfOutputUnits) => {
   }
 };
 
-exports.switchmetaTraitValyyeForAWorkableConvertedFeature = (
-  inflectorLabel,
-  inflectorValue,
+exports.switchMetaTraitValyyeForAWorkableConvertedTraitValyye = (
+  inflectionKeyy,
+  inflectionValyye,
   source,
   currentLanguage,
   structureChunk,
@@ -1312,60 +1316,60 @@ exports.switchmetaTraitValyyeForAWorkableConvertedFeature = (
     "[1;33m " +
       `ivwa ` +
       consoleLogLabel +
-      `. >>unkeyed metaTraitValyye clause<<. inflectorValue is a metaTraitValyye: "${inflectorValue}", but there is no such key on the source. So, we should check if the source has corresponding feature keys, eg allPersonalGenders -> [m, f], and if they hold all the same values, then we should let this work.` +
+      `. >>unkeyed metaTraitValyye clause<<. inflectionValyye is a metaTraitValyye: "${inflectionValyye}", but there is no such key on the source. So, we should check if the source has corresponding feature keys, eg allPersonalGenders -> [m, f], and if they hold all the same values, then we should let this work.` +
       "[0m"
   );
 
-  let convertedmetaTraitValyyes = refObj.metaTraitValyyes[currentLanguage][
-    inflectorLabel
-  ][inflectorValue].filter(
-    (convertedmetaTraitValyye) => source[convertedmetaTraitValyye]
+  let ConvertedMetaTraitValyyes = refObj.metaTraitValyyes[currentLanguage][
+    inflectionKeyy
+  ][inflectionValyye].filter(
+    (ConvertedMetaTraitValyye) => source[ConvertedMetaTraitValyye]
   );
 
   consol.log(
-    "[1;33m " + `ivwe convertedmetaTraitValyyes [${convertedmetaTraitValyyes}]` + "[0m"
+    "[1;33m " + `ivwe ConvertedMetaTraitValyyes [${ConvertedMetaTraitValyyes}]` + "[0m"
   );
 
-  if (!convertedmetaTraitValyyes || !convertedmetaTraitValyyes.length) {
+  if (!ConvertedMetaTraitValyyes || !ConvertedMetaTraitValyyes.length) {
     consol.throw(
-      `ejrb #ERR traverseAndRecordInflections >>unkeyed metaTraitValyye clause<<. Found no convertedmetaTraitValyyes for "${inflectorValue}".`
+      `ejrb #ERR traverseAndRecordInflections >>unkeyed metaTraitValyye clause<<. Found no ConvertedMetaTraitValyyes for "${inflectionValyye}".`
     );
   }
 
-  if (convertedmetaTraitValyyes.length === 1) {
-    let selectedConvertedmetaTraitValyye = convertedmetaTraitValyyes[0];
+  if (ConvertedMetaTraitValyyes.length === 1) {
+    let selectedConvertedMetaTraitValyye = ConvertedMetaTraitValyyes[0];
 
     consol.log(
       "[1;33m " +
-        `lbro traverseAndRecordInflections >>unkeyed metaTraitValyye clause<<. Setting inflectorValue to "${selectedConvertedmetaTraitValyye}". Will now continue with main fxn.` +
+        `lbro traverseAndRecordInflections >>unkeyed metaTraitValyye clause<<. Setting inflectionValyye to "${selectedConvertedMetaTraitValyye}". Will now continue with main fxn.` +
         "[0m"
     );
 
-    return selectedConvertedmetaTraitValyye;
+    return selectedConvertedMetaTraitValyye;
   }
 
-  let drillResultsOfConvertedmetaTraitValyyes = convertedmetaTraitValyyes.map(
-    (convertedmetaTraitValyye) => source[convertedmetaTraitValyye]
+  let drillResultsOfConvertedMetaTraitValyyes = ConvertedMetaTraitValyyes.map(
+    (ConvertedMetaTraitValyye) => source[ConvertedMetaTraitValyye]
   );
 
-  let selectedConvertedmetaTraitValyye = uUtils.selectRandom(
-    convertedmetaTraitValyyes
+  let selectedConvertedMetaTraitValyye = uUtils.selectRandom(
+    ConvertedMetaTraitValyyes
   );
 
   if (
     uUtils.checkEachSequentialPairing(
-      drillResultsOfConvertedmetaTraitValyyes,
+      drillResultsOfConvertedMetaTraitValyyes,
       uUtils.areTwoObjectsEqual,
       true
     )
   ) {
     consol.log(
       "[1;33m " +
-        `ksfc traverseAndRecordInflections >>unkeyed metaTraitValyye clause<<. Final Clause A. Setting inflectorValue to "${selectedConvertedmetaTraitValyye}". Do not need to adjust stCh as all converted values for this metaTraitValyye result in the same from source, eg "allPersonalSingularGenders" = m --> "you", f --> "you". Will now continue with main fxn.` +
+        `ksfc traverseAndRecordInflections >>unkeyed metaTraitValyye clause<<. Final Clause A. Setting inflectionValyye to "${selectedConvertedMetaTraitValyye}". Do not need to adjust stCh as all converted values for this metaTraitValyye result in the same from source, eg "allPersonalSingularGenders" = m --> "you", f --> "you". Will now continue with main fxn.` +
         "[0m"
     );
 
-    return selectedConvertedmetaTraitValyye;
+    return selectedConvertedMetaTraitValyye;
   } else {
     consol.log(
       `aqsa traverseAndRecordInflections >>unkeyed metaTraitValyye clause<<. 
@@ -1377,9 +1381,9 @@ exports.switchmetaTraitValyyeForAWorkableConvertedFeature = (
       So I'll pick one, and make sure to set the stCh to acknowledge this.`
     );
 
-    structureChunk.gender = [selectedConvertedmetaTraitValyye];
+    structureChunk.gender = [selectedConvertedMetaTraitValyye];
 
-    return selectedConvertedmetaTraitValyye;
+    return selectedConvertedMetaTraitValyye;
   }
 };
 

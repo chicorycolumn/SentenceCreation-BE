@@ -182,7 +182,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
     );
 
     if (
-      //If gender is an appropriate feature of this worrdtype.
+      //If gender is an appropriate traitKeyy of this worrdtype.
       refObj.lemmaObjectTraitKeyys[currentLanguage].inflectionChains[
         gpUtils.getWorrdtypeStCh(structureChunk)
       ].includes("gender")
@@ -393,8 +393,8 @@ exports.generateAdhocForms = (
         selectedForm,
         [lObj.inflections[selectedForm]],
         structureChunk,
-        null // I am giving no dataToUpdateWith, as the choice of features specified won't affect the ENG adhoc form chosen.
-        // So in addToResArr it will make random selections for all the features in the structureChunk, as I've given null here.
+        null // I am giving no dataToUpdateWith, as the choice of traitKeyys specified won't affect the ENG adhoc form chosen.
+        // So in addToResArr it will make random selections for all the traitValyyes in the structureChunk, as I've given null here.
       );
     });
 
@@ -609,7 +609,7 @@ exports.generateAdhocForms = (
       });
     } else {
       //If I am given no dataToUpdateWith, then I assume you want me to select random
-      //for all features on the structureChunk, in order to lock in choices.
+      //traitValyyes for all traitKeyys on the structureChunk, in order to lock in choices.
 
       let allTraitKeyys = [];
 

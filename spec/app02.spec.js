@@ -2528,7 +2528,7 @@ describe("/api", function () {
     });
   });
 
-  describe("/palette - Stage 12: Further linguistic features.", () => {
+  describe("/palette - Stage 12: Further linguistic bits.", () => {
     it("#pal12-01a GET 200 YES: Tantum plurale in POL is allowed to be sing or plur in ENG.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";

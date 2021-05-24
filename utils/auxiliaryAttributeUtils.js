@@ -216,7 +216,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       counterfaxedStCh[annoKey] = counterfactualTraitValyyesForThisTraitKeyy;
 
       counterfactualTraitValyyesForThisTraitKeyy =
-        refFxn.removeIncompatibleFeatures(questionLanguage, counterfaxedStCh)[
+        refFxn.removeincompatibleTraits(questionLanguage, counterfaxedStCh)[
           annoKey
         ];
 
@@ -225,12 +225,14 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       );
 
       counterfactualTraitValyyesForThisTraitKeyy.forEach(
-        (counterfactualValueForThisFeature) => {
+        (counterfactualTraitValyyeForThisTraitKeyy) => {
           consol.log(
-            `myxe removeAnnotationsByCounterfax FOREACH-2 START. Will do a run with counterfactual value "${counterfactualValueForThisFeature}".`
+            `myxe removeAnnotationsByCounterfax FOREACH-2 START. Will do a run with counterfactual value "${counterfactualTraitValyyeForThisTraitKeyy}".`
           );
 
-          counterfaxedStCh[annoKey] = [counterfactualValueForThisFeature];
+          counterfaxedStCh[annoKey] = [
+            counterfactualTraitValyyeForThisTraitKeyy,
+          ];
 
           //(IOTA). Do we want to send updated question formula for counterfax run,
           //or originalQuestionSentenceFormula ?
@@ -259,8 +261,9 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             }
           );
 
-          let counterfactualFeature = {};
-          counterfactualFeature[annoKey] = counterfactualValueForThisFeature;
+          let counterfactualTrait = {};
+          counterfactualTrait[annoKey] =
+            counterfactualTraitValyyeForThisTraitKeyy;
 
           consol.consoleLogObjectAtOneLevel(
             counterfactualQuestionSentenceFormula,
@@ -271,7 +274,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           let newReqBody = {
             arrayOfCounterfactualResultsForThisAnnotation,
             counterfactualQuestionSentenceFormula,
-            counterfactualFeature,
+            counterfactualTrait,
 
             sentenceFormulaId:
               counterfactualQuestionSentenceFormula.sentenceFormulaId,
@@ -289,7 +292,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           additionalRunsRecord.push([
             questionOutputUnit.structureChunk.chunkId,
             annoKey,
-            counterfactualValueForThisFeature,
+            counterfactualTraitValyyeForThisTraitKeyy,
           ]);
 
           palette.fetchPalette({ body: newReqBody });
@@ -339,22 +342,20 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         }
       );
 
-      let counterfactualFeatures =
+      let counterfactualTraitValyyes =
         arrayOfCounterfactualResultsForThisAnnotation.map((counterfactual) => {
           {
-            if (
-              Object.keys(counterfactual.counterfactualFeature).length !== 1
-            ) {
+            if (Object.keys(counterfactual.counterfactualTrait).length !== 1) {
               consol.throw("iejr removeAnnotationsByCounterfax");
             }
 
             if (
-              Object.keys(counterfactual.counterfactualFeature)[0] !== annoKey
+              Object.keys(counterfactual.counterfactualTrait)[0] !== annoKey
             ) {
               consol.throw("dckm removeAnnotationsByCounterfax");
             }
 
-            return counterfactual.counterfactualFeature[annoKey];
+            return counterfactual.counterfactualTrait[annoKey];
           }
         });
 
@@ -526,9 +527,9 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
         //PDSX4-orange-true
         if (questionOutputUnit.structureChunk.dontSpecifyOnThisChunk) {
-          let combinedFeatures = [
+          let combinedTraitValyyes = [
             ...questionOutputUnit.structureChunk[annoKey],
-            ...counterfactualFeatures,
+            ...counterfactualTraitValyyes,
           ];
 
           answerSelectedWordsSetsHaveChanged.value = true;
@@ -539,11 +540,11 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           ];
 
           consol.log(
-            `PDSX-orange. Agglomerating the answer output arrays and deleting annoValue "${annoValue}", and questionOutputUnit.structureChunk[${annoKey}] is now [${combinedFeatures}]`
+            `PDSX-orange. Agglomerating the answer output arrays and deleting annoValue "${annoValue}", and questionOutputUnit.structureChunk[${annoKey}] is now [${combinedTraitValyyes}]`
           );
 
           delete questionOutputUnit.structureChunk.annotations[annoKey];
-          questionOutputUnit.structureChunk[annoKey] = combinedFeatures;
+          questionOutputUnit.structureChunk[annoKey] = combinedTraitValyyes;
 
           if (
             !questionOutputUnit.structureChunk

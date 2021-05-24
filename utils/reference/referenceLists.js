@@ -1,27 +1,27 @@
 const { lObjIsMGN, getWorrdtypeStCh } = require("../generalPurposeUtils");
 
-exports.incompatibleFeaturesRef = {
+exports.incompatibleTraitsRef = {
   POL: {
-    //If we're examining gender feature.
+    //If we're examining gender traitKeyy.
     gender: {
-      //Check the "number" feature...
+      //Check the "number" traitKeyy...
       number: {
-        //...and if the number does not include "singular", remove these values from the gender array.
+        //...and if the number traitValyyes do not include "singular", remove these values from the gender array.
         singular: ["m", "m1", "m2", "m3", "f", "n"],
         //...and if the number does not include "plural", remove these values from the gender array.
         plural: ["virile", "nonvirile"],
       },
-      //Check the "person" feature...
+      //Check the "person" traitKeyy...
       person: {
-        //...and if the person does not include "3per", remove these values from the gender array.
+        //...and if the person traitValyyes do not include "3per", remove these values from the gender array.
         "3per": ["m2", "m3", "n"],
       },
     },
   },
   ENG: {
-    //If we're examining gender feature.
+    //If we're examining gender.
     gender: {
-      //Check the number feature...
+      //Check the number...
       number: {
         //...and if the number does not include singular, remove these values from the gender array.
         singular: ["m", "f", "n"],
@@ -157,7 +157,7 @@ exports.lemmaObjectTraitKeyys = {
       // article: NONE
       preposition: ["form"],
     },
-    inheritableInflectorKeys: {
+    inheritableInflectionKeyys: {
       "noun-common": ["number", "gcase"],
       "noun-person": ["number", "gcase", "gender"], //BOSTON0
       "noun-proper": ["number", "gcase"],
@@ -199,7 +199,7 @@ exports.lemmaObjectTraitKeyys = {
       article: ["form", "number"],
       preposition: ["form"],
     },
-    inheritableInflectorKeys: {
+    inheritableInflectionKeyys: {
       "noun-common": ["number", "gcase"],
       "noun-person": ["number", "gcase", "gender"],
       "noun-proper": ["number", "gcase"],
@@ -229,7 +229,7 @@ exports.structureChunkTraits = {
   ALL: {
     //
     //
-    //    These stCh features require validation that given values are okay.
+    //    These stCh traits require validation that given traitValyyes are okay.
     //
     //
     preventAddingFurtherClarifiers: { expectedTypeOnStCh: "boolean" },
@@ -290,7 +290,7 @@ exports.structureChunkTraits = {
   POL: {
     //
     //
-    //    These stCh features require validation that given values are okay.
+    //    These stCh traits require validation that given traitValyyes are okay.
     //
     //
     postHocAgreeWithPrimary: {
@@ -307,7 +307,7 @@ exports.structureChunkTraits = {
     },
     //
     //
-    //    These stCh features get validation by their possibleTraitValyyes arr.
+    //    These stCh traits get validation by their possibleTraitValyyes arr.
     //
     //
     tenseDescription: {
@@ -389,7 +389,7 @@ exports.structureChunkTraits = {
   ENG: {
     //
     //
-    //    These stCh features get validation by their possibleTraitValyyes arr.
+    //    These stCh traits get validation by their possibleTraitValyyes arr.
     //
     //
     tenseDescription: {
@@ -458,7 +458,7 @@ exports.uninflectedForms = {
   },
 };
 
-exports.adhocInflectors = {
+exports.adhocInflectionKeyys = {
   POL: {},
   ENG: { verb: ["tenseDescription"] },
 };

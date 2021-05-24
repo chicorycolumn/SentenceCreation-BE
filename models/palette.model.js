@@ -25,7 +25,7 @@ exports.fetchPalette = (req) => {
     devSaysThrowAfterAnnoSalvo,
     arrayOfCounterfactualResultsForThisAnnotation,
     counterfactualQuestionSentenceFormula,
-    counterfactualFeature,
+    counterfactualTrait,
   } = req.body;
 
   let { sentenceFormula, words } = scUtils.getMaterials(
@@ -463,7 +463,7 @@ exports.fetchPalette = (req) => {
 
   if (arrayOfCounterfactualResultsForThisAnnotation) {
     arrayOfCounterfactualResultsForThisAnnotation.push({
-      counterfactualFeature,
+      counterfactualTrait,
       questionSentenceData,
       answerSentenceData,
     });
