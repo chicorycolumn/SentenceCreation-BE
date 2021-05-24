@@ -365,7 +365,7 @@ exports.filterWithinSelectedLemmaObject = (
   //STEP ZERO: Get necessary materials, ie inflectionPaths and requirementArrs.
 
   let inflectionChain =
-    refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
+    refObj.lemmaObjectTraitKeyys[currentLanguage].inflectionChains[
       gpUtils.getWorrdtypeStCh(structureChunk)
     ];
 
@@ -598,7 +598,7 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
 
   //STEP THREE: For all remaining selectors, update the stCh with values from lObj.
   let selectors =
-    refObj.lemmaObjectFeatures[currentLanguage].selectors[
+    refObj.lemmaObjectTraitKeyys[currentLanguage].selectors[
       gpUtils.getWorrdtypeStCh(structureChunk)
     ];
 
@@ -666,7 +666,7 @@ exports.updateStChByInflections = (outputUnit, currentLanguage) => {
 
 exports.filterOutLackingLemmaObjects = (sourceArr, stCh, currentLanguage) => {
   let inflectionChain =
-    refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
+    refObj.lemmaObjectTraitKeyys[currentLanguage].inflectionChains[
       gpUtils.getWorrdtypeStCh(stCh)
     ];
   let requirementArrs = inflectionChain.map((key) => stCh[key] || []);
@@ -847,7 +847,7 @@ exports.filterBySelectors = (
   consoleLogLabel
 ) => {
   let selectors =
-    refObj.lemmaObjectFeatures[currentLanguage].selectors[
+    refObj.lemmaObjectTraitKeyys[currentLanguage].selectors[
       gpUtils.getWorrdtypeStCh(structureChunk)
     ];
 

@@ -183,7 +183,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
 
     if (
       //If gender is an appropriate feature of this worrdtype.
-      refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
+      refObj.lemmaObjectTraitKeyys[currentLanguage].inflectionChains[
         gpUtils.getWorrdtypeStCh(structureChunk)
       ].includes("gender")
     ) {
@@ -372,14 +372,14 @@ exports.addSpecialVerbForms = (lemmaObject, currentLanguage) => {
 };
 
 exports.generateAdhocForms = (
-  adhocInflectorKey,
+  adhocInflectionCategoryy,
   structureChunk,
   lObj,
   currentLanguage
 ) => {
   let resArr = [];
 
-  if (adhocInflectorKey === "form") {
+  if (adhocInflectionCategoryy === "form") {
     exports.addSpecialVerbForms(lObj, currentLanguage);
 
     structureChunk.form.forEach((selectedForm) => {
@@ -402,7 +402,7 @@ exports.generateAdhocForms = (
   }
 
   if (
-    adhocInflectorKey === "tenseDescription" &&
+    adhocInflectionCategoryy === "tenseDescription" &&
     gpUtils.getWorrdtypeStCh(structureChunk) === "verb" &&
     structureChunk.form.includes("verbal")
   ) {
@@ -611,28 +611,32 @@ exports.generateAdhocForms = (
       //If I am given no dataToUpdateWith, then I assume you want me to select random
       //for all features on the structureChunk, in order to lock in choices.
 
-      let allFeatureKeys = [];
+      let allTraitKeyys = [];
 
-      let featureTypes = ["selectors", "hybridSelectors", "inflectionChains"];
+      let categoriesOfKeyOnLObj = [
+        "selectors",
+        "hybridSelectors",
+        "inflectionChains",
+      ];
 
-      featureTypes.forEach((featureType) => {
-        let featureKeys =
-          refObj.lemmaObjectFeatures[currentLanguage][featureType][
+      categoriesOfKeyOnLObj.forEach((categoryOfKeyOnLObj) => {
+        let traitKeyys =
+          refObj.lemmaObjectTraitKeyys[currentLanguage][categoryOfKeyOnLObj][
             gpUtils.getWorrdtypeStCh(structureChunkCopy)
           ];
 
-        if (featureKeys) {
-          allFeatureKeys = [...allFeatureKeys, ...featureKeys];
+        if (traitKeyys) {
+          allTraitKeyys = [...allTraitKeyys, ...traitKeyys];
         }
       });
 
-      allFeatureKeys.forEach((featureKey) => {
+      allTraitKeyys.forEach((traitKeyy) => {
         if (
-          structureChunkCopy[featureKey] &&
-          structureChunkCopy[featureKey].length > 1
+          structureChunkCopy[traitKeyy] &&
+          structureChunkCopy[traitKeyy].length > 1
         ) {
-          structureChunkCopy[featureKey] = uUtils.selectRandom(
-            structureChunkCopy[featureKey]
+          structureChunkCopy[traitKeyy] = uUtils.selectRandom(
+            structureChunkCopy[traitKeyy]
           );
         }
       });

@@ -29,7 +29,7 @@ exports.findMatchingLemmaObjectThenWord = (
   let temporaryMultipleMode;
 
   let allInflectorsForThisWordtype =
-    refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
+    refObj.lemmaObjectTraitKeyys[currentLanguage].inflectionChains[
       gpUtils.getWorrdtypeStCh(structureChunk)
     ];
 
@@ -1140,7 +1140,7 @@ exports.giveValueFromObjectByRoute = (obj, route) => {
 
 exports.findSynhomographs = (lemmaObject, structureChunk, currentLanguage) => {
   let inflectionLabelChain =
-    refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
+    refObj.lemmaObjectTraitKeyys[currentLanguage].inflectionChains[
       gpUtils.getWorrdtypeStCh(structureChunk)
     ];
 
@@ -1238,7 +1238,7 @@ exports.findSinglePointMutationArray = (
 
 exports.stripOutFeatures = (currentLanguage, structureChunk, PWlabel) => {
   let allInflectorsForThisWordtype =
-    refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
+    refObj.lemmaObjectTraitKeyys[currentLanguage].inflectionChains[
       gpUtils.getWorrdtypeStCh(structureChunk)
     ];
 
@@ -1387,7 +1387,7 @@ exports.isThisValueUniqueAtThisLevelInLemmaObject = (
   drillPath
 ) => {
   let inflectionChain =
-    refObj.lemmaObjectFeatures[gpUtils.getLanguageFromLemmaObject(lObj)]
+    refObj.lemmaObjectTraitKeyys[gpUtils.getLanguageFromLemmaObject(lObj)]
       .inflectionChains[gpUtils.getWorrdtypeLObj(lObj)];
 
   function getInflectionKeyyFromDrillPath(inflectionCategoryy, drillPath) {

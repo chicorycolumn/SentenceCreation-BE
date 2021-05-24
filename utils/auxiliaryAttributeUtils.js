@@ -1116,7 +1116,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
     //
     //Find synhoms, add Feature Clarifiers if such clarifiers are allowed.
     let allowableClarifiers =
-      refObj.lemmaObjectFeatures[answerLanguage]
+      refObj.lemmaObjectTraitKeyys[answerLanguage]
         .allowableTransfersFromQuestionStructure[
         gpUtils.getWorrdtypeStCh(structureChunk)
       ];
@@ -1135,7 +1135,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
     }
 
     let allowableExtraClarifiersInSingleWordSentences =
-      refObj.lemmaObjectFeatures[answerLanguage]
+      refObj.lemmaObjectTraitKeyys[answerLanguage]
         .allowableExtraClarifiersInSingleWordSentences[
         gpUtils.getWorrdtypeStCh(structureChunk)
       ];

@@ -152,35 +152,41 @@ exports.skipThisStepInPreprocessStructureChunks = (
   }
 };
 
-exports.validFeaturesOfStructureChunkWordtype = (
+exports.validTraitKeyysPerStructureChunkWordtype = (
   currentLanguage,
   structureChunk,
-  featureTypes
+  categoriesOfKeyOnLObj
 ) => {
-  if (!featureTypes || !featureTypes.length) {
-    featureTypes = ["selectors", "hybridSelectors", "inflectionChains"];
+  if (!categoriesOfKeyOnLObj || !categoriesOfKeyOnLObj.length) {
+    categoriesOfKeyOnLObj = [
+      "selectors",
+      "hybridSelectors",
+      "inflectionChains",
+    ];
   }
 
-  let featuresRef = refObj.lemmaObjectFeatures[currentLanguage];
+  let featuresRef = refObj.lemmaObjectTraitKeyys[currentLanguage];
 
-  let validFeatures = [];
+  let validTraitKeyys = [];
 
-  featureTypes.forEach((featureType) => {
-    let additionalValidFeatures =
-      featuresRef[featureType][gpUtils.getWorrdtypeStCh(structureChunk)];
+  categoriesOfKeyOnLObj.forEach((categoryOfKeyOnLObj) => {
+    let additionalValidTraitKeyys =
+      featuresRef[categoryOfKeyOnLObj][
+        gpUtils.getWorrdtypeStCh(structureChunk)
+      ];
 
-    if (additionalValidFeatures) {
-      if (!Array.isArray(additionalValidFeatures)) {
+    if (additionalValidTraitKeyys) {
+      if (!Array.isArray(additionalValidTraitKeyys)) {
         consol.throw(
-          "twnl additionalValidFeatures in isValidFeatureOfStructureChunkWordtype fxn should have been array."
+          "twnl additionalValidTraitKeyys in isValidFeatureOfStructureChunkWordtype fxn should have been array."
         );
       }
 
-      validFeatures = [...validFeatures, ...additionalValidFeatures];
+      validTraitKeyys = [...validTraitKeyys, ...additionalValidTraitKeyys];
     }
   });
 
-  return validFeatures;
+  return validTraitKeyys;
 };
 
 exports.giveAdjustedTraitValyye = (

@@ -131,7 +131,7 @@ exports.metaFeatures = {
   },
 };
 
-exports.lemmaObjectFeatures = {
+exports.lemmaObjectTraitKeyys = {
   POL: {
     selectors: {
       noun: ["gender"],

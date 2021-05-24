@@ -369,7 +369,10 @@ exports.decantMGNsBeforeFetchingOutputArray = (
     }
     if (
       !refFxn
-        .validFeaturesOfStructureChunkWordtype(currentLanguage, structureChunk)
+        .validTraitKeyysPerStructureChunkWordtype(
+          currentLanguage,
+          structureChunk
+        )
         .includes("gender")
     ) {
       consol.throw(
@@ -407,7 +410,10 @@ exports.correctMGNsBeforeFetchingOutputArray = (
     }
     if (
       !refFxn
-        .validFeaturesOfStructureChunkWordtype(currentLanguage, structureChunk)
+        .validTraitKeyysPerStructureChunkWordtype(
+          currentLanguage,
+          structureChunk
+        )
         .includes("gender")
     ) {
       consol.throw(

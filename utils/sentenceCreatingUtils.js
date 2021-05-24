@@ -887,7 +887,7 @@ exports.selectWordVersions = (
 
               if (
                 //If the annoKey from the skeleton outputUnit's annos is an allowable transfer to this depCh,
-                refObj.lemmaObjectFeatures[
+                refObj.lemmaObjectTraitKeyys[
                   currentLanguage
                 ].inheritableInflectorKeys[
                   gpUtils.getWorrdtypeStCh(depUnit.structureChunk, true)
@@ -1132,7 +1132,7 @@ exports.conformAnswerStructureToQuestionStructure = (
       );
     }
 
-    refObj.lemmaObjectFeatures[
+    refObj.lemmaObjectTraitKeyys[
       answerLanguage
     ].allowableTransfersFromQuestionStructure[
       gpUtils.getWorrdtypeStCh(answerStructureChunk)
@@ -1258,12 +1258,12 @@ exports.conformAnswerStructureToQuestionStructure = (
     // And then, with that list of features, we will blind the answer structureChunks to these features.
 
     let possibleInflectionsOfQuestionLobjs =
-      refObj.lemmaObjectFeatures[questionLanguage].inflectionChains[
+      refObj.lemmaObjectTraitKeyys[questionLanguage].inflectionChains[
         gpUtils.getWorrdtypeStCh(answerStructureChunk)
       ];
 
     let possibleInflectionsOfAnswerLobjs =
-      refObj.lemmaObjectFeatures[answerLanguage].inflectionChains[
+      refObj.lemmaObjectTraitKeyys[answerLanguage].inflectionChains[
         gpUtils.getWorrdtypeStCh(answerStructureChunk)
       ];
 
@@ -1325,12 +1325,12 @@ exports.inheritFromHeadToDependentChunk = (
   consol.log("w'dil inheritFromHeadToDependentChunk: headChunk", headChunk);
 
   let normalinheritableInflectorKeys =
-    refObj.lemmaObjectFeatures[currentLanguage].inheritableInflectorKeys[
+    refObj.lemmaObjectTraitKeyys[currentLanguage].inheritableInflectorKeys[
       gpUtils.getWorrdtypeStCh(dependentChunk, true)
     ];
 
   let hybridSelectors =
-    refObj.lemmaObjectFeatures[currentLanguage].hybridSelectors[
+    refObj.lemmaObjectTraitKeyys[currentLanguage].hybridSelectors[
       (gpUtils.getWorrdtypeStCh(dependentChunk), true)
     ] || [];
 
