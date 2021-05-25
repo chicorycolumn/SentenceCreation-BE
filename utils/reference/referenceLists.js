@@ -458,7 +458,7 @@ exports.uninflectedForms = {
   },
 };
 
-exports.adhocInflectionKeyys = {
+exports.adhocInflectionCategoryys = {
   POL: {},
   ENG: { verb: ["tenseDescription"] },
 };

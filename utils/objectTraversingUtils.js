@@ -28,11 +28,6 @@ exports.findMatchingLemmaObjectThenWord = (
   let arrayOfAllPossibleOutputUnits = [];
   let temporaryMultipleMode;
 
-  let allInflectorsForThisWordtype =
-    refObj.lemmaObjectTraitKeyys[currentLanguage].inflectionChains[
-      gpUtils.getWorrdtypeStCh(structureChunk)
-    ];
-
   //STEP ONE: Fx-PW: Pathway for Fixed pieces.
   if (gpUtils.getWorrdtypeStCh(structureChunk) === "fixed") {
     consol.consoleLogPW("##Fx-PW", structureChunk, multipleMode);
@@ -131,7 +126,7 @@ exports.findMatchingLemmaObjectThenWord = (
   );
 
   //STEP THREE: Return result array immediately if uninflected or ad hoc.
-  let adhocInflectorRef = refObj.adhocInflectionKeyys[currentLanguage];
+  let adhocInflectionRef = refObj.adhocInflectionCategoryys[currentLanguage];
   let adhocFormRef = refObj.adhocForms[currentLanguage];
 
   //    THREE (A): Ad-PW: Pathway for Adhoc: both Forms and Inflections.
@@ -210,24 +205,24 @@ exports.findMatchingLemmaObjectThenWord = (
 
   //    (Ad-PW-I): Pathway for Adhoc INFLECTIONS.
   if (
-    Object.keys(adhocInflectorRef).includes(
+    Object.keys(adhocInflectionRef).includes(
       gpUtils.getWorrdtypeStCh(structureChunk)
     )
   ) {
-    let adhocInflectionKeyys =
-      adhocInflectorRef[gpUtils.getWorrdtypeStCh(structureChunk)];
+    let adhocInflectionCategoryys =
+      adhocInflectionRef[gpUtils.getWorrdtypeStCh(structureChunk)];
 
-    adhocInflectionKeyys.forEach((adhocInflectionKeyy) => {
+    adhocInflectionCategoryys.forEach((adhocInflectionCategoryy) => {
       if (
-        structureChunk[adhocInflectionKeyy] &&
-        structureChunk[adhocInflectionKeyy].length
+        structureChunk[adhocInflectionCategoryy] &&
+        structureChunk[adhocInflectionCategoryy].length
       ) {
         consol.consoleLogPW("##Ad-PW-I", structureChunk, multipleMode);
 
         if (multipleMode) {
           matches.forEach((selectedLemmaObject) => {
             let adhocArr = langUtils.generateAdhocForms(
-              adhocInflectionKeyy,
+              adhocInflectionCategoryy,
               uUtils.copyWithoutReference(structureChunk),
               selectedLemmaObject,
               currentLanguage
@@ -254,7 +249,7 @@ exports.findMatchingLemmaObjectThenWord = (
           let selectedLemmaObject = uUtils.selectRandom(matches);
 
           let adhocArr = langUtils.generateAdhocForms(
-            adhocInflectionKeyy,
+            adhocInflectionCategoryy,
             uUtils.copyWithoutReference(structureChunk),
             selectedLemmaObject,
             currentLanguage

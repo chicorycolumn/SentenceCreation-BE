@@ -1137,7 +1137,7 @@ exports.conformAnswerStructureToQuestionStructure = (
       gpUtils.getWorrdtypeStCh(answerStructureChunk)
     ].forEach((traitKeyy) => {
       //
-      // STEP ONE: Update inflectors from list of allowable transfers.
+      // STEP ONE: Update traits from list of allowable transfers.
       //
       if (!questionStructureChunk[traitKeyy]) {
         return;
@@ -1253,29 +1253,36 @@ exports.conformAnswerStructureToQuestionStructure = (
     // So when going ENG to POL, that would be gender.
     // And then, with that list of traits, we will blind the answer structureChunks to these traits.
 
-    let possibleInflectionsOfQuestionLobjs =
+    let possibleInflectionCategoryysOfQuestionLobjs =
       refObj.lemmaObjectTraitKeyys[questionLanguage].inflectionChains[
         gpUtils.getWorrdtypeStCh(answerStructureChunk)
       ];
 
-    let possibleInflectionsOfAnswerLobjs =
+    let possibleInflectionCategoryysOfAnswerLobjs =
       refObj.lemmaObjectTraitKeyys[answerLanguage].inflectionChains[
         gpUtils.getWorrdtypeStCh(answerStructureChunk)
       ];
 
-    let possibleInflectionsOfAnswerLobjsButNotQuestionLobjs =
-      possibleInflectionsOfAnswerLobjs.filter(
-        (inflector) => !possibleInflectionsOfQuestionLobjs.includes(inflector)
+    let possibleInflectionCategoryysOfAnswerLobjsButNotQuestionLobjs =
+      possibleInflectionCategoryysOfAnswerLobjs.filter(
+        (inflectionCategoryy) =>
+          !possibleInflectionCategoryysOfQuestionLobjs.includes(
+            inflectionCategoryy
+          )
       );
 
-    possibleInflectionsOfAnswerLobjsButNotQuestionLobjs.forEach((inflector) => {
-      if (
-        !answerStructureChunk.formulaImportantTraitKeyys ||
-        !answerStructureChunk.formulaImportantTraitKeyys.includes(inflector)
-      ) {
-        answerStructureChunk[inflector] = [];
+    possibleInflectionCategoryysOfAnswerLobjsButNotQuestionLobjs.forEach(
+      (inflectionCategoryy) => {
+        if (
+          !answerStructureChunk.formulaImportantTraitKeyys ||
+          !answerStructureChunk.formulaImportantTraitKeyys.includes(
+            inflectionCategoryy
+          )
+        ) {
+          answerStructureChunk[inflectionCategoryy] = [];
+        }
       }
-    });
+    );
 
     allLangUtils.convertmetaTraitValyyes(
       [answerStructureChunk],

@@ -32,7 +32,7 @@ const have = {
   conditional: "would have",
 };
 
-let inflectorRef = {
+let inflectionRef = {
   person: ["1per", "2per", "3per"],
   number: ["singular", "plural"],
   tenseDescription: [
@@ -415,10 +415,13 @@ exports.generateAdhocForms = (
 
     let { infinitive, v2, v3, thirdPS, gerund } = lObj.inflections;
 
-    Object.keys(inflectorRef).forEach((key) => {
-      let value = inflectorRef[key];
-      if (!Array.isArray(structureChunk[key]) || !structureChunk[key].length) {
-        structureChunk[key] = value.slice(0);
+    Object.keys(inflectionRef).forEach((inflectionCategoryy) => {
+      let inflectionKeyys = inflectionRef[inflectionCategoryy].slice(0);
+      if (
+        !Array.isArray(structureChunk[inflectionCategoryy]) ||
+        !structureChunk[inflectionCategoryy].length
+      ) {
+        structureChunk[inflectionCategoryy] = inflectionKeyys;
       }
     });
 

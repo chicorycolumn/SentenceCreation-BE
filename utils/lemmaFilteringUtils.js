@@ -657,11 +657,11 @@ exports.updateStChByInflections = (outputUnit, currentLanguage) => {
 
   if (outputUnit.drillPath) {
     outputUnit.drillPath.forEach((drillPathSubArr) => {
-      let requiredInflectorCategory = drillPathSubArr[0];
-      let selectedInflector = drillPathSubArr[1];
+      let requiredInflectionCategoryy = drillPathSubArr[0];
+      let selectedInflectionKeyy = drillPathSubArr[1];
 
-      outputUnit.structureChunk[requiredInflectorCategory] = [
-        selectedInflector,
+      outputUnit.structureChunk[requiredInflectionCategoryy] = [
+        selectedInflectionKeyy,
       ];
     });
   }
