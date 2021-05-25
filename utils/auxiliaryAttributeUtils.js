@@ -193,12 +193,9 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
       let stChTraits = refFxn.getstructureChunkTraits(questionLanguage);
 
-      let allPossibleTraitValyyesForThisFeature =
-        stChTraits[annoKey].possibleTraitValyyes.slice(0);
-
       let counterfactualTraitValyyesForThisTraitKeyy = Array.from(
         new Set(
-          allPossibleTraitValyyesForThisFeature.filter(
+          stChTraits[annoKey].possibleTraitValyyes.filter(
             (value) => value !== annoValue
           )
         )
@@ -486,7 +483,11 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       ) {
         consol.log(
           "[1;35m " +
-            `myxo-clauseA [tl;dr answersame so deleting anno] removeAnnotationsByCounterfax END. I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual ANSWER selected words came back SAME as original answer selected words.\nThis means that this feature has no impact, even if we flip it, so annotation is not needed. \nDeleting annotation "${annoKey}" = "${questionOutputUnit.structureChunk.annotations[annoKey]}" now.` +
+            `myxo-clauseA [tl;dr answersame so deleting anno] removeAnnotationsByCounterfax END. 
+            I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" 
+            and the counterfactual ANSWER selected words came back SAME as original answer selected words.\n
+            This means that this trait has no impact, even if we flip it, so annotation is not needed. \n
+            Deleting annotation "${annoKey}" = "${questionOutputUnit.structureChunk.annotations[annoKey]}".` +
             "[0m",
           {
             originalAnswerPseudoSentences,
@@ -503,7 +504,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       ) {
         consol.log(
           "[1;35m " +
-            `myxo-clauseB [tl;dr questiondifferent so deleting anno] removeAnnotationsByCounterfax END. I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual QUESTION selected words came back DIFFERENT original question selected words.\nThis means that this feature has no impact, even if we flip it, so annotation is not needed. \nDeleting annotation "${annoKey}" = "${questionOutputUnit.structureChunk.annotations[annoKey]}" now.` +
+            `myxo-clauseB [tl;dr questiondifferent so deleting anno] removeAnnotationsByCounterfax END. I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual QUESTION selected words came back DIFFERENT original question selected words.\nThis means that this trait has no impact, even if we flip it, so annotation is not needed. \nDeleting annotation "${annoKey}" = "${questionOutputUnit.structureChunk.annotations[annoKey]}" now.` +
             "[0m",
           {
             originalQuestionPseudoSentences,
@@ -735,7 +736,6 @@ exports.removeAnnotationsByAOCs = (
 
             /**If any dep unit holds a value at inflectionCategoryy that is unique in its lObj,
              * then this pronoun obviates the need for that specifier, so delete it from annotations.
-             * and set featureHasBeenDeleted to true.
              */
             if (
               otUtils.isThisValueUniqueAtThisLevelInLemmaObject(
@@ -1104,7 +1104,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
 
     //STEP TWO: Types 2-6 Synhomographs (language-specific)
     //
-    //  Feature Clarifiers
+    //  Trait Clarifiers
     //
     //ie ENG has some verbs with v1-v2 synhomography.
 
@@ -1116,9 +1116,9 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
 
     //STEP THREE: Type 1 Synhomographs (find synhoms in lobj programmatically)
     //
-    //  Feature Clarifiers
+    //  Trait Clarifiers
     //
-    //Find synhoms, add Feature Clarifiers if such clarifiers are allowed.
+    //Find synhoms, add Trait Clarifiers if such clarifiers are allowed.
     let allowableClarifiers =
       refObj.lemmaObjectTraitKeyys[answerLanguage]
         .allowableTransfersFromQuestionStructure[

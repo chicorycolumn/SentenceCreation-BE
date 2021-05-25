@@ -1120,10 +1120,9 @@ exports.conformAnswerStructureToQuestionStructure = (
 
     //Do actually transfer gender, for person nouns.
     if (
-      gpUtils.getWorrdtypeStCh(questionStructureChunk) === "noun" &&
       gpUtils.getWorrdtypeStCh(questionStructureChunk, true) === "noun-person"
     ) {
-      adjustAndAddFeaturesToAnswerChunk(
+      addTraitToAnswerChunkWithAdjustment(
         questionStructureChunk,
         answerStructureChunk,
         "gender",
@@ -1159,7 +1158,7 @@ exports.conformAnswerStructureToQuestionStructure = (
       //Don't transfer Number if Q is Tantum Plurale.     eg if Q is "skrzypce" we'd want A to include both "violin" and "violins".
       if (traitKeyy === "number" && questionSelectedLemmaObject.tantumPlurale) {
         consol.log(
-          "yurw conformAnswerStructureToQuestionStructure Question lobj is a tantum, so we won't transfer Number feature."
+          "yurw conformAnswerStructureToQuestionStructure Question lobj is a tantum, so we won't transfer Number trait."
         );
         return;
       }
@@ -1173,7 +1172,7 @@ exports.conformAnswerStructureToQuestionStructure = (
         )
       ) {
         consol.log(
-          "kozn conformAnswerStructureToQuestionStructure All answer lobjs are tantum, so we won't transfer Number feature."
+          "kozn conformAnswerStructureToQuestionStructure All answer lobjs are tantum, so we won't transfer Number trait."
         );
         return;
       }
@@ -1214,7 +1213,7 @@ exports.conformAnswerStructureToQuestionStructure = (
         return;
       }
 
-      adjustAndAddFeaturesToAnswerChunk(
+      addTraitToAnswerChunkWithAdjustment(
         questionStructureChunk,
         answerStructureChunk,
         traitKeyy,
@@ -1223,7 +1222,7 @@ exports.conformAnswerStructureToQuestionStructure = (
       );
     });
 
-    function adjustAndAddFeaturesToAnswerChunk(
+    function addTraitToAnswerChunkWithAdjustment(
       questionStructureChunk,
       answerStructureChunk,
       traitKeyy,
@@ -1250,9 +1249,9 @@ exports.conformAnswerStructureToQuestionStructure = (
     //PART TWO: Blinding
     //
 
-    //Check for features-of-answer-lang-lobjs-that-aren't-features-of-question-lang-lobjs.
+    //Check for traits-of-answer-lang-lobjs-that-aren't-traits-of-question-lang-lobjs.
     // So when going ENG to POL, that would be gender.
-    // And then, with that list of features, we will blind the answer structureChunks to these features.
+    // And then, with that list of traits, we will blind the answer structureChunks to these traits.
 
     let possibleInflectionsOfQuestionLobjs =
       refObj.lemmaObjectTraitKeyys[questionLanguage].inflectionChains[

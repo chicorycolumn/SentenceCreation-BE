@@ -165,15 +165,13 @@ exports.validTraitKeyysPerStructureChunkWordtype = (
     ];
   }
 
-  let featuresRef = refObj.lemmaObjectTraitKeyys[currentLanguage];
+  let traitsRef = refObj.lemmaObjectTraitKeyys[currentLanguage];
 
   let validTraitKeyys = [];
 
   categoriesOfKeyOnLObj.forEach((categoryOfKeyOnLObj) => {
     let additionalValidTraitKeyys =
-      featuresRef[categoryOfKeyOnLObj][
-        gpUtils.getWorrdtypeStCh(structureChunk)
-      ];
+      traitsRef[categoryOfKeyOnLObj][gpUtils.getWorrdtypeStCh(structureChunk)];
 
     if (additionalValidTraitKeyys) {
       if (!Array.isArray(additionalValidTraitKeyys)) {

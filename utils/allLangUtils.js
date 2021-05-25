@@ -323,7 +323,7 @@ exports.convertmetaTraitValyyes = (
 
       if (objType === "lObj") {
         Object.keys(metaTraitValyyeRef).forEach((metaTraitValyye) => {
-          let regularFeaturesArr = metaTraitValyyeRef[metaTraitValyye];
+          let regularTraitValyyes = metaTraitValyyeRef[metaTraitValyye];
 
           uUtils.findKeysInObjectAndExecuteCallback(
             sourceObject,
@@ -332,7 +332,7 @@ exports.convertmetaTraitValyyes = (
               uUtils.copyValueOfKey(
                 sourceObject,
                 metaTraitValyye,
-                regularFeaturesArr,
+                regularTraitValyyes,
                 true
               );
             }
@@ -382,7 +382,7 @@ exports.decantMGNsBeforeFetchingOutputArray = (
         .includes("gender")
     ) {
       consol.throw(
-        `wpoh lObj has metagender, but gender is not an appropriate feature for this stCh wordtype?`
+        `wpoh lObj has metagender, but gender is not an appropriate traitKeyy for this stCh wordtype?`
       );
     }
   }
@@ -423,7 +423,7 @@ exports.correctMGNsBeforeFetchingOutputArray = (
         .includes("gender")
     ) {
       consol.throw(
-        `wpoh lObj has metagender, but gender is not an appropriate feature for this stCh wordtype?`
+        `wpoh lObj has metagender, but gender is not an appropriate traitKeyy for this stCh wordtype?`
       );
     }
 
