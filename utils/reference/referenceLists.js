@@ -288,7 +288,7 @@ exports.structureChunkTraits = {
       expectedTypeOnStCh: "string",
       possibleValueMustBeExistingChunkId: true,
     },
-    value: { expectedTypeOnStCh: "string" },
+    chunkValyye: { expectedTypeOnStCh: "string" },
   },
   POL: {
     //

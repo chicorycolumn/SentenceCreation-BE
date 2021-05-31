@@ -35,7 +35,7 @@ exports.findMatchingLemmaObjectThenWord = (
     return [
       {
         selectedLemmaObject: {},
-        selectedWord: structureChunk.value,
+        selectedWord: structureChunk.chunkValyye,
         structureChunk,
       },
     ];
@@ -1027,10 +1027,10 @@ exports.findObjectInNestedObject = (
 ) => {
   let res = {};
   recursivelySearch(source, identifyingData);
-  return alsoReturnKey ? res : res.value;
+  return alsoReturnKey ? res : res.chunkValyye;
 
   function recursivelySearch(source, identifyingData) {
-    if (res.value) {
+    if (res.chunkValyye) {
       return;
     }
 
@@ -1041,7 +1041,7 @@ exports.findObjectInNestedObject = (
         (alsoSearchArrays && uUtils.isKeyValueTypeObjectOrArray(value))
       ) {
         if (uUtils.doKeyValuesMatch(value, identifyingData)) {
-          res.value = value;
+          res.chunkValyye = value;
           res.key = key;
         } else {
           recursivelySearch(value, identifyingData);
@@ -1058,21 +1058,21 @@ exports.findObjectInNestedObjectsAndArrays = (
 ) => {
   let res = {};
   recursivelySearch(source, identifyingData);
-  return alsoReturnKey ? res : res.value;
+  return alsoReturnKey ? res : res.chunkValyye;
 
   function recursivelySearch(source, identifyingData) {
-    if (res.value) {
+    if (res.chunkValyye) {
       return;
     }
 
     Object.keys(source).forEach((key) => {
-      let value = source[key];
-      if (typeof value === "object" && value !== null) {
-        if (uUtils.doKeyValuesMatch(value, identifyingData)) {
-          res.value = value;
+      let vaalue = source[key];
+      if (typeof vaalue === "object" && vaalue !== null) {
+        if (uUtils.doKeyValuesMatch(vaalue, identifyingData)) {
+          res.chunkValyye = vaalue;
           res.key = key;
         } else {
-          recursivelySearch(value, identifyingData);
+          recursivelySearch(vaalue, identifyingData);
         }
       }
     });

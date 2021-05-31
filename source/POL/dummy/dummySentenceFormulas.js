@@ -188,7 +188,7 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaSymbol: "I have APPLE",
     sentenceFormulaId: "POL-dummy11a",
     sentenceStructure: [
-      { chunkId: "fix-1", value: "mam" },
+      { chunkId: "fix-1", chunkValyye: "mam" },
       {
         chunkId: "nco-1",
 
@@ -206,7 +206,7 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaSymbol: "I have APPLE/SHIRT",
     sentenceFormulaId: "POL-dummy11b",
     sentenceStructure: [
-      { chunkId: "fix-1", value: "mam" },
+      { chunkId: "fix-1", chunkValyye: "mam" },
       {
         chunkId: "nco-1",
 
@@ -562,7 +562,7 @@ exports.dummySentenceFormulasBank = [
         number: ["singular"],
         gender: [],
       },
-      { chunkId: "fix-1", value: "i" },
+      { chunkId: "fix-1", chunkValyye: "i" },
       {
         chunkId: "ver-2",
 
@@ -591,7 +591,7 @@ exports.dummySentenceFormulasBank = [
         number: ["singular"],
         gender: [],
       },
-      { chunkId: "fix-1", value: "i" },
+      { chunkId: "fix-1", chunkValyye: "i" },
       {
         chunkId: "ver-2",
         agreeWith: "ver-1",
@@ -620,7 +620,7 @@ exports.dummySentenceFormulasBank = [
         number: ["singular", "plural"],
         gender: [],
       },
-      { chunkId: "fix-1", value: "i" },
+      { chunkId: "fix-1", chunkValyye: "i" },
       {
         chunkId: "ver-2",
         agreeWith: "ver-1",
@@ -639,8 +639,8 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "POL-dummy25a",
     translations: { ENG: ["ENG-dummy25a", "ENG-dummy25b"] },
     sentenceStructure: [
-      { chunkId: "fix-1", value: "dzień" },
-      { chunkId: "fix-2", value: "dobry" },
+      { chunkId: "fix-1", chunkValyye: "dzień" },
+      { chunkId: "fix-2", chunkValyye: "dobry" },
     ],
     primaryOrders: [],
   },
@@ -648,7 +648,7 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaSymbol: "dummy25b hello",
     sentenceFormulaId: "POL-dummy25b",
     translations: { ENG: ["ENG-dummy25a", "ENG-dummy25b"] },
-    sentenceStructure: [{ chunkId: "fix-1", value: "halo" }],
+    sentenceStructure: [{ chunkId: "fix-1", chunkValyye: "halo" }],
     primaryOrders: [],
   },
   {
@@ -1013,7 +1013,7 @@ exports.dummySentenceFormulasBank = [
         tenseDescription: ["present im"],
         agreeWith: "nco-1-sheep",
       },
-      { chunkId: "fix-1-here", value: "tutaj" },
+      { chunkId: "fix-1-here", chunkValyye: "tutaj" },
     ],
     primaryOrders: [["nco-1-sheep", "ver-1-is", "fix-1-here"]],
   },

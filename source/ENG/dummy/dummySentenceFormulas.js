@@ -4,8 +4,8 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy25a",
     translations: { POL: ["POL-dummy25a", "POL-dummy25b"] },
     sentenceStructure: [
-      { chunkId: "fix-1", value: "good" },
-      { chunkId: "fix-2", value: "day" },
+      { chunkId: "fix-1", chunkValyye: "good" },
+      { chunkId: "fix-2", chunkValyye: "day" },
     ],
     primaryOrders: [],
   },
@@ -13,7 +13,7 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaSymbol: "dummy25b hello",
     sentenceFormulaId: "ENG-dummy25b",
     translations: { POL: ["POL-dummy25a", "POL-dummy25b"] },
-    sentenceStructure: [{ chunkId: "fix-1", value: "hello" }],
+    sentenceStructure: [{ chunkId: "fix-1", chunkValyye: "hello" }],
     primaryOrders: [],
   },
   {
@@ -21,7 +21,7 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy26",
     translations: { POL: ["POL-dummy26"] },
     sentenceStructure: [
-      { chunkId: "fix-1", value: "I" },
+      { chunkId: "fix-1", chunkValyye: "I" },
       {
         chunkId: "ver-1",
         andTags: ["basic2"],
@@ -41,7 +41,7 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy27",
     translations: { POL: ["POL-dummy27"] },
     sentenceStructure: [
-      { chunkId: "fix-1", value: "I" },
+      { chunkId: "fix-1", chunkValyye: "I" },
       {
         chunkId: "ver-1",
         andTags: ["basic3"],
@@ -62,7 +62,7 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy28",
     translations: { POL: ["POL-dummy28"] },
     sentenceStructure: [
-      { chunkId: "fix-1", value: "I" },
+      { chunkId: "fix-1", chunkValyye: "I" },
       {
         chunkId: "ver-1",
         andTags: ["basic3"],
@@ -78,7 +78,7 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy29",
     translations: { POL: ["POL-dummy29"] },
     sentenceStructure: [
-      { chunkId: "fix-1", value: "I" },
+      { chunkId: "fix-1", chunkValyye: "I" },
       {
         chunkId: "ver-1",
         andTags: ["basic3"],
@@ -98,7 +98,7 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy30",
     translations: { POL: ["POL-dummy30"] },
     sentenceStructure: [
-      { chunkId: "fix-1", value: "I" },
+      { chunkId: "fix-1", chunkValyye: "I" },
       {
         chunkId: "ver-1",
         andTags: ["basic3"],
@@ -114,7 +114,7 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy31",
     translations: { POL: ["POL-dummy31"] },
     sentenceStructure: [
-      { chunkId: "fix-1", value: "I" },
+      { chunkId: "fix-1", chunkValyye: "I" },
       {
         chunkId: "ver-1",
         andTags: ["basic3"],
@@ -160,7 +160,7 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy33b",
     translations: { POL: ["POL-dummy33b"] },
     sentenceStructure: [
-      { chunkId: "fix-1", value: "I" },
+      { chunkId: "fix-1", chunkValyye: "I" },
       {
         chunkId: "ver-1",
         specificLemmas: ["be"],
@@ -196,7 +196,7 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy33d",
     translations: { POL: ["POL-dummy33d"] },
     sentenceStructure: [
-      { chunkId: "fix-1", value: "she" },
+      { chunkId: "fix-1", chunkValyye: "she" },
       {
         chunkId: "ver-1",
         specificLemmas: ["be"],
@@ -212,7 +212,7 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy33e",
     translations: { POL: ["POL-dummy33e"] },
     sentenceStructure: [
-      { chunkId: "fix-1", value: "we" },
+      { chunkId: "fix-1", chunkValyye: "we" },
       {
         chunkId: "ver-1",
         specificLemmas: ["be"],
@@ -228,7 +228,7 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy33f",
     translations: { POL: ["POL-dummy33f"] },
     sentenceStructure: [
-      { chunkId: "fix-1", value: "they" },
+      { chunkId: "fix-1", chunkValyye: "they" },
       {
         chunkId: "ver-1",
         specificLemmas: ["be"],
@@ -244,7 +244,7 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy34a",
     translations: { POL: ["POL-dummy34a"] },
     sentenceStructure: [
-      { chunkId: "fix-1", value: "I" },
+      { chunkId: "fix-1", chunkValyye: "I" },
       {
         chunkId: "ver-1",
         specificLemmas: ["be"],
@@ -260,7 +260,7 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy34c",
     translations: { POL: ["POL-dummy34c"] },
     sentenceStructure: [
-      { chunkId: "fix-1", value: "I" },
+      { chunkId: "fix-1", chunkValyye: "I" },
       {
         chunkId: "ver-1",
         specificLemmas: ["be"],
@@ -328,7 +328,7 @@ exports.dummySentenceFormulasBank = [
         tenseDescription: ["present simple"],
         agreeWith: "nco-1-sheep",
       },
-      { chunkId: "fix-1-here", value: "here" },
+      { chunkId: "fix-1-here", chunkValyye: "here" },
     ],
     primaryOrders: [["art-1-the", "nco-1-sheep", "ver-1-is", "fix-1-here"]],
   },
@@ -352,7 +352,7 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy38",
     translations: { POL: ["POL-dummy38"] },
     sentenceStructure: [
-      { chunkId: "fix-1", value: "I" },
+      { chunkId: "fix-1", chunkValyye: "I" },
       {
         chunkId: "ver-1",
         andTags: ["basic2"],
@@ -448,7 +448,7 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy43",
     translations: { POL: ["POL-dummy43"] },
     sentenceStructure: [
-      { chunkId: "fix-1", value: "a" },
+      { chunkId: "fix-1", chunkValyye: "a" },
       {
         chunkId: "adj-1",
         agreeWith: "nco-1",
@@ -563,7 +563,7 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy47",
     translations: { POL: ["POL-dummy47"] },
     sentenceStructure: [
-      { chunkId: "fix-1", value: "the" },
+      { chunkId: "fix-1", chunkValyye: "the" },
       {
         chunkId: "npe-1",
 
@@ -817,7 +817,7 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy51a",
     translations: { POL: ["POL-dummy51a"] },
     sentenceStructure: [
-      { chunkId: "fix-1", value: "the" },
+      { chunkId: "fix-1", chunkValyye: "the" },
       {
         chunkId: "npe-1",
 
@@ -840,7 +840,7 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy52",
     translations: { POL: ["POL-dummy52"] },
     sentenceStructure: [
-      { chunkId: "fix-1", value: "the" },
+      { chunkId: "fix-1", chunkValyye: "the" },
       {
         chunkId: "npe-1",
 
@@ -894,7 +894,7 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy53b",
     translations: { POL: ["POL-dummy53b"] },
     sentenceStructure: [
-      { chunkId: "fix-1", value: "I" },
+      { chunkId: "fix-1", chunkValyye: "I" },
       {
         chunkId: "ver-1",
 
@@ -955,7 +955,7 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy53d",
     translations: { POL: ["POL-dummy53d"] },
     sentenceStructure: [
-      { chunkId: "fix-1", value: "she" },
+      { chunkId: "fix-1", chunkValyye: "she" },
       {
         chunkId: "ver-1",
 
@@ -972,7 +972,7 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy53e",
     translations: { POL: ["POL-dummy53e"] },
     sentenceStructure: [
-      { chunkId: "fix-1", value: "we" },
+      { chunkId: "fix-1", chunkValyye: "we" },
       {
         chunkId: "ver-1",
 
@@ -989,7 +989,7 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy53f",
     translations: { POL: ["POL-dummy53f"] },
     sentenceStructure: [
-      { chunkId: "fix-1", value: "they" },
+      { chunkId: "fix-1", chunkValyye: "they" },
       {
         chunkId: "ver-1",
 
@@ -1006,7 +1006,7 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy54a",
     translations: { POL: ["POL-dummy54a"] },
     sentenceStructure: [
-      { chunkId: "fix-1", value: "I" },
+      { chunkId: "fix-1", chunkValyye: "I" },
       {
         chunkId: "ver-1",
 
@@ -1023,7 +1023,7 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy54c",
     translations: { POL: ["POL-dummy54c"] },
     sentenceStructure: [
-      { chunkId: "fix-1", value: "I" },
+      { chunkId: "fix-1", chunkValyye: "I" },
       {
         chunkId: "ver-1",
 

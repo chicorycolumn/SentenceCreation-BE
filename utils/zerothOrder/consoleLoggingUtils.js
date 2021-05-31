@@ -22,9 +22,9 @@ exports.consoleLogObjectAtOneLevel = (obj, label, originLabel) => {
   consol.log("[1;32m " + `------` + "[0m");
   consol.log("[1;32m " + `----------` + "[0m");
   Object.keys(obj).forEach((key) => {
-    let value = obj[key];
+    let vaalue = obj[key];
     consol.log("[1;30m " + `${key}` + "[0m");
-    consol.log(value);
+    consol.log(vaalue);
   });
   consol.log("[1;32m " + `----------` + "[0m");
   consol.log("[1;32m " + `------` + "[0m");
@@ -47,16 +47,16 @@ exports.consoleLogObjectAtTwoLevels = (obj, label, originLabel) => {
   consol.log("[1;32m " + `------` + "[0m");
   consol.log("[1;32m " + `----------` + "[0m");
   Object.keys(obj).forEach((key) => {
-    let value = obj[key];
-    if (value) {
-      Object.keys(value).forEach((key2) => {
-        let value2 = value[key2];
+    let vaalue = obj[key];
+    if (vaalue) {
+      Object.keys(vaalue).forEach((key2) => {
+        let vaalue2 = vaalue[key2];
         consol.log("[1;30m " + `${key}:${key2}` + "[0m");
-        consol.log("subvalue:", value2);
+        consol.log("subvaalue:", vaalue2);
       });
     } else {
       consol.log("[1;30m " + `${key}` + "[0m");
-      consol.log("value:", value);
+      consol.log("vaalue:", vaalue);
     }
   });
   consol.log("[1;32m " + `----------` + "[0m");
