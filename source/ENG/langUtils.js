@@ -170,8 +170,10 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
 
     if (gpUtils.getWorrdtypeStCh(structureChunk) === "noun") {
       if (structureChunk.gcase && structureChunk.gcase.length) {
-        structureChunk.gcase = structureChunk.gcase.map((gcaseValue) => {
-          return ["nom", "gen"].includes(gcaseValue) ? gcaseValue : "nom";
+        structureChunk.gcase = structureChunk.gcase.map((gcaseTraitValyye) => {
+          return ["nom", "gen"].includes(gcaseTraitValyye)
+            ? gcaseTraitValyye
+            : "nom";
         });
       }
     }
@@ -298,7 +300,7 @@ exports.addLanguageParticularClarifiers = (
     //
     if (structureChunk.tenseDescription) {
       if (structureChunk.tenseDescription.length > 1) {
-        throw "ENG:addLanguageParticularClarifiers expected this verb structureChunk's tenseDescription key to have only one value each, not more.";
+        throw "ENG:addLanguageParticularClarifiers expected this verb structureChunk's tenseDescription key to have only one traitValyye each, not more.";
       }
 
       if (lemmaObject.inflections.infinitive === lemmaObject.inflections.v2) {
@@ -365,9 +367,9 @@ exports.addSpecialVerbForms = (lemmaObject, currentLanguage) => {
     anteriorAdverbial: "having" + " " + v3,
   };
 
-  Object.keys(participlesRef).forEach((key) => {
-    let value = participlesRef[key];
-    lemmaObject.inflections[key] = value;
+  Object.keys(participlesRef).forEach((inflectionKeyy) => {
+    let inflectionValyye = participlesRef[inflectionKeyy];
+    lemmaObject.inflections[inflectionKeyy] = inflectionValyye;
   });
 };
 
@@ -476,7 +478,7 @@ exports.generateAdhocForms = (
         "negative imperative": ["don't" + " " + infinitive],
       };
 
-      const subsequentKeysRef = {
+      const subsequentTenseDescRef = {
         "cond0 condition": ["present simple"],
         "cond0 condition 3PS": ["present simple 3PS"],
         "cond0 outcome": ["present simple"],
@@ -492,17 +494,23 @@ exports.generateAdhocForms = (
         "cond3 outcome": ["conditional perfect"],
       };
 
-      Object.keys(subsequentKeysRef).forEach((key) => {
-        let resultKeysArray = subsequentKeysRef[key];
+      Object.keys(subsequentTenseDescRef).forEach((tenseDescInflectionKeyy) => {
+        let convertedTenseDescInflectionKeyys =
+          subsequentTenseDescRef[tenseDescInflectionKeyy];
 
-        let valuesArr = [];
-        resultKeysArray.forEach((resultKey) => {
-          engTenseDescriptionRef[resultKey].forEach((result) => {
-            valuesArr.push(result);
-          });
-        });
+        let tenseDescInflectionValyyes = [];
+        convertedTenseDescInflectionKeyys.forEach(
+          (convertedTenseDescInflectionKeyy) => {
+            engTenseDescriptionRef[convertedTenseDescInflectionKeyy].forEach(
+              (tenseDescInflectionValyye) => {
+                tenseDescInflectionValyyes.push(tenseDescInflectionValyye);
+              }
+            );
+          }
+        );
 
-        engTenseDescriptionRef[key] = valuesArr;
+        engTenseDescriptionRef[tenseDescInflectionKeyy] =
+          tenseDescInflectionValyyes;
       });
 
       addToResArr(

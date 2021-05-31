@@ -32,8 +32,6 @@ exports.filterWithin_PHD = (
 
   refObj.postHocDependentChunkWordtypes[currentLanguage].forEach(
     (PHD_dataObj) => {
-      console.log("PHD_dataObj", PHD_dataObj);
-
       if (
         Object.keys(PHD_dataObj.conditions).every((PHD_conditionTraitKeyy) => {
           let PHD_conditionTraitValyyeArr =
