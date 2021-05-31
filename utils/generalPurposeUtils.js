@@ -113,16 +113,16 @@ exports.updateSentenceStructureWithNewStructureChunksFromOutputUnits = (
   });
 };
 
-exports.keyShouldBeSpecified = (chunk, key, allowOverwrite) => {
+exports.traitKeyShouldBeSpecified = (chunk, traitKeyy, allowOverwrite) => {
   return (
     !chunk ||
     (!(
       chunk.formulaImportantTraitKeyys &&
-      chunk.formulaImportantTraitKeyys.includes(key)
+      chunk.formulaImportantTraitKeyys.includes(traitKeyy)
     ) &&
       (allowOverwrite ||
-        !this.isKeyFilledOutOnChunk(chunk, key) ||
-        this.traitValyyeIsMeta(null, chunk, key)))
+        !this.isTraitKeyyFilledOutOnChunk(chunk, traitKeyy) ||
+        this.traitValyyeIsMeta(null, chunk, traitKeyy)))
   );
 };
 
@@ -339,12 +339,12 @@ exports.getWorrdtypeStCh = (stCh, returnFullWordtype) => {
 
 exports.getWorrdtypeAgree = (
   structureChunk,
-  agreeWithKey = "agreeWith",
+  agreeKeey = "agreeWith",
   returnFullWordtype
 ) => {
   const wordtypeRef = refObj.wordtypeShorthandTranslation;
 
-  let wordtypeShorthand = structureChunk[agreeWithKey].split("-")[0];
+  let wordtypeShorthand = structureChunk[agreeKeey].split("-")[0];
 
   if (!Object.keys(wordtypeRef).includes(wordtypeShorthand)) {
     consol.throw(
@@ -357,7 +357,7 @@ exports.getWorrdtypeAgree = (
   return returnFullWordtype ? fullWordtype : baseWordtype;
 };
 
-exports.isKeyFilledOutOnChunk = (chunk, traitKeyy) => {
+exports.isTraitKeyyFilledOutOnChunk = (chunk, traitKeyy) => {
   if (!chunk) {
     return false;
   }
@@ -375,14 +375,14 @@ exports.isKeyFilledOutOnChunk = (chunk, traitKeyy) => {
   }
 };
 
-exports.doesKeyContainVaalueOnChunk = (
+exports.doesStChTraitKeyyContainParticularTraitVaalyyes = (
   chunk,
   traitKeyy,
   traitValyyeArr,
   includeAll //includeAll true/false passes if EVERY/ANY item in traitValyyeArr is present.
 ) => {
   return (
-    this.isKeyFilledOutOnChunk(chunk, traitKeyy) &&
+    this.isTraitKeyyFilledOutOnChunk(chunk, traitKeyy) &&
     ((!includeAll &&
       traitValyyeArr.some((traitValyye) =>
         chunk[traitKeyy].includes(traitValyye)
@@ -410,13 +410,13 @@ exports.terminusObjectNormalArray = (normalArr) => {
 exports.getWordsFromTerminusObject = (tObj, shouldGetAll) => {
   let allWords = [];
 
-  let wordsKeys = shouldGetAll
+  let pushKeys = shouldGetAll
     ? ["normal", "additionalFrequent", "additionalInfrequent"]
     : ["normal", "additionalFrequent"];
 
-  wordsKeys.forEach((wordsKey) => {
-    if (tObj[wordsKey]) {
-      allWords = [...allWords, ...tObj[wordsKey]];
+  pushKeys.forEach((pushKey) => {
+    if (tObj[pushKey]) {
+      allWords = [...allWords, ...tObj[pushKey]];
     }
   });
 
@@ -431,13 +431,13 @@ exports.lObjIsMGN = (lObj) => {
   return this.traitValyyeIsMeta(lObj.gender);
 };
 
-exports.traitValyyeIsMeta = (traitValyye, chunk, key) => {
-  if (!traitValyye && !chunk && !key) {
+exports.traitValyyeIsMeta = (traitValyye, chunk, traitKeyy) => {
+  if (!traitValyye && !chunk && !traitKeyy) {
     consol.throw("ertt No arguments to use.");
   }
 
   if (!traitValyye) {
-    traitValyye = chunk[key];
+    traitValyye = chunk[traitKeyy];
   }
 
   if (Array.isArray(traitValyye) && traitValyye.length === 1) {

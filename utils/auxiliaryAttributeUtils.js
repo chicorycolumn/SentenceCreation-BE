@@ -598,11 +598,11 @@ exports.removeAnnotationsIfHeadChunkHasBeenCounterfaxed = (
   function innerRemoveAnnotationsIfHeadChunkHasBeenCounterfaxed(
     questionOutputUnitsThatHaveBeenCounterfactualed,
     questionOutputUnit,
-    agreeKey
+    agreeKeey
   ) {
     if (
       questionOutputUnitsThatHaveBeenCounterfactualed[
-        questionOutputUnit.structureChunk[agreeKey]
+        questionOutputUnit.structureChunk[agreeKeey]
       ]
     ) {
       consol.log(questionOutputUnit.structureChunk.annotations);
@@ -611,17 +611,17 @@ exports.removeAnnotationsIfHeadChunkHasBeenCounterfaxed = (
           `mioc removeAnnotationsByCounterfax. Aha! We are examining "${
             questionOutputUnit.structureChunk.chunkId
           }" which has the annotations shown above. But this chunk agrees with "${
-            questionOutputUnit.structureChunk[agreeKey]
+            questionOutputUnit.structureChunk[agreeKeey]
           }" which has already been processed by counterfax, re these annotations: [${
             questionOutputUnitsThatHaveBeenCounterfactualed[
-              questionOutputUnit.structureChunk[agreeKey]
+              questionOutputUnit.structureChunk[agreeKeey]
             ]
           }].` +
           "[0m"
       );
 
       questionOutputUnitsThatHaveBeenCounterfactualed[
-        questionOutputUnit.structureChunk[agreeKey]
+        questionOutputUnit.structureChunk[agreeKeey]
       ].forEach((annoTraitKeyy) => {
         consol.log(
           "[1;33m " +
@@ -682,11 +682,11 @@ exports.removeAnnotationsByAOCs = (
       "postHocAgreeWithTertiary",
     ]);
 
-    function getDepUnits(questionOutputArr, headChunkId, agreeKeys) {
+    function getDepUnits(questionOutputArr, headChunkId, agreeKeeys) {
       return questionOutputArr
         .filter((unit) =>
-          agreeKeys.some(
-            (agreeKey) => unit.structureChunk[agreeKey] === headChunkId
+          agreeKeeys.some(
+            (agreeKeey) => unit.structureChunk[agreeKeey] === headChunkId
           )
         )
         .filter(

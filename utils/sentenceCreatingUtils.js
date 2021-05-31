@@ -320,7 +320,7 @@ exports.processSentenceFormula = (
       "postHocAgreeWithPrimary",
       "postHocAgreeWithSecondary",
       "postHocAgreeWithTertiary",
-    ].some((postHocAgreeWithKey) => chunk[postHocAgreeWithKey])
+    ].some((postHocAgreeKeey) => chunk[postHocAgreeKeey])
   );
 
   //STEP THREE: Select PHD words and add to result array.
@@ -853,18 +853,18 @@ exports.selectWordVersions = (
 
         let depUnits = [];
 
-        let agreeKeys = [
+        let agreeKeeys = [
           "agreeWith",
           "agreeWithSecondary",
           "agreeWithTertiary",
           "connectedTo",
         ];
 
-        agreeKeys.forEach((agreeKey) => {
+        agreeKeeys.forEach((agreeKeey) => {
           orderedOutputArr.forEach((unit) => {
             //Skeleton Clause
             if (
-              unit.structureChunk[agreeKey] ===
+              unit.structureChunk[agreeKeey] ===
               skeletonOutputUnit.structureChunk.chunkId
             )
               depUnits.push(unit);
@@ -1412,9 +1412,9 @@ exports.sortStructureChunks = (
         "postHocAgreeWithPrimary",
         "postHocAgreeWithSecondary",
         "postHocAgreeWithTertiary",
-      ].forEach((agreeKey) => {
-        if (chunk[agreeKey]) {
-          PHDheadIds.push(chunk[agreeKey]);
+      ].forEach((agreeKeey) => {
+        if (chunk[agreeKeey]) {
+          PHDheadIds.push(chunk[agreeKeey]);
         }
       });
     }
@@ -1440,7 +1440,7 @@ exports.sortStructureChunks = (
         "postHocAgreeWithPrimary",
         "postHocAgreeWithSecondary",
         "postHocAgreeWithTertiary",
-      ].some((agreeKey) => structureChunk[agreeKey])
+      ].some((agreeKeey) => structureChunk[agreeKeey])
   );
 
   let otherChunks = sentenceStructure.filter(

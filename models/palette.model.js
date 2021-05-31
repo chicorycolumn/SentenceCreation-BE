@@ -232,8 +232,8 @@ exports.fetchPalette = (req) => {
     questionSentenceData.questionOutputArr.forEach((outputUnit) => {
       if (
         ["agreeWith"].some(
-          //possible screwpoint: Should use other agreeKeys too?
-          (agreeKey) => outputUnit.structureChunk[agreeKey]
+          //possible screwpoint: Should use other agreeKeeys too?
+          (agreeKeey) => outputUnit.structureChunk[agreeKeey]
         )
       ) {
         let depCh = outputUnit.structureChunk;

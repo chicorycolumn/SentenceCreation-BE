@@ -117,7 +117,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
         }
       }
 
-      //4. Check if the traitValyye of agreeKeys is an existing chunkId.
+      //4. Check if the traitValyye of agreeKeeys is an existing chunkId.
       if (stChTraits[traitKeyy].mustBeExistingChunkId) {
         if (!allChunkIds.includes(traitValyye)) {
           consol.log(

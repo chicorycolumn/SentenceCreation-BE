@@ -112,22 +112,22 @@ exports.filterWithin_PHD = (
 
   consol.log("giuy filterWithin_PHD. source", source);
 
-  Object.keys(postHocInflectionChains).forEach((postHocAgreeWithKey) => {
+  Object.keys(postHocInflectionChains).forEach((postHocAgreeKeey) => {
     consol.log(
       "[1;35m " +
-        `nvnm lf:filterWithin_PHD Running loop for "${postHocAgreeWithKey}"` +
+        `nvnm lf:filterWithin_PHD Running loop for "${postHocAgreeKeey}"` +
         "[0m"
     );
     consol.log(
       "[1;33m " + `outputArray: [${outputArray.map((x) => x.selectedWord)}]` + "[0m"
     );
 
-    let postHocInflectionChain = postHocInflectionChains[postHocAgreeWithKey];
+    let postHocInflectionChain = postHocInflectionChains[postHocAgreeKeey];
 
     let headOutputUnit = outputArray.find(
       (outputUnit) =>
         outputUnit.structureChunk.chunkId ===
-        PHDstructureChunk[postHocAgreeWithKey]
+        PHDstructureChunk[postHocAgreeKeey]
     );
 
     let drillPathOfHead = uUtils.copyWithoutReference(headOutputUnit.drillPath);
@@ -153,8 +153,7 @@ exports.filterWithin_PHD = (
     }
 
     if (
-      gpUtils.getWorrdtypeAgree(PHDstructureChunk, postHocAgreeWithKey) ===
-      "noun"
+      gpUtils.getWorrdtypeAgree(PHDstructureChunk, postHocAgreeKeey) === "noun"
     ) {
       let personArr = drillPathOfHead.find((arr) => arr[0] === "person");
 
@@ -221,45 +220,45 @@ exports.filterWithin_PHD = (
       source = source[inflectionKeyy];
 
       consol.log(
-        `\nihjy lf:filterWithin_PHD "${postHocAgreeWithKey}" drilling into source with "${inflectionKeyy}" so source is now`,
+        `\nihjy lf:filterWithin_PHD "${postHocAgreeKeey}" drilling into source with "${inflectionKeyy}" so source is now`,
         // source,
         "\n"
       );
 
       //Update drillPath, for both ...Pri and ...Sec
 
-      consol.log("viko", { postHocAgreeWithKey }, drillPathOfHead);
+      consol.log("viko", { postHocAgreeKeey }, drillPathOfHead);
 
-      if (/.*Primary/.test(postHocAgreeWithKey)) {
+      if (/.*Primary/.test(postHocAgreeKeey)) {
         lfUtils.updateStChByInflections(
           { structureChunk: PHDstructureChunk, drillPath: drillPathOfHead },
           currentLanguage
         );
-      } else if (/.*Secondary/.test(postHocAgreeWithKey)) {
+      } else if (/.*Secondary/.test(postHocAgreeKeey)) {
         drillPathSecondary.push([inflectionCategoryy, inflectionKeyy]);
-      } else if (/.*Tertiary/.test(postHocAgreeWithKey)) {
+      } else if (/.*Tertiary/.test(postHocAgreeKeey)) {
         drillPathTertiary.push([inflectionCategoryy, inflectionKeyy]);
       } else {
         consol.throw(
-          `mezp filterWithin_PHD. Malformed postHocAgreeWithKey: "${postHocAgreeWithKey}".`
+          `mezp filterWithin_PHD. Malformed postHocAgreeKeey: "${postHocAgreeKeey}".`
         );
       }
 
       //Update stCh with these inflectionCategoryys and inflectionKeyys, but just for postHocAgreeWithPrimary.
-      // if (/.*Primary/.test(postHocAgreeWithKey)) {
+      // if (/.*Primary/.test(postHocAgreeKeey)) {
       //   lfUtils.updateStChByInflections(
       //     { structureChunk: PHDstructureChunk, drillPath: drillPathOfHead },
       //     currentLanguage
       //   );
 
       //   drillPath.push([inflectionCategoryy, inflectionKeyy]);
-      // } else if (/.*Secondary/.test(postHocAgreeWithKey)) {
+      // } else if (/.*Secondary/.test(postHocAgreeKeey)) {
       //   drillPathSecondary.push([inflectionCategoryy, inflectionKeyy]);
-      // } else if (/.*Tertiary/.test(postHocAgreeWithKey)) {
+      // } else if (/.*Tertiary/.test(postHocAgreeKeey)) {
       //   drillPathTertiary.push([inflectionCategoryy, inflectionKeyy]);
       // } else {
       //   consol.throw(
-      //     `mezp filterWithin_PHD. Malformed postHocAgreeWithKey: "${postHocAgreeWithKey}".`
+      //     `mezp filterWithin_PHD. Malformed postHocAgreeKeey: "${postHocAgreeKeey}".`
       //   );
       // }
     });
@@ -679,7 +678,9 @@ exports.filterOutLackingLemmaObjects = (sourceArr, stCh, currentLanguage) => {
     refObj.lemmaObjectTraitKeyys[currentLanguage].inflectionChains[
       gpUtils.getWorrdtypeStCh(stCh)
     ];
-  let requirementArrs = inflectionChain.map((key) => stCh[key] || []);
+  let requirementArrs = inflectionChain.map(
+    (traitKeyy) => stCh[traitKeyy] || []
+  );
 
   return sourceArr.filter((lObj) => {
     if (!lObj.lacking) {
