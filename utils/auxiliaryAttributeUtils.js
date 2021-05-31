@@ -815,9 +815,9 @@ exports.specialAdjustmentToAnnotations = (
 
         let virilityPaddedLObjGenderArr = [
           headLObj.gender,
-          ...refObj.pluralVirilityAndSingularConversionRef[
-            languagesObj.questionLanguage
-          ]["plural"][headLObj.gender],
+          ...refObj.virilityConversionRef[languagesObj.questionLanguage][
+            "plural"
+          ][headLObj.gender],
         ];
 
         if (

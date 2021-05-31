@@ -338,24 +338,26 @@ exports.adjustTenseDescriptions = (structureChunk) => {
   return resultArr;
 };
 
-exports.formatTraitValue = (traitKey, traitValue, note) => {
-  const pluralVirilityAndSingularConversionRef =
-    refObj.pluralVirilityAndSingularConversionRef["POL"];
+exports.formatGenderTraitValueAsPerson = (genderTraitValue) => {
+  return genderTraitValue === "m" ? "m1" : genderTraitValue;
+  // return {
+  //   m: ["m1"],
+  //   f: ["f"],
+  //   n: ["n"],
+  //   nonvirile: ["nonvirile"],
+  //   virile: ["virile"],
+  // }[traitValue];
+};
 
-  const shortHandGenderRef = {
-    m: ["m1"],
-    f: ["f"],
-    n: ["n"],
-    nonvirile: ["nonvirile"],
-    virile: ["virile"],
-  };
+exports.formatTraitValue = (traitKey, traitValue, note) => {
+  const virilityConversionRef = refObj.virilityConversionRef["POL"];
 
   if (traitKey === "gender") {
     if (note === "plural") {
-      return pluralVirilityAndSingularConversionRef[note][traitValue];
+      return virilityConversionRef[note][traitValue];
     } else {
       if (note === "person") {
-        return shortHandGenderRef[traitValue];
+        return formatGenderTraitValueAsPerson(traitValue);
       }
     }
   }

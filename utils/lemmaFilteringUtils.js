@@ -812,9 +812,9 @@ exports.filterByTraitKey = (
       if (traitKey === "gender") {
         structureChunk.number.forEach((numberKey) => {
           let extraVirilityConvertedValues =
-            refObj.pluralVirilityAndSingularConversionRef[currentLanguage][
-              numberKey
-            ][lObj[traitKey]];
+            refObj.virilityConversionRef[currentLanguage][numberKey][
+              lObj[traitKey]
+            ];
 
           consol.log({
             currentLanguage,

@@ -20,19 +20,18 @@ exports.translateAnnoTraitValue = (
         consol.throw("cshb #ERR ALL:translateAnnoTraitValue.");
       }
 
-      const pluralVirilityAndSingularConversionRef =
-        refObj.pluralVirilityAndSingularConversionRef[questionLanguage];
+      const virilityConversionRef =
+        refObj.virilityConversionRef[questionLanguage];
 
       if (structureChunk.number[0] === "plural") {
-        if (!pluralVirilityAndSingularConversionRef["plural"][annoTraitValue]) {
+        if (!virilityConversionRef["plural"][annoTraitValue]) {
           consol.throw(
             "mkow #ERR ALL:translateAnnoTraitValue. Could not convert virility of annoTraitValue: " +
               annoTraitValue
           );
         }
 
-        annoTraitValue =
-          pluralVirilityAndSingularConversionRef["plural"][annoTraitValue];
+        annoTraitValue = virilityConversionRef["plural"][annoTraitValue];
       }
     }
 
@@ -101,8 +100,7 @@ exports.adjustVirilityOfStructureChunk = (
     gender = refObj.metaTraitValues[currentLanguage]["gender"][gender];
   }
 
-  let pluralVirilityAndSingularConversionRef =
-    refObj.pluralVirilityAndSingularConversionRef[currentLanguage];
+  let virilityConversionRef = refObj.virilityConversionRef[currentLanguage];
 
   let newGenderTraitKeys = [];
 
@@ -120,7 +118,7 @@ exports.adjustVirilityOfStructureChunk = (
 
       newGenderTraitKeys = [
         ...newGenderTraitKeys,
-        ...pluralVirilityAndSingularConversionRef["plural"][genderTraitKey],
+        ...virilityConversionRef["plural"][genderTraitKey],
       ];
       // if (shouldRetainOriginals) {
       //   newGenderTraitKeys.push(genderTraitKey);

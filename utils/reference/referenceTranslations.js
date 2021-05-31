@@ -28,7 +28,7 @@ exports.tenseDescriptionTranslation = {
   },
 };
 
-exports.pluralVirilityAndSingularConversionRef = {
+exports.virilityConversionRef = {
   ENG: {
     singular: {
       m: ["m"],
