@@ -533,7 +533,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             ...counterfactualTraitValyyes,
           ];
 
-          answerSelectedWordsSetsHaveChanged.value = true;
+          answerSelectedWordsSetsHaveChanged.bool = true;
 
           answerSentenceData.answerOutputArrays = [
             ...answerSentenceData.answerOutputArrays,

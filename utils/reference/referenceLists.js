@@ -239,26 +239,29 @@ exports.structureChunkTraits = {
     },
     educatorBlocksAnnotationsForTheseTraitKeyys: {
       expectedTypeOnStCh: "array",
-      ultimatelyMultipleValuesOkay: true,
+      ultimatelyMultipleTraitValyyesOkay: true,
       needsNoValidation: true,
     },
     formulaImportantTraitKeyys: {
       expectedTypeOnStCh: "array",
-      ultimatelyMultipleValuesOkay: true,
+      ultimatelyMultipleTraitValyyesOkay: true,
       needsNoValidation: true,
     },
     counterfactuallyImportantTraitKeyys: {
       expectedTypeOnStCh: "array",
-      ultimatelyMultipleValuesOkay: true,
+      ultimatelyMultipleTraitValyyesOkay: true,
     },
     dontSpecifyOnThisChunk: { expectedTypeOnStCh: "boolean" },
     specificLemmas: { expectedTypeOnStCh: "array" },
     specificIds: { expectedTypeOnStCh: "array" },
     andTags: {
       expectedTypeOnStCh: "array",
-      ultimatelyMultipleValuesOkay: true,
+      ultimatelyMultipleTraitValyyesOkay: true,
     },
-    orTags: { expectedTypeOnStCh: "array", ultimatelyMultipleValuesOkay: true },
+    orTags: {
+      expectedTypeOnStCh: "array",
+      ultimatelyMultipleTraitValyyesOkay: true,
+    },
     form: { expectedTypeOnStCh: "array" },
     chunkId: { expectedTypeOnStCh: "string" },
     preferredChoicesForQuestionSentence: {

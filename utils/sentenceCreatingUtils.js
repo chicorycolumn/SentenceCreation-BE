@@ -579,7 +579,7 @@ exports.processSentenceFormula = (
 
         if (
           reference.expectedTypeOnStCh === "array" &&
-          !reference.ultimatelyMultipleValuesOkay &&
+          !reference.ultimatelyMultipleTraitValyyesOkay &&
           traitValyye.length > 1
         ) {
           consol.log(`pqoi Decanting "${otherChunk.chunkId}" "${traitKeyy}".`);
