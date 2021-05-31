@@ -111,14 +111,14 @@ exports.whittleAnnotationsAndConvertToPlainspeak = (
 
   let annoObj = {};
 
-  Object.keys(questionStructureChunk.annotations).forEach((annoKey) => {
-    let formattedAnnoValue = allLangUtils.translateAnnotationValue(
-      annoKey,
+  Object.keys(questionStructureChunk.annotations).forEach((annoTraitKeyy) => {
+    let formattedAnnoTraitValyye = allLangUtils.translateAnnoTraitValyye(
+      annoTraitKeyy,
       questionStructureChunk,
       languagesObj
     );
 
-    annoObj[annoKey] = formattedAnnoValue;
+    annoObj[annoTraitKeyy] = formattedAnnoTraitValyye;
   });
 
   return aaUtils.trimAnnotations(annoObj);
@@ -180,14 +180,19 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   );
 
   Object.keys(questionOutputUnit.structureChunk.annotations).forEach(
-    (annoKey) => {
+    (annoTraitKeyy) => {
       //ACX2A: Don't bother running counterfactuals for wordtype/emoji/text annotations, as they'll always be needed.
       //ACX2B: Don't bother running counterfactuals for tenseDesc annotations, as they'll take so long, because there are so many alternate values, and we can reasonably presume that the tenseDesc anno will be necessary.
-      if (["wordtype", "emoji", "text", "tenseDescription"].includes(annoKey)) {
+      if (
+        ["wordtype", "emoji", "text", "tenseDescription"].includes(
+          annoTraitKeyy
+        )
+      ) {
         return;
       }
 
-      let annoValue = questionOutputUnit.structureChunk.annotations[annoKey];
+      let annoTraitValyye =
+        questionOutputUnit.structureChunk.annotations[annoTraitKeyy];
 
       let arrayOfCounterfactualResultsForThisAnnotation = [];
 
@@ -195,8 +200,8 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
       let counterfactualTraitValyyesForThisTraitKeyy = Array.from(
         new Set(
-          stChTraits[annoKey].possibleTraitValyyes.filter(
-            (value) => value !== annoValue
+          stChTraits[annoTraitKeyy].possibleTraitValyyes.filter(
+            (value) => value !== annoTraitValyye
           )
         )
       );
@@ -210,15 +215,16 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         questionOutputUnit.structureChunk
       );
 
-      counterfaxedStCh[annoKey] = counterfactualTraitValyyesForThisTraitKeyy;
+      counterfaxedStCh[annoTraitKeyy] =
+        counterfactualTraitValyyesForThisTraitKeyy;
 
       counterfactualTraitValyyesForThisTraitKeyy =
         refFxn.removeincompatibleTraits(questionLanguage, counterfaxedStCh)[
-          annoKey
+          annoTraitKeyy
         ];
 
       consol.log(
-        `myxe removeAnnotationsByCounterfax FOREACH START. Examining ${questionOutputUnit.structureChunk.chunkId}'s annotation ${annoKey} = ${annoValue} so the counterfactual values are [${counterfactualTraitValyyesForThisTraitKeyy}].`
+        `myxe removeAnnotationsByCounterfax FOREACH START. Examining ${questionOutputUnit.structureChunk.chunkId}'s annotation ${annoTraitKeyy} = ${annoTraitValyye} so the counterfactual values are [${counterfactualTraitValyyesForThisTraitKeyy}].`
       );
 
       counterfactualTraitValyyesForThisTraitKeyy.forEach(
@@ -227,7 +233,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             `myxe removeAnnotationsByCounterfax FOREACH-2 START. Will do a run with counterfactual value "${counterfactualTraitValyyeForThisTraitKeyy}".`
           );
 
-          counterfaxedStCh[annoKey] = [
+          counterfaxedStCh[annoTraitKeyy] = [
             counterfactualTraitValyyeForThisTraitKeyy,
           ];
 
@@ -259,7 +265,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           );
 
           let counterfactualTrait = {};
-          counterfactualTrait[annoKey] =
+          counterfactualTrait[annoTraitKeyy] =
             counterfactualTraitValyyeForThisTraitKeyy;
 
           consol.consoleLogObjectAtOneLevel(
@@ -288,7 +294,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
           additionalRunsRecord.push([
             questionOutputUnit.structureChunk.chunkId,
-            annoKey,
+            annoTraitKeyy,
             counterfactualTraitValyyeForThisTraitKeyy,
           ]);
 
@@ -301,7 +307,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           "[1;33m \n" +
             `myxi removeAnnotationsByCounterfax. \nRun where we changed "${
               questionOutputUnit.structureChunk.chunkId
-            }" from counterfactual "${annoKey}=${annoValue}" and arrayOfCounterfactualResultsForThisAnnotation came back with "${
+            }" from counterfactual "${annoTraitKeyy}=${annoTraitValyye}" and arrayOfCounterfactualResultsForThisAnnotation came back with "${
               arrayOfCounterfactualResultsForThisAnnotation.length
             }" results. \nTo be specific, here's how many counterfactual.answerSentenceData.answerOutputArrays there are in each counterfactual result: [${arrayOfCounterfactualResultsForThisAnnotation.map(
               (counterfactual) =>
@@ -347,12 +353,13 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             }
 
             if (
-              Object.keys(counterfactual.counterfactualTrait)[0] !== annoKey
+              Object.keys(counterfactual.counterfactualTrait)[0] !==
+              annoTraitKeyy
             ) {
               consol.throw("dckm removeAnnotationsByCounterfax");
             }
 
-            return counterfactual.counterfactualTrait[annoKey];
+            return counterfactual.counterfactualTrait[annoTraitKeyy];
           }
         });
 
@@ -487,7 +494,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" 
             and the counterfactual ANSWER selected words came back SAME as original answer selected words.\n
             This means that this trait has no impact, even if we flip it, so annotation is not needed. \n
-            Deleting annotation "${annoKey}" = "${questionOutputUnit.structureChunk.annotations[annoKey]}".` +
+            Deleting annotation "${annoTraitKeyy}" = "${questionOutputUnit.structureChunk.annotations[annoTraitKeyy]}".` +
             "[0m",
           {
             originalAnswerPseudoSentences,
@@ -495,7 +502,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           }
         );
 
-        delete questionOutputUnit.structureChunk.annotations[annoKey];
+        delete questionOutputUnit.structureChunk.annotations[annoTraitKeyy];
       } else if (
         !gpUtils.areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
           originalQuestionPseudoSentences,
@@ -504,7 +511,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       ) {
         consol.log(
           "[1;35m " +
-            `myxo-clauseB [tl;dr questiondifferent so deleting anno] removeAnnotationsByCounterfax END. I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual QUESTION selected words came back DIFFERENT original question selected words.\nThis means that this trait has no impact, even if we flip it, so annotation is not needed. \nDeleting annotation "${annoKey}" = "${questionOutputUnit.structureChunk.annotations[annoKey]}" now.` +
+            `myxo-clauseB [tl;dr questiondifferent so deleting anno] removeAnnotationsByCounterfax END. I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual QUESTION selected words came back DIFFERENT original question selected words.\nThis means that this trait has no impact, even if we flip it, so annotation is not needed. \nDeleting annotation "${annoTraitKeyy}" = "${questionOutputUnit.structureChunk.annotations[annoTraitKeyy]}" now.` +
             "[0m",
           {
             originalQuestionPseudoSentences,
@@ -512,11 +519,11 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           }
         );
 
-        delete questionOutputUnit.structureChunk.annotations[annoKey];
+        delete questionOutputUnit.structureChunk.annotations[annoTraitKeyy];
       } else {
         consol.log(
           "[1;35m " +
-            `myxo-clauseC [tl;dr !answersame && !questiondifferent so keeping anno] removeAnnotationsByCounterfax END. I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual answer selected words came back DIFFERENT FROM original answer selected words.\nThis means I'll keep annotation "${annoKey}" = "${questionOutputUnit.structureChunk.annotations[annoKey]}".` +
+            `myxo-clauseC [tl;dr !answersame && !questiondifferent so keeping anno] removeAnnotationsByCounterfax END. I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual answer selected words came back DIFFERENT FROM original answer selected words.\nThis means I'll keep annotation "${annoTraitKeyy}" = "${questionOutputUnit.structureChunk.annotations[annoTraitKeyy]}".` +
             "[0m",
           {
             originalAnswerPseudoSentences,
@@ -529,7 +536,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         //PDSX4-orange-true
         if (questionOutputUnit.structureChunk.dontSpecifyOnThisChunk) {
           let combinedTraitValyyes = [
-            ...questionOutputUnit.structureChunk[annoKey],
+            ...questionOutputUnit.structureChunk[annoTraitKeyy],
             ...counterfactualTraitValyyes,
           ];
 
@@ -541,21 +548,22 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           ];
 
           consol.log(
-            `PDSX-orange. Agglomerating the answer output arrays and deleting annoValue "${annoValue}", and questionOutputUnit.structureChunk[${annoKey}] is now [${combinedTraitValyyes}]`
+            `PDSX-orange. Agglomerating the answer output arrays and deleting annoTraitValyye "${annoTraitValyye}", and questionOutputUnit.structureChunk[${annoTraitKeyy}] is now [${combinedTraitValyyes}]`
           );
 
-          delete questionOutputUnit.structureChunk.annotations[annoKey];
-          questionOutputUnit.structureChunk[annoKey] = combinedTraitValyyes;
+          delete questionOutputUnit.structureChunk.annotations[annoTraitKeyy];
+          questionOutputUnit.structureChunk[annoTraitKeyy] =
+            combinedTraitValyyes;
 
           if (
             !questionOutputUnit.structureChunk
               .counterfactuallyImportantTraitKeyys
           ) {
             questionOutputUnit.structureChunk.counterfactuallyImportantTraitKeyys =
-              [annoKey];
+              [annoTraitKeyy];
           } else {
             questionOutputUnit.structureChunk.counterfactuallyImportantTraitKeyys.push(
-              annoKey
+              annoTraitKeyy
             );
           }
         }
@@ -564,7 +572,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       uUtils.addToArrayAtKey(
         questionOutputUnitsThatHaveBeenCounterfactualed,
         questionOutputUnit.structureChunk.chunkId,
-        annoKey
+        annoTraitKeyy
       );
     }
   );
@@ -614,14 +622,14 @@ exports.removeAnnotationsIfHeadChunkHasBeenCounterfaxed = (
 
       questionOutputUnitsThatHaveBeenCounterfactualed[
         questionOutputUnit.structureChunk[agreeKey]
-      ].forEach((annoKey) => {
+      ].forEach((annoTraitKeyy) => {
         consol.log(
           "[1;33m " +
-            `mioc So I'm deleting "${annoKey}" from "${questionOutputUnit.structureChunk.chunkId}"'s annotations.` +
+            `mioc So I'm deleting "${annoTraitKeyy}" from "${questionOutputUnit.structureChunk.chunkId}"'s annotations.` +
             "[0m"
         );
 
-        delete questionOutputUnit.structureChunk.annotations[annoKey];
+        delete questionOutputUnit.structureChunk.annotations[annoTraitKeyy];
       });
       return true;
     }
@@ -709,7 +717,7 @@ exports.removeAnnotationsByAOCs = (
 
     Object.keys(questionOutputUnit.structureChunk.annotations).forEach(
       (inflectionCategoryy) => {
-        let annoValue =
+        let annoTraitValyye =
           questionOutputUnit.structureChunk.annotations[inflectionCategoryy];
 
         //Imagine "Ja, moje jabłko."
@@ -1022,16 +1030,19 @@ exports.addAnnotation = (chunk, key, value) => {
 };
 
 exports.trimAnnotations = (annotationObj) => {
-  Object.keys(annotationObj).forEach((annoKey) => {
-    let annoValue = annotationObj[annoKey];
+  Object.keys(annotationObj).forEach((annoTraitKeyy) => {
+    let annoTraitValyye = annotationObj[annoTraitKeyy];
 
-    if (annoKey === "gender" && ["males", "females"].includes(annoValue)) {
+    if (
+      annoTraitKeyy === "gender" &&
+      ["males", "females"].includes(annoTraitValyye)
+    ) {
       delete annotationObj.number;
     }
 
-    if (!annoValue) {
+    if (!annoTraitValyye) {
       consol.throw("vmkp");
-      delete annotationObj[annoKeyy];
+      delete annotationObj[annoTraitKeyyy];
     }
   });
 
@@ -1092,13 +1103,13 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
 
     if (allohomInfo && allohomInfo.multipleWordtype) {
       if (structureChunk.pleaseShowMultipleWordtypeAllohomClarifiers) {
-        let annotationValue = gpUtils.getWorrdtypeLObj(selectedLemmaObject);
+        let annoTraitValyye = gpUtils.getWorrdtypeLObj(selectedLemmaObject);
 
         consol.log(
           "wbvz addClarifiers------------------------------------------ADDED CLARIFIER in Step 1b",
-          annotationValue
+          annoTraitValyye
         );
-        structureChunk.annotations.wordtype = annotationValue;
+        structureChunk.annotations.wordtype = annoTraitValyye;
       }
     }
 

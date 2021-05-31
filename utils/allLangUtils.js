@@ -5,19 +5,19 @@ const uUtils = require("../utils/universalUtils.js");
 const consol = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 
-exports.translateAnnotationValue = (
-  annotationKey,
+exports.translateAnnoTraitValyye = (
+  annoTraitKeyy,
   structureChunk,
   languagesObj
 ) => {
   let { answerLanguage, questionLanguage } = languagesObj;
 
-  let annotationValue = structureChunk.annotations[annotationKey];
+  let annoTraitValyye = structureChunk.annotations[annoTraitKeyy];
 
-  if (annotationKey === "gender") {
+  if (annoTraitKeyy === "gender") {
     if (structureChunk.number) {
       if (structureChunk.number.length > 1) {
-        consol.throw("cshb #ERR ALL:translateAnnotationValue.");
+        consol.throw("cshb #ERR ALL:translateAnnoTraitValyye.");
       }
 
       const pluralVirilityAndSingularConversionRef =
@@ -25,29 +25,29 @@ exports.translateAnnotationValue = (
 
       if (structureChunk.number[0] === "plural") {
         if (
-          !pluralVirilityAndSingularConversionRef["plural"][annotationValue]
+          !pluralVirilityAndSingularConversionRef["plural"][annoTraitValyye]
         ) {
           consol.throw(
-            "mkow #ERR ALL:translateAnnotationValue. Could not convert virility of annotationValue: " +
-              annotationValue
+            "mkow #ERR ALL:translateAnnoTraitValyye. Could not convert virility of annoTraitValyye: " +
+              annoTraitValyye
           );
         }
 
-        annotationValue =
-          pluralVirilityAndSingularConversionRef["plural"][annotationValue];
+        annoTraitValyye =
+          pluralVirilityAndSingularConversionRef["plural"][annoTraitValyye];
       }
     }
 
     let annotationToPlainspeakRef = refObj.annotationToPlainspeakRef;
 
     let adjustedAnnotation =
-      annotationToPlainspeakRef["gender"][annotationValue];
+      annotationToPlainspeakRef["gender"][annoTraitValyye];
 
     return typeof adjustedAnnotation === "string"
       ? adjustedAnnotation
       : uUtils.selectRandom(adjustedAnnotation);
   } else {
-    return annotationValue;
+    return annoTraitValyye;
   }
 };
 

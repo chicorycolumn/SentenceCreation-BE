@@ -871,57 +871,61 @@ exports.selectWordVersions = (
           });
         });
 
-        let doneAnnoKeys = [];
+        let doneAnnoTraitKeyys = [];
 
         Object.keys(skeletonOutputUnit.structureChunk.annotations).forEach(
-          (annoKey) => {
-            let annoValue =
-              skeletonOutputUnit.structureChunk.annotations[annoKey];
+          (annoTraitKeyy) => {
+            let annoTraitValyye =
+              skeletonOutputUnit.structureChunk.annotations[annoTraitKeyy];
 
-            let thisAnnoKeyIsDone = false;
+            let thisAnnoTraitKeyyIsDone = false;
 
             depUnits.forEach((depUnit) => {
-              if (thisAnnoKeyIsDone) {
+              if (thisAnnoTraitKeyyIsDone) {
                 return;
               }
 
               if (
-                //If the annoKey from the skeleton outputUnit's annos is an allowable transfer to this depCh,
+                //If the annoTraitKeyy from the skeleton outputUnit's annos is an allowable transfer to this depCh,
                 refObj.lemmaObjectTraitKeyys[
                   currentLanguage
                 ].inheritableInflectionKeyys[
                   gpUtils.getWorrdtypeStCh(depUnit.structureChunk, true)
-                ].includes(annoKey)
+                ].includes(annoTraitKeyy)
               ) {
                 if (!depUnit.firstStageAnnotationsObj) {
                   depUnit.firstStageAnnotationsObj = {};
                 }
 
                 if (
-                  depUnit.firstStageAnnotationsObj[annoKey] &&
-                  depUnit.firstStageAnnotationsObj[annoKey] !== annoValue
+                  depUnit.firstStageAnnotationsObj[annoTraitKeyy] &&
+                  depUnit.firstStageAnnotationsObj[annoTraitKeyy] !==
+                    annoTraitValyye
                 ) {
                   consol.throw(
-                    `ioev selectWordVersions Skeleton Clause. I'm trying to transfer in annos from an outputunit that didn't make it into this outputarr. But I'm looking at one of its depChs, and this depCh has an anno with a different value?\nFor annoKey "${annoKey}", skeleton "${skeletonOutputUnit.structureChunk.chunkId}" had "${annoValue}" while depCh "${depCh.chunkId}" had "${depCh.annotations[annoKey]}".`
+                    `ioev selectWordVersions Skeleton Clause. I'm trying to transfer in annos from an outputunit that didn't make it into this outputarr. But I'm looking at one of its depChs, and this depCh has an anno with a different value?\nFor annoTraitKeyy "${annoTraitKeyy}", skeleton "${skeletonOutputUnit.structureChunk.chunkId}" had "${annoTraitValyye}" while depCh "${depCh.chunkId}" had "${depCh.annotations[annoTraitKeyy]}".`
                   );
                 }
 
                 //then transfer it to the depUnit.
-                depUnit.firstStageAnnotationsObj[annoKey] = annoValue;
-                doneAnnoKeys.push(annoKey);
-                thisAnnoKeyIsDone = true;
+                depUnit.firstStageAnnotationsObj[annoTraitKeyy] =
+                  annoTraitValyye;
+                doneAnnoTraitKeyys.push(annoTraitKeyy);
+                thisAnnoTraitKeyyIsDone = true;
               }
             });
           }
         );
 
-        let abandonedAnnoKeys = Object.keys(
+        let abandonedAnnoTraitKeyys = Object.keys(
           skeletonOutputUnit.structureChunk.annotations
-        ).filter((annoKey) => !doneAnnoKeys.includes(annoKey));
+        ).filter(
+          (annoTraitKeyy) => !doneAnnoTraitKeyys.includes(annoTraitKeyy)
+        );
 
-        if (abandonedAnnoKeys.length) {
+        if (abandonedAnnoTraitKeyys.length) {
           consol.throw(
-            `wtsu selectWordVersions Skeleton Clause. These annoKeys from skeleton "${skeletonOutputUnit.structureChunk.chunkId}" did not make it into outputArr in any way! [${abandonedAnnoKeys}].`
+            `wtsu selectWordVersions Skeleton Clause. These annoTraitKeyys from skeleton "${skeletonOutputUnit.structureChunk.chunkId}" did not make it into outputArr in any way! [${abandonedAnnoTraitKeyys}].`
           );
         }
 

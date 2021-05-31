@@ -82,16 +82,16 @@ exports.selectWordVersions = (
 
     if (subsequentOutputUnit && subsequentOutputUnit.firstStageAnnotationsObj) {
       Object.keys(subsequentOutputUnit.firstStageAnnotationsObj).forEach(
-        (annoKey) => {
-          let annoValue =
-            subsequentOutputUnit.firstStageAnnotationsObj[annoKey];
+        (annoTraitKeyy) => {
+          let annoTraitValyye =
+            subsequentOutputUnit.firstStageAnnotationsObj[annoTraitKeyy];
 
-          if (annoValue === "singular") {
+          if (annoTraitValyye === "singular") {
             consol.log(
               `yuox selectWordVersions. Removing "singular" annotation from subsequent outputUnit, as current output unit is ENG indefinite article.`
             );
 
-            delete subsequentOutputUnit.firstStageAnnotationsObj[annoKey];
+            delete subsequentOutputUnit.firstStageAnnotationsObj[annoTraitKeyy];
           }
         }
       );
@@ -314,13 +314,13 @@ exports.addLanguageParticularClarifiers = (
             structureChunk.number[0] === "singular"
           )
         ) {
-          let annotationValue = "past";
+          let annoTraitValyye = "past";
 
           consol.log(
             "weaf ENG addLanguageParticularClarifiers------------------------------------------ADDED  CLARIFIER in Step 2, for Type 2 Syn",
-            annotationValue
+            annoTraitValyye
           );
-          structureChunk.annotations.tenseDescription = annotationValue;
+          structureChunk.annotations.tenseDescription = annoTraitValyye;
           structureChunk.preventAddingFurtherClarifiers = true; // We assume that no more clarifiers are needed.
         } else if (
           structureChunk.tenseDescription &&
@@ -334,13 +334,13 @@ exports.addLanguageParticularClarifiers = (
             structureChunk.number[0] === "singular"
           )
         ) {
-          let annotationValue = "present";
+          let annoTraitValyye = "present";
 
           consol.log(
             "befx ENG addLanguageParticularClarifiers------------------------------------------ADDED  CLARIFIER in Step 2, for Type 2 Syn",
-            annotationValue
+            annoTraitValyye
           );
-          structureChunk.annotations.tenseDescription = annotationValue;
+          structureChunk.annotations.tenseDescription = annoTraitValyye;
           structureChunk.preventAddingFurtherClarifiers = true; // We assume that no more clarifiers are needed.
         }
       }
