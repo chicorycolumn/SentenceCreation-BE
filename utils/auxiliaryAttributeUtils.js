@@ -651,7 +651,7 @@ exports.removeAnnotationsByAOCs = (
   //1. For this stCh, get all q output units that are Dependent/PHD of this.
   //2. Filter to just the ones with wordtype pronoun.
   //3. If the selectedWord in any of those units is unique between genders in its lemma object
-  //   (eg "his" is unique as no other gender traitKeyy holds this inflectionValyye, whereas "their" is not unique as two genders keys hold it)
+  //   (eg "his" is unique as no other gender traitKeyy holds this inflectionValyye, whereas "their" is not unique as two genders traitKeyys hold it)
   //   then delete/block the gender annotation.
   let headWordtype = "noun";
   let allDependentWordtype = "pronoun";
@@ -686,7 +686,7 @@ exports.removeAnnotationsByAOCs = (
       return questionOutputArr
         .filter((unit) =>
           agreeKeys.some(
-            (agreeWithKey) => unit.structureChunk[agreeWithKey] === headChunkId
+            (agreeKey) => unit.structureChunk[agreeKey] === headChunkId
           )
         )
         .filter(
@@ -729,13 +729,13 @@ exports.removeAnnotationsByAOCs = (
         deleteByAOC(secondaryDepUnits, "drillPathSecondary");
         deleteByAOC(tertiaryDepUnits, "drillPathTertiary");
 
-        function deleteByAOC(depUnits, drillPathKey) {
+        function deleteByAOC(depUnits, drillPathType) {
           depUnits.forEach((depUnit) => {
             if (
               !questionOutputUnit.structureChunk.annotations[
                 inflectionCategoryy
               ] || //ie we've now deleted it so abort loop.
-              !depUnit[drillPathKey]
+              !depUnit[drillPathType]
             ) {
               return;
             }
@@ -749,7 +749,7 @@ exports.removeAnnotationsByAOCs = (
               otUtils.doesThisInflectionKeyyHoldUniqueInflectionValyyeInLObj(
                 depUnit.selectedLemmaObject,
                 inflectionCategoryy,
-                depUnit[drillPathKey]
+                depUnit[drillPathType]
               )
             ) {
               consol.log(
@@ -1292,7 +1292,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
                         inflectionCategoryy
                       ),
                       (item1, item2) => {
-                        let ref = {
+                        let tempPluralityRef = {
                           virile: ["m", "m1", "f", "n"],
                           nonvirile: ["m2", "m3", "f", "n"],
                         };
@@ -1303,21 +1303,27 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
                           return;
                         }
 
-                        Object.keys(ref).forEach((pluralKey) => {
-                          if (
-                            (item1 === pluralKey &&
-                              ref[pluralKey].includes(item2)) ||
-                            (item2 === pluralKey &&
-                              ref[pluralKey].includes(item1))
-                          ) {
-                            consol.log(
-                              "[1;33m " +
-                                `hsan findSinglePointMutationArray WAHEY!` +
-                                "[0m"
-                            );
-                            resultBool = true;
+                        Object.keys(tempPluralityRef).forEach(
+                          (pluralTraitKeyy) => {
+                            if (
+                              (item1 === pluralTraitKeyy &&
+                                tempPluralityRef[pluralTraitKeyy].includes(
+                                  item2
+                                )) ||
+                              (item2 === pluralTraitKeyy &&
+                                tempPluralityRef[pluralTraitKeyy].includes(
+                                  item1
+                                ))
+                            ) {
+                              consol.log(
+                                "[1;33m " +
+                                  `hsan findSinglePointMutationArray WAHEY!` +
+                                  "[0m"
+                              );
+                              resultBool = true;
+                            }
                           }
-                        });
+                        );
 
                         return resultBool;
                       }

@@ -11,25 +11,26 @@ exports.finishAndSend = (
   let combinedResponseObj = { additionalRunsRecord };
 
   let refs = [
-    { responseObject: questionResponseObj, key: "question" },
-    { responseObject: answerResponseObj, key: "answer" },
+    { responseObject: questionResponseObj, mode: "question" },
+    { responseObject: answerResponseObj, mode: "answer" },
   ];
 
   refs.forEach((ref) => {
     if (ref.responseObject) {
-      combinedResponseObj[ref.key + "SentenceArr"] =
+      combinedResponseObj[ref.mode + "SentenceArr"] =
         ref.responseObject.finalSentenceArr || [];
 
       if (ref.responseObject.errorMessage) {
-        combinedResponseObj[ref.key + "ErrorMessage"] = [
+        combinedResponseObj[ref.mode + "ErrorMessage"] = [
           ref.responseObject.errorMessage,
         ];
       }
       if (ref.responseObject.message) {
-        combinedResponseObj[ref.key + "Message"] = ref.responseObject.message;
+        combinedResponseObj[ref.mode + "Message"] = ref.responseObject.message;
       }
       if (ref.responseObject.fragment) {
-        combinedResponseObj[ref.key + "Fragment"] = ref.responseObject.fragment;
+        combinedResponseObj[ref.mode + "Fragment"] =
+          ref.responseObject.fragment;
       }
     }
   });
