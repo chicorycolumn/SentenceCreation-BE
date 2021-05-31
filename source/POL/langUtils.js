@@ -300,7 +300,7 @@ exports.adjustTenseDescriptions = (structureChunk) => {
 
     if (tenseDesc.slice(0, 4) === "cond" && /\d/.test(tenseDesc[4])) {
       //cond0, cond1, cond2, cond3
-      let [key, clause] = tenseDesc.split(" ");
+      let [rank, clause] = tenseDesc.split(" ");
 
       const conditionalsRef = {
         cond0: {
@@ -323,7 +323,7 @@ exports.adjustTenseDescriptions = (structureChunk) => {
         },
       };
 
-      tenseDescArr = conditionalsRef[key][clause].slice(0);
+      tenseDescArr = conditionalsRef[rank][clause].slice(0);
     }
 
     tenseDescArr.forEach((tenseDesc) => {

@@ -390,7 +390,7 @@ xdescribe("checkSentenceFormulaIds", () => {
 });
 
 xdescribe("checkWords", () => {
-  it("#edu4.1 Checks words for specific keys that might not have been specified. POL", () => {
+  it("#edu4.1 Checks words for specific traitKeyys that might not have been specified. POL", () => {
     const currentLanguage = "POL";
 
     let actual = checkWords(true, currentLanguage);
@@ -551,7 +551,7 @@ xdescribe("Educator Battery", () => {
     }
     expect(duplicateSymbols.length).to.equal(0);
   });
-  it("#eduBat-09 Checks words for specific keys that might not have been specified. ENG", () => {
+  it("#eduBat-09 Checks words for specific traitKeyys that might not have been specified. ENG", () => {
     const currentLanguage = "ENG";
 
     let actual = checkWords(false, currentLanguage);
@@ -568,7 +568,7 @@ xdescribe("Educator Battery", () => {
     }
     expect(nounsWithoutGender.length).to.equal(0);
   });
-  it("#eduBat-10 Checks words for specific keys that might not have been specified. POL", () => {
+  it("#eduBat-10 Checks words for specific traitKeyys that might not have been specified. POL", () => {
     const currentLanguage = "POL";
 
     let actual = checkWords(false, currentLanguage);

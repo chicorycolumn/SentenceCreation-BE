@@ -343,11 +343,11 @@ xdescribe("findSynhomographs", () => {
 
         inflections: {
           singular: {
-            nom: "bikey",
+            nom: "bicyclaroo",
             gen: "bikaroo",
           },
           plural: {
-            nom: "bikeys",
+            nom: "bicyclaroos",
             gen: "bikaroos",
           },
         },
@@ -358,11 +358,11 @@ xdescribe("findSynhomographs", () => {
 
         inflections: {
           singular: {
-            nom: "trikey",
+            nom: "tricyclaroo",
             gen: "trikaroo",
           },
           plural: {
-            nom: "trikeys",
+            nom: "tricyclaroos",
             gen: "trikaroos",
           },
         },
@@ -558,11 +558,11 @@ xdescribe("findSynhomographs", () => {
 
         inflections: {
           singular: {
-            nom: "trikey",
+            nom: "tricyclaroo",
             gen: "trikaroo",
           },
           plural: {
-            nom: "trikeys",
+            nom: "tricyclaroos",
             gen: "trikaroos",
           },
         },
@@ -573,12 +573,12 @@ xdescribe("findSynhomographs", () => {
 
         inflections: {
           singular: {
-            nom: "unikey",
-            acc: "unikey",
+            nom: "unicyclaroo",
+            acc: "unicyclaroo",
           },
           plural: {
-            nom: "unikeys",
-            acc: "unikey",
+            nom: "unicyclaroos",
+            acc: "unicyclaroo",
           },
         },
       },
@@ -625,7 +625,7 @@ xdescribe("findSynhomographs", () => {
         synhomographs: [
           {
             inflectionCategoryyChain: ["number", "gcase"],
-            terminalValyye: "unikey",
+            terminalValyye: "unicyclaroo",
             inflectionPaths: [
               ["singular", "nom"],
               ["singular", "acc"],
@@ -902,19 +902,19 @@ xdescribe("extractNestedRoutes", () => {
     expect(actual.routesByNesting).to.eql(expected.routesByNesting);
     expect(actual.routesByLevel).to.eql(expected.routesByLevel);
   });
-  it("#otu1.1b Returns key routes for object with one key at single level of nesting.", () => {
+  it("#otu1.1b Returns routes for object with one traitKeyy at single level of nesting.", () => {
     const input = { singular: "apple" };
     const expected = [["singular"]];
     const actual = extractNestedRoutes(input).routesByNesting;
     expect(actual).to.eql(expected);
   });
-  it("#otu1.1c Returns key routes for object with many keys at single level of nesting.", () => {
+  it("#otu1.1c Returns routes for object with many traitKeyys at single level of nesting.", () => {
     const input = { singular: "apple", plural: "apples" };
     const expected = [["singular"], ["plural"]];
     const actual = extractNestedRoutes(input).routesByNesting;
     expect(actual).to.eql(expected);
   });
-  it("#otu1.1d Returns key routes for object with many keys at two levels of nesting.", () => {
+  it("#otu1.1d Returns routes for object with many traitKeyys at two levels of nesting.", () => {
     const input = {
       singular: { nom: "kobieta", loc: "kobiecie" },
       plural: { nom: "kobiety", loc: "kobietach" },
@@ -928,7 +928,7 @@ xdescribe("extractNestedRoutes", () => {
     const actual = extractNestedRoutes(input).routesByNesting;
     expect(actual).to.eql(expected);
   });
-  it("#otu1.1e Returns key routes for object with many keys at various levels of nesting.", () => {
+  it("#otu1.1e Returns routes for object with many traitKeyys at various levels of nesting.", () => {
     const input = {
       singular: {
         nom: "jabłko",
@@ -973,7 +973,7 @@ xdescribe("extractNestedRoutes", () => {
     consol.log(actual);
     expect(actual).to.eql(expected);
   });
-  it("#otu1.1f Returns key routes when some items are arrays and should not be mapped out.", () => {
+  it("#otu1.1f Returns routes when some items are arrays and should not be mapped out.", () => {
     const input = {
       singular: { nom: "chłopak", acc: "chłopaka" },
       plural: {

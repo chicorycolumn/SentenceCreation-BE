@@ -438,12 +438,12 @@ exports.correctMGNsBeforeFetchingOutputArray = (
     );
   }
 
-  //1 Get the lObj metagender key.
+  //1 Get the lObj metagender traitKeyy.
   let lObjMetagender = selectedLemmaObject.gender;
 
   if (!structureChunk.number || !structureChunk.number.length) {
     consol.throw(
-      "wpoj Cannot correctMetagenderByNumberInMGNs with no number key."
+      "wpoj Cannot correctMetagenderByNumberInMGNs with no number traitKeyy."
     );
   }
 
