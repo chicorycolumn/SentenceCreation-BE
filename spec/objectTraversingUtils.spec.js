@@ -3,7 +3,7 @@ const {
   extractNestedRoutes,
   concoctNestedRoutes,
   findObjectInNestedObject,
-  giveRoutesAndTerminalValuesFromObject,
+  giveRoutesAndTerminalValyyesFromObject,
   findSynhomographs,
   findSinglePointMutationArray,
   isThisValueUniqueAtThisLevelInLemmaObject,
@@ -421,7 +421,7 @@ xdescribe("findSynhomographs", () => {
         synhomographs: [
           {
             inflectionLabelChain: ["number", "gcase"],
-            terminalValue: "bike",
+            terminalValyye: "bike",
             inflectionPaths: [
               ["singular", "nom"],
               ["plural", "nom"],
@@ -482,7 +482,7 @@ xdescribe("findSynhomographs", () => {
         synhomographs: [
           {
             inflectionLabelChain: ["number", "gcase"],
-            terminalValue: "11",
+            terminalValyye: "11",
             inflectionPaths: [
               ["singular", "nom"],
               ["singular", "ins"],
@@ -492,7 +492,7 @@ xdescribe("findSynhomographs", () => {
           },
           {
             inflectionLabelChain: ["number", "gcase"],
-            terminalValue: "14",
+            terminalValyye: "14",
             inflectionPaths: [
               ["singular", "acc"],
               ["plural", "dat"],
@@ -501,7 +501,7 @@ xdescribe("findSynhomographs", () => {
           },
           {
             inflectionLabelChain: ["number", "gcase"],
-            terminalValue: "16",
+            terminalValyye: "16",
             inflectionPaths: [
               ["plural", "gen"],
               ["plural", "acc"],
@@ -591,7 +591,7 @@ xdescribe("findSynhomographs", () => {
         synhomographs: [
           {
             inflectionLabelChain: ["number", "gcase"],
-            terminalValue: "11",
+            terminalValyye: "11",
             inflectionPaths: [
               ["singular", "nom"],
               ["singular", "ins"],
@@ -601,7 +601,7 @@ xdescribe("findSynhomographs", () => {
           },
           {
             inflectionLabelChain: ["number", "gcase"],
-            terminalValue: "14",
+            terminalValyye: "14",
             inflectionPaths: [
               ["singular", "acc"],
               ["plural", "dat"],
@@ -610,7 +610,7 @@ xdescribe("findSynhomographs", () => {
           },
           {
             inflectionLabelChain: ["number", "gcase"],
-            terminalValue: "16",
+            terminalValyye: "16",
             inflectionPaths: [
               ["plural", "gen"],
               ["plural", "acc"],
@@ -625,7 +625,7 @@ xdescribe("findSynhomographs", () => {
         synhomographs: [
           {
             inflectionLabelChain: ["number", "gcase"],
-            terminalValue: "unikey",
+            terminalValyye: "unikey",
             inflectionPaths: [
               ["singular", "nom"],
               ["singular", "acc"],
@@ -1026,21 +1026,21 @@ xdescribe("extractNestedRoutes", () => {
     };
 
     let expected = [
-      { terminalValue: "kobieta", nestedRoute: ["singular", "nom"] },
-      { terminalValue: "kobiety", nestedRoute: ["singular", "gen"] },
-      { terminalValue: "kobiecie", nestedRoute: ["singular", "dat"] },
-      { terminalValue: "kobietę", nestedRoute: ["singular", "acc"] },
-      { terminalValue: "kobietą", nestedRoute: ["singular", "ins"] },
-      { terminalValue: "kobiecie", nestedRoute: ["singular", "loc"] },
-      { terminalValue: "kobiety", nestedRoute: ["plural", "nom"] },
-      { terminalValue: "kobiet", nestedRoute: ["plural", "gen"] },
-      { terminalValue: "kobietom", nestedRoute: ["plural", "dat"] },
-      { terminalValue: "kobiety", nestedRoute: ["plural", "acc"] },
-      { terminalValue: undefined, nestedRoute: ["plural", "ins"] },
-      { terminalValue: "kobietach", nestedRoute: ["plural", "loc"] },
+      { terminalValyye: "kobieta", nestedRoute: ["singular", "nom"] },
+      { terminalValyye: "kobiety", nestedRoute: ["singular", "gen"] },
+      { terminalValyye: "kobiecie", nestedRoute: ["singular", "dat"] },
+      { terminalValyye: "kobietę", nestedRoute: ["singular", "acc"] },
+      { terminalValyye: "kobietą", nestedRoute: ["singular", "ins"] },
+      { terminalValyye: "kobiecie", nestedRoute: ["singular", "loc"] },
+      { terminalValyye: "kobiety", nestedRoute: ["plural", "nom"] },
+      { terminalValyye: "kobiet", nestedRoute: ["plural", "gen"] },
+      { terminalValyye: "kobietom", nestedRoute: ["plural", "dat"] },
+      { terminalValyye: "kobiety", nestedRoute: ["plural", "acc"] },
+      { terminalValyye: undefined, nestedRoute: ["plural", "ins"] },
+      { terminalValyye: "kobietach", nestedRoute: ["plural", "loc"] },
     ];
 
-    let actual = giveRoutesAndTerminalValuesFromObject(input.inflections);
+    let actual = giveRoutesAndTerminalValyyesFromObject(input.inflections);
     consol.log(actual);
     expect(actual).to.eql(expected);
   });
@@ -1066,14 +1066,14 @@ xdescribe("extractNestedRoutes", () => {
     };
 
     let expected = [
-      { terminalValue: "read", nestedRoute: ["infinitive"] },
-      { terminalValue: "read", nestedRoute: ["v2"] },
-      { terminalValue: "read", nestedRoute: ["v3"] },
-      { terminalValue: "reads", nestedRoute: ["thirdPS"] },
-      { terminalValue: "reading", nestedRoute: ["gerund"] },
+      { terminalValyye: "read", nestedRoute: ["infinitive"] },
+      { terminalValyye: "read", nestedRoute: ["v2"] },
+      { terminalValyye: "read", nestedRoute: ["v3"] },
+      { terminalValyye: "reads", nestedRoute: ["thirdPS"] },
+      { terminalValyye: "reading", nestedRoute: ["gerund"] },
     ];
 
-    let actual = giveRoutesAndTerminalValuesFromObject(input.inflections);
+    let actual = giveRoutesAndTerminalValyyesFromObject(input.inflections);
     consol.log(actual);
     expect(actual).to.eql(expected);
   });
@@ -1099,14 +1099,14 @@ xdescribe("extractNestedRoutes", () => {
     };
 
     let expected = [
-      { terminalValue: "read", nestedRoute: ["infinitive"] },
-      { terminalValue: "read", nestedRoute: ["v2"] },
-      { terminalValue: "read", nestedRoute: ["v3"] },
-      { terminalValue: "reads", nestedRoute: ["thirdPS"] },
-      { terminalValue: "reading", nestedRoute: ["gerund"] },
+      { terminalValyye: "read", nestedRoute: ["infinitive"] },
+      { terminalValyye: "read", nestedRoute: ["v2"] },
+      { terminalValyye: "read", nestedRoute: ["v3"] },
+      { terminalValyye: "reads", nestedRoute: ["thirdPS"] },
+      { terminalValyye: "reading", nestedRoute: ["gerund"] },
     ];
 
-    let actual = giveRoutesAndTerminalValuesFromObject(input.inflections);
+    let actual = giveRoutesAndTerminalValyyesFromObject(input.inflections);
     consol.log(actual);
     expect(actual).to.eql(expected);
   });
@@ -1158,11 +1158,11 @@ xdescribe("extractNestedRoutes", () => {
     };
 
     let expected = [
-      { terminalValue: "wib", nestedRoute: ["nonprotective"] },
-      { terminalValue: "wob", nestedRoute: ["protective"] },
+      { terminalValyye: "wib", nestedRoute: ["nonprotective"] },
+      { terminalValyye: "wob", nestedRoute: ["protective"] },
     ];
 
-    let actual = giveRoutesAndTerminalValuesFromObject(input.inflections);
+    let actual = giveRoutesAndTerminalValyyesFromObject(input.inflections);
     consol.log(actual);
     expect(actual).to.eql(expected);
   });

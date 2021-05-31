@@ -476,7 +476,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       // });
 
       if (
-        gpUtils.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
+        gpUtils.areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
           originalAnswerPseudoSentences,
           counterfactualAnswerPseudoSentences
         )
@@ -497,7 +497,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
         delete questionOutputUnit.structureChunk.annotations[annoKey];
       } else if (
-        !gpUtils.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
+        !gpUtils.areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
           originalQuestionPseudoSentences,
           counterfactualQuestionPseudoSentences
         )
@@ -1163,7 +1163,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
 
       if (synhomographData) {
         synhomographData.synhomographs.forEach((synhomDataUnit) => {
-          if (selectedWord === synhomDataUnit.terminalValue) {
+          if (selectedWord === synhomDataUnit.terminalValyye) {
             consol.log(
               "[1;35m " +
                 `qxqf addClarifiers YES enter filterDownClarifiers for selectedWord as "${selectedWord}"` +

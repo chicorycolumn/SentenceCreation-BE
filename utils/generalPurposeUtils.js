@@ -2,7 +2,7 @@ const uUtils = require("./universalUtils.js");
 const consol = require("./zerothOrder/consoleLoggingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 
-exports.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual =
+exports.areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual =
   (array1, array2) => {
     //Ignores order.
     //Ignores duplicates.
@@ -87,7 +87,7 @@ exports.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual
               );
             } else {
               consol.throw(
-                `erql areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual. Unexpected typeof for a selected words array value "${typeof valueFromA}".`
+                `erql areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual. Unexpected typeof for a selected words array value "${typeof valueFromA}".`
               );
             }
           });

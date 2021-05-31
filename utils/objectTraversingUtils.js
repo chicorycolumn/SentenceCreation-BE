@@ -1079,10 +1079,10 @@ exports.findObjectInNestedObjectsAndArrays = (
   }
 };
 
-exports.giveRoutesAndTerminalValuesFromObject = (obj) => {
+exports.giveRoutesAndTerminalValyyesFromObject = (obj) => {
   consol.log(
     "[1;35m " +
-      `xlbj ot:giveRoutesAndTerminalValuesFromObject-----------------------` +
+      `xlbj ot:giveRoutesAndTerminalValyyesFromObject-----------------------` +
       "[0m"
   );
 
@@ -1110,10 +1110,10 @@ exports.giveRoutesAndTerminalValuesFromObject = (obj) => {
 
     if (Array.isArray(value)) {
       value.forEach((subvalue) => {
-        resArr.push({ terminalValue: subvalue, nestedRoute });
+        resArr.push({ terminalValyye: subvalue, nestedRoute });
       });
     } else {
-      resArr.push({ terminalValue: value, nestedRoute });
+      resArr.push({ terminalValyye: value, nestedRoute });
     }
   });
 
@@ -1139,22 +1139,24 @@ exports.findSynhomographs = (lemmaObject, structureChunk, currentLanguage) => {
       gpUtils.getWorrdtypeStCh(structureChunk)
     ];
 
-  let routesAndValues = otUtils.giveRoutesAndTerminalValuesFromObject(
+  let routesAndValues = otUtils.giveRoutesAndTerminalValyyesFromObject(
     lemmaObject.inflections
   );
 
   let tempArr = [];
 
   routesAndValues.forEach((item) => {
-    let { terminalValue, nestedRoute } = item;
+    let { terminalValyye, nestedRoute } = item;
 
-    let existing = tempArr.find((item) => item.terminalValue === terminalValue);
+    let existing = tempArr.find(
+      (item) => item.terminalValyye === terminalValyye
+    );
 
     if (existing) {
       existing.inflectionPaths.push(nestedRoute.slice(0));
     } else {
       tempArr.push({
-        terminalValue,
+        terminalValyye,
         inflectionPaths: [nestedRoute.slice(0)],
       });
     }
