@@ -1213,8 +1213,8 @@ exports.findSinglePointMutationArray = (
   }
 
   //Return true if you find an arr where:
-  //     -- value at position is different to currentArr
-  //     -- but values at all other positions are the same as currentArr
+  //     -- item at position is different to currentArr
+  //     -- but items at all other positions are the same as currentArr
   return !!arrayOfArrays.find((arr) =>
     arr.every((item, index) => {
       if (index === positionToExamine) {
@@ -1306,12 +1306,12 @@ exports.switchMetaTraitValyyeForAWorkableConvertedTraitValyye = (
   structureChunk,
   consoleLogLaabel
 ) => {
-  consol.throw("Ah, we finally do use this.");
+  consol.throw("888 Ah, we finally do use this.");
   consol.log(
     "[1;33m " +
       `ivwa ` +
       consoleLogLaabel +
-      `. >>unkeyed metaTraitValyye clause<<. inflectionKeyy is a metaTraitValyye: "${inflectionKeyy}", but there is no such key on the source. So, we should check if the source has corresponding inflectionKeyys, eg for allPersonalGenders it would be [m, f], and if they hold all the same values, then we should let this work.` +
+      `. >>unkeyed metaTraitValyye clause<<. inflectionKeyy is a metaTraitValyye: "${inflectionKeyy}", but it is not present on the source. So, we should check if the source has corresponding inflectionKeyys, eg for allPersonalGenders it would be [m, f], and if they hold all the same inflectionKeyys, then we should let this work.` +
       "[0m"
   );
 
@@ -1360,7 +1360,7 @@ exports.switchMetaTraitValyyeForAWorkableConvertedTraitValyye = (
   ) {
     consol.log(
       "[1;33m " +
-        `ksfc traverseAndRecordInflections >>unkeyed metaTraitValyye clause<<. Final Clause A. Setting inflectionKeyy to "${selectedConvertedMetaTraitValyye}". Do not need to adjust stCh as all converted values for this metaTraitValyye result in the same from source, eg "allPersonalSingularGenders" = m --> "you", f --> "you". Will now continue with main fxn.` +
+        `ksfc traverseAndRecordInflections >>unkeyed metaTraitValyye clause<<. Final Clause A. Setting inflectionKeyy to "${selectedConvertedMetaTraitValyye}". Do not need to adjust stCh as all converted traitValyyes for this metaTraitValyye result in the same from source, eg "allPersonalSingularGenders" = m --> "you", f --> "you". Will now continue with main fxn.` +
         "[0m"
     );
 
@@ -1369,7 +1369,7 @@ exports.switchMetaTraitValyyeForAWorkableConvertedTraitValyye = (
     consol.log(
       `aqsa traverseAndRecordInflections >>unkeyed metaTraitValyye clause<<. 
       Final Clause B. Trying to set a metaTraitValyye to one of its convertedMetaTraitValyyes. 
-      But the drilled values were not ultimately be the same in source, therefore we cannot obey doNotSpecify. 
+      But the drilled inflectorValyyes were not ultimately the same in source, therefore we cannot obey doNotSpecify. 
       For example, the stCh asks for allPersonalSingularGenders, 
       and while sometimes the results could be m --> "I", f --> "I", in which case it would have gone to Final Clause A. 
       But in this case, eg, m1 --> kupiłem, f --> kupiłam. So they are not the same. 

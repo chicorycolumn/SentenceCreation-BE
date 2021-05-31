@@ -32,19 +32,24 @@ exports.filterWithin_PHD = (
 
   refObj.postHocDependentChunkWordtypes[currentLanguage].forEach(
     (PHD_dataObj) => {
+      console.log("PHD_dataObj", PHD_dataObj);
+
       if (
-        Object.keys(PHD_dataObj.conditions).every((PHD_conditionKey) => {
-          let PHD_conditionValueArr = PHD_dataObj.conditions[PHD_conditionKey];
+        Object.keys(PHD_dataObj.conditions).every((PHD_conditionTraitKeyy) => {
+          let PHD_conditionTraitValyyeArr =
+            PHD_dataObj.conditions[PHD_conditionTraitKeyy];
 
           if (
-            PHD_conditionValueArr.some((arrayItem) => {
+            PHD_conditionTraitValyyeArr.some((arrayItem) => {
               if (
-                PHDstructureChunk[PHD_conditionKey] &&
-                Array.isArray(PHDstructureChunk[PHD_conditionKey]) &&
-                PHDstructureChunk[PHD_conditionKey].includes(arrayItem)
+                PHDstructureChunk[PHD_conditionTraitKeyy] &&
+                Array.isArray(PHDstructureChunk[PHD_conditionTraitKeyy]) &&
+                PHDstructureChunk[PHD_conditionTraitKeyy].includes(arrayItem)
               ) {
                 return true;
-              } else if (PHDstructureChunk[PHD_conditionKey] === arrayItem) {
+              } else if (
+                PHDstructureChunk[PHD_conditionTraitKeyy] === arrayItem
+              ) {
                 return true;
               }
             })
@@ -72,7 +77,7 @@ exports.filterWithin_PHD = (
       PHDstructureChunk.specificLemmas.length !== 1
     ) {
       consol.throw(
-        "#ERR ohmk lf:filterWithin_PHD. PHD-stCh should have exactly one value in specificLemmas arr."
+        "#ERR ohmk lf:filterWithin_PHD. PHD-stCh should have exactly one traitValyye in specificLemmas arr."
       );
     }
   }
@@ -171,12 +176,12 @@ exports.filterWithin_PHD = (
       if (!drillPathOfHead.find((arr) => arr[0] === "gender")) {
         let numberArr = drillPathOfHead.find((arr) => arr[0] === "number");
 
-        let numberValue = numberArr[1];
+        let numberTraitValyye = numberArr[1];
 
         let formattedInflectionKeyyArray = langUtils.formatTraitValyye(
           "gender",
           headOutputUnit.selectedLemmaObject.gender,
-          numberValue
+          numberTraitValyye
         );
 
         if (formattedInflectionKeyyArray.length !== 1) {
@@ -288,7 +293,7 @@ exports.filterWithin_PHD = (
     consol.throw("svqe filterWithin_PHD Natasha, take action.");
   } else {
     consol.throw(
-      "#ERR dyqk filterWithin_PHD. Expected this PHD value to be the end of a chain and thus a string or array."
+      "#ERR dyqk filterWithin_PHD. Expected this PHD inflectorValyye to be the end of a chain and thus a string or array."
     );
   }
 
@@ -430,7 +435,7 @@ exports.filterWithinSelectedLemmaObject = (
 
   if (!outputUnitsWithDrillPaths || !outputUnitsWithDrillPaths.length) {
     consol.log(
-      "\n\n\n iszn I failed when looked for values according to these requirementArrs",
+      "\n\n\n iszn I failed when searched with these requirementArrs",
       requirementArrs,
       "\n\n\n iszn when I was looking inside this source"
     );
@@ -531,7 +536,7 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
   let stChTraits = refFxn.getstructureChunkTraits(currentLanguage);
 
   //STEP ZERO: Decisive Decant
-  //Remove gender values on stCh if drillPath doesn't include gender (ie is infinitive or a participle, say).
+  //Remove gender traitValyyes on stCh if drillPath doesn't include the traitKeyy 'gender' (ie is infinitive or a participle, say).
   //But if lObj is MGN, don't do this.
   if (
     !lemmaObjectIsMGN &&
@@ -547,7 +552,7 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
   //STEP ONE: Update stCh gender with that of lObj.
   if (selectedLemmaObject.gender) {
     if (lemmaObjectIsMGN) {
-      //If lObj does have metagender, set stCh gender to converted values or filter stCh's gender by them.
+      //If lObj does have metagender, set stCh gender to converted traitValyyes or filter stCh's gender by them.
 
       consol.log(
         `nxej updateStChByAndTagsAndSelectors Clause S: lObj "${selectedLemmaObject.lemma}" has metaSelector gender`
@@ -565,8 +570,8 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
         refObj.metaTraitValyyes[currentLanguage].gender[metaGender];
 
       if (structureChunk.gender && structureChunk.gender.length) {
-        structureChunk.gender = structureChunk.gender.filter((genderValue) =>
-          metaGenderConverted.includes(genderValue)
+        structureChunk.gender = structureChunk.gender.filter(
+          (genderTraitValyye) => metaGenderConverted.includes(genderTraitValyye)
         );
       } else {
         structureChunk.gender = metaGenderConverted.slice(0);
@@ -603,7 +608,7 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
     structureChunk.andTags = selectedLemmaObject.tags.slice(0);
   }
 
-  //STEP THREE: For all remaining selectors, update the stCh with values from lObj.
+  //STEP THREE: For all remaining selectors, update the stCh with traitValyyes from lObj.
   let selectors =
     refObj.lemmaObjectTraitKeyys[currentLanguage].selectors[
       gpUtils.getWorrdtypeStCh(structureChunk)
@@ -1091,7 +1096,7 @@ exports.traverseAndRecordInflections = (
     } else {
       consol.log(
         "[1;33m " +
-          `buwt #NB lf.traverseAndRecordInflections for "${chunkId}" found no matching values during drilling for ${reqInflectionCategoryy}: "${chosenInflectionKeyyAdjusted}".` +
+          `buwt #NB lf.traverseAndRecordInflections for "${chunkId}" found no matching inflectionValyyes during drilling for ${reqInflectionCategoryy}: "${chosenInflectionKeyyAdjusted}".` +
           "[0m"
       );
     }
