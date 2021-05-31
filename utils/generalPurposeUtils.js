@@ -76,18 +76,18 @@ exports.areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqua
             return false;
           }
 
-          return subArrFromA.every((valueFromA) => {
-            if (typeof valueFromA === "string") {
-              return subArrFromB.includes(valueFromA);
-            } else if (typeof valueFromA === "object") {
+          return subArrFromA.every((itemFromA) => {
+            if (typeof itemFromA === "string") {
+              return subArrFromB.includes(itemFromA);
+            } else if (typeof itemFromA === "object") {
               return subArrFromB.find(
-                (valueFromB) =>
-                  typeof valueFromB === "object" &&
-                  uUtils.areTwoObjectsEqual(valueFromA, valueFromB)
+                (itemFromB) =>
+                  typeof itemFromB === "object" &&
+                  uUtils.areTwoObjectsEqual(itemFromA, itemFromB)
               );
             } else {
               consol.throw(
-                `erql areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual. Unexpected typeof for a selected words array value "${typeof valueFromA}".`
+                `erql areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual. Unexpected typeof for a selected words array item "${typeof itemFromA}".`
               );
             }
           });
@@ -144,7 +144,7 @@ exports.copyAndCombineWordbanks = (wordbank1, wordbank2) => {
     }
     if (wordbank2Copy[key] && !Array.isArray(wordbank2Copy[key])) {
       consol.throw(
-        `#ERR cocq gp:copyAndCombineWordbanks. wordbank2 key "${key}" holds non array value.`
+        `#ERR cocq gp:copyAndCombineWordbanks. wordbank2 key "${key}" holds non array vaalue.`
       );
     }
 
@@ -286,15 +286,15 @@ exports.fillOutWashburneRefObj = (
     lemmaRefObj[targetKey] = [];
 
     lemmaRefObj[sourceKey].forEach((subObj) => {
-      subObj[subTargetKey].forEach((targetValue) => {
+      subObj[subTargetKey].forEach((targetVaalue) => {
         let existingSubObj = lemmaRefObj[targetKey].find((subObj2) => {
-          return subObj2[subTargetKey] === targetValue;
+          return subObj2[subTargetKey] === targetVaalue;
         });
         if (existingSubObj) {
           existingSubObj[subSourceKey].push(subObj[subSourceKey]);
         } else {
           let newSubObj = {};
-          newSubObj[subTargetKey] = targetValue;
+          newSubObj[subTargetKey] = targetVaalue;
           newSubObj[subSourceKey] = [subObj[subSourceKey]];
           lemmaRefObj[targetKey].push(newSubObj);
         }
@@ -375,11 +375,11 @@ exports.isKeyFilledOutOnChunk = (chunk, traitKeyy) => {
   }
 };
 
-exports.doesKeyContainValueOnChunk = (
+exports.doesKeyContainVaalueOnChunk = (
   chunk,
   traitKeyy,
   traitValyyeArr,
-  includeAll //includeAll true/false passes if EVERY/ANY value in traitValyyeArr is present.
+  includeAll //includeAll true/false passes if EVERY/ANY item in traitValyyeArr is present.
 ) => {
   return (
     this.isKeyFilledOutOnChunk(chunk, traitKeyy) &&
@@ -431,18 +431,18 @@ exports.lObjIsMGN = (lObj) => {
   return this.traitValyyeIsMeta(lObj.gender);
 };
 
-exports.traitValyyeIsMeta = (value, chunk, key) => {
-  if (!value && !chunk && !key) {
+exports.traitValyyeIsMeta = (traitValyye, chunk, key) => {
+  if (!traitValyye && !chunk && !key) {
     consol.throw("ertt No arguments to use.");
   }
 
-  if (!value) {
-    value = chunk[key];
+  if (!traitValyye) {
+    traitValyye = chunk[key];
   }
 
-  if (Array.isArray(value) && value.length === 1) {
-    value = value[0];
+  if (Array.isArray(traitValyye) && traitValyye.length === 1) {
+    traitValyye = traitValyye[0];
   }
 
-  return value.slice(0, 3) === "all";
+  return traitValyye.slice(0, 3) === "all";
 };

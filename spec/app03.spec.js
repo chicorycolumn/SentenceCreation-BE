@@ -2457,7 +2457,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal16-01b GET 200 YES: NATASHA T. Battery: Are EITHER members of an array returned as possible QUESTION, as they should be?", () => {
+    it.only("#pal16-01b GET 200 YES: NATASHA T. Battery: Are EITHER members of an array returned as possible QUESTION, as they should be?", () => {
       return Promise.all([
         testOnce(),
         testOnce(),

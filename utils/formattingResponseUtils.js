@@ -167,12 +167,8 @@ exports.pushSelectedWordToArray = (
   }
 
   if (!Array.isArray(selectedWord[pushKey])) {
-    consol.log("vcxx selectWordVersions", {
-      selectedWord,
-      "selectedWord[pushKey]": selectedWord[pushKey],
-    });
     consol.throw(
-      "vcxx selectWordVersions Value inside tobj should have been array."
+      `vcxx selectWordVersions vaalue inside tobj at pushKey "${pushKey}" should have been array but instead it was ${selectedWord[pushKey]}.`
     );
   }
 
