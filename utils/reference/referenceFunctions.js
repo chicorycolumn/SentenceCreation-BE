@@ -9,7 +9,7 @@ exports.getstructureChunkTraits = (currentLanguage) => {
   let stChTraitsRefByLang = refObj.structureChunkTraits[currentLanguage];
   let stChTraitsRefAll = refObj.structureChunkTraits["ALL"];
 
-  return uUtils.combineTwoKeyVaalueObjectsCarefully(
+  return uUtils.combineTwoKeyValueObjectsCarefully(
     stChTraitsRefByLang,
     stChTraitsRefAll
   );
@@ -22,73 +22,72 @@ exports.removeincompatibleTraits = (currentLanguage, structureChunk) => {
   //(note, the two stChs in args are likely the same stCh, but best to do as their names suggest)
 
   //ACX3A: If npe then remove neuter from gender.
-  if (gpUtils.getWorrdtypeStCh(structureChunk, true) === "noun-person") {
+  if (gpUtils.getWordtypeStCh(structureChunk, true) === "noun-person") {
     consol.log(
       "vvvx removeincompatibleTraits. Removing 'n' if present as is noun-person."
     );
     structureChunk.gender = structureChunk.gender.filter(
-      (traitValyye) => traitValyye !== "n"
+      (traitValue) => traitValue !== "n"
     );
   }
 
   //ACX3B: If 1per then remove neuter from gender.
   if (
     structureChunk.person &&
-    !structureChunk.person.filter((traitValyye) => traitValyye !== "1per")
-      .length
+    !structureChunk.person.filter((traitValue) => traitValue !== "1per").length
   ) {
     consol.log(
-      "vvvy removeincompatibleTraits. Removing 'n' if present as only person traitValyye is '1per'."
+      "vvvy removeincompatibleTraits. Removing 'n' if present as only person traitValue is '1per'."
     );
     structureChunk.gender = structureChunk.gender.filter(
-      (traitValyye) => traitValyye !== "n"
+      (traitValue) => traitValue !== "n"
     );
   }
 
   //ACX3C: If we're examining gender trait, check the "number" trait, and
-  //if the number traitValyyes do not include "singular", then remove "m", "m1", "m2", "m3", "f", "n" from the gender array.
+  //if the number traitValues do not include "singular", then remove "m", "m1", "m2", "m3", "f", "n" from the gender array.
 
   let incompatibleTraitsRef = refObj.incompatibleTraitsRef[currentLanguage];
 
   consol.log({ currentLanguage });
   consol.log({ incompatibleTraitsRef });
 
-  Object.keys(structureChunk).forEach((traitKeyy) => {
-    //eg traitKeyy = "gender"
-    if (!incompatibleTraitsRef[traitKeyy]) {
+  Object.keys(structureChunk).forEach((traitKey) => {
+    //eg traitKey = "gender"
+    if (!incompatibleTraitsRef[traitKey]) {
       return;
     }
 
-    Object.keys(incompatibleTraitsRef[traitKeyy]).forEach(
-      (traitKeyyToCheckBy) => {
-        //eg traitKeyyToCheckBy = "number"
+    Object.keys(incompatibleTraitsRef[traitKey]).forEach(
+      (traitKeyToCheckBy) => {
+        //eg traitKeyToCheckBy = "number"
         if (
-          structureChunk[traitKeyyToCheckBy] &&
-          structureChunk[traitKeyyToCheckBy].length
+          structureChunk[traitKeyToCheckBy] &&
+          structureChunk[traitKeyToCheckBy].length
         ) {
-          if (structureChunk[traitKeyyToCheckBy].length > 1) {
+          if (structureChunk[traitKeyToCheckBy].length > 1) {
             consol.throw(
-              `ckos Unsure how to handle multiple traitValyyes for ${traitKeyyToCheckBy}`
+              `ckos Unsure how to handle multiple traitValues for ${traitKeyToCheckBy}`
             );
           }
 
           Object.keys(
-            incompatibleTraitsRef[traitKeyy][traitKeyyToCheckBy]
-          ).forEach((traitValyyeToCheckBy) => {
-            //eg traitValyyeToCheckBy = "plural"
+            incompatibleTraitsRef[traitKey][traitKeyToCheckBy]
+          ).forEach((traitValueToCheckBy) => {
+            //eg traitValueToCheckBy = "plural"
             if (
-              !structureChunk[traitKeyyToCheckBy].includes(traitValyyeToCheckBy)
+              !structureChunk[traitKeyToCheckBy].includes(traitValueToCheckBy)
             ) {
-              let compatibleTraitValyyes =
-                incompatibleTraitsRef[traitKeyy][traitKeyyToCheckBy][
-                  traitValyyeToCheckBy
+              let compatibleTraitValues =
+                incompatibleTraitsRef[traitKey][traitKeyToCheckBy][
+                  traitValueToCheckBy
                 ];
-              //eg compatibleTraitValyyes = ["virile", "nonvirile"]
+              //eg compatibleTraitValues = ["virile", "nonvirile"]
 
               //eg structureChunk["number"] is ["plural"],
-              //so remove any gender traitValyye that don't fit with that.
-              structureChunk[traitKeyy] = structureChunk[traitKeyy].filter(
-                (traitValyye) => !compatibleTraitValyyes.includes(traitValyye)
+              //so remove any gender traitValue that don't fit with that.
+              structureChunk[traitKey] = structureChunk[traitKey].filter(
+                (traitValue) => !compatibleTraitValues.includes(traitValue)
               );
             }
           });
@@ -137,11 +136,11 @@ exports.getTranslatedTenseDescription = (
 
 exports.skipThisStepInPreprocessStructureChunks = (
   currentLanguage,
-  featureValyye,
+  featureValue,
   structureChunk
 ) => {
   if (currentLanguage === "POL") {
-    if (featureValyye === "tenseDescription") {
+    if (featureValue === "tenseDescription") {
       if (
         structureChunk.tense &&
         structureChunk.tense.length &&
@@ -154,7 +153,7 @@ exports.skipThisStepInPreprocessStructureChunks = (
   }
 };
 
-exports.validTraitKeyysPerStructureChunkWordtype = (
+exports.validTraitKeysPerStructureChunkWordtype = (
   currentLanguage,
   structureChunk,
   kindsOfKeyOnLObj
@@ -163,46 +162,44 @@ exports.validTraitKeyysPerStructureChunkWordtype = (
     kindsOfKeyOnLObj = ["selectors", "hybridSelectors", "inflectionChains"];
   }
 
-  let traitsRef = refObj.lemmaObjectTraitKeyys[currentLanguage];
+  let traitsRef = refObj.lemmaObjectTraitKeys[currentLanguage];
 
-  let validTraitKeyys = [];
+  let validTraitKeys = [];
 
   kindsOfKeyOnLObj.forEach((kindOfKeyOnLObj) => {
-    let additionalValidTraitKeyys =
-      traitsRef[kindOfKeyOnLObj][gpUtils.getWorrdtypeStCh(structureChunk)];
+    let additionalValidTraitKeys =
+      traitsRef[kindOfKeyOnLObj][gpUtils.getWordtypeStCh(structureChunk)];
 
-    if (additionalValidTraitKeyys) {
-      if (!Array.isArray(additionalValidTraitKeyys)) {
+    if (additionalValidTraitKeys) {
+      if (!Array.isArray(additionalValidTraitKeys)) {
         consol.throw(
-          "twnl additionalValidTraitKeyys in validTraitKeyysPerStructureChunkWordtype fxn should have been array."
+          "twnl additionalValidTraitKeys in validTraitKeysPerStructureChunkWordtype fxn should have been array."
         );
       }
 
-      validTraitKeyys = [...validTraitKeyys, ...additionalValidTraitKeyys];
+      validTraitKeys = [...validTraitKeys, ...additionalValidTraitKeys];
     }
   });
 
-  return validTraitKeyys;
+  return validTraitKeys;
 };
 
-exports.giveAdjustedTraitValyye = (
+exports.giveAdjustedTraitValue = (
   questionLanguage,
   answerLanguage,
-  traitKeyy,
-  traitValyye
+  traitKey,
+  traitValue
 ) => {
   if (
-    refObj.traitValyyeTranslation[questionLanguage] &&
-    refObj.traitValyyeTranslation[questionLanguage][answerLanguage]
+    refObj.traitValueTranslation[questionLanguage] &&
+    refObj.traitValueTranslation[questionLanguage][answerLanguage]
   ) {
-    let traitValyyeTranslationRef =
-      refObj.traitValyyeTranslation[questionLanguage][answerLanguage][
-        traitKeyy
-      ];
+    let traitValueTranslationRef =
+      refObj.traitValueTranslation[questionLanguage][answerLanguage][traitKey];
 
-    if (traitValyyeTranslationRef && traitValyyeTranslationRef[traitValyye]) {
-      return traitValyyeTranslationRef[traitValyye].slice(0);
+    if (traitValueTranslationRef && traitValueTranslationRef[traitValue]) {
+      return traitValueTranslationRef[traitValue].slice(0);
     }
   }
-  return [traitValyye];
+  return [traitValue];
 };

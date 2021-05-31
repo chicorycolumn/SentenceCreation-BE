@@ -4,7 +4,7 @@ const uUtils = require("../utils/universalUtils.js");
 
 const {
   combineAndExplodeTwoSuperArrays,
-  areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual,
+  areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual,
 } = require("../utils/generalPurposeUtils.js");
 
 const {
@@ -14,12 +14,12 @@ const {
   areTwoObjectsEqual,
 } = require("../utils/universalUtils.js");
 
-xdescribe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual", () => {
+xdescribe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual", () => {
   it("A. Two singleton arrays in same order, strings. Equal.", () => {
     const input1 = [["my", "name", "is", "norbs"]];
     const input2 = [["my", "name", "is", "norbs"]];
     const actual =
-      areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
+      areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
         input1,
         input2
       );
@@ -29,7 +29,7 @@ xdescribe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsE
     const input1 = [["my", "name", "is", "norbs"]];
     const input2 = [["my", "name", "aint", "norbs"]];
     const actual =
-      areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
+      areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
         input1,
         input2
       );
@@ -39,7 +39,7 @@ xdescribe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsE
     const input1 = [["my", "name", "is", "norbs"]];
     const input2 = [["is", "norbs", "my", "name"]];
     const actual =
-      areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
+      areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
         input1,
         input2
       );
@@ -52,12 +52,12 @@ xdescribe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsE
       ["is", "norbs", "my", "name"],
     ];
     const actualA =
-      areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
+      areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
         input1,
         input2
       );
     const actualB =
-      areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
+      areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
         input2,
         input1
       );
@@ -68,7 +68,7 @@ xdescribe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsE
     const input1 = [["norbs", "my", "name", "is", "norbs"]];
     const input2 = [["is", "norbs", "my", "my", "my", "name"]];
     const actual =
-      areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
+      areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
         input1,
         input2
       );
@@ -78,7 +78,7 @@ xdescribe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsE
     const input1 = [["my", "name", "is", "norbs"]];
     const input2 = [["aint", "norbs", "my", "name"]];
     const actual =
-      areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
+      areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
         input1,
         input2
       );
@@ -113,7 +113,7 @@ xdescribe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsE
       ],
     ];
     const actual =
-      areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
+      areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
         input1,
         input2
       );
@@ -158,7 +158,7 @@ xdescribe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsE
       ],
     ];
     const actual =
-      areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
+      areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
         input1,
         input2
       );
@@ -192,7 +192,7 @@ xdescribe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsE
       ],
     ];
     const actual =
-      areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
+      areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
         input1,
         input2
       );
@@ -226,7 +226,7 @@ xdescribe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsE
       ],
     ];
     const actual =
-      areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
+      areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
         input1,
         input2
       );
@@ -260,7 +260,7 @@ xdescribe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsE
       ],
     ];
     const actual =
-      areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
+      areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
         input1,
         input2
       );
@@ -294,7 +294,7 @@ xdescribe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsE
       ],
     ];
     const actual =
-      areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
+      areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
         input1,
         input2
       );
@@ -328,7 +328,7 @@ xdescribe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsE
       ],
     ];
     const actual =
-      areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
+      areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
         input1,
         input2
       );
@@ -339,12 +339,12 @@ xdescribe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsE
     const input1 = [["my", "name", "is", "norbs"]];
     const input2 = [["my", "name", "is", "norbs", "truly"]];
     const actualA =
-      areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
+      areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
         input1,
         input2
       );
     const actualB =
-      areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
+      areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
         input2,
         input1
       );
@@ -362,7 +362,7 @@ xdescribe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsE
       ["my", "nickname", "is", "norbs"],
     ];
     const actual =
-      areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
+      areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
         input1,
         input2
       );
@@ -381,7 +381,7 @@ xdescribe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsE
       ["my", "nickname", "is", "norbs"],
     ];
     const actual =
-      areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
+      areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
         input1,
         input2
       );
@@ -397,7 +397,7 @@ xdescribe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsE
       ["my", "nickname", "aint", "norbs"],
     ];
     const actual =
-      areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
+      areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
         input1,
         input2
       );
@@ -413,7 +413,7 @@ xdescribe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsE
       ["is", "my", "norbs", "nickname"],
     ];
     const actual =
-      areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
+      areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
         input1,
         input2
       );
@@ -429,7 +429,7 @@ xdescribe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsE
       ["is", "norbs", "my", "name"],
     ];
     const actual =
-      areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
+      areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
         input1,
         input2
       );
@@ -445,7 +445,7 @@ xdescribe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsE
       ["aint", "norbs", "nickname", "my"],
     ];
     const actual =
-      areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
+      areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
         input1,
         input2
       );
@@ -502,7 +502,7 @@ xdescribe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsE
       ],
     ];
     const actual =
-      areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
+      areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
         input1,
         input2
       );
@@ -558,7 +558,7 @@ xdescribe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsE
       ],
     ];
     const actual =
-      areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
+      areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
         input1,
         input2
       );
@@ -614,7 +614,7 @@ xdescribe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsE
       ],
     ];
     const actual =
-      areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
+      areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
         input1,
         input2
       );
@@ -670,7 +670,7 @@ xdescribe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsE
       ],
     ];
     const actual =
-      areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
+      areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
         input1,
         input2
       );
@@ -726,7 +726,7 @@ xdescribe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsE
       ],
     ];
     const actual =
-      areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
+      areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
         input1,
         input2
       );
@@ -785,7 +785,7 @@ xdescribe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsE
       ],
     ];
     const actual =
-      areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
+      areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
         input1,
         input2
       );
@@ -875,7 +875,7 @@ xdescribe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsE
       ],
     ];
     const actual =
-      areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
+      areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
         input1,
         input2
       );
@@ -931,7 +931,7 @@ xdescribe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsE
       ],
     ];
     const actual =
-      areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
+      areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
         input1,
         input2
       );
@@ -987,7 +987,7 @@ xdescribe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsE
       ],
     ];
     const actual =
-      areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
+      areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
         input1,
         input2
       );
@@ -1004,7 +1004,7 @@ xdescribe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsE
       ["my", "nickname", "is", "norbs"],
     ];
     const actual =
-      areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
+      areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
         input1,
         input2
       );
@@ -1021,12 +1021,12 @@ xdescribe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsE
       ["I", "have", "no", "match", "in", "input1"],
     ];
     const actualA =
-      areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
+      areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
         input1,
         input2
       );
     const actualB =
-      areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
+      areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
         input2,
         input1
       );
@@ -1047,12 +1047,12 @@ xdescribe("areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsE
       ["I", "no", "have", "match", "in", "input1"],
     ];
     const actualA =
-      areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
+      areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
         input1,
         input2
       );
     const actualB =
-      areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
+      areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
         input2,
         input1
       );

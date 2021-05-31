@@ -5,49 +5,47 @@ const uUtils = require("../utils/universalUtils.js");
 const consol = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 
-exports.translateAnnoTraitValyye = (
-  annoTraitKeyy,
+exports.translateAnnoTraitValue = (
+  annoTraitKey,
   structureChunk,
   languagesObj
 ) => {
   let { answerLanguage, questionLanguage } = languagesObj;
 
-  let annoTraitValyye = structureChunk.annotations[annoTraitKeyy];
+  let annoTraitValue = structureChunk.annotations[annoTraitKey];
 
-  if (annoTraitKeyy === "gender") {
+  if (annoTraitKey === "gender") {
     if (structureChunk.number) {
       if (structureChunk.number.length > 1) {
-        consol.throw("cshb #ERR ALL:translateAnnoTraitValyye.");
+        consol.throw("cshb #ERR ALL:translateAnnoTraitValue.");
       }
 
       const pluralVirilityAndSingularConversionRef =
         refObj.pluralVirilityAndSingularConversionRef[questionLanguage];
 
       if (structureChunk.number[0] === "plural") {
-        if (
-          !pluralVirilityAndSingularConversionRef["plural"][annoTraitValyye]
-        ) {
+        if (!pluralVirilityAndSingularConversionRef["plural"][annoTraitValue]) {
           consol.throw(
-            "mkow #ERR ALL:translateAnnoTraitValyye. Could not convert virility of annoTraitValyye: " +
-              annoTraitValyye
+            "mkow #ERR ALL:translateAnnoTraitValue. Could not convert virility of annoTraitValue: " +
+              annoTraitValue
           );
         }
 
-        annoTraitValyye =
-          pluralVirilityAndSingularConversionRef["plural"][annoTraitValyye];
+        annoTraitValue =
+          pluralVirilityAndSingularConversionRef["plural"][annoTraitValue];
       }
     }
 
     let annotationToPlainspeakRef = refObj.annotationToPlainspeakRef;
 
     let adjustedAnnotation =
-      annotationToPlainspeakRef["gender"][annoTraitValyye];
+      annotationToPlainspeakRef["gender"][annoTraitValue];
 
     return typeof adjustedAnnotation === "string"
       ? adjustedAnnotation
       : uUtils.selectRandom(adjustedAnnotation);
   } else {
-    return annoTraitValyye;
+    return annoTraitValue;
   }
 };
 
@@ -58,7 +56,7 @@ exports.adjustVirilityOfStructureChunk = (
 ) => {
   consol.log("gxow ALL adjustVirilityOfStructureChunk", consoleLogLaabel);
 
-  if (gpUtils.getWorrdtypeStCh(structureChunk) === "noun") {
+  if (gpUtils.getWordtypeStCh(structureChunk) === "noun") {
     // Because m -> plural -> virile and then trying to select Ojciec, which isn't virile, it's m, so will ERR later.
     return;
   }
@@ -96,43 +94,43 @@ exports.adjustVirilityOfStructureChunk = (
   if (/all.*/.test(gender)) {
     if (gender.length !== 1) {
       consol.throw(
-        `#ERR vcvl ALL:adjustVirilityOfStructureChunk. Gender traitKeyys arr contained a metaGender traitKeyy, that's fine, but it contained other traitKeyys too? That's too much. "${gender.toString()}"`
+        `#ERR vcvl ALL:adjustVirilityOfStructureChunk. Gender traitKeys arr contained a metaGender traitKey, that's fine, but it contained other traitKeys too? That's too much. "${gender.toString()}"`
       );
     }
 
-    gender = refObj.metaTraitValyyes[currentLanguage]["gender"][gender];
+    gender = refObj.metaTraitValues[currentLanguage]["gender"][gender];
   }
 
   let pluralVirilityAndSingularConversionRef =
     refObj.pluralVirilityAndSingularConversionRef[currentLanguage];
 
-  let newGenderTraitKeyys = [];
+  let newGenderTraitKeys = [];
 
   if (number.includes("singular")) {
-    gender.forEach((genderTraitKeyy) => {
-      newGenderTraitKeyys.push(genderTraitKeyy);
+    gender.forEach((genderTraitKey) => {
+      newGenderTraitKeys.push(genderTraitKey);
     });
   }
 
   if (number.includes("plural")) {
-    gender.forEach((genderTraitKeyy) => {
+    gender.forEach((genderTraitKey) => {
       consol.log("ksdx ALL adjustVirilityOfStructureChunk", {
-        genderTraitKeyy,
+        genderTraitKey,
       });
 
-      newGenderTraitKeyys = [
-        ...newGenderTraitKeyys,
-        ...pluralVirilityAndSingularConversionRef["plural"][genderTraitKeyy],
+      newGenderTraitKeys = [
+        ...newGenderTraitKeys,
+        ...pluralVirilityAndSingularConversionRef["plural"][genderTraitKey],
       ];
       // if (shouldRetainOriginals) {
-      //   newGenderTraitKeyys.push(genderTraitKeyy);
+      //   newGenderTraitKeys.push(genderTraitKey);
       // }
     });
   }
 
-  let newGenderTraitKeyysTrimmed = Array.from(new Set(newGenderTraitKeyys));
+  let newGenderTraitKeysTrimmed = Array.from(new Set(newGenderTraitKeys));
 
-  structureChunk.gender = newGenderTraitKeyysTrimmed;
+  structureChunk.gender = newGenderTraitKeysTrimmed;
 
   consol.log(
     "[1;35m " +
@@ -152,21 +150,21 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
     );
   }
 
-  let metaTraitValyyesRef = refObj.metaTraitValyyes[currentLanguage];
+  let metaTraitValuesRef = refObj.metaTraitValues[currentLanguage];
 
   sentenceStructure.forEach((structureChunk) => {
-    if (gpUtils.getWorrdtypeStCh(structureChunk) === "fixed") {
+    if (gpUtils.getWordtypeStCh(structureChunk) === "fixed") {
       return;
     }
 
     if (
       stChTraits["number"].compatibleWordtypes.includes(
-        gpUtils.getWorrdtypeStCh(structureChunk)
+        gpUtils.getWordtypeStCh(structureChunk)
       ) &&
       (!structureChunk.number || !structureChunk.number.length)
     ) {
       structureChunk.number = uUtils.copyWithoutReference(
-        stChTraits["number"].possibleTraitValyyes
+        stChTraits["number"].possibleTraitValues
       );
     }
 
@@ -177,31 +175,31 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
       );
     }
 
-    if (gpUtils.getWorrdtypeStCh(structureChunk) === "adjective") {
+    if (gpUtils.getWordtypeStCh(structureChunk) === "adjective") {
       if (!structureChunk.form || !structureChunk.form.length) {
         structureChunk.form = ["simple"];
       }
     }
 
-    if (gpUtils.getWorrdtypeStCh(structureChunk) === "pronoun") {
+    if (gpUtils.getWordtypeStCh(structureChunk) === "pronoun") {
       if (!structureChunk.form || !structureChunk.form.length) {
         structureChunk.form = ["pronoun"];
       }
     }
 
     if (
-      gpUtils.getWorrdtypeStCh(structureChunk) === "noun" ||
-      gpUtils.getWorrdtypeStCh(structureChunk) === "pronoun"
+      gpUtils.getWordtypeStCh(structureChunk) === "noun" ||
+      gpUtils.getWordtypeStCh(structureChunk) === "pronoun"
     ) {
       if (!structureChunk.gcase || !structureChunk.gcase.length) {
         structureChunk.gcase = ["nom"];
       }
     }
 
-    if (gpUtils.getWorrdtypeStCh(structureChunk) === "pronoun") {
+    if (gpUtils.getWordtypeStCh(structureChunk) === "pronoun") {
       if (structureChunk.agreeWith) {
         if (
-          gpUtils.getWorrdtypeAgree(structureChunk) === "noun" &&
+          gpUtils.getWordtypeAgree(structureChunk) === "noun" &&
           (!structureChunk.person || !structureChunk.person.length)
         ) {
           structureChunk.person = ["3per"];
@@ -217,19 +215,19 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
         ) {
           structureChunk.gender = [
             ...structureChunk.gender,
-            ...metaTraitValyyesRef["gender"]["allSingularGenders"],
+            ...metaTraitValuesRef["gender"]["allSingularGenders"],
           ];
         }
         if (structureChunk.number && structureChunk.number.includes("plural")) {
           structureChunk.gender = [
             ...structureChunk.gender,
-            ...metaTraitValyyesRef["gender"]["allPluralGenders"],
+            ...metaTraitValuesRef["gender"]["allPluralGenders"],
           ];
         }
       }
     }
 
-    if (gpUtils.getWorrdtypeStCh(structureChunk) === "verb") {
+    if (gpUtils.getWordtypeStCh(structureChunk) === "verb") {
       if (!structureChunk.form || !structureChunk.form.length) {
         structureChunk.form = ["verbal"];
       }
@@ -252,17 +250,17 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
           structureChunk.tenseDescription =
             refObj.structureChunkTraits[
               currentLanguage
-            ].tenseDescription.possibleTraitValyyes.slice(0);
+            ].tenseDescription.possibleTraitValues.slice(0);
         }
       }
 
       if (structureChunk.agreeWith) {
         if (
-          gpUtils.getWorrdtypeAgree(structureChunk) === "noun" &&
+          gpUtils.getWordtypeAgree(structureChunk) === "noun" &&
           (!structureChunk.person || !structureChunk.person.length)
         ) {
           structureChunk.person = ["3per"];
-        } else if (gpUtils.getWorrdtypeAgree(structureChunk) === "pronoun") {
+        } else if (gpUtils.getWordtypeAgree(structureChunk) === "pronoun") {
           let headChunk = (structureChunk.person = sentenceStructure.find(
             (potentialHeadChunk) => {
               return potentialHeadChunk.chunkId === structureChunk.agreeWith;
@@ -295,27 +293,27 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   }
 };
 
-exports.convertmetaTraitValyyes = (
+exports.convertmetaTraitValues = (
   sourceObjectArray,
   currentLanguage,
   objType
 ) => {
   if (!["stCh", "lObj"].includes(objType)) {
     throw (
-      "allLangUtils.convertmetaTraitValyyes was given wrong objType: " + objType
+      "allLangUtils.convertmetaTraitValues was given wrong objType: " + objType
     );
   }
 
-  let metaTraitValyyesRef = refObj.metaTraitValyyes[currentLanguage];
+  let metaTraitValuesRef = refObj.metaTraitValues[currentLanguage];
 
   sourceObjectArray.forEach((sourceObject) => {
     //sourceObject eg= a lObj or a stCh
-    Object.keys(metaTraitValyyesRef).forEach((traitKeyy) => {
-      //traitKeyy eg= "gender"
+    Object.keys(metaTraitValuesRef).forEach((traitKey) => {
+      //traitKey eg= "gender"
 
-      let metaTraitValyyeRef = metaTraitValyyesRef[traitKeyy];
+      let metaTraitValueRef = metaTraitValuesRef[traitKey];
 
-      // metaTraitValyyeRef eg= {
+      // metaTraitValueRef eg= {
       //   allPersonalGenders: ["m", "f", "virile", "nonvirile"],
       //   allSingularGenders: ["m", "f", "n"],
       //   allPersonalSingularGenders: ["m", "f"],
@@ -324,41 +322,41 @@ exports.convertmetaTraitValyyes = (
       // }
 
       if (objType === "lObj") {
-        Object.keys(metaTraitValyyeRef).forEach((metaTraitValyye) => {
-          let regularTraitValyyes = metaTraitValyyeRef[metaTraitValyye];
+        Object.keys(metaTraitValueRef).forEach((metaTraitValue) => {
+          let regularTraitValues = metaTraitValueRef[metaTraitValue];
 
           uUtils.findKeysInObjectAndExecuteCallback(
             sourceObject,
-            metaTraitValyye,
+            metaTraitValue,
             (sourceObject) => {
-              uUtils.copyVaalueOfKey(
+              uUtils.copyValueOfKey(
                 sourceObject,
-                metaTraitValyye,
-                regularTraitValyyes,
+                metaTraitValue,
+                regularTraitValues,
                 true
               );
             }
           );
         });
       } else if (objType === "stCh") {
-        if (sourceObject[traitKeyy]) {
-          let currentTraitValyyes = sourceObject[traitKeyy];
-          let newTraitValyyes = [];
+        if (sourceObject[traitKey]) {
+          let currentTraitValues = sourceObject[traitKey];
+          let newTraitValues = [];
 
-          currentTraitValyyes.forEach((traitValyye) => {
-            if (metaTraitValyyeRef[traitValyye]) {
-              newTraitValyyes = [
-                ...newTraitValyyes,
-                ...metaTraitValyyeRef[traitValyye],
+          currentTraitValues.forEach((traitValue) => {
+            if (metaTraitValueRef[traitValue]) {
+              newTraitValues = [
+                ...newTraitValues,
+                ...metaTraitValueRef[traitValue],
               ];
             } else {
-              newTraitValyyes.push(traitValyye);
+              newTraitValues.push(traitValue);
             }
           });
 
-          sourceObject[traitKeyy] = newTraitValyyes;
-          consol.log("oiiw ALL convertmetaTraitValyyes", objType, {
-            newTraitValyyes,
+          sourceObject[traitKey] = newTraitValues;
+          consol.log("oiiw ALL convertmetaTraitValues", objType, {
+            newTraitValues,
           });
         }
       }
@@ -374,20 +372,20 @@ exports.decantMGNsBeforeFetchingOutputArray = (
   if ("check") {
     if (
       !selectedLemmaObject.gender ||
-      !gpUtils.traitValyyeIsMeta(selectedLemmaObject.gender)
+      !gpUtils.traitValueIsMeta(selectedLemmaObject.gender)
     ) {
       return;
     }
     if (
       !refFxn
-        .validTraitKeyysPerStructureChunkWordtype(
+        .validTraitKeysPerStructureChunkWordtype(
           currentLanguage,
           structureChunk
         )
         .includes("gender")
     ) {
       consol.throw(
-        `wpoh lObj has metagender, but gender is not an appropriate traitKeyy for this stCh wordtype?`
+        `wpoh lObj has metagender, but gender is not an appropriate traitKey for this stCh wordtype?`
       );
     }
   }
@@ -414,21 +412,21 @@ exports.correctMGNsBeforeFetchingOutputArray = (
   if ("check") {
     if (
       !selectedLemmaObject.gender ||
-      !gpUtils.traitValyyeIsMeta(selectedLemmaObject.gender)
+      !gpUtils.traitValueIsMeta(selectedLemmaObject.gender)
     ) {
       consol.log("neem");
       return;
     }
     if (
       !refFxn
-        .validTraitKeyysPerStructureChunkWordtype(
+        .validTraitKeysPerStructureChunkWordtype(
           currentLanguage,
           structureChunk
         )
         .includes("gender")
     ) {
       consol.throw(
-        `wpoh lObj has metagender, but gender is not an appropriate traitKeyy for this stCh wordtype?`
+        `wpoh lObj has metagender, but gender is not an appropriate traitKey for this stCh wordtype?`
       );
     }
 
@@ -438,12 +436,12 @@ exports.correctMGNsBeforeFetchingOutputArray = (
     );
   }
 
-  //1 Get the lObj metagender traitKeyy.
+  //1 Get the lObj metagender traitKey.
   let lObjMetagender = selectedLemmaObject.gender;
 
   if (!structureChunk.number || !structureChunk.number.length) {
     consol.throw(
-      "wpoj Cannot correctMetagenderByNumberInMGNs with no number traitKeyy."
+      "wpoj Cannot correctMetagenderByNumberInMGNs with no number traitKey."
     );
   }
 
@@ -474,13 +472,13 @@ exports.correctMGNsBeforeFetchingOutputArray = (
 
   //3 Now convert that. let convertedLObjMetagenderArr = ["m1", "f"]
   let convertedLObjMetagenderArr =
-    refObj.metaTraitValyyes[currentLanguage]["gender"][lObjMetagender];
+    refObj.metaTraitValues[currentLanguage]["gender"][lObjMetagender];
 
   //4 If stCh has gender, then filter down so only the ones present in convertedLObjMetagenderArr remain.
   //  and if it doesn't have gender, set it as that.
   if (structureChunk.gender && structureChunk.gender.length) {
-    structureChunk.gender = structureChunk.gender.filter((genderTraitValyye) =>
-      convertedLObjMetagenderArr.includes(genderTraitValyye)
+    structureChunk.gender = structureChunk.gender.filter((genderTraitValue) =>
+      convertedLObjMetagenderArr.includes(genderTraitValue)
     );
   } else {
     structureChunk.gender = convertedLObjMetagenderArr.slice(0);

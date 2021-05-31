@@ -9,7 +9,7 @@ exports.sentenceFormulasBank = [
       //   agreeWith: "npe-1",
       //   definiteness: ["definite", "indefinite", "zero"],
       // },
-      { chunkId: "fix-1", chunkValyye: "the" },
+      { chunkId: "fix-1", chunkValue: "the" },
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
@@ -37,7 +37,7 @@ exports.sentenceFormulasBank = [
       //   agreeWith: "npe-1",
       //   definiteness: ["definite", "indefinite", "zero"],
       // },
-      { chunkId: "fix-1", chunkValyye: "the" },
+      { chunkId: "fix-1", chunkValue: "the" },
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
@@ -51,7 +51,7 @@ exports.sentenceFormulasBank = [
         tenseDescription: ["present"],
         andTags: ["basic2"],
       },
-      { chunkId: "fix-2", chunkValyye: "quickly" },
+      { chunkId: "fix-2", chunkValue: "quickly" },
     ],
     primaryOrders: [["fix-1", "npe-1", "ver-1", "fix-2"]],
     additionalOrders: [["fix-2", "fix-1", "npe-1", "ver-1"]],
@@ -61,7 +61,7 @@ exports.sentenceFormulasBank = [
     sentenceFormulaId: "ENG-00-102a",
     translations: { POL: ["POL-00-102a"] },
     sentenceStructure: [
-      { chunkId: "fix-1", chunkValyye: "I" },
+      { chunkId: "fix-1", chunkValue: "I" },
       {
         chunkId: "ver-1",
         andTags: ["basic2"],

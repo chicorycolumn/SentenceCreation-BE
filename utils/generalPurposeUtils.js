@@ -2,7 +2,7 @@ const uUtils = require("./universalUtils.js");
 const consol = require("./zerothOrder/consoleLoggingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 
-exports.areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual =
+exports.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual =
   (array1, array2) => {
     //Ignores order.
     //Ignores duplicates.
@@ -87,7 +87,7 @@ exports.areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqua
               );
             } else {
               consol.throw(
-                `erql areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual. Unexpected typeof for a selected words array item "${typeof itemFromA}".`
+                `erql areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual. Unexpected typeof for a selected words array item "${typeof itemFromA}".`
               );
             }
           });
@@ -113,16 +113,16 @@ exports.updateSentenceStructureWithNewStructureChunksFromOutputUnits = (
   });
 };
 
-exports.traitKeyyShouldBeSpecified = (chunk, traitKeyy, allowOverwrite) => {
+exports.traitKeyShouldBeSpecified = (chunk, traitKey, allowOverwrite) => {
   return (
     !chunk ||
     (!(
-      chunk.formulaImportantTraitKeyys &&
-      chunk.formulaImportantTraitKeyys.includes(traitKeyy)
+      chunk.formulaImportantTraitKeys &&
+      chunk.formulaImportantTraitKeys.includes(traitKey)
     ) &&
       (allowOverwrite ||
-        !this.isTraitKeyyFilledOutOnChunk(chunk, traitKeyy) ||
-        this.traitValyyeIsMeta(null, chunk, traitKeyy)))
+        !this.isTraitKeyFilledOutOnChunk(chunk, traitKey) ||
+        this.traitValueIsMeta(null, chunk, traitKey)))
   );
 };
 
@@ -144,7 +144,7 @@ exports.copyAndCombineWordbanks = (wordbank1, wordbank2) => {
     }
     if (wordbank2Copy[key] && !Array.isArray(wordbank2Copy[key])) {
       consol.throw(
-        `#ERR cocq gp:copyAndCombineWordbanks. wordbank2 key "${key}" holds non array vaalue.`
+        `#ERR cocq gp:copyAndCombineWordbanks. wordbank2 key "${key}" holds non array value.`
       );
     }
 
@@ -286,15 +286,15 @@ exports.fillOutWashburneRefObj = (
     lemmaRefObj[targetKey] = [];
 
     lemmaRefObj[sourceKey].forEach((subObj) => {
-      subObj[subTargetKey].forEach((targetVaalue) => {
+      subObj[subTargetKey].forEach((targetValue) => {
         let existingSubObj = lemmaRefObj[targetKey].find((subObj2) => {
-          return subObj2[subTargetKey] === targetVaalue;
+          return subObj2[subTargetKey] === targetValue;
         });
         if (existingSubObj) {
           existingSubObj[subSourceKey].push(subObj[subSourceKey]);
         } else {
           let newSubObj = {};
-          newSubObj[subTargetKey] = targetVaalue;
+          newSubObj[subTargetKey] = targetValue;
           newSubObj[subSourceKey] = [subObj[subSourceKey]];
           lemmaRefObj[targetKey].push(newSubObj);
         }
@@ -307,13 +307,13 @@ exports.getLanguageFromLemmaObject = (lObj) => {
   return lObj.id.split("-")[0].toUpperCase();
 };
 
-exports.getWorrdtypeLObj = (lObj, returnFullWordtype) => {
+exports.getWordtypeLObj = (lObj, returnFullWordtype) => {
   let wordtypeShorthand = lObj.id.split("-")[1];
   let wordtypeRef = refObj.wordtypeShorthandTranslation;
 
   if (!Object.keys(wordtypeRef).includes(wordtypeShorthand)) {
     consol.throw(
-      `#ERR hshc getWorrdtypeLObj. Called with lObj of lObj.id: "${lObj.id}"`
+      `#ERR hshc getWordtypeLObj. Called with lObj of lObj.id: "${lObj.id}"`
     );
   }
 
@@ -322,14 +322,14 @@ exports.getWorrdtypeLObj = (lObj, returnFullWordtype) => {
   return returnFullWordtype ? fullWordtype : baseWordtype;
 };
 
-exports.getWorrdtypeStCh = (stCh, returnFullWordtype) => {
+exports.getWordtypeStCh = (stCh, returnFullWordtype) => {
   let wordtypeShorthand = stCh.chunkId.split("-")[0];
 
   let fullWordtype = refObj.wordtypeShorthandTranslation[wordtypeShorthand];
 
   if (!fullWordtype) {
     consol.throw(
-      `#ERR bsov getWorrdtypeStCh. wordtypeShorthand "${stCh.chunkId}" had no translated wordtype.`
+      `#ERR bsov getWordtypeStCh. wordtypeShorthand "${stCh.chunkId}" had no translated wordtype.`
     );
   }
 
@@ -337,18 +337,18 @@ exports.getWorrdtypeStCh = (stCh, returnFullWordtype) => {
   return returnFullWordtype ? fullWordtype : baseWordtype;
 };
 
-exports.getWorrdtypeAgree = (
+exports.getWordtypeAgree = (
   structureChunk,
-  agreeKeey = "agreeWith",
+  agreeKey = "agreeWith",
   returnFullWordtype
 ) => {
   const wordtypeRef = refObj.wordtypeShorthandTranslation;
 
-  let wordtypeShorthand = structureChunk[agreeKeey].split("-")[0];
+  let wordtypeShorthand = structureChunk[agreeKey].split("-")[0];
 
   if (!Object.keys(wordtypeRef).includes(wordtypeShorthand)) {
     consol.throw(
-      `#ERR xafb getWorrdtypeLObj. Object.keys(wordtypeRef) did not include wordtypeShorthand: "${wordtypeShorthand}"`
+      `#ERR xafb getWordtypeLObj. Object.keys(wordtypeRef) did not include wordtypeShorthand: "${wordtypeShorthand}"`
     );
   }
 
@@ -357,40 +357,40 @@ exports.getWorrdtypeAgree = (
   return returnFullWordtype ? fullWordtype : baseWordtype;
 };
 
-exports.isTraitKeyyFilledOutOnChunk = (chunk, traitKeyy) => {
+exports.isTraitKeyFilledOutOnChunk = (chunk, traitKey) => {
   if (!chunk) {
     return false;
   }
 
-  if (!chunk[traitKeyy]) {
+  if (!chunk[traitKey]) {
     return false;
   }
 
-  if (Array.isArray(chunk[traitKeyy]) && !chunk[traitKeyy].length) {
+  if (Array.isArray(chunk[traitKey]) && !chunk[traitKey].length) {
     return false;
   }
 
-  if (chunk[traitKeyy]) {
+  if (chunk[traitKey]) {
     return true;
   }
 };
 
-exports.doesStChTraitKeyyContainParticularTraitVaalyyes = (
+exports.doesStChTraitKeyContainParticularTraitVaalues = (
   chunk,
-  traitKeyy,
-  traitValyyeArr,
-  includeAll //includeAll true/false passes if EVERY/ANY item in traitValyyeArr is present.
+  traitKey,
+  traitValueArr,
+  includeAll //includeAll true/false passes if EVERY/ANY item in traitValueArr is present.
 ) => {
   return (
-    this.isTraitKeyyFilledOutOnChunk(chunk, traitKeyy) &&
+    this.isTraitKeyFilledOutOnChunk(chunk, traitKey) &&
     ((!includeAll &&
-      traitValyyeArr.some((traitValyye) =>
-        chunk[traitKeyy].includes(traitValyye)
+      traitValueArr.some((traitValue) =>
+        chunk[traitKey].includes(traitValue)
       )) ||
       (includeAll &&
-        chunk[traitKeyy].length === traitValyyeArr.length &&
-        traitValyyeArr.every((traitValyye) =>
-          chunk[traitKeyy].includes(traitValyye)
+        chunk[traitKey].length === traitValueArr.length &&
+        traitValueArr.every((traitValue) =>
+          chunk[traitKey].includes(traitValue)
         )))
   );
 };
@@ -400,7 +400,7 @@ exports.isTerminusObject = (selectedWord) => {
     return false;
   }
 
-  return uUtils.isKeyVaalueTypeObject(selectedWord) && selectedWord.isTerminus;
+  return uUtils.isKeyValueTypeObject(selectedWord) && selectedWord.isTerminus;
 };
 
 exports.terminusObjectNormalArray = (normalArr) => {
@@ -428,21 +428,21 @@ exports.lObjIsMGN = (lObj) => {
     return false;
   }
 
-  return this.traitValyyeIsMeta(lObj.gender);
+  return this.traitValueIsMeta(lObj.gender);
 };
 
-exports.traitValyyeIsMeta = (traitValyye, chunk, traitKeyy) => {
-  if (!traitValyye && !chunk && !traitKeyy) {
+exports.traitValueIsMeta = (traitValue, chunk, traitKey) => {
+  if (!traitValue && !chunk && !traitKey) {
     consol.throw("ertt No arguments to use.");
   }
 
-  if (!traitValyye) {
-    traitValyye = chunk[traitKeyy];
+  if (!traitValue) {
+    traitValue = chunk[traitKey];
   }
 
-  if (Array.isArray(traitValyye) && traitValyye.length === 1) {
-    traitValyye = traitValyye[0];
+  if (Array.isArray(traitValue) && traitValue.length === 1) {
+    traitValue = traitValue[0];
   }
 
-  return traitValyye.slice(0, 3) === "all";
+  return traitValue.slice(0, 3) === "all";
 };

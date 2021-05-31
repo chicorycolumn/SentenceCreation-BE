@@ -320,7 +320,7 @@ exports.processSentenceFormula = (
       "postHocAgreeWithPrimary",
       "postHocAgreeWithSecondary",
       "postHocAgreeWithTertiary",
-    ].some((postHocAgreeKeey) => chunk[postHocAgreeKeey])
+    ].some((postHocAgreeKey) => chunk[postHocAgreeKey])
   );
 
   //STEP THREE: Select PHD words and add to result array.
@@ -554,13 +554,13 @@ exports.processSentenceFormula = (
     outputArray.forEach((outputUnit) => {
       let { structureChunk } = outputUnit;
 
-      if (gpUtils.getWorrdtypeStCh(structureChunk) === "fixed") {
+      if (gpUtils.getWordtypeStCh(structureChunk) === "fixed") {
         return;
       }
       lfUtils.updateStructureChunk(outputUnit, currentLanguage);
     });
 
-    //Decanting otherChunks if they have multiple traitValyyes.
+    //Decanting otherChunks if they have multiple traitValues.
     let { headChunks, dependentChunks, otherChunks } =
       scUtils.sortStructureChunks(
         outputArray.map((outputUnit) => outputUnit.structureChunk)
@@ -570,20 +570,20 @@ exports.processSentenceFormula = (
         return;
       }
 
-      Object.keys(otherChunk).forEach((traitKeyy) => {
-        let traitValyye = otherChunk[traitKeyy];
+      Object.keys(otherChunk).forEach((traitKey) => {
+        let traitValue = otherChunk[traitKey];
 
         let reference =
-          refObj.structureChunkTraits[currentLanguage][traitKeyy] ||
-          refObj.structureChunkTraits["ALL"][traitKeyy];
+          refObj.structureChunkTraits[currentLanguage][traitKey] ||
+          refObj.structureChunkTraits["ALL"][traitKey];
 
         if (
           reference.expectedTypeOnStCh === "array" &&
-          !reference.ultimatelyMultipleTraitValyyesOkay &&
-          traitValyye.length > 1
+          !reference.ultimatelyMultipleTraitValuesOkay &&
+          traitValue.length > 1
         ) {
-          consol.log(`pqoi Decanting "${otherChunk.chunkId}" "${traitKeyy}".`);
-          otherChunk[traitKeyy] = [uUtils.selectRandom(otherChunk[traitKeyy])];
+          consol.log(`pqoi Decanting "${otherChunk.chunkId}" "${traitKey}".`);
+          otherChunk[traitKey] = [uUtils.selectRandom(otherChunk[traitKey])];
         }
       });
     });
@@ -853,79 +853,76 @@ exports.selectWordVersions = (
 
         let depUnits = [];
 
-        let agreeKeeys = [
+        let agreeKeys = [
           "agreeWith",
           "agreeWithSecondary",
           "agreeWithTertiary",
           "connectedTo",
         ];
 
-        agreeKeeys.forEach((agreeKeey) => {
+        agreeKeys.forEach((agreeKey) => {
           orderedOutputArr.forEach((unit) => {
             //Skeleton Clause
             if (
-              unit.structureChunk[agreeKeey] ===
+              unit.structureChunk[agreeKey] ===
               skeletonOutputUnit.structureChunk.chunkId
             )
               depUnits.push(unit);
           });
         });
 
-        let doneAnnoTraitKeyys = [];
+        let doneAnnoTraitKeys = [];
 
         Object.keys(skeletonOutputUnit.structureChunk.annotations).forEach(
-          (annoTraitKeyy) => {
-            let annoTraitValyye =
-              skeletonOutputUnit.structureChunk.annotations[annoTraitKeyy];
+          (annoTraitKey) => {
+            let annoTraitValue =
+              skeletonOutputUnit.structureChunk.annotations[annoTraitKey];
 
-            let thisAnnoTraitKeyyIsDone = false;
+            let thisAnnoTraitKeyIsDone = false;
 
             depUnits.forEach((depUnit) => {
-              if (thisAnnoTraitKeyyIsDone) {
+              if (thisAnnoTraitKeyIsDone) {
                 return;
               }
 
               if (
-                //If the annoTraitKeyy from the skeleton outputUnit's annos is an allowable transfer to this depCh,
-                refObj.lemmaObjectTraitKeyys[
+                //If the annoTraitKey from the skeleton outputUnit's annos is an allowable transfer to this depCh,
+                refObj.lemmaObjectTraitKeys[
                   currentLanguage
-                ].inheritableInflectionKeyys[
-                  gpUtils.getWorrdtypeStCh(depUnit.structureChunk, true)
-                ].includes(annoTraitKeyy)
+                ].inheritableInflectionKeys[
+                  gpUtils.getWordtypeStCh(depUnit.structureChunk, true)
+                ].includes(annoTraitKey)
               ) {
                 if (!depUnit.firstStageAnnotationsObj) {
                   depUnit.firstStageAnnotationsObj = {};
                 }
 
                 if (
-                  depUnit.firstStageAnnotationsObj[annoTraitKeyy] &&
-                  depUnit.firstStageAnnotationsObj[annoTraitKeyy] !==
-                    annoTraitValyye
+                  depUnit.firstStageAnnotationsObj[annoTraitKey] &&
+                  depUnit.firstStageAnnotationsObj[annoTraitKey] !==
+                    annoTraitValue
                 ) {
                   consol.throw(
-                    `ioev selectWordVersions Skeleton Clause. I'm trying to transfer in annos from an outputunit that didn't make it into this outputarr. But I'm looking at one of its depChs, and this depCh has an anno with a different annoTraitValyye?\nFor annoTraitKeyy "${annoTraitKeyy}", skeleton "${skeletonOutputUnit.structureChunk.chunkId}" had "${annoTraitValyye}" while depCh "${depCh.chunkId}" had "${depCh.annotations[annoTraitKeyy]}".`
+                    `ioev selectWordVersions Skeleton Clause. I'm trying to transfer in annos from an outputunit that didn't make it into this outputarr. But I'm looking at one of its depChs, and this depCh has an anno with a different annoTraitValue?\nFor annoTraitKey "${annoTraitKey}", skeleton "${skeletonOutputUnit.structureChunk.chunkId}" had "${annoTraitValue}" while depCh "${depCh.chunkId}" had "${depCh.annotations[annoTraitKey]}".`
                   );
                 }
 
                 //then transfer it to the depUnit.
-                depUnit.firstStageAnnotationsObj[annoTraitKeyy] =
-                  annoTraitValyye;
-                doneAnnoTraitKeyys.push(annoTraitKeyy);
-                thisAnnoTraitKeyyIsDone = true;
+                depUnit.firstStageAnnotationsObj[annoTraitKey] = annoTraitValue;
+                doneAnnoTraitKeys.push(annoTraitKey);
+                thisAnnoTraitKeyIsDone = true;
               }
             });
           }
         );
 
-        let abandonedAnnoTraitKeyys = Object.keys(
+        let abandonedAnnoTraitKeys = Object.keys(
           skeletonOutputUnit.structureChunk.annotations
-        ).filter(
-          (annoTraitKeyy) => !doneAnnoTraitKeyys.includes(annoTraitKeyy)
-        );
+        ).filter((annoTraitKey) => !doneAnnoTraitKeys.includes(annoTraitKey));
 
-        if (abandonedAnnoTraitKeyys.length) {
+        if (abandonedAnnoTraitKeys.length) {
           consol.throw(
-            `wtsu selectWordVersions Skeleton Clause. These annoTraitKeyys from skeleton "${skeletonOutputUnit.structureChunk.chunkId}" did not make it into outputArr in any way! [${abandonedAnnoTraitKeyys}].`
+            `wtsu selectWordVersions Skeleton Clause. These annoTraitKeys from skeleton "${skeletonOutputUnit.structureChunk.chunkId}" did not make it into outputArr in any way! [${abandonedAnnoTraitKeys}].`
           );
         }
 
@@ -1047,7 +1044,7 @@ exports.conformAnswerStructureToQuestionStructure = (
     //
     let questionStructureChunk = questionOutputArrItem.structureChunk;
 
-    if (gpUtils.getWorrdtypeStCh(questionStructureChunk) === "fixed") {
+    if (gpUtils.getWordtypeStCh(questionStructureChunk) === "fixed") {
       return;
     }
 
@@ -1081,15 +1078,15 @@ exports.conformAnswerStructureToQuestionStructure = (
       questionSelectedLemmaObject.translations[answerLanguage];
 
     let source =
-      words[gpUtils.giveSetKey(gpUtils.getWorrdtypeStCh(answerStructureChunk))];
+      words[gpUtils.giveSetKey(gpUtils.getWordtypeStCh(answerStructureChunk))];
     // answerLangUtils.preprocessLemmaObjectsMinor(source);
 
     matchingAnswerLemmaObjects = source.filter(
       (lObj) =>
         lemmasToSearch.includes(lObj.lemma) &&
         //Resolve issue of multipleWordtype allohoms.
-        gpUtils.getWorrdtypeLObj(lObj) ===
-          gpUtils.getWorrdtypeStCh(questionStructureChunk)
+        gpUtils.getWordtypeLObj(lObj) ===
+          gpUtils.getWordtypeStCh(questionStructureChunk)
     );
 
     let matchesLengthSnapshot = matchingAnswerLemmaObjects.length;
@@ -1117,14 +1114,14 @@ exports.conformAnswerStructureToQuestionStructure = (
       return;
     }
 
-    //...and then for both pronouns and all other worrdtypes, we get the id and set it.
+    //...and then for both pronouns and all other wordtypes, we get the id and set it.
     answerStructureChunk.specificIds = matchingAnswerLemmaObjects.map(
       (lObj) => lObj.id
     );
 
     //Do actually transfer gender, for person nouns.
     if (
-      gpUtils.getWorrdtypeStCh(questionStructureChunk, true) === "noun-person"
+      gpUtils.getWordtypeStCh(questionStructureChunk, true) === "noun-person"
     ) {
       addTraitToAnswerChunkWithAdjustment(
         questionStructureChunk,
@@ -1135,32 +1132,32 @@ exports.conformAnswerStructureToQuestionStructure = (
       );
     }
 
-    refObj.lemmaObjectTraitKeyys[
+    refObj.lemmaObjectTraitKeys[
       answerLanguage
     ].allowableTransfersFromQuestionStructure[
-      gpUtils.getWorrdtypeStCh(answerStructureChunk)
-    ].forEach((traitKeyy) => {
+      gpUtils.getWordtypeStCh(answerStructureChunk)
+    ].forEach((traitKey) => {
       //
       // STEP ONE: Update traits from list of allowable transfers.
       //
-      if (!questionStructureChunk[traitKeyy]) {
+      if (!questionStructureChunk[traitKey]) {
         return;
       }
 
       if (
-        answerStructureChunk.formulaImportantTraitKeyys &&
-        answerStructureChunk.formulaImportantTraitKeyys.includes(traitKeyy)
+        answerStructureChunk.formulaImportantTraitKeys &&
+        answerStructureChunk.formulaImportantTraitKeys.includes(traitKey)
       ) {
         consol.log(
           "jngy conformAnswerStructureToQuestionStructure I will not transfer '" +
-            traitKeyy +
+            traitKey +
             "' in SC:conformAtoQ step 1, as marked important in answerStCh."
         );
         return;
       }
 
       //Don't transfer Number if Q is Tantum Plurale.     eg if Q is "skrzypce" we'd want A to include both "violin" and "violins".
-      if (traitKeyy === "number" && questionSelectedLemmaObject.tantumPlurale) {
+      if (traitKey === "number" && questionSelectedLemmaObject.tantumPlurale) {
         consol.log(
           "yurw conformAnswerStructureToQuestionStructure Question lobj is a tantum, so we won't transfer Number trait."
         );
@@ -1169,7 +1166,7 @@ exports.conformAnswerStructureToQuestionStructure = (
 
       //Don't transfer Number, if all A lObjs are Tantum Plurale.     eg if Q is "violin" we don't want to specify that A must be singular, as "skrzypce" can't be singular.
       if (
-        traitKeyy === "number" &&
+        traitKey === "number" &&
         matchingAnswerLemmaObjects.length &&
         matchingAnswerLemmaObjects.every(
           (answerLemmaObject) => answerLemmaObject.tantumPlurale
@@ -1181,7 +1178,7 @@ exports.conformAnswerStructureToQuestionStructure = (
         return;
       }
 
-      if (traitKeyy === "tenseDescription") {
+      if (traitKey === "tenseDescription") {
         answerStructureChunk["tenseDescription"] = []; //Hard adjust.
 
         let tenseDescriptions = questionStructureChunk["tenseDescription"];
@@ -1220,7 +1217,7 @@ exports.conformAnswerStructureToQuestionStructure = (
       addTraitToAnswerChunkWithAdjustment(
         questionStructureChunk,
         answerStructureChunk,
-        traitKeyy,
+        traitKey,
         questionLanguage,
         answerLanguage
       );
@@ -1229,24 +1226,24 @@ exports.conformAnswerStructureToQuestionStructure = (
     function addTraitToAnswerChunkWithAdjustment(
       questionStructureChunk,
       answerStructureChunk,
-      traitKeyy,
+      traitKey,
       questionLanguage,
       answerLanguage
     ) {
       let adjustedArr = [];
 
-      questionStructureChunk[traitKeyy].forEach((traitValyye) => {
-        let adjustedTraitValyyes = refFxn.giveAdjustedTraitValyye(
+      questionStructureChunk[traitKey].forEach((traitValue) => {
+        let adjustedTraitValues = refFxn.giveAdjustedTraitValue(
           questionLanguage,
           answerLanguage,
-          traitKeyy,
-          traitValyye
+          traitKey,
+          traitValue
         );
 
-        adjustedArr = [...adjustedArr, ...adjustedTraitValyyes];
+        adjustedArr = [...adjustedArr, ...adjustedTraitValues];
       });
 
-      answerStructureChunk[traitKeyy] = adjustedArr;
+      answerStructureChunk[traitKey] = adjustedArr;
     }
 
     //
@@ -1257,38 +1254,38 @@ exports.conformAnswerStructureToQuestionStructure = (
     // So when going ENG to POL, that would be gender.
     // And then, with that list of traits, we will blind the answer structureChunks to these traits.
 
-    let possibleInflectionCategoryysOfQuestionLobjs =
-      refObj.lemmaObjectTraitKeyys[questionLanguage].inflectionChains[
-        gpUtils.getWorrdtypeStCh(answerStructureChunk)
+    let possibleInflectionCategorysOfQuestionLobjs =
+      refObj.lemmaObjectTraitKeys[questionLanguage].inflectionChains[
+        gpUtils.getWordtypeStCh(answerStructureChunk)
       ];
 
-    let possibleInflectionCategoryysOfAnswerLobjs =
-      refObj.lemmaObjectTraitKeyys[answerLanguage].inflectionChains[
-        gpUtils.getWorrdtypeStCh(answerStructureChunk)
+    let possibleInflectionCategorysOfAnswerLobjs =
+      refObj.lemmaObjectTraitKeys[answerLanguage].inflectionChains[
+        gpUtils.getWordtypeStCh(answerStructureChunk)
       ];
 
-    let possibleInflectionCategoryysOfAnswerLobjsButNotQuestionLobjs =
-      possibleInflectionCategoryysOfAnswerLobjs.filter(
-        (inflectionCategoryy) =>
-          !possibleInflectionCategoryysOfQuestionLobjs.includes(
-            inflectionCategoryy
+    let possibleInflectionCategorysOfAnswerLobjsButNotQuestionLobjs =
+      possibleInflectionCategorysOfAnswerLobjs.filter(
+        (inflectionCategory) =>
+          !possibleInflectionCategorysOfQuestionLobjs.includes(
+            inflectionCategory
           )
       );
 
-    possibleInflectionCategoryysOfAnswerLobjsButNotQuestionLobjs.forEach(
-      (inflectionCategoryy) => {
+    possibleInflectionCategorysOfAnswerLobjsButNotQuestionLobjs.forEach(
+      (inflectionCategory) => {
         if (
-          !answerStructureChunk.formulaImportantTraitKeyys ||
-          !answerStructureChunk.formulaImportantTraitKeyys.includes(
-            inflectionCategoryy
+          !answerStructureChunk.formulaImportantTraitKeys ||
+          !answerStructureChunk.formulaImportantTraitKeys.includes(
+            inflectionCategory
           )
         ) {
-          answerStructureChunk[inflectionCategoryy] = [];
+          answerStructureChunk[inflectionCategory] = [];
         }
       }
     );
 
-    allLangUtils.convertmetaTraitValyyes(
+    allLangUtils.convertmetaTraitValues(
       [answerStructureChunk],
       answerLanguage,
       "stCh"
@@ -1331,36 +1328,36 @@ exports.inheritFromHeadToDependentChunk = (
   );
   consol.log("w'dil inheritFromHeadToDependentChunk: headChunk", headChunk);
 
-  let normalinheritableInflectionKeyys =
-    refObj.lemmaObjectTraitKeyys[currentLanguage].inheritableInflectionKeyys[
-      gpUtils.getWorrdtypeStCh(dependentChunk, true)
+  let normalinheritableInflectionKeys =
+    refObj.lemmaObjectTraitKeys[currentLanguage].inheritableInflectionKeys[
+      gpUtils.getWordtypeStCh(dependentChunk, true)
     ];
 
   let hybridSelectors =
-    refObj.lemmaObjectTraitKeyys[currentLanguage].hybridSelectors[
-      (gpUtils.getWorrdtypeStCh(dependentChunk), true)
+    refObj.lemmaObjectTraitKeys[currentLanguage].hybridSelectors[
+      (gpUtils.getWordtypeStCh(dependentChunk), true)
     ] || [];
 
-  let inheritableInflectionKeyys = [
-    ...normalinheritableInflectionKeyys,
+  let inheritableInflectionKeys = [
+    ...normalinheritableInflectionKeys,
     ...hybridSelectors,
   ];
 
-  inheritableInflectionKeyys.forEach((traitKeyy) => {
+  inheritableInflectionKeys.forEach((traitKey) => {
     consol.log(
-      `kwwm inheritFromHeadToDependentChunk: "${headChunk.chunkId}" to "${dependentChunk.chunkId}". traitKeyy "${traitKeyy}".`
+      `kwwm inheritFromHeadToDependentChunk: "${headChunk.chunkId}" to "${dependentChunk.chunkId}". traitKey "${traitKey}".`
     );
     //Hard change.
     if (
-      headChunk[traitKeyy] &&
+      headChunk[traitKey] &&
       !(
-        dependentChunk.formulaImportantTraitKeyys &&
-        dependentChunk.formulaImportantTraitKeyys.includes(traitKeyy)
+        dependentChunk.formulaImportantTraitKeys &&
+        dependentChunk.formulaImportantTraitKeys.includes(traitKey)
       )
     ) {
-      let traitValyyeArr = uUtils.copyWithoutReference(headChunk[traitKeyy]);
+      let traitValueArr = uUtils.copyWithoutReference(headChunk[traitKey]);
 
-      dependentChunk[traitKeyy] = traitValyyeArr;
+      dependentChunk[traitKey] = traitValueArr;
     }
   });
 
@@ -1412,9 +1409,9 @@ exports.sortStructureChunks = (
         "postHocAgreeWithPrimary",
         "postHocAgreeWithSecondary",
         "postHocAgreeWithTertiary",
-      ].forEach((agreeKeey) => {
-        if (chunk[agreeKeey]) {
-          PHDheadIds.push(chunk[agreeKeey]);
+      ].forEach((agreeKey) => {
+        if (chunk[agreeKey]) {
+          PHDheadIds.push(chunk[agreeKey]);
         }
       });
     }
@@ -1440,7 +1437,7 @@ exports.sortStructureChunks = (
         "postHocAgreeWithPrimary",
         "postHocAgreeWithSecondary",
         "postHocAgreeWithTertiary",
-      ].some((agreeKeey) => structureChunk[agreeKeey])
+      ].some((agreeKey) => structureChunk[agreeKey])
   );
 
   let otherChunks = sentenceStructure.filter(

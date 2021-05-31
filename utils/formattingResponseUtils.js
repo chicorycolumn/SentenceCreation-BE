@@ -113,11 +113,11 @@ exports.pushSelectedWordToArray = (
 
       consol.log("vpre addAnnotationsAndPush. annoObj is " + annoObj);
 
-      if (structureChunk.educatorBlocksAnnotationsForTheseTraitKeyys) {
+      if (structureChunk.educatorBlocksAnnotationsForTheseTraitKeys) {
         consol.log(
           `vpri addAnnotationsAndPush will not add clarifiers [${Object.values(
             annoObj
-          )}] as "educatorBlocksAnnotationsForTheseTraitKeyys" true.`
+          )}] as "educatorBlocksAnnotationsForTheseTraitKeys" true.`
         );
       } else {
         consol.log(
@@ -169,7 +169,7 @@ exports.pushSelectedWordToArray = (
 
   if (!Array.isArray(selectedWord[pushKey])) {
     consol.throw(
-      `vcxx selectWordVersions vaalue inside tobj at pushKey "${pushKey}" should have been array but instead it was ${selectedWord[pushKey]}.`
+      `vcxx selectWordVersions value inside tobj at pushKey "${pushKey}" should have been array but instead it was ${selectedWord[pushKey]}.`
     );
   }
 

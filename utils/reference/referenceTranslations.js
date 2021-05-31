@@ -69,7 +69,7 @@ exports.pluralVirilityAndSingularConversionRef = {
   },
 };
 
-exports.traitValyyeTranslation = {
+exports.traitValueTranslation = {
   POL: {
     ENG: {
       gender: {

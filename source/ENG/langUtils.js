@@ -66,7 +66,7 @@ exports.selectWordVersions = (
   // >>> Indefinite Article
   // >>>
   if (
-    gpUtils.getWorrdtypeStCh(structureChunk) === "article" &&
+    gpUtils.getWordtypeStCh(structureChunk) === "article" &&
     structureChunk.form.includes("indefinite")
   ) {
     if (!subsequentOutputUnit) {
@@ -82,16 +82,16 @@ exports.selectWordVersions = (
 
     if (subsequentOutputUnit && subsequentOutputUnit.firstStageAnnotationsObj) {
       Object.keys(subsequentOutputUnit.firstStageAnnotationsObj).forEach(
-        (annoTraitKeyy) => {
-          let annoTraitValyye =
-            subsequentOutputUnit.firstStageAnnotationsObj[annoTraitKeyy];
+        (annoTraitKey) => {
+          let annoTraitValue =
+            subsequentOutputUnit.firstStageAnnotationsObj[annoTraitKey];
 
-          if (annoTraitValyye === "singular") {
+          if (annoTraitValue === "singular") {
             consol.log(
               `yuox selectWordVersions. Removing "singular" annotation from subsequent outputUnit, as current output unit is ENG indefinite article.`
             );
 
-            delete subsequentOutputUnit.firstStageAnnotationsObj[annoTraitKeyy];
+            delete subsequentOutputUnit.firstStageAnnotationsObj[annoTraitKey];
           }
         }
       );
@@ -157,36 +157,36 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
     "[1;35m " + "ywzr ENG preprocessStructureChunks-------------------" + "[0m"
   );
 
-  let metagenderRef = refObj.metaTraitValyyes[currentLanguage].gender;
+  let metagenderRef = refObj.metaTraitValues[currentLanguage].gender;
 
   sentenceStructure.forEach((structureChunk) => {
-    if (gpUtils.getWorrdtypeStCh(structureChunk) === "fixed") {
+    if (gpUtils.getWordtypeStCh(structureChunk) === "fixed") {
       return;
     }
 
-    if (gpUtils.getWorrdtypeStCh(structureChunk) === "preposition") {
+    if (gpUtils.getWordtypeStCh(structureChunk) === "preposition") {
       structureChunk.form = ["onlyForm"];
     }
 
-    if (gpUtils.getWorrdtypeStCh(structureChunk) === "noun") {
+    if (gpUtils.getWordtypeStCh(structureChunk) === "noun") {
       if (structureChunk.gcase && structureChunk.gcase.length) {
-        structureChunk.gcase = structureChunk.gcase.map((gcaseTraitValyye) => {
-          return ["nom", "gen"].includes(gcaseTraitValyye)
-            ? gcaseTraitValyye
+        structureChunk.gcase = structureChunk.gcase.map((gcaseTraitValue) => {
+          return ["nom", "gen"].includes(gcaseTraitValue)
+            ? gcaseTraitValue
             : "nom";
         });
       }
     }
 
     consol.log(
-      "fydk ENG preprocessStructureChunks s'tructureChunk.worrdtype",
-      gpUtils.getWorrdtypeStCh(structureChunk)
+      "fydk ENG preprocessStructureChunks s'tructureChunk.wordtype",
+      gpUtils.getWordtypeStCh(structureChunk)
     );
 
     if (
-      //If gender is an appropriate traitKeyy of this worrdtype.
-      refObj.lemmaObjectTraitKeyys[currentLanguage].inflectionChains[
-        gpUtils.getWorrdtypeStCh(structureChunk)
+      //If gender is an appropriate traitKey of this wordtype.
+      refObj.lemmaObjectTraitKeys[currentLanguage].inflectionChains[
+        gpUtils.getWordtypeStCh(structureChunk)
       ].includes("gender")
     ) {
       if (!structureChunk.gender || !structureChunk.gender.length) {
@@ -215,13 +215,13 @@ exports.preprocessLemmaObjectsMajor = (
   adjustLemmaObjectsOnly,
   currentLanguage
 ) => {
-  let metagenderRef = refObj.metaTraitValyyes[currentLanguage].gender;
+  let metagenderRef = refObj.metaTraitValues[currentLanguage].gender;
 
   matches.forEach((lObj) => {
-    if (gpUtils.getWorrdtypeLObj(lObj) === "pronoun") {
-      if (gpUtils.getWorrdtypeStCh(structureChunk) !== "pronoun") {
+    if (gpUtils.getWordtypeLObj(lObj) === "pronoun") {
+      if (gpUtils.getWordtypeStCh(structureChunk) !== "pronoun") {
         consol.throw(
-          "#ERR hcio preprocessLemmaObjectsMajor. lObj and stCh worrdtypes don't match."
+          "#ERR hcio preprocessLemmaObjectsMajor. lObj and stCh wordtypes don't match."
         );
       }
       if (!structureChunk.gender) {
@@ -238,20 +238,20 @@ exports.preprocessLemmaObjectsMajor = (
     }
   });
 
-  allLangUtils.convertmetaTraitValyyes(matches, "ENG", "lObj");
+  allLangUtils.convertmetaTraitValues(matches, "ENG", "lObj");
   // allLangUtils.preprocessLemmaObjects(matches, "ENG");
 };
 
 exports.preprocessLemmaObjectsMinor = (matches) => {
   matches.forEach((lObj) => {
-    if (gpUtils.getWorrdtypeLObj(lObj) === "noun") {
-      if (gpUtils.getWorrdtypeLObj(lObj, true) === "noun-person") {
+    if (gpUtils.getWordtypeLObj(lObj) === "noun") {
+      if (gpUtils.getWordtypeLObj(lObj, true) === "noun-person") {
         //bostonX
         if (!lObj.gender) {
           consol.throw(
             "#ERR vuww preprocessLemmaObjectsMinor. The lObj '" +
               lObj.id +
-              "' is a noun-person so should have a gender traitKeyy."
+              "' is a noun-person so should have a gender traitKey."
           );
         }
       } else {
@@ -261,19 +261,19 @@ exports.preprocessLemmaObjectsMinor = (matches) => {
   });
 };
 
-exports.formatTraitValyye = (traitKeyy, traitValyye, note) => {
+exports.formatTraitValue = (traitKey, traitValue, note) => {
   const metagenderRef = {
     allGenders: ["m", "f", "n", "virile", "nonvirile"],
     allPersonalGenders: ["m", "f", "virile", "nonvirile"],
   };
 
-  if (traitKeyy === "gender") {
-    if (metagenderRef[traitValyye]) {
-      return metagenderRef[traitValyye];
+  if (traitKey === "gender") {
+    if (metagenderRef[traitValue]) {
+      return metagenderRef[traitValue];
     }
   }
 
-  return [traitValyye];
+  return [traitValue];
 };
 
 exports.addLanguageParticularClarifiers = (
@@ -282,7 +282,7 @@ exports.addLanguageParticularClarifiers = (
   lemmaObject
 ) => {
   if (
-    gpUtils.getWorrdtypeStCh(structureChunk) === "verb" &&
+    gpUtils.getWordtypeStCh(structureChunk) === "verb" &&
     structureChunk.form.includes("verbal")
   ) {
     //
@@ -300,7 +300,7 @@ exports.addLanguageParticularClarifiers = (
     //
     if (structureChunk.tenseDescription) {
       if (structureChunk.tenseDescription.length > 1) {
-        throw "ENG:addLanguageParticularClarifiers expected this verb structureChunk's tenseDescription traitKeyy to hold only one traitValyye each, not more.";
+        throw "ENG:addLanguageParticularClarifiers expected this verb structureChunk's tenseDescription traitKey to hold only one traitValue each, not more.";
       }
 
       if (lemmaObject.inflections.infinitive === lemmaObject.inflections.v2) {
@@ -316,13 +316,13 @@ exports.addLanguageParticularClarifiers = (
             structureChunk.number[0] === "singular"
           )
         ) {
-          let annoTraitValyye = "past";
+          let annoTraitValue = "past";
 
           consol.log(
             "weaf ENG addLanguageParticularClarifiers------------------------------------------ADDED  CLARIFIER in Step 2, for Type 2 Syn",
-            annoTraitValyye
+            annoTraitValue
           );
-          structureChunk.annotations.tenseDescription = annoTraitValyye;
+          structureChunk.annotations.tenseDescription = annoTraitValue;
           structureChunk.preventAddingFurtherClarifiers = true; // We assume that no more clarifiers are needed.
         } else if (
           structureChunk.tenseDescription &&
@@ -336,13 +336,13 @@ exports.addLanguageParticularClarifiers = (
             structureChunk.number[0] === "singular"
           )
         ) {
-          let annoTraitValyye = "present";
+          let annoTraitValue = "present";
 
           consol.log(
             "befx ENG addLanguageParticularClarifiers------------------------------------------ADDED  CLARIFIER in Step 2, for Type 2 Syn",
-            annoTraitValyye
+            annoTraitValue
           );
-          structureChunk.annotations.tenseDescription = annoTraitValyye;
+          structureChunk.annotations.tenseDescription = annoTraitValue;
           structureChunk.preventAddingFurtherClarifiers = true; // We assume that no more clarifiers are needed.
         }
       }
@@ -367,21 +367,21 @@ exports.addSpecialVerbForms = (lemmaObject, currentLanguage) => {
     anteriorAdverbial: "having" + " " + v3,
   };
 
-  Object.keys(participlesRef).forEach((inflectionKeyy) => {
-    let inflectionValyye = participlesRef[inflectionKeyy];
-    lemmaObject.inflections[inflectionKeyy] = inflectionValyye;
+  Object.keys(participlesRef).forEach((inflectionKey) => {
+    let inflectionValue = participlesRef[inflectionKey];
+    lemmaObject.inflections[inflectionKey] = inflectionValue;
   });
 };
 
 exports.generateAdhocForms = (
-  adhocInflectionCategoryy,
+  adhocInflectionCategory,
   structureChunk,
   lObj,
   currentLanguage
 ) => {
   let resArr = [];
 
-  if (adhocInflectionCategoryy === "form") {
+  if (adhocInflectionCategory === "form") {
     exports.addSpecialVerbForms(lObj, currentLanguage);
 
     structureChunk.form.forEach((selectedForm) => {
@@ -395,8 +395,8 @@ exports.generateAdhocForms = (
         selectedForm,
         [lObj.inflections[selectedForm]],
         structureChunk,
-        null // I am giving no dataToUpdateWith, as the choice of traitKeyys specified won't affect the ENG adhoc form chosen.
-        // So in addToResArr it will make random selections for all the traitValyyes in the structureChunk, as I've given null here.
+        null // I am giving no dataToUpdateWith, as the choice of traitKeys specified won't affect the ENG adhoc form chosen.
+        // So in addToResArr it will make random selections for all the traitValues in the structureChunk, as I've given null here.
       );
     });
 
@@ -404,8 +404,8 @@ exports.generateAdhocForms = (
   }
 
   if (
-    adhocInflectionCategoryy === "tenseDescription" &&
-    gpUtils.getWorrdtypeStCh(structureChunk) === "verb" &&
+    adhocInflectionCategory === "tenseDescription" &&
+    gpUtils.getWordtypeStCh(structureChunk) === "verb" &&
     structureChunk.form.includes("verbal")
   ) {
     if (
@@ -417,13 +417,13 @@ exports.generateAdhocForms = (
 
     let { infinitive, v2, v3, thirdPS, gerund } = lObj.inflections;
 
-    Object.keys(inflectionRef).forEach((inflectionCategoryy) => {
-      let inflectionKeyys = inflectionRef[inflectionCategoryy].slice(0);
+    Object.keys(inflectionRef).forEach((inflectionCategory) => {
+      let inflectionKeys = inflectionRef[inflectionCategory].slice(0);
       if (
-        !Array.isArray(structureChunk[inflectionCategoryy]) ||
-        !structureChunk[inflectionCategoryy].length
+        !Array.isArray(structureChunk[inflectionCategory]) ||
+        !structureChunk[inflectionCategory].length
       ) {
-        structureChunk[inflectionCategoryy] = inflectionKeyys;
+        structureChunk[inflectionCategory] = inflectionKeys;
       }
     });
 
@@ -446,10 +446,10 @@ exports.generateAdhocForms = (
     function fetchTenseDescription(
       dataToUpdateWith,
       structureChunk,
-      tenseDescriptionTraitKeyyForRefObj = dataToUpdateWith.tenseDescription
+      tenseDescriptionTraitKeyForRefObj = dataToUpdateWith.tenseDescription
     ) {
       let { person, number, tenseDescription } = dataToUpdateWith; //These are used in engTenseDescriptionRef
-      let tenseDescriptionTraitKeyyForStructureChunk =
+      let tenseDescriptionTraitKeyForStructureChunk =
         dataToUpdateWith.tenseDescription;
 
       //This does have to be defined in here.
@@ -494,29 +494,29 @@ exports.generateAdhocForms = (
         "cond3 outcome": ["conditional perfect"],
       };
 
-      Object.keys(subsequentTenseDescRef).forEach((tenseDescInflectionKeyy) => {
-        let convertedTenseDescInflectionKeyys =
-          subsequentTenseDescRef[tenseDescInflectionKeyy];
+      Object.keys(subsequentTenseDescRef).forEach((tenseDescInflectionKey) => {
+        let convertedTenseDescInflectionKeys =
+          subsequentTenseDescRef[tenseDescInflectionKey];
 
-        let tenseDescInflectionValyyes = [];
-        convertedTenseDescInflectionKeyys.forEach(
-          (convertedTenseDescInflectionKeyy) => {
-            engTenseDescriptionRef[convertedTenseDescInflectionKeyy].forEach(
-              (tenseDescInflectionValyye) => {
-                tenseDescInflectionValyyes.push(tenseDescInflectionValyye);
+        let tenseDescInflectionValues = [];
+        convertedTenseDescInflectionKeys.forEach(
+          (convertedTenseDescInflectionKey) => {
+            engTenseDescriptionRef[convertedTenseDescInflectionKey].forEach(
+              (tenseDescInflectionValue) => {
+                tenseDescInflectionValues.push(tenseDescInflectionValue);
               }
             );
           }
         );
 
-        engTenseDescriptionRef[tenseDescInflectionKeyy] =
-          tenseDescInflectionValyyes;
+        engTenseDescriptionRef[tenseDescInflectionKey] =
+          tenseDescInflectionValues;
       });
 
       addToResArr(
         "tenseDescription",
-        tenseDescriptionTraitKeyyForStructureChunk,
-        engTenseDescriptionRef[tenseDescriptionTraitKeyyForRefObj],
+        tenseDescriptionTraitKeyForStructureChunk,
+        engTenseDescriptionRef[tenseDescriptionTraitKeyForRefObj],
         structureChunk,
         dataToUpdateWith
       );
@@ -592,8 +592,8 @@ exports.generateAdhocForms = (
   }
 
   function addToResArr(
-    adhocTraitKeyy,
-    adhocValyye,
+    adhocTraitKey,
+    adhocValue,
     selectedWordArr,
     structureChunk,
     dataToUpdateWith
@@ -604,50 +604,50 @@ exports.generateAdhocForms = (
 
     lfUtils.updateStructureChunkByAdhocOnly(
       structureChunkCopy,
-      adhocTraitKeyy,
-      adhocValyye
+      adhocTraitKey,
+      adhocValue
     );
 
     if (dataToUpdateWith) {
-      Object.keys(dataToUpdateWith).forEach((traitKeyy) => {
-        let traitValyye = dataToUpdateWith[traitKeyy];
+      Object.keys(dataToUpdateWith).forEach((traitKey) => {
+        let traitValue = dataToUpdateWith[traitKey];
 
         lfUtils.updateStructureChunkByAdhocOnly(
           structureChunkCopy,
-          traitKeyy,
-          traitValyye
+          traitKey,
+          traitValue
         );
       });
     } else {
       //If I am given no dataToUpdateWith, then I assume you want me to select random
-      //traitValyyes for all traitKeyys on the structureChunk, in order to lock in choices.
+      //traitValues for all traitKeys on the structureChunk, in order to lock in choices.
 
-      let allTraitKeyys = [];
+      let allTraitKeys = [];
 
-      let kindsOfTraitKeyyOnLObj = [
+      let kindsOfTraitKeyOnLObj = [
         "selectors",
         "hybridSelectors",
         "inflectionChains",
       ];
 
-      kindsOfTraitKeyyOnLObj.forEach((kindOfTraitKeyyOnLObj) => {
-        let traitKeyys =
-          refObj.lemmaObjectTraitKeyys[currentLanguage][kindOfTraitKeyyOnLObj][
-            gpUtils.getWorrdtypeStCh(structureChunkCopy)
+      kindsOfTraitKeyOnLObj.forEach((kindOfTraitKeyOnLObj) => {
+        let traitKeys =
+          refObj.lemmaObjectTraitKeys[currentLanguage][kindOfTraitKeyOnLObj][
+            gpUtils.getWordtypeStCh(structureChunkCopy)
           ];
 
-        if (traitKeyys) {
-          allTraitKeyys = [...allTraitKeyys, ...traitKeyys];
+        if (traitKeys) {
+          allTraitKeys = [...allTraitKeys, ...traitKeys];
         }
       });
 
-      allTraitKeyys.forEach((traitKeyy) => {
+      allTraitKeys.forEach((traitKey) => {
         if (
-          structureChunkCopy[traitKeyy] &&
-          structureChunkCopy[traitKeyy].length > 1
+          structureChunkCopy[traitKey] &&
+          structureChunkCopy[traitKey].length > 1
         ) {
-          structureChunkCopy[traitKeyy] = uUtils.selectRandom(
-            structureChunkCopy[traitKeyy]
+          structureChunkCopy[traitKey] = uUtils.selectRandom(
+            structureChunkCopy[traitKey]
           );
         }
       });

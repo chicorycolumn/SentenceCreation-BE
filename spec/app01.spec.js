@@ -2667,7 +2667,7 @@ describe("/api", function () {
           consol.log(res.body);
         });
     });
-    it("#pal01-04a GET 200 YES: Checking in console logs whether structureChunks have indeed been updated with the traitValyyes for eg number, gender, gcase of the finally selected word they structure for.", () => {
+    it("#pal01-04a GET 200 YES: Checking in console logs whether structureChunks have indeed been updated with the traitValues for eg number, gender, gcase of the finally selected word they structure for.", () => {
       return request(app)
         .get("/api/palette")
         .send({

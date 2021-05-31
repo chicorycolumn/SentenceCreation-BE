@@ -350,7 +350,7 @@ xdescribe("traverseAndRecordInflections", () => {
       ["gender", "f"],
     ]);
   });
-  it("#lfu1.1b YES: RDS when gender has two requirement traitValyyes.", () => {
+  it("#lfu1.1b YES: RDS when gender has two requirement traitValues.", () => {
     let outputUnitsWithDrillPaths = [];
     let reqArrNo = "07";
     traverseAndRecordInflections(
@@ -387,7 +387,7 @@ xdescribe("traverseAndRecordInflections", () => {
       },
     ]);
   });
-  it("#lfu1.1c YES: RDS when gender has two requirement traitValyyes which are masculine subgenders.", () => {
+  it("#lfu1.1c YES: RDS when gender has two requirement traitValues which are masculine subgenders.", () => {
     let outputUnitsWithDrillPaths = [];
     let reqArrNo = "06";
     traverseAndRecordInflections(
@@ -424,7 +424,7 @@ xdescribe("traverseAndRecordInflections", () => {
       },
     ]);
   });
-  it("#lfu1.2a YES: RDS when gender has two identical requirement traitValyyes (feminine).", () => {
+  it("#lfu1.2a YES: RDS when gender has two identical requirement traitValues (feminine).", () => {
     let outputUnitsWithDrillPaths = [];
     let reqArrNo = "05";
     traverseAndRecordInflections(
@@ -461,7 +461,7 @@ xdescribe("traverseAndRecordInflections", () => {
       },
     ]);
   });
-  it("#lfu1.2b YES: RDS when gender has five identical requirement traitValyyes (feminine).", () => {
+  it("#lfu1.2b YES: RDS when gender has five identical requirement traitValues (feminine).", () => {
     let outputUnitsWithDrillPaths = [];
     let reqArrNo = "04";
     traverseAndRecordInflections(
@@ -528,7 +528,7 @@ xdescribe("traverseAndRecordInflections", () => {
       },
     ]);
   });
-  it("#lfu1.2c YES: RDS when gender has requirement traitValyyes that are five identical (feminine) and one different (neuter).", () => {
+  it("#lfu1.2c YES: RDS when gender has requirement traitValues that are five identical (feminine) and one different (neuter).", () => {
     let outputUnitsWithDrillPaths = [];
     let reqArrNo = "03";
     traverseAndRecordInflections(

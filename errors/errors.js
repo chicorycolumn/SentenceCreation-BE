@@ -18,7 +18,7 @@ exports.myErrMsgs = {
   "404b":
     "404b No such resource: Nothing in our database fits your specifications.",
   "404c":
-    "404c No such resource: You may be specified a non-existent vaalue in the body of your request.",
+    "404c No such resource: You may be specified a non-existent value in the body of your request.",
 
   405: "405 Method not allowed: You cannot make such a request (eg DELETE, POST, GET, etc) at this particular endpoint. You may have spelled the url wrong.",
 };

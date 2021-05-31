@@ -29,13 +29,13 @@ exports.findMatchingLemmaObjectThenWord = (
   let temporaryMultipleMode;
 
   //STEP ONE: Fx-PW: Pathway for Fixed pieces.
-  if (gpUtils.getWorrdtypeStCh(structureChunk) === "fixed") {
+  if (gpUtils.getWordtypeStCh(structureChunk) === "fixed") {
     consol.consoleLogPW("##Fx-PW", structureChunk, multipleMode);
 
     return [
       {
         selectedLemmaObject: {},
-        selectedWord: structureChunk.chunkValyye,
+        selectedWord: structureChunk.chunkValue,
         structureChunk,
       },
     ];
@@ -43,7 +43,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
   //STEP TWO: Filter lemmaObjects (by specificIds OR specificLemmas OR andTags and selectors).
   let source =
-    words[gpUtils.giveSetKey(gpUtils.getWorrdtypeStCh(structureChunk))];
+    words[gpUtils.giveSetKey(gpUtils.getWordtypeStCh(structureChunk))];
 
   langUtils.preprocessLemmaObjectsMinor(source);
   let matches = [];
@@ -126,7 +126,7 @@ exports.findMatchingLemmaObjectThenWord = (
   );
 
   //STEP THREE: Return result array immediately if uninflected or ad hoc.
-  let adhocInflectionRef = refObj.adhocInflectionCategoryys[currentLanguage];
+  let adhocInflectionRef = refObj.adhocInflectionCategorys[currentLanguage];
   let adhocFormRef = refObj.adhocForms[currentLanguage];
 
   //    THREE (A): Ad-PW: Pathway for Adhoc: both Forms and Inflections.
@@ -136,10 +136,10 @@ exports.findMatchingLemmaObjectThenWord = (
     structureChunk.form &&
     structureChunk.form.length &&
     Object.keys(adhocFormRef).includes(
-      gpUtils.getWorrdtypeStCh(structureChunk)
+      gpUtils.getWordtypeStCh(structureChunk)
     ) &&
     structureChunk.form.some((selectedForm) =>
-      adhocFormRef[gpUtils.getWorrdtypeStCh(structureChunk)].includes(
+      adhocFormRef[gpUtils.getWordtypeStCh(structureChunk)].includes(
         selectedForm
       )
     )
@@ -158,7 +158,7 @@ exports.findMatchingLemmaObjectThenWord = (
         adhocArr.forEach((adhocResultObj) => {
           let { selectedWordArr, structureChunkUpdated } = adhocResultObj;
 
-          otUtils.stripOutInflectionCategoryys(
+          otUtils.stripOutInflectionCategorys(
             currentLanguage,
             structureChunkUpdated,
             "Ad-PW-F"
@@ -189,7 +189,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
       let { selectedWordArr, structureChunkUpdated } = selectedAdhocResultObj;
 
-      otUtils.stripOutInflectionCategoryys(
+      otUtils.stripOutInflectionCategorys(
         currentLanguage,
         structureChunkUpdated,
         "Ad-PW-F"
@@ -206,23 +206,23 @@ exports.findMatchingLemmaObjectThenWord = (
   //    (Ad-PW-I): Pathway for Adhoc INFLECTIONS.
   if (
     Object.keys(adhocInflectionRef).includes(
-      gpUtils.getWorrdtypeStCh(structureChunk)
+      gpUtils.getWordtypeStCh(structureChunk)
     )
   ) {
-    let adhocInflectionCategoryys =
-      adhocInflectionRef[gpUtils.getWorrdtypeStCh(structureChunk)];
+    let adhocInflectionCategorys =
+      adhocInflectionRef[gpUtils.getWordtypeStCh(structureChunk)];
 
-    adhocInflectionCategoryys.forEach((adhocInflectionCategoryy) => {
+    adhocInflectionCategorys.forEach((adhocInflectionCategory) => {
       if (
-        structureChunk[adhocInflectionCategoryy] &&
-        structureChunk[adhocInflectionCategoryy].length
+        structureChunk[adhocInflectionCategory] &&
+        structureChunk[adhocInflectionCategory].length
       ) {
         consol.consoleLogPW("##Ad-PW-I", structureChunk, multipleMode);
 
         if (multipleMode) {
           matches.forEach((selectedLemmaObject) => {
             let adhocArr = langUtils.generateAdhocForms(
-              adhocInflectionCategoryy,
+              adhocInflectionCategory,
               uUtils.copyWithoutReference(structureChunk),
               selectedLemmaObject,
               currentLanguage
@@ -231,7 +231,7 @@ exports.findMatchingLemmaObjectThenWord = (
             adhocArr.forEach((adhocResultObj) => {
               let { selectedWordArr, structureChunkUpdated } = adhocResultObj;
 
-              otUtils.stripOutInflectionCategoryys(
+              otUtils.stripOutInflectionCategorys(
                 currentLanguage,
                 structureChunkUpdated,
                 "Ad-PW-I"
@@ -249,7 +249,7 @@ exports.findMatchingLemmaObjectThenWord = (
           let selectedLemmaObject = uUtils.selectRandom(matches);
 
           let adhocArr = langUtils.generateAdhocForms(
-            adhocInflectionCategoryy,
+            adhocInflectionCategory,
             uUtils.copyWithoutReference(structureChunk),
             selectedLemmaObject,
             currentLanguage
@@ -264,7 +264,7 @@ exports.findMatchingLemmaObjectThenWord = (
           let { selectedWordArr, structureChunkUpdated } =
             selectedAdhocResultObj;
 
-          otUtils.stripOutInflectionCategoryys(
+          otUtils.stripOutInflectionCategorys(
             currentLanguage,
             structureChunkUpdated,
             "Ad-PW-I"
@@ -283,19 +283,18 @@ exports.findMatchingLemmaObjectThenWord = (
   //    THREE (B): Un-PW: Pathway for Uninflected forms.
 
   //Note, this indeed is specifically uninflected FORMS.
-  //So, activeAdjectival, anteriorAdverbial, those kinds of things, that are indeed laabeled with the Form traitKeyy.
+  //So, activeAdjectival, anteriorAdverbial, those kinds of things, that are indeed laabeled with the Form traitKey.
   //Remember, within eg a verb lobj, available Forms are infinitive, verbal, activeAdjectival, anterior...
 
   if (structureChunk.form && structureChunk.form.length) {
     Object.keys(refObj.uninflectedForms[currentLanguage]).forEach(
       (wordtype) => {
-        if (gpUtils.getWorrdtypeStCh(structureChunk) === wordtype) {
-          let uninflectedInflectionKeyys =
+        if (gpUtils.getWordtypeStCh(structureChunk) === wordtype) {
+          let uninflectedInflectionKeys =
             refObj.uninflectedForms[currentLanguage][wordtype];
 
           let requestedUninflectedForms = structureChunk.form.filter(
-            (requestedForm) =>
-              uninflectedInflectionKeyys.includes(requestedForm)
+            (requestedForm) => uninflectedInflectionKeys.includes(requestedForm)
           );
 
           if (requestedUninflectedForms.length) {
@@ -336,7 +335,7 @@ exports.findMatchingLemmaObjectThenWord = (
                     selectedUninflectedForm,
                   ];
 
-                  otUtils.stripOutInflectionCategoryys(
+                  otUtils.stripOutInflectionCategorys(
                     currentLanguage,
                     structureChunkUpdatedByAdhocOrUninflected,
                     "Un-PW"
@@ -390,7 +389,7 @@ exports.findMatchingLemmaObjectThenWord = (
                 selectedUninflectedForm,
               ];
 
-              otUtils.stripOutInflectionCategoryys(
+              otUtils.stripOutInflectionCategorys(
                 currentLanguage,
                 structureChunkUpdatedByAdhocOrUninflected,
                 "Un-PW"
@@ -676,16 +675,16 @@ exports.findMatchingLemmaObjectThenWord = (
         Object.keys(structureChunk.preferredChoicesForQuestionSentence).length
       ) {
         Object.keys(structureChunk.preferredChoicesForQuestionSentence).forEach(
-          (traitKeyy) => {
-            let traitValyye =
-              structureChunk.preferredChoicesForQuestionSentence[traitKeyy];
+          (traitKey) => {
+            let traitValue =
+              structureChunk.preferredChoicesForQuestionSentence[traitKey];
 
             subArrayOfOutputUnits = subArrayOfOutputUnits.filter(
               (unit) =>
                 unit.drillPath &&
                 unit.drillPath.find(
-                  (drillPathSubArr) => drillPathSubArr[0] === traitKeyy
-                )[1] === traitValyye
+                  (drillPathSubArr) => drillPathSubArr[0] === traitKey
+                )[1] === traitValue
             );
           }
         );
@@ -952,9 +951,9 @@ exports.extractNestedRoutes = (source) => {
     let routesByLevel = [[]];
 
     Object.keys(source).forEach((tObjKey) => {
-      let tObjVaalue = source[tObjKey];
+      let tObjValue = source[tObjKey];
 
-      if (typeof tObjVaalue !== "boolean") {
+      if (typeof tObjValue !== "boolean") {
         routesByNesting.push([tObjKey]);
         routesByLevel[0].push(tObjKey);
       }
@@ -992,16 +991,16 @@ exports.extractNestedRoutes = (source) => {
       let arrCopy = arr.slice();
       arr.pop();
       return arrCopy;
-    } else if (uUtils.isKeyVaalueTypeObject(source)) {
-      Object.keys(source).forEach((traitKeyy) => {
-        if (!source[traitKeyy]) {
-          delete source[traitKeyy];
+    } else if (uUtils.isKeyValueTypeObject(source)) {
+      Object.keys(source).forEach((traitKey) => {
+        if (!source[traitKey]) {
+          delete source[traitKey];
           return;
         }
 
-        arr.push(traitKeyy);
+        arr.push(traitKey);
 
-        let result = recursivelyMapRoutes(arr, source[traitKeyy]);
+        let result = recursivelyMapRoutes(arr, source[traitKey]);
 
         if (result) {
           routesByNesting.push(result);
@@ -1010,7 +1009,7 @@ exports.extractNestedRoutes = (source) => {
       arr.pop();
     } else {
       consol.throw(
-        `kwdo ot:recursivelyMapRoutes found vaalue with wrong data type: "${
+        `kwdo ot:recursivelyMapRoutes found value with wrong data type: "${
           Array.isArray(source)
             ? "Array"
             : (typeof source)[0].toUpperCase() + (typeof source).slice(1)
@@ -1028,24 +1027,24 @@ exports.findObjectInNestedObject = (
 ) => {
   let res = {};
   recursivelySearch(source, identifyingData);
-  return alsoReturnKey ? res : res.chunkValyye;
+  return alsoReturnKey ? res : res.chunkValue;
 
   function recursivelySearch(source, identifyingData) {
-    if (res.chunkValyye) {
+    if (res.chunkValue) {
       return;
     }
 
     Object.keys(source).forEach((key) => {
-      let vaalue = source[key];
+      let value = source[key];
       if (
-        (!alsoSearchArrays && uUtils.isKeyVaalueTypeObject(vaalue)) ||
-        (alsoSearchArrays && uUtils.isKeyVaalueTypeObjectOrArray(vaalue))
+        (!alsoSearchArrays && uUtils.isKeyValueTypeObject(value)) ||
+        (alsoSearchArrays && uUtils.isKeyValueTypeObjectOrArray(value))
       ) {
-        if (uUtils.doKeyVaaluesMatch(vaalue, identifyingData)) {
-          res.chunkValyye = vaalue;
+        if (uUtils.doKeyValuesMatch(value, identifyingData)) {
+          res.chunkValue = value;
           res.key = key;
         } else {
-          recursivelySearch(vaalue, identifyingData);
+          recursivelySearch(value, identifyingData);
         }
       }
     });
@@ -1059,31 +1058,31 @@ exports.findObjectInNestedObjectsAndArrays = (
 ) => {
   let res = {};
   recursivelySearch(source, identifyingData);
-  return alsoReturnKey ? res : res.chunkValyye;
+  return alsoReturnKey ? res : res.chunkValue;
 
   function recursivelySearch(source, identifyingData) {
-    if (res.chunkValyye) {
+    if (res.chunkValue) {
       return;
     }
 
     Object.keys(source).forEach((key) => {
-      let vaalue = source[key];
-      if (typeof vaalue === "object" && vaalue !== null) {
-        if (uUtils.doKeyVaaluesMatch(vaalue, identifyingData)) {
-          res.chunkValyye = vaalue;
+      let value = source[key];
+      if (typeof value === "object" && value !== null) {
+        if (uUtils.doKeyValuesMatch(value, identifyingData)) {
+          res.chunkValue = value;
           res.key = key;
         } else {
-          recursivelySearch(vaalue, identifyingData);
+          recursivelySearch(value, identifyingData);
         }
       }
     });
   }
 };
 
-exports.giveRoutesAndTerminalValyyesFromObject = (obj) => {
+exports.giveRoutesAndTerminalValuesFromObject = (obj) => {
   consol.log(
     "[1;35m " +
-      `xlbj ot:giveRoutesAndTerminalValyyesFromObject-----------------------` +
+      `xlbj ot:giveRoutesAndTerminalValuesFromObject-----------------------` +
       "[0m"
   );
 
@@ -1091,64 +1090,62 @@ exports.giveRoutesAndTerminalValyyesFromObject = (obj) => {
   let resArr = [];
 
   nestedRoutes.forEach((nestedRoute) => {
-    let inflectionValyye = otUtils.giveInflectionValyyeFromObjectByRoute(
+    let inflectionValue = otUtils.giveInflectionValueFromObjectByRoute(
       obj,
       nestedRoute
     );
 
-    //Splits terminal inflectionValyye that are arrays, into different unit, with identical routes.
+    //Splits terminal inflectionValue that are arrays, into different unit, with identical routes.
 
     //What is happening here exactly?
 
-    if (Array.isArray(inflectionValyye)) {
-      inflectionValyye.forEach((subInflectionValyye) => {
-        resArr.push({ terminalValyye: subInflectionValyye, nestedRoute });
+    if (Array.isArray(inflectionValue)) {
+      inflectionValue.forEach((subInflectionValue) => {
+        resArr.push({ terminalValue: subInflectionValue, nestedRoute });
       });
     } else {
-      resArr.push({ terminalValyye: inflectionValyye, nestedRoute });
+      resArr.push({ terminalValue: inflectionValue, nestedRoute });
     }
   });
 
   return resArr;
 };
 
-exports.giveInflectionValyyeFromObjectByRoute = (obj, route) => {
+exports.giveInflectionValueFromObjectByRoute = (obj, route) => {
   return interiorFunction(obj, route);
 
   function interiorFunction(obj, route) {
-    let inflectionKeyy = route[0];
-    if (!uUtils.isKeyVaalueTypeObject(obj[inflectionKeyy])) {
-      return obj[inflectionKeyy];
+    let inflectionKey = route[0];
+    if (!uUtils.isKeyValueTypeObject(obj[inflectionKey])) {
+      return obj[inflectionKey];
     } else {
-      return interiorFunction(obj[inflectionKeyy], route.slice(1));
+      return interiorFunction(obj[inflectionKey], route.slice(1));
     }
   }
 };
 
 exports.findSynhomographs = (lemmaObject, structureChunk, currentLanguage) => {
-  let inflectionCategoryyChain =
-    refObj.lemmaObjectTraitKeyys[currentLanguage].inflectionChains[
-      gpUtils.getWorrdtypeStCh(structureChunk)
+  let inflectionCategoryChain =
+    refObj.lemmaObjectTraitKeys[currentLanguage].inflectionChains[
+      gpUtils.getWordtypeStCh(structureChunk)
     ];
 
-  let routesAndTerminalValyyes = otUtils.giveRoutesAndTerminalValyyesFromObject(
+  let routesAndTerminalValues = otUtils.giveRoutesAndTerminalValuesFromObject(
     lemmaObject.inflections
   );
 
   let tempArr = [];
 
-  routesAndTerminalValyyes.forEach((item) => {
-    let { terminalValyye, nestedRoute } = item;
+  routesAndTerminalValues.forEach((item) => {
+    let { terminalValue, nestedRoute } = item;
 
-    let existing = tempArr.find(
-      (item) => item.terminalValyye === terminalValyye
-    );
+    let existing = tempArr.find((item) => item.terminalValue === terminalValue);
 
     if (existing) {
       existing.inflectionPaths.push(nestedRoute.slice(0));
     } else {
       tempArr.push({
-        terminalValyye,
+        terminalValue,
         inflectionPaths: [nestedRoute.slice(0)],
       });
     }
@@ -1158,33 +1155,33 @@ exports.findSynhomographs = (lemmaObject, structureChunk, currentLanguage) => {
 
   if (synhomographs.length) {
     synhomographs.forEach((synhomDataUnit) => {
-      synhomDataUnit.inflectionCategoryyChain = inflectionCategoryyChain;
+      synhomDataUnit.inflectionCategoryChain = inflectionCategoryChain;
 
       let { inflectionPaths } = synhomDataUnit;
-      let inflectionCategoryysWhereTheyDiffer = [];
+      let inflectionCategorysWhereTheyDiffer = [];
 
-      inflectionCategoryyChain.forEach((inflectionCategoryy, index) => {
-        let allInflectionKeyysForThisInflectionCategoryy = inflectionPaths.map(
+      inflectionCategoryChain.forEach((inflectionCategory, index) => {
+        let allInflectionKeysForThisInflectionCategory = inflectionPaths.map(
           (path) => path[index]
         );
 
         if (
-          !allInflectionKeyysForThisInflectionCategoryy.every(
-            (inflectionKeyy) =>
-              inflectionKeyy === allInflectionKeyysForThisInflectionCategoryy[0]
+          !allInflectionKeysForThisInflectionCategory.every(
+            (inflectionKey) =>
+              inflectionKey === allInflectionKeysForThisInflectionCategory[0]
           )
         ) {
-          inflectionCategoryysWhereTheyDiffer.push(inflectionCategoryy);
+          inflectionCategorysWhereTheyDiffer.push(inflectionCategory);
         }
       });
 
-      synhomDataUnit.inflectionCategoryysWhereTheyDiffer =
-        inflectionCategoryysWhereTheyDiffer;
+      synhomDataUnit.inflectionCategorysWhereTheyDiffer =
+        inflectionCategorysWhereTheyDiffer;
     });
 
     return {
       lemmaObjectId: lemmaObject.id,
-      inflectionCategoryyChain,
+      inflectionCategoryChain,
       synhomographs,
     };
   }
@@ -1230,28 +1227,28 @@ exports.findSinglePointMutationArray = (
   );
 };
 
-exports.stripOutInflectionCategoryys = (
+exports.stripOutInflectionCategorys = (
   currentLanguage,
   structureChunk,
   PWlaabel
 ) => {
-  let allInflectionCategoryysForThisWordtype =
-    refObj.lemmaObjectTraitKeyys[currentLanguage].inflectionChains[
-      gpUtils.getWorrdtypeStCh(structureChunk)
+  let allInflectionCategorysForThisWordtype =
+    refObj.lemmaObjectTraitKeys[currentLanguage].inflectionChains[
+      gpUtils.getWordtypeStCh(structureChunk)
     ];
 
-  allInflectionCategoryysForThisWordtype
-    .filter((inflectionCategoryy) => !["form"].includes(inflectionCategoryy))
-    .forEach((inflectionCategoryy) => {
-      if (structureChunk["inflectionCategoryy"]) {
+  allInflectionCategorysForThisWordtype
+    .filter((inflectionCategory) => !["form"].includes(inflectionCategory))
+    .forEach((inflectionCategory) => {
+      if (structureChunk["inflectionCategory"]) {
         consol.log(
           "[1;35m " +
-            `milm stripOutInflectionCategoryys Deleting "${inflectionCategoryy}" from stCh "${structureChunk.chunkId}" because this is #${PWlaabel} in ${currentLanguage}` +
+            `milm stripOutInflectionCategorys Deleting "${inflectionCategory}" from stCh "${structureChunk.chunkId}" because this is #${PWlaabel} in ${currentLanguage}` +
             "[0m"
         );
       }
 
-      delete structureChunk[inflectionCategoryy];
+      delete structureChunk[inflectionCategory];
     });
 };
 
@@ -1298,9 +1295,9 @@ exports.doDrillPathsDifferOnlyByGender = (subArrayOfOutputUnits) => {
   }
 };
 
-exports.switchMetaTraitValyyeForAWorkableConvertedTraitValyye = (
-  inflectionCategoryy,
-  inflectionKeyy,
+exports.switchMetaTraitValueForAWorkableConvertedTraitValue = (
+  inflectionCategory,
+  inflectionKey,
   source,
   currentLanguage,
   structureChunk,
@@ -1311,95 +1308,95 @@ exports.switchMetaTraitValyyeForAWorkableConvertedTraitValyye = (
     "[1;33m " +
       `ivwa ` +
       consoleLogLaabel +
-      `. >>unkeyed metaTraitValyye clause<<. inflectionKeyy is a metaTraitValyye: "${inflectionKeyy}", but it is not present on the source. So, we should check if the source has corresponding inflectionKeyys, eg for allPersonalGenders it would be [m, f], and if they hold all the same inflectionKeyys, then we should let this work.` +
+      `. >>unkeyed metaTraitValue clause<<. inflectionKey is a metaTraitValue: "${inflectionKey}", but it is not present on the source. So, we should check if the source has corresponding inflectionKeys, eg for allPersonalGenders it would be [m, f], and if they hold all the same inflectionKeys, then we should let this work.` +
       "[0m"
   );
 
-  let convertedMetaTraitValyyes = refObj.metaTraitValyyes[currentLanguage][
-    inflectionCategoryy
-  ][inflectionKeyy].filter(
-    (convertedMetaTraitValyye) => source[convertedMetaTraitValyye]
+  let convertedMetaTraitValues = refObj.metaTraitValues[currentLanguage][
+    inflectionCategory
+  ][inflectionKey].filter(
+    (convertedMetaTraitValue) => source[convertedMetaTraitValue]
   );
 
   consol.log(
-    "[1;33m " + `ivwe convertedMetaTraitValyyes [${convertedMetaTraitValyyes}]` + "[0m"
+    "[1;33m " + `ivwe convertedMetaTraitValues [${convertedMetaTraitValues}]` + "[0m"
   );
 
-  if (!convertedMetaTraitValyyes || !convertedMetaTraitValyyes.length) {
+  if (!convertedMetaTraitValues || !convertedMetaTraitValues.length) {
     consol.throw(
-      `ejrb #ERR traverseAndRecordInflections >>unkeyed metaTraitValyye clause<<. Found no convertedMetaTraitValyyes for "${inflectionKeyy}".`
+      `ejrb #ERR traverseAndRecordInflections >>unkeyed metaTraitValue clause<<. Found no convertedMetaTraitValues for "${inflectionKey}".`
     );
   }
 
-  if (convertedMetaTraitValyyes.length === 1) {
-    let selectedConvertedMetaTraitValyye = convertedMetaTraitValyyes[0];
+  if (convertedMetaTraitValues.length === 1) {
+    let selectedConvertedMetaTraitValue = convertedMetaTraitValues[0];
 
     consol.log(
       "[1;33m " +
-        `lbro traverseAndRecordInflections >>unkeyed metaTraitValyye clause<<. Setting inflectionKeyy to "${selectedConvertedMetaTraitValyye}". Will now continue with main fxn.` +
+        `lbro traverseAndRecordInflections >>unkeyed metaTraitValue clause<<. Setting inflectionKey to "${selectedConvertedMetaTraitValue}". Will now continue with main fxn.` +
         "[0m"
     );
 
-    return selectedConvertedMetaTraitValyye;
+    return selectedConvertedMetaTraitValue;
   }
 
-  let drillResultsOfConvertedMetaTraitValyyes = convertedMetaTraitValyyes.map(
-    (convertedMetaTraitValyye) => source[convertedMetaTraitValyye]
+  let drillResultsOfConvertedMetaTraitValues = convertedMetaTraitValues.map(
+    (convertedMetaTraitValue) => source[convertedMetaTraitValue]
   );
 
-  let selectedConvertedMetaTraitValyye = uUtils.selectRandom(
-    convertedMetaTraitValyyes
+  let selectedConvertedMetaTraitValue = uUtils.selectRandom(
+    convertedMetaTraitValues
   );
 
   if (
     uUtils.checkEachSequentialPairing(
-      drillResultsOfConvertedMetaTraitValyyes,
+      drillResultsOfConvertedMetaTraitValues,
       uUtils.areTwoObjectsEqual,
       true
     )
   ) {
     consol.log(
       "[1;33m " +
-        `ksfc traverseAndRecordInflections >>unkeyed metaTraitValyye clause<<. Final Clause A. Setting inflectionKeyy to "${selectedConvertedMetaTraitValyye}". Do not need to adjust stCh as all converted traitValyyes for this metaTraitValyye result in the same from source, eg "allPersonalSingularGenders" = m --> "you", f --> "you". Will now continue with main fxn.` +
+        `ksfc traverseAndRecordInflections >>unkeyed metaTraitValue clause<<. Final Clause A. Setting inflectionKey to "${selectedConvertedMetaTraitValue}". Do not need to adjust stCh as all converted traitValues for this metaTraitValue result in the same from source, eg "allPersonalSingularGenders" = m --> "you", f --> "you". Will now continue with main fxn.` +
         "[0m"
     );
 
-    return selectedConvertedMetaTraitValyye;
+    return selectedConvertedMetaTraitValue;
   } else {
     consol.log(
-      `aqsa traverseAndRecordInflections >>unkeyed metaTraitValyye clause<<. 
-      Final Clause B. Trying to set a metaTraitValyye to one of its convertedMetaTraitValyyes. 
-      But the drilled inflectorValyyes were not ultimately the same in source, therefore we cannot obey doNotSpecify. 
+      `aqsa traverseAndRecordInflections >>unkeyed metaTraitValue clause<<. 
+      Final Clause B. Trying to set a metaTraitValue to one of its convertedMetaTraitValues. 
+      But the drilled inflectorValues were not ultimately the same in source, therefore we cannot obey doNotSpecify. 
       For example, the stCh asks for allPersonalSingularGenders, 
       and while sometimes the results could be m --> "I", f --> "I", in which case it would have gone to Final Clause A. 
       But in this case, eg, m1 --> kupiłem, f --> kupiłam. So they are not the same. 
       So I'll pick one, and make sure to set the stCh to acknowledge this.`
     );
 
-    structureChunk.gender = [selectedConvertedMetaTraitValyye];
+    structureChunk.gender = [selectedConvertedMetaTraitValue];
 
-    return selectedConvertedMetaTraitValyye;
+    return selectedConvertedMetaTraitValue;
   }
 };
 
-exports.doesThisInflectionKeyyHoldUniqueInflectionValyyeInLObj = (
+exports.doesThisInflectionKeyHoldUniqueInflectionValueInLObj = (
   lObj,
-  chosenInflectionCategoryy,
+  chosenInflectionCategory,
   drillPath
 ) => {
   let inflectionChain =
-    refObj.lemmaObjectTraitKeyys[gpUtils.getLanguageFromLemmaObject(lObj)]
-      .inflectionChains[gpUtils.getWorrdtypeLObj(lObj)];
+    refObj.lemmaObjectTraitKeys[gpUtils.getLanguageFromLemmaObject(lObj)]
+      .inflectionChains[gpUtils.getWordtypeLObj(lObj)];
 
-  function getInflectionKeyyFromDrillPath(inflectionCategoryy, drillPath) {
-    let inflectionKeyy = drillPath.find(
-      (arr) => arr[0] === inflectionCategoryy
+  function getInflectionKeyFromDrillPath(inflectionCategory, drillPath) {
+    let inflectionKey = drillPath.find(
+      (arr) => arr[0] === inflectionCategory
     )[1];
-    return inflectionKeyy;
+    return inflectionKey;
   }
 
-  let chosenInflectionKeyy = getInflectionKeyyFromDrillPath(
-    chosenInflectionCategoryy,
+  let chosenInflectionKey = getInflectionKeyFromDrillPath(
+    chosenInflectionCategory,
     drillPath
   );
 
@@ -1407,8 +1404,8 @@ exports.doesThisInflectionKeyyHoldUniqueInflectionValyyeInLObj = (
 
   let stopSwitch = false;
 
-  inflectionChain.forEach((inflectionCategoryy) => {
-    if (inflectionCategoryy === chosenInflectionCategoryy) {
+  inflectionChain.forEach((inflectionCategory) => {
+    if (inflectionCategory === chosenInflectionCategory) {
       stopSwitch = true;
     }
 
@@ -1416,39 +1413,39 @@ exports.doesThisInflectionKeyyHoldUniqueInflectionValyyeInLObj = (
       return;
     }
 
-    let inflectionKeyy = getInflectionKeyyFromDrillPath(
-      inflectionCategoryy,
+    let inflectionKey = getInflectionKeyFromDrillPath(
+      inflectionCategory,
       drillPath
     );
 
-    if (lObjAtRelevantLevel[inflectionKeyy]) {
-      lObjAtRelevantLevel = lObjAtRelevantLevel[inflectionKeyy];
+    if (lObjAtRelevantLevel[inflectionKey]) {
+      lObjAtRelevantLevel = lObjAtRelevantLevel[inflectionKey];
     } else {
       consol.throw(
-        "mlck #ERR doesThisInflectionKeyyHoldUniqueInflectionValyyeInLObj. That inflectionKeyy was not on lObj at this level."
+        "mlck #ERR doesThisInflectionKeyHoldUniqueInflectionValueInLObj. That inflectionKey was not on lObj at this level."
       );
     }
   });
 
-  let allInflectionKeyysAtThisLevel = Object.keys(lObjAtRelevantLevel);
+  let allInflectionKeysAtThisLevel = Object.keys(lObjAtRelevantLevel);
 
-  consol.log({ allInflectionKeyysAtThisLevel });
+  consol.log({ allInflectionKeysAtThisLevel });
 
-  if (!allInflectionKeyysAtThisLevel.includes(chosenInflectionKeyy)) {
+  if (!allInflectionKeysAtThisLevel.includes(chosenInflectionKey)) {
     consol.throw(
-      "mlcl #ERR doesThisInflectionKeyyHoldUniqueInflectionValyyeInLObj. The chosen inflectionKeyy should have been in lObj at this level."
+      "mlcl #ERR doesThisInflectionKeyHoldUniqueInflectionValueInLObj. The chosen inflectionKey should have been in lObj at this level."
     );
   }
 
-  let chosenInflectionValyye = lObjAtRelevantLevel[chosenInflectionKeyy];
+  let chosenInflectionValue = lObjAtRelevantLevel[chosenInflectionKey];
 
-  let allOtherInflectionValyyesAtThisLevel = allInflectionKeyysAtThisLevel
-    .filter((inflectionKeyy) => inflectionKeyy !== chosenInflectionKeyy)
-    .map((inflectionKeyy) => lObjAtRelevantLevel[inflectionKeyy]);
+  let allOtherInflectionValuesAtThisLevel = allInflectionKeysAtThisLevel
+    .filter((inflectionKey) => inflectionKey !== chosenInflectionKey)
+    .map((inflectionKey) => lObjAtRelevantLevel[inflectionKey]);
 
   let itIsUnique = !uUtils.isThisObjectInThisArrayOfObjects(
-    chosenInflectionValyye,
-    allOtherInflectionValyyesAtThisLevel
+    chosenInflectionValue,
+    allOtherInflectionValuesAtThisLevel
   );
 
   return itIsUnique;
