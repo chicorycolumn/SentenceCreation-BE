@@ -96,7 +96,7 @@ exports.adjustVirilityOfStructureChunk = (
   if (/all.*/.test(gender)) {
     if (gender.length !== 1) {
       consol.throw(
-        `#ERR vcvl ALL:adjustVirilityOfStructureChunk. Gender arr contained a metaGender, that's fine, but it contained other values too? That's too much. "${gender.toString()}"`
+        `#ERR vcvl ALL:adjustVirilityOfStructureChunk. Gender traitKeyys arr contained a metaGender traitKeyy, that's fine, but it contained other traitKeyys too? That's too much. "${gender.toString()}"`
       );
     }
 
@@ -106,31 +106,33 @@ exports.adjustVirilityOfStructureChunk = (
   let pluralVirilityAndSingularConversionRef =
     refObj.pluralVirilityAndSingularConversionRef[currentLanguage];
 
-  let newGenderArray = [];
+  let newGenderTraitKeyys = [];
 
   if (number.includes("singular")) {
-    gender.forEach((genderValue) => {
-      newGenderArray.push(genderValue);
+    gender.forEach((genderTraitKeyy) => {
+      newGenderTraitKeyys.push(genderTraitKeyy);
     });
   }
 
   if (number.includes("plural")) {
-    gender.forEach((genderValue) => {
-      consol.log("ksdx ALL adjustVirilityOfStructureChunk", { genderValue });
+    gender.forEach((genderTraitKeyy) => {
+      consol.log("ksdx ALL adjustVirilityOfStructureChunk", {
+        genderTraitKeyy,
+      });
 
-      newGenderArray = [
-        ...newGenderArray,
-        ...pluralVirilityAndSingularConversionRef["plural"][genderValue],
+      newGenderTraitKeyys = [
+        ...newGenderTraitKeyys,
+        ...pluralVirilityAndSingularConversionRef["plural"][genderTraitKeyy],
       ];
       // if (shouldRetainOriginals) {
-      //   newGenderArray.push(genderValue);
+      //   newGenderTraitKeyys.push(genderTraitKeyy);
       // }
     });
   }
 
-  let newGenderArrayTrimmed = Array.from(new Set(newGenderArray));
+  let newGenderTraitKeyysTrimmed = Array.from(new Set(newGenderTraitKeyys));
 
-  structureChunk.gender = newGenderArrayTrimmed;
+  structureChunk.gender = newGenderTraitKeyysTrimmed;
 
   consol.log(
     "[1;35m " +
@@ -340,20 +342,23 @@ exports.convertmetaTraitValyyes = (
         });
       } else if (objType === "stCh") {
         if (sourceObject[traitKeyy]) {
-          let currentValueArr = sourceObject[traitKeyy];
-          let newValueArr = [];
+          let currentTraitValyyes = sourceObject[traitKeyy];
+          let newTraitValyyes = [];
 
-          currentValueArr.forEach((value) => {
-            if (metaTraitValyyeRef[value]) {
-              newValueArr = [...newValueArr, ...metaTraitValyyeRef[value]];
+          currentTraitValyyes.forEach((traitValyye) => {
+            if (metaTraitValyyeRef[traitValyye]) {
+              newTraitValyyes = [
+                ...newTraitValyyes,
+                ...metaTraitValyyeRef[traitValyye],
+              ];
             } else {
-              newValueArr.push(value);
+              newTraitValyyes.push(traitValyye);
             }
           });
 
-          sourceObject[traitKeyy] = newValueArr;
+          sourceObject[traitKeyy] = newTraitValyyes;
           consol.log("oiiw ALL convertmetaTraitValyyes", objType, {
-            newValueArr,
+            newTraitValyyes,
           });
         }
       }
@@ -474,8 +479,8 @@ exports.correctMGNsBeforeFetchingOutputArray = (
   //4 If stCh has gender, then filter down so only the ones present in convertedLObjMetagenderArr remain.
   //  and if it doesn't have gender, set it as that.
   if (structureChunk.gender && structureChunk.gender.length) {
-    structureChunk.gender = structureChunk.gender.filter((value) =>
-      convertedLObjMetagenderArr.includes(value)
+    structureChunk.gender = structureChunk.gender.filter((genderTraitValyye) =>
+      convertedLObjMetagenderArr.includes(genderTraitValyye)
     );
   } else {
     structureChunk.gender = convertedLObjMetagenderArr.slice(0);

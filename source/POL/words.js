@@ -1,5 +1,5 @@
-//If you mark a key true, or give it a value      it will be filled out by fillVerbInflections fxn.
-//If you mark a key false, or omit it             it will not be.
+//If you mark a traitKeyy true, or give it a traitValyye      it will be filled out by fillVerbInflections fxn.
+//If you mark a traitKeyy false, or omit it                   it will not be.
 
 exports.wordsBank = {
   nounSet: [

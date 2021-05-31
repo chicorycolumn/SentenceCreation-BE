@@ -381,8 +381,8 @@ exports.fillVerbInflections = (lemmaObject) => {
   let { past } = inflections.verbal;
   let { infinitive } = inflections;
 
-  //In general, do nothing if the key is filled out already or holds value false.
-  //Only fill it out if the key is present and holds value true.
+  //In general, do nothing if the key is filled out already or holds vaalue false.
+  //Only fill it out if the key is present and holds vaalue true.
 
   if (
     aspect === "imperfective" ||
@@ -613,12 +613,12 @@ exports.fillVerbInflections = (lemmaObject) => {
     uUtils.copyVaalueOfKey(obj, "m", ["m1", "m2", "m3"], true);
   });
 
-  function isAvailable(value) {
+  function isAvailable(vaalue) {
     //If true, fill it out.
     //If false, don't fill it out.
     //If any truthy item (which isn't bool true), don't fill it out.
     //If undefined (ie not filled out), then don't fill it out.
-    return value === true;
+    return vaalue === true;
   }
 };
 

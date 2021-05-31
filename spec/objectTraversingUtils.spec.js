@@ -314,7 +314,7 @@ xdescribe("doesThisInflectionKeyyHoldUniqueInflectionValyyeInLObj", () => {
 
     expect(actual).to.be.true;
   });
-  it("Indeed unique, as gender inflectionKeyy 'singular' holds values which 'plural' doesn't.", () => {
+  it("Indeed unique, as gender inflectionKeyy 'singular' holds traitValyyes which 'plural' doesn't.", () => {
     let inputInflectionCategoryy = "number";
 
     let inputDrillPath = [
@@ -763,7 +763,7 @@ xdescribe("findObjectInNestedObject", () => {
       sentenceStructure: ["my", 123, "sharona", 456],
     });
   });
-  it("#otu3.2c YES: Correctly return object from one level of nesting, finding by matching multiple values.", () => {
+  it("#otu3.2c YES: Correctly return object from one level of nesting, finding by matching multiple items.", () => {
     const input1 = testObj1;
     const input2 = {
       symbol: "my aunt",
@@ -796,7 +796,7 @@ xdescribe("findObjectInNestedObject", () => {
       sentenceStructure: ["my", 123, "sharona", 456],
     });
   });
-  it("#otu3.3c Correctly return object from multi nesting, finding by matching multiple values.", () => {
+  it("#otu3.3c Correctly return object from multi nesting, finding by matching multiple items.", () => {
     const input1 = testObj2;
     const input2 = {
       symbol: "my aunt",
@@ -973,7 +973,7 @@ xdescribe("extractNestedRoutes", () => {
     consol.log(actual);
     expect(actual).to.eql(expected);
   });
-  it("#otu1.1f Returns key routes when some values are arrays and should not be mapped out.", () => {
+  it("#otu1.1f Returns key routes when some items are arrays and should not be mapped out.", () => {
     const input = {
       singular: { nom: "chłopak", acc: "chłopaka" },
       plural: {

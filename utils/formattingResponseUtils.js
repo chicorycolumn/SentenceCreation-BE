@@ -78,7 +78,7 @@ exports.createOutputUnit = (
 };
 
 exports.pushSelectedWordToArray = (
-  key,
+  pushKey,
   selectedWord,
   selectedWordsArr,
   annoObj,
@@ -87,7 +87,7 @@ exports.pushSelectedWordToArray = (
   consol.log(
     "[1;30m " + `esbq pushSelectedWordToArray-----------------with args:` + "[0m",
     {
-      key,
+      pushKey,
       selectedWord,
       selectedWordsArr,
       annoObj,
@@ -133,7 +133,7 @@ exports.pushSelectedWordToArray = (
     selectedWordsArr.push(wordInOwnArr);
   }
 
-  if (key === "string") {
+  if (pushKey === "string") {
     consol.log(
       "[1;30m " + `uufy pushSelectedWordToArray Pushing "${selectedWord}"` + "[0m"
     );
@@ -147,7 +147,7 @@ exports.pushSelectedWordToArray = (
     return;
   }
 
-  if (key === "array") {
+  if (pushKey === "array") {
     consol.log(
       "[1;30m " + `uufy pushSelectedWordToArray Pushing "${selectedWord}"` + "[0m"
     );
@@ -160,31 +160,33 @@ exports.pushSelectedWordToArray = (
     return;
   }
 
-  if (!selectedWord[key]) {
+  if (!selectedWord[pushKey]) {
     consol.throw(
-      `#ERR rgxc selectWordVersions. Could not find key "${key}" on selectedWord.`
+      `#ERR rgxc selectWordVersions. Could not find pushKey "${pushKey}" on selectedWord.`
     );
   }
 
-  if (!Array.isArray(selectedWord[key])) {
+  if (!Array.isArray(selectedWord[pushKey])) {
     consol.log("vcxx selectWordVersions", {
       selectedWord,
-      "selectedWord[key]": selectedWord[key],
+      "selectedWord[pushKey]": selectedWord[pushKey],
     });
     consol.throw(
       "vcxx selectWordVersions Value inside tobj should have been array."
     );
   }
 
-  if (!selectedWord[key]) {
-    consol.throw("#ERR ztgp selectWordVersions. selectedWord[key] was falsy.");
+  if (!selectedWord[pushKey]) {
+    consol.throw(
+      "#ERR ztgp selectWordVersions. selectedWord[pushKey] was falsy."
+    );
   }
 
   consol.log(
-    "[1;30m " + `oqij selectWordVersions Pushing arr "${selectedWord[key]}"` + "[0m"
+    "[1;30m " + `oqij selectWordVersions Pushing arr "${selectedWord[pushKey]}"` + "[0m"
   );
   addAnnotationsAndPush(
-    selectedWord[key],
+    selectedWord[pushKey],
     selectedWordsArr,
     annoObj,
     structureChunk

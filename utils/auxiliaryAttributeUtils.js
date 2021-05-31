@@ -1013,22 +1013,22 @@ exports.specifyQuestionChunkAndChangeAnswerChunk = (
   }
 };
 
-exports.addAnnotation = (chunk, key, value) => {
+exports.addAnnotation = (chunk, traitKeyy, traitValyye) => {
   if (!chunk.annotations) {
     chunk.annotations = {};
   }
 
-  if (typeof value !== "string") {
-    consol.log("nrtn addAnnotation", { value });
-    consol.throw("nrtn addAnnotation expected STRING for value");
+  if (typeof traitValyye !== "string") {
+    consol.log("nrtn addAnnotation", { traitValyye });
+    consol.throw("nrtn addAnnotation expected STRING for traitValyye");
   }
 
   consol.log(
     "[1;35m " + "aggw addAnnotation Added annotation for " + chunk.chunkId + "[0m"
   );
-  consol.log("aggw addAnnotation", { key, value });
+  consol.log("aggw addAnnotation", { traitKeyy, traitValyye });
 
-  chunk.annotations[key] = value;
+  chunk.annotations[traitKeyy] = traitValyye;
 };
 
 exports.trimAnnotations = (annotationObj) => {
@@ -1238,54 +1238,55 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
                 synhomDataUnit.inflectionCategoryyChain
               );
 
-              let currentValueArr = synhomDataUnit.inflectionCategoryyChain.map(
-                (inflectionCategoryy) => {
-                  consol.log("vpzx filterDownClarifiers", {
-                    inflectionCategoryy,
-                  });
+              let currentTraitValyyes =
+                synhomDataUnit.inflectionCategoryyChain.map(
+                  (inflectionCategoryy) => {
+                    consol.log("vpzx filterDownClarifiers", {
+                      inflectionCategoryy,
+                    });
 
-                  if (
-                    inflectionCategoryy === "tense" &&
-                    (!structureChunk[inflectionCategoryy] ||
-                      !structureChunk[inflectionCategoryy].length)
-                  ) {
-                    inflectionCategoryy = "tenseDescription";
+                    if (
+                      inflectionCategoryy === "tense" &&
+                      (!structureChunk[inflectionCategoryy] ||
+                        !structureChunk[inflectionCategoryy].length)
+                    ) {
+                      inflectionCategoryy = "tenseDescription";
+                    }
+
+                    if (
+                      !structureChunk[inflectionCategoryy] ||
+                      !structureChunk[inflectionCategoryy].length
+                    ) {
+                      consol.log(
+                        "[1;31m " +
+                          `#WARN kxqz filterDownClarifiers. Adding null to currentTraitValyyes for inflectionCategoryy "${inflectionCategoryy}".` +
+                          "[0m"
+                      );
+
+                      return null;
+                    }
+
+                    if (structureChunk[inflectionCategoryy].length > 1) {
+                      consol.log(
+                        "[1;31m " +
+                          `#WARN wqzm filterDownClarifiers. structureChunk[inflectionCategoryy] "${structureChunk[inflectionCategoryy]}"` +
+                          "[0m"
+                      );
+                      consol.throw(
+                        "#ERR wqzm filterDownClarifiers. inflectionCategoryy: " +
+                          inflectionCategoryy
+                      );
+                    }
+
+                    return structureChunk[inflectionCategoryy][0];
                   }
-
-                  if (
-                    !structureChunk[inflectionCategoryy] ||
-                    !structureChunk[inflectionCategoryy].length
-                  ) {
-                    consol.log(
-                      "[1;31m " +
-                        `#WARN kxqz filterDownClarifiers. Adding null to currentValueArr for inflectionCategoryy "${inflectionCategoryy}".` +
-                        "[0m"
-                    );
-
-                    return null;
-                  }
-
-                  if (structureChunk[inflectionCategoryy].length > 1) {
-                    consol.log(
-                      "[1;31m " +
-                        `#WARN wqzm filterDownClarifiers. structureChunk[inflectionCategoryy] "${structureChunk[inflectionCategoryy]}"` +
-                        "[0m"
-                    );
-                    consol.throw(
-                      "#ERR wqzm filterDownClarifiers. inflectionCategoryy: " +
-                        inflectionCategoryy
-                    );
-                  }
-
-                  return structureChunk[inflectionCategoryy][0];
-                }
-              );
+                );
 
               filteredInflectionCategoryys =
                 filteredInflectionCategoryys.filter((inflectionCategoryy) => {
                   if (
                     otUtils.findSinglePointMutationArray(
-                      currentValueArr,
+                      currentTraitValyyes,
                       synhomDataUnit.inflectionPaths,
                       synhomDataUnit.inflectionCategoryyChain.indexOf(
                         inflectionCategoryy
