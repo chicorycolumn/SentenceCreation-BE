@@ -31,12 +31,12 @@ exports.checkOutputArrayForMissingUnits = (
   }
 };
 
-exports.getLemmaObjectsWithoutGivenSelectorKeyy = (
+exports.getLemmaObjectsWithoutGivenSelectorKey = (
   wordsBank,
   wordtype,
-  selectorKeyy
+  selectorKey
 ) => {
-  return wordsBank[`${wordtype}Set`].filter((lObj) => !lObj[selectorKeyy]);
+  return wordsBank[`${wordtype}Set`].filter((lObj) => !lObj[selectorKey]);
 };
 
 exports.checkWords = (testing, currentLanguage) => {
@@ -49,12 +49,11 @@ exports.checkWords = (testing, currentLanguage) => {
     langUtils.preprocessLemmaObjectsMinor(words);
   });
 
-  let nounsWithoutGender =
-    educatorUtils.getLemmaObjectsWithoutGivenSelectorKeyy(
-      wordsBank,
-      "noun", //bostonOK
-      "gender"
-    );
+  let nounsWithoutGender = educatorUtils.getLemmaObjectsWithoutGivenSelectorKey(
+    wordsBank,
+    "noun", //bostonOK
+    "gender"
+  );
 
   return {
     nounsWithoutGender: nounsWithoutGender.map((lObj) => [lObj.lemma, lObj.id]),
@@ -81,8 +80,8 @@ exports.findHomographs = (testing, currentLanguage, homographType, ignore) => {
   const wordsBank = educatorUtils.getWordsBank(currentLanguage, testing);
   const langUtils = require(`../../source/${currentLanguage}/langUtils.js`);
 
-  let recordOfTerminalValyyesAndPaths = [];
-  let severallyAppearingTerminalValyyesArr = [];
+  let recordOfTerminalValuesAndPaths = [];
+  let severallyAppearingTerminalValuesArr = [];
   let temporaryArr = [];
   let homographs = {};
 
@@ -99,36 +98,33 @@ exports.findHomographs = (testing, currentLanguage, homographType, ignore) => {
     );
 
     wordset.forEach((lObj) => {
-      let terminalValyyesAndPathsArr =
-        otUtils.giveRoutesAndTerminalValyyesFromObject(lObj.inflections);
+      let terminalValuesAndPathsArr =
+        otUtils.giveRoutesAndTerminalValuesFromObject(lObj.inflections);
 
-      terminalValyyesAndPathsArr.forEach((terminalValyyesAndPathsUnit) => {
-        terminalValyyesAndPathsUnit.nestedRoute.unshift(lObj.id);
-        recordOfTerminalValyyesAndPaths.push(terminalValyyesAndPathsUnit);
+      terminalValuesAndPathsArr.forEach((terminalValuesAndPathsUnit) => {
+        terminalValuesAndPathsUnit.nestedRoute.unshift(lObj.id);
+        recordOfTerminalValuesAndPaths.push(terminalValuesAndPathsUnit);
       });
     });
   });
 
-  consol.log(
-    "recordOfTerminalValyyesAndPaths",
-    recordOfTerminalValyyesAndPaths
-  );
+  consol.log("recordOfTerminalValuesAndPaths", recordOfTerminalValuesAndPaths);
 
-  recordOfTerminalValyyesAndPaths.forEach((unit) => {
-    let { terminalValyye } = unit;
+  recordOfTerminalValuesAndPaths.forEach((unit) => {
+    let { terminalValue } = unit;
     if (
-      temporaryArr.includes(terminalValyye) &&
-      !severallyAppearingTerminalValyyesArr.includes(terminalValyye)
+      temporaryArr.includes(terminalValue) &&
+      !severallyAppearingTerminalValuesArr.includes(terminalValue)
     ) {
-      severallyAppearingTerminalValyyesArr.push(terminalValyye);
+      severallyAppearingTerminalValuesArr.push(terminalValue);
     } else {
-      temporaryArr.push(terminalValyye);
+      temporaryArr.push(terminalValue);
     }
   });
 
-  severallyAppearingTerminalValyyesArr.forEach((terminalValyye) => {
-    homographs[terminalValyye] = recordOfTerminalValyyesAndPaths
-      .filter((unit) => unit.terminalValyye === terminalValyye)
+  severallyAppearingTerminalValuesArr.forEach((terminalValue) => {
+    homographs[terminalValue] = recordOfTerminalValuesAndPaths
+      .filter((unit) => unit.terminalValue === terminalValue)
       .map((unit) => unit.nestedRoute);
   });
 

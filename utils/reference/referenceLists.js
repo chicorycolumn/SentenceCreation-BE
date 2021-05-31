@@ -1,19 +1,19 @@
-const { lObjIsMGN, getWorrdtypeStCh } = require("../generalPurposeUtils");
+const { lObjIsMGN, getWordtypeStCh } = require("../generalPurposeUtils");
 
 exports.incompatibleTraitsRef = {
   POL: {
-    //If we're examining gender traitKeyy.
+    //If we're examining gender traitKey.
     gender: {
-      //Check the "number" traitKeyy...
+      //Check the "number" traitKey...
       number: {
-        //...and if the number traitValyyes do not include "singular", remove these gender traitValyyes.
+        //...and if the number traitValues do not include "singular", remove these gender traitValues.
         singular: ["m", "m1", "m2", "m3", "f", "n"],
-        //...and if the number does not include "plural", remove these gender traitValyyes.
+        //...and if the number does not include "plural", remove these gender traitValues.
         plural: ["virile", "nonvirile"],
       },
-      //Check the "person" traitKeyy...
+      //Check the "person" traitKey...
       person: {
-        //...and if the person traitValyyes do not include "3per", remove these gender traitValyyes.
+        //...and if the person traitValues do not include "3per", remove these gender traitValues.
         "3per": ["m2", "m3", "n"],
       },
     },
@@ -23,9 +23,9 @@ exports.incompatibleTraitsRef = {
     gender: {
       //Check the number...
       number: {
-        //...and if the number does not include singular, remove these gender traitValyyes.
+        //...and if the number does not include singular, remove these gender traitValues.
         singular: ["m", "f", "n"],
-        ///...and if the number does not include plural, remove these gender traitValyyes.
+        ///...and if the number does not include plural, remove these gender traitValues.
         plural: ["virile", "nonvirile"],
       },
     },
@@ -87,7 +87,7 @@ exports.metaCorrectionRef = {
   },
 };
 
-exports.metaTraitValyyes = {
+exports.metaTraitValues = {
   ENG: {
     gender: {
       allGenders: ["m", "n", "f", "virile", "nonvirile"],
@@ -131,7 +131,7 @@ exports.metaTraitValyyes = {
   },
 };
 
-exports.lemmaObjectTraitKeyys = {
+exports.lemmaObjectTraitKeys = {
   POL: {
     selectors: {
       noun: ["gender"],
@@ -157,7 +157,7 @@ exports.lemmaObjectTraitKeyys = {
       // article: NONE
       preposition: ["form"],
     },
-    inheritableInflectionKeyys: {
+    inheritableInflectionKeys: {
       "noun-common": ["number", "gcase"],
       "noun-person": ["number", "gcase", "gender"], //BOSTON0
       "noun-proper": ["number", "gcase"],
@@ -199,7 +199,7 @@ exports.lemmaObjectTraitKeyys = {
       article: ["form", "number"],
       preposition: ["form"],
     },
-    inheritableInflectionKeyys: {
+    inheritableInflectionKeys: {
       "noun-common": ["number", "gcase"],
       "noun-person": ["number", "gcase", "gender"],
       "noun-proper": ["number", "gcase"],
@@ -229,7 +229,7 @@ exports.structureChunkTraits = {
   ALL: {
     //
     //
-    //    These stCh traits require validation that given traitValyyes are okay.
+    //    These stCh traits require validation that given traitValues are okay.
     //
     //
     preventAddingFurtherClarifiers: { expectedTypeOnStCh: "boolean" },
@@ -237,39 +237,39 @@ exports.structureChunkTraits = {
       expectedTypeOnStCh: "boolean",
       needsNoValidation: true,
     },
-    educatorBlocksAnnotationsForTheseTraitKeyys: {
+    educatorBlocksAnnotationsForTheseTraitKeys: {
       expectedTypeOnStCh: "array",
-      ultimatelyMultipleTraitValyyesOkay: true,
+      ultimatelyMultipleTraitValuesOkay: true,
       needsNoValidation: true,
     },
-    formulaImportantTraitKeyys: {
+    formulaImportantTraitKeys: {
       expectedTypeOnStCh: "array",
-      ultimatelyMultipleTraitValyyesOkay: true,
+      ultimatelyMultipleTraitValuesOkay: true,
       needsNoValidation: true,
     },
-    counterfactuallyImportantTraitKeyys: {
+    counterfactuallyImportantTraitKeys: {
       expectedTypeOnStCh: "array",
-      ultimatelyMultipleTraitValyyesOkay: true,
+      ultimatelyMultipleTraitValuesOkay: true,
     },
     dontSpecifyOnThisChunk: { expectedTypeOnStCh: "boolean" },
     specificLemmas: { expectedTypeOnStCh: "array" },
     specificIds: { expectedTypeOnStCh: "array" },
     andTags: {
       expectedTypeOnStCh: "array",
-      ultimatelyMultipleTraitValyyesOkay: true,
+      ultimatelyMultipleTraitValuesOkay: true,
     },
     orTags: {
       expectedTypeOnStCh: "array",
-      ultimatelyMultipleTraitValyyesOkay: true,
+      ultimatelyMultipleTraitValuesOkay: true,
     },
     form: { expectedTypeOnStCh: "array" },
     chunkId: { expectedTypeOnStCh: "string" },
     preferredChoicesForQuestionSentence: {
-      expectedTypeOnStCh: "keyVaalueObject",
+      expectedTypeOnStCh: "keyValueObject",
     },
     // wordtype: {
     //   expectedTypeOnStCh: "string",
-    //   possibleTraitValyyes: [
+    //   possibleTraitValues: [
     //     "noun",
     //     "adjective",
     //     "verb",
@@ -288,12 +288,12 @@ exports.structureChunkTraits = {
       expectedTypeOnStCh: "string",
       mustBeExistingChunkId: true,
     },
-    chunkValyye: { expectedTypeOnStCh: "string" },
+    chunkValue: { expectedTypeOnStCh: "string" },
   },
   POL: {
     //
     //
-    //    These stCh traits require validation that given traitValyyes are okay.
+    //    These stCh traits require validation that given traitValues are okay.
     //
     //
     postHocAgreeWithPrimary: {
@@ -310,13 +310,13 @@ exports.structureChunkTraits = {
     },
     //
     //
-    //    These stCh traits get validation by their possibleTraitValyyes arr.
+    //    These stCh traits get validation by their possibleTraitValues arr.
     //
     //
     tenseDescription: {
       compatibleWordtypes: ["verb"],
       expectedTypeOnStCh: "array",
-      possibleTraitValyyes: [
+      possibleTraitValues: [
         "past im",
         "present im",
         "future im",
@@ -339,12 +339,12 @@ exports.structureChunkTraits = {
     person: {
       compatibleWordtypes: ["noun", "verb", "pronoun"],
       expectedTypeOnStCh: "array",
-      possibleTraitValyyes: ["1per", "2per", "3per", "impersonal"],
+      possibleTraitValues: ["1per", "2per", "3per", "impersonal"],
     },
     gender: {
       compatibleWordtypes: ["noun", "verb", "adjective", "pronoun"],
       expectedTypeOnStCh: "array",
-      possibleTraitValyyes: [
+      possibleTraitValues: [
         "m1",
         "m2",
         "m3",
@@ -365,22 +365,22 @@ exports.structureChunkTraits = {
     number: {
       compatibleWordtypes: ["noun", "verb", "adjective", "pronoun"],
       expectedTypeOnStCh: "array",
-      possibleTraitValyyes: ["singular", "plural"],
+      possibleTraitValues: ["singular", "plural"],
     },
     gcase: {
       compatibleWordtypes: ["noun", "adjective", "pronoun"],
       expectedTypeOnStCh: "array",
-      possibleTraitValyyes: ["nom", "gen", "dat", "acc", "ins", "loc"],
+      possibleTraitValues: ["nom", "gen", "dat", "acc", "ins", "loc"],
     },
     aspect: {
       compatibleWordtypes: ["verb"],
       expectedTypeOnStCh: "array",
-      possibleTraitValyyes: ["imperfective", "perfective"],
+      possibleTraitValues: ["imperfective", "perfective"],
     },
     tense: {
       compatibleWordtypes: ["verb"],
       expectedTypeOnStCh: "array",
-      possibleTraitValyyes: [
+      possibleTraitValues: [
         "past",
         "present",
         "future",
@@ -392,13 +392,13 @@ exports.structureChunkTraits = {
   ENG: {
     //
     //
-    //    These stCh traits get validation by their possibleTraitValyyes arr.
+    //    These stCh traits get validation by their possibleTraitValues arr.
     //
     //
     tenseDescription: {
       compatibleWordtypes: ["verb"],
       expectedTypeOnStCh: "array",
-      possibleTraitValyyes: [
+      possibleTraitValues: [
         "past",
         "present",
         "future",
@@ -416,27 +416,27 @@ exports.structureChunkTraits = {
     person: {
       compatibleWordtypes: ["noun", "verb", "pronoun"],
       expectedTypeOnStCh: "array",
-      possibleTraitValyyes: ["1per", "2per", "3per"],
+      possibleTraitValues: ["1per", "2per", "3per"],
     },
     gender: {
       compatibleWordtypes: ["noun", "pronoun"],
       expectedTypeOnStCh: "array",
-      possibleTraitValyyes: ["m", "f", "n", "virile", "nonvirile"],
+      possibleTraitValues: ["m", "f", "n", "virile", "nonvirile"],
     },
     number: {
       compatibleWordtypes: ["noun", "verb", "pronoun", "article"],
       expectedTypeOnStCh: "array",
-      possibleTraitValyyes: ["singular", "plural"],
+      possibleTraitValues: ["singular", "plural"],
     },
     gcase: {
       compatibleWordtypes: ["noun", "pronoun"],
       expectedTypeOnStCh: "array",
-      possibleTraitValyyes: ["nom", "gen", "dat", "acc"],
+      possibleTraitValues: ["nom", "gen", "dat", "acc"],
     },
     tense: {
       compatibleWordtypes: ["verb"],
       expectedTypeOnStCh: "array",
-      possibleTraitValyyes: [
+      possibleTraitValues: [
         "past",
         "present",
         "future",
@@ -461,7 +461,7 @@ exports.uninflectedForms = {
   },
 };
 
-exports.adhocInflectionCategoryys = {
+exports.adhocInflectionCategorys = {
   POL: {},
   ENG: { verb: ["tenseDescription"] },
 };

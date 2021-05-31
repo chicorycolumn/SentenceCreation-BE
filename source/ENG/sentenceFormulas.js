@@ -4,7 +4,7 @@ exports.sentenceFormulasBank = [
     sentenceFormulaId: "ENG-00-101a",
     translations: { POL: ["POL-00-101a"] },
     sentenceStructure: [
-      { chunkId: "fix-1", chunkValyye: "the" },
+      { chunkId: "fix-1", chunkValue: "the" },
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
@@ -28,7 +28,7 @@ exports.sentenceFormulasBank = [
     sentenceFormulaId: "ENG-00-101b",
     translations: { POL: ["POL-00-101b"] },
     sentenceStructure: [
-      { chunkId: "fix-1", chunkValyye: "the" },
+      { chunkId: "fix-1", chunkValue: "the" },
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
@@ -42,7 +42,7 @@ exports.sentenceFormulasBank = [
         tenseDescription: ["present"],
         andTags: ["basic2"],
       },
-      { chunkId: "fix-2", chunkValyye: "quickly" },
+      { chunkId: "fix-2", chunkValue: "quickly" },
     ],
     primaryOrders: [["fix-1", "npe-1", "ver-1", "fix-2"]],
     additionalOrders: [["fix-2", "fix-1", "npe-1", "ver-1"]],
@@ -52,7 +52,7 @@ exports.sentenceFormulasBank = [
     sentenceFormulaId: "ENG-00-102a",
     translations: { POL: ["POL-00-102a"] },
     sentenceStructure: [
-      { chunkId: "fix-1", chunkValyye: "I" },
+      { chunkId: "fix-1", chunkValue: "I" },
       {
         chunkId: "ver-1",
         andTags: ["basic2"],
@@ -69,7 +69,7 @@ exports.sentenceFormulasBank = [
     sentenceFormulaId: "ENG-00-103a",
     translations: { POL: ["POL-00-103a"] },
     sentenceStructure: [
-      { chunkId: "fix-1", chunkValyye: "I" },
+      { chunkId: "fix-1", chunkValue: "I" },
       {
         chunkId: "ver-1",
         andTags: ["basic3"],
@@ -86,7 +86,7 @@ exports.sentenceFormulasBank = [
     sentenceFormulaId: "ENG-00-103b",
     translations: { POL: ["POL-00-103b"] },
     sentenceStructure: [
-      { chunkId: "fix-1", chunkValyye: "I" },
+      { chunkId: "fix-1", chunkValue: "I" },
       {
         chunkId: "ver-1",
         andTags: ["basic3"],
@@ -103,7 +103,7 @@ exports.sentenceFormulasBank = [
     sentenceFormulaId: "ENG-00-103c",
     translations: { POL: ["POL-00-103c"] },
     sentenceStructure: [
-      { chunkId: "fix-1", chunkValyye: "I" },
+      { chunkId: "fix-1", chunkValue: "I" },
       {
         chunkId: "ver-1",
         andTags: ["basic3"],
@@ -120,7 +120,7 @@ exports.sentenceFormulasBank = [
     sentenceFormulaId: "ENG-00-104a",
     translations: { POL: ["POL-00-104a"] },
     sentenceStructure: [
-      { chunkId: "fix-1", chunkValyye: "I" },
+      { chunkId: "fix-1", chunkValue: "I" },
       {
         chunkId: "ver-1",
         andTags: ["basic3"],
@@ -137,7 +137,7 @@ exports.sentenceFormulasBank = [
     sentenceFormulaId: "ENG-00-104b",
     translations: { POL: ["POL-00-104b"] },
     sentenceStructure: [
-      { chunkId: "fix-1", chunkValyye: "I" },
+      { chunkId: "fix-1", chunkValue: "I" },
       {
         chunkId: "ver-1",
         andTags: ["basic3"],
@@ -154,7 +154,7 @@ exports.sentenceFormulasBank = [
     sentenceFormulaId: "ENG-00-105a",
     translations: { POL: ["POL-00-105a"] },
     sentenceStructure: [
-      { chunkId: "fix-1", chunkValyye: "I" },
+      { chunkId: "fix-1", chunkValue: "I" },
       {
         chunkId: "ver-1",
         andTags: ["basic3"],
@@ -171,34 +171,34 @@ exports.sentenceFormulasBank = [
     sentenceFormulaId: "ENG-00-106a",
     translations: { POL: ["POL-00-106a"] },
     sentenceStructure: [
-      { chunkId: "fix-1", chunkValyye: "if" },
-      { chunkId: "fix-2", chunkValyye: "you" },
+      { chunkId: "fix-1", chunkValue: "if" },
+      { chunkId: "fix-2", chunkValue: "you" },
       {
         chunkId: "ver-1",
         specificLemmas: ["write"],
         tenseDescription: ["cond1 condition"],
-        formulaImportantTraitKeyys: ["tenseDescription"],
+        formulaImportantTraitKeys: ["tenseDescription"],
         person: ["2per"],
         number: ["singular"],
       },
-      { chunkId: "fix-3", chunkValyye: "a" },
+      { chunkId: "fix-3", chunkValue: "a" },
       {
         chunkId: "nco-1",
         specificLemmas: ["book"],
         number: ["singular"],
         gcase: ["nom"],
       },
-      { chunkId: "fix-4", chunkValyye: "," },
-      { chunkId: "fix-5", chunkValyye: "I" },
+      { chunkId: "fix-4", chunkValue: "," },
+      { chunkId: "fix-5", chunkValue: "I" },
       {
         chunkId: "ver-2",
         specificLemmas: ["research"],
         tenseDescription: ["cond1 outcome"],
-        formulaImportantTraitKeyys: ["tenseDescription"],
+        formulaImportantTraitKeys: ["tenseDescription"],
         person: ["1per"],
         number: ["singular"],
       },
-      { chunkId: "fix-6", chunkValyye: "it" },
+      { chunkId: "fix-6", chunkValue: "it" },
     ],
     primaryOrders: [
       [
@@ -281,7 +281,7 @@ exports.sentenceFormulasBank = [
     sentenceFormulaId: "ENG-00-109",
     translations: { POL: ["POL-00-109"] },
     sentenceStructure: [
-      { chunkId: "fix-1", chunkValyye: "the" },
+      { chunkId: "fix-1", chunkValue: "the" },
       {
         chunkId: "npe-1",
         number: ["singular"],
@@ -293,8 +293,8 @@ exports.sentenceFormulasBank = [
         specificLemmas: ["write"],
         tenseDescription: ["past simple"],
       },
-      { chunkId: "fix-2", chunkValyye: "a" },
-      { chunkId: "fix-3", chunkValyye: "prescription" },
+      { chunkId: "fix-2", chunkValue: "a" },
+      { chunkId: "fix-3", chunkValue: "prescription" },
     ],
     primaryOrders: [["fix-1", "npe-1", "ver-1", "fix-2", "fix-3"]],
     additionalOrders: [],
@@ -304,7 +304,7 @@ exports.sentenceFormulasBank = [
     sentenceFormulaId: "ENG-00-109a",
     translations: { POL: ["POL-00-109a"] },
     sentenceStructure: [
-      { chunkId: "fix-1", chunkValyye: "the" },
+      { chunkId: "fix-1", chunkValue: "the" },
       {
         chunkId: "npe-1",
         number: ["singular"],
@@ -318,11 +318,11 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "fix-2",
-        chunkValyye: "a",
+        chunkValue: "a",
       },
       {
         chunkId: "fix-3",
-        chunkValyye: "prescription",
+        chunkValue: "prescription",
       },
     ],
     primaryOrders: [["fix-1", "npe-1", "ver-1", "fix-2", "fix-3"]],
@@ -334,7 +334,7 @@ exports.sentenceFormulasBank = [
     sentenceFormulaId: "ENG-00-109b",
     translations: { POL: ["POL-00-109b"] },
     sentenceStructure: [
-      { chunkId: "fix-1", chunkValyye: "the" },
+      { chunkId: "fix-1", chunkValue: "the" },
       {
         chunkId: "npe-1",
         number: ["plural"],
@@ -346,8 +346,8 @@ exports.sentenceFormulasBank = [
         specificLemmas: ["write"],
         tenseDescription: ["past simple"],
       },
-      { chunkId: "fix-2", chunkValyye: "a" },
-      { chunkId: "fix-3", chunkValyye: "prescription" },
+      { chunkId: "fix-2", chunkValue: "a" },
+      { chunkId: "fix-3", chunkValue: "prescription" },
     ],
     primaryOrders: [["fix-1", "npe-1", "ver-1", "fix-2", "fix-3"]],
     additionalOrders: [],
@@ -357,7 +357,7 @@ exports.sentenceFormulasBank = [
     sentenceFormulaId: "ENG-00-109c",
     translations: { POL: ["POL-00-109c"] },
     sentenceStructure: [
-      { chunkId: "fix-1", chunkValyye: "the" },
+      { chunkId: "fix-1", chunkValue: "the" },
       {
         chunkId: "npe-1",
         number: ["plural"],
@@ -369,8 +369,8 @@ exports.sentenceFormulasBank = [
         specificLemmas: ["write"],
         tenseDescription: ["past continuous"],
       },
-      { chunkId: "fix-2", chunkValyye: "a" },
-      { chunkId: "fix-3", chunkValyye: "prescription" },
+      { chunkId: "fix-2", chunkValue: "a" },
+      { chunkId: "fix-3", chunkValue: "prescription" },
     ],
     primaryOrders: [["fix-1", "npe-1", "ver-1", "fix-2", "fix-3"]],
     additionalOrders: [],
@@ -380,7 +380,7 @@ exports.sentenceFormulasBank = [
     sentenceFormulaId: "ENG-00-110",
     translations: { POL: ["POL-00-110"] },
     sentenceStructure: [
-      { chunkId: "fix-1", chunkValyye: "the" },
+      { chunkId: "fix-1", chunkValue: "the" },
       {
         chunkId: "npe-1",
         specificLemmas: ["woman"],
@@ -397,13 +397,13 @@ exports.sentenceFormulasBank = [
         person: ["1per"],
         gcase: ["dat"],
       },
-      { chunkId: "fix-2", chunkValyye: "a" },
+      { chunkId: "fix-2", chunkValue: "a" },
       {
         chunkId: "nco-2",
         specificLemmas: ["book"],
         number: ["singular"],
       },
-      { chunkId: "fix-3", chunkValyye: "to" },
+      { chunkId: "fix-3", chunkValue: "to" },
     ],
     primaryOrders: [["fix-1", "npe-1", "ver-1", "pro-1", "fix-2", "nco-2"]],
     additionalOrders: [
@@ -497,7 +497,7 @@ exports.sentenceFormulasBank = [
         specificLemmas: ["book", "mirror", "apple", "onion"],
         number: ["plural"],
       },
-      { chunkId: "fix-3", chunkValyye: "to" },
+      { chunkId: "fix-3", chunkValue: "to" },
     ],
     primaryOrders: [["npe-1", "ver-1", "pro-1", "nco-2"]],
     additionalOrders: [["npe-1", "ver-1", "nco-2", "fix-3", "pro-1"]],
@@ -524,13 +524,13 @@ exports.sentenceFormulasBank = [
         person: ["1per"],
         gcase: ["dat"],
       },
-      { chunkId: "fix-1", chunkValyye: "one" },
+      { chunkId: "fix-1", chunkValue: "one" },
       {
         chunkId: "nco-2",
         specificLemmas: ["book", "mirror", "apple", "onion"],
         number: ["singular"],
       },
-      { chunkId: "fix-3", chunkValyye: "to" },
+      { chunkId: "fix-3", chunkValue: "to" },
     ],
     primaryOrders: [["npe-1", "ver-1", "pro-1", "fix-1", "nco-2"]],
     additionalOrders: [
@@ -569,10 +569,10 @@ exports.sentenceFormulasBank = [
         chunkId: "pro-3",
         agreeWith: "pro-1-invisible",
         gcase: ["dat"],
-        formulaImportantTraitKeyys: ["gcase"],
+        formulaImportantTraitKeys: ["gcase"],
         specificLemmas: ["PERSONAL"],
       },
-      { chunkId: "fix-1", chunkValyye: "a" },
+      { chunkId: "fix-1", chunkValue: "a" },
       {
         chunkId: "nco-2",
         specificLemmas: ["book"],
@@ -614,7 +614,7 @@ exports.sentenceFormulasBank = [
         chunkId: "pro-3-Us",
         agreeWith: "pro-1-invisible-We",
         gcase: ["dat"],
-        formulaImportantTraitKeyys: ["gcase"],
+        formulaImportantTraitKeys: ["gcase"],
         specificLemmas: ["PERSONAL"],
       },
       {
@@ -647,8 +647,8 @@ exports.sentenceFormulasBank = [
     sentenceFormulaId: "ENG-00-114",
     translations: { POL: ["POL-00-114"] },
     sentenceStructure: [
-      { chunkId: "fix-1a", chunkValyye: "the" },
-      { chunkId: "fix-1b", chunkValyye: "a" },
+      { chunkId: "fix-1a", chunkValue: "the" },
+      { chunkId: "fix-1b", chunkValue: "a" },
       {
         chunkId: "pro-1-invisible-I",
         specificLemmas: ["PERSONAL"],
@@ -670,7 +670,7 @@ exports.sentenceFormulasBank = [
         chunkId: "pro-2-Me",
         agreeWith: "pro-1-invisible-I",
         gcase: ["dat"],
-        formulaImportantTraitKeyys: ["gcase"],
+        formulaImportantTraitKeys: ["gcase"],
         specificLemmas: ["PERSONAL"],
       },
       {
@@ -736,7 +736,7 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
         specificLemmas: ["doctor"],
       },
-      { chunkId: "fix-1-and", chunkValyye: "and" },
+      { chunkId: "fix-1-and", chunkValue: "and" },
       {
         chunkId: "pro-3-his",
         form: ["determiner"],
@@ -785,7 +785,7 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
         specificLemmas: ["doctor"],
         gender: ["f"],
-        educatorBlocksAnnotationsForTheseTraitKeyys: ["gender"],
+        educatorBlocksAnnotationsForTheseTraitKeys: ["gender"],
         // ^ Because here the educator knows that context makes this MGN's gender unambiguous.
       },
       {
@@ -794,7 +794,7 @@ exports.sentenceFormulasBank = [
         specificLemmas: ["be"],
         tenseDescription: ["past simple"],
       },
-      { chunkId: "fix-1-a", chunkValyye: "a" },
+      { chunkId: "fix-1-a", chunkValue: "a" },
       {
         chunkId: "npe-2-woman",
         gcase: ["nom"],
@@ -856,7 +856,7 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
         specificLemmas: ["doctor"],
         gender: ["f"],
-        educatorBlocksAnnotationsForTheseTraitKeyys: ["gender"],
+        educatorBlocksAnnotationsForTheseTraitKeys: ["gender"],
         // ^ Because here the educator knows that context makes this MGN's gender unambiguous.
       },
       {
@@ -865,7 +865,7 @@ exports.sentenceFormulasBank = [
         specificLemmas: ["be"],
         tenseDescription: ["past simple"],
       },
-      { chunkId: "fix-1-a", chunkValyye: "a" },
+      { chunkId: "fix-1-a", chunkValue: "a" },
       {
         chunkId: "npe-2-woman",
         gcase: ["nom"],
@@ -907,7 +907,7 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
         specificLemmas: ["doctor"],
         gender: ["f"],
-        educatorBlocksAnnotationsForTheseTraitKeyys: ["gender"],
+        educatorBlocksAnnotationsForTheseTraitKeys: ["gender"],
       },
       {
         chunkId: "ver-1-was",
@@ -915,7 +915,7 @@ exports.sentenceFormulasBank = [
         specificLemmas: ["be"],
         tenseDescription: ["past simple"],
       },
-      { chunkId: "fix-1-a", chunkValyye: "a" },
+      { chunkId: "fix-1-a", chunkValue: "a" },
       {
         chunkId: "npe-3-woman",
         gcase: ["nom"],
@@ -1041,7 +1041,7 @@ exports.sentenceFormulasBank = [
         specificLemmas: ["be"],
         tenseDescription: ["past simple"],
       },
-      { chunkId: "fix-1-here", chunkValyye: "here" },
+      { chunkId: "fix-1-here", chunkValue: "here" },
     ],
     primaryOrders: [["pro-1-I", "ver-1-was", "fix-1-here"]],
   },
@@ -1062,7 +1062,7 @@ exports.sentenceFormulasBank = [
         specificLemmas: ["be"],
         tenseDescription: ["present simple"],
       },
-      { chunkId: "fix-1-here", chunkValyye: "here" },
+      { chunkId: "fix-1-here", chunkValue: "here" },
     ],
     primaryOrders: [["pro-1-I", "ver-1-am", "fix-1-here"]],
   },
@@ -1088,10 +1088,10 @@ exports.sentenceFormulasBank = [
         gcase: ["nom"],
         number: ["singular"],
         specificLemmas: ["doctor"],
-        educatorBlocksAnnotationsForTheseTraitKeyys: ["gender", "number"],
+        educatorBlocksAnnotationsForTheseTraitKeys: ["gender", "number"],
         // gender: ["f"],
       },
-      { chunkId: "fix-1-and", chunkValyye: "and" },
+      { chunkId: "fix-1-and", chunkValue: "and" },
       {
         chunkId: "pro-2-his",
         form: ["determiner"],
@@ -1133,7 +1133,7 @@ exports.sentenceFormulasBank = [
         specificLemmas: ["doctor"],
         // gender: ["f"],
       },
-      { chunkId: "fix-1-and", chunkValyye: "and" },
+      { chunkId: "fix-1-and", chunkValue: "and" },
       {
         chunkId: "pro-2-my",
         form: ["determiner"],

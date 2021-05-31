@@ -17,13 +17,13 @@ exports.selectWordVersions = (
   previousOutputUnit,
   multipleMode
 ) => {
-  if (gpUtils.getWorrdtypeLObj(selectedLemmaObject) === "pronoun") {
+  if (gpUtils.getWordtypeLObj(selectedLemmaObject) === "pronoun") {
     // >>>
     // >>> Pronoun: post-prepositional
     // >>>
     if (
       previousOutputUnit &&
-      gpUtils.getWorrdtypeLObj(previousOutputUnit.selectedLemmaObject) ===
+      gpUtils.getWordtypeLObj(previousOutputUnit.selectedLemmaObject) ===
         "preposition"
     ) {
       frUtils.pushSelectedWordToArray(
@@ -54,7 +54,7 @@ exports.selectWordVersions = (
     }
   }
 
-  if (gpUtils.getWorrdtypeLObj(selectedLemmaObject) === "preposition") {
+  if (gpUtils.getWordtypeLObj(selectedLemmaObject) === "preposition") {
     if (!subsequentOutputUnit) {
       consol.throw(
         "mcob selectWordVersions Shouldn't there be an outputUnit subsequent to this POL preposition?"
@@ -114,11 +114,11 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   );
 
   sentenceStructure.forEach((structureChunk) => {
-    if (gpUtils.getWorrdtypeStCh(structureChunk) === "fixed") {
+    if (gpUtils.getWordtypeStCh(structureChunk) === "fixed") {
       return;
     }
 
-    if (gpUtils.getWorrdtypeStCh(structureChunk) === "preposition") {
+    if (gpUtils.getWordtypeStCh(structureChunk) === "preposition") {
       structureChunk.form = ["onlyForm"];
     }
 
@@ -130,9 +130,9 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
     }
 
     if (
-      //If gender is an appropriate traitKeyy of this worrdtype.
-      refObj.lemmaObjectTraitKeyys[currentLanguage].inflectionChains[
-        gpUtils.getWorrdtypeStCh(structureChunk)
+      //If gender is an appropriate traitKey of this wordtype.
+      refObj.lemmaObjectTraitKeys[currentLanguage].inflectionChains[
+        gpUtils.getWordtypeStCh(structureChunk)
       ].includes("gender")
     ) {
       if (!structureChunk.gender || !structureChunk.gender.length) {
@@ -185,28 +185,28 @@ exports.preprocessLemmaObjectsMajor = (
   }
 
   if (
-    gpUtils.getWorrdtypeLObj(matches[0]) !==
-    gpUtils.getWorrdtypeStCh(structureChunk)
+    gpUtils.getWordtypeLObj(matches[0]) !==
+    gpUtils.getWordtypeStCh(structureChunk)
   ) {
     consol.throw(
-      "#ERR wkpu POL:preprocessLemmaObjectsMajor. The worrdtypes from stCh and lObjs didn't match."
+      "#ERR wkpu POL:preprocessLemmaObjectsMajor. The wordtypes from stCh and lObjs didn't match."
     );
   }
 
-  if (["verb"].includes(gpUtils.getWorrdtypeStCh(structureChunk))) {
+  if (["verb"].includes(gpUtils.getWordtypeStCh(structureChunk))) {
     matches.forEach((lObj) => exports.fillVerbInflections(lObj));
   }
 
-  if (["adjective"].includes(gpUtils.getWorrdtypeStCh(structureChunk))) {
+  if (["adjective"].includes(gpUtils.getWordtypeStCh(structureChunk))) {
     matches.forEach((lObj) => exports.copyInflectionsFromM1toM2(lObj));
   }
 
-  allLangUtils.convertmetaTraitValyyes(matches, "POL", "lObj");
+  allLangUtils.convertmetaTraitValues(matches, "POL", "lObj");
   // allLangUtils.preprocessLemmaObjects(matches, "POL");
 
   if (!adjustLemmaObjectsOnly) {
     if (
-      ["verb", "adjective"].includes(gpUtils.getWorrdtypeStCh(structureChunk))
+      ["verb", "adjective"].includes(gpUtils.getWordtypeStCh(structureChunk))
     ) {
       allLangUtils.adjustVirilityOfStructureChunk(
         currentLanguage,
@@ -253,7 +253,7 @@ exports.addLanguageParticularClarifiers = () => {
 
 exports.adjustStructureChunksInIfPW = (structureChunk) => {
   if (
-    gpUtils.getWorrdtypeStCh(structureChunk) === "verb" &&
+    gpUtils.getWordtypeStCh(structureChunk) === "verb" &&
     structureChunk.tenseDescription &&
     structureChunk.tenseDescription.length
   ) {
@@ -338,7 +338,7 @@ exports.adjustTenseDescriptions = (structureChunk) => {
   return resultArr;
 };
 
-exports.formatTraitValyye = (traitKeyy, traitValyye, note) => {
+exports.formatTraitValue = (traitKey, traitValue, note) => {
   const pluralVirilityAndSingularConversionRef =
     refObj.pluralVirilityAndSingularConversionRef["POL"];
 
@@ -350,17 +350,17 @@ exports.formatTraitValyye = (traitKeyy, traitValyye, note) => {
     virile: ["virile"],
   };
 
-  if (traitKeyy === "gender") {
+  if (traitKey === "gender") {
     if (note === "plural") {
-      return pluralVirilityAndSingularConversionRef[note][traitValyye];
+      return pluralVirilityAndSingularConversionRef[note][traitValue];
     } else {
       if (note === "person") {
-        return shortHandGenderRef[traitValyye];
+        return shortHandGenderRef[traitValue];
       }
     }
   }
 
-  return [traitValyye];
+  return [traitValue];
 };
 
 exports.fillVerbInflections = (lemmaObject) => {
@@ -381,8 +381,8 @@ exports.fillVerbInflections = (lemmaObject) => {
   let { past } = inflections.verbal;
   let { infinitive } = inflections;
 
-  //In general, do nothing if the key is filled out already or holds vaalue false.
-  //Only fill it out if the key is present and holds vaalue true.
+  //In general, do nothing if the key is filled out already or holds value false.
+  //Only fill it out if the key is present and holds value true.
 
   if (
     aspect === "imperfective" ||
@@ -610,15 +610,15 @@ exports.fillVerbInflections = (lemmaObject) => {
 
   // Masculinist agenda
   uUtils.findKeysInObjectAndExecuteCallback(inflections, "m", (obj) => {
-    uUtils.copyVaalueOfKey(obj, "m", ["m1", "m2", "m3"], true);
+    uUtils.copyValueOfKey(obj, "m", ["m1", "m2", "m3"], true);
   });
 
-  function isAvailable(vaalue) {
+  function isAvailable(value) {
     //If true, fill it out.
     //If false, don't fill it out.
     //If any truthy item (which isn't bool true), don't fill it out.
     //If undefined (ie not filled out), then don't fill it out.
-    return vaalue === true;
+    return value === true;
   }
 };
 
@@ -627,6 +627,6 @@ exports.copyInflectionsFromM1toM2 = (lemmaObject) => {
 
   //Masculinist agenda
   uUtils.findKeysInObjectAndExecuteCallback(inflections, "m1", (obj) => {
-    uUtils.copyVaalueOfKey(obj, "m1", ["m2"], false);
+    uUtils.copyValueOfKey(obj, "m1", ["m2"], false);
   });
 };

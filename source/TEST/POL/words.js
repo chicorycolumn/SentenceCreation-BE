@@ -737,8 +737,8 @@ let adjectiveSet = [
   },
 ];
 
-//If you mark a traitKeyy true, or give it a traitValyye      it will be filled out by fillVerbInflections fxn.
-//If you mark a traitKeyy false, or omit it                   it will not be.
+//If you mark a traitKey true, or give it a traitValue      it will be filled out by fillVerbInflections fxn.
+//If you mark a traitKey false, or omit it                   it will not be.
 
 let verbSet = [
   {

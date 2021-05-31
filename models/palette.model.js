@@ -67,7 +67,7 @@ exports.fetchPalette = (req) => {
     //If PDS from req, then add PDS:true to each Q stCh.
     //Unless stCh is 'person' noun and headNoun of pronoun stCh. 'The doctor gave me his book.' must specify MGN doctor.
     //
-    //But if qChunk.gender holds all the poss gender traitValyyes for this lang>worrdtype
+    //But if qChunk.gender holds all the poss gender traitValues for this lang>wordtype
     //(bearing in mind if person andTag)
     //then do allow it to be qChunk.dontSpecifyOnThisChunk = true.
     questionSentenceFormula.sentenceStructure.forEach((qChunk) => {
@@ -75,10 +75,10 @@ exports.fetchPalette = (req) => {
 
       if (
         //bostonX
-        gpUtils.getWorrdtypeStCh(qChunk, true) === "noun-person" &&
+        gpUtils.getWordtypeStCh(qChunk, true) === "noun-person" &&
         questionSentenceFormula.sentenceStructure.find(
           (potentialDepChunk) =>
-            gpUtils.getWorrdtypeStCh(potentialDepChunk) === "pronoun" &&
+            gpUtils.getWordtypeStCh(potentialDepChunk) === "pronoun" &&
             potentialDepChunk.agreeWith === qChunk.chunkId
         )
       ) {
@@ -86,20 +86,20 @@ exports.fetchPalette = (req) => {
         qChunk.dontSpecifyOnThisChunk = false;
       } else if (qChunk.gender && qChunk.gender.length) {
         //BOSTON
-        let allGenderTraitValyyesForPersonNouns = {
+        let allGenderTraitValuesForPersonNouns = {
           POL: ["m1", "f"],
           ENG: ["m", "f"],
         };
-        let allGenderTraitValyyesForPlainNouns = {
+        let allGenderTraitValuesForPlainNouns = {
           POL: ["m2", "m3", "f", "n"],
           ENG: ["m", "f", "n"],
         };
 
-        if (gpUtils.getWorrdtypeStCh(qChunk, true) === "noun-person") {
+        if (gpUtils.getWordtypeStCh(qChunk, true) === "noun-person") {
           //bostonX
           if (
-            !allGenderTraitValyyesForPersonNouns[questionLanguage].every(
-              (traitValyye) => qChunk.gender.includes(traitValyye)
+            !allGenderTraitValuesForPersonNouns[questionLanguage].every(
+              (traitValue) => qChunk.gender.includes(traitValue)
             )
           ) {
             consol.log(qChunk.chunkId + " shep2a");
@@ -107,8 +107,8 @@ exports.fetchPalette = (req) => {
           }
         } else {
           if (
-            !allGenderTraitValyyesForPlainNouns[questionLanguage].every(
-              (traitValyye) => qChunk.gender.includes(traitValyye)
+            !allGenderTraitValuesForPlainNouns[questionLanguage].every(
+              (traitValue) => qChunk.gender.includes(traitValue)
             )
           ) {
             consol.log(qChunk.chunkId + " shep2b");
@@ -232,8 +232,8 @@ exports.fetchPalette = (req) => {
     questionSentenceData.questionOutputArr.forEach((outputUnit) => {
       if (
         ["agreeWith"].some(
-          //possible screwpoint: Should use other agreeKeeys too?
-          (agreeKeey) => outputUnit.structureChunk[agreeKeey]
+          //possible screwpoint: Should use other agreeKeys too?
+          (agreeKey) => outputUnit.structureChunk[agreeKey]
         )
       ) {
         let depCh = outputUnit.structureChunk;
@@ -259,21 +259,21 @@ exports.fetchPalette = (req) => {
         return;
       }
 
-      Object.keys(unit.structureChunk).forEach((traitKeyy) => {
-        let traitValyye = unit.structureChunk[traitKeyy];
+      Object.keys(unit.structureChunk).forEach((traitKey) => {
+        let traitValue = unit.structureChunk[traitKey];
 
         let reference =
-          refObj.structureChunkTraits[questionLanguage][traitKeyy] ||
-          refObj.structureChunkTraits["ALL"][traitKeyy];
+          refObj.structureChunkTraits[questionLanguage][traitKey] ||
+          refObj.structureChunkTraits["ALL"][traitKey];
 
         if (
           reference.expectedTypeOnStCh === "array" &&
-          !reference.ultimatelyMultipleTraitValyyesOkay &&
-          traitValyye.length > 1
+          !reference.ultimatelyMultipleTraitValuesOkay &&
+          traitValue.length > 1
         ) {
           consol.log(">>", unit);
           consol.throw(
-            `oije. (>> unit above) questionLanguage=${questionLanguage} "${unit.structureChunk.chunkId}" with "${traitKeyy}" of "${traitValyye}". This should have been streamlined down to one traitValyye, eg in updateStCh fxn.`
+            `oije. (>> unit above) questionLanguage=${questionLanguage} "${unit.structureChunk.chunkId}" with "${traitKey}" of "${traitValue}". This should have been streamlined down to one traitValue, eg in updateStCh fxn.`
           );
         }
       });
