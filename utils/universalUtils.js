@@ -25,11 +25,11 @@ exports.combineTwoKeyVaalueObjectsCarefully = (obj1, obj2) => {
   return combinedObj;
 };
 
-exports.addToArrayAtKey = (object, key, vaalue) => {
+exports.addToArrayAtKey = (object, key, item) => {
   if (!object[key]) {
-    object[key] = [vaalue];
+    object[key] = [item];
   } else {
-    object[key].push(vaalue);
+    object[key].push(item);
   }
 };
 

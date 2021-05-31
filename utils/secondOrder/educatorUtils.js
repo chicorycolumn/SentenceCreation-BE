@@ -31,7 +31,7 @@ exports.checkOutputArrayForMissingUnits = (
   }
 };
 
-exports.getLemmaObjectsWithoutGivenKey = (
+exports.getLemmaObjectsWithoutGivenSelectorKeyy = (
   wordsBank,
   wordtype,
   selectorKeyy
@@ -44,16 +44,17 @@ exports.checkWords = (testing, currentLanguage) => {
 
   const wordsBank = educatorUtils.getWordsBank(currentLanguage, testing);
 
-  Object.keys(wordsBank).forEach((wordtypeKey) => {
-    let words = wordsBank[wordtypeKey];
+  Object.keys(wordsBank).forEach((wordsetKey) => {
+    let words = wordsBank[wordsetKey];
     langUtils.preprocessLemmaObjectsMinor(words);
   });
 
-  let nounsWithoutGender = educatorUtils.getLemmaObjectsWithoutGivenKey(
-    wordsBank,
-    "noun", //bostonOK
-    "gender"
-  );
+  let nounsWithoutGender =
+    educatorUtils.getLemmaObjectsWithoutGivenSelectorKeyy(
+      wordsBank,
+      "noun", //bostonOK
+      "gender"
+    );
 
   return {
     nounsWithoutGender: nounsWithoutGender.map((lObj) => [lObj.lemma, lObj.id]),
@@ -223,8 +224,8 @@ exports.checkLemmaObjectIds = (testing, currentLanguage) => {
   const wordsBank = educatorUtils.getWordsBank(currentLanguage, testing);
 
   let schematic = [];
-  Object.keys(wordsBank).forEach((wordtypeKey) => {
-    let wordsOfAType = wordsBank[wordtypeKey];
+  Object.keys(wordsBank).forEach((wordsetKey) => {
+    let wordsOfAType = wordsBank[wordsetKey];
     schematic = [
       ...schematic,
       ...wordsOfAType.map((lObj) => [lObj.id, lObj.lemma]),

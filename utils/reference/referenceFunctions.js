@@ -116,17 +116,18 @@ exports.getTranslatedTenseDescription = (
         sourceTenseDescription
       ].regular;
   } else {
-    let translations =
+    let tenseDescTranslationObj =
       refObj.tenseDescriptionTranslation[targetLanguage][sourceLanguage];
 
-    Object.keys(translations).forEach((key) => {
-      let arrayOfTranslatedTenseDescriptions = translations[key].regular;
+    Object.keys(tenseDescTranslationObj).forEach((tenseDesc) => {
+      let arrayOfTranslatedTenseDescriptions =
+        tenseDescTranslationObj[tenseDesc].regular;
 
       if (
         arrayOfTranslatedTenseDescriptions.includes(sourceTenseDescription) &&
-        !translatedTenseDescriptionsArr.includes(key)
+        !translatedTenseDescriptionsArr.includes(tenseDesc)
       ) {
-        translatedTenseDescriptionsArr.push(key);
+        translatedTenseDescriptionsArr.push(tenseDesc);
       }
     });
   }
@@ -136,11 +137,11 @@ exports.getTranslatedTenseDescription = (
 
 exports.skipThisStepInPreprocessStructureChunks = (
   currentLanguage,
-  key,
+  featureValyye,
   structureChunk
 ) => {
   if (currentLanguage === "POL") {
-    if (key === "tenseDescription") {
+    if (featureValyye === "tenseDescription") {
       if (
         structureChunk.tense &&
         structureChunk.tense.length &&

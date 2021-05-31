@@ -736,10 +736,13 @@ exports.padOutRequirementArrWithmetaTraitValyyesIfNecessary = (
 
   consol.log(
     "[1;35m " +
-      `opoq lf:filterByKey-------------------------- for traitKeyy "${traitKeyy}"` +
+      `opoq lf:filterByTraitKeyy-------------------------- for traitKeyy "${traitKeyy}"` +
       "[0m"
   );
-  consol.log("opoq lf:filterByKey requirementArr starts as", requirementArr);
+  consol.log(
+    "opoq lf:filterByTraitKeyy requirementArr starts as",
+    requirementArr
+  );
 
   if (metaTraitValyyeRef) {
     requirementArr.forEach((traitValyye) => {
@@ -749,11 +752,11 @@ exports.padOutRequirementArrWithmetaTraitValyyesIfNecessary = (
 
         if (!metaTraitValyyeConverted) {
           consol.throw(
-            "#ERR tufx lf:filterByKey. filterByKey need converted metaTraitValyye."
+            "#ERR tufx lf:filterByTraitKeyy. filterByTraitKeyy need converted metaTraitValyye."
           );
         }
         consol.log(
-          `ndew filterByKey. Gonna push metaTraitValyyeConverted [${metaTraitValyyeConverted}]`
+          `ndew filterByTraitKeyy. Gonna push metaTraitValyyeConverted [${metaTraitValyyeConverted}]`
         );
         requirementArr = [...requirementArr, ...metaTraitValyyeConverted];
       }
@@ -767,37 +770,40 @@ exports.padOutRequirementArrWithmetaTraitValyyesIfNecessary = (
           !requirementArr.includes(metaTraitValyye)
         ) {
           consol.log(
-            `exnh filterByKey. Gonna push metaTraitValyye "${metaTraitValyye}"`
+            `exnh filterByTraitKeyy. Gonna push metaTraitValyye "${metaTraitValyye}"`
           );
           requirementArr.push(metaTraitValyye);
         }
       });
 
       consol.log(
-        "sfrl lf:filterByKey requirementArr inside ```requirementArr.forEach((traitValyye)``` is",
+        "sfrl lf:filterByTraitKeyy requirementArr inside ```requirementArr.forEach((traitValyye)``` is",
         requirementArr
       );
     });
   } else {
     consol.log(
       "[1;31m " +
-        `jwpv lf:filterByKey saw there was no metaTraitValyyeRef for currentLanguage "${currentLanguage}" and traitKeyy "${traitKeyy}"` +
+        `jwpv lf:filterByTraitKeyy saw there was no metaTraitValyyeRef for currentLanguage "${currentLanguage}" and traitKeyy "${traitKeyy}"` +
         "[0m"
     );
   }
 
-  consol.log("qyvu lf:filterByKey requirementArr ends as", requirementArr);
+  consol.log(
+    "qyvu lf:filterByTraitKeyy requirementArr ends as",
+    requirementArr
+  );
 
   return requirementArr;
 };
 
-exports.filterByKey = (
+exports.filterByTraitKeyy = (
   lemmaObjectArr,
   structureChunk,
   traitKeyy,
   currentLanguage
 ) => {
-  consol.log("wdwe filterByKey START. structureChunk", structureChunk);
+  consol.log("wdwe filterByTraitKeyy START. structureChunk", structureChunk);
 
   let requirementArray =
     lfUtils.padOutRequirementArrWithmetaTraitValyyesIfNecessary(
@@ -806,7 +812,7 @@ exports.filterByKey = (
       currentLanguage
     );
 
-  consol.log("wdet filterByKey. requirementArray", requirementArray);
+  consol.log("wdet filterByTraitKeyy. requirementArray", requirementArray);
 
   //And finally, do said filter.
   if (requirementArray.length) {
@@ -871,16 +877,22 @@ exports.filterBySelectors = (
   if (selectors) {
     selectors.forEach((selector) => {
       consol.log(
-        `bnxo filterBySelectors. Will call filterByKey for selector "${selector}"`
+        `bnxo filterBySelectors. Will call filterByTraitKeyy for selector "${selector}"`
       );
-      consol.log(`bnxo matches before filterByKey "${selector}" is:`, matches);
-      matches = lfUtils.filterByKey(
+      consol.log(
+        `bnxo matches before filterByTraitKeyy "${selector}" is:`,
+        matches
+      );
+      matches = lfUtils.filterByTraitKeyy(
         matches,
         structureChunk,
         selector,
         currentLanguage
       );
-      consol.log(`bnxu matches AFTER filterByKey "${selector}" is:`, matches);
+      consol.log(
+        `bnxu matches AFTER filterByTraitKeyy "${selector}" is:`,
+        matches
+      );
     });
   }
 

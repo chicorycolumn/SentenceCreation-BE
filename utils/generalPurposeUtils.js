@@ -113,7 +113,7 @@ exports.updateSentenceStructureWithNewStructureChunksFromOutputUnits = (
   });
 };
 
-exports.traitKeyShouldBeSpecified = (chunk, traitKeyy, allowOverwrite) => {
+exports.traitKeyyShouldBeSpecified = (chunk, traitKeyy, allowOverwrite) => {
   return (
     !chunk ||
     (!(

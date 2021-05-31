@@ -65,8 +65,8 @@ exports.getMaterials = (
     sentenceFormulaSymbol = sentenceFormula.sentenceFormulaSymbol;
   }
 
-  Object.keys(words).forEach((wordtypeKey) => {
-    langUtils.preprocessLemmaObjectsMinor(words[wordtypeKey]);
+  Object.keys(words).forEach((wordsetKey) => {
+    langUtils.preprocessLemmaObjectsMinor(words[wordsetKey]);
   });
 
   return { sentenceFormula, words };

@@ -283,7 +283,7 @@ exports.findMatchingLemmaObjectThenWord = (
   //    THREE (B): Un-PW: Pathway for Uninflected forms.
 
   //Note, this indeed is specifically uninflected FORMS.
-  //So, activeAdjectival, anteriorAdverbial, those kinds of things, that are indeed laabeled with the Form key.
+  //So, activeAdjectival, anteriorAdverbial, those kinds of things, that are indeed laabeled with the Form traitKeyy.
   //Remember, within eg a verb lobj, available Forms are infinitive, verbal, activeAdjectival, anterior...
 
   if (structureChunk.form && structureChunk.form.length) {
@@ -946,7 +946,7 @@ exports.concoctNestedRoutes = (routesByLevelTarget, routesByLevelSource) => {
   }
 };
 
-exports.extractNestedRoutes = (source, includeTerminusObjectKeys) => {
+exports.extractNestedRoutes = (source) => {
   if (source.isTerminus) {
     let routesByNesting = [];
     let routesByLevel = [[]];
@@ -993,15 +993,15 @@ exports.extractNestedRoutes = (source, includeTerminusObjectKeys) => {
       arr.pop();
       return arrCopy;
     } else if (uUtils.isKeyVaalueTypeObject(source)) {
-      Object.keys(source).forEach((key) => {
-        if (!source[key]) {
-          delete source[key];
+      Object.keys(source).forEach((traitKeyy) => {
+        if (!source[traitKeyy]) {
+          delete source[traitKeyy];
           return;
         }
 
-        arr.push(key);
+        arr.push(traitKeyy);
 
-        let result = recursivelyMapRoutes(arr, source[key]);
+        let result = recursivelyMapRoutes(arr, source[traitKeyy]);
 
         if (result) {
           routesByNesting.push(result);
@@ -1116,11 +1116,11 @@ exports.giveInflectionValyyeFromObjectByRoute = (obj, route) => {
   return interiorFunction(obj, route);
 
   function interiorFunction(obj, route) {
-    let key = route[0];
-    if (!uUtils.isKeyVaalueTypeObject(obj[key])) {
-      return obj[key];
+    let inflectionKeyy = route[0];
+    if (!uUtils.isKeyVaalueTypeObject(obj[inflectionKeyy])) {
+      return obj[inflectionKeyy];
     } else {
-      return interiorFunction(obj[key], route.slice(1));
+      return interiorFunction(obj[inflectionKeyy], route.slice(1));
     }
   }
 };
