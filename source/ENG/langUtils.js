@@ -584,8 +584,8 @@ exports.generateAdhocForms = (
   }
 
   function addToResArr(
-    adhocLabel,
-    adhocValue,
+    adhocTraitKeyy,
+    adhocValyye,
     selectedWordArr,
     structureChunk,
     dataToUpdateWith
@@ -596,18 +596,18 @@ exports.generateAdhocForms = (
 
     lfUtils.updateStructureChunkByAdhocOnly(
       structureChunkCopy,
-      adhocLabel,
-      adhocValue
+      adhocTraitKeyy,
+      adhocValyye
     );
 
     if (dataToUpdateWith) {
-      Object.keys(dataToUpdateWith).forEach((label) => {
-        let value = dataToUpdateWith[label];
+      Object.keys(dataToUpdateWith).forEach((traitKeyy) => {
+        let traitValyye = dataToUpdateWith[traitKeyy];
 
         lfUtils.updateStructureChunkByAdhocOnly(
           structureChunkCopy,
-          label,
-          value
+          traitKeyy,
+          traitValyye
         );
       });
     } else {

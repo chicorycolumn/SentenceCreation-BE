@@ -6,18 +6,18 @@ exports.log = (...args) => {
   }
 };
 
-exports.consoleLogObjectAtOneLevel = (obj, label, originLabel) => {
+exports.consoleLogObjectAtOneLevel = (obj, laabel, originLaabel) => {
   if (!obj) {
     consol.log(
       "[1;33m " +
-        `--Console log "${label}" at one level, from "${originLabel}" but FALSY.` +
+        `--Console log "${laabel}" at one level, from "${originLaabel}" but FALSY.` +
         "[0m"
     );
     return;
   }
 
   consol.log(
-    "[1;33m " + `--Console log "${label}" at one level, from "${originLabel}":` + "[0m"
+    "[1;33m " + `--Console log "${laabel}" at one level, from "${originLaabel}":` + "[0m"
   );
   consol.log("[1;32m " + `------` + "[0m");
   consol.log("[1;32m " + `----------` + "[0m");
@@ -31,18 +31,20 @@ exports.consoleLogObjectAtOneLevel = (obj, label, originLabel) => {
   consol.log("[1;32m " + `--` + "[0m");
 };
 
-exports.consoleLogObjectAtTwoLevels = (obj, label, originLabel) => {
+exports.consoleLogObjectAtTwoLevels = (obj, laabel, originLaabel) => {
   if (!obj) {
     consol.log(
       "[1;33m " +
-        `--Console log "${label}" at two levels, from "${originLabel}" but FALSY.` +
+        `--Console log "${laabel}" at two levels, from "${originLaabel}" but FALSY.` +
         "[0m"
     );
     return;
   }
 
   consol.log(
-    "[1;33m " + `--Console log "${label}" at two levels, from "${originLabel}":` + "[0m"
+    "[1;33m " +
+      `--Console log "${laabel}" at two levels, from "${originLaabel}":` +
+      "[0m"
   );
   consol.log("[1;32m " + `------` + "[0m");
   consol.log("[1;32m " + `----------` + "[0m");
@@ -73,11 +75,11 @@ exports.consoleLogAestheticBorder = (reps) => {
   }
 };
 
-exports.consoleLogPW = (label, structureChunk, multipleMode) => {
+exports.consoleLogPW = (laabel, structureChunk, multipleMode) => {
   if (multipleMode) {
-    consol.consoleLogYellowWithBorder(`##${label} ${structureChunk.chunkId}`);
+    consol.consoleLogYellowWithBorder(`##${laabel} ${structureChunk.chunkId}`);
   } else {
-    consol.consoleLogBlueWithBorder(`##${label} ${structureChunk.chunkId}`);
+    consol.consoleLogBlueWithBorder(`##${laabel} ${structureChunk.chunkId}`);
   }
 };
 

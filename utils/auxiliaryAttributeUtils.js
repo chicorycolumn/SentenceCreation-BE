@@ -182,7 +182,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   Object.keys(questionOutputUnit.structureChunk.annotations).forEach(
     (annoTraitKeyy) => {
       //ACX2A: Don't bother running counterfactuals for wordtype/emoji/text annotations, as they'll always be needed.
-      //ACX2B: Don't bother running counterfactuals for tenseDesc annotations, as they'll take so long, because there are so many alternate values, and we can reasonably presume that the tenseDesc anno will be necessary.
+      //ACX2B: Don't bother running counterfactuals for tenseDesc annotations, as they'll take so long, because there are so many alternate inflectionValyyes, and we can reasonably presume that the tenseDesc anno will be necessary.
       if (
         ["wordtype", "emoji", "text", "tenseDescription"].includes(
           annoTraitKeyy
@@ -201,7 +201,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       let counterfactualTraitValyyesForThisTraitKeyy = Array.from(
         new Set(
           stChTraits[annoTraitKeyy].possibleTraitValyyes.filter(
-            (value) => value !== annoTraitValyye
+            (traitValyye) => traitValyye !== annoTraitValyye
           )
         )
       );
@@ -224,13 +224,13 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         ];
 
       consol.log(
-        `myxe removeAnnotationsByCounterfax FOREACH START. Examining ${questionOutputUnit.structureChunk.chunkId}'s annotation ${annoTraitKeyy} = ${annoTraitValyye} so the counterfactual values are [${counterfactualTraitValyyesForThisTraitKeyy}].`
+        `myxe removeAnnotationsByCounterfax FOREACH START. Examining ${questionOutputUnit.structureChunk.chunkId}'s annotation ${annoTraitKeyy} = ${annoTraitValyye} so the counterfactual traitValyyes are [${counterfactualTraitValyyesForThisTraitKeyy}].`
       );
 
       counterfactualTraitValyyesForThisTraitKeyy.forEach(
         (counterfactualTraitValyyeForThisTraitKeyy) => {
           consol.log(
-            `myxe removeAnnotationsByCounterfax FOREACH-2 START. Will do a run with counterfactual value "${counterfactualTraitValyyeForThisTraitKeyy}".`
+            `myxe removeAnnotationsByCounterfax FOREACH-2 START. Will do a run with counterfactual traitValyye "${counterfactualTraitValyyeForThisTraitKeyy}".`
           );
 
           counterfaxedStCh[annoTraitKeyy] = [
@@ -651,7 +651,7 @@ exports.removeAnnotationsByAOCs = (
   //1. For this stCh, get all q output units that are Dependent/PHD of this.
   //2. Filter to just the ones with wordtype pronoun.
   //3. If the selectedWord in any of those units is unique between genders in its lemma object
-  //   (eg "his" is unique as no other gender key holds this value, whereas "their" is not unique as two genders keys hold it)
+  //   (eg "his" is unique as no other gender traitKeyy holds this inflectionValyye, whereas "their" is not unique as two genders keys hold it)
   //   then delete/block the gender annotation.
   let headWordtype = "noun";
   let allDependentWordtype = "pronoun";
@@ -742,7 +742,7 @@ exports.removeAnnotationsByAOCs = (
 
             consol.log("meef", depUnit);
 
-            /**If any dep unit holds a value at inflectionCategoryy that is unique in its lObj,
+            /**If any dep unit holds an inflectionValyye at inflectionCategoryy that is unique in its lObj,
              * then this pronoun obviates the need for that specifier, so delete it from annotations.
              */
             if (
@@ -807,7 +807,7 @@ exports.specialAdjustmentToAnnotations = (
         headChunk.annotations.gender !== structureChunk.annotations.gender
       ) {
         consol.throw(
-          "cjow The depCh and its headCh have different values as gender anno?"
+          "cjow The depCh and its headCh have different annoTraitValyyes for gender?"
         );
       }
 
@@ -965,17 +965,19 @@ exports.sortAnswerAndQuestionStructureChunks = (
 
 exports.specifyQuestionChunkAndChangeAnswerChunk = (
   chunksObj,
-  actionKey,
-  actionValueArr
+  traitKeyy,
+  traitValyyeArr
 ) => {
-  consol.throw("fjln specifyQuestionChunkAndChangeAnswerChunk Cease");
+  consol.throw(
+    "fjln specifyQuestionChunkAndChangeAnswerChunk Oh so we do use this."
+  );
 
-  if (actionValueArr.length !== 1) {
+  if (traitValyyeArr.length !== 1) {
     consol.log("ujrw specifyQuestionChunkAndChangeAnswerChunk", {
-      actionValueArr,
+      traitValyyeArr,
     });
     consol.throw(
-      "ujrw specifyQuestionChunkAndChangeAnswerChunk actionValueArr had length of not 1"
+      "ujrw specifyQuestionChunkAndChangeAnswerChunk traitValyyeArr had length of not 1"
     );
   }
 
@@ -984,30 +986,30 @@ exports.specifyQuestionChunkAndChangeAnswerChunk = (
 
   if (answerHeadChunk) {
     consol.log("evuj specifyQuestionChunkAndChangeAnswerChunk Point A");
-    answerHeadChunk[actionKey] = actionValueArr;
+    answerHeadChunk[traitKeyy] = traitValyyeArr;
   } else {
     consol.log("evuj specifyQuestionChunkAndChangeAnswerChunk Point B");
-    answerChunk[actionKey] = actionValueArr;
+    answerChunk[traitKeyy] = traitValyyeArr;
   }
 
   //...and note Specifier in Q headCh if exists, else Q depCh.
 
   if (questionHeadChunk) {
     consol.log("tbji specifyQuestionChunkAndChangeAnswerChunk Point C");
-    aaUtils.addAnnotation(questionHeadChunk, actionKey, actionValueArr[0]);
+    aaUtils.addAnnotation(questionHeadChunk, traitKeyy, traitValyyeArr[0]);
   } else {
     if (!questionChunk) {
       throw (
         "aaxj specifyQuestionChunkAndChangeAnswerChunk There was no corresponding questionChunk to add these Specifiers to: " +
-        actionKey +
+        traitKeyy +
         " " +
-        actionValueArr[0]
+        traitValyyeArr[0]
       );
     }
     consol.log(
       "lskt specifyQuestionChunkAndChangeAnswerChunk specifyQuestionChunkAndChangeAnswerChunk Point D"
     );
-    aaUtils.addAnnotation(questionChunk, actionKey, actionValueArr[0]);
+    aaUtils.addAnnotation(questionChunk, traitKeyy, traitValyyeArr[0]);
   }
 };
 
@@ -1183,7 +1185,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
 
             consol.log("qxqf addClarifierssynhomDataUnit", synhomDataUnit);
 
-            let labelsWhereTheyDiffer = filterDownClarifiers(
+            let inflectionCategoryysWhereTheyDiffer = filterDownClarifiers(
               synhomDataUnit,
               allowableClarifiers
             );
@@ -1192,39 +1194,40 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
               consol.log("[1;35m " + `pjgg filterDownClarifiers---------------` + "[0m");
 
               consol.log(
-                "pjgg filterDownClarifiers We start with these labels:",
-                synhomDataUnit.labelsWhereTheyDiffer
+                "pjgg filterDownClarifiers We start with these inflectionCategoryy:",
+                synhomDataUnit.inflectionCategoryysWhereTheyDiffer
               );
 
-              let filteredLabels = synhomDataUnit.labelsWhereTheyDiffer.filter(
-                (label) => {
-                  if (
-                    allowableClarifiers.includes(label) ||
-                    (structureChunk.singleWordSentence &&
-                      allowableExtraClarifiersInSingleWordSentences.includes(
-                        label
-                      ))
-                  ) {
-                    consol.log(
-                      "[1;32m " +
-                        `jpnj filterDownClarifiers "${structureChunk.chunkId}" ABZ Early stage PASSING of "${label}" in allowableClarifiers` +
-                        "[0m"
-                    );
-                    return true;
-                  } else {
-                    consol.log(
-                      "[1;30m " +
-                        `lmza filterDownClarifiers "${structureChunk.chunkId}" ABZ Early stage BLOCKING of "${label}" in allowableClarifiers` +
-                        "[0m"
-                    );
-                    return false;
+              let filteredInflectionCategoryys =
+                synhomDataUnit.inflectionCategoryysWhereTheyDiffer.filter(
+                  (inflectionCategoryy) => {
+                    if (
+                      allowableClarifiers.includes(inflectionCategoryy) ||
+                      (structureChunk.singleWordSentence &&
+                        allowableExtraClarifiersInSingleWordSentences.includes(
+                          inflectionCategoryy
+                        ))
+                    ) {
+                      consol.log(
+                        "[1;32m " +
+                          `jpnj filterDownClarifiers "${structureChunk.chunkId}" ABZ Early stage PASSING of "${inflectionCategoryy}" in allowableClarifiers` +
+                          "[0m"
+                      );
+                      return true;
+                    } else {
+                      consol.log(
+                        "[1;30m " +
+                          `lmza filterDownClarifiers "${structureChunk.chunkId}" ABZ Early stage BLOCKING of "${inflectionCategoryy}" in allowableClarifiers` +
+                          "[0m"
+                      );
+                      return false;
+                    }
                   }
-                }
-              );
+                );
 
               consol.log(
-                "ahby filterDownClarifiers So now we have these labels:",
-                filteredLabels
+                "ahby filterDownClarifiers So now we have these inflectionCategoryys:",
+                filteredInflectionCategoryys
               );
               consol.log(
                 "ahby filterDownClarifiers, structureChunk",
@@ -1278,104 +1281,110 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
                 }
               );
 
-              filteredLabels = filteredLabels.filter((label) => {
-                if (
-                  otUtils.findSinglePointMutationArray(
-                    currentValueArr,
-                    synhomDataUnit.inflectionPaths,
-                    synhomDataUnit.inflectionCategoryyChain.indexOf(label),
-                    (item1, item2) => {
-                      let ref = {
-                        virile: ["m", "m1", "f", "n"],
-                        nonvirile: ["m2", "m3", "f", "n"],
-                      };
+              filteredInflectionCategoryys =
+                filteredInflectionCategoryys.filter((inflectionCategoryy) => {
+                  if (
+                    otUtils.findSinglePointMutationArray(
+                      currentValueArr,
+                      synhomDataUnit.inflectionPaths,
+                      synhomDataUnit.inflectionCategoryyChain.indexOf(
+                        inflectionCategoryy
+                      ),
+                      (item1, item2) => {
+                        let ref = {
+                          virile: ["m", "m1", "f", "n"],
+                          nonvirile: ["m2", "m3", "f", "n"],
+                        };
 
-                      let resultBool = false;
+                        let resultBool = false;
 
-                      if (resultBool) {
-                        return;
-                      }
-
-                      Object.keys(ref).forEach((pluralKey) => {
-                        if (
-                          (item1 === pluralKey &&
-                            ref[pluralKey].includes(item2)) ||
-                          (item2 === pluralKey &&
-                            ref[pluralKey].includes(item1))
-                        ) {
-                          consol.log(
-                            "[1;33m " +
-                              `hsan findSinglePointMutationArray WAHEY!` +
-                              "[0m"
-                          );
-                          resultBool = true;
+                        if (resultBool) {
+                          return;
                         }
-                      });
 
-                      return resultBool;
-                    }
-                  )
-                ) {
-                  consol.log(
-                    "[1;32m " +
-                      `xunf findSinglePointMutationArray "${structureChunk.chunkId}" ABZ Early stage PASSING of "${label}" in findSinglePointMutationArray` +
-                      "[0m"
-                  );
-                  return true;
-                } else {
-                  consol.log(
-                    "[1;30m " +
-                      `dhjc findSinglePointMutationArray "${structureChunk.chunkId}" ABZ Early stage BLOCKING of "${label}" in findSinglePointMutationArray` +
-                      "[0m"
-                  );
-                  return false;
-                }
-              });
+                        Object.keys(ref).forEach((pluralKey) => {
+                          if (
+                            (item1 === pluralKey &&
+                              ref[pluralKey].includes(item2)) ||
+                            (item2 === pluralKey &&
+                              ref[pluralKey].includes(item1))
+                          ) {
+                            consol.log(
+                              "[1;33m " +
+                                `hsan findSinglePointMutationArray WAHEY!` +
+                                "[0m"
+                            );
+                            resultBool = true;
+                          }
+                        });
+
+                        return resultBool;
+                      }
+                    )
+                  ) {
+                    consol.log(
+                      "[1;32m " +
+                        `xunf findSinglePointMutationArray "${structureChunk.chunkId}" ABZ Early stage PASSING of "${inflectionCategoryy}" in findSinglePointMutationArray` +
+                        "[0m"
+                    );
+                    return true;
+                  } else {
+                    consol.log(
+                      "[1;30m " +
+                        `dhjc findSinglePointMutationArray "${structureChunk.chunkId}" ABZ Early stage BLOCKING of "${inflectionCategoryy}" in findSinglePointMutationArray` +
+                        "[0m"
+                    );
+                    return false;
+                  }
+                });
 
               consol.log(
-                "cpkw filterDownClarifiers And now we have these labels:",
-                filteredLabels
+                "cpkw filterDownClarifiers And now we have these inflectionCategoryys:",
+                filteredInflectionCategoryys
               );
 
               consol.log("[1;35m " + `/filterDownClarifiers` + "[0m");
 
-              return filteredLabels;
+              return filteredInflectionCategoryys;
             }
 
-            labelsWhereTheyDiffer.forEach((label) => {
-              let clarifierValue = structureChunk[label];
+            inflectionCategoryysWhereTheyDiffer.forEach(
+              (inflectionCategoryy) => {
+                let inflectionKeyy = structureChunk[inflectionCategoryy];
 
-              //Abort if a metaGender label is accidentally being made subject of a Clarifier.
-              if (label === "gender") {
-                if (
-                  structureChunk[label].some((gender) =>
-                    gpUtils.traitValyyeIsMeta(gender)
-                  )
-                ) {
-                  return;
+                //Abort if a metaGender inflectionCategoryy is accidentally being made subject of a Clarifier.
+                if (inflectionCategoryy === "gender") {
+                  if (
+                    structureChunk[inflectionCategoryy].some((gender) =>
+                      gpUtils.traitValyyeIsMeta(gender)
+                    )
+                  ) {
+                    return;
+                  }
                 }
-              }
 
-              if (Array.isArray(clarifierValue)) {
-                if (clarifierValue.length === 1) {
-                  clarifierValue = clarifierValue[0];
-                } else {
-                  consol.log(
-                    "rqfh addClarifiers clarifierValue",
-                    clarifierValue
-                  );
-                  consol.throw(
-                    "exej aa:addClarifiers --> clarifierValue had length of not 1."
-                  );
+                if (Array.isArray(inflectionKeyy)) {
+                  if (inflectionKeyy.length === 1) {
+                    inflectionKeyy = inflectionKeyy[0];
+                  } else {
+                    consol.log(
+                      "rqfh addClarifiers inflectionKeyy",
+                      inflectionKeyy
+                    );
+                    consol.throw(
+                      "exej aa:addClarifiers --> inflectionKeyy had length of not 1."
+                    );
+                  }
                 }
-              }
 
-              consol.log(
-                "sosu addClarifiers------------------------------------------ADDED CLARIFIER in Step 3: ",
-                clarifierValue
-              );
-              structureChunk.annotations[label] = clarifierValue;
-            });
+                consol.log(
+                  "sosu addClarifiers------------------------------------------ADDED CLARIFIER in Step 3: ",
+                  inflectionKeyy
+                );
+                structureChunk.annotations[inflectionCategoryy] =
+                  inflectionKeyy;
+              }
+            );
           }
         });
       }

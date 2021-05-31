@@ -283,7 +283,7 @@ exports.findMatchingLemmaObjectThenWord = (
   //    THREE (B): Un-PW: Pathway for Uninflected forms.
 
   //Note, this indeed is specifically uninflected FORMS.
-  //So, activeAdjectival, anteriorAdverbial, those kinds of things, that are indeed labeled with the Form key.
+  //So, activeAdjectival, anteriorAdverbial, those kinds of things, that are indeed laabeled with the Form key.
   //Remember, within eg a verb lobj, available Forms are infinitive, verbal, activeAdjectival, anterior...
 
   if (structureChunk.form && structureChunk.form.length) {
@@ -1161,16 +1161,12 @@ exports.findSynhomographs = (lemmaObject, structureChunk, currentLanguage) => {
       synhomDataUnit.inflectionCategoryyChain = inflectionCategoryyChain;
 
       let { inflectionPaths } = synhomDataUnit;
-      let labelsWhereTheyDiffer = [];
+      let inflectionCategoryysWhereTheyDiffer = [];
 
       inflectionCategoryyChain.forEach((inflectionCategoryy, index) => {
         let allInflectionKeyysForThisInflectionCategoryy = inflectionPaths.map(
           (path) => path[index]
         );
-        console.log({
-          inflectionCategoryy,
-          allInflectionKeyysForThisInflectionCategoryy,
-        });
 
         if (
           !allInflectionKeyysForThisInflectionCategoryy.every(
@@ -1178,11 +1174,12 @@ exports.findSynhomographs = (lemmaObject, structureChunk, currentLanguage) => {
               inflectionKeyy === allInflectionKeyysForThisInflectionCategoryy[0]
           )
         ) {
-          labelsWhereTheyDiffer.push(inflectionCategoryy);
+          inflectionCategoryysWhereTheyDiffer.push(inflectionCategoryy);
         }
       });
 
-      synhomDataUnit.labelsWhereTheyDiffer = labelsWhereTheyDiffer;
+      synhomDataUnit.inflectionCategoryysWhereTheyDiffer =
+        inflectionCategoryysWhereTheyDiffer;
     });
 
     return {
@@ -1236,7 +1233,7 @@ exports.findSinglePointMutationArray = (
 exports.stripOutInflectionCategoryys = (
   currentLanguage,
   structureChunk,
-  PWlabel
+  PWlaabel
 ) => {
   let allInflectionCategoryysForThisWordtype =
     refObj.lemmaObjectTraitKeyys[currentLanguage].inflectionChains[
@@ -1249,7 +1246,7 @@ exports.stripOutInflectionCategoryys = (
       if (structureChunk["inflectionCategoryy"]) {
         consol.log(
           "[1;35m " +
-            `milm stripOutInflectionCategoryys Deleting "${inflectionCategoryy}" from stCh "${structureChunk.chunkId}" because this is #${PWlabel} in ${currentLanguage}` +
+            `milm stripOutInflectionCategoryys Deleting "${inflectionCategoryy}" from stCh "${structureChunk.chunkId}" because this is #${PWlaabel} in ${currentLanguage}` +
             "[0m"
         );
       }
@@ -1307,13 +1304,13 @@ exports.switchMetaTraitValyyeForAWorkableConvertedTraitValyye = (
   source,
   currentLanguage,
   structureChunk,
-  consoleLogLabel
+  consoleLogLaabel
 ) => {
   consol.throw("Ah, we finally do use this.");
   consol.log(
     "[1;33m " +
       `ivwa ` +
-      consoleLogLabel +
+      consoleLogLaabel +
       `. >>unkeyed metaTraitValyye clause<<. inflectionKeyy is a metaTraitValyye: "${inflectionKeyy}", but there is no such key on the source. So, we should check if the source has corresponding inflectionKeyys, eg for allPersonalGenders it would be [m, f], and if they hold all the same values, then we should let this work.` +
       "[0m"
   );

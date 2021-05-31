@@ -457,8 +457,12 @@ exports.filterWithinSelectedLemmaObject = (
   return outputUnitsWithDrillPaths;
 };
 
-exports.updateStructureChunkByAdhocOnly = (structureChunk, label, value) => {
-  structureChunk[label] = [value];
+exports.updateStructureChunkByAdhocOnly = (
+  structureChunk,
+  traitKeyy,
+  traitValyye
+) => {
+  structureChunk[traitKeyy] = [traitValyye];
 };
 
 exports.updateStructureChunk = (outputUnit, currentLanguage) => {
@@ -849,7 +853,7 @@ exports.filterBySelectors = (
   currentLanguage,
   structureChunk,
   matches,
-  consoleLogLabel
+  consoleLogLaabel
 ) => {
   let selectors =
     refObj.lemmaObjectTraitKeyys[currentLanguage].selectors[
@@ -857,7 +861,7 @@ exports.filterBySelectors = (
     ];
 
   consol.log(
-    `rcwo filterBySelectors called from ${consoleLogLabel}. selectors are [${selectors}]`
+    `rcwo filterBySelectors called from ${consoleLogLaabel}. selectors are [${selectors}]`
   );
 
   if (selectors) {
@@ -887,7 +891,7 @@ exports.traverseAndRecordInflections = (
   structureChunk,
   multipleMode,
   currentLanguage,
-  consoleLabel
+  consoleLogLaabel
 ) => {
   let chunkId = structureChunk ? structureChunk.chunkId : "???";
 
@@ -900,7 +904,7 @@ exports.traverseAndRecordInflections = (
 
   if (shouldConsoleLog) {
     consol.log(
-      `kyde traverseAndRecordInflections for "${chunkId}" called by "${consoleLabel}" reqArr`,
+      `kyde traverseAndRecordInflections for "${chunkId}" called by "${consoleLogLaabel}" reqArr`,
       reqArr
     );
     consol.log(`kyde for "${chunkId}" source`, source);

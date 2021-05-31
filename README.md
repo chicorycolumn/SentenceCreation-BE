@@ -11,7 +11,7 @@ SentenceCreation is a RESTful API that procedurally generates a near infinite nu
 <br/>
 You can download this repository and run the project locally by following these steps:
 
-1. Fork this repository by clicking the button labelled 'Fork' on the [project page](https://github.com/chicorycolumn/SentenceCreation).
+1. Fork this repository by clicking the 'Fork' button on the [project page](https://github.com/chicorycolumn/SentenceCreation).
    <br/>
    Copy the url of your forked copy of the repository, and run `git clone the_url_of_your_forked_copy` in a Terminal window on your computer, replacing the long underscored word with your url.
    <br/>

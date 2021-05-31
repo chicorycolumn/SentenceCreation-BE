@@ -54,9 +54,9 @@ exports.translateAnnoTraitValyye = (
 exports.adjustVirilityOfStructureChunk = (
   currentLanguage,
   structureChunk,
-  consoleLogLabel
+  consoleLogLaabel
 ) => {
-  consol.log("gxow ALL adjustVirilityOfStructureChunk", consoleLogLabel);
+  consol.log("gxow ALL adjustVirilityOfStructureChunk", consoleLogLaabel);
 
   if (gpUtils.getWorrdtypeStCh(structureChunk) === "noun") {
     // Because m -> plural -> virile and then trying to select Ojciec, which isn't virile, it's m, so will ERR later.
