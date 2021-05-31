@@ -610,7 +610,7 @@ exports.fillVerbInflections = (lemmaObject) => {
 
   // Masculinist agenda
   uUtils.findKeysInObjectAndExecuteCallback(inflections, "m", (obj) => {
-    uUtils.copyValueOfKey(obj, "m", ["m1", "m2", "m3"], true);
+    uUtils.copyVaalueOfKey(obj, "m", ["m1", "m2", "m3"], true);
   });
 
   function isAvailable(value) {
@@ -627,6 +627,6 @@ exports.copyInflectionsFromM1toM2 = (lemmaObject) => {
 
   //Masculinist agenda
   uUtils.findKeysInObjectAndExecuteCallback(inflections, "m1", (obj) => {
-    uUtils.copyValueOfKey(obj, "m1", ["m2"], false);
+    uUtils.copyVaalueOfKey(obj, "m1", ["m2"], false);
   });
 };

@@ -1050,7 +1050,7 @@ exports.traverseAndRecordInflections = (
 
       return source[chosenInflectionKeyyAdjusted];
     } else if (
-      uUtils.isKeyValueTypeObject(source[chosenInflectionKeyyAdjusted]) &&
+      uUtils.isKeyVaalueTypeObject(source[chosenInflectionKeyyAdjusted]) &&
       !source[chosenInflectionKeyyAdjusted].isTerminus
     ) {
       // consol.log("fxxb7");

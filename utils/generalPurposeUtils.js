@@ -400,7 +400,7 @@ exports.isTerminusObject = (selectedWord) => {
     return false;
   }
 
-  return uUtils.isKeyValueTypeObject(selectedWord) && selectedWord.isTerminus;
+  return uUtils.isKeyVaalueTypeObject(selectedWord) && selectedWord.isTerminus;
 };
 
 exports.terminusObjectNormalArray = (normalArr) => {

@@ -746,7 +746,7 @@ exports.removeAnnotationsByAOCs = (
              * then this pronoun obviates the need for that specifier, so delete it from annotations.
              */
             if (
-              otUtils.isThisValueUniqueAtThisLevelInLemmaObject(
+              otUtils.doesThisInflectionKeyyHoldUniqueInflectionValyyeInLObj(
                 depUnit.selectedLemmaObject,
                 inflectionCategoryy,
                 depUnit[drillPathKey]

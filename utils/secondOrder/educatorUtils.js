@@ -138,7 +138,7 @@ exports.findHomographs = (testing, currentLanguage, homographType, ignore) => {
     let homographRoutes = homographs[homographWord];
 
     if (
-      uUtils.doesArrContainDifferentValues(
+      uUtils.doesArrContainDifferentItems(
         homographRoutes.map((route) => route[0])
       )
     ) {
@@ -174,7 +174,7 @@ exports.findHomographs = (testing, currentLanguage, homographType, ignore) => {
 
     if (
       ignore.ignoreClarifiedAllohoms &&
-      uUtils.doesArrContainDifferentValues(firstStepsOfRoute) //At least some are allohoms.
+      uUtils.doesArrContainDifferentItems(firstStepsOfRoute) //At least some are allohoms.
     ) {
       let isEveryAllohomAlreadyClarified = firstStepsOfRoute.every(
         (lemmaObjectId) => {
@@ -209,7 +209,7 @@ exports.findHomographs = (testing, currentLanguage, homographType, ignore) => {
       }
     } else if (ignore.ignoreV2V3Synhoms) {
       if (
-        !uUtils.doesArrContainDifferentValues(firstStepsOfRoute) && //All are synhoms.
+        !uUtils.doesArrContainDifferentItems(firstStepsOfRoute) && //All are synhoms.
         uUtils.doesArrHaveOnlyTheseMembers(secondStepsOfRoute, ["v2", "v3"])
       ) {
         return;

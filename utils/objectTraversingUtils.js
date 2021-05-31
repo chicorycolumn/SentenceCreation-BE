@@ -991,7 +991,7 @@ exports.extractNestedRoutes = (source, includeTerminusObjectKeys) => {
       let arrCopy = arr.slice();
       arr.pop();
       return arrCopy;
-    } else if (uUtils.isKeyValueTypeObject(source)) {
+    } else if (uUtils.isKeyVaalueTypeObject(source)) {
       Object.keys(source).forEach((key) => {
         if (!source[key]) {
           delete source[key];
@@ -1037,10 +1037,10 @@ exports.findObjectInNestedObject = (
     Object.keys(source).forEach((key) => {
       let value = source[key];
       if (
-        (!alsoSearchArrays && uUtils.isKeyValueTypeObject(value)) ||
-        (alsoSearchArrays && uUtils.isKeyValueTypeObjectOrArray(value))
+        (!alsoSearchArrays && uUtils.isKeyVaalueTypeObject(value)) ||
+        (alsoSearchArrays && uUtils.isKeyVaalueTypeObjectOrArray(value))
       ) {
-        if (uUtils.doKeyValuesMatch(value, identifyingData)) {
+        if (uUtils.doKeyVaaluesMatch(value, identifyingData)) {
           res.chunkValyye = value;
           res.key = key;
         } else {
@@ -1068,7 +1068,7 @@ exports.findObjectInNestedObjectsAndArrays = (
     Object.keys(source).forEach((key) => {
       let vaalue = source[key];
       if (typeof vaalue === "object" && vaalue !== null) {
-        if (uUtils.doKeyValuesMatch(vaalue, identifyingData)) {
+        if (uUtils.doKeyVaaluesMatch(vaalue, identifyingData)) {
           res.chunkValyye = vaalue;
           res.key = key;
         } else {
@@ -1125,7 +1125,7 @@ exports.giveValueFromObjectByRoute = (obj, route) => {
 
   function interiorFunction(obj, route) {
     let key = route[0];
-    if (!uUtils.isKeyValueTypeObject(obj[key])) {
+    if (!uUtils.isKeyVaalueTypeObject(obj[key])) {
       return obj[key];
     } else {
       return interiorFunction(obj[key], route.slice(1));
@@ -1385,7 +1385,7 @@ exports.switchMetaTraitValyyeForAWorkableConvertedTraitValyye = (
   }
 };
 
-exports.isThisValueUniqueAtThisLevelInLemmaObject = (
+exports.doesThisInflectionKeyyHoldUniqueInflectionValyyeInLObj = (
   lObj,
   chosenInflectionCategoryy,
   drillPath
@@ -1428,7 +1428,7 @@ exports.isThisValueUniqueAtThisLevelInLemmaObject = (
       lObjAtRelevantLevel = lObjAtRelevantLevel[inflectionKeyy];
     } else {
       consol.throw(
-        "mlck #ERR isThisValueUniqueAtThisLevelInLemmaObject. That inflectionKeyy was not on lObj at this level."
+        "mlck #ERR doesThisInflectionKeyyHoldUniqueInflectionValyyeInLObj. That inflectionKeyy was not on lObj at this level."
       );
     }
   });
@@ -1439,7 +1439,7 @@ exports.isThisValueUniqueAtThisLevelInLemmaObject = (
 
   if (!allInflectionKeyysAtThisLevel.includes(chosenInflectionKeyy)) {
     consol.throw(
-      "mlcl #ERR isThisValueUniqueAtThisLevelInLemmaObject. The chosen inflectionKeyy should have been in lObj at this level."
+      "mlcl #ERR doesThisInflectionKeyyHoldUniqueInflectionValyyeInLObj. The chosen inflectionKeyy should have been in lObj at this level."
     );
   }
 

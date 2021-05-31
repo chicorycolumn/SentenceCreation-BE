@@ -329,7 +329,7 @@ exports.convertmetaTraitValyyes = (
             sourceObject,
             metaTraitValyye,
             (sourceObject) => {
-              uUtils.copyValueOfKey(
+              uUtils.copyVaalueOfKey(
                 sourceObject,
                 metaTraitValyye,
                 regularTraitValyyes,

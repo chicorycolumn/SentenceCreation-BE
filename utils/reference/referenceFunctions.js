@@ -9,7 +9,7 @@ exports.getstructureChunkTraits = (currentLanguage) => {
   let stChTraitsRefByLang = refObj.structureChunkTraits[currentLanguage];
   let stChTraitsRefAll = refObj.structureChunkTraits["ALL"];
 
-  return uUtils.combineTwoKeyValueObjectsCarefully(
+  return uUtils.combineTwoKeyVaalueObjectsCarefully(
     stChTraitsRefByLang,
     stChTraitsRefAll
   );

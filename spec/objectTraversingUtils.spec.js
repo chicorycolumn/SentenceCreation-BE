@@ -6,10 +6,10 @@ const {
   giveRoutesAndTerminalValyyesFromObject,
   findSynhomographs,
   findSinglePointMutationArray,
-  isThisValueUniqueAtThisLevelInLemmaObject,
+  doesThisInflectionKeyyHoldUniqueInflectionValyyeInLObj,
 } = require("../utils/objectTraversingUtils.js");
 
-xdescribe("isThisValueUniqueAtThisLevelInLemmaObject", () => {
+xdescribe("doesThisInflectionKeyyHoldUniqueInflectionValyyeInLObj", () => {
   let inputlObj1 = {
     //links
     translations: { ENG: ["PERSONAL"], POL: ["PERSONAL"] },
@@ -288,7 +288,7 @@ xdescribe("isThisValueUniqueAtThisLevelInLemmaObject", () => {
       ["gender", "f"],
     ];
 
-    const actual = isThisValueUniqueAtThisLevelInLemmaObject(
+    const actual = doesThisInflectionKeyyHoldUniqueInflectionValyyeInLObj(
       inputlObj1,
       inputInflectionCategoryy,
       inputDrillPath
@@ -306,7 +306,7 @@ xdescribe("isThisValueUniqueAtThisLevelInLemmaObject", () => {
       ["gender", "f"],
     ];
 
-    const actual = isThisValueUniqueAtThisLevelInLemmaObject(
+    const actual = doesThisInflectionKeyyHoldUniqueInflectionValyyeInLObj(
       inputlObj1,
       inputInflectionCategoryy,
       inputDrillPath
@@ -324,7 +324,7 @@ xdescribe("isThisValueUniqueAtThisLevelInLemmaObject", () => {
       ["gender", "f"],
     ];
 
-    const actual = isThisValueUniqueAtThisLevelInLemmaObject(
+    const actual = doesThisInflectionKeyyHoldUniqueInflectionValyyeInLObj(
       inputlObj1,
       inputInflectionCategoryy,
       inputDrillPath

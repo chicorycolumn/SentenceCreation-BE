@@ -118,7 +118,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
       }
 
       //4. Check if the value of agreeKeys is an existing chunkId.
-      if (stChTraits[traitKeyy].possibleValueMustBeExistingChunkId) {
+      if (stChTraits[traitKeyy].mustBeExistingChunkId) {
         if (!allChunkIds.includes(traitValyye)) {
           consol.log(
             "cglp validateSentenceFormula structureChunk",

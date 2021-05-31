@@ -265,7 +265,7 @@ exports.structureChunkTraits = {
     form: { expectedTypeOnStCh: "array" },
     chunkId: { expectedTypeOnStCh: "string" },
     preferredChoicesForQuestionSentence: {
-      expectedTypeOnStCh: "keyValueObject",
+      expectedTypeOnStCh: "keyVaalueObject",
     },
     // wordtype: {
     //   expectedTypeOnStCh: "string",
@@ -282,11 +282,11 @@ exports.structureChunkTraits = {
     // },
     agreeWith: {
       expectedTypeOnStCh: "string",
-      possibleValueMustBeExistingChunkId: true,
+      mustBeExistingChunkId: true,
     },
     connectedTo: {
       expectedTypeOnStCh: "string",
-      possibleValueMustBeExistingChunkId: true,
+      mustBeExistingChunkId: true,
     },
     chunkValyye: { expectedTypeOnStCh: "string" },
   },
@@ -298,15 +298,15 @@ exports.structureChunkTraits = {
     //
     postHocAgreeWithPrimary: {
       expectedTypeOnStCh: "string",
-      possibleValueMustBeExistingChunkId: true,
+      mustBeExistingChunkId: true,
     },
     postHocAgreeWithSecondary: {
       expectedTypeOnStCh: "string",
-      possibleValueMustBeExistingChunkId: true,
+      mustBeExistingChunkId: true,
     },
     postHocAgreeWithTertiary: {
       expectedTypeOnStCh: "string",
-      possibleValueMustBeExistingChunkId: true,
+      mustBeExistingChunkId: true,
     },
     //
     //
