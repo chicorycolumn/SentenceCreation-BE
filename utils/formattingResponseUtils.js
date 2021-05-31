@@ -11,25 +11,26 @@ exports.finishAndSend = (
   let combinedResponseObj = { additionalRunsRecord };
 
   let refs = [
-    { responseObject: questionResponseObj, key: "question" },
-    { responseObject: answerResponseObj, key: "answer" },
+    { responseObject: questionResponseObj, mode: "question" },
+    { responseObject: answerResponseObj, mode: "answer" },
   ];
 
   refs.forEach((ref) => {
     if (ref.responseObject) {
-      combinedResponseObj[ref.key + "SentenceArr"] =
+      combinedResponseObj[ref.mode + "SentenceArr"] =
         ref.responseObject.finalSentenceArr || [];
 
       if (ref.responseObject.errorMessage) {
-        combinedResponseObj[ref.key + "ErrorMessage"] = [
+        combinedResponseObj[ref.mode + "ErrorMessage"] = [
           ref.responseObject.errorMessage,
         ];
       }
       if (ref.responseObject.message) {
-        combinedResponseObj[ref.key + "Message"] = ref.responseObject.message;
+        combinedResponseObj[ref.mode + "Message"] = ref.responseObject.message;
       }
       if (ref.responseObject.fragment) {
-        combinedResponseObj[ref.key + "Fragment"] = ref.responseObject.fragment;
+        combinedResponseObj[ref.mode + "Fragment"] =
+          ref.responseObject.fragment;
       }
     }
   });
@@ -78,7 +79,7 @@ exports.createOutputUnit = (
 };
 
 exports.pushSelectedWordToArray = (
-  key,
+  pushKey,
   selectedWord,
   selectedWordsArr,
   annoObj,
@@ -87,7 +88,7 @@ exports.pushSelectedWordToArray = (
   consol.log(
     "[1;30m " + `esbq pushSelectedWordToArray-----------------with args:` + "[0m",
     {
-      key,
+      pushKey,
       selectedWord,
       selectedWordsArr,
       annoObj,
@@ -112,11 +113,11 @@ exports.pushSelectedWordToArray = (
 
       consol.log("vpre addAnnotationsAndPush. annoObj is " + annoObj);
 
-      if (structureChunk.educatorBlocksAnnotationsForTheseFeatures) {
+      if (structureChunk.educatorBlocksAnnotationsForTheseTraitKeyys) {
         consol.log(
           `vpri addAnnotationsAndPush will not add clarifiers [${Object.values(
             annoObj
-          )}] as "educatorBlocksAnnotationsForTheseFeatures" true.`
+          )}] as "educatorBlocksAnnotationsForTheseTraitKeyys" true.`
         );
       } else {
         consol.log(
@@ -133,7 +134,7 @@ exports.pushSelectedWordToArray = (
     selectedWordsArr.push(wordInOwnArr);
   }
 
-  if (key === "string") {
+  if (pushKey === "string") {
     consol.log(
       "[1;30m " + `uufy pushSelectedWordToArray Pushing "${selectedWord}"` + "[0m"
     );
@@ -147,7 +148,7 @@ exports.pushSelectedWordToArray = (
     return;
   }
 
-  if (key === "array") {
+  if (pushKey === "array") {
     consol.log(
       "[1;30m " + `uufy pushSelectedWordToArray Pushing "${selectedWord}"` + "[0m"
     );
@@ -160,31 +161,29 @@ exports.pushSelectedWordToArray = (
     return;
   }
 
-  if (!selectedWord[key]) {
+  if (!selectedWord[pushKey]) {
     consol.throw(
-      `#ERR rgxc selectWordVersions. Could not find key "${key}" on selectedWord.`
+      `#ERR rgxc selectWordVersions. Could not find pushKey "${pushKey}" on selectedWord.`
     );
   }
 
-  if (!Array.isArray(selectedWord[key])) {
-    consol.log("vcxx selectWordVersions", {
-      selectedWord,
-      "selectedWord[key]": selectedWord[key],
-    });
+  if (!Array.isArray(selectedWord[pushKey])) {
     consol.throw(
-      "vcxx selectWordVersions Value inside tobj should have been array."
+      `vcxx selectWordVersions vaalue inside tobj at pushKey "${pushKey}" should have been array but instead it was ${selectedWord[pushKey]}.`
     );
   }
 
-  if (!selectedWord[key]) {
-    consol.throw("#ERR ztgp selectWordVersions. selectedWord[key] was falsy.");
+  if (!selectedWord[pushKey]) {
+    consol.throw(
+      "#ERR ztgp selectWordVersions. selectedWord[pushKey] was falsy."
+    );
   }
 
   consol.log(
-    "[1;30m " + `oqij selectWordVersions Pushing arr "${selectedWord[key]}"` + "[0m"
+    "[1;30m " + `oqij selectWordVersions Pushing arr "${selectedWord[pushKey]}"` + "[0m"
   );
   addAnnotationsAndPush(
-    selectedWord[key],
+    selectedWord[pushKey],
     selectedWordsArr,
     annoObj,
     structureChunk

@@ -2,7 +2,7 @@ const uUtils = require("./universalUtils.js");
 const consol = require("./zerothOrder/consoleLoggingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 
-exports.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual =
+exports.areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual =
   (array1, array2) => {
     //Ignores order.
     //Ignores duplicates.
@@ -76,18 +76,18 @@ exports.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual
             return false;
           }
 
-          return subArrFromA.every((valueFromA) => {
-            if (typeof valueFromA === "string") {
-              return subArrFromB.includes(valueFromA);
-            } else if (typeof valueFromA === "object") {
+          return subArrFromA.every((itemFromA) => {
+            if (typeof itemFromA === "string") {
+              return subArrFromB.includes(itemFromA);
+            } else if (typeof itemFromA === "object") {
               return subArrFromB.find(
-                (valueFromB) =>
-                  typeof valueFromB === "object" &&
-                  uUtils.areTwoObjectsEqual(valueFromA, valueFromB)
+                (itemFromB) =>
+                  typeof itemFromB === "object" &&
+                  uUtils.areTwoObjectsEqual(itemFromA, itemFromB)
               );
             } else {
               consol.throw(
-                `erql areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual. Unexpected typeof for a selected words array value "${typeof valueFromA}".`
+                `erql areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual. Unexpected typeof for a selected words array item "${typeof itemFromA}".`
               );
             }
           });
@@ -113,16 +113,16 @@ exports.updateSentenceStructureWithNewStructureChunksFromOutputUnits = (
   });
 };
 
-exports.keyShouldBeSpecified = (chunk, key, allowOverwrite) => {
+exports.traitKeyyShouldBeSpecified = (chunk, traitKeyy, allowOverwrite) => {
   return (
     !chunk ||
     (!(
-      chunk.formulaImportantFeatures &&
-      chunk.formulaImportantFeatures.includes(key)
+      chunk.formulaImportantTraitKeyys &&
+      chunk.formulaImportantTraitKeyys.includes(traitKeyy)
     ) &&
       (allowOverwrite ||
-        !this.isKeyFilledOutOnChunk(chunk, key) ||
-        this.featureValueIsMeta(null, chunk, key)))
+        !this.isTraitKeyyFilledOutOnChunk(chunk, traitKeyy) ||
+        this.traitValyyeIsMeta(null, chunk, traitKeyy)))
   );
 };
 
@@ -144,7 +144,7 @@ exports.copyAndCombineWordbanks = (wordbank1, wordbank2) => {
     }
     if (wordbank2Copy[key] && !Array.isArray(wordbank2Copy[key])) {
       consol.throw(
-        `#ERR cocq gp:copyAndCombineWordbanks. wordbank2 key "${key}" holds non array value.`
+        `#ERR cocq gp:copyAndCombineWordbanks. wordbank2 key "${key}" holds non array vaalue.`
       );
     }
 
@@ -286,15 +286,15 @@ exports.fillOutWashburneRefObj = (
     lemmaRefObj[targetKey] = [];
 
     lemmaRefObj[sourceKey].forEach((subObj) => {
-      subObj[subTargetKey].forEach((targetValue) => {
+      subObj[subTargetKey].forEach((targetVaalue) => {
         let existingSubObj = lemmaRefObj[targetKey].find((subObj2) => {
-          return subObj2[subTargetKey] === targetValue;
+          return subObj2[subTargetKey] === targetVaalue;
         });
         if (existingSubObj) {
           existingSubObj[subSourceKey].push(subObj[subSourceKey]);
         } else {
           let newSubObj = {};
-          newSubObj[subTargetKey] = targetValue;
+          newSubObj[subTargetKey] = targetVaalue;
           newSubObj[subSourceKey] = [subObj[subSourceKey]];
           lemmaRefObj[targetKey].push(newSubObj);
         }
@@ -339,12 +339,12 @@ exports.getWorrdtypeStCh = (stCh, returnFullWordtype) => {
 
 exports.getWorrdtypeAgree = (
   structureChunk,
-  agreeWithKey = "agreeWith",
+  agreeKeey = "agreeWith",
   returnFullWordtype
 ) => {
   const wordtypeRef = refObj.wordtypeShorthandTranslation;
 
-  let wordtypeShorthand = structureChunk[agreeWithKey].split("-")[0];
+  let wordtypeShorthand = structureChunk[agreeKeey].split("-")[0];
 
   if (!Object.keys(wordtypeRef).includes(wordtypeShorthand)) {
     consol.throw(
@@ -357,40 +357,40 @@ exports.getWorrdtypeAgree = (
   return returnFullWordtype ? fullWordtype : baseWordtype;
 };
 
-exports.isKeyFilledOutOnChunk = (chunk, featureKey) => {
+exports.isTraitKeyyFilledOutOnChunk = (chunk, traitKeyy) => {
   if (!chunk) {
     return false;
   }
 
-  if (!chunk[featureKey]) {
+  if (!chunk[traitKeyy]) {
     return false;
   }
 
-  if (Array.isArray(chunk[featureKey]) && !chunk[featureKey].length) {
+  if (Array.isArray(chunk[traitKeyy]) && !chunk[traitKeyy].length) {
     return false;
   }
 
-  if (chunk[featureKey]) {
+  if (chunk[traitKeyy]) {
     return true;
   }
 };
 
-exports.doesKeyContainValueOnChunk = (
+exports.doesStChTraitKeyyContainParticularTraitVaalyyes = (
   chunk,
-  featureKey,
-  featureValueArr,
-  includeAll //includeAll true/false passes if EVERY/ANY value in featureValueArr is present.
+  traitKeyy,
+  traitValyyeArr,
+  includeAll //includeAll true/false passes if EVERY/ANY item in traitValyyeArr is present.
 ) => {
   return (
-    this.isKeyFilledOutOnChunk(chunk, featureKey) &&
+    this.isTraitKeyyFilledOutOnChunk(chunk, traitKeyy) &&
     ((!includeAll &&
-      featureValueArr.some((featureValue) =>
-        chunk[featureKey].includes(featureValue)
+      traitValyyeArr.some((traitValyye) =>
+        chunk[traitKeyy].includes(traitValyye)
       )) ||
       (includeAll &&
-        chunk[featureKey].length === featureValueArr.length &&
-        featureValueArr.every((featureValue) =>
-          chunk[featureKey].includes(featureValue)
+        chunk[traitKeyy].length === traitValyyeArr.length &&
+        traitValyyeArr.every((traitValyye) =>
+          chunk[traitKeyy].includes(traitValyye)
         )))
   );
 };
@@ -400,7 +400,7 @@ exports.isTerminusObject = (selectedWord) => {
     return false;
   }
 
-  return uUtils.isKeyValueTypeObject(selectedWord) && selectedWord.isTerminus;
+  return uUtils.isKeyVaalueTypeObject(selectedWord) && selectedWord.isTerminus;
 };
 
 exports.terminusObjectNormalArray = (normalArr) => {
@@ -410,13 +410,13 @@ exports.terminusObjectNormalArray = (normalArr) => {
 exports.getWordsFromTerminusObject = (tObj, shouldGetAll) => {
   let allWords = [];
 
-  let wordsKeys = shouldGetAll
+  let pushKeys = shouldGetAll
     ? ["normal", "additionalFrequent", "additionalInfrequent"]
     : ["normal", "additionalFrequent"];
 
-  wordsKeys.forEach((wordsKey) => {
-    if (tObj[wordsKey]) {
-      allWords = [...allWords, ...tObj[wordsKey]];
+  pushKeys.forEach((pushKey) => {
+    if (tObj[pushKey]) {
+      allWords = [...allWords, ...tObj[pushKey]];
     }
   });
 
@@ -428,21 +428,21 @@ exports.lObjIsMGN = (lObj) => {
     return false;
   }
 
-  return this.featureValueIsMeta(lObj.gender);
+  return this.traitValyyeIsMeta(lObj.gender);
 };
 
-exports.featureValueIsMeta = (value, chunk, key) => {
-  if (!value && !chunk && !key) {
+exports.traitValyyeIsMeta = (traitValyye, chunk, traitKeyy) => {
+  if (!traitValyye && !chunk && !traitKeyy) {
     consol.throw("ertt No arguments to use.");
   }
 
-  if (!value) {
-    value = chunk[key];
+  if (!traitValyye) {
+    traitValyye = chunk[traitKeyy];
   }
 
-  if (Array.isArray(value) && value.length === 1) {
-    value = value[0];
+  if (Array.isArray(traitValyye) && traitValyye.length === 1) {
+    traitValyye = traitValyye[0];
   }
 
-  return value.slice(0, 3) === "all";
+  return traitValyye.slice(0, 3) === "all";
 };

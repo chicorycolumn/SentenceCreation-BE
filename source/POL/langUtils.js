@@ -130,8 +130,8 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
     }
 
     if (
-      //If gender is an appropriate feature of this worrdtype.
-      refObj.lemmaObjectFeatures[currentLanguage].inflectionChains[
+      //If gender is an appropriate traitKeyy of this worrdtype.
+      refObj.lemmaObjectTraitKeyys[currentLanguage].inflectionChains[
         gpUtils.getWorrdtypeStCh(structureChunk)
       ].includes("gender")
     ) {
@@ -201,7 +201,7 @@ exports.preprocessLemmaObjectsMajor = (
     matches.forEach((lObj) => exports.copyInflectionsFromM1toM2(lObj));
   }
 
-  allLangUtils.convertMetaFeatures(matches, "POL", "lObj");
+  allLangUtils.convertmetaTraitValyyes(matches, "POL", "lObj");
   // allLangUtils.preprocessLemmaObjects(matches, "POL");
 
   if (!adjustLemmaObjectsOnly) {
@@ -300,7 +300,7 @@ exports.adjustTenseDescriptions = (structureChunk) => {
 
     if (tenseDesc.slice(0, 4) === "cond" && /\d/.test(tenseDesc[4])) {
       //cond0, cond1, cond2, cond3
-      let [key, clause] = tenseDesc.split(" ");
+      let [rank, clause] = tenseDesc.split(" ");
 
       const conditionalsRef = {
         cond0: {
@@ -323,7 +323,7 @@ exports.adjustTenseDescriptions = (structureChunk) => {
         },
       };
 
-      tenseDescArr = conditionalsRef[key][clause].slice(0);
+      tenseDescArr = conditionalsRef[rank][clause].slice(0);
     }
 
     tenseDescArr.forEach((tenseDesc) => {
@@ -338,7 +338,7 @@ exports.adjustTenseDescriptions = (structureChunk) => {
   return resultArr;
 };
 
-exports.formatFeatureValue = (featureKey, featureValue, note) => {
+exports.formatTraitValyye = (traitKeyy, traitValyye, note) => {
   const pluralVirilityAndSingularConversionRef =
     refObj.pluralVirilityAndSingularConversionRef["POL"];
 
@@ -350,17 +350,17 @@ exports.formatFeatureValue = (featureKey, featureValue, note) => {
     virile: ["virile"],
   };
 
-  if (featureKey === "gender") {
+  if (traitKeyy === "gender") {
     if (note === "plural") {
-      return pluralVirilityAndSingularConversionRef[note][featureValue];
+      return pluralVirilityAndSingularConversionRef[note][traitValyye];
     } else {
       if (note === "person") {
-        return shortHandGenderRef[featureValue];
+        return shortHandGenderRef[traitValyye];
       }
     }
   }
 
-  return [featureValue];
+  return [traitValyye];
 };
 
 exports.fillVerbInflections = (lemmaObject) => {
@@ -381,8 +381,8 @@ exports.fillVerbInflections = (lemmaObject) => {
   let { past } = inflections.verbal;
   let { infinitive } = inflections;
 
-  //In general, do nothing if the key is filled out already or holds value false.
-  //Only fill it out if the key is present and holds value true.
+  //In general, do nothing if the key is filled out already or holds vaalue false.
+  //Only fill it out if the key is present and holds vaalue true.
 
   if (
     aspect === "imperfective" ||
@@ -610,15 +610,15 @@ exports.fillVerbInflections = (lemmaObject) => {
 
   // Masculinist agenda
   uUtils.findKeysInObjectAndExecuteCallback(inflections, "m", (obj) => {
-    uUtils.copyValueOfKey(obj, "m", ["m1", "m2", "m3"], true);
+    uUtils.copyVaalueOfKey(obj, "m", ["m1", "m2", "m3"], true);
   });
 
-  function isAvailable(value) {
+  function isAvailable(vaalue) {
     //If true, fill it out.
     //If false, don't fill it out.
     //If any truthy item (which isn't bool true), don't fill it out.
     //If undefined (ie not filled out), then don't fill it out.
-    return value === true;
+    return vaalue === true;
   }
 };
 
@@ -627,6 +627,6 @@ exports.copyInflectionsFromM1toM2 = (lemmaObject) => {
 
   //Masculinist agenda
   uUtils.findKeysInObjectAndExecuteCallback(inflections, "m1", (obj) => {
-    uUtils.copyValueOfKey(obj, "m1", ["m2"], false);
+    uUtils.copyVaalueOfKey(obj, "m1", ["m2"], false);
   });
 };

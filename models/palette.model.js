@@ -25,7 +25,7 @@ exports.fetchPalette = (req) => {
     devSaysThrowAfterAnnoSalvo,
     arrayOfCounterfactualResultsForThisAnnotation,
     counterfactualQuestionSentenceFormula,
-    counterfactualFeature,
+    counterfactualTrait,
   } = req.body;
 
   let { sentenceFormula, words } = scUtils.getMaterials(
@@ -67,7 +67,7 @@ exports.fetchPalette = (req) => {
     //If PDS from req, then add PDS:true to each Q stCh.
     //Unless stCh is 'person' noun and headNoun of pronoun stCh. 'The doctor gave me his book.' must specify MGN doctor.
     //
-    //But if qChunk.gender holds all the poss gender values for this lang>worrdtype
+    //But if qChunk.gender holds all the poss gender traitValyyes for this lang>worrdtype
     //(bearing in mind if person andTag)
     //then do allow it to be qChunk.dontSpecifyOnThisChunk = true.
     questionSentenceFormula.sentenceStructure.forEach((qChunk) => {
@@ -86,11 +86,11 @@ exports.fetchPalette = (req) => {
         qChunk.dontSpecifyOnThisChunk = false;
       } else if (qChunk.gender && qChunk.gender.length) {
         //BOSTON
-        let allGenderValuesForPersonNouns = {
+        let allGenderTraitValyyesForPersonNouns = {
           POL: ["m1", "f"],
           ENG: ["m", "f"],
         };
-        let allGenderValuesForPlainNouns = {
+        let allGenderTraitValyyesForPlainNouns = {
           POL: ["m2", "m3", "f", "n"],
           ENG: ["m", "f", "n"],
         };
@@ -98,8 +98,8 @@ exports.fetchPalette = (req) => {
         if (gpUtils.getWorrdtypeStCh(qChunk, true) === "noun-person") {
           //bostonX
           if (
-            !allGenderValuesForPersonNouns[questionLanguage].every((value) =>
-              qChunk.gender.includes(value)
+            !allGenderTraitValyyesForPersonNouns[questionLanguage].every(
+              (traitValyye) => qChunk.gender.includes(traitValyye)
             )
           ) {
             consol.log(qChunk.chunkId + " shep2a");
@@ -107,8 +107,8 @@ exports.fetchPalette = (req) => {
           }
         } else {
           if (
-            !allGenderValuesForPlainNouns[questionLanguage].every((value) =>
-              qChunk.gender.includes(value)
+            !allGenderTraitValyyesForPlainNouns[questionLanguage].every(
+              (traitValyye) => qChunk.gender.includes(traitValyye)
             )
           ) {
             consol.log(qChunk.chunkId + " shep2b");
@@ -232,8 +232,8 @@ exports.fetchPalette = (req) => {
     questionSentenceData.questionOutputArr.forEach((outputUnit) => {
       if (
         ["agreeWith"].some(
-          //possible screwpoint: Should use other agreeKeys too?
-          (agreeKey) => outputUnit.structureChunk[agreeKey]
+          //possible screwpoint: Should use other agreeKeeys too?
+          (agreeKeey) => outputUnit.structureChunk[agreeKeey]
         )
       ) {
         let depCh = outputUnit.structureChunk;
@@ -263,17 +263,17 @@ exports.fetchPalette = (req) => {
         let traitValyye = unit.structureChunk[traitKeyy];
 
         let reference =
-          refObj.structureChunkFeatures[questionLanguage][traitKeyy] ||
-          refObj.structureChunkFeatures["ALL"][traitKeyy];
+          refObj.structureChunkTraits[questionLanguage][traitKeyy] ||
+          refObj.structureChunkTraits["ALL"][traitKeyy];
 
         if (
           reference.expectedTypeOnStCh === "array" &&
-          !reference.ultimatelyMultipleValuesOkay &&
+          !reference.ultimatelyMultipleTraitValyyesOkay &&
           traitValyye.length > 1
         ) {
           consol.log(">>", unit);
           consol.throw(
-            `oije. (>> unit above) questionLanguage=${questionLanguage} "${unit.structureChunk.chunkId}" with "${traitKeyy}" of "${traitValyye}". This should have been streamlined down to one value, eg in updateStCh fxn.`
+            `oije. (>> unit above) questionLanguage=${questionLanguage} "${unit.structureChunk.chunkId}" with "${traitKeyy}" of "${traitValyye}". This should have been streamlined down to one traitValyye, eg in updateStCh fxn.`
           );
         }
       });
@@ -463,14 +463,14 @@ exports.fetchPalette = (req) => {
 
   if (arrayOfCounterfactualResultsForThisAnnotation) {
     arrayOfCounterfactualResultsForThisAnnotation.push({
-      counterfactualFeature,
+      counterfactualTrait,
       questionSentenceData,
       answerSentenceData,
     });
     return;
   }
 
-  let answerSelectedWordsSetsHaveChanged = { value: false };
+  let answerSelectedWordsSetsHaveChanged = { bool: false };
   let additionalRunsRecord = [];
 
   consol.log(
@@ -491,7 +491,7 @@ exports.fetchPalette = (req) => {
     originalQuestionSentenceFormula
   );
 
-  if (answerSelectedWordsSetsHaveChanged.value) {
+  if (answerSelectedWordsSetsHaveChanged.bool) {
     if (!answerResponseObj) {
       answerResponseObj = scUtils.giveFinalSentences(
         answerSentenceData,

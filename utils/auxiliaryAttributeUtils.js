@@ -111,14 +111,14 @@ exports.whittleAnnotationsAndConvertToPlainspeak = (
 
   let annoObj = {};
 
-  Object.keys(questionStructureChunk.annotations).forEach((annoKey) => {
-    let formattedAnnoValue = allLangUtils.translateAnnotationValue(
-      annoKey,
+  Object.keys(questionStructureChunk.annotations).forEach((annoTraitKeyy) => {
+    let formattedAnnoTraitValyye = allLangUtils.translateAnnoTraitValyye(
+      annoTraitKeyy,
       questionStructureChunk,
       languagesObj
     );
 
-    annoObj[annoKey] = formattedAnnoValue;
+    annoObj[annoTraitKeyy] = formattedAnnoTraitValyye;
   });
 
   return aaUtils.trimAnnotations(annoObj);
@@ -180,55 +180,62 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   );
 
   Object.keys(questionOutputUnit.structureChunk.annotations).forEach(
-    (annoKey) => {
+    (annoTraitKeyy) => {
       //ACX2A: Don't bother running counterfactuals for wordtype/emoji/text annotations, as they'll always be needed.
-      //ACX2B: Don't bother running counterfactuals for tenseDesc annotations, as they'll take so long, because there are so many alternate values, and we can reasonably presume that the tenseDesc anno will be necessary.
-      if (["wordtype", "emoji", "text", "tenseDescription"].includes(annoKey)) {
+      //ACX2B: Don't bother running counterfactuals for tenseDesc annotations, as they'll take so long, because there are so many alternate inflectionValyyes, and we can reasonably presume that the tenseDesc anno will be necessary.
+      if (
+        ["wordtype", "emoji", "text", "tenseDescription"].includes(
+          annoTraitKeyy
+        )
+      ) {
         return;
       }
 
-      let annoValue = questionOutputUnit.structureChunk.annotations[annoKey];
+      let annoTraitValyye =
+        questionOutputUnit.structureChunk.annotations[annoTraitKeyy];
 
       let arrayOfCounterfactualResultsForThisAnnotation = [];
 
-      let stChFeatures = refFxn.getStructureChunkFeatures(questionLanguage);
+      let stChTraits = refFxn.getstructureChunkTraits(questionLanguage);
 
-      let allPossibleValuesForThisFeature =
-        stChFeatures[annoKey].possibleValues.slice(0);
-
-      let counterfactualValuesForThisFeature = Array.from(
+      let counterfactualTraitValyyesForThisTraitKeyy = Array.from(
         new Set(
-          allPossibleValuesForThisFeature.filter((value) => value !== annoValue)
+          stChTraits[annoTraitKeyy].possibleTraitValyyes.filter(
+            (traitValyye) => traitValyye !== annoTraitValyye
+          )
         )
       );
 
       consol.log(
-        "veem counterfactualValuesForThisFeature",
-        counterfactualValuesForThisFeature
+        "veem counterfactualTraitValyyesForThisTraitKeyy",
+        counterfactualTraitValyyesForThisTraitKeyy
       );
       //ACX3: eg If plural then remove m, f. If person, remove n.
       let counterfaxedStCh = uUtils.copyWithoutReference(
         questionOutputUnit.structureChunk
       );
 
-      counterfaxedStCh[annoKey] = counterfactualValuesForThisFeature;
+      counterfaxedStCh[annoTraitKeyy] =
+        counterfactualTraitValyyesForThisTraitKeyy;
 
-      counterfactualValuesForThisFeature = refFxn.removeIncompatibleFeatures(
-        questionLanguage,
-        counterfaxedStCh
-      )[annoKey];
+      counterfactualTraitValyyesForThisTraitKeyy =
+        refFxn.removeincompatibleTraits(questionLanguage, counterfaxedStCh)[
+          annoTraitKeyy
+        ];
 
       consol.log(
-        `myxe removeAnnotationsByCounterfax FOREACH START. Examining ${questionOutputUnit.structureChunk.chunkId}'s annotation ${annoKey} = ${annoValue} so the counterfactual values are [${counterfactualValuesForThisFeature}].`
+        `myxe removeAnnotationsByCounterfax FOREACH START. Examining ${questionOutputUnit.structureChunk.chunkId}'s annotation ${annoTraitKeyy} = ${annoTraitValyye} so the counterfactual traitValyyes are [${counterfactualTraitValyyesForThisTraitKeyy}].`
       );
 
-      counterfactualValuesForThisFeature.forEach(
-        (counterfactualValueForThisFeature) => {
+      counterfactualTraitValyyesForThisTraitKeyy.forEach(
+        (counterfactualTraitValyyeForThisTraitKeyy) => {
           consol.log(
-            `myxe removeAnnotationsByCounterfax FOREACH-2 START. Will do a run with counterfactual value "${counterfactualValueForThisFeature}".`
+            `myxe removeAnnotationsByCounterfax FOREACH-2 START. Will do a run with counterfactual traitValyye "${counterfactualTraitValyyeForThisTraitKeyy}".`
           );
 
-          counterfaxedStCh[annoKey] = [counterfactualValueForThisFeature];
+          counterfaxedStCh[annoTraitKeyy] = [
+            counterfactualTraitValyyeForThisTraitKeyy,
+          ];
 
           //(IOTA). Do we want to send updated question formula for counterfax run,
           //or originalQuestionSentenceFormula ?
@@ -257,8 +264,9 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             }
           );
 
-          let counterfactualFeature = {};
-          counterfactualFeature[annoKey] = counterfactualValueForThisFeature;
+          let counterfactualTrait = {};
+          counterfactualTrait[annoTraitKeyy] =
+            counterfactualTraitValyyeForThisTraitKeyy;
 
           consol.consoleLogObjectAtOneLevel(
             counterfactualQuestionSentenceFormula,
@@ -269,7 +277,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           let newReqBody = {
             arrayOfCounterfactualResultsForThisAnnotation,
             counterfactualQuestionSentenceFormula,
-            counterfactualFeature,
+            counterfactualTrait,
 
             sentenceFormulaId:
               counterfactualQuestionSentenceFormula.sentenceFormulaId,
@@ -286,8 +294,8 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
           additionalRunsRecord.push([
             questionOutputUnit.structureChunk.chunkId,
-            annoKey,
-            counterfactualValueForThisFeature,
+            annoTraitKeyy,
+            counterfactualTraitValyyeForThisTraitKeyy,
           ]);
 
           palette.fetchPalette({ body: newReqBody });
@@ -299,7 +307,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           "[1;33m \n" +
             `myxi removeAnnotationsByCounterfax. \nRun where we changed "${
               questionOutputUnit.structureChunk.chunkId
-            }" from counterfactual "${annoKey}=${annoValue}" and arrayOfCounterfactualResultsForThisAnnotation came back with "${
+            }" from counterfactual "${annoTraitKeyy}=${annoTraitValyye}" and arrayOfCounterfactualResultsForThisAnnotation came back with "${
               arrayOfCounterfactualResultsForThisAnnotation.length
             }" results. \nTo be specific, here's how many counterfactual.answerSentenceData.answerOutputArrays there are in each counterfactual result: [${arrayOfCounterfactualResultsForThisAnnotation.map(
               (counterfactual) =>
@@ -337,22 +345,21 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         }
       );
 
-      let counterfactualFeatures =
+      let counterfactualTraitValyyes =
         arrayOfCounterfactualResultsForThisAnnotation.map((counterfactual) => {
           {
-            if (
-              Object.keys(counterfactual.counterfactualFeature).length !== 1
-            ) {
+            if (Object.keys(counterfactual.counterfactualTrait).length !== 1) {
               consol.throw("iejr removeAnnotationsByCounterfax");
             }
 
             if (
-              Object.keys(counterfactual.counterfactualFeature)[0] !== annoKey
+              Object.keys(counterfactual.counterfactualTrait)[0] !==
+              annoTraitKeyy
             ) {
               consol.throw("dckm removeAnnotationsByCounterfax");
             }
 
-            return counterfactual.counterfactualFeature[annoKey];
+            return counterfactual.counterfactualTrait[annoTraitKeyy];
           }
         });
 
@@ -476,14 +483,18 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       // });
 
       if (
-        gpUtils.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
+        gpUtils.areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
           originalAnswerPseudoSentences,
           counterfactualAnswerPseudoSentences
         )
       ) {
         consol.log(
           "[1;35m " +
-            `myxo-clauseA [tl;dr answersame so deleting anno] removeAnnotationsByCounterfax END. I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual ANSWER selected words came back SAME as original answer selected words.\nThis means that this feature has no impact, even if we flip it, so annotation is not needed. \nDeleting annotation "${annoKey}" = "${questionOutputUnit.structureChunk.annotations[annoKey]}" now.` +
+            `myxo-clauseA [tl;dr answersame so deleting anno] removeAnnotationsByCounterfax END. 
+            I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" 
+            and the counterfactual ANSWER selected words came back SAME as original answer selected words.\n
+            This means that this trait has no impact, even if we flip it, so annotation is not needed. \n
+            Deleting annotation "${annoTraitKeyy}" = "${questionOutputUnit.structureChunk.annotations[annoTraitKeyy]}".` +
             "[0m",
           {
             originalAnswerPseudoSentences,
@@ -491,16 +502,16 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           }
         );
 
-        delete questionOutputUnit.structureChunk.annotations[annoKey];
+        delete questionOutputUnit.structureChunk.annotations[annoTraitKeyy];
       } else if (
-        !gpUtils.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
+        !gpUtils.areTwoArraysContainingArraysContainingOnlyStringsAndKeyVaalueObjectsEqual(
           originalQuestionPseudoSentences,
           counterfactualQuestionPseudoSentences
         )
       ) {
         consol.log(
           "[1;35m " +
-            `myxo-clauseB [tl;dr questiondifferent so deleting anno] removeAnnotationsByCounterfax END. I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual QUESTION selected words came back DIFFERENT original question selected words.\nThis means that this feature has no impact, even if we flip it, so annotation is not needed. \nDeleting annotation "${annoKey}" = "${questionOutputUnit.structureChunk.annotations[annoKey]}" now.` +
+            `myxo-clauseB [tl;dr questiondifferent so deleting anno] removeAnnotationsByCounterfax END. I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual QUESTION selected words came back DIFFERENT original question selected words.\nThis means that this trait has no impact, even if we flip it, so annotation is not needed. \nDeleting annotation "${annoTraitKeyy}" = "${questionOutputUnit.structureChunk.annotations[annoTraitKeyy]}" now.` +
             "[0m",
           {
             originalQuestionPseudoSentences,
@@ -508,11 +519,11 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           }
         );
 
-        delete questionOutputUnit.structureChunk.annotations[annoKey];
+        delete questionOutputUnit.structureChunk.annotations[annoTraitKeyy];
       } else {
         consol.log(
           "[1;35m " +
-            `myxo-clauseC [tl;dr !answersame && !questiondifferent so keeping anno] removeAnnotationsByCounterfax END. I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual answer selected words came back DIFFERENT FROM original answer selected words.\nThis means I'll keep annotation "${annoKey}" = "${questionOutputUnit.structureChunk.annotations[annoKey]}".` +
+            `myxo-clauseC [tl;dr !answersame && !questiondifferent so keeping anno] removeAnnotationsByCounterfax END. I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual answer selected words came back DIFFERENT FROM original answer selected words.\nThis means I'll keep annotation "${annoTraitKeyy}" = "${questionOutputUnit.structureChunk.annotations[annoTraitKeyy]}".` +
             "[0m",
           {
             originalAnswerPseudoSentences,
@@ -524,12 +535,12 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
         //PDSX4-orange-true
         if (questionOutputUnit.structureChunk.dontSpecifyOnThisChunk) {
-          let combinedFeatures = [
-            ...questionOutputUnit.structureChunk[annoKey],
-            ...counterfactualFeatures,
+          let combinedTraitValyyes = [
+            ...questionOutputUnit.structureChunk[annoTraitKeyy],
+            ...counterfactualTraitValyyes,
           ];
 
-          answerSelectedWordsSetsHaveChanged.value = true;
+          answerSelectedWordsSetsHaveChanged.bool = true;
 
           answerSentenceData.answerOutputArrays = [
             ...answerSentenceData.answerOutputArrays,
@@ -537,20 +548,22 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           ];
 
           consol.log(
-            `PDSX-orange. Agglomerating the answer output arrays and deleting annoValue "${annoValue}", and questionOutputUnit.structureChunk[${annoKey}] is now [${combinedFeatures}]`
+            `PDSX-orange. Agglomerating the answer output arrays and deleting annoTraitValyye "${annoTraitValyye}", and questionOutputUnit.structureChunk[${annoTraitKeyy}] is now [${combinedTraitValyyes}]`
           );
 
-          delete questionOutputUnit.structureChunk.annotations[annoKey];
-          questionOutputUnit.structureChunk[annoKey] = combinedFeatures;
+          delete questionOutputUnit.structureChunk.annotations[annoTraitKeyy];
+          questionOutputUnit.structureChunk[annoTraitKeyy] =
+            combinedTraitValyyes;
 
           if (
-            !questionOutputUnit.structureChunk.counterfactuallyImportantFeatures
+            !questionOutputUnit.structureChunk
+              .counterfactuallyImportantTraitKeyys
           ) {
-            questionOutputUnit.structureChunk.counterfactuallyImportantFeatures =
-              [annoKey];
+            questionOutputUnit.structureChunk.counterfactuallyImportantTraitKeyys =
+              [annoTraitKeyy];
           } else {
-            questionOutputUnit.structureChunk.counterfactuallyImportantFeatures.push(
-              annoKey
+            questionOutputUnit.structureChunk.counterfactuallyImportantTraitKeyys.push(
+              annoTraitKeyy
             );
           }
         }
@@ -559,7 +572,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       uUtils.addToArrayAtKey(
         questionOutputUnitsThatHaveBeenCounterfactualed,
         questionOutputUnit.structureChunk.chunkId,
-        annoKey
+        annoTraitKeyy
       );
     }
   );
@@ -585,11 +598,11 @@ exports.removeAnnotationsIfHeadChunkHasBeenCounterfaxed = (
   function innerRemoveAnnotationsIfHeadChunkHasBeenCounterfaxed(
     questionOutputUnitsThatHaveBeenCounterfactualed,
     questionOutputUnit,
-    agreeKey
+    agreeKeey
   ) {
     if (
       questionOutputUnitsThatHaveBeenCounterfactualed[
-        questionOutputUnit.structureChunk[agreeKey]
+        questionOutputUnit.structureChunk[agreeKeey]
       ]
     ) {
       consol.log(questionOutputUnit.structureChunk.annotations);
@@ -598,25 +611,25 @@ exports.removeAnnotationsIfHeadChunkHasBeenCounterfaxed = (
           `mioc removeAnnotationsByCounterfax. Aha! We are examining "${
             questionOutputUnit.structureChunk.chunkId
           }" which has the annotations shown above. But this chunk agrees with "${
-            questionOutputUnit.structureChunk[agreeKey]
+            questionOutputUnit.structureChunk[agreeKeey]
           }" which has already been processed by counterfax, re these annotations: [${
             questionOutputUnitsThatHaveBeenCounterfactualed[
-              questionOutputUnit.structureChunk[agreeKey]
+              questionOutputUnit.structureChunk[agreeKeey]
             ]
           }].` +
           "[0m"
       );
 
       questionOutputUnitsThatHaveBeenCounterfactualed[
-        questionOutputUnit.structureChunk[agreeKey]
-      ].forEach((annoKey) => {
+        questionOutputUnit.structureChunk[agreeKeey]
+      ].forEach((annoTraitKeyy) => {
         consol.log(
           "[1;33m " +
-            `mioc So I'm deleting "${annoKey}" from "${questionOutputUnit.structureChunk.chunkId}"'s annotations.` +
+            `mioc So I'm deleting "${annoTraitKeyy}" from "${questionOutputUnit.structureChunk.chunkId}"'s annotations.` +
             "[0m"
         );
 
-        delete questionOutputUnit.structureChunk.annotations[annoKey];
+        delete questionOutputUnit.structureChunk.annotations[annoTraitKeyy];
       });
       return true;
     }
@@ -638,7 +651,7 @@ exports.removeAnnotationsByAOCs = (
   //1. For this stCh, get all q output units that are Dependent/PHD of this.
   //2. Filter to just the ones with wordtype pronoun.
   //3. If the selectedWord in any of those units is unique between genders in its lemma object
-  //   (eg "his" is unique as no other gender key holds this value, whereas "their" is not unique as two genders keys hold it)
+  //   (eg "his" is unique as no other gender traitKeyy holds this inflectionValyye, whereas "their" is not unique as two genders traitKeyys hold it)
   //   then delete/block the gender annotation.
   let headWordtype = "noun";
   let allDependentWordtype = "pronoun";
@@ -669,11 +682,11 @@ exports.removeAnnotationsByAOCs = (
       "postHocAgreeWithTertiary",
     ]);
 
-    function getDepUnits(questionOutputArr, headChunkId, agreeKeys) {
+    function getDepUnits(questionOutputArr, headChunkId, agreeKeeys) {
       return questionOutputArr
         .filter((unit) =>
-          agreeKeys.some(
-            (agreeWithKey) => unit.structureChunk[agreeWithKey] === headChunkId
+          agreeKeeys.some(
+            (agreeKeey) => unit.structureChunk[agreeKeey] === headChunkId
           )
         )
         .filter(
@@ -704,7 +717,7 @@ exports.removeAnnotationsByAOCs = (
 
     Object.keys(questionOutputUnit.structureChunk.annotations).forEach(
       (inflectionCategoryy) => {
-        let annoValue =
+        let annoTraitValyye =
           questionOutputUnit.structureChunk.annotations[inflectionCategoryy];
 
         //Imagine "Ja, moje jabłko."
@@ -716,28 +729,27 @@ exports.removeAnnotationsByAOCs = (
         deleteByAOC(secondaryDepUnits, "drillPathSecondary");
         deleteByAOC(tertiaryDepUnits, "drillPathTertiary");
 
-        function deleteByAOC(depUnits, drillPathKey) {
+        function deleteByAOC(depUnits, drillPathType) {
           depUnits.forEach((depUnit) => {
             if (
               !questionOutputUnit.structureChunk.annotations[
                 inflectionCategoryy
               ] || //ie we've now deleted it so abort loop.
-              !depUnit[drillPathKey]
+              !depUnit[drillPathType]
             ) {
               return;
             }
 
             consol.log("meef", depUnit);
 
-            /**If any dep unit holds a value at inflectionCategoryy that is unique in its lObj,
+            /**If any dep unit holds an inflectionValyye at inflectionCategoryy that is unique in its lObj,
              * then this pronoun obviates the need for that specifier, so delete it from annotations.
-             * and set featureHasBeenDeleted to true.
              */
             if (
-              otUtils.isThisValueUniqueAtThisLevelInLemmaObject(
+              otUtils.doesThisInflectionKeyyHoldUniqueInflectionValyyeInLObj(
                 depUnit.selectedLemmaObject,
                 inflectionCategoryy,
-                depUnit[drillPathKey]
+                depUnit[drillPathType]
               )
             ) {
               consol.log(
@@ -795,11 +807,11 @@ exports.specialAdjustmentToAnnotations = (
         headChunk.annotations.gender !== structureChunk.annotations.gender
       ) {
         consol.throw(
-          "cjow The depCh and its headCh have different values as gender anno?"
+          "cjow The depCh and its headCh have different annoTraitValyyes for gender?"
         );
       }
 
-      if (headLObj.gender && !gpUtils.featureValueIsMeta(headLObj.gender)) {
+      if (headLObj.gender && !gpUtils.traitValyyeIsMeta(headLObj.gender)) {
         consol.log({
           questionLanguage: languagesObj.questionLanguage,
           headLObjgender: headLObj.gender,
@@ -837,7 +849,7 @@ exports.addSpecifiersToMGNs = (questionSentenceData, languagesObj) => {
   const answerLangUtils = require(`../source/${answerLanguage}/langUtils.js`);
 
   let metaGenders = Object.keys(
-    refObj.metaFeatures[questionLanguage]["gender"]
+    refObj.metaTraitValyyes[questionLanguage]["gender"]
   );
 
   let questionUnitsToSpecify = questionOutputArr.filter(
@@ -867,7 +879,7 @@ exports.addSpecifiersToMGNs = (questionSentenceData, languagesObj) => {
       );
 
       if (
-        !refObj.metaFeatures[questionLanguage].gender[metaGender].includes(
+        !refObj.metaTraitValyyes[questionLanguage].gender[metaGender].includes(
           selectedGenderForQuestionLanguage
         )
       ) {
@@ -876,8 +888,8 @@ exports.addSpecifiersToMGNs = (questionSentenceData, languagesObj) => {
           questionMGNunit.structureChunk.gender
         );
         consol.log(
-          "refObj.metaFeatures[questionLanguage].gender[metaGender]",
-          refObj.metaFeatures[questionLanguage].gender[metaGender]
+          "refObj.metaTraitValyyes[questionLanguage].gender[metaGender]",
+          refObj.metaTraitValyyes[questionLanguage].gender[metaGender]
         );
         consol.throw(
           "knmo addSpecifiersToMGNs #ERR I expected the question chunk's gender to be present in the translated genders array for the question lObj's metagender selector."
@@ -885,11 +897,11 @@ exports.addSpecifiersToMGNs = (questionSentenceData, languagesObj) => {
       }
     } else {
       selectedGenderForQuestionLanguage = uUtils.selectRandom(
-        refObj.metaFeatures[questionLanguage].gender[metaGender]
+        refObj.metaTraitValyyes[questionLanguage].gender[metaGender]
       );
     }
 
-    selectedGenderForAnswerLanguageArr = answerLangUtils.formatFeatureValue(
+    selectedGenderForAnswerLanguageArr = answerLangUtils.formatTraitValyye(
       "gender",
       selectedGenderForQuestionLanguage,
       "person"
@@ -953,17 +965,19 @@ exports.sortAnswerAndQuestionStructureChunks = (
 
 exports.specifyQuestionChunkAndChangeAnswerChunk = (
   chunksObj,
-  actionKey,
-  actionValueArr
+  traitKeyy,
+  traitValyyeArr
 ) => {
-  consol.throw("fjln specifyQuestionChunkAndChangeAnswerChunk Cease");
+  consol.throw(
+    "fjln specifyQuestionChunkAndChangeAnswerChunk Oh so we do use this."
+  );
 
-  if (actionValueArr.length !== 1) {
+  if (traitValyyeArr.length !== 1) {
     consol.log("ujrw specifyQuestionChunkAndChangeAnswerChunk", {
-      actionValueArr,
+      traitValyyeArr,
     });
     consol.throw(
-      "ujrw specifyQuestionChunkAndChangeAnswerChunk actionValueArr had length of not 1"
+      "ujrw specifyQuestionChunkAndChangeAnswerChunk traitValyyeArr had length of not 1"
     );
   }
 
@@ -972,62 +986,65 @@ exports.specifyQuestionChunkAndChangeAnswerChunk = (
 
   if (answerHeadChunk) {
     consol.log("evuj specifyQuestionChunkAndChangeAnswerChunk Point A");
-    answerHeadChunk[actionKey] = actionValueArr;
+    answerHeadChunk[traitKeyy] = traitValyyeArr;
   } else {
     consol.log("evuj specifyQuestionChunkAndChangeAnswerChunk Point B");
-    answerChunk[actionKey] = actionValueArr;
+    answerChunk[traitKeyy] = traitValyyeArr;
   }
 
   //...and note Specifier in Q headCh if exists, else Q depCh.
 
   if (questionHeadChunk) {
     consol.log("tbji specifyQuestionChunkAndChangeAnswerChunk Point C");
-    aaUtils.addAnnotation(questionHeadChunk, actionKey, actionValueArr[0]);
+    aaUtils.addAnnotation(questionHeadChunk, traitKeyy, traitValyyeArr[0]);
   } else {
     if (!questionChunk) {
       throw (
         "aaxj specifyQuestionChunkAndChangeAnswerChunk There was no corresponding questionChunk to add these Specifiers to: " +
-        actionKey +
+        traitKeyy +
         " " +
-        actionValueArr[0]
+        traitValyyeArr[0]
       );
     }
     consol.log(
       "lskt specifyQuestionChunkAndChangeAnswerChunk specifyQuestionChunkAndChangeAnswerChunk Point D"
     );
-    aaUtils.addAnnotation(questionChunk, actionKey, actionValueArr[0]);
+    aaUtils.addAnnotation(questionChunk, traitKeyy, traitValyyeArr[0]);
   }
 };
 
-exports.addAnnotation = (chunk, key, value) => {
+exports.addAnnotation = (chunk, traitKeyy, traitValyye) => {
   if (!chunk.annotations) {
     chunk.annotations = {};
   }
 
-  if (typeof value !== "string") {
-    consol.log("nrtn addAnnotation", { value });
-    consol.throw("nrtn addAnnotation expected STRING for value");
+  if (typeof traitValyye !== "string") {
+    consol.log("nrtn addAnnotation", { traitValyye });
+    consol.throw("nrtn addAnnotation expected STRING for traitValyye");
   }
 
   consol.log(
     "[1;35m " + "aggw addAnnotation Added annotation for " + chunk.chunkId + "[0m"
   );
-  consol.log("aggw addAnnotation", { key, value });
+  consol.log("aggw addAnnotation", { traitKeyy, traitValyye });
 
-  chunk.annotations[key] = value;
+  chunk.annotations[traitKeyy] = traitValyye;
 };
 
 exports.trimAnnotations = (annotationObj) => {
-  Object.keys(annotationObj).forEach((annoKey) => {
-    let annoValue = annotationObj[annoKey];
+  Object.keys(annotationObj).forEach((annoTraitKeyy) => {
+    let annoTraitValyye = annotationObj[annoTraitKeyy];
 
-    if (annoKey === "gender" && ["males", "females"].includes(annoValue)) {
+    if (
+      annoTraitKeyy === "gender" &&
+      ["males", "females"].includes(annoTraitValyye)
+    ) {
       delete annotationObj.number;
     }
 
-    if (!annoValue) {
+    if (!annoTraitValyye) {
       consol.throw("vmkp");
-      delete annotationObj[annoKeyy];
+      delete annotationObj[annoTraitKeyyy];
     }
   });
 
@@ -1088,19 +1105,19 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
 
     if (allohomInfo && allohomInfo.multipleWordtype) {
       if (structureChunk.pleaseShowMultipleWordtypeAllohomClarifiers) {
-        let annotationValue = gpUtils.getWorrdtypeLObj(selectedLemmaObject);
+        let annoTraitValyye = gpUtils.getWorrdtypeLObj(selectedLemmaObject);
 
         consol.log(
           "wbvz addClarifiers------------------------------------------ADDED CLARIFIER in Step 1b",
-          annotationValue
+          annoTraitValyye
         );
-        structureChunk.annotations.wordtype = annotationValue;
+        structureChunk.annotations.wordtype = annoTraitValyye;
       }
     }
 
     //STEP TWO: Types 2-6 Synhomographs (language-specific)
     //
-    //  Feature Clarifiers
+    //  Trait Clarifiers
     //
     //ie ENG has some verbs with v1-v2 synhomography.
 
@@ -1112,11 +1129,11 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
 
     //STEP THREE: Type 1 Synhomographs (find synhoms in lobj programmatically)
     //
-    //  Feature Clarifiers
+    //  Trait Clarifiers
     //
-    //Find synhoms, add Feature Clarifiers if such clarifiers are allowed.
+    //Find synhoms, add Trait Clarifiers if such clarifiers are allowed.
     let allowableClarifiers =
-      refObj.lemmaObjectFeatures[answerLanguage]
+      refObj.lemmaObjectTraitKeyys[answerLanguage]
         .allowableTransfersFromQuestionStructure[
         gpUtils.getWorrdtypeStCh(structureChunk)
       ];
@@ -1135,7 +1152,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
     }
 
     let allowableExtraClarifiersInSingleWordSentences =
-      refObj.lemmaObjectFeatures[answerLanguage]
+      refObj.lemmaObjectTraitKeyys[answerLanguage]
         .allowableExtraClarifiersInSingleWordSentences[
         gpUtils.getWorrdtypeStCh(structureChunk)
       ];
@@ -1159,7 +1176,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
 
       if (synhomographData) {
         synhomographData.synhomographs.forEach((synhomDataUnit) => {
-          if (selectedWord === synhomDataUnit.terminalValue) {
+          if (selectedWord === synhomDataUnit.terminalValyye) {
             consol.log(
               "[1;35m " +
                 `qxqf addClarifiers YES enter filterDownClarifiers for selectedWord as "${selectedWord}"` +
@@ -1168,7 +1185,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
 
             consol.log("qxqf addClarifierssynhomDataUnit", synhomDataUnit);
 
-            let labelsWhereTheyDiffer = filterDownClarifiers(
+            let inflectionCategoryysWhereTheyDiffer = filterDownClarifiers(
               synhomDataUnit,
               allowableClarifiers
             );
@@ -1177,188 +1194,204 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
               consol.log("[1;35m " + `pjgg filterDownClarifiers---------------` + "[0m");
 
               consol.log(
-                "pjgg filterDownClarifiers We start with these labels:",
-                synhomDataUnit.labelsWhereTheyDiffer
+                "pjgg filterDownClarifiers We start with these inflectionCategoryy:",
+                synhomDataUnit.inflectionCategoryysWhereTheyDiffer
               );
 
-              let filteredLabels = synhomDataUnit.labelsWhereTheyDiffer.filter(
-                (label) => {
-                  if (
-                    allowableClarifiers.includes(label) ||
-                    (structureChunk.singleWordSentence &&
-                      allowableExtraClarifiersInSingleWordSentences.includes(
-                        label
-                      ))
-                  ) {
-                    consol.log(
-                      "[1;32m " +
-                        `jpnj filterDownClarifiers "${structureChunk.chunkId}" ABZ Early stage PASSING of "${label}" in allowableClarifiers` +
-                        "[0m"
-                    );
-                    return true;
-                  } else {
-                    consol.log(
-                      "[1;30m " +
-                        `lmza filterDownClarifiers "${structureChunk.chunkId}" ABZ Early stage BLOCKING of "${label}" in allowableClarifiers` +
-                        "[0m"
-                    );
-                    return false;
+              let filteredInflectionCategoryys =
+                synhomDataUnit.inflectionCategoryysWhereTheyDiffer.filter(
+                  (inflectionCategoryy) => {
+                    if (
+                      allowableClarifiers.includes(inflectionCategoryy) ||
+                      (structureChunk.singleWordSentence &&
+                        allowableExtraClarifiersInSingleWordSentences.includes(
+                          inflectionCategoryy
+                        ))
+                    ) {
+                      consol.log(
+                        "[1;32m " +
+                          `jpnj filterDownClarifiers "${structureChunk.chunkId}" ABZ Early stage PASSING of "${inflectionCategoryy}" in allowableClarifiers` +
+                          "[0m"
+                      );
+                      return true;
+                    } else {
+                      consol.log(
+                        "[1;30m " +
+                          `lmza filterDownClarifiers "${structureChunk.chunkId}" ABZ Early stage BLOCKING of "${inflectionCategoryy}" in allowableClarifiers` +
+                          "[0m"
+                      );
+                      return false;
+                    }
                   }
-                }
-              );
+                );
 
               consol.log(
-                "ahby filterDownClarifiers So now we have these labels:",
-                filteredLabels
+                "ahby filterDownClarifiers So now we have these inflectionCategoryys:",
+                filteredInflectionCategoryys
               );
               consol.log(
                 "ahby filterDownClarifiers, structureChunk",
                 structureChunk
               );
               consol.log(
-                "ahby filterDownClarifiers, synhomDataUnit.inflectionLabelChain",
-                synhomDataUnit.inflectionLabelChain
+                "ahby filterDownClarifiers, synhomDataUnit.inflectionCategoryyChain",
+                synhomDataUnit.inflectionCategoryyChain
               );
 
-              let currentValueArr = synhomDataUnit.inflectionLabelChain.map(
-                (inflectionLabel) => {
-                  consol.log("vpzx filterDownClarifiers", { inflectionLabel });
+              let currentTraitValyyes =
+                synhomDataUnit.inflectionCategoryyChain.map(
+                  (inflectionCategoryy) => {
+                    consol.log("vpzx filterDownClarifiers", {
+                      inflectionCategoryy,
+                    });
 
-                  if (
-                    inflectionLabel === "tense" &&
-                    (!structureChunk[inflectionLabel] ||
-                      !structureChunk[inflectionLabel].length)
-                  ) {
-                    inflectionLabel = "tenseDescription";
-                  }
-
-                  if (
-                    !structureChunk[inflectionLabel] ||
-                    !structureChunk[inflectionLabel].length
-                  ) {
-                    consol.log(
-                      "[1;31m " +
-                        `#WARN kxqz filterDownClarifiers. Adding null to currentValueArr for inflectionLabel "${inflectionLabel}".` +
-                        "[0m"
-                    );
-
-                    return null;
-                  }
-
-                  if (structureChunk[inflectionLabel].length > 1) {
-                    consol.log(
-                      "[1;31m " +
-                        `#WARN wqzm filterDownClarifiers. structureChunk[inflectionLabel] "${structureChunk[inflectionLabel]}"` +
-                        "[0m"
-                    );
-                    consol.throw(
-                      "#ERR wqzm filterDownClarifiers. inflectionLabel: " +
-                        inflectionLabel
-                    );
-                  }
-
-                  return structureChunk[inflectionLabel][0];
-                }
-              );
-
-              filteredLabels = filteredLabels.filter((label) => {
-                if (
-                  otUtils.findSinglePointMutationArray(
-                    currentValueArr,
-                    synhomDataUnit.inflectionPaths,
-                    synhomDataUnit.inflectionLabelChain.indexOf(label),
-                    (item1, item2) => {
-                      let ref = {
-                        virile: ["m", "m1", "f", "n"],
-                        nonvirile: ["m2", "m3", "f", "n"],
-                      };
-
-                      let resultBool = false;
-
-                      if (resultBool) {
-                        return;
-                      }
-
-                      Object.keys(ref).forEach((pluralKey) => {
-                        if (
-                          (item1 === pluralKey &&
-                            ref[pluralKey].includes(item2)) ||
-                          (item2 === pluralKey &&
-                            ref[pluralKey].includes(item1))
-                        ) {
-                          consol.log(
-                            "[1;33m " +
-                              `hsan findSinglePointMutationArray WAHEY!` +
-                              "[0m"
-                          );
-                          resultBool = true;
-                        }
-                      });
-
-                      return resultBool;
+                    if (
+                      inflectionCategoryy === "tense" &&
+                      (!structureChunk[inflectionCategoryy] ||
+                        !structureChunk[inflectionCategoryy].length)
+                    ) {
+                      inflectionCategoryy = "tenseDescription";
                     }
-                  )
-                ) {
-                  consol.log(
-                    "[1;32m " +
-                      `xunf findSinglePointMutationArray "${structureChunk.chunkId}" ABZ Early stage PASSING of "${label}" in findSinglePointMutationArray` +
-                      "[0m"
-                  );
-                  return true;
-                } else {
-                  consol.log(
-                    "[1;30m " +
-                      `dhjc findSinglePointMutationArray "${structureChunk.chunkId}" ABZ Early stage BLOCKING of "${label}" in findSinglePointMutationArray` +
-                      "[0m"
-                  );
-                  return false;
-                }
-              });
+
+                    if (
+                      !structureChunk[inflectionCategoryy] ||
+                      !structureChunk[inflectionCategoryy].length
+                    ) {
+                      consol.log(
+                        "[1;31m " +
+                          `#WARN kxqz filterDownClarifiers. Adding null to currentTraitValyyes for inflectionCategoryy "${inflectionCategoryy}".` +
+                          "[0m"
+                      );
+
+                      return null;
+                    }
+
+                    if (structureChunk[inflectionCategoryy].length > 1) {
+                      consol.log(
+                        "[1;31m " +
+                          `#WARN wqzm filterDownClarifiers. structureChunk[inflectionCategoryy] "${structureChunk[inflectionCategoryy]}"` +
+                          "[0m"
+                      );
+                      consol.throw(
+                        "#ERR wqzm filterDownClarifiers. inflectionCategoryy: " +
+                          inflectionCategoryy
+                      );
+                    }
+
+                    return structureChunk[inflectionCategoryy][0];
+                  }
+                );
+
+              filteredInflectionCategoryys =
+                filteredInflectionCategoryys.filter((inflectionCategoryy) => {
+                  if (
+                    otUtils.findSinglePointMutationArray(
+                      currentTraitValyyes,
+                      synhomDataUnit.inflectionPaths,
+                      synhomDataUnit.inflectionCategoryyChain.indexOf(
+                        inflectionCategoryy
+                      ),
+                      (item1, item2) => {
+                        let tempPluralityRef = {
+                          virile: ["m", "m1", "f", "n"],
+                          nonvirile: ["m2", "m3", "f", "n"],
+                        };
+
+                        let resultBool = false;
+
+                        if (resultBool) {
+                          return;
+                        }
+
+                        Object.keys(tempPluralityRef).forEach(
+                          (pluralTraitKeyy) => {
+                            if (
+                              (item1 === pluralTraitKeyy &&
+                                tempPluralityRef[pluralTraitKeyy].includes(
+                                  item2
+                                )) ||
+                              (item2 === pluralTraitKeyy &&
+                                tempPluralityRef[pluralTraitKeyy].includes(
+                                  item1
+                                ))
+                            ) {
+                              consol.log(
+                                "[1;33m " +
+                                  `hsan findSinglePointMutationArray WAHEY!` +
+                                  "[0m"
+                              );
+                              resultBool = true;
+                            }
+                          }
+                        );
+
+                        return resultBool;
+                      }
+                    )
+                  ) {
+                    consol.log(
+                      "[1;32m " +
+                        `xunf findSinglePointMutationArray "${structureChunk.chunkId}" ABZ Early stage PASSING of "${inflectionCategoryy}" in findSinglePointMutationArray` +
+                        "[0m"
+                    );
+                    return true;
+                  } else {
+                    consol.log(
+                      "[1;30m " +
+                        `dhjc findSinglePointMutationArray "${structureChunk.chunkId}" ABZ Early stage BLOCKING of "${inflectionCategoryy}" in findSinglePointMutationArray` +
+                        "[0m"
+                    );
+                    return false;
+                  }
+                });
 
               consol.log(
-                "cpkw filterDownClarifiers And now we have these labels:",
-                filteredLabels
+                "cpkw filterDownClarifiers And now we have these inflectionCategoryys:",
+                filteredInflectionCategoryys
               );
 
               consol.log("[1;35m " + `/filterDownClarifiers` + "[0m");
 
-              return filteredLabels;
+              return filteredInflectionCategoryys;
             }
 
-            labelsWhereTheyDiffer.forEach((label) => {
-              let clarifierValue = structureChunk[label];
+            inflectionCategoryysWhereTheyDiffer.forEach(
+              (inflectionCategoryy) => {
+                let inflectionKeyy = structureChunk[inflectionCategoryy];
 
-              //Abort if a metaGender label is accidentally being made subject of a Clarifier.
-              if (label === "gender") {
-                if (
-                  structureChunk[label].some((gender) =>
-                    gpUtils.featureValueIsMeta(gender)
-                  )
-                ) {
-                  return;
+                //Abort if a metaGender inflectionCategoryy is accidentally being made subject of a Clarifier.
+                if (inflectionCategoryy === "gender") {
+                  if (
+                    structureChunk[inflectionCategoryy].some((gender) =>
+                      gpUtils.traitValyyeIsMeta(gender)
+                    )
+                  ) {
+                    return;
+                  }
                 }
-              }
 
-              if (Array.isArray(clarifierValue)) {
-                if (clarifierValue.length === 1) {
-                  clarifierValue = clarifierValue[0];
-                } else {
-                  consol.log(
-                    "rqfh addClarifiers clarifierValue",
-                    clarifierValue
-                  );
-                  consol.throw(
-                    "exej aa:addClarifiers --> clarifierValue had length of not 1."
-                  );
+                if (Array.isArray(inflectionKeyy)) {
+                  if (inflectionKeyy.length === 1) {
+                    inflectionKeyy = inflectionKeyy[0];
+                  } else {
+                    consol.log(
+                      "rqfh addClarifiers inflectionKeyy",
+                      inflectionKeyy
+                    );
+                    consol.throw(
+                      "exej aa:addClarifiers --> inflectionKeyy had length of not 1."
+                    );
+                  }
                 }
-              }
 
-              consol.log(
-                "sosu addClarifiers------------------------------------------ADDED CLARIFIER in Step 3: ",
-                clarifierValue
-              );
-              structureChunk.annotations[label] = clarifierValue;
-            });
+                consol.log(
+                  "sosu addClarifiers------------------------------------------ADDED CLARIFIER in Step 3: ",
+                  inflectionKeyy
+                );
+                structureChunk.annotations[inflectionCategoryy] =
+                  inflectionKeyy;
+              }
+            );
           }
         });
       }

@@ -8,7 +8,7 @@ exports.checkOutputArrayForMissingUnits = (
   sentenceFormula,
   outputArray,
   currentLanguage,
-  label,
+  laabel,
   useDummy
 ) => {
   if (useDummy) {
@@ -26,13 +26,17 @@ exports.checkOutputArrayForMissingUnits = (
     consol.log("dwke primaryOrders", primaryOrders);
     consol.log("dwke outputChunkIds", outputChunkIds);
     consol.throw(
-      `dwke checkOutputArrayForMissingUnits. "${label}" "${currentLanguage}" outputArray didn't have all the requisite units. See above.`
+      `dwke checkOutputArrayForMissingUnits. "${laabel}" "${currentLanguage}" outputArray didn't have all the requisite units. See above.`
     );
   }
 };
 
-exports.getLemmaObjectsWithoutGivenKey = (wordsBank, wordtype, featureKey) => {
-  return wordsBank[`${wordtype}Set`].filter((lObj) => !lObj[featureKey]);
+exports.getLemmaObjectsWithoutGivenSelectorKeyy = (
+  wordsBank,
+  wordtype,
+  selectorKeyy
+) => {
+  return wordsBank[`${wordtype}Set`].filter((lObj) => !lObj[selectorKeyy]);
 };
 
 exports.checkWords = (testing, currentLanguage) => {
@@ -40,16 +44,17 @@ exports.checkWords = (testing, currentLanguage) => {
 
   const wordsBank = educatorUtils.getWordsBank(currentLanguage, testing);
 
-  Object.keys(wordsBank).forEach((wordtypeKey) => {
-    let words = wordsBank[wordtypeKey];
+  Object.keys(wordsBank).forEach((wordsetKey) => {
+    let words = wordsBank[wordsetKey];
     langUtils.preprocessLemmaObjectsMinor(words);
   });
 
-  let nounsWithoutGender = educatorUtils.getLemmaObjectsWithoutGivenKey(
-    wordsBank,
-    "noun", //bostonOK
-    "gender"
-  );
+  let nounsWithoutGender =
+    educatorUtils.getLemmaObjectsWithoutGivenSelectorKeyy(
+      wordsBank,
+      "noun", //bostonOK
+      "gender"
+    );
 
   return {
     nounsWithoutGender: nounsWithoutGender.map((lObj) => [lObj.lemma, lObj.id]),
@@ -76,8 +81,8 @@ exports.findHomographs = (testing, currentLanguage, homographType, ignore) => {
   const wordsBank = educatorUtils.getWordsBank(currentLanguage, testing);
   const langUtils = require(`../../source/${currentLanguage}/langUtils.js`);
 
-  let recordOfTerminalValuesAndPaths = [];
-  let severallyAppearingTerminalValuesArr = [];
+  let recordOfTerminalValyyesAndPaths = [];
+  let severallyAppearingTerminalValyyesArr = [];
   let temporaryArr = [];
   let homographs = {};
 
@@ -94,33 +99,36 @@ exports.findHomographs = (testing, currentLanguage, homographType, ignore) => {
     );
 
     wordset.forEach((lObj) => {
-      let terminalValuesAndPathsArr =
-        otUtils.giveRoutesAndTerminalValuesFromObject(lObj.inflections);
+      let terminalValyyesAndPathsArr =
+        otUtils.giveRoutesAndTerminalValyyesFromObject(lObj.inflections);
 
-      terminalValuesAndPathsArr.forEach((terminalValuesAndPathsUnit) => {
-        terminalValuesAndPathsUnit.nestedRoute.unshift(lObj.id);
-        recordOfTerminalValuesAndPaths.push(terminalValuesAndPathsUnit);
+      terminalValyyesAndPathsArr.forEach((terminalValyyesAndPathsUnit) => {
+        terminalValyyesAndPathsUnit.nestedRoute.unshift(lObj.id);
+        recordOfTerminalValyyesAndPaths.push(terminalValyyesAndPathsUnit);
       });
     });
   });
 
-  consol.log("recordOfTerminalValuesAndPaths", recordOfTerminalValuesAndPaths);
+  consol.log(
+    "recordOfTerminalValyyesAndPaths",
+    recordOfTerminalValyyesAndPaths
+  );
 
-  recordOfTerminalValuesAndPaths.forEach((unit) => {
-    let { terminalValue } = unit;
+  recordOfTerminalValyyesAndPaths.forEach((unit) => {
+    let { terminalValyye } = unit;
     if (
-      temporaryArr.includes(terminalValue) &&
-      !severallyAppearingTerminalValuesArr.includes(terminalValue)
+      temporaryArr.includes(terminalValyye) &&
+      !severallyAppearingTerminalValyyesArr.includes(terminalValyye)
     ) {
-      severallyAppearingTerminalValuesArr.push(terminalValue);
+      severallyAppearingTerminalValyyesArr.push(terminalValyye);
     } else {
-      temporaryArr.push(terminalValue);
+      temporaryArr.push(terminalValyye);
     }
   });
 
-  severallyAppearingTerminalValuesArr.forEach((terminalValue) => {
-    homographs[terminalValue] = recordOfTerminalValuesAndPaths
-      .filter((unit) => unit.terminalValue === terminalValue)
+  severallyAppearingTerminalValyyesArr.forEach((terminalValyye) => {
+    homographs[terminalValyye] = recordOfTerminalValyyesAndPaths
+      .filter((unit) => unit.terminalValyye === terminalValyye)
       .map((unit) => unit.nestedRoute);
   });
 
@@ -131,7 +139,7 @@ exports.findHomographs = (testing, currentLanguage, homographType, ignore) => {
     let homographRoutes = homographs[homographWord];
 
     if (
-      uUtils.doesArrContainDifferentValues(
+      uUtils.doesArrContainDifferentItems(
         homographRoutes.map((route) => route[0])
       )
     ) {
@@ -167,7 +175,7 @@ exports.findHomographs = (testing, currentLanguage, homographType, ignore) => {
 
     if (
       ignore.ignoreClarifiedAllohoms &&
-      uUtils.doesArrContainDifferentValues(firstStepsOfRoute) //At least some are allohoms.
+      uUtils.doesArrContainDifferentItems(firstStepsOfRoute) //At least some are allohoms.
     ) {
       let isEveryAllohomAlreadyClarified = firstStepsOfRoute.every(
         (lemmaObjectId) => {
@@ -202,7 +210,7 @@ exports.findHomographs = (testing, currentLanguage, homographType, ignore) => {
       }
     } else if (ignore.ignoreV2V3Synhoms) {
       if (
-        !uUtils.doesArrContainDifferentValues(firstStepsOfRoute) && //All are synhoms.
+        !uUtils.doesArrContainDifferentItems(firstStepsOfRoute) && //All are synhoms.
         uUtils.doesArrHaveOnlyTheseMembers(secondStepsOfRoute, ["v2", "v3"])
       ) {
         return;
@@ -216,8 +224,8 @@ exports.checkLemmaObjectIds = (testing, currentLanguage) => {
   const wordsBank = educatorUtils.getWordsBank(currentLanguage, testing);
 
   let schematic = [];
-  Object.keys(wordsBank).forEach((wordtypeKey) => {
-    let wordsOfAType = wordsBank[wordtypeKey];
+  Object.keys(wordsBank).forEach((wordsetKey) => {
+    let wordsOfAType = wordsBank[wordsetKey];
     schematic = [
       ...schematic,
       ...wordsOfAType.map((lObj) => [lObj.id, lObj.lemma]),

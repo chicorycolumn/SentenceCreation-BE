@@ -3,13 +3,13 @@ const {
   extractNestedRoutes,
   concoctNestedRoutes,
   findObjectInNestedObject,
-  giveRoutesAndTerminalValuesFromObject,
+  giveRoutesAndTerminalValyyesFromObject,
   findSynhomographs,
   findSinglePointMutationArray,
-  isThisValueUniqueAtThisLevelInLemmaObject,
+  doesThisInflectionKeyyHoldUniqueInflectionValyyeInLObj,
 } = require("../utils/objectTraversingUtils.js");
 
-xdescribe("isThisValueUniqueAtThisLevelInLemmaObject", () => {
+xdescribe("doesThisInflectionKeyyHoldUniqueInflectionValyyeInLObj", () => {
   let inputlObj1 = {
     //links
     translations: { ENG: ["PERSONAL"], POL: ["PERSONAL"] },
@@ -288,7 +288,7 @@ xdescribe("isThisValueUniqueAtThisLevelInLemmaObject", () => {
       ["gender", "f"],
     ];
 
-    const actual = isThisValueUniqueAtThisLevelInLemmaObject(
+    const actual = doesThisInflectionKeyyHoldUniqueInflectionValyyeInLObj(
       inputlObj1,
       inputInflectionCategoryy,
       inputDrillPath
@@ -306,7 +306,7 @@ xdescribe("isThisValueUniqueAtThisLevelInLemmaObject", () => {
       ["gender", "f"],
     ];
 
-    const actual = isThisValueUniqueAtThisLevelInLemmaObject(
+    const actual = doesThisInflectionKeyyHoldUniqueInflectionValyyeInLObj(
       inputlObj1,
       inputInflectionCategoryy,
       inputDrillPath
@@ -314,7 +314,7 @@ xdescribe("isThisValueUniqueAtThisLevelInLemmaObject", () => {
 
     expect(actual).to.be.true;
   });
-  it("Indeed unique, as gender inflectionKeyy 'singular' holds values which 'plural' doesn't.", () => {
+  it("Indeed unique, as gender inflectionKeyy 'singular' holds traitValyyes which 'plural' doesn't.", () => {
     let inputInflectionCategoryy = "number";
 
     let inputDrillPath = [
@@ -324,7 +324,7 @@ xdescribe("isThisValueUniqueAtThisLevelInLemmaObject", () => {
       ["gender", "f"],
     ];
 
-    const actual = isThisValueUniqueAtThisLevelInLemmaObject(
+    const actual = doesThisInflectionKeyyHoldUniqueInflectionValyyeInLObj(
       inputlObj1,
       inputInflectionCategoryy,
       inputDrillPath
@@ -343,11 +343,11 @@ xdescribe("findSynhomographs", () => {
 
         inflections: {
           singular: {
-            nom: "bikey",
+            nom: "bicyclaroo",
             gen: "bikaroo",
           },
           plural: {
-            nom: "bikeys",
+            nom: "bicyclaroos",
             gen: "bikaroos",
           },
         },
@@ -358,11 +358,11 @@ xdescribe("findSynhomographs", () => {
 
         inflections: {
           singular: {
-            nom: "trikey",
+            nom: "tricyclaroo",
             gen: "trikaroo",
           },
           plural: {
-            nom: "trikeys",
+            nom: "tricyclaroos",
             gen: "trikaroos",
           },
         },
@@ -417,16 +417,16 @@ xdescribe("findSynhomographs", () => {
     const expected = [
       {
         lemmaObjectId: "pol-bike001",
-        inflectionLabelChain: ["number", "gcase"],
+        inflectionCategoryyChain: ["number", "gcase"],
         synhomographs: [
           {
-            inflectionLabelChain: ["number", "gcase"],
-            terminalValue: "bike",
+            inflectionCategoryyChain: ["number", "gcase"],
+            terminalValyye: "bike",
             inflectionPaths: [
               ["singular", "nom"],
               ["plural", "nom"],
             ],
-            labelsWhereTheyDiffer: ["number"],
+            inflectionCategoryysWhereTheyDiffer: ["number"],
           },
         ],
       },
@@ -478,35 +478,35 @@ xdescribe("findSynhomographs", () => {
     const expected = [
       {
         lemmaObjectId: "pol-bike001",
-        inflectionLabelChain: ["number", "gcase"],
+        inflectionCategoryyChain: ["number", "gcase"],
         synhomographs: [
           {
-            inflectionLabelChain: ["number", "gcase"],
-            terminalValue: "11",
+            inflectionCategoryyChain: ["number", "gcase"],
+            terminalValyye: "11",
             inflectionPaths: [
               ["singular", "nom"],
               ["singular", "ins"],
               ["singular", "loc"],
             ],
-            labelsWhereTheyDiffer: ["gcase"],
+            inflectionCategoryysWhereTheyDiffer: ["gcase"],
           },
           {
-            inflectionLabelChain: ["number", "gcase"],
-            terminalValue: "14",
+            inflectionCategoryyChain: ["number", "gcase"],
+            terminalValyye: "14",
             inflectionPaths: [
               ["singular", "acc"],
               ["plural", "dat"],
             ],
-            labelsWhereTheyDiffer: ["number", "gcase"],
+            inflectionCategoryysWhereTheyDiffer: ["number", "gcase"],
           },
           {
-            inflectionLabelChain: ["number", "gcase"],
-            terminalValue: "16",
+            inflectionCategoryyChain: ["number", "gcase"],
+            terminalValyye: "16",
             inflectionPaths: [
               ["plural", "gen"],
               ["plural", "acc"],
             ],
-            labelsWhereTheyDiffer: ["gcase"],
+            inflectionCategoryysWhereTheyDiffer: ["gcase"],
           },
         ],
       },
@@ -558,11 +558,11 @@ xdescribe("findSynhomographs", () => {
 
         inflections: {
           singular: {
-            nom: "trikey",
+            nom: "tricyclaroo",
             gen: "trikaroo",
           },
           plural: {
-            nom: "trikeys",
+            nom: "tricyclaroos",
             gen: "trikaroos",
           },
         },
@@ -573,12 +573,12 @@ xdescribe("findSynhomographs", () => {
 
         inflections: {
           singular: {
-            nom: "unikey",
-            acc: "unikey",
+            nom: "unicyclaroo",
+            acc: "unicyclaroo",
           },
           plural: {
-            nom: "unikeys",
-            acc: "unikey",
+            nom: "unicyclaroos",
+            acc: "unicyclaroo",
           },
         },
       },
@@ -587,51 +587,51 @@ xdescribe("findSynhomographs", () => {
     const expected = [
       {
         lemmaObjectId: "pol-bike001",
-        inflectionLabelChain: ["number", "gcase"],
+        inflectionCategoryyChain: ["number", "gcase"],
         synhomographs: [
           {
-            inflectionLabelChain: ["number", "gcase"],
-            terminalValue: "11",
+            inflectionCategoryyChain: ["number", "gcase"],
+            terminalValyye: "11",
             inflectionPaths: [
               ["singular", "nom"],
               ["singular", "ins"],
               ["singular", "loc"],
             ],
-            labelsWhereTheyDiffer: ["gcase"],
+            inflectionCategoryysWhereTheyDiffer: ["gcase"],
           },
           {
-            inflectionLabelChain: ["number", "gcase"],
-            terminalValue: "14",
+            inflectionCategoryyChain: ["number", "gcase"],
+            terminalValyye: "14",
             inflectionPaths: [
               ["singular", "acc"],
               ["plural", "dat"],
             ],
-            labelsWhereTheyDiffer: ["number", "gcase"],
+            inflectionCategoryysWhereTheyDiffer: ["number", "gcase"],
           },
           {
-            inflectionLabelChain: ["number", "gcase"],
-            terminalValue: "16",
+            inflectionCategoryyChain: ["number", "gcase"],
+            terminalValyye: "16",
             inflectionPaths: [
               ["plural", "gen"],
               ["plural", "acc"],
             ],
-            labelsWhereTheyDiffer: ["gcase"],
+            inflectionCategoryysWhereTheyDiffer: ["gcase"],
           },
         ],
       },
       {
         lemmaObjectId: "pol-unike001",
-        inflectionLabelChain: ["number", "gcase"],
+        inflectionCategoryyChain: ["number", "gcase"],
         synhomographs: [
           {
-            inflectionLabelChain: ["number", "gcase"],
-            terminalValue: "unikey",
+            inflectionCategoryyChain: ["number", "gcase"],
+            terminalValyye: "unicyclaroo",
             inflectionPaths: [
               ["singular", "nom"],
               ["singular", "acc"],
               ["plural", "acc"],
             ],
-            labelsWhereTheyDiffer: ["number", "gcase"],
+            inflectionCategoryysWhereTheyDiffer: ["number", "gcase"],
           },
         ],
       },
@@ -763,7 +763,7 @@ xdescribe("findObjectInNestedObject", () => {
       sentenceStructure: ["my", 123, "sharona", 456],
     });
   });
-  it("#otu3.2c YES: Correctly return object from one level of nesting, finding by matching multiple values.", () => {
+  it("#otu3.2c YES: Correctly return object from one level of nesting, finding by matching multiple items.", () => {
     const input1 = testObj1;
     const input2 = {
       symbol: "my aunt",
@@ -796,7 +796,7 @@ xdescribe("findObjectInNestedObject", () => {
       sentenceStructure: ["my", 123, "sharona", 456],
     });
   });
-  it("#otu3.3c Correctly return object from multi nesting, finding by matching multiple values.", () => {
+  it("#otu3.3c Correctly return object from multi nesting, finding by matching multiple items.", () => {
     const input1 = testObj2;
     const input2 = {
       symbol: "my aunt",
@@ -902,19 +902,19 @@ xdescribe("extractNestedRoutes", () => {
     expect(actual.routesByNesting).to.eql(expected.routesByNesting);
     expect(actual.routesByLevel).to.eql(expected.routesByLevel);
   });
-  it("#otu1.1b Returns key routes for object with one key at single level of nesting.", () => {
+  it("#otu1.1b Returns routes for object with one traitKeyy at single level of nesting.", () => {
     const input = { singular: "apple" };
     const expected = [["singular"]];
     const actual = extractNestedRoutes(input).routesByNesting;
     expect(actual).to.eql(expected);
   });
-  it("#otu1.1c Returns key routes for object with many keys at single level of nesting.", () => {
+  it("#otu1.1c Returns routes for object with many traitKeyys at single level of nesting.", () => {
     const input = { singular: "apple", plural: "apples" };
     const expected = [["singular"], ["plural"]];
     const actual = extractNestedRoutes(input).routesByNesting;
     expect(actual).to.eql(expected);
   });
-  it("#otu1.1d Returns key routes for object with many keys at two levels of nesting.", () => {
+  it("#otu1.1d Returns routes for object with many traitKeyys at two levels of nesting.", () => {
     const input = {
       singular: { nom: "kobieta", loc: "kobiecie" },
       plural: { nom: "kobiety", loc: "kobietach" },
@@ -928,7 +928,7 @@ xdescribe("extractNestedRoutes", () => {
     const actual = extractNestedRoutes(input).routesByNesting;
     expect(actual).to.eql(expected);
   });
-  it("#otu1.1e Returns key routes for object with many keys at various levels of nesting.", () => {
+  it("#otu1.1e Returns routes for object with many traitKeyys at various levels of nesting.", () => {
     const input = {
       singular: {
         nom: "jabłko",
@@ -973,7 +973,7 @@ xdescribe("extractNestedRoutes", () => {
     consol.log(actual);
     expect(actual).to.eql(expected);
   });
-  it("#otu1.1f Returns key routes when some values are arrays and should not be mapped out.", () => {
+  it("#otu1.1f Returns routes when some items are arrays and should not be mapped out.", () => {
     const input = {
       singular: { nom: "chłopak", acc: "chłopaka" },
       plural: {
@@ -1026,21 +1026,21 @@ xdescribe("extractNestedRoutes", () => {
     };
 
     let expected = [
-      { terminalValue: "kobieta", nestedRoute: ["singular", "nom"] },
-      { terminalValue: "kobiety", nestedRoute: ["singular", "gen"] },
-      { terminalValue: "kobiecie", nestedRoute: ["singular", "dat"] },
-      { terminalValue: "kobietę", nestedRoute: ["singular", "acc"] },
-      { terminalValue: "kobietą", nestedRoute: ["singular", "ins"] },
-      { terminalValue: "kobiecie", nestedRoute: ["singular", "loc"] },
-      { terminalValue: "kobiety", nestedRoute: ["plural", "nom"] },
-      { terminalValue: "kobiet", nestedRoute: ["plural", "gen"] },
-      { terminalValue: "kobietom", nestedRoute: ["plural", "dat"] },
-      { terminalValue: "kobiety", nestedRoute: ["plural", "acc"] },
-      { terminalValue: undefined, nestedRoute: ["plural", "ins"] },
-      { terminalValue: "kobietach", nestedRoute: ["plural", "loc"] },
+      { terminalValyye: "kobieta", nestedRoute: ["singular", "nom"] },
+      { terminalValyye: "kobiety", nestedRoute: ["singular", "gen"] },
+      { terminalValyye: "kobiecie", nestedRoute: ["singular", "dat"] },
+      { terminalValyye: "kobietę", nestedRoute: ["singular", "acc"] },
+      { terminalValyye: "kobietą", nestedRoute: ["singular", "ins"] },
+      { terminalValyye: "kobiecie", nestedRoute: ["singular", "loc"] },
+      { terminalValyye: "kobiety", nestedRoute: ["plural", "nom"] },
+      { terminalValyye: "kobiet", nestedRoute: ["plural", "gen"] },
+      { terminalValyye: "kobietom", nestedRoute: ["plural", "dat"] },
+      { terminalValyye: "kobiety", nestedRoute: ["plural", "acc"] },
+      { terminalValyye: undefined, nestedRoute: ["plural", "ins"] },
+      { terminalValyye: "kobietach", nestedRoute: ["plural", "loc"] },
     ];
 
-    let actual = giveRoutesAndTerminalValuesFromObject(input.inflections);
+    let actual = giveRoutesAndTerminalValyyesFromObject(input.inflections);
     consol.log(actual);
     expect(actual).to.eql(expected);
   });
@@ -1066,14 +1066,14 @@ xdescribe("extractNestedRoutes", () => {
     };
 
     let expected = [
-      { terminalValue: "read", nestedRoute: ["infinitive"] },
-      { terminalValue: "read", nestedRoute: ["v2"] },
-      { terminalValue: "read", nestedRoute: ["v3"] },
-      { terminalValue: "reads", nestedRoute: ["thirdPS"] },
-      { terminalValue: "reading", nestedRoute: ["gerund"] },
+      { terminalValyye: "read", nestedRoute: ["infinitive"] },
+      { terminalValyye: "read", nestedRoute: ["v2"] },
+      { terminalValyye: "read", nestedRoute: ["v3"] },
+      { terminalValyye: "reads", nestedRoute: ["thirdPS"] },
+      { terminalValyye: "reading", nestedRoute: ["gerund"] },
     ];
 
-    let actual = giveRoutesAndTerminalValuesFromObject(input.inflections);
+    let actual = giveRoutesAndTerminalValyyesFromObject(input.inflections);
     consol.log(actual);
     expect(actual).to.eql(expected);
   });
@@ -1099,14 +1099,14 @@ xdescribe("extractNestedRoutes", () => {
     };
 
     let expected = [
-      { terminalValue: "read", nestedRoute: ["infinitive"] },
-      { terminalValue: "read", nestedRoute: ["v2"] },
-      { terminalValue: "read", nestedRoute: ["v3"] },
-      { terminalValue: "reads", nestedRoute: ["thirdPS"] },
-      { terminalValue: "reading", nestedRoute: ["gerund"] },
+      { terminalValyye: "read", nestedRoute: ["infinitive"] },
+      { terminalValyye: "read", nestedRoute: ["v2"] },
+      { terminalValyye: "read", nestedRoute: ["v3"] },
+      { terminalValyye: "reads", nestedRoute: ["thirdPS"] },
+      { terminalValyye: "reading", nestedRoute: ["gerund"] },
     ];
 
-    let actual = giveRoutesAndTerminalValuesFromObject(input.inflections);
+    let actual = giveRoutesAndTerminalValyyesFromObject(input.inflections);
     consol.log(actual);
     expect(actual).to.eql(expected);
   });
@@ -1158,11 +1158,11 @@ xdescribe("extractNestedRoutes", () => {
     };
 
     let expected = [
-      { terminalValue: "wib", nestedRoute: ["nonprotective"] },
-      { terminalValue: "wob", nestedRoute: ["protective"] },
+      { terminalValyye: "wib", nestedRoute: ["nonprotective"] },
+      { terminalValyye: "wob", nestedRoute: ["protective"] },
     ];
 
-    let actual = giveRoutesAndTerminalValuesFromObject(input.inflections);
+    let actual = giveRoutesAndTerminalValyyesFromObject(input.inflections);
     consol.log(actual);
     expect(actual).to.eql(expected);
   });

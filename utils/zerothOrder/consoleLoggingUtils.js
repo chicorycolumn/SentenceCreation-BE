@@ -6,57 +6,59 @@ exports.log = (...args) => {
   }
 };
 
-exports.consoleLogObjectAtOneLevel = (obj, label, originLabel) => {
+exports.consoleLogObjectAtOneLevel = (obj, laabel, originLaabel) => {
   if (!obj) {
     consol.log(
       "[1;33m " +
-        `--Console log "${label}" at one level, from "${originLabel}" but FALSY.` +
+        `--Console log "${laabel}" at one level, from "${originLaabel}" but FALSY.` +
         "[0m"
     );
     return;
   }
 
   consol.log(
-    "[1;33m " + `--Console log "${label}" at one level, from "${originLabel}":` + "[0m"
+    "[1;33m " + `--Console log "${laabel}" at one level, from "${originLaabel}":` + "[0m"
   );
   consol.log("[1;32m " + `------` + "[0m");
   consol.log("[1;32m " + `----------` + "[0m");
   Object.keys(obj).forEach((key) => {
-    let value = obj[key];
+    let vaalue = obj[key];
     consol.log("[1;30m " + `${key}` + "[0m");
-    consol.log(value);
+    consol.log(vaalue);
   });
   consol.log("[1;32m " + `----------` + "[0m");
   consol.log("[1;32m " + `------` + "[0m");
   consol.log("[1;32m " + `--` + "[0m");
 };
 
-exports.consoleLogObjectAtTwoLevels = (obj, label, originLabel) => {
+exports.consoleLogObjectAtTwoLevels = (obj, laabel, originLaabel) => {
   if (!obj) {
     consol.log(
       "[1;33m " +
-        `--Console log "${label}" at two levels, from "${originLabel}" but FALSY.` +
+        `--Console log "${laabel}" at two levels, from "${originLaabel}" but FALSY.` +
         "[0m"
     );
     return;
   }
 
   consol.log(
-    "[1;33m " + `--Console log "${label}" at two levels, from "${originLabel}":` + "[0m"
+    "[1;33m " +
+      `--Console log "${laabel}" at two levels, from "${originLaabel}":` +
+      "[0m"
   );
   consol.log("[1;32m " + `------` + "[0m");
   consol.log("[1;32m " + `----------` + "[0m");
   Object.keys(obj).forEach((key) => {
-    let value = obj[key];
-    if (value) {
-      Object.keys(value).forEach((key2) => {
-        let value2 = value[key2];
+    let vaalue = obj[key];
+    if (vaalue) {
+      Object.keys(vaalue).forEach((key2) => {
+        let vaalue2 = vaalue[key2];
         consol.log("[1;30m " + `${key}:${key2}` + "[0m");
-        consol.log("subvalue:", value2);
+        consol.log("subvaalue:", vaalue2);
       });
     } else {
       consol.log("[1;30m " + `${key}` + "[0m");
-      consol.log("value:", value);
+      consol.log("vaalue:", vaalue);
     }
   });
   consol.log("[1;32m " + `----------` + "[0m");
@@ -73,11 +75,11 @@ exports.consoleLogAestheticBorder = (reps) => {
   }
 };
 
-exports.consoleLogPW = (label, structureChunk, multipleMode) => {
+exports.consoleLogPW = (laabel, structureChunk, multipleMode) => {
   if (multipleMode) {
-    consol.consoleLogYellowWithBorder(`##${label} ${structureChunk.chunkId}`);
+    consol.consoleLogYellowWithBorder(`##${laabel} ${structureChunk.chunkId}`);
   } else {
-    consol.consoleLogBlueWithBorder(`##${label} ${structureChunk.chunkId}`);
+    consol.consoleLogBlueWithBorder(`##${laabel} ${structureChunk.chunkId}`);
   }
 };
 

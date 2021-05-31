@@ -1,4 +1,4 @@
-exports.combineTwoKeyValueObjectsCarefully = (obj1, obj2) => {
+exports.combineTwoKeyVaalueObjectsCarefully = (obj1, obj2) => {
   Object.keys(obj1).forEach((obj1Key) => {
     if (Object.keys(obj2).includes(obj1Key)) {
       throw `qoko combineTwoObjectsCarefully. Oh no, "${obj1Key}" present in both objects.`;
@@ -13,23 +13,23 @@ exports.combineTwoKeyValueObjectsCarefully = (obj1, obj2) => {
   let combinedObj = {};
 
   Object.keys(obj1).forEach((obj1Key) => {
-    let obj1Value = obj1[obj1Key];
-    combinedObj[obj1Key] = this.copyWithoutReference(obj1Value); //copywithoutref
+    let obj1Vaalue = obj1[obj1Key];
+    combinedObj[obj1Key] = this.copyWithoutReference(obj1Vaalue); //copywithoutref
   });
 
   Object.keys(obj2).forEach((obj2Key) => {
-    obj2Value = obj2[obj2Key];
-    combinedObj[obj2Key] = this.copyWithoutReference(obj2Value); //copywithoutref
+    obj2Vaalue = obj2[obj2Key];
+    combinedObj[obj2Key] = this.copyWithoutReference(obj2Vaalue); //copywithoutref
   });
 
   return combinedObj;
 };
 
-exports.addToArrayAtKey = (object, key, value) => {
+exports.addToArrayAtKey = (object, key, item) => {
   if (!object[key]) {
-    object[key] = [value];
+    object[key] = [item];
   } else {
-    object[key].push(value);
+    object[key].push(item);
   }
 };
 
@@ -53,24 +53,24 @@ exports.areTwoFlatArraysEqual = (arr1, arr2) => {
   );
 };
 
-exports.doKeyValuesMatch = (object, keyValues) => {
-  return Object.keys(keyValues).every((key) => {
+exports.doKeyVaaluesMatch = (object, keyVaalues) => {
+  return Object.keys(keyVaalues).every((key) => {
     if (
-      typeof keyValues[key] === "number" ||
-      typeof keyValues[key] === "string"
+      typeof keyVaalues[key] === "number" ||
+      typeof keyVaalues[key] === "string"
     ) {
-      return object[key] === keyValues[key];
-    } else if (Array.isArray(keyValues[key]) && Array.isArray(object[key])) {
-      return this.areTwoFlatArraysEqual(object[key], keyValues[key]);
+      return object[key] === keyVaalues[key];
+    } else if (Array.isArray(keyVaalues[key]) && Array.isArray(object[key])) {
+      return this.areTwoFlatArraysEqual(object[key], keyVaalues[key]);
     }
   });
 };
 
-exports.isKeyValueTypeObject = (item) => {
+exports.isKeyVaalueTypeObject = (item) => {
   return typeof item === "object" && item !== null && !Array.isArray(item);
 };
 
-exports.isKeyValueTypeObjectOrArray = (item) => {
+exports.isKeyVaalueTypeObjectOrArray = (item) => {
   return typeof item === "object" && item !== null;
 };
 
@@ -117,7 +117,7 @@ exports.copyWithoutReference = (source) => {
   }
 };
 
-exports.copyValueOfKey = (
+exports.copyVaalueOfKey = (
   navigatedObject,
   sourceKey,
   targetKeyArr,
@@ -172,7 +172,7 @@ exports.arrayExploder = (superArray) => {
   }
 };
 
-exports.doesArrContainDifferentValues = (arr) => {
+exports.doesArrContainDifferentItems = (arr) => {
   if (!arr.length) {
     return false;
   }
@@ -187,8 +187,8 @@ exports.doesArrHaveOnlyTheseMembers = (arr1, arr2, disallowDuplicates) => {
     return false;
   }
 
-  let differingValues = arr1.filter((value) => !arr2.includes(value));
-  return !differingValues.length;
+  let differingItems = arr1.filter((item) => !arr2.includes(item));
+  return !differingItems.length;
 };
 
 exports.typeof = (item) => {
@@ -197,7 +197,7 @@ exports.typeof = (item) => {
     : item === null
     ? "null"
     : typeof item === "object"
-    ? "keyValueObject"
+    ? "keyVaalueObject"
     : typeof item;
 };
 
@@ -206,7 +206,7 @@ exports.areTwoObjectsEqual = (obj1, obj2) => {
     return false;
   }
 
-  if (!["keyValueObject", "array"].includes(this.typeof(obj1))) {
+  if (!["keyVaalueObject", "array"].includes(this.typeof(obj1))) {
     return obj1 === obj2;
   }
 
