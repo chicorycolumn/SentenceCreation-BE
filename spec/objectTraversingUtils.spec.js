@@ -417,10 +417,10 @@ xdescribe("findSynhomographs", () => {
     const expected = [
       {
         lemmaObjectId: "pol-bike001",
-        inflectionLabelChain: ["number", "gcase"],
+        inflectionCategoryyChain: ["number", "gcase"],
         synhomographs: [
           {
-            inflectionLabelChain: ["number", "gcase"],
+            inflectionCategoryyChain: ["number", "gcase"],
             terminalValyye: "bike",
             inflectionPaths: [
               ["singular", "nom"],
@@ -478,10 +478,10 @@ xdescribe("findSynhomographs", () => {
     const expected = [
       {
         lemmaObjectId: "pol-bike001",
-        inflectionLabelChain: ["number", "gcase"],
+        inflectionCategoryyChain: ["number", "gcase"],
         synhomographs: [
           {
-            inflectionLabelChain: ["number", "gcase"],
+            inflectionCategoryyChain: ["number", "gcase"],
             terminalValyye: "11",
             inflectionPaths: [
               ["singular", "nom"],
@@ -491,7 +491,7 @@ xdescribe("findSynhomographs", () => {
             labelsWhereTheyDiffer: ["gcase"],
           },
           {
-            inflectionLabelChain: ["number", "gcase"],
+            inflectionCategoryyChain: ["number", "gcase"],
             terminalValyye: "14",
             inflectionPaths: [
               ["singular", "acc"],
@@ -500,7 +500,7 @@ xdescribe("findSynhomographs", () => {
             labelsWhereTheyDiffer: ["number", "gcase"],
           },
           {
-            inflectionLabelChain: ["number", "gcase"],
+            inflectionCategoryyChain: ["number", "gcase"],
             terminalValyye: "16",
             inflectionPaths: [
               ["plural", "gen"],
@@ -587,10 +587,10 @@ xdescribe("findSynhomographs", () => {
     const expected = [
       {
         lemmaObjectId: "pol-bike001",
-        inflectionLabelChain: ["number", "gcase"],
+        inflectionCategoryyChain: ["number", "gcase"],
         synhomographs: [
           {
-            inflectionLabelChain: ["number", "gcase"],
+            inflectionCategoryyChain: ["number", "gcase"],
             terminalValyye: "11",
             inflectionPaths: [
               ["singular", "nom"],
@@ -600,7 +600,7 @@ xdescribe("findSynhomographs", () => {
             labelsWhereTheyDiffer: ["gcase"],
           },
           {
-            inflectionLabelChain: ["number", "gcase"],
+            inflectionCategoryyChain: ["number", "gcase"],
             terminalValyye: "14",
             inflectionPaths: [
               ["singular", "acc"],
@@ -609,7 +609,7 @@ xdescribe("findSynhomographs", () => {
             labelsWhereTheyDiffer: ["number", "gcase"],
           },
           {
-            inflectionLabelChain: ["number", "gcase"],
+            inflectionCategoryyChain: ["number", "gcase"],
             terminalValyye: "16",
             inflectionPaths: [
               ["plural", "gen"],
@@ -621,10 +621,10 @@ xdescribe("findSynhomographs", () => {
       },
       {
         lemmaObjectId: "pol-unike001",
-        inflectionLabelChain: ["number", "gcase"],
+        inflectionCategoryyChain: ["number", "gcase"],
         synhomographs: [
           {
-            inflectionLabelChain: ["number", "gcase"],
+            inflectionCategoryyChain: ["number", "gcase"],
             terminalValyye: "unikey",
             inflectionPaths: [
               ["singular", "nom"],

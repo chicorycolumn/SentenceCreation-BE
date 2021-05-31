@@ -1231,48 +1231,50 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
                 structureChunk
               );
               consol.log(
-                "ahby filterDownClarifiers, synhomDataUnit.inflectionLabelChain",
-                synhomDataUnit.inflectionLabelChain
+                "ahby filterDownClarifiers, synhomDataUnit.inflectionCategoryyChain",
+                synhomDataUnit.inflectionCategoryyChain
               );
 
-              let currentValueArr = synhomDataUnit.inflectionLabelChain.map(
-                (inflectionLabel) => {
-                  consol.log("vpzx filterDownClarifiers", { inflectionLabel });
+              let currentValueArr = synhomDataUnit.inflectionCategoryyChain.map(
+                (inflectionCategoryy) => {
+                  consol.log("vpzx filterDownClarifiers", {
+                    inflectionCategoryy,
+                  });
 
                   if (
-                    inflectionLabel === "tense" &&
-                    (!structureChunk[inflectionLabel] ||
-                      !structureChunk[inflectionLabel].length)
+                    inflectionCategoryy === "tense" &&
+                    (!structureChunk[inflectionCategoryy] ||
+                      !structureChunk[inflectionCategoryy].length)
                   ) {
-                    inflectionLabel = "tenseDescription";
+                    inflectionCategoryy = "tenseDescription";
                   }
 
                   if (
-                    !structureChunk[inflectionLabel] ||
-                    !structureChunk[inflectionLabel].length
+                    !structureChunk[inflectionCategoryy] ||
+                    !structureChunk[inflectionCategoryy].length
                   ) {
                     consol.log(
                       "[1;31m " +
-                        `#WARN kxqz filterDownClarifiers. Adding null to currentValueArr for inflectionLabel "${inflectionLabel}".` +
+                        `#WARN kxqz filterDownClarifiers. Adding null to currentValueArr for inflectionCategoryy "${inflectionCategoryy}".` +
                         "[0m"
                     );
 
                     return null;
                   }
 
-                  if (structureChunk[inflectionLabel].length > 1) {
+                  if (structureChunk[inflectionCategoryy].length > 1) {
                     consol.log(
                       "[1;31m " +
-                        `#WARN wqzm filterDownClarifiers. structureChunk[inflectionLabel] "${structureChunk[inflectionLabel]}"` +
+                        `#WARN wqzm filterDownClarifiers. structureChunk[inflectionCategoryy] "${structureChunk[inflectionCategoryy]}"` +
                         "[0m"
                     );
                     consol.throw(
-                      "#ERR wqzm filterDownClarifiers. inflectionLabel: " +
-                        inflectionLabel
+                      "#ERR wqzm filterDownClarifiers. inflectionCategoryy: " +
+                        inflectionCategoryy
                     );
                   }
 
-                  return structureChunk[inflectionLabel][0];
+                  return structureChunk[inflectionCategoryy][0];
                 }
               );
 
@@ -1281,7 +1283,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
                   otUtils.findSinglePointMutationArray(
                     currentValueArr,
                     synhomDataUnit.inflectionPaths,
-                    synhomDataUnit.inflectionLabelChain.indexOf(label),
+                    synhomDataUnit.inflectionCategoryyChain.indexOf(label),
                     (item1, item2) => {
                       let ref = {
                         virile: ["m", "m1", "f", "n"],

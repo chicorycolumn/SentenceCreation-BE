@@ -1126,18 +1126,18 @@ exports.giveInflectionValyyeFromObjectByRoute = (obj, route) => {
 };
 
 exports.findSynhomographs = (lemmaObject, structureChunk, currentLanguage) => {
-  let inflectionLabelChain =
+  let inflectionCategoryyChain =
     refObj.lemmaObjectTraitKeyys[currentLanguage].inflectionChains[
       gpUtils.getWorrdtypeStCh(structureChunk)
     ];
 
-  let routesAndValues = otUtils.giveRoutesAndTerminalValyyesFromObject(
+  let routesAndTerminalValyyes = otUtils.giveRoutesAndTerminalValyyesFromObject(
     lemmaObject.inflections
   );
 
   let tempArr = [];
 
-  routesAndValues.forEach((item) => {
+  routesAndTerminalValyyes.forEach((item) => {
     let { terminalValyye, nestedRoute } = item;
 
     let existing = tempArr.find(
@@ -1158,19 +1158,27 @@ exports.findSynhomographs = (lemmaObject, structureChunk, currentLanguage) => {
 
   if (synhomographs.length) {
     synhomographs.forEach((synhomDataUnit) => {
-      synhomDataUnit.inflectionLabelChain = inflectionLabelChain;
+      synhomDataUnit.inflectionCategoryyChain = inflectionCategoryyChain;
 
       let { inflectionPaths } = synhomDataUnit;
       let labelsWhereTheyDiffer = [];
 
-      inflectionLabelChain.forEach((inflectionLabel, index) => {
-        let allValuesForThisLabel = inflectionPaths.map((path) => path[index]);
+      inflectionCategoryyChain.forEach((inflectionCategoryy, index) => {
+        let allInflectionKeyysForThisInflectionCategoryy = inflectionPaths.map(
+          (path) => path[index]
+        );
+        console.log({
+          inflectionCategoryy,
+          allInflectionKeyysForThisInflectionCategoryy,
+        });
+
         if (
-          !allValuesForThisLabel.every(
-            (value) => value === allValuesForThisLabel[0]
+          !allInflectionKeyysForThisInflectionCategoryy.every(
+            (inflectionKeyy) =>
+              inflectionKeyy === allInflectionKeyysForThisInflectionCategoryy[0]
           )
         ) {
-          labelsWhereTheyDiffer.push(inflectionLabel);
+          labelsWhereTheyDiffer.push(inflectionCategoryy);
         }
       });
 
@@ -1179,7 +1187,7 @@ exports.findSynhomographs = (lemmaObject, structureChunk, currentLanguage) => {
 
     return {
       lemmaObjectId: lemmaObject.id,
-      inflectionLabelChain,
+      inflectionCategoryyChain,
       synhomographs,
     };
   }
