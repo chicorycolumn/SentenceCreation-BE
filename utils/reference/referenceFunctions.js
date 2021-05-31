@@ -156,23 +156,19 @@ exports.skipThisStepInPreprocessStructureChunks = (
 exports.validTraitKeyysPerStructureChunkWordtype = (
   currentLanguage,
   structureChunk,
-  categoriesOfKeyOnLObj
+  kindsOfKeyOnLObj
 ) => {
-  if (!categoriesOfKeyOnLObj || !categoriesOfKeyOnLObj.length) {
-    categoriesOfKeyOnLObj = [
-      "selectors",
-      "hybridSelectors",
-      "inflectionChains",
-    ];
+  if (!kindsOfKeyOnLObj || !kindsOfKeyOnLObj.length) {
+    kindsOfKeyOnLObj = ["selectors", "hybridSelectors", "inflectionChains"];
   }
 
   let traitsRef = refObj.lemmaObjectTraitKeyys[currentLanguage];
 
   let validTraitKeyys = [];
 
-  categoriesOfKeyOnLObj.forEach((categoryOfKeyOnLObj) => {
+  kindsOfKeyOnLObj.forEach((kindOfKeyOnLObj) => {
     let additionalValidTraitKeyys =
-      traitsRef[categoryOfKeyOnLObj][gpUtils.getWorrdtypeStCh(structureChunk)];
+      traitsRef[kindOfKeyOnLObj][gpUtils.getWorrdtypeStCh(structureChunk)];
 
     if (additionalValidTraitKeyys) {
       if (!Array.isArray(additionalValidTraitKeyys)) {

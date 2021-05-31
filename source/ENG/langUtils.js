@@ -251,7 +251,7 @@ exports.preprocessLemmaObjectsMinor = (matches) => {
           consol.throw(
             "#ERR vuww preprocessLemmaObjectsMinor. The lObj '" +
               lObj.id +
-              "' is a noun-person so should have a gender key."
+              "' is a noun-person so should have a gender traitKeyy."
           );
         }
       } else {
@@ -300,7 +300,7 @@ exports.addLanguageParticularClarifiers = (
     //
     if (structureChunk.tenseDescription) {
       if (structureChunk.tenseDescription.length > 1) {
-        throw "ENG:addLanguageParticularClarifiers expected this verb structureChunk's tenseDescription key to have only one traitValyye each, not more.";
+        throw "ENG:addLanguageParticularClarifiers expected this verb structureChunk's tenseDescription traitKeyy to hold only one traitValyye each, not more.";
       }
 
       if (lemmaObject.inflections.infinitive === lemmaObject.inflections.v2) {
@@ -446,10 +446,10 @@ exports.generateAdhocForms = (
     function fetchTenseDescription(
       dataToUpdateWith,
       structureChunk,
-      tenseDescriptionKeyForRefObj = dataToUpdateWith.tenseDescription
+      tenseDescriptionTraitKeyyForRefObj = dataToUpdateWith.tenseDescription
     ) {
       let { person, number, tenseDescription } = dataToUpdateWith; //These are used in engTenseDescriptionRef
-      let tenseDescriptionKeyForStructureChunk =
+      let tenseDescriptionTraitKeyyForStructureChunk =
         dataToUpdateWith.tenseDescription;
 
       //This does have to be defined in here.
@@ -515,8 +515,8 @@ exports.generateAdhocForms = (
 
       addToResArr(
         "tenseDescription",
-        tenseDescriptionKeyForStructureChunk,
-        engTenseDescriptionRef[tenseDescriptionKeyForRefObj],
+        tenseDescriptionTraitKeyyForStructureChunk,
+        engTenseDescriptionRef[tenseDescriptionTraitKeyyForRefObj],
         structureChunk,
         dataToUpdateWith
       );
@@ -624,15 +624,15 @@ exports.generateAdhocForms = (
 
       let allTraitKeyys = [];
 
-      let categoriesOfKeyOnLObj = [
+      let kindsOfTraitKeyyOnLObj = [
         "selectors",
         "hybridSelectors",
         "inflectionChains",
       ];
 
-      categoriesOfKeyOnLObj.forEach((categoryOfKeyOnLObj) => {
+      kindsOfTraitKeyyOnLObj.forEach((kindOfTraitKeyyOnLObj) => {
         let traitKeyys =
-          refObj.lemmaObjectTraitKeyys[currentLanguage][categoryOfKeyOnLObj][
+          refObj.lemmaObjectTraitKeyys[currentLanguage][kindOfTraitKeyyOnLObj][
             gpUtils.getWorrdtypeStCh(structureChunkCopy)
           ];
 
