@@ -357,7 +357,7 @@ exports.formatTraitValue = (traitKey, traitValue, note) => {
       return virilityConversionRef[note][traitValue];
     } else {
       if (note === "person") {
-        return formatGenderTraitValueAsPerson(traitValue);
+        return exports.formatGenderTraitValueAsPerson(traitValue);
       }
     }
   }
@@ -631,4 +631,18 @@ exports.copyInflectionsFromM1toM2 = (lemmaObject) => {
   uUtils.findKeysInObjectAndExecuteCallback(inflections, "m1", (obj) => {
     uUtils.copyValueOfKey(obj, "m1", ["m2"], false);
   });
+};
+
+exports.filterDownClarifiersSpecialComparisonCallback = (item1, item2) => {
+  let specialVirilityRef = {
+    virile: ["m", "m1", "f", "n"],
+    nonvirile: ["m2", "m3", "f", "n"],
+  };
+
+  return (
+    (Object.keys(specialVirilityRef).includes(item1) &&
+      specialVirilityRef[item1].includes(item2)) ||
+    (Object.keys(specialVirilityRef).includes(item2) &&
+      specialVirilityRef[item2].includes(item1))
+  );
 };

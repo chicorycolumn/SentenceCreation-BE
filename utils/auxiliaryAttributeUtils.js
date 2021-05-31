@@ -1054,7 +1054,8 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
     throw "OT:addClarifiers says Do you mean to call me? You don't give me an answerLanguage argument. I am only supposed to add clarifiers to the question sentence, and in order to do that I must know what the answerLanguage is going to be.";
   }
 
-  const langUtils = require("../source/" + questionLanguage + "/langUtils.js");
+  const questionLangUtils = require(`../source/${questionLanguage}/langUtils.js`);
+  const answerLangUtils = require(`../source/${answerLanguage}/langUtils.js`);
 
   arrayOfOutputUnits.forEach((outputUnit) => {
     let { selectedLemmaObject, drillPath, structureChunk, selectedWord } =
@@ -1117,7 +1118,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
     //
     //ie ENG has some verbs with v1-v2 synhomography.
 
-    langUtils.addLanguageParticularClarifiers(
+    questionLangUtils.addLanguageParticularClarifiers(
       structureChunk,
       questionLanguage,
       selectedLemmaObject
@@ -1280,6 +1281,9 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
 
               filteredInflectionCategorys = filteredInflectionCategorys.filter(
                 (inflectionCategory) => {
+                  let specialComparisonCallback =
+                    answerLangUtils.filterDownClarifiersSpecialComparisonCallback;
+
                   if (
                     otUtils.findSinglePointMutationArray(
                       currentTraitValues,
@@ -1287,42 +1291,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
                       synhomDataUnit.inflectionCategoryChain.indexOf(
                         inflectionCategory
                       ),
-                      (item1, item2) => {
-                        let tempPluralityRef = {
-                          virile: ["m", "m1", "f", "n"],
-                          nonvirile: ["m2", "m3", "f", "n"],
-                        };
-
-                        let resultBool = false;
-
-                        if (resultBool) {
-                          return;
-                        }
-
-                        Object.keys(tempPluralityRef).forEach(
-                          (pluralTraitKey) => {
-                            if (
-                              (item1 === pluralTraitKey &&
-                                tempPluralityRef[pluralTraitKey].includes(
-                                  item2
-                                )) ||
-                              (item2 === pluralTraitKey &&
-                                tempPluralityRef[pluralTraitKey].includes(
-                                  item1
-                                ))
-                            ) {
-                              consol.log(
-                                "[1;33m " +
-                                  `hsan findSinglePointMutationArray WAHEY!` +
-                                  "[0m"
-                              );
-                              resultBool = true;
-                            }
-                          }
-                        );
-
-                        return resultBool;
-                      }
+                      specialComparisonCallback
                     )
                   ) {
                     consol.log(
@@ -1337,7 +1306,6 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
                         `dhjc findSinglePointMutationArray "${structureChunk.chunkId}" ABZ Early stage BLOCKING of "${inflectionCategory}" in findSinglePointMutationArray` +
                         "[0m"
                     );
-                    return false;
                   }
                 }
               );
