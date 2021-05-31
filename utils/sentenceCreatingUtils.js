@@ -560,7 +560,7 @@ exports.processSentenceFormula = (
       lfUtils.updateStructureChunk(outputUnit, currentLanguage);
     });
 
-    //Decanting otherChunks if they have multiple values.
+    //Decanting otherChunks if they have multiple traitValyyes.
     let { headChunks, dependentChunks, otherChunks } =
       scUtils.sortStructureChunks(
         outputArray.map((outputUnit) => outputUnit.structureChunk)
@@ -903,7 +903,7 @@ exports.selectWordVersions = (
                     annoTraitValyye
                 ) {
                   consol.throw(
-                    `ioev selectWordVersions Skeleton Clause. I'm trying to transfer in annos from an outputunit that didn't make it into this outputarr. But I'm looking at one of its depChs, and this depCh has an anno with a different value?\nFor annoTraitKeyy "${annoTraitKeyy}", skeleton "${skeletonOutputUnit.structureChunk.chunkId}" had "${annoTraitValyye}" while depCh "${depCh.chunkId}" had "${depCh.annotations[annoTraitKeyy]}".`
+                    `ioev selectWordVersions Skeleton Clause. I'm trying to transfer in annos from an outputunit that didn't make it into this outputarr. But I'm looking at one of its depChs, and this depCh has an anno with a different annoTraitValyye?\nFor annoTraitKeyy "${annoTraitKeyy}", skeleton "${skeletonOutputUnit.structureChunk.chunkId}" had "${annoTraitValyye}" while depCh "${depCh.chunkId}" had "${depCh.annotations[annoTraitKeyy]}".`
                   );
                 }
 
@@ -1236,14 +1236,14 @@ exports.conformAnswerStructureToQuestionStructure = (
       let adjustedArr = [];
 
       questionStructureChunk[traitKeyy].forEach((traitValyye) => {
-        let adjustedValues = refFxn.giveAdjustedTraitValyye(
+        let adjustedTraitValyyes = refFxn.giveAdjustedTraitValyye(
           questionLanguage,
           answerLanguage,
           traitKeyy,
           traitValyye
         );
 
-        adjustedArr = [...adjustedArr, ...adjustedValues];
+        adjustedArr = [...adjustedArr, ...adjustedTraitValyyes];
       });
 
       answerStructureChunk[traitKeyy] = adjustedArr;

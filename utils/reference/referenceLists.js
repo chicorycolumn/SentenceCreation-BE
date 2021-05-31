@@ -6,14 +6,14 @@ exports.incompatibleTraitsRef = {
     gender: {
       //Check the "number" traitKeyy...
       number: {
-        //...and if the number traitValyyes do not include "singular", remove these values from the gender array.
+        //...and if the number traitValyyes do not include "singular", remove these gender traitValyyes.
         singular: ["m", "m1", "m2", "m3", "f", "n"],
-        //...and if the number does not include "plural", remove these values from the gender array.
+        //...and if the number does not include "plural", remove these gender traitValyyes.
         plural: ["virile", "nonvirile"],
       },
       //Check the "person" traitKeyy...
       person: {
-        //...and if the person traitValyyes do not include "3per", remove these values from the gender array.
+        //...and if the person traitValyyes do not include "3per", remove these gender traitValyyes.
         "3per": ["m2", "m3", "n"],
       },
     },
@@ -23,9 +23,9 @@ exports.incompatibleTraitsRef = {
     gender: {
       //Check the number...
       number: {
-        //...and if the number does not include singular, remove these values from the gender array.
+        //...and if the number does not include singular, remove these gender traitValyyes.
         singular: ["m", "f", "n"],
-        ///...and if the number does not include plural, remove these values from the gender array.
+        ///...and if the number does not include plural, remove these gender traitValyyes.
         plural: ["virile", "nonvirile"],
       },
     },

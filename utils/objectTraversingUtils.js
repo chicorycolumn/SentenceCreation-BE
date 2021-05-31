@@ -290,11 +290,12 @@ exports.findMatchingLemmaObjectThenWord = (
     Object.keys(refObj.uninflectedForms[currentLanguage]).forEach(
       (wordtype) => {
         if (gpUtils.getWorrdtypeStCh(structureChunk) === wordtype) {
-          let uninflectedValues =
+          let uninflectedInflectionKeyys =
             refObj.uninflectedForms[currentLanguage][wordtype];
 
           let requestedUninflectedForms = structureChunk.form.filter(
-            (requestedForm) => uninflectedValues.includes(requestedForm)
+            (requestedForm) =>
+              uninflectedInflectionKeyys.includes(requestedForm)
           );
 
           if (requestedUninflectedForms.length) {
@@ -951,9 +952,9 @@ exports.extractNestedRoutes = (source, includeTerminusObjectKeys) => {
     let routesByLevel = [[]];
 
     Object.keys(source).forEach((tObjKey) => {
-      let tObjValue = source[tObjKey];
+      let tObjVaalue = source[tObjKey];
 
-      if (typeof tObjValue !== "boolean") {
+      if (typeof tObjVaalue !== "boolean") {
         routesByNesting.push([tObjKey]);
         routesByLevel[0].push(tObjKey);
       }
@@ -1009,7 +1010,7 @@ exports.extractNestedRoutes = (source, includeTerminusObjectKeys) => {
       arr.pop();
     } else {
       consol.throw(
-        `kwdo ot:recursivelyMapRoutes found value with wrong data type: "${
+        `kwdo ot:recursivelyMapRoutes found vaalue with wrong data type: "${
           Array.isArray(source)
             ? "Array"
             : (typeof source)[0].toUpperCase() + (typeof source).slice(1)
@@ -1035,16 +1036,16 @@ exports.findObjectInNestedObject = (
     }
 
     Object.keys(source).forEach((key) => {
-      let value = source[key];
+      let vaalue = source[key];
       if (
-        (!alsoSearchArrays && uUtils.isKeyVaalueTypeObject(value)) ||
-        (alsoSearchArrays && uUtils.isKeyVaalueTypeObjectOrArray(value))
+        (!alsoSearchArrays && uUtils.isKeyVaalueTypeObject(vaalue)) ||
+        (alsoSearchArrays && uUtils.isKeyVaalueTypeObjectOrArray(vaalue))
       ) {
-        if (uUtils.doKeyVaaluesMatch(value, identifyingData)) {
-          res.chunkValyye = value;
+        if (uUtils.doKeyVaaluesMatch(vaalue, identifyingData)) {
+          res.chunkValyye = vaalue;
           res.key = key;
         } else {
-          recursivelySearch(value, identifyingData);
+          recursivelySearch(vaalue, identifyingData);
         }
       }
     });
@@ -1090,37 +1091,28 @@ exports.giveRoutesAndTerminalValyyesFromObject = (obj) => {
   let resArr = [];
 
   nestedRoutes.forEach((nestedRoute) => {
-    let value = otUtils.giveValueFromObjectByRoute(obj, nestedRoute);
+    let inflectionValyye = otUtils.giveInflectionValyyeFromObjectByRoute(
+      obj,
+      nestedRoute
+    );
 
-    //Splits terminal values that are arrays, into different unit, with identical routes.
+    //Splits terminal inflectionValyye that are arrays, into different unit, with identical routes.
 
     //What is happening here exactly?
 
-    if (!"natasha giveRoutes???") {
-      if (typeof value === "string") {
-        consol.log("[1;33m " + `nayq giveRoutes??? IS STRING` + "[0m");
-      } else if (Array.isArray(value)) {
-        consol.log("[1;33m " + `nayq giveRoutes??? IS ARRAY` + "[0m");
-        consol.log("nayq", nestedRoute, value);
-        consol.throw("nayq giveRoutes should not have been array.");
-      } else if (gpUtils.isTerminusObject(value)) {
-        consol.log("[1;33m " + `nayq giveRoutes??? IS TOBJ` + "[0m");
-      }
-    }
-
-    if (Array.isArray(value)) {
-      value.forEach((subvalue) => {
-        resArr.push({ terminalValyye: subvalue, nestedRoute });
+    if (Array.isArray(inflectionValyye)) {
+      inflectionValyye.forEach((subInflectionValyye) => {
+        resArr.push({ terminalValyye: subInflectionValyye, nestedRoute });
       });
     } else {
-      resArr.push({ terminalValyye: value, nestedRoute });
+      resArr.push({ terminalValyye: inflectionValyye, nestedRoute });
     }
   });
 
   return resArr;
 };
 
-exports.giveValueFromObjectByRoute = (obj, route) => {
+exports.giveInflectionValyyeFromObjectByRoute = (obj, route) => {
   return interiorFunction(obj, route);
 
   function interiorFunction(obj, route) {

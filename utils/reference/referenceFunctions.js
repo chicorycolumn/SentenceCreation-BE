@@ -27,20 +27,21 @@ exports.removeincompatibleTraits = (currentLanguage, structureChunk) => {
       "vvvx removeincompatibleTraits. Removing 'n' if present as is noun-person."
     );
     structureChunk.gender = structureChunk.gender.filter(
-      (value) => value !== "n"
+      (traitValyye) => traitValyye !== "n"
     );
   }
 
   //ACX3B: If 1per then remove neuter from gender.
   if (
     structureChunk.person &&
-    !structureChunk.person.filter((value) => value !== "1per").length
+    !structureChunk.person.filter((traitValyye) => traitValyye !== "1per")
+      .length
   ) {
     consol.log(
-      "vvvy removeincompatibleTraits. Removing 'n' if present as only person value is '1per'."
+      "vvvy removeincompatibleTraits. Removing 'n' if present as only person traitValyye is '1per'."
     );
     structureChunk.gender = structureChunk.gender.filter(
-      (value) => value !== "n"
+      (traitValyye) => traitValyye !== "n"
     );
   }
 
@@ -67,7 +68,7 @@ exports.removeincompatibleTraits = (currentLanguage, structureChunk) => {
         ) {
           if (structureChunk[traitKeyyToCheckBy].length > 1) {
             consol.throw(
-              `ckos Unsure how to handle multiple values for ${traitKeyyToCheckBy}`
+              `ckos Unsure how to handle multiple traitValyyes for ${traitKeyyToCheckBy}`
             );
           }
 
@@ -85,9 +86,9 @@ exports.removeincompatibleTraits = (currentLanguage, structureChunk) => {
               //eg compatibleTraitValyyes = ["virile", "nonvirile"]
 
               //eg structureChunk["number"] is ["plural"],
-              //so remove any values from gender that don't fit with that.
+              //so remove any gender traitValyye that don't fit with that.
               structureChunk[traitKeyy] = structureChunk[traitKeyy].filter(
-                (value) => !compatibleTraitValyyes.includes(value)
+                (traitValyye) => !compatibleTraitValyyes.includes(traitValyye)
               );
             }
           });
@@ -119,10 +120,10 @@ exports.getTranslatedTenseDescription = (
       refObj.tenseDescriptionTranslation[targetLanguage][sourceLanguage];
 
     Object.keys(translations).forEach((key) => {
-      let value = translations[key].regular;
+      let arrayOfTranslatedTenseDescriptions = translations[key].regular;
 
       if (
-        value.includes(sourceTenseDescription) &&
+        arrayOfTranslatedTenseDescriptions.includes(sourceTenseDescription) &&
         !translatedTenseDescriptionsArr.includes(key)
       ) {
         translatedTenseDescriptionsArr.push(key);

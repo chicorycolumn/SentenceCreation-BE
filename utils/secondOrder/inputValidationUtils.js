@@ -84,7 +84,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
         );
       }
 
-      //3. Check if values are acceptable
+      //3. Check if traitValyyes are acceptable
       let possibleTraitValyyes = stChTraits[traitKeyy].possibleTraitValyyes;
 
       if (possibleTraitValyyes) {
@@ -117,7 +117,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
         }
       }
 
-      //4. Check if the value of agreeKeys is an existing chunkId.
+      //4. Check if the traitValyye of agreeKeys is an existing chunkId.
       if (stChTraits[traitKeyy].mustBeExistingChunkId) {
         if (!allChunkIds.includes(traitValyye)) {
           consol.log(
