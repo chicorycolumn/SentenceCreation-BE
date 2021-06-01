@@ -350,15 +350,13 @@ exports.formatGenderTraitValueAsPerson = (genderTraitValue) => {
 };
 
 exports.formatTraitValue = (traitKey, traitValue, note) => {
-  const virilityConversionRef = refObj.virilityConversionRef["POL"];
-
   if (traitKey === "gender") {
     if (note === "plural") {
-      return virilityConversionRef[note][traitValue];
-    } else {
-      if (note === "person") {
-        return exports.formatGenderTraitValueAsPerson(traitValue);
-      }
+      return refObj.virilityConversionRef["POL"][note][traitValue];
+    }
+
+    if (note === "person") {
+      return exports.formatGenderTraitValueAsPerson(traitValue);
     }
   }
 

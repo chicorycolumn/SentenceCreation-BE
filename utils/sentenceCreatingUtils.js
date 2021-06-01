@@ -1362,7 +1362,7 @@ exports.inheritFromHeadToDependentChunk = (
   });
 
   consol.log(
-    "ttez At the end of inheritFromHeadToDependentChunk, we must again adjustVirility, which we also did in allLangUtils.preprocessStructureChunks earlier."
+    "ttez At the end of inheritFromHeadToDependentChunk, we must again a'djustVirility, which we also did in allLangUtils.preprocessStructureChunks earlier."
   );
 
   allLangUtils.adjustVirilityOfStructureChunk(

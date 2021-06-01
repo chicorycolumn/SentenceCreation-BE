@@ -216,7 +216,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       counterfaxedStCh[annoTraitKey] = counterfactualTraitValuesForThisTraitKey;
 
       counterfactualTraitValuesForThisTraitKey =
-        refFxn.removeincompatibleTraits(questionLanguage, counterfaxedStCh)[
+        refFxn.removeIncompatibleTraits(questionLanguage, counterfaxedStCh)[
           annoTraitKey
         ];
 
