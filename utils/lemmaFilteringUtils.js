@@ -816,6 +816,11 @@ exports.filterByTraitKey = (
               lObj[traitKey]
             ];
 
+          consol.logSpecial(
+            `vvv3 ${currentLanguage} filterByTraitKey extraVirilConvertedVals for ${traitKey} are`,
+            extraVirilityConvertedValues
+          );
+
           consol.log({
             currentLanguage,
             numberKey,

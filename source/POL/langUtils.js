@@ -137,15 +137,10 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
     ) {
       if (!structureChunk.gender || !structureChunk.gender.length) {
         //Fill out if blank.
-        structureChunk.gender = [
-          "m1",
-          "m2",
-          "m3",
-          "f",
-          "n",
-          "virile",
-          "nonvirile",
-        ];
+        structureChunk.gender =
+          refObj.structureChunkTraits["POL"][
+            "gender"
+          ].possibleTraitValues.slice(0);
       } else {
         //Masculinist agenda
         let adjustedGenderArray = [];
@@ -159,13 +154,6 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
 
         structureChunk.gender = Array.from(new Set(adjustedGenderArray));
       }
-    }
-
-    if (shouldConsoleLog) {
-      consol.log(
-        "uccs POL preprocessStructureChunks Finally the structureChunk is",
-        structureChunk
-      );
     }
   });
 
@@ -208,6 +196,10 @@ exports.preprocessLemmaObjectsMajor = (
     if (
       ["verb", "adjective"].includes(gpUtils.getWordtypeStCh(structureChunk))
     ) {
+      consol.logSpecial(
+        `vvv4 ${currentLanguage} pplobjmajor > all adjustViril`,
+        structureChunk.chunkId
+      );
       allLangUtils.adjustVirilityOfStructureChunk(
         currentLanguage,
         structureChunk,

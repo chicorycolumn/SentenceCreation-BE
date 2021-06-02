@@ -215,6 +215,10 @@ exports.fetchPalette = (req) => {
 
     consol.consoleLogAestheticBorder(4);
   }
+
+  consol.logSpecial("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
+  consol.logSpecial("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~");
+
   if (devSaysThrowAtMidpoint) {
     consol.throw("Midpoint cease.");
   }
@@ -228,26 +232,6 @@ exports.fetchPalette = (req) => {
     if (!translations || !translations.length) {
       throw "palette.model > I was asked to give translations, but the question sentence formula did not have any translations listed.";
     }
-
-    questionSentenceData.questionOutputArr.forEach((outputUnit) => {
-      if (
-        ["agreeWith"].some(
-          //possible screwpoint: Should use other agreeKeys too?
-          (agreeKey) => outputUnit.structureChunk[agreeKey]
-        )
-      ) {
-        let depCh = outputUnit.structureChunk;
-
-        scUtils.inheritFromHeadToDependentChunk(
-          questionLanguage,
-          null,
-          depCh,
-          questionSentenceData.questionOutputArr.map(
-            (unit) => unit.structureChunk
-          )
-        );
-      }
-    });
 
     consol.log(
       questionSentenceData.questionOutputArr.map((unit) => unit.structureChunk)

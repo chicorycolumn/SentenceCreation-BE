@@ -23,7 +23,7 @@ exports.removeIncompatibleTraits = (currentLanguage, structureChunk) => {
   //ACX3A: If npe then remove neuter from gender.
   if (gpUtils.getWordtypeStCh(structureChunk, true) === "noun-person") {
     consol.log(
-      "vvvx removeIncompatibleTraits. Removing 'n' if present as is noun-person."
+      "vevx removeIncompatibleTraits. Removing 'n' if present as is noun-person."
     );
     structureChunk.gender = structureChunk.gender.filter(
       (traitValue) => traitValue !== "n"
@@ -36,7 +36,7 @@ exports.removeIncompatibleTraits = (currentLanguage, structureChunk) => {
     !structureChunk.person.filter((traitValue) => traitValue !== "1per").length
   ) {
     consol.log(
-      "vvvy removeIncompatibleTraits. Removing 'n' if present as only person traitValue is '1per'."
+      "vevy removeIncompatibleTraits. Removing 'n' if present as only person traitValue is '1per'."
     );
     structureChunk.gender = structureChunk.gender.filter(
       (traitValue) => traitValue !== "n"

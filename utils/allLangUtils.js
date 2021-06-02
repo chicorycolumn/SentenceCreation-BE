@@ -30,7 +30,10 @@ exports.translateAnnoTraitValue = (
               annoTraitValue
           );
         }
-
+        consol.logSpecial(
+          `vvv5 translateAnnoTV ${annoTraitValue} to ${virilityConversionRef["plural"][annoTraitValue]}`,
+          languagesObj
+        );
         annoTraitValue = virilityConversionRef["plural"][annoTraitValue];
       }
     }
@@ -53,6 +56,9 @@ exports.adjustVirilityOfStructureChunk = (
   structureChunk,
   consoleLogLaabel
 ) => {
+  //Adds the virility gender values if number includes "plural".
+  //So ["f"] would become ["f", "nonvirile"]
+
   consol.log("gxow ALL a'djustVirilityOfStructureChunk", consoleLogLaabel);
 
   if (gpUtils.getWordtypeStCh(structureChunk) === "noun") {
@@ -271,7 +277,10 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
         }
       }
     }
-
+    consol.logSpecial(
+      `vvv1 ${currentLanguage} all ppStCh adjustViril`,
+      structureChunk.chunkId
+    );
     allLangUtils.adjustVirilityOfStructureChunk(
       currentLanguage,
       structureChunk,

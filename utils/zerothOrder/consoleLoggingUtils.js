@@ -1,7 +1,13 @@
 const consol = require("./consoleLoggingUtils.js");
 
 exports.log = (...args) => {
-  if (!process.argv.includes("r")) {
+  if (!process.argv.includes("r") && !process.argv.includes("rr")) {
+    console.log(...args);
+  }
+};
+
+exports.logSpecial = (...args) => {
+  if (process.argv.includes("rr")) {
     console.log(...args);
   }
 };

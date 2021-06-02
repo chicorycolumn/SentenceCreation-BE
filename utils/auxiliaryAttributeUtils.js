@@ -295,6 +295,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             counterfactualTraitValueForThisTraitKey,
           ]);
 
+          consol.logSpecial("-----------------counterfax run beginning");
           palette.fetchPalette({ body: newReqBody });
         }
       );
@@ -819,6 +820,12 @@ exports.specialAdjustmentToAnnotations = (
             "plural"
           ][headLObj.gender],
         ];
+
+        consol.logSpecial(
+          `vvv6 specialAdjustmentToAnnos paddedArr for ${headLObj.gender} is`,
+          virilityPaddedLObjGenderArr,
+          languagesObj
+        );
 
         if (
           !virilityPaddedLObjGenderArr.includes(
