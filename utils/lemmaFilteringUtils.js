@@ -5,6 +5,7 @@ const otUtils = require("./objectTraversingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 const refFxn = require("./reference/referenceFunctions.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
+const allLangUtils = require("./allLangUtils.js");
 
 exports.filterWithin_PHD = (
   lemmaObject,
@@ -335,6 +336,8 @@ exports.filterWithinSelectedLemmaObject = (
   outputArray,
   isPHD
 ) => {
+  consol.logSpecial1("filterWithinSelectedLemmaObject", lemmaObject.lemma);
+
   if ("console") {
     if (outputArray) {
       consol.log(
@@ -461,7 +464,7 @@ exports.updateStructureChunkByAdhocOnly = (
 };
 
 exports.updateStructureChunk = (outputUnit, currentLanguage) => {
-  let shouldConsoleLog = false;
+  let shouldConsoleLog = true;
 
   if (shouldConsoleLog) {
     consol.log(
@@ -487,16 +490,20 @@ exports.updateStructureChunk = (outputUnit, currentLanguage) => {
 
   lfUtils.updateStChByAndTagsAndSelectors(outputUnit, currentLanguage);
 
+  //Vito2: Changes stCh.
+  //If during this updateStructureChunk fxn, stCh gets gender "f" and number "plural", its gender will adjust to "nonvirile".
+  consol.logSpecial1(`vvv2b`);
+  allLangUtils.adjustVirilityOfStructureChunk(
+    currentLanguage,
+    outputUnit.structureChunk,
+    false,
+    "updateStructureChunk"
+  );
+
   if (shouldConsoleLog) {
     consol.log(
       "wbxe updateStructureChunk AFTER UB-Inf and UB-Tag-Sel, structureChunk is:",
       outputUnit.structureChunk
-    );
-
-    consol.log(
-      "[1;33m " +
-        `wbxe /updateStructureChunk "${outputUnit.structureChunk.chunkId}"` +
-        "[0m"
     );
     consol.log(" ");
   }
@@ -717,7 +724,7 @@ exports.filterByAndTagsAndOrTags = (wordset, structureChunk) => {
   return lemmaObjects;
 };
 
-exports.padOutRequirementArrWithmetaTraitValuesIfNecessary = (
+exports.padOutRequirementArrWithMetaTraitValuesIfNecessary = (
   requirementArrs,
   traitKey,
   currentLanguage
@@ -727,11 +734,11 @@ exports.padOutRequirementArrWithmetaTraitValuesIfNecessary = (
 
   consol.log(
     "[1;35m " +
-      `opoq lf:filterByTraitKey-------------------------- for traitKey "${traitKey}"` +
+      `opoq lf:filterBySelector_inner-------------------------- for traitKey "${traitKey}"` +
       "[0m"
   );
   consol.log(
-    "opoq lf:filterByTraitKey requirementArr starts as",
+    "opoq lf:filterBySelector_inner requirementArr starts as",
     requirementArr
   );
 
@@ -743,11 +750,11 @@ exports.padOutRequirementArrWithmetaTraitValuesIfNecessary = (
 
         if (!metaTraitValueConverted) {
           consol.throw(
-            "#ERR tufx lf:filterByTraitKey. filterByTraitKey need converted metaTraitValue."
+            "#ERR tufx lf:filterBySelector_inner. filterBySelector_inner need converted metaTraitValue."
           );
         }
         consol.log(
-          `ndew filterByTraitKey. Gonna push metaTraitValueConverted [${metaTraitValueConverted}]`
+          `ndew filterBySelector_inner. Gonna push metaTraitValueConverted [${metaTraitValueConverted}]`
         );
         requirementArr = [...requirementArr, ...metaTraitValueConverted];
       }
@@ -761,60 +768,73 @@ exports.padOutRequirementArrWithmetaTraitValuesIfNecessary = (
           !requirementArr.includes(metaTraitValue)
         ) {
           consol.log(
-            `exnh filterByTraitKey. Gonna push metaTraitValue "${metaTraitValue}"`
+            `exnh filterBySelector_inner. Gonna push metaTraitValue "${metaTraitValue}"`
           );
           requirementArr.push(metaTraitValue);
         }
       });
 
       consol.log(
-        "sfrl lf:filterByTraitKey requirementArr inside ```requirementArr.forEach((traitValue)``` is",
+        "sfrl lf:filterBySelector_inner requirementArr inside ```requirementArr.forEach((traitValue)``` is",
         requirementArr
       );
     });
   } else {
     consol.log(
       "[1;31m " +
-        `jwpv lf:filterByTraitKey saw there was no metaTraitValueRef for currentLanguage "${currentLanguage}" and traitKey "${traitKey}"` +
+        `jwpv lf:filterBySelector_inner saw there was no metaTraitValueRef for currentLanguage "${currentLanguage}" and traitKey "${traitKey}"` +
         "[0m"
     );
   }
 
-  consol.log("qyvu lf:filterByTraitKey requirementArr ends as", requirementArr);
+  consol.log(
+    "qyvu lf:filterBySelector_inner requirementArr ends as",
+    requirementArr
+  );
 
   return requirementArr;
 };
 
-exports.filterByTraitKey = (
+exports.filterBySelector_inner = (
   lemmaObjectArr,
   structureChunk,
   traitKey,
   currentLanguage
 ) => {
-  consol.log("wdwe filterByTraitKey START. structureChunk", structureChunk);
+  consol.log(
+    "wdwe filterBySelector_inner START. structureChunk",
+    structureChunk
+  );
 
   let requirementArray =
-    lfUtils.padOutRequirementArrWithmetaTraitValuesIfNecessary(
+    lfUtils.padOutRequirementArrWithMetaTraitValuesIfNecessary(
       structureChunk,
       traitKey,
       currentLanguage
     );
 
-  consol.log("wdet filterByTraitKey. requirementArray", requirementArray);
+  consol.log("wdet filterBySelector_inner. requirementArray", requirementArray);
 
   //And finally, do said filter.
   if (requirementArray.length) {
     return lemmaObjectArr.filter((lObj) => {
-      let lObjSelectorValues = [lObj[traitKey]];
+      let lObjSelectorValues = [lObj[traitKey]].slice(0);
 
       consol.log("wdeu lObjSelectorValues", lObjSelectorValues);
 
       if (traitKey === "gender") {
         structureChunk.number.forEach((numberKey) => {
           let extraVirilityConvertedValues =
-            refObj.pluralVirilityAndSingularConversionRef[currentLanguage][
-              numberKey
-            ][lObj[traitKey]];
+            refObj.virilityConversionRef[currentLanguage][numberKey][
+              lObj[traitKey]
+            ];
+
+          //Vito3: Does not change stCh.
+          //Filtering lObjs by selector (eg "gender", "aspect").
+          //Say lObj has gender "f", but reqArr has "nonvirile" - lObj wouldn't pass the filter, but it should.
+          //So add virility values to temporary lObjSelectorValues variable that stands for selectors on the lObj.
+          //Now lObj stand-in has genders "f" and "nonvirile" also, so passes filter.
+          consol.logSpecial1("vvv3");
 
           consol.log({
             currentLanguage,
@@ -865,20 +885,17 @@ exports.filterBySelectors = (
   if (selectors) {
     selectors.forEach((selector) => {
       consol.log(
-        `bnxo filterBySelectors. Will call filterByTraitKey for selector "${selector}"`
-      );
-      consol.log(
-        `bnxo matches before filterByTraitKey "${selector}" is:`,
+        `bnxo matches before filterBySelector_inner "${selector}" is:`,
         matches
       );
-      matches = lfUtils.filterByTraitKey(
+      matches = lfUtils.filterBySelector_inner(
         matches,
         structureChunk,
         selector,
         currentLanguage
       );
       consol.log(
-        `bnxu matches AFTER filterByTraitKey "${selector}" is:`,
+        `bnxu matches AFTER filterBySelector_inner "${selector}" is:`,
         matches
       );
     });

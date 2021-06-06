@@ -15,26 +15,7 @@ exports.translateAnnoTraitValue = (
   let annoTraitValue = structureChunk.annotations[annoTraitKey];
 
   if (annoTraitKey === "gender") {
-    if (structureChunk.number) {
-      if (structureChunk.number.length > 1) {
-        consol.throw("cshb #ERR ALL:translateAnnoTraitValue.");
-      }
-
-      const pluralVirilityAndSingularConversionRef =
-        refObj.pluralVirilityAndSingularConversionRef[questionLanguage];
-
-      if (structureChunk.number[0] === "plural") {
-        if (!pluralVirilityAndSingularConversionRef["plural"][annoTraitValue]) {
-          consol.throw(
-            "mkow #ERR ALL:translateAnnoTraitValue. Could not convert virility of annoTraitValue: " +
-              annoTraitValue
-          );
-        }
-
-        annoTraitValue =
-          pluralVirilityAndSingularConversionRef["plural"][annoTraitValue];
-      }
-    }
+    //Removed vito5 in branch step-V-virility-tidying-and-overhaul-aka-vito, as seems obviated by vito2b.
 
     let annotationToPlainspeakRef = refObj.annotationToPlainspeakRef;
 
@@ -52,25 +33,29 @@ exports.translateAnnoTraitValue = (
 exports.adjustVirilityOfStructureChunk = (
   currentLanguage,
   structureChunk,
+  isPreProcessing,
   consoleLogLaabel
 ) => {
-  consol.log("gxow ALL adjustVirilityOfStructureChunk", consoleLogLaabel);
+  //Adds the virility gender values if number includes "plural".
+  //So ["f"] would become ["f", "nonvirile"]
 
-  if (gpUtils.getWordtypeStCh(structureChunk) === "noun") {
+  consol.log("gxow ALL a'djustVirilityOfStructureChunk", consoleLogLaabel);
+
+  if (isPreProcessing && gpUtils.getWordtypeStCh(structureChunk) === "noun") {
     // Because m -> plural -> virile and then trying to select Ojciec, which isn't virile, it's m, so will ERR later.
     return;
   }
 
   consol.log(
     "[1;35m " +
-      "svpi ALL adjustVirilityOfStructureChunk " +
+      "svpi ALL a'djustVirilityOfStructureChunk " +
       structureChunk.chunkId +
       "[0m"
   );
 
   consol.log(
     "[1;35m " +
-      "svpi ALL adjustVirilityOfStructureChunk structureChunk start as being:" +
+      "svpi ALL a'djustVirilityOfStructureChunk structureChunk start as being:" +
       "[0m",
     structureChunk
   );
@@ -79,14 +64,14 @@ exports.adjustVirilityOfStructureChunk = (
 
   if (!number || !number.includes("plural")) {
     consol.log(
-      "clsq ALL adjustVirilityOfStructureChunk Aborting because Number"
+      "clsq ALL a'djustVirilityOfStructureChunk Aborting because Number"
     );
     return;
   }
 
   if (!gender || !gender.length) {
     consol.log(
-      "vlca ALL adjustVirilityOfStructureChunk Aborting because Gender"
+      "vlca ALL a'djustVirilityOfStructureChunk Aborting because Gender"
     );
     return;
   }
@@ -94,15 +79,14 @@ exports.adjustVirilityOfStructureChunk = (
   if (/all.*/.test(gender)) {
     if (gender.length !== 1) {
       consol.throw(
-        `#ERR vcvl ALL:adjustVirilityOfStructureChunk. Gender traitKeys arr contained a metaGender traitKey, that's fine, but it contained other traitKeys too? That's too much. "${gender.toString()}"`
+        `#ERR vcvl ALL:a'djustVirilityOfStructureChunk. Gender traitKeys arr contained a metaGender traitKey, that's fine, but it contained other traitKeys too? That's too much. "${gender.toString()}"`
       );
     }
 
     gender = refObj.metaTraitValues[currentLanguage]["gender"][gender];
   }
 
-  let pluralVirilityAndSingularConversionRef =
-    refObj.pluralVirilityAndSingularConversionRef[currentLanguage];
+  let virilityConversionRef = refObj.virilityConversionRef[currentLanguage];
 
   let newGenderTraitKeys = [];
 
@@ -114,13 +98,13 @@ exports.adjustVirilityOfStructureChunk = (
 
   if (number.includes("plural")) {
     gender.forEach((genderTraitKey) => {
-      consol.log("ksdx ALL adjustVirilityOfStructureChunk", {
+      consol.log("ksdx ALL a'djustVirilityOfStructureChunk", {
         genderTraitKey,
       });
 
       newGenderTraitKeys = [
         ...newGenderTraitKeys,
-        ...pluralVirilityAndSingularConversionRef["plural"][genderTraitKey],
+        ...virilityConversionRef["plural"][genderTraitKey],
       ];
       // if (shouldRetainOriginals) {
       //   newGenderTraitKeys.push(genderTraitKey);
@@ -134,7 +118,7 @@ exports.adjustVirilityOfStructureChunk = (
 
   consol.log(
     "[1;35m " +
-      "hutf ALL adjustVirilityOfStructureChunk structureChunk ends up being:" +
+      "hutf ALL a'djustVirilityOfStructureChunk structureChunk ends up being:" +
       "[0m",
     structureChunk
   );
@@ -234,19 +218,14 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
 
       if (structureChunk.form && structureChunk.form.includes("verbal")) {
         if (
-          !structureChunk.tenseDescription ||
-          !structureChunk.tenseDescription.length
+          (!structureChunk.tenseDescription ||
+            !structureChunk.tenseDescription.length) &&
+          !refFxn.skipThisStepInPreprocessStructureChunks(
+            currentLanguage,
+            "tenseDescription",
+            structureChunk
+          )
         ) {
-          if (
-            refFxn.skipThisStepInPreprocessStructureChunks(
-              currentLanguage,
-              "tenseDescription",
-              structureChunk
-            )
-          ) {
-            return;
-          }
-
           structureChunk.tenseDescription =
             refObj.structureChunkTraits[
               currentLanguage
@@ -274,9 +253,13 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
       }
     }
 
+    //Vito1: Changes stCh.
+    //Right at the start, adjusting all stChs, eg if gender "f" and number "plural", we add "nonvirile".
+    consol.logSpecial1(`vvv1`);
     allLangUtils.adjustVirilityOfStructureChunk(
       currentLanguage,
       structureChunk,
+      true,
       "structureChunk from ALL:preprocessStructureChunks"
     );
 

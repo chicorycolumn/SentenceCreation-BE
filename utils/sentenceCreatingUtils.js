@@ -191,6 +191,10 @@ exports.processSentenceFormula = (
         }
 
         // Now we update the head structure chunks with the details from their respective selectedWords.
+        consol.logSpecial1(
+          "updateStructureChunk 1",
+          headOutputUnit.structureChunk.chunkId
+        );
         lfUtils.updateStructureChunk(headOutputUnit, currentLanguage);
 
         let headChunk = headOutputUnit.structureChunk;
@@ -557,6 +561,10 @@ exports.processSentenceFormula = (
       if (gpUtils.getWordtypeStCh(structureChunk) === "fixed") {
         return;
       }
+      consol.logSpecial1(
+        "updateStructureChunk 2",
+        outputUnit.structureChunk.chunkId
+      );
       lfUtils.updateStructureChunk(outputUnit, currentLanguage);
     });
 
@@ -1355,25 +1363,14 @@ exports.inheritFromHeadToDependentChunk = (
         dependentChunk.formulaImportantTraitKeys.includes(traitKey)
       )
     ) {
-      let traitValueArr = uUtils.copyWithoutReference(headChunk[traitKey]);
+      let traitValueArr = headChunk[traitKey].slice(0);
 
       dependentChunk[traitKey] = traitValueArr;
     }
   });
 
   consol.log(
-    "ttez At the end of inheritFromHeadToDependentChunk, we must again adjustVirility, which we also did in allLangUtils.preprocessStructureChunks earlier."
-  );
-
-  allLangUtils.adjustVirilityOfStructureChunk(
-    currentLanguage,
-    headChunk,
-    "headChunk from SC:inheritFromHeadToDependentChunk"
-  );
-  allLangUtils.adjustVirilityOfStructureChunk(
-    currentLanguage,
-    dependentChunk,
-    "dependentChunk from SC:inheritFromHeadToDependentChunk"
+    "ttez At the end of inheritFromHeadToDependentChunk, we must again a'djustVirility, which we also did in allLangUtils.preprocessStructureChunks earlier."
   );
 
   consol.log(

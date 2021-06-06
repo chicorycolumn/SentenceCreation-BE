@@ -137,15 +137,10 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
     ) {
       if (!structureChunk.gender || !structureChunk.gender.length) {
         //Fill out if blank.
-        structureChunk.gender = [
-          "m1",
-          "m2",
-          "m3",
-          "f",
-          "n",
-          "virile",
-          "nonvirile",
-        ];
+        structureChunk.gender =
+          refObj.structureChunkTraits["POL"][
+            "gender"
+          ].possibleTraitValues.slice(0);
       } else {
         //Masculinist agenda
         let adjustedGenderArray = [];
@@ -159,13 +154,6 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
 
         structureChunk.gender = Array.from(new Set(adjustedGenderArray));
       }
-    }
-
-    if (shouldConsoleLog) {
-      consol.log(
-        "uccs POL preprocessStructureChunks Finally the structureChunk is",
-        structureChunk
-      );
     }
   });
 
@@ -202,19 +190,6 @@ exports.preprocessLemmaObjectsMajor = (
   }
 
   allLangUtils.convertmetaTraitValues(matches, "POL", "lObj");
-  // allLangUtils.preprocessLemmaObjects(matches, "POL");
-
-  if (!adjustLemmaObjectsOnly) {
-    if (
-      ["verb", "adjective"].includes(gpUtils.getWordtypeStCh(structureChunk))
-    ) {
-      allLangUtils.adjustVirilityOfStructureChunk(
-        currentLanguage,
-        structureChunk,
-        "structureChunk from POL:preprocessLemmaObjects"
-      );
-    }
-  }
 };
 
 exports.preprocessLemmaObjectsMinor = (matches) => {
@@ -338,25 +313,25 @@ exports.adjustTenseDescriptions = (structureChunk) => {
   return resultArr;
 };
 
+exports.formatGenderTraitValueAsPerson = (genderTraitValue) => {
+  return genderTraitValue === "m" ? "m1" : genderTraitValue;
+  // return {
+  //   m: ["m1"],
+  //   f: ["f"],
+  //   n: ["n"],
+  //   nonvirile: ["nonvirile"],
+  //   virile: ["virile"],
+  // }[traitValue];
+};
+
 exports.formatTraitValue = (traitKey, traitValue, note) => {
-  const pluralVirilityAndSingularConversionRef =
-    refObj.pluralVirilityAndSingularConversionRef["POL"];
-
-  const shortHandGenderRef = {
-    m: ["m1"],
-    f: ["f"],
-    n: ["n"],
-    nonvirile: ["nonvirile"],
-    virile: ["virile"],
-  };
-
   if (traitKey === "gender") {
     if (note === "plural") {
-      return pluralVirilityAndSingularConversionRef[note][traitValue];
-    } else {
-      if (note === "person") {
-        return shortHandGenderRef[traitValue];
-      }
+      return refObj.virilityConversionRef["POL"][note][traitValue];
+    }
+
+    if (note === "person") {
+      return exports.formatGenderTraitValueAsPerson(traitValue);
     }
   }
 
@@ -629,4 +604,18 @@ exports.copyInflectionsFromM1toM2 = (lemmaObject) => {
   uUtils.findKeysInObjectAndExecuteCallback(inflections, "m1", (obj) => {
     uUtils.copyValueOfKey(obj, "m1", ["m2"], false);
   });
+};
+
+exports.filterDownClarifiersSpecialComparisonCallback = (item1, item2) => {
+  let specialVirilityRef = {
+    virile: ["m", "m1", "f", "n"],
+    nonvirile: ["m2", "m3", "f", "n"],
+  };
+
+  return (
+    (Object.keys(specialVirilityRef).includes(item1) &&
+      specialVirilityRef[item1].includes(item2)) ||
+    (Object.keys(specialVirilityRef).includes(item2) &&
+      specialVirilityRef[item2].includes(item1))
+  );
 };

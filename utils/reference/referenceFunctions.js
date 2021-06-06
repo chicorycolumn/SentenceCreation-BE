@@ -15,42 +15,27 @@ exports.getstructureChunkTraits = (currentLanguage) => {
   );
 };
 
-exports.removeincompatibleTraits = (currentLanguage, structureChunk) => {
-  //VITO-TEMP-removeincompatibleTraits
-
-  consol.log(311, structureChunk);
-  //(note, the two stChs in args are likely the same stCh, but best to do as their names suggest)
-
-  //ACX3A: If npe then remove neuter from gender.
-  if (gpUtils.getWordtypeStCh(structureChunk, true) === "noun-person") {
-    consol.log(
-      "vvvx removeincompatibleTraits. Removing 'n' if present as is noun-person."
-    );
-    structureChunk.gender = structureChunk.gender.filter(
-      (traitValue) => traitValue !== "n"
-    );
-  }
-
-  //ACX3B: If 1per then remove neuter from gender.
+exports.removeIncompatibleTraits = (currentLanguage, structureChunk) => {
+  //ACX3A: If npe or 1per then remove neuter from gender.
   if (
-    structureChunk.person &&
-    !structureChunk.person.filter((traitValue) => traitValue !== "1per").length
+    gpUtils.getWordtypeStCh(structureChunk, true) === "noun-person" ||
+    (structureChunk.person &&
+      !structureChunk.person.filter((traitValue) => traitValue !== "1per")
+        .length)
   ) {
     consol.log(
-      "vvvy removeincompatibleTraits. Removing 'n' if present as only person traitValue is '1per'."
+      "vevx removeIncompatibleTraits. Removing 'n' if present as is noun-person."
     );
     structureChunk.gender = structureChunk.gender.filter(
       (traitValue) => traitValue !== "n"
     );
   }
 
-  //ACX3C: If we're examining gender trait, check the "number" trait, and
+  //ACX3B: If we're examining gender trait, check the number trait, and
   //if the number traitValues do not include "singular", then remove "m", "m1", "m2", "m3", "f", "n" from the gender array.
 
+  //This is effectively Vito-Reverse
   let incompatibleTraitsRef = refObj.incompatibleTraitsRef[currentLanguage];
-
-  consol.log({ currentLanguage });
-  consol.log({ incompatibleTraitsRef });
 
   Object.keys(structureChunk).forEach((traitKey) => {
     //eg traitKey = "gender"
@@ -95,8 +80,6 @@ exports.removeincompatibleTraits = (currentLanguage, structureChunk) => {
       }
     );
   });
-
-  consol.log(315, structureChunk);
   return structureChunk;
 };
 
