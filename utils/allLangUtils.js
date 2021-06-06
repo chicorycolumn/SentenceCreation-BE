@@ -239,19 +239,14 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
 
       if (structureChunk.form && structureChunk.form.includes("verbal")) {
         if (
-          !structureChunk.tenseDescription ||
-          !structureChunk.tenseDescription.length
+          (!structureChunk.tenseDescription ||
+            !structureChunk.tenseDescription.length) &&
+          !refFxn.skipThisStepInPreprocessStructureChunks(
+            currentLanguage,
+            "tenseDescription",
+            structureChunk
+          )
         ) {
-          if (
-            refFxn.skipThisStepInPreprocessStructureChunks(
-              currentLanguage,
-              "tenseDescription",
-              structureChunk
-            )
-          ) {
-            return;
-          }
-
           structureChunk.tenseDescription =
             refObj.structureChunkTraits[
               currentLanguage

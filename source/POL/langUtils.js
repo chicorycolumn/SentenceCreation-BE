@@ -190,24 +190,6 @@ exports.preprocessLemmaObjectsMajor = (
   }
 
   allLangUtils.convertmetaTraitValues(matches, "POL", "lObj");
-  // allLangUtils.preprocessLemmaObjects(matches, "POL");
-
-  if (!adjustLemmaObjectsOnly) {
-    if (
-      ["verb", "adjective"].includes(gpUtils.getWordtypeStCh(structureChunk))
-    ) {
-      consol.logSpecial1(
-        `vvv4 ${currentLanguage} pplobjmajor > all adjustViril`,
-        structureChunk.chunkId
-      );
-      allLangUtils.adjustVirilityOfStructureChunk(
-        currentLanguage,
-        structureChunk,
-        true,
-        "structureChunk from POL:preprocessLemmaObjects"
-      );
-    }
-  }
 };
 
 exports.preprocessLemmaObjectsMinor = (matches) => {
