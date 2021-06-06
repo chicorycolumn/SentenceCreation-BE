@@ -810,36 +810,7 @@ exports.specialAdjustmentToAnnotations = (
         );
       }
 
-      if (headLObj.gender && !gpUtils.traitValueIsMeta(headLObj.gender)) {
-        consol.log({
-          questionLanguage: languagesObj.questionLanguage,
-          headLObjgender: headLObj.gender,
-        });
-
-        let virilityPaddedLObjGenderArr = [
-          headLObj.gender,
-          ...refObj.virilityConversionRef[languagesObj.questionLanguage][
-            "plural"
-          ][headLObj.gender],
-        ];
-
-        consol.logSpecial1(
-          `vvv6 specialAdjustmentToAnnos paddedArr for ${headLObj.gender} is`,
-          virilityPaddedLObjGenderArr,
-          languagesObj
-        );
-
-        if (
-          !virilityPaddedLObjGenderArr.includes(
-            structureChunk.annotations.gender
-          )
-        ) {
-          consol.throw(
-            `evjo The depCh gender anno "${structureChunk.annotations.gender}" should have matched its headCh's lObj gender "${headLObj.gender}"?`
-          );
-        }
-        //Part 1-B: But if the headCh's lObj has a gender, then don't transfer the gender anno.
-      } else {
+      if (!(headLObj.gender && !gpUtils.traitValueIsMeta(headLObj.gender))) {
         headChunk.annotations.gender = structureChunk.annotations.gender;
       }
       delete structureChunk.annotations.gender;
