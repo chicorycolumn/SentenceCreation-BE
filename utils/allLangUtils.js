@@ -15,28 +15,7 @@ exports.translateAnnoTraitValue = (
   let annoTraitValue = structureChunk.annotations[annoTraitKey];
 
   if (annoTraitKey === "gender") {
-    if (structureChunk.number) {
-      if (structureChunk.number.length > 1) {
-        consol.throw("cshb #ERR ALL:translateAnnoTraitValue.");
-      }
-
-      const virilityConversionRef =
-        refObj.virilityConversionRef[questionLanguage];
-
-      if (structureChunk.number[0] === "plural") {
-        if (!virilityConversionRef["plural"][annoTraitValue]) {
-          consol.throw(
-            "mkow #ERR ALL:translateAnnoTraitValue. Could not convert virility of annoTraitValue: " +
-              annoTraitValue
-          );
-        }
-        consol.logSpecial1(
-          `vvv5 translateAnnoTV ${annoTraitValue} to ${virilityConversionRef["plural"][annoTraitValue]}`,
-          languagesObj
-        );
-        annoTraitValue = virilityConversionRef["plural"][annoTraitValue];
-      }
-    }
+    //Removed vito5 in branch step-V-virility-tidying-and-overhaul-aka-vito, as seems obviated by vito2b.
 
     let annotationToPlainspeakRef = refObj.annotationToPlainspeakRef;
 
