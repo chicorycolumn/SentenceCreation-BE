@@ -203,6 +203,7 @@ exports.preprocessLemmaObjectsMajor = (
       allLangUtils.adjustVirilityOfStructureChunk(
         currentLanguage,
         structureChunk,
+        true,
         "structureChunk from POL:preprocessLemmaObjects"
       );
     }

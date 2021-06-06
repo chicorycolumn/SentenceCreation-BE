@@ -5,6 +5,7 @@ const otUtils = require("./objectTraversingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 const refFxn = require("./reference/referenceFunctions.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
+const allLangUtils = require("./allLangUtils.js");
 
 exports.filterWithin_PHD = (
   lemmaObject,
@@ -335,6 +336,8 @@ exports.filterWithinSelectedLemmaObject = (
   outputArray,
   isPHD
 ) => {
+  consol.logSpecial1("filterWithinSelectedLemmaObject", lemmaObject.lemma);
+
   if ("console") {
     if (outputArray) {
       consol.log(
@@ -461,7 +464,7 @@ exports.updateStructureChunkByAdhocOnly = (
 };
 
 exports.updateStructureChunk = (outputUnit, currentLanguage) => {
-  let shouldConsoleLog = false;
+  let shouldConsoleLog = true;
 
   if (shouldConsoleLog) {
     consol.log(
@@ -487,16 +490,21 @@ exports.updateStructureChunk = (outputUnit, currentLanguage) => {
 
   lfUtils.updateStChByAndTagsAndSelectors(outputUnit, currentLanguage);
 
+  //Vito2b intends to obviate Vito2a.
+  //So here, make sure we don't output stCh's that can have technically conflicting gender and number.
+  //If, during this updateStructureChunk fxn, stCh gets gender f and number plural, the gender will be adjusted to nonvirile.
+  consol.logSpecial1(`vvv2b`);
+  allLangUtils.adjustVirilityOfStructureChunk(
+    currentLanguage,
+    outputUnit.structureChunk,
+    false,
+    "updateStructureChunk"
+  );
+
   if (shouldConsoleLog) {
     consol.log(
       "wbxe updateStructureChunk AFTER UB-Inf and UB-Tag-Sel, structureChunk is:",
       outputUnit.structureChunk
-    );
-
-    consol.log(
-      "[1;33m " +
-        `wbxe /updateStructureChunk "${outputUnit.structureChunk.chunkId}"` +
-        "[0m"
     );
     consol.log(" ");
   }
@@ -811,7 +819,7 @@ exports.filterBySelector_inner = (
   //And finally, do said filter.
   if (requirementArray.length) {
     return lemmaObjectArr.filter((lObj) => {
-      let lObjSelectorValues = [lObj[traitKey]];
+      let lObjSelectorValues = [lObj[traitKey]].slice(0);
 
       consol.log("wdeu lObjSelectorValues", lObjSelectorValues);
 
@@ -824,10 +832,11 @@ exports.filterBySelector_inner = (
 
           //Vito3
           //Filtering lObjs by selector (eg "gender", "aspect").
-          consol.logSpecial1(
-            `vvv3 ${currentLanguage} filterBySelector_inner extraVirilConvertedVals for ${traitKey} so ${numberKey}-${lObj[traitKey]} are`,
-            extraVirilityConvertedValues
-          );
+          //Imagine the lObj has gender f, but the stCh has number plural and the reqArr has gender nonvirile,
+          //well, this lObj wouldn't pass the filter, even though it should.
+          ///So we add virile converted values to the temporary lObjSelectorValues variable that stands for the
+          //selectors on the lObj. So now lObj stand-in has genders f and nonvirile also, so will pass.
+          consol.logSpecial1("vvv3");
 
           consol.log({
             currentLanguage,

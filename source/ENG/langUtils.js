@@ -602,6 +602,10 @@ exports.generateAdhocForms = (
 
     let structureChunkCopy = uUtils.copyWithoutReference(structureChunk);
 
+    consol.logSpecial1(
+      "updateStructureChunkByAdhocOnly 1",
+      structureChunkCopy.chunkId
+    );
     lfUtils.updateStructureChunkByAdhocOnly(
       structureChunkCopy,
       adhocTraitKey,
@@ -612,6 +616,10 @@ exports.generateAdhocForms = (
       Object.keys(dataToUpdateWith).forEach((traitKey) => {
         let traitValue = dataToUpdateWith[traitKey];
 
+        consol.logSpecial1(
+          "updateStructureChunkByAdhocOnly 2",
+          structureChunkCopy.chunkId
+        );
         lfUtils.updateStructureChunkByAdhocOnly(
           structureChunkCopy,
           traitKey,

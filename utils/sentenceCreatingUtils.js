@@ -191,6 +191,10 @@ exports.processSentenceFormula = (
         }
 
         // Now we update the head structure chunks with the details from their respective selectedWords.
+        consol.logSpecial1(
+          "updateStructureChunk 1",
+          headOutputUnit.structureChunk.chunkId
+        );
         lfUtils.updateStructureChunk(headOutputUnit, currentLanguage);
 
         let headChunk = headOutputUnit.structureChunk;
@@ -557,6 +561,10 @@ exports.processSentenceFormula = (
       if (gpUtils.getWordtypeStCh(structureChunk) === "fixed") {
         return;
       }
+      consol.logSpecial1(
+        "updateStructureChunk 2",
+        outputUnit.structureChunk.chunkId
+      );
       lfUtils.updateStructureChunk(outputUnit, currentLanguage);
     });
 
@@ -1365,15 +1373,18 @@ exports.inheritFromHeadToDependentChunk = (
     "ttez At the end of inheritFromHeadToDependentChunk, we must again a'djustVirility, which we also did in allLangUtils.preprocessStructureChunks earlier."
   );
 
-  consol.logSpecial1(
-    `vvv2 ${currentLanguage} inheritfromHtoD (D) all adjustViril`,
-    dependentChunk.chunkId
-  );
-  allLangUtils.adjustVirilityOfStructureChunk(
-    currentLanguage,
-    dependentChunk,
-    "dependentChunk from SC:inheritFromHeadToDependentChunk"
-  );
+  consol.logSpecial1(`vvv2a`);
+  //Vito2a
+  //"Mother found her coat / Father found his coat." The pronoun depCh inherits gender from headCh.
+  //But "Mothers found their coats.", the pronoun depCh inherits gender "f".
+  //Currently, the Mother headCh will have {gender: ["f"], number: ["plural"]}
+  //that's why we have to adjust gender of depCh here. Because it's okay for the headCh to have
+  //these strictly speaking - conflicting - gender and number, but not okay for depCh to have.
+  // allLangUtils.adjustVirilityOfStructureChunk(
+  //   currentLanguage,
+  //   dependentChunk,
+  //   "dependentChunk from SC:inheritFromHeadToDependentChunk"
+  // );
 
   consol.log(
     "wdim inheritFromHeadToDependentChunk: dependentChunk AFTERWARDS of inheritFromHeadToDependentChunk: ",

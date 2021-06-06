@@ -54,6 +54,7 @@ exports.translateAnnoTraitValue = (
 exports.adjustVirilityOfStructureChunk = (
   currentLanguage,
   structureChunk,
+  isPreProcessing,
   consoleLogLaabel
 ) => {
   //Adds the virility gender values if number includes "plural".
@@ -61,7 +62,7 @@ exports.adjustVirilityOfStructureChunk = (
 
   consol.log("gxow ALL a'djustVirilityOfStructureChunk", consoleLogLaabel);
 
-  if (gpUtils.getWordtypeStCh(structureChunk) === "noun") {
+  if (isPreProcessing && gpUtils.getWordtypeStCh(structureChunk) === "noun") {
     // Because m -> plural -> virile and then trying to select Ojciec, which isn't virile, it's m, so will ERR later.
     return;
   }
@@ -277,13 +278,16 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
         }
       }
     }
-    consol.logSpecial1(
-      `vvv1 ${currentLanguage} all ppStCh adjustViril`,
-      structureChunk.chunkId
-    );
+
+    //Vito1
+    //Right at the start, we adjust all stChs, so if they ask for gender f and number plural,
+    //then we add nonvirile to their gender array.
+    consol.logSpecial1(`vvv1`);
+
     allLangUtils.adjustVirilityOfStructureChunk(
       currentLanguage,
       structureChunk,
+      true,
       "structureChunk from ALL:preprocessStructureChunks"
     );
 
