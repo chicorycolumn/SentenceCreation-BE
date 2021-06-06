@@ -490,9 +490,8 @@ exports.updateStructureChunk = (outputUnit, currentLanguage) => {
 
   lfUtils.updateStChByAndTagsAndSelectors(outputUnit, currentLanguage);
 
-  //Vito2b: Changes stCh. (obviated Vito2a)
-  //So here, make sure we don't output stCh's that can have technically conflicting gender and number.
-  //If, during this updateStructureChunk fxn, stCh gets gender f and number plural, its gender will be adjusted to nonvirile.
+  //Vito2: Changes stCh.
+  //If during this updateStructureChunk fxn, stCh gets gender "f" and number "plural", its gender will adjust to "nonvirile".
   consol.logSpecial1(`vvv2b`);
   allLangUtils.adjustVirilityOfStructureChunk(
     currentLanguage,
@@ -832,10 +831,9 @@ exports.filterBySelector_inner = (
 
           //Vito3: Does not change stCh.
           //Filtering lObjs by selector (eg "gender", "aspect").
-          //Imagine the lObj has gender f, but the stCh has number plural and the reqArr has gender nonvirile,
-          //well, this lObj wouldn't pass the filter, even though it should.
-          ///So we add virile converted values to the temporary lObjSelectorValues variable that stands for the
-          //selectors on the lObj. So now lObj stand-in has genders f and nonvirile also, so will pass.
+          //Say lObj has gender "f", but reqArr has "nonvirile" - lObj wouldn't pass the filter, but it should.
+          //So add virility values to temporary lObjSelectorValues variable that stands for selectors on the lObj.
+          //Now lObj stand-in has genders "f" and "nonvirile" also, so passes filter.
           consol.logSpecial1("vvv3");
 
           consol.log({

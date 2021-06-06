@@ -208,7 +208,8 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         "veem counterfactualTraitValuesForThisTraitKey",
         counterfactualTraitValuesForThisTraitKey
       );
-      //ACX3: eg If plural then remove m, f. If person, remove n.
+
+      //ACX3: eg If "plural" then remove "m", "f". If person, remove "n".
       let counterfaxedStCh = uUtils.copyWithoutReference(
         questionOutputUnit.structureChunk
       );

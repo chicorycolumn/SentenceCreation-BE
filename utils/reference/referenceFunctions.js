@@ -16,12 +16,13 @@ exports.getstructureChunkTraits = (currentLanguage) => {
 };
 
 exports.removeIncompatibleTraits = (currentLanguage, structureChunk) => {
-  //VITO-TEMP-removeIncompatibleTraits
-
-  consol.log(311, structureChunk);
-
-  //ACX3A: If npe then remove neuter from gender.
-  if (gpUtils.getWordtypeStCh(structureChunk, true) === "noun-person") {
+  //ACX3A: If npe or 1per then remove neuter from gender.
+  if (
+    gpUtils.getWordtypeStCh(structureChunk, true) === "noun-person" ||
+    (structureChunk.person &&
+      !structureChunk.person.filter((traitValue) => traitValue !== "1per")
+        .length)
+  ) {
     consol.log(
       "vevx removeIncompatibleTraits. Removing 'n' if present as is noun-person."
     );
@@ -30,22 +31,10 @@ exports.removeIncompatibleTraits = (currentLanguage, structureChunk) => {
     );
   }
 
-  //ACX3B: If 1per then remove neuter from gender.
-  if (
-    structureChunk.person &&
-    !structureChunk.person.filter((traitValue) => traitValue !== "1per").length
-  ) {
-    consol.log(
-      "vevy removeIncompatibleTraits. Removing 'n' if present as only person traitValue is '1per'."
-    );
-    structureChunk.gender = structureChunk.gender.filter(
-      (traitValue) => traitValue !== "n"
-    );
-  }
-
-  //ACX3C: If we're examining gender trait, check the number trait, and
+  //ACX3B: If we're examining gender trait, check the number trait, and
   //if the number traitValues do not include "singular", then remove "m", "m1", "m2", "m3", "f", "n" from the gender array.
 
+  //This is effectively Vito-Reverse
   let incompatibleTraitsRef = refObj.incompatibleTraitsRef[currentLanguage];
 
   Object.keys(structureChunk).forEach((traitKey) => {
@@ -91,8 +80,6 @@ exports.removeIncompatibleTraits = (currentLanguage, structureChunk) => {
       }
     );
   });
-
-  consol.log(315, structureChunk);
   return structureChunk;
 };
 
