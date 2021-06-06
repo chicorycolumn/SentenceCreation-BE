@@ -490,9 +490,9 @@ exports.updateStructureChunk = (outputUnit, currentLanguage) => {
 
   lfUtils.updateStChByAndTagsAndSelectors(outputUnit, currentLanguage);
 
-  //Vito2b intends to obviate Vito2a.
+  //Vito2b: Changes stCh. (obviated Vito2a)
   //So here, make sure we don't output stCh's that can have technically conflicting gender and number.
-  //If, during this updateStructureChunk fxn, stCh gets gender f and number plural, the gender will be adjusted to nonvirile.
+  //If, during this updateStructureChunk fxn, stCh gets gender f and number plural, its gender will be adjusted to nonvirile.
   consol.logSpecial1(`vvv2b`);
   allLangUtils.adjustVirilityOfStructureChunk(
     currentLanguage,
@@ -830,7 +830,7 @@ exports.filterBySelector_inner = (
               lObj[traitKey]
             ];
 
-          //Vito3
+          //Vito3: Does not change stCh.
           //Filtering lObjs by selector (eg "gender", "aspect").
           //Imagine the lObj has gender f, but the stCh has number plural and the reqArr has gender nonvirile,
           //well, this lObj wouldn't pass the filter, even though it should.

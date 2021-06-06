@@ -1373,19 +1373,6 @@ exports.inheritFromHeadToDependentChunk = (
     "ttez At the end of inheritFromHeadToDependentChunk, we must again a'djustVirility, which we also did in allLangUtils.preprocessStructureChunks earlier."
   );
 
-  consol.logSpecial1(`vvv2a`);
-  //Vito2a
-  //"Mother found her coat / Father found his coat." The pronoun depCh inherits gender from headCh.
-  //But "Mothers found their coats.", the pronoun depCh inherits gender "f".
-  //Currently, the Mother headCh will have {gender: ["f"], number: ["plural"]}
-  //that's why we have to adjust gender of depCh here. Because it's okay for the headCh to have
-  //these strictly speaking - conflicting - gender and number, but not okay for depCh to have.
-  // allLangUtils.adjustVirilityOfStructureChunk(
-  //   currentLanguage,
-  //   dependentChunk,
-  //   "dependentChunk from SC:inheritFromHeadToDependentChunk"
-  // );
-
   consol.log(
     "wdim inheritFromHeadToDependentChunk: dependentChunk AFTERWARDS of inheritFromHeadToDependentChunk: ",
     dependentChunk
