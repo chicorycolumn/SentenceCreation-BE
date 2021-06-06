@@ -196,7 +196,7 @@ exports.preprocessLemmaObjectsMajor = (
     if (
       ["verb", "adjective"].includes(gpUtils.getWordtypeStCh(structureChunk))
     ) {
-      consol.logSpecial(
+      consol.logSpecial1(
         `vvv4 ${currentLanguage} pplobjmajor > all adjustViril`,
         structureChunk.chunkId
       );

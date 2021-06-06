@@ -1,13 +1,19 @@
 const consol = require("./consoleLoggingUtils.js");
 
 exports.log = (...args) => {
-  if (!process.argv.includes("r") && !process.argv.includes("rr")) {
+  if (!["r", "r1", "r2"].some((flag) => process.argv.includes(flag))) {
     console.log(...args);
   }
 };
 
-exports.logSpecial = (...args) => {
-  if (process.argv.includes("rr")) {
+exports.logSpecial1 = (...args) => {
+  if (process.argv.includes("r1")) {
+    console.log(...args);
+  }
+};
+
+exports.logSpecial2 = (...args) => {
+  if (process.argv.includes("r2")) {
     console.log(...args);
   }
 };

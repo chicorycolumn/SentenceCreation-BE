@@ -30,7 +30,7 @@ exports.translateAnnoTraitValue = (
               annoTraitValue
           );
         }
-        consol.logSpecial(
+        consol.logSpecial1(
           `vvv5 translateAnnoTV ${annoTraitValue} to ${virilityConversionRef["plural"][annoTraitValue]}`,
           languagesObj
         );
@@ -277,7 +277,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
         }
       }
     }
-    consol.logSpecial(
+    consol.logSpecial1(
       `vvv1 ${currentLanguage} all ppStCh adjustViril`,
       structureChunk.chunkId
     );

@@ -2231,7 +2231,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal17-11i GET 200 YES: Engpol. I** was a doctor. MGN to agree with pronoun.", () => {
+    it.only("#pal17-11i GET 200 YES: Engpol. I** was a doctor. MGN to agree with pronoun.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 

@@ -295,7 +295,9 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             counterfactualTraitValueForThisTraitKey,
           ]);
 
-          consol.logSpecial("-----------------counterfax run beginning");
+          consol.logSpecial1(
+            "\n--------------------------------COUNTERFAX RUN BEGINNING\n"
+          );
           palette.fetchPalette({ body: newReqBody });
         }
       );
@@ -580,19 +582,19 @@ exports.removeAnnotationsIfHeadChunkHasBeenCounterfaxed = (
   questionOutputUnit
 ) => {
   return (
-    innerRemoveAnnotationsIfHeadChunkHasBeenCounterfaxed(
+    removeAnnotationsIfHeadChunkHasBeenCounterfaxed_inner(
       questionOutputUnitsThatHaveBeenCounterfactualed,
       questionOutputUnit,
       "agreeWith"
     ) ||
-    innerRemoveAnnotationsIfHeadChunkHasBeenCounterfaxed(
+    removeAnnotationsIfHeadChunkHasBeenCounterfaxed_inner(
       questionOutputUnitsThatHaveBeenCounterfactualed,
       questionOutputUnit,
       "postHocAgreeWithPrimary"
     )
   );
 
-  function innerRemoveAnnotationsIfHeadChunkHasBeenCounterfaxed(
+  function removeAnnotationsIfHeadChunkHasBeenCounterfaxed_inner(
     questionOutputUnitsThatHaveBeenCounterfactualed,
     questionOutputUnit,
     agreeKey
@@ -821,7 +823,7 @@ exports.specialAdjustmentToAnnotations = (
           ][headLObj.gender],
         ];
 
-        consol.logSpecial(
+        consol.logSpecial1(
           `vvv6 specialAdjustmentToAnnos paddedArr for ${headLObj.gender} is`,
           virilityPaddedLObjGenderArr,
           languagesObj

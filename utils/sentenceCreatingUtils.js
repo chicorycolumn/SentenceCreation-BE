@@ -1365,7 +1365,7 @@ exports.inheritFromHeadToDependentChunk = (
     "ttez At the end of inheritFromHeadToDependentChunk, we must again a'djustVirility, which we also did in allLangUtils.preprocessStructureChunks earlier."
   );
 
-  consol.logSpecial(
+  consol.logSpecial1(
     `vvv2 ${currentLanguage} inheritfromHtoD (D) all adjustViril`,
     dependentChunk.chunkId
   );
