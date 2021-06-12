@@ -118,17 +118,6 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
       return;
     }
 
-    if (gpUtils.getWordtypeStCh(structureChunk) === "preposition") {
-      structureChunk.form = ["onlyForm"];
-    }
-
-    if (shouldConsoleLog) {
-      consol.log(
-        "guii POL preprocessStructureChunks At first the structureChunk is",
-        structureChunk
-      );
-    }
-
     if (
       //If gender is an appropriate traitKey of this wordtype.
       refObj.lemmaObjectTraitKeys[currentLanguage].inflectionChains[
@@ -148,7 +137,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
           if (gender === "m") {
             adjustedGenderArray.push("m1", "m2", "m3");
           } else {
-            adjustedGenderArray.push(gender);
+            adjustedGenderArray.push(gender, gender, gender);
           }
         });
 

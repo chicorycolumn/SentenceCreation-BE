@@ -125,8 +125,6 @@ exports.adjustVirilityOfStructureChunk = (
 };
 
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
-  let stChTraits = refFxn.getstructureChunkTraits(currentLanguage);
-
   let shouldConsoleLog = false;
   if (shouldConsoleLog) {
     consol.log(
@@ -134,11 +132,16 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
     );
   }
 
+  let stChTraits = refFxn.getstructureChunkTraits(currentLanguage);
   let metaTraitValuesRef = refObj.metaTraitValues[currentLanguage];
 
   sentenceStructure.forEach((structureChunk) => {
     if (gpUtils.getWordtypeStCh(structureChunk) === "fixed") {
       return;
+    }
+
+    if (gpUtils.getWordtypeStCh(structureChunk) === "preposition") {
+      structureChunk.form = ["onlyForm"];
     }
 
     if (
@@ -149,13 +152,6 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
     ) {
       structureChunk.number = uUtils.copyWithoutReference(
         stChTraits["number"].possibleTraitValues
-      );
-    }
-
-    if (shouldConsoleLog) {
-      consol.log(
-        "zesx ALL preprocessStructureChunks At first the structureChunk is",
-        structureChunk
       );
     }
 
@@ -199,13 +195,13 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
         ) {
           structureChunk.gender = [
             ...structureChunk.gender,
-            ...metaTraitValuesRef["gender"]["allSingularGenders"],
+            ...metaTraitValuesRef["gender"].allSingularGenders,
           ];
         }
         if (structureChunk.number && structureChunk.number.includes("plural")) {
           structureChunk.gender = [
             ...structureChunk.gender,
-            ...metaTraitValuesRef["gender"]["allPluralGenders"],
+            ...metaTraitValuesRef["gender"].allPluralGenders,
           ];
         }
       }
