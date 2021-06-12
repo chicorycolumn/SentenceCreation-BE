@@ -93,9 +93,18 @@ exports.metaTraitValues = {
       allGenders: ["m", "n", "f", "virile", "nonvirile"],
       allSingularGenders: ["m", "f", "n"],
       allPluralGenders: ["virile", "nonvirile"],
+
       allPersonalGenders: ["m", "f", "virile", "nonvirile"],
       allPersonalSingularGenders: ["m", "f"],
       allPersonalPluralGenders: ["virile", "nonvirile"],
+
+      allNonpersonalGenders: ["n", "nonvirile"],
+      // allNonpersonalSingularGenders: ["n"],
+      allNonpersonalSingularGenders: ["m", "f", "n"],
+      allNonpersonalPluralGenders: ["nonvirile"],
+
+      allSingularGendersExcludingNeuter: ["m", "f"],
+      allMasculineSingularGenders: ["m"],
     },
     // form: { pronounAndDeterminer: ["pronoun", "determiner"] },
   },
@@ -120,10 +129,15 @@ exports.metaTraitValues = {
       ],
       allSingularGenders: ["m1", "m2", "m3", "f", "f", "f", "n", "n", "n"],
       allPluralGenders: ["virile", "nonvirile"],
+
       allPersonalGenders: ["m1", "f", "virile", "nonvirile"],
       allPersonalSingularGenders: ["m1", "f"],
       allPersonalPluralGenders: ["virile", "nonvirile"],
-      //
+
+      allNonpersonalGenders: ["m2", "m3", "f", "n", "nonvirile"],
+      allNonpersonalSingularGenders: ["m2", "m3", "f", "n"],
+      allNonpersonalPluralGenders: ["nonvirile"],
+
       allSingularGendersExcludingNeuter: ["m1", "m2", "m3", "f", "f", "f"],
       allMasculineSingularGenders: ["m1", "m2", "m3"],
     },
@@ -479,11 +493,30 @@ exports.adhocForms = {
   },
 };
 
+exports.nounGenderTraitValues = {
+  nco: "allNonpersonalSingularGenders",
+  ncp: "allNonpersonalSingularGenders",
+
+  npe: "allPersonalSingularGenders",
+  npp: "allPersonalSingularGenders",
+
+  ver: "allNonpersonalSingularGenders",
+  adj: "allNonpersonalSingularGenders",
+  adv: "allNonpersonalSingularGenders",
+  pro: "allNonpersonalSingularGenders",
+  art: "allNonpersonalSingularGenders",
+  pre: "allNonpersonalSingularGenders",
+  fix: "allNonpersonalSingularGenders",
+};
+
 exports.wordtypeShorthandTranslation = {
   //boston0
   nco: "noun-common",
+  ncp: "noun-common-proper",
+
   npe: "noun-person",
-  npr: "noun-proper",
+  npp: "noun-person-proper",
+
   ver: "verb",
   adj: "adjective",
   adv: "adverb",

@@ -62,19 +62,17 @@ exports.fetchPalette = (req) => {
         "[0m"
     );
 
-    //PDSX1-yellow-set
+    //PDSX1-yellow-set (Boston)
     //
     //If PDS from req, then add PDS:true to each Q stCh.
     //Unless stCh is 'person' noun and headNoun of pronoun stCh. 'The doctor gave me his book.' must specify MGN doctor.
     //
-    //But if qChunk.gender holds all the poss gender traitValues for this lang>wordtype
-    //(bearing in mind if person andTag)
+    //But if qChunk.gender holds all the poss gender traitValues for this lang>wordtype (bearing in mind if person andTag)
     //then do allow it to be qChunk.dontSpecifyOnThisChunk = true.
     questionSentenceFormula.sentenceStructure.forEach((qChunk) => {
       qChunk.dontSpecifyOnThisChunk = true;
 
       if (
-        //bostonX
         gpUtils.getWordtypeStCh(qChunk, true) === "noun-person" &&
         questionSentenceFormula.sentenceStructure.find(
           (potentialDepChunk) =>
@@ -82,39 +80,15 @@ exports.fetchPalette = (req) => {
             potentialDepChunk.agreeWith === qChunk.chunkId
         )
       ) {
-        consol.log(qChunk.chunkId + " shep1");
         qChunk.dontSpecifyOnThisChunk = false;
-      } else if (qChunk.gender && qChunk.gender.length) {
-        //BOSTON
-        let allGenderTraitValuesForPersonNouns = {
-          POL: ["m1", "f"],
-          ENG: ["m", "f"],
-        };
-        let allGenderTraitValuesForPlainNouns = {
-          POL: ["m2", "m3", "f", "n"],
-          ENG: ["m", "f", "n"],
-        };
-
-        if (gpUtils.getWordtypeStCh(qChunk, true) === "noun-person") {
-          //bostonX
-          if (
-            !allGenderTraitValuesForPersonNouns[questionLanguage].every(
-              (traitValue) => qChunk.gender.includes(traitValue)
-            )
-          ) {
-            consol.log(qChunk.chunkId + " shep2a");
-            qChunk.dontSpecifyOnThisChunk = false;
-          }
-        } else {
-          if (
-            !allGenderTraitValuesForPlainNouns[questionLanguage].every(
-              (traitValue) => qChunk.gender.includes(traitValue)
-            )
-          ) {
-            consol.log(qChunk.chunkId + " shep2b");
-            qChunk.dontSpecifyOnThisChunk = false;
-          }
-        }
+      } else if (
+        qChunk.gender &&
+        qChunk.gender.length &&
+        !refObj.metaTraitValues[questionLanguage]["gender"][
+          refObj.nounGenderTraitValues[gpUtils.getWordtypeCodeStCh(qChunk)]
+        ].every((traitValue) => qChunk.gender.includes(traitValue))
+      ) {
+        qChunk.dontSpecifyOnThisChunk = false;
       }
 
       consol.log(

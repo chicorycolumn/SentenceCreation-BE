@@ -307,6 +307,10 @@ exports.getLanguageFromLemmaObject = (lObj) => {
   return lObj.id.split("-")[0].toUpperCase();
 };
 
+exports.getWordtypeCodeLObj = (lObj) => {
+  return (wordtypeShorthand = lObj.id.split("-")[1]);
+};
+
 exports.getWordtypeLObj = (lObj, returnFullWordtype) => {
   let wordtypeShorthand = lObj.id.split("-")[1];
   let wordtypeRef = refObj.wordtypeShorthandTranslation;
@@ -320,6 +324,10 @@ exports.getWordtypeLObj = (lObj, returnFullWordtype) => {
   let fullWordtype = wordtypeRef[wordtypeShorthand];
   let baseWordtype = fullWordtype.split("-")[0];
   return returnFullWordtype ? fullWordtype : baseWordtype;
+};
+
+exports.getWordtypeCodeStCh = (stCh) => {
+  return stCh.chunkId.split("-")[0];
 };
 
 exports.getWordtypeStCh = (stCh, returnFullWordtype) => {
