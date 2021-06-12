@@ -897,7 +897,6 @@ describe("/api", function () {
 
   describe("/palette - Stage 6: Translate rich sentences (nouns, adjectives, verbs).", () => {
     it("#pal06-01a GET 200 YES: Returns sentence with all translations (RSWAT).", () => {
-      // it.only("#pal06-01a GET 200 YES: Returns sentence with all translations (RSWAT).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -1422,8 +1421,68 @@ describe("/api", function () {
           );
         });
     });
-    xit("#pal06-06a GET 200 YES: Battery RSWAT Poleng. Ensure feminine and masculine are randomly selected at ~50/50 rate, despite there being thrice as many masculine genders as feminine.", () => {
+    it("#pal06-06a GET 200 YES: Battery RSWAT Poleng. Ensure feminine and masculine are randomly selected at ~50/50 rate, despite there being thrice as many masculine genders as feminine.", () => {
       return Promise.all([
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
+        testOnce(),
         testOnce(),
         testOnce(),
         testOnce(),
@@ -1470,9 +1529,9 @@ describe("/api", function () {
         let feminineProportion =
           res.filter((str) => str === "Pisałam.").length / res.length;
 
-        expect(res.length).to.equal(40);
+        expect(res.length).to.equal(100);
 
-        consol.log({ masculineProportion, feminineProportion });
+        consol.logSpecial2({ masculineProportion, feminineProportion });
 
         expect(masculineProportion).to.be.at.least(0.39);
         expect(masculineProportion).to.be.below(0.61);

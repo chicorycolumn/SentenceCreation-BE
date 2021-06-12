@@ -2467,9 +2467,11 @@ describe("/api", function () {
         testOnce(),
         testOnce(),
         testOnce(),
+        testOnce(),
+        testOnce(),
       ]).then((allQuestionSentencesArr) => {
         consol.log({ allQuestionSentencesArr });
-        expect(allQuestionSentencesArr).to.have.length(8);
+        expect(allQuestionSentencesArr).to.have.length(10);
         expect(allQuestionSentencesArr).to.include("Kobieta będzie pisała.");
         expect(allQuestionSentencesArr).to.include("Kobieta będzie pisać.");
       });
