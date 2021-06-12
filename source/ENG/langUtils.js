@@ -150,7 +150,7 @@ exports.selectWordVersions = (
   }
 };
 
-exports.preprocessStructureChunks = (structureChunk, currentLanguage) => {
+exports.preprocessStructureChunks = (structureChunk) => {
   if (gpUtils.getWordtypeStCh(structureChunk) === "noun") {
     if (structureChunk.gcase && structureChunk.gcase.length) {
       structureChunk.gcase = structureChunk.gcase.map((gcaseTraitValue) => {

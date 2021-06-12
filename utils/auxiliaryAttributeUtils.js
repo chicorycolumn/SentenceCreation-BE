@@ -194,7 +194,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
       let arrayOfCounterfactualResultsForThisAnnotation = [];
 
-      let stChTraits = refFxn.getstructureChunkTraits(questionLanguage);
+      let stChTraits = refFxn.getStructureChunkTraits(questionLanguage);
 
       let counterfactualTraitValuesForThisTraitKey = Array.from(
         new Set(

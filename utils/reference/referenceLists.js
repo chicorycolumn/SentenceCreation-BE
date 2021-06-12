@@ -528,3 +528,11 @@ exports.wordtypeShorthandTranslation = {
   pre: "preposition",
   fix: "fixed",
 };
+
+exports.defaultTraitValues = {
+  adjective: { form: ["simple"] },
+  pronoun: { form: ["pronoun"], gcase: ["nom"] },
+  noun: { gcase: ["nom"] },
+  verb: { form: ["verbal"] },
+  preposition: { form: ["onlyForm"] },
+};

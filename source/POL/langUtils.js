@@ -5,6 +5,7 @@ const gpUtils = require("../../utils/generalPurposeUtils.js");
 const uUtils = require("../../utils/universalUtils.js");
 const consol = require("../../utils/zerothOrder/consoleLoggingUtils.js");
 const refObj = require("../../utils/reference/referenceObjects.js");
+const refFxn = require("../../utils/reference/referenceFunctions.js");
 const allLangUtils = require("../../utils/allLangUtils.js");
 
 exports.selectWordVersions = (
@@ -106,19 +107,16 @@ exports.selectWordVersions = (
   );
 };
 
-exports.preprocessStructureChunks = (structureChunk, currentLanguage) => {
-  if (
-    //If gender is an appropriate traitKey of this wordtype.
-    refObj.lemmaObjectTraitKeys[currentLanguage].inflectionChains[
-      gpUtils.getWordtypeStCh(structureChunk)
-    ].includes("gender")
-  ) {
+exports.preprocessStructureChunks = (structureChunk) => {
+  const currentLanguage = "POL";
+
+  if (refFxn.isTraitCompatibleStCh("gender", structureChunk, currentLanguage)) {
     if (!structureChunk.gender || !structureChunk.gender.length) {
       //Fill out if blank.
       structureChunk.gender =
-        refObj.structureChunkTraits["POL"]["gender"].possibleTraitValues.slice(
-          0
-        );
+        refObj.structureChunkTraits[currentLanguage][
+          "gender"
+        ].possibleTraitValues.slice(0);
     } else {
       //Masculinist agenda
       let adjustedGenderArray = [];

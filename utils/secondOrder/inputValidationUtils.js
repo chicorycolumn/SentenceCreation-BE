@@ -6,7 +6,7 @@ const refObj = require("../reference/referenceObjects.js");
 const refFxn = require("../reference/referenceFunctions.js");
 
 exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
-  let stChTraits = refFxn.getstructureChunkTraits(currentLanguage);
+  let stChTraits = refFxn.getStructureChunkTraits(currentLanguage);
 
   let allChunkIds = sentenceFormula.sentenceStructure.map(
     (stCh) => stCh.chunkId
