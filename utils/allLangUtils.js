@@ -125,59 +125,35 @@ exports.adjustVirilityOfStructureChunk = (
 };
 
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
-  let stChTraits = refFxn.getstructureChunkTraits(currentLanguage);
-
-  let shouldConsoleLog = false;
-  if (shouldConsoleLog) {
-    consol.log(
-      "[1;35m " + "hqij ALL preprocessStructureChunks-------------------" + "[0m"
-    );
-  }
-
-  let metaTraitValuesRef = refObj.metaTraitValues[currentLanguage];
+  const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
+  const defaultTraitValuesRef = refObj.defaultTraitValues;
+  const metaTraitValuesRef = refObj.metaTraitValues[currentLanguage];
 
   sentenceStructure.forEach((structureChunk) => {
     if (gpUtils.getWordtypeStCh(structureChunk) === "fixed") {
       return;
     }
 
+    langUtils.preprocessStructureChunks(structureChunk);
+
+    Object.keys(defaultTraitValuesRef).forEach((wordtype) => {
+      if (gpUtils.getWordtypeStCh(structureChunk) === wordtype) {
+        Object.keys(defaultTraitValuesRef[wordtype]).forEach((traitKey) => {
+          if (!structureChunk[traitKey] || !structureChunk[traitKey].length) {
+            structureChunk[traitKey] =
+              defaultTraitValuesRef[wordtype][traitKey];
+          }
+        });
+      }
+    });
+
     if (
-      stChTraits["number"].compatibleWordtypes.includes(
-        gpUtils.getWordtypeStCh(structureChunk)
-      ) &&
+      refFxn.isTraitCompatibleStCh("number", structureChunk, currentLanguage) &&
       (!structureChunk.number || !structureChunk.number.length)
     ) {
-      structureChunk.number = uUtils.copyWithoutReference(
-        stChTraits["number"].possibleTraitValues
-      );
-    }
-
-    if (shouldConsoleLog) {
-      consol.log(
-        "zesx ALL preprocessStructureChunks At first the structureChunk is",
-        structureChunk
-      );
-    }
-
-    if (gpUtils.getWordtypeStCh(structureChunk) === "adjective") {
-      if (!structureChunk.form || !structureChunk.form.length) {
-        structureChunk.form = ["simple"];
-      }
-    }
-
-    if (gpUtils.getWordtypeStCh(structureChunk) === "pronoun") {
-      if (!structureChunk.form || !structureChunk.form.length) {
-        structureChunk.form = ["pronoun"];
-      }
-    }
-
-    if (
-      gpUtils.getWordtypeStCh(structureChunk) === "noun" ||
-      gpUtils.getWordtypeStCh(structureChunk) === "pronoun"
-    ) {
-      if (!structureChunk.gcase || !structureChunk.gcase.length) {
-        structureChunk.gcase = ["nom"];
-      }
+      structureChunk.number = refFxn
+        .getStructureChunkTraits(currentLanguage)
+        ["number"].possibleTraitValues.slice(0);
     }
 
     if (gpUtils.getWordtypeStCh(structureChunk) === "pronoun") {
@@ -199,23 +175,19 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
         ) {
           structureChunk.gender = [
             ...structureChunk.gender,
-            ...metaTraitValuesRef["gender"]["allSingularGenders"],
+            ...metaTraitValuesRef["gender"].allSingularGenders,
           ];
         }
         if (structureChunk.number && structureChunk.number.includes("plural")) {
           structureChunk.gender = [
             ...structureChunk.gender,
-            ...metaTraitValuesRef["gender"]["allPluralGenders"],
+            ...metaTraitValuesRef["gender"].allPluralGenders,
           ];
         }
       }
     }
 
     if (gpUtils.getWordtypeStCh(structureChunk) === "verb") {
-      if (!structureChunk.form || !structureChunk.form.length) {
-        structureChunk.form = ["verbal"];
-      }
-
       if (structureChunk.form && structureChunk.form.includes("verbal")) {
         if (
           (!structureChunk.tenseDescription ||
@@ -262,18 +234,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
       true,
       "structureChunk from ALL:preprocessStructureChunks"
     );
-
-    if (shouldConsoleLog) {
-      consol.log(
-        "gsgl ALL preprocessStructureChunks Finally the structureChunk is",
-        structureChunk
-      );
-    }
   });
-
-  if (shouldConsoleLog) {
-    consol.log("[1;35m " + "/ALL preprocessStructureChunks" + "[0m");
-  }
 };
 
 exports.convertmetaTraitValues = (
@@ -287,7 +248,7 @@ exports.convertmetaTraitValues = (
     );
   }
 
-  let metaTraitValuesRef = refObj.metaTraitValues[currentLanguage];
+  const metaTraitValuesRef = refObj.metaTraitValues[currentLanguage];
 
   sourceObjectArray.forEach((sourceObject) => {
     //sourceObject eg= a lObj or a stCh

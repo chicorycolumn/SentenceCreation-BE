@@ -5,7 +5,21 @@ const otUtils = require("../objectTraversingUtils.js");
 const refObj = require("./referenceObjects.js");
 const refFxn = require("./referenceFunctions.js");
 
-exports.getstructureChunkTraits = (currentLanguage) => {
+exports.isTraitCompatibleStCh = (trait, stCh, currentLanguage) => {
+  const stChTraitsRef = refFxn.getStructureChunkTraits(currentLanguage);
+  return stChTraitsRef[trait].compatibleWordtypes.includes(
+    gpUtils.getWordtypeStCh(stCh)
+  );
+};
+
+exports.isTraitCompatibleLObj = (trait, lObj, currentLanguage) => {
+  const stChTraitsRef = refFxn.getStructureChunkTraits(currentLanguage);
+  return stChTraitsRef[trait].compatibleWordtypes.includes(
+    gpUtils.getWordtypeLObj(lObj)
+  );
+};
+
+exports.getStructureChunkTraits = (currentLanguage) => {
   let stChTraitsRefByLang = refObj.structureChunkTraits[currentLanguage];
   let stChTraitsRefAll = refObj.structureChunkTraits["ALL"];
 

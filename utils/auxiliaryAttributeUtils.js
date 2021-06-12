@@ -194,13 +194,13 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
       let arrayOfCounterfactualResultsForThisAnnotation = [];
 
-      let stChTraits = refFxn.getstructureChunkTraits(questionLanguage);
-
       let counterfactualTraitValuesForThisTraitKey = Array.from(
         new Set(
-          stChTraits[annoTraitKey].possibleTraitValues.filter(
-            (traitValue) => traitValue !== annoTraitValue
-          )
+          refFxn
+            .getStructureChunkTraits(questionLanguage)
+            [annoTraitKey].possibleTraitValues.filter(
+              (traitValue) => traitValue !== annoTraitValue
+            )
         )
       );
 

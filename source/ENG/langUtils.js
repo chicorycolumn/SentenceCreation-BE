@@ -150,63 +150,38 @@ exports.selectWordVersions = (
   }
 };
 
-exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
-  let shouldConsoleLog = false;
-
-  consol.log(
-    "[1;35m " + "ywzr ENG preprocessStructureChunks-------------------" + "[0m"
-  );
-
-  let metagenderRef = refObj.metaTraitValues[currentLanguage].gender;
-
-  sentenceStructure.forEach((structureChunk) => {
-    if (gpUtils.getWordtypeStCh(structureChunk) === "fixed") {
-      return;
+exports.preprocessStructureChunks = (structureChunk) => {
+  if (gpUtils.getWordtypeStCh(structureChunk) === "noun") {
+    if (structureChunk.gcase && structureChunk.gcase.length) {
+      structureChunk.gcase = structureChunk.gcase.map((gcaseTraitValue) => {
+        return ["nom", "gen"].includes(gcaseTraitValue)
+          ? gcaseTraitValue
+          : "nom";
+      });
     }
-
-    if (gpUtils.getWordtypeStCh(structureChunk) === "preposition") {
-      structureChunk.form = ["onlyForm"];
-    }
-
-    if (gpUtils.getWordtypeStCh(structureChunk) === "noun") {
-      if (structureChunk.gcase && structureChunk.gcase.length) {
-        structureChunk.gcase = structureChunk.gcase.map((gcaseTraitValue) => {
-          return ["nom", "gen"].includes(gcaseTraitValue)
-            ? gcaseTraitValue
-            : "nom";
-        });
-      }
-    }
-
-    consol.log(
-      "fydk ENG preprocessStructureChunks s'tructureChunk.wordtype",
-      gpUtils.getWordtypeStCh(structureChunk)
-    );
-
-    if (
-      //If gender is an appropriate traitKey of this wordtype.
-      refObj.lemmaObjectTraitKeys[currentLanguage].inflectionChains[
-        gpUtils.getWordtypeStCh(structureChunk)
-      ].includes("gender")
-    ) {
-      if (!structureChunk.gender || !structureChunk.gender.length) {
-        //Fill out if blank.
-
-        if (
-          structureChunk.person &&
-          structureChunk.person.length &&
-          !structureChunk.person.includes("3per")
-        ) {
-          structureChunk.gender = metagenderRef["allPersonalGenders"].slice(0);
-        } else {
-          structureChunk.gender = metagenderRef["allGenders"].slice(0);
-        }
-      }
-    }
-  });
-  if (shouldConsoleLog) {
-    consol.log("[1;35m " + "/ENG:preprocessStructureChunks" + "[0m");
   }
+
+  // if (
+  //   //If gender is an appropriate traitKey of this wordtype.
+  //   refObj.lemmaObjectTraitKeys[currentLanguage].inflectionChains[
+  //     gpUtils.getWordtypeStCh(structureChunk)
+  //   ].includes("gender")
+  // ) {
+  // let metagenderRef = refObj.metaTraitValues[currentLanguage].gender;
+  //   if (!structureChunk.gender || !structureChunk.gender.length) {
+  //     //Fill out if blank.
+
+  //     if (
+  //       structureChunk.person &&
+  //       structureChunk.person.length &&
+  //       !structureChunk.person.includes("3per")
+  //     ) {
+  //       structureChunk.gender = metagenderRef["allPersonalGenders"].slice(0);
+  //     } else {
+  //       structureChunk.gender = metagenderRef["allGenders"].slice(0);
+  //     }
+  //   }
+  // }
 };
 
 exports.preprocessLemmaObjectsMajor = (
