@@ -127,7 +127,6 @@ exports.adjustVirilityOfStructureChunk = (
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
   const defaultTraitValuesRef = refObj.defaultTraitValues;
-  const stChTraitsRef = refFxn.getStructureChunkTraits(currentLanguage);
   const metaTraitValuesRef = refObj.metaTraitValues[currentLanguage];
 
   sentenceStructure.forEach((structureChunk) => {
@@ -152,9 +151,9 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
       refFxn.isTraitCompatibleStCh("number", structureChunk, currentLanguage) &&
       (!structureChunk.number || !structureChunk.number.length)
     ) {
-      structureChunk.number = uUtils.copyWithoutReference(
-        stChTraitsRef["number"].possibleTraitValues
-      );
+      structureChunk.number = refFxn
+        .getStructureChunkTraits(currentLanguage)
+        ["number"].possibleTraitValues.slice(0);
     }
 
     if (gpUtils.getWordtypeStCh(structureChunk) === "pronoun") {

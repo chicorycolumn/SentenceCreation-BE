@@ -530,8 +530,6 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
 
   let lemmaObjectIsMGN = gpUtils.lObjIsMGN(selectedLemmaObject);
 
-  let stChTraits = refFxn.getStructureChunkTraits(currentLanguage);
-
   //STEP ZERO: Decisive Decant
   //Remove gender traitValues on stCh if drillPath doesn't include the traitKey 'gender' (ie is infinitive or a participle, say).
   //But if lObj is MGN, don't do this.
