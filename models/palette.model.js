@@ -62,7 +62,7 @@ exports.fetchPalette = (req) => {
         "[0m"
     );
 
-    //PDSX1-yellow-set (Boston)
+    //PDSX1-yellow-set
     //
     //If PDS from req, then add PDS:true to each Q stCh.
     //Unless stCh is 'person' noun and headNoun of pronoun stCh. 'The doctor gave me his book.' must specify MGN doctor.

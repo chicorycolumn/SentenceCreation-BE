@@ -150,8 +150,9 @@ exports.lemmaObjectTraitKeys = {
     selectors: {
       noun: ["gender"],
       "noun-common": ["gender"],
+      "noun-common-proper": ["gender"],
       "noun-person": ["gender"],
-      "noun-proper": ["gender"],
+      "noun-person-proper": ["gender"],
       verb: ["aspect"],
     },
     hybridSelectors: {
@@ -160,8 +161,9 @@ exports.lemmaObjectTraitKeys = {
     inflectionChains: {
       noun: ["number", "gcase"],
       "noun-common": ["number", "gcase"],
+      "noun-common-proper": ["number", "gcase"],
       "noun-person": ["number", "gcase"],
-      "noun-proper": ["number", "gcase"],
+      "noun-person-proper": ["number", "gcase"],
       adjective: ["form", "number", "gender", "gcase"],
       verb: ["form", "tense", "person", "number", "gender"],
       pronoun: ["form", "person", "number", "gender", "gcase"],
@@ -173,8 +175,9 @@ exports.lemmaObjectTraitKeys = {
     },
     inheritableInflectionKeys: {
       "noun-common": ["number", "gcase"],
-      "noun-person": ["number", "gcase", "gender"], //BOSTON0
-      "noun-proper": ["number", "gcase"],
+      "noun-common-proper": ["number", "gcase"],
+      "noun-person": ["number", "gcase", "gender"],
+      "noun-person-proper": ["number", "gcase", "gender"],
       adjective: ["number", "gender", "gcase"],
       verb: [
         "tense",
@@ -187,7 +190,7 @@ exports.lemmaObjectTraitKeys = {
       pronoun: ["person", "number", "gender", "gcase"],
     },
     allowableTransfersFromQuestionStructure: {
-      noun: ["number"], //boston-?
+      noun: ["number"],
       adjective: ["form", "number", "gender"],
       verb: ["tenseDescription", "person", "number", "gender"],
       pronoun: ["person", "number", "gender"],
@@ -215,15 +218,16 @@ exports.lemmaObjectTraitKeys = {
     },
     inheritableInflectionKeys: {
       "noun-common": ["number", "gcase"],
+      "noun-common-proper": ["number", "gcase"],
       "noun-person": ["number", "gcase", "gender"],
-      "noun-proper": ["number", "gcase"],
+      "noun-person-proper": ["number", "gcase", "gender"],
       adjective: [],
       verb: ["tense", "person", "number"],
       pronoun: ["person", "number", "gender", "gcase"],
       article: ["number"],
     },
     allowableTransfersFromQuestionStructure: {
-      noun: ["number"], //boston-?
+      noun: ["number"],
       adjective: ["form"],
       verb: ["tenseDescription", "person", "number", "gender"],
       pronoun: ["form", "person", "number", "gender"],
@@ -510,7 +514,6 @@ exports.nounGenderTraitValues = {
 };
 
 exports.wordtypeShorthandTranslation = {
-  //boston0
   nco: "noun-common",
   ncp: "noun-common-proper",
 

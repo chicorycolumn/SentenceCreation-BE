@@ -51,7 +51,7 @@ exports.checkWords = (testing, currentLanguage) => {
 
   let nounsWithoutGender = educatorUtils.getLemmaObjectsWithoutGivenSelectorKey(
     wordsBank,
-    "noun", //bostonOK
+    "noun",
     "gender"
   );
 
