@@ -1128,9 +1128,7 @@ exports.conformAnswerStructureToQuestionStructure = (
     );
 
     //Do actually transfer gender, for person nouns.
-    if (
-      gpUtils.getWordtypeStCh(questionStructureChunk, true) === "noun-person"
-    ) {
+    if (gpUtils.stChIsNounPerson(questionStructureChunk)) {
       addTraitToAnswerChunkWithAdjustment(
         questionStructureChunk,
         answerStructureChunk,

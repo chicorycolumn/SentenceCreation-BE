@@ -245,8 +245,7 @@ exports.preprocessLemmaObjectsMajor = (
 exports.preprocessLemmaObjectsMinor = (matches) => {
   matches.forEach((lObj) => {
     if (gpUtils.getWordtypeLObj(lObj) === "noun") {
-      if (gpUtils.getWordtypeLObj(lObj, true) === "noun-person") {
-        //bostonX
+      if (gpUtils.lObjIsNounPerson(lObj)) {
         if (!lObj.gender) {
           consol.throw(
             "#ERR vuww preprocessLemmaObjectsMinor. The lObj '" +

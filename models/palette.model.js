@@ -73,7 +73,7 @@ exports.fetchPalette = (req) => {
       qChunk.dontSpecifyOnThisChunk = true;
 
       if (
-        gpUtils.getWordtypeStCh(qChunk, true) === "noun-person" &&
+        gpUtils.stChIsNounPerson(qChunk) &&
         questionSentenceFormula.sentenceStructure.find(
           (potentialDepChunk) =>
             gpUtils.getWordtypeStCh(potentialDepChunk) === "pronoun" &&

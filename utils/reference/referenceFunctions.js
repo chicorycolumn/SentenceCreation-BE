@@ -18,7 +18,7 @@ exports.getstructureChunkTraits = (currentLanguage) => {
 exports.removeIncompatibleTraits = (currentLanguage, structureChunk) => {
   //ACX3A: If npe or 1per then remove neuter from gender.
   if (
-    gpUtils.getWordtypeStCh(structureChunk, true) === "noun-person" ||
+    gpUtils.stChIsNounPerson(structureChunk) ||
     (structureChunk.person &&
       !structureChunk.person.filter((traitValue) => traitValue !== "1per")
         .length)

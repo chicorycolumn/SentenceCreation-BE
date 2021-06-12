@@ -311,6 +311,18 @@ exports.getWordtypeCodeLObj = (lObj) => {
   return (wordtypeShorthand = lObj.id.split("-")[1]);
 };
 
+exports.lObjIsNounPerson = (lObj) => {
+  return ["noun-person", "noun-person-proper"].includes(
+    this.getWordtypeLObj(lObj, true)
+  );
+};
+
+exports.stChIsNounPerson = (stCh) => {
+  return ["noun-person", "noun-person-proper"].includes(
+    this.getWordtypeStCh(stCh, true)
+  );
+};
+
 exports.getWordtypeLObj = (lObj, returnFullWordtype) => {
   let wordtypeShorthand = lObj.id.split("-")[1];
   let wordtypeRef = refObj.wordtypeShorthandTranslation;
