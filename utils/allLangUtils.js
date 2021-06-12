@@ -140,6 +140,9 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
       return;
     }
 
+    const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
+    langUtils.preprocessStructureChunks(structureChunk, currentLanguage);
+
     if (gpUtils.getWordtypeStCh(structureChunk) === "preposition") {
       structureChunk.form = ["onlyForm"];
     }

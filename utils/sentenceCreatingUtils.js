@@ -88,7 +88,6 @@ exports.processSentenceFormula = (
 
   //STEP ZERO: Preprocess sentence structure.
   allLangUtils.preprocessStructureChunks(sentenceStructure, currentLanguage);
-  langUtils.preprocessStructureChunks(sentenceStructure, currentLanguage);
 
   //STEP ONE: Select HEAD words and add to result array.
   let { headChunks, dependentChunks, otherChunks } =

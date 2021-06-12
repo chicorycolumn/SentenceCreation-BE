@@ -106,48 +106,32 @@ exports.selectWordVersions = (
   );
 };
 
-exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
-  let shouldConsoleLog = false;
+exports.preprocessStructureChunks = (structureChunk, currentLanguage) => {
+  if (
+    //If gender is an appropriate traitKey of this wordtype.
+    refObj.lemmaObjectTraitKeys[currentLanguage].inflectionChains[
+      gpUtils.getWordtypeStCh(structureChunk)
+    ].includes("gender")
+  ) {
+    if (!structureChunk.gender || !structureChunk.gender.length) {
+      //Fill out if blank.
+      structureChunk.gender =
+        refObj.structureChunkTraits["POL"]["gender"].possibleTraitValues.slice(
+          0
+        );
+    } else {
+      //Masculinist agenda
+      let adjustedGenderArray = [];
+      structureChunk.gender.forEach((gender) => {
+        if (gender === "m") {
+          adjustedGenderArray.push("m1", "m2", "m3");
+        } else {
+          adjustedGenderArray.push(gender, gender, gender);
+        }
+      });
 
-  consol.log(
-    "[1;35m " + "pmoe POL preprocessStructureChunks-------------------" + "[0m"
-  );
-
-  sentenceStructure.forEach((structureChunk) => {
-    if (gpUtils.getWordtypeStCh(structureChunk) === "fixed") {
-      return;
+      structureChunk.gender = Array.from(new Set(adjustedGenderArray));
     }
-
-    if (
-      //If gender is an appropriate traitKey of this wordtype.
-      refObj.lemmaObjectTraitKeys[currentLanguage].inflectionChains[
-        gpUtils.getWordtypeStCh(structureChunk)
-      ].includes("gender")
-    ) {
-      if (!structureChunk.gender || !structureChunk.gender.length) {
-        //Fill out if blank.
-        structureChunk.gender =
-          refObj.structureChunkTraits["POL"][
-            "gender"
-          ].possibleTraitValues.slice(0);
-      } else {
-        //Masculinist agenda
-        let adjustedGenderArray = [];
-        structureChunk.gender.forEach((gender) => {
-          if (gender === "m") {
-            adjustedGenderArray.push("m1", "m2", "m3");
-          } else {
-            adjustedGenderArray.push(gender, gender, gender);
-          }
-        });
-
-        structureChunk.gender = Array.from(new Set(adjustedGenderArray));
-      }
-    }
-  });
-
-  if (shouldConsoleLog) {
-    consol.log("[1;35m " + "/POL preprocessStructureChunks" + "[0m");
   }
 };
 
