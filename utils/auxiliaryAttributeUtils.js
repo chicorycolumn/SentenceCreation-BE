@@ -66,6 +66,8 @@ exports.firstStageEvaluateAnnotations = (
       `dhci firstStageEvaluateAnnotations. Adding firstStageAnnotationsObj to "${structureChunk.chunkId}".`
     );
 
+    console.log(666, formattedAnnoObj);
+
     outputUnit.firstStageAnnotationsObj = formattedAnnoObj;
   });
 };
@@ -185,10 +187,16 @@ exports.whittleAnnotationsAndConvertToPlainspeak = (
       languagesObj
     );
 
+    console.log(444, { formattedAnnoTraitValue });
+
     annoObj[annoTraitKey] = formattedAnnoTraitValue;
   });
 
-  return aaUtils.trimAnnotations(annoObj);
+  let result = aaUtils.trimAnnotations(annoObj);
+
+  console.log(555, result);
+
+  return result;
 };
 
 exports.removeAnnotationsByCounterfactualAnswerSentences = (

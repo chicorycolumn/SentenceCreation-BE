@@ -719,6 +719,11 @@ exports.buildSentenceString = (
   currentLanguage,
   answerLanguage
 ) => {
+  console.log(
+    777,
+    unorderedArr.map((unit) => unit.firstStageAnnotationsObj)
+  );
+
   consol.log("[1;35m " + "cghk buildSentenceString" + "[0m");
   consol.log(
     "cghk buildSentenceString unorderedArr",
@@ -791,22 +796,21 @@ exports.buildSentenceString = (
             (unit) =>
               unit.structureChunk.chunkId ===
               originalUnit.structureChunk.chunkId
-          )
+          ) &&
+          originalUnit.structureChunk.firstStageAnnotationsObj &&
+          Object.keys(originalUnit.structureChunk.firstStageAnnotationsObj)
+            .length
         ) {
-          if (
-            originalUnit.structureChunk.annotations &&
-            Object.keys(originalUnit.structureChunk.annotations).length
-          ) {
-            let skeletonOutputUnit = {
-              isSkeleton: true,
-              structureChunk: {
-                annotations: originalUnit.structureChunk.annotations,
-                chunkId: originalUnit.structureChunk.chunkId,
-              },
-            };
+          let skeletonOutputUnit = {
+            isSkeleton: true,
+            structureChunk: {
+              firstStageAnnotationsObj:
+                originalUnit.structureChunk.firstStageAnnotationsObj,
+              chunkId: originalUnit.structureChunk.chunkId,
+            },
+          };
 
-            outputArr.unshift(skeletonOutputUnit);
-          }
+          outputArr.unshift(skeletonOutputUnit);
         }
       });
     });
@@ -880,51 +884,53 @@ exports.selectWordVersions = (
 
         let doneAnnoTraitKeys = [];
 
-        Object.keys(skeletonOutputUnit.structureChunk.annotations).forEach(
-          (annoTraitKey) => {
-            let annoTraitValue =
-              skeletonOutputUnit.structureChunk.annotations[annoTraitKey];
+        Object.keys(
+          skeletonOutputUnit.structureChunk.firstStageAnnotationsObj
+        ).forEach((annoTraitKey) => {
+          let annoTraitValue =
+            skeletonOutputUnit.structureChunk.firstStageAnnotationsObj[
+              annoTraitKey
+            ];
 
-            let thisAnnoTraitKeyIsDone = false;
+          let thisAnnoTraitKeyIsDone = false;
 
-            depUnits.forEach((depUnit) => {
-              if (thisAnnoTraitKeyIsDone) {
-                return;
+          depUnits.forEach((depUnit) => {
+            if (thisAnnoTraitKeyIsDone) {
+              return;
+            }
+
+            if (
+              //If the annoTraitKey from the skeleton outputUnit's annos is an allowable transfer to this depCh,
+              refObj.lemmaObjectTraitKeys[
+                currentLanguage
+              ].inheritableInflectionKeys[
+                gpUtils.getWordtypeStCh(depUnit.structureChunk, true)
+              ].includes(annoTraitKey)
+            ) {
+              if (!depUnit.firstStageAnnotationsObj) {
+                depUnit.firstStageAnnotationsObj = {};
               }
 
               if (
-                //If the annoTraitKey from the skeleton outputUnit's annos is an allowable transfer to this depCh,
-                refObj.lemmaObjectTraitKeys[
-                  currentLanguage
-                ].inheritableInflectionKeys[
-                  gpUtils.getWordtypeStCh(depUnit.structureChunk, true)
-                ].includes(annoTraitKey)
+                depUnit.firstStageAnnotationsObj[annoTraitKey] &&
+                depUnit.firstStageAnnotationsObj[annoTraitKey] !==
+                  annoTraitValue
               ) {
-                if (!depUnit.firstStageAnnotationsObj) {
-                  depUnit.firstStageAnnotationsObj = {};
-                }
-
-                if (
-                  depUnit.firstStageAnnotationsObj[annoTraitKey] &&
-                  depUnit.firstStageAnnotationsObj[annoTraitKey] !==
-                    annoTraitValue
-                ) {
-                  consol.throw(
-                    `ioev selectWordVersions Skeleton Clause. I'm trying to transfer in annos from an outputunit that didn't make it into this outputarr. But I'm looking at one of its depChs, and this depCh has an anno with a different annoTraitValue?\nFor annoTraitKey "${annoTraitKey}", skeleton "${skeletonOutputUnit.structureChunk.chunkId}" had "${annoTraitValue}" while depCh "${depCh.chunkId}" had "${depCh.annotations[annoTraitKey]}".`
-                  );
-                }
-
-                //then transfer it to the depUnit.
-                depUnit.firstStageAnnotationsObj[annoTraitKey] = annoTraitValue;
-                doneAnnoTraitKeys.push(annoTraitKey);
-                thisAnnoTraitKeyIsDone = true;
+                consol.throw(
+                  `ioev selectWordVersions Skeleton Clause. I'm trying to transfer in annos from an outputunit that didn't make it into this outputarr. But I'm looking at one of its depChs, and this depCh has an anno with a different annoTraitValue?\nFor annoTraitKey "${annoTraitKey}", skeleton "${skeletonOutputUnit.structureChunk.chunkId}" had "${annoTraitValue}" while depCh "${depCh.chunkId}" had "${depCh.annotations[annoTraitKey]}".`
+                );
               }
-            });
-          }
-        );
+
+              //then transfer it to the depUnit.
+              depUnit.firstStageAnnotationsObj[annoTraitKey] = annoTraitValue;
+              doneAnnoTraitKeys.push(annoTraitKey);
+              thisAnnoTraitKeyIsDone = true;
+            }
+          });
+        });
 
         let abandonedAnnoTraitKeys = Object.keys(
-          skeletonOutputUnit.structureChunk.annotations
+          skeletonOutputUnit.structureChunk.firstStageAnnotationsObj
         ).filter((annoTraitKey) => !doneAnnoTraitKeys.includes(annoTraitKey));
 
         if (abandonedAnnoTraitKeys.length) {

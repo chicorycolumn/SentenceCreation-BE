@@ -14,13 +14,19 @@ exports.translateAnnoTraitValue = (
 
   let annoTraitValue = structureChunk.annotations[annoTraitKey];
 
+  console.log(111);
+
   if (annoTraitKey === "gender") {
     //Removed vito5 in branch step-V-virility-tidying-and-overhaul-aka-vito, as seems obviated by vito2b.
+
+    console.log(222);
 
     let annotationToPlainspeakRef = refObj.annotationToPlainspeakRef;
 
     let adjustedAnnotation =
       annotationToPlainspeakRef["gender"][annoTraitValue];
+
+    console.log({ adjustedAnnotation });
 
     return typeof adjustedAnnotation === "string"
       ? adjustedAnnotation
