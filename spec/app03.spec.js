@@ -26,7 +26,7 @@ describe("/api", function () {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe.only("/palette - Stage 18: Further annotations.", () => {
+  xdescribe("/palette - Stage 18: Further annotations.", () => {
     it("#pal18-01a GET 200 YES: Engpol. 'she reads'", () => {
       //Okay, so this failed because we wrote the Counterfax fxn to ignore tenseDescription and just let that anno pass through,
       //because there are so many alternate tenseDesc values, so would take too long.
@@ -70,7 +70,7 @@ describe("/api", function () {
           );
         });
     });
-    it.only("#pal18-01b GET 200 YES: Poleng annotations. 'she reads'", () => {
+    it("#pal18-01b GET 200 YES: Poleng annotations. 'she reads'", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
