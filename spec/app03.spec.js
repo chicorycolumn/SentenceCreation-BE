@@ -26,8 +26,14 @@ describe("/api", function () {
   // after(() => {});
   // beforeEach(() => {});
 
-  xdescribe("/palette - Stage 18: Further annotations.", () => {
+  describe("/palette - Stage 18: Further annotations.", () => {
     it("#pal18-01a GET 200 YES: Engpol. 'she reads'", () => {
+      //Okay, so this failed because we wrote the Counterfax fxn to ignore tenseDescription and just let that anno pass through,
+      //because there are so many alternate tenseDesc values, so would take too long.
+      //However, how to determine when tenseDesc anno should be kept?
+      //I think it might be best to just hardcode the specific situations.
+      //Namely, in ENG, it's just when a synhom verb (eg 'read') is in past simple, or present simple excluding 3per sing.
+      //So that's so specific, I think we'd be okay to hardcode.
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -64,7 +70,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal18-01b GET 200 YES: Poleng annotations. 'she reads'", () => {
+    xit("#pal18-01b GET 200 YES: Poleng annotations. 'she reads'", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -100,7 +106,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal18-01c GET 200 YES: Poleng PDS. 'she reads'", () => {
+    xit("#pal18-01c GET 200 YES: Poleng PDS. 'she reads'", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -136,7 +142,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal18-02a GET 200 YES: Engpol. 'she writes'", () => {
+    xit("#pal18-02a GET 200 YES: Engpol. 'she writes'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -173,7 +179,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal18-02b GET 200 YES: Poleng annotations. 'she writes'", () => {
+    xit("#pal18-02b GET 200 YES: Poleng annotations. 'she writes'", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -209,7 +215,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal18-02c GET 200 YES: Poleng PDS. 'she writes'", () => {
+    xit("#pal18-02c GET 200 YES: Poleng PDS. 'she writes'", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -245,7 +251,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal18-03a GET 200 YES: Engpol. Sentence with 'sheep' should not be disrupted by PDS.", () => {
+    xit("#pal18-03a GET 200 YES: Engpol. Sentence with 'sheep' should not be disrupted by PDS.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -278,7 +284,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal18-04a GET 200 YES: Engpol. 'We see them.'", () => {
+    xit("#pal18-04a GET 200 YES: Engpol. 'We see them.'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -314,7 +320,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal18-04b GET 200 YES: Engpol. 'We see them.' PDS", () => {
+    xit("#pal18-04b GET 200 YES: Engpol. 'We see them.' PDS", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -343,7 +349,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal18-04a GET 200 YES: Poleng. 'We see them.'", () => {
+    xit("#pal18-04a GET 200 YES: Poleng. 'We see them.'", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 

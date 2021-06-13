@@ -1347,6 +1347,27 @@ exports.dummySentenceFormulasBank = [
     primaryOrders: [["pro-1", "ver-1"]],
   },
   {
+    sentenceFormulaSymbol: "dummy61",
+    sentenceFormulaId: "ENG-dummy61",
+    translations: { POL: ["POL-dummy61"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1",
+        specificLemmas: ["PERSONAL"],
+        gcase: ["nom"],
+        number: ["singular"],
+        person: ["3per"],
+      },
+      {
+        chunkId: "ver-1",
+        agreeWith: "pro-1",
+        andTags: ["basic2"],
+        tenseDescription: ["present simple"],
+      },
+    ],
+    primaryOrders: [["pro-1", "ver-1"]],
+  },
+  {
     sentenceFormulaSymbol: "dummy61a",
     sentenceFormulaId: "ENG-dummy61a",
     translations: { POL: ["POL-dummy61a"] },

@@ -1531,7 +1531,7 @@ describe("/api", function () {
 
         expect(res.length).to.equal(100);
 
-        consol.logSpecial2({ masculineProportion, feminineProportion });
+        consol.log({ masculineProportion, feminineProportion });
 
         expect(masculineProportion).to.be.at.least(0.39);
         expect(masculineProportion).to.be.below(0.61);

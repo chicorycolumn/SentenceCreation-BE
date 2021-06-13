@@ -70,6 +70,69 @@ exports.firstStageEvaluateAnnotations = (
   });
 };
 
+exports.removeAnnotationsByRef = (
+  questionOutputUnit,
+  languagesObj,
+  answerSentenceData,
+  questionOutputArr
+) => {
+  let { structureChunk } = questionOutputUnit;
+  let headChunk =
+    structureChunk.agreeWith &&
+    questionOutputArr.find(
+      (outputUnit) =>
+        outputUnit.structureChunk.chunkId === structureChunk.agreeWith
+    ).structureChunk;
+
+  let stChs = headChunk ? [structureChunk, headChunk] : [structureChunk];
+
+  if (!uUtils.doesObjectExistAndNonEmpty(structureChunk.annotations)) {
+    return;
+  }
+
+  let ref =
+    refObj.conditionsOnWhichToBlockAnnotations[languagesObj.questionLanguage];
+
+  ref = ref && ref[gpUtils.getWordtypeStCh(structureChunk)];
+
+  if (!ref) {
+    return;
+  }
+
+  Object.keys(ref).forEach((annoTraitKey) => {
+    if (structureChunk.annotations[annoTraitKey]) {
+      let conditionsOnWhichToBlockThisAnno = ref[annoTraitKey];
+      if (
+        conditionsOnWhichToBlockThisAnno.some(
+          (conditionOnWhichToBlockThisAnno) => {
+            return Object.keys(conditionOnWhichToBlockThisAnno).every(
+              (traitKey) => {
+                let traitValues = conditionOnWhichToBlockThisAnno[traitKey];
+
+                return stChs.some((stCh) => {
+                  if (stCh[traitKey] && stCh[traitKey].length) {
+                    if (stCh[traitKey].length > 1) {
+                      consol.throw(
+                        "vjpp Unsure how to check this condition for blocking anno when the stCh has more than one traitValue here."
+                      );
+                    }
+                    return traitValues.includes(stCh[traitKey][0]);
+                  }
+                });
+              }
+            );
+          }
+        )
+      ) {
+        consol.log(
+          `prri removeAnnotationsByRef for "${structureChunk.chunkId}" is removing "${annoTraitKey}" anno as it fit the conditions.`
+        );
+        delete structureChunk.annotations[annoTraitKey];
+      }
+    }
+  });
+};
+
 exports.whittleAnnotationsAndConvertToPlainspeak = (
   questionOutputUnit,
   languagesObj,
@@ -86,14 +149,19 @@ exports.whittleAnnotationsAndConvertToPlainspeak = (
 
   let questionStructureChunk = questionOutputUnit.structureChunk;
 
-  consol.log("bbbc");
+  aaUtils.removeAnnotationsByRef(
+    questionOutputUnit,
+    languagesObj,
+    answerSentenceData,
+    questionOutputArr
+  );
+
   aaUtils.removeAnnotationsByAOCs(
     questionOutputUnit,
     languagesObj,
     answerSentenceData,
     questionOutputArr
   );
-  consol.log("bbbd");
 
   aaUtils.removeAnnotationsByCounterfactualAnswerSentences(
     questionOutputUnit,
@@ -107,7 +175,6 @@ exports.whittleAnnotationsAndConvertToPlainspeak = (
     additionalRunsRecord,
     originalQuestionSentenceFormula
   );
-  consol.log("bbbe");
 
   let annoObj = {};
 
@@ -183,6 +250,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
     (annoTraitKey) => {
       //ACX2A: Don't bother running counterfactuals for wordtype/emoji/text annotations, as they'll always be needed.
       //ACX2B: Don't bother running counterfactuals for tenseDesc annotations, as they'll take so long, because there are so many alternate inflectionValues, and we can reasonably presume that the tenseDesc anno will be necessary.
+
       if (
         ["wordtype", "emoji", "text", "tenseDescription"].includes(annoTraitKey)
       ) {
@@ -296,7 +364,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             counterfactualTraitValueForThisTraitKey,
           ]);
 
-          consol.logSpecial1(
+          consol.log(
             "\n--------------------------------COUNTERFAX RUN BEGINNING\n"
           );
           palette.fetchPalette({ body: newReqBody });
