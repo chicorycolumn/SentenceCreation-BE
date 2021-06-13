@@ -27,13 +27,9 @@ describe("/api", function () {
   // beforeEach(() => {});
 
   describe.only("/palette - Stage 18: Further annotations.", () => {
-    it("#pal18-01a GET 200 YES: Engpol. 'she reads'", () => {
-      //Okay, so this failed because we wrote the Counterfax fxn to ignore tenseDescription and just let that anno pass through,
-      //because there are so many alternate tenseDesc values, so would take too long.
-      //However, how to determine when tenseDesc anno should be kept?
-      //I think it might be best to just hardcode the specific situations.
-      //Namely, in ENG, it's just when a synhom verb (eg 'read') is in past simple, or present simple excluding 3per sing.
-      //So that's so specific, I think we'd be okay to hardcode.
+    it("#pal18-01a GET 200 YES: Engpol. 'she reads' tenseDesc anno should be removed by conditionsOnWhichToBlockAnnotations.", () => {
+      //Failed because removeAnnotationsByCounterfactualAnswerSentences lets tenseDesc annos through, as too many alternate values to check.
+      //So this situation, where the anno should be kept, is hardcoded in refObj conditionsOnWhichToBlockAnnotations.
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -70,7 +66,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal18-01b GET 200 YES: Poleng annotations. 'she reads'", () => {
+    it("#pal18-01b GET 200 YES: Poleng annotations. 'she reads' tenseDesc anno should be kept via skeleton.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
