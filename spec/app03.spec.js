@@ -26,7 +26,7 @@ describe("/api", function () {
   // after(() => {});
   // beforeEach(() => {});
 
-  xdescribe("/palette - Stage 18: Further annotations.", () => {
+  describe.only("/palette - Stage 18: Further annotations.", () => {
     it("#pal18-01a GET 200 YES: Engpol. 'she reads'", () => {
       //Okay, so this failed because we wrote the Counterfax fxn to ignore tenseDescription and just let that anno pass through,
       //because there are so many alternate tenseDesc values, so would take too long.
@@ -106,7 +106,7 @@ describe("/api", function () {
           );
         });
     });
-    xit("#pal18-01c GET 200 YES: Poleng PDS. 'she reads'", () => {
+    it("#pal18-01c GET 200 YES: Poleng PDS. 'she reads'", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -142,7 +142,7 @@ describe("/api", function () {
           );
         });
     });
-    xit("#pal18-02a GET 200 YES: Engpol. 'she writes'", () => {
+    it("#pal18-02a GET 200 YES: Engpol. 'she writes'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -179,7 +179,7 @@ describe("/api", function () {
           );
         });
     });
-    xit("#pal18-02b GET 200 YES: Poleng annotations. 'she writes'", () => {
+    it("#pal18-02b GET 200 YES: Poleng annotations. 'she writes'", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -215,7 +215,7 @@ describe("/api", function () {
           );
         });
     });
-    xit("#pal18-02c GET 200 YES: Poleng PDS. 'she writes'", () => {
+    it("#pal18-02c GET 200 YES: Poleng PDS. 'she writes'", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -251,7 +251,7 @@ describe("/api", function () {
           );
         });
     });
-    xit("#pal18-03a GET 200 YES: Engpol. Sentence with 'sheep' should not be disrupted by PDS.", () => {
+    it("#pal18-03a GET 200 YES: Engpol. Sentence with 'sheep' should not be disrupted by PDS.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -284,7 +284,7 @@ describe("/api", function () {
           );
         });
     });
-    xit("#pal18-04a GET 200 YES: Engpol. 'We see them.'", () => {
+    it.only("#pal18-04a GET 200 YES: Engpol. 'We see them.'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -320,7 +320,7 @@ describe("/api", function () {
           );
         });
     });
-    xit("#pal18-04b GET 200 YES: Engpol. 'We see them.' PDS", () => {
+    it("#pal18-04b GET 200 YES: Engpol. 'We see them.' PDS", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
