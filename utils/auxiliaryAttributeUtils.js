@@ -188,7 +188,9 @@ exports.whittleAnnotationsAndConvertToPlainspeak = (
     annoObj[annoTraitKey] = formattedAnnoTraitValue;
   });
 
-  return aaUtils.trimAnnotations(annoObj);
+  let result = aaUtils.trimAnnotations(annoObj);
+
+  return result;
 };
 
 exports.removeAnnotationsByCounterfactualAnswerSentences = (

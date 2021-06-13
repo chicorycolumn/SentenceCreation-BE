@@ -782,7 +782,6 @@ exports.buildSentenceString = (
   }
 
   //STEP 1: In Q mode, for each outputArr, if there is a chunk with annos but that didn't make it in there, keep the annos.
-
   if (!multipleMode) {
     outputArrays.forEach((outputArr) => {
       unorderedArr.forEach((originalUnit) => {
@@ -791,22 +790,19 @@ exports.buildSentenceString = (
             (unit) =>
               unit.structureChunk.chunkId ===
               originalUnit.structureChunk.chunkId
-          )
+          ) &&
+          originalUnit.firstStageAnnotationsObj &&
+          Object.keys(originalUnit.firstStageAnnotationsObj).length
         ) {
-          if (
-            originalUnit.structureChunk.annotations &&
-            Object.keys(originalUnit.structureChunk.annotations).length
-          ) {
-            let skeletonOutputUnit = {
-              isSkeleton: true,
-              structureChunk: {
-                annotations: originalUnit.structureChunk.annotations,
-                chunkId: originalUnit.structureChunk.chunkId,
-              },
-            };
+          let skeletonOutputUnit = {
+            isSkeleton: true,
+            firstStageAnnotationsObj: originalUnit.firstStageAnnotationsObj,
+            structureChunk: {
+              chunkId: originalUnit.structureChunk.chunkId,
+            },
+          };
 
-            outputArr.unshift(skeletonOutputUnit);
-          }
+          outputArr.unshift(skeletonOutputUnit);
         }
       });
     });
@@ -880,10 +876,10 @@ exports.selectWordVersions = (
 
         let doneAnnoTraitKeys = [];
 
-        Object.keys(skeletonOutputUnit.structureChunk.annotations).forEach(
+        Object.keys(skeletonOutputUnit.firstStageAnnotationsObj).forEach(
           (annoTraitKey) => {
             let annoTraitValue =
-              skeletonOutputUnit.structureChunk.annotations[annoTraitKey];
+              skeletonOutputUnit.firstStageAnnotationsObj[annoTraitKey];
 
             let thisAnnoTraitKeyIsDone = false;
 
@@ -910,7 +906,7 @@ exports.selectWordVersions = (
                     annoTraitValue
                 ) {
                   consol.throw(
-                    `ioev selectWordVersions Skeleton Clause. I'm trying to transfer in annos from an outputunit that didn't make it into this outputarr. But I'm looking at one of its depChs, and this depCh has an anno with a different annoTraitValue?\nFor annoTraitKey "${annoTraitKey}", skeleton "${skeletonOutputUnit.structureChunk.chunkId}" had "${annoTraitValue}" while depCh "${depCh.chunkId}" had "${depCh.annotations[annoTraitKey]}".`
+                    `ioev selectWordVersions Skeleton Clause. I'm trying to transfer in annos from an outputunit that didn't make it into this outputarr. But I'm looking at one of its depChs, and this depCh has an anno with a different annoTraitValue?\nFor annoTraitKey "${annoTraitKey}", skeleton "${skeletonOutputUnit.structureChunk.chunkId}" had "${annoTraitValue}" while depCh "${depCh.chunkId}" had "${depUnit.firstStageAnnotationsObj[annoTraitKey]}".`
                   );
                 }
 
@@ -924,7 +920,7 @@ exports.selectWordVersions = (
         );
 
         let abandonedAnnoTraitKeys = Object.keys(
-          skeletonOutputUnit.structureChunk.annotations
+          skeletonOutputUnit.firstStageAnnotationsObj
         ).filter((annoTraitKey) => !doneAnnoTraitKeys.includes(annoTraitKey));
 
         if (abandonedAnnoTraitKeys.length) {
