@@ -1,5 +1,3 @@
-const { lObjIsMGN, getWordtypeStCh } = require("../generalPurposeUtils");
-
 exports.incompatibleTraitsRef = {
   POL: {
     //If we're examining gender traitKey.
