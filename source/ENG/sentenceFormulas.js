@@ -1219,7 +1219,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "art-1",
-        // form: ["indefinite"],
+        form: ["indefinite", "definite"],
         agreeWith: "npe-1-woman",
       },
       {
@@ -1233,13 +1233,15 @@ exports.sentenceFormulasBank = [
         // gcase: ["nom"],
         // number: ["singular"],
         specificLemmas: ["see"],
-        agreeWith: ["npe-1-woman"],
+        agreeWith: "npe-1-woman",
+        tenseDescription: ["past simple"],
       },
       {
         chunkId: "pro-1-me",
         specificLemmas: ["PERSONAL"],
-        agreeWith: ["pro-0-I-invisible"],
+        agreeWith: "pro-0-I-invisible",
         gcase: ["acc"],
+        formulaImportantTraitKeys: ["gcase"],
       },
     ],
     primaryOrders: [["art-1", "npe-1-woman", "ver-1-see", "pro-1-me"]],

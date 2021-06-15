@@ -444,7 +444,6 @@ describe("/api", function () {
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "119 Woman saw me",
-          useDummy: true,
         })
         .expect(200)
         .then((res) => {
@@ -474,7 +473,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal18-05b GET 200 YES: Poleng. 'A woman saw me.'", () => {
+    it.only("#pal18-05b GET 200 YES: Poleng. 'A woman saw me.'", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -484,7 +483,6 @@ describe("/api", function () {
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "119 Woman saw me",
-          useDummy: true,
         })
         .expect(200)
         .then((res) => {
