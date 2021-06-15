@@ -52,7 +52,9 @@ exports.createOutputUnit = (
 ) => {
   if (errorInDrilling || !selectedWord) {
     consol.log(
-      `acsm, errorInDrilling:${!!errorInDrilling}, selectedWord:${!!selectedWord}, `
+      `acsm, Returning false because ${
+        errorInDrilling ? "errorInDrilling true" : "selectWord false"
+      }`
     );
     consol.log(
       "acsm createOutputUnit errorInSentenceCreation.errorMessage: A lemma object was indeed selected, but no word was found at the end of the give inflection chain."
