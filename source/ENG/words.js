@@ -634,7 +634,6 @@ exports.wordsBank = {
 
       //inflections
       inflections: {
-        zero: "",
         definite: {
           singular: "the",
           plural: "the",

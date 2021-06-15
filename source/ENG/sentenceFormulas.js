@@ -1219,7 +1219,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "art-1",
-        form: ["indefinite", "definite"],
+        // form: ["indefinite", "definite"],
         agreeWith: "npe-1-woman",
       },
       {

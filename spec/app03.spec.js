@@ -434,19 +434,21 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal18-05a GET 200 YES: Engpol. 'A woman saw me.'", () => {
+    it.only("#pal18-05a GET 200 YES: Engpol. 'A woman saw me.'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
         .send({
+          // devSaysThrowAtMidpoint: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "119 Woman saw me",
         })
         .expect(200)
         .then((res) => {
+          // console.log(res.body.questionErrorMessage);
           let ref = [
             {
               ENG: "A woman saw me.",
@@ -473,7 +475,7 @@ describe("/api", function () {
           );
         });
     });
-    it.only("#pal18-05b GET 200 YES: Poleng. 'A woman saw me.'", () => {
+    it("#pal18-05b GET 200 YES: Poleng. 'A woman saw me.'", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 

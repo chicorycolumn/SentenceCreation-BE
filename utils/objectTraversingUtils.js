@@ -420,6 +420,7 @@ exports.findMatchingLemmaObjectThenWord = (
         structureChunkUpdatedByAdhocOrUninflected,
       } = selectedFormObject;
 
+      consol.log("swde1");
       selectedWordArr.forEach((selectedWord) => {
         let outputUnit = frUtils.createOutputUnit(
           errorInSentenceCreation,
@@ -561,6 +562,7 @@ exports.findMatchingLemmaObjectThenWord = (
               (gpUtils.isTerminusObject(selectedWord) &&
                 selectedWord.processOnlyAtEnd)
             ) {
+              consol.log("swde2");
               let outputUnit = frUtils.createOutputUnit(
                 errorInSentenceCreation,
                 errorInDrilling,
@@ -577,6 +579,7 @@ exports.findMatchingLemmaObjectThenWord = (
               );
 
               allWords.forEach((word) => {
+                consol.log("swde3");
                 let outputUnit = frUtils.createOutputUnit(
                   errorInSentenceCreation,
                   errorInDrilling,
@@ -842,6 +845,8 @@ exports.findMatchingLemmaObjectThenWord = (
         }
       }
 
+      consol.log("dffd selectedItem", selectedItem);
+
       if (
         typeof selectedItem === "string" ||
         (gpUtils.isTerminusObject(selectedItem) &&
@@ -865,9 +870,11 @@ exports.findMatchingLemmaObjectThenWord = (
           ];
         }
 
+        consol.log("dffe additionalWords", additionalWords);
+
         selectedWord = uUtils.selectRandom(additionalWords);
       }
-
+      consol.log("swde4 selectedWord", selectedWord);
       let outputUnit = frUtils.createOutputUnit(
         errorInSentenceCreation,
         errorInDrilling,
