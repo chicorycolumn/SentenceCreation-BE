@@ -1206,4 +1206,42 @@ exports.sentenceFormulasBank = [
     ],
     primaryOrders: [["pro-1-my", "nco-1-onion"]],
   },
+  {
+    sentenceFormulaSymbol: "119 Woman saw me",
+    sentenceFormulaId: "ENG-119",
+    translations: { POL: ["POL-119"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-0-I-invisible",
+        specificLemmas: ["PERSONAL"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "art-1",
+        // form: ["indefinite"],
+        agreeWith: "npe-1-woman",
+      },
+      {
+        chunkId: "npe-1-woman",
+        // gcase: ["nom"],
+        // number: ["singular"],
+        specificLemmas: ["woman"],
+      },
+      {
+        chunkId: "ver-1-see",
+        // gcase: ["nom"],
+        // number: ["singular"],
+        specificLemmas: ["see"],
+        agreeWith: ["npe-1-woman"],
+      },
+      {
+        chunkId: "pro-1-me",
+        specificLemmas: ["PERSONAL"],
+        agreeWith: ["pro-0-I-invisible"],
+        gcase: ["acc"],
+      },
+    ],
+    primaryOrders: [["art-1", "npe-1-woman", "ver-1-see", "pro-1-me"]],
+  },
 ];

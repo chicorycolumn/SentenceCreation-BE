@@ -434,6 +434,78 @@ describe("/api", function () {
           );
         });
     });
+    it("#pal18-05a GET 200 YES: Engpol. 'A woman saw me.'", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "119 Woman saw me",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "A woman saw me.",
+              POL: ["Kobieta mnie zobaczyła."],
+            },
+            {
+              ENG: "The woman saw me.",
+              POL: ["Kobieta mnie zobaczyła."],
+            },
+            {
+              ENG: "Women saw me.",
+              POL: ["Kobiety mnie zobaczyły."],
+            },
+            {
+              ENG: "The women saw me.",
+              POL: ["Kobiety mnie zobaczyły."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal18-05b GET 200 YES: Poleng. 'A woman saw me.'", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "119 Woman saw me",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["A woman saw me.", "The woman saw me."],
+              POL: "Kobieta mnie zobaczyła.",
+            },
+            {
+              ENG: ["Women saw me.", "The women saw me."],
+              POL: "Kobiety mnie zobaczyły.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
   });
 
   describe("/palette - Stage 17-i: Possessive pronouns and MGNs. Pre-testing.", () => {
