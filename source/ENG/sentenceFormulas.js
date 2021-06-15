@@ -1219,19 +1219,14 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "art-1",
-        // form: ["indefinite", "definite"],
         agreeWith: "npe-1-woman",
       },
       {
         chunkId: "npe-1-woman",
-        // gcase: ["nom"],
-        // number: ["singular"],
         specificLemmas: ["woman"],
       },
       {
         chunkId: "ver-1-see",
-        // gcase: ["nom"],
-        // number: ["singular"],
         specificLemmas: ["see"],
         agreeWith: "npe-1-woman",
         tenseDescription: ["past simple"],

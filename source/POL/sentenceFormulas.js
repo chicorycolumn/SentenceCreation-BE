@@ -1662,16 +1662,13 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-1-woman",
-        // gcase: ["nom"],
-        // number: ["singular"],
         specificLemmas: ["kobieta"],
       },
       {
         chunkId: "ver-1-see",
-        // gcase: ["nom"],
-        // number: ["singular"],
         specificLemmas: ["widzieć", "zobaczyć"],
         agreeWith: "npe-1-woman",
+        tenseDescription: ["past pf"],
       },
       {
         chunkId: "pro-1-me",
