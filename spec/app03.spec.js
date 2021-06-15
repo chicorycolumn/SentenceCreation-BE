@@ -26,9 +26,9 @@ describe("/api", function () {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe.only("/palette - Stage 18: Further annotations.", () => {
+  describe("/palette - Stage 18: Further annotations.", () => {
     it("#pal18-01a GET 200 YES: Engpol. 'she reads' tenseDesc anno should be removed by conditionsOnWhichToBlockAnnotations.", () => {
-      //Failed because removeAnnotationsByCounterfactualAnswerSentences lets tenseDesc annos through, as too many alternate values to check.
+      //Originally failed as removeAnnotationsByCounterfax lets tenseDesc annos through, would be too many alternate values to check.
       //So this situation, where the anno should be kept, is hardcoded in refObj conditionsOnWhichToBlockAnnotations.
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -264,8 +264,8 @@ describe("/api", function () {
         .then((res) => {
           let ref = [
             {
-              ENG: "With the sheep (singular).",
-              POL: ["Z owcą."],
+              ENG: "With the sheep.",
+              POL: ["Z owcą.", "Z owcami."],
             },
             {
               ENG: "With a sheep.",
@@ -280,7 +280,7 @@ describe("/api", function () {
           );
         });
     });
-    it.only("#pal18-04a GET 200 YES: Engpol. 'We see them.'", () => {
+    it("#pal18-04a GET 200 YES: Engpol. 'We see them.'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -297,15 +297,30 @@ describe("/api", function () {
           let ref = [
             {
               ENG: "We see them (males).",
-              POL: ["Widziemy ich."],
+              POL: [
+                "Widzimy ich.",
+                "Ich widzimy.",
+                "My ich widzimy.",
+                "My widzimy ich.",
+              ],
             },
             {
               ENG: "We see them (mixed).",
-              POL: ["Widziemy ich."],
+              POL: [
+                "Widzimy ich.",
+                "Ich widzimy.",
+                "My ich widzimy.",
+                "My widzimy ich.",
+              ],
             },
             {
               ENG: "We see them (females).",
-              POL: ["Widziemy je."],
+              POL: [
+                "Widzimy je.",
+                "Je widzimy.",
+                "My je widzimy.",
+                "My widzimy je.",
+              ],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -334,7 +349,16 @@ describe("/api", function () {
           let ref = [
             {
               ENG: "We see them.",
-              POL: ["Widziemy ich.", "Widziemy je."],
+              POL: [
+                "Widzimy je.",
+                "Je widzimy.",
+                "My je widzimy.",
+                "My widzimy je.",
+                "Widzimy ich.",
+                "Ich widzimy.",
+                "My ich widzimy.",
+                "My widzimy ich.",
+              ],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -345,7 +369,7 @@ describe("/api", function () {
           );
         });
     });
-    xit("#pal18-04a GET 200 YES: Poleng. 'We see them.'", () => {
+    it("#pal18-04a GET 200 YES: Poleng. 'We see them.'", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -361,12 +385,45 @@ describe("/api", function () {
         .then((res) => {
           let ref = [
             {
-              ENG: ["We see them."],
-              POL: "Widziemy ich.",
+              ENG: ["We see them.", "We are seeing them."],
+              POL: "Widzimy ich.",
             },
             {
-              ENG: ["We see them."],
-              POL: "Widziemy je.",
+              ENG: ["We see them.", "We are seeing them."],
+              POL: "Widzimy je.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal18-04b GET 200 YES: Poleng. 'We see them.' PDS should have no effect.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy62",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["We see them.", "We are seeing them."],
+              POL: "Widzimy ich.",
+            },
+            {
+              ENG: ["We see them.", "We are seeing them."],
+              POL: "Widzimy je.",
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(

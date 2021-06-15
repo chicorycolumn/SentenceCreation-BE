@@ -605,6 +605,12 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         );
 
         //PDSX4-orange-true
+        //
+        //Eg    Q: "With the sheep.",    A: ["Z owcą."]
+        //This fxn determined that the Q would be same sentence whether singular or plural,
+        //so let's agglomerate the answer array to be ["Z owcą.", "Z owcami."]
+        //And the same for "I saw." --> ["Zobaczyłem.", "Zobaczyłam."]
+        //
         if (questionOutputUnit.structureChunk.dontSpecifyOnThisChunk) {
           let combinedTraitValues = [
             ...questionOutputUnit.structureChunk[annoTraitKey],

@@ -2054,4 +2054,37 @@ exports.dummySentenceFormulasBank = [
     primaryOrders: [["ver-1"]],
     additionalOrders: [["pro-1", "ver-1"]],
   },
+  {
+    sentenceFormulaSymbol: "dummy62",
+    sentenceFormulaId: "POL-dummy62",
+    translations: { ENG: ["ENG-dummy62"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1",
+        specificLemmas: ["PERSONAL"],
+        gcase: ["nom"],
+        number: ["plural"],
+        person: ["1per"],
+      },
+      {
+        chunkId: "ver-1",
+        agreeWith: "pro-1",
+        specificLemmas: ["widzieć", "zobaczyć"],
+        tenseDescription: ["present im"],
+      },
+      {
+        chunkId: "pro-2",
+        specificLemmas: ["PERSONAL"],
+        gcase: ["acc"],
+        number: ["plural"],
+        person: ["3per"],
+      },
+    ],
+    primaryOrders: [["ver-1", "pro-2"]],
+    additionalOrders: [
+      ["pro-1", "ver-1", "pro-2"],
+      ["pro-1", "pro-2", "ver-1"],
+      ["pro-2", "ver-1"],
+    ],
+  },
 ];
