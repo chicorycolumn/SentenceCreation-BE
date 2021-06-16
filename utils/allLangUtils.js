@@ -128,11 +128,27 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
   const defaultTraitValuesRef = refObj.defaultTraitValues;
   const metaTraitValuesRef = refObj.metaTraitValues[currentLanguage];
+  const allTraits = refFxn.getStructureChunkTraits(currentLanguage);
+  const wordyTraitKeys = Object.keys(allTraits).filter(
+    (traitKey) => allTraits[traitKey].isWordyTrait
+  );
 
   sentenceStructure.forEach((structureChunk) => {
     if (gpUtils.getWordtypeStCh(structureChunk) === "fixed") {
       return;
     }
+
+    // wordyTraitKeys.forEach((wordyTraitKey) => {
+    //   if (
+    //     structureChunk[wordyTraitKey] &&
+    //     structureChunk[wordyTraitKey].length
+    //   ) {
+    //     if (!structureChunk.formulaImportantTraitKeys) {
+    //       structureChunk.formulaImportantTraitKeys = [];
+    //     }
+    //     structureChunk.formulaImportantTraitKeys.push(wordyTraitKey);
+    //   }
+    // });
 
     langUtils.preprocessStructureChunks(structureChunk);
 

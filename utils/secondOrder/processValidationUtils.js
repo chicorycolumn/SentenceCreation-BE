@@ -36,6 +36,7 @@ exports.checkDecisiveDecant = (questionSentenceData) => {
           "specificIds",
           "specificLemmas",
           "educatorBlocksAnnotationsForTheseTraitKeys",
+          "formulaImportantTraitKeys",
         ].includes(traitKey) &&
         Array.isArray(traitValue) &&
         traitValue.length > 1

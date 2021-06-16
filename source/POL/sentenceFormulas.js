@@ -1386,7 +1386,6 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-1-doctor",
-
         gcase: ["ins"],
         formulaImportantTraitKeys: ["gcase"],
         specificLemmas: ["lekarz", "lekarka"],
