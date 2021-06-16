@@ -36,7 +36,6 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
-          // devSaysThrowAfterAnnoSalvo: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "dummy61",
