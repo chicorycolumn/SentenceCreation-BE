@@ -144,7 +144,6 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
-          // devSaysThrowAfterAnnoSalvo: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "dummy61a",
@@ -776,7 +775,6 @@ describe("/api", function () {
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "118b My doctor",
-          // devSaysThrowAtMidpoint: true,
         })
         .expect(200)
         .then((res) => {
@@ -1454,7 +1452,6 @@ describe("/api", function () {
         .get("/api/palette")
         .send({
           pleaseDontSpecify: true, //Should be ignored.
-          // devSaysThrowAtMidpoint: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "116y My doctor",
@@ -1487,7 +1484,6 @@ describe("/api", function () {
         .get("/api/palette")
         .send({
           pleaseDontSpecify: true,
-          // devSaysThrowAtMidpoint: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "116x My doctor was a woman",
