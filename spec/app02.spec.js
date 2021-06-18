@@ -3688,7 +3688,6 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
-          // devSaysThrowAfterAnnoSalvo: true,
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -3783,7 +3782,6 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
-          // devSaysThrowAfterAnnoSalvo: true,
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -3830,7 +3828,6 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
-          // devSaysThrowAfterAnnoSalvo: true,
           pleaseDontSpecify: true,
           useDummy: true,
           questionLanguage,
@@ -3925,7 +3922,6 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
-          // devSaysThrowAfterAnnoSalvo: true,
           useDummy: true,
           questionLanguage,
           answerLanguage,
