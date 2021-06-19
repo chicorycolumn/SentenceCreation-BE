@@ -29,14 +29,16 @@ exports.checkDecisiveDecant = (questionSentenceData) => {
     Object.keys(structureChunk).forEach((traitKey) => {
       let traitValue = structureChunk[traitKey];
 
+      let traitsAllowedToHaveMultipleValues = Object.keys(
+        refObj.structureChunkTraits.ALL
+      ).filter(
+        (traitKey) =>
+          refObj.structureChunkTraits.ALL[traitKey]
+            .ultimatelyMultipleTraitValuesOkay
+      );
+
       if (
-        ![
-          "andTags",
-          "orTags",
-          "specificIds",
-          "specificLemmas",
-          "educatorBlocksAnnotationsForTheseTraitKeys",
-        ].includes(traitKey) &&
+        !traitsAllowedToHaveMultipleValues.includes(traitKey) &&
         Array.isArray(traitValue) &&
         traitValue.length > 1
       ) {

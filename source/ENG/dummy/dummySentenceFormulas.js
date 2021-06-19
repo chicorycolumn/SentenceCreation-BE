@@ -1037,8 +1037,6 @@ exports.dummySentenceFormulasBank = [
       },
       {
         chunkId: "art-1",
-        form: ["definite", "indefinite"],
-        formulaImportantTraitKeys: ["form"],
         preferredChoicesForQuestionSentence: { form: "indefinite" },
         agreeWith: "nco-1",
       },
@@ -1062,8 +1060,6 @@ exports.dummySentenceFormulasBank = [
       },
       {
         chunkId: "art-1",
-        form: ["definite", "indefinite"],
-        formulaImportantTraitKeys: ["form"],
         agreeWith: "nco-1",
       },
       {
@@ -1086,8 +1082,6 @@ exports.dummySentenceFormulasBank = [
       },
       {
         chunkId: "art-1",
-        form: ["definite", "indefinite"],
-        formulaImportantTraitKeys: ["form"],
         agreeWith: "nco-1",
       },
       {
@@ -1110,8 +1104,6 @@ exports.dummySentenceFormulasBank = [
       },
       {
         chunkId: "art-1",
-        form: ["definite", "indefinite"],
-        formulaImportantTraitKeys: ["form"],
         agreeWith: "nco-1",
       },
       {
@@ -1134,8 +1126,6 @@ exports.dummySentenceFormulasBank = [
       },
       {
         chunkId: "art-1",
-        form: ["definite", "indefinite"],
-        formulaImportantTraitKeys: ["form"],
         agreeWith: "nco-1",
       },
       {
@@ -1173,8 +1163,6 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "art-1",
-
-        form: ["definite", "indefinite"],
         agreeWith: "npe-1",
       },
       {
@@ -1236,7 +1224,6 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "npe-1",
-
         andTags: ["job"],
         number: ["singular"],
         gender: ["f"],

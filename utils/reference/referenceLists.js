@@ -242,6 +242,8 @@ exports.lemmaObjectTraitKeys = {
 };
 
 exports.structureChunkTraits = {
+  //Some trait are lexical (isLexical: true), used to directly find word values, eg "gender", "gcase".
+  //Others are functional (isLexical: false), eg "specificalLemmas", "preventAddingFurtherClarifiers", "andTags".
   ALL: {
     //
     //
@@ -268,8 +270,14 @@ exports.structureChunkTraits = {
       ultimatelyMultipleTraitValuesOkay: true,
     },
     dontSpecifyOnThisChunk: { expectedTypeOnStCh: "boolean" },
-    specificLemmas: { expectedTypeOnStCh: "array" },
-    specificIds: { expectedTypeOnStCh: "array" },
+    specificLemmas: {
+      expectedTypeOnStCh: "array",
+      ultimatelyMultipleTraitValuesOkay: true,
+    },
+    specificIds: {
+      expectedTypeOnStCh: "array",
+      ultimatelyMultipleTraitValuesOkay: true,
+    },
     andTags: {
       expectedTypeOnStCh: "array",
       ultimatelyMultipleTraitValuesOkay: true,
@@ -278,7 +286,7 @@ exports.structureChunkTraits = {
       expectedTypeOnStCh: "array",
       ultimatelyMultipleTraitValuesOkay: true,
     },
-    form: { expectedTypeOnStCh: "array" },
+    form: { expectedTypeOnStCh: "array", isLexical: true },
     chunkId: { expectedTypeOnStCh: "string" },
     preferredChoicesForQuestionSentence: {
       expectedTypeOnStCh: "keyValueObject",
@@ -330,6 +338,7 @@ exports.structureChunkTraits = {
     //
     //
     tenseDescription: {
+      isLexical: true,
       compatibleWordtypes: ["verb"],
       expectedTypeOnStCh: "array",
       possibleTraitValues: [
@@ -353,11 +362,13 @@ exports.structureChunkTraits = {
       ],
     },
     person: {
+      isLexical: true,
       compatibleWordtypes: ["noun", "verb", "pronoun"],
       expectedTypeOnStCh: "array",
       possibleTraitValues: ["1per", "2per", "3per", "impersonal"],
     },
     gender: {
+      isLexical: true,
       compatibleWordtypes: ["noun", "verb", "adjective", "pronoun"],
       expectedTypeOnStCh: "array",
       possibleTraitValues: [
@@ -379,21 +390,25 @@ exports.structureChunkTraits = {
       ],
     },
     number: {
+      isLexical: true,
       compatibleWordtypes: ["noun", "verb", "adjective", "pronoun"],
       expectedTypeOnStCh: "array",
       possibleTraitValues: ["singular", "plural"],
     },
     gcase: {
+      isLexical: true,
       compatibleWordtypes: ["noun", "adjective", "pronoun"],
       expectedTypeOnStCh: "array",
       possibleTraitValues: ["nom", "gen", "dat", "acc", "ins", "loc"],
     },
     aspect: {
+      isLexical: true,
       compatibleWordtypes: ["verb"],
       expectedTypeOnStCh: "array",
       possibleTraitValues: ["imperfective", "perfective"],
     },
     tense: {
+      isLexical: true,
       compatibleWordtypes: ["verb"],
       expectedTypeOnStCh: "array",
       possibleTraitValues: [
@@ -412,6 +427,7 @@ exports.structureChunkTraits = {
     //
     //
     tenseDescription: {
+      isLexical: true,
       compatibleWordtypes: ["verb"],
       expectedTypeOnStCh: "array",
       possibleTraitValues: [
@@ -430,26 +446,31 @@ exports.structureChunkTraits = {
       ],
     },
     person: {
+      isLexical: true,
       compatibleWordtypes: ["noun", "verb", "pronoun"],
       expectedTypeOnStCh: "array",
       possibleTraitValues: ["1per", "2per", "3per"],
     },
     gender: {
+      isLexical: true,
       compatibleWordtypes: ["noun", "pronoun"],
       expectedTypeOnStCh: "array",
       possibleTraitValues: ["m", "f", "n", "virile", "nonvirile"],
     },
     number: {
+      isLexical: true,
       compatibleWordtypes: ["noun", "verb", "pronoun", "article"],
       expectedTypeOnStCh: "array",
       possibleTraitValues: ["singular", "plural"],
     },
     gcase: {
+      isLexical: true,
       compatibleWordtypes: ["noun", "pronoun"],
       expectedTypeOnStCh: "array",
       possibleTraitValues: ["nom", "gen", "dat", "acc"],
     },
     tense: {
+      isLexical: true,
       compatibleWordtypes: ["verb"],
       expectedTypeOnStCh: "array",
       possibleTraitValues: [
