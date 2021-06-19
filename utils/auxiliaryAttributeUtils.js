@@ -43,19 +43,23 @@ exports.firstStageEvaluateAnnotations = (
     answerSentenceData
   );
 
-  aaUtils.listdataUnitsOfStChsToBeCounterfaxed(
-    questionOutputArr,
-    languagesObj,
-    answerSentenceData,
-    questionSentenceFormula,
-    reqBody,
-    answerSelectedWordsSetsHaveChanged,
-    questionOutputUnitsThatHaveBeenCounterfaxed,
-    runsRecord,
-    originalQuestionSentenceFormula
-  );
+  //This arr should only be created once, on the original run...
+  let dataUnitsOfStChsToBeCounterfaxed =
+    aaUtils.listdataUnitsOfStChsToBeCounterfaxed(
+      questionOutputArr,
+      languagesObj,
+      answerSentenceData,
+      questionSentenceFormula,
+      reqBody,
+      answerSelectedWordsSetsHaveChanged,
+      questionOutputUnitsThatHaveBeenCounterfaxed,
+      runsRecord,
+      originalQuestionSentenceFormula
+    );
 
+  //...but I think this should be able to run on subsequent counterfax runs. So counterfax within counterfax kind of thing, for Step-Iota.
   aaUtils.removeAnnotationsByCounterfactualAnswerSentences(
+    dataUnitsOfStChsToBeCounterfaxed,
     questionOutputArr,
     languagesObj,
     answerSentenceData,
@@ -130,10 +134,7 @@ exports.listdataUnitsOfStChsToBeCounterfaxed = (
   let questionOutputArrOrderedHeadsFirst =
     reorderOutputArrWithHeadsFirst(questionOutputArr);
 
-  function reorderOutputArrWithHeadsFirst(
-    questionOutputArr,
-    questionOutputArrOrderedHeadsFirst
-  ) {
+  function reorderOutputArrWithHeadsFirst(questionOutputArr) {
     let questionOutputArrOrderedHeadsFirst = [];
     let headChunkIds = [];
 
@@ -161,7 +162,7 @@ exports.listdataUnitsOfStChsToBeCounterfaxed = (
           questionOutputUnit.structureChunk.chunkId === headChunkId
       );
 
-      if (!headCh) {
+      if (!headOutputUnit) {
         consol.throw(
           `kozs Failure to find headChunk for headChunkId ${headChunkId}.`
         );
@@ -290,6 +291,7 @@ exports.listdataUnitsOfStChsToBeCounterfaxed = (
 };
 
 exports.removeAnnotationsByCounterfactualAnswerSentences = (
+  dataUnitsOfStChsToBeCounterfaxed,
   questionOutputArr,
   languagesObj,
   answerSentenceData,
