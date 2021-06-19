@@ -614,7 +614,7 @@ exports.giveFinalSentences = (
   questionSentenceFormula,
   reqBody,
   answerSelectedWordsSetsHaveChanged,
-  additionalRunsRecord,
+  runsRecord,
   originalQuestionSentenceFormula
 ) => {
   let {
@@ -671,7 +671,7 @@ exports.giveFinalSentences = (
         questionSentenceFormula,
         reqBody,
         answerSelectedWordsSetsHaveChanged,
-        additionalRunsRecord,
+        runsRecord,
         originalQuestionSentenceFormula
       );
     }

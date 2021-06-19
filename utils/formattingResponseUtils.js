@@ -6,9 +6,9 @@ const refObj = require("./reference/referenceObjects.js");
 exports.finishAndSend = (
   questionResponseObj,
   answerResponseObj,
-  additionalRunsRecord
+  runsRecord
 ) => {
-  let combinedResponseObj = { additionalRunsRecord };
+  let combinedResponseObj = { runsRecord };
 
   let refs = [
     { responseObject: questionResponseObj, mode: "question" },

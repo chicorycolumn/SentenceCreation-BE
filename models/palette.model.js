@@ -428,7 +428,7 @@ exports.fetchPalette = (req) => {
   }
 
   let answerSelectedWordsSetsHaveChanged = { bool: false };
-  let additionalRunsRecord = [];
+  let runsRecord = [];
 
   consol.log(
     `csej fetchPalette. questionSentenceData`,
@@ -444,7 +444,7 @@ exports.fetchPalette = (req) => {
     questionSentenceFormula,
     req.body,
     answerSelectedWordsSetsHaveChanged,
-    additionalRunsRecord,
+    runsRecord,
     originalQuestionSentenceFormula
   );
 
@@ -475,6 +475,6 @@ exports.fetchPalette = (req) => {
   return frUtils.finishAndSend(
     questionResponseObj,
     answerResponseObj,
-    additionalRunsRecord
+    runsRecord
   );
 };

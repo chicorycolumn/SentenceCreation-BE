@@ -16,7 +16,7 @@ exports.firstStageEvaluateAnnotations = (
   questionSentenceFormula,
   reqBody,
   answerSelectedWordsSetsHaveChanged,
-  additionalRunsRecord,
+  runsRecord,
   originalQuestionSentenceFormula
 ) => {
   consol.log(questionOutputArr.map((unit) => unit.structureChunk));
@@ -50,7 +50,7 @@ exports.firstStageEvaluateAnnotations = (
       reqBody,
       answerSelectedWordsSetsHaveChanged,
       questionOutputUnitsThatHaveBeenCounterfactualed,
-      additionalRunsRecord,
+      runsRecord,
       originalQuestionSentenceFormula
     );
 
@@ -142,7 +142,7 @@ exports.whittleAnnotationsAndConvertToPlainspeak = (
   reqBody,
   answerSelectedWordsSetsHaveChanged,
   questionOutputUnitsThatHaveBeenCounterfactualed,
-  additionalRunsRecord,
+  runsRecord,
   originalQuestionSentenceFormula
 ) => {
   //This fxn removes annotations and then translates into plainspeak.
@@ -172,7 +172,7 @@ exports.whittleAnnotationsAndConvertToPlainspeak = (
     reqBody,
     answerSelectedWordsSetsHaveChanged,
     questionOutputUnitsThatHaveBeenCounterfactualed,
-    additionalRunsRecord,
+    runsRecord,
     originalQuestionSentenceFormula
   );
 
@@ -202,7 +202,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   reqBody,
   answerSelectedWordsSetsHaveChanged,
   questionOutputUnitsThatHaveBeenCounterfactualed,
-  additionalRunsRecord,
+  runsRecord,
   originalQuestionSentenceFormula
 ) => {
   let questionLanguage = languagesObj.questionLanguage;
@@ -295,6 +295,10 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         `myxe removeAnnotationsByCounterfax FOREACH START. Examining ${questionOutputUnit.structureChunk.chunkId}'s annotation ${annoTraitKey} = ${annoTraitValue} so the counterfactual traitValues are [${counterfactualTraitValuesForThisTraitKey}].`
       );
 
+      runsRecord.push(
+        `${questionOutputUnit.structureChunk.chunkId} had ${annoTraitKey} "${annoTraitValue}".`
+      );
+
       counterfactualTraitValuesForThisTraitKey.forEach(
         (counterfactualTraitValueForThisTraitKey) => {
           consol.log(
@@ -360,11 +364,9 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             devSaysOmitStChValidation: reqBody.devSaysOmitStChValidation,
           };
 
-          additionalRunsRecord.push([
-            questionOutputUnit.structureChunk.chunkId,
-            annoTraitKey,
-            counterfactualTraitValueForThisTraitKey,
-          ]);
+          runsRecord.push(
+            `${questionOutputUnit.structureChunk.chunkId} new ${annoTraitKey} "${counterfactualTraitValueForThisTraitKey}".`
+          );
 
           consol.log(
             "\n--------------------------------COUNTERFAX RUN BEGINNING\n"
@@ -444,7 +446,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             `klwe removeAnnotationsByCounterfax. We made counterfactuals for question stCh "${questionOutputUnit.structureChunk.chunkId}" based on its annotations, shown above.` +
             "[0m"
         );
-        consol.log({ additionalRunsRecord });
+        consol.log({ "additional runs": runsRecord });
         consol.log(
           "originalQuestionOutputArrays...selectedWords",
           originalQuestionOutputArrays.map((outputArr) =>

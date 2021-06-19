@@ -278,7 +278,91 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal18-04a GET 200 YES: Engpol. 'We see them.'", () => {
+    it("#pal18-04a GET 200 YES: Engpol. 'A woman saw me.'", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "119 Woman saw me",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "A woman saw me.",
+              POL: ["Kobieta mnie zobaczyła."],
+            },
+            {
+              ENG: "The woman saw me.",
+              POL: ["Kobieta mnie zobaczyła."],
+            },
+            {
+              ENG: "Women saw me.",
+              POL: ["Kobiety mnie zobaczyły."],
+            },
+            {
+              ENG: "The women saw me.",
+              POL: ["Kobiety mnie zobaczyły."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal18-04b GET 200 YES: Poleng. 'A woman saw me.'", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "119 Woman saw me",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: [
+                "The woman saw me.",
+                "The woman had seen me.",
+                "The woman has seen me.",
+                "A woman saw me.",
+                "A woman had seen me.",
+                "A woman has seen me.",
+              ],
+              POL: "Kobieta mnie zobaczyła.",
+            },
+            {
+              ENG: [
+                "The women saw me.",
+                "The women had seen me.",
+                "The women have seen me.",
+                "Women saw me.",
+                "Women had seen me.",
+                "Women have seen me.",
+              ],
+              POL: "Kobiety mnie zobaczyły.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal18-05a GET 200 YES: Engpol. 'We see them.'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -329,7 +413,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal18-04b GET 200 YES: Engpol. 'We see them.' PDS", () => {
+    it("#pal18-05b GET 200 YES: Engpol. 'We see them.' PDS", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -367,7 +451,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal18-04a GET 200 YES: Poleng. 'We see them.'", () => {
+    it("#pal18-05c GET 200 YES: Poleng. 'We see them.'", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -399,7 +483,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal18-04b GET 200 YES: Poleng. 'We see them.' PDS should have no effect.", () => {
+    it("#pal18-05d GET 200 YES: Poleng. 'We see them.' PDS should have no effect.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -432,7 +516,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal18-05a GET 200 YES: Engpol. 'A woman saw me.'", () => {
+    it("#pal18-06a GET 200 YES: Engpol. 'We saw them.'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -441,26 +525,95 @@ describe("/api", function () {
         .send({
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "119 Woman saw me",
+          sentenceFormulaSymbol: "dummy62a",
+          useDummy: true,
         })
         .expect(200)
         .then((res) => {
           let ref = [
             {
-              ENG: "A woman saw me.",
-              POL: ["Kobieta mnie zobaczyła."],
+              ENG: "We (males) saw them (males).",
+              POL: [
+                "Zobaczyliśmy ich.",
+                "Ich zobaczyliśmy.",
+                "My ich zobaczyliśmy.",
+                "My zobaczyliśmy ich.",
+              ],
             },
             {
-              ENG: "The woman saw me.",
-              POL: ["Kobieta mnie zobaczyła."],
+              ENG: "We (females) saw them (females).",
+              POL: [
+                "Zobaczyłyśmy je.",
+                "Je zobaczyłyśmy.",
+                "My je zobaczyłyśmy.",
+                "My zobaczyłyśmy je.",
+              ],
             },
             {
-              ENG: "Women saw me.",
-              POL: ["Kobiety mnie zobaczyły."],
+              ENG: "We (mixed) saw them (mixed).",
+              POL: [
+                "Zobaczyliśmy ich.",
+                "Ich zobaczyliśmy.",
+                "My ich zobaczyliśmy.",
+                "My zobaczyliśmy ich.",
+              ],
+            },
+            ///////////////////
+            {
+              ENG: "We (males) saw them (mixed).",
+              POL: [
+                "Zobaczyliśmy ich.",
+                "Ich zobaczyliśmy.",
+                "My ich zobaczyliśmy.",
+                "My zobaczyliśmy ich.",
+              ],
             },
             {
-              ENG: "The women saw me.",
-              POL: ["Kobiety mnie zobaczyły."],
+              ENG: "We (males) saw them (females).",
+              POL: [
+                "Zobaczyliśmy je.",
+                "Je zobaczyliśmy.",
+                "My je zobaczyliśmy.",
+                "My zobaczyliśmy je.",
+              ],
+            },
+            ////////////////////
+            {
+              ENG: "We (females) saw them (males).",
+              POL: [
+                "Zobaczyłyśmy ich.",
+                "Ich zobaczyłyśmy.",
+                "My ich zobaczyłyśmy.",
+                "My zobaczyłyśmy ich.",
+              ],
+            },
+            {
+              ENG: "We (females) saw them (mixed).",
+              POL: [
+                "Zobaczyłyśmy ich.",
+                "Ich zobaczyłyśmy.",
+                "My ich zobaczyłyśmy.",
+                "My zobaczyłyśmy ich.",
+              ],
+            },
+            /////////////////////
+            {
+              ENG: "We (mixed) saw them (males).",
+              POL: [
+                "Zobaczyliśmy ich.",
+                "Ich zobaczyliśmy.",
+                "My ich zobaczyliśmy.",
+                "My zobaczyliśmy ich.",
+              ],
+            },
+            {
+              ENG: "We (mixed) saw them (females).",
+              POL: [
+                "Zobaczyliśmy je.",
+                "Je zobaczyliśmy.",
+                "My je zobaczyliśmy.",
+                "My zobaczyliśmy je.",
+              ],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -471,7 +624,94 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal18-05b GET 200 YES: Poleng. 'A woman saw me.'", () => {
+    it.only("#pal18-06b GET 200 YES: Engpol. 'We saw them.' PDS", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy62a",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "We saw them.",
+              POL: [
+                "Zobaczyliśmy ich.",
+                "Ich zobaczyliśmy.",
+                "My ich zobaczyliśmy.",
+                "My zobaczyliśmy ich.",
+                /////////
+                "Zobaczyłyśmy je.",
+                "Je zobaczyłyśmy.",
+                "My je zobaczyłyśmy.",
+                "My zobaczyłyśmy je.",
+                /////////
+                "Zobaczyłyśmy ich.",
+                "Ich zobaczyłyśmy.",
+                "My ich zobaczyłyśmy.",
+                "My zobaczyłyśmy ich.",
+                /////////
+                "Zobaczyliśmy je.",
+                "Je zobaczyliśmy.",
+                "My je zobaczyliśmy.",
+                "My zobaczyliśmy je.",
+              ],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal18-05b GET 200 YES: Engpol. 'We see them.' PDS", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy62",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "We see them.",
+              POL: [
+                "Widzimy je.",
+                "Je widzimy.",
+                "My je widzimy.",
+                "My widzimy je.",
+                "Widzimy ich.",
+                "Ich widzimy.",
+                "My ich widzimy.",
+                "My widzimy ich.",
+              ],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal18-05c GET 200 YES: Poleng. 'We see them.'", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -480,32 +720,52 @@ describe("/api", function () {
         .send({
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "119 Woman saw me",
+          sentenceFormulaSymbol: "dummy62",
+          useDummy: true,
         })
         .expect(200)
         .then((res) => {
           let ref = [
             {
-              ENG: [
-                "The woman saw me.",
-                "The woman had seen me.",
-                "The woman has seen me.",
-                "A woman saw me.",
-                "A woman had seen me.",
-                "A woman has seen me.",
-              ],
-              POL: "Kobieta mnie zobaczyła.",
+              ENG: ["We see them.", "We are seeing them."],
+              POL: "Widzimy ich.",
             },
             {
-              ENG: [
-                "The women saw me.",
-                "The women had seen me.",
-                "The women have seen me.",
-                "Women saw me.",
-                "Women had seen me.",
-                "Women have seen me.",
-              ],
-              POL: "Kobiety mnie zobaczyły.",
+              ENG: ["We see them.", "We are seeing them."],
+              POL: "Widzimy je.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal18-05d GET 200 YES: Poleng. 'We see them.' PDS should have no effect.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy62",
+          useDummy: true,
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["We see them.", "We are seeing them."],
+              POL: "Widzimy ich.",
+            },
+            {
+              ENG: ["We see them.", "We are seeing them."],
+              POL: "Widzimy je.",
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
