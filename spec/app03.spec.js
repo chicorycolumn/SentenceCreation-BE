@@ -516,6 +516,7 @@ describe("/api", function () {
           );
         });
     });
+    //STEP-IOTA
     it("#pal18-06a GET 200 YES: Engpol. 'We saw them.'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -673,45 +674,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal18-05b GET 200 YES: Engpol. 'We see them.' PDS", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy62",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "We see them.",
-              POL: [
-                "Widzimy je.",
-                "Je widzimy.",
-                "My je widzimy.",
-                "My widzimy je.",
-                "Widzimy ich.",
-                "Ich widzimy.",
-                "My ich widzimy.",
-                "My widzimy ich.",
-              ],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    it("#pal18-05c GET 200 YES: Poleng. 'We see them.'", () => {
+    it("#pal18-06c GET 200 YES: Poleng. 'We saw them.'", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -720,19 +683,27 @@ describe("/api", function () {
         .send({
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy62",
+          sentenceFormulaSymbol: "dummy62a",
           useDummy: true,
         })
         .expect(200)
         .then((res) => {
           let ref = [
             {
-              ENG: ["We see them.", "We are seeing them."],
-              POL: "Widzimy ich.",
+              ENG: ["We saw them.", "We had seen them.", "We have seen them."],
+              POL: "Zobaczyliśmy ich.",
             },
             {
-              ENG: ["We see them.", "We are seeing them."],
-              POL: "Widzimy je.",
+              ENG: ["We saw them.", "We had seen them.", "We have seen them."],
+              POL: "Zobaczyłyśmy ich.",
+            },
+            {
+              ENG: ["We saw them.", "We had seen them.", "We have seen them."],
+              POL: "Zobaczyliśmy je.",
+            },
+            {
+              ENG: ["We saw them.", "We had seen them.", "We have seen them."],
+              POL: "Zobaczyłyśmy je.",
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -743,7 +714,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal18-05d GET 200 YES: Poleng. 'We see them.' PDS should have no effect.", () => {
+    it("#pal18-06d GET 200 YES: Poleng. 'We see them.' PDS should have no effect.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -760,12 +731,20 @@ describe("/api", function () {
         .then((res) => {
           let ref = [
             {
-              ENG: ["We see them.", "We are seeing them."],
-              POL: "Widzimy ich.",
+              ENG: ["We saw them.", "We had seen them.", "We have seen them."],
+              POL: "Zobaczyliśmy ich.",
             },
             {
-              ENG: ["We see them.", "We are seeing them."],
-              POL: "Widzimy je.",
+              ENG: ["We saw them.", "We had seen them.", "We have seen them."],
+              POL: "Zobaczyłyśmy ich.",
+            },
+            {
+              ENG: ["We saw them.", "We had seen them.", "We have seen them."],
+              POL: "Zobaczyliśmy je.",
+            },
+            {
+              ENG: ["We saw them.", "We had seen them.", "We have seen them."],
+              POL: "Zobaczyłyśmy je.",
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
