@@ -227,9 +227,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   answerSentenceData.answerOutputArrays.forEach((answerOutputArray) => {
     originalAnswerOutputArrays.push(answerOutputArray);
   });
-  let arrayOfAnswerSelectedWords = answerSentenceData.answerOutputArrays.map(
-    (outputArr) => outputArr.map((unit) => unit.selectedWord)
-  );
 
   consol.log("myxz questionOutputUnit", questionOutputUnit);
 
@@ -279,13 +276,13 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         counterfactualTraitValuesForThisTraitKey
       );
 
-      //ACX3: eg If "plural" then remove "m", "f". If person, remove "n".
       let counterfaxedStCh = uUtils.copyWithoutReference(
         questionOutputUnit.structureChunk
       );
 
       counterfaxedStCh[annoTraitKey] = counterfactualTraitValuesForThisTraitKey;
 
+      //If "plural", remove "m", "f". If person, remove "n".
       counterfactualTraitValuesForThisTraitKey =
         refFxn.removeIncompatibleTraits(questionLanguage, counterfaxedStCh)[
           annoTraitKey

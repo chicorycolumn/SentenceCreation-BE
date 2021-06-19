@@ -26,7 +26,7 @@ describe("/api", function () {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe("/palette - Stage 18: Further annotations.", () => {
+  describe.only("/palette - Stage 18: Further annotations.", () => {
     it("#pal18-01a GET 200 YES: Engpol. 'she reads' tenseDesc anno should be removed by conditionsOnWhichToBlockAnnotations.", () => {
       //Originally failed as removeAnnotationsByCounterfax lets tenseDesc annos through, would be too many alternate values to check.
       //So this situation, where the anno should be kept, is hardcoded in refObj conditionsOnWhichToBlockAnnotations.
@@ -516,7 +516,6 @@ describe("/api", function () {
           );
         });
     });
-    //STEP-IOTA
     it("#pal18-06a GET 200 YES: Engpol. 'We saw them.'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -625,7 +624,7 @@ describe("/api", function () {
           );
         });
     });
-    it.only("#pal18-06b GET 200 YES: Engpol. 'We saw them.' PDS", () => {
+    it.only("#pal18-06b GET 200 YES: Engpol. 'We saw them.' PDS. *This tests Step-Iota*", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -724,7 +723,7 @@ describe("/api", function () {
           pleaseDontSpecify: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy62",
+          sentenceFormulaSymbol: "dummy62a",
           useDummy: true,
         })
         .expect(200)
