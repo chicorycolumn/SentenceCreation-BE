@@ -155,6 +155,39 @@ exports.copyAndCombineWordbanks = (wordbank1, wordbank2) => {
   return wordbank1Copy;
 };
 
+function explodeCounterfaxSituations(sits) {
+  let sits = {
+    headsFirstSequenceChunkIds: ["pro-1", "pro-2"],
+    "pro-1": ["pro-1=gender=nonvirile", "pro-1=gender=virile"],
+    "pro-2": ["pro-2=gender=nonvirile", , "pro-2=gender=virile", ,],
+  };
+
+  let resArr = [];
+  let sentence = [];
+  let chunkIds = sits.headsFirstSequenceChunkIds;
+
+  inner(sits, chunkIds);
+
+  function inner(sits, chunkIds) {
+    if (!chunkIds.length) {
+      // console.log("PUSH")
+      resArr.push(sentence.slice(0));
+      sentence.pop();
+      return;
+    }
+
+    chunkIds.forEach((chunkId) => {
+      sits[chunkId].forEach((sit) => {
+        // console.log("----------------", sit)
+        sentence.push(sit);
+        inner(sits, chunkIds.slice(1));
+      });
+      sentence.pop();
+    });
+  }
+  return resArr;
+}
+
 exports.explodeOutputArraysByHeadsAndDependents = (justOneOutputArray) => {
   consol.log(
     "mdpu explodeOutputArraysByHeadsAndDependents START. justOneOutputArray"
