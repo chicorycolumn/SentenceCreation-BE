@@ -29,8 +29,6 @@ exports.firstStageEvaluateAnnotations = (
     );
   }
 
-  let questionOutputUnitsThatHaveBeenCounterfaxed = {};
-
   aaUtils.removeAnnotationsByRef(
     questionOutputArr,
     languagesObj,
@@ -44,22 +42,13 @@ exports.firstStageEvaluateAnnotations = (
   );
 
   //This arr should only be created once, on the original run...
-  let dataUnitsOfStChsToBeCounterfaxed =
-    aaUtils.listdataUnitsOfStChsToBeCounterfaxed(
-      questionOutputArr,
-      languagesObj,
-      answerSentenceData,
-      questionSentenceFormula,
-      reqBody,
-      answerSelectedWordsSetsHaveChanged,
-      questionOutputUnitsThatHaveBeenCounterfaxed,
-      runsRecord,
-      originalQuestionSentenceFormula
-    );
+  let unitsToCounterfax = aaUtils.listUnitsToCounterfax(questionOutputArr);
+
+  let questionOutputUnitsThatHaveBeenCounterfaxed = {};
 
   //...but I think this should be able to run on subsequent counterfax runs. So counterfax within counterfax kind of thing, for Step-Iota.
   aaUtils.removeAnnotationsByCounterfactualAnswerSentences(
-    dataUnitsOfStChsToBeCounterfaxed,
+    unitsToCounterfax,
     questionOutputArr,
     languagesObj,
     answerSentenceData,
@@ -117,19 +106,8 @@ exports.convertAnnotationsToPlainspeak = (questionOutputUnit, languagesObj) => {
   return result;
 };
 
-exports.listdataUnitsOfStChsToBeCounterfaxed = (
-  questionOutputArr,
-  languagesObj,
-  answerSentenceData,
-  rawQuestionSentenceFormula,
-  reqBody,
-  answerSelectedWordsSetsHaveChanged,
-  questionOutputUnitsThatHaveBeenCounterfaxed,
-  runsRecord
-) => {
-  let questionLanguage = languagesObj.questionLanguage;
-
-  let dataUnitsOfStChsToBeCounterfaxed = [];
+exports.listUnitsToCounterfax = (questionOutputArr) => {
+  let unitsToCounterfax = [];
 
   let questionOutputArrOrderedHeadsFirst =
     reorderOutputArrWithHeadsFirst(questionOutputArr);
@@ -211,17 +189,6 @@ exports.listdataUnitsOfStChsToBeCounterfaxed = (
       return;
     }
 
-    if (
-      aaUtils.removeAnnotationsIfHeadChunkHasBeenCounterfaxed(
-        questionOutputUnitsThatHaveBeenCounterfaxed,
-        questionOutputUnit
-      )
-    ) {
-      //ACX1: If this QstCh agrees with a stCh that we've already run through counterfaxing,
-      //then remove that specific annotation from this QstCh, and return.
-      return;
-    }
-
     Object.keys(questionOutputUnit.structureChunk.annotations).forEach(
       (annoTraitKey) => {
         //ACX2A: Don't bother running counterfactuals for wordtype/emoji/text annotations, as they'll always be needed.
@@ -235,7 +202,7 @@ exports.listdataUnitsOfStChsToBeCounterfaxed = (
           return;
         }
 
-        let dataUnit = dataUnitsOfStChsToBeCounterfaxed.find(
+        let dataUnit = unitsToCounterfax.find(
           (dataUnit) =>
             dataUnit.questionOutputUnit.structureChunk.chunkId ===
             questionOutputUnit.structureChunk.chunkId
@@ -243,69 +210,20 @@ exports.listdataUnitsOfStChsToBeCounterfaxed = (
         if (dataUnit) {
           dataUnit.annoTraitKeysToCounterfax.push(annoTraitKey);
         } else {
-          dataUnitsOfStChsToBeCounterfaxed.push({
+          unitsToCounterfax.push({
             questionOutputUnit,
             annoTraitKeysToCounterfax: [annoTraitKey],
           });
         }
-
-        // let annoTraitValue =
-        //   questionOutputUnit.structureChunk.annotations[annoTraitKey];
-
-        // let counterfactualTraitValuesForThisTraitKey = Array.from(
-        //   new Set(
-        //     refFxn
-        //       .getStructureChunkTraits(questionLanguage)
-        //       [annoTraitKey].possibleTraitValues.filter(
-        //         (traitValue) => traitValue !== annoTraitValue
-        //       )
-        //   )
-        // );
-
-        // consol.log(
-        //   "veem counterfactualTraitValuesForThisTraitKey",
-        //   counterfactualTraitValuesForThisTraitKey
-        // );
-
-        // ////////////////////////////////////
-
-        // let counterfaxedStCh = uUtils.copyWithoutReference(
-        //   questionOutputUnit.structureChunk
-        // );
-
-        // counterfaxedStCh[annoTraitKey] =
-        //   counterfactualTraitValuesForThisTraitKey;
-
-        // //If "plural", remove "m", "f". If person, remove "n".
-        // counterfactualTraitValuesForThisTraitKey =
-        //   refFxn.removeIncompatibleTraits(questionLanguage, counterfaxedStCh)[
-        //     annoTraitKey
-        //   ];
-
-        // consol.log(
-        //   `myxe removeAnnotationsByCounterfax FOREACH START. Examining ${questionOutputUnit.structureChunk.chunkId}'s annotation ${annoTraitKey} = ${annoTraitValue} so the counterfactual traitValues are [${counterfactualTraitValuesForThisTraitKey}].`
-        // );
-
-        // let recordString = `${questionOutputUnit.structureChunk.chunkId} had ${annoTraitKey} "${annoTraitValue}" but now it will have [${counterfactualTraitValuesForThisTraitKey}].`;
-
-        // runsRecord.push(recordString);
-
-        // dataUnitsOfStChsToBeCounterfaxed.push([
-        //   recordString,
-        //   counterfaxedStCh,
-        //   annoTraitKey,
-        //   annoTraitValue,
-        //   counterfactualTraitValuesForThisTraitKey,
-        // ]);
       }
     );
   });
 
-  return dataUnitsOfStChsToBeCounterfaxed;
+  return unitsToCounterfax;
 };
 
 exports.removeAnnotationsByCounterfactualAnswerSentences = (
-  dataUnitsOfStChsToBeCounterfaxed,
+  unitsToCounterfax,
   questionOutputArr,
   languagesObj,
   answerSentenceData,
@@ -321,19 +239,11 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   let shouldConsoleLog = false;
   let questionLanguage = languagesObj.questionLanguage;
 
-  dataUnitsOfStChsToBeCounterfaxed.forEach((dataUnitOfStChToBeCounterfaxed) => {
+  unitsToCounterfax.forEach((unitToCounterfax) => {
     let originalQuestionOutputArrays = [questionOutputArr]; //@
     let originalAnswerOutputArrays = answerSentenceData.answerOutputArrays; //@
 
-    // let {
-    //   counterfaxedStCh,
-    //   annoTraitKey,
-    //   annoTraitValue,
-    //   counterfactualTraitValuesForThisTraitKey,
-    // } = dataUnitOfStChToBeCounterfaxed;
-
-    let { questionOutputUnit, annoTraitKeysToCounterfax } =
-      dataUnitOfStChToBeCounterfaxed;
+    let { questionOutputUnit, annoTraitKeysToCounterfax } = unitToCounterfax;
 
     if (
       aaUtils.removeAnnotationsIfHeadChunkHasBeenCounterfaxed(
