@@ -603,7 +603,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           }
         );
 
-        //PDSX4-orange-true
+        //PDS-Diamond: Do if PDS true.
         //
         //Eg    Q: "With the sheep.",    A: ["Z owcą."]
         //This fxn determined that the Q would be same sentence whether singular or plural,
@@ -618,13 +618,33 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
           answerSelectedWordsSetsHaveChanged.bool = true;
 
+          newArr = [
+            ...answerSentenceData.answerOutputArrays,
+            ...counterfactualAnswerOutputArrays,
+          ];
+
+          consol.logSpecial1(
+            ">>>>>>>>>>>>>>>>>>>>>>",
+            newArr.forEach((x) => {
+              consol.logSpecial1("");
+              x.forEach((y) => {
+                if (["pro-1", "pro-2"].includes(y.structureChunk.chunkId)) {
+                  console.log(
+                    `${y.structureChunk.chunkId}-${y.structureChunk.gender}`
+                  );
+                }
+              });
+              consol.logSpecial1("");
+            })
+          );
+
           answerSentenceData.answerOutputArrays = [
             ...answerSentenceData.answerOutputArrays,
             ...counterfactualAnswerOutputArrays,
           ];
 
           consol.log(
-            `PDSX-orange. Agglomerating the answer output arrays and deleting annoTraitValue "${annoTraitValue}", and questionOutputUnit.structureChunk[${annoTraitKey}] is now [${combinedTraitValues}]`
+            `PDS-Diamond. Agglomerating the answer output arrays and deleting annoTraitValue "${annoTraitValue}", and questionOutputUnit.structureChunk[${annoTraitKey}] is now [${combinedTraitValues}]`
           );
 
           delete questionOutputUnit.structureChunk.annotations[annoTraitKey];

@@ -336,8 +336,6 @@ exports.filterWithinSelectedLemmaObject = (
   outputArray,
   isPHD
 ) => {
-  consol.logSpecial1("filterWithinSelectedLemmaObject", lemmaObject.lemma);
-
   if ("console") {
     if (outputArray) {
       consol.log(
