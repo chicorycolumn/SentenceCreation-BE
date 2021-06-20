@@ -190,10 +190,6 @@ exports.processSentenceFormula = (
         }
 
         // Now we update the head structure chunks with the details from their respective selectedWords.
-        consol.logSpecial1(
-          "updateStructureChunk 1",
-          headOutputUnit.structureChunk.chunkId
-        );
         lfUtils.updateStructureChunk(headOutputUnit, currentLanguage);
 
         let headChunk = headOutputUnit.structureChunk;
@@ -560,10 +556,6 @@ exports.processSentenceFormula = (
       if (gpUtils.getWordtypeStCh(structureChunk) === "fixed") {
         return;
       }
-      consol.logSpecial1(
-        "updateStructureChunk 2",
-        outputUnit.structureChunk.chunkId
-      );
       lfUtils.updateStructureChunk(outputUnit, currentLanguage);
     });
 

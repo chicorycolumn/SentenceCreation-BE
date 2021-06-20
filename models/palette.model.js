@@ -62,7 +62,7 @@ exports.fetchPalette = (req) => {
         "[0m"
     );
 
-    //PDSX1-yellow-set
+    //PDS-Amethyst: Set the values.
     //
     //If PDS from req, then add PDS:true to each Q stCh.
     //Unless stCh is 'person' noun and headNoun of pronoun stCh. 'The doctor gave me his book.' must specify MGN doctor.
@@ -260,7 +260,7 @@ exports.fetchPalette = (req) => {
     );
 
     ///////////////////////////////////////////////kp Specifiers
-    //PDSX3-purple-false
+    //PDS-Chalcedony: Do if PDS false.
     //
     //Add specifiers to MGNs if their stCh has PDS:false.
     //
@@ -427,6 +427,8 @@ exports.fetchPalette = (req) => {
     return;
   }
 
+  /////////////I believe somewhere b: here and...
+
   let answerSelectedWordsSetsHaveChanged = { bool: false };
   let runsRecord = [];
 
@@ -447,6 +449,8 @@ exports.fetchPalette = (req) => {
     runsRecord,
     originalQuestionSentenceFormula
   );
+
+  //...here, we re-enter processSentenceFormula.
 
   if (answerSelectedWordsSetsHaveChanged.bool) {
     if (!answerResponseObj) {

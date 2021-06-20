@@ -596,7 +596,7 @@ exports.findMatchingLemmaObjectThenWord = (
       let selectedLemmaObject = uUtils.selectRandom(matchesCopy);
 
       if (!structureChunk.dontSpecifyOnThisChunk) {
-        //PDSX2-blue-false
+        //PDS-Beryl: Do if PDS false.
         //
         //Decant the MGNs that have PDS:false. These are Q stChs as we're in !multipleMode clause.
         //

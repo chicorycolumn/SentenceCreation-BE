@@ -624,13 +624,14 @@ describe("/api", function () {
           );
         });
     });
-    xit("#pal18-06b GET 200 YES: Engpol. 'We saw them.' PDS. *This tests Step-Iota*", () => {
+    it.only("#pal18-06b GET 200 YES: Engpol. 'We saw them.' PDS. *Failure indicates problem applying multipleMode, which hasn't happened before.*", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
         .send({
+          // devSaysThrowAtMidpoint: true,
           pleaseDontSpecify: true,
           questionLanguage,
           answerLanguage,
@@ -643,25 +644,26 @@ describe("/api", function () {
             {
               ENG: "We saw them.",
               POL: [
+                /////////M-M
                 "Zobaczyliśmy ich.",
-                "Ich zobaczyliśmy.",
-                "My ich zobaczyliśmy.",
                 "My zobaczyliśmy ich.",
-                /////////
+                "My ich zobaczyliśmy.",
+                "Ich zobaczyliśmy.",
+                /////////F-F
                 "Zobaczyłyśmy je.",
-                "Je zobaczyłyśmy.",
-                "My je zobaczyłyśmy.",
                 "My zobaczyłyśmy je.",
-                /////////
+                "My je zobaczyłyśmy.",
+                "Je zobaczyłyśmy.",
+                /////////F-M
                 "Zobaczyłyśmy ich.",
-                "Ich zobaczyłyśmy.",
-                "My ich zobaczyłyśmy.",
                 "My zobaczyłyśmy ich.",
-                /////////
+                "My ich zobaczyłyśmy.",
+                "Ich zobaczyłyśmy.",
+                /////////M-F
                 "Zobaczyliśmy je.",
-                "Je zobaczyliśmy.",
-                "My je zobaczyliśmy.",
                 "My zobaczyliśmy je.",
+                "My je zobaczyliśmy.",
+                "Je zobaczyliśmy.",
               ],
             },
           ];
