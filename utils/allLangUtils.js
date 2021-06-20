@@ -227,7 +227,6 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
 
     //Vito1: Changes stCh.
     //Right at the start, adjusting all stChs, eg if gender "f" and number "plural", we add "nonvirile".
-    consol.logSpecial1(`vvv1`);
     allLangUtils.adjustVirilityOfStructureChunk(
       currentLanguage,
       structureChunk,

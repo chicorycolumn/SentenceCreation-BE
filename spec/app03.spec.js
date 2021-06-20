@@ -624,10 +624,9 @@ describe("/api", function () {
           );
         });
     });
-    it.only("#pal18-06b GET 200 YES: Engpol. 'We saw them.' PDS. *Failure indicates problem applying multipleMode, which hasn't happened before.*", () => {
+    it.only("#pal18-06b GET 200 YES: Engpol. 'We saw them.' PDS. *Step-Iota*", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
-
       return request(app)
         .get("/api/palette")
         .send({

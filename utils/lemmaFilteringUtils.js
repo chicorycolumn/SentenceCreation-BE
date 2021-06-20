@@ -490,7 +490,6 @@ exports.updateStructureChunk = (outputUnit, currentLanguage) => {
 
   //Vito2: Changes stCh.
   //If during this updateStructureChunk fxn, stCh gets gender "f" and number "plural", its gender will adjust to "nonvirile".
-  consol.logSpecial1(`vvv2b`);
   allLangUtils.adjustVirilityOfStructureChunk(
     currentLanguage,
     outputUnit.structureChunk,
@@ -828,7 +827,6 @@ exports.filterBySelector_inner = (
           //Say lObj has gender "f", but reqArr has "nonvirile" - lObj wouldn't pass the filter, but it should.
           //So add virility values to temporary lObjSelectorValues variable that stands for selectors on the lObj.
           //Now lObj stand-in has genders "f" and "nonvirile" also, so passes filter.
-          consol.logSpecial1("vvv3");
 
           consol.log({
             currentLanguage,

@@ -42,13 +42,65 @@ exports.firstStageEvaluateAnnotations = (
   );
 
   //This arr should only be created once, on the original run...
-  let unitsToCounterfax = aaUtils.listUnitsToCounterfax(questionOutputArr);
+  let counterfaxSituations = aaUtils.listCounterfaxSituations(
+    questionOutputArr,
+    languagesObj
+  );
+
+  consol.logSpecial1("222 counterfaxSituations", counterfaxSituations);
+
+  function multiplyOutCounterfaxArrays(counterfaxSituations) {
+    let multipliedOutCounterfaxArrays = [];
+
+    let resArr = [];
+
+    inner(counterfaxSituations);
+
+    function inner(units) {
+      if (!units.length) {
+        multipliedOutCounterfaxArrays.push(resArr.slice(0));
+        return;
+      }
+
+      let counterfaxSituation = units[0];
+
+      let { questionOutputUnit, annoTraitKeysToCounterfax } =
+        counterfaxSituation;
+
+      annoTraitKeysToCounterfax.forEach((annoTraitKeyToCounterfax) => {
+        resArr.push({
+          questionOutputUnit,
+          annoTraitKeyToCounterfax,
+        });
+        inner(units.slice(1));
+        resArr.pop();
+      });
+    }
+
+    return multipliedOutCounterfaxArrays;
+  }
+
+  let multipliedOutCounterfaxArrays =
+    multiplyOutCounterfaxArrays(counterfaxSituations);
+
+  consol.logSpecial1(
+    "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~multipliedOutCounterfaxArrays"
+  );
+  multipliedOutCounterfaxArrays.forEach((x) => {
+    consol.logSpecial1("");
+    x.forEach((y) => {
+      consol.logSpecial1("");
+      consol.logSpecial1(y);
+      consol.logSpecial1("");
+    });
+    consol.logSpecial1("");
+  });
 
   let questionOutputUnitsThatHaveBeenCounterfaxed = {};
 
   //...but I think this should be able to run on subsequent counterfax runs. So counterfax within counterfax kind of thing, for Step-Iota.
   aaUtils.removeAnnotationsByCounterfactualAnswerSentences(
-    unitsToCounterfax,
+    counterfaxSituations,
     questionOutputArr,
     languagesObj,
     answerSentenceData,
@@ -106,8 +158,10 @@ exports.convertAnnotationsToPlainspeak = (questionOutputUnit, languagesObj) => {
   return result;
 };
 
-exports.listUnitsToCounterfax = (questionOutputArr) => {
-  let unitsToCounterfax = [];
+exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
+  let { questionLanguage } = languagesObj;
+
+  let counterfaxSituations = { headsFirstSequenceChunkIds: [] };
 
   let questionOutputArrOrderedHeadsFirst =
     reorderOutputArrWithHeadsFirst(questionOutputArr);
@@ -202,28 +256,104 @@ exports.listUnitsToCounterfax = (questionOutputArr) => {
           return;
         }
 
-        let dataUnit = unitsToCounterfax.find(
-          (dataUnit) =>
-            dataUnit.questionOutputUnit.structureChunk.chunkId ===
-            questionOutputUnit.structureChunk.chunkId
+        ////////---------------/////
+        ////////---------------//////////
+
+        let originalAnnoTraitValue =
+          questionOutputUnit.structureChunk.annotations[annoTraitKey];
+
+        addFaxSituation(
+          counterfaxSituations,
+          uUtils.copyWithoutReference(questionOutputUnit.structureChunk),
+          annoTraitKey,
+          originalAnnoTraitValue,
+          questionOutputUnit
         );
-        if (dataUnit) {
-          dataUnit.annoTraitKeysToCounterfax.push(annoTraitKey);
-        } else {
-          unitsToCounterfax.push({
+
+        let counterfactualTraitValuesForThisTraitKey = Array.from(
+          new Set(
+            refFxn
+              .getStructureChunkTraits(questionLanguage)
+              [annoTraitKey].possibleTraitValues.filter(
+                (traitValue) => traitValue !== originalAnnoTraitValue
+              )
+          )
+        );
+
+        consol.log(
+          "veem counterfactualTraitValuesForThisTraitKey",
+          counterfactualTraitValuesForThisTraitKey
+        );
+
+        let counterfaxedStCh = uUtils.copyWithoutReference(
+          questionOutputUnit.structureChunk
+        );
+
+        counterfaxedStCh[annoTraitKey] =
+          counterfactualTraitValuesForThisTraitKey;
+
+        //If "plural", remove "m", "f". If person, remove "n".
+        counterfactualTraitValuesForThisTraitKey =
+          refFxn.removeIncompatibleTraits(questionLanguage, counterfaxedStCh)[
+            annoTraitKey
+          ];
+
+        function addFaxSituation(
+          counterfaxSituations,
+          stCh,
+          traitKey,
+          traitValue,
+          questionOutputUnit
+        ) {
+          let newCounterfaxSituation = {
+            label: `${stCh.chunkId}=${traitKey}=${traitValue}`,
+            stCh: stCh,
             questionOutputUnit,
-            annoTraitKeysToCounterfax: [annoTraitKey],
-          });
+            traitKey: traitKey,
+            traitValue: traitValue,
+          };
+
+          if (
+            counterfaxSituations.headsFirstSequenceChunkIds.includes(
+              stCh.chunkId
+            )
+          ) {
+            counterfaxSituations[stCh.chunkId].push(newCounterfaxSituation);
+          } else {
+            counterfaxSituations.headsFirstSequenceChunkIds.push(stCh.chunkId);
+            counterfaxSituations[stCh.chunkId] = [newCounterfaxSituation];
+          }
         }
+
+        counterfactualTraitValuesForThisTraitKey.forEach(
+          (counterfactualTraitValueForThisTraitKey) => {
+            let counterfaxedStChOneSituation =
+              uUtils.copyWithoutReference(counterfaxedStCh);
+            counterfaxedStChOneSituation[annoTraitKey] = [
+              counterfactualTraitValueForThisTraitKey,
+            ];
+
+            addFaxSituation(
+              counterfaxSituations,
+              counterfaxedStChOneSituation,
+              annoTraitKey,
+              counterfactualTraitValueForThisTraitKey,
+              questionOutputUnit
+            );
+          }
+        );
+
+        ////////---------------//////////
+        ////////---------------/////
       }
     );
   });
 
-  return unitsToCounterfax;
+  return counterfaxSituations;
 };
 
 exports.removeAnnotationsByCounterfactualAnswerSentences = (
-  unitsToCounterfax,
+  counterfaxSituations,
   questionOutputArr,
   languagesObj,
   answerSentenceData,
@@ -249,11 +379,11 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   //////////////////////////////////////////////
   //////////////////////////////////////////////
 
-  unitsToCounterfax.forEach((unitToCounterfax) => {
+  counterfaxSituations.forEach((counterfaxSituation) => {
     let originalQuestionOutputArrays = [questionOutputArr]; //@
     let originalAnswerOutputArrays = answerSentenceData.answerOutputArrays; //@
 
-    let { questionOutputUnit, annoTraitKeysToCounterfax } = unitToCounterfax;
+    let { questionOutputUnit, annoTraitKeysToCounterfax } = counterfaxSituation;
 
     if (
       aaUtils.removeAnnotationsIfHeadChunkHasBeenCounterfaxed(
@@ -648,8 +778,8 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
               consol.logSpecial1("");
               x.forEach((y) => {
                 if (["pro-1", "pro-2"].includes(y.structureChunk.chunkId)) {
-                  console.log(
-                    `${y.structureChunk.chunkId}-${y.structureChunk.gender}`
+                  consol.logSpecial1(
+                    `${y.structureChunk.chunkId} = ${y.structureChunk.gender}`
                   );
                 }
               });
