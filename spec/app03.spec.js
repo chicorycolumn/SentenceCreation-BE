@@ -26,7 +26,7 @@ describe("/api", function () {
   // after(() => {});
   // beforeEach(() => {});
 
-  describe.only("/palette - Stage 18: Further annotations.", () => {
+  describe("/palette - Stage 18: Further annotations.", () => {
     it("#pal18-01a GET 200 YES: Engpol. 'she reads' tenseDesc anno should be removed by conditionsOnWhichToBlockAnnotations.", () => {
       //Originally failed as removeAnnotationsByCounterfax lets tenseDesc annos through, would be too many alternate values to check.
       //So this situation, where the anno should be kept, is hardcoded in refObj conditionsOnWhichToBlockAnnotations.

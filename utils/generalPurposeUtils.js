@@ -1,5 +1,5 @@
 const uUtils = require("./universalUtils.js");
-const gpUtils = require("./gpUtils.js");
+const gpUtils = require("./generalPurposeUtils.js");
 const consol = require("./zerothOrder/consoleLoggingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 
