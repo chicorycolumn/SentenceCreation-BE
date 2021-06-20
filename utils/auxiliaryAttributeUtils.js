@@ -239,6 +239,16 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   let shouldConsoleLog = false;
   let questionLanguage = languagesObj.questionLanguage;
 
+  //////////////////////////////////////////////
+  ///////////RECURSIVE COUNTERFAXING////////////
+  //////////////////////////////////////////////
+
+  //Should take place here.
+
+  //////////////////////////////////////////////
+  //////////////////////////////////////////////
+  //////////////////////////////////////////////
+
   unitsToCounterfax.forEach((unitToCounterfax) => {
     let originalQuestionOutputArrays = [questionOutputArr]; //@
     let originalAnswerOutputArrays = answerSentenceData.answerOutputArrays; //@
