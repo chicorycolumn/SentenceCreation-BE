@@ -49,58 +49,14 @@ exports.firstStageEvaluateAnnotations = (
 
   consol.logSpecial1("222 counterfaxSituations", counterfaxSituations);
 
-  function multiplyOutCounterfaxArrays(counterfaxSituations) {
-    let multipliedOutCounterfaxArrays = [];
-
-    let resArr = [];
-
-    inner(counterfaxSituations);
-
-    function inner(units) {
-      if (!units.length) {
-        multipliedOutCounterfaxArrays.push(resArr.slice(0));
-        return;
-      }
-
-      let counterfaxSituation = units[0];
-
-      let { questionOutputUnit, annoTraitKeysToCounterfax } =
-        counterfaxSituation;
-
-      annoTraitKeysToCounterfax.forEach((annoTraitKeyToCounterfax) => {
-        resArr.push({
-          questionOutputUnit,
-          annoTraitKeyToCounterfax,
-        });
-        inner(units.slice(1));
-        resArr.pop();
-      });
-    }
-
-    return multipliedOutCounterfaxArrays;
-  }
-
-  let multipliedOutCounterfaxArrays =
-    multiplyOutCounterfaxArrays(counterfaxSituations);
-
-  consol.logSpecial1(
-    "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~multipliedOutCounterfaxArrays"
-  );
-  multipliedOutCounterfaxArrays.forEach((x) => {
-    consol.logSpecial1("");
-    x.forEach((y) => {
-      consol.logSpecial1("");
-      consol.logSpecial1(y);
-      consol.logSpecial1("");
-    });
-    consol.logSpecial1("");
-  });
+  let explodedCounterfaxSituations =
+    gpUtils.explodeCounterfaxSituations(counterfaxSituations);
 
   let questionOutputUnitsThatHaveBeenCounterfaxed = {};
 
   //...but I think this should be able to run on subsequent counterfax runs. So counterfax within counterfax kind of thing, for Step-Iota.
   aaUtils.removeAnnotationsByCounterfactualAnswerSentences(
-    counterfaxSituations,
+    explodedCounterfaxSituations,
     questionOutputArr,
     languagesObj,
     answerSentenceData,
@@ -353,7 +309,7 @@ exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
 };
 
 exports.removeAnnotationsByCounterfactualAnswerSentences = (
-  counterfaxSituations,
+  explodedCounterfaxSituations,
   questionOutputArr,
   languagesObj,
   answerSentenceData,
@@ -369,17 +325,24 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   let shouldConsoleLog = false;
   let questionLanguage = languagesObj.questionLanguage;
 
-  //////////////////////////////////////////////
-  ///////////RECURSIVE COUNTERFAXING////////////
-  //////////////////////////////////////////////
+  explodedCounterfaxSituations.forEach((explodedCounterfaxSituation, index) => {
+    if (!index) {
+      consol.log(
+        "@@ This is the original (Factual) so returning here.",
+        explodedCounterfaxSituation.label
+      );
+      return;
+    }
 
-  //Should take place here.
+    consol.log("@@", explodedCounterfaxSituation.label);
 
-  //////////////////////////////////////////////
-  //////////////////////////////////////////////
-  //////////////////////////////////////////////
+    let { questionOutputUnit, traitKey, traitValue } =
+      explodedCounterfaxSituation;
 
-  counterfaxSituations.forEach((counterfaxSituation) => {
+    let counterfaxedStCh = explodedCounterfaxSituation.stCh;
+
+    ////////Now to integrate the below into this new approach of a counterfax situation.
+
     let originalQuestionOutputArrays = [questionOutputArr]; //@
     let originalAnswerOutputArrays = answerSentenceData.answerOutputArrays; //@
 
