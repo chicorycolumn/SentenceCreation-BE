@@ -155,56 +155,6 @@ exports.copyAndCombineWordbanks = (wordbank1, wordbank2) => {
   return wordbank1Copy;
 };
 
-exports. explodeCounterfaxSituations=(sits)=>{
-  let explodedWithinEachChunk = {};
-  let sentence = [];
-  let chunkIds = sits.headsFirstSequenceChunkIds;
-
-  chunkIds.forEach(chunkId => {
-  	resArray = []
-    let traitKeys = Object.keys(sits[chunkId])
-  	explodeWithinOneChunkId(sits[chunkId], traitKeys)
-  	explodedWithinEachChunk[chunkId] = resArray
-  })
-
-  function explodeWithinOneChunkId(sitsOfOneChunkId, traitKeys){
-  	if (!traitKeys.length) {
-      resArray.push(sentence.slice(0));
-      sentence.pop();
-      return;
-    }
-    let currentTraitKey = traitKeys[0]
-	let sitArr =  sitsOfOneChunkId[currentTraitKey]
-	sitArr.forEach(sit => {
-		sentence.push(sit);
-        explodeWithinOneChunkId(sitsOfOneChunkId, traitKeys.slice(1));
-	})
-	sentence.pop()
-  }
-
-  let explodedBetweenChunks = []
-
-  explodeBetweenChunks(explodedWithinEachChunk, chunkIds)
-
-  function explodeBetweenChunks(obj, chunkIds){
-  	if (!chunkIds.length){
-  		explodedBetweenChunks.push(sentence.slice())
-  		sentence.pop()
-  		return
-  	}
-  	let currentChunkId = chunkIds[0]
-  	let sitArr = obj[currentChunkId]
-  	sitArr.forEach(sit => {
-  		sentence.push(sit)
-  		explodeBetweenChunks(obj, chunkIds.slice(1))
-  	})
-  	sentence.pop()
-  }
-
-  return explodedBetweenChunks
-
-};
-
 exports.explodeOutputArraysByHeadsAndDependents = (justOneOutputArray) => {
   consol.log(
     "mdpu explodeOutputArraysByHeadsAndDependents START. justOneOutputArray"
