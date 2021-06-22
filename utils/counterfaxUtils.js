@@ -15,7 +15,7 @@ exports.explodeCounterfaxSituations = (sits) => {
     resArray = [];
     let traitKeys = Object.keys(sits[chunkId]);
     explodeWithinOneChunkId(sits[chunkId], traitKeys);
-    explodedWithinEachChunk[chunkId] = uUtils.copyWithoutReference(resArray); //alpha copywithoutref
+    explodedWithinEachChunk[chunkId] = uUtils.copyWithoutReference(resArray);
   });
 
   function explodeWithinOneChunkId(sitsOfOneChunkId, traitKeys) {
