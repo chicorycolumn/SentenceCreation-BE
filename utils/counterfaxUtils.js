@@ -11,10 +11,10 @@ exports.explodeCounterfaxSituations = (sits) => {
   let chunkIds = sits.headsFirstSequenceChunkIds;
 
   chunkIds.forEach((chunkId) => {
-    resArray = [];
+    resArray = []; //alpha let
     let traitKeys = Object.keys(sits[chunkId]);
     explodeWithinOneChunkId(sits[chunkId], traitKeys);
-    explodedWithinEachChunk[chunkId] = resArray;
+    explodedWithinEachChunk[chunkId] = resArray; //alpha copywithoutref
   });
 
   function explodeWithinOneChunkId(sitsOfOneChunkId, traitKeys) {
@@ -34,21 +34,36 @@ exports.explodeCounterfaxSituations = (sits) => {
 
   let explodedBetweenChunks = [];
 
+  sentence = { chunkIds: chunkIds.slice() };
+  sentence.chunkIds.forEach((chunkId) => {
+    sentence[chunkId] = [];
+  });
+
   explodeBetweenChunks(explodedWithinEachChunk, chunkIds);
 
   function explodeBetweenChunks(obj, chunkIds) {
     if (!chunkIds.length) {
-      explodedBetweenChunks.push(sentence.slice());
-      sentence.pop();
+      explodedBetweenChunks.push(uUtils.copyWithoutReference(sentence));
+
+      delete sentence[sentence.chunkIds[sentence.chunkIds.length - 1]];
+      sentence.chunkIds.pop();
       return;
     }
     let currentChunkId = chunkIds[0];
     let sitArr = obj[currentChunkId];
     sitArr.forEach((sit) => {
-      sentence.push(sit);
+      if (sentence.chunkIds.includes(currentChunkId)) {
+        sentence[currentChunkId] = [...sentence[currentChunkId], ...sit];
+      } else {
+        sentence[currentChunkId] = [...sit];
+        sentence.chunkIds.push(currentChunkId);
+      }
+
       explodeBetweenChunks(obj, chunkIds.slice(1));
     });
-    sentence.pop();
+
+    delete sentence[sentence.chunkIds[sentence.chunkIds.length - 1]];
+    sentence.chunkIds.pop();
   }
 
   return explodedBetweenChunks;

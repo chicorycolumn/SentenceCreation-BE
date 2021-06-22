@@ -1398,50 +1398,62 @@ describe("explodeCounterfaxSituations", () => {
     };
     let expected = [
       {
+        chunkIds: ["pro-1", "pro-2"],
         "pro-1": ["pro-1=gender=virile", "pro-1=person=1per"],
         "pro-2": ["pro-2=gender=nonvirile"],
       },
       {
+        chunkIds: ["pro-1", "pro-2"],
         "pro-1": ["pro-1=gender=virile", "pro-1=person=1per"],
         "pro-2": ["pro-2=gender=virile"],
       },
       {
+        chunkIds: ["pro-1", "pro-2"],
         "pro-1": ["pro-1=gender=virile", "pro-1=person=2per"],
         "pro-2": ["pro-2=gender=nonvirile"],
       },
       {
+        chunkIds: ["pro-1", "pro-2"],
         "pro-1": ["pro-1=gender=virile", "pro-1=person=2per"],
         "pro-2": ["pro-2=gender=virile"],
       },
       {
+        chunkIds: ["pro-1", "pro-2"],
         "pro-1": ["pro-1=gender=virile", "pro-1=person=3per"],
         "pro-2": ["pro-2=gender=nonvirile"],
       },
       {
+        chunkIds: ["pro-1", "pro-2"],
         "pro-1": ["pro-1=gender=virile", "pro-1=person=3per"],
         "pro-2": ["pro-2=gender=virile"],
       },
       {
+        chunkIds: ["pro-1", "pro-2"],
         "pro-1": ["pro-1=gender=nonvirile", "pro-1=person=1per"],
         "pro-2": ["pro-2=gender=nonvirile"],
       },
       {
+        chunkIds: ["pro-1", "pro-2"],
         "pro-1": ["pro-1=gender=nonvirile", "pro-1=person=1per"],
         "pro-2": ["pro-2=gender=virile"],
       },
       {
+        chunkIds: ["pro-1", "pro-2"],
         "pro-1": ["pro-1=gender=nonvirile", "pro-1=person=2per"],
         "pro-2": ["pro-2=gender=nonvirile"],
       },
       {
+        chunkIds: ["pro-1", "pro-2"],
         "pro-1": ["pro-1=gender=nonvirile", "pro-1=person=2per"],
         "pro-2": ["pro-2=gender=virile"],
       },
       {
+        chunkIds: ["pro-1", "pro-2"],
         "pro-1": ["pro-1=gender=nonvirile", "pro-1=person=3per"],
         "pro-2": ["pro-2=gender=nonvirile"],
       },
       {
+        chunkIds: ["pro-1", "pro-2"],
         "pro-1": ["pro-1=gender=nonvirile", "pro-1=person=3per"],
         "pro-2": ["pro-2=gender=virile"],
       },
