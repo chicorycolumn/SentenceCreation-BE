@@ -9,12 +9,13 @@ exports.explodeCounterfaxSituations = (sits) => {
   let explodedWithinEachChunk = {};
   let sentence = [];
   let chunkIds = sits.headsFirstSequenceChunkIds;
+  let resArray = [];
 
   chunkIds.forEach((chunkId) => {
-    resArray = []; //alpha let
+    resArray = [];
     let traitKeys = Object.keys(sits[chunkId]);
     explodeWithinOneChunkId(sits[chunkId], traitKeys);
-    explodedWithinEachChunk[chunkId] = resArray; //alpha copywithoutref
+    explodedWithinEachChunk[chunkId] = uUtils.copyWithoutReference(resArray); //alpha copywithoutref
   });
 
   function explodeWithinOneChunkId(sitsOfOneChunkId, traitKeys) {
@@ -52,10 +53,8 @@ exports.explodeCounterfaxSituations = (sits) => {
     let currentChunkId = chunkIds[0];
     let sitArr = obj[currentChunkId];
     sitArr.forEach((sit) => {
-      if (sentence.chunkIds.includes(currentChunkId)) {
-        sentence[currentChunkId] = [...sentence[currentChunkId], ...sit];
-      } else {
-        sentence[currentChunkId] = [...sit];
+      sentence[currentChunkId] = uUtils.copyWithoutReference(sit);
+      if (!sentence.chunkIds.includes(currentChunkId)) {
         sentence.chunkIds.push(currentChunkId);
       }
 
