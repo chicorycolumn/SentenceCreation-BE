@@ -1384,7 +1384,63 @@ describe.only("listCounterfaxSituations", () => {
   });
 });
 
-describe("explodeCounterfaxSituations", () => {
+describe.only("explodeCounterfaxSituations", () => {
+  it("...", () => {
+    let input = {
+      headsFirstSequenceChunkIds: ["pro-1", "pro-2"],
+      "pro-1": {
+        gender: ["pro-1=gender=virile", "pro-1=gender=nonvirile"],
+        person: ["pro-1=person=1per", "pro-1=person=2per", "pro-1=person=3per"],
+      },
+      "pro-2": {
+        gender: ["pro-2=gender=nonvirile", "pro-2=gender=virile"],
+      },
+    };
+    let expected = [
+      [
+        ["pro-1=gender=virile", "pro-1=person=1per"],
+        ["pro-2=gender=nonvirile"],
+      ],
+      [["pro-1=gender=virile", "pro-1=person=1per"], ["pro-2=gender=virile"]],
+      [
+        ["pro-1=gender=virile", "pro-1=person=2per"],
+        ["pro-2=gender=nonvirile"],
+      ],
+      [["pro-1=gender=virile", "pro-1=person=2per"], ["pro-2=gender=virile"]],
+      [
+        ["pro-1=gender=virile", "pro-1=person=3per"],
+        ["pro-2=gender=nonvirile"],
+      ],
+      [["pro-1=gender=virile", "pro-1=person=3per"], ["pro-2=gender=virile"]],
+      [
+        ["pro-1=gender=nonvirile", "pro-1=person=1per"],
+        ["pro-2=gender=nonvirile"],
+      ],
+      [
+        ["pro-1=gender=nonvirile", "pro-1=person=1per"],
+        ["pro-2=gender=virile"],
+      ],
+      [
+        ["pro-1=gender=nonvirile", "pro-1=person=2per"],
+        ["pro-2=gender=nonvirile"],
+      ],
+      [
+        ["pro-1=gender=nonvirile", "pro-1=person=2per"],
+        ["pro-2=gender=virile"],
+      ],
+      [
+        ["pro-1=gender=nonvirile", "pro-1=person=3per"],
+        ["pro-2=gender=nonvirile"],
+      ],
+      [
+        ["pro-1=gender=nonvirile", "pro-1=person=3per"],
+        ["pro-2=gender=virile"],
+      ],
+    ];
+    const actual = cfUtils.explodeCounterfaxSituations(input);
+    expect(actual).to.eql(expected);
+  });
+
   it("Two by two by two by two makes sixteen.", () => {
     let input = {
       headsFirstSequenceChunkIds: ["pro-1", "pro-2"],
