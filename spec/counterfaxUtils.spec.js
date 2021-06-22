@@ -10,7 +10,7 @@ const {
   areTwoObjectsEqual,
 } = require("../utils/universalUtils.js");
 
-describe.only("listCounterfaxSituations", () => {
+describe("listCounterfaxSituations", () => {
   it("Two annotations on one, and one on the other.", () => {
     let questionOutputArray = [
       {
@@ -1384,8 +1384,8 @@ describe.only("listCounterfaxSituations", () => {
   });
 });
 
-describe.only("explodeCounterfaxSituations", () => {
-  it("...", () => {
+describe("explodeCounterfaxSituations", () => {
+  it.only("...", () => {
     let input = {
       headsFirstSequenceChunkIds: ["pro-1", "pro-2"],
       "pro-1": {
@@ -1397,45 +1397,54 @@ describe.only("explodeCounterfaxSituations", () => {
       },
     };
     let expected = [
-      [
-        ["pro-1=gender=virile", "pro-1=person=1per"],
-        ["pro-2=gender=nonvirile"],
-      ],
-      [["pro-1=gender=virile", "pro-1=person=1per"], ["pro-2=gender=virile"]],
-      [
-        ["pro-1=gender=virile", "pro-1=person=2per"],
-        ["pro-2=gender=nonvirile"],
-      ],
-      [["pro-1=gender=virile", "pro-1=person=2per"], ["pro-2=gender=virile"]],
-      [
-        ["pro-1=gender=virile", "pro-1=person=3per"],
-        ["pro-2=gender=nonvirile"],
-      ],
-      [["pro-1=gender=virile", "pro-1=person=3per"], ["pro-2=gender=virile"]],
-      [
-        ["pro-1=gender=nonvirile", "pro-1=person=1per"],
-        ["pro-2=gender=nonvirile"],
-      ],
-      [
-        ["pro-1=gender=nonvirile", "pro-1=person=1per"],
-        ["pro-2=gender=virile"],
-      ],
-      [
-        ["pro-1=gender=nonvirile", "pro-1=person=2per"],
-        ["pro-2=gender=nonvirile"],
-      ],
-      [
-        ["pro-1=gender=nonvirile", "pro-1=person=2per"],
-        ["pro-2=gender=virile"],
-      ],
-      [
-        ["pro-1=gender=nonvirile", "pro-1=person=3per"],
-        ["pro-2=gender=nonvirile"],
-      ],
-      [
-        ["pro-1=gender=nonvirile", "pro-1=person=3per"],
-        ["pro-2=gender=virile"],
-      ],
+      {
+        "pro-1": ["pro-1=gender=virile", "pro-1=person=1per"],
+        "pro-2": ["pro-2=gender=nonvirile"],
+      },
+      {
+        "pro-1": ["pro-1=gender=virile", "pro-1=person=1per"],
+        "pro-2": ["pro-2=gender=virile"],
+      },
+      {
+        "pro-1": ["pro-1=gender=virile", "pro-1=person=2per"],
+        "pro-2": ["pro-2=gender=nonvirile"],
+      },
+      {
+        "pro-1": ["pro-1=gender=virile", "pro-1=person=2per"],
+        "pro-2": ["pro-2=gender=virile"],
+      },
+      {
+        "pro-1": ["pro-1=gender=virile", "pro-1=person=3per"],
+        "pro-2": ["pro-2=gender=nonvirile"],
+      },
+      {
+        "pro-1": ["pro-1=gender=virile", "pro-1=person=3per"],
+        "pro-2": ["pro-2=gender=virile"],
+      },
+      {
+        "pro-1": ["pro-1=gender=nonvirile", "pro-1=person=1per"],
+        "pro-2": ["pro-2=gender=nonvirile"],
+      },
+      {
+        "pro-1": ["pro-1=gender=nonvirile", "pro-1=person=1per"],
+        "pro-2": ["pro-2=gender=virile"],
+      },
+      {
+        "pro-1": ["pro-1=gender=nonvirile", "pro-1=person=2per"],
+        "pro-2": ["pro-2=gender=nonvirile"],
+      },
+      {
+        "pro-1": ["pro-1=gender=nonvirile", "pro-1=person=2per"],
+        "pro-2": ["pro-2=gender=virile"],
+      },
+      {
+        "pro-1": ["pro-1=gender=nonvirile", "pro-1=person=3per"],
+        "pro-2": ["pro-2=gender=nonvirile"],
+      },
+      {
+        "pro-1": ["pro-1=gender=nonvirile", "pro-1=person=3per"],
+        "pro-2": ["pro-2=gender=virile"],
+      },
     ];
     const actual = cfUtils.explodeCounterfaxSituations(input);
     expect(actual).to.eql(expected);
