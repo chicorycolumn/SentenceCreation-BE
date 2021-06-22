@@ -624,7 +624,8 @@ describe("/api", function () {
           );
         });
     });
-    it.only("#pal18-06b GET 200 YES: Engpol. 'We saw them.' PDS. *Step-Iota*", () => {
+    it("#pal18-06b GET 200 YES: Engpol. 'We saw them.' PDS. *Step-Iota*", () => {
+      // it.only("#pal18-06b GET 200 YES: Engpol. 'We saw them.' PDS. *Step-Iota*", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
       return request(app)

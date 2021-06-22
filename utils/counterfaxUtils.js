@@ -140,10 +140,6 @@ exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
       return;
     }
 
-    if (questionOutputUnit.structureChunk.chunkId === "pro-1") {
-      questionOutputUnit.structureChunk.annotations.person = "1per"; //swde
-    }
-
     Object.keys(questionOutputUnit.structureChunk.annotations).forEach(
       (annoTraitKey) => {
         //ACX2A: Don't bother running counterfactuals for wordtype/emoji/text annotations, as they'll always be needed.
@@ -219,10 +215,23 @@ exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
               stCh.chunkId
             )
           ) {
-            counterfaxSituations[stCh.chunkId].push(newCounterfaxSituation);
+            if (
+              Object.keys(counterfaxSituations[stCh.chunkId]).includes(traitKey)
+            ) {
+              counterfaxSituations[stCh.chunkId][traitKey].push(
+                newCounterfaxSituation
+              );
+            } else {
+              counterfaxSituations[stCh.chunkId][traitKey] = [
+                newCounterfaxSituation,
+              ];
+            }
           } else {
             counterfaxSituations.headsFirstSequenceChunkIds.push(stCh.chunkId);
-            counterfaxSituations[stCh.chunkId] = [newCounterfaxSituation];
+            counterfaxSituations[stCh.chunkId] = {};
+            counterfaxSituations[stCh.chunkId][traitKey] = [
+              newCounterfaxSituation,
+            ];
           }
         }
 
