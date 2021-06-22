@@ -1385,7 +1385,7 @@ describe("listCounterfaxSituations", () => {
 });
 
 describe("explodeCounterfaxSituations", () => {
-  it.only("...", () => {
+  it("...", () => {
     let input = {
       headsFirstSequenceChunkIds: ["pro-1", "pro-2"],
       "pro-1": {
@@ -1462,7 +1462,8 @@ describe("explodeCounterfaxSituations", () => {
     expect(actual).to.eql(expected);
   });
 
-  it("Two by two by two by two makes sixteen.", () => {
+  //nownow Change expected to new output format.
+  it.only("Two by two by two by two makes sixteen.", () => {
     let input = {
       headsFirstSequenceChunkIds: ["pro-1", "pro-2"],
       "pro-1": {
