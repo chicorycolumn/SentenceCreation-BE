@@ -199,6 +199,11 @@ exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
       return;
     }
 
+    if (questionOutputUnit.structureChunk.chunkId === "pro-1"){
+      questionOutputUnit.structureChunk.annotations.person = "1per" //swde
+ }
+
+
     Object.keys(questionOutputUnit.structureChunk.annotations).forEach(
       (annoTraitKey) => {
         //ACX2A: Don't bother running counterfactuals for wordtype/emoji/text annotations, as they'll always be needed.
@@ -355,6 +360,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
     ) {
       //ACX1: If this QstCh agrees with a stCh that we've already run through counterfaxing,
       //then remove that specific annotation from this QstCh, and return.
+      consol.log("ioej")
       return;
     }
 
