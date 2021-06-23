@@ -51,8 +51,6 @@ exports.firstStageEvaluateAnnotations = (
   let explodedCounterfaxSituations =
     cfUtils.explodeCounterfaxSituations(counterfaxSituations);
 
-  let questionOutputUnitsThatHaveBeenCounterfaxed = {};
-
   //...but I think this should be able to run on subsequent counterfax runs. So counterfax within counterfax kind of thing, for Step-Iota.
   cfUtils.removeAnnotationsByCounterfactualAnswerSentences(
     explodedCounterfaxSituations,
@@ -62,7 +60,6 @@ exports.firstStageEvaluateAnnotations = (
     questionSentenceFormula,
     reqBody,
     answerSelectedWordsSetsHaveChanged,
-    questionOutputUnitsThatHaveBeenCounterfaxed,
     runsRecord,
     originalQuestionSentenceFormula
   );

@@ -78,6 +78,7 @@ exports.explodeCounterfaxSituations = (sits) => {
 
     joinedLabel = joinedLabel.join(" ");
     explodedBetweenChunks.labels.push(joinedLabel);
+    wholeSit.label = joinedLabel;
   });
 
   return explodedBetweenChunks;
@@ -298,7 +299,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   rawQuestionSentenceFormula,
   reqBody,
   answerSelectedWordsSetsHaveChanged,
-  questionOutputUnitsThatHaveBeenCounterfaxed,
   runsRecord,
   originalQuestionSentenceFormula
 ) => {
@@ -307,128 +307,202 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   let shouldConsoleLog = false;
   let questionLanguage = languagesObj.questionLanguage;
 
-  explodedCounterfaxSituations.forEach((explodedCounterfaxSituation, index) => {
+  let originalQuestionOutputArrays = [questionOutputArr]; //Does this go here?
+  let originalAnswerOutputArrays = answerSentenceData.answerOutputArrays; //Does this go here?
+
+  explodedCounterfaxSituations.forEach((sit, index) => {
+    let sitEXAMPLE = {
+      label: "pro-1=gender=virile pro-2=gender=nonvirile",
+      chunkIds: ["pro-1", "pro-2"],
+      "pro-1": [
+        {
+          label: "pro-1=gender=virile",
+          stCh: {
+            chunkId: "pro-1",
+            specificLemmas: ["PERSONAL"],
+            gcase: ["nom"],
+            number: ["plural"],
+            person: ["1per"],
+            dontSpecifyOnThisChunk: true,
+            form: ["pronoun"],
+            gender: ["virile"],
+            andTags: [],
+            annotations: {
+              gender: "virile",
+            },
+          },
+          questionOutputUnit: {
+            selectedLemmaObject: {},
+            selectedWord: "we",
+            drillPath: [
+              ["form", "pronoun"],
+              ["person", "1per"],
+              ["number", "plural"],
+              ["gender", "virile"],
+              ["gcase", "nom"],
+            ],
+            structureChunk: {
+              chunkId: "pro-1",
+              specificLemmas: ["PERSONAL"],
+              gcase: ["nom"],
+              number: ["plural"],
+              person: ["1per"],
+              dontSpecifyOnThisChunk: true,
+              form: ["pronoun"],
+              gender: ["virile"],
+              andTags: [],
+              annotations: {
+                gender: "virile",
+              },
+            },
+          },
+          traitKey: "gender",
+          traitValue: "virile",
+        },
+      ],
+      "pro-2": [
+        {
+          label: "pro-2=gender=nonvirile",
+          stCh: {
+            chunkId: "pro-2",
+            specificLemmas: ["PERSONAL"],
+            gcase: ["acc"],
+            number: ["plural"],
+            person: ["3per"],
+            dontSpecifyOnThisChunk: true,
+            form: ["pronoun"],
+            gender: ["nonvirile"],
+            andTags: [],
+            annotations: {
+              gender: "nonvirile",
+            },
+          },
+          questionOutputUnit: {
+            selectedLemmaObject: {},
+            selectedWord: "them",
+            drillPath: [
+              ["form", "pronoun"],
+              ["person", "3per"],
+              ["number", "plural"],
+              ["gender", "nonvirile"],
+              ["gcase", "acc"],
+            ],
+            structureChunk: {
+              chunkId: "pro-2",
+              specificLemmas: ["PERSONAL"],
+              gcase: ["acc"],
+              number: ["plural"],
+              person: ["3per"],
+              dontSpecifyOnThisChunk: true,
+              form: ["pronoun"],
+              gender: ["nonvirile"],
+              andTags: [],
+              annotations: {
+                gender: "nonvirile",
+              },
+            },
+          },
+          traitKey: "gender",
+          traitValue: "nonvirile",
+        },
+      ],
+    };
+
+    let questionOutputUnitsThatHaveBeenCounterfaxedInThisSit = {};
+
+    consol.log("dfim The current counterfax sit is:", sit.label);
+
     if (!index) {
-      consol.log(
-        "@@ This is the original (Factual) so returning here.",
-        explodedCounterfaxSituation.label
-      );
-      runsRecord.push(`${explodedCounterfaxSituation.label}(original)`);
+      consol.log("@@ This is the original (Factual) so returning here.");
+      runsRecord.push(`${sit.label}(original)`);
       return;
+    } else {
+      runsRecord.push(sit.label);
     }
 
-    consol.log("@@", explodedCounterfaxSituation.label);
+    sit.chunkIds.forEach((chunkId) => {
+      let assignmentsForThisChunk = sit[chunkId];
 
-    let { questionOutputUnit, traitKey, traitValue } =
-      explodedCounterfaxSituation;
+      assignmentsForThisChunk.forEach((assignment) => {
+        let { questionOutputUnit, traitKey, traitValue } = assignment;
+        let counterfaxedStCh = assignment.stCh;
 
-    let counterfaxedStCh = explodedCounterfaxSituation.stCh;
-
-    ////////Now to integrate the below into this new approach of a counterfax situation.
-
-    let originalQuestionOutputArrays = [questionOutputArr]; //@
-    let originalAnswerOutputArrays = answerSentenceData.answerOutputArrays; //@
-
-    if (
-      cfUtils.removeAnnotationsIfHeadChunkHasBeenCounterfaxed(
-        questionOutputUnitsThatHaveBeenCounterfaxed,
-        questionOutputUnit
-      )
-    ) {
-      //ACX1: If this QstCh agrees with a stCh that we've already run through counterfaxing,
-      //then remove that specific annotation from this QstCh, and return.
-      consol.log("ioej");
-      return;
-    }
-
-    // let annoTraitValue =
-    //   questionOutputUnit.structureChunk.annotations[annoTraitKey];
-
-    // let counterfactualTraitValuesForThisTraitKey = Array.from(
-    //   new Set(
-    //     refFxn
-    //       .getStructureChunkTraits(questionLanguage)
-    //       [annoTraitKey].possibleTraitValues.filter(
-    //         (traitValue) => traitValue !== annoTraitValue
-    //       )
-    //   )
-    // );
-
-    // consol.log(
-    //   "veem counterfactualTraitValuesForThisTraitKey",
-    //   counterfactualTraitValuesForThisTraitKey
-    // );
-
-    // let counterfaxedStCh = uUtils.copyWithoutReference(
-    //   questionOutputUnit.structureChunk
-    // );
-
-    // counterfaxedStCh[annoTraitKey] = counterfactualTraitValuesForThisTraitKey;
-
-    // //If "plural", remove "m", "f". If person, remove "n".
-    // counterfactualTraitValuesForThisTraitKey = refFxn.removeIncompatibleTraits(
-    //   questionLanguage,
-    //   counterfaxedStCh
-    // )[annoTraitKey];
-
-    runsRecord.push(explodedCounterfaxSituation.label);
-
-    let counterfactualQuestionSentenceFormula = uUtils.copyWithoutReference(
-      rawQuestionSentenceFormula //@
-    );
-
-    let arrayOfCounterfactualResultsForThisAnnotation = []; /////
-
-    consol.log(
-      `myxe removeAnnotationsByCounterfax FOREACH START. Examining ${questionOutputUnit.structureChunk.chunkId}'s annotation ${annoTraitKey} = ${annoTraitValue} so the counterfactual traitValues are [${counterfactualTraitValuesForThisTraitKey}].`
-    );
-
-    counterfactualTraitValuesForThisTraitKey.forEach(
-      (counterfactualTraitValueForThisTraitKey) => {
         consol.log(
-          `myxe removeAnnotationsByCounterfax FOREACH-2 START. Will do a run with counterfactual traitValue "${counterfactualTraitValueForThisTraitKey}".`
+          "dfim The current counterfax assignment is:",
+          assignment.label
         );
+        ////////////////
 
-        counterfaxedStCh[annoTraitKey] = [
-          counterfactualTraitValueForThisTraitKey,
-        ];
+        if (
+          cfUtils.removeAnnotationsIfHeadChunkHasBeenCounterfaxed(
+            questionOutputUnitsThatHaveBeenCounterfaxedInThisSit,
+            questionOutputUnit
+          )
+        ) {
+          //ACX1: If this QstCh agrees with a stCh that we've already run through counterfaxing,
+          //then remove that specific annotation from this QstCh, and return.
+          consol.log("ioej");
+          return;
+        }
+
+        let arrayOfCounterfactualResultsForThisAnnotation = []; //Hmm....
 
         //(IOTA). Do we want to send updated question formula for counterfax run,
         //or originalQuestionSentenceFormula ?
 
-        gpUtils.updateSentenceStructureWithNewStructureChunksFromOutputUnits(
-          counterfactualQuestionSentenceFormula.sentenceStructure,
-          questionOutputArr
-        );
+        function createCounterfactualSentenceFormula(
+          rawQuestionSentenceFormula,
+          questionOutputArr,
+          counterfaxedStCh
+        ) {
+          let counterfactualQuestionSentenceFormula =
+            uUtils.copyWithoutReference(
+              rawQuestionSentenceFormula //Hmm....
+            );
 
-        let indexOfStChToChange =
-          counterfactualQuestionSentenceFormula.sentenceStructure.findIndex(
-            (stCh) => stCh.chunkId === counterfaxedStCh.chunkId
+          gpUtils.updateSentenceStructureWithNewStructureChunksFromOutputUnits(
+            counterfactualQuestionSentenceFormula.sentenceStructure,
+            questionOutputArr
           );
 
-        if (indexOfStChToChange === -1) {
-          consol.throw("mizd");
+          let indexOfStChToChange =
+            counterfactualQuestionSentenceFormula.sentenceStructure.findIndex(
+              (stCh) => stCh.chunkId === counterfaxedStCh.chunkId
+            );
+
+          if (indexOfStChToChange === -1) {
+            consol.throw("mizd");
+          }
+
+          counterfactualQuestionSentenceFormula.sentenceStructure[
+            indexOfStChToChange
+          ] = counterfaxedStCh;
+
+          counterfactualQuestionSentenceFormula.sentenceStructure.forEach(
+            (stCh) => {
+              delete stCh.annotations;
+            }
+          );
+
+          consol.consoleLogObjectAtOneLevel(
+            counterfactualQuestionSentenceFormula,
+            "counterfactualQuestionSentenceFormula",
+            "RACX"
+          );
+
+          return counterfactualQuestionSentenceFormula;
         }
 
-        counterfactualQuestionSentenceFormula.sentenceStructure[
-          indexOfStChToChange
-        ] = counterfaxedStCh;
-
-        counterfactualQuestionSentenceFormula.sentenceStructure.forEach(
-          (stCh) => {
-            delete stCh.annotations;
-          }
-        );
+        let counterfactualQuestionSentenceFormula =
+          createCounterfactualSentenceFormula(
+            rawQuestionSentenceFormula,
+            questionOutputArr,
+            counterfaxedStCh
+          );
 
         let counterfactualTrait = {};
         counterfactualTrait[annoTraitKey] =
           counterfactualTraitValueForThisTraitKey;
-
-        consol.consoleLogObjectAtOneLevel(
-          counterfactualQuestionSentenceFormula,
-          "counterfactualQuestionSentenceFormula",
-          "RACX"
-        );
 
         let newReqBody = {
           arrayOfCounterfactualResultsForThisAnnotation,
@@ -447,43 +521,46 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           devSaysThrowAtMidpoint: reqBody.devSaysThrowAtMidpoint,
           devSaysOmitStChValidation: reqBody.devSaysOmitStChValidation,
         };
+        /////////////
+      });
+    });
 
-        runsRecord.push(
-          `${questionOutputUnit.structureChunk.chunkId} new ${annoTraitKey} "${counterfactualTraitValueForThisTraitKey}".`
-        );
+    /** For each chunkId in sit.chunkIds, access sit[chunkId]
+     * this is an array of all the individual assignments for this chunkId in this sit,
+     * eg [gender to female, person to 1per, ...].
+     *
+     * For each assignment, get these:
+     *     let { questionOutputUnit, traitKey, traitValue } = assignment;
+     *     let counterfaxedStCh = assignment.stCh;
+     * 
+     *     consol.log("dfim The current counterfax assignment is:",assignment.label
+    );
+     */
 
-        consol.log(
-          "\n--------------------------------COUNTERFAX RUN BEGINNING\n"
-        );
-        palette.fetchPalette({ body: newReqBody });
-      }
+    consol.log(
+      `myxe removeAnnotationsByCounterfax FOREACH START. Examining ${questionOutputUnit.structureChunk.chunkId}'s annotation ${annoTraitKey} = ${annoTraitValue} so the counterfactual traitValues are [${counterfactualTraitValuesForThisTraitKey}].`
     );
 
-    if ("console") {
-      consol.log(
-        "[1;33m \n" +
-          `myxi removeAnnotationsByCounterfax. \nRun where we changed "${
-            questionOutputUnit.structureChunk.chunkId
-          }" from counterfactual "${annoTraitKey}=${annoTraitValue}" and arrayOfCounterfactualResultsForThisAnnotation came back with "${
-            arrayOfCounterfactualResultsForThisAnnotation.length
-          }" results. \nTo be specific, here's how many counterfactual.answerSentenceData.answerOutputArrays there are in each counterfactual result: [${arrayOfCounterfactualResultsForThisAnnotation.map(
-            (counterfactual) =>
-              counterfactual.answerSentenceData.answerOutputArrays.length
-          )}].` +
-          "[0m"
-      );
+    //  counterfactualTraitValuesForThisTraitKey.forEach((counterfactualTraitValueForThisTraitKey) => {
+    consol.log(
+      `myxe removeAnnotationsByCounterfax FOREACH-2 START. Will do a run with counterfactual traitValue "${counterfactualTraitValueForThisTraitKey}".`
+    );
 
-      let logToConsole = arrayOfCounterfactualResultsForThisAnnotation.map(
-        (counterfactual, CFindex) =>
-          counterfactual.answerSentenceData.answerOutputArrays.map(
-            (outputArr, AOAindex) =>
-              `\nanswerOutputArray ${CFindex}.${AOAindex} = [${outputArr.map(
-                (unit) => unit.selectedWord
-              )}]`
-          )
-      );
-      consol.log("[1;33m" + `${logToConsole}` + "[0m");
-    }
+    // counterfaxedStCh[annoTraitKey] = [counterfactualTraitValueForThisTraitKey];
+
+    //
+    //
+    //
+    //
+    //
+
+    runsRecord.push(
+      `${questionOutputUnit.structureChunk.chunkId} new ${annoTraitKey} "${counterfactualTraitValueForThisTraitKey}".`
+    );
+
+    consol.log("\n--------------------------------COUNTERFAX RUN BEGINNING\n");
+    palette.fetchPalette({ body: newReqBody });
+    //  });
 
     let counterfactualQuestionOutputArrays =
       arrayOfCounterfactualResultsForThisAnnotation.map(
@@ -707,21 +784,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           ...counterfactualAnswerOutputArrays,
         ];
 
-        consol.logSpecial1(
-          ">>>>>>>>>>>>>>>>>>>>>>",
-          newArr.forEach((x) => {
-            consol.logSpecial1("");
-            x.forEach((y) => {
-              if (["pro-1", "pro-2"].includes(y.structureChunk.chunkId)) {
-                consol.logSpecial1(
-                  `${y.structureChunk.chunkId} = ${y.structureChunk.gender}`
-                );
-              }
-            });
-            consol.logSpecial1("");
-          })
-        );
-
         answerSentenceData.answerOutputArrays = [
           ...answerSentenceData.answerOutputArrays,
           ...counterfactualAnswerOutputArrays,
@@ -748,7 +810,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
     }
 
     uUtils.addToArrayAtKey(
-      questionOutputUnitsThatHaveBeenCounterfaxed,
+      questionOutputUnitsThatHaveBeenCounterfaxedInThisSit,
       questionOutputUnit.structureChunk.chunkId,
       annoTraitKey
     );
@@ -756,29 +818,29 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 };
 
 exports.removeAnnotationsIfHeadChunkHasBeenCounterfaxed = (
-  questionOutputUnitsThatHaveBeenCounterfaxed,
+  questionOutputUnitsThatHaveBeenCounterfaxedInThisSit,
   questionOutputUnit
 ) => {
   return (
     removeAnnotationsIfHeadChunkHasBeenCounterfaxed_inner(
-      questionOutputUnitsThatHaveBeenCounterfaxed,
+      questionOutputUnitsThatHaveBeenCounterfaxedInThisSit,
       questionOutputUnit,
       "agreeWith"
     ) ||
     removeAnnotationsIfHeadChunkHasBeenCounterfaxed_inner(
-      questionOutputUnitsThatHaveBeenCounterfaxed,
+      questionOutputUnitsThatHaveBeenCounterfaxedInThisSit,
       questionOutputUnit,
       "postHocAgreeWithPrimary"
     )
   );
 
   function removeAnnotationsIfHeadChunkHasBeenCounterfaxed_inner(
-    questionOutputUnitsThatHaveBeenCounterfaxed,
+    questionOutputUnitsThatHaveBeenCounterfaxedInThisSit,
     questionOutputUnit,
     agreeKey
   ) {
     if (
-      questionOutputUnitsThatHaveBeenCounterfaxed[
+      questionOutputUnitsThatHaveBeenCounterfaxedInThisSit[
         questionOutputUnit.structureChunk[agreeKey]
       ]
     ) {
@@ -790,14 +852,14 @@ exports.removeAnnotationsIfHeadChunkHasBeenCounterfaxed = (
           }" which has the annotations shown above. But this chunk agrees with "${
             questionOutputUnit.structureChunk[agreeKey]
           }" which has already been processed by counterfax, re these annotations: [${
-            questionOutputUnitsThatHaveBeenCounterfaxed[
+            questionOutputUnitsThatHaveBeenCounterfaxedInThisSit[
               questionOutputUnit.structureChunk[agreeKey]
             ]
           }].` +
           "[0m"
       );
 
-      questionOutputUnitsThatHaveBeenCounterfaxed[
+      questionOutputUnitsThatHaveBeenCounterfaxedInThisSit[
         questionOutputUnit.structureChunk[agreeKey]
       ].forEach((annoTraitKey) => {
         consol.log(
