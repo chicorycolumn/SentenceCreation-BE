@@ -48,8 +48,6 @@ exports.firstStageEvaluateAnnotations = (
     languagesObj
   );
 
-  consol.logSpecial1("222 counterfaxSituations", counterfaxSituations);
-
   let explodedCounterfaxSituations =
     cfUtils.explodeCounterfaxSituations(counterfaxSituations);
 

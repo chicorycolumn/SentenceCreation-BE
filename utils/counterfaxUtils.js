@@ -65,6 +65,21 @@ exports.explodeCounterfaxSituations = (sits) => {
     sentence.chunkIds.pop();
   }
 
+  explodedBetweenChunks.labels = [];
+
+  explodedBetweenChunks.forEach((wholeSit) => {
+    let joinedLabel = [];
+
+    wholeSit.chunkIds.forEach((chunkId) => {
+      wholeSit[chunkId].forEach((individualSit) => {
+        joinedLabel.push(individualSit.label);
+      });
+    });
+
+    joinedLabel = joinedLabel.join(" ");
+    explodedBetweenChunks.labels.push(joinedLabel);
+  });
+
   return explodedBetweenChunks;
 };
 

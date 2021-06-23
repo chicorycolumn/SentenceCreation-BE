@@ -1459,6 +1459,7 @@ describe("explodeCounterfaxSituations", () => {
       },
     ];
     const actual = cfUtils.explodeCounterfaxSituations(input);
+    delete actual.labels;
     expect(actual).to.eql(expected);
   });
   it("Two by two by two by two makes sixteen.", () => {
@@ -1556,6 +1557,7 @@ describe("explodeCounterfaxSituations", () => {
       },
     ];
     const actual = cfUtils.explodeCounterfaxSituations(input);
+    delete actual.labels;
     expect(actual).to.eql(expected);
   });
 });
