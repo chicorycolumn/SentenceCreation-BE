@@ -1385,7 +1385,7 @@ describe("listCounterfaxSituations", () => {
 });
 
 describe("explodeCounterfaxSituations", () => {
-  it("...", () => {
+  it("Two by three by two makes twelve.", () => {
     let input = {
       headsFirstSequenceChunkIds: ["pro-1", "pro-2"],
       "pro-1": {
@@ -1461,9 +1461,7 @@ describe("explodeCounterfaxSituations", () => {
     const actual = cfUtils.explodeCounterfaxSituations(input);
     expect(actual).to.eql(expected);
   });
-
-  //nownow Change expected to new output format.
-  it.only("Two by two by two by two makes sixteen.", () => {
+  it("Two by two by two by two makes sixteen.", () => {
     let input = {
       headsFirstSequenceChunkIds: ["pro-1", "pro-2"],
       "pro-1": {
@@ -1476,70 +1474,86 @@ describe("explodeCounterfaxSituations", () => {
       },
     };
     let expected = [
-      [
-        ["pro-1=gender=non", "pro-1=person=1per"],
-        ["pro-2=size=big", "pro-2=color=red"],
-      ],
-      [
-        ["pro-1=gender=non", "pro-1=person=1per"],
-        ["pro-2=size=big", "pro-2=color=yellow"],
-      ],
-      [
-        ["pro-1=gender=non", "pro-1=person=1per"],
-        ["pro-2=size=small", "pro-2=color=red"],
-      ],
-      [
-        ["pro-1=gender=non", "pro-1=person=1per"],
-        ["pro-2=size=small", "pro-2=color=yellow"],
-      ],
-      [
-        ["pro-1=gender=non", "pro-1=person=2per"],
-        ["pro-2=size=big", "pro-2=color=red"],
-      ],
-      [
-        ["pro-1=gender=non", "pro-1=person=2per"],
-        ["pro-2=size=big", "pro-2=color=yellow"],
-      ],
-      [
-        ["pro-1=gender=non", "pro-1=person=2per"],
-        ["pro-2=size=small", "pro-2=color=red"],
-      ],
-      [
-        ["pro-1=gender=non", "pro-1=person=2per"],
-        ["pro-2=size=small", "pro-2=color=yellow"],
-      ],
-      [
-        ["pro-1=gender=vir", "pro-1=person=1per"],
-        ["pro-2=size=big", "pro-2=color=red"],
-      ],
-      [
-        ["pro-1=gender=vir", "pro-1=person=1per"],
-        ["pro-2=size=big", "pro-2=color=yellow"],
-      ],
-      [
-        ["pro-1=gender=vir", "pro-1=person=1per"],
-        ["pro-2=size=small", "pro-2=color=red"],
-      ],
-      [
-        ["pro-1=gender=vir", "pro-1=person=1per"],
-        ["pro-2=size=small", "pro-2=color=yellow"],
-      ],
-      [
-        ["pro-1=gender=vir", "pro-1=person=2per"],
-        ["pro-2=size=big", "pro-2=color=red"],
-      ],
-      [
-        ["pro-1=gender=vir", "pro-1=person=2per"],
-        ["pro-2=size=big", "pro-2=color=yellow"],
-      ],
-      [
-        ["pro-1=gender=vir", "pro-1=person=2per"],
-        ["pro-2=size=small", "pro-2=color=red"],
-      ],
-      [
-        ["pro-1=gender=vir", "pro-1=person=2per"],
-        ["pro-2=size=small", "pro-2=color=yellow"],
-      ],
+      {
+        chunkIds: ["pro-1", "pro-2"],
+        "pro-1": ["pro-1=gender=non", "pro-1=person=1per"],
+        "pro-2": ["pro-2=size=big", "pro-2=color=red"],
+      },
+      {
+        chunkIds: ["pro-1", "pro-2"],
+        "pro-1": ["pro-1=gender=non", "pro-1=person=1per"],
+        "pro-2": ["pro-2=size=big", "pro-2=color=yellow"],
+      },
+      {
+        chunkIds: ["pro-1", "pro-2"],
+        "pro-1": ["pro-1=gender=non", "pro-1=person=1per"],
+        "pro-2": ["pro-2=size=small", "pro-2=color=red"],
+      },
+      {
+        chunkIds: ["pro-1", "pro-2"],
+        "pro-1": ["pro-1=gender=non", "pro-1=person=1per"],
+        "pro-2": ["pro-2=size=small", "pro-2=color=yellow"],
+      },
+      {
+        chunkIds: ["pro-1", "pro-2"],
+        "pro-1": ["pro-1=gender=non", "pro-1=person=2per"],
+        "pro-2": ["pro-2=size=big", "pro-2=color=red"],
+      },
+      {
+        chunkIds: ["pro-1", "pro-2"],
+        "pro-1": ["pro-1=gender=non", "pro-1=person=2per"],
+        "pro-2": ["pro-2=size=big", "pro-2=color=yellow"],
+      },
+      {
+        chunkIds: ["pro-1", "pro-2"],
+        "pro-1": ["pro-1=gender=non", "pro-1=person=2per"],
+        "pro-2": ["pro-2=size=small", "pro-2=color=red"],
+      },
+      {
+        chunkIds: ["pro-1", "pro-2"],
+        "pro-1": ["pro-1=gender=non", "pro-1=person=2per"],
+        "pro-2": ["pro-2=size=small", "pro-2=color=yellow"],
+      },
+      {
+        chunkIds: ["pro-1", "pro-2"],
+        "pro-1": ["pro-1=gender=vir", "pro-1=person=1per"],
+        "pro-2": ["pro-2=size=big", "pro-2=color=red"],
+      },
+      {
+        chunkIds: ["pro-1", "pro-2"],
+        "pro-1": ["pro-1=gender=vir", "pro-1=person=1per"],
+        "pro-2": ["pro-2=size=big", "pro-2=color=yellow"],
+      },
+      {
+        chunkIds: ["pro-1", "pro-2"],
+        "pro-1": ["pro-1=gender=vir", "pro-1=person=1per"],
+        "pro-2": ["pro-2=size=small", "pro-2=color=red"],
+      },
+      {
+        chunkIds: ["pro-1", "pro-2"],
+        "pro-1": ["pro-1=gender=vir", "pro-1=person=1per"],
+        "pro-2": ["pro-2=size=small", "pro-2=color=yellow"],
+      },
+      {
+        chunkIds: ["pro-1", "pro-2"],
+        "pro-1": ["pro-1=gender=vir", "pro-1=person=2per"],
+        "pro-2": ["pro-2=size=big", "pro-2=color=red"],
+      },
+      {
+        chunkIds: ["pro-1", "pro-2"],
+        "pro-1": ["pro-1=gender=vir", "pro-1=person=2per"],
+        "pro-2": ["pro-2=size=big", "pro-2=color=yellow"],
+      },
+      {
+        chunkIds: ["pro-1", "pro-2"],
+        "pro-1": ["pro-1=gender=vir", "pro-1=person=2per"],
+        "pro-2": ["pro-2=size=small", "pro-2=color=red"],
+      },
+      {
+        chunkIds: ["pro-1", "pro-2"],
+        "pro-1": ["pro-1=gender=vir", "pro-1=person=2per"],
+        "pro-2": ["pro-2=size=small", "pro-2=color=yellow"],
+      },
     ];
     const actual = cfUtils.explodeCounterfaxSituations(input);
     expect(actual).to.eql(expected);

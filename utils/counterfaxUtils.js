@@ -68,7 +68,6 @@ exports.explodeCounterfaxSituations = (sits) => {
   return explodedBetweenChunks;
 };
 
-//nownow Change this so it adds them by keys of traitKey within keys of chunkId.
 exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
   let { questionLanguage } = languagesObj;
 
