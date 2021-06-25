@@ -631,7 +631,6 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
-          // devSaysThrowAtMidpoint: true,
           pleaseDontSpecify: true,
           questionLanguage,
           answerLanguage,
