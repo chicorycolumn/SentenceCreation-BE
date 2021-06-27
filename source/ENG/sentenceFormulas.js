@@ -899,7 +899,6 @@ exports.sentenceFormulasBank = [
         gcase: ["gen"],
         number: ["singular"],
         specificLemmas: ["doctor"],
-        // gender: []
       },
       {
         chunkId: "npe-2-doctor",
@@ -1017,7 +1016,6 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-1-doctor",
-        // number: ["singular"],
         specificLemmas: ["doctor"],
         agreeWith: "pro-1-I",
       },
@@ -1089,7 +1087,6 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
         specificLemmas: ["doctor"],
         educatorBlocksAnnotationsForTheseTraitKeys: ["gender", "number"],
-        // gender: ["f"],
       },
       { chunkId: "fix-1-and", chunkValue: "and" },
       {
