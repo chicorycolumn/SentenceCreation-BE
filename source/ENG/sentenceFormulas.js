@@ -1128,7 +1128,6 @@ exports.sentenceFormulasBank = [
         gcase: ["nom"],
         number: ["singular"],
         specificLemmas: ["doctor"],
-        // gender: ["f"],
       },
       { chunkId: "fix-1-and", chunkValue: "and" },
       {
@@ -1158,7 +1157,6 @@ exports.sentenceFormulasBank = [
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         number: ["singular"],
-        // gender: ["m"],
       },
       {
         chunkId: "pro-1-my",
@@ -1171,7 +1169,6 @@ exports.sentenceFormulasBank = [
         gcase: ["nom"],
         number: ["singular"],
         specificLemmas: ["doctor"],
-        // gender: ["f"],
       },
     ],
     primaryOrders: [["pro-1-my", "npe-1-doctor"]],
