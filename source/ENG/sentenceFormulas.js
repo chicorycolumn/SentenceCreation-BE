@@ -1192,10 +1192,8 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "nco-1-onion",
-        // gcase: ["nom"],
         number: ["singular"],
         specificLemmas: ["onion"],
-        // gender: ["f"],
       },
     ],
     primaryOrders: [["pro-1-my", "nco-1-onion"]],
