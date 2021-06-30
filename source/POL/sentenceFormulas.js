@@ -1160,7 +1160,6 @@ exports.sentenceFormulasBank = [
     ],
     primaryOrders: [
       [
-        // "pro-1-I",
         "ver-1-see",
         "pro-2-my",
         "npe-1-doctor",
@@ -1210,15 +1209,7 @@ exports.sentenceFormulasBank = [
         specificLemmas: ["kobieta"],
       },
     ],
-    primaryOrders: [
-      [
-        // "pro-1-I",
-        "pro-2-my",
-        "npe-1-doctor",
-        "ver-1-was",
-        "npe-2-woman",
-      ],
-    ],
+    primaryOrders: [["pro-2-my", "npe-1-doctor", "ver-1-was", "npe-2-woman"]],
   },
   {
     sentenceFormulaSymbol: "116y My doctor",
@@ -1248,13 +1239,7 @@ exports.sentenceFormulasBank = [
         gender: ["f"],
       },
     ],
-    primaryOrders: [
-      [
-        // "pro-1-I",
-        "pro-2-my",
-        "npe-1-doctor",
-      ],
-    ],
+    primaryOrders: [["pro-2-my", "npe-1-doctor"]],
   },
   {
     sentenceFormulaSymbol: "116x My doctor was a woman",
