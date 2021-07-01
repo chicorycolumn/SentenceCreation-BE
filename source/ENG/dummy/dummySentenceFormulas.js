@@ -312,7 +312,6 @@ exports.dummySentenceFormulasBank = [
     primaryOrders: [],
   },
   {
-    //nowww
     sentenceFormulaSymbol: "dummy36a",
     sentenceFormulaId: "ENG-dummy36a",
     translations: { POL: ["POL-dummy36a"] },
@@ -749,8 +748,6 @@ exports.dummySentenceFormulasBank = [
 
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
-        // gender: ["m"],
-        // number: ["singular"],
       },
       {
         chunkId: "ver-1",
@@ -1209,10 +1206,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "npe-1",
-
         andTags: ["job"],
-        // number: ["singular"],
-        // gender: ["f"],
       },
     ],
     primaryOrders: [],
@@ -1240,12 +1234,8 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "npe-1",
-
         andTags: ["job"],
         number: ["singular"],
-        // gender: ["f"],
-        // formulaImportantTraitKeys: ["gender"],
-        // educatorBlocksAnnotationsForTheseTraitKeys: ["gender"],
       },
     ],
     primaryOrders: [],
