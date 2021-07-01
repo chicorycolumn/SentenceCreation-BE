@@ -42,12 +42,10 @@ exports.firstStageEvaluateAnnotations = (
     answerSentenceData
   );
 
-  //This arr should only be created once, on the original run...
   let explodedCounterfaxSituations = cfUtils.explodeCounterfaxSituations(
     cfUtils.listCounterfaxSituations(questionOutputArr, languagesObj)
   );
 
-  //...but I think this should be able to run on subsequent counterfax runs. So counterfax within counterfax kind of thing, for Step-Iota.
   cfUtils.removeAnnotationsByCounterfactualAnswerSentences(
     explodedCounterfaxSituations,
     questionOutputArr,

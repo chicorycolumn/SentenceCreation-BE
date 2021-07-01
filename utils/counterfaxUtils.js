@@ -408,7 +408,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       ],
     };
 
-    let questionOutputUnitsThatHaveBeenCounterfaxedInThisSit = {};
+    // let questionOutputUnitsThatHaveBeenCounterfaxedInThisSit = {};
 
     consol.log("dfim The current counterfax sit is:", sit.label);
 
@@ -428,6 +428,8 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
       assignmentsForThisChunk.forEach((assignment) => {
         let { questionOutputUnit, traitKey, traitValue } = assignment;
+        annoTraitKey = traitKey;
+        annoTraitValue = traitValue;
         let counterfaxedStCh = assignment.stCh;
 
         consol.log(
@@ -436,17 +438,17 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         );
         ////////////////
 
-        if (
-          cfUtils.removeAnnotationsIfHeadChunkHasBeenCounterfaxed(
-            questionOutputUnitsThatHaveBeenCounterfaxedInThisSit,
-            questionOutputUnit
-          )
-        ) {
-          //ACX1: If this QstCh agrees with a stCh that we've already run through counterfaxing,
-          //then remove that specific annotation from this QstCh, and return.
-          consol.log("ioej");
-          return;
-        }
+        // if (
+        //   cfUtils.removeAnnotationsIfHeadChunkHasBeenCounterfaxed(
+        //     questionOutputUnitsThatHaveBeenCounterfaxedInThisSit,
+        //     questionOutputUnit
+        //   )
+        // ) {
+        //   //ACX1: If this QstCh agrees with a stCh that we've already run through counterfaxing,
+        //   //then remove that specific annotation from this QstCh, and return.
+        //   consol.log("ioej");
+        //   return;
+        // }
 
         let arrayOfCounterfactualResultsForThisAnnotation = []; //Hmm....
 
@@ -743,6 +745,15 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       //And the same for "I saw." --> ["Zobaczyłem.", "Zobaczyłam."]
       //
       if (questionOutputUnit.structureChunk.dontSpecifyOnThisChunk) {
+        // const agglomerateAnswers = (
+        //   questionOutputUnit,
+        //   annoTraitKey,
+        //   counterfactualTraitValues,
+        //   answerSelectedWordsSetsHaveChanged,
+        //   answerSentenceData,
+        //   counterfactualAnswerOutputArrays,
+        // ) => {};
+
         let combinedTraitValues = [
           ...questionOutputUnit.structureChunk[annoTraitKey],
           ...counterfactualTraitValues,
@@ -750,10 +761,10 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
         answerSelectedWordsSetsHaveChanged.bool = true;
 
-        newArr = [
-          ...answerSentenceData.answerOutputArrays,
-          ...counterfactualAnswerOutputArrays,
-        ];
+        // newArr = [
+        //   ...answerSentenceData.answerOutputArrays,
+        //   ...counterfactualAnswerOutputArrays,
+        // ];
 
         answerSentenceData.answerOutputArrays = [
           ...answerSentenceData.answerOutputArrays,
@@ -780,11 +791,11 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       }
     }
 
-    uUtils.addToArrayAtKey(
-      questionOutputUnitsThatHaveBeenCounterfaxedInThisSit,
-      questionOutputUnit.structureChunk.chunkId,
-      annoTraitKey
-    );
+    // uUtils.addToArrayAtKey(
+    //   questionOutputUnitsThatHaveBeenCounterfaxedInThisSit,
+    //   questionOutputUnit.structureChunk.chunkId,
+    //   annoTraitKey
+    // );
   });
 };
 
