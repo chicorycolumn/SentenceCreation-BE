@@ -761,11 +761,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
         answerSelectedWordsSetsHaveChanged.bool = true;
 
-        // newArr = [
-        //   ...answerSentenceData.answerOutputArrays,
-        //   ...counterfactualAnswerOutputArrays,
-        // ];
-
         answerSentenceData.answerOutputArrays = [
           ...answerSentenceData.answerOutputArrays,
           ...counterfactualAnswerOutputArrays,
