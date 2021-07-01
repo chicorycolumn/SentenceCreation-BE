@@ -420,6 +420,9 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       runsRecord.push(sit.label);
     }
 
+    let moreDetailedRunRecordForThisSit = [];
+    runsRecord.push(moreDetailedRunRecordForThisSit);
+
     sit.chunkIds.forEach((chunkId) => {
       let assignmentsForThisChunk = sit[chunkId];
 
@@ -522,34 +525,14 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           devSaysOmitStChValidation: reqBody.devSaysOmitStChValidation,
           devSaysThrowAfterAnnoSalvo: reqBody.devSaysThrowAfterAnnoSalvo,
         };
-        /////////////
+
+        moreDetailedRunRecordForThisSit.push(
+          `${questionOutputUnit.structureChunk.chunkId} new ${annoTraitKey} "${counterfactualTraitValueForThisTraitKey}".`
+        );
+
+        palette.fetchPalette({ body: newReqBody });
       });
     });
-
-    consol.log(
-      `myxe removeAnnotationsByCounterfax FOREACH START. Examining ${questionOutputUnit.structureChunk.chunkId}'s annotation ${annoTraitKey} = ${annoTraitValue} so the counterfactual traitValues are [${counterfactualTraitValuesForThisTraitKey}].`
-    );
-
-    //  counterfactualTraitValuesForThisTraitKey.forEach((counterfactualTraitValueForThisTraitKey) => {
-    consol.log(
-      `myxe removeAnnotationsByCounterfax FOREACH-2 START. Will do a run with counterfactual traitValue "${counterfactualTraitValueForThisTraitKey}".`
-    );
-
-    // counterfaxedStCh[annoTraitKey] = [counterfactualTraitValueForThisTraitKey];
-
-    //
-    //
-    //
-    //
-    //
-
-    runsRecord.push(
-      `${questionOutputUnit.structureChunk.chunkId} new ${annoTraitKey} "${counterfactualTraitValueForThisTraitKey}".`
-    );
-
-    consol.log("\n--------------------------------COUNTERFAX RUN BEGINNING\n");
-    palette.fetchPalette({ body: newReqBody });
-    //  });
 
     let counterfactualQuestionOutputArrays =
       arrayOfCounterfactualResultsForThisAnnotation.map(
@@ -557,7 +540,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           counterfactual.questionSentenceData.questionOutputArr
       );
     let counterfactualAnswerOutputArrays = [];
-
     arrayOfCounterfactualResultsForThisAnnotation.forEach((counterfactual) => {
       counterfactual.answerSentenceData.answerOutputArrays.forEach(
         (answerOutputArray) => {
