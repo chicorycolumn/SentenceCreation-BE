@@ -520,22 +520,11 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           pleaseDontSpecify: reqBody.pleaseDontSpecify,
           devSaysThrowAtMidpoint: reqBody.devSaysThrowAtMidpoint,
           devSaysOmitStChValidation: reqBody.devSaysOmitStChValidation,
+          devSaysThrowAfterAnnoSalvo: reqBody.devSaysThrowAfterAnnoSalvo,
         };
         /////////////
       });
     });
-
-    /** For each chunkId in sit.chunkIds, access sit[chunkId]
-     * this is an array of all the individual assignments for this chunkId in this sit,
-     * eg [gender to female, person to 1per, ...].
-     *
-     * For each assignment, get these:
-     *     let { questionOutputUnit, traitKey, traitValue } = assignment;
-     *     let counterfaxedStCh = assignment.stCh;
-     * 
-     *     consol.log("dfim The current counterfax assignment is:",assignment.label
-    );
-     */
 
     consol.log(
       `myxe removeAnnotationsByCounterfax FOREACH START. Examining ${questionOutputUnit.structureChunk.chunkId}'s annotation ${annoTraitKey} = ${annoTraitValue} so the counterfactual traitValues are [${counterfactualTraitValuesForThisTraitKey}].`

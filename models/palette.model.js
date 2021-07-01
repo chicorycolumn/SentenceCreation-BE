@@ -427,8 +427,6 @@ exports.fetchPalette = (req) => {
     return;
   }
 
-  /////////////I believe somewhere b: here and...
-
   let answerSelectedWordsSetsHaveChanged = { bool: false };
   let runsRecord = [];
 
@@ -437,6 +435,8 @@ exports.fetchPalette = (req) => {
     questionSentenceData.questionOutputArr.map((unit) => unit.structureChunk)
   );
 
+  //giveFinalSentences in question mode, will evaluate annotations, involving counterfaxing,
+  //ie a nested set of calls to this fetchPalette fxn.
   questionResponseObj = scUtils.giveFinalSentences(
     questionSentenceData,
     false,
@@ -450,8 +450,7 @@ exports.fetchPalette = (req) => {
     originalQuestionSentenceFormula
   );
 
-  //...here, we re-enter processSentenceFormula.
-
+  //And now if any changes from counterfaxing down annotations, they will be integrated here.
   if (answerSelectedWordsSetsHaveChanged.bool) {
     if (!answerResponseObj) {
       answerResponseObj = scUtils.giveFinalSentences(
