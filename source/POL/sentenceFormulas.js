@@ -1282,15 +1282,7 @@ exports.sentenceFormulasBank = [
         specificLemmas: ["kobieta"],
       },
     ],
-    primaryOrders: [
-      [
-        // "pro-1-I",
-        "pro-2-my",
-        "npe-1-doctor",
-        "ver-1-was",
-        "npe-2-woman",
-      ],
-    ],
+    primaryOrders: [["pro-2-my", "npe-1-doctor", "ver-1-was", "npe-2-woman"]],
   },
   {
     sentenceFormulaSymbol: "116a My doctor's doctor was a woman",
@@ -1316,7 +1308,6 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
         specificLemmas: ["lekarz", "lekarka"],
         gcase: ["gen"],
-        // gender: [],
       },
       {
         chunkId: "npe-2-doctor",
@@ -1343,7 +1334,6 @@ exports.sentenceFormulasBank = [
     ],
     primaryOrders: [
       [
-        // "pro-1-I",
         "npe-2-doctor",
         "pro-2-my",
         "npe-1-doctor's",
