@@ -1493,7 +1493,6 @@ exports.sentenceFormulasBank = [
         specificLemmas: ["lekarz", "lekarka"],
         gcase: ["nom"],
         educatorBlocksAnnotationsForTheseTraitKeys: ["gender", "number"],
-        // gender: ["f"],
       },
       { chunkId: "fix-1-and", chunkValue: "i" },
       {
@@ -1540,7 +1539,6 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
         specificLemmas: ["lekarz", "lekarka"],
         gcase: ["nom"],
-        // gender: ["f"],
       },
       { chunkId: "fix-1-and", chunkValue: "i" },
       {
@@ -1572,7 +1570,6 @@ exports.sentenceFormulasBank = [
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         number: ["singular"],
-        // gender: ["m1"],
       },
       {
         chunkId: "pro-1-my",
