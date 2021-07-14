@@ -84,6 +84,205 @@ exports.explodeCounterfaxSituations = (sits) => {
   return explodedBetweenChunks;
 };
 
+exports.listCounterfaxSituations2 = (questionOutputArr, languagesObj) => {
+  let { questionLanguage } = languagesObj;
+
+  let counterfaxSituations = { headsFirstSequenceChunkIds: [] };
+
+  let questionOutputArrOrderedHeadsFirst =
+    reorderOutputArrWithHeadsFirst(questionOutputArr);
+
+  function reorderOutputArrWithHeadsFirst(questionOutputArr) {
+    let questionOutputArrOrderedHeadsFirst = [];
+    let headChunkIds = [];
+
+    let agreeKeys = [
+      "agreeWith",
+      "postHocAgreeWithPrimary",
+      "postHocAgreeWithSecondary",
+      "postHocAgreeWithTertiary",
+      "connectedTo",
+    ];
+
+    questionOutputArr.forEach((questionOutputUnit) => {
+      agreeKeys.forEach((agreeKey) => {
+        if (questionOutputUnit.structureChunk[agreeKey]) {
+          headChunkIds.push(questionOutputUnit.structureChunk[agreeKey]);
+        }
+      });
+    });
+
+    headChunkIds = Array.from(new Set(headChunkIds));
+
+    headChunkIds.forEach((headChunkId) => {
+      let headOutputUnit = questionOutputArr.find(
+        (questionOutputUnit) =>
+          questionOutputUnit.structureChunk.chunkId === headChunkId
+      );
+
+      if (!headOutputUnit) {
+        consol.throw(
+          `kozs Failure to find headChunk for headChunkId ${headChunkId}.`
+        );
+      }
+
+      questionOutputArrOrderedHeadsFirst.push(headOutputUnit);
+    });
+
+    questionOutputArr.forEach((questionOutputUnit) => {
+      if (!headChunkIds.includes(questionOutputUnit.structureChunk.chunkId)) {
+        questionOutputArrOrderedHeadsFirst.push(questionOutputUnit);
+      }
+    });
+
+    if (
+      !uUtils.areTwoFlatArraysEqual(
+        questionOutputArr.map(
+          (outputUnit) => outputUnit.structureChunk.chunkId
+        ),
+        questionOutputArrOrderedHeadsFirst.map(
+          (outputUnit) => outputUnit.structureChunk.chunkId
+        )
+      )
+    ) {
+      consol.log(
+        "iwwo questionOutputArr.map",
+        questionOutputArr.map((outputUnit) => outputUnit.structureChunk.chunkId)
+      );
+      consol.log(
+        "iwwo questionOutputArrOrderedHeadsFirst.map",
+        questionOutputArrOrderedHeadsFirst.map(
+          (outputUnit) => outputUnit.structureChunk.chunkId
+        )
+      );
+      consol.throw(
+        `iwwo Failure in reordering the questionOutputArr. See printout comparison above.`
+      );
+    }
+    return questionOutputArrOrderedHeadsFirst;
+  }
+
+  questionOutputArrOrderedHeadsFirst.forEach((questionOutputUnit) => {
+    //Abortcuts for this fxn: Search ACX.
+
+    if (uUtils.isEmpty(questionOutputUnit.structureChunk.annotations)) {
+      return;
+    }
+
+    Object.keys(questionOutputUnit.structureChunk.annotations).forEach(
+      (annoTraitKey) => {
+        //ACX2A: Don't bother running counterfactuals for wordtype/emoji/text annotations, as they'll always be needed.
+        //ACX2B: Don't bother running counterfactuals for tenseDesc annotations, as they'll take so long, because there are so many alternate inflectionValues, and we can reasonably presume that the tenseDesc anno will be necessary.
+
+        if (
+          ["wordtype", "emoji", "text", "tenseDescription"].includes(
+            annoTraitKey
+          )
+        ) {
+          return;
+        }
+
+        ////////---------------/////
+        ////////---------------//////////
+
+        let originalAnnoTraitValue =
+          questionOutputUnit.structureChunk.annotations[annoTraitKey];
+
+        //Adding original.
+        addFaxSituation2(
+          counterfaxSituations,
+          questionOutputUnit.structureChunk.chunkId,
+          annoTraitKey,
+          originalAnnoTraitValue
+        );
+
+        let counterfactualTraitValuesForThisTraitKey = Array.from(
+          new Set(
+            refFxn
+              .getStructureChunkTraits(questionLanguage)
+              [annoTraitKey].possibleTraitValues.filter(
+                (traitValue) => traitValue !== originalAnnoTraitValue
+              )
+          )
+        );
+
+        consol.log(
+          "veem counterfactualTraitValuesForThisTraitKey",
+          counterfactualTraitValuesForThisTraitKey
+        );
+
+        let tempStCh = uUtils.copyWithoutReference(
+          questionOutputUnit.structureChunk
+        );
+
+        tempStCh[annoTraitKey] = counterfactualTraitValuesForThisTraitKey;
+
+        //If "plural", remove "m", "f". If person, remove "n".
+        counterfactualTraitValuesForThisTraitKey =
+          refFxn.removeIncompatibleTraits(questionLanguage, tempStCh)[
+            annoTraitKey
+          ];
+
+        function addFaxSituation2(
+          counterfaxSituations,
+          structureChunkId,
+          traitKey,
+          traitValue
+        ) {
+          let newCounterfaxSituation = {
+            traitKey: traitKey,
+            traitValue: traitValue,
+          };
+
+          if (
+            counterfaxSituations.headsFirstSequenceChunkIds.includes(
+              structureChunkId
+            )
+          ) {
+            if (
+              Object.keys(counterfaxSituations[structureChunkId]).includes(
+                traitKey
+              )
+            ) {
+              counterfaxSituations[structureChunkId][traitKey].push(
+                newCounterfaxSituation
+              );
+            } else {
+              counterfaxSituations[structureChunkId][traitKey] = [
+                newCounterfaxSituation,
+              ];
+            }
+          } else {
+            counterfaxSituations.headsFirstSequenceChunkIds.push(
+              structureChunkId
+            );
+            counterfaxSituations[structureChunkId] = {};
+            counterfaxSituations[structureChunkId][traitKey] = [
+              newCounterfaxSituation,
+            ];
+          }
+        }
+
+        counterfactualTraitValuesForThisTraitKey.forEach(
+          (counterfactualTraitValueForThisTraitKey) => {
+            addFaxSituation2(
+              counterfaxSituations,
+              questionOutputUnit.structureChunk.chunkId,
+              annoTraitKey,
+              counterfactualTraitValueForThisTraitKey
+            );
+          }
+        );
+
+        ////////---------------//////////
+        ////////---------------/////
+      }
+    );
+  });
+
+  return counterfaxSituations;
+};
+
 exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
   let { questionLanguage } = languagesObj;
 
@@ -188,8 +387,8 @@ exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
         let originalAnnoTraitValue =
           questionOutputUnit.structureChunk.annotations[annoTraitKey];
 
+        //Adding original.
         addFaxSituation(
-          //Adding original.
           counterfaxSituations,
           uUtils.copyWithoutReference(questionOutputUnit.structureChunk),
           annoTraitKey,
@@ -224,6 +423,46 @@ exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
           refFxn.removeIncompatibleTraits(questionLanguage, counterfaxedStCh)[
             annoTraitKey
           ];
+
+        function addFaxSituation2(
+          counterfaxSituations,
+          structureChunkId,
+          traitKey,
+          traitValue
+        ) {
+          let newCounterfaxSituation = {
+            traitKey: traitKey,
+            traitValue: traitValue,
+          };
+
+          if (
+            counterfaxSituations.headsFirstSequenceChunkIds.includes(
+              structureChunkId
+            )
+          ) {
+            if (
+              Object.keys(counterfaxSituations[structureChunkId]).includes(
+                traitKey
+              )
+            ) {
+              counterfaxSituations[structureChunkId][traitKey].push(
+                newCounterfaxSituation
+              );
+            } else {
+              counterfaxSituations[structureChunkId][traitKey] = [
+                newCounterfaxSituation,
+              ];
+            }
+          } else {
+            counterfaxSituations.headsFirstSequenceChunkIds.push(
+              structureChunkId
+            );
+            counterfaxSituations[structureChunkId] = {};
+            counterfaxSituations[structureChunkId][traitKey] = [
+              newCounterfaxSituation,
+            ];
+          }
+        }
 
         function addFaxSituation(
           counterfaxSituations,
