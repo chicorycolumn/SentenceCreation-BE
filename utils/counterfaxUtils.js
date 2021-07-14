@@ -529,17 +529,20 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   //So now we have the sentenceFormula for the original (Factual) situation.
   //Now each run of the forEach sit, will make a deepcopy of it, and use that to counterfax run.
 
-  explodedCounterfaxSituationsSchematics.forEach((sit, index) => {
+  explodedCounterfaxSituationsSchematics.forEach((sitSchematic, index) => {
     // let questionOutputUnitsThatHaveBeenCounterfaxedInThisSit = {}; //To delete in Iota2.
 
-    consol.log("dfim The current counterfax sit is:", sit.label);
+    consol.log(
+      "dfim The current counterfax sitSchematic is:",
+      sitSchematic.label
+    );
 
     if (!index) {
       consol.log("@@ This is the original (Factual) so returning here.");
-      runsRecord.push(`${sit.label}(original)`);
+      runsRecord.push(`${sitSchematic.label}(original)`);
       return;
     }
-    runsRecord.push(sit.label);
+    runsRecord.push(sitSchematic.label);
 
     let counterfactualQuestionSentenceFormula = uUtils.copyWithoutReference(
       updatedOriginalQuestionSentenceFormula
@@ -550,7 +553,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
     //Then exit both loops.
     //Then send off to fetchPalette.
 
-    sit.chunkIds.forEach((chunkId) => {
+    sitSchematic.chunkIds.forEach((chunkId) => {
       let stChToCounterfax =
         counterfactualQuestionSentenceFormula.sentenceStructure.find(
           (structureChunk) => structureChunk.chunkId === chunkId
@@ -560,7 +563,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         consol.throw("waow");
       }
 
-      sit[chunkId].forEach((assignment) => {
+      sitSchematic[chunkId].forEach((assignment) => {
         stChToCounterfax[assignment.traitKey] = [assignment.traitValue];
       });
     });
@@ -572,7 +575,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
     let newReqBody = {
       allCounterfactualResults,
       counterfactualQuestionSentenceFormula,
-      sit,
+      sitSchematic,
 
       sentenceFormulaId:
         counterfactualQuestionSentenceFormula.sentenceFormulaId,
