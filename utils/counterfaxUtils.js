@@ -4,6 +4,7 @@ const consol = require("./zerothOrder/consoleLoggingUtils.js");
 const cfUtils = require("./counterfaxUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 const refFxn = require("./reference/referenceFunctions.js");
+const palette = require("../models/palette.model.js");
 
 exports.explodeCounterfaxSituations = (sits) => {
   let explodedWithinEachChunk = {};
@@ -525,7 +526,8 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
     questionOutputArr
   );
 
-  //nownow
+  let originalSitSchematic;
+
   //So now we have the sentenceFormula for the original (Factual) situation.
   //Now each run of the forEach sit, will make a deepcopy of it, and use that to counterfax run.
 
@@ -540,6 +542,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
     if (!index) {
       consol.log("@@ This is the original (Factual) so returning here.");
       runsRecord.push(`${sitSchematic.label}(original)`);
+      originalSitSchematic = sitSchematic;
       return;
     }
     runsRecord.push(sitSchematic.label);
@@ -575,7 +578,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
     let newReqBody = {
       allCounterfactualResults,
       counterfactualQuestionSentenceFormula,
-      sitSchematic,
+      counterfactualSchematic: sitSchematic,
 
       sentenceFormulaId:
         counterfactualQuestionSentenceFormula.sentenceFormulaId,
@@ -611,17 +614,88 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
   console.log("SUCCESS!");
   console.log(allCounterfactualResults.length);
-  throw 777;
 
   //Will use allCounterfactualResults not arrayOfCounterfactualResultsForThisAnnotation.
   //But will need to sort by "All other things being equal" for coppicing and inosculating.
 
-  let counterfactualQuestionOutputArrays =
-    arrayOfCounterfactualResultsForThisAnnotation.map(
-      (counterfactual) => counterfactual.questionSentenceData.questionOutputArr
-    );
+  /**NOWNOW
+   * First we need to get all annos that we want to check, with their corresp chunkIds.
+   *
+   * Then do forEach(annoKey, chunkIdToExamine => {
+   * 
+   * let traitKeyToExamine = annoKey
+   *
+   *let specificCounterfactualResultsForThisOneAnnotationOnThisStCh =  
+      findCFResultsWhenAllOtherThingsBeingEqual(
+        allCounterfactualResults,
+        originalSitSchematic,
+        chunkIdToExamine,
+        traitKeyToExamine
+      )
+
+      Now you can do coppicing and inosculating.
+   *
+   * })
+   */
+
+  function findCFResultsWhenAllOtherThingsBeingEqual(
+    allCR,
+    originalSit,
+    chunkIdToExamine,
+    traitKeyToExamine
+  ) {
+    return allCR.filter((CR) => {
+      let Cschem = CR.counterfactualSchematic;
+      console.log("");
+      console.log(Cschem.label);
+
+      //We only want counterfax results where the chunk to be coppiced/inosculated has a DIFFERENT value to what it has in original.
+      if (
+        Cschem[chunkIdToExamine].find(
+          (assig) =>
+            assig.traitKey === traitKeyToExamine &&
+            assig.traitValue ===
+              originalSit[chunkIdToExamine].find(
+                (assignment) => assignment.traitKey === traitKeyToExamine
+              ).traitValue
+        )
+      ) {
+        console.log("reject 1: chunk to examine had same value as original");
+        return false;
+      }
+
+      //And if chunk to be cop/ino does have a different value to original, all values in all other parts of this counterfax result must be same as original.
+
+      if (
+        originalSit.chunkIds.some((chunkId) =>
+          Cschem[chunkId].some(
+            (assig) =>
+              !(
+                assig.traitKey === traitKeyToExamine &&
+                chunkId === chunkIdToExamine
+              ) &&
+              assig.traitValue !==
+                originalSit[chunkId].find(
+                  (assignment) => assignment.traitKey === assig.traitKey
+                ).traitValue
+          )
+        )
+      ) {
+        console.log(
+          "reject 2: at least one other chunk had different value to in original"
+        );
+        return false;
+      }
+      console.log("Accepted!");
+      return true;
+    });
+  }
+
+  let counterfactualQuestionOutputArrays = allCounterfactualResults.map(
+    (counterfactual) => counterfactual.questionSentenceData.questionOutputArr
+  );
   let counterfactualAnswerOutputArrays = [];
-  arrayOfCounterfactualResultsForThisAnnotation.forEach((counterfactual) => {
+  allCounterfactualResults.forEach((counterfactual) => {
     counterfactual.answerSentenceData.answerOutputArrays.forEach(
       (answerOutputArray) => {
         counterfactualAnswerOutputArrays.push(answerOutputArray);
