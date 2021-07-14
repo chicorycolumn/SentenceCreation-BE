@@ -42,14 +42,16 @@ exports.firstStageEvaluateAnnotations = (
     answerSentenceData
   );
 
+  let { counterfaxSituations, annotationsToCounterfaxAndTheirChunkIds } =
+    cfUtils.listCounterfaxSituations2(questionOutputArr, languagesObj);
+
   let explodedCounterfaxSituationsSchematics =
-    cfUtils.explodeCounterfaxSituations(
-      cfUtils.listCounterfaxSituations2(questionOutputArr, languagesObj)
-    );
+    cfUtils.explodeCounterfaxSituations(counterfaxSituations);
 
   cfUtils.removeAnnotationsByCounterfactualAnswerSentences(
     explodedCounterfaxSituationsSchematics,
     questionOutputArr,
+    annotationsToCounterfaxAndTheirChunkIds,
     languagesObj,
     answerSentenceData,
     questionSentenceFormula,

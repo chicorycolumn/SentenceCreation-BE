@@ -94,6 +94,8 @@ exports.listCounterfaxSituations2 = (questionOutputArr, languagesObj) => {
 
   let counterfaxSituations = { headsFirstSequenceChunkIds: [] };
 
+  let annotationsToCounterfaxAndTheirChunkIds = [];
+
   let questionOutputArrOrderedHeadsFirst =
     reorderOutputArrWithHeadsFirst(questionOutputArr);
 
@@ -268,6 +270,11 @@ exports.listCounterfaxSituations2 = (questionOutputArr, languagesObj) => {
           }
         }
 
+        annotationsToCounterfaxAndTheirChunkIds.push({
+          chunkId: questionOutputUnit.structureChunk.chunkId,
+          annoTraitKey,
+        });
+
         counterfactualTraitValuesForThisTraitKey.forEach(
           (counterfactualTraitValueForThisTraitKey) => {
             addFaxSituation2(
@@ -285,7 +292,7 @@ exports.listCounterfaxSituations2 = (questionOutputArr, languagesObj) => {
     );
   });
 
-  return counterfaxSituations;
+  return { counterfaxSituations, annotationsToCounterfaxAndTheirChunkIds };
 };
 
 exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
@@ -499,6 +506,7 @@ exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
 exports.removeAnnotationsByCounterfactualAnswerSentences = (
   explodedCounterfaxSituationsSchematics,
   questionOutputArr,
+  annotationsToCounterfaxAndTheirChunkIds,
   languagesObj,
   answerSentenceData,
   rawQuestionSentenceFormula, //Alpha not really raw. As this is the counterfaxed sentence formula when on a counterfax run.
@@ -615,11 +623,25 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   console.log("SUCCESS!");
   console.log(allCounterfactualResults.length);
 
-  //Will use allCounterfactualResults not arrayOfCounterfactualResultsForThisAnnotation.
-  //But will need to sort by "All other things being equal" for coppicing and inosculating.
+  console.log(annotationsToCounterfaxAndTheirChunkIds);
 
-  /**NOWNOW
+  annotationsToCounterfaxAndTheirChunkIds.forEach((dataObj) => {
+    let { chunkId, annoTraitKey } = dataObj;
+
+    let specificCounterfactualResultsForThisOneAnnotationOnThisStCh =
+      findCFResultsWhenAllOtherThingsBeingEqual(
+        allCounterfactualResults,
+        originalSitSchematic,
+        chunkId,
+        annoTraitKey
+      );
+
+    console.log("nownow");
+  });
+
+  /**
    * First we need to get all annos that we want to check, with their corresp chunkIds.
+   * This ^ can have been done in listCounterfactualSituations.
    *
    * Then do forEach(annoKey, chunkIdToExamine => {
    * 
