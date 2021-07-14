@@ -1733,7 +1733,7 @@ describe("listCounterfaxSituations", () => {
   });
 });
 
-describe.only("explodeCounterfaxSituations", () => {
+describe("explodeCounterfaxSituations", () => {
   it("Two by three by two makes twelve.", () => {
     let input = {
       headsFirstSequenceChunkIds: ["pro-1", "pro-2"],

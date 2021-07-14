@@ -25,7 +25,7 @@ exports.fetchPalette = (req) => {
     devSaysThrowAfterAnnoSalvo,
     allCounterfactualResults,
     counterfactualQuestionSentenceFormula,
-    counterfactualTrait,
+    counterfactualSchematic,
   } = req.body;
 
   let { sentenceFormula, words } = scUtils.getMaterialsCopies(
@@ -420,7 +420,7 @@ exports.fetchPalette = (req) => {
 
   if (allCounterfactualResults) {
     allCounterfactualResults.push({
-      counterfactualTrait,
+      counterfactualSchematic,
       questionSentenceData,
       answerSentenceData,
     });

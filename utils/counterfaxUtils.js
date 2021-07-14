@@ -529,7 +529,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   //So now we have the sentenceFormula for the original (Factual) situation.
   //Now each run of the forEach sit, will make a deepcopy of it, and use that to counterfax run.
 
-  explodedCounterfaxSituations.forEach((sit, index) => {
+  explodedCounterfaxSituationsSchematics.forEach((sit, index) => {
     // let questionOutputUnitsThatHaveBeenCounterfaxedInThisSit = {}; //To delete in Iota2.
 
     consol.log("dfim The current counterfax sit is:", sit.label);
@@ -551,110 +551,59 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
     //Then send off to fetchPalette.
 
     sit.chunkIds.forEach((chunkId) => {
-      let assignmentsForThisChunk = sit[chunkId];
-
-      assignmentsForThisChunk.forEach((assignment) => {
-        let { questionOutputUnit, traitKey, traitValue } = assignment;
-        annoTraitKey = traitKey;
-        annoTraitValue = traitValue;
-        let counterfaxedStCh = assignment.stCh;
-
-        consol.log(
-          "dfim The current counterfax assignment is:",
-          assignment.label
+      let stChToCounterfax =
+        counterfactualQuestionSentenceFormula.sentenceStructure.find(
+          (structureChunk) => structureChunk.chunkId === chunkId
         );
-        ////////////////
 
-        // if (
-        //   cfUtils.removeAnnotationsIfHeadChunkHasBeenCounterfaxed(
-        //     questionOutputUnitsThatHaveBeenCounterfaxedInThisSit,
-        //     questionOutputUnit
-        //   )
-        // ) {
-        //   //ACX1: If this QstCh agrees with a stCh that we've already run through counterfaxing,
-        //   //then remove that specific annotation from this QstCh, and return.
-        //   consol.log("ioej");
-        //   return;
-        // }
+      if (!stChToCounterfax) {
+        consol.throw("waow");
+      }
 
-        //(IOTA). Do we want to send updated question formula for counterfax run,
-        //or originalQuestionSentenceFormula ?
-
-        function createCounterfactualSentenceFormula(
-          rawQuestionSentenceFormula,
-          questionOutputArr,
-          counterfaxedStCh
-        ) {
-          // let counterfactualQuestionSentenceFormula =
-          //   uUtils.copyWithoutReference(
-          //     rawQuestionSentenceFormula
-          //   );
-
-          // gpUtils.updateSentenceStructureWithNewStructureChunksFromOutputUnits(
-          //   counterfactualQuestionSentenceFormula.sentenceStructure,
-          //   questionOutputArr
-          // );
-
-          let indexOfStChToChange =
-            counterfactualQuestionSentenceFormula.sentenceStructure.findIndex(
-              (stCh) => stCh.chunkId === counterfaxedStCh.chunkId
-            );
-
-          if (indexOfStChToChange === -1) {
-            consol.throw("mizd");
-          }
-
-          counterfactualQuestionSentenceFormula.sentenceStructure[
-            indexOfStChToChange
-          ] = counterfaxedStCh;
-
-          counterfactualQuestionSentenceFormula.sentenceStructure.forEach(
-            (stCh) => {
-              delete stCh.annotations;
-            }
-          );
-
-          consol.consoleLogObjectAtOneLevel(
-            counterfactualQuestionSentenceFormula,
-            "counterfactualQuestionSentenceFormula",
-            "RACX"
-          );
-
-          return counterfactualQuestionSentenceFormula;
-        }
-
-        let counterfactualQuestionSentenceFormula =
-          createCounterfactualSentenceFormula(
-            rawQuestionSentenceFormula,
-            questionOutputArr,
-            counterfaxedStCh
-          );
-
-        let counterfactualTrait = {};
-        counterfactualTrait[annoTraitKey] = annoTraitValue;
-
-        let newReqBody = {
-          allCounterfactualResults,
-          counterfactualQuestionSentenceFormula,
-          counterfactualTrait,
-
-          sentenceFormulaId:
-            counterfactualQuestionSentenceFormula.sentenceFormulaId,
-          sentenceFormulaSymbol:
-            counterfactualQuestionSentenceFormula.sentenceFormulaSymbol,
-
-          useDummy: reqBody.useDummy,
-          questionLanguage: reqBody.questionLanguage,
-          answerLanguage: reqBody.answerLanguage,
-          pleaseDontSpecify: reqBody.pleaseDontSpecify,
-          devSaysThrowAtMidpoint: reqBody.devSaysThrowAtMidpoint,
-          devSaysOmitStChValidation: reqBody.devSaysOmitStChValidation,
-          devSaysThrowAfterAnnoSalvo: reqBody.devSaysThrowAfterAnnoSalvo,
-        };
-
-        palette.fetchPalette({ body: newReqBody });
+      sit[chunkId].forEach((assignment) => {
+        stChToCounterfax[assignment.traitKey] = [assignment.traitValue];
       });
     });
+
+    counterfactualQuestionSentenceFormula.sentenceStructure.forEach((stCh) => {
+      delete stCh.annotations;
+    });
+
+    let newReqBody = {
+      allCounterfactualResults,
+      counterfactualQuestionSentenceFormula,
+      sit,
+
+      sentenceFormulaId:
+        counterfactualQuestionSentenceFormula.sentenceFormulaId,
+      sentenceFormulaSymbol:
+        counterfactualQuestionSentenceFormula.sentenceFormulaSymbol,
+
+      useDummy: reqBody.useDummy,
+      questionLanguage: reqBody.questionLanguage,
+      answerLanguage: reqBody.answerLanguage,
+      pleaseDontSpecify: reqBody.pleaseDontSpecify,
+      devSaysThrowAtMidpoint: reqBody.devSaysThrowAtMidpoint,
+      devSaysOmitStChValidation: reqBody.devSaysOmitStChValidation,
+      devSaysThrowAfterAnnoSalvo: reqBody.devSaysThrowAfterAnnoSalvo,
+    };
+
+    palette.fetchPalette({ body: newReqBody });
+
+    // if (
+    //   cfUtils.removeAnnotationsIfHeadChunkHasBeenCounterfaxed(
+    //     questionOutputUnitsThatHaveBeenCounterfaxedInThisSit,
+    //     questionOutputUnit
+    //   )
+    // ) {
+    //   //ACX1: If this QstCh agrees with a stCh that we've already run through counterfaxing,
+    //   //then remove that specific annotation from this QstCh, and return.
+    //   consol.log("ioej");
+    //   return;
+    // }
+
+    //(IOTA). Do we want to send updated question formula for counterfax run,
+    //or originalQuestionSentenceFormula ?
   });
 
   console.log("SUCCESS!");
