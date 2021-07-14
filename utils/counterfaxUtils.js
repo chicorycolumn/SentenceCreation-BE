@@ -65,21 +65,25 @@ exports.explodeCounterfaxSituations = (sits) => {
     sentence.chunkIds.pop();
   }
 
-  // explodedBetweenChunks.labels = [];
+  function makeLabelFromSitSchematic(sit) {
+    let grandLabel = "";
+    sit.chunkIds.forEach((chunkId) => {
+      let label = `${chunkId} `;
+      sit[chunkId].forEach((assignment) => {
+        label += `${assignment.traitKey}=${assignment.traitValue} `;
+      });
+      label = label.slice(0, label.length - 1);
+      grandLabel += `${label}, `;
+    });
+    return grandLabel.slice(0, grandLabel.length - 2);
+  }
 
-  // explodedBetweenChunks.forEach((wholeSit) => {
-  //   let joinedLabel = [];
-
-  //   wholeSit.chunkIds.forEach((chunkId) => {
-  //     wholeSit[chunkId].forEach((individualSit) => {
-  //       joinedLabel.push(individualSit.label);
-  //     });
-  //   });
-
-  //   joinedLabel = joinedLabel.join(" ");
-  //   explodedBetweenChunks.labels.push(joinedLabel);
-  //   wholeSit.label = joinedLabel;
-  // });
+  explodedBetweenChunks.labels = [];
+  explodedBetweenChunks.forEach((sit) => {
+    let label = makeLabelFromSitSchematic(sit);
+    sit.label = label;
+    explodedBetweenChunks.labels.push(label);
+  });
 
   return explodedBetweenChunks;
 };
@@ -507,8 +511,8 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   let shouldConsoleLog = false;
   let questionLanguage = languagesObj.questionLanguage;
 
-  let originalQuestionOutputArrays = [questionOutputArr]; //Does this go here?
-  let originalAnswerOutputArrays = answerSentenceData.answerOutputArrays; //Does this go here?
+  let originalQuestionOutputArrays = [questionOutputArr];
+  let originalAnswerOutputArrays = answerSentenceData.answerOutputArrays;
 
   let allCounterfactualResults = [];
 
@@ -525,102 +529,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   //So now we have the sentenceFormula for the original (Factual) situation.
   //Now each run of the forEach sit, will make a deepcopy of it, and use that to counterfax run.
 
-  let sitEXAMPLE = {
-    label: "pro-1=gender=virile pro-2=gender=nonvirile",
-    chunkIds: ["pro-1", "pro-2"],
-    "pro-1": [
-      {
-        label: "pro-1=gender=virile",
-        stCh: {
-          chunkId: "pro-1",
-          specificLemmas: ["PERSONAL"],
-          gcase: ["nom"],
-          number: ["plural"],
-          person: ["1per"],
-          dontSpecifyOnThisChunk: true,
-          form: ["pronoun"],
-          gender: ["virile"],
-          andTags: [],
-          annotations: {
-            gender: "virile",
-          },
-        },
-        questionOutputUnit: {
-          selectedLemmaObject: {},
-          selectedWord: "we",
-          drillPath: [
-            ["form", "pronoun"],
-            ["person", "1per"],
-            ["number", "plural"],
-            ["gender", "virile"],
-            ["gcase", "nom"],
-          ],
-          structureChunk: {
-            chunkId: "pro-1",
-            specificLemmas: ["PERSONAL"],
-            gcase: ["nom"],
-            number: ["plural"],
-            person: ["1per"],
-            dontSpecifyOnThisChunk: true,
-            form: ["pronoun"],
-            gender: ["virile"],
-            andTags: [],
-            annotations: {
-              gender: "virile",
-            },
-          },
-        },
-        traitKey: "gender",
-        traitValue: "virile",
-      },
-    ],
-    "pro-2": [
-      {
-        label: "pro-2=gender=nonvirile",
-        stCh: {
-          chunkId: "pro-2",
-          specificLemmas: ["PERSONAL"],
-          gcase: ["acc"],
-          number: ["plural"],
-          person: ["3per"],
-          dontSpecifyOnThisChunk: true,
-          form: ["pronoun"],
-          gender: ["nonvirile"],
-          andTags: [],
-          annotations: {
-            gender: "nonvirile",
-          },
-        },
-        questionOutputUnit: {
-          selectedLemmaObject: {},
-          selectedWord: "them",
-          drillPath: [
-            ["form", "pronoun"],
-            ["person", "3per"],
-            ["number", "plural"],
-            ["gender", "nonvirile"],
-            ["gcase", "acc"],
-          ],
-          structureChunk: {
-            chunkId: "pro-2",
-            specificLemmas: ["PERSONAL"],
-            gcase: ["acc"],
-            number: ["plural"],
-            person: ["3per"],
-            dontSpecifyOnThisChunk: true,
-            form: ["pronoun"],
-            gender: ["nonvirile"],
-            andTags: [],
-            annotations: {
-              gender: "nonvirile",
-            },
-          },
-        },
-        traitKey: "gender",
-        traitValue: "nonvirile",
-      },
-    ],
-  };
   explodedCounterfaxSituations.forEach((sit, index) => {
     // let questionOutputUnitsThatHaveBeenCounterfaxedInThisSit = {}; //To delete in Iota2.
 
@@ -632,8 +540,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       return;
     }
     runsRecord.push(sit.label);
-    let moreDetailedRunRecordForThisSit = [];
-    runsRecord.push(moreDetailedRunRecordForThisSit);
 
     let counterfactualQuestionSentenceFormula = uUtils.copyWithoutReference(
       updatedOriginalQuestionSentenceFormula
@@ -745,10 +651,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           devSaysOmitStChValidation: reqBody.devSaysOmitStChValidation,
           devSaysThrowAfterAnnoSalvo: reqBody.devSaysThrowAfterAnnoSalvo,
         };
-
-        moreDetailedRunRecordForThisSit.push(
-          `${questionOutputUnit.structureChunk.chunkId} new ${annoTraitKey} "${counterfactualTraitValueForThisTraitKey}".`
-        );
 
         palette.fetchPalette({ body: newReqBody });
       });
