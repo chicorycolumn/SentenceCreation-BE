@@ -189,6 +189,7 @@ exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
           questionOutputUnit.structureChunk.annotations[annoTraitKey];
 
         addFaxSituation(
+          //Adding original.
           counterfaxSituations,
           uUtils.copyWithoutReference(questionOutputUnit.structureChunk),
           annoTraitKey,
@@ -296,11 +297,11 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   questionOutputArr,
   languagesObj,
   answerSentenceData,
-  rawQuestionSentenceFormula,
+  rawQuestionSentenceFormula, //Alpha not really raw. As this is the counterfaxed sentence formula when on a counterfax run.
   reqBody,
   answerSelectedWordsSetsHaveChanged,
   runsRecord,
-  originalQuestionSentenceFormula
+  originalQuestionSentenceFormula //On a counterfax run this is null. Remove this variable everywhere.
 ) => {
   //Abortcuts for this fxn: Search ACX.
 
@@ -310,14 +311,52 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   let originalQuestionOutputArrays = [questionOutputArr]; //Does this go here?
   let originalAnswerOutputArrays = answerSentenceData.answerOutputArrays; //Does this go here?
 
-  explodedCounterfaxSituations.forEach((sit, index) => {
-    let sitEXAMPLE = {
-      label: "pro-1=gender=virile pro-2=gender=nonvirile",
-      chunkIds: ["pro-1", "pro-2"],
-      "pro-1": [
-        {
-          label: "pro-1=gender=virile",
-          stCh: {
+  let allCounterfactualResults = [];
+
+  let updatedOriginalQuestionSentenceFormula = uUtils.copyWithoutReference(
+    rawQuestionSentenceFormula
+  );
+
+  gpUtils.updateSentenceStructureWithNewStructureChunksFromOutputUnits(
+    updatedOriginalQuestionSentenceFormula.sentenceStructure,
+    questionOutputArr
+  );
+
+  //nownow
+  //So now we have the sentenceFormula for the original (Factual) situation.
+  //Now each run of the forEach sit, will make a deepcopy of it, and use that to counterfax run.
+
+  let sitEXAMPLE = {
+    label: "pro-1=gender=virile pro-2=gender=nonvirile",
+    chunkIds: ["pro-1", "pro-2"],
+    "pro-1": [
+      {
+        label: "pro-1=gender=virile",
+        stCh: {
+          chunkId: "pro-1",
+          specificLemmas: ["PERSONAL"],
+          gcase: ["nom"],
+          number: ["plural"],
+          person: ["1per"],
+          dontSpecifyOnThisChunk: true,
+          form: ["pronoun"],
+          gender: ["virile"],
+          andTags: [],
+          annotations: {
+            gender: "virile",
+          },
+        },
+        questionOutputUnit: {
+          selectedLemmaObject: {},
+          selectedWord: "we",
+          drillPath: [
+            ["form", "pronoun"],
+            ["person", "1per"],
+            ["number", "plural"],
+            ["gender", "virile"],
+            ["gcase", "nom"],
+          ],
+          structureChunk: {
             chunkId: "pro-1",
             specificLemmas: ["PERSONAL"],
             gcase: ["nom"],
@@ -331,39 +370,39 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
               gender: "virile",
             },
           },
-          questionOutputUnit: {
-            selectedLemmaObject: {},
-            selectedWord: "we",
-            drillPath: [
-              ["form", "pronoun"],
-              ["person", "1per"],
-              ["number", "plural"],
-              ["gender", "virile"],
-              ["gcase", "nom"],
-            ],
-            structureChunk: {
-              chunkId: "pro-1",
-              specificLemmas: ["PERSONAL"],
-              gcase: ["nom"],
-              number: ["plural"],
-              person: ["1per"],
-              dontSpecifyOnThisChunk: true,
-              form: ["pronoun"],
-              gender: ["virile"],
-              andTags: [],
-              annotations: {
-                gender: "virile",
-              },
-            },
-          },
-          traitKey: "gender",
-          traitValue: "virile",
         },
-      ],
-      "pro-2": [
-        {
-          label: "pro-2=gender=nonvirile",
-          stCh: {
+        traitKey: "gender",
+        traitValue: "virile",
+      },
+    ],
+    "pro-2": [
+      {
+        label: "pro-2=gender=nonvirile",
+        stCh: {
+          chunkId: "pro-2",
+          specificLemmas: ["PERSONAL"],
+          gcase: ["acc"],
+          number: ["plural"],
+          person: ["3per"],
+          dontSpecifyOnThisChunk: true,
+          form: ["pronoun"],
+          gender: ["nonvirile"],
+          andTags: [],
+          annotations: {
+            gender: "nonvirile",
+          },
+        },
+        questionOutputUnit: {
+          selectedLemmaObject: {},
+          selectedWord: "them",
+          drillPath: [
+            ["form", "pronoun"],
+            ["person", "3per"],
+            ["number", "plural"],
+            ["gender", "nonvirile"],
+            ["gcase", "acc"],
+          ],
+          structureChunk: {
             chunkId: "pro-2",
             specificLemmas: ["PERSONAL"],
             gcase: ["acc"],
@@ -377,38 +416,14 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
               gender: "nonvirile",
             },
           },
-          questionOutputUnit: {
-            selectedLemmaObject: {},
-            selectedWord: "them",
-            drillPath: [
-              ["form", "pronoun"],
-              ["person", "3per"],
-              ["number", "plural"],
-              ["gender", "nonvirile"],
-              ["gcase", "acc"],
-            ],
-            structureChunk: {
-              chunkId: "pro-2",
-              specificLemmas: ["PERSONAL"],
-              gcase: ["acc"],
-              number: ["plural"],
-              person: ["3per"],
-              dontSpecifyOnThisChunk: true,
-              form: ["pronoun"],
-              gender: ["nonvirile"],
-              andTags: [],
-              annotations: {
-                gender: "nonvirile",
-              },
-            },
-          },
-          traitKey: "gender",
-          traitValue: "nonvirile",
         },
-      ],
-    };
-
-    // let questionOutputUnitsThatHaveBeenCounterfaxedInThisSit = {};
+        traitKey: "gender",
+        traitValue: "nonvirile",
+      },
+    ],
+  };
+  explodedCounterfaxSituations.forEach((sit, index) => {
+    // let questionOutputUnitsThatHaveBeenCounterfaxedInThisSit = {}; //To delete in Iota2.
 
     consol.log("dfim The current counterfax sit is:", sit.label);
 
@@ -416,12 +431,19 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       consol.log("@@ This is the original (Factual) so returning here.");
       runsRecord.push(`${sit.label}(original)`);
       return;
-    } else {
-      runsRecord.push(sit.label);
     }
-
+    runsRecord.push(sit.label);
     let moreDetailedRunRecordForThisSit = [];
     runsRecord.push(moreDetailedRunRecordForThisSit);
+
+    let counterfactualQuestionSentenceFormula = uUtils.copyWithoutReference(
+      updatedOriginalQuestionSentenceFormula
+    );
+
+    //Now, inside this forEach chunk forEach assigment,
+    //get those values and update counterfactualQuestionSentenceFormula with them.
+    //Then exit both loops.
+    //Then send off to fetchPalette.
 
     sit.chunkIds.forEach((chunkId) => {
       let assignmentsForThisChunk = sit[chunkId];
@@ -450,8 +472,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         //   return;
         // }
 
-        let arrayOfCounterfactualResultsForThisAnnotation = []; //Hmm....
-
         //(IOTA). Do we want to send updated question formula for counterfax run,
         //or originalQuestionSentenceFormula ?
 
@@ -460,15 +480,15 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           questionOutputArr,
           counterfaxedStCh
         ) {
-          let counterfactualQuestionSentenceFormula =
-            uUtils.copyWithoutReference(
-              rawQuestionSentenceFormula //Hmm....
-            );
+          // let counterfactualQuestionSentenceFormula =
+          //   uUtils.copyWithoutReference(
+          //     rawQuestionSentenceFormula
+          //   );
 
-          gpUtils.updateSentenceStructureWithNewStructureChunksFromOutputUnits(
-            counterfactualQuestionSentenceFormula.sentenceStructure,
-            questionOutputArr
-          );
+          // gpUtils.updateSentenceStructureWithNewStructureChunksFromOutputUnits(
+          //   counterfactualQuestionSentenceFormula.sentenceStructure,
+          //   questionOutputArr
+          // );
 
           let indexOfStChToChange =
             counterfactualQuestionSentenceFormula.sentenceStructure.findIndex(
@@ -506,11 +526,10 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           );
 
         let counterfactualTrait = {};
-        counterfactualTrait[annoTraitKey] =
-          counterfactualTraitValueForThisTraitKey;
+        counterfactualTrait[annoTraitKey] = annoTraitValue;
 
         let newReqBody = {
-          arrayOfCounterfactualResultsForThisAnnotation,
+          allCounterfactualResults,
           counterfactualQuestionSentenceFormula,
           counterfactualTrait,
 
@@ -535,263 +554,278 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         palette.fetchPalette({ body: newReqBody });
       });
     });
+  });
 
-    let counterfactualQuestionOutputArrays =
-      arrayOfCounterfactualResultsForThisAnnotation.map(
-        (counterfactual) =>
-          counterfactual.questionSentenceData.questionOutputArr
-      );
-    let counterfactualAnswerOutputArrays = [];
-    arrayOfCounterfactualResultsForThisAnnotation.forEach((counterfactual) => {
-      counterfactual.answerSentenceData.answerOutputArrays.forEach(
-        (answerOutputArray) => {
-          counterfactualAnswerOutputArrays.push(answerOutputArray);
-        }
-      );
-    });
+  console.log("SUCCESS!");
+  console.log(allCounterfactualResults.length);
+  throw 777;
 
-    let counterfactualTraitValues =
-      arrayOfCounterfactualResultsForThisAnnotation.map((counterfactual) => {
-        {
-          if (Object.keys(counterfactual.counterfactualTrait).length !== 1) {
-            consol.throw("iejr removeAnnotationsByCounterfax");
-          }
+  //Will use allCounterfactualResults not arrayOfCounterfactualResultsForThisAnnotation.
+  //But will need to sort by "All other things being equal" for coppicing and inosculating.
 
-          if (
-            Object.keys(counterfactual.counterfactualTrait)[0] !== annoTraitKey
-          ) {
-            consol.throw("dckm removeAnnotationsByCounterfax");
-          }
-
-          return counterfactual.counterfactualTrait[annoTraitKey];
-        }
-      });
-
-    if (shouldConsoleLog) {
-      consol.log(
-        "\n klwe removeAnnotationsByCounterfax. questionOutputUnit.structureChunk.annotations",
-        questionOutputUnit.structureChunk.annotations
-      );
-      consol.log(
-        "[1;33m" +
-          `klwe removeAnnotationsByCounterfax. We made counterfactuals for question stCh "${questionOutputUnit.structureChunk.chunkId}" based on its annotations, shown above.` +
-          "[0m"
-      );
-      consol.log({ "additional runs": runsRecord });
-      consol.log(
-        "originalQuestionOutputArrays...selectedWords",
-        originalQuestionOutputArrays.map((outputArr) =>
-          outputArr.map((unit) => unit.selectedWord)
-        )
-      );
-      consol.log(
-        "originalAnswerOutputArrays...selectedWords",
-        originalAnswerOutputArrays.map((outputArr) =>
-          outputArr.map((unit) => unit.selectedWord)
-        )
-      );
-      consol.log(
-        "counterfactualQuestionOutputArrays...selectedWords",
-        counterfactualQuestionOutputArrays.map((outputArr) =>
-          outputArr.map((unit) => unit.selectedWord)
-        )
-      );
-      consol.log(
-        "counterfactualAnswerOutputArrays...selectedWords",
-        counterfactualAnswerOutputArrays.map((outputArr) =>
-          outputArr.map((unit) => unit.selectedWord)
-        )
-      );
-    }
-
-    //
-    /** Okay, we're about to compare pseudosentences (ie the arrays of selectedWords).
-     *  If answer pseudosentences are same, or question pseudosentences are different, we delete the anno.
-     *
-     *  However, we're just working with PSEUDOsentences. Why is this a potential issue?
-     *
-     *  Because the sentences are not finally formatting, so comparison may not be accurate in specific cases. Eg:
-     *
-     *  Q original: "On czyta."     Q counterfax: "Ona czyta."
-     *
-     *  This logic would say, ah, Qs are DIFFERENT, so delete the anno. But what it doesn't know, is that
-     *  when these pseudosentences are actually formatted, they will be the SAME, because pro-1 is not included.
-     *
-     *  So...
-     *
-     *  One option is to actually convert all the pseudosentences to real sentences prior to the comparing below,
-     *  in the normal way via scUtils.b'uildSentenceString.
-     *
-     *  However... this will involve extra processing time, so for now, let's just check the pseudosentences against
-     *  primaryOrders, so that we at least catch the "On czyta." --> "Czyta." issue.
-     */
-
-    function makePseudoSentences(outputArrays, primaryOrders) {
-      //This doesn't do the full processing, ie 'a' --> 'an'
-      //but it does trim the list of selected words according to sentenceFormula.primaryOrders,
-      //ie "On czyta." and "Ona czyta." both become "Czyta.".
-
-      let orderAdjustedOutputArrs = [];
-
-      if (!primaryOrders || !primaryOrders.length) {
-        return outputArrays.map((outputArray) =>
-          outputArray.map((unit) => unit.selectedWord)
-        );
+  let counterfactualQuestionOutputArrays =
+    arrayOfCounterfactualResultsForThisAnnotation.map(
+      (counterfactual) => counterfactual.questionSentenceData.questionOutputArr
+    );
+  let counterfactualAnswerOutputArrays = [];
+  arrayOfCounterfactualResultsForThisAnnotation.forEach((counterfactual) => {
+    counterfactual.answerSentenceData.answerOutputArrays.forEach(
+      (answerOutputArray) => {
+        counterfactualAnswerOutputArrays.push(answerOutputArray);
       }
-
-      primaryOrders.forEach((primaryOrder) => {
-        outputArrays.forEach((outputArray) => {
-          let orderAdjustedOutputArr = [];
-          primaryOrder.forEach((chunkId) => {
-            let correspondingOutputUnit = outputArray.find(
-              (unit) => unit.structureChunk.chunkId === chunkId
-            );
-
-            if (!correspondingOutputUnit) {
-              consol.throw("ocii");
-            }
-
-            orderAdjustedOutputArr.push(correspondingOutputUnit);
-          });
-
-          orderAdjustedOutputArrs.push(orderAdjustedOutputArr);
-        });
-      });
-
-      return orderAdjustedOutputArrs.map((outputArr) =>
-        outputArr.map((unit) => unit.selectedWord)
-      );
-    }
-
-    let originalAnswerPseudoSentences = makePseudoSentences(
-      originalAnswerOutputArrays,
-      answerSentenceData.sentenceFormula.primaryOrders
     );
-    let counterfactualAnswerPseudoSentences = makePseudoSentences(
-      counterfactualAnswerOutputArrays,
-      answerSentenceData.sentenceFormula.primaryOrders
-    );
-    let originalQuestionPseudoSentences = makePseudoSentences(
-      originalQuestionOutputArrays,
-      rawQuestionSentenceFormula.primaryOrders
-    );
-    let counterfactualQuestionPseudoSentences = makePseudoSentences(
-      counterfactualQuestionOutputArrays,
-      rawQuestionSentenceFormula.primaryOrders
-    );
-    // consol.log("vnai", {
-    //   originalAnswerPseudoSentences,
-    //   counterfactualAnswerPseudoSentences,
-    //   originalQuestionPseudoSentences,
-    //   counterfactualQuestionPseudoSentences,
-    // });
+  });
 
-    if (
-      gpUtils.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
-        originalAnswerPseudoSentences,
-        counterfactualAnswerPseudoSentences
-      )
-    ) {
-      consol.log(
-        "[1;35m " +
-          `myxo-clauseA [tl;dr answersame so deleting anno] removeAnnotationsByCounterfax END. 
-              I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" 
-              and the counterfactual ANSWER selected words came back SAME as original answer selected words.\n
-              This means that this trait has no impact, even if we flip it, so annotation is not needed. \n
-              Deleting annotation "${annoTraitKey}" = "${questionOutputUnit.structureChunk.annotations[annoTraitKey]}".` +
-          "[0m",
-        {
-          originalAnswerPseudoSentences,
-          counterfactualAnswerPseudoSentences,
+  let counterfactualTraitValues =
+    arrayOfCounterfactualResultsForThisAnnotation.map((counterfactual) => {
+      {
+        if (Object.keys(counterfactual.counterfactualTrait).length !== 1) {
+          consol.throw("iejr removeAnnotationsByCounterfax");
         }
-      );
-
-      delete questionOutputUnit.structureChunk.annotations[annoTraitKey];
-    } else if (
-      !gpUtils.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
-        originalQuestionPseudoSentences,
-        counterfactualQuestionPseudoSentences
-      )
-    ) {
-      consol.log(
-        "[1;35m " +
-          `myxo-clauseB [tl;dr questiondifferent so deleting anno] removeAnnotationsByCounterfax END. I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual QUESTION selected words came back DIFFERENT original question selected words.\nThis means that this trait has no impact, even if we flip it, so annotation is not needed. \nDeleting annotation "${annoTraitKey}" = "${questionOutputUnit.structureChunk.annotations[annoTraitKey]}" now.` +
-          "[0m",
-        {
-          originalQuestionPseudoSentences,
-          counterfactualQuestionPseudoSentences,
-        }
-      );
-
-      delete questionOutputUnit.structureChunk.annotations[annoTraitKey];
-    } else {
-      consol.log(
-        "[1;35m " +
-          `myxo-clauseC [tl;dr !answersame && !questiondifferent so keeping anno] removeAnnotationsByCounterfax END. I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual answer selected words came back DIFFERENT FROM original answer selected words.\nThis means I'll keep annotation "${annoTraitKey}" = "${questionOutputUnit.structureChunk.annotations[annoTraitKey]}".` +
-          "[0m",
-        {
-          originalAnswerPseudoSentences,
-          counterfactualAnswerPseudoSentences,
-          originalQuestionPseudoSentences,
-          counterfactualQuestionPseudoSentences,
-        }
-      );
-
-      //PDS-Diamond: Do if PDS true.
-      //
-      //Eg    Q: "With the sheep.",    A: ["Z owcą."]
-      //This fxn determined that the Q would be same sentence whether singular or plural,
-      //so let's agglomerate the answer array to be ["Z owcą.", "Z owcami."]
-      //And the same for "I saw." --> ["Zobaczyłem.", "Zobaczyłam."]
-      //
-      if (questionOutputUnit.structureChunk.dontSpecifyOnThisChunk) {
-        // const agglomerateAnswers = (
-        //   questionOutputUnit,
-        //   annoTraitKey,
-        //   counterfactualTraitValues,
-        //   answerSelectedWordsSetsHaveChanged,
-        //   answerSentenceData,
-        //   counterfactualAnswerOutputArrays,
-        // ) => {};
-
-        let combinedTraitValues = [
-          ...questionOutputUnit.structureChunk[annoTraitKey],
-          ...counterfactualTraitValues,
-        ];
-
-        answerSelectedWordsSetsHaveChanged.bool = true;
-
-        answerSentenceData.answerOutputArrays = [
-          ...answerSentenceData.answerOutputArrays,
-          ...counterfactualAnswerOutputArrays,
-        ];
-
-        consol.log(
-          `PDS-Diamond. Agglomerating the answer output arrays and deleting annoTraitValue "${annoTraitValue}", and questionOutputUnit.structureChunk[${annoTraitKey}] is now [${combinedTraitValues}]`
-        );
-
-        delete questionOutputUnit.structureChunk.annotations[annoTraitKey];
-        questionOutputUnit.structureChunk[annoTraitKey] = combinedTraitValues;
 
         if (
-          !questionOutputUnit.structureChunk.counterfactuallyImportantTraitKeys
+          Object.keys(counterfactual.counterfactualTrait)[0] !== annoTraitKey
         ) {
-          questionOutputUnit.structureChunk.counterfactuallyImportantTraitKeys =
-            [annoTraitKey];
-        } else {
-          questionOutputUnit.structureChunk.counterfactuallyImportantTraitKeys.push(
-            annoTraitKey
-          );
+          consol.throw("dckm removeAnnotationsByCounterfax");
         }
+
+        return counterfactual.counterfactualTrait[annoTraitKey];
       }
+    });
+
+  if (shouldConsoleLog) {
+    consol.log(
+      "\n klwe removeAnnotationsByCounterfax. questionOutputUnit.structureChunk.annotations",
+      questionOutputUnit.structureChunk.annotations
+    );
+    consol.log(
+      "[1;33m" +
+        `klwe removeAnnotationsByCounterfax. We made counterfactuals for question stCh "${questionOutputUnit.structureChunk.chunkId}" based on its annotations, shown above.` +
+        "[0m"
+    );
+    consol.log({ "additional runs": runsRecord });
+    consol.log(
+      "originalQuestionOutputArrays...selectedWords",
+      originalQuestionOutputArrays.map((outputArr) =>
+        outputArr.map((unit) => unit.selectedWord)
+      )
+    );
+    consol.log(
+      "originalAnswerOutputArrays...selectedWords",
+      originalAnswerOutputArrays.map((outputArr) =>
+        outputArr.map((unit) => unit.selectedWord)
+      )
+    );
+    consol.log(
+      "counterfactualQuestionOutputArrays...selectedWords",
+      counterfactualQuestionOutputArrays.map((outputArr) =>
+        outputArr.map((unit) => unit.selectedWord)
+      )
+    );
+    consol.log(
+      "counterfactualAnswerOutputArrays...selectedWords",
+      counterfactualAnswerOutputArrays.map((outputArr) =>
+        outputArr.map((unit) => unit.selectedWord)
+      )
+    );
+  }
+
+  //
+  /** Okay, we're about to compare pseudosentences (ie the arrays of selectedWords).
+   *  If answer pseudosentences are same, or question pseudosentences are different, we delete the anno.
+   *
+   *  However, we're just working with PSEUDOsentences. Why is this a potential issue?
+   *
+   *  Because the sentences are not finally formatting, so comparison may not be accurate in specific cases. Eg:
+   *
+   *  Q original: "On czyta."     Q counterfax: "Ona czyta."
+   *
+   *  This logic would say, ah, Qs are DIFFERENT, so delete the anno. But what it doesn't know, is that
+   *  when these pseudosentences are actually formatted, they will be the SAME, because pro-1 is not included.
+   *
+   *  So...
+   *
+   *  One option is to actually convert all the pseudosentences to real sentences prior to the comparing below,
+   *  in the normal way via scUtils.b'uildSentenceString.
+   *
+   *  However... this will involve extra processing time, so for now, let's just check the pseudosentences against
+   *  primaryOrders, so that we at least catch the "On czyta." --> "Czyta." issue.
+   */
+
+  function makePseudoSentences(outputArrays, primaryOrders) {
+    //This doesn't do the full processing, ie 'a' --> 'an'
+    //but it does trim the list of selected words according to sentenceFormula.primaryOrders,
+    //ie "On czyta." and "Ona czyta." both become "Czyta.".
+
+    let orderAdjustedOutputArrs = [];
+
+    if (!primaryOrders || !primaryOrders.length) {
+      return outputArrays.map((outputArray) =>
+        outputArray.map((unit) => unit.selectedWord)
+      );
     }
 
-    // uUtils.addToArrayAtKey(
-    //   questionOutputUnitsThatHaveBeenCounterfaxedInThisSit,
-    //   questionOutputUnit.structureChunk.chunkId,
-    //   annoTraitKey
-    // );
-  });
+    primaryOrders.forEach((primaryOrder) => {
+      outputArrays.forEach((outputArray) => {
+        let orderAdjustedOutputArr = [];
+        primaryOrder.forEach((chunkId) => {
+          let correspondingOutputUnit = outputArray.find(
+            (unit) => unit.structureChunk.chunkId === chunkId
+          );
+
+          if (!correspondingOutputUnit) {
+            consol.throw("ocii");
+          }
+
+          orderAdjustedOutputArr.push(correspondingOutputUnit);
+        });
+
+        orderAdjustedOutputArrs.push(orderAdjustedOutputArr);
+      });
+    });
+
+    return orderAdjustedOutputArrs.map((outputArr) =>
+      outputArr.map((unit) => unit.selectedWord)
+    );
+  }
+
+  let originalAnswerPseudoSentences = makePseudoSentences(
+    originalAnswerOutputArrays,
+    answerSentenceData.sentenceFormula.primaryOrders
+  );
+  let counterfactualAnswerPseudoSentences = makePseudoSentences(
+    counterfactualAnswerOutputArrays,
+    answerSentenceData.sentenceFormula.primaryOrders
+  );
+  let originalQuestionPseudoSentences = makePseudoSentences(
+    originalQuestionOutputArrays,
+    rawQuestionSentenceFormula.primaryOrders
+  );
+  let counterfactualQuestionPseudoSentences = makePseudoSentences(
+    counterfactualQuestionOutputArrays,
+    rawQuestionSentenceFormula.primaryOrders
+  );
+  // consol.log("vnai", {
+  //   originalAnswerPseudoSentences,
+  //   counterfactualAnswerPseudoSentences,
+  //   originalQuestionPseudoSentences,
+  //   counterfactualQuestionPseudoSentences,
+  // });
+
+  if (
+    gpUtils.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
+      originalAnswerPseudoSentences,
+      counterfactualAnswerPseudoSentences
+    )
+  ) {
+    consol.log(
+      "[1;35m " +
+        `myxo-clauseA [tl;dr answersame so deleting anno] removeAnnotationsByCounterfax END. 
+            I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" 
+            and the counterfactual ANSWER selected words came back SAME as original answer selected words.\n
+            This means that this trait has no impact, even if we flip it, so annotation is not needed. \n
+            Deleting annotation "${annoTraitKey}" = "${questionOutputUnit.structureChunk.annotations[annoTraitKey]}".` +
+        "[0m",
+      {
+        originalAnswerPseudoSentences,
+        counterfactualAnswerPseudoSentences,
+      }
+    );
+    //Remove annotation: INOSCULATE.
+    delete questionOutputUnit.structureChunk.annotations[annoTraitKey];
+  } else if (
+    !gpUtils.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
+      originalQuestionPseudoSentences,
+      counterfactualQuestionPseudoSentences
+    )
+  ) {
+    consol.log(
+      "[1;35m " +
+        `myxo-clauseB [tl;dr questiondifferent so deleting anno] removeAnnotationsByCounterfax END. 
+        I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual 
+        QUESTION selected words came back DIFFERENT original question selected words.\n
+        This means that this trait has no impact, even if we flip it, so annotation is not needed. \n
+        Deleting annotation "${annoTraitKey}" = "${questionOutputUnit.structureChunk.annotations[annoTraitKey]}" now.` +
+        "[0m",
+      {
+        originalQuestionPseudoSentences,
+        counterfactualQuestionPseudoSentences,
+      }
+    );
+    //Remove annotation: COPPICE
+    delete questionOutputUnit.structureChunk.annotations[annoTraitKey];
+  } else {
+    consol.log(
+      "[1;35m " +
+        `myxo-clauseC [tl;dr !answersame && !questiondifferent so keeping anno] removeAnnotationsByCounterfax END. I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual answer selected words came back DIFFERENT FROM original answer selected words.\nThis means I'll keep annotation "${annoTraitKey}" = "${questionOutputUnit.structureChunk.annotations[annoTraitKey]}".` +
+        "[0m",
+      {
+        originalAnswerPseudoSentences,
+        counterfactualAnswerPseudoSentences,
+        originalQuestionPseudoSentences,
+        counterfactualQuestionPseudoSentences,
+      }
+    );
+
+    //Iota: So regarding pds diamond, that's clear. After Iota when you now have a result for each sit,
+    //you take all the sits (if any) with the same Answer sentences as original Question sentence,
+    //and agglomerate them.
+
+    //PDS-Diamond: Do if PDS true.
+    //
+    //Eg    Q: "With the sheep.",    A: ["Z owcą."]
+    //This fxn determined that the Q would be same sentence whether singular or plural,
+    //so let's agglomerate the answer array to be ["Z owcą.", "Z owcami."]
+    //And the same for "I saw." --> ["Zobaczyłem.", "Zobaczyłam."]
+    //
+    if (questionOutputUnit.structureChunk.dontSpecifyOnThisChunk) {
+      // const agglomerateAnswers = (
+      //   questionOutputUnit,
+      //   annoTraitKey,
+      //   counterfactualTraitValues,
+      //   answerSelectedWordsSetsHaveChanged,
+      //   answerSentenceData,
+      //   counterfactualAnswerOutputArrays,
+      // ) => {};
+
+      let combinedTraitValues = [
+        ...questionOutputUnit.structureChunk[annoTraitKey],
+        ...counterfactualTraitValues,
+      ];
+
+      answerSelectedWordsSetsHaveChanged.bool = true;
+
+      answerSentenceData.answerOutputArrays = [
+        ...answerSentenceData.answerOutputArrays,
+        ...counterfactualAnswerOutputArrays,
+      ];
+
+      consol.log(
+        `PDS-Diamond. Agglomerating the answer output arrays and deleting annoTraitValue "${annoTraitValue}", and questionOutputUnit.structureChunk[${annoTraitKey}] is now [${combinedTraitValues}]`
+      );
+
+      delete questionOutputUnit.structureChunk.annotations[annoTraitKey];
+      questionOutputUnit.structureChunk[annoTraitKey] = combinedTraitValues;
+
+      if (
+        !questionOutputUnit.structureChunk.counterfactuallyImportantTraitKeys
+      ) {
+        questionOutputUnit.structureChunk.counterfactuallyImportantTraitKeys = [
+          annoTraitKey,
+        ];
+      } else {
+        questionOutputUnit.structureChunk.counterfactuallyImportantTraitKeys.push(
+          annoTraitKey
+        );
+      }
+    }
+  }
+
+  // uUtils.addToArrayAtKey(
+  //   questionOutputUnitsThatHaveBeenCounterfaxedInThisSit,
+  //   questionOutputUnit.structureChunk.chunkId,
+  //   annoTraitKey
+  // );
 };
 
 exports.removeAnnotationsIfHeadChunkHasBeenCounterfaxed = (

@@ -23,12 +23,12 @@ exports.fetchPalette = (req) => {
     devSaysThrowAtMidpoint,
     devSaysOmitStChValidation,
     devSaysThrowAfterAnnoSalvo,
-    arrayOfCounterfactualResultsForThisAnnotation,
+    allCounterfactualResults,
     counterfactualQuestionSentenceFormula,
     counterfactualTrait,
   } = req.body;
 
-  let { sentenceFormula, words } = scUtils.getMaterials(
+  let { sentenceFormula, words } = scUtils.getMaterialsCopies(
     questionLanguage,
     sentenceFormulaId,
     sentenceFormulaSymbol,
@@ -42,7 +42,7 @@ exports.fetchPalette = (req) => {
   let questionResponseObj;
   let questionSentenceFormula = counterfactualQuestionSentenceFormula
     ? counterfactualQuestionSentenceFormula
-    : sentenceFormula;
+    : sentenceFormula; // Alpha use pipe.
 
   let originalQuestionSentenceFormula = counterfactualQuestionSentenceFormula
     ? null
@@ -122,7 +122,7 @@ exports.fetchPalette = (req) => {
           "[0m"
       );
 
-      if (arrayOfCounterfactualResultsForThisAnnotation) {
+      if (allCounterfactualResults) {
         return;
       } else {
         let nullQuestionResponseObj = scUtils.giveFinalSentences(
@@ -295,7 +295,7 @@ exports.fetchPalette = (req) => {
     }
 
     translations.forEach((translationSentenceFormulaId, index) => {
-      let { sentenceFormula, words } = scUtils.getMaterials(
+      let { sentenceFormula, words } = scUtils.getMaterialsCopies(
         answerLanguage,
         translationSentenceFormulaId,
         questionSentenceData.sentenceFormulaSymbol,
@@ -418,8 +418,8 @@ exports.fetchPalette = (req) => {
     scUtils.removeDuplicatesFromResponseObject(answerResponseObj);
   }
 
-  if (arrayOfCounterfactualResultsForThisAnnotation) {
-    arrayOfCounterfactualResultsForThisAnnotation.push({
+  if (allCounterfactualResults) {
+    allCounterfactualResults.push({
       counterfactualTrait,
       questionSentenceData,
       answerSentenceData,

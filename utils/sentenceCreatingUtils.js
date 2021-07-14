@@ -10,7 +10,7 @@ const refObj = require("./reference/referenceObjects.js");
 const refFxn = require("./reference/referenceFunctions.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 
-exports.getMaterials = (
+exports.getMaterialsCopies = (
   currentLanguage,
   sentenceFormulaId,
   sentenceFormulaSymbol,
@@ -38,8 +38,8 @@ exports.getMaterials = (
     : uUtils.copyWithoutReference(wordsBank);
 
   let sentenceFormulas = useDummy
-    ? uUtils.copyWithoutReference(dummySentenceFormulasBank)
-    : uUtils.copyWithoutReference(sentenceFormulasBank);
+    ? uUtils.copyWithoutReference(dummySentenceFormulasBank) //Beta What? Why do all this?
+    : uUtils.copyWithoutReference(sentenceFormulasBank); // ^
 
   if (sentenceFormulaId) {
     sentenceFormula = sentenceFormulas.find(
@@ -48,7 +48,7 @@ exports.getMaterials = (
 
     if (!sentenceFormula) {
       consol.throw(
-        `#ERR quky sc:getMaterials. No sentenceFormula for this sentenceFormulaId "${sentenceFormulaId}".`
+        `#ERR quky sc:getMaterialsCopies. No sentenceFormula for this sentenceFormulaId "${sentenceFormulaId}".`
       );
     }
 
