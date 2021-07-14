@@ -10,7 +10,7 @@ const {
   areTwoObjectsEqual,
 } = require("../utils/universalUtils.js");
 
-describe.only("listCounterfaxSituations2", () => {
+describe("listCounterfaxSituations2", () => {
   it("Two annotations on one, and one on the other.", () => {
     let questionOutputArray = [
       {
@@ -1733,78 +1733,277 @@ describe("listCounterfaxSituations", () => {
   });
 });
 
-describe("explodeCounterfaxSituations", () => {
+describe.only("explodeCounterfaxSituations", () => {
   it("Two by three by two makes twelve.", () => {
     let input = {
       headsFirstSequenceChunkIds: ["pro-1", "pro-2"],
       "pro-1": {
-        gender: ["pro-1=gender=virile", "pro-1=gender=nonvirile"],
-        person: ["pro-1=person=1per", "pro-1=person=2per", "pro-1=person=3per"],
+        gender: [
+          {
+            traitKey: "gender",
+            traitValue: "virile",
+          },
+          {
+            traitKey: "gender",
+            traitValue: "nonvirile",
+          },
+        ],
+        person: [
+          {
+            traitKey: "person",
+            traitValue: "1per",
+          },
+          {
+            traitKey: "person",
+            traitValue: "2per",
+          },
+          {
+            traitKey: "person",
+            traitValue: "3per",
+          },
+        ],
       },
       "pro-2": {
-        gender: ["pro-2=gender=nonvirile", "pro-2=gender=virile"],
+        gender: [
+          {
+            traitKey: "gender",
+            traitValue: "nonvirile",
+          },
+          {
+            traitKey: "gender",
+            traitValue: "virile",
+          },
+        ],
       },
     };
     let expected = [
       {
         chunkIds: ["pro-1", "pro-2"],
-        "pro-1": ["pro-1=gender=virile", "pro-1=person=1per"],
-        "pro-2": ["pro-2=gender=nonvirile"],
+        "pro-1": [
+          {
+            traitKey: "gender",
+            traitValue: "virile",
+          },
+          {
+            traitKey: "person",
+            traitValue: "1per",
+          },
+        ],
+        "pro-2": [
+          {
+            traitKey: "gender",
+            traitValue: "nonvirile",
+          },
+        ],
       },
       {
         chunkIds: ["pro-1", "pro-2"],
-        "pro-1": ["pro-1=gender=virile", "pro-1=person=1per"],
-        "pro-2": ["pro-2=gender=virile"],
+        "pro-1": [
+          {
+            traitKey: "gender",
+            traitValue: "virile",
+          },
+          {
+            traitKey: "person",
+            traitValue: "1per",
+          },
+        ],
+        "pro-2": [
+          {
+            traitKey: "gender",
+            traitValue: "virile",
+          },
+        ],
       },
       {
         chunkIds: ["pro-1", "pro-2"],
-        "pro-1": ["pro-1=gender=virile", "pro-1=person=2per"],
-        "pro-2": ["pro-2=gender=nonvirile"],
+        "pro-1": [
+          {
+            traitKey: "gender",
+            traitValue: "virile",
+          },
+          {
+            traitKey: "person",
+            traitValue: "2per",
+          },
+        ],
+        "pro-2": [
+          {
+            traitKey: "gender",
+            traitValue: "nonvirile",
+          },
+        ],
       },
       {
         chunkIds: ["pro-1", "pro-2"],
-        "pro-1": ["pro-1=gender=virile", "pro-1=person=2per"],
-        "pro-2": ["pro-2=gender=virile"],
+        "pro-1": [
+          {
+            traitKey: "gender",
+            traitValue: "virile",
+          },
+          {
+            traitKey: "person",
+            traitValue: "2per",
+          },
+        ],
+        "pro-2": [
+          {
+            traitKey: "gender",
+            traitValue: "virile",
+          },
+        ],
       },
       {
         chunkIds: ["pro-1", "pro-2"],
-        "pro-1": ["pro-1=gender=virile", "pro-1=person=3per"],
-        "pro-2": ["pro-2=gender=nonvirile"],
+        "pro-1": [
+          {
+            traitKey: "gender",
+            traitValue: "virile",
+          },
+          {
+            traitKey: "person",
+            traitValue: "3per",
+          },
+        ],
+        "pro-2": [
+          {
+            traitKey: "gender",
+            traitValue: "nonvirile",
+          },
+        ],
       },
       {
         chunkIds: ["pro-1", "pro-2"],
-        "pro-1": ["pro-1=gender=virile", "pro-1=person=3per"],
-        "pro-2": ["pro-2=gender=virile"],
+        "pro-1": [
+          {
+            traitKey: "gender",
+            traitValue: "virile",
+          },
+          {
+            traitKey: "person",
+            traitValue: "3per",
+          },
+        ],
+        "pro-2": [
+          {
+            traitKey: "gender",
+            traitValue: "virile",
+          },
+        ],
       },
       {
         chunkIds: ["pro-1", "pro-2"],
-        "pro-1": ["pro-1=gender=nonvirile", "pro-1=person=1per"],
-        "pro-2": ["pro-2=gender=nonvirile"],
+        "pro-1": [
+          {
+            traitKey: "gender",
+            traitValue: "nonvirile",
+          },
+          {
+            traitKey: "person",
+            traitValue: "1per",
+          },
+        ],
+        "pro-2": [
+          {
+            traitKey: "gender",
+            traitValue: "nonvirile",
+          },
+        ],
       },
       {
         chunkIds: ["pro-1", "pro-2"],
-        "pro-1": ["pro-1=gender=nonvirile", "pro-1=person=1per"],
-        "pro-2": ["pro-2=gender=virile"],
+        "pro-1": [
+          {
+            traitKey: "gender",
+            traitValue: "nonvirile",
+          },
+          {
+            traitKey: "person",
+            traitValue: "1per",
+          },
+        ],
+        "pro-2": [
+          {
+            traitKey: "gender",
+            traitValue: "virile",
+          },
+        ],
       },
       {
         chunkIds: ["pro-1", "pro-2"],
-        "pro-1": ["pro-1=gender=nonvirile", "pro-1=person=2per"],
-        "pro-2": ["pro-2=gender=nonvirile"],
+        "pro-1": [
+          {
+            traitKey: "gender",
+            traitValue: "nonvirile",
+          },
+          {
+            traitKey: "person",
+            traitValue: "2per",
+          },
+        ],
+        "pro-2": [
+          {
+            traitKey: "gender",
+            traitValue: "nonvirile",
+          },
+        ],
       },
       {
         chunkIds: ["pro-1", "pro-2"],
-        "pro-1": ["pro-1=gender=nonvirile", "pro-1=person=2per"],
-        "pro-2": ["pro-2=gender=virile"],
+        "pro-1": [
+          {
+            traitKey: "gender",
+            traitValue: "nonvirile",
+          },
+          {
+            traitKey: "person",
+            traitValue: "2per",
+          },
+        ],
+        "pro-2": [
+          {
+            traitKey: "gender",
+            traitValue: "virile",
+          },
+        ],
       },
       {
         chunkIds: ["pro-1", "pro-2"],
-        "pro-1": ["pro-1=gender=nonvirile", "pro-1=person=3per"],
-        "pro-2": ["pro-2=gender=nonvirile"],
+        "pro-1": [
+          {
+            traitKey: "gender",
+            traitValue: "nonvirile",
+          },
+          {
+            traitKey: "person",
+            traitValue: "3per",
+          },
+        ],
+        "pro-2": [
+          {
+            traitKey: "gender",
+            traitValue: "nonvirile",
+          },
+        ],
       },
       {
         chunkIds: ["pro-1", "pro-2"],
-        "pro-1": ["pro-1=gender=nonvirile", "pro-1=person=3per"],
-        "pro-2": ["pro-2=gender=virile"],
+        "pro-1": [
+          {
+            traitKey: "gender",
+            traitValue: "nonvirile",
+          },
+          {
+            traitKey: "person",
+            traitValue: "3per",
+          },
+        ],
+        "pro-2": [
+          {
+            traitKey: "gender",
+            traitValue: "virile",
+          },
+        ],
       },
     ];
     const actual = cfUtils.explodeCounterfaxSituations(input);

@@ -65,21 +65,21 @@ exports.explodeCounterfaxSituations = (sits) => {
     sentence.chunkIds.pop();
   }
 
-  explodedBetweenChunks.labels = [];
+  // explodedBetweenChunks.labels = [];
 
-  explodedBetweenChunks.forEach((wholeSit) => {
-    let joinedLabel = [];
+  // explodedBetweenChunks.forEach((wholeSit) => {
+  //   let joinedLabel = [];
 
-    wholeSit.chunkIds.forEach((chunkId) => {
-      wholeSit[chunkId].forEach((individualSit) => {
-        joinedLabel.push(individualSit.label);
-      });
-    });
+  //   wholeSit.chunkIds.forEach((chunkId) => {
+  //     wholeSit[chunkId].forEach((individualSit) => {
+  //       joinedLabel.push(individualSit.label);
+  //     });
+  //   });
 
-    joinedLabel = joinedLabel.join(" ");
-    explodedBetweenChunks.labels.push(joinedLabel);
-    wholeSit.label = joinedLabel;
-  });
+  //   joinedLabel = joinedLabel.join(" ");
+  //   explodedBetweenChunks.labels.push(joinedLabel);
+  //   wholeSit.label = joinedLabel;
+  // });
 
   return explodedBetweenChunks;
 };
@@ -424,46 +424,6 @@ exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
             annoTraitKey
           ];
 
-        function addFaxSituation2(
-          counterfaxSituations,
-          structureChunkId,
-          traitKey,
-          traitValue
-        ) {
-          let newCounterfaxSituation = {
-            traitKey: traitKey,
-            traitValue: traitValue,
-          };
-
-          if (
-            counterfaxSituations.headsFirstSequenceChunkIds.includes(
-              structureChunkId
-            )
-          ) {
-            if (
-              Object.keys(counterfaxSituations[structureChunkId]).includes(
-                traitKey
-              )
-            ) {
-              counterfaxSituations[structureChunkId][traitKey].push(
-                newCounterfaxSituation
-              );
-            } else {
-              counterfaxSituations[structureChunkId][traitKey] = [
-                newCounterfaxSituation,
-              ];
-            }
-          } else {
-            counterfaxSituations.headsFirstSequenceChunkIds.push(
-              structureChunkId
-            );
-            counterfaxSituations[structureChunkId] = {};
-            counterfaxSituations[structureChunkId][traitKey] = [
-              newCounterfaxSituation,
-            ];
-          }
-        }
-
         function addFaxSituation(
           counterfaxSituations,
           stCh,
@@ -532,7 +492,7 @@ exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
 };
 
 exports.removeAnnotationsByCounterfactualAnswerSentences = (
-  explodedCounterfaxSituations,
+  explodedCounterfaxSituationsSchematics,
   questionOutputArr,
   languagesObj,
   answerSentenceData,
