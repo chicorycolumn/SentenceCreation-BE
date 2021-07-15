@@ -278,7 +278,8 @@ describe("/api", function () {
           );
         });
     });
-    it.only("#pal18-04a GET 200 YES: Engpol. 'A woman saw me.'", () => {
+    it("#pal18-04a GET 200 YES: Engpol. 'A woman saw me.'", () => {
+      // it.only("#pal18-04a GET 200 YES: Engpol. 'A woman saw me.'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
