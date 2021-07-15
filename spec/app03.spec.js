@@ -278,7 +278,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal18-04a GET 200 YES: Engpol. 'A woman saw me.'", () => {
+    it.only("#pal18-04a GET 200 YES: Engpol. 'A woman saw me.'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -624,8 +624,8 @@ describe("/api", function () {
           );
         });
     });
-    it.only("#pal18-06b GET 200 YES: Engpol. 'We saw them.' PDS. *Step-Iota*", () => {
-      // it("#pal18-06b GET 200 YES: Engpol. 'We saw them.' PDS. *Step-Iota*", () => {
+    // it.only("#pal18-06b GET 200 YES: Engpol. 'We saw them.' PDS. *Step-Iota re PDS Diamond*", () => {
+    it("#pal18-06b GET 200 YES: Engpol. 'We saw them.' PDS. *Step-Iota re PDS Diamond*", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
       return request(app)
