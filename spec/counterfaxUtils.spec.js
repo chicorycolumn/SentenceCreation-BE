@@ -664,7 +664,7 @@ describe("listCounterfaxSituations", () => {
       "pro-1": {
         gender: [
           {
-            label: "pro-1=gender=virile",
+            cfLabel: "pro-1=gender=virile",
             stCh: {
               chunkId: "pro-1",
               specificLemmas: ["PERSONAL"],
@@ -815,7 +815,7 @@ describe("listCounterfaxSituations", () => {
             traitValue: "virile",
           },
           {
-            label: "pro-1=gender=nonvirile",
+            cfLabel: "pro-1=gender=nonvirile",
             stCh: {
               chunkId: "pro-1",
               specificLemmas: ["PERSONAL"],
@@ -968,7 +968,7 @@ describe("listCounterfaxSituations", () => {
         ],
         person: [
           {
-            label: "pro-1=person=1per",
+            cfLabel: "pro-1=person=1per",
             stCh: {
               chunkId: "pro-1",
               specificLemmas: ["PERSONAL"],
@@ -1119,7 +1119,7 @@ describe("listCounterfaxSituations", () => {
             traitValue: "1per",
           },
           {
-            label: "pro-1=person=2per",
+            cfLabel: "pro-1=person=2per",
             stCh: {
               chunkId: "pro-1",
               specificLemmas: ["PERSONAL"],
@@ -1270,7 +1270,7 @@ describe("listCounterfaxSituations", () => {
             traitValue: "2per",
           },
           {
-            label: "pro-1=person=3per",
+            cfLabel: "pro-1=person=3per",
             stCh: {
               chunkId: "pro-1",
               specificLemmas: ["PERSONAL"],
@@ -1425,7 +1425,7 @@ describe("listCounterfaxSituations", () => {
       "pro-2": {
         gender: [
           {
-            label: "pro-2=gender=nonvirile",
+            cfLabel: "pro-2=gender=nonvirile",
             stCh: {
               chunkId: "pro-2",
               specificLemmas: ["PERSONAL"],
@@ -1574,7 +1574,7 @@ describe("listCounterfaxSituations", () => {
             traitValue: "nonvirile",
           },
           {
-            label: "pro-2=gender=virile",
+            cfLabel: "pro-2=gender=virile",
             stCh: {
               chunkId: "pro-2",
               specificLemmas: ["PERSONAL"],
@@ -2007,9 +2007,9 @@ describe("explodeCounterfaxSituations", () => {
       },
     ];
     const actual = cfUtils.explodeCounterfaxSituations(input);
-    delete actual.labels;
+    delete actual.cfLabels;
     actual.forEach((sit) => {
-      delete sit.label;
+      delete sit.cfLabel;
     });
     expect(actual).to.eql(expected);
   });
@@ -2108,9 +2108,9 @@ describe("explodeCounterfaxSituations", () => {
       },
     ];
     const actual = cfUtils.explodeCounterfaxSituations(input);
-    delete actual.labels;
+    delete actual.cfLabels;
     actual.forEach((sit) => {
-      delete sit.label;
+      delete sit.cfLabel;
     });
     expect(actual).to.eql(expected);
   });
