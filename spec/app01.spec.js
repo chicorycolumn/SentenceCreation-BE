@@ -221,7 +221,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal08-02c GET 200 YES: RSWAT Engpol 'have' - pres simp, past simp - You (with clarifiers).", () => {
+    it.only("#pal08-02c GET 200 YES: RSWAT Engpol 'have' - pres simp, past simp - You (with clarifiers).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -235,6 +235,7 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
+          console.log(res.body);
           checkSentenceTranslations(
             res,
             questionLanguage,

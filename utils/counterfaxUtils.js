@@ -7,6 +7,8 @@ const refFxn = require("./reference/referenceFunctions.js");
 const palette = require("../models/palette.model.js");
 
 exports.explodeCounterfaxSituations = (sits) => {
+  //Nownow. We need this fxn to correct virility so it doesn't create sits with number plural gender f.
+
   let explodedWithinEachChunk = {};
   let sentence = [];
   let chunkIds = sits.headsFirstSequenceChunkIds;
@@ -689,7 +691,31 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
     chunkIdToExamine,
     traitKeyToExamine
   ) {
-    return allCR.filter((CR) => {
+    //Issue here that "all other things being equal" doesn't account for how "You (m sing)" compared "You (vir plur)"
+    //is actually only one change, so discounts it for looking like two changes.
+
+    //f nonvir
+    //m vir (but I guess also f can be included in vir?)
+
+    //Okay, so if traitKey is gender, then instead of comparing the two traitValues directly,
+    //compare the traitValues processed through refObj.virilityConversionRef.
+
+    function areTraitValuesEqual(traitKey, traitValue1, traitValue2) {
+      if (!(traitKey && traitValue1 && traitValue2)) {
+        consol.throw("ocsj");
+      }
+
+      if (traitKey === "gender") {
+        return uUtils.areTwoFlatArraysEqual(
+          refObj.virilityConversionRef[traitValue1],
+          refObj.virilityConversionRef[traitValue2]
+        );
+      }
+
+      return traitValue1 === traitValue2;
+    }
+
+    let resArr = allCR.filter((CR) => {
       let Cschem = CR.counterfactualSitSchematic;
 
       //We only want counterfax results where the chunk to be coppiced/inosculated has a DIFFERENT value to what it has in original.
@@ -697,10 +723,13 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         Cschem[chunkIdToExamine].find(
           (assig) =>
             assig.traitKey === traitKeyToExamine &&
-            assig.traitValue ===
+            areTraitValuesEqual(
+              assig.traitKey,
+              assig.traitValue,
               originalSit[chunkIdToExamine].find(
                 (assignment) => assignment.traitKey === traitKeyToExamine
               ).traitValue
+            )
         )
       ) {
         return false;
@@ -716,10 +745,13 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
                 assig.traitKey === traitKeyToExamine &&
                 chunkId === chunkIdToExamine
               ) &&
-              assig.traitValue !==
+              !areTraitValuesEqual(
+                assig.traitKey,
+                assig.traitValue,
                 originalSit[chunkId].find(
                   (assignment) => assignment.traitKey === assig.traitKey
                 ).traitValue
+              )
           )
         )
       ) {
@@ -727,7 +759,20 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       }
       return true;
     });
+
+    if (!resArr.length) {
+      consol.throw(
+        `zprr findCFResultsWhenAllOtherThingsBeingEqual found no results for original sit "${originalSit.cfLabel}".`
+      );
+    }
+
+    return resArr;
   }
+
+  consol.logSpecial2(
+    "wkop annotationsToCounterfaxAndTheirChunkIds",
+    annotationsToCounterfaxAndTheirChunkIds
+  );
 
   annotationsToCounterfaxAndTheirChunkIds.forEach(
     (annoDataObj, annoDataObjIndex) => {
@@ -826,7 +871,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         )
       ) {
         //Remove annotation: INOSCULATE.
-        consol.log(
+        consol.logSpecial2(
           "[1;35m " +
             `myxo-clauseA [Inosculate: answersame so deleting anno] removeAnnotationsByCounterfax END. 
               I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" 
@@ -859,7 +904,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         )
       ) {
         //Remove annotation: COPPICE
-        consol.log(
+        consol.logSpecial2(
           "[1;35m " +
             `myxo-clauseB [Coppice: questiondifferent so deleting anno] removeAnnotationsByCounterfax END. 
           I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual 
@@ -885,7 +930,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             annoDataObjIndex
           );
       } else {
-        consol.log(
+        consol.logSpecial2(
           "[1;35m " +
             `myxo-clauseC [tl;dr !answersame && !questiondifferent so keeping anno] removeAnnotationsByCounterfax END. 
           I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual answer 
@@ -944,7 +989,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             ...counterfactualAnswerOutputArrObjs.map((obj) => obj.arr),
           ];
 
-          consol.log(
+          consol.logSpecial2(
             `PDS-Diamond. Agglomerating the answer output arrays and deleting originalAnnoTraitValue "${originalAnnoTraitValue}", and questionOutputUnit.structureChunk[${annoTraitKey}] is now [${combinedTraitValues}]`
           );
 

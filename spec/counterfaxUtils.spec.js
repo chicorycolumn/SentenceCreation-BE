@@ -11,7 +11,7 @@ const {
 } = require("../utils/universalUtils.js");
 
 describe("listCounterfaxSituations2", () => {
-  it.only("Two annotations on one, and one on the other.", () => {
+  it("Two annotations on one, and one on the other.", () => {
     let questionOutputArray = [
       {
         selectedLemmaObject: {
