@@ -44,6 +44,13 @@ exports.virilityConversionRef = {
       virile: ["virile"],
       nonvirile: ["nonvirile"],
     },
+    matches: {
+      m: ["m", "virile"],
+      f: ["f", "nonvirile"],
+      n: ["n", "nonvirile"],
+      virile: ["virile", "m"],
+      nonvirile: ["nonvirile", "f", "n"],
+    },
   },
   POL: {
     singular: {
@@ -65,6 +72,16 @@ exports.virilityConversionRef = {
       n: ["nonvirile"],
       virile: ["virile"],
       nonvirile: ["nonvirile"],
+    },
+    matches: {
+      m: ["m", "virile"],
+      m1: ["m1", "virile"],
+      m2: ["m2", "nonvirile"],
+      m3: ["m3", "nonvirile"],
+      f: ["f", "nonvirile"],
+      n: ["n", "nonvirile"],
+      virile: ["virile", "m", "m1"],
+      nonvirile: ["nonvirile", "f", "n", "m2", "m3"],
     },
   },
 };

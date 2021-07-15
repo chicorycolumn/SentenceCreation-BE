@@ -2685,7 +2685,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal17-11k GET 200 YES: Poleng. I** was a doctor. MGN to agree with pronoun.", () => {
+    it.only("#pal17-11k GET 200 YES: Poleng. I** was a doctor. MGN to agree with pronoun.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 

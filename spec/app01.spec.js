@@ -221,7 +221,8 @@ describe("/api", function () {
           );
         });
     });
-    it.only("#pal08-02c GET 200 YES: RSWAT Engpol 'have' - pres simp, past simp - You (with clarifiers).", () => {
+    // it.only("#pal08-02c GET 200 YES: RSWAT Engpol 'have' - pres simp, past simp - You (with clarifiers).", () => {
+    it("#pal08-02c GET 200 YES: RSWAT Engpol 'have' - pres simp, past simp - You (with clarifiers).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 

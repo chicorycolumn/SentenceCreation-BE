@@ -220,17 +220,17 @@ exports.listCounterfaxSituations2 = (questionOutputArr, languagesObj) => {
           counterfactualTraitValuesForThisTraitKey
         );
 
-        let tempStCh = uUtils.copyWithoutReference(
-          questionOutputUnit.structureChunk
-        );
+        // let tempStCh = uUtils.copyWithoutReference(
+        //   questionOutputUnit.structureChunk
+        // );
 
-        tempStCh[annoTraitKey] = counterfactualTraitValuesForThisTraitKey;
+        // tempStCh[annoTraitKey] = counterfactualTraitValuesForThisTraitKey;
 
-        //If "plural", remove "m", "f". If person, remove "n".
-        counterfactualTraitValuesForThisTraitKey =
-          refFxn.removeIncompatibleTraits(questionLanguage, tempStCh)[
-            annoTraitKey
-          ];
+        // //If "plural", remove "m", "f". If person, remove "n".
+        // counterfactualTraitValuesForThisTraitKey =
+        //   refFxn.removeIncompatibleTraits(questionLanguage, tempStCh)[
+        //     annoTraitKey
+        //   ];
 
         function addFaxSituation2(
           counterfaxSituations,
@@ -564,7 +564,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       );
 
       if (!index) {
-        consol.log("@@ This is the original (Factual) so returning here.");
+        console.log(`Original: ${counterfactualSitSchematic.cfLabel}`);
         runsRecord.push(`${counterfactualSitSchematic.cfLabel}(original)`);
         originalSitSchematic = counterfactualSitSchematic;
         return;
@@ -639,6 +639,11 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
     }
   );
 
+  console.log(
+    "ewcc allCounterfactualResults.length",
+    allCounterfactualResults.length
+  );
+
   function makePseudoSentenceObjs(outputArrObjs, primaryOrders) {
     //This doesn't do the full processing, ie 'a' --> 'an'
     //but it does trim the list of selected words according to sentenceFormula.primaryOrders,
@@ -689,7 +694,8 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
     allCR,
     originalSit,
     chunkIdToExamine,
-    traitKeyToExamine
+    traitKeyToExamine,
+    questionLanguage
   ) {
     //Issue here that "all other things being equal" doesn't account for how "You (m sing)" compared "You (vir plur)"
     //is actually only one change, so discounts it for looking like two changes.
@@ -700,16 +706,22 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
     //Okay, so if traitKey is gender, then instead of comparing the two traitValues directly,
     //compare the traitValues processed through refObj.virilityConversionRef.
 
-    function areTraitValuesEqual(traitKey, traitValue1, traitValue2) {
+    function areTraitValuesEqual(
+      traitKey,
+      traitValue1,
+      traitValue2,
+      questionLanguage
+    ) {
+      console.log({ questionLanguage });
+
       if (!(traitKey && traitValue1 && traitValue2)) {
         consol.throw("ocsj");
       }
 
       if (traitKey === "gender") {
-        return uUtils.areTwoFlatArraysEqual(
-          refObj.virilityConversionRef[traitValue1],
-          refObj.virilityConversionRef[traitValue2]
-        );
+        return refObj.virilityConversionRef[questionLanguage].matches[
+          traitValue1
+        ].includes(traitValue2);
       }
 
       return traitValue1 === traitValue2;
@@ -728,7 +740,8 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
               assig.traitValue,
               originalSit[chunkIdToExamine].find(
                 (assignment) => assignment.traitKey === traitKeyToExamine
-              ).traitValue
+              ).traitValue,
+              questionLanguage
             )
         )
       ) {
@@ -750,7 +763,8 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
                 assig.traitValue,
                 originalSit[chunkId].find(
                   (assignment) => assignment.traitKey === assig.traitKey
-                ).traitValue
+                ).traitValue,
+                questionLanguage
               )
           )
         )
@@ -762,7 +776,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
     if (!resArr.length) {
       consol.throw(
-        `zprr findCFResultsWhenAllOtherThingsBeingEqual found no results for original sit "${originalSit.cfLabel}".`
+        `zprr findCFResultsWhenAllOtherThingsBeingEqual found no results for original sit "${originalSit.cfLabel}" from Array[${allCR.length}].`
       );
     }
 
@@ -787,7 +801,8 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           allCounterfactualResults,
           originalSitSchematic,
           chunkId,
-          annoTraitKey
+          annoTraitKey,
+          questionLanguage
         );
 
       let counterfactualTraitValuesForThisTraitKeyOnThisStCh =
