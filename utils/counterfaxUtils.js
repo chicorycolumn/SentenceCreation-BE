@@ -220,18 +220,6 @@ exports.listCounterfaxSituations2 = (questionOutputArr, languagesObj) => {
           counterfactualTraitValuesForThisTraitKey
         );
 
-        // let tempStCh = uUtils.copyWithoutReference(
-        //   questionOutputUnit.structureChunk
-        // );
-
-        // tempStCh[annoTraitKey] = counterfactualTraitValuesForThisTraitKey;
-
-        // //If "plural", remove "m", "f". If person, remove "n".
-        // counterfactualTraitValuesForThisTraitKey =
-        //   refFxn.removeIncompatibleTraits(questionLanguage, tempStCh)[
-        //     annoTraitKey
-        //   ];
-
         function addFaxSituation2(
           counterfaxSituations,
           structureChunkId,
@@ -569,7 +557,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         originalSitSchematic = counterfactualSitSchematic;
         return;
       }
-      runsRecord.push(counterfactualSitSchematic.cfLabel);
 
       let counterfactualQuestionSentenceFormula = uUtils.copyWithoutReference(
         updatedOriginalQuestionSentenceFormula
@@ -580,7 +567,13 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       //Then exit both loops.
       //Then send off to fetchPalette.
 
+      let thisCounterfactualSitSchematicIsBad;
+
       counterfactualSitSchematic.chunkIds.forEach((chunkId) => {
+        if (thisCounterfactualSitSchematicIsBad) {
+          return;
+        }
+
         let stChToCounterfax =
           counterfactualQuestionSentenceFormula.sentenceStructure.find(
             (structureChunk) => structureChunk.chunkId === chunkId
@@ -593,7 +586,37 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         counterfactualSitSchematic[chunkId].forEach((assignment) => {
           stChToCounterfax[assignment.traitKey] = [assignment.traitValue];
         });
+
+        if (!removeBadVirilityCombinations(stChToCounterfax)) {
+          console.log(
+            `sdnd This counterfactualSitSchematic ${counterfactualSitSchematic.cfLabel} had incompatible virility values, so will not be run through fetchPalette.`
+          );
+          thisCounterfactualSitSchematicIsBad = true;
+        }
       });
+
+      if (thisCounterfactualSitSchematicIsBad) {
+        return;
+      }
+
+      runsRecord.push(counterfactualSitSchematic.cfLabel);
+
+      function removeBadVirilityCombinations(stChToCounterfax) {
+        //Adjust stCh to rectify bad virility combinations, eg gender:f number:plural,
+        //and return true.
+        //But if this stCh can't be saved, return false and this counterfactual sit will not be continued with.
+
+        return;
+        // let tempStCh = uUtils.copyWithoutReference(
+        //   questionOutputUnit.structureChunk
+        // );
+        // tempStCh[annoTraitKey] = counterfactualTraitValuesForThisTraitKey;
+        // //If "plural", remove "m", "f". If person, remove "n".
+        // counterfactualTraitValuesForThisTraitKey =
+        //   refFxn.removeIncompatibleTraits(questionLanguage, tempStCh)[
+        //     annoTraitKey
+        //   ];
+      }
 
       counterfactualQuestionSentenceFormula.sentenceStructure.forEach(
         (stCh) => {
