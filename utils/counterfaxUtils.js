@@ -423,9 +423,10 @@ exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
 
         //If "plural", remove "m", "f". If person, remove "n".
         counterfactualTraitValuesForThisTraitKey =
-          refFxn.removeIncompatibleTraits(questionLanguage, counterfaxedStCh)[
-            annoTraitKey
-          ];
+          refFxn.removeIncompatibleTraitValues(
+            questionLanguage,
+            counterfaxedStCh
+          ).structureChunk[annoTraitKey];
 
         function addFaxSituation(
           counterfaxSituations,
@@ -587,7 +588,9 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           stChToCounterfax[assignment.traitKey] = [assignment.traitValue];
         });
 
-        if (!removeBadVirilityCombinations(stChToCounterfax)) {
+        if (
+          !removeBadVirilityCombinations(questionLanguage, stChToCounterfax)
+        ) {
           console.log(
             `sdnd This counterfactualSitSchematic ${counterfactualSitSchematic.cfLabel} had incompatible virility values, so will not be run through fetchPalette.`
           );
@@ -601,19 +604,32 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
       runsRecord.push(counterfactualSitSchematic.cfLabel);
 
-      function removeBadVirilityCombinations(stChToCounterfax) {
+      function removeBadVirilityCombinations(questionLanguage, structureChunk) {
         //Adjust stCh to rectify bad virility combinations, eg gender:f number:plural,
         //and return true.
         //But if this stCh can't be saved, return false and this counterfactual sit will not be continued with.
 
-        return;
+        let obj = refFxn.removeIncompatibleTraitValues(questionLanguage, stCh);
+        stCh = obj.structureChunk;
+        let traitKeysChanged = obj.traitKeysChanged;
+
+        if (
+          traitKeysChanged.some(
+            (traitKeyChanged) =>
+              !stCh[traitKeyChanged] || !stCh[traitKeyChanged].length
+          )
+          //This stCh and thus sit couldn't be saved. Removing incompatible traitValues removed all of them for this traitKey.
+        ) {
+          return false;
+        }
+        return true;
         // let tempStCh = uUtils.copyWithoutReference(
         //   questionOutputUnit.structureChunk
         // );
         // tempStCh[annoTraitKey] = counterfactualTraitValuesForThisTraitKey;
         // //If "plural", remove "m", "f". If person, remove "n".
         // counterfactualTraitValuesForThisTraitKey =
-        //   refFxn.removeIncompatibleTraits(questionLanguage, tempStCh)[
+        //   refFxn.removeIncompatibleTraitValues(questionLanguage, tempStCh).structureChunk[
         //     annoTraitKey
         //   ];
       }
