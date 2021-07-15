@@ -11,7 +11,7 @@ const {
 } = require("../utils/universalUtils.js");
 
 describe("listCounterfaxSituations2", () => {
-  it("Two annotations on one, and one on the other.", () => {
+  it.only("Two annotations on one, and one on the other.", () => {
     let questionOutputArray = [
       {
         selectedLemmaObject: {
@@ -354,12 +354,12 @@ describe("listCounterfaxSituations2", () => {
     const actual = cfUtils.listCounterfaxSituations2(
       questionOutputArray,
       languagesObject
-    );
+    ).counterfaxSituations;
     expect(actual).to.eql(expected);
   });
 });
 
-describe("listCounterfaxSituations", () => {
+xdescribe("listCounterfaxSituations", () => {
   it("Two annotations on one, and one on the other.", () => {
     let questionOutputArray = [
       {
