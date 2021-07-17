@@ -236,7 +236,6 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
-          console.log(res.body);
           checkSentenceTranslations(
             res,
             questionLanguage,

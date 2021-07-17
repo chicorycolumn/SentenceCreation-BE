@@ -137,7 +137,7 @@ describe("/api", function () {
           );
         });
     });
-    it.only("#pal18-02a GET 200 YES: Engpol. 'she writes'", () => {
+    it("#pal18-02a GET 200 YES: Engpol. 'she writes'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 

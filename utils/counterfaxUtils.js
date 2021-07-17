@@ -506,30 +506,30 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   runsRecord,
   originalQuestionSentenceFormula //On a counterfax run this is null. Remove this variable everywhere.
 ) => {
-  console.log("");
-  console.log("*");
-  console.log("**");
-  console.log("***");
-  console.log("****");
-  console.log("removeAnnotationsByCounterfactualAnswerSentences");
-  console.log(
+  consol.logSpecial3("");
+  consol.logSpecial3("*");
+  consol.logSpecial3("**");
+  consol.logSpecial3("***");
+  consol.logSpecial3("****");
+  consol.logSpecial3("removeAnnotationsByCounterfactualAnswerSentences");
+  consol.logSpecial3(
     `There are ${explodedCounterfaxSituationsSchematics.length} schematics.`
   );
   explodedCounterfaxSituationsSchematics.forEach((x, index) => {
-    console.log(x);
+    consol.logSpecial3(x);
     if (!index) {
-      console.log("^^^ ORIGINAL ^^^");
+      consol.logSpecial3("^^^ ORIGINAL ^^^");
     }
-    console.log("-");
+    consol.logSpecial3("-");
   });
-  console.log(
+  consol.logSpecial3(
     "annotationsToCounterfaxAndTheirChunkIds",
     annotationsToCounterfaxAndTheirChunkIds
   );
-  console.log("questionOutputArr", questionOutputArr);
-  console.log(".");
-  console.log(".");
-  console.log(".");
+  consol.logSpecial3("questionOutputArr", questionOutputArr);
+  consol.logSpecial3(".");
+  consol.logSpecial3(".");
+  consol.logSpecial3(".");
   //Abortcuts for this fxn: Search ACX.
 
   let shouldConsoleLog = false;
@@ -577,12 +577,14 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       // let questionOutputUnitsThatHaveBeenCounterfaxedInThisSit = {}; //To delete in Iota2.
 
       if (!index) {
-        console.log(`dfimOriginal sit: ${counterfactualSitSchematic.cfLabel}`);
+        consol.logSpecial3(
+          `dfimOriginal sit: ${counterfactualSitSchematic.cfLabel}`
+        );
         runsRecord.push(counterfactualSitSchematic.cfLabel);
         originalSitSchematic = counterfactualSitSchematic;
         return;
       } else {
-        console.log(
+        consol.logSpecial3(
           "\ndfim Current counterfax sit:",
           counterfactualSitSchematic.cfLabel
         );
@@ -617,10 +619,10 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           stChToCounterfax[assignment.traitKey] = [assignment.traitValue];
         });
 
-        console.log("--------eggd--------");
+        consol.logSpecial3("--------eggd--------");
 
-        console.log("number", stChToCounterfax.number);
-        console.log("gender", stChToCounterfax.gender);
+        consol.logSpecial3("number", stChToCounterfax.number);
+        consol.logSpecial3("gender", stChToCounterfax.gender);
 
         allLangUtils.adjustVirilityOfStructureChunk(
           questionLanguage,
@@ -629,10 +631,10 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           true
         );
 
-        console.log("↓");
-        console.log("gender", stChToCounterfax.gender);
+        consol.logSpecial3("↓");
+        consol.logSpecial3("gender", stChToCounterfax.gender);
 
-        console.log("~~~~~~~~~~~~~~~~~~~~");
+        consol.logSpecial3("~~~~~~~~~~~~~~~~~~~~");
 
         //Update the counterfactualSitSchematic assignments now that they may have changed from adjust virility.
         tempCopySchematicForThisChunk.forEach((assignment) => {
@@ -652,7 +654,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           let traitValueAfterAdjust = traitValuesAfterAdjust[0];
 
           if (traitValueBeforeAdjust !== traitValueAfterAdjust) {
-            console.log(`klnn For sit "${counterfactualSitSchematic.cfLabel}", structure chunk "${chunkId}" has changed from
+            consol.logSpecial3(`klnn For sit "${counterfactualSitSchematic.cfLabel}", structure chunk "${chunkId}" has changed from
             "${traitKey}" = "${traitValueBeforeAdjust}" to "${traitValueAfterAdjust}". The former value is from counterfax listing
             and exploding, but that process naturally creates bad virility combinations like number singular gender nonvirile. So
             that has now been adjusted in this sit. The cfLabel will be updated accordingly. And this sit may even be stopped here 
@@ -670,14 +672,14 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         counterfactualSitSchematic
       );
       if (counterfactualSitSchematic.cfLabel !== newCfLabel) {
-        console.log(
+        consol.logSpecial3(
           `ncui Changing cfLabel from "${counterfactualSitSchematic.cfLabel}" to "${newCfLabel}"`
         );
         counterfactualSitSchematic.cfLabel = newCfLabel;
       }
 
       if (runsRecord.includes(counterfactualSitSchematic.cfLabel)) {
-        console.log(
+        consol.logSpecial3(
           `dssb Dropping current counterfax sit: "${counterfactualSitSchematic.cfLabel}" ie not send to fetchPalette, 
           because after adjusting virility, it turns out an identical one has already been done.`
         );
@@ -690,18 +692,18 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         //and return true.
         //But if this stCh can't be saved, return false and this counterfactual sit will not be continued with.
 
-        console.log("--------------------");
+        consol.logSpecial3("--------------------");
 
-        console.log("number", stCh.number);
-        console.log("gender", stCh.gender);
+        consol.logSpecial3("number", stCh.number);
+        consol.logSpecial3("gender", stCh.gender);
 
         let obj = refFxn.removeIncompatibleTraitValues(questionLanguage, stCh);
         stCh = obj.structureChunk;
         let traitKeysChanged = obj.traitKeysChanged;
-        console.log("↓");
-        console.log("gender", stCh.gender);
+        consol.logSpecial3("↓");
+        consol.logSpecial3("gender", stCh.gender);
 
-        console.log("~~~~~~~~~~~~~~~~~~~~");
+        consol.logSpecial3("~~~~~~~~~~~~~~~~~~~~");
 
         if (
           traitKeysChanged.some(
@@ -710,10 +712,10 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           )
           //This stCh and thus sit couldn't be saved. Removing incompatible traitValues removed all of them for this traitKey.
         ) {
-          console.log("-->false");
+          consol.logSpecial3("-->false");
           return false;
         }
-        console.log("-->true");
+        consol.logSpecial3("-->true");
         return true;
         // let tempStCh = uUtils.copyWithoutReference(
         //   questionOutputUnit.structureChunk
@@ -751,13 +753,13 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         devSaysThrowAfterAnnoSalvo: reqBody.devSaysThrowAfterAnnoSalvo,
       };
 
-      console.log(
+      consol.logSpecial3(
         `> > > Sending counterfax sit "${counterfactualSitSchematic.cfLabel}" to fetchPalette.`
       );
 
       palette.fetchPalette({ body: newReqBody });
 
-      console.log("");
+      consol.logSpecial3("");
 
       // if (
       //   cfUtils.removeAnnotationsIfHeadChunkHasBeenCounterfaxed(
@@ -776,7 +778,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
     }
   );
 
-  console.log(
+  consol.logSpecial3(
     "ewcc allCounterfactualResults.length",
     allCounterfactualResults.length
   );
@@ -853,7 +855,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       traitValue2,
       questionLanguage
     ) {
-      console.log({ questionLanguage });
+      consol.logSpecial3({ questionLanguage });
 
       if (!(traitKey && traitValue1 && traitValue2)) {
         consol.throw("ocsj");
@@ -868,28 +870,28 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       return traitValue1 === traitValue2;
     }
 
-    console.log("");
-    console.log("~");
-    console.log("~~");
-    console.log("~~~");
-    console.log("~~~~");
-    console.log("findCFResultsWhenAllOtherThingsBeingEqual");
-    console.log("");
-    console.log("The original sit is", originalSit);
-    console.log("");
-    console.log(`All ${allCR.length} CF results are:`);
+    consol.logSpecial3("");
+    consol.logSpecial3("~");
+    consol.logSpecial3("~~");
+    consol.logSpecial3("~~~");
+    consol.logSpecial3("~~~~");
+    consol.logSpecial3("findCFResultsWhenAllOtherThingsBeingEqual");
+    consol.logSpecial3("");
+    consol.logSpecial3("The original sit is", originalSit);
+    consol.logSpecial3("");
+    consol.logSpecial3(`All ${allCR.length} CF results are:`);
     allCR.forEach((x) => {
-      console.log(x);
-      console.log("-");
+      consol.logSpecial3(x);
+      consol.logSpecial3("-");
     });
-    console.log("");
-    console.log("Now for .filter");
+    consol.logSpecial3("");
+    consol.logSpecial3("Now for .filter");
 
     let resArr = allCR.filter((CR) => {
       let Cschem = CR.counterfactualSitSchematic;
 
-      console.log("");
-      console.log("Current CR examined is", CR);
+      consol.logSpecial3("");
+      consol.logSpecial3("Current CR examined is", CR);
 
       //We only want counterfax results where the chunk to be coppiced/inosculated has a DIFFERENT value to what it has in original.
       if (
@@ -906,7 +908,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             )
         )
       ) {
-        console.log("Fail A");
+        consol.logSpecial3("Fail A");
         return false;
       }
 
@@ -931,10 +933,10 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           )
         )
       ) {
-        console.log("Fail B");
+        consol.logSpecial3("Fail B");
         return false;
       }
-      console.log("Pass");
+      consol.logSpecial3("Pass");
       return true;
     });
 
@@ -943,15 +945,15 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         `zprr SEE ABOVE At the end of findCFResultsWhenAllOtherThingsBeingEqual found no results for original sit "${originalSit.cfLabel}" from Array[${allCR.length}].`
       );
     } else {
-      console.log("Success! resArr.length:", resArr.length);
+      consol.logSpecial3("Success! resArr.length:", resArr.length);
     }
 
-    console.log("/findCFResultsWhenAllOtherThingsBeingEqual");
-    console.log("~~~~");
-    console.log("~~~");
-    console.log("~~");
-    console.log("~");
-    console.log("");
+    consol.logSpecial3("/findCFResultsWhenAllOtherThingsBeingEqual");
+    consol.logSpecial3("~~~~");
+    consol.logSpecial3("~~~");
+    consol.logSpecial3("~~");
+    consol.logSpecial3("~");
+    consol.logSpecial3("");
 
     return resArr;
   }
