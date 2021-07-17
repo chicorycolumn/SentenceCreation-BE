@@ -610,7 +610,22 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           stChToCounterfax[assignment.traitKey] = [assignment.traitValue];
         });
 
-        removeBadVirilityCombinations2(questionLanguage, stChToCounterfax);
+        console.log("--------eggd--------");
+
+        console.log("number", stChToCounterfax.number);
+        console.log("gender", stChToCounterfax.gender);
+
+        allLangUtils.adjustVirilityOfStructureChunk(
+          questionLanguage,
+          stChToCounterfax,
+          true,
+          true
+        );
+
+        console.log("↓");
+        console.log("gender", stChToCounterfax.gender);
+
+        console.log("~~~~~~~~~~~~~~~~~~~~");
       });
 
       if (runsRecord.includes(counterfactualSitSchematic.cfLabel)) {
@@ -644,53 +659,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         console.log("gender", stCh.gender);
 
         console.log("~~~~~~~~~~~~~~~~~~~~");
-
-        if (
-          traitKeysChanged.some(
-            (traitKeyChanged) =>
-              !stCh[traitKeyChanged] || !stCh[traitKeyChanged].length
-          )
-          //This stCh and thus sit couldn't be saved. Removing incompatible traitValues removed all of them for this traitKey.
-        ) {
-          console.log("-->false");
-          return false;
-        }
-        console.log("-->true");
-        return true;
-        // let tempStCh = uUtils.copyWithoutReference(
-        //   questionOutputUnit.structureChunk
-        // );
-        // tempStCh[annoTraitKey] = counterfactualTraitValuesForThisTraitKey;
-        // //If "plural", remove "m", "f". If person, remove "n".
-        // counterfactualTraitValuesForThisTraitKey =
-        //   refFxn.removeIncompatibleTraitValues(questionLanguage, tempStCh).structureChunk[
-        //     annoTraitKey
-        //   ];
-      }
-
-      function removeBadVirilityCombinations2(questionLanguage, stCh) {
-        //Adjust stCh to rectify bad virility combinations, eg gender:f number:plural,
-        //and return true.
-        //But if this stCh can't be saved, return false and this counterfactual sit will not be continued with.
-
-        console.log("--------eggd--------");
-
-        console.log("number", stCh.number);
-        console.log("gender", stCh.gender);
-
-        allLangUtils.adjustVirilityOfStructureChunk(
-          questionLanguage,
-          stCh,
-          true,
-          true
-        );
-
-        console.log("↓");
-        console.log("gender", stCh.gender);
-
-        console.log("~~~~~~~~~~~~~~~~~~~~");
-
-        return;
 
         if (
           traitKeysChanged.some(
