@@ -5,6 +5,7 @@ const cfUtils = require("./counterfaxUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 const refFxn = require("./reference/referenceFunctions.js");
 const palette = require("../models/palette.model.js");
+const allLangUtils = require("./allLangUtils.js");
 
 exports.explodeCounterfaxSituations = (sits) => {
   //Nownow. We need this fxn to correct virility so it doesn't create sits with number plural gender f.
@@ -507,6 +508,27 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   runsRecord,
   originalQuestionSentenceFormula //On a counterfax run this is null. Remove this variable everywhere.
 ) => {
+  console.log("");
+  console.log("*");
+  console.log("**");
+  console.log("***");
+  console.log("****");
+  console.log("removeAnnotationsByCounterfactualAnswerSentences");
+  console.log(
+    `There are ${explodedCounterfaxSituationsSchematics.length} schematics.`
+  );
+  explodedCounterfaxSituationsSchematics.forEach((x) => {
+    console.log(x);
+    console.log("-");
+  });
+  console.log(
+    "annotationsToCounterfaxAndTheirChunkIds",
+    annotationsToCounterfaxAndTheirChunkIds
+  );
+  console.log("questionOutputArr", questionOutputArr);
+  console.log(".");
+  console.log(".");
+  console.log(".");
   //Abortcuts for this fxn: Search ACX.
 
   let shouldConsoleLog = false;
@@ -543,38 +565,39 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   //So now we have the sentenceFormula for the original (Factual) situation.
   //Now each run of the forEach sit, will make a deepcopy of it, and use that to counterfax run.
 
+  let recordOfCounterfaxedStChsForEachCF = []; //Nownow Need to make a such object for the original factual, and put it in here too.
+
   explodedCounterfaxSituationsSchematics.forEach(
     (counterfactualSitSchematic, index) => {
       // let questionOutputUnitsThatHaveBeenCounterfaxedInThisSit = {}; //To delete in Iota2.
 
-      consol.log(
-        "dfim The current counterfax counterfactualSitSchematic is:",
-        counterfactualSitSchematic.cfLabel
-      );
-
       if (!index) {
-        console.log(`Original: ${counterfactualSitSchematic.cfLabel}`);
+        console.log(`dfimOriginal sit: ${counterfactualSitSchematic.cfLabel}`);
         runsRecord.push(`${counterfactualSitSchematic.cfLabel}(original)`);
         originalSitSchematic = counterfactualSitSchematic;
         return;
+      } else {
+        console.log(
+          "dfim Current counterfax sit:",
+          counterfactualSitSchematic.cfLabel
+        );
       }
 
       let counterfactualQuestionSentenceFormula = uUtils.copyWithoutReference(
         updatedOriginalQuestionSentenceFormula
       );
 
+      let recordOfCounterfaxedStChsForThisCF = {
+        stChs: {},
+        cfLabel: counterfactualSitSchematic.cfLabel,
+      };
+
       //Now, inside this forEach chunk forEach assigment,
       //get those values and update counterfactualQuestionSentenceFormula with them.
       //Then exit both loops.
       //Then send off to fetchPalette.
 
-      let thisCounterfactualSitSchematicIsBad;
-
       counterfactualSitSchematic.chunkIds.forEach((chunkId) => {
-        if (thisCounterfactualSitSchematicIsBad) {
-          return;
-        }
-
         let stChToCounterfax =
           counterfactualQuestionSentenceFormula.sentenceStructure.find(
             (structureChunk) => structureChunk.chunkId === chunkId
@@ -584,23 +607,58 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           consol.throw("waow");
         }
 
+        delete stChToCounterfax.annotations;
+
         counterfactualSitSchematic[chunkId].forEach((assignment) => {
           stChToCounterfax[assignment.traitKey] = [assignment.traitValue];
         });
 
-        if (
-          !removeBadVirilityCombinations(questionLanguage, stChToCounterfax)
-        ) {
-          console.log(
-            `sdnd This counterfactualSitSchematic ${counterfactualSitSchematic.cfLabel} had incompatible virility values, so will not be run through fetchPalette.`
-          );
-          thisCounterfactualSitSchematicIsBad = true;
-        }
+        removeBadVirilityCombinations2(questionLanguage, stChToCounterfax);
+
+        recordOfCounterfaxedStChsForThisCF.stChs[stChToCounterfax.chunkId] =
+          stChToCounterfax;
+
+        //Alpha: Better to update cfLabel and schematic itself, rather than make new record that diverges from those.
       });
 
-      if (thisCounterfactualSitSchematicIsBad) {
+      if (
+        recordOfCounterfaxedStChsForEachCF.some(
+          (recordOfCounterfaxedStChsForOneCF) => {
+            console.log("########");
+            console.log("#############");
+            console.log("areTwoObjectsEqual");
+            console.log("obj1", recordOfCounterfaxedStChsForOneCF.stChs);
+            console.log("obj2", recordOfCounterfaxedStChsForThisCF.stChs);
+            console.log("#############");
+            console.log("########");
+
+            let bool = uUtils.areTwoObjectsEqual(
+              recordOfCounterfaxedStChsForOneCF.stChs,
+              recordOfCounterfaxedStChsForThisCF.stChs
+            );
+
+            console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>", bool);
+
+            if (bool) {
+              console.log(
+                `dssb Dropping current counterfax sit: "${recordOfCounterfaxedStChsForThisCF.cfLabel}" ie not send to fetchPalette, because counterfax sit: "${recordOfCounterfaxedStChsForOneCF.cfLabel}" has already been done, and is identical (after adjusting virility).`
+              );
+            }
+
+            return bool;
+          }
+        )
+      ) {
         return;
       }
+
+      recordOfCounterfaxedStChsForEachCF.push(
+        recordOfCounterfaxedStChsForThisCF
+      );
+
+      //Nownow, if this recordOfCounterfaxedStChsForThisCF is now a duplicate of a sit already done, based on looking at its stCh's eg if after adjustVirility,
+      //{number: plural, gender: f} and {number: plural, gender: n} both became {number: plural, gender: nonvirile}
+      //then return here, ie don't do a fetchPalette for this sit.
 
       runsRecord.push(counterfactualSitSchematic.cfLabel);
 
@@ -610,16 +668,64 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         //But if this stCh can't be saved, return false and this counterfactual sit will not be continued with.
 
         console.log("--------------------");
-        console.log(stCh);
-        console.log("--------------------");
+
+        console.log("number", stCh.number);
+        console.log("gender", stCh.gender);
 
         let obj = refFxn.removeIncompatibleTraitValues(questionLanguage, stCh);
         stCh = obj.structureChunk;
         let traitKeysChanged = obj.traitKeysChanged;
+        console.log("↓");
+        console.log("gender", stCh.gender);
 
         console.log("~~~~~~~~~~~~~~~~~~~~");
-        console.log(stCh);
+
+        if (
+          traitKeysChanged.some(
+            (traitKeyChanged) =>
+              !stCh[traitKeyChanged] || !stCh[traitKeyChanged].length
+          )
+          //This stCh and thus sit couldn't be saved. Removing incompatible traitValues removed all of them for this traitKey.
+        ) {
+          console.log("-->false");
+          return false;
+        }
+        console.log("-->true");
+        return true;
+        // let tempStCh = uUtils.copyWithoutReference(
+        //   questionOutputUnit.structureChunk
+        // );
+        // tempStCh[annoTraitKey] = counterfactualTraitValuesForThisTraitKey;
+        // //If "plural", remove "m", "f". If person, remove "n".
+        // counterfactualTraitValuesForThisTraitKey =
+        //   refFxn.removeIncompatibleTraitValues(questionLanguage, tempStCh).structureChunk[
+        //     annoTraitKey
+        //   ];
+      }
+
+      function removeBadVirilityCombinations2(questionLanguage, stCh) {
+        //Adjust stCh to rectify bad virility combinations, eg gender:f number:plural,
+        //and return true.
+        //But if this stCh can't be saved, return false and this counterfactual sit will not be continued with.
+
+        console.log("--------eggd--------");
+
+        console.log("number", stCh.number);
+        console.log("gender", stCh.gender);
+
+        allLangUtils.adjustVirilityOfStructureChunk(
+          questionLanguage,
+          stCh,
+          true,
+          "removeBadVirilityCombinations2 for removeAnnotationsByCounterfax"
+        );
+
+        console.log("↓");
+        console.log("gender", stCh.gender);
+
         console.log("~~~~~~~~~~~~~~~~~~~~");
+
+        return;
 
         if (
           traitKeysChanged.some(
@@ -669,6 +775,10 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         devSaysThrowAfterAnnoSalvo: reqBody.devSaysThrowAfterAnnoSalvo,
       };
 
+      console.log(
+        `Sending counterfax sit "${counterfactualSitSchematic.cfLabel}" to fetchPalette.`
+      );
+
       palette.fetchPalette({ body: newReqBody });
 
       // if (
@@ -692,6 +802,10 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
     "ewcc allCounterfactualResults.length",
     allCounterfactualResults.length
   );
+
+  if (!allCounterfactualResults.length) {
+    consol.throw("THROW: allCounterfactualResults was empty.");
+  }
 
   function makePseudoSentenceObjs(outputArrObjs, primaryOrders) {
     //This doesn't do the full processing, ie 'a' --> 'an'
@@ -776,8 +890,28 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       return traitValue1 === traitValue2;
     }
 
+    console.log("");
+    console.log("~");
+    console.log("~~");
+    console.log("~~~");
+    console.log("~~~~");
+    console.log("findCFResultsWhenAllOtherThingsBeingEqual");
+    console.log("");
+    console.log("The original sit is", originalSit);
+    console.log("");
+    console.log(`All ${allCR.length} CF results are:`);
+    allCR.forEach((x) => {
+      console.log(x);
+      console.log("-");
+    });
+    console.log("");
+    console.log("Now for .filter");
+
     let resArr = allCR.filter((CR) => {
       let Cschem = CR.counterfactualSitSchematic;
+
+      console.log("");
+      console.log("Current CR examined is", CR);
 
       //We only want counterfax results where the chunk to be coppiced/inosculated has a DIFFERENT value to what it has in original.
       if (
@@ -794,6 +928,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             )
         )
       ) {
+        console.log("Fail A");
         return false;
       }
 
@@ -818,16 +953,27 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           )
         )
       ) {
+        console.log("Fail B");
         return false;
       }
+      console.log("Pass");
       return true;
     });
 
     if (!resArr.length) {
       consol.throw(
-        `zprr findCFResultsWhenAllOtherThingsBeingEqual found no results for original sit "${originalSit.cfLabel}" from Array[${allCR.length}].`
+        `zprr SEE ABOVE At the end of findCFResultsWhenAllOtherThingsBeingEqual found no results for original sit "${originalSit.cfLabel}" from Array[${allCR.length}].`
       );
+    } else {
+      console.log("Success! resArr.length:", resArr.length);
     }
+
+    console.log("/findCFResultsWhenAllOtherThingsBeingEqual");
+    console.log("~~~~");
+    console.log("~~~");
+    console.log("~~");
+    console.log("~");
+    console.log("");
 
     return resArr;
   }
