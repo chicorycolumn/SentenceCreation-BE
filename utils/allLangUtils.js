@@ -44,11 +44,6 @@ exports.adjustVirilityOfStructureChunk = (
   //So you don't to worry about leaving n out in the cold when f is randomly chosen to translate nonvirile for singular,
   //because there will be another sit with n.
 
-  if (isPreProcessing && gpUtils.getWordtypeStCh(structureChunk) === "noun") {
-    // Because m -> plural -> virile and then trying to select Ojciec, which isn't virile, it's m, so will ERR later.
-    return;
-  }
-
   consol.log(
     "[1;35m " +
       "svpi ALL a'djustVirilityOfStructureChunk " +
@@ -62,6 +57,16 @@ exports.adjustVirilityOfStructureChunk = (
       "[0m",
     structureChunk
   );
+
+  if (
+    isPreProcessing &&
+    gpUtils.getWordtypeStCh(structureChunk) === "noun" &&
+    structureChunk.number &&
+    structureChunk.number.includes("plural")
+  ) {
+    // Because m -> plural -> virile and then trying to select Ojciec, which isn't virile, it's m, so will ERR later.
+    return;
+  }
 
   let { gender, number } = structureChunk;
 
