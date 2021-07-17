@@ -42,6 +42,14 @@ exports.firstStageEvaluateAnnotations = (
     answerSentenceData
   );
 
+  if (
+    questionOutputArr.every((outputUnit) =>
+      uUtils.isEmpty(outputUnit.structureChunk.annotations)
+    )
+  ) {
+    return;
+  }
+
   let { counterfaxSituations, annotationsToCounterfaxAndTheirChunkIds } =
     cfUtils.listCounterfaxSituations2(questionOutputArr, languagesObj);
 

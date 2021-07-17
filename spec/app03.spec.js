@@ -137,7 +137,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal18-02a GET 200 YES: Engpol. 'she writes'", () => {
+    it.only("#pal18-02a GET 200 YES: Engpol. 'she writes'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2685,7 +2685,7 @@ describe("/api", function () {
           );
         });
     });
-    it.only("#pal17-11k GET 200 YES: Poleng. I** was a doctor. MGN to agree with pronoun.", () => {
+    it("#pal17-11k GET 200 YES: Poleng. I** was a doctor. MGN to agree with pronoun.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
