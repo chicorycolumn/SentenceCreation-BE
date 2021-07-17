@@ -247,7 +247,7 @@ describe("/api", function () {
           );
         });
     });
-    it.only("#pal15-03d GET 200 YES: Engpol. Preposition 'with'. SHEEP (checking clarifiers) Articles for plural.", () => {
+    it("#pal15-03d GET 200 YES: Engpol. Preposition 'with'. SHEEP (checking clarifiers) Articles for plural.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 

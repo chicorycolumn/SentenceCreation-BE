@@ -862,9 +862,13 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       }
 
       if (traitKey === "gender") {
-        return refObj.virilityConversionRef[questionLanguage].matches[
-          traitValue1
-        ].includes(traitValue2);
+        let virilityRefWithMetas = uUtils.combineTwoKeyValueObjectsCarefully(
+          refObj.virilityConversionRef[questionLanguage].matches,
+
+          refObj.metaTraitValues[questionLanguage].gender
+        );
+
+        return virilityRefWithMetas[traitValue1].includes(traitValue2);
       }
 
       return traitValue1 === traitValue2;

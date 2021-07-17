@@ -53,21 +53,23 @@ exports.firstStageEvaluateAnnotations = (
   let { counterfaxSituations, annotationsToCounterfaxAndTheirChunkIds } =
     cfUtils.listCounterfaxSituations2(questionOutputArr, languagesObj);
 
-  let explodedCounterfaxSituationsSchematics =
-    cfUtils.explodeCounterfaxSituations(counterfaxSituations);
+  if (annotationsToCounterfaxAndTheirChunkIds.length) {
+    let explodedCounterfaxSituationsSchematics =
+      cfUtils.explodeCounterfaxSituations(counterfaxSituations);
 
-  cfUtils.removeAnnotationsByCounterfactualAnswerSentences(
-    explodedCounterfaxSituationsSchematics,
-    questionOutputArr,
-    annotationsToCounterfaxAndTheirChunkIds,
-    languagesObj,
-    answerSentenceData,
-    questionSentenceFormula,
-    reqBody,
-    answerSelectedWordsSetsHaveChanged,
-    runsRecord,
-    originalQuestionSentenceFormula
-  );
+    cfUtils.removeAnnotationsByCounterfactualAnswerSentences(
+      explodedCounterfaxSituationsSchematics,
+      questionOutputArr,
+      annotationsToCounterfaxAndTheirChunkIds,
+      languagesObj,
+      answerSentenceData,
+      questionSentenceFormula,
+      reqBody,
+      answerSelectedWordsSetsHaveChanged,
+      runsRecord,
+      originalQuestionSentenceFormula
+    );
+  }
 
   questionOutputArr.forEach((outputUnit) => {
     if (uUtils.isEmpty(outputUnit.structureChunk.annotations)) {

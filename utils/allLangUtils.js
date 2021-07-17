@@ -34,11 +34,11 @@ exports.adjustVirilityOfStructureChunk = (
   currentLanguage,
   structureChunk,
   isPreProcessing,
-  randomlyPickOneTraitValue
+  justOneValue
 ) => {
   //Adds the virility gender values. Eg if number includes "plural", then gender ["f"] would become ["f", "nonvirile"]
 
-  //Unless you true randomlyPickOneTraitValue, in which case if number singular and gender nonvirile, it would
+  //Unless you true justOneValue, in which case if number singular and gender nonvirile, it would
   //randomly choose either f or n. This is used in counterfaxing, because by that point, the list and explode of
   //counterfax situations means that all gender values and all number values have been exploded together.
   //So you don't to worry about leaving n out in the cold when f is randomly chosen to translate nonvirile for singular,
@@ -70,7 +70,7 @@ exports.adjustVirilityOfStructureChunk = (
 
   let { gender, number } = structureChunk;
 
-  if (!randomlyPickOneTraitValue && (!number || !number.includes("plural"))) {
+  if (!justOneValue && (!number || !number.includes("plural"))) {
     consol.log(
       "clsq ALL a'djustVirilityOfStructureChunk Aborting because Number"
     );
@@ -86,10 +86,10 @@ exports.adjustVirilityOfStructureChunk = (
 
   let virilityConversionRef = refObj.virilityConversionRef[currentLanguage];
 
-  if (randomlyPickOneTraitValue) {
-    let newGenderTraitValue = uUtils.selectRandom(
-      virilityConversionRef[number[0]][gender[0]]
-    );
+  if (justOneValue) {
+    let newGenderTraitValue =
+      virilityConversionRef.justOneValue[number[0]][gender[0]];
+
     gender.length = 0;
     gender.push(newGenderTraitValue);
 
@@ -103,7 +103,7 @@ exports.adjustVirilityOfStructureChunk = (
     return;
   }
 
-  if (/all.*/.test(gender)) {
+  if (/^all/.test(gender)) {
     //Gamma This regex seems to test the array not the contents.
     if (gender.length !== 1) {
       consol.throw(

@@ -102,7 +102,10 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
           }
         } else if (uUtils.typeof(traitValue) === "array") {
           traitValue.forEach((traitValueItem) => {
-            if (!possibleTraitValues.includes(traitValueItem)) {
+            if (
+              !/^all/.test(traitValueItem) &&
+              !possibleTraitValues.includes(traitValueItem)
+            ) {
               consol.log(
                 "timm validateSentenceFormula structureChunk",
                 structureChunk
