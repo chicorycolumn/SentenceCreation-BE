@@ -606,6 +606,10 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
         delete stChToCounterfax.annotations; //No longer necessary to do this.
 
+        let tempCopySchematicForThisChunk = uUtils.copyWithoutReference(
+          counterfactualSitSchematic[chunkId]
+        );
+
         counterfactualSitSchematic[chunkId].forEach((assignment) => {
           stChToCounterfax[assignment.traitKey] = [assignment.traitValue];
         });
@@ -626,7 +630,40 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         console.log("gender", stChToCounterfax.gender);
 
         console.log("~~~~~~~~~~~~~~~~~~~~");
+
+        //Update the counterfactualSitSchematic assignments now that they may have changed from adjust virility.
+        tempCopySchematicForThisChunk[chunkId].forEach((assignment) => {
+          let traitKey = assignment.traitKey;
+          let traitValuesBeforeAdjust = assignment.traitValue;
+          let traitValuesAfterAdjust = stChToCounterfax[traitKey];
+
+          if (
+            traitValuesBeforeAdjust.length !== 1 ||
+            traitValuesAfterAdjust.length !== 1
+          ) {
+            consol.throw(
+              `idwp These should only contain one value, as this is counterfax sit. After listing and exploding, we should always be dealing with just one traitValue for the counterfaxed traitKeys.`
+            );
+          }
+
+          if (traitValuesBeforeAdjust[0] !== traitValuesAfterAdjust[0]) {
+            console.log(`klnn For sit "${counterfactualSitSchematic.cfLabel}", structure chunk "${chunkId}" has changed from
+            "${traitKey}" = "${traitValuesBeforeAdjust[0]}" to "${traitValuesAfterAdjust[0]}". The former value is from counterfax listing
+            and exploding, but that process naturally creates bad virility combinations like number singular gender nonvirile. So
+            that has now been adjusted in this sit. The cfLabel will be updated accordingly. And this sit may even be stopped here 
+            (ie not be sent to fetchPalette) because an identical (now after virility adjustment) sit may have already been through.`);
+
+            counterfactualSitSchematic[chunkId].find(
+              (assig) => assig.traitKey === traitKey
+            ).traitValue = traitValuesAfterAdjust[0];
+          }
+        });
       });
+
+      //Make cfLabel again now that counterfactualSitSchematic assignments may have changed.
+      counterfactualSitSchematic.cfLabel = cfUtils.makeCfLabelFromSitSchematic(
+        counterfactualSitSchematic
+      );
 
       if (runsRecord.includes(counterfactualSitSchematic.cfLabel)) {
         console.log(
@@ -635,11 +672,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         );
         return;
       }
-
-      //^Nownow, if this recordOfCounterfaxedStChsForThisCF is now a duplicate of a sit already done, based on looking at its stCh's eg if after adjustVirility,
-      //{number: plural, gender: f} and {number: plural, gender: n} both became {number: plural, gender: nonvirile}
-      //then return here, ie don't do a fetchPalette for this sit.
-
       runsRecord.push(counterfactualSitSchematic.cfLabel);
 
       function removeBadVirilityCombinations(questionLanguage, stCh) {
