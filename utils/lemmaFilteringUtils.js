@@ -493,8 +493,7 @@ exports.updateStructureChunk = (outputUnit, currentLanguage) => {
   allLangUtils.adjustVirilityOfStructureChunk(
     currentLanguage,
     outputUnit.structureChunk,
-    false,
-    "updateStructureChunk"
+    false
   );
 
   if (shouldConsoleLog) {

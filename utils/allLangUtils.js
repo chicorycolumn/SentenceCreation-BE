@@ -34,12 +34,15 @@ exports.adjustVirilityOfStructureChunk = (
   currentLanguage,
   structureChunk,
   isPreProcessing,
-  consoleLogLaabel
+  randomlyPickOneTraitValue
 ) => {
-  //Adds the virility gender values if number includes "plural".
-  //So ["f"] would become ["f", "nonvirile"]
+  //Adds the virility gender values. Eg if number includes "plural" gender ["f"] would become ["f", "nonvirile"]
 
-  consol.log("gxow ALL a'djustVirilityOfStructureChunk", consoleLogLaabel);
+  //Unless you true randomlyPickOneTraitValue, in which case if number singular and gender nonvirile, it would
+  //randomly choose either f or n. This is used in counterfaxing, because by that point, the list and explode of
+  //counterfax situations means that all gender values and all number values have been exploded together.
+  //So you don't to worry about leaving n out in the cold when f is randomly chosen to translate nonvirile for singular,
+  //because there will be another sit with n.
 
   if (isPreProcessing && gpUtils.getWordtypeStCh(structureChunk) === "noun") {
     // Because m -> plural -> virile and then trying to select Ojciec, which isn't virile, it's m, so will ERR later.
@@ -76,7 +79,23 @@ exports.adjustVirilityOfStructureChunk = (
     return;
   }
 
+  let virilityConversionRef = refObj.virilityConversionRef[currentLanguage];
+
+  if (randomlyPickOneTraitValue) {
+    gender = [uUtils.selectRandom(virilityConversionRef[number[0]][gender[0]])];
+
+    consol.log(
+      "[1;35m " +
+        "hutf ALL a'djustVirilityOfStructureChunk structureChunk ends up being:" +
+        "[0m",
+      structureChunk
+    );
+
+    return;
+  }
+
   if (/all.*/.test(gender)) {
+    //Gamma This regex seems to test the array not the contents.
     if (gender.length !== 1) {
       consol.throw(
         `#ERR vcvl ALL:a'djustVirilityOfStructureChunk. Gender traitKeys arr contained a metaGender traitKey, that's fine, but it contained other traitKeys too? That's too much. "${gender.toString()}"`
@@ -85,8 +104,6 @@ exports.adjustVirilityOfStructureChunk = (
 
     gender = refObj.metaTraitValues[currentLanguage]["gender"][gender];
   }
-
-  let virilityConversionRef = refObj.virilityConversionRef[currentLanguage];
 
   let newGenderTraitKeys = [];
 
@@ -106,9 +123,6 @@ exports.adjustVirilityOfStructureChunk = (
         ...newGenderTraitKeys,
         ...virilityConversionRef["plural"][genderTraitKey],
       ];
-      // if (shouldRetainOriginals) {
-      //   newGenderTraitKeys.push(genderTraitKey);
-      // }
     });
   }
 
@@ -118,7 +132,7 @@ exports.adjustVirilityOfStructureChunk = (
 
   consol.log(
     "[1;35m " +
-      "hutf ALL a'djustVirilityOfStructureChunk structureChunk ends up being:" +
+      "hutg ALL a'djustVirilityOfStructureChunk structureChunk ends up being:" +
       "[0m",
     structureChunk
   );
@@ -230,8 +244,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
     allLangUtils.adjustVirilityOfStructureChunk(
       currentLanguage,
       structureChunk,
-      true,
-      "structureChunk from ALL:preprocessStructureChunks"
+      true
     );
   });
 };

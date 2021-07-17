@@ -8,8 +8,6 @@ const palette = require("../models/palette.model.js");
 const allLangUtils = require("./allLangUtils.js");
 
 exports.explodeCounterfaxSituations = (sits) => {
-  //Nownow. We need this fxn to correct virility so it doesn't create sits with number plural gender f.
-
   let explodedWithinEachChunk = {};
   let sentence = [];
   let chunkIds = sits.headsFirstSequenceChunkIds;
@@ -69,27 +67,27 @@ exports.explodeCounterfaxSituations = (sits) => {
     sentence.chunkIds.pop();
   }
 
-  function makeCfLabelFromSitSchematic(sit) {
-    let grandCfLabel = "";
-    sit.chunkIds.forEach((chunkId) => {
-      let cfLabel = `${chunkId} `;
-      sit[chunkId].forEach((assignment) => {
-        cfLabel += `${assignment.traitKey}=${assignment.traitValue} `;
-      });
-      cfLabel = cfLabel.slice(0, cfLabel.length - 1);
-      grandCfLabel += `${cfLabel}, `;
-    });
-    return grandCfLabel.slice(0, grandCfLabel.length - 2);
-  }
-
   explodedBetweenChunks.cfLabels = [];
   explodedBetweenChunks.forEach((sit) => {
-    let cfLabel = makeCfLabelFromSitSchematic(sit);
+    let cfLabel = cfUtils.makeCfLabelFromSitSchematic(sit);
     sit.cfLabel = cfLabel;
     explodedBetweenChunks.cfLabels.push(cfLabel);
   });
 
   return explodedBetweenChunks;
+};
+
+exports.makeCfLabelFromSitSchematic = (sit) => {
+  let grandCfLabel = "";
+  sit.chunkIds.forEach((chunkId) => {
+    let cfLabel = `${chunkId} `;
+    sit[chunkId].forEach((assignment) => {
+      cfLabel += `${assignment.traitKey}=${assignment.traitValue} `;
+    });
+    cfLabel = cfLabel.slice(0, cfLabel.length - 1);
+    grandCfLabel += `${cfLabel}, `;
+  });
+  return grandCfLabel.slice(0, grandCfLabel.length - 2);
 };
 
 exports.listCounterfaxSituations2 = (questionOutputArr, languagesObj) => {
@@ -565,7 +563,11 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   //So now we have the sentenceFormula for the original (Factual) situation.
   //Now each run of the forEach sit, will make a deepcopy of it, and use that to counterfax run.
 
-  let recordOfCounterfaxedStChsForEachCF = []; //Nownow Need to make a such object for the original factual, and put it in here too.
+  let cfLabelsOfCounterfaxedSits = [];
+  //Nownow Need to make a such object for the original factual, and put it in here too.
+
+  //In fact, we should modify the counterfax sit schematics directly when virility adjustments are made, including remaking the label.
+  //Then we'n compare the lables, rather that making a new record object and putting it in recordOfCounterfaxedStChsForEachCF.
 
   explodedCounterfaxSituationsSchematics.forEach(
     (counterfactualSitSchematic, index) => {
@@ -587,11 +589,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         updatedOriginalQuestionSentenceFormula
       );
 
-      let recordOfCounterfaxedStChsForThisCF = {
-        stChs: {},
-        cfLabel: counterfactualSitSchematic.cfLabel,
-      };
-
       //Now, inside this forEach chunk forEach assigment,
       //get those values and update counterfactualQuestionSentenceFormula with them.
       //Then exit both loops.
@@ -607,56 +604,24 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           consol.throw("waow");
         }
 
-        delete stChToCounterfax.annotations;
+        delete stChToCounterfax.annotations; //No longer necessary to do this.
 
         counterfactualSitSchematic[chunkId].forEach((assignment) => {
           stChToCounterfax[assignment.traitKey] = [assignment.traitValue];
         });
 
         removeBadVirilityCombinations2(questionLanguage, stChToCounterfax);
-
-        recordOfCounterfaxedStChsForThisCF.stChs[stChToCounterfax.chunkId] =
-          stChToCounterfax;
-
-        //Alpha: Better to update cfLabel and schematic itself, rather than make new record that diverges from those.
       });
 
-      if (
-        recordOfCounterfaxedStChsForEachCF.some(
-          (recordOfCounterfaxedStChsForOneCF) => {
-            console.log("########");
-            console.log("#############");
-            console.log("areTwoObjectsEqual");
-            console.log("obj1", recordOfCounterfaxedStChsForOneCF.stChs);
-            console.log("obj2", recordOfCounterfaxedStChsForThisCF.stChs);
-            console.log("#############");
-            console.log("########");
-
-            let bool = uUtils.areTwoObjectsEqual(
-              recordOfCounterfaxedStChsForOneCF.stChs,
-              recordOfCounterfaxedStChsForThisCF.stChs
-            );
-
-            console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>", bool);
-
-            if (bool) {
-              console.log(
-                `dssb Dropping current counterfax sit: "${recordOfCounterfaxedStChsForThisCF.cfLabel}" ie not send to fetchPalette, because counterfax sit: "${recordOfCounterfaxedStChsForOneCF.cfLabel}" has already been done, and is identical (after adjusting virility).`
-              );
-            }
-
-            return bool;
-          }
-        )
-      ) {
+      if (runsRecord.includes(counterfactualSitSchematic.cfLabel)) {
+        console.log(
+          `dssb Dropping current counterfax sit: "${counterfactualSitSchematic.cfLabel}" ie not send to fetchPalette, 
+          because after adjusting virility, it turns out an identical one has already been done.`
+        );
         return;
       }
 
-      recordOfCounterfaxedStChsForEachCF.push(
-        recordOfCounterfaxedStChsForThisCF
-      );
-
-      //Nownow, if this recordOfCounterfaxedStChsForThisCF is now a duplicate of a sit already done, based on looking at its stCh's eg if after adjustVirility,
+      //^Nownow, if this recordOfCounterfaxedStChsForThisCF is now a duplicate of a sit already done, based on looking at its stCh's eg if after adjustVirility,
       //{number: plural, gender: f} and {number: plural, gender: n} both became {number: plural, gender: nonvirile}
       //then return here, ie don't do a fetchPalette for this sit.
 
@@ -717,7 +682,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           questionLanguage,
           stCh,
           true,
-          "removeBadVirilityCombinations2 for removeAnnotationsByCounterfax"
+          true
         );
 
         console.log("↓");
