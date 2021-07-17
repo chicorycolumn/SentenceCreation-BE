@@ -578,12 +578,12 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
       if (!index) {
         console.log(`dfimOriginal sit: ${counterfactualSitSchematic.cfLabel}`);
-        runsRecord.push(`${counterfactualSitSchematic.cfLabel}(original)`);
+        runsRecord.push(counterfactualSitSchematic.cfLabel);
         originalSitSchematic = counterfactualSitSchematic;
         return;
       } else {
         console.log(
-          "dfim Current counterfax sit:",
+          "\ndfim Current counterfax sit:",
           counterfactualSitSchematic.cfLabel
         );
       }
@@ -752,10 +752,12 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       };
 
       console.log(
-        `Sending counterfax sit "${counterfactualSitSchematic.cfLabel}" to fetchPalette.`
+        `> > > Sending counterfax sit "${counterfactualSitSchematic.cfLabel}" to fetchPalette.`
       );
 
       palette.fetchPalette({ body: newReqBody });
+
+      console.log("");
 
       // if (
       //   cfUtils.removeAnnotationsIfHeadChunkHasBeenCounterfaxed(

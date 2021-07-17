@@ -72,8 +72,9 @@ exports.filterWithin_PHD = (
     }
 
     if (
-      !PHDstructureChunk.specificLemmas ||
-      PHDstructureChunk.specificLemmas.length !== 1
+      //SLIM
+      !PHDstructureChunk.specificLemmas
+      // || PHDstructureChunk.specificLemmas.length !== 1
     ) {
       consol.throw(
         "#ERR ohmk lf:filterWithin_PHD. PHD-stCh should have exactly one traitValue in specificLemmas arr."
@@ -629,8 +630,12 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
 
   //STEP FOUR: Selectors that must be handled specially.
 
-  if (structureChunk.specificLemmas && structureChunk.specificLemmas.length) {
-    structureChunk.specificLemmas = [selectedLemmaObject.lemma];
+  if (
+    !structureChunk.doNotUpdateSpecificLemmasAsIsJustOneMDN &&
+    structureChunk.specificLemmas &&
+    structureChunk.specificLemmas.length
+  ) {
+    structureChunk.specificLemmas = [selectedLemmaObject.lemma]; //SLIM (specificLemma Issue re MDNs)
   }
 
   consol.log(

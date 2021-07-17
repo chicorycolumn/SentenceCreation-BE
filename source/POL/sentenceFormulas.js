@@ -1445,6 +1445,7 @@ exports.sentenceFormulasBank = [
         formulaImportantTraitKeys: ["gcase"],
         // number: ["singular"],
         specificLemmas: ["lekarz", "lekarka"],
+        doNotUpdateSpecificLemmasAsIsJustOneMDN: true,
         agreeWith: "pro-1-I",
       },
     ],
