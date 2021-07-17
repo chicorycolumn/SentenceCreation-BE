@@ -515,8 +515,11 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   console.log(
     `There are ${explodedCounterfaxSituationsSchematics.length} schematics.`
   );
-  explodedCounterfaxSituationsSchematics.forEach((x) => {
+  explodedCounterfaxSituationsSchematics.forEach((x, index) => {
     console.log(x);
+    if (!index) {
+      console.log("^^^ ORIGINAL ^^^");
+    }
     console.log("-");
   });
   console.log(
@@ -632,38 +635,46 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         console.log("~~~~~~~~~~~~~~~~~~~~");
 
         //Update the counterfactualSitSchematic assignments now that they may have changed from adjust virility.
-        tempCopySchematicForThisChunk[chunkId].forEach((assignment) => {
+        tempCopySchematicForThisChunk.forEach((assignment) => {
           let traitKey = assignment.traitKey;
-          let traitValuesBeforeAdjust = assignment.traitValue;
+          let traitValueBeforeAdjust = assignment.traitValue;
           let traitValuesAfterAdjust = stChToCounterfax[traitKey];
 
-          if (
-            traitValuesBeforeAdjust.length !== 1 ||
-            traitValuesAfterAdjust.length !== 1
-          ) {
+          if (traitValuesAfterAdjust.length !== 1) {
             consol.throw(
-              `idwp These should only contain one value, as this is counterfax sit. After listing and exploding, we should always be dealing with just one traitValue for the counterfaxed traitKeys.`
+              `idwp These should only contain one value, as this is counterfax sit. After listing and exploding, 
+              we should always be dealing with just one traitValue for the counterfaxed traitKeys.
+              traitValuesAfterAdjust: [${traitValuesAfterAdjust}] 
+              `
             );
           }
 
-          if (traitValuesBeforeAdjust[0] !== traitValuesAfterAdjust[0]) {
+          let traitValueAfterAdjust = traitValuesAfterAdjust[0];
+
+          if (traitValueBeforeAdjust !== traitValueAfterAdjust) {
             console.log(`klnn For sit "${counterfactualSitSchematic.cfLabel}", structure chunk "${chunkId}" has changed from
-            "${traitKey}" = "${traitValuesBeforeAdjust[0]}" to "${traitValuesAfterAdjust[0]}". The former value is from counterfax listing
+            "${traitKey}" = "${traitValueBeforeAdjust}" to "${traitValueAfterAdjust}". The former value is from counterfax listing
             and exploding, but that process naturally creates bad virility combinations like number singular gender nonvirile. So
             that has now been adjusted in this sit. The cfLabel will be updated accordingly. And this sit may even be stopped here 
             (ie not be sent to fetchPalette) because an identical (now after virility adjustment) sit may have already been through.`);
 
             counterfactualSitSchematic[chunkId].find(
               (assig) => assig.traitKey === traitKey
-            ).traitValue = traitValuesAfterAdjust[0];
+            ).traitValue = traitValueAfterAdjust;
           }
         });
       });
 
       //Make cfLabel again now that counterfactualSitSchematic assignments may have changed.
-      counterfactualSitSchematic.cfLabel = cfUtils.makeCfLabelFromSitSchematic(
+      let newCfLabel = cfUtils.makeCfLabelFromSitSchematic(
         counterfactualSitSchematic
       );
+      if (counterfactualSitSchematic.cfLabel !== newCfLabel) {
+        console.log(
+          `ncui Changing cfLabel from "${counterfactualSitSchematic.cfLabel}" to "${newCfLabel}"`
+        );
+        counterfactualSitSchematic.cfLabel = newCfLabel;
+      }
 
       if (runsRecord.includes(counterfactualSitSchematic.cfLabel)) {
         console.log(

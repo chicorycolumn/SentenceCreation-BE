@@ -36,7 +36,7 @@ exports.adjustVirilityOfStructureChunk = (
   isPreProcessing,
   randomlyPickOneTraitValue
 ) => {
-  //Adds the virility gender values. Eg if number includes "plural" gender ["f"] would become ["f", "nonvirile"]
+  //Adds the virility gender values. Eg if number includes "plural", then gender ["f"] would become ["f", "nonvirile"]
 
   //Unless you true randomlyPickOneTraitValue, in which case if number singular and gender nonvirile, it would
   //randomly choose either f or n. This is used in counterfaxing, because by that point, the list and explode of
@@ -65,11 +65,11 @@ exports.adjustVirilityOfStructureChunk = (
 
   let { gender, number } = structureChunk;
 
-  if (!number || !number.includes("plural")) {
+  if (!randomlyPickOneTraitValue && (!number || !number.includes("plural"))) {
     consol.log(
       "clsq ALL a'djustVirilityOfStructureChunk Aborting because Number"
     );
-    return;
+    return; //Gamma Don't know why doing this?
   }
 
   if (!gender || !gender.length) {
@@ -82,7 +82,11 @@ exports.adjustVirilityOfStructureChunk = (
   let virilityConversionRef = refObj.virilityConversionRef[currentLanguage];
 
   if (randomlyPickOneTraitValue) {
-    gender = [uUtils.selectRandom(virilityConversionRef[number[0]][gender[0]])];
+    let newGenderTraitValue = uUtils.selectRandom(
+      virilityConversionRef[number[0]][gender[0]]
+    );
+    gender.length = 0;
+    gender.push(newGenderTraitValue);
 
     consol.log(
       "[1;35m " +
