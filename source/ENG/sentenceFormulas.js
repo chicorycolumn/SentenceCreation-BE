@@ -1241,4 +1241,41 @@ exports.sentenceFormulasBank = [
     ],
     primaryOrders: [["art-1", "npe-1-woman", "ver-1-see", "pro-1-me"]],
   },
+  {
+    sentenceFormulaSymbol: "120 Doctor saw me",
+    sentenceFormulaId: "ENG-120",
+    translations: { POL: ["POL-120"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-0-I-invisible",
+        specificLemmas: ["PERSONAL"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "art-1",
+        agreeWith: "npe-1-doctor",
+      },
+      {
+        chunkId: "npe-1-doctor",
+        specificLemmas: ["doctor"],
+        number: ["singular"],
+        gender: ["f"],
+      },
+      {
+        chunkId: "ver-1-see",
+        specificLemmas: ["see"],
+        agreeWith: "npe-1-doctor",
+        tenseDescription: ["past simple"],
+      },
+      {
+        chunkId: "pro-1-me",
+        specificLemmas: ["PERSONAL"],
+        agreeWith: "pro-0-I-invisible",
+        gcase: ["acc"],
+        formulaImportantTraitKeys: ["gcase"],
+      },
+    ],
+    primaryOrders: [["art-1", "npe-1-doctor", "ver-1-see", "pro-1-me"]],
+  },
 ];

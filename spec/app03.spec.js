@@ -755,6 +755,71 @@ describe("/api", function () {
           );
         });
     });
+    it.only("#pal18-07a GET 200 YES: Engpol. 'A doctor saw me.'", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "120 Doctor saw me",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "A doctor (female) saw me.",
+              POL: ["Lekarka mnie zobaczyła."],
+            },
+            {
+              ENG: "The doctor (female) saw me.",
+              POL: ["Lekarka mnie zobaczyła."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it.only("#pal18-07b GET 200 YES: Poleng. 'A doctor saw me.'", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "120 Doctor saw me",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: [
+                "The doctor saw me.",
+                "The doctor had seen me.",
+                "The doctor has seen me.",
+                "A doctor saw me.",
+                "A doctor had seen me.",
+                "A doctor has seen me.",
+              ],
+              POL: "Lekarka mnie zobaczyła.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
   });
 
   describe("/palette - Stage 17-i: Possessive pronouns and MGNs. Pre-testing.", () => {
