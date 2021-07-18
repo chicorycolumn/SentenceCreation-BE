@@ -1,7 +1,11 @@
 const consol = require("./consoleLoggingUtils.js");
 
 exports.log = (...args) => {
-  if (!["r", "r1", "r2", "r3"].some((flag) => process.argv.includes(flag))) {
+  if (
+    !["r", "r1", "r2", "r3", "r4", "r5"].some((flag) =>
+      process.argv.includes(flag)
+    )
+  ) {
     console.log(...args);
   }
 };
@@ -20,6 +24,18 @@ exports.logSpecial2 = (...args) => {
 
 exports.logSpecial3 = (...args) => {
   if (process.argv.includes("r3")) {
+    console.log(...args);
+  }
+};
+
+exports.logSpecial4 = (...args) => {
+  if (process.argv.includes("r4")) {
+    console.log(...args);
+  }
+};
+
+exports.logSpecial5 = (...args) => {
+  if (process.argv.includes("r5")) {
     console.log(...args);
   }
 };

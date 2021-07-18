@@ -879,9 +879,15 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
     consol.logSpecial3("~~");
     consol.logSpecial3("~~~");
     consol.logSpecial3("~~~~");
-    consol.logSpecial3("findCFResultsWhenAllOtherThingsBeingEqual");
+    consol.logSpecial3(
+      `findCFResultsWhenAllOtherThingsBeingEqual for "${chunkIdToExamine}" "${traitKeyToExamine}"`
+    );
+    consol.logSpecial4(
+      `\nfindCFResultsWhenAllOtherThingsBeingEqual for "${chunkIdToExamine}" "${traitKeyToExamine}"`
+    );
     consol.logSpecial3("");
-    consol.logSpecial3("The original sit is", originalSit);
+    consol.logSpecial3("The original sit is", originalSit.cfLabel);
+    consol.logSpecial4("The original sit is", originalSit.cfLabel);
     consol.logSpecial3("");
     consol.logSpecial3(`All ${allCR.length} CF results are:`);
     allCR.forEach((x) => {
@@ -896,6 +902,10 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
       consol.logSpecial3("");
       consol.logSpecial3("Current CR examined is", CR);
+      consol.logSpecial4(
+        "Current CR examined is",
+        CR.counterfactualSitSchematic.cfLabel
+      );
 
       //We only want counterfax results where the chunk to be coppiced/inosculated has a DIFFERENT value to what it has in original.
       if (
@@ -913,6 +923,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         )
       ) {
         consol.logSpecial3("Fail A");
+        consol.logSpecial4("Fail A");
         return false;
       }
 
@@ -938,9 +949,11 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         )
       ) {
         consol.logSpecial3("Fail B");
+        consol.logSpecial4("Fail B");
         return false;
       }
       consol.logSpecial3("Pass");
+      consol.logSpecial4("Pass");
       return true;
     });
 
@@ -975,47 +988,97 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         (unit) => unit.structureChunk.chunkId === chunkId
       );
 
-      let specificCounterfactualResultsForThisOneAnnotationOnThisStCh =
-        findCFResultsWhenAllOtherThingsBeingEqual(
-          allCounterfactualResults,
-          originalSitSchematic,
-          chunkId,
-          annoTraitKey,
-          questionLanguage
+      let {
+        originalAnswerPseudoSentenceObjs,
+        counterfactualAnswerPseudoSentenceObjs,
+        originalQuestionPseudoSentenceObjs,
+        counterfactualQuestionPseudoSentenceObjs,
+        counterfactualTraitValuesForThisTraitKeyOnThisStCh,
+        counterfactualAnswerOutputArrObjs,
+      } = getPseudoSentencesFromAnnotationSpecificResults(
+        allCounterfactualResults,
+        originalSitSchematic,
+        chunkId,
+        annoTraitKey,
+        questionLanguage
+      );
+
+      function getPseudoSentencesFromAnnotationSpecificResults() {
+        let specificCounterfactualResultsForThisOneAnnotationOnThisStCh =
+          findCFResultsWhenAllOtherThingsBeingEqual(
+            allCounterfactualResults,
+            originalSitSchematic,
+            chunkId,
+            annoTraitKey,
+            questionLanguage
+          );
+
+        consol.logSpecial4(
+          "===========> specificCounterfactualResultsForThisOneAnnotationOnThisStCh",
+          specificCounterfactualResultsForThisOneAnnotationOnThisStCh.map(
+            (x) => x.counterfactualSitSchematic.cfLabel
+          )
         );
 
-      let counterfactualTraitValuesForThisTraitKeyOnThisStCh =
-        specificCounterfactualResultsForThisOneAnnotationOnThisStCh.map(
-          (counterfactual) =>
-            counterfactual.counterfactualSitSchematic[chunkId].find(
-              (assig) => assig.traitKey === annoTraitKey
-            ).traitValue
-        );
+        let counterfactualTraitValuesForThisTraitKeyOnThisStCh =
+          specificCounterfactualResultsForThisOneAnnotationOnThisStCh.map(
+            (counterfactual) =>
+              counterfactual.counterfactualSitSchematic[chunkId].find(
+                (assig) => assig.traitKey === annoTraitKey
+              ).traitValue
+          );
 
-      let counterfactualQuestionOutputArrObjs =
-        specificCounterfactualResultsForThisOneAnnotationOnThisStCh.map(
+        let counterfactualQuestionOutputArrObjs =
+          specificCounterfactualResultsForThisOneAnnotationOnThisStCh.map(
+            (counterfactual) => {
+              return {
+                arr: counterfactual.questionSentenceData.questionOutputArr,
+                cfLabel: counterfactual.counterfactualSitSchematic.cfLabel,
+              };
+            }
+          );
+
+        let counterfactualAnswerOutputArrObjs = [];
+
+        specificCounterfactualResultsForThisOneAnnotationOnThisStCh.forEach(
           (counterfactual) => {
-            return {
-              arr: counterfactual.questionSentenceData.questionOutputArr,
-              cfLabel: counterfactual.counterfactualSitSchematic.cfLabel,
-            };
+            counterfactual.answerSentenceData.answerOutputArrays.forEach(
+              (answerOutputArray) => {
+                counterfactualAnswerOutputArrObjs.push({
+                  arr: answerOutputArray,
+                  cfLabel: counterfactual.counterfactualSitSchematic.cfLabel,
+                });
+              }
+            );
           }
         );
 
-      let counterfactualAnswerOutputArrObjs = [];
+        let originalAnswerPseudoSentenceObjs = makePseudoSentenceObjs(
+          originalAnswerOutputArrObjs,
+          answerSentenceData.sentenceFormula.primaryOrders
+        );
+        let counterfactualAnswerPseudoSentenceObjs = makePseudoSentenceObjs(
+          counterfactualAnswerOutputArrObjs,
+          answerSentenceData.sentenceFormula.primaryOrders
+        );
+        let originalQuestionPseudoSentenceObjs = makePseudoSentenceObjs(
+          originalQuestionOutputArrObjs,
+          rawQuestionSentenceFormula.primaryOrders
+        );
+        let counterfactualQuestionPseudoSentenceObjs = makePseudoSentenceObjs(
+          counterfactualQuestionOutputArrObjs,
+          rawQuestionSentenceFormula.primaryOrders
+        );
 
-      specificCounterfactualResultsForThisOneAnnotationOnThisStCh.forEach(
-        (counterfactual) => {
-          counterfactual.answerSentenceData.answerOutputArrays.forEach(
-            (answerOutputArray) => {
-              counterfactualAnswerOutputArrObjs.push({
-                arr: answerOutputArray,
-                cfLabel: counterfactual.counterfactualSitSchematic.cfLabel,
-              });
-            }
-          );
-        }
-      );
+        return {
+          originalAnswerPseudoSentenceObjs,
+          counterfactualAnswerPseudoSentenceObjs,
+          originalQuestionPseudoSentenceObjs,
+          counterfactualQuestionPseudoSentenceObjs,
+          counterfactualTraitValuesForThisTraitKeyOnThisStCh,
+          counterfactualAnswerOutputArrObjs,
+        };
+      }
 
       //
       /** Okay, we're about to compare pseudosentences (ie the arrays of selectedWords).
@@ -1038,23 +1101,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
        *  However... this will involve extra processing time, so for now, let's just check the pseudosentences against
        *  primaryOrders, so that we at least catch the "On czyta." --> "Czyta." issue.
        */
-
-      let originalAnswerPseudoSentenceObjs = makePseudoSentenceObjs(
-        originalAnswerOutputArrObjs,
-        answerSentenceData.sentenceFormula.primaryOrders
-      );
-      let counterfactualAnswerPseudoSentenceObjs = makePseudoSentenceObjs(
-        counterfactualAnswerOutputArrObjs,
-        answerSentenceData.sentenceFormula.primaryOrders
-      );
-      let originalQuestionPseudoSentenceObjs = makePseudoSentenceObjs(
-        originalQuestionOutputArrObjs,
-        rawQuestionSentenceFormula.primaryOrders
-      );
-      let counterfactualQuestionPseudoSentenceObjs = makePseudoSentenceObjs(
-        counterfactualQuestionOutputArrObjs,
-        rawQuestionSentenceFormula.primaryOrders
-      );
 
       if (
         gpUtils.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
