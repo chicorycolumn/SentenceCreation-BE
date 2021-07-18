@@ -23,8 +23,6 @@ describe("/api", function () {
     "POL",
     "ENG"
   );
-  // after(() => {});
-  // beforeEach(() => {});
 
   describe("/palette - Stage 18: Further annotations.", () => {
     it("#pal18-01a GET 200 YES: Engpol. 'she reads' tenseDesc anno should be removed by conditionsOnWhichToBlockAnnotations.", () => {
@@ -630,7 +628,6 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
-          // devSaysThrowAtMidpoint: true,
           pleaseDontSpecify: true,
           questionLanguage,
           answerLanguage,

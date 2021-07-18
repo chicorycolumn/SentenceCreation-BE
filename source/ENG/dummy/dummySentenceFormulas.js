@@ -312,7 +312,6 @@ exports.dummySentenceFormulasBank = [
     primaryOrders: [],
   },
   {
-    //nowww
     sentenceFormulaSymbol: "dummy36a",
     sentenceFormulaId: "ENG-dummy36a",
     translations: { POL: ["POL-dummy36a"] },
@@ -749,8 +748,6 @@ exports.dummySentenceFormulasBank = [
 
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
-        // gender: ["m"],
-        // number: ["singular"],
       },
       {
         chunkId: "ver-1",
@@ -1167,7 +1164,6 @@ exports.dummySentenceFormulasBank = [
       },
       {
         chunkId: "npe-1",
-
         specificLemmas: ["woman"],
         number: ["singular"],
       },
@@ -1181,20 +1177,17 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "npe-1",
-
         number: ["plural"],
         specificLemmas: ["woman"],
       },
       {
         chunkId: "ver-1",
-
         agreeWith: "npe-1",
         specificLemmas: ["see"],
         tenseDescription: ["past simple"],
       },
       {
         chunkId: "pro-1",
-
         specificLemmas: ["PERSONAL"],
         person: ["2per"],
         gcase: ["acc"],
@@ -1209,10 +1202,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "npe-1",
-
         andTags: ["job"],
-        // number: ["singular"],
-        // gender: ["f"],
       },
     ],
     primaryOrders: [],
@@ -1240,12 +1230,8 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "npe-1",
-
         andTags: ["job"],
         number: ["singular"],
-        // gender: ["f"],
-        // formulaImportantTraitKeys: ["gender"],
-        // educatorBlocksAnnotationsForTheseTraitKeys: ["gender"],
       },
     ],
     primaryOrders: [],
@@ -1257,7 +1243,6 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "npe-1",
-
         andTags: ["job"],
         number: ["singular"],
         gender: ["m", "f"],
@@ -1283,10 +1268,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "ver-1",
         agreeWith: "pro-1",
         andTags: ["basic1"],
-        tenseDescription: [
-          "present simple",
-          // "past simple"
-        ],
+        tenseDescription: ["present simple"],
       },
     ],
     primaryOrders: [["pro-1", "ver-1"]],

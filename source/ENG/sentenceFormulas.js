@@ -899,7 +899,6 @@ exports.sentenceFormulasBank = [
         gcase: ["gen"],
         number: ["singular"],
         specificLemmas: ["doctor"],
-        // gender: []
       },
       {
         chunkId: "npe-2-doctor",
@@ -1017,7 +1016,6 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-1-doctor",
-        // number: ["singular"],
         specificLemmas: ["doctor"],
         agreeWith: "pro-1-I",
       },
@@ -1089,7 +1087,6 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
         specificLemmas: ["doctor"],
         educatorBlocksAnnotationsForTheseTraitKeys: ["gender", "number"],
-        // gender: ["f"],
       },
       { chunkId: "fix-1-and", chunkValue: "and" },
       {
@@ -1131,7 +1128,6 @@ exports.sentenceFormulasBank = [
         gcase: ["nom"],
         number: ["singular"],
         specificLemmas: ["doctor"],
-        // gender: ["f"],
       },
       { chunkId: "fix-1-and", chunkValue: "and" },
       {
@@ -1161,7 +1157,6 @@ exports.sentenceFormulasBank = [
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         number: ["singular"],
-        // gender: ["m"],
       },
       {
         chunkId: "pro-1-my",
@@ -1174,7 +1169,6 @@ exports.sentenceFormulasBank = [
         gcase: ["nom"],
         number: ["singular"],
         specificLemmas: ["doctor"],
-        // gender: ["f"],
       },
     ],
     primaryOrders: [["pro-1-my", "npe-1-doctor"]],
@@ -1198,10 +1192,8 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "nco-1-onion",
-        // gcase: ["nom"],
         number: ["singular"],
         specificLemmas: ["onion"],
-        // gender: ["f"],
       },
     ],
     primaryOrders: [["pro-1-my", "nco-1-onion"]],

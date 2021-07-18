@@ -2045,8 +2045,6 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-
           let ref = [
             { ENG: "I (male) wrote.", POL: ["Napisałem.", "Ja napisałem."] },
           ];
@@ -2073,8 +2071,6 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-
           let ref = [
             {
               ENG: "We (females) wrote.",
@@ -2104,8 +2100,6 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-
           let ref = [
             { ENG: "I (male) wrote.", POL: ["Napisałem.", "Ja napisałem."] },
           ];
@@ -2132,8 +2126,6 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-
           let ref = [
             {
               ENG: "We (females) wrote.",
@@ -2163,8 +2155,6 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-
           let ref = [
             {
               ENG: ["I wrote.", "I had written.", "I have written."],
@@ -2198,8 +2188,6 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-
           let ref = [
             {
               ENG: ["We wrote.", "We had written.", "We have written."],
@@ -2233,8 +2221,6 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-
           let ref = [
             {
               ENG: ["I wrote.", "I had written.", "I have written."],
@@ -2268,8 +2254,6 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-
           let ref = [
             {
               ENG: ["We wrote.", "We had written.", "We have written."],
@@ -2303,8 +2287,6 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-
           let ref = [
             {
               ENG: ["I wrote.", "I had written.", "I have written."],
@@ -2346,8 +2328,6 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-
           let ref = [
             {
               ENG: ["We wrote.", "We had written.", "We have written."],
@@ -2389,8 +2369,6 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-
           let ref = [
             {
               ENG: ["I wrote.", "I had written.", "I have written."],
@@ -2432,8 +2410,6 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-
           let ref = [
             {
               ENG: ["We wrote.", "We had written.", "We have written."],
@@ -2476,8 +2452,6 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-
           let ref = [
             {
               ENG: "The doctor wrote.",
@@ -3013,8 +2987,6 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-
           let ref = [
             {
               ENG: "We wrote.",

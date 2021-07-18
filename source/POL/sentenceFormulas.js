@@ -1163,7 +1163,6 @@ exports.sentenceFormulasBank = [
     ],
     primaryOrders: [
       [
-        // "pro-1-I",
         "ver-1-see",
         "pro-2-my",
         "npe-1-doctor",
@@ -1214,15 +1213,7 @@ exports.sentenceFormulasBank = [
         specificLemmas: ["kobieta"],
       },
     ],
-    primaryOrders: [
-      [
-        // "pro-1-I",
-        "pro-2-my",
-        "npe-1-doctor",
-        "ver-1-was",
-        "npe-2-woman",
-      ],
-    ],
+    primaryOrders: [["pro-2-my", "npe-1-doctor", "ver-1-was", "npe-2-woman"]],
   },
   {
     sentenceFormulaSymbol: "116y My doctor",
@@ -1253,13 +1244,7 @@ exports.sentenceFormulasBank = [
         gender: ["f"],
       },
     ],
-    primaryOrders: [
-      [
-        // "pro-1-I",
-        "pro-2-my",
-        "npe-1-doctor",
-      ],
-    ],
+    primaryOrders: [["pro-2-my", "npe-1-doctor"]],
   },
   {
     sentenceFormulaSymbol: "116x My doctor was a woman",
@@ -1303,15 +1288,7 @@ exports.sentenceFormulasBank = [
         specificLemmas: ["kobieta"],
       },
     ],
-    primaryOrders: [
-      [
-        // "pro-1-I",
-        "pro-2-my",
-        "npe-1-doctor",
-        "ver-1-was",
-        "npe-2-woman",
-      ],
-    ],
+    primaryOrders: [["pro-2-my", "npe-1-doctor", "ver-1-was", "npe-2-woman"]],
   },
   {
     sentenceFormulaSymbol: "116a My doctor's doctor was a woman",
@@ -1338,7 +1315,6 @@ exports.sentenceFormulasBank = [
         specificLemmas: ["lekarz", "lekarka"],
         doNotUpdateSpecificLemmasAsIsJustOneMDN: true,
         gcase: ["gen"],
-        // gender: [],
       },
       {
         chunkId: "npe-2-doctor",
@@ -1366,7 +1342,6 @@ exports.sentenceFormulasBank = [
     ],
     primaryOrders: [
       [
-        // "pro-1-I",
         "npe-2-doctor",
         "pro-2-my",
         "npe-1-doctor's",
@@ -1530,7 +1505,6 @@ exports.sentenceFormulasBank = [
         doNotUpdateSpecificLemmasAsIsJustOneMDN: true,
         gcase: ["nom"],
         educatorBlocksAnnotationsForTheseTraitKeys: ["gender", "number"],
-        // gender: ["f"],
       },
       { chunkId: "fix-1-and", chunkValue: "i" },
       {
@@ -1578,7 +1552,6 @@ exports.sentenceFormulasBank = [
         specificLemmas: ["lekarz", "lekarka"],
         doNotUpdateSpecificLemmasAsIsJustOneMDN: true,
         gcase: ["nom"],
-        // gender: ["f"],
       },
       { chunkId: "fix-1-and", chunkValue: "i" },
       {
@@ -1610,7 +1583,6 @@ exports.sentenceFormulasBank = [
         specificLemmas: ["PERSONAL"],
         person: ["1per"],
         number: ["singular"],
-        // gender: ["m1"],
       },
       {
         chunkId: "pro-1-my",

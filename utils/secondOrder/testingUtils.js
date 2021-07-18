@@ -1,5 +1,4 @@
 const request = require("supertest");
-const chai = require("chai");
 const { expect } = require("chai");
 const gpUtils = require("../generalPurposeUtils.js");
 const uUtils = require("../universalUtils.js");
