@@ -1205,15 +1205,15 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         //And the same for "I saw." --> ["Zobaczyłem.", "Zobaczyłam."]
         //
 
-        cfUtils.agglomerateAndRemoveAnnosIfSameResults(
-          questionOutputUnit,
-          counterfactualTraitValuesForThisTraitKeyOnThisStCh,
-          answerSelectedWordsSetsHaveChanged,
-          annoTraitKey,
-          answerSentenceData,
-          counterfactualAnswerOutputArrObjs,
-          originalAnnoTraitValue
-        );
+        // cfUtils.agglomerateAndRemoveAnnosIfSameResults(
+        //   questionOutputUnit,
+        //   counterfactualTraitValuesForThisTraitKeyOnThisStCh,
+        //   answerSelectedWordsSetsHaveChanged,
+        //   annoTraitKey,
+        //   answerSentenceData,
+        //   counterfactualAnswerOutputArrObjs,
+        //   originalAnnoTraitValue
+        // );
 
         agglomerateUsingAllCounterfaxResults(
           allCounterfactualResults,

@@ -69,32 +69,85 @@ exports.fetchPalette = (req) => {
     //
     //But if qChunk.gender holds all the poss gender traitValues for this lang>wordtype (bearing in mind if person andTag)
     //then do allow it to be qChunk.dontSpecifyOnThisChunk = true.
-    questionSentenceFormula.sentenceStructure.forEach((qChunk) => {
-      qChunk.dontSpecifyOnThisChunk = true;
 
-      if (
-        gpUtils.stChIsNounPerson(qChunk) &&
-        questionSentenceFormula.sentenceStructure.find(
-          (potentialDepChunk) =>
-            gpUtils.getWordtypeStCh(potentialDepChunk) === "pronoun" &&
-            potentialDepChunk.agreeWith === qChunk.chunkId
-        )
-      ) {
-        qChunk.dontSpecifyOnThisChunk = false;
-      } else if (
-        qChunk.gender &&
-        qChunk.gender.length &&
-        !refObj.metaTraitValues[questionLanguage]["gender"][
-          refObj.nounGenderTraitValues[gpUtils.getWordtypeCodeStCh(qChunk)]
-        ].every((traitValue) => qChunk.gender.includes(traitValue))
-      ) {
-        qChunk.dontSpecifyOnThisChunk = false;
-      }
+    setPDSValuesB();
 
-      consol.log(
-        `PDSyellow qChunk.dontSpecifyOnThisChunk for "${qChunk.chunkId}=${qChunk.dontSpecifyOnThisChunk}"`
-      );
-    });
+    function setPDSValuesA() {
+      questionSentenceFormula.sentenceStructure.forEach((qChunk) => {
+        qChunk.dontSpecifyOnThisChunk = true;
+
+        if (
+          gpUtils.stChIsNounPerson(qChunk) &&
+          questionSentenceFormula.sentenceStructure.find(
+            (potentialDepChunk) =>
+              gpUtils.getWordtypeStCh(potentialDepChunk) === "pronoun" &&
+              potentialDepChunk.agreeWith === qChunk.chunkId
+          )
+        ) {
+          qChunk.dontSpecifyOnThisChunk = false;
+        } else if (
+          qChunk.gender &&
+          qChunk.gender.length &&
+          !refObj.metaTraitValues[questionLanguage]["gender"][
+            refObj.nounGenderTraitValues[gpUtils.getWordtypeCodeStCh(qChunk)]
+          ].every((traitValue) => qChunk.gender.includes(traitValue))
+        ) {
+          qChunk.dontSpecifyOnThisChunk = false;
+        }
+
+        consol.log(
+          `PDSyellow qChunk.dontSpecifyOnThisChunk for "${qChunk.chunkId}=${qChunk.dontSpecifyOnThisChunk}"`
+        );
+      });
+    }
+
+    function setPDSValuesB() {
+      questionSentenceFormula.sentenceStructure.forEach((qChunk) => {
+        if (!gpUtils.stChIsNounPerson(qChunk)) {
+          qChunk.dontSpecifyOnThisChunk = true;
+        } else {
+          if (
+            questionSentenceFormula.sentenceStructure.find(
+              (potentialDepChunk) =>
+                gpUtils.getWordtypeStCh(potentialDepChunk) === "pronoun" &&
+                potentialDepChunk.agreeWith === qChunk.chunkId
+            )
+          ) {
+            if (
+              qChunk.gender &&
+              qChunk.gender.length &&
+              refObj.metaTraitValues[questionLanguage]["gender"][
+                refObj.nounGenderTraitValues[
+                  gpUtils.getWordtypeCodeStCh(qChunk)
+                ]
+              ].every((traitValue) => qChunk.gender.includes(traitValue))
+            ) {
+              qChunk.dontSpecifyOnThisChunk = true;
+            } else {
+              qChunk.dontSpecifyOnThisChunk = false;
+            }
+          } else {
+            if (
+              qChunk.gender &&
+              qChunk.gender.length &&
+              !refObj.metaTraitValues[questionLanguage]["gender"][
+                refObj.nounGenderTraitValues[
+                  gpUtils.getWordtypeCodeStCh(qChunk)
+                ]
+              ].every((traitValue) => qChunk.gender.includes(traitValue))
+            ) {
+              qChunk.dontSpecifyOnThisChunk = false;
+            } else {
+              qChunk.dontSpecifyOnThisChunk = true;
+            }
+          }
+        }
+
+        consol.log(
+          `PDSyellow qChunk.dontSpecifyOnThisChunk for "${qChunk.chunkId}=${qChunk.dontSpecifyOnThisChunk}"`
+        );
+      });
+    }
   }
 
   consol.log(
