@@ -350,8 +350,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
   explodedCounterfaxSituationsSchematics.forEach(
     (counterfactualSitSchematic, index) => {
-      // let questionOutputUnitsThatHaveBeenCounterfaxedInThisSit = {}; //To delete in Iota2.
-
       if (!index) {
         runsRecord.push(counterfactualSitSchematic.cfLabel);
         originalSitSchematic = counterfactualSitSchematic;
@@ -524,18 +522,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       );
 
       palette.fetchPalette({ body: newReqBody });
-
-      // if (
-      //   cfUtils.removeAnnotationsIfHeadChunkHasBeenCounterfaxed(
-      //     questionOutputUnitsThatHaveBeenCounterfaxedInThisSit,
-      //     questionOutputUnit
-      //   )
-      // ) {
-      //   //ACX1: If this QstCh agrees with a stCh that we've already run through counterfaxing,
-      //   //then remove that specific annotation from this QstCh, and return.
-      //   consol.log("ioej");
-      //   return;
-      // }
     }
   );
 
@@ -1089,64 +1075,6 @@ exports.agglomerateAndRemoveAnnosIfSameResults = (
       questionOutputUnit.structureChunk.counterfactuallyImportantTraitKeys.push(
         annoTraitKey
       );
-    }
-  }
-};
-
-exports.removeAnnotationsIfHeadChunkHasBeenCounterfaxed = (
-  questionOutputUnitsThatHaveBeenCounterfaxedInThisSit,
-  questionOutputUnit
-) => {
-  return (
-    removeAnnotationsIfHeadChunkHasBeenCounterfaxed_inner(
-      questionOutputUnitsThatHaveBeenCounterfaxedInThisSit,
-      questionOutputUnit,
-      "agreeWith"
-    ) ||
-    removeAnnotationsIfHeadChunkHasBeenCounterfaxed_inner(
-      questionOutputUnitsThatHaveBeenCounterfaxedInThisSit,
-      questionOutputUnit,
-      "postHocAgreeWithPrimary"
-    )
-  );
-
-  function removeAnnotationsIfHeadChunkHasBeenCounterfaxed_inner(
-    questionOutputUnitsThatHaveBeenCounterfaxedInThisSit,
-    questionOutputUnit,
-    agreeKey
-  ) {
-    if (
-      questionOutputUnitsThatHaveBeenCounterfaxedInThisSit[
-        questionOutputUnit.structureChunk[agreeKey]
-      ]
-    ) {
-      consol.log(questionOutputUnit.structureChunk.annotations);
-      consol.log(
-        "[1;33m " +
-          `mioc removeAnnotationsByCounterfax. Aha! We are examining "${
-            questionOutputUnit.structureChunk.chunkId
-          }" which has the annotations shown above. But this chunk agrees with "${
-            questionOutputUnit.structureChunk[agreeKey]
-          }" which has already been processed by counterfax, re these annotations: [${
-            questionOutputUnitsThatHaveBeenCounterfaxedInThisSit[
-              questionOutputUnit.structureChunk[agreeKey]
-            ]
-          }].` +
-          "[0m"
-      );
-
-      questionOutputUnitsThatHaveBeenCounterfaxedInThisSit[
-        questionOutputUnit.structureChunk[agreeKey]
-      ].forEach((annoTraitKey) => {
-        consol.log(
-          "[1;33m " +
-            `mioc So I'm deleting "${annoTraitKey}" from "${questionOutputUnit.structureChunk.chunkId}"'s annotations.` +
-            "[0m"
-        );
-
-        delete questionOutputUnit.structureChunk.annotations[annoTraitKey];
-      });
-      return true;
     }
   }
 };
