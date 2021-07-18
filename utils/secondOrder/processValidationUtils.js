@@ -29,11 +29,6 @@ exports.checkDecisiveDecant = (questionSentenceData, questionLanguage) => {
     Object.keys(structureChunk).forEach((traitKey) => {
       let traitValue = structureChunk[traitKey];
 
-      consol.log(
-        "Object.keys.refObj.structureChunkTraits.ALL",
-        Object.keys(refObj.structureChunkTraits.ALL)
-      );
-
       let traitsAllowedToHaveMultipleValues = Object.keys(
         refObj.structureChunkTraits.ALL
       ).filter(
@@ -42,18 +37,7 @@ exports.checkDecisiveDecant = (questionSentenceData, questionLanguage) => {
             .ultimatelyMultipleTraitValuesOkay
       );
 
-      consol.log({
-        questionLanguage,
-        traitKey,
-      });
-      consol.log(
-        "refObj.structureChunkTraits[questionLanguage][traitKey]",
-        refObj.structureChunkTraits[questionLanguage][traitKey]
-      );
-
       if (
-        refObj.structureChunkTraits[questionLanguage][traitKey] &&
-        !refObj.structureChunkTraits[questionLanguage][traitKey].isLexical &&
         !traitsAllowedToHaveMultipleValues.includes(traitKey) &&
         Array.isArray(traitValue) &&
         traitValue.length > 1
