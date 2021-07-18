@@ -506,30 +506,22 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   runsRecord,
   originalQuestionSentenceFormula //On a counterfax run this is null. Remove this variable everywhere.
 ) => {
-  consol.logSpecial3("");
-  consol.logSpecial3("*");
-  consol.logSpecial3("**");
-  consol.logSpecial3("***");
-  consol.logSpecial3("****");
-  consol.logSpecial3("removeAnnotationsByCounterfactualAnswerSentences");
-  consol.logSpecial3(
-    `There are ${explodedCounterfaxSituationsSchematics.length} schematics.`
-  );
-  explodedCounterfaxSituationsSchematics.forEach((x, index) => {
-    consol.logSpecial3(x);
-    if (!index) {
-      consol.logSpecial3("^^^ ORIGINAL ^^^");
-    }
-    consol.logSpecial3("-");
-  });
-  consol.logSpecial3(
-    "annotationsToCounterfaxAndTheirChunkIds",
-    annotationsToCounterfaxAndTheirChunkIds
-  );
-  // consol.logSpecial3("questionOutputArr", questionOutputArr);
-  consol.logSpecial3(".");
-  consol.logSpecial3(".");
-  consol.logSpecial3(".");
+  if (!"console") {
+    consol.logSpecial3("");
+    consol.logSpecial3("*");
+    consol.logSpecial3("removeAnnotationsByCounterfactualAnswerSentences");
+    consol.logSpecial3(
+      `There are ${explodedCounterfaxSituationsSchematics.length} schematics.`
+    );
+    explodedCounterfaxSituationsSchematics.forEach((x, index) => {
+      consol.logSpecial3(x);
+      if (!index) {
+        consol.logSpecial3("^^^ ORIGINAL ^^^");
+      }
+      consol.logSpecial3("-");
+    });
+  }
+
   //Abortcuts for this fxn: Search ACX.
 
   let shouldConsoleLog = false;
@@ -577,17 +569,9 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       // let questionOutputUnitsThatHaveBeenCounterfaxedInThisSit = {}; //To delete in Iota2.
 
       if (!index) {
-        consol.logSpecial3(
-          `dfimOriginal sit: ${counterfactualSitSchematic.cfLabel}`
-        );
         runsRecord.push(counterfactualSitSchematic.cfLabel);
         originalSitSchematic = counterfactualSitSchematic;
         return;
-      } else {
-        consol.logSpecial3(
-          "\ndfim Current counterfax sit:",
-          counterfactualSitSchematic.cfLabel
-        );
       }
 
       let counterfactualQuestionSentenceFormula = uUtils.copyWithoutReference(
@@ -712,10 +696,8 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           )
           //This stCh and thus sit couldn't be saved. Removing incompatible traitValues removed all of them for this traitKey.
         ) {
-          consol.logSpecial3("-->false");
           return false;
         }
-        consol.logSpecial3("-->true");
         return true;
         // let tempStCh = uUtils.copyWithoutReference(
         //   questionOutputUnit.structureChunk
@@ -758,8 +740,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       );
 
       palette.fetchPalette({ body: newReqBody });
-
-      consol.logSpecial3("");
 
       // if (
       //   cfUtils.removeAnnotationsIfHeadChunkHasBeenCounterfaxed(
@@ -855,8 +835,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       traitValue2,
       questionLanguage
     ) {
-      consol.logSpecial3("pbbn", { questionLanguage });
-
       if (!(traitKey && traitValue1 && traitValue2)) {
         consol.throw("ocsj");
       }
@@ -874,38 +852,8 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       return traitValue1 === traitValue2;
     }
 
-    consol.logSpecial3("");
-    consol.logSpecial3("~");
-    consol.logSpecial3("~~");
-    consol.logSpecial3("~~~");
-    consol.logSpecial3("~~~~");
-    consol.logSpecial3(
-      `findCFResultsWhenAllOtherThingsBeingEqual for "${chunkIdToExamine}" "${traitKeyToExamine}"`
-    );
-    consol.logSpecial4(
-      `\nfindCFResultsWhenAllOtherThingsBeingEqual for "${chunkIdToExamine}" "${traitKeyToExamine}"`
-    );
-    consol.logSpecial3("");
-    consol.logSpecial3("The original sit is", originalSit.cfLabel);
-    consol.logSpecial4("The original sit is", originalSit.cfLabel);
-    consol.logSpecial3("");
-    consol.logSpecial3(`All ${allCR.length} CF results are:`);
-    allCR.forEach((x) => {
-      consol.logSpecial3(x);
-      consol.logSpecial3("-");
-    });
-    consol.logSpecial3("");
-    consol.logSpecial3("Now for .filter");
-
     let resArr = allCR.filter((CR) => {
       let Cschem = CR.counterfactualSitSchematic;
-
-      consol.logSpecial3("");
-      consol.logSpecial3("Current CR examined is", CR);
-      consol.logSpecial4(
-        "Current CR examined is",
-        CR.counterfactualSitSchematic.cfLabel
-      );
 
       //We only want counterfax results where the chunk to be coppiced/inosculated has a DIFFERENT value to what it has in original.
       if (
@@ -922,8 +870,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             )
         )
       ) {
-        consol.logSpecial3("Fail A");
-        consol.logSpecial4("Fail A");
         return false;
       }
 
@@ -948,12 +894,8 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           )
         )
       ) {
-        consol.logSpecial3("Fail B");
-        consol.logSpecial4("Fail B");
         return false;
       }
-      consol.logSpecial3("Pass");
-      consol.logSpecial4("Pass");
       return true;
     });
 
@@ -961,21 +903,12 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       consol.throw(
         `zprr SEE ABOVE At the end of findCFResultsWhenAllOtherThingsBeingEqual found no results for original sit "${originalSit.cfLabel}" from Array[${allCR.length}].`
       );
-    } else {
-      consol.logSpecial3("Success! resArr.length:", resArr.length);
     }
-
-    consol.logSpecial3("/findCFResultsWhenAllOtherThingsBeingEqual");
-    consol.logSpecial3("~~~~");
-    consol.logSpecial3("~~~");
-    consol.logSpecial3("~~");
-    consol.logSpecial3("~");
-    consol.logSpecial3("");
 
     return resArr;
   }
 
-  consol.logSpecial2(
+  consol.logSpecial3(
     "wkop annotationsToCounterfaxAndTheirChunkIds",
     annotationsToCounterfaxAndTheirChunkIds
   );
@@ -1065,9 +998,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         }
       );
 
-      consol.logSpecial5({ annotationsToCounterfaxAndTheirChunkIds });
-      consol.logSpecial5({ coppiceConditionBooleans });
-
       if (
         coppiceConditionBooleans.length ===
           annotationsToCounterfaxAndTheirChunkIds.length &&
@@ -1113,11 +1043,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
     questionLanguage,
     questionDataOnly
   ) {
-    consol.logSpecial4(
-      "===========> cfResults",
-      cfResults.map((x) => x.counterfactualSitSchematic.cfLabel)
-    );
-
     let counterfactualTraitValuesForThisTraitKeyOnThisStCh = cfResults.map(
       (counterfactual) =>
         counterfactual.counterfactualSitSchematic[chunkId].find(
@@ -1236,7 +1161,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         )
       ) {
         //Remove annotation: INOSCULATE.
-        consol.logSpecial2(
+        consol.logSpecial3(
           "[1;35m " +
             `myxo-clauseA [Inosculate: answersame so deleting anno] removeAnnotationsByCounterfax END. 
               I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" 
@@ -1269,7 +1194,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         )
       ) {
         //Remove annotation: COPPICE
-        consol.logSpecial2(
+        consol.logSpecial3(
           "[1;35m " +
             `myxo-clauseB [Coppice: questiondifferent so deleting anno] removeAnnotationsByCounterfax END. 
           I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual 
@@ -1295,7 +1220,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             annoDataObjIndex
           );
       } else {
-        consol.logSpecial2(
+        consol.logSpecial3(
           "[1;35m " +
             `myxo-clauseC [tl;dr !answersame && !questiondifferent so keeping anno] removeAnnotationsByCounterfax END. 
           I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual answer 
@@ -1368,7 +1293,7 @@ exports.agglomerateAndRemoveAnnosIfSameResults = (
       ...counterfactualAnswerOutputArrObjs.map((obj) => obj.arr),
     ];
 
-    consol.logSpecial2(
+    consol.logSpecial3(
       `PDS-Diamond. Agglomerating the answer output arrays and deleting originalAnnoTraitValue "${originalAnnoTraitValue}", and questionOutputUnit.structureChunk[${annoTraitKey}] is now [${combinedTraitValues}]`
     );
 

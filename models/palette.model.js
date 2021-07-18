@@ -243,7 +243,7 @@ exports.fetchPalette = (req) => {
     consol.consoleLogAestheticBorder(4);
   }
 
-  consol.logSpecial1("\n~ ~ ~ ~ MIDPOINT\n");
+  consol.log("\n~ ~ ~ ~ MIDPOINT\n");
 
   if (devSaysThrowAtMidpoint) {
     consol.throw("Midpoint cease.");
