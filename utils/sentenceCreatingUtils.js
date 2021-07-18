@@ -38,7 +38,7 @@ exports.getMaterialsCopies = (
     : uUtils.copyWithoutReference(wordsBank);
 
   let sentenceFormulas = useDummy
-    ? uUtils.copyWithoutReference(dummySentenceFormulasBank) //Beta What? Why do all this?
+    ? uUtils.copyWithoutReference(dummySentenceFormulasBank) //Alpha What? Why do all this?
     : uUtils.copyWithoutReference(sentenceFormulasBank); // ^
 
   if (sentenceFormulaId) {

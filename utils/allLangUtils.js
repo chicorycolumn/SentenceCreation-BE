@@ -75,7 +75,7 @@ exports.adjustVirilityOfStructureChunk = (
     consol.log(
       "clsq ALL a'djustVirilityOfStructureChunk Aborting because Number"
     );
-    return; //Gamma Don't know why doing this?
+    return;
   }
 
   if (!gender || !gender.length) {
