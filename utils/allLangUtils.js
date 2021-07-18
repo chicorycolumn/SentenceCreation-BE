@@ -104,8 +104,7 @@ exports.adjustVirilityOfStructureChunk = (
     return;
   }
 
-  if (/^all/.test(gender)) {
-    //Gamma This regex seems to test the array not the contents.
+  if (/^all/.test(gender[0])) {
     if (gender.length !== 1) {
       consol.throw(
         `#ERR vcvl ALL:a'djustVirilityOfStructureChunk. Gender traitKeys arr contained a metaGender traitKey, that's fine, but it contained other traitKeys too? That's too much. "${gender.toString()}"`
