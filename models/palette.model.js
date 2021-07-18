@@ -169,7 +169,7 @@ exports.fetchPalette = (req) => {
   );
 
   ///////////////////////////////////////////////kp Decisive Decant Check
-  pvUtils.checkDecisiveDecant(questionSentenceData);
+  pvUtils.checkDecisiveDecant(questionSentenceData, questionLanguage);
 
   if (true && "console") {
     consol.log(

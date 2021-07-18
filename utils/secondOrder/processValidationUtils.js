@@ -6,7 +6,7 @@ const pvUtils = require("./processValidationUtils.js");
 const refObj = require("../reference/referenceObjects.js");
 const refFxn = require("../reference/referenceFunctions.js");
 
-exports.checkDecisiveDecant = (questionSentenceData) => {
+exports.checkDecisiveDecant = (questionSentenceData, questionLanguage) => {
   questionSentenceData.questionOutputArr.forEach((outputUnit, index) => {
     if (outputUnit.structureChunk.dontSpecifyOnThisChunk) {
       return;
@@ -29,6 +29,11 @@ exports.checkDecisiveDecant = (questionSentenceData) => {
     Object.keys(structureChunk).forEach((traitKey) => {
       let traitValue = structureChunk[traitKey];
 
+      consol.log(
+        "Object.keys.refObj.structureChunkTraits.ALL",
+        Object.keys(refObj.structureChunkTraits.ALL)
+      );
+
       let traitsAllowedToHaveMultipleValues = Object.keys(
         refObj.structureChunkTraits.ALL
       ).filter(
@@ -37,7 +42,18 @@ exports.checkDecisiveDecant = (questionSentenceData) => {
             .ultimatelyMultipleTraitValuesOkay
       );
 
+      consol.log({
+        questionLanguage,
+        traitKey,
+      });
+      consol.log(
+        "refObj.structureChunkTraits[questionLanguage][traitKey]",
+        refObj.structureChunkTraits[questionLanguage][traitKey]
+      );
+
       if (
+        refObj.structureChunkTraits[questionLanguage][traitKey] &&
+        !refObj.structureChunkTraits[questionLanguage][traitKey].isLexical &&
         !traitsAllowedToHaveMultipleValues.includes(traitKey) &&
         Array.isArray(traitValue) &&
         traitValue.length > 1

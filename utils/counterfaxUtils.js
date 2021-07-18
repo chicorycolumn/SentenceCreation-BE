@@ -526,7 +526,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
     "annotationsToCounterfaxAndTheirChunkIds",
     annotationsToCounterfaxAndTheirChunkIds
   );
-  consol.logSpecial3("questionOutputArr", questionOutputArr);
+  // consol.logSpecial3("questionOutputArr", questionOutputArr);
   consol.logSpecial3(".");
   consol.logSpecial3(".");
   consol.logSpecial3(".");
@@ -855,7 +855,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       traitValue2,
       questionLanguage
     ) {
-      consol.logSpecial3({ questionLanguage });
+      consol.logSpecial3("pbbn", { questionLanguage });
 
       if (!(traitKey && traitValue1 && traitValue2)) {
         consol.throw("ocsj");

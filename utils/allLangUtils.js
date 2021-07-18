@@ -59,6 +59,7 @@ exports.adjustVirilityOfStructureChunk = (
   );
 
   if (
+    !justOneValue &&
     isPreProcessing &&
     gpUtils.getWordtypeStCh(structureChunk) === "noun" &&
     structureChunk.number &&
