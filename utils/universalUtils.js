@@ -66,6 +66,14 @@ exports.doKeyValuesMatch = (object, keyValues) => {
   });
 };
 
+exports.isEmpty = (obj) => {
+  return (
+    !obj ||
+    (this.isKeyValueTypeObject(obj) && !Object.keys(obj).length) ||
+    (Array.isArray(obj) && !obj.length)
+  );
+};
+
 exports.isKeyValueTypeObject = (item) => {
   return typeof item === "object" && item !== null && !Array.isArray(item);
 };
@@ -239,14 +247,6 @@ exports.oneStepCheck = (n1, n2) => {
 
 exports.returnArrayWithItemAtIndexRemoved = (arr, indexToRemove) => {
   return [...arr.slice(0, indexToRemove), ...arr.slice(indexToRemove + 1)];
-};
-
-exports.doesObjectExistAndNonEmpty = (object) => {
-  if (!object) {
-    return false;
-  }
-
-  return !!Object.keys(object).length;
 };
 
 exports.isThisObjectInThisArrayOfObjects = (obj, arr) => {

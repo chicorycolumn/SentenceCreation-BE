@@ -44,6 +44,29 @@ exports.virilityConversionRef = {
       virile: ["virile"],
       nonvirile: ["nonvirile"],
     },
+    matches: {
+      m: ["m", "virile"],
+      f: ["f", "nonvirile"],
+      n: ["n", "nonvirile"],
+      virile: ["virile", "m"],
+      nonvirile: ["nonvirile", "f", "n"],
+    },
+    justOneValue: {
+      singular: {
+        m: "m",
+        f: "f",
+        n: "n",
+        virile: "allPersonalSingularGenders",
+        nonvirile: "allSingularGenders",
+      },
+      plural: {
+        m: "virile",
+        f: "nonvirile",
+        n: "nonvirile",
+        virile: "virile",
+        nonvirile: "nonvirile",
+      },
+    },
   },
   POL: {
     singular: {
@@ -65,6 +88,38 @@ exports.virilityConversionRef = {
       n: ["nonvirile"],
       virile: ["virile"],
       nonvirile: ["nonvirile"],
+    },
+    matches: {
+      m: ["m", "virile"],
+      m1: ["m1", "virile"],
+      m2: ["m2", "nonvirile"],
+      m3: ["m3", "nonvirile"],
+      f: ["f", "nonvirile"],
+      n: ["n", "nonvirile"],
+      virile: ["virile", "m", "m1"],
+      nonvirile: ["nonvirile", "f", "n", "m2", "m3"],
+    },
+    justOneValue: {
+      singular: {
+        m: "m",
+        m1: "m1",
+        m2: "m2",
+        m3: "m3",
+        f: "f",
+        n: "n",
+        virile: "allPersonalSingularGenders",
+        nonvirile: "allSingularGenders",
+      },
+      plural: {
+        m: "virile",
+        m1: "virile",
+        m2: "nonvirile",
+        m3: "nonvirile",
+        f: "nonvirile",
+        n: "nonvirile",
+        virile: "virile",
+        nonvirile: "nonvirile",
+      },
     },
   },
 };

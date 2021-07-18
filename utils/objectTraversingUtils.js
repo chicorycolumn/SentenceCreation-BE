@@ -1302,7 +1302,6 @@ exports.switchMetaTraitValueForAWorkableConvertedTraitValue = (
   structureChunk,
   consoleLogLaabel
 ) => {
-  consol.throw("888 Ah, we finally do use this.");
   consol.log(
     "[1;33m " +
       `ivwa ` +

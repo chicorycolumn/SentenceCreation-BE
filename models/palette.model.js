@@ -23,12 +23,12 @@ exports.fetchPalette = (req) => {
     devSaysThrowAtMidpoint,
     devSaysOmitStChValidation,
     devSaysThrowAfterAnnoSalvo,
-    arrayOfCounterfactualResultsForThisAnnotation,
+    allCounterfactualResults,
     counterfactualQuestionSentenceFormula,
-    counterfactualTrait,
+    counterfactualSitSchematic,
   } = req.body;
 
-  let { sentenceFormula, words } = scUtils.getMaterials(
+  let { sentenceFormula, words } = scUtils.getMaterialsCopies(
     questionLanguage,
     sentenceFormulaId,
     sentenceFormulaSymbol,
@@ -40,13 +40,8 @@ exports.fetchPalette = (req) => {
   let answerSentenceData;
 
   let questionResponseObj;
-  let questionSentenceFormula = counterfactualQuestionSentenceFormula
-    ? counterfactualQuestionSentenceFormula
-    : sentenceFormula;
-
-  let originalQuestionSentenceFormula = counterfactualQuestionSentenceFormula
-    ? null
-    : uUtils.copyWithoutReference(questionSentenceFormula);
+  let questionSentenceFormula =
+    counterfactualQuestionSentenceFormula || sentenceFormula;
 
   //Omega: Ultimately this needn't be done here, but rather, after creating a new sentenceFormula.
   //       Once it passes that, we know it's fine, so don't need to validate it every time down here.
@@ -69,32 +64,85 @@ exports.fetchPalette = (req) => {
     //
     //But if qChunk.gender holds all the poss gender traitValues for this lang>wordtype (bearing in mind if person andTag)
     //then do allow it to be qChunk.dontSpecifyOnThisChunk = true.
-    questionSentenceFormula.sentenceStructure.forEach((qChunk) => {
-      qChunk.dontSpecifyOnThisChunk = true;
 
-      if (
-        gpUtils.stChIsNounPerson(qChunk) &&
-        questionSentenceFormula.sentenceStructure.find(
-          (potentialDepChunk) =>
-            gpUtils.getWordtypeStCh(potentialDepChunk) === "pronoun" &&
-            potentialDepChunk.agreeWith === qChunk.chunkId
-        )
-      ) {
-        qChunk.dontSpecifyOnThisChunk = false;
-      } else if (
-        qChunk.gender &&
-        qChunk.gender.length &&
-        !refObj.metaTraitValues[questionLanguage]["gender"][
-          refObj.nounGenderTraitValues[gpUtils.getWordtypeCodeStCh(qChunk)]
-        ].every((traitValue) => qChunk.gender.includes(traitValue))
-      ) {
-        qChunk.dontSpecifyOnThisChunk = false;
-      }
+    setPDSValuesB();
 
-      consol.log(
-        `PDSyellow qChunk.dontSpecifyOnThisChunk for "${qChunk.chunkId}=${qChunk.dontSpecifyOnThisChunk}"`
-      );
-    });
+    function setPDSValuesA() {
+      questionSentenceFormula.sentenceStructure.forEach((qChunk) => {
+        qChunk.dontSpecifyOnThisChunk = true;
+
+        if (
+          gpUtils.stChIsNounPerson(qChunk) &&
+          questionSentenceFormula.sentenceStructure.find(
+            (potentialDepChunk) =>
+              gpUtils.getWordtypeStCh(potentialDepChunk) === "pronoun" &&
+              potentialDepChunk.agreeWith === qChunk.chunkId
+          )
+        ) {
+          qChunk.dontSpecifyOnThisChunk = false;
+        } else if (
+          qChunk.gender &&
+          qChunk.gender.length &&
+          !refObj.metaTraitValues[questionLanguage]["gender"][
+            refObj.nounGenderTraitValues[gpUtils.getWordtypeCodeStCh(qChunk)]
+          ].every((traitValue) => qChunk.gender.includes(traitValue))
+        ) {
+          qChunk.dontSpecifyOnThisChunk = false;
+        }
+
+        consol.log(
+          `PDSyellow qChunk.dontSpecifyOnThisChunk for "${qChunk.chunkId}=${qChunk.dontSpecifyOnThisChunk}"`
+        );
+      });
+    }
+
+    function setPDSValuesB() {
+      questionSentenceFormula.sentenceStructure.forEach((qChunk) => {
+        if (!gpUtils.stChIsNounPerson(qChunk)) {
+          qChunk.dontSpecifyOnThisChunk = true;
+        } else {
+          if (
+            questionSentenceFormula.sentenceStructure.find(
+              (potentialDepChunk) =>
+                gpUtils.getWordtypeStCh(potentialDepChunk) === "pronoun" &&
+                potentialDepChunk.agreeWith === qChunk.chunkId
+            )
+          ) {
+            if (
+              qChunk.gender &&
+              qChunk.gender.length &&
+              refObj.metaTraitValues[questionLanguage]["gender"][
+                refObj.nounGenderTraitValues[
+                  gpUtils.getWordtypeCodeStCh(qChunk)
+                ]
+              ].every((traitValue) => qChunk.gender.includes(traitValue))
+            ) {
+              qChunk.dontSpecifyOnThisChunk = true;
+            } else {
+              qChunk.dontSpecifyOnThisChunk = false;
+            }
+          } else {
+            if (
+              qChunk.gender &&
+              qChunk.gender.length &&
+              !refObj.metaTraitValues[questionLanguage]["gender"][
+                refObj.nounGenderTraitValues[
+                  gpUtils.getWordtypeCodeStCh(qChunk)
+                ]
+              ].every((traitValue) => qChunk.gender.includes(traitValue))
+            ) {
+              qChunk.dontSpecifyOnThisChunk = false;
+            } else {
+              qChunk.dontSpecifyOnThisChunk = true;
+            }
+          }
+        }
+
+        consol.log(
+          `PDSyellow qChunk.dontSpecifyOnThisChunk for "${qChunk.chunkId}=${qChunk.dontSpecifyOnThisChunk}"`
+        );
+      });
+    }
   }
 
   consol.log(
@@ -122,7 +170,7 @@ exports.fetchPalette = (req) => {
           "[0m"
       );
 
-      if (arrayOfCounterfactualResultsForThisAnnotation) {
+      if (allCounterfactualResults) {
         return;
       } else {
         let nullQuestionResponseObj = scUtils.giveFinalSentences(
@@ -169,7 +217,7 @@ exports.fetchPalette = (req) => {
   );
 
   ///////////////////////////////////////////////kp Decisive Decant Check
-  pvUtils.checkDecisiveDecant(questionSentenceData);
+  pvUtils.checkDecisiveDecant(questionSentenceData, questionLanguage);
 
   if (true && "console") {
     consol.log(
@@ -190,7 +238,7 @@ exports.fetchPalette = (req) => {
     consol.consoleLogAestheticBorder(4);
   }
 
-  consol.logSpecial1("\n~ ~ ~ ~ MIDPOINT\n");
+  consol.log("\n~ ~ ~ ~ MIDPOINT\n");
 
   if (devSaysThrowAtMidpoint) {
     consol.throw("Midpoint cease.");
@@ -295,7 +343,7 @@ exports.fetchPalette = (req) => {
     }
 
     translations.forEach((translationSentenceFormulaId, index) => {
-      let { sentenceFormula, words } = scUtils.getMaterials(
+      let { sentenceFormula, words } = scUtils.getMaterialsCopies(
         answerLanguage,
         translationSentenceFormulaId,
         questionSentenceData.sentenceFormulaSymbol,
@@ -418,16 +466,14 @@ exports.fetchPalette = (req) => {
     scUtils.removeDuplicatesFromResponseObject(answerResponseObj);
   }
 
-  if (arrayOfCounterfactualResultsForThisAnnotation) {
-    arrayOfCounterfactualResultsForThisAnnotation.push({
-      counterfactualTrait,
+  if (allCounterfactualResults) {
+    allCounterfactualResults.push({
+      counterfactualSitSchematic,
       questionSentenceData,
       answerSentenceData,
     });
     return;
   }
-
-  /////////////I believe somewhere b: here and...
 
   let answerSelectedWordsSetsHaveChanged = { bool: false };
   let runsRecord = [];
@@ -437,6 +483,8 @@ exports.fetchPalette = (req) => {
     questionSentenceData.questionOutputArr.map((unit) => unit.structureChunk)
   );
 
+  //giveFinalSentences in question mode, will evaluate annotations, involving counterfaxing,
+  //ie a nested set of calls to this fetchPalette fxn.
   questionResponseObj = scUtils.giveFinalSentences(
     questionSentenceData,
     false,
@@ -446,12 +494,10 @@ exports.fetchPalette = (req) => {
     questionSentenceFormula,
     req.body,
     answerSelectedWordsSetsHaveChanged,
-    runsRecord,
-    originalQuestionSentenceFormula
+    runsRecord
   );
 
-  //...here, we re-enter processSentenceFormula.
-
+  //And now if any changes from counterfaxing down annotations, they will be integrated here.
   if (answerSelectedWordsSetsHaveChanged.bool) {
     if (!answerResponseObj) {
       answerResponseObj = scUtils.giveFinalSentences(

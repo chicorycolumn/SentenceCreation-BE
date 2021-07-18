@@ -28,7 +28,9 @@ exports.getStructureChunkTraits = (currentLanguage) => {
   );
 };
 
-exports.removeIncompatibleTraits = (currentLanguage, structureChunk) => {
+exports.removeIncompatibleTraitValues = (currentLanguage, structureChunk) => {
+  let traitKeysChanged = [];
+
   //ACX3A: If npe or 1per then remove neuter from gender.
   if (
     gpUtils.stChIsNounPerson(structureChunk) ||
@@ -37,11 +39,14 @@ exports.removeIncompatibleTraits = (currentLanguage, structureChunk) => {
         .length)
   ) {
     consol.log(
-      "vevx removeIncompatibleTraits. Removing 'n' if present as is noun-person."
+      "vevx removeIncompatibleTraitValues. Removing 'n' if present as is noun-person."
     );
     structureChunk.gender = structureChunk.gender.filter(
       (traitValue) => traitValue !== "n"
     );
+    if (!traitKeysChanged.includes("gender")) {
+      traitKeysChanged.push("gender");
+    }
   }
 
   //ACX3B: If we're examining gender trait, check the number trait, and
@@ -87,13 +92,16 @@ exports.removeIncompatibleTraits = (currentLanguage, structureChunk) => {
               structureChunk[traitKey] = structureChunk[traitKey].filter(
                 (traitValue) => !compatibleTraitValues.includes(traitValue)
               );
+              if (!traitKeysChanged.includes(traitKey)) {
+                traitKeysChanged.push(traitKey);
+              }
             }
           });
         }
       }
     );
   });
-  return structureChunk;
+  return { structureChunk, traitKeysChanged };
 };
 
 exports.getTranslatedTenseDescription = (

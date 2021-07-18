@@ -265,6 +265,10 @@ exports.structureChunkTraits = {
       ultimatelyMultipleTraitValuesOkay: true,
       needsNoValidation: true,
     },
+    doNotUpdateSpecificLemmasAsIsJustOneMDN: {
+      expectedTypeOnStCh: "boolean",
+      needsNoValidation: true,
+    },
     counterfactuallyImportantTraitKeys: {
       expectedTypeOnStCh: "array",
       ultimatelyMultipleTraitValuesOkay: true,

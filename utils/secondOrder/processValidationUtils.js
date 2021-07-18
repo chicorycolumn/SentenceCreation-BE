@@ -6,7 +6,7 @@ const pvUtils = require("./processValidationUtils.js");
 const refObj = require("../reference/referenceObjects.js");
 const refFxn = require("../reference/referenceFunctions.js");
 
-exports.checkDecisiveDecant = (questionSentenceData) => {
+exports.checkDecisiveDecant = (questionSentenceData, questionLanguage) => {
   questionSentenceData.questionOutputArr.forEach((outputUnit, index) => {
     if (outputUnit.structureChunk.dontSpecifyOnThisChunk) {
       return;
