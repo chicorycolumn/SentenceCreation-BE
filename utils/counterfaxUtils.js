@@ -988,6 +988,15 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         (unit) => unit.structureChunk.chunkId === chunkId
       );
 
+      let specificCounterfactualResultsForThisOneAnnotationOnThisStCh =
+        findCFResultsWhenAllOtherThingsBeingEqual(
+          allCounterfactualResults,
+          originalSitSchematic,
+          chunkId,
+          annoTraitKey,
+          questionLanguage
+        );
+
       let {
         originalAnswerPseudoSentenceObjs,
         counterfactualAnswerPseudoSentenceObjs,
@@ -996,62 +1005,51 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         counterfactualTraitValuesForThisTraitKeyOnThisStCh,
         counterfactualAnswerOutputArrObjs,
       } = getPseudoSentencesFromAnnotationSpecificResults(
-        allCounterfactualResults,
-        originalSitSchematic,
+        specificCounterfactualResultsForThisOneAnnotationOnThisStCh,
         chunkId,
         annoTraitKey,
         questionLanguage
       );
 
-      function getPseudoSentencesFromAnnotationSpecificResults() {
-        let specificCounterfactualResultsForThisOneAnnotationOnThisStCh =
-          findCFResultsWhenAllOtherThingsBeingEqual(
-            allCounterfactualResults,
-            originalSitSchematic,
-            chunkId,
-            annoTraitKey,
-            questionLanguage
-          );
-
+      function getPseudoSentencesFromAnnotationSpecificResults(
+        cfResults,
+        chunkId,
+        annoTraitKey,
+        questionLanguage
+      ) {
         consol.logSpecial4(
-          "===========> specificCounterfactualResultsForThisOneAnnotationOnThisStCh",
-          specificCounterfactualResultsForThisOneAnnotationOnThisStCh.map(
-            (x) => x.counterfactualSitSchematic.cfLabel
-          )
+          "===========> cfResults",
+          cfResults.map((x) => x.counterfactualSitSchematic.cfLabel)
         );
 
-        let counterfactualTraitValuesForThisTraitKeyOnThisStCh =
-          specificCounterfactualResultsForThisOneAnnotationOnThisStCh.map(
-            (counterfactual) =>
-              counterfactual.counterfactualSitSchematic[chunkId].find(
-                (assig) => assig.traitKey === annoTraitKey
-              ).traitValue
-          );
+        let counterfactualTraitValuesForThisTraitKeyOnThisStCh = cfResults.map(
+          (counterfactual) =>
+            counterfactual.counterfactualSitSchematic[chunkId].find(
+              (assig) => assig.traitKey === annoTraitKey
+            ).traitValue
+        );
 
-        let counterfactualQuestionOutputArrObjs =
-          specificCounterfactualResultsForThisOneAnnotationOnThisStCh.map(
-            (counterfactual) => {
-              return {
-                arr: counterfactual.questionSentenceData.questionOutputArr,
-                cfLabel: counterfactual.counterfactualSitSchematic.cfLabel,
-              };
-            }
-          );
+        let counterfactualQuestionOutputArrObjs = cfResults.map(
+          (counterfactual) => {
+            return {
+              arr: counterfactual.questionSentenceData.questionOutputArr,
+              cfLabel: counterfactual.counterfactualSitSchematic.cfLabel,
+            };
+          }
+        );
 
         let counterfactualAnswerOutputArrObjs = [];
 
-        specificCounterfactualResultsForThisOneAnnotationOnThisStCh.forEach(
-          (counterfactual) => {
-            counterfactual.answerSentenceData.answerOutputArrays.forEach(
-              (answerOutputArray) => {
-                counterfactualAnswerOutputArrObjs.push({
-                  arr: answerOutputArray,
-                  cfLabel: counterfactual.counterfactualSitSchematic.cfLabel,
-                });
-              }
-            );
-          }
-        );
+        cfResults.forEach((counterfactual) => {
+          counterfactual.answerSentenceData.answerOutputArrays.forEach(
+            (answerOutputArray) => {
+              counterfactualAnswerOutputArrObjs.push({
+                arr: answerOutputArray,
+                cfLabel: counterfactual.counterfactualSitSchematic.cfLabel,
+              });
+            }
+          );
+        });
 
         let originalAnswerPseudoSentenceObjs = makePseudoSentenceObjs(
           originalAnswerOutputArrObjs,
@@ -1207,47 +1205,31 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         //And the same for "I saw." --> ["Zobaczyłem.", "Zobaczyłam."]
         //
 
-        if (questionOutputUnit.structureChunk.dontSpecifyOnThisChunk) {
-          // const agglomerateAnswers = (
-          //   questionOutputUnit,
-          //   annoTraitKey,
-          //   counterfactualTraitValuesUNDEFINED,
-          //   answerSelectedWordsSetsHaveChanged,
-          //   answerSentenceData,
-          //   counterfactualAnswerOutputArrays,
-          // ) => {};
+        cfUtils.agglomerateAndRemoveAnnosIfSameResults(
+          questionOutputUnit,
+          counterfactualTraitValuesForThisTraitKeyOnThisStCh,
+          answerSelectedWordsSetsHaveChanged,
+          annoTraitKey,
+          answerSentenceData,
+          counterfactualAnswerOutputArrObjs,
+          originalAnnoTraitValue
+        );
 
-          let combinedTraitValues = [
-            ...questionOutputUnit.structureChunk[annoTraitKey],
-            ...counterfactualTraitValuesForThisTraitKeyOnThisStCh,
-          ];
-
-          answerSelectedWordsSetsHaveChanged.bool = true;
-
-          answerSentenceData.answerOutputArrays = [
-            ...answerSentenceData.answerOutputArrays,
-            ...counterfactualAnswerOutputArrObjs.map((obj) => obj.arr),
-          ];
-
-          consol.logSpecial2(
-            `PDS-Diamond. Agglomerating the answer output arrays and deleting originalAnnoTraitValue "${originalAnnoTraitValue}", and questionOutputUnit.structureChunk[${annoTraitKey}] is now [${combinedTraitValues}]`
-          );
-
-          delete questionOutputUnit.structureChunk.annotations[annoTraitKey];
-          questionOutputUnit.structureChunk[annoTraitKey] = combinedTraitValues;
-
-          if (
-            !questionOutputUnit.structureChunk
-              .counterfactuallyImportantTraitKeys
-          ) {
-            questionOutputUnit.structureChunk.counterfactuallyImportantTraitKeys =
-              [annoTraitKey];
-          } else {
-            questionOutputUnit.structureChunk.counterfactuallyImportantTraitKeys.push(
-              annoTraitKey
-            );
-          }
-        }
+        // if (
+        //   !gpUtils.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
+        //     originalAnswerPseudoSentenceObjs.map((obj) => obj.pseudoSentence),
+        //     counterfactualAnswerPseudoSentenceObjs.map(
+        //       (obj) => obj.pseudoSentence
+        //     )
+        //   ) &&
+        //   !!gpUtils.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
+        //     originalQuestionPseudoSentenceObjs.map((obj) => obj.pseudoSentence),
+        //     counterfactualQuestionPseudoSentenceObjs.map(
+        //       (obj) => obj.pseudoSentence
+        //     )
+        //   )
+        // ) {
+        // }
       }
     }
   );
@@ -1257,6 +1239,56 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   //   questionOutputUnit.structureChunk.chunkId,
   //   annoTraitKey
   // );
+};
+
+exports.agglomerateAndRemoveAnnosIfSameResults = (
+  questionOutputUnit,
+  counterfactualTraitValuesForThisTraitKeyOnThisStCh,
+  answerSelectedWordsSetsHaveChanged,
+  annoTraitKey,
+  answerSentenceData,
+  counterfactualAnswerOutputArrObjs,
+  originalAnnoTraitValue
+) => {
+  if (questionOutputUnit.structureChunk.dontSpecifyOnThisChunk) {
+    // const agglomerateAnswers = (
+    //   questionOutputUnit,
+    //   annoTraitKey,
+    //   counterfactualTraitValuesUNDEFINED,
+    //   answerSelectedWordsSetsHaveChanged,
+    //   answerSentenceData,
+    //   counterfactualAnswerOutputArrays,
+    // ) => {};
+
+    let combinedTraitValues = [
+      ...questionOutputUnit.structureChunk[annoTraitKey],
+      ...counterfactualTraitValuesForThisTraitKeyOnThisStCh,
+    ];
+
+    answerSelectedWordsSetsHaveChanged.bool = true;
+
+    answerSentenceData.answerOutputArrays = [
+      ...answerSentenceData.answerOutputArrays,
+      ...counterfactualAnswerOutputArrObjs.map((obj) => obj.arr),
+    ];
+
+    consol.logSpecial2(
+      `PDS-Diamond. Agglomerating the answer output arrays and deleting originalAnnoTraitValue "${originalAnnoTraitValue}", and questionOutputUnit.structureChunk[${annoTraitKey}] is now [${combinedTraitValues}]`
+    );
+
+    delete questionOutputUnit.structureChunk.annotations[annoTraitKey];
+    questionOutputUnit.structureChunk[annoTraitKey] = combinedTraitValues;
+
+    if (!questionOutputUnit.structureChunk.counterfactuallyImportantTraitKeys) {
+      questionOutputUnit.structureChunk.counterfactuallyImportantTraitKeys = [
+        annoTraitKey,
+      ];
+    } else {
+      questionOutputUnit.structureChunk.counterfactuallyImportantTraitKeys.push(
+        annoTraitKey
+      );
+    }
+  }
 };
 
 exports.removeAnnotationsIfHeadChunkHasBeenCounterfaxed = (
