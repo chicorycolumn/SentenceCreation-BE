@@ -980,6 +980,200 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
     annotationsToCounterfaxAndTheirChunkIds
   );
 
+  //Nownow
+  //So here, if all chunks are PDS true, and if coppice condition doesn't hold,
+  //then do PDS Diamond using allCounterfax results.
+  //Then skip the following stage of Coppice-Inosculate-Agglomerate that goes anno by anno.
+
+  if (
+    questionOutputArr.every(
+      (unit) => unit.structureChunk.dontSpecifyOnThisChunk
+    )
+  ) {
+    if (
+      agglomerateUsingAllCounterfaxResults(
+        allCounterfactualResults,
+        annotationsToCounterfaxAndTheirChunkIds,
+        questionLanguage
+      )
+    ) {
+      //This entire QA has been globally agglomerated, ie all annotations removed and all answer arrays added.
+      //So no need to coppice or agglomerate any of them, so return here.
+      return;
+    }
+
+    function agglomerateUsingAllCounterfaxResults(
+      allCounterfactualResults,
+      annotationsToCounterfaxAndTheirChunkIds,
+      annoTraitKey,
+      questionLanguage
+    ) {
+      //Only perform this agglomeration if for all anno+chunkIds, the condition where if true you would coppice,
+      //is false for all. Ie if question sentences are different for any anno+chunkId, we cannot do this global agglomeration.
+      let coppiceConditionBooleans = [];
+
+      annotationsToCounterfaxAndTheirChunkIds.forEach(
+        (annoDataObj, annoDataObjIndex) => {
+          // if (coppiceConditionBooleans.includes(true)) {
+          //   return;
+          // }
+
+          let { chunkId, annoTraitKey, originalAnnoTraitValue } = annoDataObj;
+
+          let questionOutputUnit = questionOutputArr.find(
+            (unit) => unit.structureChunk.chunkId === chunkId
+          );
+
+          let {
+            originalAnswerPseudoSentenceObjs,
+            counterfactualAnswerPseudoSentenceObjs,
+            originalQuestionPseudoSentenceObjs,
+            counterfactualQuestionPseudoSentenceObjs,
+            counterfactualTraitValuesForThisTraitKeyOnThisStCh,
+            counterfactualAnswerOutputArrObjs,
+          } = getPseudoSentencesFromAnnotationSpecificResults(
+            allCounterfactualResults,
+            chunkId,
+            annoTraitKey,
+            questionLanguage
+          );
+
+          // annoDataObj.originalAnswerPseudoSentenceObjs = originalAnswerPseudoSentenceObjs
+          // annoDataObj.counterfactualAnswerPseudoSentenceObjs = counterfactualAnswerPseudoSentenceObjs
+          annoDataObj.originalQuestionPseudoSentenceObjs =
+            originalQuestionPseudoSentenceObjs;
+          annoDataObj.counterfactualQuestionPseudoSentenceObjs =
+            counterfactualQuestionPseudoSentenceObjs;
+          annoDataObj.counterfactualTraitValuesForThisTraitKeyOnThisStCh =
+            counterfactualTraitValuesForThisTraitKeyOnThisStCh;
+          annoDataObj.counterfactualAnswerOutputArrObjs =
+            counterfactualAnswerOutputArrObjs;
+          annoDataObj.questionOutputUnit = questionOutputUnit;
+
+          //The condition under which this should be coppiced, and thus not agglomerated.
+          let coppiceConditionBoolean =
+            !gpUtils.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
+              originalQuestionPseudoSentenceObjs.map(
+                (obj) => obj.pseudoSentence
+              ),
+              counterfactualQuestionPseudoSentenceObjs.map(
+                (obj) => obj.pseudoSentence
+              )
+            );
+
+          coppiceConditionBooleans.push(coppiceConditionBoolean);
+        }
+      );
+
+      consol.logSpecial5({ annotationsToCounterfaxAndTheirChunkIds });
+      consol.logSpecial5({ coppiceConditionBooleans });
+
+      if (
+        coppiceConditionBooleans.length ===
+          annotationsToCounterfaxAndTheirChunkIds.length &&
+        !coppiceConditionBooleans.includes(true)
+      ) {
+        //Globally agglomerate if for all annos, they don't need to be coppiced instead.
+        annotationsToCounterfaxAndTheirChunkIds.forEach(
+          (annoDataObj, annoDataObjIndex) => {
+            let {
+              chunkId,
+              annoTraitKey,
+              originalAnnoTraitValue,
+              questionOutputUnit,
+              originalAnswerPseudoSentenceObjs,
+              counterfactualAnswerPseudoSentenceObjs,
+              originalQuestionPseudoSentenceObjs,
+              counterfactualQuestionPseudoSentenceObjs,
+              counterfactualTraitValuesForThisTraitKeyOnThisStCh,
+              counterfactualAnswerOutputArrObjs,
+            } = annoDataObj;
+
+            cfUtils.agglomerateAndRemoveAnnosIfSameResults(
+              questionOutputUnit,
+              counterfactualTraitValuesForThisTraitKeyOnThisStCh,
+              answerSelectedWordsSetsHaveChanged,
+              annoTraitKey,
+              answerSentenceData,
+              counterfactualAnswerOutputArrObjs,
+              originalAnnoTraitValue
+            );
+          }
+        );
+
+        return true;
+      }
+    }
+  }
+
+  function getPseudoSentencesFromAnnotationSpecificResults(
+    cfResults,
+    chunkId,
+    annoTraitKey,
+    questionLanguage,
+    questionDataOnly
+  ) {
+    consol.logSpecial4(
+      "===========> cfResults",
+      cfResults.map((x) => x.counterfactualSitSchematic.cfLabel)
+    );
+
+    let counterfactualTraitValuesForThisTraitKeyOnThisStCh = cfResults.map(
+      (counterfactual) =>
+        counterfactual.counterfactualSitSchematic[chunkId].find(
+          (assig) => assig.traitKey === annoTraitKey
+        ).traitValue
+    );
+
+    let counterfactualQuestionOutputArrObjs = cfResults.map(
+      (counterfactual) => {
+        return {
+          arr: counterfactual.questionSentenceData.questionOutputArr,
+          cfLabel: counterfactual.counterfactualSitSchematic.cfLabel,
+        };
+      }
+    );
+
+    let counterfactualAnswerOutputArrObjs = [];
+
+    cfResults.forEach((counterfactual) => {
+      counterfactual.answerSentenceData.answerOutputArrays.forEach(
+        (answerOutputArray) => {
+          counterfactualAnswerOutputArrObjs.push({
+            arr: answerOutputArray,
+            cfLabel: counterfactual.counterfactualSitSchematic.cfLabel,
+          });
+        }
+      );
+    });
+
+    let originalAnswerPseudoSentenceObjs = makePseudoSentenceObjs(
+      originalAnswerOutputArrObjs,
+      answerSentenceData.sentenceFormula.primaryOrders
+    );
+    let counterfactualAnswerPseudoSentenceObjs = makePseudoSentenceObjs(
+      counterfactualAnswerOutputArrObjs,
+      answerSentenceData.sentenceFormula.primaryOrders
+    );
+    let originalQuestionPseudoSentenceObjs = makePseudoSentenceObjs(
+      originalQuestionOutputArrObjs,
+      rawQuestionSentenceFormula.primaryOrders
+    );
+    let counterfactualQuestionPseudoSentenceObjs = makePseudoSentenceObjs(
+      counterfactualQuestionOutputArrObjs,
+      rawQuestionSentenceFormula.primaryOrders
+    );
+
+    return {
+      originalAnswerPseudoSentenceObjs,
+      counterfactualAnswerPseudoSentenceObjs,
+      originalQuestionPseudoSentenceObjs,
+      counterfactualQuestionPseudoSentenceObjs,
+      counterfactualTraitValuesForThisTraitKeyOnThisStCh,
+      counterfactualAnswerOutputArrObjs,
+    };
+  }
+
   annotationsToCounterfaxAndTheirChunkIds.forEach(
     (annoDataObj, annoDataObjIndex) => {
       let { chunkId, annoTraitKey, originalAnnoTraitValue } = annoDataObj;
@@ -1010,73 +1204,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         annoTraitKey,
         questionLanguage
       );
-
-      function getPseudoSentencesFromAnnotationSpecificResults(
-        cfResults,
-        chunkId,
-        annoTraitKey,
-        questionLanguage
-      ) {
-        consol.logSpecial4(
-          "===========> cfResults",
-          cfResults.map((x) => x.counterfactualSitSchematic.cfLabel)
-        );
-
-        let counterfactualTraitValuesForThisTraitKeyOnThisStCh = cfResults.map(
-          (counterfactual) =>
-            counterfactual.counterfactualSitSchematic[chunkId].find(
-              (assig) => assig.traitKey === annoTraitKey
-            ).traitValue
-        );
-
-        let counterfactualQuestionOutputArrObjs = cfResults.map(
-          (counterfactual) => {
-            return {
-              arr: counterfactual.questionSentenceData.questionOutputArr,
-              cfLabel: counterfactual.counterfactualSitSchematic.cfLabel,
-            };
-          }
-        );
-
-        let counterfactualAnswerOutputArrObjs = [];
-
-        cfResults.forEach((counterfactual) => {
-          counterfactual.answerSentenceData.answerOutputArrays.forEach(
-            (answerOutputArray) => {
-              counterfactualAnswerOutputArrObjs.push({
-                arr: answerOutputArray,
-                cfLabel: counterfactual.counterfactualSitSchematic.cfLabel,
-              });
-            }
-          );
-        });
-
-        let originalAnswerPseudoSentenceObjs = makePseudoSentenceObjs(
-          originalAnswerOutputArrObjs,
-          answerSentenceData.sentenceFormula.primaryOrders
-        );
-        let counterfactualAnswerPseudoSentenceObjs = makePseudoSentenceObjs(
-          counterfactualAnswerOutputArrObjs,
-          answerSentenceData.sentenceFormula.primaryOrders
-        );
-        let originalQuestionPseudoSentenceObjs = makePseudoSentenceObjs(
-          originalQuestionOutputArrObjs,
-          rawQuestionSentenceFormula.primaryOrders
-        );
-        let counterfactualQuestionPseudoSentenceObjs = makePseudoSentenceObjs(
-          counterfactualQuestionOutputArrObjs,
-          rawQuestionSentenceFormula.primaryOrders
-        );
-
-        return {
-          originalAnswerPseudoSentenceObjs,
-          counterfactualAnswerPseudoSentenceObjs,
-          originalQuestionPseudoSentenceObjs,
-          counterfactualQuestionPseudoSentenceObjs,
-          counterfactualTraitValuesForThisTraitKeyOnThisStCh,
-          counterfactualAnswerOutputArrObjs,
-        };
-      }
 
       //
       /** Okay, we're about to compare pseudosentences (ie the arrays of selectedWords).
@@ -1205,70 +1332,15 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         //And the same for "I saw." --> ["Zobaczyłem.", "Zobaczyłam."]
         //
 
-        // cfUtils.agglomerateAndRemoveAnnosIfSameResults(
-        //   questionOutputUnit,
-        //   counterfactualTraitValuesForThisTraitKeyOnThisStCh,
-        //   answerSelectedWordsSetsHaveChanged,
-        //   annoTraitKey,
-        //   answerSentenceData,
-        //   counterfactualAnswerOutputArrObjs,
-        //   originalAnnoTraitValue
-        // );
-
-        agglomerateUsingAllCounterfaxResults(
-          allCounterfactualResults,
-          chunkId,
+        cfUtils.agglomerateAndRemoveAnnosIfSameResults(
+          questionOutputUnit,
+          counterfactualTraitValuesForThisTraitKeyOnThisStCh,
+          answerSelectedWordsSetsHaveChanged,
           annoTraitKey,
-          questionLanguage
+          answerSentenceData,
+          counterfactualAnswerOutputArrObjs,
+          originalAnnoTraitValue
         );
-
-        function agglomerateUsingAllCounterfaxResults(
-          allCounterfactualResults,
-          chunkId,
-          annoTraitKey,
-          questionLanguage
-        ) {
-          let {
-            originalAnswerPseudoSentenceObjs,
-            counterfactualAnswerPseudoSentenceObjs,
-            originalQuestionPseudoSentenceObjs,
-            counterfactualQuestionPseudoSentenceObjs,
-            counterfactualTraitValuesForThisTraitKeyOnThisStCh,
-            counterfactualAnswerOutputArrObjs,
-          } = getPseudoSentencesFromAnnotationSpecificResults(
-            allCounterfactualResults,
-            chunkId,
-            annoTraitKey,
-            questionLanguage
-          );
-
-          if (
-            !gpUtils.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
-              originalAnswerPseudoSentenceObjs.map((obj) => obj.pseudoSentence),
-              counterfactualAnswerPseudoSentenceObjs.map(
-                (obj) => obj.pseudoSentence
-              )
-            ) &&
-            !!gpUtils.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
-              originalQuestionPseudoSentenceObjs.map(
-                (obj) => obj.pseudoSentence
-              ),
-              counterfactualQuestionPseudoSentenceObjs.map(
-                (obj) => obj.pseudoSentence
-              )
-            )
-          ) {
-            cfUtils.agglomerateAndRemoveAnnosIfSameResults(
-              questionOutputUnit,
-              counterfactualTraitValuesForThisTraitKeyOnThisStCh,
-              answerSelectedWordsSetsHaveChanged,
-              annoTraitKey,
-              answerSentenceData,
-              counterfactualAnswerOutputArrObjs,
-              originalAnnoTraitValue
-            );
-          }
-        }
       }
     }
   );
