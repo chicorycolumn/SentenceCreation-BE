@@ -606,8 +606,7 @@ exports.giveFinalSentences = (
   questionSentenceFormula,
   reqBody,
   answerSelectedWordsSetsHaveChanged,
-  runsRecord,
-  originalQuestionSentenceFormula
+  runsRecord
 ) => {
   let {
     answerOutputArrays,
@@ -663,8 +662,7 @@ exports.giveFinalSentences = (
         questionSentenceFormula,
         reqBody,
         answerSelectedWordsSetsHaveChanged,
-        runsRecord,
-        originalQuestionSentenceFormula
+        runsRecord
       );
     }
 

@@ -40,13 +40,8 @@ exports.fetchPalette = (req) => {
   let answerSentenceData;
 
   let questionResponseObj;
-  let questionSentenceFormula = counterfactualQuestionSentenceFormula
-    ? counterfactualQuestionSentenceFormula
-    : sentenceFormula; // Alpha use pipe.
-
-  let originalQuestionSentenceFormula = counterfactualQuestionSentenceFormula
-    ? null
-    : uUtils.copyWithoutReference(questionSentenceFormula);
+  let questionSentenceFormula =
+    counterfactualQuestionSentenceFormula || sentenceFormula;
 
   //Omega: Ultimately this needn't be done here, but rather, after creating a new sentenceFormula.
   //       Once it passes that, we know it's fine, so don't need to validate it every time down here.
@@ -499,8 +494,7 @@ exports.fetchPalette = (req) => {
     questionSentenceFormula,
     req.body,
     answerSelectedWordsSetsHaveChanged,
-    runsRecord,
-    originalQuestionSentenceFormula
+    runsRecord
   );
 
   //And now if any changes from counterfaxing down annotations, they will be integrated here.

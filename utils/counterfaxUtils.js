@@ -285,11 +285,10 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   annotationsToCounterfaxAndTheirChunkIds,
   languagesObj,
   answerSentenceData,
-  rawQuestionSentenceFormula, //Alpha not really raw. As this is the counterfaxed sentence formula when on a counterfax run.
+  counterfaxedSentenceFormula,
   reqBody,
   answerSelectedWordsSetsHaveChanged,
-  runsRecord,
-  originalQuestionSentenceFormula //On a counterfax run this is null. Remove this variable everywhere.
+  runsRecord
 ) => {
   if (!"console") {
     consol.logSpecial3("");
@@ -329,12 +328,12 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
   let allCounterfactualResults = [];
 
-  let updatedOriginalQuestionSentenceFormula = uUtils.copyWithoutReference(
-    rawQuestionSentenceFormula
+  let updatedCounterfaxedQuestionSentenceFormula = uUtils.copyWithoutReference(
+    counterfaxedSentenceFormula
   );
 
   gpUtils.updateSentenceStructureWithNewStructureChunksFromOutputUnits(
-    updatedOriginalQuestionSentenceFormula.sentenceStructure,
+    updatedCounterfaxedQuestionSentenceFormula.sentenceStructure,
     questionOutputArr
   );
 
@@ -360,7 +359,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       }
 
       let counterfactualQuestionSentenceFormula = uUtils.copyWithoutReference(
-        updatedOriginalQuestionSentenceFormula
+        updatedCounterfaxedQuestionSentenceFormula
       );
 
       //Now, inside this forEach chunk forEach assigment,
@@ -537,9 +536,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       //   consol.log("ioej");
       //   return;
       // }
-
-      //(IOTA). Do we want to send updated question formula for counterfax run,
-      //or originalQuestionSentenceFormula ?
     }
   );
 
@@ -867,11 +863,11 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
     );
     let originalQuestionPseudoSentenceObjs = makePseudoSentenceObjs(
       originalQuestionOutputArrObjs,
-      rawQuestionSentenceFormula.primaryOrders
+      counterfaxedSentenceFormula.primaryOrders
     );
     let counterfactualQuestionPseudoSentenceObjs = makePseudoSentenceObjs(
       counterfactualQuestionOutputArrObjs,
-      rawQuestionSentenceFormula.primaryOrders
+      counterfaxedSentenceFormula.primaryOrders
     );
 
     return {

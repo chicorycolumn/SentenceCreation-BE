@@ -17,8 +17,7 @@ exports.firstStageEvaluateAnnotations = (
   questionSentenceFormula,
   reqBody,
   answerSelectedWordsSetsHaveChanged,
-  runsRecord,
-  originalQuestionSentenceFormula
+  runsRecord
 ) => {
   consol.log(questionOutputArr.map((unit) => unit.structureChunk));
 
@@ -66,8 +65,7 @@ exports.firstStageEvaluateAnnotations = (
       questionSentenceFormula,
       reqBody,
       answerSelectedWordsSetsHaveChanged,
-      runsRecord,
-      originalQuestionSentenceFormula
+      runsRecord
     );
   }
 
