@@ -1215,30 +1215,63 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           originalAnnoTraitValue
         );
 
-        // if (
-        //   !gpUtils.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
-        //     originalAnswerPseudoSentenceObjs.map((obj) => obj.pseudoSentence),
-        //     counterfactualAnswerPseudoSentenceObjs.map(
-        //       (obj) => obj.pseudoSentence
-        //     )
-        //   ) &&
-        //   !!gpUtils.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
-        //     originalQuestionPseudoSentenceObjs.map((obj) => obj.pseudoSentence),
-        //     counterfactualQuestionPseudoSentenceObjs.map(
-        //       (obj) => obj.pseudoSentence
-        //     )
-        //   )
-        // ) {
-        // }
+        agglomerateUsingAllCounterfaxResults(
+          allCounterfactualResults,
+          chunkId,
+          annoTraitKey,
+          questionLanguage
+        );
+
+        function agglomerateUsingAllCounterfaxResults(
+          allCounterfactualResults,
+          chunkId,
+          annoTraitKey,
+          questionLanguage
+        ) {
+          let {
+            originalAnswerPseudoSentenceObjs,
+            counterfactualAnswerPseudoSentenceObjs,
+            originalQuestionPseudoSentenceObjs,
+            counterfactualQuestionPseudoSentenceObjs,
+            counterfactualTraitValuesForThisTraitKeyOnThisStCh,
+            counterfactualAnswerOutputArrObjs,
+          } = getPseudoSentencesFromAnnotationSpecificResults(
+            allCounterfactualResults,
+            chunkId,
+            annoTraitKey,
+            questionLanguage
+          );
+
+          if (
+            !gpUtils.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
+              originalAnswerPseudoSentenceObjs.map((obj) => obj.pseudoSentence),
+              counterfactualAnswerPseudoSentenceObjs.map(
+                (obj) => obj.pseudoSentence
+              )
+            ) &&
+            !!gpUtils.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
+              originalQuestionPseudoSentenceObjs.map(
+                (obj) => obj.pseudoSentence
+              ),
+              counterfactualQuestionPseudoSentenceObjs.map(
+                (obj) => obj.pseudoSentence
+              )
+            )
+          ) {
+            cfUtils.agglomerateAndRemoveAnnosIfSameResults(
+              questionOutputUnit,
+              counterfactualTraitValuesForThisTraitKeyOnThisStCh,
+              answerSelectedWordsSetsHaveChanged,
+              annoTraitKey,
+              answerSentenceData,
+              counterfactualAnswerOutputArrObjs,
+              originalAnnoTraitValue
+            );
+          }
+        }
       }
     }
   );
-
-  // uUtils.addToArrayAtKey(
-  //   questionOutputUnitsThatHaveBeenCounterfaxedInThisSit,
-  //   questionOutputUnit.structureChunk.chunkId,
-  //   annoTraitKey
-  // );
 };
 
 exports.agglomerateAndRemoveAnnosIfSameResults = (
@@ -1251,15 +1284,6 @@ exports.agglomerateAndRemoveAnnosIfSameResults = (
   originalAnnoTraitValue
 ) => {
   if (questionOutputUnit.structureChunk.dontSpecifyOnThisChunk) {
-    // const agglomerateAnswers = (
-    //   questionOutputUnit,
-    //   annoTraitKey,
-    //   counterfactualTraitValuesUNDEFINED,
-    //   answerSelectedWordsSetsHaveChanged,
-    //   answerSentenceData,
-    //   counterfactualAnswerOutputArrays,
-    // ) => {};
-
     let combinedTraitValues = [
       ...questionOutputUnit.structureChunk[annoTraitKey],
       ...counterfactualTraitValuesForThisTraitKeyOnThisStCh,

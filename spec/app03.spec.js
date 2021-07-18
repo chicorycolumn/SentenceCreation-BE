@@ -625,7 +625,6 @@ describe("/api", function () {
         });
     });
     it("#pal18-06b GET 200 YES: Engpol. 'We saw them.' PDS. *Step-Iota re PDS Diamond*", () => {
-      // it("#pal18-06b GET 200 YES: Engpol. 'We saw them.' PDS. *Step-Iota re PDS Diamond*", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
       return request(app)
@@ -640,7 +639,6 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
-          console.log(res.body);
           let ref = [
             {
               ENG: "We saw them.",
