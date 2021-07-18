@@ -755,7 +755,7 @@ describe("/api", function () {
           );
         });
     });
-    it.only("#pal18-07a GET 200 YES: Engpol. 'A doctor saw me.'", () => {
+    it("#pal18-07a GET 200 YES: Engpol. 'A doctor saw me.'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -777,6 +777,14 @@ describe("/api", function () {
               ENG: "The doctor (female) saw me.",
               POL: ["Lekarka mnie zobaczyła."],
             },
+            {
+              ENG: "A doctor (male) saw me.",
+              POL: ["Lekarz mnie zobaczył."],
+            },
+            {
+              ENG: "The doctor (male) saw me.",
+              POL: ["Lekarz mnie zobaczył."],
+            },
           ];
           testingUtils.checkTranslationsOfGivenRef(
             res,
@@ -786,7 +794,7 @@ describe("/api", function () {
           );
         });
     });
-    it.only("#pal18-07b GET 200 YES: Poleng. 'A doctor saw me.'", () => {
+    it("#pal18-07b GET 200 YES: Poleng. 'A doctor saw me.'", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -810,6 +818,17 @@ describe("/api", function () {
                 "A doctor has seen me.",
               ],
               POL: "Lekarka mnie zobaczyła.",
+            },
+            {
+              ENG: [
+                "The doctor saw me.",
+                "The doctor had seen me.",
+                "The doctor has seen me.",
+                "A doctor saw me.",
+                "A doctor had seen me.",
+                "A doctor has seen me.",
+              ],
+              POL: "Lekarz mnie zobaczył.",
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(

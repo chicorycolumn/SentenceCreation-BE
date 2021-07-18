@@ -1260,7 +1260,6 @@ exports.sentenceFormulasBank = [
         chunkId: "npe-1-doctor",
         specificLemmas: ["doctor"],
         number: ["singular"],
-        gender: ["f"],
       },
       {
         chunkId: "ver-1-see",
