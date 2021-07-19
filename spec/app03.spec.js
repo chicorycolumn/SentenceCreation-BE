@@ -24,6 +24,187 @@ describe("/api", function () {
     "ENG"
   );
 
+  describe("/palette - Stage 18a.", () => {
+    it.only("#pal18-08a GET 200 YES: Engpol. 'I read* a book.'", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "121 I read* a book",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "I (male) read (past) a book.",
+              POL: ["Przeczytałem książkę."],
+            },
+            {
+              ENG: "I read (present) a book.",
+              POL: ["Czytam książkę."],
+            },
+            {
+              ENG: "I (male) will read a book.",
+              POL: [
+                "Przeczytam książkę.",
+                "Będę czytał książkę.",
+                "Będę czytać książkę.",
+              ],
+            },
+            {
+              ENG: "I (female) read (past) a book.",
+              POL: ["Przeczytałam książkę."],
+            },
+            {
+              ENG: "I read (present) a book.",
+              POL: ["Czytam książkę."],
+            },
+            {
+              ENG: "I (female) will read a book.",
+              POL: [
+                "Przeczytam książkę.",
+                "Będę czytała książkę.",
+                "Będę czytać książkę.",
+              ],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    xit("#pal18-08b GET 200 YES: Engpol. 'I read* a book. PDS'", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "121",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "A doctor saw me.",
+              POL: ["Lekarka mnie zobaczyła.", "Lekarz mnie zobaczył."],
+            },
+            {
+              ENG: "The doctor saw me.",
+              POL: ["Lekarka mnie zobaczyła.", "Lekarz mnie zobaczył."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    xit("#pal18-08c GET 200 YES: Poleng. 'I read* a book.'", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "121",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: [
+                "The doctor saw me.",
+                "The doctor had seen me.",
+                "The doctor has seen me.",
+                "A doctor saw me.",
+                "A doctor had seen me.",
+                "A doctor has seen me.",
+              ],
+              POL: "Lekarka mnie zobaczyła.",
+            },
+            {
+              ENG: [
+                "The doctor saw me.",
+                "The doctor had seen me.",
+                "The doctor has seen me.",
+                "A doctor saw me.",
+                "A doctor had seen me.",
+                "A doctor has seen me.",
+              ],
+              POL: "Lekarz mnie zobaczył.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    xit("#pal18-08d GET 200 YES: Poleng. 'I read* a book.' PDS", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "121",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: [
+                "The doctor saw me.",
+                "The doctor had seen me.",
+                "The doctor has seen me.",
+                "A doctor saw me.",
+                "A doctor had seen me.",
+                "A doctor has seen me.",
+              ],
+              POL: "Lekarka mnie zobaczyła.",
+            },
+            {
+              ENG: [
+                "The doctor saw me.",
+                "The doctor had seen me.",
+                "The doctor has seen me.",
+                "A doctor saw me.",
+                "A doctor had seen me.",
+                "A doctor has seen me.",
+              ],
+              POL: "Lekarz mnie zobaczył.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+  });
+
   describe("/palette - Stage 18: Further annotations.", () => {
     it("#pal18-01a GET 200 YES: Engpol. 'she reads' tenseDesc anno should be removed by conditionsOnWhichToBlockAnnotations.", () => {
       //Originally failed as removeAnnotationsByCounterfax lets tenseDesc annos through, would be too many alternate values to check.
@@ -791,13 +972,91 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal18-07b GET 200 YES: Poleng. 'A doctor saw me.'", () => {
+    it("#pal18-07b GET 200 YES: Engpol. 'A doctor saw me. PDS'", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "120 Doctor saw me",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "A doctor saw me.",
+              POL: ["Lekarka mnie zobaczyła.", "Lekarz mnie zobaczył."],
+            },
+            {
+              ENG: "The doctor saw me.",
+              POL: ["Lekarka mnie zobaczyła.", "Lekarz mnie zobaczył."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal18-07c GET 200 YES: Poleng. 'A doctor saw me.'", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
       return request(app)
         .get("/api/palette")
         .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "120 Doctor saw me",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: [
+                "The doctor saw me.",
+                "The doctor had seen me.",
+                "The doctor has seen me.",
+                "A doctor saw me.",
+                "A doctor had seen me.",
+                "A doctor has seen me.",
+              ],
+              POL: "Lekarka mnie zobaczyła.",
+            },
+            {
+              ENG: [
+                "The doctor saw me.",
+                "The doctor had seen me.",
+                "The doctor has seen me.",
+                "A doctor saw me.",
+                "A doctor had seen me.",
+                "A doctor has seen me.",
+              ],
+              POL: "Lekarz mnie zobaczył.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal18-07d GET 200 YES: Poleng. 'A doctor saw me.' PDS", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "120 Doctor saw me",
