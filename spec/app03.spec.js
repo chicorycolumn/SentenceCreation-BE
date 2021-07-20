@@ -24,8 +24,8 @@ describe("/api", function () {
     "ENG"
   );
 
-  describe("/palette - Stage 18a.", () => {
-    it.only("#pal18-08a GET 200 YES: Engpol. 'I read* a book.'", () => {
+  describe.only("/palette - Stage 18a.", () => {
+    it("#pal18-08a GET 200 YES: Engpol. 'I read* a book.'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -40,37 +40,44 @@ describe("/api", function () {
         .then((res) => {
           let ref = [
             {
-              ENG: "I (male) read (past) a book.",
-              POL: ["Przeczytałem książkę."],
-            },
-            {
               ENG: "I read (present) a book.",
               POL: ["Czytam książkę."],
             },
             {
-              ENG: "I (male) will read a book.",
-              POL: [
-                "Przeczytam książkę.",
-                "Będę czytał książkę.",
-                "Będę czytać książkę.",
-              ],
+              ENG: "I am reading a book.",
+              POL: ["Czytam książkę."],
             },
+            {
+              ENG: "I will read a book.",
+              POL: ["Przeczytam książkę."],
+            },
+            //
+            {
+              ENG: "I (male) read (past) a book.",
+              POL: ["Przeczytałem książkę."],
+            },
+            {
+              ENG: "I (male) will be reading a book.",
+              POL: ["Będę czytał książkę.", "Będę czytać książkę."],
+            },
+            {
+              ENG: "I (male) was reading a book.",
+              POL: ["Czytałem książkę."],
+            },
+            //
             {
               ENG: "I (female) read (past) a book.",
               POL: ["Przeczytałam książkę."],
             },
             {
-              ENG: "I read (present) a book.",
-              POL: ["Czytam książkę."],
+              ENG: "I (female) will be reading a book.",
+              POL: ["Będę czytała książkę.", "Będę czytać książkę."],
             },
             {
-              ENG: "I (female) will read a book.",
-              POL: [
-                "Przeczytam książkę.",
-                "Będę czytała książkę.",
-                "Będę czytać książkę.",
-              ],
+              ENG: "I (female) was reading a book.",
+              POL: ["Czytałam książkę."],
             },
+            //
           ];
           testingUtils.checkTranslationsOfGivenRef(
             res,
@@ -80,7 +87,7 @@ describe("/api", function () {
           );
         });
     });
-    xit("#pal18-08b GET 200 YES: Engpol. 'I read* a book. PDS'", () => {
+    it("#pal18-08b GET 200 YES: Engpol. 'I read* a book.' PDS", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -90,18 +97,39 @@ describe("/api", function () {
           pleaseDontSpecify: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "121",
+          sentenceFormulaSymbol: "121 I read* a book",
         })
         .expect(200)
         .then((res) => {
           let ref = [
             {
-              ENG: "A doctor saw me.",
-              POL: ["Lekarka mnie zobaczyła.", "Lekarz mnie zobaczył."],
+              ENG: "I read (present) a book.",
+              POL: ["Czytam książkę."],
             },
             {
-              ENG: "The doctor saw me.",
-              POL: ["Lekarka mnie zobaczyła.", "Lekarz mnie zobaczył."],
+              ENG: "I am reading a book.",
+              POL: ["Czytam książkę."],
+            },
+            {
+              ENG: "I will read a book.",
+              POL: ["Przeczytam książkę."],
+            },
+            //
+            {
+              ENG: "I read (past) a book.",
+              POL: ["Przeczytałem książkę.", "Przeczytałam książkę."],
+            },
+            {
+              ENG: "I will be reading a book.",
+              POL: [
+                "Będę czytał książkę.",
+                "Będę czytała książkę.",
+                "Będę czytać książkę.",
+              ],
+            },
+            {
+              ENG: "I was reading a book.",
+              POL: ["Czytałem książkę.", "Czytałam książkę."],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -112,7 +140,7 @@ describe("/api", function () {
           );
         });
     });
-    xit("#pal18-08c GET 200 YES: Poleng. 'I read* a book.'", () => {
+    it("#pal18-08c GET 200 YES: Poleng. 'I read* a book.'", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -121,32 +149,69 @@ describe("/api", function () {
         .send({
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "121",
+          sentenceFormulaSymbol: "121 I read* a book",
         })
         .expect(200)
         .then((res) => {
+          console.log(res.body);
           let ref = [
             {
-              ENG: [
-                "The doctor saw me.",
-                "The doctor had seen me.",
-                "The doctor has seen me.",
-                "A doctor saw me.",
-                "A doctor had seen me.",
-                "A doctor has seen me.",
-              ],
-              POL: "Lekarka mnie zobaczyła.",
+              ENG: ["I read a book.", "I am reading a book."],
+              POL: "Czytam książkę.",
             },
             {
               ENG: [
-                "The doctor saw me.",
-                "The doctor had seen me.",
-                "The doctor has seen me.",
-                "A doctor saw me.",
-                "A doctor had seen me.",
-                "A doctor has seen me.",
+                "I will read a book.",
+                "I am going to read a book.",
+                "I will have read a book.",
               ],
-              POL: "Lekarz mnie zobaczył.",
+              POL: "Przeczytam książkę.",
+            },
+            //
+            {
+              ENG: [
+                "I read a book.",
+                "I have read a book.",
+                "I had read a book.",
+              ],
+              POL: "Przeczytałem książkę.",
+            },
+            {
+              ENG: [
+                "I read a book.",
+                "I have read a book.",
+                "I had read a book.",
+              ],
+              POL: "Przeczytałam książkę.",
+            },
+            {
+              ENG: [
+                "I will be reading a book.",
+                "I am going to be reading a book.",
+              ],
+              POL: "Będę czytał książkę.",
+            },
+            {
+              ENG: [
+                "I will be reading a book.",
+                "I am going to be reading a book.",
+              ],
+              POL: "Będę czytała książkę.",
+            },
+            {
+              ENG: [
+                "I will be reading a book.",
+                "I am going to be reading a book.",
+              ],
+              POL: "Będę czytać książkę.",
+            },
+            {
+              ENG: ["I was reading a book.", "I have read a book."],
+              POL: "Czytałem książkę.",
+            },
+            {
+              ENG: ["I was reading a book.", "I have read a book."],
+              POL: "Czytałam książkę.",
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -157,7 +222,7 @@ describe("/api", function () {
           );
         });
     });
-    xit("#pal18-08d GET 200 YES: Poleng. 'I read* a book.' PDS", () => {
+    it("#pal18-08d GET 200 YES: Poleng. 'I read* a book.' PDS", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -167,32 +232,69 @@ describe("/api", function () {
           pleaseDontSpecify: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "121",
+          sentenceFormulaSymbol: "121 I read* a book",
         })
         .expect(200)
         .then((res) => {
+          console.log(res.body);
           let ref = [
             {
-              ENG: [
-                "The doctor saw me.",
-                "The doctor had seen me.",
-                "The doctor has seen me.",
-                "A doctor saw me.",
-                "A doctor had seen me.",
-                "A doctor has seen me.",
-              ],
-              POL: "Lekarka mnie zobaczyła.",
+              ENG: ["I read a book.", "I am reading a book."],
+              POL: "Czytam książkę.",
             },
             {
               ENG: [
-                "The doctor saw me.",
-                "The doctor had seen me.",
-                "The doctor has seen me.",
-                "A doctor saw me.",
-                "A doctor had seen me.",
-                "A doctor has seen me.",
+                "I will read a book.",
+                "I am going to read a book.",
+                "I will have read a book.",
               ],
-              POL: "Lekarz mnie zobaczył.",
+              POL: "Przeczytam książkę.",
+            },
+            //
+            {
+              ENG: [
+                "I read a book.",
+                "I have read a book.",
+                "I had read a book.",
+              ],
+              POL: "Przeczytałem książkę.",
+            },
+            {
+              ENG: [
+                "I read a book.",
+                "I have read a book.",
+                "I had read a book.",
+              ],
+              POL: "Przeczytałam książkę.",
+            },
+            {
+              ENG: [
+                "I will be reading a book.",
+                "I am going to be reading a book.",
+              ],
+              POL: "Będę czytał książkę.",
+            },
+            {
+              ENG: [
+                "I will be reading a book.",
+                "I am going to be reading a book.",
+              ],
+              POL: "Będę czytała książkę.",
+            },
+            {
+              ENG: [
+                "I will be reading a book.",
+                "I am going to be reading a book.",
+              ],
+              POL: "Będę czytać książkę.",
+            },
+            {
+              ENG: ["I was reading a book.", "I have read a book."],
+              POL: "Czytałem książkę.",
+            },
+            {
+              ENG: ["I was reading a book.", "I have read a book."],
+              POL: "Czytałam książkę.",
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(

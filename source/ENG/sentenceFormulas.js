@@ -1269,4 +1269,42 @@ exports.sentenceFormulasBank = [
     ],
     primaryOrders: [["art-1", "npe-1-doctor", "ver-1-see", "pro-1-me"]],
   },
+  {
+    sentenceFormulaSymbol: "121 I read* a book",
+    sentenceFormulaId: "ENG-121",
+    translations: { POL: ["POL-121"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificLemmas: ["PERSONAL"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-read",
+        specificLemmas: ["read"],
+        agreeWith: "pro-1-I",
+        tenseDescription: [
+          "past simple",
+          "past continuous",
+          "present simple",
+          "present continuous",
+          "future simple",
+          "future continuous",
+        ],
+      },
+      {
+        chunkId: "art-1",
+        form: ["indefinite"],
+        agreeWith: "nco-1-book",
+      },
+      {
+        chunkId: "nco-1-book",
+        specificLemmas: ["book"],
+        number: ["singular"],
+        gcase: ["acc"],
+      },
+    ],
+    primaryOrders: [["pro-1-I", "ver-1-read", "art-1", "nco-1-book"]],
+  },
 ];

@@ -5,8 +5,8 @@ const ivUtils = require("./inputValidationUtils.js");
 const refObj = require("../reference/referenceObjects.js");
 const refFxn = require("../reference/referenceFunctions.js");
 
-exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
-  let stChTraits = refFxn.getStructureChunkTraits(currentLanguage);
+exports.validateSentenceFormula = (sentenceFormula, lang) => {
+  let stChTraits = refFxn.getStructureChunkTraits(lang);
 
   let allChunkIds = sentenceFormula.sentenceStructure.map(
     (stCh) => stCh.chunkId
@@ -17,7 +17,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
 
     if (!gpUtils.getWordtypeStCh(structureChunk)) {
       consol.throw(
-        `#ERR esxo validateSentenceFormula. stCh "${chunkId}" has falsy wordtype.`
+        `#ERR esxo "${lang}" validateSentenceFormula. stCh "${chunkId}" has falsy wordtype.`
       );
     }
 
@@ -25,7 +25,7 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
       let traitValue = structureChunk[traitKey];
 
       let reference =
-        refObj.structureChunkTraits[currentLanguage][traitKey] ||
+        refObj.structureChunkTraits[lang][traitKey] ||
         refObj.structureChunkTraits["ALL"][traitKey];
 
       if (
@@ -40,11 +40,11 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
 
       if (!allTraitKeys.includes(traitKey)) {
         consol.log(
-          "fneu validateSentenceFormula structureChunk",
+          `fneu "${lang}" validateSentenceFormula structureChunk`,
           structureChunk
         );
         consol.throw(
-          `#ERR fneu validateSentenceFormula. stCh "${chunkId}": traitKey "${traitKey}" not specified on reference object.`
+          `#ERR fneu "${lang}" validateSentenceFormula. stCh "${chunkId}": traitKey "${traitKey}" not specified on reference object.`
         );
       }
 
@@ -56,11 +56,11 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
         !compatibleWordtypes.includes(gpUtils.getWordtypeStCh(structureChunk))
       ) {
         consol.log(
-          "wghd validateSentenceFormula structureChunk",
+          `wghd "${lang}" validateSentenceFormula structureChunk`,
           structureChunk
         );
         consol.throw(
-          `#ERR wghd validateSentenceFormula. stCh "${chunkId}": traitKey "${traitKey}" not expected to be present on "${gpUtils.getWordtypeStCh(
+          `#ERR wghd "${lang}" validateSentenceFormula. stCh "${chunkId}": traitKey "${traitKey}" not expected to be present on "${gpUtils.getWordtypeStCh(
             structureChunk
           )}".`
         );
@@ -74,11 +74,11 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
         expectedTypeOnStCh !== uUtils.typeof(traitValue)
       ) {
         consol.log(
-          "kchk validateSentenceFormula structureChunk",
+          `kchk "${lang}" validateSentenceFormula structureChunk`,
           structureChunk
         );
         consol.throw(
-          `#ERR kchk validateSentenceFormula. stCh "${chunkId}": Expected "${expectedTypeOnStCh}" as "${traitKey}" traitValue but got "${uUtils.typeof(
+          `#ERR kchk "${lang}" validateSentenceFormula. stCh "${chunkId}": Expected "${expectedTypeOnStCh}" as "${traitKey}" traitValue but got "${uUtils.typeof(
             traitValue
           )}"`
         );
@@ -91,11 +91,11 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
         if (uUtils.typeof(traitValue) === "string") {
           if (!possibleTraitValues.includes(traitValue)) {
             consol.log(
-              "mkkf validateSentenceFormula structureChunk",
+              `mkkf "${lang}" validateSentenceFormula structureChunk`,
               structureChunk
             );
             consol.throw(
-              `#ERR mkkf validateSentenceFormula. stCh "${chunkId}": traitValue "${traitValue}" not listed as possible for wordtype "${gpUtils.getWordtypeStCh(
+              `#ERR mkkf "${lang}" validateSentenceFormula. stCh "${chunkId}": traitValue "${traitValue}" not listed as possible for wordtype "${gpUtils.getWordtypeStCh(
                 structureChunk
               )}".`
             );
@@ -107,11 +107,11 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
               !possibleTraitValues.includes(traitValueItem)
             ) {
               consol.log(
-                "timm validateSentenceFormula structureChunk",
+                `timm "${lang}" validateSentenceFormula structureChunk`,
                 structureChunk
               );
               consol.throw(
-                `#ERR timm validateSentenceFormula. stCh "${chunkId}": traitValue arr included "${traitValueItem}" which was not listed as possible for wordtype "${gpUtils.getWordtypeStCh(
+                `#ERR timm "${lang}" validateSentenceFormula. stCh "${chunkId}": traitValue arr included "${traitValueItem}" which was not listed as possible for wordtype "${gpUtils.getWordtypeStCh(
                   structureChunk
                 )}".`
               );
@@ -124,11 +124,11 @@ exports.validateSentenceFormula = (sentenceFormula, currentLanguage) => {
       if (stChTraits[traitKey].mustBeExistingChunkId) {
         if (!allChunkIds.includes(traitValue)) {
           consol.log(
-            "cglp validateSentenceFormula structureChunk",
+            `cglp "${lang}" validateSentenceFormula structureChunk`,
             structureChunk
           );
           consol.throw(
-            `#ERR cglp validateSentenceFormula. stCh "${chunkId}": traitValue "${traitValue}" should have been a chunkId existing in sentenceStructure.`
+            `#ERR cglp "${lang}" validateSentenceFormula. stCh "${chunkId}": traitValue "${traitValue}" should have been a chunkId existing in sentenceStructure.`
           );
         }
       }
