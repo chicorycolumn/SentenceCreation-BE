@@ -1730,4 +1730,22 @@ exports.sentenceFormulasBank = [
     primaryOrders: [["ver-1-read", "nco-1-book"]],
     // additionalOrders: [["pro-1-I", "ver-1-read", "nco-1-book"]],
   },
+  {
+    sentenceFormulaSymbol: "122 The doctor writes",
+    sentenceFormulaId: "POL-122",
+    translations: { ENG: ["ENG-122"] },
+    sentenceStructure: [
+      {
+        chunkId: "npe-1-doctor",
+        specificLemmas: ["lekarz", "lekarka"],
+      },
+      {
+        chunkId: "ver-1-write",
+        specificLemmas: ["pisać", "napisać"],
+        agreeWith: "npe-1-doctor",
+        tenseDescription: ["present im", "past pf"],
+      },
+    ],
+    primaryOrders: [["npe-1-doctor", "ver-1-write"]],
+  },
 ];

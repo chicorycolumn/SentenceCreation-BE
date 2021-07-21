@@ -1307,4 +1307,27 @@ exports.sentenceFormulasBank = [
     ],
     primaryOrders: [["pro-1-I", "ver-1-read", "art-1", "nco-1-book"]],
   },
+  {
+    sentenceFormulaSymbol: "122 The doctor writes",
+    sentenceFormulaId: "ENG-122",
+    translations: { POL: ["POL-122"] },
+    sentenceStructure: [
+      {
+        chunkId: "art-1",
+        form: ["definite"],
+        agreeWith: "npe-1-doctor",
+      },
+      {
+        chunkId: "npe-1-doctor",
+        specificLemmas: ["doctor"],
+      },
+      {
+        chunkId: "ver-1-write",
+        specificLemmas: ["write"],
+        agreeWith: "npe-1-doctor",
+        tenseDescription: ["present simple", "past simple"],
+      },
+    ],
+    primaryOrders: [["art-1", "npe-1-doctor", "ver-1-write"]],
+  },
 ];
