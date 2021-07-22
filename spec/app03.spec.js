@@ -550,7 +550,7 @@ describe("/api", function () {
         });
     });
     //
-    it.only("#pal18-10a GET 200 YES: Engpol. 'They are big.'", () => {
+    it("#pal18-10a GET 200 YES: Engpol. 'They are red.'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -559,34 +559,121 @@ describe("/api", function () {
         .send({
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "123 They are big",
+          sentenceFormulaSymbol: "123 I am red",
         })
         .expect(200)
         .then((res) => {
           let ref = [
             {
-              ENG: "He is big.",
-              POL: ["Jest du«y."],
+              ENG: "He is red.",
+              POL: ["Jest czerwony."],
             },
             {
-              ENG: "She is big.",
-              POL: ["Jest du«a."],
+              ENG: "She is red.",
+              POL: ["Jest czerwona."],
             },
             {
-              ENG: "It is big.",
-              POL: ["Jest du«e."],
+              ENG: "It is red.",
+              POL: ["Jest czerwone."],
             },
             {
-              ENG: "They (males) are big.",
-              POL: ["Sæ duzi"],
+              ENG: "They (males) are red.",
+              POL: ["Są czerwoni."],
             },
             {
-              ENG: "They (mixed) are big.",
-              POL: ["Sæ duzi"],
+              ENG: "They (mixed) are red.",
+              POL: ["Są czerwoni."],
             },
             {
-              ENG: "They (females) are big.",
-              POL: ["Sæ duze"],
+              ENG: "They (females) are red.",
+              POL: ["Są czerwone."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal18-10b GET 200 YES: Engpol. 'They are red.' PDS", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "123 I am red",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "He is red.",
+              POL: ["Jest czerwony."],
+            },
+            {
+              ENG: "She is red.",
+              POL: ["Jest czerwona."],
+            },
+            {
+              ENG: "It is red.",
+              POL: ["Jest czerwone."],
+            },
+            {
+              ENG: "They are red.",
+              POL: ["Są czerwoni.", "Są czerwone."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it.only("#pal18-10c GET 200 YES: Poleng. 'They are red.'", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "123 I am red",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["He is red."],
+              POL: "Jest czerwony.",
+            },
+            {
+              ENG: "She is red.",
+              POL: ["Jest czerwona."],
+            },
+            {
+              ENG: "It is red.",
+              POL: ["Jest czerwone."],
+            },
+            {
+              ENG: "They (males) are red.",
+              POL: ["Są czerwoni."],
+            },
+            {
+              ENG: "They (mixed) are red.",
+              POL: ["Są czerwoni."],
+            },
+            {
+              ENG: "They (females) are red.",
+              POL: ["Są czerwone."],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(

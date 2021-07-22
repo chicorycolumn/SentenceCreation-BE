@@ -65,6 +65,14 @@ exports.getMaterialsCopies = (
     sentenceFormulaSymbol = sentenceFormula.sentenceFormulaSymbol;
   }
 
+  if (!sentenceFormula) {
+    consol.throw(
+      `pcco No sentence formula found for "${
+        sentenceFormulaSymbol || sentenceFormulaId
+      }"`
+    );
+  }
+
   Object.keys(words).forEach((wordsetKey) => {
     langUtils.preprocessLemmaObjectsMinor(words[wordsetKey]);
   });

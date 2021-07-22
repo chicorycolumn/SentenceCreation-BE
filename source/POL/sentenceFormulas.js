@@ -1748,4 +1748,29 @@ exports.sentenceFormulasBank = [
     ],
     primaryOrders: [["npe-1-doctor", "ver-1-write"]],
   },
+  {
+    sentenceFormulaSymbol: "123 I am red",
+    sentenceFormulaId: "POL-123",
+    translations: { ENG: ["ENG-123"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificLemmas: ["PERSONAL"],
+        person: ["3per"],
+        // number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-am",
+        specificLemmas: ["być"],
+        agreeWith: "pro-1-I",
+        tenseDescription: ["present im"],
+      },
+      {
+        chunkId: "adj-1-red",
+        specificLemmas: ["czerwony"],
+        agreeWith: "pro-1-I",
+      },
+    ],
+    primaryOrders: [["ver-1-am", "adj-1-red"]],
+  },
 ];
