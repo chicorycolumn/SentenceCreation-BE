@@ -684,6 +684,54 @@ describe("/api", function () {
           );
         });
     });
+    it("#pal18-10d GET 200 YES: Poleng. 'They are red.' PDS", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "123 I am red",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["He is red."],
+              POL: "Jest czerwony.",
+            },
+            {
+              ENG: "She is red.",
+              POL: ["Jest czerwona."],
+            },
+            {
+              ENG: "It is red.",
+              POL: ["Jest czerwone."],
+            },
+            {
+              ENG: "They (males) are red.",
+              POL: ["Są czerwoni."],
+            },
+            {
+              ENG: "They (mixed) are red.",
+              POL: ["Są czerwoni."],
+            },
+            {
+              ENG: "They (females) are red.",
+              POL: ["Są czerwone."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
   });
 
   describe("/palette - Stage 18: Further annotations.", () => {
