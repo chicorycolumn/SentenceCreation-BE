@@ -1772,5 +1772,6 @@ exports.sentenceFormulasBank = [
       },
     ],
     primaryOrders: [["ver-1-am", "adj-1-red"]],
+    additionalOrders: [["pro-1-I", "ver-1-am", "adj-1-red"]],
   },
 ];
