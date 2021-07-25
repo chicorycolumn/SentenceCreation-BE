@@ -550,7 +550,7 @@ describe("/api", function () {
         });
     });
     //
-    it("#pal18-09e GET 200 YES: Engpol. 'The doctor writes.' stCh specified male", () => {
+    it.only("#pal18-09e GET 200 YES: Engpol. 'The doctor writes.' stCh specified male", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -564,6 +564,7 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
+          console.log(res.body);
           let ref = [
             {
               ENG: "The doctor (male) writes.",

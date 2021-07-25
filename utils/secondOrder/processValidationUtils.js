@@ -46,7 +46,9 @@ exports.checkDecisiveDecant = (questionSentenceData, questionLanguage) => {
           "[1;31m " + `#WARN oyxp fetchPalette. structureChunk is:` + "[0m",
           structureChunk
         );
-        consol.throw("#ERR oyxp fetchPalette. traitKey: " + traitKey);
+        consol.throw(
+          `#ERR oyxp fetchPalette. traitKey: "${traitKey}" and traitValue: "${traitValue}"`
+        );
       }
     });
   });
