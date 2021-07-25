@@ -24,7 +24,7 @@ describe("/api", function () {
     "ENG"
   );
 
-  xdescribe("/palette - Stage 18a.", () => {
+  describe.only("/palette - Stage 18a.", () => {
     it("#pal18-08a GET 200 YES: Engpol. 'I read* a book.'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -608,7 +608,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal18-10c GET 200 YES: Poleng. 'They are red.'", () => {
+    it.only("#pal18-10c GET 200 YES: Poleng. 'They are red.'", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -626,7 +626,7 @@ describe("/api", function () {
             {
               originalRun: "pro-1-I gender=m1",
               ENG: ["He is red.", "He is being red."],
-              POL: "Jest czerwony.",
+              POL: "Jest (male) czerwony.",
             },
             {
               originalRun: "pro-1-I gender=f",

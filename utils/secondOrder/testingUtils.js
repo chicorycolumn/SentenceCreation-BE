@@ -806,16 +806,19 @@ exports.checkTranslationsOfGivenRef = (
   }
 
   questionSentenceArr.forEach((actualQuestionSentence, index) => {
-    let expectedQuestionSentences = ref.map((item) => item[questionLanguage]);
+    let expectedQuestionSentences = ref.map(
+      (refItem) => refItem[questionLanguage]
+    );
 
     expect(expectedQuestionSentences).to.include(actualQuestionSentence);
 
-    ref.forEach((item) => {
+    ref.forEach((refItem) => {
       if (
-        (!item.originalRun || item.originalRun === res.body.originalRun) &&
-        item[questionLanguage] === actualQuestionSentence
+        (!refItem.originalRun ||
+          refItem.originalRun === res.body.originalRun) &&
+        refItem[questionLanguage] === actualQuestionSentence
       ) {
-        expect(answerSentenceArr).to.have.members(item[answerLanguage]);
+        expect(answerSentenceArr).to.have.members(refItem[answerLanguage]);
         testActivated = true;
       }
     });
