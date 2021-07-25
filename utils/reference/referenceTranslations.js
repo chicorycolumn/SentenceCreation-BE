@@ -129,8 +129,8 @@ exports.traitValueTranslation = {
     ENG: {
       gender: {
         m1: ["m"],
-        m2: ["n"],
-        m3: ["n"],
+        m2: ["m"],
+        m3: ["m"],
         allSingularGendersExcludingNeuter: ["allPersonalSingularGenders"],
         allSingularGendersExcludingNeuterWithPadding: ["allSingularGenders"],
         allMasculineSingularGenders: ["m"],
@@ -150,8 +150,8 @@ exports.annotationToPlainspeakRef = {
   gender: {
     m: "male",
     m1: "male",
-    m2: "neuter",
-    m3: "neuter",
+    m2: "male",
+    m3: "male",
     f: "female",
     n: "neuter",
     virile: ["mixed", "males"],
