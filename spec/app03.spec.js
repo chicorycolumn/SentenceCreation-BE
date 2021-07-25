@@ -550,6 +550,103 @@ describe("/api", function () {
         });
     });
     //
+    it("#pal18-09e GET 200 YES: Engpol. 'The doctor writes.' stCh specified male", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy63a",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "The doctor (male) writes.",
+              POL: ["Lekarz pisze."],
+            },
+            {
+              ENG: "The doctors (males) write.",
+              POL: ["Lekarze piszą."],
+            },
+            {
+              ENG: "The doctors (mixed) write.",
+              POL: ["Lekarze piszą."],
+            },
+            {
+              ENG: "The doctor (male) wrote.",
+              POL: ["Lekarz napisał."],
+            },
+            {
+              ENG: "The doctors (males) wrote.",
+              POL: ["Lekarze napisali."],
+            },
+            {
+              ENG: "The doctors (mixed) wrote.",
+              POL: ["Lekarze napisali."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal18-09f GET 200 YES: Poleng. 'The doctor writes.' stCh specified male", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy63a",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["The doctor writes.", "The doctor is writing."],
+              POL: "Lekarz pisze.",
+            },
+            {
+              ENG: ["The doctors write.", "The doctors are writing."],
+              POL: "Lekarze piszą.",
+            },
+            {
+              ENG: [
+                "The doctor wrote.",
+                "The doctor has written.",
+                "The doctor had written.",
+              ],
+              POL: "Lekarz napisał.",
+            },
+            {
+              ENG: [
+                "The doctors wrote.",
+                "The doctors have written.",
+                "The doctors had written.",
+              ],
+              POL: "Lekarze napisali.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    //
     it("#pal18-10a GET 200 YES: Engpol. 'They are red.'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -563,7 +660,6 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
-          console.log(res.body);
           let ref = [
             {
               ENG: "He is red.",
@@ -585,6 +681,10 @@ describe("/api", function () {
               ENG: "They (mixed) are red.",
               POL: ["Są czerwoni.", "Oni są czerwoni."],
             },
+            {
+              ENG: "They (females) are red.",
+              POL: ["Są czerwone.", "One są czerwone."],
+            },
             //Now technically, you'd need this. Because "koty" are masculine (m2) but that's "one" not "oni",
             //ie only m1 plural (and groups containing m1) are virile.
             //But practically, you can just teach this to the player in lesson text, rather than testing that
@@ -595,9 +695,50 @@ describe("/api", function () {
             //   ENG: "They (non-persons) are red.",
             //   POL: ["Są czerwone.", "One są czerwone."],
             // },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal18-10b GET 200 YES: Engpol. 'They are red.' PDS", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "123 I am red",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
             {
-              ENG: "They (females) are red.",
-              POL: ["Są czerwone.", "One są czerwone."],
+              ENG: "He is red.",
+              POL: ["Jest czerwony.", "On jest czerwony."],
+            },
+            {
+              ENG: "She is red.",
+              POL: ["Jest czerwona.", "Ona jest czerwona."],
+            },
+            {
+              ENG: "It is red.",
+              POL: ["Jest czerwone.", "Ono jest czerwone."],
+            },
+            {
+              ENG: "They are red.",
+              POL: [
+                "Są czerwoni.",
+                "Oni są czerwoni.",
+                "Są czerwone.",
+                "One są czerwone.",
+              ],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -621,30 +762,68 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
-          console.log(res.body);
           let ref = [
             {
-              originalRun: "pro-1-I gender=m",
               ENG: ["He is red.", "He is being red."],
               POL: "Jest czerwony.",
             },
             {
-              originalRun: "pro-1-I gender=f",
               ENG: ["She is red.", "She is being red."],
               POL: "Jest czerwona.",
             },
             {
-              originalRun: "pro-1-I gender=n",
               ENG: ["It is red.", "It is being red."],
               POL: "Jest czerwone.",
             },
             {
-              originalRun: "pro-1-I gender=virile",
               ENG: ["They are red.", "They are being red."],
               POL: "Są czerwoni.",
             },
             {
-              originalRun: "pro-1-I gender=nonvirile",
+              ENG: ["They are red.", "They are being red."],
+              POL: "Są czerwone.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal18-10d GET 200 YES: Poleng. 'They are red.' PDS", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "123 I am red",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["He is red.", "He is being red."],
+              POL: "Jest czerwony.",
+            },
+            {
+              ENG: ["She is red.", "She is being red."],
+              POL: "Jest czerwona.",
+            },
+            {
+              ENG: ["It is red.", "It is being red."],
+              POL: "Jest czerwone.",
+            },
+            {
+              ENG: ["They are red.", "They are being red."],
+              POL: "Są czerwoni.",
+            },
+            {
               ENG: ["They are red.", "They are being red."],
               POL: "Są czerwone.",
             },

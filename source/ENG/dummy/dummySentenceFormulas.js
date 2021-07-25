@@ -1413,4 +1413,27 @@ exports.dummySentenceFormulasBank = [
     ],
     primaryOrders: [["pro-1", "ver-1", "pro-2"]],
   },
+  {
+    sentenceFormulaSymbol: "dummy63a",
+    sentenceFormulaId: "ENG-dummy63a",
+    translations: { POL: ["POL-dummy63a"] },
+    sentenceStructure: [
+      {
+        chunkId: "art-1",
+        form: ["definite"],
+        agreeWith: "npe-1-doctor",
+      },
+      {
+        chunkId: "npe-1-doctor",
+        specificLemmas: ["doctor"],
+      },
+      {
+        chunkId: "ver-1-write",
+        specificLemmas: ["write"],
+        agreeWith: "npe-1-doctor",
+        tenseDescription: ["present simple", "past simple"],
+      },
+    ],
+    primaryOrders: [["art-1", "npe-1-doctor", "ver-1-write"]],
+  },
 ];

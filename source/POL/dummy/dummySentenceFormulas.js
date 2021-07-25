@@ -2120,4 +2120,22 @@ exports.dummySentenceFormulasBank = [
       ["pro-2", "ver-1"],
     ],
   },
+  {
+    sentenceFormulaSymbol: "dummy63a",
+    sentenceFormulaId: "POL-dummy63a",
+    translations: { ENG: ["ENG-dummy63a"] },
+    sentenceStructure: [
+      {
+        chunkId: "npe-1-doctor",
+        specificLemmas: ["lekarz", "lekarka"],
+      },
+      {
+        chunkId: "ver-1-write",
+        specificLemmas: ["pisać", "napisać"],
+        agreeWith: "npe-1-doctor",
+        tenseDescription: ["present im", "past pf"],
+      },
+    ],
+    primaryOrders: [["npe-1-doctor", "ver-1-write"]],
+  },
 ];

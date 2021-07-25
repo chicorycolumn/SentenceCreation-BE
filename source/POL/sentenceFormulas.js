@@ -1757,8 +1757,6 @@ exports.sentenceFormulasBank = [
         chunkId: "pro-1-I",
         specificLemmas: ["PERSONAL"],
         person: ["3per"],
-        // number: ["singular"],
-        // gender: ["m2"],
       },
       {
         chunkId: "ver-1-am",
