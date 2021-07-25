@@ -350,6 +350,40 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   explodedCounterfaxSituationsSchematics.forEach(
     (counterfactualSitSchematic, index) => {
       if (!index) {
+        counterfactualSitSchematic.chunkIds.forEach((chunkId) => {
+          let assignments = counterfactualSitSchematic[chunkId];
+          assignments.forEach((assignment) => {
+            if (
+              assignment.traitKey === "gender" &&
+              ["m1", "m2", "m3"].includes(assignment.traitValue)
+            ) {
+              let stCh = questionOutputArr.find(
+                (unit) => unit.structureChunk.chunkId === chunkId
+              ).structureChunk;
+
+              if (stCh.number) {
+                if (stCh.number.length !== 1) {
+                  consol.throw("dhua");
+                }
+                if (stCh.number[0] === "singular") {
+                  assignment.traitValue = "m";
+                }
+              }
+            }
+          });
+        });
+
+        //Make cfLabel again now that counterfactualSitSchematic assignments may have changed.
+        let newCfLabel = cfUtils.makeCfLabelFromSitSchematic(
+          counterfactualSitSchematic
+        );
+        if (counterfactualSitSchematic.cfLabel !== newCfLabel) {
+          consol.logSpecial3(
+            `ncui Changing cfLabel of ORIGINAL from "${counterfactualSitSchematic.cfLabel}" to "${newCfLabel}"`
+          );
+          counterfactualSitSchematic.cfLabel = newCfLabel;
+        }
+
         runsRecord.push(counterfactualSitSchematic.cfLabel);
         originalSitSchematic = counterfactualSitSchematic;
         return;
@@ -395,6 +429,37 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           true,
           true
         );
+
+        //Okay, if questionLang is POL, and number: singular, and gender is a masculine one,
+        //then change gender to just "m".
+        //But you will have to do this to original, too, which you don't deal with right here.
+        collapseMasculineGenders(questionLanguage, stChToCounterfax);
+
+        function collapseMasculineGenders(questionLanguage, stChToCounterfax) {
+          if (["POL"].includes(questionLanguage)) {
+            if (
+              stChToCounterfax.number &&
+              stChToCounterfax.number.length !== 1
+            ) {
+              consol.throw("nbii");
+            }
+            if (
+              stChToCounterfax.gender &&
+              stChToCounterfax.gender.length !== 1
+            ) {
+              consol.throw("nbij");
+            }
+
+            if (
+              stChToCounterfax.number &&
+              stChToCounterfax.number[0] === "singular" &&
+              stChToCounterfax.number &&
+              ["m1", "m2", "m3"].includes(stChToCounterfax.gender[0])
+            ) {
+              stChToCounterfax.gender = ["m"];
+            }
+          }
+        }
 
         consol.logSpecial3("↓");
         consol.logSpecial3("gender", stChToCounterfax.gender);

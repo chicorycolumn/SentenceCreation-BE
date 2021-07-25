@@ -624,17 +624,7 @@ describe("/api", function () {
           console.log(res.body);
           let ref = [
             {
-              originalRun: "pro-1-I gender=m1",
-              ENG: ["He is red.", "He is being red."],
-              POL: "Jest czerwony.",
-            },
-            {
-              originalRun: "pro-1-I gender=m2",
-              ENG: ["He is red.", "He is being red."],
-              POL: "Jest czerwony.",
-            },
-            {
-              originalRun: "pro-1-I gender=m3",
+              originalRun: "pro-1-I gender=m",
               ENG: ["He is red.", "He is being red."],
               POL: "Jest czerwony.",
             },
