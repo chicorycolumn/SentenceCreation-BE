@@ -550,7 +550,7 @@ describe("/api", function () {
         });
     });
     //
-    it.only("#pal18-10a GET 200 YES: Engpol. 'They are red.'", () => {
+    it("#pal18-10a GET 200 YES: Engpol. 'They are red.'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -563,6 +563,7 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
+          console.log(res.body);
           let ref = [
             {
               ENG: "He is red.",
@@ -584,6 +585,16 @@ describe("/api", function () {
               ENG: "They (mixed) are red.",
               POL: ["Są czerwoni.", "Oni są czerwoni."],
             },
+            //Now technically, you'd need this. Because "koty" are masculine (m2) but that's "one" not "oni",
+            //ie only m1 plural (and groups containing m1) are virile.
+            //But practically, you can just teach this to the player in lesson text, rather than testing that
+            //nitty gritty here. Because the real sentences encountered will be like, "Cats are black." "Kote sæ czarne."
+            //so that plural-m2-is-nonvirile is taught there. You don't need to worry about it for single contextless
+            //barebones sentence like this one.
+            // {
+            //   ENG: "They (non-persons) are red.",
+            //   POL: ["Są czerwone.", "One są czerwone."],
+            // },
             {
               ENG: "They (females) are red.",
               POL: ["Są czerwone.", "One są czerwone."],
@@ -597,47 +608,7 @@ describe("/api", function () {
           );
         });
     });
-    xit("#pal18-10b GET 200 YES: Engpol. 'They are red.' PDS", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "123 I am red",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "He is red.",
-              POL: ["Jest czerwony."],
-            },
-            {
-              ENG: "She is red.",
-              POL: ["Jest czerwona."],
-            },
-            {
-              ENG: "It is red.",
-              POL: ["Jest czerwone."],
-            },
-            {
-              ENG: "They are red.",
-              POL: ["Są czerwoni.", "Są czerwone."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    xit("#pal18-10c GET 200 YES: Poleng. 'They are red.'", () => {
+    it.only("#pal18-10c GET 200 YES: Poleng. 'They are red.'", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -650,78 +621,42 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
+          console.log(res.body);
           let ref = [
             {
-              ENG: ["He is red."],
+              originalRun: "pro-1-I gender=m1",
+              ENG: ["He is red.", "He is being red."],
               POL: "Jest czerwony.",
             },
             {
-              ENG: "She is red.",
-              POL: ["Jest czerwona."],
+              originalRun: "pro-1-I gender=f",
+              ENG: ["She is red.", "She is being red."],
+              POL: "Jest czerwona.",
             },
             {
-              ENG: "It is red.",
-              POL: ["Jest czerwone."],
-            },
-            {
-              ENG: "They (males) are red.",
-              POL: ["Są czerwoni."],
-            },
-            {
-              ENG: "They (mixed) are red.",
-              POL: ["Są czerwoni."],
-            },
-            {
-              ENG: "They (females) are red.",
-              POL: ["Są czerwone."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    xit("#pal18-10d GET 200 YES: Poleng. 'They are red.' PDS", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "123 I am red",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["He is red."],
+              originalRun: "pro-1-I gender=m2",
+              ENG: ["It is red.", "It is being red."],
               POL: "Jest czerwony.",
             },
             {
-              ENG: "She is red.",
-              POL: ["Jest czerwona."],
+              originalRun: "pro-1-I gender=m3",
+              ENG: ["It is red.", "It is being red."],
+              POL: "Jest czerwony.",
             },
             {
-              ENG: "It is red.",
-              POL: ["Jest czerwone."],
+              originalRun: "pro-1-I gender=n",
+              ENG: ["It is red.", "It is being red."],
+              POL: "Jest czerwone.",
             },
             {
-              ENG: "They (males) are red.",
-              POL: ["Są czerwoni."],
+              originalRun: "pro-1-I gender=virile",
+              ENG: ["They are red.", "They are being red."],
+              POL: "Są czerwoni.",
             },
             {
-              ENG: "They (mixed) are red.",
-              POL: ["Są czerwoni."],
-            },
-            {
-              ENG: "They (females) are red.",
-              POL: ["Są czerwone."],
+              originalRun: "pro-1-I gender=nonvirile",
+              ENG: ["They are red.", "They are being red."],
+              POL: "Są czerwone.",
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(

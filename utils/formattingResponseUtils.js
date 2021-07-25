@@ -8,7 +8,12 @@ exports.finishAndSend = (
   answerResponseObj,
   runsRecord
 ) => {
-  let combinedResponseObj = { runsRecord };
+  let combinedResponseObj = {};
+
+  if (runsRecord && runsRecord.length) {
+    combinedResponseObj.originalRun = runsRecord.shift();
+    combinedResponseObj.runsRecord = runsRecord;
+  }
 
   let refs = [
     { responseObject: questionResponseObj, mode: "question" },

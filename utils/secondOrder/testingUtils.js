@@ -811,10 +811,14 @@ exports.checkTranslationsOfGivenRef = (
     expect(expectedQuestionSentences).to.include(actualQuestionSentence);
 
     ref.forEach((item) => {
-      if (item[questionLanguage] === actualQuestionSentence) {
-        expect(answerSentenceArr).to.have.members(item[answerLanguage]);
-        testActivated = true;
-      }
+      if (item.originalRun)
+        if (
+          (!item.originalRun || item.originalRun === res.body.originalRun) &&
+          item[questionLanguage] === actualQuestionSentence
+        ) {
+          expect(answerSentenceArr).to.have.members(item[answerLanguage]);
+          testActivated = true;
+        }
     });
   });
 
