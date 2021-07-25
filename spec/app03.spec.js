@@ -550,7 +550,7 @@ describe("/api", function () {
         });
     });
     //
-    it("#pal18-10a GET 200 YES: Engpol. 'They are red.'", () => {
+    it.only("#pal18-10a GET 200 YES: Engpol. 'They are red.'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -566,27 +566,27 @@ describe("/api", function () {
           let ref = [
             {
               ENG: "He is red.",
-              POL: ["Jest czerwony."],
+              POL: ["Jest czerwony.", "On jest czerwony."],
             },
             {
               ENG: "She is red.",
-              POL: ["Jest czerwona."],
+              POL: ["Jest czerwona.", "Ona jest czerwona."],
             },
             {
               ENG: "It is red.",
-              POL: ["Jest czerwone."],
+              POL: ["Jest czerwone.", "Ono jest czerwone."],
             },
             {
               ENG: "They (males) are red.",
-              POL: ["Są czerwoni."],
+              POL: ["Są czerwoni.", "Oni są czerwoni."],
             },
             {
               ENG: "They (mixed) are red.",
-              POL: ["Są czerwoni."],
+              POL: ["Są czerwoni.", "Oni są czerwoni."],
             },
             {
               ENG: "They (females) are red.",
-              POL: ["Są czerwone."],
+              POL: ["Są czerwone.", "One są czerwone."],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -597,7 +597,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal18-10b GET 200 YES: Engpol. 'They are red.' PDS", () => {
+    xit("#pal18-10b GET 200 YES: Engpol. 'They are red.' PDS", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -637,7 +637,7 @@ describe("/api", function () {
           );
         });
     });
-    it.only("#pal18-10c GET 200 YES: Poleng. 'They are red.'", () => {
+    xit("#pal18-10c GET 200 YES: Poleng. 'They are red.'", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -684,7 +684,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal18-10d GET 200 YES: Poleng. 'They are red.' PDS", () => {
+    xit("#pal18-10d GET 200 YES: Poleng. 'They are red.' PDS", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
