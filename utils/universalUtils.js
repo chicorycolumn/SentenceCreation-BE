@@ -41,16 +41,13 @@ exports.capitaliseFirst = (string) => {
   return string[0].toUpperCase() + string.slice(1);
 };
 
-exports.areTwoFlatArraysEqualAndInSameOrder = (arr1, arr2) => {
-  return arr1.every((item, index) => arr2[index] === item);
-};
-
-exports.areTwoFlatArraysEqual = (arr1, arr2) => {
-  return (
-    arr1.length === arr2.length &&
-    arr1.every((item) => arr2.includes(item)) &&
-    arr2.every((item) => arr1.includes(item))
-  );
+exports.areTwoFlatArraysEqual = (arr1, arr2, mustHaveSameOrder) => {
+  return arr1.length !== arr2.length
+    ? false
+    : mustHaveSameOrder
+    ? arr1.every((item, index) => arr2[index] === item)
+    : arr1.every((item) => arr2.includes(item)) &&
+      arr2.every((item) => arr1.includes(item));
 };
 
 exports.doKeyValuesMatch = (object, keyValues) => {
@@ -199,6 +196,12 @@ exports.doesArrHaveOnlyTheseMembers = (arr1, arr2, disallowDuplicates) => {
   return !differingItems.length;
 };
 
+exports.isArraySubsetOfArray = (array1, array2) => {
+  return array1.every((arr1Item) =>
+    array2.find((arr2Item) => exports.areTwoObjectsEqual(arr1Item, arr2Item))
+  );
+};
+
 exports.typeof = (item) => {
   return Array.isArray(item)
     ? "array"
@@ -210,6 +213,7 @@ exports.typeof = (item) => {
 };
 
 exports.areTwoObjectsEqual = (obj1, obj2) => {
+  //Returns false for arrays if in different order.
   if (this.typeof(obj1) !== this.typeof(obj2)) {
     return false;
   }

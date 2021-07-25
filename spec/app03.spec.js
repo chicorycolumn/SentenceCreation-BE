@@ -24,7 +24,7 @@ describe("/api", function () {
     "ENG"
   );
 
-  describe.only("/palette - Stage 18a.", () => {
+  xdescribe("/palette - Stage 18a.", () => {
     it("#pal18-08a GET 200 YES: Engpol. 'I read* a book.'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -608,7 +608,7 @@ describe("/api", function () {
           );
         });
     });
-    it.only("#pal18-10c GET 200 YES: Poleng. 'They are red.'", () => {
+    it("#pal18-10c GET 200 YES: Poleng. 'They are red.'", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 

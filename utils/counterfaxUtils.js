@@ -342,7 +342,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   //So now we have the sentenceFormula for the original (Factual) situation.
   //Now each run of the forEach sit, will make a deepcopy of it, and use that to counterfax run.
 
-  let cfLabelsOfCounterfaxedSits = [];
   //Nownow Need to make a such object for the original factual, and put it in here too.
 
   //In fact, we should modify the counterfax sit schematics directly when virility adjustments are made, including remaking the label.
@@ -953,7 +952,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             annoDataObjIndex
           );
       } else if (
-        !gpUtils.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual(
+        !uUtils.isArraySubsetOfArray(
           originalQuestionPseudoSentenceObjs.map((obj) => obj.pseudoSentence),
           counterfactualQuestionPseudoSentenceObjs.map(
             (obj) => obj.pseudoSentence
