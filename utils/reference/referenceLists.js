@@ -376,6 +376,7 @@ exports.structureChunkTraits = {
       compatibleWordtypes: ["noun", "verb", "adjective", "pronoun"],
       expectedTypeOnStCh: "array",
       possibleTraitValues: [
+        "m",
         "m1",
         "m2",
         "m3",

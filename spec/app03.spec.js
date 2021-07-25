@@ -608,7 +608,7 @@ describe("/api", function () {
           );
         });
     });
-    it.only("#pal18-10c GET 200 YES: Poleng. 'They are red.'", () => {
+    it("#pal18-10c GET 200 YES: Poleng. 'They are red.'", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
