@@ -626,22 +626,22 @@ describe("/api", function () {
             {
               originalRun: "pro-1-I gender=m1",
               ENG: ["He is red.", "He is being red."],
-              POL: "Jest (male) czerwony.",
+              POL: "Jest czerwony.",
+            },
+            {
+              originalRun: "pro-1-I gender=m2",
+              ENG: ["He is red.", "He is being red."],
+              POL: "Jest czerwony.",
+            },
+            {
+              originalRun: "pro-1-I gender=m3",
+              ENG: ["He is red.", "He is being red."],
+              POL: "Jest czerwony.",
             },
             {
               originalRun: "pro-1-I gender=f",
               ENG: ["She is red.", "She is being red."],
               POL: "Jest czerwona.",
-            },
-            {
-              originalRun: "pro-1-I gender=m2",
-              ENG: ["It is red.", "It is being red."],
-              POL: "Jest czerwony.",
-            },
-            {
-              originalRun: "pro-1-I gender=m3",
-              ENG: ["It is red.", "It is being red."],
-              POL: "Jest czerwony.",
             },
             {
               originalRun: "pro-1-I gender=n",
