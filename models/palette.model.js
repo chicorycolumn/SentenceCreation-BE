@@ -219,6 +219,8 @@ exports.fetchPalette = (req) => {
   ///////////////////////////////////////////////kp Decisive Decant Check
   pvUtils.checkDecisiveDecant(questionSentenceData, questionLanguage);
 
+  consol.throw(333);
+
   if (true && "console") {
     consol.log(
       "[1;35m " +

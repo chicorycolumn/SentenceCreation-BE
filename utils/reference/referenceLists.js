@@ -98,7 +98,7 @@ exports.metaTraitValues = {
 
       allNonpersonalGenders: ["n", "nonvirile"],
       // allNonpersonalSingularGenders: ["n"],
-      allNonpersonalSingularGenders: ["m", "f", "n"],
+      allNonpersonalSingularGenders: ["m", "f", "n"], //Beta Is that right?
       allNonpersonalPluralGenders: ["nonvirile"],
 
       allSingularGendersExcludingNeuter: ["m", "f"],

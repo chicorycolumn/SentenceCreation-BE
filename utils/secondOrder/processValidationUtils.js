@@ -28,6 +28,9 @@ exports.checkDecisiveDecant = (questionSentenceData, questionLanguage) => {
 
     Object.keys(structureChunk).forEach((traitKey) => {
       let traitValue = structureChunk[traitKey];
+      console.log(
+        `oyxp to check "${structureChunk.chunkId}" for "${traitKey}": [${traitValue}]`
+      );
 
       let traitsAllowedToHaveMultipleValues = Object.keys(
         refObj.structureChunkTraits.ALL
@@ -43,11 +46,11 @@ exports.checkDecisiveDecant = (questionSentenceData, questionLanguage) => {
         traitValue.length > 1
       ) {
         consol.log(
-          "[1;31m " + `#WARN oyxp fetchPalette. structureChunk is:` + "[0m",
+          "[1;31m " + `#WARN oyxp checkDecisiveDecant. structureChunk is:` + "[0m",
           structureChunk
         );
         consol.throw(
-          `#ERR oyxp fetchPalette. traitKey: "${traitKey}" and traitValue: "${traitValue}"`
+          `#ERR oyxp checkDecisiveDecant. traitKey: "${traitKey}" and traitValue: "${traitValue}"`
         );
       }
     });

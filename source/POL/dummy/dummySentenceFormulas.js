@@ -2129,6 +2129,8 @@ exports.dummySentenceFormulasBank = [
         chunkId: "npe-1-doctor",
         specificLemmas: ["lekarz", "lekarka"],
         gender: ["m1"],
+        formulaImportantTraitKeys: ["gender"],
+        number: ["plural"],
       },
       {
         chunkId: "ver-1-write",

@@ -24,7 +24,353 @@ describe("/api", function () {
     "ENG"
   );
 
-  describe.only("/palette - Stage 18a.", () => {
+  describe.only("/palette - Stage 18b.", () => {
+    it("#pal18-10a GET 200 YES: Engpol. 'The doctor writes.'", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "122 The doctor writes",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "The doctor (male) writes.",
+              POL: ["Lekarz pisze."],
+            },
+            {
+              ENG: "The doctor (female) writes.",
+              POL: ["Lekarka pisze."],
+            },
+            {
+              ENG: "The doctors (males) write.",
+              POL: ["Lekarze piszą."],
+            },
+            {
+              ENG: "The doctors (mixed) write.",
+              POL: ["Lekarze piszą."],
+            },
+            {
+              ENG: "The doctors (females) write.",
+              POL: ["Lekarki piszą."],
+            },
+            {
+              ENG: "The doctor (male) wrote.",
+              POL: ["Lekarz napisał."],
+            },
+            {
+              ENG: "The doctor (female) wrote.",
+              POL: ["Lekarka napisała."],
+            },
+            {
+              ENG: "The doctors (males) wrote.",
+              POL: ["Lekarze napisali."],
+            },
+            {
+              ENG: "The doctors (mixed) wrote.",
+              POL: ["Lekarze napisali."],
+            },
+            {
+              ENG: "The doctors (females) wrote.",
+              POL: ["Lekarki napisały."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal18-10b GET 200 YES: Engpol. 'The doctor writes.' PDS", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "122 The doctor writes",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "The doctor writes.",
+              POL: ["Lekarz pisze.", "Lekarka pisze."],
+            },
+            {
+              ENG: "The doctors write.",
+              POL: ["Lekarze piszą.", "Lekarki piszą."],
+            },
+            {
+              ENG: "The doctor wrote.",
+              POL: ["Lekarz napisał.", "Lekarka napisała."],
+            },
+            {
+              ENG: "The doctors wrote.",
+              POL: ["Lekarze napisali.", "Lekarki napisały."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal18-10c GET 200 YES: Poleng. 'The doctor writes.'", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "122 The doctor writes",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["The doctor writes.", "The doctor is writing."],
+              POL: "Lekarz pisze.",
+            },
+            {
+              ENG: ["The doctor writes.", "The doctor is writing."],
+              POL: "Lekarka pisze.",
+            },
+            {
+              ENG: ["The doctors write.", "The doctors are writing."],
+              POL: "Lekarze piszą.",
+            },
+            {
+              ENG: ["The doctors write.", "The doctors are writing."],
+              POL: "Lekarki piszą.",
+            },
+            {
+              ENG: [
+                "The doctor wrote.",
+                "The doctor has written.",
+                "The doctor had written.",
+              ],
+              POL: "Lekarz napisał.",
+            },
+            {
+              ENG: [
+                "The doctor wrote.",
+                "The doctor has written.",
+                "The doctor had written.",
+              ],
+              POL: "Lekarka napisała.",
+            },
+            {
+              ENG: [
+                "The doctors wrote.",
+                "The doctors have written.",
+                "The doctors had written.",
+              ],
+              POL: "Lekarze napisali.",
+            },
+            {
+              ENG: [
+                "The doctors wrote.",
+                "The doctors have written.",
+                "The doctors had written.",
+              ],
+              POL: "Lekarki napisały.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal18-10d GET 200 YES: Poleng. 'The doctor writes.' PDS", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "122 The doctor writes",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["The doctor writes.", "The doctor is writing."],
+              POL: "Lekarz pisze.",
+            },
+            {
+              ENG: ["The doctor writes.", "The doctor is writing."],
+              POL: "Lekarka pisze.",
+            },
+            {
+              ENG: ["The doctors write.", "The doctors are writing."],
+              POL: "Lekarze piszą.",
+            },
+            {
+              ENG: ["The doctors write.", "The doctors are writing."],
+              POL: "Lekarki piszą.",
+            },
+            {
+              ENG: [
+                "The doctor wrote.",
+                "The doctor has written.",
+                "The doctor had written.",
+              ],
+              POL: "Lekarz napisał.",
+            },
+            {
+              ENG: [
+                "The doctor wrote.",
+                "The doctor has written.",
+                "The doctor had written.",
+              ],
+              POL: "Lekarka napisała.",
+            },
+            {
+              ENG: [
+                "The doctors wrote.",
+                "The doctors have written.",
+                "The doctors had written.",
+              ],
+              POL: "Lekarze napisali.",
+            },
+            {
+              ENG: [
+                "The doctors wrote.",
+                "The doctors have written.",
+                "The doctors had written.",
+              ],
+              POL: "Lekarki napisały.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it.only("#pal18-10e GET 200 YES: Engpol. 'The doctor writes.' stCh specified male", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy63a",
+        })
+        .expect(200)
+        .then((res) => {
+          console.log(res.body);
+          let ref = [
+            {
+              ENG: "The doctor (male) writes.",
+              POL: ["Lekarz pisze."],
+            },
+            {
+              ENG: "The doctors (males) write.",
+              POL: ["Lekarze piszą."],
+            },
+            {
+              ENG: "The doctors (mixed) write.",
+              POL: ["Lekarze piszą."],
+            },
+            {
+              ENG: "The doctor (male) wrote.",
+              POL: ["Lekarz napisał."],
+            },
+            {
+              ENG: "The doctors (males) wrote.",
+              POL: ["Lekarze napisali."],
+            },
+            {
+              ENG: "The doctors (mixed) wrote.",
+              POL: ["Lekarze napisali."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    xit("#pal18-10f GET 200 YES: Poleng. 'The doctor writes.' stCh specified male", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy63a",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["The doctor writes.", "The doctor is writing."],
+              POL: "Lekarz pisze.",
+            },
+            {
+              ENG: ["The doctors write.", "The doctors are writing."],
+              POL: "Lekarze piszą.",
+            },
+            {
+              ENG: [
+                "The doctor wrote.",
+                "The doctor has written.",
+                "The doctor had written.",
+              ],
+              POL: "Lekarz napisał.",
+            },
+            {
+              ENG: [
+                "The doctors wrote.",
+                "The doctors have written.",
+                "The doctors had written.",
+              ],
+              POL: "Lekarze napisali.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+  });
+
+  describe("/palette - Stage 18a.", () => {
     it("#pal18-08a GET 200 YES: Engpol. 'I read* a book.'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -303,352 +649,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal18-09a GET 200 YES: Engpol. 'The doctor writes.'", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "122 The doctor writes",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "The doctor (male) writes.",
-              POL: ["Lekarz pisze."],
-            },
-            {
-              ENG: "The doctor (female) writes.",
-              POL: ["Lekarka pisze."],
-            },
-            {
-              ENG: "The doctors (males) write.",
-              POL: ["Lekarze piszą."],
-            },
-            {
-              ENG: "The doctors (mixed) write.",
-              POL: ["Lekarze piszą."],
-            },
-            {
-              ENG: "The doctors (females) write.",
-              POL: ["Lekarki piszą."],
-            },
-            {
-              ENG: "The doctor (male) wrote.",
-              POL: ["Lekarz napisał."],
-            },
-            {
-              ENG: "The doctor (female) wrote.",
-              POL: ["Lekarka napisała."],
-            },
-            {
-              ENG: "The doctors (males) wrote.",
-              POL: ["Lekarze napisali."],
-            },
-            {
-              ENG: "The doctors (mixed) wrote.",
-              POL: ["Lekarze napisali."],
-            },
-            {
-              ENG: "The doctors (females) wrote.",
-              POL: ["Lekarki napisały."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    it("#pal18-09b GET 200 YES: Engpol. 'The doctor writes.' PDS", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "122 The doctor writes",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "The doctor writes.",
-              POL: ["Lekarz pisze.", "Lekarka pisze."],
-            },
-            {
-              ENG: "The doctors write.",
-              POL: ["Lekarze piszą.", "Lekarki piszą."],
-            },
-            {
-              ENG: "The doctor wrote.",
-              POL: ["Lekarz napisał.", "Lekarka napisała."],
-            },
-            {
-              ENG: "The doctors wrote.",
-              POL: ["Lekarze napisali.", "Lekarki napisały."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    it("#pal18-09c GET 200 YES: Poleng. 'The doctor writes.'", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "122 The doctor writes",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["The doctor writes.", "The doctor is writing."],
-              POL: "Lekarz pisze.",
-            },
-            {
-              ENG: ["The doctor writes.", "The doctor is writing."],
-              POL: "Lekarka pisze.",
-            },
-            {
-              ENG: ["The doctors write.", "The doctors are writing."],
-              POL: "Lekarze piszą.",
-            },
-            {
-              ENG: ["The doctors write.", "The doctors are writing."],
-              POL: "Lekarki piszą.",
-            },
-            {
-              ENG: [
-                "The doctor wrote.",
-                "The doctor has written.",
-                "The doctor had written.",
-              ],
-              POL: "Lekarz napisał.",
-            },
-            {
-              ENG: [
-                "The doctor wrote.",
-                "The doctor has written.",
-                "The doctor had written.",
-              ],
-              POL: "Lekarka napisała.",
-            },
-            {
-              ENG: [
-                "The doctors wrote.",
-                "The doctors have written.",
-                "The doctors had written.",
-              ],
-              POL: "Lekarze napisali.",
-            },
-            {
-              ENG: [
-                "The doctors wrote.",
-                "The doctors have written.",
-                "The doctors had written.",
-              ],
-              POL: "Lekarki napisały.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    it("#pal18-09d GET 200 YES: Poleng. 'The doctor writes.' PDS", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "122 The doctor writes",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["The doctor writes.", "The doctor is writing."],
-              POL: "Lekarz pisze.",
-            },
-            {
-              ENG: ["The doctor writes.", "The doctor is writing."],
-              POL: "Lekarka pisze.",
-            },
-            {
-              ENG: ["The doctors write.", "The doctors are writing."],
-              POL: "Lekarze piszą.",
-            },
-            {
-              ENG: ["The doctors write.", "The doctors are writing."],
-              POL: "Lekarki piszą.",
-            },
-            {
-              ENG: [
-                "The doctor wrote.",
-                "The doctor has written.",
-                "The doctor had written.",
-              ],
-              POL: "Lekarz napisał.",
-            },
-            {
-              ENG: [
-                "The doctor wrote.",
-                "The doctor has written.",
-                "The doctor had written.",
-              ],
-              POL: "Lekarka napisała.",
-            },
-            {
-              ENG: [
-                "The doctors wrote.",
-                "The doctors have written.",
-                "The doctors had written.",
-              ],
-              POL: "Lekarze napisali.",
-            },
-            {
-              ENG: [
-                "The doctors wrote.",
-                "The doctors have written.",
-                "The doctors had written.",
-              ],
-              POL: "Lekarki napisały.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    //
-    it.only("#pal18-09e GET 200 YES: Engpol. 'The doctor writes.' stCh specified male", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy63a",
-        })
-        .expect(200)
-        .then((res) => {
-          console.log(res.body);
-          let ref = [
-            {
-              ENG: "The doctor (male) writes.",
-              POL: ["Lekarz pisze."],
-            },
-            {
-              ENG: "The doctors (males) write.",
-              POL: ["Lekarze piszą."],
-            },
-            {
-              ENG: "The doctors (mixed) write.",
-              POL: ["Lekarze piszą."],
-            },
-            {
-              ENG: "The doctor (male) wrote.",
-              POL: ["Lekarz napisał."],
-            },
-            {
-              ENG: "The doctors (males) wrote.",
-              POL: ["Lekarze napisali."],
-            },
-            {
-              ENG: "The doctors (mixed) wrote.",
-              POL: ["Lekarze napisali."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    it("#pal18-09f GET 200 YES: Poleng. 'The doctor writes.' stCh specified male", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy63a",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["The doctor writes.", "The doctor is writing."],
-              POL: "Lekarz pisze.",
-            },
-            {
-              ENG: ["The doctors write.", "The doctors are writing."],
-              POL: "Lekarze piszą.",
-            },
-            {
-              ENG: [
-                "The doctor wrote.",
-                "The doctor has written.",
-                "The doctor had written.",
-              ],
-              POL: "Lekarz napisał.",
-            },
-            {
-              ENG: [
-                "The doctors wrote.",
-                "The doctors have written.",
-                "The doctors had written.",
-              ],
-              POL: "Lekarze napisali.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    //
-    it("#pal18-10a GET 200 YES: Engpol. 'They are red.'", () => {
+    it("#pal18-09a GET 200 YES: Engpol. 'They are red.'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -705,7 +706,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal18-10b GET 200 YES: Engpol. 'They are red.' PDS", () => {
+    it("#pal18-09b GET 200 YES: Engpol. 'They are red.' PDS", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -750,7 +751,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal18-10c GET 200 YES: Poleng. 'They are red.'", () => {
+    it("#pal18-09c GET 200 YES: Poleng. 'They are red.'", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -793,7 +794,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal18-10d GET 200 YES: Poleng. 'They are red.' PDS", () => {
+    it("#pal18-09d GET 200 YES: Poleng. 'They are red.' PDS", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 

@@ -442,9 +442,28 @@ exports.correctMGNsBeforeFetchingOutputArray = (
   //4 If stCh has gender, then filter down so only the ones present in convertedLObjMetagenderArr remain.
   //  and if it doesn't have gender, set it as that.
   if (structureChunk.gender && structureChunk.gender.length) {
+    //First adjust virility, so arr ["m"] when number plural doesn't get filtered to [].
+
+    console.log("wwee structureChunk.gender was", structureChunk.gender);
+
+    allLangUtils.adjustVirilityOfStructureChunk(
+      currentLanguage,
+      structureChunk
+    );
+
+    console.log("wwee structureChunk.gender now", structureChunk.gender);
+
     structureChunk.gender = structureChunk.gender.filter((genderTraitValue) =>
       convertedLObjMetagenderArr.includes(genderTraitValue)
     );
+
+    console.log("wwee structureChunk.gender finally", structureChunk.gender);
+
+    if (!structureChunk.gender.length) {
+      consol.throw(
+        `wppo Now the gender array on stCh is empty, where it wasn't before.`
+      );
+    }
   } else {
     structureChunk.gender = convertedLObjMetagenderArr.slice(0);
   }
@@ -453,4 +472,6 @@ exports.correctMGNsBeforeFetchingOutputArray = (
     `wpon correctMGNsBeforeFetchingOutputArray. ${structureChunk.chunkId} ${currentLanguage}. stCh ENDS as:`,
     structureChunk
   );
+
+  // consol.throw(222);
 };
