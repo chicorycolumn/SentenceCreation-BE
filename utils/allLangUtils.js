@@ -104,15 +104,20 @@ exports.adjustVirilityOfStructureChunk = (
     return;
   }
 
-  if (/^all/.test(gender[0])) {
-    if (gender.length !== 1) {
-      consol.throw(
-        `#ERR vcvl ALL:a'djustVirilityOfStructureChunk. Gender traitKeys arr contained a metaGender traitKey, that's fine, but it contained other traitKeys too? That's too much. "${gender.toString()}"`
-      );
+  let metaTranslatedGenderArr = [];
+  gender.forEach((genderValue) => {
+    if (/^all/.test(genderValue)) {
+      metaTranslatedGenderArr = [
+        ...metaTranslatedGenderArr,
+        ...refObj.metaTraitValues[currentLanguage]["gender"][genderValue],
+      ];
+    } else {
+      metaTranslatedGenderArr.push(genderValue);
     }
+  });
+  gender = Array.from(new Set(metaTranslatedGenderArr));
 
-    gender = refObj.metaTraitValues[currentLanguage]["gender"][gender];
-  }
+  console.log("cecc gender after translating metas", gender);
 
   let newGenderTraitKeys = [];
 

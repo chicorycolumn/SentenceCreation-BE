@@ -85,6 +85,11 @@ exports.metaCorrectionRef = {
   },
 };
 
+// exports.gendersByNumber = {
+//   singular: ["m", "n", "f", "m1", "m2", "m3"],
+//   plural: ["virile", "nonvirile"],
+// };
+
 exports.metaTraitValues = {
   ENG: {
     gender: {
