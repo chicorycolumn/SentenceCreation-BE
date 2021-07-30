@@ -378,7 +378,7 @@ describe("/api", function () {
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy63a",
+          sentenceFormulaSymbol: "dummy63b",
         })
         .expect(200)
         .then((res) => {
@@ -419,26 +419,14 @@ describe("/api", function () {
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy63a",
+          sentenceFormulaSymbol: "dummy63b",
         })
         .expect(200)
         .then((res) => {
           let ref = [
             {
-              ENG: ["The doctor writes.", "The doctor is writing."],
-              POL: "Lekarz pisze.",
-            },
-            {
               ENG: ["The doctors write.", "The doctors are writing."],
-              POL: "Lekarze piszą.",
-            },
-            {
-              ENG: [
-                "The doctor wrote.",
-                "The doctor has written.",
-                "The doctor had written.",
-              ],
-              POL: "Lekarz napisał.",
+              POL: "Lekarki piszą.",
             },
             {
               ENG: [
@@ -446,7 +434,7 @@ describe("/api", function () {
                 "The doctors have written.",
                 "The doctors had written.",
               ],
-              POL: "Lekarze napisali.",
+              POL: "Lekarki napisały.",
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
