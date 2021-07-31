@@ -108,21 +108,6 @@ exports.selectWordVersions = (
         subsequentOutputUnit.structureChunk,
     });
 
-    // if (
-    //   subsequentOutputUnit.structureChunk.number &&
-    //   subsequentOutputUnit.structureChunk.number.includes("plural")
-    // ) {
-    //   if (subsequentOutputUnit.structureChunk.number.length > 1) {
-    //     consol.throw(
-    //       "#ERR pudk selectWordVersions. subsequentOutputUnit.structureChunk.number had length over 1."
-    //     );
-    //   }
-    //   consol.log(
-    //     "fzxm selectWordVersions skipping pushSelectedWordToArray as plural noun means no indefinite article."
-    //   );
-    //   return true;
-    // }
-
     if (
       !subsequentOutputUnit.selectedWord.surprisinglyStartsWithConsonantSound &&
       (subsequentOutputUnit.selectedWord.surprisinglyStartsWithVowelSound ||
