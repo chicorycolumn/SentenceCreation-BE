@@ -283,6 +283,8 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
       false,
       true
     );
+
+    langUtils.balanceGenders(structureChunk);
   });
 };
 

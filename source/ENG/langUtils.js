@@ -31,7 +31,6 @@ const have = {
   future: "will have",
   conditional: "would have",
 };
-
 let inflectionRef = {
   person: ["1per", "2per", "3per"],
   number: ["singular", "plural"],
@@ -51,6 +50,8 @@ let inflectionRef = {
     "imperative",
   ],
 };
+
+exports.balanceGenders = () => {};
 
 exports.selectWordVersions = (
   structureChunk,
