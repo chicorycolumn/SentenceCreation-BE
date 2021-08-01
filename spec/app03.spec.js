@@ -24,7 +24,7 @@ describe("/api", function () {
     "ENG"
   );
 
-  xdescribe("/palette - Stage 18b.", () => {
+  describe.only("/palette - Stage 18b.", () => {
     it("#pal18-10a GET 200 YES: Engpol. 'The doctor writes.'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -271,7 +271,7 @@ describe("/api", function () {
           );
         });
     });
-    xit("#pal18-11a GET 200 YES: Engpol. 'The doctor writes.' stCh specified male", () => {
+    it("#pal18-11a GET 200 YES: Engpol. 'The doctor writes.' stCh specified male", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -320,7 +320,7 @@ describe("/api", function () {
           );
         });
     });
-    xit("#pal18-11c GET 200 YES: Poleng. 'The doctor writes.' stCh specified male", () => {
+    it("#pal18-11c GET 200 YES: Poleng. 'The doctor writes.' stCh specified male", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -368,7 +368,7 @@ describe("/api", function () {
           );
         });
     });
-    xit("#pal18-12a GET 200 YES: Engpol. 'The doctor writes.' stCh specified nonvirile", () => {
+    it.only("#pal18-12a GET 200 YES: Engpol. 'The doctor writes.' stCh specified nonvirile", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -394,11 +394,11 @@ describe("/api", function () {
             },
             {
               ENG: "The doctors (females) write.",
-              POL: ["Lekarze piszą."],
+              POL: ["Lekarki piszą."],
             },
             {
               ENG: "The doctors (females) wrote.",
-              POL: ["Lekarze napisali."],
+              POL: ["Lekarki napisały."],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(

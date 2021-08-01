@@ -1014,7 +1014,7 @@ describe("/api", function () {
           );
         });
     });
-    it.only("#pal14-04a GET 200 YES: Engpol. The doctor gave me her book. Gender annotation is added when there's no AOC, because pronoun is 'their' so doesn't reveal gender. However in singular, the pronouns 'her' and 'his' reveal the gender (are AOCs) so no gender annotation.", () => {
+    it("#pal14-04a GET 200 YES: Engpol. The doctor gave me her book. Gender annotation is added when there's no AOC, because pronoun is 'their' so doesn't reveal gender. However in singular, the pronouns 'her' and 'his' reveal the gender (are AOCs) so no gender annotation.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 

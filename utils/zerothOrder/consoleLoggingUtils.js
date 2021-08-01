@@ -11,31 +11,31 @@ exports.log = (...args) => {
 };
 
 exports.logSpecial1 = (...args) => {
-  if (process.argv[0].split("r").includes("1")) {
+  if (process.argv[process.argv.length - 1].split("r").includes("1")) {
     console.log(...args);
   }
 };
 
 exports.logSpecial2 = (...args) => {
-  if (process.argv[0].split("r").includes("2")) {
+  if (process.argv[process.argv.length - 1].split("r").includes("2")) {
     console.log(...args);
   }
 };
 
 exports.logSpecial3 = (...args) => {
-  if (process.argv[0].split("r").includes("3")) {
+  if (process.argv[process.argv.length - 1].split("r").includes("3")) {
     console.log(...args);
   }
 };
 
 exports.logSpecial4 = (...args) => {
-  if (process.argv[0].split("r").includes("4")) {
+  if (process.argv[process.argv.length - 1].split("r").includes("4")) {
     console.log(...args);
   }
 };
 
 exports.logSpecial5 = (...args) => {
-  if (process.argv[0].split("r").includes("5")) {
+  if (process.argv[process.argv.length - 1].split("r").includes("5")) {
     console.log(...args);
   }
 };

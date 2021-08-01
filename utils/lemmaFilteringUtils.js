@@ -803,12 +803,15 @@ exports.filterBySelector_inner = (
     structureChunk
   );
 
-  let requirementArray =
-    lfUtils.padOutRequirementArrWithMetaTraitValuesIfNecessary(
-      structureChunk,
-      traitKey,
-      currentLanguage
-    );
+  // let requirementArray =
+  //   lfUtils.padOutRequirementArrWithMetaTraitValuesIfNecessary(
+  //     structureChunk,
+  //     traitKey,
+  //     currentLanguage
+  //   );
+  let requirementArray = structureChunk[traitKey] || [];
+
+  let metaTraitValueRef = refObj.metaTraitValues[currentLanguage][traitKey];
 
   consol.log("wdet filterBySelector_inner. requirementArray", requirementArray);
 
@@ -819,18 +822,18 @@ exports.filterBySelector_inner = (
 
       consol.log("wdeu lObjSelectorValues", lObjSelectorValues);
 
+      //ADJUST VIRILITY OF LOBJ VALUES
+      //Vito3: Does not change stCh.
+      //Filtering lObjs by selector (eg "gender", "aspect").
+      //Say lObj has gender "f", but reqArr has "nonvirile" - lObj wouldn't pass the filter, but it should.
+      //So add virility values to temporary lObjSelectorValues variable that stands for selectors on the lObj.
+      //Now lObj stand-in has genders "f" and "nonvirile" also, so passes filter.
       if (traitKey === "gender") {
         structureChunk.number.forEach((numberKey) => {
           let extraVirilityConvertedValues =
             refObj.virilityConversionRef[currentLanguage][numberKey][
               lObj[traitKey]
             ];
-
-          //Vito3: Does not change stCh.
-          //Filtering lObjs by selector (eg "gender", "aspect").
-          //Say lObj has gender "f", but reqArr has "nonvirile" - lObj wouldn't pass the filter, but it should.
-          //So add virility values to temporary lObjSelectorValues variable that stands for selectors on the lObj.
-          //Now lObj stand-in has genders "f" and "nonvirile" also, so passes filter.
 
           consol.log({
             currentLanguage,
@@ -852,7 +855,27 @@ exports.filterBySelector_inner = (
         });
       }
 
-      consol.log("wdev . lObjSelectorValues", lObjSelectorValues);
+      //ADJUST META OF LOBJ VALUES
+      //stCh could have gender "m", but that would fail to select lObj ENG doctor with gender "allPersonalGenders".
+      //So add the translations of the lObj's metagender to its lObjSelectorValues arr.
+      lObjSelectorValues.forEach((lObjSelectorValue) => {
+        if (gpUtils.traitValueIsMeta(lObjSelectorValue)) {
+          if (!metaTraitValueRef) {
+            consol.throw(
+              `diof I am to translate this meta value "${lObjSelectorValue}" for "${currentLanguage}" traitKey "${traitKey}" but no such translation ref?`
+            );
+          }
+
+          let translatedMetaValues = metaTraitValueRef[lObjSelectorValue];
+
+          lObjSelectorValues = [...lObjSelectorValues, ...translatedMetaValues];
+        }
+      });
+
+      consol.log(
+        "wdev filterBySelector_inner lObjSelectorValues after adjustments for virility if applicable, and for meta",
+        lObjSelectorValues
+      );
 
       return lObjSelectorValues.some((lObjSelectorValue) =>
         requirementArray.includes(lObjSelectorValue)
