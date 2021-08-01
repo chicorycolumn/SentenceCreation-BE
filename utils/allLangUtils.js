@@ -117,7 +117,7 @@ exports.adjustVirilityOfStructureChunk = (
   });
   gender = Array.from(new Set(metaTranslatedGenderArr));
 
-  console.log("cecc gender after translating metas", gender);
+  consol.logSpecial4("cecc gender after translating metas", gender);
 
   let newGenderTraitKeys = [];
 
@@ -449,20 +449,23 @@ exports.correctMGNsBeforeFetchingOutputArray = (
   if (structureChunk.gender && structureChunk.gender.length) {
     //First adjust virility, so arr ["m"] when number plural doesn't get filtered to [].
 
-    console.log("wwee structureChunk.gender was", structureChunk.gender);
+    consol.logSpecial4("wwee structureChunk.gender was", structureChunk.gender);
 
     allLangUtils.adjustVirilityOfStructureChunk(
       currentLanguage,
       structureChunk
     );
 
-    console.log("wwee structureChunk.gender now", structureChunk.gender);
+    consol.logSpecial4("wwee structureChunk.gender now", structureChunk.gender);
 
     structureChunk.gender = structureChunk.gender.filter((genderTraitValue) =>
       convertedLObjMetagenderArr.includes(genderTraitValue)
     );
 
-    console.log("wwee structureChunk.gender finally", structureChunk.gender);
+    consol.logSpecial4(
+      "wwee structureChunk.gender finally",
+      structureChunk.gender
+    );
 
     if (!structureChunk.gender.length) {
       consol.throw(

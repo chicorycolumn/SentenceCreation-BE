@@ -24,7 +24,7 @@ describe("/api", function () {
     "ENG"
   );
 
-  describe.only("/palette - Stage 18b.", () => {
+  xdescribe("/palette - Stage 18b.", () => {
     it("#pal18-10a GET 200 YES: Engpol. 'The doctor writes.'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -271,7 +271,7 @@ describe("/api", function () {
           );
         });
     });
-    it.only("#pal18-11a GET 200 YES: Engpol. 'The doctor writes.' stCh specified male", () => {
+    xit("#pal18-11a GET 200 YES: Engpol. 'The doctor writes.' stCh specified male", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
