@@ -24,7 +24,7 @@ describe("/api", function () {
     "ENG"
   );
 
-  describe.only("/palette - Stage 18b.", () => {
+  describe("/palette - Stage 18b.", () => {
     it("#pal18-10a GET 200 YES: Engpol. 'The doctor writes.'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -831,6 +831,7 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
+          console.log(res.body);
           let ref = [
             {
               ENG: ["He is red.", "He is being red."],

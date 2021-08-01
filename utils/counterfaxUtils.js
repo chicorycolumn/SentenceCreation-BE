@@ -308,7 +308,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
   //Abortcuts for this fxn: Search ACX.
 
-  let shouldConsoleLog = false;
   let questionLanguage = languagesObj.questionLanguage;
 
   let questionOutputArrObj = {
@@ -398,7 +397,13 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       //Then exit both loops.
       //Then send off to fetchPalette.
 
+      let shouldDrop;
+
       counterfactualSitSchematic.chunkIds.forEach((chunkId) => {
+        if (shouldDrop) {
+          return;
+        }
+
         let stChToCounterfax =
           counterfactualQuestionSentenceFormula.sentenceStructure.find(
             (structureChunk) => structureChunk.chunkId === chunkId
@@ -417,6 +422,41 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         counterfactualSitSchematic[chunkId].forEach((assignment) => {
           stChToCounterfax[assignment.traitKey] = [assignment.traitValue];
         });
+
+        console.log(">>>", stChToCounterfax);
+
+        counterfactualSitSchematic[chunkId].forEach((assignment) => {
+          if (
+            assignment.traitKey === "gender" &&
+            stChToCounterfax.number &&
+            stChToCounterfax.number.length
+          ) {
+            console.log(311);
+            if (stChToCounterfax.number.length > 1) {
+              consol.throw("mkdo");
+            }
+
+            let incompatibleTraitsRef =
+              refObj.incompatibleTraitsRef[questionLanguage].gender.number;
+
+            if (
+              !incompatibleTraitsRef[stChToCounterfax.number[0]].includes(
+                stChToCounterfax.gender[0]
+              )
+            ) {
+              // consol.logSpecial3(
+              console.log(
+                `kcaq Dropping current counterfax sit: "${counterfactualSitSchematic.cfLabel}" ie not send to fetchPalette, 
+                as it has gender [${stChToCounterfax.number}] and number [${stChToCounterfax.gender[0]}].`
+              );
+              shouldDrop = true;
+            }
+          }
+        });
+
+        if (shouldDrop) {
+          return;
+        }
 
         consol.logSpecial3("--------eggd--------");
 
@@ -497,13 +537,17 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         });
       });
 
+      if (shouldDrop) {
+        return;
+      }
+
       //Make cfLabel again now that counterfactualSitSchematic assignments may have changed.
       let newCfLabel = cfUtils.makeCfLabelFromSitSchematic(
         counterfactualSitSchematic
       );
       if (counterfactualSitSchematic.cfLabel !== newCfLabel) {
         consol.logSpecial3(
-          `ncui Changing cfLabel from "${counterfactualSitSchematic.cfLabel}" to "${newCfLabel}"`
+          `ncuo Changing cfLabel from "${counterfactualSitSchematic.cfLabel}" to "${newCfLabel}"`
         );
         counterfactualSitSchematic.cfLabel = newCfLabel;
       }
@@ -1100,6 +1144,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       }
     }
   );
+  console.log("swde");
 };
 
 exports.agglomerateAndRemoveAnnosIfSameResults = (
