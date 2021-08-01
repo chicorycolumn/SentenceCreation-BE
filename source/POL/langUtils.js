@@ -11,12 +11,11 @@ const allLangUtils = require("../../utils/allLangUtils.js");
 exports.balanceGenders = (structureChunk) => {
   if (structureChunk.gender) {
     if (
-      ["m1", "m2", "m3"].every((mascGen) =>
+      ["m1", "m2", "m3", "f"].every((mascGen) =>
         structureChunk.gender.includes(mascGen)
       )
     ) {
-      structureChunk.gender.push("f");
-      structureChunk.gender.push("f");
+      structureChunk.gender.push("f", "f");
     }
   }
 };
@@ -136,6 +135,8 @@ exports.preprocessStructureChunks = (structureChunk) => {
       structureChunk.gender.forEach((gender) => {
         if (gender === "m") {
           adjustedGenderArray.push("m1", "m2", "m3");
+        } else {
+          adjustedGenderArray.push(gender);
         }
       });
 
