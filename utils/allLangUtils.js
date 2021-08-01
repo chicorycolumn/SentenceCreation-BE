@@ -34,11 +34,12 @@ exports.adjustVirilityOfStructureChunk = (
   currentLanguage,
   structureChunk,
   isPreProcessing,
-  justOneValue
+  justOneGenderValue,
+  justOneNumberValue
 ) => {
   //Adds the virility gender values. Eg if number includes "plural", then gender ["f"] would become ["f", "nonvirile"]
 
-  //Unless you true justOneValue, in which case if number singular and gender nonvirile, it would
+  //Unless you true justOneGenderValue, in which case if number singular and gender nonvirile, it would
   //randomly choose either f or n. This is used in counterfaxing, because by that point, the list and explode of
   //counterfax situations means that all gender values and all number values have been exploded together.
   //So you don't to worry about leaving n out in the cold when f is randomly chosen to translate nonvirile for singular,
@@ -58,20 +59,20 @@ exports.adjustVirilityOfStructureChunk = (
     structureChunk
   );
 
-  if (
-    !justOneValue &&
-    isPreProcessing &&
-    gpUtils.getWordtypeStCh(structureChunk) === "noun" &&
-    structureChunk.number &&
-    structureChunk.number.includes("plural")
-  ) {
-    // Because m -> plural -> virile and then trying to select Ojciec, which isn't virile, it's m, so will ERR later.
-    return;
-  }
+  // if (
+  //   !justOneGenderValue &&
+  //   isPreProcessing &&
+  //   gpUtils.getWordtypeStCh(structureChunk) === "noun" &&
+  //   structureChunk.number &&
+  //   structureChunk.number.includes("plural")
+  // ) {
+  //   // Because m -> plural -> virile and then trying to select Ojciec, which isn't virile, it's m, so will ERR later.
+  //   return;
+  // }
 
   let { gender, number } = structureChunk;
 
-  if (!justOneValue && (!number || !number.includes("plural"))) {
+  if (!justOneGenderValue && !number) {
     consol.log(
       "clsq ALL a'djustVirilityOfStructureChunk Aborting because Number"
     );
@@ -87,9 +88,9 @@ exports.adjustVirilityOfStructureChunk = (
 
   let virilityConversionRef = refObj.virilityConversionRef[currentLanguage];
 
-  if (justOneValue) {
+  if (justOneGenderValue) {
     let newGenderTraitValue =
-      virilityConversionRef.justOneValue[number[0]][gender[0]];
+      virilityConversionRef.justOneGenderValue[number[0]][gender[0]];
 
     gender.length = 0;
     gender.push(newGenderTraitValue);
@@ -150,6 +151,27 @@ exports.adjustVirilityOfStructureChunk = (
       "[0m",
     structureChunk
   );
+
+  if (justOneNumberValue) {
+    let virilityRef = refObj.virilityConversionRef[currentLanguage];
+
+    if (structureChunk.gender.length > 1) {
+      return;
+    }
+
+    let numberFromGender = Object.keys(virilityRef).find(
+      (numberTraitValue) =>
+        virilityRef[numberTraitValue].allValues &&
+        structureChunk.gender.every((genderTraitValue) =>
+          virilityRef[numberTraitValue].allValues.includes(genderTraitValue)
+        )
+    );
+    if (!numberFromGender) {
+      consol.throw("fivk");
+    }
+    structureChunk.number = [numberFromGender];
+  }
+  console.log("swde2");
 };
 
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
@@ -258,9 +280,12 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
     allLangUtils.adjustVirilityOfStructureChunk(
       currentLanguage,
       structureChunk,
+      true,
+      false,
       true
     );
   });
+  console.log("swde");
 };
 
 exports.convertmetaTraitValues = (
@@ -443,6 +468,7 @@ exports.correctMGNsBeforeFetchingOutputArray = (
   //3 Now convert that. let convertedLObjMetagenderArr = ["m1", "f"]
   let convertedLObjMetagenderArr =
     refObj.metaTraitValues[currentLanguage]["gender"][lObjMetagender];
+  consol.log("tctt convertedLObjMetagenderArr", convertedLObjMetagenderArr);
 
   //4 If stCh has gender, then filter down so only the ones present in convertedLObjMetagenderArr remain.
   //  and if it doesn't have gender, set it as that.

@@ -368,7 +368,7 @@ describe("/api", function () {
           );
         });
     });
-    it.only("#pal18-12a GET 200 YES: Engpol. 'The doctor writes.' stCh specified nonvirile", () => {
+    it("#pal18-12a GET 200 YES: Engpol. 'The doctor writes.' stCh specified nonvirile", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -384,14 +384,6 @@ describe("/api", function () {
         .then((res) => {
           console.log(res.body);
           let ref = [
-            {
-              ENG: "The doctors (mixed) write.",
-              POL: ["Lekarze piszą."],
-            },
-            {
-              ENG: "The doctors (mixed) wrote.",
-              POL: ["Lekarze napisali."],
-            },
             {
               ENG: "The doctors (females) write.",
               POL: ["Lekarki piszą."],

@@ -31,6 +31,7 @@ exports.tenseDescriptionTranslation = {
 exports.virilityConversionRef = {
   ENG: {
     singular: {
+      allValues: ["m", "f", "n"],
       m: ["m"],
       f: ["f"],
       n: ["n"],
@@ -38,6 +39,7 @@ exports.virilityConversionRef = {
       nonvirile: ["f", "n"],
     },
     plural: {
+      allValues: ["virile", "nonvirile"],
       m: ["virile"],
       f: ["nonvirile"],
       n: ["nonvirile"],
@@ -51,7 +53,7 @@ exports.virilityConversionRef = {
       virile: ["virile", "m"],
       nonvirile: ["nonvirile", "f", "n"],
     },
-    justOneValue: {
+    justOneGenderValue: {
       singular: {
         m: "m",
         f: "f",
@@ -70,6 +72,7 @@ exports.virilityConversionRef = {
   },
   POL: {
     singular: {
+      allValues: ["m", "m1", "m2", "m3", "f", "n"],
       m: ["m"],
       m1: ["m1"],
       m2: ["m2"],
@@ -80,6 +83,7 @@ exports.virilityConversionRef = {
       nonvirile: ["m2", "m3", "f", "n"],
     },
     plural: {
+      allValues: ["virile", "nonvirile"],
       m: ["virile"],
       m1: ["virile"],
       m2: ["nonvirile"],
@@ -99,7 +103,7 @@ exports.virilityConversionRef = {
       virile: ["virile", "m", "m1"],
       nonvirile: ["nonvirile", "f", "n", "m2", "m3"],
     },
-    justOneValue: {
+    justOneGenderValue: {
       singular: {
         m: "m",
         m1: "m1",
