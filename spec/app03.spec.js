@@ -285,7 +285,6 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
-          console.log(res.body);
           let ref = [
             {
               ENG: "The doctor (male) writes.",
@@ -382,7 +381,6 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
-          console.log(res.body);
           let ref = [
             {
               ENG: "The doctors (females) write.",
@@ -401,7 +399,7 @@ describe("/api", function () {
           );
         });
     });
-    xit("#pal18-12c GET 200 YES: Poleng. 'The doctor writes.' stCh specified nonvirile", () => {
+    it("#pal18-12c GET 200 YES: Poleng. 'The doctor writes.' stCh specified nonvirile", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -4034,8 +4032,6 @@ function checkSentenceTranslations(
       (array) => array[questionLanguage]
     );
   }
-
-  consol.log(res.body);
 
   let questionSentence = body.questionSentenceArr[0];
   let { answerSentenceArr } = body;

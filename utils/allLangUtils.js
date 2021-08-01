@@ -171,7 +171,6 @@ exports.adjustVirilityOfStructureChunk = (
     }
     structureChunk.number = [numberFromGender];
   }
-  console.log("swde2");
 };
 
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
@@ -285,7 +284,6 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
       true
     );
   });
-  console.log("swde");
 };
 
 exports.convertmetaTraitValues = (
