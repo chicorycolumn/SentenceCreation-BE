@@ -1513,4 +1513,15 @@ exports.dummySentenceFormulasBank = [
     ],
     primaryOrders: [["art-1", "npe-1-doctor", "ver-1-write"]],
   },
+  {
+    sentenceFormulaSymbol: "dummy64a",
+    sentenceFormulaId: "ENG-dummy64a",
+    translations: { POL: ["POL-dummy64a"] },
+    sentenceStructure: [
+      //I have a book (f) and will read it.
+      //I have a magazine (n) and will read it.
+      //I have an essay (m) and will read it.
+    ],
+    primaryOrders: [[]],
+  },
 ];

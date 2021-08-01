@@ -24,6 +24,8 @@ describe("/api", function () {
     "ENG"
   );
 
+  describe("/palette - Stage 19: Step-L: Pronoun translation of gendered objects eg Książka and Stół.", () => {});
+
   describe("/palette - Stage 18C: Further annotations.", () => {
     it("#pal18-10a GET 200 YES: Engpol. 'The doctor writes.'", () => {
       const questionLanguage = "ENG";
