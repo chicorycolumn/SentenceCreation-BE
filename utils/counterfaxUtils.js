@@ -423,15 +423,13 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           stChToCounterfax[assignment.traitKey] = [assignment.traitValue];
         });
 
-        console.log(">>>", stChToCounterfax);
-
+        //Drop if bad virility combination.
         counterfactualSitSchematic[chunkId].forEach((assignment) => {
           if (
             assignment.traitKey === "gender" &&
             stChToCounterfax.number &&
             stChToCounterfax.number.length
           ) {
-            console.log(311);
             if (stChToCounterfax.number.length > 1) {
               consol.throw("mkdo");
             }
@@ -445,7 +443,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
               )
             ) {
               // consol.logSpecial3(
-              console.log(
+              consol.logSpecial3(
                 `kcaq Dropping current counterfax sit: "${counterfactualSitSchematic.cfLabel}" ie not send to fetchPalette, 
                 as it has gender [${stChToCounterfax.number}] and number [${stChToCounterfax.gender[0]}].`
               );
@@ -1144,7 +1142,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       }
     }
   );
-  console.log("swde");
 };
 
 exports.agglomerateAndRemoveAnnosIfSameResults = (

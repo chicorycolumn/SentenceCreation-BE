@@ -1421,7 +1421,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal06-06a GET 200 YES: Battery RSWAT Poleng. Ensure feminine and masculine are randomly selected at ~50/50 rate, despite there being thrice as many masculine genders as feminine.", () => {
+    it("#pal06-06 GET 200 YES: Battery RSWAT Poleng. Ensure feminine and masculine are randomly selected at ~50/50 rate, despite there being thrice as many masculine genders as feminine.", () => {
       return Promise.all([
         testOnce(),
         testOnce(),

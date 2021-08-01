@@ -1027,7 +1027,6 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
-          console.log(res.body);
           let ref = [
             {
               ENG: "The doctor gave me her book.",

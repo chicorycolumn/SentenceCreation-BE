@@ -1463,4 +1463,54 @@ exports.dummySentenceFormulasBank = [
     ],
     primaryOrders: [["art-1", "npe-1-doctor", "ver-1-write"]],
   },
+  {
+    sentenceFormulaSymbol: "dummy63c",
+    sentenceFormulaId: "ENG-dummy63c",
+    translations: { POL: ["POL-dummy63c"] },
+    sentenceStructure: [
+      {
+        chunkId: "art-1",
+        form: ["definite"],
+        agreeWith: "npe-1-doctor",
+      },
+      {
+        chunkId: "npe-1-doctor",
+        specificLemmas: ["doctor"],
+        gender: ["f"],
+        formulaImportantTraitKeys: ["gender"],
+        number: ["plural"],
+      },
+      {
+        chunkId: "ver-1-write",
+        specificLemmas: ["write"],
+        agreeWith: "npe-1-doctor",
+        tenseDescription: ["present simple", "past simple"],
+      },
+    ],
+    primaryOrders: [["art-1", "npe-1-doctor", "ver-1-write"]],
+  },
+  {
+    sentenceFormulaSymbol: "dummy63d",
+    sentenceFormulaId: "ENG-dummy63d",
+    translations: { POL: ["POL-dummy63d"] },
+    sentenceStructure: [
+      {
+        chunkId: "art-1",
+        form: ["definite"],
+        agreeWith: "npe-1-doctor",
+      },
+      {
+        chunkId: "npe-1-doctor",
+        specificLemmas: ["doctor"],
+        gender: ["virile"],
+      },
+      {
+        chunkId: "ver-1-write",
+        specificLemmas: ["write"],
+        agreeWith: "npe-1-doctor",
+        tenseDescription: ["present simple", "past simple"],
+      },
+    ],
+    primaryOrders: [["art-1", "npe-1-doctor", "ver-1-write"]],
+  },
 ];

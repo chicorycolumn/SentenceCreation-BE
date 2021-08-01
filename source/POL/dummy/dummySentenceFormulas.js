@@ -2160,4 +2160,44 @@ exports.dummySentenceFormulasBank = [
     ],
     primaryOrders: [["npe-1-doctor", "ver-1-write"]],
   },
+  {
+    sentenceFormulaSymbol: "dummy63c",
+    sentenceFormulaId: "POL-dummy63c",
+    translations: { ENG: ["ENG-dummy63c"] },
+    sentenceStructure: [
+      {
+        chunkId: "npe-1-doctor",
+        specificLemmas: ["lekarz", "lekarka"],
+        gender: ["f"],
+        formulaImportantTraitKeys: ["gender"],
+        number: ["plural"],
+      },
+      {
+        chunkId: "ver-1-write",
+        specificLemmas: ["pisać", "napisać"],
+        agreeWith: "npe-1-doctor",
+        tenseDescription: ["present im", "past pf"],
+      },
+    ],
+    primaryOrders: [["npe-1-doctor", "ver-1-write"]],
+  },
+  {
+    sentenceFormulaSymbol: "dummy63d",
+    sentenceFormulaId: "POL-dummy63d",
+    translations: { ENG: ["ENG-dummy63d"] },
+    sentenceStructure: [
+      {
+        chunkId: "npe-1-doctor",
+        specificLemmas: ["lekarz", "lekarka"],
+        gender: ["virile"],
+      },
+      {
+        chunkId: "ver-1-write",
+        specificLemmas: ["pisać", "napisać"],
+        agreeWith: "npe-1-doctor",
+        tenseDescription: ["present im", "past pf"],
+      },
+    ],
+    primaryOrders: [["npe-1-doctor", "ver-1-write"]],
+  },
 ];
