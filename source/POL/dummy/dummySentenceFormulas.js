@@ -2205,9 +2205,11 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "POL-dummy64a",
     translations: { ENG: ["ENG-dummy64a"] },
     sentenceStructure: [
-      //I have a book (f) and will read it.
-      //I have a magazine (n) and will read it.
-      //I have an essay (m) and will read it.
+      //There's a man and I see him.
+      //There's a woman and I see her.
+      //There's an apple and I see it.
+      //There's an onion and I see it. (not her)
+      //There's a tomato and I see it. (not him)
     ],
     primaryOrders: [[]],
   },

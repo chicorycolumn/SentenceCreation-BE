@@ -1518,10 +1518,97 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "ENG-dummy64a",
     translations: { POL: ["POL-dummy64a"] },
     sentenceStructure: [
-      //I have a book (f) and will read it.
-      //I have a magazine (n) and will read it.
-      //I have an essay (m) and will read it.
+      { chunkId: "fix-1-There's", chunkValue: "there's" },
+      { chunkId: "art-1-A", form: ["indefinite"], agreeWith: "npe-1-Woman" },
+      {
+        chunkId: "npe-1-Woman",
+        specificLemmas: ["woman", "man"],
+        number: ["singular"],
+      },
+      { chunkId: "fix-2-And", chunkValue: "and" },
+      {
+        chunkId: "pro-1-I",
+        specificLemmas: ["PERSONAL"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-See",
+        agreeWith: "pro-1-I",
+        specificLemmas: ["see"],
+        tenseDescription: ["present simple"],
+      },
+      {
+        chunkId: "pro-2-Her",
+        specificLemmas: ["PERSONAL"],
+        agreeWith: "npe-1-Woman",
+        gcase: ["acc"],
+      },
+      //There's a man and I see him.
+      //There's a woman and I see her.
+      //There's an apple and I see it.
+      //There's an onion and I see it. (not her)
+      //There's a tomato and I see it. (not him)
     ],
-    primaryOrders: [[]],
+    primaryOrders: [
+      [
+        "fix-1-There's",
+        "art-1-A",
+        "npe-1-Woman",
+        "fix-2-And",
+        "pro-1-I",
+        "ver-1-See",
+        "pro-2-Her",
+      ],
+    ],
+  },
+  {
+    sentenceFormulaSymbol: "dummy64b",
+    sentenceFormulaId: "ENG-dummy64b",
+    translations: { POL: ["POL-dummy64b"] },
+    sentenceStructure: [
+      { chunkId: "fix-1-There's", chunkValue: "there's" },
+      { chunkId: "art-1-A", form: ["indefinite"], agreeWith: "nco-1-Apple" },
+      {
+        chunkId: "nco-1-Apple",
+        specificLemmas: ["apple", "onion", "tomato"],
+        number: ["singular"],
+      },
+      { chunkId: "fix-2-And", chunkValue: "and" },
+      {
+        chunkId: "pro-1-I",
+        specificLemmas: ["PERSONAL"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-See",
+        agreeWith: "pro-1-I",
+        specificLemmas: ["see"],
+        tenseDescription: ["present simple"],
+      },
+      {
+        chunkId: "pro-2-It",
+        specificLemmas: ["PERSONAL"],
+        agreeWith: "nco-1-Apple",
+        gcase: ["acc"],
+      },
+      //There's a man and I see him.
+      //There's a woman and I see her.
+      //There's an apple and I see it.
+      //There's an onion and I see it. (not her)
+      //There's a tomato and I see it. (not him)
+    ],
+    primaryOrders: [
+      [
+        "fix-1-There's",
+        "art-1-A",
+        "npe-1-Apple",
+        "fix-2-And",
+        "pro-1-I",
+        "ver-1-See",
+        "pro-2-It",
+      ],
+    ],
   },
 ];
