@@ -32,6 +32,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          useDummy: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "dummy64a",
@@ -45,7 +46,7 @@ describe("/api", function () {
             },
             {
               ENG: "There's a boy and I see him.",
-              POL: ["Jest chłopiec i widzę go."],
+              POL: ["Jest chłopiec i widzę go.", "Jest chłopiec i widzę jego."],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -63,6 +64,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          useDummy: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "dummy64a",
@@ -93,10 +95,87 @@ describe("/api", function () {
           );
         });
     });
-    //dummy64b
-    //There's an apple and I see it.
-    //There's an onion and I see it. (not her)
-    //There's a tomato and I see it. (not him)
+    it("#pal19-02a GET 200 YES: Engpol. 'There's an apple and I see it.'", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy64b",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "There's an apple and I see it.",
+              POL: ["Jest jabłko i widzę go.", "Jest jabłko i widzę jego."],
+            },
+            {
+              ENG: "There's an onion and I see it.",
+              POL: ["Jest cebula i widzę ją."],
+            },
+            {
+              ENG: "There's a tomato and I see it.",
+              POL: ["Jest pomidor i widzę go.", "Jest pomidor i widzę jego."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal19-02a GET 200 YES: Poleng. 'There's an apple and I see it.'", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy64b",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: [
+                "There's an apple and I see it.",
+                "There's an apple and I am seeing it.",
+              ],
+              POL: "Jest jabłko i widzę go.",
+            },
+            {
+              ENG: [
+                "There's an onion and I see it.",
+                "There's an onion and I am seeing it.",
+              ],
+              POL: "Jest cebula i widzę ją.",
+            },
+            {
+              ENG: [
+                "There's a tomato and I see it.",
+                "There's a tomato and I am seeing it.",
+              ],
+              POL: "Jest pomidor i widzę go.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
   });
 
   describe("/palette - Stage 18C: Further annotations.", () => {
