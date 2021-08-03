@@ -1603,4 +1603,49 @@ exports.dummySentenceFormulasBank = [
       ],
     ],
   },
+  {
+    sentenceFormulaSymbol: "dummy65a",
+    sentenceFormulaId: "ENG-dummy65a",
+    translations: { POL: ["POL-dummy65a"] },
+    sentenceStructure: [
+      { chunkId: "fix-1-There's", chunkValue: "there's" },
+      { chunkId: "art-1-A", form: ["indefinite"], agreeWith: "nco-1-Dog" },
+      {
+        chunkId: "nco-1-Dog",
+        specificLemmas: ["dog"],
+        number: ["singular"],
+      },
+      { chunkId: "fix-2-And", chunkValue: "and" },
+      {
+        chunkId: "pro-1-I",
+        specificLemmas: ["PERSONAL"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-See",
+        agreeWith: "pro-1-I",
+        specificLemmas: ["see"],
+        tenseDescription: ["present simple"],
+      },
+      {
+        chunkId: "pro-2-It",
+        specificLemmas: ["PERSONAL"],
+        agreeWith: "nco-1-Dog",
+        gcase: ["acc"],
+        formulaImportantTraitKeys: ["gcase"],
+      },
+    ],
+    primaryOrders: [
+      [
+        "fix-1-There's",
+        "art-1-A",
+        "nco-1-Dog",
+        "fix-2-And",
+        "pro-1-I",
+        "ver-1-See",
+        "pro-2-It",
+      ],
+    ],
+  },
 ];

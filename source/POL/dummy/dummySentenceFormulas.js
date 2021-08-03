@@ -2282,4 +2282,45 @@ exports.dummySentenceFormulasBank = [
       ["ver-1-Is", "nco-1-Apple", "fix-2-And", "ver-1-See", "pro-2-It"],
     ],
   },
+  {
+    sentenceFormulaSymbol: "dummy65a",
+    sentenceFormulaId: "POL-dummy65a",
+    translations: { ENG: ["ENG-dummy65a"] },
+    sentenceStructure: [
+      {
+        chunkId: "ver-1-Is",
+        specificLemmas: ["być"],
+        tenseDescription: ["present im"],
+        agreeWith: "nco-1-Dog",
+      },
+      {
+        chunkId: "nco-1-Dog",
+        specificLemmas: ["pies"],
+        number: ["singular"],
+      },
+      { chunkId: "fix-2-And", chunkValue: "i" },
+      {
+        chunkId: "pro-1-I",
+        specificLemmas: ["PERSONAL"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-See",
+        agreeWith: "pro-1-I",
+        specificLemmas: ["widzieć", "zobaczyć"],
+        tenseDescription: ["present im"],
+      },
+      {
+        chunkId: "pro-2-It",
+        specificLemmas: ["PERSONAL"],
+        agreeWith: "nco-1-Dog",
+        gcase: ["acc"],
+        formulaImportantTraitKeys: ["gcase"],
+      },
+    ],
+    primaryOrders: [
+      ["ver-1-Is", "nco-1-Dog", "fix-2-And", "ver-1-See", "pro-2-It"],
+    ],
+  },
 ];
