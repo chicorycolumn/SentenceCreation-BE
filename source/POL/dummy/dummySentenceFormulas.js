@@ -2205,12 +2205,93 @@ exports.dummySentenceFormulasBank = [
     sentenceFormulaId: "POL-dummy64a",
     translations: { ENG: ["ENG-dummy64a"] },
     sentenceStructure: [
-      //There's a man and I see him.
-      //There's a woman and I see her.
-      //There's an apple and I see it.
-      //There's an onion and I see it. (not her)
-      //There's a tomato and I see it. (not him)
+      {
+        chunkId: "ver-1-Is",
+        specificLemmas: ["być"],
+        tenseDescription: ["present im"],
+        agreeWith: "npe-1-Woman",
+      },
+      {
+        chunkId: "npe-1-Woman",
+        specificLemmas: ["kobieta", "chłopiec"],
+        number: ["singular"],
+      },
+      { chunkId: "fix-2-And", chunkValue: "i" },
+      {
+        chunkId: "pro-1-I",
+        specificLemmas: ["PERSONAL"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-See",
+        agreeWith: "pro-1-I",
+        specificLemmas: ["widzieć", "zobaczyć"],
+        tenseDescription: ["present im"],
+      },
+      {
+        chunkId: "pro-2-Her",
+        specificLemmas: ["PERSONAL"],
+        agreeWith: "npe-1-Woman",
+        gcase: ["acc"],
+      },
     ],
-    primaryOrders: [[]],
+    primaryOrders: [
+      [
+        "ver-1-Is",
+        "npe-1-Woman",
+        "fix-2-And",
+        "pro-1-I",
+        "ver-1-See",
+        "pro-2-Her",
+      ],
+    ],
+  },
+  {
+    sentenceFormulaSymbol: "dummy64b",
+    sentenceFormulaId: "POL-dummy64b",
+    translations: { ENG: ["ENG-dummy64b"] },
+    sentenceStructure: [
+      {
+        chunkId: "ver-1-Is",
+        specificLemmas: ["być"],
+        tenseDescription: ["present im"],
+        agreeWith: "nco-1-Apple",
+      },
+      {
+        chunkId: "nco-1-Apple",
+        specificLemmas: ["jabłko", "pomidor", "cebula"],
+        number: ["singular"],
+      },
+      { chunkId: "fix-2-And", chunkValue: "i" },
+      {
+        chunkId: "pro-1-I",
+        specificLemmas: ["PERSONAL"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-See",
+        agreeWith: "pro-1-I",
+        specificLemmas: ["widzieć", "zobaczyć"],
+        tenseDescription: ["present im"],
+      },
+      {
+        chunkId: "pro-2-It",
+        specificLemmas: ["PERSONAL"],
+        agreeWith: "nco-1-Apple",
+        gcase: ["acc"],
+      },
+    ],
+    primaryOrders: [
+      [
+        "ver-1-Is",
+        "nco-1-Apple",
+        "fix-2-And",
+        "pro-1-I",
+        "ver-1-See",
+        "pro-2-It",
+      ],
+    ],
   },
 ];

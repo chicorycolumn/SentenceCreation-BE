@@ -1522,7 +1522,7 @@ exports.dummySentenceFormulasBank = [
       { chunkId: "art-1-A", form: ["indefinite"], agreeWith: "npe-1-Woman" },
       {
         chunkId: "npe-1-Woman",
-        specificLemmas: ["woman", "man"],
+        specificLemmas: ["woman", "boy"],
         number: ["singular"],
       },
       { chunkId: "fix-2-And", chunkValue: "and" },
@@ -1544,11 +1544,6 @@ exports.dummySentenceFormulasBank = [
         agreeWith: "npe-1-Woman",
         gcase: ["acc"],
       },
-      //There's a man and I see him.
-      //There's a woman and I see her.
-      //There's an apple and I see it.
-      //There's an onion and I see it. (not her)
-      //There's a tomato and I see it. (not him)
     ],
     primaryOrders: [
       [
@@ -1593,17 +1588,12 @@ exports.dummySentenceFormulasBank = [
         agreeWith: "nco-1-Apple",
         gcase: ["acc"],
       },
-      //There's a man and I see him.
-      //There's a woman and I see her.
-      //There's an apple and I see it.
-      //There's an onion and I see it. (not her)
-      //There's a tomato and I see it. (not him)
     ],
     primaryOrders: [
       [
         "fix-1-There's",
         "art-1-A",
-        "npe-1-Apple",
+        "nco-1-Apple",
         "fix-2-And",
         "pro-1-I",
         "ver-1-See",

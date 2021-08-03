@@ -24,7 +24,75 @@ describe("/api", function () {
     "ENG"
   );
 
-  describe("/palette - Stage 19: Step-L: Pronoun translation of gendered objects eg Książka and Stół.", () => {});
+  describe("/palette - Stage 19: Step-L: Pronoun translation of gendered objects eg Pomidor/Cebula.", () => {
+    it("#pal19-01a GET 200 YES: Engpol. 'There's a woman and I see her.'", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy64a",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "The doctor (male) writes.",
+              POL: ["Lekarz pisze."],
+            },
+            {
+              ENG: "The doctor (female) writes.",
+              POL: ["Lekarka pisze."],
+            },
+            {
+              ENG: "The doctors (males) write.",
+              POL: ["Lekarze piszą."],
+            },
+            {
+              ENG: "The doctors (mixed) write.",
+              POL: ["Lekarze piszą."],
+            },
+            {
+              ENG: "The doctors (females) write.",
+              POL: ["Lekarki piszą."],
+            },
+            {
+              ENG: "The doctor (male) wrote.",
+              POL: ["Lekarz napisał."],
+            },
+            {
+              ENG: "The doctor (female) wrote.",
+              POL: ["Lekarka napisała."],
+            },
+            {
+              ENG: "The doctors (males) wrote.",
+              POL: ["Lekarze napisali."],
+            },
+            {
+              ENG: "The doctors (mixed) wrote.",
+              POL: ["Lekarze napisali."],
+            },
+            {
+              ENG: "The doctors (females) wrote.",
+              POL: ["Lekarki napisały."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    //dummy64b
+    //There's an apple and I see it.
+    //There's an onion and I see it. (not her)
+    //There's a tomato and I see it. (not him)
+  });
 
   describe("/palette - Stage 18C: Further annotations.", () => {
     it("#pal18-10a GET 200 YES: Engpol. 'The doctor writes.'", () => {
