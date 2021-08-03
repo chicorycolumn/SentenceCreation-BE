@@ -24,7 +24,7 @@ describe("/api", function () {
     "ENG"
   );
 
-  describe("/palette - Stage 19: Step-L: Pronoun translation of gendered objects eg Pomidor/Cebula.", () => {
+  describe.only("/palette - Stage 19: Step-L: Pronoun translation of gendered objects eg Pomidor/Cebula.", () => {
     it("#pal19-01a GET 200 YES: Engpol. 'There's a woman and I see her.'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -40,44 +40,49 @@ describe("/api", function () {
         .then((res) => {
           let ref = [
             {
-              ENG: "The doctor (male) writes.",
-              POL: ["Lekarz pisze."],
+              ENG: "There's a woman and I see her.",
+              POL: ["Jest kobieta i widzę ją."],
             },
             {
-              ENG: "The doctor (female) writes.",
-              POL: ["Lekarka pisze."],
+              ENG: "There's a boy and I see him.",
+              POL: ["Jest chłopiec i widzę go."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal19-01c GET 200 YES: Poleng. 'There's a woman and I see her.'", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy64a",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: [
+                "There's a woman and I see her.",
+                "There's a woman and I am seeing her.",
+              ],
+              POL: "Jest kobieta i widzę ją.",
             },
             {
-              ENG: "The doctors (males) write.",
-              POL: ["Lekarze piszą."],
-            },
-            {
-              ENG: "The doctors (mixed) write.",
-              POL: ["Lekarze piszą."],
-            },
-            {
-              ENG: "The doctors (females) write.",
-              POL: ["Lekarki piszą."],
-            },
-            {
-              ENG: "The doctor (male) wrote.",
-              POL: ["Lekarz napisał."],
-            },
-            {
-              ENG: "The doctor (female) wrote.",
-              POL: ["Lekarka napisała."],
-            },
-            {
-              ENG: "The doctors (males) wrote.",
-              POL: ["Lekarze napisali."],
-            },
-            {
-              ENG: "The doctors (mixed) wrote.",
-              POL: ["Lekarze napisali."],
-            },
-            {
-              ENG: "The doctors (females) wrote.",
-              POL: ["Lekarki napisały."],
+              ENG: [
+                "There's a boy and I see him.",
+                "There's a boy and I am seeing him.",
+              ],
+              POL: "Jest chłopiec i widzę go.",
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
