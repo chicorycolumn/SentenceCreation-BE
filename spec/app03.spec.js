@@ -24,7 +24,7 @@ describe("/api", function () {
     "ENG"
   );
 
-  describe.only("/palette - Stage 19: Step-L: Pronoun translation of gendered objects eg Pomidor/Cebula.", () => {
+  describe("/palette - Stage 19: Step-L: Pronoun translation of gendered objects eg Pomidor/Cebula.", () => {
     //Step-L Part One
     //#pal19-00 alias #pal18-09, yes indeed   "It is red." -> "Ono jest czerwone."
     //                                  and   "Ono jest czerwone." -> "It is red."
@@ -208,7 +208,7 @@ describe("/api", function () {
           );
         });
     });
-    xit("#pal19-03c GET 200 YES: Poleng. 'There's a rat and I see him/her/it.'", () => {
+    it("#pal19-03c GET 200 YES: Poleng. 'There's a rat and I see him/her/it.'", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
