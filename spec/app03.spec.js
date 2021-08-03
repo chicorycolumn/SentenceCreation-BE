@@ -24,7 +24,8 @@ describe("/api", function () {
     "ENG"
   );
 
-  describe.only("/palette - Stage 19: Step-L: Pronoun translation of gendered objects eg Pomidor/Cebula.", () => {
+  describe("/palette - Stage 19: Step-L: Pronoun translation of gendered objects eg Pomidor/Cebula.", () => {
+    //Step-L Part One
     it("#pal19-01a GET 200 YES: Engpol. 'There's a woman and I see her.'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -95,6 +96,8 @@ describe("/api", function () {
           );
         });
     });
+    //See Tests 18-09, that yes good   "It is red." -> "Ono jest czerwone."
+    //                           and   "Ono jest czerwone." -> "It is red."
     it("#pal19-02a GET 200 YES: Engpol. 'There's an apple and I see it.'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -131,7 +134,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal19-02a GET 200 YES: Poleng. 'There's an apple and I see it.'", () => {
+    it("#pal19-02c GET 200 YES: Poleng. 'There's an apple and I see it.'", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -166,6 +169,70 @@ describe("/api", function () {
                 "There's a tomato and I am seeing it.",
               ],
               POL: "Jest pomidor i widzę go.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    //Step-L Part Two
+    it("#pal19-03a GET 200 YES: Engpol. 'There's a dog and I see him/her/it.'", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy65a",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "There's a dog and I see it.",
+              POL: ["Jest pies i widzę go.", "Jest pies i widzę jego."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal19-03c GET 200 YES: Poleng. 'There's a dog and I see him/her/it.'", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy65a",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: [
+                "There's a dog and I see it.",
+                "There's a dog and I am seeing it.",
+                "There's a dog and I see him.",
+                "There's a dog and I am seeing him.",
+                "There's a dog and I see her.",
+                "There's a dog and I am seeing her.",
+              ],
+              POL: "Jest pies i widzę go.",
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -1050,7 +1117,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal18-09a GET 200 YES: Engpol. 'They are red.'", () => {
+    it.only("#pal18-09a GET 200 YES: Engpol. 'They are red.'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
