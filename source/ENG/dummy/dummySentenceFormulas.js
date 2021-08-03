@@ -1609,10 +1609,10 @@ exports.dummySentenceFormulasBank = [
     translations: { POL: ["POL-dummy65a"] },
     sentenceStructure: [
       { chunkId: "fix-1-There's", chunkValue: "there's" },
-      { chunkId: "art-1-A", form: ["indefinite"], agreeWith: "nco-1-Dog" },
+      { chunkId: "art-1-A", form: ["indefinite"], agreeWith: "nco-1-Rat" },
       {
-        chunkId: "nco-1-Dog",
-        specificLemmas: ["dog"],
+        chunkId: "nco-1-Rat",
+        specificLemmas: ["rat"],
         number: ["singular"],
       },
       { chunkId: "fix-2-And", chunkValue: "and" },
@@ -1631,7 +1631,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-2-It",
         specificLemmas: ["PERSONAL"],
-        agreeWith: "nco-1-Dog",
+        agreeWith: "nco-1-Rat",
         gcase: ["acc"],
         formulaImportantTraitKeys: ["gcase"],
       },
@@ -1640,7 +1640,7 @@ exports.dummySentenceFormulasBank = [
       [
         "fix-1-There's",
         "art-1-A",
-        "nco-1-Dog",
+        "nco-1-Rat",
         "fix-2-And",
         "pro-1-I",
         "ver-1-See",

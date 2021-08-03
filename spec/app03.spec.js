@@ -24,8 +24,10 @@ describe("/api", function () {
     "ENG"
   );
 
-  describe("/palette - Stage 19: Step-L: Pronoun translation of gendered objects eg Pomidor/Cebula.", () => {
+  describe.only("/palette - Stage 19: Step-L: Pronoun translation of gendered objects eg Pomidor/Cebula.", () => {
     //Step-L Part One
+    //#pal19-00 alias #pal18-09, yes indeed   "It is red." -> "Ono jest czerwone."
+    //                                  and   "Ono jest czerwone." -> "It is red."
     it("#pal19-01a GET 200 YES: Engpol. 'There's a woman and I see her.'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -96,8 +98,6 @@ describe("/api", function () {
           );
         });
     });
-    //See Tests 18-09, that yes good   "It is red." -> "Ono jest czerwone."
-    //                           and   "Ono jest czerwone." -> "It is red."
     it("#pal19-02a GET 200 YES: Engpol. 'There's an apple and I see it.'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -180,7 +180,7 @@ describe("/api", function () {
         });
     });
     //Step-L Part Two
-    it("#pal19-03a GET 200 YES: Engpol. 'There's a dog and I see him/her/it.'", () => {
+    it("#pal19-03a GET 200 YES: Engpol. 'There's a rat and I see him/her/it.'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -196,8 +196,8 @@ describe("/api", function () {
         .then((res) => {
           let ref = [
             {
-              ENG: "There's a dog and I see it.",
-              POL: ["Jest pies i widzę go.", "Jest pies i widzę jego."],
+              ENG: "There's a rat and I see it.",
+              POL: ["Jest szczur i widzę go.", "Jest szczur i widzę jego."],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -208,7 +208,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal19-03c GET 200 YES: Poleng. 'There's a dog and I see him/her/it.'", () => {
+    xit("#pal19-03c GET 200 YES: Poleng. 'There's a rat and I see him/her/it.'", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -225,14 +225,14 @@ describe("/api", function () {
           let ref = [
             {
               ENG: [
-                "There's a dog and I see it.",
-                "There's a dog and I am seeing it.",
-                "There's a dog and I see him.",
-                "There's a dog and I am seeing him.",
-                "There's a dog and I see her.",
-                "There's a dog and I am seeing her.",
+                "There's a rat and I see it.",
+                "There's a rat and I am seeing it.",
+                "There's a rat and I see him.",
+                "There's a rat and I am seeing him.",
+                "There's a rat and I see her.",
+                "There's a rat and I am seeing her.",
               ],
-              POL: "Jest pies i widzę go.",
+              POL: "Jest szczur i widzę go.",
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -1117,7 +1117,7 @@ describe("/api", function () {
           );
         });
     });
-    it.only("#pal18-09a GET 200 YES: Engpol. 'They are red.'", () => {
+    it("#pal18-09a GET 200 YES: Engpol. 'They are red.'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 

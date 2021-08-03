@@ -2291,11 +2291,11 @@ exports.dummySentenceFormulasBank = [
         chunkId: "ver-1-Is",
         specificLemmas: ["być"],
         tenseDescription: ["present im"],
-        agreeWith: "nco-1-Dog",
+        agreeWith: "nco-1-Rat",
       },
       {
-        chunkId: "nco-1-Dog",
-        specificLemmas: ["pies"],
+        chunkId: "nco-1-Rat",
+        specificLemmas: ["szczur"],
         number: ["singular"],
       },
       { chunkId: "fix-2-And", chunkValue: "i" },
@@ -2314,13 +2314,13 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-2-It",
         specificLemmas: ["PERSONAL"],
-        agreeWith: "nco-1-Dog",
+        agreeWith: "nco-1-Rat",
         gcase: ["acc"],
         formulaImportantTraitKeys: ["gcase"],
       },
     ],
     primaryOrders: [
-      ["ver-1-Is", "nco-1-Dog", "fix-2-And", "ver-1-See", "pro-2-It"],
+      ["ver-1-Is", "nco-1-Rat", "fix-2-And", "ver-1-See", "pro-2-It"],
     ],
   },
 ];
