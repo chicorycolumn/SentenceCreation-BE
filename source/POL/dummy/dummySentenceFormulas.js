@@ -2275,17 +2275,11 @@ exports.dummySentenceFormulasBank = [
         specificLemmas: ["PERSONAL"],
         agreeWith: "nco-1-Apple",
         gcase: ["acc"],
+        formulaImportantTraitKeys: ["gcase"],
       },
     ],
     primaryOrders: [
-      [
-        "ver-1-Is",
-        "nco-1-Apple",
-        "fix-2-And",
-        "pro-1-I",
-        "ver-1-See",
-        "pro-2-It",
-      ],
+      ["ver-1-Is", "nco-1-Apple", "fix-2-And", "ver-1-See", "pro-2-It"],
     ],
   },
 ];

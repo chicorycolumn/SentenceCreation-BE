@@ -112,7 +112,7 @@ describe("/api", function () {
           let ref = [
             {
               ENG: "There's an apple and I see it.",
-              POL: ["Jest jabłko i widzę go.", "Jest jabłko i widzę jego."],
+              POL: ["Jest jabłko i widzę je."],
             },
             {
               ENG: "There's an onion and I see it.",
@@ -151,7 +151,7 @@ describe("/api", function () {
                 "There's an apple and I see it.",
                 "There's an apple and I am seeing it.",
               ],
-              POL: "Jest jabłko i widzę go.",
+              POL: "Jest jabłko i widzę je.",
             },
             {
               ENG: [
