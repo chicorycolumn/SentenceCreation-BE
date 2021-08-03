@@ -242,7 +242,7 @@ describe("/api", function () {
     });
   });
 
-  describe("/palette - Stage 18C: Further annotations.", () => {
+  describe("/palette - Stage 18C: Further annotations: MGNs and metagenders", () => {
     it("#pal18-10a GET 200 YES: Engpol. 'The doctor writes.'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -1155,7 +1155,7 @@ describe("/api", function () {
             //Now technically, you'd need this. Because "koty" are masculine (m2) but that's "one" not "oni",
             //ie only m1 plural (and groups containing m1) are virile.
             //But practically, you can just teach this to the player in lesson text, rather than testing that
-            //nitty gritty here. Because the real sentences encountered will be like, "Cats are black." "Kote sæ czarne."
+            //nitty gritty here. Because the real sentences encountered will be like, "Cats are black." "Kote są czarne."
             //so that plural-m2-is-nonvirile is taught there. You don't need to worry about it for single contextless
             //barebones sentence like this one.
             // {
@@ -1293,6 +1293,76 @@ describe("/api", function () {
             {
               ENG: ["They are red.", "They are being red."],
               POL: "Są czerwone.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it.only("#pal18-09w GET 200 YES: Engpol. 'Rats are red.' Pluralising nonvirile males ie m2", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy66",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "Rats are red.",
+              POL: ["Szczury są czerwone."],
+            },
+            {
+              ENG: "Boys are red.",
+              POL: ["Chłopcy są czerwoni."],
+            },
+            {
+              ENG: "Women are red.",
+              POL: ["Kobiety są czerwone."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it.only("#pal18-09y GET 200 YES: Poleng. 'Rats are red.' Pluralising nonvirile males ie m2", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy66",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["Rats are red.", "Rats are being red."],
+              POL: "Szczury są czerwone.",
+            },
+            {
+              ENG: ["Boys are red.", "Boys are being red."],
+              POL: "Chłopcy są czerwoni.",
+            },
+            {
+              ENG: ["Women are red.", "Women are being red."],
+              POL: "Kobiety są czerwone.",
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
