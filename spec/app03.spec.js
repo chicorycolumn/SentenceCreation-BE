@@ -25,9 +25,7 @@ describe("/api", function () {
   );
 
   describe("/palette - Stage 19: Step-L: Pronoun translation of gendered objects eg Pomidor/Cebula.", () => {
-    //Step-L Part One
-    //#pal19-00 alias #pal18-09, yes indeed   "It is red." -> "Ono jest czerwone."
-    //                                  and   "Ono jest czerwone." -> "It is red."
+    //#pal19-00 alias #pal18-09, yes indeed   "It is red." <-> "Ono jest czerwone."
     it("#pal19-01a GET 200 YES: Engpol. 'There's a woman and I see her.'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -179,7 +177,6 @@ describe("/api", function () {
           );
         });
     });
-    //Step-L Part Two
     it("#pal19-03a GET 200 YES: Engpol. 'There's a rat and I see him/her/it.'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
