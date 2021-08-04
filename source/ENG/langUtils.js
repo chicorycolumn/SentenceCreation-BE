@@ -147,6 +147,7 @@ exports.preprocessStructureChunks = (structureChunk) => {
     }
   }
 
+  //Gamma delete this?
   // if (
   //   //If gender is an appropriate traitKey of this wordtype.
   //   refObj.lemmaObjectTraitKeys[currentLanguage].inflectionChains[
@@ -200,7 +201,7 @@ exports.preprocessLemmaObjectsMajor = (
   });
 
   allLangUtils.convertmetaTraitValues(matches, "ENG", "lObj");
-  // allLangUtils.preprocessLemmaObjects(matches, "ENG");
+  // allLangUtils.preprocessLemmaObjects(matches, "ENG"); //Gamma
 };
 
 exports.preprocessLemmaObjectsMinor = (matches) => {

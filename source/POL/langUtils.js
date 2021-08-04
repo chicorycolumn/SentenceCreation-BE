@@ -298,13 +298,6 @@ exports.adjustTenseDescriptions = (structureChunk) => {
 
 exports.formatGenderTraitValueAsPerson = (genderTraitValue) => {
   return genderTraitValue === "m" ? "m1" : genderTraitValue;
-  // return {
-  //   m: ["m1"],
-  //   f: ["f"],
-  //   n: ["n"],
-  //   nonvirile: ["nonvirile"],
-  //   virile: ["virile"],
-  // }[traitValue];
 };
 
 exports.formatTraitValue = (traitKey, traitValue, note) => {
