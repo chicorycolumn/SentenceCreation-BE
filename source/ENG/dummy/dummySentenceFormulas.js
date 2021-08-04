@@ -1685,4 +1685,28 @@ exports.dummySentenceFormulasBank = [
       ],
     ],
   },
+  {
+    sentenceFormulaSymbol: "dummy65",
+    sentenceFormulaId: "ENG-dummy65",
+    translations: { POL: ["POL-dummy65"] },
+    sentenceStructure: [
+      {
+        chunkId: "nco-1-Rats",
+        specificLemmas: ["rat", "woman", "boy"],
+        number: ["plural"],
+      },
+      {
+        chunkId: "ver-1-Are",
+        specificLemmas: ["be"],
+        agreeWith: "nco-1-Rats",
+        tenseDescription: ["present simple"],
+      },
+      {
+        chunkId: "adj-1-Red",
+        specificLemmas: ["red"],
+        agreeWith: "nco-1-Rats",
+      },
+    ],
+    primaryOrders: [["nco-1-Rats", "ver-1-Are", "adj-1-Red"]],
+  },
 ];
