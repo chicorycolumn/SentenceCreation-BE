@@ -82,7 +82,6 @@ describe("/api", function () {
         })
         .expect(200)
         .then((res) => {
-          console.log(res.body);
           let { questionSentenceArr, answerSentenceArr } = res.body;
           expect(["Red door.", "Red doors."]).to.includes(
             questionSentenceArr[0]

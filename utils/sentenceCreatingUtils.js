@@ -1146,8 +1146,9 @@ exports.conformAnswerStructureToQuestionStructure = (
       //
       // STEP ONE: Update traits from list of allowable transfers.
       //
-      let nonhiddenTraitValue;
 
+      //Step-T, dealing with hidden values.
+      let nonhiddenTraitValue;
       if (questionStructureChunk.hiddenTraits[traitKey]) {
         nonhiddenTraitValue = uUtils.copyWithoutReference(
           questionStructureChunk[traitKey]
@@ -1182,7 +1183,7 @@ exports.conformAnswerStructureToQuestionStructure = (
       }
 
       //Don't transfer Number if all A lObjs are Tantum Plurale.     eg if Q is "violin" we don't want to specify that A must be singular, as "skrzypce" can't be singular.
-      //Theta: And does this work vice versa?
+      //Step-T: And does this work vice versa?
       if (
         traitKey === "number" &&
         matchingAnswerLemmaObjects.length &&
@@ -1190,7 +1191,7 @@ exports.conformAnswerStructureToQuestionStructure = (
           (answerLemmaObject) => answerLemmaObject.tantumPlurale
         )
       ) {
-        consol.log(
+        console.log(
           "kozn conformAnswerStructureToQuestionStructure All answer lobjs are tantum, so we won't transfer Number trait."
         );
         return;
@@ -1250,6 +1251,7 @@ exports.conformAnswerStructureToQuestionStructure = (
         answerLanguage
       );
 
+      //Step-T, dealing with hidden values.
       if (questionStructureChunk.hiddenTraits[traitKey]) {
         questionStructureChunk[traitKey] = nonhiddenTraitValue;
       }

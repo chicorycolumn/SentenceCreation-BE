@@ -482,7 +482,7 @@ exports.findMatchingLemmaObjectThenWord = (
       return false;
     }
 
-    //Now tantum nouns are allowed to pass by this filter.
+    //Tantum nouns should be allowed to pass by this filter.
     matchesCopy = lfUtils.filterOutLackingLemmaObjects(
       matchesCopy,
       structureChunk,
