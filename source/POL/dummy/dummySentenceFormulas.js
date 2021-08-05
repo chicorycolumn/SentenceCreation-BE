@@ -2347,4 +2347,30 @@ exports.dummySentenceFormulasBank = [
     ],
     primaryOrders: [["nco-1-Rats", "ver-1-Are", "adj-1-Red"]],
   },
+  {
+    sentenceFormulaSymbol: "dummy67a",
+    sentenceFormulaId: "POL-dummy67a",
+    translations: { ENG: ["ENG-dummy67a"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificLemmas: ["PERSONAL"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-See",
+        agreeWith: "pro-1-I",
+        specificLemmas: ["widzieć", "zobaczyć"],
+        tenseDescription: ["present im"],
+      },
+      {
+        chunkId: "nco-1-Rat",
+        specificLemmas: ["szczur"],
+        number: ["singular"],
+        gcase: ["acc"],
+      },
+    ],
+    primaryOrders: [["ver-1-See", "nco-1-Rat"]],
+  },
 ];

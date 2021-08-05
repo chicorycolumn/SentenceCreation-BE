@@ -27,6 +27,69 @@ describe("/api", function () {
     "ENG"
   );
 
+  describe("/palette - Stage 20: Step-O: Omit particular traitValues from being a valid translation.", () => {
+    it.only("#pal20-01a GET 200 YES: Engpol. 'I see a rat.'", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy67a",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "I see a rat.",
+              POL: ["Widzę szczura."],
+            },
+            {
+              ENG: "I can see a rat.",
+              POL: ["Widzę szczura."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal20-01c GET 200 YES: Poleng. 'I see a rat.'", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy67a",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["I see a rat.", "I can see a rat."],
+              POL: "Widzę szczura.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+  });
+
   describe("/palette - Stage 19: Step-L: Pronoun translation of gendered objects eg Pomidor/Cebula.", () => {
     //#pal19-00 alias #pal18-09, yes indeed   "It is red." <-> "Ono jest czerwone."
     it("#pal19-01a GET 200 YES: Engpol. 'There's a woman and I see her.'", () => {

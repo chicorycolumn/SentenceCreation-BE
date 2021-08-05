@@ -584,6 +584,12 @@ exports.processSentenceFormula = (
           refObj.structureChunkTraits[currentLanguage][traitKey] ||
           refObj.structureChunkTraits["ALL"][traitKey];
 
+        if (!reference) {
+          consol.throw(
+            `elsz I think "${traitKey}" is not a valid traitKey. currentLanguage:"${currentLanguage}".`
+          );
+        }
+
         if (
           reference.expectedTypeOnStCh === "array" &&
           !reference.ultimatelyMultipleTraitValuesOkay &&

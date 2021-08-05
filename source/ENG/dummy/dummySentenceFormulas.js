@@ -1709,4 +1709,42 @@ exports.dummySentenceFormulasBank = [
     ],
     primaryOrders: [["nco-1-Rats", "ver-1-Are", "adj-1-Red"]],
   },
+  {
+    sentenceFormulaSymbol: "dummy67a",
+    sentenceFormulaId: "ENG-dummy67a",
+    translations: { POL: ["POL-dummy67a"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificLemmas: ["PERSONAL"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-See",
+        agreeWith: "pro-1-I",
+        specificLemmas: ["see"],
+        tenseDescription: ["present simple"],
+      },
+      { chunkId: "art-1-A", form: ["indefinite"], agreeWith: "nco-1-Rat" },
+      {
+        chunkId: "nco-1-Rat",
+        specificLemmas: ["rat"],
+        number: ["singular"],
+        gcase: ["acc"],
+      },
+      //
+      { chunkId: "fix-1-Can", chunkValue: "can" },
+      {
+        chunkId: "ver-2-See",
+        agreeWith: "pro-1-I",
+        specificLemmas: ["see"],
+        form: ["infinitive"],
+      },
+    ],
+    primaryOrders: [
+      ["pro-1-I", "ver-1-See", "art-1-A", "nco-1-Rat"],
+      ["pro-1-I", "fix-1-Can", "ver-2-See", "art-1-A", "nco-1-Rat"],
+    ],
+  },
 ];
