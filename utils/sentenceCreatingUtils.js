@@ -1169,7 +1169,8 @@ exports.conformAnswerStructureToQuestionStructure = (
         return;
       }
 
-      //Don't transfer Number, if all A lObjs are Tantum Plurale.     eg if Q is "violin" we don't want to specify that A must be singular, as "skrzypce" can't be singular.
+      //Don't transfer Number if all A lObjs are Tantum Plurale.     eg if Q is "violin" we don't want to specify that A must be singular, as "skrzypce" can't be singular.
+      //Theta: And does this work vice versa?
       if (
         traitKey === "number" &&
         matchingAnswerLemmaObjects.length &&

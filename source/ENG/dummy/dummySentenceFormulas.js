@@ -1725,6 +1725,7 @@ exports.dummySentenceFormulasBank = [
         agreeWith: "pro-1-I",
         specificLemmas: ["see"],
         tenseDescription: ["present simple"],
+        formulaImportantTraitKeys: ["tenseDescription"],
       },
       { chunkId: "art-1-A", form: ["indefinite"], agreeWith: "nco-1-Rat" },
       {
