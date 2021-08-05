@@ -28,7 +28,7 @@ describe("/api", function () {
   );
 
   describe.only("/palette - Stage 21: Tantum Nouns.", () => {
-    it("#pal21-01a GET 200 YES: Poleng. Plurale Tantum in POL is allowed to be sing or plur in ENG.", () => {
+    xit("#pal21-01a GET 200 YES: Poleng. Plurale Tantum in POL is allowed to be sing or plur in ENG.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -50,7 +50,7 @@ describe("/api", function () {
           ]);
         });
     });
-    it("#pal21-01b GET 200 YES: Engpol. RSWAT for ENG sing to POL Plurale Tantum.", () => {
+    xit("#pal21-01b GET 200 YES: Engpol. RSWAT for ENG sing to POL Plurale Tantum.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -69,7 +69,7 @@ describe("/api", function () {
           expect(answerSentenceArr).to.have.members(["Czerwone drzwi."]);
         });
     });
-    it("#pal21-01c GET 200 YES: Engpol. RSWAT for Engpol Plurale Tantum.", () => {
+    xit("#pal21-01c GET 200 YES: Engpol. RSWAT for Engpol Plurale Tantum.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -90,13 +90,14 @@ describe("/api", function () {
           expect(answerSentenceArr).to.have.members(["Czerwone drzwi."]);
         });
     });
-    it.only("#pal21-02a GET 200 YES: Engpol. In this sentence, a Plurale Tantum does really have a number.", () => {
+    it("#pal21-02a GET 200 YES: Engpol. In this sentence, a Plurale Tantum does really have a number.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
         .send({
+          devSaysThrowAtMidpoint: true,
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -118,13 +119,14 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal21-02b GET 200 YES: Poleng. In this sentence, a Plurale Tantum does really have a number.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
+    it.only("#pal21-02b GET 200 YES: Poleng. In this sentence, a Plurale Tantum does really have a number.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
 
       return request(app)
         .get("/api/palette")
         .send({
+          // devSaysThrowAtMidpoint: true,
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -175,8 +177,8 @@ describe("/api", function () {
         });
     });
     it("#pal21-02d GET 200 YES: Poleng. In this sentence, a Plurale Tantum does really have a number.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
 
       return request(app)
         .get("/api/palette")

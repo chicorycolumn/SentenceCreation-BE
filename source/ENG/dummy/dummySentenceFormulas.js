@@ -1759,8 +1759,8 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "nco-1-Door",
         specificLemmas: ["door"],
-        // number: ["singular"],
-        formulaImportantTraitKeys: ["number"],
+        number: ["singular"],
+        // formulaImportantTraitKeys: ["number"],
       },
     ],
     primaryOrders: [["fix-1-One", "nco-1-Door"]],

@@ -482,11 +482,47 @@ exports.findMatchingLemmaObjectThenWord = (
       return false;
     }
 
+    //Now tantum nouns are allowed to pass by this filter.
     matchesCopy = lfUtils.filterOutLackingLemmaObjects(
       matchesCopy,
       structureChunk,
       currentLanguage
     );
+
+    function addHiddenNumberToTantumLObjs(lObj, stCh) {
+      let tantumsAreNotCompatibleWith = {
+        tantumPlurale: "singular",
+        tantumSingulare: "plural",
+      };
+
+      Object.keys(tantumsAreNotCompatibleWith).forEach((tantumKey) => {
+        let incompatibleNumberValue = tantumsAreNotCompatibleWith[tantumKey];
+
+        if (lObj[tantumKey]) {
+          if (stCh.number) {
+            let newStChNumberArr = [];
+
+            stCh.number.forEach((numberTraitValue) => {
+              if (numberTraitValue === incompatibleNumberValue) {
+                if (!stCh.hiddenTraits) {
+                  stCh.hiddenTraits = {};
+                }
+
+                if (!stCh.hiddenTraits.number) {
+                  stCh.hiddenTraits.number = [];
+                }
+
+                stCh.hiddenTraits.number.push(incompatibleNumberValue);
+              } else {
+                newStChNumberArr.push(numberTraitValue);
+              }
+            });
+
+            stCh.number = newStChNumberArr;
+          }
+        }
+      });
+    }
 
     if (!matchesCopy.length) {
       consol.log(
@@ -509,6 +545,8 @@ exports.findMatchingLemmaObjectThenWord = (
           "uzsw ot:findMatchingLemmaObjectThenWord selectedLemmaObject",
           selectedLemmaObject
         );
+
+        addHiddenNumberToTantumLObjs(selectedLemmaObject, structureChunk);
 
         if (outputArray) {
           consol.log(
@@ -594,6 +632,8 @@ exports.findMatchingLemmaObjectThenWord = (
     } else {
       consol.log("xzjc ot:findMatchingLemmaObjectThenWord");
       let selectedLemmaObject = uUtils.selectRandom(matchesCopy);
+
+      addHiddenNumberToTantumLObjs(selectedLemmaObject, structureChunk);
 
       if (!structureChunk.dontSpecifyOnThisChunk) {
         //PDS-Beryl: Do if PDS false.

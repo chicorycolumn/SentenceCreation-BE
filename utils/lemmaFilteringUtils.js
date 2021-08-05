@@ -681,6 +681,17 @@ exports.filterOutLackingLemmaObjects = (sourceArr, stCh, currentLanguage) => {
     if (!lObj.lacking) {
       return true;
     } else {
+      if (
+        ["tantumPlurale", "tantumSingulare"].some(
+          (tantum) =>
+            lObj[tantum] &&
+            (!stCh.blockedLemmaObjects ||
+              !stCh.blockedLemmaObjects.includes(tantum))
+        )
+      ) {
+        return true;
+      }
+
       let { routesByNesting, routesByLevel } = otUtils.extractNestedRoutes(
         lObj.inflections
       );

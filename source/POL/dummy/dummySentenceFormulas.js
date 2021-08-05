@@ -2383,7 +2383,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "nco-1-Door",
         specificLemmas: ["drzwi"],
         // traitsToForceOntoAnswer: { number: ["singular"] }, //Actually, maybe not this.
-        // number: ["singular"],// Instead allow tantums to have hidden traits that don't affect Q, but do get transferred to A.
+        number: ["singular"], // Instead allow tantums to have hidden traits that don't affect Q, but do get transferred to A.
         //And programmatically add them, like you don't need to here, but instead in processing when it realises it's
         //dealing with a tantum, it adds a hiddenTraits key.
         // formulaImportantTraitKeys: ["number"],

@@ -219,28 +219,24 @@ exports.fetchPalette = (req) => {
   ///////////////////////////////////////////////kp Decisive Decant Check
   pvUtils.checkDecisiveDecant(questionSentenceData, questionLanguage);
 
-  if (true && "console") {
-    consol.log(
+  if (devSaysThrowAtMidpoint) {
+    console.log(
       "[1;35m " +
         "{{{ cjae-fetchPalette just before midpoint. Let's see the selectedWordss" +
         "[0m"
     );
 
-    consol.log(
+    console.log(
       "odej-fetchPalette questionSentenceData.questionOutputArr.map((outputUnit) => outputUnit.selectedWord)",
       questionSentenceData.questionOutputArr.map(
         (outputUnit) => outputUnit.selectedWord
       )
     );
 
-    consol.log("[1;35m " + "}}}" + "[0m");
+    console.log("[1;35m " + "}}}" + "[0m");
 
     consol.consoleLogAestheticBorder(4);
-  }
 
-  consol.log("\n~ ~ ~ ~ MIDPOINT\n");
-
-  if (devSaysThrowAtMidpoint) {
     consol.throw("Midpoint cease.");
   }
 

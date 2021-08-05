@@ -275,6 +275,16 @@ exports.structureChunkTraits = {
       ultimatelyMultipleTraitValuesOkay: true,
       needsNoValidation: true,
     },
+    blockedLemmaObjects: {
+      expectedTypeOnStCh: "array",
+      ultimatelyMultipleTraitValuesOkay: true,
+      needsNoValidation: true,
+    },
+    hiddenTraits: {
+      expectedTypeOnStCh: "array",
+      ultimatelyMultipleTraitValuesOkay: true,
+      needsNoValidation: true,
+    },
     traitsToForceOntoAnswer: {
       expectedTypeOnStCh: "keyValueObject",
       needsNoValidation: true,
