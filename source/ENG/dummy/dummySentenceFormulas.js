@@ -1759,7 +1759,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "nco-1-Door",
         specificLemmas: ["door"],
-        number: ["singular"],
+        // number: ["singular"],
         formulaImportantTraitKeys: ["number"],
       },
     ],

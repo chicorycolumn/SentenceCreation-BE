@@ -275,6 +275,10 @@ exports.structureChunkTraits = {
       ultimatelyMultipleTraitValuesOkay: true,
       needsNoValidation: true,
     },
+    traitsToForceOntoAnswer: {
+      expectedTypeOnStCh: "keyValueObject",
+      needsNoValidation: true,
+    },
     doNotUpdateSpecificLemmasAsIsJustOneMDN: {
       expectedTypeOnStCh: "boolean",
       needsNoValidation: true,

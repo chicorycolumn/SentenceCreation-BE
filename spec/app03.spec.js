@@ -90,7 +90,7 @@ describe("/api", function () {
           expect(answerSentenceArr).to.have.members(["Czerwone drzwi."]);
         });
     });
-    it("#pal21-02a GET 200 YES: Engpol. In this sentence, a Plurale Tantum does really have a number.", () => {
+    it.only("#pal21-02a GET 200 YES: Engpol. In this sentence, a Plurale Tantum does really have a number.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
