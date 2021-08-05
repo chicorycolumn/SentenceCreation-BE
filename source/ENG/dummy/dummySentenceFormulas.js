@@ -1725,7 +1725,9 @@ exports.dummySentenceFormulasBank = [
         agreeWith: "pro-1-I",
         specificLemmas: ["see"],
         tenseDescription: ["present simple"],
-        formulaImportantTraitKeys: ["tenseDescription"],
+        formulaImportantTraitKeys: ["tenseDescription"], //Either of these work for Step-O. But this preferable,
+        //as you don't need to block every erroneous tense that might come from each language's translation of their Q tenseDesc.
+        // blockedTenseDescriptions: ["present continuous"], //Either of these work for Step-O.
       },
       { chunkId: "art-1-A", form: ["indefinite"], agreeWith: "nco-1-Rat" },
       {

@@ -1217,6 +1217,16 @@ exports.conformAnswerStructureToQuestionStructure = (
           ];
         });
 
+        if (answerStructureChunk.blockedTenseDescriptions) {
+          answerStructureChunk.blockedTenseDescriptions.forEach(
+            (blockedTenseDesc) => {
+              answerStructureChunk["tenseDescription"] = answerStructureChunk[
+                "tenseDescription"
+              ].filter((tenseDesc) => tenseDesc !== blockedTenseDesc);
+            }
+          );
+        }
+
         return;
       }
 

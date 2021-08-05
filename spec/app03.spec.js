@@ -27,7 +27,7 @@ describe("/api", function () {
     "ENG"
   );
 
-  describe("/palette - Stage 20: Step-O: Omit particular traitValues from being a valid translation.", () => {
+  describe.only("/palette - Stage 20: Step-O: Omit particular traitValues from being a valid translation.", () => {
     it("#pal20-01a GET 200 YES: Engpol. 'I see a rat.'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -60,7 +60,7 @@ describe("/api", function () {
           );
         });
     });
-    it.only("#pal20-01c GET 200 YES: Poleng. 'I see a rat.'", () => {
+    it("#pal20-01c GET 200 YES: Poleng. 'I see a rat.'", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 

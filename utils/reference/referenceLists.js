@@ -270,6 +270,11 @@ exports.structureChunkTraits = {
       ultimatelyMultipleTraitValuesOkay: true,
       needsNoValidation: true,
     },
+    blockedTenseDescriptions: {
+      expectedTypeOnStCh: "array",
+      ultimatelyMultipleTraitValuesOkay: true,
+      needsNoValidation: true,
+    },
     doNotUpdateSpecificLemmasAsIsJustOneMDN: {
       expectedTypeOnStCh: "boolean",
       needsNoValidation: true,
