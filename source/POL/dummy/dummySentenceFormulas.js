@@ -2373,4 +2373,36 @@ exports.dummySentenceFormulasBank = [
     ],
     primaryOrders: [["ver-1-See", "nco-1-Rat"]],
   },
+  {
+    sentenceFormulaSymbol: "dummy68a",
+    sentenceFormulaId: "POL-dummy68a",
+    translations: { ENG: ["ENG-dummy68a"] },
+    sentenceStructure: [
+      { chunkId: "fix-1-One", chunkValue: "jedne" },
+      {
+        chunkId: "nco-1-Door",
+        specificLemmas: ["drzwi"],
+        number: ["singular"],
+        formulaImportantTraitKeys: ["number"],
+      },
+    ],
+    primaryOrders: [["fix-1-One", "nco-1-Door"]],
+    additionalOrders: [],
+  },
+  {
+    sentenceFormulaSymbol: "dummy68b",
+    sentenceFormulaId: "ENG-dummy68b",
+    translations: { POL: ["POL-dummy68b"] },
+    sentenceStructure: [
+      { chunkId: "fix-1-Two", chunkValue: "dwoje" },
+      {
+        chunkId: "nco-1-Door",
+        specificLemmas: ["drzwi"],
+        number: ["plural"],
+        formulaImportantTraitKeys: ["number"],
+      },
+    ],
+    primaryOrders: [["fix-1-Two", "nco-1-Door"]],
+    additionalOrders: [],
+  },
 ];
