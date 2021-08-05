@@ -1790,25 +1790,6 @@ describe("/api", function () {
           consol.log(res.body);
         });
     });
-    xit("#pal05-02d GET 200 YES: CONDITIONAL Returns a sentence when selected by one from multiple tenseDescriptions.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "girl reads f conditional im pf",
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect([
-            "Kobieta czytałaby.",
-            "Kobiety czytałyby.",
-            "Kobieta przeczytałaby.",
-            "Kobiety przeczytałyby.",
-          ]).to.include(res.body.questionSentenceArr[0]);
-          consol.log(res.body);
-        });
-    });
     it("#pal05-03a GET 200 YES: Allow specification of multiple radically different tenseDescriptions, without unwanted cross pollination.", () => {
       return request(app)
         .get("/api/palette")
@@ -1996,29 +1977,6 @@ describe("/api", function () {
             "Czytałybyście.",
             "Czytaj.",
             "Czytajcie.",
-          ]).to.include(res.body.questionSentenceArr[0]);
-          consol.log(res.body);
-        });
-    });
-    xit("#pal04-01c GET 200 YES: CONDITIONAL Returns a sentence with a single verb, with tense and number specified.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "dummy13a conditional plural",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect([
-            "Czytano by.",
-            "Czytalibyśmy.",
-            "Czytałybyśmy.",
-            "Czytalibyście.",
-            "Czytałybyście.",
-            "Czytaliby.",
-            "Czytałyby.",
           ]).to.include(res.body.questionSentenceArr[0]);
           consol.log(res.body);
         });

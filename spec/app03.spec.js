@@ -27,7 +27,72 @@ describe("/api", function () {
     "ENG"
   );
 
-  describe.only("/palette - Stage 20: Step-O: Omit particular traitValues from being a valid translation.", () => {
+  describe("/palette - Stage 21: Tantum Nouns.", () => {
+    it("#pal21-01a GET 200 YES: Plurale Tantum in POL is allowed to be sing or plur in ENG.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "red door",
+        })
+        .expect(200)
+        .then((res) => {
+          consol.log(res.body);
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+          expect(["Czerwone drzwi."]).to.include(questionSentenceArr[0]);
+          expect(answerSentenceArr).to.have.members([
+            "Red door.",
+            "Red doors.",
+          ]);
+        });
+    });
+    it("#pal21-01b GET 200 YES: RSWAT for ENG sing to POL Plurale Tantum.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "red door singular",
+        })
+        .expect(200)
+        .then((res) => {
+          consol.log(res.body);
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+          expect(["Red door."]).to.include(questionSentenceArr[0]);
+          expect(answerSentenceArr).to.have.members(["Czerwone drzwi."]);
+        });
+    });
+    it("#pal21-01c GET 200 YES: RSWAT for Engpol Plurale Tantum.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "red door",
+        })
+        .expect(200)
+        .then((res) => {
+          consol.log(res.body);
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+          expect(["Red door.", "Red doors."]).to.includes(
+            questionSentenceArr[0]
+          );
+          expect(answerSentenceArr).to.have.members(["Czerwone drzwi."]);
+        });
+    });
+  });
+
+  describe("/palette - Stage 20: Step-O: Omit particular traitValues from being a valid translation.", () => {
     it("#pal20-01a GET 200 YES: Engpol. 'I see a rat.'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";

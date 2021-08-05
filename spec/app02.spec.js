@@ -2502,70 +2502,50 @@ describe("/api", function () {
     });
   });
 
-  describe("/palette - Stage 12: Further linguistic bits.", () => {
-    it("#pal12-01a GET 200 YES: Tantum plurale in POL is allowed to be sing or plur in ENG.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
+  xdescribe("/palette - Stage 12: Conditionals.", () => {
+    it("#pal12-01a (04-01c) GET 200 YES: CONDITIONAL Returns a sentence with a single verb, with tense and number specified.", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "red door",
+          questionLanguage: "POL",
+          sentenceFormulaSymbol: "dummy13a conditional plural",
+          useDummy: true,
         })
         .expect(200)
         .then((res) => {
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
+          expect([
+            "Czytano by.",
+            "Czytalibyśmy.",
+            "Czytałybyśmy.",
+            "Czytalibyście.",
+            "Czytałybyście.",
+            "Czytaliby.",
+            "Czytałyby.",
+          ]).to.include(res.body.questionSentenceArr[0]);
           consol.log(res.body);
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-          expect(["Czerwone drzwi."]).to.include(questionSentenceArr[0]);
-          expect(answerSentenceArr).to.have.members([
-            "Red door.",
-            "Red doors.",
-          ]);
         });
     });
-    it("#pal12-01b GET 200 YES: RSWAT for ENG sing to POL tantum plurale.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
+    it("#pal12-02a (05-02d) GET 200 YES: CONDITIONAL Returns a sentence when selected by one from multiple tenseDescriptions.", () => {
       return request(app)
         .get("/api/palette")
         .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "red door singular",
+          questionLanguage: "POL",
+          sentenceFormulaSymbol: "girl reads f conditional im pf",
         })
         .expect(200)
         .then((res) => {
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
+          expect([
+            "Kobieta czytałaby.",
+            "Kobiety czytałyby.",
+            "Kobieta przeczytałaby.",
+            "Kobiety przeczytałyby.",
+          ]).to.include(res.body.questionSentenceArr[0]);
           consol.log(res.body);
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-          expect(["Red door."]).to.include(questionSentenceArr[0]);
-          expect(answerSentenceArr).to.have.members(["Czerwone drzwi."]);
         });
     });
-    it("#pal12-01c GET 200 YES: RSWAT for Engpol tantum plurale.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "red door",
-        })
-        .expect(200)
-        .then((res) => {
-          consol.log(res.body);
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-          expect(["Red door.", "Red doors."]).to.includes(
-            questionSentenceArr[0]
-          );
-          expect(answerSentenceArr).to.have.members(["Czerwone drzwi."]);
-        });
-    });
-    xit("#pal12-##a GET 200 YES: RSWAT for First Conditional POL->ENG.", () => {
+    it("#pal12-03a GET 200 YES: RSWAT for First Conditional POL->ENG.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -2605,7 +2585,7 @@ describe("/api", function () {
           );
         });
     });
-    xit("#pal12-##b GET 200 YES: RSWAT for First Conditional ENG->POL.", () => {
+    it("#pal12-03b GET 200 YES: RSWAT for First Conditional ENG->POL.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
