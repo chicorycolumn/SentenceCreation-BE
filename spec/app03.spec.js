@@ -28,7 +28,7 @@ describe("/api", function () {
   );
 
   describe.only("/palette - Stage 21: Tantum Nouns.", () => {
-    xit("#pal21-01a GET 200 YES: Poleng. Plurale Tantum in POL is allowed to be sing or plur in ENG.", () => {
+    it("#pal21-01a GET 200 YES: Poleng. Plurale Tantum in POL is allowed to be sing or plur in ENG.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -50,7 +50,7 @@ describe("/api", function () {
           ]);
         });
     });
-    xit("#pal21-01b GET 200 YES: Engpol. RSWAT for ENG sing to POL Plurale Tantum.", () => {
+    it("#pal21-01b GET 200 YES: Engpol. RSWAT for ENG sing to POL Plurale Tantum.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -69,7 +69,7 @@ describe("/api", function () {
           expect(answerSentenceArr).to.have.members(["Czerwone drzwi."]);
         });
     });
-    xit("#pal21-01c GET 200 YES: Engpol. RSWAT for Engpol Plurale Tantum.", () => {
+    it("#pal21-01c GET 200 YES: Engpol. RSWAT for Engpol Plurale Tantum.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -97,7 +97,6 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
-          devSaysThrowAtMidpoint: true,
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -126,7 +125,6 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
-          // devSaysThrowAtMidpoint: true,
           useDummy: true,
           questionLanguage,
           answerLanguage,

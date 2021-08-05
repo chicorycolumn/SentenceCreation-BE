@@ -9,6 +9,7 @@ const scUtils = require("./sentenceCreatingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 const refFxn = require("./reference/referenceFunctions.js");
 const allLangUtils = require("../utils/allLangUtils.js");
+const { copy } = require("../routes/paletteRouter.js");
 
 exports.getMaterialsCopies = (
   currentLanguage,
@@ -1121,7 +1122,7 @@ exports.conformAnswerStructureToQuestionStructure = (
       return;
     }
 
-    //...and then for both pronouns and all other wordtypes, we get the id and set it.
+    //...and then for both pronouns and all other wordtypes, we get the ID and set it.
     answerStructureChunk.specificIds = matchingAnswerLemmaObjects.map(
       (lObj) => lObj.id
     );
@@ -1145,6 +1146,17 @@ exports.conformAnswerStructureToQuestionStructure = (
       //
       // STEP ONE: Update traits from list of allowable transfers.
       //
+      let nonhiddenTraitValue;
+
+      if (questionStructureChunk.hiddenTraits[traitKey]) {
+        nonhiddenTraitValue = uUtils.copyWithoutReference(
+          questionStructureChunk[traitKey]
+        );
+        questionStructureChunk[traitKey] = uUtils.copyWithoutReference(
+          questionStructureChunk.hiddenTraits[traitKey]
+        );
+      }
+
       if (!questionStructureChunk[traitKey]) {
         return;
       }
@@ -1237,6 +1249,10 @@ exports.conformAnswerStructureToQuestionStructure = (
         questionLanguage,
         answerLanguage
       );
+
+      if (questionStructureChunk.hiddenTraits[traitKey]) {
+        questionStructureChunk[traitKey] = nonhiddenTraitValue;
+      }
     });
 
     function addTraitToAnswerChunkWithAdjustment(
