@@ -1686,9 +1686,9 @@ exports.dummySentenceFormulasBank = [
     ],
   },
   {
-    sentenceFormulaSymbol: "dummy65",
-    sentenceFormulaId: "ENG-dummy65",
-    translations: { POL: ["POL-dummy65"] },
+    sentenceFormulaSymbol: "dummy66",
+    sentenceFormulaId: "ENG-dummy66",
+    translations: { POL: ["POL-dummy66"] },
     sentenceStructure: [
       {
         chunkId: "nco-1-Rats",

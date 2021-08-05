@@ -2324,9 +2324,9 @@ exports.dummySentenceFormulasBank = [
     ],
   },
   {
-    sentenceFormulaSymbol: "dummy65",
-    sentenceFormulaId: "POL-dummy65",
-    translations: { ENG: ["ENG-dummy65"] },
+    sentenceFormulaSymbol: "dummy66",
+    sentenceFormulaId: "POL-dummy66",
+    translations: { ENG: ["ENG-dummy66"] },
     sentenceStructure: [
       {
         chunkId: "nco-1-Rats",

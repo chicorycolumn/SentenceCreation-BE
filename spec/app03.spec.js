@@ -7,6 +7,9 @@ const uUtils = require("../utils/universalUtils.js");
 const consol = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const { it } = require("mocha");
 const testingUtils = require("../utils/secondOrder/testingUtils.js");
+const {
+  traitValueTranslation,
+} = require("../utils/reference/referenceTranslations");
 const { generalTranslatedSentencesRef } = testingUtils;
 
 // MGN:            Multi-gender noun. Eg doctor in ENG can be either male or female.
@@ -1303,13 +1306,14 @@ describe("/api", function () {
           );
         });
     });
-    it.only("#pal18-09w GET 200 YES: Engpol. 'Rats are red.' Pluralising nonvirile males ie m2", () => {
+    it("#pal18-09w GET 200 YES: Engpol. 'Rats are red.' Pluralised m2 should be nonvirile", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
         .send({
+          useDummy: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "dummy66",
@@ -1338,13 +1342,14 @@ describe("/api", function () {
           );
         });
     });
-    it.only("#pal18-09y GET 200 YES: Poleng. 'Rats are red.' Pluralising nonvirile males ie m2", () => {
+    it("#pal18-09y GET 200 YES: Poleng. 'Rats are red.' Pluralised m2 should be nonvirile", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
       return request(app)
         .get("/api/palette")
         .send({
+          useDummy: true,
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "dummy66",
