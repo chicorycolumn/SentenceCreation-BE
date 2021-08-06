@@ -490,36 +490,28 @@ exports.findMatchingLemmaObjectThenWord = (
     );
 
     function addHiddenNumberToTantumLObjs(lObj, stCh) {
-      let tantumsAreNotCompatibleWith = {
-        tantumPlurale: "singular",
-        tantumSingulare: "plural",
+      let tantumsRef = {
+        tantumPlurale: "plural",
+        tantumSingulare: "singular",
       };
 
-      Object.keys(tantumsAreNotCompatibleWith).forEach((tantumKey) => {
-        let incompatibleNumberValue = tantumsAreNotCompatibleWith[tantumKey];
-
+      Object.keys(tantumsRef).forEach((tantumKey) => {
         if (lObj[tantumKey]) {
-          if (stCh.number) {
-            let newStChNumberArr = [];
-
-            stCh.number.forEach((numberTraitValue) => {
-              if (numberTraitValue === incompatibleNumberValue) {
-                if (!stCh.hiddenTraits) {
-                  stCh.hiddenTraits = {};
-                }
-
-                if (!stCh.hiddenTraits.number) {
-                  stCh.hiddenTraits.number = [];
-                }
-
-                stCh.hiddenTraits.number.push(incompatibleNumberValue);
-              } else {
-                newStChNumberArr.push(numberTraitValue);
-              }
-            });
-
-            stCh.number = newStChNumberArr;
+          if (!stCh.number) {
+            consol.throw("cipp");
           }
+
+          let tantumCompatibleNumberValue = tantumsRef[tantumKey];
+
+          if (!stCh.hiddenTraits) {
+            stCh.hiddenTraits = {};
+          }
+
+          stCh.hiddenTraits.number = [...stCh.number];
+
+          stCh.number = [tantumCompatibleNumberValue];
+
+          console.log("");
         }
       });
     }

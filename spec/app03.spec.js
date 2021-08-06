@@ -117,7 +117,7 @@ describe("/api", function () {
           );
         });
     });
-    it.only("#pal21-02b GET 200 YES: Poleng. In this sentence, a Plurale Tantum does really have a number.", () => {
+    xit("#pal21-02b GET 200 YES: Poleng. In this sentence, a Plurale Tantum does really have a number.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -145,7 +145,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal21-02c GET 200 YES: Engpol. In this sentence, a Plurale Tantum does really have a number.", () => {
+    xit("#pal21-02c GET 200 YES: Engpol. In this sentence, a Plurale Tantum does really have a number.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -173,7 +173,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal21-02d GET 200 YES: Poleng. In this sentence, a Plurale Tantum does really have a number.", () => {
+    xit("#pal21-02d GET 200 YES: Poleng. In this sentence, a Plurale Tantum does really have a number.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 

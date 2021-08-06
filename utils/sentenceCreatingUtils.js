@@ -1147,15 +1147,29 @@ exports.conformAnswerStructureToQuestionStructure = (
       // STEP ONE: Update traits from list of allowable transfers.
       //
 
+      console.log(">>>>>>>>>>>>>>>>>", questionStructureChunk.chunkId);
+      console.log(answerStructureChunk);
+
+      if (traitKey === "number") {
+        console.log("qqqa", questionStructureChunk.number);
+      }
+
       //Step-T, dealing with hidden values.
       let nonhiddenTraitValue;
-      if (questionStructureChunk.hiddenTraits[traitKey]) {
+      if (
+        questionStructureChunk.hiddenTraits &&
+        questionStructureChunk.hiddenTraits[traitKey]
+      ) {
         nonhiddenTraitValue = uUtils.copyWithoutReference(
           questionStructureChunk[traitKey]
         );
         questionStructureChunk[traitKey] = uUtils.copyWithoutReference(
           questionStructureChunk.hiddenTraits[traitKey]
         );
+      }
+
+      if (traitKey === "number") {
+        console.log("qqqb", questionStructureChunk.number);
       }
 
       if (!questionStructureChunk[traitKey]) {
@@ -1175,7 +1189,11 @@ exports.conformAnswerStructureToQuestionStructure = (
       }
 
       //Don't transfer Number if Q is Tantum Plurale.     eg if Q is "skrzypce" we'd want A to include both "violin" and "violins".
-      if (traitKey === "number" && questionSelectedLemmaObject.tantumPlurale) {
+      if (
+        false &&
+        traitKey === "number" &&
+        questionSelectedLemmaObject.tantumPlurale
+      ) {
         consol.log(
           "yurw conformAnswerStructureToQuestionStructure Question lobj is a tantum, so we won't transfer Number trait."
         );
@@ -1185,6 +1203,7 @@ exports.conformAnswerStructureToQuestionStructure = (
       //Don't transfer Number if all A lObjs are Tantum Plurale.     eg if Q is "violin" we don't want to specify that A must be singular, as "skrzypce" can't be singular.
       //Step-T: And does this work vice versa?
       if (
+        false &&
         traitKey === "number" &&
         matchingAnswerLemmaObjects.length &&
         matchingAnswerLemmaObjects.every(
@@ -1251,8 +1270,13 @@ exports.conformAnswerStructureToQuestionStructure = (
         answerLanguage
       );
 
+      console.log(answerStructureChunk);
+
       //Step-T, dealing with hidden values.
-      if (questionStructureChunk.hiddenTraits[traitKey]) {
+      if (
+        questionStructureChunk.hiddenTraits &&
+        questionStructureChunk.hiddenTraits[traitKey]
+      ) {
         questionStructureChunk[traitKey] = nonhiddenTraitValue;
       }
     });
