@@ -1147,11 +1147,11 @@ exports.conformAnswerStructureToQuestionStructure = (
       // STEP ONE: Update traits from list of allowable transfers.
       //
 
-      console.log(">>>>>>>>>>>>>>>>>", questionStructureChunk.chunkId);
-      console.log(answerStructureChunk);
+      consol.logSpecial5(">>>>>>>>>>>>>>>>>", questionStructureChunk.chunkId);
+      consol.logSpecial5(answerStructureChunk);
 
       if (traitKey === "number") {
-        console.log("qqqa", questionStructureChunk.number);
+        consol.logSpecial5("qqqa", questionStructureChunk.number);
       }
 
       //Step-T, dealing with hidden values.
@@ -1169,7 +1169,7 @@ exports.conformAnswerStructureToQuestionStructure = (
       }
 
       if (traitKey === "number") {
-        console.log("qqqb", questionStructureChunk.number);
+        consol.logSpecial5("qqqb", questionStructureChunk.number);
       }
 
       if (!questionStructureChunk[traitKey]) {
@@ -1270,7 +1270,7 @@ exports.conformAnswerStructureToQuestionStructure = (
         answerLanguage
       );
 
-      console.log(answerStructureChunk);
+      consol.logSpecial5(answerStructureChunk);
 
       //Step-T, dealing with hidden values.
       if (

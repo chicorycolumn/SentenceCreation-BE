@@ -510,8 +510,6 @@ exports.findMatchingLemmaObjectThenWord = (
           stCh.hiddenTraits.number = [...stCh.number];
 
           stCh.number = [tantumCompatibleNumberValue];
-
-          console.log("");
         }
       });
     }
