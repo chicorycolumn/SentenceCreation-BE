@@ -2415,6 +2415,7 @@ exports.dummySentenceFormulasBank = [
       },
       {
         chunkId: "ver-1-Be",
+        specificLemmas: ["być"],
         agreeWith: "nco-1-Tweezers",
         tenseDescription: ["present im"],
         formulaImportantTraitKeys: ["tenseDescription"],
@@ -2425,8 +2426,8 @@ exports.dummySentenceFormulasBank = [
   },
   {
     sentenceFormulaSymbol: "dummy68d",
-    sentenceFormulaId: "ENG-dummy68d",
-    translations: { POL: ["POL-dummy68d"] },
+    sentenceFormulaId: "POL-dummy68d",
+    translations: { ENG: ["ENG-dummy68d"] },
     sentenceStructure: [
       {
         chunkId: "nco-1-Tweezers",
@@ -2435,8 +2436,9 @@ exports.dummySentenceFormulasBank = [
       },
       {
         chunkId: "ver-1-Be",
+        specificLemmas: ["być"],
         agreeWith: "nco-1-Tweezers",
-        tenseDescription: ["present simple"],
+        tenseDescription: ["present im"],
         formulaImportantTraitKeys: ["tenseDescription"],
       },
     ],

@@ -1792,6 +1792,7 @@ exports.dummySentenceFormulasBank = [
       },
       {
         chunkId: "ver-1-Be",
+        specificLemmas: ["be"],
         agreeWith: "nco-1-Tweezers",
         tenseDescription: ["present simple"],
         formulaImportantTraitKeys: ["tenseDescription"],
@@ -1812,6 +1813,7 @@ exports.dummySentenceFormulasBank = [
       },
       {
         chunkId: "ver-1-Be",
+        specificLemmas: ["be"],
         agreeWith: "nco-1-Tweezers",
         tenseDescription: ["present simple"],
         formulaImportantTraitKeys: ["tenseDescription"],

@@ -28,7 +28,7 @@ describe("/api", function () {
   );
 
   describe.only("/palette - Stage 21b: Tantum Nouns.", () => {
-    it("#pal21-03a GET 200 YES: Engpol. An ENG Plurale Tantum is actually Singular.", () => {
+    xit("#pal21-03a GET 200 YES: Engpol. An ENG Plurale Tantum is actually Singular.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -45,7 +45,7 @@ describe("/api", function () {
           let ref = [
             {
               ENG: "Tweezers are.",
-              POL: ["Otoczenie jest."],
+              POL: ["Pinceta jest."],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -56,7 +56,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal21-03b GET 200 YES: Poleng. An ENG Plurale Tantum is actually Singular.", () => {
+    xit("#pal21-03b GET 200 YES: Poleng. An ENG Plurale Tantum is actually Singular.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -73,7 +73,7 @@ describe("/api", function () {
           let ref = [
             {
               ENG: ["Tweezers are."],
-              POL: "Otoczenie jest.",
+              POL: "Pinceta jest.",
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -84,7 +84,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal21-03c GET 200 YES: Engpol. An ENG Plurale Tantum is actually Plural.", () => {
+    xit("#pal21-03c GET 200 YES: Engpol. An ENG Plurale Tantum is actually Plural.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -101,7 +101,7 @@ describe("/api", function () {
           let ref = [
             {
               ENG: "Tweezers are.",
-              POL: ["Otoczenia są."],
+              POL: ["Pincety są."],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -112,7 +112,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal21-03d GET 200 YES: Poleng. An ENG Plurale Tantum is actually Plural.", () => {
+    xit("#pal21-03d GET 200 YES: Poleng. An ENG Plurale Tantum is actually Plural.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -129,7 +129,7 @@ describe("/api", function () {
           let ref = [
             {
               ENG: ["Tweezers are."],
-              POL: "Otoczenia są.",
+              POL: "Pincety są.",
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -254,7 +254,7 @@ describe("/api", function () {
     });
   });
 
-  describe.only("/palette - Stage 21a: Tantum Nouns.", () => {
+  describe("/palette - Stage 21a: Tantum Nouns.", () => {
     it("#pal21-01a GET 200 YES: Poleng. Plurale Tantum in POL is allowed to be sing or plur in ENG.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
