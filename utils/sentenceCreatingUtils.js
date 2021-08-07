@@ -46,17 +46,6 @@ exports.getMaterialsCopies = (
     dummySentenceFormulasBank,
   } = scUtils.getWordsAndFormulas(currentLanguage);
 
-  // console.log(
-  //   currentLanguage,
-  //   "dummyWordsBank.nounSet.length",
-  //   currentLanguage,
-  //   dummyWordsBank.nounSet.length
-  // );
-
-  // dummyWordsBank.nounSet.push(
-  //   uUtils.copyWithoutReference(dummyWordsBank.nounSet[0])
-  // );
-
   let sentenceFormula;
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
   let defaultSentenceFormulaId = "POL-00-50";
