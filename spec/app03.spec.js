@@ -27,7 +27,7 @@ describe("/api", function () {
     "ENG"
   );
 
-  describe.only("/palette - Stage 21: Tantum Nouns.", () => {
+  describe.only("/palette - Stage 21a: Tantum Nouns.", () => {
     it("#pal21-01a GET 200 YES: Poleng. Plurale Tantum in POL is allowed to be sing or plur in ENG.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
@@ -89,7 +89,7 @@ describe("/api", function () {
           expect(answerSentenceArr).to.have.members(["Czerwone drzwi."]);
         });
     });
-    it("#pal21-02a GET 200 YES: Engpol. In this sentence, a Plurale Tantum does really have a number.", () => {
+    it("#pal21-02a GET 200 YES: Engpol. A POL Plurale Tantum is actually Singular.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -117,7 +117,7 @@ describe("/api", function () {
           );
         });
     });
-    xit("#pal21-02b GET 200 YES: Poleng. In this sentence, a Plurale Tantum does really have a number.", () => {
+    it("#pal21-02b GET 200 YES: Poleng. A POL Plurale Tantum is actually Singular.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -145,7 +145,7 @@ describe("/api", function () {
           );
         });
     });
-    xit("#pal21-02c GET 200 YES: Engpol. In this sentence, a Plurale Tantum does really have a number.", () => {
+    it("#pal21-02c GET 200 YES: Engpol. A POL Plurale Tantum is actually Plural.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -173,7 +173,7 @@ describe("/api", function () {
           );
         });
     });
-    xit("#pal21-02d GET 200 YES: Poleng. In this sentence, a Plurale Tantum does really have a number.", () => {
+    it("#pal21-02d GET 200 YES: Poleng. A POL Plurale Tantum is actually Plural.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
