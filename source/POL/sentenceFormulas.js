@@ -52,6 +52,7 @@ exports.sentenceFormulasBank = [
         andTags: ["wearable"],
         gcase: ["nom"],
         number: ["singular"],
+        blockedLemmaObjects: ["tantumPlurale"],
         gender: [],
       },
       { chunkId: "fix-1", chunkValue: "jest w szafie" },

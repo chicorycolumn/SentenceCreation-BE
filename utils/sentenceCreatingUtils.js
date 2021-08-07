@@ -1188,34 +1188,6 @@ exports.conformAnswerStructureToQuestionStructure = (
         return;
       }
 
-      //Don't transfer Number if Q is Tantum Plurale.     eg if Q is "skrzypce" we'd want A to include both "violin" and "violins".
-      if (
-        false &&
-        traitKey === "number" &&
-        questionSelectedLemmaObject.tantumPlurale
-      ) {
-        consol.log(
-          "yurw conformAnswerStructureToQuestionStructure Question lobj is a tantum, so we won't transfer Number trait."
-        );
-        return;
-      }
-
-      //Don't transfer Number if all A lObjs are Tantum Plurale.     eg if Q is "violin" we don't want to specify that A must be singular, as "skrzypce" can't be singular.
-      //Step-T: And does this work vice versa?
-      if (
-        false &&
-        traitKey === "number" &&
-        matchingAnswerLemmaObjects.length &&
-        matchingAnswerLemmaObjects.every(
-          (answerLemmaObject) => answerLemmaObject.tantumPlurale
-        )
-      ) {
-        console.log(
-          "kozn conformAnswerStructureToQuestionStructure All answer lobjs are tantum, so we won't transfer Number trait."
-        );
-        return;
-      }
-
       if (traitKey === "tenseDescription") {
         answerStructureChunk["tenseDescription"] = []; //Hard adjust.
 
