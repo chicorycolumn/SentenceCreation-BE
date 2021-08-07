@@ -16,7 +16,7 @@ const { generalTranslatedSentencesRef } = testingUtils;
 describe("/api", function () {
   this.timeout(7000);
 
-  describe("/palette - Stage Ω: Checks at end of all tests.", () => {
+  describe("/palette - Stage Ω Omega: Checks at end of all tests.", () => {
     it("#palΩ-01 Words and Formulas banks were not mutated.", () => {
       const original = require("../spec/originalCopies.js");
 

@@ -16,7 +16,6 @@ exports.getWordsAndFormulas = (currentLanguage) => {
   const {
     dummyWordsBank,
   } = require(`../source/${currentLanguage}/dummy/dummyWords.js`);
-
   const {
     sentenceFormulasBank,
   } = require(`../source/${currentLanguage}/sentenceFormulas.js`);
@@ -51,12 +50,12 @@ exports.getMaterialsCopies = (
   let defaultSentenceFormulaId = "POL-00-50";
 
   let words = useDummy
-    ? gpUtils.copyAndCombineWordbanks(wordsBank, dummyWordsBank)
-    : uUtils.copyWithoutReference(wordsBank);
+    ? gpUtils.combineWordbanks(wordsBank, dummyWordsBank)
+    : wordsBank;
 
   let sentenceFormulas = useDummy
-    ? uUtils.copyWithoutReference(dummySentenceFormulasBank) //Alpha What? Why do all this?
-    : uUtils.copyWithoutReference(sentenceFormulasBank); // ^
+    ? dummySentenceFormulasBank
+    : sentenceFormulasBank;
 
   if (sentenceFormulaId) {
     sentenceFormula = sentenceFormulas.find(
@@ -90,11 +89,10 @@ exports.getMaterialsCopies = (
     );
   }
 
-  Object.keys(words).forEach((wordsetKey) => {
-    langUtils.preprocessLemmaObjectsMinor(words[wordsetKey]);
-  });
-
-  return { sentenceFormula, words };
+  return {
+    sentenceFormula: uUtils.copyWithoutReference(sentenceFormula),
+    words,
+  };
 };
 
 exports.processSentenceFormula = (

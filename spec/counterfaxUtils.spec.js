@@ -10,7 +10,7 @@ const {
   areTwoObjectsEqual,
 } = require("../utils/universalUtils.js");
 
-describe("listCounterfaxSituations2", () => {
+xdescribe("listCounterfaxSituations2", () => {
   it("Two annotations on one, and one on the other.", () => {
     let questionOutputArray = [
       {
@@ -753,7 +753,7 @@ describe("listCounterfaxSituations2", () => {
   });
 });
 
-describe("explodeCounterfaxSituations", () => {
+xdescribe("explodeCounterfaxSituations", () => {
   it("Two by three by two makes twelve.", () => {
     let input = {
       headsFirstSequenceChunkIds: ["pro-1", "pro-2"],

@@ -45,7 +45,8 @@ exports.findMatchingLemmaObjectThenWord = (
   let source =
     words[gpUtils.giveSetKey(gpUtils.getWordtypeStCh(structureChunk))];
 
-  langUtils.preprocessLemmaObjectsMinor(source);
+  let shouldFilterBySelectors;
+
   let matches = [];
 
   if (structureChunk.specificIds && structureChunk.specificIds.length) {
@@ -99,6 +100,18 @@ exports.findMatchingLemmaObjectThenWord = (
       );
     }
 
+    shouldFilterBySelectors = true;
+  }
+
+  //Instead of deep copying every single lObj, in getMaterials
+  //we wait until some of the filtering is done, and then deep copy them, so we're deep copying fewer.
+
+  //We need to deep copy because there are shorthands inside the lObjs which require processing,
+  //eg "m" key being expanded ie its value copied to "m1", "m2", "m3" keys, which is mutating the lObj.
+
+  matches = uUtils.copyWithoutReference(matches);
+
+  if (shouldFilterBySelectors) {
     langUtils.preprocessLemmaObjectsMinor(matches);
 
     matches = lfUtils.filterBySelectors(

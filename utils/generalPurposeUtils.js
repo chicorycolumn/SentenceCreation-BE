@@ -131,28 +131,34 @@ exports.giveSetKey = (word) => {
   return word + "Set";
 };
 
-exports.copyAndCombineWordbanks = (wordbank1, wordbank2) => {
-  let wordbank1Copy = uUtils.copyWithoutReference(wordbank1);
-  let wordbank2Copy = uUtils.copyWithoutReference(wordbank2);
+exports.combineWordbanks = (wordbank1Input, wordbank2Input, shouldCopy) => {
+  let wordbank1 = shouldCopy
+    ? uUtils.copyWithoutReference(wordbank1Input)
+    : wordbank1Input;
+  let wordbank2 = shouldCopy
+    ? uUtils.copyWithoutReference(wordbank2Input)
+    : wordbank2Input;
 
-  Object.keys(wordbank1Copy).forEach((key) => {
-    if (!wordbank2Copy[key]) {
+  let result = {};
+
+  Object.keys(wordbank1).forEach((key) => {
+    if (!wordbank2[key]) {
       consol.log(
         "[1;31m " +
-          `udhd gp:copyAndCombineWordbanks #NB: wordbank2 does not have key "${key}" but wordbank1 does.` +
+          `udhd gp:combineWordbanks #NB: wordbank2 does not have key "${key}" but wordbank1 does.` +
           "[0m"
       );
     }
-    if (wordbank2Copy[key] && !Array.isArray(wordbank2Copy[key])) {
+    if (!Array.isArray(wordbank2[key])) {
       consol.throw(
-        `#ERR cocq gp:copyAndCombineWordbanks. wordbank2 key "${key}" holds non array value.`
+        `#ERR cocq gp:combineWordbanks. wordbank2 key "${key}" holds non array value.`
       );
     }
 
-    wordbank1Copy[key] = [...wordbank1Copy[key], ...(wordbank2Copy[key] || [])];
+    result[key] = [...wordbank1[key], ...wordbank2[key]];
   });
 
-  return wordbank1Copy;
+  return result;
 };
 
 exports.explodeOutputArraysByHeadsAndDependents = (justOneOutputArray) => {
