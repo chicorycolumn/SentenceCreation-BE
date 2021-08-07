@@ -27,234 +27,7 @@ describe("/api", function () {
     "ENG"
   );
 
-  describe.only("/palette - Stage 21b: Tantum Nouns.", () => {
-    xit("#pal21-03a GET 200 YES: Engpol. An ENG Plurale Tantum is actually Singular.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy68c",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "Tweezers are.",
-              POL: ["Pinceta jest."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    xit("#pal21-03b GET 200 YES: Poleng. An ENG Plurale Tantum is actually Singular.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy68c",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["Tweezers are."],
-              POL: "Pinceta jest.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    xit("#pal21-03c GET 200 YES: Engpol. An ENG Plurale Tantum is actually Plural.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy68d",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "Tweezers are.",
-              POL: ["Pincety są."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    xit("#pal21-03d GET 200 YES: Poleng. An ENG Plurale Tantum is actually Plural.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy68d",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["Tweezers are."],
-              POL: "Pincety są.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    it("#pal21-04a GET 200 YES: Engpol. An ENG Singulare Tantum is actually Singular.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy68e",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "Dust is.",
-              POL: ["Pył jest."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    it("#pal21-04b GET 200 YES: Poleng. An ENG Singulare Tantum is actually Singular.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy68e",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["Dust is."],
-              POL: "Pył jest.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    it("#pal21-04c GET 200 YES: Engpol. An ENG Singulare Tantum is actually Plural.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy68f",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "Dust is.",
-              POL: ["Pyły są."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    it("#pal21-04d GET 200 YES: Poleng. An ENG Singulare Tantum is actually Plural.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy68d",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["Dust is."],
-              POL: "Pyły są.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-  });
-
-  describe("/palette - Stage 21a: Tantum Nouns.", () => {
+  describe("/palette - Stage 21: Tantum Nouns.", () => {
     it("#pal21-01a GET 200 YES: Poleng. Plurale Tantum in POL is allowed to be sing or plur in ENG.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
@@ -418,6 +191,230 @@ describe("/api", function () {
             {
               ENG: ["Two doors."],
               POL: "Dwoje drzwi.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal21-03a GET 200 YES: Engpol. An ENG Plurale Tantum is actually Singular.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy68c",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "Tweezers are.",
+              POL: ["Pinceta jest."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal21-03b GET 200 YES: Poleng. An ENG Plurale Tantum is actually Singular.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy68c",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["Tweezers are."],
+              POL: "Pinceta jest.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal21-03c GET 200 YES: Engpol. An ENG Plurale Tantum is actually Plural.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy68d",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "Tweezers are.",
+              POL: ["Pincety są."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal21-03d GET 200 YES: Poleng. An ENG Plurale Tantum is actually Plural.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy68d",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["Tweezers are."],
+              POL: "Pincety są.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal21-04a GET 200 YES: Engpol. An ENG Singulare Tantum is actually Singular.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy68e",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "Dust is.",
+              POL: ["Pył jest."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal21-04b GET 200 YES: Poleng. An ENG Singulare Tantum is actually Singular.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy68e",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["Dust is."],
+              POL: "Pył jest.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal21-04c GET 200 YES: Engpol. An ENG Singulare Tantum is actually Plural.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy68f",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "Dust is.",
+              POL: ["Pyły są."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal21-04d GET 200 YES: Poleng. An ENG Singulare Tantum is actually Plural.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy68f",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["Dust is."],
+              POL: "Pyły są.",
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(

@@ -290,6 +290,25 @@ exports.wordsBank = {
     },
     {
       //links
+      translations: { ENG: ["dust"], POL: ["pył"] },
+      tags: ["tantumTest1"],
+      //selectors
+      lemma: "dust",
+      id: "eng-nco-018",
+      lacking: true,
+      tantumSingulare: true,
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "dust",
+          gen: "dust's",
+        },
+      },
+    },
+    {
+      //links
       translations: { ENG: ["doctor"], POL: ["lekarz", "lekarka"] },
       tags: ["concrete", "animate", "personTest2", "job"],
       //selectors

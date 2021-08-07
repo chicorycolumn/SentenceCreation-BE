@@ -1822,4 +1822,46 @@ exports.dummySentenceFormulasBank = [
     primaryOrders: [["nco-1-Tweezers", "ver-1-Be"]],
     additionalOrders: [],
   },
+  {
+    sentenceFormulaSymbol: "dummy68e",
+    sentenceFormulaId: "ENG-dummy68e",
+    translations: { POL: ["POL-dummy68e"] },
+    sentenceStructure: [
+      {
+        chunkId: "nco-1-Dust",
+        specificLemmas: ["dust"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-Be",
+        specificLemmas: ["be"],
+        agreeWith: "nco-1-Dust",
+        tenseDescription: ["present simple"],
+        formulaImportantTraitKeys: ["tenseDescription"],
+      },
+    ],
+    primaryOrders: [["nco-1-Dust", "ver-1-Be"]],
+    additionalOrders: [],
+  },
+  {
+    sentenceFormulaSymbol: "dummy68f",
+    sentenceFormulaId: "ENG-dummy68f",
+    translations: { POL: ["POL-dummy68f"] },
+    sentenceStructure: [
+      {
+        chunkId: "nco-1-Dust",
+        specificLemmas: ["dust"],
+        number: ["plural"],
+      },
+      {
+        chunkId: "ver-1-Be",
+        specificLemmas: ["be"],
+        agreeWith: "nco-1-Dust",
+        tenseDescription: ["present simple"],
+        formulaImportantTraitKeys: ["tenseDescription"],
+      },
+    ],
+    primaryOrders: [["nco-1-Dust", "ver-1-Be"]],
+    additionalOrders: [],
+  },
 ];

@@ -253,6 +253,36 @@ exports.wordsBank = {
     },
     {
       //links
+      translations: { POL: ["pył"], ENG: ["dust"] },
+      tags: ["tantumTest1"],
+      //selectors
+      lemma: "pył",
+      id: "pol-nco-016",
+      gender: "m3",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "pył",
+          gen: "pyła",
+          dat: "pyłowi",
+          acc: "pył",
+          ins: "pyłem",
+          loc: "pyle",
+        },
+        plural: {
+          nom: "pyły",
+          gen: "pyłów",
+          dat: "pyłom",
+          acc: "pyły",
+          ins: "pyłami",
+          loc: "pyłach",
+        },
+      },
+    },
+    {
+      //links
       translations: { ENG: ["mirror"] },
       tags: ["inanimate", "holdable", "concrete"],
       //selectors
