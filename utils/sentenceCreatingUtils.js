@@ -11,20 +11,12 @@ const refFxn = require("./reference/referenceFunctions.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 const { copy } = require("../routes/paletteRouter.js");
 
-exports.getMaterialsCopies = (
-  currentLanguage,
-  sentenceFormulaId,
-  sentenceFormulaSymbol,
-  useDummy
-) => {
-  let sentenceFormula;
-  const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
-
-  //STEP ZERO (A): Get necessary source materials.
+exports.getWordsAndFormulas = (currentLanguage) => {
   const { wordsBank } = require(`../source/${currentLanguage}/words.js`);
   const {
     dummyWordsBank,
   } = require(`../source/${currentLanguage}/dummy/dummyWords.js`);
+
   const {
     sentenceFormulasBank,
   } = require(`../source/${currentLanguage}/sentenceFormulas.js`);
@@ -32,6 +24,41 @@ exports.getMaterialsCopies = (
     dummySentenceFormulasBank,
   } = require(`../source/${currentLanguage}/dummy/dummySentenceFormulas.js`);
 
+  return {
+    wordsBank,
+    dummyWordsBank,
+    sentenceFormulasBank,
+    dummySentenceFormulasBank,
+  };
+};
+
+exports.getMaterialsCopies = (
+  currentLanguage,
+  sentenceFormulaId,
+  sentenceFormulaSymbol,
+  useDummy
+) => {
+  //STEP ZERO (A): Get necessary source materials.
+  const {
+    wordsBank,
+    dummyWordsBank,
+    sentenceFormulasBank,
+    dummySentenceFormulasBank,
+  } = scUtils.getWordsAndFormulas(currentLanguage);
+
+  // console.log(
+  //   currentLanguage,
+  //   "dummyWordsBank.nounSet.length",
+  //   currentLanguage,
+  //   dummyWordsBank.nounSet.length
+  // );
+
+  // dummyWordsBank.nounSet.push(
+  //   uUtils.copyWithoutReference(dummyWordsBank.nounSet[0])
+  // );
+
+  let sentenceFormula;
+  const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
   let defaultSentenceFormulaId = "POL-00-50";
 
   let words = useDummy

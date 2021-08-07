@@ -16,7 +16,7 @@ const { generalTranslatedSentencesRef } = testingUtils;
 // ProsMgn:        "My doctor and her book." Connected pronoun reveals gender of MGN. Doesn't need an annotation for doctor as clearly must be lekarka.
 // EdusMgn:        "My doctor is a man."     Educator specifies MGN's gender. Sentence where educator knows that this MGN will need no clarifying.
 
-describe("/api", function () {
+xdescribe("/api", function () {
   this.timeout(7000);
 
   gpUtils.fillOutWashburneRefObj(
@@ -27,7 +27,7 @@ describe("/api", function () {
     "ENG"
   );
 
-  describe("/palette - Stage 21: Tantum Nouns.", () => {
+  describe("/palette - Stage 21: Step-T: Tantum Nouns.", () => {
     it("#pal21-01a GET 200 YES: Poleng. Plurale Tantum in POL is allowed to be sing or plur in ENG.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
@@ -708,7 +708,7 @@ describe("/api", function () {
     });
   });
 
-  describe("/palette - Stage 18C: Further annotations: MGNs and metagenders", () => {
+  describe("/palette - Stage 18B: Annotations: MGNs and metagenders", () => {
     it("#pal18-10a GET 200 YES: Engpol. 'The doctor writes.'", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -1301,549 +1301,7 @@ describe("/api", function () {
     });
   });
 
-  describe("/palette - Stage 18B: Further annotations.", () => {
-    it("#pal18-08a GET 200 YES: Engpol. 'I read* a book.'", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "121 I read* a book",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "I read (present) a book.",
-              POL: ["Czytam książkę."],
-            },
-            {
-              ENG: "I am reading a book.",
-              POL: ["Czytam książkę."],
-            },
-            {
-              ENG: "I will read a book.",
-              POL: ["Przeczytam książkę."],
-            },
-            //
-            {
-              ENG: "I (male) read (past) a book.",
-              POL: ["Przeczytałem książkę."],
-            },
-            {
-              ENG: "I (male) will be reading a book.",
-              POL: ["Będę czytał książkę.", "Będę czytać książkę."],
-            },
-            {
-              ENG: "I (male) was reading a book.",
-              POL: ["Czytałem książkę."],
-            },
-            //
-            {
-              ENG: "I (female) read (past) a book.",
-              POL: ["Przeczytałam książkę."],
-            },
-            {
-              ENG: "I (female) will be reading a book.",
-              POL: ["Będę czytała książkę.", "Będę czytać książkę."],
-            },
-            {
-              ENG: "I (female) was reading a book.",
-              POL: ["Czytałam książkę."],
-            },
-            //
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    it("#pal18-08b GET 200 YES: Engpol. 'I read* a book.' PDS", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "121 I read* a book",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "I read (present) a book.",
-              POL: ["Czytam książkę."],
-            },
-            {
-              ENG: "I am reading a book.",
-              POL: ["Czytam książkę."],
-            },
-            {
-              ENG: "I will read a book.",
-              POL: ["Przeczytam książkę."],
-            },
-            //
-            {
-              ENG: "I read (past) a book.",
-              POL: ["Przeczytałem książkę.", "Przeczytałam książkę."],
-            },
-            {
-              ENG: "I will be reading a book.",
-              POL: [
-                "Będę czytał książkę.",
-                "Będę czytała książkę.",
-                "Będę czytać książkę.",
-              ],
-            },
-            {
-              ENG: "I was reading a book.",
-              POL: ["Czytałem książkę.", "Czytałam książkę."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    it("#pal18-08c GET 200 YES: Poleng. 'I read* a book.'", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "121 I read* a book",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["I read a book.", "I am reading a book."],
-              POL: "Czytam książkę.",
-            },
-            {
-              ENG: [
-                "I will read a book.",
-                "I am going to read a book.",
-                "I will have read a book.",
-              ],
-              POL: "Przeczytam książkę.",
-            },
-            //
-            {
-              ENG: [
-                "I read a book.",
-                "I have read a book.",
-                "I had read a book.",
-              ],
-              POL: "Przeczytałem książkę.",
-            },
-            {
-              ENG: [
-                "I read a book.",
-                "I have read a book.",
-                "I had read a book.",
-              ],
-              POL: "Przeczytałam książkę.",
-            },
-            {
-              ENG: [
-                "I will be reading a book.",
-                "I am going to be reading a book.",
-              ],
-              POL: "Będę czytał książkę.",
-            },
-            {
-              ENG: [
-                "I will be reading a book.",
-                "I am going to be reading a book.",
-              ],
-              POL: "Będę czytała książkę.",
-            },
-            {
-              ENG: [
-                "I will be reading a book.",
-                "I am going to be reading a book.",
-              ],
-              POL: "Będę czytać książkę.",
-            },
-            {
-              ENG: ["I was reading a book.", "I have read a book."],
-              POL: "Czytałem książkę.",
-            },
-            {
-              ENG: ["I was reading a book.", "I have read a book."],
-              POL: "Czytałam książkę.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    it("#pal18-08d GET 200 YES: Poleng. 'I read* a book.' PDS", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "121 I read* a book",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["I read a book.", "I am reading a book."],
-              POL: "Czytam książkę.",
-            },
-            {
-              ENG: [
-                "I will read a book.",
-                "I am going to read a book.",
-                "I will have read a book.",
-              ],
-              POL: "Przeczytam książkę.",
-            },
-            //
-            {
-              ENG: [
-                "I read a book.",
-                "I have read a book.",
-                "I had read a book.",
-              ],
-              POL: "Przeczytałem książkę.",
-            },
-            {
-              ENG: [
-                "I read a book.",
-                "I have read a book.",
-                "I had read a book.",
-              ],
-              POL: "Przeczytałam książkę.",
-            },
-            {
-              ENG: [
-                "I will be reading a book.",
-                "I am going to be reading a book.",
-              ],
-              POL: "Będę czytał książkę.",
-            },
-            {
-              ENG: [
-                "I will be reading a book.",
-                "I am going to be reading a book.",
-              ],
-              POL: "Będę czytała książkę.",
-            },
-            {
-              ENG: [
-                "I will be reading a book.",
-                "I am going to be reading a book.",
-              ],
-              POL: "Będę czytać książkę.",
-            },
-            {
-              ENG: ["I was reading a book.", "I have read a book."],
-              POL: "Czytałem książkę.",
-            },
-            {
-              ENG: ["I was reading a book.", "I have read a book."],
-              POL: "Czytałam książkę.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    it("#pal18-09a GET 200 YES: Engpol. 'They are red.'", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "123 I am red",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "He is red.",
-              POL: ["Jest czerwony.", "On jest czerwony."],
-            },
-            {
-              ENG: "She is red.",
-              POL: ["Jest czerwona.", "Ona jest czerwona."],
-            },
-            {
-              ENG: "It is red.",
-              POL: ["Jest czerwone.", "Ono jest czerwone."],
-            },
-            {
-              ENG: "They (males) are red.",
-              POL: ["Są czerwoni.", "Oni są czerwoni."],
-            },
-            {
-              ENG: "They (mixed) are red.",
-              POL: ["Są czerwoni.", "Oni są czerwoni."],
-            },
-            {
-              ENG: "They (females) are red.",
-              POL: ["Są czerwone.", "One są czerwone."],
-            },
-            //Now technically, you'd need this. Because "koty" are masculine (m2) but that's "one" not "oni",
-            //ie only m1 plural (and groups containing m1) are virile.
-            //But practically, you can just teach this to the player in lesson text, rather than testing that
-            //nitty gritty here. Because the real sentences encountered will be like, "Cats are black." "Kote są czarne."
-            //so that plural-m2-is-nonvirile is taught there. You don't need to worry about it for single contextless
-            //barebones sentence like this one.
-            // {
-            //   ENG: "They (non-persons) are red.",
-            //   POL: ["Są czerwone.", "One są czerwone."],
-            // },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    it("#pal18-09b GET 200 YES: Engpol. 'They are red.' PDS", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "123 I am red",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "He is red.",
-              POL: ["Jest czerwony.", "On jest czerwony."],
-            },
-            {
-              ENG: "She is red.",
-              POL: ["Jest czerwona.", "Ona jest czerwona."],
-            },
-            {
-              ENG: "It is red.",
-              POL: ["Jest czerwone.", "Ono jest czerwone."],
-            },
-            {
-              ENG: "They are red.",
-              POL: [
-                "Są czerwoni.",
-                "Oni są czerwoni.",
-                "Są czerwone.",
-                "One są czerwone.",
-              ],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    it("#pal18-09c GET 200 YES: Poleng. 'They are red.'", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "123 I am red",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["He is red.", "He is being red."],
-              POL: "Jest czerwony.",
-            },
-            {
-              ENG: ["She is red.", "She is being red."],
-              POL: "Jest czerwona.",
-            },
-            {
-              ENG: ["It is red.", "It is being red."],
-              POL: "Jest czerwone.",
-            },
-            {
-              ENG: ["They are red.", "They are being red."],
-              POL: "Są czerwoni.",
-            },
-            {
-              ENG: ["They are red.", "They are being red."],
-              POL: "Są czerwone.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    it("#pal18-09d GET 200 YES: Poleng. 'They are red.' PDS", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "123 I am red",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["He is red.", "He is being red."],
-              POL: "Jest czerwony.",
-            },
-            {
-              ENG: ["She is red.", "She is being red."],
-              POL: "Jest czerwona.",
-            },
-            {
-              ENG: ["It is red.", "It is being red."],
-              POL: "Jest czerwone.",
-            },
-            {
-              ENG: ["They are red.", "They are being red."],
-              POL: "Są czerwoni.",
-            },
-            {
-              ENG: ["They are red.", "They are being red."],
-              POL: "Są czerwone.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    it("#pal18-09w GET 200 YES: Engpol. 'Rats are red.' Pluralised m2 should be nonvirile", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy66",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "Rats are red.",
-              POL: ["Szczury są czerwone."],
-            },
-            {
-              ENG: "Boys are red.",
-              POL: ["Chłopcy są czerwoni."],
-            },
-            {
-              ENG: "Women are red.",
-              POL: ["Kobiety są czerwone."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-    it("#pal18-09y GET 200 YES: Poleng. 'Rats are red.' Pluralised m2 should be nonvirile", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy66",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["Rats are red.", "Rats are being red."],
-              POL: "Szczury są czerwone.",
-            },
-            {
-              ENG: ["Boys are red.", "Boys are being red."],
-              POL: "Chłopcy są czerwoni.",
-            },
-            {
-              ENG: ["Women are red.", "Women are being red."],
-              POL: "Kobiety są czerwone.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
-    });
-  });
-
-  describe("/palette - Stage 18A: Further annotations.", () => {
+  describe("/palette - Stage 18A: Annotations: Miscellaneous", () => {
     it("#pal18-01a GET 200 YES: Engpol. 'she reads' tenseDesc anno should be removed by conditionsOnWhichToBlockAnnotations.", () => {
       //Originally failed as removeAnnotationsByCounterfax lets tenseDesc annos through, would be too many alternate values to check.
       //So this situation, where the anno should be kept, is hardcoded in refObj conditionsOnWhichToBlockAnnotations.
@@ -2723,6 +2181,545 @@ describe("/api", function () {
                 "A doctor has seen me.",
               ],
               POL: "Lekarz mnie zobaczył.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal18-08a GET 200 YES: Engpol. 'I read* a book.'", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "121 I read* a book",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "I read (present) a book.",
+              POL: ["Czytam książkę."],
+            },
+            {
+              ENG: "I am reading a book.",
+              POL: ["Czytam książkę."],
+            },
+            {
+              ENG: "I will read a book.",
+              POL: ["Przeczytam książkę."],
+            },
+            //
+            {
+              ENG: "I (male) read (past) a book.",
+              POL: ["Przeczytałem książkę."],
+            },
+            {
+              ENG: "I (male) will be reading a book.",
+              POL: ["Będę czytał książkę.", "Będę czytać książkę."],
+            },
+            {
+              ENG: "I (male) was reading a book.",
+              POL: ["Czytałem książkę."],
+            },
+            //
+            {
+              ENG: "I (female) read (past) a book.",
+              POL: ["Przeczytałam książkę."],
+            },
+            {
+              ENG: "I (female) will be reading a book.",
+              POL: ["Będę czytała książkę.", "Będę czytać książkę."],
+            },
+            {
+              ENG: "I (female) was reading a book.",
+              POL: ["Czytałam książkę."],
+            },
+            //
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal18-08b GET 200 YES: Engpol. 'I read* a book.' PDS", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "121 I read* a book",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "I read (present) a book.",
+              POL: ["Czytam książkę."],
+            },
+            {
+              ENG: "I am reading a book.",
+              POL: ["Czytam książkę."],
+            },
+            {
+              ENG: "I will read a book.",
+              POL: ["Przeczytam książkę."],
+            },
+            //
+            {
+              ENG: "I read (past) a book.",
+              POL: ["Przeczytałem książkę.", "Przeczytałam książkę."],
+            },
+            {
+              ENG: "I will be reading a book.",
+              POL: [
+                "Będę czytał książkę.",
+                "Będę czytała książkę.",
+                "Będę czytać książkę.",
+              ],
+            },
+            {
+              ENG: "I was reading a book.",
+              POL: ["Czytałem książkę.", "Czytałam książkę."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal18-08c GET 200 YES: Poleng. 'I read* a book.'", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "121 I read* a book",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["I read a book.", "I am reading a book."],
+              POL: "Czytam książkę.",
+            },
+            {
+              ENG: [
+                "I will read a book.",
+                "I am going to read a book.",
+                "I will have read a book.",
+              ],
+              POL: "Przeczytam książkę.",
+            },
+            //
+            {
+              ENG: [
+                "I read a book.",
+                "I have read a book.",
+                "I had read a book.",
+              ],
+              POL: "Przeczytałem książkę.",
+            },
+            {
+              ENG: [
+                "I read a book.",
+                "I have read a book.",
+                "I had read a book.",
+              ],
+              POL: "Przeczytałam książkę.",
+            },
+            {
+              ENG: [
+                "I will be reading a book.",
+                "I am going to be reading a book.",
+              ],
+              POL: "Będę czytał książkę.",
+            },
+            {
+              ENG: [
+                "I will be reading a book.",
+                "I am going to be reading a book.",
+              ],
+              POL: "Będę czytała książkę.",
+            },
+            {
+              ENG: [
+                "I will be reading a book.",
+                "I am going to be reading a book.",
+              ],
+              POL: "Będę czytać książkę.",
+            },
+            {
+              ENG: ["I was reading a book.", "I have read a book."],
+              POL: "Czytałem książkę.",
+            },
+            {
+              ENG: ["I was reading a book.", "I have read a book."],
+              POL: "Czytałam książkę.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal18-08d GET 200 YES: Poleng. 'I read* a book.' PDS", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "121 I read* a book",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["I read a book.", "I am reading a book."],
+              POL: "Czytam książkę.",
+            },
+            {
+              ENG: [
+                "I will read a book.",
+                "I am going to read a book.",
+                "I will have read a book.",
+              ],
+              POL: "Przeczytam książkę.",
+            },
+            //
+            {
+              ENG: [
+                "I read a book.",
+                "I have read a book.",
+                "I had read a book.",
+              ],
+              POL: "Przeczytałem książkę.",
+            },
+            {
+              ENG: [
+                "I read a book.",
+                "I have read a book.",
+                "I had read a book.",
+              ],
+              POL: "Przeczytałam książkę.",
+            },
+            {
+              ENG: [
+                "I will be reading a book.",
+                "I am going to be reading a book.",
+              ],
+              POL: "Będę czytał książkę.",
+            },
+            {
+              ENG: [
+                "I will be reading a book.",
+                "I am going to be reading a book.",
+              ],
+              POL: "Będę czytała książkę.",
+            },
+            {
+              ENG: [
+                "I will be reading a book.",
+                "I am going to be reading a book.",
+              ],
+              POL: "Będę czytać książkę.",
+            },
+            {
+              ENG: ["I was reading a book.", "I have read a book."],
+              POL: "Czytałem książkę.",
+            },
+            {
+              ENG: ["I was reading a book.", "I have read a book."],
+              POL: "Czytałam książkę.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal18-09a GET 200 YES: Engpol. 'They are red.'", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "123 I am red",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "He is red.",
+              POL: ["Jest czerwony.", "On jest czerwony."],
+            },
+            {
+              ENG: "She is red.",
+              POL: ["Jest czerwona.", "Ona jest czerwona."],
+            },
+            {
+              ENG: "It is red.",
+              POL: ["Jest czerwone.", "Ono jest czerwone."],
+            },
+            {
+              ENG: "They (males) are red.",
+              POL: ["Są czerwoni.", "Oni są czerwoni."],
+            },
+            {
+              ENG: "They (mixed) are red.",
+              POL: ["Są czerwoni.", "Oni są czerwoni."],
+            },
+            {
+              ENG: "They (females) are red.",
+              POL: ["Są czerwone.", "One są czerwone."],
+            },
+            //Now technically, you'd need this. Because "koty" are masculine (m2) but that's "one" not "oni",
+            //ie only m1 plural (and groups containing m1) are virile.
+            //But practically, you can just teach this to the player in lesson text, rather than testing that
+            //nitty gritty here. Because the real sentences encountered will be like, "Cats are black." "Kote są czarne."
+            //so that plural-m2-is-nonvirile is taught there. You don't need to worry about it for single contextless
+            //barebones sentence like this one.
+            // {
+            //   ENG: "They (non-persons) are red.",
+            //   POL: ["Są czerwone.", "One są czerwone."],
+            // },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal18-09b GET 200 YES: Engpol. 'They are red.' PDS", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "123 I am red",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "He is red.",
+              POL: ["Jest czerwony.", "On jest czerwony."],
+            },
+            {
+              ENG: "She is red.",
+              POL: ["Jest czerwona.", "Ona jest czerwona."],
+            },
+            {
+              ENG: "It is red.",
+              POL: ["Jest czerwone.", "Ono jest czerwone."],
+            },
+            {
+              ENG: "They are red.",
+              POL: [
+                "Są czerwoni.",
+                "Oni są czerwoni.",
+                "Są czerwone.",
+                "One są czerwone.",
+              ],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal18-09c GET 200 YES: Poleng. 'They are red.'", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "123 I am red",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["He is red.", "He is being red."],
+              POL: "Jest czerwony.",
+            },
+            {
+              ENG: ["She is red.", "She is being red."],
+              POL: "Jest czerwona.",
+            },
+            {
+              ENG: ["It is red.", "It is being red."],
+              POL: "Jest czerwone.",
+            },
+            {
+              ENG: ["They are red.", "They are being red."],
+              POL: "Są czerwoni.",
+            },
+            {
+              ENG: ["They are red.", "They are being red."],
+              POL: "Są czerwone.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal18-09d GET 200 YES: Poleng. 'They are red.' PDS", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          pleaseDontSpecify: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "123 I am red",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["He is red.", "He is being red."],
+              POL: "Jest czerwony.",
+            },
+            {
+              ENG: ["She is red.", "She is being red."],
+              POL: "Jest czerwona.",
+            },
+            {
+              ENG: ["It is red.", "It is being red."],
+              POL: "Jest czerwone.",
+            },
+            {
+              ENG: ["They are red.", "They are being red."],
+              POL: "Są czerwoni.",
+            },
+            {
+              ENG: ["They are red.", "They are being red."],
+              POL: "Są czerwone.",
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal18-09w GET 200 YES: Engpol. 'Rats are red.' Pluralised m2 should be nonvirile", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy66",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "Rats are red.",
+              POL: ["Szczury są czerwone."],
+            },
+            {
+              ENG: "Boys are red.",
+              POL: ["Chłopcy są czerwoni."],
+            },
+            {
+              ENG: "Women are red.",
+              POL: ["Kobiety są czerwone."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal18-09y GET 200 YES: Poleng. 'Rats are red.' Pluralised m2 should be nonvirile", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy66",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["Rats are red.", "Rats are being red."],
+              POL: "Szczury są czerwone.",
+            },
+            {
+              ENG: ["Boys are red.", "Boys are being red."],
+              POL: "Chłopcy są czerwoni.",
+            },
+            {
+              ENG: ["Women are red.", "Women are being red."],
+              POL: "Kobiety są czerwone.",
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
