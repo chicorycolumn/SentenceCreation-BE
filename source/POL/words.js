@@ -509,6 +509,36 @@ exports.wordsBank = {
         },
       },
     },
+    {
+      //links
+      translations: { ENG: ["tweezers"], POL: ["pinceta"] },
+      tags: ["tantumTest1"],
+      //selectors
+      lemma: "pinceta",
+      id: "pol-nco-015",
+      gender: "f",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "pinceta",
+          gen: "pincety",
+          dat: "pincecie",
+          acc: "pincetę",
+          ins: "pincetą",
+          loc: "pincecie",
+        },
+        plural: {
+          nom: "pincety",
+          gen: "pincet",
+          dat: "pincetom",
+          acc: "pincety",
+          ins: "pincetami",
+          loc: "pincetach",
+        },
+      },
+    },
   ],
   adjectiveSet: [
     {

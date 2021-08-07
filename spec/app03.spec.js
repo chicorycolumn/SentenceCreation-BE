@@ -44,7 +44,7 @@ describe("/api", function () {
         .then((res) => {
           let ref = [
             {
-              ENG: "Surroundings are.",
+              ENG: "Tweezers are.",
               POL: ["Otoczenie jest."],
             },
           ];
@@ -72,7 +72,7 @@ describe("/api", function () {
         .then((res) => {
           let ref = [
             {
-              ENG: ["Surroundings are."],
+              ENG: ["Tweezers are."],
               POL: "Otoczenie jest.",
             },
           ];
@@ -100,7 +100,7 @@ describe("/api", function () {
         .then((res) => {
           let ref = [
             {
-              ENG: "Surroundings are.",
+              ENG: "Tweezers are.",
               POL: ["Otoczenia są."],
             },
           ];
@@ -128,7 +128,7 @@ describe("/api", function () {
         .then((res) => {
           let ref = [
             {
-              ENG: ["Surroundings are."],
+              ENG: ["Tweezers are."],
               POL: "Otoczenia są.",
             },
           ];

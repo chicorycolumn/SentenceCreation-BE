@@ -270,6 +270,26 @@ exports.wordsBank = {
     },
     {
       //links
+      translations: { ENG: ["tweezers"], POL: ["pinceta"] },
+      tags: ["tantumTest1"],
+      //selectors
+      lemma: "tweezers",
+      id: "eng-nco-017",
+      lacking: true,
+      tantumPlurale: true,
+      tantumCountNoun: { singular: "pair", plural: "pairs" },
+      //notes
+
+      //inflections
+      inflections: {
+        plural: {
+          nom: "tweezers",
+          gen: "tweezers'",
+        },
+      },
+    },
+    {
+      //links
       translations: { ENG: ["doctor"], POL: ["lekarz", "lekarka"] },
       tags: ["concrete", "animate", "personTest2", "job"],
       //selectors
