@@ -163,7 +163,7 @@ exports.findMatchingLemmaObjectThenWord = (
       matches.forEach((selectedLemmaObject) => {
         let adhocArr = langUtils.generateAdhocForms(
           "form",
-          uUtils.copyWithoutReference(structureChunk),
+          structureChunk,
           selectedLemmaObject,
           currentLanguage
         );
@@ -189,7 +189,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
       let adhocArr = langUtils.generateAdhocForms(
         "form",
-        uUtils.copyWithoutReference(structureChunk),
+        structureChunk,
         selectedLemmaObject,
         currentLanguage
       );
@@ -236,7 +236,7 @@ exports.findMatchingLemmaObjectThenWord = (
           matches.forEach((selectedLemmaObject) => {
             let adhocArr = langUtils.generateAdhocForms(
               adhocInflectionCategory,
-              uUtils.copyWithoutReference(structureChunk),
+              structureChunk,
               selectedLemmaObject,
               currentLanguage
             );
@@ -263,7 +263,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
           let adhocArr = langUtils.generateAdhocForms(
             adhocInflectionCategory,
-            uUtils.copyWithoutReference(structureChunk),
+            structureChunk,
             selectedLemmaObject,
             currentLanguage
           );
@@ -420,11 +420,6 @@ exports.findMatchingLemmaObjectThenWord = (
     );
   }
 
-  // consol.log(
-  //   "ecse ot:findMatchingLemmaObjectThenWord selectedFormsArray",
-  //   selectedFormsArray
-  // );
-
   if (selectedFormsArray.length) {
     selectedFormsArray.forEach((selectedFormObject) => {
       let {
@@ -457,7 +452,13 @@ exports.findMatchingLemmaObjectThenWord = (
   let structureChunksAdjusted =
     langUtils.adjustStructureChunksInIfPW(structureChunk);
 
-  let structureChunks = structureChunksAdjusted || [structureChunk];
+  //Deep copying here because will mutate stChs in:
+  // -- addHiddenNumberToTantumStChs,
+  // -- correctMGNsBeforeFetchingOutputArray and decantMGNsBeforeFetchingOutputArray
+
+  let structureChunks = uUtils.copyWithoutReference(
+    structureChunksAdjusted || [structureChunk]
+  );
 
   structureChunks.forEach((structureChunk) => {
     consol.log(
@@ -502,7 +503,7 @@ exports.findMatchingLemmaObjectThenWord = (
       currentLanguage
     );
 
-    function addHiddenNumberToTantumLObjs(lObj, stCh) {
+    function addHiddenNumberToTantumStChs(lObj, stCh) {
       let tantumsRef = {
         tantumPlurale: "plural",
         tantumSingulare: "singular",
@@ -549,7 +550,7 @@ exports.findMatchingLemmaObjectThenWord = (
           selectedLemmaObject
         );
 
-        addHiddenNumberToTantumLObjs(selectedLemmaObject, structureChunk);
+        addHiddenNumberToTantumStChs(selectedLemmaObject, structureChunk);
 
         if (outputArray) {
           consol.log(
@@ -636,7 +637,7 @@ exports.findMatchingLemmaObjectThenWord = (
       consol.log("xzjc ot:findMatchingLemmaObjectThenWord");
       let selectedLemmaObject = uUtils.selectRandom(matchesCopy);
 
-      addHiddenNumberToTantumLObjs(selectedLemmaObject, structureChunk);
+      addHiddenNumberToTantumStChs(selectedLemmaObject, structureChunk);
 
       if (!structureChunk.dontSpecifyOnThisChunk) {
         //PDS-Beryl: Do if PDS false.

@@ -14,12 +14,12 @@ exports.combineTwoKeyValueObjectsCarefully = (obj1, obj2) => {
 
   Object.keys(obj1).forEach((obj1Key) => {
     let obj1Value = obj1[obj1Key];
-    combinedObj[obj1Key] = this.copyWithoutReference(obj1Value); //copywithoutref
+    combinedObj[obj1Key] = this.copyWithoutReference(obj1Value);
   });
 
   Object.keys(obj2).forEach((obj2Key) => {
     obj2Value = obj2[obj2Key];
-    combinedObj[obj2Key] = this.copyWithoutReference(obj2Value); //copywithoutref
+    combinedObj[obj2Key] = this.copyWithoutReference(obj2Value);
   });
 
   return combinedObj;

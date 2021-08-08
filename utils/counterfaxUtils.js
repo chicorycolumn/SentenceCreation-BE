@@ -587,15 +587,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           return false;
         }
         return true;
-        // let tempStCh = uUtils.copyWithoutReference(
-        //   questionOutputUnit.structureChunk
-        // );
-        // tempStCh[annoTraitKey] = counterfactualTraitValuesForThisTraitKey;
-        // //If "plural", remove "m", "f". If person, remove "n".
-        // counterfactualTraitValuesForThisTraitKey =
-        //   refFxn.removeIncompatibleTraitValues(questionLanguage, tempStCh).structureChunk[
-        //     annoTraitKey
-        //   ];
       }
 
       counterfactualQuestionSentenceFormula.sentenceStructure.forEach(

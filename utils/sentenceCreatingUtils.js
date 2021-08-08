@@ -145,7 +145,7 @@ exports.processSentenceFormula = (
     consol.log("evga sc:processSentenceFormula STEP ONE", headChunk.chunkId);
 
     let allPossOutputUnits_head = otUtils.findMatchingLemmaObjectThenWord(
-      uUtils.copyWithoutReference(headChunk),
+      headChunk,
       words,
       errorInSentenceCreation,
       currentLanguage,
@@ -242,7 +242,7 @@ exports.processSentenceFormula = (
             consol.log(`weoe dependentChunk "${dependentChunk.chunkId}"`);
             let allPossOutputUnits_dependent =
               otUtils.findMatchingLemmaObjectThenWord(
-                uUtils.copyWithoutReference(dependentChunk),
+                dependentChunk,
                 words,
                 errorInSentenceCreation,
                 currentLanguage,
@@ -372,7 +372,7 @@ exports.processSentenceFormula = (
       );
 
       let allPossOutputUnits_PHD = otUtils.findMatchingLemmaObjectThenWord(
-        uUtils.copyWithoutReference(postHocDependentChunk),
+        postHocDependentChunk,
         words,
         errorInSentenceCreation,
         currentLanguage,
@@ -504,7 +504,7 @@ exports.processSentenceFormula = (
 
     consol.log(`weoi otherChunk "${otherChunk.chunkId}"`);
     let allPossOutputUnits_other = otUtils.findMatchingLemmaObjectThenWord(
-      uUtils.copyWithoutReference(otherChunk),
+      otherChunk,
       words,
       errorInSentenceCreation,
       currentLanguage,
