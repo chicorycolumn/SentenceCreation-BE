@@ -1,4 +1,4 @@
-let a = [
+let goodNounsPL = [
   //Done PLN-01
   //Done PLN-02
   //Done PLN-03
