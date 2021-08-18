@@ -7,6 +7,11 @@ let goodNounsPL = [
   //Done PLN-06
   //Done PLN-07
   //Done PLN-08
+  //Done PLN-09
+  //Done PLN-10
+
+  //Done PLN-12
+  //Done PLN-13
   //of 17.
   "brat",
   "fizyka",
@@ -1456,4 +1461,25 @@ let goodNounsPL = [
   "pracowniczka",
   "uczestnik",
   "uczestniczka",
+  "przedpokój",
+  "narodziny",
+  "wkrętak",
+  "narodzenie",
+  "pasażerka",
+  "cieplarnia",
+  "żołnierka",
+  "kafejka",
+  "kuchenka mikrofalowa",
+  "nadwaga",
+  "niedowaga",
+  "iluzja",
+  "racja",
+  "ratowniczka",
+  "wyjazd",
+  "postój",
+  "chrząstka",
+  "kafel",
+  "kafelek",
+  "warkot",
+  "przypis",
 ];
