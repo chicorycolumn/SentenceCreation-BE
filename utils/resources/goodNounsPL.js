@@ -9,9 +9,11 @@ let goodNounsPL = [
   //Done PLN-08
   //Done PLN-09
   //Done PLN-10
-
+  //Done PLN-11
   //Done PLN-12
   //Done PLN-13
+  //Done PLN-14
+  //PLN 15-17 nothing.
   //of 17.
   "brat",
   "fizyka",
@@ -1482,4 +1484,10 @@ let goodNounsPL = [
   "kafelek",
   "warkot",
   "przypis",
+  "zarząd",
+  "krwotok",
+  "układanka",
+  "dyżur",
+  "postawa",
+  "utrzymanie",
 ];
