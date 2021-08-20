@@ -1,8 +1,28 @@
 const fs = require("fs");
-const { path } = require("../resources/secrets.js");
-const { nouns } = require("../../../Wiktionary/POL/nouns.js");
+// const { path } = require("../resources/secrets.js");
+// const { nouns } = require("../../../Wiktionary/POL/nouns.js");
 // console.log(typeof nouns);
 // console.log(nouns.length);
+
+const { rejectedNounsPL } = require("./rejectedNounsPL.js");
+const { goodNounsPL } = require("./goodNounsPL.js");
+console.log(rejectedNounsPL.length);
+console.log(goodNounsPL.length);
+
+let filtered = rejectedNounsPL.filter((n) => !goodNounsPL.includes(n));
+
+console.log(filtered.length);
+
+let lore = JSON.stringify(filtered);
+fs.writeFile("./banana.js", lore, (err) => {
+  if (err) console.log(err);
+  else {
+    console.log("File written successfully\n");
+    // console.log("The written has the following contents:");
+    // console.log(fs.readFileSync("books.txt", "utf8"));
+  }
+});
+return;
 
 function getHeadWords(raw) {
   let headWords = raw
