@@ -6,12 +6,7 @@ const fs = require("fs");
 
 const { rejectedNounsPL } = require("./rejectedNounsPL.js");
 const { goodNounsPL } = require("./goodNounsPL.js");
-console.log(rejectedNounsPL.length);
-console.log(goodNounsPL.length);
-
 let filtered = rejectedNounsPL.filter((n) => !goodNounsPL.includes(n));
-
-console.log(filtered.length);
 
 let lore = JSON.stringify(filtered);
 fs.writeFile("./banana.js", lore, (err) => {
