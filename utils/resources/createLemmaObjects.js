@@ -1,8 +1,6 @@
 const fs = require("fs");
 // const { path } = require("../resources/secrets.js");
 // const { nouns } = require("../../../Wiktionary/POL/nouns.js");
-// console.log(typeof nouns);
-// console.log(nouns.length);
 
 const { rejectedNounsPL } = require("./rejectedNounsPL.js");
 const { goodNounsPL } = require("./goodNounsPL.js");
