@@ -12,10 +12,7 @@ const { goodNounsPL } = require("./goodNounsPL.js");
 // });
 // return;
 
-let { plObjs, unmatchedHeadWords } = makeProtoLemmaObjects(
-  nouns,
-  goodNounsPL.slice(50)
-);
+let { plObjs, unmatchedHeadWords } = makeProtoLemmaObjects(nouns, goodNounsPL);
 
 console.log("");
 
@@ -56,18 +53,17 @@ function makeProtoLemmaObjects(raw, headWords) {
   });
 
   let plObjsPopulated = plObjs.filter((plObj) => plObj.constituentWords.length);
-  let unmatchedHeadWords = plObjs
-    .filter((plObj) => !plObj.constituentWords.length)
-    .map((plObj) => plObj.headWord);
+  let unmatchedHeadWords = headWords.filter(
+    (headWord) =>
+      !plObjs.find((plObj) => plObj.headWord === headWord).constituentWords
+        .length
+  );
 
   return {
     plObjs: plObjsPopulated,
     unmatchedHeadWords,
   };
 }
-
-let plObjs = makeProtoLemmaObjects(nouns.slice(50), getHeadWords(raw));
-// console.log(plObjs);
 
 let data = JSON.stringify(getHeadWords(nouns));
 
