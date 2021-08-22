@@ -14,9 +14,6 @@ const { goodNounsPL } = require("./goodNounsPL.js");
 
 let { plObjs, unmatchedHeadWords } = makeProtoLemmaObjects(nouns, goodNounsPL);
 
-console.log("");
-let tempCount = 0;
-
 function makeProtoLemmaObjects(raw, headWords) {
   // let plObjsFilteredBySomethingToConsoleLog = headWords.filter((headWord) => {
   //   let raw = nouns.find(
@@ -46,50 +43,46 @@ function makeProtoLemmaObjects(raw, headWords) {
   };
 
   let plObjs = headWords.map((headWord) => {
+    //
+    //FIND corresponding raw data, and INITIALISE keys that will be added to resulting plObj.
+
     let raw = nouns.find(
       (rawObj) =>
         rawObj.word === headWord &&
         rawObj.senses.some((sense) => !sense.form_of)
     );
-
     if (!raw.heads || raw.heads.length !== 1) {
       throw "Error 9384 re raw obj heads.";
     }
-
     let tags1 = [];
     let tags2 = [];
     let trans1 = [];
     let otherShapes = {};
 
+    //
+    //Add GENDER.
+
     let gender1 =
       genderConversionRef[raw.heads[0]["g"]] ||
       genderConversionRef[raw.heads[0]["1"]];
-
     if (!gender1) {
-      console.log(
-        `Error 5396 re raw obj gender for "${headWord}" "${raw.heads[0][1]}"`
-      );
-      tempCount++;
-      if (tempCount > 1000) {
-        throw "Error 2039";
-      }
-      return {};
-    }
-
-    if (gender1 === "nonvirile") {
+      throw `Error 5396 re raw obj gender for "${headWord}" "${raw.heads[0][1]}"`;
+    } else if (gender1 === "nonvirile") {
       console.log(
         `Setting "${headWord}" <${
           raw.sounds[1] && raw.sounds[1].audio
         }> as nonvirile. Hope that's okay!`
       );
-    }
-    if (gender1 === "virile") {
+    } else if (gender1 === "virile") {
       console.log(
         `>>>>>>>>>>>> Setting "${headWord}" <${
           raw.sounds[1] && raw.sounds[1].audio
         }> as virile. Hope that's okay!`
       );
     }
+
+    //
+    //Add other SHAPES, such as diminutive and augmentative.
 
     if (raw.forms) {
       raw.forms.forEach((f) => {
@@ -98,6 +91,9 @@ function makeProtoLemmaObjects(raw, headWords) {
         });
       });
     }
+
+    //
+    //Add what will become TAGS and TRANSLATIONS. Will require sorting as inconsistent placement in raw data.
 
     raw.senses.forEach((sense) => {
       if (sense.tags) {
@@ -111,7 +107,7 @@ function makeProtoLemmaObjects(raw, headWords) {
       }
     });
 
-    let res = {
+    return {
       lemma: headWord,
       tags1,
       tags2,
@@ -121,11 +117,12 @@ function makeProtoLemmaObjects(raw, headWords) {
       raw,
       gender1,
     };
-
-    return res;
   });
 
   console.log("1. plObjs have been initialised.");
+
+  //
+  //Go through raw data to find all INFLECTION objects of each plObj, and harvest from them.
 
   raw.forEach((rawObj) => {
     rawObj.senses.forEach((sense) => {
@@ -149,7 +146,17 @@ function makeProtoLemmaObjects(raw, headWords) {
     });
   });
 
-  console.log("2. plObjs have been filled out with proto-inflections.");
+  console.log("2. plObjs have been filled out with proto inflections.");
+
+  //
+  //Process the proto-inflection into properly structured inflections.
+
+  //code here...
+
+  console.log("3. plObjs have been filled out with structured inflections.");
+
+  //
+  //Return completed plObjs.
 
   let plObjsPopulated = plObjs.filter((plObj) => {
     return plObj.constituentWords.length;
