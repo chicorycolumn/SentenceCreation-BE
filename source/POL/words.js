@@ -14,6 +14,9 @@ exports.wordsBank = {
       //notes
 
       //inflections
+      otherShapes: {
+        diminutive: "kobietka",
+      },
       inflections: {
         singular: {
           nom: "kobieta",
