@@ -1,20 +1,4 @@
 exports.goodNounsPL = [
-  //Done PLN-01
-  //Done PLN-02
-  //Done PLN-03
-  //Done PLN-04
-  //Done PLN-05
-  //Done PLN-06
-  //Done PLN-07
-  //Done PLN-08
-  //Done PLN-09
-  //Done PLN-10
-  //Done PLN-11
-  //Done PLN-12
-  //Done PLN-13
-  //Done PLN-14
-  //PLN 15-17 nothing.
-  //of 17.
   "brat",
   "fizyka",
   "matematyka",

@@ -1,35 +1,25 @@
 const fs = require("fs");
 // const { path } = require("../resources/secrets.js");
-// const { nouns } = require("../../../Wiktionary/POL/nouns.js");
-
-const { rejectedNounsPL } = require("./rejectedNounsPL.js");
+const { nouns } = require("../../../Wiktionary/POL/nouns.js");
 const { goodNounsPL } = require("./goodNounsPL.js");
-let filtered = rejectedNounsPL.filter((n) => !goodNounsPL.includes(n));
 
-let lore = JSON.stringify(filtered);
-fs.writeFile("./banana.js", lore, (err) => {
-  if (err) console.log(err);
-  else {
-    console.log("File written successfully\n");
-    // console.log("The written has the following contents:");
-    // console.log(fs.readFileSync("books.txt", "utf8"));
-  }
-});
-return;
+// let lore = JSON.stringify(filtered);
+// fs.writeFile("./banana.js", lore, (err) => {
+//   if (err) console.log(err);
+//   else {
+//     console.log("File written successfully\n");
+//   }
+// });
+// return;
 
-function getHeadWords(raw) {
-  let headWords = raw
-    .filter((rawObj) => rawObj.senses.some((sense) => !sense.form_of))
-    .map((rawObj) => rawObj.word);
+let { plObjs, unmatchedHeadWords } = makeProtoLemmaObjects(
+  nouns,
+  goodNounsPL.slice(50)
+);
 
-  return Array.from(new Set(headWords));
-}
+console.log("");
 
-function makeProtoLemmaObjects(raw) {
-  let headWords = getHeadWords(raw);
-
-  console.log(headWords);
-
+function makeProtoLemmaObjects(raw, headWords) {
   let plObjs = headWords.map((headWord) => {
     return { headWord, constituentWords: [] };
   });
@@ -65,10 +55,18 @@ function makeProtoLemmaObjects(raw) {
     });
   });
 
-  return plObjs.filter((plObj) => plObj.constituentWords.length);
+  let plObjsPopulated = plObjs.filter((plObj) => plObj.constituentWords.length);
+  let unmatchedHeadWords = plObjs
+    .filter((plObj) => !plObj.constituentWords.length)
+    .map((plObj) => plObj.headWord);
+
+  return {
+    plObjs: plObjsPopulated,
+    unmatchedHeadWords,
+  };
 }
 
-let plObjs = makeProtoLemmaObjects(nouns.slice(50));
+let plObjs = makeProtoLemmaObjects(nouns.slice(50), getHeadWords(raw));
 // console.log(plObjs);
 
 let data = JSON.stringify(getHeadWords(nouns));
@@ -81,3 +79,11 @@ fs.writeFile(path, data, (err) => {
     // console.log(fs.readFileSync("books.txt", "utf8"));
   }
 });
+
+function getHeadWords(raw) {
+  let headWords = raw
+    .filter((rawObj) => rawObj.senses.some((sense) => !sense.form_of))
+    .map((rawObj) => rawObj.word);
+
+  return Array.from(new Set(headWords));
+}
