@@ -44,7 +44,7 @@ function makeProtoLemmaObjects(raw, headWords) {
 
   let plObjs = headWords.map((headWord) => {
     //
-    //FIND corresponding raw data, and INITIALISE keys that will be added to resulting plObj.
+    //1. FIND corresponding raw data, and INITIALISE keys that will be added to resulting plObj.
 
     let raw = nouns.find(
       (rawObj) =>
@@ -60,7 +60,7 @@ function makeProtoLemmaObjects(raw, headWords) {
     let otherShapes = {};
 
     //
-    //Add GENDER.
+    //2. Add GENDER.
 
     let gender1 =
       genderConversionRef[raw.heads[0]["g"]] ||
@@ -82,7 +82,7 @@ function makeProtoLemmaObjects(raw, headWords) {
     }
 
     //
-    //Add other SHAPES, such as diminutive and augmentative.
+    //3. Add other SHAPES, such as diminutive and augmentative.
 
     if (raw.forms) {
       raw.forms.forEach((f) => {
@@ -93,7 +93,7 @@ function makeProtoLemmaObjects(raw, headWords) {
     }
 
     //
-    //Add what will become TAGS and TRANSLATIONS. Will require sorting as inconsistent placement in raw data.
+    //4. Add what will become TAGS and TRANSLATIONS. Will require sorting as inconsistent placement in raw data.
 
     raw.senses.forEach((sense) => {
       if (sense.tags) {
@@ -119,10 +119,8 @@ function makeProtoLemmaObjects(raw, headWords) {
     };
   });
 
-  console.log("1. plObjs have been initialised.");
-
   //
-  //Go through raw data to find all INFLECTION objects of each plObj, and harvest from them.
+  //5. Go through raw data to find all INFLECTION objects of each plObj, and harvest from them.
 
   raw.forEach((rawObj) => {
     rawObj.senses.forEach((sense) => {
@@ -146,17 +144,12 @@ function makeProtoLemmaObjects(raw, headWords) {
     });
   });
 
-  console.log("2. plObjs have been filled out with proto inflections.");
-
   //
-  //Process the proto-inflection into properly structured inflections.
-
+  //6. Process the proto-inflection into properly structured inflections.
   //code here...
 
-  console.log("3. plObjs have been filled out with structured inflections.");
-
   //
-  //Return completed plObjs.
+  //7. Return completed plObjs.
 
   let plObjsPopulated = plObjs.filter((plObj) => {
     return plObj.constituentWords.length;
