@@ -148,6 +148,16 @@ function makeProtoLemmaObjects(raw, headWords) {
   //6. Process the proto-inflection into properly structured inflections.
   //code here...
 
+  let inflectionsRef = [
+    "nominative",
+    "genitive",
+    "dative",
+    "accusative",
+    "instrumental",
+    "locative",
+    "vocative",
+  ];
+
   //
   //7. Return completed plObjs.
 
