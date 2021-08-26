@@ -559,36 +559,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       }
       runsRecord.push(counterfactualSitSchematic.cfLabel);
 
-      function removeBadVirilityCombinations(questionLanguage, stCh) {
-        //Adjust stCh to rectify bad virility combinations, eg gender:f number:plural,
-        //and return true.
-        //But if this stCh can't be saved, return false and this counterfactual sit will not be continued with.
-
-        consol.logSpecial3("--------------------");
-
-        consol.logSpecial3("number", stCh.number);
-        consol.logSpecial3("gender", stCh.gender);
-
-        let obj = refFxn.removeIncompatibleTraitValues(questionLanguage, stCh);
-        stCh = obj.structureChunk;
-        let traitKeysChanged = obj.traitKeysChanged;
-        consol.logSpecial3("↓");
-        consol.logSpecial3("gender", stCh.gender);
-
-        consol.logSpecial3("~~~~~~~~~~~~~~~~~~~~");
-
-        if (
-          traitKeysChanged.some(
-            (traitKeyChanged) =>
-              !stCh[traitKeyChanged] || !stCh[traitKeyChanged].length
-          )
-          //This stCh and thus sit couldn't be saved. Removing incompatible traitValues removed all of them for this traitKey.
-        ) {
-          return false;
-        }
-        return true;
-      }
-
       counterfactualQuestionSentenceFormula.sentenceStructure.forEach(
         (stCh) => {
           delete stCh.annotations;
