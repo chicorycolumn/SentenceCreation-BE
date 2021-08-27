@@ -158,6 +158,25 @@ function makeProtoLemmaObjects(raw, headWords) {
     "vocative",
   ];
 
+  function findInflections(wordValue, inflectionsString){
+    let res = {}
+
+    function addToOrCreateArr(obj, key, val){
+      if (!obj[key]){
+        obj[key] = []
+      }
+      obj[key].push(val)
+    }
+
+    inflectionsRef.forEach(inflectionKey => {
+      if (inflectionsString.toLowerCase().includes(inflectionKey)){
+        addToOrCreateArr(res, inflectionKey, wordValue)
+      }
+    })
+
+    return res
+  }
+
   //
   //7. Return completed plObjs.
 
