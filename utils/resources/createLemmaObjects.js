@@ -1,30 +1,21 @@
+const { raw } = require("express");
 const fs = require("fs");
 // const { path } = require("../resources/secrets.js");
 const { nouns } = require("../../../Wiktionary/POL/nouns.js");
 const { goodNounsPL } = require("./goodNounsPL.js");
+const uUtils = require("../universalUtils.js");
 
-// let lore = JSON.stringify(filtered);
-// fs.writeFile("./banana.js", lore, (err) => {
-//   if (err) console.log(err);
-//   else {
-//     console.log("File written successfully\n");
-//   }
-// });
-// return;
+const mascKeys = ["m", "masculine", "masc", "male"];
+const femKeys = ["f", "feminine", "fem", "female"];
 
 let { plObjs, unmatchedHeadWords } = makeProtoLemmaObjects(nouns, goodNounsPL);
 
+// let a = plObjs.filter((p) => Object.keys(p.counterparts).length);
+// let a = plObjs.filter((p) => Object.keys(p.related1).length);
+
+console.log("");
+
 function makeProtoLemmaObjects(raw, headWords) {
-  // let plObjsFilteredBySomethingToConsoleLog = headWords.filter((headWord) => {
-  //   let raw = nouns.find(
-  //     (rawObj) =>
-  //       rawObj.word === headWord &&
-  //       rawObj.senses.some((sense) => !sense.form_of)
-  //   );
-
-  //   return !raw.heads;
-  // });
-
   const genderConversionRef = {
     "m-pr": "m1",
     "m-an": "m2",
@@ -52,12 +43,15 @@ function makeProtoLemmaObjects(raw, headWords) {
         rawObj.senses.some((sense) => !sense.form_of)
     );
     if (!raw.heads || raw.heads.length !== 1) {
-      throw "Error 9384 re raw obj heads.";
+      throw "Error 9384. Raw object has no 'heads' key.";
     }
     let tags1 = [];
     let tags2 = [];
     let trans1 = [];
     let otherShapes = {};
+    let isPerson;
+    let related1 = {};
+    let counterparts = {};
 
     //
     //2. Add GENDER.
@@ -81,16 +75,44 @@ function makeProtoLemmaObjects(raw, headWords) {
       );
     }
 
+    if (gender1 === "m1" || raw.heads.isPerson) {
+      // console.log(`- - - - - - - - - - - - "${headWord}" is a person.`);
+      isPerson = true;
+    }
+
     //
-    //3. Add other SHAPES, such as diminutive and augmentative.
+    //3. Add other SHAPES, such as diminutive and augmentative. Also MGN counterparts.
 
     if (raw.forms) {
       raw.forms.forEach((f) => {
         f.tags.forEach((ftag) => {
-          otherShapes[ftag] = f.form;
+          if (mascKeys.includes(ftag)) {
+            uUtils.addToArrayAtKey(counterparts, "m", f.form);
+          } else if (femKeys.includes(ftag)) {
+            uUtils.addToArrayAtKey(counterparts, "f", f.form);
+          } else {
+            otherShapes[ftag] = f.form;
+          }
         });
       });
     }
+
+    mascKeys.forEach((mascKey) => {
+      if (
+        raw.heads[mascKey] &&
+        !raw.heads[mascKey].toLowerCase().includes("wikipedia")
+      ) {
+        uUtils.addToArrayAtKey(counterparts, "m", raw.heads[mascKey]);
+      }
+    });
+    femKeys.forEach((femKey) => {
+      if (
+        raw.heads[femKey] &&
+        !raw.heads[femKey].toLowerCase().includes("wikipedia")
+      ) {
+        uUtils.addToArrayAtKey(counterparts, "f", raw.heads[femKey]);
+      }
+    });
 
     //
     //4. Add what will become TAGS and TRANSLATIONS. Will require sorting as inconsistent placement in raw data.
@@ -105,9 +127,26 @@ function makeProtoLemmaObjects(raw, headWords) {
       if (sense.glosses) {
         trans1 = [...trans1, ...sense.glosses];
       }
+      if (sense.related) {
+        sense.related.forEach((rel) => {
+          let tags = rel.tags && rel.tags.length ? rel.tags : ["misc"];
+
+          tags.forEach((tag) => {
+            uUtils.addToArrayAtKey(related1, tag, rel.word);
+          });
+        });
+      }
     });
 
-    return {
+    tags1 = tags1.filter(
+      (t) =>
+        !["person", "masculine", "feminine", "animate", "inanimate"].includes(t)
+    );
+
+    //
+    //5. Add to res object.
+
+    let resObj = {
       lemma: headWord,
       tags1,
       tags2,
@@ -116,25 +155,43 @@ function makeProtoLemmaObjects(raw, headWords) {
       otherShapes,
       raw,
       gender1,
+      related1,
+      counterparts,
     };
+
+    if (isPerson) {
+      resObj.isPerson = true;
+    }
+
+    return resObj;
   });
 
   //
-  //5. Go through raw data to find all INFLECTION objects of each plObj, and harvest from them.
+  //7. Go through raw data to find all INFLECTION objects of each plObj, and harvest from them.
 
-  raw.forEach((rawObj) => {
-    rawObj.senses.forEach((sense) => {
+  raw.forEach((rawObj, rIndex) => {
+    rawObj.senses.forEach((sense, sIndex) => {
       if (!sense.form_of) {
         return;
       }
 
-      sense.form_of.forEach((f) => {
-        let plObj = plObjs.find((plObj) => plObj.headWord === f.lemma);
+      sense.form_of.forEach((f, fIndex) => {
+        if (f.lemma) {
+          console.log("-->", f);
+          return;
+        }
+
+        let plObj = plObjs.find((plObj) => plObj.lemma === f.word);
 
         if (plObj) {
           let traits = splitAllStrings(sense.glosses);
-          traits = traits.filter((t) => !["of", plObj.headWord].includes(t));
+          traits = traits.filter((t) => !["of", plObj.lemma].includes(t));
           traits = traits.join(" ");
+          // console.log(
+          //   111,
+          //   `rIndex:${rIndex},sIndex:${sIndex},fIndex:${fIndex}`,
+          //   plObj.lemma
+          // );
           plObj.constituentWords.push({
             word: rawObj.word,
             traits,
@@ -145,7 +202,7 @@ function makeProtoLemmaObjects(raw, headWords) {
   });
 
   //
-  //6. Process the proto-inflection into properly structured inflections.
+  //8. Process the proto-inflection into properly structured inflections.
   //code here...
 
   let inflectionsRef = [
@@ -158,36 +215,30 @@ function makeProtoLemmaObjects(raw, headWords) {
     "vocative",
   ];
 
-  function findInflections(wordValue, inflectionsString){
-    let res = {}
+  function findInflections(wordValue, inflectionsString) {
+    let res = {};
 
-    function addToOrCreateArr(obj, key, val){
-      if (!obj[key]){
-        obj[key] = []
+    inflectionsRef.forEach((inflectionKey) => {
+      if (inflectionsString.toLowerCase().includes(inflectionKey)) {
+        uUtils.addToArrayAtKey(res, inflectionKey, wordValue);
       }
-      obj[key].push(val)
-    }
+    });
 
-    inflectionsRef.forEach(inflectionKey => {
-      if (inflectionsString.toLowerCase().includes(inflectionKey)){
-        addToOrCreateArr(res, inflectionKey, wordValue)
-      }
-    })
-
-    return res
+    return res;
   }
 
   //
-  //7. Return completed plObjs.
+  //9. Return completed plObjs.
 
   let plObjsPopulated = plObjs.filter((plObj) => {
     return plObj.constituentWords.length;
   });
-  let unmatchedHeadWords = headWords.filter(
-    (headWord) =>
-      !plObjs.find((plObj) => plObj.headWord === headWord).constituentWords
-        .length
-  );
+  let unmatchedHeadWords = headWords.filter((headWord) => {
+    let plObjForHead = plObjs.find((plObj) => plObj.lemma === headWord);
+    return (
+      !plObjForHead.constituentWords || !plObjForHead.constituentWords.length
+    );
+  });
 
   return {
     plObjs: plObjsPopulated,
@@ -195,22 +246,21 @@ function makeProtoLemmaObjects(raw, headWords) {
   };
 }
 
-let data = JSON.stringify(getHeadWords(nouns));
+// let data = JSON.stringify(getHeadWords(nouns));
+// fs.writeFile(path, data, (err) => {
+//   if (err) console.log(err);
+//   else {
+//     console.log("File written successfully\n");
+//   }
+// });
+//
+// function getHeadWords(raw) {
+//   let headWords = raw
+//     .filter((rawObj) => rawObj.senses.some((sense) => !sense.form_of))
+//     .map((rawObj) => rawObj.word);
 
-fs.writeFile(path, data, (err) => {
-  if (err) console.log(err);
-  else {
-    console.log("File written successfully\n");
-  }
-});
-
-function getHeadWords(raw) {
-  let headWords = raw
-    .filter((rawObj) => rawObj.senses.some((sense) => !sense.form_of))
-    .map((rawObj) => rawObj.word);
-
-  return Array.from(new Set(headWords));
-}
+//   return Array.from(new Set(headWords));
+// }
 
 function splitAllStrings(arr, separator = " ") {
   let res = [];
