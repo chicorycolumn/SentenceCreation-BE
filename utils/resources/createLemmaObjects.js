@@ -7,32 +7,104 @@ const uUtils = require("../universalUtils.js");
 
 const mascKeys = ["m", "masculine", "masc", "male"];
 const femKeys = ["f", "feminine", "fem", "female"];
+const genderConversionRef = {
+  "m-pr": "m1",
+  "m-an": "m2",
+  "m-in": "m3",
+
+  "m-p": "virile",
+
+  m: "nonvirile",
+  p: "nonvirile",
+  nv: "nonvirile",
+  pl: "nonvirile",
+  "m-in-p": "nonvirile",
+
+  f: "f",
+  n: "n",
+};
+const inflectionsRef = [
+  "nominative",
+  "genitive",
+  "dative",
+  "accusative",
+  "instrumental",
+  "locative",
+  "vocative",
+];
+const otherInflectionsRef = [
+  "plural",
+  "singular",
+  "augmentative",
+  "diminutive",
+];
+
+// let riks = checkRawInfKeys();
+function checkRawInfKeys() {
+  let koala = {
+    pos: "noun",
+    heads: [{ 1: "f", template_name: "pl-noun" }],
+    inflection: [{ genp: "koali", template_name: "pl-decl-noun-f" }],
+    sounds: [
+      { ipa: "/k\u0254\u02c8a.la/" },
+      { audio: "Pl-koala.ogg", text: "audio" },
+    ],
+    word: "koala",
+    lang: "Polish",
+    lang_code: "pl",
+    senses: [
+      {
+        tags: ["feminine"],
+        glosses: ["koala"],
+        categories: ["Marsupials"],
+        id: "koala-noun",
+      },
+    ],
+  };
+
+  let rawInfKeys = [];
+
+  nouns.forEach((rawObj, rIndex) => {
+    if (!goodNounsPL.includes(rawObj.word)) {
+      return;
+    }
+    rawObj.senses.forEach((sense, sIndex) => {
+      if (!sense.form_of) {
+        return;
+      }
+
+      sense.form_of.forEach((f, fIndex) => {
+        if (f.lemma) {
+          console.log("-->", f);
+          return;
+        }
+
+        let traits = splitAllStrings(sense.glosses);
+        traits = traits.filter(
+          (t) => !["of"].includes(t) && !goodNounsPL.includes(t)
+        );
+        traits.forEach((tr) => rawInfKeys.push(tr));
+      });
+    });
+  });
+
+  rawInfKeys = rawInfKeys.filter(
+    (rik) =>
+      !inflectionsRef.includes(rik.toLowerCase()) &&
+      !otherInflectionsRef.includes(rik.toLowerCase())
+  );
+  rawInfKeys = Array.from(new Set(rawInfKeys));
+}
 
 let { plObjs, unmatchedHeadWords } = makeProtoLemmaObjects(nouns, goodNounsPL);
 
 // let a = plObjs.filter((p) => Object.keys(p.counterparts).length);
 // let a = plObjs.filter((p) => Object.keys(p.related1).length);
+let aaa = plObjs.filter((p) => Object.keys(p.inflection).length);
 
 console.log("");
 
 function makeProtoLemmaObjects(raw, headWords) {
-  const genderConversionRef = {
-    "m-pr": "m1",
-    "m-an": "m2",
-    "m-in": "m3",
-
-    "m-p": "virile",
-
-    m: "nonvirile",
-    p: "nonvirile",
-    nv: "nonvirile",
-    pl: "nonvirile",
-    "m-in-p": "nonvirile",
-
-    f: "f",
-    n: "n",
-  };
-
   let plObjs = headWords.map((headWord) => {
     //
     //1. FIND corresponding raw data, and INITIALISE keys that will be added to resulting plObj.
@@ -45,6 +117,7 @@ function makeProtoLemmaObjects(raw, headWords) {
     if (!raw.heads || raw.heads.length !== 1) {
       throw "Error 9384. Raw object has no 'heads' key.";
     }
+
     let tags1 = [];
     let tags2 = [];
     let trans1 = [];
@@ -52,6 +125,18 @@ function makeProtoLemmaObjects(raw, headWords) {
     let isPerson;
     let related1 = {};
     let counterparts = {};
+    let inflection = {};
+
+    if (raw.inflection) {
+      raw.inflection.forEach((iObj) => {
+        Object.keys(iObj).forEach((k) => {
+          let v = iObj[k];
+          if (k !== "template_name") {
+            uUtils.addToArrayAtKey(inflection, k, v);
+          }
+        });
+      });
+    }
 
     //
     //2. Add GENDER.
@@ -105,6 +190,7 @@ function makeProtoLemmaObjects(raw, headWords) {
         uUtils.addToArrayAtKey(counterparts, "m", raw.heads[mascKey]);
       }
     });
+
     femKeys.forEach((femKey) => {
       if (
         raw.heads[femKey] &&
@@ -157,6 +243,7 @@ function makeProtoLemmaObjects(raw, headWords) {
       gender1,
       related1,
       counterparts,
+      inflection,
     };
 
     if (isPerson) {
@@ -204,16 +291,6 @@ function makeProtoLemmaObjects(raw, headWords) {
   //
   //8. Process the proto-inflection into properly structured inflections.
   //code here...
-
-  let inflectionsRef = [
-    "nominative",
-    "genitive",
-    "dative",
-    "accusative",
-    "instrumental",
-    "locative",
-    "vocative",
-  ];
 
   function findInflections(wordValue, inflectionsString) {
     let res = {};
