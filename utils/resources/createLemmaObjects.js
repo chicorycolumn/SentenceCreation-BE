@@ -75,8 +75,7 @@ function checkRawInfKeys() {
 
       sense.form_of.forEach((f, fIndex) => {
         if (f.lemma) {
-          console.log("-->", f);
-          return;
+          throw `Error 2763`
         }
 
         let traits = splitAllStrings(sense.glosses);
@@ -264,8 +263,7 @@ function makeProtoLemmaObjects(raw, headWords) {
 
       sense.form_of.forEach((f, fIndex) => {
         if (f.lemma) {
-          console.log("-->", f);
-          return;
+          throw `Error 2763`
         }
 
         let plObj = plObjs.find((plObj) => plObj.lemma === f.word);
