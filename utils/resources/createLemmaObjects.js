@@ -38,6 +38,7 @@ const otherInflectionsRef = [
   "augmentative",
   "diminutive",
 ];
+let moreThanOneHeadRawObj = [];
 
 // let riks = checkRawInfKeys();
 function checkRawInfKeys() {
@@ -75,7 +76,7 @@ function checkRawInfKeys() {
 
       sense.form_of.forEach((f, fIndex) => {
         if (f.lemma) {
-          throw `Error 2763`
+          throw `Error 2763`;
         }
 
         let traits = splitAllStrings(sense.glosses);
@@ -95,161 +96,175 @@ function checkRawInfKeys() {
   rawInfKeys = Array.from(new Set(rawInfKeys));
 }
 
-let { plObjs, unmatchedHeadWords } = makeProtoLemmaObjects(nouns, goodNounsPL);
+let { plObjs, unmatchedHeadWords } = makeProtoLemmaObjects(
+  nouns,
+  goodNounsPL,
+  "POL"
+);
 
 // let a = plObjs.filter((p) => Object.keys(p.counterparts).length);
 // let a = plObjs.filter((p) => Object.keys(p.related1).length);
-let aaa = plObjs.filter((p) => Object.keys(p.inflection).length);
+// let aaa = plObjs.filter((p) => Object.keys(p.inflection).length);
+let aaa = plObjs.filter((p) => p.id.includes("(")).map((p) => p.id);
 
 console.log("");
 
-function makeProtoLemmaObjects(raw, headWords) {
-  let plObjs = headWords.map((headWord) => {
+function makeProtoLemmaObjects(raw, headWords, lang) {
+  let plObjs = [];
+
+  headWords.forEach((headWord) => {
     //
     //1. FIND corresponding raw data, and INITIALISE keys that will be added to resulting plObj.
 
-    let raw = nouns.find(
+    let matchingRawObjs = nouns.filter(
       (rawObj) =>
         rawObj.word === headWord &&
         rawObj.senses.some((sense) => !sense.form_of)
     );
-    if (!raw.heads || raw.heads.length !== 1) {
-      throw "Error 9384. Raw object has no 'heads' key.";
-    }
 
-    let tags1 = [];
-    let tags2 = [];
-    let trans1 = [];
-    let otherShapes = {};
-    let isPerson;
-    let related1 = {};
-    let counterparts = {};
-    let inflection = {};
+    console.log("--->", matchingRawObjs.length, headWord);
 
-    if (raw.inflection) {
-      raw.inflection.forEach((iObj) => {
-        Object.keys(iObj).forEach((k) => {
-          let v = iObj[k];
-          if (k !== "template_name") {
-            uUtils.addToArrayAtKey(inflection, k, v);
-          }
-        });
-      });
-    }
-
-    //
-    //2. Add GENDER.
-
-    let gender1 =
-      genderConversionRef[raw.heads[0]["g"]] ||
-      genderConversionRef[raw.heads[0]["1"]];
-    if (!gender1) {
-      throw `Error 5396 re raw obj gender for "${headWord}" "${raw.heads[0][1]}"`;
-    } else if (gender1 === "nonvirile") {
-      console.log(
-        `Setting "${headWord}" <${
-          raw.sounds[1] && raw.sounds[1].audio
-        }> as nonvirile. Hope that's okay!`
-      );
-    } else if (gender1 === "virile") {
-      console.log(
-        `>>>>>>>>>>>> Setting "${headWord}" <${
-          raw.sounds[1] && raw.sounds[1].audio
-        }> as virile. Hope that's okay!`
-      );
-    }
-
-    if (gender1 === "m1" || raw.heads.isPerson) {
-      // console.log(`- - - - - - - - - - - - "${headWord}" is a person.`);
-      isPerson = true;
-    }
-
-    //
-    //3. Add other SHAPES, such as diminutive and augmentative. Also MGN counterparts.
-
-    if (raw.forms) {
-      raw.forms.forEach((f) => {
-        f.tags.forEach((ftag) => {
-          if (mascKeys.includes(ftag)) {
-            uUtils.addToArrayAtKey(counterparts, "m", f.form);
-          } else if (femKeys.includes(ftag)) {
-            uUtils.addToArrayAtKey(counterparts, "f", f.form);
-          } else {
-            otherShapes[ftag] = f.form;
-          }
-        });
-      });
-    }
-
-    mascKeys.forEach((mascKey) => {
-      if (
-        raw.heads[mascKey] &&
-        !raw.heads[mascKey].toLowerCase().includes("wikipedia")
-      ) {
-        uUtils.addToArrayAtKey(counterparts, "m", raw.heads[mascKey]);
+    matchingRawObjs.forEach((raw) => {
+      if (!raw.heads || raw.heads.length !== 1) {
+        throw "Error 9384. Raw object has no 'heads' key.";
       }
-    });
 
-    femKeys.forEach((femKey) => {
-      if (
-        raw.heads[femKey] &&
-        !raw.heads[femKey].toLowerCase().includes("wikipedia")
-      ) {
-        uUtils.addToArrayAtKey(counterparts, "f", raw.heads[femKey]);
-      }
-    });
+      let tags1 = [];
+      let tags2 = [];
+      let trans1 = [];
+      let otherShapes = {};
+      let isPerson;
+      let related1 = {};
+      let counterparts = {};
+      let inflection = {};
 
-    //
-    //4. Add what will become TAGS and TRANSLATIONS. Will require sorting as inconsistent placement in raw data.
-
-    raw.senses.forEach((sense) => {
-      if (sense.tags) {
-        tags1 = [...tags1, ...sense.tags];
-      }
-      if (sense.categories) {
-        tags2 = [...tags2, ...sense.categories];
-      }
-      if (sense.glosses) {
-        trans1 = [...trans1, ...sense.glosses];
-      }
-      if (sense.related) {
-        sense.related.forEach((rel) => {
-          let tags = rel.tags && rel.tags.length ? rel.tags : ["misc"];
-
-          tags.forEach((tag) => {
-            uUtils.addToArrayAtKey(related1, tag, rel.word);
+      if (raw.inflection) {
+        raw.inflection.forEach((iObj) => {
+          Object.keys(iObj).forEach((k) => {
+            let v = iObj[k];
+            if (k !== "template_name") {
+              uUtils.addToArrayAtKey(inflection, k, v);
+            }
           });
         });
       }
+
+      //
+      //2. Add GENDER.
+
+      let gender1 =
+        genderConversionRef[raw.heads[0]["g"]] ||
+        genderConversionRef[raw.heads[0]["1"]];
+      if (!gender1) {
+        throw `Error 5396 re raw obj gender for "${headWord}" "${raw.heads[0][1]}"`;
+      } else if (gender1 === "nonvirile") {
+        // console.log(
+        //   `Setting "${headWord}" <${
+        //     raw.sounds[1] && raw.sounds[1].audio
+        //   }> as nonvirile. Hope that's okay!`
+        // );
+      } else if (gender1 === "virile") {
+        // console.log(
+        //   `>>>>>>>>>>>> Setting "${headWord}" <${
+        //     raw.sounds[1] && raw.sounds[1].audio
+        //   }> as virile. Hope that's okay!`
+        // );
+      }
+
+      if (gender1 === "m1" || raw.heads.isPerson) {
+        // console.log(`- - - - - - - - - - - - "${headWord}" is a person.`);
+        isPerson = true;
+      }
+
+      //
+      //3. Add other SHAPES, such as diminutive and augmentative. Also MGN counterparts.
+
+      if (raw.forms) {
+        raw.forms.forEach((f) => {
+          f.tags.forEach((ftag) => {
+            if (mascKeys.includes(ftag)) {
+              uUtils.addToArrayAtKey(counterparts, "m", f.form);
+            } else if (femKeys.includes(ftag)) {
+              uUtils.addToArrayAtKey(counterparts, "f", f.form);
+            } else {
+              otherShapes[ftag] = f.form;
+            }
+          });
+        });
+      }
+
+      mascKeys.forEach((mascKey) => {
+        if (
+          raw.heads[mascKey] &&
+          !raw.heads[mascKey].toLowerCase().includes("wikipedia")
+        ) {
+          uUtils.addToArrayAtKey(counterparts, "m", raw.heads[mascKey]);
+        }
+      });
+
+      femKeys.forEach((femKey) => {
+        if (
+          raw.heads[femKey] &&
+          !raw.heads[femKey].toLowerCase().includes("wikipedia")
+        ) {
+          uUtils.addToArrayAtKey(counterparts, "f", raw.heads[femKey]);
+        }
+      });
+
+      //
+      //4. Add what will become TAGS and TRANSLATIONS. Will require sorting as inconsistent placement in raw data.
+
+      raw.senses.forEach((sense) => {
+        if (sense.tags) {
+          tags1 = [...tags1, ...sense.tags];
+        }
+        if (sense.categories) {
+          tags2 = [...tags2, ...sense.categories];
+        }
+        if (sense.glosses) {
+          trans1 = [...trans1, ...sense.glosses];
+        }
+        if (sense.related) {
+          sense.related.forEach((rel) => {
+            let tags = rel.tags && rel.tags.length ? rel.tags : ["misc"];
+
+            tags.forEach((tag) => {
+              uUtils.addToArrayAtKey(related1, tag, rel.word);
+            });
+          });
+        }
+      });
+
+      tags1 = tags1.filter(
+        (t) =>
+          !["person", "masculine", "feminine", "animate", "inanimate"].includes(
+            t
+          )
+      );
+
+      //
+      //5. Add to res object.
+
+      let resObj = {
+        lemma: headWord,
+        tags1,
+        tags2,
+        constituentWords: [],
+        trans1,
+        otherShapes,
+        raw,
+        gender1,
+        related1,
+        counterparts,
+        inflection,
+      };
+
+      if (isPerson) {
+        resObj.isPerson = true;
+      }
+
+      plObjs.push(resObj);
     });
-
-    tags1 = tags1.filter(
-      (t) =>
-        !["person", "masculine", "feminine", "animate", "inanimate"].includes(t)
-    );
-
-    //
-    //5. Add to res object.
-
-    let resObj = {
-      lemma: headWord,
-      tags1,
-      tags2,
-      constituentWords: [],
-      trans1,
-      otherShapes,
-      raw,
-      gender1,
-      related1,
-      counterparts,
-      inflection,
-    };
-
-    if (isPerson) {
-      resObj.isPerson = true;
-    }
-
-    return resObj;
   });
 
   //
@@ -263,7 +278,7 @@ function makeProtoLemmaObjects(raw, headWords) {
 
       sense.form_of.forEach((f, fIndex) => {
         if (f.lemma) {
-          throw `Error 2763`
+          throw `Error 2763`;
         }
 
         let plObj = plObjs.find((plObj) => plObj.lemma === f.word);
@@ -303,7 +318,9 @@ function makeProtoLemmaObjects(raw, headWords) {
   }
 
   //
-  //9. Return completed plObjs.
+  //9. Get completed plObjs.
+
+  console.log(`plObjs has length ${plObjs.length}`);
 
   let plObjsPopulated = plObjs.filter((plObj) => {
     return plObj.constituentWords.length;
@@ -314,6 +331,51 @@ function makeProtoLemmaObjects(raw, headWords) {
       !plObjForHead.constituentWords || !plObjForHead.constituentWords.length
     );
   });
+
+  console.log(`plObjsPopulated has length ${plObjsPopulated.length}`);
+
+  let aaaa = plObjsPopulated.filter((p) => p.lemma === "adwokat");
+
+  //
+  //10. Generate IDs.
+
+  let counts = { nco: 0, npe: 0, ncp: 0, npp: 0 };
+
+  plObjsPopulated.forEach((plObj) => {
+    function makeIds(plObj, counts, lang, wordtypeCode) {
+      let idNum = uUtils.numToString(counts[wordtypeCode] + 1, 3);
+
+      counts[wordtypeCode]++;
+
+      return `${lang.toLowerCase()}-${wordtypeCode}-${idNum}-${plObj.lemma}`;
+    }
+
+    if (plObj.isPerson) {
+      plObj.id = makeIds(plObj, counts, lang, "npe");
+    } else {
+      plObj.id = makeIds(plObj, counts, lang, "nco");
+    }
+  });
+
+  let headWordsThatHaveMultiplePlobjs = [];
+  let allHeadWords = plObjsPopulated.map((p) => p.lemma);
+  let tempArr = [];
+  allHeadWords.forEach((h) => {
+    if (tempArr.includes(h) && !headWordsThatHaveMultiplePlobjs.includes(h)) {
+      headWordsThatHaveMultiplePlobjs.push(h);
+    }
+    tempArr.push(h);
+  });
+
+  headWordsThatHaveMultiplePlobjs.forEach((h) => {
+    plObjsPopulated.forEach((p) => {
+      if (p.lemma === h) {
+        p.id = `${p.id}-(${p.gender})`;
+      }
+    });
+  });
+
+  //END. Add final plObj to array.
 
   return {
     plObjs: plObjsPopulated,
