@@ -187,12 +187,9 @@ exports.adjustImperfectiveOnly = (matches, lObj) => {
     delete lObj.imperfectiveOnly_unadjusted;
 
     let adjustedLemmaObject = uUtils.copyWithoutReference(lObj);
+
     adjustedLemmaObject.aspect = "perfective";
-
-    let newIdArr = lObj.id.split("-");
-    newIdArr[3] = "pf";
-    adjustedLemmaObject.id = newIdArr.join("-");
-
+    adjustedLemmaObject.id = `${lObj.id}-(pf)`;
     matches.push(adjustedLemmaObject);
   }
 };
