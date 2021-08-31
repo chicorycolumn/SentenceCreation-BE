@@ -1,3 +1,20 @@
+exports.randomString = (length) => {
+  const alph = "abcdefghijklmnopqrstuvwxyz";
+  let str = "";
+  for (let i = 0; i < length; i++) {
+    str += alph[Math.floor(Math.random() * alph.length)];
+  }
+  return str;
+};
+
+exports.numToString = (num, desiredLength) => {
+  let str = num.toString();
+  if (str.length < desiredLength) {
+    str = `${"0".repeat(desiredLength - str.length)}${str}`;
+  }
+  return str;
+};
+
 exports.combineTwoKeyValueObjectsCarefully = (obj1, obj2) => {
   Object.keys(obj1).forEach((obj1Key) => {
     if (Object.keys(obj2).includes(obj1Key)) {
