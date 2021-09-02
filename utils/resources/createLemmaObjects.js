@@ -122,7 +122,9 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
         rawObj.senses.some((sense) => !sense.form_of)
     );
 
-    console.log("--->", matchingRawObjs.length, headWord);
+    if (matchingRawObjs.length > 1) {
+      console.log("Multiple raws --->", matchingRawObjs.length, headWord);
+    }
 
     matchingRawObjs.forEach((raw) => {
       if (!raw.heads || raw.heads.length !== 1) {
@@ -152,18 +154,18 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
       //
       //2. Add GENDER.
 
-      let gender1 =
+      let gender =
         genderConversionRef[raw.heads[0]["g"]] ||
         genderConversionRef[raw.heads[0]["1"]];
-      if (!gender1) {
+      if (!gender) {
         throw `Error 5396 re raw obj gender for "${headWord}" "${raw.heads[0][1]}"`;
-      } else if (gender1 === "nonvirile") {
+      } else if (gender === "nonvirile") {
         // console.log(
         //   `Setting "${headWord}" <${
         //     raw.sounds[1] && raw.sounds[1].audio
         //   }> as nonvirile. Hope that's okay!`
         // );
-      } else if (gender1 === "virile") {
+      } else if (gender === "virile") {
         // console.log(
         //   `>>>>>>>>>>>> Setting "${headWord}" <${
         //     raw.sounds[1] && raw.sounds[1].audio
@@ -171,7 +173,7 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
         // );
       }
 
-      if (gender1 === "m1" || raw.heads.isPerson) {
+      if (gender === "m1" || raw.heads.isPerson) {
         // console.log(`- - - - - - - - - - - - "${headWord}" is a person.`);
         isPerson = true;
       }
@@ -253,7 +255,7 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
         trans1,
         otherShapes,
         raw,
-        gender1,
+        gender,
         related1,
         counterparts,
         inflection,
@@ -318,67 +320,50 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
   }
 
   //
-  //9. Get completed plObjs.
-
-  console.log(`plObjs has length ${plObjs.length}`);
-
-  let plObjsPopulated = plObjs.filter((plObj) => {
-    return plObj.constituentWords.length;
-  });
-  let unmatchedHeadWords = headWords.filter((headWord) => {
-    let plObjForHead = plObjs.find((plObj) => plObj.lemma === headWord);
-    return (
-      !plObjForHead.constituentWords || !plObjForHead.constituentWords.length
-    );
-  });
-
-  console.log(`plObjsPopulated has length ${plObjsPopulated.length}`);
-
-  let aaaa = plObjsPopulated.filter((p) => p.lemma === "adwokat");
-
-  //
   //10. Generate IDs.
 
-  let counts = { nco: 0, npe: 0, ncp: 0, npp: 0 };
+  function reorderPlobjs(plObjs) {
+    let { pop, unpop } = sortPlobjsByPopulated(plObjs);
+    return [...pop, ...unpop];
+  }
 
-  plObjsPopulated.forEach((plObj) => {
-    function makeIds(plObj, counts, lang, wordtypeCode) {
-      let idNum = uUtils.numToString(counts[wordtypeCode] + 1, 3);
+  plObjs = reorderPlobjs(plObjs);
 
-      counts[wordtypeCode]++;
+  makeLemmaObjectIDs(plObjs, lang);
 
-      return `${lang.toLowerCase()}-${wordtypeCode}-${idNum}-${plObj.lemma}`;
-    }
+  //
+  //9. Filter out unpopulated plObjs.
 
-    if (plObj.isPerson) {
-      plObj.id = makeIds(plObj, counts, lang, "npe");
-    } else {
-      plObj.id = makeIds(plObj, counts, lang, "nco");
-    }
-  });
+  let { pop, unpop } = sortPlobjsByPopulated(plObjs);
 
-  let headWordsThatHaveMultiplePlobjs = [];
-  let allHeadWords = plObjsPopulated.map((p) => p.lemma);
-  let tempArr = [];
-  allHeadWords.forEach((h) => {
-    if (tempArr.includes(h) && !headWordsThatHaveMultiplePlobjs.includes(h)) {
-      headWordsThatHaveMultiplePlobjs.push(h);
-    }
-    tempArr.push(h);
-  });
-
-  headWordsThatHaveMultiplePlobjs.forEach((h) => {
-    plObjsPopulated.forEach((p) => {
-      if (p.lemma === h) {
-        p.id = `${p.id}-(${p.gender})`;
-      }
+  if ("console") {
+    console.log("* - * - * - * - * - *");
+    console.log(` plObjs in total had length ${plObjs.length}`);
+    console.log(`populated plObjs has length ${pop.length}`);
+    console.log(`unpopulat plObjs has length ${unpop.length}`);
+    let unmatchedHeadWords = headWords.filter((headWord) => {
+      let plObjForHead = plObjs.find((plObj) => plObj.lemma === headWord);
+      return (
+        !plObjForHead.constituentWords || !plObjForHead.constituentWords.length
+      );
     });
-  });
+    let unmatchedHeadWordsInPop = headWords.filter((headWord) => {
+      let plObjForHead = pop.find((plObj) => plObj.lemma === headWord);
+      return (
+        !plObjForHead.constituentWords || !plObjForHead.constituentWords.length
+      );
+    });
+    console.log(`Headwords with no match at all ${unmatchedHeadWords.length}`);
+    console.log(
+      `Headwords with no match in pop ${unmatchedHeadWordsInPop.length}`
+    );
+    console.log("* - * - * - * - * - *");
+  }
 
   //END. Add final plObj to array.
 
   return {
-    plObjs: plObjsPopulated,
+    plObjs: pop,
     unmatchedHeadWords,
   };
 }
@@ -399,10 +384,78 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
 //   return Array.from(new Set(headWords));
 // }
 
+function makeLemmaObjectIDs(plObjs, lang, existingLemmaObjects) {
+  function makeIds(plObj, counts, lang, wordtypeCode) {
+    let idNum = uUtils.numToString(counts[wordtypeCode] + 1, 3);
+
+    counts[wordtypeCode]++;
+
+    return `${lang.toLowerCase()}-${wordtypeCode}-${idNum}-${plObj.lemma}`;
+  }
+
+  let counts = { nco: 0, npe: 0, ncp: 0, npp: 0 };
+
+  Object.keys(counts).forEach((wordtypeCode) => {
+    if (!existingLemmaObjects) {
+      console.log(
+        "No existing lemma objects given so couldn't take into account existing numbers already used when making lemma object IDs."
+      );
+      return;
+    }
+
+    let lObjs = existingLemmaObjects.filter(
+      (l) => l.id.split("-")[1] === wordtypeCode
+    );
+
+    lObjs.sort(
+      (a, b) => parseInt(b.id.split("-")[2]) - parseInt(a.id.split("-")[2])
+    );
+
+    let highestIdNumber = parseInt(lObjs[0].id.split("-")[2]);
+
+    counts[wordtypeCode] = highestIdNumber;
+  });
+
+  plObjs.forEach((plObj) => {
+    if (plObj.isPerson) {
+      plObj.id = makeIds(plObj, counts, lang, "npe");
+    } else {
+      plObj.id = makeIds(plObj, counts, lang, "nco");
+    }
+  });
+
+  let headWordsThatHaveMultiplePlobjs = [];
+  let allHeadWords = plObjs.map((p) => p.lemma);
+  let tempArr = [];
+  allHeadWords.forEach((h) => {
+    if (tempArr.includes(h) && !headWordsThatHaveMultiplePlobjs.includes(h)) {
+      headWordsThatHaveMultiplePlobjs.push(h);
+    }
+    tempArr.push(h);
+  });
+
+  headWordsThatHaveMultiplePlobjs.forEach((h) => {
+    console.log("#", h);
+
+    plObjs.forEach((p) => {
+      if (p.lemma === h) {
+        p.id = `${p.id}-(${p.gender})`;
+        console.log("#", p.id);
+      }
+    });
+  });
+}
+
 function splitAllStrings(arr, separator = " ") {
   let res = [];
   arr.forEach((s) => {
     res.push(...s.split(separator));
   });
   return res;
+}
+
+function sortPlobjsByPopulated(arr) {
+  let pop = arr.filter((p) => p.constituentWords.length);
+  let unpop = arr.filter((p) => !p.constituentWords.length);
+  return { pop, unpop };
 }
