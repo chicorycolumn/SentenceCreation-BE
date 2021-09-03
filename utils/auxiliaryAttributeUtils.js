@@ -50,7 +50,7 @@ exports.firstStageEvaluateAnnotations = (
   }
 
   let { counterfaxSituations, annotationsToCounterfaxAndTheirChunkIds } =
-    cfUtils.listCounterfaxSituations2(questionOutputArr, languagesObj);
+    cfUtils.listCounterfaxSituations(questionOutputArr, languagesObj);
 
   if (annotationsToCounterfaxAndTheirChunkIds.length) {
     let explodedCounterfaxSituationsSchematics =

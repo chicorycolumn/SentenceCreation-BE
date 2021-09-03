@@ -90,7 +90,7 @@ exports.makeCfLabelFromSitSchematic = (sit) => {
   return grandCfLabel.slice(0, grandCfLabel.length - 2);
 };
 
-exports.listCounterfaxSituations2 = (questionOutputArr, languagesObj) => {
+exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
   let { questionLanguage } = languagesObj;
 
   let counterfaxSituations = { headsFirstSequenceChunkIds: [] };

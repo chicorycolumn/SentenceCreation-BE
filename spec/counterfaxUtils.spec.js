@@ -10,7 +10,7 @@ const {
   areTwoObjectsEqual,
 } = require("../utils/universalUtils.js");
 
-xdescribe("listCounterfaxSituations2", () => {
+xdescribe("listCounterfaxSituations", () => {
   it("Two annotations on one, and one on the other.", () => {
     let questionOutputArray = [
       {
@@ -375,7 +375,7 @@ xdescribe("listCounterfaxSituations2", () => {
         ],
       },
     };
-    const actual = cfUtils.listCounterfaxSituations2(
+    const actual = cfUtils.listCounterfaxSituations(
       questionOutputArray,
       languagesObject
     ).counterfaxSituations;
@@ -745,7 +745,7 @@ xdescribe("listCounterfaxSituations2", () => {
         ],
       },
     };
-    const actual = cfUtils.listCounterfaxSituations2(
+    const actual = cfUtils.listCounterfaxSituations(
       questionOutputArray,
       languagesObject
     ).counterfaxSituations;
