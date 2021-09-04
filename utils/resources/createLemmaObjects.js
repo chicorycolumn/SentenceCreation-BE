@@ -102,9 +102,6 @@ let { plObjs, unmatchedHeadWords } = makeProtoLemmaObjects(
   "POL"
 );
 
-// let a = plObjs.filter((p) => Object.keys(p.counterparts).length);
-// let a = plObjs.filter((p) => Object.keys(p.related1).length);
-// let aaa = plObjs.filter((p) => Object.keys(p.inflection).length);
 let aaa = plObjs.filter((p) => p.id.includes("(")).map((p) => p.id);
 
 console.log("");
