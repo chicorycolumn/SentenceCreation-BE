@@ -307,11 +307,30 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
   function findInflections(wordValue, inflectionsString) {
     let res = {};
 
-    inflectionsRef.forEach((inflectionKey) => {
-      if (inflectionsString.toLowerCase().includes(inflectionKey)) {
-        uUtils.addToArrayAtKey(res, inflectionKey, wordValue);
+    let matchFound = false
+
+    otherInflectionsRef.forEach(higherInfectionKey => {
+      //eg "singular"
+      if (inflectionsString.toLowerCase().includes(higherInfectionKey)) {
+        matchFound = true
+        inflectionsRef.forEach((inflectionKey) => {
+          //eg "nominative"
+          if (inflectionsString.toLowerCase().includes(inflectionKey)) {
+            uUtils.addToArrayAtKey(res, [higherInfectionKey, inflectionKey], wordValue);
+          }
+        });
       }
-    });
+    })
+
+    if (!matchFound){
+      let higherInfectionKey = "unsorted"
+      inflectionsRef.forEach((inflectionKey) => {
+        //eg "nominative"
+        if (inflectionsString.toLowerCase().includes(inflectionKey)) {
+          uUtils.addToArrayAtKey(res, [higherInfectionKey, inflectionKey], wordValue);
+        }
+      });
+    }
 
     return res;
   }

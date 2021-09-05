@@ -43,6 +43,29 @@ exports.combineTwoKeyValueObjectsCarefully = (obj1, obj2) => {
 };
 
 exports.addToArrayAtKey = (object, key, item) => {
+if (Array.isArray(key)){
+
+key.forEach((k, i) => {
+  if (i < (k.length-1)){
+    if (!object[k]) {
+      object[k] = {};
+    }
+    object = object[k]
+  }else{
+    if (!object[key]) {
+      object[key] = [item];
+    } else {
+      object[key].push(item);
+    }
+  }
+
+ 
+})
+
+return
+}
+
+
   if (!object[key]) {
     object[key] = [item];
   } else {
