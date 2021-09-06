@@ -304,6 +304,16 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
   //8. Process the proto-inflection into properly structured inflections.
   //code here...
 
+  const shorthandInflectionsRef = {
+    noms: ["singular", "nominative"],
+    accs: ["singular", "accusative"],
+    dats: ["singular", "dative"],
+    gens: ["singular", "genitive"],
+    inss: ["singular", "instrumental"],
+    locs: ["singular", "locative"],
+    vocs: ["singular", "vocative"],
+  }
+
   function findInflections(wordValue, inflectionsString) {
     let res = {};
 
