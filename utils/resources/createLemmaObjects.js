@@ -312,6 +312,13 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
     inss: ["singular", "instrumental"],
     locs: ["singular", "locative"],
     vocs: ["singular", "vocative"],
+    nomp: ["plural", "nominative"],
+    accp: ["plural", "accusative"],
+    datp: ["plural", "dative"],
+    genp: ["plural", "genitive"],
+    insp: ["plural", "instrumental"],
+    locp: ["plural", "locative"],
+    vocp: ["plural", "vocative"],
   }
 
   function findInflections(wordValue, inflectionsString) {
