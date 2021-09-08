@@ -73,10 +73,16 @@ exports.findInflections = (protoLObj) => {
         if (!otherShapes[k]) {
           otherShapes[k] = [];
         }
-        otherShapes[k] = Array.from(new Set([...otherShapes[k], ...v]));
+        otherShapes[k] = [...otherShapes[k], ...v];
       }
     });
   }
+
+  Object.keys(otherShapes).forEach((k) => {
+    if (otherShapes[k].length > 1) {
+      otherShapes[k] = Array.from(new Set(otherShapes[k]));
+    }
+  });
 
   protoLObj.otherShapes = otherShapes;
   protoLObj.inflections = inflections;
