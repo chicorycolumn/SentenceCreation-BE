@@ -5,7 +5,8 @@ const ref = require("./reference.js");
 exports.findInflections = (protoLObj) => {
   let { constituentWords } = protoLObj;
 
-  let res = {};
+  let inflections = {};
+  let otherShapes = {};
 
   constituentWords.forEach((cw) => {
     let wordValue = cw.word;
@@ -13,7 +14,7 @@ exports.findInflections = (protoLObj) => {
 
     let matchFound = false;
 
-    ref.otherInflectionsRef.forEach((higherInflectionKey) => {
+    ref.higherInflectionsRef.forEach((higherInflectionKey) => {
       //eg "singular"
 
       if (inflectionsString.toLowerCase().includes(higherInflectionKey)) {
@@ -24,7 +25,7 @@ exports.findInflections = (protoLObj) => {
           if (inflectionsString.toLowerCase().includes(inflectionKey)) {
             matchFoundSecondLevel = true;
             uUtils.addToArrayAtKey(
-              res,
+              inflections,
               [higherInflectionKey, inflectionKey],
               wordValue
             );
@@ -32,33 +33,53 @@ exports.findInflections = (protoLObj) => {
         });
 
         if (!matchFoundSecondLevel) {
-          uUtils.addToArrayAtKey(res, higherInflectionKey, wordValue);
+          uUtils.addToArrayAtKey(
+            inflections,
+            [higherInflectionKey, "unsorted"],
+            wordValue
+          );
         }
       }
     });
 
     if (!matchFound) {
-      let higherInflectionKey = "unsorted";
-      ref.inflectionsRef.forEach((inflectionKey) => {
-        //eg "nominative"
-        if (inflectionsString.toLowerCase().includes(inflectionKey)) {
-          uUtils.addToArrayAtKey(
-            res,
-            [higherInflectionKey, inflectionKey],
-            wordValue
-          );
+      ref.otherInflectionsRef.forEach((otherInflectionKey) => {
+        //eg "diminutive"
+
+        if (inflectionsString.toLowerCase().includes(otherInflectionKey)) {
+          matchFound = true;
+          uUtils.addToArrayAtKey(otherShapes, otherInflectionKey, wordValue);
         }
       });
     }
+
+    if (!matchFound) {
+      uUtils.addToArrayAtKey(otherShapes, "unsorted", wordValue);
+    }
   });
 
-  if (!res["singular"]) {
-    res["singular"] = {};
+  if (!inflections["singular"]) {
+    inflections["singular"] = {};
+  }
+  inflections["singular"]["nominative"] = [protoLObj.lemma];
+
+  if (protoLObj.otherShapes && Object.keys(protoLObj.otherShapes).length) {
+    Object.keys(protoLObj.otherShapes).forEach((k) => {
+      let v = protoLObj.otherShapes[k];
+
+      if (typeof v === "string") {
+        uUtils.addToArrayAtKey(otherShapes, k, v);
+      } else if (Array.isArray(v)) {
+        if (!otherShapes[k]) {
+          otherShapes[k] = [];
+        }
+        otherShapes[k] = Array.from(new Set([...otherShapes[k], ...v]));
+      }
+    });
   }
 
-  res["singular"]["nominative"] = [protoLObj.lemma];
-
-  return res;
+  protoLObj.otherShapes = otherShapes;
+  protoLObj.inflections = inflections;
 };
 
 exports.makeLemmaObjectIDs = (protoLObjs, lang, existingLemmaObjects) => {

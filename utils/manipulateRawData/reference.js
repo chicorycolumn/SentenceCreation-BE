@@ -46,13 +46,9 @@ exports.inflectionsRef = [
   "vocative",
 ];
 
-exports.otherInflectionsRef = [
-  "plural",
-  "singular",
-  "augmentative",
-  "diminutive",
-  "abbreviation",
-];
+exports.higherInflectionsRef = ["plural", "singular"];
+
+exports.otherInflectionsRef = ["augmentative", "diminutive", "abbreviation"];
 
 function checkRawInfKeys() {
   let koala = {
