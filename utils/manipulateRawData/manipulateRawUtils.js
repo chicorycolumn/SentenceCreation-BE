@@ -75,10 +75,12 @@ exports.formulateInflectionsFromRaw = (protoLObj) => {
       if (
         Object.keys(protoLObj.extraInflectionData).includes(shorthandCombined)
       ) {
-        let wordValue = protoLObj.extraInflectionData[shorthandCombined];
+        let wordValue = protoLObj.extraInflectionData[shorthandCombined][0];
 
         if (wordValue.includes("/")) {
           wordValue = wordValue.split("/").map((w) => w.replace(/\s/g, ""));
+        } else {
+          wordValue = [wordValue];
         }
 
         if (!inflections[separatedInflectionKeys[0]]) {
@@ -93,6 +95,8 @@ exports.formulateInflectionsFromRaw = (protoLObj) => {
         }
       }
     });
+
+    delete protoLObj.extraInflectionData;
   }
 
   if (protoLObj.otherShapes && Object.keys(protoLObj.otherShapes).length) {
@@ -137,7 +141,7 @@ exports.formulateInflectionsFromRaw = (protoLObj) => {
           isTerminus: true,
           requiresAttention:
             "Should any from .normal go to .additionalNormal ?",
-          normal: inf[k][0],
+          normal: inf[k],
           additionalNormal: [],
         };
       }
