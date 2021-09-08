@@ -2,7 +2,7 @@ const mrUtils = require("./manipulateRawUtils.js");
 const uUtils = require("../universalUtils.js");
 const ref = require("./reference.js");
 
-exports.findInflections = (protoLObj) => {
+exports.formulateInflectionsFromRaw = (protoLObj) => {
   let { constituentWords } = protoLObj;
 
   let inflections = {};
@@ -54,7 +54,11 @@ exports.findInflections = (protoLObj) => {
     }
 
     if (!matchFound) {
-      uUtils.addToArrayAtKey(otherShapes, "unsorted", wordValue);
+      uUtils.addToArrayAtKey(
+        otherShapes,
+        ["unsorted", inflectionsString],
+        wordValue
+      );
     }
   });
 
@@ -85,7 +89,13 @@ exports.findInflections = (protoLObj) => {
   });
 
   protoLObj.otherShapes = otherShapes;
+
+  if (!Object.keys(protoLObj.otherShapes).length) {
+    delete protoLObj.otherShapes;
+  }
+
   protoLObj.inflections = inflections;
+  delete protoLObj.constituentWords;
 };
 
 exports.makeLemmaObjectIDs = (protoLObjs, lang, existingLemmaObjects) => {

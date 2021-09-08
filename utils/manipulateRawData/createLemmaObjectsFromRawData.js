@@ -11,10 +11,10 @@ const temp = require("./tempCopyOutput.js");
 //     console.log(cw.traits);
 //   });
 // });
-let { pp } = temp;
-pp.forEach((p) => {
-  p.inflections = mrUtils.findInflections(p);
-});
+// let { pp } = temp;
+// pp.forEach((p) => {
+//   mrUtils.formulateInflectionsFromRaw(p);
+// });
 
 console.log("");
 
@@ -219,23 +219,16 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
   });
 
   //
-  //B2. Process the proto-inflection into properly structured inflections.
-  //code here...
+  //B2. Generate IDs.
   console.log("## Stage B2");
-
-  // mrUtils.findInflections();
-
-  //
-  //B3. Generate IDs.
-  console.log("## Stage B3");
 
   protoLObjs = mrUtils.reorderProtoLObjs(protoLObjs);
 
   mrUtils.makeLemmaObjectIDs(protoLObjs, lang);
 
   //
-  //B4. Filter out unpopulated protoLObjs.
-  console.log("## Stage B4");
+  //B3. Filter out unpopulated protoLObjs.
+  console.log("## Stage B3");
 
   let { pop, unpop } = mrUtils.sortProtoLObjsByPopulated(protoLObjs);
 
@@ -264,6 +257,15 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
   console.log(`[${unpop.length}] were unpopulated.`);
   console.log(`[${unmatchedHeadWords.length}] headwords no match at all`);
   console.log(`[${unmatchedHeadWordsInPop.length}] headwords no match in pop`);
+
+  //
+  //B4. Process the proto-inflection into properly structured inflections.
+  //code here...
+  console.log("## Stage B4");
+
+  pop.forEach((protoLObj) => {
+    mrUtils.formulateInflectionsFromRaw(protoLObj);
+  });
 
   //
   //B5. Add final protoLObj to array.
