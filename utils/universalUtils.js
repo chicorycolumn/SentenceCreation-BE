@@ -42,35 +42,29 @@ exports.combineTwoKeyValueObjectsCarefully = (obj1, obj2) => {
   return combinedObj;
 };
 
-exports.addToArrayAtKey = (object, key, item) => {
-if (Array.isArray(key)){
-
-key.forEach((k, i) => {
-  if (i < (k.length-1)){
-    if (!object[k]) {
-      object[k] = {};
-    }
-    object = object[k]
-  }else{
-    if (!object[key]) {
-      object[key] = [item];
-    } else {
-      object[key].push(item);
-    }
+exports.addToArrayAtKey = (object, keyOrKeyArray, item) => {
+  if (Array.isArray(keyOrKeyArray)) {
+    keyOrKeyArray.forEach((key, i) => {
+      if (i < keyOrKeyArray.length - 1) {
+        if (!object[key]) {
+          object[key] = {};
+        }
+        object = object[key];
+      } else {
+        if (!object[key]) {
+          object[key] = [];
+        }
+        object[key].push(item);
+      }
+    });
+    return;
   }
 
- 
-})
-
-return
-}
-
-
+  let key = keyOrKeyArray;
   if (!object[key]) {
-    object[key] = [item];
-  } else {
-    object[key].push(item);
+    object[key] = [];
   }
+  object[key].push(item);
 };
 
 exports.selectRandom = (array) => {
