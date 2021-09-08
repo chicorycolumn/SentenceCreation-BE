@@ -11,9 +11,9 @@ const temp = require("./tempCopyOutput.js");
 //     console.log(cw.traits);
 //   });
 // });
-
-temp.pp.forEach((p) => {
-  p.inflections = mrUtils.findInflections(p.constituentWords);
+let { pp } = temp;
+pp.forEach((p) => {
+  p.inflections = mrUtils.findInflections(p);
 });
 
 console.log("");

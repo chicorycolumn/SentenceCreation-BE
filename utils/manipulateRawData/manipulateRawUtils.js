@@ -2,46 +2,61 @@ const mrUtils = require("./manipulateRawUtils.js");
 const uUtils = require("../universalUtils.js");
 const ref = require("./reference.js");
 
-exports.findInflections = (consituentWords) => {
+exports.findInflections = (protoLObj) => {
+  let { constituentWords } = protoLObj;
+
   let res = {};
 
-  consituentWords.forEach((cw) => {
+  constituentWords.forEach((cw) => {
     let wordValue = cw.word;
     let inflectionsString = cw.traits;
 
     let matchFound = false;
 
-    ref.otherInflectionsRef.forEach((higherInfectionKey) => {
+    ref.otherInflectionsRef.forEach((higherInflectionKey) => {
       //eg "singular"
-      if (inflectionsString.toLowerCase().includes(higherInfectionKey)) {
+
+      if (inflectionsString.toLowerCase().includes(higherInflectionKey)) {
         matchFound = true;
+        let matchFoundSecondLevel = false;
         ref.inflectionsRef.forEach((inflectionKey) => {
           //eg "nominative"
           if (inflectionsString.toLowerCase().includes(inflectionKey)) {
+            matchFoundSecondLevel = true;
             uUtils.addToArrayAtKey(
               res,
-              [higherInfectionKey, inflectionKey],
+              [higherInflectionKey, inflectionKey],
               wordValue
             );
           }
         });
+
+        if (!matchFoundSecondLevel) {
+          uUtils.addToArrayAtKey(res, higherInflectionKey, wordValue);
+        }
       }
     });
 
     if (!matchFound) {
-      let higherInfectionKey = "unsorted";
+      let higherInflectionKey = "unsorted";
       ref.inflectionsRef.forEach((inflectionKey) => {
         //eg "nominative"
         if (inflectionsString.toLowerCase().includes(inflectionKey)) {
           uUtils.addToArrayAtKey(
             res,
-            [higherInfectionKey, inflectionKey],
+            [higherInflectionKey, inflectionKey],
             wordValue
           );
         }
       });
     }
   });
+
+  if (!res["singular"]) {
+    res["singular"] = {};
+  }
+
+  res["singular"]["nominative"] = [protoLObj.lemma];
 
   return res;
 };
