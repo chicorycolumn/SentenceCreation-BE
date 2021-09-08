@@ -67,6 +67,34 @@ exports.formulateInflectionsFromRaw = (protoLObj) => {
   }
   inflections["singular"]["nom"] = [protoLObj.lemma];
 
+  if (protoLObj.extraInflectionData) {
+    Object.keys(ref.shorthandInflectionsRef2).forEach((shorthandCombined) => {
+      let separatedInflectionKeys =
+        ref.shorthandInflectionsRef2[shorthandCombined];
+
+      if (
+        Object.keys(protoLObj.extraInflectionData).includes(shorthandCombined)
+      ) {
+        let wordValue = protoLObj.extraInflectionData[shorthandCombined];
+
+        if (wordValue.includes("/")) {
+          wordValue = wordValue.split("/").map((w) => w.replace(/\s/g, ""));
+        }
+
+        if (!inflections[separatedInflectionKeys[0]]) {
+          inflections[separatedInflectionKeys[0]] = {};
+        }
+
+        if (
+          !inflections[separatedInflectionKeys[0]][separatedInflectionKeys[1]]
+        ) {
+          inflections[separatedInflectionKeys[0]][separatedInflectionKeys[1]] =
+            wordValue;
+        }
+      }
+    });
+  }
+
   if (protoLObj.otherShapes && Object.keys(protoLObj.otherShapes).length) {
     Object.keys(protoLObj.otherShapes).forEach((k) => {
       let v = protoLObj.otherShapes[k];

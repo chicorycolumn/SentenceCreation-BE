@@ -9,20 +9,20 @@ exports.shorthandInflectionsRef = {
 };
 
 exports.shorthandInflectionsRef2 = {
-  noms: ["singular", "nominative"],
-  accs: ["singular", "accusative"],
-  dats: ["singular", "dative"],
-  gens: ["singular", "genitive"],
-  inss: ["singular", "instrumental"],
-  locs: ["singular", "locative"],
-  vocs: ["singular", "vocative"],
-  nomp: ["plural", "nominative"],
-  accp: ["plural", "accusative"],
-  datp: ["plural", "dative"],
-  genp: ["plural", "genitive"],
-  insp: ["plural", "instrumental"],
-  locp: ["plural", "locative"],
-  vocp: ["plural", "vocative"],
+  noms: ["singular", "nom"],
+  accs: ["singular", "acc"],
+  dats: ["singular", "dat"],
+  gens: ["singular", "gen"],
+  inss: ["singular", "ins"],
+  locs: ["singular", "loc"],
+  vocs: ["singular", "voc"],
+  nomp: ["plural", "nom"],
+  accp: ["plural", "acc"],
+  datp: ["plural", "dat"],
+  genp: ["plural", "gen"],
+  insp: ["plural", "ins"],
+  locp: ["plural", "loc"],
+  vocp: ["plural", "voc"],
 };
 
 exports.mascKeys = ["m", "masculine", "masc", "male"];

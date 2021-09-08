@@ -29,8 +29,8 @@ let { protoLObjs, unmatchedHeadWords } = makeProtoLemmaObjects(
 console.log("");
 
 protoLObjs.forEach((p, i) => {
-  if (Object.keys(p.inflection).length) {
-    console.log(i, JSON.stringify(p.inflection));
+  if (Object.keys(p.extraInflectionData).length) {
+    console.log(i, JSON.stringify(p.extraInflectionData));
   }
 });
 
@@ -66,14 +66,14 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
       let isPerson;
       let related1 = {};
       let counterparts = {};
-      let inflection = {};
+      let extraInflectionData = {};
 
       if (raw.inflection) {
         raw.inflection.forEach((iObj) => {
           Object.keys(iObj).forEach((k) => {
             let v = iObj[k];
             if (k !== "template_name") {
-              uUtils.addToArrayAtKey(inflection, k, v);
+              uUtils.addToArrayAtKey(extraInflectionData, k, v);
             }
           });
         });
@@ -182,7 +182,7 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
         gender,
         related1,
         counterparts,
-        inflection,
+        extraInflectionData,
       };
 
       if (isPerson) {
