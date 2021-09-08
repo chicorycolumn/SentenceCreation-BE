@@ -1,4 +1,14 @@
 exports.shorthandInflectionsRef = {
+  nominative: "nom",
+  accusative: "acc",
+  dative: "dat",
+  genitive: "gen",
+  instrumental: "ins",
+  locative: "loc",
+  vocative: "voc",
+};
+
+exports.shorthandInflectionsRef2 = {
   noms: ["singular", "nominative"],
   accs: ["singular", "accusative"],
   dats: ["singular", "dative"],

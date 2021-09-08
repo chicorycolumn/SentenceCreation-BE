@@ -26,7 +26,7 @@ exports.formulateInflectionsFromRaw = (protoLObj) => {
             matchFoundSecondLevel = true;
             uUtils.addToArrayAtKey(
               inflections,
-              [higherInflectionKey, inflectionKey],
+              [higherInflectionKey, ref.shorthandInflectionsRef[inflectionKey]],
               wordValue
             );
           }
@@ -65,7 +65,7 @@ exports.formulateInflectionsFromRaw = (protoLObj) => {
   if (!inflections["singular"]) {
     inflections["singular"] = {};
   }
-  inflections["singular"]["nominative"] = [protoLObj.lemma];
+  inflections["singular"]["nom"] = [protoLObj.lemma];
 
   if (protoLObj.otherShapes && Object.keys(protoLObj.otherShapes).length) {
     Object.keys(protoLObj.otherShapes).forEach((k) => {
@@ -93,6 +93,28 @@ exports.formulateInflectionsFromRaw = (protoLObj) => {
   if (!Object.keys(protoLObj.otherShapes).length) {
     delete protoLObj.otherShapes;
   }
+
+  ref.higherInflectionsRef.forEach((higherInflectionKey) => {
+    let inf = inflections[higherInflectionKey];
+
+    if (!inf) {
+      return;
+    }
+
+    Object.keys(inf).forEach((k) => {
+      if (inf[k].length === 1) {
+        inf[k] = inf[k][0];
+      } else {
+        inf[k] = {
+          isTerminus: true,
+          requiresAttention:
+            "Should any from .normal go to .additionalNormal ?",
+          normal: inf[k][0],
+          additionalNormal: [],
+        };
+      }
+    });
+  });
 
   protoLObj.inflections = inflections;
   delete protoLObj.constituentWords;

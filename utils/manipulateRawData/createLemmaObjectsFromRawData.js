@@ -28,6 +28,14 @@ let { protoLObjs, unmatchedHeadWords } = makeProtoLemmaObjects(
 
 console.log("");
 
+protoLObjs.forEach((p, i) => {
+  if (Object.keys(p.inflection).length) {
+    console.log(i, JSON.stringify(p.inflection));
+  }
+});
+
+console.log("");
+
 function makeProtoLemmaObjects(raw, headWords, lang) {
   let protoLObjs = [];
 
