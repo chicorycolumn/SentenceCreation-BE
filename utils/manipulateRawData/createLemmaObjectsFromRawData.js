@@ -29,8 +29,8 @@ let { protoLObjs, unmatchedHeadWords } = makeProtoLemmaObjects(
 console.log("");
 
 protoLObjs.forEach((p, i) => {
-  if (Object.keys(p.extraInflectionData).length) {
-    console.log(i, JSON.stringify(p.extraInflectionData));
+  if (p.tags1.length) {
+    console.log(p.id, "    ", JSON.stringify(p.tags1));
   }
 });
 
@@ -268,7 +268,6 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
 
   //
   //B4. Process the proto-inflection into properly structured inflections.
-  //code here...
   console.log("## Stage B4");
 
   pop.forEach((protoLObj) => {
@@ -276,8 +275,17 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
   });
 
   //
-  //B5. Add final protoLObj to array.
+  //B5. Process the proto-translations.
   console.log("## Stage B5");
+
+  pop.forEach((protoLObj) => {
+    protoLObj.translations = { ENG: protoLObj.trans1 || "requiresAttention" };
+    delete protoLObj.trans1;
+  });
+
+  //
+  //B9. Add final protoLObj to array.
+  console.log("## Stage B9");
 
   return {
     protoLObjs: pop,
