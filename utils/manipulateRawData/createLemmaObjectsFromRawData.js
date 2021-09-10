@@ -5,6 +5,7 @@ const uUtils = require("../universalUtils.js");
 const mrUtils = require("./manipulateRawUtils.js");
 const ref = require("./reference.js");
 const temp = require("./tempCopyOutput.js");
+const consol = require("../zerothOrder/consoleLoggingUtils.js");
 
 // temp.pp.forEach((p) => {
 //   p.constituentWords.forEach((cw) => {
@@ -26,13 +27,17 @@ let { protoLObjs, unmatchedHeadWords } = makeProtoLemmaObjects(
 
 // let aaa = protoLObjs.filter((p) => p.id.includes("(")).map((p) => p.id);
 
-console.log("");
-
-protoLObjs.forEach((p, i) => {
-  if (p.tags1.length) {
-    console.log(p.id, "    ", JSON.stringify(p.tags1));
-  }
-});
+/**
+ * grammarTags is useless and can be dropped completely.
+ *      It's stuff like [diminutive, slang, plural-only, neuter]
+ *
+ * categoryTags is things broadly related, like, areas of life that contain.
+ *      eg [architecture] for lemma "łuk"
+ *      eg [computing]    for lemma "okno"
+ *      eg [berries]      for lemma "truskawka"
+ *      eg [anatomy]      for lemma "pęcherz"
+ *      eg [male family]  for lemma "syn"
+ */
 
 console.log("");
 
@@ -59,8 +64,8 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
         throw "Error 9384. Raw object has no 'heads' key.";
       }
 
-      let tags1 = [];
-      let tags2 = [];
+      let grammarTags = [];
+      let categoryTags = [];
       let trans1 = [];
       let otherShapes = {};
       let isPerson;
@@ -141,10 +146,10 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
 
       raw.senses.forEach((sense) => {
         if (sense.tags) {
-          tags1 = [...tags1, ...sense.tags];
+          grammarTags = [...grammarTags, ...sense.tags];
         }
         if (sense.categories) {
-          tags2 = [...tags2, ...sense.categories];
+          categoryTags = [...categoryTags, ...sense.categories];
         }
         if (sense.glosses) {
           trans1 = [...trans1, ...sense.glosses];
@@ -160,9 +165,9 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
         }
       });
 
-      tags1 = tags1.filter(
+      grammarTags = grammarTags.filter(
         (t) =>
-          !["person", "masculine", "feminine", "animate", "inanimate"].includes(
+          !["masculine", "feminine", "animate", "inanimate", "neuter"].includes(
             t
           )
       );
@@ -173,8 +178,8 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
 
       let resObj = {
         lemma: headWord,
-        tags1,
-        tags2,
+        grammarTags,
+        categoryTags,
         constituentWords: [],
         trans1,
         otherShapes,
