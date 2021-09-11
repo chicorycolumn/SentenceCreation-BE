@@ -1,9 +1,12 @@
 const mrUtils = require("./manipulateRawUtils.js");
 const uUtils = require("../universalUtils.js");
 const consol = require("../zerothOrder/consoleLoggingUtils.js");
-const ref = require("./reference.js");
 
-exports.logHowManyInflectionsFilled = (protoLObjs) => {
+exports.logHowManyInflectionsFilled = (protoLObjs, lang) => {
+  const ref = require(`./languageSpecific/${lang}/reference.js`);
+
+  let totalNumberExpected = Object.keys(ref.shorthandInflectionsRef2).length;
+
   let howManyInflectionsFilledOut = {
     1: 0,
     2: 0,
@@ -26,11 +29,8 @@ exports.logHowManyInflectionsFilled = (protoLObjs) => {
       (doubleInflectionKey) => {
         let number = ref.shorthandInflectionsRef2[doubleInflectionKey][0];
         let gender = ref.shorthandInflectionsRef2[doubleInflectionKey][1];
-        return (
-          gender !== "voc" &&
-          p.inflections[number] &&
-          p.inflections[number][gender]
-        );
+
+        return p.inflections[number] && p.inflections[number][gender];
       }
     ).length;
 
@@ -40,7 +40,7 @@ exports.logHowManyInflectionsFilled = (protoLObjs) => {
     let countProtoLObjs = howManyInflectionsFilledOut[numInflections];
     consol.log(
       "[1;30m " +
-        `[${countProtoLObjs}] protoLObjs have filled out ${numInflections}/12 inflections.` +
+        `[${countProtoLObjs}] protoLObjs have filled out ${numInflections}/${totalNumberExpected} inflections.` +
         "[0m"
     );
   });

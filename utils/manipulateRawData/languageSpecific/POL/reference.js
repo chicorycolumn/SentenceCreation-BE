@@ -5,7 +5,7 @@ exports.shorthandInflectionsRef = {
   genitive: "gen",
   instrumental: "ins",
   locative: "loc",
-  vocative: "voc",
+  // vocative: "voc",
 };
 
 exports.shorthandInflectionsRef2 = {
@@ -15,14 +15,14 @@ exports.shorthandInflectionsRef2 = {
   gens: ["singular", "gen"],
   inss: ["singular", "ins"],
   locs: ["singular", "loc"],
-  vocs: ["singular", "voc"],
+  // vocs: ["singular", "voc"],
   nomp: ["plural", "nom"],
   accp: ["plural", "acc"],
   datp: ["plural", "dat"],
   genp: ["plural", "gen"],
   insp: ["plural", "ins"],
   locp: ["plural", "loc"],
-  vocp: ["plural", "voc"],
+  // vocp: ["plural", "voc"],
 };
 
 exports.mascKeys = ["m", "masculine", "masc", "male"];
@@ -53,7 +53,7 @@ exports.inflectionsRef = [
   "accusative",
   "instrumental",
   "locative",
-  "vocative",
+  // "vocative",
 ];
 
 exports.higherInflectionsRef = ["plural", "singular"];

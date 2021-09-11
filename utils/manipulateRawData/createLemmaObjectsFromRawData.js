@@ -1,7 +1,6 @@
 const mrUtils = require("./manipulateRawUtils.js");
 const uUtils = require("../universalUtils.js");
 const consol = require("../zerothOrder/consoleLoggingUtils.js");
-const ref = require("./reference.js");
 
 const { nouns } = require("../../../Wiktionary/POL/nouns.js");
 const { goodNouns } = require("./rawWords/POL/nouns.js");
@@ -36,6 +35,7 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
    */
 
   const langUtils = require(`./languageSpecific/${lang}/utils.js`);
+  const ref = require(`./languageSpecific/${lang}/reference.js`);
 
   let protoLObjs = [];
 
@@ -316,7 +316,7 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
   //B9. Add final protoLObj to array.
   console.log("## Stage B6");
 
-  mrUtils.logHowManyInflectionsFilled(pop);
+  mrUtils.logHowManyInflectionsFilled(pop, lang);
 
   return {
     protoLObjs: pop,
