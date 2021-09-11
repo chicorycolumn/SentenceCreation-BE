@@ -126,6 +126,14 @@ exports.formulateInflectionsFromRaw = (protoLObj) => {
     delete protoLObj.otherShapes;
   }
 
+  if (protoLObj.otherShapes) {
+    if (!protoLObj.xtra) {
+      protoLObj.xtra = {};
+    }
+    protoLObj.xtra.otherShapes = protoLObj.otherShapes;
+    delete protoLObj.otherShapes;
+  }
+
   ref.higherInflectionsRef.forEach((higherInflectionKey) => {
     let inf = inflections[higherInflectionKey];
 
