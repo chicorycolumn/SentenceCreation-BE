@@ -19,7 +19,7 @@ exports.logHowManyInflectionsFilled = (protoLObjs) => {
     12: 0,
   };
   consol.log("[1;30m " + `    ----    ` + "[0m");
-  consol.log("[1;30m " + `Of a total ${protoLObjs.length} protoLObjs:` + "[0m");
+  consol.log("[1;30m " + `[${protoLObjs.length}] total protoLObjs` + "[0m");
 
   protoLObjs.forEach((p) => {
     let numInflectionsFilled = Object.keys(ref.shorthandInflectionsRef2).filter(
@@ -40,7 +40,7 @@ exports.logHowManyInflectionsFilled = (protoLObjs) => {
     let countProtoLObjs = howManyInflectionsFilledOut[numInflections];
     consol.log(
       "[1;30m " +
-        `${countProtoLObjs} protoLObjs have filled out ${numInflections}/12 inflections.` +
+        `[${countProtoLObjs}] protoLObjs have filled out ${numInflections}/12 inflections.` +
         "[0m"
     );
   });

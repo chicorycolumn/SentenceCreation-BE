@@ -1,21 +1,18 @@
-const { path } = require("./secrets.js");
+const mrUtils = require("./manipulateRawUtils.js");
+const uUtils = require("../universalUtils.js");
+const consol = require("../zerothOrder/consoleLoggingUtils.js");
+const ref = require("./reference.js");
+
 const { nouns } = require("../../../Wiktionary/POL/nouns.js");
 const { goodNouns } = require("./rawWords/POL/nouns.js");
-const uUtils = require("../universalUtils.js");
-const mrUtils = require("./manipulateRawUtils.js");
-const ref = require("./reference.js");
+const { path } = require("./secrets.js");
 const temp = require("./tempCopyOutput.js");
-const consol = require("../zerothOrder/consoleLoggingUtils.js");
-
-console.log("");
 
 let { protoLObjs, unmatchedHeadWords } = makeProtoLemmaObjects(
   nouns,
   goodNouns,
   "POL"
 );
-
-mrUtils.logHowManyInflectionsFilled(protoLObjs);
 
 console.log("");
 
@@ -51,9 +48,9 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
         rawObj.senses.some((sense) => !sense.form_of)
     );
 
-    if (matchingRawObjs.length > 1) {
-      console.log("Multiple raws --->", matchingRawObjs.length, headWord);
-    }
+    // if (matchingRawObjs.length > 1) {
+    //   console.log("Multiple raws --->", matchingRawObjs.length, headWord);
+    // }
 
     matchingRawObjs.forEach((raw) => {
       if (!raw.heads || raw.heads.length !== 1) {
@@ -281,6 +278,7 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
   });
 
   if ("console") {
+    consol.log("[1;30m " + `    ----    ` + "[0m");
     consol.log("[1;30m " + `[${protoLObjs.length}] protoLObjs.` + "[0m");
     consol.log(
       "[1;30m " + `[${pop.length}] were populated (have inflection data).` + "[0m"
@@ -292,6 +290,7 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
     consol.log(
       "[1;30m " + `[${unmatchedHeadWordsInPop.length}] headwords no match in pop` + "[0m"
     );
+    consol.log("[1;30m " + `    ----    ` + "[0m");
   }
 
   //
@@ -313,7 +312,9 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
 
   //
   //B9. Add final protoLObj to array.
-  console.log("## Stage B9");
+  console.log("## Stage B6");
+
+  mrUtils.logHowManyInflectionsFilled(pop);
 
   return {
     protoLObjs: pop,
