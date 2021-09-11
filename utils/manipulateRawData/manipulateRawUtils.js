@@ -1,6 +1,47 @@
 const mrUtils = require("./manipulateRawUtils.js");
 const uUtils = require("../universalUtils.js");
+const consol = require("../zerothOrder/consoleLoggingUtils.js");
 const ref = require("./reference.js");
+
+exports.logHowManyInflectionsFilled = (protoLObjs) => {
+  let howManyInflectionsFilledOut = {
+    1: 0,
+    2: 0,
+    3: 0,
+    4: 0,
+    5: 0,
+    6: 0,
+    7: 0,
+    8: 0,
+    9: 0,
+    10: 0,
+    11: 0,
+    12: 0,
+  };
+  protoLObjs.forEach((p) => {
+    let numInflectionsFilled = Object.keys(ref.shorthandInflectionsRef2).filter(
+      (doubleInflectionKey) => {
+        let number = ref.shorthandInflectionsRef2[doubleInflectionKey][0];
+        let gender = ref.shorthandInflectionsRef2[doubleInflectionKey][1];
+        return (
+          gender !== "voc" &&
+          p.inflections[number] &&
+          p.inflections[number][gender]
+        );
+      }
+    ).length;
+
+    howManyInflectionsFilledOut[numInflectionsFilled]++;
+  });
+  Object.keys(howManyInflectionsFilledOut).forEach((numInflections) => {
+    let countProtoLObjs = howManyInflectionsFilledOut[numInflections];
+    consol.log(
+      "[1;33m " +
+        `${countProtoLObjs} protoLObjs have filled out ${numInflections}/12 inflections.` +
+        "[0m"
+    );
+  });
+};
 
 exports.formulateInflectionsFromRaw = (protoLObj) => {
   let { constituentWords } = protoLObj;

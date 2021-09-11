@@ -25,38 +25,9 @@ let { protoLObjs, unmatchedHeadWords } = makeProtoLemmaObjects(
   "POL"
 );
 
+mrUtils.logHowManyInflectionsFilled(protoLObjs);
+
 // let aaa = protoLObjs.filter((p) => p.id.includes("(")).map((p) => p.id);
-
-let howManyInflectionsFilledOut = {
-  1: 0,
-  2: 0,
-  3: 0,
-  4: 0,
-  5: 0,
-  6: 0,
-  7: 0,
-  8: 0,
-  9: 0,
-  10: 0,
-  11: 0,
-  12: 0,
-};
-
-protoLObjs.forEach((p) => {
-  let numInflectionsFilled = Object.keys(ref.shorthandInflectionsRef2).filter(
-    (doubleInflectionKey) => {
-      let number = ref.shorthandInflectionsRef2[doubleInflectionKey][0];
-      let gender = ref.shorthandInflectionsRef2[doubleInflectionKey][1];
-      return (
-        gender !== "voc" &&
-        p.inflections[number] &&
-        p.inflections[number][gender]
-      );
-    }
-  ).length;
-
-  howManyInflectionsFilledOut[numInflectionsFilled]++;
-});
 
 // consol.log(
 //   "[1;30m " +
