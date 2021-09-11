@@ -1,0 +1,1 @@
+exports.formulateInflections = (protoLObj) => {};

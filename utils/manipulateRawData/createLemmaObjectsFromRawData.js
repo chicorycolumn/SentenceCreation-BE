@@ -35,6 +35,8 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
    *      eg "student" has {f: ["studentka"]}
    */
 
+  const langUtils = require(`./languageSpecific/${lang}/utils.js`);
+
   let protoLObjs = [];
 
   headWords.forEach((headWord) => {
@@ -298,7 +300,7 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
   console.log("## Stage B4");
 
   pop.forEach((protoLObj) => {
-    mrUtils.formulateInflectionsFromRaw(protoLObj);
+    langUtils.formulateInflections(protoLObj);
   });
 
   //
