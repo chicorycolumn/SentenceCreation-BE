@@ -27,21 +27,72 @@ let { protoLObjs, unmatchedHeadWords } = makeProtoLemmaObjects(
 
 // let aaa = protoLObjs.filter((p) => p.id.includes("(")).map((p) => p.id);
 
-/**
- * grammarTags is useless and can be dropped completely.
- *      It's stuff like [diminutive, slang, plural-only, neuter]
- *
- * categoryTags is things broadly related, like, areas of life that contain.
- *      eg [architecture] for lemma "łuk"
- *      eg [computing]    for lemma "okno"
- *      eg [berries]      for lemma "truskawka"
- *      eg [anatomy]      for lemma "pęcherz"
- *      eg [male family]  for lemma "syn"
- */
+let howManyInflectionsFilledOut = {
+  1: 0,
+  2: 0,
+  3: 0,
+  4: 0,
+  5: 0,
+  6: 0,
+  7: 0,
+  8: 0,
+  9: 0,
+  10: 0,
+  11: 0,
+  12: 0,
+};
+
+protoLObjs.forEach((p) => {
+  let numInflectionsFilled = Object.keys(ref.shorthandInflectionsRef2).filter(
+    (doubleInflectionKey) => {
+      let number = ref.shorthandInflectionsRef2[doubleInflectionKey][0];
+      let gender = ref.shorthandInflectionsRef2[doubleInflectionKey][1];
+      return (
+        gender !== "voc" &&
+        p.inflections[number] &&
+        p.inflections[number][gender]
+      );
+    }
+  ).length;
+
+  howManyInflectionsFilledOut[numInflectionsFilled]++;
+});
+
+// consol.log(
+//   "[1;30m " +
+//     protoLObjs.filter((p) => {
+//       return Object.keys(ref.shorthandInflectionsRef2).every(
+//         (doubleInflectionKey) => {
+//           let number = ref.shorthandInflectionsRef2[doubleInflectionKey][0];
+//           let gender = ref.shorthandInflectionsRef2[doubleInflectionKey][1];
+//           return p.inflections[number] && p.inflections[number][gender];
+//         }
+//       );
+//     }).length +
+//     "[0m"
+// );
 
 console.log("");
 
 function makeProtoLemmaObjects(raw, headWords, lang) {
+  /**
+   * grammarTags gets dropped.
+   *      It's stuff like [diminutive, slang, plural-only, neuter]
+   *
+   * categoryTags is patchy but useful.
+   *      eg [architecture] for lemma "łuk"
+   *      eg [computing]    for lemma "okno"
+   *      eg [berries]      for lemma "truskawka"
+   *      eg [anatomy]      for lemma "pęcherz"
+   *      eg [male family]  for lemma "syn"
+   *
+   * relatedWords is droppable but kept.
+   *      Sometimes contains other word forms, (noun adj verb) of this word.
+   *
+   * counterparts only present on ~10% of words, but is very useful.
+   *      eg "student" has {f: ["studentka"]}
+   */
+
   let protoLObjs = [];
 
   headWords.forEach((headWord) => {
@@ -64,14 +115,14 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
         throw "Error 9384. Raw object has no 'heads' key.";
       }
 
-      let grammarTags = [];
       let categoryTags = [];
       let trans1 = [];
       let otherShapes = {};
       let isPerson;
-      let related1 = {};
+      let relatedWords = {};
       let counterparts = {};
       let extraInflectionData = {};
+      // let grammarTags = [];
 
       if (raw.inflection) {
         raw.inflection.forEach((iObj) => {
@@ -105,49 +156,63 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
       }
 
       //
-      //A3. Add other SHAPES, such as diminutive and augmentative. Also MGN counterparts.
+      //A3. Add MGN counterparts, and other SHAPES ie diminutive and augmentative.
       // console.log("## Stage A3");
 
       if (raw.forms) {
-        raw.forms.forEach((f) => {
-          f.tags.forEach((ftag) => {
-            if (ref.mascKeys.includes(ftag)) {
-              uUtils.addToArrayAtKey(counterparts, "m", f.form);
-            } else if (ref.femKeys.includes(ftag)) {
-              uUtils.addToArrayAtKey(counterparts, "f", f.form);
+        raw.forms.forEach((formObj) => {
+          formObj.tags.forEach((formTag) => {
+            if (ref.mascKeys.includes(formTag)) {
+              uUtils.addToArrayAtKey(counterparts, "m", formObj.form);
+            } else if (ref.femKeys.includes(formTag)) {
+              uUtils.addToArrayAtKey(counterparts, "f", formObj.form);
             } else {
-              otherShapes[ftag] = f.form;
+              otherShapes[formTag] = formObj.form;
             }
           });
         });
       }
 
-      ref.mascKeys.forEach((mascKey) => {
-        if (
-          raw.heads[mascKey] &&
-          !raw.heads[mascKey].toLowerCase().includes("wikipedia")
-        ) {
-          uUtils.addToArrayAtKey(counterparts, "m", raw.heads[mascKey]);
-        }
-      });
-
-      ref.femKeys.forEach((femKey) => {
-        if (
-          raw.heads[femKey] &&
-          !raw.heads[femKey].toLowerCase().includes("wikipedia")
-        ) {
-          uUtils.addToArrayAtKey(counterparts, "f", raw.heads[femKey]);
-        }
-      });
+      //Only seldom are counterparts yielded from this, and in those cases was covered by raw.forms anyway.
+      //
+      // [
+      //   { type: "m", genKeys: ref.mascKeys },
+      //   { type: "f", genKeys: ref.femKeys },
+      // ].forEach((genderHeadRefObj) => {
+      //   let { genKeys, type } = genderHeadRefObj;
+      //   genKeys.forEach((genKey) => {
+      //     let counterpartsSubArr = raw.heads[genKey]
+      //       ? raw.heads[genKey].filter(
+      //           (counterpart) =>
+      //             !counterpart.toLowerCase().includes("wikipedia")
+      //         )
+      //       : [];
+      //     if (counterpartsSubArr.length) {
+      //       uUtils.addToArrayAtKey(counterparts, type, counterpartsSubArr);
+      //     }
+      //   });
+      // });
 
       //
       //A4. Add what will become TAGS and TRANSLATIONS. Will require sorting as inconsistent placement in raw data.
       // console.log("## Stage A4");
 
       raw.senses.forEach((sense) => {
-        if (sense.tags) {
-          grammarTags = [...grammarTags, ...sense.tags];
-        }
+        // if (sense.tags) {
+        //   grammarTags = [
+        //     ...grammarTags,
+        //     ...sense.tags.filter(
+        //       (t) =>
+        //         ![
+        //           "masculine",
+        //           "feminine",
+        //           "animate",
+        //           "inanimate",
+        //           "neuter",
+        //         ].includes(t)
+        //     ),
+        //   ];
+        // }
         if (sense.categories) {
           categoryTags = [...categoryTags, ...sense.categories];
         }
@@ -159,39 +224,45 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
             let tags = rel.tags && rel.tags.length ? rel.tags : ["misc"];
 
             tags.forEach((tag) => {
-              uUtils.addToArrayAtKey(related1, tag, rel.word);
+              uUtils.addToArrayAtKey(relatedWords, tag, rel.word);
             });
           });
         }
       });
 
-      grammarTags = grammarTags.filter(
-        (t) =>
-          !["masculine", "feminine", "animate", "inanimate", "neuter"].includes(
-            t
-          )
-      );
-
       //
       //A5. Add to res object.
       // console.log("## Stage A5");
 
+      categoryTags = Array.from(
+        new Set(categoryTags.map((t) => t.toLowerCase()))
+      );
+
       let resObj = {
         lemma: headWord,
-        grammarTags,
-        categoryTags,
+        tags: categoryTags,
         constituentWords: [],
         trans1,
-        otherShapes,
-        raw,
         gender,
-        related1,
-        counterparts,
         extraInflectionData,
+        otherShapes,
+        // raw,
+        // grammarTags,
       };
 
       if (isPerson) {
         resObj.isPerson = true;
+      }
+
+      let xtra = {};
+      if (Object.keys(relatedWords).length) {
+        xtra.relatedWords = relatedWords;
+      }
+      if (Object.keys(counterparts).length) {
+        xtra.counterparts = counterparts;
+      }
+      if (Object.keys(xtra).length) {
+        resObj.xtra = xtra;
       }
 
       protoLObjs.push(resObj);
