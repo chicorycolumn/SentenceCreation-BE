@@ -7,16 +7,6 @@ const ref = require("./reference.js");
 const temp = require("./tempCopyOutput.js");
 const consol = require("../zerothOrder/consoleLoggingUtils.js");
 
-// temp.pp.forEach((p) => {
-//   p.constituentWords.forEach((cw) => {
-//     console.log(cw.traits);
-//   });
-// });
-// let { pp } = temp;
-// pp.forEach((p) => {
-//   mrUtils.formulateInflectionsFromRaw(p);
-// });
-
 console.log("");
 
 let { protoLObjs, unmatchedHeadWords } = makeProtoLemmaObjects(
@@ -26,22 +16,6 @@ let { protoLObjs, unmatchedHeadWords } = makeProtoLemmaObjects(
 );
 
 mrUtils.logHowManyInflectionsFilled(protoLObjs);
-
-// let aaa = protoLObjs.filter((p) => p.id.includes("(")).map((p) => p.id);
-
-// consol.log(
-//   "[1;30m " +
-//     protoLObjs.filter((p) => {
-//       return Object.keys(ref.shorthandInflectionsRef2).every(
-//         (doubleInflectionKey) => {
-//           let number = ref.shorthandInflectionsRef2[doubleInflectionKey][0];
-//           let gender = ref.shorthandInflectionsRef2[doubleInflectionKey][1];
-//           return p.inflections[number] && p.inflections[number][gender];
-//         }
-//       );
-//     }).length +
-//     "[0m"
-// );
 
 console.log("");
 
@@ -263,7 +237,6 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
           let traits = mrUtils.splitAllStrings(sense.glosses);
           traits = traits.filter((t) => !["of", protoLObj.lemma].includes(t));
           traits = traits.join(" ");
-          // console.log(111,`rIndex:${rIndex},sIndex:${sIndex},fIndex:${fIndex}`,protoLObj.lemma);
           protoLObj.constituentWords.push({
             word: rawObj.word,
             traits,
@@ -307,11 +280,19 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
     );
   });
 
-  console.log(`[${protoLObjs.length}] protoLObjs.`);
-  console.log(`[${pop.length}] were populated (have inflection data).`);
-  console.log(`[${unpop.length}] were unpopulated.`);
-  console.log(`[${unmatchedHeadWords.length}] headwords no match at all`);
-  console.log(`[${unmatchedHeadWordsInPop.length}] headwords no match in pop`);
+  if ("console") {
+    consol.log("[1;30m " + `[${protoLObjs.length}] protoLObjs.` + "[0m");
+    consol.log(
+      "[1;30m " + `[${pop.length}] were populated (have inflection data).` + "[0m"
+    );
+    consol.log("[1;30m " + `[${unpop.length}] were unpopulated.` + "[0m");
+    consol.log(
+      "[1;30m " + `[${unmatchedHeadWords.length}] headwords no match at all` + "[0m"
+    );
+    consol.log(
+      "[1;30m " + `[${unmatchedHeadWordsInPop.length}] headwords no match in pop` + "[0m"
+    );
+  }
 
   //
   //B4. Process the proto-inflection into properly structured inflections.

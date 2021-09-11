@@ -18,6 +18,9 @@ exports.logHowManyInflectionsFilled = (protoLObjs) => {
     11: 0,
     12: 0,
   };
+  consol.log("[1;30m " + `    ----    ` + "[0m");
+  consol.log("[1;30m " + `Of a total ${protoLObjs.length} protoLObjs:` + "[0m");
+
   protoLObjs.forEach((p) => {
     let numInflectionsFilled = Object.keys(ref.shorthandInflectionsRef2).filter(
       (doubleInflectionKey) => {
@@ -36,11 +39,12 @@ exports.logHowManyInflectionsFilled = (protoLObjs) => {
   Object.keys(howManyInflectionsFilledOut).forEach((numInflections) => {
     let countProtoLObjs = howManyInflectionsFilledOut[numInflections];
     consol.log(
-      "[1;33m " +
+      "[1;30m " +
         `${countProtoLObjs} protoLObjs have filled out ${numInflections}/12 inflections.` +
         "[0m"
     );
   });
+  consol.log("[1;30m " + `    ----    ` + "[0m");
 };
 
 exports.formulateInflectionsFromRaw = (protoLObj) => {
@@ -254,7 +258,7 @@ exports.makeLemmaObjectIDs = (protoLObjs, lang, existingLemmaObjects) => {
     protoLObjs.forEach((p) => {
       if (p.lemma === h) {
         p.id = `${p.id}-(${p.gender})`;
-        console.log(`Added (gender) to this id as it's a multiple: "${p.id}"`);
+        // console.log(`Added (gender) to this id as it's a multiple: "${p.id}"`);
       }
     });
   });
