@@ -17,6 +17,9 @@ console.log("");
 
 function makeProtoLemmaObjects(raw, headWords, lang) {
   /**
+   * NOTE: Feminine nouns must all be manually checked for if they represent people,
+   * and the isPerson boolean is manually added.
+   * 
    * grammarTags gets dropped.
    *      It's stuff like [diminutive, slang, plural-only, neuter]
    *
@@ -66,7 +69,7 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
       let relatedWords = {};
       let counterparts = {};
       let extraInflectionData = {};
-      // let grammarTags = [];
+      let grammarTags = [];
 
       if (raw.inflection) {
         raw.inflection.forEach((iObj) => {
@@ -142,21 +145,21 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
       // console.log("## Stage A4");
 
       raw.senses.forEach((sense) => {
-        // if (sense.tags) {
-        //   grammarTags = [
-        //     ...grammarTags,
-        //     ...sense.tags.filter(
-        //       (t) =>
-        //         ![
-        //           "masculine",
-        //           "feminine",
-        //           "animate",
-        //           "inanimate",
-        //           "neuter",
-        //         ].includes(t)
-        //     ),
-        //   ];
-        // }
+        if (sense.tags) {
+          grammarTags = [
+            ...grammarTags,
+            ...sense.tags.filter(
+              (t) =>
+                ![
+                  "masculine",
+                  "feminine",
+                  "animate",
+                  "inanimate",
+                  "neuter",
+                ].includes(t)
+            ),
+          ];
+        }
         if (sense.categories) {
           categoryTags = [...categoryTags, ...sense.categories];
         }
@@ -194,7 +197,11 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
         // grammarTags,
       };
 
-      if (isPerson) {
+      if (isPerson || [...categoryTags, ...grammarTags].includes("person")) {
+        console.log(`-> "${headWord}" is a person.`)
+        if (!headWord){
+          console.log("      (I detected that by the categoryTags/grammarTags.)")
+        }
         resObj.isPerson = true;
       }
 
