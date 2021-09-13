@@ -7,20 +7,11 @@ exports.logHowManyInflectionsFilled = (protoLObjs, lang) => {
 
   let totalNumberExpected = Object.keys(ref.shorthandInflectionsRef2).length;
 
-  let howManyInflectionsFilledOut = {
-    1: 0,
-    2: 0,
-    3: 0,
-    4: 0,
-    5: 0,
-    6: 0,
-    7: 0,
-    8: 0,
-    9: 0,
-    10: 0,
-    11: 0,
-    12: 0,
-  };
+  let howManyInflectionsFilledOut = {};
+  for (let i = 0; i <= totalNumberExpected; i++) {
+    howManyInflectionsFilledOut[i] = 0;
+  }
+
   consol.log("[1;30m " + `    ----    ` + "[0m");
   consol.log("[1;30m " + `[${protoLObjs.length}] total protoLObjs` + "[0m");
 
