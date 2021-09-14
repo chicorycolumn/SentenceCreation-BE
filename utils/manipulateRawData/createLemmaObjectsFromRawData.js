@@ -19,7 +19,7 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
   /**
    * NOTE: Feminine nouns must all be manually checked for if they represent people,
    * and the isPerson boolean is manually added.
-   * 
+   *
    * grammarTags gets dropped.
    *      It's stuff like [diminutive, slang, plural-only, neuter]
    *
@@ -193,14 +193,15 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
         gender,
         extraInflectionData,
         otherShapes,
-        // raw,
-        // grammarTags,
+        // raw
       };
 
       if (isPerson || [...categoryTags, ...grammarTags].includes("person")) {
-        console.log(`-> "${headWord}" is a person.`)
-        if (!headWord){
-          console.log("      (I detected that by the categoryTags/grammarTags.)")
+        console.log(`-> "${headWord}" is a person.`);
+        if (!headWord) {
+          console.log(
+            "      (I detected that by the categoryTags/grammarTags.)"
+          );
         }
         resObj.isPerson = true;
       }
@@ -224,13 +225,13 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
   //B1. Go through raw data to find all INFLECTION objects of each protoLObj, and harvest from them.
   console.log("## Stage B1");
 
-  raw.forEach((rawObj, rIndex) => {
-    rawObj.senses.forEach((sense, sIndex) => {
+  raw.forEach((rawObj) => {
+    rawObj.senses.forEach((sense) => {
       if (!sense.form_of) {
         return;
       }
 
-      sense.form_of.forEach((f, fIndex) => {
+      sense.form_of.forEach((f) => {
         if (f.lemma) {
           throw `Error 2763`;
         }
