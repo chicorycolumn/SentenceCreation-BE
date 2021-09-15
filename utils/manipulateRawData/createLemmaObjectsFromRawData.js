@@ -53,10 +53,6 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
         rawObj.senses.some((sense) => !sense.form_of)
     );
 
-    // if (matchingRawObjs.length > 1) {
-    //   console.log("Multiple raws --->", matchingRawObjs.length, headWord);
-    // }
-
     matchingRawObjs.forEach((raw) => {
       if (!raw.heads || raw.heads.length !== 1) {
         throw "Error 9384. Raw object has no 'heads' key.";
