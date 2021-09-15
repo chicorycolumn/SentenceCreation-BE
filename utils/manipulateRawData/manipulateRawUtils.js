@@ -9,11 +9,11 @@ exports.logHowManyInflectionsFilled = (protoLObjs, lang) => {
 
   let howManyInflectionsFilledOut = {};
   for (let i = 0; i <= totalNumberExpected; i++) {
-    howManyInflectionsFilledOut[i] = 0;
+    howManyInflectionsFilledOut[i] = [];
   }
 
   consol.log("[1;30m " + `    ----    ` + "[0m");
-  consol.log("[1;30m " + `[${protoLObjs.length}] total protoLObjs` + "[0m");
+  consol.log("[1;30m " + `Total protoLObjs: ${protoLObjs.length}` + "[0m");
 
   protoLObjs.forEach((p) => {
     let numInflectionsFilled = Object.keys(ref.shorthandInflectionsRef2).filter(
@@ -25,10 +25,10 @@ exports.logHowManyInflectionsFilled = (protoLObjs, lang) => {
       }
     ).length;
 
-    howManyInflectionsFilledOut[numInflectionsFilled]++;
+    howManyInflectionsFilledOut[numInflectionsFilled].push(p);
   });
   Object.keys(howManyInflectionsFilledOut).forEach((numInflections) => {
-    let countProtoLObjs = howManyInflectionsFilledOut[numInflections];
+    let countProtoLObjs = howManyInflectionsFilledOut[numInflections].length;
     consol.log(
       "[1;30m " +
         `[${countProtoLObjs}] protoLObjs have filled out ${numInflections}/${totalNumberExpected} inflections.` +
@@ -95,6 +95,7 @@ exports.makeLemmaObjectIDs = (protoLObjs, lang, existingLemmaObjects) => {
       }
     });
   });
+  console.log("Final counts:", counts);
 };
 
 exports.reorderProtoLObjs = (protoLObjs) => {

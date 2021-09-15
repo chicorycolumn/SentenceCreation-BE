@@ -261,6 +261,8 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
 
   mrUtils.makeLemmaObjectIDs(protoLObjs, lang);
 
+  let countProtoLObjsBeforeFilteringDown = protoLObjs.length;
+
   //
   //B3. Filter out unpopulated protoLObjs.
   console.log("## Stage B3");
@@ -325,6 +327,17 @@ function makeProtoLemmaObjects(raw, headWords, lang) {
   console.log("## Stage B6");
 
   mrUtils.logHowManyInflectionsFilled(pop, lang);
+
+  consol.log(
+    "[1;30m " +
+      `I was given ${headWords.length} headWords, and I created lObjs for ${
+        headWords.length - unmatchedHeadWords.length
+      } of those headWords. The total number of lObjs I created is ${countProtoLObjsBeforeFilteringDown} 
+      (remember, one headWord can correspond to multiple lObjs) but I trimmed this down to just ${
+        pop.length
+      } lObjs, because I discarded protoLObjs that had no constituentWords data.` +
+      "[0m"
+  );
 
   return {
     protoLObjs: pop,
