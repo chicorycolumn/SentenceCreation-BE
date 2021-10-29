@@ -1,4 +1,5 @@
 node_modules
 trash*.js
+scratchpad*.js
 secrets.js
 tempCopyOutput.js

@@ -120,7 +120,7 @@ exports.wordsBank = {
     //       nom: {
     // isTerminus: true,
     // normal: ["chłopacy"],
-    // additionalNormal: ["chłopaki"],
+    // additionalFrequent: ["chłopaki"],
     //        },
     //       gen: "chłopaków",
     //       dat: "chłopakom",
@@ -239,7 +239,7 @@ exports.wordsBank = {
           acc: {
             isTerminus: true,
             normal: ["pomidor"],
-            additionalNormal: ["pomidora"],
+            additionalFrequent: ["pomidora"],
           },
           ins: "pomidorem",
           loc: "pomidorze",

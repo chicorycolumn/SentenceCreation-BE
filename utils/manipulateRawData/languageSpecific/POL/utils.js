@@ -149,9 +149,9 @@ exports.formulateInflections = (protoLObj) => {
         inf[k] = {
           isTerminus: true,
           requiresAttention:
-            "Should any from .normal go to .additionalNormal ?",
+            "Should any from .normal go to .additionalFrequent ?",
           normal: inf[k],
-          additionalNormal: [],
+          additionalFrequent: [],
         };
       }
     });
