@@ -545,20 +545,24 @@ exports.adhocForms = {
   },
 };
 
-exports.nounGenderTraitValues = {
-  nco: "allNonpersonalSingularGenders",
-  ncp: "allNonpersonalSingularGenders",
+exports.getNounGenderTraitValues = (wordtypeCode) => {
+  ref = {
+    nco: "allNonpersonalSingularGenders",
+    ncp: "allNonpersonalSingularGenders",
 
-  npe: "allPersonalSingularGenders",
-  npp: "allPersonalSingularGenders",
+    npe: "allPersonalSingularGenders",
+    npp: "allPersonalSingularGenders",
 
-  ver: "allNonpersonalSingularGenders",
-  adj: "allNonpersonalSingularGenders",
-  adv: "allNonpersonalSingularGenders",
-  pro: "allNonpersonalSingularGenders",
-  art: "allNonpersonalSingularGenders",
-  pre: "allNonpersonalSingularGenders",
-  fix: "allNonpersonalSingularGenders",
+    ver: "allNonpersonalSingularGenders",
+    adj: "allNonpersonalSingularGenders",
+    adv: "allNonpersonalSingularGenders",
+    pro: "allNonpersonalSingularGenders",
+    art: "allNonpersonalSingularGenders",
+    pre: "allNonpersonalSingularGenders",
+    fix: "allNonpersonalSingularGenders",
+  };
+
+  return ref[wordtypeCode];
 };
 
 exports.wordtypeShorthandTranslation = {

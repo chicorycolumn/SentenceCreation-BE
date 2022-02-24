@@ -895,3 +895,53 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
     }
   });
 };
+
+exports.setPDSValues = (questionSentenceFormula, questionLanguage) => {
+  //If PDS from req, then add PDS:true to each Q stCh.
+  //Unless stCh is 'person' noun and headNoun of pronoun stCh. 'The doctor gave me his book.' must specify MGN doctor.
+  //
+  //But if qChunk.gender holds all the poss gender traitValues for this lang>wordtype (bearing in mind if isPerson)
+  //then do allow it to be qChunk.dontSpecifyOnThisChunk = true.
+
+  questionSentenceFormula.sentenceStructure.forEach((qChunk) => {
+    if (!gpUtils.stChIsNounPerson(qChunk)) {
+      qChunk.dontSpecifyOnThisChunk = true;
+    } else {
+      if (
+        questionSentenceFormula.sentenceStructure.find(
+          (potentialDepChunk) =>
+            gpUtils.getWordtypeStCh(potentialDepChunk) === "pronoun" &&
+            potentialDepChunk.agreeWith === qChunk.chunkId
+        )
+      ) {
+        if (
+          qChunk.gender &&
+          qChunk.gender.length &&
+          refObj.metaTraitValues[questionLanguage]["gender"][
+            refObj.getNounGenderTraitValues(gpUtils.getWordtypeCodeStCh(qChunk))
+          ].every((traitValue) => qChunk.gender.includes(traitValue))
+        ) {
+          qChunk.dontSpecifyOnThisChunk = true;
+        } else {
+          qChunk.dontSpecifyOnThisChunk = false;
+        }
+      } else {
+        if (
+          qChunk.gender &&
+          qChunk.gender.length &&
+          !refObj.metaTraitValues[questionLanguage]["gender"][
+            refObj.getNounGenderTraitValues(gpUtils.getWordtypeCodeStCh(qChunk))
+          ].every((traitValue) => qChunk.gender.includes(traitValue))
+        ) {
+          qChunk.dontSpecifyOnThisChunk = false;
+        } else {
+          qChunk.dontSpecifyOnThisChunk = true;
+        }
+      }
+    }
+
+    consol.log(
+      `PDSyellow qChunk.dontSpecifyOnThisChunk for "${qChunk.chunkId}=${qChunk.dontSpecifyOnThisChunk}"`
+    );
+  });
+};
