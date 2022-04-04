@@ -9,7 +9,6 @@ const scUtils = require("./sentenceCreatingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 const refFxn = require("./reference/referenceFunctions.js");
 const allLangUtils = require("../utils/allLangUtils.js");
-const { copy } = require("../routes/paletteRouter.js");
 
 exports.getWordsAndFormulas = (currentLanguage) => {
   const { wordsBank } = require(`../source/${currentLanguage}/words.js`);
