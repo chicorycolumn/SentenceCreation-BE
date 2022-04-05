@@ -9,7 +9,10 @@
     "test-app": "clear && mocha spec/app.spec.js",
     "test-scu": "clear && mocha spec/objectTraversingUtils.spec.js",
     "start": "node listen.js",
-    "dev": "nodemon listen.js localhost 9090"
+    "mon": "nodemon listen.js localhost 9090",
+    "react": "react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject"
   },
   "repository": {
     "type": "git",
@@ -20,13 +23,32 @@
   "bugs": {
     "url": "https://github.com/chicorycolumn/SentenceCreation/issues"
   },
-  "homepage": "https://github.com/chicorycolumn/SentenceCreation#readme",
   "dependencies": {
     "chai": "^4.2.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mocha": "^8.2.1",
     "nodemon": "^2.0.6",
-    "supertest": "^6.0.1"
+    "supertest": "^6.0.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-scripts": "5.0.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
