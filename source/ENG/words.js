@@ -184,6 +184,7 @@ exports.wordsBank = {
       //links
       translations: { ENG: ["book"], POL: ["książka"] },
       tags: ["inanimate", "holdable", "concrete"],
+      topics: ["school"],
       //selectors
       lemma: "book",
       id: "eng-nco-006",

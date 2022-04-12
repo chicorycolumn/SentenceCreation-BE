@@ -3,6 +3,38 @@ const gpUtils = require("./generalPurposeUtils.js");
 const consol = require("./zerothOrder/consoleLoggingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 
+exports.collectAllValuesFromKeyOnObjectsInNestedArrayOfObjects = (
+  nestedArrOfObjects,
+  subKey
+) => {
+  let allTags = [];
+  Object.values(nestedArrOfObjects).forEach((arrOfObjects) => {
+    allTags = gpUtils.collectAllValuesFromKeyOnObjectsInArrayOfObjects(
+      arrOfObjects,
+      subKey,
+      allTags
+    );
+  });
+  return allTags;
+};
+
+exports.collectAllValuesFromKeyOnObjectsInArrayOfObjects = (
+  arrOfObjects,
+  key,
+  allTags = []
+) => {
+  arrOfObjects.forEach((lObj) => {
+    if (lObj[key]) {
+      lObj[key].forEach((tag) => {
+        if (!allTags.includes(tag)) {
+          allTags.push(tag);
+        }
+      });
+    }
+  });
+  return allTags;
+};
+
 exports.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual =
   (array1, array2) => {
     //Ignores order.

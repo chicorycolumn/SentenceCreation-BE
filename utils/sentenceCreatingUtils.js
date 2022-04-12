@@ -10,8 +10,21 @@ const refObj = require("./reference/referenceObjects.js");
 const refFxn = require("./reference/referenceFunctions.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 
-exports.getWordsAndFormulas = (currentLanguage) => {
+exports.getWordsAndFormulas = (currentLanguage, getTags) => {
   const { wordsBank } = require(`../source/${currentLanguage}/words.js`);
+
+  if (getTags) {
+    allTags = gpUtils.collectAllValuesFromKeyOnObjectsInNestedArrayOfObjects(
+      wordsBank,
+      "tags"
+    );
+    allTopics = gpUtils.collectAllValuesFromKeyOnObjectsInNestedArrayOfObjects(
+      wordsBank,
+      "topics"
+    );
+    return { allTags, allTopics };
+  }
+
   const {
     dummyWordsBank,
   } = require(`../source/${currentLanguage}/dummy/dummyWords.js`);
