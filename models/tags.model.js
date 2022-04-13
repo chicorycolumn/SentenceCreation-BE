@@ -11,12 +11,26 @@ const refObj = require("../utils/reference/referenceObjects.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 
 exports.fetchTags = (req) => {
-  console.log("mptl", req.params);
-  let { language1 } = req.params;
+  console.log("mptl", req);
+  let { language1 } = req.query;
 
-  let { allTags, allTopics } = scUtils.getWordsAndFormulas(language1, true);
+  let { allTags, allTopics } = scUtils.getTagsAndTopics(language1);
 
   let responseObject = { tags: allTags, topics: allTopics };
+
+  return Promise.all([responseObject]).then((array) => {
+    return array[0];
+  });
+};
+
+exports.fetchWordsByCriteria = (req) => {
+  console.log("psme", req);
+  let { language1 } = req.query;
+  delete req.query["language1"];
+
+  let words = scUtils.getWordsByCriteria(language1, req.query);
+
+  let responseObject = { words };
 
   return Promise.all([responseObject]).then((array) => {
     return array[0];

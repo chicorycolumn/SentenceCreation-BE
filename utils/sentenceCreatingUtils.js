@@ -10,20 +10,47 @@ const refObj = require("./reference/referenceObjects.js");
 const refFxn = require("./reference/referenceFunctions.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 
-exports.getWordsAndFormulas = (currentLanguage, getTags) => {
+exports.getWordsByCriteria = (currentLanguage, criteria) => {
   const { wordsBank } = require(`../source/${currentLanguage}/words.js`);
 
-  if (getTags) {
-    allTags = gpUtils.collectAllValuesFromKeyOnObjectsInNestedArrayOfObjects(
-      wordsBank,
-      "tags"
-    );
-    allTopics = gpUtils.collectAllValuesFromKeyOnObjectsInNestedArrayOfObjects(
-      wordsBank,
-      "topics"
-    );
-    return { allTags, allTopics };
-  }
+  resObj = {};
+
+  Object.keys(wordsBank).forEach((wordSetKey) => {
+    resObj[wordSetKey] = [];
+    let wordSet = wordsBank[wordSetKey];
+    wordSet.forEach((lObj) => {
+      if (
+        Object.keys(criteria).some((criterionKey) => {
+          let criterionValue = criteria[criterionKey];
+          return (
+            lObj[criterionKey] && lObj[criterionKey].includes(criterionValue)
+          );
+        })
+      ) {
+        resObj[wordSetKey].push({ lemma: lObj.lemma, id: lObj.id });
+      }
+    });
+  });
+
+  return resObj;
+};
+
+exports.getTagsAndTopics = (currentLanguage) => {
+  const { wordsBank } = require(`../source/${currentLanguage}/words.js`);
+
+  allTags = gpUtils.collectAllValuesFromKeyOnObjectsInNestedArrayOfObjects(
+    wordsBank,
+    "tags"
+  );
+  allTopics = gpUtils.collectAllValuesFromKeyOnObjectsInNestedArrayOfObjects(
+    wordsBank,
+    "topics"
+  );
+  return { allTags, allTopics };
+};
+
+exports.getWordsAndFormulas = (currentLanguage) => {
+  const { wordsBank } = require(`../source/${currentLanguage}/words.js`);
 
   const {
     dummyWordsBank,
