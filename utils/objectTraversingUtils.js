@@ -745,7 +745,7 @@ exports.findMatchingLemmaObjectThenWord = (
       //eg subArrayOfOutputUnits [{
       //   selectedWordArray: [ 'I' ],
       //   drillPath: [
-      //     [ 'form', 'pronoun' ],
+      //     [ 'form', 'pronombre' ],
       //     [ 'person', '1per' ],
       //     [ 'number', 'singular' ],
       //     [ 'gender', 'm' ],
@@ -756,7 +756,7 @@ exports.findMatchingLemmaObjectThenWord = (
       // {
       //   selectedWordArray: [ 'I' ],
       //   drillPath: [
-      //     [ 'form', 'pronoun' ],
+      //     [ 'form', 'pronombre' ],
       //     [ 'person', '1per' ],
       //     [ 'number', 'singular' ],
       //     [ 'gender', 'f' ],
@@ -797,7 +797,7 @@ exports.findMatchingLemmaObjectThenWord = (
       //eg [{
       //   selectedWordArray: [ 'I' ],
       //   drillPath: [
-      //     [ 'form', 'pronoun' ],
+      //     [ 'form', 'pronombre' ],
       //     [ 'person', '1per' ],
       //     [ 'number', 'singular' ],
       //     [ 'gender', 'm' ],
@@ -808,7 +808,7 @@ exports.findMatchingLemmaObjectThenWord = (
       // {
       //   selectedWordArray: [ 'I' ],
       //   drillPath: [
-      //     [ 'form', 'pronoun' ],
+      //     [ 'form', 'pronombre' ],
       //     [ 'person', '1per' ],
       //     [ 'number', 'singular' ],
       //     [ 'gender', 'f' ],
@@ -819,7 +819,7 @@ exports.findMatchingLemmaObjectThenWord = (
       // {
       //   selectedWordArray: [ 'we' ],
       //   drillPath: [
-      //     [ 'form', 'pronoun' ],
+      //     [ 'form', 'pronombre' ],
       //     [ 'person', '1per' ],
       //     [ 'number', 'plural' ],
       //     [ 'gender', 'virile' ],
@@ -830,7 +830,7 @@ exports.findMatchingLemmaObjectThenWord = (
       // {
       //   selectedWordArray: [ 'we' ],
       //   drillPath: [
-      //     [ 'form', 'pronoun' ],
+      //     [ 'form', 'pronombre' ],
       //     [ 'person', '1per' ],
       //     [ 'number', 'plural' ],
       //     [ 'gender', 'nonvirile' ],

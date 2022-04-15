@@ -13,7 +13,7 @@ const {
 const { generalTranslatedSentencesRef } = testingUtils;
 
 // MGN:            Multi-gender noun. Eg doctor in ENG can be either male or female.
-// ProsMgn:        "My doctor and her book." Connected pronoun reveals gender of MGN. Doesn't need an annotation for doctor as clearly must be lekarka.
+// ProsMgn:        "My doctor and her book." Connected pronombre reveals gender of MGN. Doesn't need an annotation for doctor as clearly must be lekarka.
 // EdusMgn:        "My doctor is a man."     Educator specifies MGN's gender. Sentence where educator knows that this MGN will need no clarifying.
 
 describe("/api", function () {
@@ -490,7 +490,7 @@ describe("/api", function () {
     });
   });
 
-  describe("/palette - Stage 19: Step-L: Pronoun translation of gendered objects eg Pomidor/Cebula.", () => {
+  describe("/palette - Stage 19: Step-L: Pronombre translation of gendered objects eg Pomidor/Cebula.", () => {
     //#pal19-00 alias #pal18-09, yes indeed   "It is red." <-> "Ono jest czerwone."
     it("#pal19-01a GET 200 YES: Engpol. 'There's a woman and I see her.'", () => {
       const questionLanguage = "ENG";
@@ -2732,7 +2732,7 @@ describe("/api", function () {
     });
   });
 
-  describe("/palette - Stage 17D: Possessive pronouns and MGNs. MGN to agree with pronoun.", () => {
+  describe("/palette - Stage 17D: Possessive pronombres and MGNs. MGN to agree with pronombre.", () => {
     it("#pal17-10a GET 200 YES: Engpol. I was here. Testing annotations.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -2993,7 +2993,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal17-11a GET 200 YES: Engpol. I was a doctor. MGN to agree with pronoun.", () => {
+    it("#pal17-11a GET 200 YES: Engpol. I was a doctor. MGN to agree with pronombre.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -3024,7 +3024,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal17-11b GET 200 YES: Engpol. I was a doctor. MGN to agree with pronoun. pleaseDontSpecify", () => {
+    it("#pal17-11b GET 200 YES: Engpol. I was a doctor. MGN to agree with pronombre. pleaseDontSpecify", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -3052,7 +3052,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal17-11c GET 200 YES: Poleng. I was a doctor. MGN to agree with pronoun.", () => {
+    it("#pal17-11c GET 200 YES: Poleng. I was a doctor. MGN to agree with pronombre.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -3093,7 +3093,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal17-11d GET 200 YES: Poleng. I was a doctor. MGN to agree with pronoun. pleaseDontSpecify but with no effect expected.", () => {
+    it("#pal17-11d GET 200 YES: Poleng. I was a doctor. MGN to agree with pronombre. pleaseDontSpecify but with no effect expected.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -3135,7 +3135,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal17-11e GET 200 YES: Engpol. I* was a doctor. MGN to agree with pronoun.", () => {
+    it("#pal17-11e GET 200 YES: Engpol. I* was a doctor. MGN to agree with pronombre.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -3178,7 +3178,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal17-11f GET 200 YES: Engpol. I* was a doctor. MGN to agree with pronoun. pleaseDontSpecify", () => {
+    it("#pal17-11f GET 200 YES: Engpol. I* was a doctor. MGN to agree with pronombre. pleaseDontSpecify", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -3210,7 +3210,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal17-11g GET 200 YES: Poleng. I* was a doctor. MGN to agree with pronoun.", () => {
+    it("#pal17-11g GET 200 YES: Poleng. I* was a doctor. MGN to agree with pronombre.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -3269,7 +3269,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal17-11h GET 200 YES: Poleng. I* was a doctor. MGN to agree with pronoun. pleaseDontSpecify but with no effect expected.", () => {
+    it("#pal17-11h GET 200 YES: Poleng. I* was a doctor. MGN to agree with pronombre. pleaseDontSpecify but with no effect expected.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -3329,7 +3329,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal17-11i GET 200 YES: Engpol. I** was a doctor. MGN to agree with pronoun.", () => {
+    it("#pal17-11i GET 200 YES: Engpol. I** was a doctor. MGN to agree with pronombre.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -3372,7 +3372,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal17-11j GET 200 YES: Engpol. I** was a doctor. MGN to agree with pronoun. pleaseDontSpecify", () => {
+    it("#pal17-11j GET 200 YES: Engpol. I** was a doctor. MGN to agree with pronombre. pleaseDontSpecify", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -3404,7 +3404,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal17-11k GET 200 YES: Poleng. I** was a doctor. MGN to agree with pronoun.", () => {
+    it("#pal17-11k GET 200 YES: Poleng. I** was a doctor. MGN to agree with pronombre.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -3463,7 +3463,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal17-11l GET 200 YES: Poleng. I** was a doctor. MGN to agree with pronoun. pleaseDontSpecify but with no effect expected.", () => {
+    it("#pal17-11l GET 200 YES: Poleng. I** was a doctor. MGN to agree with pronombre. pleaseDontSpecify but with no effect expected.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -3526,7 +3526,7 @@ describe("/api", function () {
     //Add "The doctor was here." sentence with tests.
   });
 
-  describe("/palette - Stage 17C: Possessive pronouns and MGNs. EdusMgn", () => {
+  describe("/palette - Stage 17C: Possessive pronombres and MGNs. EdusMgn", () => {
     it("#pal17-07a GET 200 YES: Engpol. Hard-specify an MGN's gender (EdusMgn dummy run).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -3911,7 +3911,7 @@ describe("/api", function () {
     });
   });
 
-  describe("/palette - Stage 17B: Possessive pronouns and MGNs. PP below MGN. ProsMgn.", () => {
+  describe("/palette - Stage 17B: Possessive pronombres and MGNs. PP below MGN. ProsMgn.", () => {
     it("#pal17-04b GET 200 YES: Engpol. Sentence with 2 of same MGN. Some annotations expected. But eventually, this should succeed, as ProsMgn.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -4188,7 +4188,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal17-05a GET 200 YES: Engpol. Possessive pronoun below MGN. No annotation as ProsMgn.", () => {
+    it("#pal17-05a GET 200 YES: Engpol. Possessive pronombre below MGN. No annotation as ProsMgn.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -4219,7 +4219,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal17-05b GET 200 YES: Engpol. Possessive pronoun below MGN. pleaseDontSpecify should be BLOCKED for ProsMgn MGN.", () => {
+    it("#pal17-05b GET 200 YES: Engpol. Possessive pronombre below MGN. pleaseDontSpecify should be BLOCKED for ProsMgn MGN.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -4251,7 +4251,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal17-05c GET 200 YES: Poleng. Possessive pronoun below MGN. Annotations wouldn't appear anyway.", () => {
+    it("#pal17-05c GET 200 YES: Poleng. Possessive pronombre below MGN. Annotations wouldn't appear anyway.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -4282,7 +4282,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal17-05d GET 200 YES: Poleng. Possessive pronoun below MGN. pleaseDontSpecify but annotations wouldn't appear anyway.", () => {
+    it("#pal17-05d GET 200 YES: Poleng. Possessive pronombre below MGN. pleaseDontSpecify but annotations wouldn't appear anyway.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -4441,7 +4441,7 @@ describe("/api", function () {
     });
   });
 
-  describe("/palette - Stage 17A: Possessive pronouns and MGNs. Pre-testing.", () => {
+  describe("/palette - Stage 17A: Possessive pronombres and MGNs. Pre-testing.", () => {
     it("#pal17-01a GET 200 YES: Engpol. MGN as sole word, annotation expected.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -4600,7 +4600,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal17-02a GET 200 YES: Engpol. Simple possessive pronoun sentence. Should not be broken by pleaseDontSpecify.", () => {
+    it("#pal17-02a GET 200 YES: Engpol. Simple possessive pronombre sentence. Should not be broken by pleaseDontSpecify.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -4628,7 +4628,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal17-02b GET 200 YES: Poleng. Simple possessive pronoun sentence. Should not be broken by pleaseDontSpecify.", () => {
+    it("#pal17-02b GET 200 YES: Poleng. Simple possessive pronombre sentence. Should not be broken by pleaseDontSpecify.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -4656,7 +4656,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal17-03a GET 200 YES: Engpol. Possessive pronoun above MGN. Annotation expected as this isn't actually a ProsMgn.", () => {
+    it("#pal17-03a GET 200 YES: Engpol. Possessive pronombre above MGN. Annotation expected as this isn't actually a ProsMgn.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -4687,7 +4687,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal17-03b GET 200 YES: Engpol. Possessive pronoun above MGN. pleaseDontSpecify.", () => {
+    it("#pal17-03b GET 200 YES: Engpol. Possessive pronombre above MGN. pleaseDontSpecify.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -4715,7 +4715,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal17-03c GET 200 YES: Poleng. Possessive pronoun above MGN. Annotation wouldn't appear anyway.", () => {
+    it("#pal17-03c GET 200 YES: Poleng. Possessive pronombre above MGN. Annotation wouldn't appear anyway.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -4746,7 +4746,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal17-03d GET 200 YES: Poleng. Possessive pronoun above MGN. pleaseDontSpecify but annotation wouldn't appear anyway.", () => {
+    it("#pal17-03d GET 200 YES: Poleng. Possessive pronombre above MGN. pleaseDontSpecify but annotation wouldn't appear anyway.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 

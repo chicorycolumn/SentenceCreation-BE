@@ -21,7 +21,7 @@ xdescribe("doesThisInflectionKeyHoldUniqueInflectionValueInLObj", () => {
 
     //inflections
     inflections: {
-      pronoun: {
+      pronombre: {
         "1per": {
           singular: {
             m1: {
@@ -282,7 +282,7 @@ xdescribe("doesThisInflectionKeyHoldUniqueInflectionValueInLObj", () => {
     let inputInflectionCategory = "gender";
 
     let inputDrillPath = [
-      ["form", "pronoun"],
+      ["form", "pronombre"],
       ["person", "1per"],
       ["number", "singular"],
       ["gender", "f"],
@@ -300,7 +300,7 @@ xdescribe("doesThisInflectionKeyHoldUniqueInflectionValueInLObj", () => {
     let inputInflectionCategory = "gender";
 
     let inputDrillPath = [
-      ["form", "pronoun"],
+      ["form", "pronombre"],
       ["person", "3per"],
       ["number", "singular"],
       ["gender", "f"],
@@ -318,7 +318,7 @@ xdescribe("doesThisInflectionKeyHoldUniqueInflectionValueInLObj", () => {
     let inputInflectionCategory = "number";
 
     let inputDrillPath = [
-      ["form", "pronoun"],
+      ["form", "pronombre"],
       ["person", "3per"],
       ["number", "singular"],
       ["gender", "f"],
@@ -369,9 +369,9 @@ xdescribe("findSynhomographs", () => {
       },
     ];
     const structureChunkArr = [
-      { wordtype: "noun", chunkId: "nco-1" },
-      { wordtype: "noun", chunkId: "nco-2" },
-      { wordtype: "noun", chunkId: "nco-3" },
+      { wordtype: "nounCommon", chunkId: "nco-1" },
+      { wordtype: "nounCommon", chunkId: "nco-2" },
+      { wordtype: "nounCommon", chunkId: "nco-3" },
     ];
 
     const expected = [];
@@ -433,9 +433,9 @@ xdescribe("findSynhomographs", () => {
     ];
 
     const structureChunkArr = [
-      { wordtype: "noun", chunkId: "nco-1" },
-      { wordtype: "noun", chunkId: "nco-2" },
-      { wordtype: "noun", chunkId: "nco-3" },
+      { wordtype: "nounCommon", chunkId: "nco-1" },
+      { wordtype: "nounCommon", chunkId: "nco-2" },
+      { wordtype: "nounCommon", chunkId: "nco-3" },
     ];
     const actual = [];
 
@@ -512,9 +512,9 @@ xdescribe("findSynhomographs", () => {
       },
     ];
     const structureChunkArr = [
-      { wordtype: "noun", chunkId: "nco-1" },
-      { wordtype: "noun", chunkId: "nco-2" },
-      { wordtype: "noun", chunkId: "nco-3" },
+      { wordtype: "nounCommon", chunkId: "nco-1" },
+      { wordtype: "nounCommon", chunkId: "nco-2" },
+      { wordtype: "nounCommon", chunkId: "nco-3" },
     ];
     const actual = [];
 
@@ -637,9 +637,9 @@ xdescribe("findSynhomographs", () => {
       },
     ];
     const structureChunkArr = [
-      { wordtype: "noun", chunkId: "nco-1" },
-      { wordtype: "noun", chunkId: "nco-2" },
-      { wordtype: "noun", chunkId: "nco-3" },
+      { wordtype: "nounCommon", chunkId: "nco-1" },
+      { wordtype: "nounCommon", chunkId: "nco-2" },
+      { wordtype: "nounCommon", chunkId: "nco-3" },
     ];
     const actual = [];
 

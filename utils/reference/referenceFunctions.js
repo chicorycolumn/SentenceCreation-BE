@@ -4,6 +4,38 @@ const consol = require("../zerothOrder/consoleLoggingUtils.js");
 const refObj = require("./referenceObjects.js");
 const refFxn = require("./referenceFunctions.js");
 
+exports.getBaseWordtype = (wordtypeLonghand) => {
+  let reg = /\w+(?=[A-Z])/;
+  return (
+    (wordtypeLonghand.match(reg) && wordtypeLonghand.match(reg)[0]) ||
+    wordtypeLonghand
+  );
+};
+
+exports.getWordtypeShorthandTranslation = (str, label, returnBaseWordtype) => {
+  if (returnBaseWordtype) {
+    consol.throw(
+      "spqd You should not need to use this base word type. nounCommon and nounPerson are now two separare wordtypes and there ought to be no use-case for just noun."
+    );
+  }
+  let res;
+  Object.keys(refObj.wordtypeShorthandTranslation).forEach((shorthand) => {
+    let longhand = refObj.wordtypeShorthandTranslation[shorthand];
+    if (str == shorthand) {
+      res = returnBaseWordtype ? refFxn.getBaseWordtype(longhand) : longhand;
+    }
+    if (str == longhand) {
+      res = shorthand;
+    }
+  });
+  if (res) {
+    return res;
+  }
+  consol.throw(
+    `fkat This is not a valid wordtype shorthand or longhand: "${str}". Further info: ${label}.`
+  );
+};
+
 exports.isTraitCompatibleStCh = (trait, stCh, currentLanguage) => {
   const stChTraitsRef = refFxn.getStructureChunkTraits(currentLanguage);
   return stChTraitsRef[trait].compatibleWordtypes.includes(
@@ -39,7 +71,7 @@ exports.removeIncompatibleTraitValues = (currentLanguage, structureChunk) => {
         .length)
   ) {
     consol.log(
-      "vevx removeIncompatibleTraitValues. Removing 'n' if present as is noun-person."
+      "vevx removeIncompatibleTraitValues. Removing 'n' if present as is nounPerson."
     );
     structureChunk.gender = structureChunk.gender.filter(
       (traitValue) => traitValue !== "n"

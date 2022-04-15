@@ -709,7 +709,7 @@ exports.sentenceFormulasBank = [
       },
     ],
     primaryOrders: [["pro-1", "ver-1"]],
-    additionalOrders: [["ver-1"]], //See how here we're showing the pronoun is optional.
+    additionalOrders: [["ver-1"]], //See how here we're showing the pronombre is optional.
   },
   {
     sentenceFormulaSymbol: "109 doc wrote p",

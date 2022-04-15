@@ -9,7 +9,7 @@ const pvUtils = require("../utils/secondOrder/processValidationUtils.js");
 const frUtils = require("../utils/formattingResponseUtils.js");
 const refObj = require("../utils/reference/referenceObjects.js");
 const allLangUtils = require("../utils/allLangUtils.js");
-const refFxn = require("./reference/referenceFunctions.js");
+const refFxn = require("../utils/reference/referenceFunctions.js");
 
 exports.fetchInfo = (req) => {
   console.log("msll", req);

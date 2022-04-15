@@ -30,9 +30,9 @@ exports.selectWordVersions = (
   previousOutputUnit,
   multipleMode
 ) => {
-  if (gpUtils.getWordtypeLObj(selectedLemmaObject) === "pronoun") {
+  if (gpUtils.getWordtypeLObj(selectedLemmaObject) === "pronombre") {
     // >>>
-    // >>> Pronoun: post-prepositional
+    // >>> Pronombre: post-prepositional
     // >>>
     if (
       previousOutputUnit &&
@@ -49,7 +49,7 @@ exports.selectWordVersions = (
       return true;
     } else {
       // >>>
-      // >>> Pronoun: stressed or unstressed
+      // >>> Pronombre: stressed or unstressed
       // >>>
 
       let combinedSelectedWordsArr = multipleMode

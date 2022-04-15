@@ -4,7 +4,7 @@ const {
   terminusObjectNormalArray,
 } = require("../../../utils/generalPurposeUtils");
 
-let nounSet = [
+let nounPersonSet = [
   {
     //links
     translations: { ENG: ["woman", "lady"], POL: ["kobieta"] },
@@ -49,6 +49,9 @@ let nounSet = [
       },
     },
   },
+];
+
+let nounCommonSet = [
   {
     //links
     translations: { ENG: ["onion"], POL: ["cebula"] },
@@ -500,12 +503,13 @@ let verbSet = [
 ];
 
 exports.wordsBank = {
-  nounSet,
+  nounCommonSet,
+  nounPersonSet,
   adjectiveSet,
   verbSet,
 };
 
-// let pronounSet = [
+// let pronombreSet = [
 //   {
 //     translations: { ENG: ["I"] },
 //     lemma: "ja",

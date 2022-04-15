@@ -11,7 +11,7 @@ const testingUtils = require("../utils/secondOrder/testingUtils.js");
 const { generalTranslatedSentencesRef } = testingUtils;
 
 // MGN:            Multi-gender noun. Eg doctor in ENG can be either male or female.
-// ProsMgn:        "My doctor and her book." Connected pronoun reveals gender of MGN. Doesn't need an annotation for doctor as clearly must be lekarka.
+// ProsMgn:        "My doctor and her book." Connected pronombre reveals gender of MGN. Doesn't need an annotation for doctor as clearly must be lekarka.
 // EdusMgn:        "My doctor is a man."     Educator specifies MGN's gender. Sentence where educator knows that this MGN will need no clarifying.
 
 describe("/api", function () {
@@ -2001,7 +2001,7 @@ describe("/api", function () {
             res,
             questionLanguage,
             answerLanguage,
-            "be_withPronouns",
+            "be_withPronombres",
             []
           );
         });
@@ -2024,7 +2024,7 @@ describe("/api", function () {
             res,
             questionLanguage,
             answerLanguage,
-            "be_withPronouns_withClarifiers_QlangPOL",
+            "be_withPronombres_withClarifiers_QlangPOL",
             []
           );
         });
@@ -2047,7 +2047,7 @@ describe("/api", function () {
             res,
             questionLanguage,
             answerLanguage,
-            "be_withPronouns",
+            "be_withPronombres",
             []
           );
         });
@@ -2070,7 +2070,7 @@ describe("/api", function () {
             res,
             questionLanguage,
             answerLanguage,
-            "be_withPronouns",
+            "be_withPronombres",
             []
           );
         });
@@ -2093,7 +2093,7 @@ describe("/api", function () {
             res,
             questionLanguage,
             answerLanguage,
-            "be_withPronouns",
+            "be_withPronombres",
             []
           );
         });
@@ -2135,7 +2135,7 @@ describe("/api", function () {
             res,
             questionLanguage,
             answerLanguage,
-            "be_withPronouns",
+            "be_withPronombres",
             []
           );
         });
@@ -2158,7 +2158,7 @@ describe("/api", function () {
             res,
             questionLanguage,
             answerLanguage,
-            "be_withPronouns_withClarifiers_QlangENG",
+            "be_withPronombres_withClarifiers_QlangENG",
             []
           );
         });
@@ -2181,7 +2181,7 @@ describe("/api", function () {
             res,
             questionLanguage,
             answerLanguage,
-            "be_withPronouns",
+            "be_withPronombres",
             []
           );
         });
@@ -2204,7 +2204,7 @@ describe("/api", function () {
             res,
             questionLanguage,
             answerLanguage,
-            "be_withPronouns",
+            "be_withPronombres",
             []
           );
         });
@@ -2227,12 +2227,12 @@ describe("/api", function () {
             res,
             questionLanguage,
             answerLanguage,
-            "be_withPronouns",
+            "be_withPronombres",
             []
           );
         });
     });
-    it("#pal07-03a GET 200 YES: RSWAT Poleng 'be' correctly (without pronouns).", () => {
+    it("#pal07-03a GET 200 YES: RSWAT Poleng 'be' correctly (without pronombres).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -2323,7 +2323,7 @@ describe("/api", function () {
             res,
             questionLanguage,
             answerLanguage,
-            "be_withPronouns",
+            "be_withPronombres",
             []
           );
         });
@@ -2346,7 +2346,7 @@ describe("/api", function () {
             res,
             questionLanguage,
             answerLanguage,
-            "be_withPronouns",
+            "be_withPronombres",
             []
           );
         });
@@ -2432,7 +2432,7 @@ describe("/api", function () {
             res,
             questionLanguage,
             answerLanguage,
-            "have_withPronouns",
+            "have_withPronombres",
             []
           );
         });
@@ -2455,7 +2455,7 @@ describe("/api", function () {
             res,
             questionLanguage,
             answerLanguage,
-            "have_withPronouns_withClarifiers_QlangPOL",
+            "have_withPronombres_withClarifiers_QlangPOL",
             []
           );
         });
@@ -2478,7 +2478,7 @@ describe("/api", function () {
             res,
             questionLanguage,
             answerLanguage,
-            "have_withPronouns",
+            "have_withPronombres",
             []
           );
         });
@@ -2501,7 +2501,7 @@ describe("/api", function () {
             res,
             questionLanguage,
             answerLanguage,
-            "have_withPronouns",
+            "have_withPronombres",
             []
           );
         });
@@ -2524,7 +2524,7 @@ describe("/api", function () {
             res,
             questionLanguage,
             answerLanguage,
-            "have_withPronouns",
+            "have_withPronombres",
             []
           );
         });
@@ -2566,7 +2566,7 @@ describe("/api", function () {
             res,
             questionLanguage,
             answerLanguage,
-            "have_withPronouns",
+            "have_withPronombres",
             []
           );
         });
@@ -2589,7 +2589,7 @@ describe("/api", function () {
             res,
             questionLanguage,
             answerLanguage,
-            "have_withPronouns_withClarifiers_QlangENG",
+            "have_withPronombres_withClarifiers_QlangENG",
             []
           );
         });
@@ -2612,7 +2612,7 @@ describe("/api", function () {
             res,
             questionLanguage,
             answerLanguage,
-            "have_withPronouns",
+            "have_withPronombres",
             []
           );
         });
@@ -2635,7 +2635,7 @@ describe("/api", function () {
             res,
             questionLanguage,
             answerLanguage,
-            "have_withPronouns",
+            "have_withPronombres",
             []
           );
         });
@@ -2658,12 +2658,12 @@ describe("/api", function () {
             res,
             questionLanguage,
             answerLanguage,
-            "have_withPronouns",
+            "have_withPronombres",
             []
           );
         });
     });
-    it("#pal08-03a GET 200 YES: RSWAT Poleng 'have' correctly (without pronouns).", () => {
+    it("#pal08-03a GET 200 YES: RSWAT Poleng 'have' correctly (without pronombres).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -2759,7 +2759,7 @@ describe("/api", function () {
             res,
             questionLanguage,
             answerLanguage,
-            "have_withPronouns",
+            "have_withPronombres",
             []
           );
         });
@@ -2782,7 +2782,7 @@ describe("/api", function () {
             res,
             questionLanguage,
             answerLanguage,
-            "have_withPronouns",
+            "have_withPronombres",
             []
           );
         });
@@ -2807,7 +2807,7 @@ describe("/api", function () {
             res,
             questionLanguage,
             answerLanguage,
-            "have_withPronouns",
+            "have_withPronombres",
             []
           );
         });

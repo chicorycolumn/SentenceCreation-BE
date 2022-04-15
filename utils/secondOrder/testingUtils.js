@@ -19,7 +19,7 @@ exports.generalTranslatedSentencesRef = {
       { POL: "Macie.", ENG: ["You have.", "You are having."] },
     ],
   },
-  have_withPronouns_withClarifiers_QlangPOL: {
+  have_withPronombres_withClarifiers_QlangPOL: {
     "POL->ENG": [
       { POL: "Masz.", ENG: ["You have.", "You are having."] },
       { POL: "Macie.", ENG: ["You have.", "You are having."] },
@@ -41,7 +41,7 @@ exports.generalTranslatedSentencesRef = {
       },
     ],
   },
-  have_withPronouns_withClarifiers_QlangENG: {
+  have_withPronombres_withClarifiers_QlangENG: {
     "POL->ENG": [
       {
         POL: "Masz.",
@@ -89,7 +89,7 @@ exports.generalTranslatedSentencesRef = {
       },
     ],
   },
-  have_withPronouns: {
+  have_withPronombres: {
     "POL->ENG": [
       {
         POL: "Będę miał.",
@@ -245,7 +245,7 @@ exports.generalTranslatedSentencesRef = {
       { POL: "Jesteście.", ENG: ["You are.", "You are being."] },
     ],
   },
-  be_withPronouns_withClarifiers_QlangPOL: {
+  be_withPronombres_withClarifiers_QlangPOL: {
     "POL->ENG": [
       { POL: "Jesteś.", ENG: ["You are.", "You are being."] },
       { POL: "Jesteście.", ENG: ["You are.", "You are being."] },
@@ -287,7 +287,7 @@ exports.generalTranslatedSentencesRef = {
       },
     ],
   },
-  be_withPronouns_withClarifiers_QlangENG: {
+  be_withPronombres_withClarifiers_QlangENG: {
     "POL->ENG": [
       {
         POL: "Jesteś.",
@@ -344,7 +344,7 @@ exports.generalTranslatedSentencesRef = {
       },
     ],
   },
-  be_withPronouns: {
+  be_withPronombres: {
     "POL->ENG": [
       {
         POL: "Będę.",

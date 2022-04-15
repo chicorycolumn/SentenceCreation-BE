@@ -1,7 +1,7 @@
 const uUtils = require("./universalUtils.js");
-const gpUtils = require("./generalPurposeUtils.js");
 const consol = require("./zerothOrder/consoleLoggingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
+const refFxn = require("./reference/referenceFunctions.js");
 
 exports.collectAllValuesFromKeyOnObjectsInNestedArrayOfObjects = (
   nestedArrOfObjects,
@@ -9,7 +9,7 @@ exports.collectAllValuesFromKeyOnObjectsInNestedArrayOfObjects = (
 ) => {
   let allTags = [];
   Object.values(nestedArrOfObjects).forEach((arrOfObjects) => {
-    allTags = gpUtils.collectAllValuesFromKeyOnObjectsInArrayOfObjects(
+    allTags = this.collectAllValuesFromKeyOnObjectsInArrayOfObjects(
       arrOfObjects,
       subKey,
       allTags
@@ -346,74 +346,39 @@ exports.getLanguageFromLemmaObject = (lObj) => {
   return lObj.id.split("-")[0].toUpperCase();
 };
 
-exports.getWordtypeCodeLObj = (lObj) => {
-  return (wordtypeShorthand = lObj.id.split("-")[1]);
-};
-
 exports.lObjIsNounPerson = (lObj) => {
-  return ["noun-person", "noun-person-proper"].includes(
-    this.getWordtypeLObj(lObj, true)
-  );
+  return ["nounPerson"].includes(this.getWordtypeLObj(lObj));
 };
 
 exports.stChIsNounPerson = (stCh) => {
-  return ["noun-person", "noun-person-proper"].includes(
-    this.getWordtypeStCh(stCh, true)
-  );
+  return ["nounPerson"].includes(this.getWordtypeStCh(stCh, true));
 };
 
-exports.getWordtypeLObj = (lObj, returnFullWordtype) => {
-  let wordtypeShorthand = lObj.id.split("-")[1];
-  let wordtypeRef = refObj.wordtypeShorthandTranslation;
-
-  if (!Object.keys(wordtypeRef).includes(wordtypeShorthand)) {
-    consol.throw(
-      `#ERR hshc getWordtypeLObj. Called with lObj of lObj.id: "${lObj.id}"`
-    );
-  }
-
-  let fullWordtype = wordtypeRef[wordtypeShorthand];
-  let baseWordtype = fullWordtype.split("-")[0];
-  return returnFullWordtype ? fullWordtype : baseWordtype;
+exports.getWordtypeCodeLObj = (lObj) => {
+  return lObj.id.split("-")[1];
 };
 
 exports.getWordtypeCodeStCh = (stCh) => {
   return stCh.chunkId.split("-")[0];
 };
 
-exports.getWordtypeStCh = (stCh, returnFullWordtype) => {
-  let wordtypeShorthand = stCh.chunkId.split("-")[0];
-
-  let fullWordtype = refObj.wordtypeShorthandTranslation[wordtypeShorthand];
-
-  if (!fullWordtype) {
-    consol.throw(
-      `#ERR bsov getWordtypeStCh. wordtypeShorthand "${stCh.chunkId}" had no translated wordtype.`
-    );
-  }
-
-  let baseWordtype = fullWordtype.split("-")[0];
-  return returnFullWordtype ? fullWordtype : baseWordtype;
+exports.getWordtypeLObj = (lObj) => {
+  return refFxn.getWordtypeShorthandTranslation(
+    this.getWordtypeCodeLObj(lObj),
+    lObj.id
+  );
 };
 
-exports.getWordtypeAgree = (
-  structureChunk,
-  agreeKey = "agreeWith",
-  returnFullWordtype
-) => {
-  const wordtypeRef = refObj.wordtypeShorthandTranslation;
+exports.getWordtypeStCh = (stCh) => {
+  return refFxn.getWordtypeShorthandTranslation(
+    this.getWordtypeCodeStCh(stCh),
+    stCh.chunkId
+  );
+};
 
+exports.getWordtypeAgree = (structureChunk, agreeKey = "agreeWith") => {
   let wordtypeShorthand = structureChunk[agreeKey].split("-")[0];
-
-  if (!Object.keys(wordtypeRef).includes(wordtypeShorthand)) {
-    consol.throw(
-      `#ERR xafb getWordtypeLObj. Object.keys(wordtypeRef) did not include wordtypeShorthand: "${wordtypeShorthand}"`
-    );
-  }
-
-  let fullWordtype = wordtypeRef[wordtypeShorthand];
-  let baseWordtype = fullWordtype.split("-")[0];
-  return returnFullWordtype ? fullWordtype : baseWordtype;
+  return refFxn.getWordtypeShorthandTranslation(wordtypeShorthand);
 };
 
 exports.isTraitKeyFilledOutOnChunk = (chunk, traitKey) => {

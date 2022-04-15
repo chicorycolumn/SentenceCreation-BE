@@ -62,7 +62,7 @@ exports.adjustVirilityOfStructureChunk = (
   // if (
   //   !justOneGenderValue &&
   //   isPreProcessing &&
-  //   gpUtils.getWordtypeStCh(structureChunk) === "noun" &&
+  //   ["nounCommon","nounPerson"].includes(gpUtils.getWordtypeStCh(structureChunk)) &&
   //   structureChunk.number &&
   //   structureChunk.number.includes("plural")
   // ) {
@@ -205,10 +205,12 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
         ["number"].possibleTraitValues.slice(0);
     }
 
-    if (gpUtils.getWordtypeStCh(structureChunk) === "pronoun") {
+    if (gpUtils.getWordtypeStCh(structureChunk) === "pronombre") {
       if (structureChunk.agreeWith) {
         if (
-          gpUtils.getWordtypeAgree(structureChunk) === "noun" &&
+          ["nounCommon", "nounPerson"].includes(
+            gpUtils.getWordtypeAgree(structureChunk)
+          ) &&
           (!structureChunk.person || !structureChunk.person.length)
         ) {
           structureChunk.person = ["3per"];
@@ -256,11 +258,13 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
 
       if (structureChunk.agreeWith) {
         if (
-          gpUtils.getWordtypeAgree(structureChunk) === "noun" &&
+          ["nounCommon", "nounPerson"].includes(
+            gpUtils.getWordtypeAgree(structureChunk)
+          ) &&
           (!structureChunk.person || !structureChunk.person.length)
         ) {
           structureChunk.person = ["3per"];
-        } else if (gpUtils.getWordtypeAgree(structureChunk) === "pronoun") {
+        } else if (gpUtils.getWordtypeAgree(structureChunk) === "pronombre") {
           let headChunk = (structureChunk.person = sentenceStructure.find(
             (potentialHeadChunk) => {
               return potentialHeadChunk.chunkId === structureChunk.agreeWith;

@@ -23,7 +23,7 @@ xdescribe("listCounterfaxSituations", () => {
           lemma: "PERSONAL",
           id: "eng-pro-001",
           inflections: {
-            pronoun: {
+            pronombre: {
               "1per": {
                 singular: {
                   m: {
@@ -122,7 +122,7 @@ xdescribe("listCounterfaxSituations", () => {
         },
         selectedWord: "we",
         drillPath: [
-          ["form", "pronoun"],
+          ["form", "pronombre"],
           ["person", "1per"],
           ["number", "plural"],
           ["gender", "virile"],
@@ -135,7 +135,7 @@ xdescribe("listCounterfaxSituations", () => {
           number: ["plural"],
           person: ["1per"],
           dontSpecifyOnThisChunk: true,
-          form: ["pronoun"],
+          form: ["pronombre"],
           gender: ["virile"],
           andTags: [],
           annotations: {
@@ -185,7 +185,7 @@ xdescribe("listCounterfaxSituations", () => {
           lemma: "PERSONAL",
           id: "eng-pro-001",
           inflections: {
-            pronoun: {
+            pronombre: {
               "1per": {
                 singular: {
                   m: {
@@ -284,7 +284,7 @@ xdescribe("listCounterfaxSituations", () => {
         },
         selectedWord: "them",
         drillPath: [
-          ["form", "pronoun"],
+          ["form", "pronombre"],
           ["person", "3per"],
           ["number", "plural"],
           ["gender", "nonvirile"],
@@ -297,7 +297,7 @@ xdescribe("listCounterfaxSituations", () => {
           number: ["plural"],
           person: ["3per"],
           dontSpecifyOnThisChunk: true,
-          form: ["pronoun"],
+          form: ["pronombre"],
           gender: ["nonvirile"],
           andTags: [],
           annotations: {
@@ -393,7 +393,7 @@ xdescribe("listCounterfaxSituations", () => {
           lemma: "PERSONAL",
           id: "eng-pro-001",
           inflections: {
-            pronoun: {
+            pronombre: {
               "1per": {
                 singular: {
                   m: {
@@ -492,7 +492,7 @@ xdescribe("listCounterfaxSituations", () => {
         },
         selectedWord: "we",
         drillPath: [
-          ["form", "pronoun"],
+          ["form", "pronombre"],
           ["person", "1per"],
           ["number", "plural"],
           ["gender", "virile"],
@@ -505,7 +505,7 @@ xdescribe("listCounterfaxSituations", () => {
           number: ["plural"],
           person: ["1per"],
           dontSpecifyOnThisChunk: true,
-          form: ["pronoun"],
+          form: ["pronombre"],
           gender: ["virile"],
           andTags: [],
           annotations: {
@@ -555,7 +555,7 @@ xdescribe("listCounterfaxSituations", () => {
           lemma: "PERSONAL",
           id: "eng-pro-001",
           inflections: {
-            pronoun: {
+            pronombre: {
               "1per": {
                 singular: {
                   m: {
@@ -654,7 +654,7 @@ xdescribe("listCounterfaxSituations", () => {
         },
         selectedWord: "them",
         drillPath: [
-          ["form", "pronoun"],
+          ["form", "pronombre"],
           ["person", "3per"],
           ["number", "plural"],
           ["gender", "nonvirile"],
@@ -667,7 +667,7 @@ xdescribe("listCounterfaxSituations", () => {
           number: ["plural"],
           person: ["3per"],
           dontSpecifyOnThisChunk: true,
-          form: ["pronoun"],
+          form: ["pronombre"],
           gender: ["nonvirile"],
           andTags: [],
           annotations: {

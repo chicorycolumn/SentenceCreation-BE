@@ -3,7 +3,7 @@ const {
 } = require("../../utils/generalPurposeUtils");
 
 exports.wordsBank = {
-  nounSet: [
+  nounPersonSet: [
     {
       //links
       translations: { ENG: ["woman", "lady"], POL: ["kobieta"] },
@@ -92,6 +92,30 @@ exports.wordsBank = {
         },
       },
     },
+    {
+      //links
+      translations: { ENG: ["doctor"], POL: ["lekarz", "lekarka"] },
+      tags: ["concrete", "animate", "personTest2", "job"],
+      //selectors
+      lemma: "doctor",
+      id: "eng-npe-012",
+      gender: "allPersonalGenders",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "doctor",
+          gen: "doctor's",
+        },
+        plural: {
+          nom: "doctors",
+          gen: "doctors'",
+        },
+      },
+    },
+  ],
+  nounCommonSet: [
     {
       //links
       translations: { ENG: ["onion"], POL: ["cebula"] },
@@ -308,28 +332,6 @@ exports.wordsBank = {
         },
       },
     },
-    {
-      //links
-      translations: { ENG: ["doctor"], POL: ["lekarz", "lekarka"] },
-      tags: ["concrete", "animate", "personTest2", "job"],
-      //selectors
-      lemma: "doctor",
-      id: "eng-npe-012",
-      gender: "allPersonalGenders",
-      //notes
-
-      //inflections
-      inflections: {
-        singular: {
-          nom: "doctor",
-          gen: "doctor's",
-        },
-        plural: {
-          nom: "doctors",
-          gen: "doctors'",
-        },
-      },
-    },
   ],
   adjectiveSet: [
     {
@@ -501,7 +503,7 @@ exports.wordsBank = {
       },
     },
   ],
-  pronounSet: [
+  pronombreSet: [
     {
       //links
       translations: { ENG: ["PERSONAL"], POL: ["PERSONAL"] },
@@ -513,7 +515,7 @@ exports.wordsBank = {
 
       //inflections
       inflections: {
-        pronoun: {
+        pronombre: {
           "1per": {
             singular: {
               allPersonalSingularGenders: {
@@ -617,7 +619,7 @@ exports.wordsBank = {
             },
           },
         },
-        pronoun: {
+        pronombre: {
           "1per": {
             singular: {
               allPersonalSingularGenders: "mine",

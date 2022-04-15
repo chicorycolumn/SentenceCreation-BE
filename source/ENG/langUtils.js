@@ -137,7 +137,11 @@ exports.selectWordVersions = (
 };
 
 exports.preprocessStructureChunks = (structureChunk) => {
-  if (gpUtils.getWordtypeStCh(structureChunk) === "noun") {
+  if (
+    ["nounCommon", "nounPerson"].includes(
+      gpUtils.getWordtypeStCh(structureChunk)
+    )
+  ) {
     if (structureChunk.gcase && structureChunk.gcase.length) {
       structureChunk.gcase = structureChunk.gcase.map((gcaseTraitValue) => {
         return ["nom", "gen"].includes(gcaseTraitValue)
@@ -180,8 +184,8 @@ exports.preprocessLemmaObjectsMajor = (
   let metagenderRef = refObj.metaTraitValues[currentLanguage].gender;
 
   matches.forEach((lObj) => {
-    if (gpUtils.getWordtypeLObj(lObj) === "pronoun") {
-      if (gpUtils.getWordtypeStCh(structureChunk) !== "pronoun") {
+    if (gpUtils.getWordtypeLObj(lObj) === "pronombre") {
+      if (gpUtils.getWordtypeStCh(structureChunk) !== "pronombre") {
         consol.throw(
           "#ERR hcio preprocessLemmaObjectsMajor. lObj and stCh wordtypes don't match."
         );
@@ -206,13 +210,13 @@ exports.preprocessLemmaObjectsMajor = (
 
 exports.preprocessLemmaObjectsMinor = (matches) => {
   matches.forEach((lObj) => {
-    if (gpUtils.getWordtypeLObj(lObj) === "noun") {
+    if (["nounCommon", "nounPerson"].includes(gpUtils.getWordtypeLObj(lObj))) {
       if (gpUtils.lObjIsNounPerson(lObj)) {
         if (!lObj.gender) {
           consol.throw(
             "#ERR vuww preprocessLemmaObjectsMinor. The lObj '" +
               lObj.id +
-              "' is a noun-person so should have a gender traitKey."
+              "' is a nounPerson so should have a gender traitKey."
           );
         }
       } else {
@@ -253,7 +257,7 @@ exports.addLanguageParticularClarifiers = (
 
     //
     //Type 3 Synhomographs: Add clarifier for 2nd person singular vs plural. (Wasn't caught, as went through Ad-PW).
-    //Doesn't need to be done. Because all verbs will be tied to nouns or pronouns, even when such are invisible.
+    //Doesn't need to be done. Because all verbs will be tied to nouns or pronombres, even when such are invisible.
     //
 
     //

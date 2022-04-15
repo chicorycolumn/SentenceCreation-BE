@@ -38,7 +38,7 @@ exports.conditionsOnWhichToBlockAnnotations = {
 //         },
 //       ],
 //     },
-//     pronoun: {
+//     pronombre: {
 //       gender: [
 //         {
 //           tenseDescription: [
@@ -80,7 +80,7 @@ exports.conditionsOnWhichToBlockAnnotations = {
 //         },
 //       ],
 //     },
-//     pronoun: {
+//     pronombre: {
 //       form: [
 //         {
 //           allConditions: true,
@@ -103,8 +103,8 @@ exports.postHocDependentChunkWordtypes = {
   ENG: [],
   POL: [
     {
-      PHD_type: "POL possessive pronoun",
-      conditions: { wordtype: ["pronoun"], specificLemmas: ["POSSESSIVE"] },
+      PHD_type: "POL possessive pronombre",
+      conditions: { wordtype: ["pronombre"], specificLemmas: ["POSSESSIVE"] },
       inflectionChains: {
         postHocAgreeWithPrimary: ["form", "person", "number", "gender"],
         postHocAgreeWithSecondary: ["number", "gender", "gcase"],

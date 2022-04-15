@@ -154,7 +154,9 @@ exports.filterWithin_PHD = (
     }
 
     if (
-      gpUtils.getWordtypeAgree(PHDstructureChunk, postHocAgreeKey) === "noun"
+      ["nounCommon", "nounPerson"].includes(
+        gpUtils.getWordtypeAgree(PHDstructureChunk, postHocAgreeKey)
+      )
     ) {
       let personArr = drillPathOfHead.find((arr) => arr[0] === "person");
 

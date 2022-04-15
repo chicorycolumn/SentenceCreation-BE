@@ -1,6 +1,6 @@
 //Copied over on 27/12/2020
 
-let nounSet = [
+let nounPersonSet = [
   {
     //links
     translations: { ENG: ["woman", "lady"] },
@@ -28,36 +28,6 @@ let nounSet = [
         acc: "kobiety",
         ins: "kobietami",
         loc: "kobietach",
-      },
-    },
-  },
-  {
-    //links
-    translations: { ENG: ["bear"] },
-    tags: ["allohomTesting2", "animal"],
-    //selectors
-    lemma: "niedźwiedź",
-    id: "pol-nco-014",
-    gender: "m2",
-    //notes
-
-    //inflections
-    inflections: {
-      singular: {
-        nom: "niedźwiedź",
-        gen: "niedźwiedzia",
-        dat: "niedźwiedziowi",
-        acc: "niedźwiedzia",
-        ins: "niedźwiedziem",
-        loc: "niedźwiedziu",
-      },
-      plural: {
-        nom: "niedźwiedzie",
-        gen: "niedźwiedzi",
-        dat: "niedźwiedziom",
-        acc: "niedźwiedzie",
-        ins: "niedźwiedziami",
-        loc: "niedźwiedziach",
       },
     },
   },
@@ -118,6 +88,39 @@ let nounSet = [
         acc: "chłopców",
         ins: "chłopcami",
         loc: "chłopcach",
+      },
+    },
+  },
+];
+
+let nounCommonSet = [
+  {
+    //links
+    translations: { ENG: ["bear"] },
+    tags: ["allohomTesting2", "animal"],
+    //selectors
+    lemma: "niedźwiedź",
+    id: "pol-nco-014",
+    gender: "m2",
+    //notes
+
+    //inflections
+    inflections: {
+      singular: {
+        nom: "niedźwiedź",
+        gen: "niedźwiedzia",
+        dat: "niedźwiedziowi",
+        acc: "niedźwiedzia",
+        ins: "niedźwiedziem",
+        loc: "niedźwiedziu",
+      },
+      plural: {
+        nom: "niedźwiedzie",
+        gen: "niedźwiedzi",
+        dat: "niedźwiedziom",
+        acc: "niedźwiedzie",
+        ins: "niedźwiedziami",
+        loc: "niedźwiedziach",
       },
     },
   },
@@ -415,7 +418,7 @@ let nounSet = [
   },
 ];
 
-let pronounSet = [
+let pronombreSet = [
   {
     translations: { ENG: ["I"] },
     lemma: "ja",
@@ -1639,7 +1642,8 @@ let verbSet = [
 ];
 
 exports.wordsBank = {
-  nounSet,
+  nounPersonSet,
+  nounCommonSet,
   adjectiveSet,
   verbSet,
 };

@@ -10,7 +10,7 @@ const testingUtils = require("../utils/secondOrder/testingUtils.js");
 const { generalTranslatedSentencesRef } = testingUtils;
 
 // MGN:            Multi-gender noun. Eg doctor in ENG can be either male or female.
-// ProsMgn:        "My doctor and her book." Connected pronoun reveals gender of MGN. Doesn't need an annotation for doctor as clearly must be lekarka.
+// ProsMgn:        "My doctor and her book." Connected pronombre reveals gender of MGN. Doesn't need an annotation for doctor as clearly must be lekarka.
 // EdusMgn:        "My doctor is a man."     Educator specifies MGN's gender. Sentence where educator knows that this MGN will need no clarifying.
 
 describe("/api", function () {
@@ -934,7 +934,7 @@ describe("/api", function () {
           expect(questionSentenceArr.length).to.equal(1);
           expect(answerSentenceArr.length).to.equal(1);
 
-          let ref = [{ ENG: "Bear (noun).", POL: ["Niedźwiedź."] }];
+          let ref = [{ ENG: "Bear (nounCommon).", POL: ["Niedźwiedź."] }];
 
           testingUtils.checkTranslationsOfGivenRef(
             res,
@@ -1112,8 +1112,8 @@ describe("/api", function () {
           expect(answerSentenceArr.length).to.equal(1);
 
           let ref = [
-            { ENG: "Tie (⚽, score, noun).", POL: ["Remis."] },
-            { ENG: "Tie (👔, clothes, noun).", POL: ["Krawat."] },
+            { ENG: "Tie (⚽, score, nounCommon).", POL: ["Remis."] },
+            { ENG: "Tie (👔, clothes, nounCommon).", POL: ["Krawat."] },
           ];
 
           testingUtils.checkTranslationsOfGivenRef(
@@ -1316,7 +1316,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal11A-02a GET 200 YES: NO SPECIFIER EVEN WHEN ASKED FOR. Pronoun I/WE. {pres im} needs no gender. Engpol.", () => {
+    it("#pal11A-02a GET 200 YES: NO SPECIFIER EVEN WHEN ASKED FOR. Pronombre I/WE. {pres im} needs no gender. Engpol.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1342,7 +1342,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal11A-02b GET 200 YES: SPECIFIER EXPECTED. Pronoun I/WE. {past im} does indeed need gender. Engpol.", () => {
+    it("#pal11A-02b GET 200 YES: SPECIFIER EXPECTED. Pronombre I/WE. {past im} does indeed need gender. Engpol.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1403,7 +1403,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal11A-04a GET 200 YES: GIVE MULTIPLE ANSWER OPTIONS WHEN SPECIFIERS NOT REQUESTED. Pronoun I/WE. {past im} does indeed need gender. Engpol.", () => {
+    it("#pal11A-04a GET 200 YES: GIVE MULTIPLE ANSWER OPTIONS WHEN SPECIFIERS NOT REQUESTED. Pronombre I/WE. {past im} does indeed need gender. Engpol.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1447,7 +1447,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal11A-05a GET 200 YES: Gives clarifiers and specifiers. Pronoun YOU. Engpol.", () => {
+    it("#pal11A-05a GET 200 YES: Gives clarifiers and specifiers. Pronombre YOU. Engpol.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1782,7 +1782,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal11B-03a GET 200 YES: Engpol. AGNOSTIC. Give both pronoun singular gender options in answer.", () => {
+    it("#pal11B-03a GET 200 YES: Engpol. AGNOSTIC. Give both pronombre singular gender options in answer.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1817,7 +1817,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal11B-03b GET 200 YES: Engpol. AGNOSTIC. Give both pronoun plural gender options in answer.", () => {
+    it("#pal11B-03b GET 200 YES: Engpol. AGNOSTIC. Give both pronombre plural gender options in answer.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1980,8 +1980,8 @@ describe("/api", function () {
     });
   });
 
-  describe("/palette - Stage 13A: Pronouns and other Multi Gender Nouns: Basic tests.", () => {
-    it("#pal13A-01a GET 200 YES: Give a pronoun in ENG.", () => {
+  describe("/palette - Stage 13A: Pronombres and other Multi Gender Nouns: Basic tests.", () => {
+    it("#pal13A-01a GET 200 YES: Give a pronombre in ENG.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -1999,7 +1999,7 @@ describe("/api", function () {
           expect(res.body.questionSentenceArr[0]).to.equal("I.");
         });
     });
-    it("#pal13A-01b GET 200 YES: Give a pronoun in POL.", () => {
+    it("#pal13A-01b GET 200 YES: Give a pronombre in POL.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -2017,7 +2017,7 @@ describe("/api", function () {
           expect(res.body.questionSentenceArr[0]).to.equal("Ja.");
         });
     });
-    it("#pal13A-01c GET 200 YES: Give a pronoun in Poleng.", () => {
+    it("#pal13A-01c GET 200 YES: Give a pronombre in Poleng.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -2037,7 +2037,7 @@ describe("/api", function () {
           expect(res.body.answerSentenceArr).to.have.members(["I."]);
         });
     });
-    it("#pal13A-01d GET 200 YES: Give a pronoun in Engpol.", () => {
+    it("#pal13A-01d GET 200 YES: Give a pronombre in Engpol.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2057,7 +2057,7 @@ describe("/api", function () {
           expect(res.body.answerSentenceArr).to.have.members(["Ja."]);
         });
     });
-    it("#pal13A-02a GET 200 YES: Engpol. Inherit from pronoun to verb (m sing).", () => {
+    it("#pal13A-02a GET 200 YES: Engpol. Inherit from pronombre to verb (m sing).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2083,7 +2083,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal13A-02b GET 200 YES: Engpol. Inherit from pronoun to verb (nonvir plur).", () => {
+    it("#pal13A-02b GET 200 YES: Engpol. Inherit from pronombre to verb (nonvir plur).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2112,7 +2112,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal13A-02c GET 200 YES: Engpol. WITH SPECIFIERS Inherit from pronoun to verb (m sing).", () => {
+    it("#pal13A-02c GET 200 YES: Engpol. WITH SPECIFIERS Inherit from pronombre to verb (m sing).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2138,7 +2138,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal13A-02d GET 200 YES: Engpol. WITH SPECIFIERS Inherit from pronoun to verb (nonvir plur).", () => {
+    it("#pal13A-02d GET 200 YES: Engpol. WITH SPECIFIERS Inherit from pronombre to verb (nonvir plur).", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2167,7 +2167,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal13A-04a GET 200 YES: Poleng. Inherit from pronoun to verb (m sing).", () => {
+    it("#pal13A-04a GET 200 YES: Poleng. Inherit from pronombre to verb (m sing).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -2200,7 +2200,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal13A-04b GET 200 YES: Poleng. Inherit from pronoun to verb (nonvir plur).", () => {
+    it("#pal13A-04b GET 200 YES: Poleng. Inherit from pronombre to verb (nonvir plur).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -2233,7 +2233,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal13A-04c GET 200 YES: Poleng. NO CLARIFIERS Inherit from pronoun to verb (m sing).", () => {
+    it("#pal13A-04c GET 200 YES: Poleng. NO CLARIFIERS Inherit from pronombre to verb (m sing).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -2266,7 +2266,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal13A-04d GET 200 YES: Poleng. NO CLARIFIERS Inherit from pronoun to verb (nonvir plur).", () => {
+    it("#pal13A-04d GET 200 YES: Poleng. NO CLARIFIERS Inherit from pronombre to verb (nonvir plur).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -2299,7 +2299,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal13A-05a GET 200 YES: Poleng. Inherit from pronoun to verb (m sing).", () => {
+    it("#pal13A-05a GET 200 YES: Poleng. Inherit from pronombre to verb (m sing).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -2340,7 +2340,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal13A-05b GET 200 YES: Poleng. Inherit from pronoun to verb (nonvir plur).", () => {
+    it("#pal13A-05b GET 200 YES: Poleng. Inherit from pronombre to verb (nonvir plur).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -2381,7 +2381,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal13A-05c GET 200 YES: Poleng. NO CLARIFIERS Inherit from pronoun to verb (m sing).", () => {
+    it("#pal13A-05c GET 200 YES: Poleng. NO CLARIFIERS Inherit from pronombre to verb (m sing).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -2422,7 +2422,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal13A-05d GET 200 YES: Poleng. NO CLARIFIERS Inherit from pronoun to verb (nonvir plur).", () => {
+    it("#pal13A-05d GET 200 YES: Poleng. NO CLARIFIERS Inherit from pronombre to verb (nonvir plur).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -2497,7 +2497,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal13A-7a GET 200 YES: Singular pronouns: Verb person and number is inherited from pronoun headChunk.", () => {
+    it("#pal13A-7a GET 200 YES: Singular pronombres: Verb person and number is inherited from pronombre headChunk.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2528,7 +2528,7 @@ describe("/api", function () {
     });
   });
 
-  describe("/palette - Stage 13B: Pronouns and other Multi Gender Nouns: Further tests.", () => {
+  describe("/palette - Stage 13B: Pronombres and other Multi Gender Nouns: Further tests.", () => {
     it("#pal13B-01a GET 200 YES: Specifiers not requested. Engpol. I am.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -2581,7 +2581,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal13B-02a GET 200 YES: Engpol. A more interesting sentence with Pronouns.", () => {
+    it("#pal13B-02a GET 200 YES: Engpol. A more interesting sentence with Pronombres.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2649,7 +2649,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal13B-02b GET 200 YES: Poleng. A more interesting sentence with Pronouns.", () => {
+    it("#pal13B-02b GET 200 YES: Poleng. A more interesting sentence with Pronombres.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -2709,7 +2709,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal13B-03a GET 200 YES: Engpol. Another more interesting sentence with Pronouns.", () => {
+    it("#pal13B-03a GET 200 YES: Engpol. Another more interesting sentence with Pronombres.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -2883,7 +2883,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal13B-03b GET 200 YES: Poleng. Another more interesting sentence with Pronouns.", () => {
+    it("#pal13B-03b GET 200 YES: Poleng. Another more interesting sentence with Pronombres.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -3127,7 +3127,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal13B-03c GET 200 YES: Poleng. Another more interesting sentence with Pronouns.", () => {
+    it("#pal13B-03c GET 200 YES: Poleng. Another more interesting sentence with Pronombres.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -3311,7 +3311,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal13B-04a GET 200 YES: Engpol. Another more interesting sentence with Pronouns. Terminal object used.", () => {
+    it("#pal13B-04a GET 200 YES: Engpol. Another more interesting sentence with Pronombres. Terminal object used.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 
@@ -3347,7 +3347,7 @@ describe("/api", function () {
     });
   });
 
-  describe("/palette - Stage 14: Possessive pronouns.", () => {
+  describe("/palette - Stage 14: Possessive pronombres.", () => {
     it("#pal14-01a GET 200 YES: POL. I have my onion.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
@@ -3840,7 +3840,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal14-04a GET 200 YES: Engpol. The doctor gave me her book. Gender annotation is added when there's no AOC, because pronoun is 'their' so doesn't reveal gender. However in singular, the pronouns 'her' and 'his' reveal the gender (are AOCs) so no gender annotation.", () => {
+    it("#pal14-04a GET 200 YES: Engpol. The doctor gave me her book. Gender annotation is added when there's no AOC, because pronombre is 'their' so doesn't reveal gender. However in singular, the pronombres 'her' and 'his' reveal the gender (are AOCs) so no gender annotation.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 

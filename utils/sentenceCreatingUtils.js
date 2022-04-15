@@ -955,7 +955,7 @@ exports.selectWordVersions = (
                 refObj.lemmaObjectTraitKeys[
                   currentLanguage
                 ].inheritableInflectionKeys[
-                  gpUtils.getWordtypeStCh(depUnit.structureChunk, true)
+                  gpUtils.getWordtypeStCh(depUnit.structureChunk)
                 ].includes(annoTraitKey)
               ) {
                 if (!depUnit.firstStageAnnotationsObj) {
@@ -1179,7 +1179,7 @@ exports.conformAnswerStructureToQuestionStructure = (
       return;
     }
 
-    //...and then for both pronouns and all other wordtypes, we get the ID and set it.
+    //...and then for both pronombres and all other wordtypes, we get the ID and set it.
     answerStructureChunk.specificIds = matchingAnswerLemmaObjects.map(
       (lObj) => lObj.id
     );
@@ -1417,7 +1417,7 @@ exports.inheritFromHeadToDependentChunk = (
 
   let normalinheritableInflectionKeys =
     refObj.lemmaObjectTraitKeys[currentLanguage].inheritableInflectionKeys[
-      gpUtils.getWordtypeStCh(dependentChunk, true)
+      gpUtils.getWordtypeStCh(dependentChunk)
     ];
 
   let hybridSelectors =

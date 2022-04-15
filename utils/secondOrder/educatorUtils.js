@@ -49,11 +49,24 @@ exports.checkWords = (testing, currentLanguage) => {
     langUtils.preprocessLemmaObjectsMinor(words);
   });
 
-  let nounsWithoutGender = educatorUtils.getLemmaObjectsWithoutGivenSelectorKey(
-    wordsBank,
-    "noun",
-    "gender"
-  );
+  let nounPersonsWithoutGender =
+    educatorUtils.getLemmaObjectsWithoutGivenSelectorKey(
+      wordsBank,
+      "nounPerson",
+      "gender"
+    );
+
+  let nounCommonsWithoutGender =
+    educatorUtils.getLemmaObjectsWithoutGivenSelectorKey(
+      wordsBank,
+      "nounCommon",
+      "gender"
+    );
+
+  let nounsWithoutGender = [
+    ...nounPersonsWithoutGender,
+    ...nounCommonsWithoutGender,
+  ];
 
   return {
     nounsWithoutGender: nounsWithoutGender.map((lObj) => [lObj.lemma, lObj.id]),

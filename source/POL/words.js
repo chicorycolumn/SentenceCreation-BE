@@ -2,7 +2,7 @@
 //If you mark a traitKey false, or omit it                   it will not be.
 
 exports.wordsBank = {
-  nounSet: [
+  nounPersonSet: [
     {
       //links
       translations: { ENG: ["woman", "lady"] },
@@ -160,6 +160,68 @@ exports.wordsBank = {
         },
       },
     },
+    {
+      //links
+      translations: { ENG: ["doctor"], POL: ["lekarz"] },
+      tags: ["concrete", "animate", "personTest2", "job"],
+      //selectors
+      lemma: "lekarz",
+      id: "pol-npe-015a",
+      gender: "m1",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "lekarz",
+          gen: "lekarza",
+          dat: "lekarzowi",
+          acc: "lekarza",
+          ins: "lekarzem",
+          loc: "lekarzu",
+        },
+        plural: {
+          nom: "lekarze",
+          gen: "lekarzy",
+          dat: "lekarzom",
+          acc: "lekarzy",
+          ins: "lekarzami",
+          loc: "lekarzach",
+        },
+      },
+    },
+    {
+      //links
+      translations: { ENG: ["doctor"], POL: ["lekarka"] },
+      tags: ["concrete", "animate", "personTest2", "job"],
+      //selectors
+      lemma: "lekarka",
+      id: "pol-npe-015b",
+      gender: "f",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "lekarka",
+          gen: "lekarki",
+          dat: "lekarce",
+          acc: "lekarkę",
+          ins: "lekarką",
+          loc: "lekarce",
+        },
+        plural: {
+          nom: "lekarki",
+          gen: "lekarek",
+          dat: "lekarkom",
+          acc: "lekarki",
+          ins: "lekarkami",
+          loc: "lekarkach",
+        },
+      },
+    },
+  ],
+  nounCommonSet: [
     {
       //links
       translations: { ENG: ["onion"] },
@@ -479,66 +541,6 @@ exports.wordsBank = {
           acc: "szczury",
           ins: "szczurami",
           loc: "szczurach",
-        },
-      },
-    },
-    {
-      //links
-      translations: { ENG: ["doctor"], POL: ["lekarz"] },
-      tags: ["concrete", "animate", "personTest2", "job"],
-      //selectors
-      lemma: "lekarz",
-      id: "pol-npe-015a",
-      gender: "m1",
-      //notes
-
-      //inflections
-      inflections: {
-        singular: {
-          nom: "lekarz",
-          gen: "lekarza",
-          dat: "lekarzowi",
-          acc: "lekarza",
-          ins: "lekarzem",
-          loc: "lekarzu",
-        },
-        plural: {
-          nom: "lekarze",
-          gen: "lekarzy",
-          dat: "lekarzom",
-          acc: "lekarzy",
-          ins: "lekarzami",
-          loc: "lekarzach",
-        },
-      },
-    },
-    {
-      //links
-      translations: { ENG: ["doctor"], POL: ["lekarka"] },
-      tags: ["concrete", "animate", "personTest2", "job"],
-      //selectors
-      lemma: "lekarka",
-      id: "pol-npe-015b",
-      gender: "f",
-      //notes
-
-      //inflections
-      inflections: {
-        singular: {
-          nom: "lekarka",
-          gen: "lekarki",
-          dat: "lekarce",
-          acc: "lekarkę",
-          ins: "lekarką",
-          loc: "lekarce",
-        },
-        plural: {
-          nom: "lekarki",
-          gen: "lekarek",
-          dat: "lekarkom",
-          acc: "lekarki",
-          ins: "lekarkami",
-          loc: "lekarkach",
         },
       },
     },
@@ -1968,7 +1970,7 @@ exports.wordsBank = {
       },
     },
   ],
-  pronounSet: [
+  pronombreSet: [
     {
       //links
       translations: { ENG: ["PERSONAL"], POL: ["PERSONAL"] },
@@ -1980,7 +1982,7 @@ exports.wordsBank = {
 
       //inflections
       inflections: {
-        pronoun: {
+        pronombre: {
           "1per": {
             singular: {
               m1: {
@@ -2250,7 +2252,7 @@ exports.wordsBank = {
 
       //inflections
       inflections: {
-        pronounAndDeterminer: {
+        pronombreAndDeterminer: {
           "1per": {
             singular: {
               allPersonalSingularGenders: {

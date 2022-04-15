@@ -132,20 +132,20 @@ exports.removeAnnotationsByAOCs = (
 
     //prosMGN
     //1. For this stCh, get all q output units that are Dependent/PHD of this.
-    //2. Filter to just the ones with wordtype pronoun.
+    //2. Filter to just the ones with wordtype pronombre.
     //3. If the selectedWord in any of those units is unique between genders in its lemma object
     //   (eg "his" is unique as no other gender traitKey holds this inflectionValue, whereas "their" is not unique as two genders traitKeys hold it)
     //   then delete/block the gender annotation.
-    let headWordtype = "noun";
-    let allDependentWordtype = "pronoun";
+    let allDependentWordtype = "pronombre";
 
     if (uUtils.isEmpty(questionOutputUnit.structureChunk.annotations)) {
       return;
     }
 
     if (
-      gpUtils.getWordtypeStCh(questionOutputUnit.structureChunk) ===
-      headWordtype
+      ["nounCommon", "nounPerson"].includes(
+        gpUtils.getWordtypeStCh(questionOutputUnit.structureChunk)
+      )
     ) {
       let headChunkId = questionOutputUnit.structureChunk.chunkId;
 
@@ -223,7 +223,7 @@ exports.removeAnnotationsByAOCs = (
               consol.log("meef", depUnit);
 
               /**If any dep unit holds an inflectionValue at inflectionCategory that is unique in its lObj,
-               * then this pronoun obviates the need for that specifier, so delete it from annotations.
+               * then this pronombre obviates the need for that specifier, so delete it from annotations.
                */
               if (
                 otUtils.doesThisInflectionKeyHoldUniqueInflectionValueInLObj(
@@ -898,7 +898,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
 
 exports.setPDSValues = (questionSentenceFormula, questionLanguage) => {
   //If PDS from req, then add PDS:true to each Q stCh.
-  //Unless stCh is 'person' noun and headNoun of pronoun stCh. 'The doctor gave me his book.' must specify MGN doctor.
+  //Unless stCh has wordtype nounPerson and is headNoun of pronombre stCh. 'The doctor gave me his book.' must specify MGN doctor.
   //
   //But if qChunk.gender holds all the poss gender traitValues for this lang>wordtype (bearing in mind if isPerson)
   //then do allow it to be qChunk.dontSpecifyOnThisChunk = true.
@@ -910,7 +910,7 @@ exports.setPDSValues = (questionSentenceFormula, questionLanguage) => {
       if (
         questionSentenceFormula.sentenceStructure.find(
           (potentialDepChunk) =>
-            gpUtils.getWordtypeStCh(potentialDepChunk) === "pronoun" &&
+            gpUtils.getWordtypeStCh(potentialDepChunk) === "pronombre" &&
             potentialDepChunk.agreeWith === qChunk.chunkId
         )
       ) {

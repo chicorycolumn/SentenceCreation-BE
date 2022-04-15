@@ -1,4 +1,4 @@
-let nounSet = [
+let nounCommonSet = [
   {
     //links
     translations: { ENG: ["nut"] },
@@ -298,9 +298,10 @@ let nounSet = [
     },
   },
 ];
+let nounPersonSet = [];
 let adjectiveSet = [];
 let adverbSet = [];
-let pronounSet = [];
+let pronombreSet = [];
 let verbSet = [
   {
     //links
@@ -486,11 +487,12 @@ let prepositionSet = [];
 let articleSet = [];
 
 exports.dummyWordsBank = {
-  nounSet,
+  nounCommonSet,
+  nounPersonSet,
   adjectiveSet,
   adverbSet,
   verbSet,
-  pronounSet,
+  pronombreSet,
   prepositionSet,
   articleSet,
 };
