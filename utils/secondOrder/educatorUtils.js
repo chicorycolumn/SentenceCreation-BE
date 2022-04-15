@@ -33,10 +33,10 @@ exports.checkOutputArrayForMissingUnits = (
 
 exports.getLemmaObjectsWithoutGivenSelectorKey = (
   wordsBank,
-  wordtype,
+  wordtypeShorthand,
   selectorKey
 ) => {
-  return wordsBank[`${wordtype}Set`].filter((lObj) => !lObj[selectorKey]);
+  return wordsBank[wordtypeShorthand].filter((lObj) => !lObj[selectorKey]);
 };
 
 exports.checkWords = (testing, currentLanguage) => {
@@ -52,14 +52,14 @@ exports.checkWords = (testing, currentLanguage) => {
   let nounPersonsWithoutGender =
     educatorUtils.getLemmaObjectsWithoutGivenSelectorKey(
       wordsBank,
-      "nounPerson",
+      "npe",
       "gender"
     );
 
   let nounCommonsWithoutGender =
     educatorUtils.getLemmaObjectsWithoutGivenSelectorKey(
       wordsBank,
-      "nounCommon",
+      "nco",
       "gender"
     );
 

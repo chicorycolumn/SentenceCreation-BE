@@ -2,7 +2,7 @@
 //If you mark a traitKey false, or omit it                   it will not be.
 
 exports.wordsBank = {
-  nounPersonSet: [
+  npe: [
     {
       //links
       translations: { ENG: ["woman", "lady"] },
@@ -221,7 +221,7 @@ exports.wordsBank = {
       },
     },
   ],
-  nounCommonSet: [
+  nco: [
     {
       //links
       translations: { ENG: ["onion"] },
@@ -575,7 +575,7 @@ exports.wordsBank = {
       },
     },
   ],
-  adjectiveSet: [
+  adj: [
     {
       //links
       translations: { ENG: ["red"] },
@@ -803,7 +803,7 @@ exports.wordsBank = {
       },
     },
   ],
-  verbSet: [
+  ver: [
     {
       //links
       translations: { ENG: ["give"] },
@@ -1970,7 +1970,7 @@ exports.wordsBank = {
       },
     },
   ],
-  pronombreSet: [
+  pro: [
     {
       //links
       translations: { ENG: ["PERSONAL"], POL: ["PERSONAL"] },
@@ -2611,7 +2611,7 @@ exports.wordsBank = {
       },
     },
   ],
-  prepositionSet: [
+  pre: [
     {
       //links
       translations: { ENG: [] },
@@ -2633,5 +2633,5 @@ exports.wordsBank = {
       },
     },
   ],
-  articleSet: [],
+  art: [],
 };

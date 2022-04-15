@@ -42,8 +42,7 @@ exports.findMatchingLemmaObjectThenWord = (
   }
 
   //STEP TWO: Filter lemmaObjects (by specificIds OR specificLemmas OR andTags and selectors).
-  let source =
-    words[gpUtils.giveSetKey(gpUtils.getWordtypeStCh(structureChunk))];
+  let source = words[gpUtils.getWordtypeShorthandStCh(structureChunk)];
 
   let shouldFilterBySelectors;
 

@@ -15,9 +15,9 @@ exports.getWordsByCriteria = (currentLanguage, criteria) => {
 
   resObj = {};
 
-  Object.keys(wordsBank).forEach((wordSetKey) => {
-    resObj[wordSetKey] = [];
-    let wordSet = wordsBank[wordSetKey];
+  Object.keys(wordsBank).forEach((wordtypeShorthand) => {
+    resObj[wordtypeShorthand] = [];
+    let wordSet = wordsBank[wordtypeShorthand];
     wordSet.forEach((lObj) => {
       if (
         Object.keys(criteria).some((criterionKey) => {
@@ -27,7 +27,7 @@ exports.getWordsByCriteria = (currentLanguage, criteria) => {
           );
         })
       ) {
-        resObj[wordSetKey].push({ lemma: lObj.lemma, id: lObj.id });
+        resObj[wordtypeShorthand].push({ lemma: lObj.lemma, id: lObj.id });
       }
     });
   });
@@ -1142,8 +1142,8 @@ exports.conformAnswerStructureToQuestionStructure = (
     let lemmasToSearch =
       questionSelectedLemmaObject.translations[answerLanguage];
 
-    let source =
-      words[gpUtils.giveSetKey(gpUtils.getWordtypeStCh(answerStructureChunk))];
+    let source = words[gpUtils.getWordtypeShorthandStCh(answerStructureChunk)];
+
     // answerLangUtils.preprocessLemmaObjectsMinor(source);
 
     matchingAnswerLemmaObjects = source.filter(

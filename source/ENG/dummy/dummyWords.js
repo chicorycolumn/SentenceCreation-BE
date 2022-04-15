@@ -1,4 +1,4 @@
-let nounCommonSet = [
+let nco = [
   {
     //links
     translations: { ENG: ["nut"], POL: ["orzech"] },
@@ -130,11 +130,11 @@ let nounCommonSet = [
     },
   },
 ];
-let nounPersonSet = [];
-let adjectiveSet = [];
-let adverbSet = [];
-let pronombreSet = [];
-let verbSet = [
+let npe = [];
+let adj = [];
+let adver = [];
+let pro = [];
+let ver = [
   {
     //links
     translations: { ENG: ["bear"], POL: ["znieść"] },
@@ -186,16 +186,16 @@ let verbSet = [
   },
 ];
 
-let prepositionSet = [];
-let articleSet = [];
+let pre = [];
+let art = [];
 
 exports.dummyWordsBank = {
-  nounCommonSet,
-  nounPersonSet,
-  adjectiveSet,
-  adverbSet,
-  verbSet,
-  pronombreSet,
-  prepositionSet,
-  articleSet,
+  nco,
+  npe,
+  adj,
+  adver,
+  ver,
+  pro,
+  pre,
+  art,
 };

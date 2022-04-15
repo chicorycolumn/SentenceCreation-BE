@@ -568,7 +568,7 @@ exports.adhocForms = {
   },
 };
 
-exports.getNounGenderTraitValues = (wordtypeCode) => {
+exports.getNounGenderTraitValues = (wordtypeShorthand) => {
   ref = {
     nco: "allNonpersonalSingularGenders",
     npe: "allPersonalSingularGenders",
@@ -581,7 +581,7 @@ exports.getNounGenderTraitValues = (wordtypeCode) => {
     fix: "allNonpersonalSingularGenders",
   };
 
-  return ref[wordtypeCode];
+  return ref[wordtypeShorthand];
 };
 
 exports.wordtypeShorthandTranslation = {

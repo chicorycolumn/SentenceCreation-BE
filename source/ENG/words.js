@@ -3,7 +3,7 @@ const {
 } = require("../../utils/generalPurposeUtils");
 
 exports.wordsBank = {
-  nounPersonSet: [
+  npe: [
     {
       //links
       translations: { ENG: ["woman", "lady"], POL: ["kobieta"] },
@@ -115,7 +115,7 @@ exports.wordsBank = {
       },
     },
   ],
-  nounCommonSet: [
+  nco: [
     {
       //links
       translations: { ENG: ["onion"], POL: ["cebula"] },
@@ -333,7 +333,7 @@ exports.wordsBank = {
       },
     },
   ],
-  adjectiveSet: [
+  adj: [
     {
       //links
       translations: { ENG: ["red"], POL: ["czerwony"] },
@@ -369,7 +369,7 @@ exports.wordsBank = {
       },
     },
   ],
-  verbSet: [
+  ver: [
     {
       //links
       translations: { ENG: ["give"], POL: ["dać", "dawać"] },
@@ -503,7 +503,7 @@ exports.wordsBank = {
       },
     },
   ],
-  pronombreSet: [
+  pro: [
     {
       //links
       translations: { ENG: ["PERSONAL"], POL: ["PERSONAL"] },
@@ -650,7 +650,7 @@ exports.wordsBank = {
       },
     },
   ],
-  prepositionSet: [
+  pre: [
     {
       //links
       translations: { POL: [] },
@@ -664,7 +664,7 @@ exports.wordsBank = {
       inflections: { onlyForm: "with" },
     },
   ],
-  articleSet: [
+  art: [
     {
       //links
       translations: { POL: [] },

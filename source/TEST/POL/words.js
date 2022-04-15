@@ -1,6 +1,6 @@
 //Copied over on 27/12/2020
 
-let nounPersonSet = [
+let npe = [
   {
     //links
     translations: { ENG: ["woman", "lady"] },
@@ -93,7 +93,7 @@ let nounPersonSet = [
   },
 ];
 
-let nounCommonSet = [
+let nco = [
   {
     //links
     translations: { ENG: ["bear"] },
@@ -418,7 +418,7 @@ let nounCommonSet = [
   },
 ];
 
-let pronombreSet = [
+let pro = [
   {
     translations: { ENG: ["I"] },
     lemma: "ja",
@@ -507,7 +507,7 @@ let pronombreSet = [
   },
 ];
 
-let adjectiveSet = [
+let adj = [
   {
     //links
     translations: { ENG: ["red"] },
@@ -743,7 +743,7 @@ let adjectiveSet = [
 //If you mark a traitKey true, or give it a traitValue      it will be filled out by fillVerbInflections fxn.
 //If you mark a traitKey false, or omit it                   it will not be.
 
-let verbSet = [
+let ver = [
   {
     //links
     translations: { ENG: ["be"], POL: ["być"] },
@@ -1642,8 +1642,8 @@ let verbSet = [
 ];
 
 exports.wordsBank = {
-  nounPersonSet,
-  nounCommonSet,
-  adjectiveSet,
-  verbSet,
+  npe,
+  nco,
+  adj,
+  ver,
 };

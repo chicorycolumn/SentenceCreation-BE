@@ -39,20 +39,20 @@ exports.logHowManyInflectionsFilled = (protoLObjs, lang) => {
 };
 
 exports.makeLemmaObjectIDs = (protoLObjs, lang, existingLemmaObjects) => {
-  function makeIds(protoLObj, counts, lang, wordtypeCode) {
-    let idNum = uUtils.numToString(counts[wordtypeCode] + 1, 3);
-    let id = `${lang.toLowerCase()}-${wordtypeCode}-${idNum}-${
+  function makeIds(protoLObj, counts, lang, wordtypeShorthand) {
+    let idNum = uUtils.numToString(counts[wordtypeShorthand] + 1, 3);
+    let id = `${lang.toLowerCase()}-${wordtypeShorthand}-${idNum}-${
       protoLObj.lemma
     }`;
-    counts[wordtypeCode]++;
+    counts[wordtypeShorthand]++;
     return id;
   }
 
   let counts = { nco: 0, npe: 0, ncp: 0, npp: 0 };
   if (existingLemmaObjects) {
-    Object.keys(counts).forEach((wordtypeCode) => {
+    Object.keys(counts).forEach((wordtypeShorthand) => {
       let lObjs = existingLemmaObjects.filter(
-        (l) => l.id.split("-")[1] === wordtypeCode
+        (l) => l.id.split("-")[1] === wordtypeShorthand
       );
 
       lObjs.sort(
@@ -61,7 +61,7 @@ exports.makeLemmaObjectIDs = (protoLObjs, lang, existingLemmaObjects) => {
 
       let highestIdNumber = parseInt(lObjs[0].id.split("-")[2]);
 
-      counts[wordtypeCode] = highestIdNumber;
+      counts[wordtypeShorthand] = highestIdNumber;
     });
   } else {
     console.log(
@@ -70,8 +70,8 @@ exports.makeLemmaObjectIDs = (protoLObjs, lang, existingLemmaObjects) => {
   }
 
   protoLObjs.forEach((protoLObj) => {
-    let wordtypeCode = protoLObj.isPerson ? "npe" : "nco";
-    protoLObj.id = makeIds(protoLObj, counts, lang, wordtypeCode);
+    let wordtypeShorthand = protoLObj.isPerson ? "npe" : "nco";
+    protoLObj.id = makeIds(protoLObj, counts, lang, wordtypeShorthand);
   });
 
   let headWordsThatHaveMultipleProtoLObjs = [];

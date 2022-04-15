@@ -918,7 +918,9 @@ exports.setPDSValues = (questionSentenceFormula, questionLanguage) => {
           qChunk.gender &&
           qChunk.gender.length &&
           refObj.metaTraitValues[questionLanguage]["gender"][
-            refObj.getNounGenderTraitValues(gpUtils.getWordtypeCodeStCh(qChunk))
+            refObj.getNounGenderTraitValues(
+              gpUtils.getWordtypeShorthandStCh(qChunk)
+            )
           ].every((traitValue) => qChunk.gender.includes(traitValue))
         ) {
           qChunk.dontSpecifyOnThisChunk = true;
@@ -930,7 +932,9 @@ exports.setPDSValues = (questionSentenceFormula, questionLanguage) => {
           qChunk.gender &&
           qChunk.gender.length &&
           !refObj.metaTraitValues[questionLanguage]["gender"][
-            refObj.getNounGenderTraitValues(gpUtils.getWordtypeCodeStCh(qChunk))
+            refObj.getNounGenderTraitValues(
+              gpUtils.getWordtypeShorthandStCh(qChunk)
+            )
           ].every((traitValue) => qChunk.gender.includes(traitValue))
         ) {
           qChunk.dontSpecifyOnThisChunk = false;

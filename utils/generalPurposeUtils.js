@@ -159,10 +159,6 @@ exports.traitKeyShouldBeSpecified = (chunk, traitKey, allowOverwrite) => {
   );
 };
 
-exports.giveSetKey = (word) => {
-  return word + "Set";
-};
-
 exports.combineWordbanks = (wordbank1Input, wordbank2Input, shouldCopy) => {
   let wordbank1 = shouldCopy
     ? uUtils.copyWithoutReference(wordbank1Input)
@@ -354,31 +350,31 @@ exports.stChIsNounPerson = (stCh) => {
   return ["nounPerson"].includes(this.getWordtypeStCh(stCh, true));
 };
 
-exports.getWordtypeCodeLObj = (lObj) => {
+exports.getWordtypeShorthandLObj = (lObj) => {
   return lObj.id.split("-")[1];
 };
 
-exports.getWordtypeCodeStCh = (stCh) => {
+exports.getWordtypeShorthandStCh = (stCh) => {
   return stCh.chunkId.split("-")[0];
 };
 
 exports.getWordtypeLObj = (lObj) => {
-  return refFxn.getWordtypeShorthandTranslation(
-    this.getWordtypeCodeLObj(lObj),
+  return refFxn.translateWordtypeShorthandLonghand(
+    this.getWordtypeShorthandLObj(lObj),
     lObj.id
   );
 };
 
 exports.getWordtypeStCh = (stCh) => {
-  return refFxn.getWordtypeShorthandTranslation(
-    this.getWordtypeCodeStCh(stCh),
+  return refFxn.translateWordtypeShorthandLonghand(
+    this.getWordtypeShorthandStCh(stCh),
     stCh.chunkId
   );
 };
 
 exports.getWordtypeAgree = (structureChunk, agreeKey = "agreeWith") => {
   let wordtypeShorthand = structureChunk[agreeKey].split("-")[0];
-  return refFxn.getWordtypeShorthandTranslation(wordtypeShorthand);
+  return refFxn.translateWordtypeShorthandLonghand(wordtypeShorthand);
 };
 
 exports.isTraitKeyFilledOutOnChunk = (chunk, traitKey) => {

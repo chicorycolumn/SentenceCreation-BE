@@ -12,7 +12,11 @@ exports.getBaseWordtype = (wordtypeLonghand) => {
   );
 };
 
-exports.getWordtypeShorthandTranslation = (str, label, returnBaseWordtype) => {
+exports.translateWordtypeShorthandLonghand = (
+  str,
+  label,
+  returnBaseWordtype
+) => {
   if (returnBaseWordtype) {
     consol.throw(
       "spqd You should not need to use this base word type. nounCommon and nounPerson are now two separare wordtypes and there ought to be no use-case for just noun."
