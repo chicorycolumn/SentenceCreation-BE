@@ -1,7 +1,7 @@
 {
-  "name": "sentencecreation",
+  "name": "sentencecreation-backend",
   "version": "1.0.0",
-  "description": "Creating sentences from specifications.",
+  "description": "Learn a language with SentenceCreation",
   "main": "app.js",
   "scripts": {
     "test-utils": "clear && mocha spec/utils.spec.js",

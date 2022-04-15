@@ -49,8 +49,12 @@ exports.getTagsAndTopics = (currentLanguage) => {
   return { allTags, allTopics };
 };
 
-exports.getWordsAndFormulas = (currentLanguage) => {
+exports.getWordsAndFormulas = (currentLanguage, wordsOnly) => {
   const { wordsBank } = require(`../source/${currentLanguage}/words.js`);
+
+  if (wordsOnly) {
+    return { wordsBank };
+  }
 
   const {
     dummyWordsBank,
