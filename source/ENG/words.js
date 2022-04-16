@@ -118,6 +118,30 @@ exports.wordsBank = {
   nco: [
     {
       //links
+      translations: { ENG: ["bear"], POL: ["niedźwiedź"] },
+      tags: ["allohomTesting2", "animal"],
+      allohomInfo: { multipleWordtype: true, text: "animal", emoji: "🐻" },
+
+      //selectors
+      lemma: "bear",
+      id: "eng-nco-050",
+
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "bear",
+          gen: "bear's",
+        },
+        plural: {
+          nom: "bears",
+          gen: "bears'",
+        },
+      },
+    },
+    {
+      //links
       translations: { ENG: ["onion"], POL: ["cebula"] },
       tags: ["inanimate", "edible", "holdable", "concrete"],
       //selectors
@@ -370,6 +394,30 @@ exports.wordsBank = {
     },
   ],
   ver: [
+    {
+      //links
+      translations: { ENG: ["bear"], POL: ["znieść"] },
+      tags: ["allohomTesting2", "emotions"],
+      allohomInfo: {
+        multipleWordtype: true,
+        text: "emotional verb",
+        emoji: "😑",
+      },
+      //selectors
+      lemma: "bear",
+      id: "eng-ver-050",
+      //notes
+
+      //inflections
+      inflections: {
+        infinitive: "bear",
+        verbal: {},
+        v2: "bore",
+        v3: "borne",
+        thirdPS: "bears",
+        gerund: "bearing",
+      },
+    },
     {
       //links
       translations: { ENG: ["give"], POL: ["dać", "dawać"] },
