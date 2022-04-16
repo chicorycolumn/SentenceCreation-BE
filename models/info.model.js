@@ -12,12 +12,11 @@ const allLangUtils = require("../utils/allLangUtils.js");
 const refFxn = require("../utils/reference/referenceFunctions.js");
 
 exports.fetchInfo = (req) => {
-  console.log("msll", req);
   let responseObject = { info: "Info type requested not recognised." };
   let { language1, infoType } = req.query;
 
   if (infoType == "structureChunkTraits") {
-    responseObject.info = refFxn.getWordtypeFromLemma(language1);
+    responseObject.info = refFxn.getInfoFromLemma(language1);
   }
 
   if (infoType == "structureWordtype") {

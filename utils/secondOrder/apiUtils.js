@@ -11,9 +11,16 @@ const refObj = require("../../utils/reference/referenceObjects.js");
 const allLangUtils = require("../../utils/allLangUtils.js");
 const refFxn = require("../reference/referenceFunctions.js");
 
-exports.getWordtypeFromLemma = (lemma, lang) => {
+exports.getInfoFromLemma = (lemma, lang) => {
+  matches = [];
   let { wordsBank } = scUtils.getWordsAndFormulas(lang, true);
-  Object.keys(wordsBank).forEach((setKey) => {
-    //   wordtype = setKey. #swde
+  Object.keys(wordsBank).forEach((wordtypeShorthand) => {
+    wordSet = wordsBank[wordtypeShorthand];
+    wordSet.forEach((lObj) => {
+      if (lObj.lemma === lemma) {
+        matches.append(lObj);
+      }
+    });
   });
+  return matches;
 };
