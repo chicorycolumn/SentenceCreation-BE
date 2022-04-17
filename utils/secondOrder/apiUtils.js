@@ -5,9 +5,11 @@ const edUtils = require("../../utils/secondOrder/educatorUtils.js");
 const scUtils = require("../../utils/sentenceCreatingUtils.js");
 const lfUtils = require("../../utils/lemmaFilteringUtils.js");
 const aaUtils = require("../../utils/auxiliaryAttributeUtils.js");
+const otUtils = require("../../utils/objectTraversingUtils.js");
 const ivUtils = require("../../utils/secondOrder/inputValidationUtils.js");
 const pvUtils = require("../../utils/secondOrder/processValidationUtils.js");
 const frUtils = require("../../utils/formattingResponseUtils.js");
+const apiUtils = require("../../utils/secondOrder/apiUtils.js");
 const refObj = require("../../utils/reference/referenceObjects.js");
 const allLangUtils = require("../../utils/allLangUtils.js");
 const refFxn = require("../reference/referenceFunctions.js");
@@ -26,28 +28,53 @@ exports.getBlankStChForThisWordtype = (lang, wordtypeLonghand) => {
   return stChTraits;
 };
 
-exports.makeStChsFromLObjs = (lang, lemma) => {
-  let lObjs = apiUtils.getLObjsForLemma(lang, lemma); //swde We now will take women lemma and still get woman lobj.
+exports.getStChsForLemma = (lang, lemma) => {
+  let lObjs = apiUtils.getLObjsForLemma(lang, lemma);
 
-  lObjs.forEach((lObj) => {
+  return lObjs.map((lObj) => {
     let wordtypeShorthand = gpUtils.getWordtypeShorthandLObj(lObj);
     let wordtypeLonghand =
       refFxn.translateWordtypeShorthandLonghand(wordtypeShorthand);
 
-    let blankStCh = apiUtils.getBlankStChForThisWordtype(
-      lang,
-      wordtypeShorthand
-    );
+    let stCh = apiUtils.getBlankStChForThisWordtype(lang, wordtypeLonghand);
+    let routes = otUtils.giveRoutesAndTerminalValuesFromObject(lObj, true);
+    routes.forEach((routeObj) => {
+      if (routeObj.terminalValue === lemma) {
+        Object.keys(routeObj.describedRoute).forEach((traitKey) => {
+          let traitValue = routeObj.describedRoute[traitKey];
 
-    let inflectionChains =
-      refObj.lemmaObjectTraitKeys[lang].inflectionChains[wordtypeLonghand];
+          if (
+            stCh[traitKey].compatibleWordtypes &&
+            !stCh[traitKey].compatibleWordtypes.includes(wordtypeLonghand)
+          ) {
+            consol.log(
+              `tbaa Error: Wordtype ${wordtypeLonghand} not compatible with ${traitKey}=${traitValue} even though that's what I gleaned using giveRoutesAndTerminalValuesFromObject.`
+            );
+            return;
+          }
 
-    // lfUtils.traverseAndRecordInflections()
+          if (
+            stCh[traitKey].possibleTraitValues &&
+            !stCh[traitKey].possibleTraitValues.includes(traitValue)
+          ) {
+            consol.log(
+              `pomi Error: traitValue ${traitValue} not compatible with ${traitKey} even though that's what I gleaned using giveRoutesAndTerminalValuesFromObject.`
+            );
+            return;
+          }
 
-    //Okay, so if I give you "women" I want you to return [
-    //   ["number", "plural"],
-    //   ["gcase", "nom"],
-    // ]
+          if (stCh[traitKey].expectedTypeOnStCh === "array") {
+            stCh[traitKey].traitValue = [traitValue];
+          } else if (stCh[traitKey].expectedTypeOnStCh === "string") {
+            stCh[traitKey].traitValue = traitValue;
+          }
+        });
+      }
+    });
+
+    stCh.andTags.traitValue = lObj.tags || [];
+
+    return stCh;
   });
 };
 
@@ -57,7 +84,10 @@ exports.getLObjsForLemma = (lang, lemma) => {
   Object.keys(wordsBank).forEach((wordtypeShorthand) => {
     wordSet = wordsBank[wordtypeShorthand];
     wordSet.forEach((lObj) => {
-      if (lObj.lemma === lemma) {
+      if (
+        lObj.lemma === lemma ||
+        uUtils.isThisValueInThisKeyValueObject(lObj.inflections, lemma)
+      ) {
         matches.push(lObj);
       }
     });

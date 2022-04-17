@@ -287,6 +287,31 @@ exports.returnArrayWithItemAtIndexRemoved = (arr, indexToRemove) => {
   return [...arr.slice(0, indexToRemove), ...arr.slice(indexToRemove + 1)];
 };
 
+exports.isThisValueInThisKeyValueObject = (obj, soughtValue) => {
+  let res = { found: false };
+  inner(obj, soughtValue, res);
+  return res.found;
+
+  function inner(obj, soughtValue, res) {
+    if (res.found) {
+      return true;
+    }
+    if (typeof obj !== "object") {
+      return false;
+    }
+    if (Object.values(obj).includes(soughtValue)) {
+      res.found = true;
+      return;
+    }
+    Object.values(obj).forEach((value) => {
+      if (inner(value, soughtValue, res)) {
+        res.found = true;
+        return;
+      }
+    });
+  }
+};
+
 exports.isThisObjectInThisArrayOfObjects = (obj, arr) => {
   return arr.some((objFromArr) => this.areTwoObjectsEqual(objFromArr, obj));
 };

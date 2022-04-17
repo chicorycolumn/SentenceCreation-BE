@@ -13,11 +13,16 @@ const allLangUtils = require("../utils/allLangUtils.js");
 const refFxn = require("../utils/reference/referenceFunctions.js");
 
 exports.fetchInfo = (req) => {
-  let responseObject = { info: "Info type requested not recognised." };
   let { language1, infoType } = req.query;
 
+  let responseObject = {
+    info: infoType
+      ? `Info type "${infoType}" requested not recognised.`
+      : "No info type was specified.",
+  };
+
   if (infoType == "lObjs") {
-    stChs = apiUtils.makeStChsFromLObjs(
+    responseObject.info = apiUtils.getStChsForLemma(
       language1,
       req.query.lemma.toLowerCase()
     );
