@@ -1121,12 +1121,14 @@ exports.findObjectInNestedObjectsAndArrays = (
   }
 };
 
-exports.giveRoutesAndTerminalValuesFromObject = (obj) => {
+exports.giveRoutesAndTerminalValuesFromObject = (lObj, detailNestedRoutes) => {
   consol.log(
     "[1;35m " +
       `xlbj ot:giveRoutesAndTerminalValuesFromObject-----------------------` +
       "[0m"
   );
+
+  let obj = lObj.inflections;
 
   const nestedRoutes = otUtils.extractNestedRoutes(obj).routesByNesting;
   let resArr = [];
@@ -1150,6 +1152,20 @@ exports.giveRoutesAndTerminalValuesFromObject = (obj) => {
     }
   });
 
+  if (detailNestedRoutes) {
+    let inflectionChainSpecification =
+      refObj.lemmaObjectTraitKeys[gpUtils.getLanguageFromLemmaObject(lObj)]
+        .inflectionChains[gpUtils.getWordtypeLObj(lObj)];
+
+    resArr.forEach((routesObj) => {
+      let describedRoute = {};
+      inflectionChainSpecification.forEach((traitKey, index) => {
+        describedRoute[traitKey] = routesObj.nestedRoute[index];
+      });
+      routesObj.describedRoute = describedRoute;
+    });
+  }
+
   return resArr;
 };
 
@@ -1172,9 +1188,8 @@ exports.findSynhomographs = (lemmaObject, structureChunk, currentLanguage) => {
       gpUtils.getWordtypeStCh(structureChunk)
     ];
 
-  let routesAndTerminalValues = otUtils.giveRoutesAndTerminalValuesFromObject(
-    lemmaObject.inflections
-  );
+  let routesAndTerminalValues =
+    otUtils.giveRoutesAndTerminalValuesFromObject(lemmaObject);
 
   let tempArr = [];
 

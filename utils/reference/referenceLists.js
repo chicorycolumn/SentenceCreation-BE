@@ -151,7 +151,6 @@ exports.metaTraitValues = {
 exports.lemmaObjectTraitKeys = {
   POL: {
     selectors: {
-      noun: ["gender"],
       nounCommon: ["gender"],
       nounPerson: ["gender"],
       verb: ["aspect"],
@@ -160,7 +159,6 @@ exports.lemmaObjectTraitKeys = {
       verb: ["tenseDescription"],
     },
     inflectionChains: {
-      noun: ["number", "gcase"],
       nounCommon: ["number", "gcase"],
       nounPerson: ["number", "gcase"],
       adjective: ["form", "number", "gender", "gcase"],
@@ -601,7 +599,6 @@ exports.defaultTraitValues = {
   pronombre: { form: ["pronombre"], gcase: ["nom"] },
   nounCommon: { gcase: ["nom"] },
   nounPerson: { gcase: ["nom"] },
-  noun: { gcase: ["nom"] },
   verb: { form: ["verbal"] },
   preposition: { form: ["onlyForm"] },
 };

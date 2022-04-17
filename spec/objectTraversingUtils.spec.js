@@ -8,6 +8,7 @@ const {
   findSinglePointMutationArray,
   doesThisInflectionKeyHoldUniqueInflectionValueInLObj,
 } = require("../utils/objectTraversingUtils.js");
+const consol = require("../utils/zerothOrder/consoleLoggingUtils.js");
 
 xdescribe("doesThisInflectionKeyHoldUniqueInflectionValueInLObj", () => {
   let inputlObj1 = {
@@ -891,7 +892,7 @@ xdescribe("concoctNestedRoutes", () => {
   });
 });
 
-xdescribe("extractNestedRoutes", () => {
+xdescribe("extractNestedRoutes/giveRoutesAndTerminalValuesFromObject", () => {
   it("#otu1.1a Returns empty array for empty object.", () => {
     const input = {};
     const expected = {
@@ -990,7 +991,7 @@ xdescribe("extractNestedRoutes", () => {
     const actual = extractNestedRoutes(input).routesByNesting;
     expect(actual).to.eql(expected);
   });
-  it("#otu1.2a get routes from kobieta.", () => {
+  it("#otu1.2a get routes from kobieta, plus describedRoutes.", () => {
     const input = {
       //links
       translations: { ENG: ["woman", "lady"] },
@@ -1026,21 +1027,69 @@ xdescribe("extractNestedRoutes", () => {
     };
 
     let expected = [
-      { terminalValue: "kobieta", nestedRoute: ["singular", "nom"] },
-      { terminalValue: "kobiety", nestedRoute: ["singular", "gen"] },
-      { terminalValue: "kobiecie", nestedRoute: ["singular", "dat"] },
-      { terminalValue: "kobietę", nestedRoute: ["singular", "acc"] },
-      { terminalValue: "kobietą", nestedRoute: ["singular", "ins"] },
-      { terminalValue: "kobiecie", nestedRoute: ["singular", "loc"] },
-      { terminalValue: "kobiety", nestedRoute: ["plural", "nom"] },
-      { terminalValue: "kobiet", nestedRoute: ["plural", "gen"] },
-      { terminalValue: "kobietom", nestedRoute: ["plural", "dat"] },
-      { terminalValue: "kobiety", nestedRoute: ["plural", "acc"] },
-      { terminalValue: undefined, nestedRoute: ["plural", "ins"] },
-      { terminalValue: "kobietach", nestedRoute: ["plural", "loc"] },
+      {
+        terminalValue: "kobieta",
+        nestedRoute: ["singular", "nom"],
+        describedRoute: { number: "singular", gcase: "nom" },
+      },
+      {
+        terminalValue: "kobiety",
+        nestedRoute: ["singular", "gen"],
+        describedRoute: { number: "singular", gcase: "gen" },
+      },
+      {
+        terminalValue: "kobiecie",
+        nestedRoute: ["singular", "dat"],
+        describedRoute: { number: "singular", gcase: "dat" },
+      },
+      {
+        terminalValue: "kobietę",
+        nestedRoute: ["singular", "acc"],
+        describedRoute: { number: "singular", gcase: "acc" },
+      },
+      {
+        terminalValue: "kobietą",
+        nestedRoute: ["singular", "ins"],
+        describedRoute: { number: "singular", gcase: "ins" },
+      },
+      {
+        terminalValue: "kobiecie",
+        nestedRoute: ["singular", "loc"],
+        describedRoute: { number: "singular", gcase: "loc" },
+      },
+      {
+        terminalValue: "kobiety",
+        nestedRoute: ["plural", "nom"],
+        describedRoute: { number: "plural", gcase: "nom" },
+      },
+      {
+        terminalValue: "kobiet",
+        nestedRoute: ["plural", "gen"],
+        describedRoute: { number: "plural", gcase: "gen" },
+      },
+      {
+        terminalValue: "kobietom",
+        nestedRoute: ["plural", "dat"],
+        describedRoute: { number: "plural", gcase: "dat" },
+      },
+      {
+        terminalValue: "kobiety",
+        nestedRoute: ["plural", "acc"],
+        describedRoute: { number: "plural", gcase: "acc" },
+      },
+      {
+        terminalValue: undefined,
+        nestedRoute: ["plural", "ins"],
+        describedRoute: { number: "plural", gcase: "ins" },
+      },
+      {
+        terminalValue: "kobietach",
+        nestedRoute: ["plural", "loc"],
+        describedRoute: { number: "plural", gcase: "loc" },
+      },
     ];
 
-    let actual = giveRoutesAndTerminalValuesFromObject(input.inflections);
+    let actual = giveRoutesAndTerminalValuesFromObject(input, true);
     consol.log(actual);
     expect(actual).to.eql(expected);
   });
@@ -1073,7 +1122,7 @@ xdescribe("extractNestedRoutes", () => {
       { terminalValue: "reading", nestedRoute: ["gerund"] },
     ];
 
-    let actual = giveRoutesAndTerminalValuesFromObject(input.inflections);
+    let actual = giveRoutesAndTerminalValuesFromObject(input);
     consol.log(actual);
     expect(actual).to.eql(expected);
   });
@@ -1106,7 +1155,7 @@ xdescribe("extractNestedRoutes", () => {
       { terminalValue: "reading", nestedRoute: ["gerund"] },
     ];
 
-    let actual = giveRoutesAndTerminalValuesFromObject(input.inflections);
+    let actual = giveRoutesAndTerminalValuesFromObject(input);
     consol.log(actual);
     expect(actual).to.eql(expected);
   });
@@ -1162,7 +1211,7 @@ xdescribe("extractNestedRoutes", () => {
       { terminalValue: "wob", nestedRoute: ["protective"] },
     ];
 
-    let actual = giveRoutesAndTerminalValuesFromObject(input.inflections);
+    let actual = giveRoutesAndTerminalValuesFromObject(input);
     consol.log(actual);
     expect(actual).to.eql(expected);
   });

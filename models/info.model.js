@@ -17,7 +17,7 @@ exports.fetchInfo = (req) => {
   let { language1, infoType } = req.query;
 
   if (infoType == "lObjs") {
-    responseObject.info = apiUtils.getLObjsForLemma(
+    stChs = apiUtils.makeStChsFromLObjs(
       language1,
       req.query.lemma.toLowerCase()
     );

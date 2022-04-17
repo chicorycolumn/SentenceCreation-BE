@@ -112,7 +112,7 @@ exports.findHomographs = (testing, currentLanguage, homographType, ignore) => {
 
     wordset.forEach((lObj) => {
       let terminalValuesAndPathsArr =
-        otUtils.giveRoutesAndTerminalValuesFromObject(lObj.inflections);
+        otUtils.giveRoutesAndTerminalValuesFromObject(lObj);
 
       terminalValuesAndPathsArr.forEach((terminalValuesAndPathsUnit) => {
         terminalValuesAndPathsUnit.nestedRoute.unshift(lObj.id);
