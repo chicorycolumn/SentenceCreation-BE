@@ -72,7 +72,21 @@ exports.getStChsForLemma = (lang, lemma) => {
       }
     });
 
-    stCh.andTags.traitValue = lObj.tags || [];
+    stCh.gender.traitValue = Array.from(new Set(stCh.gender.traitValue));
+
+    Object.keys(stCh).forEach((traitKey) => {
+      let traitObject = stCh[traitKey];
+      if (
+        traitObject.expectedTypeOnStCh === "array" &&
+        !traitObject.traitValue
+      ) {
+        traitObject.traitValue = [];
+      }
+    });
+
+    if (lObj.tags) {
+      stCh.andTags.traitValue = lObj.tags;
+    }
 
     return stCh;
   });
