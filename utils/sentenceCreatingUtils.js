@@ -10,20 +10,28 @@ const refObj = require("./reference/referenceObjects.js");
 const refFxn = require("./reference/referenceFunctions.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 
-exports.getWordsByCriteria = (currentLanguage, criteria) => {
+exports.getWordsByCriteria = (currentLanguage, criteriaFromHTTP) => {
   const { wordsBank } = require(`../source/${currentLanguage}/words.js`);
 
   resObj = {};
+
+  criteria = {};
+  Object.keys(criteriaFromHTTP).forEach((critKey) => {
+    let critValue = criteriaFromHTTP[critKey];
+    critValue = critValue.split("+");
+    criteria[critKey] = critValue;
+  });
 
   Object.keys(wordsBank).forEach((wordtypeShorthand) => {
     resObj[wordtypeShorthand] = [];
     let wordSet = wordsBank[wordtypeShorthand];
     wordSet.forEach((lObj) => {
       if (
-        Object.keys(criteria).some((criterionKey) => {
-          let criterionValue = criteria[criterionKey];
+        Object.keys(criteria).every((critKey) => {
+          let critValue = criteria[critKey];
           return (
-            lObj[criterionKey] && lObj[criterionKey].includes(criterionValue)
+            lObj[critKey] &&
+            uUtils.doStringsOrArraysMatch(lObj[critKey], critValue)
           );
         })
       ) {

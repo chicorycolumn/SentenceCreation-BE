@@ -13,7 +13,7 @@ const allLangUtils = require("../utils/allLangUtils.js");
 const refFxn = require("../utils/reference/referenceFunctions.js");
 
 exports.fetchInfo = (req) => {
-  let { language1, infoType } = req.query;
+  let { lang, infoType } = req.query;
 
   let responseObject = {
     info: infoType
@@ -23,13 +23,13 @@ exports.fetchInfo = (req) => {
 
   if (infoType == "lObjs") {
     responseObject.info = apiUtils.getStChsForLemma(
-      language1,
+      lang,
       req.query.lemma.toLowerCase()
     );
   }
 
   if (infoType == "structureWordtype") {
-    responseObject.info = refFxn.getStructureChunkTraits(language1);
+    responseObject.info = refFxn.getStructureChunkTraits(lang);
   }
 
   return Promise.all([responseObject]).then((array) => {

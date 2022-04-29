@@ -12,9 +12,9 @@ const allLangUtils = require("../utils/allLangUtils.js");
 
 exports.fetchTags = (req) => {
   console.log("mptl", req);
-  let { language1 } = req.query;
+  let { lang } = req.query;
 
-  let { allTags, allTopics } = scUtils.getTagsAndTopics(language1);
+  let { allTags, allTopics } = scUtils.getTagsAndTopics(lang);
 
   let responseObject = { tags: allTags, topics: allTopics };
 
@@ -25,10 +25,10 @@ exports.fetchTags = (req) => {
 
 exports.fetchWordsByCriteria = (req) => {
   console.log("psme", req);
-  let { language1 } = req.query;
-  delete req.query["language1"];
+  let { lang } = req.query;
+  delete req.query["lang"];
 
-  let words = scUtils.getWordsByCriteria(language1, req.query);
+  let words = scUtils.getWordsByCriteria(lang, req.query);
 
   let responseObject = { words };
 

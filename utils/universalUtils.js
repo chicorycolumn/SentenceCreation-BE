@@ -35,7 +35,7 @@ exports.combineTwoKeyValueObjectsCarefully = (obj1, obj2) => {
   });
 
   Object.keys(obj2).forEach((obj2Key) => {
-    obj2Value = obj2[obj2Key];
+    let obj2Value = obj2[obj2Key];
     combinedObj[obj2Key] = this.copyWithoutReference(obj2Value);
   });
 
@@ -97,11 +97,16 @@ exports.doKeyValuesMatch = (object, keyValues) => {
   });
 };
 
-exports.isEmpty = (obj) => {
+exports.isEmpty = (obj, strict = false) => {
+  if (strict && this.typeof(obj) === "string") {
+    obj = obj.trim();
+  }
   return (
     !obj ||
     (this.isKeyValueTypeObject(obj) && !Object.keys(obj).length) ||
-    (Array.isArray(obj) && !obj.length)
+    (Array.isArray(obj) &&
+      (!obj.length ||
+        (strict && !obj.some((element) => !this.isEmpty(element, true)))))
   );
 };
 
@@ -314,4 +319,16 @@ exports.isThisValueInThisKeyValueObject = (obj, soughtValue) => {
 
 exports.isThisObjectInThisArrayOfObjects = (obj, arr) => {
   return arr.some((objFromArr) => this.areTwoObjectsEqual(objFromArr, obj));
+};
+
+exports.doStringsOrArraysMatch = (actual, sought) => {
+  if (Array.isArray(actual) && Array.isArray(sought)) {
+    return sought.every((el) => actual.includes(el));
+  } else if (Array.isArray(actual)) {
+    return actual.includes(sought);
+  } else if (Array.isArray(sought)) {
+    return sought.includes(actual);
+  } else {
+    return actual === sought;
+  }
 };
