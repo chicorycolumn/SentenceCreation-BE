@@ -24,7 +24,6 @@ exports.fetchTags = (req) => {
 };
 
 exports.fetchWordsByCriteria = (req) => {
-  console.log("psme", req);
   let { lang } = req.query;
   delete req.query["lang"];
 

@@ -18,9 +18,11 @@ exports.getWordsByCriteria = (currentLanguage, criteriaFromHTTP) => {
   criteria = {};
   Object.keys(criteriaFromHTTP).forEach((critKey) => {
     let critValue = criteriaFromHTTP[critKey];
-    critValue = critValue.split("+");
+    critValue = critValue.split(" ");
     criteria[critKey] = critValue;
   });
+
+  console.log("nyfs getWordsByCriteria invoked with:", criteria);
 
   Object.keys(wordsBank).forEach((wordtypeShorthand) => {
     resObj[wordtypeShorthand] = [];
