@@ -8,13 +8,14 @@ const ivUtils = require("../utils/secondOrder/inputValidationUtils.js");
 const pvUtils = require("../utils/secondOrder/processValidationUtils.js");
 const frUtils = require("../utils/formattingResponseUtils.js");
 const refObj = require("../utils/reference/referenceObjects.js");
+const apiUtils = require("../utils/secondOrder/apiUtils.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 
 exports.fetchTags = (req) => {
   console.log("mptl", req);
   let { lang } = req.query;
 
-  let { allTags, allTopics } = scUtils.getTagsAndTopics(lang);
+  let { allTags, allTopics } = apiUtils.getTagsAndTopics(lang);
 
   let responseObject = { tags: allTags, topics: allTopics };
 
@@ -27,7 +28,7 @@ exports.fetchWordsByCriteria = (req) => {
   let { lang } = req.query;
   delete req.query["lang"];
 
-  let words = scUtils.getWordsByCriteria(lang, req.query);
+  let words = apiUtils.getWordsByCriteria(lang, req.query);
 
   let responseObject = { words };
 

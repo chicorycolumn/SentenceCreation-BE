@@ -14,6 +14,70 @@ const refObj = require("../../utils/reference/referenceObjects.js");
 const allLangUtils = require("../../utils/allLangUtils.js");
 const refFxn = require("../reference/referenceFunctions.js");
 
+exports.getWordsByCriteria = (currentLanguage, criteriaFromHTTP) => {
+  const { wordsBank } = require(`../../source/${currentLanguage}/words.js`);
+
+  resObj = {};
+
+  criteria = {};
+  Object.keys(criteriaFromHTTP).forEach((critKey) => {
+    let critValue = criteriaFromHTTP[critKey];
+    critValue = critValue.split(" ");
+    criteria[critKey] = critValue;
+  });
+
+  console.log("nyfs getWordsByCriteria invoked with:", criteria);
+
+  Object.keys(wordsBank).forEach((wordtypeShorthand) => {
+    resObj[wordtypeShorthand] = [];
+    let wordSet = wordsBank[wordtypeShorthand];
+    wordSet.forEach((lObj) => {
+      if (
+        Object.keys(criteria).every((critKey) => {
+          let critValue = criteria[critKey];
+
+          if (critKey === "andTags") {
+            return uUtils.doStringsOrArraysMatch(lObj["tags"], critValue);
+          } else if (critKey === "orTags") {
+            return uUtils.doStringsOrArraysMatch(
+              lObj["tags"],
+              critValue,
+              false
+            );
+          } else {
+            return (
+              lObj[critKey] &&
+              uUtils.doStringsOrArraysMatch(lObj[critKey], critValue)
+            );
+          }
+        })
+      ) {
+        resObj[wordtypeShorthand].push({
+          lemma: lObj.lemma,
+          id: lObj.id,
+          tags: lObj.tags,
+        });
+      }
+    });
+  });
+
+  return resObj;
+};
+
+exports.getTagsAndTopics = (currentLanguage) => {
+  const { wordsBank } = require(`../../source/${currentLanguage}/words.js`);
+
+  allTags = gpUtils.collectAllValuesFromKeyOnObjectsInNestedArrayOfObjects(
+    wordsBank,
+    "tags"
+  );
+  allTopics = gpUtils.collectAllValuesFromKeyOnObjectsInNestedArrayOfObjects(
+    wordsBank,
+    "topics"
+  );
+  return { allTags, allTopics };
+};
+
 exports.getBlankStChForThisWordtype = (lang, wordtypeLonghand) => {
   let stChTraits = refFxn.getStructureChunkTraits(lang);
   Object.keys(stChTraits).forEach((key) => {

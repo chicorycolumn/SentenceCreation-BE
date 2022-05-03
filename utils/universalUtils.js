@@ -321,9 +321,11 @@ exports.isThisObjectInThisArrayOfObjects = (obj, arr) => {
   return arr.some((objFromArr) => this.areTwoObjectsEqual(objFromArr, obj));
 };
 
-exports.doStringsOrArraysMatch = (actual, sought) => {
+exports.doStringsOrArraysMatch = (actual, sought, every = true) => {
   if (Array.isArray(actual) && Array.isArray(sought)) {
-    return sought.every((el) => actual.includes(el));
+    return every
+      ? sought.every((el) => actual.includes(el))
+      : sought.some((el) => actual.includes(el));
   } else if (Array.isArray(actual)) {
     return actual.includes(sought);
   } else if (Array.isArray(sought)) {
