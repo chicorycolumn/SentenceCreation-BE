@@ -312,7 +312,6 @@ exports.structureChunkTraits = {
       expectedTypeOnStCh: "array",
       ultimatelyMultipleTraitValuesOkay: true,
     },
-    form: { expectedTypeOnStCh: "array", isLexical: true },
     chunkId: { expectedTypeOnStCh: "string" },
     preferredChoicesForQuestionSentence: {
       expectedTypeOnStCh: "keyValueObject",
@@ -349,6 +348,25 @@ exports.structureChunkTraits = {
     //    These stCh traits require validation that given traitValues are okay.
     //
     //
+    form: {
+      expectedTypeOnStCh: "array",
+      isLexical: true,
+      compatibleWordtypes: ["adjective", "pronombre", "verb", "preposition"],
+      possibleTraitValuesPerWordtype: {
+        adjective: ["simple", "comparative", "superlative", "adverb"],
+        pronombre: ["pronombre", "pronombreAndDeterminer"],
+        verb: [
+          "verbal",
+          "infinitive",
+          "contemporaryAdverbial",
+          "passiveAdjectival",
+          "activeAdjectival",
+          "anteriorAdverbial",
+          "verbalNoun",
+        ],
+        preposition: ["onlyForm"],
+      },
+    },
     postHocAgreeWithPrimary: {
       expectedTypeOnStCh: "string",
       mustBeExistingChunkId: true,
@@ -468,6 +486,29 @@ exports.structureChunkTraits = {
     },
   },
   ENG: {
+    //
+    //
+    //    These stCh traits require validation that given traitValues are okay.
+    //
+    //
+    form: {
+      expectedTypeOnStCh: "array",
+      isLexical: true,
+      compatibleWordtypes: [
+        "adjective",
+        "pronombre",
+        "article",
+        "verb",
+        "preposition",
+      ],
+      possibleTraitValuesPerWordtype: {
+        adjective: ["simple"],
+        pronombre: ["pronombre", "determiner"],
+        article: ["definite", "indefinite"],
+        verb: ["verbal", "infinitive", "v2", "v3", "thirdPS", "gerund"],
+        preposition: ["onlyForm"],
+      },
+    },
     //
     //
     //    These stCh traits get validation by their possibleTraitValues arr.

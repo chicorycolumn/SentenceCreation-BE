@@ -2628,7 +2628,7 @@ exports.wordsBank = {
           processOnlyAtEnd: true,
           nonprotective: ["z"],
           protective: ["ze"],
-          protectIfSubsequentStartsWithTheseRegexes: ["mn", "szcz"],
+          protectIfSubsequentStartsWith: ["mn", "szcz"],
         },
       },
     },

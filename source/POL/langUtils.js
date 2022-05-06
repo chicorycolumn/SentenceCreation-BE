@@ -82,8 +82,8 @@ exports.selectWordVersions = (
     );
 
     if (
-      selectedWord.protectIfSubsequentStartsWithTheseRegexes &&
-      selectedWord.protectIfSubsequentStartsWithTheseRegexes.some((prefix) => {
+      selectedWord.protectIfSubsequentStartsWith &&
+      selectedWord.protectIfSubsequentStartsWith.some((prefix) => {
         consol.log("spez selectWordVersions", { prefix });
 
         let prefixRegex = RegExp("^" + prefix);

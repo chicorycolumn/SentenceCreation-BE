@@ -79,14 +79,34 @@ exports.getTagsAndTopics = (currentLanguage) => {
 };
 
 exports.getBlankStChForThisWordtype = (lang, wordtypeLonghand) => {
+  console.log("hmwo", { lang, wordtypeLonghand });
+
   let stChTraits = refFxn.getStructureChunkTraits(lang);
-  Object.keys(stChTraits).forEach((key) => {
-    let value = stChTraits[key];
+  Object.keys(stChTraits).forEach((traitKey) => {
+    // If this traitKey is entirely invalid for this wordtype, remove it. eg tenseDescription for adjectives.
     if (
-      value.compatibleWordtypes &&
-      !value.compatibleWordtypes.includes(wordtypeLonghand)
+      stChTraits[traitKey].compatibleWordtypes &&
+      !stChTraits[traitKey].compatibleWordtypes.includes(wordtypeLonghand)
     ) {
-      delete stChTraits[key];
+      delete stChTraits[traitKey];
+    }
+    // Add acceptable values for this traitKey per this wordtype. eg form has acceptable value "determiner" for article, but not for adjective.
+    else if (stChTraits[traitKey].possibleTraitValuesPerWordtype) {
+      if (
+        Object.keys(
+          stChTraits[traitKey].possibleTraitValuesPerWordtype
+        ).includes(wordtypeLonghand)
+      ) {
+        stChTraits[traitKey].possibleTraitValues =
+          stChTraits[traitKey].possibleTraitValuesPerWordtype[wordtypeLonghand];
+      } else {
+        console.log(
+          "clhb",
+          Object.keys(stChTraits[traitKey].possibleTraitValuesPerWordtype),
+          "does not include",
+          wordtypeLonghand
+        );
+      }
     }
   });
   return stChTraits;
