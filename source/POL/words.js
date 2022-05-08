@@ -575,234 +575,6 @@ exports.wordsBank = {
       },
     },
   ],
-  adj: [
-    {
-      //links
-      translations: { ENG: ["red"] },
-      tags: ["colour"],
-      //selectors
-      lemma: "czerwony",
-      id: "pol-adj-001",
-      //notes
-
-      //inflections
-      inflections: {
-        simple: {
-          singular: {
-            m1: {
-              nom: "czerwony",
-              gen: "czerwonego",
-              dat: "czerwonemu",
-              acc: "czerwonego",
-              ins: "czerwonym",
-              loc: "czerwonym",
-            },
-            m3: {
-              nom: "czerwony",
-              gen: "czerwonego",
-              dat: "czerwonemu",
-              acc: "czerwony",
-              ins: "czerwonym",
-              loc: "czerwonym",
-            },
-            f: {
-              nom: "czerwona",
-              gen: "czerwonej",
-              dat: "czerwonej",
-              acc: "czerwoną",
-              ins: "czerwoną",
-              loc: "czerwonej",
-            },
-            n: {
-              nom: "czerwone",
-              gen: "czerwonego",
-              dat: "czerwonemu",
-              acc: "czerwone",
-              ins: "czerwonym",
-              loc: "czerwonym",
-            },
-          },
-          plural: {
-            virile: {
-              nom: "czerwoni",
-              gen: "czerwonych",
-              dat: "czerwonym",
-              acc: "czerwonych",
-              ins: "czerwonymi",
-              loc: "czerwonych",
-            },
-            nonvirile: {
-              nom: "czerwone",
-              gen: "czerwonych",
-              dat: "czerwonym",
-              acc: "czerwone",
-              ins: "czerwonymi",
-              loc: "czerwonych",
-            },
-          },
-        },
-        comparative: {
-          isTerminus: true,
-          normal: ["czerwieńszy"],
-          isRegular: true,
-        },
-        superlative: {
-          isTerminus: true,
-          normal: ["najczerwieńszy"],
-          isRegular: true,
-        },
-        adverb: "czerwono",
-      },
-    },
-    {
-      //links
-      translations: { ENG: ["red"] },
-      tags: ["colour2"],
-      //selectors
-      lemma: "niebieski",
-      id: "pol-adj-002",
-      //notes
-
-      //inflections
-      inflections: {
-        simple: {
-          singular: {
-            m1: {
-              nom: "niebieski",
-              gen: "niebieskiego",
-              dat: "niebieskiemu",
-              acc: "niebieskiego",
-              ins: "niebieskim",
-              loc: "niebieskim",
-            },
-            m3: {
-              nom: "niebieski",
-              gen: "niebieskiego",
-              dat: "niebieskiemu",
-              acc: "niebieski",
-              ins: "niebieskim",
-              loc: "niebieskim",
-            },
-            f: {
-              nom: "niebieska",
-              gen: "niebieskiej",
-              dat: "niebieskiej",
-              acc: "niebieską",
-              ins: "niebieską",
-              loc: "niebieskiej",
-            },
-            n: {
-              nom: "niebieskie",
-              gen: "niebieskiego",
-              dat: "niebieskiemu",
-              acc: "niebieskie",
-              ins: "niebieskim",
-              loc: "niebieskim",
-            },
-          },
-          plural: {
-            virile: {
-              nom: "niebiescy",
-              gen: "niebieskich",
-              dat: "niebieskim",
-              acc: "niebieskich",
-              ins: "niebieskimi",
-              loc: "niebieskich",
-            },
-            nonvirile: {
-              nom: "niebieskie",
-              gen: "niebieskich",
-              dat: "niebieskim",
-              acc: "niebieskie",
-              ins: "niebieskimi",
-              loc: "niebieskich",
-            },
-          },
-        },
-        comparative: { isTerminus: true, normal: [""], isRegular: true },
-        superlative: { isTerminus: true, normal: [""], isRegular: true },
-        adverb: "niebiesko",
-      },
-    },
-    {
-      //links
-      translations: { ENG: ["small"] },
-      tags: ["size"],
-      //selectors
-      lemma: "mały",
-      id: "pol-adj-003",
-      //notes
-
-      //inflections
-      inflections: {
-        simple: {
-          singular: {
-            m1: {
-              nom: "mały",
-              gen: "małego",
-              dat: "małemu",
-              acc: "małego",
-              ins: "małym",
-              loc: "małym",
-            },
-            m3: {
-              nom: "mały",
-              gen: "małego",
-              dat: "małemu",
-              acc: "mały",
-              ins: "małym",
-              loc: "małym",
-            },
-            f: {
-              nom: "mała",
-              gen: "małej",
-              dat: "małej",
-              acc: "małą",
-              ins: "małą",
-              loc: "małej",
-            },
-            n: {
-              nom: "małe",
-              gen: "małego",
-              dat: "małemu",
-              acc: "małe",
-              ins: "małym",
-              loc: "małym",
-            },
-          },
-          plural: {
-            virile: {
-              nom: "mali",
-              gen: "małych",
-              dat: "małym",
-              acc: "małych",
-              ins: "małymi",
-              loc: "małych",
-            },
-            nonvirile: {
-              nom: "małe",
-              gen: "małych",
-              dat: "małym",
-              acc: "małe",
-              ins: "małymi",
-              loc: "małych",
-            },
-          },
-        },
-        comparative: {
-          isTerminus: true,
-          normal: ["mniejszy"],
-          isRegular: true,
-        },
-        superlative: {
-          isTerminus: true,
-          normal: ["najmniejszy"],
-          isRegular: true,
-        },
-        adverb: "mało",
-      },
-    },
-  ],
   ver: [
     {
       //links
@@ -1967,6 +1739,234 @@ exports.wordsBank = {
         contemporaryAdverbial: false,
         anteriorAdverbial: "zobaczywszy",
         verbalNoun: "zobaczenie",
+      },
+    },
+  ],
+  adj: [
+    {
+      //links
+      translations: { ENG: ["red"] },
+      tags: ["colour"],
+      //selectors
+      lemma: "czerwony",
+      id: "pol-adj-001",
+      //notes
+
+      //inflections
+      inflections: {
+        simple: {
+          singular: {
+            m1: {
+              nom: "czerwony",
+              gen: "czerwonego",
+              dat: "czerwonemu",
+              acc: "czerwonego",
+              ins: "czerwonym",
+              loc: "czerwonym",
+            },
+            m3: {
+              nom: "czerwony",
+              gen: "czerwonego",
+              dat: "czerwonemu",
+              acc: "czerwony",
+              ins: "czerwonym",
+              loc: "czerwonym",
+            },
+            f: {
+              nom: "czerwona",
+              gen: "czerwonej",
+              dat: "czerwonej",
+              acc: "czerwoną",
+              ins: "czerwoną",
+              loc: "czerwonej",
+            },
+            n: {
+              nom: "czerwone",
+              gen: "czerwonego",
+              dat: "czerwonemu",
+              acc: "czerwone",
+              ins: "czerwonym",
+              loc: "czerwonym",
+            },
+          },
+          plural: {
+            virile: {
+              nom: "czerwoni",
+              gen: "czerwonych",
+              dat: "czerwonym",
+              acc: "czerwonych",
+              ins: "czerwonymi",
+              loc: "czerwonych",
+            },
+            nonvirile: {
+              nom: "czerwone",
+              gen: "czerwonych",
+              dat: "czerwonym",
+              acc: "czerwone",
+              ins: "czerwonymi",
+              loc: "czerwonych",
+            },
+          },
+        },
+        comparative: {
+          isTerminus: true,
+          normal: ["czerwieńszy"],
+          isRegular: true,
+        },
+        superlative: {
+          isTerminus: true,
+          normal: ["najczerwieńszy"],
+          isRegular: true,
+        },
+        adverb: "czerwono",
+      },
+    },
+    {
+      //links
+      translations: { ENG: ["red"] },
+      tags: ["colour2"],
+      //selectors
+      lemma: "niebieski",
+      id: "pol-adj-002",
+      //notes
+
+      //inflections
+      inflections: {
+        simple: {
+          singular: {
+            m1: {
+              nom: "niebieski",
+              gen: "niebieskiego",
+              dat: "niebieskiemu",
+              acc: "niebieskiego",
+              ins: "niebieskim",
+              loc: "niebieskim",
+            },
+            m3: {
+              nom: "niebieski",
+              gen: "niebieskiego",
+              dat: "niebieskiemu",
+              acc: "niebieski",
+              ins: "niebieskim",
+              loc: "niebieskim",
+            },
+            f: {
+              nom: "niebieska",
+              gen: "niebieskiej",
+              dat: "niebieskiej",
+              acc: "niebieską",
+              ins: "niebieską",
+              loc: "niebieskiej",
+            },
+            n: {
+              nom: "niebieskie",
+              gen: "niebieskiego",
+              dat: "niebieskiemu",
+              acc: "niebieskie",
+              ins: "niebieskim",
+              loc: "niebieskim",
+            },
+          },
+          plural: {
+            virile: {
+              nom: "niebiescy",
+              gen: "niebieskich",
+              dat: "niebieskim",
+              acc: "niebieskich",
+              ins: "niebieskimi",
+              loc: "niebieskich",
+            },
+            nonvirile: {
+              nom: "niebieskie",
+              gen: "niebieskich",
+              dat: "niebieskim",
+              acc: "niebieskie",
+              ins: "niebieskimi",
+              loc: "niebieskich",
+            },
+          },
+        },
+        comparative: { isTerminus: true, normal: [""], isRegular: true },
+        superlative: { isTerminus: true, normal: [""], isRegular: true },
+        adverb: "niebiesko",
+      },
+    },
+    {
+      //links
+      translations: { ENG: ["small"] },
+      tags: ["size"],
+      //selectors
+      lemma: "mały",
+      id: "pol-adj-003",
+      //notes
+
+      //inflections
+      inflections: {
+        simple: {
+          singular: {
+            m1: {
+              nom: "mały",
+              gen: "małego",
+              dat: "małemu",
+              acc: "małego",
+              ins: "małym",
+              loc: "małym",
+            },
+            m3: {
+              nom: "mały",
+              gen: "małego",
+              dat: "małemu",
+              acc: "mały",
+              ins: "małym",
+              loc: "małym",
+            },
+            f: {
+              nom: "mała",
+              gen: "małej",
+              dat: "małej",
+              acc: "małą",
+              ins: "małą",
+              loc: "małej",
+            },
+            n: {
+              nom: "małe",
+              gen: "małego",
+              dat: "małemu",
+              acc: "małe",
+              ins: "małym",
+              loc: "małym",
+            },
+          },
+          plural: {
+            virile: {
+              nom: "mali",
+              gen: "małych",
+              dat: "małym",
+              acc: "małych",
+              ins: "małymi",
+              loc: "małych",
+            },
+            nonvirile: {
+              nom: "małe",
+              gen: "małych",
+              dat: "małym",
+              acc: "małe",
+              ins: "małymi",
+              loc: "małych",
+            },
+          },
+        },
+        comparative: {
+          isTerminus: true,
+          normal: ["mniejszy"],
+          isRegular: true,
+        },
+        superlative: {
+          isTerminus: true,
+          normal: ["najmniejszy"],
+          isRegular: true,
+        },
+        adverb: "mało",
       },
     },
   ],

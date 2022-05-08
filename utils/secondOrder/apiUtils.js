@@ -91,20 +91,29 @@ exports.getBlankStChForThisWordtype = (lang, wordtypeLonghand) => {
       delete stChTraits[traitKey];
     }
     // Add acceptable values for this traitKey per this wordtype. eg form has acceptable value "determiner" for article, but not for adjective.
-    else if (stChTraits[traitKey].possibleTraitValuesPerWordtype) {
-      if (
-        Object.keys(
-          stChTraits[traitKey].possibleTraitValuesPerWordtype
-        ).includes(wordtypeLonghand)
-      ) {
-        stChTraits[traitKey].possibleTraitValues =
-          stChTraits[traitKey].possibleTraitValuesPerWordtype[wordtypeLonghand];
-      } else {
-        console.log(
-          "clhb",
-          Object.keys(stChTraits[traitKey].possibleTraitValuesPerWordtype),
-          "does not include",
-          wordtypeLonghand
+    else {
+      if (stChTraits[traitKey].possibleTraitValuesPerWordtype) {
+        if (
+          Object.keys(
+            stChTraits[traitKey].possibleTraitValuesPerWordtype
+          ).includes(wordtypeLonghand)
+        ) {
+          stChTraits[traitKey].possibleTraitValues =
+            stChTraits[traitKey].possibleTraitValuesPerWordtype[
+              wordtypeLonghand
+            ];
+        } else {
+          console.log(
+            "clhb",
+            Object.keys(stChTraits[traitKey].possibleTraitValuesPerWordtype),
+            "does not include",
+            wordtypeLonghand
+          );
+        }
+      }
+      if (stChTraits[traitKey].possibleTraitValues) {
+        stChTraits[traitKey].possibleTraitValues = Array.from(
+          new Set(stChTraits[traitKey].possibleTraitValues)
         );
       }
     }
@@ -156,7 +165,9 @@ exports.getStChsForLemma = (lang, lemma) => {
       }
     });
 
-    stCh.gender.traitValue = Array.from(new Set(stCh.gender.traitValue));
+    if (stCh.gender) {
+      stCh.gender.traitValue = Array.from(new Set(stCh.gender.traitValue));
+    }
 
     Object.keys(stCh).forEach((traitKey) => {
       let traitObject = stCh[traitKey];
@@ -171,6 +182,10 @@ exports.getStChsForLemma = (lang, lemma) => {
     if (lObj.tags) {
       stCh.andTags.traitValue = lObj.tags;
     }
+
+    stCh.wordtype = gpUtils.getWordtypeShorthandLObj(lObj);
+    stCh.id = lObj.id;
+    stCh.lemma = lObj.lemma;
 
     return stCh;
   });

@@ -357,42 +357,6 @@ exports.wordsBank = {
       },
     },
   ],
-  adj: [
-    {
-      //links
-      translations: { ENG: ["red"], POL: ["czerwony"] },
-      tags: ["colour"],
-      //selectors
-      lemma: "red",
-      id: "eng-adj-001",
-      //notes
-
-      //inflections
-      inflections: {
-        simple: "red",
-        comparative: "redder",
-        superlative: "reddest",
-        adverb: "redly",
-      },
-    },
-    {
-      //links
-      translations: { ENG: ["small"], POL: ["mały"] },
-      tags: ["size"],
-      //selectors
-      lemma: "small",
-      id: "eng-adj-002",
-      //notes
-
-      //inflections
-      inflections: {
-        simple: "small",
-        comparative: "smaller",
-        superlative: "smallest",
-        adverb: false,
-      },
-    },
-  ],
   ver: [
     {
       //links
@@ -548,6 +512,42 @@ exports.wordsBank = {
         v3: "been",
         thirdPS: "is",
         gerund: "being",
+      },
+    },
+  ],
+  adj: [
+    {
+      //links
+      translations: { ENG: ["red"], POL: ["czerwony"] },
+      tags: ["colour"],
+      //selectors
+      lemma: "red",
+      id: "eng-adj-001",
+      //notes
+
+      //inflections
+      inflections: {
+        simple: "red",
+        comparative: "redder",
+        superlative: "reddest",
+        adverb: "redly",
+      },
+    },
+    {
+      //links
+      translations: { ENG: ["small"], POL: ["mały"] },
+      tags: ["size"],
+      //selectors
+      lemma: "small",
+      id: "eng-adj-002",
+      //notes
+
+      //inflections
+      inflections: {
+        simple: "small",
+        comparative: "smaller",
+        superlative: "smallest",
+        adverb: false,
       },
     },
   ],
