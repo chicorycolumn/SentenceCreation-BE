@@ -11,8 +11,6 @@ const refObj = require("../utils/reference/referenceObjects.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 
 exports.fetchPalette = (req) => {
-  let multipleMode = false;
-
   let {
     sentenceFormulaId,
     sentenceFormulaSymbol,
@@ -26,7 +24,10 @@ exports.fetchPalette = (req) => {
     allCounterfactualResults,
     counterfactualQuestionSentenceFormula,
     counterfactualSitSchematic,
+    forceMultipleModeQuestionOnlySingleChunk,
   } = req.body;
+
+  let multipleMode = !!forceMultipleModeQuestionOnlySingleChunk;
 
   let { sentenceFormula, words } = scUtils.getMaterialsCopies(
     questionLanguage,
@@ -74,7 +75,17 @@ exports.fetchPalette = (req) => {
   );
 
   consol.log("questionSentenceData", questionSentenceData);
-  if ("check") {
+
+  if (forceMultipleModeQuestionOnlySingleChunk) {
+    return frUtils.finishAndSend({
+      finalSentenceArr: questionSentenceData.arrayOfOutputArrays.map((arr) => {
+        return {
+          selectedWord: arr.map((obj) => obj.selectedWord).join(" "),
+          lObjID: arr.map((obj) => obj.selectedLemmaObject.id).join(" "),
+        };
+      }),
+    });
+  } else {
     if (
       !questionSentenceData ||
       !questionSentenceData.arrayOfOutputArrays ||

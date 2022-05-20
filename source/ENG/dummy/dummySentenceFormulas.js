@@ -1864,4 +1864,19 @@ exports.dummySentenceFormulasBank = [
     primaryOrders: [["nco-1-Dust", "ver-1-Be"]],
     additionalOrders: [],
   },
+  {
+    sentenceFormulaSymbol: "dummy69singleword",
+    sentenceFormulaId: "ENG-dummy69singleword",
+    translations: { POL: [] },
+    sentenceStructure: [
+      {
+        chunkId: "npe-1",
+        andTags: ["personTest1"],
+        gcase: ["nom"],
+        number: ["singular", "plural"],
+        gender: [],
+      },
+    ],
+    primaryOrders: [],
+  },
 ];

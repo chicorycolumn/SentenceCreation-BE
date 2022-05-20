@@ -186,6 +186,7 @@ exports.getStChsForLemma = (lang, lemma) => {
     stCh.wordtype = gpUtils.getWordtypeShorthandLObj(lObj);
     stCh.id = lObj.id;
     stCh.lemma = lObj.lemma;
+    console.log(4545, stCh.id, stCh.lemma);
 
     return stCh;
   });
