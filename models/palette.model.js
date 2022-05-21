@@ -25,6 +25,7 @@ exports.fetchPalette = (req) => {
     counterfactualQuestionSentenceFormula,
     counterfactualSitSchematic,
     forceMultipleModeQuestionOnlySingleChunk,
+    sentenceFormulaFromEducator,
   } = req.body;
 
   let multipleMode = !!forceMultipleModeQuestionOnlySingleChunk;
@@ -33,8 +34,13 @@ exports.fetchPalette = (req) => {
     questionLanguage,
     sentenceFormulaId,
     sentenceFormulaSymbol,
-    useDummy
+    useDummy,
+    sentenceFormulaFromEducator
   );
+
+  if (!words || !Object.keys(words).length) {
+    consol.throw("Error kpas: No words found.");
+  }
 
   let answerResponseObj;
   let firstAnswerSentenceFormula;

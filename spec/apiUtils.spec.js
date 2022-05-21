@@ -15,13 +15,29 @@ describe.only("/educator/sandbox - Testing API.", () => {
   it("#san01 GET 200 YES: Single word sentence.", () => {
     const questionLanguage = "ENG";
 
+    let numberString = Date.now();
+
+    const sentenceFormulaFromEducator = {
+      sentenceFormulaSymbol: numberString,
+      sentenceFormulaId: `${questionLanguage}-${numberString}`,
+      translations: {},
+      sentenceStructure: [
+        {
+          chunkId: "npe-1",
+          andTags: ["personTest1"],
+          gcase: ["nom"],
+          number: ["singular", "plural"],
+          gender: [],
+        },
+      ],
+    };
+
     return request(app)
       .get("/api/palette")
       .send({
         questionLanguage,
-        sentenceFormulaSymbol: "dummy69singleword",
-        useDummy: true,
         forceMultipleModeQuestionOnlySingleChunk: true,
+        sentenceFormulaFromEducator,
       })
       .expect(200)
       .then((res) => {

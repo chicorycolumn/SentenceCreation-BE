@@ -1,14 +1,33 @@
 const { fetchPalette } = require("../models/palette.model");
 
 exports.getWordByExplicitChunk = (req, res, next) => {
-  console.log("swde", req.body);
-  //   fetchPalette(req)
-  //     .then((responseObj) => {
-  //       if (responseObj.questionSentence) {
-  //         res.status(200).send(responseObj);
-  //       } else {
-  //         res.status(200).send(responseObj);
-  //       }
-  //     })
-  //     .catch((err) => next(err));
+  let { questionLanguage, chunk } = req.body;
+
+  let numberString = Date.now();
+
+  const sentenceFormulaFromEducator = {
+    sentenceFormulaSymbol: numberString,
+    sentenceFormulaId: `${questionLanguage}-${numberString}`,
+    translations: {},
+    sentenceStructure: [chunk],
+  };
+
+  let data = {
+    body: {
+      sentenceFormulaFromEducator,
+      questionLanguage,
+      forceMultipleModeQuestionOnlySingleChunk: true,
+    },
+  };
+
+  fetchPalette(data)
+    .then((responseObj) => {
+      if (responseObj.questionSentenceArr) {
+        let respo = { wordsAndIDs: responseObj.questionSentenceArr };
+        res.status(200).send(respo);
+      } else {
+        res.status(200).send({ wordsAndIDs: [] });
+      }
+    })
+    .catch((err) => next(err));
 };

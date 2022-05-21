@@ -39,15 +39,22 @@ exports.getMaterialsCopies = (
   currentLanguage,
   sentenceFormulaId,
   sentenceFormulaSymbol,
-  useDummy
+  useDummy,
+  sentenceFormulaFromEducator
 ) => {
   //STEP ZERO (A): Get necessary source materials.
+  let wordsOnly = !!sentenceFormulaFromEducator;
+
   const {
     wordsBank,
     dummyWordsBank,
     sentenceFormulasBank,
     dummySentenceFormulasBank,
-  } = scUtils.getWordsAndFormulas(currentLanguage);
+  } = scUtils.getWordsAndFormulas(currentLanguage, wordsOnly);
+
+  if (wordsOnly) {
+    return { words: wordsBank, sentenceFormula: sentenceFormulaFromEducator };
+  }
 
   let sentenceFormula;
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
