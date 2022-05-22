@@ -1,22 +1,21 @@
 const { fetchPalette } = require("../models/palette.model");
 
-exports.getWordByExplicitChunk = (req, res, next) => {
-  let { questionLanguage, chunk } = req.body;
+exports.getSentencesAsQuestionOnly = (req, res, next) => {
+  let questionLanguage = req.query.lang;
+
+  let { sentenceFormula } = req.body;
 
   let numberString = Date.now();
 
-  const sentenceFormulaFromEducator = {
-    sentenceFormulaSymbol: numberString,
-    sentenceFormulaId: `${questionLanguage}-${numberString}`,
-    translations: {},
-    sentenceStructure: [chunk],
-  };
+  sentenceFormula.sentenceFormulaSymbol = numberString;
+  sentenceFormula.sentenceFormulaId = `${questionLanguage}-${numberString}`;
+  sentenceFormula.translations = {};
 
   let data = {
     body: {
-      sentenceFormulaFromEducator,
+      sentenceFormulaFromEducator: sentenceFormula,
       questionLanguage,
-      forceMultipleModeQuestionOnlySingleChunk: true,
+      forceMultipleModeAndQuestionOnly: true,
     },
   };
 
@@ -26,7 +25,7 @@ exports.getWordByExplicitChunk = (req, res, next) => {
         let respo = { wordsAndIDs: responseObj.questionSentenceArr };
         res.status(200).send(respo);
       } else {
-        res.status(200).send({ wordsAndIDs: [] });
+        res.status(200).send({ message: "Nothing was made." });
       }
     })
     .catch((err) => next(err));

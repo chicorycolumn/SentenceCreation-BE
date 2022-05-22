@@ -1023,7 +1023,7 @@ exports.selectWordVersions = (
       }
     } else {
       consol.throw(
-        "#ERR oilf selectWordVersions. I expected either a string or a terminus object for this selectedWord."
+        `#ERR oilf selectWordVersions. I expected either a string or a terminus object for this selectedWord but instead it is ${typeof selectedWord}.`
       );
     }
 

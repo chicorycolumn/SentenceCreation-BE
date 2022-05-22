@@ -24,11 +24,11 @@ exports.fetchPalette = (req) => {
     allCounterfactualResults,
     counterfactualQuestionSentenceFormula,
     counterfactualSitSchematic,
-    forceMultipleModeQuestionOnlySingleChunk,
+    forceMultipleModeAndQuestionOnly,
     sentenceFormulaFromEducator,
   } = req.body;
 
-  let multipleMode = !!forceMultipleModeQuestionOnlySingleChunk;
+  let multipleMode = forceMultipleModeAndQuestionOnly;
 
   let { sentenceFormula, words } = scUtils.getMaterialsCopies(
     questionLanguage,
@@ -82,15 +82,35 @@ exports.fetchPalette = (req) => {
 
   consol.log("questionSentenceData", questionSentenceData);
 
-  if (forceMultipleModeQuestionOnlySingleChunk) {
-    return frUtils.finishAndSend({
-      finalSentenceArr: questionSentenceData.arrayOfOutputArrays.map((arr) => {
-        return {
-          selectedWord: arr.map((obj) => obj.selectedWord).join(" "),
-          lObjID: arr.map((obj) => obj.selectedLemmaObject.id).join(" "),
-        };
-      }),
-    });
+  if (forceMultipleModeAndQuestionOnly) {
+    if (sentenceFormula.sentenceStructure.length < 2) {
+      return frUtils.finishAndSend({
+        finalSentenceArr: questionSentenceData.arrayOfOutputArrays.map(
+          (arr) => {
+            return {
+              selectedWord: arr.map((obj) => obj.selectedWord).join(" "),
+              lObjID: arr.map((obj) => obj.selectedLemmaObject.id).join(" "),
+            };
+          }
+        ),
+      });
+    } else {
+      let arr = questionSentenceData.arrayOfOutputArrays.map((outputArray) => {
+        let sentence = scUtils.buildSentenceString(
+          outputArray,
+          sentenceFormula,
+          multipleMode,
+          questionLanguage,
+          answerLanguage
+        );
+
+        return sentence;
+      });
+
+      return frUtils.finishAndSend({
+        finalSentenceArr: arr,
+      });
+    }
   } else {
     if (
       !questionSentenceData ||

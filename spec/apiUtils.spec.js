@@ -12,7 +12,54 @@ const testingUtils = require("../utils/secondOrder/testingUtils.js");
 const { getStChsForLemma } = require("../utils/secondOrder/apiUtils.js");
 
 describe.only("/educator/sandbox - Testing API.", () => {
-  it("#san01 GET 200 YES: Single word sentence.", () => {
+  it("#san02 GET 200 YES: Educator queries a sentence, Q only but still wants multiple mode.", () => {
+    const questionLanguage = "POL";
+
+    let numberString = Date.now();
+
+    const sentenceFormulaFromEducator = {
+      sentenceFormulaSymbol: numberString,
+      sentenceFormulaId: `${questionLanguage}-${numberString}`,
+      translations: {},
+      sentenceStructure: [
+        {
+          chunkId: "adj-1",
+          andTags: ["colour"],
+          agreeWith: "npe-1",
+        },
+        {
+          chunkId: "npe-1",
+          andTags: ["personTest1"],
+          gcase: ["nom"],
+          number: ["singular", "plural"],
+          gender: [],
+        },
+      ],
+      primaryOrders: [["adj-1", "npe-1"]],
+    };
+
+    const expected = {
+      questionSentenceArr: [
+        ["Czerwona kobieta."],
+        ["Czerwone kobiety."],
+        ["Czerwony chłopiec."],
+        ["Czerwoni chłopcy."],
+      ],
+    };
+
+    return request(app)
+      .get("/api/palette")
+      .send({
+        questionLanguage,
+        forceMultipleModeAndQuestionOnly: true,
+        sentenceFormulaFromEducator,
+      })
+      .expect(200)
+      .then((res) => {
+        expect(res.body).to.eql(expected);
+      });
+  });
+  it("#san01 GET 200 YES: Educator queries a single word, Q only but still wants multiple mode.", () => {
     const questionLanguage = "ENG";
 
     let numberString = Date.now();
@@ -32,19 +79,25 @@ describe.only("/educator/sandbox - Testing API.", () => {
       ],
     };
 
+    const expected = {
+      questionSentenceArr: [
+        { selectedWord: "woman", lObjID: "eng-npe-001" },
+        { selectedWord: "women", lObjID: "eng-npe-001" },
+        { selectedWord: "boy", lObjID: "eng-npe-002" },
+        { selectedWord: "boys", lObjID: "eng-npe-002" },
+      ],
+    };
+
     return request(app)
       .get("/api/palette")
       .send({
         questionLanguage,
-        forceMultipleModeQuestionOnlySingleChunk: true,
+        forceMultipleModeAndQuestionOnly: true,
         sentenceFormulaFromEducator,
       })
       .expect(200)
       .then((res) => {
-        console.log(res.body);
-        // let { questionSentenceArr, answerSentenceArr } = res.body;
-        // expect(["Czerwone drzwi."]).to.include(questionSentenceArr[0]);
-        // expect(answerSentenceArr).to.have.members(["Red door.", "Red doors."]);
+        expect(res.body).to.eql(expected);
       });
   });
 });
