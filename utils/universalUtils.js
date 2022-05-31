@@ -334,3 +334,23 @@ exports.doStringsOrArraysMatch = (actual, sought, every = true) => {
     return actual === sought;
   }
 };
+
+exports.selectRandomElementsFromArr = (arr, quantity) => {
+  if (arr.length > quantity) {
+    let limitedArrIndex = [];
+    for (let i = 0; i < quantity; i++) {
+      let selectedIndex;
+      while (!selectedIndex) {
+        let putativeIndex = Math.floor(Math.random() * arr.length);
+        if (!limitedArrIndex.includes(putativeIndex)) {
+          selectedIndex = putativeIndex;
+        }
+      }
+      limitedArrIndex.push(selectedIndex);
+    }
+    console.log(limitedArrIndex);
+    return limitedArrIndex.map((index) => arr[index]);
+  } else {
+    return arr;
+  }
+};

@@ -110,8 +110,10 @@ exports.processSentenceFormula = (
   languagesObj,
   sentenceFormula,
   words,
-  multipleMode
+  multipleModes
 ) => {
+  let { multipleMode, forceMultipleModeAndQuestionOnly } = multipleModes;
+
   consol.log("hbbhey START processSentenceFormula");
   let { currentLanguage, previousQuestionLanguage } = languagesObj;
   let { sentenceFormulaId, sentenceFormulaSymbol, sentenceStructure } =
@@ -161,7 +163,7 @@ exports.processSentenceFormula = (
       errorInSentenceCreation,
       currentLanguage,
       previousQuestionLanguage,
-      multipleMode,
+      multipleModes,
       null
     );
 
@@ -258,7 +260,7 @@ exports.processSentenceFormula = (
                 errorInSentenceCreation,
                 currentLanguage,
                 previousQuestionLanguage,
-                multipleMode,
+                multipleModes,
                 null
               );
 
@@ -388,7 +390,7 @@ exports.processSentenceFormula = (
         errorInSentenceCreation,
         currentLanguage,
         previousQuestionLanguage,
-        multipleMode,
+        multipleModes,
         outputArray,
         true
       );
@@ -413,7 +415,7 @@ exports.processSentenceFormula = (
 
         thisOutputArrayIsDeleted = true;
       } else {
-        //If multipleMode is true, then allPossOutputUnits_other is array of outputUnit objects, while if false, array of just one said object.
+        //If multipleMode then allPossOutputUnits_other is array of outputUnit objects, else array of just one said object.
         PHDoutputUnitsForThisParticularOutputArray.push(allPossOutputUnits_PHD);
       }
     });
@@ -520,7 +522,7 @@ exports.processSentenceFormula = (
       errorInSentenceCreation,
       currentLanguage,
       previousQuestionLanguage,
-      multipleMode,
+      multipleModes,
       null
     );
 
@@ -555,7 +557,7 @@ exports.processSentenceFormula = (
       };
     }
 
-    //If multipleMode is true, then allPossOutputUnits_other is array of outputUnit objects, while if false, array of just one said object.
+    //If multipleMode then allPossOutputUnits_other is array of outputUnit objects, else array of just one said object.
     grandAllPossOutputUnits_other.push(allPossOutputUnits_other);
   });
 
@@ -580,8 +582,8 @@ exports.processSentenceFormula = (
     );
   }
 
-  //If multipleMode is true, then grandOutputArray is array of all possible arrays of outputUnit combinations.
-  //And if multipleMode false, then grandOutputArray is array of just one said possible array.
+  //If multipleMode then grandOutputArray is array of all possible arrays of outputUnit combinations,
+  //else array of just one said possible array.
 
   grandOutputArray.forEach((outputArray, outputArrayIndex) => {
     outputArray.forEach((outputUnit) => {

@@ -714,7 +714,7 @@ exports.filterOutLackingLemmaObjects = (sourceArr, stCh, currentLanguage) => {
   });
 };
 
-exports.filterByAndTagsAndOrTags = (wordset, structureChunk) => {
+exports.filterByTags = (wordset, structureChunk) => {
   let lemmaObjects = Object.values(wordset);
 
   let { andTags, orTags } = structureChunk;

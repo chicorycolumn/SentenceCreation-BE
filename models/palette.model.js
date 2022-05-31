@@ -28,7 +28,7 @@ exports.fetchPalette = (req) => {
     sentenceFormulaFromEducator,
   } = req.body;
 
-  let multipleMode = forceMultipleModeAndQuestionOnly;
+  let multipleMode = !!forceMultipleModeAndQuestionOnly;
 
   let { sentenceFormula, words } = scUtils.getMaterialsCopies(
     questionLanguage,
@@ -77,7 +77,7 @@ exports.fetchPalette = (req) => {
     { currentLanguage: questionLanguage },
     questionSentenceFormula,
     words,
-    multipleMode
+    { multipleMode, forceMultipleModeAndQuestionOnly }
   );
 
   consol.log("questionSentenceData", questionSentenceData);
@@ -351,7 +351,7 @@ exports.fetchPalette = (req) => {
         },
         answerSentenceFormula,
         words,
-        multipleMode
+        { multipleMode, forceMultipleModeAndQuestionOnly }
       );
 
       if ("check") {

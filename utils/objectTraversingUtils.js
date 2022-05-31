@@ -13,10 +13,11 @@ exports.findMatchingLemmaObjectThenWord = (
   errorInSentenceCreation,
   currentLanguage,
   questionLanguage,
-  multipleMode,
+  multipleModes,
   outputArray,
   isPHD
 ) => {
+  let { multipleMode, forceMultipleModeAndQuestionOnly } = multipleModes;
   consol.log(
     "[1;33m " +
       `ligw ot:findMatchingLemmaObjectThenWord for stCh: "${structureChunk.chunkId}"` +
@@ -26,7 +27,6 @@ exports.findMatchingLemmaObjectThenWord = (
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
   let selectedFormsArray = [];
   let arrayOfAllPossibleOutputUnits = [];
-  let temporaryMultipleMode;
 
   //STEP ONE: Fx-PW: Pathway for Fixed pieces.
   if (gpUtils.getWordtypeStCh(structureChunk) === "fixed") {
@@ -89,7 +89,11 @@ exports.findMatchingLemmaObjectThenWord = (
     consol.log(
       "vqkx ot:findMatchingLemmaObjectThenWord GGGet matches by Tags and Selectors."
     );
-    matches = lfUtils.filterByAndTagsAndOrTags(source, structureChunk);
+    matches = lfUtils.filterByTags(source, structureChunk);
+
+    if (forceMultipleModeAndQuestionOnly) {
+      matches = uUtils.selectRandomElementsFromArr(matches, 2);
+    }
 
     if (!matches.length) {
       consol.log(
