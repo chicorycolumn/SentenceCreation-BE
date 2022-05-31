@@ -295,7 +295,7 @@ exports.findMatchingLemmaObjectThenWord = (
   //    THREE (B): Un-PW: Pathway for Uninflected forms.
 
   //Note, this indeed is specifically uninflected FORMS.
-  //So, activeAdjectival, anteriorAdverbial, those kinds of things, that are indeed laabeled with the Form traitKey.
+  //So, activeAdjectival, anteriorAdverbial, those kinds of things, that are indeed labelled with the Form traitKey.
   //Remember, within eg a verb lobj, available Forms are infinitive, verbal, activeAdjectival, anterior...
 
   if (structureChunk.form && structureChunk.form.length) {
@@ -1287,7 +1287,7 @@ exports.findSinglePointMutationArray = (
 exports.stripOutInflectionCategorys = (
   currentLanguage,
   structureChunk,
-  PWlaabel
+  PWetiquette
 ) => {
   let allInflectionCategorysForThisWordtype =
     refObj.lemmaObjectTraitKeys[currentLanguage].inflectionChains[
@@ -1300,7 +1300,7 @@ exports.stripOutInflectionCategorys = (
       if (structureChunk["inflectionCategory"]) {
         consol.log(
           "[1;35m " +
-            `milm stripOutInflectionCategorys Deleting "${inflectionCategory}" from stCh "${structureChunk.chunkId}" because this is #${PWlaabel} in ${currentLanguage}` +
+            `milm stripOutInflectionCategorys Deleting "${inflectionCategory}" from stCh "${structureChunk.chunkId}" because this is #${PWetiquette} in ${currentLanguage}` +
             "[0m"
         );
       }
@@ -1358,12 +1358,12 @@ exports.switchMetaTraitValueForAWorkableConvertedTraitValue = (
   source,
   currentLanguage,
   structureChunk,
-  consoleLogLaabel
+  consoleLogEtiquette
 ) => {
   consol.log(
     "[1;33m " +
       `ivwa ` +
-      consoleLogLaabel +
+      consoleLogEtiquette +
       `. >>unkeyed metaTraitValue clause<<. inflectionKey is a metaTraitValue: "${inflectionKey}", but it is not present on the source. So, we should check if the source has corresponding inflectionKeys, eg for allPersonalGenders it would be [m, f], and if they hold all the same inflectionKeys, then we should let this work.` +
       "[0m"
   );

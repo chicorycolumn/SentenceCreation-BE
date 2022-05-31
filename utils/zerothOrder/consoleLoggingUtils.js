@@ -40,18 +40,20 @@ exports.logSpecial5 = (...args) => {
   }
 };
 
-exports.consoleLogObjectAtOneLevel = (obj, laabel, originLaabel) => {
+exports.consoleLogObjectAtOneLevel = (obj, etiquette, originEtiquette) => {
   if (!obj) {
     consol.log(
       "[1;33m " +
-        `--Console log "${laabel}" at one level, from "${originLaabel}" but FALSY.` +
+        `--Console log "${etiquette}" at one level, from "${originEtiquette}" but FALSY.` +
         "[0m"
     );
     return;
   }
 
   consol.log(
-    "[1;33m " + `--Console log "${laabel}" at one level, from "${originLaabel}":` + "[0m"
+    "[1;33m " +
+      `--Console log "${etiquette}" at one level, from "${originEtiquette}":` +
+      "[0m"
   );
   consol.log("[1;32m " + `------` + "[0m");
   consol.log("[1;32m " + `----------` + "[0m");
@@ -65,11 +67,11 @@ exports.consoleLogObjectAtOneLevel = (obj, laabel, originLaabel) => {
   consol.log("[1;32m " + `--` + "[0m");
 };
 
-exports.consoleLogObjectAtTwoLevels = (obj, laabel, originLaabel) => {
+exports.consoleLogObjectAtTwoLevels = (obj, etiquette, originEtiquette) => {
   if (!obj) {
     consol.log(
       "[1;33m " +
-        `--Console log "${laabel}" at two levels, from "${originLaabel}" but FALSY.` +
+        `--Console log "${etiquette}" at two levels, from "${originEtiquette}" but FALSY.` +
         "[0m"
     );
     return;
@@ -77,7 +79,7 @@ exports.consoleLogObjectAtTwoLevels = (obj, laabel, originLaabel) => {
 
   consol.log(
     "[1;33m " +
-      `--Console log "${laabel}" at two levels, from "${originLaabel}":` +
+      `--Console log "${etiquette}" at two levels, from "${originEtiquette}":` +
       "[0m"
   );
   consol.log("[1;32m " + `------` + "[0m");
@@ -109,11 +111,13 @@ exports.consoleLogAestheticBorder = (reps) => {
   }
 };
 
-exports.consoleLogPW = (laabel, structureChunk, multipleMode) => {
+exports.consoleLogPW = (etiquette, structureChunk, multipleMode) => {
   if (multipleMode) {
-    consol.consoleLogYellowWithBorder(`##${laabel} ${structureChunk.chunkId}`);
+    consol.consoleLogYellowWithBorder(
+      `##${etiquette} ${structureChunk.chunkId}`
+    );
   } else {
-    consol.consoleLogBlueWithBorder(`##${laabel} ${structureChunk.chunkId}`);
+    consol.consoleLogBlueWithBorder(`##${etiquette} ${structureChunk.chunkId}`);
   }
 };
 

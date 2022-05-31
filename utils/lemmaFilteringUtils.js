@@ -903,7 +903,7 @@ exports.filterBySelectors = (
   currentLanguage,
   structureChunk,
   matches,
-  consoleLogLaabel
+  consoleLogEtiquette
 ) => {
   let selectors =
     refObj.lemmaObjectTraitKeys[currentLanguage].selectors[
@@ -911,7 +911,7 @@ exports.filterBySelectors = (
     ];
 
   consol.log(
-    `rcwo filterBySelectors called from ${consoleLogLaabel}. selectors are [${selectors}]`
+    `rcwo filterBySelectors called from ${consoleLogEtiquette}. selectors are [${selectors}]`
   );
 
   if (selectors) {
@@ -944,7 +944,7 @@ exports.traverseAndRecordInflections = (
   structureChunk,
   multipleMode,
   currentLanguage,
-  consoleLogLaabel
+  consoleLogEtiquette
 ) => {
   let chunkId = structureChunk ? structureChunk.chunkId : "???";
 
@@ -957,7 +957,7 @@ exports.traverseAndRecordInflections = (
 
   if (shouldConsoleLog) {
     consol.log(
-      `kyde traverseAndRecordInflections for "${chunkId}" called by "${consoleLogLaabel}" reqArr`,
+      `kyde traverseAndRecordInflections for "${chunkId}" called by "${consoleLogEtiquette}" reqArr`,
       reqArr
     );
     consol.log(`kyde for "${chunkId}" source`, source);

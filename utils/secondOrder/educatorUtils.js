@@ -8,7 +8,7 @@ exports.checkOutputArrayForMissingUnits = (
   sentenceFormula,
   outputArray,
   currentLanguage,
-  laabel,
+  etiquette,
   useDummy
 ) => {
   if (useDummy) {
@@ -26,7 +26,7 @@ exports.checkOutputArrayForMissingUnits = (
     consol.log("dwke primaryOrders", primaryOrders);
     consol.log("dwke outputChunkIds", outputChunkIds);
     consol.throw(
-      `dwke checkOutputArrayForMissingUnits. "${laabel}" "${currentLanguage}" outputArray didn't have all the requisite units. See above.`
+      `dwke checkOutputArrayForMissingUnits. "${etiquette}" "${currentLanguage}" outputArray didn't have all the requisite units. See above.`
     );
   }
 };
