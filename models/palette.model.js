@@ -80,9 +80,45 @@ exports.fetchPalette = (req) => {
     { multipleMode, forceMultipleModeAndQuestionOnly }
   );
 
-  consol.log("questionSentenceData", questionSentenceData);
+  consol.log("smdv questionSentenceData", questionSentenceData);
 
-  if (forceMultipleModeAndQuestionOnly) {
+  function returnNullQuestionResponseObj(
+    questionSentenceData,
+    multipleMode,
+    questionLanguage,
+    answerLanguage
+  ) {
+    let nullQuestionResponseObj = scUtils.giveFinalSentences(
+      questionSentenceData,
+      multipleMode,
+      questionLanguage,
+      answerLanguage
+    );
+    return frUtils.finishAndSend(nullQuestionResponseObj, null);
+  }
+
+  if (
+    !questionSentenceData ||
+    !questionSentenceData.arrayOfOutputArrays ||
+    !questionSentenceData.arrayOfOutputArrays.length
+  ) {
+    consol.log(
+      "[1;31m " +
+        `#WARN cdqk fetchPalette. The question arrayOfOutputArrays came back NOTHING.` +
+        "[0m"
+    );
+
+    if (allCounterfactualResults) {
+      return;
+    } else {
+      return returnNullQuestionResponseObj(
+        questionSentenceData,
+        multipleMode,
+        questionLanguage,
+        answerLanguage
+      );
+    }
+  } else if (forceMultipleModeAndQuestionOnly) {
     if (sentenceFormula.sentenceStructure.length < 2) {
       return frUtils.finishAndSend({
         finalSentenceArr: questionSentenceData.arrayOfOutputArrays.map(
@@ -112,31 +148,6 @@ exports.fetchPalette = (req) => {
       });
     }
   } else {
-    if (
-      !questionSentenceData ||
-      !questionSentenceData.arrayOfOutputArrays ||
-      !questionSentenceData.arrayOfOutputArrays.length
-    ) {
-      consol.log(
-        "[1;31m " +
-          `#WARN cdqk fetchPalette. The question arrayOfOutputArrays came back NOTHING.` +
-          "[0m"
-      );
-
-      if (allCounterfactualResults) {
-        return;
-      } else {
-        let nullQuestionResponseObj = scUtils.giveFinalSentences(
-          questionSentenceData,
-          multipleMode,
-          questionLanguage,
-          answerLanguage
-        );
-
-        return frUtils.finishAndSend(nullQuestionResponseObj, null);
-      }
-    }
-
     consol.log(
       "veve questionSentenceData.arrayOfOutputArrays",
       questionSentenceData.arrayOfOutputArrays.map((arr) =>
