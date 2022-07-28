@@ -183,10 +183,14 @@ exports.getStChsForLemma = (lang, lemma) => {
       stCh.andTags.traitValue = lObj.tags;
     }
 
+    if (lObj.allohomInfo) {
+      stCh.allohomInfo = lObj.allohomInfo;
+    }
+
     stCh.wordtype = gpUtils.getWordtypeShorthandLObj(lObj);
     stCh.id = lObj.id;
     stCh.lemma = lObj.lemma;
-    console.log(4545, stCh.id, stCh.lemma);
+    console.log(4545, stCh.id, `"${stCh.lemma}"`);
 
     return stCh;
   });

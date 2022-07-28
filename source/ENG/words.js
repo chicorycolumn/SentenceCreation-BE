@@ -384,6 +384,54 @@ exports.wordsBank = {
     },
     {
       //links
+      translations: { ENG: ["nut"], POL: ["orzech"] },
+      tags: ["allohomTesting", "edible2"],
+      allohomInfo: { singleWordtype: true, text: "food", emoji: "🥜" },
+
+      //selectors
+      lemma: "nut",
+      id: "eng-nco-081",
+
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "nut",
+          gen: "nut's",
+        },
+        plural: {
+          nom: "nuts",
+          gen: "nuts'",
+        },
+      },
+    },
+    {
+      //links
+      translations: { ENG: ["nut"], POL: ["nakrętka"] },
+      tags: ["allohomTesting", "toolbox"],
+      allohomInfo: { singleWordtype: true, text: "metal", emoji: "🔩" },
+
+      //selectors
+      lemma: "nut",
+      id: "eng-nco-080",
+
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "nut",
+          gen: "nut's",
+        },
+        plural: {
+          nom: "nuts",
+          gen: "nuts'",
+        },
+      },
+    },
+    {
+      //links
       translations: { ENG: ["give"], POL: ["dać", "dawać"] },
       tags: [],
       //selectors
