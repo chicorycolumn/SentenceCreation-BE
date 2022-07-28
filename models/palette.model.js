@@ -26,6 +26,7 @@ exports.fetchPalette = (req) => {
     counterfactualSitSchematic,
     forceMultipleModeAndQuestionOnly,
     sentenceFormulaFromEducator,
+    requestingSingleWordOnly,
   } = req.body;
 
   let multipleMode = !!forceMultipleModeAndQuestionOnly;
@@ -119,17 +120,8 @@ exports.fetchPalette = (req) => {
       );
     }
   } else if (forceMultipleModeAndQuestionOnly) {
-    if (sentenceFormula.sentenceStructure.length < 2) {
-      return frUtils.finishAndSend({
-        finalSentenceArr: questionSentenceData.arrayOfOutputArrays.map(
-          (arr) => {
-            return {
-              selectedWord: arr.map((obj) => obj.selectedWord).join(" "),
-              lObjID: arr.map((obj) => obj.selectedLemmaObject.id).join(" "),
-            };
-          }
-        ),
-      });
+    if (requestingSingleWordOnly) {
+      return frUtils.sendResponseForSingleWord(questionSentenceData);
     } else {
       let arr = questionSentenceData.arrayOfOutputArrays.map((outputArray) => {
         let sentence = scUtils.buildSentenceString(
@@ -144,7 +136,7 @@ exports.fetchPalette = (req) => {
       });
 
       return frUtils.finishAndSend({
-        finalSentenceArr: arr,
+        finalSentenceArr: uUtils.flatten(arr),
       });
     }
   } else {

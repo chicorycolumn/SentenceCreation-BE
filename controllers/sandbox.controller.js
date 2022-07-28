@@ -63,7 +63,7 @@ exports.getErrors = (responseObj) => {
 exports.getSentencesAsQuestionOnly = (req, res, next) => {
   let questionLanguage = req.query.lang;
 
-  let { sentenceFormula } = req.body;
+  let { sentenceFormula, requestingSingleWordOnly } = req.body;
 
   let numberString = Date.now();
 
@@ -76,6 +76,7 @@ exports.getSentencesAsQuestionOnly = (req, res, next) => {
       sentenceFormulaFromEducator: sentenceFormula,
       questionLanguage,
       forceMultipleModeAndQuestionOnly: true,
+      requestingSingleWordOnly,
     },
   };
 
@@ -83,7 +84,7 @@ exports.getSentencesAsQuestionOnly = (req, res, next) => {
     .then((responseObj) => {
       let status = 200;
       let errors = exports.getErrors(responseObj);
-      let respo = { wordsAndIDs: responseObj.questionSentenceArr };
+      let respo = { payload: responseObj.questionSentenceArr };
 
       if (errors || !responseObj.questionSentenceArr) {
         respo = {

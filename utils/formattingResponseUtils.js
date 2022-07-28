@@ -3,6 +3,17 @@ const uUtils = require("./universalUtils.js");
 const consol = require("./zerothOrder/consoleLoggingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 
+exports.sendResponseForSingleWord = (questionSentenceData) => {
+  return frUtils.finishAndSend({
+    finalSentenceArr: questionSentenceData.arrayOfOutputArrays.map((arr) => {
+      return {
+        selectedWord: arr.map((obj) => obj.selectedWord).join(" "),
+        lObjID: arr.map((obj) => obj.selectedLemmaObject.id).join(" "),
+      };
+    }),
+  });
+};
+
 exports.finishAndSend = (
   questionResponseObj,
   answerResponseObj,
