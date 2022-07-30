@@ -183,6 +183,23 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
       return;
     }
 
+    if (structureChunk.merelyPreferredChoicesForQuestionSentence) {
+      let merelyPreferredChoicesForQuestionSentenceObj = {};
+
+      structureChunk.merelyPreferredChoicesForQuestionSentence.forEach(
+        (traitKey) => {
+          if (structureChunk[traitKey] && structureChunk[traitKey].length) {
+            merelyPreferredChoicesForQuestionSentenceObj[traitKey] =
+              structureChunk[traitKey].slice();
+          }
+          delete structureChunk[traitKey];
+        }
+      );
+
+      structureChunk.merelyPreferredChoicesForQuestionSentence =
+        merelyPreferredChoicesForQuestionSentenceObj;
+    }
+
     langUtils.preprocessStructureChunks(structureChunk);
 
     Object.keys(defaultTraitValuesRef).forEach((wordtype) => {

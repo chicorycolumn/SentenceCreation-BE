@@ -104,7 +104,7 @@ exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
     let questionOutputArrOrderedHeadsFirst = [];
     let headChunkIds = [];
 
-    let agreeKeys = [
+    let agreementTraits = [
       "agreeWith",
       "postHocAgreeWithPrimary",
       "postHocAgreeWithSecondary",
@@ -113,7 +113,7 @@ exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
     ];
 
     questionOutputArr.forEach((questionOutputUnit) => {
-      agreeKeys.forEach((agreeKey) => {
+      agreementTraits.forEach((agreeKey) => {
         if (questionOutputUnit.structureChunk[agreeKey]) {
           headChunkIds.push(questionOutputUnit.structureChunk[agreeKey]);
         }
@@ -1134,14 +1134,15 @@ exports.agglomerateAndRemoveAnnosIfSameResults = (
     delete questionOutputUnit.structureChunk.annotations[annoTraitKey];
     questionOutputUnit.structureChunk[annoTraitKey] = combinedTraitValues;
 
-    if (!questionOutputUnit.structureChunk.counterfactuallyImportantTraitKeys) {
-      questionOutputUnit.structureChunk.counterfactuallyImportantTraitKeys = [
-        annoTraitKey,
-      ];
-    } else {
-      questionOutputUnit.structureChunk.counterfactuallyImportantTraitKeys.push(
-        annoTraitKey
-      );
-    }
+    //Last checked 30th July 2022, this if else is never run. counterfactuallyImportantTraitKeys never used.
+    // if (!questionOutputUnit.structureChunk.counterfactuallyImportantTraitKeys) {
+    //   questionOutputUnit.structureChunk.counterfactuallyImportantTraitKeys = [
+    //     annoTraitKey,
+    //   ];
+    // } else {
+    //   questionOutputUnit.structureChunk.counterfactuallyImportantTraitKeys.push(
+    //     annoTraitKey
+    //   );
+    // }
   }
 };

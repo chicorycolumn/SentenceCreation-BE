@@ -718,23 +718,30 @@ exports.findMatchingLemmaObjectThenWord = (
       consol.consoleLogObjectAtOneLevel(subArrayOfOutputUnits);
 
       if (
-        structureChunk.preferredChoicesForQuestionSentence &&
-        Object.keys(structureChunk.preferredChoicesForQuestionSentence).length
+        structureChunk.merelyPreferredChoicesForQuestionSentence &&
+        Object.keys(structureChunk.merelyPreferredChoicesForQuestionSentence)
+          .length
       ) {
-        Object.keys(structureChunk.preferredChoicesForQuestionSentence).forEach(
-          (traitKey) => {
-            let traitValue =
-              structureChunk.preferredChoicesForQuestionSentence[traitKey];
+        consol.consoleLogObjectAtOneLevel(
+          structureChunk.merelyPreferredChoicesForQuestionSentence
+        );
 
-            subArrayOfOutputUnits = subArrayOfOutputUnits.filter(
-              (unit) =>
-                unit.drillPath &&
+        Object.keys(
+          structureChunk.merelyPreferredChoicesForQuestionSentence
+        ).forEach((traitKey) => {
+          let traitValue =
+            structureChunk.merelyPreferredChoicesForQuestionSentence[traitKey];
+
+          subArrayOfOutputUnits = subArrayOfOutputUnits.filter(
+            (unit) =>
+              unit.drillPath &&
+              traitValue.includes(
                 unit.drillPath.find(
                   (drillPathSubArr) => drillPathSubArr[0] === traitKey
-                )[1] === traitValue
-            );
-          }
-        );
+                )[1]
+              )
+          );
+        });
       }
 
       let unit = uUtils.selectRandom(subArrayOfOutputUnits);
@@ -742,7 +749,7 @@ exports.findMatchingLemmaObjectThenWord = (
        * So if matka and matki are possibles, then of course we must choose one for the one Q sentence,
        * so ultimately Q sentence is "Matki dały mi stół." but it could have equally been "Matka dała mi stół."
        *
-       * But see above, we can take preferredChoicesForQuestionSentence from stCh into account.
+       * But see above, we can take merelyPreferredChoicesForQuestionSentence from stCh into account.
        */
 
       //eg subArrayOfOutputUnits [{

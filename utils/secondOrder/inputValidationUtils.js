@@ -120,7 +120,7 @@ exports.validateSentenceFormula = (sentenceFormula, lang) => {
         }
       }
 
-      //4. Check if the traitValue of agreeKeys is an existing chunkId.
+      //4. Check if the traitValue of agreementTraits is an existing chunkId.
       if (stChTraits[traitKey].mustBeExistingChunkId) {
         if (!allChunkIds.includes(traitValue)) {
           consol.log(

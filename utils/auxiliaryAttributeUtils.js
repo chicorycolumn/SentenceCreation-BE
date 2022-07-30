@@ -162,10 +162,10 @@ exports.removeAnnotationsByAOCs = (
         "postHocAgreeWithTertiary",
       ]);
 
-      function getDepUnits(questionOutputArr, headChunkId, agreeKeys) {
+      function getDepUnits(questionOutputArr, headChunkId, agreementTraits) {
         return questionOutputArr
           .filter((unit) =>
-            agreeKeys.some(
+            agreementTraits.some(
               (agreeKey) => unit.structureChunk[agreeKey] === headChunkId
             )
           )

@@ -1034,7 +1034,8 @@ exports.dummySentenceFormulasBank = [
       },
       {
         chunkId: "art-1",
-        preferredChoicesForQuestionSentence: { form: "indefinite" },
+        form: ["indefinite"],
+        merelyPreferredChoicesForQuestionSentence: ["form"],
         agreeWith: "nco-1",
       },
       {

@@ -4382,7 +4382,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal15-04e GET 200 YES: Poleng. Preposition 'with'. Articles for singular.", () => {
+    it("#pal15-04e GET 200 YES: Poleng. Preposition 'with'. Articles for singular. merelyPreferredChoicesForQuestionSentence", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -4418,7 +4418,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal15-04f GET 200 YES: Engpol. Preposition 'with'. Articles for singular.", () => {
+    it("#pal15-04f GET 200 YES: Engpol. Preposition 'with'. Articles for singular. merelyPreferredChoicesForQuestionSentence", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
 

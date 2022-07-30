@@ -283,18 +283,14 @@ exports.structureChunkTraits = {
       ultimatelyMultipleTraitValuesOkay: true,
       needsNoValidation: true,
     },
-    traitsToForceOntoAnswer: {
-      expectedTypeOnStCh: "keyValueObject",
-      needsNoValidation: true,
-    },
     doNotUpdateSpecificLemmasAsIsJustOneMDN: {
       expectedTypeOnStCh: "boolean",
       needsNoValidation: true,
     },
-    counterfactuallyImportantTraitKeys: {
-      expectedTypeOnStCh: "array",
-      ultimatelyMultipleTraitValuesOkay: true,
-    },
+    // counterfactuallyImportantTraitKeys: {
+    //   expectedTypeOnStCh: "array",
+    //   ultimatelyMultipleTraitValuesOkay: true,
+    // },
     dontSpecifyOnThisChunk: { expectedTypeOnStCh: "boolean" },
     specificLemmas: {
       expectedTypeOnStCh: "array",
@@ -313,8 +309,8 @@ exports.structureChunkTraits = {
       ultimatelyMultipleTraitValuesOkay: true,
     },
     chunkId: { expectedTypeOnStCh: "string" },
-    preferredChoicesForQuestionSentence: {
-      expectedTypeOnStCh: "keyValueObject",
+    merelyPreferredChoicesForQuestionSentence: {
+      expectedTypeOnStCh: "array",
     },
     // wordtype: {
     //   expectedTypeOnStCh: "string",

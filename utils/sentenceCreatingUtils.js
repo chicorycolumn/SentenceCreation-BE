@@ -888,14 +888,14 @@ exports.selectWordVersions = (
 
         let depUnits = [];
 
-        let agreeKeys = [
+        let agreementTraits = [
           "agreeWith",
           "agreeWithSecondary",
           "agreeWithTertiary",
           "connectedTo",
         ];
 
-        agreeKeys.forEach((agreeKey) => {
+        agreementTraits.forEach((agreeKey) => {
           orderedOutputArr.forEach((unit) => {
             //Skeleton Clause
             if (
