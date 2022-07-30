@@ -684,11 +684,11 @@ exports.filterOutLackingLemmaObjects = (sourceArr, stCh, currentLanguage) => {
       return true;
     } else {
       if (
-        ["tantumPlurale", "tantumSingulare"].some(
+        refObj.tantumTypes.some(
           (tantum) =>
             lObj[tantum] &&
-            (!stCh.blockedLemmaObjects ||
-              !stCh.blockedLemmaObjects.includes(tantum))
+            (!stCh.blockedLemmaObjectTypes ||
+              !stCh.blockedLemmaObjectTypes.includes(tantum))
         )
       ) {
         return true;

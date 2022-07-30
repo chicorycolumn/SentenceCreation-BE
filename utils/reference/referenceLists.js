@@ -1,3 +1,5 @@
+exports.tantumTypes = ["tantumPlurale", "tantumSingulare"];
+
 exports.incompatibleTraitsRef = {
   POL: {
     //If we're examining gender traitKey.
@@ -244,6 +246,42 @@ exports.lemmaObjectTraitKeys = {
   },
 };
 
+exports._tenseDescriptions = {
+  POL: [
+    "past im",
+    "present im",
+    "future im",
+    "past pf",
+    "future pf",
+    // "imperative",
+    // "negative imperative",
+    // "conditional im",
+    // "conditional pf",
+    // "cond0 condition",
+    // "cond0 outcome",
+    // "cond1 condition",
+    // "cond1 outcome",
+    // "cond2 condition",
+    // "cond2 outcome",
+    // "cond3 condition",
+    // "cond3 outcome",
+  ],
+  ENG: [
+    "past",
+    "present",
+    "future",
+    "past simple",
+    "past continuous",
+    "past perfect",
+    "present simple",
+    "present continuous",
+    "present perfect",
+    "future simple",
+    "future continuous",
+    "future perfect",
+  ],
+};
+
 exports.structureChunkTraits = {
   //Some trait are lexical (isLexical: true), used to directly find word values, eg "gender", "gcase".
   //Others are functional (isLexical: false), eg "specificalLemmas", "preventAddingFurtherClarifiers", "andTags".
@@ -268,13 +306,9 @@ exports.structureChunkTraits = {
       ultimatelyMultipleTraitValuesOkay: true,
       needsNoValidation: true,
     },
-    blockedTenseDescriptions: {
+    blockedLemmaObjectTypes: {
       expectedTypeOnStCh: "array",
-      ultimatelyMultipleTraitValuesOkay: true,
-      needsNoValidation: true,
-    },
-    blockedLemmaObjects: {
-      expectedTypeOnStCh: "array",
+      possibleTraitValues: ["tantumPlurale", "tantumSingulare"],
       ultimatelyMultipleTraitValuesOkay: true,
       needsNoValidation: true,
     },
@@ -384,25 +418,13 @@ exports.structureChunkTraits = {
       isLexical: true,
       compatibleWordtypes: ["verb"],
       expectedTypeOnStCh: "array",
-      possibleTraitValues: [
-        "past im",
-        "present im",
-        "future im",
-        "past pf",
-        "future pf",
-        // "imperative",
-        // "negative imperative",
-        // "conditional im",
-        // "conditional pf",
-        // "cond0 condition",
-        // "cond0 outcome",
-        // "cond1 condition",
-        // "cond1 outcome",
-        // "cond2 condition",
-        // "cond2 outcome",
-        // "cond3 condition",
-        // "cond3 outcome",
-      ],
+      possibleTraitValues: this._tenseDescriptions["POL"],
+    },
+    blockedTenseDescriptions: {
+      expectedTypeOnStCh: "array",
+      ultimatelyMultipleTraitValuesOkay: true,
+      needsNoValidation: true,
+      possibleTraitValues: this._tenseDescriptions["POL"],
     },
     person: {
       isLexical: true,
@@ -514,20 +536,13 @@ exports.structureChunkTraits = {
       isLexical: true,
       compatibleWordtypes: ["verb"],
       expectedTypeOnStCh: "array",
-      possibleTraitValues: [
-        "past",
-        "present",
-        "future",
-        "past simple",
-        "past continuous",
-        "past perfect",
-        "present simple",
-        "present continuous",
-        "present perfect",
-        "future simple",
-        "future continuous",
-        "future perfect",
-      ],
+      possibleTraitValues: this._tenseDescriptions["ENG"],
+    },
+    blockedTenseDescriptions: {
+      expectedTypeOnStCh: "array",
+      ultimatelyMultipleTraitValuesOkay: true,
+      needsNoValidation: true,
+      possibleTraitValues: this._tenseDescriptions["ENG"],
     },
     person: {
       isLexical: true,
