@@ -890,9 +890,10 @@ exports.selectWordVersions = (
 
         let agreementTraits = [
           "agreeWith",
-          "agreeWithSecondary",
-          "agreeWithTertiary",
-          "connectedTo",
+          // "connectedTo",
+          // "postHocAgreeWithPrimary",
+          // "postHocAgreeWithSecondary",
+          // "postHocAgreeWithTertiary",
         ];
 
         agreementTraits.forEach((agreeKey) => {

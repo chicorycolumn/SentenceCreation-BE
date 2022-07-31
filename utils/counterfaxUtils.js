@@ -109,7 +109,7 @@ exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
       "postHocAgreeWithPrimary",
       "postHocAgreeWithSecondary",
       "postHocAgreeWithTertiary",
-      "connectedTo",
+      // "connectedTo",
     ];
 
     questionOutputArr.forEach((questionOutputUnit) => {

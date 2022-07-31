@@ -363,10 +363,10 @@ exports.structureChunkTraits = {
       expectedTypeOnStCh: "string",
       mustBeExistingChunkId: true,
     },
-    connectedTo: {
-      expectedTypeOnStCh: "string",
-      mustBeExistingChunkId: true,
-    },
+    // connectedTo: {
+    //   expectedTypeOnStCh: "string",
+    //   mustBeExistingChunkId: true,
+    // },
     chunkValue: {
       expectedTypeOnStCh: "string",
       compatibleWordtypes: ["fixed"],
@@ -422,6 +422,7 @@ exports.structureChunkTraits = {
     },
     blockedTenseDescriptions: {
       expectedTypeOnStCh: "array",
+      compatibleWordtypes: ["verb"],
       ultimatelyMultipleTraitValuesOkay: true,
       needsNoValidation: true,
       possibleTraitValues: this._tenseDescriptions["POL"],
@@ -540,6 +541,7 @@ exports.structureChunkTraits = {
     },
     blockedTenseDescriptions: {
       expectedTypeOnStCh: "array",
+      compatibleWordtypes: ["verb"],
       ultimatelyMultipleTraitValuesOkay: true,
       needsNoValidation: true,
       possibleTraitValues: this._tenseDescriptions["ENG"],
