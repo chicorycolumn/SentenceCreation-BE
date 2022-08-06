@@ -7,6 +7,23 @@ const refFxn = require("./reference/referenceFunctions.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
 const allLangUtils = require("./allLangUtils.js");
 
+exports.drillCarefullyIntoPHD = (source, key) => {
+  if (!source) {
+    consol.throw(
+      `sidn stCh's form value '${key}' not present on this level of PHD lObj's inflections as that's null.`
+    );
+  } else if (!Object.keys(source).includes(key)) {
+    consol.log(source);
+    consol.throw(
+      `sido stCh's form value '${key}' not present on this level of PHD lObj's inflections which had keys [${Object.keys(
+        source
+      ).join(",")}] See source above.`
+    );
+  } else {
+    return source[key];
+  }
+};
+
 exports.filterWithin_PHD = (
   lemmaObject,
   PHDstructureChunk,
@@ -21,70 +38,17 @@ exports.filterWithin_PHD = (
     multipleMode,
   });
 
-  PHDstructureChunk["wordtype"] = gpUtils.getWordtypeStCh(PHDstructureChunk);
-
   let drillPath = [];
   let drillPathSecondary = [];
   let drillPathTertiary = [];
 
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
 
-  let PHD_type;
-
-  refObj.postHocDependentChunkWordtypes[currentLanguage].forEach(
-    (PHD_dataObj) => {
-      if (
-        Object.keys(PHD_dataObj.conditions).every((PHD_conditionTraitKey) => {
-          let PHD_conditionTraitValueArr =
-            PHD_dataObj.conditions[PHD_conditionTraitKey];
-
-          if (
-            PHD_conditionTraitValueArr.some((arrayItem) => {
-              if (
-                PHDstructureChunk[PHD_conditionTraitKey] &&
-                Array.isArray(PHDstructureChunk[PHD_conditionTraitKey]) &&
-                PHDstructureChunk[PHD_conditionTraitKey].includes(arrayItem)
-              ) {
-                return true;
-              } else if (
-                PHDstructureChunk[PHD_conditionTraitKey] === arrayItem
-              ) {
-                return true;
-              }
-            })
-          ) {
-            return true;
-          }
-        })
-      ) {
-        PHD_type = PHD_dataObj.PHD_type;
-      }
-    }
-  );
-
-  delete PHDstructureChunk["wordtype"];
-
-  if ("check") {
-    if (!PHD_type) {
-      consol.throw(
-        "pwir filterWithin_PHD. Failed postHocDependentChunkWordtypes[currentLanguage].forEach(PHD_dataObj => passing the PHD_dataObj.conditions)"
-      );
-    }
-
-    if (
-      //SLIM
-      !PHDstructureChunk.specificLemmas
-      // || PHDstructureChunk.specificLemmas.length !== 1
-    ) {
-      consol.throw(
-        "#ERR ohmk lf:filterWithin_PHD. PHD-stCh should have exactly one traitValue in specificLemmas arr."
-      );
-    }
-  }
-
   let postHocInflectionChains = refObj.postHocDependentChunkWordtypes[
     currentLanguage
-  ].find((PHD_dataObj) => PHD_dataObj.PHD_type === PHD_type).inflectionChains;
+  ].find(
+    (PHD_dataObj) => PHD_dataObj.PHD_type === PHDstructureChunk.PHD_type
+  ).inflectionChains;
 
   let lemmaObjectCopy = uUtils.copyWithoutReference(lemmaObject);
 
@@ -101,7 +65,7 @@ exports.filterWithin_PHD = (
     currentLanguage,
     multipleMode,
     outputArray,
-    PHD_type,
+    PHD_type: PHDstructureChunk.PHD_type,
     postHocInflectionChains,
   });
   // consol.consoleLogObjectAtTwoLevels(
@@ -114,17 +78,37 @@ exports.filterWithin_PHD = (
 
   consol.log("giuy filterWithin_PHD. source", source);
 
+  if (
+    !(
+      Array.isArray(PHDstructureChunk.form) &&
+      PHDstructureChunk.form.length === 1
+    )
+  ) {
+    consol.throw(
+      `sidm Needed 'form' to be exactly one value on PHDstructureChunk but was`,
+      PHDstructureChunk.form
+    );
+  } else {
+    source = lfUtils.drillCarefullyIntoPHD(source, PHDstructureChunk.form[0]);
+  }
+
   Object.keys(postHocInflectionChains).forEach((postHocAgreeKey) => {
+    let postHocInflectionChain = postHocInflectionChains[postHocAgreeKey];
+
     consol.log(
       "[1;35m " +
-        `nvnm lf:filterWithin_PHD Running loop for "${postHocAgreeKey}"` +
+        `nvnm lf:filterWithin_PHD Running loop for "${postHocAgreeKey}" which has postHocInflectionChain [${postHocInflectionChain.join(
+          ","
+        )}]` +
         "[0m"
     );
     consol.log(
       "[1;33m " + `outputArray: [${outputArray.map((x) => x.selectedWord)}]` + "[0m"
     );
 
-    let postHocInflectionChain = postHocInflectionChains[postHocAgreeKey];
+    if (!postHocInflectionChain.length) {
+      return;
+    }
 
     let headOutputUnit = outputArray.find(
       (outputUnit) =>
@@ -185,16 +169,26 @@ exports.filterWithin_PHD = (
         );
 
         if (formattedInflectionKeyArray.length !== 1) {
+          formattedInflectionKeyArray =
+            headOutputUnit.structureChunk.gender.slice();
+        }
+
+        if (formattedInflectionKeyArray.length !== 1) {
+          consol.log(
+            "formattedInflectionKeyArray:",
+            formattedInflectionKeyArray
+          );
           consol.throw(
-            "#ERR ikdr lf:filterWithin_PHD. Expected formattedInflectionKeyArray to have length 1"
+            "#ERR ikdr lf:filterWithin_PHD. Expected formattedInflectionKeyArray to have length 1 but see above:"
           );
         }
-        let formattedInflectionKey = formattedInflectionKeyArray[0];
 
         consol.log(
-          `ijeg filterWithin_PHD. Updating drillPathOfHead with gender "${formattedInflectionKey}"`
+          `ijeg filterWithin_PHD. Updating drillPathOfHead with gender [${formattedInflectionKeyArray.join(
+            ","
+          )}]`
         );
-        drillPathOfHead.push(["gender", formattedInflectionKey]);
+        drillPathOfHead.push(["gender", formattedInflectionKeyArray[0]]);
       } else {
         throw "I am unsure about which gender to use - either the one from lobj inherent, or the one from drillPath. I wanted to use this gender for the PHD stCh.";
       }
@@ -217,7 +211,7 @@ exports.filterWithin_PHD = (
           );
       }
 
-      source = source[inflectionKey];
+      source = lfUtils.drillCarefullyIntoPHD(source, inflectionKey);
 
       consol.log(
         `\nihjy lf:filterWithin_PHD "${postHocAgreeKey}" drilling into source with "${inflectionKey}" so source is now`,
@@ -663,11 +657,20 @@ exports.updateStChByInflections = (outputUnit, currentLanguage) => {
   if (outputUnit.drillPath) {
     outputUnit.drillPath.forEach((drillPathSubArr) => {
       let requiredInflectionCategory = drillPathSubArr[0];
-      let selectedInflectionKey = drillPathSubArr[1];
+      let val = drillPathSubArr[1];
+      let selectedInflectionKeys;
+      if (Array.isArray(val)) {
+        selectedInflectionKeys = val;
+      } else if (typeof val === "string") {
+        selectedInflectionKeys = [val];
+      } else {
+        consol.throw(
+          `twsi Expected arr or string for this value in drillPath but got ${typeof val}.`
+        );
+      }
 
-      outputUnit.structureChunk[requiredInflectionCategory] = [
-        selectedInflectionKey,
-      ];
+      outputUnit.structureChunk[requiredInflectionCategory] =
+        selectedInflectionKeys;
     });
   }
 };
@@ -1141,6 +1144,7 @@ exports.traverseAndRecordInflections = (
       // consol.log("fxxb8");
 
       outputUnitsWithDrillPathsMini.pop();
+      return;
     } else {
       consol.log(
         "[1;33m " +
