@@ -384,7 +384,7 @@ exports.structureChunkTraits = {
       compatibleWordtypes: ["adjective", "pronombre", "verb", "preposition"],
       possibleTraitValuesPerWordtype: {
         adjective: ["simple", "comparative", "superlative", "adverb"],
-        pronombre: ["pronombre", "pronombreAndDeterminer"],
+        pronombre: ["pronombre", "pronombreAndDeterminer", "determiner"],
         verb: [
           "verbal",
           "infinitive",
