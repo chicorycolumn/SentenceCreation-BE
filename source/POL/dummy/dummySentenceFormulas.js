@@ -1723,7 +1723,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "pre-1",
 
         specificLemmas: ["z"],
-        connectedTo: "nco-1",
+        // connectedTo: "nco-1",
       },
       {
         chunkId: "nco-1",
@@ -1744,7 +1744,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "pre-1",
 
         specificLemmas: ["z"],
-        connectedTo: "nco-1",
+        // connectedTo: "nco-1",
       },
       {
         chunkId: "nco-1",
@@ -1765,7 +1765,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "pre-1",
 
         specificLemmas: ["z"],
-        connectedTo: "nco-1",
+        // connectedTo: "nco-1",
       },
       {
         chunkId: "nco-1",
@@ -1786,7 +1786,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "pre-1",
 
         specificLemmas: ["z"],
-        connectedTo: "nco-1",
+        // connectedTo: "nco-1",
       },
       {
         chunkId: "nco-1",
@@ -1807,7 +1807,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "pre-1",
 
         specificLemmas: ["z"],
-        connectedTo: "nco-1",
+        // connectedTo: "nco-1",
       },
       {
         chunkId: "nco-1",

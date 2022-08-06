@@ -28,6 +28,15 @@ exports.validateSentenceFormula = (sentenceFormula, lang) => {
         refObj.structureChunkTraits[lang][traitKey] ||
         refObj.structureChunkTraits["ALL"][traitKey];
 
+      try {
+        reference.needsNoValidation;
+      } catch (err) {
+        consol.throw(
+          `\n\nmzod traitKey: "${traitKey}" not found on refObj.structureChunkTraits\n\n`,
+          err
+        );
+      }
+
       if (
         ["fixed"].includes(gpUtils.getWordtypeStCh(structureChunk)) ||
         reference.needsNoValidation

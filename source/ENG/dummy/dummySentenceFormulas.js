@@ -1030,7 +1030,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pre-1",
         specificLemmas: ["with"],
-        connectedTo: "nco-1",
+        // connectedTo: "nco-1",
       },
       {
         chunkId: "art-1",
@@ -1054,7 +1054,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pre-1",
         specificLemmas: ["with"],
-        connectedTo: "nco-1",
+        // connectedTo: "nco-1",
       },
       {
         chunkId: "art-1",
@@ -1076,7 +1076,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pre-1",
         specificLemmas: ["with"],
-        connectedTo: "nco-1",
+        // connectedTo: "nco-1",
       },
       {
         chunkId: "art-1",
@@ -1098,7 +1098,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pre-1",
         specificLemmas: ["with"],
-        connectedTo: "nco-1",
+        // connectedTo: "nco-1",
       },
       {
         chunkId: "art-1",
@@ -1120,7 +1120,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pre-1",
         specificLemmas: ["with"],
-        connectedTo: "nco-1",
+        // connectedTo: "nco-1",
       },
       {
         chunkId: "art-1",
