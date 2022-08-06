@@ -552,6 +552,7 @@ exports.sentenceFormulasBank = [
         form: ["determiner"],
         specificLemmas: ["POSSESSIVE"],
         agreeWith: "pro-1-invisible",
+        agreeWith2: "npe-1",
       },
       {
         chunkId: "npe-1",

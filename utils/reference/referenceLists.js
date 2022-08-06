@@ -363,6 +363,28 @@ exports.structureChunkTraits = {
       expectedTypeOnStCh: "string",
       mustBeExistingChunkId: true,
     },
+    agreeWith2: {
+      expectedTypeOnStCh: "string",
+      mustBeExistingChunkId: true,
+    },
+    PHD_type: {
+      expectedTypeOnStCh: "string",
+    },
+    postHocAgreeWithPrimary: {
+      expectedTypeOnStCh: "string",
+      mustBeExistingChunkId: true,
+      compatibleWordtypes: ["pronombre"],
+    },
+    postHocAgreeWithSecondary: {
+      expectedTypeOnStCh: "string",
+      mustBeExistingChunkId: true,
+      compatibleWordtypes: ["pronombre"],
+    },
+    postHocAgreeWithTertiary: {
+      expectedTypeOnStCh: "string",
+      mustBeExistingChunkId: true,
+      compatibleWordtypes: ["pronombre"],
+    },
     // connectedTo: {
     //   expectedTypeOnStCh: "string",
     //   mustBeExistingChunkId: true,
@@ -396,18 +418,6 @@ exports.structureChunkTraits = {
         ],
         preposition: ["onlyForm"],
       },
-    },
-    postHocAgreeWithPrimary: {
-      expectedTypeOnStCh: "string",
-      mustBeExistingChunkId: true,
-    },
-    postHocAgreeWithSecondary: {
-      expectedTypeOnStCh: "string",
-      mustBeExistingChunkId: true,
-    },
-    postHocAgreeWithTertiary: {
-      expectedTypeOnStCh: "string",
-      mustBeExistingChunkId: true,
     },
     //
     //
@@ -659,3 +669,11 @@ exports.defaultTraitValues = {
   verb: { form: ["verbal"] },
   preposition: { form: ["onlyForm"] },
 };
+
+exports.agreementTraits = [
+  "agreeWith",
+  //"agreeWith2", not technically an agreeKey as gets removed and replaced by postHocAgreeWithSecondary.
+  "postHocAgreeWithPrimary",
+  "postHocAgreeWithSecondary",
+  "postHocAgreeWithTertiary",
+];

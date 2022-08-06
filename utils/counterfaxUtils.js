@@ -104,16 +104,8 @@ exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
     let questionOutputArrOrderedHeadsFirst = [];
     let headChunkIds = [];
 
-    let agreementTraits = [
-      "agreeWith",
-      "postHocAgreeWithPrimary",
-      "postHocAgreeWithSecondary",
-      "postHocAgreeWithTertiary",
-      // "connectedTo",
-    ];
-
     questionOutputArr.forEach((questionOutputUnit) => {
-      agreementTraits.forEach((agreeKey) => {
+      refObj.agreementTraits.forEach((agreeKey) => {
         if (questionOutputUnit.structureChunk[agreeKey]) {
           headChunkIds.push(questionOutputUnit.structureChunk[agreeKey]);
         }

@@ -1416,8 +1416,8 @@ exports.dummySentenceFormulasBank = [
 
         form: ["determiner"],
         specificLemmas: ["POSSESSIVE"],
-        postHocAgreeWithPrimary: "pro-1",
-        postHocAgreeWithSecondary: "nco-1",
+        agreeWith: "pro-1",
+        agreeWith2: "nco-1",
       },
       {
         chunkId: "nco-1",
@@ -1446,8 +1446,8 @@ exports.dummySentenceFormulasBank = [
 
         form: ["determiner"],
         specificLemmas: ["POSSESSIVE"],
-        postHocAgreeWithPrimary: "pro-1",
-        postHocAgreeWithSecondary: "nco-1",
+        agreeWith: "pro-1",
+        agreeWith2: "nco-1",
       },
       {
         chunkId: "nco-1",

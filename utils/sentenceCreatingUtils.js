@@ -350,13 +350,15 @@ exports.processSentenceFormula = (
   let grandAllPossOutputUnits_other = [];
   let grandAllPossOutputUnits_PHD = [];
 
-  let postHocDependentChunks = otherChunks.filter((chunk) =>
-    [
-      "postHocAgreeWithPrimary",
-      "postHocAgreeWithSecondary",
-      "postHocAgreeWithTertiary",
-    ].some((postHocAgreeKey) => chunk[postHocAgreeKey])
-  );
+  let postHocDependentChunks = otherChunks.filter((chunk) => chunk.PHD_type);
+
+  postHocDependentChunks.forEach((stCh) => {
+    if (!stCh.postHocAgreeWithPrimary) {
+      consol.throw(
+        `iayi ${currentLanguage} stCh "${stCh.chunkId}" is PHD_type "${stCh.PHD_type}" and yet no postHocAgreeWithPrimary?`
+      );
+    }
+  });
 
   //STEP THREE: Select PHD words and add to result array.
 
@@ -888,13 +890,7 @@ exports.selectWordVersions = (
 
         let depUnits = [];
 
-        let agreementTraits = [
-          "agreeWith",
-          // "connectedTo",
-          // "postHocAgreeWithPrimary",
-          // "postHocAgreeWithSecondary",
-          // "postHocAgreeWithTertiary",
-        ];
+        let agreementTraits = ["agreeWith"];
 
         agreementTraits.forEach((agreeKey) => {
           orderedOutputArr.forEach((unit) => {
@@ -1434,15 +1430,7 @@ exports.sortStructureChunks = (
   separateDependentsAndPHDs
 ) => {
   let headIds = Array.from(
-    new Set(
-      sentenceStructure
-        .map((chunk) => {
-          if (typeof chunk === "object" && chunk.agreeWith) {
-            return chunk.agreeWith;
-          }
-        })
-        .filter((item) => item)
-    )
+    new Set(sentenceStructure.map((chunk) => chunk.agreeWith).filter((x) => x))
   );
 
   let headChunks = [];
@@ -1450,18 +1438,11 @@ exports.sortStructureChunks = (
   let PHDheadIds = [];
 
   sentenceStructure.forEach((chunk) => {
-    if (typeof chunk === "object") {
-      [
-        "agreeWith",
-        "postHocAgreeWithPrimary",
-        "postHocAgreeWithSecondary",
-        "postHocAgreeWithTertiary",
-      ].forEach((agreeKey) => {
-        if (chunk[agreeKey]) {
-          PHDheadIds.push(chunk[agreeKey]);
-        }
-      });
-    }
+    refObj.agreementTraits.forEach((agreeKey) => {
+      if (chunk[agreeKey]) {
+        PHDheadIds.push(chunk[agreeKey]);
+      }
+    });
   });
 
   PHDheadIds = Array.from(new Set(PHDheadIds));
@@ -1473,18 +1454,11 @@ exports.sortStructureChunks = (
   });
 
   let dependentChunks = sentenceStructure.filter(
-    (structureChunk) =>
-      typeof structureChunk === "object" && structureChunk.agreeWith
+    (structureChunk) => structureChunk.agreeWith
   );
 
   let PHDChunks = sentenceStructure.filter(
-    (structureChunk) =>
-      typeof structureChunk === "object" &&
-      [
-        "postHocAgreeWithPrimary",
-        "postHocAgreeWithSecondary",
-        "postHocAgreeWithTertiary",
-      ].some((agreeKey) => structureChunk[agreeKey])
+    (structureChunk) => structureChunk.PHD_type
   );
 
   let otherChunks = sentenceStructure.filter(

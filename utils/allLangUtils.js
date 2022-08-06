@@ -173,6 +173,96 @@ exports.adjustVirilityOfStructureChunk = (
   }
 };
 
+exports.setPostHocAgreeKeys = (structureChunk, currentLanguage) => {
+  if (refObj.postHocDependentChunkWordtypes[currentLanguage]) {
+    structureChunk["wordtype"] = gpUtils.getWordtypeStCh(structureChunk);
+
+    let PHD_type;
+
+    refObj.postHocDependentChunkWordtypes[currentLanguage].forEach(
+      (PHD_dataObj) => {
+        if (
+          Object.keys(PHD_dataObj.conditions).every((PHD_conditionTraitKey) => {
+            let PHD_conditionTraitValueArr =
+              PHD_dataObj.conditions[PHD_conditionTraitKey];
+
+            if (
+              PHD_conditionTraitValueArr.some((arrayItem) => {
+                if (
+                  structureChunk[PHD_conditionTraitKey] &&
+                  Array.isArray(structureChunk[PHD_conditionTraitKey]) &&
+                  structureChunk[PHD_conditionTraitKey].includes(arrayItem)
+                ) {
+                  return true;
+                } else if (
+                  structureChunk[PHD_conditionTraitKey] === arrayItem
+                ) {
+                  return true;
+                }
+              })
+            ) {
+              return true;
+            }
+          })
+        ) {
+          PHD_type = PHD_dataObj.PHD_type;
+        }
+      }
+    );
+
+    delete structureChunk["wordtype"];
+
+    if (PHD_type) {
+      consol.log(`stCh "${structureChunk.chunkId}" is PHD_type "${PHD_type}".`);
+      structureChunk.PHD_type = PHD_type;
+      const ref = {
+        agreeWith: "postHocAgreeWithPrimary",
+        agreeWith2: "postHocAgreeWithSecondary",
+      };
+      Object.keys(ref).forEach((oldKey) => {
+        let newKey = ref[oldKey];
+        if (!structureChunk[newKey]) {
+          try {
+            structureChunk[newKey] = structureChunk[oldKey];
+            delete structureChunk[oldKey];
+          } catch (err) {
+            consol.throw(
+              `yhtm Wanted to replace oldKey "${oldKey}" with newKey "${newKey}" on stCh "${structureChunk.chunkId}" but oldKey probably not found.`
+            );
+          }
+        }
+      });
+    } else {
+      delete structureChunk.agreeWith2;
+    }
+  }
+
+  if (structureChunk.PHD_type && !structureChunk.postHocAgreeWithPrimary) {
+    consol.throw(
+      `lwdi ${currentLanguage} "${structureChunk.chunkId}" has PHD_type "${structureChunk.PHD_type}" and yet no postHocAgreeWithPrimary.`
+    );
+  }
+};
+
+exports.setMerelyPreferredChoices = (structureChunk, currentLanguage) => {
+  if (structureChunk.merelyPreferredChoicesForQuestionSentence) {
+    let merelyPreferredChoicesForQuestionSentenceObj = {};
+
+    structureChunk.merelyPreferredChoicesForQuestionSentence.forEach(
+      (traitKey) => {
+        if (structureChunk[traitKey] && structureChunk[traitKey].length) {
+          merelyPreferredChoicesForQuestionSentenceObj[traitKey] =
+            structureChunk[traitKey].slice();
+        }
+        delete structureChunk[traitKey];
+      }
+    );
+
+    structureChunk.merelyPreferredChoicesForQuestionSentence =
+      merelyPreferredChoicesForQuestionSentenceObj;
+  }
+};
+
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
   const defaultTraitValuesRef = refObj.defaultTraitValues;
@@ -183,23 +273,8 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
       return;
     }
 
-    if (structureChunk.merelyPreferredChoicesForQuestionSentence) {
-      let merelyPreferredChoicesForQuestionSentenceObj = {};
-
-      structureChunk.merelyPreferredChoicesForQuestionSentence.forEach(
-        (traitKey) => {
-          if (structureChunk[traitKey] && structureChunk[traitKey].length) {
-            merelyPreferredChoicesForQuestionSentenceObj[traitKey] =
-              structureChunk[traitKey].slice();
-          }
-          delete structureChunk[traitKey];
-        }
-      );
-
-      structureChunk.merelyPreferredChoicesForQuestionSentence =
-        merelyPreferredChoicesForQuestionSentenceObj;
-    }
-
+    allLangUtils.setPostHocAgreeKeys(structureChunk, currentLanguage);
+    allLangUtils.setMerelyPreferredChoices(structureChunk, currentLanguage);
     langUtils.preprocessStructureChunks(structureChunk);
 
     Object.keys(defaultTraitValuesRef).forEach((wordtype) => {

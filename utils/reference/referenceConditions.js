@@ -100,13 +100,15 @@ exports.conditionsOnWhichToBlockAnnotations = {
 // };
 
 exports.postHocDependentChunkWordtypes = {
-  ENG: [],
   POL: [
     {
       PHD_type: "POL possessive pronombre",
-      conditions: { wordtype: ["pronombre"], specificLemmas: ["POSSESSIVE"] },
+      conditions: {
+        wordtype: ["pronombre"],
+        specificLemmas: ["POSSESSIVE"],
+      },
       inflectionChains: {
-        postHocAgreeWithPrimary: ["form", "person", "number", "gender"],
+        postHocAgreeWithPrimary: ["person", "number", "gender"],
         postHocAgreeWithSecondary: ["number", "gender", "gcase"],
       },
     },
