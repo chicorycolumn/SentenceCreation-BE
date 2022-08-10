@@ -41,10 +41,10 @@ xdescribe("/educator/sandbox - Testing API.", () => {
 
     const expected = {
       questionSentenceArr: [
-        ["Czerwona kobieta."],
-        ["Czerwone kobiety."],
-        ["Czerwony chłopiec."],
-        ["Czerwoni chłopcy."],
+        "Czerwona kobieta.",
+        "Czerwone kobiety.",
+        "Czerwony chłopiec.",
+        "Czerwoni chłopcy.",
       ],
     };
 
@@ -81,12 +81,7 @@ xdescribe("/educator/sandbox - Testing API.", () => {
     };
 
     const expected = {
-      questionSentenceArr: [
-        { selectedWord: "woman", lObjID: "eng-npe-001" },
-        { selectedWord: "women", lObjID: "eng-npe-001" },
-        { selectedWord: "boy", lObjID: "eng-npe-002" },
-        { selectedWord: "boys", lObjID: "eng-npe-002" },
-      ],
+      questionSentenceArr: ["Woman.", "Women.", "Boy.", "Boys."],
     };
 
     return request(app)

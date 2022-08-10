@@ -1,8 +1,8 @@
 exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "symb1",
-    sentenceFormulaId: "ENG-00-101a",
-    translations: { POL: ["POL-00-101a"] },
+    sentenceFormulaId: "ENG-90-901a",
+    translations: { POL: ["POL-90-901a"] },
     sentenceStructure: [
       // {
       //   chunkId: "art-1",
@@ -29,8 +29,8 @@ exports.sentenceFormulasBank = [
   },
   {
     sentenceFormulaSymbol: "symb1",
-    sentenceFormulaId: "ENG-00-101b",
-    translations: { POL: ["POL-00-101b"] },
+    sentenceFormulaId: "ENG-90-901b",
+    translations: { POL: ["POL-90-901b"] },
     sentenceStructure: [
       // {
       //   chunkId: "art-1",
@@ -58,8 +58,8 @@ exports.sentenceFormulasBank = [
   },
   {
     sentenceFormulaSymbol: "102a I'll read (pf fut)",
-    sentenceFormulaId: "ENG-00-102a",
-    translations: { POL: ["POL-00-102a"] },
+    sentenceFormulaId: "ENG-90-902a",
+    translations: { POL: ["POL-90-902a"] },
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "I" },
       {
@@ -75,8 +75,8 @@ exports.sentenceFormulasBank = [
   },
   {
     sentenceFormulaSymbol: "102a I'll read",
-    sentenceFormulaId: "ENG-00-102a",
-    translations: { POL: ["POL-00-102a"] },
+    sentenceFormulaId: "ENG-90-902a",
+    translations: { POL: ["POL-90-902a"] },
     sentenceStructure: [],
     primaryOrders: [],
     additionalOrders: [],

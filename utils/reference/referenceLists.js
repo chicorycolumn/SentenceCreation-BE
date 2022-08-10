@@ -366,6 +366,7 @@ exports.structureChunkTraits = {
     agreeWith2: {
       expectedTypeOnStCh: "string",
       mustBeExistingChunkId: true,
+      compatibleWordtypes: ["pronombre"],
     },
     PHD_type: {
       expectedTypeOnStCh: "string",

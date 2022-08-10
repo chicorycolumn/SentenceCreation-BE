@@ -17,7 +17,7 @@ xdescribe("doesThisInflectionKeyHoldUniqueInflectionValueInLObj", () => {
     tags: [],
     //selectors
     lemma: "PERSONAL",
-    id: "pol-pro-001",
+    id: "pol-pro-901",
     //notes
 
     //inflections
@@ -998,7 +998,7 @@ xdescribe("extractNestedRoutes/giveRoutesAndTerminalValuesFromObject", () => {
       tags: ["animate", "concrete"],
       //selectors
       lemma: "kobieta",
-      id: "pol-npe-001",
+      id: "pol-npe-901",
       gender: "f",
       //notes
 
@@ -1100,7 +1100,7 @@ xdescribe("extractNestedRoutes/giveRoutesAndTerminalValuesFromObject", () => {
       tags: ["basic2"],
       //selectors
       lemma: "read",
-      id: "eng-ver-003",
+      id: "eng-ver-903",
       //notes
 
       //inflections
@@ -1133,7 +1133,7 @@ xdescribe("extractNestedRoutes/giveRoutesAndTerminalValuesFromObject", () => {
       tags: ["basic2"],
       //selectors
       lemma: "read",
-      id: "eng-ver-003",
+      id: "eng-ver-903",
       //notes
 
       //inflections
@@ -1166,7 +1166,7 @@ xdescribe("extractNestedRoutes/giveRoutesAndTerminalValuesFromObject", () => {
       tags: ["basic2"],
       //selectors
       lemma: "read",
-      id: "eng-ver-003",
+      id: "eng-ver-903",
       //notes
 
       //inflections
@@ -1194,7 +1194,7 @@ xdescribe("extractNestedRoutes/giveRoutesAndTerminalValuesFromObject", () => {
       tags: ["basic2"],
       //selectors
       lemma: "read",
-      id: "eng-ver-003",
+      id: "eng-ver-903",
       //notes
 
       //inflections

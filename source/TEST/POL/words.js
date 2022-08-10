@@ -7,7 +7,7 @@ let npe = [
     tags: ["animate", "personTest1", "concrete"],
     //selectors
     lemma: "kobieta",
-    id: "pol-npe-001",
+    id: "pol-npe-901",
     // gender: "f",
     //notes
 
@@ -37,7 +37,7 @@ let npe = [
   //   tags: ["animate",  "personTest1", "concrete"],
   //   //selectors
   //   lemma: "chłopak",
-  //   id: "pol-npe-002",
+  //   id: "pol-npe-902",
   //   gender: "m1",
   //   //notes
   //
@@ -67,7 +67,7 @@ let npe = [
     tags: ["animate", "personTest1", "concrete"],
     //selectors
     lemma: "chłopiec",
-    id: "pol-npe-003",
+    id: "pol-npe-903",
     gender: "m1",
     //notes
 
@@ -100,7 +100,7 @@ let nco = [
     tags: ["allohomTesting2", "animal"],
     //selectors
     lemma: "niedźwiedź",
-    id: "pol-nco-014",
+    id: "pol-nco-914",
     gender: "m2",
     //notes
 
@@ -130,7 +130,7 @@ let nco = [
     tags: ["inanimate", "edible", "holdable", "concrete"],
     //selectors
     lemma: "cebula",
-    id: "pol-nco-004",
+    id: "pol-nco-904",
     gender: "f",
     //notes
 
@@ -160,7 +160,7 @@ let nco = [
     tags: ["inanimate", "edible", "holdable", "concrete"],
     //selectors
     lemma: "jabłko",
-    id: "pol-nco-005",
+    id: "pol-nco-905",
     gender: "n",
     //notes
 
@@ -190,7 +190,7 @@ let nco = [
     tags: ["inanimate", "holdable", "concrete"],
     //selectors
     lemma: "lustro",
-    id: "pol-nco-006",
+    id: "pol-nco-906",
     gender: "n",
     //notes
 
@@ -220,7 +220,7 @@ let nco = [
     tags: ["inanimate", "holdable", "concrete"],
     //selectors
     lemma: "zwierciadło",
-    id: "pol-nco-007",
+    id: "pol-nco-907",
     gender: "n",
     //notes
 
@@ -250,7 +250,7 @@ let nco = [
     tags: ["inanimate", "holdable", "concrete"],
     //selectors
     lemma: "książka",
-    id: "pol-nco-009",
+    id: "pol-nco-909",
     gender: "f",
     //notes
 
@@ -280,7 +280,7 @@ let nco = [
     tags: ["inanimate", "house", "concrete"],
     //selectors
     lemma: "drzwi",
-    id: "pol-nco-010",
+    id: "pol-nco-910",
     gender: "nonvirile",
     //notes
     lacking: true,
@@ -305,7 +305,7 @@ let nco = [
     tags: ["inanimate", "holdable", "concrete", "wearable"],
     //selectors
     lemma: "majtki",
-    id: "pol-nco-008",
+    id: "pol-nco-908",
     gender: "nonvirile",
     //notes
     lacking: true,
@@ -328,7 +328,7 @@ let nco = [
     tags: ["concrete", "animal", "animate", "farmyard"],
     //selectors
     lemma: "owca",
-    id: "pol-nco-011",
+    id: "pol-nco-911",
     gender: "f",
     //notes
 
@@ -358,7 +358,7 @@ let nco = [
     tags: ["allohomTesting", "edible2"],
     //selectors
     lemma: "orzech",
-    id: "pol-nco-012",
+    id: "pol-nco-912",
     gender: "m3",
     //notes
 
@@ -392,7 +392,7 @@ let nco = [
     tags: ["allohomTesting", "toolbox"],
     //selectors
     lemma: "nakrętka",
-    id: "pol-nco-013",
+    id: "pol-nco-913",
     gender: "f",
     //notes
 
@@ -422,7 +422,7 @@ let pro = [
   {
     translations: { ENG: ["I"] },
     lemma: "ja",
-    id: "pol-pro-001",
+    id: "pol-pro-901",
     tags: [],
 
     person: "1per",
@@ -457,7 +457,7 @@ let pro = [
   {
     translations: { ENG: ["you (familiar)"] },
     lemma: "ty",
-    id: "pol-pro-001",
+    id: "pol-pro-901",
     tags: [],
 
     person: "2per",
@@ -488,7 +488,7 @@ let pro = [
   {
     translations: { ENG: ["he"] },
     lemma: "on",
-    id: "pol-pro-001",
+    id: "pol-pro-901",
     tags: [],
 
     person: "3per",
@@ -514,7 +514,7 @@ let adj = [
     tags: ["colour"],
     //selectors
     lemma: "czerwony",
-    id: "pol-adj-001",
+    id: "pol-adj-901",
     //notes
 
     //inflections
@@ -592,7 +592,7 @@ let adj = [
     tags: ["colour2"],
     //selectors
     lemma: "niebieski",
-    id: "pol-adj-002",
+    id: "pol-adj-902",
     //notes
 
     //inflections
@@ -670,7 +670,7 @@ let adj = [
     tags: ["size"],
     //selectors
     lemma: "mały",
-    id: "pol-adj-003",
+    id: "pol-adj-903",
     //notes
 
     //inflections
@@ -750,7 +750,7 @@ let ver = [
     tags: ["basic", "identity"],
     //selectors
     lemma: "być",
-    id: "pol-ver-000-im-01",
+    id: "pol-ver-900-im-01",
     aspect: "imperfective",
     //notes
     lacking: true,
@@ -931,7 +931,7 @@ let ver = [
     tags: ["basic", "possession"],
     //selectors
     lemma: "mieć",
-    id: "pol-ver-001-im-01",
+    id: "pol-ver-901-im-01",
     aspect: "imperfective",
     //notes
     lacking: true,
@@ -1022,7 +1022,7 @@ let ver = [
     tags: ["basic3"],
     //selectors
     lemma: "pisać",
-    id: "pol-ver-004-im-01",
+    id: "pol-ver-904-im-01",
     aspect: "imperfective",
     //notes
 
@@ -1111,7 +1111,7 @@ let ver = [
     tags: ["basic3"],
     //selectors
     lemma: "napisać",
-    id: "pol-ver-004-pf-01",
+    id: "pol-ver-904-pf-01",
     aspect: "perfective",
     //notes
 
@@ -1200,7 +1200,7 @@ let ver = [
     tags: ["basic2"],
     //selectors
     lemma: "czytać",
-    id: "pol-ver-002-im-01",
+    id: "pol-ver-902-im-01",
     aspect: "imperfective",
     //notes
 
@@ -1289,7 +1289,7 @@ let ver = [
     tags: ["basic2"],
     //selectors
     lemma: "przeczytać",
-    id: "pol-ver-002-pf-01",
+    id: "pol-ver-902-pf-01",
     aspect: "perfective",
     //notes
 
@@ -1378,7 +1378,7 @@ let ver = [
     tags: ["science"],
     //selectors
     lemma: "badać",
-    id: "pol-ver-003-im-01",
+    id: "pol-ver-903-im-01",
     aspect: "imperfective",
     //notes
 
@@ -1467,7 +1467,7 @@ let ver = [
     tags: ["science"],
     //selectors
     lemma: "zbadać",
-    id: "pol-ver-003-pf-01",
+    id: "pol-ver-903-pf-01",
     aspect: "perfective",
     //notes
 
@@ -1556,7 +1556,7 @@ let ver = [
     tags: ["allohomTesting2", "emotions"],
     //selectors
     lemma: "znieść",
-    id: "pol-ver-005-pf-01",
+    id: "pol-ver-905-pf-01",
     aspect: "perfective",
     //notes
 

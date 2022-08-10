@@ -11,7 +11,7 @@ let npe = [
     tags: ["animate", "personTest1", "concrete"],
     //selectors
     lemma: "woman",
-    id: "eng-npe-001",
+    id: "eng-npe-901",
     gender: "f",
     //notes
 
@@ -33,7 +33,7 @@ let npe = [
     tags: ["animate", "personTest1", "concrete"],
     //selectors
     lemma: "boy",
-    id: "eng-npe-002",
+    id: "eng-npe-902",
     gender: "m",
     //notes
 
@@ -58,7 +58,7 @@ let nco = [
     tags: ["inanimate", "edible", "holdable", "concrete"],
     //selectors
     lemma: "onion",
-    id: "eng-nco-003",
+    id: "eng-nco-902",
 
     //notes
 
@@ -80,7 +80,7 @@ let nco = [
     tags: ["inanimate", "edible", "holdable", "concrete"],
     //selectors
     lemma: "apple",
-    id: "eng-nco-003",
+    id: "eng-nco-902",
 
     //notes
 
@@ -102,7 +102,7 @@ let nco = [
     tags: ["inanimate", "holdable", "concrete"],
     //selectors
     lemma: "mirror",
-    id: "eng-nco-005",
+    id: "eng-nco-905",
 
     //notes
 
@@ -124,7 +124,7 @@ let nco = [
     tags: ["inanimate", "holdable", "concrete"],
     //selectors
     lemma: "book",
-    id: "eng-nco-006",
+    id: "eng-nco-906",
 
     //notes
 
@@ -146,7 +146,7 @@ let nco = [
     tags: ["inanimate", "holdable", "concrete"],
     //selectors
     lemma: "door",
-    id: "eng-nco-007",
+    id: "eng-nco-907",
 
     //notes
 
@@ -168,7 +168,7 @@ let nco = [
     tags: ["animate", "animal", "farmyard", "concrete"],
     //selectors
     lemma: "sheep",
-    id: "eng-nco-008",
+    id: "eng-nco-908",
 
     //notes
 
@@ -192,7 +192,7 @@ let nco = [
 
     //selectors
     lemma: "nut",
-    id: "eng-nco-009",
+    id: "eng-nco-909",
 
     //notes
 
@@ -216,7 +216,7 @@ let nco = [
 
     //selectors
     lemma: "nut",
-    id: "eng-nco-010",
+    id: "eng-nco-910",
 
     //notes
 
@@ -240,7 +240,7 @@ let nco = [
 
     //selectors
     lemma: "bear",
-    id: "eng-nco-011",
+    id: "eng-nco-901",
 
     //notes
 
@@ -265,7 +265,7 @@ let adj = [
     tags: ["colour"],
     //selectors
     lemma: "red",
-    id: "eng-adj-001",
+    id: "eng-adj-901",
     //notes
 
     //inflections
@@ -282,7 +282,7 @@ let adj = [
     tags: ["wibbly"],
     //selectors
     lemma: "wibbly",
-    id: "eng-adj-100",
+    id: "eng-adj-900",
     //notes
 
     //inflections
@@ -299,7 +299,7 @@ let adj = [
     tags: ["wobbly"],
     //selectors
     lemma: "wobbly",
-    id: "eng-adj-101",
+    id: "eng-adj-901",
     //notes
 
     //inflections
@@ -316,7 +316,7 @@ let adj = [
     tags: ["fitting"],
     //selectors
     lemma: "fast",
-    id: "eng-adj-005",
+    id: "eng-adj-905",
     //notes
 
     //inflections
@@ -333,7 +333,7 @@ let adj = [
     tags: ["speed"],
     //selectors
     lemma: "fast",
-    id: "eng-adj-004",
+    id: "eng-adj-904",
     //notes
 
     //inflections
@@ -350,7 +350,7 @@ let adj = [
     tags: ["size"],
     //selectors
     lemma: "small",
-    id: "eng-adj-002",
+    id: "eng-adj-902",
     //notes
 
     //inflections
@@ -375,7 +375,7 @@ let ver = [
     },
     //selectors
     lemma: "bear",
-    id: "eng-ver-006",
+    id: "eng-ver-906",
     //notes
 
     //inflections
@@ -394,7 +394,7 @@ let ver = [
     tags: ["basic2"],
     //selectors
     lemma: "read",
-    id: "eng-ver-003",
+    id: "eng-ver-903",
     //notes
 
     //inflections
@@ -413,7 +413,7 @@ let ver = [
     tags: ["basic3"],
     //selectors
     lemma: "write",
-    id: "eng-ver-002",
+    id: "eng-ver-905",
     //notes
 
     //inflections
@@ -432,7 +432,7 @@ let ver = [
     tags: ["science"],
     //selectors
     lemma: "research",
-    id: "eng-ver-004",
+    id: "eng-ver-904",
     //notes
 
     //inflections
@@ -451,7 +451,7 @@ let ver = [
     tags: ["basic", "possession"],
     //selectors
     lemma: "have",
-    id: "eng-ver-001",
+    id: "eng-ver-902",
     //notes
 
     //inflections
@@ -470,7 +470,7 @@ let ver = [
     tags: ["basic", "identity"],
     //selectors
     lemma: "be",
-    id: "eng-ver-000",
+    id: "eng-ver-901",
     //notes
 
     //inflections
@@ -513,7 +513,7 @@ exports.wordsBank = {
 //   {
 //     translations: { ENG: ["I"] },
 //     lemma: "ja",
-//     id: "pol-pro-001",
+//     id: "pol-pro-901",
 //     tags: [],
 //
 //     person: "1per",

@@ -28,50 +28,6 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["father"], POL: ["ojciec"] },
-      tags: ["animate", "family", "concrete"],
-      //selectors
-      lemma: "father",
-      id: "eng-npe-013",
-      gender: "m",
-      //notes
-
-      //inflections
-      inflections: {
-        singular: {
-          nom: "father",
-          gen: "father's",
-        },
-        plural: {
-          nom: "fathers",
-          gen: "fathers'",
-        },
-      },
-    },
-    {
-      //links
-      translations: { ENG: ["mother"], POL: ["matka"] },
-      tags: ["animate", "family", "concrete"],
-      //selectors
-      lemma: "mother",
-      id: "eng-npe-014",
-      gender: "f",
-      //notes
-
-      //inflections
-      inflections: {
-        singular: {
-          nom: "mother",
-          gen: "mother's",
-        },
-        plural: {
-          nom: "mothers",
-          gen: "mothers'",
-        },
-      },
-    },
-    {
-      //links
       translations: { ENG: ["boy"], POL: ["chłopiec", "chłopak"] },
       tags: ["animate", "personTest1", "concrete"],
       //selectors
@@ -94,11 +50,55 @@ exports.wordsBank = {
     },
     {
       //links
+      translations: { ENG: ["father"], POL: ["ojciec"] },
+      tags: ["animate", "family", "concrete"],
+      //selectors
+      lemma: "father",
+      id: "eng-npe-003",
+      gender: "m",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "father",
+          gen: "father's",
+        },
+        plural: {
+          nom: "fathers",
+          gen: "fathers'",
+        },
+      },
+    },
+    {
+      //links
+      translations: { ENG: ["mother"], POL: ["matka"] },
+      tags: ["animate", "family", "concrete"],
+      //selectors
+      lemma: "mother",
+      id: "eng-npe-004",
+      gender: "f",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "mother",
+          gen: "mother's",
+        },
+        plural: {
+          nom: "mothers",
+          gen: "mothers'",
+        },
+      },
+    },
+    {
+      //links
       translations: { ENG: ["doctor"], POL: ["lekarz", "lekarka"] },
       tags: ["concrete", "animate", "personTest2", "job"],
       //selectors
       lemma: "doctor",
-      id: "eng-npe-012",
+      id: "eng-npe-005",
       gender: "allPersonalGenders",
       //notes
 
@@ -124,7 +124,7 @@ exports.wordsBank = {
 
       //selectors
       lemma: "bear",
-      id: "eng-nco-050",
+      id: "eng-nco-001",
 
       //notes
 
@@ -146,7 +146,7 @@ exports.wordsBank = {
       tags: ["inanimate", "edible", "holdable", "concrete"],
       //selectors
       lemma: "onion",
-      id: "eng-nco-003",
+      id: "eng-nco-002",
 
       //notes
 
@@ -159,6 +159,28 @@ exports.wordsBank = {
         plural: {
           nom: "onions",
           gen: "onions'",
+        },
+      },
+    },
+    {
+      //links
+      translations: { ENG: ["tomato"], POL: ["pomidor"] },
+      tags: ["inanimate", "edible0", "holdable", "concrete"],
+      //selectors
+      lemma: "tomato",
+      id: "eng-nco-003",
+
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "tomato",
+          gen: "tomato's",
+        },
+        plural: {
+          nom: "tomatoes",
+          gen: "tomatoes'",
         },
       },
     },
@@ -181,28 +203,6 @@ exports.wordsBank = {
         plural: {
           nom: "apples",
           gen: "apples'",
-        },
-      },
-    },
-    {
-      //links
-      translations: { ENG: ["tomato"], POL: ["pomidor"] },
-      tags: ["inanimate", "edible0", "holdable", "concrete"],
-      //selectors
-      lemma: "tomato",
-      id: "eng-nco-015",
-
-      //notes
-
-      //inflections
-      inflections: {
-        singular: {
-          nom: "tomato",
-          gen: "tomato's",
-        },
-        plural: {
-          nom: "tomatoes",
-          gen: "tomatoes'",
         },
       },
     },
@@ -297,100 +297,13 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["rat"], POL: ["szczur"] },
-      tags: ["animate", "animal", "pet", "concrete"],
-      //selectors
-      lemma: "rat",
-      id: "eng-nco-016",
-
-      //notes
-
-      //inflections
-      inflections: {
-        singular: {
-          nom: "rat",
-          gen: "rat's",
-        },
-        plural: {
-          nom: "rats",
-          gen: "rats'",
-        },
-      },
-    },
-    {
-      //links
-      translations: { ENG: ["tweezers"], POL: ["pinceta"] },
-      tags: ["tantumTest1"],
-      //selectors
-      lemma: "tweezers",
-      id: "eng-nco-017",
-      lacking: true,
-      tantumPlurale: true,
-      tantumCountNoun: { singular: "pair", plural: "pairs" },
-      //notes
-
-      //inflections
-      inflections: {
-        plural: {
-          nom: "tweezers",
-          gen: "tweezers'",
-        },
-      },
-    },
-    {
-      //links
-      translations: { ENG: ["dust"], POL: ["pył"] },
-      tags: ["tantumTest1"],
-      //selectors
-      lemma: "dust",
-      id: "eng-nco-018",
-      lacking: true,
-      tantumSingulare: true,
-      //notes
-
-      //inflections
-      inflections: {
-        singular: {
-          nom: "dust",
-          gen: "dust's",
-        },
-      },
-    },
-  ],
-  ver: [
-    {
-      //links
-      translations: { ENG: ["bear"], POL: ["znieść"] },
-      tags: ["allohomTesting2", "emotions"],
-      allohomInfo: {
-        multipleWordtype: true,
-        text: "emotional verb",
-        emoji: "😑",
-      },
-      //selectors
-      lemma: "bear",
-      id: "eng-ver-050",
-      //notes
-
-      //inflections
-      inflections: {
-        infinitive: "bear",
-        verbal: {},
-        v2: "bore",
-        v3: "borne",
-        thirdPS: "bears",
-        gerund: "bearing",
-      },
-    },
-    {
-      //links
       translations: { ENG: ["nut"], POL: ["orzech"] },
       tags: ["allohomTesting", "edible2"],
       allohomInfo: { singleWordtype: true, text: "food", emoji: "🥜" },
 
       //selectors
       lemma: "nut",
-      id: "eng-nco-081",
+      id: "eng-nco-009",
 
       //notes
 
@@ -414,7 +327,7 @@ exports.wordsBank = {
 
       //selectors
       lemma: "nut",
-      id: "eng-nco-080",
+      id: "eng-nco-010",
 
       //notes
 
@@ -432,21 +345,102 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["give"], POL: ["dać", "dawać"] },
-      tags: [],
+      translations: { ENG: ["rat"], POL: ["szczur"] },
+      tags: ["animate", "animal", "pet", "concrete"],
       //selectors
-      lemma: "give",
-      id: "eng-ver-007",
+      lemma: "rat",
+      id: "eng-nco-011",
+
       //notes
 
       //inflections
       inflections: {
-        infinitive: "give",
+        singular: {
+          nom: "rat",
+          gen: "rat's",
+        },
+        plural: {
+          nom: "rats",
+          gen: "rats'",
+        },
+      },
+    },
+    {
+      //links
+      translations: { ENG: ["tweezers"], POL: ["pinceta"] },
+      tags: ["tantumTest1"],
+      //selectors
+      lemma: "tweezers",
+      id: "eng-nco-012",
+      lacking: true,
+      tantumPlurale: true,
+      tantumCountNoun: { singular: "pair", plural: "pairs" },
+      //notes
+
+      //inflections
+      inflections: {
+        plural: {
+          nom: "tweezers",
+          gen: "tweezers'",
+        },
+      },
+    },
+    {
+      //links
+      translations: { ENG: ["dust"], POL: ["pył"] },
+      tags: ["tantumTest1"],
+      //selectors
+      lemma: "dust",
+      id: "eng-nco-013",
+      lacking: true,
+      tantumSingulare: true,
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "dust",
+          gen: "dust's",
+        },
+      },
+    },
+  ],
+  ver: [
+    {
+      //links
+      translations: { ENG: ["be"], POL: ["być"] },
+      tags: ["basic", "identity"],
+      //selectors
+      lemma: "be",
+      id: "eng-ver-001",
+      //notes
+
+      //inflections
+      inflections: {
+        infinitive: "be",
+        v2: terminusObjectNormalArray(["was", "were"]),
+        v3: "been",
+        thirdPS: "is",
+        gerund: "being",
+      },
+    },
+    {
+      //links
+      translations: { ENG: ["have"], POL: ["mieć"] },
+      tags: ["basic", "possession"],
+      //selectors
+      lemma: "have",
+      id: "eng-ver-002",
+      //notes
+
+      //inflections
+      inflections: {
+        infinitive: "have",
         verbal: {},
-        v2: "gave",
-        v3: "given",
-        thirdPS: "gives",
-        gerund: "giving",
+        v2: "had",
+        v3: "had",
+        thirdPS: "has",
+        gerund: "having",
       },
     },
     {
@@ -470,25 +464,6 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["write"], POL: ["pisać", "napisać"] },
-      tags: ["basic3"],
-      //selectors
-      lemma: "write",
-      id: "eng-ver-002",
-      //notes
-
-      //inflections
-      inflections: {
-        infinitive: "write",
-        verbal: {},
-        v2: "wrote",
-        v3: "written",
-        thirdPS: "writes",
-        gerund: "writing",
-      },
-    },
-    {
-      //links
       translations: { ENG: ["research"], POL: ["badać", "zbadać"] },
       tags: ["science"],
       //selectors
@@ -508,6 +483,68 @@ exports.wordsBank = {
     },
     {
       //links
+      translations: { ENG: ["write"], POL: ["pisać", "napisać"] },
+      tags: ["basic3"],
+      //selectors
+      lemma: "write",
+      id: "eng-ver-005",
+      //notes
+
+      //inflections
+      inflections: {
+        infinitive: "write",
+        verbal: {},
+        v2: "wrote",
+        v3: "written",
+        thirdPS: "writes",
+        gerund: "writing",
+      },
+    },
+    {
+      //links
+      translations: { ENG: ["give"], POL: ["dać", "dawać"] },
+      tags: [],
+      //selectors
+      lemma: "give",
+      id: "eng-ver-006",
+      //notes
+
+      //inflections
+      inflections: {
+        infinitive: "give",
+        verbal: {},
+        v2: "gave",
+        v3: "given",
+        thirdPS: "gives",
+        gerund: "giving",
+      },
+    },
+    {
+      //links
+      translations: { ENG: ["bear"], POL: ["znieść"] },
+      tags: ["allohomTesting2", "emotions"],
+      allohomInfo: {
+        multipleWordtype: true,
+        text: "emotional verb",
+        emoji: "😑",
+      },
+      //selectors
+      lemma: "bear",
+      id: "eng-ver-007",
+      //notes
+
+      //inflections
+      inflections: {
+        infinitive: "bear",
+        verbal: {},
+        v2: "bore",
+        v3: "borne",
+        thirdPS: "bears",
+        gerund: "bearing",
+      },
+    },
+    {
+      //links
       translations: { ENG: ["see"], POL: ["widzieć", "zobaczyć"] },
       tags: ["basic1"],
       //selectors
@@ -523,43 +560,6 @@ exports.wordsBank = {
         v3: "seen",
         thirdPS: "sees",
         gerund: "seeing",
-      },
-    },
-    {
-      //links
-      translations: { ENG: ["have"], POL: ["mieć"] },
-      tags: ["basic", "possession"],
-      //selectors
-      lemma: "have",
-      id: "eng-ver-001",
-      //notes
-
-      //inflections
-      inflections: {
-        infinitive: "have",
-        verbal: {},
-        v2: "had",
-        v3: "had",
-        thirdPS: "has",
-        gerund: "having",
-      },
-    },
-    {
-      //links
-      translations: { ENG: ["be"], POL: ["być"] },
-      tags: ["basic", "identity"],
-      //selectors
-      lemma: "be",
-      id: "eng-ver-000",
-      //notes
-
-      //inflections
-      inflections: {
-        infinitive: "be",
-        v2: terminusObjectNormalArray(["was", "were"]),
-        v3: "been",
-        thirdPS: "is",
-        gerund: "being",
       },
     },
   ],

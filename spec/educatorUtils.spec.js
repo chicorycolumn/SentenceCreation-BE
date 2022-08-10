@@ -5,6 +5,7 @@ const {
   checkWords,
 } = require("../utils/secondOrder/educatorUtils.js");
 const { expect } = require("chai");
+const consol = require("./../utils/zerothOrder/consoleLoggingUtils.js");
 
 xdescribe("findHomographs", () => {
   it("#edu1.1 Gives all synhomograph lemma objects in one language.", () => {
@@ -18,25 +19,25 @@ xdescribe("findHomographs", () => {
 
     const expected = {
       sheep: [
-        ["eng-nco-008", "singular", "nom"],
-        ["eng-nco-008", "plural", "nom"],
+        ["eng-nco-908", "singular", "nom"],
+        ["eng-nco-908", "plural", "nom"],
       ],
       "sheep's": [
-        ["eng-nco-008", "singular", "gen"],
-        ["eng-nco-008", "plural", "gen"],
+        ["eng-nco-908", "singular", "gen"],
+        ["eng-nco-908", "plural", "gen"],
       ],
       read: [
-        ["eng-ver-003", "infinitive"],
-        ["eng-ver-003", "v2"],
-        ["eng-ver-003", "v3"],
+        ["eng-ver-903", "infinitive"],
+        ["eng-ver-903", "v2"],
+        ["eng-ver-903", "v3"],
       ],
       researched: [
-        ["eng-ver-004", "v2"],
-        ["eng-ver-004", "v3"],
+        ["eng-ver-904", "v2"],
+        ["eng-ver-904", "v3"],
       ],
       had: [
-        ["eng-ver-001", "v2"],
-        ["eng-ver-001", "v3"],
+        ["eng-ver-902", "v2"],
+        ["eng-ver-902", "v3"],
       ],
     };
 
@@ -54,17 +55,17 @@ xdescribe("findHomographs", () => {
 
     const expected = {
       sheep: [
-        ["eng-nco-008", "singular", "nom"],
-        ["eng-nco-008", "plural", "nom"],
+        ["eng-nco-908", "singular", "nom"],
+        ["eng-nco-908", "plural", "nom"],
       ],
       "sheep's": [
-        ["eng-nco-008", "singular", "gen"],
-        ["eng-nco-008", "plural", "gen"],
+        ["eng-nco-908", "singular", "gen"],
+        ["eng-nco-908", "plural", "gen"],
       ],
       read: [
-        ["eng-ver-003", "infinitive"],
-        ["eng-ver-003", "v2"],
-        ["eng-ver-003", "v3"],
+        ["eng-ver-903", "infinitive"],
+        ["eng-ver-903", "v2"],
+        ["eng-ver-903", "v3"],
       ],
     };
 
@@ -82,25 +83,25 @@ xdescribe("findHomographs", () => {
 
     const expected = {
       sheep: [
-        ["eng-nco-008", "singular", "nom"],
-        ["eng-nco-008", "plural", "nom"],
+        ["eng-nco-908", "singular", "nom"],
+        ["eng-nco-908", "plural", "nom"],
       ],
       "sheep's": [
-        ["eng-nco-008", "singular", "gen"],
-        ["eng-nco-008", "plural", "gen"],
+        ["eng-nco-908", "singular", "gen"],
+        ["eng-nco-908", "plural", "gen"],
       ],
       read: [
-        ["eng-ver-003", "infinitive"],
-        ["eng-ver-003", "v2"],
-        ["eng-ver-003", "v3"],
+        ["eng-ver-903", "infinitive"],
+        ["eng-ver-903", "v2"],
+        ["eng-ver-903", "v3"],
       ],
       researched: [
-        ["eng-ver-004", "v2"],
-        ["eng-ver-004", "v3"],
+        ["eng-ver-904", "v2"],
+        ["eng-ver-904", "v3"],
       ],
       had: [
-        ["eng-ver-001", "v2"],
-        ["eng-ver-001", "v3"],
+        ["eng-ver-902", "v2"],
+        ["eng-ver-902", "v3"],
       ],
     };
 
@@ -118,17 +119,17 @@ xdescribe("findHomographs", () => {
 
     const expected = {
       sheep: [
-        ["eng-nco-008", "singular", "nom"],
-        ["eng-nco-008", "plural", "nom"],
+        ["eng-nco-908", "singular", "nom"],
+        ["eng-nco-908", "plural", "nom"],
       ],
       "sheep's": [
-        ["eng-nco-008", "singular", "gen"],
-        ["eng-nco-008", "plural", "gen"],
+        ["eng-nco-908", "singular", "gen"],
+        ["eng-nco-908", "plural", "gen"],
       ],
       read: [
-        ["eng-ver-003", "infinitive"],
-        ["eng-ver-003", "v2"],
-        ["eng-ver-003", "v3"],
+        ["eng-ver-903", "infinitive"],
+        ["eng-ver-903", "v2"],
+        ["eng-ver-903", "v3"],
       ],
     };
 
@@ -146,42 +147,42 @@ xdescribe("findHomographs", () => {
 
     const expected = {
       wob: [
-        ["eng-adj-100", "protective"],
-        ["eng-adj-101", "nonprotective"],
+        ["eng-adj-900", "protective"],
+        ["eng-adj-901", "nonprotective"],
       ],
       nut: [
-        ["eng-nco-009", "singular", "nom"],
-        ["eng-nco-010", "singular", "nom"],
+        ["eng-nco-909", "singular", "nom"],
+        ["eng-nco-910", "singular", "nom"],
       ],
       "nut's": [
-        ["eng-nco-009", "singular", "gen"],
-        ["eng-nco-010", "singular", "gen"],
+        ["eng-nco-909", "singular", "gen"],
+        ["eng-nco-910", "singular", "gen"],
       ],
       nuts: [
-        ["eng-nco-009", "plural", "nom"],
-        ["eng-nco-010", "plural", "nom"],
+        ["eng-nco-909", "plural", "nom"],
+        ["eng-nco-910", "plural", "nom"],
       ],
       "nuts'": [
-        ["eng-nco-009", "plural", "gen"],
-        ["eng-nco-010", "plural", "gen"],
+        ["eng-nco-909", "plural", "gen"],
+        ["eng-nco-910", "plural", "gen"],
       ],
       fast: [
-        ["eng-adj-005", "simple"],
-        ["eng-adj-005", "comparative"],
-        ["eng-adj-005", "adverb"],
-        ["eng-adj-004", "simple"],
+        ["eng-adj-905", "simple"],
+        ["eng-adj-905", "comparative"],
+        ["eng-adj-905", "adverb"],
+        ["eng-adj-904", "simple"],
       ],
       fastest: [
-        ["eng-adj-005", "superlative"],
-        ["eng-adj-004", "superlative"],
+        ["eng-adj-905", "superlative"],
+        ["eng-adj-904", "superlative"],
       ],
       bear: [
-        ["eng-nco-011", "singular", "nom"],
-        ["eng-ver-006", "infinitive"],
+        ["eng-nco-901", "singular", "nom"],
+        ["eng-ver-906", "infinitive"],
       ],
       bears: [
-        ["eng-nco-011", "plural", "nom"],
-        ["eng-ver-006", "thirdPS"],
+        ["eng-nco-901", "plural", "nom"],
+        ["eng-ver-906", "thirdPS"],
       ],
     };
 
@@ -199,42 +200,42 @@ xdescribe("findHomographs", () => {
 
     const expected = {
       wob: [
-        ["eng-adj-100", "protective"],
-        ["eng-adj-101", "nonprotective"],
+        ["eng-adj-900", "protective"],
+        ["eng-adj-901", "nonprotective"],
       ],
       nut: [
-        ["eng-nco-009", "singular", "nom"],
-        ["eng-nco-010", "singular", "nom"],
+        ["eng-nco-909", "singular", "nom"],
+        ["eng-nco-910", "singular", "nom"],
       ],
       "nut's": [
-        ["eng-nco-009", "singular", "gen"],
-        ["eng-nco-010", "singular", "gen"],
+        ["eng-nco-909", "singular", "gen"],
+        ["eng-nco-910", "singular", "gen"],
       ],
       nuts: [
-        ["eng-nco-009", "plural", "nom"],
-        ["eng-nco-010", "plural", "nom"],
+        ["eng-nco-909", "plural", "nom"],
+        ["eng-nco-910", "plural", "nom"],
       ],
       "nuts'": [
-        ["eng-nco-009", "plural", "gen"],
-        ["eng-nco-010", "plural", "gen"],
+        ["eng-nco-909", "plural", "gen"],
+        ["eng-nco-910", "plural", "gen"],
       ],
       fast: [
-        ["eng-adj-005", "simple"],
-        ["eng-adj-005", "comparative"],
-        ["eng-adj-005", "adverb"],
-        ["eng-adj-004", "simple"],
+        ["eng-adj-905", "simple"],
+        ["eng-adj-905", "comparative"],
+        ["eng-adj-905", "adverb"],
+        ["eng-adj-904", "simple"],
       ],
       fastest: [
-        ["eng-adj-005", "superlative"],
-        ["eng-adj-004", "superlative"],
+        ["eng-adj-905", "superlative"],
+        ["eng-adj-904", "superlative"],
       ],
       bear: [
-        ["eng-nco-011", "singular", "nom"],
-        ["eng-ver-006", "infinitive"],
+        ["eng-nco-901", "singular", "nom"],
+        ["eng-ver-906", "infinitive"],
       ],
       bears: [
-        ["eng-nco-011", "plural", "nom"],
-        ["eng-ver-006", "thirdPS"],
+        ["eng-nco-901", "plural", "nom"],
+        ["eng-ver-906", "thirdPS"],
       ],
     };
 
@@ -252,18 +253,18 @@ xdescribe("findHomographs", () => {
 
     const expected = {
       wob: [
-        ["eng-adj-100", "protective"],
-        ["eng-adj-101", "nonprotective"],
+        ["eng-adj-900", "protective"],
+        ["eng-adj-901", "nonprotective"],
       ],
       fast: [
-        ["eng-adj-005", "simple"],
-        ["eng-adj-005", "comparative"],
-        ["eng-adj-005", "adverb"],
-        ["eng-adj-004", "simple"],
+        ["eng-adj-905", "simple"],
+        ["eng-adj-905", "comparative"],
+        ["eng-adj-905", "adverb"],
+        ["eng-adj-904", "simple"],
       ],
       fastest: [
-        ["eng-adj-005", "superlative"],
-        ["eng-adj-004", "superlative"],
+        ["eng-adj-905", "superlative"],
+        ["eng-adj-904", "superlative"],
       ],
     };
 
@@ -281,18 +282,18 @@ xdescribe("findHomographs", () => {
 
     const expected = {
       wob: [
-        ["eng-adj-100", "protective"],
-        ["eng-adj-101", "nonprotective"],
+        ["eng-adj-900", "protective"],
+        ["eng-adj-901", "nonprotective"],
       ],
       fast: [
-        ["eng-adj-005", "simple"],
-        ["eng-adj-005", "comparative"],
-        ["eng-adj-005", "adverb"],
-        ["eng-adj-004", "simple"],
+        ["eng-adj-905", "simple"],
+        ["eng-adj-905", "comparative"],
+        ["eng-adj-905", "adverb"],
+        ["eng-adj-904", "simple"],
       ],
       fastest: [
-        ["eng-adj-005", "superlative"],
-        ["eng-adj-004", "superlative"],
+        ["eng-adj-905", "superlative"],
+        ["eng-adj-904", "superlative"],
       ],
     };
 
@@ -310,18 +311,18 @@ xdescribe("findHomographs", () => {
 
     const expected = {
       fast: [
-        ["eng-adj-005", "simple"],
-        ["eng-adj-005", "comparative"],
-        ["eng-adj-005", "adverb"],
-        ["eng-adj-004", "simple"],
+        ["eng-adj-905", "simple"],
+        ["eng-adj-905", "comparative"],
+        ["eng-adj-905", "adverb"],
+        ["eng-adj-904", "simple"],
       ],
       fastest: [
-        ["eng-adj-005", "superlative"],
-        ["eng-adj-004", "superlative"],
+        ["eng-adj-905", "superlative"],
+        ["eng-adj-904", "superlative"],
       ],
       wob: [
-        ["eng-adj-100", "protective"],
-        ["eng-adj-101", "nonprotective"],
+        ["eng-adj-900", "protective"],
+        ["eng-adj-901", "nonprotective"],
       ],
     };
 
@@ -337,32 +338,44 @@ xdescribe("checkLemmaObjectIds", () => {
 
     let actual = checkLemmaObjectIds(true, currentLanguage);
 
-    expect(actual).to.eql({
+    let expected = {
       schematic: [
-        ["eng-npe-001", "woman"],
-        ["eng-npe-002", "boy"],
-        ["eng-nco-003", "onion"],
-        ["eng-nco-003", "apple"],
-        ["eng-nco-005", "mirror"],
-        ["eng-nco-006", "book"],
-        ["eng-nco-007", "door"],
-        ["eng-nco-008", "sheep"],
-        ["eng-nco-009", "nut"],
-        ["eng-nco-010", "nut"],
-        ["eng-nco-011", "bear"],
-        ["eng-adj-001", "red"],
-        ["eng-adj-005", "fast"],
-        ["eng-adj-004", "fast"],
-        ["eng-adj-002", "small"],
-        ["eng-ver-006", "bear"],
-        ["eng-ver-003", "read"],
-        ["eng-ver-002", "write"],
-        ["eng-ver-004", "research"],
-        ["eng-ver-001", "have"],
-        ["eng-ver-000", "be"],
+        ["eng-npe-901", "woman"],
+        ["eng-npe-902", "boy"],
+        ["eng-nco-902", "onion"],
+        ["eng-nco-902", "apple"],
+        ["eng-nco-905", "mirror"],
+        ["eng-nco-906", "book"],
+        ["eng-nco-907", "door"],
+        ["eng-nco-908", "sheep"],
+        ["eng-nco-909", "nut"],
+        ["eng-nco-910", "nut"],
+        ["eng-nco-901", "bear"],
+        ["eng-adj-901", "red"],
+        ["eng-adj-905", "fast"],
+        ["eng-adj-904", "fast"],
+        ["eng-adj-902", "small"],
+        ["eng-adj-900", "wibbly"],
+        ["eng-adj-901", "wobbly"],
+        ["eng-ver-906", "bear"],
+        ["eng-ver-903", "read"],
+        ["eng-ver-905", "write"],
+        ["eng-ver-904", "research"],
+        ["eng-ver-902", "have"],
+        ["eng-ver-901", "be"],
       ],
-      duplicateIds: ["eng-nco-003"],
-    });
+      duplicateIds: ["eng-nco-902", "eng-adj-901"],
+    };
+
+    function order(obj) {
+      obj.schematic = obj.schematic.sort((x, y) => x[0].localeCompare(y[0]));
+      obj.duplicateIds = obj.duplicateIds.sort((x, y) => x.localeCompare(y));
+    }
+
+    order(actual);
+    order(expected);
+
+    expect(actual).to.eql(expected);
   });
 });
 
@@ -376,12 +389,12 @@ xdescribe("checkSentenceFormulaIds", () => {
 
     const expected = {
       schematic: [
-        ["ENG-00-101a", "symb1"],
-        ["ENG-00-101b", "symb1"],
-        ["ENG-00-102a", "102a I'll read (pf fut)"],
-        ["ENG-00-102a", "102a I'll read"],
+        ["ENG-90-901a", "symb1"],
+        ["ENG-90-901b", "symb1"],
+        ["ENG-90-902a", "102a I'll read (pf fut)"],
+        ["ENG-90-902a", "102a I'll read"],
       ],
-      duplicateIds: ["ENG-00-102a"],
+      duplicateIds: ["ENG-90-902a"],
       duplicateSymbols: ["symb1"],
     };
 
@@ -399,7 +412,7 @@ xdescribe("checkWords", () => {
 
     consol.log(actual);
 
-    expect(nounsWithoutGender).to.eql([["kobieta", "pol-npe-001"]]);
+    expect(nounsWithoutGender).to.eql([["kobieta", "pol-npe-901"]]);
   });
 });
 
@@ -418,7 +431,7 @@ xdescribe("Educator Battery", () => {
       actual
     );
   });
-  it("#eduBat-02 Gives POL synhomograph lemma objects. (Used programmatically for Type 1 Synhomos)", () => {
+  it("#eduBat-02 Gives POL synhomograph lemma objects. (Used programmatically for Type 1 Synhoms)", () => {
     const currentLanguage = "POL";
     const homographType = "syn";
     const ignore = {

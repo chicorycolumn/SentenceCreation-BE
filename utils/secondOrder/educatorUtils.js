@@ -40,7 +40,9 @@ exports.getLemmaObjectsWithoutGivenSelectorKey = (
 };
 
 exports.checkWords = (testing, currentLanguage) => {
-  const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
+  const langUtils = require("../../source/" +
+    currentLanguage +
+    "/langUtils.js");
 
   const wordsBank = educatorUtils.getWordsBank(currentLanguage, testing);
 
@@ -100,15 +102,10 @@ exports.findHomographs = (testing, currentLanguage, homographType, ignore) => {
 
   Object.keys(wordsBank).forEach((wordsetKey) => {
     let wordset = wordsBank[wordsetKey];
+    let wordtype = wordsetKey.slice(0, 3);
+    let stCh = { wordtype, chunkId: `${wordtype}-900` };
 
-    let wordtype = wordsetKey.slice(0, -3);
-
-    langUtils.preprocessLemmaObjectsMajor(
-      wordset,
-      { wordtype },
-      true,
-      currentLanguage
-    );
+    langUtils.preprocessLemmaObjectsMajor(wordset, stCh, true, currentLanguage);
 
     wordset.forEach((lObj) => {
       let terminalValuesAndPathsArr =
