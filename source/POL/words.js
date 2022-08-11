@@ -1973,11 +1973,11 @@ exports.wordsBank = {
   pro: [
     {
       //links
-      translations: { ENG: ["eng-pro-PERSONAL"], POL: ["pol-pro-PERSONAL"] },
+      translations: { ENG: ["PERSONAL"], POL: ["PERSONAL"] },
       tags: [],
       //selectors
-      lemma: "",
-      id: "pol-pro-PERSONAL",
+      lemma: "PERSONAL",
+      id: "pol-pro-001",
       //notes
 
       //inflections
@@ -2278,13 +2278,13 @@ exports.wordsBank = {
     {
       //links
       translations: {
-        ENG: ["eng-pro-POSSESSIVE"],
-        POL: ["pol-pro-POSSESSIVE"],
+        ENG: ["POSSESSIVE"],
+        POL: ["POSSESSIVE"],
       },
       tags: [],
       //selectors
-      lemma: "",
-      id: "pol-pro-POSSESSIVE",
+      lemma: "POSSESSIVE",
+      id: "pol-pro-002",
       //notes
 
       //inflections
