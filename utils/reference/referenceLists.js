@@ -94,6 +94,16 @@ exports.metaCorrectionRef = {
 
 exports.metaTraitValues = {
   ENG: {
+    gcase: {
+      allGcases: ["nom", "acc", "gen", "dat"],
+    },
+    number: {
+      allNumbers: ["singular", "plural"],
+    },
+    person: {
+      allPers: ["1per", "2per", "3per"],
+    },
+    form: { pronombreAndDeterminer: ["pronombre", "determiner"] },
     gender: {
       allGenders: ["m", "n", "f", "virile", "nonvirile"],
       allSingularGenders: ["m", "f", "n"],
@@ -111,9 +121,18 @@ exports.metaTraitValues = {
       allSingularGendersExcludingNeuter: ["m", "f"],
       allMasculineSingularGenders: ["m"],
     },
-    // form: { pronombreAndDeterminer: ["pronombre", "determiner"] },
   },
   POL: {
+    gcase: {
+      allGcases: ["nom", "acc", "gen", "dat", "loc", "ins"],
+    },
+    number: {
+      allNumbers: ["singular", "plural"],
+    },
+    person: {
+      allPers: ["1per", "2per", "3per"],
+    },
+    form: { pronombreAndDeterminer: ["pronombre", "determiner"] },
     gender: {
       allGenders: [
         "m1",
@@ -146,7 +165,6 @@ exports.metaTraitValues = {
       allSingularGendersExcludingNeuter: ["m1", "m2", "m3", "f", "f", "f"],
       allMasculineSingularGenders: ["m1", "m2", "m3"],
     },
-    form: { pronombreAndDeterminer: ["pronombre", "determiner"] },
   },
 };
 

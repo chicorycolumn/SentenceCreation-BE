@@ -1973,11 +1973,11 @@ exports.wordsBank = {
   pro: [
     {
       //links
-      translations: { ENG: ["PERSONAL"], POL: ["PERSONAL"] },
+      translations: { ENG: ["eng-pro-PERSONAL"], POL: ["pol-pro-PERSONAL"] },
       tags: [],
       //selectors
-      lemma: "PERSONAL",
-      id: "pol-pro-001",
+      lemma: "",
+      id: "pol-pro-PERSONAL",
       //notes
 
       //inflections
@@ -1992,7 +1992,7 @@ exports.wordsBank = {
                   isTerminus: true,
                   processOnlyAtEnd: true,
                   unstressed: ["mi"],
-                  stressed: ["mnie"],
+                  stressed: ["mnie"], //alpha, wait what?
                 },
                 acc: "mnie",
                 ins: "mną",
@@ -2240,14 +2240,51 @@ exports.wordsBank = {
     },
     {
       //links
+      translations: { ENG: ["eng-pro-INTERR-A"], POL: ["pol-pro-INTERR-A"] },
+      tags: [],
+      //selectors
+      lemma: "",
+      id: "pol-pro-INTERR-A",
+      //notes
+
+      //inflections
+      inflections: {
+        pronombreAndDeterminer: {
+          "3per": {
+            singular: {
+              n: {
+                nom: "co",
+                gen: "czego",
+                dat: "czym",
+                acc: "co",
+                ins: "czym",
+                loc: "czym",
+              },
+            },
+            plural: {
+              nonvirile: {
+                nom: "co",
+                gen: "czego",
+                dat: "czym",
+                acc: "co",
+                ins: "czym",
+                loc: "czym",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      //links
       translations: {
-        ENG: ["POSSESSIVE"],
-        POL: ["POSSESSIVE"],
+        ENG: ["eng-pro-POSSESSIVE"],
+        POL: ["pol-pro-POSSESSIVE"],
       },
       tags: [],
       //selectors
-      lemma: "POSSESSIVE",
-      id: "pol-pro-002",
+      lemma: "",
+      id: "pol-pro-POSSESSIVE",
       //notes
 
       //inflections
