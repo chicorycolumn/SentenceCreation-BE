@@ -1106,7 +1106,7 @@ exports.conformAnswerStructureToQuestionStructure = (
 
     let matchingAnswerLemmaObjects = [];
 
-    let lemmasToSearch =
+    let lObjsToSearch =
       questionSelectedLemmaObject.translations[answerLanguage];
 
     let source = words[gpUtils.getWordtypeShorthandStCh(answerStructureChunk)];
@@ -1115,7 +1115,7 @@ exports.conformAnswerStructureToQuestionStructure = (
 
     matchingAnswerLemmaObjects = source.filter(
       (lObj) =>
-        lemmasToSearch.includes(lObj.lemma) &&
+        lObjsToSearch.includes(lObj.id) &&
         //Resolve issue of multipleWordtype allohoms.
         gpUtils.getWordtypeLObj(lObj) ===
           gpUtils.getWordtypeStCh(questionStructureChunk)

@@ -196,7 +196,7 @@ exports.dummySentenceFormulasBank = [
         gcase: ["nom"],
         number: ["singular"],
         gender: [],
-        specificLemmas: ["jabłko"],
+        specificIds: ["pol-nco-004-jabłko"],
       },
     ],
     primaryOrders: [["fix-1", "nco-1"]],
@@ -214,7 +214,7 @@ exports.dummySentenceFormulasBank = [
         gcase: ["acc"],
         number: ["plural"],
         gender: [],
-        specificLemmas: ["jabłko", "majtki"],
+        specificIds: ["pol-nco-004-jabłko", "pol-nco-014-majtki"],
       },
     ],
     primaryOrders: [["fix-1", "nco-1"]],
@@ -790,7 +790,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "ver-1",
 
-        specificLemmas: ["być"],
+        specificIds: ["pol-ver-001-być"],
         tenseDescription: ["present im", "past pf"],
         person: [],
         number: [],
@@ -807,7 +807,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "ver-1",
 
-        specificLemmas: ["być"],
+        specificIds: ["pol-ver-001-być"],
         tenseDescription: ["present im"],
         person: ["1per"],
         number: [],
@@ -824,7 +824,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "ver-1",
 
-        specificLemmas: ["być"],
+        specificIds: ["pol-ver-001-być"],
         tenseDescription: ["present im", "past pf"],
         person: ["1per"],
         number: ["singular"],
@@ -840,14 +840,14 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
 
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["pol-pro-PERSONAL"],
         person: ["2per"],
       },
       {
         chunkId: "ver-1",
 
         agreeWith: "pro-1",
-        specificLemmas: ["być"],
+        specificIds: ["pol-ver-001-być"],
         tenseDescription: ["present im", "past pf"],
         number: [],
       },
@@ -862,7 +862,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "ver-1",
 
-        specificLemmas: ["być"],
+        specificIds: ["pol-ver-001-być"],
         tenseDescription: ["present im", "past pf"],
         person: ["3per"],
         number: ["singular"],
@@ -880,7 +880,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "ver-1",
 
-        specificLemmas: ["być"],
+        specificIds: ["pol-ver-001-być"],
         tenseDescription: ["present im", "past pf"],
         person: ["1per"],
         number: ["plural"],
@@ -896,7 +896,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "ver-1",
 
-        specificLemmas: ["być"],
+        specificIds: ["pol-ver-001-być"],
         tenseDescription: ["present im", "past pf"],
         person: ["3per"],
         number: ["plural"],
@@ -912,7 +912,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "ver-1",
 
-        specificLemmas: ["być"],
+        specificIds: ["pol-ver-001-być"],
         tenseDescription: ["past pf"],
         person: [],
         number: [],
@@ -929,7 +929,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "ver-1",
 
-        specificLemmas: ["być"],
+        specificIds: ["pol-ver-001-być"],
         tenseDescription: ["future pf"],
         person: ["1per"],
         number: ["singular"],
@@ -946,7 +946,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "ver-1",
 
-        specificLemmas: ["być"],
+        specificIds: ["pol-ver-001-być"],
         tenseDescription: ["future im"],
         person: ["1per"],
         number: ["singular"],
@@ -963,7 +963,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "ver-1",
 
-        specificLemmas: ["być"],
+        specificIds: ["pol-ver-001-być"],
         person: ["1per"],
         tenseDescription: ["future im"],
       },
@@ -978,7 +978,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "ver-1",
 
-        specificLemmas: ["być"],
+        specificIds: ["pol-ver-001-być"],
         tenseDescription: ["future im", "present im"],
       },
     ],
@@ -1009,7 +1009,7 @@ exports.dummySentenceFormulasBank = [
       },
       {
         chunkId: "ver-1-is",
-        specificLemmas: ["być"],
+        specificIds: ["pol-ver-001-być"],
         tenseDescription: ["present im"],
         agreeWith: "nco-1-sheep",
       },
@@ -1025,7 +1025,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "ver-1",
 
-        specificLemmas: ["być"],
+        specificIds: ["pol-ver-001-być"],
       },
     ],
     primaryOrders: [],
@@ -1053,13 +1053,13 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["pol-pro-PERSONAL"],
         person: ["2per"],
       },
       {
         chunkId: "ver-1",
         agreeWith: "pro-1",
-        specificLemmas: ["być"],
+        specificIds: ["pol-ver-001-być"],
         tenseDescription: ["present im"],
       },
     ],
@@ -1073,7 +1073,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
 
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["pol-pro-PERSONAL"],
         person: ["2per"],
       },
       {
@@ -1094,7 +1094,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
 
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["pol-pro-PERSONAL"],
         person: ["2per"],
       },
       {
@@ -1115,7 +1115,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
 
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["pol-pro-PERSONAL"],
         person: ["2per"],
       },
       {
@@ -1211,14 +1211,14 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "npe-1",
 
-        specificLemmas: ["kobieta"],
+        specificIds: ["pol-npe-001-kobieta"],
         number: ["singular"],
       },
       {
         chunkId: "ver-1",
 
         agreeWith: "npe-1",
-        specificLemmas: ["pisać"],
+        specificIds: ["pol-ver-005-pisać"],
         tenseDescription: ["past im"],
         person: ["3per"],
         number: ["singular"],
@@ -1234,7 +1234,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
 
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["pol-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
         gender: ["m1"],
@@ -1251,7 +1251,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
 
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["pol-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
         gender: ["m1"],
@@ -1262,7 +1262,7 @@ exports.dummySentenceFormulasBank = [
 
         agreeWith: "pro-1",
         tenseDescription: ["past pf"],
-        specificLemmas: ["napisać"],
+        specificIds: ["pol-ver-005-napisać"],
       },
     ],
     primaryOrders: [["ver-1"]],
@@ -1276,7 +1276,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
 
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["pol-pro-PERSONAL"],
         person: ["1per"],
         gender: ["f"],
         number: ["plural"],
@@ -1287,7 +1287,7 @@ exports.dummySentenceFormulasBank = [
 
         agreeWith: "pro-1",
         tenseDescription: ["past pf"],
-        specificLemmas: ["napisać"],
+        specificIds: ["pol-ver-005-napisać"],
       },
     ],
     primaryOrders: [["ver-1"]],
@@ -1301,7 +1301,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
 
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["pol-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
         gcase: ["nom"],
@@ -1311,7 +1311,7 @@ exports.dummySentenceFormulasBank = [
 
         agreeWith: "pro-1",
         tenseDescription: ["past pf"],
-        specificLemmas: ["napisać"],
+        specificIds: ["pol-ver-005-napisać"],
       },
     ],
     primaryOrders: [["ver-1"]],
@@ -1325,7 +1325,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
 
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["pol-pro-PERSONAL"],
         person: ["1per"],
         number: ["plural"],
         gcase: ["nom"],
@@ -1335,7 +1335,7 @@ exports.dummySentenceFormulasBank = [
 
         agreeWith: "pro-1",
         tenseDescription: ["past pf"],
-        specificLemmas: ["napisać"],
+        specificIds: ["pol-ver-005-napisać"],
       },
     ],
     primaryOrders: [["ver-1"]],
@@ -1350,7 +1350,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
 
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["pol-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
         gcase: ["nom"],
@@ -1361,7 +1361,7 @@ exports.dummySentenceFormulasBank = [
 
         agreeWith: "pro-1",
         tenseDescription: ["past pf"],
-        specificLemmas: ["napisać"],
+        specificIds: ["pol-ver-005-napisać"],
       },
     ],
     primaryOrders: [["ver-1"]],
@@ -1375,7 +1375,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
 
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["pol-pro-PERSONAL"],
         person: ["1per"],
         number: ["plural"],
         gcase: ["nom"],
@@ -1385,7 +1385,7 @@ exports.dummySentenceFormulasBank = [
 
         agreeWith: "pro-1",
         tenseDescription: ["past pf"],
-        specificLemmas: ["napisać"],
+        specificIds: ["pol-ver-005-napisać"],
       },
     ],
     primaryOrders: [["ver-1"]],
@@ -1399,7 +1399,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
 
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["pol-pro-PERSONAL"],
         person: ["1per"],
         // gender: ["m1"],
         // number: ["singular"],
@@ -1408,21 +1408,21 @@ exports.dummySentenceFormulasBank = [
         chunkId: "ver-1",
         agreeWith: "pro-1",
 
-        specificLemmas: ["mieć"],
+        specificIds: ["pol-ver-002-mieć"],
         tenseDescription: ["present im"],
       },
       {
         chunkId: "pro-2",
 
         form: ["determiner"],
-        specificLemmas: ["POSSESSIVE"],
+        specificIds: ["pol-pro-POSSESSIVE"],
         agreeWith: "pro-1",
         agreeWith2: "nco-1",
       },
       {
         chunkId: "nco-1",
 
-        specificLemmas: ["cebula"],
+        specificIds: ["pol-nco-002-cebula"],
         gcase: ["acc"],
       },
     ],
@@ -1437,7 +1437,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
 
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["pol-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
       },
@@ -1445,14 +1445,14 @@ exports.dummySentenceFormulasBank = [
         chunkId: "pro-2",
 
         form: ["determiner"],
-        specificLemmas: ["POSSESSIVE"],
+        specificIds: ["pol-pro-POSSESSIVE"],
         agreeWith: "pro-1",
         agreeWith2: "nco-1",
       },
       {
         chunkId: "nco-1",
 
-        specificLemmas: ["cebula"],
+        specificIds: ["pol-nco-002-cebula"],
         number: ["singular"],
       },
     ],
@@ -1474,7 +1474,7 @@ exports.dummySentenceFormulasBank = [
 
         agreeWith: "npe-1",
         tenseDescription: ["past pf"],
-        specificLemmas: ["napisać", "przeczytać"],
+        specificIds: ["pol-ver-005-napisać", "pol-ver-003-przeczytać"],
       },
     ],
     primaryOrders: [["npe-1", "ver-1"]],
@@ -1488,7 +1488,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "npe-1",
 
-        specificLemmas: ["kobieta"],
+        specificIds: ["pol-npe-001-kobieta"],
         number: ["singular"],
       },
       {
@@ -1496,7 +1496,7 @@ exports.dummySentenceFormulasBank = [
 
         agreeWith: "npe-1",
         tenseDescription: ["future im"],
-        specificLemmas: ["napisać", "pisać"],
+        specificIds: ["pol-ver-005-napisać", "pol-ver-005-pisać"],
       },
     ],
     primaryOrders: [["npe-1", "ver-1"]],
@@ -1510,7 +1510,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "ver-1",
 
-        specificLemmas: ["mieć"],
+        specificIds: ["pol-ver-002-mieć"],
         tenseDescription: ["present im", "past pf"],
         person: ["1per", "2per", "3per"],
         number: [],
@@ -1527,7 +1527,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "ver-1",
 
-        specificLemmas: ["mieć"],
+        specificIds: ["pol-ver-002-mieć"],
         tenseDescription: ["present im"],
         person: ["1per"],
         number: [],
@@ -1544,7 +1544,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "ver-1",
 
-        specificLemmas: ["mieć"],
+        specificIds: ["pol-ver-002-mieć"],
         tenseDescription: ["present im", "past pf"],
         person: ["1per"],
         number: ["singular"],
@@ -1560,14 +1560,14 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
 
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["pol-pro-PERSONAL"],
         person: ["2per"],
       },
       {
         chunkId: "ver-1",
 
         agreeWith: "pro-1",
-        specificLemmas: ["mieć"],
+        specificIds: ["pol-ver-002-mieć"],
         tenseDescription: ["present im", "past pf"],
         number: [],
       },
@@ -1582,14 +1582,14 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
 
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["pol-pro-PERSONAL"],
         person: ["2per"],
       },
       {
         chunkId: "ver-1",
 
         agreeWith: "pro-1",
-        specificLemmas: ["mieć"],
+        specificIds: ["pol-ver-002-mieć"],
         tenseDescription: ["present im"],
         number: [],
       },
@@ -1604,7 +1604,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "ver-1",
 
-        specificLemmas: ["mieć"],
+        specificIds: ["pol-ver-002-mieć"],
         tenseDescription: ["present im", "past pf"],
         person: ["3per"],
         number: ["singular"],
@@ -1622,7 +1622,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "ver-1",
 
-        specificLemmas: ["mieć"],
+        specificIds: ["pol-ver-002-mieć"],
         tenseDescription: ["present im", "past pf"],
         person: ["1per"],
         number: ["plural"],
@@ -1638,7 +1638,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "ver-1",
 
-        specificLemmas: ["mieć"],
+        specificIds: ["pol-ver-002-mieć"],
         tenseDescription: ["present im", "past pf"],
         person: ["3per"],
         number: ["plural"],
@@ -1654,7 +1654,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "ver-1",
 
-        specificLemmas: ["mieć"],
+        specificIds: ["pol-ver-002-mieć"],
         tenseDescription: ["past pf"],
         person: ["1per", "2per", "3per"],
         number: [],
@@ -1671,7 +1671,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "ver-1",
 
-        specificLemmas: ["mieć"],
+        specificIds: ["pol-ver-002-mieć"],
         tenseDescription: ["future pf"],
         person: ["1per"],
         number: ["singular"],
@@ -1689,7 +1689,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "ver-1",
 
-        specificLemmas: ["mieć"],
+        specificIds: ["pol-ver-002-mieć"],
         tenseDescription: ["future im"],
         person: ["1per"],
         number: ["singular"],
@@ -1707,7 +1707,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "ver-1",
 
-        specificLemmas: ["mieć"],
+        specificIds: ["pol-ver-002-mieć"],
         person: ["1per"],
         tenseDescription: ["future im"],
       },
@@ -1722,7 +1722,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pre-1",
 
-        specificLemmas: ["z"],
+        specificIds: ["pol-art-001-z"],
         // connectedTo: "nco-1",
       },
       {
@@ -1743,7 +1743,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pre-1",
 
-        specificLemmas: ["z"],
+        specificIds: ["pol-art-001-z"],
         // connectedTo: "nco-1",
       },
       {
@@ -1764,7 +1764,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pre-1",
 
-        specificLemmas: ["z"],
+        specificIds: ["pol-art-001-z"],
         // connectedTo: "nco-1",
       },
       {
@@ -1785,13 +1785,13 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pre-1",
 
-        specificLemmas: ["z"],
+        specificIds: ["pol-art-001-z"],
         // connectedTo: "nco-1",
       },
       {
         chunkId: "nco-1",
 
-        specificLemmas: ["owca"],
+        specificIds: ["pol-nco-008-owca"],
         gcase: ["ins"],
         number: ["singular"],
       },
@@ -1806,13 +1806,13 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pre-1",
 
-        specificLemmas: ["z"],
+        specificIds: ["pol-art-001-z"],
         // connectedTo: "nco-1",
       },
       {
         chunkId: "nco-1",
 
-        specificLemmas: ["owca"],
+        specificIds: ["pol-nco-008-owca"],
         gcase: ["ins"],
         number: ["plural"],
       },
@@ -1841,7 +1841,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "npe-1",
 
-        specificLemmas: ["kobieta"],
+        specificIds: ["pol-npe-001-kobieta"],
         number: ["singular"],
       },
     ],
@@ -1856,19 +1856,19 @@ exports.dummySentenceFormulasBank = [
         chunkId: "npe-1",
 
         number: ["plural"],
-        specificLemmas: ["kobieta"],
+        specificIds: ["pol-npe-001-kobieta"],
       },
       {
         chunkId: "ver-1",
 
         agreeWith: "npe-1",
-        specificLemmas: ["widzieć", "zobaczyć"],
+        specificIds: ["pol-ver-008-widzieć", "pol-ver-008-zobaczyć"],
         tenseDescription: ["past pf"],
       },
       {
         chunkId: "pro-1",
 
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["pol-pro-PERSONAL"],
         person: ["2per"],
         gcase: ["acc"],
       },
@@ -1948,7 +1948,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["pol-pro-PERSONAL"],
         gcase: ["nom"],
         number: ["singular"],
         person: ["1per"],
@@ -1973,7 +1973,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["pol-pro-PERSONAL"],
         gcase: ["nom"],
         number: ["singular"],
         person: ["1per"],
@@ -1995,7 +1995,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["pol-pro-PERSONAL"],
         gcase: ["nom"],
         number: ["singular"],
         person: ["1per"],
@@ -2017,7 +2017,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["pol-pro-PERSONAL"],
         gcase: ["nom"],
         number: ["singular"],
         person: ["3per"],
@@ -2039,7 +2039,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["pol-pro-PERSONAL"],
         gcase: ["nom"],
         number: ["singular"],
         person: ["3per"],
@@ -2061,7 +2061,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["pol-pro-PERSONAL"],
         gcase: ["nom"],
         number: ["plural"],
         person: ["1per"],
@@ -2069,12 +2069,12 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "pro-1",
-        specificLemmas: ["widzieć", "zobaczyć"],
+        specificIds: ["pol-ver-008-widzieć", "pol-ver-008-zobaczyć"],
         tenseDescription: ["present im"],
       },
       {
         chunkId: "pro-2",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["pol-pro-PERSONAL"],
         gcase: ["acc"],
         number: ["plural"],
         person: ["3per"],
@@ -2094,7 +2094,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["pol-pro-PERSONAL"],
         gcase: ["nom"],
         number: ["plural"],
         person: ["1per"],
@@ -2102,12 +2102,12 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "pro-1",
-        specificLemmas: ["widzieć", "zobaczyć"],
+        specificIds: ["pol-ver-008-widzieć", "pol-ver-008-zobaczyć"],
         tenseDescription: ["past pf"],
       },
       {
         chunkId: "pro-2",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["pol-pro-PERSONAL"],
         gcase: ["acc"],
         number: ["plural"],
         person: ["3per"],
@@ -2127,14 +2127,14 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "npe-1-doctor",
-        specificLemmas: ["lekarz", "lekarka"],
+        specificIds: ["pol-npe-005-lekarz", "pol-npe-006-lekarka"],
         gender: ["m1"],
         formulaImportantTraitKeys: ["gender"],
         number: ["plural"],
       },
       {
         chunkId: "ver-1-write",
-        specificLemmas: ["pisać", "napisać"],
+        specificIds: ["pol-ver-005-pisać", "pol-ver-005-napisać"],
         agreeWith: "npe-1-doctor",
         tenseDescription: ["present im", "past pf"],
       },
@@ -2148,12 +2148,12 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "npe-1-doctor",
-        specificLemmas: ["lekarz", "lekarka"],
+        specificIds: ["pol-npe-005-lekarz", "pol-npe-006-lekarka"],
         gender: ["nonvirile"],
       },
       {
         chunkId: "ver-1-write",
-        specificLemmas: ["pisać", "napisać"],
+        specificIds: ["pol-ver-005-pisać", "pol-ver-005-napisać"],
         agreeWith: "npe-1-doctor",
         tenseDescription: ["present im", "past pf"],
       },
@@ -2167,14 +2167,14 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "npe-1-doctor",
-        specificLemmas: ["lekarz", "lekarka"],
+        specificIds: ["pol-npe-005-lekarz", "pol-npe-006-lekarka"],
         gender: ["f"],
         formulaImportantTraitKeys: ["gender"],
         number: ["plural"],
       },
       {
         chunkId: "ver-1-write",
-        specificLemmas: ["pisać", "napisać"],
+        specificIds: ["pol-ver-005-pisać", "pol-ver-005-napisać"],
         agreeWith: "npe-1-doctor",
         tenseDescription: ["present im", "past pf"],
       },
@@ -2188,12 +2188,12 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "npe-1-doctor",
-        specificLemmas: ["lekarz", "lekarka"],
+        specificIds: ["pol-npe-005-lekarz", "pol-npe-006-lekarka"],
         gender: ["virile"],
       },
       {
         chunkId: "ver-1-write",
-        specificLemmas: ["pisać", "napisać"],
+        specificIds: ["pol-ver-005-pisać", "pol-ver-005-napisać"],
         agreeWith: "npe-1-doctor",
         tenseDescription: ["present im", "past pf"],
       },
@@ -2207,31 +2207,31 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "ver-1-Is",
-        specificLemmas: ["być"],
+        specificIds: ["pol-ver-001-być"],
         tenseDescription: ["present im"],
         agreeWith: "npe-1-Woman",
       },
       {
         chunkId: "npe-1-Woman",
-        specificLemmas: ["kobieta", "chłopiec"],
+        specificIds: ["pol-npe-001-kobieta", "pol-npe-002-chłopiec"],
         number: ["singular"],
       },
       { chunkId: "fix-2-And", chunkValue: "i" },
       {
         chunkId: "pro-1-I",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["pol-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
       },
       {
         chunkId: "ver-1-See",
         agreeWith: "pro-1-I",
-        specificLemmas: ["widzieć", "zobaczyć"],
+        specificIds: ["pol-ver-008-widzieć", "pol-ver-008-zobaczyć"],
         tenseDescription: ["present im"],
       },
       {
         chunkId: "pro-2-Her",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["pol-pro-PERSONAL"],
         agreeWith: "npe-1-Woman",
         gcase: ["acc"],
         formulaImportantTraitKeys: ["gcase"],
@@ -2248,31 +2248,35 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "ver-1-Is",
-        specificLemmas: ["być"],
+        specificIds: ["pol-ver-001-być"],
         tenseDescription: ["present im"],
         agreeWith: "nco-1-Apple",
       },
       {
         chunkId: "nco-1-Apple",
-        specificLemmas: ["jabłko", "pomidor", "cebula"],
+        specificIds: [
+          "pol-nco-004-jabłko",
+          "pol-nco-003-pomidor",
+          "pol-nco-002-cebula",
+        ],
         number: ["singular"],
       },
       { chunkId: "fix-2-And", chunkValue: "i" },
       {
         chunkId: "pro-1-I",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["pol-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
       },
       {
         chunkId: "ver-1-See",
         agreeWith: "pro-1-I",
-        specificLemmas: ["widzieć", "zobaczyć"],
+        specificIds: ["pol-ver-008-widzieć", "pol-ver-008-zobaczyć"],
         tenseDescription: ["present im"],
       },
       {
         chunkId: "pro-2-It",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["pol-pro-PERSONAL"],
         agreeWith: "nco-1-Apple",
         gcase: ["acc"],
         formulaImportantTraitKeys: ["gcase"],
@@ -2289,31 +2293,31 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "ver-1-Is",
-        specificLemmas: ["być"],
+        specificIds: ["pol-ver-001-być"],
         tenseDescription: ["present im"],
         agreeWith: "nco-1-Rat",
       },
       {
         chunkId: "nco-1-Rat",
-        specificLemmas: ["szczur"],
+        specificIds: ["pol-nco-011-szczur"],
         number: ["singular"],
       },
       { chunkId: "fix-2-And", chunkValue: "i" },
       {
         chunkId: "pro-1-I",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["pol-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
       },
       {
         chunkId: "ver-1-See",
         agreeWith: "pro-1-I",
-        specificLemmas: ["widzieć", "zobaczyć"],
+        specificIds: ["pol-ver-008-widzieć", "pol-ver-008-zobaczyć"],
         tenseDescription: ["present im"],
       },
       {
         chunkId: "pro-2-It",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["pol-pro-PERSONAL"],
         agreeWith: "nco-1-Rat",
         gcase: ["acc"],
         formulaImportantTraitKeys: ["gcase"],
@@ -2330,18 +2334,22 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "nco-1-Rats",
-        specificLemmas: ["szczur", "kobieta", "chłopiec"],
+        specificIds: [
+          "pol-nco-011-szczur",
+          "pol-npe-001-kobieta",
+          "pol-npe-002-chłopiec",
+        ],
         number: ["plural"],
       },
       {
         chunkId: "ver-1-Are",
-        specificLemmas: ["być"],
+        specificIds: ["pol-ver-001-być"],
         agreeWith: "nco-1-Rats",
         tenseDescription: ["present im"],
       },
       {
         chunkId: "adj-1-Red",
-        specificLemmas: ["czerwony"],
+        specificIds: ["pol-adj-001-czerwony"],
         agreeWith: "nco-1-Rats",
       },
     ],
@@ -2354,19 +2362,19 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["pol-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
       },
       {
         chunkId: "ver-1-See",
         agreeWith: "pro-1-I",
-        specificLemmas: ["widzieć", "zobaczyć"],
+        specificIds: ["pol-ver-008-widzieć", "pol-ver-008-zobaczyć"],
         tenseDescription: ["present im"],
       },
       {
         chunkId: "nco-1-Rat",
-        specificLemmas: ["szczur"],
+        specificIds: ["pol-nco-011-szczur"],
         number: ["singular"],
         gcase: ["acc"],
       },
@@ -2381,7 +2389,7 @@ exports.dummySentenceFormulasBank = [
       { chunkId: "fix-1-One", chunkValue: "jedne" },
       {
         chunkId: "nco-1-Door",
-        specificLemmas: ["drzwi"],
+        specificIds: ["pol-nco-007-drzwi"],
         number: ["singular"],
       },
     ],
@@ -2396,7 +2404,7 @@ exports.dummySentenceFormulasBank = [
       { chunkId: "fix-1-Two", chunkValue: "dwoje" },
       {
         chunkId: "nco-1-Door",
-        specificLemmas: ["drzwi"],
+        specificIds: ["pol-nco-007-drzwi"],
         number: ["plural"],
       },
     ],
@@ -2410,12 +2418,12 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "nco-1-Tweezers",
-        specificLemmas: ["pinceta"],
+        specificIds: ["pol-nco-012-pinceta"],
         number: ["singular"],
       },
       {
         chunkId: "ver-1-Be",
-        specificLemmas: ["być"],
+        specificIds: ["pol-ver-001-być"],
         agreeWith: "nco-1-Tweezers",
         tenseDescription: ["present im"],
         formulaImportantTraitKeys: ["tenseDescription"],
@@ -2431,12 +2439,12 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "nco-1-Tweezers",
-        specificLemmas: ["pinceta"],
+        specificIds: ["pol-nco-012-pinceta"],
         number: ["plural"],
       },
       {
         chunkId: "ver-1-Be",
-        specificLemmas: ["być"],
+        specificIds: ["pol-ver-001-być"],
         agreeWith: "nco-1-Tweezers",
         tenseDescription: ["present im"],
         formulaImportantTraitKeys: ["tenseDescription"],
@@ -2452,12 +2460,12 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "nco-1-Dust",
-        specificLemmas: ["pył"],
+        specificIds: ["pol-nco-013-pył"],
         number: ["singular"],
       },
       {
         chunkId: "ver-1-Be",
-        specificLemmas: ["być"],
+        specificIds: ["pol-ver-001-być"],
         agreeWith: "nco-1-Dust",
         tenseDescription: ["present im"],
         formulaImportantTraitKeys: ["tenseDescription"],
@@ -2473,12 +2481,12 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "nco-1-Dust",
-        specificLemmas: ["pył"],
+        specificIds: ["pol-nco-013-pył"],
         number: ["plural"],
       },
       {
         chunkId: "ver-1-Be",
-        specificLemmas: ["być"],
+        specificIds: ["pol-ver-001-być"],
         agreeWith: "nco-1-Dust",
         tenseDescription: ["present im"],
         formulaImportantTraitKeys: ["tenseDescription"],

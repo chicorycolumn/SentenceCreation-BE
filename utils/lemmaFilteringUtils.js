@@ -627,11 +627,11 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
   //STEP FOUR: Selectors that must be handled specially.
 
   if (
-    !structureChunk.doNotUpdateSpecificLemmasAsIsJustOneMDN &&
-    structureChunk.specificLemmas &&
-    structureChunk.specificLemmas.length
+    !structureChunk.doNotUpdateSpecificIdsAsIsJustOneMDN &&
+    structureChunk.specificIds &&
+    structureChunk.specificIds.length
   ) {
-    structureChunk.specificLemmas = [selectedLemmaObject.lemma]; //SLIM (specificLemma Issue re MDNs)
+    structureChunk.specificIds = [selectedLemmaObject.id]; //SLIM (specific lemma issue re MDNs)
   }
 
   consol.log(
