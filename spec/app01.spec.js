@@ -2006,7 +2006,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal07-01c GET 200 YES: RSWAT Poleng 'be' - past im/pf (Type 2 Allohomograph), pres pf - You (with clarifiers).", () => {
+    it.only("#pal07-01c GET 200 YES: RSWAT Poleng 'be' - past im/pf (Type 2 Allohomograph), pres pf - You (with clarifiers).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
