@@ -1,11 +1,11 @@
 let nco = [
   {
     //links
-    translations: { ENG: ["nut"] },
+    translations: { ENG: ["eng-nco-Dnut1"], POL: ["pol-nco-Dnut1"] },
     tags: ["allohomTesting", "edible2"],
     //selectors
     lemma: "orzech",
-    id: "pol-nco-d01",
+    id: "pol-nco-Dnut1",
     gender: "m3",
     //notes
 
@@ -35,11 +35,11 @@ let nco = [
   },
   {
     //links
-    translations: { ENG: ["nut"] },
+    translations: { ENG: ["eng-nco-Dnut2"], POL: ["pol-nco-Dnut2"] },
     tags: ["allohomTesting", "toolbox"],
     //selectors
     lemma: "nakrętka",
-    id: "pol-nco-d02",
+    id: "pol-nco-Dnut2",
     gender: "f",
     //notes
 
@@ -65,41 +65,11 @@ let nco = [
   },
   {
     //links
-    translations: { ENG: ["bear"] },
-    tags: ["allohomTesting2", "animal"],
-    //selectors
-    lemma: "niedźwiedź",
-    id: "pol-nco-d03",
-    gender: "m2",
-    //notes
-
-    //inflections
-    inflections: {
-      singular: {
-        nom: "niedźwiedź",
-        gen: "niedźwiedzia",
-        dat: "niedźwiedziowi",
-        acc: "niedźwiedzia",
-        ins: "niedźwiedziem",
-        loc: "niedźwiedziu",
-      },
-      plural: {
-        nom: "niedźwiedzie",
-        gen: "niedźwiedzi",
-        dat: "niedźwiedziom",
-        acc: "niedźwiedzie",
-        ins: "niedźwiedziami",
-        loc: "niedźwiedziach",
-      },
-    },
-  },
-  {
-    //links
-    translations: { ENG: ["tie"] },
+    translations: { ENG: ["eng-nco-Dtie2"], POL: ["pol-nco-Dtie2"] },
     tags: ["allohomTesting3", "sports"],
     //selectors
     lemma: "remis",
-    id: "pol-nco-d04",
+    id: "pol-nco-Dtie2",
     gender: "m3",
     //notes
 
@@ -125,11 +95,11 @@ let nco = [
   },
   {
     //links
-    translations: { ENG: ["tie"] },
+    translations: { ENG: ["eng-nco-Dtie1"], POL: ["pol-nco-Dtie1"] },
     tags: ["allohomTesting3", "clothes"],
     //selectors
     lemma: "krawat",
-    id: "pol-nco-d05",
+    id: "pol-nco-Dtie1",
     gender: "m3",
     //notes
 
@@ -305,100 +275,11 @@ let pro = [];
 let ver = [
   {
     //links
-    translations: { ENG: ["bear"] },
-    tags: ["allohomTesting2", "emotions"],
-    //selectors
-    lemma: "znieść",
-    id: "pol-ver-d01-pf-01",
-    aspect: "perfective",
-    //notes
-
-    //inflections
-    inflections: {
-      infinitive: "znieść",
-      verbal: {
-        past: {
-          impersonal: {
-            singular: { allSingularGenders: "zniesiono" },
-            plural: { allPluralGenders: "zniesiono" },
-          },
-          "1per": {
-            singular: {
-              m: "zniósłem",
-              f: "zniosłam",
-            },
-            plural: {
-              virile: "znieśliśmy",
-              nonvirile: "zniosłyśmy",
-            },
-          },
-          "2per": {
-            singular: {
-              m: "zniósłeś",
-              f: "zniosłaś",
-            },
-            plural: {
-              virile: "znieśliście",
-              nonvirile: "zniosłyście",
-            },
-          },
-          "3per": {
-            singular: {
-              m: "zniósł",
-              f: "zniosła",
-              n: "zniosło",
-            },
-            plural: {
-              virile: "znieśli",
-              nonvirile: "zniosły",
-            },
-          },
-        },
-        present: false,
-        future: {
-          impersonal: { singular: true, plural: true },
-          "1per": {
-            singular: {
-              allSingularGendersExcludingNeuter: "zniosę",
-            },
-            plural: {
-              allPluralGenders: "zniesiemy",
-            },
-          },
-          "2per": {
-            singular: {
-              allSingularGendersExcludingNeuter: "zniesiesz",
-            },
-            plural: {
-              allPluralGenders: "zniesiecie",
-            },
-          },
-          "3per": {
-            singular: {
-              allSingularGenders: "zniesie",
-            },
-            plural: {
-              allPluralGenders: "zniosą",
-            },
-          },
-        },
-        conditional: true,
-        imperative: "znieś",
-      },
-      activeAdjectival: false,
-      passiveAdjectival: "zniesiony",
-      contemporaryAdverbial: false,
-      anteriorAdverbial: "zniósłszy",
-      verbalNoun: "zniesienie",
-    },
-  },
-  {
-    //links
-    translations: { ENG: ["tie"] },
+    translations: { ENG: ["eng-ver-Dtie"], POL: ["pol-ver-Dtie"] },
     tags: ["allohomTesting3", "crafts"],
     //selectors
     lemma: "wiązać",
-    id: "pol-ver-d02-im-01",
+    id: "pol-ver-Dtie",
     aspect: "imperfective",
     //notes
 

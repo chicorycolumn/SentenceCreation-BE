@@ -627,11 +627,13 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
   //STEP FOUR: Selectors that must be handled specially.
 
   if (
-    !structureChunk.doNotUpdateSpecificLemmasAsIsJustOneMDN &&
-    structureChunk.specificLemmas &&
-    structureChunk.specificLemmas.length
+    !structureChunk.doNotUpdateSpecificIdsAsIsJustOneMDN &&
+    structureChunk.specificIds &&
+    structureChunk.specificIds.length
   ) {
-    structureChunk.specificLemmas = [selectedLemmaObject.lemma]; //SLIM (specificLemma Issue re MDNs)
+    structureChunk.specificIds = allLangUtils.formatSpecificIds([
+      selectedLemmaObject.id,
+    ]); //SLIM (specific lemma issue re MDNs)
   }
 
   consol.log(
@@ -1148,7 +1150,7 @@ exports.traverseAndRecordInflections = (
     } else {
       consol.log(
         "[1;33m " +
-          `buwt #NB lf.traverseAndRecordInflections for "${chunkId}" found no matching inflectionValues during drilling for ${reqInflectionCategory}: "${chosenInflectionKeyAdjusted}".` +
+          `buwt ${currentLanguage} #NB lf.traverseAndRecordInflections for "${chunkId}" found no matching inflectionValues during drilling for ${reqInflectionCategory}: "${chosenInflectionKeyAdjusted}".` +
           "[0m"
       );
     }

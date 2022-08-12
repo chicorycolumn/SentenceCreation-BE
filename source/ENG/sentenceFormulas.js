@@ -175,7 +175,7 @@ exports.sentenceFormulasBank = [
       { chunkId: "fix-2", chunkValue: "you" },
       {
         chunkId: "ver-1",
-        specificLemmas: ["write"],
+        specificIds: ["eng-ver-005-write"],
         tenseDescription: ["cond1 condition"],
         formulaImportantTraitKeys: ["tenseDescription"],
         person: ["2per"],
@@ -184,7 +184,7 @@ exports.sentenceFormulasBank = [
       { chunkId: "fix-3", chunkValue: "a" },
       {
         chunkId: "nco-1",
-        specificLemmas: ["book"],
+        specificIds: ["eng-nco-006-book"],
         number: ["singular"],
         gcase: ["nom"],
       },
@@ -192,7 +192,7 @@ exports.sentenceFormulasBank = [
       { chunkId: "fix-5", chunkValue: "I" },
       {
         chunkId: "ver-2",
-        specificLemmas: ["research"],
+        specificIds: ["eng-ver-004-research"],
         tenseDescription: ["cond1 outcome"],
         formulaImportantTraitKeys: ["tenseDescription"],
         person: ["1per"],
@@ -227,7 +227,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "nco-1",
-        specificLemmas: ["door"],
+        specificIds: ["eng-nco-007-door"],
         number: [],
         gcase: ["nom"],
       },
@@ -247,7 +247,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "nco-1",
-        specificLemmas: ["door"],
+        specificIds: ["eng-nco-007-door"],
         number: ["singular"],
         gcase: ["nom"],
       },
@@ -262,14 +262,14 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["eng-pro-PERSONAL"],
         gcase: ["nom"],
         number: ["singular"],
       },
       {
         chunkId: "ver-1",
         agreeWith: "pro-1",
-        specificLemmas: ["be"],
+        specificIds: ["eng-ver-001-be"],
         tenseDescription: ["present simple"],
       },
     ],
@@ -290,7 +290,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "npe-1",
-        specificLemmas: ["write"],
+        specificIds: ["eng-ver-005-write"],
         tenseDescription: ["past simple"],
       },
       { chunkId: "fix-2", chunkValue: "a" },
@@ -313,7 +313,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "npe-1",
-        specificLemmas: ["write"],
+        specificIds: ["eng-ver-005-write"],
         tenseDescription: ["past continuous"],
       },
       {
@@ -343,7 +343,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "npe-1",
-        specificLemmas: ["write"],
+        specificIds: ["eng-ver-005-write"],
         tenseDescription: ["past simple"],
       },
       { chunkId: "fix-2", chunkValue: "a" },
@@ -366,7 +366,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "npe-1",
-        specificLemmas: ["write"],
+        specificIds: ["eng-ver-005-write"],
         tenseDescription: ["past continuous"],
       },
       { chunkId: "fix-2", chunkValue: "a" },
@@ -383,24 +383,24 @@ exports.sentenceFormulasBank = [
       { chunkId: "fix-1", chunkValue: "the" },
       {
         chunkId: "npe-1",
-        specificLemmas: ["woman"],
+        specificIds: ["eng-npe-001-woman"],
       },
       {
         chunkId: "ver-1",
         agreeWith: "npe-1",
-        specificLemmas: ["read"],
+        specificIds: ["eng-ver-003-read"],
         tenseDescription: ["past continuous"],
       },
       {
         chunkId: "pro-1",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
         gcase: ["dat"],
       },
       { chunkId: "fix-2", chunkValue: "a" },
       {
         chunkId: "nco-2",
-        specificLemmas: ["book"],
+        specificIds: ["eng-nco-006-book"],
         number: ["singular"],
       },
       { chunkId: "fix-3", chunkValue: "to" },
@@ -417,13 +417,13 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
       },
       {
         chunkId: "ver-1",
         agreeWith: "pro-1",
-        specificLemmas: ["be"],
+        specificIds: ["eng-ver-001-be"],
         tenseDescription: ["present simple"],
       },
     ],
@@ -437,13 +437,13 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
       },
       {
         chunkId: "ver-1",
         agreeWith: "pro-1",
-        specificLemmas: ["be"],
+        specificIds: ["eng-ver-001-be"],
         tenseDescription: ["past simple"],
       },
     ],
@@ -457,13 +457,13 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["eng-pro-PERSONAL"],
         person: ["2per"],
       },
       {
         chunkId: "ver-1",
         agreeWith: "pro-1",
-        specificLemmas: ["be"],
+        specificIds: ["eng-ver-001-be"],
         tenseDescription: ["past simple"],
       },
     ],
@@ -483,18 +483,23 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "npe-1",
-        specificLemmas: ["give"],
+        specificIds: ["eng-ver-006-give"],
         tenseDescription: ["past simple"],
       },
       {
         chunkId: "pro-1",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
         gcase: ["dat"],
       },
       {
         chunkId: "nco-2",
-        specificLemmas: ["book", "mirror", "apple", "onion"],
+        specificIds: [
+          "eng-nco-006-book",
+          "eng-nco-005-mirror",
+          "eng-nco-004-apple",
+          "eng-nco-002-onion",
+        ],
         number: ["plural"],
       },
       { chunkId: "fix-3", chunkValue: "to" },
@@ -515,19 +520,24 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "npe-1",
-        specificLemmas: ["give"],
+        specificIds: ["eng-ver-006-give"],
         tenseDescription: ["past simple"],
       },
       {
         chunkId: "pro-1",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
         gcase: ["dat"],
       },
       { chunkId: "fix-1", chunkValue: "one" },
       {
         chunkId: "nco-2",
-        specificLemmas: ["book", "mirror", "apple", "onion"],
+        specificIds: [
+          "eng-nco-006-book",
+          "eng-nco-005-mirror",
+          "eng-nco-004-apple",
+          "eng-nco-002-onion",
+        ],
         number: ["singular"],
       },
       { chunkId: "fix-3", chunkValue: "to" },
@@ -544,13 +554,13 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1-invisible",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
       },
       {
         chunkId: "pro-2",
         form: ["determiner"],
-        specificLemmas: ["POSSESSIVE"],
+        specificIds: ["eng-pro-POSSESSIVE"],
         agreeWith: "pro-1-invisible",
         agreeWith2: "npe-1",
       },
@@ -563,7 +573,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "npe-1",
-        specificLemmas: ["give"],
+        specificIds: ["eng-ver-006-give"],
         tenseDescription: ["past simple"],
       },
       {
@@ -571,12 +581,12 @@ exports.sentenceFormulasBank = [
         agreeWith: "pro-1-invisible",
         gcase: ["dat"],
         formulaImportantTraitKeys: ["gcase"],
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["eng-pro-PERSONAL"],
       },
       { chunkId: "fix-1", chunkValue: "a" },
       {
         chunkId: "nco-2",
-        specificLemmas: ["book"],
+        specificIds: ["eng-nco-006-book"],
         gcase: ["acc"],
         number: ["singular"],
       },
@@ -591,13 +601,13 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1-invisible-We",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
       },
       {
         chunkId: "pro-2-Our",
         form: ["determiner"],
-        specificLemmas: ["POSSESSIVE"],
+        specificIds: ["eng-pro-POSSESSIVE"],
         agreeWith: "pro-1-invisible-We",
       },
       {
@@ -608,7 +618,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1-Gave",
         agreeWith: "npe-1-Father",
-        specificLemmas: ["give"],
+        specificIds: ["eng-ver-006-give"],
         tenseDescription: ["past simple"],
       },
       {
@@ -616,17 +626,17 @@ exports.sentenceFormulasBank = [
         agreeWith: "pro-1-invisible-We",
         gcase: ["dat"],
         formulaImportantTraitKeys: ["gcase"],
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["eng-pro-PERSONAL"],
       },
       {
         chunkId: "pro-4-His",
         form: ["determiner"],
-        specificLemmas: ["POSSESSIVE"],
+        specificIds: ["eng-pro-POSSESSIVE"],
         agreeWith: "npe-1-Father",
       },
       {
         chunkId: "nco-2-Book",
-        specificLemmas: ["book"],
+        specificIds: ["eng-nco-006-book"],
         gcase: ["acc"],
         number: ["singular"],
       },
@@ -652,19 +662,19 @@ exports.sentenceFormulasBank = [
       { chunkId: "fix-1b", chunkValue: "a" },
       {
         chunkId: "pro-1-invisible-I",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
       },
       {
         chunkId: "npe-1-Doctor",
-        specificLemmas: ["doctor"],
+        specificIds: ["eng-npe-005-doctor"],
         gcase: ["nom"],
       },
       {
         chunkId: "ver-1-Gave",
         agreeWith: "npe-1-Doctor",
-        specificLemmas: ["give"],
+        specificIds: ["eng-ver-006-give"],
         tenseDescription: ["past simple"],
       },
       {
@@ -672,17 +682,17 @@ exports.sentenceFormulasBank = [
         agreeWith: "pro-1-invisible-I",
         gcase: ["dat"],
         formulaImportantTraitKeys: ["gcase"],
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["eng-pro-PERSONAL"],
       },
       {
         chunkId: "pro-3-Her",
         form: ["determiner"],
-        specificLemmas: ["POSSESSIVE"],
+        specificIds: ["eng-pro-POSSESSIVE"],
         agreeWith: "npe-1-Doctor",
       },
       {
         chunkId: "nco-2-Book",
-        specificLemmas: ["book"],
+        specificIds: ["eng-nco-006-book"],
         gcase: ["acc"],
         number: ["singular"],
       },
@@ -715,40 +725,40 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
       },
       {
         chunkId: "ver-1-see",
         agreeWith: "pro-1-I",
-        specificLemmas: ["see"],
+        specificIds: ["eng-ver-008-see"],
         tenseDescription: ["past simple"],
       },
       {
         chunkId: "pro-2-my",
         form: ["determiner"],
-        specificLemmas: ["POSSESSIVE"],
+        specificIds: ["eng-pro-POSSESSIVE"],
         agreeWith: "pro-1-I",
       },
       {
         chunkId: "npe-1-doctor",
         gcase: ["nom"],
         number: ["singular"],
-        specificLemmas: ["doctor"],
+        specificIds: ["eng-npe-005-doctor"],
       },
       { chunkId: "fix-1-and", chunkValue: "and" },
       {
         chunkId: "pro-3-his",
         form: ["determiner"],
-        specificLemmas: ["POSSESSIVE"],
+        specificIds: ["eng-pro-POSSESSIVE"],
         agreeWith: "npe-1-doctor",
       },
       {
         chunkId: "npe-2-doctor",
         gcase: ["nom"],
         number: ["singular"],
-        specificLemmas: ["doctor"],
+        specificIds: ["eng-npe-005-doctor"],
       },
     ],
     primaryOrders: [
@@ -770,21 +780,21 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
       },
       {
         chunkId: "pro-2-my",
         form: ["determiner"],
-        specificLemmas: ["POSSESSIVE"],
+        specificIds: ["eng-pro-POSSESSIVE"],
         agreeWith: "pro-1-I",
       },
       {
         chunkId: "npe-1-doctor",
         gcase: ["nom"],
         number: ["singular"],
-        specificLemmas: ["doctor"],
+        specificIds: ["eng-npe-005-doctor"],
         gender: ["f"],
         educatorBlocksAnnotationsForTheseTraitKeys: ["gender"],
         // ^ Because here the educator knows that context makes this MGN's gender unambiguous.
@@ -792,7 +802,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1-was",
         agreeWith: "npe-1-doctor",
-        specificLemmas: ["be"],
+        specificIds: ["eng-ver-001-be"],
         tenseDescription: ["past simple"],
       },
       { chunkId: "fix-1-a", chunkValue: "a" },
@@ -800,7 +810,7 @@ exports.sentenceFormulasBank = [
         chunkId: "npe-2-woman",
         gcase: ["nom"],
         number: ["singular"],
-        specificLemmas: ["woman"],
+        specificIds: ["eng-npe-001-woman"],
       },
     ],
     primaryOrders: [
@@ -814,21 +824,21 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
       },
       {
         chunkId: "pro-2-my",
         form: ["determiner"],
-        specificLemmas: ["POSSESSIVE"],
+        specificIds: ["eng-pro-POSSESSIVE"],
         agreeWith: "pro-1-I",
       },
       {
         chunkId: "npe-1-doctor",
         gcase: ["nom"],
         number: ["singular"],
-        specificLemmas: ["doctor"],
+        specificIds: ["eng-npe-005-doctor"],
         gender: ["f"],
       },
     ],
@@ -841,21 +851,21 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
       },
       {
         chunkId: "pro-2-my",
         form: ["determiner"],
-        specificLemmas: ["POSSESSIVE"],
+        specificIds: ["eng-pro-POSSESSIVE"],
         agreeWith: "pro-1-I",
       },
       {
         chunkId: "npe-1-doctor",
         gcase: ["nom"],
         number: ["singular"],
-        specificLemmas: ["doctor"],
+        specificIds: ["eng-npe-005-doctor"],
         gender: ["f"],
         educatorBlocksAnnotationsForTheseTraitKeys: ["gender"],
         // ^ Because here the educator knows that context makes this MGN's gender unambiguous.
@@ -863,7 +873,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1-was",
         agreeWith: "npe-1-doctor",
-        specificLemmas: ["be"],
+        specificIds: ["eng-ver-001-be"],
         tenseDescription: ["past simple"],
       },
       { chunkId: "fix-1-a", chunkValue: "a" },
@@ -871,7 +881,7 @@ exports.sentenceFormulasBank = [
         chunkId: "npe-2-woman",
         gcase: ["nom"],
         number: ["singular"],
-        specificLemmas: ["woman"],
+        specificIds: ["eng-npe-001-woman"],
       },
     ],
     primaryOrders: [
@@ -885,34 +895,34 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
       },
       {
         chunkId: "pro-2-my",
         form: ["determiner"],
-        specificLemmas: ["POSSESSIVE"],
+        specificIds: ["eng-pro-POSSESSIVE"],
         agreeWith: "pro-1-I",
       },
       {
         chunkId: "npe-1-doctor's",
         gcase: ["gen"],
         number: ["singular"],
-        specificLemmas: ["doctor"],
+        specificIds: ["eng-npe-005-doctor"],
       },
       {
         chunkId: "npe-2-doctor",
         gcase: ["nom"],
         number: ["singular"],
-        specificLemmas: ["doctor"],
+        specificIds: ["eng-npe-005-doctor"],
         gender: ["f"],
         educatorBlocksAnnotationsForTheseTraitKeys: ["gender"],
       },
       {
         chunkId: "ver-1-was",
         agreeWith: "npe-2-doctor",
-        specificLemmas: ["be"],
+        specificIds: ["eng-ver-001-be"],
         tenseDescription: ["past simple"],
       },
       { chunkId: "fix-1-a", chunkValue: "a" },
@@ -920,7 +930,7 @@ exports.sentenceFormulasBank = [
         chunkId: "npe-3-woman",
         gcase: ["nom"],
         number: ["singular"],
-        specificLemmas: ["woman"],
+        specificIds: ["eng-npe-001-woman"],
       },
     ],
     primaryOrders: [
@@ -941,14 +951,14 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
       },
       {
         chunkId: "ver-1-was",
         agreeWith: "pro-1-I",
-        specificLemmas: ["be"],
+        specificIds: ["eng-ver-001-be"],
         tenseDescription: ["past simple"],
       },
       {
@@ -958,7 +968,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-1-doctor",
-        specificLemmas: ["doctor"],
+        specificIds: ["eng-npe-005-doctor"],
         agreeWith: "pro-1-I",
       },
     ],
@@ -971,13 +981,13 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
       },
       {
         chunkId: "ver-1-was",
         agreeWith: "pro-1-I",
-        specificLemmas: ["be"],
+        specificIds: ["eng-ver-001-be"],
         tenseDescription: ["past simple"],
       },
       {
@@ -988,7 +998,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1-doctor",
         number: ["singular"],
-        specificLemmas: ["doctor"],
+        specificIds: ["eng-npe-005-doctor"],
         agreeWith: "pro-1-I",
       },
     ],
@@ -1001,13 +1011,13 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
       },
       {
         chunkId: "ver-1-was",
         agreeWith: "pro-1-I",
-        specificLemmas: ["be"],
+        specificIds: ["eng-ver-001-be"],
         tenseDescription: ["past simple"],
       },
       {
@@ -1017,7 +1027,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-1-doctor",
-        specificLemmas: ["doctor"],
+        specificIds: ["eng-npe-005-doctor"],
         agreeWith: "pro-1-I",
       },
     ],
@@ -1030,14 +1040,14 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
       },
       {
         chunkId: "ver-1-was",
         agreeWith: "pro-1-I",
-        specificLemmas: ["be"],
+        specificIds: ["eng-ver-001-be"],
         tenseDescription: ["past simple"],
       },
       { chunkId: "fix-1-here", chunkValue: "here" },
@@ -1051,14 +1061,14 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
       },
       {
         chunkId: "ver-1-am",
         agreeWith: "pro-1-I",
-        specificLemmas: ["be"],
+        specificIds: ["eng-ver-001-be"],
         tenseDescription: ["present simple"],
       },
       { chunkId: "fix-1-here", chunkValue: "here" },
@@ -1072,35 +1082,35 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-0-I-invisible",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
       },
       {
         chunkId: "pro-1-my",
         form: ["determiner"],
-        specificLemmas: ["POSSESSIVE"],
+        specificIds: ["eng-pro-POSSESSIVE"],
         agreeWith: "pro-0-I-invisible",
       },
       {
         chunkId: "npe-1-doctor",
         gcase: ["nom"],
         number: ["singular"],
-        specificLemmas: ["doctor"],
+        specificIds: ["eng-npe-005-doctor"],
         educatorBlocksAnnotationsForTheseTraitKeys: ["gender", "number"],
       },
       { chunkId: "fix-1-and", chunkValue: "and" },
       {
         chunkId: "pro-2-his",
         form: ["determiner"],
-        specificLemmas: ["POSSESSIVE"],
+        specificIds: ["eng-pro-POSSESSIVE"],
         agreeWith: "npe-1-doctor",
       },
       {
         chunkId: "nco-2-book",
         gcase: ["nom"],
         number: ["singular"],
-        specificLemmas: ["book"],
+        specificIds: ["eng-nco-006-book"],
       },
     ],
     primaryOrders: [
@@ -1114,34 +1124,34 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-0-I-invisible",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
       },
       {
         chunkId: "pro-1-my",
         form: ["determiner"],
-        specificLemmas: ["POSSESSIVE"],
+        specificIds: ["eng-pro-POSSESSIVE"],
         agreeWith: "pro-0-I-invisible",
       },
       {
         chunkId: "npe-1-doctor",
         gcase: ["nom"],
         number: ["singular"],
-        specificLemmas: ["doctor"],
+        specificIds: ["eng-npe-005-doctor"],
       },
       { chunkId: "fix-1-and", chunkValue: "and" },
       {
         chunkId: "pro-2-my",
         form: ["determiner"],
-        specificLemmas: ["POSSESSIVE"],
+        specificIds: ["eng-pro-POSSESSIVE"],
         agreeWith: "pro-0-I-invisible",
       },
       {
         chunkId: "nco-2-book",
         gcase: ["nom"],
         number: ["singular"],
-        specificLemmas: ["book"],
+        specificIds: ["eng-nco-006-book"],
       },
     ],
     primaryOrders: [
@@ -1155,21 +1165,21 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-0-I-invisible",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
       },
       {
         chunkId: "pro-1-my",
         form: ["determiner"],
-        specificLemmas: ["POSSESSIVE"],
+        specificIds: ["eng-pro-POSSESSIVE"],
         agreeWith: "pro-0-I-invisible",
       },
       {
         chunkId: "npe-1-doctor",
         gcase: ["nom"],
         number: ["singular"],
-        specificLemmas: ["doctor"],
+        specificIds: ["eng-npe-005-doctor"],
       },
     ],
     primaryOrders: [["pro-1-my", "npe-1-doctor"]],
@@ -1181,20 +1191,20 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-0-I-invisible",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
       },
       {
         chunkId: "pro-1-my",
         form: ["determiner"],
-        specificLemmas: ["POSSESSIVE"],
+        specificIds: ["eng-pro-POSSESSIVE"],
         agreeWith: "pro-0-I-invisible",
       },
       {
         chunkId: "nco-1-onion",
         number: ["singular"],
-        specificLemmas: ["onion"],
+        specificIds: ["eng-nco-002-onion"],
       },
     ],
     primaryOrders: [["pro-1-my", "nco-1-onion"]],
@@ -1206,7 +1216,7 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-0-I-invisible",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
       },
@@ -1216,17 +1226,17 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-1-woman",
-        specificLemmas: ["woman"],
+        specificIds: ["eng-npe-001-woman"],
       },
       {
         chunkId: "ver-1-see",
-        specificLemmas: ["see"],
+        specificIds: ["eng-ver-008-see"],
         agreeWith: "npe-1-woman",
         tenseDescription: ["past simple"],
       },
       {
         chunkId: "pro-1-me",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["eng-pro-PERSONAL"],
         agreeWith: "pro-0-I-invisible",
         gcase: ["acc"],
         formulaImportantTraitKeys: ["gcase"],
@@ -1241,7 +1251,7 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-0-I-invisible",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
       },
@@ -1251,18 +1261,18 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-1-doctor",
-        specificLemmas: ["doctor"],
+        specificIds: ["eng-npe-005-doctor"],
         number: ["singular"],
       },
       {
         chunkId: "ver-1-see",
-        specificLemmas: ["see"],
+        specificIds: ["eng-ver-008-see"],
         agreeWith: "npe-1-doctor",
         tenseDescription: ["past simple"],
       },
       {
         chunkId: "pro-1-me",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["eng-pro-PERSONAL"],
         agreeWith: "pro-0-I-invisible",
         gcase: ["acc"],
         formulaImportantTraitKeys: ["gcase"],
@@ -1277,13 +1287,13 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
       },
       {
         chunkId: "ver-1-read",
-        specificLemmas: ["read"],
+        specificIds: ["eng-ver-003-read"],
         agreeWith: "pro-1-I",
         tenseDescription: [
           "past simple",
@@ -1301,7 +1311,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "nco-1-book",
-        specificLemmas: ["book"],
+        specificIds: ["eng-nco-006-book"],
         number: ["singular"],
         gcase: ["acc"],
       },
@@ -1320,11 +1330,11 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-1-doctor",
-        specificLemmas: ["doctor"],
+        specificIds: ["eng-npe-005-doctor"],
       },
       {
         chunkId: "ver-1-write",
-        specificLemmas: ["write"],
+        specificIds: ["eng-ver-005-write"],
         agreeWith: "npe-1-doctor",
         tenseDescription: ["present simple", "past simple"],
       },
@@ -1338,18 +1348,18 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
-        specificLemmas: ["PERSONAL"],
+        specificIds: ["eng-pro-PERSONAL"],
         person: ["3per"],
       },
       {
         chunkId: "ver-1-am",
-        specificLemmas: ["be"],
+        specificIds: ["eng-ver-001-be"],
         agreeWith: "pro-1-I",
         tenseDescription: ["present simple"],
       },
       {
         chunkId: "adj-1-red",
-        specificLemmas: ["red"],
+        specificIds: ["eng-adj-001-red"],
         agreeWith: "pro-1-I",
       },
     ],

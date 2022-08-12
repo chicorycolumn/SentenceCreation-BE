@@ -335,7 +335,7 @@ exports.structureChunkTraits = {
       ultimatelyMultipleTraitValuesOkay: true,
       needsNoValidation: true,
     },
-    doNotUpdateSpecificLemmasAsIsJustOneMDN: {
+    doNotUpdateSpecificIdsAsIsJustOneMDN: {
       expectedTypeOnStCh: "boolean",
       needsNoValidation: true,
     },
@@ -344,10 +344,6 @@ exports.structureChunkTraits = {
     //   ultimatelyMultipleTraitValuesOkay: true,
     // },
     dontSpecifyOnThisChunk: { expectedTypeOnStCh: "boolean" },
-    specificLemmas: {
-      expectedTypeOnStCh: "array",
-      ultimatelyMultipleTraitValuesOkay: true,
-    },
     specificIds: {
       expectedTypeOnStCh: "array",
       ultimatelyMultipleTraitValuesOkay: true,

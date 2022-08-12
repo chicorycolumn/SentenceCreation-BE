@@ -5,6 +5,19 @@ const uUtils = require("../utils/universalUtils.js");
 const consol = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 
+exports.formatSpecificIds = (specificIds) => {
+  let res = [];
+
+  specificIds.forEach((id) => {
+    res.push(id);
+    if (id.includes("*")) {
+      res.push(id.split("*")[0]);
+    }
+  });
+
+  return res;
+};
+
 exports.translateAnnoTraitValue = (
   annoTraitKey,
   structureChunk,

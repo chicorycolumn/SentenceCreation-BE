@@ -16,12 +16,12 @@ xdescribe("listCounterfaxSituations", () => {
       {
         selectedLemmaObject: {
           translations: {
-            ENG: ["PERSONAL"],
-            POL: ["PERSONAL"],
+            ENG: ["eng-pro-PERSONAL"],
+            POL: ["pol-pro-PERSONAL"],
           },
           tags: [],
-          lemma: "PERSONAL",
-          id: "eng-pro-001",
+          lemma: "",
+          id: "eng-pro-PERSONAL",
           inflections: {
             pronombre: {
               "1per": {
@@ -130,7 +130,7 @@ xdescribe("listCounterfaxSituations", () => {
         ],
         structureChunk: {
           chunkId: "pro-1",
-          specificLemmas: ["PERSONAL"],
+          specificIds: ["eng-pro-PERSONAL"],
           gcase: ["nom"],
           number: ["plural"],
           person: ["1per"],
@@ -147,12 +147,12 @@ xdescribe("listCounterfaxSituations", () => {
       {
         selectedLemmaObject: {
           translations: {
-            ENG: ["see"],
-            POL: ["widzieć", "zobaczyć"],
+            ENG: ["eng-ver-008-see"],
+            POL: ["pol-ver-008-widzieć", "pol-ver-008-zobaczyć"],
           },
           tags: ["basic1"],
           lemma: "see",
-          id: "eng-ver-008",
+          id: "eng-ver-008-see",
           inflections: {
             infinitive: "see",
             verbal: {},
@@ -167,7 +167,7 @@ xdescribe("listCounterfaxSituations", () => {
         structureChunk: {
           chunkId: "ver-1",
           agreeWith: "pro-1",
-          specificLemmas: ["see"],
+          specificIds: ["eng-ver-008-see"],
           tenseDescription: ["past simple"],
           dontSpecifyOnThisChunk: true,
           form: ["verbal"],
@@ -178,12 +178,12 @@ xdescribe("listCounterfaxSituations", () => {
       {
         selectedLemmaObject: {
           translations: {
-            ENG: ["PERSONAL"],
-            POL: ["PERSONAL"],
+            ENG: ["eng-pro-PERSONAL"],
+            POL: ["pol-pro-PERSONAL"],
           },
           tags: [],
-          lemma: "PERSONAL",
-          id: "eng-pro-001",
+          lemma: "",
+          id: "eng-pro-PERSONAL",
           inflections: {
             pronombre: {
               "1per": {
@@ -292,7 +292,7 @@ xdescribe("listCounterfaxSituations", () => {
         ],
         structureChunk: {
           chunkId: "pro-2",
-          specificLemmas: ["PERSONAL"],
+          specificIds: ["eng-pro-PERSONAL"],
           gcase: ["acc"],
           number: ["plural"],
           person: ["3per"],
@@ -386,12 +386,12 @@ xdescribe("listCounterfaxSituations", () => {
       {
         selectedLemmaObject: {
           translations: {
-            ENG: ["PERSONAL"],
-            POL: ["PERSONAL"],
+            ENG: ["eng-pro-PERSONAL"],
+            POL: ["pol-pro-PERSONAL"],
           },
           tags: [],
-          lemma: "PERSONAL",
-          id: "eng-pro-001",
+          lemma: "",
+          id: "eng-pro-PERSONAL",
           inflections: {
             pronombre: {
               "1per": {
@@ -500,7 +500,7 @@ xdescribe("listCounterfaxSituations", () => {
         ],
         structureChunk: {
           chunkId: "pro-1",
-          specificLemmas: ["PERSONAL"],
+          specificIds: ["eng-pro-PERSONAL"],
           gcase: ["nom"],
           number: ["plural"],
           person: ["1per"],
@@ -517,12 +517,12 @@ xdescribe("listCounterfaxSituations", () => {
       {
         selectedLemmaObject: {
           translations: {
-            ENG: ["see"],
-            POL: ["widzieć", "zobaczyć"],
+            ENG: ["eng-ver-008-see"],
+            POL: ["pol-ver-008-widzieć", "pol-ver-008-zobaczyć"],
           },
           tags: ["basic1"],
           lemma: "see",
-          id: "eng-ver-008",
+          id: "eng-ver-008-see",
           inflections: {
             infinitive: "see",
             verbal: {},
@@ -537,7 +537,7 @@ xdescribe("listCounterfaxSituations", () => {
         structureChunk: {
           chunkId: "ver-1",
           agreeWith: "pro-1",
-          specificLemmas: ["see"],
+          specificIds: ["eng-ver-008-see"],
           tenseDescription: ["past simple"],
           dontSpecifyOnThisChunk: true,
           form: ["verbal"],
@@ -548,12 +548,12 @@ xdescribe("listCounterfaxSituations", () => {
       {
         selectedLemmaObject: {
           translations: {
-            ENG: ["PERSONAL"],
-            POL: ["PERSONAL"],
+            ENG: ["eng-pro-PERSONAL"],
+            POL: ["pol-pro-PERSONAL"],
           },
           tags: [],
-          lemma: "PERSONAL",
-          id: "eng-pro-001",
+          lemma: "",
+          id: "eng-pro-PERSONAL",
           inflections: {
             pronombre: {
               "1per": {
@@ -662,7 +662,7 @@ xdescribe("listCounterfaxSituations", () => {
         ],
         structureChunk: {
           chunkId: "pro-2",
-          specificLemmas: ["PERSONAL"],
+          specificIds: ["eng-pro-PERSONAL"],
           gcase: ["acc"],
           number: ["plural"],
           person: ["3per"],

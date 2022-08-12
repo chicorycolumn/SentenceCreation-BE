@@ -1,13 +1,13 @@
 let nco = [
   {
     //links
-    translations: { ENG: ["nut"], POL: ["orzech"] },
+    translations: { ENG: ["eng-nco-Dnut1"], POL: ["pol-nco-Dnut1"] },
     tags: ["allohomTesting", "edible2"],
     allohomInfo: { singleWordtype: true, text: "food", emoji: "🥜" },
 
     //selectors
     lemma: "nut",
-    id: "eng-nco-d01",
+    id: "eng-nco-Dnut1",
 
     //notes
 
@@ -25,13 +25,13 @@ let nco = [
   },
   {
     //links
-    translations: { ENG: ["nut"], POL: ["nakrętka"] },
+    translations: { ENG: ["eng-nco-Dnut2"], POL: ["pol-nco-Dnut2"] },
     tags: ["allohomTesting", "toolbox"],
     allohomInfo: { singleWordtype: true, text: "metal", emoji: "🔩" },
 
     //selectors
     lemma: "nut",
-    id: "eng-nco-d02",
+    id: "eng-nco-Dnut2",
 
     //notes
 
@@ -49,31 +49,7 @@ let nco = [
   },
   {
     //links
-    translations: { ENG: ["bear"], POL: ["niedźwiedź"] },
-    tags: ["allohomTesting2", "animal"],
-    allohomInfo: { multipleWordtype: true, text: "animal", emoji: "🐻" },
-
-    //selectors
-    lemma: "bear",
-    id: "eng-nco-d03",
-
-    //notes
-
-    //inflections
-    inflections: {
-      singular: {
-        nom: "bear",
-        gen: "bear's",
-      },
-      plural: {
-        nom: "bears",
-        gen: "bears'",
-      },
-    },
-  },
-  {
-    //links
-    translations: { ENG: ["tie"], POL: ["remis"] },
+    translations: { ENG: ["eng-nco-Dtie2"], POL: ["pol-nco-Dtie2"] },
     tags: ["allohomTesting3", "sports"],
     allohomInfo: {
       multipleWordtype: true,
@@ -84,7 +60,7 @@ let nco = [
 
     //selectors
     lemma: "tie",
-    id: "eng-nco-d04",
+    id: "eng-nco-Dtie2",
 
     //notes
 
@@ -102,7 +78,7 @@ let nco = [
   },
   {
     //links
-    translations: { ENG: ["tie"], POL: ["krawat"] },
+    translations: { ENG: ["eng-nco-Dtie1"], POL: ["pol-nco-Dtie1"] },
     tags: ["allohomTesting3", "clothes"],
     allohomInfo: {
       multipleWordtype: true,
@@ -113,7 +89,7 @@ let nco = [
 
     //selectors
     lemma: "tie",
-    id: "eng-nco-d05",
+    id: "eng-nco-Dtie1",
 
     //notes
 
@@ -137,31 +113,7 @@ let pro = [];
 let ver = [
   {
     //links
-    translations: { ENG: ["bear"], POL: ["znieść"] },
-    tags: ["allohomTesting2", "emotions"],
-    allohomInfo: {
-      multipleWordtype: true,
-      text: "emotional verb",
-      emoji: "😑",
-    },
-    //selectors
-    lemma: "bear",
-    id: "eng-ver-d01",
-    //notes
-
-    //inflections
-    inflections: {
-      infinitive: "bear",
-      verbal: {},
-      v2: "bore",
-      v3: "borne",
-      thirdPS: "bears",
-      gerund: "bearing",
-    },
-  },
-  {
-    //links
-    translations: { ENG: ["tie"], POL: ["wiązać"] },
+    translations: { ENG: ["eng-ver-Dtie"], POL: ["pol-ver-Dtie"] },
     tags: ["allohomTesting3", "crafts"],
     allohomInfo: {
       multipleWordtype: true,
@@ -171,7 +123,7 @@ let ver = [
     },
     //selectors
     lemma: "tie",
-    id: "eng-ver-d02",
+    id: "eng-ver-Dtie",
     //notes
 
     //inflections

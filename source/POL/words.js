@@ -5,11 +5,14 @@ exports.wordsBank = {
   npe: [
     {
       //links
-      translations: { ENG: ["woman", "lady"] },
+      translations: {
+        ENG: ["eng-npe-001-woman"],
+        POL: ["pol-npe-001-kobieta"],
+      },
       tags: ["animate", "personTest1", "concrete"],
       //selectors
       lemma: "kobieta",
-      id: "pol-npe-001",
+      id: "pol-npe-001-kobieta",
       gender: "f",
       //notes
 
@@ -38,11 +41,14 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["father"] },
+      translations: {
+        ENG: ["eng-npe-003-father"],
+        POL: ["pol-npe-003-ojciec"],
+      },
       tags: ["animate", "family", "concrete"],
       //selectors
       lemma: "ojciec",
-      id: "pol-npe-016",
+      id: "pol-npe-003-ojciec",
       gender: "m1",
       //notes
 
@@ -68,11 +74,11 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["mother"] },
+      translations: { ENG: ["eng-npe-004-mother"], POL: ["pol-npe-004-matka"] },
       tags: ["animate", "family", "concrete"],
       //selectors
       lemma: "matka",
-      id: "pol-npe-017",
+      id: "pol-npe-004-matka",
       gender: "f",
       //notes
 
@@ -132,11 +138,11 @@ exports.wordsBank = {
     // },
     {
       //links
-      translations: { ENG: ["boy", "little boy"] },
+      translations: { ENG: ["eng-npe-002-boy"], POL: ["pol-npe-002-chłopiec"] },
       tags: ["animate", "personTest1", "concrete"],
       //selectors
       lemma: "chłopiec",
-      id: "pol-npe-003",
+      id: "pol-npe-002-chłopiec",
       gender: "m1",
       //notes
 
@@ -162,11 +168,14 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["doctor"], POL: ["lekarz"] },
+      translations: {
+        ENG: ["eng-npe-005-doctor"],
+        POL: ["pol-npe-005-lekarz", "pol-npe-006-lekarka"],
+      },
       tags: ["concrete", "animate", "personTest2", "job"],
       //selectors
       lemma: "lekarz",
-      id: "pol-npe-015a",
+      id: "pol-npe-005-lekarz",
       gender: "m1",
       //notes
 
@@ -192,11 +201,14 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["doctor"], POL: ["lekarka"] },
+      translations: {
+        ENG: ["eng-npe-005-doctor"],
+        POL: ["pol-npe-005-lekarz", "pol-npe-006-lekarka"],
+      },
       tags: ["concrete", "animate", "personTest2", "job"],
       //selectors
       lemma: "lekarka",
-      id: "pol-npe-015b",
+      id: "pol-npe-006-lekarka",
       gender: "f",
       //notes
 
@@ -224,11 +236,44 @@ exports.wordsBank = {
   nco: [
     {
       //links
-      translations: { ENG: ["onion"] },
+      translations: {
+        ENG: ["eng-nco-001-bear"],
+        POL: ["pol-nco-001-niedźwiedź"],
+      },
+      tags: ["allohomTesting2", "animal"],
+      //selectors
+      lemma: "niedźwiedź",
+      id: "pol-nco-001-niedźwiedź",
+      gender: "m2",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "niedźwiedź",
+          gen: "niedźwiedzia",
+          dat: "niedźwiedziowi",
+          acc: "niedźwiedzia",
+          ins: "niedźwiedziem",
+          loc: "niedźwiedziu",
+        },
+        plural: {
+          nom: "niedźwiedzie",
+          gen: "niedźwiedzi",
+          dat: "niedźwiedziom",
+          acc: "niedźwiedzie",
+          ins: "niedźwiedziami",
+          loc: "niedźwiedziach",
+        },
+      },
+    },
+    {
+      //links
+      translations: { ENG: ["eng-nco-002-onion"], POL: ["pol-nco-002-cebula"] },
       tags: ["inanimate", "edible", "holdable", "concrete"],
       //selectors
       lemma: "cebula",
-      id: "pol-nco-004",
+      id: "pol-nco-002-cebula",
       gender: "f",
       //notes
 
@@ -254,11 +299,11 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["apple"] },
+      translations: { ENG: ["eng-nco-004-apple"], POL: ["pol-nco-004-jabłko"] },
       tags: ["inanimate", "edible", "holdable", "concrete"],
       //selectors
       lemma: "jabłko",
-      id: "pol-nco-005",
+      id: "pol-nco-004-jabłko",
       gender: "n",
       //notes
 
@@ -284,11 +329,14 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { POL: ["pomidor"], ENG: ["tomato"] },
+      translations: {
+        ENG: ["eng-nco-003-tomato"],
+        POL: ["pol-nco-003-pomidor"],
+      },
       tags: ["inanimate", "edible0", "holdable", "concrete"],
       //selectors
       lemma: "pomidor",
-      id: "pol-nco-018",
+      id: "pol-nco-003-pomidor",
       gender: "m2",
       //notes
 
@@ -318,11 +366,11 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { POL: ["pył"], ENG: ["dust"] },
+      translations: { ENG: ["eng-nco-009-dust"], POL: ["pol-nco-009-pył"] },
       tags: ["tantumTest1"],
       //selectors
       lemma: "pył",
-      id: "pol-nco-016",
+      id: "pol-nco-009-pył",
       gender: "m3",
       //notes
 
@@ -348,11 +396,14 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["mirror"] },
+      translations: {
+        ENG: ["eng-nco-005-mirror"],
+        POL: ["pol-nco-005-lustro", "pol-nco-014-zwierciadło"],
+      },
       tags: ["inanimate", "holdable", "concrete"],
       //selectors
       lemma: "lustro",
-      id: "pol-nco-006",
+      id: "pol-nco-005-lustro",
       gender: "n",
       //notes
 
@@ -378,11 +429,14 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["mirror"] },
+      translations: {
+        ENG: ["eng-nco-005-mirror"],
+        POL: ["pol-nco-005-lustro", "pol-nco-014-zwierciadło"],
+      },
       tags: ["inanimate", "holdable", "concrete"],
       //selectors
       lemma: "zwierciadło",
-      id: "pol-nco-007",
+      id: "pol-nco-014-zwierciadło",
       gender: "n",
       //notes
 
@@ -408,11 +462,11 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["book"] },
+      translations: { ENG: ["eng-nco-006-book"], POL: ["pol-nco-006-książka"] },
       tags: ["inanimate", "holdable", "concrete"],
       //selectors
       lemma: "książka",
-      id: "pol-nco-009",
+      id: "pol-nco-006-książka",
       gender: "f",
       //notes
 
@@ -438,11 +492,11 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["door"] },
+      translations: { ENG: ["eng-nco-007-door"], POL: ["pol-nco-007-drzwi"] },
       tags: ["inanimate", "house", "concrete"],
       //selectors
       lemma: "drzwi",
-      id: "pol-nco-010",
+      id: "pol-nco-007-drzwi",
       gender: "nonvirile",
       //notes
       lacking: true,
@@ -462,12 +516,13 @@ exports.wordsBank = {
     {
       //links
       translations: {
-        ENG: ["underwear", "pants", "underpants", "briefs", "panties"],
+        ENG: ["eng-nco-010-underwear"],
+        POL: ["pol-nco-010-majtki"],
       },
       tags: ["inanimate", "holdable", "concrete", "wearable"],
       //selectors
       lemma: "majtki",
-      id: "pol-nco-008",
+      id: "pol-nco-010-majtki",
       gender: "nonvirile",
       //notes
       lacking: true,
@@ -486,11 +541,11 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["sheep"], POL: ["owca"] },
+      translations: { ENG: ["eng-nco-008-sheep"], POL: ["pol-nco-008-owca"] },
       tags: ["concrete", "animal0", "animate", "farmyard"],
       //selectors
       lemma: "owca",
-      id: "pol-nco-011",
+      id: "pol-nco-008-owca",
       gender: "f",
       //notes
 
@@ -516,11 +571,11 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["rat"], POL: ["szczur"] },
+      translations: { ENG: ["eng-nco-011-rat"], POL: ["pol-nco-011-szczur"] },
       tags: ["concrete", "animal", "animate", "pet"],
       //selectors
       lemma: "szczur",
-      id: "pol-nco-019",
+      id: "pol-nco-011-szczur",
       gender: "m2",
       //notes
 
@@ -546,11 +601,14 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["tweezers"], POL: ["pinceta"] },
+      translations: {
+        ENG: ["eng-nco-012-tweezers"],
+        POL: ["pol-nco-012-pinceta"],
+      },
       tags: ["tantumTest1"],
       //selectors
       lemma: "pinceta",
-      id: "pol-nco-015",
+      id: "pol-nco-012-pinceta",
       gender: "f",
       //notes
 
@@ -578,11 +636,14 @@ exports.wordsBank = {
   ver: [
     {
       //links
-      translations: { ENG: ["give"] },
+      translations: {
+        ENG: ["eng-ver-006-give"],
+        POL: ["pol-ver-006-dać", "pol-ver-006-dawać"],
+      },
       tags: [],
       //selectors
       lemma: "dawać",
-      id: "pol-ver-006-im-01",
+      id: "pol-ver-006-dawać",
       aspect: "imperfective",
       //notes
 
@@ -667,11 +728,14 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["give"] },
+      translations: {
+        ENG: ["eng-ver-006-give"],
+        POL: ["pol-ver-006-dać", "pol-ver-006-dawać"],
+      },
       tags: [],
       //selectors
       lemma: "dać",
-      id: "pol-ver-006-pf-01",
+      id: "pol-ver-006-dać",
       aspect: "perfective",
       //notes
 
@@ -754,14 +818,13 @@ exports.wordsBank = {
         verbalNoun: "danie",
       },
     },
-
     {
       //links
-      translations: { ENG: ["be"], POL: ["być"] },
+      translations: { ENG: ["eng-ver-001-be"], POL: ["pol-ver-001-być"] },
       tags: ["basic", "identity"],
       //selectors
       lemma: "być",
-      id: "pol-ver-000-im-01",
+      id: "pol-ver-001-być",
       aspect: "imperfective",
       //notes
       lacking: true,
@@ -939,11 +1002,11 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["have"] },
+      translations: { ENG: ["eng-ver-002-have"], POL: ["pol-ver-002-mieć"] },
       tags: ["basic", "possession"],
       //selectors
       lemma: "mieć",
-      id: "pol-ver-001-im-01",
+      id: "pol-ver-002-mieć",
       aspect: "imperfective",
       //notes
       lacking: true,
@@ -1031,11 +1094,14 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["write"] },
+      translations: {
+        ENG: ["eng-ver-005-write"],
+        POL: ["pol-ver-005-pisać", "pol-ver-005-napisać"],
+      },
       tags: ["basic3"],
       //selectors
       lemma: "pisać",
-      id: "pol-ver-004-im-01",
+      id: "pol-ver-005-pisać",
       aspect: "imperfective",
       //notes
 
@@ -1120,11 +1186,14 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["write"] },
+      translations: {
+        ENG: ["eng-ver-005-write"],
+        POL: ["pol-ver-005-pisać", "pol-ver-005-napisać"],
+      },
       tags: ["basic3"],
       //selectors
       lemma: "napisać",
-      id: "pol-ver-004-pf-01",
+      id: "pol-ver-005-napisać",
       aspect: "perfective",
       //notes
 
@@ -1209,11 +1278,14 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["read"] },
+      translations: {
+        ENG: ["eng-ver-003-read"],
+        POL: ["pol-ver-003-czytać", "pol-ver-003-przeczytać"],
+      },
       tags: ["basic2"],
       //selectors
       lemma: "czytać",
-      id: "pol-ver-002-im-01",
+      id: "pol-ver-003-czytać",
       aspect: "imperfective",
       //notes
 
@@ -1298,11 +1370,14 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["read"] },
+      translations: {
+        ENG: ["eng-ver-003-read"],
+        POL: ["pol-ver-003-czytać", "pol-ver-003-przeczytać"],
+      },
       tags: ["basic2"],
       //selectors
       lemma: "przeczytać",
-      id: "pol-ver-002-pf-01",
+      id: "pol-ver-003-przeczytać",
       aspect: "perfective",
       //notes
 
@@ -1387,11 +1462,14 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["research"] },
+      translations: {
+        ENG: ["eng-ver-004-research"],
+        POL: ["pol-ver-004-badać", "pol-ver-004-zbadać"],
+      },
       tags: ["science"],
       //selectors
       lemma: "badać",
-      id: "pol-ver-003-im-01",
+      id: "pol-ver-004-badać",
       aspect: "imperfective",
       //notes
 
@@ -1476,11 +1554,14 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["research"] },
+      translations: {
+        ENG: ["eng-ver-004-research"],
+        POL: ["pol-ver-004-badać", "pol-ver-004-zbadać"],
+      },
       tags: ["science"],
       //selectors
       lemma: "zbadać",
-      id: "pol-ver-003-pf-01",
+      id: "pol-ver-004-zbadać",
       aspect: "perfective",
       //notes
 
@@ -1565,11 +1646,14 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["see"] },
+      translations: {
+        ENG: ["eng-ver-008-see"],
+        POL: ["pol-ver-008-widzieć", "pol-ver-008-zobaczyć"],
+      },
       tags: ["basic1"],
       //selectors
       lemma: "widzieć",
-      id: "pol-ver-007-im-01",
+      id: "pol-ver-008-widzieć",
       aspect: "imperfective",
       //notes
 
@@ -1654,11 +1738,14 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["see"] },
+      translations: {
+        ENG: ["eng-ver-008-see"],
+        POL: ["pol-ver-008-widzieć", "pol-ver-008-zobaczyć"],
+      },
       tags: ["basic1"],
       //selectors
       lemma: "zobaczyć",
-      id: "pol-ver-007-pf-01",
+      id: "pol-ver-008-zobaczyć",
       aspect: "perfective",
       //notes
 
@@ -1741,15 +1828,104 @@ exports.wordsBank = {
         verbalNoun: "zobaczenie",
       },
     },
+    {
+      //links
+      translations: { ENG: ["eng-ver-007-bear"], POL: ["pol-ver-007-znieść"] },
+      tags: ["allohomTesting2", "emotions"],
+      //selectors
+      lemma: "znieść",
+      id: "pol-ver-007-znieść",
+      aspect: "perfective",
+      //notes
+
+      //inflections
+      inflections: {
+        infinitive: "znieść",
+        verbal: {
+          past: {
+            impersonal: {
+              singular: { allSingularGenders: "zniesiono" },
+              plural: { allPluralGenders: "zniesiono" },
+            },
+            "1per": {
+              singular: {
+                m: "zniósłem",
+                f: "zniosłam",
+              },
+              plural: {
+                virile: "znieśliśmy",
+                nonvirile: "zniosłyśmy",
+              },
+            },
+            "2per": {
+              singular: {
+                m: "zniósłeś",
+                f: "zniosłaś",
+              },
+              plural: {
+                virile: "znieśliście",
+                nonvirile: "zniosłyście",
+              },
+            },
+            "3per": {
+              singular: {
+                m: "zniósł",
+                f: "zniosła",
+                n: "zniosło",
+              },
+              plural: {
+                virile: "znieśli",
+                nonvirile: "zniosły",
+              },
+            },
+          },
+          present: false,
+          future: {
+            impersonal: { singular: true, plural: true },
+            "1per": {
+              singular: {
+                allSingularGendersExcludingNeuter: "zniosę",
+              },
+              plural: {
+                allPluralGenders: "zniesiemy",
+              },
+            },
+            "2per": {
+              singular: {
+                allSingularGendersExcludingNeuter: "zniesiesz",
+              },
+              plural: {
+                allPluralGenders: "zniesiecie",
+              },
+            },
+            "3per": {
+              singular: {
+                allSingularGenders: "zniesie",
+              },
+              plural: {
+                allPluralGenders: "zniosą",
+              },
+            },
+          },
+          conditional: true,
+          imperative: "znieś",
+        },
+        activeAdjectival: false,
+        passiveAdjectival: "zniesiony",
+        contemporaryAdverbial: false,
+        anteriorAdverbial: "zniósłszy",
+        verbalNoun: "zniesienie",
+      },
+    },
   ],
   adj: [
     {
       //links
-      translations: { ENG: ["red"] },
+      translations: { ENG: ["eng-adj-001-red"], POL: ["pol-adj-001-czerwony"] },
       tags: ["colour"],
       //selectors
       lemma: "czerwony",
-      id: "pol-adj-001",
+      id: "pol-adj-001-czerwony",
       //notes
 
       //inflections
@@ -1823,11 +1999,14 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["red"] },
+      translations: {
+        ENG: ["eng-adj-003-blue"],
+        POL: ["pol-adj-003-niebieski"],
+      },
       tags: ["colour2"],
       //selectors
       lemma: "niebieski",
-      id: "pol-adj-002",
+      id: "pol-adj-003-niebieski",
       //notes
 
       //inflections
@@ -1893,11 +2072,11 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["small"] },
+      translations: { ENG: ["eng-adj-002-small"], POL: ["pol-adj-002-mały"] },
       tags: ["size"],
       //selectors
       lemma: "mały",
-      id: "pol-adj-003",
+      id: "pol-adj-002-mały",
       //notes
 
       //inflections
@@ -1973,11 +2152,11 @@ exports.wordsBank = {
   pro: [
     {
       //links
-      translations: { ENG: ["PERSONAL"], POL: ["PERSONAL"] },
+      translations: { ENG: ["eng-pro-PERSONAL"], POL: ["pol-pro-PERSONAL"] },
       tags: [],
       //selectors
       lemma: "PERSONAL",
-      id: "pol-pro-001",
+      id: "pol-pro-PERSONAL",
       //notes
 
       //inflections
@@ -2278,13 +2457,13 @@ exports.wordsBank = {
     {
       //links
       translations: {
-        ENG: ["POSSESSIVE"],
-        POL: ["POSSESSIVE"],
+        ENG: ["eng-pro-POSSESSIVE"],
+        POL: ["pol-pro-POSSESSIVE"],
       },
       tags: [],
       //selectors
       lemma: "POSSESSIVE",
-      id: "pol-pro-002",
+      id: "pol-pro-POSSESSIVE",
       //notes
 
       //inflections
@@ -2651,11 +2830,11 @@ exports.wordsBank = {
   pre: [
     {
       //links
-      translations: { ENG: [] },
+      translations: { ENG: ["eng-pre-001-with"], POL: ["pol-pre-001-z"] },
       tags: [],
       //selectors
       lemma: "z",
-      id: "pol-pre-001",
+      id: "pol-pre-001-z",
       //notes
 
       //inflections
