@@ -2152,7 +2152,7 @@ exports.wordsBank = {
   pro: [
     {
       //links
-      translations: { ENG: ["PERSONAL"], POL: ["PERSONAL"] },
+      translations: { ENG: ["eng-pro-PERSONAL"], POL: ["pol-pro-PERSONAL"] },
       tags: [],
       //selectors
       lemma: "PERSONAL",
@@ -2457,8 +2457,8 @@ exports.wordsBank = {
     {
       //links
       translations: {
-        ENG: ["POSSESSIVE"],
-        POL: ["POSSESSIVE"],
+        ENG: ["eng-pro-POSSESSIVE"],
+        POL: ["pol-pro-POSSESSIVE"],
       },
       tags: [],
       //selectors
