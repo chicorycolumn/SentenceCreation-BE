@@ -65,36 +65,6 @@ let nco = [
   },
   {
     //links
-    translations: { ENG: ["eng-nco-Dbear"], POL: ["pol-nco-Dbear"] },
-    tags: ["allohomTesting2", "animal"],
-    //selectors
-    lemma: "niedźwiedź",
-    id: "pol-nco-Dbear",
-    gender: "m2",
-    //notes
-
-    //inflections
-    inflections: {
-      singular: {
-        nom: "niedźwiedź",
-        gen: "niedźwiedzia",
-        dat: "niedźwiedziowi",
-        acc: "niedźwiedzia",
-        ins: "niedźwiedziem",
-        loc: "niedźwiedziu",
-      },
-      plural: {
-        nom: "niedźwiedzie",
-        gen: "niedźwiedzi",
-        dat: "niedźwiedziom",
-        acc: "niedźwiedzie",
-        ins: "niedźwiedziami",
-        loc: "niedźwiedziach",
-      },
-    },
-  },
-  {
-    //links
     translations: { ENG: ["eng-nco-Dtie2"], POL: ["pol-nco-Dtie2"] },
     tags: ["allohomTesting3", "sports"],
     //selectors
@@ -303,95 +273,6 @@ let adj = [];
 let adver = [];
 let pro = [];
 let ver = [
-  {
-    //links
-    translations: { ENG: ["eng-ver-Dbear"], POL: ["pol-ver-Dbear"] },
-    tags: ["allohomTesting2", "emotions"],
-    //selectors
-    lemma: "znieść",
-    id: "pol-ver-Dbear",
-    aspect: "perfective",
-    //notes
-
-    //inflections
-    inflections: {
-      infinitive: "znieść",
-      verbal: {
-        past: {
-          impersonal: {
-            singular: { allSingularGenders: "zniesiono" },
-            plural: { allPluralGenders: "zniesiono" },
-          },
-          "1per": {
-            singular: {
-              m: "zniósłem",
-              f: "zniosłam",
-            },
-            plural: {
-              virile: "znieśliśmy",
-              nonvirile: "zniosłyśmy",
-            },
-          },
-          "2per": {
-            singular: {
-              m: "zniósłeś",
-              f: "zniosłaś",
-            },
-            plural: {
-              virile: "znieśliście",
-              nonvirile: "zniosłyście",
-            },
-          },
-          "3per": {
-            singular: {
-              m: "zniósł",
-              f: "zniosła",
-              n: "zniosło",
-            },
-            plural: {
-              virile: "znieśli",
-              nonvirile: "zniosły",
-            },
-          },
-        },
-        present: false,
-        future: {
-          impersonal: { singular: true, plural: true },
-          "1per": {
-            singular: {
-              allSingularGendersExcludingNeuter: "zniosę",
-            },
-            plural: {
-              allPluralGenders: "zniesiemy",
-            },
-          },
-          "2per": {
-            singular: {
-              allSingularGendersExcludingNeuter: "zniesiesz",
-            },
-            plural: {
-              allPluralGenders: "zniesiecie",
-            },
-          },
-          "3per": {
-            singular: {
-              allSingularGenders: "zniesie",
-            },
-            plural: {
-              allPluralGenders: "zniosą",
-            },
-          },
-        },
-        conditional: true,
-        imperative: "znieś",
-      },
-      activeAdjectival: false,
-      passiveAdjectival: "zniesiony",
-      contemporaryAdverbial: false,
-      anteriorAdverbial: "zniósłszy",
-      verbalNoun: "zniesienie",
-    },
-  },
   {
     //links
     translations: { ENG: ["eng-ver-Dtie"], POL: ["pol-ver-Dtie"] },

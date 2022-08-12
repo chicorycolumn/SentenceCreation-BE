@@ -236,6 +236,39 @@ exports.wordsBank = {
   nco: [
     {
       //links
+      translations: {
+        ENG: ["eng-nco-001-bear"],
+        POL: ["pol-nco-001-niedźwiedź"],
+      },
+      tags: ["allohomTesting2", "animal"],
+      //selectors
+      lemma: "niedźwiedź",
+      id: "pol-nco-001-niedźwiedź",
+      gender: "m2",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "niedźwiedź",
+          gen: "niedźwiedzia",
+          dat: "niedźwiedziowi",
+          acc: "niedźwiedzia",
+          ins: "niedźwiedziem",
+          loc: "niedźwiedziu",
+        },
+        plural: {
+          nom: "niedźwiedzie",
+          gen: "niedźwiedzi",
+          dat: "niedźwiedziom",
+          acc: "niedźwiedzie",
+          ins: "niedźwiedziami",
+          loc: "niedźwiedziach",
+        },
+      },
+    },
+    {
+      //links
       translations: { ENG: ["eng-nco-002-onion"], POL: ["pol-nco-002-cebula"] },
       tags: ["inanimate", "edible", "holdable", "concrete"],
       //selectors
@@ -1795,6 +1828,95 @@ exports.wordsBank = {
         verbalNoun: "zobaczenie",
       },
     },
+    {
+      //links
+      translations: { ENG: ["eng-ver-007-bear"], POL: ["pol-ver-007-znieść"] },
+      tags: ["allohomTesting2", "emotions"],
+      //selectors
+      lemma: "znieść",
+      id: "pol-ver-007-znieść",
+      aspect: "perfective",
+      //notes
+
+      //inflections
+      inflections: {
+        infinitive: "znieść",
+        verbal: {
+          past: {
+            impersonal: {
+              singular: { allSingularGenders: "zniesiono" },
+              plural: { allPluralGenders: "zniesiono" },
+            },
+            "1per": {
+              singular: {
+                m: "zniósłem",
+                f: "zniosłam",
+              },
+              plural: {
+                virile: "znieśliśmy",
+                nonvirile: "zniosłyśmy",
+              },
+            },
+            "2per": {
+              singular: {
+                m: "zniósłeś",
+                f: "zniosłaś",
+              },
+              plural: {
+                virile: "znieśliście",
+                nonvirile: "zniosłyście",
+              },
+            },
+            "3per": {
+              singular: {
+                m: "zniósł",
+                f: "zniosła",
+                n: "zniosło",
+              },
+              plural: {
+                virile: "znieśli",
+                nonvirile: "zniosły",
+              },
+            },
+          },
+          present: false,
+          future: {
+            impersonal: { singular: true, plural: true },
+            "1per": {
+              singular: {
+                allSingularGendersExcludingNeuter: "zniosę",
+              },
+              plural: {
+                allPluralGenders: "zniesiemy",
+              },
+            },
+            "2per": {
+              singular: {
+                allSingularGendersExcludingNeuter: "zniesiesz",
+              },
+              plural: {
+                allPluralGenders: "zniesiecie",
+              },
+            },
+            "3per": {
+              singular: {
+                allSingularGenders: "zniesie",
+              },
+              plural: {
+                allPluralGenders: "zniosą",
+              },
+            },
+          },
+          conditional: true,
+          imperative: "znieś",
+        },
+        activeAdjectival: false,
+        passiveAdjectival: "zniesiony",
+        contemporaryAdverbial: false,
+        anteriorAdverbial: "zniósłszy",
+        verbalNoun: "zniesienie",
+      },
+    },
   ],
   adj: [
     {
@@ -2033,7 +2155,7 @@ exports.wordsBank = {
       translations: { ENG: ["eng-pro-PERSONAL"], POL: ["pol-pro-PERSONAL"] },
       tags: [],
       //selectors
-      lemma: "",
+      lemma: "PERSONAL",
       id: "pol-pro-PERSONAL",
       //notes
 
@@ -2340,7 +2462,7 @@ exports.wordsBank = {
       },
       tags: [],
       //selectors
-      lemma: "",
+      lemma: "POSSESSIVE",
       id: "pol-pro-POSSESSIVE",
       //notes
 

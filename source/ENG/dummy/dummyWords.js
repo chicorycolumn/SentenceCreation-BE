@@ -49,30 +49,6 @@ let nco = [
   },
   {
     //links
-    translations: { ENG: ["eng-nco-Dbear"], POL: ["pol-nco-Dbear"] },
-    tags: ["allohomTesting2", "animal"],
-    allohomInfo: { multipleWordtype: true, text: "animal", emoji: "🐻" },
-
-    //selectors
-    lemma: "bear",
-    id: "eng-nco-Dbear",
-
-    //notes
-
-    //inflections
-    inflections: {
-      singular: {
-        nom: "bear",
-        gen: "bear's",
-      },
-      plural: {
-        nom: "bears",
-        gen: "bears'",
-      },
-    },
-  },
-  {
-    //links
     translations: { ENG: ["eng-nco-Dtie2"], POL: ["pol-nco-Dtie2"] },
     tags: ["allohomTesting3", "sports"],
     allohomInfo: {
@@ -135,30 +111,6 @@ let adj = [];
 let adver = [];
 let pro = [];
 let ver = [
-  {
-    //links
-    translations: { ENG: ["eng-ver-Dbear"], POL: ["pol-ver-Dbear"] },
-    tags: ["allohomTesting2", "emotions"],
-    allohomInfo: {
-      multipleWordtype: true,
-      text: "emotional verb",
-      emoji: "😑",
-    },
-    //selectors
-    lemma: "bear",
-    id: "eng-ver-Dbear",
-    //notes
-
-    //inflections
-    inflections: {
-      infinitive: "bear",
-      verbal: {},
-      v2: "bore",
-      v3: "borne",
-      thirdPS: "bears",
-      gerund: "bearing",
-    },
-  },
   {
     //links
     translations: { ENG: ["eng-ver-Dtie"], POL: ["pol-ver-Dtie"] },

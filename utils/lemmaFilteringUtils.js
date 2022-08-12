@@ -631,7 +631,9 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
     structureChunk.specificIds &&
     structureChunk.specificIds.length
   ) {
-    structureChunk.specificIds = [selectedLemmaObject.id]; //SLIM (specific lemma issue re MDNs)
+    structureChunk.specificIds = allLangUtils.formatSpecificIds([
+      selectedLemmaObject.id,
+    ]); //SLIM (specific lemma issue re MDNs)
   }
 
   consol.log(
@@ -1148,7 +1150,7 @@ exports.traverseAndRecordInflections = (
     } else {
       consol.log(
         "[1;33m " +
-          `buwt #NB lf.traverseAndRecordInflections for "${chunkId}" found no matching inflectionValues during drilling for ${reqInflectionCategory}: "${chosenInflectionKeyAdjusted}".` +
+          `buwt ${currentLanguage} #NB lf.traverseAndRecordInflections for "${chunkId}" found no matching inflectionValues during drilling for ${reqInflectionCategory}: "${chosenInflectionKeyAdjusted}".` +
           "[0m"
       );
     }

@@ -315,60 +315,6 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: {
-        ENG: ["eng-nco-009-nut(food)"],
-        POL: ["pol-nco-009-orzech"],
-      },
-      tags: ["allohomTesting", "edible2"],
-      allohomInfo: { singleWordtype: true, text: "food", emoji: "🥜" },
-
-      //selectors
-      lemma: "nut",
-      id: "eng-nco-009-nut(food)",
-
-      //notes
-
-      //inflections
-      inflections: {
-        singular: {
-          nom: "nut",
-          gen: "nut's",
-        },
-        plural: {
-          nom: "nuts",
-          gen: "nuts'",
-        },
-      },
-    },
-    {
-      //links
-      translations: {
-        ENG: ["eng-nco-010-nut(metal)"],
-        POL: ["pol-nco-010-nakrętka"],
-      },
-      tags: ["allohomTesting", "toolbox"],
-      allohomInfo: { singleWordtype: true, text: "metal", emoji: "🔩" },
-
-      //selectors
-      lemma: "nut",
-      id: "eng-nco-010-nut(metal)",
-
-      //notes
-
-      //inflections
-      inflections: {
-        singular: {
-          nom: "nut",
-          gen: "nut's",
-        },
-        plural: {
-          nom: "nuts",
-          gen: "nuts'",
-        },
-      },
-    },
-    {
-      //links
       translations: { ENG: ["eng-nco-011-rat"], POL: ["pol-nco-011-szczur"] },
       tags: ["animate", "animal", "pet", "concrete"],
       //selectors
@@ -670,7 +616,7 @@ exports.wordsBank = {
         ENG: ["eng-adj-003-blue"],
         POL: ["pol-adj-003-niebieski"],
       },
-      tags: ["colour"],
+      tags: ["colour2"],
       //selectors
       lemma: "niebieski",
       id: "eng-adj-003-blue",
@@ -690,7 +636,7 @@ exports.wordsBank = {
       translations: { ENG: ["eng-pro-PERSONAL"], POL: ["pol-pro-PERSONAL"] },
       tags: [],
       //selectors
-      lemma: "",
+      lemma: "PERSONAL",
       id: "eng-pro-PERSONAL",
       //notes
 
@@ -788,7 +734,7 @@ exports.wordsBank = {
       },
       tags: [],
       //selectors
-      lemma: "",
+      lemma: "POSSESSIVE",
       id: "eng-pro-POSSESSIVE",
       //notes
 

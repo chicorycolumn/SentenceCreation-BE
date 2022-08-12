@@ -1722,7 +1722,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pre-1",
 
-        specificIds: ["pol-art-001-z"],
+        specificIds: ["pol-pre-001-z"],
         // connectedTo: "nco-1",
       },
       {
@@ -1743,7 +1743,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pre-1",
 
-        specificIds: ["pol-art-001-z"],
+        specificIds: ["pol-pre-001-z"],
         // connectedTo: "nco-1",
       },
       {
@@ -1764,7 +1764,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pre-1",
 
-        specificIds: ["pol-art-001-z"],
+        specificIds: ["pol-pre-001-z"],
         // connectedTo: "nco-1",
       },
       {
@@ -1785,7 +1785,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pre-1",
 
-        specificIds: ["pol-art-001-z"],
+        specificIds: ["pol-pre-001-z"],
         // connectedTo: "nco-1",
       },
       {
@@ -1806,7 +1806,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pre-1",
 
-        specificIds: ["pol-art-001-z"],
+        specificIds: ["pol-pre-001-z"],
         // connectedTo: "nco-1",
       },
       {

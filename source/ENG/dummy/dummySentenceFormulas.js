@@ -1029,7 +1029,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pre-1",
-        specificIds: ["eng-art-001-with"],
+        specificIds: ["eng-pre-001-with"],
         // connectedTo: "nco-1",
       },
       {
@@ -1053,7 +1053,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pre-1",
-        specificIds: ["eng-art-001-with"],
+        specificIds: ["eng-pre-001-with"],
         // connectedTo: "nco-1",
       },
       {
@@ -1075,7 +1075,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pre-1",
-        specificIds: ["eng-art-001-with"],
+        specificIds: ["eng-pre-001-with"],
         // connectedTo: "nco-1",
       },
       {
@@ -1097,7 +1097,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pre-1",
-        specificIds: ["eng-art-001-with"],
+        specificIds: ["eng-pre-001-with"],
         // connectedTo: "nco-1",
       },
       {
@@ -1119,7 +1119,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pre-1",
-        specificIds: ["eng-art-001-with"],
+        specificIds: ["eng-pre-001-with"],
         // connectedTo: "nco-1",
       },
       {

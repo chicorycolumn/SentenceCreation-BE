@@ -176,22 +176,29 @@ exports.preprocessLemmaObjectsMajor = (
 };
 
 exports.preprocessLemmaObjectsMinor = (matches) => {
-  matches.forEach((lObj) => {
-    exports.adjustImperfectiveOnly(matches, lObj);
-  });
+  exports.adjustImperfectiveOnly(matches);
 };
 
-exports.adjustImperfectiveOnly = (matches, lObj) => {
-  if (lObj.imperfectiveOnly_unadjusted && lObj.aspect === "imperfective") {
-    lObj.imperfectiveOnly = true;
-    delete lObj.imperfectiveOnly_unadjusted;
+exports.adjustImperfectiveOnly = (matches) => {
+  let extraLemmaObjects = [];
 
-    let adjustedLemmaObject = uUtils.copyWithoutReference(lObj);
+  matches.forEach((lObj) => {
+    if (lObj.imperfectiveOnly_unadjusted && lObj.aspect === "imperfective") {
+      lObj.imperfectiveOnly = true;
+      delete lObj.imperfectiveOnly_unadjusted;
 
-    adjustedLemmaObject.aspect = "perfective";
-    adjustedLemmaObject.id = `${lObj.id}-(pf)`;
-    matches.push(adjustedLemmaObject);
-  }
+      let adjustedLemmaObject = uUtils.copyWithoutReference(lObj);
+
+      adjustedLemmaObject.aspect = "perfective";
+      adjustedLemmaObject.id = `${lObj.id}*pf`;
+
+      extraLemmaObjects.push(adjustedLemmaObject);
+    }
+  });
+
+  extraLemmaObjects.forEach((extraLemmaObject) => {
+    matches.push(extraLemmaObject);
+  });
 };
 
 exports.addLanguageParticularClarifiers = () => {

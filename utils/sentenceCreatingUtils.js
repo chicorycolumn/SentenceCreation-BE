@@ -1111,7 +1111,7 @@ exports.conformAnswerStructureToQuestionStructure = (
 
     let source = words[gpUtils.getWordtypeShorthandStCh(answerStructureChunk)];
 
-    // answerLangUtils.preprocessLemmaObjectsMinor(source);
+    // answerLangUtils.preprocessLemmaObjectsMinor(source); //alpha should actually do this.
 
     matchingAnswerLemmaObjects = source.filter(
       (lObj) =>
@@ -1147,8 +1147,8 @@ exports.conformAnswerStructureToQuestionStructure = (
     }
 
     //...and then for both pronombres and all other wordtypes, we get the ID and set it.
-    answerStructureChunk.specificIds = matchingAnswerLemmaObjects.map(
-      (lObj) => lObj.id
+    answerStructureChunk.specificIds = allLangUtils.formatSpecificIds(
+      matchingAnswerLemmaObjects.map((lObj) => lObj.id)
     );
 
     //Do actually transfer gender, for person nouns.

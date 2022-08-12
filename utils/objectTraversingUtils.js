@@ -43,6 +43,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
   //STEP TWO: Filter lemmaObjects (by specificIds OR andTags and selectors).
   let source = words[gpUtils.getWordtypeShorthandStCh(structureChunk)];
+  langUtils.preprocessLemmaObjectsMinor(source); //alpha
 
   let shouldFilterBySelectors;
 
@@ -51,11 +52,20 @@ exports.findMatchingLemmaObjectThenWord = (
   if (structureChunk.specificIds && structureChunk.specificIds.length) {
     consol.log(
       "obbm ot:findMatchingLemmaObjectThenWord GGGet matches by specific IDs:",
-      structureChunk.specificIds
+      structureChunk.specificIds,
+      "and the full set to look in is",
+      source.map((lObj) => lObj.id)
     );
-    matches = source.filter((lObj) =>
-      structureChunk.specificIds.includes(lObj.id)
-    );
+    matches = source.filter((lObj) => {
+      soughtId = lObj.id;
+
+      if (lObj.id.includes("*")) {
+        soughtId = lObj.id.split("*")[0];
+      }
+
+      return structureChunk.specificIds.includes(soughtId);
+    });
+    consol.log(`obbn Found ${matches.length} matches.`);
     if (!matches.length) {
       consol.log(
         "[1;31m " +
