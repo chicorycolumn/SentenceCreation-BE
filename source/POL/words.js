@@ -366,11 +366,11 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["eng-nco-013-dust"], POL: ["pol-nco-013-pył"] },
+      translations: { ENG: ["eng-nco-009-dust"], POL: ["pol-nco-009-pył"] },
       tags: ["tantumTest1"],
       //selectors
       lemma: "pył",
-      id: "pol-nco-013-pył",
+      id: "pol-nco-009-pył",
       gender: "m3",
       //notes
 
@@ -516,13 +516,13 @@ exports.wordsBank = {
     {
       //links
       translations: {
-        ENG: ["eng-nco-014-underwear"],
-        POL: ["pol-nco-014-majtki"],
+        ENG: ["eng-nco-010-underwear"],
+        POL: ["pol-nco-010-majtki"],
       },
       tags: ["inanimate", "holdable", "concrete", "wearable"],
       //selectors
       lemma: "majtki",
-      id: "pol-nco-014-majtki",
+      id: "pol-nco-010-majtki",
       gender: "nonvirile",
       //notes
       lacking: true,

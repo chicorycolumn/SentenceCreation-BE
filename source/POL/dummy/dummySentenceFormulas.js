@@ -214,7 +214,7 @@ exports.dummySentenceFormulasBank = [
         gcase: ["acc"],
         number: ["plural"],
         gender: [],
-        specificIds: ["pol-nco-004-jabłko", "pol-nco-014-majtki"],
+        specificIds: ["pol-nco-004-jabłko", "pol-nco-010-majtki"],
       },
     ],
     primaryOrders: [["fix-1", "nco-1"]],
@@ -2460,7 +2460,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "nco-1-Dust",
-        specificIds: ["pol-nco-013-pył"],
+        specificIds: ["pol-nco-009-pył"],
         number: ["singular"],
       },
       {
@@ -2481,7 +2481,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "nco-1-Dust",
-        specificIds: ["pol-nco-013-pył"],
+        specificIds: ["pol-nco-009-pył"],
         number: ["plural"],
       },
       {

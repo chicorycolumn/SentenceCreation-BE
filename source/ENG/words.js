@@ -315,6 +315,49 @@ exports.wordsBank = {
     },
     {
       //links
+      translations: { ENG: ["eng-nco-009-dust"], POL: ["pol-nco-009-pył"] },
+      tags: ["tantumTest1"],
+      //selectors
+      lemma: "dust",
+      id: "eng-nco-009-dust",
+      lacking: true,
+      tantumSingulare: true,
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "dust",
+          gen: "dust's",
+        },
+      },
+    },
+    {
+      //links
+      translations: {
+        ENG: ["eng-nco-010-underwear"],
+        POL: ["pol-nco-010-majtki"],
+      },
+      tags: ["clothes"],
+      //selectors
+      lemma: "underwear",
+      id: "eng-nco-010-underwear",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "underwear",
+          gen: "underwear's",
+        },
+        plural: {
+          nom: "underwear",
+          gen: "underwear's",
+        },
+      },
+    },
+    {
+      //links
       translations: { ENG: ["eng-nco-011-rat"], POL: ["pol-nco-011-szczur"] },
       tags: ["animate", "animal", "pet", "concrete"],
       //selectors
@@ -355,49 +398,6 @@ exports.wordsBank = {
         plural: {
           nom: "tweezers",
           gen: "tweezers'",
-        },
-      },
-    },
-    {
-      //links
-      translations: { ENG: ["eng-nco-013-dust"], POL: ["pol-nco-013-pył"] },
-      tags: ["tantumTest1"],
-      //selectors
-      lemma: "dust",
-      id: "eng-nco-013-dust",
-      lacking: true,
-      tantumSingulare: true,
-      //notes
-
-      //inflections
-      inflections: {
-        singular: {
-          nom: "dust",
-          gen: "dust's",
-        },
-      },
-    },
-    {
-      //links
-      translations: {
-        ENG: ["eng-nco-014-underwear"],
-        POL: ["pol-nco-014-majtki"],
-      },
-      tags: ["clothes"],
-      //selectors
-      lemma: "underwear",
-      id: "eng-nco-014-underwear",
-      //notes
-
-      //inflections
-      inflections: {
-        singular: {
-          nom: "underwear",
-          gen: "underwear's",
-        },
-        plural: {
-          nom: "underwear",
-          gen: "underwear's",
         },
       },
     },

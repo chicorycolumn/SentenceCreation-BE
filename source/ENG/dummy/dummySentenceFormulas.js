@@ -1838,7 +1838,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "nco-1-Dust",
-        specificIds: ["eng-nco-013-dust"],
+        specificIds: ["eng-nco-009-dust"],
         number: ["singular"],
       },
       {
@@ -1859,7 +1859,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "nco-1-Dust",
-        specificIds: ["eng-nco-013-dust"],
+        specificIds: ["eng-nco-009-dust"],
         number: ["plural"],
       },
       {
