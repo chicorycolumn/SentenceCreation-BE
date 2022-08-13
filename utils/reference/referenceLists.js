@@ -101,7 +101,7 @@ exports.metaTraitValues = {
       allNumbers: ["singular", "plural"],
     },
     person: {
-      allPers: ["1per", "2per", "3per"],
+      allPers: ["1per", "2per", "3per", "impersonal"],
     },
     form: { pronombreAndDeterminer: ["pronombre", "determiner"] },
     gender: {
@@ -130,7 +130,7 @@ exports.metaTraitValues = {
       allNumbers: ["singular", "plural"],
     },
     person: {
-      allPers: ["1per", "2per", "3per"],
+      allPers: ["1per", "2per", "3per", "impersonal"],
     },
     form: { pronombreAndDeterminer: ["pronombre", "determiner"] },
     gender: {
@@ -678,7 +678,12 @@ exports.wordtypeShorthandTranslation = {
 
 exports.defaultTraitValues = {
   adjective: { form: ["simple"] },
-  pronombre: { form: ["pronombre"], gcase: ["nom"] },
+  pronombre: {
+    form: ["pronombre"],
+    gcase: ["nom"],
+    number: ["singular"],
+    person: ["3per"],
+  },
   nounCommon: { gcase: ["nom"] },
   nounPerson: { gcase: ["nom"] },
   verb: { form: ["verbal"] },

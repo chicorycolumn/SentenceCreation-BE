@@ -61,5 +61,5 @@ General instructions for taking a **project with a PSQL database** and hosting i
 
 To test the program with logs run `npm t`
 To test program without logs, run `npm t r`
-To log only special logs, type 1, `npm t r1`
-To log only special logs, type 2, `npm t r2`, and so on up to 5.
+To log only special logs, type 1, `npm t r1` whereas for type 2 it's `r2`, and so on.
+To log only test ending printout, `npm t t`.

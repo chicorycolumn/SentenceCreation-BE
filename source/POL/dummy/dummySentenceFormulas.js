@@ -2495,4 +2495,24 @@ exports.dummySentenceFormulasBank = [
     primaryOrders: [["nco-1-Dust", "ver-1-Be"]],
     additionalOrders: [],
   },
+  {
+    sentenceFormulaSymbol: "dummy70a",
+    sentenceFormulaId: "POL-dummy70a",
+    translations: { ENG: ["ENG-dummy70a"], POL: ["POL-dummy70a"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-Who",
+        specificIds: ["pol-pro-ITG_G"],
+      },
+      // {
+      //   chunkId: "ver-1-Be",
+      //   specificIds: ["eng-ver-001-be"],
+      //   agreeWith: "nco-1-Dust",
+      //   tenseDescription: ["present simple"],
+      //   formulaImportantTraitKeys: ["tenseDescription"],
+      // },
+    ],
+    primaryOrders: [["pro-1-Who"]],
+    additionalOrders: [],
+  },
 ];

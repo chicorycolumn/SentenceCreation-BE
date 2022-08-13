@@ -636,7 +636,7 @@ exports.wordsBank = {
       translations: { ENG: ["eng-pro-PERSONAL"], POL: ["pol-pro-PERSONAL"] },
       tags: [],
       //selectors
-      lemma: "PERSONAL",
+      lemma: "*PERSONAL",
       id: "eng-pro-PERSONAL",
       //notes
 
@@ -706,11 +706,11 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["eng-pro-INTERR-A"], POL: ["pol-pro-INTERR-A"] },
+      translations: { ENG: ["eng-pro-ITG_A"], POL: ["pol-pro-ITG_A"] },
       tags: [],
       //selectors
-      lemma: "",
-      id: "eng-pro-INTERR-A",
+      lemma: "*ITG_A",
+      id: "eng-pro-ITG_A",
       //notes
 
       //inflections
@@ -728,13 +728,155 @@ exports.wordsBank = {
     },
     {
       //links
+      translations: { ENG: ["eng-pro-ITG_B"], POL: ["pol-adj-ITG_B"] },
+      tags: [],
+      //selectors
+      lemma: "*ITG_B",
+      id: "eng-pro-ITG_B",
+      //notes
+
+      //inflections
+      inflections: {
+        pronombreAndDeterminer: {
+          allPers: {
+            allNumbers: {
+              allGenders: {
+                allGcases: "which",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      //links
+      translations: { ENG: ["eng-pro-ITG_C"], POL: ["pol-pro-ITG_C"] },
+      tags: [],
+      //selectors
+      lemma: "*ITG_C",
+      id: "eng-pro-ITG_C",
+      //notes
+
+      //inflections
+      inflections: {
+        pronombreAndDeterminer: {
+          allPers: {
+            allNumbers: {
+              allGenders: {
+                allGcases: "when",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      //links
+      translations: { ENG: ["eng-pro-ITG_D"], POL: ["pol-pro-ITG_D"] },
+      tags: [],
+      //selectors
+      lemma: "*ITG_D",
+      id: "eng-pro-ITG_D",
+      //notes
+
+      //inflections
+      inflections: {
+        pronombreAndDeterminer: {
+          allPers: {
+            allNumbers: {
+              allGenders: {
+                allGcases: "where",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      //links
+      translations: { ENG: ["eng-pro-ITG_E"], POL: ["pol-pro-ITG_E"] },
+      tags: [],
+      //selectors
+      lemma: "*ITG_E",
+      id: "eng-pro-ITG_E",
+      //notes
+
+      //inflections
+      inflections: {
+        pronombreAndDeterminer: {
+          allPers: {
+            allNumbers: {
+              allGenders: {
+                allGcases: "how",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      //links
+      translations: { ENG: ["eng-pro-ITG_F"], POL: ["pol-pro-ITG_F"] },
+      tags: [],
+      //selectors
+      lemma: "*ITG_F",
+      id: "eng-pro-ITG_F",
+      //notes
+
+      //inflections
+      inflections: {
+        pronombreAndDeterminer: {
+          allPers: {
+            allNumbers: {
+              allGenders: {
+                allGcases: "why",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      //links
+      translations: { ENG: ["eng-pro-ITG_G"], POL: ["pol-pro-ITG_G"] },
+      tags: [],
+      //selectors
+      lemma: "*ITG_G",
+      id: "eng-pro-ITG_G",
+      //notes
+
+      //inflections
+      inflections: {
+        pronombreAndDeterminer: {
+          allPers: {
+            allNumbers: {
+              allGenders: {
+                nom: "who",
+                dat: {
+                  isTerminus: true,
+                  normal: ["who"],
+                  additionalInfrequent: ["whom"],
+                },
+                acc: {
+                  isTerminus: true,
+                  normal: ["who"],
+                  additionalInfrequent: ["whom"],
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      //links
       translations: {
         ENG: ["eng-pro-POSSESSIVE"],
         POL: ["pol-pro-POSSESSIVE"],
       },
       tags: [],
       //selectors
-      lemma: "POSSESSIVE",
+      lemma: "*POSSESSIVE",
       id: "eng-pro-POSSESSIVE",
       //notes
 

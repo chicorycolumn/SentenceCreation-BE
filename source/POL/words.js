@@ -2155,7 +2155,7 @@ exports.wordsBank = {
       translations: { ENG: ["eng-pro-PERSONAL"], POL: ["pol-pro-PERSONAL"] },
       tags: [],
       //selectors
-      lemma: "PERSONAL",
+      lemma: "*PERSONAL",
       id: "pol-pro-PERSONAL",
       //notes
 
@@ -2419,50 +2419,13 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["eng-pro-INTERR-A"], POL: ["pol-pro-INTERR-A"] },
-      tags: [],
-      //selectors
-      lemma: "",
-      id: "pol-pro-INTERR-A",
-      //notes
-
-      //inflections
-      inflections: {
-        pronombreAndDeterminer: {
-          "3per": {
-            singular: {
-              n: {
-                nom: "co",
-                gen: "czego",
-                dat: "czym",
-                acc: "co",
-                ins: "czym",
-                loc: "czym",
-              },
-            },
-            plural: {
-              nonvirile: {
-                nom: "co",
-                gen: "czego",
-                dat: "czym",
-                acc: "co",
-                ins: "czym",
-                loc: "czym",
-              },
-            },
-          },
-        },
-      },
-    },
-    {
-      //links
       translations: {
         ENG: ["eng-pro-POSSESSIVE"],
         POL: ["pol-pro-POSSESSIVE"],
       },
       tags: [],
       //selectors
-      lemma: "POSSESSIVE",
+      lemma: "*POSSESSIVE",
       id: "pol-pro-POSSESSIVE",
       //notes
 
@@ -2820,6 +2783,430 @@ exports.wordsBank = {
                     loc: "ich",
                   },
                 },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      //links
+      translations: { ENG: ["eng-pro-ITG_A"], POL: ["pol-pro-ITG_A"] },
+      tags: [],
+      //selectors
+      lemma: "*ITG_A",
+      id: "pol-pro-ITG_A",
+      //notes
+
+      //inflections
+      inflections: {
+        pronombreAndDeterminer: {
+          allPers: {
+            singular: {
+              allSingularGenders: {
+                nom: "co",
+                gen: "czego",
+                dat: "czym",
+                acc: "co",
+                ins: "czym",
+                loc: "czym",
+              },
+            },
+            plural: {
+              allPluralGenders: {
+                nom: "co",
+                gen: "czego",
+                dat: "czym",
+                acc: "co",
+                ins: "czym",
+                loc: "czym",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      //links
+      translations: { ENG: ["eng-pro-ITG_B"], POL: ["pol-pro-ITG_B"] },
+      tags: [],
+      //selectors
+      lemma: "*ITG_B",
+      id: "pol-pro-ITG_B",
+      //notes
+
+      //inflections
+      inflections: {
+        pronombreAndDeterminer: {
+          allPers: {
+            singular: {
+              m1: {
+                nom: "który",
+                gen: "którego",
+                dat: "któremu",
+                acc: "którego",
+                ins: "którym",
+                loc: "którym",
+              },
+              m3: {
+                nom: "który",
+                gen: "którego",
+                dat: "któremu",
+                acc: "który",
+                ins: "którym",
+                loc: "którym",
+              },
+              f: {
+                nom: "która",
+                gen: "której",
+                dat: "której",
+                acc: "którą",
+                ins: "którą",
+                loc: "której",
+              },
+              n: {
+                nom: "które",
+                gen: "którego",
+                dat: "któremu",
+                acc: "które",
+                ins: "którym",
+                loc: "którym",
+              },
+            },
+            plural: {
+              virile: {
+                nom: "którzy",
+                gen: "których",
+                dat: "którym",
+                acc: "których",
+                ins: "którymi",
+                loc: "których",
+              },
+              nonvirile: {
+                nom: "które",
+                gen: "których",
+                dat: "którym",
+                acc: "które",
+                ins: "którymi",
+                loc: "których",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      //links
+      translations: { ENG: ["eng-pro-ITG_C"], POL: ["pol-pro-ITG_C"] },
+      tags: [],
+      //selectors
+      lemma: "*ITG_C",
+      id: "pol-pro-ITG_C",
+      //notes
+
+      //inflections
+      inflections: {
+        pronombreAndDeterminer: {
+          allPers: {
+            allNumbers: {
+              allGenders: {
+                allGcases: "kiedy",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      //links
+      translations: { ENG: ["eng-pro-ITG_D"], POL: ["pol-pro-ITG_D"] },
+      tags: [],
+      //selectors
+      lemma: "*ITG_D",
+      id: "pol-pro-ITG_D",
+      //notes
+
+      //inflections
+      inflections: {
+        pronombreAndDeterminer: {
+          allPers: {
+            allNumbers: {
+              allGenders: {
+                allGcases: "gdzie",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      //links
+      translations: { ENG: ["eng-pro-ITG_E"], POL: ["pol-pro-ITG_E"] },
+      tags: [],
+      //selectors
+      lemma: "*ITG_E",
+      id: "pol-pro-ITG_E",
+      //notes
+
+      //inflections
+      inflections: {
+        pronombreAndDeterminer: {
+          allPers: {
+            allNumbers: {
+              allGenders: {
+                allGcases: "jak",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      //links
+      translations: { ENG: ["eng-pro-ITG_F"], POL: ["pol-pro-ITG_F"] },
+      tags: [],
+      //selectors
+      lemma: "*ITG_F",
+      id: "pol-pro-ITG_F",
+      //notes
+
+      //inflections
+      inflections: {
+        pronombre: {
+          allPers: {
+            allNumbers: {
+              allGenders: {
+                allGcases: "dlaczego",
+              },
+            },
+          },
+        },
+        determiner: {
+          allPers: {
+            allNumbers: {
+              allGenders: {
+                allGcases: "dlatego",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      //links
+      translations: { ENG: ["eng-pro-ITG_G"], POL: ["pol-pro-ITG_G"] },
+      tags: [],
+      //selectors
+      lemma: "*ITG_G",
+      id: "pol-pro-ITG_G",
+      //notes
+
+      //inflections
+      inflections: {
+        pronombre: {
+          allPers: {
+            allNumbers: {
+              allGenders: {
+                nom: "kto",
+                gen: "kogo",
+                dat: "komu",
+                acc: "kogo",
+                ins: "kim",
+                loc: "kim",
+              },
+            },
+          },
+        },
+        determiner: {
+          allPers: {
+            singular: {
+              m1: {
+                nom: "który",
+                gen: "którego",
+                dat: "któremu",
+                acc: "którego",
+                ins: "którym",
+                loc: "którym",
+              },
+              m3: {
+                nom: "który",
+                gen: "którego",
+                dat: "któremu",
+                acc: "który",
+                ins: "którym",
+                loc: "którym",
+              },
+              f: {
+                nom: "która",
+                gen: "której",
+                dat: "której",
+                acc: "którą",
+                ins: "którą",
+                loc: "której",
+              },
+              n: {
+                nom: "które",
+                gen: "którego",
+                dat: "któremu",
+                acc: "które",
+                ins: "którym",
+                loc: "którym",
+              },
+            },
+            plural: {
+              virile: {
+                nom: "którzy",
+                gen: "których",
+                dat: "którym",
+                acc: "których",
+                ins: "którymi",
+                loc: "których",
+              },
+              nonvirile: {
+                nom: "które",
+                gen: "których",
+                dat: "którym",
+                acc: "które",
+                ins: "którymi",
+                loc: "których",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      //links
+      translations: { ENG: ["eng-pro-ITG_J"], POL: ["pol-pro-ITG_J"] },
+      tags: [],
+      //selectors
+      lemma: "*ITG_J",
+      id: "pol-pro-ITG_J",
+      //notes
+
+      //inflections
+      inflections: {
+        pronombreAndDeterminer: {
+          allPers: {
+            singular: {
+              m1: {
+                nom: "taki",
+                gen: "takiego",
+                dat: "takiemu",
+                acc: "takiego",
+                ins: "takim",
+                loc: "takim",
+              },
+              m3: {
+                nom: "taki",
+                gen: "takiego",
+                dat: "takiemu",
+                acc: "takiy",
+                ins: "takim",
+                loc: "takim",
+              },
+              f: {
+                nom: "taka",
+                gen: "takiej",
+                dat: "takiej",
+                acc: "taką",
+                ins: "taką",
+                loc: "takiej",
+              },
+              n: {
+                nom: "takie",
+                gen: "takiego",
+                dat: "takiemu",
+                acc: "takie",
+                ins: "takim",
+                loc: "takim",
+              },
+            },
+            plural: {
+              virile: {
+                nom: "tacy",
+                gen: "takich",
+                dat: "takim",
+                acc: "takich",
+                ins: "takimi",
+                loc: "takich",
+              },
+              nonvirile: {
+                nom: "takie",
+                gen: "takich",
+                dat: "takim",
+                acc: "takie",
+                ins: "takimi",
+                loc: "takich",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      //links
+      translations: { ENG: ["eng-pro-ITG_K"], POL: ["pol-pro-ITG_K"] },
+      tags: [],
+      //selectors
+      lemma: "*ITG_K",
+      id: "pol-pro-ITG_K",
+      //notes
+
+      //inflections
+      inflections: {
+        pronombreAndDeterminer: {
+          allPers: {
+            singular: {
+              m1: {
+                nom: "jaki",
+                gen: "jakiego",
+                dat: "jakiemu",
+                acc: "jakiego",
+                ins: "jakim",
+                loc: "jakim",
+              },
+              m3: {
+                nom: "jaki",
+                gen: "jakiego",
+                dat: "jakiemu",
+                acc: "jakiy",
+                ins: "jakim",
+                loc: "jakim",
+              },
+              f: {
+                nom: "jaka",
+                gen: "jakiej",
+                dat: "jakiej",
+                acc: "jaką",
+                ins: "jaką",
+                loc: "jakiej",
+              },
+              n: {
+                nom: "jakie",
+                gen: "jakiego",
+                dat: "jakiemu",
+                acc: "jakie",
+                ins: "jakim",
+                loc: "jakim",
+              },
+            },
+            plural: {
+              virile: {
+                nom: "jacy",
+                gen: "jakich",
+                dat: "jakim",
+                acc: "jakich",
+                ins: "jakimi",
+                loc: "jakich",
+              },
+              nonvirile: {
+                nom: "jakie",
+                gen: "jakich",
+                dat: "jakim",
+                acc: "jakie",
+                ins: "jakimi",
+                loc: "jakich",
               },
             },
           },
