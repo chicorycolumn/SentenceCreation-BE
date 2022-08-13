@@ -727,7 +727,17 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
     if (!resArr.length) {
       consol.throw(
-        `zprr SEE ABOVE At the end of findCFResultsWhenAllOtherThingsBeingEqual found no results for original sit "${originalSit.cfLabel}" from Array[${allCR.length}].`
+        "[1;31m " +
+          `#ERR zprr "${questionLanguage}"
+          \nOkay look, I'm running findCFResultsWhenAllOtherThingsBeingEqual for chunk "${chunkIdToExamine}", trait "${traitKeyToExamine}".
+          \nThe original sit is    "${originalSit.cfLabel}"    and there are ${allCR.length} counterfax results total.
+          \nSo I'm filtering that array to just the counterfactual results where
+          \na) The chunk to be coppiced/inosculated has a DIFFERENT value to what it has in original, and
+          \nb) If chunk to be cop/ino does have a different value to original, all values in all other parts of this counterfax result must be same as original.
+          \nBut not one of the counterfax results fulfilled both criteria, and if resArr has length 0 I've been told to error.
+          \nHowever, it's not necessarily the case that something's terribly wrong. Maybe this particular lObj only has singular inflection, say.
+          ` +
+          "[0m"
       );
     }
 
