@@ -276,6 +276,33 @@ exports.setMerelyPreferredChoices = (structureChunk, currentLanguage) => {
   }
 };
 
+exports.getAndPreprocessStructureAndFormula = (
+  sentenceFormula,
+  currentLanguage,
+  multipleMode
+) => {
+  if (
+    !multipleMode &&
+    sentenceFormula.primaryOrders &&
+    sentenceFormula.primaryOrders.length > 1
+  ) {
+    sentenceFormula.primaryOrders = [
+      uUtils.selectRandom(sentenceFormula.primaryOrders),
+    ];
+  }
+
+  let { sentenceFormulaId, sentenceFormulaSymbol, sentenceStructure } =
+    sentenceFormula;
+
+  allLangUtils.preprocessStructureChunks(sentenceStructure, currentLanguage);
+
+  return {
+    sentenceFormulaId,
+    sentenceFormulaSymbol,
+    sentenceStructure,
+  };
+};
+
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
   const defaultTraitValuesRef = refObj.defaultTraitValues;

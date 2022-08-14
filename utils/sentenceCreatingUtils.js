@@ -116,14 +116,17 @@ exports.processSentenceFormula = (
 
   consol.log("hbbhey START processSentenceFormula");
   let { currentLanguage, previousQuestionLanguage } = languagesObj;
-  let { sentenceFormulaId, sentenceFormulaSymbol, sentenceStructure } =
-    sentenceFormula;
   let errorInSentenceCreation = { errorMessage: null };
   const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
   let grandOutputArray = [];
 
-  //STEP ZERO: Preprocess sentence structure.
-  allLangUtils.preprocessStructureChunks(sentenceStructure, currentLanguage);
+  //STEP ZERO: Get and preprocess sentence structure.
+  let { sentenceFormulaId, sentenceFormulaSymbol, sentenceStructure } =
+    allLangUtils.getAndPreprocessStructureAndFormula(
+      sentenceFormula,
+      currentLanguage,
+      multipleMode
+    );
 
   //STEP ONE: Select HEAD words and add to result array.
   let { headChunks, dependentChunks, otherChunks } =
@@ -862,8 +865,18 @@ exports.buildSentenceString = (
     }
 
     arrOfFinalSelectedWordsArr.forEach((finalSelectedWordsArr) => {
+      let finalPunctuation = ".";
+
+      if (
+        ["!", "?", ".", "..."].includes(
+          finalSelectedWordsArr[finalSelectedWordsArr.length - 1]
+        )
+      ) {
+        finalPunctuation = finalSelectedWordsArr.pop();
+      }
+
       let producedSentence = uUtils.capitaliseFirst(
-        finalSelectedWordsArr.join(" ") + "."
+        finalSelectedWordsArr.join(" ") + finalPunctuation
       );
 
       producedSentences.push(producedSentence);

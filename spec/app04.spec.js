@@ -40,8 +40,44 @@ describe("/api", function () {
         .then((res) => {
           let ref = [
             {
-              ENG: ["Who."],
-              POL: "Kto.",
+              ENG: ["Who is she?"],
+              POL: "Kim ona jest?",
+            },
+            {
+              ENG: ["Who is he?"],
+              POL: "Kim on jest?",
+            },
+            {
+              ENG: ["Who are you?"],
+              POL: "Kim ty jesteś?",
+            },
+            {
+              ENG: ["Who are you?"],
+              POL: "Kim wy jesteście?",
+            },
+            {
+              ENG: ["Who am I?"],
+              POL: "Kim ja jestem?",
+            },
+            {
+              ENG: ["Who is she?"],
+              POL: "Kim jest (female)?",
+            },
+            {
+              ENG: ["Who is he?"],
+              POL: "Kim jest (male)?",
+            },
+            {
+              ENG: ["Who are you?"],
+              POL: "Kim jesteś?",
+            },
+            {
+              ENG: ["Who are you?"],
+              POL: "Kim jesteście?",
+            },
+            {
+              ENG: ["Who am I?"],
+              POL: "Kim jestem?",
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -71,6 +107,8 @@ function checkSentenceTranslations(
       (array) => array[questionLanguage]
     );
   }
+
+  consol.logSpecialTestOutput(res.body);
 
   let questionSentence = body.questionSentenceArr[0];
   let { answerSentenceArr } = body;

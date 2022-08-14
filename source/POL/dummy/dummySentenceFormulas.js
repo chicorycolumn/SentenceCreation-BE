@@ -1018,6 +1018,24 @@ exports.dummySentenceFormulasBank = [
     primaryOrders: [["nco-1-sheep", "ver-1-is", "fix-1-here"]],
   },
   {
+    sentenceFormulaSymbol: "dummy36b",
+    sentenceFormulaId: "POL-dummy36b",
+    translations: { ENG: ["ENG-dummy36b"] },
+    sentenceStructure: [
+      {
+        chunkId: "nco-1",
+        andTags: ["farmyard"],
+      },
+      {
+        chunkId: "ver-1",
+        specificIds: ["pol-ver-001-być"],
+        tenseDescription: ["present im"],
+        agreeWith: "nco-1",
+      },
+    ],
+    primaryOrders: [["nco-1", "ver-1"], ["nco-1"]],
+  },
+  {
     sentenceFormulaSymbol: "dummy37",
     sentenceFormulaId: "POL-dummy37",
     translations: { ENG: ["ENG-dummy37"] },
@@ -2503,16 +2521,32 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1-Who",
         specificIds: ["pol-pro-ITG_G"],
+        gcase: ["ins"],
+        formulaImportantTraitKeys: ["gcase"],
       },
-      // {
-      //   chunkId: "ver-1-Be",
-      //   specificIds: ["eng-ver-001-be"],
-      //   agreeWith: "nco-1-Dust",
-      //   tenseDescription: ["present simple"],
-      //   formulaImportantTraitKeys: ["tenseDescription"],
-      // },
+      {
+        chunkId: "ver-1-Be",
+        specificIds: ["pol-ver-001-być"],
+        agreeWith: "pro-2-She",
+        tenseDescription: ["present im"],
+        formulaImportantTraitKeys: ["tenseDescription"],
+      },
+      {
+        chunkId: "pro-2-She",
+        specificIds: ["pol-pro-PERSONAL"],
+        gender: ["f", "m"],
+        number: ["singular"],
+        person: ["3per"],
+      },
+      {
+        chunkId: "fix-1-QM",
+        chunkValue: "?",
+      },
     ],
-    primaryOrders: [["pro-1-Who"]],
+    primaryOrders: [
+      ["pro-1-Who", "ver-1-Be", "fix-1-QM"],
+      ["pro-1-Who", "pro-2-She", "ver-1-Be", "fix-1-QM"],
+    ],
     additionalOrders: [],
   },
 ];

@@ -26,7 +26,7 @@ exports.getWordsByCriteria = (currentLanguage, criteriaFromHTTP) => {
     criteria[critKey] = critValue;
   });
 
-  console.log("nyfs getWordsByCriteria invoked with:", criteria);
+  // console.log("nyfs getWordsByCriteria invoked with:", criteria);
 
   Object.keys(wordsBank).forEach((wordtypeShorthand) => {
     resObj[wordtypeShorthand] = [];
@@ -79,7 +79,7 @@ exports.getTagsAndTopics = (currentLanguage) => {
 };
 
 exports.getBlankStChForThisWordtype = (lang, wordtypeLonghand) => {
-  console.log("hmwo", { lang, wordtypeLonghand });
+  // console.log("hmwo", { lang, wordtypeLonghand });
 
   let stChTraits = refFxn.getStructureChunkTraits(lang);
   Object.keys(stChTraits).forEach((traitKey) => {
@@ -190,7 +190,7 @@ exports.getStChsForLemma = (lang, lemma) => {
     stCh.wordtype = gpUtils.getWordtypeShorthandLObj(lObj);
     stCh.id = lObj.id;
     stCh.lemma = lObj.lemma;
-    console.log(4545, stCh.id, `"${stCh.lemma}"`);
+    // console.log(4545, stCh.id, `"${stCh.lemma}"`);
 
     return stCh;
   });

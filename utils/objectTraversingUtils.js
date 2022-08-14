@@ -69,7 +69,9 @@ exports.findMatchingLemmaObjectThenWord = (
     if (!matches.length) {
       consol.log(
         "[1;31m " +
-          `czdi ot:findMatchingLemmaObjectThenWord No matches after Get matches by specific IDs.` +
+          `czdi ot:findMatchingLemmaObjectThenWord No matches after Get matches these specific IDs: [${structureChunk.specificIds.join(
+            ", "
+          )}]` +
           "[0m"
       );
     }

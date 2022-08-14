@@ -215,6 +215,47 @@ describe("/api", function () {
           );
         });
     });
+    it("#pal09-01i (Type 1 Synhomographs. If-PW: clarify Inflections) 'sheep': Engpol. Two primaryOrders, only one needing clarifiers.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "dummy36b",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: "Sheep (singular).",
+              POL: ["Owca.", "Owca jest."],
+            },
+            {
+              ENG: "Sheep (plural).",
+              POL: ["Owce.", "Owce są."],
+            },
+            {
+              ENG: "Sheep is.",
+              POL: ["Owca.", "Owca jest."],
+            },
+            {
+              ENG: "Sheep are.",
+              POL: ["Owce.", "Owce są."],
+            },
+          ];
+
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
     it("#pal09-02a (Type 2 Synhomographs. Ad-PW: clarify Inflections (tenseDescription)) 'read': Engpol. Expect clarifiers.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -4474,7 +4515,7 @@ function checkSentenceTranslations(
     );
   }
 
-  consol.log(res.body);
+  consol.logSpecialTestOutput(res.body);
 
   let questionSentence = body.questionSentenceArr[0];
   let { answerSentenceArr } = body;

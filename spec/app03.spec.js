@@ -4966,6 +4966,8 @@ function checkSentenceTranslations(
     );
   }
 
+  consol.logSpecialTestOutput(res.body);
+
   let questionSentence = body.questionSentenceArr[0];
   let { answerSentenceArr } = body;
 

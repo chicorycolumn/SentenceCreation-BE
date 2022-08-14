@@ -98,7 +98,7 @@ xdescribe("/educator/sandbox - Testing API.", () => {
   });
 });
 
-describe("getStChsForLemma", () => {
+xdescribe("getStChsForLemma", () => {
   it("1", () => {
     const actual = getStChsForLemma("POL", "kobieta");
     console.log(actual);
