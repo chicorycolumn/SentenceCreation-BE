@@ -24,7 +24,7 @@ describe("/api", function () {
   );
 
   describe("/palette - Stage 22: Pronouns, Interrogatives.", () => {
-    it("#pal22-01a GET 200 YES: Poleng. xyz.", () => {
+    it("#pal22-01a GET 200 YES: Poleng. ITG_G. Who is she?", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
@@ -41,43 +41,23 @@ describe("/api", function () {
           let ref = [
             {
               ENG: ["Who is she?"],
-              POL: "Kim ona jest?",
+              POL: ["Kim ona jest?", "Kim jest (female)?"],
             },
             {
               ENG: ["Who is he?"],
-              POL: "Kim on jest?",
+              POL: ["Kim on jest?", "Kim jest (male)?"],
             },
             {
               ENG: ["Who are you?"],
-              POL: "Kim ty jesteś?",
+              POL: ["Kim ty jesteś?", "Kim jesteś?"],
             },
             {
               ENG: ["Who are you?"],
-              POL: "Kim wy jesteście?",
+              POL: ["Kim wy jesteście?", "Kim jesteście?"],
             },
             {
               ENG: ["Who am I?"],
-              POL: "Kim ja jestem?",
-            },
-            {
-              ENG: ["Who is she?"],
-              POL: "Kim jest (female)?",
-            },
-            {
-              ENG: ["Who is he?"],
-              POL: "Kim jest (male)?",
-            },
-            {
-              ENG: ["Who are you?"],
-              POL: "Kim jesteś?",
-            },
-            {
-              ENG: ["Who are you?"],
-              POL: "Kim jesteście?",
-            },
-            {
-              ENG: ["Who am I?"],
-              POL: "Kim jestem?",
+              POL: ["Kim ja jestem?", "Kim jestem?"],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(

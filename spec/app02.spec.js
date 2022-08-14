@@ -231,19 +231,11 @@ describe("/api", function () {
         .then((res) => {
           let ref = [
             {
-              ENG: "Sheep (singular).",
+              ENG: ["Sheep (singular).", "Sheep is."],
               POL: ["Owca.", "Owca jest."],
             },
             {
-              ENG: "Sheep (plural).",
-              POL: ["Owce.", "Owce są."],
-            },
-            {
-              ENG: "Sheep is.",
-              POL: ["Owca.", "Owca jest."],
-            },
-            {
-              ENG: "Sheep are.",
+              ENG: ["Sheep (plural).", "Sheep are."],
               POL: ["Owce.", "Owce są."],
             },
           ];

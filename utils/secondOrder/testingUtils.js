@@ -794,8 +794,33 @@ exports.checkTranslationsOfGivenRef = (
   answerLanguage
 ) => {
   let testActivated = false;
-
   consol.logSpecialTestOutput(res.body);
+
+  //Unpack ref so questionLanguage is just one string per refItem.
+  let refItemsWithQuestionString = [];
+  let refItemsWithQuestionArray = [];
+
+  ref.forEach((refItem) => {
+    if (Array.isArray(refItem[questionLanguage])) {
+      refItemsWithQuestionArray.push(refItem);
+    } else {
+      refItemsWithQuestionString.push(refItem);
+    }
+  });
+
+  let newRefItemsWithQuestionString = [];
+
+  refItemsWithQuestionArray.forEach((refItem) => {
+    refItem[questionLanguage].forEach((questionString) => {
+      let refItemCopy = uUtils.copyWithoutReference(refItem);
+      refItemCopy[questionLanguage] = questionString;
+      newRefItemsWithQuestionString.push(refItemCopy);
+    });
+  });
+
+  ref = [...refItemsWithQuestionString, ...newRefItemsWithQuestionString];
+
+  //Begin testing.
 
   let { questionSentenceArr, answerSentenceArr } = res.body;
 
