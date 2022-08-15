@@ -102,6 +102,7 @@ exports.metaTraitValues = {
     },
     person: {
       allPers: ["1per", "2per", "3per", "impersonal"],
+      allPersExludingImpersonal: ["1per", "2per", "3per"],
     },
     form: { pronombreAndDeterminer: ["pronombre", "determiner"] },
     gender: {
@@ -131,6 +132,7 @@ exports.metaTraitValues = {
     },
     person: {
       allPers: ["1per", "2per", "3per", "impersonal"],
+      allPersExludingImpersonal: ["1per", "2per", "3per"],
     },
     form: { pronombreAndDeterminer: ["pronombre", "determiner"] },
     gender: {
@@ -681,8 +683,8 @@ exports.defaultTraitValues = {
   pronombre: {
     form: ["pronombre"],
     gcase: ["nom"],
-    number: ["singular"],
-    person: ["3per"],
+    // number: ["singular"], // If you were to specify these, then leaving number blank for a pronoun won't result in all trait values being selected from.
+    // person: ["3per"],
   },
   nounCommon: { gcase: ["nom"] },
   nounPerson: { gcase: ["nom"] },

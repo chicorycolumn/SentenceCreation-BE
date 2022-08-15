@@ -56,6 +56,14 @@ describe("/api", function () {
               POL: ["Kim wy jesteście?", "Kim jesteście?"],
             },
             {
+              ENG: ["Who are we?"],
+              POL: ["Kim wy jesteśmy?", "Kim jesteśmy?"],
+            },
+            {
+              ENG: ["Who are they?"],
+              POL: ["Kim oni są?", "Kim one są?", "Kim są?"],
+            },
+            {
               ENG: ["Who am I?"],
               POL: ["Kim ja jestem?", "Kim jestem?"],
             },

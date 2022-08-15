@@ -1926,9 +1926,8 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-2-She",
         specificIds: ["eng-pro-PERSONAL"],
-        gender: ["f", "m"],
-        number: ["singular"],
-        person: ["3per"],
+        gender: ["allPersonalGenders"],
+        person: ["allPersExludingImpersonal"],
       },
       {
         chunkId: "fix-1-QM",
