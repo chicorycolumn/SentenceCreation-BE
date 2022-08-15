@@ -500,11 +500,7 @@ describe("/api", function () {
         .then((res) => {
           let ref = [
             {
-              ENG: "I see.",
-              POL: ["Widzę.", "Ja widzę."],
-            },
-            {
-              ENG: "I am seeing.",
+              ENG: ["I see.", "I am seeing."],
               POL: ["Widzę.", "Ja widzę."],
             },
           ];
@@ -570,11 +566,7 @@ describe("/api", function () {
               POL: ["Przeczytałam.", "Ja przeczytałam."],
             },
             {
-              ENG: "I am reading.",
-              POL: ["Czytam.", "Ja czytam."],
-            },
-            {
-              ENG: "I read (present).",
+              ENG: ["I am reading.", "I read (present)."],
               POL: ["Czytam.", "Ja czytam."],
             },
           ];
@@ -602,11 +594,7 @@ describe("/api", function () {
         .then((res) => {
           let ref = [
             {
-              ENG: "I see.",
-              POL: ["Widzę.", "Ja widzę."],
-            },
-            {
-              ENG: "I am seeing.",
+              ENG: ["I see.", "I am seeing."],
               POL: ["Widzę.", "Ja widzę."],
             },
           ];
@@ -676,11 +664,7 @@ describe("/api", function () {
               ],
             },
             {
-              ENG: "I am reading.",
-              POL: ["Czytam.", "Ja czytam."],
-            },
-            {
-              ENG: "I read (present).",
+              ENG: ["I am reading.", "I read (present)."],
               POL: ["Czytam.", "Ja czytam."],
             },
           ];
@@ -735,11 +719,7 @@ describe("/api", function () {
           let ref = [
             {
               ENG: ["I saw.", "I have seen.", "I had seen."],
-              POL: "Zobaczyłem.",
-            },
-            {
-              ENG: ["I saw.", "I have seen.", "I had seen."],
-              POL: "Zobaczyłam.",
+              POL: ["Zobaczyłem.", "Zobaczyłam."],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -766,11 +746,7 @@ describe("/api", function () {
           let ref = [
             {
               ENG: ["I read.", "I have read.", "I had read."],
-              POL: "Przeczytałem.",
-            },
-            {
-              ENG: ["I read.", "I have read.", "I had read."],
-              POL: "Przeczytałam.",
+              POL: ["Przeczytałem.", "Przeczytałam."],
             },
             {
               ENG: ["I read.", "I am reading."],
@@ -830,11 +806,7 @@ describe("/api", function () {
           let ref = [
             {
               ENG: ["I saw.", "I have seen.", "I had seen."],
-              POL: "Zobaczyłem.",
-            },
-            {
-              ENG: ["I saw.", "I have seen.", "I had seen."],
-              POL: "Zobaczyłam.",
+              POL: ["Zobaczyłem.", "Zobaczyłam."],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -862,11 +834,7 @@ describe("/api", function () {
           let ref = [
             {
               ENG: ["I read.", "I have read.", "I had read."],
-              POL: "Przeczytałem.",
-            },
-            {
-              ENG: ["I read.", "I have read.", "I had read."],
-              POL: "Przeczytałam.",
+              POL: ["Przeczytałem.", "Przeczytałam."],
             },
             {
               ENG: ["I read.", "I am reading."],
@@ -936,8 +904,7 @@ describe("/api", function () {
           expect(answerSentenceArr.length).to.equal(1);
 
           let ref = [
-            { POL: "Mały orzech.", ENG: ["A small nut."] },
-            { POL: "Mała nakrętka.", ENG: ["A small nut."] },
+            { POL: ["Mały orzech.", "Mała nakrętka."], ENG: ["A small nut."] },
           ];
 
           testingUtils.checkTranslationsOfGivenRef(
@@ -1236,10 +1203,7 @@ describe("/api", function () {
           expect(questionSentenceArr.length).to.equal(1);
           expect(answerSentenceArr.length).to.equal(1);
 
-          let ref = [
-            { POL: "Remis.", ENG: ["Tie."] },
-            { POL: "Krawat.", ENG: ["Tie."] },
-          ];
+          let ref = [{ POL: ["Remis.", "Krawat."], ENG: ["Tie."] }];
 
           testingUtils.checkTranslationsOfGivenRef(
             res,
@@ -1391,8 +1355,10 @@ describe("/api", function () {
           let ref = [
             { ENG: "I (male) was.", POL: ["Byłem.", "Ja byłem."] },
             { ENG: "I (female) was.", POL: ["Byłam.", "Ja byłam."] },
-            { ENG: "We (males) were.", POL: ["Byliśmy.", "My byliśmy."] },
-            { ENG: "We (mixed) were.", POL: ["Byliśmy.", "My byliśmy."] },
+            {
+              ENG: ["We (males) were.", "We (mixed) were."],
+              POL: ["Byliśmy.", "My byliśmy."],
+            },
             { ENG: "We (females) were.", POL: ["Byłyśmy.", "My byłyśmy."] },
           ];
 
@@ -1419,13 +1385,15 @@ describe("/api", function () {
         .expect(200)
         .then((res) => {
           let ref = [
-            { ENG: "The woman wrote.", POL: ["Kobieta napisała."] },
+            {
+              ENG: ["The woman wrote.", "The woman had written."],
+              POL: ["Kobieta napisała."],
+            },
             { ENG: "The woman was writing.", POL: ["Kobieta pisała."] },
             {
               ENG: "The woman has written.",
               POL: ["Kobieta napisała.", "Kobieta pisała."],
             },
-            { ENG: "The woman had written.", POL: ["Kobieta napisała."] },
           ];
 
           testingUtils.checkTranslationsOfGivenRef(
@@ -1459,11 +1427,7 @@ describe("/api", function () {
               POL: ["Byłam.", "Ja byłam."],
             },
             {
-              ENG: "We (males) were.",
-              POL: ["Byliśmy.", "My byliśmy."],
-            },
-            {
-              ENG: "We (mixed) were.",
+              ENG: ["We (mixed) were.", "We (males) were."],
               POL: ["Byliśmy.", "My byliśmy."],
             },
             {
@@ -1503,11 +1467,7 @@ describe("/api", function () {
               POL: ["Byłaś.", "Ty byłaś."],
             },
             {
-              ENG: "You (males) were.",
-              POL: ["Byliście.", "Wy byliście."],
-            },
-            {
-              ENG: "You (plural, mixed) were.",
+              ENG: ["You (plural, mixed) were.", "You (males) were."],
               POL: ["Byliście.", "Wy byliście."],
             },
             {
@@ -1542,15 +1502,7 @@ describe("/api", function () {
         .then((res) => {
           let ref = [
             {
-              POL: "Lekarz napisał receptę.",
-              ENG: [
-                "The doctor wrote a prescription.",
-                "The doctor had written a prescription.",
-                "The doctor has written a prescription.",
-              ],
-            },
-            {
-              POL: "Lekarka napisała receptę.",
+              POL: ["Lekarka napisała receptę.", "Lekarz napisał receptę."],
               ENG: [
                 "The doctor wrote a prescription.",
                 "The doctor had written a prescription.",
@@ -1582,15 +1534,7 @@ describe("/api", function () {
         .then((res) => {
           let ref = [
             {
-              POL: "Lekarze napisali receptę.",
-              ENG: [
-                "The doctors wrote a prescription.",
-                "The doctors had written a prescription.",
-                "The doctors have written a prescription.",
-              ],
-            },
-            {
-              POL: "Lekarki napisały receptę.",
+              POL: ["Lekarze napisali receptę.", "Lekarki napisały receptę."],
               ENG: [
                 "The doctors wrote a prescription.",
                 "The doctors had written a prescription.",
@@ -1623,15 +1567,7 @@ describe("/api", function () {
         .then((res) => {
           let ref = [
             {
-              POL: "Lekarz napisał receptę.",
-              ENG: [
-                "The doctor wrote a prescription.",
-                "The doctor had written a prescription.",
-                "The doctor has written a prescription.",
-              ],
-            },
-            {
-              POL: "Lekarka napisała receptę.",
+              POL: ["Lekarz napisał receptę.", "Lekarka napisała receptę."],
               ENG: [
                 "The doctor wrote a prescription.",
                 "The doctor had written a prescription.",
@@ -1664,15 +1600,7 @@ describe("/api", function () {
         .then((res) => {
           let ref = [
             {
-              POL: "Lekarze napisali receptę.",
-              ENG: [
-                "The doctors wrote a prescription.",
-                "The doctors had written a prescription.",
-                "The doctors have written a prescription.",
-              ],
-            },
-            {
-              POL: "Lekarki napisały receptę.",
+              POL: ["Lekarze napisali receptę.", "Lekarki napisały receptę."],
               ENG: [
                 "The doctors wrote a prescription.",
                 "The doctors had written a prescription.",
@@ -1740,11 +1668,10 @@ describe("/api", function () {
               POL: ["Lekarki pisały receptę."],
             },
             {
-              ENG: "The doctors (mixed) were writing a prescription.",
-              POL: ["Lekarze pisali receptę."],
-            },
-            {
-              ENG: "The doctors (males) were writing a prescription.",
+              ENG: [
+                "The doctors (mixed) were writing a prescription.",
+                "The doctors (males) were writing a prescription.",
+              ],
               POL: ["Lekarze pisali receptę."],
             },
           ];
@@ -1987,11 +1914,10 @@ describe("/api", function () {
           let ref = [
             {
               ENG: "If you write a book , I will research it.",
-              POL: ["Jeśli napiszesz książkę , ją zbadam."],
-            },
-            {
-              ENG: "If you write a book , I will research it.",
-              POL: ["Jeśli będziesz pisać książkę , ją zbadam."],
+              POL: [
+                "Jeśli napiszesz książkę , ją zbadam.",
+                "Jeśli będziesz pisać książkę , ją zbadam.",
+              ],
             },
             {
               ENG: "If you write (male) a book , I will research it.",
@@ -2217,11 +2143,7 @@ describe("/api", function () {
           let ref = [
             {
               ENG: ["I wrote.", "I had written.", "I have written."],
-              POL: "Napisałem.",
-            },
-            {
-              ENG: ["I wrote.", "I had written.", "I have written."],
-              POL: "Ja napisałem.",
+              POL: ["Napisałem.", "Ja napisałem."],
             },
           ];
 
@@ -2250,11 +2172,7 @@ describe("/api", function () {
           let ref = [
             {
               ENG: ["We wrote.", "We had written.", "We have written."],
-              POL: "Napisałyśmy.",
-            },
-            {
-              ENG: ["We wrote.", "We had written.", "We have written."],
-              POL: "My napisałyśmy.",
+              POL: ["Napisałyśmy.", "My napisałyśmy."],
             },
           ];
 
@@ -2283,11 +2201,7 @@ describe("/api", function () {
           let ref = [
             {
               ENG: ["I wrote.", "I had written.", "I have written."],
-              POL: "Napisałem.",
-            },
-            {
-              ENG: ["I wrote.", "I had written.", "I have written."],
-              POL: "Ja napisałem.",
+              POL: ["Napisałem.", "Ja napisałem."],
             },
           ];
 
@@ -2316,11 +2230,7 @@ describe("/api", function () {
           let ref = [
             {
               ENG: ["We wrote.", "We had written.", "We have written."],
-              POL: "Napisałyśmy.",
-            },
-            {
-              ENG: ["We wrote.", "We had written.", "We have written."],
-              POL: "My napisałyśmy.",
+              POL: ["Napisałyśmy.", "My napisałyśmy."],
             },
           ];
 
@@ -2349,19 +2259,12 @@ describe("/api", function () {
           let ref = [
             {
               ENG: ["I wrote.", "I had written.", "I have written."],
-              POL: "Napisałem.",
-            },
-            {
-              ENG: ["I wrote.", "I had written.", "I have written."],
-              POL: "Ja napisałem.",
-            },
-            {
-              ENG: ["I wrote.", "I had written.", "I have written."],
-              POL: "Napisałam.",
-            },
-            {
-              ENG: ["I wrote.", "I had written.", "I have written."],
-              POL: "Ja napisałam.",
+              POL: [
+                "Napisałem.",
+                "Ja napisałem.",
+                "Napisałam.",
+                "Ja napisałam.",
+              ],
             },
           ];
 
@@ -2390,19 +2293,12 @@ describe("/api", function () {
           let ref = [
             {
               ENG: ["We wrote.", "We had written.", "We have written."],
-              POL: "Napisałyśmy.",
-            },
-            {
-              ENG: ["We wrote.", "We had written.", "We have written."],
-              POL: "My napisałyśmy.",
-            },
-            {
-              ENG: ["We wrote.", "We had written.", "We have written."],
-              POL: "Napisaliśmy.",
-            },
-            {
-              ENG: ["We wrote.", "We had written.", "We have written."],
-              POL: "My napisaliśmy.",
+              POL: [
+                "Napisałyśmy.",
+                "My napisałyśmy.",
+                "Napisaliśmy.",
+                "My napisaliśmy.",
+              ],
             },
           ];
 
@@ -2431,19 +2327,12 @@ describe("/api", function () {
           let ref = [
             {
               ENG: ["I wrote.", "I had written.", "I have written."],
-              POL: "Napisałem.",
-            },
-            {
-              ENG: ["I wrote.", "I had written.", "I have written."],
-              POL: "Ja napisałem.",
-            },
-            {
-              ENG: ["I wrote.", "I had written.", "I have written."],
-              POL: "Napisałam.",
-            },
-            {
-              ENG: ["I wrote.", "I had written.", "I have written."],
-              POL: "Ja napisałam.",
+              POL: [
+                "Napisałem.",
+                "Ja napisałem.",
+                "Napisałam.",
+                "Ja napisałam.",
+              ],
             },
           ];
 
@@ -2472,19 +2361,12 @@ describe("/api", function () {
           let ref = [
             {
               ENG: ["We wrote.", "We had written.", "We have written."],
-              POL: "Napisałyśmy.",
-            },
-            {
-              ENG: ["We wrote.", "We had written.", "We have written."],
-              POL: "My napisałyśmy.",
-            },
-            {
-              ENG: ["We wrote.", "We had written.", "We have written."],
-              POL: "Napisaliśmy.",
-            },
-            {
-              ENG: ["We wrote.", "We had written.", "We have written."],
-              POL: "My napisaliśmy.",
+              POL: [
+                "Napisałyśmy.",
+                "My napisałyśmy.",
+                "Napisaliśmy.",
+                "My napisaliśmy.",
+              ],
             },
           ];
 
@@ -2629,47 +2511,37 @@ describe("/api", function () {
         .then((res) => {
           let ref = [
             {
-              ENG: "The woman was reading me a book.",
+              ENG: [
+                "The woman was reading me a book.",
+                "The woman was reading a book to me.",
+              ],
               POL: [
                 "Kobieta czytała mi książkę.",
                 "Kobieta czytała mnie książkę.",
               ],
             },
             {
-              ENG: "The women were reading me a book.",
+              ENG: [
+                "The women were reading a book to me.",
+                "The women were reading me a book.",
+              ],
               POL: [
                 "Kobiety czytały mi książkę.",
                 "Kobiety czytały mnie książkę.",
               ],
             },
             {
-              ENG: "The woman was reading a book to me.",
-              POL: [
-                "Kobieta czytała mi książkę.",
-                "Kobieta czytała mnie książkę.",
+              ENG: [
+                "The woman was reading a book to us.",
+                "The woman was reading us a book.",
               ],
-            },
-            {
-              ENG: "The women were reading a book to me.",
-              POL: [
-                "Kobiety czytały mi książkę.",
-                "Kobiety czytały mnie książkę.",
-              ],
-            },
-            {
-              ENG: "The woman was reading us a book.",
               POL: ["Kobieta czytała nam książkę."],
             },
             {
-              ENG: "The women were reading us a book.",
-              POL: ["Kobiety czytały nam książkę."],
-            },
-            {
-              ENG: "The woman was reading a book to us.",
-              POL: ["Kobieta czytała nam książkę."],
-            },
-            {
-              ENG: "The women were reading a book to us.",
+              ENG: [
+                "The women were reading a book to us.",
+                "The women were reading us a book.",
+              ],
               POL: ["Kobiety czytały nam książkę."],
             },
           ];
@@ -2757,19 +2629,19 @@ describe("/api", function () {
         .then((res) => {
           let ref = [
             {
-              ENG: "Father gave me apples.",
+              ENG: ["Father gave me apples.", "Father gave apples to me."],
               POL: ["Ojciec dał mi jabłka.", "Ojciec dał mnie jabłka."],
             },
             {
-              ENG: "Father gave me books.",
+              ENG: ["Father gave me books.", "Father gave books to me."],
               POL: ["Ojciec dał mi książki.", "Ojciec dał mnie książki."],
             },
             {
-              ENG: "Father gave me onions.",
+              ENG: ["Father gave me onions.", "Father gave onions to me."],
               POL: ["Ojciec dał mi cebule.", "Ojciec dał mnie cebule."],
             },
             {
-              ENG: "Father gave me mirrors.",
+              ENG: ["Father gave me mirrors.", "Father gave mirrors to me."],
               POL: [
                 "Ojciec dał mi zwierciadła.",
                 "Ojciec dał mi lustra.",
@@ -2779,35 +2651,35 @@ describe("/api", function () {
               ],
             },
             {
-              ENG: "Father gave us apples.",
+              ENG: ["Father gave us apples.", "Father gave apples to us."],
               POL: ["Ojciec dał nam jabłka."],
             },
             {
-              ENG: "Father gave us books.",
+              ENG: ["Father gave us books.", "Father gave books to us."],
               POL: ["Ojciec dał nam książki."],
             },
             {
-              ENG: "Father gave us onions.",
+              ENG: ["Father gave us onions.", "Father gave onions to us."],
               POL: ["Ojciec dał nam cebule."],
             },
             {
-              ENG: "Father gave us mirrors.",
+              ENG: ["Father gave us mirrors.", "Father gave mirrors to us."],
               POL: ["Ojciec dał nam zwierciadła.", "Ojciec dał nam lustra."],
             },
             {
-              ENG: "Mother gave me apples.",
+              ENG: ["Mother gave me apples.", "Mother gave apples to me."],
               POL: ["Matka dała mi jabłka.", "Matka dała mnie jabłka."],
             },
             {
-              ENG: "Mother gave me books.",
+              ENG: ["Mother gave me books.", "Mother gave books to me."],
               POL: ["Matka dała mi książki.", "Matka dała mnie książki."],
             },
             {
-              ENG: "Mother gave me onions.",
+              ENG: ["Mother gave me onions.", "Mother gave onions to me."],
               POL: ["Matka dała mi cebule.", "Matka dała mnie cebule."],
             },
             {
-              ENG: "Mother gave me mirrors.",
+              ENG: ["Mother gave me mirrors.", "Mother gave mirrors to me."],
               POL: [
                 "Matka dała mi zwierciadła.",
                 "Matka dała mi lustra.",
@@ -2816,94 +2688,19 @@ describe("/api", function () {
               ],
             },
             {
-              ENG: "Mother gave us apples.",
+              ENG: ["Mother gave us apples.", "Mother gave apples to us."],
               POL: ["Matka dała nam jabłka."],
             },
             {
-              ENG: "Mother gave us books.",
+              ENG: ["Mother gave us books.", "Mother gave books to us."],
               POL: ["Matka dała nam książki."],
             },
             {
-              ENG: "Mother gave us onions.",
+              ENG: ["Mother gave us onions.", "Mother gave onions to us."],
               POL: ["Matka dała nam cebule."],
             },
             {
-              ENG: "Mother gave us mirrors.",
-              POL: ["Matka dała nam zwierciadła.", "Matka dała nam lustra."],
-            },
-            //
-            {
-              ENG: "Father gave apples to me.",
-              POL: ["Ojciec dał mi jabłka.", "Ojciec dał mnie jabłka."],
-            },
-            {
-              ENG: "Father gave books to me.",
-              POL: ["Ojciec dał mi książki.", "Ojciec dał mnie książki."],
-            },
-            {
-              ENG: "Father gave onions to me.",
-              POL: ["Ojciec dał mi cebule.", "Ojciec dał mnie cebule."],
-            },
-            {
-              ENG: "Father gave mirrors to me.",
-              POL: [
-                "Ojciec dał mi zwierciadła.",
-                "Ojciec dał mi lustra.",
-                "Ojciec dał mnie zwierciadła.",
-                "Ojciec dał mnie lustra.",
-              ],
-            },
-            {
-              ENG: "Father gave apples to us.",
-              POL: ["Ojciec dał nam jabłka."],
-            },
-            {
-              ENG: "Father gave books to us.",
-              POL: ["Ojciec dał nam książki."],
-            },
-            {
-              ENG: "Father gave onions to us.",
-              POL: ["Ojciec dał nam cebule."],
-            },
-            {
-              ENG: "Father gave mirrors to us.",
-              POL: ["Ojciec dał nam zwierciadła.", "Ojciec dał nam lustra."],
-            },
-            {
-              ENG: "Mother gave apples to me.",
-              POL: ["Matka dała mi jabłka.", "Matka dała mnie jabłka."],
-            },
-            {
-              ENG: "Mother gave books to me.",
-              POL: ["Matka dała mi książki.", "Matka dała mnie książki."],
-            },
-            {
-              ENG: "Mother gave onions to me.",
-              POL: ["Matka dała mi cebule.", "Matka dała mnie cebule."],
-            },
-            {
-              ENG: "Mother gave mirrors to me.",
-              POL: [
-                "Matka dała mi zwierciadła.",
-                "Matka dała mi lustra.",
-                "Matka dała mnie zwierciadła.",
-                "Matka dała mnie lustra.",
-              ],
-            },
-            {
-              ENG: "Mother gave apples to us.",
-              POL: ["Matka dała nam jabłka."],
-            },
-            {
-              ENG: "Mother gave books to us.",
-              POL: ["Matka dała nam książki."],
-            },
-            {
-              ENG: "Mother gave onions to us.",
-              POL: ["Matka dała nam cebule."],
-            },
-            {
-              ENG: "Mother gave mirrors to us.",
+              ENG: ["Mother gave us mirrors.", "Mother gave mirrors to us."],
               POL: ["Matka dała nam zwierciadła.", "Matka dała nam lustra."],
             },
           ];
@@ -3902,14 +3699,10 @@ describe("/api", function () {
               ],
             },
             {
-              ENG: "The doctors (mixed) gave me their book.",
-              POL: [
-                "Lekarze dali mi ich książkę.",
-                "Lekarze dali mnie ich książkę.",
+              ENG: [
+                "The doctors (mixed) gave me their book.",
+                "The doctors (males) gave me their book.",
               ],
-            },
-            {
-              ENG: "The doctors (males) gave me their book.",
               POL: [
                 "Lekarze dali mi ich książkę.",
                 "Lekarze dali mnie ich książkę.",
@@ -3963,14 +3756,10 @@ describe("/api", function () {
               ],
             },
             {
-              ENG: "The doctors (mixed) gave me their book.",
-              POL: [
-                "Lekarze dali mi ich książkę.",
-                "Lekarze dali mnie ich książkę.",
+              ENG: [
+                "The doctors (mixed) gave me their book.",
+                "The doctors (males) gave me their book.",
               ],
-            },
-            {
-              ENG: "The doctors (males) gave me their book.",
               POL: [
                 "Lekarze dali mi ich książkę.",
                 "Lekarze dali mnie ich książkę.",
@@ -4171,11 +3960,7 @@ describe("/api", function () {
         .then((res) => {
           let ref = [
             {
-              ENG: "With the sheep (singular).",
-              POL: ["Z owcą."],
-            },
-            {
-              ENG: "With a sheep.",
+              ENG: ["With the sheep (singular).", "With a sheep."],
               POL: ["Z owcą."],
             },
           ];
@@ -4231,11 +4016,7 @@ describe("/api", function () {
         .then((res) => {
           let ref = [
             {
-              ENG: "With the sheep (plural).",
-              POL: ["Z owcami."],
-            },
-            {
-              ENG: "With sheep.",
+              ENG: ["With the sheep (plural).", "With sheep."],
               POL: ["Z owcami."],
             },
           ];
@@ -4299,27 +4080,15 @@ describe("/api", function () {
         .then((res) => {
           let ref = [
             {
-              ENG: "With the sheep.",
+              ENG: ["With the sheep.", "With a sheep."],
               POL: ["Z owcą."],
             },
             {
-              ENG: "With a sheep.",
-              POL: ["Z owcą."],
-            },
-            {
-              ENG: "With the rat.",
+              ENG: ["With the rat.", "With a rat."],
               POL: ["Ze szczurem."],
             },
             {
-              ENG: "With a rat.",
-              POL: ["Ze szczurem."],
-            },
-            {
-              ENG: "With the bear.",
-              POL: ["Z niedźwiedziem."],
-            },
-            {
-              ENG: "With a bear.",
+              ENG: ["With the bear.", "With a bear."],
               POL: ["Z niedźwiedziem."],
             },
           ];
@@ -4383,27 +4152,15 @@ describe("/api", function () {
         .then((res) => {
           let ref = [
             {
-              ENG: "With the sheep.",
+              ENG: ["With the sheep.", "With sheep."],
               POL: ["Z owcami."],
             },
             {
-              ENG: "With sheep.",
-              POL: ["Z owcami."],
-            },
-            {
-              ENG: "With the rats.",
+              ENG: ["With the rats.", "With rats."],
               POL: ["Ze szczurami."],
             },
             {
-              ENG: "With rats.",
-              POL: ["Ze szczurami."],
-            },
-            {
-              ENG: "With the bears.",
-              POL: ["Z niedźwiedziami."],
-            },
-            {
-              ENG: "With bears.",
+              ENG: ["With the bears.", "With bears."],
               POL: ["Z niedźwiedziami."],
             },
           ];

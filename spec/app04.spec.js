@@ -23,7 +23,7 @@ describe("/api", function () {
     "ENG"
   );
 
-  describe("/palette - Stage 22: Pronouns, Interrogatives.", () => {
+  xdescribe("/palette - Stage 22: Pronouns, Interrogatives.", () => {
     it("#pal22-01a GET 200 YES: Poleng. ITG_G. Who is she?", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
