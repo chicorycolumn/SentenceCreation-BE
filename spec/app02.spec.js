@@ -1872,11 +1872,10 @@ describe("/api", function () {
         .then((res) => {
           let ref = [
             {
-              POL: "Jeśli napiszesz książkę , ją zbadam.",
-              ENG: ["If you write a book , I will research it."],
-            },
-            {
-              POL: "Jeśli będziesz pisać książkę , ją zbadam.",
+              POL: [
+                "Jeśli będziesz pisać książkę , ją zbadam.",
+                "Jeśli napiszesz książkę , ją zbadam.",
+              ],
               ENG: ["If you write a book , I will research it."],
             },
             {
@@ -2761,18 +2760,7 @@ describe("/api", function () {
               ],
             },
             {
-              POL: "Ojciec dał mi zwierciadła.",
-              ENG: [
-                "Father gave me mirrors.",
-                "Father had given me mirrors.",
-                "Father has given me mirrors.",
-                "Father gave mirrors to me.",
-                "Father had given mirrors to me.",
-                "Father has given mirrors to me.",
-              ],
-            },
-            {
-              POL: "Ojciec dał mi lustra.",
+              POL: ["Ojciec dał mi zwierciadła.", "Ojciec dał mi lustra."],
               ENG: [
                 "Father gave me mirrors.",
                 "Father had given me mirrors.",
@@ -2816,18 +2804,7 @@ describe("/api", function () {
               ],
             },
             {
-              POL: "Ojciec dał nam zwierciadła.",
-              ENG: [
-                "Father gave us mirrors.",
-                "Father had given us mirrors.",
-                "Father has given us mirrors.",
-                "Father gave mirrors to us.",
-                "Father had given mirrors to us.",
-                "Father has given mirrors to us.",
-              ],
-            },
-            {
-              POL: "Ojciec dał nam lustra.",
+              POL: ["Ojciec dał nam zwierciadła.", "Ojciec dał nam lustra."],
               ENG: [
                 "Father gave us mirrors.",
                 "Father had given us mirrors.",
@@ -2871,18 +2848,7 @@ describe("/api", function () {
               ],
             },
             {
-              POL: "Matka dała mi zwierciadła.",
-              ENG: [
-                "Mother gave me mirrors.",
-                "Mother had given me mirrors.",
-                "Mother has given me mirrors.",
-                "Mother gave mirrors to me.",
-                "Mother had given mirrors to me.",
-                "Mother has given mirrors to me.",
-              ],
-            },
-            {
-              POL: "Matka dała mi lustra.",
+              POL: ["Matka dała mi zwierciadła.", "Matka dała mi lustra."],
               ENG: [
                 "Mother gave me mirrors.",
                 "Mother had given me mirrors.",
@@ -2926,18 +2892,7 @@ describe("/api", function () {
               ],
             },
             {
-              POL: "Matka dała nam zwierciadła.",
-              ENG: [
-                "Mother gave us mirrors.",
-                "Mother had given us mirrors.",
-                "Mother has given us mirrors.",
-                "Mother gave mirrors to us.",
-                "Mother had given mirrors to us.",
-                "Mother has given mirrors to us.",
-              ],
-            },
-            {
-              POL: "Matka dała nam lustra.",
+              POL: ["Matka dała nam lustra.", "Matka dała nam zwierciadła."],
               ENG: [
                 "Mother gave us mirrors.",
                 "Mother had given us mirrors.",
@@ -2996,15 +2951,7 @@ describe("/api", function () {
               ],
             },
             {
-              POL: "Ojciec dał mi zwierciadło.",
-              ENG: [
-                "Father gave me one mirror.",
-                "Father had given me one mirror.",
-                "Father has given me one mirror.",
-              ],
-            },
-            {
-              POL: "Ojciec dał mi lustro.",
+              POL: ["Ojciec dał mi zwierciadło.", "Ojciec dał mi lustro."],
               ENG: [
                 "Father gave me one mirror.",
                 "Father had given me one mirror.",
@@ -3036,15 +2983,7 @@ describe("/api", function () {
               ],
             },
             {
-              POL: "Ojciec dał nam zwierciadło.",
-              ENG: [
-                "Father gave us one mirror.",
-                "Father had given us one mirror.",
-                "Father has given us one mirror.",
-              ],
-            },
-            {
-              POL: "Ojciec dał nam lustro.",
+              POL: ["Ojciec dał nam zwierciadło.", "Ojciec dał nam lustro."],
               ENG: [
                 "Father gave us one mirror.",
                 "Father had given us one mirror.",
@@ -3076,15 +3015,7 @@ describe("/api", function () {
               ],
             },
             {
-              POL: "Matka dała mi zwierciadło.",
-              ENG: [
-                "Mother gave me one mirror.",
-                "Mother had given me one mirror.",
-                "Mother has given me one mirror.",
-              ],
-            },
-            {
-              POL: "Matka dała mi lustro.",
+              POL: ["Matka dała mi zwierciadło.", "Matka dała mi lustro."],
               ENG: [
                 "Mother gave me one mirror.",
                 "Mother had given me one mirror.",
@@ -3116,15 +3047,7 @@ describe("/api", function () {
               ],
             },
             {
-              POL: "Matka dała nam zwierciadło.",
-              ENG: [
-                "Mother gave us one mirror.",
-                "Mother had given us one mirror.",
-                "Mother has given us one mirror.",
-              ],
-            },
-            {
-              POL: "Matka dała nam lustro.",
+              POL: ["Matka dała nam zwierciadło.", "Matka dała nam lustro."],
               ENG: [
                 "Mother gave us one mirror.",
                 "Mother had given us one mirror.",

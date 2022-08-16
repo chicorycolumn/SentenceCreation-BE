@@ -444,11 +444,7 @@ describe("/api", function () {
         .then((res) => {
           let ref = [
             {
-              ENG: "I see a rat.",
-              POL: ["Widzę szczura."],
-            },
-            {
-              ENG: "I can see a rat.",
+              ENG: ["I can see a rat.", "I see a rat."],
               POL: ["Widzę szczura."],
             },
           ];
@@ -732,11 +728,7 @@ describe("/api", function () {
               POL: ["Lekarka pisze."],
             },
             {
-              ENG: "The doctors (males) write.",
-              POL: ["Lekarze piszą."],
-            },
-            {
-              ENG: "The doctors (mixed) write.",
+              ENG: ["The doctors (males) write.", "The doctors (mixed) write."],
               POL: ["Lekarze piszą."],
             },
             {
@@ -752,11 +744,7 @@ describe("/api", function () {
               POL: ["Lekarka napisała."],
             },
             {
-              ENG: "The doctors (males) wrote.",
-              POL: ["Lekarze napisali."],
-            },
-            {
-              ENG: "The doctors (mixed) wrote.",
+              ENG: ["The doctors (males) wrote.", "The doctors (mixed) wrote."],
               POL: ["Lekarze napisali."],
             },
             {
@@ -975,11 +963,7 @@ describe("/api", function () {
               POL: ["Lekarz pisze."],
             },
             {
-              ENG: "The doctors (males) write.",
-              POL: ["Lekarze piszą."],
-            },
-            {
-              ENG: "The doctors (mixed) write.",
+              ENG: ["The doctors (males) write.", "The doctors (mixed) write."],
               POL: ["Lekarze piszą."],
             },
             {
@@ -987,11 +971,7 @@ describe("/api", function () {
               POL: ["Lekarz napisał."],
             },
             {
-              ENG: "The doctors (males) wrote.",
-              POL: ["Lekarze napisali."],
-            },
-            {
-              ENG: "The doctors (mixed) wrote.",
+              ENG: ["The doctors (males) wrote.", "The doctors (mixed) wrote."],
               POL: ["Lekarze napisali."],
             },
           ];
@@ -1239,19 +1219,11 @@ describe("/api", function () {
         .then((res) => {
           let ref = [
             {
-              ENG: "The doctors (males) write.",
+              ENG: ["The doctors (males) write.", "The doctors (mixed) write."],
               POL: ["Lekarze piszą."],
             },
             {
-              ENG: "The doctors (males) wrote.",
-              POL: ["Lekarze napisali."],
-            },
-            {
-              ENG: "The doctors (mixed) write.",
-              POL: ["Lekarze piszą."],
-            },
-            {
-              ENG: "The doctors (mixed) wrote.",
+              ENG: ["The doctors (males) wrote.", "The doctors (mixed) wrote."],
               POL: ["Lekarze napisali."],
             },
           ];
@@ -1568,19 +1540,11 @@ describe("/api", function () {
         .then((res) => {
           let ref = [
             {
-              ENG: "A woman saw me.",
+              ENG: ["The woman saw me.", "A woman saw me."],
               POL: ["Kobieta mnie zobaczyła."],
             },
             {
-              ENG: "The woman saw me.",
-              POL: ["Kobieta mnie zobaczyła."],
-            },
-            {
-              ENG: "Women saw me.",
-              POL: ["Kobiety mnie zobaczyły."],
-            },
-            {
-              ENG: "The women saw me.",
+              ENG: ["The women saw me.", "Women saw me."],
               POL: ["Kobiety mnie zobaczyły."],
             },
           ];
@@ -1653,16 +1617,7 @@ describe("/api", function () {
         .then((res) => {
           let ref = [
             {
-              ENG: "We see them (males).",
-              POL: [
-                "Widzimy ich.",
-                "Ich widzimy.",
-                "My ich widzimy.",
-                "My widzimy ich.",
-              ],
-            },
-            {
-              ENG: "We see them (mixed).",
+              ENG: ["We see them (males).", "We see them (mixed)."],
               POL: [
                 "Widzimy ich.",
                 "Ich widzimy.",
@@ -1743,11 +1698,7 @@ describe("/api", function () {
           let ref = [
             {
               ENG: ["We see them.", "We are seeing them."],
-              POL: "Widzimy ich.",
-            },
-            {
-              ENG: ["We see them.", "We are seeing them."],
-              POL: "Widzimy je.",
+              POL: ["Widzimy ich.", "Widzimy je."],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -1776,11 +1727,7 @@ describe("/api", function () {
           let ref = [
             {
               ENG: ["We see them.", "We are seeing them."],
-              POL: "Widzimy ich.",
-            },
-            {
-              ENG: ["We see them.", "We are seeing them."],
-              POL: "Widzimy je.",
+              POL: ["Widzimy ich.", "Widzimy je."],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -1807,7 +1754,12 @@ describe("/api", function () {
         .then((res) => {
           let ref = [
             {
-              ENG: "We (males) saw them (males).",
+              ENG: [
+                "We (males) saw them (males).",
+                "We (males) saw them (mixed).",
+                "We (mixed) saw them (males).",
+                "We (mixed) saw them (mixed).",
+              ],
               POL: [
                 "Zobaczyliśmy ich.",
                 "Ich zobaczyliśmy.",
@@ -1825,26 +1777,10 @@ describe("/api", function () {
               ],
             },
             {
-              ENG: "We (mixed) saw them (mixed).",
-              POL: [
-                "Zobaczyliśmy ich.",
-                "Ich zobaczyliśmy.",
-                "My ich zobaczyliśmy.",
-                "My zobaczyliśmy ich.",
+              ENG: [
+                "We (males) saw them (females).",
+                "We (mixed) saw them (females).",
               ],
-            },
-            ///////////////////
-            {
-              ENG: "We (males) saw them (mixed).",
-              POL: [
-                "Zobaczyliśmy ich.",
-                "Ich zobaczyliśmy.",
-                "My ich zobaczyliśmy.",
-                "My zobaczyliśmy ich.",
-              ],
-            },
-            {
-              ENG: "We (males) saw them (females).",
               POL: [
                 "Zobaczyliśmy je.",
                 "Je zobaczyliśmy.",
@@ -1852,18 +1788,11 @@ describe("/api", function () {
                 "My zobaczyliśmy je.",
               ],
             },
-            ////////////////////
             {
-              ENG: "We (females) saw them (males).",
-              POL: [
-                "Zobaczyłyśmy ich.",
-                "Ich zobaczyłyśmy.",
-                "My ich zobaczyłyśmy.",
-                "My zobaczyłyśmy ich.",
+              ENG: [
+                "We (females) saw them (mixed).",
+                "We (females) saw them (males).",
               ],
-            },
-            {
-              ENG: "We (females) saw them (mixed).",
               POL: [
                 "Zobaczyłyśmy ich.",
                 "Ich zobaczyłyśmy.",
@@ -1872,24 +1801,6 @@ describe("/api", function () {
               ],
             },
             /////////////////////
-            {
-              ENG: "We (mixed) saw them (males).",
-              POL: [
-                "Zobaczyliśmy ich.",
-                "Ich zobaczyliśmy.",
-                "My ich zobaczyliśmy.",
-                "My zobaczyliśmy ich.",
-              ],
-            },
-            {
-              ENG: "We (mixed) saw them (females).",
-              POL: [
-                "Zobaczyliśmy je.",
-                "Je zobaczyliśmy.",
-                "My je zobaczyliśmy.",
-                "My zobaczyliśmy je.",
-              ],
-            },
           ];
           testingUtils.checkTranslationsOfGivenRef(
             res,
@@ -1965,19 +1876,12 @@ describe("/api", function () {
           let ref = [
             {
               ENG: ["We saw them.", "We had seen them.", "We have seen them."],
-              POL: "Zobaczyliśmy ich.",
-            },
-            {
-              ENG: ["We saw them.", "We had seen them.", "We have seen them."],
-              POL: "Zobaczyłyśmy ich.",
-            },
-            {
-              ENG: ["We saw them.", "We had seen them.", "We have seen them."],
-              POL: "Zobaczyliśmy je.",
-            },
-            {
-              ENG: ["We saw them.", "We had seen them.", "We have seen them."],
-              POL: "Zobaczyłyśmy je.",
+              POL: [
+                "Zobaczyliśmy ich.",
+                "Zobaczyłyśmy ich.",
+                "Zobaczyliśmy je.",
+                "Zobaczyłyśmy je.",
+              ],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -2006,19 +1910,12 @@ describe("/api", function () {
           let ref = [
             {
               ENG: ["We saw them.", "We had seen them.", "We have seen them."],
-              POL: "Zobaczyliśmy ich.",
-            },
-            {
-              ENG: ["We saw them.", "We had seen them.", "We have seen them."],
-              POL: "Zobaczyłyśmy ich.",
-            },
-            {
-              ENG: ["We saw them.", "We had seen them.", "We have seen them."],
-              POL: "Zobaczyliśmy je.",
-            },
-            {
-              ENG: ["We saw them.", "We had seen them.", "We have seen them."],
-              POL: "Zobaczyłyśmy je.",
+              POL: [
+                "Zobaczyliśmy ich.",
+                "Zobaczyłyśmy ich.",
+                "Zobaczyliśmy je.",
+                "Zobaczyłyśmy je.",
+              ],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -2044,19 +1941,11 @@ describe("/api", function () {
         .then((res) => {
           let ref = [
             {
-              ENG: "A doctor (female) saw me.",
+              ENG: ["The doctor (female) saw me.", "A doctor (female) saw me."],
               POL: ["Lekarka mnie zobaczyła."],
             },
             {
-              ENG: "The doctor (female) saw me.",
-              POL: ["Lekarka mnie zobaczyła."],
-            },
-            {
-              ENG: "A doctor (male) saw me.",
-              POL: ["Lekarz mnie zobaczył."],
-            },
-            {
-              ENG: "The doctor (male) saw me.",
+              ENG: ["The doctor (male) saw me.", "A doctor (male) saw me."],
               POL: ["Lekarz mnie zobaczył."],
             },
           ];
@@ -2084,11 +1973,7 @@ describe("/api", function () {
         .then((res) => {
           let ref = [
             {
-              ENG: "A doctor saw me.",
-              POL: ["Lekarka mnie zobaczyła.", "Lekarz mnie zobaczył."],
-            },
-            {
-              ENG: "The doctor saw me.",
+              ENG: ["The doctor saw me.", "A doctor saw me."],
               POL: ["Lekarka mnie zobaczyła.", "Lekarz mnie zobaczył."],
             },
           ];
@@ -2123,18 +2008,7 @@ describe("/api", function () {
                 "A doctor had seen me.",
                 "A doctor has seen me.",
               ],
-              POL: "Lekarka mnie zobaczyła.",
-            },
-            {
-              ENG: [
-                "The doctor saw me.",
-                "The doctor had seen me.",
-                "The doctor has seen me.",
-                "A doctor saw me.",
-                "A doctor had seen me.",
-                "A doctor has seen me.",
-              ],
-              POL: "Lekarz mnie zobaczył.",
+              POL: ["Lekarka mnie zobaczyła.", "Lekarz mnie zobaczył."],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -2169,18 +2043,7 @@ describe("/api", function () {
                 "A doctor had seen me.",
                 "A doctor has seen me.",
               ],
-              POL: "Lekarka mnie zobaczyła.",
-            },
-            {
-              ENG: [
-                "The doctor saw me.",
-                "The doctor had seen me.",
-                "The doctor has seen me.",
-                "A doctor saw me.",
-                "A doctor had seen me.",
-                "A doctor has seen me.",
-              ],
-              POL: "Lekarz mnie zobaczył.",
+              POL: ["Lekarka mnie zobaczyła.", "Lekarz mnie zobaczył."],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -2206,11 +2069,7 @@ describe("/api", function () {
         .then((res) => {
           let ref = [
             {
-              ENG: "I read (present) a book.",
-              POL: ["Czytam książkę."],
-            },
-            {
-              ENG: "I am reading a book.",
+              ENG: ["I read (present) a book.", "I am reading a book."],
               POL: ["Czytam książkę."],
             },
             {
@@ -2269,11 +2128,7 @@ describe("/api", function () {
         .then((res) => {
           let ref = [
             {
-              ENG: "I read (present) a book.",
-              POL: ["Czytam książkę."],
-            },
-            {
-              ENG: "I am reading a book.",
+              ENG: ["I am reading a book.", "I read (present) a book."],
               POL: ["Czytam książkę."],
             },
             {
@@ -2496,11 +2351,7 @@ describe("/api", function () {
               POL: ["Jest czerwone.", "Ono jest czerwone."],
             },
             {
-              ENG: "They (males) are red.",
-              POL: ["Są czerwoni.", "Oni są czerwoni."],
-            },
-            {
-              ENG: "They (mixed) are red.",
+              ENG: ["They (mixed) are red.", "They (males) are red."],
               POL: ["Są czerwoni.", "Oni są czerwoni."],
             },
             {
@@ -2813,16 +2664,7 @@ describe("/api", function () {
                 "I have been here.",
                 "I was being here.",
               ],
-              POL: "Byłem tutaj.",
-            },
-            {
-              ENG: [
-                "I was here.",
-                "I had been here.",
-                "I have been here.",
-                "I was being here.",
-              ],
-              POL: "Byłam tutaj.",
+              POL: ["Byłem tutaj.", "Byłam tutaj."],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -2855,16 +2697,7 @@ describe("/api", function () {
                 "I have been here.",
                 "I was being here.",
               ],
-              POL: "Byłem tutaj.",
-            },
-            {
-              ENG: [
-                "I was here.",
-                "I had been here.",
-                "I have been here.",
-                "I was being here.",
-              ],
-              POL: "Byłam tutaj.",
+              POL: ["Byłem tutaj.", "Byłam tutaj."],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -2889,10 +2722,6 @@ describe("/api", function () {
         .expect(200)
         .then((res) => {
           let ref = [
-            {
-              ENG: "I am here.",
-              POL: ["Jestem tutaj."],
-            },
             {
               ENG: "I am here.",
               POL: ["Jestem tutaj."],
@@ -2948,10 +2777,6 @@ describe("/api", function () {
         .expect(200)
         .then((res) => {
           let ref = [
-            {
-              ENG: ["I am here.", "I am being here."],
-              POL: "Jestem tutaj.",
-            },
             {
               ENG: ["I am here.", "I am being here."],
               POL: "Jestem tutaj.",
@@ -3073,16 +2898,7 @@ describe("/api", function () {
                 "I have been a doctor.",
                 "I was being a doctor.",
               ],
-              POL: "Byłem lekarzem.",
-            },
-            {
-              ENG: [
-                "I was a doctor.",
-                "I had been a doctor.",
-                "I have been a doctor.",
-                "I was being a doctor.",
-              ],
-              POL: "Byłam lekarką.",
+              POL: ["Byłem lekarzem.", "Byłam lekarką."],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -3115,16 +2931,7 @@ describe("/api", function () {
                 "I have been a doctor.",
                 "I was being a doctor.",
               ],
-              POL: "Byłem lekarzem.",
-            },
-            {
-              ENG: [
-                "I was a doctor.",
-                "I had been a doctor.",
-                "I have been a doctor.",
-                "I was being a doctor.",
-              ],
-              POL: "Byłam lekarką.",
+              POL: ["Byłem lekarzem.", "Byłam lekarką."],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -3162,11 +2969,7 @@ describe("/api", function () {
               POL: ["Byłyśmy lekarkami."],
             },
             {
-              ENG: "We (males) were doctors.",
-              POL: ["Byliśmy lekarzami."],
-            },
-            {
-              ENG: "We (mixed) were doctors.",
+              ENG: ["We (males) were doctors.", "We (mixed) were doctors."],
               POL: ["Byliśmy lekarzami."],
             },
           ];
@@ -3249,16 +3052,7 @@ describe("/api", function () {
                 "We have been doctors.",
                 "We were being doctors.",
               ],
-              POL: "Byłyśmy lekarkami.",
-            },
-            {
-              ENG: [
-                "We were doctors.",
-                "We had been doctors.",
-                "We have been doctors.",
-                "We were being doctors.",
-              ],
-              POL: "Byliśmy lekarzami.",
+              POL: ["Byłyśmy lekarkami.", "Byliśmy lekarzami."],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -3309,16 +3103,7 @@ describe("/api", function () {
                 "We have been doctors.",
                 "We were being doctors.",
               ],
-              POL: "Byłyśmy lekarkami.",
-            },
-            {
-              ENG: [
-                "We were doctors.",
-                "We had been doctors.",
-                "We have been doctors.",
-                "We were being doctors.",
-              ],
-              POL: "Byliśmy lekarzami.",
+              POL: ["Byłyśmy lekarkami.", "Byliśmy lekarzami."],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -3356,11 +3141,7 @@ describe("/api", function () {
               POL: ["Byłyśmy lekarkami."],
             },
             {
-              ENG: "We (males) were doctors.",
-              POL: ["Byliśmy lekarzami."],
-            },
-            {
-              ENG: "We (mixed) were doctors.",
+              ENG: ["We (mixed) were doctors.", "We (males) were doctors."],
               POL: ["Byliśmy lekarzami."],
             },
           ];
@@ -3443,16 +3224,7 @@ describe("/api", function () {
                 "We have been doctors.",
                 "We were being doctors.",
               ],
-              POL: "Byłyśmy lekarkami.",
-            },
-            {
-              ENG: [
-                "We were doctors.",
-                "We had been doctors.",
-                "We have been doctors.",
-                "We were being doctors.",
-              ],
-              POL: "Byliśmy lekarzami.",
+              POL: ["Byłyśmy lekarkami.", "Byliśmy lekarzami."],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -3503,16 +3275,7 @@ describe("/api", function () {
                 "We have been doctors.",
                 "We were being doctors.",
               ],
-              POL: "Byłyśmy lekarkami.",
-            },
-            {
-              ENG: [
-                "We were doctors.",
-                "We had been doctors.",
-                "We have been doctors.",
-                "We were being doctors.",
-              ],
-              POL: "Byliśmy lekarzami.",
+              POL: ["Byłyśmy lekarkami.", "Byliśmy lekarzami."],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -3846,16 +3609,10 @@ describe("/api", function () {
                 "My doctor's doctor has been a woman.",
                 "My doctor's doctor was being a woman.",
               ],
-              POL: "Lekarka mojego lekarza była kobietą.",
-            },
-            {
-              ENG: [
-                "My doctor's doctor was a woman.",
-                "My doctor's doctor had been a woman.",
-                "My doctor's doctor has been a woman.",
-                "My doctor's doctor was being a woman.",
+              POL: [
+                "Lekarka mojego lekarza była kobietą.",
+                "Lekarka mojej lekarki była kobietą.",
               ],
-              POL: "Lekarka mojej lekarki była kobietą.",
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -3888,16 +3645,10 @@ describe("/api", function () {
                 "My doctor's doctor has been a woman.",
                 "My doctor's doctor was being a woman.",
               ],
-              POL: "Lekarka mojego lekarza była kobietą.",
-            },
-            {
-              ENG: [
-                "My doctor's doctor was a woman.",
-                "My doctor's doctor had been a woman.",
-                "My doctor's doctor has been a woman.",
-                "My doctor's doctor was being a woman.",
+              POL: [
+                "Lekarka mojego lekarza była kobietą.",
+                "Lekarka mojej lekarki była kobietą.",
               ],
-              POL: "Lekarka mojej lekarki była kobietą.",
             },
           ];
 
@@ -4033,63 +3784,26 @@ describe("/api", function () {
                 "I had seen my doctor and his doctor.",
                 "I have seen my doctor and his doctor.",
               ],
-              POL: "Zobaczyłem mojego lekarza i jego lekarza.",
-            },
-            {
-              ENG: [
-                "I saw my doctor and his doctor.",
-                "I had seen my doctor and his doctor.",
-                "I have seen my doctor and his doctor.",
+              POL: [
+                "Zobaczyłem mojego lekarza i jego lekarza.",
+                "Zobaczyłam mojego lekarza i jego lekarkę.",
+                "Zobaczyłem mojego lekarza i jego lekarkę.",
+                "Zobaczyłam mojego lekarza i jego lekarza.",
               ],
-              POL: "Zobaczyłam mojego lekarza i jego lekarza.",
             },
-            {
-              ENG: [
-                "I saw my doctor and his doctor.",
-                "I had seen my doctor and his doctor.",
-                "I have seen my doctor and his doctor.",
-              ],
-              POL: "Zobaczyłem mojego lekarza i jego lekarkę.",
-            },
-            {
-              ENG: [
-                "I saw my doctor and his doctor.",
-                "I had seen my doctor and his doctor.",
-                "I have seen my doctor and his doctor.",
-              ],
-              POL: "Zobaczyłam mojego lekarza i jego lekarkę.",
-            },
+
             {
               ENG: [
                 "I saw my doctor and her doctor.",
                 "I had seen my doctor and her doctor.",
                 "I have seen my doctor and her doctor.",
               ],
-              POL: "Zobaczyłem moją lekarkę i jej lekarza.",
-            },
-            {
-              ENG: [
-                "I saw my doctor and her doctor.",
-                "I had seen my doctor and her doctor.",
-                "I have seen my doctor and her doctor.",
+              POL: [
+                "Zobaczyłam moją lekarkę i jej lekarkę.",
+                "Zobaczyłem moją lekarkę i jej lekarkę.",
+                "Zobaczyłam moją lekarkę i jej lekarza.",
+                "Zobaczyłem moją lekarkę i jej lekarza.",
               ],
-              POL: "Zobaczyłam moją lekarkę i jej lekarza.",
-            },
-            {
-              ENG: [
-                "I saw my doctor and her doctor.",
-                "I had seen my doctor and her doctor.",
-                "I have seen my doctor and her doctor.",
-              ],
-              POL: "Zobaczyłem moją lekarkę i jej lekarkę.",
-            },
-            {
-              ENG: [
-                "I saw my doctor and her doctor.",
-                "I had seen my doctor and her doctor.",
-                "I have seen my doctor and her doctor.",
-              ],
-              POL: "Zobaczyłam moją lekarkę i jej lekarkę.",
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -4121,31 +3835,12 @@ describe("/api", function () {
                 "I had seen my doctor and his doctor.",
                 "I have seen my doctor and his doctor.",
               ],
-              POL: "Zobaczyłem mojego lekarza i jego lekarza.",
-            },
-            {
-              ENG: [
-                "I saw my doctor and his doctor.",
-                "I had seen my doctor and his doctor.",
-                "I have seen my doctor and his doctor.",
+              POL: [
+                "Zobaczyłem mojego lekarza i jego lekarza.",
+                "Zobaczyłam mojego lekarza i jego lekarkę.",
+                "Zobaczyłem mojego lekarza i jego lekarkę.",
+                "Zobaczyłam mojego lekarza i jego lekarza.",
               ],
-              POL: "Zobaczyłam mojego lekarza i jego lekarza.",
-            },
-            {
-              ENG: [
-                "I saw my doctor and his doctor.",
-                "I had seen my doctor and his doctor.",
-                "I have seen my doctor and his doctor.",
-              ],
-              POL: "Zobaczyłem mojego lekarza i jego lekarkę.",
-            },
-            {
-              ENG: [
-                "I saw my doctor and his doctor.",
-                "I had seen my doctor and his doctor.",
-                "I have seen my doctor and his doctor.",
-              ],
-              POL: "Zobaczyłam mojego lekarza i jego lekarkę.",
             },
             {
               ENG: [
@@ -4153,31 +3848,12 @@ describe("/api", function () {
                 "I had seen my doctor and her doctor.",
                 "I have seen my doctor and her doctor.",
               ],
-              POL: "Zobaczyłem moją lekarkę i jej lekarza.",
-            },
-            {
-              ENG: [
-                "I saw my doctor and her doctor.",
-                "I had seen my doctor and her doctor.",
-                "I have seen my doctor and her doctor.",
+              POL: [
+                "Zobaczyłam moją lekarkę i jej lekarkę.",
+                "Zobaczyłem moją lekarkę i jej lekarkę.",
+                "Zobaczyłam moją lekarkę i jej lekarza.",
+                "Zobaczyłem moją lekarkę i jej lekarza.",
               ],
-              POL: "Zobaczyłam moją lekarkę i jej lekarza.",
-            },
-            {
-              ENG: [
-                "I saw my doctor and her doctor.",
-                "I had seen my doctor and her doctor.",
-                "I have seen my doctor and her doctor.",
-              ],
-              POL: "Zobaczyłem moją lekarkę i jej lekarkę.",
-            },
-            {
-              ENG: [
-                "I saw my doctor and her doctor.",
-                "I had seen my doctor and her doctor.",
-                "I have seen my doctor and her doctor.",
-              ],
-              POL: "Zobaczyłam moją lekarkę i jej lekarkę.",
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -4392,11 +4068,10 @@ describe("/api", function () {
           let ref = [
             {
               ENG: ["My doctor and my book."],
-              POL: "Mój lekarz i moja książka.",
-            },
-            {
-              ENG: ["My doctor and my book."],
-              POL: "Moja lekarka i moja książka.",
+              POL: [
+                "Mój lekarz i moja książka.",
+                "Moja lekarka i moja książka.",
+              ],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -4424,11 +4099,10 @@ describe("/api", function () {
           let ref = [
             {
               ENG: ["My doctor and my book."],
-              POL: "Mój lekarz i moja książka.",
-            },
-            {
-              ENG: ["My doctor and my book."],
-              POL: "Moja lekarka i moja książka.",
+              POL: [
+                "Mój lekarz i moja książka.",
+                "Moja lekarka i moja książka.",
+              ],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -4470,11 +4144,7 @@ describe("/api", function () {
               POL: ["Lekarki."],
             },
             {
-              ENG: "Doctors (males).",
-              POL: ["Lekarze."],
-            },
-            {
-              ENG: "Doctors (mixed).",
+              ENG: ["Doctors (males).", "Doctors (mixed)."],
               POL: ["Lekarze."],
             },
           ];
@@ -4536,19 +4206,11 @@ describe("/api", function () {
           let ref = [
             {
               ENG: ["Doctor."],
-              POL: "Lekarka.",
-            },
-            {
-              ENG: ["Doctor."],
-              POL: "Lekarz.",
+              POL: ["Lekarka.", "Lekarz."],
             },
             {
               ENG: ["Doctors."],
-              POL: "Lekarki.",
-            },
-            {
-              ENG: ["Doctors."],
-              POL: "Lekarze.",
+              POL: ["Lekarki.", "Lekarze."],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -4577,19 +4239,11 @@ describe("/api", function () {
           let ref = [
             {
               ENG: ["Doctor."],
-              POL: "Lekarka.",
-            },
-            {
-              ENG: ["Doctor."],
-              POL: "Lekarz.",
+              POL: ["Lekarka.", "Lekarz."],
             },
             {
               ENG: ["Doctors."],
-              POL: "Lekarki.",
-            },
-            {
-              ENG: ["Doctors."],
-              POL: "Lekarze.",
+              POL: ["Lekarki.", "Lekarze."],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -4731,11 +4385,7 @@ describe("/api", function () {
           let ref = [
             {
               ENG: ["My doctor."],
-              POL: "Mój lekarz.",
-            },
-            {
-              ENG: ["My doctor."],
-              POL: "Moja lekarka.",
+              POL: ["Mój lekarz.", "Moja lekarka."],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -4763,11 +4413,7 @@ describe("/api", function () {
           let ref = [
             {
               ENG: ["My doctor."],
-              POL: "Mój lekarz.",
-            },
-            {
-              ENG: ["My doctor."],
-              POL: "Moja lekarka.",
+              POL: ["Mój lekarz.", "Moja lekarka."],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
@@ -4870,14 +4516,7 @@ describe("/api", function () {
                 "The woman will be writing.",
                 "The woman is going to be writing.",
               ],
-              POL: "Kobieta będzie pisała.",
-            },
-            {
-              ENG: [
-                "The woman will be writing.",
-                "The woman is going to be writing.",
-              ],
-              POL: "Kobieta będzie pisać.",
+              POL: ["Kobieta będzie pisała.", "Kobieta będzie pisać."],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
