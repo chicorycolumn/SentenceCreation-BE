@@ -267,6 +267,72 @@ let nco = [
       },
     },
   },
+  {
+    //links
+    translations: {
+      ENG: ["eng-nco-Dhole", "eng-nco-Dpit"],
+      POL: ["pol-nco-Ddziura", "pol-nco-Dotwór"],
+    },
+    tags: ["construction work"],
+    //selectors
+    lemma: "dziura",
+    id: "pol-nco-Ddziura",
+    gender: "f",
+    //notes
+
+    //inflections
+    inflections: {
+      singular: {
+        nom: "dziura",
+        gen: "dziury",
+        dat: "dziurze",
+        acc: "dziurę",
+        ins: "dziurą",
+        loc: "dziurze",
+      },
+      plural: {
+        nom: "dziury",
+        gen: "dziur",
+        dat: "dziurom",
+        acc: "dziury",
+        ins: "dziurami",
+        loc: "dziurach",
+      },
+    },
+  },
+  {
+    //links
+    translations: {
+      ENG: ["eng-nco-Dhole", "eng-nco-Dpit"],
+      POL: ["pol-nco-Ddziura", "pol-nco-Dotwór"],
+    },
+    tags: ["construction work"],
+    //selectors
+    lemma: "otwór",
+    id: "pol-nco-Dotwór",
+    gender: "m3",
+    //notes
+
+    //inflections
+    inflections: {
+      singular: {
+        nom: "otwór",
+        gen: "otworu",
+        dat: "otworowi",
+        acc: "otwór",
+        ins: "otworem",
+        loc: "otworze",
+      },
+      plural: {
+        nom: "otwory",
+        gen: "otworów",
+        dat: "otworom",
+        acc: "otwory",
+        ins: "otworami",
+        loc: "otworach",
+      },
+    },
+  },
 ];
 let npe = [];
 let adj = [];

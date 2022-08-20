@@ -1937,4 +1937,80 @@ exports.dummySentenceFormulasBank = [
     primaryOrders: [["pro-1-Who", "ver-1-Be", "pro-2-She", "fix-1-QM"]],
     additionalOrders: [],
   },
+  {
+    sentenceFormulaSymbol: "dummy71a",
+    sentenceFormulaId: "ENG-dummy71a",
+    translations: { ENG: ["ENG-dummy71a"], POL: ["POL-dummy71a"] },
+    sentenceStructure: [
+      {
+        chunkId: "adj-1-Small",
+        specificIds: ["eng-adj-002-small"],
+        agreeWith: "nco-1-Hole",
+      },
+      {
+        chunkId: "nco-1-Hole",
+        specificIds: ["eng-nco-Dhole"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [["adj-1-Small", "nco-1-Hole"]],
+    additionalOrders: [],
+  },
+  {
+    sentenceFormulaSymbol: "dummy71b",
+    sentenceFormulaId: "ENG-dummy71b",
+    translations: { ENG: ["ENG-dummy71b"], POL: ["POL-dummy71b"] },
+    sentenceStructure: [
+      {
+        chunkId: "fix-1-In",
+        chunkValue: "in",
+      },
+      {
+        chunkId: "fix-2-A",
+        chunkValue: "a",
+      },
+      {
+        chunkId: "adj-1-Small",
+        specificIds: ["eng-adj-002-small"],
+        agreeWith: "nco-1-Hole",
+      },
+      {
+        chunkId: "nco-1-Hole",
+        specificIds: ["eng-nco-Dhole"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [["fix-1-In", "fix-2-A", "adj-1-Small", "nco-1-Hole"]],
+    additionalOrders: [],
+  },
+  {
+    sentenceFormulaSymbol: "dummy71c",
+    sentenceFormulaId: "ENG-dummy71c",
+    translations: {
+      ENG: ["ENG-dummy71c", "ENG-dummy71a"],
+      POL: ["POL-dummy71c", "POL-dummy71a"],
+    },
+    sentenceStructure: [
+      {
+        chunkId: "fix-1-In",
+        chunkValue: "in",
+      },
+      {
+        chunkId: "fix-2-A",
+        chunkValue: "a",
+      },
+      {
+        chunkId: "adj-1-Small",
+        specificIds: ["eng-adj-002-small"],
+        agreeWith: "nco-1-Hole",
+      },
+      {
+        chunkId: "nco-1-Hole",
+        specificIds: ["eng-nco-Dhole"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [["fix-1-In", "fix-2-A", "adj-1-Small", "nco-1-Hole"]],
+    additionalOrders: [],
+  },
 ];

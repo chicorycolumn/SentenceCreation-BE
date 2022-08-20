@@ -2549,4 +2549,74 @@ exports.dummySentenceFormulasBank = [
     ],
     additionalOrders: [],
   },
+  {
+    sentenceFormulaSymbol: "dummy71a",
+    sentenceFormulaId: "POL-dummy71a",
+    translations: { ENG: ["ENG-dummy71a"], POL: ["POL-dummy71a"] },
+    sentenceStructure: [
+      {
+        chunkId: "adj-1-Small",
+        specificIds: ["pol-adj-002-mały"],
+        agreeWith: "nco-1-Hole",
+      },
+      {
+        chunkId: "nco-1-Hole",
+        specificIds: ["pol-nco-Ddziura"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [["adj-1-Small", "nco-1-Hole"]],
+    additionalOrders: [],
+  },
+  {
+    sentenceFormulaSymbol: "dummy71b",
+    sentenceFormulaId: "POL-dummy71b",
+    translations: { ENG: ["ENG-dummy71b"], POL: ["POL-dummy71b"] },
+    sentenceStructure: [
+      {
+        chunkId: "fix-1-W",
+        chunkValue: "w",
+      },
+      {
+        chunkId: "adj-1-Small",
+        specificIds: ["pol-adj-002-mały"],
+        agreeWith: "nco-1-Hole",
+      },
+      {
+        chunkId: "nco-1-Hole",
+        specificIds: ["pol-nco-Ddziura"],
+        number: ["singular"],
+        gcase: ["loc"],
+      },
+    ],
+    primaryOrders: [["fix-1-W", "adj-1-Small", "nco-1-Hole"]],
+    additionalOrders: [],
+  },
+  {
+    sentenceFormulaSymbol: "dummy71c",
+    sentenceFormulaId: "POL-dummy71c",
+    translations: {
+      ENG: ["ENG-dummy71c", "ENG-dummy71a"],
+      POL: ["POL-dummy71c", "POL-dummy71a"],
+    },
+    sentenceStructure: [
+      {
+        chunkId: "fix-1-W",
+        chunkValue: "w",
+      },
+      {
+        chunkId: "adj-1-Small",
+        specificIds: ["pol-adj-002-mały"],
+        agreeWith: "nco-1-Hole",
+      },
+      {
+        chunkId: "nco-1-Hole",
+        specificIds: ["pol-nco-Ddziura"],
+        number: ["singular"],
+        gcase: ["loc"],
+      },
+    ],
+    primaryOrders: [["fix-1-W", "adj-1-Small", "nco-1-Hole"]],
+    additionalOrders: [],
+  },
 ];

@@ -105,6 +105,58 @@ let nco = [
       },
     },
   },
+  {
+    //links
+    translations: {
+      ENG: ["eng-nco-Dhole", "eng-nco-Dpit"],
+      POL: ["pol-nco-Ddziura", "pol-nco-Dotwór"],
+    },
+    tags: ["construction work"],
+
+    //selectors
+    lemma: "hole",
+    id: "eng-nco-Dhole",
+
+    //notes
+
+    //inflections
+    inflections: {
+      singular: {
+        nom: "hole",
+        gen: "hole's",
+      },
+      plural: {
+        nom: "holes",
+        gen: "holes'",
+      },
+    },
+  },
+  {
+    //links
+    translations: {
+      ENG: ["eng-nco-Dhole", "eng-nco-Dpit"],
+      POL: ["pol-nco-Ddziura", "pol-nco-Dotwór"],
+    },
+    tags: ["construction work"],
+
+    //selectors
+    lemma: "pit",
+    id: "eng-nco-Dpit",
+
+    //notes
+
+    //inflections
+    inflections: {
+      singular: {
+        nom: "pit",
+        gen: "pit's",
+      },
+      plural: {
+        nom: "pits",
+        gen: "pits'",
+      },
+    },
+  },
 ];
 let npe = [];
 let adj = [];
