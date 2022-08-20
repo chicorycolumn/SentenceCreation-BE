@@ -337,7 +337,7 @@ exports.structureChunkTraits = {
       ultimatelyMultipleTraitValuesOkay: true,
       needsNoValidation: true,
     },
-    doNotUpdateSpecificIdsAsIsJustOneMDN: {
+    doNotUpdateSpecificIdsAsIsJustOneMGN: {
       expectedTypeOnStCh: "boolean",
       needsNoValidation: true,
     },
