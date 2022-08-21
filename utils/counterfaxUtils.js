@@ -203,6 +203,15 @@ exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
           )
         );
 
+        if (annoTraitKey === "gender") {
+          let tempObj = {
+            gender: counterfactualTraitValuesForThisTraitKey,
+            isPerson: questionOutputUnit.structureChunk.isPerson,
+          };
+          allLangUtils.enforceIsPerson(tempObj);
+          counterfactualTraitValuesForThisTraitKey = tempObj.gender;
+        }
+
         consol.log(
           "veem counterfactualTraitValuesForThisTraitKey",
           counterfactualTraitValuesForThisTraitKey

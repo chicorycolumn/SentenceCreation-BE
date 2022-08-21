@@ -64,6 +64,60 @@ exports.getStructureChunkTraits = (currentLanguage) => {
   );
 };
 
+exports.assignDefaultTraitValuesOrPossibleTraitValues = (
+  stCh,
+  currentLanguage,
+  traitKey,
+  alsoUseStChTraitsFromAll
+) => {
+  let wordtype = gpUtils.getWordtypeStCh(stCh);
+
+  let defaultTraitValuesOrPossibleTraitValues =
+    this.getDefaultTraitValuesOrPossibleTraitValues(
+      currentLanguage,
+      wordtype,
+      traitKey,
+      alsoUseStChTraitsFromAll
+    );
+  stCh[traitKey] = defaultTraitValuesOrPossibleTraitValues;
+};
+
+exports.getDefaultTraitValuesOrPossibleTraitValues = (
+  currentLanguage,
+  wordtype,
+  traitKey,
+  alsoUseStChTraitsFromAll
+) => {
+  let stChTraitsRefByLang = refObj.structureChunkTraits[currentLanguage];
+  let ref;
+
+  if (alsoUseStChTraitsFromAll) {
+    let stChTraitsRefAll = refObj.structureChunkTraits["ALL"];
+
+    ref = uUtils.combineTwoKeyValueObjectsCarefully(
+      stChTraitsRefByLang,
+      stChTraitsRefAll
+    );
+  } else {
+    ref = stChTraitsRefByLang;
+  }
+
+  let possibleTraitValues = ref[traitKey].possibleTraitValues.slice(0);
+  let defaultTraitValues;
+
+  if (
+    refObj.defaultTraitValues[wordtype] &&
+    refObj.defaultTraitValues[wordtype][traitKey]
+  ) {
+    defaultTraitValues = refObj.defaultTraitValues[wordtype][traitKey].slice(0);
+  }
+
+  if (defaultTraitValues && defaultTraitValues.length) {
+    return defaultTraitValues;
+  }
+  return possibleTraitValues;
+};
+
 exports.removeIncompatibleTraitValues = (currentLanguage, structureChunk) => {
   let traitKeysChanged = [];
 

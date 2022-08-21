@@ -125,10 +125,12 @@ exports.preprocessStructureChunks = (structureChunk) => {
   if (refFxn.isTraitCompatibleStCh("gender", structureChunk, currentLanguage)) {
     if (!structureChunk.gender || !structureChunk.gender.length) {
       //Fill out if blank.
-      structureChunk.gender =
-        refObj.structureChunkTraits[currentLanguage][
-          "gender"
-        ].possibleTraitValues.slice(0);
+
+      refFxn.assignDefaultTraitValuesOrPossibleTraitValues(
+        structureChunk,
+        currentLanguage,
+        "gender"
+      );
     } else {
       //Masculinist agenda
       let adjustedGenderArray = [];

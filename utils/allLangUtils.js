@@ -5,6 +5,25 @@ const uUtils = require("../utils/universalUtils.js");
 const consol = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 
+exports.enforceThirdPersonAgreeWith = (stCh, onlyIfUnpopulated) => {
+  if (
+    ["agreeWith", "postHocAgreeWithPrimary"].some(
+      (agreeKey) =>
+        stCh[agreeKey] && ["nco", "npe"].includes(stCh[agreeKey].split("-")[0])
+    ) &&
+    (!onlyIfUnpopulated || uUtils.isEmpty(stCh.person))
+  ) {
+    stCh.person = ["3per"];
+    return true;
+  }
+};
+
+exports.enforceIsPerson = (stCh) => {
+  if (stCh.isPerson) {
+    stCh.gender = stCh.gender.filter((genderValue) => genderValue !== "n");
+  }
+};
+
 exports.formatSpecificIds = (specificIds) => {
   let res = [];
 
@@ -321,8 +340,13 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
       if (gpUtils.getWordtypeStCh(structureChunk) === wordtype) {
         Object.keys(defaultTraitValuesRef[wordtype]).forEach((traitKey) => {
           if (!structureChunk[traitKey] || !structureChunk[traitKey].length) {
-            structureChunk[traitKey] =
-              defaultTraitValuesRef[wordtype][traitKey];
+            structureChunk[traitKey] = [
+              uUtils.selectRandom(defaultTraitValuesRef[wordtype][traitKey]),
+            ];
+
+            if (traitKey === "person" && wordtype === "pronombre") {
+              allLangUtils.enforceThirdPersonAgreeWith(structureChunk);
+            }
           }
         });
       }
@@ -332,22 +356,15 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
       refFxn.isTraitCompatibleStCh("number", structureChunk, currentLanguage) &&
       (!structureChunk.number || !structureChunk.number.length)
     ) {
-      structureChunk.number = refFxn
-        .getStructureChunkTraits(currentLanguage)
-        ["number"].possibleTraitValues.slice(0);
+      refFxn.assignDefaultTraitValuesOrPossibleTraitValues(
+        structureChunk,
+        currentLanguage,
+        "number"
+      );
     }
 
     if (gpUtils.getWordtypeStCh(structureChunk) === "pronombre") {
-      if (structureChunk.agreeWith) {
-        if (
-          ["nounCommon", "nounPerson"].includes(
-            gpUtils.getWordtypeAgree(structureChunk)
-          ) &&
-          (!structureChunk.person || !structureChunk.person.length)
-        ) {
-          structureChunk.person = ["3per"];
-        }
-      }
+      allLangUtils.enforceThirdPersonAgreeWith(structureChunk, true);
 
       if (!structureChunk.gender || !structureChunk.gender.length) {
         structureChunk.gender = [];
@@ -368,6 +385,8 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
           ];
         }
       }
+
+      allLangUtils.enforceIsPerson(structureChunk.gender);
     }
 
     if (gpUtils.getWordtypeStCh(structureChunk) === "verb") {
@@ -381,22 +400,24 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
             structureChunk
           )
         ) {
-          structureChunk.tenseDescription =
-            refObj.structureChunkTraits[
-              currentLanguage
-            ].tenseDescription.possibleTraitValues.slice(0);
+          refFxn.assignDefaultTraitValuesOrPossibleTraitValues(
+            structureChunk,
+            currentLanguage,
+            "tenseDescription"
+          );
         }
       }
 
       if (structureChunk.agreeWith) {
+        let haveAdjusted = allLangUtils.enforceThirdPersonAgreeWith(
+          structureChunk,
+          true
+        );
+
         if (
-          ["nounCommon", "nounPerson"].includes(
-            gpUtils.getWordtypeAgree(structureChunk)
-          ) &&
-          (!structureChunk.person || !structureChunk.person.length)
+          !haveAdjusted &&
+          gpUtils.getWordtypeAgree(structureChunk) === "pronombre"
         ) {
-          structureChunk.person = ["3per"];
-        } else if (gpUtils.getWordtypeAgree(structureChunk) === "pronombre") {
           let headChunk = (structureChunk.person = sentenceStructure.find(
             (potentialHeadChunk) => {
               return potentialHeadChunk.chunkId === structureChunk.agreeWith;

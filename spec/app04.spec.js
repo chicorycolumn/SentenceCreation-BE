@@ -23,7 +23,7 @@ describe("/api", function () {
     "ENG"
   );
 
-  xdescribe("/palette - Stage 22: Pronouns, Interrogatives.", () => {
+  describe("/palette - Stage 22: Pronouns, Interrogatives.", () => {
     it("#pal22-01a GET 200 YES: Poleng. ITG_G. Who is she?", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
@@ -57,7 +57,7 @@ describe("/api", function () {
             },
             {
               ENG: ["Who are we?"],
-              POL: ["Kim wy jesteśmy?", "Kim jesteśmy?"],
+              POL: ["Kim my jesteśmy?", "Kim jesteśmy?"],
             },
             {
               ENG: ["Who are they?"],

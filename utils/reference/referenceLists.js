@@ -410,6 +410,10 @@ exports.structureChunkTraits = {
       expectedTypeOnStCh: "string",
       compatibleWordtypes: ["fixed"],
     },
+    isPerson: {
+      expectedTypeOnStCh: "boolean",
+      compatibleWordtypes: ["pronombre"],
+    },
   },
   POL: {
     //
@@ -683,8 +687,15 @@ exports.defaultTraitValues = {
   pronombre: {
     form: ["pronombre"],
     gcase: ["nom"],
-    // number: ["singular"], // If you were to specify these, then leaving number blank for a pronoun won't result in all trait values being selected from.
-    // person: ["3per"],
+    person: ["1per", "2per", "3per"],
+    /** Have decided not to have default values for gender or number.
+     *
+     *  Was tempted {number: [singular]} but when number key left blank wo do want it to choose from both singular and plural.
+     *
+     *  Was tempted {gender: [m, f]} to avoid "Kim ona jest?" from randomly selecting "ono".
+     *  So instead the educator would always remember to check all then uncheck n for pronombre chunk in sentences like these,
+     *  but I have a better solution - an "isPerson" key on stCh which strips out n from gender array.
+     */
   },
   nounCommon: { gcase: ["nom"] },
   nounPerson: { gcase: ["nom"] },
