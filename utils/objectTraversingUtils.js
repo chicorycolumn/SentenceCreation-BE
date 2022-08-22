@@ -43,7 +43,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
   //STEP TWO: Filter lemmaObjects (by specificIds OR andTags and selectors).
   let source = words[gpUtils.getWordtypeShorthandStCh(structureChunk)];
-  langUtils.preprocessLemmaObjectsMinor(source); //alpha
+  langUtils.preprocessLemmaObjectsMinor(source); //alpha Have we copied them prior to this?
 
   let shouldFilterBySelectors;
 
@@ -103,10 +103,9 @@ exports.findMatchingLemmaObjectThenWord = (
   //eg "m" key being expanded ie its value copied to "m1", "m2", "m3" keys, which is mutating the lObj.
 
   matches = uUtils.copyWithoutReference(matches);
+  langUtils.preprocessLemmaObjectsMinor(matches);
 
   if (shouldFilterBySelectors) {
-    langUtils.preprocessLemmaObjectsMinor(matches);
-
     matches = lfUtils.filterBySelectors(
       currentLanguage,
       structureChunk,
@@ -123,7 +122,6 @@ exports.findMatchingLemmaObjectThenWord = (
     }
   }
 
-  langUtils.preprocessLemmaObjectsMinor(matches); //Must be adjusted again as may not have been in such pathway above.
   langUtils.preprocessLemmaObjectsMajor(
     matches,
     structureChunk,
