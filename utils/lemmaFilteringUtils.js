@@ -42,9 +42,7 @@ exports.filterWithin_PHD = (
   let drillPathSecondary = [];
   let drillPathTertiary = [];
 
-  const langUtils = require("../source/all/" +
-    currentLanguage +
-    "/langUtils.js");
+  const langUtils = require(`../source/all/${currentLanguage}/langUtils.js`);
 
   let postHocInflectionChains = refObj.postHocDependentChunkWordtypes[
     currentLanguage
@@ -361,9 +359,7 @@ exports.filterWithinSelectedLemmaObject = (
     );
   }
 
-  const langUtils = require("../source/all/" +
-    currentLanguage +
-    "/langUtils.js");
+  const langUtils = require(`../source/all/${currentLanguage}/langUtils.js`);
 
   //STEP ZERO: Get necessary materials, ie inflectionPaths and requirementArrs.
 

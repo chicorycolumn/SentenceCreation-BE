@@ -39,12 +39,10 @@ exports.getLemmaObjectsWithoutGivenSelectorKey = (
   return wordsBank[wordtypeShorthand].filter((lObj) => !lObj[selectorKey]);
 };
 
-exports.checkWords = (testing, currentLanguage) => {
-  const langUtils = require("../../source/all/" +
-    currentLanguage +
-    "/langUtils.js");
+exports.checkWords = (envir, currentLanguage) => {
+  const langUtils = require(`../../source/all/${currentLanguage}/langUtils.js`);
 
-  const wordsBank = educatorUtils.getWordsBank(currentLanguage, testing);
+  const wordsBank = educatorUtils.getWordsBank(currentLanguage, envir);
 
   Object.keys(wordsBank).forEach((wordsetKey) => {
     let words = wordsBank[wordsetKey];
@@ -77,12 +75,12 @@ exports.checkWords = (testing, currentLanguage) => {
 
 /**
  * Gives a list of homographs (allo or syn) to the educator, so that they may take action on these.
- * @param {boolean} testing - Should we use test wordsBank.
+ * @param {boolean} envir - Which envir wordsBank to use.
  * @param {string} currentLanguage
  * @param {string} homographType - "syn", "allo", or "all".
  * @param {object} ignore - What to ignore: "ignoreV2V3Synhoms", "ignoreClarifiedAllohoms"
  */
-exports.findHomographs = (testing, currentLanguage, homographType, ignore) => {
+exports.findHomographs = (envir, currentLanguage, homographType, ignore) => {
   if (currentLanguage !== "ENG") {
     ignore.ignoreV2V3Synhoms = false;
   }
@@ -92,9 +90,9 @@ exports.findHomographs = (testing, currentLanguage, homographType, ignore) => {
     throw "findHomographs fxn: I don't know what type of homograph you want me to find. I've logged above what you gave me.";
   }
 
-  const wordsBank = educatorUtils.getWordsBank(currentLanguage, testing);
-  let envir = "ref";
-  const langUtils = require(`../../source/${envir}/${currentLanguage}/langUtils.js`);
+  const wordsBank = educatorUtils.getWordsBank(currentLanguage, envir);
+
+  const langUtils = require(`../../source/all/${currentLanguage}/langUtils.js`);
 
   let recordOfTerminalValuesAndPaths = [];
   let severallyAppearingTerminalValuesArr = [];
@@ -227,8 +225,8 @@ exports.findHomographs = (testing, currentLanguage, homographType, ignore) => {
   }
 };
 
-exports.checkLemmaObjectIds = (testing, currentLanguage) => {
-  const wordsBank = educatorUtils.getWordsBank(currentLanguage, testing);
+exports.checkLemmaObjectIds = (envir, currentLanguage) => {
+  const wordsBank = educatorUtils.getWordsBank(currentLanguage, envir);
 
   let schematic = [];
   Object.keys(wordsBank).forEach((wordsetKey) => {
@@ -253,10 +251,10 @@ exports.checkLemmaObjectIds = (testing, currentLanguage) => {
   return { schematic, duplicateIds };
 };
 
-exports.checkSentenceFormulaIds = (testing, currentLanguage) => {
+exports.checkSentenceFormulaIds = (envir, currentLanguage) => {
   const sentenceFormulasBank = educatorUtils.getSentenceFormulasBank(
     currentLanguage,
-    testing
+    envir
   );
 
   let schematic = sentenceFormulasBank.map((senFor) => [
@@ -285,24 +283,14 @@ exports.checkSentenceFormulaIds = (testing, currentLanguage) => {
   return { schematic, duplicateIds, duplicateSymbols };
 };
 
-exports.getWordsBank = (currentLanguage, testing) => {
-  let envir = "ref";
-  if (testing) {
-    envir = "dev";
-  }
-
+exports.getWordsBank = (currentLanguage, envir) => {
   const {
     wordsBank,
   } = require(`../../source/${envir}/${currentLanguage}/words.js`);
   return wordsBank;
 };
 
-exports.getSentenceFormulasBank = (currentLanguage, testing) => {
-  let envir = "ref";
-  if (testing) {
-    envir = "dev";
-  }
-
+exports.getSentenceFormulasBank = (currentLanguage, envir) => {
   const {
     sentenceFormulasBank,
   } = require(`../../source/${envir}/${currentLanguage}/sentenceFormulas.js`);

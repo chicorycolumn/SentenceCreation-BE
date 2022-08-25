@@ -31,7 +31,7 @@ describe("/api", function () {
       let langs = ["ENG", "POL"];
 
       langs.forEach((lang) => {
-        const langUtils = require("../source/all/" + lang + "/langUtils.js");
+        const langUtils = require(`../source/all/${lang}/langUtils.js`);
 
         let words = scUtils.getWordsAndFormulas(lang);
         actual[lang] = words;

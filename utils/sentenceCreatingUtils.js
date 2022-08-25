@@ -61,9 +61,7 @@ exports.getMaterialsCopies = (
   }
 
   let sentenceFormula;
-  const langUtils = require("../source/all/" +
-    currentLanguage +
-    "/langUtils.js");
+  const langUtils = require(`../source/all/${currentLanguage}/langUtils.js`);
   let defaultSentenceFormulaId = "POL-00-50";
 
   let words = useDummy
@@ -123,9 +121,7 @@ exports.processSentenceFormula = (
   consol.log("hbbhey START processSentenceFormula");
   let { currentLanguage, previousQuestionLanguage } = languagesObj;
   let errorInSentenceCreation = { errorMessage: null };
-  const langUtils = require("../source/all/" +
-    currentLanguage +
-    "/langUtils.js");
+  const langUtils = require(`../source/all/${currentLanguage}/langUtils.js`);
   let grandOutputArray = [];
 
   //STEP ZERO: Get and preprocess sentence structure.
@@ -901,9 +897,7 @@ exports.selectWordVersions = (
 ) => {
   let shouldConsoleLog = false;
   let selectedWordsArr = [];
-  const langUtils = require("../source/all/" +
-    currentLanguage +
-    "/langUtils.js");
+  const langUtils = require(`../source/all/${currentLanguage}/langUtils.js`);
 
   //STEP 0: If in Q mode, bring annos in from skeleton units.
   if (!multipleMode) {

@@ -24,9 +24,7 @@ exports.findMatchingLemmaObjectThenWord = (
       "[0m"
   );
 
-  const langUtils = require("../source/all/" +
-    currentLanguage +
-    "/langUtils.js");
+  const langUtils = require(`../source/all/${currentLanguage}/langUtils.js`);
   let selectedFormsArray = [];
   let arrayOfAllPossibleOutputUnits = [];
 

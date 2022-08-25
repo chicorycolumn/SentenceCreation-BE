@@ -41,7 +41,7 @@ xdescribe("findHomographs", () => {
       ],
     };
 
-    let actual = findHomographs(true, currentLanguage, homographType, ignore);
+    let actual = findHomographs("dev", currentLanguage, homographType, ignore);
     consol.log("spec result >>>>", actual);
     expect(actual).to.eql(expected);
   });
@@ -69,7 +69,7 @@ xdescribe("findHomographs", () => {
       ],
     };
 
-    let actual = findHomographs(true, currentLanguage, homographType, ignore);
+    let actual = findHomographs("dev", currentLanguage, homographType, ignore);
     consol.log("spec result >>>>", actual);
     expect(actual).to.eql(expected);
   });
@@ -105,7 +105,7 @@ xdescribe("findHomographs", () => {
       ],
     };
 
-    let actual = findHomographs(true, currentLanguage, homographType, ignore);
+    let actual = findHomographs("dev", currentLanguage, homographType, ignore);
     consol.log("spec result >>>>", actual);
     expect(actual).to.eql(expected);
   });
@@ -133,7 +133,7 @@ xdescribe("findHomographs", () => {
       ],
     };
 
-    let actual = findHomographs(true, currentLanguage, homographType, ignore);
+    let actual = findHomographs("dev", currentLanguage, homographType, ignore);
     consol.log("spec result >>>>", actual);
     expect(actual).to.eql(expected);
   });
@@ -186,7 +186,7 @@ xdescribe("findHomographs", () => {
       ],
     };
 
-    let actual = findHomographs(true, currentLanguage, homographType, ignore);
+    let actual = findHomographs("dev", currentLanguage, homographType, ignore);
     consol.log("spec result >>>>", actual);
     expect(actual).to.eql(expected);
   });
@@ -239,7 +239,7 @@ xdescribe("findHomographs", () => {
       ],
     };
 
-    let actual = findHomographs(true, currentLanguage, homographType, ignore);
+    let actual = findHomographs("dev", currentLanguage, homographType, ignore);
     consol.log("spec result >>>>", actual);
     expect(actual).to.eql(expected);
   });
@@ -268,7 +268,7 @@ xdescribe("findHomographs", () => {
       ],
     };
 
-    let actual = findHomographs(true, currentLanguage, homographType, ignore);
+    let actual = findHomographs("dev", currentLanguage, homographType, ignore);
     consol.log("spec result >>>>", actual);
     expect(actual).to.eql(expected);
   });
@@ -297,7 +297,7 @@ xdescribe("findHomographs", () => {
       ],
     };
 
-    let actual = findHomographs(true, currentLanguage, homographType, ignore);
+    let actual = findHomographs("dev", currentLanguage, homographType, ignore);
     consol.log("spec result >>>>", actual);
     expect(actual).to.eql(expected);
   });
@@ -326,7 +326,7 @@ xdescribe("findHomographs", () => {
       ],
     };
 
-    let actual = findHomographs(true, currentLanguage, homographType, ignore);
+    let actual = findHomographs("dev", currentLanguage, homographType, ignore);
     consol.log(actual);
     expect(actual).to.eql(expected);
   });
@@ -336,7 +336,7 @@ xdescribe("checkLemmaObjectIds", () => {
   it("#edu2.1 Gives a schematic and duplicateIds. ENG", () => {
     const currentLanguage = "ENG";
 
-    let actual = checkLemmaObjectIds(true, currentLanguage);
+    let actual = checkLemmaObjectIds("dev", currentLanguage);
 
     let expected = {
       schematic: [
@@ -383,7 +383,7 @@ xdescribe("checkSentenceFormulaIds", () => {
   it("#edu3.1 Gives a schematic and duplicateIds. ENG", () => {
     const currentLanguage = "ENG";
 
-    let actual = checkSentenceFormulaIds(true, currentLanguage);
+    let actual = checkSentenceFormulaIds("dev", currentLanguage);
 
     consol.log(actual);
 
@@ -406,7 +406,7 @@ xdescribe("checkWords", () => {
   it("#edu4.1 Checks words for specific traitKeys that might not have been specified. POL", () => {
     const currentLanguage = "POL";
 
-    let actual = checkWords(true, currentLanguage);
+    let actual = checkWords("dev", currentLanguage);
 
     let { nounsWithoutGender } = actual;
 
@@ -425,7 +425,7 @@ xdescribe("Educator Battery", () => {
       ignoreClarifiedAllohoms: true, //Should have no effect as we are asking for synhoms.
     };
 
-    let actual = findHomographs(false, currentLanguage, homographType, ignore);
+    let actual = findHomographs("ref", currentLanguage, homographType, ignore);
     consol.log(
       "Educator does not need to take action on this: spec result >>>>",
       actual
@@ -439,7 +439,7 @@ xdescribe("Educator Battery", () => {
       ignoreClarifiedAllohoms: true, //Should have no effect as we are asking for synhoms.
     };
 
-    let actual = findHomographs(false, currentLanguage, homographType, ignore);
+    let actual = findHomographs("ref", currentLanguage, homographType, ignore);
     consol.log(
       "Educator does not need to take action on this: result >>>>",
       actual
@@ -453,7 +453,7 @@ xdescribe("Educator Battery", () => {
       ignoreClarifiedAllohoms: true,
     };
 
-    let actual = findHomographs(false, currentLanguage, homographType, ignore);
+    let actual = findHomographs("ref", currentLanguage, homographType, ignore);
     consol.log("spec result >>>>", actual);
 
     if (Object.keys(actual).length) {
@@ -473,7 +473,7 @@ xdescribe("Educator Battery", () => {
       ignoreClarifiedAllohoms: true,
     };
 
-    let actual = findHomographs(false, currentLanguage, homographType, ignore);
+    let actual = findHomographs("ref", currentLanguage, homographType, ignore);
     consol.log("spec result >>>>", actual);
     let keysActual = Object.keys(actual).filter((key) => key !== "true");
 
@@ -489,7 +489,7 @@ xdescribe("Educator Battery", () => {
   it("#eduBat-05 Gives a schematic and duplicateIds. ENG", () => {
     const currentLanguage = "ENG";
 
-    let actual = checkLemmaObjectIds(false, currentLanguage);
+    let actual = checkLemmaObjectIds("ref", currentLanguage);
 
     if (actual.duplicateIds.length) {
       consol.log(currentLanguage + " Lemma Objects >>>>", actual);
@@ -503,7 +503,7 @@ xdescribe("Educator Battery", () => {
   it("#eduBat-06 Gives a schematic and duplicateIds. POL", () => {
     const currentLanguage = "POL";
 
-    let actual = checkLemmaObjectIds(false, currentLanguage);
+    let actual = checkLemmaObjectIds("ref", currentLanguage);
 
     if (actual.duplicateIds.length) {
       consol.log(currentLanguage + " Lemma Objects >>>>", actual);
@@ -517,7 +517,7 @@ xdescribe("Educator Battery", () => {
   it("#eduBat-07 Gives a schematic and duplicateIds. ENG", () => {
     const currentLanguage = "ENG";
 
-    let actual = checkSentenceFormulaIds(false, currentLanguage);
+    let actual = checkSentenceFormulaIds("ref", currentLanguage);
 
     let { duplicateIds, duplicateSymbols } = actual;
 
@@ -542,7 +542,7 @@ xdescribe("Educator Battery", () => {
   it("#eduBat-08 Gives a schematic and duplicateIds. POL", () => {
     const currentLanguage = "POL";
 
-    let actual = checkSentenceFormulaIds(false, currentLanguage);
+    let actual = checkSentenceFormulaIds("ref", currentLanguage);
 
     let { duplicateIds, duplicateSymbols } = actual;
 
@@ -567,7 +567,7 @@ xdescribe("Educator Battery", () => {
   it("#eduBat-09 Checks words for specific traitKeys that might not have been specified. ENG", () => {
     const currentLanguage = "ENG";
 
-    let actual = checkWords(false, currentLanguage);
+    let actual = checkWords("ref", currentLanguage);
 
     consol.log(actual);
 
@@ -584,7 +584,7 @@ xdescribe("Educator Battery", () => {
   it("#eduBat-10 Checks words for specific traitKeys that might not have been specified. POL", () => {
     const currentLanguage = "POL";
 
-    let actual = checkWords(false, currentLanguage);
+    let actual = checkWords("ref", currentLanguage);
 
     consol.log(actual);
 
