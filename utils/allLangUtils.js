@@ -323,7 +323,7 @@ exports.getAndPreprocessStructureAndFormula = (
 };
 
 exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
-  const langUtils = require("../source/" + currentLanguage + "/langUtils.js");
+  const langUtils = require(`../source/all/${currentLanguage}/langUtils.js`);
   const defaultTraitValuesRef = refObj.defaultTraitValues;
   const metaTraitValuesRef = refObj.metaTraitValues[currentLanguage];
 

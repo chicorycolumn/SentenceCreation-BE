@@ -1,6 +1,6 @@
 const {
   terminusObjectNormalArray,
-} = require("../../utils/generalPurposeUtils");
+} = require("../../../utils/generalPurposeUtils");
 
 exports.wordsBank = {
   npe: [

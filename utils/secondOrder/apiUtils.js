@@ -15,7 +15,11 @@ const allLangUtils = require("../../utils/allLangUtils.js");
 const refFxn = require("../reference/referenceFunctions.js");
 
 exports.getWordsByCriteria = (currentLanguage, criteriaFromHTTP) => {
-  const { wordsBank } = require(`../../source/${currentLanguage}/words.js`);
+  let envir = "ref";
+
+  const {
+    wordsBank,
+  } = require(`../../source/${envir}/${currentLanguage}/words.js`);
 
   resObj = {};
 
@@ -65,7 +69,11 @@ exports.getWordsByCriteria = (currentLanguage, criteriaFromHTTP) => {
 };
 
 exports.getTagsAndTopics = (currentLanguage) => {
-  const { wordsBank } = require(`../../source/${currentLanguage}/words.js`);
+  let envir = "ref";
+
+  const {
+    wordsBank,
+  } = require(`../../source/${envir}/${currentLanguage}/words.js`);
 
   allTags = gpUtils.collectAllValuesFromKeyOnObjectsInNestedArrayOfObjects(
     wordsBank,

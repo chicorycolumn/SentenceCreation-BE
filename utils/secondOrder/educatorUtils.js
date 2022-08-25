@@ -40,7 +40,7 @@ exports.getLemmaObjectsWithoutGivenSelectorKey = (
 };
 
 exports.checkWords = (testing, currentLanguage) => {
-  const langUtils = require("../../source/" +
+  const langUtils = require("../../source/all/" +
     currentLanguage +
     "/langUtils.js");
 
@@ -93,7 +93,8 @@ exports.findHomographs = (testing, currentLanguage, homographType, ignore) => {
   }
 
   const wordsBank = educatorUtils.getWordsBank(currentLanguage, testing);
-  const langUtils = require(`../../source/${currentLanguage}/langUtils.js`);
+  let envir = "ref";
+  const langUtils = require(`../../source/${envir}/${currentLanguage}/langUtils.js`);
 
   let recordOfTerminalValuesAndPaths = [];
   let severallyAppearingTerminalValuesArr = [];
@@ -285,27 +286,25 @@ exports.checkSentenceFormulaIds = (testing, currentLanguage) => {
 };
 
 exports.getWordsBank = (currentLanguage, testing) => {
-  if (!testing) {
-    const { wordsBank } = require(`../../source/${currentLanguage}/words.js`);
-    return wordsBank;
-  } else {
-    const {
-      wordsBank,
-    } = require(`../../source/TEST/${currentLanguage}/words.js`);
-    return wordsBank;
+  let envir = "ref";
+  if (testing) {
+    envir = "dev";
   }
+
+  const {
+    wordsBank,
+  } = require(`../../source/${envir}/${currentLanguage}/words.js`);
+  return wordsBank;
 };
 
 exports.getSentenceFormulasBank = (currentLanguage, testing) => {
-  if (!testing) {
-    const {
-      sentenceFormulasBank,
-    } = require(`../../source/${currentLanguage}/sentenceFormulas.js`);
-    return sentenceFormulasBank;
-  } else {
-    const {
-      sentenceFormulasBank,
-    } = require(`../../source/TEST/${currentLanguage}/sentenceFormulas.js`);
-    return sentenceFormulasBank;
+  let envir = "ref";
+  if (testing) {
+    envir = "dev";
   }
+
+  const {
+    sentenceFormulasBank,
+  } = require(`../../source/${envir}/${currentLanguage}/sentenceFormulas.js`);
+  return sentenceFormulasBank;
 };

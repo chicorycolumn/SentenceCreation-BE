@@ -1,11 +1,11 @@
-const lfUtils = require("../../utils/lemmaFilteringUtils.js");
-const otUtils = require("../../utils/objectTraversingUtils.js");
-const frUtils = require("../../utils/formattingResponseUtils.js");
-const gpUtils = require("../../utils/generalPurposeUtils.js");
-const uUtils = require("../../utils/universalUtils.js");
-const consol = require("../../utils/zerothOrder/consoleLoggingUtils.js");
-const refObj = require("../../utils/reference/referenceObjects.js");
-const allLangUtils = require("../../utils/allLangUtils.js");
+const lfUtils = require("../../../utils/lemmaFilteringUtils.js");
+const otUtils = require("../../../utils/objectTraversingUtils.js");
+const frUtils = require("../../../utils/formattingResponseUtils.js");
+const gpUtils = require("../../../utils/generalPurposeUtils.js");
+const uUtils = require("../../../utils/universalUtils.js");
+const consol = require("../../../utils/zerothOrder/consoleLoggingUtils.js");
+const refObj = require("../../../utils/reference/referenceObjects.js");
+const allLangUtils = require("../../../utils/allLangUtils.js");
 
 const be = {
   past: {

@@ -91,7 +91,7 @@ describe("/api", function () {
           expect(res.body.questionSentenceArr.length).to.equal(0);
         });
     });
-    it("#pal01-02b GET 200 NO: Returns message to say no sentence could possibly be created from specifications. This fails when in DEV, as I put a throw. But in PROD the throw will be removed.", () => {
+    it("#pal01-02b GET 200 NO: Returns message to say no sentence could possibly be created from specifications. This fails when in dev, as I put a throw. But in PROD the throw will be removed.", () => {
       return request(app)
         .get("/api/palette")
         .send({
@@ -2086,6 +2086,28 @@ describe("/api", function () {
           questionLanguage,
           answerLanguage,
           sentenceFormulaSymbol: "dummy33f they are",
+        })
+        .expect(200)
+        .then((res) => {
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronombres",
+            []
+          );
+        });
+    });
+    xit("#pal07-01g GET 200 YES: RSWAT Poleng 'be' - Ripplemin - It should be possible to select 'be' even though it is impf and we are looking for pf.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaSymbol: "111c you were",
         })
         .expect(200)
         .then((res) => {

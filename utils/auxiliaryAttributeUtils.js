@@ -326,8 +326,8 @@ exports.specialAdjustmentToAnnotations = (
   questionSentenceData,
   languagesObj
 ) => {
-  const questionLangUtils = require(`../source/${languagesObj.questionLanguage}/langUtils.js`);
-  const answerLangUtils = require(`../source/${languagesObj.answerLanguage}/langUtils.js`);
+  const questionLangUtils = require(`../source/all/${languagesObj.questionLanguage}/langUtils.js`);
+  const answerLangUtils = require(`../source/all/${languagesObj.answerLanguage}/langUtils.js`);
 
   //Part 1-A: If a stCh has a gender anno, and this stCh is a depCh,
   //then transfer the gender anno to its headCh, and remove the anno from this depCh.
@@ -375,8 +375,8 @@ exports.specialAdjustmentToAnnotations = (
 exports.addSpecifiersToMGNs = (questionSentenceData, languagesObj) => {
   let { questionOutputArr } = questionSentenceData;
   let { questionLanguage, answerLanguage } = languagesObj;
-  const questionLangUtils = require(`../source/${questionLanguage}/langUtils.js`);
-  const answerLangUtils = require(`../source/${answerLanguage}/langUtils.js`);
+  const questionLangUtils = require(`../source/all/${questionLanguage}/langUtils.js`);
+  const answerLangUtils = require(`../source/all/${answerLanguage}/langUtils.js`);
 
   let metaGenders = Object.keys(
     refObj.metaTraitValues[questionLanguage]["gender"]
@@ -588,8 +588,8 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
     throw "OT:addClarifiers says Do you mean to call me? You don't give me an answerLanguage argument. I am only supposed to add clarifiers to the question sentence, and in order to do that I must know what the answerLanguage is going to be.";
   }
 
-  const questionLangUtils = require(`../source/${questionLanguage}/langUtils.js`);
-  const answerLangUtils = require(`../source/${answerLanguage}/langUtils.js`);
+  const questionLangUtils = require(`../source/all/${questionLanguage}/langUtils.js`);
+  const answerLangUtils = require(`../source/all/${answerLanguage}/langUtils.js`);
 
   arrayOfOutputUnits.forEach((outputUnit) => {
     let { selectedLemmaObject, drillPath, structureChunk, selectedWord } =
