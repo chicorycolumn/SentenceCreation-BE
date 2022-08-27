@@ -774,7 +774,7 @@ exports.padOutRequirementArrWithMetaTraitValuesIfNecessary = (
         requirementArr = [...requirementArr, ...metaTraitValueConverted];
       }
 
-      //But also need do the inverse of this. If reqArr has 'f', then allow lObj to pass filter if lObj gender is 'allSingularGenders' eg.
+      //But also need do the inverse of this. If reqArr has 'f', then allow lObj to pass filter if lObj gender is '_allSingularGenders' eg.
       Object.keys(metaTraitValueRef).forEach((metaTraitValue) => {
         let ConvertedMetaTraitValueArr = metaTraitValueRef[metaTraitValue];
 
@@ -874,7 +874,7 @@ exports.filterBySelector_inner = (
       }
 
       //ADJUST META OF LOBJ VALUES
-      //stCh could have gender "m", but that would fail to select lObj ENG doctor with gender "allPersonalGenders".
+      //stCh could have gender "m", but that would fail to select lObj ENG doctor with gender "_allPersonalGenders".
       //So add the translations of the lObj's metagender to its lObjSelectorValues arr.
       lObjSelectorValues.forEach((lObjSelectorValue) => {
         if (gpUtils.traitValueIsMeta(lObjSelectorValue)) {

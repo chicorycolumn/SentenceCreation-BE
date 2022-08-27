@@ -429,7 +429,7 @@ let pro = [
     gender: ["m1", "f"],
     inflections: {
       singular: {
-        allSingularGendersExcludingNeuter: {
+        _allSingularGendersExcludingNeuter: {
           nom: "ja",
           gen: "mnie",
           dat: {
@@ -443,7 +443,7 @@ let pro = [
         },
       },
       plural: {
-        allPluralGenders: {
+        _allPluralGenders: {
           nom: "my",
           gen: "nas",
           dat: "nam",
@@ -464,7 +464,7 @@ let pro = [
     gender: ["m1", "f"],
     inflections: {
       singular: {
-        allSingularGendersExcludingNeuter: {
+        _allSingularGendersExcludingNeuter: {
           nom: "ty",
           gen: ["cię", "ciebie"],
           dat: ["ci", "tobie"],
@@ -474,7 +474,7 @@ let pro = [
         },
       },
       plural: {
-        allPluralGenders: {
+        _allPluralGenders: {
           nom: "wy",
           gen: "was",
           dat: "wam",
@@ -943,8 +943,8 @@ let ver = [
       verbal: {
         past: {
           impersonal: {
-            singular: { allSingularGenders: "miano" },
-            plural: { allPluralGenders: "miano" },
+            singular: { _allSingularGenders: "miano" },
+            plural: { _allPluralGenders: "miano" },
           },
           "1per": {
             singular: {
@@ -982,26 +982,26 @@ let ver = [
           impersonal: { singular: true, plural: true },
           "1per": {
             singular: {
-              allSingularGendersExcludingNeuter: "mam",
+              _allSingularGendersExcludingNeuter: "mam",
             },
             plural: {
-              allPluralGenders: "mamy",
+              _allPluralGenders: "mamy",
             },
           },
           "2per": {
             singular: {
-              allSingularGendersExcludingNeuter: "masz",
+              _allSingularGendersExcludingNeuter: "masz",
             },
             plural: {
-              allPluralGenders: "macie",
+              _allPluralGenders: "macie",
             },
           },
           "3per": {
             singular: {
-              allSingularGenders: "ma",
+              _allSingularGenders: "ma",
             },
             plural: {
-              allPluralGenders: "mają",
+              _allPluralGenders: "mają",
             },
           },
         },
@@ -1032,8 +1032,8 @@ let ver = [
       verbal: {
         past: {
           impersonal: {
-            singular: { allSingularGenders: "pisano" },
-            plural: { allPluralGenders: "pisano" },
+            singular: { _allSingularGenders: "pisano" },
+            plural: { _allPluralGenders: "pisano" },
           },
           "1per": {
             singular: {
@@ -1071,26 +1071,26 @@ let ver = [
           impersonal: { singular: true, plural: true },
           "1per": {
             singular: {
-              allSingularGendersExcludingNeuter: "piszę",
+              _allSingularGendersExcludingNeuter: "piszę",
             },
             plural: {
-              allPluralGenders: "piszemy",
+              _allPluralGenders: "piszemy",
             },
           },
           "2per": {
             singular: {
-              allSingularGendersExcludingNeuter: "piszesz",
+              _allSingularGendersExcludingNeuter: "piszesz",
             },
             plural: {
-              allPluralGenders: "piszecie",
+              _allPluralGenders: "piszecie",
             },
           },
           "3per": {
             singular: {
-              allSingularGenders: "pisze",
+              _allSingularGenders: "pisze",
             },
             plural: {
-              allPluralGenders: "piszą",
+              _allPluralGenders: "piszą",
             },
           },
         },
@@ -1121,8 +1121,8 @@ let ver = [
       verbal: {
         past: {
           impersonal: {
-            singular: { allSingularGenders: "napisano" },
-            plural: { allPluralGenders: "napisano" },
+            singular: { _allSingularGenders: "napisano" },
+            plural: { _allPluralGenders: "napisano" },
           },
           "1per": {
             singular: {
@@ -1160,26 +1160,26 @@ let ver = [
           impersonal: { singular: true, plural: true },
           "1per": {
             singular: {
-              allSingularGendersExcludingNeuter: "napiszę",
+              _allSingularGendersExcludingNeuter: "napiszę",
             },
             plural: {
-              allPluralGenders: "napiszemy",
+              _allPluralGenders: "napiszemy",
             },
           },
           "2per": {
             singular: {
-              allSingularGendersExcludingNeuter: "napiszesz",
+              _allSingularGendersExcludingNeuter: "napiszesz",
             },
             plural: {
-              allPluralGenders: "napiszecie",
+              _allPluralGenders: "napiszecie",
             },
           },
           "3per": {
             singular: {
-              allSingularGenders: "napisze",
+              _allSingularGenders: "napisze",
             },
             plural: {
-              allPluralGenders: "napiszą",
+              _allPluralGenders: "napiszą",
             },
           },
         },
@@ -1210,8 +1210,8 @@ let ver = [
       verbal: {
         past: {
           impersonal: {
-            singular: { allSingularGenders: "czytano" },
-            plural: { allPluralGenders: "czytano" },
+            singular: { _allSingularGenders: "czytano" },
+            plural: { _allPluralGenders: "czytano" },
           },
           "1per": {
             singular: {
@@ -1249,26 +1249,26 @@ let ver = [
           impersonal: { singular: true, plural: true },
           "1per": {
             singular: {
-              allSingularGendersExcludingNeuter: "czytam",
+              _allSingularGendersExcludingNeuter: "czytam",
             },
             plural: {
-              allPluralGenders: "czytamy",
+              _allPluralGenders: "czytamy",
             },
           },
           "2per": {
             singular: {
-              allSingularGendersExcludingNeuter: "czytasz",
+              _allSingularGendersExcludingNeuter: "czytasz",
             },
             plural: {
-              allPluralGenders: "czytacie",
+              _allPluralGenders: "czytacie",
             },
           },
           "3per": {
             singular: {
-              allSingularGenders: "czyta",
+              _allSingularGenders: "czyta",
             },
             plural: {
-              allPluralGenders: "czytają",
+              _allPluralGenders: "czytają",
             },
           },
         },
@@ -1299,8 +1299,8 @@ let ver = [
       verbal: {
         past: {
           impersonal: {
-            singular: { allSingularGenders: "przeczytano" },
-            plural: { allPluralGenders: "przeczytano" },
+            singular: { _allSingularGenders: "przeczytano" },
+            plural: { _allPluralGenders: "przeczytano" },
           },
           "1per": {
             singular: {
@@ -1338,26 +1338,26 @@ let ver = [
           impersonal: { singular: true, plural: true },
           "1per": {
             singular: {
-              allSingularGendersExcludingNeuter: "przeczytam",
+              _allSingularGendersExcludingNeuter: "przeczytam",
             },
             plural: {
-              allPluralGenders: "przeczytamy",
+              _allPluralGenders: "przeczytamy",
             },
           },
           "2per": {
             singular: {
-              allSingularGendersExcludingNeuter: "przeczytasz",
+              _allSingularGendersExcludingNeuter: "przeczytasz",
             },
             plural: {
-              allPluralGenders: "przeczytacie",
+              _allPluralGenders: "przeczytacie",
             },
           },
           "3per": {
             singular: {
-              allSingularGenders: "przeczyta",
+              _allSingularGenders: "przeczyta",
             },
             plural: {
-              allPluralGenders: "przeczytają",
+              _allPluralGenders: "przeczytają",
             },
           },
         },
@@ -1388,8 +1388,8 @@ let ver = [
       verbal: {
         past: {
           impersonal: {
-            singular: { allSingularGenders: "badano" },
-            plural: { allPluralGenders: "badano" },
+            singular: { _allSingularGenders: "badano" },
+            plural: { _allPluralGenders: "badano" },
           },
           "1per": {
             singular: {
@@ -1427,26 +1427,26 @@ let ver = [
           impersonal: { singular: true, plural: true },
           "1per": {
             singular: {
-              allSingularGendersExcludingNeuter: "badam",
+              _allSingularGendersExcludingNeuter: "badam",
             },
             plural: {
-              allPluralGenders: "badamy",
+              _allPluralGenders: "badamy",
             },
           },
           "2per": {
             singular: {
-              allSingularGendersExcludingNeuter: "badasz",
+              _allSingularGendersExcludingNeuter: "badasz",
             },
             plural: {
-              allPluralGenders: "badacie",
+              _allPluralGenders: "badacie",
             },
           },
           "3per": {
             singular: {
-              allSingularGenders: "bada",
+              _allSingularGenders: "bada",
             },
             plural: {
-              allPluralGenders: "badają",
+              _allPluralGenders: "badają",
             },
           },
         },
@@ -1477,8 +1477,8 @@ let ver = [
       verbal: {
         past: {
           impersonal: {
-            singular: { allSingularGenders: "zbadano" },
-            plural: { allPluralGenders: "zbadano" },
+            singular: { _allSingularGenders: "zbadano" },
+            plural: { _allPluralGenders: "zbadano" },
           },
           "1per": {
             singular: {
@@ -1517,26 +1517,26 @@ let ver = [
           impersonal: { singular: true, plural: true },
           "1per": {
             singular: {
-              allSingularGendersExcludingNeuter: "zbadam",
+              _allSingularGendersExcludingNeuter: "zbadam",
             },
             plural: {
-              allPluralGenders: "zbadamy",
+              _allPluralGenders: "zbadamy",
             },
           },
           "2per": {
             singular: {
-              allSingularGendersExcludingNeuter: "zbadasz",
+              _allSingularGendersExcludingNeuter: "zbadasz",
             },
             plural: {
-              allPluralGenders: "zbadacie",
+              _allPluralGenders: "zbadacie",
             },
           },
           "3per": {
             singular: {
-              allSingularGenders: "zbada",
+              _allSingularGenders: "zbada",
             },
             plural: {
-              allPluralGenders: "zbadają",
+              _allPluralGenders: "zbadają",
             },
           },
         },
@@ -1566,8 +1566,8 @@ let ver = [
       verbal: {
         past: {
           impersonal: {
-            singular: { allSingularGenders: "zniesiono" },
-            plural: { allPluralGenders: "zniesiono" },
+            singular: { _allSingularGenders: "zniesiono" },
+            plural: { _allPluralGenders: "zniesiono" },
           },
           "1per": {
             singular: {
@@ -1606,26 +1606,26 @@ let ver = [
           impersonal: { singular: true, plural: true },
           "1per": {
             singular: {
-              allSingularGendersExcludingNeuter: "zniosę",
+              _allSingularGendersExcludingNeuter: "zniosę",
             },
             plural: {
-              allPluralGenders: "zniesiemy",
+              _allPluralGenders: "zniesiemy",
             },
           },
           "2per": {
             singular: {
-              allSingularGendersExcludingNeuter: "zniesiesz",
+              _allSingularGendersExcludingNeuter: "zniesiesz",
             },
             plural: {
-              allPluralGenders: "zniesiecie",
+              _allPluralGenders: "zniesiecie",
             },
           },
           "3per": {
             singular: {
-              allSingularGenders: "zniesie",
+              _allSingularGenders: "zniesie",
             },
             plural: {
-              allPluralGenders: "zniosą",
+              _allPluralGenders: "zniosą",
             },
           },
         },

@@ -1363,7 +1363,7 @@ exports.switchMetaTraitValueForAWorkableConvertedTraitValue = (
     "[1;33m " +
       `ivwa ` +
       consoleLogEtiquette +
-      `. >>unkeyed metaTraitValue clause<<. inflectionKey is a metaTraitValue: "${inflectionKey}", but it is not present on the source. So, we should check if the source has corresponding inflectionKeys, eg for allPersonalGenders it would be [m, f], and if they hold all the same inflectionKeys, then we should let this work.` +
+      `. >>unkeyed metaTraitValue clause<<. inflectionKey is a metaTraitValue: "${inflectionKey}", but it is not present on the source. So, we should check if the source has corresponding inflectionKeys, eg for _allPersonalGenders it would be [m, f], and if they hold all the same inflectionKeys, then we should let this work.` +
       "[0m"
   );
 
@@ -1412,7 +1412,7 @@ exports.switchMetaTraitValueForAWorkableConvertedTraitValue = (
   ) {
     consol.log(
       "[1;33m " +
-        `ksfc traverseAndRecordInflections >>unkeyed metaTraitValue clause<<. Final Clause A. Setting inflectionKey to "${selectedConvertedMetaTraitValue}". Do not need to adjust stCh as all converted traitValues for this metaTraitValue result in the same from source, eg "allPersonalSingularGenders" = m --> "you", f --> "you". Will now continue with main fxn.` +
+        `ksfc traverseAndRecordInflections >>unkeyed metaTraitValue clause<<. Final Clause A. Setting inflectionKey to "${selectedConvertedMetaTraitValue}". Do not need to adjust stCh as all converted traitValues for this metaTraitValue result in the same from source, eg "_allPersonalSingularGenders" = m --> "you", f --> "you". Will now continue with main fxn.` +
         "[0m"
     );
 
@@ -1422,7 +1422,7 @@ exports.switchMetaTraitValueForAWorkableConvertedTraitValue = (
       `aqsa traverseAndRecordInflections >>unkeyed metaTraitValue clause<<. 
       Final Clause B. Trying to set a metaTraitValue to one of its convertedMetaTraitValues. 
       But the drilled inflectorValues were not ultimately the same in source, therefore we cannot obey doNotSpecify. 
-      For example, the stCh asks for allPersonalSingularGenders, 
+      For example, the stCh asks for _allPersonalSingularGenders, 
       and while sometimes the results could be m --> "I", f --> "I", in which case it would have gone to Final Clause A. 
       But in this case, eg, m1 --> kupiłem, f --> kupiłam. So they are not the same. 
       So I'll pick one, and make sure to set the stCh to acknowledge this.`

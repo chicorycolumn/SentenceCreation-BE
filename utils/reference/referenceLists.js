@@ -38,23 +38,23 @@ exports.metaCorrectionRef = {
       {
         condition: { number: "singular" },
         changeRef: {
-          allGenders: "allSingularGenders",
-          allSingularGenders: "allSingularGenders",
-          allPluralGenders: false,
-          allPersonalGenders: "allPersonalSingularGenders",
-          allPersonalSingularGenders: "allPersonalSingularGenders",
-          allPersonalPluralGenders: false,
+          _allGenders: "_allSingularGenders",
+          _allSingularGenders: "_allSingularGenders",
+          _allPluralGenders: false,
+          _allPersonalGenders: "_allPersonalSingularGenders",
+          _allPersonalSingularGenders: "_allPersonalSingularGenders",
+          _allPersonalPluralGenders: false,
         },
       },
       {
         condition: { number: "plural" },
         changeRef: {
-          allGenders: "allPluralGenders",
-          allSingularGenders: false,
-          allPluralGenders: "allPluralGenders",
-          allPersonalGenders: "allPersonalPluralGenders",
-          allPersonalSingularGenders: false,
-          allPersonalPluralGenders: "allPersonalPluralGenders",
+          _allGenders: "_allPluralGenders",
+          _allSingularGenders: false,
+          _allPluralGenders: "_allPluralGenders",
+          _allPersonalGenders: "_allPersonalPluralGenders",
+          _allPersonalSingularGenders: false,
+          _allPersonalPluralGenders: "_allPersonalPluralGenders",
         },
       },
     ],
@@ -64,23 +64,23 @@ exports.metaCorrectionRef = {
       {
         condition: { number: "singular" },
         changeRef: {
-          allGenders: "allSingularGenders",
-          allSingularGenders: "allSingularGenders",
-          allPluralGenders: false,
-          allPersonalGenders: "allPersonalSingularGenders",
-          allPersonalSingularGenders: "allPersonalSingularGenders",
-          allPersonalPluralGenders: false,
+          _allGenders: "_allSingularGenders",
+          _allSingularGenders: "_allSingularGenders",
+          _allPluralGenders: false,
+          _allPersonalGenders: "_allPersonalSingularGenders",
+          _allPersonalSingularGenders: "_allPersonalSingularGenders",
+          _allPersonalPluralGenders: false,
         },
       },
       {
         condition: { number: "plural" },
         changeRef: {
-          allGenders: "allPluralGenders",
-          allSingularGenders: false,
-          allPluralGenders: "allPluralGenders",
-          allPersonalGenders: "allPersonalPluralGenders",
-          allPersonalSingularGenders: false,
-          allPersonalPluralGenders: "allPersonalPluralGenders",
+          _allGenders: "_allPluralGenders",
+          _allSingularGenders: false,
+          _allPluralGenders: "_allPluralGenders",
+          _allPersonalGenders: "_allPersonalPluralGenders",
+          _allPersonalSingularGenders: false,
+          _allPersonalPluralGenders: "_allPersonalPluralGenders",
         },
       },
     ],
@@ -95,48 +95,48 @@ exports.metaCorrectionRef = {
 exports.metaTraitValues = {
   ENG: {
     gcase: {
-      allGcases: ["nom", "acc", "gen", "dat"],
+      _allGcases: ["nom", "acc", "gen", "dat"],
     },
     number: {
-      allNumbers: ["singular", "plural"],
+      _allNumbers: ["singular", "plural"],
     },
     person: {
-      allPers: ["1per", "2per", "3per", "impersonal"],
-      allPersExludingImpersonal: ["1per", "2per", "3per"],
+      _allPers: ["1per", "2per", "3per", "impersonal"],
+      _allPersExludingImpersonal: ["1per", "2per", "3per"],
     },
-    form: { pronombreAndDeterminer: ["pronombre", "determiner"] },
+    form: { _pronombreAndDeterminer: ["pronombre", "determiner"] },
     gender: {
-      allGenders: ["m", "n", "f", "virile", "nonvirile"],
-      allSingularGenders: ["m", "f", "n"],
-      allPluralGenders: ["virile", "nonvirile"],
+      _allGenders: ["m", "n", "f", "virile", "nonvirile"],
+      _allSingularGenders: ["m", "f", "n"],
+      _allPluralGenders: ["virile", "nonvirile"],
 
-      allPersonalGenders: ["m", "f", "virile", "nonvirile"],
-      allPersonalSingularGenders: ["m", "f"],
-      allPersonalPluralGenders: ["virile", "nonvirile"],
+      _allPersonalGenders: ["m", "f", "virile", "nonvirile"],
+      _allPersonalSingularGenders: ["m", "f"],
+      _allPersonalPluralGenders: ["virile", "nonvirile"],
 
-      allNonpersonalGenders: ["n", "nonvirile"],
-      // allNonpersonalSingularGenders: ["n"],
-      allNonpersonalSingularGenders: ["m", "f", "n"], //Beta Is that right?
-      allNonpersonalPluralGenders: ["nonvirile"],
+      _allNonpersonalGenders: ["n", "nonvirile"],
+      // _allNonpersonalSingularGenders: ["n"],
+      _allNonpersonalSingularGenders: ["m", "f", "n"], //Beta Is that right?
+      _allNonpersonalPluralGenders: ["nonvirile"],
 
-      allSingularGendersExcludingNeuter: ["m", "f"],
-      allMasculineSingularGenders: ["m"],
+      _allSingularGendersExcludingNeuter: ["m", "f"],
+      _allMasculineSingularGenders: ["m"],
     },
   },
   POL: {
     gcase: {
-      allGcases: ["nom", "acc", "gen", "dat", "loc", "ins"],
+      _allGcases: ["nom", "acc", "gen", "dat", "loc", "ins"],
     },
     number: {
-      allNumbers: ["singular", "plural"],
+      _allNumbers: ["singular", "plural"],
     },
     person: {
-      allPers: ["1per", "2per", "3per", "impersonal"],
-      allPersExludingImpersonal: ["1per", "2per", "3per"],
+      _allPers: ["1per", "2per", "3per", "impersonal"],
+      _allPersExludingImpersonal: ["1per", "2per", "3per"],
     },
-    form: { pronombreAndDeterminer: ["pronombre", "determiner"] },
+    form: { _pronombreAndDeterminer: ["pronombre", "determiner"] },
     gender: {
-      allGenders: [
+      _allGenders: [
         "m1",
         "m2",
         "m3",
@@ -153,19 +153,19 @@ exports.metaTraitValues = {
         "nonvirile",
         "nonvirile",
       ],
-      allSingularGenders: ["m1", "m2", "m3", "f", "f", "f", "n", "n", "n"],
-      allPluralGenders: ["virile", "nonvirile"],
+      _allSingularGenders: ["m1", "m2", "m3", "f", "f", "f", "n", "n", "n"],
+      _allPluralGenders: ["virile", "nonvirile"],
 
-      allPersonalGenders: ["m1", "f", "virile", "nonvirile"],
-      allPersonalSingularGenders: ["m1", "f"],
-      allPersonalPluralGenders: ["virile", "nonvirile"],
+      _allPersonalGenders: ["m1", "f", "virile", "nonvirile"],
+      _allPersonalSingularGenders: ["m1", "f"],
+      _allPersonalPluralGenders: ["virile", "nonvirile"],
 
-      allNonpersonalGenders: ["m2", "m3", "f", "n", "nonvirile"],
-      allNonpersonalSingularGenders: ["m2", "m3", "f", "n"],
-      allNonpersonalPluralGenders: ["nonvirile"],
+      _allNonpersonalGenders: ["m2", "m3", "f", "n", "nonvirile"],
+      _allNonpersonalSingularGenders: ["m2", "m3", "f", "n"],
+      _allNonpersonalPluralGenders: ["nonvirile"],
 
-      allSingularGendersExcludingNeuter: ["m1", "m2", "m3", "f", "f", "f"],
-      allMasculineSingularGenders: ["m1", "m2", "m3"],
+      _allSingularGendersExcludingNeuter: ["m1", "m2", "m3", "f", "f", "f"],
+      _allMasculineSingularGenders: ["m1", "m2", "m3"],
     },
   },
 };
@@ -427,7 +427,7 @@ exports.structureChunkTraits = {
       compatibleWordtypes: ["adjective", "pronombre", "verb", "preposition"],
       possibleTraitValuesPerWordtype: {
         adjective: ["simple", "comparative", "superlative", "adverb"],
-        pronombre: ["pronombre", "pronombreAndDeterminer", "determiner"],
+        pronombre: ["pronombre", "_pronombreAndDeterminer", "determiner"],
         verb: [
           "verbal",
           "infinitive",
@@ -656,15 +656,15 @@ exports.adhocForms = {
 
 exports.getNounGenderTraitValues = (wordtypeShorthand) => {
   ref = {
-    nco: "allNonpersonalSingularGenders",
-    npe: "allPersonalSingularGenders",
-    ver: "allNonpersonalSingularGenders",
-    adj: "allNonpersonalSingularGenders",
-    adv: "allNonpersonalSingularGenders",
-    pro: "allNonpersonalSingularGenders",
-    art: "allNonpersonalSingularGenders",
-    pre: "allNonpersonalSingularGenders",
-    fix: "allNonpersonalSingularGenders",
+    nco: "_allNonpersonalSingularGenders",
+    npe: "_allPersonalSingularGenders",
+    ver: "_allNonpersonalSingularGenders",
+    adj: "_allNonpersonalSingularGenders",
+    adv: "_allNonpersonalSingularGenders",
+    pro: "_allNonpersonalSingularGenders",
+    art: "_allNonpersonalSingularGenders",
+    pre: "_allNonpersonalSingularGenders",
+    fix: "_allNonpersonalSingularGenders",
   };
 
   return ref[wordtypeShorthand];

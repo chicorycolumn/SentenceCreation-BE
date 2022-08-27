@@ -59,7 +59,7 @@ let nco = [
     //selectors
     lemma: "onion",
     id: "eng-nco-902",
-
+    gender: "n",
     //notes
 
     //inflections
@@ -81,7 +81,7 @@ let nco = [
     //selectors
     lemma: "apple",
     id: "eng-nco-902",
-
+    gender: "n",
     //notes
 
     //inflections
@@ -103,7 +103,7 @@ let nco = [
     //selectors
     lemma: "mirror",
     id: "eng-nco-905",
-
+    gender: "n",
     //notes
 
     //inflections
@@ -125,7 +125,7 @@ let nco = [
     //selectors
     lemma: "book",
     id: "eng-nco-906",
-
+    gender: "n",
     //notes
 
     //inflections
@@ -147,7 +147,7 @@ let nco = [
     //selectors
     lemma: "door",
     id: "eng-nco-907",
-
+    gender: "n",
     //notes
 
     //inflections
@@ -169,7 +169,7 @@ let nco = [
     //selectors
     lemma: "sheep",
     id: "eng-nco-908",
-
+    gender: "n",
     //notes
 
     //inflections
@@ -193,7 +193,7 @@ let nco = [
     //selectors
     lemma: "nut",
     id: "eng-nco-909",
-
+    gender: "n",
     //notes
 
     //inflections
@@ -217,7 +217,7 @@ let nco = [
     //selectors
     lemma: "nut",
     id: "eng-nco-910",
-
+    gender: "n",
     //notes
 
     //inflections
@@ -241,7 +241,7 @@ let nco = [
     //selectors
     lemma: "bear",
     id: "eng-nco-901",
-
+    gender: "_allGenders",
     //notes
 
     //inflections
@@ -488,10 +488,10 @@ let ver = [
       //     "3per": { singular: "is", plural: "are" },
       //   },
       //   future: {
-      //     allPersons: { allNumbers: "will be" },
+      //     _allPersons: { _allNumbers: "will be" },
       //   },
       //   conditional: {
-      //     allPersons: { allNumbers: "would be" },
+      //     _allPersons: { _allNumbers: "would be" },
       //   },
       // },
       v2: terminusObjectNormalArray(["was", "were"]),
@@ -520,7 +520,7 @@ exports.wordsBank = {
 //     gender: ["m1", "f"],
 //     inflections: {
 //       singular: {
-//         allSingularGendersExcludingNeuter: {
+//         _allSingularGendersExcludingNeuter: {
 //           nom: "ja",
 //           gen: "mnie",
 //           dat: ["mi", "mnie"],
@@ -530,7 +530,7 @@ exports.wordsBank = {
 //         },
 //       },
 //       plural: {
-//         allPluralGenders: {
+//         _allPluralGenders: {
 //           nom: "my",
 //           gen: "nas",
 //           dat: "nam",

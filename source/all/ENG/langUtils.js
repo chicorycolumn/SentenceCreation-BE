@@ -167,9 +167,9 @@ exports.preprocessStructureChunks = (structureChunk) => {
   //       structureChunk.person.length &&
   //       !structureChunk.person.includes("3per")
   //     ) {
-  //       structureChunk.gender = metagenderRef["allPersonalGenders"].slice(0);
+  //       structureChunk.gender = metagenderRef["_allPersonalGenders"].slice(0);
   //     } else {
-  //       structureChunk.gender = metagenderRef["allGenders"].slice(0);
+  //       structureChunk.gender = metagenderRef["_allGenders"].slice(0);
   //     }
   //   }
   // }
@@ -196,9 +196,9 @@ exports.preprocessLemmaObjectsMajor = (
           structureChunk.person.length &&
           !structureChunk.person.includes("3per")
         ) {
-          structureChunk.gender = metagenderRef["allPersonalGenders"].slice(0);
+          structureChunk.gender = metagenderRef["_allPersonalGenders"].slice(0);
         } else {
-          structureChunk.gender = metagenderRef["allGenders"].slice(0);
+          structureChunk.gender = metagenderRef["_allGenders"].slice(0);
         }
       }
     }
@@ -210,6 +210,7 @@ exports.preprocessLemmaObjectsMajor = (
 
 exports.preprocessLemmaObjectsMinor = (matches) => {
   matches.forEach((lObj) => {
+    //ripplemin
     if (["nounCommon", "nounPerson"].includes(gpUtils.getWordtypeLObj(lObj))) {
       if (gpUtils.lObjIsNounPerson(lObj)) {
         if (!lObj.gender) {
@@ -228,8 +229,8 @@ exports.preprocessLemmaObjectsMinor = (matches) => {
 
 exports.formatTraitValue = (traitKey, traitValue, note) => {
   const metagenderRef = {
-    allGenders: ["m", "f", "n", "virile", "nonvirile"],
-    allPersonalGenders: ["m", "f", "virile", "nonvirile"],
+    _allGenders: ["m", "f", "n", "virile", "nonvirile"],
+    _allPersonalGenders: ["m", "f", "virile", "nonvirile"],
   };
 
   if (traitKey === "gender") {

@@ -351,10 +351,10 @@ exports.fillVerbInflections = (lemmaObject) => {
       inflections.verbal.future = {
         impersonal: {
           singular: {
-            allSingularGenders: "będzie" + " " + infinitive + " " + "się",
+            _allSingularGenders: "będzie" + " " + infinitive + " " + "się",
           },
           plural: {
-            allPluralGenders: "będzie" + " " + infinitive + " " + "się",
+            _allPluralGenders: "będzie" + " " + infinitive + " " + "się",
           },
         },
         "1per": {
@@ -431,16 +431,16 @@ exports.fillVerbInflections = (lemmaObject) => {
     }
     if (isAvailable(inflections.verbal.present.impersonal.singular)) {
       inflections.verbal.present.impersonal.singular = {
-        allSingularGenders:
-          inflections.verbal.present["3per"].singular.allSingularGenders +
+        _allSingularGenders:
+          inflections.verbal.present["3per"].singular._allSingularGenders +
           " " +
           "się",
       };
     }
     if (isAvailable(inflections.verbal.present.impersonal.plural)) {
       inflections.verbal.present.impersonal.plural = {
-        allPluralGenders:
-          inflections.verbal.present["3per"].singular.allSingularGenders + //Yes, this is meant to use Singular.
+        _allPluralGenders:
+          inflections.verbal.present["3per"].singular._allSingularGenders + //Yes, this is meant to use Singular.
           " " +
           "się",
       };
@@ -448,16 +448,16 @@ exports.fillVerbInflections = (lemmaObject) => {
   } else if (aspect === "perfective") {
     if (isAvailable(inflections.verbal.future.impersonal.singular)) {
       inflections.verbal.future.impersonal.singular = {
-        allSingularGenders:
-          inflections.verbal.future["3per"].singular.allSingularGenders +
+        _allSingularGenders:
+          inflections.verbal.future["3per"].singular._allSingularGenders +
           " " +
           "się",
       };
     }
     if (isAvailable(inflections.verbal.future.impersonal.plural)) {
       inflections.verbal.future.impersonal.plural = {
-        allPluralGenders:
-          inflections.verbal.future["3per"].singular.allSingularGenders + //Yes, this is meant to use Singular.
+        _allPluralGenders:
+          inflections.verbal.future["3per"].singular._allSingularGenders + //Yes, this is meant to use Singular.
           " " +
           "się",
       };
@@ -470,44 +470,44 @@ exports.fillVerbInflections = (lemmaObject) => {
     let presentFirstSingular =
       aspect === "imperfective" || lemmaObject.imperfectiveOnly
         ? inflections.verbal.present["1per"].singular
-            .allSingularGendersExcludingNeuter
+            ._allSingularGendersExcludingNeuter
         : inflections.verbal.future["1per"].singular
-            .allSingularGendersExcludingNeuter;
+            ._allSingularGendersExcludingNeuter;
 
     let presentThirdSingular =
       aspect === "imperfective" || lemmaObject.imperfectiveOnly
-        ? inflections.verbal.present["3per"].singular.allSingularGenders
-        : inflections.verbal.future["3per"].singular.allSingularGenders;
+        ? inflections.verbal.present["3per"].singular._allSingularGenders
+        : inflections.verbal.future["3per"].singular._allSingularGenders;
 
     let presentThirdPlural =
       aspect === "imperfective" || lemmaObject.imperfectiveOnly
-        ? inflections.verbal.present["3per"].plural.allPluralGenders
-        : inflections.verbal.future["3per"].plural.allPluralGenders;
+        ? inflections.verbal.present["3per"].plural._allPluralGenders
+        : inflections.verbal.future["3per"].plural._allPluralGenders;
 
     let filledOutImperatives = {
       "1per": {
         singular: {
-          allSingularGendersExcludingNeuter:
+          _allSingularGendersExcludingNeuter:
             "niech" + " " + presentFirstSingular,
         },
         plural: {
-          allPluralGenders: imperativeBase + "my",
+          _allPluralGenders: imperativeBase + "my",
         },
       },
       "2per": {
         singular: {
-          allSingularGendersExcludingNeuter: imperativeBase,
+          _allSingularGendersExcludingNeuter: imperativeBase,
         },
         plural: {
-          allPluralGenders: imperativeBase + "cie",
+          _allPluralGenders: imperativeBase + "cie",
         },
       },
       "3per": {
         singular: {
-          allSingularGenders: "niech" + " " + presentThirdSingular,
+          _allSingularGenders: "niech" + " " + presentThirdSingular,
         },
         plural: {
-          allPluralGenders: "niech" + " " + presentThirdPlural,
+          _allPluralGenders: "niech" + " " + presentThirdPlural,
         },
       },
     };
@@ -519,14 +519,14 @@ exports.fillVerbInflections = (lemmaObject) => {
     inflections.verbal.conditional = {
       impersonal: {
         singular: {
-          allSingularGenders:
-            inflections.verbal.past.impersonal.singular.allSingularGenders +
+          _allSingularGenders:
+            inflections.verbal.past.impersonal.singular._allSingularGenders +
             " " +
             "by",
         },
         plural: {
-          allPluralGenders:
-            inflections.verbal.past.impersonal.plural.allPluralGenders +
+          _allPluralGenders:
+            inflections.verbal.past.impersonal.plural._allPluralGenders +
             " " +
             "by",
         },

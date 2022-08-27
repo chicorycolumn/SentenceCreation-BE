@@ -2098,28 +2098,6 @@ describe("/api", function () {
           );
         });
     });
-    xit("#pal07-01g GET 200 YES: RSWAT Poleng 'be' - Ripplemin - It should be possible to select 'be' even though it is impf and we are looking for pf.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "111c you were",
-        })
-        .expect(200)
-        .then((res) => {
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be_withPronombres",
-            []
-          );
-        });
-    });
     it("#pal07-02a GET 200 YES: Conjugate ENG be correctly without translations.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -2277,7 +2255,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal07-03b GET 200 YES: Conjugate POL 'be' past pf, (should be treated as im and pf both).", () => {
+    it("#pal07-03b GET 200 YES: Conjugate POL 'be' past pf, (should be treated as im and pf both). Ripplemin", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 

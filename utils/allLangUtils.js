@@ -139,7 +139,8 @@ exports.adjustVirilityOfStructureChunk = (
 
   let metaTranslatedGenderArr = [];
   gender.forEach((genderValue) => {
-    if (/^all/.test(genderValue)) {
+    if (/^_/.test(genderValue)) {
+      //Ripplemin1
       metaTranslatedGenderArr = [
         ...metaTranslatedGenderArr,
         ...refObj.metaTraitValues[currentLanguage]["gender"][genderValue],
@@ -375,13 +376,13 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
         ) {
           structureChunk.gender = [
             ...structureChunk.gender,
-            ...metaTraitValuesRef["gender"].allSingularGenders,
+            ...metaTraitValuesRef["gender"]._allSingularGenders,
           ];
         }
         if (structureChunk.number && structureChunk.number.includes("plural")) {
           structureChunk.gender = [
             ...structureChunk.gender,
-            ...metaTraitValuesRef["gender"].allPluralGenders,
+            ...metaTraitValuesRef["gender"]._allPluralGenders,
           ];
         }
       }
@@ -466,11 +467,11 @@ exports.convertmetaTraitValues = (
       let metaTraitValueRef = metaTraitValuesRef[traitKey];
 
       // metaTraitValueRef eg= {
-      //   allPersonalGenders: ["m", "f", "virile", "nonvirile"],
-      //   allSingularGenders: ["m", "f", "n"],
-      //   allPersonalSingularGenders: ["m", "f"],
-      //   allPluralGenders: ["virile", "nonvirile"],
-      //   allGenders: ["m", "n", "f", "virile", "nonvirile"],
+      //   _allPersonalGenders: ["m", "f", "virile", "nonvirile"],
+      //   _allSingularGenders: ["m", "f", "n"],
+      //   _allPersonalSingularGenders: ["m", "f"],
+      //   _allPluralGenders: ["virile", "nonvirile"],
+      //   _allGenders: ["m", "n", "f", "virile", "nonvirile"],
       // }
 
       if (objType === "lObj") {
@@ -619,7 +620,7 @@ exports.correctMGNsBeforeFetchingOutputArray = (
   );
 
   //2 Adjust lObjMetagender by number from stCh.
-  // eg if stCh number singular, lObjMetagender goes from "allPersonalGenders" to "allPersonalSingularGenders".
+  // eg if stCh number singular, lObjMetagender goes from "_allPersonalGenders" to "_allPersonalSingularGenders".
   lObjMetagender = metagenderCorrectedByNumberRef[lObjMetagender];
 
   //3 Now convert that. let convertedLObjMetagenderArr = ["m1", "f"]

@@ -108,7 +108,7 @@ exports.wordsBank = {
       //selectors
       lemma: "doctor",
       id: "eng-npe-005-doctor",
-      gender: "allPersonalGenders",
+      gender: "_allPersonalGenders",
       //notes
 
       //inflections
@@ -137,7 +137,7 @@ exports.wordsBank = {
       //selectors
       lemma: "bear",
       id: "eng-nco-001-bear",
-
+      gender: "_allGenders",
       //notes
 
       //inflections
@@ -159,7 +159,7 @@ exports.wordsBank = {
       //selectors
       lemma: "onion",
       id: "eng-nco-002-onion",
-
+      gender: "n",
       //notes
 
       //inflections
@@ -184,7 +184,7 @@ exports.wordsBank = {
       //selectors
       lemma: "tomato",
       id: "eng-nco-003-tomato",
-
+      gender: "n",
       //notes
 
       //inflections
@@ -206,7 +206,7 @@ exports.wordsBank = {
       //selectors
       lemma: "apple",
       id: "eng-nco-004-apple",
-
+      gender: "n",
       //notes
 
       //inflections
@@ -231,7 +231,7 @@ exports.wordsBank = {
       //selectors
       lemma: "mirror",
       id: "eng-nco-005-mirror",
-
+      gender: "n",
       //notes
 
       //inflections
@@ -254,7 +254,7 @@ exports.wordsBank = {
       //selectors
       lemma: "book",
       id: "eng-nco-006-book",
-
+      gender: "n",
       //notes
 
       //inflections
@@ -276,7 +276,7 @@ exports.wordsBank = {
       //selectors
       lemma: "door",
       id: "eng-nco-007-door",
-
+      gender: "n",
       //notes
 
       //inflections
@@ -298,7 +298,7 @@ exports.wordsBank = {
       //selectors
       lemma: "sheep",
       id: "eng-nco-008-sheep",
-
+      gender: "_allGenders",
       //notes
 
       //inflections
@@ -636,7 +636,7 @@ exports.wordsBank = {
       translations: { ENG: ["eng-pro-PERSONAL"], POL: ["pol-pro-PERSONAL"] },
       tags: [],
       //selectors
-      lemma: "*PERSONAL",
+      lemma: "$PERSONAL",
       id: "eng-pro-PERSONAL",
       //notes
 
@@ -645,14 +645,14 @@ exports.wordsBank = {
         pronombre: {
           "1per": {
             singular: {
-              allPersonalSingularGenders: {
+              _allPersonalSingularGenders: {
                 nom: "I",
                 dat: "me",
                 acc: "me",
               },
             },
             plural: {
-              allPluralGenders: {
+              _allPluralGenders: {
                 nom: "we",
                 dat: "us",
                 acc: "us",
@@ -661,14 +661,14 @@ exports.wordsBank = {
           },
           "2per": {
             singular: {
-              allPersonalSingularGenders: {
+              _allPersonalSingularGenders: {
                 nom: "you",
                 dat: "you",
                 acc: "you",
               },
             },
             plural: {
-              allPluralGenders: {
+              _allPluralGenders: {
                 nom: "you",
                 dat: "you",
                 acc: "you",
@@ -694,7 +694,7 @@ exports.wordsBank = {
               },
             },
             plural: {
-              allPersonalGenders: {
+              _allPersonalGenders: {
                 nom: "they",
                 dat: "them",
                 acc: "them",
@@ -709,17 +709,17 @@ exports.wordsBank = {
       translations: { ENG: ["eng-pro-ITG_A"], POL: ["pol-pro-ITG_A"] },
       tags: [],
       //selectors
-      lemma: "*ITG_A",
+      lemma: "$ITG_A",
       id: "eng-pro-ITG_A",
       //notes
 
       //inflections
       inflections: {
-        pronombreAndDeterminer: {
-          allPers: {
-            allNumbers: {
-              allGenders: {
-                allGcases: "what",
+        _pronombreAndDeterminer: {
+          _allPers: {
+            _allNumbers: {
+              _allGenders: {
+                _allGcases: "what",
               },
             },
           },
@@ -731,17 +731,17 @@ exports.wordsBank = {
       translations: { ENG: ["eng-pro-ITG_B"], POL: ["pol-adj-ITG_B"] },
       tags: [],
       //selectors
-      lemma: "*ITG_B",
+      lemma: "$ITG_B",
       id: "eng-pro-ITG_B",
       //notes
 
       //inflections
       inflections: {
-        pronombreAndDeterminer: {
-          allPers: {
-            allNumbers: {
-              allGenders: {
-                allGcases: "which",
+        _pronombreAndDeterminer: {
+          _allPers: {
+            _allNumbers: {
+              _allGenders: {
+                _allGcases: "which",
               },
             },
           },
@@ -753,17 +753,17 @@ exports.wordsBank = {
       translations: { ENG: ["eng-pro-ITG_C"], POL: ["pol-pro-ITG_C"] },
       tags: [],
       //selectors
-      lemma: "*ITG_C",
+      lemma: "$ITG_C",
       id: "eng-pro-ITG_C",
       //notes
 
       //inflections
       inflections: {
-        pronombreAndDeterminer: {
-          allPers: {
-            allNumbers: {
-              allGenders: {
-                allGcases: "when",
+        _pronombreAndDeterminer: {
+          _allPers: {
+            _allNumbers: {
+              _allGenders: {
+                _allGcases: "when",
               },
             },
           },
@@ -775,17 +775,17 @@ exports.wordsBank = {
       translations: { ENG: ["eng-pro-ITG_D"], POL: ["pol-pro-ITG_D"] },
       tags: [],
       //selectors
-      lemma: "*ITG_D",
+      lemma: "$ITG_D",
       id: "eng-pro-ITG_D",
       //notes
 
       //inflections
       inflections: {
-        pronombreAndDeterminer: {
-          allPers: {
-            allNumbers: {
-              allGenders: {
-                allGcases: "where",
+        _pronombreAndDeterminer: {
+          _allPers: {
+            _allNumbers: {
+              _allGenders: {
+                _allGcases: "where",
               },
             },
           },
@@ -797,17 +797,17 @@ exports.wordsBank = {
       translations: { ENG: ["eng-pro-ITG_E"], POL: ["pol-pro-ITG_E"] },
       tags: [],
       //selectors
-      lemma: "*ITG_E",
+      lemma: "$ITG_E",
       id: "eng-pro-ITG_E",
       //notes
 
       //inflections
       inflections: {
-        pronombreAndDeterminer: {
-          allPers: {
-            allNumbers: {
-              allGenders: {
-                allGcases: "how",
+        _pronombreAndDeterminer: {
+          _allPers: {
+            _allNumbers: {
+              _allGenders: {
+                _allGcases: "how",
               },
             },
           },
@@ -819,17 +819,17 @@ exports.wordsBank = {
       translations: { ENG: ["eng-pro-ITG_F"], POL: ["pol-pro-ITG_F"] },
       tags: [],
       //selectors
-      lemma: "*ITG_F",
+      lemma: "$ITG_F",
       id: "eng-pro-ITG_F",
       //notes
 
       //inflections
       inflections: {
-        pronombreAndDeterminer: {
-          allPers: {
-            allNumbers: {
-              allGenders: {
-                allGcases: "why",
+        _pronombreAndDeterminer: {
+          _allPers: {
+            _allNumbers: {
+              _allGenders: {
+                _allGcases: "why",
               },
             },
           },
@@ -841,16 +841,16 @@ exports.wordsBank = {
       translations: { ENG: ["eng-pro-ITG_G"], POL: ["pol-pro-ITG_G"] },
       tags: [],
       //selectors
-      lemma: "*ITG_G",
+      lemma: "$ITG_G",
       id: "eng-pro-ITG_G",
       //notes
 
       //inflections
       inflections: {
-        pronombreAndDeterminer: {
-          allPers: {
-            allNumbers: {
-              allGenders: {
+        _pronombreAndDeterminer: {
+          _allPers: {
+            _allNumbers: {
+              _allGenders: {
                 nom: "who",
                 dat: {
                   isTerminus: true,
@@ -876,7 +876,7 @@ exports.wordsBank = {
       },
       tags: [],
       //selectors
-      lemma: "*POSSESSIVE",
+      lemma: "$POSSESSIVE",
       id: "eng-pro-POSSESSIVE",
       //notes
 
@@ -885,18 +885,18 @@ exports.wordsBank = {
         determiner: {
           "1per": {
             singular: {
-              allPersonalSingularGenders: "my",
+              _allPersonalSingularGenders: "my",
             },
             plural: {
-              allPluralGenders: "our",
+              _allPluralGenders: "our",
             },
           },
           "2per": {
             singular: {
-              allPersonalSingularGenders: "your",
+              _allPersonalSingularGenders: "your",
             },
             plural: {
-              allPluralGenders: "your",
+              _allPluralGenders: "your",
             },
           },
           "3per": {
@@ -906,25 +906,25 @@ exports.wordsBank = {
               n: "its",
             },
             plural: {
-              allPluralGenders: "their",
+              _allPluralGenders: "their",
             },
           },
         },
         pronombre: {
           "1per": {
             singular: {
-              allPersonalSingularGenders: "mine",
+              _allPersonalSingularGenders: "mine",
             },
             plural: {
-              allPluralGenders: "ours",
+              _allPluralGenders: "ours",
             },
           },
           "2per": {
             singular: {
-              allPersonalSingularGenders: "yours",
+              _allPersonalSingularGenders: "yours",
             },
             plural: {
-              allPluralGenders: "yours",
+              _allPluralGenders: "yours",
             },
           },
           "3per": {
@@ -934,7 +934,7 @@ exports.wordsBank = {
               n: "its",
             },
             plural: {
-              allPluralGenders: "theirs",
+              _allPluralGenders: "theirs",
             },
           },
         },

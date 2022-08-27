@@ -464,5 +464,5 @@ exports.traitValueIsMeta = (traitValue, chunk, traitKey) => {
     traitValue = traitValue[0];
   }
 
-  return traitValue.slice(0, 3) === "all";
+  return traitValue[0] === "_";
 };
