@@ -141,7 +141,7 @@ xdescribe("doesThisInflectionKeyHoldUniqueInflectionValueInLObj", () => {
         },
         "3per": {
           singular: {
-            _allMasculineSingularGenders: {
+            _MasculineSingularGenders: {
               nom: "on",
               gen: {
                 isTerminus: true,

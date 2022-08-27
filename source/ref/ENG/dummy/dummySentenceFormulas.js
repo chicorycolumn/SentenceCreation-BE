@@ -1777,6 +1777,86 @@ exports.dummySentenceFormulasBank = [
       ["pro-1-I", "fix-1-Can", "ver-2-See", "art-1-A", "nco-1-Rat"],
     ],
   },
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  {
+    sentenceFormulaSymbol: "dummy67b",
+    sentenceFormulaId: "ENG-dummy67b",
+    translations: { POL: ["POL-dummy67b"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificIds: ["eng-pro-PERSONAL"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-See",
+        agreeWith: "pro-1-I",
+        specificIds: ["eng-ver-008-see"],
+        tenseDescription: ["present simple"],
+        formulaImportantTraitKeys: ["tenseDescription"],
+      },
+      { chunkId: "art-1-A", form: ["indefinite"], agreeWith: "nco-1-Rat" },
+      {
+        chunkId: "nco-1-Rat",
+        specificIds: ["eng-nco-011-rat"],
+        number: ["singular"],
+        gcase: ["acc"],
+      },
+      { chunkId: "fix-1-Comma", chunkValue: "," },
+      {
+        chunkId: "pro-2-It",
+        agreeWith: "nco-1-Rat",
+        specificIds: ["eng-pro-PERSONAL"],
+        person: ["3per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-2-Be",
+        agreeWith: "nco-1-Rat",
+        specificIds: ["eng-ver-001-be"],
+        tenseDescription: ["past simple"],
+      },
+      {
+        chunkId: "adj-1-Small",
+        agreeWith: "nco-1-Rat",
+        specificIds: ["eng-adj-002-small"],
+      },
+    ],
+    primaryOrders: [
+      [
+        "pro-1-I",
+        "ver-1-See",
+        "art-1-A",
+        "nco-1-Rat",
+        "fix-1-Comma",
+        "pro-2-It",
+        "ver-2-Be",
+        "adj-1-Small",
+      ],
+    ],
+  },
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
   {
     sentenceFormulaSymbol: "dummy68a",
     sentenceFormulaId: "ENG-dummy68a",

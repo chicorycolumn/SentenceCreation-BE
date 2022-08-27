@@ -140,7 +140,6 @@ exports.adjustVirilityOfStructureChunk = (
   let metaTranslatedGenderArr = [];
   gender.forEach((genderValue) => {
     if (/^_/.test(genderValue)) {
-      //Ripplemin1
       metaTranslatedGenderArr = [
         ...metaTranslatedGenderArr,
         ...refObj.metaTraitValues[currentLanguage]["gender"][genderValue],
@@ -376,13 +375,13 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
         ) {
           structureChunk.gender = [
             ...structureChunk.gender,
-            ...metaTraitValuesRef["gender"]._allSingularGenders,
+            ...metaTraitValuesRef["gender"]._SingularGenders,
           ];
         }
         if (structureChunk.number && structureChunk.number.includes("plural")) {
           structureChunk.gender = [
             ...structureChunk.gender,
-            ...metaTraitValuesRef["gender"]._allPluralGenders,
+            ...metaTraitValuesRef["gender"]._PluralGenders,
           ];
         }
       }
@@ -467,11 +466,11 @@ exports.convertmetaTraitValues = (
       let metaTraitValueRef = metaTraitValuesRef[traitKey];
 
       // metaTraitValueRef eg= {
-      //   _allPersonalGenders: ["m", "f", "virile", "nonvirile"],
-      //   _allSingularGenders: ["m", "f", "n"],
-      //   _allPersonalSingularGenders: ["m", "f"],
-      //   _allPluralGenders: ["virile", "nonvirile"],
-      //   _allGenders: ["m", "n", "f", "virile", "nonvirile"],
+      //   _PersonalGenders: ["m", "f", "virile", "nonvirile"],
+      //   _SingularGenders: ["m", "f", "n"],
+      //   _PersonalSingularGenders: ["m", "f"],
+      //   _PluralGenders: ["virile", "nonvirile"],
+      //   _Genders: ["m", "n", "f", "virile", "nonvirile"],
       // }
 
       if (objType === "lObj") {
@@ -620,7 +619,7 @@ exports.correctMGNsBeforeFetchingOutputArray = (
   );
 
   //2 Adjust lObjMetagender by number from stCh.
-  // eg if stCh number singular, lObjMetagender goes from "_allPersonalGenders" to "_allPersonalSingularGenders".
+  // eg if stCh number singular, lObjMetagender goes from "_PersonalGenders" to "_PersonalSingularGenders".
   lObjMetagender = metagenderCorrectedByNumberRef[lObjMetagender];
 
   //3 Now convert that. let convertedLObjMetagenderArr = ["m1", "f"]

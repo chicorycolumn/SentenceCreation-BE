@@ -112,7 +112,7 @@ exports.validateSentenceFormula = (sentenceFormula, lang) => {
         } else if (uUtils.typeof(traitValue) === "array") {
           traitValue.forEach((traitValueItem) => {
             if (
-              !/^_/.test(traitValueItem) && //Ripplemin1
+              !/^_/.test(traitValueItem) &&
               !possibleTraitValues.includes(traitValueItem)
             ) {
               consol.log(

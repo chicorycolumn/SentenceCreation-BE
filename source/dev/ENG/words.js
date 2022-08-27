@@ -241,7 +241,7 @@ let nco = [
     //selectors
     lemma: "bear",
     id: "eng-nco-901",
-    gender: "_allGenders",
+    gender: "n",
     //notes
 
     //inflections
@@ -488,10 +488,10 @@ let ver = [
       //     "3per": { singular: "is", plural: "are" },
       //   },
       //   future: {
-      //     _allPersons: { _allNumbers: "will be" },
+      //     _Persons: { _Numbers: "will be" },
       //   },
       //   conditional: {
-      //     _allPersons: { _allNumbers: "would be" },
+      //     _Persons: { _Numbers: "would be" },
       //   },
       // },
       v2: terminusObjectNormalArray(["was", "were"]),
@@ -520,7 +520,7 @@ exports.wordsBank = {
 //     gender: ["m1", "f"],
 //     inflections: {
 //       singular: {
-//         _allSingularGendersExcludingNeuter: {
+//         _SingularGendersExcludingNeuter: {
 //           nom: "ja",
 //           gen: "mnie",
 //           dat: ["mi", "mnie"],
@@ -530,7 +530,7 @@ exports.wordsBank = {
 //         },
 //       },
 //       plural: {
-//         _allPluralGenders: {
+//         _PluralGenders: {
 //           nom: "my",
 //           gen: "nas",
 //           dat: "nam",

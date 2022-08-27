@@ -2399,6 +2399,69 @@ exports.dummySentenceFormulasBank = [
     ],
     primaryOrders: [["ver-1-See", "nco-1-Rat"]],
   },
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  {
+    sentenceFormulaSymbol: "dummy67b",
+    sentenceFormulaId: "POL-dummy67b",
+    translations: { ENG: ["ENG-dummy67b"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificIds: ["pol-pro-PERSONAL"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-See",
+        agreeWith: "pro-1-I",
+        specificIds: ["pol-ver-008-widzieć", "pol-ver-008-zobaczyć"],
+        tenseDescription: ["present im"],
+      },
+      {
+        chunkId: "nco-1-Rat",
+        specificIds: ["pol-nco-011-szczur"],
+        number: ["singular"],
+        gcase: ["acc"],
+      },
+      { chunkId: "fix-1-Comma", chunkValue: "," },
+      {
+        chunkId: "ver-2-Be",
+        agreeWith: "nco-1-Rat",
+        specificIds: ["pol-ver-001-być"],
+        tenseDescription: ["past im"],
+        formulaImportantTraitKeys: ["tenseDescription"],
+      },
+      {
+        chunkId: "adj-1-Small",
+        agreeWith: "nco-1-Rat",
+        specificIds: ["pol-adj-002-mały"],
+        gcase: ["nom"],
+        formulaImportantTraitKeys: ["gcase"],
+      },
+    ],
+    primaryOrders: [
+      ["ver-1-See", "nco-1-Rat", "fix-1-Comma", "ver-2-Be", "adj-1-Small"],
+    ],
+  },
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
   {
     sentenceFormulaSymbol: "dummy68a",
     sentenceFormulaId: "POL-dummy68a",

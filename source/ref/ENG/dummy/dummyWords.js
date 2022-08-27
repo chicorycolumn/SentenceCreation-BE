@@ -8,7 +8,7 @@ let nco = [
     //selectors
     lemma: "nut",
     id: "eng-nco-Dnut1",
-
+    gender: "n",
     //notes
 
     //inflections
@@ -32,7 +32,7 @@ let nco = [
     //selectors
     lemma: "nut",
     id: "eng-nco-Dnut2",
-
+    gender: "n",
     //notes
 
     //inflections
@@ -61,7 +61,7 @@ let nco = [
     //selectors
     lemma: "tie",
     id: "eng-nco-Dtie2",
-
+    gender: "n",
     //notes
 
     //inflections
@@ -90,7 +90,7 @@ let nco = [
     //selectors
     lemma: "tie",
     id: "eng-nco-Dtie1",
-
+    gender: "n",
     //notes
 
     //inflections
@@ -116,7 +116,7 @@ let nco = [
     //selectors
     lemma: "hole",
     id: "eng-nco-Dhole",
-
+    gender: "n",
     //notes
 
     //inflections
@@ -142,7 +142,7 @@ let nco = [
     //selectors
     lemma: "pit",
     id: "eng-nco-Dpit",
-
+    gender: "n",
     //notes
 
     //inflections

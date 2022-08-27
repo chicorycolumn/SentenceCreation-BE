@@ -869,21 +869,23 @@ exports.buildSentenceString = (
     }
 
     arrOfFinalSelectedWordsArr.forEach((finalSelectedWordsArr) => {
-      let finalPunctuation = ".";
-
+      let producedSentence = finalSelectedWordsArr[0];
+      finalSelectedWordsArr.slice(1).forEach((str) => {
+        if (refObj.punctuation.includes(str)) {
+          producedSentence += str;
+        } else {
+          producedSentence += ` ${str}`;
+        }
+      });
       if (
-        ["!", "?", ".", "..."].includes(
+        !refObj.punctuation.includes(
           finalSelectedWordsArr[finalSelectedWordsArr.length - 1]
         )
       ) {
-        finalPunctuation = finalSelectedWordsArr.pop();
+        producedSentence += ".";
       }
 
-      let producedSentence = uUtils.capitaliseFirst(
-        finalSelectedWordsArr.join(" ") + finalPunctuation
-      );
-
-      producedSentences.push(producedSentence);
+      producedSentences.push(uUtils.capitaliseFirst(producedSentence));
     });
   });
 

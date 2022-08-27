@@ -355,8 +355,8 @@ let ver = [
       verbal: {
         past: {
           impersonal: {
-            singular: { _allSingularGenders: "wiązano" },
-            plural: { _allPluralGenders: "wiązano" },
+            singular: { _SingularGenders: "wiązano" },
+            plural: { _PluralGenders: "wiązano" },
           },
           "1per": {
             singular: {
@@ -394,26 +394,26 @@ let ver = [
           impersonal: { singular: true, plural: true },
           "1per": {
             singular: {
-              _allSingularGendersExcludingNeuter: "wiążę",
+              _SingularGendersExcludingNeuter: "wiążę",
             },
             plural: {
-              _allPluralGenders: "wiążemy",
+              _PluralGenders: "wiążemy",
             },
           },
           "2per": {
             singular: {
-              _allSingularGendersExcludingNeuter: "wiążesz",
+              _SingularGendersExcludingNeuter: "wiążesz",
             },
             plural: {
-              _allPluralGenders: "wiążecie",
+              _PluralGenders: "wiążecie",
             },
           },
           "3per": {
             singular: {
-              _allSingularGenders: "wiąże",
+              _SingularGenders: "wiąże",
             },
             plural: {
-              _allPluralGenders: "wiążą",
+              _PluralGenders: "wiążą",
             },
           },
         },

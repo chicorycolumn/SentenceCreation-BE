@@ -167,9 +167,9 @@ exports.preprocessStructureChunks = (structureChunk) => {
   //       structureChunk.person.length &&
   //       !structureChunk.person.includes("3per")
   //     ) {
-  //       structureChunk.gender = metagenderRef["_allPersonalGenders"].slice(0);
+  //       structureChunk.gender = metagenderRef["_PersonalGenders"].slice(0);
   //     } else {
-  //       structureChunk.gender = metagenderRef["_allGenders"].slice(0);
+  //       structureChunk.gender = metagenderRef["_Genders"].slice(0);
   //     }
   //   }
   // }
@@ -196,9 +196,9 @@ exports.preprocessLemmaObjectsMajor = (
           structureChunk.person.length &&
           !structureChunk.person.includes("3per")
         ) {
-          structureChunk.gender = metagenderRef["_allPersonalGenders"].slice(0);
+          structureChunk.gender = metagenderRef["_PersonalGenders"].slice(0);
         } else {
-          structureChunk.gender = metagenderRef["_allGenders"].slice(0);
+          structureChunk.gender = metagenderRef["_Genders"].slice(0);
         }
       }
     }
@@ -229,8 +229,8 @@ exports.preprocessLemmaObjectsMinor = (matches) => {
 
 exports.formatTraitValue = (traitKey, traitValue, note) => {
   const metagenderRef = {
-    _allGenders: ["m", "f", "n", "virile", "nonvirile"],
-    _allPersonalGenders: ["m", "f", "virile", "nonvirile"],
+    _Genders: ["m", "f", "n", "virile", "nonvirile"],
+    _PersonalGenders: ["m", "f", "virile", "nonvirile"],
   };
 
   if (traitKey === "gender") {

@@ -108,7 +108,7 @@ exports.wordsBank = {
       //selectors
       lemma: "doctor",
       id: "eng-npe-005-doctor",
-      gender: "_allPersonalGenders",
+      gender: "_PersonalGenders",
       //notes
 
       //inflections
@@ -137,7 +137,7 @@ exports.wordsBank = {
       //selectors
       lemma: "bear",
       id: "eng-nco-001-bear",
-      gender: "_allGenders",
+      gender: "n",
       //notes
 
       //inflections
@@ -298,7 +298,7 @@ exports.wordsBank = {
       //selectors
       lemma: "sheep",
       id: "eng-nco-008-sheep",
-      gender: "_allGenders",
+      gender: "n",
       //notes
 
       //inflections
@@ -320,6 +320,7 @@ exports.wordsBank = {
       //selectors
       lemma: "dust",
       id: "eng-nco-009-dust",
+      gender: "n",
       lacking: true,
       tantumSingulare: true,
       //notes
@@ -342,6 +343,7 @@ exports.wordsBank = {
       //selectors
       lemma: "underwear",
       id: "eng-nco-010-underwear",
+      gender: "n",
       //notes
 
       //inflections
@@ -363,7 +365,7 @@ exports.wordsBank = {
       //selectors
       lemma: "rat",
       id: "eng-nco-011-rat",
-
+      gender: "n",
       //notes
 
       //inflections
@@ -388,6 +390,7 @@ exports.wordsBank = {
       //selectors
       lemma: "tweezers",
       id: "eng-nco-012-tweezers",
+      gender: "n",
       lacking: true,
       tantumPlurale: true,
       tantumCountNoun: { singular: "pair", plural: "pairs" },
@@ -645,14 +648,14 @@ exports.wordsBank = {
         pronombre: {
           "1per": {
             singular: {
-              _allPersonalSingularGenders: {
+              _PersonalSingularGenders: {
                 nom: "I",
                 dat: "me",
                 acc: "me",
               },
             },
             plural: {
-              _allPluralGenders: {
+              _PluralGenders: {
                 nom: "we",
                 dat: "us",
                 acc: "us",
@@ -661,14 +664,14 @@ exports.wordsBank = {
           },
           "2per": {
             singular: {
-              _allPersonalSingularGenders: {
+              _PersonalSingularGenders: {
                 nom: "you",
                 dat: "you",
                 acc: "you",
               },
             },
             plural: {
-              _allPluralGenders: {
+              _PluralGenders: {
                 nom: "you",
                 dat: "you",
                 acc: "you",
@@ -694,7 +697,7 @@ exports.wordsBank = {
               },
             },
             plural: {
-              _allPersonalGenders: {
+              _PersonalGenders: {
                 nom: "they",
                 dat: "them",
                 acc: "them",
@@ -716,10 +719,10 @@ exports.wordsBank = {
       //inflections
       inflections: {
         _pronombreAndDeterminer: {
-          _allPers: {
-            _allNumbers: {
-              _allGenders: {
-                _allGcases: "what",
+          _Pers: {
+            _Numbers: {
+              _Genders: {
+                _Gcases: "what",
               },
             },
           },
@@ -738,10 +741,10 @@ exports.wordsBank = {
       //inflections
       inflections: {
         _pronombreAndDeterminer: {
-          _allPers: {
-            _allNumbers: {
-              _allGenders: {
-                _allGcases: "which",
+          _Pers: {
+            _Numbers: {
+              _Genders: {
+                _Gcases: "which",
               },
             },
           },
@@ -760,10 +763,10 @@ exports.wordsBank = {
       //inflections
       inflections: {
         _pronombreAndDeterminer: {
-          _allPers: {
-            _allNumbers: {
-              _allGenders: {
-                _allGcases: "when",
+          _Pers: {
+            _Numbers: {
+              _Genders: {
+                _Gcases: "when",
               },
             },
           },
@@ -782,10 +785,10 @@ exports.wordsBank = {
       //inflections
       inflections: {
         _pronombreAndDeterminer: {
-          _allPers: {
-            _allNumbers: {
-              _allGenders: {
-                _allGcases: "where",
+          _Pers: {
+            _Numbers: {
+              _Genders: {
+                _Gcases: "where",
               },
             },
           },
@@ -804,10 +807,10 @@ exports.wordsBank = {
       //inflections
       inflections: {
         _pronombreAndDeterminer: {
-          _allPers: {
-            _allNumbers: {
-              _allGenders: {
-                _allGcases: "how",
+          _Pers: {
+            _Numbers: {
+              _Genders: {
+                _Gcases: "how",
               },
             },
           },
@@ -826,10 +829,10 @@ exports.wordsBank = {
       //inflections
       inflections: {
         _pronombreAndDeterminer: {
-          _allPers: {
-            _allNumbers: {
-              _allGenders: {
-                _allGcases: "why",
+          _Pers: {
+            _Numbers: {
+              _Genders: {
+                _Gcases: "why",
               },
             },
           },
@@ -848,9 +851,9 @@ exports.wordsBank = {
       //inflections
       inflections: {
         _pronombreAndDeterminer: {
-          _allPers: {
-            _allNumbers: {
-              _allGenders: {
+          _Pers: {
+            _Numbers: {
+              _Genders: {
                 nom: "who",
                 dat: {
                   isTerminus: true,
@@ -885,18 +888,18 @@ exports.wordsBank = {
         determiner: {
           "1per": {
             singular: {
-              _allPersonalSingularGenders: "my",
+              _PersonalSingularGenders: "my",
             },
             plural: {
-              _allPluralGenders: "our",
+              _PluralGenders: "our",
             },
           },
           "2per": {
             singular: {
-              _allPersonalSingularGenders: "your",
+              _PersonalSingularGenders: "your",
             },
             plural: {
-              _allPluralGenders: "your",
+              _PluralGenders: "your",
             },
           },
           "3per": {
@@ -906,25 +909,25 @@ exports.wordsBank = {
               n: "its",
             },
             plural: {
-              _allPluralGenders: "their",
+              _PluralGenders: "their",
             },
           },
         },
         pronombre: {
           "1per": {
             singular: {
-              _allPersonalSingularGenders: "mine",
+              _PersonalSingularGenders: "mine",
             },
             plural: {
-              _allPluralGenders: "ours",
+              _PluralGenders: "ours",
             },
           },
           "2per": {
             singular: {
-              _allPersonalSingularGenders: "yours",
+              _PersonalSingularGenders: "yours",
             },
             plural: {
-              _allPluralGenders: "yours",
+              _PluralGenders: "yours",
             },
           },
           "3per": {
@@ -934,7 +937,7 @@ exports.wordsBank = {
               n: "its",
             },
             plural: {
-              _allPluralGenders: "theirs",
+              _PluralGenders: "theirs",
             },
           },
         },

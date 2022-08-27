@@ -653,8 +653,8 @@ exports.wordsBank = {
         verbal: {
           past: {
             impersonal: {
-              singular: { _allSingularGenders: "dawano" },
-              plural: { _allPluralGenders: "dawano" },
+              singular: { _SingularGenders: "dawano" },
+              plural: { _PluralGenders: "dawano" },
             },
             "1per": {
               singular: {
@@ -692,26 +692,26 @@ exports.wordsBank = {
             impersonal: { singular: true, plural: true },
             "1per": {
               singular: {
-                _allSingularGendersExcludingNeuter: "daję",
+                _SingularGendersExcludingNeuter: "daję",
               },
               plural: {
-                _allPluralGenders: "dajemy",
+                _PluralGenders: "dajemy",
               },
             },
             "2per": {
               singular: {
-                _allSingularGendersExcludingNeuter: "dajesz",
+                _SingularGendersExcludingNeuter: "dajesz",
               },
               plural: {
-                _allPluralGenders: "dajecie",
+                _PluralGenders: "dajecie",
               },
             },
             "3per": {
               singular: {
-                _allSingularGenders: "daje",
+                _SingularGenders: "daje",
               },
               plural: {
-                _allPluralGenders: "dają",
+                _PluralGenders: "dają",
               },
             },
           },
@@ -745,8 +745,8 @@ exports.wordsBank = {
         verbal: {
           past: {
             impersonal: {
-              singular: { _allSingularGenders: "dano" },
-              plural: { _allPluralGenders: "dano" },
+              singular: { _SingularGenders: "dano" },
+              plural: { _PluralGenders: "dano" },
             },
             "1per": {
               singular: {
@@ -784,26 +784,26 @@ exports.wordsBank = {
             impersonal: { singular: true, plural: true },
             "1per": {
               singular: {
-                _allSingularGendersExcludingNeuter: "dam",
+                _SingularGendersExcludingNeuter: "dam",
               },
               plural: {
-                _allPluralGenders: "damy",
+                _PluralGenders: "damy",
               },
             },
             "2per": {
               singular: {
-                _allSingularGendersExcludingNeuter: "dasz",
+                _SingularGendersExcludingNeuter: "dasz",
               },
               plural: {
-                _allPluralGenders: "dacie",
+                _PluralGenders: "dacie",
               },
             },
             "3per": {
               singular: {
-                _allSingularGenders: "da",
+                _SingularGenders: "da",
               },
               plural: {
-                _allPluralGenders: "dadzą",
+                _PluralGenders: "dadzą",
               },
             },
           },
@@ -1019,8 +1019,8 @@ exports.wordsBank = {
         verbal: {
           past: {
             impersonal: {
-              singular: { _allSingularGenders: "miano" },
-              plural: { _allPluralGenders: "miano" },
+              singular: { _SingularGenders: "miano" },
+              plural: { _PluralGenders: "miano" },
             },
             "1per": {
               singular: {
@@ -1058,26 +1058,26 @@ exports.wordsBank = {
             impersonal: { singular: true, plural: true },
             "1per": {
               singular: {
-                _allSingularGendersExcludingNeuter: "mam",
+                _SingularGendersExcludingNeuter: "mam",
               },
               plural: {
-                _allPluralGenders: "mamy",
+                _PluralGenders: "mamy",
               },
             },
             "2per": {
               singular: {
-                _allSingularGendersExcludingNeuter: "masz",
+                _SingularGendersExcludingNeuter: "masz",
               },
               plural: {
-                _allPluralGenders: "macie",
+                _PluralGenders: "macie",
               },
             },
             "3per": {
               singular: {
-                _allSingularGenders: "ma",
+                _SingularGenders: "ma",
               },
               plural: {
-                _allPluralGenders: "mają",
+                _PluralGenders: "mają",
               },
             },
           },
@@ -1111,8 +1111,8 @@ exports.wordsBank = {
         verbal: {
           past: {
             impersonal: {
-              singular: { _allSingularGenders: "pisano" },
-              plural: { _allPluralGenders: "pisano" },
+              singular: { _SingularGenders: "pisano" },
+              plural: { _PluralGenders: "pisano" },
             },
             "1per": {
               singular: {
@@ -1150,26 +1150,26 @@ exports.wordsBank = {
             impersonal: { singular: true, plural: true },
             "1per": {
               singular: {
-                _allSingularGendersExcludingNeuter: "piszę",
+                _SingularGendersExcludingNeuter: "piszę",
               },
               plural: {
-                _allPluralGenders: "piszemy",
+                _PluralGenders: "piszemy",
               },
             },
             "2per": {
               singular: {
-                _allSingularGendersExcludingNeuter: "piszesz",
+                _SingularGendersExcludingNeuter: "piszesz",
               },
               plural: {
-                _allPluralGenders: "piszecie",
+                _PluralGenders: "piszecie",
               },
             },
             "3per": {
               singular: {
-                _allSingularGenders: "pisze",
+                _SingularGenders: "pisze",
               },
               plural: {
-                _allPluralGenders: "piszą",
+                _PluralGenders: "piszą",
               },
             },
           },
@@ -1203,8 +1203,8 @@ exports.wordsBank = {
         verbal: {
           past: {
             impersonal: {
-              singular: { _allSingularGenders: "napisano" },
-              plural: { _allPluralGenders: "napisano" },
+              singular: { _SingularGenders: "napisano" },
+              plural: { _PluralGenders: "napisano" },
             },
             "1per": {
               singular: {
@@ -1242,26 +1242,26 @@ exports.wordsBank = {
             impersonal: { singular: true, plural: true },
             "1per": {
               singular: {
-                _allSingularGendersExcludingNeuter: "napiszę",
+                _SingularGendersExcludingNeuter: "napiszę",
               },
               plural: {
-                _allPluralGenders: "napiszemy",
+                _PluralGenders: "napiszemy",
               },
             },
             "2per": {
               singular: {
-                _allSingularGendersExcludingNeuter: "napiszesz",
+                _SingularGendersExcludingNeuter: "napiszesz",
               },
               plural: {
-                _allPluralGenders: "napiszecie",
+                _PluralGenders: "napiszecie",
               },
             },
             "3per": {
               singular: {
-                _allSingularGenders: "napisze",
+                _SingularGenders: "napisze",
               },
               plural: {
-                _allPluralGenders: "napiszą",
+                _PluralGenders: "napiszą",
               },
             },
           },
@@ -1295,8 +1295,8 @@ exports.wordsBank = {
         verbal: {
           past: {
             impersonal: {
-              singular: { _allSingularGenders: "czytano" },
-              plural: { _allPluralGenders: "czytano" },
+              singular: { _SingularGenders: "czytano" },
+              plural: { _PluralGenders: "czytano" },
             },
             "1per": {
               singular: {
@@ -1334,26 +1334,26 @@ exports.wordsBank = {
             impersonal: { singular: true, plural: true },
             "1per": {
               singular: {
-                _allSingularGendersExcludingNeuter: "czytam",
+                _SingularGendersExcludingNeuter: "czytam",
               },
               plural: {
-                _allPluralGenders: "czytamy",
+                _PluralGenders: "czytamy",
               },
             },
             "2per": {
               singular: {
-                _allSingularGendersExcludingNeuter: "czytasz",
+                _SingularGendersExcludingNeuter: "czytasz",
               },
               plural: {
-                _allPluralGenders: "czytacie",
+                _PluralGenders: "czytacie",
               },
             },
             "3per": {
               singular: {
-                _allSingularGenders: "czyta",
+                _SingularGenders: "czyta",
               },
               plural: {
-                _allPluralGenders: "czytają",
+                _PluralGenders: "czytają",
               },
             },
           },
@@ -1387,8 +1387,8 @@ exports.wordsBank = {
         verbal: {
           past: {
             impersonal: {
-              singular: { _allSingularGenders: "przeczytano" },
-              plural: { _allPluralGenders: "przeczytano" },
+              singular: { _SingularGenders: "przeczytano" },
+              plural: { _PluralGenders: "przeczytano" },
             },
             "1per": {
               singular: {
@@ -1426,26 +1426,26 @@ exports.wordsBank = {
             impersonal: { singular: true, plural: true },
             "1per": {
               singular: {
-                _allSingularGendersExcludingNeuter: "przeczytam",
+                _SingularGendersExcludingNeuter: "przeczytam",
               },
               plural: {
-                _allPluralGenders: "przeczytamy",
+                _PluralGenders: "przeczytamy",
               },
             },
             "2per": {
               singular: {
-                _allSingularGendersExcludingNeuter: "przeczytasz",
+                _SingularGendersExcludingNeuter: "przeczytasz",
               },
               plural: {
-                _allPluralGenders: "przeczytacie",
+                _PluralGenders: "przeczytacie",
               },
             },
             "3per": {
               singular: {
-                _allSingularGenders: "przeczyta",
+                _SingularGenders: "przeczyta",
               },
               plural: {
-                _allPluralGenders: "przeczytają",
+                _PluralGenders: "przeczytają",
               },
             },
           },
@@ -1479,8 +1479,8 @@ exports.wordsBank = {
         verbal: {
           past: {
             impersonal: {
-              singular: { _allSingularGenders: "badano" },
-              plural: { _allPluralGenders: "badano" },
+              singular: { _SingularGenders: "badano" },
+              plural: { _PluralGenders: "badano" },
             },
             "1per": {
               singular: {
@@ -1518,26 +1518,26 @@ exports.wordsBank = {
             impersonal: { singular: true, plural: true },
             "1per": {
               singular: {
-                _allSingularGendersExcludingNeuter: "badam",
+                _SingularGendersExcludingNeuter: "badam",
               },
               plural: {
-                _allPluralGenders: "badamy",
+                _PluralGenders: "badamy",
               },
             },
             "2per": {
               singular: {
-                _allSingularGendersExcludingNeuter: "badasz",
+                _SingularGendersExcludingNeuter: "badasz",
               },
               plural: {
-                _allPluralGenders: "badacie",
+                _PluralGenders: "badacie",
               },
             },
             "3per": {
               singular: {
-                _allSingularGenders: "bada",
+                _SingularGenders: "bada",
               },
               plural: {
-                _allPluralGenders: "badają",
+                _PluralGenders: "badają",
               },
             },
           },
@@ -1571,8 +1571,8 @@ exports.wordsBank = {
         verbal: {
           past: {
             impersonal: {
-              singular: { _allSingularGenders: "zbadano" },
-              plural: { _allPluralGenders: "zbadano" },
+              singular: { _SingularGenders: "zbadano" },
+              plural: { _PluralGenders: "zbadano" },
             },
             "1per": {
               singular: {
@@ -1611,26 +1611,26 @@ exports.wordsBank = {
             impersonal: { singular: true, plural: true },
             "1per": {
               singular: {
-                _allSingularGendersExcludingNeuter: "zbadam",
+                _SingularGendersExcludingNeuter: "zbadam",
               },
               plural: {
-                _allPluralGenders: "zbadamy",
+                _PluralGenders: "zbadamy",
               },
             },
             "2per": {
               singular: {
-                _allSingularGendersExcludingNeuter: "zbadasz",
+                _SingularGendersExcludingNeuter: "zbadasz",
               },
               plural: {
-                _allPluralGenders: "zbadacie",
+                _PluralGenders: "zbadacie",
               },
             },
             "3per": {
               singular: {
-                _allSingularGenders: "zbada",
+                _SingularGenders: "zbada",
               },
               plural: {
-                _allPluralGenders: "zbadają",
+                _PluralGenders: "zbadają",
               },
             },
           },
@@ -1663,8 +1663,8 @@ exports.wordsBank = {
         verbal: {
           past: {
             impersonal: {
-              singular: { _allSingularGenders: "widziano" },
-              plural: { _allPluralGenders: "widziano" },
+              singular: { _SingularGenders: "widziano" },
+              plural: { _PluralGenders: "widziano" },
             },
             "1per": {
               singular: {
@@ -1702,26 +1702,26 @@ exports.wordsBank = {
             impersonal: { singular: true, plural: true },
             "1per": {
               singular: {
-                _allSingularGendersExcludingNeuter: "widzę",
+                _SingularGendersExcludingNeuter: "widzę",
               },
               plural: {
-                _allPluralGenders: "widzimy",
+                _PluralGenders: "widzimy",
               },
             },
             "2per": {
               singular: {
-                _allSingularGendersExcludingNeuter: "widzisz",
+                _SingularGendersExcludingNeuter: "widzisz",
               },
               plural: {
-                _allPluralGenders: "widzicie",
+                _PluralGenders: "widzicie",
               },
             },
             "3per": {
               singular: {
-                _allSingularGenders: "widzi",
+                _SingularGenders: "widzi",
               },
               plural: {
-                _allPluralGenders: "widzą",
+                _PluralGenders: "widzą",
               },
             },
           },
@@ -1755,8 +1755,8 @@ exports.wordsBank = {
         verbal: {
           past: {
             impersonal: {
-              singular: { _allSingularGenders: "zobaczono" },
-              plural: { _allPluralGenders: "zobaczono" },
+              singular: { _SingularGenders: "zobaczono" },
+              plural: { _PluralGenders: "zobaczono" },
             },
             "1per": {
               singular: {
@@ -1795,26 +1795,26 @@ exports.wordsBank = {
             impersonal: { singular: true, plural: true },
             "1per": {
               singular: {
-                _allSingularGendersExcludingNeuter: "zobaczę",
+                _SingularGendersExcludingNeuter: "zobaczę",
               },
               plural: {
-                _allPluralGenders: "zobaczymy",
+                _PluralGenders: "zobaczymy",
               },
             },
             "2per": {
               singular: {
-                _allSingularGendersExcludingNeuter: "zobaczysz",
+                _SingularGendersExcludingNeuter: "zobaczysz",
               },
               plural: {
-                _allPluralGenders: "zobaczycie",
+                _PluralGenders: "zobaczycie",
               },
             },
             "3per": {
               singular: {
-                _allSingularGenders: "zobaczy",
+                _SingularGenders: "zobaczy",
               },
               plural: {
-                _allPluralGenders: "zobaczą",
+                _PluralGenders: "zobaczą",
               },
             },
           },
@@ -1844,8 +1844,8 @@ exports.wordsBank = {
         verbal: {
           past: {
             impersonal: {
-              singular: { _allSingularGenders: "zniesiono" },
-              plural: { _allPluralGenders: "zniesiono" },
+              singular: { _SingularGenders: "zniesiono" },
+              plural: { _PluralGenders: "zniesiono" },
             },
             "1per": {
               singular: {
@@ -1884,26 +1884,26 @@ exports.wordsBank = {
             impersonal: { singular: true, plural: true },
             "1per": {
               singular: {
-                _allSingularGendersExcludingNeuter: "zniosę",
+                _SingularGendersExcludingNeuter: "zniosę",
               },
               plural: {
-                _allPluralGenders: "zniesiemy",
+                _PluralGenders: "zniesiemy",
               },
             },
             "2per": {
               singular: {
-                _allSingularGendersExcludingNeuter: "zniesiesz",
+                _SingularGendersExcludingNeuter: "zniesiesz",
               },
               plural: {
-                _allPluralGenders: "zniesiecie",
+                _PluralGenders: "zniesiecie",
               },
             },
             "3per": {
               singular: {
-                _allSingularGenders: "zniesie",
+                _SingularGenders: "zniesie",
               },
               plural: {
-                _allPluralGenders: "zniosą",
+                _PluralGenders: "zniosą",
               },
             },
           },
@@ -2280,7 +2280,7 @@ exports.wordsBank = {
           },
           "3per": {
             singular: {
-              _allMasculineSingularGenders: {
+              _MasculineSingularGenders: {
                 nom: "on",
                 gen: {
                   isTerminus: true,
@@ -2434,7 +2434,7 @@ exports.wordsBank = {
         _pronombreAndDeterminer: {
           "1per": {
             singular: {
-              _allPersonalSingularGenders: {
+              _PersonalSingularGenders: {
                 singular: {
                   m1: {
                     nom: "mój",
@@ -2498,7 +2498,7 @@ exports.wordsBank = {
               },
             },
             plural: {
-              _allPluralGenders: {
+              _PluralGenders: {
                 singular: {
                   m1: {
                     nom: "nasz",
@@ -2564,7 +2564,7 @@ exports.wordsBank = {
           },
           "2per": {
             singular: {
-              _allPersonalSingularGenders: {
+              _PersonalSingularGenders: {
                 singular: {
                   m1: {
                     nom: "twój",
@@ -2628,7 +2628,7 @@ exports.wordsBank = {
               },
             },
             plural: {
-              _allPluralGenders: {
+              _PluralGenders: {
                 singular: {
                   m1: {
                     nom: "wasz",
@@ -2694,9 +2694,9 @@ exports.wordsBank = {
           },
           "3per": {
             singular: {
-              _allMasculineSingularGenders: {
+              _MasculineSingularGenders: {
                 singular: {
-                  _allSingularGenders: {
+                  _SingularGenders: {
                     nom: "jego",
                     gen: "jego",
                     dat: "jego",
@@ -2706,7 +2706,7 @@ exports.wordsBank = {
                   },
                 },
                 plural: {
-                  _allPluralGenders: {
+                  _PluralGenders: {
                     nom: "jego",
                     gen: "jego",
                     dat: "jego",
@@ -2718,7 +2718,7 @@ exports.wordsBank = {
               },
               f: {
                 singular: {
-                  _allSingularGenders: {
+                  _SingularGenders: {
                     nom: "jej",
                     gen: "jej",
                     dat: "jej",
@@ -2728,7 +2728,7 @@ exports.wordsBank = {
                   },
                 },
                 plural: {
-                  _allPluralGenders: {
+                  _PluralGenders: {
                     nom: "jej",
                     gen: "jej",
                     dat: "jej",
@@ -2740,7 +2740,7 @@ exports.wordsBank = {
               },
               n: {
                 singular: {
-                  _allSingularGenders: {
+                  _SingularGenders: {
                     nom: "jego",
                     gen: "jego",
                     dat: "jego",
@@ -2750,7 +2750,7 @@ exports.wordsBank = {
                   },
                 },
                 plural: {
-                  _allPluralGenders: {
+                  _PluralGenders: {
                     nom: "jego",
                     gen: "jego",
                     dat: "jego",
@@ -2762,9 +2762,9 @@ exports.wordsBank = {
               },
             },
             plural: {
-              _allPluralGenders: {
+              _PluralGenders: {
                 singular: {
-                  _allSingularGenders: {
+                  _SingularGenders: {
                     nom: "ich",
                     gen: "ich",
                     dat: "ich",
@@ -2774,7 +2774,7 @@ exports.wordsBank = {
                   },
                 },
                 plural: {
-                  _allPluralGenders: {
+                  _PluralGenders: {
                     nom: "ich",
                     gen: "ich",
                     dat: "ich",
@@ -2801,9 +2801,9 @@ exports.wordsBank = {
       //inflections
       inflections: {
         _pronombreAndDeterminer: {
-          _allPers: {
+          _Pers: {
             singular: {
-              _allSingularGenders: {
+              _SingularGenders: {
                 nom: "co",
                 gen: "czego",
                 dat: "czym",
@@ -2813,7 +2813,7 @@ exports.wordsBank = {
               },
             },
             plural: {
-              _allPluralGenders: {
+              _PluralGenders: {
                 nom: "co",
                 gen: "czego",
                 dat: "czym",
@@ -2838,7 +2838,7 @@ exports.wordsBank = {
       //inflections
       inflections: {
         _pronombreAndDeterminer: {
-          _allPers: {
+          _Pers: {
             singular: {
               m1: {
                 nom: "który",
@@ -2907,10 +2907,10 @@ exports.wordsBank = {
       //inflections
       inflections: {
         _pronombreAndDeterminer: {
-          _allPers: {
-            _allNumbers: {
-              _allGenders: {
-                _allGcases: "kiedy",
+          _Pers: {
+            _Numbers: {
+              _Genders: {
+                _Gcases: "kiedy",
               },
             },
           },
@@ -2929,10 +2929,10 @@ exports.wordsBank = {
       //inflections
       inflections: {
         _pronombreAndDeterminer: {
-          _allPers: {
-            _allNumbers: {
-              _allGenders: {
-                _allGcases: "gdzie",
+          _Pers: {
+            _Numbers: {
+              _Genders: {
+                _Gcases: "gdzie",
               },
             },
           },
@@ -2951,10 +2951,10 @@ exports.wordsBank = {
       //inflections
       inflections: {
         _pronombreAndDeterminer: {
-          _allPers: {
-            _allNumbers: {
-              _allGenders: {
-                _allGcases: "jak",
+          _Pers: {
+            _Numbers: {
+              _Genders: {
+                _Gcases: "jak",
               },
             },
           },
@@ -2973,19 +2973,19 @@ exports.wordsBank = {
       //inflections
       inflections: {
         pronombre: {
-          _allPers: {
-            _allNumbers: {
-              _allGenders: {
-                _allGcases: "dlaczego",
+          _Pers: {
+            _Numbers: {
+              _Genders: {
+                _Gcases: "dlaczego",
               },
             },
           },
         },
         determiner: {
-          _allPers: {
-            _allNumbers: {
-              _allGenders: {
-                _allGcases: "dlatego",
+          _Pers: {
+            _Numbers: {
+              _Genders: {
+                _Gcases: "dlatego",
               },
             },
           },
@@ -3004,9 +3004,9 @@ exports.wordsBank = {
       //inflections
       inflections: {
         pronombre: {
-          _allPers: {
-            _allNumbers: {
-              _allGenders: {
+          _Pers: {
+            _Numbers: {
+              _Genders: {
                 nom: "kto",
                 gen: "kogo",
                 dat: "komu",
@@ -3018,7 +3018,7 @@ exports.wordsBank = {
           },
         },
         determiner: {
-          _allPers: {
+          _Pers: {
             singular: {
               m1: {
                 nom: "który",
@@ -3087,7 +3087,7 @@ exports.wordsBank = {
       //inflections
       inflections: {
         _pronombreAndDeterminer: {
-          _allPers: {
+          _Pers: {
             singular: {
               m1: {
                 nom: "taki",
@@ -3156,7 +3156,7 @@ exports.wordsBank = {
       //inflections
       inflections: {
         _pronombreAndDeterminer: {
-          _allPers: {
+          _Pers: {
             singular: {
               m1: {
                 nom: "jaki",

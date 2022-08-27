@@ -78,7 +78,7 @@ describe("/api", function () {
     });
   });
 
-  describe("/palette - Stage 22: Synonyms.", () => {
+  describe("/palette - Stage 23: Synonyms.", () => {
     it("#pal23-01a GET 200 YES: Engpol. Word synonyms, two in ENG and two in POL.", () => {
       const questionLanguage = "ENG";
       const answerLanguage = "POL";
@@ -247,6 +247,70 @@ describe("/api", function () {
                 "Small pit.",
               ],
               POL: ["W małej dziurze."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+  });
+
+  describe("/palette - Stage 24: Gender of animals is neuter in ENG.", () => {
+    it("#pal24-01a GET 200 YES: Poleng. I saw a rat, it was small.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          useDummy: true,
+          sentenceFormulaSymbol: "dummy67b",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: [
+                "I see a rat, it was small.",
+                "I see a rat, it had been small.",
+                "I see a rat, it has been small.",
+                "I see a rat, it was being small.",
+              ],
+              POL: ["Widzę szczura, był mały."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+    it("#pal24-01b GET 200 YES: Engpol. I saw a rat, it was small.", () => {
+      const questionLanguage = "ENG";
+      const answerLanguage = "POL";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          useDummy: true,
+          sentenceFormulaSymbol: "dummy67b",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["I see a rat, it was small."],
+              POL: ["Widzę szczura, był mały."],
             },
           ];
           testingUtils.checkTranslationsOfGivenRef(
