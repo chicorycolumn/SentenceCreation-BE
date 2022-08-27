@@ -120,12 +120,12 @@ exports.findMatchingLemmaObjectThenWord = (
     }
   }
 
-  langUtils.preprocessLemmaObjectsMajor(
+  langUtils.expandLemmaObjects(
     matches,
-    structureChunk,
-    false,
+    gpUtils.getWordtypeStCh(structureChunk),
     currentLanguage
   );
+  allLangUtils.tweakStructureChunks(matches, structureChunk, currentLanguage);
 
   //STEP THREE: Return result array immediately if uninflected or ad hoc.
   let adhocInflectionRef = refObj.adhocInflectionCategorys[currentLanguage];

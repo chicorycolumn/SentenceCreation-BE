@@ -52,10 +52,9 @@ exports.filterWithin_PHD = (
 
   let lemmaObjectCopy = uUtils.copyWithoutReference(lemmaObject);
 
-  langUtils.preprocessLemmaObjectsMajor(
+  langUtils.expandLemmaObjects(
     [lemmaObjectCopy],
-    PHDstructureChunk,
-    true,
+    gpUtils.getWordtypeStCh(PHDstructureChunk),
     currentLanguage
   );
 

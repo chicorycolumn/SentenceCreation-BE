@@ -5,6 +5,35 @@ const uUtils = require("../utils/universalUtils.js");
 const consol = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 
+exports.expandLemmaObjects = (matches, currentLanguage) => {
+  allLangUtils.convertmetaTraitValues(matches, currentLanguage, "lObj");
+};
+
+exports.tweakStructureChunks = (matches, structureChunk, currentLanguage) => {
+  let metagenderRef = refObj.metaTraitValues[currentLanguage].gender;
+
+  matches.forEach((lObj) => {
+    if (gpUtils.getWordtypeLObj(lObj) === "pronombre") {
+      if (gpUtils.getWordtypeStCh(structureChunk) !== "pronombre") {
+        consol.throw(
+          "#ERR hcio expandLemmaObjects. lObj and stCh wordtypes don't match."
+        );
+      }
+      if (!structureChunk.gender) {
+        if (
+          structureChunk.person &&
+          structureChunk.person.length &&
+          !structureChunk.person.includes("3per")
+        ) {
+          structureChunk.gender = metagenderRef["_PersonalGenders"].slice(0);
+        } else {
+          structureChunk.gender = metagenderRef["_Genders"].slice(0);
+        }
+      }
+    }
+  });
+};
+
 exports.enforceThirdPersonAgreeWith = (stCh, onlyIfUnpopulated) => {
   if (
     ["agreeWith", "postHocAgreeWithPrimary"].some(

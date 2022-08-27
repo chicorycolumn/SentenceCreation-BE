@@ -152,37 +152,8 @@ exports.preprocessStructureChunks = (structureChunk) => {
   }
 };
 
-exports.preprocessLemmaObjectsMajor = (
-  matches,
-  structureChunk,
-  adjustLemmaObjectsOnly,
-  currentLanguage
-) => {
-  let metagenderRef = refObj.metaTraitValues[currentLanguage].gender;
-
-  matches.forEach((lObj) => {
-    if (gpUtils.getWordtypeLObj(lObj) === "pronombre") {
-      if (gpUtils.getWordtypeStCh(structureChunk) !== "pronombre") {
-        consol.throw(
-          "#ERR hcio preprocessLemmaObjectsMajor. lObj and stCh wordtypes don't match."
-        );
-      }
-      if (!structureChunk.gender) {
-        if (
-          structureChunk.person &&
-          structureChunk.person.length &&
-          !structureChunk.person.includes("3per")
-        ) {
-          structureChunk.gender = metagenderRef["_PersonalGenders"].slice(0);
-        } else {
-          structureChunk.gender = metagenderRef["_Genders"].slice(0);
-        }
-      }
-    }
-  });
-
-  allLangUtils.convertmetaTraitValues(matches, "ENG", "lObj");
-  // allLangUtils.preprocessLemmaObjects(matches, "ENG"); //Gamma
+exports.expandLemmaObjects = (matches, stChWordtype, currentLanguage) => {
+  allLangUtils.expandLemmaObjects(matches, currentLanguage);
 };
 
 exports.formatTraitValue = (traitKey, traitValue, note) => {

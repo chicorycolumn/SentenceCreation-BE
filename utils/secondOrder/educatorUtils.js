@@ -46,7 +46,7 @@ exports.checkWords = (envir, currentLanguage) => {
 
   Object.keys(wordsBank).forEach((wordsetKey) => {
     let words = wordsBank[wordsetKey];
-    // langUtils.preprocessLemmaObjectsMinor(words);
+    // langUtils.preprocessL emmaObjectsMinor(words);
   });
 
   let nounPersonsWithoutGender =
@@ -104,7 +104,11 @@ exports.findHomographs = (envir, currentLanguage, homographType, ignore) => {
     let wordtype = wordsetKey.slice(0, 3);
     let stCh = { wordtype, chunkId: `${wordtype}-900` };
 
-    langUtils.preprocessLemmaObjectsMajor(wordset, stCh, true, currentLanguage);
+    langUtils.expandLemmaObjects(
+      wordset,
+      gpUtils.getWordtypeStCh(stCh),
+      currentLanguage
+    );
 
     wordset.forEach((lObj) => {
       let terminalValuesAndPathsArr =

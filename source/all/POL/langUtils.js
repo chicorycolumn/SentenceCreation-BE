@@ -147,34 +147,20 @@ exports.preprocessStructureChunks = (structureChunk) => {
   }
 };
 
-exports.preprocessLemmaObjectsMajor = (
-  matches,
-  structureChunk,
-  adjustLemmaObjectsOnly,
-  currentLanguage
-) => {
-  if (!matches.length) {
-    return;
-  }
-
-  if (
-    gpUtils.getWordtypeLObj(matches[0]) !==
-    gpUtils.getWordtypeStCh(structureChunk)
-  ) {
+exports.expandLemmaObjects = (matches, stChWordtype, currentLanguage) => {
+  if (matches.length && gpUtils.getWordtypeLObj(matches[0]) !== stChWordtype) {
     consol.throw(
-      "#ERR wkpu POL:preprocessLemmaObjectsMajor. The wordtypes from stCh and lObjs didn't match."
+      "#ERR wkpu POL:expandLemmaObjects. The wordtypes from stCh and lObjs didn't match."
     );
   }
 
-  if (["verb"].includes(gpUtils.getWordtypeStCh(structureChunk))) {
+  if (["verb"].includes(stChWordtype)) {
     matches.forEach((lObj) => exports.fillVerbInflections(lObj));
-  }
-
-  if (["adjective"].includes(gpUtils.getWordtypeStCh(structureChunk))) {
+  } else if (["adjective"].includes(stChWordtype)) {
     matches.forEach((lObj) => exports.copyInflectionsFromM1toM2(lObj));
   }
 
-  allLangUtils.convertmetaTraitValues(matches, "POL", "lObj");
+  allLangUtils.expandLemmaObjects(matches, currentLanguage);
 };
 
 exports.addLanguageParticularClarifiers = () => {
