@@ -453,7 +453,7 @@ exports.lObjIsMGN = (lObj) => {
 
 exports.traitValueIsMeta = (traitValue, chunk, traitKey) => {
   if (!traitValue && !chunk && !traitKey) {
-    consol.throw("ertt No arguments to use.");
+    return false;
   }
 
   if (!traitValue) {

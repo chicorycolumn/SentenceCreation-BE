@@ -46,7 +46,7 @@ exports.checkWords = (envir, currentLanguage) => {
 
   Object.keys(wordsBank).forEach((wordsetKey) => {
     let words = wordsBank[wordsetKey];
-    langUtils.preprocessLemmaObjectsMinor(words);
+    // langUtils.preprocessLemmaObjectsMinor(words);
   });
 
   let nounPersonsWithoutGender =

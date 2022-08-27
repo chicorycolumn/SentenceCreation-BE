@@ -54,14 +54,27 @@ exports.isTraitCompatibleLObj = (trait, lObj, currentLanguage) => {
   );
 };
 
-exports.getStructureChunkTraits = (currentLanguage) => {
+exports.getStructureChunkTraits = (currentLanguage, lexicalOnly) => {
   let stChTraitsRefByLang = refObj.structureChunkTraits[currentLanguage];
   let stChTraitsRefAll = refObj.structureChunkTraits["ALL"];
 
-  return uUtils.combineTwoKeyValueObjectsCarefully(
+  let res = uUtils.combineTwoKeyValueObjectsCarefully(
     stChTraitsRefByLang,
     stChTraitsRefAll
   );
+
+  if (lexicalOnly) {
+    let trimmedRes = {};
+    Object.keys(res).forEach((key) => {
+      let value = res[key];
+      if (value.isLexical) {
+        trimmedRes[key] = value;
+      }
+    });
+    return trimmedRes;
+  }
+
+  return res;
 };
 
 exports.assignDefaultTraitValuesOrPossibleTraitValues = (

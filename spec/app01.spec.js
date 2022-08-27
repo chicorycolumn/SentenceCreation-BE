@@ -2255,7 +2255,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal07-03b GET 200 YES: Conjugate POL 'be' past pf, (should be treated as im and pf both). Ripplemin", () => {
+    it("#pal07-03b GET 200 YES: Conjugate POL 'be' past pf, (should be treated as im and pf both). This related to Operation Ripplemin where we removed preprocessLemmaObjectsMinor which in POL adjusted imperfectiveOnly to have a duplicate lObj with aspect perfective, but instead we have solved this with a meta trait value for aspect for eg być and mieć.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 

@@ -126,6 +126,9 @@ exports.metaTraitValues = {
     },
   },
   POL: {
+    aspect: {
+      _imOnly: ["imperfective", "perfective"],
+    },
     gcase: {
       _Gcases: ["nom", "acc", "gen", "dat", "loc", "ins"],
     },
@@ -522,7 +525,7 @@ exports.structureChunkTraits = {
       isLexical: true,
       compatibleWordtypes: ["verb"],
       expectedTypeOnStCh: "array",
-      possibleTraitValues: ["imperfective", "perfective"],
+      possibleTraitValues: ["imperfective", "perfective", "_imOnly"],
     },
     tense: {
       isLexical: true,

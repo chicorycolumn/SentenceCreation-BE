@@ -521,11 +521,11 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
 
   let doneSelectors = [];
 
-  let lemmaObjectIsMGN = gpUtils.lObjIsMGN(selectedLemmaObject);
-
   //STEP ZERO: Decisive Decant
   //Remove gender traitValues on stCh if drillPath doesn't include the traitKey 'gender' (ie is infinitive or a participle, say).
   //But if lObj is MGN, don't do this.
+  let lemmaObjectIsMGN = gpUtils.traitValueIsMeta(selectedLemmaObject.gender);
+
   if (
     !lemmaObjectIsMGN &&
     drillPath &&
@@ -535,48 +535,53 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
     structureChunk.gender = [];
   }
 
-  //STEP ONE: Update stCh gender with that of lObj.
-  if (selectedLemmaObject.gender) {
-    if (lemmaObjectIsMGN) {
-      //If lObj does have metagender, set stCh gender to converted traitValues or filter stCh's gender by them.
+  //STEP ONE: Update stCh gender with that of lObj, handling meta trait values too.
+  // For all lexical traitKeys, if the lObj has a meta trait value eg {aspect: "_imOnly"} or {gender: "_PersonalGenders"}.
+
+  const lexicalTraits = refFxn.getStructureChunkTraits(currentLanguage, true);
+
+  Object.keys(lexicalTraits).forEach((traitKey) => {
+    if (gpUtils.traitValueIsMeta(selectedLemmaObject[traitKey])) {
+      //If lObj does have metaTrait, set stCh trait to converted traitValues or filter stCh's trait by them.
 
       consol.log(
-        `nxej updateStChByAndTagsAndSelectors Clause S: lObj "${selectedLemmaObject.lemma}" has metaSelector gender`
+        `nxej updateStChByAndTagsAndSelectors Clause S: lObj "${selectedLemmaObject.lemma}" has metaSelector trait`
       );
       consol.log("nxej updateStChByAndTagsAndSelectors", structureChunk);
       consol.log(
         "[1;33m " +
-          `nxej updateStChByAndTagsAndSelectors in clause S start "${structureChunk.gender}"` +
+          `nxej updateStChByAndTagsAndSelectors in clause S start "${structureChunk[traitKey]}"` +
           "[0m"
       );
 
-      let metaGender = selectedLemmaObject.gender;
+      let metaTrait = selectedLemmaObject[traitKey];
 
-      let metaGenderConverted =
-        refObj.metaTraitValues[currentLanguage].gender[metaGender];
+      let metaTraitConverted =
+        refObj.metaTraitValues[currentLanguage][traitKey][metaTrait];
 
-      if (structureChunk.gender && structureChunk.gender.length) {
-        structureChunk.gender = structureChunk.gender.filter(
-          (genderTraitValue) => metaGenderConverted.includes(genderTraitValue)
+      if (structureChunk[traitKey] && structureChunk[traitKey].length) {
+        structureChunk[traitKey] = structureChunk[traitKey].filter(
+          (traitValue) => metaTraitConverted.includes(traitValue)
         );
       } else {
-        structureChunk.gender = metaGenderConverted.slice(0);
+        structureChunk[traitKey] = metaTraitConverted.slice(0);
       }
-      doneSelectors.push("gender");
+      doneSelectors.push(traitKey);
       consol.log(
         "[1;33m " +
-          `qdtx updateStChByAndTagsAndSelectors in clause S end "${structureChunk.gender}"` +
+          `qdtx updateStChByAndTagsAndSelectors in clause S end "${structureChunk[traitKey]}"` +
           "[0m"
       );
-    } else {
-      //If lObj has non-meta-gender, then update stCh with lObj gender.
-
-      consol.log(
-        "ijfw updateStChByAndTagsAndSelectors Clause R: lObj does not have metaSelector gender"
-      );
-      structureChunk.gender = [selectedLemmaObject.gender];
-      doneSelectors.push("gender");
     }
+  });
+
+  if (selectedLemmaObject.gender && !doneSelectors.includes("gender")) {
+    //If lObj has non-meta-gender, then update stCh with lObj gender.
+    consol.log(
+      "ijfw updateStChByAndTagsAndSelectors Clause R: lObj does not have metaSelector gender"
+    );
+    structureChunk.gender = [selectedLemmaObject.gender];
+    doneSelectors.push("gender");
   }
 
   //STEP TWO: Update the stCh's andTags with the lObj's tags.

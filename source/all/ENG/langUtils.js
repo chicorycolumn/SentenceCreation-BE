@@ -150,29 +150,6 @@ exports.preprocessStructureChunks = (structureChunk) => {
       });
     }
   }
-
-  //Gamma delete this?
-  // if (
-  //   //If gender is an appropriate traitKey of this wordtype.
-  //   refObj.lemmaObjectTraitKeys[currentLanguage].inflectionChains[
-  //     gpUtils.getWordtypeStCh(structureChunk)
-  //   ].includes("gender")
-  // ) {
-  // let metagenderRef = refObj.metaTraitValues[currentLanguage].gender;
-  //   if (!structureChunk.gender || !structureChunk.gender.length) {
-  //     //Fill out if blank.
-
-  //     if (
-  //       structureChunk.person &&
-  //       structureChunk.person.length &&
-  //       !structureChunk.person.includes("3per")
-  //     ) {
-  //       structureChunk.gender = metagenderRef["_PersonalGenders"].slice(0);
-  //     } else {
-  //       structureChunk.gender = metagenderRef["_Genders"].slice(0);
-  //     }
-  //   }
-  // }
 };
 
 exports.preprocessLemmaObjectsMajor = (
@@ -206,25 +183,6 @@ exports.preprocessLemmaObjectsMajor = (
 
   allLangUtils.convertmetaTraitValues(matches, "ENG", "lObj");
   // allLangUtils.preprocessLemmaObjects(matches, "ENG"); //Gamma
-};
-
-exports.preprocessLemmaObjectsMinor = (matches) => {
-  matches.forEach((lObj) => {
-    //ripplemin
-    if (["nounCommon", "nounPerson"].includes(gpUtils.getWordtypeLObj(lObj))) {
-      if (gpUtils.lObjIsNounPerson(lObj)) {
-        if (!lObj.gender) {
-          consol.throw(
-            "#ERR vuww preprocessLemmaObjectsMinor. The lObj '" +
-              lObj.id +
-              "' is a nounPerson so should have a gender traitKey."
-          );
-        }
-      } else {
-        lObj.gender = "n";
-      }
-    }
-  });
 };
 
 exports.formatTraitValue = (traitKey, traitValue, note) => {

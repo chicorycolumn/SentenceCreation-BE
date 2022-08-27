@@ -825,7 +825,7 @@ exports.wordsBank = {
       //selectors
       lemma: "być",
       id: "pol-ver-001-być",
-      aspect: "imperfective",
+      aspect: "_imOnly",
       //notes
       lacking: true,
 
@@ -1007,7 +1007,7 @@ exports.wordsBank = {
       //selectors
       lemma: "mieć",
       id: "pol-ver-002-mieć",
-      aspect: "imperfective",
+      aspect: "_imOnly",
       //notes
       lacking: true,
 

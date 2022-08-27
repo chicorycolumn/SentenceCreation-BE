@@ -177,32 +177,6 @@ exports.preprocessLemmaObjectsMajor = (
   allLangUtils.convertmetaTraitValues(matches, "POL", "lObj");
 };
 
-exports.preprocessLemmaObjectsMinor = (matches) => {
-  exports.adjustImperfectiveOnly(matches); //ripplemin
-};
-
-exports.adjustImperfectiveOnly = (matches) => {
-  let extraLemmaObjects = [];
-
-  matches.forEach((lObj) => {
-    if (lObj.imperfectiveOnly_unadjusted && lObj.aspect === "imperfective") {
-      lObj.imperfectiveOnly = true;
-      delete lObj.imperfectiveOnly_unadjusted;
-
-      let adjustedLemmaObject = uUtils.copyWithoutReference(lObj);
-
-      adjustedLemmaObject.aspect = "perfective";
-      adjustedLemmaObject.id = `${lObj.id}*pf`;
-
-      extraLemmaObjects.push(adjustedLemmaObject);
-    }
-  });
-
-  extraLemmaObjects.forEach((extraLemmaObject) => {
-    matches.push(extraLemmaObject);
-  });
-};
-
 exports.addLanguageParticularClarifiers = () => {
   //
   //Type 6 Synhomographs: Add clarifier for ambiguous verb participles (Un-PW).
@@ -229,7 +203,7 @@ exports.adjustTenseDescriptionsBeforeTranslating = (
   tenseDescriptions,
   questionSelectedLemmaObject
 ) => {
-  if (questionSelectedLemmaObject.imperfectiveOnly) {
+  if (questionSelectedLemmaObject.aspect === "_imOnly") {
     const imperfectiveOnlyConversionRef = {
       "past im": "past pf",
       "past pf": "past im",
@@ -342,8 +316,7 @@ exports.fillVerbInflections = (lemmaObject) => {
   //Only fill it out if the key is present and holds value true.
 
   if (
-    aspect === "imperfective" ||
-    lemmaObject.imperfectiveOnly
+    ["imperfective", "_imOnly"].includes(aspect)
     //This is indeed nec to include the impOnly pf lObjs, as im and pf lobjs go through slightly different process here below,
     //and for these purposes, we still need to think of the pf clones of impOnly lobjs as being im, not pf.
   ) {
@@ -467,22 +440,19 @@ exports.fillVerbInflections = (lemmaObject) => {
   if (typeof inflections.verbal.imperative === "string") {
     let imperativeBase = inflections.verbal.imperative;
 
-    let presentFirstSingular =
-      aspect === "imperfective" || lemmaObject.imperfectiveOnly
-        ? inflections.verbal.present["1per"].singular
-            ._SingularGendersExcludingNeuter
-        : inflections.verbal.future["1per"].singular
-            ._SingularGendersExcludingNeuter;
+    let presentFirstSingular = ["imperfective", "_imOnly"].includes(aspect)
+      ? inflections.verbal.present["1per"].singular
+          ._SingularGendersExcludingNeuter
+      : inflections.verbal.future["1per"].singular
+          ._SingularGendersExcludingNeuter;
 
-    let presentThirdSingular =
-      aspect === "imperfective" || lemmaObject.imperfectiveOnly
-        ? inflections.verbal.present["3per"].singular._SingularGenders
-        : inflections.verbal.future["3per"].singular._SingularGenders;
+    let presentThirdSingular = ["imperfective", "_imOnly"].includes(aspect)
+      ? inflections.verbal.present["3per"].singular._SingularGenders
+      : inflections.verbal.future["3per"].singular._SingularGenders;
 
-    let presentThirdPlural =
-      aspect === "imperfective" || lemmaObject.imperfectiveOnly
-        ? inflections.verbal.present["3per"].plural._PluralGenders
-        : inflections.verbal.future["3per"].plural._PluralGenders;
+    let presentThirdPlural = ["imperfective", "_imOnly"].includes(aspect)
+      ? inflections.verbal.present["3per"].plural._PluralGenders
+      : inflections.verbal.future["3per"].plural._PluralGenders;
 
     let filledOutImperatives = {
       "1per": {

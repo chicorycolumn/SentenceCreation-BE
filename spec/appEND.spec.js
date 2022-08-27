@@ -18,9 +18,7 @@ describe("/api", function () {
 
   describe("/palette - Stage Ω Omega: Checks at end of all tests.", () => {
     /**Actually I think it is fine for us to be mutating lemma objects, because
-     * we don't write them back into the word banks after creating sentence. And the
-     * only mutation is the processing from preprocessLemmaObjectsMinor. So instead,
-     * we now use this test to check that it's only those changes happening.
+     * we don't write them back into the word banks after creating sentence.
      */
 
     it("#palΩ-01 Words and Formulas banks were not mutated.", () => {
@@ -35,13 +33,6 @@ describe("/api", function () {
 
         let words = scUtils.getWordsAndFormulas(lang);
         actual[lang] = words;
-
-        Object.values(original[lang].wordsBank).forEach((wordset) => {
-          langUtils.preprocessLemmaObjectsMinor(wordset);
-        });
-        Object.values(original[lang].dummyWordsBank).forEach((wordset) => {
-          langUtils.preprocessLemmaObjectsMinor(wordset);
-        });
       });
 
       expect(actual).to.eql(original);

@@ -1130,8 +1130,6 @@ exports.conformAnswerStructureToQuestionStructure = (
 
     let source = words[gpUtils.getWordtypeShorthandStCh(answerStructureChunk)];
 
-    // answerLangUtils.preprocessLemmaObjectsMinor(source); //alpha should actually do this.
-
     matchingAnswerLemmaObjects = source.filter(
       (lObj) =>
         lObjsToSearch.includes(lObj.id) &&
