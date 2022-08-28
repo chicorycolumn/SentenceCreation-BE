@@ -2171,7 +2171,7 @@ exports.wordsBank = {
                   isTerminus: true,
                   processOnlyAtEnd: true,
                   unstressed: ["mi"],
-                  stressed: ["mnie"], //alpha, wait what?
+                  stressed: ["mnie"], //Alpha, be aware of this.
                 },
                 acc: "mnie",
                 ins: "mną",

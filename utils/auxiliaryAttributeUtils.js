@@ -379,7 +379,7 @@ exports.addSpecifiersToMGNs = (questionSentenceData, languagesObj) => {
   const answerLangUtils = require(`../source/all/${answerLanguage}/langUtils.js`);
 
   let metaGenders = Object.keys(
-    refObj.metaTraitValues[questionLanguage]["gender"]
+    refObj.metaTraitValues[questionLanguage].gender
   );
 
   let questionUnitsToSpecify = questionOutputArr.filter(
@@ -917,7 +917,7 @@ exports.setPDSValues = (questionSentenceFormula, questionLanguage) => {
         if (
           qChunk.gender &&
           qChunk.gender.length &&
-          refObj.metaTraitValues[questionLanguage]["gender"][
+          refObj.metaTraitValues[questionLanguage].gender[
             refObj.getNounGenderTraitValues(
               gpUtils.getWordtypeShorthandStCh(qChunk)
             )
@@ -931,7 +931,7 @@ exports.setPDSValues = (questionSentenceFormula, questionLanguage) => {
         if (
           qChunk.gender &&
           qChunk.gender.length &&
-          !refObj.metaTraitValues[questionLanguage]["gender"][
+          !refObj.metaTraitValues[questionLanguage].gender[
             refObj.getNounGenderTraitValues(
               gpUtils.getWordtypeShorthandStCh(qChunk)
             )

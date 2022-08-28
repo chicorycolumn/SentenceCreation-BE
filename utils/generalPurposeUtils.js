@@ -444,10 +444,6 @@ exports.getWordsFromTerminusObject = (tObj, shouldGetAll) => {
 };
 
 exports.lObjIsMGN = (lObj) => {
-  if (!lObj.gender) {
-    return false;
-  }
-
   return this.traitValueIsMeta(lObj.gender);
 };
 

@@ -5,6 +5,30 @@ const uUtils = require("../utils/universalUtils.js");
 const consol = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 
+exports.addHiddenNumberToTantumStChs = (lObj, stCh) => {
+  let tantumsRef = {
+    tantumPlurale: "plural",
+    tantumSingulare: "singular",
+  };
+
+  Object.keys(tantumsRef).forEach((tantumKey) => {
+    if (lObj[tantumKey]) {
+      if (!stCh.number) {
+        consol.throw("cipp");
+      }
+
+      let tantumCompatibleNumberValue = tantumsRef[tantumKey];
+
+      if (!stCh.hiddenTraits) {
+        stCh.hiddenTraits = {};
+      }
+
+      stCh.hiddenTraits.number = [...stCh.number];
+      stCh.number = [tantumCompatibleNumberValue];
+    }
+  });
+};
+
 exports.expandLemmaObjects = (matches, currentLanguage) => {
   allLangUtils.convertmetaTraitValues(matches, currentLanguage, "lObj");
 };
@@ -80,8 +104,7 @@ exports.translateAnnoTraitValue = (
 
     let annotationToPlainspeakRef = refObj.annotationToPlainspeakRef;
 
-    let adjustedAnnotation =
-      annotationToPlainspeakRef["gender"][annoTraitValue];
+    let adjustedAnnotation = annotationToPlainspeakRef.gender[annoTraitValue];
 
     return typeof adjustedAnnotation === "string"
       ? adjustedAnnotation
@@ -171,7 +194,7 @@ exports.adjustVirilityOfStructureChunk = (
     if (/^_/.test(genderValue)) {
       metaTranslatedGenderArr = [
         ...metaTranslatedGenderArr,
-        ...refObj.metaTraitValues[currentLanguage]["gender"][genderValue],
+        ...refObj.metaTraitValues[currentLanguage].gender[genderValue],
       ];
     } else {
       metaTranslatedGenderArr.push(genderValue);
@@ -636,7 +659,7 @@ exports.correctMGNsBeforeFetchingOutputArray = (
 
   let metagenderCorrectedByNumberRef = refObj.metaCorrectionRef[
     currentLanguage
-  ]["gender"].find(
+  ].gender.find(
     (obj) =>
       Object.keys(obj.condition).includes("number") &&
       obj.condition.number === structureChunk.number[0]
@@ -701,6 +724,4 @@ exports.correctMGNsBeforeFetchingOutputArray = (
     `wpon correctMGNsBeforeFetchingOutputArray. ${structureChunk.chunkId} ${currentLanguage}. stCh ENDS as:`,
     structureChunk
   );
-
-  // consol.throw(222);
 };

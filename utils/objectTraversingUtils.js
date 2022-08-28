@@ -492,31 +492,6 @@ exports.findMatchingLemmaObjectThenWord = (
       currentLanguage
     );
 
-    function addHiddenNumberToTantumStChs(lObj, stCh) {
-      let tantumsRef = {
-        tantumPlurale: "plural",
-        tantumSingulare: "singular",
-      };
-
-      Object.keys(tantumsRef).forEach((tantumKey) => {
-        if (lObj[tantumKey]) {
-          if (!stCh.number) {
-            consol.throw("cipp");
-          }
-
-          let tantumCompatibleNumberValue = tantumsRef[tantumKey];
-
-          if (!stCh.hiddenTraits) {
-            stCh.hiddenTraits = {};
-          }
-
-          stCh.hiddenTraits.number = [...stCh.number];
-
-          stCh.number = [tantumCompatibleNumberValue];
-        }
-      });
-    }
-
     if (!matchesCopy.length) {
       consol.log(
         "[1;31m " +
@@ -539,7 +514,10 @@ exports.findMatchingLemmaObjectThenWord = (
           selectedLemmaObject
         );
 
-        addHiddenNumberToTantumStChs(selectedLemmaObject, structureChunk);
+        allLangUtils.addHiddenNumberToTantumStChs(
+          selectedLemmaObject,
+          structureChunk
+        );
 
         if (outputArray) {
           consol.log(
@@ -626,7 +604,10 @@ exports.findMatchingLemmaObjectThenWord = (
       consol.log("xzjc ot:findMatchingLemmaObjectThenWord");
       let selectedLemmaObject = uUtils.selectRandom(matchesCopy);
 
-      addHiddenNumberToTantumStChs(selectedLemmaObject, structureChunk);
+      allLangUtils.addHiddenNumberToTantumStChs(
+        selectedLemmaObject,
+        structureChunk
+      );
 
       if (!structureChunk.dontSpecifyOnThisChunk) {
         //PDS-Beryl: Do if PDS false.
@@ -1361,7 +1342,10 @@ exports.switchMetaTraitValueForAWorkableConvertedTraitValue = (
     "[1;33m " +
       `ivwa ` +
       consoleLogEtiquette +
-      `. >>unkeyed metaTraitValue clause<<. inflectionKey is a metaTraitValue: "${inflectionKey}", but it is not present on the source. So, we should check if the source has corresponding inflectionKeys, eg for _PersonalGenders it would be [m, f], and if they hold all the same inflectionKeys, then we should let this work.` +
+      `. >>unkeyed metaTraitValue clause<<. inflectionKey is a metaTraitValue: "${inflectionKey}", 
+      but it is not present on the source. So, we should check if the source has corresponding inflectionKeys, 
+      eg for _PersonalGenders it would be [m, f], and if they hold all the same inflectionKeys, 
+      then we should let this work.` +
       "[0m"
   );
 
@@ -1426,7 +1410,9 @@ exports.switchMetaTraitValueForAWorkableConvertedTraitValue = (
       So I'll pick one, and make sure to set the stCh to acknowledge this.`
     );
 
-    structureChunk.gender = [selectedConvertedMetaTraitValue];
+    if (inflectionCategory === "gender") {
+      structureChunk.gender = [selectedConvertedMetaTraitValue];
+    }
 
     return selectedConvertedMetaTraitValue;
   }

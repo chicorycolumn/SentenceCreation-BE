@@ -199,6 +199,9 @@ exports.filterWithin_PHD = (
       )[1];
 
       if (gpUtils.traitValueIsMeta(inflectionKey) && !source[inflectionKey]) {
+        consol.logBlueWithBorder(
+          "igyd Surprisingly s'witchMetaTraitValueForAWorkableConvertedTraitValue() is now used, though I would have expected by this point the lObjs have been expanded, ie the meta trait values inside their inflections object have been replaced, so odd that we reach this point now."
+        );
         inflectionKey =
           otUtils.switchMetaTraitValueForAWorkableConvertedTraitValue(
             inflectionCategory,
@@ -378,12 +381,6 @@ exports.filterWithinSelectedLemmaObject = (
           inflectionCategory,
           inflectionKey
         );
-
-        // consol.log(
-        //   "afwm lf:filterWithinSelectedLemmaObject: formattedInflectionKeyArr",
-        //   formattedInflectionKeyArr
-        // );
-
         inflectionKeyArr = [...inflectionKeyArr, ...formattedInflectionKeyArr];
       });
     }
@@ -1014,6 +1011,9 @@ exports.traverseAndRecordInflections = (
       gpUtils.traitValueIsMeta(chosenInflectionKey) &&
       !source[chosenInflectionKey]
     ) {
+      consol.logBlueWithBorder(
+        "escm Surprisingly s'witchMetaTraitValueForAWorkableConvertedTraitValue() is now used, though I would have expected by this point the lObjs have been expanded, ie the meta trait values inside their inflections object have been replaced, so odd that we reach this point now."
+      );
       chosenInflectionKeyAdjusted =
         otUtils.switchMetaTraitValueForAWorkableConvertedTraitValue(
           reqInflectionCategory,
@@ -1021,7 +1021,7 @@ exports.traverseAndRecordInflections = (
           source,
           currentLanguage,
           structureChunk,
-          "traverseAndRecordInflections ->  reqInflectionKeys.forEach"
+          "traverseAndRecordInflections -> reqInflectionKeys.forEach"
         );
     }
 
