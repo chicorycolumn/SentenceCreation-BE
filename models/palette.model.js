@@ -191,7 +191,7 @@ exports.fetchPalette = (req) => {
 
     console.log("[1;35m " + "}}}" + "[0m");
 
-    consol.consoleLogAestheticBorder(4);
+    consol.logAestheticBorder(4);
 
     consol.throw("Midpoint cease.");
   }

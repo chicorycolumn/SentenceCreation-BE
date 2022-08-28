@@ -1188,11 +1188,11 @@ exports.conformAnswerStructureToQuestionStructure = (
       // STEP ONE: Update traits from list of allowable transfers.
       //
 
-      consol.logSpecial5(">>>>>>>>>>>>>>>>>", questionStructureChunk.chunkId);
-      consol.logSpecial5(answerStructureChunk);
+      consol.logSpecial(5, ">>>>>>>>>>>>>>>>>", questionStructureChunk.chunkId);
+      consol.logSpecial(5, answerStructureChunk);
 
       if (traitKey === "number") {
-        consol.logSpecial5("qqqa", questionStructureChunk.number);
+        consol.logSpecial(5, "qqqa", questionStructureChunk.number);
       }
 
       //Step-T, dealing with hidden values.
@@ -1210,7 +1210,7 @@ exports.conformAnswerStructureToQuestionStructure = (
       }
 
       if (traitKey === "number") {
-        consol.logSpecial5("qqqb", questionStructureChunk.number);
+        consol.logSpecial(5, "qqqb", questionStructureChunk.number);
       }
 
       if (!questionStructureChunk[traitKey]) {
@@ -1283,7 +1283,7 @@ exports.conformAnswerStructureToQuestionStructure = (
         answerLanguage
       );
 
-      consol.logSpecial5(answerStructureChunk);
+      consol.logSpecial(5, answerStructureChunk);
 
       //Step-T, dealing with hidden values.
       if (

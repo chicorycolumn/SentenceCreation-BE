@@ -794,7 +794,7 @@ exports.checkTranslationsOfGivenRef = (
   answerLanguage
 ) => {
   let testActivated = false;
-  consol.logSpecialTestOutput(res.body);
+  consol.logTestOutputSolely(res.body);
 
   //Unpack ref so questionLanguage is just one string per refItem.
   let refItemsWithQuestionString = [];

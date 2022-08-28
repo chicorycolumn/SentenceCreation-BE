@@ -292,18 +292,19 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   runsRecord
 ) => {
   if (!"console") {
-    consol.logSpecial3("");
-    consol.logSpecial3("*");
-    consol.logSpecial3("removeAnnotationsByCounterfactualAnswerSentences");
-    consol.logSpecial3(
+    consol.logSpecial(3, "");
+    consol.logSpecial(3, "*");
+    consol.logSpecial(3, "removeAnnotationsByCounterfactualAnswerSentences");
+    consol.logSpecial(
+      3,
       `There are ${explodedCounterfaxSituationsSchematics.length} schematics.`
     );
     explodedCounterfaxSituationsSchematics.forEach((x, index) => {
-      consol.logSpecial3(x);
+      consol.logSpecial(3, x);
       if (!index) {
-        consol.logSpecial3("^^^ ORIGINAL ^^^");
+        consol.logSpecial(3, "^^^ ORIGINAL ^^^");
       }
-      consol.logSpecial3("-");
+      consol.logSpecial(3, "-");
     });
   }
 
@@ -378,7 +379,8 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           counterfactualSitSchematic
         );
         if (counterfactualSitSchematic.cfLabel !== newCfLabel) {
-          consol.logSpecial3(
+          consol.logSpecial(
+            3,
             `ncui Changing cfLabel of ORIGINAL from "${counterfactualSitSchematic.cfLabel}" to "${newCfLabel}"`
           );
           counterfactualSitSchematic.cfLabel = newCfLabel;
@@ -443,8 +445,9 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
                 stChToCounterfax.gender[0]
               )
             ) {
-              // consol.logSpecial3(
-              consol.logSpecial3(
+              // consol.logSpecial(3,
+              consol.logSpecial(
+                3,
                 `kcaq Dropping current counterfax sit: "${counterfactualSitSchematic.cfLabel}" ie not send to fetchPalette, 
                 as it has gender [${stChToCounterfax.number}] and number [${stChToCounterfax.gender[0]}].`
               );
@@ -457,10 +460,10 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           return;
         }
 
-        consol.logSpecial3("--------eggd--------");
+        consol.logSpecial(3, "--------eggd--------");
 
-        consol.logSpecial3("number", stChToCounterfax.number);
-        consol.logSpecial3("gender", stChToCounterfax.gender);
+        consol.logSpecial(3, "number", stChToCounterfax.number);
+        consol.logSpecial(3, "gender", stChToCounterfax.gender);
 
         allLangUtils.adjustVirilityOfStructureChunk(
           questionLanguage,
@@ -500,10 +503,10 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           }
         }
 
-        consol.logSpecial3("↓");
-        consol.logSpecial3("gender", stChToCounterfax.gender);
+        consol.logSpecial(3, "↓");
+        consol.logSpecial(3, "gender", stChToCounterfax.gender);
 
-        consol.logSpecial3("~~~~~~~~~~~~~~~~~~~~");
+        consol.logSpecial(3, "~~~~~~~~~~~~~~~~~~~~");
 
         //Update the counterfactualSitSchematic assignments now that they may have changed from adjust virility.
         tempCopySchematicForThisChunk.forEach((assignment) => {
@@ -523,11 +526,14 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           let traitValueAfterAdjust = traitValuesAfterAdjust[0];
 
           if (traitValueBeforeAdjust !== traitValueAfterAdjust) {
-            consol.logSpecial3(`klnn For sit "${counterfactualSitSchematic.cfLabel}", structure chunk "${chunkId}" has changed from
+            consol.logSpecial(
+              3,
+              `klnn For sit "${counterfactualSitSchematic.cfLabel}", structure chunk "${chunkId}" has changed from
             "${traitKey}" = "${traitValueBeforeAdjust}" to "${traitValueAfterAdjust}". The former value is from counterfax listing
             and exploding, but that process naturally creates bad virility combinations like number singular gender nonvirile. So
             that has now been adjusted in this sit. The cfLabel will be updated accordingly. And this sit may even be stopped here 
-            (ie not be sent to fetchPalette) because an identical (now after virility adjustment) sit may have already been through.`);
+            (ie not be sent to fetchPalette) because an identical (now after virility adjustment) sit may have already been through.`
+            );
 
             counterfactualSitSchematic[chunkId].find(
               (assig) => assig.traitKey === traitKey
@@ -545,14 +551,16 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         counterfactualSitSchematic
       );
       if (counterfactualSitSchematic.cfLabel !== newCfLabel) {
-        consol.logSpecial3(
+        consol.logSpecial(
+          3,
           `ncuo Changing cfLabel from "${counterfactualSitSchematic.cfLabel}" to "${newCfLabel}"`
         );
         counterfactualSitSchematic.cfLabel = newCfLabel;
       }
 
       if (runsRecord.includes(counterfactualSitSchematic.cfLabel)) {
-        consol.logSpecial3(
+        consol.logSpecial(
+          3,
           `dssb Dropping current counterfax sit: "${counterfactualSitSchematic.cfLabel}" ie not send to fetchPalette, 
           because after adjusting virility, it turns out an identical one has already been done.`
         );
@@ -585,7 +593,8 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         devSaysThrowAfterAnnoSalvo: reqBody.devSaysThrowAfterAnnoSalvo,
       };
 
-      consol.logSpecial3(
+      consol.logSpecial(
+        3,
         `> > > Sending counterfax sit "${counterfactualSitSchematic.cfLabel}" to fetchPalette.`
       );
 
@@ -593,7 +602,8 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
     }
   );
 
-  consol.logSpecial3(
+  consol.logSpecial(
+    3,
     "ewcc allCounterfactualResults.length",
     allCounterfactualResults.length
   );
@@ -751,7 +761,8 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
     return resArr;
   }
 
-  consol.logSpecial3(
+  consol.logSpecial(
+    3,
     "wkop annotationsToCounterfaxAndTheirChunkIds",
     annotationsToCounterfaxAndTheirChunkIds
   );
@@ -1004,7 +1015,8 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         )
       ) {
         //Remove annotation: INOSCULATE.
-        consol.logSpecial3(
+        consol.logSpecial(
+          3,
           "[1;35m " +
             `myxo-clauseA [Inosculate: answersame so deleting anno] removeAnnotationsByCounterfax END. 
               I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" 
@@ -1037,7 +1049,8 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         )
       ) {
         //Remove annotation: COPPICE
-        consol.logSpecial3(
+        consol.logSpecial(
+          3,
           "[1;35m " +
             `myxo-clauseB [Coppice: questiondifferent so deleting anno] removeAnnotationsByCounterfax END. 
           I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual 
@@ -1063,7 +1076,8 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             annoDataObjIndex
           );
       } else {
-        consol.logSpecial3(
+        consol.logSpecial(
+          3,
           "[1;35m " +
             `myxo-clauseC [tl;dr !answersame && !questiondifferent so keeping anno] removeAnnotationsByCounterfax END. 
           I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual answer 
@@ -1136,7 +1150,8 @@ exports.agglomerateAndRemoveAnnosIfSameResults = (
       ...counterfactualAnswerOutputArrObjs.map((obj) => obj.arr),
     ];
 
-    consol.logSpecial3(
+    consol.logSpecial(
+      3,
       `PDS-Diamond. Agglomerating the answer output arrays and deleting originalAnnoTraitValue "${originalAnnoTraitValue}", and questionOutputUnit.structureChunk[${annoTraitKey}] is now [${combinedTraitValues}]`
     );
 

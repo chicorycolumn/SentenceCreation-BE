@@ -28,7 +28,8 @@ exports.checkDecisiveDecant = (questionSentenceData, questionLanguage) => {
 
     Object.keys(structureChunk).forEach((traitKey) => {
       let traitValue = structureChunk[traitKey];
-      consol.logSpecial4(
+      consol.logSpecial(
+        4,
         `oyxp to check "${structureChunk.chunkId}" for "${traitKey}": [${traitValue}]`
       );
 

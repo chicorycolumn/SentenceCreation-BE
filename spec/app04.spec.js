@@ -341,7 +341,7 @@ function checkSentenceTranslations(
     );
   }
 
-  consol.logSpecialTestOutput(res.body);
+  consol.logTestOutputSolely(res.body);
 
   let questionSentence = body.questionSentenceArr[0];
   let { answerSentenceArr } = body;

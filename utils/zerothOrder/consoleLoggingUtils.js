@@ -1,58 +1,25 @@
 const consol = require("./consoleLoggingUtils.js");
 
 exports.log = (...args) => {
-  if (
-    !["r", "r1", "r2", "r3", "r4", "r5", "r6", "t"].some((flag) =>
-      process.argv.includes(flag)
-    )
-  ) {
+  if (!process.argv.some((el) => ["t", "r"].includes(el[0]))) {
     console.log(...args);
   }
 };
 
-exports.logSpecial1 = (...args) => {
-  if (process.argv[process.argv.length - 1].split("r").includes("1")) {
+exports.logSpecial = (num, ...args) => {
+  let lastArg = process.argv[process.argv.length - 1];
+  if (lastArg[0] === "r" && lastArg.slice(1) === num.toString()) {
     console.log(...args);
   }
 };
 
-exports.logSpecial2 = (...args) => {
-  if (process.argv[process.argv.length - 1].split("r").includes("2")) {
-    console.log(...args);
-  }
-};
-
-exports.logSpecial3 = (...args) => {
-  if (process.argv[process.argv.length - 1].split("r").includes("3")) {
-    console.log(...args);
-  }
-};
-
-exports.logSpecial4 = (...args) => {
-  if (process.argv[process.argv.length - 1].split("r").includes("4")) {
-    console.log(...args);
-  }
-};
-
-exports.logSpecial5 = (...args) => {
-  if (process.argv[process.argv.length - 1].split("r").includes("5")) {
-    console.log(...args);
-  }
-};
-
-exports.logSpecial6 = (...args) => {
-  if (process.argv[process.argv.length - 1].split("r").includes("6")) {
-    console.log(...args);
-  }
-};
-
-exports.logSpecialTestOutput = (...args) => {
+exports.logTestOutputSolely = (...args) => {
   if (process.argv[process.argv.length - 1] === "t") {
     console.log(...args);
   }
 };
 
-exports.consoleLogObjectAtOneLevel = (obj, etiquette, originEtiquette) => {
+exports.logObjectOneLevel = (obj, etiquette, originEtiquette) => {
   if (!obj) {
     consol.log(
       "[1;33m " +
@@ -79,7 +46,7 @@ exports.consoleLogObjectAtOneLevel = (obj, etiquette, originEtiquette) => {
   consol.log("[1;32m " + `--` + "[0m");
 };
 
-exports.consoleLogObjectAtTwoLevels = (obj, etiquette, originEtiquette) => {
+exports.logObjectTwoLevels = (obj, etiquette, originEtiquette) => {
   if (!obj) {
     consol.log(
       "[1;33m " +
@@ -114,7 +81,7 @@ exports.consoleLogObjectAtTwoLevels = (obj, etiquette, originEtiquette) => {
   consol.log("[1;32m " + `--` + "[0m");
 };
 
-exports.consoleLogAestheticBorder = (reps) => {
+exports.logAestheticBorder = (reps) => {
   let border =
     " │ ║ ▌ │ ║ ▌ ║ ▌ █ ║ ▌ ║ █ ║ ▌ │ ║ ▌ │ ║ ▌ ║ █ ║ ▌ │ ║ ▌ │ ║ ▌ ║ ▌ █ ║ ▌ ║ █ ║ ▌ │ ║ ▌ │ ║ ▌ ║ ▌ █ ║ ▌ ║ █ ║ ▌ │ ▌ ║ █ ║ ▌ │ ║ ▌ │ ║";
 
@@ -123,17 +90,15 @@ exports.consoleLogAestheticBorder = (reps) => {
   }
 };
 
-exports.consoleLogPW = (etiquette, structureChunk, multipleMode) => {
+exports.logPathwayTitle = (etiquette, structureChunk, multipleMode) => {
   if (multipleMode) {
-    consol.consoleLogYellowWithBorder(
-      `##${etiquette} ${structureChunk.chunkId}`
-    );
+    consol.logYellowWithBorder(`##${etiquette} ${structureChunk.chunkId}`);
   } else {
-    consol.consoleLogBlueWithBorder(`##${etiquette} ${structureChunk.chunkId}`);
+    consol.logBlueWithBorder(`##${etiquette} ${structureChunk.chunkId}`);
   }
 };
 
-exports.consoleLogYellowWithBorder = (text) => {
+exports.logYellowWithBorder = (text) => {
   consol.log(" ");
   consol.log(
     "[1;33m " +
@@ -159,7 +124,7 @@ exports.consoleLogYellowWithBorder = (text) => {
   consol.log(" ");
 };
 
-exports.consoleLogBlueWithBorder = (text) => {
+exports.logBlueWithBorder = (text) => {
   consol.log(" ");
   consol.log(
     "[1;36m " +
@@ -185,7 +150,7 @@ exports.consoleLogBlueWithBorder = (text) => {
   consol.log(" ");
 };
 
-exports.consoleLogPurpleWithBorder = (text) => {
+exports.logPurpleWithBorder = (text) => {
   consol.log(" ");
   consol.log(
     "[1;35m " +

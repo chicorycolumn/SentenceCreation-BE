@@ -67,7 +67,7 @@ exports.filterWithin_PHD = (
     PHD_type: PHDstructureChunk.PHD_type,
     postHocInflectionChains,
   });
-  // consol.consoleLogObjectAtTwoLevels(
+  // consol.logObjectTwoLevels(
   //   outputArray,
   //   "outputArray",
   //   "filterWithin_PHD"
@@ -426,7 +426,7 @@ exports.filterWithinSelectedLemmaObject = (
       requirementArrs,
       "\n\n\n iszn when I was looking inside this source"
     );
-    consol.consoleLogObjectAtTwoLevels(source);
+    consol.logObjectTwoLevels(source);
     consol.log("\n\n\n");
 
     consol.log(

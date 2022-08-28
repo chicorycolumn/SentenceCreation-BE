@@ -30,7 +30,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
   //STEP ONE: Fx-PW: Pathway for Fixed pieces.
   if (gpUtils.getWordtypeStCh(structureChunk) === "fixed") {
-    consol.consoleLogPW("##Fx-PW", structureChunk, multipleMode);
+    consol.logPathwayTitle("##Fx-PW", structureChunk, multipleMode);
 
     return [
       {
@@ -146,7 +146,7 @@ exports.findMatchingLemmaObjectThenWord = (
       )
     )
   ) {
-    consol.consoleLogPW("##Ad-PW-F", structureChunk, multipleMode);
+    consol.logPathwayTitle("##Ad-PW-F", structureChunk, multipleMode);
 
     if (multipleMode) {
       matches.forEach((selectedLemmaObject) => {
@@ -219,7 +219,7 @@ exports.findMatchingLemmaObjectThenWord = (
         structureChunk[adhocInflectionCategory] &&
         structureChunk[adhocInflectionCategory].length
       ) {
-        consol.consoleLogPW("##Ad-PW-I", structureChunk, multipleMode);
+        consol.logPathwayTitle("##Ad-PW-I", structureChunk, multipleMode);
 
         if (multipleMode) {
           matches.forEach((selectedLemmaObject) => {
@@ -300,7 +300,7 @@ exports.findMatchingLemmaObjectThenWord = (
           );
 
           if (requestedUninflectedForms.length) {
-            consol.consoleLogPW("##Un-PW", structureChunk, multipleMode);
+            consol.logPathwayTitle("##Un-PW", structureChunk, multipleMode);
 
             if (multipleMode) {
               requestedUninflectedForms.forEach((selectedUninflectedForm) => {
@@ -529,7 +529,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
     //    STEP FOUR-B: Getting the inflected word.
 
-    consol.consoleLogPW("##If-PW", structureChunk, multipleMode);
+    consol.logPathwayTitle("##If-PW", structureChunk, multipleMode);
 
     if (multipleMode) {
       consol.log("iksf ot:findMatchingLemmaObjectThenWord");
@@ -701,14 +701,14 @@ exports.findMatchingLemmaObjectThenWord = (
       consol.log(
         "sfmo ot:findMatchingLemmaObjectThenWord subArrayOfOutputUnits"
       );
-      consol.consoleLogObjectAtOneLevel(subArrayOfOutputUnits);
+      consol.logObjectOneLevel(subArrayOfOutputUnits);
 
       if (
         structureChunk.merelyPreferredChoicesForQuestionSentence &&
         Object.keys(structureChunk.merelyPreferredChoicesForQuestionSentence)
           .length
       ) {
-        consol.consoleLogObjectAtOneLevel(
+        consol.logObjectOneLevel(
           structureChunk.merelyPreferredChoicesForQuestionSentence
         );
 
