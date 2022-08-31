@@ -119,7 +119,9 @@ exports.fetchPalette = (req) => {
         answerLanguage
       );
     }
-  } else if (forceMultipleModeAndQuestionOnly) {
+  }
+
+  if (forceMultipleModeAndQuestionOnly) {
     if (requestingSingleWordOnly) {
       return frUtils.sendResponseForSingleWord(questionSentenceData);
     } else {
@@ -135,8 +137,12 @@ exports.fetchPalette = (req) => {
         return sentence;
       });
 
+      deduplicatedArrForEducatorInterface = Array.from(
+        new Set(uUtils.flatten(arr))
+      );
+
       return frUtils.finishAndSend({
-        finalSentenceArr: uUtils.flatten(arr),
+        finalSentenceArr: deduplicatedArrForEducatorInterface,
       });
     }
   } else {

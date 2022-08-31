@@ -11,7 +11,55 @@ const testingUtils = require("../utils/secondOrder/testingUtils.js");
 
 const { getStChsForLemma } = require("../utils/secondOrder/apiUtils.js");
 
-xdescribe("/educator/sandbox - Testing API.", () => {
+describe("/educator/sandbox - Testing API.", () => {
+  it("#san03 GET 200 YES: Deduplicating specially treated imOnly verbs like 'być'.", () => {
+    const questionLanguage = "POL";
+
+    let numberString = Date.now();
+
+    const sentenceFormulaFromEducator = {
+      sentenceFormulaSymbol: numberString,
+      sentenceFormulaId: `${questionLanguage}-${numberString}`,
+      translations: {},
+      sentenceStructure: [
+        {
+          chunkId: "ver-1",
+          agreeWith: "npe-1",
+          specificIds: ["pol-ver-001-być"],
+        },
+        {
+          chunkId: "npe-1",
+          specificIds: ["pol-npe-001-kobieta"],
+          gcase: ["nom"],
+          number: ["singular"],
+        },
+      ],
+      primaryOrders: [["npe-1", "ver-1"]],
+    };
+
+    const expected = {
+      questionSentenceArr: [
+        "Kobieta jest.",
+        "Kobieta była.",
+        "Kobieta będzie.",
+      ],
+    };
+
+    return request(app)
+      .get("/api/palette")
+      .send({
+        questionLanguage,
+        forceMultipleModeAndQuestionOnly: true,
+        sentenceFormulaFromEducator,
+      })
+      .expect(200)
+      .then((res) => {
+        res.body.questionSentenceArr = res.body.questionSentenceArr.sort();
+        expected.questionSentenceArr = expected.questionSentenceArr.sort();
+
+        expect(res.body).to.eql(expected);
+      });
+  });
   it("#san02 GET 200 YES: Educator queries a sentence, Q only but still wants multiple mode.", () => {
     const questionLanguage = "POL";
 

@@ -4,13 +4,27 @@ const consol = require("./zerothOrder/consoleLoggingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 
 exports.sendResponseForSingleWord = (questionSentenceData) => {
+  let arr = questionSentenceData.arrayOfOutputArrays.map((arr) => {
+    return {
+      selectedWord: arr.map((obj) => obj.selectedWord).join(" "),
+      lObjID: arr.map((obj) => obj.selectedLemmaObject.id).join(" "),
+    };
+  });
+
+  let deduplicatedArrForEducatorInterface = [];
+
+  arr.forEach((obj) => {
+    if (
+      !deduplicatedArrForEducatorInterface
+        .map((ob) => ob.selectedWord)
+        .includes(obj.selectedWord)
+    ) {
+      deduplicatedArrForEducatorInterface.push(obj);
+    }
+  });
+
   return frUtils.finishAndSend({
-    finalSentenceArr: questionSentenceData.arrayOfOutputArrays.map((arr) => {
-      return {
-        selectedWord: arr.map((obj) => obj.selectedWord).join(" "),
-        lObjID: arr.map((obj) => obj.selectedLemmaObject.id).join(" "),
-      };
-    }),
+    finalSentenceArr: deduplicatedArrForEducatorInterface,
   });
 };
 
