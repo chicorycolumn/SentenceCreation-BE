@@ -198,7 +198,23 @@ exports.getStChsForLemma = (lang, lemma) => {
     stCh.wordtype = gpUtils.getWordtypeShorthandLObj(lObj);
     stCh.id = lObj.id;
     stCh.lemma = lObj.lemma;
-    // console.log(4545, stCh.id, `"${stCh.lemma}"`);
+
+    stCh._info = {};
+
+    [
+      "inheritableInflectionKeys",
+      "allowableTransfersFromQuestionStructure",
+    ].forEach((infoKey) => {
+      let info =
+        refObj.lemmaObjectTraitKeys[lang][infoKey][
+          refFxn.translateWordtypeShorthandLonghand(stCh.wordtype)
+        ];
+      if (!info) {
+        //devlogging
+        consol.throw("stmo Error fetching auxiliary info for stCh via API.");
+      }
+      stCh._info[infoKey] = info;
+    });
 
     return stCh;
   });
