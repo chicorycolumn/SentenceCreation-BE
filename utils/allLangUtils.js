@@ -438,7 +438,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
         }
       }
 
-      allLangUtils.enforceIsPerson(structureChunk.gender);
+      allLangUtils.enforceIsPerson(structureChunk);
     }
 
     if (gpUtils.getWordtypeStCh(structureChunk) === "verb") {
