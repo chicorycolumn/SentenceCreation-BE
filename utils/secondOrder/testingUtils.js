@@ -787,6 +787,13 @@ exports.generalTranslatedSentencesRef = {
   },
 };
 
+exports.checkRunsRecord = (res) => {
+  let throwLimit = 10;
+  if (res.body.runsRecord && res.body.runsRecord.length >= throwLimit) {
+    consol.throw(`Runs record too high: ${res.body.runsRecord.length}.`);
+  }
+};
+
 exports.checkTranslationsOfGivenRef = (
   res,
   ref,
@@ -795,6 +802,12 @@ exports.checkTranslationsOfGivenRef = (
 ) => {
   let testActivated = false;
   consol.logTestOutputSolely(res.body);
+  if (res.body.runsRecord) {
+    consol.logTestOutputSolely(
+      "[1;35m " + `Runs record was ${res.body.runsRecord.length}.` + "[0m"
+    );
+  }
+  testingUtils.checkRunsRecord(res);
 
   //Unpack ref so questionLanguage is just one string per refItem.
   let refItemsWithQuestionString = [];

@@ -1,19 +1,29 @@
-exports.conditionsOnWhichToBlockAnnotations = {
-  ENG: {
-    verb: {
+exports.conditionsToBlockAnnotations = [
+  {
+    questionLangs: ["ENG"],
+    wordtypes: ["verb"],
+    annotations: ["tenseDescription"],
+    stChConditions: [
       //If QUESTIONlang {{ENG}}, for {{verbs}}, block the {{tenseDesc}} anno
-      //if any of these condition objects have all their conditions met by this chunk or its headChunk.
-      tenseDescription: [
-        {
-          tenseDescription: ["present simple"],
-          person: ["3per"],
-          number: ["singular"],
-        },
-      ],
-    },
+      //if any of these condition objects has all its conditions met by this chunk or its headChunk.
+      {
+        tenseDescription: ["present simple"],
+        person: ["3per"],
+        number: ["singular"],
+      },
+    ],
   },
-  POL: {},
-};
+  {
+    questionLangs: ["ENG", "POL"],
+    wordtypes: ["pronombre"],
+    annotations: ["gender", "number", "person"],
+    lObjConditions: [
+      {
+        lemma: "$ITG_G",
+      },
+    ],
+  },
+];
 
 // exports.conditionsOnWhichToBlockAnnotationsUNUSED = {
 //   POL: {

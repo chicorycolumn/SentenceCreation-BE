@@ -115,6 +115,24 @@ exports.convertAnnotationsToPlainspeak = (questionOutputUnit, languagesObj) => {
   return result;
 };
 
+exports.getDepUnits = (
+  questionOutputArr,
+  headChunkId,
+  agreementTraits,
+  allDependentWordtype
+) => {
+  return questionOutputArr
+    .filter((unit) =>
+      agreementTraits.some(
+        (agreeKey) => unit.structureChunk[agreeKey] === headChunkId
+      )
+    )
+    .filter(
+      (unit) =>
+        gpUtils.getWordtypeStCh(unit.structureChunk) === allDependentWordtype
+    );
+};
+
 exports.removeAnnotationsByAOCs = (
   questionOutputArr,
   languagesObj,
@@ -149,32 +167,21 @@ exports.removeAnnotationsByAOCs = (
     ) {
       let headChunkId = questionOutputUnit.structureChunk.chunkId;
 
-      let primaryDepUnits = getDepUnits(questionOutputArr, headChunkId, [
+      const loadedGetDepUnits = (agreementTraitsArg) => {
+        return aaUtils.getDepUnits(
+          questionOutputArr,
+          headChunkId,
+          agreementTraitsArg,
+          allDependentWordtype
+        );
+      };
+
+      let primaryDepUnits = loadedGetDepUnits([
         "agreeWith",
         "postHocAgreeWithPrimary",
       ]);
-
-      let secondaryDepUnits = getDepUnits(questionOutputArr, headChunkId, [
-        "postHocAgreeWithSeconday",
-      ]);
-
-      let tertiaryDepUnits = getDepUnits(questionOutputArr, headChunkId, [
-        "postHocAgreeWithTertiary",
-      ]);
-
-      function getDepUnits(questionOutputArr, headChunkId, agreementTraits) {
-        return questionOutputArr
-          .filter((unit) =>
-            agreementTraits.some(
-              (agreeKey) => unit.structureChunk[agreeKey] === headChunkId
-            )
-          )
-          .filter(
-            (unit) =>
-              gpUtils.getWordtypeStCh(unit.structureChunk) ===
-              allDependentWordtype
-          );
-      }
+      let secondaryDepUnits = loadedGetDepUnits(["postHocAgreeWithSeconday"]);
+      let tertiaryDepUnits = loadedGetDepUnits(["postHocAgreeWithTertiary"]);
 
       if ("console") {
         consol.log(
@@ -205,48 +212,83 @@ exports.removeAnnotationsByAOCs = (
           //drillPathSecondary reveals info about 'jabłko'
           //
           //So if we're looking at secondaryDeps, then we'll look in drillPathSecondary, and so on.
-          deleteByAOC(primaryDepUnits, "drillPath");
-          deleteByAOC(secondaryDepUnits, "drillPathSecondary");
-          deleteByAOC(tertiaryDepUnits, "drillPathTertiary");
+          const loadedDeleteByAOC = (depUnitsArg, drillPathTypeArg) => {
+            return aaUtils.deleteByAOC(
+              depUnitsArg,
+              drillPathTypeArg,
+              questionOutputUnit,
+              inflectionCategory
+            );
+          };
 
-          function deleteByAOC(depUnits, drillPathType) {
-            depUnits.forEach((depUnit) => {
-              if (
-                !questionOutputUnit.structureChunk.annotations[
-                  inflectionCategory
-                ] || //ie we've now deleted it so abort loop.
-                !depUnit[drillPathType]
-              ) {
-                return;
-              }
-
-              consol.log("meef", depUnit);
-
-              /**If any dep unit holds an inflectionValue at inflectionCategory that is unique in its lObj,
-               * then this pronombre obviates the need for that specifier, so delete it from annotations.
-               */
-              if (
-                otUtils.doesThisInflectionKeyHoldUniqueInflectionValueInLObj(
-                  depUnit.selectedLemmaObject,
-                  inflectionCategory,
-                  depUnit[drillPathType]
-                )
-              ) {
-                consol.log(
-                  "[1;30m " +
-                    `kzia removeAnnotationsByAOCs "${questionOutputUnit.structureChunk.chunkId}" ABZ Late stage DELETION of annotation "${inflectionCategory}" which is "${questionOutputUnit.structureChunk.annotations[inflectionCategory]}"` +
-                    "[0m"
-                );
-
-                delete questionOutputUnit.structureChunk.annotations[
-                  inflectionCategory
-                ];
-              }
-            });
-          }
+          loadedDeleteByAOC(primaryDepUnits, "drillPath");
+          loadedDeleteByAOC(secondaryDepUnits, "drillPathSecondary");
+          loadedDeleteByAOC(tertiaryDepUnits, "drillPathTertiary");
         }
       );
     }
+  });
+};
+
+exports.deleteByAOC = (
+  depUnits,
+  drillPathType,
+  questionOutputUnit,
+  inflectionCategory
+) => {
+  depUnits.forEach((depUnit) => {
+    if (
+      !questionOutputUnit.structureChunk.annotations[inflectionCategory] || //ie we've now deleted it so abort loop.
+      !depUnit[drillPathType]
+    ) {
+      return;
+    }
+
+    consol.log("meef", depUnit);
+
+    /**If any dep unit holds an inflectionValue at inflectionCategory that is unique in its lObj,
+     * then this pronombre obviates the need for that specifier, so delete it from annotations.
+     */
+    if (
+      otUtils.doesThisInflectionKeyHoldUniqueInflectionValueInLObj(
+        depUnit.selectedLemmaObject,
+        inflectionCategory,
+        depUnit[drillPathType]
+      )
+    ) {
+      consol.log(
+        "[1;30m " +
+          `kzia removeAnnotationsByAOCs "${questionOutputUnit.structureChunk.chunkId}" ABZ Late stage DELETION of annotation "${inflectionCategory}" which is "${questionOutputUnit.structureChunk.annotations[inflectionCategory]}"` +
+          "[0m"
+      );
+
+      delete questionOutputUnit.structureChunk.annotations[inflectionCategory];
+    }
+  });
+};
+
+exports.checkConditions = (conditions, objects) => {
+  return conditions.some((cond) => {
+    return Object.keys(cond).every((traitKey) => {
+      let conditionTraitValues = cond[traitKey];
+
+      return objects.some((stChOrLObj) => {
+        let traitValueFromObj = stChOrLObj[traitKey];
+
+        if (traitValueFromObj && traitValueFromObj.length) {
+          if (Array.isArray(traitValueFromObj)) {
+            if (traitValueFromObj.length > 1) {
+              consol.throw(
+                "vjpp Unsure how to check this condition for blocking anno when the stCh or lObj has more than one traitValue here."
+              );
+            }
+            traitValueFromObj = traitValueFromObj[0];
+          }
+
+          return conditionTraitValues.includes(traitValueFromObj);
+        }
+      });
+    });
   });
 };
 
@@ -256,66 +298,52 @@ exports.removeAnnotationsByRef = (
   answerSentenceData
 ) => {
   questionOutputArr.forEach((questionOutputUnit) => {
-    let { structureChunk } = questionOutputUnit;
+    let stCh = questionOutputUnit.structureChunk;
+    let lObj = questionOutputUnit.selectedLemmaObject;
 
-    if (
-      !questionOutputUnit.structureChunk.annotations ||
-      !Object.keys(questionOutputUnit.structureChunk.annotations).length
-    ) {
+    if (!stCh.annotations || !Object.keys(stCh.annotations).length) {
       return;
     }
 
     let headChunk =
-      structureChunk.agreeWith &&
+      stCh.agreeWith &&
       questionOutputArr.find(
-        (outputUnit) =>
-          outputUnit.structureChunk.chunkId === structureChunk.agreeWith
+        (outputUnit) => outputUnit.structureChunk.chunkId === stCh.agreeWith
       ).structureChunk;
 
-    let stChs = headChunk ? [structureChunk, headChunk] : [structureChunk];
+    let stChs = headChunk ? [stCh, headChunk] : [stCh];
 
-    if (uUtils.isEmpty(structureChunk.annotations)) {
+    if (uUtils.isEmpty(stCh.annotations)) {
       return;
     }
 
-    let ref =
-      refObj.conditionsOnWhichToBlockAnnotations[languagesObj.questionLanguage];
+    let conditionsToBlockAnnotations =
+      refObj.conditionsToBlockAnnotations.filter((cond) =>
+        cond.questionLangs.includes(languagesObj.questionLanguage)
+      );
 
-    ref = ref && ref[gpUtils.getWordtypeStCh(structureChunk)];
-
-    if (!ref) {
-      return;
-    }
-
-    Object.keys(ref).forEach((annoTraitKey) => {
-      if (structureChunk.annotations[annoTraitKey]) {
-        let conditionsOnWhichToBlockThisAnno = ref[annoTraitKey];
+    conditionsToBlockAnnotations.forEach((condBlockAnnos) => {
+      if (
+        condBlockAnnos.wordtypes.some(
+          (wordtype) => gpUtils.getWordtypeStCh(stCh) === wordtype
+        ) &&
+        condBlockAnnos.annotations.some((traitKey) =>
+          Object.keys(stCh.annotations).includes(traitKey)
+        )
+      ) {
         if (
-          conditionsOnWhichToBlockThisAnno.some(
-            (conditionOnWhichToBlockThisAnno) => {
-              return Object.keys(conditionOnWhichToBlockThisAnno).every(
-                (traitKey) => {
-                  let traitValues = conditionOnWhichToBlockThisAnno[traitKey];
-
-                  return stChs.some((stCh) => {
-                    if (stCh[traitKey] && stCh[traitKey].length) {
-                      if (stCh[traitKey].length > 1) {
-                        consol.throw(
-                          "vjpp Unsure how to check this condition for blocking anno when the stCh has more than one traitValue here."
-                        );
-                      }
-                      return traitValues.includes(stCh[traitKey][0]);
-                    }
-                  });
-                }
-              );
-            }
-          )
+          (!condBlockAnnos.stChConditions ||
+            aaUtils.checkConditions(condBlockAnnos.stChConditions, stChs)) &&
+          (!condBlockAnnos.lObjConditions ||
+            aaUtils.checkConditions(condBlockAnnos.lObjConditions, [lObj]))
         ) {
-          consol.log(
-            `prri removeAnnotationsByRef for "${structureChunk.chunkId}" is removing "${annoTraitKey}" anno as it fit the conditions.`
-          );
-          delete structureChunk.annotations[annoTraitKey];
+          condBlockAnnos.annotations.forEach((annoTraitKey) => {
+            consol.logSpecial(
+              3,
+              `prri "${stCh.chunkId}" removing "${annoTraitKey}" anno due to conditionsToBlockAnnotations.`
+            );
+            delete stCh.annotations[annoTraitKey];
+          });
         }
       }
     });
@@ -450,7 +478,7 @@ exports.addSpecifiersToMGNs = (questionSentenceData, languagesObj) => {
     questionMGNunit.structureChunk.gender = [selectedGenderForQuestionLanguage];
     // correspondingAnswerUnit.structureChunk.gender = selectedGenderForAnswerLanguageArr;
 
-    consol.log("wdmi addSpecifiers. Will addAnnotation ");
+    consol.logSpecial(3, "wdmi addSpecifiersToMGNs. Calling addAnnotation() ");
     aaUtils.addAnnotation(
       questionMGNunit.structureChunk,
       "gender",
@@ -525,7 +553,10 @@ exports.specifyQuestionChunkAndChangeAnswerChunk = (
   //...and note Specifier in Q headCh if exists, else Q depCh.
 
   if (questionHeadChunk) {
-    consol.log("tbji specifyQuestionChunkAndChangeAnswerChunk Point C");
+    consol.logSpecial(
+      3,
+      "hotd specifyQuestionChunkAndChangeAnswerChunk. Point C. Calling addAnnotation() "
+    );
     aaUtils.addAnnotation(questionHeadChunk, traitKey, traitValueArr[0]);
   } else {
     if (!questionChunk) {
@@ -536,8 +567,9 @@ exports.specifyQuestionChunkAndChangeAnswerChunk = (
         traitValueArr[0]
       );
     }
-    consol.log(
-      "lskt specifyQuestionChunkAndChangeAnswerChunk specifyQuestionChunkAndChangeAnswerChunk Point D"
+    consol.logSpecial(
+      3,
+      "lskt specifyQuestionChunkAndChangeAnswerChunk. Point D. Calling addAnnotation() "
     );
     aaUtils.addAnnotation(questionChunk, traitKey, traitValueArr[0]);
   }
@@ -553,10 +585,11 @@ exports.addAnnotation = (chunk, traitKey, traitValue) => {
     consol.throw("nrtn addAnnotation expected STRING for traitValue");
   }
 
-  consol.log(
+  consol.logSpecial(
+    3,
     "[1;35m " + "aggw addAnnotation Added annotation for " + chunk.chunkId + "[0m"
   );
-  consol.log("aggw addAnnotation", { traitKey, traitValue });
+  consol.logSpecial(3, "aggw addAnnotation", { traitKey, traitValue });
 
   chunk.annotations[traitKey] = traitValue;
 };
@@ -579,6 +612,138 @@ exports.trimAnnotations = (annotationObj) => {
   });
 
   return annotationObj;
+};
+
+exports.filterDownClarifiers = (
+  synhomDataUnit,
+  allowableClarifiers,
+  structureChunk,
+  answerLangUtils
+) => {
+  consol.log("[1;35m " + `pjgg filterDownClarifiers---------------` + "[0m");
+
+  consol.log(
+    "pjgg filterDownClarifiers We start with these inflectionCategory:",
+    synhomDataUnit.inflectionCategorysWhereTheyDiffer
+  );
+
+  let filteredInflectionCategorys =
+    synhomDataUnit.inflectionCategorysWhereTheyDiffer.filter(
+      (inflectionCategory) => {
+        if (
+          allowableClarifiers.includes(inflectionCategory) ||
+          (structureChunk.singleWordSentence &&
+            allowableExtraClarifiersInSingleWordSentences.includes(
+              inflectionCategory
+            ))
+        ) {
+          consol.log(
+            "[1;32m " +
+              `jpnj filterDownClarifiers "${structureChunk.chunkId}" ABZ Early stage PASSING of "${inflectionCategory}" in allowableClarifiers` +
+              "[0m"
+          );
+          return true;
+        } else {
+          consol.log(
+            "[1;30m " +
+              `lmza filterDownClarifiers "${structureChunk.chunkId}" ABZ Early stage BLOCKING of "${inflectionCategory}" in allowableClarifiers` +
+              "[0m"
+          );
+          return false;
+        }
+      }
+    );
+
+  consol.log(
+    "ahby filterDownClarifiers So now we have these inflectionCategorys:",
+    filteredInflectionCategorys
+  );
+  consol.log("ahby filterDownClarifiers, structureChunk", structureChunk);
+  consol.log(
+    "ahby filterDownClarifiers, synhomDataUnit.inflectionCategoryChain",
+    synhomDataUnit.inflectionCategoryChain
+  );
+
+  let currentTraitValues = synhomDataUnit.inflectionCategoryChain.map(
+    (inflectionCategory) => {
+      consol.log("vpzx filterDownClarifiers", {
+        inflectionCategory,
+      });
+
+      if (
+        inflectionCategory === "tense" &&
+        (!structureChunk[inflectionCategory] ||
+          !structureChunk[inflectionCategory].length)
+      ) {
+        inflectionCategory = "tenseDescription";
+      }
+
+      if (
+        !structureChunk[inflectionCategory] ||
+        !structureChunk[inflectionCategory].length
+      ) {
+        consol.log(
+          "[1;31m " +
+            `#WARN kxqz filterDownClarifiers. Adding null to currentTraitValues for inflectionCategory "${inflectionCategory}".` +
+            "[0m"
+        );
+
+        return null;
+      }
+
+      if (structureChunk[inflectionCategory].length > 1) {
+        consol.log(
+          "[1;31m " +
+            `#WARN wqzm filterDownClarifiers. structureChunk[inflectionCategory] "${structureChunk[inflectionCategory]}"` +
+            "[0m"
+        );
+        consol.throw(
+          "#ERR wqzm filterDownClarifiers. inflectionCategory: " +
+            inflectionCategory
+        );
+      }
+
+      return structureChunk[inflectionCategory][0];
+    }
+  );
+
+  filteredInflectionCategorys = filteredInflectionCategorys.filter(
+    (inflectionCategory) => {
+      let specialComparisonCallback =
+        answerLangUtils.filterDownClarifiersSpecialComparisonCallback;
+
+      if (
+        otUtils.findSinglePointMutationArray(
+          currentTraitValues,
+          synhomDataUnit.inflectionPaths,
+          synhomDataUnit.inflectionCategoryChain.indexOf(inflectionCategory),
+          specialComparisonCallback
+        )
+      ) {
+        consol.log(
+          "[1;32m " +
+            `xunf findSinglePointMutationArray "${structureChunk.chunkId}" ABZ Early stage PASSING of "${inflectionCategory}" in findSinglePointMutationArray` +
+            "[0m"
+        );
+        return true;
+      } else {
+        consol.log(
+          "[1;30m " +
+            `dhjc findSinglePointMutationArray "${structureChunk.chunkId}" ABZ Early stage BLOCKING of "${inflectionCategory}" in findSinglePointMutationArray` +
+            "[0m"
+        );
+      }
+    }
+  );
+
+  consol.log(
+    "cpkw filterDownClarifiers And now we have these inflectionCategorys:",
+    filteredInflectionCategorys
+  );
+
+  consol.log("[1;35m " + `/filterDownClarifiers` + "[0m");
+
+  return filteredInflectionCategorys;
 };
 
 exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
@@ -716,143 +881,13 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
 
             consol.log("qxqf addClarifierssynhomDataUnit", synhomDataUnit);
 
-            let inflectionCategorysWhereTheyDiffer = filterDownClarifiers(
-              synhomDataUnit,
-              allowableClarifiers
-            );
-
-            function filterDownClarifiers(synhomDataUnit, allowableClarifiers) {
-              consol.log("[1;35m " + `pjgg filterDownClarifiers---------------` + "[0m");
-
-              consol.log(
-                "pjgg filterDownClarifiers We start with these inflectionCategory:",
-                synhomDataUnit.inflectionCategorysWhereTheyDiffer
+            let inflectionCategorysWhereTheyDiffer =
+              aaUtils.filterDownClarifiers(
+                synhomDataUnit,
+                allowableClarifiers,
+                structureChunk,
+                answerLangUtils
               );
-
-              let filteredInflectionCategorys =
-                synhomDataUnit.inflectionCategorysWhereTheyDiffer.filter(
-                  (inflectionCategory) => {
-                    if (
-                      allowableClarifiers.includes(inflectionCategory) ||
-                      (structureChunk.singleWordSentence &&
-                        allowableExtraClarifiersInSingleWordSentences.includes(
-                          inflectionCategory
-                        ))
-                    ) {
-                      consol.log(
-                        "[1;32m " +
-                          `jpnj filterDownClarifiers "${structureChunk.chunkId}" ABZ Early stage PASSING of "${inflectionCategory}" in allowableClarifiers` +
-                          "[0m"
-                      );
-                      return true;
-                    } else {
-                      consol.log(
-                        "[1;30m " +
-                          `lmza filterDownClarifiers "${structureChunk.chunkId}" ABZ Early stage BLOCKING of "${inflectionCategory}" in allowableClarifiers` +
-                          "[0m"
-                      );
-                      return false;
-                    }
-                  }
-                );
-
-              consol.log(
-                "ahby filterDownClarifiers So now we have these inflectionCategorys:",
-                filteredInflectionCategorys
-              );
-              consol.log(
-                "ahby filterDownClarifiers, structureChunk",
-                structureChunk
-              );
-              consol.log(
-                "ahby filterDownClarifiers, synhomDataUnit.inflectionCategoryChain",
-                synhomDataUnit.inflectionCategoryChain
-              );
-
-              let currentTraitValues =
-                synhomDataUnit.inflectionCategoryChain.map(
-                  (inflectionCategory) => {
-                    consol.log("vpzx filterDownClarifiers", {
-                      inflectionCategory,
-                    });
-
-                    if (
-                      inflectionCategory === "tense" &&
-                      (!structureChunk[inflectionCategory] ||
-                        !structureChunk[inflectionCategory].length)
-                    ) {
-                      inflectionCategory = "tenseDescription";
-                    }
-
-                    if (
-                      !structureChunk[inflectionCategory] ||
-                      !structureChunk[inflectionCategory].length
-                    ) {
-                      consol.log(
-                        "[1;31m " +
-                          `#WARN kxqz filterDownClarifiers. Adding null to currentTraitValues for inflectionCategory "${inflectionCategory}".` +
-                          "[0m"
-                      );
-
-                      return null;
-                    }
-
-                    if (structureChunk[inflectionCategory].length > 1) {
-                      consol.log(
-                        "[1;31m " +
-                          `#WARN wqzm filterDownClarifiers. structureChunk[inflectionCategory] "${structureChunk[inflectionCategory]}"` +
-                          "[0m"
-                      );
-                      consol.throw(
-                        "#ERR wqzm filterDownClarifiers. inflectionCategory: " +
-                          inflectionCategory
-                      );
-                    }
-
-                    return structureChunk[inflectionCategory][0];
-                  }
-                );
-
-              filteredInflectionCategorys = filteredInflectionCategorys.filter(
-                (inflectionCategory) => {
-                  let specialComparisonCallback =
-                    answerLangUtils.filterDownClarifiersSpecialComparisonCallback;
-
-                  if (
-                    otUtils.findSinglePointMutationArray(
-                      currentTraitValues,
-                      synhomDataUnit.inflectionPaths,
-                      synhomDataUnit.inflectionCategoryChain.indexOf(
-                        inflectionCategory
-                      ),
-                      specialComparisonCallback
-                    )
-                  ) {
-                    consol.log(
-                      "[1;32m " +
-                        `xunf findSinglePointMutationArray "${structureChunk.chunkId}" ABZ Early stage PASSING of "${inflectionCategory}" in findSinglePointMutationArray` +
-                        "[0m"
-                    );
-                    return true;
-                  } else {
-                    consol.log(
-                      "[1;30m " +
-                        `dhjc findSinglePointMutationArray "${structureChunk.chunkId}" ABZ Early stage BLOCKING of "${inflectionCategory}" in findSinglePointMutationArray` +
-                        "[0m"
-                    );
-                  }
-                }
-              );
-
-              consol.log(
-                "cpkw filterDownClarifiers And now we have these inflectionCategorys:",
-                filteredInflectionCategorys
-              );
-
-              consol.log("[1;35m " + `/filterDownClarifiers` + "[0m");
-
-              return filteredInflectionCategorys;
-            }
 
             inflectionCategorysWhereTheyDiffer.forEach((inflectionCategory) => {
               let inflectionKey = structureChunk[inflectionCategory];

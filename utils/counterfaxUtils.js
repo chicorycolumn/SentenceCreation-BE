@@ -145,11 +145,13 @@ exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
         )
       )
     ) {
-      consol.log(
+      consol.logSpecial(
+        3,
         "iwwo questionOutputArr.map",
         questionOutputArr.map((outputUnit) => outputUnit.structureChunk.chunkId)
       );
-      consol.log(
+      consol.logSpecial(
+        3,
         "iwwo questionOutputArrOrderedHeadsFirst.map",
         questionOutputArrOrderedHeadsFirst.map(
           (outputUnit) => outputUnit.structureChunk.chunkId
@@ -212,8 +214,11 @@ exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
           counterfactualTraitValuesForThisTraitKey = tempObj.gender;
         }
 
-        consol.log(
+        consol.logSpecial(
+          3,
           "veem counterfactualTraitValuesForThisTraitKey",
+          questionOutputUnit.structureChunk.chunkId,
+          annoTraitKey,
           counterfactualTraitValuesForThisTraitKey
         );
 
@@ -291,24 +296,22 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   answerSelectedWordsSetsHaveChanged,
   runsRecord
 ) => {
-  if (!"console") {
-    consol.logSpecial(3, "");
-    consol.logSpecial(3, "*");
-    consol.logSpecial(3, "removeAnnotationsByCounterfactualAnswerSentences");
-    consol.logSpecial(
-      3,
-      `There are ${explodedCounterfaxSituationsSchematics.length} schematics.`
-    );
-    explodedCounterfaxSituationsSchematics.forEach((x, index) => {
-      consol.logSpecial(3, x);
-      if (!index) {
-        consol.logSpecial(3, "^^^ ORIGINAL ^^^");
-      }
-      consol.logSpecial(3, "-");
-    });
-  }
-
-  //Abortcuts for this fxn: Search ACX.
+  consol.logSpecial(
+    3,
+    "\n",
+    "removeAnnotationsByCounterfactualAnswerSentences"
+  );
+  consol.logSpecial(
+    3,
+    `There are ${explodedCounterfaxSituationsSchematics.length} schematics.`
+  );
+  explodedCounterfaxSituationsSchematics.forEach((x, index) => {
+    consol.logSpecial(3, x);
+    if (!index) {
+      consol.logSpecial(3, "^^^ ORIGINAL ^^^");
+    }
+    consol.logSpecial(3, "-");
+  });
 
   let questionLanguage = languagesObj.questionLanguage;
 
@@ -445,7 +448,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
                 stChToCounterfax.gender[0]
               )
             ) {
-              // consol.logSpecial(3,
               consol.logSpecial(
                 3,
                 `kcaq Dropping current counterfax sit: "${counterfactualSitSchematic.cfLabel}" ie not send to fetchPalette, 
