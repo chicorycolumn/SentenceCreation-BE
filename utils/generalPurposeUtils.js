@@ -342,6 +342,19 @@ exports.getLanguageFromLemmaObject = (lObj) => {
   return lObj.id.split("-")[0].toUpperCase();
 };
 
+exports.stChIsPerson = (stCh, strict) => {
+  if (strict) {
+    return stCh.isPerson || exports.stChIsNounPerson(stCh);
+  }
+  return (
+    stCh.isPerson ||
+    exports.stChIsNounPerson(stCh) ||
+    (stCh.person &&
+      stCh.person.length === 1 &&
+      ["1per", "2per"].includes(stCh.person[0]))
+  );
+};
+
 exports.lObjIsNounPerson = (lObj) => {
   return ["nounPerson"].includes(this.getWordtypeLObj(lObj));
 };

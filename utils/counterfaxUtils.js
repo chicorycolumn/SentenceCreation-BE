@@ -209,6 +209,8 @@ exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
           let tempObj = {
             gender: counterfactualTraitValuesForThisTraitKey,
             isPerson: questionOutputUnit.structureChunk.isPerson,
+            chunkId: questionOutputUnit.structureChunk.chunkId,
+            person: questionOutputUnit.structureChunk.person,
           };
           allLangUtils.enforceIsPerson(tempObj);
           counterfactualTraitValuesForThisTraitKey = tempObj.gender;
