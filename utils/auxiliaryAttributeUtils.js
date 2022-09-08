@@ -8,7 +8,6 @@ const refObj = require("./reference/referenceObjects.js");
 const refFxn = require("./reference/referenceFunctions.js");
 const aaUtils = require("./auxiliaryAttributeUtils.js");
 const allLangUtils = require("./allLangUtils.js");
-const palette = require("../models/palette.model.js");
 
 exports.firstStageEvaluateAnnotations = (
   questionOutputArr,
