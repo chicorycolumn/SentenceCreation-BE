@@ -170,7 +170,7 @@ exports.wordsBank = {
       //links
       translations: {
         ENG: ["eng-npe-005-doctor"],
-        POL: ["pol-npe-005-lekarz", "pol-npe-006-lekarka"],
+        POL: ["pol-npe-005-lekarz", "pol-npe-005-lekarka"],
       },
       tags: ["concrete", "animate", "personTest2", "job"],
       //selectors
@@ -203,12 +203,12 @@ exports.wordsBank = {
       //links
       translations: {
         ENG: ["eng-npe-005-doctor"],
-        POL: ["pol-npe-005-lekarz", "pol-npe-006-lekarka"],
+        POL: ["pol-npe-005-lekarz", "pol-npe-005-lekarka"],
       },
       tags: ["concrete", "animate", "personTest2", "job"],
       //selectors
       lemma: "lekarka",
-      id: "pol-npe-006-lekarka",
+      id: "pol-npe-005-lekarka",
       gender: "f",
       //notes
 

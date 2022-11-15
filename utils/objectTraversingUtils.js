@@ -56,13 +56,10 @@ exports.findMatchingLemmaObjectThenWord = (
       source.map((lObj) => lObj.id)
     );
     matches = source.filter((lObj) => {
-      soughtId = lObj.id;
-
-      if (lObj.id.includes("*")) {
-        soughtId = lObj.id.split("*")[0];
-      }
-
-      return structureChunk.specificIds.includes(soughtId);
+      soughtId = allLangUtils.getLObjIdStem(lObj.id);
+      return structureChunk.specificIds.some(
+        (specificId) => allLangUtils.getLObjIdStem(specificId) === soughtId
+      );
     });
     consol.log(`obbn Found ${matches.length} matches.`);
     if (!matches.length) {

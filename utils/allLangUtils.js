@@ -77,17 +77,8 @@ exports.enforceIsPerson = (stCh) => {
   }
 };
 
-exports.formatSpecificIds = (specificIds) => {
-  let res = [];
-
-  specificIds.forEach((id) => {
-    res.push(id);
-    if (id.includes("*")) {
-      res.push(id.split("*")[0]);
-    }
-  });
-
-  return res;
+exports.getLObjIdStem = (id) => {
+  return id.split("-").slice(0, 3).join("-");
 };
 
 exports.translateAnnoTraitValue = (

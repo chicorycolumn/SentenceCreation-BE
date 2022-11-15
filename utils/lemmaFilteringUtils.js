@@ -632,9 +632,7 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
     structureChunk.specificIds &&
     structureChunk.specificIds.length
   ) {
-    structureChunk.specificIds = allLangUtils.formatSpecificIds([
-      selectedLemmaObject.id,
-    ]); //SLIM (specific lemma issue re MGNs)
+    structureChunk.specificIds = [selectedLemmaObject.id];
   }
 
   consol.log(

@@ -646,7 +646,7 @@ exports.sentenceFormulasBank = [
       { chunkId: "fix-1", chunkValue: "jeśli" },
       {
         chunkId: "ver-1",
-        specificIds: ["pol-ver-005-pisać", "pol-ver-005-napisać"],
+        specificIds: ["pol-ver-005-pisać"],
         tenseDescription: ["cond1 condition"],
         formulaImportantTraitKeys: ["tenseDescription"],
         person: ["2per"],
@@ -662,7 +662,7 @@ exports.sentenceFormulasBank = [
       { chunkId: "fix-3", chunkValue: "ją" },
       {
         chunkId: "ver-2",
-        specificIds: ["pol-ver-004-badać", "pol-ver-004-zbadać"],
+        specificIds: ["pol-ver-004-badać"],
         tenseDescription: ["cond1 outcome"],
         formulaImportantTraitKeys: ["tenseDescription"],
         person: ["1per"],
@@ -724,7 +724,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "npe-1",
-        specificIds: ["pol-ver-005-pisać", "pol-ver-005-napisać"],
+        specificIds: ["pol-ver-005-pisać"],
         tenseDescription: ["past pf"],
       },
       { chunkId: "fix-1", chunkValue: "receptę" },
@@ -745,7 +745,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "npe-1",
-        specificIds: ["pol-ver-005-pisać", "pol-ver-005-napisać"],
+        specificIds: ["pol-ver-005-pisać"],
         tenseDescription: ["past im"],
       },
       {
@@ -770,7 +770,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "npe-1",
-        specificIds: ["pol-ver-005-pisać", "pol-ver-005-napisać"],
+        specificIds: ["pol-ver-005-pisać"],
         tenseDescription: ["past pf"],
       },
       { chunkId: "fix-1", chunkValue: "receptę" },
@@ -791,7 +791,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "npe-1",
-        specificIds: ["pol-ver-005-pisać", "pol-ver-005-napisać"],
+        specificIds: ["pol-ver-005-pisać"],
         tenseDescription: ["past im"],
       },
       { chunkId: "fix-1", chunkValue: "receptę" },
@@ -903,7 +903,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "npe-1",
-        specificIds: ["pol-ver-006-dać", "pol-ver-006-dawać"],
+        specificIds: ["pol-ver-006-dać"],
         tenseDescription: ["past pf"],
       },
       {
@@ -940,7 +940,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "npe-1",
-        specificIds: ["pol-ver-006-dać", "pol-ver-006-dawać"],
+        specificIds: ["pol-ver-006-dać"],
         tenseDescription: ["past pf"],
       },
       {
@@ -990,7 +990,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "npe-1",
-        specificIds: ["pol-ver-006-dać", "pol-ver-006-dawać"],
+        specificIds: ["pol-ver-006-dać"],
         tenseDescription: ["past pf"],
       },
       {
@@ -1035,7 +1035,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1-Gave",
         agreeWith: "npe-1-Father",
-        specificIds: ["pol-ver-006-dać", "pol-ver-006-dawać"],
+        specificIds: ["pol-ver-006-dać"],
         tenseDescription: ["past pf"],
       },
       {
@@ -1086,13 +1086,13 @@ exports.sentenceFormulasBank = [
         chunkId: "npe-1-Doctor",
 
         gcase: ["nom"],
-        specificIds: ["pol-npe-005-lekarz", "pol-npe-006-lekarka"],
+        specificIds: ["pol-npe-005-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
       },
       {
         chunkId: "ver-1-Gave",
         agreeWith: "npe-1-Doctor",
-        specificIds: ["pol-ver-006-dać", "pol-ver-006-dawać"],
+        specificIds: ["pol-ver-006-dać"],
         tenseDescription: ["past pf"],
       },
       {
@@ -1135,7 +1135,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1-see",
         agreeWith: "pro-1-I",
-        specificIds: ["pol-ver-008-widzieć", "pol-ver-008-zobaczyć"],
+        specificIds: ["pol-ver-008-widzieć"],
         tenseDescription: ["past pf"],
       },
       {
@@ -1150,7 +1150,7 @@ exports.sentenceFormulasBank = [
 
         gcase: ["nom"],
         number: ["singular"],
-        specificIds: ["pol-npe-005-lekarz", "pol-npe-006-lekarka"],
+        specificIds: ["pol-npe-005-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
         gcase: ["acc"],
       },
@@ -1167,7 +1167,7 @@ exports.sentenceFormulasBank = [
 
         gcase: ["nom"],
         number: ["singular"],
-        specificIds: ["pol-npe-005-lekarz", "pol-npe-006-lekarka"],
+        specificIds: ["pol-npe-005-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
         gcase: ["acc"],
       },
@@ -1205,7 +1205,7 @@ exports.sentenceFormulasBank = [
         chunkId: "npe-1-doctor",
         gcase: ["nom"],
         number: ["singular"],
-        specificIds: ["pol-npe-005-lekarz", "pol-npe-006-lekarka"],
+        specificIds: ["pol-npe-005-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
         gcase: ["nom"],
         gender: ["f"],
@@ -1249,7 +1249,7 @@ exports.sentenceFormulasBank = [
 
         gcase: ["nom"],
         number: ["singular"],
-        specificIds: ["pol-npe-005-lekarz", "pol-npe-006-lekarka"],
+        specificIds: ["pol-npe-005-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
         gcase: ["nom"],
         gender: ["f"],
@@ -1279,7 +1279,7 @@ exports.sentenceFormulasBank = [
         chunkId: "npe-1-doctor",
         gcase: ["nom"],
         number: ["singular"],
-        specificIds: ["pol-npe-005-lekarz", "pol-npe-006-lekarka"],
+        specificIds: ["pol-npe-005-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
         gcase: ["nom"],
         gender: ["f"],
@@ -1323,7 +1323,7 @@ exports.sentenceFormulasBank = [
         chunkId: "npe-1-doctor's",
 
         number: ["singular"],
-        specificIds: ["pol-npe-005-lekarz", "pol-npe-006-lekarka"],
+        specificIds: ["pol-npe-005-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
         gcase: ["gen"],
       },
@@ -1332,7 +1332,7 @@ exports.sentenceFormulasBank = [
 
         gcase: ["nom"],
         number: ["singular"],
-        specificIds: ["pol-npe-005-lekarz", "pol-npe-006-lekarka"],
+        specificIds: ["pol-npe-005-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
         gender: ["f"],
         educatorBlocksAnnotationsForTheseTraitKeys: ["gender"], //Just for symmetry and so I know it doesn't break anything.
@@ -1382,7 +1382,7 @@ exports.sentenceFormulasBank = [
         chunkId: "npe-1-doctor",
         gcase: ["ins"],
         formulaImportantTraitKeys: ["gcase"],
-        specificIds: ["pol-npe-005-lekarz", "pol-npe-006-lekarka"],
+        specificIds: ["pol-npe-005-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
         agreeWith: "pro-1-I",
       },
@@ -1411,7 +1411,7 @@ exports.sentenceFormulasBank = [
         gcase: ["ins"],
         formulaImportantTraitKeys: ["gcase"],
         number: ["singular"],
-        specificIds: ["pol-npe-005-lekarz", "pol-npe-006-lekarka"],
+        specificIds: ["pol-npe-005-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
         agreeWith: "pro-1-I",
       },
@@ -1440,7 +1440,7 @@ exports.sentenceFormulasBank = [
         gcase: ["ins"],
         formulaImportantTraitKeys: ["gcase"],
         // number: ["singular"],
-        specificIds: ["pol-npe-005-lekarz", "pol-npe-006-lekarka"],
+        specificIds: ["pol-npe-005-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
         agreeWith: "pro-1-I",
       },
@@ -1512,7 +1512,7 @@ exports.sentenceFormulasBank = [
 
         gcase: ["nom"],
         number: ["singular"],
-        specificIds: ["pol-npe-005-lekarz", "pol-npe-006-lekarka"],
+        specificIds: ["pol-npe-005-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
         gcase: ["nom"],
         educatorBlocksAnnotationsForTheseTraitKeys: ["gender", "number"],
@@ -1560,7 +1560,7 @@ exports.sentenceFormulasBank = [
 
         gcase: ["nom"],
         number: ["singular"],
-        specificIds: ["pol-npe-005-lekarz", "pol-npe-006-lekarka"],
+        specificIds: ["pol-npe-005-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
         gcase: ["nom"],
       },
@@ -1607,7 +1607,7 @@ exports.sentenceFormulasBank = [
 
         gcase: ["nom"],
         number: ["singular"],
-        specificIds: ["pol-npe-005-lekarz", "pol-npe-006-lekarka"],
+        specificIds: ["pol-npe-005-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
         gcase: ["nom"],
         // gender: ["f"],
@@ -1662,7 +1662,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "ver-1-see",
-        specificIds: ["pol-ver-008-widzieć", "pol-ver-008-zobaczyć"],
+        specificIds: ["pol-ver-008-widzieć"],
         agreeWith: "npe-1-woman",
         tenseDescription: ["past pf"],
       },
@@ -1689,12 +1689,12 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-1-doctor",
-        specificIds: ["pol-npe-005-lekarz", "pol-npe-006-lekarka"],
+        specificIds: ["pol-npe-005-lekarz"],
         number: ["singular"],
       },
       {
         chunkId: "ver-1-see",
-        specificIds: ["pol-ver-008-widzieć", "pol-ver-008-zobaczyć"],
+        specificIds: ["pol-ver-008-widzieć"],
         agreeWith: "npe-1-doctor",
         tenseDescription: ["past pf"],
       },
@@ -1721,7 +1721,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "ver-1-read",
-        specificIds: ["pol-ver-003-czytać", "pol-ver-003-przeczytać"],
+        specificIds: ["pol-ver-003-czytać"],
         agreeWith: "pro-1-I",
         tenseDescription: [
           "past pf",
@@ -1748,11 +1748,11 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "npe-1-doctor",
-        specificIds: ["pol-npe-005-lekarz", "pol-npe-006-lekarka"],
+        specificIds: ["pol-npe-005-lekarz"],
       },
       {
         chunkId: "ver-1-write",
-        specificIds: ["pol-ver-005-pisać", "pol-ver-005-napisać"],
+        specificIds: ["pol-ver-005-pisać"],
         agreeWith: "npe-1-doctor",
         tenseDescription: ["present im", "past pf"],
       },

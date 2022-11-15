@@ -1164,8 +1164,8 @@ exports.conformAnswerStructureToQuestionStructure = (
     }
 
     //...and then for both pronombres and all other wordtypes, we get the ID and set it.
-    answerStructureChunk.specificIds = allLangUtils.formatSpecificIds(
-      matchingAnswerLemmaObjects.map((lObj) => lObj.id)
+    answerStructureChunk.specificIds = matchingAnswerLemmaObjects.map(
+      (lObj) => lObj.id
     );
 
     //Do actually transfer gender, for person nouns.

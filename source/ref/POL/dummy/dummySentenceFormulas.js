@@ -1492,7 +1492,7 @@ exports.dummySentenceFormulasBank = [
 
         agreeWith: "npe-1",
         tenseDescription: ["past pf"],
-        specificIds: ["pol-ver-005-napisać", "pol-ver-003-przeczytać"],
+        specificIds: ["pol-ver-005-napisać"],
       },
     ],
     primaryOrders: [["npe-1", "ver-1"]],
@@ -1514,7 +1514,7 @@ exports.dummySentenceFormulasBank = [
 
         agreeWith: "npe-1",
         tenseDescription: ["future im"],
-        specificIds: ["pol-ver-005-napisać", "pol-ver-005-pisać"],
+        specificIds: ["pol-ver-005-napisać"],
       },
     ],
     primaryOrders: [["npe-1", "ver-1"]],
@@ -1880,7 +1880,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "ver-1",
 
         agreeWith: "npe-1",
-        specificIds: ["pol-ver-008-widzieć", "pol-ver-008-zobaczyć"],
+        specificIds: ["pol-ver-008-widzieć"],
         tenseDescription: ["past pf"],
       },
       {
@@ -2087,7 +2087,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "pro-1",
-        specificIds: ["pol-ver-008-widzieć", "pol-ver-008-zobaczyć"],
+        specificIds: ["pol-ver-008-widzieć"],
         tenseDescription: ["present im"],
       },
       {
@@ -2120,7 +2120,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "pro-1",
-        specificIds: ["pol-ver-008-widzieć", "pol-ver-008-zobaczyć"],
+        specificIds: ["pol-ver-008-widzieć"],
         tenseDescription: ["past pf"],
       },
       {
@@ -2145,14 +2145,14 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "npe-1-doctor",
-        specificIds: ["pol-npe-005-lekarz", "pol-npe-006-lekarka"],
+        specificIds: ["pol-npe-005-lekarz"],
         gender: ["m1"],
         formulaImportantTraitKeys: ["gender"],
         number: ["plural"],
       },
       {
         chunkId: "ver-1-write",
-        specificIds: ["pol-ver-005-pisać", "pol-ver-005-napisać"],
+        specificIds: ["pol-ver-005-pisać"],
         agreeWith: "npe-1-doctor",
         tenseDescription: ["present im", "past pf"],
       },
@@ -2166,12 +2166,12 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "npe-1-doctor",
-        specificIds: ["pol-npe-005-lekarz", "pol-npe-006-lekarka"],
+        specificIds: ["pol-npe-005-lekarz"],
         gender: ["nonvirile"],
       },
       {
         chunkId: "ver-1-write",
-        specificIds: ["pol-ver-005-pisać", "pol-ver-005-napisać"],
+        specificIds: ["pol-ver-005-pisać"],
         agreeWith: "npe-1-doctor",
         tenseDescription: ["present im", "past pf"],
       },
@@ -2185,14 +2185,14 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "npe-1-doctor",
-        specificIds: ["pol-npe-005-lekarz", "pol-npe-006-lekarka"],
+        specificIds: ["pol-npe-005-lekarz"],
         gender: ["f"],
         formulaImportantTraitKeys: ["gender"],
         number: ["plural"],
       },
       {
         chunkId: "ver-1-write",
-        specificIds: ["pol-ver-005-pisać", "pol-ver-005-napisać"],
+        specificIds: ["pol-ver-005-pisać"],
         agreeWith: "npe-1-doctor",
         tenseDescription: ["present im", "past pf"],
       },
@@ -2206,12 +2206,12 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "npe-1-doctor",
-        specificIds: ["pol-npe-005-lekarz", "pol-npe-006-lekarka"],
+        specificIds: ["pol-npe-005-lekarz"],
         gender: ["virile"],
       },
       {
         chunkId: "ver-1-write",
-        specificIds: ["pol-ver-005-pisać", "pol-ver-005-napisać"],
+        specificIds: ["pol-ver-005-pisać"],
         agreeWith: "npe-1-doctor",
         tenseDescription: ["present im", "past pf"],
       },
@@ -2244,7 +2244,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "ver-1-See",
         agreeWith: "pro-1-I",
-        specificIds: ["pol-ver-008-widzieć", "pol-ver-008-zobaczyć"],
+        specificIds: ["pol-ver-008-widzieć"],
         tenseDescription: ["present im"],
       },
       {
@@ -2289,7 +2289,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "ver-1-See",
         agreeWith: "pro-1-I",
-        specificIds: ["pol-ver-008-widzieć", "pol-ver-008-zobaczyć"],
+        specificIds: ["pol-ver-008-widzieć"],
         tenseDescription: ["present im"],
       },
       {
@@ -2330,7 +2330,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "ver-1-See",
         agreeWith: "pro-1-I",
-        specificIds: ["pol-ver-008-widzieć", "pol-ver-008-zobaczyć"],
+        specificIds: ["pol-ver-008-widzieć"],
         tenseDescription: ["present im"],
       },
       {
@@ -2387,7 +2387,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "ver-1-See",
         agreeWith: "pro-1-I",
-        specificIds: ["pol-ver-008-widzieć", "pol-ver-008-zobaczyć"],
+        specificIds: ["pol-ver-008-widzieć"],
         tenseDescription: ["present im"],
       },
       {
@@ -2423,7 +2423,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "ver-1-See",
         agreeWith: "pro-1-I",
-        specificIds: ["pol-ver-008-widzieć", "pol-ver-008-zobaczyć"],
+        specificIds: ["pol-ver-008-widzieć"],
         tenseDescription: ["present im"],
       },
       {
