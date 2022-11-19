@@ -8,7 +8,7 @@ exports.wordsBank = {
       //links
       translations: {
         ENG: ["eng-npe-001-woman"],
-        POL: ["pol-npe-001-kobieta"],
+        POL: ["pol-npe-011-kobieta"],
       },
       tags: ["animate", "personTest1", "concrete"],
       //selectors
@@ -31,7 +31,7 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["eng-npe-002-boy"], POL: ["pol-npe-002-chłopiec"] },
+      translations: { ENG: ["eng-npe-002-boy"], POL: ["pol-npe-012-chłopiec"] },
       tags: ["animate", "personTest1", "concrete"],
       //selectors
       lemma: "boy",
@@ -55,7 +55,7 @@ exports.wordsBank = {
       //links
       translations: {
         ENG: ["eng-npe-003-father"],
-        POL: ["pol-npe-003-ojciec"],
+        POL: ["pol-npe-013-ojciec"],
       },
       tags: ["animate", "family", "concrete"],
       //selectors
@@ -78,7 +78,7 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["eng-npe-004-mother"], POL: ["pol-npe-004-matka"] },
+      translations: { ENG: ["eng-npe-004-mother"], POL: ["pol-npe-014-matka"] },
       tags: ["animate", "family", "concrete"],
       //selectors
       lemma: "mother",
@@ -102,7 +102,7 @@ exports.wordsBank = {
       //links
       translations: {
         ENG: ["eng-npe-005-doctor"],
-        POL: ["pol-npe-005-lekarz", "pol-npe-005-lekarka"],
+        POL: ["pol-npe-015-lekarz", "pol-npe-015-lekarka"],
       },
       tags: ["concrete", "animate", "personTest2", "job"],
       //selectors
@@ -123,13 +123,34 @@ exports.wordsBank = {
         },
       },
     },
+    {
+      //links
+      tags: ["animate", "personTest1", "concrete"],
+      //selectors
+      lemma: "doctor",
+      id: "eng-npe-006-lady",
+      gender: "_PersonalGenders",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "lady",
+          gen: "lady's",
+        },
+        plural: {
+          nom: "ladies",
+          gen: "ladies'",
+        },
+      },
+    },
   ],
   nco: [
     {
       //links
       translations: {
         ENG: ["eng-nco-001-bear"],
-        POL: ["pol-nco-001-niedźwiedź"],
+        POL: ["pol-nco-011-niedźwiedź"],
       },
       tags: ["allohomTesting2", "animal"],
       allohomInfo: { multipleWordtype: true, text: "animal", emoji: "🐻" },
@@ -154,7 +175,7 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["eng-nco-002-onion"], POL: ["pol-nco-002-cebula"] },
+      translations: { ENG: ["eng-nco-002-onion"], POL: ["pol-nco-012-cebula"] },
       tags: ["inanimate", "edible", "holdable", "concrete"],
       //selectors
       lemma: "onion",
@@ -178,7 +199,7 @@ exports.wordsBank = {
       //links
       translations: {
         ENG: ["eng-nco-003-tomato"],
-        POL: ["pol-nco-003-pomidor"],
+        POL: ["pol-nco-013-pomidor"],
       },
       tags: ["inanimate", "edible0", "holdable", "concrete"],
       //selectors
@@ -201,7 +222,7 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["eng-nco-004-apple"], POL: ["pol-nco-004-jabłko"] },
+      translations: { ENG: ["eng-nco-004-apple"], POL: ["pol-nco-014-jabłko"] },
       tags: ["inanimate", "edible", "holdable", "concrete"],
       //selectors
       lemma: "apple",
@@ -225,7 +246,7 @@ exports.wordsBank = {
       //links
       translations: {
         ENG: ["eng-nco-005-mirror"],
-        POL: ["pol-nco-005-lustro", "pol-nco-014-zwierciadło"],
+        POL: ["pol-nco-015-lustro", "pol-nco-004-zwierciadło"],
       },
       tags: ["inanimate", "holdable", "concrete"],
       //selectors
@@ -248,7 +269,7 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["eng-nco-006-book"], POL: ["pol-nco-006-książka"] },
+      translations: { ENG: ["eng-nco-006-book"], POL: ["pol-nco-016-książka"] },
       tags: ["inanimate", "holdable", "concrete"],
       topics: ["school"],
       //selectors
@@ -271,7 +292,7 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["eng-nco-007-door"], POL: ["pol-nco-007-drzwi"] },
+      translations: { ENG: ["eng-nco-007-door"], POL: ["pol-nco-017-drzwi"] },
       tags: ["inanimate", "house", "concrete"],
       //selectors
       lemma: "door",
@@ -293,7 +314,7 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["eng-nco-008-sheep"], POL: ["pol-nco-008-owca"] },
+      translations: { ENG: ["eng-nco-008-sheep"], POL: ["pol-nco-018-owca"] },
       tags: ["animate", "animal0", "farmyard", "concrete"],
       //selectors
       lemma: "sheep",
@@ -315,7 +336,7 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["eng-nco-009-dust"], POL: ["pol-nco-009-pył"] },
+      translations: { ENG: ["eng-nco-009-dust"], POL: ["pol-nco-019-pył"] },
       tags: ["tantumTest1"],
       //selectors
       lemma: "dust",
@@ -360,7 +381,7 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["eng-nco-011-rat"], POL: ["pol-nco-011-szczur"] },
+      translations: { ENG: ["eng-nco-011-rat"], POL: ["pol-nco-001-szczur"] },
       tags: ["animate", "animal", "pet", "concrete"],
       //selectors
       lemma: "rat",
@@ -384,7 +405,7 @@ exports.wordsBank = {
       //links
       translations: {
         ENG: ["eng-nco-012-tweezers"],
-        POL: ["pol-nco-012-pinceta"],
+        POL: ["pol-nco-002-pinceta"],
       },
       tags: ["tantumTest1"],
       //selectors
@@ -408,7 +429,7 @@ exports.wordsBank = {
   ver: [
     {
       //links
-      translations: { ENG: ["eng-ver-001-be"], POL: ["pol-ver-001-być"] },
+      translations: { ENG: ["eng-ver-001-be"], POL: ["pol-ver-011-być"] },
       tags: ["basic", "identity"],
       //selectors
       lemma: "be",
@@ -426,7 +447,7 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["eng-ver-002-have"], POL: ["pol-ver-002-mieć"] },
+      translations: { ENG: ["eng-ver-002-have"], POL: ["pol-ver-012-mieć"] },
       tags: ["basic", "possession"],
       //selectors
       lemma: "have",
@@ -447,7 +468,7 @@ exports.wordsBank = {
       //links
       translations: {
         ENG: ["eng-ver-003-read"],
-        POL: ["pol-ver-003-czytać", "pol-ver-003-przeczytać"],
+        POL: ["pol-ver-013-czytać", "pol-ver-013-przeczytać"],
       },
       tags: ["basic2"],
       //selectors
@@ -469,7 +490,7 @@ exports.wordsBank = {
       //links
       translations: {
         ENG: ["eng-ver-004-research"],
-        POL: ["pol-ver-004-badać", "pol-ver-004-zbadać"],
+        POL: ["pol-ver-014-badać", "pol-ver-014-zbadać"],
       },
       tags: ["science"],
       //selectors
@@ -491,7 +512,7 @@ exports.wordsBank = {
       //links
       translations: {
         ENG: ["eng-ver-005-write"],
-        POL: ["pol-ver-005-pisać", "pol-ver-005-napisać"],
+        POL: ["pol-ver-015-pisać", "pol-ver-015-napisać"],
       },
       tags: ["basic3"],
       //selectors
@@ -513,7 +534,7 @@ exports.wordsBank = {
       //links
       translations: {
         ENG: ["eng-ver-006-give"],
-        POL: ["pol-ver-006-dać", "pol-ver-006-dawać"],
+        POL: ["pol-ver-016-dać", "pol-ver-016-dawać"],
       },
       tags: [],
       //selectors
@@ -533,7 +554,7 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["eng-ver-007-bear"], POL: ["pol-ver-007-znieść"] },
+      translations: { ENG: ["eng-ver-007-bear"], POL: ["pol-ver-017-znieść"] },
       tags: ["allohomTesting2", "emotions"],
       allohomInfo: {
         multipleWordtype: true,
@@ -559,7 +580,7 @@ exports.wordsBank = {
       //links
       translations: {
         ENG: ["eng-ver-008-see"],
-        POL: ["pol-ver-008-widzieć", "pol-ver-008-zobaczyć"],
+        POL: ["pol-ver-018-widzieć", "pol-ver-018-zobaczyć"],
       },
       tags: ["basic1"],
       //selectors
@@ -581,7 +602,7 @@ exports.wordsBank = {
   adj: [
     {
       //links
-      translations: { ENG: ["eng-adj-001-red"], POL: ["pol-adj-001-czerwony"] },
+      translations: { ENG: ["eng-adj-001-red"], POL: ["pol-adj-011-czerwony"] },
       tags: ["colour"],
       //selectors
       lemma: "red",
@@ -598,7 +619,7 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["eng-adj-002-small"], POL: ["pol-adj-002-mały"] },
+      translations: { ENG: ["eng-adj-002-small"], POL: ["pol-adj-012-mały"] },
       tags: ["size"],
       //selectors
       lemma: "small",
@@ -617,7 +638,7 @@ exports.wordsBank = {
       //links
       translations: {
         ENG: ["eng-adj-003-blue"],
-        POL: ["pol-adj-003-niebieski"],
+        POL: ["pol-adj-013-niebieski"],
       },
       tags: ["colour2"],
       //selectors

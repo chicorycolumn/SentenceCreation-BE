@@ -148,7 +148,7 @@ xdescribe("listCounterfaxSituations", () => {
         selectedLemmaObject: {
           translations: {
             ENG: ["eng-ver-008-see"],
-            POL: ["pol-ver-008-widzieć", "pol-ver-008-zobaczyć"],
+            POL: ["pol-ver-018-widzieć", "pol-ver-018-zobaczyć"],
           },
           tags: ["basic1"],
           lemma: "see",
@@ -518,7 +518,7 @@ xdescribe("listCounterfaxSituations", () => {
         selectedLemmaObject: {
           translations: {
             ENG: ["eng-ver-008-see"],
-            POL: ["pol-ver-008-widzieć", "pol-ver-008-zobaczyć"],
+            POL: ["pol-ver-018-widzieć", "pol-ver-018-zobaczyć"],
           },
           tags: ["basic1"],
           lemma: "see",

@@ -265,7 +265,7 @@ exports.sentenceFormulasBank = [
         tenseDescription: ["present im"],
         person: ["3per"],
         andTags: [],
-        specificIds: ["pol-ver-002-mieć"],
+        specificIds: ["pol-ver-012-mieć"],
       },
       {
         chunkId: "adj-1",
@@ -305,7 +305,7 @@ exports.sentenceFormulasBank = [
         tenseDescription: ["present im"],
         person: ["3per"],
         andTags: [],
-        specificIds: ["pol-ver-002-mieć"],
+        specificIds: ["pol-ver-012-mieć"],
       },
       {
         chunkId: "adj-1",
@@ -340,7 +340,7 @@ exports.sentenceFormulasBank = [
         person: ["3per"],
         andTags: [],
 
-        specificIds: ["pol-ver-002-mieć"],
+        specificIds: ["pol-ver-012-mieć"],
       },
       {
         chunkId: "adj-1",
@@ -382,7 +382,7 @@ exports.sentenceFormulasBank = [
         person: ["3per"],
         andTags: [],
 
-        specificIds: ["pol-ver-002-mieć"],
+        specificIds: ["pol-ver-012-mieć"],
       },
       {
         chunkId: "adj-1",
@@ -646,7 +646,7 @@ exports.sentenceFormulasBank = [
       { chunkId: "fix-1", chunkValue: "jeśli" },
       {
         chunkId: "ver-1",
-        specificIds: ["pol-ver-005-pisać"],
+        specificIds: ["pol-ver-015-pisać"],
         tenseDescription: ["cond1 condition"],
         formulaImportantTraitKeys: ["tenseDescription"],
         person: ["2per"],
@@ -654,7 +654,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "nco-1",
-        specificIds: ["pol-nco-006-książka"],
+        specificIds: ["pol-nco-016-książka"],
         gcase: ["acc"],
         number: ["singular"],
       },
@@ -662,7 +662,7 @@ exports.sentenceFormulasBank = [
       { chunkId: "fix-3", chunkValue: "ją" },
       {
         chunkId: "ver-2",
-        specificIds: ["pol-ver-004-badać"],
+        specificIds: ["pol-ver-014-badać"],
         tenseDescription: ["cond1 outcome"],
         formulaImportantTraitKeys: ["tenseDescription"],
         person: ["1per"],
@@ -684,7 +684,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "nco-1",
-        specificIds: ["pol-nco-007-drzwi"],
+        specificIds: ["pol-nco-017-drzwi"],
         gcase: ["nom"],
         number: [],
       },
@@ -704,7 +704,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "pro-1",
-        specificIds: ["pol-ver-001-być"],
+        specificIds: ["pol-ver-011-być"],
         tenseDescription: ["present im"],
       },
     ],
@@ -724,7 +724,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "npe-1",
-        specificIds: ["pol-ver-005-pisać"],
+        specificIds: ["pol-ver-015-pisać"],
         tenseDescription: ["past pf"],
       },
       { chunkId: "fix-1", chunkValue: "receptę" },
@@ -745,7 +745,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "npe-1",
-        specificIds: ["pol-ver-005-pisać"],
+        specificIds: ["pol-ver-015-pisać"],
         tenseDescription: ["past im"],
       },
       {
@@ -770,7 +770,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "npe-1",
-        specificIds: ["pol-ver-005-pisać"],
+        specificIds: ["pol-ver-015-pisać"],
         tenseDescription: ["past pf"],
       },
       { chunkId: "fix-1", chunkValue: "receptę" },
@@ -791,7 +791,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "npe-1",
-        specificIds: ["pol-ver-005-pisać"],
+        specificIds: ["pol-ver-015-pisać"],
         tenseDescription: ["past im"],
       },
       { chunkId: "fix-1", chunkValue: "receptę" },
@@ -806,12 +806,12 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "npe-1",
-        specificIds: ["pol-npe-001-kobieta"],
+        specificIds: ["pol-npe-011-kobieta"],
       },
       {
         chunkId: "ver-1",
         agreeWith: "npe-1",
-        specificIds: ["pol-ver-003-czytać"],
+        specificIds: ["pol-ver-013-czytać"],
         tenseDescription: ["past im"],
       },
       {
@@ -822,7 +822,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "nco-2",
-        specificIds: ["pol-nco-006-książka"],
+        specificIds: ["pol-nco-016-książka"],
         gcase: ["acc"],
         number: ["singular"],
       },
@@ -843,7 +843,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "pro-1",
-        specificIds: ["pol-ver-001-być"],
+        specificIds: ["pol-ver-011-być"],
         tenseDescription: ["present im"],
       },
     ],
@@ -863,7 +863,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "pro-1",
-        specificIds: ["pol-ver-001-być"],
+        specificIds: ["pol-ver-011-być"],
         tenseDescription: ["past im"],
       },
     ],
@@ -883,7 +883,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "pro-1",
-        specificIds: ["pol-ver-001-być"],
+        specificIds: ["pol-ver-011-być"],
         tenseDescription: ["past im"],
       },
     ],
@@ -903,7 +903,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "npe-1",
-        specificIds: ["pol-ver-006-dać"],
+        specificIds: ["pol-ver-016-dać"],
         tenseDescription: ["past pf"],
       },
       {
@@ -915,10 +915,10 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "nco-2",
         specificIds: [
-          "pol-nco-004-jabłko",
-          "pol-nco-002-cebula",
-          "pol-nco-005-lustro",
-          "pol-nco-006-książka",
+          "pol-nco-014-jabłko",
+          "pol-nco-012-cebula",
+          "pol-nco-015-lustro",
+          "pol-nco-016-książka",
         ],
         gcase: ["acc"],
         number: ["plural"],
@@ -940,7 +940,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "npe-1",
-        specificIds: ["pol-ver-006-dać"],
+        specificIds: ["pol-ver-016-dać"],
         tenseDescription: ["past pf"],
       },
       {
@@ -952,10 +952,10 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "nco-2",
         specificIds: [
-          "pol-nco-004-jabłko",
-          "pol-nco-002-cebula",
-          "pol-nco-005-lustro",
-          "pol-nco-006-książka",
+          "pol-nco-014-jabłko",
+          "pol-nco-012-cebula",
+          "pol-nco-015-lustro",
+          "pol-nco-016-książka",
         ],
         gcase: ["acc"],
         number: ["singular"],
@@ -990,7 +990,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "npe-1",
-        specificIds: ["pol-ver-006-dać"],
+        specificIds: ["pol-ver-016-dać"],
         tenseDescription: ["past pf"],
       },
       {
@@ -1002,7 +1002,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "nco-2",
-        specificIds: ["pol-nco-006-książka"],
+        specificIds: ["pol-nco-016-książka"],
         gcase: ["acc"],
         number: ["singular"],
       },
@@ -1035,7 +1035,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1-Gave",
         agreeWith: "npe-1-Father",
-        specificIds: ["pol-ver-006-dać"],
+        specificIds: ["pol-ver-016-dać"],
         tenseDescription: ["past pf"],
       },
       {
@@ -1054,7 +1054,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "nco-2-Book",
-        specificIds: ["pol-nco-006-książka"],
+        specificIds: ["pol-nco-016-książka"],
         gcase: ["acc"],
         number: ["singular"],
       },
@@ -1086,13 +1086,13 @@ exports.sentenceFormulasBank = [
         chunkId: "npe-1-Doctor",
 
         gcase: ["nom"],
-        specificIds: ["pol-npe-005-lekarz"],
+        specificIds: ["pol-npe-015-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
       },
       {
         chunkId: "ver-1-Gave",
         agreeWith: "npe-1-Doctor",
-        specificIds: ["pol-ver-006-dać"],
+        specificIds: ["pol-ver-016-dać"],
         tenseDescription: ["past pf"],
       },
       {
@@ -1111,7 +1111,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "nco-2-Book",
-        specificIds: ["pol-nco-006-książka"],
+        specificIds: ["pol-nco-016-książka"],
         gcase: ["acc"],
         number: ["singular"],
       },
@@ -1135,7 +1135,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1-see",
         agreeWith: "pro-1-I",
-        specificIds: ["pol-ver-008-widzieć"],
+        specificIds: ["pol-ver-018-widzieć"],
         tenseDescription: ["past pf"],
       },
       {
@@ -1150,7 +1150,7 @@ exports.sentenceFormulasBank = [
 
         gcase: ["nom"],
         number: ["singular"],
-        specificIds: ["pol-npe-005-lekarz"],
+        specificIds: ["pol-npe-015-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
         gcase: ["acc"],
       },
@@ -1167,7 +1167,7 @@ exports.sentenceFormulasBank = [
 
         gcase: ["nom"],
         number: ["singular"],
-        specificIds: ["pol-npe-005-lekarz"],
+        specificIds: ["pol-npe-015-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
         gcase: ["acc"],
       },
@@ -1205,7 +1205,7 @@ exports.sentenceFormulasBank = [
         chunkId: "npe-1-doctor",
         gcase: ["nom"],
         number: ["singular"],
-        specificIds: ["pol-npe-005-lekarz"],
+        specificIds: ["pol-npe-015-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
         gcase: ["nom"],
         gender: ["f"],
@@ -1214,14 +1214,14 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1-was",
         agreeWith: "npe-1-doctor",
-        specificIds: ["pol-ver-001-być"],
+        specificIds: ["pol-ver-011-być"],
         tenseDescription: ["past pf"],
       },
       {
         chunkId: "npe-2-woman",
         gcase: ["ins"],
         number: ["singular"],
-        specificIds: ["pol-npe-001-kobieta"],
+        specificIds: ["pol-npe-011-kobieta"],
       },
     ],
     primaryOrders: [["pro-2-my", "npe-1-doctor", "ver-1-was", "npe-2-woman"]],
@@ -1249,7 +1249,7 @@ exports.sentenceFormulasBank = [
 
         gcase: ["nom"],
         number: ["singular"],
-        specificIds: ["pol-npe-005-lekarz"],
+        specificIds: ["pol-npe-015-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
         gcase: ["nom"],
         gender: ["f"],
@@ -1279,7 +1279,7 @@ exports.sentenceFormulasBank = [
         chunkId: "npe-1-doctor",
         gcase: ["nom"],
         number: ["singular"],
-        specificIds: ["pol-npe-005-lekarz"],
+        specificIds: ["pol-npe-015-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
         gcase: ["nom"],
         gender: ["f"],
@@ -1288,7 +1288,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1-was",
         agreeWith: "npe-1-doctor",
-        specificIds: ["pol-ver-001-być"],
+        specificIds: ["pol-ver-011-być"],
         tenseDescription: ["past pf"],
       },
       {
@@ -1296,7 +1296,7 @@ exports.sentenceFormulasBank = [
 
         gcase: ["ins"],
         number: ["singular"],
-        specificIds: ["pol-npe-001-kobieta"],
+        specificIds: ["pol-npe-011-kobieta"],
       },
     ],
     primaryOrders: [["pro-2-my", "npe-1-doctor", "ver-1-was", "npe-2-woman"]],
@@ -1323,7 +1323,7 @@ exports.sentenceFormulasBank = [
         chunkId: "npe-1-doctor's",
 
         number: ["singular"],
-        specificIds: ["pol-npe-005-lekarz"],
+        specificIds: ["pol-npe-015-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
         gcase: ["gen"],
       },
@@ -1332,7 +1332,7 @@ exports.sentenceFormulasBank = [
 
         gcase: ["nom"],
         number: ["singular"],
-        specificIds: ["pol-npe-005-lekarz"],
+        specificIds: ["pol-npe-015-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
         gender: ["f"],
         educatorBlocksAnnotationsForTheseTraitKeys: ["gender"], //Just for symmetry and so I know it doesn't break anything.
@@ -1340,7 +1340,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1-was",
         agreeWith: "npe-2-doctor",
-        specificIds: ["pol-ver-001-być"],
+        specificIds: ["pol-ver-011-być"],
         tenseDescription: ["past pf"],
       },
       {
@@ -1348,7 +1348,7 @@ exports.sentenceFormulasBank = [
 
         gcase: ["ins"],
         number: ["singular"],
-        specificIds: ["pol-npe-001-kobieta"],
+        specificIds: ["pol-npe-011-kobieta"],
       },
     ],
     primaryOrders: [
@@ -1375,14 +1375,14 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1-was",
         agreeWith: "pro-1-I",
-        specificIds: ["pol-ver-001-być"],
+        specificIds: ["pol-ver-011-być"],
         tenseDescription: ["past pf"],
       },
       {
         chunkId: "npe-1-doctor",
         gcase: ["ins"],
         formulaImportantTraitKeys: ["gcase"],
-        specificIds: ["pol-npe-005-lekarz"],
+        specificIds: ["pol-npe-015-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
         agreeWith: "pro-1-I",
       },
@@ -1402,7 +1402,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1-was",
         agreeWith: "pro-1-I",
-        specificIds: ["pol-ver-001-być"],
+        specificIds: ["pol-ver-011-być"],
         tenseDescription: ["past pf"],
       },
       {
@@ -1411,7 +1411,7 @@ exports.sentenceFormulasBank = [
         gcase: ["ins"],
         formulaImportantTraitKeys: ["gcase"],
         number: ["singular"],
-        specificIds: ["pol-npe-005-lekarz"],
+        specificIds: ["pol-npe-015-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
         agreeWith: "pro-1-I",
       },
@@ -1431,7 +1431,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1-was",
         agreeWith: "pro-1-I",
-        specificIds: ["pol-ver-001-być"],
+        specificIds: ["pol-ver-011-być"],
         tenseDescription: ["past pf"],
       },
       {
@@ -1440,7 +1440,7 @@ exports.sentenceFormulasBank = [
         gcase: ["ins"],
         formulaImportantTraitKeys: ["gcase"],
         // number: ["singular"],
-        specificIds: ["pol-npe-005-lekarz"],
+        specificIds: ["pol-npe-015-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
         agreeWith: "pro-1-I",
       },
@@ -1461,7 +1461,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1-was",
         agreeWith: "pro-1-I",
-        specificIds: ["pol-ver-001-być"],
+        specificIds: ["pol-ver-011-być"],
         tenseDescription: ["past pf"],
       },
       { chunkId: "fix-1-here", chunkValue: "tutaj" },
@@ -1482,7 +1482,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1-am",
         agreeWith: "pro-1-I",
-        specificIds: ["pol-ver-001-być"],
+        specificIds: ["pol-ver-011-być"],
         tenseDescription: ["present im"],
       },
       { chunkId: "fix-1-here", chunkValue: "tutaj" },
@@ -1512,7 +1512,7 @@ exports.sentenceFormulasBank = [
 
         gcase: ["nom"],
         number: ["singular"],
-        specificIds: ["pol-npe-005-lekarz"],
+        specificIds: ["pol-npe-015-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
         gcase: ["nom"],
         educatorBlocksAnnotationsForTheseTraitKeys: ["gender", "number"],
@@ -1529,7 +1529,7 @@ exports.sentenceFormulasBank = [
         chunkId: "nco-2-book",
         gcase: ["nom"],
         number: ["singular"],
-        specificIds: ["pol-nco-006-książka"],
+        specificIds: ["pol-nco-016-książka"],
         gcase: ["nom"],
       },
     ],
@@ -1560,7 +1560,7 @@ exports.sentenceFormulasBank = [
 
         gcase: ["nom"],
         number: ["singular"],
-        specificIds: ["pol-npe-005-lekarz"],
+        specificIds: ["pol-npe-015-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
         gcase: ["nom"],
       },
@@ -1576,7 +1576,7 @@ exports.sentenceFormulasBank = [
         chunkId: "nco-2-book",
         gcase: ["nom"],
         number: ["singular"],
-        specificIds: ["pol-nco-006-książka"],
+        specificIds: ["pol-nco-016-książka"],
         gcase: ["nom"],
       },
     ],
@@ -1607,7 +1607,7 @@ exports.sentenceFormulasBank = [
 
         gcase: ["nom"],
         number: ["singular"],
-        specificIds: ["pol-npe-005-lekarz"],
+        specificIds: ["pol-npe-015-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
         gcase: ["nom"],
         // gender: ["f"],
@@ -1638,7 +1638,7 @@ exports.sentenceFormulasBank = [
         //
         // gcase: ["nom"],
         number: ["singular"],
-        specificIds: ["pol-nco-002-cebula"],
+        specificIds: ["pol-nco-012-cebula"],
         // gcase: ["nom"],
         // gender: ["f"],
       },
@@ -1658,11 +1658,11 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-1-woman",
-        specificIds: ["pol-npe-001-kobieta"],
+        specificIds: ["pol-npe-011-kobieta"],
       },
       {
         chunkId: "ver-1-see",
-        specificIds: ["pol-ver-008-widzieć"],
+        specificIds: ["pol-ver-018-widzieć"],
         agreeWith: "npe-1-woman",
         tenseDescription: ["past pf"],
       },
@@ -1689,12 +1689,12 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-1-doctor",
-        specificIds: ["pol-npe-005-lekarz"],
+        specificIds: ["pol-npe-015-lekarz"],
         number: ["singular"],
       },
       {
         chunkId: "ver-1-see",
-        specificIds: ["pol-ver-008-widzieć"],
+        specificIds: ["pol-ver-018-widzieć"],
         agreeWith: "npe-1-doctor",
         tenseDescription: ["past pf"],
       },
@@ -1721,7 +1721,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "ver-1-read",
-        specificIds: ["pol-ver-003-czytać"],
+        specificIds: ["pol-ver-013-czytać"],
         agreeWith: "pro-1-I",
         tenseDescription: [
           "past pf",
@@ -1733,7 +1733,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "nco-1-book",
-        specificIds: ["pol-nco-006-książka"],
+        specificIds: ["pol-nco-016-książka"],
         number: ["singular"],
         gcase: ["acc"],
       },
@@ -1748,11 +1748,11 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "npe-1-doctor",
-        specificIds: ["pol-npe-005-lekarz"],
+        specificIds: ["pol-npe-015-lekarz"],
       },
       {
         chunkId: "ver-1-write",
-        specificIds: ["pol-ver-005-pisać"],
+        specificIds: ["pol-ver-015-pisać"],
         agreeWith: "npe-1-doctor",
         tenseDescription: ["present im", "past pf"],
       },
@@ -1771,13 +1771,13 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "ver-1-am",
-        specificIds: ["pol-ver-001-być"],
+        specificIds: ["pol-ver-011-być"],
         agreeWith: "pro-1-I",
         tenseDescription: ["present im"],
       },
       {
         chunkId: "adj-1-red",
-        specificIds: ["pol-adj-001-czerwony"],
+        specificIds: ["pol-adj-011-czerwony"],
         agreeWith: "pro-1-I",
       },
     ],
