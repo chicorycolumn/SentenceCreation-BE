@@ -5,6 +5,8 @@ const otUtils = require("./objectTraversingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 const refFxn = require("./reference/referenceFunctions.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
+const nexusUtils = require("../utils/secondOrder/nexusUtils.js");
+
 const allLangUtils = require("./allLangUtils.js");
 
 exports.drillCarefullyIntoPHD = (source, key) => {
@@ -580,10 +582,12 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
     doneSelectors.push("gender");
   }
 
+  let selectedLemmaObjectTags = nexusUtils.getPapers(selectedLemmaObject);
+
   //STEP TWO: Update the stCh's andTags with the lObj's tags.
   if (structureChunk.andTags && structureChunk.andTags.length) {
     structureChunk.andTags = structureChunk.andTags.filter((andTag) =>
-      selectedLemmaObject.tags.includes(andTag)
+      selectedLemmaObjectTags.includes(andTag)
     );
   } else {
     consol.log(
@@ -592,7 +596,7 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
         "[0m"
     );
 
-    structureChunk.andTags = selectedLemmaObject.tags.slice(0);
+    structureChunk.andTags = selectedLemmaObjectTags.slice(0);
   }
 
   //STEP THREE: For all remaining selectors, update the stCh with traitValues from lObj.
@@ -724,15 +728,17 @@ exports.filterByTags = (wordset, structureChunk) => {
   let { andTags, orTags } = structureChunk;
 
   if (andTags && andTags.length) {
-    lemmaObjects = lemmaObjects.filter((lemmaObject) =>
-      andTags.every((andTag) => lemmaObject.tags.includes(andTag))
-    );
+    lemmaObjects = lemmaObjects.filter((lemmaObject) => {
+      lemmaObjectTags = nexusUtils.getPapers(lemmaObject);
+      return andTags.every((andTag) => lemmaObjectTags.includes(andTag));
+    });
   }
 
   if (orTags && orTags.length) {
-    lemmaObjects = lemmaObjects.filter((lemmaObject) =>
-      orTags.some((orTag) => lemmaObject.tags.includes(orTag))
-    );
+    lemmaObjects = lemmaObjects.filter((lemmaObject) => {
+      lemmaObjectTags = nexusUtils.getPapers(lemmaObject);
+      return orTags.some((orTag) => lemmaObjectTags.includes(orTag));
+    });
   }
 
   return lemmaObjects;

@@ -8,11 +8,8 @@ const consol = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const { it } = require("mocha");
 const testingUtils = require("../utils/secondOrder/testingUtils.js");
 const nexusUtils = require("../utils/secondOrder/nexusUtils.js");
-const {
-  traitValueTranslation,
-} = require("../utils/reference/referenceTranslations");
 
-describe.only("/nexusUtils", function () {
+describe("/nexusUtils", function () {
   it("1", () => {
     nexusUtils.checkAllLObjsArePresentInNexus("ref", "ENG");
     nexusUtils.checkAllLObjsArePresentInNexus("ref", "POL");

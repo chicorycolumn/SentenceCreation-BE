@@ -4,12 +4,6 @@
 exports.wordsBank = {
   npe: [
     {
-      //links
-      translations: {
-        ENG: ["eng-npe-001-woman"],
-        POL: ["pol-npe-011-kobieta"],
-      },
-      tags: ["animate", "personTest1", "concrete"],
       //selectors
       lemma: "kobieta",
       id: "pol-npe-011-kobieta",
@@ -40,12 +34,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: {
-        ENG: ["eng-npe-003-father"],
-        POL: ["pol-npe-013-ojciec"],
-      },
-      tags: ["animate", "family", "concrete"],
       //selectors
       lemma: "ojciec",
       id: "pol-npe-013-ojciec",
@@ -73,9 +61,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: { ENG: ["eng-npe-004-mother"], POL: ["pol-npe-014-matka"] },
-      tags: ["animate", "family", "concrete"],
       //selectors
       lemma: "matka",
       id: "pol-npe-014-matka",
@@ -137,9 +122,6 @@ exports.wordsBank = {
     //   },
     // },
     {
-      //links
-      translations: { ENG: ["eng-npe-002-boy"], POL: ["pol-npe-012-chłopiec"] },
-      tags: ["animate", "personTest1", "concrete"],
       //selectors
       lemma: "chłopiec",
       id: "pol-npe-012-chłopiec",
@@ -167,12 +149,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: {
-        ENG: ["eng-npe-005-doctor"],
-        POL: ["pol-npe-015-lekarz", "pol-npe-015-lekarka"],
-      },
-      tags: ["concrete", "animate", "personTest2", "job"],
       //selectors
       lemma: "lekarz",
       id: "pol-npe-015-lekarz",
@@ -200,12 +176,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: {
-        ENG: ["eng-npe-005-doctor"],
-        POL: ["pol-npe-015-lekarz", "pol-npe-015-lekarka"],
-      },
-      tags: ["concrete", "animate", "personTest2", "job"],
       //selectors
       lemma: "lekarka",
       id: "pol-npe-015-lekarka",
@@ -235,12 +205,6 @@ exports.wordsBank = {
   ],
   nco: [
     {
-      //links
-      translations: {
-        ENG: ["eng-nco-001-bear"],
-        POL: ["pol-nco-011-niedźwiedź"],
-      },
-      tags: ["allohomTesting2", "animal"],
       //selectors
       lemma: "niedźwiedź",
       id: "pol-nco-011-niedźwiedź",
@@ -268,9 +232,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: { ENG: ["eng-nco-002-onion"], POL: ["pol-nco-012-cebula"] },
-      tags: ["inanimate", "edible", "holdable", "concrete"],
       //selectors
       lemma: "cebula",
       id: "pol-nco-012-cebula",
@@ -298,9 +259,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: { ENG: ["eng-nco-004-apple"], POL: ["pol-nco-014-jabłko"] },
-      tags: ["inanimate", "edible", "holdable", "concrete"],
       //selectors
       lemma: "jabłko",
       id: "pol-nco-014-jabłko",
@@ -328,12 +286,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: {
-        ENG: ["eng-nco-003-tomato"],
-        POL: ["pol-nco-013-pomidor"],
-      },
-      tags: ["inanimate", "edible0", "holdable", "concrete"],
       //selectors
       lemma: "pomidor",
       id: "pol-nco-013-pomidor",
@@ -365,9 +317,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: { ENG: ["eng-nco-009-dust"], POL: ["pol-nco-019-pył"] },
-      tags: ["tantumTest1"],
       //selectors
       lemma: "pył",
       id: "pol-nco-019-pył",
@@ -395,12 +344,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: {
-        ENG: ["eng-nco-005-mirror"],
-        POL: ["pol-nco-015-lustro", "pol-nco-004-zwierciadło"],
-      },
-      tags: ["inanimate", "holdable", "concrete"],
       //selectors
       lemma: "lustro",
       id: "pol-nco-015-lustro",
@@ -428,12 +371,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: {
-        ENG: ["eng-nco-005-mirror"],
-        POL: ["pol-nco-015-lustro", "pol-nco-004-zwierciadło"],
-      },
-      tags: ["inanimate", "holdable", "concrete"],
       //selectors
       lemma: "zwierciadło",
       id: "pol-nco-004-zwierciadło",
@@ -461,9 +398,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: { ENG: ["eng-nco-006-book"], POL: ["pol-nco-016-książka"] },
-      tags: ["inanimate", "holdable", "concrete"],
       //selectors
       lemma: "książka",
       id: "pol-nco-016-książka",
@@ -491,9 +425,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: { ENG: ["eng-nco-007-door"], POL: ["pol-nco-017-drzwi"] },
-      tags: ["inanimate", "house", "concrete"],
       //selectors
       lemma: "drzwi",
       id: "pol-nco-017-drzwi",
@@ -514,12 +445,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: {
-        ENG: ["eng-nco-010-underwear"],
-        POL: ["pol-nco-010-majtki"],
-      },
-      tags: ["inanimate", "holdable", "concrete", "wearable"],
       //selectors
       lemma: "majtki",
       id: "pol-nco-010-majtki",
@@ -540,9 +465,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: { ENG: ["eng-nco-008-sheep"], POL: ["pol-nco-018-owca"] },
-      tags: ["concrete", "animal0", "animate", "farmyard"],
       //selectors
       lemma: "owca",
       id: "pol-nco-018-owca",
@@ -570,9 +492,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: { ENG: ["eng-nco-011-rat"], POL: ["pol-nco-001-szczur"] },
-      tags: ["concrete", "animal", "animate", "pet"],
       //selectors
       lemma: "szczur",
       id: "pol-nco-001-szczur",
@@ -600,12 +519,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: {
-        ENG: ["eng-nco-012-tweezers"],
-        POL: ["pol-nco-002-pinceta"],
-      },
-      tags: ["tantumTest1"],
       //selectors
       lemma: "pinceta",
       id: "pol-nco-002-pinceta",
@@ -635,12 +548,6 @@ exports.wordsBank = {
   ],
   ver: [
     {
-      //links
-      translations: {
-        ENG: ["eng-ver-006-give"],
-        POL: ["pol-ver-016-dać", "pol-ver-016-dawać"],
-      },
-      tags: [],
       //selectors
       lemma: "dawać",
       id: "pol-ver-016-dawać",
@@ -727,12 +634,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: {
-        ENG: ["eng-ver-006-give"],
-        POL: ["pol-ver-016-dać", "pol-ver-016-dawać"],
-      },
-      tags: [],
       //selectors
       lemma: "dać",
       id: "pol-ver-016-dać",
@@ -819,9 +720,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: { ENG: ["eng-ver-001-be"], POL: ["pol-ver-011-być"] },
-      tags: ["basic", "identity"],
       //selectors
       lemma: "być",
       id: "pol-ver-011-być",
@@ -1001,9 +899,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: { ENG: ["eng-ver-002-have"], POL: ["pol-ver-012-mieć"] },
-      tags: ["basic", "possession"],
       //selectors
       lemma: "mieć",
       id: "pol-ver-012-mieć",
@@ -1093,12 +988,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: {
-        ENG: ["eng-ver-005-write"],
-        POL: ["pol-ver-015-pisać", "pol-ver-015-napisać"],
-      },
-      tags: ["basic3"],
       //selectors
       lemma: "pisać",
       id: "pol-ver-015-pisać",
@@ -1185,12 +1074,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: {
-        ENG: ["eng-ver-005-write"],
-        POL: ["pol-ver-015-pisać", "pol-ver-015-napisać"],
-      },
-      tags: ["basic3"],
       //selectors
       lemma: "napisać",
       id: "pol-ver-015-napisać",
@@ -1277,12 +1160,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: {
-        ENG: ["eng-ver-003-read"],
-        POL: ["pol-ver-013-czytać", "pol-ver-013-przeczytać"],
-      },
-      tags: ["basic2"],
       //selectors
       lemma: "czytać",
       id: "pol-ver-013-czytać",
@@ -1369,12 +1246,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: {
-        ENG: ["eng-ver-003-read"],
-        POL: ["pol-ver-013-czytać", "pol-ver-013-przeczytać"],
-      },
-      tags: ["basic2"],
       //selectors
       lemma: "przeczytać",
       id: "pol-ver-013-przeczytać",
@@ -1461,12 +1332,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: {
-        ENG: ["eng-ver-004-research"],
-        POL: ["pol-ver-014-badać", "pol-ver-014-zbadać"],
-      },
-      tags: ["science"],
       //selectors
       lemma: "badać",
       id: "pol-ver-014-badać",
@@ -1553,12 +1418,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: {
-        ENG: ["eng-ver-004-research"],
-        POL: ["pol-ver-014-badać", "pol-ver-014-zbadać"],
-      },
-      tags: ["science"],
       //selectors
       lemma: "zbadać",
       id: "pol-ver-014-zbadać",
@@ -1645,12 +1504,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: {
-        ENG: ["eng-ver-008-see"],
-        POL: ["pol-ver-018-widzieć", "pol-ver-018-zobaczyć"],
-      },
-      tags: ["basic1"],
       //selectors
       lemma: "widzieć",
       id: "pol-ver-018-widzieć",
@@ -1737,12 +1590,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: {
-        ENG: ["eng-ver-008-see"],
-        POL: ["pol-ver-018-widzieć", "pol-ver-018-zobaczyć"],
-      },
-      tags: ["basic1"],
       //selectors
       lemma: "zobaczyć",
       id: "pol-ver-018-zobaczyć",
@@ -1829,9 +1676,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: { ENG: ["eng-ver-007-bear"], POL: ["pol-ver-017-znieść"] },
-      tags: ["allohomTesting2", "emotions"],
       //selectors
       lemma: "znieść",
       id: "pol-ver-017-znieść",
@@ -1920,9 +1764,6 @@ exports.wordsBank = {
   ],
   adj: [
     {
-      //links
-      translations: { ENG: ["eng-adj-001-red"], POL: ["pol-adj-011-czerwony"] },
-      tags: ["colour"],
       //selectors
       lemma: "czerwony",
       id: "pol-adj-011-czerwony",
@@ -1998,12 +1839,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: {
-        ENG: ["eng-adj-003-blue"],
-        POL: ["pol-adj-013-niebieski"],
-      },
-      tags: ["colour2"],
       //selectors
       lemma: "niebieski",
       id: "pol-adj-013-niebieski",
@@ -2071,9 +1906,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: { ENG: ["eng-adj-002-small"], POL: ["pol-adj-012-mały"] },
-      tags: ["size"],
       //selectors
       lemma: "mały",
       id: "pol-adj-012-mały",
@@ -2151,9 +1983,6 @@ exports.wordsBank = {
   ],
   pro: [
     {
-      //links
-      translations: { ENG: ["eng-pro-PERSONAL"], POL: ["pol-pro-PERSONAL"] },
-      tags: [],
       //selectors
       lemma: "$PERSONAL",
       id: "pol-pro-PERSONAL",
@@ -2418,12 +2247,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: {
-        ENG: ["eng-pro-POSSESSIVE"],
-        POL: ["pol-pro-POSSESSIVE"],
-      },
-      tags: [],
       //selectors
       lemma: "$POSSESSIVE",
       id: "pol-pro-POSSESSIVE",
@@ -2790,9 +2613,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: { ENG: ["eng-pro-ITG_A"], POL: ["pol-pro-ITG_A"] },
-      tags: [],
       //selectors
       lemma: "$ITG_A",
       id: "pol-pro-ITG_A",
@@ -2827,9 +2647,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: { ENG: ["eng-pro-ITG_B"], POL: ["pol-pro-ITG_B"] },
-      tags: [],
       //selectors
       lemma: "$ITG_B",
       id: "pol-pro-ITG_B",
@@ -2896,9 +2713,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: { ENG: ["eng-pro-ITG_C"], POL: ["pol-pro-ITG_C"] },
-      tags: [],
       //selectors
       lemma: "$ITG_C",
       id: "pol-pro-ITG_C",
@@ -2918,9 +2732,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: { ENG: ["eng-pro-ITG_D"], POL: ["pol-pro-ITG_D"] },
-      tags: [],
       //selectors
       lemma: "$ITG_D",
       id: "pol-pro-ITG_D",
@@ -2940,9 +2751,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: { ENG: ["eng-pro-ITG_E"], POL: ["pol-pro-ITG_E"] },
-      tags: [],
       //selectors
       lemma: "$ITG_E",
       id: "pol-pro-ITG_E",
@@ -2962,9 +2770,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: { ENG: ["eng-pro-ITG_F"], POL: ["pol-pro-ITG_F"] },
-      tags: [],
       //selectors
       lemma: "$ITG_F",
       id: "pol-pro-ITG_F",
@@ -2993,9 +2798,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: { ENG: ["eng-pro-ITG_G"], POL: ["pol-pro-ITG_G"] },
-      tags: [],
       //selectors
       lemma: "$ITG_G",
       id: "pol-pro-ITG_G",
@@ -3076,9 +2878,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: { ENG: ["eng-pro-ITG_J"], POL: ["pol-pro-ITG_J"] },
-      tags: [],
       //selectors
       lemma: "$ITG_J",
       id: "pol-pro-ITG_J",
@@ -3145,9 +2944,6 @@ exports.wordsBank = {
       },
     },
     {
-      //links
-      translations: { ENG: ["eng-pro-ITG_K"], POL: ["pol-pro-ITG_K"] },
-      tags: [],
       //selectors
       lemma: "$ITG_K",
       id: "pol-pro-ITG_K",
@@ -3216,9 +3012,6 @@ exports.wordsBank = {
   ],
   pre: [
     {
-      //links
-      translations: { ENG: ["eng-pre-001-with"], POL: ["pol-pre-001-z"] },
-      tags: [],
       //selectors
       lemma: "z",
       id: "pol-pre-001-z",

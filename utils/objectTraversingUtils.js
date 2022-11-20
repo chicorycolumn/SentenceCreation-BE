@@ -56,9 +56,8 @@ exports.findMatchingLemmaObjectThenWord = (
       source.map((lObj) => lObj.id)
     );
     matches = source.filter((lObj) => {
-      soughtId = allLangUtils.getLObjIdStem(lObj.id);
-      return structureChunk.specificIds.some(
-        (specificId) => allLangUtils.getLObjIdStem(specificId) === soughtId
+      return structureChunk.specificIds.some((specificId) =>
+        allLangUtils.compareLObjStems(lObj.id, specificId)
       );
     });
     consol.log(`obbn Found ${matches.length} matches.`);

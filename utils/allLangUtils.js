@@ -81,6 +81,10 @@ exports.getLObjIdStem = (id) => {
   return id.split("-").slice(0, 3).join("-");
 };
 
+exports.compareLObjStems = (id1, id2) => {
+  return allLangUtils.getLObjIdStem(id1) === allLangUtils.getLObjIdStem(id2);
+};
+
 exports.translateAnnoTraitValue = (
   annoTraitKey,
   structureChunk,

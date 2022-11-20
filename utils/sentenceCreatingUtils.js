@@ -9,6 +9,7 @@ const scUtils = require("./sentenceCreatingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 const refFxn = require("./reference/referenceFunctions.js");
 const allLangUtils = require("../utils/allLangUtils.js");
+const nexusUtils = require("./secondOrder/nexusUtils.js");
 
 exports.getWordsAndFormulas = (currentLanguage, wordsOnly) => {
   let envir = "ref";
@@ -1125,8 +1126,9 @@ exports.conformAnswerStructureToQuestionStructure = (
 
     let matchingAnswerLemmaObjects = [];
 
-    let lObjsToSearch =
-      questionSelectedLemmaObject.translations[answerLanguage];
+    let lObjsToSearch = nexusUtils.getTraductions(questionSelectedLemmaObject)[
+      answerLanguage
+    ];
 
     let source = words[gpUtils.getWordtypeShorthandStCh(answerStructureChunk)];
 
@@ -1143,8 +1145,8 @@ exports.conformAnswerStructureToQuestionStructure = (
     matchingAnswerLemmaObjects = matchingAnswerLemmaObjects.filter(
       (answerLemmaObject) =>
         uUtils.areTwoFlatArraysEqual(
-          questionSelectedLemmaObject.tags,
-          answerLemmaObject.tags
+          nexusUtils.getPapers(questionSelectedLemmaObject),
+          nexusUtils.getPapers(answerLemmaObject)
         )
     );
 

@@ -11,6 +11,8 @@ const pvUtils = require("../../utils/secondOrder/processValidationUtils.js");
 const frUtils = require("../../utils/formattingResponseUtils.js");
 const apiUtils = require("../../utils/secondOrder/apiUtils.js");
 const refObj = require("../../utils/reference/referenceObjects.js");
+const nexusUtils = require("../../utils/secondOrder/nexusUtils.js");
+
 const allLangUtils = require("../../utils/allLangUtils.js");
 const refFxn = require("../reference/referenceFunctions.js");
 
@@ -41,10 +43,13 @@ exports.getWordsByCriteria = (currentLanguage, criteriaFromHTTP) => {
           let critValue = criteria[critKey];
 
           if (critKey === "andTags") {
-            return uUtils.doStringsOrArraysMatch(lObj["tags"], critValue);
+            return uUtils.doStringsOrArraysMatch(
+              nexusUtils.getPapers(lObj),
+              critValue
+            );
           } else if (critKey === "orTags") {
             return uUtils.doStringsOrArraysMatch(
-              lObj["tags"],
+              nexusUtils.getPapers(lObj),
               critValue,
               false
             );
@@ -59,7 +64,7 @@ exports.getWordsByCriteria = (currentLanguage, criteriaFromHTTP) => {
         resObj[wordtypeShorthand].push({
           lemma: lObj.lemma,
           id: lObj.id,
-          tags: lObj.tags,
+          tags: nexusUtils.getPapers(lObj),
         });
       }
     });
@@ -71,13 +76,11 @@ exports.getWordsByCriteria = (currentLanguage, criteriaFromHTTP) => {
 exports.getTagsAndTopics = (currentLanguage) => {
   let envir = "ref";
 
-  const {
-    wordsBank,
-  } = require(`../../source/${envir}/${currentLanguage}/words.js`);
+  const { wordsBank } = require(`../../source/${envir}/NEXUS/words.js`);
 
   allTags = gpUtils.collectAllValuesFromKeyOnObjectsInNestedArrayOfObjects(
     wordsBank,
-    "tags"
+    "papers"
   );
   allTopics = gpUtils.collectAllValuesFromKeyOnObjectsInNestedArrayOfObjects(
     wordsBank,
@@ -187,9 +190,12 @@ exports.getStChsForLemma = (lang, lemma) => {
       }
     });
 
-    if (lObj.tags) {
-      stCh.andTags.traitValue = lObj.tags;
+    let theTags = nexusUtils.getPapers(lObj);
+    if (!theTags) {
+      consol.log("[1;31m " + `taof ${lObj.id} has no tags.` + "[0m");
+      theTags = [];
     }
+    stCh.andTags.traitValue = theTags;
 
     if (lObj.allohomInfo) {
       stCh.allohomInfo = lObj.allohomInfo;
