@@ -20,7 +20,7 @@ describe("/educator/sandbox - Testing API.", () => {
     const sentenceFormulaFromEducator = {
       sentenceFormulaSymbol: numberString,
       sentenceFormulaId: `${questionLanguage}-${numberString}`,
-      translations: {},
+      equivalents: {},
       sentenceStructure: [
         {
           chunkId: "ver-1",
@@ -68,7 +68,7 @@ describe("/educator/sandbox - Testing API.", () => {
     const sentenceFormulaFromEducator = {
       sentenceFormulaSymbol: numberString,
       sentenceFormulaId: `${questionLanguage}-${numberString}`,
-      translations: {},
+      equivalents: {},
       sentenceStructure: [
         {
           chunkId: "adj-1",
@@ -115,7 +115,7 @@ describe("/educator/sandbox - Testing API.", () => {
     const sentenceFormulaFromEducator = {
       sentenceFormulaSymbol: numberString,
       sentenceFormulaId: `${questionLanguage}-${numberString}`,
-      translations: {},
+      equivalents: {},
       sentenceStructure: [
         {
           chunkId: "npe-1",

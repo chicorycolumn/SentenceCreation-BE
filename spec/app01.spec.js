@@ -1280,7 +1280,7 @@ describe("/api", function () {
   });
 
   describe("/palette - Stage 6: Translate rich sentences (nouns, adjectives, verbs).", () => {
-    it("#pal06-01a GET 200 YES: Returns sentence with all translations (RSWAT).", () => {
+    it("#pal06-01a GET 200 YES: Returns sentence with all equivalents (RSWAT).", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";
 
