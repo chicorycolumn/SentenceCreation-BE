@@ -27,11 +27,19 @@ exports.getNexusLemmaObject = (lObj, env = "ref") => {
 };
 
 exports.getPapers = (lObj, env = "ref") => {
+  if (lObj.devHardcoded_tags) {
+    return lObj.devHardcoded_tags;
+  }
+
   let nexusObject = exports.getNexusLemmaObject(lObj, env);
   return nexusObject.papers;
 };
 
 exports.getTraductions = (lObj, env = "ref") => {
+  if (lObj.devHardcoded_translations) {
+    return lObj.devHardcoded_translations;
+  }
+
   let nexusObject = exports.getNexusLemmaObject(lObj, env);
   return nexusObject.traductions;
 };

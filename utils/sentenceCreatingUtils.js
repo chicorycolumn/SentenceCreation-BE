@@ -1073,17 +1073,8 @@ exports.conformAnswerStructureToQuestionStructure = (
   words
 ) => {
   let shouldConsoleLog = false;
-  if (shouldConsoleLog) {
-    consol.log(
-      "[1;35m " +
-        "dxft sc:conformAnswerStructureToQuestionStructure-------------------" +
-        "[0m"
-    );
-  } else {
-    consol.log(
-      "[1;35m " + `(aegh sc:conformAnswerStructureToQuestionStructure)` + "[0m"
-    );
-  }
+
+  consol.log("[1;35m " + `(aegh sc:conformAnswerStructureToQuestionStructure)` + "[0m");
 
   let { sentenceStructure } = sentenceFormula;
   let { questionLanguage, answerLanguage } = languagesObj;

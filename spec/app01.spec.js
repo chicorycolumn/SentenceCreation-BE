@@ -1298,11 +1298,21 @@ describe("/api", function () {
               "POL->ENG": [
                 {
                   POL: "Kobieta czyta.",
-                  ENG: ["The woman reads.", "The woman is reading."],
+                  ENG: [
+                    "The woman reads.",
+                    "The woman is reading.",
+                    "The lady reads.",
+                    "The lady is reading.",
+                  ],
                 },
                 {
                   POL: "Kobiety czytają.",
-                  ENG: ["The women read.", "The women are reading."],
+                  ENG: [
+                    "The women read.",
+                    "The women are reading.",
+                    "The ladies read.",
+                    "The ladies are reading.",
+                  ],
                 },
                 {
                   POL: "Chłopiec czyta.",
@@ -1354,6 +1364,10 @@ describe("/api", function () {
                     "The woman is reading quickly.",
                     "Quickly the woman reads.",
                     "Quickly the woman is reading.",
+                    "The lady reads quickly.",
+                    "The lady is reading quickly.",
+                    "Quickly the lady reads.",
+                    "Quickly the lady is reading.",
                   ],
                 },
                 {
@@ -1363,6 +1377,10 @@ describe("/api", function () {
                     "The women are reading quickly.",
                     "Quickly the women read.",
                     "Quickly the women are reading.",
+                    "The ladies read quickly.",
+                    "The ladies are reading quickly.",
+                    "Quickly the ladies read.",
+                    "Quickly the ladies are reading.",
                   ],
                 },
                 {

@@ -1,8 +1,11 @@
 let nco = [
   {
     //links
-    translations: { ENG: ["eng-nco-Dnut1"], POL: ["pol-nco-Dnut1"] },
-    tags: ["allohomTesting", "edible2"],
+    devHardcoded_translations: {
+      ENG: ["eng-nco-Dnut1"],
+      POL: ["pol-nco-Dnut1"],
+    },
+    devHardcoded_tags: ["allohomTesting", "edible2"],
     //selectors
     lemma: "orzech",
     id: "pol-nco-Dnut1",
@@ -35,8 +38,11 @@ let nco = [
   },
   {
     //links
-    translations: { ENG: ["eng-nco-Dnut2"], POL: ["pol-nco-Dnut2"] },
-    tags: ["allohomTesting", "toolbox"],
+    devHardcoded_translations: {
+      ENG: ["eng-nco-Dnut2"],
+      POL: ["pol-nco-Dnut2"],
+    },
+    devHardcoded_tags: ["allohomTesting", "toolbox"],
     //selectors
     lemma: "nakrętka",
     id: "pol-nco-Dnut2",
@@ -65,8 +71,11 @@ let nco = [
   },
   {
     //links
-    translations: { ENG: ["eng-nco-Dtie2"], POL: ["pol-nco-Dtie2"] },
-    tags: ["allohomTesting3", "sports"],
+    devHardcoded_translations: {
+      ENG: ["eng-nco-Dtie2"],
+      POL: ["pol-nco-Dtie2"],
+    },
+    devHardcoded_tags: ["allohomTesting3", "sports"],
     //selectors
     lemma: "remis",
     id: "pol-nco-Dtie2",
@@ -95,8 +104,11 @@ let nco = [
   },
   {
     //links
-    translations: { ENG: ["eng-nco-Dtie1"], POL: ["pol-nco-Dtie1"] },
-    tags: ["allohomTesting3", "clothes"],
+    devHardcoded_translations: {
+      ENG: ["eng-nco-Dtie1"],
+      POL: ["pol-nco-Dtie1"],
+    },
+    devHardcoded_tags: ["allohomTesting3", "clothes"],
     //selectors
     lemma: "krawat",
     id: "pol-nco-Dtie1",
@@ -131,7 +143,7 @@ let nco = [
     id: "dummy-nco-001",
     lemma: "foobar_loc_only",
     gender: "n",
-    tags: ["dummy"],
+    devHardcoded_tags: ["dummy"],
     lacking: true,
     inflections: {
       singular: {
@@ -146,7 +158,7 @@ let nco = [
     id: "dummy-nco-002",
     lemma: "foobar_ins_only",
     gender: "n",
-    tags: ["dummy"],
+    devHardcoded_tags: ["dummy"],
     lacking: true,
     inflections: {
       singular: {
@@ -161,7 +173,7 @@ let nco = [
     id: "dummy-nco-003",
     lemma: "foobar_sin_ins_plu_loc_only",
     gender: "n",
-    tags: ["dummy2"],
+    devHardcoded_tags: ["dummy2"],
     lacking: true,
     inflections: {
       singular: {
@@ -176,7 +188,7 @@ let nco = [
     id: "dummy-nco-004",
     lemma: "foobar_sin_ins_plu_loc_only",
     gender: "n",
-    tags: ["dummy3"],
+    devHardcoded_tags: ["dummy3"],
     lacking: true,
     inflections: {
       singular: {
@@ -191,7 +203,7 @@ let nco = [
     id: "dummy-nco-005",
     lemma: "foobar_sin_loc_plu_ins_only",
     gender: "n",
-    tags: ["dummy3"],
+    devHardcoded_tags: ["dummy3"],
     lacking: true,
     inflections: {
       singular: {
@@ -206,7 +218,7 @@ let nco = [
     id: "dummy-nco-006",
     lemma: "foobar_none",
     gender: "n",
-    tags: ["dummy3"],
+    devHardcoded_tags: ["dummy3"],
     lacking: true,
     inflections: {
       plural: {
@@ -219,7 +231,7 @@ let nco = [
     id: "dummy-nco-007",
     lemma: "foobar-A",
     gender: "n",
-    tags: ["foobar-A"],
+    devHardcoded_tags: ["foobar-A"],
     lacking: true,
     inflections: {
       singular: {
@@ -231,7 +243,7 @@ let nco = [
     id: "dummy-nco-008",
     lemma: "foobar-B",
     gender: "n",
-    tags: ["foobar-B"],
+    devHardcoded_tags: ["foobar-B"],
     lacking: true,
     inflections: {
       singular: {
@@ -243,7 +255,7 @@ let nco = [
     id: "dummy-nco-009",
     lemma: "foobar-C",
     gender: "n",
-    tags: ["foobar-C"],
+    devHardcoded_tags: ["foobar-C"],
     lacking: true,
     inflections: {
       singular: {
@@ -255,7 +267,7 @@ let nco = [
     id: "dummy-nco-010",
     lemma: "dummy-nco-010",
     gender: "n",
-    tags: ["dummy-nco-010"],
+    devHardcoded_tags: ["dummy-nco-010"],
     lacking: true,
     inflections: {
       singular: {
@@ -269,11 +281,11 @@ let nco = [
   },
   {
     //links
-    translations: {
+    devHardcoded_translations: {
       ENG: ["eng-nco-Dhole", "eng-nco-Dpit"],
       POL: ["pol-nco-Ddziura", "pol-nco-Dotwór"],
     },
-    tags: ["construction work"],
+    devHardcoded_tags: ["construction work"],
     //selectors
     lemma: "dziura",
     id: "pol-nco-Ddziura",
@@ -302,11 +314,11 @@ let nco = [
   },
   {
     //links
-    translations: {
+    devHardcoded_translations: {
       ENG: ["eng-nco-Dhole", "eng-nco-Dpit"],
       POL: ["pol-nco-Ddziura", "pol-nco-Dotwór"],
     },
-    tags: ["construction work"],
+    devHardcoded_tags: ["construction work"],
     //selectors
     lemma: "otwór",
     id: "pol-nco-Dotwór",
@@ -341,8 +353,8 @@ let pro = [];
 let ver = [
   {
     //links
-    translations: { ENG: ["eng-ver-Dtie"], POL: ["pol-ver-Dtie"] },
-    tags: ["allohomTesting3", "crafts"],
+    devHardcoded_translations: { ENG: ["eng-ver-Dtie"], POL: ["pol-ver-Dtie"] },
+    devHardcoded_tags: ["allohomTesting3", "crafts"],
     //selectors
     lemma: "wiązać",
     id: "pol-ver-Dtie",
