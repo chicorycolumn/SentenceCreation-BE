@@ -101,9 +101,9 @@ exports.wordsBank = {
     },
     {
       //selectors
-      lemma: "doctor",
+      lemma: "lady",
       id: "eng-npe-006-lady",
-      gender: "_PersonalGenders",
+      gender: "f",
       //notes
 
       //inflections

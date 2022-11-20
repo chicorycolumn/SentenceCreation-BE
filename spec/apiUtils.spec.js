@@ -108,7 +108,6 @@ describe("/educator/sandbox - Testing API.", () => {
       });
   });
   it("#san01 GET 200 YES: Educator queries a single word, Q only but still wants multiple mode.", () => {
-    //beta
     const questionLanguage = "ENG";
 
     let numberString = Date.now();

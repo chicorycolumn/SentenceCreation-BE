@@ -118,7 +118,7 @@ exports.checkAllLObjsArePresentInNexus = (env, lang) => {
   });
 
   if (problems.length) {
-    console.log(problems);
+    console.log("wdgt problems:", problems);
   }
 
   expect(problems.length).to.equal(0);

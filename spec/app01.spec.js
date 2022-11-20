@@ -1933,7 +1933,10 @@ describe("/api", function () {
 
         expect(res.length).to.equal(100);
 
-        console.log({ masculineProportion, feminineProportion });
+        console.log("♂:♀", {
+          masculineProportion,
+          feminineProportion,
+        });
 
         expect(masculineProportion).to.be.at.least(0.39);
         expect(masculineProportion).to.be.below(0.61);
