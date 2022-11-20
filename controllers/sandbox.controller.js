@@ -69,7 +69,7 @@ exports.getSentencesAsQuestionOnly = (req, res, next) => {
 
   sentenceFormula.sentenceFormulaSymbol = numberString;
   sentenceFormula.sentenceFormulaId = `${questionLanguage}-${numberString}`;
-  sentenceFormula.translations = {};
+  sentenceFormula.equivalents = {};
 
   let data = {
     body: {

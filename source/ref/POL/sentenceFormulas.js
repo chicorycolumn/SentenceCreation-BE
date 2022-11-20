@@ -485,7 +485,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "101a girl is reading",
     sentenceFormulaId: "POL-00-101a",
-    translations: { ENG: ["ENG-00-101a"] },
+    equivalents: { ENG: ["ENG-00-101a"] },
     sentenceStructure: [
       {
         chunkId: "npe-1",
@@ -506,7 +506,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "101b girl *reads quickly",
     sentenceFormulaId: "POL-00-101b",
-    translations: { ENG: ["ENG-00-101b"] },
+    equivalents: { ENG: ["ENG-00-101b"] },
     sentenceStructure: [
       {
         chunkId: "npe-1",
@@ -529,7 +529,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "102a I'll read (pf fut)",
     sentenceFormulaId: "POL-00-102a",
-    translations: { ENG: ["ENG-00-102a"] },
+    equivalents: { ENG: ["ENG-00-102a"] },
     sentenceStructure: [
       {
         chunkId: "ver-1",
@@ -545,7 +545,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "I read *future 103a",
     sentenceFormulaId: "POL-00-103a",
-    translations: { ENG: ["ENG-00-103a"] },
+    equivalents: { ENG: ["ENG-00-103a"] },
     sentenceStructure: [
       {
         chunkId: "ver-1",
@@ -561,7 +561,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "I read *future 103b",
     sentenceFormulaId: "POL-00-103b",
-    translations: { ENG: ["ENG-00-103b"] },
+    equivalents: { ENG: ["ENG-00-103b"] },
     sentenceStructure: [
       {
         chunkId: "ver-1",
@@ -577,7 +577,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "I read *future 103c",
     sentenceFormulaId: "POL-00-103c",
-    translations: { ENG: ["ENG-00-103c"] },
+    equivalents: { ENG: ["ENG-00-103c"] },
     sentenceStructure: [
       {
         chunkId: "ver-1",
@@ -593,7 +593,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "I read *future 104a",
     sentenceFormulaId: "POL-00-104a",
-    translations: { ENG: ["ENG-00-104a"] },
+    equivalents: { ENG: ["ENG-00-104a"] },
     sentenceStructure: [
       {
         chunkId: "ver-1",
@@ -609,7 +609,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "I read *future 104b",
     sentenceFormulaId: "POL-00-104b",
-    translations: { ENG: ["ENG-00-104b"] },
+    equivalents: { ENG: ["ENG-00-104b"] },
     sentenceStructure: [
       {
         chunkId: "ver-1",
@@ -625,7 +625,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "I was writing 105a",
     sentenceFormulaId: "POL-00-105a",
-    translations: { ENG: ["ENG-00-105a"] },
+    equivalents: { ENG: ["ENG-00-105a"] },
     sentenceStructure: [
       {
         chunkId: "ver-1",
@@ -641,7 +641,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "first conditional 106a",
     sentenceFormulaId: "POL-00-106a",
-    translations: { ENG: ["ENG-00-106a"] },
+    equivalents: { ENG: ["ENG-00-106a"] },
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "jeśli" },
       {
@@ -675,7 +675,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "red door",
     sentenceFormulaId: "POL-00-107",
-    translations: { ENG: ["ENG-00-107"] },
+    equivalents: { ENG: ["ENG-00-107"] },
     sentenceStructure: [
       {
         chunkId: "adj-1",
@@ -695,7 +695,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "108 singular I am",
     sentenceFormulaId: "POL-00-108",
-    translations: { ENG: ["ENG-00-108"] },
+    equivalents: { ENG: ["ENG-00-108"] },
     sentenceStructure: [
       {
         chunkId: "pro-1",
@@ -714,7 +714,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "109 doc wrote p",
     sentenceFormulaId: "POL-00-109",
-    translations: { ENG: ["ENG-00-109"] },
+    equivalents: { ENG: ["ENG-00-109"] },
     sentenceStructure: [
       {
         chunkId: "npe-1",
@@ -735,7 +735,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "109a doc was writing p",
     sentenceFormulaId: "POL-00-109a",
-    translations: { ENG: ["ENG-00-109a"] },
+    equivalents: { ENG: ["ENG-00-109a"] },
     sentenceStructure: [
       {
         chunkId: "npe-1",
@@ -760,7 +760,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "109b docs wrote p",
     sentenceFormulaId: "POL-00-109b",
-    translations: { ENG: ["ENG-00-109b"] },
+    equivalents: { ENG: ["ENG-00-109b"] },
     sentenceStructure: [
       {
         chunkId: "npe-1",
@@ -781,7 +781,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "109c docs were writing p",
     sentenceFormulaId: "POL-00-109c",
-    translations: { ENG: ["ENG-00-109c"] },
+    equivalents: { ENG: ["ENG-00-109c"] },
     sentenceStructure: [
       {
         chunkId: "npe-1",
@@ -802,7 +802,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "110 the woman read me a book",
     sentenceFormulaId: "POL-00-110",
-    translations: { ENG: ["ENG-00-110"] },
+    equivalents: { ENG: ["ENG-00-110"] },
     sentenceStructure: [
       {
         chunkId: "npe-1",
@@ -833,7 +833,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "111a I am",
     sentenceFormulaId: "POL-00-111a",
-    translations: { ENG: ["ENG-00-111a"] },
+    equivalents: { ENG: ["ENG-00-111a"] },
     sentenceStructure: [
       {
         chunkId: "pro-1",
@@ -853,7 +853,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "111b I was",
     sentenceFormulaId: "POL-00-111b",
-    translations: { ENG: ["ENG-00-111b"] },
+    equivalents: { ENG: ["ENG-00-111b"] },
     sentenceStructure: [
       {
         chunkId: "pro-1",
@@ -873,7 +873,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "111c you were",
     sentenceFormulaId: "POL-00-111c",
-    translations: { ENG: ["ENG-00-111c"] },
+    equivalents: { ENG: ["ENG-00-111c"] },
     sentenceStructure: [
       {
         chunkId: "pro-1",
@@ -893,7 +893,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "112 familymember gave me things",
     sentenceFormulaId: "POL-00-112",
-    translations: { ENG: ["ENG-00-112"] },
+    equivalents: { ENG: ["ENG-00-112"] },
     sentenceStructure: [
       {
         chunkId: "npe-1",
@@ -930,7 +930,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "112a familymember gave me thing",
     sentenceFormulaId: "POL-00-112a",
-    translations: { ENG: ["ENG-00-112a"] },
+    equivalents: { ENG: ["ENG-00-112a"] },
     sentenceStructure: [
       {
         chunkId: "npe-1",
@@ -967,7 +967,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "113 my father gave me a book",
     sentenceFormulaId: "POL-00-113",
-    translations: { ENG: ["ENG-00-113"] },
+    equivalents: { ENG: ["ENG-00-113"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-invisible",
@@ -1013,7 +1013,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "113a my father gave me his book",
     sentenceFormulaId: "POL-00-113a",
-    translations: { ENG: ["ENG-00-113a"] },
+    equivalents: { ENG: ["ENG-00-113a"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-invisible-We",
@@ -1074,7 +1074,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "114 doctor gave me her book",
     sentenceFormulaId: "POL-00-114",
-    translations: { ENG: ["ENG-00-114"] },
+    equivalents: { ENG: ["ENG-00-114"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-invisible-I",
@@ -1124,7 +1124,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "115 I saw my doctor and her doctor",
     sentenceFormulaId: "POL-115",
-    translations: { ENG: ["ENG-115"] },
+    equivalents: { ENG: ["ENG-115"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1186,7 +1186,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "116 My doctor was a woman",
     sentenceFormulaId: "POL-116",
-    translations: { ENG: ["ENG-116"] },
+    equivalents: { ENG: ["ENG-116"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1229,7 +1229,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "116y My doctor",
     sentenceFormulaId: "POL-116y",
-    translations: { ENG: ["ENG-116y"] },
+    equivalents: { ENG: ["ENG-116y"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1260,7 +1260,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "116x My doctor was a woman",
     sentenceFormulaId: "POL-116x",
-    translations: { ENG: ["ENG-116x"] },
+    equivalents: { ENG: ["ENG-116x"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1304,7 +1304,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "116a My doctor's doctor was a woman",
     sentenceFormulaId: "POL-116a",
-    translations: { ENG: ["ENG-116a"] },
+    equivalents: { ENG: ["ENG-116a"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1364,7 +1364,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "117 I was a doctor",
     sentenceFormulaId: "POL-117",
-    translations: { ENG: ["ENG-117"], POL: ["POL-117"] },
+    equivalents: { ENG: ["ENG-117"], POL: ["POL-117"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1392,7 +1392,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "117a I* was a doctor",
     sentenceFormulaId: "POL-117a",
-    translations: { ENG: ["ENG-117a"], POL: ["POL-117a"] },
+    equivalents: { ENG: ["ENG-117a"], POL: ["POL-117a"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1421,7 +1421,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "117aa I** was a doctor",
     sentenceFormulaId: "POL-117aa",
-    translations: { ENG: ["ENG-117aa"], POL: ["POL-117aa"] },
+    equivalents: { ENG: ["ENG-117aa"], POL: ["POL-117aa"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1450,7 +1450,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "117b I was here",
     sentenceFormulaId: "POL-117b",
-    translations: { ENG: ["ENG-117b"], POL: ["POL-117b"] },
+    equivalents: { ENG: ["ENG-117b"], POL: ["POL-117b"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1471,7 +1471,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "117c I am here",
     sentenceFormulaId: "POL-117c",
-    translations: { ENG: ["ENG-117c"], POL: ["POL-117c"] },
+    equivalents: { ENG: ["ENG-117c"], POL: ["POL-117c"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1492,7 +1492,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "118 My doctor and his book",
     sentenceFormulaId: "POL-118",
-    translations: { ENG: ["ENG-118"] },
+    equivalents: { ENG: ["ENG-118"] },
     sentenceStructure: [
       {
         chunkId: "pro-0-I-invisible",
@@ -1540,7 +1540,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "118a My doctor and my book",
     sentenceFormulaId: "POL-118a",
-    translations: { ENG: ["ENG-118a"] },
+    equivalents: { ENG: ["ENG-118a"] },
     sentenceStructure: [
       {
         chunkId: "pro-0-I-invisible",
@@ -1587,7 +1587,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "118b My doctor",
     sentenceFormulaId: "POL-118b",
-    translations: { ENG: ["ENG-118b"] },
+    equivalents: { ENG: ["ENG-118b"] },
     sentenceStructure: [
       {
         chunkId: "pro-0-I-invisible",
@@ -1618,7 +1618,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "118c My onion",
     sentenceFormulaId: "POL-118c",
-    translations: { ENG: ["ENG-118c"] },
+    equivalents: { ENG: ["ENG-118c"] },
     sentenceStructure: [
       {
         chunkId: "pro-0-I-invisible",
@@ -1648,7 +1648,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "119 Woman saw me",
     sentenceFormulaId: "POL-119",
-    translations: { ENG: ["ENG-119"] },
+    equivalents: { ENG: ["ENG-119"] },
     sentenceStructure: [
       {
         chunkId: "pro-0-I-invisible",
@@ -1679,7 +1679,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "120 Doctor saw me",
     sentenceFormulaId: "POL-120",
-    translations: { ENG: ["ENG-120"] },
+    equivalents: { ENG: ["ENG-120"] },
     sentenceStructure: [
       {
         chunkId: "pro-0-I-invisible",
@@ -1711,7 +1711,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "121 I read* a book",
     sentenceFormulaId: "POL-121",
-    translations: { ENG: ["ENG-121"] },
+    equivalents: { ENG: ["ENG-121"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1744,7 +1744,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "122 The doctor writes",
     sentenceFormulaId: "POL-122",
-    translations: { ENG: ["ENG-122"] },
+    equivalents: { ENG: ["ENG-122"] },
     sentenceStructure: [
       {
         chunkId: "npe-1-doctor",
@@ -1762,7 +1762,7 @@ exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "123 I am red",
     sentenceFormulaId: "POL-123",
-    translations: { ENG: ["ENG-123"] },
+    equivalents: { ENG: ["ENG-123"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-I",

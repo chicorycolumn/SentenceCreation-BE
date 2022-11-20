@@ -205,11 +205,11 @@ exports.fetchPalette = (req) => {
   if (answerLanguage) {
     multipleMode = true;
 
-    let translations =
-      questionSentenceData.sentenceFormula.translations[answerLanguage];
+    let equivalents =
+      questionSentenceData.sentenceFormula.equivalents[answerLanguage];
 
-    if (!translations || !translations.length) {
-      throw "palette.model > I was asked to give translations, but the question sentence formula did not have any translations listed.";
+    if (!equivalents || !equivalents.length) {
+      throw "palette.model > I was asked to give equivalents, but the question sentence formula did not have any equivalents listed.";
     }
 
     consol.log(
@@ -300,10 +300,10 @@ exports.fetchPalette = (req) => {
       consol.throw("mhji devSaysThrowAfterAnnoSalvo");
     }
 
-    translations.forEach((translationSentenceFormulaId, index) => {
+    equivalents.forEach((equivalentSentenceFormulaId, index) => {
       let { sentenceFormula, words } = scUtils.getMaterialsCopies(
         answerLanguage,
-        translationSentenceFormulaId,
+        equivalentSentenceFormulaId,
         questionSentenceData.sentenceFormulaSymbol,
         useDummy
       );

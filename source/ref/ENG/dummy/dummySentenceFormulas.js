@@ -2,7 +2,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy25a good day",
     sentenceFormulaId: "ENG-dummy25a",
-    translations: { POL: ["POL-dummy25a", "POL-dummy25b"] },
+    equivalents: { POL: ["POL-dummy25a", "POL-dummy25b"] },
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "good" },
       { chunkId: "fix-2", chunkValue: "day" },
@@ -12,14 +12,14 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy25b hello",
     sentenceFormulaId: "ENG-dummy25b",
-    translations: { POL: ["POL-dummy25a", "POL-dummy25b"] },
+    equivalents: { POL: ["POL-dummy25a", "POL-dummy25b"] },
     sentenceStructure: [{ chunkId: "fix-1", chunkValue: "hello" }],
     primaryOrders: [],
   },
   {
     sentenceFormulaSymbol: "dummy26",
     sentenceFormulaId: "ENG-dummy26",
-    translations: { POL: ["POL-dummy26"] },
+    equivalents: { POL: ["POL-dummy26"] },
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "I" },
       {
@@ -39,7 +39,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy27",
     sentenceFormulaId: "ENG-dummy27",
-    translations: { POL: ["POL-dummy27"] },
+    equivalents: { POL: ["POL-dummy27"] },
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "I" },
       {
@@ -60,7 +60,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy28",
     sentenceFormulaId: "ENG-dummy28",
-    translations: { POL: ["POL-dummy28"] },
+    equivalents: { POL: ["POL-dummy28"] },
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "I" },
       {
@@ -76,7 +76,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy29",
     sentenceFormulaId: "ENG-dummy29",
-    translations: { POL: ["POL-dummy29"] },
+    equivalents: { POL: ["POL-dummy29"] },
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "I" },
       {
@@ -96,7 +96,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy30",
     sentenceFormulaId: "ENG-dummy30",
-    translations: { POL: ["POL-dummy30"] },
+    equivalents: { POL: ["POL-dummy30"] },
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "I" },
       {
@@ -112,7 +112,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy31",
     sentenceFormulaId: "ENG-dummy31",
-    translations: { POL: ["POL-dummy31"] },
+    equivalents: { POL: ["POL-dummy31"] },
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "I" },
       {
@@ -128,7 +128,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy33",
     sentenceFormulaId: "ENG-dummy33",
-    translations: { POL: ["POL-dummy33"] },
+    equivalents: { POL: ["POL-dummy33"] },
     sentenceStructure: [
       {
         chunkId: "ver-1",
@@ -143,7 +143,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy33a",
     sentenceFormulaId: "ENG-dummy33a",
-    translations: { POL: ["POL-dummy33a"] },
+    equivalents: { POL: ["POL-dummy33a"] },
     sentenceStructure: [
       {
         chunkId: "ver-1",
@@ -158,7 +158,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy33b I am",
     sentenceFormulaId: "ENG-dummy33b",
-    translations: { POL: ["POL-dummy33b"] },
+    equivalents: { POL: ["POL-dummy33b"] },
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "I" },
       {
@@ -174,7 +174,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy33c you are",
     sentenceFormulaId: "ENG-dummy33c",
-    translations: { POL: ["POL-dummy33c"] },
+    equivalents: { POL: ["POL-dummy33c"] },
     sentenceStructure: [
       {
         chunkId: "pro-1",
@@ -194,7 +194,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy33d she is",
     sentenceFormulaId: "ENG-dummy33d",
-    translations: { POL: ["POL-dummy33d"] },
+    equivalents: { POL: ["POL-dummy33d"] },
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "she" },
       {
@@ -210,7 +210,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy33e we are",
     sentenceFormulaId: "ENG-dummy33e",
-    translations: { POL: ["POL-dummy33e"] },
+    equivalents: { POL: ["POL-dummy33e"] },
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "we" },
       {
@@ -226,7 +226,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy33f they are",
     sentenceFormulaId: "ENG-dummy33f",
-    translations: { POL: ["POL-dummy33f"] },
+    equivalents: { POL: ["POL-dummy33f"] },
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "they" },
       {
@@ -242,7 +242,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy34a they are",
     sentenceFormulaId: "ENG-dummy34a",
-    translations: { POL: ["POL-dummy34a"] },
+    equivalents: { POL: ["POL-dummy34a"] },
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "I" },
       {
@@ -258,7 +258,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy34c",
     sentenceFormulaId: "ENG-dummy34c",
-    translations: { POL: ["POL-dummy34c"] },
+    equivalents: { POL: ["POL-dummy34c"] },
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "I" },
       {
@@ -274,7 +274,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy34d",
     sentenceFormulaId: "ENG-dummy34d",
-    translations: { POL: ["POL-dummy34d"] },
+    equivalents: { POL: ["POL-dummy34d"] },
     sentenceStructure: [
       {
         chunkId: "ver-1",
@@ -287,7 +287,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy35",
     sentenceFormulaId: "ENG-dummy35",
-    translations: { POL: ["POL-dummy35"] },
+    equivalents: { POL: ["POL-dummy35"] },
     sentenceStructure: [
       {
         chunkId: "ver-1",
@@ -302,7 +302,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy36",
     sentenceFormulaId: "ENG-dummy36",
-    translations: { POL: ["POL-dummy36"] },
+    equivalents: { POL: ["POL-dummy36"] },
     sentenceStructure: [
       {
         chunkId: "nco-1",
@@ -314,7 +314,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy36a",
     sentenceFormulaId: "ENG-dummy36a",
-    translations: { POL: ["POL-dummy36a"] },
+    equivalents: { POL: ["POL-dummy36a"] },
     sentenceStructure: [
       { chunkId: "art-1-the", form: ["definite"], agreeWith: "nco-1-sheep" },
       {
@@ -334,7 +334,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy36b",
     sentenceFormulaId: "ENG-dummy36b",
-    translations: { POL: ["POL-dummy36b"] },
+    equivalents: { POL: ["POL-dummy36b"] },
     sentenceStructure: [
       {
         chunkId: "nco-1",
@@ -352,7 +352,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy37",
     sentenceFormulaId: "ENG-dummy37",
-    translations: { POL: ["POL-dummy37"] },
+    equivalents: { POL: ["POL-dummy37"] },
     sentenceStructure: [
       {
         chunkId: "ver-1",
@@ -367,7 +367,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy38",
     sentenceFormulaId: "ENG-dummy38",
-    translations: { POL: ["POL-dummy38"] },
+    equivalents: { POL: ["POL-dummy38"] },
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "I" },
       {
@@ -383,7 +383,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy39",
     sentenceFormulaId: "ENG-dummy39",
-    translations: { POL: ["POL-dummy39"] },
+    equivalents: { POL: ["POL-dummy39"] },
     sentenceStructure: [
       {
         chunkId: "pro-1",
@@ -403,7 +403,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy40",
     sentenceFormulaId: "ENG-dummy40",
-    translations: { POL: ["POL-dummy40"] },
+    equivalents: { POL: ["POL-dummy40"] },
     sentenceStructure: [
       {
         chunkId: "pro-1",
@@ -423,7 +423,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy41",
     sentenceFormulaId: "ENG-dummy41",
-    translations: { POL: ["POL-dummy41"] },
+    equivalents: { POL: ["POL-dummy41"] },
     sentenceStructure: [
       {
         chunkId: "pro-1",
@@ -443,7 +443,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy42",
     sentenceFormulaId: "ENG-dummy42",
-    translations: { POL: ["POL-dummy42"] },
+    equivalents: { POL: ["POL-dummy42"] },
     sentenceStructure: [
       {
         chunkId: "pro-1",
@@ -463,7 +463,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy43",
     sentenceFormulaId: "ENG-dummy43",
-    translations: { POL: ["POL-dummy43"] },
+    equivalents: { POL: ["POL-dummy43"] },
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "a" },
       {
@@ -483,7 +483,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy45a",
     sentenceFormulaId: "ENG-dummy45a",
-    translations: { POL: ["POL-dummy45a"] },
+    equivalents: { POL: ["POL-dummy45a"] },
     sentenceStructure: [
       {
         chunkId: "nco-1",
@@ -497,7 +497,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy45b",
     sentenceFormulaId: "ENG-dummy45b",
-    translations: { POL: ["POL-dummy45b"] },
+    equivalents: { POL: ["POL-dummy45b"] },
     sentenceStructure: [
       {
         chunkId: "ver-1",
@@ -511,7 +511,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy45c",
     sentenceFormulaId: "ENG-dummy45c",
-    translations: { POL: ["POL-dummy45b"] }, //Yes, this does point from c to b.
+    equivalents: { POL: ["POL-dummy45b"] }, //Yes, this does point from c to b.
     sentenceStructure: [
       {
         chunkId: "ver-1",
@@ -524,7 +524,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy46a",
     sentenceFormulaId: "ENG-dummy46a",
-    translations: { POL: ["POL-dummy46a"] },
+    equivalents: { POL: ["POL-dummy46a"] },
     sentenceStructure: [
       {
         chunkId: "nco-1",
@@ -537,7 +537,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy46b",
     sentenceFormulaId: "ENG-dummy46b",
-    translations: { POL: ["POL-dummy46a"] }, //Yes, this does indeed point from b to a.
+    equivalents: { POL: ["POL-dummy46a"] }, //Yes, this does indeed point from b to a.
     sentenceStructure: [
       {
         chunkId: "nco-1",
@@ -551,7 +551,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy46c",
     sentenceFormulaId: "ENG-dummy46c",
-    translations: { POL: ["POL-dummy46c"] },
+    equivalents: { POL: ["POL-dummy46c"] },
     sentenceStructure: [
       {
         chunkId: "ver-1",
@@ -564,7 +564,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy46d",
     sentenceFormulaId: "ENG-dummy46d",
-    translations: { POL: ["POL-dummy46c"] }, //Yes, this does indeed point from d to c.
+    equivalents: { POL: ["POL-dummy46c"] }, //Yes, this does indeed point from d to c.
     sentenceStructure: [
       {
         chunkId: "ver-1",
@@ -578,7 +578,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy47",
     sentenceFormulaId: "ENG-dummy47",
-    translations: { POL: ["POL-dummy47"] },
+    equivalents: { POL: ["POL-dummy47"] },
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "the" },
       {
@@ -600,7 +600,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy48a",
     sentenceFormulaId: "ENG-dummy48a",
-    translations: { POL: ["POL-dummy48a"] },
+    equivalents: { POL: ["POL-dummy48a"] },
     sentenceStructure: [
       {
         chunkId: "pro-1",
@@ -617,7 +617,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy49a",
     sentenceFormulaId: "ENG-dummy49a",
-    translations: { POL: ["POL-dummy49a"] },
+    equivalents: { POL: ["POL-dummy49a"] },
     sentenceStructure: [
       {
         chunkId: "pro-1",
@@ -641,7 +641,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy49b",
     sentenceFormulaId: "ENG-dummy49b",
-    translations: { POL: ["POL-dummy49b"] },
+    equivalents: { POL: ["POL-dummy49b"] },
     sentenceStructure: [
       {
         chunkId: "pro-1",
@@ -665,7 +665,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy49c",
     sentenceFormulaId: "ENG-dummy49c",
-    translations: { POL: ["POL-dummy49c"] },
+    equivalents: { POL: ["POL-dummy49c"] },
     sentenceStructure: [
       {
         chunkId: "pro-1",
@@ -688,7 +688,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy49d",
     sentenceFormulaId: "ENG-dummy49d",
-    translations: { POL: ["POL-dummy49d"] },
+    equivalents: { POL: ["POL-dummy49d"] },
     sentenceStructure: [
       {
         chunkId: "pro-1",
@@ -711,7 +711,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy49e",
     sentenceFormulaId: "ENG-dummy49e",
-    translations: { POL: ["POL-dummy49e"] },
+    equivalents: { POL: ["POL-dummy49e"] },
     sentenceStructure: [
       {
         chunkId: "pro-1",
@@ -735,7 +735,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy49f",
     sentenceFormulaId: "ENG-dummy49f",
-    translations: { POL: ["POL-dummy49f"] },
+    equivalents: { POL: ["POL-dummy49f"] },
     sentenceStructure: [
       {
         chunkId: "pro-1",
@@ -759,7 +759,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy50a",
     sentenceFormulaId: "ENG-dummy50a",
-    translations: { POL: ["POL-dummy50a"] },
+    equivalents: { POL: ["POL-dummy50a"] },
     sentenceStructure: [
       {
         chunkId: "pro-1",
@@ -792,7 +792,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy50b",
     sentenceFormulaId: "ENG-dummy50b",
-    translations: { POL: ["POL-dummy50b"] },
+    equivalents: { POL: ["POL-dummy50b"] },
     sentenceStructure: [
       {
         chunkId: "pro-1",
@@ -820,7 +820,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy51a",
     sentenceFormulaId: "ENG-dummy51a",
-    translations: { POL: ["POL-dummy51a"] },
+    equivalents: { POL: ["POL-dummy51a"] },
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "the" },
       {
@@ -843,7 +843,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy52",
     sentenceFormulaId: "ENG-dummy52",
-    translations: { POL: ["POL-dummy52"] },
+    equivalents: { POL: ["POL-dummy52"] },
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "the" },
       {
@@ -865,7 +865,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy53",
     sentenceFormulaId: "ENG-dummy53",
-    translations: { POL: ["POL-dummy53"] },
+    equivalents: { POL: ["POL-dummy53"] },
     sentenceStructure: [
       {
         chunkId: "ver-1",
@@ -881,7 +881,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy53a",
     sentenceFormulaId: "ENG-dummy53a",
-    translations: { POL: ["POL-dummy53a"] },
+    equivalents: { POL: ["POL-dummy53a"] },
     sentenceStructure: [
       {
         chunkId: "ver-1",
@@ -897,7 +897,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy53b I am",
     sentenceFormulaId: "ENG-dummy53b",
-    translations: { POL: ["POL-dummy53b"] },
+    equivalents: { POL: ["POL-dummy53b"] },
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "I" },
       {
@@ -914,7 +914,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy53c you are",
     sentenceFormulaId: "ENG-dummy53c",
-    translations: { POL: ["POL-dummy53c"] },
+    equivalents: { POL: ["POL-dummy53c"] },
     sentenceStructure: [
       {
         chunkId: "pro-1",
@@ -936,7 +936,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy53c-2 you are (pres)",
     sentenceFormulaId: "ENG-dummy53c-2",
-    translations: { POL: ["POL-dummy53c-2"] },
+    equivalents: { POL: ["POL-dummy53c-2"] },
     sentenceStructure: [
       {
         chunkId: "pro-1",
@@ -958,7 +958,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy53d she is",
     sentenceFormulaId: "ENG-dummy53d",
-    translations: { POL: ["POL-dummy53d"] },
+    equivalents: { POL: ["POL-dummy53d"] },
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "she" },
       {
@@ -975,7 +975,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy53e we are",
     sentenceFormulaId: "ENG-dummy53e",
-    translations: { POL: ["POL-dummy53e"] },
+    equivalents: { POL: ["POL-dummy53e"] },
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "we" },
       {
@@ -992,7 +992,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy53f they are",
     sentenceFormulaId: "ENG-dummy53f",
-    translations: { POL: ["POL-dummy53f"] },
+    equivalents: { POL: ["POL-dummy53f"] },
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "they" },
       {
@@ -1009,7 +1009,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy54a they are",
     sentenceFormulaId: "ENG-dummy54a",
-    translations: { POL: ["POL-dummy54a"] },
+    equivalents: { POL: ["POL-dummy54a"] },
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "I" },
       {
@@ -1026,7 +1026,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy54c",
     sentenceFormulaId: "ENG-dummy54c",
-    translations: { POL: ["POL-dummy54c"] },
+    equivalents: { POL: ["POL-dummy54c"] },
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "I" },
       {
@@ -1043,7 +1043,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy55",
     sentenceFormulaId: "ENG-dummy55",
-    translations: { POL: ["POL-dummy55"] },
+    equivalents: { POL: ["POL-dummy55"] },
     sentenceStructure: [
       {
         chunkId: "pre-1",
@@ -1067,7 +1067,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy55a",
     sentenceFormulaId: "ENG-dummy55a",
-    translations: { POL: ["POL-dummy55a"] },
+    equivalents: { POL: ["POL-dummy55a"] },
     sentenceStructure: [
       {
         chunkId: "pre-1",
@@ -1089,7 +1089,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy55b",
     sentenceFormulaId: "ENG-dummy55b",
-    translations: { POL: ["POL-dummy55b"] },
+    equivalents: { POL: ["POL-dummy55b"] },
     sentenceStructure: [
       {
         chunkId: "pre-1",
@@ -1111,7 +1111,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy55c",
     sentenceFormulaId: "ENG-dummy55c",
-    translations: { POL: ["POL-dummy55c"] },
+    equivalents: { POL: ["POL-dummy55c"] },
     sentenceStructure: [
       {
         chunkId: "pre-1",
@@ -1133,7 +1133,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy55d",
     sentenceFormulaId: "ENG-dummy55d",
-    translations: { POL: ["POL-dummy55d"] },
+    equivalents: { POL: ["POL-dummy55d"] },
     sentenceStructure: [
       {
         chunkId: "pre-1",
@@ -1155,7 +1155,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy56",
     sentenceFormulaId: "ENG-dummy56",
-    translations: { POL: ["POL-dummy56"] },
+    equivalents: { POL: ["POL-dummy56"] },
     sentenceStructure: [
       {
         chunkId: "art-1",
@@ -1175,7 +1175,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy56a",
     sentenceFormulaId: "ENG-dummy56a",
-    translations: { POL: ["POL-dummy56a"] },
+    equivalents: { POL: ["POL-dummy56a"] },
     sentenceStructure: [
       {
         chunkId: "art-1",
@@ -1192,7 +1192,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy57",
     sentenceFormulaId: "ENG-dummy57",
-    translations: { POL: ["POL-dummy57"] },
+    equivalents: { POL: ["POL-dummy57"] },
     sentenceStructure: [
       {
         chunkId: "npe-1",
@@ -1217,7 +1217,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy58 doctor",
     sentenceFormulaId: "ENG-dummy58",
-    translations: { POL: ["POL-dummy58"] },
+    equivalents: { POL: ["POL-dummy58"] },
     sentenceStructure: [
       {
         chunkId: "npe-1",
@@ -1229,7 +1229,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy58a doctor f",
     sentenceFormulaId: "ENG-dummy58a",
-    translations: { POL: ["POL-dummy58a"] },
+    equivalents: { POL: ["POL-dummy58a"] },
     sentenceStructure: [
       {
         chunkId: "npe-1",
@@ -1245,7 +1245,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy59a doctor",
     sentenceFormulaId: "ENG-dummy59a",
-    translations: { POL: ["POL-dummy59a"] },
+    equivalents: { POL: ["POL-dummy59a"] },
     sentenceStructure: [
       {
         chunkId: "npe-1",
@@ -1258,7 +1258,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy59b doctor",
     sentenceFormulaId: "ENG-dummy59b",
-    translations: { POL: ["POL-dummy59b"] },
+    equivalents: { POL: ["POL-dummy59b"] },
     sentenceStructure: [
       {
         chunkId: "npe-1",
@@ -1274,7 +1274,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy60",
     sentenceFormulaId: "ENG-dummy60",
-    translations: { POL: ["POL-dummy60"] },
+    equivalents: { POL: ["POL-dummy60"] },
     sentenceStructure: [
       {
         chunkId: "pro-1",
@@ -1295,7 +1295,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy60a",
     sentenceFormulaId: "ENG-dummy60a",
-    translations: { POL: ["POL-dummy60a"] },
+    equivalents: { POL: ["POL-dummy60a"] },
     sentenceStructure: [
       {
         chunkId: "pro-1",
@@ -1316,7 +1316,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy60b",
     sentenceFormulaId: "ENG-dummy60b",
-    translations: { POL: ["POL-dummy60b"] },
+    equivalents: { POL: ["POL-dummy60b"] },
     sentenceStructure: [
       {
         chunkId: "pro-1",
@@ -1337,7 +1337,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy61",
     sentenceFormulaId: "ENG-dummy61",
-    translations: { POL: ["POL-dummy61"] },
+    equivalents: { POL: ["POL-dummy61"] },
     sentenceStructure: [
       {
         chunkId: "pro-1",
@@ -1358,7 +1358,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy61a",
     sentenceFormulaId: "ENG-dummy61a",
-    translations: { POL: ["POL-dummy61a"] },
+    equivalents: { POL: ["POL-dummy61a"] },
     sentenceStructure: [
       {
         chunkId: "pro-1",
@@ -1379,7 +1379,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy62",
     sentenceFormulaId: "ENG-dummy62",
-    translations: { POL: ["POL-dummy62"] },
+    equivalents: { POL: ["POL-dummy62"] },
     sentenceStructure: [
       {
         chunkId: "pro-1",
@@ -1407,7 +1407,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy62a",
     sentenceFormulaId: "ENG-dummy62a",
-    translations: { POL: ["POL-dummy62a"] },
+    equivalents: { POL: ["POL-dummy62a"] },
     sentenceStructure: [
       {
         chunkId: "pro-1",
@@ -1435,7 +1435,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy63a",
     sentenceFormulaId: "ENG-dummy63a",
-    translations: { POL: ["POL-dummy63a"] },
+    equivalents: { POL: ["POL-dummy63a"] },
     sentenceStructure: [
       {
         chunkId: "art-1",
@@ -1461,7 +1461,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy63b",
     sentenceFormulaId: "ENG-dummy63b",
-    translations: { POL: ["POL-dummy63b"] },
+    equivalents: { POL: ["POL-dummy63b"] },
     sentenceStructure: [
       {
         chunkId: "art-1",
@@ -1485,7 +1485,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy63c",
     sentenceFormulaId: "ENG-dummy63c",
-    translations: { POL: ["POL-dummy63c"] },
+    equivalents: { POL: ["POL-dummy63c"] },
     sentenceStructure: [
       {
         chunkId: "art-1",
@@ -1511,7 +1511,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy63d",
     sentenceFormulaId: "ENG-dummy63d",
-    translations: { POL: ["POL-dummy63d"] },
+    equivalents: { POL: ["POL-dummy63d"] },
     sentenceStructure: [
       {
         chunkId: "art-1",
@@ -1535,7 +1535,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy64a",
     sentenceFormulaId: "ENG-dummy64a",
-    translations: { POL: ["POL-dummy64a"] },
+    equivalents: { POL: ["POL-dummy64a"] },
     sentenceStructure: [
       { chunkId: "fix-1-There's", chunkValue: "there's" },
       { chunkId: "art-1-A", form: ["indefinite"], agreeWith: "npe-1-Woman" },
@@ -1580,7 +1580,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy64b",
     sentenceFormulaId: "ENG-dummy64b",
-    translations: { POL: ["POL-dummy64b"] },
+    equivalents: { POL: ["POL-dummy64b"] },
     sentenceStructure: [
       { chunkId: "fix-1-There's", chunkValue: "there's" },
       { chunkId: "art-1-A", form: ["indefinite"], agreeWith: "nco-1-Apple" },
@@ -1629,7 +1629,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy65a",
     sentenceFormulaId: "ENG-dummy65a",
-    translations: { POL: ["POL-dummy65a"] },
+    equivalents: { POL: ["POL-dummy65a"] },
     sentenceStructure: [
       { chunkId: "fix-1-There's", chunkValue: "there's" },
       { chunkId: "art-1-A", form: ["indefinite"], agreeWith: "nco-1-Rat" },
@@ -1711,7 +1711,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy66",
     sentenceFormulaId: "ENG-dummy66",
-    translations: { POL: ["POL-dummy66"] },
+    equivalents: { POL: ["POL-dummy66"] },
     sentenceStructure: [
       {
         chunkId: "nco-1-Rats",
@@ -1739,7 +1739,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy67a",
     sentenceFormulaId: "ENG-dummy67a",
-    translations: { POL: ["POL-dummy67a"] },
+    equivalents: { POL: ["POL-dummy67a"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1791,7 +1791,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy67b",
     sentenceFormulaId: "ENG-dummy67b",
-    translations: { POL: ["POL-dummy67b"] },
+    equivalents: { POL: ["POL-dummy67b"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1860,7 +1860,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy68a",
     sentenceFormulaId: "ENG-dummy68a",
-    translations: { POL: ["POL-dummy68a"] },
+    equivalents: { POL: ["POL-dummy68a"] },
     sentenceStructure: [
       { chunkId: "fix-1-One", chunkValue: "one" },
       {
@@ -1875,7 +1875,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy68b",
     sentenceFormulaId: "ENG-dummy68b",
-    translations: { POL: ["POL-dummy68b"] },
+    equivalents: { POL: ["POL-dummy68b"] },
     sentenceStructure: [
       { chunkId: "fix-1-Two", chunkValue: "two" },
       {
@@ -1890,7 +1890,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy68c",
     sentenceFormulaId: "ENG-dummy68c",
-    translations: { POL: ["POL-dummy68c"] },
+    equivalents: { POL: ["POL-dummy68c"] },
     sentenceStructure: [
       {
         chunkId: "nco-1-Tweezers",
@@ -1911,7 +1911,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy68d",
     sentenceFormulaId: "ENG-dummy68d",
-    translations: { POL: ["POL-dummy68d"] },
+    equivalents: { POL: ["POL-dummy68d"] },
     sentenceStructure: [
       {
         chunkId: "nco-1-Tweezers",
@@ -1932,7 +1932,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy68e",
     sentenceFormulaId: "ENG-dummy68e",
-    translations: { POL: ["POL-dummy68e"] },
+    equivalents: { POL: ["POL-dummy68e"] },
     sentenceStructure: [
       {
         chunkId: "nco-1-Dust",
@@ -1953,7 +1953,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy68f",
     sentenceFormulaId: "ENG-dummy68f",
-    translations: { POL: ["POL-dummy68f"] },
+    equivalents: { POL: ["POL-dummy68f"] },
     sentenceStructure: [
       {
         chunkId: "nco-1-Dust",
@@ -1974,7 +1974,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy69singleword",
     sentenceFormulaId: "ENG-dummy69singleword",
-    translations: { POL: [] },
+    equivalents: { POL: [] },
     sentenceStructure: [
       {
         chunkId: "npe-1",
@@ -1989,7 +1989,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy70a",
     sentenceFormulaId: "ENG-dummy70a",
-    translations: { ENG: ["ENG-dummy70a"], POL: ["POL-dummy70a"] },
+    equivalents: { ENG: ["ENG-dummy70a"], POL: ["POL-dummy70a"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-Who",
@@ -2019,7 +2019,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy71a",
     sentenceFormulaId: "ENG-dummy71a",
-    translations: { ENG: ["ENG-dummy71a"], POL: ["POL-dummy71a"] },
+    equivalents: { ENG: ["ENG-dummy71a"], POL: ["POL-dummy71a"] },
     sentenceStructure: [
       {
         chunkId: "adj-1-Small",
@@ -2038,7 +2038,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy71b",
     sentenceFormulaId: "ENG-dummy71b",
-    translations: { ENG: ["ENG-dummy71b"], POL: ["POL-dummy71b"] },
+    equivalents: { ENG: ["ENG-dummy71b"], POL: ["POL-dummy71b"] },
     sentenceStructure: [
       {
         chunkId: "fix-1-In",
@@ -2065,7 +2065,7 @@ exports.dummySentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "dummy71c",
     sentenceFormulaId: "ENG-dummy71c",
-    translations: {
+    equivalents: {
       ENG: ["ENG-dummy71c", "ENG-dummy71a"],
       POL: ["POL-dummy71c", "POL-dummy71a"],
     },
