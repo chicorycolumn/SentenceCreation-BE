@@ -752,7 +752,7 @@ exports.wordsBank = {
     },
     {
       //links
-      translations: { ENG: ["eng-pro-ITG_B"], POL: ["pol-adj-ITG_B"] },
+      translations: { ENG: ["eng-pro-ITG_B"], POL: ["pol-pro-ITG_B"] },
       tags: [],
       //selectors
       lemma: "$ITG_B",
@@ -886,6 +886,50 @@ exports.wordsBank = {
                   normal: ["who"],
                   additionalInfrequent: ["whom"],
                 },
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      //links
+      translations: { ENG: ["eng-pro-ITG_J"], POL: ["pol-pro-ITG_J"] },
+      tags: [],
+      //selectors
+      lemma: "$ITG_J",
+      id: "eng-pro-ITG_J",
+      //notes
+
+      //inflections
+      inflections: {
+        _pronombreAndDeterminer: {
+          _Pers: {
+            _Numbers: {
+              _Genders: {
+                _Gcases: "such",
+              },
+            },
+          },
+        },
+      },
+    },
+    {
+      //links
+      translations: { ENG: ["eng-pro-ITG_K"], POL: ["pol-pro-ITG_K"] },
+      tags: [],
+      //selectors
+      lemma: "$ITG_K",
+      id: "eng-pro-ITG_K",
+      //notes
+
+      //inflections
+      inflections: {
+        _pronombreAndDeterminer: {
+          _Pers: {
+            _Numbers: {
+              _Genders: {
+                _Gcases: "what kind",
               },
             },
           },

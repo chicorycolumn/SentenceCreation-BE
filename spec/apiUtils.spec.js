@@ -107,7 +107,8 @@ describe("/educator/sandbox - Testing API.", () => {
         expect(res.body).to.eql(expected);
       });
   });
-  it.only("#san01 GET 200 YES: Educator queries a single word, Q only but still wants multiple mode.", () => {
+  it("#san01 GET 200 YES: Educator queries a single word, Q only but still wants multiple mode.", () => {
+    //beta
     const questionLanguage = "ENG";
 
     let numberString = Date.now();
