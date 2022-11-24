@@ -1,8 +1,11 @@
 let nco = [
   {
     //links
-    translations: { ENG: ["eng-nco-Dnut1"], POL: ["pol-nco-Dnut1"] },
-    tags: ["allohomTesting", "edible2"],
+    devHardcoded_translations: {
+      ENG: ["eng-nco-Dnut1"],
+      POL: ["pol-nco-Dnut1"],
+    },
+    devHardcoded_tags: ["allohomTesting", "edible2"],
     allohomInfo: { singleWordtype: true, text: "food", emoji: "🥜" },
 
     //selectors
@@ -25,8 +28,11 @@ let nco = [
   },
   {
     //links
-    translations: { ENG: ["eng-nco-Dnut2"], POL: ["pol-nco-Dnut2"] },
-    tags: ["allohomTesting", "toolbox"],
+    devHardcoded_translations: {
+      ENG: ["eng-nco-Dnut2"],
+      POL: ["pol-nco-Dnut2"],
+    },
+    devHardcoded_tags: ["allohomTesting", "toolbox"],
     allohomInfo: { singleWordtype: true, text: "metal", emoji: "🔩" },
 
     //selectors
@@ -49,8 +55,11 @@ let nco = [
   },
   {
     //links
-    translations: { ENG: ["eng-nco-Dtie2"], POL: ["pol-nco-Dtie2"] },
-    tags: ["allohomTesting3", "sports"],
+    devHardcoded_translations: {
+      ENG: ["eng-nco-Dtie2"],
+      POL: ["pol-nco-Dtie2"],
+    },
+    devHardcoded_tags: ["allohomTesting3", "sports"],
     allohomInfo: {
       multipleWordtype: true,
       singleWordtype: true,
@@ -78,8 +87,11 @@ let nco = [
   },
   {
     //links
-    translations: { ENG: ["eng-nco-Dtie1"], POL: ["pol-nco-Dtie1"] },
-    tags: ["allohomTesting3", "clothes"],
+    devHardcoded_translations: {
+      ENG: ["eng-nco-Dtie1"],
+      POL: ["pol-nco-Dtie1"],
+    },
+    devHardcoded_tags: ["allohomTesting3", "clothes"],
     allohomInfo: {
       multipleWordtype: true,
       singleWordtype: true,
@@ -107,11 +119,11 @@ let nco = [
   },
   {
     //links
-    translations: {
+    devHardcoded_translations: {
       ENG: ["eng-nco-Dhole", "eng-nco-Dpit"],
       POL: ["pol-nco-Ddziura", "pol-nco-Dotwór"],
     },
-    tags: ["construction work"],
+    devHardcoded_tags: ["construction work"],
 
     //selectors
     lemma: "hole",
@@ -133,11 +145,11 @@ let nco = [
   },
   {
     //links
-    translations: {
+    devHardcoded_translations: {
       ENG: ["eng-nco-Dhole", "eng-nco-Dpit"],
       POL: ["pol-nco-Ddziura", "pol-nco-Dotwór"],
     },
-    tags: ["construction work"],
+    devHardcoded_tags: ["construction work"],
 
     //selectors
     lemma: "pit",
@@ -165,8 +177,8 @@ let pro = [];
 let ver = [
   {
     //links
-    translations: { ENG: ["eng-ver-Dtie"], POL: ["pol-ver-Dtie"] },
-    tags: ["allohomTesting3", "crafts"],
+    devHardcoded_translations: { ENG: ["eng-ver-Dtie"], POL: ["pol-ver-Dtie"] },
+    devHardcoded_tags: ["allohomTesting3", "crafts"],
     allohomInfo: {
       multipleWordtype: true,
       singleWordtype: true,

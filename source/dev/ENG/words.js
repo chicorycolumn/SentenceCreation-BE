@@ -7,8 +7,8 @@ const {
 let npe = [
   {
     //links
-    translations: { ENG: ["woman", "lady"], POL: ["kobieta"] },
-    tags: ["animate", "personTest1", "concrete"],
+    devHardcoded_translations: { ENG: ["woman", "lady"], POL: ["kobieta"] },
+    devHardcoded_tags: ["animate", "personTest1", "concrete"],
     //selectors
     lemma: "woman",
     id: "eng-npe-901",
@@ -29,8 +29,8 @@ let npe = [
   },
   {
     //links
-    translations: { ENG: ["boy"], POL: ["chłopiec", "chłopak"] },
-    tags: ["animate", "personTest1", "concrete"],
+    devHardcoded_translations: { ENG: ["boy"], POL: ["chłopiec", "chłopak"] },
+    devHardcoded_tags: ["animate", "personTest1", "concrete"],
     //selectors
     lemma: "boy",
     id: "eng-npe-902",
@@ -54,8 +54,8 @@ let npe = [
 let nco = [
   {
     //links
-    translations: { ENG: ["onion"], POL: ["cebula"] },
-    tags: ["inanimate", "edible", "holdable", "concrete"],
+    devHardcoded_translations: { ENG: ["onion"], POL: ["cebula"] },
+    devHardcoded_tags: ["inanimate", "edible", "holdable", "concrete"],
     //selectors
     lemma: "onion",
     id: "eng-nco-902",
@@ -76,8 +76,8 @@ let nco = [
   },
   {
     //links
-    translations: { ENG: ["apple"], POL: ["jabłko"] },
-    tags: ["inanimate", "edible", "holdable", "concrete"],
+    devHardcoded_translations: { ENG: ["apple"], POL: ["jabłko"] },
+    devHardcoded_tags: ["inanimate", "edible", "holdable", "concrete"],
     //selectors
     lemma: "apple",
     id: "eng-nco-902",
@@ -98,8 +98,11 @@ let nco = [
   },
   {
     //links
-    translations: { ENG: ["mirror"], POL: ["lustro", "zwierciadło"] },
-    tags: ["inanimate", "holdable", "concrete"],
+    devHardcoded_translations: {
+      ENG: ["mirror"],
+      POL: ["lustro", "zwierciadło"],
+    },
+    devHardcoded_tags: ["inanimate", "holdable", "concrete"],
     //selectors
     lemma: "mirror",
     id: "eng-nco-905",
@@ -120,8 +123,8 @@ let nco = [
   },
   {
     //links
-    translations: { ENG: ["book"], POL: ["książka"] },
-    tags: ["inanimate", "holdable", "concrete"],
+    devHardcoded_translations: { ENG: ["book"], POL: ["książka"] },
+    devHardcoded_tags: ["inanimate", "holdable", "concrete"],
     //selectors
     lemma: "book",
     id: "eng-nco-906",
@@ -142,8 +145,8 @@ let nco = [
   },
   {
     //links
-    translations: { ENG: ["door"], POL: ["drzwi"] },
-    tags: ["inanimate", "holdable", "concrete"],
+    devHardcoded_translations: { ENG: ["door"], POL: ["drzwi"] },
+    devHardcoded_tags: ["inanimate", "holdable", "concrete"],
     //selectors
     lemma: "door",
     id: "eng-nco-907",
@@ -164,8 +167,8 @@ let nco = [
   },
   {
     //links
-    translations: { ENG: ["sheep"], POL: ["owca"] },
-    tags: ["animate", "animal", "farmyard", "concrete"],
+    devHardcoded_translations: { ENG: ["sheep"], POL: ["owca"] },
+    devHardcoded_tags: ["animate", "animal", "farmyard", "concrete"],
     //selectors
     lemma: "sheep",
     id: "eng-nco-908",
@@ -186,8 +189,8 @@ let nco = [
   },
   {
     //links
-    translations: { ENG: ["nut"], POL: ["orzech"] },
-    tags: ["allohomTesting", "edible2"],
+    devHardcoded_translations: { ENG: ["nut"], POL: ["orzech"] },
+    devHardcoded_tags: ["allohomTesting", "edible2"],
     allohomInfo: { singleWordtype: true, text: "food", emoji: "🥜" },
 
     //selectors
@@ -210,8 +213,8 @@ let nco = [
   },
   {
     //links
-    translations: { ENG: ["nut"], POL: ["nakrętka"] },
-    tags: ["allohomTesting", "toolbox"],
+    devHardcoded_translations: { ENG: ["nut"], POL: ["nakrętka"] },
+    devHardcoded_tags: ["allohomTesting", "toolbox"],
     allohomInfo: { singleWordtype: true, text: "metal", emoji: "🔩" },
 
     //selectors
@@ -234,8 +237,8 @@ let nco = [
   },
   {
     //links
-    translations: { ENG: ["bear"], POL: ["niedźwiedź"] },
-    tags: ["allohomTesting2", "animal"],
+    devHardcoded_translations: { ENG: ["bear"], POL: ["niedźwiedź"] },
+    devHardcoded_tags: ["allohomTesting2", "animal"],
     allohomInfo: { multipleWordtype: true, text: "animal", emoji: "🐻" },
 
     //selectors
@@ -261,8 +264,8 @@ let nco = [
 let adj = [
   {
     //links
-    translations: { ENG: ["red"], POL: ["czerwony"] },
-    tags: ["colour"],
+    devHardcoded_translations: { ENG: ["red"], POL: ["czerwony"] },
+    devHardcoded_tags: ["colour"],
     //selectors
     lemma: "red",
     id: "eng-adj-901",
@@ -278,8 +281,8 @@ let adj = [
   },
   {
     //links
-    translations: { ENG: ["wibbly"], POL: ["łybli"] },
-    tags: ["wibbly"],
+    devHardcoded_translations: { ENG: ["wibbly"], POL: ["łybli"] },
+    devHardcoded_tags: ["wibbly"],
     //selectors
     lemma: "wibbly",
     id: "eng-adj-900",
@@ -295,8 +298,8 @@ let adj = [
   },
   {
     //links
-    translations: { ENG: ["wobbly"], POL: ["łobli"] },
-    tags: ["wobbly"],
+    devHardcoded_translations: { ENG: ["wobbly"], POL: ["łobli"] },
+    devHardcoded_tags: ["wobbly"],
     //selectors
     lemma: "wobbly",
     id: "eng-adj-901",
@@ -312,8 +315,8 @@ let adj = [
   },
   {
     //links
-    translations: { ENG: ["fast"], POL: ["mocno"] },
-    tags: ["fitting"],
+    devHardcoded_translations: { ENG: ["fast"], POL: ["mocno"] },
+    devHardcoded_tags: ["fitting"],
     //selectors
     lemma: "fast",
     id: "eng-adj-905",
@@ -329,8 +332,8 @@ let adj = [
   },
   {
     //links
-    translations: { ENG: ["fast"], POL: ["szybki"] },
-    tags: ["speed"],
+    devHardcoded_translations: { ENG: ["fast"], POL: ["szybki"] },
+    devHardcoded_tags: ["speed"],
     //selectors
     lemma: "fast",
     id: "eng-adj-904",
@@ -346,8 +349,8 @@ let adj = [
   },
   {
     //links
-    translations: { ENG: ["small"], POL: ["mały"] },
-    tags: ["size"],
+    devHardcoded_translations: { ENG: ["small"], POL: ["mały"] },
+    devHardcoded_tags: ["size"],
     //selectors
     lemma: "small",
     id: "eng-adj-902",
@@ -366,8 +369,8 @@ let adj = [
 let ver = [
   {
     //links
-    translations: { ENG: ["bear"], POL: ["znieść"] },
-    tags: ["allohomTesting2", "emotions"],
+    devHardcoded_translations: { ENG: ["bear"], POL: ["znieść"] },
+    devHardcoded_tags: ["allohomTesting2", "emotions"],
     allohomInfo: {
       multipleWordtype: true,
       text: "emotional verb",
@@ -390,8 +393,8 @@ let ver = [
   },
   {
     //links
-    translations: { ENG: ["read"], POL: ["czytać", "przeczytać"] },
-    tags: ["basic2"],
+    devHardcoded_translations: { ENG: ["read"], POL: ["czytać", "przeczytać"] },
+    devHardcoded_tags: ["basic2"],
     //selectors
     lemma: "read",
     id: "eng-ver-903",
@@ -409,8 +412,8 @@ let ver = [
   },
   {
     //links
-    translations: { ENG: ["write"], POL: ["pisać", "napisać"] },
-    tags: ["basic3"],
+    devHardcoded_translations: { ENG: ["write"], POL: ["pisać", "napisać"] },
+    devHardcoded_tags: ["basic3"],
     //selectors
     lemma: "write",
     id: "eng-ver-905",
@@ -428,8 +431,8 @@ let ver = [
   },
   {
     //links
-    translations: { ENG: ["research"], POL: ["badać", "zbadać"] },
-    tags: ["science"],
+    devHardcoded_translations: { ENG: ["research"], POL: ["badać", "zbadać"] },
+    devHardcoded_tags: ["science"],
     //selectors
     lemma: "research",
     id: "eng-ver-904",
@@ -447,8 +450,8 @@ let ver = [
   },
   {
     //links
-    translations: { ENG: ["have"], POL: ["mieć"] },
-    tags: ["basic", "possession"],
+    devHardcoded_translations: { ENG: ["have"], POL: ["mieć"] },
+    devHardcoded_tags: ["basic", "possession"],
     //selectors
     lemma: "have",
     id: "eng-ver-902",
@@ -466,8 +469,8 @@ let ver = [
   },
   {
     //links
-    translations: { ENG: ["be"], POL: ["być"] },
-    tags: ["basic", "identity"],
+    devHardcoded_translations: { ENG: ["be"], POL: ["być"] },
+    devHardcoded_tags: ["basic", "identity"],
     //selectors
     lemma: "be",
     id: "eng-ver-901",
@@ -511,10 +514,10 @@ exports.wordsBank = {
 
 // let pro = [
 //   {
-//     translations: { ENG: ["I"] },
+//     devHardcoded_translations:  { ENG: ["I"] },
 //     lemma: "ja",
 //     id: "pol-pro-901",
-//     tags: [],
+//     devHardcoded_tags: [],
 //
 //     person: "1per",
 //     gender: ["m1", "f"],

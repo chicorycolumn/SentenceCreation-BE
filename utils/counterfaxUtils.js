@@ -90,6 +90,68 @@ exports.makeCfLabelFromSitSchematic = (sit) => {
   return grandCfLabel.slice(0, grandCfLabel.length - 2);
 };
 
+exports.reorderOutputArrWithHeadsFirst = (questionOutputArr) => {
+  let questionOutputArrOrderedHeadsFirst = [];
+  let headChunkIds = [];
+
+  questionOutputArr.forEach((questionOutputUnit) => {
+    refObj.agreementTraits.forEach((agreeKey) => {
+      if (questionOutputUnit.structureChunk[agreeKey]) {
+        headChunkIds.push(questionOutputUnit.structureChunk[agreeKey]);
+      }
+    });
+  });
+
+  headChunkIds = Array.from(new Set(headChunkIds));
+
+  headChunkIds.forEach((headChunkId) => {
+    let headOutputUnit = questionOutputArr.find(
+      (questionOutputUnit) =>
+        questionOutputUnit.structureChunk.chunkId === headChunkId
+    );
+
+    if (!headOutputUnit) {
+      consol.throw(
+        `kozs Failure to find headChunk for headChunkId ${headChunkId}.`
+      );
+    }
+
+    questionOutputArrOrderedHeadsFirst.push(headOutputUnit);
+  });
+
+  questionOutputArr.forEach((questionOutputUnit) => {
+    if (!headChunkIds.includes(questionOutputUnit.structureChunk.chunkId)) {
+      questionOutputArrOrderedHeadsFirst.push(questionOutputUnit);
+    }
+  });
+
+  if (
+    !uUtils.areTwoFlatArraysEqual(
+      questionOutputArr.map((outputUnit) => outputUnit.structureChunk.chunkId),
+      questionOutputArrOrderedHeadsFirst.map(
+        (outputUnit) => outputUnit.structureChunk.chunkId
+      )
+    )
+  ) {
+    consol.logSpecial(
+      3,
+      "iwwo questionOutputArr.map",
+      questionOutputArr.map((outputUnit) => outputUnit.structureChunk.chunkId)
+    );
+    consol.logSpecial(
+      3,
+      "iwwo questionOutputArrOrderedHeadsFirst.map",
+      questionOutputArrOrderedHeadsFirst.map(
+        (outputUnit) => outputUnit.structureChunk.chunkId
+      )
+    );
+    consol.throw(
+      `iwwo Failure in reordering the questionOutputArr. See printout comparison above.`
+    );
+  }
+  return questionOutputArrOrderedHeadsFirst;
+};
+
 exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
   let { questionLanguage } = languagesObj;
 
@@ -98,71 +160,7 @@ exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
   let annotationsToCounterfaxAndTheirChunkIds = [];
 
   let questionOutputArrOrderedHeadsFirst =
-    reorderOutputArrWithHeadsFirst(questionOutputArr);
-
-  function reorderOutputArrWithHeadsFirst(questionOutputArr) {
-    let questionOutputArrOrderedHeadsFirst = [];
-    let headChunkIds = [];
-
-    questionOutputArr.forEach((questionOutputUnit) => {
-      refObj.agreementTraits.forEach((agreeKey) => {
-        if (questionOutputUnit.structureChunk[agreeKey]) {
-          headChunkIds.push(questionOutputUnit.structureChunk[agreeKey]);
-        }
-      });
-    });
-
-    headChunkIds = Array.from(new Set(headChunkIds));
-
-    headChunkIds.forEach((headChunkId) => {
-      let headOutputUnit = questionOutputArr.find(
-        (questionOutputUnit) =>
-          questionOutputUnit.structureChunk.chunkId === headChunkId
-      );
-
-      if (!headOutputUnit) {
-        consol.throw(
-          `kozs Failure to find headChunk for headChunkId ${headChunkId}.`
-        );
-      }
-
-      questionOutputArrOrderedHeadsFirst.push(headOutputUnit);
-    });
-
-    questionOutputArr.forEach((questionOutputUnit) => {
-      if (!headChunkIds.includes(questionOutputUnit.structureChunk.chunkId)) {
-        questionOutputArrOrderedHeadsFirst.push(questionOutputUnit);
-      }
-    });
-
-    if (
-      !uUtils.areTwoFlatArraysEqual(
-        questionOutputArr.map(
-          (outputUnit) => outputUnit.structureChunk.chunkId
-        ),
-        questionOutputArrOrderedHeadsFirst.map(
-          (outputUnit) => outputUnit.structureChunk.chunkId
-        )
-      )
-    ) {
-      consol.logSpecial(
-        3,
-        "iwwo questionOutputArr.map",
-        questionOutputArr.map((outputUnit) => outputUnit.structureChunk.chunkId)
-      );
-      consol.logSpecial(
-        3,
-        "iwwo questionOutputArrOrderedHeadsFirst.map",
-        questionOutputArrOrderedHeadsFirst.map(
-          (outputUnit) => outputUnit.structureChunk.chunkId
-        )
-      );
-      consol.throw(
-        `iwwo Failure in reordering the questionOutputArr. See printout comparison above.`
-      );
-    }
-    return questionOutputArrOrderedHeadsFirst;
-  }
+    cfUtils.reorderOutputArrWithHeadsFirst(questionOutputArr);
 
   questionOutputArrOrderedHeadsFirst.forEach((questionOutputUnit) => {
     //Abortcuts for this fxn: Search ACX.
@@ -175,7 +173,6 @@ exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
       (annoTraitKey) => {
         //ACX2A: Don't bother running counterfactuals for wordtype/emoji/text annotations, as they'll always be needed.
         //ACX2B: Don't bother running counterfactuals for tenseDesc annotations, as they'll take so long, because there are so many alternate inflectionValues, and we can reasonably presume that the tenseDesc anno will be necessary.
-
         if (
           ["wordtype", "emoji", "text", "tenseDescription"].includes(
             annoTraitKey
@@ -212,7 +209,13 @@ exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
             chunkId: questionOutputUnit.structureChunk.chunkId,
             person: questionOutputUnit.structureChunk.person,
           };
-          allLangUtils.enforceIsPerson(tempObj);
+          allLangUtils.enforceIsPerson(
+            tempObj,
+            Object.keys(questionOutputUnit.structureChunk.annotations).includes(
+              "person"
+            ) // If "person" is an annotation (and stCh is pronoun),
+            //then this can be "3per", which would mean we don't want to enforce isPerson ie removing "n" from gender counterfaxes.
+          );
           counterfactualTraitValuesForThisTraitKey = tempObj.gender;
         }
 

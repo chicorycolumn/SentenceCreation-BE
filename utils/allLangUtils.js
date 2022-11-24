@@ -71,23 +71,18 @@ exports.enforceThirdPersonAgreeWith = (stCh, onlyIfUnpopulated) => {
   }
 };
 
-exports.enforceIsPerson = (stCh) => {
-  if (gpUtils.stChIsPerson(stCh)) {
+exports.enforceIsPerson = (stCh, strict) => {
+  if (gpUtils.stChIsPerson(stCh, strict)) {
     stCh.gender = stCh.gender.filter((genderValue) => genderValue !== "n");
   }
 };
 
-exports.formatSpecificIds = (specificIds) => {
-  let res = [];
+exports.getLObjIdStem = (id) => {
+  return id.split("-").slice(0, 3).join("-");
+};
 
-  specificIds.forEach((id) => {
-    res.push(id);
-    if (id.includes("*")) {
-      res.push(id.split("*")[0]);
-    }
-  });
-
-  return res;
+exports.compareLObjStems = (id1, id2) => {
+  return allLangUtils.getLObjIdStem(id1) === allLangUtils.getLObjIdStem(id2);
 };
 
 exports.translateAnnoTraitValue = (

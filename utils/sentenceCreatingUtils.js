@@ -9,6 +9,7 @@ const scUtils = require("./sentenceCreatingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 const refFxn = require("./reference/referenceFunctions.js");
 const allLangUtils = require("../utils/allLangUtils.js");
+const nexusUtils = require("./secondOrder/nexusUtils.js");
 
 exports.getWordsAndFormulas = (currentLanguage, wordsOnly) => {
   let envir = "ref";
@@ -1072,17 +1073,8 @@ exports.conformAnswerStructureToQuestionStructure = (
   words
 ) => {
   let shouldConsoleLog = false;
-  if (shouldConsoleLog) {
-    consol.log(
-      "[1;35m " +
-        "dxft sc:conformAnswerStructureToQuestionStructure-------------------" +
-        "[0m"
-    );
-  } else {
-    consol.log(
-      "[1;35m " + `(aegh sc:conformAnswerStructureToQuestionStructure)` + "[0m"
-    );
-  }
+
+  consol.log("[1;35m " + `(aegh sc:conformAnswerStructureToQuestionStructure)` + "[0m");
 
   let { sentenceStructure } = sentenceFormula;
   let { questionLanguage, answerLanguage } = languagesObj;
@@ -1125,8 +1117,9 @@ exports.conformAnswerStructureToQuestionStructure = (
 
     let matchingAnswerLemmaObjects = [];
 
-    let lObjsToSearch =
-      questionSelectedLemmaObject.translations[answerLanguage];
+    let lObjsToSearch = nexusUtils.getTraductions(questionSelectedLemmaObject)[
+      answerLanguage
+    ];
 
     let source = words[gpUtils.getWordtypeShorthandStCh(answerStructureChunk)];
 
@@ -1143,8 +1136,8 @@ exports.conformAnswerStructureToQuestionStructure = (
     matchingAnswerLemmaObjects = matchingAnswerLemmaObjects.filter(
       (answerLemmaObject) =>
         uUtils.areTwoFlatArraysEqual(
-          questionSelectedLemmaObject.tags,
-          answerLemmaObject.tags
+          nexusUtils.getPapers(questionSelectedLemmaObject),
+          nexusUtils.getPapers(answerLemmaObject)
         )
     );
 
@@ -1164,8 +1157,8 @@ exports.conformAnswerStructureToQuestionStructure = (
     }
 
     //...and then for both pronombres and all other wordtypes, we get the ID and set it.
-    answerStructureChunk.specificIds = allLangUtils.formatSpecificIds(
-      matchingAnswerLemmaObjects.map((lObj) => lObj.id)
+    answerStructureChunk.specificIds = matchingAnswerLemmaObjects.map(
+      (lObj) => lObj.id
     );
 
     //Do actually transfer gender, for person nouns.

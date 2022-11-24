@@ -56,13 +56,9 @@ exports.findMatchingLemmaObjectThenWord = (
       source.map((lObj) => lObj.id)
     );
     matches = source.filter((lObj) => {
-      soughtId = lObj.id;
-
-      if (lObj.id.includes("*")) {
-        soughtId = lObj.id.split("*")[0];
-      }
-
-      return structureChunk.specificIds.includes(soughtId);
+      return structureChunk.specificIds.some((specificId) =>
+        allLangUtils.compareLObjStems(lObj.id, specificId)
+      );
     });
     consol.log(`obbn Found ${matches.length} matches.`);
     if (!matches.length) {
@@ -81,7 +77,7 @@ exports.findMatchingLemmaObjectThenWord = (
     matches = lfUtils.filterByTags(source, structureChunk);
 
     if (forceMultipleModeAndQuestionOnly) {
-      matches = uUtils.selectRandomElementsFromArr(matches, 2);
+      matches = uUtils.selectRandomElementsFromArr(matches);
     }
 
     if (!matches.length) {

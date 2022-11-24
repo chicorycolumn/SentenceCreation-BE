@@ -25,11 +25,11 @@ describe("/educator/sandbox - Testing API.", () => {
         {
           chunkId: "ver-1",
           agreeWith: "npe-1",
-          specificIds: ["pol-ver-001-być"],
+          specificIds: ["pol-ver-011-być"],
         },
         {
           chunkId: "npe-1",
-          specificIds: ["pol-npe-001-kobieta"],
+          specificIds: ["pol-npe-011-kobieta"],
           gcase: ["nom"],
           number: ["singular"],
         },
@@ -128,7 +128,14 @@ describe("/educator/sandbox - Testing API.", () => {
     };
 
     const expected = {
-      questionSentenceArr: ["Woman.", "Women.", "Boy.", "Boys."],
+      questionSentenceArr: [
+        "Woman.",
+        "Women.",
+        "Boy.",
+        "Boys.",
+        "Lady.",
+        "Ladies.",
+      ],
     };
 
     return request(app)

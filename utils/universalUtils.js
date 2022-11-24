@@ -352,7 +352,7 @@ exports.doStringsOrArraysMatch = (actual, sought, every = true) => {
   }
 };
 
-exports.selectRandomElementsFromArr = (arr, quantity) => {
+exports.selectRandomElementsFromArr = (arr, quantity = arr.length) => {
   if (arr.length > quantity) {
     let limitedArrIndex = [];
     for (let i = 0; i < quantity; i++) {
@@ -365,7 +365,6 @@ exports.selectRandomElementsFromArr = (arr, quantity) => {
       }
       limitedArrIndex.push(selectedIndex);
     }
-    console.log(limitedArrIndex);
     return limitedArrIndex.map((index) => arr[index]);
   } else {
     return arr;
