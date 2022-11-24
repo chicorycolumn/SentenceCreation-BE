@@ -51,6 +51,162 @@ let inflectionRef = {
   ],
 };
 
+const _addToResArrAdhocForms = (
+  resArr,
+  adhocTraitKey,
+  adhocValue,
+  selectedWordArr,
+  structureChunk,
+  dataToUpdateWith
+) => {
+  consol.log(
+    "htrt _addToResArrAdhocForms START selectedWordArr",
+    selectedWordArr
+  );
+
+  let structureChunkCopy = uUtils.copyWithoutReference(structureChunk);
+
+  lfUtils.updateStructureChunkByAdhocOnly(
+    structureChunkCopy,
+    adhocTraitKey,
+    adhocValue
+  );
+
+  if (dataToUpdateWith) {
+    Object.keys(dataToUpdateWith).forEach((traitKey) => {
+      let traitValue = dataToUpdateWith[traitKey];
+
+      lfUtils.updateStructureChunkByAdhocOnly(
+        structureChunkCopy,
+        traitKey,
+        traitValue
+      );
+    });
+  } else {
+    //If I am given no dataToUpdateWith, then I assume you want me to select random
+    //traitValues for all traitKeys on the structureChunk, in order to lock in choices.
+
+    let allTraitKeys = [];
+
+    let kindsOfTraitKeyOnLObj = [
+      "selectors",
+      "hybridSelectors",
+      "inflectionChains",
+    ];
+
+    kindsOfTraitKeyOnLObj.forEach((kindOfTraitKeyOnLObj) => {
+      let traitKeys =
+        refObj.lemmaObjectTraitKeys[currentLanguage][kindOfTraitKeyOnLObj][
+          gpUtils.getWordtypeStCh(structureChunkCopy)
+        ];
+
+      if (traitKeys) {
+        allTraitKeys = [...allTraitKeys, ...traitKeys];
+      }
+    });
+
+    allTraitKeys.forEach((traitKey) => {
+      if (
+        structureChunkCopy[traitKey] &&
+        structureChunkCopy[traitKey].length > 1
+      ) {
+        structureChunkCopy[traitKey] = uUtils.selectRandom(
+          structureChunkCopy[traitKey]
+        );
+      }
+    });
+  }
+
+  let resObj = {
+    selectedWordArr,
+    structureChunkUpdated: structureChunkCopy,
+  };
+
+  resArr.push(resObj);
+};
+
+const _fetchTenseDescriptionAdhocForms = (
+  resArr,
+  lObj,
+  dataToUpdateWith,
+  structureChunk,
+  tenseDescriptionTraitKeyForRefObj = dataToUpdateWith.tenseDescription
+) => {
+  let { infinitive, v2, v3, thirdPS, gerund } = lObj.inflections;
+  let { person, number, tenseDescription } = dataToUpdateWith; //These are used in engTenseDescriptionRef
+  let tenseDescriptionTraitKeyForStructureChunk =
+    dataToUpdateWith.tenseDescription;
+
+  //This does have to be defined in here.
+  const engTenseDescriptionRef = {
+    "past simple": [v2],
+    "past continuous": [be["past"][person][number] + " " + gerund],
+    "past perfect": [have["past"] + " " + v3],
+    "present simple 3PS": [thirdPS],
+    "present simple": [infinitive],
+    "present continuous": [be["present"][person][number] + " " + gerund],
+    "present perfect": [have["present"][person][number] + " " + v3],
+    "future simple": ["will" + " " + infinitive],
+    "future goingto": [
+      be["present"][person][number] + " " + "going to" + " " + infinitive,
+    ],
+    "future continuous": [be.future + " " + gerund],
+    "future goingto continuous": [
+      be["present"][person][number] + " " + "going to be" + " " + gerund,
+    ],
+    "future perfect": [have.future + " " + v3],
+    // conditional: ["would" + " " + infinitive],
+    "conditional simple": ["would" + " " + infinitive],
+    "conditional continuous": [be.conditional + " " + gerund],
+    "conditional perfect": [have.conditional + " " + v3],
+    imperative: [infinitive],
+    "negative imperative": ["don't" + " " + infinitive],
+  };
+
+  const subsequentTenseDescRef = {
+    "cond0 condition": ["present simple"],
+    "cond0 condition 3PS": ["present simple 3PS"],
+    "cond0 outcome": ["present simple"],
+    "cond0 outcome 3PS": ["present simple 3PS"],
+
+    "cond1 condition": ["present simple"],
+    "cond1 outcome": ["future simple"],
+
+    "cond2 condition": ["past simple"],
+    "cond2 outcome": ["conditional simple"],
+
+    "cond3 condition": ["past perfect"],
+    "cond3 outcome": ["conditional perfect"],
+  };
+
+  Object.keys(subsequentTenseDescRef).forEach((tenseDescInflectionKey) => {
+    let convertedTenseDescInflectionKeys =
+      subsequentTenseDescRef[tenseDescInflectionKey];
+
+    let tenseDescInflectionValues = [];
+    convertedTenseDescInflectionKeys.forEach(
+      (convertedTenseDescInflectionKey) => {
+        engTenseDescriptionRef[convertedTenseDescInflectionKey].forEach(
+          (tenseDescInflectionValue) => {
+            tenseDescInflectionValues.push(tenseDescInflectionValue);
+          }
+        );
+      }
+    );
+
+    engTenseDescriptionRef[tenseDescInflectionKey] = tenseDescInflectionValues;
+  });
+
+  _addToResArrAdhocForms(
+    resArr,
+    "tenseDescription",
+    tenseDescriptionTraitKeyForStructureChunk,
+    engTenseDescriptionRef[tenseDescriptionTraitKeyForRefObj],
+    structureChunk,
+    dataToUpdateWith
+  );
+};
+
 exports.balanceGenders = () => {};
 
 exports.selectWordVersions = (
@@ -281,17 +437,18 @@ exports.generateAdhocForms = (
 
     structureChunk.form.forEach((selectedForm) => {
       consol.log(
-        "pqdw generateAdhocForms giving addToResArr this selectedWordArr",
+        "pqdw generateAdhocForms giving _addToResArrAdhocForms this selectedWordArr",
         [lObj.inflections[selectedForm]]
       );
 
-      addToResArr(
+      _addToResArrAdhocForms(
+        resArr,
         "form",
         selectedForm,
         [lObj.inflections[selectedForm]],
         structureChunk,
         null // I am giving no dataToUpdateWith, as the choice of traitKeys specified won't affect the ENG adhoc form chosen.
-        // So in addToResArr it will make random selections for all the traitValues in the structureChunk, as I've given null here.
+        // So in _addToResArrAdhocForms it will make random selections for all the traitValues in the structureChunk, as I've given null here.
       );
     });
 
@@ -309,8 +466,6 @@ exports.generateAdhocForms = (
     ) {
       throw "This shouldn't have happened.";
     }
-
-    let { infinitive, v2, v3, thirdPS, gerund } = lObj.inflections;
 
     Object.keys(inflectionRef).forEach((inflectionCategory) => {
       let inflectionKeys = inflectionRef[inflectionCategory].slice(0);
@@ -337,85 +492,6 @@ exports.generateAdhocForms = (
     });
 
     consol.log("cesb tenseDescriptionArr", tenseDescriptionArr);
-
-    function fetchTenseDescription(
-      dataToUpdateWith,
-      structureChunk,
-      tenseDescriptionTraitKeyForRefObj = dataToUpdateWith.tenseDescription
-    ) {
-      let { person, number, tenseDescription } = dataToUpdateWith; //These are used in engTenseDescriptionRef
-      let tenseDescriptionTraitKeyForStructureChunk =
-        dataToUpdateWith.tenseDescription;
-
-      //This does have to be defined in here.
-      const engTenseDescriptionRef = {
-        "past simple": [v2],
-        "past continuous": [be["past"][person][number] + " " + gerund],
-        "past perfect": [have["past"] + " " + v3],
-        "present simple 3PS": [thirdPS],
-        "present simple": [infinitive],
-        "present continuous": [be["present"][person][number] + " " + gerund],
-        "present perfect": [have["present"][person][number] + " " + v3],
-        "future simple": ["will" + " " + infinitive],
-        "future goingto": [
-          be["present"][person][number] + " " + "going to" + " " + infinitive,
-        ],
-        "future continuous": [be.future + " " + gerund],
-        "future goingto continuous": [
-          be["present"][person][number] + " " + "going to be" + " " + gerund,
-        ],
-        "future perfect": [have.future + " " + v3],
-        // conditional: ["would" + " " + infinitive],
-        "conditional simple": ["would" + " " + infinitive],
-        "conditional continuous": [be.conditional + " " + gerund],
-        "conditional perfect": [have.conditional + " " + v3],
-        imperative: [infinitive],
-        "negative imperative": ["don't" + " " + infinitive],
-      };
-
-      const subsequentTenseDescRef = {
-        "cond0 condition": ["present simple"],
-        "cond0 condition 3PS": ["present simple 3PS"],
-        "cond0 outcome": ["present simple"],
-        "cond0 outcome 3PS": ["present simple 3PS"],
-
-        "cond1 condition": ["present simple"],
-        "cond1 outcome": ["future simple"],
-
-        "cond2 condition": ["past simple"],
-        "cond2 outcome": ["conditional simple"],
-
-        "cond3 condition": ["past perfect"],
-        "cond3 outcome": ["conditional perfect"],
-      };
-
-      Object.keys(subsequentTenseDescRef).forEach((tenseDescInflectionKey) => {
-        let convertedTenseDescInflectionKeys =
-          subsequentTenseDescRef[tenseDescInflectionKey];
-
-        let tenseDescInflectionValues = [];
-        convertedTenseDescInflectionKeys.forEach(
-          (convertedTenseDescInflectionKey) => {
-            engTenseDescriptionRef[convertedTenseDescInflectionKey].forEach(
-              (tenseDescInflectionValue) => {
-                tenseDescInflectionValues.push(tenseDescInflectionValue);
-              }
-            );
-          }
-        );
-
-        engTenseDescriptionRef[tenseDescInflectionKey] =
-          tenseDescInflectionValues;
-      });
-
-      addToResArr(
-        "tenseDescription",
-        tenseDescriptionTraitKeyForStructureChunk,
-        engTenseDescriptionRef[tenseDescriptionTraitKeyForRefObj],
-        structureChunk,
-        dataToUpdateWith
-      );
-    }
 
     consol.log("jpvb", {
       "structureChunk.person": structureChunk.person,
@@ -451,11 +527,12 @@ exports.generateAdhocForms = (
             let tense = tenseDescription.split(" ")[0];
 
             consol.log(
-              "wmcp generateAdhocForms giving addToResArr this selectedWordArr",
+              "wmcp generateAdhocForms giving _addToResArrAdhocForms this selectedWordArr",
               [be[tense][person][number]]
             );
 
-            addToResArr(
+            _addToResArrAdhocForms(
+              resArr,
               "tenseDescription",
               tenseDescription,
               [be[tense][person][number]],
@@ -471,88 +548,25 @@ exports.generateAdhocForms = (
               person === "3per" &&
               number === "singular"
             ) {
-              fetchTenseDescription(
+              _fetchTenseDescriptionAdhocForms(
+                resArr,
+                lObj,
                 dataToUpdateWith,
                 structureChunk,
                 `${tenseDescription} 3PS`
               );
             } else {
-              fetchTenseDescription(dataToUpdateWith, structureChunk);
+              _fetchTenseDescriptionAdhocForms(
+                resArr,
+                lObj,
+                dataToUpdateWith,
+                structureChunk
+              );
             }
           }
         });
       });
     });
     return resArr;
-  }
-
-  function addToResArr(
-    adhocTraitKey,
-    adhocValue,
-    selectedWordArr,
-    structureChunk,
-    dataToUpdateWith
-  ) {
-    consol.log("htrt addToResArr START selectedWordArr", selectedWordArr);
-
-    let structureChunkCopy = uUtils.copyWithoutReference(structureChunk);
-
-    lfUtils.updateStructureChunkByAdhocOnly(
-      structureChunkCopy,
-      adhocTraitKey,
-      adhocValue
-    );
-
-    if (dataToUpdateWith) {
-      Object.keys(dataToUpdateWith).forEach((traitKey) => {
-        let traitValue = dataToUpdateWith[traitKey];
-
-        lfUtils.updateStructureChunkByAdhocOnly(
-          structureChunkCopy,
-          traitKey,
-          traitValue
-        );
-      });
-    } else {
-      //If I am given no dataToUpdateWith, then I assume you want me to select random
-      //traitValues for all traitKeys on the structureChunk, in order to lock in choices.
-
-      let allTraitKeys = [];
-
-      let kindsOfTraitKeyOnLObj = [
-        "selectors",
-        "hybridSelectors",
-        "inflectionChains",
-      ];
-
-      kindsOfTraitKeyOnLObj.forEach((kindOfTraitKeyOnLObj) => {
-        let traitKeys =
-          refObj.lemmaObjectTraitKeys[currentLanguage][kindOfTraitKeyOnLObj][
-            gpUtils.getWordtypeStCh(structureChunkCopy)
-          ];
-
-        if (traitKeys) {
-          allTraitKeys = [...allTraitKeys, ...traitKeys];
-        }
-      });
-
-      allTraitKeys.forEach((traitKey) => {
-        if (
-          structureChunkCopy[traitKey] &&
-          structureChunkCopy[traitKey].length > 1
-        ) {
-          structureChunkCopy[traitKey] = uUtils.selectRandom(
-            structureChunkCopy[traitKey]
-          );
-        }
-      });
-    }
-
-    let resObj = {
-      selectedWordArr,
-      structureChunkUpdated: structureChunkCopy,
-    };
-
-    resArr.push(resObj);
   }
 };

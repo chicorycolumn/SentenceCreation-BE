@@ -13,14 +13,7 @@ exports.explodeCounterfaxSituations = (sits) => {
   let chunkIds = sits.headsFirstSequenceChunkIds;
   let resArray = [];
 
-  chunkIds.forEach((chunkId) => {
-    resArray = [];
-    let traitKeys = Object.keys(sits[chunkId]);
-    explodeWithinOneChunkId(sits[chunkId], traitKeys);
-    explodedWithinEachChunk[chunkId] = uUtils.copyWithoutReference(resArray);
-  });
-
-  function explodeWithinOneChunkId(sitsOfOneChunkId, traitKeys) {
+  const _explodeWithinOneChunkId = (sitsOfOneChunkId, traitKeys) => {
     if (!traitKeys.length) {
       resArray.push(sentence.slice(0));
       sentence.pop();
@@ -30,10 +23,17 @@ exports.explodeCounterfaxSituations = (sits) => {
     let sitArr = sitsOfOneChunkId[currentTraitKey];
     sitArr.forEach((sit) => {
       sentence.push(sit);
-      explodeWithinOneChunkId(sitsOfOneChunkId, traitKeys.slice(1));
+      _explodeWithinOneChunkId(sitsOfOneChunkId, traitKeys.slice(1));
     });
     sentence.pop();
-  }
+  };
+
+  chunkIds.forEach((chunkId) => {
+    resArray = [];
+    let traitKeys = Object.keys(sits[chunkId]);
+    _explodeWithinOneChunkId(sits[chunkId], traitKeys);
+    explodedWithinEachChunk[chunkId] = uUtils.copyWithoutReference(resArray);
+  });
 
   let explodedBetweenChunks = [];
 
@@ -42,9 +42,7 @@ exports.explodeCounterfaxSituations = (sits) => {
     sentence[chunkId] = [];
   });
 
-  explodeBetweenChunks(explodedWithinEachChunk, chunkIds);
-
-  function explodeBetweenChunks(obj, chunkIds) {
+  const _explodeBetweenChunks = (obj, chunkIds) => {
     if (!chunkIds.length) {
       explodedBetweenChunks.push(uUtils.copyWithoutReference(sentence));
 
@@ -60,12 +58,14 @@ exports.explodeCounterfaxSituations = (sits) => {
         sentence.chunkIds.push(currentChunkId);
       }
 
-      explodeBetweenChunks(obj, chunkIds.slice(1));
+      _explodeBetweenChunks(obj, chunkIds.slice(1));
     });
 
     delete sentence[sentence.chunkIds[sentence.chunkIds.length - 1]];
     sentence.chunkIds.pop();
-  }
+  };
+
+  _explodeBetweenChunks(explodedWithinEachChunk, chunkIds);
 
   explodedBetweenChunks.cfLabels = [];
   explodedBetweenChunks.forEach((sit) => {
@@ -185,7 +185,7 @@ exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
           questionOutputUnit.structureChunk.annotations[annoTraitKey];
 
         //Adding original.
-        addFaxSituation2(
+        cfUtils.addFaxSituation2(
           counterfaxSituations,
           questionOutputUnit.structureChunk.chunkId,
           annoTraitKey,
@@ -227,46 +227,6 @@ exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
           counterfactualTraitValuesForThisTraitKey
         );
 
-        function addFaxSituation2(
-          counterfaxSituations,
-          structureChunkId,
-          traitKey,
-          traitValue
-        ) {
-          let newCounterfaxSituation = {
-            traitKey: traitKey,
-            traitValue: traitValue,
-          };
-
-          if (
-            counterfaxSituations.headsFirstSequenceChunkIds.includes(
-              structureChunkId
-            )
-          ) {
-            if (
-              Object.keys(counterfaxSituations[structureChunkId]).includes(
-                traitKey
-              )
-            ) {
-              counterfaxSituations[structureChunkId][traitKey].push(
-                newCounterfaxSituation
-              );
-            } else {
-              counterfaxSituations[structureChunkId][traitKey] = [
-                newCounterfaxSituation,
-              ];
-            }
-          } else {
-            counterfaxSituations.headsFirstSequenceChunkIds.push(
-              structureChunkId
-            );
-            counterfaxSituations[structureChunkId] = {};
-            counterfaxSituations[structureChunkId][traitKey] = [
-              newCounterfaxSituation,
-            ];
-          }
-        }
-
         annotationsToCounterfaxAndTheirChunkIds.push({
           chunkId: questionOutputUnit.structureChunk.chunkId,
           annoTraitKey,
@@ -275,7 +235,7 @@ exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
 
         counterfactualTraitValuesForThisTraitKey.forEach(
           (counterfactualTraitValueForThisTraitKey) => {
-            addFaxSituation2(
+            cfUtils.addFaxSituation2(
               counterfaxSituations,
               questionOutputUnit.structureChunk.chunkId,
               annoTraitKey,
@@ -288,6 +248,38 @@ exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
   });
 
   return { counterfaxSituations, annotationsToCounterfaxAndTheirChunkIds };
+};
+
+exports.addFaxSituation2 = (
+  counterfaxSituations,
+  structureChunkId,
+  traitKey,
+  traitValue
+) => {
+  let newCounterfaxSituation = {
+    traitKey: traitKey,
+    traitValue: traitValue,
+  };
+
+  if (
+    counterfaxSituations.headsFirstSequenceChunkIds.includes(structureChunkId)
+  ) {
+    if (
+      Object.keys(counterfaxSituations[structureChunkId]).includes(traitKey)
+    ) {
+      counterfaxSituations[structureChunkId][traitKey].push(
+        newCounterfaxSituation
+      );
+    } else {
+      counterfaxSituations[structureChunkId][traitKey] = [
+        newCounterfaxSituation,
+      ];
+    }
+  } else {
+    counterfaxSituations.headsFirstSequenceChunkIds.push(structureChunkId);
+    counterfaxSituations[structureChunkId] = {};
+    counterfaxSituations[structureChunkId][traitKey] = [newCounterfaxSituation];
+  }
 };
 
 exports.removeAnnotationsByCounterfactualAnswerSentences = (
@@ -482,33 +474,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         //Okay, if questionLang is POL, and number: singular, and gender is a masculine one,
         //then change gender to just "m".
         //But you will have to do this to original, too, which you don't deal with right here.
-        collapseMasculineGenders(questionLanguage, stChToCounterfax);
-
-        function collapseMasculineGenders(questionLanguage, stChToCounterfax) {
-          if (["POL"].includes(questionLanguage)) {
-            if (
-              stChToCounterfax.number &&
-              stChToCounterfax.number.length !== 1
-            ) {
-              consol.throw("nbii");
-            }
-            if (
-              stChToCounterfax.gender &&
-              stChToCounterfax.gender.length !== 1
-            ) {
-              consol.throw("nbij");
-            }
-
-            if (
-              stChToCounterfax.number &&
-              stChToCounterfax.number[0] === "singular" &&
-              stChToCounterfax.number &&
-              ["m1", "m2", "m3"].includes(stChToCounterfax.gender[0])
-            ) {
-              stChToCounterfax.gender = ["m"];
-            }
-          }
-        }
+        cfUtils.collapseMasculineGenders(questionLanguage, stChToCounterfax);
 
         consol.logSpecial(3, "↓");
         consol.logSpecial(3, "gender", stChToCounterfax.gender);
@@ -617,52 +583,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
   if (!allCounterfactualResults.length) {
     consol.throw("THROW: allCounterfactualResults was empty.");
-  }
-
-  function makePseudoSentenceObjs(outputArrObjs, primaryOrders) {
-    //This doesn't do the full processing, ie 'a' --> 'an'
-    //but it does trim the list of selected words according to sentenceFormula.primaryOrders,
-    //ie "On czyta." and "Ona czyta." both become "Czyta.".
-
-    let orderAdjustedOutputArrObjs = [];
-
-    if (!primaryOrders || !primaryOrders.length) {
-      return outputArrObjs.map((outputArrObj) => {
-        return {
-          pseudoSentence: outputArrObj.arr.map((unit) => unit.selectedWord),
-          cfLabel: outputArrObj.cfLabel,
-        };
-      });
-    }
-
-    primaryOrders.forEach((primaryOrder) => {
-      outputArrObjs.forEach((outputArrObj) => {
-        let orderAdjustedOutputArrObj = {
-          cfLabel: outputArrObj.cfLabel,
-          arr: [],
-        };
-        primaryOrder.forEach((chunkId) => {
-          let correspondingOutputUnit = outputArrObj.arr.find(
-            (unit) => unit.structureChunk.chunkId === chunkId
-          );
-
-          if (!correspondingOutputUnit) {
-            consol.throw("ocii");
-          }
-
-          orderAdjustedOutputArrObj.arr.push(correspondingOutputUnit);
-        });
-
-        orderAdjustedOutputArrObjs.push(orderAdjustedOutputArrObj);
-      });
-    });
-
-    return orderAdjustedOutputArrObjs.map((outputArrObj) => {
-      return {
-        pseudoSentence: outputArrObj.arr.map((unit) => unit.selectedWord),
-        cfLabel: outputArrObj.cfLabel,
-      };
-    });
   }
 
   function findCFResultsWhenAllOtherThingsBeingEqual(
@@ -933,22 +853,23 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       );
     });
 
-    let originalAnswerPseudoSentenceObjs = makePseudoSentenceObjs(
+    let originalAnswerPseudoSentenceObjs = cfUtils.makePseudoSentenceObjs(
       originalAnswerOutputArrObjs,
       answerSentenceData.sentenceFormula.primaryOrders
     );
-    let counterfactualAnswerPseudoSentenceObjs = makePseudoSentenceObjs(
+    let counterfactualAnswerPseudoSentenceObjs = cfUtils.makePseudoSentenceObjs(
       counterfactualAnswerOutputArrObjs,
       answerSentenceData.sentenceFormula.primaryOrders
     );
-    let originalQuestionPseudoSentenceObjs = makePseudoSentenceObjs(
+    let originalQuestionPseudoSentenceObjs = cfUtils.makePseudoSentenceObjs(
       originalQuestionOutputArrObjs,
       counterfaxedSentenceFormula.primaryOrders
     );
-    let counterfactualQuestionPseudoSentenceObjs = makePseudoSentenceObjs(
-      counterfactualQuestionOutputArrObjs,
-      counterfaxedSentenceFormula.primaryOrders
-    );
+    let counterfactualQuestionPseudoSentenceObjs =
+      cfUtils.makePseudoSentenceObjs(
+        counterfactualQuestionOutputArrObjs,
+        counterfaxedSentenceFormula.primaryOrders
+      );
 
     return {
       originalAnswerPseudoSentenceObjs,
@@ -1133,6 +1054,72 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       }
     }
   );
+};
+
+exports.makePseudoSentenceObjs = (outputArrObjs, primaryOrders) => {
+  //This doesn't do the full processing, ie 'a' --> 'an'
+  //but it does trim the list of selected words according to sentenceFormula.primaryOrders,
+  //ie "On czyta." and "Ona czyta." both become "Czyta.".
+
+  let orderAdjustedOutputArrObjs = [];
+
+  if (!primaryOrders || !primaryOrders.length) {
+    return outputArrObjs.map((outputArrObj) => {
+      return {
+        pseudoSentence: outputArrObj.arr.map((unit) => unit.selectedWord),
+        cfLabel: outputArrObj.cfLabel,
+      };
+    });
+  }
+
+  primaryOrders.forEach((primaryOrder) => {
+    outputArrObjs.forEach((outputArrObj) => {
+      let orderAdjustedOutputArrObj = {
+        cfLabel: outputArrObj.cfLabel,
+        arr: [],
+      };
+      primaryOrder.forEach((chunkId) => {
+        let correspondingOutputUnit = outputArrObj.arr.find(
+          (unit) => unit.structureChunk.chunkId === chunkId
+        );
+
+        if (!correspondingOutputUnit) {
+          consol.throw("ocii");
+        }
+
+        orderAdjustedOutputArrObj.arr.push(correspondingOutputUnit);
+      });
+
+      orderAdjustedOutputArrObjs.push(orderAdjustedOutputArrObj);
+    });
+  });
+
+  return orderAdjustedOutputArrObjs.map((outputArrObj) => {
+    return {
+      pseudoSentence: outputArrObj.arr.map((unit) => unit.selectedWord),
+      cfLabel: outputArrObj.cfLabel,
+    };
+  });
+};
+
+exports.collapseMasculineGenders = (questionLanguage, stChToCounterfax) => {
+  if (["POL"].includes(questionLanguage)) {
+    if (stChToCounterfax.number && stChToCounterfax.number.length !== 1) {
+      consol.throw("nbii");
+    }
+    if (stChToCounterfax.gender && stChToCounterfax.gender.length !== 1) {
+      consol.throw("nbij");
+    }
+
+    if (
+      stChToCounterfax.number &&
+      stChToCounterfax.number[0] === "singular" &&
+      stChToCounterfax.number &&
+      ["m1", "m2", "m3"].includes(stChToCounterfax.gender[0])
+    ) {
+      stChToCounterfax.gender = ["m"];
+    }
+  }
 };
 
 exports.agglomerateAndRemoveAnnosIfSameResults = (

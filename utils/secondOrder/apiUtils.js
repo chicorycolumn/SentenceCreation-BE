@@ -234,7 +234,7 @@ exports.getLObjsForLemma = (lang, lemma) => {
     wordSet.forEach((lObj) => {
       if (
         lObj.lemma === lemma ||
-        uUtils.isThisValueInThisKeyValueObject(lObj.inflections, lemma)
+        uUtils.valueInObject(lObj.inflections, lemma)
       ) {
         matches.push(lObj);
       }

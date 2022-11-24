@@ -1163,7 +1163,7 @@ exports.conformAnswerStructureToQuestionStructure = (
 
     //Do actually transfer gender, for person nouns.
     if (gpUtils.stChIsNounPerson(questionStructureChunk)) {
-      addTraitToAnswerChunkWithAdjustment(
+      scUtils.addTraitToAnswerChunkWithAdjustment(
         questionStructureChunk,
         answerStructureChunk,
         "gender",
@@ -1268,7 +1268,7 @@ exports.conformAnswerStructureToQuestionStructure = (
         return;
       }
 
-      addTraitToAnswerChunkWithAdjustment(
+      scUtils.addTraitToAnswerChunkWithAdjustment(
         questionStructureChunk,
         answerStructureChunk,
         traitKey,
@@ -1286,29 +1286,6 @@ exports.conformAnswerStructureToQuestionStructure = (
         questionStructureChunk[traitKey] = nonhiddenTraitValue;
       }
     });
-
-    function addTraitToAnswerChunkWithAdjustment(
-      questionStructureChunk,
-      answerStructureChunk,
-      traitKey,
-      questionLanguage,
-      answerLanguage
-    ) {
-      let adjustedArr = [];
-
-      questionStructureChunk[traitKey].forEach((traitValue) => {
-        let adjustedTraitValues = refFxn.giveAdjustedTraitValue(
-          questionLanguage,
-          answerLanguage,
-          traitKey,
-          traitValue
-        );
-
-        adjustedArr = [...adjustedArr, ...adjustedTraitValues];
-      });
-
-      answerStructureChunk[traitKey] = adjustedArr;
-    }
 
     //
     //PART TWO: Blinding
@@ -1359,6 +1336,29 @@ exports.conformAnswerStructureToQuestionStructure = (
   if (shouldConsoleLog) {
     consol.log("[1;35m " + "/conformAnswerStructureToQuestionStructure" + "[0m");
   }
+};
+
+exports.addTraitToAnswerChunkWithAdjustment = (
+  questionStructureChunk,
+  answerStructureChunk,
+  traitKey,
+  questionLanguage,
+  answerLanguage
+) => {
+  let adjustedArr = [];
+
+  questionStructureChunk[traitKey].forEach((traitValue) => {
+    let adjustedTraitValues = refFxn.giveAdjustedTraitValue(
+      questionLanguage,
+      answerLanguage,
+      traitKey,
+      traitValue
+    );
+
+    adjustedArr = [...adjustedArr, ...adjustedTraitValues];
+  });
+
+  answerStructureChunk[traitKey] = adjustedArr;
 };
 
 exports.removeDuplicatesFromResponseObject = (respObj) => {

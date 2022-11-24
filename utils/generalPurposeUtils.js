@@ -98,11 +98,7 @@ exports.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual
     //
     // ];
 
-    return (
-      findMatchingSubArr(array1, array2) && findMatchingSubArr(array2, array1)
-    );
-
-    function findMatchingSubArr(arrayA, arrayB) {
+    const _findMatchingSubArr = (arrayA, arrayB) => {
       return arrayA.every((subArrFromA) => {
         let matchingSubArrFromB = arrayB.find((subArrFromB) => {
           if (subArrFromA.length !== subArrFromB.length) {
@@ -128,7 +124,11 @@ exports.areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual
 
         return matchingSubArrFromB;
       });
-    }
+    };
+
+    return (
+      _findMatchingSubArr(array1, array2) && _findMatchingSubArr(array2, array1)
+    );
   };
 
 exports.updateSentenceStructureWithNewStructureChunksFromOutputUnits = (

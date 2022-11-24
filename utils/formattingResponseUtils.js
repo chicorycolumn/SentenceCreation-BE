@@ -129,6 +129,45 @@ exports.createOutputUnit = (
   return resultingOutputUnit;
 };
 
+exports.addAnnotationsAndPush = (
+  wordInOwnArr,
+  selectedWordsArr,
+  annoObj,
+  structureChunk
+) => {
+  consol.log(`vprr addAnnotationsAndPush "${wordInOwnArr}"`);
+  if (annoObj && Object.values(annoObj).length) {
+    if (wordInOwnArr.length !== 1) {
+      consol.throw(
+        `vpra #ERR addAnnotationsAndPush. To add annotation from [${Object.values(
+          annoObj
+        )}] but there are multiple/none selected words: [${wordInOwnArr}].`
+      );
+    }
+
+    consol.log("vpre addAnnotationsAndPush. annoObj is " + annoObj);
+
+    if (structureChunk.educatorBlocksAnnotationsForTheseTraitKeys) {
+      consol.log(
+        `vpri addAnnotationsAndPush will not add clarifiers [${Object.values(
+          annoObj
+        )}] as "educatorBlocksAnnotationsForTheseTraitKeys" true.`
+      );
+    } else {
+      consol.log(
+        "vpro pushSelectedWordToArray addAnnotationsAndPush. Adding these annotations:" +
+          Object.values(annoObj).join(", ")
+      );
+
+      wordInOwnArr[0] += ` (${Object.values(annoObj).join(", ")})`;
+    }
+  } else {
+    consol.log("vpru addAnnotationsAndPush. No annoObj");
+  }
+
+  selectedWordsArr.push(wordInOwnArr);
+};
+
 exports.pushSelectedWordToArray = (
   pushKey,
   selectedWord,
@@ -146,51 +185,12 @@ exports.pushSelectedWordToArray = (
     }
   );
 
-  function addAnnotationsAndPush(
-    wordInOwnArr,
-    selectedWordsArr,
-    annoObj,
-    structureChunk
-  ) {
-    consol.log(`vprr addAnnotationsAndPush "${wordInOwnArr}"`);
-    if (annoObj && Object.values(annoObj).length) {
-      if (wordInOwnArr.length !== 1) {
-        consol.throw(
-          `vpra #ERR addAnnotationsAndPush. To add annotation from [${Object.values(
-            annoObj
-          )}] but there are multiple/none selected words: [${wordInOwnArr}].`
-        );
-      }
-
-      consol.log("vpre addAnnotationsAndPush. annoObj is " + annoObj);
-
-      if (structureChunk.educatorBlocksAnnotationsForTheseTraitKeys) {
-        consol.log(
-          `vpri addAnnotationsAndPush will not add clarifiers [${Object.values(
-            annoObj
-          )}] as "educatorBlocksAnnotationsForTheseTraitKeys" true.`
-        );
-      } else {
-        consol.log(
-          "vpro pushSelectedWordToArray addAnnotationsAndPush. Adding these annotations:" +
-            Object.values(annoObj).join(", ")
-        );
-
-        wordInOwnArr[0] += ` (${Object.values(annoObj).join(", ")})`;
-      }
-    } else {
-      consol.log("vpru addAnnotationsAndPush. No annoObj");
-    }
-
-    selectedWordsArr.push(wordInOwnArr);
-  }
-
   if (pushKey === "string") {
     consol.log(
       "[1;30m " + `uufy pushSelectedWordToArray Pushing "${selectedWord}"` + "[0m"
     );
 
-    addAnnotationsAndPush(
+    frUtils.addAnnotationsAndPush(
       [selectedWord],
       selectedWordsArr,
       annoObj,
@@ -203,7 +203,7 @@ exports.pushSelectedWordToArray = (
     consol.log(
       "[1;30m " + `uufy pushSelectedWordToArray Pushing "${selectedWord}"` + "[0m"
     );
-    addAnnotationsAndPush(
+    frUtils.addAnnotationsAndPush(
       selectedWord,
       selectedWordsArr,
       annoObj,
@@ -233,7 +233,7 @@ exports.pushSelectedWordToArray = (
   consol.log(
     "[1;30m " + `oqij selectWordVersions Pushing arr "${selectedWord[pushKey]}"` + "[0m"
   );
-  addAnnotationsAndPush(
+  frUtils.addAnnotationsAndPush(
     selectedWord[pushKey],
     selectedWordsArr,
     annoObj,

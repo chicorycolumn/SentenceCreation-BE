@@ -367,10 +367,10 @@ xdescribe("checkLemmaObjectIds", () => {
       duplicateIds: ["eng-nco-902", "eng-adj-901"],
     };
 
-    function _order(obj) {
+    const _order = (obj) => {
       obj.schematic = obj.schematic.sort((x, y) => x[0].localeCompare(y[0]));
       obj.duplicateIds = obj.duplicateIds.sort((x, y) => x.localeCompare(y));
-    }
+    };
 
     _order(actual);
     _order(expected);

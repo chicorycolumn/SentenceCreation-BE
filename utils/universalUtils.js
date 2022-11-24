@@ -148,16 +148,7 @@ exports.findKeysInObjectAndExecuteCallback = (obj, soughtKey, callback) => {
 };
 
 exports.copyWithoutReference = (source) => {
-  if (typeof source !== "object" || source === null) {
-    return source;
-  }
-  if (Array.isArray(source)) {
-    return recursivelyCopyObject(source, []);
-  } else {
-    return recursivelyCopyObject(source, {});
-  }
-
-  function recursivelyCopyObject(input, targ) {
+  const _recursivelyCopyObject = (input, targ) => {
     Object.keys(input).forEach((key) => {
       let item = input[key];
 
@@ -166,16 +157,26 @@ exports.copyWithoutReference = (source) => {
         return;
       } else if (Array.isArray(item)) {
         targ[key] = [];
-        recursivelyCopyObject(item, targ[key]);
+        _recursivelyCopyObject(item, targ[key]);
         return;
       } else {
         targ[key] = {};
-        recursivelyCopyObject(item, targ[key]);
+        _recursivelyCopyObject(item, targ[key]);
         return;
       }
     });
     return targ;
+  };
+
+  if (typeof source !== "object" || source === null) {
+    return source;
   }
+
+  if (Array.isArray(source)) {
+    return _recursivelyCopyObject(source, []);
+  }
+
+  return _recursivelyCopyObject(source, {});
 };
 
 exports.copyValueOfKey = (
@@ -212,25 +213,25 @@ exports.arrayExploder = (superArray) => {
 
   let result = [];
 
-  arrayExploderRecursion(superArray, result, []);
-
-  return result;
-
-  function arrayExploderRecursion(src, res, miniRes) {
+  const _arrayExploderRecursion = (src, res, miniRes) => {
     let arr = src[0];
 
     arr.forEach((item, itemIndex) => {
       miniRes.push(item);
 
       if (src.length > 1) {
-        arrayExploderRecursion(src.slice(1), res, miniRes);
+        _arrayExploderRecursion(src.slice(1), res, miniRes);
       } else {
         res.push(miniRes.slice(0));
         miniRes.pop();
       }
     });
     miniRes.pop();
-  }
+  };
+
+  _arrayExploderRecursion(superArray, result, []);
+
+  return result;
 };
 
 exports.doesArrContainDifferentItems = (arr) => {
@@ -309,12 +310,10 @@ exports.returnArrayWithItemAtIndexRemoved = (arr, indexToRemove) => {
   return [...arr.slice(0, indexToRemove), ...arr.slice(indexToRemove + 1)];
 };
 
-exports.isThisValueInThisKeyValueObject = (obj, soughtValue) => {
+exports.valueInObject = (obj, soughtValue) => {
   let res = { found: false };
-  inner(obj, soughtValue, res);
-  return res.found;
 
-  function inner(obj, soughtValue, res) {
+  const _vioInner = (obj, soughtValue, res) => {
     if (res.found) {
       return true;
     }
@@ -326,12 +325,16 @@ exports.isThisValueInThisKeyValueObject = (obj, soughtValue) => {
       return;
     }
     Object.values(obj).forEach((value) => {
-      if (inner(value, soughtValue, res)) {
+      if (_vioInner(value, soughtValue, res)) {
         res.found = true;
         return;
       }
     });
-  }
+  };
+
+  _vioInner(obj, soughtValue, res);
+
+  return res.found;
 };
 
 exports.isThisObjectInThisArrayOfObjects = (obj, arr) => {
