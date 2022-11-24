@@ -12,17 +12,10 @@ exports.getErrors = (responseObj) => {
     "answerMessage",
   ];
 
-  function addAsArr(obj, key, val) {
-    if (!obj[key]) {
-      obj[key] = [];
-    }
-    obj[key].push(val);
-  }
-
   errorKeys.forEach((errorKey) => {
     if (responseObj[errorKey]) {
       if (typeof responseObj[errorKey] === "string") {
-        addAsArr(errors, errorKey, responseObj[errorKey]);
+        uUtils.addToArrayAtKey(errors, errorKey, responseObj[errorKey]);
       } else if (
         Array.isArray(responseObj[errorKey]) ||
         uUtils.isKeyValueTypeObject(responseObj[errorKey])
@@ -30,22 +23,26 @@ exports.getErrors = (responseObj) => {
         Object.keys(responseObj[errorKey]).forEach((subkey) => {
           let value = responseObj[errorKey][subkey];
           if (typeof value === "string") {
-            addAsArr(errors, `${errorKey}-${subkey}`, value);
+            uUtils.addToArrayAtKey(errors, `${errorKey}-${subkey}`, value);
             errorsArr.push(value);
           } else if (Array.isArray(value)) {
-            addAsArr(errors, `${errorKey}-${subkey}`, subvalue);
+            uUtils.addToArrayAtKey(errors, `${errorKey}-${subkey}`, subvalue);
           } else if (uUtils.isKeyValueTypeObject(value)) {
             Object.keys(value).forEach((subsubkey) => {
               let subsubvalue = value[subsubkey];
               if (typeof subsubvalue === "string") {
-                addAsArr(
+                uUtils.addToArrayAtKey(
                   errors,
                   `${errorKey}-${subkey}-${subsubkey}`,
                   subsubvalue
                 );
               } else if (Array.isArray(subsubvalue)) {
                 subsubvalue.forEach((v) => {
-                  addAsArr(errors, `${errorKey}-${subkey}-${subsubkey}`, v);
+                  uUtils.addToArrayAtKey(
+                    errors,
+                    `${errorKey}-${subkey}-${subsubkey}`,
+                    v
+                  );
                 });
               }
             });

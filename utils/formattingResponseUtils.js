@@ -1,4 +1,5 @@
 const frUtils = require("./formattingResponseUtils.js");
+const scUtils = require("./sentenceCreatingUtils.js");
 const uUtils = require("./universalUtils.js");
 const consol = require("./zerothOrder/consoleLoggingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
@@ -68,6 +69,21 @@ exports.finishAndSend = (
   return Promise.all([combinedResponseObj]).then((array) => {
     return array[0];
   });
+};
+
+exports.returnNullQuestionResponseObj = (
+  questionSentenceData,
+  multipleMode,
+  questionLanguage,
+  answerLanguage
+) => {
+  let nullQuestionResponseObj = scUtils.giveFinalSentences(
+    questionSentenceData,
+    multipleMode,
+    questionLanguage,
+    answerLanguage
+  );
+  return frUtils.finishAndSend(nullQuestionResponseObj, null);
 };
 
 exports.createOutputUnit = (

@@ -359,43 +359,51 @@ exports.specialAdjustmentToAnnotations = (
   //Part 1-A: If a stCh has a gender anno, and this stCh is a depCh,
   //then transfer the gender anno to its headCh, and remove the anno from this depCh.
   questionSentenceData.questionOutputArr.forEach((outputUnit) => {
-    trimAnnoIfGenderRevealedByGenderedNoun(outputUnit, languagesObj);
+    aaUtils.trimAnnoIfGenderRevealedByGenderedNoun(
+      outputUnit,
+      questionSentenceData,
+      languagesObj
+    );
   });
+};
 
-  function trimAnnoIfGenderRevealedByGenderedNoun(outputUnit, languagesObj) {
-    let { structureChunk } = outputUnit;
+exports.trimAnnoIfGenderRevealedByGenderedNoun = (
+  outputUnit,
+  questionSentenceData,
+  languagesObj
+) => {
+  let { structureChunk } = outputUnit;
+
+  if (
+    structureChunk.annotations &&
+    Object.keys(structureChunk.annotations).includes("gender") &&
+    structureChunk.agreeWith
+  ) {
+    let headOutputUnit = questionSentenceData.questionOutputArr.find(
+      (unit) => unit.structureChunk.chunkId === structureChunk.agreeWith
+    );
+
+    let headChunk = headOutputUnit.structureChunk;
+    let headLObj = headOutputUnit.selectedLemmaObject;
+
+    if (!headChunk) {
+      consol.throw("ojiq");
+    }
 
     if (
-      structureChunk.annotations &&
-      Object.keys(structureChunk.annotations).includes("gender") &&
-      structureChunk.agreeWith
+      headChunk.annotations &&
+      headChunk.annotations.gender &&
+      headChunk.annotations.gender !== structureChunk.annotations.gender
     ) {
-      let headOutputUnit = questionSentenceData.questionOutputArr.find(
-        (unit) => unit.structureChunk.chunkId === structureChunk.agreeWith
+      consol.throw(
+        "cjow The depCh and its headCh have different annoTraitValues for gender?"
       );
-
-      let headChunk = headOutputUnit.structureChunk;
-      let headLObj = headOutputUnit.selectedLemmaObject;
-
-      if (!headChunk) {
-        consol.throw("ojiq");
-      }
-
-      if (
-        headChunk.annotations &&
-        headChunk.annotations.gender &&
-        headChunk.annotations.gender !== structureChunk.annotations.gender
-      ) {
-        consol.throw(
-          "cjow The depCh and its headCh have different annoTraitValues for gender?"
-        );
-      }
-
-      if (!(headLObj.gender && !gpUtils.traitValueIsMeta(headLObj.gender))) {
-        headChunk.annotations.gender = structureChunk.annotations.gender;
-      }
-      delete structureChunk.annotations.gender;
     }
+
+    if (!(headLObj.gender && !gpUtils.traitValueIsMeta(headLObj.gender))) {
+      headChunk.annotations.gender = structureChunk.annotations.gender;
+    }
+    delete structureChunk.annotations.gender;
   }
 };
 

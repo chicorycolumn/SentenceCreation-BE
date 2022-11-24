@@ -83,21 +83,6 @@ exports.fetchPalette = (req) => {
 
   consol.log("smdv questionSentenceData", questionSentenceData);
 
-  function returnNullQuestionResponseObj(
-    questionSentenceData,
-    multipleMode,
-    questionLanguage,
-    answerLanguage
-  ) {
-    let nullQuestionResponseObj = scUtils.giveFinalSentences(
-      questionSentenceData,
-      multipleMode,
-      questionLanguage,
-      answerLanguage
-    );
-    return frUtils.finishAndSend(nullQuestionResponseObj, null);
-  }
-
   if (
     !questionSentenceData ||
     !questionSentenceData.arrayOfOutputArrays ||
@@ -112,7 +97,7 @@ exports.fetchPalette = (req) => {
     if (allCounterfactualResults) {
       return;
     } else {
-      return returnNullQuestionResponseObj(
+      return frUtils.returnNullQuestionResponseObj(
         questionSentenceData,
         multipleMode,
         questionLanguage,

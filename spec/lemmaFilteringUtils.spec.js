@@ -307,25 +307,6 @@ xdescribe("traverseAndRecordInflections", () => {
     ],
   };
 
-  function consoleLogOutputUnitsWithDrillPaths(
-    number,
-    outputUnitsWithDrillPaths
-  ) {
-    outputUnitsWithDrillPaths.forEach((outputUnitsWithDrillPathsUnit) => {
-      consol.log(">>>", number);
-      consol.log(
-        "outputUnitsWithDrillPathsUnit selectedWordArray:",
-        outputUnitsWithDrillPathsUnit.selectedWordArray
-      );
-      consol.log(
-        "outputUnitsWithDrillPathsUnit drillPath:",
-        outputUnitsWithDrillPathsUnit.drillPath
-      );
-      consol.log(" ");
-      consol.log(" ");
-    });
-  }
-
   it("#lfu1.1a YES: Returns drills successfully (RDS) from set of single requirements.", () => {
     let outputUnitsWithDrillPaths = [];
     let reqArrNo = "08";
@@ -335,7 +316,7 @@ xdescribe("traverseAndRecordInflections", () => {
       outputUnitsWithDrillPaths
     );
     if (shouldConsoleLog) {
-      consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+      consol.logOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
     }
 
     expect(outputUnitsWithDrillPaths.length).to.equal(1);
@@ -359,7 +340,7 @@ xdescribe("traverseAndRecordInflections", () => {
       outputUnitsWithDrillPaths
     );
     if (shouldConsoleLog) {
-      consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+      consol.logOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
     }
 
     expect(outputUnitsWithDrillPaths.length).to.equal(2);
@@ -396,7 +377,7 @@ xdescribe("traverseAndRecordInflections", () => {
       outputUnitsWithDrillPaths
     );
     if (shouldConsoleLog) {
-      consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+      consol.logOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
     }
 
     expect(outputUnitsWithDrillPaths.length).to.equal(2);
@@ -433,7 +414,7 @@ xdescribe("traverseAndRecordInflections", () => {
       outputUnitsWithDrillPaths
     );
     if (shouldConsoleLog) {
-      consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+      consol.logOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
     }
 
     expect(outputUnitsWithDrillPaths.length).to.equal(2);
@@ -470,7 +451,7 @@ xdescribe("traverseAndRecordInflections", () => {
       outputUnitsWithDrillPaths
     );
     if (shouldConsoleLog) {
-      consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+      consol.logOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
     }
 
     expect(outputUnitsWithDrillPaths.length).to.equal(5);
@@ -537,7 +518,7 @@ xdescribe("traverseAndRecordInflections", () => {
       outputUnitsWithDrillPaths
     );
     if (shouldConsoleLog) {
-      consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+      consol.logOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
     }
 
     expect(outputUnitsWithDrillPaths.length).to.equal(6);
@@ -614,7 +595,7 @@ xdescribe("traverseAndRecordInflections", () => {
       outputUnitsWithDrillPaths
     );
     if (shouldConsoleLog) {
-      consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+      consol.logOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
     }
 
     expect(outputUnitsWithDrillPaths.length).to.equal(9);
@@ -722,7 +703,7 @@ xdescribe("traverseAndRecordInflections", () => {
     );
 
     if (shouldConsoleLog) {
-      consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+      consol.logOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
     }
 
     expect(outputUnitsWithDrillPaths.length).to.equal(1);
@@ -750,7 +731,7 @@ xdescribe("traverseAndRecordInflections", () => {
     );
 
     if (shouldConsoleLog) {
-      consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+      consol.logOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
     }
 
     expect(outputUnitsWithDrillPaths.length).to.equal(2);
@@ -788,7 +769,7 @@ xdescribe("traverseAndRecordInflections", () => {
     );
 
     if (shouldConsoleLog) {
-      consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+      consol.logOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
     }
 
     expect(outputUnitsWithDrillPaths.length).to.equal(4);
@@ -846,7 +827,7 @@ xdescribe("traverseAndRecordInflections", () => {
     );
 
     if (shouldConsoleLog) {
-      consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+      consol.logOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
     }
 
     expect(outputUnitsWithDrillPaths.length).to.equal(1);
@@ -874,7 +855,7 @@ xdescribe("traverseAndRecordInflections", () => {
     );
 
     if (shouldConsoleLog) {
-      consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+      consol.logOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
     }
 
     expect(outputUnitsWithDrillPaths.length).to.equal(1);
@@ -902,7 +883,7 @@ xdescribe("traverseAndRecordInflections", () => {
     );
 
     if (shouldConsoleLog) {
-      consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+      consol.logOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
     }
 
     expect(outputUnitsWithDrillPaths.length).to.equal(1);
@@ -930,7 +911,7 @@ xdescribe("traverseAndRecordInflections", () => {
     );
 
     if (shouldConsoleLog) {
-      consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+      consol.logOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
     }
 
     expect(outputUnitsWithDrillPaths.length).to.equal(1);
@@ -958,7 +939,7 @@ xdescribe("traverseAndRecordInflections", () => {
     );
 
     if (shouldConsoleLog) {
-      consoleLogOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
+      consol.logOutputUnitsWithDrillPaths(reqArrNo, outputUnitsWithDrillPaths);
     }
 
     expect(outputUnitsWithDrillPaths.length).to.equal(2);

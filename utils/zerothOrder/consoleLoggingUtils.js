@@ -182,3 +182,19 @@ exports.throw = (msg = "Cease.") => {
   consol.log("[1;31m " + "!   !   !   !   !   !   !   !   !   !" + "[0m");
   throw msg;
 };
+
+exports.logOutputUnitsWithDrillPaths = (number, outputUnitsWithDrillPaths) => {
+  outputUnitsWithDrillPaths.forEach((outputUnitsWithDrillPathsUnit) => {
+    consol.log(">>>", number);
+    consol.log(
+      "outputUnitsWithDrillPathsUnit selectedWordArray:",
+      outputUnitsWithDrillPathsUnit.selectedWordArray
+    );
+    consol.log(
+      "outputUnitsWithDrillPathsUnit drillPath:",
+      outputUnitsWithDrillPathsUnit.drillPath
+    );
+    consol.log(" ");
+    consol.log(" ");
+  });
+};

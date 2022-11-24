@@ -8,6 +8,14 @@ const refObj = require("../../../utils/reference/referenceObjects.js");
 const refFxn = require("../../../utils/reference/referenceFunctions.js");
 const allLangUtils = require("../../../utils/allLangUtils.js");
 
+const _isAvailable = (value) => {
+  //If true, fill it out.
+  //If false, don't fill it out.
+  //If any truthy item (which isn't bool true), don't fill it out.
+  //If undefined (ie not filled out), then don't fill it out.
+  return value === true;
+};
+
 exports.balanceGenders = (structureChunk) => {
   if (structureChunk.gender) {
     if (
@@ -306,7 +314,7 @@ exports.fillVerbInflections = (lemmaObject) => {
     //This is indeed nec to include the impOnly pf lObjs, as im and pf lobjs go through slightly different process here below,
     //and for these purposes, we still need to think of the pf clones of impOnly lobjs as being im, not pf.
   ) {
-    if (isAvailable(inflections.verbal.future)) {
+    if (_isAvailable(inflections.verbal.future)) {
       inflections.verbal.future = {
         impersonal: {
           singular: {
@@ -388,7 +396,7 @@ exports.fillVerbInflections = (lemmaObject) => {
         },
       };
     }
-    if (isAvailable(inflections.verbal.present.impersonal.singular)) {
+    if (_isAvailable(inflections.verbal.present.impersonal.singular)) {
       inflections.verbal.present.impersonal.singular = {
         _SingularGenders:
           inflections.verbal.present["3per"].singular._SingularGenders +
@@ -396,7 +404,7 @@ exports.fillVerbInflections = (lemmaObject) => {
           "się",
       };
     }
-    if (isAvailable(inflections.verbal.present.impersonal.plural)) {
+    if (_isAvailable(inflections.verbal.present.impersonal.plural)) {
       inflections.verbal.present.impersonal.plural = {
         _PluralGenders:
           inflections.verbal.present["3per"].singular._SingularGenders + //Yes, this is meant to use Singular.
@@ -405,7 +413,7 @@ exports.fillVerbInflections = (lemmaObject) => {
       };
     }
   } else if (aspect === "perfective") {
-    if (isAvailable(inflections.verbal.future.impersonal.singular)) {
+    if (_isAvailable(inflections.verbal.future.impersonal.singular)) {
       inflections.verbal.future.impersonal.singular = {
         _SingularGenders:
           inflections.verbal.future["3per"].singular._SingularGenders +
@@ -413,7 +421,7 @@ exports.fillVerbInflections = (lemmaObject) => {
           "się",
       };
     }
-    if (isAvailable(inflections.verbal.future.impersonal.plural)) {
+    if (_isAvailable(inflections.verbal.future.impersonal.plural)) {
       inflections.verbal.future.impersonal.plural = {
         _PluralGenders:
           inflections.verbal.future["3per"].singular._SingularGenders + //Yes, this is meant to use Singular.
@@ -470,7 +478,7 @@ exports.fillVerbInflections = (lemmaObject) => {
     inflections.verbal.imperative = filledOutImperatives;
   }
 
-  if (isAvailable(inflections.verbal.conditional)) {
+  if (_isAvailable(inflections.verbal.conditional)) {
     inflections.verbal.conditional = {
       impersonal: {
         singular: {
@@ -524,14 +532,6 @@ exports.fillVerbInflections = (lemmaObject) => {
   uUtils.findKeysInObjectAndExecuteCallback(inflections, "m", (obj) => {
     uUtils.copyValueOfKey(obj, "m", ["m1", "m2", "m3"], true);
   });
-
-  function isAvailable(value) {
-    //If true, fill it out.
-    //If false, don't fill it out.
-    //If any truthy item (which isn't bool true), don't fill it out.
-    //If undefined (ie not filled out), then don't fill it out.
-    return value === true;
-  }
 };
 
 exports.copyInflectionsFromM1toM2 = (lemmaObject) => {
