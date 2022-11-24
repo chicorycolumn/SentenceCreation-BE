@@ -71,8 +71,8 @@ exports.enforceThirdPersonAgreeWith = (stCh, onlyIfUnpopulated) => {
   }
 };
 
-exports.enforceIsPerson = (stCh) => {
-  if (gpUtils.stChIsPerson(stCh)) {
+exports.enforceIsPerson = (stCh, strict) => {
+  if (gpUtils.stChIsPerson(stCh, strict)) {
     stCh.gender = stCh.gender.filter((genderValue) => genderValue !== "n");
   }
 };

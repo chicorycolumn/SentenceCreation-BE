@@ -175,7 +175,6 @@ exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
       (annoTraitKey) => {
         //ACX2A: Don't bother running counterfactuals for wordtype/emoji/text annotations, as they'll always be needed.
         //ACX2B: Don't bother running counterfactuals for tenseDesc annotations, as they'll take so long, because there are so many alternate inflectionValues, and we can reasonably presume that the tenseDesc anno will be necessary.
-
         if (
           ["wordtype", "emoji", "text", "tenseDescription"].includes(
             annoTraitKey
@@ -212,7 +211,13 @@ exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
             chunkId: questionOutputUnit.structureChunk.chunkId,
             person: questionOutputUnit.structureChunk.person,
           };
-          allLangUtils.enforceIsPerson(tempObj);
+          allLangUtils.enforceIsPerson(
+            tempObj,
+            Object.keys(questionOutputUnit.structureChunk.annotations).includes(
+              "person"
+            ) // If "person" is an annotation (and stCh is pronoun),
+            //then this can be "3per", which would mean we don't want to enforce isPerson ie removing "n" from gender counterfaxes.
+          );
           counterfactualTraitValuesForThisTraitKey = tempObj.gender;
         }
 
