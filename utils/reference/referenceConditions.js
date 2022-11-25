@@ -14,7 +14,7 @@ exports.conditionsToBlockAnnotations = [
     ],
   },
   {
-    questionLangs: ["ENG", "POL"],
+    questionLangs: [], // This means it applies to all langs.
     wordtypes: ["pronombre"],
     annotations: ["gender", "number", "person"],
     lObjConditions: [
@@ -116,6 +116,19 @@ exports.postHocDependentChunkWordtypes = {
       conditions: {
         wordtype: ["pronombre"],
         specificIds: ["pol-pro-POSSESSIVE"],
+      },
+      inflectionChains: {
+        postHocAgreeWithPrimary: ["person", "number", "gender"],
+        postHocAgreeWithSecondary: ["number", "gender", "gcase"],
+      },
+    },
+  ],
+  SPA: [
+    {
+      PHD_type: "SPA possessive pronombre",
+      conditions: {
+        wordtype: ["pronombre"],
+        specificIds: ["spa-pro-POSSESSIVE"],
       },
       inflectionChains: {
         postHocAgreeWithPrimary: ["person", "number", "gender"],

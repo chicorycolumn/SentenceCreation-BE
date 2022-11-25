@@ -147,11 +147,11 @@ const _fetchTenseDescriptionAdhocForms = (
     "present continuous": [be["present"][person][number] + " " + gerund],
     "present perfect": [have["present"][person][number] + " " + v3],
     "future simple": ["will" + " " + infinitive],
-    "future goingto": [
+    "future compound": [
       be["present"][person][number] + " " + "going to" + " " + infinitive,
     ],
     "future continuous": [be.future + " " + gerund],
-    "future goingto continuous": [
+    "future compound continuous": [
       be["present"][person][number] + " " + "going to be" + " " + gerund,
     ],
     "future perfect": [have.future + " " + v3],
@@ -309,6 +309,7 @@ exports.preprocessStructureChunks = (structureChunk) => {
 };
 
 exports.expandLemmaObjects = (matches, stChWordtype, currentLanguage) => {
+  //delta genericise
   allLangUtils.expandLemmaObjects(matches, currentLanguage);
 };
 
@@ -510,7 +511,7 @@ exports.generateAdhocForms = (
 
           if (
             lObj.lemma === "be" &&
-            ["future continuous", "future goingto continuous"].includes(
+            ["future continuous", "future compound continuous"].includes(
               tenseDescription
             )
           ) {

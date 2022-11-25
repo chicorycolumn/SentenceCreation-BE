@@ -2215,4 +2215,28 @@ exports.dummySentenceFormulasBank = [
     primaryOrders: [["adj-1-Red", "npe-1-Brother"]],
     additionalOrders: [],
   },
+  {
+    sentenceFormulaSymbol: "dummy73a",
+    sentenceFormulaId: "ENG-dummy73a",
+    equivalents: {
+      ENG: ["ENG-dummy73a"],
+      POL: ["POL-dummy73a"],
+      SPA: ["SPA-dummy73a"],
+    },
+    sentenceStructure: [
+      {
+        chunkId: "nco-1",
+        specificIds: ["eng-nco-002-onion", "pol-nco-001-bear"],
+        // number: ["singular"],
+        gcase: ["nom"],
+      },
+      {
+        chunkId: "adj-1",
+        agreeWith: "nco-1",
+        specificIds: ["eng-adj-001-red"],
+      },
+    ],
+    primaryOrders: [["adj-1", "nco-1"]],
+    additionalOrders: [],
+  },
 ];

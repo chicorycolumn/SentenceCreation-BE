@@ -934,7 +934,7 @@ describe("/api", function () {
           expect(questionSentenceArr.length).to.equal(1);
           expect(answerSentenceArr.length).to.equal(1);
 
-          let ref = [{ ENG: "Bear (nounCommon).", POL: ["Niedźwiedź."] }];
+          let ref = [{ ENG: "Bear (nounCommon).", POL: ["Nedved."] }];
 
           testingUtils.checkTranslationsOfGivenRef(
             res,
@@ -1021,7 +1021,7 @@ describe("/api", function () {
           expect(questionSentenceArr.length).to.equal(1);
           expect(answerSentenceArr.length).to.equal(1);
 
-          let ref = [{ POL: "Niedźwiedź.", ENG: ["Bear."] }];
+          let ref = [{ POL: "Nedved.", ENG: ["Bear."] }];
 
           testingUtils.checkTranslationsOfGivenRef(
             res,

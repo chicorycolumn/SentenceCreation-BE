@@ -99,7 +99,7 @@ let nco = [
     devHardcoded_translations: { ENG: ["bear"] },
     devHardcoded_tags: ["allohomTesting2", "animal"],
     //selectors
-    lemma: "niedźwiedź",
+    lemma: "nedved",
     id: "pol-nco-914",
     gender: "m2",
     //notes
@@ -107,7 +107,7 @@ let nco = [
     //inflections
     inflections: {
       singular: {
-        nom: "niedźwiedź",
+        nom: "nedved",
         gen: "niedźwiedzia",
         dat: "niedźwiedziowi",
         acc: "niedźwiedzia",

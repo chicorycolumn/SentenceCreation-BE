@@ -317,8 +317,10 @@ exports.removeAnnotationsByRef = (
     }
 
     let conditionsToBlockAnnotations =
-      refObj.conditionsToBlockAnnotations.filter((cond) =>
-        cond.questionLangs.includes(languagesObj.questionLanguage)
+      refObj.conditionsToBlockAnnotations.filter(
+        (cond) =>
+          !cond.questionLangs.length ||
+          cond.questionLangs.includes(languagesObj.questionLanguage)
       );
 
     conditionsToBlockAnnotations.forEach((condBlockAnnos) => {

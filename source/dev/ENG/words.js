@@ -237,7 +237,7 @@ let nco = [
   },
   {
     //links
-    devHardcoded_translations: { ENG: ["bear"], POL: ["niedźwiedź"] },
+    devHardcoded_translations: { ENG: ["bear"], POL: ["nedved"] },
     devHardcoded_tags: ["allohomTesting2", "animal"],
     allohomInfo: { multipleWordtype: true, text: "animal", emoji: "🐻" },
 

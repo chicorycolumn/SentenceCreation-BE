@@ -30,10 +30,48 @@ exports.incompatibleTraitsRef = {
       },
     },
   },
+  SPA: {
+    //If we're examining gender.
+    gender: {
+      //Check the number...
+      number: {
+        //...and if the number does not include singular, remove these gender traitValues.
+        singular: ["m", "f", "n"],
+        ///...and if the number does not include plural, remove these gender traitValues.
+        plural: ["virile", "nonvirile"],
+      },
+    },
+  },
 };
 
 exports.metaCorrectionRef = {
   ENG: {
+    gender: [
+      {
+        condition: { number: "singular" },
+        changeRef: {
+          _Genders: "_SingularGenders",
+          _SingularGenders: "_SingularGenders",
+          _PluralGenders: false,
+          _PersonalGenders: "_PersonalSingularGenders",
+          _PersonalSingularGenders: "_PersonalSingularGenders",
+          _PersonalPluralGenders: false,
+        },
+      },
+      {
+        condition: { number: "plural" },
+        changeRef: {
+          _Genders: "_PluralGenders",
+          _SingularGenders: false,
+          _PluralGenders: "_PluralGenders",
+          _PersonalGenders: "_PersonalPluralGenders",
+          _PersonalSingularGenders: false,
+          _PersonalPluralGenders: "_PersonalPluralGenders",
+        },
+      },
+    ],
+  },
+  SPA: {
     gender: [
       {
         condition: { number: "singular" },
@@ -119,6 +157,35 @@ exports.metaTraitValues = {
       _NonpersonalGenders: ["n", "nonvirile"],
       // _NonpersonalSingularGenders: ["n"],
       _NonpersonalSingularGenders: ["m", "f", "n"], //Beta Is that right?
+      _NonpersonalPluralGenders: ["nonvirile"],
+
+      _SingularGendersExcludingNeuter: ["m", "f"],
+      _MasculineSingularGenders: ["m"],
+    },
+  },
+  SPA: {
+    gcase: {
+      _Gcases: ["nom", "acc", "gen", "dat"],
+    },
+    number: {
+      _Numbers: ["singular", "plural"],
+    },
+    person: {
+      _Pers: ["1per", "2per", "3per", "impersonal"],
+      _PersExludingImpersonal: ["1per", "2per", "3per"],
+    },
+    form: { _pronombreAndDeterminer: ["pronombre", "determiner"] },
+    gender: {
+      _Genders: ["m", "f", "virile", "nonvirile"],
+      _SingularGenders: ["m", "f"],
+      _PluralGenders: ["virile", "nonvirile"],
+
+      _PersonalGenders: ["m", "f", "virile", "nonvirile"],
+      _PersonalSingularGenders: ["m", "f"],
+      _PersonalPluralGenders: ["virile", "nonvirile"],
+
+      _NonpersonalGenders: ["m", "f", "nonvirile"], //beta is that right?
+      _NonpersonalSingularGenders: ["m", "f"],
       _NonpersonalPluralGenders: ["nonvirile"],
 
       _SingularGendersExcludingNeuter: ["m", "f"],
@@ -227,6 +294,54 @@ exports.lemmaObjectTraitKeys = {
       pronombre: [],
     },
   },
+  SPA: {
+    selectors: {
+      nounCommon: ["gender"],
+      nounPerson: ["gender"],
+    },
+    hybridSelectors: {
+      verb: ["tenseDescription"],
+    },
+    inflectionChains: {
+      nounCommon: ["number", "gcase"],
+      nounPerson: ["number", "gcase"],
+      adjective: ["form", "number", "gender"],
+      verb: ["form", "tense", "gender", "person", "number"], // "gender" will be _Genders for in all tenses except pastParticiple ie hechas, escritos.
+      pronombre: ["form", "person", "number", "gender", "gcase"],
+      article: ["form", "number", "gender"],
+      preposition: ["form"],
+    },
+    inheritableInflectionKeys: {
+      nounCommon: ["number", "gcase"],
+      nounPerson: ["number", "gcase", "gender"],
+      adjective: ["number", "gender"],
+      verb: [
+        "tense",
+        "person",
+        "number",
+        "gender", // Los libros son escritos. --> "libros" gives gender and number to "escritos"
+        // "tenseDescription" // delta add this, and to ENG too?
+      ],
+      pronombre: ["person", "number", "gender", "gcase"],
+      article: ["number", "gender"],
+    },
+    allowableTransfersFromQuestionStructure: {
+      nounCommon: ["number"],
+      nounPerson: ["number"],
+      adjective: ["form", "number", "gender"],
+      verb: ["tenseDescription", "person", "number", "gender"],
+      pronombre: ["form", "person", "number", "gender"],
+      article: [],
+      preposition: [],
+    },
+    allowableExtraClarifiersInSingleWordSentences: {
+      nounCommon: [],
+      nounPerson: [],
+      adjective: [],
+      verb: [],
+      pronombre: [],
+    },
+  },
   ENG: {
     selectors: {
       nounCommon: ["gender"],
@@ -305,11 +420,19 @@ exports._tenseDescriptions = {
     "future continuous",
     "future perfect",
   ],
+  SPA: [
+    "present",
+    "present simple",
+    "past",
+    "past simple",
+    "future",
+    "future simple",
+  ], //delta to do
 };
 
 exports.structureChunkTraits = {
-  //Some trait are lexical (isLexical: true), used to directly find word values, eg "gender", "gcase".
-  //Others are functional (isLexical: false), eg "specificalLemmas", "preventAddingFurtherClarifiers", "andTags".
+  //Some traits are lexical (isLexical: true), used to directly find word values, eg "gender", "gcase".
+  //Others are functional (isLexical: false), eg "specificLemmas", "preventAddingFurtherClarifiers", "andTags".
   ALL: {
     //
     //
@@ -540,6 +663,98 @@ exports.structureChunkTraits = {
       ],
     },
   },
+  SPA: {
+    //
+    //
+    //    These stCh traits require validation that given traitValues are okay.
+    //
+    //
+    form: {
+      expectedTypeOnStCh: "array",
+      isLexical: true,
+      compatibleWordtypes: [
+        "adjective",
+        "pronombre",
+        "article",
+        "verb",
+        "preposition",
+      ],
+      possibleTraitValuesPerWordtype: {
+        adjective: ["simple", "comparative", "superlative", "adverb"],
+        pronombre: ["pronombre", "_pronombreAndDeterminer", "determiner"],
+        article: ["definite", "indefinite"],
+        verb: ["verbal", "infinitive", "pastParticiple", "gerund"],
+        preposition: ["onlyForm"],
+      },
+    },
+    //
+    //
+    //    These stCh traits get validation by their possibleTraitValues arr.
+    //
+    //
+    tenseDescription: {
+      isLexical: true,
+      compatibleWordtypes: ["verb"],
+      expectedTypeOnStCh: "array",
+      possibleTraitValues: this._tenseDescriptions["SPA"],
+    },
+    blockedTenseDescriptions: {
+      expectedTypeOnStCh: "array",
+      compatibleWordtypes: ["verb"],
+      ultimatelyMultipleTraitValuesOkay: true,
+      needsNoValidation: true,
+      possibleTraitValues: this._tenseDescriptions["SPA"],
+    },
+    person: {
+      isLexical: true,
+      compatibleWordtypes: ["nounPerson", "nounCommon", "verb", "pronombre"],
+      expectedTypeOnStCh: "array",
+      possibleTraitValues: ["1per", "2per", "3per", "impersonal"],
+    },
+    gender: {
+      isLexical: true,
+      compatibleWordtypes: [
+        "nounPerson",
+        "nounCommon",
+        "verb", // Las tortas estan hechas. --> "tortas" gives gender and number to "hechas".
+        "adjective",
+        "pronombre",
+      ],
+      expectedTypeOnStCh: "array",
+      possibleTraitValues: ["m", "f", "virile", "nonvirile"],
+    },
+    number: {
+      isLexical: true,
+      compatibleWordtypes: [
+        "nounPerson",
+        "nounCommon",
+        "verb",
+        "pronombre",
+        "adjective",
+        "article",
+      ],
+      expectedTypeOnStCh: "array",
+      possibleTraitValues: ["singular", "plural"],
+    },
+    gcase: {
+      isLexical: true,
+      compatibleWordtypes: ["nounPerson", "nounCommon", "pronombre"],
+      expectedTypeOnStCh: "array",
+      possibleTraitValues: ["nom", "gen", "dat", "acc"],
+    },
+    tense: {
+      isLexical: true,
+      compatibleWordtypes: ["verb"],
+      expectedTypeOnStCh: "array",
+      possibleTraitValues: [
+        "past",
+        "present",
+        "future",
+        "conditional",
+        "imperative", // delta to do
+      ],
+    },
+  },
   ENG: {
     //
     //
@@ -557,8 +772,8 @@ exports.structureChunkTraits = {
         "preposition",
       ],
       possibleTraitValuesPerWordtype: {
-        adjective: ["simple"],
-        pronombre: ["pronombre", "determiner"],
+        adjective: ["simple", "comparative", "superlative", "adverb"],
+        pronombre: ["pronombre", "_pronombreAndDeterminer", "determiner"],
         article: ["definite", "indefinite"],
         verb: ["verbal", "infinitive", "v2", "v3", "thirdPS", "gerund"],
         preposition: ["onlyForm"],
@@ -639,17 +854,23 @@ exports.uninflectedForms = {
   ENG: {
     verb: [],
   },
+  SPA: {
+    verb: [],
+  },
 };
 
 exports.adhocInflectionCategorys = {
   POL: {},
-  ENG: { verb: ["tenseDescription"] },
+  SPA: {},
+  ENG: { verb: ["tenseDescription"] }, // delta what is this for?
 };
 
 exports.adhocForms = {
+  SPA: {},
   POL: {},
   ENG: {
     verb: [
+      // delta these are english?
       "contemporaryAdverbial",
       "anteriorAdverbial",
       "activeAdjectival",

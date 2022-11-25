@@ -214,31 +214,16 @@ exports.getTranslatedTenseDescription = (
 ) => {
   let translatedTenseDescriptionsArr = [];
 
-  if (
-    Object.keys(refObj.tenseDescriptionTranslation).includes(sourceLanguage)
-  ) {
-    translatedTenseDescriptionsArr =
-      refObj.tenseDescriptionTranslation[sourceLanguage][targetLanguage][
-        sourceTenseDescription
-      ].regular;
-  } else {
-    let tenseDescTranslationObj =
-      refObj.tenseDescriptionTranslation[targetLanguage][sourceLanguage];
+  refObj.tenseDescriptionTranslations.forEach((refItem) => {
+    if (refItem[sourceLanguage].includes(sourceTenseDescription)) {
+      translatedTenseDescriptionsArr = [
+        ...translatedTenseDescriptionsArr,
+        ...refItem[targetLanguage],
+      ];
+    }
+  });
 
-    Object.keys(tenseDescTranslationObj).forEach((tenseDesc) => {
-      let arrayOfTranslatedTenseDescriptions =
-        tenseDescTranslationObj[tenseDesc].regular;
-
-      if (
-        arrayOfTranslatedTenseDescriptions.includes(sourceTenseDescription) &&
-        !translatedTenseDescriptionsArr.includes(tenseDesc)
-      ) {
-        translatedTenseDescriptionsArr.push(tenseDesc);
-      }
-    });
-  }
-
-  return translatedTenseDescriptionsArr;
+  return Array.from(new Set(translatedTenseDescriptionsArr));
 };
 
 exports.skipThisStepInPreprocessStructureChunks = (
