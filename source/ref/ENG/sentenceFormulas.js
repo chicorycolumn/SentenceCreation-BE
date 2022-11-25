@@ -1342,6 +1342,29 @@ exports.sentenceFormulasBank = [
     primaryOrders: [["art-1", "npe-1-doctor", "ver-1-write"]],
   },
   {
+    sentenceFormulaSymbol: "122a The king writes",
+    sentenceFormulaId: "ENG-122a",
+    equivalents: { POL: ["POL-122a"] },
+    sentenceStructure: [
+      {
+        chunkId: "art-1",
+        form: ["definite"],
+        agreeWith: "npe-1-king",
+      },
+      {
+        chunkId: "npe-1-king",
+        specificIds: ["eng-npe-007-king"],
+      },
+      {
+        chunkId: "ver-1-write",
+        specificIds: ["eng-ver-005-write"],
+        agreeWith: "npe-1-king",
+        tenseDescription: ["present simple", "past simple"],
+      },
+    ],
+    primaryOrders: [["art-1", "npe-1-king", "ver-1-write"]],
+  },
+  {
     sentenceFormulaSymbol: "123 I am red",
     sentenceFormulaId: "ENG-123",
     equivalents: { POL: ["POL-123"] },

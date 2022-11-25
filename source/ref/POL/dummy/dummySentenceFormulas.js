@@ -2219,6 +2219,86 @@ exports.dummySentenceFormulasBank = [
     primaryOrders: [["npe-1-doctor", "ver-1-write"]],
   },
   {
+    sentenceFormulaSymbol: "dummy63e",
+    sentenceFormulaId: "POL-dummy63e",
+    equivalents: { ENG: ["ENG-dummy63e"] },
+    sentenceStructure: [
+      {
+        chunkId: "npe-1-king",
+        specificIds: ["pol-npe-016-król"],
+        gender: ["m1"],
+        formulaImportantTraitKeys: ["gender"],
+        number: ["plural"],
+      },
+      {
+        chunkId: "ver-1-write",
+        specificIds: ["pol-ver-015-pisać"],
+        agreeWith: "npe-1-king",
+        tenseDescription: ["present im", "past pf"],
+      },
+    ],
+    primaryOrders: [["npe-1-king", "ver-1-write"]],
+  },
+  {
+    sentenceFormulaSymbol: "dummy63f",
+    sentenceFormulaId: "POL-dummy63f",
+    equivalents: { ENG: ["ENG-dummy63f"] },
+    sentenceStructure: [
+      {
+        chunkId: "npe-1-king",
+        specificIds: ["pol-npe-016-król"],
+        gender: ["nonvirile"],
+      },
+      {
+        chunkId: "ver-1-write",
+        specificIds: ["pol-ver-015-pisać"],
+        agreeWith: "npe-1-king",
+        tenseDescription: ["present im", "past pf"],
+      },
+    ],
+    primaryOrders: [["npe-1-king", "ver-1-write"]],
+  },
+  {
+    sentenceFormulaSymbol: "dummy63g",
+    sentenceFormulaId: "POL-dummy63g",
+    equivalents: { ENG: ["ENG-dummy63g"] },
+    sentenceStructure: [
+      {
+        chunkId: "npe-1-king",
+        specificIds: ["pol-npe-016-król"],
+        gender: ["f"],
+        formulaImportantTraitKeys: ["gender"],
+        number: ["plural"],
+      },
+      {
+        chunkId: "ver-1-write",
+        specificIds: ["pol-ver-015-pisać"],
+        agreeWith: "npe-1-king",
+        tenseDescription: ["present im", "past pf"],
+      },
+    ],
+    primaryOrders: [["npe-1-king", "ver-1-write"]],
+  },
+  {
+    sentenceFormulaSymbol: "dummy63h",
+    sentenceFormulaId: "POL-dummy63h",
+    equivalents: { ENG: ["ENG-dummy63h"] },
+    sentenceStructure: [
+      {
+        chunkId: "npe-1-king",
+        specificIds: ["pol-npe-016-król"],
+        gender: ["virile"],
+      },
+      {
+        chunkId: "ver-1-write",
+        specificIds: ["pol-ver-015-pisać"],
+        agreeWith: "npe-1-king",
+        tenseDescription: ["present im", "past pf"],
+      },
+    ],
+    primaryOrders: [["npe-1-king", "ver-1-write"]],
+  },
+  {
     sentenceFormulaSymbol: "dummy64a",
     sentenceFormulaId: "POL-dummy64a",
     equivalents: { ENG: ["ENG-dummy64a"] },
@@ -2678,6 +2758,29 @@ exports.dummySentenceFormulasBank = [
       },
     ],
     primaryOrders: [["fix-1-W", "adj-1-Small", "nco-1-Hole"]],
+    additionalOrders: [],
+  },
+  {
+    sentenceFormulaSymbol: "dummy72a",
+    sentenceFormulaId: "POL-dummy72a",
+    equivalents: {
+      ENG: ["ENG-dummy72a"],
+      POL: ["POL-dummy72a"],
+    },
+    sentenceStructure: [
+      {
+        chunkId: "npe-1-Brother",
+        specificIds: ["pol-npe-017-brat"],
+        // number: ["singular"],
+        gcase: ["nom"],
+      },
+      {
+        chunkId: "adj-1-Red",
+        agreeWith: "npe-1-Brother",
+        specificIds: ["pol-adj-011-czerwony"],
+      },
+    ],
+    primaryOrders: [["adj-1-Red", "npe-1-Brother"]],
     additionalOrders: [],
   },
 ];

@@ -61,6 +61,24 @@ exports.wordsBank = {
       papers: ["concrete", "animate", "personTest2", "job"],
       topics: [],
     },
+    {
+      key: "npe-0005-king/queen",
+      traductions: {
+        ENG: ["eng-npe-007-king"],
+        POL: ["pol-npe-016-król"],
+      },
+      papers: [],
+      topics: [],
+    },
+    {
+      key: "npe-0006-brother/sister",
+      traductions: {
+        ENG: ["eng-npe-008-brother"],
+        POL: ["pol-npe-017-brat"],
+      },
+      papers: [],
+      topics: [],
+    },
   ],
   nco: [
     {

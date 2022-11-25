@@ -202,6 +202,115 @@ exports.wordsBank = {
         },
       },
     },
+    {
+      //selectors
+      lemma: "król",
+      id: "pol-npe-016-król",
+      gender: "m1",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "król",
+          gen: "króla",
+          dat: "królowi",
+          acc: "króla",
+          ins: "królem",
+          loc: "królu",
+        },
+        plural: {
+          nom: "królowie",
+          gen: "królów",
+          dat: "królom",
+          acc: "królów",
+          ins: "królami",
+          loc: "królach",
+        },
+      },
+    },
+    {
+      //selectors
+      lemma: "dama",
+      id: "pol-npe-016-dama",
+      gender: "f",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "dama",
+          gen: "damy",
+          dat: "damie",
+          acc: "damę",
+          ins: "damą",
+          loc: "damie",
+        },
+        plural: {
+          nom: "damy",
+          gen: "dam",
+          dat: "damom",
+          acc: "damy",
+          ins: "damami",
+          loc: "damach",
+        },
+      },
+    },
+
+    {
+      //selectors
+      lemma: "brat",
+      id: "pol-npe-017-brat",
+      gender: "m1",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "brat",
+          gen: "brata",
+          dat: "bratu",
+          acc: "brata",
+          ins: "bratem",
+          loc: "bracie",
+        },
+        plural: {
+          nom: "bracia",
+          gen: "braci",
+          dat: "braciom",
+          acc: "braci",
+          ins: "braćmi",
+          loc: "braciach",
+        },
+      },
+    },
+    {
+      //selectors
+      lemma: "siostra",
+      id: "pol-npe-017-siostra",
+      gender: "f",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "siostra",
+          gen: "siostry",
+          dat: "siostrze",
+          acc: "siostrę",
+          ins: "siostrą",
+          loc: "siostrze",
+        },
+        plural: {
+          nom: "siostry",
+          gen: "sióstr",
+          dat: "siostrom",
+          acc: "siostry",
+          ins: "siostrami",
+          loc: "siostrach",
+        },
+      },
+    },
   ],
   nco: [
     {

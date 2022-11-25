@@ -23,6 +23,49 @@ describe("/api", function () {
     "ENG"
   );
 
+  describe("/palette - Stage 23: SMPs: Special Mixed Plurals.", () => {
+    it("#pal23-01a GET 200 YES: Poleng. Boys were here.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage,
+          answerLanguage,
+          useDummy: true,
+          sentenceFormulaSymbol: "dummy72a",
+        })
+        .expect(200)
+        .then((res) => {
+          let ref = [
+            {
+              ENG: ["Red brother."],
+              POL: ["Czerwony brat."],
+            },
+            {
+              ENG: ["Red brothers."],
+              POL: ["Czerwoni bracia."],
+            },
+            {
+              ENG: ["Red sister."],
+              POL: ["Czerwona siostra."],
+            },
+            {
+              ENG: ["Red sisters."],
+              POL: ["Czerwone siostry."],
+            },
+          ];
+          testingUtils.checkTranslationsOfGivenRef(
+            res,
+            ref,
+            questionLanguage,
+            answerLanguage
+          );
+        });
+    });
+  });
+
   describe("/palette - Stage 22: Pronouns, Interrogatives.", () => {
     it("#pal22-01a GET 200 YES: Poleng. ITG_G. Who is she?", () => {
       const questionLanguage = "POL";
