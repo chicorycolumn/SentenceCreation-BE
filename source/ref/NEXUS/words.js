@@ -35,19 +35,10 @@ exports.wordsBank = {
       topics: [],
     },
     {
-      key: "npe-0002-father",
+      key: "npe-0003-father/mother",
       traductions: {
-        ENG: ["eng-npe-003-father"],
-        POL: ["pol-npe-013-ojciec"],
-      },
-      papers: ["animate", "family", "concrete"],
-      topics: [],
-    },
-    {
-      key: "npe-0003-mother",
-      traductions: {
-        ENG: ["eng-npe-004-mother"],
-        POL: ["pol-npe-014-matka"],
+        ENG: ["eng-npe-003-mother"],
+        POL: ["pol-npe-013-matka"],
       },
       papers: ["animate", "family", "concrete"],
       topics: [],

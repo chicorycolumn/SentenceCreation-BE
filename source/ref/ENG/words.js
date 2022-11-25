@@ -64,7 +64,7 @@ exports.wordsBank = {
     {
       //selectors
       lemma: "mother",
-      id: "eng-npe-004-mother",
+      id: "eng-npe-003-mother",
       gender: "f",
       //notes
 

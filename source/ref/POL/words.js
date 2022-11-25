@@ -63,7 +63,7 @@ exports.wordsBank = {
     {
       //selectors
       lemma: "matka",
-      id: "pol-npe-014-matka",
+      id: "pol-npe-013-matka",
       gender: "f",
       //notes
 
