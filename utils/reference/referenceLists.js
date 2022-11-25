@@ -305,7 +305,7 @@ exports.lemmaObjectTraitKeys = {
     inflectionChains: {
       nounCommon: ["number", "gcase"],
       nounPerson: ["number", "gcase"],
-      adjective: ["form", "number", "gender"],
+      adjective: ["form", "number", "gender", "gcase"],
       verb: ["form", "tense", "gender", "person", "number"], // "gender" will be _Genders for in all tenses except pastParticiple ie hechas, escritos.
       pronombre: ["form", "person", "number", "gender", "gcase"],
       article: ["form", "number", "gender"],

@@ -115,10 +115,10 @@ let nco = [
         loc: "niedźwiedziu",
       },
       plural: {
-        nom: "niedźwiedzie",
+        nom: "nedvedy",
         gen: "niedźwiedzi",
         dat: "niedźwiedziom",
-        acc: "niedźwiedzie",
+        acc: "nedvedy",
         ins: "niedźwiedziami",
         loc: "niedźwiedziach",
       },

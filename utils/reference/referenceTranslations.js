@@ -220,9 +220,20 @@ exports.virilityConversionRef = {
 };
 
 exports.traitValueTranslation = {
-  //Delta here.
   POL: {
     ENG: {
+      gender: {
+        m1: ["m"],
+        m2: ["m"],
+        m3: ["m"],
+        _SingularGendersExcludingNeuter: ["_PersonalSingularGenders"],
+        _SingularGendersExcludingNeuterWithPadding: ["_SingularGenders"],
+        _MasculineSingularGenders: ["m"],
+      },
+    },
+  },
+  POL: {
+    SPA: {
       gender: {
         m1: ["m"],
         m2: ["m"],
@@ -236,7 +247,7 @@ exports.traitValueTranslation = {
   ENG: {
     POL: {
       gender: {
-        m: ["m1"],
+        m: ["m1"], //Delta but I can't say the same for SPA->POL, whereas for ENG->POL the only masculine nouns are definitely people.
       },
     },
   },
