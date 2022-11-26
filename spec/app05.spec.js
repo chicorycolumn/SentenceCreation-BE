@@ -9,6 +9,56 @@ const { it } = require("mocha");
 const testingUtils = require("../utils/secondOrder/testingUtils.js");
 const { generalTranslatedSentencesRef, runPaletteTest } = testingUtils;
 
+// Delta here.
+/**
+ * Okay, currently SMP "padre" is basically working.
+ * Only thing is, I think I want to make it so a SMP's counterparts (Co-SMPs)
+ * (ie "rodzic" and "parent" are the SMP's counterparts, whereas "padre" is the SMP)
+ * are not randomly selected as often.
+ *
+ * You know like... if I make a sentence with npe-0002
+ * I don't want it coming out equal probability in ENG Q sentence:
+ * "My parent gave me a book."
+ * "My mother gave me a book."
+ * "My father gave me a book."
+ *
+ * I want to downgrade the likelihood of it generating the first sentence, in singular.
+ *
+ * But I suppose in plural, I want to upgrade its likelihood, so that "My parents gave me a book." is
+ * more likely to generate than "My mothers gave me a book."
+ *
+ * Okay, so, you could put a marker symbol in the lobj id of the Hypernym,
+ * "spa-npe-001-padre€"
+ * "spa-npe-001-madre"
+ *
+ * "eng-npe-029-parent£"
+ * "eng-npe-029-mother"
+ * "eng-npe-029-father"
+ *
+ * "pol-npe-007-rodzic£"
+ * "pol-npe-007-ojciec"
+ * "pol-npe-007-matka"
+ *
+ * A word with £                    = Hypernym but not SMP      "parent", "rodzic"
+ * A word with €                    = Hypernym and is SMP       "padre"
+ * A word with neither but is in
+ * nexus arr with a word which is £ = Hypon of a non-SMP        "mother" "father" "matka" "ojciec"
+ * A word with neither but is in
+ * nexus arr with a word which is € = Hypon of a SMP            "madre"
+ *
+ *
+ * So when trait values are being filled where they have been left blank in sentence structure...
+ *
+ * Hypernym non-SMPs    get random(4/5) to be number["plural"]
+ * Hypernym SMPs        get uninterfered, so number["singular", "plural"]
+ * Hyponyms of non-SMP  get random(4/5) to be number["singular"]
+ * Hyponyms of SMP      get random(4/5) to be number["singular"]
+ *
+ * So mother, father, matka, ojciec, and madre will be more likely to generate as singular.
+ * While parent, rodzic will be more likely to generate as plural.
+ * And padre will generate equally as either.
+ */
+
 const dummy73a = [
   {
     ENG: ["Red bear."],
