@@ -25,7 +25,28 @@ exports.wordsBank = {
     {
       //selectors
       lemma: "padre",
-      id: "spa-npe-002-padre",
+      id: "spa-npe-002-padre(father)",
+      gender: "m",
+      // gender: "_PersonalGenders",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "padre",
+          gen: "del padre",
+        },
+        plural: {
+          nom: "padres",
+          gen: "de los padres",
+        },
+      },
+    },
+    {
+      //selectors
+      lemma: "padre",
+      id: "spa-npe-002-padre(parent)",
+      // gender: "m",
       gender: "m",
       //notes
 

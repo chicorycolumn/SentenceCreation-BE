@@ -2843,7 +2843,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "npe-1",
         specificIds: ["pol-npe-013-matka"],
-        // number: ["singular"],
+        // number: ["plural"],
         gcase: ["nom"],
       },
       {

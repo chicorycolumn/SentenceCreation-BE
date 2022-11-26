@@ -82,6 +82,25 @@ exports.wordsBank = {
     },
     {
       //selectors
+      lemma: "parent",
+      id: "eng-npe-003-parent",
+      gender: "m",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "parent",
+          gen: "parent's",
+        },
+        plural: {
+          nom: "parents",
+          gen: "parents'",
+        },
+      },
+    },
+    {
+      //selectors
       lemma: "doctor",
       id: "eng-npe-005-doctor",
       gender: "_PersonalGenders",

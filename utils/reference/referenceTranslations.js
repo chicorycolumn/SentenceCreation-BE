@@ -231,8 +231,6 @@ exports.traitValueTranslation = {
         _MasculineSingularGenders: ["m"],
       },
     },
-  },
-  POL: {
     SPA: {
       gender: {
         m1: ["m"],
@@ -244,6 +242,7 @@ exports.traitValueTranslation = {
       },
     },
   },
+
   ENG: {
     POL: {
       gender: {

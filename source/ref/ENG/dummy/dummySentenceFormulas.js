@@ -2275,7 +2275,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "npe-1",
         specificIds: ["eng-npe-003-mother"],
-        // number: ["singular"],
+        // number: ["plural"],
         gcase: ["nom"],
       },
       {

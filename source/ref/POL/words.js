@@ -87,6 +87,33 @@ exports.wordsBank = {
         },
       },
     },
+    {
+      //selectors
+      lemma: "rodzic",
+      id: "pol-npe-013-rodzic",
+      gender: "m1",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "rodzic",
+          gen: "rodzic_swde",
+          dat: "rodzic_swde",
+          acc: "rodzic_swde",
+          ins: "rodzic_swde",
+          loc: "rodzic_swde",
+        },
+        plural: {
+          nom: "rodzice",
+          gen: "rodzic_swde",
+          dat: "rodzic_swde",
+          acc: "rodzic_swde",
+          ins: "rodzic_swde",
+          loc: "rodzic_swde",
+        },
+      },
+    },
     // {
     //   //links
     //   translations: { ENG: ["boy", "boyfriend", "guy"] },

@@ -59,7 +59,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "npe-1",
         specificIds: ["spa-npe-002-madre"],
-        // number: ["singular"],
+        // number: ["plural"],
         gcase: ["nom"],
       },
       {

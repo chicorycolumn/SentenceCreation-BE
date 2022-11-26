@@ -246,7 +246,10 @@ exports.adjustVirilityOfStructureChunk = (
         )
     );
     if (!numberFromGender) {
-      consol.throw("fivk");
+      consol.log("fivk virilityRef=", virilityRef);
+      consol.throw(
+        `fivk ${currentLanguage} There was no numberFromGender for stCh "${structureChunk.chunkId}" structureChunk.gender="${structureChunk.gender}".`
+      );
     }
     structureChunk.number = [numberFromGender];
   }
