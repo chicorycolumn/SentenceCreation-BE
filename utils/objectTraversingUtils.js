@@ -76,10 +76,6 @@ exports.findMatchingLemmaObjectThenWord = (
     );
     matches = lfUtils.filterByTags(source, structureChunk);
 
-    if (forceMultipleModeAndQuestionOnly) {
-      matches = uUtils.selectRandomElementsFromArr(matches);
-    }
-
     if (!matches.length) {
       consol.log(
         "[1;31m " +
