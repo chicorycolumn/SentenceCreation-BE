@@ -1,3 +1,4 @@
+const app = require("../app");
 const request = require("supertest");
 const { expect } = require("chai");
 const gpUtils = require("../generalPurposeUtils.js");
@@ -5,6 +6,35 @@ const uUtils = require("../universalUtils.js");
 const consol = require("../zerothOrder/consoleLoggingUtils.js");
 const { it } = require("mocha");
 const testingUtils = require("./testingUtils.js");
+
+exports.runPaletteTest = (
+  questionLanguage,
+  answerLanguage,
+  sentenceFormulaSymbol,
+  ref,
+  useDummy,
+  args
+) => {
+  return request(app)
+    .get("/api/palette")
+    .send({
+      questionLanguage,
+      answerLanguage,
+      useDummy,
+      sentenceFormulaSymbol,
+      ...args,
+    })
+    .expect(200)
+    .then((res) => {
+      consol.log(res.body);
+      testingUtils.checkTranslationsOfGivenRef(
+        res,
+        ref,
+        questionLanguage,
+        answerLanguage
+      );
+    });
+};
 
 exports.generalTranslatedSentencesRef = {
   have_withClarifiers_QlangENG: {

@@ -10,39 +10,11 @@ const testingUtils = require("../utils/secondOrder/testingUtils.js");
 const {
   traitValueTranslation,
 } = require("../utils/reference/referenceTranslations");
-const { generalTranslatedSentencesRef } = testingUtils;
+const { generalTranslatedSentencesRef, runPaletteTest } = testingUtils;
 
 // MGN:            Multi-gender noun. Eg doctor in ENG can be either male or female.
 // ProsMgn:        "My doctor and her book." Connected pronombre reveals gender of MGN. Doesn't need an annotation for doctor as clearly must be lekarka.
 // EdusMgn:        "My doctor is a man."     Educator specifies MGN's gender. Sentence where educator knows that this MGN will need no clarifying.
-
-const go = (
-  questionLanguage,
-  answerLanguage,
-  sentenceFormulaSymbol,
-  ref,
-  useDummy,
-  args
-) => {
-  return request(app)
-    .get("/api/palette")
-    .send({
-      questionLanguage,
-      answerLanguage,
-      useDummy,
-      sentenceFormulaSymbol,
-      ...args,
-    })
-    .expect(200)
-    .then((res) => {
-      testingUtils.checkTranslationsOfGivenRef(
-        res,
-        ref,
-        questionLanguage,
-        answerLanguage
-      );
-    });
-};
 
 describe("/api", function () {
   this.timeout(7000);
@@ -124,7 +96,7 @@ describe("/api", function () {
           POL: ["Jedne drzwi."],
         },
       ];
-      return go("ENG", "POL", "dummy68a", ref, true);
+      return runPaletteTest("ENG", "POL", "dummy68a", ref, true);
     });
     it("#pal21-02b GET 200 YES: Poleng. A POL Plurale Tantum is actually Singular.", () => {
       let ref = [
@@ -133,7 +105,7 @@ describe("/api", function () {
           POL: "Jedne drzwi.",
         },
       ];
-      return go("POL", "ENG", "dummy68a", ref, true);
+      return runPaletteTest("POL", "ENG", "dummy68a", ref, true);
     });
     it("#pal21-02c GET 200 YES: Engpol. A POL Plurale Tantum is actually Plural.", () => {
       let ref = [
@@ -142,7 +114,7 @@ describe("/api", function () {
           POL: ["Dwoje drzwi."],
         },
       ];
-      return go("ENG", "POL", "dummy68b", ref, true);
+      return runPaletteTest("ENG", "POL", "dummy68b", ref, true);
     });
     it("#pal21-02d GET 200 YES: Poleng. A POL Plurale Tantum is actually Plural.", () => {
       let ref = [
@@ -151,7 +123,7 @@ describe("/api", function () {
           POL: "Dwoje drzwi.",
         },
       ];
-      return go("POL", "ENG", "dummy68b", ref, true);
+      return runPaletteTest("POL", "ENG", "dummy68b", ref, true);
     });
     it("#pal21-03a GET 200 YES: Engpol. An ENG Plurale Tantum is actually Singular.", () => {
       let ref = [
@@ -160,7 +132,7 @@ describe("/api", function () {
           POL: ["Pinceta jest."],
         },
       ];
-      return go("ENG", "POL", "dummy68c", ref, true);
+      return runPaletteTest("ENG", "POL", "dummy68c", ref, true);
     });
     it("#pal21-03b GET 200 YES: Poleng. An ENG Plurale Tantum is actually Singular.", () => {
       let ref = [
@@ -169,7 +141,7 @@ describe("/api", function () {
           POL: "Pinceta jest.",
         },
       ];
-      return go("POL", "ENG", "dummy68c", ref, true);
+      return runPaletteTest("POL", "ENG", "dummy68c", ref, true);
     });
     it("#pal21-03c GET 200 YES: Engpol. An ENG Plurale Tantum is actually Plural.", () => {
       let ref = [
@@ -178,7 +150,7 @@ describe("/api", function () {
           POL: ["Pincety są."],
         },
       ];
-      return go("ENG", "POL", "dummy68d", ref, true);
+      return runPaletteTest("ENG", "POL", "dummy68d", ref, true);
     });
     it("#pal21-03d GET 200 YES: Poleng. An ENG Plurale Tantum is actually Plural.", () => {
       let ref = [
@@ -187,7 +159,7 @@ describe("/api", function () {
           POL: "Pincety są.",
         },
       ];
-      return go("POL", "ENG", "dummy68d", ref, true);
+      return runPaletteTest("POL", "ENG", "dummy68d", ref, true);
     });
     it("#pal21-04a GET 200 YES: Engpol. An ENG Singulare Tantum is actually Singular.", () => {
       let ref = [
@@ -196,7 +168,7 @@ describe("/api", function () {
           POL: ["Pył jest."],
         },
       ];
-      return go("ENG", "POL", "dummy68e", ref, true);
+      return runPaletteTest("ENG", "POL", "dummy68e", ref, true);
     });
     it("#pal21-04b GET 200 YES: Poleng. An ENG Singulare Tantum is actually Singular.", () => {
       let ref = [
@@ -205,7 +177,7 @@ describe("/api", function () {
           POL: "Pył jest.",
         },
       ];
-      return go("POL", "ENG", "dummy68e", ref, true);
+      return runPaletteTest("POL", "ENG", "dummy68e", ref, true);
     });
     it("#pal21-04c GET 200 YES: Engpol. An ENG Singulare Tantum is actually Plural.", () => {
       let ref = [
@@ -214,7 +186,7 @@ describe("/api", function () {
           POL: ["Pyły są."],
         },
       ];
-      return go("ENG", "POL", "dummy68f", ref, true);
+      return runPaletteTest("ENG", "POL", "dummy68f", ref, true);
     });
     it("#pal21-04d GET 200 YES: Poleng. An ENG Singulare Tantum is actually Plural.", () => {
       let ref = [
@@ -223,7 +195,7 @@ describe("/api", function () {
           POL: "Pyły są.",
         },
       ];
-      return go("POL", "ENG", "dummy68f", ref, true);
+      return runPaletteTest("POL", "ENG", "dummy68f", ref, true);
     });
   });
 
@@ -235,7 +207,7 @@ describe("/api", function () {
           POL: ["Widzę szczura."],
         },
       ];
-      return go("ENG", "POL", "dummy67a", ref, true);
+      return runPaletteTest("ENG", "POL", "dummy67a", ref, true);
     });
     it("#pal20-01c GET 200 YES: Poleng. 'I see a rat.'", () => {
       let ref = [
@@ -244,7 +216,7 @@ describe("/api", function () {
           POL: "Widzę szczura.",
         },
       ];
-      return go("POL", "ENG", "dummy67a", ref, true);
+      return runPaletteTest("POL", "ENG", "dummy67a", ref, true);
     });
   });
 
@@ -261,7 +233,7 @@ describe("/api", function () {
           POL: ["Jest chłopiec i widzę go.", "Jest chłopiec i widzę jego."],
         },
       ];
-      return go("ENG", "POL", "dummy64a", ref, true);
+      return runPaletteTest("ENG", "POL", "dummy64a", ref, true);
     });
     it("#pal19-01c GET 200 YES: Poleng. 'There's a woman and I see her.'", () => {
       let ref = [
@@ -282,7 +254,7 @@ describe("/api", function () {
           POL: "Jest chłopiec i widzę go.",
         },
       ];
-      return go("POL", "ENG", "dummy64a", ref, true);
+      return runPaletteTest("POL", "ENG", "dummy64a", ref, true);
     });
     it("#pal19-02a GET 200 YES: Engpol. 'There's an apple and I see it.'", () => {
       let ref = [
@@ -299,7 +271,7 @@ describe("/api", function () {
           POL: ["Jest pomidor i widzę go.", "Jest pomidor i widzę jego."],
         },
       ];
-      return go("ENG", "POL", "dummy64b", ref, true);
+      return runPaletteTest("ENG", "POL", "dummy64b", ref, true);
     });
     it("#pal19-02c GET 200 YES: Poleng. 'There's an apple and I see it.'", () => {
       let ref = [
@@ -325,7 +297,7 @@ describe("/api", function () {
           POL: "Jest pomidor i widzę go.",
         },
       ];
-      return go("POL", "ENG", "dummy64b", ref, true);
+      return runPaletteTest("POL", "ENG", "dummy64b", ref, true);
     });
     it("#pal19-03a GET 200 YES: Engpol. 'There's a rat and I see him/her/it.'", () => {
       let ref = [
@@ -334,7 +306,7 @@ describe("/api", function () {
           POL: ["Jest szczur i widzę go.", "Jest szczur i widzę jego."],
         },
       ];
-      return go("ENG", "POL", "dummy65a", ref, true);
+      return runPaletteTest("ENG", "POL", "dummy65a", ref, true);
     });
     it("#pal19-03c GET 200 YES: Poleng. 'There's a rat and I see him/her/it.'", () => {
       let ref = [
@@ -350,7 +322,7 @@ describe("/api", function () {
           POL: "Jest szczur i widzę go.",
         },
       ];
-      return go("POL", "ENG", "dummy65a", ref, true);
+      return runPaletteTest("POL", "ENG", "dummy65a", ref, true);
     });
   });
 
@@ -993,7 +965,7 @@ describe("/api", function () {
           POL: ["Lekarki napisały."],
         },
       ];
-      return go("ENG", "POL", "122 The doctor writes", ref);
+      return runPaletteTest("ENG", "POL", "122 The doctor writes", ref);
     });
     it("#pal18-10b GET 200 YES: Engpol. 'The doctor writes.' PDS", () => {
       let ref = [
@@ -1014,7 +986,7 @@ describe("/api", function () {
           POL: ["Lekarze napisali.", "Lekarki napisały."],
         },
       ];
-      return go("ENG", "POL", "122 The doctor writes", ref, false, {
+      return runPaletteTest("ENG", "POL", "122 The doctor writes", ref, false, {
         pleaseDontSpecify: true,
       });
     });
@@ -1069,7 +1041,7 @@ describe("/api", function () {
           POL: "Lekarki napisały.",
         },
       ];
-      return go("POL", "ENG", "122 The doctor writes", ref);
+      return runPaletteTest("POL", "ENG", "122 The doctor writes", ref);
     });
     it("#pal18-10d GET 200 YES: Poleng. 'The doctor writes.' PDS", () => {
       let ref = [
@@ -1122,7 +1094,7 @@ describe("/api", function () {
           POL: "Lekarki napisały.",
         },
       ];
-      return go("POL", "ENG", "122 The doctor writes", ref, false, {
+      return runPaletteTest("POL", "ENG", "122 The doctor writes", ref, false, {
         pleaseDontSpecify: true,
       });
     });
@@ -1145,7 +1117,7 @@ describe("/api", function () {
           POL: ["Lekarze napisali."],
         },
       ];
-      return go("ENG", "POL", "dummy63a", ref, true);
+      return runPaletteTest("ENG", "POL", "dummy63a", ref, true);
     });
     it("#pal18-11c GET 200 YES: Poleng. 'The doctor writes.' stCh specified male", () => {
       let ref = [
@@ -1174,7 +1146,7 @@ describe("/api", function () {
           POL: "Lekarze napisali.",
         },
       ];
-      return go("POL", "ENG", "dummy63a", ref, true);
+      return runPaletteTest("POL", "ENG", "dummy63a", ref, true);
     });
     it("#pal18-12a GET 200 YES: Engpol. 'The doctor writes.' stCh specified nonvirile", () => {
       let ref = [
@@ -1187,7 +1159,7 @@ describe("/api", function () {
           POL: ["Lekarki napisały."],
         },
       ];
-      return go("ENG", "POL", "dummy63b", ref, true);
+      return runPaletteTest("ENG", "POL", "dummy63b", ref, true);
     });
     it("#pal18-12c GET 200 YES: Poleng. 'The doctor writes.' stCh specified nonvirile", () => {
       let ref = [
@@ -1204,7 +1176,7 @@ describe("/api", function () {
           POL: "Lekarki napisały.",
         },
       ];
-      return go("POL", "ENG", "dummy63b", ref, true);
+      return runPaletteTest("POL", "ENG", "dummy63b", ref, true);
     });
     it("#pal18-13a GET 200 YES: Engpol. 'The doctor writes.' stCh specified female", () => {
       let ref = [
@@ -1233,7 +1205,7 @@ describe("/api", function () {
           POL: ["Lekarze napisali."],
         },
       ];
-      return go("ENG", "POL", "dummy63c", ref, true);
+      return runPaletteTest("ENG", "POL", "dummy63c", ref, true);
     });
     it("#pal18-13c GET 200 YES: Poleng. 'The doctor writes.' stCh specified female", () => {
       let ref = [
@@ -1270,7 +1242,7 @@ describe("/api", function () {
           POL: "Lekarze napisali.",
         },
       ];
-      return go("POL", "ENG", "dummy63c", ref, true);
+      return runPaletteTest("POL", "ENG", "dummy63c", ref, true);
     });
     it("#pal18-14a GET 200 YES: Engpol. 'The doctor writes.' stCh specified virile", () => {
       let ref = [
@@ -1283,7 +1255,7 @@ describe("/api", function () {
           POL: ["Lekarze napisali."],
         },
       ];
-      return go("ENG", "POL", "dummy63d", ref, true);
+      return runPaletteTest("ENG", "POL", "dummy63d", ref, true);
     });
     it("#pal18-14c GET 200 YES: Poleng. 'The doctor writes.' stCh specified virile", () => {
       let ref = [
@@ -1300,7 +1272,7 @@ describe("/api", function () {
           POL: "Lekarze napisali.",
         },
       ];
-      return go("POL", "ENG", "dummy63d", ref, true);
+      return runPaletteTest("POL", "ENG", "dummy63d", ref, true);
     });
   });
 
