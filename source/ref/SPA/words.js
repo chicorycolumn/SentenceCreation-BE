@@ -5,6 +5,44 @@ exports.wordsBank = {
   npe: [
     {
       //selectors
+      lemma: "madre",
+      id: "spa-npe-002-madre",
+      gender: "f",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "madre",
+          gen: "de la madre",
+        },
+        plural: {
+          nom: "madres",
+          gen: "de las madres",
+        },
+      },
+    },
+    {
+      //selectors
+      lemma: "padre",
+      id: "spa-npe-002-padre",
+      gender: "m",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "padre",
+          gen: "del padre",
+        },
+        plural: {
+          nom: "padres",
+          gen: "de los padres",
+        },
+      },
+    },
+    {
+      //selectors
       lemma: "medico",
       id: "spa-npe-001-medico",
       gender: "m",

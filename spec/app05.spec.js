@@ -13,7 +13,7 @@ describe("/api", function () {
   this.timeout(7000);
 
   describe.only("/palette - Stage 24: Spanish basic.", () => {
-    const dummy73aRef = [
+    const dummy73a = [
       {
         ENG: ["Red bear."],
         SPA: ["Rojo oso."],
@@ -35,7 +35,7 @@ describe("/api", function () {
         POL: ["Czerwone cebule."],
       },
     ];
-    const dummy73bRefSpaPolBoth = [
+    const dummy73bSpaPolBoth = [
       {
         POL: ["Czerwony lekarz."],
         SPA: ["Rojo medico."],
@@ -53,7 +53,7 @@ describe("/api", function () {
         SPA: ["Rojas medicas."],
       },
     ];
-    const dummy73bRefSpaEng = [
+    const dummy73bSpaEng = [
       {
         SPA: ["Rojo medico."],
         ENG: ["Red doctor."],
@@ -71,7 +71,7 @@ describe("/api", function () {
         ENG: ["Red doctors."],
       },
     ];
-    const dummy73bRefEngSpa = [
+    const dummy73bEngSpa = [
       {
         ENG: ["Red doctor (male)."],
         SPA: ["Rojo medico."],
@@ -93,29 +93,67 @@ describe("/api", function () {
         SPA: ["Rojas medicas."],
       },
     ];
-    it("#pal23-01a GET 200 YES: Polspa. Red bear/onion.", () => {
-      return runPaletteTest("POL", "SPA", "dummy73a", dummy73aRef);
+    const dummy73cRefPolSpa = [
+      { POL: ["Czerwona matka."], SPA: ["Roja madre."] },
+      { POL: ["Czerwone matki."], SPA: ["Rojas madres."] },
+      { POL: ["Czerwony ojciec."], SPA: ["Rojo padre."] },
+      { POL: ["Czerwoni ojcowie."], SPA: ["Rojos padres."] },
+    ];
+    const dummy73cRefSpaPol = [
+      { POL: ["Czerwona matka."], SPA: ["Roja madre."] },
+      { POL: ["Czerwone matki."], SPA: ["Rojas madres."] },
+      { POL: ["Czerwony ojciec."], SPA: ["Rojo padre."] },
+      { POL: ["Czerwoni ojcowie."], SPA: ["Rojos padres (males)."] },
+      { POL: ["Czerwoni rodzice."], SPA: ["Rojos padres (mixed)."] },
+    ];
+    const dummy73cRefEngSpa = [
+      { ENG: ["Red mother."], SPA: ["Roja madre."] },
+      { ENG: ["Red mothers."], SPA: ["Rojas madres."] },
+      { ENG: ["Red father."], SPA: ["Rojo padre."] },
+      { ENG: ["Red fathers."], SPA: ["Rojos padres."] },
+    ];
+    const dummy73cRefSpaEng = [
+      { ENG: ["Red mother."], SPA: ["Roja madre."] },
+      { ENG: ["Red mothers."], SPA: ["Rojas madres."] },
+      { ENG: ["Red father."], SPA: ["Rojo padre."] },
+      { ENG: ["Red fathers."], SPA: ["Rojos padres (fathers)."] },
+      { ENG: ["Red parents."], SPA: ["Rojos padres (mixed)."] },
+    ];
+    it("#pal23-01a GET 200 YES: Polspa. Red onion (NORMAL).", () => {
+      return runPaletteTest("POL", "SPA", "dummy73a", dummy73a, true);
     });
-    it("#pal23-01b GET 200 YES: Spapol. Red bear/onion.", () => {
-      return runPaletteTest("SPA", "POL", "dummy73a", dummy73aRef);
+    it("#pal23-01b GET 200 YES: Spapol. Red onion (NORMAL).", () => {
+      return runPaletteTest("SPA", "POL", "dummy73a", dummy73a, true);
     });
-    it("#pal23-01c GET 200 YES: Engspa. Red bear/onion.", () => {
-      return runPaletteTest("ENG", "SPA", "dummy73a", dummy73aRef);
+    it("#pal23-01c GET 200 YES: Engspa. Red onion (NORMAL).", () => {
+      return runPaletteTest("ENG", "SPA", "dummy73a", dummy73a, true);
     });
-    it("#pal23-01d GET 200 YES: Spaeng. Red bear/onion.", () => {
-      return runPaletteTest("SPA", "ENG", "dummy73a", dummy73aRef);
+    it("#pal23-01d GET 200 YES: Spaeng. Red onion (NORMAL).", () => {
+      return runPaletteTest("SPA", "ENG", "dummy73a", dummy73a, true);
     });
-    it("#pal23-02a GET 200 YES: Polspa. Red doctor.", () => {
-      return runPaletteTest("POL", "SPA", "dummy73b", dummy73bRefSpaPolBoth);
+    it("#pal23-02a GET 200 YES: Polspa. Red doctor (MGN).", () => {
+      return runPaletteTest("POL", "SPA", "dummy73b", dummy73bSpaPolBoth, true);
     });
-    it("#pal23-02b GET 200 YES: Spapol. Red doctor.", () => {
-      return runPaletteTest("SPA", "POL", "dummy73b", dummy73bRefSpaPolBoth);
+    it("#pal23-02b GET 200 YES: Spapol. Red doctor (MGN).", () => {
+      return runPaletteTest("SPA", "POL", "dummy73b", dummy73bSpaPolBoth, true);
     });
-    it("#pal23-02c GET 200 YES: Engspa. Red doctor.", () => {
-      return runPaletteTest("ENG", "SPA", "dummy73b", dummy73bRefEngSpa);
+    it("#pal23-02c GET 200 YES: Engspa. Red doctor (MGN).", () => {
+      return runPaletteTest("ENG", "SPA", "dummy73b", dummy73bEngSpa, true);
     });
-    it("#pal23-02d GET 200 YES: Spaeng. Red doctor.", () => {
-      return runPaletteTest("SPA", "ENG", "dummy73b", dummy73bRefSpaEng);
+    it("#pal23-02d GET 200 YES: Spaeng. Red doctor (MGN).", () => {
+      return runPaletteTest("SPA", "ENG", "dummy73b", dummy73bSpaEng, true);
+    });
+    it.only("#pal23-03a GET 200 YES: Polspa. Red mother (SMP).", () => {
+      return runPaletteTest("POL", "SPA", "dummy73c", dummy73cRefPolSpa, true);
+    });
+    it.only("#pal23-03b GET 200 YES: Spapol. Red mother (SMP).", () => {
+      return runPaletteTest("SPA", "POL", "dummy73c", dummy73cRefSpaPol, true);
+    });
+    it.only("#pal23-03c GET 200 YES: Engspa. Red mother (SMP).", () => {
+      return runPaletteTest("ENG", "SPA", "dummy73c", dummy73cRefEngSpa, true);
+    });
+    it.only("#pal23-03d GET 200 YES: Spaeng. Red mother (SMP).", () => {
+      return runPaletteTest("SPA", "ENG", "dummy73c", dummy73cRefSpaEng, true);
     });
   });
 });
