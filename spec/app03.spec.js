@@ -16,6 +16,34 @@ const { generalTranslatedSentencesRef } = testingUtils;
 // ProsMgn:        "My doctor and her book." Connected pronombre reveals gender of MGN. Doesn't need an annotation for doctor as clearly must be lekarka.
 // EdusMgn:        "My doctor is a man."     Educator specifies MGN's gender. Sentence where educator knows that this MGN will need no clarifying.
 
+const go = (
+  questionLanguage,
+  answerLanguage,
+  sentenceFormulaSymbol,
+  ref,
+  useDummy,
+  args
+) => {
+  return request(app)
+    .get("/api/palette")
+    .send({
+      questionLanguage,
+      answerLanguage,
+      useDummy,
+      sentenceFormulaSymbol,
+      ...args,
+    })
+    .expect(200)
+    .then((res) => {
+      testingUtils.checkTranslationsOfGivenRef(
+        res,
+        ref,
+        questionLanguage,
+        answerLanguage
+      );
+    });
+};
+
 describe("/api", function () {
   this.timeout(7000);
 
@@ -90,619 +118,239 @@ describe("/api", function () {
         });
     });
     it("#pal21-02a GET 200 YES: Engpol. A POL Plurale Tantum is actually Singular.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy68a",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "One door.",
-              POL: ["Jedne drzwi."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "One door.",
+          POL: ["Jedne drzwi."],
+        },
+      ];
+      return go("ENG", "POL", "dummy68a", ref, true);
     });
     it("#pal21-02b GET 200 YES: Poleng. A POL Plurale Tantum is actually Singular.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy68a",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["One door."],
-              POL: "Jedne drzwi.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["One door."],
+          POL: "Jedne drzwi.",
+        },
+      ];
+      return go("POL", "ENG", "dummy68a", ref, true);
     });
     it("#pal21-02c GET 200 YES: Engpol. A POL Plurale Tantum is actually Plural.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy68b",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "Two doors.",
-              POL: ["Dwoje drzwi."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "Two doors.",
+          POL: ["Dwoje drzwi."],
+        },
+      ];
+      return go("ENG", "POL", "dummy68b", ref, true);
     });
     it("#pal21-02d GET 200 YES: Poleng. A POL Plurale Tantum is actually Plural.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy68b",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["Two doors."],
-              POL: "Dwoje drzwi.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["Two doors."],
+          POL: "Dwoje drzwi.",
+        },
+      ];
+      return go("POL", "ENG", "dummy68b", ref, true);
     });
     it("#pal21-03a GET 200 YES: Engpol. An ENG Plurale Tantum is actually Singular.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy68c",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "Tweezers are.",
-              POL: ["Pinceta jest."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "Tweezers are.",
+          POL: ["Pinceta jest."],
+        },
+      ];
+      return go("ENG", "POL", "dummy68c", ref, true);
     });
     it("#pal21-03b GET 200 YES: Poleng. An ENG Plurale Tantum is actually Singular.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy68c",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["Tweezers are."],
-              POL: "Pinceta jest.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["Tweezers are."],
+          POL: "Pinceta jest.",
+        },
+      ];
+      return go("POL", "ENG", "dummy68c", ref, true);
     });
     it("#pal21-03c GET 200 YES: Engpol. An ENG Plurale Tantum is actually Plural.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy68d",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "Tweezers are.",
-              POL: ["Pincety są."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "Tweezers are.",
+          POL: ["Pincety są."],
+        },
+      ];
+      return go("ENG", "POL", "dummy68d", ref, true);
     });
     it("#pal21-03d GET 200 YES: Poleng. An ENG Plurale Tantum is actually Plural.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy68d",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["Tweezers are."],
-              POL: "Pincety są.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["Tweezers are."],
+          POL: "Pincety są.",
+        },
+      ];
+      return go("POL", "ENG", "dummy68d", ref, true);
     });
     it("#pal21-04a GET 200 YES: Engpol. An ENG Singulare Tantum is actually Singular.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy68e",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "Dust is.",
-              POL: ["Pył jest."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "Dust is.",
+          POL: ["Pył jest."],
+        },
+      ];
+      return go("ENG", "POL", "dummy68e", ref, true);
     });
     it("#pal21-04b GET 200 YES: Poleng. An ENG Singulare Tantum is actually Singular.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy68e",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["Dust is."],
-              POL: "Pył jest.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["Dust is."],
+          POL: "Pył jest.",
+        },
+      ];
+      return go("POL", "ENG", "dummy68e", ref, true);
     });
     it("#pal21-04c GET 200 YES: Engpol. An ENG Singulare Tantum is actually Plural.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy68f",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "Dust is.",
-              POL: ["Pyły są."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "Dust is.",
+          POL: ["Pyły są."],
+        },
+      ];
+      return go("ENG", "POL", "dummy68f", ref, true);
     });
     it("#pal21-04d GET 200 YES: Poleng. An ENG Singulare Tantum is actually Plural.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy68f",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["Dust is."],
-              POL: "Pyły są.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["Dust is."],
+          POL: "Pyły są.",
+        },
+      ];
+      return go("POL", "ENG", "dummy68f", ref, true);
     });
   });
 
   describe("/palette - Stage 20: Step-O: Omit particular traitValues from being a valid translation.", () => {
     it("#pal20-01a GET 200 YES: Engpol. 'I see a rat.'", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy67a",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["I can see a rat.", "I see a rat."],
-              POL: ["Widzę szczura."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["I can see a rat.", "I see a rat."],
+          POL: ["Widzę szczura."],
+        },
+      ];
+      return go("ENG", "POL", "dummy67a", ref, true);
     });
     it("#pal20-01c GET 200 YES: Poleng. 'I see a rat.'", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy67a",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["I see a rat.", "I can see a rat."],
-              POL: "Widzę szczura.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["I see a rat.", "I can see a rat."],
+          POL: "Widzę szczura.",
+        },
+      ];
+      return go("POL", "ENG", "dummy67a", ref, true);
     });
   });
 
   describe("/palette - Stage 19: Step-L: Pronombre translation of gendered objects eg Pomidor/Cebula.", () => {
     //#pal19-00 alias #pal18-09, yes indeed   "It is red." <-> "Ono jest czerwone."
     it("#pal19-01a GET 200 YES: Engpol. 'There's a woman and I see her.'", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy64a",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "There's a woman and I see her.",
-              POL: ["Jest kobieta i widzę ją."],
-            },
-            {
-              ENG: "There's a boy and I see him.",
-              POL: ["Jest chłopiec i widzę go.", "Jest chłopiec i widzę jego."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "There's a woman and I see her.",
+          POL: ["Jest kobieta i widzę ją."],
+        },
+        {
+          ENG: "There's a boy and I see him.",
+          POL: ["Jest chłopiec i widzę go.", "Jest chłopiec i widzę jego."],
+        },
+      ];
+      return go("ENG", "POL", "dummy64a", ref, true);
     });
     it("#pal19-01c GET 200 YES: Poleng. 'There's a woman and I see her.'", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy64a",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: [
-                "There's a woman and I see her.",
-                "There's a woman and I am seeing her.",
-                "There's a lady and I see her.",
-                "There's a lady and I am seeing her.",
-              ],
-              POL: "Jest kobieta i widzę ją.",
-            },
-            {
-              ENG: [
-                "There's a boy and I see him.",
-                "There's a boy and I am seeing him.",
-              ],
-              POL: "Jest chłopiec i widzę go.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: [
+            "There's a woman and I see her.",
+            "There's a woman and I am seeing her.",
+            "There's a lady and I see her.",
+            "There's a lady and I am seeing her.",
+          ],
+          POL: "Jest kobieta i widzę ją.",
+        },
+        {
+          ENG: [
+            "There's a boy and I see him.",
+            "There's a boy and I am seeing him.",
+          ],
+          POL: "Jest chłopiec i widzę go.",
+        },
+      ];
+      return go("POL", "ENG", "dummy64a", ref, true);
     });
     it("#pal19-02a GET 200 YES: Engpol. 'There's an apple and I see it.'", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy64b",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "There's an apple and I see it.",
-              POL: ["Jest jabłko i widzę je."],
-            },
-            {
-              ENG: "There's an onion and I see it.",
-              POL: ["Jest cebula i widzę ją."],
-            },
-            {
-              ENG: "There's a tomato and I see it.",
-              POL: ["Jest pomidor i widzę go.", "Jest pomidor i widzę jego."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "There's an apple and I see it.",
+          POL: ["Jest jabłko i widzę je."],
+        },
+        {
+          ENG: "There's an onion and I see it.",
+          POL: ["Jest cebula i widzę ją."],
+        },
+        {
+          ENG: "There's a tomato and I see it.",
+          POL: ["Jest pomidor i widzę go.", "Jest pomidor i widzę jego."],
+        },
+      ];
+      return go("ENG", "POL", "dummy64b", ref, true);
     });
     it("#pal19-02c GET 200 YES: Poleng. 'There's an apple and I see it.'", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy64b",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: [
-                "There's an apple and I see it.",
-                "There's an apple and I am seeing it.",
-              ],
-              POL: "Jest jabłko i widzę je.",
-            },
-            {
-              ENG: [
-                "There's an onion and I see it.",
-                "There's an onion and I am seeing it.",
-              ],
-              POL: "Jest cebula i widzę ją.",
-            },
-            {
-              ENG: [
-                "There's a tomato and I see it.",
-                "There's a tomato and I am seeing it.",
-              ],
-              POL: "Jest pomidor i widzę go.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: [
+            "There's an apple and I see it.",
+            "There's an apple and I am seeing it.",
+          ],
+          POL: "Jest jabłko i widzę je.",
+        },
+        {
+          ENG: [
+            "There's an onion and I see it.",
+            "There's an onion and I am seeing it.",
+          ],
+          POL: "Jest cebula i widzę ją.",
+        },
+        {
+          ENG: [
+            "There's a tomato and I see it.",
+            "There's a tomato and I am seeing it.",
+          ],
+          POL: "Jest pomidor i widzę go.",
+        },
+      ];
+      return go("POL", "ENG", "dummy64b", ref, true);
     });
     it("#pal19-03a GET 200 YES: Engpol. 'There's a rat and I see him/her/it.'", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy65a",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "There's a rat and I see it.",
-              POL: ["Jest szczur i widzę go.", "Jest szczur i widzę jego."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "There's a rat and I see it.",
+          POL: ["Jest szczur i widzę go.", "Jest szczur i widzę jego."],
+        },
+      ];
+      return go("ENG", "POL", "dummy65a", ref, true);
     });
     it("#pal19-03c GET 200 YES: Poleng. 'There's a rat and I see him/her/it.'", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy65a",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: [
-                "There's a rat and I see it.",
-                "There's a rat and I am seeing it.",
-                "There's a rat and I see him.",
-                "There's a rat and I am seeing him.",
-                "There's a rat and I see her.",
-                "There's a rat and I am seeing her.",
-              ],
-              POL: "Jest szczur i widzę go.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: [
+            "There's a rat and I see it.",
+            "There's a rat and I am seeing it.",
+            "There's a rat and I see him.",
+            "There's a rat and I am seeing him.",
+            "There's a rat and I see her.",
+            "There's a rat and I am seeing her.",
+          ],
+          POL: "Jest szczur i widzę go.",
+        },
+      ];
+      return go("POL", "ENG", "dummy65a", ref, true);
     });
   });
 
@@ -1311,570 +959,348 @@ describe("/api", function () {
 
   describe("/palette - Stage 18B: Annotations: MGNs and metagenders", () => {
     it("#pal18-10a GET 200 YES: Engpol. 'The doctor writes.'", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "122 The doctor writes",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "The doctor (male) writes.",
-              POL: ["Lekarz pisze."],
-            },
-            {
-              ENG: "The doctor (female) writes.",
-              POL: ["Lekarka pisze."],
-            },
-            {
-              ENG: ["The doctors (males) write.", "The doctors (mixed) write."],
-              POL: ["Lekarze piszą."],
-            },
-            {
-              ENG: "The doctors (females) write.",
-              POL: ["Lekarki piszą."],
-            },
-            {
-              ENG: "The doctor (male) wrote.",
-              POL: ["Lekarz napisał."],
-            },
-            {
-              ENG: "The doctor (female) wrote.",
-              POL: ["Lekarka napisała."],
-            },
-            {
-              ENG: ["The doctors (males) wrote.", "The doctors (mixed) wrote."],
-              POL: ["Lekarze napisali."],
-            },
-            {
-              ENG: "The doctors (females) wrote.",
-              POL: ["Lekarki napisały."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "The doctor (male) writes.",
+          POL: ["Lekarz pisze."],
+        },
+        {
+          ENG: "The doctor (female) writes.",
+          POL: ["Lekarka pisze."],
+        },
+        {
+          ENG: ["The doctors (males) write.", "The doctors (mixed) write."],
+          POL: ["Lekarze piszą."],
+        },
+        {
+          ENG: "The doctors (females) write.",
+          POL: ["Lekarki piszą."],
+        },
+        {
+          ENG: "The doctor (male) wrote.",
+          POL: ["Lekarz napisał."],
+        },
+        {
+          ENG: "The doctor (female) wrote.",
+          POL: ["Lekarka napisała."],
+        },
+        {
+          ENG: ["The doctors (males) wrote.", "The doctors (mixed) wrote."],
+          POL: ["Lekarze napisali."],
+        },
+        {
+          ENG: "The doctors (females) wrote.",
+          POL: ["Lekarki napisały."],
+        },
+      ];
+      return go("ENG", "POL", "122 The doctor writes", ref);
     });
     it("#pal18-10b GET 200 YES: Engpol. 'The doctor writes.' PDS", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "122 The doctor writes",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "The doctor writes.",
-              POL: ["Lekarz pisze.", "Lekarka pisze."],
-            },
-            {
-              ENG: "The doctors write.",
-              POL: ["Lekarze piszą.", "Lekarki piszą."],
-            },
-            {
-              ENG: "The doctor wrote.",
-              POL: ["Lekarz napisał.", "Lekarka napisała."],
-            },
-            {
-              ENG: "The doctors wrote.",
-              POL: ["Lekarze napisali.", "Lekarki napisały."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "The doctor writes.",
+          POL: ["Lekarz pisze.", "Lekarka pisze."],
+        },
+        {
+          ENG: "The doctors write.",
+          POL: ["Lekarze piszą.", "Lekarki piszą."],
+        },
+        {
+          ENG: "The doctor wrote.",
+          POL: ["Lekarz napisał.", "Lekarka napisała."],
+        },
+        {
+          ENG: "The doctors wrote.",
+          POL: ["Lekarze napisali.", "Lekarki napisały."],
+        },
+      ];
+      return go("ENG", "POL", "122 The doctor writes", ref, false, {
+        pleaseDontSpecify: true,
+      });
     });
     it("#pal18-10c GET 200 YES: Poleng. 'The doctor writes.'", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "122 The doctor writes",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["The doctor writes.", "The doctor is writing."],
-              POL: "Lekarz pisze.",
-            },
-            {
-              ENG: ["The doctor writes.", "The doctor is writing."],
-              POL: "Lekarka pisze.",
-            },
-            {
-              ENG: ["The doctors write.", "The doctors are writing."],
-              POL: "Lekarze piszą.",
-            },
-            {
-              ENG: ["The doctors write.", "The doctors are writing."],
-              POL: "Lekarki piszą.",
-            },
-            {
-              ENG: [
-                "The doctor wrote.",
-                "The doctor has written.",
-                "The doctor had written.",
-              ],
-              POL: "Lekarz napisał.",
-            },
-            {
-              ENG: [
-                "The doctor wrote.",
-                "The doctor has written.",
-                "The doctor had written.",
-              ],
-              POL: "Lekarka napisała.",
-            },
-            {
-              ENG: [
-                "The doctors wrote.",
-                "The doctors have written.",
-                "The doctors had written.",
-              ],
-              POL: "Lekarze napisali.",
-            },
-            {
-              ENG: [
-                "The doctors wrote.",
-                "The doctors have written.",
-                "The doctors had written.",
-              ],
-              POL: "Lekarki napisały.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["The doctor writes.", "The doctor is writing."],
+          POL: "Lekarz pisze.",
+        },
+        {
+          ENG: ["The doctor writes.", "The doctor is writing."],
+          POL: "Lekarka pisze.",
+        },
+        {
+          ENG: ["The doctors write.", "The doctors are writing."],
+          POL: "Lekarze piszą.",
+        },
+        {
+          ENG: ["The doctors write.", "The doctors are writing."],
+          POL: "Lekarki piszą.",
+        },
+        {
+          ENG: [
+            "The doctor wrote.",
+            "The doctor has written.",
+            "The doctor had written.",
+          ],
+          POL: "Lekarz napisał.",
+        },
+        {
+          ENG: [
+            "The doctor wrote.",
+            "The doctor has written.",
+            "The doctor had written.",
+          ],
+          POL: "Lekarka napisała.",
+        },
+        {
+          ENG: [
+            "The doctors wrote.",
+            "The doctors have written.",
+            "The doctors had written.",
+          ],
+          POL: "Lekarze napisali.",
+        },
+        {
+          ENG: [
+            "The doctors wrote.",
+            "The doctors have written.",
+            "The doctors had written.",
+          ],
+          POL: "Lekarki napisały.",
+        },
+      ];
+      return go("POL", "ENG", "122 The doctor writes", ref);
     });
     it("#pal18-10d GET 200 YES: Poleng. 'The doctor writes.' PDS", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "122 The doctor writes",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["The doctor writes.", "The doctor is writing."],
-              POL: "Lekarz pisze.",
-            },
-            {
-              ENG: ["The doctor writes.", "The doctor is writing."],
-              POL: "Lekarka pisze.",
-            },
-            {
-              ENG: ["The doctors write.", "The doctors are writing."],
-              POL: "Lekarze piszą.",
-            },
-            {
-              ENG: ["The doctors write.", "The doctors are writing."],
-              POL: "Lekarki piszą.",
-            },
-            {
-              ENG: [
-                "The doctor wrote.",
-                "The doctor has written.",
-                "The doctor had written.",
-              ],
-              POL: "Lekarz napisał.",
-            },
-            {
-              ENG: [
-                "The doctor wrote.",
-                "The doctor has written.",
-                "The doctor had written.",
-              ],
-              POL: "Lekarka napisała.",
-            },
-            {
-              ENG: [
-                "The doctors wrote.",
-                "The doctors have written.",
-                "The doctors had written.",
-              ],
-              POL: "Lekarze napisali.",
-            },
-            {
-              ENG: [
-                "The doctors wrote.",
-                "The doctors have written.",
-                "The doctors had written.",
-              ],
-              POL: "Lekarki napisały.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["The doctor writes.", "The doctor is writing."],
+          POL: "Lekarz pisze.",
+        },
+        {
+          ENG: ["The doctor writes.", "The doctor is writing."],
+          POL: "Lekarka pisze.",
+        },
+        {
+          ENG: ["The doctors write.", "The doctors are writing."],
+          POL: "Lekarze piszą.",
+        },
+        {
+          ENG: ["The doctors write.", "The doctors are writing."],
+          POL: "Lekarki piszą.",
+        },
+        {
+          ENG: [
+            "The doctor wrote.",
+            "The doctor has written.",
+            "The doctor had written.",
+          ],
+          POL: "Lekarz napisał.",
+        },
+        {
+          ENG: [
+            "The doctor wrote.",
+            "The doctor has written.",
+            "The doctor had written.",
+          ],
+          POL: "Lekarka napisała.",
+        },
+        {
+          ENG: [
+            "The doctors wrote.",
+            "The doctors have written.",
+            "The doctors had written.",
+          ],
+          POL: "Lekarze napisali.",
+        },
+        {
+          ENG: [
+            "The doctors wrote.",
+            "The doctors have written.",
+            "The doctors had written.",
+          ],
+          POL: "Lekarki napisały.",
+        },
+      ];
+      return go("POL", "ENG", "122 The doctor writes", ref, false, {
+        pleaseDontSpecify: true,
+      });
     });
     it("#pal18-11a GET 200 YES: Engpol. 'The doctor writes.' stCh specified male", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy63a",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "The doctor (male) writes.",
-              POL: ["Lekarz pisze."],
-            },
-            {
-              ENG: ["The doctors (males) write.", "The doctors (mixed) write."],
-              POL: ["Lekarze piszą."],
-            },
-            {
-              ENG: "The doctor (male) wrote.",
-              POL: ["Lekarz napisał."],
-            },
-            {
-              ENG: ["The doctors (males) wrote.", "The doctors (mixed) wrote."],
-              POL: ["Lekarze napisali."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "The doctor (male) writes.",
+          POL: ["Lekarz pisze."],
+        },
+        {
+          ENG: ["The doctors (males) write.", "The doctors (mixed) write."],
+          POL: ["Lekarze piszą."],
+        },
+        {
+          ENG: "The doctor (male) wrote.",
+          POL: ["Lekarz napisał."],
+        },
+        {
+          ENG: ["The doctors (males) wrote.", "The doctors (mixed) wrote."],
+          POL: ["Lekarze napisali."],
+        },
+      ];
+      return go("ENG", "POL", "dummy63a", ref, true);
     });
     it("#pal18-11c GET 200 YES: Poleng. 'The doctor writes.' stCh specified male", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy63a",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["The doctor writes.", "The doctor is writing."],
-              POL: "Lekarz pisze.",
-            },
-            {
-              ENG: ["The doctors write.", "The doctors are writing."],
-              POL: "Lekarze piszą.",
-            },
-            {
-              ENG: [
-                "The doctor wrote.",
-                "The doctor has written.",
-                "The doctor had written.",
-              ],
-              POL: "Lekarz napisał.",
-            },
-            {
-              ENG: [
-                "The doctors wrote.",
-                "The doctors have written.",
-                "The doctors had written.",
-              ],
-              POL: "Lekarze napisali.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["The doctor writes.", "The doctor is writing."],
+          POL: "Lekarz pisze.",
+        },
+        {
+          ENG: ["The doctors write.", "The doctors are writing."],
+          POL: "Lekarze piszą.",
+        },
+        {
+          ENG: [
+            "The doctor wrote.",
+            "The doctor has written.",
+            "The doctor had written.",
+          ],
+          POL: "Lekarz napisał.",
+        },
+        {
+          ENG: [
+            "The doctors wrote.",
+            "The doctors have written.",
+            "The doctors had written.",
+          ],
+          POL: "Lekarze napisali.",
+        },
+      ];
+      return go("POL", "ENG", "dummy63a", ref, true);
     });
     it("#pal18-12a GET 200 YES: Engpol. 'The doctor writes.' stCh specified nonvirile", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy63b",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "The doctors (females) write.",
-              POL: ["Lekarki piszą."],
-            },
-            {
-              ENG: "The doctors (females) wrote.",
-              POL: ["Lekarki napisały."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "The doctors (females) write.",
+          POL: ["Lekarki piszą."],
+        },
+        {
+          ENG: "The doctors (females) wrote.",
+          POL: ["Lekarki napisały."],
+        },
+      ];
+      return go("ENG", "POL", "dummy63b", ref, true);
     });
     it("#pal18-12c GET 200 YES: Poleng. 'The doctor writes.' stCh specified nonvirile", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy63b",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["The doctors write.", "The doctors are writing."],
-              POL: "Lekarki piszą.",
-            },
-            {
-              ENG: [
-                "The doctors wrote.",
-                "The doctors have written.",
-                "The doctors had written.",
-              ],
-              POL: "Lekarki napisały.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["The doctors write.", "The doctors are writing."],
+          POL: "Lekarki piszą.",
+        },
+        {
+          ENG: [
+            "The doctors wrote.",
+            "The doctors have written.",
+            "The doctors had written.",
+          ],
+          POL: "Lekarki napisały.",
+        },
+      ];
+      return go("POL", "ENG", "dummy63b", ref, true);
     });
     it("#pal18-13a GET 200 YES: Engpol. 'The doctor writes.' stCh specified female", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy63c",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "The doctor (female) writes.",
-              POL: ["Lekarka pisze."],
-            },
-            {
-              ENG: "The doctors (females) write.",
-              POL: ["Lekarki piszą."],
-            },
-            {
-              ENG: "The doctors (mixed) write.",
-              POL: ["Lekarze piszą."],
-            },
-            {
-              ENG: "The doctor (female) wrote.",
-              POL: ["Lekarka napisała."],
-            },
-            {
-              ENG: "The doctors (females) wrote.",
-              POL: ["Lekarki napisały."],
-            },
-            {
-              ENG: "The doctors (mixed) wrote.",
-              POL: ["Lekarze napisali."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "The doctor (female) writes.",
+          POL: ["Lekarka pisze."],
+        },
+        {
+          ENG: "The doctors (females) write.",
+          POL: ["Lekarki piszą."],
+        },
+        {
+          ENG: "The doctors (mixed) write.",
+          POL: ["Lekarze piszą."],
+        },
+        {
+          ENG: "The doctor (female) wrote.",
+          POL: ["Lekarka napisała."],
+        },
+        {
+          ENG: "The doctors (females) wrote.",
+          POL: ["Lekarki napisały."],
+        },
+        {
+          ENG: "The doctors (mixed) wrote.",
+          POL: ["Lekarze napisali."],
+        },
+      ];
+      return go("ENG", "POL", "dummy63c", ref, true);
     });
     it("#pal18-13c GET 200 YES: Poleng. 'The doctor writes.' stCh specified female", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy63c",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["The doctor writes.", "The doctor is writing."],
-              POL: "Lekarka pisze.",
-            },
-            {
-              ENG: ["The doctors write.", "The doctors are writing."],
-              POL: "Lekarki piszą.",
-            },
-            {
-              ENG: [
-                "The doctor wrote.",
-                "The doctor has written.",
-                "The doctor had written.",
-              ],
-              POL: "Lekarka napisała.",
-            },
-            {
-              ENG: [
-                "The doctors wrote.",
-                "The doctors have written.",
-                "The doctors had written.",
-              ],
-              POL: "Lekarki napisały.",
-            },
-            {
-              ENG: [
-                "The doctors wrote.",
-                "The doctors have written.",
-                "The doctors had written.",
-              ],
-              POL: "Lekarze napisali.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["The doctor writes.", "The doctor is writing."],
+          POL: "Lekarka pisze.",
+        },
+        {
+          ENG: ["The doctors write.", "The doctors are writing."],
+          POL: "Lekarki piszą.",
+        },
+        {
+          ENG: [
+            "The doctor wrote.",
+            "The doctor has written.",
+            "The doctor had written.",
+          ],
+          POL: "Lekarka napisała.",
+        },
+        {
+          ENG: [
+            "The doctors wrote.",
+            "The doctors have written.",
+            "The doctors had written.",
+          ],
+          POL: "Lekarki napisały.",
+        },
+        {
+          ENG: [
+            "The doctors wrote.",
+            "The doctors have written.",
+            "The doctors had written.",
+          ],
+          POL: "Lekarze napisali.",
+        },
+      ];
+      return go("POL", "ENG", "dummy63c", ref, true);
     });
     it("#pal18-14a GET 200 YES: Engpol. 'The doctor writes.' stCh specified virile", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy63d",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["The doctors (males) write.", "The doctors (mixed) write."],
-              POL: ["Lekarze piszą."],
-            },
-            {
-              ENG: ["The doctors (males) wrote.", "The doctors (mixed) wrote."],
-              POL: ["Lekarze napisali."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["The doctors (males) write.", "The doctors (mixed) write."],
+          POL: ["Lekarze piszą."],
+        },
+        {
+          ENG: ["The doctors (males) wrote.", "The doctors (mixed) wrote."],
+          POL: ["Lekarze napisali."],
+        },
+      ];
+      return go("ENG", "POL", "dummy63d", ref, true);
     });
     it("#pal18-14c GET 200 YES: Poleng. 'The doctor writes.' stCh specified virile", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy63d",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["The doctors write.", "The doctors are writing."],
-              POL: "Lekarze piszą.",
-            },
-            {
-              ENG: [
-                "The doctors wrote.",
-                "The doctors have written.",
-                "The doctors had written.",
-              ],
-              POL: "Lekarze napisali.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["The doctors write.", "The doctors are writing."],
+          POL: "Lekarze piszą.",
+        },
+        {
+          ENG: [
+            "The doctors wrote.",
+            "The doctors have written.",
+            "The doctors had written.",
+          ],
+          POL: "Lekarze napisali.",
+        },
+      ];
+      return go("POL", "ENG", "dummy63d", ref, true);
     });
   });
 
