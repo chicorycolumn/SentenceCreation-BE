@@ -2,7 +2,46 @@
 //If you mark a traitKey false, or omit it                   it will not be.
 
 exports.wordsBank = {
-  npe: [],
+  npe: [
+    {
+      //selectors
+      lemma: "medico",
+      id: "spa-npe-001-medico",
+      gender: "m",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "medico",
+          gen: "del medico",
+        },
+        plural: {
+          nom: "medicos",
+          gen: "de los medicos",
+        },
+      },
+    },
+    {
+      //selectors
+      lemma: "medica",
+      id: "spa-npe-001-medica",
+      gender: "f",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "medica",
+          gen: "de la medica",
+        },
+        plural: {
+          nom: "medicas",
+          gen: "de las medicas",
+        },
+      },
+    },
+  ],
   ver: [],
   pro: [],
   pre: [],
@@ -48,7 +87,7 @@ exports.wordsBank = {
         },
         plural: {
           nom: "osos",
-          gen: "del los osos",
+          gen: "de los osos",
         },
       },
     },

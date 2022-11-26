@@ -23,4 +23,28 @@ exports.dummySentenceFormulasBank = [
     primaryOrders: [["adj-1", "nco-1"]],
     additionalOrders: [],
   },
+  {
+    sentenceFormulaSymbol: "dummy73b",
+    sentenceFormulaId: "SPA-dummy73b",
+    equivalents: {
+      ENG: ["ENG-dummy73b"],
+      POL: ["POL-dummy73b"],
+      SPA: ["SPA-dummy73b"],
+    },
+    sentenceStructure: [
+      {
+        chunkId: "npe-1",
+        specificIds: ["spa-npe-001-medico"],
+        // number: ["singular"],
+        gcase: ["nom"],
+      },
+      {
+        chunkId: "adj-1",
+        agreeWith: "npe-1",
+        specificIds: ["spa-adj-001-rojo"],
+      },
+    ],
+    primaryOrders: [["adj-1", "npe-1"]],
+    additionalOrders: [],
+  },
 ];

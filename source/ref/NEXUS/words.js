@@ -49,7 +49,7 @@ exports.wordsBank = {
     {
       key: "npe-0004-doctor",
       traductions: {
-        SPA: [],
+        SPA: ["spa-npe-001-medico"],
         ENG: ["eng-npe-005-doctor"],
         POL: ["pol-npe-015-lekarz"],
       },
