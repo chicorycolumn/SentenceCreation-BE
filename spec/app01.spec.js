@@ -383,656 +383,341 @@ describe("/api", function () {
       ]);
     });
     it("#pal04-01d GET 200 YES: Returns a sentence with a single verb, with tense number and gender specified.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "dummy13b present 2per f",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect(["Czytasz.", "Czytacie."]).to.include(
-            res.body.questionSentenceArr[0]
-          );
-          consol.log(res.body);
-        });
+      return runPaletteTest3("POL", null, "dummy13b present 2per f", [
+        "Czytasz.",
+        "Czytacie.",
+      ]);
     });
     it("#pal04-01e GET 200 YES: Returns a sentence with a single verb in infinitive.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "dummy14 infinitive",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect(["Czytać."]).to.include(res.body.questionSentenceArr[0]);
-          consol.log(res.body);
-        });
+      return runPaletteTest3("POL", null, "dummy14 infinitive", ["Czytać."]);
     });
     it("#pal04-01f GET 200 YES: Returns a sentence with a single verb in impersonal.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "dummy15 impersonal",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect([
-            "Czyta się.",
-            "Czytano.",
-            "Będzie czytać się.",
-            "Czytano by.",
-          ]).to.include(res.body.questionSentenceArr[0]);
-          consol.log(res.body);
-        });
+      return runPaletteTest3("POL", null, "dummy15 impersonal", [
+        "Czyta się.",
+        "Czytano.",
+        "Będzie czytać się.",
+        "Czytano by.",
+      ]);
     });
     it("#pal04-01g GET 200 YES: Returns a sentence with a single verb in impersonal, even when plural is specified (returns just those impersonals that have plural use).", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "dummy15a impersonal plural",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect([
-            "Czytano.",
-            "Czytano by.",
-            "Będzie czytać się.",
-            "Czyta się.",
-          ]).to.include(res.body.questionSentenceArr[0]);
-          consol.log(res.body);
-        });
+      return runPaletteTest3("POL", null, "dummy15a impersonal plural", [
+        "Czytano.",
+        "Czytano by.",
+        "Będzie czytać się.",
+        "Czyta się.",
+      ]);
     });
     it("#pal04-01h GET 200 YES: Returns a sentence with a single verb in impersonal, even when plural is specified (returns just those impersonals that have plural use).", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "dummy15b impersonal plural",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect([
-            "Przeczyta się.",
-            "Przeczytano.",
-            "Przeczytano by.",
-          ]).to.include(res.body.questionSentenceArr[0]);
-          consol.log(res.body);
-        });
+      return runPaletteTest3("POL", null, "dummy15b impersonal plural", [
+        "Przeczyta się.",
+        "Przeczytano.",
+        "Przeczytano by.",
+      ]);
     });
     it("#pal04-02a GET 200 YES: Returns a sentence with a verb's contemporaryAdverbial participle.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "dummy16 contemporaryAdverbial",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect(["Czytając."]).to.include(res.body.questionSentenceArr[0]);
-          consol.log(res.body);
-        });
+      return runPaletteTest3("POL", null, "dummy16 contemporaryAdverbial", [
+        "Czytając.",
+      ]);
     });
     it("#pal04-02b GET 200 YES: Returns a sentence with a verb's contemporaryAdverbial participle, ignoring gender.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "dummy17 contemporaryAdverbial female",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect(["Czytając."]).to.include(res.body.questionSentenceArr[0]);
-          consol.log(res.body);
-        });
+      return runPaletteTest3(
+        "POL",
+        null,
+        "dummy17 contemporaryAdverbial female",
+        ["Czytając."]
+      );
     });
     it("#pal04-02c GET 200 YES: Returns a sentence with a verb's contemporaryAdverbial participle, ignoring gender and person.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "dummy18 contemporaryAdverbial n virile 2per",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect(["Czytając."]).to.include(res.body.questionSentenceArr[0]);
-          consol.log(res.body);
-        });
+      return runPaletteTest3(
+        "POL",
+        null,
+        "dummy18 contemporaryAdverbial n virile 2per",
+        ["Czytając."]
+      );
     });
     it("#pal04-02d GET 200 YES: Returns a sentence with a verb's anteriorAdverbial participle.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "dummy16a anteriorAdverbial",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect(["Przeczytawszy."]).to.include(
-            res.body.questionSentenceArr[0]
-          );
-          consol.log(res.body);
-        });
+      return runPaletteTest3("POL", null, "dummy16a anteriorAdverbial", [
+        "Przeczytawszy.",
+      ]);
     });
     it("#pal04-02e GET 200 YES: Returns a sentence with a verb's anteriorAdverbial participle, ignoring gender.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "dummy17a anteriorAdverbial female",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect(["Przeczytawszy."]).to.include(
-            res.body.questionSentenceArr[0]
-          );
-          consol.log(res.body);
-        });
+      return runPaletteTest3("POL", null, "dummy17a anteriorAdverbial female", [
+        "Przeczytawszy.",
+      ]);
     });
     it("#pal04-02f GET 200 YES: Returns a sentence with a verb's anteriorAdverbial participle, ignoring gender and person.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "dummy18a anteriorAdverbial n virile 2per",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect(["Przeczytawszy."]).to.include(
-            res.body.questionSentenceArr[0]
-          );
-          consol.log(res.body);
-        });
+      return runPaletteTest3(
+        "POL",
+        null,
+        "dummy18a anteriorAdverbial n virile 2per",
+        ["Przeczytawszy."]
+      );
     });
     it("#pal04-03a GET 200 YES: Returns a sentence with a single verb's verbalNoun.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "dummy21 verbalNoun",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect(["Czytanie."]).to.include(res.body.questionSentenceArr[0]);
-          consol.log(res.body);
-        });
+      return runPaletteTest3("POL", null, "dummy21 verbalNoun", ["Czytanie."]);
     });
     it("#pal04-04a GET 200 YES: Returns verb in virile when one gender option is given.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "dummy23a past/cond 1per plural m1",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect([
-            "Czytaliśmy.",
-            "Czytaliście.",
-            "Czytali.",
-            "Czytalibyśmy.",
-            "Czytalibyście.",
-            "Czytaliby.",
-          ]).to.include(res.body.questionSentenceArr[0]);
-          consol.log(res.body);
-        });
+      return runPaletteTest3("POL", null, "dummy23a past/cond 1per plural m1", [
+        "Czytaliśmy.",
+        "Czytaliście.",
+        "Czytali.",
+        "Czytalibyśmy.",
+        "Czytalibyście.",
+        "Czytaliby.",
+      ]);
     });
     it("#pal04-04b GET 200 YES: Returns verb in nonvirile when one gender option is given.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "dummy23b past/cond 1per plural m2",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect([
-            "Czytałyśmy.",
-            "Czytałyście.",
-            "Czytały.",
-            "Czytałybyśmy.",
-            "Czytałybyście.",
-            "Czytałyby.",
-          ]).to.include(res.body.questionSentenceArr[0]);
-          consol.log(res.body);
-        });
+      return runPaletteTest3("POL", null, "dummy23b past/cond 1per plural m2", [
+        "Czytałyśmy.",
+        "Czytałyście.",
+        "Czytały.",
+        "Czytałybyśmy.",
+        "Czytałybyście.",
+        "Czytałyby.",
+      ]);
     });
     it("#pal04-04c GET 200 YES: Returns verb in nonvirile when two gender options are given.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "dummy23c past/cond 1per plural f/n",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect([
-            "Czytałyśmy.",
-            "Czytałyście.",
-            "Czytały.",
-            "Czytałybyśmy.",
-            "Czytałybyście.",
-            "Czytałyby.",
-          ]).to.include(res.body.questionSentenceArr[0]);
-          consol.log(res.body);
-        });
+      return runPaletteTest3(
+        "POL",
+        null,
+        "dummy23c past/cond 1per plural f/n",
+        [
+          "Czytałyśmy.",
+          "Czytałyście.",
+          "Czytały.",
+          "Czytałybyśmy.",
+          "Czytałybyście.",
+          "Czytałyby.",
+        ]
+      );
     });
     it("#pal04-05a GET 200 YES: Conjugate verb (as virile or nonvirile) to agree with noun in plural.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "girls were reading",
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect([
-            "Kobiety czytały.",
-            "Chłopcy czytali.",
-            "Chłopaki czytali.",
-            "Chłopacy czytali.",
-          ]).to.include(res.body.questionSentenceArr[0]);
-          consol.log(res.body);
-        });
+      return runPaletteTest3("POL", null, "girls were reading", [
+        "Kobiety czytały.",
+        "Chłopcy czytali.",
+        "Chłopaki czytali.",
+        "Chłopacy czytali.",
+      ]);
     });
     it("#pal04-05b GET 200 YES: Conjugate verb to agree with noun in singular or plural.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "girl is reading",
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect(["Kobieta czyta.", "Kobiety czytają."]).to.include(
-            res.body.questionSentenceArr[0]
-          );
-          consol.log(res.body);
-        });
+      return runPaletteTest3("POL", null, "girl is reading", [
+        "Kobieta czyta.",
+        "Kobiety czytają.",
+      ]);
     });
     it("#pal04-06a GET 200 YES: Select a verb by the Aspect selector.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "dummy20a girl is reading im",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect(["Kobieta czyta.", "Kobiety czytają."]).to.include(
-            res.body.questionSentenceArr[0]
-          );
-          consol.log(res.body);
-        });
+      return runPaletteTest3("POL", null, "dummy20a girl is reading im", [
+        "Kobieta czyta.",
+        "Kobiety czytają.",
+      ]);
     });
     it("#pal04-06b GET 200 YES: Select a verb by the Aspect selector.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "dummy20b girl will read pf",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect(["Kobieta przeczyta.", "Kobiety przeczytają."]).to.include(
-            res.body.questionSentenceArr[0]
-          );
-          consol.log(res.body);
-        });
+      return runPaletteTest3("POL", null, "dummy20b girl will read pf", [
+        "Kobieta przeczyta.",
+        "Kobiety przeczytają.",
+      ]);
     });
     it("#pal04-07a GET 200 YES: Make two verbs agree.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "dummy24a I read and research",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect(["Czytam i badam."]).to.include(
-            res.body.questionSentenceArr[0]
-          );
-          consol.log(res.body);
-        });
+      return runPaletteTest3("POL", null, "dummy24a I read and research", [
+        "Czytam i badam.",
+      ]);
     });
     it("#pal04-07b GET 200 YES: Make two verbs agree when there is a choice of person.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "dummy24b I/you read and research",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect(["Czytam i badam.", "Czytasz i badasz."]).to.include(
-            res.body.questionSentenceArr[0]
-          );
-          consol.log(res.body);
-        });
+      return runPaletteTest3("POL", null, "dummy24b I/you read and research", [
+        "Czytam i badam.",
+        "Czytasz i badasz.",
+      ]);
     });
     it("#pal04-07c GET 200 YES: Make two verbs agree when there is a choice of person, gender, and number.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "dummy24c read and research",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          consol.log(res.body);
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect([
-            "Czytam i badam.",
-            "Czytasz i badasz.",
+      return runPaletteTest3("POL", null, "dummy24c read and research", [
+        "Czytam i badam.",
+        "Czytasz i badasz.",
 
-            "Czytałem i badałem.",
-            "Czytałam i badałam.",
-            "Czytałeś i badałeś.",
-            "Czytałaś i badałaś.",
+        "Czytałem i badałem.",
+        "Czytałam i badałam.",
+        "Czytałeś i badałeś.",
+        "Czytałaś i badałaś.",
 
-            "Czytamy i badamy.",
-            "Czytacie i badacie.",
+        "Czytamy i badamy.",
+        "Czytacie i badacie.",
 
-            "Czytałyśmy i badałyśmy.",
-            "Czytaliśmy i badaliśmy.",
-            "Czytałyście i badałyście.",
-            "Czytaliście i badaliście.",
-          ]).to.include(res.body.questionSentenceArr[0]);
-          consol.log(res.body);
-        });
+        "Czytałyśmy i badałyśmy.",
+        "Czytaliśmy i badaliśmy.",
+        "Czytałyście i badałyście.",
+        "Czytaliście i badaliście.",
+      ]);
     });
   });
 
   describe("/palette - Stage 5: Generate rich sentences (nouns adjectives and verbs).", () => {
     it("#pal05-01a GET 200 YES: Returns a sentence in present.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "girl has red apple",
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect([
-            "Kobieta ma czerwone jabłko.",
-            "Chłopiec ma czerwone jabłko.",
-            "Chłopak ma czerwone jabłko.",
+      return runPaletteTest3("POL", null, "girl has red apple", [
+        "Kobieta ma czerwone jabłko.",
+        "Chłopiec ma czerwone jabłko.",
+        "Chłopak ma czerwone jabłko.",
 
-            "Kobieta ma czerwone jabłka.",
-            "Chłopiec ma czerwone jabłka.",
-            "Chłopak ma czerwone jabłka.",
+        "Kobieta ma czerwone jabłka.",
+        "Chłopiec ma czerwone jabłka.",
+        "Chłopak ma czerwone jabłka.",
 
-            "Kobiety mają czerwone jabłko.",
-            "Chłopcy mają czerwone jabłko.",
-            "Chłopacy mają czerwone jabłko.",
-            "Chłopaki mają czerwone jabłko.",
+        "Kobiety mają czerwone jabłko.",
+        "Chłopcy mają czerwone jabłko.",
+        "Chłopacy mają czerwone jabłko.",
+        "Chłopaki mają czerwone jabłko.",
 
-            "Kobiety mają czerwone jabłka.",
-            "Chłopcy mają czerwone jabłka.",
-            "Chłopacy mają czerwone jabłka.",
-            "Chłopaki mają czerwone jabłka.",
+        "Kobiety mają czerwone jabłka.",
+        "Chłopcy mają czerwone jabłka.",
+        "Chłopacy mają czerwone jabłka.",
+        "Chłopaki mają czerwone jabłka.",
 
-            "Kobieta ma czerwoną cebulę.",
-            "Chłopiec ma czerwoną cebulę.",
-            "Chłopak ma czerwoną cebulę.",
+        "Kobieta ma czerwoną cebulę.",
+        "Chłopiec ma czerwoną cebulę.",
+        "Chłopak ma czerwoną cebulę.",
 
-            "Kobieta ma czerwone cebule.",
-            "Chłopiec ma czerwone cebule.",
-            "Chłopak ma czerwone cebule.",
+        "Kobieta ma czerwone cebule.",
+        "Chłopiec ma czerwone cebule.",
+        "Chłopak ma czerwone cebule.",
 
-            "Kobiety mają czerwoną cebulę.",
-            "Chłopcy mają czerwoną cebulę.",
-            "Chłopacy mają czerwoną cebulę.",
-            "Chłopaki mają czerwoną cebulę.",
+        "Kobiety mają czerwoną cebulę.",
+        "Chłopcy mają czerwoną cebulę.",
+        "Chłopacy mają czerwoną cebulę.",
+        "Chłopaki mają czerwoną cebulę.",
 
-            "Kobiety mają czerwone cebule.",
-            "Chłopcy mają czerwone cebule.",
-            "Chłopacy mają czerwone cebule.",
-            "Chłopaki mają czerwone cebule.",
-          ]).to.include(res.body.questionSentenceArr[0]);
-          consol.log(res.body);
-        });
+        "Kobiety mają czerwone cebule.",
+        "Chłopcy mają czerwone cebule.",
+        "Chłopacy mają czerwone cebule.",
+        "Chłopaki mają czerwone cebule.",
+      ]);
     });
     it("#pal05-01b GET 200 YES: Returns a negative sentence in past.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "girl didn't have red apple",
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect([
-            "Kobieta nie miała czerwonego jabłka.",
-            "Chłopiec nie miał czerwonego jabłka.",
-            "Chłopak nie miał czerwonego jabłka.",
+      return runPaletteTest3("POL", null, "girl didn't have red apple", [
+        "Kobieta nie miała czerwonego jabłka.",
+        "Chłopiec nie miał czerwonego jabłka.",
+        "Chłopak nie miał czerwonego jabłka.",
 
-            "Kobieta nie miała czerwonych jabłek.",
-            "Chłopiec nie miał czerwonych jabłek.",
-            "Chłopak nie miał czerwonych jabłek.",
+        "Kobieta nie miała czerwonych jabłek.",
+        "Chłopiec nie miał czerwonych jabłek.",
+        "Chłopak nie miał czerwonych jabłek.",
 
-            "Kobiety nie miały czerwonego jabłka.",
-            "Chłopcy nie mieli czerwonego jabłka.",
-            "Chłopacy nie mieli czerwonego jabłka.",
-            "Chłopaki nie mieli czerwonego jabłka.",
+        "Kobiety nie miały czerwonego jabłka.",
+        "Chłopcy nie mieli czerwonego jabłka.",
+        "Chłopacy nie mieli czerwonego jabłka.",
+        "Chłopaki nie mieli czerwonego jabłka.",
 
-            "Kobiety nie miały czerwonych jabłek.",
-            "Chłopcy nie mieli czerwonych jabłek.",
-            "Chłopacy nie mieli czerwonych jabłek.",
-            "Chłopaki nie mieli czerwonych jabłek.",
+        "Kobiety nie miały czerwonych jabłek.",
+        "Chłopcy nie mieli czerwonych jabłek.",
+        "Chłopacy nie mieli czerwonych jabłek.",
+        "Chłopaki nie mieli czerwonych jabłek.",
 
-            "Kobieta nie miała czerwonej cebuli.",
-            "Chłopiec nie miał czerwonej cebuli.",
-            "Chłopak nie miał czerwonej cebuli.",
+        "Kobieta nie miała czerwonej cebuli.",
+        "Chłopiec nie miał czerwonej cebuli.",
+        "Chłopak nie miał czerwonej cebuli.",
 
-            "Kobieta nie miała czerwonych cebul.",
-            "Chłopiec nie miał czerwonych cebul.",
-            "Chłopak nie miał czerwonych cebul.",
+        "Kobieta nie miała czerwonych cebul.",
+        "Chłopiec nie miał czerwonych cebul.",
+        "Chłopak nie miał czerwonych cebul.",
 
-            "Kobiety nie miały czerwonej cebuli.",
-            "Chłopcy nie mieli czerwonej cebuli.",
-            "Chłopacy nie mieli czerwonej cebuli.",
-            "Chłopaki nie mieli czerwonej cebuli.",
+        "Kobiety nie miały czerwonej cebuli.",
+        "Chłopcy nie mieli czerwonej cebuli.",
+        "Chłopacy nie mieli czerwonej cebuli.",
+        "Chłopaki nie mieli czerwonej cebuli.",
 
-            "Kobiety nie miały czerwonych cebul.",
-            "Chłopcy nie mieli czerwonych cebul.",
-            "Chłopacy nie mieli czerwonych cebul.",
-            "Chłopaki nie mieli czerwonych cebul.",
-          ]).to.include(res.body.questionSentenceArr[0]);
-          consol.log(res.body);
-        });
+        "Kobiety nie miały czerwonych cebul.",
+        "Chłopcy nie mieli czerwonych cebul.",
+        "Chłopacy nie mieli czerwonych cebul.",
+        "Chłopaki nie mieli czerwonych cebul.",
+      ]);
     });
     it("#pal05-01c GET 200 YES: Returns a negative sentence in past.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "red girl didn't have red apple",
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect([
-            "Czerwona kobieta nie miała czerwonego jabłka.",
-            "Czerwony chłopiec nie miał czerwonego jabłka.",
-            "Czerwony chłopak nie miał czerwonego jabłka.",
+      return runPaletteTest3("POL", null, "red girl didn't have red apple", [
+        "Czerwona kobieta nie miała czerwonego jabłka.",
+        "Czerwony chłopiec nie miał czerwonego jabłka.",
+        "Czerwony chłopak nie miał czerwonego jabłka.",
 
-            "Czerwona kobieta nie miała czerwonych jabłek.",
-            "Czerwony chłopiec nie miał czerwonych jabłek.",
-            "Czerwony chłopak nie miał czerwonych jabłek.",
+        "Czerwona kobieta nie miała czerwonych jabłek.",
+        "Czerwony chłopiec nie miał czerwonych jabłek.",
+        "Czerwony chłopak nie miał czerwonych jabłek.",
 
-            "Czerwone kobiety nie miały czerwonego jabłka.",
-            "Czerwoni chłopcy nie mieli czerwonego jabłka.",
-            "Czerwoni chłopacy nie mieli czerwonego jabłka.",
-            "Czerwoni chłopaki nie mieli czerwonego jabłka.",
+        "Czerwone kobiety nie miały czerwonego jabłka.",
+        "Czerwoni chłopcy nie mieli czerwonego jabłka.",
+        "Czerwoni chłopacy nie mieli czerwonego jabłka.",
+        "Czerwoni chłopaki nie mieli czerwonego jabłka.",
 
-            "Czerwone kobiety nie miały czerwonych jabłek.",
-            "Czerwoni chłopcy nie mieli czerwonych jabłek.",
-            "Czerwoni chłopacy nie mieli czerwonych jabłek.",
-            "Czerwoni chłopaki nie mieli czerwonych jabłek.",
+        "Czerwone kobiety nie miały czerwonych jabłek.",
+        "Czerwoni chłopcy nie mieli czerwonych jabłek.",
+        "Czerwoni chłopacy nie mieli czerwonych jabłek.",
+        "Czerwoni chłopaki nie mieli czerwonych jabłek.",
 
-            "Czerwona kobieta nie miała czerwonej cebuli.",
-            "Czerwony chłopiec nie miał czerwonej cebuli.",
-            "Czerwony chłopak nie miał czerwonej cebuli.",
+        "Czerwona kobieta nie miała czerwonej cebuli.",
+        "Czerwony chłopiec nie miał czerwonej cebuli.",
+        "Czerwony chłopak nie miał czerwonej cebuli.",
 
-            "Czerwona kobieta nie miała czerwonych cebul.",
-            "Czerwony chłopiec nie miał czerwonych cebul.",
-            "Czerwony chłopak nie miał czerwonych cebul.",
+        "Czerwona kobieta nie miała czerwonych cebul.",
+        "Czerwony chłopiec nie miał czerwonych cebul.",
+        "Czerwony chłopak nie miał czerwonych cebul.",
 
-            "Czerwone kobiety nie miały czerwonej cebuli.",
-            "Czerwoni chłopcy nie mieli czerwonej cebuli.",
-            "Czerwoni chłopacy nie mieli czerwonej cebuli.",
-            "Czerwoni chłopaki nie mieli czerwonej cebuli.",
+        "Czerwone kobiety nie miały czerwonej cebuli.",
+        "Czerwoni chłopcy nie mieli czerwonej cebuli.",
+        "Czerwoni chłopacy nie mieli czerwonej cebuli.",
+        "Czerwoni chłopaki nie mieli czerwonej cebuli.",
 
-            "Czerwone kobiety nie miały czerwonych cebul.",
-            "Czerwoni chłopcy nie mieli czerwonych cebul.",
-            "Czerwoni chłopacy nie mieli czerwonych cebul.",
-            "Czerwoni chłopaki nie mieli czerwonych cebul.",
-          ]).to.include(res.body.questionSentenceArr[0]);
-          consol.log(res.body);
-        });
+        "Czerwone kobiety nie miały czerwonych cebul.",
+        "Czerwoni chłopcy nie mieli czerwonych cebul.",
+        "Czerwoni chłopacy nie mieli czerwonych cebul.",
+        "Czerwoni chłopaki nie mieli czerwonych cebul.",
+      ]);
     });
     it("#pal05-02a GET 200 YES: Returns a sentence when selected by tenseDescription.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "girl reads present im",
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect([
-            "Kobieta czyta.",
-            "Chłopiec czyta.",
-            "Chłopak czyta.",
+      return runPaletteTest3("POL", null, "girl reads present im", [
+        "Kobieta czyta.",
+        "Chłopiec czyta.",
+        "Chłopak czyta.",
 
-            "Kobiety czytają.",
-            "Chłopcy czytają.",
-            "Chłopacy czytają.",
-            "Chłopaki czytają.",
-          ]).to.include(res.body.questionSentenceArr[0]);
-          consol.log(res.body);
-        });
+        "Kobiety czytają.",
+        "Chłopcy czytają.",
+        "Chłopacy czytają.",
+        "Chłopaki czytają.",
+      ]);
     });
     it("#pal05-02b GET 200 YES: Returns a sentence when selected by tenseDescription.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "girl reads past pf",
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect([
-            "Kobieta przeczytała.",
-            "Chłopiec przeczytał.",
-            "Chłopak przeczytał.",
+      return runPaletteTest3("POL", null, "girl reads past pf", [
+        "Kobieta przeczytała.",
+        "Chłopiec przeczytał.",
+        "Chłopak przeczytał.",
 
-            "Kobiety przeczytały.",
-            "Chłopcy przeczytali.",
-            "Chłopacy przeczytali.",
-            "Chłopaki przeczytali.",
-          ]).to.include(res.body.questionSentenceArr[0]);
-          consol.log(res.body);
-        });
+        "Kobiety przeczytały.",
+        "Chłopcy przeczytali.",
+        "Chłopacy przeczytali.",
+        "Chłopaki przeczytali.",
+      ]);
     });
     it("#pal05-02c GET 200 YES: Returns a sentence when selected by tenseDescription.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "girl reads future im",
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect([
-            "Kobieta będzie czytała.",
-            "Chłopiec będzie czytał.",
-            "Chłopak będzie czytał.",
+      return runPaletteTest3("POL", null, "girl reads future im", [
+        "Kobieta będzie czytała.",
+        "Chłopiec będzie czytał.",
+        "Chłopak będzie czytał.",
 
-            "Kobiety będą czytały.",
-            "Chłopcy będą czytali.",
-            "Chłopacy będą czytali.",
-            "Chłopaki będą czytali.",
+        "Kobiety będą czytały.",
+        "Chłopcy będą czytali.",
+        "Chłopacy będą czytali.",
+        "Chłopaki będą czytali.",
 
-            "Kobieta będzie czytać.",
-            "Chłopiec będzie czytać.",
-            "Chłopak będzie czytać.",
+        "Kobieta będzie czytać.",
+        "Chłopiec będzie czytać.",
+        "Chłopak będzie czytać.",
 
-            "Kobiety będą czytać.",
-            "Chłopcy będą czytać.",
-            "Chłopacy będą czytać.",
-            "Chłopaki będą czytać.",
-          ]).to.include(res.body.questionSentenceArr[0]);
-          consol.log(res.body);
-        });
+        "Kobiety będą czytać.",
+        "Chłopcy będą czytać.",
+        "Chłopacy będą czytać.",
+        "Chłopaki będą czytać.",
+      ]);
     });
     it("#pal05-03a GET 200 YES: Allow specification of multiple radically different tenseDescriptions, without unwanted cross pollination.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "dummy26",
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect(["Czytałam.", "Przeczytam."]).to.include(
-            res.body.questionSentenceArr[0]
-          );
-          //If "Będę czytała." or "Przeczytałam." are returned, it's because the unwanted cross pollination is happening.
-          consol.log(res.body);
-        });
+      return runPaletteTest3("POL", null, "dummy26", [
+        "Czytałam.",
+        "Przeczytam.",
+      ]);
+      //If "Będę czytała." or "Przeczytałam." are returned, it's because the unwanted cross pollination is happening.
     });
     it("#pal05-03b GET 200 YES: Allow specification of multiple radically different tenseDescriptions, and then translate them. Poleng", () => {
       return request(app)
