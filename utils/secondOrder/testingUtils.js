@@ -12,8 +12,8 @@ exports.runPaletteTest = (
   answerLanguage,
   sentenceFormulaSymbol,
   ref,
-  useDummy,
-  args
+  args,
+  useDummy = sentenceFormulaSymbol.includes("dummy")
 ) => {
   return request(app)
     .get("/api/palette")
