@@ -8,6 +8,7 @@ const consol = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const { it } = require("mocha");
 const testingUtils = require("../utils/secondOrder/testingUtils.js");
 const { generalTranslatedSentencesRef } = testingUtils;
+const { runPaletteTest3 } = testingUtils;
 
 // MGN:            Multi-gender noun. Eg doctor in ENG can be either male or female.
 // ProsMgn:        "My doctor and her book." Connected pronombre reveals gender of MGN. Doesn't need an annotation for doctor as clearly must be lekarka.
@@ -220,86 +221,31 @@ describe("/api", function () {
         });
     });
     it("#pal01-04a GET 200 YES: Checking in console logs whether structureChunks have indeed been updated with the traitValues for eg number, gender, gcase of the finally selected word they structure for.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "I have apple",
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          consol.log(res.body);
-        });
+      return runPaletteTest3("POL", null, "I have apple");
     });
     it("#pal01-05a GET 200 YES: Check order of words in final sentence, based on one specified order.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "dummy09",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect(["Foobar-A foobar-C foobar-B."]).to.include(
-            res.body.questionSentenceArr[0]
-          );
-          consol.log(res.body);
-        });
+      return runPaletteTest3("POL", null, "dummy09", [
+        "Foobar-A foobar-C foobar-B.",
+      ]);
     });
     it("#pal01-05b GET 200 YES: Check order of words in final sentence, based on multiple specified orders.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "dummy10",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect([
-            "Foobar-A foobar-B foobar-C.",
-            "Foobar-A foobar-C foobar-B.",
-            "Foobar-B foobar-A foobar-C.",
-            "Foobar-B foobar-C foobar-A.",
-          ]).to.include(res.body.questionSentenceArr[0]);
-          consol.log(res.body);
-        });
+      return runPaletteTest3("POL", null, "dummy10", [
+        "Foobar-A foobar-B foobar-C.",
+        "Foobar-A foobar-C foobar-B.",
+        "Foobar-B foobar-A foobar-C.",
+        "Foobar-B foobar-C foobar-A.",
+      ]);
     });
     it("#pal01-06a GET 200 YES: Filter by specified lemma.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "I have APPLE",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect(res.body.questionSentenceArr[0]).to.equal("Mam jabłko.");
-          consol.log(res.body);
-        });
+      return runPaletteTest3("POL", null, "dummy I have APPLE", [
+        "Mam jabłko.",
+      ]);
     });
     it("#pal01-06b GET 200 YES: Filter by a selection of multiple specified lemmas.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "I have APPLE/SHIRT",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect(["Mam jabłka.", "Mam majtki."]).to.include(
-            res.body.questionSentenceArr[0]
-          );
-          consol.log(res.body);
-        });
+      return runPaletteTest3("POL", null, "dummy I have APPLE/SHIRT", [
+        "Mam jabłka.",
+        "Mam majtki.",
+      ]);
     });
     it("#pal01-07 Responds 405 if any other methods are used at this endpoint", () => {
       const url = "/api/palette";
@@ -366,150 +312,75 @@ describe("/api", function () {
         });
     });
     it("#pal02-02a GET 200 YES: Returns a sentence where end of inflection chain could be array.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "boys are male",
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          consol.log(res.body);
-        });
+      return runPaletteTest3("POL", null, "boys are male");
     });
   });
 
   describe("/palette - Stage 3: Adjectives", () => {
     it("#pal03-01a GET 200 YES: Returns a sentence where adjective agrees with noun in singular. Filtered by orTags.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "red/blue apple",
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect([
-            "Czerwona cebula.",
-            "Czerwone jabłko.",
-            "Niebieska cebula.",
-            "Niebieskie jabłko.",
-          ]).to.include(res.body.questionSentenceArr[0]);
-          consol.log(res.body);
-        });
+      return runPaletteTest3("POL", null, "red/blue apple", [
+        "Czerwona cebula.",
+        "Czerwone jabłko.",
+        "Niebieska cebula.",
+        "Niebieskie jabłko.",
+      ]);
     });
     it("#pal03-02a GET 200 YES: Returns a sentence where adjective agrees with noun in singular. Filtered by andTags.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "red apple",
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect(["Czerwona cebula.", "Czerwone jabłko."]).to.include(
-            res.body.questionSentenceArr[0]
-          );
-          consol.log(res.body);
-        });
+      return runPaletteTest3("POL", null, "red apple", [
+        "Czerwona cebula.",
+        "Czerwone jabłko.",
+      ]);
     });
     it("#pal03-02b GET 200 YES: Returns a sentence where adjective agrees with noun in nonvirile plural.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "red apples",
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect(["Czerwone cebule.", "Czerwone jabłka."]).to.include(
-            res.body.questionSentenceArr[0]
-          );
-          consol.log(res.body);
-        });
+      return runPaletteTest3("POL", null, "red apples", [
+        "Czerwone cebule.",
+        "Czerwone jabłka.",
+      ]);
     });
     it("#pal03-02c GET 200 YES: Returns a sentence where adjective agrees with noun in virile or nonvirile plural.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "red girls",
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect([
-            "Czerwoni chłopcy.",
-            "Czerwoni chłopacy.",
-            "Czerwoni chłopaki.",
-            "Czerwone kobiety.",
-          ]).to.include(res.body.questionSentenceArr[0]);
-          consol.log(res.body);
-        });
+      return runPaletteTest3("POL", null, "red girls", [
+        "Czerwoni chłopcy.",
+        "Czerwoni chłopacy.",
+        "Czerwoni chłopaki.",
+        "Czerwone kobiety.",
+      ]);
     });
   });
 
   describe("/palette - Stage 4: Verbs", () => {
     it("#pal04-01a GET 200 YES: Returns a sentence with a single verb, in present.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "I am reading",
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect([
-            "Czytam.",
-            "Czytasz.",
-            "Czyta.",
-            "Czytamy.",
-            "Czytacie.",
-            "Czytają.",
-          ]).to.include(res.body.questionSentenceArr[0]);
-          consol.log(res.body);
-        });
+      return runPaletteTest3("POL", null, "I am reading", [
+        "Czytam.",
+        "Czytasz.",
+        "Czyta.",
+        "Czytamy.",
+        "Czytacie.",
+        "Czytają.",
+      ]);
     });
     it("#pal04-01b GET 200 YES: Returns a sentence with a single verb, with person specified.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "dummy12a 2per",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect([
-            "Czytasz.",
-            "Czytacie.",
-            "Czytałeś.",
-            "Czytałaś.",
-            "Czytaliście.",
-            "Czytałyście.",
-            "Będziesz czytał.",
-            "Będziesz czytać.",
-            "Będziesz czytała.",
-            "Będziesz czytać.",
-            "Będziecie czytali.",
-            "Będziecie czytać.",
-            "Będziecie czytały.",
-            "Będziecie czytać.",
-            "Czytałbyś.",
-            "Czytałabyś.",
-            "Czytalibyście.",
-            "Czytałybyście.",
-            "Czytaj.",
-            "Czytajcie.",
-          ]).to.include(res.body.questionSentenceArr[0]);
-          consol.log(res.body);
-        });
+      return runPaletteTest3("POL", null, "dummy12a 2per", [
+        "Czytasz.",
+        "Czytacie.",
+        "Czytałeś.",
+        "Czytałaś.",
+        "Czytaliście.",
+        "Czytałyście.",
+        "Będziesz czytał.",
+        "Będziesz czytać.",
+        "Będziesz czytała.",
+        "Będziesz czytać.",
+        "Będziecie czytali.",
+        "Będziecie czytać.",
+        "Będziecie czytały.",
+        "Będziecie czytać.",
+        "Czytałbyś.",
+        "Czytałabyś.",
+        "Czytalibyście.",
+        "Czytałybyście.",
+        "Czytaj.",
+        "Czytajcie.",
+      ]);
     });
     it("#pal04-01d GET 200 YES: Returns a sentence with a single verb, with tense number and gender specified.", () => {
       return request(app)
