@@ -225,463 +225,178 @@ describe("/api", function () {
       );
     });
     it("#pal09-04a-i (pal09-02a Engpol, two clarifiers potentially expected.)", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy60",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["I see.", "I am seeing."],
-              POL: ["Widzę.", "Ja widzę."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["I see.", "I am seeing."],
+          POL: ["Widzę.", "Ja widzę."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "dummy60", ref);
     });
     it("#pal09-04a-ii (pal09-02a Engpol, two clarifiers potentially expected.)", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy60a",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "I (male) saw.",
-              POL: ["Zobaczyłem.", "Ja zobaczyłem."],
-            },
-            {
-              ENG: "I (female) saw.",
-              POL: ["Zobaczyłam.", "Ja zobaczyłam."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "I (male) saw.",
+          POL: ["Zobaczyłem.", "Ja zobaczyłem."],
+        },
+        {
+          ENG: "I (female) saw.",
+          POL: ["Zobaczyłam.", "Ja zobaczyłam."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "dummy60a", ref);
     });
     it("#pal09-04a-iii (pal09-02a Engpol, two clarifiers potentially expected.)", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy60b",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "I (male) read (past).",
-              POL: ["Przeczytałem.", "Ja przeczytałem."],
-            },
-            {
-              ENG: "I (female) read (past).",
-              POL: ["Przeczytałam.", "Ja przeczytałam."],
-            },
-            {
-              ENG: ["I am reading.", "I read (present)."],
-              POL: ["Czytam.", "Ja czytam."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "I (male) read (past).",
+          POL: ["Przeczytałem.", "Ja przeczytałem."],
+        },
+        {
+          ENG: "I (female) read (past).",
+          POL: ["Przeczytałam.", "Ja przeczytałam."],
+        },
+        {
+          ENG: ["I am reading.", "I read (present)."],
+          POL: ["Czytam.", "Ja czytam."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "dummy60b", ref);
     });
     it("#pal09-04a-iv (pal09-02a Engpol PDS, two clarifiers potentially expected.)", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy60",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["I see.", "I am seeing."],
-              POL: ["Widzę.", "Ja widzę."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["I see.", "I am seeing."],
+          POL: ["Widzę.", "Ja widzę."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "dummy60", ref, {
+        pleaseDontSpecify: true,
+      });
     });
     it("#pal09-04a-v (pal09-02a Engpol PDS, two clarifiers potentially expected.)", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy60a",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "I saw.",
-              POL: [
-                "Zobaczyłem.",
-                "Ja zobaczyłem.",
-                "Zobaczyłam.",
-                "Ja zobaczyłam.",
-              ],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "I saw.",
+          POL: [
+            "Zobaczyłem.",
+            "Ja zobaczyłem.",
+            "Zobaczyłam.",
+            "Ja zobaczyłam.",
+          ],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "dummy60a", ref, {
+        pleaseDontSpecify: true,
+      });
     });
     it("#pal09-04a-vi (pal09-02a Engpol PDS, two clarifiers potentially expected.)", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy60b",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "I read (past).",
-              POL: [
-                "Przeczytałem.",
-                "Ja przeczytałem.",
-                "Przeczytałam.",
-                "Ja przeczytałam.",
-              ],
-            },
-            {
-              ENG: ["I am reading.", "I read (present)."],
-              POL: ["Czytam.", "Ja czytam."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "I read (past).",
+          POL: [
+            "Przeczytałem.",
+            "Ja przeczytałem.",
+            "Przeczytałam.",
+            "Ja przeczytałam.",
+          ],
+        },
+        {
+          ENG: ["I am reading.", "I read (present)."],
+          POL: ["Czytam.", "Ja czytam."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "dummy60b", ref, {
+        pleaseDontSpecify: true,
+      });
     });
     it("#pal09-04b-i (pal09-02a Poleng, two clarifiers potentially expected.)", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy60",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["I see.", "I am seeing."],
-              POL: "Widzę.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["I see.", "I am seeing."],
+          POL: "Widzę.",
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "dummy60", ref);
     });
     it("#pal09-04b-ii (pal09-02a Poleng, two clarifiers potentially expected.)", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy60a",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["I saw.", "I have seen.", "I had seen."],
-              POL: ["Zobaczyłem.", "Zobaczyłam."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["I saw.", "I have seen.", "I had seen."],
+          POL: ["Zobaczyłem.", "Zobaczyłam."],
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "dummy60a", ref);
     });
     it("#pal09-04b-iii (pal09-02a Poleng, two clarifiers potentially expected.)", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy60b",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["I read.", "I have read.", "I had read."],
-              POL: ["Przeczytałem.", "Przeczytałam."],
-            },
-            {
-              ENG: ["I read.", "I am reading."],
-              POL: "Czytam.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["I read.", "I have read.", "I had read."],
+          POL: ["Przeczytałem.", "Przeczytałam."],
+        },
+        {
+          ENG: ["I read.", "I am reading."],
+          POL: "Czytam.",
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "dummy60b", ref);
     });
     it("#pal09-04b-iv (pal09-02a Poleng PDS, two clarifiers potentially expected.)", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy60",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["I see.", "I am seeing."],
-              POL: "Widzę.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["I see.", "I am seeing."],
+          POL: "Widzę.",
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "dummy60", ref, {
+        pleaseDontSpecify: true,
+      });
     });
     it("#pal09-04b-v (pal09-02a Poleng PDS, two clarifiers potentially expected.)", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy60a",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["I saw.", "I have seen.", "I had seen."],
-              POL: ["Zobaczyłem.", "Zobaczyłam."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["I saw.", "I have seen.", "I had seen."],
+          POL: ["Zobaczyłem.", "Zobaczyłam."],
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "dummy60a", ref, {
+        pleaseDontSpecify: true,
+      });
     });
     it("#pal09-04b-vi (pal09-02a Poleng PDS, two clarifiers potentially expected.)", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy60b",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["I read.", "I have read.", "I had read."],
-              POL: ["Przeczytałem.", "Przeczytałam."],
-            },
-            {
-              ENG: ["I read.", "I am reading."],
-              POL: "Czytam.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["I read.", "I have read.", "I had read."],
+          POL: ["Przeczytałem.", "Przeczytałam."],
+        },
+        {
+          ENG: ["I read.", "I am reading."],
+          POL: "Czytam.",
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "dummy60b", ref, {
+        pleaseDontSpecify: true,
+      });
     });
   });
 
   describe("/palette - Stage 10: Allohomographs (adding Clarifiers).", () => {
     it("#pal10-01a Type 1 Allohomographs of SingleWordtype: 'nut' Engpol. Expect clarifiers.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy43",
-        })
-        .expect(200)
-        .then((res) => {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-
-          expect(questionSentenceArr.length).to.equal(1);
-          expect(answerSentenceArr.length).to.equal(1);
-
-          let ref = [
-            { ENG: "A small nut (🥜, food).", POL: ["Mały orzech."] },
-            { ENG: "A small nut (🔩, metal).", POL: ["Mała nakrętka."] },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        { ENG: "A small nut (🥜, food).", POL: ["Mały orzech."] },
+        { ENG: "A small nut (🔩, metal).", POL: ["Mała nakrętka."] },
+      ];
+      return runPaletteTest("ENG", "POL", "dummy43", ref, {}, 1);
     });
     it("#pal10-01b Type 1 Allohomographs of SingleWordtype: 'nut' Poleng. No clarifiers.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy43",
-        })
-        .expect(200)
-        .then((res) => {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-
-          expect(questionSentenceArr.length).to.equal(1);
-          expect(answerSentenceArr.length).to.equal(1);
-
-          let ref = [
-            { POL: ["Mały orzech.", "Mała nakrętka."], ENG: ["A small nut."] },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        { POL: ["Mały orzech.", "Mała nakrętka."], ENG: ["A small nut."] },
+      ];
+      return runPaletteTest("POL", "ENG", "dummy43", ref, {}, 1);
     });
     it("#pal10-02a Type 1 Allohomographs of MultipleWordtype: 'bear (noun)' Engpol. Expect clarifiers as requested allo-multi-clarifiers in structureChunk.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy45a",
-        })
-        .expect(200)
-        .then((res) => {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-
-          expect(questionSentenceArr.length).to.equal(1);
-          expect(answerSentenceArr.length).to.equal(1);
-
-          let ref = [{ ENG: "Bear (nounCommon).", POL: ["Niedźwiedź."] }];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [{ ENG: "Bear (nounCommon).", POL: ["Niedźwiedź."] }];
+      return runPaletteTest("ENG", "POL", "dummy45a", ref, {}, 1);
     });
     it("#pal10-02b Type 1 Allohomographs of MultipleWordtype: 'bear (verb)' Engpol. Expect clarifiers as requested allo-multi-clarifiers in structureChunk.", () => {
       const questionLanguage = "ENG";

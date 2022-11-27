@@ -13,6 +13,7 @@ exports.runPaletteTest = (
   sentenceFormulaSymbol,
   ref,
   args,
+  expectedResLength,
   useDummy = sentenceFormulaSymbol.includes("dummy")
 ) => {
   return request(app)
@@ -27,6 +28,13 @@ exports.runPaletteTest = (
     .expect(200)
     .then((res) => {
       consol.log(res.body);
+
+      if (expectedResLength) {
+        let { questionSentenceArr, answerSentenceArr } = res.body;
+        expect(questionSentenceArr.length).to.equal(expectedResLength);
+        expect(answerSentenceArr.length).to.equal(expectedResLength);
+      }
+
       testingUtils.checkTranslationsOfGivenRef(
         res,
         ref,
