@@ -1280,697 +1280,366 @@ describe("/api", function () {
     it("#pal18-01a GET 200 YES: Engpol. 'she reads' tenseDesc anno should be removed by conditionsOnWhichToBlockAnnotations.", () => {
       //Originally failed as removeAnnotationsByCounterfax lets tenseDesc annos through, would be too many alternate values to check.
       //So this situation, where the anno should be kept, is hardcoded in refObj conditionsOnWhichToBlockAnnotations.
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy61",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "She reads.",
-              POL: ["Czyta.", "Ona czyta."],
-            },
-            {
-              ENG: "He reads.",
-              POL: ["Czyta.", "On czyta."],
-            },
-            {
-              ENG: "It reads.",
-              POL: ["Czyta.", "Ono czyta."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "She reads.",
+          POL: ["Czyta.", "Ona czyta."],
+        },
+        {
+          ENG: "He reads.",
+          POL: ["Czyta.", "On czyta."],
+        },
+        {
+          ENG: "It reads.",
+          POL: ["Czyta.", "Ono czyta."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "dummy61", ref, true);
     });
     it("#pal18-01b GET 200 YES: Poleng annotations. 'she reads' tenseDesc anno should be kept via skeleton. Relates to ACX2?", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy61",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["She reads.", "She is reading."],
-              POL: "Czyta (female).",
-            },
-            {
-              ENG: ["He reads.", "He is reading."],
-              POL: "Czyta (male).",
-            },
-            {
-              ENG: ["It reads.", "It is reading."],
-              POL: "Czyta (neuter).",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["She reads.", "She is reading."],
+          POL: "Czyta (female).",
+        },
+        {
+          ENG: ["He reads.", "He is reading."],
+          POL: "Czyta (male).",
+        },
+        {
+          ENG: ["It reads.", "It is reading."],
+          POL: "Czyta (neuter).",
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "dummy61", ref, true);
     });
     it("#pal18-01c GET 200 YES: Poleng PDS. 'she reads'", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy61",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: [
-                "She reads.",
-                "He reads.",
-                "It reads.",
-                "She is reading.",
-                "He is reading.",
-                "It is reading.",
-              ],
-              POL: "Czyta.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: [
+            "She reads.",
+            "He reads.",
+            "It reads.",
+            "She is reading.",
+            "He is reading.",
+            "It is reading.",
+          ],
+          POL: "Czyta.",
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "dummy61", ref, true, {
+        pleaseDontSpecify: true,
+      });
     });
     it("#pal18-02a GET 200 YES: Engpol. 'she writes'", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy61a",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "She writes.",
-              POL: ["Pisze.", "Ona pisze."],
-            },
-            {
-              ENG: "He writes.",
-              POL: ["Pisze.", "On pisze."],
-            },
-            {
-              ENG: "It writes.",
-              POL: ["Pisze.", "Ono pisze."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "She writes.",
+          POL: ["Pisze.", "Ona pisze."],
+        },
+        {
+          ENG: "He writes.",
+          POL: ["Pisze.", "On pisze."],
+        },
+        {
+          ENG: "It writes.",
+          POL: ["Pisze.", "Ono pisze."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "dummy61a", ref, true);
     });
     it("#pal18-02b GET 200 YES: Poleng annotations. 'she writes'", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy61a",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["She writes.", "She is writing."],
-              POL: "Pisze (female).",
-            },
-            {
-              ENG: ["He writes.", "He is writing."],
-              POL: "Pisze (male).",
-            },
-            {
-              ENG: ["It writes.", "It is writing."],
-              POL: "Pisze (neuter).",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["She writes.", "She is writing."],
+          POL: "Pisze (female).",
+        },
+        {
+          ENG: ["He writes.", "He is writing."],
+          POL: "Pisze (male).",
+        },
+        {
+          ENG: ["It writes.", "It is writing."],
+          POL: "Pisze (neuter).",
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "dummy61a", ref, true);
     });
     it("#pal18-02c GET 200 YES: Poleng PDS. 'she writes'", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy61a",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: [
-                "She writes.",
-                "He writes.",
-                "It writes.",
-                "She is writing.",
-                "He is writing.",
-                "It is writing.",
-              ],
-              POL: "Pisze.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: [
+            "She writes.",
+            "He writes.",
+            "It writes.",
+            "She is writing.",
+            "He is writing.",
+            "It is writing.",
+          ],
+          POL: "Pisze.",
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "dummy61a", ref, true, {
+        pleaseDontSpecify: true,
+      });
     });
     it("#pal18-03a GET 200 YES: Engpol. Sentence with 'sheep' should not be disrupted by PDS.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy55c",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "With the sheep.",
-              POL: ["Z owcą.", "Z owcami."],
-            },
-            {
-              ENG: "With a sheep.",
-              POL: ["Z owcą."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "With the sheep.",
+          POL: ["Z owcą.", "Z owcami."],
+        },
+        {
+          ENG: "With a sheep.",
+          POL: ["Z owcą."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "dummy55c", ref, true, {
+        pleaseDontSpecify: true,
+      });
     });
     it("#pal18-04a GET 200 YES: Engpol. 'A woman saw me.'", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "119 Woman saw me",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["The woman saw me.", "A woman saw me."],
-              POL: ["Kobieta mnie zobaczyła."],
-            },
-            {
-              ENG: ["The women saw me.", "Women saw me."],
-              POL: ["Kobiety mnie zobaczyły."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["The woman saw me.", "A woman saw me."],
+          POL: ["Kobieta mnie zobaczyła."],
+        },
+        {
+          ENG: ["The women saw me.", "Women saw me."],
+          POL: ["Kobiety mnie zobaczyły."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "119 Woman saw me", ref, false, {});
     });
     it("#pal18-04b GET 200 YES: Poleng. 'A woman saw me.'", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "119 Woman saw me",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: [
-                "The woman saw me.",
-                "The woman had seen me.",
-                "The woman has seen me.",
-                "A woman saw me.",
-                "A woman had seen me.",
-                "A woman has seen me.",
-                "The lady saw me.",
-                "The lady had seen me.",
-                "The lady has seen me.",
-                "A lady saw me.",
-                "A lady had seen me.",
-                "A lady has seen me.",
-              ],
-              POL: "Kobieta mnie zobaczyła.",
-            },
-            {
-              ENG: [
-                "The women saw me.",
-                "The women had seen me.",
-                "The women have seen me.",
-                "Women saw me.",
-                "Women had seen me.",
-                "Women have seen me.",
-                "The ladies saw me.",
-                "The ladies had seen me.",
-                "The ladies have seen me.",
-                "Ladies saw me.",
-                "Ladies had seen me.",
-                "Ladies have seen me.",
-              ],
-              POL: "Kobiety mnie zobaczyły.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: [
+            "The woman saw me.",
+            "The woman had seen me.",
+            "The woman has seen me.",
+            "A woman saw me.",
+            "A woman had seen me.",
+            "A woman has seen me.",
+            "The lady saw me.",
+            "The lady had seen me.",
+            "The lady has seen me.",
+            "A lady saw me.",
+            "A lady had seen me.",
+            "A lady has seen me.",
+          ],
+          POL: "Kobieta mnie zobaczyła.",
+        },
+        {
+          ENG: [
+            "The women saw me.",
+            "The women had seen me.",
+            "The women have seen me.",
+            "Women saw me.",
+            "Women had seen me.",
+            "Women have seen me.",
+            "The ladies saw me.",
+            "The ladies had seen me.",
+            "The ladies have seen me.",
+            "Ladies saw me.",
+            "Ladies had seen me.",
+            "Ladies have seen me.",
+          ],
+          POL: "Kobiety mnie zobaczyły.",
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "119 Woman saw me", ref, false, {});
     });
     it("#pal18-05a GET 200 YES: Engpol. 'We see them.'", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy62",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["We see them (males).", "We see them (mixed)."],
-              POL: [
-                "Widzimy ich.",
-                "Ich widzimy.",
-                "My ich widzimy.",
-                "My widzimy ich.",
-              ],
-            },
-            {
-              ENG: "We see them (females).",
-              POL: [
-                "Widzimy je.",
-                "Je widzimy.",
-                "My je widzimy.",
-                "My widzimy je.",
-              ],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["We see them (males).", "We see them (mixed)."],
+          POL: [
+            "Widzimy ich.",
+            "Ich widzimy.",
+            "My ich widzimy.",
+            "My widzimy ich.",
+          ],
+        },
+        {
+          ENG: "We see them (females).",
+          POL: [
+            "Widzimy je.",
+            "Je widzimy.",
+            "My je widzimy.",
+            "My widzimy je.",
+          ],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "dummy62", ref, true, {});
     });
     it("#pal18-05b GET 200 YES: Engpol. 'We see them.' PDS", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy62",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "We see them.",
-              POL: [
-                "Widzimy je.",
-                "Je widzimy.",
-                "My je widzimy.",
-                "My widzimy je.",
-                "Widzimy ich.",
-                "Ich widzimy.",
-                "My ich widzimy.",
-                "My widzimy ich.",
-              ],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "We see them.",
+          POL: [
+            "Widzimy je.",
+            "Je widzimy.",
+            "My je widzimy.",
+            "My widzimy je.",
+            "Widzimy ich.",
+            "Ich widzimy.",
+            "My ich widzimy.",
+            "My widzimy ich.",
+          ],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "dummy62", ref, true, {
+        pleaseDontSpecify: true,
+      });
     });
     it("#pal18-05c GET 200 YES: Poleng. 'We see them.'", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy62",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["We see them.", "We are seeing them."],
-              POL: ["Widzimy ich.", "Widzimy je."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["We see them.", "We are seeing them."],
+          POL: ["Widzimy ich.", "Widzimy je."],
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "dummy62", ref, true, {});
     });
     it("#pal18-05d GET 200 YES: Poleng. 'We see them.' PDS should have no effect.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy62",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["We see them.", "We are seeing them."],
-              POL: ["Widzimy ich.", "Widzimy je."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["We see them.", "We are seeing them."],
+          POL: ["Widzimy ich.", "Widzimy je."],
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "dummy62", ref, true, {
+        pleaseDontSpecify: true,
+      });
     });
     it("#pal18-06a GET 200 YES: Engpol. 'We saw them.'", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy62a",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: [
-                "We (males) saw them (males).",
-                "We (males) saw them (mixed).",
-                "We (mixed) saw them (males).",
-                "We (mixed) saw them (mixed).",
-              ],
-              POL: [
-                "Zobaczyliśmy ich.",
-                "Ich zobaczyliśmy.",
-                "My ich zobaczyliśmy.",
-                "My zobaczyliśmy ich.",
-              ],
-            },
-            {
-              ENG: "We (females) saw them (females).",
-              POL: [
-                "Zobaczyłyśmy je.",
-                "Je zobaczyłyśmy.",
-                "My je zobaczyłyśmy.",
-                "My zobaczyłyśmy je.",
-              ],
-            },
-            {
-              ENG: [
-                "We (males) saw them (females).",
-                "We (mixed) saw them (females).",
-              ],
-              POL: [
-                "Zobaczyliśmy je.",
-                "Je zobaczyliśmy.",
-                "My je zobaczyliśmy.",
-                "My zobaczyliśmy je.",
-              ],
-            },
-            {
-              ENG: [
-                "We (females) saw them (mixed).",
-                "We (females) saw them (males).",
-              ],
-              POL: [
-                "Zobaczyłyśmy ich.",
-                "Ich zobaczyłyśmy.",
-                "My ich zobaczyłyśmy.",
-                "My zobaczyłyśmy ich.",
-              ],
-            },
-            /////////////////////
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: [
+            "We (males) saw them (males).",
+            "We (males) saw them (mixed).",
+            "We (mixed) saw them (males).",
+            "We (mixed) saw them (mixed).",
+          ],
+          POL: [
+            "Zobaczyliśmy ich.",
+            "Ich zobaczyliśmy.",
+            "My ich zobaczyliśmy.",
+            "My zobaczyliśmy ich.",
+          ],
+        },
+        {
+          ENG: "We (females) saw them (females).",
+          POL: [
+            "Zobaczyłyśmy je.",
+            "Je zobaczyłyśmy.",
+            "My je zobaczyłyśmy.",
+            "My zobaczyłyśmy je.",
+          ],
+        },
+        {
+          ENG: [
+            "We (males) saw them (females).",
+            "We (mixed) saw them (females).",
+          ],
+          POL: [
+            "Zobaczyliśmy je.",
+            "Je zobaczyliśmy.",
+            "My je zobaczyliśmy.",
+            "My zobaczyliśmy je.",
+          ],
+        },
+        {
+          ENG: [
+            "We (females) saw them (mixed).",
+            "We (females) saw them (males).",
+          ],
+          POL: [
+            "Zobaczyłyśmy ich.",
+            "Ich zobaczyłyśmy.",
+            "My ich zobaczyłyśmy.",
+            "My zobaczyłyśmy ich.",
+          ],
+        },
+        /////////////////////
+      ];
+      return runPaletteTest("ENG", "POL", "dummy62a", ref, true, {});
     });
     it("#pal18-06b GET 200 YES: Engpol. 'We saw them.' PDS. *Step-Iota re PDS Diamond*", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy62a",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "We saw them.",
-              POL: [
-                /////////M-M
-                "Zobaczyliśmy ich.",
-                "My zobaczyliśmy ich.",
-                "My ich zobaczyliśmy.",
-                "Ich zobaczyliśmy.",
-                /////////F-F
-                "Zobaczyłyśmy je.",
-                "My zobaczyłyśmy je.",
-                "My je zobaczyłyśmy.",
-                "Je zobaczyłyśmy.",
-                /////////F-M
-                "Zobaczyłyśmy ich.",
-                "My zobaczyłyśmy ich.",
-                "My ich zobaczyłyśmy.",
-                "Ich zobaczyłyśmy.",
-                /////////M-F
-                "Zobaczyliśmy je.",
-                "My zobaczyliśmy je.",
-                "My je zobaczyliśmy.",
-                "Je zobaczyliśmy.",
-              ],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "We saw them.",
+          POL: [
+            /////////M-M
+            "Zobaczyliśmy ich.",
+            "My zobaczyliśmy ich.",
+            "My ich zobaczyliśmy.",
+            "Ich zobaczyliśmy.",
+            /////////F-F
+            "Zobaczyłyśmy je.",
+            "My zobaczyłyśmy je.",
+            "My je zobaczyłyśmy.",
+            "Je zobaczyłyśmy.",
+            /////////F-M
+            "Zobaczyłyśmy ich.",
+            "My zobaczyłyśmy ich.",
+            "My ich zobaczyłyśmy.",
+            "Ich zobaczyłyśmy.",
+            /////////M-F
+            "Zobaczyliśmy je.",
+            "My zobaczyliśmy je.",
+            "My je zobaczyliśmy.",
+            "Je zobaczyliśmy.",
+          ],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "dummy62a", ref, true, {
+        pleaseDontSpecify: true,
+      });
     });
     it("#pal18-06c GET 200 YES: Poleng. 'We saw them.'", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy62a",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["We saw them.", "We had seen them.", "We have seen them."],
-              POL: [
-                "Zobaczyliśmy ich.",
-                "Zobaczyłyśmy ich.",
-                "Zobaczyliśmy je.",
-                "Zobaczyłyśmy je.",
-              ],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["We saw them.", "We had seen them.", "We have seen them."],
+          POL: [
+            "Zobaczyliśmy ich.",
+            "Zobaczyłyśmy ich.",
+            "Zobaczyliśmy je.",
+            "Zobaczyłyśmy je.",
+          ],
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "dummy62a", ref, true, {});
     });
     it("#pal18-06d GET 200 YES: Poleng. 'We see them.' PDS should have no effect.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy62a",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["We saw them.", "We had seen them.", "We have seen them."],
-              POL: [
-                "Zobaczyliśmy ich.",
-                "Zobaczyłyśmy ich.",
-                "Zobaczyliśmy je.",
-                "Zobaczyłyśmy je.",
-              ],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["We saw them.", "We had seen them.", "We have seen them."],
+          POL: [
+            "Zobaczyliśmy ich.",
+            "Zobaczyłyśmy ich.",
+            "Zobaczyliśmy je.",
+            "Zobaczyłyśmy je.",
+          ],
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "dummy62a", ref, true, {
+        pleaseDontSpecify: true,
+      });
     });
     it("#pal18-07a GET 200 YES: Engpol. 'A doctor saw me.'", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "120 Doctor saw me",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["The doctor (female) saw me.", "A doctor (female) saw me."],
-              POL: ["Lekarka mnie zobaczyła."],
-            },
-            {
-              ENG: ["The doctor (male) saw me.", "A doctor (male) saw me."],
-              POL: ["Lekarz mnie zobaczył."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["The doctor (female) saw me.", "A doctor (female) saw me."],
+          POL: ["Lekarka mnie zobaczyła."],
+        },
+        {
+          ENG: ["The doctor (male) saw me.", "A doctor (male) saw me."],
+          POL: ["Lekarz mnie zobaczył."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "120 Doctor saw me", ref);
     });
     it("#pal18-07b GET 200 YES: Engpol. 'A doctor saw me. PDS'", () => {
       const questionLanguage = "ENG";
