@@ -399,872 +399,296 @@ describe("/api", function () {
       return runPaletteTest("ENG", "POL", "dummy45a", ref, {}, 1);
     });
     it("#pal10-02b Type 1 Allohomographs of MultipleWordtype: 'bear (verb)' Engpol. Expect clarifiers as requested allo-multi-clarifiers in structureChunk.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy45b",
-        })
-        .expect(200)
-        .then((res) => {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-
-          expect(questionSentenceArr.length).to.equal(1);
-          expect(answerSentenceArr.length).to.equal(1);
-
-          let ref = [{ ENG: "Bear (verb).", POL: ["Znieść."] }];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [{ ENG: "Bear (verb).", POL: ["Znieść."] }];
+      return runPaletteTest("ENG", "POL", "dummy45b", ref, {}, 1);
     });
     it("#pal10-02c Type 1 Allohomographs of MultipleWordtype: 'bear (verb)' Engpol. Did NOT request allo-multi-clarifiers in structureChunk.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy45c",
-        })
-        .expect(200)
-        .then((res) => {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-
-          expect(questionSentenceArr.length).to.equal(1);
-          expect(answerSentenceArr.length).to.equal(1);
-
-          let ref = [{ ENG: "Bear.", POL: ["Znieść."] }];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [{ ENG: "Bear.", POL: ["Znieść."] }];
+      return runPaletteTest("ENG", "POL", "dummy45c", ref, {}, 1);
     });
     it("#pal10-02d Type 1 Allohomographs of MultipleWordtype: 'bear (noun)' Poleng. No clarifiers.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy45a",
-        })
-        .expect(200)
-        .then((res) => {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-
-          expect(questionSentenceArr.length).to.equal(1);
-          expect(answerSentenceArr.length).to.equal(1);
-
-          let ref = [{ POL: "Niedźwiedź.", ENG: ["Bear."] }];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [{ POL: "Niedźwiedź.", ENG: ["Bear."] }];
+      return runPaletteTest("POL", "ENG", "dummy45a", ref, {}, 1);
     });
     it("#pal10-02e Type 1 Allohomographs of MultipleWordtype: 'bear (verb)' Poleng. No clarifiers.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy45b",
-        })
-        .expect(200)
-        .then((res) => {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-
-          expect(questionSentenceArr.length).to.equal(1);
-          expect(answerSentenceArr.length).to.equal(1);
-
-          let ref = [{ POL: "Znieść.", ENG: ["Bear."] }];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [{ POL: "Znieść.", ENG: ["Bear."] }];
+      return runPaletteTest("POL", "ENG", "dummy45b", ref, {}, 1);
     });
     it("#pal10-03a Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (noun)' Engpol. Textmoji Clarifier expected. Wordtype Clarifier not requested.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy46a",
-        })
-        .expect(200)
-        .then((res) => {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-
-          expect(questionSentenceArr.length).to.equal(1);
-          expect(answerSentenceArr.length).to.equal(1);
-
-          let ref = [
-            { ENG: "Tie (⚽, score).", POL: ["Remis."] },
-            { ENG: "Tie (👔, clothes).", POL: ["Krawat."] },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        { ENG: "Tie (⚽, score).", POL: ["Remis."] },
+        { ENG: "Tie (👔, clothes).", POL: ["Krawat."] },
+      ];
+      return runPaletteTest("ENG", "POL", "dummy46a", ref, {}, 1);
     });
     it("#pal10-03b Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (noun)' Engpol. Textmoji Clarifier expected. Wordtype Clarifier requested so also expected.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy46b",
-        })
-        .expect(200)
-        .then((res) => {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-
-          expect(questionSentenceArr.length).to.equal(1);
-          expect(answerSentenceArr.length).to.equal(1);
-
-          let ref = [
-            { ENG: "Tie (⚽, score, nounCommon).", POL: ["Remis."] },
-            { ENG: "Tie (👔, clothes, nounCommon).", POL: ["Krawat."] },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        { ENG: "Tie (⚽, score, nounCommon).", POL: ["Remis."] },
+        { ENG: "Tie (👔, clothes, nounCommon).", POL: ["Krawat."] },
+      ];
+      return runPaletteTest("ENG", "POL", "dummy46b", ref, {}, 1);
     });
     it("#pal10-03c Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (verb)' Engpol. Textmoji Clarifier expected. Wordtype Clarifier not requested.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy46c",
-        })
-        .expect(200)
-        .then((res) => {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-
-          expect(questionSentenceArr.length).to.equal(1);
-          expect(answerSentenceArr.length).to.equal(1);
-
-          let ref = [{ ENG: "Tie (🧵, with string eg).", POL: ["Wiązać."] }];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [{ ENG: "Tie (🧵, with string eg).", POL: ["Wiązać."] }];
+      return runPaletteTest("ENG", "POL", "dummy46c", ref, {}, 1);
     });
     it("#pal10-03d Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (verb)' Engpol. Textmoji Clarifier expected. Wordtype Clarifier requested so also expected.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy46d",
-        })
-        .expect(200)
-        .then((res) => {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-
-          expect(questionSentenceArr.length).to.equal(1);
-          expect(answerSentenceArr.length).to.equal(1);
-
-          let ref = [
-            { ENG: "Tie (🧵, with string eg, verb).", POL: ["Wiązać."] },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [{ ENG: "Tie (🧵, with string eg, verb).", POL: ["Wiązać."] }];
+      return runPaletteTest("ENG", "POL", "dummy46d", ref, {}, 1);
     });
     it("#pal10-03e Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (noun)' Poleng. No clarifiers.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy46a",
-        })
-        .expect(200)
-        .then((res) => {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-
-          expect(questionSentenceArr.length).to.equal(1);
-          expect(answerSentenceArr.length).to.equal(1);
-
-          let ref = [{ POL: ["Remis.", "Krawat."], ENG: ["Tie."] }];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [{ POL: ["Remis.", "Krawat."], ENG: ["Tie."] }];
+      return runPaletteTest("POL", "ENG", "dummy46a", ref, {}, 1);
     });
     it("#pal10-03f Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (verb)' Poleng. No clarifiers.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy46c",
-        })
-        .expect(200)
-        .then((res) => {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-
-          expect(questionSentenceArr.length).to.equal(1);
-          expect(answerSentenceArr.length).to.equal(1);
-
-          let ref = [{ POL: "Wiązać.", ENG: ["Tie."] }];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [{ POL: "Wiązać.", ENG: ["Tie."] }];
+      return runPaletteTest("POL", "ENG", "dummy46c", ref, {}, 1);
     });
   });
 
   describe("/palette - Stage 11A: Adding Specifiers.", () => {
     it("#pal11A-01a GET 200 YES: SPECIFIER EXPECTED. Multi Gender Noun. Engpol.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "109a doc was writing p",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "The doctor (male) was writing a prescription.",
-              POL: ["Lekarz pisał receptę."],
-            },
-            {
-              ENG: "The doctor (female) was writing a prescription.",
-              POL: ["Lekarka pisała receptę."],
-            },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "The doctor (male) was writing a prescription.",
+          POL: ["Lekarz pisał receptę."],
+        },
+        {
+          ENG: "The doctor (female) was writing a prescription.",
+          POL: ["Lekarka pisała receptę."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "109a doc was writing p", ref, {});
     });
     it("#pal11A-01b GET 200 YES: SPECIFIER EXPECTED Multi Gender Noun PLURAL. Engpol.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "109c docs were writing p",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "The doctors (males) were writing a prescription.",
-              POL: ["Lekarze pisali receptę."],
-            },
-            {
-              ENG: "The doctors (mixed) were writing a prescription.",
-              POL: ["Lekarze pisali receptę."],
-            },
-            {
-              ENG: "The doctors (females) were writing a prescription.",
-              POL: ["Lekarki pisały receptę."],
-            },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "The doctors (males) were writing a prescription.",
+          POL: ["Lekarze pisali receptę."],
+        },
+        {
+          ENG: "The doctors (mixed) were writing a prescription.",
+          POL: ["Lekarze pisali receptę."],
+        },
+        {
+          ENG: "The doctors (females) were writing a prescription.",
+          POL: ["Lekarki pisały receptę."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "109c docs were writing p", ref, {});
     });
     it("#pal11A-02a GET 200 YES: NO SPECIFIER EVEN WHEN ASKED FOR. Pronombre I/WE. {pres im} needs no gender. Engpol.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
+      let ref = [
+        { ENG: "I am.", POL: ["Jestem.", "Ja jestem."] },
+        { ENG: "We are.", POL: ["Jesteśmy.", "My jesteśmy."] },
+      ];
 
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "111a I am",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            { ENG: "I am.", POL: ["Jestem.", "Ja jestem."] },
-            { ENG: "We are.", POL: ["Jesteśmy.", "My jesteśmy."] },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      return runPaletteTest("ENG", "POL", "111a I am", ref, {});
     });
     it("#pal11A-02b GET 200 YES: SPECIFIER EXPECTED. Pronombre I/WE. {past im} does indeed need gender. Engpol.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "111b I was",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            { ENG: "I (male) was.", POL: ["Byłem.", "Ja byłem."] },
-            { ENG: "I (female) was.", POL: ["Byłam.", "Ja byłam."] },
-            {
-              ENG: ["We (males) were.", "We (mixed) were."],
-              POL: ["Byliśmy.", "My byliśmy."],
-            },
-            { ENG: "We (females) were.", POL: ["Byłyśmy.", "My byłyśmy."] },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        { ENG: "I (male) was.", POL: ["Byłem.", "Ja byłem."] },
+        { ENG: "I (female) was.", POL: ["Byłam.", "Ja byłam."] },
+        {
+          ENG: ["We (males) were.", "We (mixed) were."],
+          POL: ["Byliśmy.", "My byliśmy."],
+        },
+        { ENG: "We (females) were.", POL: ["Byłyśmy.", "My byłyśmy."] },
+      ];
+      return runPaletteTest("ENG", "POL", "111b I was", ref, {});
     });
     it("#pal11A-03a GET 200 YES: NO SPECIFIER EVEN WHEN ASKED FOR if noun already has gender.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy47",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["The woman wrote.", "The woman had written."],
-              POL: ["Kobieta napisała."],
-            },
-            { ENG: "The woman was writing.", POL: ["Kobieta pisała."] },
-            {
-              ENG: "The woman has written.",
-              POL: ["Kobieta napisała.", "Kobieta pisała."],
-            },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["The woman wrote.", "The woman had written."],
+          POL: ["Kobieta napisała."],
+        },
+        { ENG: "The woman was writing.", POL: ["Kobieta pisała."] },
+        {
+          ENG: "The woman has written.",
+          POL: ["Kobieta napisała.", "Kobieta pisała."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "dummy47", ref, {});
     });
     it("#pal11A-04a GET 200 YES: GIVE MULTIPLE ANSWER OPTIONS WHEN SPECIFIERS NOT REQUESTED. Pronombre I/WE. {past im} does indeed need gender. Engpol.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "111b I was",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "I (male) was.",
-              POL: ["Byłem.", "Ja byłem."],
-            },
-            {
-              ENG: "I (female) was.",
-              POL: ["Byłam.", "Ja byłam."],
-            },
-            {
-              ENG: ["We (mixed) were.", "We (males) were."],
-              POL: ["Byliśmy.", "My byliśmy."],
-            },
-            {
-              ENG: "We (females) were.",
-              POL: ["Byłyśmy.", "My byłyśmy."],
-            },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "I (male) was.",
+          POL: ["Byłem.", "Ja byłem."],
+        },
+        {
+          ENG: "I (female) was.",
+          POL: ["Byłam.", "Ja byłam."],
+        },
+        {
+          ENG: ["We (mixed) were.", "We (males) were."],
+          POL: ["Byliśmy.", "My byliśmy."],
+        },
+        {
+          ENG: "We (females) were.",
+          POL: ["Byłyśmy.", "My byłyśmy."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "111b I was", ref, {});
     });
     it("#pal11A-05a GET 200 YES: Gives clarifiers and specifiers. Pronombre YOU. Engpol.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "111c you were",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "You (singular, male) were.",
-              POL: ["Byłeś.", "Ty byłeś."],
-            },
-            {
-              ENG: "You (singular, female) were.",
-              POL: ["Byłaś.", "Ty byłaś."],
-            },
-            {
-              ENG: ["You (plural, mixed) were.", "You (males) were."],
-              POL: ["Byliście.", "Wy byliście."],
-            },
-            {
-              ENG: "You (females) were.",
-              POL: ["Byłyście.", "Wy byłyście."],
-            },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "You (singular, male) were.",
+          POL: ["Byłeś.", "Ty byłeś."],
+        },
+        {
+          ENG: "You (singular, female) were.",
+          POL: ["Byłaś.", "Ty byłaś."],
+        },
+        {
+          ENG: ["You (plural, mixed) were.", "You (males) were."],
+          POL: ["Byliście.", "Wy byliście."],
+        },
+        {
+          ENG: "You (females) were.",
+          POL: ["Byłyście.", "Wy byłyście."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "111c you were", ref, {});
     });
   });
 
   describe("/palette - Stage 11B Not adding Specifiers.", () => {
     it("#pal11B-01a GET 200 YES: Poleng. CHOOSE ONE. Singular. male or female versions of same person.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "109 doc wrote p",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              POL: ["Lekarka napisała receptę.", "Lekarz napisał receptę."],
-              ENG: [
-                "The doctor wrote a prescription.",
-                "The doctor had written a prescription.",
-                "The doctor has written a prescription.",
-              ],
-            },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          POL: ["Lekarka napisała receptę.", "Lekarz napisał receptę."],
+          ENG: [
+            "The doctor wrote a prescription.",
+            "The doctor had written a prescription.",
+            "The doctor has written a prescription.",
+          ],
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "109 doc wrote p", ref, {});
     });
     it("#pal11B-01b GET 200 YES: Poleng. CHOOSE ONE. Plural. male or female versions of same person.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "109b docs wrote p",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              POL: ["Lekarze napisali receptę.", "Lekarki napisały receptę."],
-              ENG: [
-                "The doctors wrote a prescription.",
-                "The doctors had written a prescription.",
-                "The doctors have written a prescription.",
-              ],
-            },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          POL: ["Lekarze napisali receptę.", "Lekarki napisały receptę."],
+          ENG: [
+            "The doctors wrote a prescription.",
+            "The doctors had written a prescription.",
+            "The doctors have written a prescription.",
+          ],
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "109b docs wrote p", ref, {});
     });
     it("#pal11B-01c GET 200 YES: Poleng. AGNOSTIC has no effect. Singular. male or female versions of same person.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "109 doc wrote p",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              POL: ["Lekarz napisał receptę.", "Lekarka napisała receptę."],
-              ENG: [
-                "The doctor wrote a prescription.",
-                "The doctor had written a prescription.",
-                "The doctor has written a prescription.",
-              ],
-            },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          POL: ["Lekarz napisał receptę.", "Lekarka napisała receptę."],
+          ENG: [
+            "The doctor wrote a prescription.",
+            "The doctor had written a prescription.",
+            "The doctor has written a prescription.",
+          ],
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "109 doc wrote p", ref, {
+        pleaseDontSpecify: true,
+      });
     });
     it("#pal11B-01d GET 200 YES: Poleng. AGNOSTIC has no effect. Plural. male or female versions of same person.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "109b docs wrote p",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              POL: ["Lekarze napisali receptę.", "Lekarki napisały receptę."],
-              ENG: [
-                "The doctors wrote a prescription.",
-                "The doctors had written a prescription.",
-                "The doctors have written a prescription.",
-              ],
-            },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          POL: ["Lekarze napisali receptę.", "Lekarki napisały receptę."],
+          ENG: [
+            "The doctors wrote a prescription.",
+            "The doctors had written a prescription.",
+            "The doctors have written a prescription.",
+          ],
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "109b docs wrote p", ref, {
+        pleaseDontSpecify: true,
+      });
     });
     it("#pal11B-02a GET 200 YES: Engpol. CHOOSE ONE. Singular. male or female versions of same person.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "109a doc was writing p",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "The doctor (male) was writing a prescription.",
-              POL: ["Lekarz pisał receptę."],
-            },
-            {
-              ENG: "The doctor (female) was writing a prescription.",
-              POL: ["Lekarka pisała receptę."],
-            },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "The doctor (male) was writing a prescription.",
+          POL: ["Lekarz pisał receptę."],
+        },
+        {
+          ENG: "The doctor (female) was writing a prescription.",
+          POL: ["Lekarka pisała receptę."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "109a doc was writing p", ref, {});
     });
     it("#pal11B-02b GET 200 YES: Engpol. CHOOSE ONE. Plural. male or female versions of same person.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "109c docs were writing p",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "The doctors (females) were writing a prescription.",
-              POL: ["Lekarki pisały receptę."],
-            },
-            {
-              ENG: [
-                "The doctors (mixed) were writing a prescription.",
-                "The doctors (males) were writing a prescription.",
-              ],
-              POL: ["Lekarze pisali receptę."],
-            },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "The doctors (females) were writing a prescription.",
+          POL: ["Lekarki pisały receptę."],
+        },
+        {
+          ENG: [
+            "The doctors (mixed) were writing a prescription.",
+            "The doctors (males) were writing a prescription.",
+          ],
+          POL: ["Lekarze pisali receptę."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "109c docs were writing p", ref, {});
     });
     it("#pal11B-02c GET 200 YES: Engpol. AGNOSTIC. Singular. male or female versions of same person.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "109a doc was writing p",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "The doctor was writing a prescription.",
-              POL: ["Lekarz pisał receptę.", "Lekarka pisała receptę."],
-            },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "The doctor was writing a prescription.",
+          POL: ["Lekarz pisał receptę.", "Lekarka pisała receptę."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "109a doc was writing p", ref, {
+        pleaseDontSpecify: true,
+      });
     });
     it("#pal11B-02d GET 200 YES: Engpol. AGNOSTIC. Plural. male or female versions of same person.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "109c docs were writing p",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "The doctors were writing a prescription.",
-              POL: ["Lekarze pisali receptę.", "Lekarki pisały receptę."],
-            },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "The doctors were writing a prescription.",
+          POL: ["Lekarze pisali receptę.", "Lekarki pisały receptę."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "109c docs were writing p", ref, {
+        pleaseDontSpecify: true,
+      });
     });
     it("#pal11B-03a GET 200 YES: Engpol. AGNOSTIC. Give both pronombre singular gender options in answer.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          pleaseDontSpecify: true,
-          useDummy: true,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy49c",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "I wrote.",
-              POL: [
-                "Napisałem.",
-                "Ja napisałem.",
-                "Napisałam.",
-                "Ja napisałam.",
-              ],
-            },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "I wrote.",
+          POL: ["Napisałem.", "Ja napisałem.", "Napisałam.", "Ja napisałam."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "dummy49c", ref, {
+        pleaseDontSpecify: true,
+      });
     });
     it("#pal11B-03b GET 200 YES: Engpol. AGNOSTIC. Give both pronombre plural gender options in answer.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          pleaseDontSpecify: true,
-          useDummy: true,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy49d",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "We wrote.",
-              POL: [
-                "Napisaliśmy.",
-                "My napisaliśmy.",
-                "Napisałyśmy.",
-                "My napisałyśmy.",
-              ],
-            },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "We wrote.",
+          POL: [
+            "Napisaliśmy.",
+            "My napisaliśmy.",
+            "Napisałyśmy.",
+            "My napisałyśmy.",
+          ],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "dummy49d", ref, {
+        pleaseDontSpecify: true,
+      });
     });
   });
 
