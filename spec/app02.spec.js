@@ -2046,244 +2046,137 @@ describe("/api", function () {
         });
     });
     it("#pal14-01c GET 200 YES: Engpol. I have my onion. Clarifier for 'my' should NOT be present.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy50a",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "I have my onion.",
-              POL: ["Ja mam moją cebulę.", "Mam moją cebulę."],
-            },
-            {
-              ENG: "We have our onion.",
-              POL: ["My mamy naszą cebulę.", "Mamy naszą cebulę."],
-            },
-            {
-              ENG: "I have my onions.",
-              POL: ["Ja mam moje cebule.", "Mam moje cebule."],
-            },
-            {
-              ENG: "We have our onions.",
-              POL: ["My mamy nasze cebule.", "Mamy nasze cebule."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "I have my onion.",
+          POL: ["Ja mam moją cebulę.", "Mam moją cebulę."],
+        },
+        {
+          ENG: "We have our onion.",
+          POL: ["My mamy naszą cebulę.", "Mamy naszą cebulę."],
+        },
+        {
+          ENG: "I have my onions.",
+          POL: ["Ja mam moje cebule.", "Mam moje cebule."],
+        },
+        {
+          ENG: "We have our onions.",
+          POL: ["My mamy nasze cebule.", "Mamy nasze cebule."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "dummy50a", ref, {});
     });
     it("#pal14-01d GET 200 YES: Poleng. I have my onion.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy50a",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["I have my onion.", "I am having my onion."],
-              POL: "Ja mam moją cebulę.",
-            },
-            {
-              ENG: ["We have our onion.", "We are having our onion."],
-              POL: "My mamy naszą cebulę.",
-            },
-            {
-              ENG: ["I have my onions.", "I am having my onions."],
-              POL: "Ja mam moje cebule.",
-            },
-            {
-              ENG: ["We have our onions.", "We are having our onions."],
-              POL: "My mamy nasze cebule.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["I have my onion.", "I am having my onion."],
+          POL: "Ja mam moją cebulę.",
+        },
+        {
+          ENG: ["We have our onion.", "We are having our onion."],
+          POL: "My mamy naszą cebulę.",
+        },
+        {
+          ENG: ["I have my onions.", "I am having my onions."],
+          POL: "Ja mam moje cebule.",
+        },
+        {
+          ENG: ["We have our onions.", "We are having our onions."],
+          POL: "My mamy nasze cebule.",
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "dummy50a", ref, {});
     });
     it("#pal14-01e GET 200 YES: Engpol. My onion.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy50b",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "My onion.",
-              POL: ["Moja cebula."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "My onion.",
+          POL: ["Moja cebula."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "dummy50b", ref, {});
     });
     it("#pal14-01f GET 200 YES: Poleng. My onion.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy50b",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["My onion."],
-              POL: "Moja cebula.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["My onion."],
+          POL: "Moja cebula.",
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "dummy50b", ref, {});
     });
     it("#pal14-02a GET 200 YES: Engpol. My father gave me a book.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "113 my father gave me a book",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "My father gave me a book.",
-              POL: [
-                "Mój ojciec dał mi książkę.",
-                "Mój ojciec dał mnie książkę.",
-              ],
-            },
-            {
-              ENG: "My mother gave me a book.",
-              POL: [
-                "Moja matka dała mi książkę.",
-                "Moja matka dała mnie książkę.",
-              ],
-            },
-            {
-              ENG: "Our father gave us a book.",
-              POL: ["Nasz ojciec dał nam książkę."],
-            },
-            {
-              ENG: "Our mother gave us a book.",
-              POL: ["Nasza matka dała nam książkę."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "My father gave me a book.",
+          POL: ["Mój ojciec dał mi książkę.", "Mój ojciec dał mnie książkę."],
+        },
+        {
+          ENG: "My mother gave me a book.",
+          POL: ["Moja matka dała mi książkę.", "Moja matka dała mnie książkę."],
+        },
+        {
+          ENG: "Our father gave us a book.",
+          POL: ["Nasz ojciec dał nam książkę."],
+        },
+        {
+          ENG: "Our mother gave us a book.",
+          POL: ["Nasza matka dała nam książkę."],
+        },
+      ];
+      return runPaletteTest(
+        "ENG",
+        "POL",
+        "113 my father gave me a book",
+        ref,
+        {}
+      );
     });
     it("#pal14-02b GET 200 YES: Poleng. My father gave me a book.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "113 my father gave me a book",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              POL: "Mój ojciec dał mi książkę.",
-              ENG: [
-                "My father gave me a book.",
-                "My father had given me a book.",
-                "My father has given me a book.",
-              ],
-            },
-            {
-              POL: "Moja matka dała mi książkę.",
-              ENG: [
-                "My mother gave me a book.",
-                "My mother had given me a book.",
-                "My mother has given me a book.",
-              ],
-            },
-            {
-              POL: "Nasz ojciec dał nam książkę.",
-              ENG: [
-                "Our father gave us a book.",
-                "Our father had given us a book.",
-                "Our father has given us a book.",
-              ],
-            },
-            {
-              POL: "Nasza matka dała nam książkę.",
-              ENG: [
-                "Our mother gave us a book.",
-                "Our mother had given us a book.",
-                "Our mother has given us a book.",
-              ],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          POL: "Mój ojciec dał mi książkę.",
+          ENG: [
+            "My father gave me a book.",
+            "My father had given me a book.",
+            "My father has given me a book.",
+          ],
+        },
+        {
+          POL: "Moja matka dała mi książkę.",
+          ENG: [
+            "My mother gave me a book.",
+            "My mother had given me a book.",
+            "My mother has given me a book.",
+          ],
+        },
+        {
+          POL: "Nasz ojciec dał nam książkę.",
+          ENG: [
+            "Our father gave us a book.",
+            "Our father had given us a book.",
+            "Our father has given us a book.",
+          ],
+        },
+        {
+          POL: "Nasza matka dała nam książkę.",
+          ENG: [
+            "Our mother gave us a book.",
+            "Our mother had given us a book.",
+            "Our mother has given us a book.",
+          ],
+        },
+      ];
+      return runPaletteTest(
+        "POL",
+        "ENG",
+        "113 my father gave me a book",
+        ref,
+        {}
+      );
     });
-    it("#pal14-03a GET 200 YES: POL. My father gave me his book.", () => {
+    it("#pal14-03a GET 200 YES: POL only. My father gave me his book.", () => {
       const questionLanguage = "POL";
-      const answerLanguage = "ENG";
 
       return request(app)
         .get("/api/palette")
@@ -2307,9 +2200,8 @@ describe("/api", function () {
           ]).to.include(res.body.questionSentenceArr[0]);
         });
     });
-    it("#pal14-03b GET 200 YES: ENG. My father gave me his book.", () => {
+    it("#pal14-03b GET 200 YES: ENG only. My father gave me his book.", () => {
       const questionLanguage = "ENG";
-      const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
@@ -2334,732 +2226,407 @@ describe("/api", function () {
         });
     });
     it("#pal14-03c GET 200 YES: Engpol. My father gave me his book.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "113a my father gave me his book",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "My father gave me his book.",
-              POL: [
-                "Mój ojciec dał mi jego książkę.",
-                "Mój ojciec dał mnie jego książkę.",
-              ],
-            },
-            {
-              ENG: "My mother gave me her book.",
-              POL: [
-                "Moja matka dała mi jej książkę.",
-                "Moja matka dała mnie jej książkę.",
-              ],
-            },
-            {
-              ENG: "My fathers gave me their book.",
-              POL: [
-                "Moi ojcowie dali mi ich książkę.",
-                "Moi ojcowie dali mnie ich książkę.",
-              ],
-            },
-            {
-              ENG: "My mothers gave me their book.",
-              POL: [
-                "Moje matki dały mi ich książkę.",
-                "Moje matki dały mnie ich książkę.",
-              ],
-            },
-            {
-              ENG: "Our father gave us his book.",
-              POL: ["Nasz ojciec dał nam jego książkę."],
-            },
-            {
-              ENG: "Our mother gave us her book.",
-              POL: ["Nasza matka dała nam jej książkę."],
-            },
-            {
-              ENG: "Our fathers gave us their book.",
-              POL: ["Nasi ojcowie dali nam ich książkę."],
-            },
-            {
-              ENG: "Our mothers gave us their book.",
-              POL: ["Nasze matki dały nam ich książkę."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "My father gave me his book.",
+          POL: [
+            "Mój ojciec dał mi jego książkę.",
+            "Mój ojciec dał mnie jego książkę.",
+          ],
+        },
+        {
+          ENG: "My mother gave me her book.",
+          POL: [
+            "Moja matka dała mi jej książkę.",
+            "Moja matka dała mnie jej książkę.",
+          ],
+        },
+        {
+          ENG: "My fathers gave me their book.",
+          POL: [
+            "Moi ojcowie dali mi ich książkę.",
+            "Moi ojcowie dali mnie ich książkę.",
+          ],
+        },
+        {
+          ENG: "My mothers gave me their book.",
+          POL: [
+            "Moje matki dały mi ich książkę.",
+            "Moje matki dały mnie ich książkę.",
+          ],
+        },
+        {
+          ENG: "Our father gave us his book.",
+          POL: ["Nasz ojciec dał nam jego książkę."],
+        },
+        {
+          ENG: "Our mother gave us her book.",
+          POL: ["Nasza matka dała nam jej książkę."],
+        },
+        {
+          ENG: "Our fathers gave us their book.",
+          POL: ["Nasi ojcowie dali nam ich książkę."],
+        },
+        {
+          ENG: "Our mothers gave us their book.",
+          POL: ["Nasze matki dały nam ich książkę."],
+        },
+      ];
+      return runPaletteTest(
+        "ENG",
+        "POL",
+        "113a my father gave me his book",
+        ref,
+        {}
+      );
     });
     it("#pal14-03d GET 200 YES: Poleng. My father gave me his book.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "113a my father gave me his book",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              POL: "Mój ojciec dał mi jego książkę.",
-              ENG: [
-                "My father gave me his book.",
-                "My father had given me his book.",
-                "My father has given me his book.",
-              ],
-            },
-            {
-              POL: "Moja matka dała mi jej książkę.",
-              ENG: [
-                "My mother gave me her book.",
-                "My mother had given me her book.",
-                "My mother has given me her book.",
-              ],
-            },
-            {
-              POL: "Nasz ojciec dał nam jego książkę.",
-              ENG: [
-                "Our father gave us his book.",
-                "Our father had given us his book.",
-                "Our father has given us his book.",
-              ],
-            },
-            {
-              POL: "Nasza matka dała nam jej książkę.",
-              ENG: [
-                "Our mother gave us her book.",
-                "Our mother had given us her book.",
-                "Our mother has given us her book.",
-              ],
-            },
-            {
-              POL: "Moi ojcowie dali mi ich książkę.",
-              ENG: [
-                "My fathers gave me their book.",
-                "My fathers had given me their book.",
-                "My fathers have given me their book.",
-              ],
-            },
-            {
-              POL: "Moje matki dały mi ich książkę.",
-              ENG: [
-                "My mothers gave me their book.",
-                "My mothers had given me their book.",
-                "My mothers have given me their book.",
-              ],
-            },
-            {
-              POL: "Nasi ojcowie dali nam ich książkę.",
-              ENG: [
-                "Our fathers gave us their book.",
-                "Our fathers had given us their book.",
-                "Our fathers have given us their book.",
-              ],
-            },
-            {
-              POL: "Nasze matki dały nam ich książkę.",
-              ENG: [
-                "Our mothers gave us their book.",
-                "Our mothers had given us their book.",
-                "Our mothers have given us their book.",
-              ],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          POL: "Mój ojciec dał mi jego książkę.",
+          ENG: [
+            "My father gave me his book.",
+            "My father had given me his book.",
+            "My father has given me his book.",
+          ],
+        },
+        {
+          POL: "Moja matka dała mi jej książkę.",
+          ENG: [
+            "My mother gave me her book.",
+            "My mother had given me her book.",
+            "My mother has given me her book.",
+          ],
+        },
+        {
+          POL: "Nasz ojciec dał nam jego książkę.",
+          ENG: [
+            "Our father gave us his book.",
+            "Our father had given us his book.",
+            "Our father has given us his book.",
+          ],
+        },
+        {
+          POL: "Nasza matka dała nam jej książkę.",
+          ENG: [
+            "Our mother gave us her book.",
+            "Our mother had given us her book.",
+            "Our mother has given us her book.",
+          ],
+        },
+        {
+          POL: "Moi ojcowie dali mi ich książkę.",
+          ENG: [
+            "My fathers gave me their book.",
+            "My fathers had given me their book.",
+            "My fathers have given me their book.",
+          ],
+        },
+        {
+          POL: "Moje matki dały mi ich książkę.",
+          ENG: [
+            "My mothers gave me their book.",
+            "My mothers had given me their book.",
+            "My mothers have given me their book.",
+          ],
+        },
+        {
+          POL: "Nasi ojcowie dali nam ich książkę.",
+          ENG: [
+            "Our fathers gave us their book.",
+            "Our fathers had given us their book.",
+            "Our fathers have given us their book.",
+          ],
+        },
+        {
+          POL: "Nasze matki dały nam ich książkę.",
+          ENG: [
+            "Our mothers gave us their book.",
+            "Our mothers had given us their book.",
+            "Our mothers have given us their book.",
+          ],
+        },
+      ];
+      return runPaletteTest(
+        "POL",
+        "ENG",
+        "113a my father gave me his book",
+        ref,
+        {}
+      );
     });
     it("#pal14-04a GET 200 YES: Engpol. The doctor gave me her book. Gender annotation is added when there's no AOC, because pronombre is 'their' so doesn't reveal gender. However in singular, the pronombres 'her' and 'his' reveal the gender (are AOCs) so no gender annotation.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "114 doctor gave me her book",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "The doctor gave me her book.",
-              POL: [
-                "Lekarka dała mi jej książkę.",
-                "Lekarka dała mnie jej książkę.",
-              ],
-            },
-            {
-              ENG: "The doctor gave me his book.",
-              POL: [
-                "Lekarz dał mi jego książkę.",
-                "Lekarz dał mnie jego książkę.",
-              ],
-            },
-            {
-              ENG: [
-                "The doctors (mixed) gave me their book.",
-                "The doctors (males) gave me their book.",
-              ],
-              POL: [
-                "Lekarze dali mi ich książkę.",
-                "Lekarze dali mnie ich książkę.",
-              ],
-            },
-            {
-              ENG: "The doctors (females) gave me their book.",
-              POL: [
-                "Lekarki dały mi ich książkę.",
-                "Lekarki dały mnie ich książkę.",
-              ],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "The doctor gave me her book.",
+          POL: [
+            "Lekarka dała mi jej książkę.",
+            "Lekarka dała mnie jej książkę.",
+          ],
+        },
+        {
+          ENG: "The doctor gave me his book.",
+          POL: ["Lekarz dał mi jego książkę.", "Lekarz dał mnie jego książkę."],
+        },
+        {
+          ENG: [
+            "The doctors (mixed) gave me their book.",
+            "The doctors (males) gave me their book.",
+          ],
+          POL: [
+            "Lekarze dali mi ich książkę.",
+            "Lekarze dali mnie ich książkę.",
+          ],
+        },
+        {
+          ENG: "The doctors (females) gave me their book.",
+          POL: [
+            "Lekarki dały mi ich książkę.",
+            "Lekarki dały mnie ich książkę.",
+          ],
+        },
+      ];
+      return runPaletteTest(
+        "ENG",
+        "POL",
+        "114 doctor gave me her book",
+        ref,
+        {}
+      );
     });
     it("#pal14-04b GET 200 YES: Engpol. (not allowed to be unspecified, should be identical result to previous test). The doctor gave me her book.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "114 doctor gave me her book",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              // ENG: "The doctor (female) gave me her book.",
-              ENG: "The doctor gave me her book.",
-              POL: [
-                "Lekarka dała mi jej książkę.",
-                "Lekarka dała mnie jej książkę.",
-              ],
-            },
-            {
-              // ENG: "The doctor (male) gave me his book.",
-              ENG: "The doctor gave me his book.",
-              POL: [
-                "Lekarz dał mi jego książkę.",
-                "Lekarz dał mnie jego książkę.",
-              ],
-            },
-            {
-              ENG: [
-                "The doctors (mixed) gave me their book.",
-                "The doctors (males) gave me their book.",
-              ],
-              POL: [
-                "Lekarze dali mi ich książkę.",
-                "Lekarze dali mnie ich książkę.",
-              ],
-            },
-            {
-              ENG: "The doctors (females) gave me their book.",
-              POL: [
-                "Lekarki dały mi ich książkę.",
-                "Lekarki dały mnie ich książkę.",
-              ],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          // ENG: "The doctor (female) gave me her book.",
+          ENG: "The doctor gave me her book.",
+          POL: [
+            "Lekarka dała mi jej książkę.",
+            "Lekarka dała mnie jej książkę.",
+          ],
+        },
+        {
+          // ENG: "The doctor (male) gave me his book.",
+          ENG: "The doctor gave me his book.",
+          POL: ["Lekarz dał mi jego książkę.", "Lekarz dał mnie jego książkę."],
+        },
+        {
+          ENG: [
+            "The doctors (mixed) gave me their book.",
+            "The doctors (males) gave me their book.",
+          ],
+          POL: [
+            "Lekarze dali mi ich książkę.",
+            "Lekarze dali mnie ich książkę.",
+          ],
+        },
+        {
+          ENG: "The doctors (females) gave me their book.",
+          POL: [
+            "Lekarki dały mi ich książkę.",
+            "Lekarki dały mnie ich książkę.",
+          ],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "114 doctor gave me her book", ref, {
+        pleaseDontSpecify: true,
+      });
     });
   });
 
   describe("/palette - Stage 15: Prepositions and Articles.", () => {
     it("#pal15-01a GET 200 YES: Poleng. Indefinite article.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy56",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["A tomato."],
-              POL: "Pomidor.",
-            },
-            {
-              ENG: ["An onion."],
-              POL: "Cebula.",
-            },
-            {
-              ENG: ["An apple."],
-              POL: "Jabłko.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["A tomato."],
+          POL: "Pomidor.",
+        },
+        {
+          ENG: ["An onion."],
+          POL: "Cebula.",
+        },
+        {
+          ENG: ["An apple."],
+          POL: "Jabłko.",
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "dummy56", ref, {});
     });
     it("#pal15-01b GET 200 YES: Engpol. Indefinite article.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy56",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "A tomato.",
-              POL: ["Pomidor."],
-            },
-            {
-              ENG: "An onion.",
-              POL: ["Cebula."],
-            },
-            {
-              ENG: "An apple.",
-              POL: ["Jabłko."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "A tomato.",
+          POL: ["Pomidor."],
+        },
+        {
+          ENG: "An onion.",
+          POL: ["Cebula."],
+        },
+        {
+          ENG: "An apple.",
+          POL: ["Jabłko."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "dummy56", ref, {});
     });
     it("#pal15-02a GET 200 YES: Poleng. Either article.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy56a",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["A woman.", "The woman.", "A lady.", "The lady."],
-              POL: "Kobieta.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["A woman.", "The woman.", "A lady.", "The lady."],
+          POL: "Kobieta.",
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "dummy56a", ref, {});
     });
     it("#pal15-02b GET 200 YES: Engpol. Either article.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy56a",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "A woman.",
-              POL: ["Kobieta."],
-            },
-            {
-              ENG: "The woman.",
-              POL: ["Kobieta."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "A woman.",
+          POL: ["Kobieta."],
+        },
+        {
+          ENG: "The woman.",
+          POL: ["Kobieta."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "dummy56a", ref, {});
     });
     it("#pal15-03a GET 200 YES: Poleng. Preposition 'with'. SHEEP (checking clarifiers) Articles for singular. Checking POL protective preposition form.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy55c",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["With a sheep.", "With the sheep."],
-              POL: "Z owcą.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["With a sheep.", "With the sheep."],
+          POL: "Z owcą.",
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "dummy55c", ref, {});
     });
     it("#pal15-03b GET 200 YES: Engpol. Preposition 'with'. SHEEP (checking clarifiers) Articles for singular. Checking POL protective preposition form.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy55c",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["With the sheep (singular).", "With a sheep."],
-              POL: ["Z owcą."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["With the sheep (singular).", "With a sheep."],
+          POL: ["Z owcą."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "dummy55c", ref, {});
     });
     it("#pal15-03c GET 200 YES: Poleng. Preposition 'with'. SHEEP (checking clarifiers) Articles for plural.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy55d",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["With sheep.", "With the sheep."],
-              POL: "Z owcami.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["With sheep.", "With the sheep."],
+          POL: "Z owcami.",
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "dummy55d", ref, {});
     });
     it("#pal15-03d GET 200 YES: Engpol. Preposition 'with'. SHEEP (checking clarifiers) Articles for plural.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy55d",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["With the sheep (plural).", "With sheep."],
-              POL: ["Z owcami."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["With the sheep (plural).", "With sheep."],
+          POL: ["Z owcami."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "dummy55d", ref, {});
     });
     it("#pal15-04a GET 200 YES: Poleng. Preposition 'with'. Articles for singular. Checking POL protective preposition form.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy55a",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["With a sheep.", "With the sheep."],
-              POL: "Z owcą.",
-            },
-            {
-              ENG: ["With a rat.", "With the rat."],
-              POL: "Ze szczurem.",
-            },
-            {
-              ENG: ["With a bear.", "With the bear."],
-              POL: "Z niedźwiedziem.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["With a sheep.", "With the sheep."],
+          POL: "Z owcą.",
+        },
+        {
+          ENG: ["With a rat.", "With the rat."],
+          POL: "Ze szczurem.",
+        },
+        {
+          ENG: ["With a bear.", "With the bear."],
+          POL: "Z niedźwiedziem.",
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "dummy55a", ref, {});
     });
     it("#pal15-04b GET 200 YES: Engpol. Preposition 'with'. Articles for singular. Checking POL protective preposition form.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy55a",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["With the sheep.", "With a sheep."],
-              POL: ["Z owcą."],
-            },
-            {
-              ENG: ["With the rat.", "With a rat."],
-              POL: ["Ze szczurem."],
-            },
-            {
-              ENG: ["With the bear.", "With a bear."],
-              POL: ["Z niedźwiedziem."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["With the sheep.", "With a sheep."],
+          POL: ["Z owcą."],
+        },
+        {
+          ENG: ["With the rat.", "With a rat."],
+          POL: ["Ze szczurem."],
+        },
+        {
+          ENG: ["With the bear.", "With a bear."],
+          POL: ["Z niedźwiedziem."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "dummy55a", ref, {});
     });
     it("#pal15-04c GET 200 YES: Poleng. Preposition 'with'. Articles for plural.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy55b",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["With sheep.", "With the sheep."],
-              POL: "Z owcami.",
-            },
-            {
-              ENG: ["With rats.", "With the rats."],
-              POL: "Ze szczurami.",
-            },
-            {
-              ENG: ["With bears.", "With the bears."],
-              POL: "Z niedźwiedziami.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["With sheep.", "With the sheep."],
+          POL: "Z owcami.",
+        },
+        {
+          ENG: ["With rats.", "With the rats."],
+          POL: "Ze szczurami.",
+        },
+        {
+          ENG: ["With bears.", "With the bears."],
+          POL: "Z niedźwiedziami.",
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "dummy55b", ref, {});
     });
     it("#pal15-04d GET 200 YES: Engpol. Preposition 'with'. Articles for plural.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy55b",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["With the sheep.", "With sheep."],
-              POL: ["Z owcami."],
-            },
-            {
-              ENG: ["With the rats.", "With rats."],
-              POL: ["Ze szczurami."],
-            },
-            {
-              ENG: ["With the bears.", "With bears."],
-              POL: ["Z niedźwiedziami."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["With the sheep.", "With sheep."],
+          POL: ["Z owcami."],
+        },
+        {
+          ENG: ["With the rats.", "With rats."],
+          POL: ["Ze szczurami."],
+        },
+        {
+          ENG: ["With the bears.", "With bears."],
+          POL: ["Z niedźwiedziami."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "dummy55b", ref, {});
     });
     it("#pal15-04e GET 200 YES: Poleng. Preposition 'with'. Articles for singular. merelyPreferredChoicesForQuestionSentence", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy55",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["With an apple.", "With the apple."],
-              POL: "Z jabłkiem.",
-            },
-            {
-              ENG: ["With a tomato.", "With the tomato."],
-              POL: "Z pomidorem.",
-            },
-            {
-              ENG: ["With an onion.", "With the onion."],
-              POL: "Z cebulą.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["With an apple.", "With the apple."],
+          POL: "Z jabłkiem.",
+        },
+        {
+          ENG: ["With a tomato.", "With the tomato."],
+          POL: "Z pomidorem.",
+        },
+        {
+          ENG: ["With an onion.", "With the onion."],
+          POL: "Z cebulą.",
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "dummy55", ref, {});
     });
     it("#pal15-04f GET 200 YES: Engpol. Preposition 'with'. Articles for singular. merelyPreferredChoicesForQuestionSentence", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy55",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "With an apple.",
-              POL: ["Z jabłkiem."],
-            },
-            {
-              ENG: "With a tomato.",
-              POL: ["Z pomidorem."],
-            },
-            {
-              ENG: "With an onion.",
-              POL: ["Z cebulą."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "With an apple.",
+          POL: ["Z jabłkiem."],
+        },
+        {
+          ENG: "With a tomato.",
+          POL: ["Z pomidorem."],
+        },
+        {
+          ENG: "With an onion.",
+          POL: ["Z cebulą."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "dummy55", ref, {});
     });
   });
 });
