@@ -736,83 +736,44 @@ describe("/api", function () {
         });
     });
     it("#pal12-03a GET 200 YES: RSWAT for First Conditional POL->ENG.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "first conditional 106a",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              POL: [
-                "Jeśli będziesz pisać książkę , ją zbadam.",
-                "Jeśli napiszesz książkę , ją zbadam.",
-              ],
-              ENG: ["If you write a book , I will research it."],
-            },
-            {
-              POL: "Jeśli będziesz pisał książkę , ją zbadam.",
-              ENG: ["If you write (male) a book , I will research it."],
-            },
-            {
-              POL: "Jeśli będziesz pisała książkę , ją zbadam.",
-              ENG: ["If you write (female) a book , I will research it."],
-            },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          POL: [
+            "Jeśli będziesz pisać książkę , ją zbadam.",
+            "Jeśli napiszesz książkę , ją zbadam.",
+          ],
+          ENG: ["If you write a book , I will research it."],
+        },
+        {
+          POL: "Jeśli będziesz pisał książkę , ją zbadam.",
+          ENG: ["If you write (male) a book , I will research it."],
+        },
+        {
+          POL: "Jeśli będziesz pisała książkę , ją zbadam.",
+          ENG: ["If you write (female) a book , I will research it."],
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "first conditional 106a", ref, {});
     });
     it("#pal12-03b GET 200 YES: RSWAT for First Conditional ENG->POL.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "first conditional 106a",
-        })
-        .expect(200)
-        .then((res) => {
-          consol.log(res.body);
-          let ref = [
-            {
-              ENG: "If you write a book , I will research it.",
-              POL: [
-                "Jeśli napiszesz książkę , ją zbadam.",
-                "Jeśli będziesz pisać książkę , ją zbadam.",
-              ],
-            },
-            {
-              ENG: "If you write (male) a book , I will research it.",
-              POL: ["Jeśli będziesz pisał książkę , ją zbadam."],
-            },
-            {
-              ENG: "If you write (female) a book , I will research it.",
-              POL: ["Jeśli będziesz pisała książkę , ją zbadam."],
-            },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "If you write a book , I will research it.",
+          POL: [
+            "Jeśli napiszesz książkę , ją zbadam.",
+            "Jeśli będziesz pisać książkę , ją zbadam.",
+          ],
+        },
+        {
+          ENG: "If you write (male) a book , I will research it.",
+          POL: ["Jeśli będziesz pisał książkę , ją zbadam."],
+        },
+        {
+          ENG: "If you write (female) a book , I will research it.",
+          POL: ["Jeśli będziesz pisała książkę , ją zbadam."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "first conditional 106a", ref, {});
     });
   });
 
@@ -894,1110 +855,696 @@ describe("/api", function () {
         });
     });
     it("#pal13A-02a GET 200 YES: Engpol. Inherit from pronombre to verb (m sing).", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          useDummy: true,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy49a",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            { ENG: "I (male) wrote.", POL: ["Napisałem.", "Ja napisałem."] },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        { ENG: "I (male) wrote.", POL: ["Napisałem.", "Ja napisałem."] },
+      ];
+      return runPaletteTest("ENG", "POL", "dummy49a", ref, {});
     });
     it("#pal13A-02b GET 200 YES: Engpol. Inherit from pronombre to verb (nonvir plur).", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          useDummy: true,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy49b",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "We (females) wrote.",
-              POL: ["Napisałyśmy.", "My napisałyśmy."],
-            },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "We (females) wrote.",
+          POL: ["Napisałyśmy.", "My napisałyśmy."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "dummy49b", ref, {});
     });
     it("#pal13A-02c GET 200 YES: Engpol. WITH SPECIFIERS Inherit from pronombre to verb (m sing).", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          useDummy: true,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy49a",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            { ENG: "I (male) wrote.", POL: ["Napisałem.", "Ja napisałem."] },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        { ENG: "I (male) wrote.", POL: ["Napisałem.", "Ja napisałem."] },
+      ];
+      return runPaletteTest("ENG", "POL", "dummy49a", ref, {});
     });
     it("#pal13A-02d GET 200 YES: Engpol. WITH SPECIFIERS Inherit from pronombre to verb (nonvir plur).", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
+      let ref = [
+        {
+          ENG: "We (females) wrote.",
+          POL: ["Napisałyśmy.", "My napisałyśmy."],
+        },
+      ];
 
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          useDummy: true,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy49b",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "We (females) wrote.",
-              POL: ["Napisałyśmy.", "My napisałyśmy."],
-            },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      return runPaletteTest("ENG", "POL", "dummy49b", ref, {});
     });
     it("#pal13A-04a GET 200 YES: Poleng. Inherit from pronombre to verb (m sing).", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          useDummy: true,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy49a",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["I wrote.", "I had written.", "I have written."],
-              POL: ["Napisałem.", "Ja napisałem."],
-            },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["I wrote.", "I had written.", "I have written."],
+          POL: ["Napisałem.", "Ja napisałem."],
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "dummy49a", ref, {});
     });
     it("#pal13A-04b GET 200 YES: Poleng. Inherit from pronombre to verb (nonvir plur).", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          useDummy: true,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy49b",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["We wrote.", "We had written.", "We have written."],
-              POL: ["Napisałyśmy.", "My napisałyśmy."],
-            },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["We wrote.", "We had written.", "We have written."],
+          POL: ["Napisałyśmy.", "My napisałyśmy."],
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "dummy49b", ref, {});
     });
     it("#pal13A-04c GET 200 YES: Poleng. NO CLARIFIERS Inherit from pronombre to verb (m sing).", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          useDummy: true,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy49a",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["I wrote.", "I had written.", "I have written."],
-              POL: ["Napisałem.", "Ja napisałem."],
-            },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["I wrote.", "I had written.", "I have written."],
+          POL: ["Napisałem.", "Ja napisałem."],
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "dummy49a", ref, {});
     });
     it("#pal13A-04d GET 200 YES: Poleng. NO CLARIFIERS Inherit from pronombre to verb (nonvir plur).", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          useDummy: true,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy49b",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["We wrote.", "We had written.", "We have written."],
-              POL: ["Napisałyśmy.", "My napisałyśmy."],
-            },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["We wrote.", "We had written.", "We have written."],
+          POL: ["Napisałyśmy.", "My napisałyśmy."],
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "dummy49b", ref, {});
     });
     it("#pal13A-05a GET 200 YES: Poleng. Inherit from pronombre to verb (m sing).", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          useDummy: true,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy49c",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["I wrote.", "I had written.", "I have written."],
-              POL: [
-                "Napisałem.",
-                "Ja napisałem.",
-                "Napisałam.",
-                "Ja napisałam.",
-              ],
-            },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["I wrote.", "I had written.", "I have written."],
+          POL: ["Napisałem.", "Ja napisałem.", "Napisałam.", "Ja napisałam."],
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "dummy49c", ref, {});
     });
     it("#pal13A-05b GET 200 YES: Poleng. Inherit from pronombre to verb (nonvir plur).", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          useDummy: true,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy49d",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["We wrote.", "We had written.", "We have written."],
-              POL: [
-                "Napisałyśmy.",
-                "My napisałyśmy.",
-                "Napisaliśmy.",
-                "My napisaliśmy.",
-              ],
-            },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["We wrote.", "We had written.", "We have written."],
+          POL: [
+            "Napisałyśmy.",
+            "My napisałyśmy.",
+            "Napisaliśmy.",
+            "My napisaliśmy.",
+          ],
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "dummy49d", ref, {});
     });
     it("#pal13A-05c GET 200 YES: Poleng. NO CLARIFIERS Inherit from pronombre to verb (m sing).", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          useDummy: true,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy49c",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["I wrote.", "I had written.", "I have written."],
-              POL: [
-                "Napisałem.",
-                "Ja napisałem.",
-                "Napisałam.",
-                "Ja napisałam.",
-              ],
-            },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["I wrote.", "I had written.", "I have written."],
+          POL: ["Napisałem.", "Ja napisałem.", "Napisałam.", "Ja napisałam."],
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "dummy49c", ref, {});
     });
     it("#pal13A-05d GET 200 YES: Poleng. NO CLARIFIERS Inherit from pronombre to verb (nonvir plur).", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          useDummy: true,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy49b",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["We wrote.", "We had written.", "We have written."],
-              POL: [
-                "Napisałyśmy.",
-                "My napisałyśmy.",
-                "Napisaliśmy.",
-                "My napisaliśmy.",
-              ],
-            },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["We wrote.", "We had written.", "We have written."],
+          POL: [
+            "Napisałyśmy.",
+            "My napisałyśmy.",
+            "Napisaliśmy.",
+            "My napisaliśmy.",
+          ],
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "dummy49b", ref, {});
     });
     it("#pal13A-06a GET 200 YES: Engpol. No gender specified in stCh for MGN.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          useDummy: true,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy51a",
-          pleaseDontSpecify: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "The doctor wrote.",
-              POL: ["Lekarz napisał.", "Lekarka napisała."],
-            },
-            {
-              ENG: "The doctor read (past).",
-              POL: ["Lekarz przeczytał.", "Lekarka przeczytała."],
-            },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "The doctor wrote.",
+          POL: ["Lekarz napisał.", "Lekarka napisała."],
+        },
+        {
+          ENG: "The doctor read (past).",
+          POL: ["Lekarz przeczytał.", "Lekarka przeczytała."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "dummy51a", ref, {
+        pleaseDontSpecify: true,
+      });
     });
     it("#pal13A-7a GET 200 YES: Singular pronombres: Verb person and number is inherited from pronombre headChunk.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "108 singular I am",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            { ENG: "I am.", POL: ["Jestem.", "Ja jestem."] },
-            { ENG: "You (singular) are.", POL: ["Jesteś.", "Ty jesteś."] },
-            { ENG: "He is.", POL: ["Jest.", "On jest."] },
-            { ENG: "She is.", POL: ["Jest.", "Ona jest."] },
-            { ENG: "It is.", POL: ["Jest.", "Ono jest."] },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        { ENG: "I am.", POL: ["Jestem.", "Ja jestem."] },
+        { ENG: "You (singular) are.", POL: ["Jesteś.", "Ty jesteś."] },
+        { ENG: "He is.", POL: ["Jest.", "On jest."] },
+        { ENG: "She is.", POL: ["Jest.", "Ona jest."] },
+        { ENG: "It is.", POL: ["Jest.", "Ono jest."] },
+      ];
+      return runPaletteTest("ENG", "POL", "108 singular I am", ref, {});
     });
   });
 
   describe("/palette - Stage 13B: Pronombres and other Multi Gender Nouns: Further tests.", () => {
     it("#pal13B-01a GET 200 YES: Specifiers not requested. Engpol. I am.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "111a I am",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            { ENG: "I am.", POL: ["Jestem.", "Ja jestem."] },
-            { ENG: "We are.", POL: ["Jesteśmy.", "My jesteśmy."] },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      //epsilon duplicate test of following one.
+      let ref = [
+        { ENG: "I am.", POL: ["Jestem.", "Ja jestem."] },
+        { ENG: "We are.", POL: ["Jesteśmy.", "My jesteśmy."] },
+      ];
+      return runPaletteTest("ENG", "POL", "111a I am", ref, {});
     });
     it("#pal13B-01b GET 200 YES: Specifiers requested but should not appear. Engpol. I am.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "111a I am",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            { ENG: "I am.", POL: ["Jestem.", "Ja jestem."] },
-            { ENG: "We are.", POL: ["Jesteśmy.", "My jesteśmy."] },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        { ENG: "I am.", POL: ["Jestem.", "Ja jestem."] },
+        { ENG: "We are.", POL: ["Jesteśmy.", "My jesteśmy."] },
+      ];
+      return runPaletteTest("ENG", "POL", "111a I am", ref, {});
     });
     it("#pal13B-02a GET 200 YES: Engpol. A more interesting sentence with Pronombres.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
+      let ref = [
+        {
+          ENG: [
+            "The woman was reading me a book.",
+            "The woman was reading a book to me.",
+          ],
+          POL: ["Kobieta czytała mi książkę.", "Kobieta czytała mnie książkę."],
+        },
+        {
+          ENG: [
+            "The women were reading a book to me.",
+            "The women were reading me a book.",
+          ],
+          POL: ["Kobiety czytały mi książkę.", "Kobiety czytały mnie książkę."],
+        },
+        {
+          ENG: [
+            "The woman was reading a book to us.",
+            "The woman was reading us a book.",
+          ],
+          POL: ["Kobieta czytała nam książkę."],
+        },
+        {
+          ENG: [
+            "The women were reading a book to us.",
+            "The women were reading us a book.",
+          ],
+          POL: ["Kobiety czytały nam książkę."],
+        },
+      ];
 
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "110 the woman read me a book",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: [
-                "The woman was reading me a book.",
-                "The woman was reading a book to me.",
-              ],
-              POL: [
-                "Kobieta czytała mi książkę.",
-                "Kobieta czytała mnie książkę.",
-              ],
-            },
-            {
-              ENG: [
-                "The women were reading a book to me.",
-                "The women were reading me a book.",
-              ],
-              POL: [
-                "Kobiety czytały mi książkę.",
-                "Kobiety czytały mnie książkę.",
-              ],
-            },
-            {
-              ENG: [
-                "The woman was reading a book to us.",
-                "The woman was reading us a book.",
-              ],
-              POL: ["Kobieta czytała nam książkę."],
-            },
-            {
-              ENG: [
-                "The women were reading a book to us.",
-                "The women were reading us a book.",
-              ],
-              POL: ["Kobiety czytały nam książkę."],
-            },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      return runPaletteTest(
+        "ENG",
+        "POL",
+        "110 the woman read me a book",
+        ref,
+        {}
+      );
     });
     it("#pal13B-02b GET 200 YES: Poleng. A more interesting sentence with Pronombres.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "110 the woman read me a book",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: [
-                "The woman was reading me a book.",
-                "The woman was reading a book to me.",
-                "The woman has read me a book.",
-                "The woman has read a book to me.",
-                "The lady was reading me a book.",
-                "The lady was reading a book to me.",
-                "The lady has read me a book.",
-                "The lady has read a book to me.",
-              ],
-              POL: "Kobieta czytała mi książkę.",
-            },
-            {
-              ENG: [
-                "The women were reading me a book.",
-                "The women were reading a book to me.",
-                "The women have read me a book.",
-                "The women have read a book to me.",
-                "The ladies were reading me a book.",
-                "The ladies were reading a book to me.",
-                "The ladies have read me a book.",
-                "The ladies have read a book to me.",
-              ],
-              POL: "Kobiety czytały mi książkę.",
-            },
-            {
-              ENG: [
-                "The woman was reading us a book.",
-                "The woman was reading a book to us.",
-                "The woman has read us a book.",
-                "The woman has read a book to us.",
-                "The lady was reading us a book.",
-                "The lady was reading a book to us.",
-                "The lady has read us a book.",
-                "The lady has read a book to us.",
-              ],
-              POL: "Kobieta czytała nam książkę.",
-            },
-            {
-              ENG: [
-                "The women were reading us a book.",
-                "The women were reading a book to us.",
-                "The women have read us a book.",
-                "The women have read a book to us.",
-                "The ladies were reading us a book.",
-                "The ladies were reading a book to us.",
-                "The ladies have read us a book.",
-                "The ladies have read a book to us.",
-              ],
-              POL: "Kobiety czytały nam książkę.",
-            },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: [
+            "The woman was reading me a book.",
+            "The woman was reading a book to me.",
+            "The woman has read me a book.",
+            "The woman has read a book to me.",
+            "The lady was reading me a book.",
+            "The lady was reading a book to me.",
+            "The lady has read me a book.",
+            "The lady has read a book to me.",
+          ],
+          POL: "Kobieta czytała mi książkę.",
+        },
+        {
+          ENG: [
+            "The women were reading me a book.",
+            "The women were reading a book to me.",
+            "The women have read me a book.",
+            "The women have read a book to me.",
+            "The ladies were reading me a book.",
+            "The ladies were reading a book to me.",
+            "The ladies have read me a book.",
+            "The ladies have read a book to me.",
+          ],
+          POL: "Kobiety czytały mi książkę.",
+        },
+        {
+          ENG: [
+            "The woman was reading us a book.",
+            "The woman was reading a book to us.",
+            "The woman has read us a book.",
+            "The woman has read a book to us.",
+            "The lady was reading us a book.",
+            "The lady was reading a book to us.",
+            "The lady has read us a book.",
+            "The lady has read a book to us.",
+          ],
+          POL: "Kobieta czytała nam książkę.",
+        },
+        {
+          ENG: [
+            "The women were reading us a book.",
+            "The women were reading a book to us.",
+            "The women have read us a book.",
+            "The women have read a book to us.",
+            "The ladies were reading us a book.",
+            "The ladies were reading a book to us.",
+            "The ladies have read us a book.",
+            "The ladies have read a book to us.",
+          ],
+          POL: "Kobiety czytały nam książkę.",
+        },
+      ];
+      return runPaletteTest(
+        "POL",
+        "ENG",
+        "110 the woman read me a book",
+        ref,
+        {}
+      );
     });
     it("#pal13B-03a GET 200 YES: Engpol. Another more interesting sentence with Pronombres.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
+      let ref = [
+        {
+          ENG: ["Father gave me apples.", "Father gave apples to me."],
+          POL: ["Ojciec dał mi jabłka.", "Ojciec dał mnie jabłka."],
+        },
+        {
+          ENG: ["Father gave me books.", "Father gave books to me."],
+          POL: ["Ojciec dał mi książki.", "Ojciec dał mnie książki."],
+        },
+        {
+          ENG: ["Father gave me onions.", "Father gave onions to me."],
+          POL: ["Ojciec dał mi cebule.", "Ojciec dał mnie cebule."],
+        },
+        {
+          ENG: ["Father gave me mirrors.", "Father gave mirrors to me."],
+          POL: [
+            "Ojciec dał mi zwierciadła.",
+            "Ojciec dał mi lustra.",
 
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "112 familymember gave me things",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["Father gave me apples.", "Father gave apples to me."],
-              POL: ["Ojciec dał mi jabłka.", "Ojciec dał mnie jabłka."],
-            },
-            {
-              ENG: ["Father gave me books.", "Father gave books to me."],
-              POL: ["Ojciec dał mi książki.", "Ojciec dał mnie książki."],
-            },
-            {
-              ENG: ["Father gave me onions.", "Father gave onions to me."],
-              POL: ["Ojciec dał mi cebule.", "Ojciec dał mnie cebule."],
-            },
-            {
-              ENG: ["Father gave me mirrors.", "Father gave mirrors to me."],
-              POL: [
-                "Ojciec dał mi zwierciadła.",
-                "Ojciec dał mi lustra.",
-
-                "Ojciec dał mnie zwierciadła.",
-                "Ojciec dał mnie lustra.",
-              ],
-            },
-            {
-              ENG: ["Father gave us apples.", "Father gave apples to us."],
-              POL: ["Ojciec dał nam jabłka."],
-            },
-            {
-              ENG: ["Father gave us books.", "Father gave books to us."],
-              POL: ["Ojciec dał nam książki."],
-            },
-            {
-              ENG: ["Father gave us onions.", "Father gave onions to us."],
-              POL: ["Ojciec dał nam cebule."],
-            },
-            {
-              ENG: ["Father gave us mirrors.", "Father gave mirrors to us."],
-              POL: ["Ojciec dał nam zwierciadła.", "Ojciec dał nam lustra."],
-            },
-            {
-              ENG: ["Mother gave me apples.", "Mother gave apples to me."],
-              POL: ["Matka dała mi jabłka.", "Matka dała mnie jabłka."],
-            },
-            {
-              ENG: ["Mother gave me books.", "Mother gave books to me."],
-              POL: ["Matka dała mi książki.", "Matka dała mnie książki."],
-            },
-            {
-              ENG: ["Mother gave me onions.", "Mother gave onions to me."],
-              POL: ["Matka dała mi cebule.", "Matka dała mnie cebule."],
-            },
-            {
-              ENG: ["Mother gave me mirrors.", "Mother gave mirrors to me."],
-              POL: [
-                "Matka dała mi zwierciadła.",
-                "Matka dała mi lustra.",
-                "Matka dała mnie zwierciadła.",
-                "Matka dała mnie lustra.",
-              ],
-            },
-            {
-              ENG: ["Mother gave us apples.", "Mother gave apples to us."],
-              POL: ["Matka dała nam jabłka."],
-            },
-            {
-              ENG: ["Mother gave us books.", "Mother gave books to us."],
-              POL: ["Matka dała nam książki."],
-            },
-            {
-              ENG: ["Mother gave us onions.", "Mother gave onions to us."],
-              POL: ["Matka dała nam cebule."],
-            },
-            {
-              ENG: ["Mother gave us mirrors.", "Mother gave mirrors to us."],
-              POL: ["Matka dała nam zwierciadła.", "Matka dała nam lustra."],
-            },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+            "Ojciec dał mnie zwierciadła.",
+            "Ojciec dał mnie lustra.",
+          ],
+        },
+        {
+          ENG: ["Father gave us apples.", "Father gave apples to us."],
+          POL: ["Ojciec dał nam jabłka."],
+        },
+        {
+          ENG: ["Father gave us books.", "Father gave books to us."],
+          POL: ["Ojciec dał nam książki."],
+        },
+        {
+          ENG: ["Father gave us onions.", "Father gave onions to us."],
+          POL: ["Ojciec dał nam cebule."],
+        },
+        {
+          ENG: ["Father gave us mirrors.", "Father gave mirrors to us."],
+          POL: ["Ojciec dał nam zwierciadła.", "Ojciec dał nam lustra."],
+        },
+        {
+          ENG: ["Mother gave me apples.", "Mother gave apples to me."],
+          POL: ["Matka dała mi jabłka.", "Matka dała mnie jabłka."],
+        },
+        {
+          ENG: ["Mother gave me books.", "Mother gave books to me."],
+          POL: ["Matka dała mi książki.", "Matka dała mnie książki."],
+        },
+        {
+          ENG: ["Mother gave me onions.", "Mother gave onions to me."],
+          POL: ["Matka dała mi cebule.", "Matka dała mnie cebule."],
+        },
+        {
+          ENG: ["Mother gave me mirrors.", "Mother gave mirrors to me."],
+          POL: [
+            "Matka dała mi zwierciadła.",
+            "Matka dała mi lustra.",
+            "Matka dała mnie zwierciadła.",
+            "Matka dała mnie lustra.",
+          ],
+        },
+        {
+          ENG: ["Mother gave us apples.", "Mother gave apples to us."],
+          POL: ["Matka dała nam jabłka."],
+        },
+        {
+          ENG: ["Mother gave us books.", "Mother gave books to us."],
+          POL: ["Matka dała nam książki."],
+        },
+        {
+          ENG: ["Mother gave us onions.", "Mother gave onions to us."],
+          POL: ["Matka dała nam cebule."],
+        },
+        {
+          ENG: ["Mother gave us mirrors.", "Mother gave mirrors to us."],
+          POL: ["Matka dała nam zwierciadła.", "Matka dała nam lustra."],
+        },
+      ];
+      return runPaletteTest(
+        "ENG",
+        "POL",
+        "112 familymember gave me things",
+        ref,
+        {}
+      );
     });
     it("#pal13B-03b GET 200 YES: Poleng. Another more interesting sentence with Pronombres.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "112 familymember gave me things",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              POL: "Ojciec dał mi jabłka.",
-              ENG: [
-                "Father gave me apples.",
-                "Father had given me apples.",
-                "Father has given me apples.",
-                "Father gave apples to me.",
-                "Father had given apples to me.",
-                "Father has given apples to me.",
-              ],
-            },
-            {
-              POL: "Ojciec dał mi książki.",
-              ENG: [
-                "Father gave me books.",
-                "Father had given me books.",
-                "Father has given me books.",
-                "Father gave books to me.",
-                "Father had given books to me.",
-                "Father has given books to me.",
-              ],
-            },
-            {
-              POL: "Ojciec dał mi cebule.",
-              ENG: [
-                "Father gave me onions.",
-                "Father had given me onions.",
-                "Father has given me onions.",
-                "Father gave onions to me.",
-                "Father had given onions to me.",
-                "Father has given onions to me.",
-              ],
-            },
-            {
-              POL: ["Ojciec dał mi zwierciadła.", "Ojciec dał mi lustra."],
-              ENG: [
-                "Father gave me mirrors.",
-                "Father had given me mirrors.",
-                "Father has given me mirrors.",
-                "Father gave mirrors to me.",
-                "Father had given mirrors to me.",
-                "Father has given mirrors to me.",
-              ],
-            },
-            {
-              POL: "Ojciec dał nam jabłka.",
-              ENG: [
-                "Father gave us apples.",
-                "Father had given us apples.",
-                "Father has given us apples.",
-                "Father gave apples to us.",
-                "Father had given apples to us.",
-                "Father has given apples to us.",
-              ],
-            },
-            {
-              POL: "Ojciec dał nam książki.",
-              ENG: [
-                "Father gave us books.",
-                "Father had given us books.",
-                "Father has given us books.",
-                "Father gave books to us.",
-                "Father had given books to us.",
-                "Father has given books to us.",
-              ],
-            },
-            {
-              POL: "Ojciec dał nam cebule.",
-              ENG: [
-                "Father gave us onions.",
-                "Father had given us onions.",
-                "Father has given us onions.",
-                "Father gave onions to us.",
-                "Father had given onions to us.",
-                "Father has given onions to us.",
-              ],
-            },
-            {
-              POL: ["Ojciec dał nam zwierciadła.", "Ojciec dał nam lustra."],
-              ENG: [
-                "Father gave us mirrors.",
-                "Father had given us mirrors.",
-                "Father has given us mirrors.",
-                "Father gave mirrors to us.",
-                "Father had given mirrors to us.",
-                "Father has given mirrors to us.",
-              ],
-            },
-            {
-              POL: "Matka dała mi jabłka.",
-              ENG: [
-                "Mother gave me apples.",
-                "Mother had given me apples.",
-                "Mother has given me apples.",
-                "Mother gave apples to me.",
-                "Mother had given apples to me.",
-                "Mother has given apples to me.",
-              ],
-            },
-            {
-              POL: "Matka dała mi książki.",
-              ENG: [
-                "Mother gave me books.",
-                "Mother had given me books.",
-                "Mother has given me books.",
-                "Mother gave books to me.",
-                "Mother had given books to me.",
-                "Mother has given books to me.",
-              ],
-            },
-            {
-              POL: "Matka dała mi cebule.",
-              ENG: [
-                "Mother gave me onions.",
-                "Mother had given me onions.",
-                "Mother has given me onions.",
-                "Mother gave onions to me.",
-                "Mother had given onions to me.",
-                "Mother has given onions to me.",
-              ],
-            },
-            {
-              POL: ["Matka dała mi zwierciadła.", "Matka dała mi lustra."],
-              ENG: [
-                "Mother gave me mirrors.",
-                "Mother had given me mirrors.",
-                "Mother has given me mirrors.",
-                "Mother gave mirrors to me.",
-                "Mother had given mirrors to me.",
-                "Mother has given mirrors to me.",
-              ],
-            },
-            {
-              POL: "Matka dała nam jabłka.",
-              ENG: [
-                "Mother gave us apples.",
-                "Mother had given us apples.",
-                "Mother has given us apples.",
-                "Mother gave apples to us.",
-                "Mother had given apples to us.",
-                "Mother has given apples to us.",
-              ],
-            },
-            {
-              POL: "Matka dała nam książki.",
-              ENG: [
-                "Mother gave us books.",
-                "Mother had given us books.",
-                "Mother has given us books.",
-                "Mother gave books to us.",
-                "Mother had given books to us.",
-                "Mother has given books to us.",
-              ],
-            },
-            {
-              POL: "Matka dała nam cebule.",
-              ENG: [
-                "Mother gave us onions.",
-                "Mother had given us onions.",
-                "Mother has given us onions.",
-                "Mother gave onions to us.",
-                "Mother had given onions to us.",
-                "Mother has given onions to us.",
-              ],
-            },
-            {
-              POL: ["Matka dała nam lustra.", "Matka dała nam zwierciadła."],
-              ENG: [
-                "Mother gave us mirrors.",
-                "Mother had given us mirrors.",
-                "Mother has given us mirrors.",
-                "Mother gave mirrors to us.",
-                "Mother had given mirrors to us.",
-                "Mother has given mirrors to us.",
-              ],
-            },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          POL: "Ojciec dał mi jabłka.",
+          ENG: [
+            "Father gave me apples.",
+            "Father had given me apples.",
+            "Father has given me apples.",
+            "Father gave apples to me.",
+            "Father had given apples to me.",
+            "Father has given apples to me.",
+          ],
+        },
+        {
+          POL: "Ojciec dał mi książki.",
+          ENG: [
+            "Father gave me books.",
+            "Father had given me books.",
+            "Father has given me books.",
+            "Father gave books to me.",
+            "Father had given books to me.",
+            "Father has given books to me.",
+          ],
+        },
+        {
+          POL: "Ojciec dał mi cebule.",
+          ENG: [
+            "Father gave me onions.",
+            "Father had given me onions.",
+            "Father has given me onions.",
+            "Father gave onions to me.",
+            "Father had given onions to me.",
+            "Father has given onions to me.",
+          ],
+        },
+        {
+          POL: ["Ojciec dał mi zwierciadła.", "Ojciec dał mi lustra."],
+          ENG: [
+            "Father gave me mirrors.",
+            "Father had given me mirrors.",
+            "Father has given me mirrors.",
+            "Father gave mirrors to me.",
+            "Father had given mirrors to me.",
+            "Father has given mirrors to me.",
+          ],
+        },
+        {
+          POL: "Ojciec dał nam jabłka.",
+          ENG: [
+            "Father gave us apples.",
+            "Father had given us apples.",
+            "Father has given us apples.",
+            "Father gave apples to us.",
+            "Father had given apples to us.",
+            "Father has given apples to us.",
+          ],
+        },
+        {
+          POL: "Ojciec dał nam książki.",
+          ENG: [
+            "Father gave us books.",
+            "Father had given us books.",
+            "Father has given us books.",
+            "Father gave books to us.",
+            "Father had given books to us.",
+            "Father has given books to us.",
+          ],
+        },
+        {
+          POL: "Ojciec dał nam cebule.",
+          ENG: [
+            "Father gave us onions.",
+            "Father had given us onions.",
+            "Father has given us onions.",
+            "Father gave onions to us.",
+            "Father had given onions to us.",
+            "Father has given onions to us.",
+          ],
+        },
+        {
+          POL: ["Ojciec dał nam zwierciadła.", "Ojciec dał nam lustra."],
+          ENG: [
+            "Father gave us mirrors.",
+            "Father had given us mirrors.",
+            "Father has given us mirrors.",
+            "Father gave mirrors to us.",
+            "Father had given mirrors to us.",
+            "Father has given mirrors to us.",
+          ],
+        },
+        {
+          POL: "Matka dała mi jabłka.",
+          ENG: [
+            "Mother gave me apples.",
+            "Mother had given me apples.",
+            "Mother has given me apples.",
+            "Mother gave apples to me.",
+            "Mother had given apples to me.",
+            "Mother has given apples to me.",
+          ],
+        },
+        {
+          POL: "Matka dała mi książki.",
+          ENG: [
+            "Mother gave me books.",
+            "Mother had given me books.",
+            "Mother has given me books.",
+            "Mother gave books to me.",
+            "Mother had given books to me.",
+            "Mother has given books to me.",
+          ],
+        },
+        {
+          POL: "Matka dała mi cebule.",
+          ENG: [
+            "Mother gave me onions.",
+            "Mother had given me onions.",
+            "Mother has given me onions.",
+            "Mother gave onions to me.",
+            "Mother had given onions to me.",
+            "Mother has given onions to me.",
+          ],
+        },
+        {
+          POL: ["Matka dała mi zwierciadła.", "Matka dała mi lustra."],
+          ENG: [
+            "Mother gave me mirrors.",
+            "Mother had given me mirrors.",
+            "Mother has given me mirrors.",
+            "Mother gave mirrors to me.",
+            "Mother had given mirrors to me.",
+            "Mother has given mirrors to me.",
+          ],
+        },
+        {
+          POL: "Matka dała nam jabłka.",
+          ENG: [
+            "Mother gave us apples.",
+            "Mother had given us apples.",
+            "Mother has given us apples.",
+            "Mother gave apples to us.",
+            "Mother had given apples to us.",
+            "Mother has given apples to us.",
+          ],
+        },
+        {
+          POL: "Matka dała nam książki.",
+          ENG: [
+            "Mother gave us books.",
+            "Mother had given us books.",
+            "Mother has given us books.",
+            "Mother gave books to us.",
+            "Mother had given books to us.",
+            "Mother has given books to us.",
+          ],
+        },
+        {
+          POL: "Matka dała nam cebule.",
+          ENG: [
+            "Mother gave us onions.",
+            "Mother had given us onions.",
+            "Mother has given us onions.",
+            "Mother gave onions to us.",
+            "Mother had given onions to us.",
+            "Mother has given onions to us.",
+          ],
+        },
+        {
+          POL: ["Matka dała nam lustra.", "Matka dała nam zwierciadła."],
+          ENG: [
+            "Mother gave us mirrors.",
+            "Mother had given us mirrors.",
+            "Mother has given us mirrors.",
+            "Mother gave mirrors to us.",
+            "Mother had given mirrors to us.",
+            "Mother has given mirrors to us.",
+          ],
+        },
+      ];
+      return runPaletteTest(
+        "POL",
+        "ENG",
+        "112 familymember gave me things",
+        ref,
+        {}
+      );
     });
     it("#pal13B-03c GET 200 YES: Poleng. Another more interesting sentence with Pronombres.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "112a familymember gave me thing",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              POL: "Ojciec dał mi jabłko.",
-              ENG: [
-                "Father gave me one apple.",
-                "Father had given me one apple.",
-                "Father has given me one apple.",
-              ],
-            },
-            {
-              POL: "Ojciec dał mi książkę.",
-              ENG: [
-                "Father gave me one book.",
-                "Father had given me one book.",
-                "Father has given me one book.",
-              ],
-            },
-            {
-              POL: "Ojciec dał mi cebulę.",
-              ENG: [
-                "Father gave me one onion.",
-                "Father had given me one onion.",
-                "Father has given me one onion.",
-              ],
-            },
-            {
-              POL: ["Ojciec dał mi zwierciadło.", "Ojciec dał mi lustro."],
-              ENG: [
-                "Father gave me one mirror.",
-                "Father had given me one mirror.",
-                "Father has given me one mirror.",
-              ],
-            },
-            {
-              POL: "Ojciec dał nam jabłko.",
-              ENG: [
-                "Father gave us one apple.",
-                "Father had given us one apple.",
-                "Father has given us one apple.",
-              ],
-            },
-            {
-              POL: "Ojciec dał nam książkę.",
-              ENG: [
-                "Father gave us one book.",
-                "Father had given us one book.",
-                "Father has given us one book.",
-              ],
-            },
-            {
-              POL: "Ojciec dał nam cebulę.",
-              ENG: [
-                "Father gave us one onion.",
-                "Father had given us one onion.",
-                "Father has given us one onion.",
-              ],
-            },
-            {
-              POL: ["Ojciec dał nam zwierciadło.", "Ojciec dał nam lustro."],
-              ENG: [
-                "Father gave us one mirror.",
-                "Father had given us one mirror.",
-                "Father has given us one mirror.",
-              ],
-            },
-            {
-              POL: "Matka dała mi jabłko.",
-              ENG: [
-                "Mother gave me one apple.",
-                "Mother had given me one apple.",
-                "Mother has given me one apple.",
-              ],
-            },
-            {
-              POL: "Matka dała mi książkę.",
-              ENG: [
-                "Mother gave me one book.",
-                "Mother had given me one book.",
-                "Mother has given me one book.",
-              ],
-            },
-            {
-              POL: "Matka dała mi cebulę.",
-              ENG: [
-                "Mother gave me one onion.",
-                "Mother had given me one onion.",
-                "Mother has given me one onion.",
-              ],
-            },
-            {
-              POL: ["Matka dała mi zwierciadło.", "Matka dała mi lustro."],
-              ENG: [
-                "Mother gave me one mirror.",
-                "Mother had given me one mirror.",
-                "Mother has given me one mirror.",
-              ],
-            },
-            {
-              POL: "Matka dała nam jabłko.",
-              ENG: [
-                "Mother gave us one apple.",
-                "Mother had given us one apple.",
-                "Mother has given us one apple.",
-              ],
-            },
-            {
-              POL: "Matka dała nam książkę.",
-              ENG: [
-                "Mother gave us one book.",
-                "Mother had given us one book.",
-                "Mother has given us one book.",
-              ],
-            },
-            {
-              POL: "Matka dała nam cebulę.",
-              ENG: [
-                "Mother gave us one onion.",
-                "Mother had given us one onion.",
-                "Mother has given us one onion.",
-              ],
-            },
-            {
-              POL: ["Matka dała nam zwierciadło.", "Matka dała nam lustro."],
-              ENG: [
-                "Mother gave us one mirror.",
-                "Mother had given us one mirror.",
-                "Mother has given us one mirror.",
-              ],
-            },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          POL: "Ojciec dał mi jabłko.",
+          ENG: [
+            "Father gave me one apple.",
+            "Father had given me one apple.",
+            "Father has given me one apple.",
+          ],
+        },
+        {
+          POL: "Ojciec dał mi książkę.",
+          ENG: [
+            "Father gave me one book.",
+            "Father had given me one book.",
+            "Father has given me one book.",
+          ],
+        },
+        {
+          POL: "Ojciec dał mi cebulę.",
+          ENG: [
+            "Father gave me one onion.",
+            "Father had given me one onion.",
+            "Father has given me one onion.",
+          ],
+        },
+        {
+          POL: ["Ojciec dał mi zwierciadło.", "Ojciec dał mi lustro."],
+          ENG: [
+            "Father gave me one mirror.",
+            "Father had given me one mirror.",
+            "Father has given me one mirror.",
+          ],
+        },
+        {
+          POL: "Ojciec dał nam jabłko.",
+          ENG: [
+            "Father gave us one apple.",
+            "Father had given us one apple.",
+            "Father has given us one apple.",
+          ],
+        },
+        {
+          POL: "Ojciec dał nam książkę.",
+          ENG: [
+            "Father gave us one book.",
+            "Father had given us one book.",
+            "Father has given us one book.",
+          ],
+        },
+        {
+          POL: "Ojciec dał nam cebulę.",
+          ENG: [
+            "Father gave us one onion.",
+            "Father had given us one onion.",
+            "Father has given us one onion.",
+          ],
+        },
+        {
+          POL: ["Ojciec dał nam zwierciadło.", "Ojciec dał nam lustro."],
+          ENG: [
+            "Father gave us one mirror.",
+            "Father had given us one mirror.",
+            "Father has given us one mirror.",
+          ],
+        },
+        {
+          POL: "Matka dała mi jabłko.",
+          ENG: [
+            "Mother gave me one apple.",
+            "Mother had given me one apple.",
+            "Mother has given me one apple.",
+          ],
+        },
+        {
+          POL: "Matka dała mi książkę.",
+          ENG: [
+            "Mother gave me one book.",
+            "Mother had given me one book.",
+            "Mother has given me one book.",
+          ],
+        },
+        {
+          POL: "Matka dała mi cebulę.",
+          ENG: [
+            "Mother gave me one onion.",
+            "Mother had given me one onion.",
+            "Mother has given me one onion.",
+          ],
+        },
+        {
+          POL: ["Matka dała mi zwierciadło.", "Matka dała mi lustro."],
+          ENG: [
+            "Mother gave me one mirror.",
+            "Mother had given me one mirror.",
+            "Mother has given me one mirror.",
+          ],
+        },
+        {
+          POL: "Matka dała nam jabłko.",
+          ENG: [
+            "Mother gave us one apple.",
+            "Mother had given us one apple.",
+            "Mother has given us one apple.",
+          ],
+        },
+        {
+          POL: "Matka dała nam książkę.",
+          ENG: [
+            "Mother gave us one book.",
+            "Mother had given us one book.",
+            "Mother has given us one book.",
+          ],
+        },
+        {
+          POL: "Matka dała nam cebulę.",
+          ENG: [
+            "Mother gave us one onion.",
+            "Mother had given us one onion.",
+            "Mother has given us one onion.",
+          ],
+        },
+        {
+          POL: ["Matka dała nam zwierciadło.", "Matka dała nam lustro."],
+          ENG: [
+            "Mother gave us one mirror.",
+            "Mother had given us one mirror.",
+            "Mother has given us one mirror.",
+          ],
+        },
+      ];
+      return runPaletteTest(
+        "POL",
+        "ENG",
+        "112a familymember gave me thing",
+        ref,
+        {}
+      );
     });
     it("#pal13B-04a GET 200 YES: Engpol. Another more interesting sentence with Pronombres. Terminal object used.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          useDummy: true,
-          devSaysOmitStChValidation: true,
-          sentenceFormulaSymbol: "dummy57",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "Women saw you (singular).",
-              POL: ["Kobiety zobaczyły cię.", "Kobiety zobaczyły ciebie."],
-            },
-            {
-              ENG: "Women saw you (plural).",
-              POL: ["Kobiety zobaczyły was."],
-            },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "Women saw you (singular).",
+          POL: ["Kobiety zobaczyły cię.", "Kobiety zobaczyły ciebie."],
+        },
+        {
+          ENG: "Women saw you (plural).",
+          POL: ["Kobiety zobaczyły was."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "dummy57", ref, {
+        devSaysOmitStChValidation: true,
+      });
     });
   });
 
   describe("/palette - Stage 14: Possessive pronombres.", () => {
-    it("#pal14-01a GET 200 YES: POL. I have my onion.", () => {
+    it("#pal14-01a GET 200 YES: POL only. I have my onion.", () => {
       const questionLanguage = "POL";
-      const answerLanguage = "ENG";
 
       return request(app)
         .get("/api/palette")
@@ -2022,9 +1569,8 @@ describe("/api", function () {
           ]).to.include(res.body.questionSentenceArr[0]);
         });
     });
-    it("#pal14-01b GET 200 YES: ENG. I have my onion.", () => {
+    it("#pal14-01b GET 200 YES: ENG only. I have my onion.", () => {
       const questionLanguage = "ENG";
-      const answerLanguage = "POL";
 
       return request(app)
         .get("/api/palette")
