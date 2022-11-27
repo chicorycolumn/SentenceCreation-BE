@@ -7,6 +7,7 @@ const consol = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const { it } = require("mocha");
 const testingUtils = require("../utils/secondOrder/testingUtils.js");
 const { generalTranslatedSentencesRef } = testingUtils;
+const { runPaletteTest } = testingUtils;
 
 // MGN:            Multi-gender noun. Eg doctor in ENG can be either male or female.
 // ProsMgn:        "My doctor and her book." Connected pronombre reveals gender of MGN. Doesn't need an annotation for doctor as clearly must be lekarka.
@@ -27,462 +28,201 @@ describe("/api", function () {
 
   describe("/palette - Stage 9: Synhomographs (adding Clarifiers).", () => {
     it("#pal09-01a (Type 1 Synhomographs. If-PW: clarify Inflections) 'sheep': Engpol. Expect clarifiers.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy36",
-        })
-        .expect(200)
-        .then((res) => {
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "sheep_withClarifiers_Qlang" + questionLanguage,
-            ["Sheep (singular).", "Sheep (plural)."]
-          );
-        });
+      return runPaletteTest2(
+        "ENG",
+        "POL",
+        "dummy36",
+        {},
+        "sheep_withClarifiers_Qlang",
+        ["Sheep (singular).", "Sheep (plural)."]
+      );
     });
     it("#pal09-01b 'sheep': Poleng. No clarifiers.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
+      return runPaletteTest2(
+        "POL",
+        "ENG",
 
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy36",
-        })
-        .expect(200)
-        .then((res) => {
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "sheep_withClarifiers_Qlang" + questionLanguage,
-            ["Owce.", "Owca."]
-          );
-        });
+        "dummy36",
+        {},
+        "sheep_withClarifiers_Qlang",
+        ["Owce.", "Owca."]
+      );
     });
     it("#pal09-01c (Type 1 Synhomographs. If-PW: clarify Inflections) 'sheep': Engpol. Expect clarifiers. PDS makes it agnostic between singular and plural.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy36",
-        })
-        .expect(200)
-        .then((res) => {
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "sheep_withoutClarifiers_Qlang" + questionLanguage,
-            ["Sheep."]
-          );
-        });
+      return runPaletteTest2(
+        "ENG",
+        "POL",
+        "dummy36",
+        { pleaseDontSpecify: true },
+        "sheep_withoutClarifiers_Qlang",
+        ["Sheep."]
+      );
     });
     it("#pal09-01d 'sheep': Poleng. No clarifiers. PDS should have no effect.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy36",
-        })
-        .expect(200)
-        .then((res) => {
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "sheep_withClarifiers_Qlang" + questionLanguage,
-            ["Owce.", "Owca."]
-          );
-        });
+      return runPaletteTest2(
+        "POL",
+        "ENG",
+        "dummy36",
+        { pleaseDontSpecify: true },
+        "sheep_withClarifiers_Qlang",
+        ["Owce.", "Owca."]
+      );
     });
     it("#pal09-01e (Type 1 Synhomographs. If-PW: clarify Inflections) 'Sheep are* here.': Engpol. Expect clarifiers.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy36a",
-        })
-        .expect(200)
-        .then((res) => {
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "sheeps_withClarifiers_Qlang" + questionLanguage,
-            []
-          );
-        });
+      return runPaletteTest2(
+        "ENG",
+        "POL",
+        "dummy36a",
+        {},
+        "sheeps_withClarifiers_Qlang"
+      );
     });
     it("#pal09-01f 'Sheep are* here.': Poleng. No clarifiers.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy36a",
-        })
-        .expect(200)
-        .then((res) => {
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "sheeps_withClarifiers_Qlang" + questionLanguage,
-            []
-          );
-        });
+      return runPaletteTest2(
+        "POL",
+        "ENG",
+        "dummy36a",
+        {},
+        "sheeps_withClarifiers_Qlang"
+      );
     });
     it("#pal09-01g (Type 1 Synhomographs. If-PW: clarify Inflections) 'Sheep are* here.': Engpol. Expect clarifiers. PDS makes it agnostic between singular and plural.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy36a",
-        })
-        .expect(200)
-        .then((res) => {
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "sheeps_withClarifiers_Qlang" + questionLanguage,
-            []
-          );
-        });
+      return runPaletteTest2(
+        "ENG",
+        "POL",
+        "dummy36a",
+        { pleaseDontSpecify: true },
+        "sheeps_withClarifiers_Qlang"
+      );
     });
     it("#pal09-01h 'Sheep are* here.': Poleng. No clarifiers. PDS should have no effect.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
+      return runPaletteTest2(
+        "POL",
+        "ENG",
+        "dummy36a",
+        {
           pleaseDontSpecify: true,
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy36a",
-        })
-        .expect(200)
-        .then((res) => {
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "sheeps_withClarifiers_Qlang" + questionLanguage,
-            []
-          );
-        });
+        },
+        "sheeps_withClarifiers_Qlang"
+      );
     });
     it("#pal09-01i (Type 1 Synhomographs. If-PW: clarify Inflections) 'sheep': Engpol. Two primaryOrders, only one needing clarifiers.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy36b",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["Sheep (singular).", "Sheep is."],
-              POL: ["Owca.", "Owca jest."],
-            },
-            {
-              ENG: ["Sheep (plural).", "Sheep are."],
-              POL: ["Owce.", "Owce są."],
-            },
-          ];
-
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["Sheep (singular).", "Sheep is."],
+          POL: ["Owca.", "Owca jest."],
+        },
+        {
+          ENG: ["Sheep (plural).", "Sheep are."],
+          POL: ["Owce.", "Owce są."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "dummy36b", ref);
     });
     it("#pal09-02a (Type 2 Synhomographs. Ad-PW: clarify Inflections (tenseDescription)) 'read': Engpol. Expect clarifiers.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy38",
-        })
-        .expect(200)
-        .then((res) => {
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "read_withClarifiers_Qlang" + questionLanguage,
-            ["I read (present).", "I read (past)."]
-          );
-        });
+      return runPaletteTest2(
+        "ENG",
+        "POL",
+        "dummy38",
+        {},
+        "read_withClarifiers_Qlang",
+        ["I read (present).", "I read (past)."]
+      );
     });
     it("#pal09-02b (Ad-PW: clarify Inflections (tenseDescription)) 'read': Poleng. No clarifiers.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy38",
-        })
-        .expect(200)
-        .then((res) => {
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "read_withClarifiers_Qlang" + questionLanguage,
-            ["Czytam.", "Przeczytałem.", "Przeczytałam."]
-          );
-        });
+      return runPaletteTest2(
+        "POL",
+        "ENG",
+        "dummy38",
+        {},
+        "read_withClarifiers_Qlang",
+        ["Czytam.", "Przeczytałem.", "Przeczytałam."]
+      );
     });
     it("#pal09-03a (Type 3 Synhomographs. Ad-PW: clarify Inflections) 'write': Engpol. Expect clarifiers.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy40",
-        })
-        .expect(200)
-        .then((res) => {
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "write_withClarifiers_Qlang" + questionLanguage,
-            ["You (singular) write.", "You (plural) write."]
-          );
-        });
+      return runPaletteTest2(
+        "ENG",
+        "POL",
+        "dummy40",
+        {},
+        "write_withClarifiers_Qlang",
+        ["You (singular) write.", "You (plural) write."]
+      );
     });
     it("#pal09-03b (Ad-PW: clarify Inflections) 'write': Poleng. No clarifiers.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy40",
-        })
-        .expect(200)
-        .then((res) => {
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "write_withClarifiers_Qlang" + questionLanguage,
-            ["Piszesz.", "Piszecie."]
-          );
-        });
+      return runPaletteTest2(
+        "POL",
+        "ENG",
+        "dummy40",
+        {},
+        "write_withClarifiers_Qlang",
+        ["Piszesz.", "Piszecie."]
+      );
     });
     it("#pal09-03c (Type 3 Synhomographs. Ad-PW: clarify Inflections) 'write': Engpol. Expect clarifiers.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy41",
-        })
-        .expect(200)
-        .then((res) => {
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "write_withClarifiers_Qlang" + questionLanguage,
-            []
-          );
-        });
+      return runPaletteTest2(
+        "ENG",
+        "POL",
+        "dummy41",
+        {},
+        "write_withClarifiers_Qlang"
+      );
     });
     it("#pal09-03d (Ad-PW: clarify Inflections) 'write': Poleng. No clarifiers.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy41",
-        })
-        .expect(200)
-        .then((res) => {
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "write_withClarifiers_Qlang" + questionLanguage,
-            ["Napisałeś.", "Napisałaś.", "Napisaliście.", "Napisałyście."]
-          );
-        });
+      return runPaletteTest2(
+        "POL",
+        "ENG",
+        "dummy41",
+        {},
+        "write_withClarifiers_Qlang",
+        ["Napisałeś.", "Napisałaś.", "Napisaliście.", "Napisałyście."]
+      );
     });
     it("#pal09-03e (Type 3 Synhomographs. Ad-PW: clarify Inflections) 'write': Engpol. Expect clarifiers.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy42",
-        })
-        .expect(200)
-        .then((res) => {
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "write_withClarifiers_Qlang" + questionLanguage,
-            []
-          );
-        });
+      return runPaletteTest2(
+        "ENG",
+        "POL",
+        "dummy42",
+        {},
+        "write_withClarifiers_Qlang"
+      );
     });
     it("#pal09-03f (Ad-PW: clarify Inflections) 'write': Poleng. No clarifiers.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy42",
-        })
-        .expect(200)
-        .then((res) => {
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "write_withClarifiers_Qlang" + questionLanguage,
-            [
-              "Będziesz pisał.",
-              "Będziesz pisała.",
-              "Będziesz pisać.",
-              "Będziecie pisały.",
-              "Będziecie pisali.",
-              "Będziecie pisać.",
-            ]
-          );
-        });
+      return runPaletteTest2(
+        "POL",
+        "ENG",
+        "dummy42",
+        {},
+        "write_withClarifiers_Qlang",
+        [
+          "Będziesz pisał.",
+          "Będziesz pisała.",
+          "Będziesz pisać.",
+          "Będziecie pisały.",
+          "Będziecie pisali.",
+          "Będziecie pisać.",
+        ]
+      );
     });
     it("#pal09-03g (Type 3 Synhomographs. Ad-PW: clarify Inflections) 'be': Engpol. Expect clarifiers.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy39",
-        })
-        .expect(200)
-        .then((res) => {
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be_withClarifiers_Qlang" + questionLanguage,
-            ["You (singular) are.", "You (plural) are."]
-          );
-        });
+      return runPaletteTest2(
+        "ENG",
+        "POL",
+        "dummy39",
+        {},
+        "be_withClarifiers_Qlang",
+        ["You (singular) are.", "You (plural) are."]
+      );
     });
     it("#pal09-03h (Ad-PW: clarify Inflections) 'be': Poleng. No clarifiers.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          useDummy: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy39",
-        })
-        .expect(200)
-        .then((res) => {
-          checkSentenceTranslations(
-            res,
-            questionLanguage,
-            answerLanguage,
-            "be_withClarifiers_Qlang" + questionLanguage,
-            ["Jesteś.", "Jesteście."]
-          );
-        });
+      return runPaletteTest2(
+        "POL",
+        "ENG",
+        "dummy39",
+        {},
+        "be_withClarifiers_Qlang",
+        ["Jesteś.", "Jesteście."]
+      );
     });
     it("#pal09-04a-i (pal09-02a Engpol, two clarifiers potentially expected.)", () => {
       const questionLanguage = "ENG";
@@ -4241,4 +3981,38 @@ function checkSentenceTranslations(
       );
     }
   });
+}
+
+function runPaletteTest2(
+  questionLanguage,
+  answerLanguage,
+  sentenceFormulaSymbol,
+  args,
+  word,
+  alex = [],
+  tran,
+  useDummy = sentenceFormulaSymbol.includes("dummy")
+) {
+  word = word + questionLanguage;
+
+  return request(app)
+    .get("/api/palette")
+    .send({
+      useDummy,
+      questionLanguage,
+      answerLanguage,
+      sentenceFormulaSymbol,
+      ...args,
+    })
+    .expect(200)
+    .then((res) => {
+      checkSentenceTranslations(
+        res,
+        questionLanguage,
+        answerLanguage,
+        word,
+        alex,
+        tran
+      );
+    });
 }
