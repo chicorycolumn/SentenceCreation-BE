@@ -1,6 +1,5 @@
 const app = require("../app");
 const request = require("supertest");
-const chai = require("chai");
 const { expect } = require("chai");
 const gpUtils = require("../utils/generalPurposeUtils.js");
 const uUtils = require("../utils/universalUtils.js");
