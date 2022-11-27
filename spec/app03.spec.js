@@ -7,10 +7,8 @@ const uUtils = require("../utils/universalUtils.js");
 const consol = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const { it } = require("mocha");
 const testingUtils = require("../utils/secondOrder/testingUtils.js");
-const {
-  traitValueTranslation,
-} = require("../utils/reference/referenceTranslations");
-const { generalTranslatedSentencesRef, runPaletteTest } = testingUtils;
+
+const { runPaletteTest } = testingUtils;
 
 // MGN:            Multi-gender noun. Eg doctor in ENG can be either male or female.
 // ProsMgn:        "My doctor and her book." Connected pronombre reveals gender of MGN. Doesn't need an annotation for doctor as clearly must be lekarka.
@@ -18,14 +16,6 @@ const { generalTranslatedSentencesRef, runPaletteTest } = testingUtils;
 
 describe("/api", function () {
   this.timeout(7000);
-
-  gpUtils.fillOutWashburneRefObj(
-    generalTranslatedSentencesRef,
-    "POL->ENG",
-    "ENG->POL",
-    "POL",
-    "ENG"
-  );
 
   describe("/palette - Stage 21: Step-T: Tantum Nouns.", () => {
     it("#pal21-01a GET 200 YES: Poleng. Plurale Tantum in POL is allowed to be sing or plur in ENG.", () => {
@@ -2845,343 +2835,146 @@ describe("/api", function () {
 
   describe("/palette - Stage 17A: Possessive pronombres and MGNs. Pre-testing.", () => {
     it("#pal17-01a GET 200 YES: Engpol. MGN as sole word, annotation expected.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy58 doctor",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "Doctor (female).",
-              POL: ["Lekarka."],
-            },
-            {
-              ENG: "Doctor (male).",
-              POL: ["Lekarz."],
-            },
-            {
-              ENG: "Doctors (females).",
-              POL: ["Lekarki."],
-            },
-            {
-              ENG: ["Doctors (males).", "Doctors (mixed)."],
-              POL: ["Lekarze."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "Doctor (female).",
+          POL: ["Lekarka."],
+        },
+        {
+          ENG: "Doctor (male).",
+          POL: ["Lekarz."],
+        },
+        {
+          ENG: "Doctors (females).",
+          POL: ["Lekarki."],
+        },
+        {
+          ENG: ["Doctors (males).", "Doctors (mixed)."],
+          POL: ["Lekarze."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "dummy58 doctor", ref, {});
     });
     it("#pal17-01b GET 200 YES: Engpol. MGN as sole word, pleaseDontSpecify.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy58 doctor",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "Doctor.",
-              POL: ["Lekarka.", "Lekarz."],
-            },
-            {
-              ENG: "Doctors.",
-              POL: ["Lekarki.", "Lekarze."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "Doctor.",
+          POL: ["Lekarka.", "Lekarz."],
+        },
+        {
+          ENG: "Doctors.",
+          POL: ["Lekarki.", "Lekarze."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "dummy58 doctor", ref, {
+        pleaseDontSpecify: true,
+      });
     });
     it("#pal17-01c GET 200 YES: Poleng. MGN as sole word, annotation wouldn't appear anyway.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy58 doctor",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["Doctor."],
-              POL: ["Lekarka.", "Lekarz."],
-            },
-            {
-              ENG: ["Doctors."],
-              POL: ["Lekarki.", "Lekarze."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["Doctor."],
+          POL: ["Lekarka.", "Lekarz."],
+        },
+        {
+          ENG: ["Doctors."],
+          POL: ["Lekarki.", "Lekarze."],
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "dummy58 doctor", ref, {});
     });
     it("#pal17-01d GET 200 YES: Poleng. MGN as sole word, pleaseDontSpecify but annotation wouldn't appear anyway.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy58 doctor",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["Doctor."],
-              POL: ["Lekarka.", "Lekarz."],
-            },
-            {
-              ENG: ["Doctors."],
-              POL: ["Lekarki.", "Lekarze."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["Doctor."],
+          POL: ["Lekarka.", "Lekarz."],
+        },
+        {
+          ENG: ["Doctors."],
+          POL: ["Lekarki.", "Lekarze."],
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "dummy58 doctor", ref, {
+        pleaseDontSpecify: true,
+      });
     });
     it("#pal17-02a GET 200 YES: Engpol. Simple possessive pronombre sentence. Should not be broken by pleaseDontSpecify.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "118c My onion",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "My onion.",
-              POL: ["Moja cebula."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "My onion.",
+          POL: ["Moja cebula."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "118c My onion", ref, {
+        pleaseDontSpecify: true,
+      });
     });
     it("#pal17-02b GET 200 YES: Poleng. Simple possessive pronombre sentence. Should not be broken by pleaseDontSpecify.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "118c My onion",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["My onion."],
-              POL: "Moja cebula.",
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["My onion."],
+          POL: "Moja cebula.",
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "118c My onion", ref, {
+        pleaseDontSpecify: true,
+      });
     });
     it("#pal17-03a GET 200 YES: Engpol. Possessive pronombre above MGN. Annotation expected as this isn't actually a ProsMgn.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "118b My doctor",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "My doctor (male).",
-              POL: ["Mój lekarz."],
-            },
-            {
-              ENG: "My doctor (female).",
-              POL: ["Moja lekarka."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "My doctor (male).",
+          POL: ["Mój lekarz."],
+        },
+        {
+          ENG: "My doctor (female).",
+          POL: ["Moja lekarka."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "118b My doctor", ref, {});
     });
     it("#pal17-03b GET 200 YES: Engpol. Possessive pronombre above MGN. pleaseDontSpecify.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "118b My doctor",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "My doctor.",
-              POL: ["Mój lekarz.", "Moja lekarka."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "My doctor.",
+          POL: ["Mój lekarz.", "Moja lekarka."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "118b My doctor", ref, {
+        pleaseDontSpecify: true,
+      });
     });
     it("#pal17-03c GET 200 YES: Poleng. Possessive pronombre above MGN. Annotation wouldn't appear anyway.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "118b My doctor",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["My doctor."],
-              POL: ["Mój lekarz.", "Moja lekarka."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["My doctor."],
+          POL: ["Mój lekarz.", "Moja lekarka."],
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "118b My doctor", ref, {});
     });
     it("#pal17-03d GET 200 YES: Poleng. Possessive pronombre above MGN. pleaseDontSpecify but annotation wouldn't appear anyway.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          pleaseDontSpecify: true,
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "118b My doctor",
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: ["My doctor."],
-              POL: ["Mój lekarz.", "Moja lekarka."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: ["My doctor."],
+          POL: ["Mój lekarz.", "Moja lekarka."],
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "118b My doctor", ref, {
+        pleaseDontSpecify: true,
+      });
     });
   });
 
   describe("/palette - Stage 16: NATASHA T. Checking how arrays as terminal points are handled. +extra", () => {
     it("#pal16-01a GET 200 YES: NATASHA T. Are correct members of an array returned as possible ANSWER, as they should be?", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy52",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "The woman will be writing.",
-              POL: ["Kobieta będzie pisała.", "Kobieta będzie pisać."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "The woman will be writing.",
+          POL: ["Kobieta będzie pisała.", "Kobieta będzie pisać."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "dummy52", ref, {});
     });
     it("#pal16-01b GET 200 YES: NATASHA T. Battery: Are EITHER members of an array returned as possible QUESTION, as they should be?", () => {
       return Promise.all([
@@ -3225,153 +3018,40 @@ describe("/api", function () {
       }
     });
     it("#pal16-01c GET 200 YES: NATASHA T. Are correct answer sentences given for each of those question sentences.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy52",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: [
-                "The woman will be writing.",
-                "The woman is going to be writing.",
-                "The lady will be writing.",
-                "The lady is going to be writing.",
-              ],
-              POL: ["Kobieta będzie pisała.", "Kobieta będzie pisać."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: [
+            "The woman will be writing.",
+            "The woman is going to be writing.",
+            "The lady will be writing.",
+            "The lady is going to be writing.",
+          ],
+          POL: ["Kobieta będzie pisała.", "Kobieta będzie pisać."],
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "dummy52", ref, {});
     });
     it("#pal16-02a GET 200 YES: MGN re stCh. Engpol. PDS.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy59a doctor",
-          useDummy: true,
-          pleaseDontSpecify: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "Doctor.",
-              POL: ["Lekarka.", "Lekarz."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "Doctor.",
+          POL: ["Lekarka.", "Lekarz."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "dummy59a doctor", ref, {
+        pleaseDontSpecify: true,
+      });
     });
     it("#pal16-02b GET 200 YES: MGN re stCh. Engpol. PDS.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy59b doctor",
-          useDummy: true,
-          pleaseDontSpecify: true,
-        })
-        .expect(200)
-        .then((res) => {
-          let ref = [
-            {
-              ENG: "Doctor.",
-              POL: ["Lekarka.", "Lekarz."],
-            },
-          ];
-          testingUtils.checkTranslationsOfGivenRef(
-            res,
-            ref,
-            questionLanguage,
-            answerLanguage
-          );
-        });
+      let ref = [
+        {
+          ENG: "Doctor.",
+          POL: ["Lekarka.", "Lekarz."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "dummy59b doctor", ref, {
+        pleaseDontSpecify: true,
+      });
     });
   });
 });
-
-function checkSentenceTranslations(
-  res,
-  questionLanguage,
-  answerLanguage,
-  word,
-  allExpectedQuestionSentences,
-  translatedSentencesRef = generalTranslatedSentencesRef
-) {
-  let { body } = res;
-  let direction = `${questionLanguage}->${answerLanguage}`;
-
-  if (!allExpectedQuestionSentences.length) {
-    allExpectedQuestionSentences = translatedSentencesRef[word][direction].map(
-      (array) => array[questionLanguage]
-    );
-  }
-
-  consol.logTestOutputSolely(res.body);
-
-  let questionSentence = body.questionSentenceArr[0];
-  let { answerSentenceArr } = body;
-
-  expect(questionSentence).to.be.a("String");
-
-  expect(allExpectedQuestionSentences).to.include(questionSentence);
-
-  let translations = translatedSentencesRef[word][direction];
-
-  expect(translations.map((refItem) => refItem[questionLanguage])).to.include(
-    questionSentence
-  );
-
-  translations.forEach((refItem) => {
-    let { POL, ENG } = refItem;
-
-    if (questionSentence === POL) {
-      expect(answerSentenceArr).to.have.members(ENG);
-      consol.log(
-        `-' '-._,-' '-._,-' '-._,-' '-._,-' '-._,-' '-._${questionSentence}`
-      );
-      consol.log(
-        "was translated by,-'-._,-' '-._,-' '-._,-'-._,",
-        answerSentenceArr
-      );
-    }
-    if (questionSentence === ENG) {
-      expect(answerSentenceArr).to.have.members(POL);
-      consol.log(
-        `-' '-._,-' '-._,-' '-._,-' '-._,-' '-._,-' '-._${questionSentence}`
-      );
-      consol.log(
-        "  was translated by`-' '-._,-' '-._,-' '-._,-'",
-        answerSentenceArr
-      );
-    }
-  });
-}
