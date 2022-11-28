@@ -9,6 +9,7 @@ const testingUtils = require("./testingUtils.js");
 
 exports.checkProportions = (res, ref) => {
   let printout = {};
+  let rec = {};
 
   ref.forEach((refArr) => {
     let name = refArr[0];
@@ -18,16 +19,25 @@ exports.checkProportions = (res, ref) => {
 
     let upperBound = target + target * variance;
     let lowerBound = target - target * variance;
-
     let actual = res.filter((str) => values.includes(str)).length / res.length;
 
-    expect(actual).to.be.at.least(lowerBound);
-    expect(actual).to.be.below(upperBound);
-
-    printout[name] = Math.round(actual * 100) / 100;
+    rec[name] = {
+      actual,
+      upperBound,
+      lowerBound,
+    };
+    printout[name] = `${uUtils.round(actual)} ${
+      lowerBound <= actual && actual <= upperBound ? "yes" : "not"
+    } in ${uUtils.round(lowerBound)}-${uUtils.round(upperBound)}`;
   });
 
   consol.logTestOutputSolely("checkProportions:", printout);
+
+  Object.keys(rec).forEach((name) => {
+    let { actual, upperBound, lowerBound } = rec[name];
+    expect(actual).to.be.at.least(lowerBound);
+    expect(actual).to.be.at.most(upperBound);
+  });
 };
 
 exports.promiseAllMultiplier = (iterations = 10, callback) => {

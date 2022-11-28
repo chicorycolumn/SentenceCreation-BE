@@ -613,7 +613,7 @@ exports.processSentenceFormula = (
     otherChunks.forEach((otherChunk) => {
       let selectedLObj = outputArray.find(
         (outputUnit) => outputUnit.structureChunk.chunkId === otherChunk.chunkId
-      );
+      ).selectedLemmaObject;
 
       if (otherChunk.dontSpecifyOnThisChunk) {
         return;

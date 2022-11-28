@@ -43,6 +43,10 @@ const { runPaletteTest, promiseAllMultiplier, checkProportions } = testingUtils;
  *    Hyponyms   get random(4/5) to be number["singular"]         "mother" "father" "matka" "ojciec"
  *    Vyponyms   get random(4/5) to be number["singular"]         "madre"
  *
+ * If number["plural"]            Hypernyms      * 4
+ * If number["singular"]          Vypo/Hyponyms  * 4
+ * If number["plural","singular"]
+ *
  * So mother, father, matka, ojciec, and madre will be more likely to generate as singular.
  * While parent, rodzic will be more likely to generate as plural.
  * And padre will generate equally as either.
@@ -219,19 +223,23 @@ describe("/api", function () {
   });
 
   describe("/palette - Stage 24-iv: Spanish basic. Test Hypernym Vypernym Hyponym Vyponym probabilities.", () => {
-    it("#pal23-03a GET 200 YES: Polspa. Red mother (Vypernym).", () => {
+    it.only("#pal23-03a GET 200 YES: Polspa. Red mother (Vypernym).", () => {
       return Promise.all(
         promiseAllMultiplier(300, () => {
           return runPaletteTest("POL", "SPA", "dummy72c", [], {}, 1, true);
         })
       ).then((allQuestionSentences) => {
+        let std = 1 / 6;
+
         checkProportions(allQuestionSentences, [
-          ["matka", ["Czerwona matka."], 0.17, 0.4],
-          ["matki", ["Czerwone matki."], 0.17, 0.4],
-          ["ojciec", ["Czerwony ojciec."], 0.17, 0.4],
-          ["ojcowie", ["Czerwoni ojcowie."], 0.17, 0.4],
-          ["rodzic", ["Czerwony rodzic."], 0.17, 0.4],
-          ["rodzice", ["Czerwoni rodzice."], 0.17, 0.4],
+          ["matka", ["Czerwona matka."], 1.8 * std, 0.4],
+          ["matki", ["Czerwone matki."], 0.2 * std, 0.4],
+
+          ["ojciec", ["Czerwony ojciec."], 1.8 * std, 0.4],
+          ["ojcowie", ["Czerwoni ojcowie."], 0.2 * std, 0.4],
+
+          ["rodzic", ["Czerwony rodzic."], 0.2 * std, 0.4],
+          ["rodzice", ["Czerwoni rodzice."], 1.8 * std, 0.4],
         ]);
       });
     });

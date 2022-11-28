@@ -387,3 +387,7 @@ exports.flatten = (arr) => {
   });
   return res;
 };
+
+exports.round = (num) => {
+  return Math.round(num * 100) / 100;
+};

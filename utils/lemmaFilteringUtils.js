@@ -6,15 +6,16 @@ const refObj = require("./reference/referenceObjects.js");
 const refFxn = require("./reference/referenceFunctions.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
 const nexusUtils = require("../utils/secondOrder/nexusUtils.js");
-
 const allLangUtils = require("./allLangUtils.js");
 
-exports.assessHypernymy = (lObj, lang) => {
+exports.assessHypernymy = (lObj) => {
+  let lang = gpUtils.getLanguageFromLemmaObject(lObj);
+
   function _isHypernym(lObj) {
-    return lObj.id.split("-")[4].includes("£");
+    return lObj.id.split("-").length > 4 && lObj.id.split("-")[4].includes("£");
   }
   function _isVypernym(lObj) {
-    return lObj.id.split("-")[4].includes("€");
+    return lObj.id.split("-").length > 4 && lObj.id.split("-")[4].includes("€");
   }
 
   if (_isHypernym(lObj)) {
@@ -35,8 +36,65 @@ exports.assessHypernymy = (lObj, lang) => {
 };
 
 exports.selectRandLObj = (lObjs, stCh) => {
-  // Here put the conditional logic re Hypernym SMPs
-  return uUtils.selectRandom(lObjs);
+  if (!lObjs.length) {
+    consol.throw("pwbs");
+  }
+
+  if (
+    stCh.number &&
+    stCh.number.includes("singular") &&
+    stCh.number.includes("plural") &&
+    stCh.number.length > 2
+  ) {
+    consol.throw("iwba");
+  }
+
+  if (
+    ["npe", "nco"].includes(gpUtils.getWordtypeShorthandStCh(stCh)) &&
+    stCh.number &&
+    stCh.number.length &&
+    !(
+      stCh.number.includes("singular") &&
+      stCh.number.includes("plural") &&
+      stCh.number.length === 2
+    )
+  ) {
+    let lObjIds = [];
+
+    lObjs.forEach((lObj) => {
+      let hypernymy = lfUtils.assessHypernymy(lObj);
+
+      if (stCh.number.includes("plural") && stCh.number.length === 1) {
+        if (["hypernym"].includes(hypernymy)) {
+          lObjIds.push(lObj.id);
+          lObjIds.push(lObj.id);
+          lObjIds.push(lObj.id);
+          lObjIds.push(lObj.id);
+        } else {
+          lObjIds.push(lObj.id);
+        }
+      } else if (stCh.number.includes("singular") && stCh.number.length === 1) {
+        if (["hyponym", "vyponym"].includes(hypernymy)) {
+          lObjIds.push(lObj.id);
+          lObjIds.push(lObj.id);
+          lObjIds.push(lObj.id);
+          lObjIds.push(lObj.id);
+        } else {
+          lObjIds.push(lObj.id);
+        }
+      } else {
+        consol.throw("iwbb");
+      }
+    });
+
+    let chosenId = uUtils.selectRandom(lObjIds);
+
+    let res = lObjs.find((lObj) => lObj.id === chosenId); //This is correct, that it directly compares IDs.
+    return res;
+  }
+
+  let res = uUtils.selectRandom(lObjs);
+  return res;
 };
 
 exports.selectRandTraitValue = (
@@ -45,7 +103,42 @@ exports.selectRandTraitValue = (
   traitKey,
   traitValues = stCh[traitKey]
 ) => {
-  // Here put the conditional logic re Hypernym SMPs
+  if (traitKey === "number") {
+    let hypernymy = lfUtils.assessHypernymy(lObj);
+    console.log("nzay", hypernymy, lObj.id, stCh.chunkId);
+    if (stCh[traitKey].length > 1) {
+      if (
+        stCh[traitKey].length > 2 ||
+        !["singular", "plural"].every((tv) => stCh[traitKey].includes(tv))
+      ) {
+        consol.throw("dlvu");
+      }
+      if (["hypernym"].includes(hypernymy)) {
+        stCh[traitKey] = [
+          uUtils.selectRandom([
+            "singular",
+            "plural",
+            "plural",
+            "plural",
+            "plural",
+          ]),
+        ];
+        return;
+      }
+      if (["hyponym", "vyponym"].includes(hypernymy)) {
+        stCh[traitKey] = [
+          uUtils.selectRandom([
+            "singular",
+            "singular",
+            "singular",
+            "singular",
+            "plural",
+          ]),
+        ];
+        return;
+      }
+    }
+  }
   stCh[traitKey] = [uUtils.selectRandom(traitValues)];
 };
 
