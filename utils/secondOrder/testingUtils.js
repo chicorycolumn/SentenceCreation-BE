@@ -7,13 +7,45 @@ const consol = require("../zerothOrder/consoleLoggingUtils.js");
 const { it } = require("mocha");
 const testingUtils = require("./testingUtils.js");
 
+exports.checkProportions = (res, ref) => {
+  let printout = {};
+
+  ref.forEach((refArr) => {
+    let name = refArr[0];
+    let values = refArr[1];
+    let target = refArr[2];
+    let variance = refArr[3] || 0.22;
+
+    let upperBound = target + target * variance;
+    let lowerBound = target - target * variance;
+
+    let actual = res.filter((str) => values.includes(str)).length / res.length;
+
+    expect(actual).to.be.at.least(lowerBound);
+    expect(actual).to.be.below(upperBound);
+
+    printout[name] = Math.round(actual * 100) / 100;
+  });
+
+  consol.logTestOutputSolely("checkProportions:", printout);
+};
+
+exports.promiseAllMultiplier = (iterations = 10, callback) => {
+  let res = [];
+  for (let i = 0; i < iterations; i++) {
+    res.push(callback());
+  }
+  return res;
+};
+
 exports.runPaletteTest = (
   questionLanguage,
   answerLanguage,
   sentenceFormulaSymbol,
   expected,
   args,
-  expectedResLength,
+  expectedLength,
+  returnRes,
   useDummy = sentenceFormulaSymbol.includes("dummy")
 ) => {
   return request(app)
@@ -27,8 +59,6 @@ exports.runPaletteTest = (
     })
     .expect(200)
     .then((res) => {
-      consol.log(res.body);
-
       if (!answerLanguage) {
         expect(res.body.questionSentenceArr).to.have.length(1);
         expect(res.body.questionSentenceArr[0]).to.be.a("String");
@@ -36,10 +66,12 @@ exports.runPaletteTest = (
           expect(expected).to.include(res.body.questionSentenceArr[0]);
         }
       } else {
-        if (expectedResLength) {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-          expect(questionSentenceArr.length).to.equal(expectedResLength);
-          expect(answerSentenceArr.length).to.equal(expectedResLength);
+        if (expectedLength) {
+          expect(res.body.questionSentenceArr.length).to.equal(expectedLength);
+        }
+
+        if (returnRes) {
+          return res.body.questionSentenceArr[0];
         }
 
         testingUtils.checkTranslationsOfGivenRef(

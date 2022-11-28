@@ -7,7 +7,7 @@ const uUtils = require("../utils/universalUtils.js");
 const consol = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const { it } = require("mocha");
 const testingUtils = require("../utils/secondOrder/testingUtils.js");
-const { generalTranslatedSentencesRef, runPaletteTest } = testingUtils;
+const { runPaletteTest, promiseAllMultiplier, checkProportions } = testingUtils;
 
 // Delta here.
 /**
@@ -215,6 +215,25 @@ describe("/api", function () {
     });
     it("#pal23-03d GET 200 YES: Spaeng. Red mother (Vypernym).", () => {
       return runPaletteTest("SPA", "ENG", "dummy72c", dummy72cRefSpaEng);
+    });
+  });
+
+  describe("/palette - Stage 24-iv: Spanish basic. Test Hypernym Vypernym Hyponym Vyponym probabilities.", () => {
+    it("#pal23-03a GET 200 YES: Polspa. Red mother (Vypernym).", () => {
+      return Promise.all(
+        promiseAllMultiplier(300, () => {
+          return runPaletteTest("POL", "SPA", "dummy72c", [], {}, 1, true);
+        })
+      ).then((allQuestionSentences) => {
+        checkProportions(allQuestionSentences, [
+          ["matka", ["Czerwona matka."], 0.17, 0.4],
+          ["matki", ["Czerwone matki."], 0.17, 0.4],
+          ["ojciec", ["Czerwony ojciec."], 0.17, 0.4],
+          ["ojcowie", ["Czerwoni ojcowie."], 0.17, 0.4],
+          ["rodzic", ["Czerwony rodzic."], 0.17, 0.4],
+          ["rodzice", ["Czerwoni rodzice."], 0.17, 0.4],
+        ]);
+      });
     });
   });
 });
