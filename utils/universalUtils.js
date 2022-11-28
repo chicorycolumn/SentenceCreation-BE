@@ -357,18 +357,18 @@ exports.doStringsOrArraysMatch = (actual, sought, every = true) => {
 
 exports.selectRandomElementsFromArr = (arr, quantity = arr.length) => {
   if (arr.length > quantity) {
-    let limitedArrIndex = [];
+    let limitedArrIndexes = [];
     for (let i = 0; i < quantity; i++) {
       let selectedIndex;
       while (!selectedIndex) {
         let putativeIndex = Math.floor(Math.random() * arr.length);
-        if (!limitedArrIndex.includes(putativeIndex)) {
+        if (!limitedArrIndexes.includes(putativeIndex)) {
           selectedIndex = putativeIndex;
         }
       }
-      limitedArrIndex.push(selectedIndex);
+      limitedArrIndexes.push(selectedIndex);
     }
-    return limitedArrIndex.map((index) => arr[index]);
+    return limitedArrIndexes.map((index) => arr[index]);
   } else {
     return arr;
   }

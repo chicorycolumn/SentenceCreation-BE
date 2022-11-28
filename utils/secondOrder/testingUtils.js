@@ -11,9 +11,10 @@ exports.runPaletteTest = (
   questionLanguage,
   answerLanguage,
   sentenceFormulaSymbol,
-  ref,
-  useDummy,
-  args
+  expected,
+  args,
+  expectedResLength,
+  useDummy = sentenceFormulaSymbol.includes("dummy")
 ) => {
   return request(app)
     .get("/api/palette")
@@ -27,12 +28,27 @@ exports.runPaletteTest = (
     .expect(200)
     .then((res) => {
       consol.log(res.body);
-      testingUtils.checkTranslationsOfGivenRef(
-        res,
-        ref,
-        questionLanguage,
-        answerLanguage
-      );
+
+      if (!answerLanguage) {
+        expect(res.body.questionSentenceArr).to.have.length(1);
+        expect(res.body.questionSentenceArr[0]).to.be.a("String");
+        if (expected) {
+          expect(expected).to.include(res.body.questionSentenceArr[0]);
+        }
+      } else {
+        if (expectedResLength) {
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+          expect(questionSentenceArr.length).to.equal(expectedResLength);
+          expect(answerSentenceArr.length).to.equal(expectedResLength);
+        }
+
+        testingUtils.checkTranslationsOfGivenRef(
+          res,
+          expected,
+          questionLanguage,
+          answerLanguage
+        );
+      }
     });
 };
 

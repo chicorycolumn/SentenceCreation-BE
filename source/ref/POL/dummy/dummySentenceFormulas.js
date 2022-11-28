@@ -185,7 +185,7 @@ exports.dummySentenceFormulasBank = [
     additionalOrders: [],
   },
   {
-    sentenceFormulaSymbol: "I have APPLE",
+    sentenceFormulaSymbol: "dummy I have APPLE",
     sentenceFormulaId: "POL-dummy11a",
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "mam" },
@@ -203,7 +203,7 @@ exports.dummySentenceFormulasBank = [
     additionalOrders: [],
   },
   {
-    sentenceFormulaSymbol: "I have APPLE/SHIRT",
+    sentenceFormulaSymbol: "dummy I have APPLE/SHIRT",
     sentenceFormulaId: "POL-dummy11b",
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "mam" },

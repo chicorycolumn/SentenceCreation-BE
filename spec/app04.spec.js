@@ -1,16 +1,12 @@
 const app = require("../app");
 const request = require("supertest");
-const chai = require("chai");
 const { expect } = require("chai");
 const gpUtils = require("../utils/generalPurposeUtils.js");
 const uUtils = require("../utils/universalUtils.js");
 const consol = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const { it } = require("mocha");
 const testingUtils = require("../utils/secondOrder/testingUtils.js");
-const {
-  traitValueTranslation,
-} = require("../utils/reference/referenceTranslations");
-const { generalTranslatedSentencesRef, runPaletteTest } = testingUtils;
+const { runPaletteTest } = testingUtils;
 
 describe("/api", function () {
   this.timeout(7000);
@@ -90,7 +86,7 @@ describe("/api", function () {
           POL: ["Kim ja jestem?", "Kim jestem?"],
         },
       ];
-      return runPaletteTest("POL", "ENG", "dummy70a", ref, true);
+      return runPaletteTest("POL", "ENG", "dummy70a", ref);
     });
   });
 
@@ -102,7 +98,7 @@ describe("/api", function () {
           POL: ["Mała dziura.", "Mały otwór."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "dummy71a", ref, true);
+      return runPaletteTest("ENG", "POL", "dummy71a", ref);
     });
     it("#pal23-01b GET 200 YES: Poleng. Word synonyms, two in ENG and two in POL.", () => {
       let ref = [
@@ -111,7 +107,7 @@ describe("/api", function () {
           POL: ["Mała dziura."],
         },
       ];
-      return runPaletteTest("POL", "ENG", "dummy71a", ref, true);
+      return runPaletteTest("POL", "ENG", "dummy71a", ref);
     });
     it("#pal23-01c GET 200 YES: Engpol. Word synonyms, two in ENG and two in POL.", () => {
       let ref = [
@@ -120,7 +116,7 @@ describe("/api", function () {
           POL: ["W małej dziurze.", "W małym otworze."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "dummy71b", ref, true);
+      return runPaletteTest("ENG", "POL", "dummy71b", ref);
     });
     it("#pal23-01d GET 200 YES: Poleng. Word synonyms, two in ENG and two in POL.", () => {
       let ref = [
@@ -129,7 +125,7 @@ describe("/api", function () {
           POL: ["W małej dziurze."],
         },
       ];
-      return runPaletteTest("POL", "ENG", "dummy71b", ref, true);
+      return runPaletteTest("POL", "ENG", "dummy71b", ref);
     });
     it("#pal23-01e GET 200 YES: Engpol. Sentences synonyms.", () => {
       let ref = [
@@ -143,7 +139,7 @@ describe("/api", function () {
           ],
         },
       ];
-      return runPaletteTest("ENG", "POL", "dummy71c", ref, true);
+      return runPaletteTest("ENG", "POL", "dummy71c", ref);
     });
     it("#pal23-01f GET 200 YES: Poleng. Sentences synonyms.", () => {
       let ref = [
@@ -157,7 +153,7 @@ describe("/api", function () {
           POL: ["W małej dziurze."],
         },
       ];
-      return runPaletteTest("POL", "ENG", "dummy71c", ref, true);
+      return runPaletteTest("POL", "ENG", "dummy71c", ref);
     });
   });
 
@@ -174,7 +170,7 @@ describe("/api", function () {
           POL: ["Widzę szczura, był mały."],
         },
       ];
-      return runPaletteTest("POL", "ENG", "dummy67b", ref, true);
+      return runPaletteTest("POL", "ENG", "dummy67b", ref);
     });
     it("#pal24-01b GET 200 YES: Engpol. I saw a rat, it was small.", () => {
       let ref = [
@@ -183,7 +179,7 @@ describe("/api", function () {
           POL: ["Widzę szczura, był mały."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "dummy67b", ref, true);
+      return runPaletteTest("ENG", "POL", "dummy67b", ref);
     });
   });
 });
