@@ -7,38 +7,11 @@ const consol = require("../zerothOrder/consoleLoggingUtils.js");
 const { it } = require("mocha");
 const testingUtils = require("./testingUtils.js");
 
-exports.runPaletteTest3 = (
-  questionLanguage,
-  answerLanguage,
-  sentenceFormulaSymbol,
-  expected,
-  args,
-  useDummy = sentenceFormulaSymbol.includes("dummy")
-) => {
-  return request(app)
-    .get("/api/palette")
-    .send({
-      questionLanguage,
-      answerLanguage,
-      useDummy,
-      sentenceFormulaSymbol,
-      ...args,
-    })
-    .expect(200)
-    .then((res) => {
-      consol.log(res.body);
-      expect(res.body.questionSentenceArr[0]).to.be.a("String");
-      if (expected) {
-        expect(expected).to.include(res.body.questionSentenceArr[0]);
-      }
-    });
-};
-
 exports.runPaletteTest = (
   questionLanguage,
   answerLanguage,
   sentenceFormulaSymbol,
-  ref,
+  expected,
   args,
   expectedResLength,
   useDummy = sentenceFormulaSymbol.includes("dummy")
@@ -56,18 +29,26 @@ exports.runPaletteTest = (
     .then((res) => {
       consol.log(res.body);
 
-      if (expectedResLength) {
-        let { questionSentenceArr, answerSentenceArr } = res.body;
-        expect(questionSentenceArr.length).to.equal(expectedResLength);
-        expect(answerSentenceArr.length).to.equal(expectedResLength);
-      }
+      if (!answerLanguage) {
+        expect(res.body.questionSentenceArr).to.have.length(1);
+        expect(res.body.questionSentenceArr[0]).to.be.a("String");
+        if (expected) {
+          expect(expected).to.include(res.body.questionSentenceArr[0]);
+        }
+      } else {
+        if (expectedResLength) {
+          let { questionSentenceArr, answerSentenceArr } = res.body;
+          expect(questionSentenceArr.length).to.equal(expectedResLength);
+          expect(answerSentenceArr.length).to.equal(expectedResLength);
+        }
 
-      testingUtils.checkTranslationsOfGivenRef(
-        res,
-        ref,
-        questionLanguage,
-        answerLanguage
-      );
+        testingUtils.checkTranslationsOfGivenRef(
+          res,
+          expected,
+          questionLanguage,
+          answerLanguage
+        );
+      }
     });
 };
 

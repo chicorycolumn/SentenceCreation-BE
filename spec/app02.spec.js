@@ -694,46 +694,23 @@ describe("/api", function () {
 
   xdescribe("/palette - Stage 12: Conditionals.", () => {
     it("#pal12-01a (04-01c) GET 200 YES: CONDITIONAL Returns a sentence with a single verb, with tense and number specified.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "dummy13a conditional plural",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect([
-            "Czytano by.",
-            "Czytalibyśmy.",
-            "Czytałybyśmy.",
-            "Czytalibyście.",
-            "Czytałybyście.",
-            "Czytaliby.",
-            "Czytałyby.",
-          ]).to.include(res.body.questionSentenceArr[0]);
-          consol.log(res.body);
-        });
+      return runPaletteTest("POL", null, "dummy13a conditional plural", [
+        "Czytano by.",
+        "Czytalibyśmy.",
+        "Czytałybyśmy.",
+        "Czytalibyście.",
+        "Czytałybyście.",
+        "Czytaliby.",
+        "Czytałyby.",
+      ]);
     });
     it("#pal12-02a (05-02d) GET 200 YES: CONDITIONAL Returns a sentence when selected by one from multiple tenseDescriptions.", () => {
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage: "POL",
-          sentenceFormulaSymbol: "girl reads f conditional im pf",
-        })
-        .expect(200)
-        .then((res) => {
-          expect(res.body.questionSentenceArr[0]).to.be.a("String");
-          expect([
-            "Kobieta czytałaby.",
-            "Kobiety czytałyby.",
-            "Kobieta przeczytałaby.",
-            "Kobiety przeczytałyby.",
-          ]).to.include(res.body.questionSentenceArr[0]);
-          consol.log(res.body);
-        });
+      return runPaletteTest("POL", null, "girl reads f conditional im pf", [
+        "Kobieta czytałaby.",
+        "Kobiety czytałyby.",
+        "Kobieta przeczytałaby.",
+        "Kobiety przeczytałyby.",
+      ]);
     });
     it("#pal12-03a GET 200 YES: RSWAT for First Conditional POL->ENG.", () => {
       let ref = [
@@ -779,80 +756,28 @@ describe("/api", function () {
 
   describe("/palette - Stage 13A: Pronombres and other Multi Gender Nouns: Basic tests.", () => {
     it("#pal13A-01a GET 200 YES: Give a pronombre in ENG.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          useDummy: true,
-          sentenceFormulaSymbol: "dummy48a",
-        })
-        .expect(200)
-        .then((res) => {
-          consol.log(res.body);
-          expect(res.body.questionSentenceArr).to.have.length(1);
-          expect(res.body.questionSentenceArr[0]).to.equal("I.");
-        });
+      return runPaletteTest("ENG", null, "dummy48a", ["I."]);
     });
     it("#pal13A-01b GET 200 YES: Give a pronombre in POL.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          useDummy: true,
-          sentenceFormulaSymbol: "dummy48a",
-        })
-        .expect(200)
-        .then((res) => {
-          consol.log(res.body);
-          expect(res.body.questionSentenceArr).to.have.length(1);
-          expect(res.body.questionSentenceArr[0]).to.equal("Ja.");
-        });
+      return runPaletteTest("POL", null, "dummy48a", ["Ja."]);
     });
     it("#pal13A-01c GET 200 YES: Give a pronombre in Poleng.", () => {
-      const questionLanguage = "POL";
-      const answerLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          useDummy: true,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy48a",
-        })
-        .expect(200)
-        .then((res) => {
-          consol.log(res.body);
-          expect(res.body.questionSentenceArr).to.have.length(1);
-          expect(res.body.questionSentenceArr[0]).to.equal("Ja.");
-          expect(res.body.answerSentenceArr).to.have.members(["I."]);
-        });
+      let ref = [
+        {
+          POL: ["Ja."],
+          ENG: ["I."],
+        },
+      ];
+      return runPaletteTest("POL", "ENG", "dummy48a", ref);
     });
     it("#pal13A-01d GET 200 YES: Give a pronombre in Engpol.", () => {
-      const questionLanguage = "ENG";
-      const answerLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          useDummy: true,
-          answerLanguage,
-          sentenceFormulaSymbol: "dummy48a",
-        })
-        .expect(200)
-        .then((res) => {
-          consol.log(res.body);
-          expect(res.body.questionSentenceArr).to.have.length(1);
-          expect(res.body.questionSentenceArr[0]).to.equal("I.");
-          expect(res.body.answerSentenceArr).to.have.members(["Ja."]);
-        });
+      let ref = [
+        {
+          POL: ["Ja."],
+          ENG: ["I."],
+        },
+      ];
+      return runPaletteTest("ENG", "POL", "dummy48a", ref);
     });
     it("#pal13A-02a GET 200 YES: Engpol. Inherit from pronombre to verb (m sing).", () => {
       let ref = [
@@ -1544,52 +1469,24 @@ describe("/api", function () {
 
   describe("/palette - Stage 14: Possessive pronombres.", () => {
     it("#pal14-01a GET 200 YES: POL only. I have my onion.", () => {
-      const questionLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          sentenceFormulaSymbol: "dummy50a",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          consol.log(res.body);
-
-          expect([
-            "Ja mam moją cebulę.",
-            "My mamy naszą cebulę.",
-            "Ja mam moje cebule.",
-            "My mamy nasze cebule.",
-            "Mam moją cebulę.",
-            "Mamy naszą cebulę.",
-            "Mam moje cebule.",
-            "Mamy nasze cebule.",
-          ]).to.include(res.body.questionSentenceArr[0]);
-        });
+      return runPaletteTest("POL", null, "dummy50a", [
+        "Ja mam moją cebulę.",
+        "My mamy naszą cebulę.",
+        "Ja mam moje cebule.",
+        "My mamy nasze cebule.",
+        "Mam moją cebulę.",
+        "Mamy naszą cebulę.",
+        "Mam moje cebule.",
+        "Mamy nasze cebule.",
+      ]);
     });
     it("#pal14-01b GET 200 YES: ENG only. I have my onion.", () => {
-      const questionLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          sentenceFormulaSymbol: "dummy50a",
-          useDummy: true,
-        })
-        .expect(200)
-        .then((res) => {
-          consol.log(res.body);
-
-          expect([
-            "I have my onion.",
-            "I have my onions.",
-            "We have our onion.",
-            "We have our onions.",
-          ]).to.include(res.body.questionSentenceArr[0]);
-        });
+      return runPaletteTest("ENG", null, "dummy50a", [
+        "I have my onion.",
+        "I have my onions.",
+        "We have our onion.",
+        "We have our onions.",
+      ]);
     });
     it("#pal14-01c GET 200 YES: Engpol. I have my onion. Clarifier for 'my' should NOT be present.", () => {
       let ref = [
@@ -1722,54 +1619,28 @@ describe("/api", function () {
       );
     });
     it("#pal14-03a GET 200 YES: POL only. My father gave me his book.", () => {
-      const questionLanguage = "POL";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          sentenceFormulaSymbol: "113a my father gave me his book",
-        })
-        .expect(200)
-        .then((res) => {
-          consol.log(res.body);
-
-          expect([
-            "Mój ojciec dał mi jego książkę.",
-            "Moja matka dała mi jej książkę.",
-            "Nasz ojciec dał nam jego książkę.",
-            "Nasza matka dała nam jej książkę.",
-            "Moi ojcowie dali mi ich książkę.",
-            "Moje matki dały mi ich książkę.",
-            "Nasi ojcowie dali nam ich książkę.",
-            "Nasze matki dały nam ich książkę.",
-          ]).to.include(res.body.questionSentenceArr[0]);
-        });
+      return runPaletteTest("POL", null, "113a my father gave me his book", [
+        "Mój ojciec dał mi jego książkę.",
+        "Moja matka dała mi jej książkę.",
+        "Nasz ojciec dał nam jego książkę.",
+        "Nasza matka dała nam jej książkę.",
+        "Moi ojcowie dali mi ich książkę.",
+        "Moje matki dały mi ich książkę.",
+        "Nasi ojcowie dali nam ich książkę.",
+        "Nasze matki dały nam ich książkę.",
+      ]);
     });
     it("#pal14-03b GET 200 YES: ENG only. My father gave me his book.", () => {
-      const questionLanguage = "ENG";
-
-      return request(app)
-        .get("/api/palette")
-        .send({
-          questionLanguage,
-          sentenceFormulaSymbol: "113a my father gave me his book",
-        })
-        .expect(200)
-        .then((res) => {
-          consol.log(res.body);
-
-          expect([
-            "My father gave me his book.",
-            "My mother gave me her book.",
-            "Our father gave us his book.",
-            "Our mother gave us her book.",
-            "My fathers gave me their book.",
-            "My mothers gave me their book.",
-            "Our fathers gave us their book.",
-            "Our mothers gave us their book.",
-          ]).to.include(res.body.questionSentenceArr[0]);
-        });
+      return runPaletteTest("ENG", null, "113a my father gave me his book", [
+        "My father gave me his book.",
+        "My mother gave me her book.",
+        "Our father gave us his book.",
+        "Our mother gave us her book.",
+        "My fathers gave me their book.",
+        "My mothers gave me their book.",
+        "Our fathers gave us their book.",
+        "Our mothers gave us their book.",
+      ]);
     });
     it("#pal14-03c GET 200 YES: Engpol. My father gave me his book.", () => {
       let ref = [
