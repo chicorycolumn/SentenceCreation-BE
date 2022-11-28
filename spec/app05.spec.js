@@ -183,6 +183,9 @@ describe("/api", function () {
   });
 
   describe("/palette - Stage 24-ii: Spanish basic. Hypernyms and Vypernyms", () => {
+    // "medico"    Vypernym of "medico"/"medica".
+    // "lekarz"    Vypernym of "lekarz"/"lekarka".
+    // "doctor"    MGN, ie both male and female, whether singular or plural.
     it("#pal23-02a GET 200 YES: Polspa. Red doctor (MGN).", () => {
       return runPaletteTest("POL", "SPA", "dummy72b", dummy72bSpaPolBoth);
     });
@@ -197,8 +200,10 @@ describe("/api", function () {
     });
   });
 
-  describe("/palette - Stage 24-i: Spanish basic. Hypernyms and Vypernyms", () => {
-    // "parent" is hypernym of "mother"/"father". "padre" is vypernym (virile hypernym) of "madre"/"padre".
+  describe("/palette - Stage 24-iii: Spanish basic. Hypernyms and Vypernyms", () => {
+    // "parent"    Hypernym of "mother"/"father".
+    // "rodzic"    Hypernym of "matka"/"ojciec".
+    // "padre"     Vypernym of "madre"/"padre".
     it("#pal23-03a GET 200 YES: Polspa. Red mother (Vypernym).", () => {
       return runPaletteTest("POL", "SPA", "dummy72c", dummy72cRefPolSpa);
     });
