@@ -392,7 +392,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
         Object.keys(defaultTraitValuesRef[wordtype]).forEach((traitKey) => {
           if (!structureChunk[traitKey] || !structureChunk[traitKey].length) {
             structureChunk[traitKey] = [
-              uUtils.selectRandom(defaultTraitValuesRef[wordtype][traitKey]),
+              uUtils.selectRandom(defaultTraitValuesRef[wordtype][traitKey]), //delta But I don't think relevant to Hypernym Adjustment as this is preprocessing so no lobj to speak of.
             ];
 
             if (traitKey === "person" && wordtype === "pronombre") {
@@ -649,11 +649,7 @@ exports.correctMGNsBeforeFetchingOutputArray = (
   }
 
   if (structureChunk.number.length > 1) {
-    ///////// delta smp
     lfUtils.selectRandTraitValue(selectedLemmaObject, structureChunk, "number");
-    //////////
-    // structureChunk.number = [uUtils.selectRandom(structureChunk.number)];
-    //////////
   }
 
   consol.log(

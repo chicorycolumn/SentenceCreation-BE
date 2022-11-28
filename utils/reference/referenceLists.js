@@ -863,6 +863,7 @@ exports.adhocInflectionCategorys = {
   POL: {},
   SPA: {},
   ENG: { verb: ["tenseDescription"] }, // delta what is this for?
+  // But Polish doesn't have tenseDesc as an adhoc category?
 };
 
 exports.adhocForms = {

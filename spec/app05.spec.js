@@ -9,7 +9,6 @@ const { it } = require("mocha");
 const testingUtils = require("../utils/secondOrder/testingUtils.js");
 const { runPaletteTest, promiseAllMultiplier, checkProportions } = testingUtils;
 
-// Delta here.
 /**
  * Okay, currently vypernym "padre" is basically working.
  *
@@ -223,23 +222,22 @@ describe("/api", function () {
   });
 
   describe("/palette - Stage 24-iv: Spanish basic. Test Hypernym Vypernym Hyponym Vyponym probabilities.", () => {
-    it.only("#pal23-03a GET 200 YES: Polspa. Red mother (Vypernym).", () => {
+    it("#pal23-03a GET 200 YES: Polspa. Red mother (Vypernym).", () => {
       return Promise.all(
-        promiseAllMultiplier(300, () => {
+        promiseAllMultiplier(200, () => {
           return runPaletteTest("POL", "SPA", "dummy72c", [], {}, 1, true);
         })
       ).then((allQuestionSentences) => {
-        let std = 1 / 6;
-
         checkProportions(allQuestionSentences, [
-          ["matka", ["Czerwona matka."], 1.8 * std, 0.4],
-          ["matki", ["Czerwone matki."], 0.2 * std, 0.4],
+          // Hypernyms want higher proportion. (1/4 each)
+          ["matka", ["Czerwona matka."], 0.265, 0.24],
+          ["ojciec", ["Czerwony ojciec."], 0.265, 0.24],
+          ["rodzice", ["Czerwoni rodzice."], 0.265, 0.24],
 
-          ["ojciec", ["Czerwony ojciec."], 1.8 * std, 0.4],
-          ["ojcowie", ["Czerwoni ojcowie."], 0.2 * std, 0.4],
-
-          ["rodzic", ["Czerwony rodzic."], 0.2 * std, 0.4],
-          ["rodzice", ["Czerwoni rodzice."], 1.8 * std, 0.4],
+          // Hyponyms/Vyponyms lower proportion. (1/16 each)
+          ["matki", ["Czerwone matki."], 0.065, 0.48],
+          ["ojcowie", ["Czerwoni ojcowie."], 0.065, 0.48],
+          ["rodzic", ["Czerwony rodzic."], 0.065, 0.48],
         ]);
       });
     });

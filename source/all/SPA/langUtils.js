@@ -113,7 +113,7 @@ exports.expandLemmaObjects = (matches, stChWordtype, currentLanguage) => {
 };
 
 exports.formatTraitValue = (traitKey, traitValue, note) => {
-  //delta genericise
+  //epsilon genericise
   const metagenderRef = {
     _Genders: ["m", "f", "n", "virile", "nonvirile"],
     _PersonalGenders: ["m", "f", "virile", "nonvirile"],

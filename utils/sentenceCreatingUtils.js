@@ -638,12 +638,7 @@ exports.processSentenceFormula = (
           traitValue.length > 1
         ) {
           consol.log(`pqoi Decanting "${otherChunk.chunkId}" "${traitKey}".`);
-
-          //////// delta smp
           lfUtils.selectRandTraitValue(selectedLObj, otherChunk, traitKey);
-          //////////
-          // otherChunk[traitKey] = [uUtils.selectRandom(otherChunk[traitKey])];
-          //////////
         }
       });
     });
@@ -1128,7 +1123,8 @@ exports.conformAnswerStructureToQuestionStructure = (
 
     let lObjsToSearch = nexusUtils.getTraductions(
       questionSelectedLemmaObject,
-      answerLanguage
+      answerLanguage,
+      false
     );
 
     let source = words[gpUtils.getWordtypeShorthandStCh(answerStructureChunk)];

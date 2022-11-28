@@ -389,5 +389,5 @@ exports.flatten = (arr) => {
 };
 
 exports.round = (num) => {
-  return Math.round(num * 100) / 100;
+  return Math.round(num * 1000) / 1000;
 };

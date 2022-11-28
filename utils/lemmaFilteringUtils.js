@@ -10,6 +10,9 @@ const allLangUtils = require("./allLangUtils.js");
 
 exports.assessHypernymy = (lObj) => {
   let lang = gpUtils.getLanguageFromLemmaObject(lObj);
+  if (lang === "DUMMY") {
+    return;
+  }
 
   function _isHypernym(lObj) {
     return lObj.id.split("-").length > 4 && lObj.id.split("-")[4].includes("£");
@@ -25,7 +28,7 @@ exports.assessHypernymy = (lObj) => {
     return "vypernym";
   }
 
-  let traductions = nexusUtils.getTraductions(lObj, lang);
+  let traductions = nexusUtils.getTraductions(lObj, lang, true);
 
   if (traductions.some((id) => _isHypernym({ id }))) {
     return "hyponym";
@@ -33,6 +36,52 @@ exports.assessHypernymy = (lObj) => {
   if (traductions.some((id) => _isVypernym({ id }))) {
     return "vyponym";
   }
+};
+
+exports.selectRandOutputUnit = (lObj, stCh, outputUnits) => {
+  let hypernymy = lfUtils.assessHypernymy(lObj);
+
+  if (["hypernym", "hyponym", "vyponym"].includes(hypernymy)) {
+    let proportionAdjustedOutputUnits = [];
+
+    if (["hypernym"].includes(hypernymy)) {
+      outputUnits.forEach((unit) => {
+        if (
+          unit.drillPath.some(
+            (drillPathUnit) =>
+              drillPathUnit[0] === "number" && drillPathUnit[1] === "plural"
+          )
+        ) {
+          proportionAdjustedOutputUnits.push(unit);
+          proportionAdjustedOutputUnits.push(unit);
+          proportionAdjustedOutputUnits.push(unit);
+          proportionAdjustedOutputUnits.push(unit);
+        } else {
+          proportionAdjustedOutputUnits.push(unit);
+        }
+      });
+    } else if (["hyponym", "vyponym"].includes(hypernymy)) {
+      outputUnits.forEach((unit) => {
+        if (
+          unit.drillPath.some(
+            (drillPathUnit) =>
+              drillPathUnit[0] === "number" && drillPathUnit[1] === "singular"
+          )
+        ) {
+          proportionAdjustedOutputUnits.push(unit);
+          proportionAdjustedOutputUnits.push(unit);
+          proportionAdjustedOutputUnits.push(unit);
+          proportionAdjustedOutputUnits.push(unit);
+        } else {
+          proportionAdjustedOutputUnits.push(unit);
+        }
+      });
+    }
+
+    return uUtils.selectRandom(proportionAdjustedOutputUnits);
+  }
+
+  return uUtils.selectRandom(outputUnits);
 };
 
 exports.selectRandLObj = (lObjs, stCh) => {
@@ -105,7 +154,6 @@ exports.selectRandTraitValue = (
 ) => {
   if (traitKey === "number") {
     let hypernymy = lfUtils.assessHypernymy(lObj);
-    console.log("nzay", hypernymy, lObj.id, stCh.chunkId);
     if (stCh[traitKey].length > 1) {
       if (
         stCh[traitKey].length > 2 ||
@@ -139,6 +187,7 @@ exports.selectRandTraitValue = (
       }
     }
   }
+
   stCh[traitKey] = [uUtils.selectRandom(traitValues)];
 };
 

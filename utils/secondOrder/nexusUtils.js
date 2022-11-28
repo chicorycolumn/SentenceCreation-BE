@@ -11,11 +11,11 @@ exports.getNexusLemmaObject = (lObj, env = "ref") => {
 
   const wordtypeShorthand = gpUtils.getWordtypeShorthandLObj(lObj);
 
-  let resArr = nexusWordsBank[wordtypeShorthand].filter((lemmaObject) =>
-    lemmaObject.traductions[lang].some((el) =>
+  let resArr = nexusWordsBank[wordtypeShorthand].filter((lemmaObject) => {
+    return lemmaObject.traductions[lang].some((el) =>
       allLangUtils.compareLObjStems(el, lObj.id)
-    )
-  );
+    );
+  });
 
   if (resArr.length !== 1) {
     consol.throw(
@@ -27,18 +27,32 @@ exports.getNexusLemmaObject = (lObj, env = "ref") => {
 };
 
 exports.getPapers = (lObj, env = "ref") => {
-  if (lObj.devHardcoded_tags) {
-    return lObj.devHardcoded_tags;
-  }
-
-  let nexusObject = exports.getNexusLemmaObject(lObj, env);
-  return nexusObject.papers;
+  return (
+    lObj.devHardcoded_tags || exports.getNexusLemmaObject(lObj, env).papers
+  );
 };
 
-exports.getTraductions = (lObj, targetlang, env = "ref") => {
+exports.getTraductions = (lObj, targetlang, getAllIds, env = "ref") => {
   let traductions =
     lObj.devHardcoded_translations ||
     exports.getNexusLemmaObject(lObj, env).traductions;
+
+  if (getAllIds) {
+    const { wordsBank } = require(`../../source/${env}/${targetlang}/words.js`);
+    let bank = wordsBank[gpUtils.getWordtypeShorthandLObj(lObj)];
+
+    let resArr = [];
+
+    traductions[targetlang].forEach((id) => {
+      bank.forEach((l) => {
+        if (allLangUtils.compareLObjStems(l.id, id)) {
+          resArr.push(l.id);
+        }
+      });
+    });
+
+    return Array.from(new Set(resArr));
+  }
 
   return targetlang ? traductions[targetlang] : traductions;
 };

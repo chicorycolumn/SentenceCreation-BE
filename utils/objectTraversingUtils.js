@@ -179,7 +179,7 @@ exports.findMatchingLemmaObjectThenWord = (
         throw "No members were found in the adhocArr from OT:findMatching, path 3A-1 (ie form).";
       }
 
-      let selectedAdhocResultObj = uUtils.selectRandom(adhocArr);
+      let selectedAdhocResultObj = uUtils.selectRandom(adhocArr); //delta2
 
       let { selectedWordArr, structureChunkUpdated } = selectedAdhocResultObj;
 
@@ -256,7 +256,7 @@ exports.findMatchingLemmaObjectThenWord = (
             throw "No members were found in the adhocArr from OT:findMatching, path 3A-2 ie Ad-PW-I (ie tenseDescription).";
           }
 
-          let selectedAdhocResultObj = uUtils.selectRandom(adhocArr);
+          let selectedAdhocResultObj = uUtils.selectRandom(adhocArr); //delta2
 
           let { selectedWordArr, structureChunkUpdated } =
             selectedAdhocResultObj;
@@ -710,7 +710,12 @@ exports.findMatchingLemmaObjectThenWord = (
         });
       }
 
-      let unit = uUtils.selectRandom(subArrayOfOutputUnits); //delta here2
+      let unit = lfUtils.selectRandOutputUnit(
+        selectedLemmaObject,
+        structureChunk,
+        subArrayOfOutputUnits
+      );
+
       /**Why selran here? Because we're in Q mode.
        * So if matka and matki are possibles, then of course we must choose one for the one Q sentence,
        * so ultimately Q sentence is "Matki dały mi stół." but it could have equally been "Matka dała mi stół."
