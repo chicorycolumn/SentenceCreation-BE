@@ -11,12 +11,9 @@ const { generalTranslatedSentencesRef, runPaletteTest } = testingUtils;
 
 // Delta here.
 /**
- * Okay, currently SMP "padre" is basically working.
- * Only thing is, I think I want to make it so a SMP's counterparts (Co-SMPs)
- * (ie "rodzic" and "parent" are the SMP's counterparts, whereas "padre" is the SMP)
- * are not randomly selected as often.
+ * Okay, currently vypernym "padre" is basically working.
  *
- * You know like... if I make a sentence with npe-0002
+ * But like... if I make a sentence with npe-0002
  * I don't want it coming out equal probability in ENG Q sentence:
  * "My parent gave me a book."
  * "My mother gave me a book."
@@ -39,27 +36,19 @@ const { generalTranslatedSentencesRef, runPaletteTest } = testingUtils;
  * "pol-npe-007-ojciec"
  * "pol-npe-007-matka"
  *
- * A word with £                    = Hypernym but not SMP      "parent", "rodzic"
- * A word with €                    = Hypernym and is SMP       "padre"
- * A word with neither but is in
- * nexus arr with a word which is £ = Hypon of a non-SMP        "mother" "father" "matka" "ojciec"
- * A word with neither but is in
- * nexus arr with a word which is € = Hypon of a SMP            "madre"
- *
- *
  * So when trait values are being filled where they have been left blank in sentence structure...
  *
- * Hypernym non-SMPs    get random(4/5) to be number["plural"]
- * Hypernym SMPs        get uninterfered, so number["singular", "plural"]
- * Hyponyms of non-SMP  get random(4/5) to be number["singular"]
- * Hyponyms of SMP      get random(4/5) to be number["singular"]
+ * £  Hypernyms  get random(4/5) to be number["plural"]           "parent", "rodzic"
+ * €  Vypernyms  get uninterfered, number["singular","plural"]    "padre"
+ *    Hyponyms   get random(4/5) to be number["singular"]         "mother" "father" "matka" "ojciec"
+ *    Vyponyms   get random(4/5) to be number["singular"]         "madre"
  *
  * So mother, father, matka, ojciec, and madre will be more likely to generate as singular.
  * While parent, rodzic will be more likely to generate as plural.
  * And padre will generate equally as either.
  */
 
-const dummy73a = [
+const dummy72a = [
   {
     ENG: ["Red bear."],
     SPA: ["Rojo oso."],
@@ -81,7 +70,7 @@ const dummy73a = [
     POL: ["Czerwone cebule."],
   },
 ];
-const dummy73bSpaPolBoth = [
+const dummy72bSpaPolBoth = [
   {
     POL: ["Czerwony lekarz."],
     SPA: ["Rojo medico."],
@@ -99,7 +88,7 @@ const dummy73bSpaPolBoth = [
     SPA: ["Rojas medicas."],
   },
 ];
-const dummy73bSpaEng = [
+const dummy72bSpaEng = [
   {
     SPA: ["Rojo medico."],
     ENG: ["Red doctor."],
@@ -117,7 +106,7 @@ const dummy73bSpaEng = [
     ENG: ["Red doctors."],
   },
 ];
-const dummy73bEngSpa = [
+const dummy72bEngSpa = [
   {
     ENG: ["Red doctor (male)."],
     SPA: ["Rojo medico."],
@@ -139,7 +128,7 @@ const dummy73bEngSpa = [
     SPA: ["Rojas medicas."],
   },
 ];
-const dummy73cRefPolSpa = [
+const dummy72cRefPolSpa = [
   { POL: ["Czerwona matka."], SPA: ["Roja madre."] },
   { POL: ["Czerwone matki."], SPA: ["Rojas madres."] },
   { POL: ["Czerwony ojciec."], SPA: ["Rojo padre."] },
@@ -147,7 +136,7 @@ const dummy73cRefPolSpa = [
   { POL: ["Czerwoni rodzice."], SPA: ["Rojos padres."] },
   { POL: ["Czerwony rodzic."], SPA: ["Rojo padre."] },
 ];
-const dummy73cRefSpaPol = [
+const dummy72cRefSpaPol = [
   { POL: ["Czerwona matka."], SPA: ["Roja madre."] },
   { POL: ["Czerwone matki."], SPA: ["Rojas madres."] },
   { POL: ["Czerwony ojciec.", "Czerwony rodzic."], SPA: ["Rojo padre."] },
@@ -158,7 +147,7 @@ const dummy73cRefSpaPol = [
   { POL: ["Czerwoni ojcowie."], SPA: ["Rojos padres (males)."] },
   { POL: ["Czerwoni rodzice."], SPA: ["Rojos padres (mixed)."] },
 ];
-const dummy73cRefEngSpa = [
+const dummy72cRefEngSpa = [
   { ENG: ["Red mother."], SPA: ["Roja madre."] },
   { ENG: ["Red mothers."], SPA: ["Rojas madres."] },
   { ENG: ["Red father."], SPA: ["Rojo padre."] },
@@ -166,7 +155,7 @@ const dummy73cRefEngSpa = [
   { ENG: ["Red parents."], SPA: ["Rojos padres."] },
   { ENG: ["Red parent."], SPA: ["Rojo padre."] },
 ];
-const dummy73cRefSpaEng = [
+const dummy72cRefSpaEng = [
   { ENG: ["Red mother."], SPA: ["Roja madre."] },
   { ENG: ["Red mothers."], SPA: ["Rojas madres."] },
   { ENG: ["Red father.", "Red parent."], SPA: ["Rojo padre."] },
@@ -178,48 +167,49 @@ const dummy73cRefSpaEng = [
 describe("/api", function () {
   this.timeout(7000);
 
-  describe("/palette - Stage 24-i: Spanish basic.", () => {
+  describe("/palette - Stage 24-i: Spanish basic. Normal nouns.", () => {
     it("#pal23-01a GET 200 YES: Polspa. Red onion (NORMAL).", () => {
-      return runPaletteTest("POL", "SPA", "dummy73a", dummy73a);
+      return runPaletteTest("POL", "SPA", "dummy72a", dummy72a);
     });
     it("#pal23-01b GET 200 YES: Spapol. Red onion (NORMAL).", () => {
-      return runPaletteTest("SPA", "POL", "dummy73a", dummy73a);
+      return runPaletteTest("SPA", "POL", "dummy72a", dummy72a);
     });
     it("#pal23-01c GET 200 YES: Engspa. Red onion (NORMAL).", () => {
-      return runPaletteTest("ENG", "SPA", "dummy73a", dummy73a);
+      return runPaletteTest("ENG", "SPA", "dummy72a", dummy72a);
     });
     it("#pal23-01d GET 200 YES: Spaeng. Red onion (NORMAL).", () => {
-      return runPaletteTest("SPA", "ENG", "dummy73a", dummy73a);
+      return runPaletteTest("SPA", "ENG", "dummy72a", dummy72a);
     });
   });
 
-  describe("/palette - Stage 24-ii: Spanish basic.", () => {
+  describe("/palette - Stage 24-ii: Spanish basic. Hypernyms and Vypernyms", () => {
     it("#pal23-02a GET 200 YES: Polspa. Red doctor (MGN).", () => {
-      return runPaletteTest("POL", "SPA", "dummy73b", dummy73bSpaPolBoth);
+      return runPaletteTest("POL", "SPA", "dummy72b", dummy72bSpaPolBoth);
     });
     it("#pal23-02b GET 200 YES: Spapol. Red doctor (MGN).", () => {
-      return runPaletteTest("SPA", "POL", "dummy73b", dummy73bSpaPolBoth);
+      return runPaletteTest("SPA", "POL", "dummy72b", dummy72bSpaPolBoth);
     });
     it("#pal23-02c GET 200 YES: Engspa. Red doctor (MGN).", () => {
-      return runPaletteTest("ENG", "SPA", "dummy73b", dummy73bEngSpa);
+      return runPaletteTest("ENG", "SPA", "dummy72b", dummy72bEngSpa);
     });
     it("#pal23-02d GET 200 YES: Spaeng. Red doctor (MGN).", () => {
-      return runPaletteTest("SPA", "ENG", "dummy73b", dummy73bSpaEng);
+      return runPaletteTest("SPA", "ENG", "dummy72b", dummy72bSpaEng);
     });
   });
 
-  describe("/palette - Stage 24-i: Spanish basic.", () => {
-    it("#pal23-03a GET 200 YES: Polspa. Red mother (SMP).", () => {
-      return runPaletteTest("POL", "SPA", "dummy73c", dummy73cRefPolSpa);
+  describe("/palette - Stage 24-i: Spanish basic. Hypernyms and Vypernyms", () => {
+    // "parent" is hypernym of "mother"/"father". "padre" is vypernym (virile hypernym) of "madre"/"padre".
+    it("#pal23-03a GET 200 YES: Polspa. Red mother (Vypernym).", () => {
+      return runPaletteTest("POL", "SPA", "dummy72c", dummy72cRefPolSpa);
     });
-    it("#pal23-03b GET 200 YES: Spapol. Red mother (SMP).", () => {
-      return runPaletteTest("SPA", "POL", "dummy73c", dummy73cRefSpaPol);
+    it("#pal23-03b GET 200 YES: Spapol. Red mother (Vypernym).", () => {
+      return runPaletteTest("SPA", "POL", "dummy72c", dummy72cRefSpaPol);
     });
-    it("#pal23-03c GET 200 YES: Engspa. Red mother (SMP).", () => {
-      return runPaletteTest("ENG", "SPA", "dummy73c", dummy73cRefEngSpa);
+    it("#pal23-03c GET 200 YES: Engspa. Red mother (Vypernym).", () => {
+      return runPaletteTest("ENG", "SPA", "dummy72c", dummy72cRefEngSpa);
     });
-    it("#pal23-03d GET 200 YES: Spaeng. Red mother (SMP).", () => {
-      return runPaletteTest("SPA", "ENG", "dummy73c", dummy73cRefSpaEng);
+    it("#pal23-03d GET 200 YES: Spaeng. Red mother (Vypernym).", () => {
+      return runPaletteTest("SPA", "ENG", "dummy72c", dummy72cRefSpaEng);
     });
   });
 });
