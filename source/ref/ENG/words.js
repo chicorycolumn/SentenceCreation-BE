@@ -83,8 +83,8 @@ exports.wordsBank = {
     {
       //selectors
       lemma: "parent",
-      id: "eng-npe-003-parent",
-      gender: "m",
+      id: "eng-npe-003-parent-£",
+      gender: "m", // delta or "_PersonalGenders" like "doctor"?
       //notes
 
       //inflections

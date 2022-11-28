@@ -2,6 +2,7 @@ const refObj = require("../utils/reference/referenceObjects.js");
 const refFxn = require("../utils/reference/referenceFunctions.js");
 const gpUtils = require("../utils/generalPurposeUtils.js");
 const uUtils = require("../utils/universalUtils.js");
+const lfUtils = require("../utils/lemmaFilteringUtils.js");
 const consol = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 
@@ -648,7 +649,11 @@ exports.correctMGNsBeforeFetchingOutputArray = (
   }
 
   if (structureChunk.number.length > 1) {
-    structureChunk.number = [uUtils.selectRandom(structureChunk.number)];
+    ///////// delta smp
+    lfUtils.selectRandTraitValue(selectedLemmaObject, structureChunk, "number");
+    //////////
+    // structureChunk.number = [uUtils.selectRandom(structureChunk.number)];
+    //////////
   }
 
   consol.log(

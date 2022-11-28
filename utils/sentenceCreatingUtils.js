@@ -611,6 +611,10 @@ exports.processSentenceFormula = (
         outputArray.map((outputUnit) => outputUnit.structureChunk)
       );
     otherChunks.forEach((otherChunk) => {
+      let selectedLObj = outputArray.find(
+        (outputUnit) => outputUnit.structureChunk.chunkId === otherChunk.chunkId
+      );
+
       if (otherChunk.dontSpecifyOnThisChunk) {
         return;
       }
@@ -634,7 +638,12 @@ exports.processSentenceFormula = (
           traitValue.length > 1
         ) {
           consol.log(`pqoi Decanting "${otherChunk.chunkId}" "${traitKey}".`);
-          otherChunk[traitKey] = [uUtils.selectRandom(otherChunk[traitKey])];
+
+          //////// delta smp
+          lfUtils.selectRandTraitValue(selectedLObj, otherChunk, traitKey);
+          //////////
+          // otherChunk[traitKey] = [uUtils.selectRandom(otherChunk[traitKey])];
+          //////////
         }
       });
     });
@@ -1117,15 +1126,18 @@ exports.conformAnswerStructureToQuestionStructure = (
 
     let matchingAnswerLemmaObjects = [];
 
-    let lObjsToSearch = nexusUtils.getTraductions(questionSelectedLemmaObject)[
+    let lObjsToSearch = nexusUtils.getTraductions(
+      questionSelectedLemmaObject,
       answerLanguage
-    ];
+    );
 
     let source = words[gpUtils.getWordtypeShorthandStCh(answerStructureChunk)];
 
     matchingAnswerLemmaObjects = source.filter(
       (lObj) =>
-        lObjsToSearch.includes(lObj.id) &&
+        lObjsToSearch.some((id) =>
+          allLangUtils.compareLObjStems(id, lObj.id)
+        ) &&
         //Resolve issue of multipleWordtype allohoms.
         gpUtils.getWordtypeLObj(lObj) ===
           gpUtils.getWordtypeStCh(questionStructureChunk)

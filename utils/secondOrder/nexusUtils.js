@@ -35,13 +35,12 @@ exports.getPapers = (lObj, env = "ref") => {
   return nexusObject.papers;
 };
 
-exports.getTraductions = (lObj, env = "ref") => {
-  if (lObj.devHardcoded_translations) {
-    return lObj.devHardcoded_translations;
-  }
+exports.getTraductions = (lObj, targetlang, env = "ref") => {
+  let traductions =
+    lObj.devHardcoded_translations ||
+    exports.getNexusLemmaObject(lObj, env).traductions;
 
-  let nexusObject = exports.getNexusLemmaObject(lObj, env);
-  return nexusObject.traductions;
+  return targetlang ? traductions[targetlang] : traductions;
 };
 
 exports.checkAllLObjsArePresentInNexus = (env, lang) => {
@@ -78,7 +77,9 @@ exports.checkAllLObjsArePresentInNexus = (env, lang) => {
       nex.traductions[lang].forEach((trad) => {
         if (
           !Object.values(wordsBank).some((_wb) => {
-            return _wb.some((lObj) => lObj.id === trad);
+            return _wb.some((lObj) =>
+              allLangUtils.compareLObjStems(lObj.id, trad)
+            );
           })
         ) {
           problems.push(
@@ -109,7 +110,7 @@ exports.checkAllLObjsArePresentInNexus = (env, lang) => {
 
       if (res.length !== 1) {
         problems.push(
-          `${id} is present in nexus words bank _${res.length}_ times but should be 1.`
+          `${id} is present in nexus bank ${res.length} times but should be 1.`
         );
       }
 
@@ -121,5 +122,5 @@ exports.checkAllLObjsArePresentInNexus = (env, lang) => {
     console.log("wdgt problems:", problems);
   }
 
-  expect(problems.length).to.equal(0);
+  expect(problems).to.eql([]);
 };

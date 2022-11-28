@@ -166,7 +166,7 @@ exports.findMatchingLemmaObjectThenWord = (
         });
       });
     } else {
-      let selectedLemmaObject = uUtils.selectRandom(matches);
+      let selectedLemmaObject = lfUtils.selectRandLObj(matches, structureChunk);
 
       let adhocArr = langUtils.generateAdhocForms(
         "form",
@@ -240,7 +240,10 @@ exports.findMatchingLemmaObjectThenWord = (
             });
           });
         } else {
-          let selectedLemmaObject = uUtils.selectRandom(matches);
+          let selectedLemmaObject = lfUtils.selectRandLObj(
+            matches,
+            structureChunk
+          );
 
           let adhocArr = langUtils.generateAdhocForms(
             adhocInflectionCategory,
@@ -351,8 +354,9 @@ exports.findMatchingLemmaObjectThenWord = (
                 (lObj) => lObj.inflections[selectedUninflectedForm]
               );
 
-              let selectedLemmaObject = uUtils.selectRandom(
-                matchesByUninflectedForm
+              let selectedLemmaObject = lfUtils.selectRandLObj(
+                matchesByUninflectedForm,
+                structureChunk
               );
 
               let selectedWordArr =
@@ -594,7 +598,10 @@ exports.findMatchingLemmaObjectThenWord = (
       });
     } else {
       consol.log("xzjc ot:findMatchingLemmaObjectThenWord");
-      let selectedLemmaObject = uUtils.selectRandom(matchesCopy);
+      let selectedLemmaObject = lfUtils.selectRandLObj(
+        matchesCopy,
+        structureChunk
+      );
 
       allLangUtils.addHiddenNumberToTantumStChs(
         selectedLemmaObject,
@@ -703,7 +710,7 @@ exports.findMatchingLemmaObjectThenWord = (
         });
       }
 
-      let unit = uUtils.selectRandom(subArrayOfOutputUnits);
+      let unit = uUtils.selectRandom(subArrayOfOutputUnits); //delta here2
       /**Why selran here? Because we're in Q mode.
        * So if matka and matki are possibles, then of course we must choose one for the one Q sentence,
        * so ultimately Q sentence is "Matki dały mi stół." but it could have equally been "Matka dała mi stół."
@@ -913,7 +920,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
   if (!multipleMode && arrayOfAllPossibleOutputUnits.length > 1) {
     arrayOfAllPossibleOutputUnits = [
-      uUtils.selectRandom(arrayOfAllPossibleOutputUnits),
+      uUtils.selectRandom(arrayOfAllPossibleOutputUnits), //delta here2
     ];
   }
 

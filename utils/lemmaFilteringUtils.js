@@ -9,6 +9,46 @@ const nexusUtils = require("../utils/secondOrder/nexusUtils.js");
 
 const allLangUtils = require("./allLangUtils.js");
 
+exports.assessHypernymy = (lObj, lang) => {
+  function _isHypernym(lObj) {
+    return lObj.id.split("-")[4].includes("£");
+  }
+  function _isVypernym(lObj) {
+    return lObj.id.split("-")[4].includes("€");
+  }
+
+  if (_isHypernym(lObj)) {
+    return "hypernym";
+  }
+  if (_isVypernym(lObj)) {
+    return "vypernym";
+  }
+
+  let traductions = nexusUtils.getTraductions(lObj, lang);
+
+  if (traductions.some((id) => _isHypernym({ id }))) {
+    return "hyponym";
+  }
+  if (traductions.some((id) => _isVypernym({ id }))) {
+    return "vyponym";
+  }
+};
+
+exports.selectRandLObj = (lObjs, stCh) => {
+  // Here put the conditional logic re Hypernym SMPs
+  return uUtils.selectRandom(lObjs);
+};
+
+exports.selectRandTraitValue = (
+  lObj,
+  stCh,
+  traitKey,
+  traitValues = stCh[traitKey]
+) => {
+  // Here put the conditional logic re Hypernym SMPs
+  stCh[traitKey] = [uUtils.selectRandom(traitValues)];
+};
+
 exports.drillCarefullyIntoPHD = (source, key) => {
   if (!source) {
     consol.throw(

@@ -25,7 +25,7 @@ exports.wordsBank = {
     {
       //selectors
       lemma: "padre",
-      id: "spa-npe-002-padre",
+      id: "spa-npe-002-padre-€",
       gender: "m",
       //notes
 
@@ -44,7 +44,7 @@ exports.wordsBank = {
     {
       //selectors
       lemma: "medico",
-      id: "spa-npe-001-medico",
+      id: "spa-npe-001-medico-€",
       gender: "m",
       //notes
 

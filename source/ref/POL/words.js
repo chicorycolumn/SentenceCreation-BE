@@ -90,7 +90,7 @@ exports.wordsBank = {
     {
       //selectors
       lemma: "rodzic",
-      id: "pol-npe-013-rodzic",
+      id: "pol-npe-013-rodzic-£",
       gender: "m1",
       //notes
 
@@ -178,7 +178,7 @@ exports.wordsBank = {
     {
       //selectors
       lemma: "lekarz",
-      id: "pol-npe-015-lekarz",
+      id: "pol-npe-015-lekarz-€",
       gender: "m1",
       //notes
 

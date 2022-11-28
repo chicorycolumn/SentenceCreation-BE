@@ -9,7 +9,7 @@ const testingUtils = require("../utils/secondOrder/testingUtils.js");
 const nexusUtils = require("../utils/secondOrder/nexusUtils.js");
 
 describe("/nexusUtils", function () {
-  it("1", () => {
+  it("checkAllLObjsArePresentInNexus", () => {
     nexusUtils.checkAllLObjsArePresentInNexus("ref", "ENG");
     nexusUtils.checkAllLObjsArePresentInNexus("ref", "POL");
   });
