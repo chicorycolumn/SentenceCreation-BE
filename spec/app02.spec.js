@@ -1170,6 +1170,44 @@ describe("/api", function () {
           ENG: ["Mother gave us mirrors.", "Mother gave mirrors to us."],
           POL: ["Matka dała nam zwierciadła.", "Matka dała nam lustra."],
         },
+        {
+          ENG: ["Parent gave me apples.", "Parent gave apples to me."],
+          POL: ["Rodzic dał mi jabłka.", "Rodzic dał mnie jabłka."],
+        },
+        {
+          ENG: ["Parent gave me books.", "Parent gave books to me."],
+          POL: ["Rodzic dał mi książki.", "Rodzic dał mnie książki."],
+        },
+        {
+          ENG: ["Parent gave me onions.", "Parent gave onions to me."],
+          POL: ["Rodzic dał mi cebule.", "Rodzic dał mnie cebule."],
+        },
+        {
+          ENG: ["Parent gave me mirrors.", "Parent gave mirrors to me."],
+          POL: [
+            "Rodzic dał mi zwierciadła.",
+            "Rodzic dał mi lustra.",
+
+            "Rodzic dał mnie zwierciadła.",
+            "Rodzic dał mnie lustra.",
+          ],
+        },
+        {
+          ENG: ["Parent gave us apples.", "Parent gave apples to us."],
+          POL: ["Rodzic dał nam jabłka."],
+        },
+        {
+          ENG: ["Parent gave us books.", "Parent gave books to us."],
+          POL: ["Rodzic dał nam książki."],
+        },
+        {
+          ENG: ["Parent gave us onions.", "Parent gave onions to us."],
+          POL: ["Rodzic dał nam cebule."],
+        },
+        {
+          ENG: ["Parent gave us mirrors.", "Parent gave mirrors to us."],
+          POL: ["Rodzic dał nam zwierciadła.", "Rodzic dał nam lustra."],
+        },
       ];
       return runPaletteTest(
         "ENG",
