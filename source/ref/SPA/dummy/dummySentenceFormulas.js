@@ -58,7 +58,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "npe-1",
-        specificIds: ["spa-npe-002-madre"],
+        specificIds: ["spa-npe-002-parentaroonie"],
         // number: ["plural"],
         gcase: ["nom"],
       },

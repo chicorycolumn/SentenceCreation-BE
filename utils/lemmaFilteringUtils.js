@@ -20,6 +20,14 @@ exports.assessHypernymy = (lObj) => {
   function _isVypernym(lObj) {
     return lObj.id.split("-").length > 4 && lObj.id.split("-")[4].includes("€");
   }
+  function _isAnswerChunkOfAQuestionChunkVypernym(lObj) {
+    return lObj.id.split("-").length > 4 && lObj.id.split("-")[4].includes("¢");
+  }
+
+  if (_isAnswerChunkOfAQuestionChunkVypernym(lObj)) {
+    return "answerChunkOfAQuestionChunkVypernym";
+  } // Higher priority, ie a lobj with id "...£" which has become "...£¢" when this very fxn was run for Question Mode,
+  // should in Answer Mode be returned as this type (¢), not hypernym type (£).
 
   if (_isHypernym(lObj)) {
     return "hypernym";
@@ -36,6 +44,136 @@ exports.assessHypernymy = (lObj) => {
   if (traductions.some((id) => _isVypernym({ id }))) {
     return "vyponym";
   }
+};
+
+exports.getLObjAndSiblings = (
+  source,
+  ids,
+  blockHypernyms,
+  label,
+  qLObj,
+  stChGender
+) => {
+  // console.log(11);
+  const log = (...args) => {
+    if (ids.some((id) => gpUtils.getWordtypeShorthandLObj({ id }) === "npe")) {
+      // console.log(22);
+      consol.logSpecial(7, ...args);
+    }
+  };
+  log("");
+  if (qLObj) {
+    log("[1;36m " + qLObj.id + "[0m");
+  }
+  log(label, blockHypernyms, "Looking for", ids);
+
+  let additionalRes = [];
+
+  let res = source.filter((lObj) => {
+    let cease;
+    return ids.some((specificId) => {
+      if (cease) {
+        return false;
+      }
+
+      if (!allLangUtils.compareLObjStems(lObj.id, specificId)) {
+        return false;
+      }
+
+      if (
+        qLObj &&
+        ["vypernym"].includes(lfUtils.assessHypernymy(qLObj)) &&
+        ["vypernym", "hypernym"].includes(lfUtils.assessHypernymy(lObj))
+      ) {
+        let lObjCopy = uUtils.copyWithoutReference(lObj);
+        lObjCopy.id = lObjCopy.id + "¢";
+        additionalRes.push(lObjCopy);
+        log("---------BOSCH OVERRIDE", lObjCopy.id);
+        return false;
+      }
+
+      if (
+        // blockHypernyms &&
+        qLObj &&
+        !["vypernym"].includes(lfUtils.assessHypernymy(lObj)) &&
+        !["vypernym"].includes(lfUtils.assessHypernymy(qLObj)) &&
+        ["hypernym", "vypernym"].includes(lfUtils.assessHypernymy(qLObj)) !==
+          ["hypernym", "vypernym"].includes(lfUtils.assessHypernymy(lObj))
+      ) {
+        log("Chuck-red ", lObj.id);
+        return false;
+      }
+
+      if (
+        blockHypernyms &&
+        // qLObj &&
+        ![
+          "hypernym",
+          "vypernym",
+          "answerChunkOfAQuestionChunkVypernym",
+        ].includes(lfUtils.assessHypernymy({ id: specificId })) &&
+        ["hypernym", "vypernym"].includes(lfUtils.assessHypernymy(lObj))
+      ) {
+        log("Chuck-yellow ", lObj.id);
+        return false;
+      }
+
+      if (
+        blockHypernyms &&
+        ["hypernym"].includes(lfUtils.assessHypernymy({ id: specificId })) &&
+        !["hypernym"].includes(lfUtils.assessHypernymy(lObj))
+      ) {
+        log("Chuck-green ", lObj.id, "because of", specificId);
+        return false;
+      }
+
+      if (
+        blockHypernyms &&
+        ["answerChunkOfAQuestionChunkVypernym"].includes(
+          lfUtils.assessHypernymy({ id: specificId })
+        ) &&
+        ["hypernym", "vypernym"].includes(lfUtils.assessHypernymy(lObj))
+      ) {
+        log("Yessir-brown ", lObj.id, "because of", specificId);
+        return true;
+      }
+
+      if (
+        blockHypernyms &&
+        !["vypernym"].includes(lfUtils.assessHypernymy({ id: specificId })) &&
+        ["vypernym"].includes(lfUtils.assessHypernymy(lObj))
+      ) {
+        log("Chuck-blue ", lObj.id);
+        return false;
+      }
+
+      return true;
+    });
+  });
+
+  if (additionalRes.length) {
+    additionalRes.forEach((additionalLObj) => {
+      if (res.some((l) => l.id === additionalLObj.id)) {
+        consol.throw(`akdp ${l.id} in both additionalRes and res.`);
+      }
+    });
+    res = [...res, ...additionalRes];
+  }
+
+  log(
+    label,
+    blockHypernyms,
+    "Got",
+    res.map((l) => l.id)
+  );
+
+  if (!res || !res.length) {
+    consol.throw(
+      "epma This will cause unwanted behaviour like the resetting of traitKey such as number, resulting in Q: Lekarz. A: Doctor. Doctors."
+    );
+  }
+
+  return res;
 };
 
 exports.selectRandOutputUnit = (lObj, stCh, outputUnits) => {
@@ -145,7 +283,7 @@ exports.selectRandLObj = (lObjs, stCh) => {
   let res = uUtils.selectRandom(lObjs);
   return res;
 };
-
+// Delta: selectRndLObj and selectRndTraitValue might be completely unneeded.
 exports.selectRandTraitValue = (
   lObj,
   stCh,

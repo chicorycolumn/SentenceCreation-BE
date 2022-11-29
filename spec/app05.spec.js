@@ -150,6 +150,14 @@ const dummy72cRefSpaPol = [
   { POL: ["Czerwoni ojcowie."], SPA: ["Rojos padres (males)."] },
   { POL: ["Czerwoni rodzice."], SPA: ["Rojos padres (mixed)."] },
 ];
+const dummy72cRefEngPolBoth = [
+  { ENG: ["Red mother."], POL: ["Czerwona matka."] },
+  { ENG: ["Red mothers."], POL: ["Czerwone matki."] },
+  { ENG: ["Red father."], POL: ["Czerwony ojciec."] },
+  { ENG: ["Red fathers."], POL: ["Czerwoni ojcowie."] },
+  { ENG: ["Red parents."], POL: ["Czerwoni rodzice."] },
+  { ENG: ["Red parent."], POL: ["Czerwony rodzic."] },
+];
 const dummy72cRefEngSpa = [
   { ENG: ["Red mother."], SPA: ["Roja madre."] },
   { ENG: ["Red mothers."], SPA: ["Rojas madres."] },
@@ -158,6 +166,7 @@ const dummy72cRefEngSpa = [
   { ENG: ["Red parents."], SPA: ["Rojos padres."] },
   { ENG: ["Red parent."], SPA: ["Rojo padre."] },
 ];
+
 const dummy72cRefSpaEng = [
   { ENG: ["Red mother."], SPA: ["Roja madre."] },
   { ENG: ["Red mothers."], SPA: ["Rojas madres."] },
@@ -171,16 +180,16 @@ describe("/api", function () {
   this.timeout(7000);
 
   describe("/palette - Stage 24-i: Spanish basic. Normal nouns.", () => {
-    it("#pal23-01a GET 200 YES: Polspa. Red onion (NORMAL).", () => {
+    it("#pal24-01a GET 200 YES: Polspa. Red onion (NORMAL).", () => {
       return runPaletteTest("POL", "SPA", "dummy72a", dummy72a);
     });
-    it("#pal23-01b GET 200 YES: Spapol. Red onion (NORMAL).", () => {
+    it("#pal24-01b GET 200 YES: Spapol. Red onion (NORMAL).", () => {
       return runPaletteTest("SPA", "POL", "dummy72a", dummy72a);
     });
-    it("#pal23-01c GET 200 YES: Engspa. Red onion (NORMAL).", () => {
+    it("#pal24-01c GET 200 YES: Engspa. Red onion (NORMAL).", () => {
       return runPaletteTest("ENG", "SPA", "dummy72a", dummy72a);
     });
-    it("#pal23-01d GET 200 YES: Spaeng. Red onion (NORMAL).", () => {
+    it("#pal24-01d GET 200 YES: Spaeng. Red onion (NORMAL).", () => {
       return runPaletteTest("SPA", "ENG", "dummy72a", dummy72a);
     });
   });
@@ -189,16 +198,16 @@ describe("/api", function () {
     // "medico"    Vypernym of "medico"/"medica".
     // "lekarz"    Vypernym of "lekarz"/"lekarka".
     // "doctor"    MGN, ie both male and female, whether singular or plural.
-    it("#pal23-02a GET 200 YES: Polspa. Red doctor (MGN).", () => {
+    it("#pal24-02a GET 200 YES: Polspa. Red doctor (MGN).", () => {
       return runPaletteTest("POL", "SPA", "dummy72b", dummy72bSpaPolBoth);
     });
-    it("#pal23-02b GET 200 YES: Spapol. Red doctor (MGN).", () => {
+    it("#pal24-02b GET 200 YES: Spapol. Red doctor (MGN).", () => {
       return runPaletteTest("SPA", "POL", "dummy72b", dummy72bSpaPolBoth);
     });
-    it("#pal23-02c GET 200 YES: Engspa. Red doctor (MGN).", () => {
+    it("#pal24-02c GET 200 YES: Engspa. Red doctor (MGN).", () => {
       return runPaletteTest("ENG", "SPA", "dummy72b", dummy72bEngSpa);
     });
-    it("#pal23-02d GET 200 YES: Spaeng. Red doctor (MGN).", () => {
+    it("#pal24-02d GET 200 YES: Spaeng. Red doctor (MGN).", () => {
       return runPaletteTest("SPA", "ENG", "dummy72b", dummy72bSpaEng);
     });
   });
@@ -207,37 +216,47 @@ describe("/api", function () {
     // "parent"    Hypernym of "mother"/"father".
     // "rodzic"    Hypernym of "matka"/"ojciec".
     // "padre"     Vypernym of "madre"/"padre".
-    it("#pal23-03a GET 200 YES: Polspa. Red mother (Vypernym).", () => {
+    it("#pal24-03a GET 200 YES: Polspa. Red mother (Vypernym).", () => {
       return runPaletteTest("POL", "SPA", "dummy72c", dummy72cRefPolSpa);
     });
-    it("#pal23-03b GET 200 YES: Spapol. Red mother (Vypernym).", () => {
+    it("#pal24-03b GET 200 YES: Spapol. Red mother (Vypernym).", () => {
       return runPaletteTest("SPA", "POL", "dummy72c", dummy72cRefSpaPol);
     });
-    it("#pal23-03c GET 200 YES: Engspa. Red mother (Vypernym).", () => {
+    it("#pal24-03c GET 200 YES: Engspa. Red mother (Vypernym).", () => {
       return runPaletteTest("ENG", "SPA", "dummy72c", dummy72cRefEngSpa);
     });
-    it("#pal23-03d GET 200 YES: Spaeng. Red mother (Vypernym).", () => {
+    it("#pal24-03d GET 200 YES: Spaeng. Red mother (Vypernym).", () => {
       return runPaletteTest("SPA", "ENG", "dummy72c", dummy72cRefSpaEng);
+    });
+    it("#pal24-03e GET 200 YES: Enpol. Red mother (Vypernym).", () => {
+      return runPaletteTest("ENG", "POL", "dummy72c", dummy72cRefEngPolBoth);
+    });
+    it("#pal24-03f GET 200 YES: Poleng. Red mother (Vypernym).", () => {
+      return runPaletteTest("POL", "ENG", "dummy72c", dummy72cRefEngPolBoth);
     });
   });
 
   describe("/palette - Stage 24-iv: Spanish basic. Test Hypernym Vypernym Hyponym Vyponym probabilities.", () => {
-    it("#pal23-03a GET 200 YES: Polspa. Red mother (Vypernym).", () => {
+    it("#pal24-03a GET 200 YES: Polspa. Red mother (Vypernym).", () => {
       return Promise.all(
         promiseAllMultiplier(200, () => {
           return runPaletteTest("POL", "SPA", "dummy72c", [], {}, 1, true);
         })
       ).then((allQuestionSentences) => {
         checkProportions(allQuestionSentences, [
-          // Hypernyms want higher proportion. (1/4 each)
-          ["matka", ["Czerwona matka."], 0.265, 0.24],
-          ["ojciec", ["Czerwony ojciec."], 0.265, 0.24],
-          ["rodzice", ["Czerwoni rodzice."], 0.265, 0.24],
+          // V/Hypernyms in plural
+          // V/Hyponyms in singular
+          // should be higher proportion. (1/4 each)
+          ["matka", ["Czerwona matka."], 0.265, 0.25],
+          ["ojciec", ["Czerwony ojciec."], 0.265, 0.25],
+          ["rodzice", ["Czerwoni rodzice."], 0.265, 0.25],
 
-          // Hyponyms/Vyponyms lower proportion. (1/16 each)
-          ["matki", ["Czerwone matki."], 0.065, 0.48],
-          ["ojcowie", ["Czerwoni ojcowie."], 0.065, 0.48],
-          ["rodzic", ["Czerwony rodzic."], 0.065, 0.48],
+          // V/Hypernyms in singular
+          // V/Hyponyms in plural
+          // should be lower proportion. (1/16 each)
+          ["matki", ["Czerwone matki."], 0.065, 0.5],
+          ["ojcowie", ["Czerwoni ojcowie."], 0.065, 0.5],
+          ["rodzic", ["Czerwony rodzic."], 0.065, 0.5],
         ]);
       });
     });

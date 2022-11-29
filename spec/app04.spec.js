@@ -55,7 +55,9 @@ describe("/api", function () {
           POL: ["Mała dziura.", "Mały otwór."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "dummy71a", ref);
+      return runPaletteTest("ENG", "POL", "dummy71a", ref, {
+        useDummyWords: true,
+      });
     });
     it("#pal23-01b GET 200 YES: Poleng. Word synonyms, two in ENG and two in POL.", () => {
       let ref = [
@@ -64,7 +66,9 @@ describe("/api", function () {
           POL: ["Mała dziura."],
         },
       ];
-      return runPaletteTest("POL", "ENG", "dummy71a", ref);
+      return runPaletteTest("POL", "ENG", "dummy71a", ref, {
+        useDummyWords: true,
+      });
     });
     it("#pal23-01c GET 200 YES: Engpol. Word synonyms, two in ENG and two in POL.", () => {
       let ref = [
@@ -73,7 +77,9 @@ describe("/api", function () {
           POL: ["W małej dziurze.", "W małym otworze."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "dummy71b", ref);
+      return runPaletteTest("ENG", "POL", "dummy71b", ref, {
+        useDummyWords: true,
+      });
     });
     it("#pal23-01d GET 200 YES: Poleng. Word synonyms, two in ENG and two in POL.", () => {
       let ref = [
@@ -82,7 +88,9 @@ describe("/api", function () {
           POL: ["W małej dziurze."],
         },
       ];
-      return runPaletteTest("POL", "ENG", "dummy71b", ref);
+      return runPaletteTest("POL", "ENG", "dummy71b", ref, {
+        useDummyWords: true,
+      });
     });
     it("#pal23-01e GET 200 YES: Engpol. Sentences synonyms.", () => {
       let ref = [
@@ -96,7 +104,9 @@ describe("/api", function () {
           ],
         },
       ];
-      return runPaletteTest("ENG", "POL", "dummy71c", ref);
+      return runPaletteTest("ENG", "POL", "dummy71c", ref, {
+        useDummyWords: true,
+      });
     });
     it("#pal23-01f GET 200 YES: Poleng. Sentences synonyms.", () => {
       let ref = [
@@ -110,7 +120,9 @@ describe("/api", function () {
           POL: ["W małej dziurze."],
         },
       ];
-      return runPaletteTest("POL", "ENG", "dummy71c", ref);
+      return runPaletteTest("POL", "ENG", "dummy71c", ref, {
+        useDummyWords: true,
+      });
     });
   });
 

@@ -2819,7 +2819,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "npe-1",
-        specificIds: ["pol-npe-013-matka"],
+        specificIds: ["pol-npe-013-parentaroonie"],
         // number: ["plural"],
         gcase: ["nom"],
       },

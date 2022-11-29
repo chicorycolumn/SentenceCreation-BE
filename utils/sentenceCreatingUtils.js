@@ -112,6 +112,7 @@ exports.getMaterialsCopies = (
 };
 
 exports.processSentenceFormula = (
+  useDummyWords,
   languagesObj,
   sentenceFormula,
   words,
@@ -166,6 +167,7 @@ exports.processSentenceFormula = (
     consol.log("evga sc:processSentenceFormula STEP ONE", headChunk.chunkId);
 
     let allPossOutputUnits_head = otUtils.findMatchingLemmaObjectThenWord(
+      useDummyWords,
       headChunk,
       words,
       errorInSentenceCreation,
@@ -263,6 +265,7 @@ exports.processSentenceFormula = (
             consol.log(`weoe dependentChunk "${dependentChunk.chunkId}"`);
             let allPossOutputUnits_dependent =
               otUtils.findMatchingLemmaObjectThenWord(
+                useDummyWords,
                 dependentChunk,
                 words,
                 errorInSentenceCreation,
@@ -395,6 +398,7 @@ exports.processSentenceFormula = (
       );
 
       let allPossOutputUnits_PHD = otUtils.findMatchingLemmaObjectThenWord(
+        useDummyWords,
         postHocDependentChunk,
         words,
         errorInSentenceCreation,
@@ -527,6 +531,7 @@ exports.processSentenceFormula = (
 
     consol.log(`weoi otherChunk "${otherChunk.chunkId}"`);
     let allPossOutputUnits_other = otUtils.findMatchingLemmaObjectThenWord(
+      useDummyWords,
       otherChunk,
       words,
       errorInSentenceCreation,
@@ -1128,15 +1133,19 @@ exports.conformAnswerStructureToQuestionStructure = (
     );
 
     let source = words[gpUtils.getWordtypeShorthandStCh(answerStructureChunk)];
-
-    matchingAnswerLemmaObjects = source.filter(
+    source = source.filter(
+      //Resolve issue of multipleWordtype allohoms.
       (lObj) =>
-        lObjsToSearch.some((id) =>
-          allLangUtils.compareLObjStems(id, lObj.id)
-        ) &&
-        //Resolve issue of multipleWordtype allohoms.
         gpUtils.getWordtypeLObj(lObj) ===
-          gpUtils.getWordtypeStCh(questionStructureChunk)
+        gpUtils.getWordtypeStCh(questionStructureChunk)
+    );
+
+    matchingAnswerLemmaObjects = lfUtils.getLObjAndSiblings(
+      source,
+      lObjsToSearch,
+      false,
+      "conformAtoQ",
+      questionSelectedLemmaObject
     );
 
     let matchesLengthSnapshot = matchingAnswerLemmaObjects.length;

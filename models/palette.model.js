@@ -15,6 +15,7 @@ exports.fetchPalette = (req) => {
     sentenceFormulaId,
     sentenceFormulaSymbol,
     useDummy,
+    useDummyWords,
     questionLanguage,
     answerLanguage,
     pleaseDontSpecify,
@@ -75,6 +76,7 @@ exports.fetchPalette = (req) => {
   );
 
   let questionSentenceData = scUtils.processSentenceFormula(
+    useDummyWords,
     { currentLanguage: questionLanguage },
     questionSentenceFormula,
     words,
@@ -307,6 +309,7 @@ exports.fetchPalette = (req) => {
       }
 
       if ("console") {
+        consol.log("");
         consol.log(
           `pjeg fetchPalette. Just BEFORE qaConform, let's see the Q and A structures:`
         );
@@ -339,6 +342,7 @@ exports.fetchPalette = (req) => {
       );
 
       answerSentenceData = scUtils.processSentenceFormula(
+        useDummyWords,
         {
           currentLanguage: answerLanguage,
           previousQuestionLanguage: questionLanguage,

@@ -39,9 +39,9 @@ exports.wordsBank = {
     {
       key: "npe-0003-father/mother",
       traductions: {
-        SPA: ["spa-npe-002-madre"],
-        ENG: ["eng-npe-003-mother"],
-        POL: ["pol-npe-013-matka"],
+        SPA: ["spa-npe-002-parentarooni"],
+        ENG: ["eng-npe-003-parentarooni"],
+        POL: ["pol-npe-013-parentarooni"],
       },
       papers: ["animate", "family", "concrete"],
       topics: [],

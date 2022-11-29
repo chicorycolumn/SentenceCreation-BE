@@ -8,6 +8,7 @@ const otUtils = require("./objectTraversingUtils.js");
 const allLangUtils = require("./allLangUtils.js");
 
 exports.findMatchingLemmaObjectThenWord = (
+  useDummyWords,
   structureChunk,
   words,
   errorInSentenceCreation,
@@ -55,12 +56,26 @@ exports.findMatchingLemmaObjectThenWord = (
       "and the full set to look in is",
       source.map((lObj) => lObj.id)
     );
-    matches = source.filter((lObj) => {
-      return structureChunk.specificIds.some((specificId) =>
-        allLangUtils.compareLObjStems(lObj.id, specificId)
+
+    if (useDummyWords) {
+      matches = source.filter((l) => structureChunk.specificIds.includes(l.id));
+    } else {
+      let blockHypernymsIfAnswerMode = !!questionLanguage; // ie if we are in answer mode.
+
+      matches = lfUtils.getLObjAndSiblings(
+        source,
+        structureChunk.specificIds,
+        blockHypernymsIfAnswerMode,
+        "findMatching",
+        null,
+        structureChunk.gender
       );
-    });
-    consol.log(`obbn Found ${matches.length} matches.`);
+    }
+
+    consol.log(
+      `obbn Found ${matches.length} matches:`,
+      matches.map((l) => l.id)
+    );
     if (!matches.length) {
       consol.log(
         "[1;31m " +
