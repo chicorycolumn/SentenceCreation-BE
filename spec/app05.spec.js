@@ -10,45 +10,72 @@ const testingUtils = require("../utils/secondOrder/testingUtils.js");
 const { runPaletteTest, promiseAllMultiplier, checkProportions } = testingUtils;
 
 /**
- * Okay, currently vypernym "padre" is basically working.
+ * HYPERNYMS AND VYPERNYMS
  *
- * But like... if I make a sentence with npe-0002
- * I don't want it coming out equal probability in ENG Q sentence:
- * "My parent gave me a book."
- * "My mother gave me a book."
- * "My father gave me a book."
+ * 1. Terms
  *
- * I want to downgrade the likelihood of it generating the first sentence, in singular.
+ * "parent"    Hypernym of mother/father
+ * "rodzic"    Hypernym
+ * "padre"     Vypernym (virile hypernym)
  *
- * But I suppose in plural, I want to upgrade its likelihood, so that "My parents gave me a book." is
- * more likely to generate than "My mothers gave me a book."
+ * "medico"    Vypernym of "medico"/"medica".
+ * "lekarz"    Vypernym of "lekarz"/"lekarka".
+ * "doctor"    MGN, ie both male and female, whether singular or plural.
  *
- * Okay, so, you could put a marker symbol in the lobj id of the Hypernym,
- * "spa-npe-001-padre€"
+ * 3. Issue 205: Gender of singular hypernym
+ *
+ * "My parent gave me his book." has been generated. That's not right.
+ *
+ * So let's think through the scenarios:
+ *
+ * SPA->ENG
+ *
+ * Vypernyms in singular only ever mean the male vyponym.
+ *
+ * Vyponym: "Mi padre y la mujer que LE ama." -> "My FATHER and the woman who loves HIM."
+ * Vyponym: "Mi madre y la mujer que LA ama." -> "My MOTHER and the woman who loves HER."
+ *
+ * But hypernyms in singular can technically be either gender.
+ *
+ * Hyponym: "Matka i kobieta ktøra JÆ kocha." -> "My MOTHER and the woman who loves HER."
+ * Hyponym: "Ojciec i kobieta ktøra GO kocha." -> "My FATHER and the woman who loves HIM."
+ * Hypernym: "Rodzic...GO." "Rodzic...JÆ." -> "My parent...HIM." "My parent...HER." "My parent...THEM."
+ *
+ * And we have this extra knot that in English, singular they can be used for...
+ *  hypernyms "The parent and their book."
+ *  MGNs      "The doctor and their book."
+ *
+ * Okay... I will steer well clear of generating singular they in QUESTION sentences.
+ *
+ *
+ *
+ * Note that in Polish, "She's a good kid." is "Ona jest dobrYM dzieckIEM."
+ *
+ *
+ *
+ *
+ *
+ *
+ * 2. Issue 204: Adjust proportions (solved)
+ *
+ * "spa-npe-001-padre€"     euro symbol indicates vypernym
  * "spa-npe-001-madre"
  *
- * "eng-npe-029-parent£"
+ * "eng-npe-029-parent£"    pound symbol indicates hypernym
  * "eng-npe-029-mother"
  * "eng-npe-029-father"
  *
- * "pol-npe-007-rodzic£"
+ * "pol-npe-007-rodzic£"    pound symbol indicates hypernym
  * "pol-npe-007-ojciec"
  * "pol-npe-007-matka"
  *
  * So when trait values are being filled where they have been left blank in sentence structure...
  *
- * £  Hypernyms  get random(4/5) to be number["plural"]           "parent", "rodzic"
- * €  Vypernyms  get uninterfered, number["singular","plural"]    "padre"
+ *    Hypernyms  get random(4/5) to be number["plural"]           "parent", "rodzic"
+ *    Vypernyms  get uninterfered, number["singular","plural"]    "padre"
  *    Hyponyms   get random(4/5) to be number["singular"]         "mother" "father" "matka" "ojciec"
  *    Vyponyms   get random(4/5) to be number["singular"]         "madre"
  *
- * If number["plural"]            Hypernyms      * 4
- * If number["singular"]          Vypo/Hyponyms  * 4
- * If number["plural","singular"]
- *
- * So mother, father, matka, ojciec, and madre will be more likely to generate as singular.
- * While parent, rodzic will be more likely to generate as plural.
- * And padre will generate equally as either.
  */
 
 const dummy72a = [
@@ -146,7 +173,7 @@ const dummy72cRefSpaPol = [
   {
     POL: ["Czerwoni ojcowie.", "Czerwoni rodzice."],
     SPA: ["Rojos padres."],
-  }, // delta hmmm
+  },
   { POL: ["Czerwoni ojcowie."], SPA: ["Rojos padres (males)."] },
   { POL: ["Czerwoni rodzice."], SPA: ["Rojos padres (mixed)."] },
 ];
@@ -171,12 +198,12 @@ const dummy72cRefSpaEng = [
   { ENG: ["Red mother."], SPA: ["Roja madre."] },
   { ENG: ["Red mothers."], SPA: ["Rojas madres."] },
   { ENG: ["Red father.", "Red parent."], SPA: ["Rojo padre."] },
-  { ENG: ["Red fathers.", "Red parents."], SPA: ["Rojos padres."] }, // delta hmmm
+  { ENG: ["Red fathers.", "Red parents."], SPA: ["Rojos padres."] },
   { ENG: ["Red fathers."], SPA: ["Rojos padres (fathers)."] },
   { ENG: ["Red parents."], SPA: ["Rojos padres (mixed)."] },
 ];
 
-describe("/api", function () {
+describe.only("/api", function () {
   this.timeout(7000);
 
   describe("/palette - Stage 24-i: Spanish basic. Normal nouns.", () => {
@@ -195,9 +222,6 @@ describe("/api", function () {
   });
 
   describe("/palette - Stage 24-ii: Spanish basic. Hypernyms and Vypernyms", () => {
-    // "medico"    Vypernym of "medico"/"medica".
-    // "lekarz"    Vypernym of "lekarz"/"lekarka".
-    // "doctor"    MGN, ie both male and female, whether singular or plural.
     it("#pal24-02a GET 200 YES: Polspa. Red doctor (MGN).", () => {
       return runPaletteTest("POL", "SPA", "dummy72b", dummy72bSpaPolBoth);
     });
@@ -213,16 +237,13 @@ describe("/api", function () {
   });
 
   describe("/palette - Stage 24-iii: Spanish basic. Hypernyms and Vypernyms", () => {
-    // "parent"    Hypernym of "mother"/"father".
-    // "rodzic"    Hypernym of "matka"/"ojciec".
-    // "padre"     Vypernym of "madre"/"padre".
     it("#pal24-03a GET 200 YES: Polspa. Red mother (Vypernym).", () => {
       return runPaletteTest("POL", "SPA", "dummy72c", dummy72cRefPolSpa);
     });
     it("#pal24-03b GET 200 YES: Spapol. Red mother (Vypernym).", () => {
       return runPaletteTest("SPA", "POL", "dummy72c", dummy72cRefSpaPol);
     });
-    it("#pal24-03c GET 200 YES: Engspa. Red mother (Vypernym).", () => {
+    it.only("#pal24-03c GET 200 YES: Engspa. Red mother (Vypernym).", () => {
       return runPaletteTest("ENG", "SPA", "dummy72c", dummy72cRefEngSpa);
     });
     it("#pal24-03d GET 200 YES: Spaeng. Red mother (Vypernym).", () => {
@@ -237,7 +258,7 @@ describe("/api", function () {
   });
 
   describe("/palette - Stage 24-iv: Spanish basic. Test Hypernym Vypernym Hyponym Vyponym probabilities.", () => {
-    it("#pal24-03a GET 200 YES: Polspa. Red mother (Vypernym).", () => {
+    it("#pal24-04a GET 200 YES: Polspa. Red mother (Vypernym).", () => {
       return Promise.all(
         promiseAllMultiplier(200, () => {
           return runPaletteTest("POL", "SPA", "dummy72c", [], {}, 1, true);
@@ -247,16 +268,103 @@ describe("/api", function () {
           // V/Hypernyms in plural
           // V/Hyponyms in singular
           // should be higher proportion. (1/4 each)
-          ["matka", ["Czerwona matka."], 0.265, 0.25],
-          ["ojciec", ["Czerwony ojciec."], 0.265, 0.25],
-          ["rodzice", ["Czerwoni rodzice."], 0.265, 0.25],
+          ["matka", ["Czerwona matka."], 0.265, 0.35],
+          ["ojciec", ["Czerwony ojciec."], 0.265, 0.35],
+          ["rodzice", ["Czerwoni rodzice."], 0.265, 0.35],
 
           // V/Hypernyms in singular
           // V/Hyponyms in plural
           // should be lower proportion. (1/16 each)
-          ["matki", ["Czerwone matki."], 0.065, 0.5],
-          ["ojcowie", ["Czerwoni ojcowie."], 0.065, 0.5],
-          ["rodzic", ["Czerwony rodzic."], 0.065, 0.5],
+          ["matki", ["Czerwone matki."], 0.065, 0.65],
+          ["ojcowie", ["Czerwoni ojcowie."], 0.065, 0.65],
+          ["rodzic", ["Czerwony rodzic."], 0.065, 0.65],
+        ]);
+      });
+    });
+    it("#pal24-04b GET 200 YES: Poleng. Red mother (Vypernym).", () => {
+      return Promise.all(
+        promiseAllMultiplier(200, () => {
+          return runPaletteTest("POL", "ENG", "dummy72c", [], {}, 1, true);
+        })
+      ).then((allQuestionSentences) => {
+        checkProportions(allQuestionSentences, [
+          // V/Hypernyms in plural
+          // V/Hyponyms in singular
+          // should be higher proportion. (1/4 each)
+          ["matka", ["Czerwona matka."], 0.265, 0.35],
+          ["ojciec", ["Czerwony ojciec."], 0.265, 0.35],
+          ["rodzice", ["Czerwoni rodzice."], 0.265, 0.35],
+
+          // V/Hypernyms in singular
+          // V/Hyponyms in plural
+          // should be lower proportion. (1/16 each)
+          ["matki", ["Czerwone matki."], 0.065, 0.65],
+          ["ojcowie", ["Czerwoni ojcowie."], 0.065, 0.65],
+          ["rodzic", ["Czerwony rodzic."], 0.065, 0.65],
+        ]);
+      });
+    });
+    it("#pal24-04c GET 200 YES: Spapol. Red mother (Vypernym).", () => {
+      return Promise.all(
+        promiseAllMultiplier(200, () => {
+          return runPaletteTest("SPA", "POL", "dummy72c", [], {}, 1, true);
+        })
+      ).then((allQuestionSentences) => {
+        checkProportions(allQuestionSentences, [
+          ["madre", ["Roja madre."], 0.3, 0.55],
+          ["padre", ["Rojo padre."], 0.3, 0.55],
+          ["padres", ["Rojos padres."], 0.3, 0.55],
+
+          ["madres", ["Rojas madres."], 0.1, 0.65],
+        ]);
+      });
+    });
+    it("#pal24-04d GET 200 YES: Spaeng. Red mother (Vypernym).", () => {
+      return Promise.all(
+        promiseAllMultiplier(200, () => {
+          return runPaletteTest("SPA", "ENG", "dummy72c", [], {}, 1, true);
+        })
+      ).then((allQuestionSentences) => {
+        checkProportions(allQuestionSentences, [
+          ["madre", ["Roja madre."], 0.3, 0.55],
+          ["padre", ["Rojo padre."], 0.3, 0.55],
+          ["padres", ["Rojos padres."], 0.3, 0.55],
+
+          ["madres", ["Rojas madres."], 0.1, 0.65],
+        ]);
+      });
+    });
+    it("#pal24-04e GET 200 YES: Engpol. Red mother (Vypernym).", () => {
+      return Promise.all(
+        promiseAllMultiplier(200, () => {
+          return runPaletteTest("ENG", "POL", "dummy72c", [], {}, 1, true);
+        })
+      ).then((allQuestionSentences) => {
+        checkProportions(allQuestionSentences, [
+          ["mother", ["Red mother."], 0.265, 0.35],
+          ["father", ["Red father."], 0.265, 0.35],
+          ["parents", ["Red parents."], 0.265, 0.35],
+
+          ["parents", ["Red parent."], 0.065, 0.65],
+          ["mothers", ["Red mothers."], 0.065, 0.65],
+          ["fathers", ["Red fathers."], 0.065, 0.65],
+        ]);
+      });
+    });
+    it("#pal24-04f GET 200 YES: Engspa. Red mother (Vypernym).", () => {
+      return Promise.all(
+        promiseAllMultiplier(200, () => {
+          return runPaletteTest("ENG", "SPA", "dummy72c", [], {}, 1, true);
+        })
+      ).then((allQuestionSentences) => {
+        checkProportions(allQuestionSentences, [
+          ["mother", ["Red mother."], 0.265, 0.35],
+          ["father", ["Red father."], 0.265, 0.35],
+          ["parents", ["Red parents."], 0.265, 0.35],
+
+          ["parents", ["Red parent."], 0.065, 0.65],
+          ["mothers", ["Red mothers."], 0.065, 0.65],
+          ["fathers", ["Red fathers."], 0.065, 0.65],
         ]);
       });
     });
