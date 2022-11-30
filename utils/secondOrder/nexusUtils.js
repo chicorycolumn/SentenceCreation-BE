@@ -32,7 +32,17 @@ exports.getPapers = (lObj, env = "ref") => {
   );
 };
 
-exports.getTraductions = (lObj, targetlang, getAllIds, env = "ref") => {
+exports.getTraductions = (
+  lObj,
+  targetlang,
+  getAllIds,
+  mapIdsToLObjs,
+  env = "ref"
+) => {
+  if (mapIdsToLObjs && !getAllIds) {
+    consol.throw("bcct Not possible.");
+  }
+
   let traductions =
     lObj.devHardcoded_translations ||
     exports.getNexusLemmaObject(lObj, env).traductions;
@@ -51,7 +61,9 @@ exports.getTraductions = (lObj, targetlang, getAllIds, env = "ref") => {
       });
     });
 
-    return Array.from(new Set(resArr));
+    let ids = Array.from(new Set(resArr));
+
+    return mapIdsToLObjs ? ids.map((id) => bank.find((l) => l.id === id)) : ids;
   }
 
   return targetlang ? traductions[targetlang] : traductions;

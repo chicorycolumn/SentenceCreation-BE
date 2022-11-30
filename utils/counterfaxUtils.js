@@ -1013,19 +1013,19 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           "${annoTraitKey}" = "${questionOutputUnit.structureChunk.annotations[annoTraitKey]}".` +
             "[0m",
           {
-            originalAnswerPseudoSentences: originalAnswerPseudoSentenceObjs.map(
-              (obj) => obj.pseudoSentence
-            ),
-            counterfactualAnswerPseudoSentences:
-              counterfactualAnswerPseudoSentenceObjs.map(
-                (obj) => obj.pseudoSentence
-              ),
             originalQuestionPseudoSentences:
               originalQuestionPseudoSentenceObjs.map(
                 (obj) => obj.pseudoSentence
               ),
+            originalAnswerPseudoSentences: originalAnswerPseudoSentenceObjs.map(
+              (obj) => obj.pseudoSentence
+            ),
             counterfactualQuestionPseudoSentences:
               counterfactualQuestionPseudoSentenceObjs.map(
+                (obj) => obj.pseudoSentence
+              ),
+            counterfactualAnswerPseudoSentences:
+              counterfactualAnswerPseudoSentenceObjs.map(
                 (obj) => obj.pseudoSentence
               ),
           }

@@ -1912,7 +1912,7 @@ describe("/api", function () {
         "My fathers gave me their book.",
         "Our fathers gave us their book.",
 
-        "My parent gave me his book.",
+        "My parent gave me his book.", //Delta! Issue 205
         "Our parent gave us his book.",
         "My parents gave me their book.",
         "Our parents gave us their book.",

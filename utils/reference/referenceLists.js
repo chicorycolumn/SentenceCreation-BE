@@ -320,7 +320,7 @@ exports.lemmaObjectTraitKeys = {
         "person",
         "number",
         "gender", // Los libros son escritos. --> "libros" gives gender and number to "escritos"
-        // "tenseDescription" // delta add this, and to ENG too?
+        // "tenseDescription" // epsilon add this, and to ENG too?
       ],
       pronombre: ["person", "number", "gender", "gcase"],
       article: ["number", "gender"],
@@ -427,7 +427,7 @@ exports._tenseDescriptions = {
     "past simple",
     "future",
     "future simple",
-  ], //delta to do
+  ], //epsilon to do
 };
 
 exports.structureChunkTraits = {
@@ -751,7 +751,7 @@ exports.structureChunkTraits = {
         "present",
         "future",
         "conditional",
-        "imperative", // delta to do
+        "imperative", // epsilon to do
       ],
     },
   },
@@ -862,7 +862,7 @@ exports.uninflectedForms = {
 exports.adhocInflectionCategorys = {
   POL: {},
   SPA: {},
-  ENG: { verb: ["tenseDescription"] }, // delta what is this for?
+  ENG: { verb: ["tenseDescription"] }, // epsilon what is this for?
   // But Polish doesn't have tenseDesc as an adhoc category?
 };
 
@@ -871,7 +871,7 @@ exports.adhocForms = {
   POL: {},
   ENG: {
     verb: [
-      // delta these are english?
+      // epsilon these are english?
       "contemporaryAdverbial",
       "anteriorAdverbial",
       "activeAdjectival",

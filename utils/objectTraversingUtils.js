@@ -194,7 +194,7 @@ exports.findMatchingLemmaObjectThenWord = (
         throw "No members were found in the adhocArr from OT:findMatching, path 3A-1 (ie form).";
       }
 
-      let selectedAdhocResultObj = uUtils.selectRandom(adhocArr); //delta2
+      let selectedAdhocResultObj = uUtils.selectRandom(adhocArr);
 
       let { selectedWordArr, structureChunkUpdated } = selectedAdhocResultObj;
 
@@ -271,7 +271,7 @@ exports.findMatchingLemmaObjectThenWord = (
             throw "No members were found in the adhocArr from OT:findMatching, path 3A-2 ie Ad-PW-I (ie tenseDescription).";
           }
 
-          let selectedAdhocResultObj = uUtils.selectRandom(adhocArr); //delta2
+          let selectedAdhocResultObj = uUtils.selectRandom(adhocArr);
 
           let { selectedWordArr, structureChunkUpdated } =
             selectedAdhocResultObj;
@@ -940,7 +940,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
   if (!multipleMode && arrayOfAllPossibleOutputUnits.length > 1) {
     arrayOfAllPossibleOutputUnits = [
-      uUtils.selectRandom(arrayOfAllPossibleOutputUnits), //delta here2
+      uUtils.selectRandom(arrayOfAllPossibleOutputUnits), //delta Possible adjustment point.
     ];
   }
 

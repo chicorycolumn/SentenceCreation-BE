@@ -8,6 +8,10 @@ const lfUtils = require("./lemmaFilteringUtils.js");
 const nexusUtils = require("../utils/secondOrder/nexusUtils.js");
 const allLangUtils = require("./allLangUtils.js");
 
+exports.checkHyper = (lObj, expectedTypes) => {
+  return expectedTypes.includes(lfUtils.assessHypernymy(lObj));
+};
+
 exports.assessHypernymy = (lObj) => {
   let lang = gpUtils.getLanguageFromLemmaObject(lObj);
   if (lang === "DUMMY") {
@@ -54,11 +58,9 @@ exports.getLObjAndSiblings = (
   qLObj,
   stChGender
 ) => {
-  // console.log(11);
   const log = (...args) => {
     if (ids.some((id) => gpUtils.getWordtypeShorthandLObj({ id }) === "npe")) {
-      // console.log(22);
-      consol.logSpecial(7, ...args);
+      // consol.logSpecial(7, ...args);
     }
   };
   log("");
@@ -235,6 +237,28 @@ exports.selectRandLObj = (lObjs, stCh) => {
   ) {
     consol.throw("iwba");
   }
+
+  // DRACONIAN OPTION FOR HYPERNYM ISSUE 205:
+  // Only the Q "I saw the child and HIS toy." can be generated,
+  // never the Q "I saw the child and HER toy."
+  //
+  // if (
+  //   stCh.gender &&
+  //   stCh.gender.length &&
+  //   stCh.gender.every((el) => ["f", "nonvirile"].includes(el))
+  // ) {
+  //   lObjs = lObjs.filter(
+  //     (l) => !lfUtils.checkHyper(l, ["vypernym", "hypernym"])
+  //   );
+  //   consol.logSpecial(
+  //     7,
+  //     `Remove vypernyms from possible lObjs because stCh gender`,
+  //     stCh.gender
+  //   );
+  //   if (!lObjs.length) {
+  //     consol.throw("pwbt");
+  //   }
+  // }
 
   if (
     ["npe", "nco"].includes(gpUtils.getWordtypeShorthandStCh(stCh)) &&
