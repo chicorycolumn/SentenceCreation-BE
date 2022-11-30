@@ -10,12 +10,11 @@ exports.log = (...args) => {
 };
 
 exports.logSpecial = (num, ...args) => {
-  let rArg = process.argv.find((el) => /^r[\d]$/.test(el));
-  if (rArg) {
-    let rNum = rArg[1];
-    if (num.toString() === rNum) {
-      console.log(...args);
-    }
+  let rArgs = process.argv
+    .filter((el) => /^r[\d]$/.test(el))
+    .map((el) => el[1]);
+  if (rArgs.includes(num.toString())) {
+    console.log(...args);
   }
 };
 
