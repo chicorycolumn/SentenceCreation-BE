@@ -1,20 +1,29 @@
 const consol = require("./consoleLoggingUtils.js");
 
 exports.log = (...args) => {
-  if (!process.argv.some((el) => ["t", "r"].includes(el[0]))) {
+  if (
+    process.argv.some((el) => el === "all") ||
+    !process.argv.some((el) => /^(r[\d]?)$|^t$/.test(el))
+  ) {
     console.log(...args);
   }
 };
 
 exports.logSpecial = (num, ...args) => {
-  let lastArg = process.argv[process.argv.length - 1];
-  if (lastArg[0] === "r" && lastArg.slice(1) === num.toString()) {
+  let rArgs = process.argv
+    .filter((el) => /^r[\d]$/.test(el))
+    .map((el) => el[1]);
+  if (rArgs.includes(num.toString())) {
     console.log(...args);
   }
 };
 
 exports.logTestOutputSolely = (...args) => {
-  if (process.argv[process.argv.length - 1] === "t") {
+  if (
+    process.argv.includes("t") ||
+    process.argv.includes("all") ||
+    !process.argv.find((el) => /^r[\d]?$/.test(el))
+  ) {
     console.log(...args);
   }
 };
