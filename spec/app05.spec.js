@@ -45,13 +45,15 @@ const { runPaletteTest, promiseAllMultiplier, checkProportions } = testingUtils;
  *  hypernyms "The parent and their book."
  *  MGNs      "The doctor and their book."
  *
- * Okay... I will steer well clear of generating singular they in QUESTION sentences.
- *
- *
+ * Okay... I will steer well clear of generating singular "they" in QUESTION sentences.
  *
  * Note that in Polish, "She's a good kid." is "Ona jest dobrYM dzieckIEM."
  *
- *
+ * Okay, so actually we don't need to worry about singular "they".
+ * Because a sentence with an MGN like "doctor" or "parent" in ENG will generate as
+ * Q: Small child (female). <--> A: Pequenya ninya.
+ * Q: The doctor and HER bag. <--> A: Lekarka i jej/swoja torba.
+ * Q: El chico y su bolsa. <--> A: The boy and HIS bag.
  *
  *
  *
@@ -163,8 +165,11 @@ const dummy72cRefPolSpa = [
   { POL: ["Czerwone matki."], SPA: ["Rojas madres."] },
   { POL: ["Czerwony ojciec."], SPA: ["Rojo padre."] },
   { POL: ["Czerwoni ojcowie."], SPA: ["Rojos padres."] },
-  { POL: ["Czerwoni rodzice."], SPA: ["Rojos padres."] },
-  { POL: ["Czerwony rodzic."], SPA: ["Rojo padre."] },
+  { POL: ["Czerwoni rodzice (males)."], SPA: ["Rojos padres."] },
+  { POL: ["Czerwoni rodzice (mixed)."], SPA: ["Rojos padres."] },
+  { POL: ["Czerwoni rodzice (females)."], SPA: ["Rojas madres."] },
+  { POL: ["Czerwony rodzic (male)."], SPA: ["Rojo padre."] },
+  { POL: ["Czerwony rodzic (female)."], SPA: ["Roja madre."] },
 ];
 const dummy72cRefSpaPol = [
   { POL: ["Czerwona matka."], SPA: ["Roja madre."] },
@@ -190,8 +195,11 @@ const dummy72cRefEngSpa = [
   { ENG: ["Red mothers."], SPA: ["Rojas madres."] },
   { ENG: ["Red father."], SPA: ["Rojo padre."] },
   { ENG: ["Red fathers."], SPA: ["Rojos padres."] },
-  { ENG: ["Red parents."], SPA: ["Rojos padres."] },
-  { ENG: ["Red parent."], SPA: ["Rojo padre."] },
+  { ENG: ["Red parents (mixed)."], SPA: ["Rojos padres."] },
+  { ENG: ["Red parents (males)."], SPA: ["Rojos padres."] },
+  { ENG: ["Red parents (females)."], SPA: ["Rojas madres."] },
+  { ENG: ["Red parent (male)."], SPA: ["Rojo padre."] },
+  { ENG: ["Red parent (female)."], SPA: ["Roja madre."] },
 ];
 
 const dummy72cRefSpaEng = [

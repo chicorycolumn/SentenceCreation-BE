@@ -42,6 +42,9 @@ exports.getTraductions = (
   if (mapIdsToLObjs && !getAllIds) {
     consol.throw("bcct Not possible.");
   }
+  if (!targetlang) {
+    targetlang = gpUtils.getLanguageFromLemmaObject(lObj);
+  }
 
   let traductions =
     lObj.devHardcoded_translations ||

@@ -255,7 +255,8 @@ exports.deleteByAOC = (
         depUnit[drillPathType]
       )
     ) {
-      consol.log(
+      consol.logSpecial(
+        3,
         "[1;30m " +
           `kzia removeAnnotationsByAOCs "${questionOutputUnit.structureChunk.chunkId}" ABZ Late stage DELETION of annotation "${inflectionCategory}" which is "${questionOutputUnit.structureChunk.annotations[inflectionCategory]}"` +
           "[0m"
@@ -405,6 +406,10 @@ exports.trimAnnoIfGenderRevealedByGenderedNoun = (
     if (!(headLObj.gender && !gpUtils.traitValueIsMeta(headLObj.gender))) {
       headChunk.annotations.gender = structureChunk.annotations.gender;
     }
+    consol.logSpecial(
+      3,
+      `wbmf "${structureChunk.chunkId}" removing "gender" anno. trimAnnoIfGenderRevealedByGenderedNoun`
+    );
     delete structureChunk.annotations.gender;
   }
 };
@@ -611,11 +616,16 @@ exports.trimAnnotations = (annotationObj) => {
       annoTraitKey === "gender" &&
       ["males", "females"].includes(annoTraitValue)
     ) {
+      consol.logSpecial(3, `mpsa "trimAnnotations removing "number" anno.`);
       delete annotationObj.number;
     }
 
     if (!annoTraitValue) {
       consol.throw("vmkp");
+      consol.logSpecial(
+        3,
+        `mpsb "trimAnnotations removing "${annoTraitKeyy}" anno as no annoTraitValue.`
+      );
       delete annotationObj[annoTraitKeyy];
     }
   });

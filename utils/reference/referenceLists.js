@@ -474,6 +474,10 @@ exports.structureChunkTraits = {
     //   ultimatelyMultipleTraitValuesOkay: true,
     // },
     dontSpecifyOnThisChunk: { expectedTypeOnStCh: "boolean" },
+    demandedIds: {
+      expectedTypeOnStCh: "array",
+      ultimatelyMultipleTraitValuesOkay: true,
+    },
     specificIds: {
       expectedTypeOnStCh: "array",
       ultimatelyMultipleTraitValuesOkay: true,

@@ -2820,6 +2820,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "npe-1",
         specificIds: ["pol-npe-013-parentaroonie"],
+        // gender: ["f"],
         // number: ["plural"],
         gcase: ["nom"],
       },

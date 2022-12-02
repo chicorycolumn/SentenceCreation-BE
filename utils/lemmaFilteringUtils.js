@@ -238,6 +238,17 @@ exports.selectRandLObj = (lObjs, stCh) => {
     consol.throw("iwba");
   }
 
+  if (stCh.demandedIds) {
+    console.log("}}}}}}}}}}}}}}}}}}");
+    console.log("}}}}}}}}}}}}}}}}}}");
+    console.log("}}}demandedIds}}}}");
+    console.log("}}}}}}}}}}}}}}}}}}");
+    console.log("}}}}}}}}}}}}}}}}}}", stCh.demandedIds);
+    return uUtils.selectRandom(
+      lObjs.filter((l) => stCh.demandedIds.includes(l.id))
+    );
+  }
+
   // DRACONIAN OPTION FOR HYPERNYM ISSUE 205:
   // Only the Q "I saw the child and HIS toy." can be generated,
   // never the Q "I saw the child and HER toy."
