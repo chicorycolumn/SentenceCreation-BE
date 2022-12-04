@@ -211,7 +211,7 @@ const dummy72cRefSpaEng = [
   { ENG: ["Red parents."], SPA: ["Rojos padres (mixed)."] },
 ];
 
-describe.only("/api", function () {
+describe("/api", function () {
   this.timeout(7000);
 
   describe("/palette - Stage 24-i: Spanish basic. Normal nouns.", () => {
@@ -251,7 +251,7 @@ describe.only("/api", function () {
     it("#pal24-03b GET 200 YES: Spapol. Red mother (Vypernym).", () => {
       return runPaletteTest("SPA", "POL", "dummy72c", dummy72cRefSpaPol);
     });
-    it.only("#pal24-03c GET 200 YES: Engspa. Red mother (Vypernym).", () => {
+    it("#pal24-03c GET 200 YES: Engspa. Red mother (Vypernym).", () => {
       return runPaletteTest("ENG", "SPA", "dummy72c", dummy72cRefEngSpa);
     });
     it("#pal24-03d GET 200 YES: Spaeng. Red mother (Vypernym).", () => {

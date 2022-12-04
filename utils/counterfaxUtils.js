@@ -539,7 +539,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         );
         return;
       }
-      runsRecord.push(counterfactualSitSchematic.cfLabel);
 
       counterfactualQuestionSentenceFormula.sentenceStructure.forEach(
         (stCh) => {
@@ -566,12 +565,15 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         devSaysThrowAfterAnnoSalvo: reqBody.devSaysThrowAfterAnnoSalvo,
       };
 
-      consol.logSpecial(
-        3,
-        `> > > Sending counterfax sit "${counterfactualSitSchematic.cfLabel}" to fetchPalette.`
-      );
-
-      palette.fetchPalette({ body: newReqBody });
+      let newReqBodys = [newReqBody];
+      newReqBodys.forEach((body) => {
+        consol.logSpecial(
+          8,
+          `> > > Sending counterfax sit "${body.counterfactualSitSchematic.cfLabel}" to fetchPalette.`
+        );
+        runsRecord.push(body.counterfactualSitSchematic.cfLabel);
+        palette.fetchPalette({ body });
+      });
     }
   );
 

@@ -1189,6 +1189,212 @@ exports.conformAnswerStructureToQuestionStructure = (
       );
     }
 
+    /////////////////////////////////////////////////////////////////////////////
+
+    /**
+     * V/HYPERNYM CORRECTIONS, ISSUE 205
+     *
+     *
+     *
+     * THOUGHT 2:
+     *
+     * Okay yes, so, because of all this gender changing needed when Q->A re £ and €,
+     * so it's in conformAtoQ where we need to put in a series of conditional logic, right?
+     *
+     * conformAtoQ
+     *
+     * English to Spanish
+     *         f hypo    f hyper              m vyper                         f
+     * If Q is "GIRL" or "CHILD", and A is "NINYO/A", then translate to "NINYA" only.
+     *         m hypo    m hyper              m vyper                         m
+     * If Q is "BOY" or "CHILD",  and A is "NINYO/A", then translate to "NINYO" only.
+     *
+     *         nv hypo    nv hyper           vi vyper                         nv
+     * If Q is "GIRLS" or "CHILDS", and A is "NINYO/AS", then translate to "NINYAS" only.
+     *         vi hypo    vi hyper           vi vyper                         vi
+     * If Q is "BOYS" or "CHILDS",  and A is "NINYO/AS", then translate to "NINYOS" only.
+     *
+     * Spanish to English
+     *         f vypo                       ? hyper                         f          f
+     * If Q is "CHICA"             and A is "B/G/CHILD", then translate to "GIRL" and "CHILD".
+     *         m vypo                       ? hyper                         m          ?
+     * If Q is "CHICO"             and A is "B/G/CHILD", then translate to "BOY" and "CHILD".
+     *
+     *         nv vypo                      ? hyper                         nv          nv
+     * If Q is "CHICAS"            and A is "B/G/CHILDS", then translate to "GIRLS" and "CHILDS".
+     *         vi vypo                      ? hyper                         vi          ?
+     * If Q is "CHICOS"            and A is "B/G/CHILDS", then translate to "BOYS" and "CHILDS".
+     *
+     *
+     * o0o0o0o0o0o0o0o0o0o0o0o0o0o0o0o0o0o0o
+     * 0o0o0o0o0o0o0o0o0o0o0o0o0o0o0o0o0o0o
+     * Here's a question: Q "Chicos." so A clearly ["Boys.", "Children."]
+     * But what about Q: "Chicas." ? should A be ["Girls."] or ["Girls.", "Children."] ?
+     * o0o0o0o0o0o0o0o0o0o0o0o0o0o0o0o0o0o0o
+     * 0o0o0o0o0o0o0o0o0o0o0o0o0o0o0o0o0o0o
+     *
+     *
+     * English to Polish
+     *          f hyper                     m1 hyper                        m1
+     * If Q is  "PARENT",          and A is "RODZIC", then translate to "RODZIC" --but set PHDGender to 'f'--
+     *         m hyper                      n hyper                         m1
+     * If Q is  "PARENT",          and A is "RODZIC", then translate to "RODZIC" --and keep gender as 'm1'--
+     *
+     *         nv hyper                    vi hyper                         vi
+     * If Q is  "PARENTS",         and A is "RODZICE", then translate to "RODZICE" --but set PHDGender to 'nv'--
+     *         vi hyper                    vi hyper                         vi
+     * If Q is  "PARENTS",         and A is "RODZICE", then translate to "RODZICE" --and keep gender as 'vi'--
+     *
+     * (And for "DZIECKO" both boy child and girl child will need a PHDGender as dziecko is neuter.)
+     *
+     *
+     *
+     *
+     *
+     *
+     *
+     *
+     *
+     *
+     *
+     *
+     *
+     *
+     * Wait, so actually, instead of doing all these adjustments here,
+     * why don't we adjust the filtering by gender, wherever that happens
+     * so that £ and € allow for all genders?
+     *
+     * Okay, so there's lot of gender changing that needs to be done.
+     *
+     * Fundamentally this is because, while most of the time, gender is preserved for npe when Q to A:
+     * lady -> kobieta, on -> he, chica -> girl
+     *
+     * But when it comes to £ and €, that goes out the window, see below.
+     * "dziecko" is neuter but must translate with "child" male and "child" female.
+     * "dziecko" is neuter but must translate with "chico" male and "chica" female.
+     *
+     *    £                               £
+     * Q "parent"  f  should change to A "rodzic"n m1 (with semantic f for PHD)
+     * Q "child"   f  should change to A "dziecko" n  (with semantic f for PHD)
+     * Q "child"   m1 should change to A "dziecko" n  (with semantic m1 for PHD)
+     * Q "parents" nv should change to A "rodzice" virile
+     *
+     *    £                               €
+     * Q "parent"  f  should change to A "madre" f       Surely this already happens automatically? I see no barrier..
+     * Q "child"   f  should change to A "ninya" f       "
+     * Q "parents" nv should change to A "padres" virile
+     *
+     *
+     * A further thought - "chico" should translate as both "boy" and "child"
+     *                     "chica" should translate as both "girl" and "child"
+     *
+     *
+     *
+     *
+     *
+     * THOUGHT 1:
+     *
+     * Q ENG Hypernyms must be set to gender m1/virile for A POL Hypernyms
+     * eg if Q lobj is "parent" and q stch gender is "f" or "nonvirile"
+     * then we need to change this to masculine for A POL lobj "rodzic".
+     *
+     *         QUESTION                  ANSWER          CHANGE ANSWER TO
+     * 205-i)  parent-£ gender:[f]       padre-€         madre
+     * 205-ii) parent-£ gender:[f]       rodzic-£(m1)    gender[m/vir] but set semanticGender to f/nonv (for PHD inheritance ie possessives)
+     *
+     * So with ii) it should successfully generate:
+     *
+     *    Q: I gave the parent HER book.
+     *    A: Di la MADRE su libro.
+     *
+     *    Q: I gave the parent HER book.
+     *    A: Dałem rodzicowi JEJ ksiazke.
+     *
+     *    and likewise HIM...JEGO although that one was never in doubt.
+     */
+
+    // <Issue 205: Helium Approach>
+
+    // scUtils.enforceMaxLObjStems(matchingAnswerLemmaObjects, 1);
+    // let answerStructureChunkGenderCopy =
+    //   answerStructureChunk.gender && answerStructureChunk.gender.slice();
+    // let matchingAnswerLemmaObjectsCopy = matchingAnswerLemmaObjects.map(
+    //   (l) => l.id
+    // );
+
+    // // 205-i)
+    // if (
+    //   lfUtils.checkHyper(questionSelectedLemmaObject, ["hypernym"]) &&
+    //   questionStructureChunk.gender &&
+    //   questionStructureChunk.gender.length &&
+    //   questionStructureChunk.gender.every((el) =>
+    //     ["f", "nonvirile"].includes(el)
+    //   ) &&
+    //   matchingAnswerLemmaObjects.some((l) =>
+    //     lfUtils.checkHyper(l, ["vypernym"])
+    //   )
+    // ) {
+    //   let allLObjsForThisIdStem = nexusUtils.getTraductions(
+    //     matchingAnswerLemmaObjects[0],
+    //     answerLanguage,
+    //     true,
+    //     true
+    //   );
+    //   let feminineLObjs = allLObjsForThisIdStem.filter((l) => l.gender === "f");
+    //   if (feminineLObjs.length !== 1) {
+    //     consol.throw(
+    //       `wabh Unsure how to proceed. Expected feminineLObjs length 1 but got ${feminineLObjs.length}.`
+    //     );
+    //   }
+    //   matchingAnswerLemmaObjects = feminineLObjs;
+    //   consol.logSpecial(
+    //     7,
+    //     `lvdi matchingAnswerLemmaObjects for`,
+    //     questionSelectedLemmaObject.id,
+    //     `was`,
+    //     matchingAnswerLemmaObjectsCopy,
+    //     `is now only the feminine ones`,
+    //     matchingAnswerLemmaObjects.map((l) => l.id)
+    //   );
+    // }
+
+    // if (
+    //   ["hypernym", "vypernym"].includes(
+    //     lfUtils.assessHypernymy(matchingAnswerLemmaObjects[0])
+    //   ) &&
+    //   answerStructureChunk.gender &&
+    //   ["f", "nonvirile"].some((el) => answerStructureChunk.gender.includes(el))
+    // ) {
+    //   if (
+    //     !["hypernym"].includes(
+    //       lfUtils.assessHypernymy(questionSelectedLemmaObject)
+    //     )
+    //   ) {
+    //     consol.throw("mdwb How did we get here?");
+    //   }
+    //   answerStructureChunk.gender = answerStructureChunk.gender.map((el) => {
+    //     if (el === "f") {
+    //       return "m1";
+    //     }
+    //     if (el === "nonvirile") {
+    //       return "virile";
+    //     }
+    //     return el;
+    //   });
+    //   consol.logSpecial(
+    //     7,
+    //     `mdwc Have set gender of this hypernym to masculine.`,
+    //     {
+    //       answerStructureChunkGenderPREVIOUSLY: answerStructureChunkGenderCopy,
+    //       answerStructureChunkGenderNOW: answerStructureChunk.gender,
+    //       questionLObj: questionSelectedLemmaObject.id,
+    //       answerLObj: matchingAnswerLemmaObjects[0].id,
+    //     }
+    //   );
+    // }
+
+    // </Issue 205: Helium Approach>
+
     refObj.lemmaObjectTraitKeys[
       answerLanguage
     ].allowableTransfersFromQuestionStructure[
@@ -1309,7 +1515,7 @@ exports.conformAnswerStructureToQuestionStructure = (
     //
 
     //Check for traits-of-answer-lang-lobjs-that-aren't-traits-of-question-lang-lobjs.
-    // So when going ENG to POL, that would be gender.
+    // So when going ENG to POL, that would be gender of nco.
     // And then, with that list of traits, we will blind the answer structureChunks to these traits.
 
     let possibleInflectionCategorysOfQuestionLobjs =
@@ -1509,5 +1715,18 @@ exports.sortStructureChunks = (
   } else {
     otherChunks = [...otherChunks, ...PHDChunks];
     return { headChunks, dependentChunks, otherChunks };
+  }
+};
+
+exports.enforceMaxLObjStems = (lObjs, max) => {
+  let lObjIdStems = Array.from(
+    new Set(lObjs.map((l) => l.id.split("-").slice(0, 3).join("-")))
+  );
+  if (lObjIdStems.length > max) {
+    consol.throw(
+      `rcmd Expected no more than 1 lObj stem (eg "pol-npe-002-matka" and "pol-npe-002-ojciec" count as 1) but found ${
+        lObjIdStems.length
+      }: [${"pol-npe-002-matka".join(",")}]`
+    );
   }
 };
