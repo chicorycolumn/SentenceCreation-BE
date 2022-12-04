@@ -2,12 +2,15 @@ const gpUtils = require("./generalPurposeUtils.js");
 const uUtils = require("./universalUtils.js");
 const consol = require("./zerothOrder/consoleLoggingUtils.js");
 const cfUtils = require("./counterfaxUtils.js");
+const lfUtils = require("./lemmaFilteringUtils.js");
+const nexusUtils = require("./secondOrder/nexusUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 const refFxn = require("./reference/referenceFunctions.js");
 const palette = require("../models/palette.model.js");
 const allLangUtils = require("./allLangUtils.js");
 
 exports.explodeCounterfaxSituations = (sits) => {
+  consol.logSpecial(8, "swde1 explodeCounterfaxSituations");
   let explodedWithinEachChunk = {};
   let sentence = [];
   let chunkIds = sits.headsFirstSequenceChunkIds;
@@ -78,6 +81,7 @@ exports.explodeCounterfaxSituations = (sits) => {
 };
 
 exports.makeCfLabelFromSitSchematic = (sit) => {
+  consol.logSpecial(8, "swde1 makeCfLabelFromSitSchematic");
   let grandCfLabel = "";
   sit.chunkIds.forEach((chunkId) => {
     let cfLabel = `${chunkId} `;
@@ -91,6 +95,7 @@ exports.makeCfLabelFromSitSchematic = (sit) => {
 };
 
 exports.reorderOutputArrWithHeadsFirst = (questionOutputArr) => {
+  consol.logSpecial(8, "swde1 reorderOutputArrWithHeadsFirst");
   let questionOutputArrOrderedHeadsFirst = [];
   let headChunkIds = [];
 
@@ -153,6 +158,7 @@ exports.reorderOutputArrWithHeadsFirst = (questionOutputArr) => {
 };
 
 exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
+  consol.logSpecial(8, "swde1 listCounterfaxSituations");
   let { questionLanguage } = languagesObj;
 
   let counterfaxSituations = { headsFirstSequenceChunkIds: [] };
@@ -256,6 +262,7 @@ exports.addFaxSituation2 = (
   traitKey,
   traitValue
 ) => {
+  consol.logSpecial(8, "swde1 addFaxSituation2");
   let newCounterfaxSituation = {
     traitKey: traitKey,
     traitValue: traitValue,
@@ -293,6 +300,10 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   answerSelectedWordsSetsHaveChanged,
   runsRecord
 ) => {
+  consol.logSpecial(
+    8,
+    "swde1 removeAnnotationsByCounterfactualAnswerSentences"
+  );
   consol.logSpecial(
     3,
     "\n",
@@ -566,9 +577,159 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       };
 
       let newReqBodys = [newReqBody];
+
+      // <Issue 205: Helium Approach>
+
+      // let specialSpecificLObjs = [];
+      // let specialChunkIds = [];
+      // let counterfaxingGenderValue;
+
+      // if (
+      //   counterfactualSitSchematic.chunkIds.some((chunkIdToCounterfax) =>
+      //     counterfactualSitSchematic[chunkIdToCounterfax].some(
+      //       (counterfaxDetails) =>
+      //         counterfaxDetails.traitKey === "gender" &&
+      //         originalQuestionOutputArrObjs.some((obj) =>
+      //           obj.arr.some((outputUnit) => {
+      //             let condition =
+      //               outputUnit.structureChunk.chunkId === chunkIdToCounterfax &&
+      //               lfUtils.checkHyper(outputUnit.selectedLemmaObject, [
+      //                 "hypernym",
+      //               ]) &&
+      //               outputUnit.structureChunk.gender &&
+      //               outputUnit.structureChunk.gender.length;
+      //             //  &&
+      //             // outputUnit.structureChunk.gender.every((el) =>
+      //             //   ["f", "nonvirile"].includes(el)
+      //             // );
+      //             if (condition) {
+      //               specialChunkIds.push(chunkIdToCounterfax);
+      //               specialSpecificLObjs.push(outputUnit.selectedLemmaObject);
+      //               counterfaxingGenderValue = counterfaxDetails.traitValue;
+      //             }
+      //             return condition;
+      //           })
+      //         )
+      //     )
+      //   )
+      // ) {
+      //   if (specialChunkIds.length > 1 || specialSpecificLObjs.length > 1) {
+      //     consol.throw(
+      //       "bbjc So I have to do this special hypernym counterfaxing correction for more than 1 chunk?",
+      //       {
+      //         specialChunkIds,
+      //         specialSpecificLObjs,
+      //       }
+      //     );
+      //   }
+      //   if (specialChunkIds.length !== specialSpecificLObjs.length) {
+      //     consol.throw(
+      //       "bbjd Special hypernym counterfaxing correction but these arrays are odd.",
+      //       {
+      //         specialChunkIds,
+      //         specialSpecificLObjs,
+      //       }
+      //     );
+      //   }
+      //   let specialChunkId = specialChunkIds[0];
+      //   let specialSpecificLObj = specialSpecificLObjs[0];
+      //   let specialLObjs = nexusUtils.getTraductions(
+      //     specialSpecificLObj,
+      //     null, // questionLanguage epsilon
+      //     true,
+      //     true
+      //   );
+
+      //   let virRef =
+      //     refObj.virilityConversionRef[questionLanguage].matches[
+      //       counterfaxingGenderValue
+      //     ];
+
+      //   consol.logSpecial(
+      //     7,
+      //     "specialLObjs WAS",
+      //     specialLObjs.map((l) => l.id)
+      //   );
+      //   specialLObjs = specialLObjs.filter((l) => {
+      //     let lObjGender = gpUtils.traitValueIsMeta(l.gender)
+      //       ? refObj.metaTraitValues[questionLanguage].gender[l.gender]
+      //       : [l.gender];
+
+      //     return virRef.some((el) => lObjGender.some((elem) => el === elem));
+      //   });
+      //   consol.logSpecial(
+      //     7,
+      //     "specialLObjs NOW",
+      //     specialLObjs.map((l) => l.id)
+      //   );
+
+      //   let firstDemandedLObj = specialLObjs[0];
+
+      //   newReqBody.counterfactualQuestionSentenceFormula.sentenceStructure.find(
+      //     (chunk) => chunk.chunkId === specialChunkId
+      //   ).demandedIds = [firstDemandedLObj.id];
+
+      //   newReqBody.counterfactualSitSchematic.cfLabelAddition =
+      //     " demandedId=" + firstDemandedLObj.id;
+
+      //   consol.logSpecial(
+      //     3,
+      //     "[1;33m " +
+      //       `gtut Modified first counterfactual: ${newReqBody.counterfactualSitSchematic.cfLabel}` +
+      //       " " +
+      //       newReqBody.counterfactualSitSchematic.cfLabelAddition +
+      //       "[0m"
+      //   );
+
+      //   specialLObjs.slice(1).forEach((demandedLObj) => {
+      //     let copiedNewResBody = uUtils.copyWithoutReference(newReqBody);
+
+      //     copiedNewResBody.allCounterfactualResults = allCounterfactualResults; //Copy WITH reference. This must be the very same one.
+
+      //     copiedNewResBody.counterfactualQuestionSentenceFormula.sentenceStructure.find(
+      //       (chunk) => chunk.chunkId === specialChunkId
+      //     ).demandedIds = [demandedLObj.id];
+
+      //     copiedNewResBody.counterfactualSitSchematic.cfLabelAddition =
+      //       " demandedId=" + demandedLObj.id;
+
+      //     consol.logSpecial(
+      //       3,
+      //       "[1;33m " +
+      //         `gtut Adding a new counterfactual: ${copiedNewResBody.counterfactualSitSchematic.cfLabel}` +
+      //         " " +
+      //         copiedNewResBody.counterfactualSitSchematic.cfLabelAddition +
+      //         "[0m"
+      //     );
+      //     newReqBodys.push(copiedNewResBody);
+      //   });
+      // }
+      // /**
+      //  * V If the qlobj of original is a hypernym (eg parent)
+      //  * V and gender f/virile
+      //  * V and gender is what we're counterfaxing
+      //  * then
+      //  * V get all lobjs for the specific id on new req body
+      //  * V and for every non-female one (so that would be father and parent)
+      //  * V add those as demandedIds
+      //  * And then run both of those new req bodies through palette
+      //  * And that way, the running of parent virile, versus original
+      //  * which is parent nonvirile, should make it so annotation stays.
+      //  */
+
+      // consol.logSpecial(3, "msnm ");
+
+      // </Issue 205: Helium Approach>
+
       newReqBodys.forEach((body) => {
+        if (body.counterfactualSitSchematic.cfLabelAddition) {
+          body.counterfactualSitSchematic.cfLabel +=
+            " " + body.counterfactualSitSchematic.cfLabelAddition;
+          delete body.counterfactualSitSchematic.cfLabelAddition;
+        }
+
         consol.logSpecial(
-          8,
+          3,
           `> > > Sending counterfax sit "${body.counterfactualSitSchematic.cfLabel}" to fetchPalette.`
         );
         runsRecord.push(body.counterfactualSitSchematic.cfLabel);
@@ -1133,6 +1294,7 @@ exports.agglomerateAndRemoveAnnosIfSameResults = (
   counterfactualAnswerOutputArrObjs,
   originalAnnoTraitValue
 ) => {
+  consol.logSpecial(8, "swde1 agglomerateAndRemoveAnnosIfSameResults");
   if (questionOutputUnit.structureChunk.dontSpecifyOnThisChunk) {
     let combinedTraitValues = [
       ...questionOutputUnit.structureChunk[annoTraitKey],
