@@ -642,7 +642,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             )
         )
       ) {
-        consol.logSpecial(3, `jgos1 reject this one`, cfSchem.cfLabel);
+        consol.logSpecial(3, `jgos1 REJECT`, cfSchem.cfLabel);
         return false;
       }
 
@@ -667,9 +667,10 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           )
         )
       ) {
-        consol.logSpecial(3, `jgos2 reject this one`, cfSchem.cfLabel);
+        consol.logSpecial(3, `jgos2 REJECT`, cfSchem.cfLabel);
         return false;
       }
+      consol.logSpecial(3, `jgos3 yes to`, cfSchem.cfLabel);
       return true;
     });
 
