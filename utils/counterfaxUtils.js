@@ -586,7 +586,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   }
 
   function findCFResultsWhenAllOtherThingsBeingEqual(
-    allCR,
+    allCfRes,
     originalSit,
     chunkIdToExamine,
     traitKeyToExamine,
@@ -624,12 +624,12 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       return traitValue1 === traitValue2;
     }
 
-    let resArr = allCR.filter((CR) => {
-      let Cschem = CR.counterfactualSitSchematic;
+    let resArr = allCfRes.filter((cfRes) => {
+      let cfSchem = cfRes.counterfactualSitSchematic;
 
       //We only want counterfax results where the chunk to be coppiced/inosculated has a DIFFERENT value to what it has in original.
       if (
-        Cschem[chunkIdToExamine].find(
+        cfSchem[chunkIdToExamine].find(
           (assig) =>
             assig.traitKey === traitKeyToExamine &&
             areTraitValuesEqual(
@@ -642,6 +642,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             )
         )
       ) {
+        consol.logSpecial(3, `jgos1 reject this one`, cfSchem.cfLabel);
         return false;
       }
 
@@ -649,7 +650,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
       if (
         originalSit.chunkIds.some((chunkId) =>
-          Cschem[chunkId].some(
+          cfSchem[chunkId].some(
             (assig) =>
               !(
                 assig.traitKey === traitKeyToExamine &&
@@ -666,6 +667,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           )
         )
       ) {
+        consol.logSpecial(3, `jgos2 reject this one`, cfSchem.cfLabel);
         return false;
       }
       return true;
@@ -675,7 +677,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       consol.throw(
         `#ERR zprr "${questionLanguage}"
           \nOkay look, I'm running findCFResultsWhenAllOtherThingsBeingEqual for chunk "${chunkIdToExamine}", trait "${traitKeyToExamine}".
-          \nThe original sit is    "${originalSit.cfLabel}"    and there are ${allCR.length} counterfax results total.
+          \nThe original sit is    "${originalSit.cfLabel}"    and there are ${allCfRes.length} counterfax results total.
           \nSo I'm filtering that array to just the counterfactual results where
           \na) The chunk to be coppiced/inosculated has a DIFFERENT value to what it has in original, and
           \nb) If chunk to be cop/ino does have a different value to original, all values in all other parts of this counterfax result must be same as original.
