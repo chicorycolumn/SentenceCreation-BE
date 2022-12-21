@@ -7,7 +7,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "nco-1",
 
         andTags: ["nonexistent tag"],
-        gcase: ["nom"],
+
         number: ["singular"],
         gender: [],
       },
@@ -35,7 +35,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "nco-1",
 
         andTags: ["dummy"],
-        gcase: ["nom"],
+
         number: [],
         gender: [],
       },
@@ -49,7 +49,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "nco-1",
 
         andTags: ["dummy"],
-        gcase: ["nom"],
+
         number: ["singular", "plural"],
         gender: [],
       },
@@ -119,7 +119,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "nco-1",
 
         andTags: ["foobar-A"],
-        gcase: ["nom"],
+
         number: ["singular"],
         gender: [],
       },
@@ -127,7 +127,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "nco-2",
 
         andTags: ["foobar-B"],
-        gcase: ["nom"],
+
         number: ["singular"],
         gender: [],
       },
@@ -135,7 +135,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "nco-3",
 
         andTags: ["foobar-C"],
-        gcase: ["nom"],
+
         number: ["singular"],
         gender: [],
       },
@@ -155,7 +155,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "nco-1",
 
         andTags: ["foobar-A"],
-        gcase: ["nom"],
+
         number: ["singular"],
         gender: [],
       },
@@ -163,7 +163,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "nco-2",
 
         andTags: ["foobar-B"],
-        gcase: ["nom"],
+
         number: ["singular"],
         gender: [],
       },
@@ -171,7 +171,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "nco-3",
 
         andTags: ["foobar-C"],
-        gcase: ["nom"],
+
         number: ["singular"],
         gender: [],
       },
@@ -193,7 +193,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "nco-1",
 
         andTags: [],
-        gcase: ["nom"],
+
         number: ["singular"],
         gender: [],
         specificIds: ["pol-nco-014-jabłko"],
@@ -228,7 +228,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "nco-1",
 
         andTags: ["wearable"],
-        gcase: ["nom"],
+
         number: [],
         gender: [],
       },
@@ -435,7 +435,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "npe-1",
 
         andTags: ["personTest1"],
-        gcase: ["nom"],
+
         number: ["singular", "plural"],
         gender: ["f"],
       },
@@ -457,7 +457,7 @@ exports.dummySentenceFormulasBank = [
         chunkId: "npe-1",
 
         andTags: ["personTest1"],
-        gcase: ["nom"],
+
         number: ["singular", "plural"],
         gender: ["f"],
       },
@@ -1256,7 +1256,6 @@ exports.dummySentenceFormulasBank = [
         person: ["1per"],
         number: ["singular"],
         gender: ["m1"],
-        gcase: ["nom"],
       },
     ],
     primaryOrders: [],
@@ -1273,7 +1272,6 @@ exports.dummySentenceFormulasBank = [
         person: ["1per"],
         number: ["singular"],
         gender: ["m1"],
-        gcase: ["nom"],
       },
       {
         chunkId: "ver-1",
@@ -1298,7 +1296,6 @@ exports.dummySentenceFormulasBank = [
         person: ["1per"],
         gender: ["f"],
         number: ["plural"],
-        gcase: ["nom"],
       },
       {
         chunkId: "ver-1",
@@ -1322,7 +1319,6 @@ exports.dummySentenceFormulasBank = [
         specificIds: ["pol-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
-        gcase: ["nom"],
       },
       {
         chunkId: "ver-1",
@@ -1346,7 +1342,6 @@ exports.dummySentenceFormulasBank = [
         specificIds: ["pol-pro-PERSONAL"],
         person: ["1per"],
         number: ["plural"],
-        gcase: ["nom"],
       },
       {
         chunkId: "ver-1",
@@ -1371,7 +1366,7 @@ exports.dummySentenceFormulasBank = [
         specificIds: ["pol-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
-        gcase: ["nom"],
+
         gender: [],
       },
       {
@@ -1396,7 +1391,6 @@ exports.dummySentenceFormulasBank = [
         specificIds: ["pol-pro-PERSONAL"],
         person: ["1per"],
         number: ["plural"],
-        gcase: ["nom"],
       },
       {
         chunkId: "ver-1",
@@ -1967,7 +1961,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         specificIds: ["pol-pro-PERSONAL"],
-        gcase: ["nom"],
+
         number: ["singular"],
         person: ["1per"],
       },
@@ -1992,7 +1986,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         specificIds: ["pol-pro-PERSONAL"],
-        gcase: ["nom"],
+
         number: ["singular"],
         person: ["1per"],
       },
@@ -2014,7 +2008,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         specificIds: ["pol-pro-PERSONAL"],
-        gcase: ["nom"],
+
         number: ["singular"],
         person: ["1per"],
       },
@@ -2036,7 +2030,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         specificIds: ["pol-pro-PERSONAL"],
-        gcase: ["nom"],
+
         number: ["singular"],
         person: ["3per"],
       },
@@ -2058,7 +2052,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         specificIds: ["pol-pro-PERSONAL"],
-        gcase: ["nom"],
+
         number: ["singular"],
         person: ["3per"],
       },
@@ -2080,7 +2074,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         specificIds: ["pol-pro-PERSONAL"],
-        gcase: ["nom"],
+
         number: ["plural"],
         person: ["1per"],
       },
@@ -2113,7 +2107,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         specificIds: ["pol-pro-PERSONAL"],
-        gcase: ["nom"],
+
         number: ["plural"],
         person: ["1per"],
       },
@@ -2772,7 +2766,6 @@ exports.dummySentenceFormulasBank = [
         chunkId: "npe-1-Brother",
         specificIds: ["pol-npe-017-brat"],
         // number: ["singular"],
-        gcase: ["nom"],
       },
       {
         chunkId: "adj-1-Red",

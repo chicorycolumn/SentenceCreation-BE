@@ -29,7 +29,6 @@ describe("/educator/sandbox - Testing API.", () => {
         {
           chunkId: "npe-1",
           specificIds: ["pol-npe-011-kobieta"],
-          gcase: ["nom"],
           number: ["singular"],
         },
       ],
@@ -77,7 +76,6 @@ describe("/educator/sandbox - Testing API.", () => {
         {
           chunkId: "npe-1",
           andTags: ["personTest1"],
-          gcase: ["nom"],
           number: ["singular", "plural"],
           gender: [],
         },
@@ -119,7 +117,6 @@ describe("/educator/sandbox - Testing API.", () => {
         {
           chunkId: "npe-1",
           andTags: ["personTest1"],
-          gcase: ["nom"],
           number: ["singular", "plural"],
           gender: [],
         },

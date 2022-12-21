@@ -8,7 +8,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-        gcase: ["nom"],
+
         number: ["singular", "plural"],
         gender: [],
       },
@@ -32,7 +32,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-        gcase: ["nom"],
+
         number: ["singular", "plural"],
       },
       {
@@ -186,7 +186,6 @@ exports.sentenceFormulasBank = [
         chunkId: "nco-1",
         specificIds: ["eng-nco-006-book"],
         number: ["singular"],
-        gcase: ["nom"],
       },
       { chunkId: "fix-4", chunkValue: "," },
       { chunkId: "fix-5", chunkValue: "I" },
@@ -229,7 +228,6 @@ exports.sentenceFormulasBank = [
         chunkId: "nco-1",
         specificIds: ["eng-nco-007-door"],
         number: [],
-        gcase: ["nom"],
       },
     ],
     primaryOrders: [["adj-1", "nco-1"]],
@@ -249,7 +247,6 @@ exports.sentenceFormulasBank = [
         chunkId: "nco-1",
         specificIds: ["eng-nco-007-door"],
         number: ["singular"],
-        gcase: ["nom"],
       },
     ],
     primaryOrders: [["adj-1", "nco-1"]],
@@ -263,7 +260,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "pro-1",
         specificIds: ["eng-pro-PERSONAL"],
-        gcase: ["nom"],
+
         number: ["singular"],
       },
       {
@@ -567,7 +564,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["family"],
-        gcase: ["nom"],
+
         number: ["singular"],
       },
       {
@@ -613,7 +610,6 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1-Father",
         andTags: ["family"],
-        gcase: ["nom"],
       },
       {
         chunkId: "ver-1-Gave",
@@ -669,7 +665,6 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1-Doctor",
         specificIds: ["eng-npe-005-doctor"],
-        gcase: ["nom"],
       },
       {
         chunkId: "ver-1-Gave",
@@ -743,7 +738,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-1-doctor",
-        gcase: ["nom"],
+
         number: ["singular"],
         specificIds: ["eng-npe-005-doctor"],
       },
@@ -756,7 +751,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-2-doctor",
-        gcase: ["nom"],
+
         number: ["singular"],
         specificIds: ["eng-npe-005-doctor"],
       },
@@ -792,7 +787,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-1-doctor",
-        gcase: ["nom"],
+
         number: ["singular"],
         specificIds: ["eng-npe-005-doctor"],
         gender: ["f"],
@@ -808,7 +803,7 @@ exports.sentenceFormulasBank = [
       { chunkId: "fix-1-a", chunkValue: "a" },
       {
         chunkId: "npe-2-woman",
-        gcase: ["nom"],
+
         number: ["singular"],
         specificIds: ["eng-npe-001-woman"],
       },
@@ -836,7 +831,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-1-doctor",
-        gcase: ["nom"],
+
         number: ["singular"],
         specificIds: ["eng-npe-005-doctor"],
         gender: ["f"],
@@ -863,7 +858,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-1-doctor",
-        gcase: ["nom"],
+
         number: ["singular"],
         specificIds: ["eng-npe-005-doctor"],
         gender: ["f"],
@@ -879,7 +874,7 @@ exports.sentenceFormulasBank = [
       { chunkId: "fix-1-a", chunkValue: "a" },
       {
         chunkId: "npe-2-woman",
-        gcase: ["nom"],
+
         number: ["singular"],
         specificIds: ["eng-npe-001-woman"],
       },
@@ -913,7 +908,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-2-doctor",
-        gcase: ["nom"],
+
         number: ["singular"],
         specificIds: ["eng-npe-005-doctor"],
         gender: ["f"],
@@ -928,7 +923,7 @@ exports.sentenceFormulasBank = [
       { chunkId: "fix-1-a", chunkValue: "a" },
       {
         chunkId: "npe-3-woman",
-        gcase: ["nom"],
+
         number: ["singular"],
         specificIds: ["eng-npe-001-woman"],
       },
@@ -1094,7 +1089,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-1-doctor",
-        gcase: ["nom"],
+
         number: ["singular"],
         specificIds: ["eng-npe-005-doctor"],
         educatorBlocksAnnotationsForTheseTraitKeys: ["gender", "number"],
@@ -1108,7 +1103,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "nco-2-book",
-        gcase: ["nom"],
+
         number: ["singular"],
         specificIds: ["eng-nco-006-book"],
       },
@@ -1136,7 +1131,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-1-doctor",
-        gcase: ["nom"],
+
         number: ["singular"],
         specificIds: ["eng-npe-005-doctor"],
       },
@@ -1149,7 +1144,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "nco-2-book",
-        gcase: ["nom"],
+
         number: ["singular"],
         specificIds: ["eng-nco-006-book"],
       },
@@ -1177,7 +1172,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-1-doctor",
-        gcase: ["nom"],
+
         number: ["singular"],
         specificIds: ["eng-npe-005-doctor"],
       },
