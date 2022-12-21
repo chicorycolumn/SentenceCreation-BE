@@ -1923,7 +1923,7 @@ describe("/api", function () {
         "Our mothers gave us their book.",
       ]);
     });
-    it("#pal14-03c GET 200 YES: Engpol. My father gave me his book.", () => {
+    it.only("#pal14-03c GET 200 YES: Engpol. My father gave me his book.", () => {
       let ref = [
         {
           ENG: "My father gave me his book.",

@@ -14,6 +14,7 @@ exports.findMatchingLemmaObjectThenWord = (
   errorInSentenceCreation,
   currentLanguage,
   questionLanguage,
+  questionOutputArr,
   multipleModes,
   outputArray,
   isPHD
@@ -65,11 +66,23 @@ exports.findMatchingLemmaObjectThenWord = (
       matches = lfUtils.getLObjAndSiblings(
         source,
         structureChunk.specificIds,
-        blockHypernymsIfAnswerMode,
+        false, // blockHypernymsIfAnswerMode,
         "findMatching",
         null,
         structureChunk.gender
       );
+
+      let matchesLengthSnap = matches.length;
+
+      if (structureChunk.demandedIds) {
+        matches = matches.filter((l) =>
+          structureChunk.demandedIds.includes(l.id)
+        );
+
+        if (matchesLengthSnap && !matches.length) {
+          consol.throw("alro " + structureChunk.demandedIds.join(", "));
+        }
+      }
     }
 
     consol.log(
@@ -115,7 +128,9 @@ exports.findMatchingLemmaObjectThenWord = (
       currentLanguage,
       structureChunk,
       matches,
-      "matches line 106"
+      questionOutputArr,
+      "matches line 106",
+      !!questionLanguage
     );
 
     if (!matches.length) {
@@ -181,7 +196,11 @@ exports.findMatchingLemmaObjectThenWord = (
         });
       });
     } else {
-      let selectedLemmaObject = lfUtils.selectRandLObj(matches, structureChunk);
+      let selectedLemmaObject = lfUtils.selectRandLObj(
+        matches,
+        structureChunk,
+        currentLanguage
+      );
 
       let adhocArr = langUtils.generateAdhocForms(
         "form",
@@ -257,7 +276,8 @@ exports.findMatchingLemmaObjectThenWord = (
         } else {
           let selectedLemmaObject = lfUtils.selectRandLObj(
             matches,
-            structureChunk
+            structureChunk,
+            currentLanguage
           );
 
           let adhocArr = langUtils.generateAdhocForms(
@@ -371,7 +391,8 @@ exports.findMatchingLemmaObjectThenWord = (
 
               let selectedLemmaObject = lfUtils.selectRandLObj(
                 matchesByUninflectedForm,
-                structureChunk
+                structureChunk,
+                currentLanguage
               );
 
               let selectedWordArr =
@@ -482,7 +503,9 @@ exports.findMatchingLemmaObjectThenWord = (
       currentLanguage,
       structureChunk,
       matchesCopy,
-      "matches 465"
+      questionOutputArr,
+      "matches 465",
+      !!questionLanguage
     );
 
     if (!matchesCopy.length) {
@@ -615,7 +638,8 @@ exports.findMatchingLemmaObjectThenWord = (
       consol.log("xzjc ot:findMatchingLemmaObjectThenWord");
       let selectedLemmaObject = lfUtils.selectRandLObj(
         matchesCopy,
-        structureChunk
+        structureChunk,
+        currentLanguage
       );
 
       allLangUtils.addHiddenNumberToTantumStChs(
@@ -1368,8 +1392,14 @@ exports.switchMetaTraitValueForAWorkableConvertedTraitValue = (
       "[0m"
   );
 
-  let convertedMetaTraitValues = refObj.metaTraitValues[currentLanguage][
+  let refAdjustedInflectionCategory = ["semanticGender"].includes(
     inflectionCategory
+  )
+    ? "gender"
+    : inflectionCategory;
+
+  let convertedMetaTraitValues = refObj.metaTraitValues[currentLanguage][
+    refAdjustedInflectionCategory
   ][inflectionKey].filter(
     (convertedMetaTraitValue) => source[convertedMetaTraitValue]
   );
@@ -1442,14 +1472,17 @@ exports.doesThisInflectionKeyHoldUniqueInflectionValueInLObj = (
   chosenInflectionCategory,
   drillPath
 ) => {
+  if (chosenInflectionCategory === "semanticGender") {
+    return false;
+  }
+
   let inflectionChain =
     refObj.lemmaObjectTraitKeys[gpUtils.getLanguageFromLemmaObject(lObj)]
       .inflectionChains[gpUtils.getWordtypeLObj(lObj)];
 
   function getInflectionKeyFromDrillPath(inflectionCategory, drillPath) {
-    let inflectionKey = drillPath.find(
-      (arr) => arr[0] === inflectionCategory
-    )[1];
+    let x = drillPath.find((arr) => arr[0] === inflectionCategory);
+    let inflectionKey = x[1];
     return inflectionKey;
   }
 

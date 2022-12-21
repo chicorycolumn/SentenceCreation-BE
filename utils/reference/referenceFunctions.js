@@ -54,6 +54,24 @@ exports.isTraitCompatibleLObj = (trait, lObj, currentLanguage) => {
   );
 };
 
+exports.duplicateTraitKeys = (obj) => {
+  let duplications = { gender: ["semanticGender"] };
+
+  Object.keys(duplications).forEach((duplicatorSource) => {
+    duplications[duplicatorSource].forEach((duplicatorTarget) => {
+      obj[duplicatorTarget] = uUtils.copyWithoutReference(
+        obj[duplicatorSource]
+      );
+    });
+  });
+};
+
+exports.getAnnotationToPlainspeakRef = () => {
+  let annotationToPlainspeakRef = refObj.annotationToPlainspeakRef;
+  refFxn.duplicateTraitKeys(annotationToPlainspeakRef);
+  return annotationToPlainspeakRef;
+};
+
 exports.getStructureChunkTraits = (currentLanguage, lexicalOnly) => {
   let stChTraitsRefByLang = refObj.structureChunkTraits[currentLanguage];
   let stChTraitsRefAll = refObj.structureChunkTraits["ALL"];
@@ -62,6 +80,8 @@ exports.getStructureChunkTraits = (currentLanguage, lexicalOnly) => {
     stChTraitsRefByLang,
     stChTraitsRefAll
   );
+
+  refFxn.duplicateTraitKeys(res);
 
   if (lexicalOnly) {
     let trimmedRes = {};
@@ -282,6 +302,10 @@ exports.giveAdjustedTraitValue = (
   traitKey,
   traitValue
 ) => {
+  if (traitKey === "semanticGender") {
+    traitKey = "gender";
+  }
+
   if (
     refObj.traitValueTranslation[questionLanguage] &&
     refObj.traitValueTranslation[questionLanguage][answerLanguage]

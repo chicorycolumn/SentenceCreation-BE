@@ -2772,8 +2772,6 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "nco-1",
         specificIds: ["pol-nco-012-cebula", "pol-nco-011-nedved"],
-        // number: ["singular"],
-        gcase: ["nom"],
       },
       {
         chunkId: "adj-1",
@@ -2796,8 +2794,6 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "npe-1",
         specificIds: ["pol-npe-015-lekarz"],
-        // number: ["singular"],
-        gcase: ["nom"],
       },
       {
         chunkId: "adj-1",
@@ -2820,9 +2816,6 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "npe-1",
         specificIds: ["pol-npe-013-parentaroonie"],
-        // gender: ["f"],
-        // number: ["plural"],
-        gcase: ["nom"],
       },
       {
         chunkId: "adj-1",

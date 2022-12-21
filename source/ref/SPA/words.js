@@ -27,6 +27,7 @@ exports.wordsBank = {
       lemma: "padre",
       id: "spa-npe-002-padre-€",
       gender: "m",
+      semanticGender: "_VypernymGenders",
       //notes
 
       //inflections
@@ -46,6 +47,7 @@ exports.wordsBank = {
       lemma: "medico",
       id: "spa-npe-001-medico-€",
       gender: "m",
+      semanticGender: "_VypernymGenders",
       //notes
 
       //inflections
@@ -95,12 +97,12 @@ exports.wordsBank = {
       inflections: {
         simple: {
           singular: {
-            m: { nom: "rojo" },
-            f: { nom: "roja" },
+            m: "rojo",
+            f: "roja",
           },
           plural: {
-            virile: { nom: "rojos" },
-            nonvirile: { nom: "rojas" },
+            virile: "rojos",
+            nonvirile: "rojas",
           },
         },
         comparative: false,

@@ -8,6 +8,7 @@ const ivUtils = require("../utils/secondOrder/inputValidationUtils.js");
 const pvUtils = require("../utils/secondOrder/processValidationUtils.js");
 const frUtils = require("../utils/formattingResponseUtils.js");
 const refObj = require("../utils/reference/referenceObjects.js");
+const refFxn = require("../utils/reference/referenceFunctions.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 
 exports.fetchPalette = (req) => {
@@ -80,7 +81,8 @@ exports.fetchPalette = (req) => {
     { currentLanguage: questionLanguage },
     questionSentenceFormula,
     words,
-    { multipleMode, forceMultipleModeAndQuestionOnly }
+    { multipleMode, forceMultipleModeAndQuestionOnly },
+    !!allCounterfactualResults
   );
 
   consol.log("smdv questionSentenceData", questionSentenceData);
@@ -203,7 +205,7 @@ exports.fetchPalette = (req) => {
       questionSentenceData.questionOutputArr.map((unit) => unit.structureChunk)
     );
 
-    //Check that all chunks are appropriately decanted.
+    //Check that all chunks are appropriately decanted. //gamma tidy this into own fxn pvUtils.checkDecant
     questionSentenceData.questionOutputArr.forEach((unit) => {
       if (unit.structureChunk.dontSpecifyOnThisChunk) {
         return;
@@ -212,9 +214,8 @@ exports.fetchPalette = (req) => {
       Object.keys(unit.structureChunk).forEach((traitKey) => {
         let traitValue = unit.structureChunk[traitKey];
 
-        let reference =
-          refObj.structureChunkTraits[questionLanguage][traitKey] ||
-          refObj.structureChunkTraits["ALL"][traitKey];
+        const reference =
+          refFxn.getStructureChunkTraits(questionLanguage)[traitKey];
 
         if (
           reference.expectedTypeOnStCh === "array" &&
@@ -349,7 +350,9 @@ exports.fetchPalette = (req) => {
         },
         answerSentenceFormula,
         words,
-        { multipleMode, forceMultipleModeAndQuestionOnly }
+        { multipleMode, forceMultipleModeAndQuestionOnly },
+        !!allCounterfactualResults,
+        questionSentenceData.questionOutputArr
       );
 
       if ("check") {
@@ -414,6 +417,15 @@ exports.fetchPalette = (req) => {
   }
 
   if (allCounterfactualResults) {
+    consol.logSpecial(
+      3,
+      "[1;33m " + `kcaw Counterfactual got QUESTION` + "[0m",
+      questionSentenceData.questionOutputArr.map((ou) => ou.selectedWord),
+      "[1;33m " + `and ANSWER` + "[0m",
+      answerSentenceData.answerOutputArrays.map((oarray) =>
+        oarray.map((ou) => ou.selectedWord)
+      )
+    );
     allCounterfactualResults.push({
       counterfactualSitSchematic,
       questionSentenceData,

@@ -2511,6 +2511,10 @@ describe("/api", function () {
             "My doctor's doctor had been a woman.",
             "My doctor's doctor has been a woman.",
             "My doctor's doctor was being a woman.",
+            "My doctor's doctor was a lady.",
+            "My doctor's doctor had been a lady.",
+            "My doctor's doctor has been a lady.",
+            "My doctor's doctor was being a lady.",
           ],
           POL: [
             "Lekarka mojego lekarza była kobietą.",
@@ -2534,6 +2538,10 @@ describe("/api", function () {
             "My doctor's doctor had been a woman.",
             "My doctor's doctor has been a woman.",
             "My doctor's doctor was being a woman.",
+            "My doctor's doctor was a lady.",
+            "My doctor's doctor had been a lady.",
+            "My doctor's doctor has been a lady.",
+            "My doctor's doctor was being a lady.",
           ],
           POL: [
             "Lekarka mojego lekarza była kobietą.",

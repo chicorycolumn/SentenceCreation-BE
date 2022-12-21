@@ -21,12 +21,12 @@ exports.validateSentenceFormula = (sentenceFormula, lang) => {
       );
     }
 
+    let structureChunkTraitsRef = refFxn.getStructureChunkTraits(lang);
+
     Object.keys(structureChunk).forEach((traitKey) => {
       let traitValue = structureChunk[traitKey];
 
-      let reference =
-        refObj.structureChunkTraits[lang][traitKey] ||
-        refObj.structureChunkTraits["ALL"][traitKey];
+      let reference = structureChunkTraitsRef[traitKey];
 
       try {
         reference.needsNoValidation;

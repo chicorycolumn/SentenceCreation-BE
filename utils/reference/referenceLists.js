@@ -56,6 +56,7 @@ exports.metaCorrectionRef = {
           _PersonalGenders: "_PersonalSingularGenders",
           _PersonalSingularGenders: "_PersonalSingularGenders",
           _PersonalPluralGenders: false,
+          _VypernymGenders: "m",
         },
       },
       {
@@ -67,6 +68,8 @@ exports.metaCorrectionRef = {
           _PersonalGenders: "_PersonalPluralGenders",
           _PersonalSingularGenders: false,
           _PersonalPluralGenders: "_PersonalPluralGenders",
+          _VypernymGenders: "virile",
+          // _VypernymGenders: "_PersonalPluralGenders", //nix this under Garibaldi Revelation
         },
       },
     ],
@@ -82,6 +85,7 @@ exports.metaCorrectionRef = {
           _PersonalGenders: "_PersonalSingularGenders",
           _PersonalSingularGenders: "_PersonalSingularGenders",
           _PersonalPluralGenders: false,
+          _VypernymGenders: "m",
         },
       },
       {
@@ -93,6 +97,8 @@ exports.metaCorrectionRef = {
           _PersonalGenders: "_PersonalPluralGenders",
           _PersonalSingularGenders: false,
           _PersonalPluralGenders: "_PersonalPluralGenders",
+          _VypernymGenders: "virile",
+          // _VypernymGenders: "_PersonalPluralGenders", //nix this under Garibaldi Revelation
         },
       },
     ],
@@ -109,6 +115,7 @@ exports.metaCorrectionRef = {
           _PersonalGenders: "_PersonalSingularGenders",
           _PersonalSingularGenders: "_PersonalSingularGenders",
           _PersonalPluralGenders: false,
+          _VypernymGenders: "m1",
         },
       },
       {
@@ -121,6 +128,8 @@ exports.metaCorrectionRef = {
           _PersonalGenders: "_PersonalPluralGenders",
           _PersonalSingularGenders: false,
           _PersonalPluralGenders: "_PersonalPluralGenders",
+          _VypernymGenders: "virile",
+          // _VypernymGenders: "_PersonalPluralGenders", //nix this under Garibaldi Revelation
         },
       },
     ],
@@ -161,6 +170,11 @@ exports.metaTraitValues = {
 
       _SingularGendersExcludingNeuter: ["m", "f"],
       _MasculineSingularGenders: ["m"],
+      _VypernymGenders: [
+        "m",
+        "virile",
+        //  "nonvirile" //nix this under Garibaldi Revelation
+      ],
     },
   },
   SPA: {
@@ -190,6 +204,11 @@ exports.metaTraitValues = {
 
       _SingularGendersExcludingNeuter: ["m", "f"],
       _MasculineSingularGenders: ["m"],
+      _VypernymGenders: [
+        "m",
+        "virile",
+        // "nonvirile" //nix this under Garibaldi Revelation
+      ],
     },
   },
   POL: {
@@ -238,6 +257,11 @@ exports.metaTraitValues = {
 
       _SingularGendersExcludingNeuter: ["m1", "m2", "m3", "f", "f", "f"],
       _MasculineSingularGenders: ["m1", "m2", "m3"],
+      _VypernymGenders: [
+        "m1",
+        "virile",
+        // "nonvirile" //nix this under Garibaldi Revelation
+      ],
     },
   },
 };
@@ -276,13 +300,19 @@ exports.lemmaObjectTraitKeys = {
         "aspect",
         "tenseDescription",
       ],
-      pronombre: ["person", "number", "gender", "gcase"],
+      pronombre: ["person", "number", "gender", "semanticGender", "gcase"],
     },
     allowableTransfersFromQuestionStructure: {
       nounCommon: ["number"],
-      nounPerson: ["number"],
-      adjective: ["form", "number", "gender"],
-      verb: ["tenseDescription", "person", "number", "gender"],
+      nounPerson: ["number", "semanticGender", "virilityDetail"],
+      adjective: ["form", "number", "gender", "semanticGender"],
+      verb: [
+        "tenseDescription",
+        "person",
+        "number",
+        "gender",
+        "semanticGender",
+      ],
       pronombre: ["person", "number", "gender"],
       preposition: [],
     },
@@ -305,7 +335,7 @@ exports.lemmaObjectTraitKeys = {
     inflectionChains: {
       nounCommon: ["number", "gcase"],
       nounPerson: ["number", "gcase"],
-      adjective: ["form", "number", "gender", "gcase"],
+      adjective: ["form", "number", "gender"],
       verb: ["form", "tense", "gender", "person", "number"], // "gender" will be _Genders for in all tenses except pastParticiple ie hechas, escritos.
       pronombre: ["form", "person", "number", "gender", "gcase"],
       article: ["form", "number", "gender"],
@@ -322,15 +352,21 @@ exports.lemmaObjectTraitKeys = {
         "gender", // Los libros son escritos. --> "libros" gives gender and number to "escritos"
         // "tenseDescription" // epsilon add this, and to ENG too?
       ],
-      pronombre: ["person", "number", "gender", "gcase"],
+      pronombre: ["person", "number", "gender", "semanticGender", "gcase"],
       article: ["number", "gender"],
     },
     allowableTransfersFromQuestionStructure: {
       nounCommon: ["number"],
-      nounPerson: ["number"],
-      adjective: ["form", "number", "gender"],
-      verb: ["tenseDescription", "person", "number", "gender"],
-      pronombre: ["form", "person", "number", "gender"],
+      nounPerson: ["number", "semanticGender", "virilityDetail"],
+      adjective: ["form", "number", "gender", "semanticGender"],
+      verb: [
+        "tenseDescription",
+        "person",
+        "number",
+        "gender",
+        "semanticGender",
+      ],
+      pronombre: ["form", "person", "number", "gender", "semanticGender"],
       article: [],
       preposition: [],
     },
@@ -364,15 +400,21 @@ exports.lemmaObjectTraitKeys = {
       nounPerson: ["number", "gcase", "gender"],
       adjective: [],
       verb: ["tense", "person", "number"],
-      pronombre: ["person", "number", "gender", "gcase"],
+      pronombre: ["person", "number", "gender", "semanticGender", "gcase"],
       article: ["number"],
     },
     allowableTransfersFromQuestionStructure: {
       nounCommon: ["number"],
-      nounPerson: ["number"],
+      nounPerson: ["number", "semanticGender", "virilityDetail"],
       adjective: ["form"],
-      verb: ["tenseDescription", "person", "number", "gender"],
-      pronombre: ["form", "person", "number", "gender"],
+      verb: [
+        "tenseDescription",
+        "person",
+        "number",
+        "gender",
+        "semanticGender",
+      ],
+      pronombre: ["form", "person", "number", "gender", "semanticGender"],
       article: [],
       preposition: [],
     },
@@ -546,6 +588,27 @@ exports.structureChunkTraits = {
       expectedTypeOnStCh: "boolean",
       compatibleWordtypes: ["pronombre"],
     },
+    hypernymy: {
+      expectedTypeOnStCh: "string",
+      compatibleWordtypes: ["nounPerson"],
+      possibleTraitValuesPerWordtype: {
+        nounPerson: ["hypernym", "vypernym", "hyponym", "vyponym"],
+      },
+    },
+    virilityDetail: {
+      expectedTypeOnStCh: "array",
+      compatibleWordtypes: ["nounPerson"],
+      possibleTraitValuesPerWordtype: {
+        nounPerson: ["mixed", "males", " males ", "male", " male "],
+      },
+    },
+    semanticGender: {
+      expectedTypeOnStCh: "array",
+      compatibleWordtypes: ["nounPerson"],
+      possibleTraitValuesPerWordtype: {
+        nounPerson: ["m", "m1", "m2", "m3", "f", "virile", "nonvirile"],
+      },
+    },
   },
   POL: {
     //
@@ -612,17 +675,17 @@ exports.structureChunkTraits = {
         "m2",
         "m3",
         "f",
-        "f",
-        "f",
+        // "f",
+        // "f",
         "n",
-        "n",
-        "n",
+        // "n",
+        // "n",
         "virile",
-        "virile",
-        "virile",
+        // "virile",
+        // "virile",
         "nonvirile",
-        "nonvirile",
-        "nonvirile",
+        // "nonvirile",
+        // "nonvirile",
       ],
     },
     number: {
@@ -899,6 +962,12 @@ exports.getNounGenderTraitValues = (wordtypeShorthand) => {
   };
 
   return ref[wordtypeShorthand];
+};
+
+exports.malePersonsInThisLanguageHaveWhatGender = {
+  POL: "m1",
+  ENG: "m",
+  SPA: "m",
 };
 
 exports.wordtypeShorthandTranslation = {
