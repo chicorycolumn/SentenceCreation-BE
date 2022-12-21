@@ -609,7 +609,6 @@ exports.dummySentenceFormulasBank = [
         person: ["1per"],
         number: ["singular"],
         gender: ["m"],
-        gcase: ["nom"],
       },
     ],
     primaryOrders: [],
@@ -626,7 +625,6 @@ exports.dummySentenceFormulasBank = [
         person: ["1per"],
         number: ["singular"],
         gender: ["m"],
-        gcase: ["nom"],
       },
       {
         chunkId: "ver-1",
@@ -650,7 +648,6 @@ exports.dummySentenceFormulasBank = [
         person: ["1per"],
         gender: ["f"],
         number: ["plural"],
-        gcase: ["nom"],
       },
       {
         chunkId: "ver-1",
@@ -673,7 +670,6 @@ exports.dummySentenceFormulasBank = [
         specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
-        gcase: ["nom"],
       },
       {
         chunkId: "ver-1",
@@ -696,7 +692,6 @@ exports.dummySentenceFormulasBank = [
         specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
         number: ["plural"],
-        gcase: ["nom"],
       },
       {
         chunkId: "ver-1",
@@ -719,7 +714,7 @@ exports.dummySentenceFormulasBank = [
         specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
-        gcase: ["nom"],
+
         gender: [],
       },
       {
@@ -743,7 +738,6 @@ exports.dummySentenceFormulasBank = [
         specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
         number: ["plural"],
-        gcase: ["nom"],
       },
       {
         chunkId: "ver-1",
@@ -1279,7 +1273,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         specificIds: ["eng-pro-PERSONAL"],
-        gcase: ["nom"],
+
         number: ["singular"],
         person: ["1per"],
       },
@@ -1300,7 +1294,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         specificIds: ["eng-pro-PERSONAL"],
-        gcase: ["nom"],
+
         number: ["singular"],
         person: ["1per"],
       },
@@ -1321,7 +1315,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         specificIds: ["eng-pro-PERSONAL"],
-        gcase: ["nom"],
+
         number: ["singular"],
         person: ["1per"],
       },
@@ -1342,7 +1336,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         specificIds: ["eng-pro-PERSONAL"],
-        gcase: ["nom"],
+
         number: ["singular"],
         person: ["3per"],
       },
@@ -1363,7 +1357,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         specificIds: ["eng-pro-PERSONAL"],
-        gcase: ["nom"],
+
         number: ["singular"],
         person: ["3per"],
       },
@@ -1384,7 +1378,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         specificIds: ["eng-pro-PERSONAL"],
-        gcase: ["nom"],
+
         number: ["plural"],
         person: ["1per"],
       },
@@ -1412,7 +1406,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "pro-1",
         specificIds: ["eng-pro-PERSONAL"],
-        gcase: ["nom"],
+
         number: ["plural"],
         person: ["1per"],
       },
@@ -2079,7 +2073,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-        gcase: ["nom"],
+
         number: ["singular", "plural"],
         gender: [],
       },

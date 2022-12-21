@@ -6,7 +6,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-        gcase: ["nom"],
+
         number: ["singular"],
         gender: [],
       },
@@ -28,7 +28,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-        gcase: ["nom"],
+
         number: ["singular"],
         gender: [],
       },
@@ -50,7 +50,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "nco-1",
         andTags: ["wearable"],
-        gcase: ["nom"],
+
         number: ["singular"],
         blockedLemmaObjectTypes: ["tantumPlurale"],
         gender: [],
@@ -81,7 +81,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-        gcase: ["nom"],
+
         number: ["plural"],
         gender: ["m1"],
       },
@@ -103,7 +103,6 @@ exports.sentenceFormulasBank = [
         chunkId: "nco-1",
         andTags: ["edible"],
 
-        gcase: ["nom"],
         number: ["singular"],
         gender: [],
       },
@@ -125,7 +124,6 @@ exports.sentenceFormulasBank = [
         chunkId: "nco-1",
         andTags: ["edible"],
 
-        gcase: ["nom"],
         number: ["plural"],
         gender: [],
       },
@@ -147,7 +145,6 @@ exports.sentenceFormulasBank = [
         chunkId: "nco-1",
         andTags: ["edible"],
 
-        gcase: ["nom"],
         number: ["singular"],
         gender: [],
       },
@@ -169,7 +166,6 @@ exports.sentenceFormulasBank = [
         chunkId: "npe-1",
         andTags: ["personTest1"],
 
-        gcase: ["nom"],
         number: ["plural"],
         gender: [],
       },
@@ -212,7 +208,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-        gcase: ["nom"],
+
         number: ["singular", "plural"],
         gender: ["f"],
       },
@@ -233,7 +229,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-        gcase: ["nom"],
+
         number: ["plural"],
         gender: [],
       },
@@ -256,7 +252,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-        gcase: ["nom"],
+
         number: ["singular"],
       },
       {
@@ -297,7 +293,6 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-        gcase: ["nom"],
       },
       {
         chunkId: "ver-1",
@@ -329,8 +324,6 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-
-        gcase: ["nom"],
       },
       { chunkId: "fix-1", chunkValue: "nie" },
       {
@@ -371,8 +364,6 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-
-        gcase: ["nom"],
       },
       { chunkId: "fix-1", chunkValue: "nie" },
       {
@@ -407,7 +398,6 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-        gcase: ["nom"],
       },
       {
         chunkId: "ver-1",
@@ -427,7 +417,6 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-        gcase: ["nom"],
       },
       {
         chunkId: "ver-1",
@@ -447,7 +436,6 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-        gcase: ["nom"],
       },
       {
         chunkId: "ver-1",
@@ -467,7 +455,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-        gcase: ["nom"],
+
         number: [],
         gender: ["f"],
       },
@@ -490,7 +478,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-        gcase: ["nom"],
+
         number: ["singular", "plural"],
       },
       {
@@ -511,7 +499,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-        gcase: ["nom"],
+
         number: ["singular", "plural"],
       },
       {
@@ -685,7 +673,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "nco-1",
         specificIds: ["pol-nco-017-drzwi"],
-        gcase: ["nom"],
+
         number: [],
       },
     ],
@@ -984,7 +972,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["family"],
-        gcase: ["nom"],
+
         number: ["singular"],
       },
       {
@@ -1030,7 +1018,6 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1-Father",
         andTags: ["family"],
-        gcase: ["nom"],
       },
       {
         chunkId: "ver-1-Gave",
@@ -1085,7 +1072,6 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1-Doctor",
 
-        gcase: ["nom"],
         specificIds: ["pol-npe-015-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
       },
@@ -1148,7 +1134,6 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1-doctor",
 
-        gcase: ["nom"],
         number: ["singular"],
         specificIds: ["pol-npe-015-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
@@ -1165,7 +1150,6 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-2-doctor",
 
-        gcase: ["nom"],
         number: ["singular"],
         specificIds: ["pol-npe-015-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
@@ -1203,11 +1187,11 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-1-doctor",
-        gcase: ["nom"],
+
         number: ["singular"],
         specificIds: ["pol-npe-015-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
-        gcase: ["nom"],
+
         gender: ["f"],
         educatorBlocksAnnotationsForTheseTraitKeys: ["gender"], //Just for symmetry and so I know it doesn't break anything.
       },
@@ -1247,11 +1231,10 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1-doctor",
 
-        gcase: ["nom"],
         number: ["singular"],
         specificIds: ["pol-npe-015-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
-        gcase: ["nom"],
+
         gender: ["f"],
       },
     ],
@@ -1277,11 +1260,11 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-1-doctor",
-        gcase: ["nom"],
+
         number: ["singular"],
         specificIds: ["pol-npe-015-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
-        gcase: ["nom"],
+
         gender: ["f"],
         educatorBlocksAnnotationsForTheseTraitKeys: ["gender"], //Just for symmetry and so I know it doesn't break anything.
       },
@@ -1330,7 +1313,6 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-2-doctor",
 
-        gcase: ["nom"],
         number: ["singular"],
         specificIds: ["pol-npe-015-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
@@ -1510,11 +1492,10 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1-doctor",
 
-        gcase: ["nom"],
         number: ["singular"],
         specificIds: ["pol-npe-015-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
-        gcase: ["nom"],
+
         educatorBlocksAnnotationsForTheseTraitKeys: ["gender", "number"],
       },
       { chunkId: "fix-1-and", chunkValue: "i" },
@@ -1527,10 +1508,9 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "nco-2-book",
-        gcase: ["nom"],
+
         number: ["singular"],
         specificIds: ["pol-nco-016-książka"],
-        gcase: ["nom"],
       },
     ],
     primaryOrders: [
@@ -1558,11 +1538,9 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1-doctor",
 
-        gcase: ["nom"],
         number: ["singular"],
         specificIds: ["pol-npe-015-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
-        gcase: ["nom"],
       },
       { chunkId: "fix-1-and", chunkValue: "i" },
       {
@@ -1574,10 +1552,9 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "nco-2-book",
-        gcase: ["nom"],
+
         number: ["singular"],
         specificIds: ["pol-nco-016-książka"],
-        gcase: ["nom"],
       },
     ],
     primaryOrders: [
@@ -1605,11 +1582,10 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1-doctor",
 
-        gcase: ["nom"],
         number: ["singular"],
         specificIds: ["pol-npe-015-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
-        gcase: ["nom"],
+
         // gender: ["f"],
       },
     ],
@@ -1636,10 +1612,10 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "nco-1-onion",
         //
-        // gcase: ["nom"],
+        //
         number: ["singular"],
         specificIds: ["pol-nco-012-cebula"],
-        // gcase: ["nom"],
+        //
         // gender: ["f"],
       },
     ],

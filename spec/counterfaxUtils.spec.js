@@ -131,7 +131,6 @@ xdescribe("listCounterfaxSituations", () => {
         structureChunk: {
           chunkId: "pro-1",
           specificIds: ["eng-pro-PERSONAL"],
-          gcase: ["nom"],
           number: ["plural"],
           person: ["1per"],
           dontSpecifyOnThisChunk: true,
@@ -501,7 +500,6 @@ xdescribe("listCounterfaxSituations", () => {
         structureChunk: {
           chunkId: "pro-1",
           specificIds: ["eng-pro-PERSONAL"],
-          gcase: ["nom"],
           number: ["plural"],
           person: ["1per"],
           dontSpecifyOnThisChunk: true,

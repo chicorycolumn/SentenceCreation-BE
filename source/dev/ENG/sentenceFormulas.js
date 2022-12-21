@@ -13,7 +13,6 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-        gcase: ["nom"],
         number: ["singular", "plural"],
         gender: [],
       },
@@ -41,7 +40,6 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-        gcase: ["nom"],
         number: ["singular", "plural"],
       },
       {
