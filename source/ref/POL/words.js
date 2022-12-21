@@ -92,6 +92,7 @@ exports.wordsBank = {
       lemma: "rodzic",
       id: "pol-npe-013-rodzic-£",
       gender: "m1",
+      semanticGender: "_PersonalGenders",
       //notes
 
       //inflections
@@ -180,6 +181,7 @@ exports.wordsBank = {
       lemma: "lekarz",
       id: "pol-npe-015-lekarz-€",
       gender: "m1",
+      semanticGender: "_VypernymGenders",
       //notes
 
       //inflections

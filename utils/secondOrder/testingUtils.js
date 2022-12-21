@@ -7,8 +7,9 @@ const consol = require("../zerothOrder/consoleLoggingUtils.js");
 const { it } = require("mocha");
 const testingUtils = require("./testingUtils.js");
 
-exports.checkProportions = (res, ref) => {
-  let printout = {};
+exports.checkProportions = (res, ref, strictAboutAnnotations) => {
+  let printoutGood = {};
+  let printoutBad = {};
   let rec = {};
 
   ref.forEach((refArr) => {
@@ -19,19 +20,57 @@ exports.checkProportions = (res, ref) => {
 
     let upperBound = target + target * variance;
     let lowerBound = target - target * variance;
-    let actual = res.filter((str) => values.includes(str)).length / res.length;
+    let actual =
+      res.filter((str) => {
+        if (!strictAboutAnnotations) {
+          let strWithoutAnnotations = "";
+          let cease;
+          str.split("").forEach((char) => {
+            if (!cease && char !== "(") {
+              strWithoutAnnotations += char;
+            } else {
+              cease = true;
+            }
+          });
+
+          if (cease) {
+            strWithoutAnnotations = strWithoutAnnotations.slice(0, -1) + ".";
+          }
+
+          str = strWithoutAnnotations;
+        }
+
+        return values.includes(str);
+      }).length / res.length;
 
     rec[name] = {
       actual,
       upperBound,
       lowerBound,
     };
-    printout[name] = `${uUtils.round(actual)} ${
-      lowerBound <= actual && actual <= upperBound ? "yes" : "not"
-    } in ${uUtils.round(lowerBound)}-${uUtils.round(upperBound)}`;
+    let bool = lowerBound <= actual && actual <= upperBound;
+    let str = bool ? "" : " not";
+    let toPrint = `${uUtils.round(actual)}${str} in ${uUtils.round(
+      lowerBound
+    )}-${uUtils.round(upperBound)}`;
+
+    if (bool) {
+      printoutGood[name] = toPrint;
+    } else {
+      printoutBad[name] = toPrint;
+    }
   });
 
-  consol.logTestOutputSolely("checkProportions:", printout);
+  consol.logTestOutputSolely("");
+  consol.logTestOutputSolely("checkProportions:");
+  if (Object.keys(printoutBad).length) {
+    consol.logTestOutputSolely("😰 BAD:", printoutBad);
+    consol.logTestOutputSolely("");
+  }
+  if (Object.keys(printoutGood).length) {
+    consol.logTestOutputSolely("😀 GOOD:", printoutGood);
+    consol.logTestOutputSolely("");
+  }
 
   Object.keys(rec).forEach((name) => {
     let { actual, upperBound, lowerBound } = rec[name];

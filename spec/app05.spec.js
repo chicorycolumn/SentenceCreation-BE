@@ -102,7 +102,7 @@ const dummy72a = [
     POL: ["Czerwone cebule."],
   },
 ];
-const dummy72bSpaPolBoth = [
+const dummy72bSpaPol = [
   {
     POL: ["Czerwony lekarz."],
     SPA: ["Rojo medico."],
@@ -113,6 +113,36 @@ const dummy72bSpaPolBoth = [
   },
   {
     POL: ["Czerwoni lekarze."],
+    SPA: ["Rojos medicos (males)."],
+  },
+  {
+    POL: ["Czerwoni lekarze."],
+    SPA: ["Rojos medicos."],
+  },
+  {
+    POL: ["Czerwone lekarki."],
+    SPA: ["Rojas medicas."],
+  },
+];
+const dummy72bPolSpa = [
+  {
+    POL: ["Czerwony lekarz."],
+    SPA: ["Rojo medico."],
+  },
+  {
+    POL: ["Czerwona lekarka."],
+    SPA: ["Roja medica."],
+  },
+  {
+    POL: ["Czerwoni lekarze."],
+    SPA: ["Rojos medicos."],
+  },
+  {
+    POL: ["Czerwoni lekarze (mixed)."],
+    SPA: ["Rojos medicos."],
+  },
+  {
+    POL: ["Czerwoni lekarze (males)."],
     SPA: ["Rojos medicos."],
   },
   {
@@ -175,6 +205,7 @@ const dummy72cRefSpaPol = [
   { POL: ["Czerwona matka."], SPA: ["Roja madre."] },
   { POL: ["Czerwone matki."], SPA: ["Rojas madres."] },
   { POL: ["Czerwony ojciec.", "Czerwony rodzic."], SPA: ["Rojo padre."] },
+  { POL: ["Czerwony ojciec."], SPA: ["Rojo padre (male)."] },
   {
     POL: ["Czerwoni ojcowie.", "Czerwoni rodzice."],
     SPA: ["Rojos padres."],
@@ -182,7 +213,15 @@ const dummy72cRefSpaPol = [
   { POL: ["Czerwoni ojcowie."], SPA: ["Rojos padres (males)."] },
   { POL: ["Czerwoni rodzice."], SPA: ["Rojos padres (mixed)."] },
 ];
-const dummy72cRefEngPolBoth = [
+const dummy72cRefEngPol = [
+  { ENG: ["Red mother."], POL: ["Czerwona matka."] },
+  { ENG: ["Red mothers."], POL: ["Czerwone matki."] },
+  { ENG: ["Red father."], POL: ["Czerwony ojciec."] },
+  { ENG: ["Red fathers."], POL: ["Czerwoni ojcowie."] },
+  { ENG: ["Red parents."], POL: ["Czerwoni rodzice."] },
+  { ENG: ["Red parent."], POL: ["Czerwony rodzic."] },
+];
+const dummy72cRefPolEng = [
   { ENG: ["Red mother."], POL: ["Czerwona matka."] },
   { ENG: ["Red mothers."], POL: ["Czerwone matki."] },
   { ENG: ["Red father."], POL: ["Czerwony ojciec."] },
@@ -206,8 +245,9 @@ const dummy72cRefSpaEng = [
   { ENG: ["Red mother."], SPA: ["Roja madre."] },
   { ENG: ["Red mothers."], SPA: ["Rojas madres."] },
   { ENG: ["Red father.", "Red parent."], SPA: ["Rojo padre."] },
+  { ENG: ["Red father."], SPA: ["Rojo padre (male)."] },
   { ENG: ["Red fathers.", "Red parents."], SPA: ["Rojos padres."] },
-  { ENG: ["Red fathers."], SPA: ["Rojos padres (fathers)."] },
+  { ENG: ["Red fathers."], SPA: ["Rojos padres (males)."] },
   { ENG: ["Red parents."], SPA: ["Rojos padres (mixed)."] },
 ];
 
@@ -231,10 +271,10 @@ describe("/api", function () {
 
   describe("/palette - Stage 24-ii: Spanish basic. Hypernyms and Vypernyms", () => {
     it("#pal24-02a GET 200 YES: Polspa. Red doctor (MGN).", () => {
-      return runPaletteTest("POL", "SPA", "dummy72b", dummy72bSpaPolBoth);
+      return runPaletteTest("POL", "SPA", "dummy72b", dummy72bPolSpa);
     });
     it("#pal24-02b GET 200 YES: Spapol. Red doctor (MGN).", () => {
-      return runPaletteTest("SPA", "POL", "dummy72b", dummy72bSpaPolBoth);
+      return runPaletteTest("SPA", "POL", "dummy72b", dummy72bSpaPol);
     });
     it("#pal24-02c GET 200 YES: Engspa. Red doctor (MGN).", () => {
       return runPaletteTest("ENG", "SPA", "dummy72b", dummy72bEngSpa);
@@ -258,14 +298,14 @@ describe("/api", function () {
       return runPaletteTest("SPA", "ENG", "dummy72c", dummy72cRefSpaEng);
     });
     it("#pal24-03e GET 200 YES: Enpol. Red mother (Vypernym).", () => {
-      return runPaletteTest("ENG", "POL", "dummy72c", dummy72cRefEngPolBoth);
+      return runPaletteTest("ENG", "POL", "dummy72c", dummy72cRefEngPol);
     });
     it("#pal24-03f GET 200 YES: Poleng. Red mother (Vypernym).", () => {
-      return runPaletteTest("POL", "ENG", "dummy72c", dummy72cRefEngPolBoth);
+      return runPaletteTest("POL", "ENG", "dummy72c", dummy72cRefPolEng);
     });
   });
 
-  describe("/palette - Stage 24-iv: Spanish basic. Test Hypernym Vypernym Hyponym Vyponym probabilities.", () => {
+  describe("/palette - Stage 24-iv: Spanish basic. Test Hypernym Vypernym Hyponym Vyponym proportions.", () => {
     it("#pal24-04a GET 200 YES: Polspa. Red mother (Vypernym).", () => {
       return Promise.all(
         promiseAllMultiplier(200, () => {

@@ -208,22 +208,35 @@ exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
           )
         );
 
-        if (annoTraitKey === "gender") {
-          let tempObj = {
-            gender: counterfactualTraitValuesForThisTraitKey,
-            isPerson: questionOutputUnit.structureChunk.isPerson,
-            chunkId: questionOutputUnit.structureChunk.chunkId,
-            person: questionOutputUnit.structureChunk.person,
-          };
-          allLangUtils.enforceIsPerson(
-            tempObj,
-            Object.keys(questionOutputUnit.structureChunk.annotations).includes(
-              "person"
-            ) // If "person" is an annotation (and stCh is pronoun),
-            //then this can be "3per", which would mean we don't want to enforce isPerson ie removing "n" from gender counterfaxes.
-          );
-          counterfactualTraitValuesForThisTraitKey = tempObj.gender;
-        }
+        ["gender", "semanticGender"].forEach((genderTraitKey) => {
+          if (annoTraitKey === genderTraitKey) {
+            let tempObj = {
+              gender: counterfactualTraitValuesForThisTraitKey,
+              isPerson: questionOutputUnit.structureChunk.isPerson,
+              chunkId: questionOutputUnit.structureChunk.chunkId,
+              person: questionOutputUnit.structureChunk.person,
+            };
+            allLangUtils.enforceIsPerson(
+              tempObj,
+              Object.keys(
+                questionOutputUnit.structureChunk.annotations
+              ).includes("person") // If "person" is an annotation (and stCh is pronoun),
+              //then this can be "3per", which would mean we don't want to enforce isPerson ie removing "n" from gender counterfaxes.
+            );
+            counterfactualTraitValuesForThisTraitKey = tempObj.gender;
+
+            if (genderTraitKey === "semanticGender") {
+              //Alpha parametrise this so not hardcoded POL here.
+
+              //Fix for POL issue where counterfax sits were being generated using ["m","m1","f","virile","nonvirile"]
+              //The "m" is unnecessary and causes checkthrow "knmo" later down the line.
+              counterfactualTraitValuesForThisTraitKey =
+                counterfactualTraitValuesForThisTraitKey.filter(
+                  (tv) => tv !== "m"
+                );
+            }
+          }
+        });
 
         consol.logSpecial(
           3,
@@ -317,8 +330,9 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
     consol.logSpecial(3, x);
     if (!index) {
       consol.logSpecial(3, "^^^ ORIGINAL ^^^");
+      consol.logSpecial(3, "[1;33m " + `kcab Original=` + x.cfLabel + "[0m");
     }
-    consol.logSpecial(3, "-");
+    consol.logSpecial(3, "");
   });
 
   let questionLanguage = languagesObj.questionLanguage;
@@ -366,7 +380,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           let assignments = counterfactualSitSchematic[chunkId];
           assignments.forEach((assignment) => {
             if (
-              assignment.traitKey === "gender" &&
+              ["gender"].includes(assignment.traitKey) &&
               ["m1", "m2", "m3"].includes(assignment.traitValue)
             ) {
               let stCh = questionOutputArr.find(
@@ -439,43 +453,76 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
         //Drop if bad virility combination.
         counterfactualSitSchematic[chunkId].forEach((assignment) => {
-          if (
-            assignment.traitKey === "gender" &&
-            stChToCounterfax.number &&
-            stChToCounterfax.number.length
-          ) {
-            if (stChToCounterfax.number.length > 1) {
-              consol.throw("mkdo");
-            }
+          if (shouldDrop) {
+            return;
+          }
 
-            let incompatibleTraitsRef =
-              refObj.incompatibleTraitsRef[questionLanguage].gender.number;
-
+          ["semanticGender"].forEach((genderTraitKey) => {
+            //Garibaldi part 2
             if (
-              !incompatibleTraitsRef[stChToCounterfax.number[0]].includes(
-                stChToCounterfax.gender[0]
-              )
+              ["vypernym"].includes(stChToCounterfax.hypernymy) &&
+              assignment.traitKey === genderTraitKey &&
+              ["f", "nonvirile"].includes(assignment.traitValue)
             ) {
               consol.logSpecial(
                 3,
-                `kcaq Dropping current counterfax sit: "${counterfactualSitSchematic.cfLabel}" ie not send to fetchPalette, 
-                as it has gender [${stChToCounterfax.number}] and number [${stChToCounterfax.gender[0]}].`
+                `kcap Dropping current counterfax sit: "${counterfactualSitSchematic.cfLabel}" ie not send to fetchPalette, 
+                as vypernym cannot have counterfaxed ${genderTraitKey} [${stChToCounterfax[genderTraitKey][0]}].`
               );
               shouldDrop = true;
             }
+          });
+
+          if (shouldDrop) {
+            return;
           }
+
+          ["gender", "semanticGender"].forEach((genderTraitKey) => {
+            if (
+              assignment.traitKey === genderTraitKey &&
+              stChToCounterfax.number &&
+              stChToCounterfax.number.length
+            ) {
+              if (stChToCounterfax.number.length > 1) {
+                consol.throw("mkdo");
+              }
+
+              let incompatibleTraitsRef =
+                refObj.incompatibleTraitsRef[questionLanguage].gender.number;
+
+              if (
+                !incompatibleTraitsRef[stChToCounterfax.number[0]].includes(
+                  stChToCounterfax[genderTraitKey][0]
+                )
+              ) {
+                consol.logSpecial(
+                  3,
+                  `kcaq Dropping current counterfax sit: "${counterfactualSitSchematic.cfLabel}" ie not send to fetchPalette, 
+                as number [${stChToCounterfax.number}] not fit with ${genderTraitKey} [${stChToCounterfax[genderTraitKey][0]}].`
+                );
+                shouldDrop = true;
+              }
+            }
+          });
         });
 
         if (shouldDrop) {
           return;
         }
 
-        consol.logSpecial(3, "--------eggd--------");
-
-        consol.logSpecial(3, "number", stChToCounterfax.number);
-        consol.logSpecial(3, "gender", stChToCounterfax.gender);
+        consol.logSpecial(
+          3,
+          "--------eggd Let's adjustVirilityOfStructureChunk--------\n",
+          "~~~~~~number\n",
+          stChToCounterfax.number,
+          "\n~~~~~~gender\n",
+          stChToCounterfax.gender,
+          "/n~~~~~~semanticGender\n",
+          stChToCounterfax.semanticGender
+        );
 
         allLangUtils.adjustVirilityOfStructureChunk(
+          //Alpha have yet to put semanticGender loop into this fxn too.
           questionLanguage,
           stChToCounterfax,
           true,
@@ -487,10 +534,15 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         //But you will have to do this to original, too, which you don't deal with right here.
         cfUtils.collapseMasculineGenders(questionLanguage, stChToCounterfax);
 
-        consol.logSpecial(3, "↓");
-        consol.logSpecial(3, "gender", stChToCounterfax.gender);
-
-        consol.logSpecial(3, "~~~~~~~~~~~~~~~~~~~~");
+        consol.logSpecial(
+          3,
+          "eggf~~~~~~↓\n",
+          "~~~~~~gender\n",
+          stChToCounterfax.gender,
+          "\n~~~~~~semanticGender\n",
+          stChToCounterfax.semanticGender,
+          "\n~~~~~~~~done adjustVirilityOfStructureChunk~~~~~~~~~~~~"
+        );
 
         //Update the counterfactualSitSchematic assignments now that they may have changed from adjust virility.
         tempCopySchematicForThisChunk.forEach((assignment) => {
@@ -553,6 +605,23 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
       counterfactualQuestionSentenceFormula.sentenceStructure.forEach(
         (stCh) => {
+          if (stCh.demandedIds && stCh.demandedIds.length) {
+            consol.throw(
+              "igtc Wasn't expecting demandedIds to be populated yet."
+            );
+          }
+          if (stCh.specificIds && stCh.specificIds.length) {
+            let demandedId = questionOutputArr.find(
+              (ou) => ou.structureChunk.chunkId === stCh.chunkId
+            ).selectedLemmaObject.id;
+            if (
+              demandedId &&
+              !lfUtils.checkHyper({ id: demandedId }, ["hyponym", "vyponym"])
+            ) {
+              stCh.demandedIds = [demandedId];
+            }
+          }
+
           delete stCh.annotations;
         }
       );
@@ -730,26 +799,46 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
         consol.logSpecial(
           3,
-          `> > > Sending counterfax sit "${body.counterfactualSitSchematic.cfLabel}" to fetchPalette.`
+          "[1;33m " +
+            ` kcad = = = = = = = = = = = = = = = = = = = = = = = = = = = = =\nSending counterfax sit "${body.counterfactualSitSchematic.cfLabel}" to fetchPalette.\n = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =` +
+            "[0m"
         );
+
         runsRecord.push(body.counterfactualSitSchematic.cfLabel);
         palette.fetchPalette({ body });
       });
     }
   );
 
-  consol.logSpecial(
-    3,
-    "ewcc allCounterfactualResults.length",
-    allCounterfactualResults.length
-  );
+  if ("logging") {
+    consol.logSpecial(
+      3,
+      "\nkcax allCounterfactualResults.length: ",
+      allCounterfactualResults.length
+    );
+    allCounterfactualResults.forEach((cfRes) => {
+      consol.logSpecial(
+        3,
+        cfRes.counterfactualSitSchematic.cfLabel,
+        cfRes.questionSentenceData.questionOutputArr.map(
+          (ou) => ou.selectedWord
+        ),
+        cfRes.answerSentenceData.answerOutputArrays.map((oarray) =>
+          oarray.map((ou) => ou.selectedWord)
+        )
+      );
+    });
+    consol.logSpecial(3, "\n");
+  }
 
   if (!allCounterfactualResults.length) {
-    consol.throw("THROW: allCounterfactualResults was empty.");
+    console.log("[1;31m " + "fbms allCounterfactualResults was empty." + "[0m");
+    // consol.throw("fbms allCounterfactualResults was empty.");
+    return;
   }
 
   function findCFResultsWhenAllOtherThingsBeingEqual(
-    allCR,
+    allCfRes,
     originalSit,
     chunkIdToExamine,
     traitKeyToExamine,
@@ -770,29 +859,49 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       traitValue2,
       questionLanguage
     ) {
+      let bool;
+
       if (!(traitKey && traitValue1 && traitValue2)) {
         consol.throw("ocsj");
       }
 
-      if (traitKey === "gender") {
-        let virilityRefWithMetas = uUtils.combineTwoKeyValueObjectsCarefully(
-          refObj.virilityConversionRef[questionLanguage].matches,
-
-          refObj.metaTraitValues[questionLanguage].gender
-        );
-
-        return virilityRefWithMetas[traitValue1].includes(traitValue2);
+      let genderTraitKeys = ["gender"];
+      if (
+        gpUtils.getWordtypeShorthandStCh({ chunkId: chunkIdToExamine }) ===
+        "npe"
+      ) {
+        genderTraitKeys.push("semanticGender");
       }
 
-      return traitValue1 === traitValue2;
+      genderTraitKeys.forEach((genderTraitKey) => {
+        if (bool) {
+          return;
+        }
+
+        if (traitKey === genderTraitKey) {
+          let virilityRefWithMetas = uUtils.combineTwoKeyValueObjectsCarefully(
+            refObj.virilityConversionRef[questionLanguage].matches,
+            refObj.metaTraitValues[questionLanguage].gender // Yes, .gender is intentional.
+          );
+
+          bool = virilityRefWithMetas[traitValue1].includes(traitValue2);
+        }
+      });
+
+      if (bool) {
+        return bool;
+      }
+
+      bool = traitValue1 === traitValue2;
+      return bool;
     }
 
-    let resArr = allCR.filter((CR) => {
-      let Cschem = CR.counterfactualSitSchematic;
+    let resArr = allCfRes.filter((cfRes) => {
+      let cfSchem = cfRes.counterfactualSitSchematic;
 
       //We only want counterfax results where the chunk to be coppiced/inosculated has a DIFFERENT value to what it has in original.
       if (
-        Cschem[chunkIdToExamine].find(
+        cfSchem[chunkIdToExamine].find(
           (assig) =>
             assig.traitKey === traitKeyToExamine &&
             areTraitValuesEqual(
@@ -805,6 +914,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             )
         )
       ) {
+        consol.logSpecial(3, `jgos1 REJECT`, cfSchem.cfLabel);
         return false;
       }
 
@@ -812,7 +922,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
       if (
         originalSit.chunkIds.some((chunkId) =>
-          Cschem[chunkId].some(
+          cfSchem[chunkId].some(
             (assig) =>
               !(
                 assig.traitKey === traitKeyToExamine &&
@@ -829,8 +939,10 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           )
         )
       ) {
+        consol.logSpecial(3, `jgos2 REJECT`, cfSchem.cfLabel);
         return false;
       }
+      consol.logSpecial(3, `jgos3 ACCEPT`, cfSchem.cfLabel);
       return true;
     });
 
@@ -838,7 +950,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       consol.throw(
         `#ERR zprr "${questionLanguage}"
           \nOkay look, I'm running findCFResultsWhenAllOtherThingsBeingEqual for chunk "${chunkIdToExamine}", trait "${traitKeyToExamine}".
-          \nThe original sit is    "${originalSit.cfLabel}"    and there are ${allCR.length} counterfax results total.
+          \nThe original sit is    "${originalSit.cfLabel}"    and there are ${allCfRes.length} counterfax results total.
           \nSo I'm filtering that array to just the counterfactual results where
           \na) The chunk to be coppiced/inosculated has a DIFFERENT value to what it has in original, and
           \nb) If chunk to be cop/ino does have a different value to original, all values in all other parts of this counterfax result must be same as original.
@@ -1266,23 +1378,29 @@ exports.makePseudoSentenceObjs = (outputArrObjs, primaryOrders) => {
 };
 
 exports.collapseMasculineGenders = (questionLanguage, stChToCounterfax) => {
-  if (["POL"].includes(questionLanguage)) {
-    if (stChToCounterfax.number && stChToCounterfax.number.length !== 1) {
-      consol.throw("nbii");
-    }
-    if (stChToCounterfax.gender && stChToCounterfax.gender.length !== 1) {
-      consol.throw("nbij");
-    }
+  ["gender"].forEach((genderTraitKey) => {
+    //Epislon - parametrise this so not hardcoded POL here.
+    if (["POL"].includes(questionLanguage)) {
+      if (stChToCounterfax.number && stChToCounterfax.number.length !== 1) {
+        consol.throw("nbii");
+      }
+      if (
+        stChToCounterfax[genderTraitKey] &&
+        stChToCounterfax[genderTraitKey].length !== 1
+      ) {
+        consol.throw("nbij");
+      }
 
-    if (
-      stChToCounterfax.number &&
-      stChToCounterfax.number[0] === "singular" &&
-      stChToCounterfax.number &&
-      ["m1", "m2", "m3"].includes(stChToCounterfax.gender[0])
-    ) {
-      stChToCounterfax.gender = ["m"];
+      if (
+        stChToCounterfax.number &&
+        stChToCounterfax.number[0] === "singular" &&
+        stChToCounterfax.number &&
+        ["m1", "m2", "m3"].includes(stChToCounterfax[genderTraitKey][0])
+      ) {
+        stChToCounterfax[genderTraitKey] = ["m"];
+      }
     }
-  }
+  });
 };
 
 exports.agglomerateAndRemoveAnnosIfSameResults = (

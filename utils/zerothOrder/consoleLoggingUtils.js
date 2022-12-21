@@ -13,7 +13,16 @@ exports.logSpecial = (num, ...args) => {
   let rArgs = process.argv
     .filter((el) => /^r[\d]$/.test(el))
     .map((el) => el[1]);
-  if (rArgs.includes(num.toString())) {
+  if (process.argv.some((el) => el === "r")) {
+    rArgs.push("r");
+  }
+  if (process.argv.some((el) => el === "t")) {
+    rArgs.push("t");
+  }
+  if (
+    rArgs.every((el) => !"tr0123456789".split("").includes(el)) ||
+    rArgs.includes(num.toString())
+  ) {
     console.log(...args);
   }
 };

@@ -2204,8 +2204,6 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "nco-1",
         specificIds: ["eng-nco-002-onion", "pol-nco-001-bear"],
-        // number: ["singular"],
-        gcase: ["nom"],
       },
       {
         chunkId: "adj-1",
@@ -2228,8 +2226,6 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "npe-1",
         specificIds: ["eng-npe-005-doctor"],
-        // number: ["singular"],
-        gcase: ["nom"],
       },
       {
         chunkId: "adj-1",
@@ -2252,9 +2248,6 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "npe-1",
         specificIds: ["eng-npe-003-parentaroonie"],
-        // gender: ["f"],
-        // number: ["plural"],
-        gcase: ["nom"],
       },
       {
         chunkId: "adj-1",

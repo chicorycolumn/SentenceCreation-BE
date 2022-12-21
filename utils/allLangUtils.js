@@ -72,9 +72,23 @@ exports.enforceThirdPersonAgreeWith = (stCh, onlyIfUnpopulated) => {
   }
 };
 
-exports.enforceIsPerson = (stCh, strict) => {
+exports.enforceIsPerson = (stCh, strict, arrOnly, genderTraitKey) => {
+  if (!genderTraitKey) {
+    genderTraitKey = "gender";
+  }
+
+  const _enforceIsPerson = (arr) => {
+    return arr.filter(
+      (genderValue) => !["n", "m2", "m3"].includes(genderValue)
+    );
+  };
+
+  if (arrOnly) {
+    return _enforceIsPerson(arrOnly);
+  }
+
   if (gpUtils.stChIsPerson(stCh, strict)) {
-    stCh.gender = stCh.gender.filter((genderValue) => genderValue !== "n");
+    stCh[genderTraitKey] = _enforceIsPerson(stCh[genderTraitKey]);
   }
 };
 
@@ -95,19 +109,46 @@ exports.translateAnnoTraitValue = (
 
   let annoTraitValue = structureChunk.annotations[annoTraitKey];
 
-  if (annoTraitKey === "gender") {
-    //Removed vito5 in branch step-V-virility-tidying-and-overhaul-aka-vito, as seems obviated by vito2b.
+  let annotationToPlainspeakRef = refFxn.getAnnotationToPlainspeakRef();
 
-    let annotationToPlainspeakRef = refObj.annotationToPlainspeakRef;
-
+  if (Object.keys(annotationToPlainspeakRef).includes(annoTraitKey)) {
+    //gender: Removed vito5 in branch step-V-virility-tidying-and-overhaul-aka-vito, as seems obviated by vito2b.
     let adjustedAnnotation = annotationToPlainspeakRef.gender[annoTraitValue];
 
-    return typeof adjustedAnnotation === "string"
-      ? adjustedAnnotation
-      : uUtils.selectRandom(adjustedAnnotation);
-  } else {
-    return annoTraitValue;
+    if (
+      ["gender", "semanticGender"].includes(annoTraitKey) &&
+      structureChunk.virilityDetail &&
+      structureChunk.virilityDetail.length
+    ) {
+      let plainspeakAnno = structureChunk.virilityDetail[0].trim();
+
+      consol.logSpecial(
+        8,
+        `pwmi "${structureChunk.chunkId}" Setting plainspeakAnno to "${plainspeakAnno}".`
+      );
+
+      return plainspeakAnno;
+    }
+
+    let plainspeakAnno =
+      typeof adjustedAnnotation === "string"
+        ? adjustedAnnotation
+        : uUtils.selectRandom(adjustedAnnotation);
+
+    consol.logSpecial(
+      8,
+      `pwmj "${structureChunk.chunkId}" Setting plainspeakAnno to "${plainspeakAnno}".`
+    );
+
+    return plainspeakAnno;
   }
+
+  consol.logSpecial(
+    8,
+    `pwmk "${structureChunk.chunkId}" Setting plainspeakAnno to "${annoTraitValue}".`
+  );
+
+  return annoTraitValue;
 };
 
 exports.adjustVirilityOfStructureChunk = (
@@ -385,6 +426,20 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
 
     allLangUtils.setPostHocAgreeKeys(structureChunk, currentLanguage);
     allLangUtils.setMerelyPreferredChoices(structureChunk, currentLanguage);
+
+    if (
+      refFxn.isTraitCompatibleStCh("gender", structureChunk, currentLanguage)
+    ) {
+      if (!structureChunk.gender || !structureChunk.gender.length) {
+        //Fill out if blank.
+        refFxn.assignDefaultTraitValuesOrPossibleTraitValues(
+          structureChunk,
+          currentLanguage,
+          "gender"
+        );
+      }
+    }
+
     langUtils.preprocessStructureChunks(structureChunk);
 
     Object.keys(defaultTraitValuesRef).forEach((wordtype) => {

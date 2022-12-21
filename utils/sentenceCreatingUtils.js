@@ -116,7 +116,9 @@ exports.processSentenceFormula = (
   languagesObj,
   sentenceFormula,
   words,
-  multipleModes
+  multipleModes,
+  isCounterfax,
+  questionOutputArr
 ) => {
   let { multipleMode, forceMultipleModeAndQuestionOnly } = multipleModes;
 
@@ -173,9 +175,17 @@ exports.processSentenceFormula = (
       errorInSentenceCreation,
       currentLanguage,
       previousQuestionLanguage,
+      questionOutputArr,
       multipleModes,
       null
     );
+
+    allPossOutputUnits_head.forEach((ou) => {
+      uUtils.validateArrayQuasiEmpty(
+        ou.structureChunk.semanticGender,
+        "processSentenceFormula headChunks 1"
+      );
+    });
 
     if (
       errorInSentenceCreation.errorMessage ||
@@ -225,6 +235,15 @@ exports.processSentenceFormula = (
     uUtils.arrayExploder(headOutputUnitArrays)
   );
 
+  headOutputUnitArrays.forEach((houa) => {
+    houa.forEach((ou) => {
+      uUtils.validateArrayQuasiEmpty(
+        ou.structureChunk.semanticGender,
+        "processSentenceFormula headChunks 2"
+      );
+    });
+  });
+
   //STEP TWO: Select DEPENDENT words and add to result array.
   explodedOutputArraysWithHeads.forEach(
     (headOutputArray, headOutputArrayIndex) => {
@@ -236,7 +255,12 @@ exports.processSentenceFormula = (
         }
 
         // Now we update the head structure chunks with the details from their respective selectedWords.
-        lfUtils.updateStructureChunk(headOutputUnit, currentLanguage);
+        lfUtils.updateStructureChunk(
+          headOutputUnit,
+          currentLanguage,
+          false,
+          isCounterfax
+        );
 
         let headChunk = headOutputUnit.structureChunk;
 
@@ -271,6 +295,7 @@ exports.processSentenceFormula = (
                 errorInSentenceCreation,
                 currentLanguage,
                 previousQuestionLanguage,
+                questionOutputArr,
                 multipleModes,
                 null
               );
@@ -311,6 +336,15 @@ exports.processSentenceFormula = (
       });
     }
   );
+
+  explodedOutputArraysWithHeads.forEach((houa) => {
+    houa.forEach((ou) => {
+      uUtils.validateArrayQuasiEmpty(
+        ou.structureChunk.semanticGender,
+        "processSentenceFormula explodedwithheads 1"
+      );
+    });
+  });
 
   if (headChunks.length && !explodedOutputArraysWithHeads.length) {
     consol.log(
@@ -404,6 +438,7 @@ exports.processSentenceFormula = (
         errorInSentenceCreation,
         currentLanguage,
         previousQuestionLanguage,
+        questionOutputArr,
         multipleModes,
         outputArray,
         true
@@ -537,6 +572,7 @@ exports.processSentenceFormula = (
       errorInSentenceCreation,
       currentLanguage,
       previousQuestionLanguage,
+      questionOutputArr,
       multipleModes,
       null
     );
@@ -607,7 +643,18 @@ exports.processSentenceFormula = (
       if (gpUtils.getWordtypeStCh(structureChunk) === "fixed") {
         return;
       }
-      lfUtils.updateStructureChunk(outputUnit, currentLanguage);
+
+      uUtils.validateArrayQuasiEmpty(
+        outputUnit.structureChunk.semanticGender,
+        "processSentenceFormula grandOutputArray 1"
+      );
+
+      lfUtils.updateStructureChunk(
+        outputUnit,
+        currentLanguage,
+        true,
+        isCounterfax
+      );
     });
 
     //Decanting otherChunks if they have multiple traitValues.
@@ -1081,6 +1128,28 @@ exports.conformAnswerStructureToQuestionStructure = (
   languagesObj,
   words
 ) => {
+  if ("logging") {
+    consol.logSpecial(
+      8,
+      "[1;33m " + `conformAnswerStructureToQuestionStructure START...` + "[0m"
+    );
+    questionOutputArr.forEach((outputUnit) => {
+      consol.logSpecial(8, {
+        "outputUnit.selectedWord": outputUnit.selectedWord,
+        "outputUnit.selectedLemmaObject.id": outputUnit.selectedLemmaObject.id,
+        "outputUnit.structureChunk.gender": outputUnit.structureChunk.gender,
+        "outputUnit.structureChunk.semanticGender":
+          outputUnit.structureChunk.semanticGender,
+        "outputUnit.structureChunk.hypernymy":
+          outputUnit.structureChunk.hypernymy,
+      });
+    });
+    consol.logSpecial(
+      8,
+      "[1;33m " + `conformAnswerStructureToQuestionStructure START.` + "[0m"
+    );
+  }
+
   let shouldConsoleLog = false;
 
   consol.log("[1;35m " + `(aegh sc:conformAnswerStructureToQuestionStructure)` + "[0m");
@@ -1187,12 +1256,116 @@ exports.conformAnswerStructureToQuestionStructure = (
         questionLanguage,
         answerLanguage
       );
+
+      scUtils.addTraitToAnswerChunkWithAdjustment(
+        questionStructureChunk,
+        answerStructureChunk,
+        "semanticGender",
+        questionLanguage,
+        answerLanguage
+      );
     }
+
+    // <Issue 205: Neon Approach>
+
+    // scUtils.enforceMaxLObjStems(matchingAnswerLemmaObjects, 1);
+    // let answerStructureChunkGenderCopy =
+    //   answerStructureChunk.gender && answerStructureChunk.gender.slice();
+    // let matchingAnswerLemmaObjectsCopy = matchingAnswerLemmaObjects.map(
+    //   (l) => l.id
+    // );
+
+    // if (
+    //   matchingAnswerLemmaObjects.some((l) => l.gender === "_VypernymGenders")
+    // ) {
+    //   let allLObjsForThisIdStem = nexusUtils.getTraductions(
+    //     matchingAnswerLemmaObjects[0],
+    //     answerLanguage,
+    //     true,
+    //     true
+    //   );
+    //   let nonFeminineLObjs = allLObjsForThisIdStem.filter(
+    //     (l) => l.gender !== "f"
+    //   );
+    //   answerStructureChunk.demandedIds = nonFeminineLObjs.map(
+    //     (lObj) => lObj.id
+    //   );
+    // }
+
+    // </Issue 205: Neon Approach>
 
     /////////////////////////////////////////////////////////////////////////////
 
     /**
      * V/HYPERNYM CORRECTIONS, ISSUE 205
+     *
+     *
+     *
+     * Issue 205: Neon Approach
+     *
+     * So when filtering by gender, in all places where that happens,
+     * check to see if the Q lobj and potential A lobj have semanticGender.
+     * If so, use that instead of grammatical gender to filter.
+     *
+     * Also, in conformAtoQ?
+     *
+     * Q Eng "child" (female)
+     * Q stCh gender: ["f"]
+     * ->conformAtoQ->
+     * A Pol "dziecko" {g: "n", sg: "_personal"}
+     * A stCh gender: ["f"] // But filtering processes will allow "dziecko" lobj to be selected.
+     *
+     * Q Eng "children" (nv)
+     * Q stCh gender: ["nv"]
+     * ->conformAtoQ
+     * A Spa "ninyo" {g: "m", sg: "_vypernym"}
+     * A stCh gender ["nv"] // But filtering processes will allow "ninyo" to be selected.
+     *
+     * Q Spa "chica" (f)
+     * Q stCh gender: ["f"]
+     * ->conformAtoQ
+     * A Eng "child" {g: "_personal"}
+     * A stCh gender ["nv"] // But filtering processes will allow "ninyo" to be selected.
+     *
+     *
+     *
+     * English MGN lobjs: "doctor"
+     *
+     * gender: "_PersonalGenders"
+     *
+     *
+     *
+     * English Hypernym lobjs: "parent", "child"
+     *
+     * gender: "_PersonalGenders"
+     * semanticGender: "_PersonalGenders" (although redundant)
+     *
+     *
+     *
+     * Polish Hypernym lobjs: "rodzic", "dziecko"
+     *
+     * gender: "m1" / "n"
+     * semanticGender: "_PersonalGenders"
+     *
+     *
+     *
+     * Spanish MGN lobjs: "amante"
+     *
+     * gender: "_PersonalGenders"
+     *
+     *
+     *
+     * Spanish Vypernym lobjs: "padre", "chico"
+     *
+     * gender: "m"
+     * semanticGender: "_VypernymGenders"           (["m","virile","nonvirile"] but not singular female)
+     *
+     *
+     *
+     *
+     *
+     *
+     *
      *
      *
      *
@@ -1554,7 +1727,39 @@ exports.conformAnswerStructureToQuestionStructure = (
       answerLanguage,
       "stCh"
     );
+
+    ["gender", "semanticGender"].forEach((genderTraitKey) => {
+      if (answerStructureChunk[genderTraitKey]) {
+        allLangUtils.enforceIsPerson(
+          answerStructureChunk,
+          true,
+          null,
+          genderTraitKey
+        );
+      }
+    });
   });
+
+  if ("logging") {
+    consol.logSpecial(
+      8,
+      "[1;35m " + `conformAnswerStructureToQuestionStructure END...` + "[0m"
+    );
+    sentenceStructure.forEach((answerStCh) => {
+      consol.logSpecial(8, {
+        "answerStCh.chunkId": answerStCh.chunkId,
+        "answerStCh.specificIds": answerStCh.specificIds,
+        "answerStCh.demandedIds": answerStCh.demandedIds,
+        "answerStCh.gender": answerStCh.gender,
+        "answerStCh.semanticGender": answerStCh.semanticGender,
+        "answerStCh.hypernymy": answerStCh.hypernymy,
+      });
+    });
+    consol.logSpecial(
+      8,
+      "[1;35m " + `conformAnswerStructureToQuestionStructure END.` + "[0m"
+    );
+  }
 
   if (shouldConsoleLog) {
     consol.log("[1;35m " + "/conformAnswerStructureToQuestionStructure" + "[0m");
@@ -1569,6 +1774,13 @@ exports.addTraitToAnswerChunkWithAdjustment = (
   answerLanguage
 ) => {
   let adjustedArr = [];
+
+  if (!questionStructureChunk[traitKey]) {
+    consol.log(
+      `yasa questionStructureChunk "${questionStructureChunk.chunk}" had no "${traitKey}".`
+    );
+    return;
+  }
 
   questionStructureChunk[traitKey].forEach((traitValue) => {
     let adjustedTraitValues = refFxn.giveAdjustedTraitValue(

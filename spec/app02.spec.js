@@ -1924,6 +1924,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal14-03c GET 200 YES: Engpol. My father gave me his book.", () => {
+      //Alpha very occasional failure to resolve, with "My parent gave me her book -> dał mi jego..."
       let ref = [
         {
           ENG: "My father gave me his book.",
