@@ -71,11 +71,23 @@ exports.enforceThirdPersonAgreeWith = (stCh, onlyIfUnpopulated) => {
   }
 };
 
-exports.enforceIsPerson = (stCh, strict) => {
-  if (gpUtils.stChIsPerson(stCh, strict)) {
-    stCh.gender = stCh.gender.filter(
+exports.enforceIsPerson = (stCh, strict, arrOnly, genderTraitKey) => {
+  if (!genderTraitKey) {
+    genderTraitKey = "gender";
+  }
+
+  const _enforceIsPerson = (arr) => {
+    return arr.filter(
       (genderValue) => !["n", "m2", "m3"].includes(genderValue)
     );
+  };
+
+  if (arrOnly) {
+    return _enforceIsPerson(arrOnly);
+  }
+
+  if (gpUtils.stChIsPerson(stCh, strict)) {
+    stCh[genderTraitKey] = _enforceIsPerson(stCh[genderTraitKey]);
   }
 };
 
