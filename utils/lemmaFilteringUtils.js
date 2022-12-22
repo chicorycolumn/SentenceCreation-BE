@@ -350,8 +350,6 @@ exports.selectRandLObj = (lObjs, stCh, lang) => {
   return _returnLObj(res, stCh, "simple path");
 };
 
-// Delta: selectRndLObj and selectRndTraitValue might be completely unneeded.
-
 exports.selectRandTraitValue = (
   lObj,
   stCh,

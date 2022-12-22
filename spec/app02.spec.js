@@ -1894,7 +1894,7 @@ describe("/api", function () {
         "Moi ojcowie dali mi ich książkę.",
         "Nasi ojcowie dali nam ich książkę.",
 
-        "Mój rodzic dał mi jego książkę.", //Delta! Issue 205
+        "Mój rodzic dał mi jego książkę.", //Alpha Issue 205
         "Nasz rodzic dał nam jego książkę.",
         "Moi rodzice dali mi ich książkę.",
         "Nasi rodzice dali nam ich książkę.",
@@ -1912,7 +1912,8 @@ describe("/api", function () {
         "My fathers gave me their book.",
         "Our fathers gave us their book.",
 
-        "My parent gave me his book.", //Delta! Issue 205
+        "My parent gave me his book.", //Alpha Issue 205
+        // Surely here in ENG Qlang only, we should be able to get "My parent gave me HER book."?
         "Our parent gave us his book.",
         "My parents gave me their book.",
         "Our parents gave us their book.",

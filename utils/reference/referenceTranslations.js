@@ -254,7 +254,7 @@ exports.traitValueTranslation = {
   SPA: {
     POL: {
       gender: {
-        m: ["m1", "m2", "m3"], //Delta but I can't say the same as ENG->POL where the only masculine nouns are definitely people.
+        m: ["m1", "m2", "m3"], //But I can't say the same as ENG->POL where the only masculine nouns are definitely people.
       },
     },
   },
