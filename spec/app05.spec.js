@@ -305,7 +305,7 @@ describe("/api", function () {
     });
   });
 
-  describe("/palette - Stage 24-iv: Spanish basic. Test Hypernym Vypernym Hyponym Vyponym proportions.", () => {
+  describe("/palette - Stage 24-iv: Spanish basic. Vypernym Hyponym Vyponym hypernymyProportion.", () => {
     it("#pal24-04a GET 200 YES: Polspa. Red mother (Vypernym).", () => {
       return Promise.all(
         promiseAllMultiplier(250, () => {

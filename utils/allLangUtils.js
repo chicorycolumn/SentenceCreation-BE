@@ -151,11 +151,15 @@ exports.translateAnnoTraitValue = (
   return annoTraitValue;
 };
 
-exports.standardiseGenders = (lang, traitValues) => {
+exports.standardiseGenders = (lang, traitValues, metagender) => {
+  if (!metagender) {
+    metagender = "_Genders";
+  }
+
   //Fix for POL issue where counterfax sits were being generated using ["m","m1","f","virile","nonvirile"]
   //The "m" is unnecessary and causes checkthrow "knmo" later down the line.
   return traitValues.filter((tv) =>
-    refObj.metaTraitValues[lang].gender._Genders.includes(tv)
+    refObj.metaTraitValues[lang].gender[metagender].includes(tv)
   );
 };
 

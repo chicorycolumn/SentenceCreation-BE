@@ -1090,8 +1090,10 @@ exports.updateStChByAndTagsAndSelectors = (
 
       if (this.checkHyper(selectedLemmaObject, [HY.VY])) {
         //Garibaldi adjustment, Neon approach, vypernyms issue 205
-        numberAdjustedGenderValues = numberAdjustedGenderValues.filter(
-          (tv) => !["f", "nonvirile"].includes(tv)
+        numberAdjustedGenderValues = allLangUtils.standardiseGenders(
+          currentLanguage,
+          numberAdjustedGenderValues,
+          "_VypernymGenders"
         );
       }
 

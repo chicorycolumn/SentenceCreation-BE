@@ -18,6 +18,7 @@ const _isAvailable = (value) => {
 
 exports.balanceGenders = (structureChunk) => {
   if (structureChunk.gender) {
+    //genderProportion
     if (
       ["m1", "m2", "m3", "f"].every((mascGen) =>
         structureChunk.gender.includes(mascGen)

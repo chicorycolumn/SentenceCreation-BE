@@ -520,7 +520,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         );
 
         allLangUtils.adjustVirilityOfStructureChunk(
-          //Alpha have yet to put semanticGender loop into this fxn too.
+          //Decided not to put semanticGender loop into this fxn too.
           questionLanguage,
           stChToCounterfax,
           true,

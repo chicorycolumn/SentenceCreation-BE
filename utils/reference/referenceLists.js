@@ -667,17 +667,9 @@ exports.structureChunkTraits = {
         "m2",
         "m3",
         "f",
-        // "f", //Alpha should keep or remove?
-        // "f",
         "n",
-        // "n",
-        // "n",
         "virile",
-        // "virile",
-        // "virile",
         "nonvirile",
-        // "nonvirile",
-        // "nonvirile",
       ],
     },
     number: {
