@@ -10,6 +10,7 @@ const refObj = require("./reference/referenceObjects.js");
 const refFxn = require("./reference/referenceFunctions.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 const nexusUtils = require("./secondOrder/nexusUtils.js");
+const { HY } = refObj;
 
 exports.getWordsAndFormulas = (currentLanguage, wordsOnly) => {
   let envir = "ref";
@@ -1497,14 +1498,14 @@ exports.conformAnswerStructureToQuestionStructure = (
 
     // // 205-i)
     // if (
-    //   lfUtils.checkHyper(questionSelectedLemmaObject, ["hypernym"]) &&
+    //   lfUtils.checkHyper(questionSelectedLemmaObject, [HY.HY]) &&
     //   questionStructureChunk.gender &&
     //   questionStructureChunk.gender.length &&
     //   questionStructureChunk.gender.every((el) =>
     //     ["f", "nonvirile"].includes(el)
     //   ) &&
     //   matchingAnswerLemmaObjects.some((l) =>
-    //     lfUtils.checkHyper(l, ["vypernym"])
+    //     lfUtils.checkHyper(l, [HY.VY])
     //   )
     // ) {
     //   let allLObjsForThisIdStem = nexusUtils.getTraductions(
@@ -1532,14 +1533,14 @@ exports.conformAnswerStructureToQuestionStructure = (
     // }
 
     // if (
-    //   ["hypernym", "vypernym"].includes(
+    //   [HY.HY, HY.VY].includes(
     //     lfUtils.assessHypernymy(matchingAnswerLemmaObjects[0])
     //   ) &&
     //   answerStructureChunk.gender &&
     //   ["f", "nonvirile"].some((el) => answerStructureChunk.gender.includes(el))
     // ) {
     //   if (
-    //     !["hypernym"].includes(
+    //     ![HY.HY].includes(
     //       lfUtils.assessHypernymy(questionSelectedLemmaObject)
     //     )
     //   ) {

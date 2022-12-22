@@ -9,6 +9,7 @@ const refFxn = require("./reference/referenceFunctions.js");
 const aaUtils = require("./auxiliaryAttributeUtils.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
 const allLangUtils = require("./allLangUtils.js");
+const { HY } = refObj;
 const {
   malePersonsInThisLanguageHaveWhatGender,
 } = require("./reference/referenceLists.js");
@@ -184,7 +185,7 @@ exports.removeAnnotationsByVypernym = (
     malePersonsInThisLanguageHaveWhatGender[languagesObj.questionLanguage];
 
   questionOutputArr.forEach((questionOutputUnit) => {
-    if (questionOutputUnit.structureChunk.hypernymy === "vypernym") {
+    if (questionOutputUnit.structureChunk.hypernymy === HY.VY) {
       if (
         Object.keys(questionOutputUnit.structureChunk.annotations).includes(
           "semanticGender"
@@ -241,7 +242,7 @@ exports.removeAnnotationsByVypernym = (
                 questionOutputUnit.structureChunk.chunkId
             );
             return lfUtils.checkHyper(answerOutputUnit.selectedLemmaObject, [
-              "vypernym",
+              HY.VY,
             ]);
           }
         );
@@ -254,10 +255,10 @@ exports.removeAnnotationsByVypernym = (
                 questionOutputUnit.structureChunk.chunkId
             );
             return !lfUtils.checkHyper(answerOutputUnit.selectedLemmaObject, [
-              "vypernym",
-              "hypernym",
-              "vyponym",
-              "hyponym",
+              HY.VY,
+              HY.HY,
+              HY.VO,
+              HY.HO,
             ]);
           }
         );

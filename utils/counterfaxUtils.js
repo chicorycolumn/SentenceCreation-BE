@@ -8,6 +8,7 @@ const refObj = require("./reference/referenceObjects.js");
 const refFxn = require("./reference/referenceFunctions.js");
 const palette = require("../models/palette.model.js");
 const allLangUtils = require("./allLangUtils.js");
+const { HY } = refObj;
 
 exports.explodeCounterfaxSituations = (sits) => {
   consol.logSpecial(8, "swde1 explodeCounterfaxSituations");
@@ -226,13 +227,10 @@ exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
             counterfactualTraitValuesForThisTraitKey = tempObj.gender;
 
             if (genderTraitKey === "semanticGender") {
-              //Alpha parametrise this so not hardcoded POL here.
-
-              //Fix for POL issue where counterfax sits were being generated using ["m","m1","f","virile","nonvirile"]
-              //The "m" is unnecessary and causes checkthrow "knmo" later down the line.
               counterfactualTraitValuesForThisTraitKey =
-                counterfactualTraitValuesForThisTraitKey.filter(
-                  (tv) => tv !== "m"
+                allLangUtils.standardiseGenders(
+                  questionLanguage,
+                  counterfactualTraitValuesForThisTraitKey
                 );
             }
           }
@@ -460,7 +458,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           ["semanticGender"].forEach((genderTraitKey) => {
             //Garibaldi part 2
             if (
-              ["vypernym"].includes(stChToCounterfax.hypernymy) &&
+              [HY.VY].includes(stChToCounterfax.hypernymy) &&
               assignment.traitKey === genderTraitKey &&
               ["f", "nonvirile"].includes(assignment.traitValue)
             ) {
@@ -529,10 +527,12 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           true
         );
 
-        //Okay, if questionLang is POL, and number: singular, and gender is a masculine one,
-        //then change gender to just "m".
-        //But you will have to do this to original, too, which you don't deal with right here.
-        cfUtils.collapseMasculineGenders(questionLanguage, stChToCounterfax);
+        //If questionLang POL and number "singular" and gender is a masculine one, then change gender to just "m".
+        //But you will have to do this to original too, which you don't deal with right here.
+        allLangUtils.collapseMasculineGenders(
+          questionLanguage,
+          stChToCounterfax
+        );
 
         consol.logSpecial(
           3,
@@ -616,7 +616,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             ).selectedLemmaObject.id;
             if (
               demandedId &&
-              !lfUtils.checkHyper({ id: demandedId }, ["hyponym", "vyponym"])
+              !lfUtils.checkHyper({ id: demandedId }, [HY.HO, HY.VO])
             ) {
               stCh.demandedIds = [demandedId];
             }
@@ -663,7 +663,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       //             let condition =
       //               outputUnit.structureChunk.chunkId === chunkIdToCounterfax &&
       //               lfUtils.checkHyper(outputUnit.selectedLemmaObject, [
-      //                 "hypernym",
+      //                 HY.HY,
       //               ]) &&
       //               outputUnit.structureChunk.gender &&
       //               outputUnit.structureChunk.gender.length;
@@ -1374,32 +1374,6 @@ exports.makePseudoSentenceObjs = (outputArrObjs, primaryOrders) => {
       pseudoSentence: outputArrObj.arr.map((unit) => unit.selectedWord),
       cfLabel: outputArrObj.cfLabel,
     };
-  });
-};
-
-exports.collapseMasculineGenders = (questionLanguage, stChToCounterfax) => {
-  ["gender"].forEach((genderTraitKey) => {
-    //Epislon - parametrise this so not hardcoded POL here.
-    if (["POL"].includes(questionLanguage)) {
-      if (stChToCounterfax.number && stChToCounterfax.number.length !== 1) {
-        consol.throw("nbii");
-      }
-      if (
-        stChToCounterfax[genderTraitKey] &&
-        stChToCounterfax[genderTraitKey].length !== 1
-      ) {
-        consol.throw("nbij");
-      }
-
-      if (
-        stChToCounterfax.number &&
-        stChToCounterfax.number[0] === "singular" &&
-        stChToCounterfax.number &&
-        ["m1", "m2", "m3"].includes(stChToCounterfax[genderTraitKey][0])
-      ) {
-        stChToCounterfax[genderTraitKey] = ["m"];
-      }
-    }
   });
 };
 

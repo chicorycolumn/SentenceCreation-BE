@@ -151,6 +151,44 @@ exports.translateAnnoTraitValue = (
   return annoTraitValue;
 };
 
+exports.standardiseGenders = (lang, traitValues) => {
+  //Fix for POL issue where counterfax sits were being generated using ["m","m1","f","virile","nonvirile"]
+  //The "m" is unnecessary and causes checkthrow "knmo" later down the line.
+  return traitValues.filter((tv) =>
+    refObj.metaTraitValues[lang].gender._Genders.includes(tv)
+  );
+};
+
+exports.collapseMasculineGenders = (lang, stCh) => {
+  let ref = refObj.collapsibleMasculineGenders[lang];
+  let genderTraitKeys = ["gender"];
+
+  if (ref) {
+    Object.keys(ref).forEach((numberTraitValue) => {
+      Object.keys(ref[numberTraitValue]).forEach((collapsedGender) => {
+        let collapsibleGenders = ref[numberTraitValue][collapsedGender];
+        genderTraitKeys.forEach((genderTraitKey) => {
+          if (stCh.number && stCh.number.length !== 1) {
+            consol.throw("nbii");
+          }
+          if (stCh[genderTraitKey] && stCh[genderTraitKey].length !== 1) {
+            consol.throw("nbij");
+          }
+
+          if (
+            stCh.number &&
+            stCh.number[0] === numberTraitValue &&
+            stCh.number &&
+            collapsibleGenders.includes(stCh[genderTraitKey][0])
+          ) {
+            stCh[genderTraitKey] = [collapsedGender];
+          }
+        });
+      });
+    });
+  }
+};
+
 exports.adjustVirilityOfStructureChunk = (
   currentLanguage,
   structureChunk,

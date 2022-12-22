@@ -1,5 +1,12 @@
 exports.tantumTypes = ["tantumPlurale", "tantumSingulare"];
 
+exports.HY = {
+  VY: "vypernym", // virile hypernyms eg "padre" means both "parent" and "father"
+  VO: "vyponym", // "madre" is including in meaning of "padre"
+  HY: "hypernym", // "parent" is non gender specific
+  HO: "hyponym", // "mother" and "father" are included in meaning of "parent"
+};
+
 exports.incompatibleTraitsRef = {
   POL: {
     //If we're examining gender traitKey.
@@ -212,6 +219,7 @@ exports.metaTraitValues = {
     form: { _pronombreAndDeterminer: ["pronombre", "determiner"] },
     gender: {
       _Genders: [
+        // Don't put "m" here.
         "m1",
         "m2",
         "m3",
@@ -575,7 +583,7 @@ exports.structureChunkTraits = {
       expectedTypeOnStCh: "string",
       compatibleWordtypes: ["nounPerson"],
       possibleTraitValuesPerWordtype: {
-        nounPerson: ["hypernym", "vypernym", "hyponym", "vyponym"],
+        nounPerson: [Object.values(exports.HY)],
       },
     },
     virilityDetail: {
@@ -996,3 +1004,7 @@ exports.agreementTraits = [
 ];
 
 exports.punctuation = ["!", "?", ".", ",", ":", ";", "..."];
+
+exports.collapsibleMasculineGenders = {
+  POL: { singular: { m: ["m1", "m2", "m3"] } },
+};

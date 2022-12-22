@@ -308,7 +308,7 @@ describe("/api", function () {
   describe("/palette - Stage 24-iv: Spanish basic. Test Hypernym Vypernym Hyponym Vyponym proportions.", () => {
     it("#pal24-04a GET 200 YES: Polspa. Red mother (Vypernym).", () => {
       return Promise.all(
-        promiseAllMultiplier(200, () => {
+        promiseAllMultiplier(250, () => {
           return runPaletteTest("POL", "SPA", "dummy72c", [], {}, 1, true);
         })
       ).then((allQuestionSentences) => {
@@ -331,7 +331,7 @@ describe("/api", function () {
     });
     it("#pal24-04b GET 200 YES: Poleng. Red mother (Vypernym).", () => {
       return Promise.all(
-        promiseAllMultiplier(200, () => {
+        promiseAllMultiplier(250, () => {
           return runPaletteTest("POL", "ENG", "dummy72c", [], {}, 1, true);
         })
       ).then((allQuestionSentences) => {
@@ -354,7 +354,7 @@ describe("/api", function () {
     });
     it("#pal24-04c GET 200 YES: Spapol. Red mother (Vypernym).", () => {
       return Promise.all(
-        promiseAllMultiplier(200, () => {
+        promiseAllMultiplier(250, () => {
           return runPaletteTest("SPA", "POL", "dummy72c", [], {}, 1, true);
         })
       ).then((allQuestionSentences) => {
@@ -369,7 +369,7 @@ describe("/api", function () {
     });
     it("#pal24-04d GET 200 YES: Spaeng. Red mother (Vypernym).", () => {
       return Promise.all(
-        promiseAllMultiplier(200, () => {
+        promiseAllMultiplier(250, () => {
           return runPaletteTest("SPA", "ENG", "dummy72c", [], {}, 1, true);
         })
       ).then((allQuestionSentences) => {
@@ -384,7 +384,7 @@ describe("/api", function () {
     });
     it("#pal24-04e GET 200 YES: Engpol. Red mother (Vypernym).", () => {
       return Promise.all(
-        promiseAllMultiplier(200, () => {
+        promiseAllMultiplier(250, () => {
           return runPaletteTest("ENG", "POL", "dummy72c", [], {}, 1, true);
         })
       ).then((allQuestionSentences) => {
@@ -401,7 +401,7 @@ describe("/api", function () {
     });
     it("#pal24-04f GET 200 YES: Engspa. Red mother (Vypernym).", () => {
       return Promise.all(
-        promiseAllMultiplier(200, () => {
+        promiseAllMultiplier(250, () => {
           return runPaletteTest("ENG", "SPA", "dummy72c", [], {}, 1, true);
         })
       ).then((allQuestionSentences) => {

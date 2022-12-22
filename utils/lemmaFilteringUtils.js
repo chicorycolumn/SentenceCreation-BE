@@ -7,20 +7,11 @@ const refFxn = require("./reference/referenceFunctions.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
 const nexusUtils = require("../utils/secondOrder/nexusUtils.js");
 const allLangUtils = require("./allLangUtils.js");
-
-exports.hypernymy = {
-  //Alpha refactor so these strings are only ever referenced by this dict.
-  vy: "vypernym",
-  vo: "vyponym",
-  hy: "hypernym",
-  ho: "hyponym",
-};
+const { HY } = refObj;
 
 exports.checkHyper = (lObj, expectedTypes) => {
   if (
-    !expectedTypes.every((str) =>
-      Object.keys(lfUtils.hypernymy).some((k) => lfUtils.hypernymy[k] === str)
-    )
+    !expectedTypes.every((str) => Object.keys(HY).some((k) => HY[k] === str))
   ) {
     consol.throw(
       'tyoe Wrong expectedTypes: ["' + expectedTypes.join('","') + '"]'
@@ -51,19 +42,19 @@ exports.assessHypernymy = (lObj) => {
   // should in Answer Mode be returned as this type (¢), not hypernym type (£).
 
   if (_isHypernym(lObj)) {
-    return "hypernym";
+    return HY.HY;
   }
   if (_isVypernym(lObj)) {
-    return "vypernym";
+    return HY.VY;
   }
 
   let traductions = nexusUtils.getTraductions(lObj, lang, true);
 
   if (traductions.some((id) => _isHypernym({ id }))) {
-    return "hyponym";
+    return HY.HO;
   }
   if (traductions.some((id) => _isVypernym({ id }))) {
-    return "vyponym";
+    return HY.VO;
   }
 };
 
@@ -101,8 +92,8 @@ exports.getLObjAndSiblings = (
 
       if (
         qLObj &&
-        ["vypernym"].includes(lfUtils.assessHypernymy(qLObj)) &&
-        ["vypernym", "hypernym"].includes(lfUtils.assessHypernymy(lObj))
+        [HY.VY].includes(lfUtils.assessHypernymy(qLObj)) &&
+        [HY.VY, HY.HY].includes(lfUtils.assessHypernymy(lObj))
       ) {
         let lObjCopy = uUtils.copyWithoutReference(lObj);
         lObjCopy.id = lObjCopy.id + "¢";
@@ -114,10 +105,10 @@ exports.getLObjAndSiblings = (
       if (
         // blockHypernyms &&
         qLObj &&
-        !["vypernym"].includes(lfUtils.assessHypernymy(lObj)) &&
-        !["vypernym"].includes(lfUtils.assessHypernymy(qLObj)) &&
-        ["hypernym", "vypernym"].includes(lfUtils.assessHypernymy(qLObj)) !==
-          ["hypernym", "vypernym"].includes(lfUtils.assessHypernymy(lObj))
+        ![HY.VY].includes(lfUtils.assessHypernymy(lObj)) &&
+        ![HY.VY].includes(lfUtils.assessHypernymy(qLObj)) &&
+        [HY.HY, HY.VY].includes(lfUtils.assessHypernymy(qLObj)) !==
+          [HY.HY, HY.VY].includes(lfUtils.assessHypernymy(lObj))
       ) {
         log("Chuck-red ", lObj.id);
         return false;
@@ -126,12 +117,10 @@ exports.getLObjAndSiblings = (
       if (
         blockHypernyms &&
         // qLObj &&
-        ![
-          "hypernym",
-          "vypernym",
-          "answerChunkOfAQuestionChunkVypernym",
-        ].includes(lfUtils.assessHypernymy({ id: specificId })) &&
-        ["hypernym", "vypernym"].includes(lfUtils.assessHypernymy(lObj))
+        ![HY.HY, HY.VY, "answerChunkOfAQuestionChunkVypernym"].includes(
+          lfUtils.assessHypernymy({ id: specificId })
+        ) &&
+        [HY.HY, HY.VY].includes(lfUtils.assessHypernymy(lObj))
       ) {
         log("Chuck-yellow ", lObj.id);
         return false;
@@ -139,8 +128,8 @@ exports.getLObjAndSiblings = (
 
       if (
         blockHypernyms &&
-        ["hypernym"].includes(lfUtils.assessHypernymy({ id: specificId })) &&
-        !["hypernym"].includes(lfUtils.assessHypernymy(lObj))
+        [HY.HY].includes(lfUtils.assessHypernymy({ id: specificId })) &&
+        ![HY.HY].includes(lfUtils.assessHypernymy(lObj))
       ) {
         log("Chuck-green ", lObj.id, "because of", specificId);
         return false;
@@ -151,7 +140,7 @@ exports.getLObjAndSiblings = (
         ["answerChunkOfAQuestionChunkVypernym"].includes(
           lfUtils.assessHypernymy({ id: specificId })
         ) &&
-        ["hypernym", "vypernym"].includes(lfUtils.assessHypernymy(lObj))
+        [HY.HY, HY.VY].includes(lfUtils.assessHypernymy(lObj))
       ) {
         log("Yessir-brown ", lObj.id, "because of", specificId);
         return true;
@@ -159,8 +148,8 @@ exports.getLObjAndSiblings = (
 
       if (
         blockHypernyms &&
-        !["vypernym"].includes(lfUtils.assessHypernymy({ id: specificId })) &&
-        ["vypernym"].includes(lfUtils.assessHypernymy(lObj))
+        ![HY.VY].includes(lfUtils.assessHypernymy({ id: specificId })) &&
+        [HY.VY].includes(lfUtils.assessHypernymy(lObj))
       ) {
         log("Chuck-blue ", lObj.id);
         return false;
@@ -198,7 +187,7 @@ exports.getLObjAndSiblings = (
 exports.adjustHypernymyProportions = (hypernymy, outputUnits) => {
   let proportionAdjustedOutputUnits = [];
 
-  if (["hypernym"].includes(hypernymy)) {
+  if ([HY.HY].includes(hypernymy)) {
     outputUnits.forEach((unit) => {
       if (
         unit.drillPath.some(
@@ -214,7 +203,7 @@ exports.adjustHypernymyProportions = (hypernymy, outputUnits) => {
         proportionAdjustedOutputUnits.push(unit);
       }
     });
-  } else if (["hyponym", "vyponym"].includes(hypernymy)) {
+  } else if ([HY.HO, HY.VO].includes(hypernymy)) {
     outputUnits.forEach((unit) => {
       if (
         unit.drillPath.some(
@@ -237,7 +226,7 @@ exports.adjustHypernymyProportions = (hypernymy, outputUnits) => {
 
 exports.selectRandOutputUnit = (lObj, stCh, outputUnits) => {
   let hypernymy = lfUtils.assessHypernymy(lObj);
-  if (["hypernym", "hyponym", "vyponym"].includes(hypernymy)) {
+  if ([HY.HY, HY.HO, HY.VO].includes(hypernymy)) {
     outputUnits = lfUtils.adjustHypernymyProportions(hypernymy, outputUnits);
   }
 
@@ -321,7 +310,7 @@ exports.selectRandLObj = (lObjs, stCh, lang) => {
       let hypernymy = lfUtils.assessHypernymy(lObj);
 
       if (stCh.number.includes("plural") && stCh.number.length === 1) {
-        if (["hypernym"].includes(hypernymy)) {
+        if ([HY.HY].includes(hypernymy)) {
           lObjIds.push(lObj.id);
           lObjIds.push(lObj.id);
           lObjIds.push(lObj.id);
@@ -330,7 +319,7 @@ exports.selectRandLObj = (lObjs, stCh, lang) => {
           lObjIds.push(lObj.id);
         }
       } else if (stCh.number.includes("singular") && stCh.number.length === 1) {
-        if (["hyponym", "vyponym"].includes(hypernymy)) {
+        if ([HY.HO, HY.VO].includes(hypernymy)) {
           lObjIds.push(lObj.id);
           lObjIds.push(lObj.id);
           lObjIds.push(lObj.id);
@@ -378,7 +367,7 @@ exports.selectRandTraitValue = (
       ) {
         consol.throw("dlvu");
       }
-      if (["hypernym"].includes(hypernymy)) {
+      if ([HY.HY].includes(hypernymy)) {
         stCh[traitKey] = [
           uUtils.selectRandom([
             "singular",
@@ -390,7 +379,7 @@ exports.selectRandTraitValue = (
         ];
         return;
       }
-      if (["hyponym", "vyponym"].includes(hypernymy)) {
+      if ([HY.HO, HY.VO].includes(hypernymy)) {
         stCh[traitKey] = [
           uUtils.selectRandom([
             "singular",
@@ -975,7 +964,7 @@ exports.updateStChByAndTagsAndSelectors = (
   //lObj rodzic so gender "m1" and semanticGender "_PersonalGenders"
   //but if I didn't step in here, stCh would end up with gender "m1" which is wrong.
 
-  if (structureChunk.hypernymy === "vypernym") {
+  if (structureChunk.hypernymy === HY.VY) {
     if (structureChunk.number.length !== 1) {
       consol.throw(`xtal`);
     }
@@ -1099,7 +1088,7 @@ exports.updateStChByAndTagsAndSelectors = (
         throw "lemon";
       }
 
-      if (this.checkHyper(selectedLemmaObject, ["vypernym"])) {
+      if (this.checkHyper(selectedLemmaObject, [HY.VY])) {
         //Garibaldi adjustment, Neon approach, vypernyms issue 205
         numberAdjustedGenderValues = numberAdjustedGenderValues.filter(
           (tv) => !["f", "nonvirile"].includes(tv)
@@ -1124,17 +1113,10 @@ exports.updateStChByAndTagsAndSelectors = (
         numberAdjustedGenderValues
       );
 
-      if (
-        refObj.malePersonsInThisLanguageHaveWhatGender[currentLanguage] !== "m"
-      ) {
-        //Alpha some other alphas can look at how it was parametrised here.
-
-        //Fix for POL issue where counterfax sits were being generated using ["m","m1","f","virile","nonvirile"]
-        //The "m" is unnecessary and causes checkthrow "knmo" later down the line.
-        numberAdjustedGenderValues = numberAdjustedGenderValues.filter(
-          (tv) => tv !== "m"
-        );
-      }
+      numberAdjustedGenderValues = allLangUtils.standardiseGenders(
+        currentLanguage,
+        numberAdjustedGenderValues
+      );
 
       consol.logSpecial(
         8,
@@ -1535,9 +1517,7 @@ exports.filterBySelector_inner = (
     lemmaObjectArr.map((l) => l.id)
   );
 
-  let hypernymLObjs = lemmaObjectArr.filter((l) =>
-    this.checkHyper(l, ["hypernym"])
-  );
+  let hypernymLObjs = lemmaObjectArr.filter((l) => this.checkHyper(l, [HY.HY]));
 
   let questionChunk = {};
   if (answerMode) {
@@ -1554,11 +1534,7 @@ exports.filterBySelector_inner = (
     }
   }
 
-  if (
-    answerMode &&
-    questionChunk.hypernymy === "hypernym" &&
-    hypernymLObjs.length
-  ) {
+  if (answerMode && questionChunk.hypernymy === HY.HY && hypernymLObjs.length) {
     consol.logSpecial(
       8,
       `\netpz ${currentLanguage} ${
@@ -1582,7 +1558,7 @@ exports.filterBySelector_inner = (
       [" males ", " male "].includes(questionChunk.virilityDetail[0])
     ) {
       lemmaObjectArr = lemmaObjectArr.filter(
-        (l) => !lfUtils.checkHyper(l, ["hypernym"])
+        (l) => !lfUtils.checkHyper(l, [HY.HY])
       );
     }
 
@@ -1594,7 +1570,7 @@ exports.filterBySelector_inner = (
     ) {
       lemmaObjectArr = lemmaObjectArr.filter(
         (l) =>
-          lfUtils.checkHyper(l, ["hypernym", "vypernym"]) || //Garibaldi could be a pain point, perhaps should only be hy here.
+          lfUtils.checkHyper(l, [HY.HY, HY.VY]) || //Garibaldi could be a pain point, perhaps should only be hy here.
           l.gender !==
             refObj.malePersonsInThisLanguageHaveWhatGender[currentLanguage]
       );
@@ -1658,8 +1634,8 @@ exports.filterBySelector_inner = (
     return lemmaObjectArr.filter((lObj) => {
       if (
         answerMode &&
-        ["hyponym", "vyponym"].includes(questionChunk.hypernymy) &&
-        lfUtils.checkHyper(lObj, ["hypernym"])
+        [HY.HO, HY.VO].includes(questionChunk.hypernymy) &&
+        lfUtils.checkHyper(lObj, [HY.HY])
       ) {
         //Garibaldi part 2
         consol.logSpecial(8, `mbtt Kicking out ${lObj.id}`);
@@ -1718,10 +1694,10 @@ exports.filterBySelector_inner = (
 
       if (
         // Garibaldi Condition for finishing up Neon Approach to vypernyms issue 205.
-        (!answerMode && this.checkHyper(lObj, ["vypernym"])) ||
+        (!answerMode && this.checkHyper(lObj, [HY.VY])) ||
         (answerMode &&
-          this.checkHyper(lObj, ["hypernym"]) &&
-          !structureChunk.hypernymy === "hypernym")
+          this.checkHyper(lObj, [HY.HY]) &&
+          !structureChunk.hypernymy === HY.HY)
       ) {
         lObjSelectorValues = lObjSelectorValues.filter(
           (tv) => !gpUtils.traitValueIsMeta(tv)
