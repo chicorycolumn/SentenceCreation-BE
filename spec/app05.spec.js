@@ -393,7 +393,7 @@ describe("/api", function () {
           ["father", ["Red father."], 0.265, 0.35],
           ["parents", ["Red parents."], 0.265, 0.35],
 
-          ["parents", ["Red parent."], 0.065, 0.65],
+          ["parent", ["Red parent."], 0.065, 0.65],
           ["mothers", ["Red mothers."], 0.065, 0.65],
           ["fathers", ["Red fathers."], 0.065, 0.65],
         ]);
@@ -410,7 +410,7 @@ describe("/api", function () {
           ["father", ["Red father."], 0.265, 0.35],
           ["parents", ["Red parents."], 0.265, 0.35],
 
-          ["parents", ["Red parent."], 0.065, 0.65],
+          ["parent", ["Red parent."], 0.065, 0.65],
           ["mothers", ["Red mothers."], 0.065, 0.65],
           ["fathers", ["Red fathers."], 0.065, 0.65],
         ]);

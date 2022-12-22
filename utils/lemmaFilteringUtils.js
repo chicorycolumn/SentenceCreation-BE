@@ -195,47 +195,50 @@ exports.getLObjAndSiblings = (
   return res;
 };
 
+exports.adjustHypernymyProportions = (hypernymy, outputUnits) => {
+  let proportionAdjustedOutputUnits = [];
+
+  if (["hypernym"].includes(hypernymy)) {
+    outputUnits.forEach((unit) => {
+      if (
+        unit.drillPath.some(
+          (drillPathUnit) =>
+            drillPathUnit[0] === "number" && drillPathUnit[1] === "plural"
+        )
+      ) {
+        proportionAdjustedOutputUnits.push(unit);
+        proportionAdjustedOutputUnits.push(unit);
+        proportionAdjustedOutputUnits.push(unit);
+        proportionAdjustedOutputUnits.push(unit);
+      } else {
+        proportionAdjustedOutputUnits.push(unit);
+      }
+    });
+  } else if (["hyponym", "vyponym"].includes(hypernymy)) {
+    outputUnits.forEach((unit) => {
+      if (
+        unit.drillPath.some(
+          (drillPathUnit) =>
+            drillPathUnit[0] === "number" && drillPathUnit[1] === "singular"
+        )
+      ) {
+        proportionAdjustedOutputUnits.push(unit);
+        proportionAdjustedOutputUnits.push(unit);
+        proportionAdjustedOutputUnits.push(unit);
+        proportionAdjustedOutputUnits.push(unit);
+      } else {
+        proportionAdjustedOutputUnits.push(unit);
+      }
+    });
+  }
+
+  return proportionAdjustedOutputUnits;
+};
+
 exports.selectRandOutputUnit = (lObj, stCh, outputUnits) => {
   let hypernymy = lfUtils.assessHypernymy(lObj);
-
   if (["hypernym", "hyponym", "vyponym"].includes(hypernymy)) {
-    let proportionAdjustedOutputUnits = [];
-
-    if (["hypernym"].includes(hypernymy)) {
-      outputUnits.forEach((unit) => {
-        if (
-          unit.drillPath.some(
-            (drillPathUnit) =>
-              drillPathUnit[0] === "number" && drillPathUnit[1] === "plural"
-          )
-        ) {
-          proportionAdjustedOutputUnits.push(unit);
-          proportionAdjustedOutputUnits.push(unit);
-          proportionAdjustedOutputUnits.push(unit);
-          proportionAdjustedOutputUnits.push(unit);
-        } else {
-          proportionAdjustedOutputUnits.push(unit);
-        }
-      });
-    } else if (["hyponym", "vyponym"].includes(hypernymy)) {
-      outputUnits.forEach((unit) => {
-        if (
-          unit.drillPath.some(
-            (drillPathUnit) =>
-              drillPathUnit[0] === "number" && drillPathUnit[1] === "singular"
-          )
-        ) {
-          proportionAdjustedOutputUnits.push(unit);
-          proportionAdjustedOutputUnits.push(unit);
-          proportionAdjustedOutputUnits.push(unit);
-          proportionAdjustedOutputUnits.push(unit);
-        } else {
-          proportionAdjustedOutputUnits.push(unit);
-        }
-      });
-    }
-
-    return uUtils.selectRandom(proportionAdjustedOutputUnits);
+    outputUnits = lfUtils.adjustHypernymyProportions(hypernymy, outputUnits);
   }
 
   return uUtils.selectRandom(outputUnits);
