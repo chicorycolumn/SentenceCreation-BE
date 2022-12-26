@@ -26,6 +26,13 @@
     },
     {
       "type": "node-terminal",
+      "name": "Run Script: test",
+      "request": "launch",
+      "command": "npm t",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "node-terminal",
       "name": "Run Script: test restrain all",
       "request": "launch",
       "command": "npm t r",
@@ -40,30 +47,9 @@
     },
     {
       "type": "node-terminal",
-      "name": "Run Script: test restrained except 2",
+      "name": "Run Script: test restrained except testoutput",
       "request": "launch",
-      "command": "npm t r2",
-      "cwd": "${workspaceFolder}"
-    },
-    {
-      "type": "node-terminal",
-      "name": "Run Script: test restrained except 3",
-      "request": "launch",
-      "command": "npm t r3",
-      "cwd": "${workspaceFolder}"
-    },
-    {
-      "type": "node-terminal",
-      "name": "Run Script: test restrained except 4",
-      "request": "launch",
-      "command": "npm t r4",
-      "cwd": "${workspaceFolder}"
-    },
-    {
-      "type": "node-terminal",
-      "name": "Run Script: test restrained except 5",
-      "request": "launch",
-      "command": "npm t r5",
+      "command": "npm t t",
       "cwd": "${workspaceFolder}"
     }
   ]

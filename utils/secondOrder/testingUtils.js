@@ -108,6 +108,7 @@ exports.runPaletteTest = (
     })
     .expect(200)
     .then((res) => {
+      consol.logTestOutputSolely(res.body);
       if (!answerLanguage) {
         expect(res.body.questionSentenceArr).to.have.length(1);
         expect(res.body.questionSentenceArr[0]).to.be.a("String");
