@@ -1321,6 +1321,7 @@ describe("/api", function () {
           ["♀ feminine", ["Pisałam."], 0.5],
         ]);
       });
+    });
     it("#pal06-06 GET 200 YES: Battery RSWAT Poleng. Ensure genderProportion masc and fem randomly selected at ~50/50 rate, despite there being thrice as many masculine genders as feminine.", () => {
       return Promise.all(
         promiseAllMultiplier(100, () => {
