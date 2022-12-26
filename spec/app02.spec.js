@@ -408,7 +408,7 @@ describe("/api", function () {
       );
     });
     it("#pal10-02a Type 1 Allohomographs of MultipleWordtype: 'bear (noun)' Engpol. Expect clarifiers as requested allo-multi-clarifiers in structureChunk.", () => {
-      let ref = [{ ENG: "Bear (nounCommon).", POL: ["Nedved."] }];
+      let ref = [{ ENG: "Bear (nounCommon).", POL: ["Niedźwiedź."] }];
       return runPaletteTest("ENG", "POL", "dummy45a", ref, {}, 1);
     });
     it("#pal10-02b Type 1 Allohomographs of MultipleWordtype: 'bear (verb)' Engpol. Expect clarifiers as requested allo-multi-clarifiers in structureChunk.", () => {
@@ -420,7 +420,7 @@ describe("/api", function () {
       return runPaletteTest("ENG", "POL", "dummy45c", ref, {}, 1);
     });
     it("#pal10-02d Type 1 Allohomographs of MultipleWordtype: 'bear (noun)' Poleng. No clarifiers.", () => {
-      let ref = [{ POL: "Nedved.", ENG: ["Bear."] }];
+      let ref = [{ POL: "Niedźwiedź.", ENG: ["Bear."] }];
       return runPaletteTest("POL", "ENG", "dummy45a", ref, {}, 1);
     });
     it("#pal10-02e Type 1 Allohomographs of MultipleWordtype: 'bear (verb)' Poleng. No clarifiers.", () => {

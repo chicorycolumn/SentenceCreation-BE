@@ -83,7 +83,7 @@ exports.wordsBank = {
       traductions: {
         SPA: ["spa-nco-002-oso"],
         ENG: ["eng-nco-001-bear"],
-        POL: ["pol-nco-011-nedved"],
+        POL: ["pol-nco-011-niedźwiedź"],
       },
       papers: ["allohomTesting2", "animal"],
       topics: [],

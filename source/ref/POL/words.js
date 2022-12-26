@@ -344,15 +344,15 @@ exports.wordsBank = {
   nco: [
     {
       //selectors
-      lemma: "nedved",
-      id: "pol-nco-011-nedved",
+      lemma: "niedźwiedź",
+      id: "pol-nco-011-niedźwiedź",
       gender: "m2",
       //notes
 
       //inflections
       inflections: {
         singular: {
-          nom: "nedved",
+          nom: "niedźwiedź",
           gen: "niedźwiedzia",
           dat: "niedźwiedziowi",
           acc: "niedźwiedzia",
@@ -360,10 +360,10 @@ exports.wordsBank = {
           loc: "niedźwiedziu",
         },
         plural: {
-          nom: "nedvedy",
+          nom: "niedźwiedzie",
           gen: "niedźwiedzi",
           dat: "niedźwiedziom",
-          acc: "nedvedy",
+          acc: "niedźwiedzie",
           ins: "niedźwiedziami",
           loc: "niedźwiedziach",
         },

@@ -2765,7 +2765,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "nco-1",
-        specificIds: ["pol-nco-012-cebula", "pol-nco-011-nedved"],
+        specificIds: ["pol-nco-012-cebula", "pol-nco-011-niedźwiedź"],
       },
       {
         chunkId: "adj-1",

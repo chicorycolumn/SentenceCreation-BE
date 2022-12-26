@@ -84,7 +84,7 @@ const dummy72a = [
   {
     ENG: ["Red bear."],
     SPA: ["Rojo oso."],
-    POL: ["Czerwony nedved."],
+    POL: ["Czerwony niedźwiedź."],
   },
   {
     ENG: ["Red onion."],
@@ -94,7 +94,7 @@ const dummy72a = [
   {
     ENG: ["Red bears."],
     SPA: ["Rojos osos."],
-    POL: ["Czerwone nedvedy."],
+    POL: ["Czerwone niedźwiedzie."],
   },
   {
     ENG: ["Red onions."],
