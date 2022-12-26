@@ -287,7 +287,7 @@ exports.checkSentenceFormulaIds = (envir, currentLanguage) => {
   return { schematic, duplicateIds, duplicateSymbols };
 };
 
-exports.getWordsBank = (currentLanguage, envir) => {
+exports.getWordsBank = (currentLanguage, envir = "ref") => {
   const {
     wordsBank,
   } = require(`../../source/${envir}/${currentLanguage}/words.js`);

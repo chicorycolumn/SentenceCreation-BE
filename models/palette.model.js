@@ -201,7 +201,7 @@ exports.fetchPalette = (req) => {
       questionSentenceData.questionOutputArr.map((unit) => unit.structureChunk)
     );
 
-    //Check that all chunks are appropriately decanted.
+    //Check that all chunks are appropriately decanted. //gamma tidy this into own fxn pvUtils.checkDecant
     questionSentenceData.questionOutputArr.forEach((unit) => {
       if (unit.structureChunk.dontSpecifyOnThisChunk) {
         return;

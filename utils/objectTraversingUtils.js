@@ -913,7 +913,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
   if (!multipleMode && arrayOfAllPossibleOutputUnits.length > 1) {
     arrayOfAllPossibleOutputUnits = [
-      uUtils.selectRandom(arrayOfAllPossibleOutputUnits),
+      uUtils.selectRandom(arrayOfAllPossibleOutputUnits), //delta Possible adjustment point.
     ];
   }
 

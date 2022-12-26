@@ -309,6 +309,7 @@ exports.preprocessStructureChunks = (structureChunk) => {
 };
 
 exports.expandLemmaObjects = (matches, stChWordtype, currentLanguage) => {
+  //epsilon genericise
   allLangUtils.expandLemmaObjects(matches, currentLanguage);
 };
 
