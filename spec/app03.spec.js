@@ -312,7 +312,7 @@ describe("/api", function () {
     });
   });
 
-  // describe.only("/palette - Stage 18C: Annotations: MGNs and metagenders - king queen", () => {
+  // describe("/palette - Stage 18C: Annotations: MGNs and metagenders - king queen", () => {
   //   it("#pal18-15a GET 200 YES: Engpol. 'The king writes.'", () => {
   //     const questionLanguage = "ENG";
   //     const answerLanguage = "POL";
@@ -374,7 +374,7 @@ describe("/api", function () {
   //         );
   //       });
   //   });
-  //   it.only("#pal18-15b GET 200 YES: Engpol. 'The king writes.' PDS", () => {
+  //   it("#pal18-15b GET 200 YES: Engpol. 'The king writes.' PDS", () => {
   //     const questionLanguage = "ENG";
   //     const answerLanguage = "POL";
 
