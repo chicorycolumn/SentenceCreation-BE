@@ -310,9 +310,8 @@ exports.fetchPalette = (req) => {
       }
 
       if ("console") {
-        consol.log("");
         consol.log(
-          `pjeg fetchPalette. Just BEFORE qaConform, let's see the Q and A structures:`
+          `\n pjeg fetchPalette. Just BEFORE qaConform, let's see the Q and A structures:`
         );
         consol.log(
           "p'jeg answerSentenceFormula.sentenceStructure",
