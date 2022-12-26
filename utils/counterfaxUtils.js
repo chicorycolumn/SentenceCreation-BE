@@ -213,7 +213,7 @@ exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
             tempObj,
             Object.keys(questionOutputUnit.structureChunk.annotations).includes(
               "person"
-            ) // If "person" is an annotation (and stCh is pronoun),
+            ) // If "person" is an annotation (and stCh is pronombre),
             //then this can be "3per", which would mean we don't want to enforce isPerson ie removing "n" from gender counterfaxes.
           );
           counterfactualTraitValuesForThisTraitKey = tempObj.gender;

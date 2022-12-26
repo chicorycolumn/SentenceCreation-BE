@@ -9,7 +9,7 @@ const { runPaletteTest } = testingUtils;
 describe("/api", function () {
   this.timeout(7000);
 
-  describe("/palette - Stage 22: Pronouns, Interrogatives.", () => {
+  describe("/palette - Stage 22: Pronombres, Interrogatives.", () => {
     it("#pal22-01a GET 200 YES: Poleng. ITG_G. Who is she?", () => {
       let ref = [
         {
