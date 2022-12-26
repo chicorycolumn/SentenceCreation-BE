@@ -348,7 +348,6 @@ let nco = [
 ];
 let npe = [];
 let adj = [];
-let adver = [];
 let pro = [];
 let ver = [
   {
@@ -449,7 +448,6 @@ exports.dummyWordsBank = {
   nco,
   npe,
   adj,
-  adver,
   ver,
   pro,
   pre,

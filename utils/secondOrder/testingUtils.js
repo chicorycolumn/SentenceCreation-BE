@@ -7,14 +7,93 @@ const consol = require("../zerothOrder/consoleLoggingUtils.js");
 const { it } = require("mocha");
 const testingUtils = require("./testingUtils.js");
 
+exports.checkProportions = (res, ref, strictAboutAnnotations) => {
+  let printoutGood = {};
+  let printoutBad = {};
+  let rec = {};
+
+  ref.forEach((refArr) => {
+    let name = refArr[0];
+    let values = refArr[1];
+    let target = refArr[2];
+    let variance = refArr[3] || 0.22;
+
+    let upperBound = target + target * variance;
+    let lowerBound = target - target * variance;
+    let actual =
+      res.filter((str) => {
+        if (!strictAboutAnnotations) {
+          let strWithoutAnnotations = "";
+          let cease;
+          str.split("").forEach((char) => {
+            if (!cease && char !== "(") {
+              strWithoutAnnotations += char;
+            } else {
+              cease = true;
+            }
+          });
+
+          if (cease) {
+            strWithoutAnnotations = strWithoutAnnotations.slice(0, -1) + ".";
+          }
+
+          str = strWithoutAnnotations;
+        }
+
+        return values.includes(str);
+      }).length / res.length;
+
+    rec[name] = {
+      actual,
+      upperBound,
+      lowerBound,
+    };
+    let bool = lowerBound <= actual && actual <= upperBound;
+    let str = bool ? "" : " not";
+    let toPrint = `${uUtils.round(actual)}${str} in ${uUtils.round(
+      lowerBound
+    )}-${uUtils.round(upperBound)}`;
+
+    if (bool) {
+      printoutGood[name] = toPrint;
+    } else {
+      printoutBad[name] = toPrint;
+    }
+  });
+
+  consol.logTestOutputSolely("\ncheckProportions:");
+  if (Object.keys(printoutBad).length) {
+    consol.logTestOutputSolely("😰 BAD:", printoutBad, "\n");
+  }
+  if (Object.keys(printoutGood).length) {
+    consol.logTestOutputSolely("😀 GOOD:", printoutGood, "\n");
+  }
+
+  Object.keys(rec).forEach((name) => {
+    let { actual, upperBound, lowerBound } = rec[name];
+    expect(actual).to.be.at.least(lowerBound);
+    expect(actual).to.be.at.most(upperBound);
+  });
+};
+
+exports.promiseAllMultiplier = (iterations = 10, callback) => {
+  let res = [];
+  for (let i = 0; i < iterations; i++) {
+    res.push(callback());
+  }
+  return res;
+};
+
 exports.runPaletteTest = (
   questionLanguage,
   answerLanguage,
   sentenceFormulaSymbol,
   expected,
   args,
-  expectedResLength,
-  useDummy = sentenceFormulaSymbol.includes("dummy")
+  expectedLength,
+  returnRes,
+  useDummy = sentenceFormulaSymbol.includes("dummy"),
+  skipConsoleLog
 ) => {
   return request(app)
     .get("/api/palette")
@@ -27,7 +106,10 @@ exports.runPaletteTest = (
     })
     .expect(200)
     .then((res) => {
-      consol.logTestOutputSolely(res.body);
+      if (!skipConsoleLog) {
+        consol.logTestOutputSolely(res.body);
+      }
+
       if (!answerLanguage) {
         expect(res.body.questionSentenceArr).to.have.length(1);
         expect(res.body.questionSentenceArr[0]).to.be.a("String");
@@ -35,10 +117,12 @@ exports.runPaletteTest = (
           expect(expected).to.include(res.body.questionSentenceArr[0]);
         }
       } else {
-        if (expectedResLength) {
-          let { questionSentenceArr, answerSentenceArr } = res.body;
-          expect(questionSentenceArr.length).to.equal(expectedResLength);
-          expect(answerSentenceArr.length).to.equal(expectedResLength);
+        if (expectedLength) {
+          expect(res.body.questionSentenceArr.length).to.equal(expectedLength);
+        }
+
+        if (returnRes) {
+          return res.body.questionSentenceArr[0];
         }
 
         testingUtils.checkTranslationsOfGivenRef(
