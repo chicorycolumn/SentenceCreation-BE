@@ -61,15 +61,12 @@ exports.checkProportions = (res, ref, strictAboutAnnotations) => {
     }
   });
 
-  consol.logTestOutputSolely("");
-  consol.logTestOutputSolely("checkProportions:");
+  consol.logTestOutputSolely("\ncheckProportions:");
   if (Object.keys(printoutBad).length) {
-    consol.logTestOutputSolely("😰 BAD:", printoutBad);
-    consol.logTestOutputSolely("");
+    consol.logTestOutputSolely("😰 BAD:", printoutBad, "\n");
   }
   if (Object.keys(printoutGood).length) {
-    consol.logTestOutputSolely("😀 GOOD:", printoutGood);
-    consol.logTestOutputSolely("");
+    consol.logTestOutputSolely("😀 GOOD:", printoutGood, "\n");
   }
 
   Object.keys(rec).forEach((name) => {
@@ -95,7 +92,8 @@ exports.runPaletteTest = (
   args,
   expectedLength,
   returnRes,
-  useDummy = sentenceFormulaSymbol.includes("dummy")
+  useDummy = sentenceFormulaSymbol.includes("dummy"),
+  skipConsoleLog
 ) => {
   return request(app)
     .get("/api/palette")
@@ -108,7 +106,10 @@ exports.runPaletteTest = (
     })
     .expect(200)
     .then((res) => {
-      consol.logTestOutputSolely(res.body);
+      if (!skipConsoleLog) {
+        consol.logTestOutputSolely(res.body);
+      }
+
       if (!answerLanguage) {
         expect(res.body.questionSentenceArr).to.have.length(1);
         expect(res.body.questionSentenceArr[0]).to.be.a("String");
