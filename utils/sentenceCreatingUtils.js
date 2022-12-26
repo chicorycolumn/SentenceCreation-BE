@@ -950,6 +950,51 @@ exports.buildSentenceString = (
   return producedSentences;
 };
 
+exports.coverBothGendersForPossessivesOfHypernyms = (
+  multipleMode,
+  structureChunk,
+  orderedOutputArr,
+  drillPath,
+  selectedLemmaObject
+) => {
+  if (
+    multipleMode &&
+    gpUtils.getWordtypeStCh(structureChunk) === "pronombre" &&
+    structureChunk.agreeWith
+  ) {
+    const getHeadOutputUnit = (stCh, outputArr) => {
+      return outputArr.find(
+        (ou) => ou.structureChunk.chunkId === stCh.agreeWith
+      );
+    };
+    let headOutputUnit = getHeadOutputUnit(structureChunk, orderedOutputArr);
+    let firstNumberDrillPathUnit = drillPath.find((dpu) => dpu[0] === "number");
+    if (
+      headOutputUnit &&
+      lfUtils.checkHyper(headOutputUnit.selectedLemmaObject, [HY.HY]) &&
+      firstNumberDrillPathUnit &&
+      firstNumberDrillPathUnit[1] === "singular"
+    ) {
+      let drillPathGenderFlipped = uUtils.copyWithoutReference(drillPath);
+      let firstGenderDrillPathUnit = drillPathGenderFlipped.find(
+        (dpu) => dpu[0] === "gender"
+      );
+      firstGenderDrillPathUnit[1] =
+        firstGenderDrillPathUnit[1] === "f" ? "m" : "f";
+
+      let res = uUtils.copyWithoutReference(selectedLemmaObject).inflections;
+      drillPathGenderFlipped.forEach((drillPathUnit) => {
+        res = res[drillPathUnit[1]];
+        if (!res) {
+          consol.throw("ndln");
+        }
+      });
+
+      return res;
+    }
+  }
+};
+
 exports.selectWordVersions = (
   orderedOutputArr,
   currentLanguage,
@@ -1071,6 +1116,30 @@ exports.selectWordVersions = (
     }
 
     if (typeof selectedWord === "string") {
+      // For possessives of hypernyms we want answer to accept both genders, eg:
+      // Q POL "Rodzic dał nam jego lustro." should give
+      // A ENG ["Parent gave me HIS mirror.", "Parent gave me HER mirror."]
+      // So if a gender flipped word is generated, then it is indeed a possessive of a hypernym, so we add it.
+      let genderFlippedSelectedWord =
+        scUtils.coverBothGendersForPossessivesOfHypernyms(
+          multipleMode,
+          structureChunk,
+          orderedOutputArr,
+          drillPath,
+          selectedLemmaObject,
+          selectedWordsArr,
+          firstStageAnnotationsObj
+        );
+      if (genderFlippedSelectedWord) {
+        frUtils.pushSelectedWordToArray(
+          "array",
+          [selectedWord, genderFlippedSelectedWord],
+          selectedWordsArr,
+          firstStageAnnotationsObj,
+          structureChunk
+        );
+        return;
+      }
       frUtils.pushSelectedWordToArray(
         "string",
         selectedWord,
@@ -1581,10 +1650,6 @@ exports.conformAnswerStructureToQuestionStructure = (
       consol.logSpecial(5, ">>>>>>>>>>>>>>>>>", questionStructureChunk.chunkId);
       consol.logSpecial(5, answerStructureChunk);
 
-      if (traitKey === "number") {
-        consol.logSpecial(5, "qqqa", questionStructureChunk.number);
-      }
-
       //Step-T, dealing with hidden values.
       let nonhiddenTraitValue;
       if (
@@ -1597,10 +1662,6 @@ exports.conformAnswerStructureToQuestionStructure = (
         questionStructureChunk[traitKey] = uUtils.copyWithoutReference(
           questionStructureChunk.hiddenTraits[traitKey]
         );
-      }
-
-      if (traitKey === "number") {
-        consol.logSpecial(5, "qqqb", questionStructureChunk.number);
       }
 
       if (!questionStructureChunk[traitKey]) {
@@ -1860,6 +1921,13 @@ exports.inheritFromHeadToDependentChunk = (
       dependentChunk[traitKey] = traitValueArr;
     }
   });
+
+  // if (
+  //   gpUtils.getWordtypeStCh(dependentChunk) === "pronombre" &&
+  //   headChunk.semanticGender
+  // ) {
+  //   dependentChunk["gender"] = headChunk.semanticGender.slice();
+  // }
 
   consol.log(
     "ttez At the end of inheritFromHeadToDependentChunk, we must again a'djustVirility, which we also did in allLangUtils.preprocessStructureChunks earlier."

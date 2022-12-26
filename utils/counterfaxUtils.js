@@ -11,7 +11,7 @@ const allLangUtils = require("./allLangUtils.js");
 const { HY } = refObj;
 
 exports.explodeCounterfaxSituations = (sits) => {
-  consol.logSpecial(8, "swde1 explodeCounterfaxSituations");
+  consol.logSpecial(8, "START explodeCounterfaxSituations");
   let explodedWithinEachChunk = {};
   let sentence = [];
   let chunkIds = sits.headsFirstSequenceChunkIds;
@@ -82,7 +82,7 @@ exports.explodeCounterfaxSituations = (sits) => {
 };
 
 exports.makeCfLabelFromSitSchematic = (sit) => {
-  consol.logSpecial(8, "swde1 makeCfLabelFromSitSchematic");
+  consol.logSpecial(8, "START makeCfLabelFromSitSchematic");
   let grandCfLabel = "";
   sit.chunkIds.forEach((chunkId) => {
     let cfLabel = `${chunkId} `;
@@ -96,7 +96,7 @@ exports.makeCfLabelFromSitSchematic = (sit) => {
 };
 
 exports.reorderOutputArrWithHeadsFirst = (questionOutputArr) => {
-  consol.logSpecial(8, "swde1 reorderOutputArrWithHeadsFirst");
+  consol.logSpecial(8, "START reorderOutputArrWithHeadsFirst");
   let questionOutputArrOrderedHeadsFirst = [];
   let headChunkIds = [];
 
@@ -159,7 +159,7 @@ exports.reorderOutputArrWithHeadsFirst = (questionOutputArr) => {
 };
 
 exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
-  consol.logSpecial(8, "swde1 listCounterfaxSituations");
+  consol.logSpecial(8, "START listCounterfaxSituations");
   let { questionLanguage } = languagesObj;
 
   let counterfaxSituations = { headsFirstSequenceChunkIds: [] };
@@ -221,8 +221,9 @@ exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
               tempObj,
               Object.keys(
                 questionOutputUnit.structureChunk.annotations
-              ).includes("person") // If "person" is an annotation (and stCh is pronoun),
-              //then this can be "3per", which would mean we don't want to enforce isPerson ie removing "n" from gender counterfaxes.
+              ).includes("person")
+              // If "person" is an annotation (and stCh is pronombre) then this can be "3per",
+              // which would mean we don't want to enforce isPerson ie removing "n" from gender counterfaxes.
             );
             counterfactualTraitValuesForThisTraitKey = tempObj.gender;
 
@@ -273,7 +274,7 @@ exports.addFaxSituation2 = (
   traitKey,
   traitValue
 ) => {
-  consol.logSpecial(8, "swde1 addFaxSituation2");
+  consol.logSpecial(8, "START addFaxSituation2");
   let newCounterfaxSituation = {
     traitKey: traitKey,
     traitValue: traitValue,
@@ -313,7 +314,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 ) => {
   consol.logSpecial(
     8,
-    "swde1 removeAnnotationsByCounterfactualAnswerSentences"
+    "START removeAnnotationsByCounterfactualAnswerSentences"
   );
   consol.logSpecial(
     3,
@@ -1386,7 +1387,7 @@ exports.agglomerateAndRemoveAnnosIfSameResults = (
   counterfactualAnswerOutputArrObjs,
   originalAnnoTraitValue
 ) => {
-  consol.logSpecial(8, "swde1 agglomerateAndRemoveAnnosIfSameResults");
+  consol.logSpecial(8, "START agglomerateAndRemoveAnnosIfSameResults");
   if (questionOutputUnit.structureChunk.dontSpecifyOnThisChunk) {
     let combinedTraitValues = [
       ...questionOutputUnit.structureChunk[annoTraitKey],

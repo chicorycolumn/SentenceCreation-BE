@@ -1894,7 +1894,9 @@ describe("/api", function () {
         "Moi ojcowie dali mi ich książkę.",
         "Nasi ojcowie dali nam ich książkę.",
 
-        "Mój rodzic dał mi jego książkę.", //Alpha Issue 205
+        "Mój rodzic dał mi jego książkę.",
+        // "Rodzic dał mi JEJ książkę.". absent because even when parent is a woman,
+        // the sentence is still "Rodzic dał mi JEGO książkę."
         "Nasz rodzic dał nam jego książkę.",
         "Moi rodzice dali mi ich książkę.",
         "Nasi rodzice dali nam ich książkę.",
@@ -1912,9 +1914,10 @@ describe("/api", function () {
         "My fathers gave me their book.",
         "Our fathers gave us their book.",
 
-        "My parent gave me his book.", //Alpha Issue 205
-        // Surely here in ENG Qlang only, we should be able to get "My parent gave me HER book."?
+        "My parent gave me his book.",
         "Our parent gave us his book.",
+        "My parent gave me her book.",
+        "Our parent gave us her book.",
         "My parents gave me their book.",
         "Our parents gave us their book.",
 
@@ -2050,6 +2053,10 @@ describe("/api", function () {
             "My parent gave me his book.",
             "My parent had given me his book.",
             "My parent has given me his book.",
+
+            "My parent gave me her book.",
+            "My parent had given me her book.",
+            "My parent has given me her book.",
           ],
         },
         {
@@ -2058,6 +2065,10 @@ describe("/api", function () {
             "Our parent gave us his book.",
             "Our parent had given us his book.",
             "Our parent has given us his book.",
+
+            "Our parent gave us her book.",
+            "Our parent had given us her book.",
+            "Our parent has given us her book.",
           ],
         },
         {
