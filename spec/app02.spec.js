@@ -2045,6 +2045,38 @@ describe("/api", function () {
     it("#pal14-03d GET 200 YES: Poleng. My father gave me his book.", () => {
       let ref = [
         {
+          POL: "Mój rodzic dał mi jego książkę.",
+          ENG: [
+            "My parent gave me his book.",
+            "My parent had given me his book.",
+            "My parent has given me his book.",
+          ],
+        },
+        {
+          POL: "Nasz rodzic dał nam jego książkę.",
+          ENG: [
+            "Our parent gave us his book.",
+            "Our parent had given us his book.",
+            "Our parent has given us his book.",
+          ],
+        },
+        {
+          POL: "Moi rodzice dali mi ich książkę.",
+          ENG: [
+            "My parents gave me their book.",
+            "My parents had given me their book.",
+            "My parents have given me their book.",
+          ],
+        },
+        {
+          POL: "Nasi rodzice dali nam ich książkę.",
+          ENG: [
+            "Our parents gave us their book.",
+            "Our parents had given us their book.",
+            "Our parents have given us their book.",
+          ],
+        },
+        {
           POL: "Mój ojciec dał mi jego książkę.",
           ENG: [
             "My father gave me his book.",
@@ -2106,38 +2138,6 @@ describe("/api", function () {
             "Our mothers gave us their book.",
             "Our mothers had given us their book.",
             "Our mothers have given us their book.",
-          ],
-        },
-        {
-          POL: "Mój rodzic dał mi jego książkę.",
-          ENG: [
-            "My parent gave me his book.",
-            "My parent had given me his book.",
-            "My parent has given me his book.",
-          ],
-        },
-        {
-          POL: "Nasz rodzic dał nam jego książkę.",
-          ENG: [
-            "Our parent gave us his book.",
-            "Our parent had given us his book.",
-            "Our parent has given us his book.",
-          ],
-        },
-        {
-          POL: "Moi rodzice dali mi ich książkę.",
-          ENG: [
-            "My parents gave me their book.",
-            "My parents had given me their book.",
-            "My parents have given me their book.",
-          ],
-        },
-        {
-          POL: "Nasi rodzice dali nam ich książkę.",
-          ENG: [
-            "Our parents gave us their book.",
-            "Our parents had given us their book.",
-            "Our parents have given us their book.",
           ],
         },
       ];
