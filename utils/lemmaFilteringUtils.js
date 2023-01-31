@@ -972,9 +972,19 @@ exports.filterBySelector_inner = (
         lObjSelectorValues
       );
 
-      return lObjSelectorValues.some((lObjSelectorValue) =>
+      let bool = lObjSelectorValues.some((lObjSelectorValue) =>
         requirementArray.includes(lObjSelectorValue)
       );
+
+      consol.logSpecial(
+        8,
+        "\netpe              ",
+        lObj.lemma,
+        bool ? "YES" : "NO",
+        "because lObjSelectorValues (printed above) fit requirementArray (printed higher above).\n"
+      );
+
+      return bool;
     });
   } else {
     return lemmaObjectArr;

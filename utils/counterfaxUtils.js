@@ -670,21 +670,35 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       traitValue2,
       questionLanguage
     ) {
+      let bool;
+
       if (!(traitKey && traitValue1 && traitValue2)) {
         consol.throw("ocsj");
       }
 
-      if (traitKey === "gender") {
-        let virilityRefWithMetas = uUtils.combineTwoKeyValueObjectsCarefully(
-          refObj.virilityConversionRef[questionLanguage].matches,
+      let genderTraitKeys = ["gender"];
 
-          refObj.metaTraitValues[questionLanguage].gender
-        );
+      genderTraitKeys.forEach((genderTraitKey) => {
+        if (bool) {
+          return;
+        }
 
-        return virilityRefWithMetas[traitValue1].includes(traitValue2);
+        if (traitKey === genderTraitKey) {
+          let virilityRefWithMetas = uUtils.combineTwoKeyValueObjectsCarefully(
+            refObj.virilityConversionRef[questionLanguage].matches,
+            refObj.metaTraitValues[questionLanguage].gender
+          );
+
+          bool = virilityRefWithMetas[traitValue1].includes(traitValue2);
+        }
+      });
+
+      if (bool) {
+        return bool;
       }
 
-      return traitValue1 === traitValue2;
+      bool = traitValue1 === traitValue2;
+      return bool;
     }
 
     let resArr = allCfRes.filter((cfRes) => {
