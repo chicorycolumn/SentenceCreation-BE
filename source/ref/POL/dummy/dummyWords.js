@@ -144,6 +144,7 @@ let nco = [
     lemma: "foobar_loc_only",
     gender: "n",
     devHardcoded_tags: ["dummy"],
+    devHardcoded_translations: {},
     lacking: true,
     inflections: {
       singular: {
@@ -159,6 +160,7 @@ let nco = [
     lemma: "foobar_ins_only",
     gender: "n",
     devHardcoded_tags: ["dummy"],
+    devHardcoded_translations: {},
     lacking: true,
     inflections: {
       singular: {
@@ -174,6 +176,7 @@ let nco = [
     lemma: "foobar_sin_ins_plu_loc_only",
     gender: "n",
     devHardcoded_tags: ["dummy2"],
+    devHardcoded_translations: {},
     lacking: true,
     inflections: {
       singular: {
@@ -189,6 +192,7 @@ let nco = [
     lemma: "foobar_sin_ins_plu_loc_only",
     gender: "n",
     devHardcoded_tags: ["dummy3"],
+    devHardcoded_translations: {},
     lacking: true,
     inflections: {
       singular: {
@@ -204,6 +208,7 @@ let nco = [
     lemma: "foobar_sin_loc_plu_ins_only",
     gender: "n",
     devHardcoded_tags: ["dummy3"],
+    devHardcoded_translations: {},
     lacking: true,
     inflections: {
       singular: {
@@ -219,6 +224,7 @@ let nco = [
     lemma: "foobar_none",
     gender: "n",
     devHardcoded_tags: ["dummy3"],
+    devHardcoded_translations: {},
     lacking: true,
     inflections: {
       plural: {
@@ -232,6 +238,7 @@ let nco = [
     lemma: "foobar-A",
     gender: "n",
     devHardcoded_tags: ["foobar-A"],
+    devHardcoded_translations: {},
     lacking: true,
     inflections: {
       singular: {
@@ -244,6 +251,7 @@ let nco = [
     lemma: "foobar-B",
     gender: "n",
     devHardcoded_tags: ["foobar-B"],
+    devHardcoded_translations: {},
     lacking: true,
     inflections: {
       singular: {
@@ -256,6 +264,7 @@ let nco = [
     lemma: "foobar-C",
     gender: "n",
     devHardcoded_tags: ["foobar-C"],
+    devHardcoded_translations: {},
     lacking: true,
     inflections: {
       singular: {
@@ -268,6 +277,7 @@ let nco = [
     lemma: "dummy-nco-010",
     gender: "n",
     devHardcoded_tags: ["dummy-nco-010"],
+    devHardcoded_translations: {},
     lacking: true,
     inflections: {
       singular: {

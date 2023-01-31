@@ -2511,6 +2511,10 @@ describe("/api", function () {
             "My doctor's doctor had been a woman.",
             "My doctor's doctor has been a woman.",
             "My doctor's doctor was being a woman.",
+            "My doctor's doctor was a lady.",
+            "My doctor's doctor had been a lady.",
+            "My doctor's doctor has been a lady.",
+            "My doctor's doctor was being a lady.",
           ],
           POL: [
             "Lekarka mojego lekarza była kobietą.",
@@ -2534,6 +2538,10 @@ describe("/api", function () {
             "My doctor's doctor had been a woman.",
             "My doctor's doctor has been a woman.",
             "My doctor's doctor was being a woman.",
+            "My doctor's doctor was a lady.",
+            "My doctor's doctor had been a lady.",
+            "My doctor's doctor has been a lady.",
+            "My doctor's doctor was being a lady.",
           ],
           POL: [
             "Lekarka mojego lekarza była kobietą.",
@@ -2866,7 +2874,7 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    it("#pal17-01c GET 200 YES: Poleng. MGN as sole word, annotation wouldn't appear anyway.", () => {
+    it("#pal17-01c-i(by tags) GET 200 YES: Poleng. MGN as sole word, annotation wouldn't appear anyway.", () => {
       let ref = [
         {
           ENG: ["Doctor."],

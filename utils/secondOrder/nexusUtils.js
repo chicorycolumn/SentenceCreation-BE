@@ -27,21 +27,49 @@ exports.getNexusLemmaObject = (lObj, env = "ref") => {
 };
 
 exports.getPapers = (lObj, env = "ref") => {
-  if (lObj.devHardcoded_tags) {
-    return lObj.devHardcoded_tags;
-  }
-
-  let nexusObject = exports.getNexusLemmaObject(lObj, env);
-  return nexusObject.papers;
+  return (
+    lObj.devHardcoded_tags || exports.getNexusLemmaObject(lObj, env).papers
+  );
 };
 
-exports.getTraductions = (lObj, env = "ref") => {
-  if (lObj.devHardcoded_translations) {
-    return lObj.devHardcoded_translations;
+exports.getTraductions = (
+  lObj,
+  targetlang,
+  getAllIds,
+  mapIdsToLObjs,
+  env = "ref"
+) => {
+  if (mapIdsToLObjs && !getAllIds) {
+    consol.throw("bcct Not possible.");
+  }
+  if (!targetlang) {
+    targetlang = gpUtils.getLanguageFromLemmaObject(lObj);
   }
 
-  let nexusObject = exports.getNexusLemmaObject(lObj, env);
-  return nexusObject.traductions;
+  let traductions =
+    lObj.devHardcoded_translations ||
+    exports.getNexusLemmaObject(lObj, env).traductions;
+
+  if (getAllIds) {
+    const { wordsBank } = require(`../../source/${env}/${targetlang}/words.js`);
+    let bank = wordsBank[gpUtils.getWordtypeShorthandLObj(lObj)];
+
+    let resArr = [];
+
+    traductions[targetlang].forEach((id) => {
+      bank.forEach((l) => {
+        if (allLangUtils.compareLObjStems(l.id, id)) {
+          resArr.push(l.id);
+        }
+      });
+    });
+
+    let ids = Array.from(new Set(resArr));
+
+    return mapIdsToLObjs ? ids.map((id) => bank.find((l) => l.id === id)) : ids;
+  }
+
+  return traductions[targetlang];
 };
 
 exports.checkAllLObjsArePresentInNexus = (env, lang) => {
@@ -78,7 +106,9 @@ exports.checkAllLObjsArePresentInNexus = (env, lang) => {
       nex.traductions[lang].forEach((trad) => {
         if (
           !Object.values(wordsBank).some((_wb) => {
-            return _wb.some((lObj) => lObj.id === trad);
+            return _wb.some((lObj) =>
+              allLangUtils.compareLObjStems(lObj.id, trad)
+            );
           })
         ) {
           problems.push(
@@ -109,7 +139,7 @@ exports.checkAllLObjsArePresentInNexus = (env, lang) => {
 
       if (res.length !== 1) {
         problems.push(
-          `${id} is present in nexus words bank _${res.length}_ times but should be 1.`
+          `${id} is present in nexus bank ${res.length} times but should be 1.`
         );
       }
 
@@ -121,5 +151,5 @@ exports.checkAllLObjsArePresentInNexus = (env, lang) => {
     console.log("wdgt problems:", problems);
   }
 
-  expect(problems.length).to.equal(0);
+  expect(problems).to.eql([]);
 };

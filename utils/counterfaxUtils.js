@@ -2,12 +2,15 @@ const gpUtils = require("./generalPurposeUtils.js");
 const uUtils = require("./universalUtils.js");
 const consol = require("./zerothOrder/consoleLoggingUtils.js");
 const cfUtils = require("./counterfaxUtils.js");
+const lfUtils = require("./lemmaFilteringUtils.js");
+const nexusUtils = require("./secondOrder/nexusUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 const refFxn = require("./reference/referenceFunctions.js");
 const palette = require("../models/palette.model.js");
 const allLangUtils = require("./allLangUtils.js");
 
 exports.explodeCounterfaxSituations = (sits) => {
+  consol.logSpecial(8, "START explodeCounterfaxSituations");
   let explodedWithinEachChunk = {};
   let sentence = [];
   let chunkIds = sits.headsFirstSequenceChunkIds;
@@ -78,6 +81,7 @@ exports.explodeCounterfaxSituations = (sits) => {
 };
 
 exports.makeCfLabelFromSitSchematic = (sit) => {
+  consol.logSpecial(8, "START makeCfLabelFromSitSchematic");
   let grandCfLabel = "";
   sit.chunkIds.forEach((chunkId) => {
     let cfLabel = `${chunkId} `;
@@ -91,6 +95,7 @@ exports.makeCfLabelFromSitSchematic = (sit) => {
 };
 
 exports.reorderOutputArrWithHeadsFirst = (questionOutputArr) => {
+  consol.logSpecial(8, "START reorderOutputArrWithHeadsFirst");
   let questionOutputArrOrderedHeadsFirst = [];
   let headChunkIds = [];
 
@@ -153,6 +158,7 @@ exports.reorderOutputArrWithHeadsFirst = (questionOutputArr) => {
 };
 
 exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
+  consol.logSpecial(8, "START listCounterfaxSituations");
   let { questionLanguage } = languagesObj;
 
   let counterfaxSituations = { headsFirstSequenceChunkIds: [] };
@@ -202,22 +208,25 @@ exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
           )
         );
 
-        if (annoTraitKey === "gender") {
-          let tempObj = {
-            gender: counterfactualTraitValuesForThisTraitKey,
-            isPerson: questionOutputUnit.structureChunk.isPerson,
-            chunkId: questionOutputUnit.structureChunk.chunkId,
-            person: questionOutputUnit.structureChunk.person,
-          };
-          allLangUtils.enforceIsPerson(
-            tempObj,
-            Object.keys(questionOutputUnit.structureChunk.annotations).includes(
-              "person"
-            ) // If "person" is an annotation (and stCh is pronombre),
-            //then this can be "3per", which would mean we don't want to enforce isPerson ie removing "n" from gender counterfaxes.
-          );
-          counterfactualTraitValuesForThisTraitKey = tempObj.gender;
-        }
+        ["gender"].forEach((genderTraitKey) => {
+          if (annoTraitKey === genderTraitKey) {
+            let tempObj = {
+              gender: counterfactualTraitValuesForThisTraitKey,
+              isPerson: questionOutputUnit.structureChunk.isPerson,
+              chunkId: questionOutputUnit.structureChunk.chunkId,
+              person: questionOutputUnit.structureChunk.person,
+            };
+            allLangUtils.enforceIsPerson(
+              tempObj,
+              Object.keys(
+                questionOutputUnit.structureChunk.annotations
+              ).includes("person")
+              // If "person" is an annotation (and stCh is pronombre) then this can be "3per",
+              // which would mean we don't want to enforce isPerson ie removing "n" from gender counterfaxes.
+            );
+            counterfactualTraitValuesForThisTraitKey = tempObj.gender;
+          }
+        });
 
         consol.logSpecial(
           3,
@@ -256,6 +265,7 @@ exports.addFaxSituation2 = (
   traitKey,
   traitValue
 ) => {
+  consol.logSpecial(8, "START addFaxSituation2");
   let newCounterfaxSituation = {
     traitKey: traitKey,
     traitValue: traitValue,
@@ -294,6 +304,10 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   runsRecord
 ) => {
   consol.logSpecial(
+    8,
+    "START removeAnnotationsByCounterfactualAnswerSentences"
+  );
+  consol.logSpecial(
     3,
     "\n",
     "removeAnnotationsByCounterfactualAnswerSentences"
@@ -306,8 +320,9 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
     consol.logSpecial(3, x);
     if (!index) {
       consol.logSpecial(3, "^^^ ORIGINAL ^^^");
+      consol.logSpecial(3, "[1;33m " + `kcab Original=` + x.cfLabel + "[0m");
     }
-    consol.logSpecial(3, "-");
+    consol.logSpecial(3, "");
   });
 
   let questionLanguage = languagesObj.questionLanguage;
@@ -355,7 +370,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           let assignments = counterfactualSitSchematic[chunkId];
           assignments.forEach((assignment) => {
             if (
-              assignment.traitKey === "gender" &&
+              ["gender"].includes(assignment.traitKey) &&
               ["m1", "m2", "m3"].includes(assignment.traitValue)
             ) {
               let stCh = questionOutputArr.find(
@@ -428,41 +443,53 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
         //Drop if bad virility combination.
         counterfactualSitSchematic[chunkId].forEach((assignment) => {
-          if (
-            assignment.traitKey === "gender" &&
-            stChToCounterfax.number &&
-            stChToCounterfax.number.length
-          ) {
-            if (stChToCounterfax.number.length > 1) {
-              consol.throw("mkdo");
-            }
-
-            let incompatibleTraitsRef =
-              refObj.incompatibleTraitsRef[questionLanguage].gender.number;
-
-            if (
-              !incompatibleTraitsRef[stChToCounterfax.number[0]].includes(
-                stChToCounterfax.gender[0]
-              )
-            ) {
-              consol.logSpecial(
-                3,
-                `kcaq Dropping current counterfax sit: "${counterfactualSitSchematic.cfLabel}" ie not send to fetchPalette, 
-                as it has gender [${stChToCounterfax.number}] and number [${stChToCounterfax.gender[0]}].`
-              );
-              shouldDrop = true;
-            }
+          if (shouldDrop) {
+            return;
           }
+
+          ["gender"].forEach((genderTraitKey) => {
+            if (
+              assignment.traitKey === genderTraitKey &&
+              stChToCounterfax.number &&
+              stChToCounterfax.number.length
+            ) {
+              if (stChToCounterfax.number.length > 1) {
+                consol.throw("mkdo");
+              }
+
+              let incompatibleTraitsRef =
+                refObj.incompatibleTraitsRef[questionLanguage].gender.number;
+
+              if (
+                !incompatibleTraitsRef[stChToCounterfax.number[0]].includes(
+                  stChToCounterfax[genderTraitKey][0]
+                )
+              ) {
+                consol.logSpecial(
+                  3,
+                  `kcaq Dropping current counterfax sit: "${counterfactualSitSchematic.cfLabel}" ie not send to fetchPalette, 
+                as number [${stChToCounterfax.number}] not fit with ${genderTraitKey} [${stChToCounterfax[genderTraitKey][0]}].`
+                );
+                shouldDrop = true;
+              }
+            }
+          });
         });
 
         if (shouldDrop) {
           return;
         }
 
-        consol.logSpecial(3, "--------eggd--------");
-
-        consol.logSpecial(3, "number", stChToCounterfax.number);
-        consol.logSpecial(3, "gender", stChToCounterfax.gender);
+        consol.logSpecial(
+          3,
+          "--------eggd Let's adjustVirilityOfStructureChunk--------\n",
+          "~~~~~~number\n",
+          stChToCounterfax.number,
+          "\n~~~~~~gender\n",
+          stChToCounterfax.gender,
+          "/n~~~~~~semanticGender\n",
+          stChToCounterfax.semanticGender
+        );
 
         allLangUtils.adjustVirilityOfStructureChunk(
           questionLanguage,
@@ -471,15 +498,22 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           true
         );
 
-        //Okay, if questionLang is POL, and number: singular, and gender is a masculine one,
-        //then change gender to just "m".
-        //But you will have to do this to original, too, which you don't deal with right here.
-        cfUtils.collapseMasculineGenders(questionLanguage, stChToCounterfax);
+        //If questionLang POL and number "singular" and gender is a masculine one, then change gender to just "m".
+        //But you will have to do this to original too, which you don't deal with right here.
+        allLangUtils.collapseMasculineGenders(
+          questionLanguage,
+          stChToCounterfax
+        );
 
-        consol.logSpecial(3, "↓");
-        consol.logSpecial(3, "gender", stChToCounterfax.gender);
-
-        consol.logSpecial(3, "~~~~~~~~~~~~~~~~~~~~");
+        consol.logSpecial(
+          3,
+          "eggf~~~~~~↓\n",
+          "~~~~~~gender\n",
+          stChToCounterfax.gender,
+          "\n~~~~~~semanticGender\n",
+          stChToCounterfax.semanticGender,
+          "\n~~~~~~~~done adjustVirilityOfStructureChunk~~~~~~~~~~~~"
+        );
 
         //Update the counterfactualSitSchematic assignments now that they may have changed from adjust virility.
         tempCopySchematicForThisChunk.forEach((assignment) => {
@@ -539,7 +573,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         );
         return;
       }
-      runsRecord.push(counterfactualSitSchematic.cfLabel);
 
       counterfactualQuestionSentenceFormula.sentenceStructure.forEach(
         (stCh) => {
@@ -566,23 +599,53 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         devSaysThrowAfterAnnoSalvo: reqBody.devSaysThrowAfterAnnoSalvo,
       };
 
-      consol.logSpecial(
-        3,
-        `> > > Sending counterfax sit "${counterfactualSitSchematic.cfLabel}" to fetchPalette.`
-      );
+      let newReqBodys = [newReqBody];
 
-      palette.fetchPalette({ body: newReqBody });
+      newReqBodys.forEach((body) => {
+        if (body.counterfactualSitSchematic.cfLabelAddition) {
+          body.counterfactualSitSchematic.cfLabel +=
+            " " + body.counterfactualSitSchematic.cfLabelAddition;
+          delete body.counterfactualSitSchematic.cfLabelAddition;
+        }
+
+        consol.logSpecial(
+          3,
+          "[1;33m " +
+            ` kcad = = = = = = = = = = = = = = = = = = = = = = = = = = = = =\nSending counterfax sit "${body.counterfactualSitSchematic.cfLabel}" to fetchPalette.\n = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =` +
+            "[0m"
+        );
+
+        runsRecord.push(body.counterfactualSitSchematic.cfLabel);
+        palette.fetchPalette({ body });
+      });
     }
   );
 
-  consol.logSpecial(
-    3,
-    "ewcc allCounterfactualResults.length",
-    allCounterfactualResults.length
-  );
+  if ("logging") {
+    consol.logSpecial(
+      3,
+      "\nkcax allCounterfactualResults.length: ",
+      allCounterfactualResults.length
+    );
+    allCounterfactualResults.forEach((cfRes) => {
+      consol.logSpecial(
+        3,
+        cfRes.counterfactualSitSchematic.cfLabel,
+        cfRes.questionSentenceData.questionOutputArr.map(
+          (ou) => ou.selectedWord
+        ),
+        cfRes.answerSentenceData.answerOutputArrays.map((oarray) =>
+          oarray.map((ou) => ou.selectedWord)
+        )
+      );
+    });
+    consol.logSpecial(3, "\n");
+  }
 
   if (!allCounterfactualResults.length) {
-    consol.throw("THROW: allCounterfactualResults was empty.");
+    console.log("[1;31m " + "fbms allCounterfactualResults was empty." + "[0m");
+    consol.throw("fbms allCounterfactualResults was empty.");
+    return;
   }
 
   function findCFResultsWhenAllOtherThingsBeingEqual(
@@ -1016,19 +1079,19 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           "${annoTraitKey}" = "${questionOutputUnit.structureChunk.annotations[annoTraitKey]}".` +
             "[0m",
           {
-            originalAnswerPseudoSentences: originalAnswerPseudoSentenceObjs.map(
-              (obj) => obj.pseudoSentence
-            ),
-            counterfactualAnswerPseudoSentences:
-              counterfactualAnswerPseudoSentenceObjs.map(
-                (obj) => obj.pseudoSentence
-              ),
             originalQuestionPseudoSentences:
               originalQuestionPseudoSentenceObjs.map(
                 (obj) => obj.pseudoSentence
               ),
+            originalAnswerPseudoSentences: originalAnswerPseudoSentenceObjs.map(
+              (obj) => obj.pseudoSentence
+            ),
             counterfactualQuestionPseudoSentences:
               counterfactualQuestionPseudoSentenceObjs.map(
+                (obj) => obj.pseudoSentence
+              ),
+            counterfactualAnswerPseudoSentences:
+              counterfactualAnswerPseudoSentenceObjs.map(
                 (obj) => obj.pseudoSentence
               ),
           }
@@ -1105,26 +1168,6 @@ exports.makePseudoSentenceObjs = (outputArrObjs, primaryOrders) => {
   });
 };
 
-exports.collapseMasculineGenders = (questionLanguage, stChToCounterfax) => {
-  if (["POL"].includes(questionLanguage)) {
-    if (stChToCounterfax.number && stChToCounterfax.number.length !== 1) {
-      consol.throw("nbii");
-    }
-    if (stChToCounterfax.gender && stChToCounterfax.gender.length !== 1) {
-      consol.throw("nbij");
-    }
-
-    if (
-      stChToCounterfax.number &&
-      stChToCounterfax.number[0] === "singular" &&
-      stChToCounterfax.number &&
-      ["m1", "m2", "m3"].includes(stChToCounterfax.gender[0])
-    ) {
-      stChToCounterfax.gender = ["m"];
-    }
-  }
-};
-
 exports.agglomerateAndRemoveAnnosIfSameResults = (
   questionOutputUnit,
   counterfactualTraitValuesForThisTraitKeyOnThisStCh,
@@ -1134,6 +1177,7 @@ exports.agglomerateAndRemoveAnnosIfSameResults = (
   counterfactualAnswerOutputArrObjs,
   originalAnnoTraitValue
 ) => {
+  consol.logSpecial(8, "START agglomerateAndRemoveAnnosIfSameResults");
   if (questionOutputUnit.structureChunk.dontSpecifyOnThisChunk) {
     let combinedTraitValues = [
       ...questionOutputUnit.structureChunk[annoTraitKey],

@@ -8,11 +8,13 @@ const otUtils = require("./objectTraversingUtils.js");
 const allLangUtils = require("./allLangUtils.js");
 
 exports.findMatchingLemmaObjectThenWord = (
+  useDummyWords,
   structureChunk,
   words,
   errorInSentenceCreation,
   currentLanguage,
   questionLanguage,
+  questionOutputArr,
   multipleModes,
   outputArray,
   isPHD
@@ -55,12 +57,21 @@ exports.findMatchingLemmaObjectThenWord = (
       "and the full set to look in is",
       source.map((lObj) => lObj.id)
     );
-    matches = source.filter((lObj) => {
-      return structureChunk.specificIds.some((specificId) =>
-        allLangUtils.compareLObjStems(lObj.id, specificId)
-      );
-    });
-    consol.log(`obbn Found ${matches.length} matches.`);
+
+    if (useDummyWords) {
+      matches = source.filter((l) => structureChunk.specificIds.includes(l.id));
+    } else {
+      matches = source.filter((lObj) => {
+        return structureChunk.specificIds.some((specificId) =>
+          allLangUtils.compareLObjStems(lObj.id, specificId)
+        );
+      });
+    }
+
+    consol.log(
+      `obbn Found ${matches.length} matches:`,
+      matches.map((l) => l.id)
+    );
     if (!matches.length) {
       consol.log(
         "[1;31m " +
@@ -100,7 +111,9 @@ exports.findMatchingLemmaObjectThenWord = (
       currentLanguage,
       structureChunk,
       matches,
-      "matches line 106"
+      questionOutputArr,
+      "matches line 106",
+      !!questionLanguage
     );
 
     if (!matches.length) {
@@ -166,7 +179,11 @@ exports.findMatchingLemmaObjectThenWord = (
         });
       });
     } else {
-      let selectedLemmaObject = uUtils.selectRandom(matches);
+      let selectedLemmaObject = lfUtils.selectRandLObj(
+        matches,
+        structureChunk,
+        currentLanguage
+      );
 
       let adhocArr = langUtils.generateAdhocForms(
         "form",
@@ -240,7 +257,11 @@ exports.findMatchingLemmaObjectThenWord = (
             });
           });
         } else {
-          let selectedLemmaObject = uUtils.selectRandom(matches);
+          let selectedLemmaObject = lfUtils.selectRandLObj(
+            matches,
+            structureChunk,
+            currentLanguage
+          );
 
           let adhocArr = langUtils.generateAdhocForms(
             adhocInflectionCategory,
@@ -351,8 +372,10 @@ exports.findMatchingLemmaObjectThenWord = (
                 (lObj) => lObj.inflections[selectedUninflectedForm]
               );
 
-              let selectedLemmaObject = uUtils.selectRandom(
-                matchesByUninflectedForm
+              let selectedLemmaObject = lfUtils.selectRandLObj(
+                matchesByUninflectedForm,
+                structureChunk,
+                currentLanguage
               );
 
               let selectedWordArr =
@@ -463,7 +486,9 @@ exports.findMatchingLemmaObjectThenWord = (
       currentLanguage,
       structureChunk,
       matchesCopy,
-      "matches 465"
+      questionOutputArr,
+      "matches 465",
+      !!questionLanguage
     );
 
     if (!matchesCopy.length) {
@@ -594,7 +619,11 @@ exports.findMatchingLemmaObjectThenWord = (
       });
     } else {
       consol.log("xzjc ot:findMatchingLemmaObjectThenWord");
-      let selectedLemmaObject = uUtils.selectRandom(matchesCopy);
+      let selectedLemmaObject = lfUtils.selectRandLObj(
+        matchesCopy,
+        structureChunk,
+        currentLanguage
+      );
 
       allLangUtils.addHiddenNumberToTantumStChs(
         selectedLemmaObject,
@@ -703,7 +732,12 @@ exports.findMatchingLemmaObjectThenWord = (
         });
       }
 
-      let unit = uUtils.selectRandom(subArrayOfOutputUnits);
+      let unit = lfUtils.selectRandOutputUnit(
+        selectedLemmaObject,
+        structureChunk,
+        subArrayOfOutputUnits
+      );
+
       /**Why selran here? Because we're in Q mode.
        * So if matka and matki are possibles, then of course we must choose one for the one Q sentence,
        * so ultimately Q sentence is "Matki dały mi stół." but it could have equally been "Matka dała mi stół."
@@ -1420,9 +1454,8 @@ exports.doesThisInflectionKeyHoldUniqueInflectionValueInLObj = (
       .inflectionChains[gpUtils.getWordtypeLObj(lObj)];
 
   function getInflectionKeyFromDrillPath(inflectionCategory, drillPath) {
-    let inflectionKey = drillPath.find(
-      (arr) => arr[0] === inflectionCategory
-    )[1];
+    let x = drillPath.find((arr) => arr[0] === inflectionCategory);
+    let inflectionKey = x[1];
     return inflectionKey;
   }
 

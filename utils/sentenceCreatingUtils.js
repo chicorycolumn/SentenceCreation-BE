@@ -112,10 +112,13 @@ exports.getMaterialsCopies = (
 };
 
 exports.processSentenceFormula = (
+  useDummyWords,
   languagesObj,
   sentenceFormula,
   words,
-  multipleModes
+  multipleModes,
+  isCounterfax,
+  questionOutputArr
 ) => {
   let { multipleMode, forceMultipleModeAndQuestionOnly } = multipleModes;
 
@@ -166,11 +169,13 @@ exports.processSentenceFormula = (
     consol.log("evga sc:processSentenceFormula STEP ONE", headChunk.chunkId);
 
     let allPossOutputUnits_head = otUtils.findMatchingLemmaObjectThenWord(
+      useDummyWords,
       headChunk,
       words,
       errorInSentenceCreation,
       currentLanguage,
       previousQuestionLanguage,
+      questionOutputArr,
       multipleModes,
       null
     );
@@ -234,7 +239,12 @@ exports.processSentenceFormula = (
         }
 
         // Now we update the head structure chunks with the details from their respective selectedWords.
-        lfUtils.updateStructureChunk(headOutputUnit, currentLanguage);
+        lfUtils.updateStructureChunk(
+          headOutputUnit,
+          currentLanguage,
+          false,
+          isCounterfax
+        );
 
         let headChunk = headOutputUnit.structureChunk;
 
@@ -263,11 +273,13 @@ exports.processSentenceFormula = (
             consol.log(`weoe dependentChunk "${dependentChunk.chunkId}"`);
             let allPossOutputUnits_dependent =
               otUtils.findMatchingLemmaObjectThenWord(
+                useDummyWords,
                 dependentChunk,
                 words,
                 errorInSentenceCreation,
                 currentLanguage,
                 previousQuestionLanguage,
+                questionOutputArr,
                 multipleModes,
                 null
               );
@@ -395,11 +407,13 @@ exports.processSentenceFormula = (
       );
 
       let allPossOutputUnits_PHD = otUtils.findMatchingLemmaObjectThenWord(
+        useDummyWords,
         postHocDependentChunk,
         words,
         errorInSentenceCreation,
         currentLanguage,
         previousQuestionLanguage,
+        questionOutputArr,
         multipleModes,
         outputArray,
         true
@@ -527,11 +541,13 @@ exports.processSentenceFormula = (
 
     consol.log(`weoi otherChunk "${otherChunk.chunkId}"`);
     let allPossOutputUnits_other = otUtils.findMatchingLemmaObjectThenWord(
+      useDummyWords,
       otherChunk,
       words,
       errorInSentenceCreation,
       currentLanguage,
       previousQuestionLanguage,
+      questionOutputArr,
       multipleModes,
       null
     );
@@ -602,7 +618,13 @@ exports.processSentenceFormula = (
       if (gpUtils.getWordtypeStCh(structureChunk) === "fixed") {
         return;
       }
-      lfUtils.updateStructureChunk(outputUnit, currentLanguage);
+
+      lfUtils.updateStructureChunk(
+        outputUnit,
+        currentLanguage,
+        true,
+        isCounterfax
+      );
     });
 
     //Decanting otherChunks if they have multiple traitValues.
@@ -611,6 +633,10 @@ exports.processSentenceFormula = (
         outputArray.map((outputUnit) => outputUnit.structureChunk)
       );
     otherChunks.forEach((otherChunk) => {
+      let selectedLObj = outputArray.find(
+        (outputUnit) => outputUnit.structureChunk.chunkId === otherChunk.chunkId
+      ).selectedLemmaObject;
+
       if (otherChunk.dontSpecifyOnThisChunk) {
         return;
       }
@@ -634,7 +660,7 @@ exports.processSentenceFormula = (
           traitValue.length > 1
         ) {
           consol.log(`pqoi Decanting "${otherChunk.chunkId}" "${traitKey}".`);
-          otherChunk[traitKey] = [uUtils.selectRandom(otherChunk[traitKey])];
+          lfUtils.selectRandTraitValue(selectedLObj, otherChunk, traitKey);
         }
       });
     });
@@ -1072,6 +1098,28 @@ exports.conformAnswerStructureToQuestionStructure = (
   languagesObj,
   words
 ) => {
+  if ("logging") {
+    consol.logSpecial(
+      8,
+      "[1;33m " + `conformAnswerStructureToQuestionStructure START...` + "[0m"
+    );
+    questionOutputArr.forEach((outputUnit) => {
+      consol.logSpecial(8, {
+        "outputUnit.selectedWord": outputUnit.selectedWord,
+        "outputUnit.selectedLemmaObject.id": outputUnit.selectedLemmaObject.id,
+        "outputUnit.structureChunk.gender": outputUnit.structureChunk.gender,
+        "outputUnit.structureChunk.semanticGender":
+          outputUnit.structureChunk.semanticGender,
+        "outputUnit.structureChunk.hypernymy":
+          outputUnit.structureChunk.hypernymy,
+      });
+    });
+    consol.logSpecial(
+      8,
+      "[1;33m " + `conformAnswerStructureToQuestionStructure START.` + "[0m"
+    );
+  }
+
   let shouldConsoleLog = false;
 
   consol.log("[1;35m " + `(aegh sc:conformAnswerStructureToQuestionStructure)` + "[0m");
@@ -1117,9 +1165,11 @@ exports.conformAnswerStructureToQuestionStructure = (
 
     let matchingAnswerLemmaObjects = [];
 
-    let lObjsToSearch = nexusUtils.getTraductions(questionSelectedLemmaObject)[
-      answerLanguage
-    ];
+    let lObjsToSearch = nexusUtils.getTraductions(
+      questionSelectedLemmaObject,
+      answerLanguage,
+      false
+    );
 
     let source = words[gpUtils.getWordtypeShorthandStCh(answerStructureChunk)];
 
@@ -1184,10 +1234,6 @@ exports.conformAnswerStructureToQuestionStructure = (
       consol.logSpecial(5, ">>>>>>>>>>>>>>>>>", questionStructureChunk.chunkId);
       consol.logSpecial(5, answerStructureChunk);
 
-      if (traitKey === "number") {
-        consol.logSpecial(5, "qqqa", questionStructureChunk.number);
-      }
-
       //Step-T, dealing with hidden values.
       let nonhiddenTraitValue;
       if (
@@ -1200,10 +1246,6 @@ exports.conformAnswerStructureToQuestionStructure = (
         questionStructureChunk[traitKey] = uUtils.copyWithoutReference(
           questionStructureChunk.hiddenTraits[traitKey]
         );
-      }
-
-      if (traitKey === "number") {
-        consol.logSpecial(5, "qqqb", questionStructureChunk.number);
       }
 
       if (!questionStructureChunk[traitKey]) {
@@ -1233,7 +1275,7 @@ exports.conformAnswerStructureToQuestionStructure = (
         );
 
         tenseDescriptions.forEach((tenseDesc) => {
-          let translatedTenseDescArr = refFxn.getTranslatedTenseDescription(
+          let translatedTenseDescArr = refFxn.getTranslatedTenseDescription2(
             tenseDesc,
             questionLanguage,
             answerLanguage
@@ -1292,7 +1334,7 @@ exports.conformAnswerStructureToQuestionStructure = (
     //
 
     //Check for traits-of-answer-lang-lobjs-that-aren't-traits-of-question-lang-lobjs.
-    // So when going ENG to POL, that would be gender.
+    // So when going ENG to POL, that would be gender of nco.
     // And then, with that list of traits, we will blind the answer structureChunks to these traits.
 
     let possibleInflectionCategorysOfQuestionLobjs =
@@ -1333,6 +1375,27 @@ exports.conformAnswerStructureToQuestionStructure = (
     );
   });
 
+  if ("logging") {
+    consol.logSpecial(
+      8,
+      "[1;35m " + `conformAnswerStructureToQuestionStructure END...` + "[0m"
+    );
+    sentenceStructure.forEach((answerStCh) => {
+      consol.logSpecial(8, {
+        "answerStCh.chunkId": answerStCh.chunkId,
+        "answerStCh.specificIds": answerStCh.specificIds,
+        "answerStCh.demandedIds": answerStCh.demandedIds,
+        "answerStCh.gender": answerStCh.gender,
+        "answerStCh.semanticGender": answerStCh.semanticGender,
+        "answerStCh.hypernymy": answerStCh.hypernymy,
+      });
+    });
+    consol.logSpecial(
+      8,
+      "[1;35m " + `conformAnswerStructureToQuestionStructure END.` + "[0m"
+    );
+  }
+
   if (shouldConsoleLog) {
     consol.log("[1;35m " + "/conformAnswerStructureToQuestionStructure" + "[0m");
   }
@@ -1346,6 +1409,13 @@ exports.addTraitToAnswerChunkWithAdjustment = (
   answerLanguage
 ) => {
   let adjustedArr = [];
+
+  if (!questionStructureChunk[traitKey]) {
+    consol.log(
+      `yasa questionStructureChunk "${questionStructureChunk.chunk}" had no "${traitKey}".`
+    );
+    return;
+  }
 
   questionStructureChunk[traitKey].forEach((traitValue) => {
     let adjustedTraitValues = refFxn.giveAdjustedTraitValue(

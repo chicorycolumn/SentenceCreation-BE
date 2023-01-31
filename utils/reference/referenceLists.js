@@ -89,11 +89,6 @@ exports.metaCorrectionRef = {
   },
 };
 
-// exports.gendersByNumber = {
-//   singular: ["m", "n", "f", "m1", "m2", "m3"],
-//   plural: ["virile", "nonvirile"],
-// };
-
 exports.metaTraitValues = {
   ENG: {
     gcase: {
@@ -308,8 +303,8 @@ exports._tenseDescriptions = {
 };
 
 exports.structureChunkTraits = {
-  //Some trait are lexical (isLexical: true), used to directly find word values, eg "gender", "gcase".
-  //Others are functional (isLexical: false), eg "specificalLemmas", "preventAddingFurtherClarifiers", "andTags".
+  //Some traits are lexical (isLexical: true), used to directly find word values, eg "gender", "gcase".
+  //Others are functional (isLexical: false), eg "specificLemmas", "preventAddingFurtherClarifiers", "andTags".
   ALL: {
     //
     //
@@ -485,16 +480,8 @@ exports.structureChunkTraits = {
         "m2",
         "m3",
         "f",
-        "f",
-        "f",
-        "n",
-        "n",
         "n",
         "virile",
-        "virile",
-        "virile",
-        "nonvirile",
-        "nonvirile",
         "nonvirile",
       ],
     },
@@ -557,8 +544,8 @@ exports.structureChunkTraits = {
         "preposition",
       ],
       possibleTraitValuesPerWordtype: {
-        adjective: ["simple"],
-        pronombre: ["pronombre", "determiner"],
+        adjective: ["simple", "comparative", "superlative", "adverb"],
+        pronombre: ["pronombre", "_pronombreAndDeterminer", "determiner"],
         article: ["definite", "indefinite"],
         verb: ["verbal", "infinitive", "v2", "v3", "thirdPS", "gerund"],
         preposition: ["onlyForm"],
@@ -643,13 +630,15 @@ exports.uninflectedForms = {
 
 exports.adhocInflectionCategorys = {
   POL: {},
-  ENG: { verb: ["tenseDescription"] },
+  ENG: { verb: ["tenseDescription"] }, // epsilon what is this for?
+  // But Polish doesn't have tenseDesc as an adhoc category?
 };
 
 exports.adhocForms = {
   POL: {},
   ENG: {
     verb: [
+      // epsilon these are english?
       "contemporaryAdverbial",
       "anteriorAdverbial",
       "activeAdjectival",
@@ -673,6 +662,16 @@ exports.getNounGenderTraitValues = (wordtypeShorthand) => {
   };
 
   return ref[wordtypeShorthand];
+};
+
+exports.malePersonsInThisLanguageHaveWhatGender = {
+  POL: "m1",
+  ENG: "m",
+  SPA: "m",
+};
+
+exports.collapsibleMasculineGenders = {
+  POL: { singular: { m: ["m1", "m2", "m3"] } },
 };
 
 exports.wordtypeShorthandTranslation = {

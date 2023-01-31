@@ -54,6 +54,24 @@ exports.isTraitCompatibleLObj = (trait, lObj, currentLanguage) => {
   );
 };
 
+exports.duplicateTraitKeys = (obj) => {
+  let duplications = {};
+
+  Object.keys(duplications).forEach((duplicatorSource) => {
+    duplications[duplicatorSource].forEach((duplicatorTarget) => {
+      obj[duplicatorTarget] = uUtils.copyWithoutReference(
+        obj[duplicatorSource]
+      );
+    });
+  });
+};
+
+exports.getAnnotationToPlainspeakRef = () => {
+  let annotationToPlainspeakRef = refObj.annotationToPlainspeakRef;
+  refFxn.duplicateTraitKeys(annotationToPlainspeakRef);
+  return annotationToPlainspeakRef;
+};
+
 exports.getStructureChunkTraits = (currentLanguage, lexicalOnly) => {
   let stChTraitsRefByLang = refObj.structureChunkTraits[currentLanguage];
   let stChTraitsRefAll = refObj.structureChunkTraits["ALL"];
@@ -62,6 +80,8 @@ exports.getStructureChunkTraits = (currentLanguage, lexicalOnly) => {
     stChTraitsRefByLang,
     stChTraitsRefAll
   );
+
+  refFxn.duplicateTraitKeys(res);
 
   if (lexicalOnly) {
     let trimmedRes = {};
@@ -239,6 +259,25 @@ exports.getTranslatedTenseDescription = (
   }
 
   return translatedTenseDescriptionsArr;
+};
+
+exports.getTranslatedTenseDescription2 = (
+  sourceTenseDescription,
+  sourceLanguage,
+  targetLanguage
+) => {
+  let translatedTenseDescriptionsArr = [];
+
+  refObj.tenseDescriptionTranslations2.forEach((refItem) => {
+    if (refItem[sourceLanguage].includes(sourceTenseDescription)) {
+      translatedTenseDescriptionsArr = [
+        ...translatedTenseDescriptionsArr,
+        ...refItem[targetLanguage],
+      ];
+    }
+  });
+
+  return Array.from(new Set(translatedTenseDescriptionsArr));
 };
 
 exports.skipThisStepInPreprocessStructureChunks = (

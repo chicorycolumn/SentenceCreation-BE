@@ -6,8 +6,45 @@ const refObj = require("./reference/referenceObjects.js");
 const refFxn = require("./reference/referenceFunctions.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
 const nexusUtils = require("../utils/secondOrder/nexusUtils.js");
-
 const allLangUtils = require("./allLangUtils.js");
+
+exports.selectRandOutputUnit = (lObj, stCh, outputUnits) => {
+  return uUtils.selectRandom(outputUnits);
+};
+
+exports.selectRandLObj = (lObjs, stCh, lang) => {
+  const _returnLObj = (lObj, stCh, label) => {
+    consol.logSpecial(
+      8,
+      `.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.\n`,
+      `selectRandLObj (via ${label}) selected "${lObj.id}"\n`,
+      `"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"`
+    );
+
+    return lObj;
+  };
+
+  if (!lObjs.length) {
+    if (!res) {
+      consol.throw(
+        `ktrl ${lang} "${stCh.chunkId}" selectRandLObj failed to find lObj as input lObj array empty.`
+      );
+    }
+  }
+
+  let res = uUtils.selectRandom(lObjs);
+
+  return _returnLObj(res, stCh, "simple path");
+};
+
+exports.selectRandTraitValue = (
+  lObj,
+  stCh,
+  traitKey,
+  traitValues = stCh[traitKey]
+) => {
+  stCh[traitKey] = [uUtils.selectRandom(traitValues)];
+};
 
 exports.drillCarefullyIntoPHD = (source, key) => {
   if (!source) {
@@ -456,7 +493,12 @@ exports.updateStructureChunkByAdhocOnly = (
   structureChunk[traitKey] = [traitValue];
 };
 
-exports.updateStructureChunk = (outputUnit, currentLanguage) => {
+exports.updateStructureChunk = (
+  outputUnit,
+  currentLanguage,
+  isSecondRound,
+  isCounterfax
+) => {
   let shouldConsoleLog = true;
 
   if (shouldConsoleLog) {
@@ -481,7 +523,12 @@ exports.updateStructureChunk = (outputUnit, currentLanguage) => {
     );
   }
 
-  lfUtils.updateStChByAndTagsAndSelectors(outputUnit, currentLanguage);
+  lfUtils.updateStChByAndTagsAndSelectors(
+    outputUnit,
+    currentLanguage,
+    isSecondRound,
+    isCounterfax
+  );
 
   //Vito2: Changes stCh.
   //If during this updateStructureChunk fxn, stCh gets gender "f" and number "plural", its gender will adjust to "nonvirile".
@@ -500,9 +547,25 @@ exports.updateStructureChunk = (outputUnit, currentLanguage) => {
   }
 };
 
-exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
+exports.updateStChByAndTagsAndSelectors = (
+  outputUnit,
+  currentLanguage,
+  isSecondRound,
+  isCounterfax
+) => {
   let { selectedLemmaObject, structureChunk, selectedWord, drillPath } =
     outputUnit;
+
+  consol.logSpecial(
+    8,
+    "[1;36m " +
+      `${currentLanguage} "${
+        structureChunk.chunkId
+      }" updateStChByAndTagsAndSelectors ${
+        isSecondRound ? "SECOND/LATER" : "FIRST"
+      } round.` +
+      "[0m"
+  );
 
   consol.log(
     "[1;35m " + `rakt updateStChByAndTagsAndSelectors--------------------` + "[0m"
@@ -515,7 +578,6 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
     "updateStChByAndTagsAndSelectors selectedLemmaObject is",
     selectedLemmaObject
   );
-  // consol.log("updateStChByAndTagsAndSelectors drillPath", drillPath);
 
   let doneSelectors = [];
 
@@ -539,6 +601,10 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
   const lexicalTraits = refFxn.getStructureChunkTraits(currentLanguage, true);
 
   Object.keys(lexicalTraits).forEach((traitKey) => {
+    if (doneSelectors.includes(traitKey)) {
+      return;
+    }
+
     if (gpUtils.traitValueIsMeta(selectedLemmaObject[traitKey])) {
       //If lObj does have metaTrait, set stCh trait to converted traitValues or filter stCh's trait by them.
 
@@ -553,6 +619,12 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
       );
 
       let metaTrait = selectedLemmaObject[traitKey];
+
+      consol.logSpecial(8, `cdee`, {
+        currentLanguage,
+        traitKey,
+        metaTrait,
+      });
 
       let metaTraitConverted =
         refObj.metaTraitValues[currentLanguage][traitKey][metaTrait];
@@ -647,18 +719,6 @@ exports.updateStChByAndTagsAndSelectors = (outputUnit, currentLanguage) => {
 };
 
 exports.updateStChByInflections = (outputUnit, currentLanguage) => {
-  if (false) {
-    consol.log(
-      "[1;30m " +
-        `plol updateStChByInflections "${
-          outputUnit.drillPath
-            ? outputUnit.drillPath.toString()
-            : "no drillPath"
-        }"` +
-        "[0m"
-    );
-  }
-
   if (outputUnit.drillPath) {
     outputUnit.drillPath.forEach((drillPathSubArr) => {
       let requiredInflectionCategory = drillPathSubArr[0];
@@ -819,7 +879,9 @@ exports.filterBySelector_inner = (
   lemmaObjectArr,
   structureChunk,
   traitKey,
-  currentLanguage
+  currentLanguage,
+  answerMode,
+  questionOutputArr
 ) => {
   consol.log(
     "wdwe filterBySelector_inner START. structureChunk",
@@ -840,10 +902,20 @@ exports.filterBySelector_inner = (
 
   //And finally, do said filter.
   if (requirementArray.length) {
+    consol.logSpecial(
+      8,
+      "[1;35m " +
+        `\netpb ${currentLanguage} ${
+          answerMode ? "answerMode" : "questionMode"
+        } Right! Let's filterBySelector_inner for stCh "${
+          structureChunk.chunkId
+        }" with requirementArray` +
+        "[0m",
+      requirementArray
+    );
+
     return lemmaObjectArr.filter((lObj) => {
       let lObjSelectorValues = [lObj[traitKey]].slice(0);
-
-      consol.log("wdeu lObjSelectorValues", lObjSelectorValues);
 
       //ADJUST VIRILITY OF LOBJ VALUES
       //Vito3: Does not change stCh.
@@ -913,7 +985,9 @@ exports.filterBySelectors = (
   currentLanguage,
   structureChunk,
   matches,
-  consoleLogEtiquette
+  questionOutputArr,
+  consoleLogEtiquette,
+  answerMode
 ) => {
   let selectors =
     refObj.lemmaObjectTraitKeys[currentLanguage].selectors[
@@ -934,7 +1008,9 @@ exports.filterBySelectors = (
         matches,
         structureChunk,
         selector,
-        currentLanguage
+        currentLanguage,
+        answerMode,
+        questionOutputArr
       );
       consol.log(
         `bnxu matches AFTER filterBySelector_inner "${selector}" is:`,

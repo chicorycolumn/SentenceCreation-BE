@@ -18,6 +18,7 @@ const _isAvailable = (value) => {
 
 exports.balanceGenders = (structureChunk) => {
   if (structureChunk.gender) {
+    //genderProportion
     if (
       ["m1", "m2", "m3", "f"].every((mascGen) =>
         structureChunk.gender.includes(mascGen)
@@ -131,27 +132,17 @@ exports.preprocessStructureChunks = (structureChunk) => {
   const currentLanguage = "POL";
 
   if (refFxn.isTraitCompatibleStCh("gender", structureChunk, currentLanguage)) {
-    if (!structureChunk.gender || !structureChunk.gender.length) {
-      //Fill out if blank.
+    //Masculinist agenda
+    let adjustedGenderArray = [];
+    structureChunk.gender.forEach((gender) => {
+      if (gender === "m") {
+        adjustedGenderArray.push("m1", "m2", "m3");
+      } else {
+        adjustedGenderArray.push(gender);
+      }
+    });
 
-      refFxn.assignDefaultTraitValuesOrPossibleTraitValues(
-        structureChunk,
-        currentLanguage,
-        "gender"
-      );
-    } else {
-      //Masculinist agenda
-      let adjustedGenderArray = [];
-      structureChunk.gender.forEach((gender) => {
-        if (gender === "m") {
-          adjustedGenderArray.push("m1", "m2", "m3");
-        } else {
-          adjustedGenderArray.push(gender);
-        }
-      });
-
-      structureChunk.gender = Array.from(new Set(adjustedGenderArray));
-    }
+    structureChunk.gender = Array.from(new Set(adjustedGenderArray));
   }
 };
 

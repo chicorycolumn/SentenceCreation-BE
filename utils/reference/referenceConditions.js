@@ -14,7 +14,7 @@ exports.conditionsToBlockAnnotations = [
     ],
   },
   {
-    questionLangs: ["ENG", "POL"],
+    questionLangs: [], // This means it applies to all langs.
     wordtypes: ["pronombre"],
     annotations: ["gender", "number", "person"],
     lObjConditions: [
