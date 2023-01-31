@@ -123,4 +123,17 @@ exports.postHocDependentChunkWordtypes = {
       },
     },
   ],
+  SPA: [
+    {
+      PHD_type: "SPA possessive pronombre",
+      conditions: {
+        wordtype: ["pronombre"],
+        specificIds: ["spa-pro-POSSESSIVE"],
+      },
+      inflectionChains: {
+        postHocAgreeWithPrimary: ["person", "number", "gender"],
+        postHocAgreeWithSecondary: ["number", "gender", "gcase"],
+      },
+    },
+  ],
 };

@@ -125,6 +125,42 @@ exports.virilityConversionRef = {
       },
     },
   },
+  SPA: {
+    singular: {
+      allValues: ["m", "f"],
+      m: ["m"],
+      f: ["f"],
+      virile: ["m"],
+      nonvirile: ["f"],
+    },
+    plural: {
+      allValues: ["virile", "nonvirile"],
+      m: ["virile"],
+      f: ["nonvirile"],
+      virile: ["virile"],
+      nonvirile: ["nonvirile"],
+    },
+    matches: {
+      m: ["m", "virile"],
+      f: ["f", "nonvirile"],
+      virile: ["virile", "m"],
+      nonvirile: ["nonvirile", "f"],
+    },
+    justOneGenderValue: {
+      singular: {
+        m: "m",
+        f: "f",
+        virile: "_PersonalSingularGenders",
+        nonvirile: "_SingularGenders",
+      },
+      plural: {
+        m: "virile",
+        f: "nonvirile",
+        virile: "virile",
+        nonvirile: "nonvirile",
+      },
+    },
+  },
   POL: {
     singular: {
       allValues: ["m", "m1", "m2", "m3", "f", "n"],
@@ -195,11 +231,30 @@ exports.traitValueTranslation = {
         _MasculineSingularGenders: ["m"],
       },
     },
+    SPA: {
+      gender: {
+        m1: ["m"],
+        m2: ["m"],
+        m3: ["m"],
+        _SingularGendersExcludingNeuter: ["_PersonalSingularGenders"],
+        _SingularGendersExcludingNeuterWithPadding: ["_SingularGenders"],
+        _MasculineSingularGenders: ["m"],
+      },
+    },
   },
+
   ENG: {
     POL: {
       gender: {
         m: ["m1"],
+      },
+    },
+  },
+
+  SPA: {
+    POL: {
+      gender: {
+        m: ["m1", "m2", "m3"], //But I can't say the same as ENG->POL where the only masculine nouns are definitely people.
       },
     },
   },
