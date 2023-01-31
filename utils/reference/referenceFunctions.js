@@ -234,41 +234,7 @@ exports.getTranslatedTenseDescription = (
 ) => {
   let translatedTenseDescriptionsArr = [];
 
-  if (
-    Object.keys(refObj.tenseDescriptionTranslation).includes(sourceLanguage)
-  ) {
-    translatedTenseDescriptionsArr =
-      refObj.tenseDescriptionTranslation[sourceLanguage][targetLanguage][
-        sourceTenseDescription
-      ].regular;
-  } else {
-    let tenseDescTranslationObj =
-      refObj.tenseDescriptionTranslation[targetLanguage][sourceLanguage];
-
-    Object.keys(tenseDescTranslationObj).forEach((tenseDesc) => {
-      let arrayOfTranslatedTenseDescriptions =
-        tenseDescTranslationObj[tenseDesc].regular;
-
-      if (
-        arrayOfTranslatedTenseDescriptions.includes(sourceTenseDescription) &&
-        !translatedTenseDescriptionsArr.includes(tenseDesc)
-      ) {
-        translatedTenseDescriptionsArr.push(tenseDesc);
-      }
-    });
-  }
-
-  return translatedTenseDescriptionsArr;
-};
-
-exports.getTranslatedTenseDescription2 = (
-  sourceTenseDescription,
-  sourceLanguage,
-  targetLanguage
-) => {
-  let translatedTenseDescriptionsArr = [];
-
-  refObj.tenseDescriptionTranslations2.forEach((refItem) => {
+  refObj.tenseDescriptionTranslations.forEach((refItem) => {
     if (refItem[sourceLanguage].includes(sourceTenseDescription)) {
       translatedTenseDescriptionsArr = [
         ...translatedTenseDescriptionsArr,

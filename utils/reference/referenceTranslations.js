@@ -1,34 +1,4 @@
-exports.tenseDescriptionTranslation = {
-  //Note, this is NOT a Washburne style reference object. And that's okay.
-  ENG: {
-    POL: {
-      "past simple": { regular: ["past pf"] },
-      // "past going to": [""], //This would need to be translated by more elaborate, so should be handled within sentenceStructre.
-      "past continuous": { regular: ["past im"] },
-      "past perfect": { regular: ["past pf"] },
-      "present simple": { regular: ["present im"] },
-      "present continuous": { regular: ["present im"] },
-      "present perfect": { regular: ["past im", "past pf"] },
-      "future simple": { regular: ["future pf"] },
-      "future compound": { regular: ["future pf"] },
-      "future continuous": { regular: ["future im"] },
-      "future compound continuous": { regular: ["future im"] },
-      "future perfect": { regular: ["future pf"] },
-      imperative: { regular: ["imperative"] },
-      "negative imperative": { regular: ["negative imperative"] },
-      "cond0 condition": { regular: ["cond0 condition"] },
-      "cond0 outcome": { regular: ["cond0 outcome"] },
-      "cond1 condition": { regular: ["cond1 condition"] },
-      "cond1 outcome": { regular: ["cond1 outcome"] },
-      "cond2 condition": { regular: ["cond2 condition"] },
-      "cond2 outcome": { regular: ["cond2 outcome"] },
-      "cond3 condition": { regular: ["cond3 condition"] },
-      "cond3 outcome": { regular: ["cond3 outcome"] },
-    },
-  },
-};
-
-exports.tenseDescriptionTranslations2 = [
+exports.tenseDescriptionTranslations = [
   // "past compound": [""], //This would need to be translated by more elaborate, so should be handled within sentenceStructre.
   { ENG: ["past simple"], POL: ["past pf"], SPA: ["past preterite"] },
   { ENG: ["past continuous"], POL: ["past im"], SPA: ["past imperfect"] },

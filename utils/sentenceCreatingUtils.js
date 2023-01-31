@@ -1275,7 +1275,7 @@ exports.conformAnswerStructureToQuestionStructure = (
         );
 
         tenseDescriptions.forEach((tenseDesc) => {
-          let translatedTenseDescArr = refFxn.getTranslatedTenseDescription2(
+          let translatedTenseDescArr = refFxn.getTranslatedTenseDescription(
             tenseDesc,
             questionLanguage,
             answerLanguage
