@@ -108,32 +108,6 @@ exports.metaCorrectionRef = {
       },
     ],
   },
-  SPA: {
-    gender: [
-      {
-        condition: { number: "singular" },
-        changeRef: {
-          _Genders: "_SingularGenders",
-          _SingularGenders: "_SingularGenders",
-          _PluralGenders: false,
-          _PersonalGenders: "_PersonalSingularGenders",
-          _PersonalSingularGenders: "_PersonalSingularGenders",
-          _PersonalPluralGenders: false,
-        },
-      },
-      {
-        condition: { number: "plural" },
-        changeRef: {
-          _Genders: "_PluralGenders",
-          _SingularGenders: false,
-          _PluralGenders: "_PluralGenders",
-          _PersonalGenders: "_PersonalPluralGenders",
-          _PersonalSingularGenders: false,
-          _PersonalPluralGenders: "_PersonalPluralGenders",
-        },
-      },
-    ],
-  },
   POL: {
     gender: [
       {
@@ -226,35 +200,6 @@ exports.metaTraitValues = {
       _SingularGendersExcludingNeuter: ["m", "f"],
       _MasculineSingularGenders: ["m"],
       _VypernymGenders: ["m", "virile"], //Garibaldi says not include "nonvirile"
-    },
-  },
-  SPA: {
-    gcase: {
-      _Gcases: ["nom", "acc", "gen", "dat"],
-    },
-    number: {
-      _Numbers: ["singular", "plural"],
-    },
-    person: {
-      _Pers: ["1per", "2per", "3per", "impersonal"],
-      _PersExludingImpersonal: ["1per", "2per", "3per"],
-    },
-    form: { _pronombreAndDeterminer: ["pronombre", "determiner"] },
-    gender: {
-      _Genders: ["m", "f", "virile", "nonvirile"],
-      _SingularGenders: ["m", "f"],
-      _PluralGenders: ["virile", "nonvirile"],
-
-      _PersonalGenders: ["m", "f", "virile", "nonvirile"],
-      _PersonalSingularGenders: ["m", "f"],
-      _PersonalPluralGenders: ["virile", "nonvirile"],
-
-      _NonpersonalGenders: ["m", "f", "nonvirile"], //beta is that right?
-      _NonpersonalSingularGenders: ["m", "f"],
-      _NonpersonalPluralGenders: ["nonvirile"],
-
-      _SingularGendersExcludingNeuter: ["m", "f"],
-      _MasculineSingularGenders: ["m"],
     },
   },
   POL: {
