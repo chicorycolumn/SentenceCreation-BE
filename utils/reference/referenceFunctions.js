@@ -54,6 +54,24 @@ exports.isTraitCompatibleLObj = (trait, lObj, currentLanguage) => {
   );
 };
 
+exports.duplicateTraitKeys = (obj) => {
+  let duplications = {};
+
+  Object.keys(duplications).forEach((duplicatorSource) => {
+    duplications[duplicatorSource].forEach((duplicatorTarget) => {
+      obj[duplicatorTarget] = uUtils.copyWithoutReference(
+        obj[duplicatorSource]
+      );
+    });
+  });
+};
+
+exports.getAnnotationToPlainspeakRef = () => {
+  let annotationToPlainspeakRef = refObj.annotationToPlainspeakRef;
+  refFxn.duplicateTraitKeys(annotationToPlainspeakRef);
+  return annotationToPlainspeakRef;
+};
+
 exports.getStructureChunkTraits = (currentLanguage, lexicalOnly) => {
   let stChTraitsRefByLang = refObj.structureChunkTraits[currentLanguage];
   let stChTraitsRefAll = refObj.structureChunkTraits["ALL"];
@@ -62,6 +80,8 @@ exports.getStructureChunkTraits = (currentLanguage, lexicalOnly) => {
     stChTraitsRefByLang,
     stChTraitsRefAll
   );
+
+  refFxn.duplicateTraitKeys(res);
 
   if (lexicalOnly) {
     let trimmedRes = {};
@@ -214,31 +234,16 @@ exports.getTranslatedTenseDescription = (
 ) => {
   let translatedTenseDescriptionsArr = [];
 
-  if (
-    Object.keys(refObj.tenseDescriptionTranslation).includes(sourceLanguage)
-  ) {
-    translatedTenseDescriptionsArr =
-      refObj.tenseDescriptionTranslation[sourceLanguage][targetLanguage][
-        sourceTenseDescription
-      ].regular;
-  } else {
-    let tenseDescTranslationObj =
-      refObj.tenseDescriptionTranslation[targetLanguage][sourceLanguage];
+  refObj.tenseDescriptionTranslations.forEach((refItem) => {
+    if (refItem[sourceLanguage].includes(sourceTenseDescription)) {
+      translatedTenseDescriptionsArr = [
+        ...translatedTenseDescriptionsArr,
+        ...refItem[targetLanguage],
+      ];
+    }
+  });
 
-    Object.keys(tenseDescTranslationObj).forEach((tenseDesc) => {
-      let arrayOfTranslatedTenseDescriptions =
-        tenseDescTranslationObj[tenseDesc].regular;
-
-      if (
-        arrayOfTranslatedTenseDescriptions.includes(sourceTenseDescription) &&
-        !translatedTenseDescriptionsArr.includes(tenseDesc)
-      ) {
-        translatedTenseDescriptionsArr.push(tenseDesc);
-      }
-    });
-  }
-
-  return translatedTenseDescriptionsArr;
+  return Array.from(new Set(translatedTenseDescriptionsArr));
 };
 
 exports.skipThisStepInPreprocessStructureChunks = (

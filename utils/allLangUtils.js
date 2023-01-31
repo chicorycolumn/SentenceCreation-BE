@@ -2,6 +2,7 @@ const refObj = require("../utils/reference/referenceObjects.js");
 const refFxn = require("../utils/reference/referenceFunctions.js");
 const gpUtils = require("../utils/generalPurposeUtils.js");
 const uUtils = require("../utils/universalUtils.js");
+const lfUtils = require("../utils/lemmaFilteringUtils.js");
 const consol = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 
@@ -108,18 +109,60 @@ exports.translateAnnoTraitValue = (
 
   let annoTraitValue = structureChunk.annotations[annoTraitKey];
 
-  if (annoTraitKey === "gender") {
-    //Removed vito5 in branch step-V-virility-tidying-and-overhaul-aka-vito, as seems obviated by vito2b.
+  let annotationToPlainspeakRef = refFxn.getAnnotationToPlainspeakRef();
 
-    let annotationToPlainspeakRef = refObj.annotationToPlainspeakRef;
-
+  if (Object.keys(annotationToPlainspeakRef).includes(annoTraitKey)) {
+    //gender: Removed vito5 in branch step-V-virility-tidying-and-overhaul-aka-vito, as seems obviated by vito2b.
     let adjustedAnnotation = annotationToPlainspeakRef.gender[annoTraitValue];
 
-    return typeof adjustedAnnotation === "string"
-      ? adjustedAnnotation
-      : uUtils.selectRandom(adjustedAnnotation);
-  } else {
-    return annoTraitValue;
+    let plainspeakAnno =
+      typeof adjustedAnnotation === "string"
+        ? adjustedAnnotation
+        : uUtils.selectRandom(adjustedAnnotation);
+
+    consol.logSpecial(
+      8,
+      `pwmj "${structureChunk.chunkId}" Setting plainspeakAnno to "${plainspeakAnno}".`
+    );
+
+    return plainspeakAnno;
+  }
+
+  consol.logSpecial(
+    8,
+    `pwmk "${structureChunk.chunkId}" Setting plainspeakAnno to "${annoTraitValue}".`
+  );
+
+  return annoTraitValue;
+};
+
+exports.collapseMasculineGenders = (lang, stCh) => {
+  let ref = refObj.collapsibleMasculineGenders[lang];
+  let genderTraitKeys = ["gender"];
+
+  if (ref) {
+    Object.keys(ref).forEach((numberTraitValue) => {
+      Object.keys(ref[numberTraitValue]).forEach((collapsedGender) => {
+        let collapsibleGenders = ref[numberTraitValue][collapsedGender];
+        genderTraitKeys.forEach((genderTraitKey) => {
+          if (stCh.number && stCh.number.length !== 1) {
+            consol.throw("nbii");
+          }
+          if (stCh[genderTraitKey] && stCh[genderTraitKey].length !== 1) {
+            consol.throw("nbij");
+          }
+
+          if (
+            stCh.number &&
+            stCh.number[0] === numberTraitValue &&
+            stCh.number &&
+            collapsibleGenders.includes(stCh[genderTraitKey][0])
+          ) {
+            stCh[genderTraitKey] = [collapsedGender];
+          }
+        });
+      });
+    });
   }
 };
 
@@ -260,7 +303,10 @@ exports.adjustVirilityOfStructureChunk = (
         )
     );
     if (!numberFromGender) {
-      consol.throw("fivk");
+      consol.log("fivk virilityRef=", virilityRef);
+      consol.throw(
+        `fivk ${currentLanguage} There was no numberFromGender for stCh "${structureChunk.chunkId}" structureChunk.gender="${structureChunk.gender}".`
+      );
     }
     structureChunk.number = [numberFromGender];
   }
@@ -395,6 +441,20 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
 
     allLangUtils.setPostHocAgreeKeys(structureChunk, currentLanguage);
     allLangUtils.setMerelyPreferredChoices(structureChunk, currentLanguage);
+
+    if (
+      refFxn.isTraitCompatibleStCh("gender", structureChunk, currentLanguage)
+    ) {
+      if (!structureChunk.gender || !structureChunk.gender.length) {
+        //Fill out if blank.
+        refFxn.assignDefaultTraitValuesOrPossibleTraitValues(
+          structureChunk,
+          currentLanguage,
+          "gender"
+        );
+      }
+    }
+
     langUtils.preprocessStructureChunks(structureChunk);
 
     Object.keys(defaultTraitValuesRef).forEach((wordtype) => {
@@ -659,7 +719,7 @@ exports.correctMGNsBeforeFetchingOutputArray = (
   }
 
   if (structureChunk.number.length > 1) {
-    structureChunk.number = [uUtils.selectRandom(structureChunk.number)];
+    lfUtils.selectRandTraitValue(selectedLemmaObject, structureChunk, "number");
   }
 
   consol.log(

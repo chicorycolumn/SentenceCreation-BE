@@ -385,13 +385,27 @@ describe("/api", function () {
         { ENG: "A small nut (🥜, food).", POL: ["Mały orzech."] },
         { ENG: "A small nut (🔩, metal).", POL: ["Mała nakrętka."] },
       ];
-      return runPaletteTest("ENG", "POL", "dummy43", ref, {}, 1);
+      return runPaletteTest(
+        "ENG",
+        "POL",
+        "dummy43",
+        ref,
+        { useDummyWords: true },
+        1
+      );
     });
     it("#pal10-01b Type 1 Allohomographs of SingleWordtype: 'nut' Poleng. No clarifiers.", () => {
       let ref = [
         { POL: ["Mały orzech.", "Mała nakrętka."], ENG: ["A small nut."] },
       ];
-      return runPaletteTest("POL", "ENG", "dummy43", ref, {}, 1);
+      return runPaletteTest(
+        "POL",
+        "ENG",
+        "dummy43",
+        ref,
+        { useDummyWords: true },
+        1
+      );
     });
     it("#pal10-02a Type 1 Allohomographs of MultipleWordtype: 'bear (noun)' Engpol. Expect clarifiers as requested allo-multi-clarifiers in structureChunk.", () => {
       let ref = [{ ENG: "Bear (nounCommon).", POL: ["Niedźwiedź."] }];
@@ -418,30 +432,72 @@ describe("/api", function () {
         { ENG: "Tie (⚽, score).", POL: ["Remis."] },
         { ENG: "Tie (👔, clothes).", POL: ["Krawat."] },
       ];
-      return runPaletteTest("ENG", "POL", "dummy46a", ref, {}, 1);
+      return runPaletteTest(
+        "ENG",
+        "POL",
+        "dummy46a",
+        ref,
+        { useDummyWords: true },
+        1
+      );
     });
     it("#pal10-03b Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (noun)' Engpol. Textmoji Clarifier expected. Wordtype Clarifier requested so also expected.", () => {
       let ref = [
         { ENG: "Tie (⚽, score, nounCommon).", POL: ["Remis."] },
         { ENG: "Tie (👔, clothes, nounCommon).", POL: ["Krawat."] },
       ];
-      return runPaletteTest("ENG", "POL", "dummy46b", ref, {}, 1);
+      return runPaletteTest(
+        "ENG",
+        "POL",
+        "dummy46b",
+        ref,
+        { useDummyWords: true },
+        1
+      );
     });
     it("#pal10-03c Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (verb)' Engpol. Textmoji Clarifier expected. Wordtype Clarifier not requested.", () => {
       let ref = [{ ENG: "Tie (🧵, with string eg).", POL: ["Wiązać."] }];
-      return runPaletteTest("ENG", "POL", "dummy46c", ref, {}, 1);
+      return runPaletteTest(
+        "ENG",
+        "POL",
+        "dummy46c",
+        ref,
+        { useDummyWords: true },
+        1
+      );
     });
     it("#pal10-03d Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (verb)' Engpol. Textmoji Clarifier expected. Wordtype Clarifier requested so also expected.", () => {
       let ref = [{ ENG: "Tie (🧵, with string eg, verb).", POL: ["Wiązać."] }];
-      return runPaletteTest("ENG", "POL", "dummy46d", ref, {}, 1);
+      return runPaletteTest(
+        "ENG",
+        "POL",
+        "dummy46d",
+        ref,
+        { useDummyWords: true },
+        1
+      );
     });
     it("#pal10-03e Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (noun)' Poleng. No clarifiers.", () => {
       let ref = [{ POL: ["Remis.", "Krawat."], ENG: ["Tie."] }];
-      return runPaletteTest("POL", "ENG", "dummy46a", ref, {}, 1);
+      return runPaletteTest(
+        "POL",
+        "ENG",
+        "dummy46a",
+        ref,
+        { useDummyWords: true },
+        1
+      );
     });
     it("#pal10-03f Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (verb)' Poleng. No clarifiers.", () => {
       let ref = [{ POL: "Wiązać.", ENG: ["Tie."] }];
-      return runPaletteTest("POL", "ENG", "dummy46c", ref, {}, 1);
+      return runPaletteTest(
+        "POL",
+        "ENG",
+        "dummy46c",
+        ref,
+        { useDummyWords: true },
+        1
+      );
     });
   });
 

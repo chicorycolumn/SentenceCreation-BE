@@ -1326,7 +1326,7 @@ exports.sentenceFormulasBank = [
         tenseDescription: ["past pf"],
       },
       {
-        chunkId: "npe-2-woman",
+        chunkId: "npe-3-woman",
 
         gcase: ["ins"],
         number: ["singular"],
@@ -1339,7 +1339,7 @@ exports.sentenceFormulasBank = [
         "pro-2-my",
         "npe-1-doctor's",
         "ver-1-was",
-        "npe-2-woman",
+        "npe-3-woman",
       ],
     ],
   },

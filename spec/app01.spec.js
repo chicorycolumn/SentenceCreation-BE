@@ -1322,6 +1322,26 @@ describe("/api", function () {
         ]);
       });
     });
+    it("#pal06-06 GET 200 YES: Battery RSWAT Poleng. Ensure genderProportion masc and fem randomly selected at ~50/50 rate, despite there being thrice as many masculine genders as feminine.", () => {
+      return Promise.all(
+        promiseAllMultiplier(100, () => {
+          return runPaletteTest(
+            "POL",
+            "ENG",
+            "dummy31",
+            [],
+            { devSaysOmitStChValidation: true },
+            1,
+            true
+          );
+        })
+      ).then((allQuestionSentences) => {
+        checkProportions(allQuestionSentences, [
+          ["♂ masculine", ["Pisałem."], 0.5],
+          ["♀ feminine", ["Pisałam."], 0.5],
+        ]);
+      });
+    });
   });
 
   describe("/palette - Stage 7: 'Be' ENG <-> POL.", () => {

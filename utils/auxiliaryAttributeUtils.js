@@ -7,6 +7,7 @@ const cfUtils = require("./counterfaxUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 const refFxn = require("./reference/referenceFunctions.js");
 const aaUtils = require("./auxiliaryAttributeUtils.js");
+const lfUtils = require("./lemmaFilteringUtils.js");
 const allLangUtils = require("./allLangUtils.js");
 
 exports.firstStageEvaluateAnnotations = (
@@ -18,14 +19,24 @@ exports.firstStageEvaluateAnnotations = (
   answerSelectedWordsSetsHaveChanged,
   runsRecord
 ) => {
-  consol.log(questionOutputArr.map((unit) => unit.structureChunk));
-
-  if (!answerSentenceData) {
-    consol.log(
-      "[1;31m " +
-        "hhvv NB: NO ANSWER SENTENCE DATA IN aa.firstStageEvaluateAnnotations" +
-        "[0m"
-    );
+  if ("logging") {
+    consol.log(questionOutputArr.map((unit) => unit.structureChunk));
+    if (!answerSentenceData) {
+      consol.log(
+        "[1;31m " +
+          "hhvv NB: NO ANSWER SENTENCE DATA IN aa.firstStageEvaluateAnnotations" +
+          "[0m"
+      );
+    }
+    consol.logSpecial(8, "[1;32m " + `wtct START firstStageEvaluateAnnotations` + "[0m");
+    questionOutputArr.forEach((ou) => {
+      consol.logSpecial(
+        8,
+        ou.structureChunk.chunkId,
+        "has annotations:",
+        ou.structureChunk.annotations
+      );
+    });
   }
 
   aaUtils.removeAnnotationsByRef(
@@ -45,8 +56,30 @@ exports.firstStageEvaluateAnnotations = (
       uUtils.isEmpty(outputUnit.structureChunk.annotations)
     )
   ) {
+    consol.logSpecial(
+      3,
+      `ntks Ending firstStageEvaluateAnnotations as all stCh's have no annotations.`
+    );
     return;
   }
+  consol.logSpecial(
+    3,
+    `ntkt`,
+    questionOutputArr.map((outputUnit) => {
+      let annos;
+      if (outputUnit.structureChunk.annotations)
+        annos = Object.keys(outputUnit.structureChunk.annotations)
+          .map((k) => {
+            let v = outputUnit.structureChunk.annotations[k];
+            return `${k}: ${v}`;
+          })
+          .join(", ");
+      return {
+        stCh: outputUnit.structureChunk.chunkId,
+        annos,
+      };
+    })
+  );
 
   let { counterfaxSituations, annotationsToCounterfaxAndTheirChunkIds } =
     cfUtils.listCounterfaxSituations(questionOutputArr, languagesObj);
@@ -255,7 +288,8 @@ exports.deleteByAOC = (
         depUnit[drillPathType]
       )
     ) {
-      consol.log(
+      consol.logSpecial(
+        3,
         "[1;30m " +
           `kzia removeAnnotationsByAOCs "${questionOutputUnit.structureChunk.chunkId}" ABZ Late stage DELETION of annotation "${inflectionCategory}" which is "${questionOutputUnit.structureChunk.annotations[inflectionCategory]}"` +
           "[0m"
@@ -317,8 +351,10 @@ exports.removeAnnotationsByRef = (
     }
 
     let conditionsToBlockAnnotations =
-      refObj.conditionsToBlockAnnotations.filter((cond) =>
-        cond.questionLangs.includes(languagesObj.questionLanguage)
+      refObj.conditionsToBlockAnnotations.filter(
+        (cond) =>
+          !cond.questionLangs.length ||
+          cond.questionLangs.includes(languagesObj.questionLanguage)
       );
 
     conditionsToBlockAnnotations.forEach((condBlockAnnos) => {
@@ -403,6 +439,10 @@ exports.trimAnnoIfGenderRevealedByGenderedNoun = (
     if (!(headLObj.gender && !gpUtils.traitValueIsMeta(headLObj.gender))) {
       headChunk.annotations.gender = structureChunk.annotations.gender;
     }
+    consol.logSpecial(
+      3,
+      `wbmf "${structureChunk.chunkId}" removing "gender" anno. trimAnnoIfGenderRevealedByGenderedNoun`
+    );
     delete structureChunk.annotations.gender;
   }
 };
@@ -413,85 +453,95 @@ exports.addSpecifiersToMGNs = (questionSentenceData, languagesObj) => {
   const questionLangUtils = require(`../source/all/${questionLanguage}/langUtils.js`);
   const answerLangUtils = require(`../source/all/${answerLanguage}/langUtils.js`);
 
-  let metaGenders = Object.keys(
-    refObj.metaTraitValues[questionLanguage].gender
-  );
+  let metaGenderRef = refObj.metaTraitValues[questionLanguage].gender;
+  let metaGenders = Object.keys(metaGenderRef);
 
   let questionUnitsToSpecify = questionOutputArr.filter(
     (qUnit) => !qUnit.structureChunk.dontSpecifyOnThisChunk
   );
 
-  let questionMGNunits = questionUnitsToSpecify.filter((unit) => {
-    return (
-      unit.selectedLemmaObject &&
-      unit.selectedLemmaObject.gender &&
-      metaGenders.includes(unit.selectedLemmaObject.gender)
-    );
-  });
-
-  questionMGNunits.forEach((questionMGNunit) => {
-    let metaGender = questionMGNunit.selectedLemmaObject.gender;
-
-    let selectedGenderForQuestionLanguage;
-    let selectedGenderForAnswerLanguageArr;
-
-    if (
-      questionMGNunit.structureChunk.gender &&
-      questionMGNunit.structureChunk.gender.length
-    ) {
-      selectedGenderForQuestionLanguage = uUtils.selectRandom(
-        questionMGNunit.structureChunk.gender
+  const _addSpecifiersToMGNs = (
+    questionUnitsToSpecify,
+    metaGenders,
+    genderTraitKey
+  ) => {
+    let questionMGNunits = questionUnitsToSpecify.filter((unit) => {
+      return (
+        unit.selectedLemmaObject &&
+        metaGenders.includes(unit.selectedLemmaObject[genderTraitKey])
       );
-
-      if (
-        !refObj.metaTraitValues[questionLanguage].gender[metaGender].includes(
-          selectedGenderForQuestionLanguage
-        )
-      ) {
-        consol.log(
-          "questionMGNunit.structureChunk.gender",
-          questionMGNunit.structureChunk.gender
-        );
-        consol.log(
-          "refObj.metaTraitValues[questionLanguage].gender[metaGender]",
-          refObj.metaTraitValues[questionLanguage].gender[metaGender]
-        );
-        consol.throw(
-          "knmo addSpecifiersToMGNs #ERR I expected the question chunk's gender to be present in the translated genders array for the question lObj's metagender selector."
-        );
-      }
-    } else {
-      selectedGenderForQuestionLanguage = uUtils.selectRandom(
-        refObj.metaTraitValues[questionLanguage].gender[metaGender]
-      );
-    }
-
-    selectedGenderForAnswerLanguageArr = answerLangUtils.formatTraitValue(
-      "gender",
-      selectedGenderForQuestionLanguage,
-      "person"
-    );
-
-    consol.log(
-      "[1;35m " +
-        `ksxy addSpecifiersToMGNs #NB: Am changing questionMGNunit.structureChunk.gender and correspondingAnswerUnit.structureChunk.gender` +
-        "[0m"
-    );
-    consol.log(`ksxy addSpecifiersToMGNs`, {
-      selectedGenderForQuestionLanguage,
-      selectedGenderForAnswerLanguageArr,
     });
 
-    questionMGNunit.structureChunk.gender = [selectedGenderForQuestionLanguage];
-    // correspondingAnswerUnit.structureChunk.gender = selectedGenderForAnswerLanguageArr;
+    questionMGNunits.forEach((questionMGNunit) => {
+      let metaGender = questionMGNunit.selectedLemmaObject[genderTraitKey];
 
-    consol.logSpecial(3, "wdmi addSpecifiersToMGNs. Calling addAnnotation() ");
-    aaUtils.addAnnotation(
-      questionMGNunit.structureChunk,
-      "gender",
-      selectedGenderForQuestionLanguage
-    );
-  });
+      let selectedGenderForQuestionLanguage;
+      let selectedGenderForAnswerLanguageArr;
+
+      if (
+        questionMGNunit.structureChunk[genderTraitKey] &&
+        questionMGNunit.structureChunk[genderTraitKey].length
+      ) {
+        selectedGenderForQuestionLanguage = uUtils.selectRandom(
+          questionMGNunit.structureChunk[genderTraitKey]
+        );
+
+        if (
+          !metaGenderRef[metaGender].includes(selectedGenderForQuestionLanguage)
+        ) {
+          consol.log(
+            "questionMGNunit.structureChunk[genderTraitKey]",
+            questionMGNunit.structureChunk[genderTraitKey]
+          );
+          consol.log("metaGenderRef[metaGender]", metaGenderRef[metaGender]);
+          consol.throw(
+            `knmo addSpecifiersToMGNs #ERR 
+            ${questionMGNunit.selectedLemmaObject.id}
+            ${questionMGNunit.structureChunk.chunkId}
+            metaGenderRef.${metaGender} does not includes ${selectedGenderForQuestionLanguage}.
+            I expected the question chunk's genderTraitKey to be present in the translated genderTraitKeys array for the question lObj's metaGender selector.`
+          );
+        }
+      } else {
+        selectedGenderForQuestionLanguage = uUtils.selectRandom(
+          metaGenderRef[metaGender]
+        );
+      }
+
+      selectedGenderForAnswerLanguageArr = answerLangUtils.formatTraitValue(
+        genderTraitKey,
+        selectedGenderForQuestionLanguage,
+        "person"
+      );
+
+      consol.log(
+        "[1;35m " +
+          `ksxy addSpecifiersToMGNs #NB: Am changing questionMGNunit.structureChunk[genderTraitKey] and correspondingAnswerUnit.structureChunk[genderTraitKey]` +
+          "[0m"
+      );
+      consol.log(`ksxy addSpecifiersToMGNs`, {
+        selectedGenderForQuestionLanguage,
+        selectedGenderForAnswerLanguageArr,
+      });
+
+      questionMGNunit.structureChunk[genderTraitKey] = [
+        selectedGenderForQuestionLanguage,
+      ];
+      // correspondingAnswerUnit.structureChunk[genderTraitKey] = selectedGenderForAnswerLanguageArr;
+
+      consol.logSpecial(
+        3,
+        "wdmi addSpecifiersToMGNs. Calling addAnnotation() "
+      );
+      aaUtils.addAnnotation(
+        questionMGNunit.structureChunk,
+        genderTraitKey,
+        selectedGenderForQuestionLanguage
+      );
+    });
+  };
+
+  _addSpecifiersToMGNs(questionUnitsToSpecify, metaGenders, "gender");
 };
 
 exports.sortAnswerAndQuestionStructureChunks = (
@@ -609,11 +659,16 @@ exports.trimAnnotations = (annotationObj) => {
       annoTraitKey === "gender" &&
       ["males", "females"].includes(annoTraitValue)
     ) {
+      consol.logSpecial(3, `mpsa "trimAnnotations removing "number" anno.`);
       delete annotationObj.number;
     }
 
     if (!annoTraitValue) {
       consol.throw("vmkp");
+      consol.logSpecial(
+        3,
+        `mpsb "trimAnnotations removing "${annoTraitKeyy}" anno as no annoTraitValue.`
+      );
       delete annotationObj[annoTraitKeyy];
     }
   });

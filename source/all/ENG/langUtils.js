@@ -110,9 +110,7 @@ const _addToResArrAdhocForms = (
         structureChunkCopy[traitKey] &&
         structureChunkCopy[traitKey].length > 1
       ) {
-        structureChunkCopy[traitKey] = uUtils.selectRandom(
-          structureChunkCopy[traitKey]
-        );
+        lfUtils.selectRandTraitValue(lObj, structureChunkCopy, traitKey);
       }
     });
   }
@@ -162,7 +160,6 @@ const _fetchTenseDescriptionAdhocForms = (
     imperative: [infinitive],
     "negative imperative": ["don't" + " " + infinitive],
   };
-
   const subsequentTenseDescRef = {
     "cond0 condition": ["present simple"],
     "cond0 condition 3PS": ["present simple 3PS"],
