@@ -395,6 +395,44 @@ exports.selectRandTraitValue = (
   stCh[traitKey] = [uUtils.selectRandom(traitValues)];
 };
 
+exports.selectRandOutputUnit = (lObj, stCh, outputUnits) => {
+  return uUtils.selectRandom(outputUnits);
+};
+
+exports.selectRandLObj = (lObjs, stCh, lang) => {
+  const _returnLObj = (lObj, stCh, label) => {
+    consol.logSpecial(
+      8,
+      `.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.\n`,
+      `selectRandLObj (via ${label}) selected "${lObj.id}"\n`,
+      `"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"`
+    );
+
+    return lObj;
+  };
+
+  if (!lObjs.length) {
+    if (!res) {
+      consol.throw(
+        `ktrl ${lang} "${stCh.chunkId}" selectRandLObj failed to find lObj as input lObj array empty.`
+      );
+    }
+  }
+
+  let res = uUtils.selectRandom(lObjs);
+
+  return _returnLObj(res, stCh, "simple path");
+};
+
+exports.selectRandTraitValue = (
+  lObj,
+  stCh,
+  traitKey,
+  traitValues = stCh[traitKey]
+) => {
+  stCh[traitKey] = [uUtils.selectRandom(traitValues)];
+};
+
 exports.drillCarefullyIntoPHD = (source, key) => {
   if (!source) {
     consol.throw(
