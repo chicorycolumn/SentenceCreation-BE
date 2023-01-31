@@ -954,6 +954,10 @@ exports.malePersonsInThisLanguageHaveWhatGender = {
   SPA: "m",
 };
 
+exports.collapsibleMasculineGenders = {
+  POL: { singular: { m: ["m1", "m2", "m3"] } },
+};
+
 exports.wordtypeShorthandTranslation = {
   nco: "nounCommon",
   npe: "nounPerson",
@@ -996,7 +1000,3 @@ exports.agreementTraits = [
 ];
 
 exports.punctuation = ["!", "?", ".", ",", ":", ";", "..."];
-
-exports.collapsibleMasculineGenders = {
-  POL: { singular: { m: ["m1", "m2", "m3"] } },
-};
