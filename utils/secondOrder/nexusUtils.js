@@ -11,11 +11,11 @@ exports.getNexusLemmaObject = (lObj, env = "ref") => {
 
   const wordtypeShorthand = gpUtils.getWordtypeShorthandLObj(lObj);
 
-  let resArr = nexusWordsBank[wordtypeShorthand].filter((lemmaObject) => {
-    return lemmaObject.traductions[lang].some((el) =>
+  let resArr = nexusWordsBank[wordtypeShorthand].filter((lemmaObject) =>
+    lemmaObject.traductions[lang].some((el) =>
       allLangUtils.compareLObjStems(el, lObj.id)
-    );
-  });
+    )
+  );
 
   if (resArr.length !== 1) {
     consol.throw(
@@ -69,7 +69,7 @@ exports.getTraductions = (
     return mapIdsToLObjs ? ids.map((id) => bank.find((l) => l.id === id)) : ids;
   }
 
-  return targetlang ? traductions[targetlang] : traductions;
+  return traductions[targetlang];
 };
 
 exports.checkAllLObjsArePresentInNexus = (env, lang) => {
