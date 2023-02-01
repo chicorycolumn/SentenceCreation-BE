@@ -1929,35 +1929,6 @@ describe("/api", function () {
     });
     it("#pal14-03c GET 200 YES: Engpol. My father gave me his book.", () => {
       let ref = [
-        /**
-         * 1) "Our parent gave me HIS book." Is that right?
-         *
-         * Yes, because "Red parent (male)." --> "Czerwony rodzic." is AOK.
-         * And in this sentence, the "his" reveals the gender (AOC) so anno is removed.         *
-         *
-         * 2) "My parent gave me her b." -> "Rodzic DAŁ mi JEGO k." Surely that's wrong?
-         *
-         * I'm afraid that is in fact correct.
-         * Because rodzic is m1, so it's "rodzic dał mi jego" even if the parent is female.
-         * Just like "dziecko dało". Despite if the child is male it's not "dał", or female it's not "dała".
-         *
-         * But having said that, I can search in the corpus for "child and her" and indeed find "dziecko i jej" as
-         * well as "dziecko i jego". But yeah, let's just stick with the official grammar, which is:
-         * "Møj rodzic dał mi jego k." whether the parent is male or female.
-         *
-         * However... it is confusing. So could we nix this particular sentence being created, or reduce frequency?
-         * Because this issue will keep coming up and could be annoying to the player.
-         * eg a sentence formula that says "<familymember> <have> <wooden clock>"
-         * given that <familymember> includes "parent" and <have> will be all tenses
-         * Q "My parent (female)" --> A "Rodzic miał" will keep coming up.
-         * And like, even though it's grammatically correct, it's not a very natural sentence.
-         * A Polish person would more likely say "Matka dała" if that's what they meant.
-         * And to be fair, that's true in English too, that we're unlikely to talk about parent in the singular,
-         * we'd say "My parents..." but in singular probably just "My father..." or "My mother..."
-         * Aha! That's exactly what we have done.
-         * We have adjusted the proportions so that hypo/vypo in plural and hyper in plural are generated as Q
-         * 4x less frequently than the converse. And we may even reduce this frequency further.
-         */
         {
           ENG: "My parent gave me his book.",
           POL: [
@@ -1968,7 +1939,7 @@ describe("/api", function () {
         {
           ENG: "My parent gave me her book.",
           POL: [
-            "Mój rodzic dał mi jego książkę.", //Yes I know this looks weird, but it is correct. See above.
+            "Mój rodzic dał mi jego książkę.", // I know this looks weird but it is correct. See Issue 205 in Hypernymy documentation.
             "Mój rodzic dał mnie jego książkę.",
           ],
         },
