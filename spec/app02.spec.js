@@ -40,7 +40,6 @@ describe("/api", function () {
       return runPaletteTest2(
         "POL",
         "ENG",
-
         "dummy36",
         {},
         "sheep_withClarifiers_Qlang",
@@ -99,9 +98,7 @@ describe("/api", function () {
         "POL",
         "ENG",
         "dummy36a",
-        {
-          pleaseDontSpecify: true,
-        },
+        { pleaseDontSpecify: true },
         "sheeps_withClarifiers_Qlang"
       );
     });

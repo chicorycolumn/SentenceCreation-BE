@@ -808,12 +808,7 @@ describe("/api", function () {
             questionLanguage,
             answerLanguage,
             "current",
-            [
-              "Kobieta czyta.",
-              "Kobiety czytają.",
-              "Chłopiec czyta.",
-              "Chłopcy czytają.",
-            ],
+            null,
             translatedSentencesRef
           );
         });
@@ -887,12 +882,7 @@ describe("/api", function () {
             questionLanguage,
             answerLanguage,
             "current",
-            [
-              "Kobieta szybko czyta.",
-              "Kobiety szybko czytają.",
-              "Chłopiec szybko czyta.",
-              "Chłopcy szybko czytają.",
-            ],
+            null,
             translatedSentencesRef
           );
         });
@@ -927,7 +917,7 @@ describe("/api", function () {
             questionLanguage,
             answerLanguage,
             "current",
-            ["Dzień dobry."],
+            null,
             translatedSentencesRef
           );
         });
@@ -962,7 +952,7 @@ describe("/api", function () {
             questionLanguage,
             answerLanguage,
             "current",
-            ["Good day."],
+            null,
             translatedSentencesRef
           );
         });
@@ -2155,7 +2145,7 @@ function checkSentenceTranslations(
   let { body } = res;
   let direction = `${questionLanguage}->${answerLanguage}`;
 
-  if (!allExpectedQuestionSentences.length) {
+  if (!allExpectedQuestionSentences || !allExpectedQuestionSentences.length) {
     allExpectedQuestionSentences = translatedSentencesRef[word][direction].map(
       (array) => array[questionLanguage]
     );
