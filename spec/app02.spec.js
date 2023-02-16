@@ -98,9 +98,7 @@ describe("/api", function () {
         "POL",
         "ENG",
         "dummy36a",
-        {
-          pleaseDontSpecify: true,
-        },
+        { pleaseDontSpecify: true },
         "sheeps_withClarifiers_Qlang"
       );
     });
