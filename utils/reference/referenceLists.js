@@ -5,6 +5,7 @@ exports.HY = {
   VO: "vyponym", // "madre" is including in meaning of "padre"
   HY: "hypernym", // "parent" is non gender specific
   HO: "hyponym", // "mother" and "father" are included in meaning of "parent"
+  AofQVY: "answerChunkOfAQuestionChunkVypernym",
 };
 
 exports.incompatibleTraitsRef = {

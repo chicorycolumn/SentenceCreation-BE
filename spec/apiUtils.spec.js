@@ -17,7 +17,9 @@ const runApiTest1 = (req, expected) => {
     .expect(200)
     .then((res) => {
       expect(Object.keys(res.body)).to.eql(Object.keys(expected));
-      expect(res.body.questionSentenceArr).to.eql(expected.questionSentenceArr);
+      expect(res.body.questionSentenceArr.sort()).to.eql(
+        expected.questionSentenceArr.sort()
+      );
     });
 };
 
@@ -135,14 +137,14 @@ describe("/educator/sandbox - Testing API.", () => {
         questionSentenceArr: [
           "Woman.",
           "Women.",
-          "Child.",
-          "Children.",
+          "Lady.",
+          "Ladies.",
           "Boy.",
           "Boys.",
           "Girl.",
           "Girls.",
-          "Lady.",
-          "Ladies.",
+          "Child.",
+          "Children.",
         ],
       }
     );

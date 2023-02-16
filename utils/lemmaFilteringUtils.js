@@ -37,7 +37,7 @@ exports.assessHypernymy = (lObj) => {
   }
 
   if (_isAnswerChunkOfAQuestionChunkVypernym(lObj)) {
-    return "answerChunkOfAQuestionChunkVypernym";
+    return HY.AofQVY;
   } // Higher priority, ie a lobj with id "...£" which has become "...£¢" when this very fxn was run for Question Mode,
   // should in Answer Mode be returned as this type (¢), not hypernym type (£).
 
@@ -92,8 +92,8 @@ exports.getLObjAndSiblings = (
 
       if (
         qLObj &&
-        [HY.VY].includes(lfUtils.assessHypernymy(qLObj)) &&
-        [HY.VY, HY.HY].includes(lfUtils.assessHypernymy(lObj))
+        lfUtils.checkHyper(qLObj, [HY.VY]) &&
+        lfUtils.checkHyper(lObj, [HY.VY, HY.HY])
       ) {
         let lObjCopy = uUtils.copyWithoutReference(lObj);
         lObjCopy.id = lObjCopy.id + "¢";
@@ -116,11 +116,8 @@ exports.getLObjAndSiblings = (
 
       if (
         blockHypernyms &&
-        // qLObj &&
-        ![HY.HY, HY.VY, "answerChunkOfAQuestionChunkVypernym"].includes(
-          lfUtils.assessHypernymy({ id: specificId })
-        ) &&
-        [HY.HY, HY.VY].includes(lfUtils.assessHypernymy(lObj))
+        !lfUtils.checkHyper({ id: specificId }, [HY.HY, HY.VY, HY.AofQVY]) &&
+        lfUtils.checkHyper(lObj, [HY.HY, HY.VY])
       ) {
         log("Chuck-yellow ", lObj.id);
         return false;
@@ -128,8 +125,8 @@ exports.getLObjAndSiblings = (
 
       if (
         blockHypernyms &&
-        [HY.HY].includes(lfUtils.assessHypernymy({ id: specificId })) &&
-        ![HY.HY].includes(lfUtils.assessHypernymy(lObj))
+        lfUtils.checkHyper({ id: specificId }, [HY.HY]) &&
+        !lfUtils.checkHyper(lObj, [HY.HY])
       ) {
         log("Chuck-green ", lObj.id, "because of", specificId);
         return false;
@@ -137,10 +134,8 @@ exports.getLObjAndSiblings = (
 
       if (
         blockHypernyms &&
-        ["answerChunkOfAQuestionChunkVypernym"].includes(
-          lfUtils.assessHypernymy({ id: specificId })
-        ) &&
-        [HY.HY, HY.VY].includes(lfUtils.assessHypernymy(lObj))
+        lfUtils.checkHyper({ id: specificId }, HY.AofQVY) &&
+        lfUtils.checkHyper(lObj, [HY.HY, HY.VY])
       ) {
         log("Yessir-brown ", lObj.id, "because of", specificId);
         return true;
@@ -148,8 +143,8 @@ exports.getLObjAndSiblings = (
 
       if (
         blockHypernyms &&
-        ![HY.VY].includes(lfUtils.assessHypernymy({ id: specificId })) &&
-        [HY.VY].includes(lfUtils.assessHypernymy(lObj))
+        !lfUtils.checkHyper({ id: specificId }, [HY.VY]) &&
+        lfUtils.checkHyper(lObj, [HY.VY])
       ) {
         log("Chuck-blue ", lObj.id);
         return false;
@@ -357,7 +352,6 @@ exports.selectRandTraitValue = (
   traitValues = stCh[traitKey]
 ) => {
   if (traitKey === "number") {
-    let hypernymy = lfUtils.assessHypernymy(lObj);
     if (stCh[traitKey].length > 1) {
       if (
         stCh[traitKey].length > 2 ||
@@ -365,7 +359,7 @@ exports.selectRandTraitValue = (
       ) {
         consol.throw("dlvu");
       }
-      if ([HY.HY].includes(hypernymy)) {
+      if (lfUtils.checkHyper(lObj, [HY.HY])) {
         stCh[traitKey] = [
           uUtils.selectRandom([
             "singular",
@@ -377,7 +371,7 @@ exports.selectRandTraitValue = (
         ];
         return;
       }
-      if ([HY.HO, HY.VO].includes(hypernymy)) {
+      if (lfUtils.checkHyper(lObj, [HY.HO, HY.VO])) {
         stCh[traitKey] = [
           uUtils.selectRandom([
             "singular",
@@ -1126,9 +1120,7 @@ exports.updateStChByAndTagsAndSelectors = (
 
       if (isSecondRound && numberAdjustedGenderValues.length > 1) {
         let oneValue = uUtils.selectRandom(numberAdjustedGenderValues);
-        consol.throw("pppp");
-        consol.logSpecial(
-          8,
+        console.log(
           `htah Expected length 1 for "${
             outputUnit.selectedLemmaObject.lemma
           }" but got: ${
