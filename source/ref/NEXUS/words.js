@@ -67,16 +67,6 @@ exports.wordsBank = {
       topics: [],
     },
     {
-      key: "npe-0005-king/queen",
-      traductions: {
-        SPA: [],
-        ENG: ["eng-npe-007-king"],
-        POL: ["pol-npe-016-król"],
-      },
-      papers: [],
-      topics: [],
-    },
-    {
       key: "npe-0006-brother/sister",
       traductions: {
         SPA: [],

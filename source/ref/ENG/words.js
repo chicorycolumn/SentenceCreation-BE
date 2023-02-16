@@ -101,45 +101,6 @@ exports.wordsBank = {
     },
     {
       //selectors
-      lemma: "king",
-      id: "eng-npe-007-king",
-      gender: "m",
-      //notes
-
-      //inflections
-      inflections: {
-        singular: {
-          nom: "king",
-          gen: "king's",
-        },
-        plural: {
-          nom: "kings",
-          gen: "kings'",
-        },
-      },
-    },
-    {
-      //selectors
-      lemma: "queen",
-      id: "eng-npe-007-queen",
-      gender: "f",
-      //notes
-
-      //inflections
-      inflections: {
-        singular: {
-          nom: "queen",
-          gen: "queen's",
-        },
-        plural: {
-          nom: "queens",
-          gen: "queens'",
-        },
-      },
-    },
-
-    {
-      //selectors
       lemma: "brother",
       id: "eng-npe-008-brother",
       gender: "m",
