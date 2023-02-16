@@ -64,7 +64,7 @@ exports.getMaterialsCopies = (
 
   let sentenceFormula;
   const langUtils = require(`../source/all/${currentLanguage}/langUtils.js`);
-  let defaultSentenceFormulaId = "POL-00-50";
+  let defaultSentenceFormulaId = `${currentLanguage}-00-default`;
 
   let words = useDummy
     ? gpUtils.combineWordbanks(wordsBank, dummyWordsBank)
@@ -1289,13 +1289,38 @@ exports.conformAnswerStructureToQuestionStructure = (
 
     let matchesLengthSnapshot = matchingAnswerLemmaObjects.length;
 
-    matchingAnswerLemmaObjects = matchingAnswerLemmaObjects.filter(
-      (answerLemmaObject) =>
-        uUtils.areTwoFlatArraysEqual(
-          nexusUtils.getPapers(questionSelectedLemmaObject),
-          nexusUtils.getPapers(answerLemmaObject)
-        )
-    );
+    // "traductions by papers"
+    // matchingAnswerLemmaObjects = matchingAnswerLemmaObjects.filter(
+    //   (answerLemmaObject) =>
+    //     uUtils.areTwoFlatArraysEqual(
+    //       nexusUtils.getPapers(questionSelectedLemmaObject),
+    //       nexusUtils.getPapers(answerLemmaObject)
+    //     )
+    // );
+    /**I think this clause is not needed.
+     * It's here to prevent mistaken translating, eg
+     * qLobj is "wysoki" with tags "personaldescription"
+     * so we only want that to translate here to A "tall", not "high".
+     * So we were thinking you enforce here that translated must have same tags
+     * so "tall" has the same tags, whereas "high" doesn't have "personaldescription" tag.
+     * But... this shouldn't be an issue,
+     * because "tall" and "high" are two separate lobjs, and more importantly,
+     * "wysoki" and "wysoki" are two separate lobjs. They have different tags, Freq, translations.
+     * The only thing they have in common is their lemma and their inflections obj.
+     * They are two different lobjs, with different ids.
+     * So "wysoki dziewczyna" would not translate to "high woman",
+     * because "wysoki" in this sentence is the lobj with id "pol-adj-400-wysoki(person)"
+     * which only appears in the nexuslobj with "eng-tall",
+     * whereas "eng-high" is in the nexuslobj with "pol-adj-401-wysoki(dimension)".
+     * So we don't need this check.
+     *
+     * Are there cases where this would be false, though?
+     * Yes. "dziecko" is a translation of "child" and "baby", but those two could conceivably have different tags.
+     * Sure, they're be mostly the same "concrete","person"
+     * but "baby" might have the tag "childbirth","medical" whereas "child" doesn't.
+     *
+     * So yes, I think to nix this clause.
+     */
 
     if (matchesLengthSnapshot && !matchingAnswerLemmaObjects.length) {
       consol.log(
@@ -1313,8 +1338,22 @@ exports.conformAnswerStructureToQuestionStructure = (
     }
 
     //...and then for both pronombres and all other wordtypes, we get the ID and set it.
-    answerStructureChunk.specificIds = matchingAnswerLemmaObjects.map(
-      (lObj) => lObj.id
+    //Ensure prefix characters are kept, ie "^pol-000-dziecko" doesn't lose caret.
+    let specificIdsForAnswer = [];
+    matchingAnswerLemmaObjects
+      .map((lObj) => lObj.id)
+      .forEach((id) => {
+        let soughtIds = lObjsToSearch.filter((soughtId) =>
+          allLangUtils.compareLObjStems(soughtId, id)
+        );
+        if (soughtIds.length) {
+          specificIdsForAnswer.push(...soughtIds);
+        } else {
+          specificIdsForAnswer.push(id);
+        }
+      });
+    answerStructureChunk.specificIds = Array.from(
+      new Set(specificIdsForAnswer)
     );
 
     //Do actually transfer gender, for person nouns.

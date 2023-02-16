@@ -25,6 +25,44 @@ exports.wordsBank = {
     },
     {
       //selectors
+      lemma: "child",
+      id: "eng-npe-002-child-£",
+      gender: "_PersonalGenders",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "child",
+          gen: "child's",
+        },
+        plural: {
+          nom: "children",
+          gen: "children's",
+        },
+      },
+    },
+    {
+      //selectors
+      lemma: "baby",
+      id: "eng-npe-009-baby",
+      gender: "_Genders", // Because baby can be neuter "Your baby is crying, is IT hungry?"
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "baby",
+          gen: "baby's",
+        },
+        plural: {
+          nom: "babies",
+          gen: "babies'",
+        },
+      },
+    },
+    {
+      //selectors
       lemma: "boy",
       id: "eng-npe-002-boy",
       gender: "m",
@@ -39,6 +77,25 @@ exports.wordsBank = {
         plural: {
           nom: "boys",
           gen: "boys'",
+        },
+      },
+    },
+    {
+      //selectors
+      lemma: "girl",
+      id: "eng-npe-002-girl",
+      gender: "f",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "girl",
+          gen: "girl's",
+        },
+        plural: {
+          nom: "girls",
+          gen: "girls'",
         },
       },
     },
@@ -118,45 +175,6 @@ exports.wordsBank = {
         },
       },
     },
-    {
-      //selectors
-      lemma: "king",
-      id: "eng-npe-007-king",
-      gender: "m",
-      //notes
-
-      //inflections
-      inflections: {
-        singular: {
-          nom: "king",
-          gen: "king's",
-        },
-        plural: {
-          nom: "kings",
-          gen: "kings'",
-        },
-      },
-    },
-    {
-      //selectors
-      lemma: "queen",
-      id: "eng-npe-007-queen",
-      gender: "f",
-      //notes
-
-      //inflections
-      inflections: {
-        singular: {
-          nom: "queen",
-          gen: "queen's",
-        },
-        plural: {
-          nom: "queens",
-          gen: "queens'",
-        },
-      },
-    },
-
     {
       //selectors
       lemma: "brother",

@@ -2,6 +2,7 @@ const { expect } = require("chai");
 const allLangUtils = require("../allLangUtils.js");
 const consol = require("../../utils/zerothOrder/consoleLoggingUtils.js");
 const gpUtils = require("../generalPurposeUtils.js");
+const uUtils = require("../universalUtils.js");
 
 exports.getNexusLemmaObject = (lObj, env = "ref") => {
   let lang = gpUtils.getLanguageFromLemmaObject(lObj);
@@ -17,19 +18,72 @@ exports.getNexusLemmaObject = (lObj, env = "ref") => {
     )
   );
 
-  if (resArr.length !== 1) {
-    consol.throw(
-      `dlmb getNexusLemmaObject for ${lang} ${lObj.id} found ${resArr.length} not 1.`
+  if (resArr.length > 1) {
+    consol.logSpecial(
+      9,
+      `dlma getNexusLemmaObject for ${lang} ${lObj.id} found ${resArr.length} nexus lObjs, usually only 1.`
     );
   }
 
-  return resArr[0];
+  if (!resArr.length) {
+    consol.throw(
+      `dlmb getNexusLemmaObject for ${lang} ${lObj.id} found 0 ${resArr.length} nexus lObjs.`
+    );
+  }
+
+  return resArr;
+};
+
+exports.accumulateThisKeyFromLObjs = (lObj, env, key) => {
+  let fetchedLObjs = exports.getNexusLemmaObject(lObj, env);
+
+  let typeOfValue = uUtils.typeof(fetchedLObjs[0][key]);
+
+  if (typeOfValue === "array") {
+    let res = [];
+    fetchedLObjs.forEach((l) => {
+      if (l[key]) {
+        res.push(...l[key]);
+      }
+    });
+
+    return Array.from(new Set(res));
+  } else if (typeOfValue === "keyValueObject") {
+    let res = {};
+    fetchedLObjs.forEach((l) => {
+      if (l[key]) {
+        Object.keys(l[key]).forEach((subkey) => {
+          if (!res[subkey]) {
+            res[subkey] = [];
+          }
+
+          let values = l[key][subkey];
+
+          values.forEach((value) => {
+            if (!res[subkey].includes(value)) {
+              res[subkey].push(value);
+            }
+          });
+        });
+      }
+    });
+
+    return res;
+  } else {
+    consol.throw(
+      `gyae "${key}" of lObj ${
+        l.key
+      } is not Array or KeyValueObject, instead is ${typeof l[key]}.`
+    );
+  }
 };
 
 exports.getPapers = (lObj, env = "ref") => {
-  return (
-    lObj.devHardcoded_tags || exports.getNexusLemmaObject(lObj, env).papers
-  );
+  let papers =
+    lObj.devHardcoded_tags ||
+    exports.accumulateThisKeyFromLObjs(lObj, env, "papers");
+
+  return papers;
 };
 
 exports.getTraductions = (
@@ -48,7 +102,7 @@ exports.getTraductions = (
 
   let traductions =
     lObj.devHardcoded_translations ||
-    exports.getNexusLemmaObject(lObj, env).traductions;
+    exports.accumulateThisKeyFromLObjs(lObj, env, "traductions");
 
   if (getAllIds) {
     const { wordsBank } = require(`../../source/${env}/${targetlang}/words.js`);
@@ -73,33 +127,18 @@ exports.getTraductions = (
 };
 
 exports.checkAllLObjsArePresentInNexus = (env, lang) => {
-  const nl = () => {
-    console.log("");
-  };
-
   const nexusWordsBank =
     require(`../../source/${env}/NEXUS/words.js`).wordsBank;
 
   const { wordsBank } = require(`../../source/${env}/${lang}/words.js`);
 
-  console.log("--------------------------------------------");
-  console.log("--------------------------------------------");
-  console.log("-------checkAllLObjsArePresentInNexus-------");
-  console.log("--------------------------------------------");
-  console.log("--------------------------------------------");
-  nl();
-  console.log("env = ", env);
-  console.log("lang =", lang);
-  nl();
-
+  console.log("\n", "[1;35m " + `${env} ${lang}` + "[0m");
   Object.keys(wordsBank).forEach((wbKey) => {
-    wb = wordsBank[wbKey];
-    console.log(wbKey, "has", wb.length, "lObjs.");
-    nl();
+    console.log(wbKey, "has", wordsBank[wbKey].length, "lObjs.");
   });
 
-  howManyTimesIsEachLObjIdPresentInNexusWordsBank = {};
-  problems = [];
+  let howManyTimesIsEachLObjIdPresentInNexusWordsBank = {};
+  let problems = [];
 
   Object.values(nexusWordsBank).forEach((nexusWB) => {
     nexusWB.forEach((nex) => {
@@ -111,17 +150,14 @@ exports.checkAllLObjsArePresentInNexus = (env, lang) => {
             );
           })
         ) {
-          problems.push(
-            `${trad} is present in nexus words bank but no lObj was found.`
-          );
+          problems.push(`"${trad}" present in NEXUS but absent in ${lang}.`);
         }
       });
     });
   });
 
   Object.keys(wordsBank).forEach((wbKey) => {
-    wb = wordsBank[wbKey];
-    howManyTimesIsEachLObjIdPresentInNexusWordsBank = {};
+    let wb = wordsBank[wbKey];
 
     wb.forEach((lObj) => {
       id = lObj.id;
@@ -137,19 +173,28 @@ exports.checkAllLObjsArePresentInNexus = (env, lang) => {
         });
       });
 
-      if (res.length !== 1) {
-        problems.push(
-          `${id} is present in nexus bank ${res.length} times but should be 1.`
-        );
+      if (!res.length) {
+        problems.push(`"${id}" present in ${lang} but absent in NEXUS.`);
       }
 
-      howManyTimesIsEachLObjIdPresentInNexusWordsBank[id] = res;
+      howManyTimesIsEachLObjIdPresentInNexusWordsBank[id] = res.length;
     });
   });
 
-  if (problems.length) {
-    console.log("wdgt problems:", problems);
+  let interestingTally = {};
+  Object.keys(howManyTimesIsEachLObjIdPresentInNexusWordsBank).forEach((k) => {
+    let v = howManyTimesIsEachLObjIdPresentInNexusWordsBank[k];
+    if (v !== 1) {
+      interestingTally[k] = v;
+    }
+  });
+
+  if (Object.keys(interestingTally).length) {
+    console.log(
+      "These not present exactly 1 times in nexus (which is the norm):\n",
+      interestingTally
+    );
   }
 
-  expect(problems).to.eql([]);
+  return expect(problems).to.eql([]);
 };

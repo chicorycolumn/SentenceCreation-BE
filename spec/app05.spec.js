@@ -169,7 +169,6 @@ const dummy72cRefEngSpa = [
   { ENG: ["Red parent (male)."], SPA: ["Rojo padre."] },
   { ENG: ["Red parent (female)."], SPA: ["Roja madre."] },
 ];
-
 const dummy72cRefSpaEng = [
   { ENG: ["Red mother."], SPA: ["Roja madre."] },
   { ENG: ["Red mothers."], SPA: ["Rojas madres."] },
@@ -179,9 +178,52 @@ const dummy72cRefSpaEng = [
   { ENG: ["Red fathers."], SPA: ["Rojos padres (males)."] },
   { ENG: ["Red parents."], SPA: ["Rojos padres (mixed)."] },
 ];
+const dummy73a = [
+  {
+    POL: ["Czerwone dziecko."],
+    ENG: ["Red child.", "Red baby."],
+  },
+  {
+    POL: ["Czerwone dzieci."],
+    ENG: ["Red children.", "Red babies."],
+  },
+];
+const dummy73b = [
+  {
+    POL: ["Czerwone dziecko."],
+    ENG: ["Red child.", "Red baby."],
+  },
+  {
+    POL: ["Czerwona dziewczyna."],
+    ENG: ["Red girl."],
+  },
+  {
+    POL: ["Czerwone dzieci."],
+    ENG: ["Red children.", "Red babies."],
+  },
+  {
+    POL: ["Czerwone dziewczyny."],
+    ENG: ["Red girls."],
+  },
+];
 
 describe("/api", function () {
   this.timeout(7000);
+
+  describe("/palette - Stage 25: Complex nexus connections.", () => {
+    it("#pal25-01a GET 200 YES: Poleng. Dziecko should translate as Child and also Baby.", () => {
+      return runPaletteTest("POL", "ENG", "dummy73a", dummy73a);
+    });
+    it("#pal25-01b GET 200 YES: Engpol. Dziecko should translate as Child and also Baby.", () => {
+      return runPaletteTest("ENG", "POL", "dummy73a", dummy73a);
+    });
+    it("#pal25-02a GET 200 YES: Poleng. Dziecko selectable by gender f.", () => {
+      return runPaletteTest("POL", "ENG", "dummy73b", dummy73b);
+    });
+    it("#pal25-02b GET 200 YES: Engpol. Dziecko selectable by gender f.", () => {
+      return runPaletteTest("ENG", "POL", "dummy73b", dummy73b);
+    });
+  });
 
   describe("/palette - Stage 24-i: Spanish basic. Normal nouns.", () => {
     it("#pal24-01a GET 200 YES: Polspa. Red onion (NORMAL).", () => {

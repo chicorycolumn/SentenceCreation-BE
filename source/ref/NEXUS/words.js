@@ -27,13 +27,25 @@ exports.wordsBank = {
       topics: [],
     },
     {
-      key: "npe-0001-boy",
+      key: "npe-0001-boy/girl/child",
       traductions: {
-        SPA: [],
-        ENG: ["eng-npe-002-boy"],
-        POL: ["pol-npe-012-chłopiec"],
+        SPA: ["spa-npe-003-chico/a", "spa-npe-004-niño/a"],
+        ENG: ["eng-npe-002-boy/girl/child"],
+        POL: ["pol-npe-012-chłop/dziew/dziecko"],
       },
-      papers: ["animate", "personTest1", "concrete"],
+      papers: ["animate", "concrete", "personTest1"],
+      topics: [],
+    },
+    {
+      key: "npe-0002-baby",
+      traductions: {
+        SPA: ["spa-npe-004-niño/a"],
+        ENG: ["eng-npe-009-baby"],
+        POL: [
+          "^pol-npe-012-dziecko-£", // Get dziecko only and not also chłopiec and dziewczyna.
+        ],
+      },
+      papers: ["animate", "concrete"],
       topics: [],
     },
     {
@@ -43,7 +55,7 @@ exports.wordsBank = {
         ENG: ["eng-npe-003-parentarooni"],
         POL: ["pol-npe-013-parentarooni"],
       },
-      papers: ["animate", "family", "concrete"],
+      papers: ["animate", "family", "concrete", "personTest3"],
       topics: [],
     },
     {
@@ -54,16 +66,6 @@ exports.wordsBank = {
         POL: ["pol-npe-015-lekarz"],
       },
       papers: ["concrete", "animate", "personTest2", "job"],
-      topics: [],
-    },
-    {
-      key: "npe-0005-king/queen",
-      traductions: {
-        SPA: [],
-        ENG: ["eng-npe-007-king"],
-        POL: ["pol-npe-016-król"],
-      },
-      papers: [],
       topics: [],
     },
     {

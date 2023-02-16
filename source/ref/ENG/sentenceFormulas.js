@@ -1,5 +1,26 @@
 exports.sentenceFormulasBank = [
   {
+    sentenceFormulaSymbol: "girl eats apple",
+    sentenceFormulaId: "ENG-00-default",
+    sentenceStructure: [
+      {
+        chunkId: "npe-1",
+        andTags: ["personTest3"],
+        number: ["singular"],
+        gender: [],
+      },
+      { chunkId: "fix-1", chunkValue: "eats" },
+      {
+        chunkId: "nco-2",
+        andTags: ["edible"],
+        gcase: ["acc"],
+        number: [],
+        gender: [],
+      },
+    ],
+    primaryOrders: [["npe-1", "fix-1", "nco-2"]],
+  },
+  {
     sentenceFormulaSymbol: "101a girl is reading",
     sentenceFormulaId: "ENG-00-101a",
     equivalents: { POL: ["POL-00-101a"] },
@@ -8,7 +29,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-
+        specificIds: ["eng-npe-001-woman"],
         number: ["singular", "plural"],
         gender: [],
       },
@@ -32,7 +53,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-
+        specificIds: ["eng-npe-001-woman"],
         number: ["singular", "plural"],
       },
       {
@@ -650,6 +671,123 @@ exports.sentenceFormulasBank = [
     additionalOrders: [],
   },
   {
+    sentenceFormulaSymbol: "113b my child gave me his book",
+    sentenceFormulaId: "ENG-00-113b",
+    equivalents: { POL: ["POL-00-113b"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-invisible-We",
+        specificIds: ["eng-pro-PERSONAL"],
+        person: ["1per"],
+      },
+      {
+        chunkId: "pro-2-Our",
+        form: ["determiner"],
+        specificIds: ["eng-pro-POSSESSIVE"],
+        agreeWith: "pro-1-invisible-We",
+      },
+      {
+        chunkId: "npe-1-Father",
+        specificIds: ["eng-npe-002-boy/girl/child"],
+      },
+      {
+        chunkId: "ver-1-Gave",
+        agreeWith: "npe-1-Father",
+        specificIds: ["eng-ver-006-give"],
+        tenseDescription: ["past simple"],
+      },
+      {
+        chunkId: "pro-3-Us",
+        agreeWith: "pro-1-invisible-We",
+        gcase: ["dat"],
+        formulaImportantTraitKeys: ["gcase"],
+        specificIds: ["eng-pro-PERSONAL"],
+      },
+      {
+        chunkId: "pro-4-His",
+        form: ["determiner"],
+        specificIds: ["eng-pro-POSSESSIVE"],
+        agreeWith: "npe-1-Father",
+      },
+      {
+        chunkId: "nco-2-Book",
+        specificIds: ["eng-nco-006-book"],
+        gcase: ["acc"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [
+      [
+        "pro-2-Our",
+        "npe-1-Father",
+        "ver-1-Gave",
+        "pro-3-Us",
+        "pro-4-His",
+        "nco-2-Book",
+      ],
+    ],
+    additionalOrders: [],
+  },
+  {
+    sentenceFormulaSymbol: "113c my child gave me his book",
+    sentenceFormulaId: "ENG-00-113c",
+    equivalents: { POL: ["POL-00-113c"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-invisible-We",
+        specificIds: ["eng-pro-PERSONAL"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "pro-2-Our",
+        form: ["determiner"],
+        specificIds: ["eng-pro-POSSESSIVE"],
+        agreeWith: "pro-1-invisible-We",
+      },
+      {
+        chunkId: "npe-1-Father",
+        specificIds: ["eng-npe-009-baby"],
+      },
+      {
+        chunkId: "ver-1-Gave",
+        agreeWith: "npe-1-Father",
+        specificIds: ["eng-ver-006-give"],
+        tenseDescription: ["past simple"],
+      },
+      {
+        chunkId: "pro-3-Us",
+        agreeWith: "pro-1-invisible-We",
+        gcase: ["dat"],
+        formulaImportantTraitKeys: ["gcase"],
+        specificIds: ["eng-pro-PERSONAL"],
+      },
+      {
+        chunkId: "pro-4-His",
+        form: ["determiner"],
+        specificIds: ["eng-pro-POSSESSIVE"],
+        agreeWith: "npe-1-Father",
+      },
+      {
+        chunkId: "nco-2-Book",
+        specificIds: ["eng-nco-006-book"],
+        gcase: ["acc"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [
+      [
+        "pro-2-Our",
+        "npe-1-Father",
+        "ver-1-Gave",
+        "pro-3-Us",
+        "pro-4-His",
+        "nco-2-Book",
+      ],
+    ],
+    additionalOrders: [],
+  },
+  {
     sentenceFormulaSymbol: "114 doctor gave me her book",
     sentenceFormulaId: "ENG-00-114",
     equivalents: { POL: ["POL-00-114"] },
@@ -792,7 +930,7 @@ exports.sentenceFormulasBank = [
         specificIds: ["eng-npe-005-doctor"],
         gender: ["f"],
         educatorBlocksAnnotationsForTheseTraitKeys: ["gender"],
-        // ^ Because here the educator knows that context makes this MGN's gender unambiguous.
+        // ▲ Because here the educator knows that context makes this MGN's gender unambiguous.
       },
       {
         chunkId: "ver-1-was",
@@ -863,7 +1001,7 @@ exports.sentenceFormulasBank = [
         specificIds: ["eng-npe-005-doctor"],
         gender: ["f"],
         educatorBlocksAnnotationsForTheseTraitKeys: ["gender"],
-        // ^ Because here the educator knows that context makes this MGN's gender unambiguous.
+        // ▲ Because here the educator knows that context makes this MGN's gender unambiguous.
       },
       {
         chunkId: "ver-1-was",
@@ -1335,29 +1473,6 @@ exports.sentenceFormulasBank = [
       },
     ],
     primaryOrders: [["art-1", "npe-1-doctor", "ver-1-write"]],
-  },
-  {
-    sentenceFormulaSymbol: "122a The king writes",
-    sentenceFormulaId: "ENG-122a",
-    equivalents: { POL: ["POL-122a"] },
-    sentenceStructure: [
-      {
-        chunkId: "art-1",
-        form: ["definite"],
-        agreeWith: "npe-1-king",
-      },
-      {
-        chunkId: "npe-1-king",
-        specificIds: ["eng-npe-007-king"],
-      },
-      {
-        chunkId: "ver-1-write",
-        specificIds: ["eng-ver-005-write"],
-        agreeWith: "npe-1-king",
-        tenseDescription: ["present simple", "past simple"],
-      },
-    ],
-    primaryOrders: [["art-1", "npe-1-king", "ver-1-write"]],
   },
   {
     sentenceFormulaSymbol: "123 I am red",

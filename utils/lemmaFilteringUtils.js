@@ -102,17 +102,17 @@ exports.getLObjAndSiblings = (
         return false;
       }
 
-      if (
-        // blockHypernyms &&
-        qLObj &&
-        ![HY.VY].includes(lfUtils.assessHypernymy(lObj)) &&
-        ![HY.VY].includes(lfUtils.assessHypernymy(qLObj)) &&
-        [HY.HY, HY.VY].includes(lfUtils.assessHypernymy(qLObj)) !==
-          [HY.HY, HY.VY].includes(lfUtils.assessHypernymy(lObj))
-      ) {
-        log("Chuck-red ", lObj.id);
-        return false;
-      }
+      // Nixed to allow Dziecko£ to translate as Baby.
+      // if (
+      //   qLObj &&
+      //   ![HY.VY].includes(lfUtils.assessHypernymy(lObj)) &&
+      //   ![HY.VY].includes(lfUtils.assessHypernymy(qLObj)) &&
+      //   [HY.HY, HY.VY].includes(lfUtils.assessHypernymy(qLObj)) !==
+      //     [HY.HY, HY.VY].includes(lfUtils.assessHypernymy(lObj))
+      // ) {
+      //   log("Chuck-red ", lObj.id);
+      //   return false;
+      // }
 
       if (
         blockHypernyms &&
@@ -177,7 +177,7 @@ exports.getLObjAndSiblings = (
 
   if (!res || !res.length) {
     consol.throw(
-      "epma This will cause unwanted behaviour like the resetting of traitKey such as number, resulting in Q: Lekarz. A: Doctor. Doctors."
+      "epma getLObjAndSiblings found nothing.\nThis will cause unwanted behaviour like the resetting of traitKey such as number, resulting in Q: Lekarz. A: Doctor. Doctors."
     );
   }
 
@@ -1083,7 +1083,7 @@ exports.updateStChByAndTagsAndSelectors = (
       );
 
       if (!numberAdjustedGenderValues.length) {
-        throw "lemon";
+        throw "nmol !numberAdjustedGenderValues.length in updateStChByAndTagsAndSelectors";
       }
 
       if (this.checkHyper(selectedLemmaObject, [HY.VY])) {
@@ -1124,12 +1124,21 @@ exports.updateStChByAndTagsAndSelectors = (
         numberAdjustedGenderValues
       );
 
-      if (isSecondRound && numberAdjustedGenderValues.length !== 1) {
-        consol.throw(
-          `htag Expected length 1 but got ${
+      if (isSecondRound && numberAdjustedGenderValues.length > 1) {
+        let oneValue = uUtils.selectRandom(numberAdjustedGenderValues);
+        consol.throw("pppp");
+        consol.logSpecial(
+          8,
+          `htah Expected length 1 for "${
+            outputUnit.selectedLemmaObject.lemma
+          }" but got: ${
             numberAdjustedGenderValues.length
-          } [${numberAdjustedGenderValues.join(", ")}]`
+          } [${numberAdjustedGenderValues.join(
+            ", "
+          )}] so have randomly selected "${oneValue}".`
         );
+
+        numberAdjustedGenderValues = [oneValue];
       }
 
       if (!numberAdjustedGenderValues.length) {
@@ -1142,7 +1151,7 @@ exports.updateStChByAndTagsAndSelectors = (
 
       consol.logSpecial(
         8,
-        `htah numberAdjustedGenderValues after SELECTRANDOM`,
+        `htai numberAdjustedGenderValues after SELECTRANDOM`,
         numberAdjustedGenderValues
       );
 
@@ -1150,7 +1159,7 @@ exports.updateStChByAndTagsAndSelectors = (
         consol.logSpecial(
           8,
           "[1;36m " +
-            `htai ${currentLanguage} ${structureChunk.chunkId}, stCh.semanticGender was ${structureChunk.semanticGender} is now ${numberAdjustedGenderValues}.` +
+            `htaj ${currentLanguage} ${structureChunk.chunkId}, stCh.semanticGender was ${structureChunk.semanticGender} is now ${numberAdjustedGenderValues}.` +
             "[0m"
         );
       }
@@ -1517,8 +1526,6 @@ exports.filterBySelector_inner = (
     lemmaObjectArr.map((l) => l.id)
   );
 
-  let hypernymLObjs = lemmaObjectArr.filter((l) => this.checkHyper(l, [HY.HY]));
-
   let questionChunk = {};
   if (answerMode) {
     let ou = questionOutputArr.find(
@@ -1534,17 +1541,26 @@ exports.filterBySelector_inner = (
     }
   }
 
-  if (answerMode && questionChunk.hypernymy === HY.HY && hypernymLObjs.length) {
-    consol.logSpecial(
-      8,
-      `\netpz ${currentLanguage} ${
-        answerMode ? "answerMode" : "questionMode"
-      } Big override right at the start of filterBySelector_inner for stCh "${
-        structureChunk.chunkId
-      }" because Q chunk is hypernym so I will make A chunk hypernym.`,
-      hypernymLObjs.map((l) => l.id)
+  if (answerMode && questionChunk.hypernymy === HY.HY) {
+    let hypernymsAndMGNs = lemmaObjectArr.filter(
+      (l) =>
+        this.checkHyper(l, [HY.HY]) ||
+        ["_Genders", "_PersonalGenders"].includes(l.gender)
+      // || ["_Genders", "_PersonalGenders"].includes(l.semanticGender)
     );
-    return hypernymLObjs;
+
+    if (hypernymsAndMGNs.length) {
+      consol.logSpecial(
+        8,
+        `\netpz ${currentLanguage} ${
+          answerMode ? "answerMode" : "questionMode"
+        } Big override right at the start of filterBySelector_inner for stCh "${
+          structureChunk.chunkId
+        }" because Q chunk is hypernym so I will return hypernyms/MGNs for A chunks.`,
+        hypernymsAndMGNs.map((l) => l.id)
+      );
+      return hypernymsAndMGNs;
+    }
   }
 
   // Garibaldi part 3

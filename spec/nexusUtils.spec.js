@@ -9,8 +9,15 @@ const testingUtils = require("../utils/secondOrder/testingUtils.js");
 const nexusUtils = require("../utils/secondOrder/nexusUtils.js");
 
 describe("/nexusUtils", function () {
-  it("checkAllLObjsArePresentInNexus", () => {
-    nexusUtils.checkAllLObjsArePresentInNexus("ref", "ENG");
-    nexusUtils.checkAllLObjsArePresentInNexus("ref", "POL");
+  describe("checkAllLObjsArePresentInNexus", () => {
+    it("ENG", () => {
+      return nexusUtils.checkAllLObjsArePresentInNexus("ref", "ENG");
+    });
+    it("POL", () => {
+      return nexusUtils.checkAllLObjsArePresentInNexus("ref", "POL");
+    });
+    it("SPA", () => {
+      return nexusUtils.checkAllLObjsArePresentInNexus("ref", "SPA");
+    });
   });
 });

@@ -63,7 +63,7 @@ exports.checkProportions = (res, ref, strictAboutAnnotations) => {
 
   consol.logTestOutputSolely("\ncheckProportions:");
   if (Object.keys(printoutBad).length) {
-    consol.logTestOutputSolely("😰 BAD:", printoutBad, "\n");
+    consol.logTestOutputSolely("🥵 BAD:", printoutBad, "\n");
   }
   if (Object.keys(printoutGood).length) {
     consol.logTestOutputSolely("😀 GOOD:", printoutGood, "\n");
@@ -89,7 +89,7 @@ exports.runPaletteTest = (
   answerLanguage,
   sentenceFormulaSymbol,
   expected,
-  args,
+  args = {},
   expectedLength,
   returnRes,
   useDummy = sentenceFormulaSymbol.includes("dummy"),
@@ -129,7 +129,8 @@ exports.runPaletteTest = (
           res,
           expected,
           questionLanguage,
-          answerLanguage
+          answerLanguage,
+          true
         );
       }
     });
@@ -927,10 +928,13 @@ exports.checkTranslationsOfGivenRef = (
   res,
   ref,
   questionLanguage,
-  answerLanguage
+  answerLanguage,
+  alreadyLogged
 ) => {
   let testActivated = false;
-  consol.logTestOutputSolely(res.body);
+  if (!alreadyLogged) {
+    consol.logTestOutputSolely(res.body);
+  }
   if (res.body.runsRecord) {
     consol.logTestOutputSolely(
       "[1;35m " + `Runs record was ${res.body.runsRecord.length}.` + "[0m"

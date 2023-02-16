@@ -99,19 +99,19 @@ exports.wordsBank = {
       inflections: {
         singular: {
           nom: "rodzic",
-          gen: "rodzic_swde",
-          dat: "rodzic_swde",
-          acc: "rodzic_swde",
-          ins: "rodzic_swde",
-          loc: "rodzic_swde",
+          gen: "rodzica",
+          dat: "rodzicowi",
+          acc: "rodzica",
+          ins: "rodzicem",
+          loc: "rodzicu",
         },
         plural: {
           nom: "rodzice",
-          gen: "rodzic_swde",
-          dat: "rodzic_swde",
-          acc: "rodzic_swde",
-          ins: "rodzic_swde",
-          loc: "rodzic_swde",
+          gen: "rodziców",
+          dat: "rodzicom",
+          acc: "rodziców",
+          ins: "rodzicami",
+          loc: "rodzicach",
         },
       },
     },
@@ -178,6 +178,61 @@ exports.wordsBank = {
     },
     {
       //selectors
+      lemma: "dziewczyna",
+      id: "pol-npe-012-dziewczyna",
+      gender: "f",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "dziewczyna",
+          gen: "dziewczyny",
+          dat: "dziewczynie",
+          acc: "dziewczynę",
+          ins: "dziewczyną",
+          loc: "dziewczynie",
+        },
+        plural: {
+          nom: "dziewczyny",
+          gen: "dziewczyn",
+          dat: "dziewczynom",
+          acc: "dziewczyny",
+          ins: "dziewczynami",
+          loc: "dziewczynach",
+        },
+      },
+    },
+    {
+      //selectors
+      lemma: "dziecko",
+      id: "pol-npe-012-dziecko-£",
+      gender: "n",
+      semanticGender: "_PersonalGenders",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "dziecko",
+          gen: "dziecka",
+          dat: "dziecku",
+          acc: "dziecko",
+          ins: "dzieckiem",
+          loc: "dziecku",
+        },
+        plural: {
+          nom: "dzieci",
+          gen: "dzieci",
+          dat: "dzieciom",
+          acc: "dzieci",
+          ins: "dziećmi",
+          loc: "dzieciach",
+        },
+      },
+    },
+    {
+      //selectors
       lemma: "lekarz",
       id: "pol-npe-015-lekarz-€",
       gender: "m1",
@@ -231,61 +286,6 @@ exports.wordsBank = {
         },
       },
     },
-    {
-      //selectors
-      lemma: "król",
-      id: "pol-npe-016-król",
-      gender: "m1",
-      //notes
-
-      //inflections
-      inflections: {
-        singular: {
-          nom: "król",
-          gen: "króla",
-          dat: "królowi",
-          acc: "króla",
-          ins: "królem",
-          loc: "królu",
-        },
-        plural: {
-          nom: "królowie",
-          gen: "królów",
-          dat: "królom",
-          acc: "królów",
-          ins: "królami",
-          loc: "królach",
-        },
-      },
-    },
-    {
-      //selectors
-      lemma: "dama",
-      id: "pol-npe-016-dama",
-      gender: "f",
-      //notes
-
-      //inflections
-      inflections: {
-        singular: {
-          nom: "dama",
-          gen: "damy",
-          dat: "damie",
-          acc: "damę",
-          ins: "damą",
-          loc: "damie",
-        },
-        plural: {
-          nom: "damy",
-          gen: "dam",
-          dat: "damom",
-          acc: "damy",
-          ins: "damami",
-          loc: "damach",
-        },
-      },
-    },
-
     {
       //selectors
       lemma: "brat",

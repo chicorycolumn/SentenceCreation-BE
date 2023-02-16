@@ -328,7 +328,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   explodedCounterfaxSituationsSchematics.forEach((x, index) => {
     consol.logSpecial(3, x);
     if (!index) {
-      consol.logSpecial(3, "^^^ ORIGINAL ^^^");
+      consol.logSpecial(3, "▲▲▲ ORIGINAL ▲▲▲");
       consol.logSpecial(3, "[1;33m " + `kcab Original=` + x.cfLabel + "[0m");
     }
     consol.logSpecial(3, "");
