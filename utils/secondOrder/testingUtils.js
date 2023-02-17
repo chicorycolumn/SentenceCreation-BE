@@ -106,8 +106,10 @@ exports.runPaletteTest = (
     })
     .expect(200)
     .then((res) => {
+      let alreadyLogged;
       if (!skipConsoleLog) {
-        consol.logTestOutputSolely(res.body);
+        consol.logTestOutputSolely("\n", res.body);
+        alreadyLogged = true;
       }
 
       if (!answerLanguage) {
@@ -129,7 +131,8 @@ exports.runPaletteTest = (
           res,
           expected,
           questionLanguage,
-          answerLanguage
+          answerLanguage,
+          alreadyLogged
         );
       }
     });
@@ -927,10 +930,13 @@ exports.checkTranslationsOfGivenRef = (
   res,
   ref,
   questionLanguage,
-  answerLanguage
+  answerLanguage,
+  alreadyLogged
 ) => {
   let testActivated = false;
-  consol.logTestOutputSolely(res.body);
+  if (!alreadyLogged) {
+    consol.logTestOutputSolely("\n", res.body);
+  }
   if (res.body.runsRecord) {
     consol.logTestOutputSolely(
       "[1;35m " + `Runs record was ${res.body.runsRecord.length}.` + "[0m"
