@@ -8,6 +8,7 @@ const otUtils = require("./objectTraversingUtils.js");
 const allLangUtils = require("./allLangUtils.js");
 
 exports.findMatchingLemmaObjectThenWord = (
+  etiquette,
   useDummyWords,
   structureChunk,
   words,
@@ -36,6 +37,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
     return [
       {
+        etiquette,
         selectedLemmaObject: {},
         selectedWord: structureChunk.chunkValue,
         structureChunk,
@@ -434,6 +436,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
       selectedWordArr.forEach((selectedWord) => {
         let outputUnit = frUtils.createOutputUnit(
+          etiquette,
           errorInSentenceCreation,
           null,
           selectedWord,
@@ -588,6 +591,7 @@ exports.findMatchingLemmaObjectThenWord = (
                 selectedWord.processOnlyAtEnd)
             ) {
               let outputUnit = frUtils.createOutputUnit(
+                etiquette,
                 errorInSentenceCreation,
                 errorInDrilling,
                 selectedWord,
@@ -604,6 +608,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
               allWords.forEach((word) => {
                 let outputUnit = frUtils.createOutputUnit(
+                  etiquette,
                   errorInSentenceCreation,
                   errorInDrilling,
                   word,
@@ -745,103 +750,6 @@ exports.findMatchingLemmaObjectThenWord = (
        * But see above, we can take merelyPreferredChoicesForQuestionSentence from stCh into account.
        */
 
-      //eg subArrayOfOutputUnits [{
-      //   selectedWordArray: [ 'I' ],
-      //   drillPath: [
-      //     [ 'form', 'pronombre' ],
-      //     [ 'person', '1per' ],
-      //     [ 'number', 'singular' ],
-      //     [ 'gender', 'm' ],
-      //     [ 'gcase', 'nom' ]
-      //   ],
-      //   errorInDrilling: false
-      // },
-      // {
-      //   selectedWordArray: [ 'I' ],
-      //   drillPath: [
-      //     [ 'form', 'pronombre' ],
-      //     [ 'person', '1per' ],
-      //     [ 'number', 'singular' ],
-      //     [ 'gender', 'f' ],
-      //     [ 'gcase', 'nom' ]
-      //   ],
-      //   errorInDrilling: false
-      // }]
-
-      //eg [{
-      //   selectedWordArray: [ 'the' ],
-      //   drillPath: [ [ 'form', 'definite' ] ],
-      //   errorInDrilling: false
-      // },
-      // {
-      //   selectedWordArray: [
-      //     {
-      //       isTerminus: true,
-      //       processOnlyAtEnd: true,
-      //       nonprotective: [Array],
-      //       protective: [Array]
-      //     }
-      //   ],
-      //   drillPath: [ [ 'form', 'indefinite' ] ],
-      //   errorInDrilling: false
-      // }]
-
-      //eg [{
-      //   selectedWordArray: [ 'matka' ],
-      //   drillPath: [ [ 'number', 'singular' ], [ 'gcase', 'nom' ] ],
-      //   errorInDrilling: false
-      // },
-      // {
-      //   selectedWordArray: [ 'matki' ],
-      //   drillPath: [ [ 'number', 'plural' ], [ 'gcase', 'nom' ] ],
-      //   errorInDrilling: false
-      // }]
-
-      //eg [{
-      //   selectedWordArray: [ 'I' ],
-      //   drillPath: [
-      //     [ 'form', 'pronombre' ],
-      //     [ 'person', '1per' ],
-      //     [ 'number', 'singular' ],
-      //     [ 'gender', 'm' ],
-      //     [ 'gcase', 'nom' ]
-      //   ],
-      //   errorInDrilling: false
-      // },
-      // {
-      //   selectedWordArray: [ 'I' ],
-      //   drillPath: [
-      //     [ 'form', 'pronombre' ],
-      //     [ 'person', '1per' ],
-      //     [ 'number', 'singular' ],
-      //     [ 'gender', 'f' ],
-      //     [ 'gcase', 'nom' ]
-      //   ],
-      //   errorInDrilling: false
-      // },
-      // {
-      //   selectedWordArray: [ 'we' ],
-      //   drillPath: [
-      //     [ 'form', 'pronombre' ],
-      //     [ 'person', '1per' ],
-      //     [ 'number', 'plural' ],
-      //     [ 'gender', 'virile' ],
-      //     [ 'gcase', 'nom' ]
-      //   ],
-      //   errorInDrilling: false
-      // },
-      // {
-      //   selectedWordArray: [ 'we' ],
-      //   drillPath: [
-      //     [ 'form', 'pronombre' ],
-      //     [ 'person', '1per' ],
-      //     [ 'number', 'plural' ],
-      //     [ 'gender', 'nonvirile' ],
-      //     [ 'gcase', 'nom' ]
-      //   ],
-      //   errorInDrilling: false
-      // }]
-
       let {
         errorInDrilling,
         selectedWordArray,
@@ -915,6 +823,7 @@ exports.findMatchingLemmaObjectThenWord = (
         selectedWord = uUtils.selectRandom(additionalWords);
       }
       let outputUnit = frUtils.createOutputUnit(
+        etiquette,
         errorInSentenceCreation,
         errorInDrilling,
         selectedWord,

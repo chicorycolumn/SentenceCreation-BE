@@ -169,6 +169,7 @@ exports.processSentenceFormula = (
     consol.log("evga sc:processSentenceFormula STEP ONE", headChunk.chunkId);
 
     let allPossOutputUnits_head = otUtils.findMatchingLemmaObjectThenWord(
+      "head",
       useDummyWords,
       headChunk,
       words,
@@ -228,6 +229,14 @@ exports.processSentenceFormula = (
     uUtils.arrayExploder(headOutputUnitArrays)
   );
 
+  ////potential for adding group "dependent head chunks"//////
+  ////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////
+  /////////////////////////////start//////////////////////////
+  ////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////
+
   //STEP TWO: Select DEPENDENT words and add to result array.
   explodedOutputArraysWithHeads.forEach(
     (headOutputArray, headOutputArrayIndex) => {
@@ -273,6 +282,7 @@ exports.processSentenceFormula = (
             consol.log(`weoe dependentChunk "${dependentChunk.chunkId}"`);
             let allPossOutputUnits_dependent =
               otUtils.findMatchingLemmaObjectThenWord(
+                "dependent",
                 useDummyWords,
                 dependentChunk,
                 words,
@@ -349,23 +359,18 @@ exports.processSentenceFormula = (
     return nullResultObj;
   }
 
-  // consol.log(
-  //   "wvmo explodedOutputArraysWithHeads",
-  //   explodedOutputArraysWithHeads
-  // );
-
   explodedOutputArraysWithHeads.forEach((arr) => {
-    // consol.log(
-    //   "mocu processSentenceFormula explodedOutputArraysWithHeads arr:",
-    //   arr
-    // );
-
     let result = gpUtils.explodeOutputArraysByHeadsAndDependents(arr);
-
-    // consol.log("result of explodedOutputArraysWithHeads:", result);
-
     grandOutputArray.push(...result);
   });
+
+  ////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////
+  //////////////////////////end///////////////////////////////
+  ////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////
 
   let grandAllPossOutputUnits_other = [];
   let grandAllPossOutputUnits_PHD = [];
@@ -381,8 +386,6 @@ exports.processSentenceFormula = (
   });
 
   //STEP THREE: Select PHD words and add to result array.
-
-  // consol.log("shia grandOutputArray before PHD processing", grandOutputArray);
 
   grandOutputArray.forEach((outputArray, outputArrayIndex) => {
     let thisOutputArrayIsDeleted;
@@ -407,6 +410,7 @@ exports.processSentenceFormula = (
       );
 
       let allPossOutputUnits_PHD = otUtils.findMatchingLemmaObjectThenWord(
+        "PHD",
         useDummyWords,
         postHocDependentChunk,
         words,
@@ -541,6 +545,7 @@ exports.processSentenceFormula = (
 
     consol.log(`weoi otherChunk "${otherChunk.chunkId}"`);
     let allPossOutputUnits_other = otUtils.findMatchingLemmaObjectThenWord(
+      "other",
       useDummyWords,
       otherChunk,
       words,
