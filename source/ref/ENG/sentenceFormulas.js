@@ -792,7 +792,7 @@ exports.sentenceFormulasBank = [
         specificIds: ["eng-npe-005-doctor"],
         gender: ["f"],
         educatorBlocksAnnotationsForTheseTraitKeys: ["gender"],
-        // ^ Because here the educator knows that context makes this MGN's gender unambiguous.
+        // ▲ Because here the educator knows that context makes this MGN's gender unambiguous.
       },
       {
         chunkId: "ver-1-was",
@@ -863,7 +863,7 @@ exports.sentenceFormulasBank = [
         specificIds: ["eng-npe-005-doctor"],
         gender: ["f"],
         educatorBlocksAnnotationsForTheseTraitKeys: ["gender"],
-        // ^ Because here the educator knows that context makes this MGN's gender unambiguous.
+        // ▲ Because here the educator knows that context makes this MGN's gender unambiguous.
       },
       {
         chunkId: "ver-1-was",
