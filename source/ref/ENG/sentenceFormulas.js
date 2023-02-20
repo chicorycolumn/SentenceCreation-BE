@@ -1500,9 +1500,9 @@ exports.sentenceFormulasBank = [
     primaryOrders: [["pro-1-I", "ver-1-am", "adj-1-red"]],
   },
   {
-    sentenceFormulaSymbol: "124a I was a good person",
-    sentenceFormulaId: "ENG-124a",
-    equivalents: { POL: ["POL-124a"] },
+    sentenceFormulaSymbol: "124b I was a good person",
+    sentenceFormulaId: "ENG-124b",
+    equivalents: { POL: ["POL-124b"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-I",

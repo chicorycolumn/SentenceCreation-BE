@@ -206,7 +206,7 @@ const dummy73b = [
     ENG: ["Red girls."],
   },
 ];
-const _124a = [
+const _124b = [
   {
     ENG: ["I (female) was a good person."],
     POL: ["Byłam dobræ osobæ."],
@@ -235,7 +235,7 @@ describe("/api", function () {
     });
 
     xit("#pal25-02a GET 200 YES: Engpol. I was a good person - masculine I should still be dobræ osobæ.", () => {
-      return runPaletteTest("POL", null, "124a I was a good person", _124a);
+      return runPaletteTest("POL", null, "124b I was a good person", _124b);
     });
   });
 

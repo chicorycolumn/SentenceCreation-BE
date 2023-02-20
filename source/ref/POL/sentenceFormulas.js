@@ -1887,9 +1887,9 @@ exports.sentenceFormulasBank = [
     additionalOrders: [["pro-1-I", "ver-1-am", "adj-1-red"]],
   },
   {
-    sentenceFormulaSymbol: "124a I was a good person",
-    sentenceFormulaId: "POL-124a",
-    equivalents: { ENG: ["ENG-124a"] },
+    sentenceFormulaSymbol: "124b I was a good person",
+    sentenceFormulaId: "POL-124b",
+    equivalents: { ENG: ["ENG-124b"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
