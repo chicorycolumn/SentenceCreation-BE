@@ -1385,13 +1385,12 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "adj-1-good",
-        specificIds: ["eng-adj-004-good"],
+        specificIds: ["eng-adj-001-red"],
         agreeWith: "npe-1-person",
       },
       {
         chunkId: "npe-1-person",
         specificIds: ["eng-npe-005-doctor"],
-        agreeWith: "pro-1-I",
       },
     ],
     primaryOrders: [

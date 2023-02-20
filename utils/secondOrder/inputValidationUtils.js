@@ -162,9 +162,9 @@ exports.validateSentenceFormula = (sentenceFormula, lang) => {
   );
 
   if (tripleAgreeRecords.length) {
-    console.log(tripleAgreeRecords);
+    console.log(">>", tripleAgreeRecords);
     consol.throw(
-      `shgs An agreeWith chain of more than 3 members was found, printed above.`
+      `shgs An agreeWith chain of more than 3 members (or a circular one?) was found, find in printout >> above.`
     );
   }
 };
