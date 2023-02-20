@@ -143,4 +143,28 @@ exports.validateSentenceFormula = (sentenceFormula, lang) => {
       }
     });
   });
+
+  //5 Ensure agreeWith chains are no more than 3 members. ie Z can agree with Y which agrees with X, but no more levels allowed.
+  let agreeRecords = sentenceFormula.sentenceStructure
+    .map((stCh) => {
+      return { chunkId: stCh.chunkId, agreeWith: stCh.agreeWith };
+    })
+    .filter((agreeRecord) => agreeRecord.agreeWith);
+
+  let doubleAgreeRecords = agreeRecords.filter((agreeRecord) =>
+    agreeRecords.some((singleAR) => singleAR.chunkId === agreeRecord.agreeWith)
+  );
+
+  let tripleAgreeRecords = agreeRecords.filter((agreeRecord) =>
+    doubleAgreeRecords.some(
+      (doubleAR) => doubleAR.chunkId === agreeRecord.agreeWith
+    )
+  );
+
+  if (tripleAgreeRecords.length) {
+    console.log(tripleAgreeRecords);
+    consol.throw(
+      `shgs An agreeWith chain of more than 3 members was found, printed above.`
+    );
+  }
 };

@@ -151,28 +151,28 @@ describe("/api", function () {
   });
 
   describe("/palette - Stage 25: Two levels of dependent chunks.", () => {
-    it("#pal25-01a GET 200 YES: Engpol. I was a good person.", () => {
-      return runPaletteTest(
-        "POL",
-        null,
-        "124a I was a good doctor",
-        [
-          "Byłam czerwoną lekarką.",
-          "Byłyśmy czerwonymi lekarkami.",
-          "Byłem czerwonym lekarzem.",
-          "Byłiśmy czerwonymi lekarzami.",
-        ]
-        // [
-        //   {
-        //     ENG: ["I was a good doctor."],
-        //     POL: ["Byłam czerwoną lekarką."],
-        //   },
-        //   {
-        //     ENG: ["I was a good doctor."],
-        //     POL: ["Byłem czerwonym lekarzem."],
-        //   },
-        // ]
-      );
+    it.only("#pal25-01z GET 200 YES: Engpol. I was a good person.", () => {
+      return runPaletteTest("POL", null, "124a I was a good doctor", [
+        "Byłam czerwoną lekarką.",
+        "Byłyśmy czerwonymi lekarkami.",
+        "Byłem czerwonym lekarzem.",
+        "Byliśmy czerwonymi lekarzami.",
+      ]);
+    });
+    it("#pal25-01a GET 200 YES: Poleng. I was a good person.", () => {
+      return runPaletteTest("POL", "ENG", "124a I was a good doctor", [
+        {
+          ENG: ["I was a good doctor."],
+          POL: ["Byłem czerwonym lekarzem.", "Byłam czerwoną lekarką."],
+        },
+        {
+          ENG: ["We were good doctors."],
+          POL: [
+            "Byłyśmy czerwonymi lekarkami.",
+            "Byliśmy czerwonymi lekarzami.",
+          ],
+        },
+      ]);
     });
   });
 });
