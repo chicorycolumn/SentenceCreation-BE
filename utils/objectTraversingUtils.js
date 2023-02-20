@@ -38,7 +38,6 @@ exports.findMatchingLemmaObjectThenWord = (
     return [
       {
         etiquette,
-        selectedLemmaObject: {},
         selectedWord: structureChunk.chunkValue,
         structureChunk,
       },
