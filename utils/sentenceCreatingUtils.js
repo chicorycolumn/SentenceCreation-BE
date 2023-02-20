@@ -111,6 +111,139 @@ exports.getMaterialsCopies = (
   };
 };
 
+exports.selectDependentChunkWordsAndAddToOutputArray = (
+  etiquette,
+  explodedOutputArraysWithHeads,
+  grandOutputArray,
+  headChunks,
+  dependentChunks,
+  currentLanguage,
+  isCounterfax,
+  useDummyWords,
+  words,
+  errorInSentenceCreation,
+  previousQuestionLanguage,
+  questionOutputArr,
+  multipleModes,
+  potentialNullResultObject
+) => {
+  let filteredExplodedOutputArraysWithHeads = [];
+
+  explodedOutputArraysWithHeads.forEach(
+    (headOutputArray, headOutputArrayIndex) => {
+      let thisHeadOutputArrayIsDeleted;
+
+      headOutputArray.forEach((headOutputUnit) => {
+        if (thisHeadOutputArrayIsDeleted) {
+          return;
+        }
+
+        if (headOutputUnit.etiquette === etiquette) {
+          // Now we update the head structure chunks with the details from their respective selectedWords.
+          lfUtils.updateStructureChunk(
+            headOutputUnit,
+            currentLanguage,
+            false,
+            isCounterfax
+          );
+        }
+
+        let headChunk = headOutputUnit.structureChunk;
+
+        // Step two begins here.
+        let specificDependentChunks = dependentChunks
+          .filter((chunk) => chunk.agreeWith === headChunk.chunkId)
+          .map((chunk) => uUtils.copyWithoutReference(chunk));
+
+        if (specificDependentChunks.length) {
+          specificDependentChunks.forEach((dependentChunk) => {
+            if (thisHeadOutputArrayIsDeleted) {
+              return;
+            }
+
+            consol.log(
+              "oiez sc:processSentenceFormula STEP TWO",
+              dependentChunk.chunkId
+            );
+
+            scUtils.inheritFromHeadToDependentChunk(
+              currentLanguage,
+              headChunk,
+              dependentChunk
+            );
+
+            consol.log(`weoe dependentChunk "${dependentChunk.chunkId}"`);
+            let allPossOutputUnits_dependent =
+              otUtils.findMatchingLemmaObjectThenWord(
+                "dependent",
+                useDummyWords,
+                dependentChunk,
+                words,
+                errorInSentenceCreation,
+                currentLanguage,
+                previousQuestionLanguage,
+                questionOutputArr,
+                multipleModes,
+                null
+              );
+
+            if (
+              errorInSentenceCreation.errorMessage ||
+              !allPossOutputUnits_dependent ||
+              !allPossOutputUnits_dependent.length
+            ) {
+              consol.log(
+                "[1;31m " +
+                  `klye trimArrayOfExplodedOutputArraysByFailures. explodedOutputArraysWithHeads has ${explodedOutputArraysWithHeads.length} members. Deleting headOutputArray at index ${headOutputArrayIndex} because no results were found for depCh "${dependentChunk.chunkId}" in this headOutputArray. \nThis happened in "STEP TWO: Select DEPENDENT words and add to result array."` +
+                  "[0m"
+              );
+
+              thisHeadOutputArrayIsDeleted = true; // effectively deleting this headOutputArray.
+            } else {
+              uUtils.addToArrayAtKey(
+                headOutputUnit,
+                "possibleDependentOutputArrays",
+                allPossOutputUnits_dependent
+              );
+            }
+          });
+        }
+      });
+      if (!thisHeadOutputArrayIsDeleted) {
+        filteredExplodedOutputArraysWithHeads.push(headOutputArray);
+      }
+    }
+  );
+
+  if (headChunks.length && !filteredExplodedOutputArraysWithHeads.length) {
+    consol.log(
+      "[1;31m \n" +
+        `#ERR bcke processSentenceFormula ${currentLanguage}. This run has FAILED due to filteredExplodedOutputArraysWithHeads having no successful members. 'klye' must have deleted all members of filteredExplodedOutputArraysWithHeads arr.` +
+        "\n[0m"
+    );
+
+    if (!errorInSentenceCreation.errorMessage) {
+      errorInSentenceCreation.errorMessage = [];
+    }
+    let newErrMsgs = [
+      `#ERR b'cke processSentenceFormula ${currentLanguage}. This run has FAILED due to filteredExplodedOutputArraysWithHeads having no successful members. 'k'lye' must have deleted all members of filteredExplodedOutputArraysWithHeads arr.`,
+      `k'lye trimArrayOfExplodedOutputArraysByFailures. filteredExplodedOutputArraysWithHeads has ${filteredExplodedOutputArraysWithHeads.length} members. Deleting a headOutputArray because no results were found for a depCh in this headOutputArray. \nThis happened in "STEP TWO: Select DEPENDENT words and add to result array."`,
+    ];
+    newErrMsgs.forEach((errMsg) => {
+      errorInSentenceCreation.errorMessage.push(errMsg);
+    });
+
+    potentialNullResultObject.arrayOfOutputArrays = null;
+    potentialNullResultObject.errorInSentenceCreation = errorInSentenceCreation;
+    return potentialNullResultObject;
+  }
+
+  filteredExplodedOutputArraysWithHeads.forEach((arr) => {
+    let result = gpUtils.explodeOutputArraysByHeadsAndDependents(arr);
+    grandOutputArray.push(...result);
+  });
+};
+
 exports.processSentenceFormula = (
   useDummyWords,
   languagesObj,
@@ -137,7 +270,7 @@ exports.processSentenceFormula = (
     );
 
   //STEP ONE: Select HEAD words and add to result array.
-  let { headChunks, dependentChunks, otherChunks } =
+  let { headChunks, dependentHeadChunks, dependentChunks, otherChunks } =
     scUtils.sortStructureChunks(sentenceStructure);
 
   let headOutputUnitArrays = [];
@@ -148,9 +281,14 @@ exports.processSentenceFormula = (
       headChunks.map((chunk) => chunk.chunkId)
     );
     consol.log(
+      "iytd processSentenceFormula: dependentHeadChunks",
+      dependentHeadChunks.map((chunk) => chunk.chunkId)
+    );
+    consol.log(
       "iytd processSentenceFormula: dependentChunks",
       dependentChunks.map((chunk) => chunk.chunkId)
     );
+
     consol.log(
       "iytd processSentenceFormula: otherChunks",
       otherChunks.map((chunk) => chunk.chunkId)
@@ -229,148 +367,68 @@ exports.processSentenceFormula = (
     uUtils.arrayExploder(headOutputUnitArrays)
   );
 
-  ////potential for adding group "dependent head chunks"//////
-  ////////////////////////////////////////////////////////////
-  ////////////////////////////////////////////////////////////
-  /////////////////////////////start//////////////////////////
-  ////////////////////////////////////////////////////////////
-  ////////////////////////////////////////////////////////////
-  ////////////////////////////////////////////////////////////
+  let potentialNullResultObject = {
+    sentenceFormula,
+    sentenceFormulaId,
+    sentenceFormulaSymbol,
+  };
+
+  const _selectDependentChunkWordsAndAddToOutputArray = (
+    etiquette,
+    explodedOutputArraysWithHeads,
+    grandOutputArray,
+    headChunks,
+    dependentChunks
+  ) => {
+    return scUtils.selectDependentChunkWordsAndAddToOutputArray(
+      etiquette,
+      explodedOutputArraysWithHeads,
+      grandOutputArray,
+      headChunks,
+      dependentChunks,
+      currentLanguage,
+      isCounterfax,
+      useDummyWords,
+      words,
+      errorInSentenceCreation,
+      previousQuestionLanguage,
+      questionOutputArr,
+      multipleModes,
+      potentialNullResultObject
+    );
+  };
 
   //STEP TWO: Select DEPENDENT words and add to result array.
-  explodedOutputArraysWithHeads.forEach(
-    (headOutputArray, headOutputArrayIndex) => {
-      let thisHeadOutputArrayIsDeleted;
 
-      headOutputArray.forEach((headOutputUnit) => {
-        if (thisHeadOutputArrayIsDeleted) {
-          return;
-        }
-
-        // Now we update the head structure chunks with the details from their respective selectedWords.
-        lfUtils.updateStructureChunk(
-          headOutputUnit,
-          currentLanguage,
-          false,
-          isCounterfax
-        );
-
-        let headChunk = headOutputUnit.structureChunk;
-
-        // Step two begins here.
-        let specificDependentChunks = dependentChunks
-          .filter((chunk) => chunk.agreeWith === headChunk.chunkId)
-          .map((chunk) => uUtils.copyWithoutReference(chunk));
-
-        if (specificDependentChunks.length) {
-          specificDependentChunks.forEach((dependentChunk) => {
-            if (thisHeadOutputArrayIsDeleted) {
-              return;
-            }
-
-            consol.log(
-              "oiez sc:processSentenceFormula STEP TWO",
-              dependentChunk.chunkId
-            );
-
-            scUtils.inheritFromHeadToDependentChunk(
-              currentLanguage,
-              headChunk,
-              dependentChunk
-            );
-
-            consol.log(`weoe dependentChunk "${dependentChunk.chunkId}"`);
-            let allPossOutputUnits_dependent =
-              otUtils.findMatchingLemmaObjectThenWord(
-                "dependent",
-                useDummyWords,
-                dependentChunk,
-                words,
-                errorInSentenceCreation,
-                currentLanguage,
-                previousQuestionLanguage,
-                questionOutputArr,
-                multipleModes,
-                null
-              );
-
-            if (
-              errorInSentenceCreation.errorMessage ||
-              !allPossOutputUnits_dependent ||
-              !allPossOutputUnits_dependent.length
-            ) {
-              consol.log(
-                "[1;31m " +
-                  `klye trimArrayOfExplodedOutputArraysByFailures. explodedOutputArraysWithHeads has ${explodedOutputArraysWithHeads.length} members. Deleting headOutputArray at index ${headOutputArrayIndex} because no results were found for depCh "${dependentChunk.chunkId}" in this headOutputArray. \nThis happened in "STEP TWO: Select DEPENDENT words and add to result array."` +
-                  "[0m"
-              );
-
-              explodedOutputArraysWithHeads =
-                uUtils.returnArrayWithItemAtIndexRemoved(
-                  explodedOutputArraysWithHeads,
-                  headOutputArrayIndex
-                );
-
-              thisHeadOutputArrayIsDeleted = true;
-            } else {
-              if (!headOutputUnit.possibleDependentOutputArrays) {
-                headOutputUnit.possibleDependentOutputArrays = [];
-              }
-
-              headOutputUnit.possibleDependentOutputArrays.push(
-                allPossOutputUnits_dependent
-              );
-            }
-          });
-        } else {
-          consol.log(
-            "zvvs processSentenceFormula explodedOutputArraysWithHeads. specificDependentChunks had no length."
-          );
-        }
-      });
-    }
-  );
-
-  if (headChunks.length && !explodedOutputArraysWithHeads.length) {
-    consol.log(
-      "[1;31m \n" +
-        `#ERR bcke processSentenceFormula ${currentLanguage}. This run has FAILED due to explodedOutputArraysWithHeads having no successful members. 'klye' must have deleted all members of explodedOutputArraysWithHeads arr.` +
-        "\n[0m"
+  if (dependentHeadChunks.length) {
+    // If there are head chunks that agreeWith other head chunks, do these first.
+    let halfwayGrandOutputArray = [];
+    _selectDependentChunkWordsAndAddToOutputArray(
+      "head",
+      explodedOutputArraysWithHeads,
+      halfwayGrandOutputArray,
+      headChunks,
+      dependentHeadChunks
     );
 
-    if (!errorInSentenceCreation.errorMessage) {
-      errorInSentenceCreation.errorMessage = [];
-    }
-    let newErrMsgs = [
-      `#ERR b'cke processSentenceFormula ${currentLanguage}. This run has FAILED due to explodedOutputArraysWithHeads having no successful members. 'k'lye' must have deleted all members of explodedOutputArraysWithHeads arr.`,
-      `k'lye trimArrayOfExplodedOutputArraysByFailures. explodedOutputArraysWithHeads has ${explodedOutputArraysWithHeads.length} members. Deleting a headOutputArray because no results were found for a depCh in this headOutputArray. \nThis happened in "STEP TWO: Select DEPENDENT words and add to result array."`,
-    ];
-    newErrMsgs.forEach((errMsg) => {
-      errorInSentenceCreation.errorMessage.push(errMsg);
-    });
-
-    nullResultObj = {
-      arrayOfOutputArrays: null,
-      sentenceFormula,
-      sentenceFormulaId,
-      sentenceFormulaSymbol,
-      errorInSentenceCreation,
-    };
-    return nullResultObj;
+    // Now that all head chunks are done, do the dependentChunks.
+    _selectDependentChunkWordsAndAddToOutputArray(
+      "dependent",
+      halfwayGrandOutputArray,
+      grandOutputArray,
+      [...headChunks, dependentHeadChunks],
+      dependentChunks
+    );
+  } else {
+    // There are no head chunks which depend on other head chunk, so just do depependentChunks as normal.
+    _selectDependentChunkWordsAndAddToOutputArray(
+      "head",
+      explodedOutputArraysWithHeads,
+      grandOutputArray,
+      headChunks,
+      dependentChunks
+    );
   }
-
-  explodedOutputArraysWithHeads.forEach((arr) => {
-    let result = gpUtils.explodeOutputArraysByHeadsAndDependents(arr);
-    grandOutputArray.push(...result);
-  });
-
-  ////////////////////////////////////////////////////////////
-  ////////////////////////////////////////////////////////////
-  ////////////////////////////////////////////////////////////
-  ////////////////////////////////////////////////////////////
-  //////////////////////////end///////////////////////////////
-  ////////////////////////////////////////////////////////////
-  ////////////////////////////////////////////////////////////
 
   let grandAllPossOutputUnits_other = [];
   let grandAllPossOutputUnits_PHD = [];
@@ -633,10 +691,9 @@ exports.processSentenceFormula = (
     });
 
     //Decanting otherChunks if they have multiple traitValues.
-    let { headChunks, dependentChunks, otherChunks } =
-      scUtils.sortStructureChunks(
-        outputArray.map((outputUnit) => outputUnit.structureChunk)
-      );
+    let { otherChunks } = scUtils.sortStructureChunks(
+      outputArray.map((outputUnit) => outputUnit.structureChunk)
+    );
     otherChunks.forEach((otherChunk) => {
       let selectedLObj = outputArray.find(
         (outputUnit) => outputUnit.structureChunk.chunkId === otherChunk.chunkId
@@ -1521,7 +1578,6 @@ exports.sortStructureChunks = (
   let headChunks = [];
 
   let PHDheadIds = [];
-
   sentenceStructure.forEach((chunk) => {
     refObj.agreementTraits.forEach((agreeKey) => {
       if (chunk[agreeKey]) {
@@ -1529,7 +1585,6 @@ exports.sortStructureChunks = (
       }
     });
   });
-
   PHDheadIds = Array.from(new Set(PHDheadIds));
 
   let uniqueCombinedHeadIds = Array.from(new Set([...headIds, ...PHDheadIds]));
@@ -1539,33 +1594,56 @@ exports.sortStructureChunks = (
   });
 
   let dependentChunks = sentenceStructure.filter(
-    (structureChunk) => structureChunk.agreeWith
+    (structureChunk) =>
+      structureChunk.agreeWith &&
+      !headChunks.map((ch) => ch.chunkId).includes(structureChunk.chunkId)
   );
+
+  let dependentHeadChunks = [];
+  let filteredHeadChunks = [];
+  headChunks.forEach((ch) => {
+    if (ch.agreeWith) {
+      dependentHeadChunks.push(ch);
+    } else {
+      filteredHeadChunks.push(ch);
+    }
+  });
+  headChunks = filteredHeadChunks;
 
   let PHDChunks = sentenceStructure.filter(
     (structureChunk) => structureChunk.PHD_type
   );
 
+  let doneIds = [
+    ...headChunks.map((chunk) => chunk.chunkId),
+    ...dependentHeadChunks.map((chunk) => chunk.chunkId),
+    ...dependentChunks.map((chunk) => chunk.chunkId),
+    ...PHDChunks.map((chunk) => chunk.chunkId),
+  ];
   let otherChunks = sentenceStructure.filter(
-    (chunk) =>
-      ![
-        ...headChunks.map((chunk) => chunk.chunkId),
-        ...dependentChunks.map((chunk) => chunk.chunkId),
-        ...PHDChunks.map((chunk) => chunk.chunkId),
-      ].includes(chunk.chunkId)
+    (chunk) => !doneIds.includes(chunk.chunkId)
   );
 
   consol.log("fafo sortStructureChunks END", {
     headChunks,
+    dependentHeadChunks,
     dependentChunks,
     PHDChunks,
     otherChunks,
   });
 
+  let res = {
+    headChunks,
+    dependentHeadChunks,
+    dependentChunks,
+    otherChunks,
+  };
+
   if (separateDependentsAndPHDs) {
-    return { headChunks, dependentChunks, PHDChunks, otherChunks };
+    res.PHDChunks = PHDChunks;
   } else {
-    otherChunks = [...otherChunks, ...PHDChunks];
-    return { headChunks, dependentChunks, otherChunks };
+    res.otherChunks = [...res.otherChunks, ...PHDChunks];
   }
+
+  return res;
 };

@@ -548,16 +548,7 @@ exports.sortAnswerAndQuestionStructureChunks = (
   questionSentenceStructure,
   answerSentenceStructure
 ) => {
-  consol.log("bsat sortAnswerAndQuestionStructureChunks");
-
-  let responseObj = {
-    answerHeadChunks: null,
-    answerDependentChunks: null,
-    answerOtherChunks: null,
-    questionHeadChunks: null,
-    questionDependentChunks: null,
-    questionOtherChunks: null,
-  };
+  let responseObj = {};
 
   let { headChunks, dependentChunks, otherChunks } =
     scUtils.sortStructureChunks(answerSentenceStructure);

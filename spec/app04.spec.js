@@ -149,4 +149,52 @@ describe("/api", function () {
       return runPaletteTest("ENG", "POL", "dummy67b", ref);
     });
   });
+
+  describe("/palette - Stage 25: Two levels of dependent chunks.", () => {
+    it("#pal25-01a GET 200 YES: Poleng. I was a good doctor.", () => {
+      return runPaletteTest("POL", "ENG", "124a I was a good doctor", [
+        {
+          ENG: [
+            "I was being a red doctor.",
+            "I have been a red doctor.",
+            "I was a red doctor.",
+            "I had been a red doctor.",
+          ],
+          POL: ["Byłem czerwonym lekarzem.", "Byłam czerwoną lekarką."],
+        },
+        {
+          ENG: [
+            "We were being red doctors.",
+            "We have been red doctors.",
+            "We were red doctors.",
+            "We had been red doctors.",
+          ],
+          POL: [
+            "Byłyśmy czerwonymi lekarkami.",
+            "Byliśmy czerwonymi lekarzami.",
+          ],
+        },
+      ]);
+    });
+    it("#pal25-01b GET 200 YES: Engpol. I was a good doctor.", () => {
+      return runPaletteTest("ENG", "POL", "124a I was a good doctor", [
+        {
+          ENG: ["I was a red doctor (male)."],
+          POL: ["Byłem czerwonym lekarzem."],
+        },
+        {
+          ENG: ["I was a red doctor (female)."],
+          POL: ["Byłam czerwoną lekarką."],
+        },
+        {
+          ENG: ["We were red doctors (mixed).", "We were red doctors (males)."],
+          POL: ["Byliśmy czerwonymi lekarzami."],
+        },
+        {
+          ENG: ["We were red doctors (females)."],
+          POL: ["Byłyśmy czerwonymi lekarkami."],
+        },
+      ]);
+    });
+  });
 });
