@@ -170,6 +170,7 @@ exports.processSentenceFormula = (
     consol.log("evga sc:processSentenceFormula STEP ONE", headChunk.chunkId);
 
     let allPossOutputUnits_head = otUtils.findMatchingLemmaObjectThenWord(
+      "head",
       useDummyWords,
       headChunk,
       words,
@@ -181,12 +182,10 @@ exports.processSentenceFormula = (
       null
     );
 
-    allPossOutputUnits_head.forEach((ou) => {
-      uUtils.validateArrayQuasiEmpty(
-        ou.structureChunk.semanticGender,
-        "processSentenceFormula headChunks 1"
-      );
-    });
+    uUtils.validateQuasiEmptyOutputUnitSemanticGender(
+      [allPossOutputUnits_head],
+      "processSentenceFormula headChunks 1"
+    );
 
     if (
       errorInSentenceCreation.errorMessage ||
@@ -228,7 +227,6 @@ exports.processSentenceFormula = (
         `#ERR bcka processSentenceFormula ${currentLanguage}. headOutputUnitArrays had no successful members. 'klya' only had to fail once, and it did.` +
         "\n[0m"
     );
-
     return nullResultObj;
   }
 
@@ -236,14 +234,18 @@ exports.processSentenceFormula = (
     uUtils.arrayExploder(headOutputUnitArrays)
   );
 
-  headOutputUnitArrays.forEach((houa) => {
-    houa.forEach((ou) => {
-      uUtils.validateArrayQuasiEmpty(
-        ou.structureChunk.semanticGender,
-        "processSentenceFormula headChunks 2"
-      );
-    });
-  });
+  uUtils.validateQuasiEmptyOutputUnitSemanticGender(
+    headOutputUnitArrays,
+    "processSentenceFormula headChunks 2"
+  );
+
+  ////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////
+  ////////////////////////swde start//////////////////////////
+  ////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////
 
   //STEP TWO: Select DEPENDENT words and add to result array.
   explodedOutputArraysWithHeads.forEach(
@@ -290,6 +292,7 @@ exports.processSentenceFormula = (
             consol.log(`weoe dependentChunk "${dependentChunk.chunkId}"`);
             let allPossOutputUnits_dependent =
               otUtils.findMatchingLemmaObjectThenWord(
+                "dependent",
                 useDummyWords,
                 dependentChunk,
                 words,
@@ -338,14 +341,10 @@ exports.processSentenceFormula = (
     }
   );
 
-  explodedOutputArraysWithHeads.forEach((houa) => {
-    houa.forEach((ou) => {
-      uUtils.validateArrayQuasiEmpty(
-        ou.structureChunk.semanticGender,
-        "processSentenceFormula explodedwithheads 1"
-      );
-    });
-  });
+  uUtils.validateQuasiEmptyOutputUnitSemanticGender(
+    explodedOutputArraysWithHeads,
+    "processSentenceFormula explodedwithheads 1"
+  );
 
   if (headChunks.length && !explodedOutputArraysWithHeads.length) {
     consol.log(
@@ -375,23 +374,18 @@ exports.processSentenceFormula = (
     return nullResultObj;
   }
 
-  // consol.log(
-  //   "wvmo explodedOutputArraysWithHeads",
-  //   explodedOutputArraysWithHeads
-  // );
-
   explodedOutputArraysWithHeads.forEach((arr) => {
-    // consol.log(
-    //   "mocu processSentenceFormula explodedOutputArraysWithHeads arr:",
-    //   arr
-    // );
-
     let result = gpUtils.explodeOutputArraysByHeadsAndDependents(arr);
-
-    // consol.log("result of explodedOutputArraysWithHeads:", result);
-
     grandOutputArray.push(...result);
   });
+
+  ////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////
+  /////////////////////swde end///////////////////////////////
+  ////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////
 
   let grandAllPossOutputUnits_other = [];
   let grandAllPossOutputUnits_PHD = [];
@@ -407,8 +401,6 @@ exports.processSentenceFormula = (
   });
 
   //STEP THREE: Select PHD words and add to result array.
-
-  // consol.log("shia grandOutputArray before PHD processing", grandOutputArray);
 
   grandOutputArray.forEach((outputArray, outputArrayIndex) => {
     let thisOutputArrayIsDeleted;
@@ -433,6 +425,7 @@ exports.processSentenceFormula = (
       );
 
       let allPossOutputUnits_PHD = otUtils.findMatchingLemmaObjectThenWord(
+        "PHD",
         useDummyWords,
         postHocDependentChunk,
         words,
@@ -567,6 +560,7 @@ exports.processSentenceFormula = (
 
     consol.log(`weoi otherChunk "${otherChunk.chunkId}"`);
     let allPossOutputUnits_other = otUtils.findMatchingLemmaObjectThenWord(
+      "other",
       useDummyWords,
       otherChunk,
       words,

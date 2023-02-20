@@ -163,7 +163,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-        specificIds: ["pol-npe-011-kobieta"],
+        specificIds: ["^pol-npe-011-kobieta"],
         number: ["plural"],
         gender: [],
       },
@@ -206,7 +206,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-        specificIds: ["pol-npe-011-kobieta"],
+        specificIds: ["^pol-npe-011-kobieta"],
         number: ["singular", "plural"],
         gender: ["f"],
       },
@@ -291,7 +291,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-        specificIds: ["pol-npe-011-kobieta"],
+        specificIds: ["^pol-npe-011-kobieta"],
       },
       {
         chunkId: "ver-1",
@@ -323,7 +323,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-        specificIds: ["pol-npe-011-kobieta"],
+        specificIds: ["^pol-npe-011-kobieta"],
       },
       { chunkId: "fix-1", chunkValue: "nie" },
       {
@@ -364,7 +364,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-        specificIds: ["pol-npe-011-kobieta"],
+        specificIds: ["^pol-npe-011-kobieta"],
       },
       { chunkId: "fix-1", chunkValue: "nie" },
       {
@@ -399,7 +399,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-        specificIds: ["pol-npe-011-kobieta"],
+        specificIds: ["^pol-npe-011-kobieta"],
       },
       {
         chunkId: "ver-1",
@@ -419,7 +419,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-        specificIds: ["pol-npe-011-kobieta"],
+        specificIds: ["^pol-npe-011-kobieta"],
       },
       {
         chunkId: "ver-1",
@@ -439,7 +439,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-        specificIds: ["pol-npe-011-kobieta"],
+        specificIds: ["^pol-npe-011-kobieta"],
       },
       {
         chunkId: "ver-1",
@@ -483,7 +483,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-        specificIds: ["pol-npe-011-kobieta"],
+        specificIds: ["^pol-npe-011-kobieta"],
         number: ["singular", "plural"],
       },
       {
@@ -504,7 +504,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-        specificIds: ["pol-npe-011-kobieta"],
+        specificIds: ["^pol-npe-011-kobieta"],
         number: ["singular", "plural"],
       },
       {
@@ -799,7 +799,7 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "npe-1",
-        specificIds: ["pol-npe-011-kobieta"],
+        specificIds: ["^pol-npe-011-kobieta"],
       },
       {
         chunkId: "ver-1",
@@ -1760,7 +1760,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-1-woman",
-        specificIds: ["pol-npe-011-kobieta"],
+        specificIds: ["^pol-npe-011-kobieta"],
       },
       {
         chunkId: "ver-1-see",
@@ -1885,5 +1885,36 @@ exports.sentenceFormulasBank = [
     ],
     primaryOrders: [["ver-1-am", "adj-1-red"]],
     additionalOrders: [["pro-1-I", "ver-1-am", "adj-1-red"]],
+  },
+  {
+    sentenceFormulaSymbol: "124a I was a good person",
+    sentenceFormulaId: "POL-124a",
+    equivalents: { ENG: ["ENG-124a"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificIds: ["pol-pro-PERSONAL"],
+        person: ["1per"],
+      },
+      {
+        chunkId: "ver-1-am",
+        specificIds: ["pol-ver-011-być"],
+        agreeWith: "pro-1-I",
+        tenseDescription: ["past im"],
+      },
+      {
+        chunkId: "adj-1-good",
+        specificIds: ["pol-adj-010-dobry"],
+        agreeWith: "npe-1-person",
+      },
+      {
+        chunkId: "npe-1-person",
+        specificIds: ["^pol-npe-011-osoba-£"],
+        agreeWith: "pro-1-I",
+        gcase: ["ins"],
+        formulaImportantTraitKeys: ["gcase"],
+      },
+    ],
+    primaryOrders: [["pro-1-I", "ver-1-am", "adj-1-good", "npe-1-person"]],
   },
 ];

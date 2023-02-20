@@ -320,6 +320,16 @@ exports.wordsBank = {
       papers: ["size"],
       topics: [],
     },
+    {
+      key: "adj-0004-good",
+      traductions: {
+        SPA: ["spa-adj-002-bueno"],
+        ENG: ["eng-adj-004-good"],
+        POL: ["pol-adj-010-dobry"],
+      },
+      papers: ["positive judgment"],
+      topics: [],
+    },
   ],
   pro: [
     {

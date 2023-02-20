@@ -107,7 +107,7 @@ exports.runPaletteTest = (
     .expect(200)
     .then((res) => {
       if (!skipConsoleLog) {
-        consol.logTestOutputSolely(res.body);
+        consol.logTestOutputSolely("\n\n", res.body);
       }
 
       if (!answerLanguage) {
@@ -933,10 +933,11 @@ exports.checkTranslationsOfGivenRef = (
 ) => {
   let testActivated = false;
   if (!alreadyLogged) {
-    consol.logTestOutputSolely(res.body);
+    consol.logTestOutputSolely("\n\n", res.body);
   }
   if (res.body.runsRecord) {
     consol.logTestOutputSolely(
+      "\n\n",
       "[1;35m " + `Runs record was ${res.body.runsRecord.length}.` + "[0m"
     );
   }

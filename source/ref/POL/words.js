@@ -35,6 +35,81 @@ exports.wordsBank = {
     },
     {
       //selectors
+      lemma: "osoba",
+      id: "pol-npe-011-osoba-£",
+      gender: "f",
+      semanticGender: "_PersonalGenders",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "osoba",
+          gen: "osoby",
+          dat: "osobie",
+          acc: "osobę",
+          ins: "osobą",
+          loc: "osobie",
+        },
+        plural: {
+          nom: "osoby",
+          gen: "osób",
+          dat: "osobom",
+          acc: "osoby",
+          ins: "osobami",
+          loc: "osobach",
+        },
+      },
+    },
+    {
+      //selectors
+      lemma: "ludzie",
+      id: "pol-npe-011-ludzie-£",
+      gender: "m1",
+      semanticGender: "_PersonalGenders",
+      //notes
+      tantumPlurale: true,
+      //inflections
+      inflections: {
+        plural: {
+          nom: "ludzie",
+          gen: "ludzi",
+          dat: "ludziom",
+          acc: "ludzi",
+          ins: "ludźmi",
+          loc: "ludziach",
+        },
+      },
+    },
+    {
+      //selectors
+      lemma: "mężczyzna",
+      id: "pol-npe-011-mężczyzna",
+      gender: "m1",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "mężczyzna",
+          gen: "mężczyzny",
+          dat: "mężczyźnie",
+          acc: "mężczyznę",
+          ins: "mężczyzną",
+          loc: "mężczyźnie",
+        },
+        plural: {
+          nom: "mężczyźni",
+          gen: "mężczyzn",
+          dat: "mężczyznom",
+          acc: "mężczyzn",
+          ins: "mężczyznami",
+          loc: "mężczyznach",
+        },
+      },
+    },
+    {
+      //selectors
       lemma: "ojciec",
       id: "pol-npe-013-ojciec",
       gender: "m1",
@@ -1901,6 +1976,81 @@ exports.wordsBank = {
     },
   ],
   adj: [
+    {
+      //selectors
+      lemma: "dobry",
+      id: "pol-adj-010-dobry",
+      //notes
+
+      //inflections
+      inflections: {
+        simple: {
+          singular: {
+            m1: {
+              nom: "dobry",
+              gen: "dobrego",
+              dat: "dobremu",
+              acc: "dobrego",
+              ins: "dobrym",
+              loc: "dobrym",
+            },
+            m3: {
+              nom: "dobry",
+              gen: "dobrego",
+              dat: "dobremu",
+              acc: "dobry",
+              ins: "dobrym",
+              loc: "dobrym",
+            },
+            f: {
+              nom: "dobra",
+              gen: "dobrej",
+              dat: "dobrej",
+              acc: "dobrą",
+              ins: "dobrą",
+              loc: "dobrej",
+            },
+            n: {
+              nom: "dobre",
+              gen: "dobrego",
+              dat: "dobremu",
+              acc: "dobre",
+              ins: "dobrym",
+              loc: "dobrym",
+            },
+          },
+          plural: {
+            virile: {
+              nom: "dobrzy",
+              gen: "dobrych",
+              dat: "dobrym",
+              acc: "dobrych",
+              ins: "dobrymi",
+              loc: "dobrych",
+            },
+            nonvirile: {
+              nom: "dobre",
+              gen: "dobrych",
+              dat: "dobrym",
+              acc: "dobre",
+              ins: "dobrymi",
+              loc: "dobrych",
+            },
+          },
+        },
+        comparative: {
+          isTerminus: true,
+          normal: ["lepszy"],
+          isRegular: true,
+        },
+        superlative: {
+          isTerminus: true,
+          normal: ["najlepszy"],
+          isRegular: true,
+        },
+        adverb: "dobrze",
+      },
+    },
     {
       //selectors
       lemma: "czerwony",

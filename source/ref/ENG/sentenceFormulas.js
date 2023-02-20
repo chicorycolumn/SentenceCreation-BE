@@ -29,7 +29,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-        specificIds: ["eng-npe-001-woman"],
+        specificIds: ["^eng-npe-001-woman"],
         number: ["singular", "plural"],
         gender: [],
       },
@@ -53,7 +53,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-        specificIds: ["eng-npe-001-woman"],
+        specificIds: ["^eng-npe-001-woman"],
         number: ["singular", "plural"],
       },
       {
@@ -401,7 +401,7 @@ exports.sentenceFormulasBank = [
       { chunkId: "fix-1", chunkValue: "the" },
       {
         chunkId: "npe-1",
-        specificIds: ["eng-npe-001-woman"],
+        specificIds: ["^eng-npe-001-woman"],
       },
       {
         chunkId: "ver-1",
@@ -1359,7 +1359,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-1-woman",
-        specificIds: ["eng-npe-001-woman"],
+        specificIds: ["^eng-npe-001-woman"],
       },
       {
         chunkId: "ver-1-see",
@@ -1483,6 +1483,7 @@ exports.sentenceFormulasBank = [
         chunkId: "pro-1-I",
         specificIds: ["eng-pro-PERSONAL"],
         person: ["3per"],
+        number: ["singular"],
       },
       {
         chunkId: "ver-1-am",
@@ -1497,5 +1498,41 @@ exports.sentenceFormulasBank = [
       },
     ],
     primaryOrders: [["pro-1-I", "ver-1-am", "adj-1-red"]],
+  },
+  {
+    sentenceFormulaSymbol: "124a I was a good person",
+    sentenceFormulaId: "ENG-124a",
+    equivalents: { POL: ["POL-124a"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificIds: ["eng-pro-PERSONAL"],
+        person: ["1per"],
+      },
+      {
+        chunkId: "ver-1-am",
+        specificIds: ["eng-ver-001-be"],
+        agreeWith: "pro-1-I",
+        tenseDescription: ["past simple"],
+      },
+      {
+        chunkId: "art-1-a",
+        form: ["indefinite"],
+        agreeWith: "npe-1-person",
+      },
+      {
+        chunkId: "adj-1-good",
+        specificIds: ["eng-adj-004-good"],
+        agreeWith: "npe-1-person",
+      },
+      {
+        chunkId: "npe-1-person",
+        specificIds: ["^eng-npe-001-person-£"],
+        agreeWith: "pro-1-I",
+      },
+    ],
+    primaryOrders: [
+      ["pro-1-I", "ver-1-am", "art-1-a", "adj-1-good", "npe-1-person"],
+    ],
   },
 ];

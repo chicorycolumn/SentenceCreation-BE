@@ -206,6 +206,16 @@ const dummy73b = [
     ENG: ["Red girls."],
   },
 ];
+const _124a = [
+  {
+    ENG: ["I (female) was a good person."],
+    POL: ["Byłam dobræ osobæ."],
+  },
+  {
+    ENG: ["I (male) was a good person."],
+    POL: ["Byłem dobræ osobæ."],
+  },
+];
 
 describe("/api", function () {
   this.timeout(7000);
@@ -222,6 +232,10 @@ describe("/api", function () {
     });
     it("#pal25-02b GET 200 YES: Engpol. Dziecko selectable by gender f.", () => {
       return runPaletteTest("ENG", "POL", "dummy73b", dummy73b);
+    });
+
+    xit("#pal25-02a GET 200 YES: Engpol. I was a good person - masculine I should still be dobræ osobæ.", () => {
+      return runPaletteTest("POL", null, "124a I was a good person", _124a);
     });
   });
 

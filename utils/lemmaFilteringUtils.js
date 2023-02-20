@@ -66,6 +66,10 @@ exports.getLObjAndSiblings = (
   qLObj,
   stChGender
 ) => {
+  let logHint = qLObj
+    ? "qLObj is present so presume invoked by conformAnswerStructureToQuestionStructure"
+    : "qLObj is null so presume invoked by findMatchingLemmaObjectThenWord";
+
   const log = (...args) => {
     if (ids.some((id) => gpUtils.getWordtypeShorthandLObj({ id }) === "npe")) {
       // consol.logSpecial(7, ...args);
@@ -114,6 +118,7 @@ exports.getLObjAndSiblings = (
       //   return false;
       // }
 
+      // All of these clauses are not currently used, because blockHypernyms is only invoked as false.
       if (
         blockHypernyms &&
         !lfUtils.checkHyper({ id: specificId }, [HY.HY, HY.VY, HY.AofQVY]) &&
@@ -171,8 +176,9 @@ exports.getLObjAndSiblings = (
   );
 
   if (!res || !res.length) {
+    console.log(">>", ids);
     consol.throw(
-      "epma getLObjAndSiblings found nothing.\nThis will cause unwanted behaviour like the resetting of traitKey such as number, resulting in Q: Lekarz. A: Doctor. Doctors."
+      `epma getLObjAndSiblings found no matches for ids printed >> above.\n${logHint}`
     );
   }
 

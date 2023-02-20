@@ -25,6 +25,44 @@ exports.wordsBank = {
     },
     {
       //selectors
+      lemma: "man",
+      id: "eng-npe-001-man",
+      gender: "m",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "man",
+          gen: "man's",
+        },
+        plural: {
+          nom: "men",
+          gen: "men's",
+        },
+      },
+    },
+    {
+      //selectors
+      lemma: "person",
+      id: "eng-npe-001-person-£",
+      gender: "_PersonalGenders",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "person",
+          gen: "person's",
+        },
+        plural: {
+          nom: "people",
+          gen: "people's",
+        },
+      },
+    },
+    {
+      //selectors
       lemma: "child",
       id: "eng-npe-002-child-£",
       gender: "_PersonalGenders",
@@ -637,6 +675,20 @@ exports.wordsBank = {
         simple: "blue",
         comparative: "bluer",
         superlative: "bluest",
+      },
+    },
+    {
+      //selectors
+      lemma: "good",
+      id: "eng-adj-004-good",
+      //notes
+
+      //inflections
+      inflections: {
+        simple: "good",
+        comparative: "better",
+        superlative: "best",
+        adverb: "well",
       },
     },
   ],

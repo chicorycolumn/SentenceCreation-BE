@@ -206,17 +206,24 @@ describe("/api", function () {
     });
   });
 
-  describe("/palette - Stage 19: Step-L: Pronombre translation of gendered objects eg Pomidor/Cebula.", () => {
+  describe.only("/palette - Stage 19: Step-L: Pronombre translation of gendered objects eg Pomidor/Cebula.", () => {
     //#pal19-00 alias #pal18-09, yes indeed   "It is red." <-> "Ono jest czerwone."
     it("#pal19-01a GET 200 YES: Engpol. 'There's a woman and I see her.'", () => {
       let ref = [
         {
-          ENG: "There's a woman and I see her.",
-          POL: ["Jest kobieta i widzę ją."],
+          ENG: "There's a mother and I see her.",
+          POL: ["Jest matka i widzę ją."],
         },
         {
-          ENG: "There's a boy and I see him.",
-          POL: ["Jest chłopiec i widzę go.", "Jest chłopiec i widzę jego."],
+          ENG: [
+            "There's a parent and I see him.",
+            "There's a parent and I see her.",
+          ],
+          POL: ["Jest rodzic i widzę go.", "Jest rodzic i widzę jego."],
+        },
+        {
+          ENG: "There's a father and I see him.",
+          POL: ["Jest ojciec i widzę go.", "Jest ojciec i widzę jego."],
         },
       ];
       return runPaletteTest("ENG", "POL", "dummy64a", ref);
@@ -225,19 +232,26 @@ describe("/api", function () {
       let ref = [
         {
           ENG: [
-            "There's a woman and I see her.",
-            "There's a woman and I am seeing her.",
-            "There's a lady and I see her.",
-            "There's a lady and I am seeing her.",
+            "There's a mother and I see her.",
+            "There's a mother and I am seeing her.",
           ],
-          POL: "Jest kobieta i widzę ją.",
+          POL: "Jest matka i widzę ją.",
         },
         {
           ENG: [
-            "There's a boy and I see him.",
-            "There's a boy and I am seeing him.",
+            "There's a father and I see him.",
+            "There's a father and I am seeing him.",
           ],
-          POL: "Jest chłopiec i widzę go.",
+          POL: "Jest ojciec i widzę go.",
+        },
+        {
+          ENG: [
+            "There's a parent and I see him.",
+            "There's a parent and I am seeing him.",
+            "There's a parent and I see her.",
+            "There's a parent and I am seeing her.",
+          ],
+          POL: "Jest rodzic i widzę go.",
         },
       ];
       return runPaletteTest("POL", "ENG", "dummy64a", ref);
