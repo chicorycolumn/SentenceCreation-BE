@@ -434,7 +434,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-        specificIds: ["pol-npe-011-kobieta"],
+        specificIds: ["^pol-npe-011-kobieta"],
         number: ["singular", "plural"],
       },
       {
@@ -454,7 +454,7 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-        specificIds: ["pol-npe-011-kobieta"],
+        specificIds: ["^pol-npe-011-kobieta"],
         number: ["singular", "plural"],
         gender: ["f"],
       },
@@ -1496,8 +1496,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "npe-1",
-
-        specificIds: ["pol-npe-011-kobieta"],
+        specificIds: ["^pol-npe-011-kobieta"],
         number: ["singular"],
       },
       {
@@ -1849,8 +1848,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "npe-1",
-
-        specificIds: ["pol-npe-011-kobieta"],
+        specificIds: ["^pol-npe-011-kobieta"],
         number: ["singular"],
       },
     ],
@@ -2222,7 +2220,7 @@ exports.dummySentenceFormulasBank = [
       },
       {
         chunkId: "npe-1-Woman",
-        specificIds: ["pol-npe-011-kobieta"],
+        specificIds: ["pol-npe-013-parentarooni"],
         number: ["singular"],
       },
       { chunkId: "fix-2-And", chunkValue: "i" },
@@ -2344,9 +2342,9 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "nco-1-Rats",
         specificIds: [
-          "pol-nco-001-szczur",
-          "pol-npe-011-kobieta",
-          "pol-npe-012-chłopiec",
+          "^pol-nco-001-szczur",
+          "^pol-npe-011-kobieta",
+          "^pol-npe-012-chłopiec",
         ],
         number: ["plural"],
       },

@@ -496,6 +496,9 @@ describe("/api", function () {
         "Kobiety czytały.",
         "Dzieci czytały.",
         "Dziewczyny czytały.",
+        "Osoby czytały.",
+        "Mężczyźni czytali.",
+        "Ludzie czytali.",
         "Chłopcy czytali.",
         "Chłopaki czytali.",
         "Chłopacy czytali.",
@@ -2028,7 +2031,7 @@ function checkSentenceTranslations(
     );
   }
 
-  consol.logTestOutputSolely(res.body);
+  consol.logTestOutputSolely("\n\n", res.body);
 
   let questionSentence = body.questionSentenceArr[0];
   let { answerSentenceArr } = body;

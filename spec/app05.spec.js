@@ -206,78 +206,135 @@ const dummy73b = [
     ENG: ["Red girls."],
   },
 ];
+const _124bRefPolEng = [
+  {
+    ENG: [
+      "I was a good person.",
+      "I was being a good person.",
+      "I have been a good person.",
+      "I had been a good person.",
+    ],
+    POL: ["Ja byłam dobrą osobą.", "Ja byłem dobrą osobą."],
+  },
+  {
+    ENG: [
+      "We were good people.",
+      "We were being good people.",
+      "We have been good people.",
+      "We had been good people.",
+    ],
+    POL: ["My byłyśmy dobrymi osobami.", "My byliśmy dobrymi osobami."],
+  },
+];
+const _124bRefEngPol = [
+  {
+    ENG: ["I (female) was a good person."],
+    POL: ["Ja byłam dobrą osobą."],
+  },
+  {
+    ENG: ["I (male) was a good person."],
+    POL: ["Ja byłem dobrą osobą."],
+  },
+  {
+    ENG: ["We (males) were good people.", "We (mixed) were good people."],
+    POL: ["My byliśmy dobrymi osobami."],
+    // POL: ["My byliśmy dobrymi osobami.", "My byliśmy dobrymi ludźmi."],
+  },
+  {
+    ENG: ["We (females) were good people."],
+    POL: ["My byłyśmy dobrymi osobami."],
+    // POL: ["My byłyśmy dobrymi osobami.", "My byłyśmy dobrymi ludźmi."],
+  },
+];
 
 describe("/api", function () {
   this.timeout(7000);
 
-  describe("/palette - Stage 25: Complex nexus connections.", () => {
-    it("#pal25-01a GET 200 YES: Poleng. Dziecko should translate as Child and also Baby.", () => {
+  describe("/palette - Stage 27: Complex nexus connections.", () => {
+    it("#pal27-01a GET 200 YES: Poleng. Dziecko should translate as Child and also Baby.", () => {
       return runPaletteTest("POL", "ENG", "dummy73a", dummy73a);
     });
-    it("#pal25-01b GET 200 YES: Engpol. Dziecko should translate as Child and also Baby.", () => {
+    it("#pal27-01b GET 200 YES: Engpol. Dziecko should translate as Child and also Baby.", () => {
       return runPaletteTest("ENG", "POL", "dummy73a", dummy73a);
     });
-    it("#pal25-02a GET 200 YES: Poleng. Dziecko selectable by gender f.", () => {
+    it("#pal27-02a GET 200 YES: Poleng. Dziecko selectable by gender f.", () => {
       return runPaletteTest("POL", "ENG", "dummy73b", dummy73b);
     });
-    it("#pal25-02b GET 200 YES: Engpol. Dziecko selectable by gender f.", () => {
+    it("#pal27-02b GET 200 YES: Engpol. Dziecko selectable by gender f.", () => {
       return runPaletteTest("ENG", "POL", "dummy73b", dummy73b);
+    });
+
+    it("#pal27-02a GET 200 YES: Poleng. I was a good person - masculine I should still be dobrą osobą.", () => {
+      return runPaletteTest(
+        "POL",
+        "ENG",
+        "124b I was a good person",
+        _124bRefPolEng
+      );
+    });
+    xit("#pal27-02b GET 200 YES: Engpol. I was a good person - masculine I should still be dobrą osobą.", () => {
+      return runPaletteTest(
+        "ENG",
+        "POL",
+        "124b I was a good person",
+        _124bRefEngPol
+      );
     });
   });
 
-  describe("/palette - Stage 24-i: Spanish basic. Normal nouns.", () => {
-    it("#pal24-01a GET 200 YES: Polspa. Red onion (NORMAL).", () => {
+  describe("/palette - Stage 26-i: Spanish basic. Normal nouns.", () => {
+    it("#pal26-01a GET 200 YES: Polspa. Red onion (NORMAL).", () => {
       return runPaletteTest("POL", "SPA", "dummy72a", dummy72a);
     });
-    it("#pal24-01b GET 200 YES: Spapol. Red onion (NORMAL).", () => {
+    it("#pal26-01b GET 200 YES: Spapol. Red onion (NORMAL).", () => {
       return runPaletteTest("SPA", "POL", "dummy72a", dummy72a);
     });
-    it("#pal24-01c GET 200 YES: Engspa. Red onion (NORMAL).", () => {
+    it("#pal26-01c GET 200 YES: Engspa. Red onion (NORMAL).", () => {
       return runPaletteTest("ENG", "SPA", "dummy72a", dummy72a);
     });
-    it("#pal24-01d GET 200 YES: Spaeng. Red onion (NORMAL).", () => {
+    it("#pal26-01d GET 200 YES: Spaeng. Red onion (NORMAL).", () => {
       return runPaletteTest("SPA", "ENG", "dummy72a", dummy72a);
     });
   });
 
-  describe("/palette - Stage 24-ii: Spanish basic. Hypernyms and Vypernyms", () => {
-    it("#pal24-02a GET 200 YES: Polspa. Red doctor (MGN).", () => {
+  describe("/palette - Stage 26-ii: Spanish basic. Hypernyms and Vypernyms", () => {
+    it("#pal26-02a GET 200 YES: Polspa. Red doctor (MGN).", () => {
       return runPaletteTest("POL", "SPA", "dummy72b", dummy72bPolSpa);
     });
-    it("#pal24-02b GET 200 YES: Spapol. Red doctor (MGN).", () => {
+    it("#pal26-02b GET 200 YES: Spapol. Red doctor (MGN).", () => {
       return runPaletteTest("SPA", "POL", "dummy72b", dummy72bSpaPol);
     });
-    it("#pal24-02c GET 200 YES: Engspa. Red doctor (MGN).", () => {
+    it("#pal26-02c GET 200 YES: Engspa. Red doctor (MGN).", () => {
       return runPaletteTest("ENG", "SPA", "dummy72b", dummy72bEngSpa);
     });
-    it("#pal24-02d GET 200 YES: Spaeng. Red doctor (MGN).", () => {
+    it("#pal26-02d GET 200 YES: Spaeng. Red doctor (MGN).", () => {
       return runPaletteTest("SPA", "ENG", "dummy72b", dummy72bSpaEng);
     });
   });
 
-  describe("/palette - Stage 24-iii: Spanish basic. Hypernyms and Vypernyms", () => {
-    it("#pal24-03a GET 200 YES: Polspa. Red mother (Vypernym).", () => {
+  describe("/palette - Stage 26-iii: Spanish basic. Hypernyms and Vypernyms", () => {
+    it("#pal26-03a GET 200 YES: Polspa. Red mother (Vypernym).", () => {
       return runPaletteTest("POL", "SPA", "dummy72c", dummy72cRefPolSpa);
     });
-    it("#pal24-03b GET 200 YES: Spapol. Red mother (Vypernym).", () => {
+    it("#pal26-03b GET 200 YES: Spapol. Red mother (Vypernym).", () => {
       return runPaletteTest("SPA", "POL", "dummy72c", dummy72cRefSpaPol);
     });
-    it("#pal24-03c GET 200 YES: Engspa. Red mother (Vypernym).", () => {
+    it("#pal26-03c GET 200 YES: Engspa. Red mother (Vypernym).", () => {
       return runPaletteTest("ENG", "SPA", "dummy72c", dummy72cRefEngSpa);
     });
-    it("#pal24-03d GET 200 YES: Spaeng. Red mother (Vypernym).", () => {
+    it("#pal26-03d GET 200 YES: Spaeng. Red mother (Vypernym).", () => {
       return runPaletteTest("SPA", "ENG", "dummy72c", dummy72cRefSpaEng);
     });
-    it("#pal24-03e GET 200 YES: Enpol. Red mother (Vypernym).", () => {
+    it("#pal26-03e GET 200 YES: Enpol. Red mother (Vypernym).", () => {
       return runPaletteTest("ENG", "POL", "dummy72c", dummy72cRefEngPol);
     });
-    it("#pal24-03f GET 200 YES: Poleng. Red mother (Vypernym).", () => {
+    it("#pal26-03f GET 200 YES: Poleng. Red mother (Vypernym).", () => {
       return runPaletteTest("POL", "ENG", "dummy72c", dummy72cRefPolEng);
     });
   });
 
-  describe("/palette - Stage 24-iv: Spanish basic. Vypernym Hyponym Vyponym hypernymyProportion.", () => {
-    it("#pal24-04a GET 200 YES: Polspa. Red mother (Vypernym).", () => {
+  describe("/palette - Stage 26-iv: Spanish basic. Vypernym Hyponym Vyponym hypernymyProportion.", () => {
+    it("#pal26-04a GET 200 YES: Polspa. Red mother (Vypernym).", () => {
       return Promise.all(
         promiseAllMultiplier(250, () => {
           return runPaletteTest("POL", "SPA", "dummy72c", [], {}, 1, true);
@@ -300,7 +357,7 @@ describe("/api", function () {
         ]);
       });
     });
-    it("#pal24-04b GET 200 YES: Poleng. Red mother (Vypernym).", () => {
+    it("#pal26-04b GET 200 YES: Poleng. Red mother (Vypernym).", () => {
       return Promise.all(
         promiseAllMultiplier(250, () => {
           return runPaletteTest("POL", "ENG", "dummy72c", [], {}, 1, true);
@@ -323,7 +380,7 @@ describe("/api", function () {
         ]);
       });
     });
-    it("#pal24-04c GET 200 YES: Spapol. Red mother (Vypernym).", () => {
+    it("#pal26-04c GET 200 YES: Spapol. Red mother (Vypernym).", () => {
       return Promise.all(
         promiseAllMultiplier(250, () => {
           return runPaletteTest("SPA", "POL", "dummy72c", [], {}, 1, true);
@@ -338,7 +395,7 @@ describe("/api", function () {
         ]);
       });
     });
-    it("#pal24-04d GET 200 YES: Spaeng. Red mother (Vypernym).", () => {
+    it("#pal26-04d GET 200 YES: Spaeng. Red mother (Vypernym).", () => {
       return Promise.all(
         promiseAllMultiplier(250, () => {
           return runPaletteTest("SPA", "ENG", "dummy72c", [], {}, 1, true);
@@ -353,7 +410,7 @@ describe("/api", function () {
         ]);
       });
     });
-    it("#pal24-04e GET 200 YES: Engpol. Red mother (Vypernym).", () => {
+    it("#pal26-04e GET 200 YES: Engpol. Red mother (Vypernym).", () => {
       return Promise.all(
         promiseAllMultiplier(250, () => {
           return runPaletteTest("ENG", "POL", "dummy72c", [], {}, 1, true);
@@ -370,7 +427,7 @@ describe("/api", function () {
         ]);
       });
     });
-    it("#pal24-04f GET 200 YES: Engspa. Red mother (Vypernym).", () => {
+    it("#pal26-04f GET 200 YES: Engspa. Red mother (Vypernym).", () => {
       return Promise.all(
         promiseAllMultiplier(250, () => {
           return runPaletteTest("ENG", "SPA", "dummy72c", [], {}, 1, true);

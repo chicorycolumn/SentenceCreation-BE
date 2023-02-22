@@ -185,7 +185,13 @@ exports.removeAnnotationsByVypernym = (
     malePersonsInThisLanguageHaveWhatGender[languagesObj.questionLanguage];
 
   questionOutputArr.forEach((questionOutputUnit) => {
-    if (questionOutputUnit.structureChunk.hypernymy === HY.VY) {
+    if (
+      gpUtils.getWordtypeStCh(questionOutputUnit.structureChunk) === "fixed"
+    ) {
+      return;
+    }
+
+    if (lfUtils.checkHyper(questionOutputUnit.selectedLemmaObject, [HY.VY])) {
       if (
         Object.keys(questionOutputUnit.structureChunk.annotations).includes(
           "semanticGender"
@@ -565,7 +571,7 @@ exports.trimAnnoIfGenderRevealedByGenderedNoun = (
       headChunk.annotations.gender !== structureChunk.annotations.gender
     ) {
       consol.throw(
-        "cjow The depCh and its headCh have different annoTraitValues for gender?"
+        `cjow The depCh "${structureChunk.chunkId}": [${structureChunk.annotations.gender}] and its headCh "${headChunk.chunkId}": [${headChunk.annotations.gender}] have different annoTraitValues for gender?`
       );
     }
 
@@ -682,16 +688,7 @@ exports.sortAnswerAndQuestionStructureChunks = (
   questionSentenceStructure,
   answerSentenceStructure
 ) => {
-  consol.log("bsat sortAnswerAndQuestionStructureChunks");
-
-  let responseObj = {
-    answerHeadChunks: null,
-    answerDependentChunks: null,
-    answerOtherChunks: null,
-    questionHeadChunks: null,
-    questionDependentChunks: null,
-    questionOtherChunks: null,
-  };
+  let responseObj = {};
 
   let { headChunks, dependentChunks, otherChunks } =
     scUtils.sortStructureChunks(answerSentenceStructure);

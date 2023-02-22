@@ -398,3 +398,14 @@ exports.validateArrayQuasiEmpty = (arr, label) => {
     consol.throw(`moaa ${label} Have printed quasi empty array --> above.`);
   }
 };
+
+exports.validateQuasiEmptyOutputUnitSemanticGender = (
+  outputUnitArrays,
+  label
+) => {
+  outputUnitArrays.forEach((houa) => {
+    houa.forEach((ou) => {
+      exports.validateArrayQuasiEmpty(ou.structureChunk.semanticGender, label);
+    });
+  });
+};

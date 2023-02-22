@@ -66,6 +66,10 @@ exports.getLObjAndSiblings = (
   qLObj,
   stChGender
 ) => {
+  let logHint = qLObj
+    ? "qLObj is present so presume invoked by conformAnswerStructureToQuestionStructure"
+    : "qLObj is null so presume invoked by findMatchingLemmaObjectThenWord";
+
   const log = (...args) => {
     if (ids.some((id) => gpUtils.getWordtypeShorthandLObj({ id }) === "npe")) {
       // consol.logSpecial(7, ...args);
@@ -114,6 +118,7 @@ exports.getLObjAndSiblings = (
       //   return false;
       // }
 
+      // All of these clauses are not currently used, because blockHypernyms is only invoked as false.
       if (
         blockHypernyms &&
         !lfUtils.checkHyper({ id: specificId }, [HY.HY, HY.VY, HY.AofQVY]) &&
@@ -171,8 +176,9 @@ exports.getLObjAndSiblings = (
   );
 
   if (!res || !res.length) {
+    console.log(">>", ids);
     consol.throw(
-      "epma getLObjAndSiblings found nothing.\nThis will cause unwanted behaviour like the resetting of traitKey such as number, resulting in Q: Lekarz. A: Doctor. Doctors."
+      `epma getLObjAndSiblings found no matches for ids printed >> above.\n${logHint}`
     );
   }
 
@@ -237,10 +243,12 @@ exports.selectRandLObj = (lObjs, stCh, lang) => {
       `"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"`
     );
 
+    //katowice delete this?
     let hypernymy = lfUtils.assessHypernymy(lObj);
     if (hypernymy) {
       stCh.hypernymy = hypernymy;
     }
+    //
 
     return lObj;
   };
@@ -956,7 +964,10 @@ exports.updateStChByAndTagsAndSelectors = (
   //lObj rodzic so gender "m1" and semanticGender "_PersonalGenders"
   //but if I didn't step in here, stCh would end up with gender "m1" which is wrong.
 
-  if (structureChunk.hypernymy === HY.VY) {
+  if (
+    structureChunk.hypernymy === HY.VY || //katowice
+    lfUtils.checkHyper(selectedLemmaObject, [HY.VY])
+  ) {
     if (structureChunk.number.length !== 1) {
       consol.throw(`xtal`);
     }
@@ -984,7 +995,7 @@ exports.updateStChByAndTagsAndSelectors = (
   }
 
   if (selectedLemmaObject.semanticGender) {
-    if (isCounterfax) {
+    if (isCounterfax && structureChunk.semanticGender) {
       consol.logSpecial(
         8,
         "----------\n",
@@ -1155,7 +1166,7 @@ exports.updateStChByAndTagsAndSelectors = (
             "[0m"
         );
       }
-      structureChunk.semanticGender = numberAdjustedGenderValues;
+      structureChunk.semanticGender = numberAdjustedGenderValues; //Set semanticGender in Question.
       doneSelectors.push("semanticGender");
     }
   }
@@ -1518,88 +1529,110 @@ exports.filterBySelector_inner = (
     lemmaObjectArr.map((l) => l.id)
   );
 
-  let questionChunk = {};
+  let questionChunk;
+  let questionSelectedLemmaObject;
   if (answerMode) {
     let ou = questionOutputArr.find(
       (ou) => ou.structureChunk.chunkId === structureChunk.chunkId
     );
     if (ou) {
       questionChunk = ou.structureChunk;
+      questionSelectedLemmaObject = ou.selectedLemmaObject;
+
+      if (
+        !questionSelectedLemmaObject &&
+        gpUtils.getWordtypeStCh(questionChunk) !== "fixed"
+      ) {
+        consol.throw("bdwo answer mode but no questionSelectedLemmaObject?");
+      }
     } else {
-      consol.logSpecial(
-        3,
-        `slmr No corresponding question stCh for answer stCh "${structureChunk.chunkId}".`
-      );
-    }
-  }
-
-  if (answerMode && questionChunk.hypernymy === HY.HY) {
-    let hypernymsAndMGNs = lemmaObjectArr.filter(
-      (l) =>
-        this.checkHyper(l, [HY.HY]) ||
-        ["_Genders", "_PersonalGenders"].includes(l.gender)
-      // || ["_Genders", "_PersonalGenders"].includes(l.semanticGender)
-    );
-
-    if (hypernymsAndMGNs.length) {
-      consol.logSpecial(
-        8,
-        `\netpz ${currentLanguage} ${
-          answerMode ? "answerMode" : "questionMode"
-        } Big override right at the start of filterBySelector_inner for stCh "${
-          structureChunk.chunkId
-        }" because Q chunk is hypernym so I will return hypernyms/MGNs for A chunks.`,
-        hypernymsAndMGNs.map((l) => l.id)
-      );
-      return hypernymsAndMGNs;
-    }
-  }
-
-  // Garibaldi part 3
-  if (true) {
-    let checkMapForConsoleLogging = lemmaObjectArr.map((l) => l.id).join(", ");
-
-    //section A
-    if (
-      answerMode &&
-      questionChunk.virilityDetail &&
-      [" males ", " male "].includes(questionChunk.virilityDetail[0])
-    ) {
-      lemmaObjectArr = lemmaObjectArr.filter(
-        (l) => !lfUtils.checkHyper(l, [HY.HY])
-      );
-    }
-
-    // section B
-    if (
-      answerMode &&
-      questionChunk.virilityDetail &&
-      questionChunk.virilityDetail[0] === "mixed"
-    ) {
-      lemmaObjectArr = lemmaObjectArr.filter(
-        (l) =>
-          lfUtils.checkHyper(l, [HY.HY, HY.VY]) || //Garibaldi could be a pain point, perhaps should only be hy here.
-          l.gender !==
-            refObj.malePersonsInThisLanguageHaveWhatGender[currentLanguage]
-      );
-    }
-
-    let checkMapForConsoleLogging2 = lemmaObjectArr.map((l) => l.id).join(", ");
-    if (checkMapForConsoleLogging !== checkMapForConsoleLogging2) {
-      consol.logSpecial(
-        8,
-        `sswl Adjusted lemmaObjectArr re virilityDetail "${questionChunk.virilityDetail}" so is now`,
-        lemmaObjectArr.map((l) => l.id)
-      );
-    }
-    if (!lemmaObjectArr.length) {
       console.log(
         "[1;31m " +
-          `sswm ${currentLanguage} ${structureChunk.chunkId} ${
-            answerMode ? "answerMode" : "questionMode"
-          } No lObjs found in filterBySelector_inner` +
+          `slmr No questionChunk for answerChunk "${structureChunk.chunkId}".` +
           "[0m"
       );
+    }
+  }
+
+  if (answerMode && questionChunk) {
+    if (
+      answerMode &&
+      questionSelectedLemmaObject &&
+      (questionChunk.hypernymy === HY.HY || //katowice
+        lfUtils.checkHyper(questionSelectedLemmaObject, [HY.HY]))
+    ) {
+      //alpha
+      let hypernymsAndMGNs = lemmaObjectArr.filter(
+        (l) =>
+          this.checkHyper(l, [HY.HY]) ||
+          ["_Genders", "_PersonalGenders"].includes(l.gender)
+        // || ["_Genders", "_PersonalGenders"].includes(l.semanticGender)
+      );
+
+      if (hypernymsAndMGNs.length) {
+        consol.logSpecial(
+          8,
+          `\netpz ${currentLanguage} ${
+            answerMode ? "answerMode" : "questionMode"
+          } Big override right at the start of filterBySelector_inner for stCh "${
+            structureChunk.chunkId
+          }" because Q chunk is hypernym so I will return hypernyms/MGNs for A chunks.`,
+          hypernymsAndMGNs.map((l) => l.id)
+        );
+        return hypernymsAndMGNs;
+      }
+    }
+
+    // Garibaldi part 3
+    if (true) {
+      let checkMapForConsoleLogging = lemmaObjectArr
+        .map((l) => l.id)
+        .join(", ");
+
+      //section A
+      if (
+        answerMode &&
+        questionChunk.virilityDetail &&
+        [" males ", " male "].includes(questionChunk.virilityDetail[0])
+      ) {
+        lemmaObjectArr = lemmaObjectArr.filter(
+          (l) => !lfUtils.checkHyper(l, [HY.HY])
+        );
+      }
+
+      // section B
+      if (
+        answerMode &&
+        questionChunk.virilityDetail &&
+        questionChunk.virilityDetail[0] === "mixed"
+      ) {
+        lemmaObjectArr = lemmaObjectArr.filter(
+          (l) =>
+            lfUtils.checkHyper(l, [HY.HY, HY.VY]) || //Garibaldi could be a pain point, perhaps should only be hy here.
+            l.gender !==
+              refObj.malePersonsInThisLanguageHaveWhatGender[currentLanguage]
+        );
+      }
+
+      let checkMapForConsoleLogging2 = lemmaObjectArr
+        .map((l) => l.id)
+        .join(", ");
+      if (checkMapForConsoleLogging !== checkMapForConsoleLogging2) {
+        consol.logSpecial(
+          8,
+          `sswl Adjusted lemmaObjectArr re virilityDetail "${questionChunk.virilityDetail}" so is now`,
+          lemmaObjectArr.map((l) => l.id)
+        );
+      }
+      if (!lemmaObjectArr.length) {
+        console.log(
+          "[1;31m " +
+            `sswm ${currentLanguage} ${structureChunk.chunkId} ${
+              answerMode ? "answerMode" : "questionMode"
+            } No lObjs found in filterBySelector_inner` +
+            "[0m"
+        );
+      }
     }
   }
 
@@ -1642,6 +1675,7 @@ exports.filterBySelector_inner = (
     return lemmaObjectArr.filter((lObj) => {
       if (
         answerMode &&
+        questionChunk &&
         [HY.HO, HY.VO].includes(questionChunk.hypernymy) &&
         lfUtils.checkHyper(lObj, [HY.HY])
       ) {
@@ -1703,9 +1737,11 @@ exports.filterBySelector_inner = (
       if (
         // Garibaldi Condition for finishing up Neon Approach to vypernyms issue 205.
         (!answerMode && this.checkHyper(lObj, [HY.VY])) ||
+        //katowice
         (answerMode &&
           this.checkHyper(lObj, [HY.HY]) &&
           !structureChunk.hypernymy === HY.HY)
+        //
       ) {
         lObjSelectorValues = lObjSelectorValues.filter(
           (tv) => !gpUtils.traitValueIsMeta(tv)
