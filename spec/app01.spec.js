@@ -73,6 +73,18 @@ describe("/api", function () {
           consol.log(res.body);
         });
     });
+    it("#pal01-01b GET 200 YES: Returns a sentence", () => {
+      return request(app)
+        .get("/api/palette")
+        .send({
+          questionLanguage: "ENG",
+        })
+        .expect(200)
+        .then((res) => {
+          expect(res.body.questionSentenceArr[0]).to.be.a("String");
+          consol.log(res.body);
+        });
+    });
     it("#pal01-02a GET 200 NO: Returns message to say no sentence can be created from specifications.", () => {
       return request(app)
         .get("/api/palette")
@@ -310,7 +322,7 @@ describe("/api", function () {
         });
     });
     it("#pal02-02a GET 200 YES: Returns a sentence where end of inflection chain could be array.", () => {
-      return runPaletteTest("POL", null, "boys are male");
+      return runPaletteTest("POL", null, "boys are here");
     });
   });
 
@@ -2151,7 +2163,7 @@ function checkSentenceTranslations(
     );
   }
 
-  consol.logTestOutputSolely(res.body);
+  consol.logTestOutputSolely("\n\n", res.body);
 
   let questionSentence = body.questionSentenceArr[0];
   let { answerSentenceArr } = body;

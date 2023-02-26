@@ -10,6 +10,19 @@ const testingUtils = require("../utils/secondOrder/testingUtils.js");
 
 const { getStChsForLemma } = require("../utils/secondOrder/apiUtils.js");
 
+const runApiTest1 = (req, expected) => {
+  return request(app)
+    .get("/api/palette")
+    .send(req)
+    .expect(200)
+    .then((res) => {
+      expect(Object.keys(res.body)).to.eql(Object.keys(expected));
+      expect(res.body.questionSentenceArr.sort()).to.eql(
+        expected.questionSentenceArr.sort()
+      );
+    });
+};
+
 describe("/educator/sandbox - Testing API.", () => {
   it("#san03 GET 200 YES: Deduplicating specially treated imOnly verbs like 'być'.", () => {
     const questionLanguage = "POL";
@@ -35,28 +48,20 @@ describe("/educator/sandbox - Testing API.", () => {
       primaryOrders: [["npe-1", "ver-1"]],
     };
 
-    const expected = {
-      questionSentenceArr: [
-        "Kobieta jest.",
-        "Kobieta była.",
-        "Kobieta będzie.",
-      ],
-    };
-
-    return request(app)
-      .get("/api/palette")
-      .send({
+    return runApiTest1(
+      {
         questionLanguage,
         forceMultipleModeAndQuestionOnly: true,
         sentenceFormulaFromEducator,
-      })
-      .expect(200)
-      .then((res) => {
-        res.body.questionSentenceArr = res.body.questionSentenceArr.sort();
-        expected.questionSentenceArr = expected.questionSentenceArr.sort();
-
-        expect(res.body).to.eql(expected);
-      });
+      },
+      {
+        questionSentenceArr: [
+          "Kobieta jest.",
+          "Kobieta była.",
+          "Kobieta będzie.",
+        ],
+      }
+    );
   });
   it("#san02 GET 200 YES: Educator queries a sentence, Q only but still wants multiple mode.", () => {
     const questionLanguage = "POL";
@@ -83,26 +88,21 @@ describe("/educator/sandbox - Testing API.", () => {
       primaryOrders: [["adj-1", "npe-1"]],
     };
 
-    const expected = {
-      questionSentenceArr: [
-        "Czerwona kobieta.",
-        "Czerwone kobiety.",
-        "Czerwony chłopiec.",
-        "Czerwoni chłopcy.",
-      ],
-    };
-
-    return request(app)
-      .get("/api/palette")
-      .send({
+    return runApiTest1(
+      {
         questionLanguage,
         forceMultipleModeAndQuestionOnly: true,
         sentenceFormulaFromEducator,
-      })
-      .expect(200)
-      .then((res) => {
-        expect(res.body).to.eql(expected);
-      });
+      },
+      {
+        questionSentenceArr: [
+          "Czerwona kobieta.",
+          "Czerwone kobiety.",
+          "Czerwony chłopiec.",
+          "Czerwoni chłopcy.",
+        ],
+      }
+    );
   });
   it("#san01 GET 200 YES: Educator queries a single word, Q only but still wants multiple mode.", () => {
     const questionLanguage = "ENG";
@@ -123,28 +123,23 @@ describe("/educator/sandbox - Testing API.", () => {
       ],
     };
 
-    const expected = {
-      questionSentenceArr: [
-        "Woman.",
-        "Women.",
-        "Boy.",
-        "Boys.",
-        "Lady.",
-        "Ladies.",
-      ],
-    };
-
-    return request(app)
-      .get("/api/palette")
-      .send({
+    return runApiTest1(
+      {
         questionLanguage,
         forceMultipleModeAndQuestionOnly: true,
         sentenceFormulaFromEducator,
-      })
-      .expect(200)
-      .then((res) => {
-        expect(res.body).to.eql(expected);
-      });
+      },
+      {
+        questionSentenceArr: [
+          "Woman.",
+          "Women.",
+          "Boy.",
+          "Boys.",
+          "Lady.",
+          "Ladies.",
+        ],
+      }
+    );
   });
 });
 

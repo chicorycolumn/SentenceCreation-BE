@@ -63,7 +63,7 @@ exports.getMaterialsCopies = (
 
   let sentenceFormula;
   const langUtils = require(`../source/all/${currentLanguage}/langUtils.js`);
-  let defaultSentenceFormulaId = "POL-00-50";
+  let defaultSentenceFormulaId = `${currentLanguage}-00-default`;
 
   let words = useDummy
     ? gpUtils.combineWordbanks(wordsBank, dummyWordsBank)
@@ -168,7 +168,7 @@ exports.selectDependentChunkWordsAndAddToOutputArray = (
 
             scUtils.inheritFromHeadToDependentChunk(
               currentLanguage,
-              headChunk,
+              headOutputUnit,
               dependentChunk
             );
 
@@ -1511,15 +1511,11 @@ exports.removeDuplicatesFromResponseObject = (respObj) => {
 
 exports.inheritFromHeadToDependentChunk = (
   currentLanguage,
-  headChunk,
-  dependentChunk,
-  sentenceStructure
+  headOutputUnit,
+  dependentChunk
 ) => {
-  if (!headChunk) {
-    headChunk = sentenceStructure.find(
-      (stCh) => stCh.chunkId === dependentChunk.agreeWith
-    );
-  }
+  let headChunk = headOutputUnit.structureChunk;
+  let headSelectedLemmaObject = headOutputUnit.selectedLemmaObject;
 
   consol.log(
     `wdil inheritFromHeadToDependentChunk: "${headChunk.chunkId}" to "${dependentChunk.chunkId}"`,
@@ -1650,4 +1646,17 @@ exports.sortStructureChunks = (
   }
 
   return res;
+};
+
+exports.enforceMaxLObjStems = (lObjs, max) => {
+  let lObjIdStems = Array.from(
+    new Set(lObjs.map((l) => l.id.split("-").slice(0, 3).join("-")))
+  );
+  if (lObjIdStems.length > max) {
+    consol.throw(
+      `rcmd Expected no more than 1 lObj stem (eg "pol-npe-002-matka" and "pol-npe-002-ojciec" count as 1) but found ${
+        lObjIdStems.length
+      }: [${"pol-npe-002-matka".join(",")}]`
+    );
+  }
 };

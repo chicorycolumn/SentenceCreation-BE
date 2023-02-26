@@ -1,5 +1,26 @@
 exports.sentenceFormulasBank = [
   {
+    sentenceFormulaSymbol: "girl eats apple",
+    sentenceFormulaId: "ENG-00-default",
+    sentenceStructure: [
+      {
+        chunkId: "npe-1",
+        andTags: ["personTest1"],
+        number: ["singular"],
+        gender: [],
+      },
+      { chunkId: "fix-1", chunkValue: "eats" },
+      {
+        chunkId: "nco-2",
+        andTags: ["edible"],
+        gcase: ["acc"],
+        number: [],
+        gender: [],
+      },
+    ],
+    primaryOrders: [["npe-1", "fix-1", "nco-2"]],
+  },
+  {
     sentenceFormulaSymbol: "101a girl is reading",
     sentenceFormulaId: "ENG-00-101a",
     equivalents: { POL: ["POL-00-101a"] },

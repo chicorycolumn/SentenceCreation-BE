@@ -1519,8 +1519,8 @@ describe("/api", function () {
     });
   });
 
-  describe("/palette - Stage 14: Possessive pronombres.", () => {
-    it("#pal14-01a GET 200 YES: POL only. I have my onion.", () => {
+  describe("/palette - Stage 14A: Possessive pronombres.", () => {
+    it("#pal14A-01a GET 200 YES: POL only. I have my onion.", () => {
       return runPaletteTest("POL", null, "dummy50a", [
         "Ja mam moją cebulę.",
         "My mamy naszą cebulę.",
@@ -1532,7 +1532,7 @@ describe("/api", function () {
         "Mamy nasze cebule.",
       ]);
     });
-    it("#pal14-01b GET 200 YES: ENG only. I have my onion.", () => {
+    it("#pal14A-01b GET 200 YES: ENG only. I have my onion.", () => {
       return runPaletteTest("ENG", null, "dummy50a", [
         "I have my onion.",
         "I have my onions.",
@@ -1540,7 +1540,7 @@ describe("/api", function () {
         "We have our onions.",
       ]);
     });
-    it("#pal14-01c GET 200 YES: Engpol. I have my onion. Clarifier for 'my' should NOT be present.", () => {
+    it("#pal14A-01c GET 200 YES: Engpol. I have my onion. Clarifier for 'my' should NOT be present.", () => {
       let ref = [
         {
           ENG: "I have my onion.",
@@ -1561,7 +1561,7 @@ describe("/api", function () {
       ];
       return runPaletteTest("ENG", "POL", "dummy50a", ref, {});
     });
-    it("#pal14-01d GET 200 YES: Poleng. I have my onion.", () => {
+    it("#pal14A-01d GET 200 YES: Poleng. I have my onion.", () => {
       let ref = [
         {
           ENG: ["I have my onion.", "I am having my onion."],
@@ -1582,7 +1582,7 @@ describe("/api", function () {
       ];
       return runPaletteTest("POL", "ENG", "dummy50a", ref, {});
     });
-    it("#pal14-01e GET 200 YES: Engpol. My onion.", () => {
+    it("#pal14A-01e GET 200 YES: Engpol. My onion.", () => {
       let ref = [
         {
           ENG: "My onion.",
@@ -1591,7 +1591,7 @@ describe("/api", function () {
       ];
       return runPaletteTest("ENG", "POL", "dummy50b", ref, {});
     });
-    it("#pal14-01f GET 200 YES: Poleng. My onion.", () => {
+    it("#pal14A-01f GET 200 YES: Poleng. My onion.", () => {
       let ref = [
         {
           ENG: ["My onion."],
@@ -1600,7 +1600,7 @@ describe("/api", function () {
       ];
       return runPaletteTest("POL", "ENG", "dummy50b", ref, {});
     });
-    it("#pal14-02a GET 200 YES: Engpol. My father gave me a book.", () => {
+    it("#pal14A-02a GET 200 YES: Engpol. My father gave me a book.", () => {
       let ref = [
         {
           ENG: "My father gave me a book.",
@@ -1627,7 +1627,7 @@ describe("/api", function () {
         {}
       );
     });
-    it("#pal14-02b GET 200 YES: Poleng. My father gave me a book.", () => {
+    it("#pal14A-02b GET 200 YES: Poleng. My father gave me a book.", () => {
       let ref = [
         {
           POL: "Mój ojciec dał mi książkę.",
@@ -1670,7 +1670,7 @@ describe("/api", function () {
         {}
       );
     });
-    it("#pal14-03a GET 200 YES: POL only. My father gave me his book.", () => {
+    it("#pal14A-03a GET 200 YES: POL only. My father gave me his book.", () => {
       return runPaletteTest("POL", null, "113a my father gave me his book", [
         "Mój ojciec dał mi jego książkę.",
         "Moja matka dała mi jej książkę.",
@@ -1682,7 +1682,7 @@ describe("/api", function () {
         "Nasze matki dały nam ich książkę.",
       ]);
     });
-    it("#pal14-03b GET 200 YES: ENG only. My father gave me his book.", () => {
+    it("#pal14A-03b GET 200 YES: ENG only. My father gave me his book.", () => {
       return runPaletteTest("ENG", null, "113a my father gave me his book", [
         "My father gave me his book.",
         "My mother gave me her book.",
@@ -1694,7 +1694,7 @@ describe("/api", function () {
         "Our mothers gave us their book.",
       ]);
     });
-    it("#pal14-03c GET 200 YES: Engpol. My father gave me his book.", () => {
+    it("#pal14A-03c GET 200 YES: Engpol. My father gave me his book.", () => {
       let ref = [
         {
           ENG: "My father gave me his book.",
@@ -1749,7 +1749,7 @@ describe("/api", function () {
         {}
       );
     });
-    it("#pal14-03d GET 200 YES: Poleng. My father gave me his book.", () => {
+    it("#pal14A-03d GET 200 YES: Poleng. My father gave me his book.", () => {
       let ref = [
         {
           POL: "Mój ojciec dał mi jego książkę.",
@@ -1824,7 +1824,7 @@ describe("/api", function () {
         {}
       );
     });
-    it("#pal14-04a GET 200 YES: Engpol. The doctor gave me her book. Gender annotation is added when there's no AOC, because pronombre is 'their' so doesn't reveal gender. However in singular, the pronombres 'her' and 'his' reveal the gender (are AOCs) so no gender annotation.", () => {
+    it("#pal14A-04a GET 200 YES: Engpol. The doctor gave me her book. Gender annotation is added when there's no AOC, because pronombre is 'their' so doesn't reveal gender. However in singular, the pronombres 'her' and 'his' reveal the gender (are AOCs) so no gender annotation.", () => {
       let ref = [
         {
           ENG: "The doctor gave me her book.",
@@ -1863,7 +1863,7 @@ describe("/api", function () {
         {}
       );
     });
-    it("#pal14-04b GET 200 YES: Engpol. (not allowed to be unspecified, should be identical result to previous test). The doctor gave me her book.", () => {
+    it("#pal14A-04b GET 200 YES: Engpol. (not allowed to be unspecified, should be identical result to previous test). The doctor gave me her book.", () => {
       let ref = [
         {
           // ENG: "The doctor (female) gave me her book.",
@@ -2117,7 +2117,7 @@ function checkSentenceTranslations(
     );
   }
 
-  consol.logTestOutputSolely(res.body);
+  consol.logTestOutputSolely("\n\n", res.body);
 
   let questionSentence = body.questionSentenceArr[0];
   let { answerSentenceArr } = body;

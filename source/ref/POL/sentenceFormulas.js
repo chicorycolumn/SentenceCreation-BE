@@ -1,12 +1,11 @@
 exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "girl eats apple",
-    sentenceFormulaId: "POL-00-50",
+    sentenceFormulaId: "POL-00-default",
     sentenceStructure: [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-
         number: ["singular"],
         gender: [],
       },
@@ -75,7 +74,7 @@ exports.sentenceFormulasBank = [
     primaryOrders: [["fix-1", "nco-1"]],
   },
   {
-    sentenceFormulaSymbol: "boys are male",
+    sentenceFormulaSymbol: "boys are here",
     sentenceFormulaId: "POL-00-54",
     sentenceStructure: [
       {
@@ -85,7 +84,7 @@ exports.sentenceFormulasBank = [
         number: ["plural"],
         gender: ["m1"],
       },
-      { chunkId: "fix-1", chunkValue: "są męscy" },
+      { chunkId: "fix-1", chunkValue: "są tutaj" },
     ],
     primaryOrders: [["npe-1", "fix-1"]],
   },
