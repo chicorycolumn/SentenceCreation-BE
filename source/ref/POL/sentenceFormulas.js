@@ -5,6 +5,7 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "npe-1",
+        andTags: ["personTest1"],
         number: ["singular"],
         gender: [],
       },

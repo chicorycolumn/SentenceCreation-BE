@@ -169,7 +169,7 @@ exports.selectDependentChunkWordsAndAddToOutputArray = (
 
             scUtils.inheritFromHeadToDependentChunk(
               currentLanguage,
-              headChunk,
+              headOutputUnit,
               dependentChunk
             );
 
@@ -1968,15 +1968,11 @@ exports.removeDuplicatesFromResponseObject = (respObj) => {
 
 exports.inheritFromHeadToDependentChunk = (
   currentLanguage,
-  headChunk,
-  dependentChunk,
-  sentenceStructure
+  headOutputUnit,
+  dependentChunk
 ) => {
-  if (!headChunk) {
-    headChunk = sentenceStructure.find(
-      (stCh) => stCh.chunkId === dependentChunk.agreeWith
-    );
-  }
+  let headChunk = headOutputUnit.structureChunk;
+  let headSelectedLemmaObject = headOutputUnit.selectedLemmaObject;
 
   consol.log(
     `wdil inheritFromHeadToDependentChunk: "${headChunk.chunkId}" to "${dependentChunk.chunkId}"`,
