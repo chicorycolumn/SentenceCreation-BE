@@ -216,6 +216,11 @@ exports.selectDependentChunkWordsAndAddToOutputArray = (
     }
   );
 
+  uUtils.validateQuasiEmptyOutputUnitSemanticGender(
+    explodedOutputArraysWithHeads,
+    "processSentenceFormula explodedwithheads 1"
+  );
+
   if (headChunks.length && !filteredExplodedOutputArraysWithHeads.length) {
     consol.log(
       "[1;31m \n" +
@@ -320,12 +325,10 @@ exports.processSentenceFormula = (
       null
     );
 
-    allPossOutputUnits_head.forEach((ou) => {
-      uUtils.validateArrayQuasiEmpty(
-        ou.structureChunk.semanticGender,
-        "processSentenceFormula headChunks 1"
-      );
-    });
+    uUtils.validateQuasiEmptyOutputUnitSemanticGender(
+      [allPossOutputUnits_head],
+      "processSentenceFormula headChunks 1"
+    );
 
     if (
       errorInSentenceCreation.errorMessage ||
@@ -375,14 +378,10 @@ exports.processSentenceFormula = (
     uUtils.arrayExploder(headOutputUnitArrays)
   );
 
-  headOutputUnitArrays.forEach((houa) => {
-    houa.forEach((ou) => {
-      uUtils.validateArrayQuasiEmpty(
-        ou.structureChunk.semanticGender,
-        "processSentenceFormula headChunks 2"
-      );
-    });
-  });
+  uUtils.validateQuasiEmptyOutputUnitSemanticGender(
+    headOutputUnitArrays,
+    "processSentenceFormula headChunks 2"
+  );
 
   let potentialNullResultObject = {
     sentenceFormula,
@@ -1423,6 +1422,7 @@ exports.conformAnswerStructureToQuestionStructure = (
         answerLanguage
       );
 
+      //Set semanticGender in Answer
       scUtils.addTraitToAnswerChunkWithAdjustment(
         questionStructureChunk,
         answerStructureChunk,
@@ -1639,7 +1639,7 @@ exports.conformAnswerStructureToQuestionStructure = (
      *
      *         QUESTION                  ANSWER          CHANGE ANSWER TO
      * 205-i)  parent-£ gender:[f]       padre-€         madre
-     * 205-ii) parent-£ gender:[f]       rodzic-£(m1)    gender[m/vir] but set semanticGender to f/nonv (for PHD inheritance ie possessives)
+     * 205-ii) parent-£ gender:[f]       rodzic-£(m1)    gender[m/vir] but put semanticGender to f/nonv (for PHD inheritance ie possessives)
      *
      * So with ii) it should successfully generate:
      *
