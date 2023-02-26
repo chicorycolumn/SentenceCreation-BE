@@ -565,7 +565,7 @@ exports.trimAnnoIfGenderRevealedByGenderedNoun = (
       headChunk.annotations.gender !== structureChunk.annotations.gender
     ) {
       consol.throw(
-        "cjow The depCh and its headCh have different annoTraitValues for gender?"
+        `cjow The depCh "${structureChunk.chunkId}": [${structureChunk.annotations.gender}] and its headCh "${headChunk.chunkId}": [${headChunk.annotations.gender}] have different annoTraitValues for gender?`
       );
     }
 
@@ -682,16 +682,7 @@ exports.sortAnswerAndQuestionStructureChunks = (
   questionSentenceStructure,
   answerSentenceStructure
 ) => {
-  consol.log("bsat sortAnswerAndQuestionStructureChunks");
-
-  let responseObj = {
-    answerHeadChunks: null,
-    answerDependentChunks: null,
-    answerOtherChunks: null,
-    questionHeadChunks: null,
-    questionDependentChunks: null,
-    questionOtherChunks: null,
-  };
+  let responseObj = {};
 
   let { headChunks, dependentChunks, otherChunks } =
     scUtils.sortStructureChunks(answerSentenceStructure);

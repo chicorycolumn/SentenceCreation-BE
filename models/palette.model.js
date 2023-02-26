@@ -233,7 +233,11 @@ exports.fetchPalette = (req) => {
     consol.log(
       "[1;36m " + `znuj fetchPalette. questionOutputArr BEFORE CLARI OR SPECI` + "[0m\n",
       questionSentenceData.questionOutputArr.map((unit) => [
-        `${unit.selectedLemmaObject.lemma}-->${unit.selectedWord}`,
+        `${
+          gpUtils.getWordtypeStCh(unit.structureChunk) === "fixed"
+            ? "FIXED"
+            : unit.selectedLemmaObject.lemma
+        }-->${unit.selectedWord}`,
         unit.structureChunk.annotations,
       ])
     );
@@ -266,7 +270,11 @@ exports.fetchPalette = (req) => {
     consol.log(
       "[1;36m " + `znul-fetchPalette, questionOutputArr AFTER CLARI AND SPECI` + "[0m\n",
       questionSentenceData.questionOutputArr.map((unit) => [
-        `${unit.selectedLemmaObject.lemma}-->${unit.selectedWord}`,
+        `${
+          gpUtils.getWordtypeStCh(unit.structureChunk) === "fixed"
+            ? "FIXED"
+            : unit.selectedLemmaObject.lemma
+        }-->${unit.selectedWord}`,
         unit.structureChunk.annotations,
       ])
     );
@@ -279,7 +287,11 @@ exports.fetchPalette = (req) => {
     consol.log(
       "[1;36m " + `znum-fetchPalette, questionOutputArr AFTER SPECIALADJUST\n` + "[0m",
       questionSentenceData.questionOutputArr.map((unit) => [
-        `${unit.selectedLemmaObject.lemma}-->${unit.selectedWord}`,
+        `${
+          gpUtils.getWordtypeStCh(unit.structureChunk) === "fixed"
+            ? "FIXED"
+            : unit.selectedLemmaObject.lemma
+        }-->${unit.selectedWord}`,
         unit.structureChunk.annotations,
       ])
     );

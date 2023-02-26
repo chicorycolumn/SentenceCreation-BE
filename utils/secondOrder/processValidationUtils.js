@@ -8,7 +8,10 @@ const refFxn = require("../reference/referenceFunctions.js");
 
 exports.checkDecisiveDecant = (questionSentenceData, questionLanguage) => {
   questionSentenceData.questionOutputArr.forEach((outputUnit, index) => {
-    if (outputUnit.structureChunk.dontSpecifyOnThisChunk) {
+    if (
+      outputUnit.structureChunk.dontSpecifyOnThisChunk ||
+      gpUtils.getWordtypeStCh(outputUnit.structureChunk) === "fixed"
+    ) {
       return;
     }
 

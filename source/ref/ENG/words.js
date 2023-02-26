@@ -973,7 +973,7 @@ exports.wordsBank = {
   art: [
     {
       //selectors
-      lemma: "ARTICLE",
+      lemma: "$ARTICLE",
       id: "eng-art-001-the",
       //notes
 

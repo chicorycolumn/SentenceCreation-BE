@@ -1886,4 +1886,36 @@ exports.sentenceFormulasBank = [
     primaryOrders: [["ver-1-am", "adj-1-red"]],
     additionalOrders: [["pro-1-I", "ver-1-am", "adj-1-red"]],
   },
+  {
+    sentenceFormulaSymbol: "124a I was a good doctor",
+    sentenceFormulaId: "POL-124a",
+    equivalents: { ENG: ["ENG-124a"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificIds: ["pol-pro-PERSONAL"],
+        person: ["1per"],
+        gcase: ["nom"],
+        formulaImportantTraitKeys: ["person", "gcase"],
+        agreeWith: "npe-1-person",
+      },
+      {
+        chunkId: "ver-1-am",
+        specificIds: ["pol-ver-011-być"],
+        agreeWith: "pro-1-I",
+        tenseDescription: ["past im"],
+      },
+      {
+        chunkId: "adj-1-good",
+        specificIds: ["pol-adj-011-czerwony"],
+        agreeWith: "npe-1-person",
+      },
+      {
+        chunkId: "npe-1-person",
+        specificIds: ["pol-npe-015-lekarz"],
+        gcase: ["ins"],
+      },
+    ],
+    primaryOrders: [["ver-1-am", "adj-1-good", "npe-1-person"]],
+  },
 ];
