@@ -1259,7 +1259,11 @@ exports.conformAnswerStructureToQuestionStructure = (
     questionOutputArr.forEach((outputUnit) => {
       consol.logSpecial(8, {
         "outputUnit.selectedWord": outputUnit.selectedWord,
-        "outputUnit.selectedLemmaObject.id": outputUnit.selectedLemmaObject.id,
+        "outputUnit.selectedLemmaObject.id": `${
+          gpUtils.getWordtypeStCh(outputUnit.structureChunk) === "fixed"
+            ? "FIXED"
+            : outputUnit.selectedLemmaObject.id
+        }`,
         "outputUnit.structureChunk.gender": outputUnit.structureChunk.gender,
         "outputUnit.structureChunk.semanticGender":
           outputUnit.structureChunk.semanticGender,
