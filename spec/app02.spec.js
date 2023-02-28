@@ -2011,52 +2011,33 @@ describe("/api", function () {
         [
           {
             ENG: "My parent gave me his book.",
-            POL: [
-              "Mój rodzic dał mi jego książkę.",
-              "Mój rodzic dał mnie jego książkę.",
-            ],
+            POL: ["Mój rodzic dał mi/mnie jego książkę."],
           },
           {
             ENG: "My parent gave me her book.",
             POL: [
-              "Mój rodzic dał mi jego książkę.", // I know this looks weird but it is correct. See Issue 205 in Hypernymy documentation.
-              "Mój rodzic dał mnie jego książkę.",
+              "Mój rodzic dał mi/mnie jego książkę.", // I know this looks weird but it is correct. See Issue 205 in Hypernymy documentation.
             ],
           },
           {
             ENG: "My parents gave me their book.",
-            POL: [
-              "Moi rodzice dali mi ich książkę.",
-              "Moi rodzice dali mnie ich książkę.",
-            ],
+            POL: ["Moi rodzice dali mi/mnie ich książkę."],
           },
           {
             ENG: "My father gave me his book.",
-            POL: [
-              "Mój ojciec dał mi jego książkę.",
-              "Mój ojciec dał mnie jego książkę.",
-            ],
+            POL: ["Mój ojciec dał mi/mnie jego książkę."],
           },
           {
             ENG: "My fathers gave me their book.",
-            POL: [
-              "Moi ojcowie dali mi ich książkę.",
-              "Moi ojcowie dali mnie ich książkę.",
-            ],
+            POL: ["Moi ojcowie dali mi/mnie ich książkę."],
           },
           {
             ENG: "My mother gave me her book.",
-            POL: [
-              "Moja matka dała mi jej książkę.",
-              "Moja matka dała mnie jej książkę.",
-            ],
+            POL: ["Moja matka dała mi/mnie jej książkę."],
           },
           {
             ENG: "My mothers gave me their book.",
-            POL: [
-              "Moje matki dały mi ich książkę.",
-              "Moje matki dały mnie ich książkę.",
-            ],
+            POL: ["Moje matki dały mi/mnie ich książkę."],
           },
           //////////////
           {
