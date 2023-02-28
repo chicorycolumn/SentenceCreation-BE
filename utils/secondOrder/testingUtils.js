@@ -926,7 +926,7 @@ exports.checkRunsRecord = (res) => {
 
 exports.checkTranslationsOfGivenRef = (
   res,
-  ref,
+  originalRef,
   questionLanguage,
   answerLanguage,
   alreadyLogged
@@ -943,11 +943,37 @@ exports.checkTranslationsOfGivenRef = (
   }
   testingUtils.checkRunsRecord(res);
 
-  //Unpack ref so questionLanguage is just one string per refItem.
+  //Expand testing shorthands.
+  let expandedRef = originalRef.map((refItem) => {
+    let refItemQuestionSentence = refItem[questionLanguage];
+    let refItemAnswerSentence = refItem[answerLanguage];
+
+    if (!Array.isArray(refItemQuestionSentence)) {
+      refItemQuestionSentence = [refItemQuestionSentence];
+    }
+    if (!Array.isArray(refItemAnswerSentence)) {
+      refItemAnswerSentence = [refItemAnswerSentence];
+    }
+
+    let refItemQuestionSentences = exports.expandTestShorthands(
+      refItemQuestionSentence
+    );
+    let refItemAnswerSentences = exports.expandTestShorthands(
+      refItemAnswerSentence
+    );
+
+    let expandedRefItem = {};
+    expandedRefItem[questionLanguage] = refItemQuestionSentences;
+    expandedRefItem[answerLanguage] = refItemAnswerSentences;
+
+    return expandedRefItem;
+  });
+
+  //Unpack expandedRef so questionLanguage is just one string per refItem.
   let refItemsWithQuestionString = [];
   let refItemsWithQuestionArray = [];
 
-  ref.forEach((refItem) => {
+  expandedRef.forEach((refItem) => {
     if (Array.isArray(refItem[questionLanguage])) {
       refItemsWithQuestionArray.push(refItem);
     } else {
@@ -965,7 +991,7 @@ exports.checkTranslationsOfGivenRef = (
     });
   });
 
-  ref = [...refItemsWithQuestionString, ...newRefItemsWithQuestionString];
+  let ref = [...refItemsWithQuestionString, ...newRefItemsWithQuestionString];
 
   //Begin testing.
 
@@ -998,5 +1024,78 @@ exports.checkTranslationsOfGivenRef = (
 
   if (!testActivated) {
     throw "This test did not really pass, as no expect statement ran.";
+  }
+};
+
+exports.expandTestShorthands = (arr) => {
+  if (!Array.isArray(arr)) {
+    arr = [arr];
+  }
+
+  const ref = {
+    "mi/mnie": ["mi", "mnie"],
+    "was/": ["was", "has been", "had been", "was being"],
+    "was/i": ["was", "have been", "had been", "was being"],
+    "were/": ["were", "have been", "had been", "were being"],
+  };
+
+  let totalRes = [];
+  arr.forEach((sentence) => {
+    let tempRes = expandTestingShorthands(sentence);
+    totalRes.push(...tempRes);
+  });
+  return totalRes;
+
+  function expandTestingShorthands(str) {
+    let grandRes = [];
+    _expandTestingShorthands(str, grandRes);
+    return grandRes;
+
+    function _expandTestingShorthands(a, resArr) {
+      let arr = a.split(" ");
+      let superArr = [];
+      let shorthanders = [];
+      let reg = /[a-zA-Z\/]/;
+      arr.forEach((el, index) => {
+        if (el.includes("/")) {
+          let trimmedEl = el
+            .split("")
+            .filter((char) => {
+              return reg.test(char);
+            })
+            .join("");
+          let shorthand = { el: trimmedEl, index };
+          if (!reg.test(el[el.length - 1])) {
+            shorthand.lastChar = el[el.length - 1];
+          }
+          shorthanders.push(shorthand);
+        }
+      });
+      if (!shorthanders.length) {
+        resArr.push(a);
+        return;
+      }
+      let shorthander = shorthanders[0];
+      if (!Object.keys(ref).includes(shorthander.el)) {
+        throw `vfkl expandTestingShorthands "${shorthander.el}" not a recognised shorthand.`;
+      }
+      ref[shorthander.el].forEach((longhand) => {
+        let newArr = [
+          ...arr.slice(0, shorthander.index),
+          `${longhand}${shorthander.lastChar || ""}`,
+          ...arr.slice(shorthander.index + 1),
+        ];
+        superArr.push(newArr.join(" "));
+      });
+
+      if (shorthanders.length === 1) {
+        resArr.push(...superArr);
+        return;
+      } else {
+        superArr.forEach((s) => {
+          _expandTestingShorthands(s, resArr);
+        });
+      }
+    }
   }
 };

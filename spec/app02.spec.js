@@ -1698,31 +1698,19 @@ describe("/api", function () {
       let ref = [
         {
           ENG: "My father gave me his book.",
-          POL: [
-            "Mój ojciec dał mi jego książkę.",
-            "Mój ojciec dał mnie jego książkę.",
-          ],
+          POL: ["Mój ojciec dał mi/mnie jego książkę."],
         },
         {
           ENG: "My mother gave me her book.",
-          POL: [
-            "Moja matka dała mi jej książkę.",
-            "Moja matka dała mnie jej książkę.",
-          ],
+          POL: ["Moja matka dała mi/mnie jej książkę."],
         },
         {
           ENG: "My fathers gave me their book.",
-          POL: [
-            "Moi ojcowie dali mi ich książkę.",
-            "Moi ojcowie dali mnie ich książkę.",
-          ],
+          POL: ["Moi ojcowie dali mi/mnie ich książkę."],
         },
         {
           ENG: "My mothers gave me their book.",
-          POL: [
-            "Moje matki dały mi ich książkę.",
-            "Moje matki dały mnie ich książkę.",
-          ],
+          POL: ["Moje matki dały mi/mnie ich książkę."],
         },
         {
           ENG: "Our father gave us his book.",
