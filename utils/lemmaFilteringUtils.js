@@ -243,13 +243,6 @@ exports.selectRandLObj = (lObjs, stCh, lang) => {
       `"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"`
     );
 
-    ////alphalpha Look to remove stCh.hypernymy completely.
-    let hypernymy = lfUtils.assessHypernymy(lObj);
-    if (hypernymy) {
-      stCh.hypernymy = hypernymy;
-    }
-    ///////////////////////////////////////////////////////
-
     return lObj;
   };
 
