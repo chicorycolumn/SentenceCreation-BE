@@ -2098,102 +2098,72 @@ exports.inheritFromHeadToDependentChunk = (
   ];
 
   let doneTraitKeys = [];
-  inheritableInflectionKeys.forEach((traitKey) => {
+
+  //Treat gender & semanticGender separately, in special cases:
+  if (
+    // alpha or a vypernym, right?
+    lfUtils.checkHyper(headSelectedLemmaObject, [HY.HY]) &&
+    inheritableInflectionKeys.includes("gender")
+  ) {
+    // Hypernymy Fine Tuning 1 (HFT1)
+    // ie   If headChunk is Hypernym,   depChunk is personal pronombre,   and we are in a Gendered Language.
     if (
-      ["gender", "semanticGender"].includes(traitKey) &&
-      lfUtils.checkHyper(headSelectedLemmaObject, [HY.HY]) // alpha or a vypernym, right?
+      !gpUtils.traitValueIsMeta(headSelectedLemmaObject.gender) &&
+      gpUtils.getWordtypeShorthandStCh(dependentChunk) === "pro" &&
+      dependentChunk.specificIds.some((id) => id.split("-")[2] === "PERSONAL")
     ) {
-      if (doneTraitKeys.includes(traitKey)) {
-        return;
-      }
-
-      if (
-        gpUtils.getWordtypeShorthandStCh(dependentChunk) === "pro" &&
-        currentLanguage === "POL" &&
-        dependentChunk.specificIds.some((id) => id.split("-")[2] === "PERSONAL")
-      ) {
-        if (dependentChunk.specificIds.length > 1) {
-          consol.throw(
-            `smce More than one specificId even though specificId array includes "pro-PERSONAL"? [${dependentChunk.specificIds.join(
-              ","
-            )}]`
-          );
-        }
-
-        // Hypernymy Fine Tuning 1 (HFT1)
-        /**
-         * IF head lobj is a hypernym
-         * AND is gendered (eg "rodzic") (so in effect this means, IF it's a hypernym in a gendered language)
-         * AND depChunk is NOMINATIVE personal pronoun
-         * THEN
-         * transfer semanticGender of headChunk to be *gender* of depChunk
-         *
-         * So headChunk "rodzic" semanticGender f, would transfer to depChunk gender f so "Ja byłam".
-         *
-         * BUT
-         *
-         * IF depChunk (personal pronoun) is any other gcase
-         * THEN
-         * transfer semanticGender of headChunk to be *semanticGender* of depChunk.
-         * transfer gender of headChunk to be *gender* of depChunk. <----swde Not yet done.
-         *
-         * So headChunk "rodzic" semanticGender f, would transfer to depChunk gender m1, semanticGender f, so "go".
-         *
-         *
-         *
-         * So altogether:
-         *
-         * "SHE was a parent and I see HER."
-         * translates to
-         * "BYŁA rodzicem i widze GO."
-         *
-         */
-
-        if (gpUtils.traitValueIsMeta(headSelectedLemmaObject.gender)) {
-          /**
-           * headSelectedLemmaObject has metagender, eg "parent",
-           * so for depChunk personal pronombre here, inherit:
-           * head gender --> dep gender
-           * regardless of pronombre's gcase.
-           */
-          console.log(
-            `smcf depChunk is PERSONAL PRONOUN, setting its gender and semanticGender to`,
-            headChunk.semanticGender
-          );
-          dependentChunk.semanticGender = headChunk.semanticGender.slice();
-          dependentChunk.gender = headChunk.semanticGender.slice(); //alpha - but that's not what you've said
-        } else if (dependentChunk.gcase[0] === "nom") {
-          /**
-           * headSelectedLemmaObject is gendered, eg "rodzic" (m1)
-           * so for depChunk personal pronombre here, inherit:
-           * head semanticGender --> dep semanticGender IF dep gcase: "nom" ELSE
-           * head gender --> dep gender AND head semanticGender --> dep semanticGender IF dep gcase: !nom
-           */
-          dependentChunk.semanticGender = headChunk.semanticGender.slice();
-        } else {
-          dependentChunk.gender = headChunk.gender.slice();
-          dependentChunk.semanticGender = headChunk.semanticGender.slice();
-        }
-        doneTraitKeys.push("gender", "semanticGender");
-      }
-      if (gpUtils.getWordtypeShorthandStCh(dependentChunk) === "npe") {
-        console.log(
-          `smcg depChunk is NPE, setting its semanticGender to`,
-          headChunk.semanticGender
+      if (dependentChunk.specificIds.length > 1) {
+        consol.throw(
+          `smce More than one specificId even though specificId array includes "pro-PERSONAL"? [${dependentChunk.specificIds.join(
+            ","
+          )}]`
         );
-        dependentChunk.semanticGender = headChunk.semanticGender.slice();
-        doneTraitKeys.push(traitKey);
+      }
+      if (dependentChunk.gcase.length > 1) {
+        consol.throw(`smcf More than one gcase?`);
       }
 
-      if (doneTraitKeys.includes(traitKey)) {
-        return;
-      }
+      /** HFT1a
+       * If depChunk is NOMINATIVE personal pronoun vs ANY OTHER gcase.
+       *
+       * So headChunk "rodzic"  *semanticGender* f    transfers to  NOM  depChunk *gender*    so "Ja byłam".
+       * So headChunk "rodzic"     *gender*   m1      transfers to  ~NOM depChunk *gender*    so "go".
+       *
+       * So altogether:   "SHE was a parent and I see HER."   translates to   "BYŁA rodzicem i widze GO."
+       */
+
+      dependentChunk.semanticGender = headChunk.semanticGender.slice();
+      dependentChunk.gender =
+        dependentChunk.gcase[0] === "nom"
+          ? headChunk.semanticGender.slice()
+          : headChunk.gender.slice();
+
+      doneTraitKeys.push("gender", "semanticGender");
     }
 
+    if (gpUtils.getWordtypeShorthandStCh(dependentChunk) === "npe") {
+      /** HFT1b
+       * If depChunk is npe (and headChunk is hypernym).
+       *
+       * For a sentence like "My parent(head) is a woman(dep)."
+       * don't transfer "rodzic" gender m1 to "woman"
+       * instead just "rodzic" semanticGender f to "woman"
+       */
+
+      dependentChunk.gender = headChunk.semanticGender.slice();
+      dependentChunk.semanticGender = headChunk.semanticGender.slice();
+
+      doneTraitKeys.push("gender", "semanticGender");
+    }
+  }
+
+  inheritableInflectionKeys.forEach((traitKey) => {
+    if (doneTraitKeys.includes(traitKey)) {
+      return;
+    }
     consol.log(
       `kwwm inheritFromHeadToDependentChunk: "${headChunk.chunkId}" to "${dependentChunk.chunkId}". traitKey "${traitKey}".`
     );
-    //Hard change.
     if (
       headChunk[traitKey] &&
       !(
@@ -2202,14 +2172,9 @@ exports.inheritFromHeadToDependentChunk = (
       )
     ) {
       let traitValueArr = headChunk[traitKey].slice(0);
-
       dependentChunk[traitKey] = traitValueArr;
     }
   });
-
-  consol.log(
-    "ttez At the end of inheritFromHeadToDependentChunk, we must again a'djustVirility, which we also did in allLangUtils.preprocessStructureChunks earlier."
-  );
 
   consol.log(
     "wdim inheritFromHeadToDependentChunk: dependentChunk AFTERWARDS of inheritFromHeadToDependentChunk: ",
