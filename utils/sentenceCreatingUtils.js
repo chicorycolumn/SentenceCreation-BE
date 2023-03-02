@@ -1051,7 +1051,7 @@ exports.coverBothGendersForPossessivesOfHypernyms = (
   drillPath,
   selectedLemmaObject
 ) => {
-  /**  Hypernymy Fine Tuning 2 (HFT2)
+  /** Hypernymy Fine Tuning 2 (HFT2)
    *
    * Run this fxn only for depChunks which are a) POSSESSIVE pronombres or b) !NOM PERSONAL pronombres.
    *
@@ -1092,7 +1092,12 @@ exports.coverBothGendersForPossessivesOfHypernyms = (
       );
       if (
         headOutputUnit &&
-        lfUtils.checkHyper(headOutputUnit.selectedLemmaObject, [HY.HY]) &&
+        lfUtils.checkHyper(headOutputUnit.selectedLemmaObject, [
+          HY.HY,
+          HY.VY,
+        ]) &&
+        //NOTE: Originally the cond above was only [HY.HY], but I believe it should include HY.VY.
+        //But if errors arise re vypernyms, try reverting this.
         firstNumberDrillPathUnit &&
         firstNumberDrillPathUnit[1] === "singular"
       ) {
@@ -2103,9 +2108,11 @@ exports.inheritFromHeadToDependentChunk = (
 
   // Hypernymy Fine Tuning 1 (HFT1)
   //Treat gender & semanticGender separately, in special cases.
+
+  //NOTE: Originally the cond below was only [HY.HY], but I believe it should include HY.VY.
+  //But if errors arise re vypernyms, try reverting this.
   if (
-    // alpha or a vypernym, right?
-    lfUtils.checkHyper(headSelectedLemmaObject, [HY.HY]) &&
+    lfUtils.checkHyper(headSelectedLemmaObject, [HY.HY, HY.VY]) &&
     inheritableInflectionKeys.includes("gender")
   ) {
     /** HFT1a
@@ -2170,7 +2177,6 @@ exports.inheritFromHeadToDependentChunk = (
      * don't transfer "rodzic" gender m1 to "woman"
      * instead just "rodzic" semanticGender f to "woman"
      */
-
     if (gpUtils.getWordtypeShorthandStCh(dependentChunk) === "npe") {
       dependentChunk.gender = headChunk.semanticGender.slice();
       dependentChunk.semanticGender = headChunk.semanticGender.slice();
