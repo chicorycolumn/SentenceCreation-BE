@@ -2112,28 +2112,6 @@ exports.inheritFromHeadToDependentChunk = (
         currentLanguage === "POL" &&
         dependentChunk.specificIds.some((id) => id.split("-")[2] === "PERSONAL")
       ) {
-        // Hypernymy Fine Tuning 1
-        /**
-         * IF head lobj is a hypernym
-         * AND is gendered (eg "rodzic")
-         * AND depChunk is NOMINATIVE personal pronoun
-         * THEN
-         * transfer semanticGender of headChunk to be !gender! of depChunk
-         *
-         * BUT
-         *
-         * IF depChunk is any other gcase personal pronoun
-         * THEN
-         * transfer semanticGender of headChunk to be !semanticGender! of depChunk.
-         *
-         * Because
-         *
-         * "She is a parent and I see her."
-         * translates to
-         * "ONA jest rodzicem i widze` GO."
-         *
-         */
-
         if (dependentChunk.specificIds.length > 1) {
           consol.throw(
             `smce More than one specificId even though specificId array includes "pro-PERSONAL"? [${dependentChunk.specificIds.join(
@@ -2142,12 +2120,36 @@ exports.inheritFromHeadToDependentChunk = (
           );
         }
 
+        // Hypernymy Fine Tuning 1 (HFT1)
         /**
-         * "She is a parent and I see her."
+         * IF head lobj is a hypernym
+         * AND is gendered (eg "rodzic") (so in effect this means, IF it's a hypernym in a gendered language)
+         * AND depChunk is NOMINATIVE personal pronoun
+         * THEN
+         * transfer semanticGender of headChunk to be *gender* of depChunk
+         *
+         * So headChunk "rodzic" semanticGender f, would transfer to depChunk gender f so "Ja byłam".
+         *
+         * BUT
+         *
+         * IF depChunk (personal pronoun) is any other gcase
+         * THEN
+         * transfer semanticGender of headChunk to be *semanticGender* of depChunk.
+         * transfer gender of headChunk to be *gender* of depChunk. <----swde Not yet done.
+         *
+         * So headChunk "rodzic" semanticGender f, would transfer to depChunk gender m1, semanticGender f, so "go".
+         *
+         *
+         *
+         * So altogether:
+         *
+         * "SHE was a parent and I see HER."
          * translates to
-         * "ONA jest rodzicem i widze` GO."
+         * "BYŁA rodzicem i widze GO."
+         *
          */
-        if (gpUtils.traitValueIsMeta([headSelectedLemmaObject.gender])) {
+
+        if (gpUtils.traitValueIsMeta(headSelectedLemmaObject.gender)) {
           /**
            * headSelectedLemmaObject has metagender, eg "parent",
            * so for depChunk personal pronombre here, inherit:

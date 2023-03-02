@@ -477,7 +477,10 @@ exports.traitValueIsMeta = (traitValue, chunk, traitKey) => {
     traitValue = chunk[traitKey];
   }
 
-  if (Array.isArray(traitValue) && traitValue.length === 1) {
+  if (Array.isArray(traitValue)) {
+    if (traitValue.length !== 1) {
+      consol.throw("kngh");
+    }
     traitValue = traitValue[0];
   }
 
