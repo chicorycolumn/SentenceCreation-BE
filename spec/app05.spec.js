@@ -206,6 +206,44 @@ const dummy73b = [
     ENG: ["Red girls."],
   },
 ];
+const _124bRefPolEng = [
+  {
+    ENG: [
+      "I was a good person.",
+      "I was being a good person.",
+      "I have been a good person.",
+      "I had been a good person.",
+    ],
+    POL: ["Ja byłam dobrą osobą.", "Ja byłem dobrą osobą."],
+  },
+  {
+    ENG: [
+      "We were good people.",
+      "We were being good people.",
+      "We have been good people.",
+      "We had been good people.",
+    ],
+    POL: ["My byłyśmy dobrymi osobami.", "My byliśmy dobrymi osobami."],
+  },
+];
+const _124bRefEngPol = [
+  {
+    ENG: ["I (female) was a good person."],
+    POL: ["Ja byłam dobrą osobą."],
+  },
+  {
+    ENG: ["I (male) was a good person."],
+    POL: ["Ja byłem dobrą osobą."],
+  },
+  {
+    ENG: ["We (males) were good people.", "We (mixed) were good people."],
+    POL: ["My byliśmy dobrymi osobami."],
+  },
+  {
+    ENG: ["We (females) were good people."],
+    POL: ["My byłyśmy dobrymi osobami."],
+  },
+];
 
 describe("/api", function () {
   this.timeout(7000);
@@ -217,11 +255,28 @@ describe("/api", function () {
     it("#pal27-01b GET 200 YES: Engpol. Dziecko should translate as Child and also Baby.", () => {
       return runPaletteTest("ENG", "POL", "dummy73a", dummy73a);
     });
-    it("#pal27-02a GET 200 YES: Poleng. Dziecko selectable by gender f.", () => {
+    it("#pal27-01c GET 200 YES: Poleng. Dziecko selectable by gender f.", () => {
       return runPaletteTest("POL", "ENG", "dummy73b", dummy73b);
     });
-    it("#pal27-02b GET 200 YES: Engpol. Dziecko selectable by gender f.", () => {
+    it("#pal27-01d GET 200 YES: Engpol. Dziecko selectable by gender f.", () => {
       return runPaletteTest("ENG", "POL", "dummy73b", dummy73b);
+    });
+    // Beta: What proportions does this come back singular vs plural? I would like equal.
+    it("#pal27-02a GET 200 YES: Poleng. I was a good person - masculine I should still be dobrą osobą.", () => {
+      return runPaletteTest(
+        "POL",
+        "ENG",
+        "124b I was a good person",
+        _124bRefPolEng
+      );
+    });
+    it("#pal27-02b GET 200 YES: Engpol. I was a good person - masculine I should still be dobrą osobą.", () => {
+      return runPaletteTest(
+        "ENG",
+        "POL",
+        "124b I was a good person",
+        _124bRefEngPol
+      );
     });
   });
 

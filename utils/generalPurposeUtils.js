@@ -475,3 +475,19 @@ exports.traitValueIsMeta = (traitValue, chunk, traitKey) => {
 
   return traitValue[0] === "_";
 };
+
+exports.checkNoDuplicateChunks = (
+  label = "yggf",
+  obj,
+  isOutputArray,
+  returnBool
+) => {
+  let stChs = isOutputArray ? obj.map((ou) => ou.structureChunk) : obj;
+  let ids = stChs.map((stCh) => stCh.chunkId);
+  if (Array.from(new Set(ids)).length !== ids.length) {
+    if (returnBool) {
+      return true;
+    }
+    consol.throw(`${label} Contains duplicates: [${ids.join(", ")}]`);
+  }
+};

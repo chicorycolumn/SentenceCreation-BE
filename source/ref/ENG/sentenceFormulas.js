@@ -29,7 +29,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-        specificIds: ["eng-npe-001-woman"],
+        specificIds: ["^eng-npe-001-woman"],
         number: ["singular", "plural"],
         gender: [],
       },
@@ -53,7 +53,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-        specificIds: ["eng-npe-001-woman"],
+        specificIds: ["^eng-npe-001-woman"],
         number: ["singular", "plural"],
       },
       {
@@ -401,7 +401,7 @@ exports.sentenceFormulasBank = [
       { chunkId: "fix-1", chunkValue: "the" },
       {
         chunkId: "npe-1",
-        specificIds: ["eng-npe-001-woman"],
+        specificIds: ["^eng-npe-001-woman"],
       },
       {
         chunkId: "ver-1",
@@ -585,7 +585,6 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["family"],
-
         number: ["singular"],
       },
       {
@@ -907,9 +906,9 @@ exports.sentenceFormulasBank = [
     ],
   },
   {
-    sentenceFormulaSymbol: "116 My doctor was a woman",
-    sentenceFormulaId: "ENG-116",
-    equivalents: { POL: ["POL-116"] },
+    sentenceFormulaSymbol: "116b My doctor was a woman specifically",
+    sentenceFormulaId: "ENG-116b",
+    equivalents: { POL: ["POL-116b"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -941,13 +940,55 @@ exports.sentenceFormulasBank = [
       { chunkId: "fix-1-a", chunkValue: "a" },
       {
         chunkId: "npe-2-woman",
-
+        agreeWith: "npe-1-doctor",
         number: ["singular"],
-        specificIds: ["eng-npe-001-woman"],
+        specificIds: ["^eng-npe-001-woman"],
       },
     ],
     primaryOrders: [
       ["pro-2-my", "npe-1-doctor", "ver-1-was", "fix-1-a", "npe-2-woman"],
+    ],
+  },
+  {
+    sentenceFormulaSymbol: "116c My doctor was a woman/man/person",
+    sentenceFormulaId: "ENG-116c",
+    equivalents: { POL: ["POL-116c"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificIds: ["eng-pro-PERSONAL"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "pro-2-my",
+        form: ["determiner"],
+        specificIds: ["eng-pro-POSSESSIVE"],
+        agreeWith: "pro-1-I",
+      },
+      {
+        chunkId: "npe-1-doctor",
+        specificIds: ["eng-npe-005-doctor"],
+      },
+      {
+        chunkId: "ver-1-was",
+        agreeWith: "npe-1-doctor",
+        specificIds: ["eng-ver-001-be"],
+        tenseDescription: ["past simple"],
+      },
+      {
+        chunkId: "art-1-a",
+        form: ["indefinite"],
+        agreeWith: "npe-2-woman",
+      },
+      {
+        chunkId: "npe-2-woman",
+        agreeWith: "npe-1-doctor",
+        specificIds: ["eng-npe-001-woman"],
+      },
+    ],
+    primaryOrders: [
+      ["pro-2-my", "npe-1-doctor", "ver-1-was", "art-1-a", "npe-2-woman"],
     ],
   },
   {
@@ -1012,9 +1053,9 @@ exports.sentenceFormulasBank = [
       { chunkId: "fix-1-a", chunkValue: "a" },
       {
         chunkId: "npe-2-woman",
-
+        agreeWith: "npe-1-doctor",
         number: ["singular"],
-        specificIds: ["eng-npe-001-woman"],
+        specificIds: ["^eng-npe-001-woman"],
       },
     ],
     primaryOrders: [
@@ -1022,7 +1063,7 @@ exports.sentenceFormulasBank = [
     ],
   },
   {
-    sentenceFormulaSymbol: "116a My doctor's doctor was a woman",
+    sentenceFormulaSymbol: "116a My doctor's doctor was a woman specifically",
     sentenceFormulaId: "ENG-116a",
     equivalents: { POL: ["POL-116a"] },
     sentenceStructure: [
@@ -1046,7 +1087,6 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-2-doctor",
-
         number: ["singular"],
         specificIds: ["eng-npe-005-doctor"],
         gender: ["f"],
@@ -1061,9 +1101,8 @@ exports.sentenceFormulasBank = [
       { chunkId: "fix-1-a", chunkValue: "a" },
       {
         chunkId: "npe-3-woman",
-
-        number: ["singular"],
-        specificIds: ["eng-npe-001-woman"],
+        agreeWith: "npe-2-doctor",
+        specificIds: ["^eng-npe-001-woman"],
       },
     ],
     primaryOrders: [
@@ -1359,7 +1398,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-1-woman",
-        specificIds: ["eng-npe-001-woman"],
+        specificIds: ["^eng-npe-001-woman"],
       },
       {
         chunkId: "ver-1-see",
@@ -1483,6 +1522,7 @@ exports.sentenceFormulasBank = [
         chunkId: "pro-1-I",
         specificIds: ["eng-pro-PERSONAL"],
         person: ["3per"],
+        number: ["singular"],
       },
       {
         chunkId: "ver-1-am",
@@ -1529,6 +1569,43 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1-person",
         specificIds: ["eng-npe-005-doctor"],
+      },
+    ],
+    primaryOrders: [
+      ["pro-1-I", "ver-1-am", "art-1-a", "adj-1-good", "npe-1-person"],
+    ],
+  },
+  {
+    sentenceFormulaSymbol: "124b I was a good person",
+    sentenceFormulaId: "ENG-124b",
+    equivalents: { POL: ["POL-124b"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificIds: ["eng-pro-PERSONAL"],
+        person: ["1per"],
+        agreeWith: "npe-1-person",
+        giveMeTheseClarifiersOfMyHeadChunk: ["gender", "number"],
+      },
+      {
+        chunkId: "ver-1-am",
+        specificIds: ["eng-ver-001-be"],
+        agreeWith: "pro-1-I",
+        tenseDescription: ["past simple"],
+      },
+      {
+        chunkId: "art-1-a",
+        form: ["indefinite"],
+        agreeWith: "npe-1-person",
+      },
+      {
+        chunkId: "adj-1-good",
+        specificIds: ["eng-adj-004-good"],
+        agreeWith: "npe-1-person",
+      },
+      {
+        chunkId: "npe-1-person",
+        specificIds: ["^eng-npe-001-person-£"],
       },
     ],
     primaryOrders: [

@@ -113,7 +113,7 @@ exports.getMaterialsCopies = (
 };
 
 exports.selectDependentChunkWordsAndAddToOutputArray = (
-  etiquette,
+  dependenceTypeToUpdate,
   explodedOutputArraysWithHeads,
   grandOutputArray,
   headChunks,
@@ -139,7 +139,7 @@ exports.selectDependentChunkWordsAndAddToOutputArray = (
           return;
         }
 
-        if (headOutputUnit.etiquette === etiquette) {
+        if (headOutputUnit.dependenceType === dependenceTypeToUpdate) {
           // Now we update the head structure chunks with the details from their respective selectedWords.
           lfUtils.updateStructureChunk(
             headOutputUnit,
@@ -200,13 +200,40 @@ exports.selectDependentChunkWordsAndAddToOutputArray = (
               );
 
               thisHeadOutputArrayIsDeleted = true; // effectively deleting this headOutputArray.
-            } else {
-              uUtils.addToArrayAtKey(
-                headOutputUnit,
-                "possibleDependentOutputArrays",
-                allPossOutputUnits_dependent
-              );
+              return;
             }
+
+            if (headOutputUnit.possibleDependentOutputArrays) {
+              let arraysOfAlreadyChunkIds =
+                headOutputUnit.possibleDependentOutputArrays.map((arr) =>
+                  arr.map((ou) => ou.structureChunk.chunkId)
+                );
+              let proposedAddition = allPossOutputUnits_dependent.map(
+                (ou) => ou.structureChunk.chunkId
+              );
+              if (
+                arraysOfAlreadyChunkIds.some((arr) =>
+                  proposedAddition.some((chunkId) => arr.includes(chunkId))
+                )
+              ) {
+                console.log(
+                  "rhne I refuse the proposal to add allPossOutputUnits_dependent",
+                  proposedAddition,
+                  `to possibleDependentOutputArrays for headChunk "${headOutputUnit.structureChunk.chunkId}"`,
+                  arraysOfAlreadyChunkIds
+                );
+                consol.throw(
+                  `rhne Duplication of possibleDependentOutputArrays for headChunk "${headOutputUnit.structureChunk.chunkId}", see above.`
+                );
+                return;
+              }
+            }
+
+            uUtils.addToArrayAtKey(
+              headOutputUnit,
+              "possibleDependentOutputArrays",
+              allPossOutputUnits_dependent
+            );
           });
         }
       });
@@ -277,7 +304,7 @@ exports.processSentenceFormula = (
 
   //STEP ONE: Select HEAD words and add to result array.
   let { headChunks, dependentHeadChunks, dependentChunks, otherChunks } =
-    scUtils.sortStructureChunks(sentenceStructure);
+    scUtils.sortStructureChunks(sentenceStructure, false, currentLanguage);
 
   let headOutputUnitArrays = [];
 
@@ -325,11 +352,6 @@ exports.processSentenceFormula = (
       null
     );
 
-    uUtils.validateQuasiEmptyOutputUnitSemanticGender(
-      [allPossOutputUnits_head],
-      "processSentenceFormula headChunks 1"
-    );
-
     if (
       errorInSentenceCreation.errorMessage ||
       !allPossOutputUnits_head ||
@@ -360,6 +382,11 @@ exports.processSentenceFormula = (
         errorInSentenceCreation,
       };
     } else {
+      uUtils.validateQuasiEmptyOutputUnitSemanticGender(
+        [allPossOutputUnits_head],
+        "processSentenceFormula headChunks 1"
+      );
+
       headOutputUnitArrays.push(allPossOutputUnits_head);
     }
   });
@@ -390,18 +417,18 @@ exports.processSentenceFormula = (
   };
 
   const _selectDependentChunkWordsAndAddToOutputArray = (
-    etiquette,
-    explodedOutputArraysWithHeads,
-    grandOutputArray,
-    headChunks,
-    dependentChunks
+    _dependenceTypeToUpdate,
+    _explodedOutputArraysWithHeads,
+    _grandOutputArray,
+    _headChunks,
+    _dependentChunks
   ) => {
     return scUtils.selectDependentChunkWordsAndAddToOutputArray(
-      etiquette,
-      explodedOutputArraysWithHeads,
-      grandOutputArray,
-      headChunks,
-      dependentChunks,
+      _dependenceTypeToUpdate,
+      _explodedOutputArraysWithHeads,
+      _grandOutputArray,
+      _headChunks,
+      _dependentChunks,
       currentLanguage,
       isCounterfax,
       useDummyWords,
@@ -419,6 +446,7 @@ exports.processSentenceFormula = (
   if (dependentHeadChunks.length) {
     // If there are head chunks that agreeWith other head chunks, do these first.
     let halfwayGrandOutputArray = [];
+
     _selectDependentChunkWordsAndAddToOutputArray(
       "head",
       explodedOutputArraysWithHeads,
@@ -428,15 +456,29 @@ exports.processSentenceFormula = (
     );
 
     // Now that all head chunks are done, do the dependentChunks.
+
+    halfwayGrandOutputArray = uUtils.copyWithoutReference(
+      halfwayGrandOutputArray
+    );
+
+    halfwayGrandOutputArray.forEach((oua) => {
+      oua.forEach((ou) => {
+        if (ou.dependenceType === "dependent") {
+          ou.dependenceType = "dependentHead";
+        }
+      });
+    });
+
     _selectDependentChunkWordsAndAddToOutputArray(
-      "dependent",
+      "dependentHead",
       halfwayGrandOutputArray,
       grandOutputArray,
-      [...headChunks, dependentHeadChunks],
+      [...headChunks, ...dependentHeadChunks],
       dependentChunks
     );
   } else {
     // There are no head chunks which depend on other head chunk, so just do depependentChunks as normal.
+
     _selectDependentChunkWordsAndAddToOutputArray(
       "head",
       explodedOutputArraysWithHeads,
@@ -692,9 +734,7 @@ exports.processSentenceFormula = (
 
   grandOutputArray.forEach((outputArray, outputArrayIndex) => {
     outputArray.forEach((outputUnit) => {
-      let { structureChunk } = outputUnit;
-
-      if (gpUtils.getWordtypeStCh(structureChunk) === "fixed") {
+      if (gpUtils.getWordtypeStCh(outputUnit.structureChunk) === "fixed") {
         return;
       }
 
@@ -713,7 +753,9 @@ exports.processSentenceFormula = (
 
     //Decanting otherChunks if they have multiple traitValues.
     let { otherChunks } = scUtils.sortStructureChunks(
-      outputArray.map((outputUnit) => outputUnit.structureChunk)
+      outputArray.map((outputUnit) => outputUnit.structureChunk),
+      false,
+      `${currentLanguage}-other`
     );
     otherChunks.forEach((otherChunk) => {
       let selectedLObj = outputArray.find(
@@ -1014,35 +1056,61 @@ exports.coverBothGendersForPossessivesOfHypernyms = (
     gpUtils.getWordtypeStCh(structureChunk) === "pronombre" &&
     structureChunk.agreeWith
   ) {
-    const getHeadOutputUnit = (stCh, outputArr) => {
-      return outputArr.find(
-        (ou) => ou.structureChunk.chunkId === stCh.agreeWith
-      );
-    };
-    let headOutputUnit = getHeadOutputUnit(structureChunk, orderedOutputArr);
-    let firstNumberDrillPathUnit = drillPath.find((dpu) => dpu[0] === "number");
+    if (!structureChunk.gcase) {
+      consol.throw(`gibp`);
+    }
+    if (structureChunk.gcase.length !== 1) {
+      consol.throw(`gibq`);
+    }
+
     if (
-      headOutputUnit &&
-      lfUtils.checkHyper(headOutputUnit.selectedLemmaObject, [HY.HY]) &&
-      firstNumberDrillPathUnit &&
-      firstNumberDrillPathUnit[1] === "singular"
+      // Hypernymy Fine Tuning 2
+      /**
+       * "acc"
+       * because we want
+       * "Jest rodzic i widziałem GO." for both semanticGenders of rodzic. (GO is acc pronombre)
+       *
+       * "$POSSESSIVE"
+       * because we want
+       * "Rodzic dał mi JEGO lustro." for both semanticGenders of rodzic. (JEGO is acc possessive pronombre)
+       *
+       * But we DON'T WANT
+       * "ON jest rodzicem." for semanticGender f. (ON/ONA is nom pronombre)
+       * So that's why we're not doing this for all pronouns, only with these conditions.
+       */
+      selectedLemmaObject.lemma === "$POSSESSIVE" ||
+      structureChunk.gcase[0] === "acc"
     ) {
-      let drillPathGenderFlipped = uUtils.copyWithoutReference(drillPath);
-      let firstGenderDrillPathUnit = drillPathGenderFlipped.find(
-        (dpu) => dpu[0] === "gender"
+      let headOutputUnit = otUtils.getHeadOutputUnit(
+        structureChunk,
+        orderedOutputArr
       );
-      firstGenderDrillPathUnit[1] =
-        firstGenderDrillPathUnit[1] === "f" ? "m" : "f";
+      let firstNumberDrillPathUnit = drillPath.find(
+        (dpu) => dpu[0] === "number"
+      );
+      if (
+        headOutputUnit &&
+        lfUtils.checkHyper(headOutputUnit.selectedLemmaObject, [HY.HY]) &&
+        firstNumberDrillPathUnit &&
+        firstNumberDrillPathUnit[1] === "singular"
+      ) {
+        let drillPathGenderFlipped = uUtils.copyWithoutReference(drillPath);
+        let firstGenderDrillPathUnit = drillPathGenderFlipped.find(
+          (dpu) => dpu[0] === "gender"
+        );
+        firstGenderDrillPathUnit[1] =
+          firstGenderDrillPathUnit[1] === "f" ? "m" : "f";
 
-      let res = uUtils.copyWithoutReference(selectedLemmaObject).inflections;
-      drillPathGenderFlipped.forEach((drillPathUnit) => {
-        res = res[drillPathUnit[1]];
-        if (!res) {
-          consol.throw("ndln");
-        }
-      });
+        let res = uUtils.copyWithoutReference(selectedLemmaObject).inflections;
+        drillPathGenderFlipped.forEach((drillPathUnit) => {
+          res = res[drillPathUnit[1]];
+          if (!res) {
+            consol.throw("ndln");
+          }
+        });
 
-      return res;
+        return res;
+      }
     }
   }
 };
@@ -1056,7 +1124,7 @@ exports.selectWordVersions = (
   let selectedWordsArr = [];
   const langUtils = require(`../source/all/${currentLanguage}/langUtils.js`);
 
-  //STEP 0: If in Q mode, bring annos in from skeleton units.
+  //STEP 0 part A: If in Q mode, bring annos in from skeleton units.
   if (!multipleMode) {
     orderedOutputArr.forEach((outputUnit, outputUnitIndex) => {
       if (outputUnit.isSkeleton) {
@@ -1138,6 +1206,42 @@ exports.selectWordVersions = (
       }
     });
   }
+
+  //STEP 0 part B: Transfer annos between chunks if asked to.
+  orderedOutputArr.forEach((depOutputUnit, outputUnitIndex) => {
+    if (depOutputUnit.structureChunk.giveMeTheseClarifiersOfMyHeadChunk) {
+      let headOutputUnit = orderedOutputArr.find(
+        (ou) =>
+          ou.structureChunk.chunkId === depOutputUnit.structureChunk.agreeWith
+      );
+      if (!headOutputUnit) {
+        consol.throw(
+          `wihb Tried to transfer annos but no headChunk for ${depOutputUnit.structureChunk.chunkId}'s agreeWith: "${depOutputUnit.structureChunk.agreeWith}".`
+        );
+      }
+
+      if (headOutputUnit.firstStageAnnotationsObj) {
+        if (!depOutputUnit.firstStageAnnotationsObj) {
+          depOutputUnit.firstStageAnnotationsObj = {};
+        }
+
+        depOutputUnit.structureChunk.giveMeTheseClarifiersOfMyHeadChunk.forEach(
+          (annoKey) => {
+            let annoValue = headOutputUnit.firstStageAnnotationsObj[annoKey];
+            if (annoValue) {
+              if (depOutputUnit.firstStageAnnotationsObj[annoKey]) {
+                consol.throw(
+                  `wihc Tried to transfer "${annoKey}" anno from ${headOutputUnit.structureChunk.chunkId} to ${depOutputUnit.structureChunk.chunkId} but it already had that anno.`
+                );
+              }
+              depOutputUnit.firstStageAnnotationsObj[annoKey] = annoValue;
+              delete headOutputUnit.firstStageAnnotationsObj[annoKey];
+            }
+          }
+        );
+      }
+    }
+  });
 
   //STEP 1: Select and push.
 
@@ -1266,8 +1370,6 @@ exports.conformAnswerStructureToQuestionStructure = (
         "outputUnit.structureChunk.gender": outputUnit.structureChunk.gender,
         "outputUnit.structureChunk.semanticGender":
           outputUnit.structureChunk.semanticGender,
-        "outputUnit.structureChunk.hypernymy":
-          outputUnit.structureChunk.hypernymy,
       });
     });
     consol.logSpecial(
@@ -1910,7 +2012,6 @@ exports.conformAnswerStructureToQuestionStructure = (
         "answerStCh.demandedIds": answerStCh.demandedIds,
         "answerStCh.gender": answerStCh.gender,
         "answerStCh.semanticGender": answerStCh.semanticGender,
-        "answerStCh.hypernymy": answerStCh.hypernymy,
       });
     });
     consol.logSpecial(
@@ -1996,7 +2097,97 @@ exports.inheritFromHeadToDependentChunk = (
     ...hybridSelectors,
   ];
 
+  let doneTraitKeys = [];
   inheritableInflectionKeys.forEach((traitKey) => {
+    if (
+      ["gender", "semanticGender"].includes(traitKey) &&
+      lfUtils.checkHyper(headSelectedLemmaObject, [HY.HY]) // alpha or a vypernym, right?
+    ) {
+      if (doneTraitKeys.includes(traitKey)) {
+        return;
+      }
+
+      if (
+        gpUtils.getWordtypeShorthandStCh(dependentChunk) === "pro" &&
+        currentLanguage === "POL" &&
+        dependentChunk.specificIds.some((id) => id.split("-")[2] === "PERSONAL")
+      ) {
+        // Hypernymy Fine Tuning 1
+        /**
+         * IF head lobj is a hypernym
+         * AND is gendered (eg "rodzic")
+         * AND depChunk is NOMINATIVE personal pronoun
+         * THEN
+         * transfer semanticGender of headChunk to be !gender! of depChunk
+         *
+         * BUT
+         *
+         * IF depChunk is any other gcase personal pronoun
+         * THEN
+         * transfer semanticGender of headChunk to be !semanticGender! of depChunk.
+         *
+         * Because
+         *
+         * "She is a parent and I see her."
+         * translates to
+         * "ONA jest rodzicem i widze` GO."
+         *
+         */
+
+        if (dependentChunk.specificIds.length > 1) {
+          consol.throw(
+            `smce More than one specificId even though specificId array includes "pro-PERSONAL"? [${dependentChunk.specificIds.join(
+              ","
+            )}]`
+          );
+        }
+
+        /**
+         * "She is a parent and I see her."
+         * translates to
+         * "ONA jest rodzicem i widze` GO."
+         */
+        if (gpUtils.traitValueIsMeta([headSelectedLemmaObject.gender])) {
+          /**
+           * headSelectedLemmaObject has metagender, eg "parent",
+           * so for depChunk personal pronombre here, inherit:
+           * head gender --> dep gender
+           * regardless of pronombre's gcase.
+           */
+          console.log(
+            `smcf depChunk is PERSONAL PRONOUN, setting its gender and semanticGender to`,
+            headChunk.semanticGender
+          );
+          dependentChunk.semanticGender = headChunk.semanticGender.slice();
+          dependentChunk.gender = headChunk.semanticGender.slice(); //alpha - but that's not what you've said
+        } else if (dependentChunk.gcase[0] === "nom") {
+          /**
+           * headSelectedLemmaObject is gendered, eg "rodzic" (m1)
+           * so for depChunk personal pronombre here, inherit:
+           * head semanticGender --> dep semanticGender IF dep gcase: "nom" ELSE
+           * head gender --> dep gender AND head semanticGender --> dep semanticGender IF dep gcase: !nom
+           */
+          dependentChunk.semanticGender = headChunk.semanticGender.slice();
+        } else {
+          dependentChunk.gender = headChunk.gender.slice();
+          dependentChunk.semanticGender = headChunk.semanticGender.slice();
+        }
+        doneTraitKeys.push("gender", "semanticGender");
+      }
+      if (gpUtils.getWordtypeShorthandStCh(dependentChunk) === "npe") {
+        console.log(
+          `smcg depChunk is NPE, setting its semanticGender to`,
+          headChunk.semanticGender
+        );
+        dependentChunk.semanticGender = headChunk.semanticGender.slice();
+        doneTraitKeys.push(traitKey);
+      }
+
+      if (doneTraitKeys.includes(traitKey)) {
+        return;
+      }
+    }
+
     consol.log(
       `kwwm inheritFromHeadToDependentChunk: "${headChunk.chunkId}" to "${dependentChunk.chunkId}". traitKey "${traitKey}".`
     );
@@ -2014,13 +2205,6 @@ exports.inheritFromHeadToDependentChunk = (
     }
   });
 
-  // if (
-  //   gpUtils.getWordtypeStCh(dependentChunk) === "pronombre" &&
-  //   headChunk.semanticGender
-  // ) {
-  //   dependentChunk["gender"] = headChunk.semanticGender.slice();
-  // }
-
   consol.log(
     "ttez At the end of inheritFromHeadToDependentChunk, we must again a'djustVirility, which we also did in allLangUtils.preprocessStructureChunks earlier."
   );
@@ -2033,7 +2217,8 @@ exports.inheritFromHeadToDependentChunk = (
 
 exports.sortStructureChunks = (
   sentenceStructure,
-  separateDependentsAndPHDs
+  separateDependentsAndPHDs,
+  label
 ) => {
   let headIds = Array.from(
     new Set(sentenceStructure.map((chunk) => chunk.agreeWith).filter((x) => x))
@@ -2088,12 +2273,12 @@ exports.sortStructureChunks = (
     (chunk) => !doneIds.includes(chunk.chunkId)
   );
 
-  consol.log("fafo sortStructureChunks END", {
-    headChunks,
-    dependentHeadChunks,
-    dependentChunks,
-    PHDChunks,
-    otherChunks,
+  consol.logSpecial(1, `\nfafo sortStructureChunks ${label}`, {
+    headChunks: headChunks.map((stCh) => stCh.chunkId),
+    dependentHeadChunks: dependentHeadChunks.map((stCh) => stCh.chunkId),
+    dependentChunks: dependentChunks.map((stCh) => stCh.chunkId),
+    PHDChunks: PHDChunks.map((stCh) => stCh.chunkId),
+    otherChunks: otherChunks.map((stCh) => stCh.chunkId),
   });
 
   let res = {

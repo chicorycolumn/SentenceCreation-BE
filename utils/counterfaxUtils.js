@@ -459,7 +459,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           ["semanticGender"].forEach((genderTraitKey) => {
             //Garibaldi part 2
             if (
-              [HY.VY].includes(stChToCounterfax.hypernymy) &&
+              [HY.VY].includes(stChToCounterfax.hypernymy) && //alphalpha Look to remove stCh.hypernymy completely.
               assignment.traitKey === genderTraitKey &&
               ["f", "nonvirile"].includes(assignment.traitValue)
             ) {

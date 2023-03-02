@@ -188,6 +188,29 @@ exports.wordsBank = {
         adverb: false,
       },
     },
+    {
+      //selectors
+      lemma: "bueno",
+      id: "spa-adj-002-bueno",
+      //notes
+
+      //inflections
+      inflections: {
+        simple: {
+          singular: {
+            m: "bueno", //Gamma, before nouns this is "buen" so need terminus obj here.
+            f: "buena",
+          },
+          plural: {
+            virile: "buenos",
+            nonvirile: "buenas",
+          },
+        },
+        comparative: "mejor",
+        superlative: true, // Gamma programmatically build this once gender is known.
+        adverb: "bien",
+      },
+    },
   ],
   nco: [
     {

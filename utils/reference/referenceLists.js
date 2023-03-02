@@ -602,6 +602,10 @@ exports.structureChunkTraits = {
         nounPerson: ["m", "m1", "m2", "m3", "f", "virile", "nonvirile"],
       },
     },
+    giveMeTheseClarifiersOfMyHeadChunk: {
+      expectedTypeOnStCh: "array",
+      ultimatelyMultipleTraitValuesOkay: true,
+    },
   },
   POL: {
     //

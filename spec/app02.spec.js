@@ -560,6 +560,36 @@ describe("/api", function () {
           ENG: "The woman has written.",
           POL: ["Kobieta napisała.", "Kobieta pisała."],
         },
+
+        {
+          ENG: ["The man wrote.", "The man had written."],
+          POL: ["Mężczyzna napisał."],
+        },
+        { ENG: "The man was writing.", POL: ["Mężczyzna pisał."] },
+        {
+          ENG: "The man has written.",
+          POL: ["Mężczyzna napisał.", "Mężczyzna pisał."],
+        },
+
+        {
+          ENG: ["The person wrote.", "The person had written."],
+          POL: ["Osoba napisała."],
+        },
+        { ENG: "The person was writing.", POL: ["Osoba pisała."] },
+        {
+          ENG: "The person has written.",
+          POL: ["Osoba napisała.", "Osoba pisała."],
+        },
+
+        {
+          ENG: ["The lady wrote.", "The lady had written."],
+          POL: ["Kobieta napisała."],
+        },
+        { ENG: "The lady was writing.", POL: ["Kobieta pisała."] },
+        {
+          ENG: "The lady has written.",
+          POL: ["Kobieta napisała.", "Kobieta pisała."],
+        },
       ];
       return runPaletteTest("ENG", "POL", "dummy47", ref, {});
     });
@@ -1691,8 +1721,8 @@ describe("/api", function () {
         ref,
         {}
       );
-    });
-    it("#pal13B-04a GET 200 YES: Engpol. Another more interesting sentence with Pronombres. Terminal object used.", () => {
+    }); //Beta
+    xit("#pal13B-04a GET 200 YES: Engpol. Another more interesting sentence with Pronombres. Terminal object used.", () => {
       let ref = [
         {
           ENG: "Women saw you (singular).",

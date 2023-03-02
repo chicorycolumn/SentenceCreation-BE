@@ -87,7 +87,7 @@ exports.returnNullQuestionResponseObj = (
 };
 
 exports.createOutputUnit = (
-  etiquette,
+  dependenceType,
   errorInSentenceCreation,
   errorInDrilling,
   selectedWord,
@@ -113,7 +113,7 @@ exports.createOutputUnit = (
   }
 
   let resultingOutputUnit = {
-    etiquette,
+    dependenceType,
     selectedLemmaObject,
     selectedWord,
     drillPath,

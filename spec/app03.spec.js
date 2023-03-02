@@ -211,12 +211,19 @@ describe("/api", function () {
     it("#pal19-01a GET 200 YES: Engpol. 'There's a woman and I see her.'", () => {
       let ref = [
         {
-          ENG: "There's a woman and I see her.",
-          POL: ["Jest kobieta i widzę ją."],
+          ENG: "There's a mother and I see her.",
+          POL: ["Jest matka i widzę ją."],
         },
         {
-          ENG: "There's a boy and I see him.",
-          POL: ["Jest chłopiec i widzę go.", "Jest chłopiec i widzę jego."],
+          ENG: [
+            "There's a parent and I see him.",
+            "There's a parent and I see her.",
+          ],
+          POL: ["Jest rodzic i widzę go.", "Jest rodzic i widzę jego."],
+        },
+        {
+          ENG: "There's a father and I see him.",
+          POL: ["Jest ojciec i widzę go.", "Jest ojciec i widzę jego."],
         },
       ];
       return runPaletteTest("ENG", "POL", "dummy64a", ref);
@@ -225,19 +232,26 @@ describe("/api", function () {
       let ref = [
         {
           ENG: [
-            "There's a woman and I see her.",
-            "There's a woman and I am seeing her.",
-            "There's a lady and I see her.",
-            "There's a lady and I am seeing her.",
+            "There's a mother and I see her.",
+            "There's a mother and I am seeing her.",
           ],
-          POL: "Jest kobieta i widzę ją.",
+          POL: "Jest matka i widzę ją.",
         },
         {
           ENG: [
-            "There's a boy and I see him.",
-            "There's a boy and I am seeing him.",
+            "There's a father and I see him.",
+            "There's a father and I am seeing him.",
           ],
-          POL: "Jest chłopiec i widzę go.",
+          POL: "Jest ojciec i widzę go.",
+        },
+        {
+          ENG: [
+            "There's a parent and I see him.",
+            "There's a parent and I am seeing him.",
+            "There's a parent and I see her.",
+            "There's a parent and I am seeing her.",
+          ],
+          POL: "Jest rodzic i widzę go.",
         },
       ];
       return runPaletteTest("POL", "ENG", "dummy64a", ref);
@@ -1812,7 +1826,13 @@ describe("/api", function () {
           POL: ["Moja lekarka była kobietą."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "116 My doctor was a woman", ref, {});
+      return runPaletteTest(
+        "ENG",
+        "POL",
+        "116b My doctor was a woman specifically",
+        ref,
+        {}
+      );
     });
     it("#pal17-08b GET 200 YES: Engpol. pleaseDontSpecify but no annotations anyway as EdusMgn.", () => {
       let ref = [
@@ -1821,9 +1841,15 @@ describe("/api", function () {
           POL: ["Moja lekarka była kobietą."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "116 My doctor was a woman", ref, {
-        pleaseDontSpecify: true,
-      });
+      return runPaletteTest(
+        "ENG",
+        "POL",
+        "116b My doctor was a woman specifically",
+        ref,
+        {
+          pleaseDontSpecify: true,
+        }
+      );
     });
     it("#pal17-08c GET 200 YES: Poleng. No annotations anyway, aside from this being EdusMgn.", () => {
       let ref = [
@@ -1841,7 +1867,13 @@ describe("/api", function () {
           POL: "Moja lekarka była kobietą.",
         },
       ];
-      return runPaletteTest("POL", "ENG", "116 My doctor was a woman", ref, {});
+      return runPaletteTest(
+        "POL",
+        "ENG",
+        "116b My doctor was a woman specifically",
+        ref,
+        {}
+      );
     });
     it("#pal17-08d GET 200 YES: Poleng. pleaseDontSpecify but no annotations anyway, aside from this being EdusMgn.", () => {
       let ref = [
@@ -1859,11 +1891,18 @@ describe("/api", function () {
           POL: "Moja lekarka była kobietą.",
         },
       ];
-      return runPaletteTest("POL", "ENG", "116 My doctor was a woman", ref, {
-        pleaseDontSpecify: true,
-      });
+      return runPaletteTest(
+        "POL",
+        "ENG",
+        "116b My doctor was a woman specifically",
+        ref,
+        {
+          pleaseDontSpecify: true,
+        }
+      );
     });
     it("#pal17-09a GET 200 YES: Engpol. One annotation absent as EdusMgn.", () => {
+      //Beta: Some runs affected by Mungojerry issue
       let ref = [
         {
           ENG: "My doctor's (male) doctor was a woman.",
@@ -1877,7 +1916,7 @@ describe("/api", function () {
       return runPaletteTest(
         "ENG",
         "POL",
-        "116a My doctor's doctor was a woman",
+        "116a My doctor's doctor was a woman specifically",
         ref,
         {}
       );
@@ -1895,7 +1934,7 @@ describe("/api", function () {
       return runPaletteTest(
         "ENG",
         "POL",
-        "116a My doctor's doctor was a woman",
+        "116a My doctor's doctor was a woman specifically",
         ref,
         { pleaseDontSpecify: true }
       );
@@ -1922,7 +1961,7 @@ describe("/api", function () {
       return runPaletteTest(
         "POL",
         "ENG",
-        "116a My doctor's doctor was a woman",
+        "116a My doctor's doctor was a woman specifically",
         ref,
         {}
       );
@@ -1949,9 +1988,88 @@ describe("/api", function () {
       return runPaletteTest(
         "POL",
         "ENG",
-        "116a My doctor's doctor was a woman",
+        "116a My doctor's doctor was a woman specifically",
         ref,
         { pleaseDontSpecify: true }
+      );
+    });
+    it("#pal17-10a GET 200 YES: Engpol. Agreement of npe with npe.", () => {
+      let ref = [
+        {
+          ENG: "My doctor was a woman.",
+          POL: ["Moja lekarka była kobietą."],
+        },
+        {
+          ENG: "My doctor was a man.",
+          POL: ["Mój lekarz był mężczyzną."],
+        },
+        {
+          ENG: "My doctor (male) was a person.",
+          POL: ["Mój lekarz był osobą."],
+        },
+        {
+          ENG: "My doctor (female) was a person.",
+          POL: ["Moja lekarka była osobą."],
+        },
+        //
+        {
+          ENG: [
+            "My doctors (males) were people.",
+            "My doctors (mixed) were people.",
+          ],
+          POL: ["Moi lekarze byli osobami."],
+        },
+        {
+          ENG: "My doctors (females) were people.",
+          POL: ["Moje lekarki były osobami."],
+        },
+        //
+        {
+          ENG: "My doctors were men.",
+          POL: ["Moi lekarze byli mężczyznami."],
+        },
+        {
+          ENG: "My doctors were women.",
+          POL: ["Moje lekarki były kobietami."],
+        },
+      ];
+      return runPaletteTest(
+        "ENG",
+        "POL",
+        "116c My doctor was a woman/man/person",
+        ref
+      );
+    });
+    it("#pal17-10b GET 200 YES: Poleng. Agreement of npe with npe.", () => {
+      let ref = [
+        {
+          POL: "Moja lekarka była kobietą.",
+          ENG: ["My doctor was/ a woman/lady."],
+        },
+        {
+          POL: ["Mój lekarz był osobą.", "Moja lekarka była osobą."],
+          ENG: ["My doctor was/ a person."],
+        },
+        { POL: ["Mój lekarz był mężczyzną."], ENG: ["My doctor was/ a man."] },
+        //
+        {
+          POL: ["Moje lekarki były kobietami."],
+          ENG: ["My doctors were/ women/ladies."],
+        },
+        {
+          POL: ["Moi lekarze byli mężczyznami."],
+          ENG: ["My doctors were/ men."],
+        },
+        {
+          POL: ["Moje lekarki były osobami.", "Moi lekarze byli osobami."],
+          ENG: ["My doctors were/ people."],
+        },
+      ];
+      return runPaletteTest(
+        "POL",
+        "ENG",
+        "116c My doctor was a woman/man/person",
+        ref
       );
     });
   });

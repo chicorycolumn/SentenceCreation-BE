@@ -842,8 +842,7 @@ exports.dummySentenceFormulasBank = [
       { chunkId: "fix-1", chunkValue: "the" },
       {
         chunkId: "npe-1",
-
-        specificIds: ["eng-npe-001-woman"],
+        specificIds: ["^eng-npe-001-woman"],
         number: ["singular"],
       },
       {
@@ -1177,7 +1176,7 @@ exports.dummySentenceFormulasBank = [
       },
       {
         chunkId: "npe-1",
-        specificIds: ["eng-npe-001-woman"],
+        specificIds: ["^eng-npe-001-woman"],
         number: ["singular"],
       },
     ],
@@ -1535,7 +1534,7 @@ exports.dummySentenceFormulasBank = [
       { chunkId: "art-1-A", form: ["indefinite"], agreeWith: "npe-1-Woman" },
       {
         chunkId: "npe-1-Woman",
-        specificIds: ["eng-npe-001-woman"],
+        specificIds: ["eng-npe-003-parentarooni"],
         number: ["singular"],
       },
       { chunkId: "fix-2-And", chunkValue: "and" },

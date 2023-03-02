@@ -1033,6 +1033,8 @@ exports.expandTestShorthands = (arr) => {
   }
 
   const ref = {
+    "woman/lady": ["woman", "lady"],
+    "women/ladies": ["women", "ladies"],
     "mi/mnie": ["mi", "mnie"],
     "was/": ["was", "has been", "had been", "was being"],
     "was/i": ["was", "have been", "had been", "was being"],

@@ -185,7 +185,18 @@ exports.removeAnnotationsByVypernym = (
     malePersonsInThisLanguageHaveWhatGender[languagesObj.questionLanguage];
 
   questionOutputArr.forEach((questionOutputUnit) => {
-    if (questionOutputUnit.structureChunk.hypernymy === HY.VY) {
+    if (
+      gpUtils.getWordtypeStCh(questionOutputUnit.structureChunk) === "fixed"
+    ) {
+      return;
+    }
+
+    lfUtils.checkMatchHyper(
+      questionOutputUnit.structureChunk,
+      questionOutputUnit.selectedLemmaObject
+    );
+
+    if (lfUtils.checkHyper(questionOutputUnit.selectedLemmaObject, [HY.VY])) {
       if (
         Object.keys(questionOutputUnit.structureChunk.annotations).includes(
           "semanticGender"
@@ -685,7 +696,7 @@ exports.sortAnswerAndQuestionStructureChunks = (
   let responseObj = {};
 
   let { headChunks, dependentChunks, otherChunks } =
-    scUtils.sortStructureChunks(answerSentenceStructure);
+    scUtils.sortStructureChunks(answerSentenceStructure, false, "answer");
 
   responseObj.answerHeadChunks = headChunks;
   responseObj.answerDependentChunks = dependentChunks;
@@ -693,7 +704,7 @@ exports.sortAnswerAndQuestionStructureChunks = (
 
   if (true) {
     let { headChunks, dependentChunks, otherChunks } =
-      scUtils.sortStructureChunks(questionSentenceStructure);
+      scUtils.sortStructureChunks(questionSentenceStructure, false, "question");
 
     responseObj.questionHeadChunks = headChunks;
     responseObj.questionDependentChunks = dependentChunks;
