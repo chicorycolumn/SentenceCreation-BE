@@ -1051,6 +1051,21 @@ exports.coverBothGendersForPossessivesOfHypernyms = (
   drillPath,
   selectedLemmaObject
 ) => {
+  /**  Hypernymy Fine Tuning 2 (HFT2)
+   *
+   * Run this fxn only for depChunks which are a) POSSESSIVE pronombres or b) !NOM PERSONAL pronombres.
+   *
+   * PERSONAL and gcase !NOM because we want
+   * "Jest rodzic i widziałem GO." for both semanticGenders of rodzic. (GO is acc PERSONAL pronombre)
+   *
+   * POSSESSIVE because we want
+   * "Rodzic dał mi JEGO lustro." for both semanticGenders of rodzic. (JEGO is POSSESSIVE pronombre)
+   *
+   * But we DON'T WANT
+   * "ON jest rodzicem." for semanticGender f. (ON/ONA is nom PERSONAL pronombre)
+   *
+   * So that's why we're not running this fxn for all pronouns.
+   */
   if (
     multipleMode &&
     gpUtils.getWordtypeStCh(structureChunk) === "pronombre" &&
@@ -1064,22 +1079,9 @@ exports.coverBothGendersForPossessivesOfHypernyms = (
     }
 
     if (
-      // Hypernymy Fine Tuning 2
-      /**
-       * "acc"
-       * because we want
-       * "Jest rodzic i widziałem GO." for both semanticGenders of rodzic. (GO is acc pronombre)
-       *
-       * "$POSSESSIVE"
-       * because we want
-       * "Rodzic dał mi JEGO lustro." for both semanticGenders of rodzic. (JEGO is acc possessive pronombre)
-       *
-       * But we DON'T WANT
-       * "ON jest rodzicem." for semanticGender f. (ON/ONA is nom pronombre)
-       * So that's why we're not doing this for all pronouns, only with these conditions.
-       */
       selectedLemmaObject.lemma === "$POSSESSIVE" ||
-      structureChunk.gcase[0] === "acc"
+      (selectedLemmaObject.lemma === "$PERSONAL" &&
+        structureChunk.gcase[0] !== "nom")
     ) {
       let headOutputUnit = otUtils.getHeadOutputUnit(
         structureChunk,
@@ -2099,57 +2101,77 @@ exports.inheritFromHeadToDependentChunk = (
 
   let doneTraitKeys = [];
 
-  //Treat gender & semanticGender separately, in special cases:
+  // Hypernymy Fine Tuning 1 (HFT1)
+  //Treat gender & semanticGender separately, in special cases.
   if (
     // alpha or a vypernym, right?
     lfUtils.checkHyper(headSelectedLemmaObject, [HY.HY]) &&
     inheritableInflectionKeys.includes("gender")
   ) {
-    // Hypernymy Fine Tuning 1 (HFT1)
-    // ie   If headChunk is Hypernym,   depChunk is personal pronombre,   and we are in a Gendered Language.
+    /** HFT1a
+     * If headChunk is Hypernym,   depChunk is personal pronombre,   and we are in a Gendered Language.
+     *
+     * So headChunk "rodzic"   *semanticGender* f      transfers to  NOM  depChunk          *gender*    so "Ja byłam".
+     *
+     * So headChunk "rodzic"   *gender*        m1      transfers to  ~NOM depChunk          *gender*    so "go".
+     * So headChunk "rodzic"   *gender*        m1      transfers to  possessive depChunk    *gender*    so "go".
+     *
+     * So altogether:   "SHE was a parent, I see HER and HER car."   translates to   "BYŁA rodzicem, widze GO i JEGO auto."
+     */
     if (
       !gpUtils.traitValueIsMeta(headSelectedLemmaObject.gender) &&
-      gpUtils.getWordtypeShorthandStCh(dependentChunk) === "pro" &&
-      dependentChunk.specificIds.some((id) => id.split("-")[2] === "PERSONAL")
+      gpUtils.getWordtypeShorthandStCh(dependentChunk) === "pro"
     ) {
-      if (dependentChunk.specificIds.length > 1) {
-        consol.throw(
-          `smce More than one specificId even though specificId array includes "pro-PERSONAL"? [${dependentChunk.specificIds.join(
-            ","
-          )}]`
-        );
+      if (
+        dependentChunk.specificIds.some(
+          (id) => id.split("-")[2] === "POSSESSIVE"
+        )
+      ) {
+        if (dependentChunk.specificIds.length > 1) {
+          consol.throw(
+            `smce More than one specificId even though specificId array includes "pro-POSSESSIVE"? [${dependentChunk.specificIds.join(
+              ","
+            )}]`
+          );
+        }
+        dependentChunk.semanticGender = headChunk.semanticGender.slice();
+        dependentChunk.gender = headChunk.gender.slice();
+
+        doneTraitKeys.push("gender", "semanticGender");
       }
-      if (dependentChunk.gcase.length > 1) {
-        consol.throw(`smcf More than one gcase?`);
+      if (
+        dependentChunk.specificIds.some((id) => id.split("-")[2] === "PERSONAL")
+      ) {
+        if (dependentChunk.specificIds.length > 1) {
+          consol.throw(
+            `smce More than one specificId even though specificId array includes "pro-PERSONAL"? [${dependentChunk.specificIds.join(
+              ","
+            )}]`
+          );
+        }
+        if (dependentChunk.gcase.length > 1) {
+          consol.throw(`smcf More than one gcase?`);
+        }
+
+        dependentChunk.semanticGender = headChunk.semanticGender.slice();
+        dependentChunk.gender =
+          dependentChunk.gcase[0] === "nom"
+            ? headChunk.semanticGender.slice()
+            : headChunk.gender.slice();
+
+        doneTraitKeys.push("gender", "semanticGender");
       }
-
-      /** HFT1a
-       * If depChunk is NOMINATIVE personal pronoun vs ANY OTHER gcase.
-       *
-       * So headChunk "rodzic"  *semanticGender* f    transfers to  NOM  depChunk *gender*    so "Ja byłam".
-       * So headChunk "rodzic"     *gender*   m1      transfers to  ~NOM depChunk *gender*    so "go".
-       *
-       * So altogether:   "SHE was a parent and I see HER."   translates to   "BYŁA rodzicem i widze GO."
-       */
-
-      dependentChunk.semanticGender = headChunk.semanticGender.slice();
-      dependentChunk.gender =
-        dependentChunk.gcase[0] === "nom"
-          ? headChunk.semanticGender.slice()
-          : headChunk.gender.slice();
-
-      doneTraitKeys.push("gender", "semanticGender");
     }
 
-    if (gpUtils.getWordtypeShorthandStCh(dependentChunk) === "npe") {
-      /** HFT1b
-       * If depChunk is npe (and headChunk is hypernym).
-       *
-       * For a sentence like "My parent(head) is a woman(dep)."
-       * don't transfer "rodzic" gender m1 to "woman"
-       * instead just "rodzic" semanticGender f to "woman"
-       */
+    /** HFT1b
+     * If depChunk is npe (and headChunk is hypernym).
+     *
+     * For a sentence like "My parent(head) is a woman(dep)."
+     * don't transfer "rodzic" gender m1 to "woman"
+     * instead just "rodzic" semanticGender f to "woman"
+     */
 
+    if (gpUtils.getWordtypeShorthandStCh(dependentChunk) === "npe") {
       dependentChunk.gender = headChunk.semanticGender.slice();
       dependentChunk.semanticGender = headChunk.semanticGender.slice();
 
