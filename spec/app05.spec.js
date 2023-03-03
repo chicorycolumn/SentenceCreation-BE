@@ -331,7 +331,7 @@ describe("/api", function () {
     });
   });
 
-  describe("/palette - Stage 26-iv: Spanish basic. Vypernym Hyponym Vyponym hypernymyProportion.", () => {
+  describe("/palette - Stage 26-iv: Spanish basic. HypernymyProportion adjustment but just for mother/father/parent.", () => {
     it("#pal26-04a GET 200 YES: Polspa. Red mother (Vypernym).", () => {
       return Promise.all(
         promiseAllMultiplier(250, () => {
@@ -339,16 +339,10 @@ describe("/api", function () {
         })
       ).then((allQuestionSentences) => {
         checkProportions(allQuestionSentences, [
-          // V/Hypernyms in plural
-          // V/Hyponyms in singular
-          // should be higher proportion. (1/4 each)
           ["matka", ["Czerwona matka."], 0.265, 0.35],
           ["ojciec", ["Czerwony ojciec."], 0.265, 0.35],
           ["rodzice", ["Czerwoni rodzice."], 0.265, 0.35],
 
-          // V/Hypernyms in singular
-          // V/Hyponyms in plural
-          // should be lower proportion. (1/16 each)
           ["matki", ["Czerwone matki."], 0.065, 0.65],
           ["ojcowie", ["Czerwoni ojcowie."], 0.065, 0.65],
           ["rodzic", ["Czerwony rodzic."], 0.065, 0.65],
@@ -362,16 +356,10 @@ describe("/api", function () {
         })
       ).then((allQuestionSentences) => {
         checkProportions(allQuestionSentences, [
-          // V/Hypernyms in plural
-          // V/Hyponyms in singular
-          // should be higher proportion. (1/4 each)
           ["matka", ["Czerwona matka."], 0.265, 0.35],
           ["ojciec", ["Czerwony ojciec."], 0.265, 0.35],
           ["rodzice", ["Czerwoni rodzice."], 0.265, 0.35],
 
-          // V/Hypernyms in singular
-          // V/Hyponyms in plural
-          // should be lower proportion. (1/16 each)
           ["matki", ["Czerwone matki."], 0.065, 0.65],
           ["ojcowie", ["Czerwoni ojcowie."], 0.065, 0.65],
           ["rodzic", ["Czerwony rodzic."], 0.065, 0.65],

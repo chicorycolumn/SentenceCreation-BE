@@ -227,7 +227,12 @@ exports.adjustHypernymyProportions = (hypernymy, outputUnits) => {
 
 exports.selectRandOutputUnit = (lObj, stCh, outputUnits) => {
   let hypernymy = lfUtils.assessHypernymy(lObj);
-  if ([HY.HY, HY.HO, HY.VO].includes(hypernymy)) {
+  let nexusLObjs = nexusUtils.getNexusLemmaObjects(lObj);
+
+  if (
+    [HY.HY, HY.HO, HY.VO].includes(hypernymy) &&
+    nexusLObjs.some((nlobj) => nlobj.requiresHypernymyProportionAdjust)
+  ) {
     outputUnits = lfUtils.adjustHypernymyProportions(hypernymy, outputUnits);
   }
 

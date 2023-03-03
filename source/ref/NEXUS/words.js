@@ -20,8 +20,8 @@ exports.wordsBank = {
       key: "npe-0000-woman",
       traductions: {
         SPA: [],
-        ENG: ["eng-npe-001-woman", "eng-npe-006-lady"],
-        POL: ["pol-npe-011-kobieta"],
+        ENG: ["eng-npe-001-woman/manaroonie", "eng-npe-006-lady"],
+        POL: ["pol-npe-011-kobieta/mezczyznaroonie"],
       },
       papers: ["animate", "personTest1", "concrete"],
       topics: [],
@@ -42,14 +42,14 @@ exports.wordsBank = {
         SPA: ["spa-npe-004-niño/a"],
         ENG: ["eng-npe-009-baby"],
         POL: [
-          "^pol-npe-012-dziecko-£", // Get dziecko only and not also chłopiec and dziewczyna.
+          "^pol-npe-012-dziecko-£", // ie "dziecko" only, not also "chłopiec" and "dziewczyna".
         ],
       },
       papers: ["animate", "concrete"],
       topics: [],
     },
     {
-      key: "npe-0003-father/mother",
+      key: "npe-0003-father/mother/parent",
       traductions: {
         SPA: ["spa-npe-002-parentarooni"],
         ENG: ["eng-npe-003-parentarooni"],
@@ -57,6 +57,7 @@ exports.wordsBank = {
       },
       papers: ["animate", "family", "concrete", "personTest3"],
       topics: [],
+      requiresHypernymyProportionAdjust: true,
     },
     {
       key: "npe-0004-doctor",
