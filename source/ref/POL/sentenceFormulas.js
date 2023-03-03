@@ -1991,4 +1991,38 @@ exports.sentenceFormulasBank = [
     ],
     primaryOrders: [["pro-1-I", "ver-1-am", "adj-1-good", "npe-1-person"]],
   },
+  {
+    sentenceFormulaSymbol: "124c I was a good man/woman/person",
+    sentenceFormulaId: "POL-124c",
+    equivalents: { ENG: ["ENG-124c"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificIds: ["pol-pro-PERSONAL"],
+        person: ["1per"],
+        agreeWith: "npe-1-person",
+        gcase: ["nom"],
+        formulaImportantTraitKeys: ["gcase"],
+        giveMeTheseClarifiersOfMyHeadChunk: ["gender", "number"],
+      },
+      {
+        chunkId: "ver-1-am",
+        specificIds: ["pol-ver-011-być"],
+        agreeWith: "pro-1-I",
+        tenseDescription: ["past im"],
+      },
+      {
+        chunkId: "adj-1-good",
+        specificIds: ["pol-adj-010-dobry"],
+        agreeWith: "npe-1-person",
+      },
+      {
+        chunkId: "npe-1-person",
+        specificIds: ["pol-npe-011-osoba-£"],
+        gcase: ["ins"],
+        formulaImportantTraitKeys: ["gcase"],
+      },
+    ],
+    primaryOrders: [["pro-1-I", "ver-1-am", "adj-1-good", "npe-1-person"]],
+  },
 ];

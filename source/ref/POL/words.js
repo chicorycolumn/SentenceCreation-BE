@@ -61,7 +61,7 @@ exports.wordsBank = {
         },
       },
     },
-    // { //Alpha uncomment this and deal with how affect #pal27-02
+    // { // After resolving Mungojerry, uncomment this and deal with how affect #pal27-02
     //   //selectors
     //   lemma: "ludzie",
     //   id: "pol-npe-011-ludzie-£",

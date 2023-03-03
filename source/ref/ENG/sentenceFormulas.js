@@ -1612,4 +1612,41 @@ exports.sentenceFormulasBank = [
       ["pro-1-I", "ver-1-am", "art-1-a", "adj-1-good", "npe-1-person"],
     ],
   },
+  {
+    sentenceFormulaSymbol: "124c I was a good man/woman/person",
+    sentenceFormulaId: "ENG-124c",
+    equivalents: { POL: ["POL-124c"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificIds: ["eng-pro-PERSONAL"],
+        person: ["1per"],
+        agreeWith: "npe-1-person",
+        giveMeTheseClarifiersOfMyHeadChunk: ["gender", "number"],
+      },
+      {
+        chunkId: "ver-1-am",
+        specificIds: ["eng-ver-001-be"],
+        agreeWith: "pro-1-I",
+        tenseDescription: ["past simple"],
+      },
+      {
+        chunkId: "art-1-a",
+        form: ["indefinite"],
+        agreeWith: "npe-1-person",
+      },
+      {
+        chunkId: "adj-1-good",
+        specificIds: ["eng-adj-004-good"],
+        agreeWith: "npe-1-person",
+      },
+      {
+        chunkId: "npe-1-person",
+        specificIds: ["eng-npe-001-person-£"],
+      },
+    ],
+    primaryOrders: [
+      ["pro-1-I", "ver-1-am", "art-1-a", "adj-1-good", "npe-1-person"],
+    ],
+  },
 ];

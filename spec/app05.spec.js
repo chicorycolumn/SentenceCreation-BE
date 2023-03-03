@@ -244,6 +244,66 @@ const _124bRefEngPol = [
     POL: ["My byłyśmy dobrymi osobami."],
   },
 ];
+const _124cRefPolEng = [
+  {
+    ENG: ["I was/i a good person."],
+    POL: ["Ja byłam dobrą osobą.", "Ja byłem dobrą osobą."],
+  },
+  {
+    ENG: ["We were/ good people."],
+    POL: ["My byłyśmy dobrymi osobami.", "My byliśmy dobrymi osobami."],
+  },
+  {
+    ENG: ["I was/i a good man."],
+    POL: ["Ja byłem dobrym mężczyzną."],
+  },
+  {
+    ENG: ["We were/ good men."],
+    POL: ["My byliśmy dobrymi mężczyznami."],
+  },
+  {
+    ENG: ["I was/i a good woman/lady."],
+    POL: ["Ja byłam dobrą kobietą."],
+  },
+  {
+    ENG: ["We were/ good women/ladies."],
+    POL: ["My byłyśmy dobrymi kobietami."],
+  },
+];
+const _124cRefEngPol = [
+  {
+    ENG: ["I (female) was a good person."],
+    POL: ["Ja byłam dobrą osobą."],
+  },
+  {
+    ENG: ["I (male) was a good person."],
+    POL: ["Ja byłem dobrą osobą."],
+  },
+  {
+    ENG: ["We (males) were good people.", "We (mixed) were good people."],
+    POL: ["My byliśmy dobrymi osobami."],
+  },
+  {
+    ENG: ["We (females) were good people."],
+    POL: ["My byłyśmy dobrymi osobami."],
+  },
+  {
+    ENG: ["I was a good man."],
+    POL: ["Ja byłem dobrym mężczyzną."],
+  },
+  {
+    ENG: ["We were good men."],
+    POL: ["My byliśmy dobrymi mężczyznami."],
+  },
+  {
+    ENG: ["I was a good woman/lady."],
+    POL: ["Ja byłam dobrą kobietą."],
+  },
+  {
+    ENG: ["We were good women/ladies."],
+    POL: ["My byłyśmy dobrymi kobietami."],
+  },
+];
 
 describe("/api", function () {
   this.timeout(7000);
@@ -306,6 +366,22 @@ describe("/api", function () {
           ],
         ]);
       });
+    });
+    it("#pal27-02e GET 200 YES: Poleng. I was a good person - masculine I should still be dobrą osobą.", () => {
+      return runPaletteTest(
+        "POL",
+        "ENG",
+        "124c I was a good man/woman/person",
+        _124cRefPolEng
+      );
+    });
+    it("#pal27-02f GET 200 YES: Engpol. I was a good person - masculine I should still be dobrą osobą.", () => {
+      return runPaletteTest(
+        "ENG",
+        "POL",
+        "124c I was a good man/woman/person",
+        _124cRefEngPol
+      );
     });
   });
 
