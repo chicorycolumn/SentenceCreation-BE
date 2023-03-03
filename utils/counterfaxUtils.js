@@ -1030,7 +1030,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
               I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" 
               and the counterfactual ANSWER selected words came back SAME as original answer selected words.\n
               This means that this trait has no impact, even if we flip it, so annotation is not needed. \n
-              Deleting annotation "${annoTraitKey}" = "${questionOutputUnit.structureChunk.annotations[annoTraitKey]}".` +
+              ⭕ Deleting annotation "${annoTraitKey}" = "${questionOutputUnit.structureChunk.annotations[annoTraitKey]}".` +
             "[0m",
           {
             originalAnswerPseudoSentences: originalAnswerPseudoSentenceObjs.map(
@@ -1064,7 +1064,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual 
           QUESTION selected words came back DIFFERENT original question selected words.\n
           This means that this trait has no impact, even if we flip it, so annotation is not needed. \n
-          Deleting annotation "${annoTraitKey}" = "${questionOutputUnit.structureChunk.annotations[annoTraitKey]}" now.` +
+          ⭕ Deleting annotation "${annoTraitKey}" = "${questionOutputUnit.structureChunk.annotations[annoTraitKey]}" now.` +
             "[0m",
           {
             originalQuestionPseudoSentences:
@@ -1089,7 +1089,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           "[1;35m " +
             `myxo-clauseC [tl;dr !answersame && !questiondifferent so keeping anno] removeAnnotationsByCounterfax END. 
           I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual answer 
-          selected words came back DIFFERENT FROM original answer selected words.\nThis means I'll keep annotation 
+          selected words came back DIFFERENT FROM original answer selected words.\nThis means 🉑 I'll keep annotation 
           "${annoTraitKey}" = "${questionOutputUnit.structureChunk.annotations[annoTraitKey]}".` +
             "[0m",
           {
