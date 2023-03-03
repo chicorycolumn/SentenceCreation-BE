@@ -1063,7 +1063,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             `myxo-clauseB [Coppice: questiondifferent so deleting anno] removeAnnotationsByCounterfax END. 
           I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual 
           QUESTION selected words came back DIFFERENT original question selected words.\n
-          This means that this trait has no impact, even if we flip it, so annotation is not needed. \n
+          This means there's no ambiguity, so annotation is not needed. \n
           ⭕ Deleting annotation "${annoTraitKey}" = "${questionOutputUnit.structureChunk.annotations[annoTraitKey]}" now.` +
             "[0m",
           {
@@ -1089,8 +1089,8 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           "[1;35m " +
             `myxo-clauseC [tl;dr !answersame && !questiondifferent so keeping anno] removeAnnotationsByCounterfax END. 
           I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual answer 
-          selected words came back DIFFERENT FROM original answer selected words.\nThis means 🉑 I'll keep annotation 
-          "${annoTraitKey}" = "${questionOutputUnit.structureChunk.annotations[annoTraitKey]}".` +
+          selected words came back DIFFERENT FROM original answer selected words, and so\n
+          🉑 Keeping annotation "${annoTraitKey}" = "${questionOutputUnit.structureChunk.annotations[annoTraitKey]}".` +
             "[0m",
           {
             originalQuestionPseudoSentences:
