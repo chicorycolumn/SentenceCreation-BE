@@ -151,13 +151,13 @@ exports.addAnnotationsAndPush = (
 
     if (structureChunk.educatorBlocksAnnotationsForTheseTraitKeys) {
       consol.log(
-        `vpri addAnnotationsAndPush will not add clarifiers [${Object.values(
+        `vpri addAnnotationsAndPush ⭕ Will not add clarifiers [${Object.values(
           annoObj
         )}] as "educatorBlocksAnnotationsForTheseTraitKeys" true.`
       );
     } else {
       consol.log(
-        "vpro pushSelectedWordToArray addAnnotationsAndPush. Adding these annotations:" +
+        "vpro pushSelectedWordToArray addAnnotationsAndPush. 🉑 Adding these annotations:" +
           Object.values(annoObj).join(", ")
       );
 

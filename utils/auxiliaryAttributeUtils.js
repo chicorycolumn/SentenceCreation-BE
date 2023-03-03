@@ -519,7 +519,7 @@ exports.removeAnnotationsByRef = (
           condBlockAnnos.annotations.forEach((annoTraitKey) => {
             consol.logSpecial(
               3,
-              `prri "${stCh.chunkId}" removing "${annoTraitKey}" anno due to conditionsToBlockAnnotations.`
+              `prri "${stCh.chunkId}" ⭕ Removing "${annoTraitKey}" anno due to conditionsToBlockAnnotations.`
             );
             delete stCh.annotations[annoTraitKey];
           });
@@ -585,7 +585,7 @@ exports.trimAnnoIfGenderRevealedByGenderedNoun = (
     }
     consol.logSpecial(
       3,
-      `wbmf "${structureChunk.chunkId}" removing "gender" anno. trimAnnoIfGenderRevealedByGenderedNoun`
+      `wbmf "${structureChunk.chunkId}" ⭕ Removing "gender" anno. trimAnnoIfGenderRevealedByGenderedNoun`
     );
     delete structureChunk.annotations.gender;
   }
@@ -795,7 +795,7 @@ exports.trimAnnotations = (annotationObj) => {
       annoTraitKey === "gender" &&
       ["males", "females"].includes(annoTraitValue)
     ) {
-      consol.logSpecial(3, `mpsa "trimAnnotations removing "number" anno.`);
+      consol.logSpecial(3, `mpsa "trimAnnotations ⭕ Removing "number" anno.`);
       delete annotationObj.number;
     }
 
@@ -803,7 +803,7 @@ exports.trimAnnotations = (annotationObj) => {
       consol.throw("vmkp");
       consol.logSpecial(
         3,
-        `mpsb "trimAnnotations removing "${annoTraitKeyy}" anno as no annoTraitValue.`
+        `mpsb "trimAnnotations ⭕ Removing "${annoTraitKeyy}" anno as no annoTraitValue.`
       );
       delete annotationObj[annoTraitKeyy];
     }

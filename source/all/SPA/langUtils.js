@@ -45,7 +45,7 @@ exports.selectWordVersions = (
 
           if (annoTraitValue === "singular") {
             consol.log(
-              `yuox selectWordVersions. Removing "singular" annotation from subsequent outputUnit, as current output unit is ENG indefinite article.`
+              `yuox selectWordVersions. ⭕ Removing "singular" annotation from subsequent outputUnit, as current output unit is ENG indefinite article.`
             );
 
             delete subsequentOutputUnit.firstStageAnnotationsObj[annoTraitKey];
