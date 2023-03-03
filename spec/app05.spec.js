@@ -261,7 +261,6 @@ describe("/api", function () {
     it("#pal27-01d GET 200 YES: Engpol. Dziecko selectable by gender f.", () => {
       return runPaletteTest("ENG", "POL", "dummy73b", dummy73b);
     });
-    // Beta: What proportions does this come back singular vs plural? I would like equal.
     it("#pal27-02a GET 200 YES: Poleng. I was a good person - masculine I should still be dobrą osobą.", () => {
       return runPaletteTest(
         "POL",
@@ -277,6 +276,36 @@ describe("/api", function () {
         "124b I was a good person",
         _124bRefEngPol
       );
+    });
+    it("#pal27-02c GET 200 YES: Poleng. I was a good person - singular/plural equal proportion.", () => {
+      return Promise.all(
+        promiseAllMultiplier(50, () => {
+          return runPaletteTest(
+            "POL",
+            "ENG",
+            "124b I was a good person",
+            [],
+            {},
+            1,
+            true
+          );
+        })
+      ).then((allQuestionSentences) => {
+        checkProportions(allQuestionSentences, [
+          [
+            "plural",
+            ["Ja byłam dobrą osobą.", "Ja byłem dobrą osobą."],
+            0.5,
+            0.35,
+          ],
+          [
+            "singular",
+            ["My byłyśmy dobrymi osobami.", "My byliśmy dobrymi osobami."],
+            0.5,
+            0.35,
+          ],
+        ]);
+      });
     });
   });
 
