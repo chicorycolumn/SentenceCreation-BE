@@ -1721,15 +1721,32 @@ describe("/api", function () {
         ref,
         {}
       );
-    }); //Beta
+    });
     xit("#pal13B-04a GET 200 YES: Engpol. Another more interesting sentence with Pronombres. Terminal object used.", () => {
+      // Fails 1/4 of the time due to Mungojerry issue.
       let ref = [
         {
-          ENG: "Women saw you (singular).",
-          POL: ["Kobiety zobaczyły cię.", "Kobiety zobaczyły ciebie."],
+          ENG: "People saw you (singular).",
+          POL: ["Osoby zobaczyły cie/ciebie."],
         },
         {
-          ENG: "Women saw you (plural).",
+          ENG: "People saw you (plural).",
+          POL: ["Osoby zobaczyły was."],
+        },
+        {
+          ENG: "Men saw you (singular).",
+          POL: ["Mężczyźni zobaczyli cie/ciebie."],
+        },
+        {
+          ENG: "Men saw you (plural).",
+          POL: ["Mężczyźni zobaczyli was."],
+        },
+        {
+          ENG: ["Women/Ladies saw you (singular)."],
+          POL: ["Kobiety zobaczyły cie/ciebie."],
+        },
+        {
+          ENG: ["Women/Ladies saw you (plural)."],
           POL: ["Kobiety zobaczyły was."],
         },
       ];

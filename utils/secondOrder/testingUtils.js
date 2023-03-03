@@ -1036,6 +1036,7 @@ exports.expandTestShorthands = (arr) => {
     "woman/lady": ["woman", "lady"],
     "women/ladies": ["women", "ladies"],
     "mi/mnie": ["mi", "mnie"],
+    "cie/ciebie": ["cię", "ciebie"],
     "was/": ["was", "has been", "had been", "was being"],
     "was/i": ["was", "have been", "had been", "was being"],
     "were/": ["were", "have been", "had been", "were being"],
@@ -1066,7 +1067,11 @@ exports.expandTestShorthands = (arr) => {
               return reg.test(char);
             })
             .join("");
-          let shorthand = { el: trimmedEl, index };
+
+          let capitalCase = /[A-Z]/.test(trimmedEl);
+          trimmedEl = trimmedEl.toLowerCase();
+
+          let shorthand = { el: trimmedEl, index, capitalCase };
           if (!reg.test(el[el.length - 1])) {
             shorthand.lastChar = el[el.length - 1];
           }
@@ -1082,9 +1087,14 @@ exports.expandTestShorthands = (arr) => {
         throw `vfkl expandTestingShorthands "${shorthander.el}" not a recognised shorthand.`;
       }
       ref[shorthander.el].forEach((longhand) => {
+        let longhanded = `${longhand}${shorthander.lastChar || ""}`;
+        if (shorthander.capitalCase) {
+          longhanded = longhanded[0].toUpperCase() + longhanded.slice(1);
+        }
+
         let newArr = [
           ...arr.slice(0, shorthander.index),
-          `${longhand}${shorthander.lastChar || ""}`,
+          longhanded,
           ...arr.slice(shorthander.index + 1),
         ];
         superArr.push(newArr.join(" "));
