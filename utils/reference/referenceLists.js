@@ -164,8 +164,7 @@ exports.metaTraitValues = {
       _PersonalPluralGenders: ["virile", "nonvirile"],
 
       _NonpersonalGenders: ["n", "nonvirile"],
-      // _NonpersonalSingularGenders: ["n"],
-      _NonpersonalSingularGenders: ["m", "f", "n"], //Beta Is that right?
+      _NonpersonalSingularGenders: ["n"], // In ENG, nonpersons cannot be m or f. I realise pet animals yes... but these will always be "it" in this app, see FYIP101.
       _NonpersonalPluralGenders: ["nonvirile"],
 
       _SingularGendersExcludingNeuter: ["m", "f"],
@@ -194,7 +193,7 @@ exports.metaTraitValues = {
       _PersonalSingularGenders: ["m", "f"],
       _PersonalPluralGenders: ["virile", "nonvirile"],
 
-      _NonpersonalGenders: ["m", "f", "nonvirile"], //beta is that right?
+      _NonpersonalGenders: ["m", "f", "nonvirile"],
       _NonpersonalSingularGenders: ["m", "f"],
       _NonpersonalPluralGenders: ["nonvirile"],
 

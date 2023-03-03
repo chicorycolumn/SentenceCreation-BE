@@ -124,7 +124,7 @@ describe("/api", function () {
     });
   });
 
-  describe("/palette - Stage 24: Gender of animals is neuter in ENG.", () => {
+  describe("/palette - Stage 24: Gender of animals is neuter in ENG (see FYIP101).", () => {
     it("#pal24-01a GET 200 YES: Poleng. I saw a rat, it was small.", () => {
       let ref = [
         {
