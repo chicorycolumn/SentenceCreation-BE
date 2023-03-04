@@ -1562,7 +1562,7 @@ exports.conformAnswerStructureToQuestionStructure = (
     //   let nonFeminineLObjs = allLObjsForThisIdStem.filter(
     //     (l) => l.gender !== "f"
     //   );
-    //   answerStructureChunk.demandedIds = nonFeminineLObjs.map(
+    //   answerStructureChunk.d emandedIds = nonFeminineLObjs.map(
     //     (lObj) => lObj.id
     //   );
     // }
@@ -2016,7 +2016,9 @@ exports.conformAnswerStructureToQuestionStructure = (
       consol.logSpecial(8, {
         "answerStCh.chunkId": answerStCh.chunkId,
         "answerStCh.specificIds": answerStCh.specificIds,
-        "answerStCh.demandedIds": answerStCh.demandedIds,
+        "answerStCh.demandedLObjs": answerStCh.demandedLObjs
+          ? answerStCh.demandedLObjs.map((l) => l.id)
+          : [],
         "answerStCh.gender": answerStCh.gender,
         "answerStCh.semanticGender": answerStCh.semanticGender,
       });

@@ -269,11 +269,9 @@ exports.selectRandLObj = (lObjs, stCh, lang) => {
     consol.throw("iwba");
   }
 
-  if (stCh.demandedIds && stCh.demandedIds.length) {
-    consol.logSpecial(8, `ahps stCh.demandedIds`, stCh.demandedIds);
-    let res = uUtils.selectRandom(
-      lObjs.filter((l) => stCh.demandedIds.includes(l.id))
-    );
+  if (stCh.demandedLObjs && stCh.demandedLObjs.length) {
+    let matches = lfUtils.filterByDemandedLObjs(stCh, lObjs);
+    let res = uUtils.selectRandom(matches);
 
     consol.logSpecial(
       8,
@@ -287,13 +285,13 @@ exports.selectRandLObj = (lObjs, stCh, lang) => {
       consol.throw(
         `ktrm ${lang} "${
           stCh.chunkId
-        }" selectRandLObj failed to find lObj from arr (-->above) via --stCh.demandedIds-- [${stCh.demandedIds.join(
-          ", "
-        )}].`
+        }" selectRandLObj failed to find lObj from arr (-->above) via --stCh.demandedLObjs-- [${stCh.demandedLObjs
+          .map((l) => l.id)
+          .join(", ")}].`
       );
     }
 
-    return _returnLObj(res, stCh, "demandedIds");
+    return _returnLObj(res, stCh, "demandedLObjs");
   }
 
   if (
@@ -2056,5 +2054,47 @@ exports.checkMatchHyper = (s, l) => {
         consol.throw(`cmhb mismatch stCh has "${h}" but not lObj.`);
       }
     }
+  });
+};
+
+exports.filterByDemandedLObjs = (stCh, lObjs) => {
+  consol.logSpecial(8, `ahps stCh.demandedLObjs`, stCh.demandedLObjs);
+
+  return lObjs.filter((l) => {
+    consol.logSpecial(8, "\n Trying for", l.id);
+
+    return stCh.demandedLObjs.some((demandedLObj) => {
+      consol.logSpecial(8, "             against demanded:", demandedLObj.id);
+      if (allLangUtils.compareLObjStems(l.id, `^${demandedLObj.id}`)) {
+        consol.logSpecial(8, "ahps1 yes");
+        return true;
+      }
+
+      if (demandedLObj.gender === l.gender) {
+        consol.logSpecial(8, "ahps2 no");
+        return false;
+      }
+
+      if (
+        !lfUtils.checkHyper(demandedLObj, [HY.HY]) &&
+        lfUtils.checkHyper(l, [HY.HY])
+      ) {
+        consol.logSpecial(8, "ahps3 no");
+        return false;
+      }
+
+      if (
+        lfUtils.checkHyper(demandedLObj, [HY.HY]) &&
+        !lfUtils.checkHyper(l, [HY.HY])
+      ) {
+        consol.logSpecial(8, "ahps4 no");
+        return false;
+      }
+
+      if (allLangUtils.compareLObjStems(l.id, demandedLObj.id, true)) {
+        consol.logSpecial(8, "ahps5 yes");
+        return true;
+      }
+    });
   });
 };

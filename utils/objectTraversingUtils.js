@@ -75,13 +75,12 @@ exports.findMatchingLemmaObjectThenWord = (
 
       let matchesLengthSnap = matches.length;
 
-      if (structureChunk.demandedIds) {
-        matches = matches.filter((l) =>
-          structureChunk.demandedIds.includes(l.id)
-        );
-
+      if (structureChunk.demandedLObjs) {
+        matches = lfUtils.filterByDemandedLObjs(structureChunk, matches);
         if (matchesLengthSnap && !matches.length) {
-          consol.throw("alro " + structureChunk.demandedIds.join(", "));
+          consol.throw(
+            "alro " + structureChunk.demandedLObjs.map((l) => l.id).join(", ")
+          );
         }
       }
     }

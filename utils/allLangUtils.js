@@ -96,7 +96,7 @@ exports.getLObjIdStem = (id) => {
   return id.split("-").slice(0, 3).join("-");
 };
 
-exports.compareLObjStems = (id1, id2) => {
+exports.compareLObjStems = (id1, id2, ignoreSpecificity) => {
   let res;
   [
     [id1, id2],
@@ -107,7 +107,11 @@ exports.compareLObjStems = (id1, id2) => {
     }
     let [idA, idB] = ids;
     if (idA[0] === "^") {
-      res = idA.slice(1) === idB;
+      if (!ignoreSpecificity) {
+        res = idA.slice(1) === idB;
+      } else {
+        idA = idA.slice(1);
+      }
     }
   });
 

@@ -606,20 +606,18 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
       counterfactualQuestionSentenceFormula.sentenceStructure.forEach(
         (stCh) => {
-          if (stCh.demandedIds && stCh.demandedIds.length) {
+          if (stCh.demandedLObjs && stCh.demandedLObjs.length) {
             consol.throw(
-              "igtc Wasn't expecting demandedIds to be populated yet."
+              "igtc Wasn't expecting demandedLObjs to be populated yet."
             );
           }
-          if (stCh.specificIds && stCh.specificIds.length) {
-            let demandedId = questionOutputArr.find(
+          if (gpUtils.getWordtypeStCh(stCh) !== "fixed") {
+            let demandedLObj = questionOutputArr.find(
               (ou) => ou.structureChunk.chunkId === stCh.chunkId
-            ).selectedLemmaObject.id;
-            if (
-              demandedId &&
-              !lfUtils.checkHyper({ id: demandedId }, [HY.HO, HY.VO])
-            ) {
-              stCh.demandedIds = [demandedId];
+            ).selectedLemmaObject;
+
+            if (demandedLObj) {
+              stCh.demandedLObjs = [demandedLObj];
             }
           }
 
@@ -737,10 +735,10 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
       //   newReqBody.counterfactualQuestionSentenceFormula.sentenceStructure.find(
       //     (chunk) => chunk.chunkId === specialChunkId
-      //   ).demandedIds = [firstDemandedLObj.id];
+      //   ).d emandedIds = [firstDemandedLObj.id];
 
       //   newReqBody.counterfactualSitSchematic.cfLabelAddition =
-      //     " demandedId=" + firstDemandedLObj.id;
+      //     " d emandedId=" + firstDemandedLObj.id;
 
       //   consol.logSpecial(
       //     3,
@@ -758,10 +756,10 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
       //     copiedNewResBody.counterfactualQuestionSentenceFormula.sentenceStructure.find(
       //       (chunk) => chunk.chunkId === specialChunkId
-      //     ).demandedIds = [demandedLObj.id];
+      //     ).d emandedIds = [demandedLObj.id];
 
       //     copiedNewResBody.counterfactualSitSchematic.cfLabelAddition =
-      //       " demandedId=" + demandedLObj.id;
+      //       " d emandedId=" + demandedLObj.id;
 
       //     consol.logSpecial(
       //       3,
@@ -781,7 +779,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       //  * then
       //  * V get all lobjs for the specific id on new req body
       //  * V and for every non-female one (so that would be father and parent)
-      //  * V add those as demandedIds
+      //  * V add those as demandedLObjs
       //  * And then run both of those new req bodies through palette
       //  * And that way, the running of parent virile, versus original
       //  * which is parent nonvirile, should make it so annotation stays.
@@ -1226,7 +1224,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
               I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" 
               and the counterfactual ANSWER selected words came back SAME as original answer selected words.\n
               This means that this trait has no impact, even if we flip it, so annotation is not needed. \n
-              ⭕ Deleting annotation "${annoTraitKey}" = "${questionOutputUnit.structureChunk.annotations[annoTraitKey]}".` +
+              ⭕ Deleting annotation "${annoTraitKey}" = "${questionOutputUnit.structureChunk.annotations[annoTraitKey]}" on "${questionOutputUnit.structureChunk.chunkId}".` +
             "[0m",
           {
             originalAnswerPseudoSentences: originalAnswerPseudoSentenceObjs.map(
@@ -1260,7 +1258,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
           I ran counterfactuals for "${questionOutputUnit.structureChunk.chunkId}" and the counterfactual 
           QUESTION selected words came back DIFFERENT original question selected words.\n
           This means that this trait has no impact, even if we flip it, so annotation is not needed. \n
-          ⭕ Deleting annotation "${annoTraitKey}" = "${questionOutputUnit.structureChunk.annotations[annoTraitKey]}" now.` +
+          ⭕ Deleting annotation "${annoTraitKey}" = "${questionOutputUnit.structureChunk.annotations[annoTraitKey]}" on "${questionOutputUnit.structureChunk.chunkId}".` +
             "[0m",
           {
             originalQuestionPseudoSentences:
