@@ -1902,7 +1902,7 @@ describe("/api", function () {
       );
     });
     it("#pal17-09a GET 200 YES: Engpol. One annotation absent as EdusMgn.", () => {
-      // 1/4 of runs affected by Mungojerry issue
+      // Was affected by Mungojerry issue, now resolved.
       let ref = [
         {
           ENG: "My doctor's (male) doctor was a woman.",

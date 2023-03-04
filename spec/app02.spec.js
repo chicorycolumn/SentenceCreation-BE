@@ -1722,8 +1722,8 @@ describe("/api", function () {
         {}
       );
     });
-    xit("#pal13B-04a GET 200 YES: Engpol. Another more interesting sentence with Pronombres. Terminal object used.", () => {
-      // Fails 1/4 of the time due to Mungojerry issue.
+    it("#pal13B-04a GET 200 YES: Engpol. Another more interesting sentence with Pronombres. Terminal object used.", () => {
+      // Was affected by Mungojerry issue, now resolved.
       let ref = [
         {
           ENG: "People saw you (singular).",
