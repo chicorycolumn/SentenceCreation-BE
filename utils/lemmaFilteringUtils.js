@@ -2058,48 +2058,89 @@ exports.checkMatchHyper = (s, l) => {
 };
 
 exports.filterByDemandedLObjs = (stCh, lObjs) => {
-  consol.logSpecial(8, `ahps stCh.demandedLObjs`, stCh.demandedLObjs);
+  /**Added to resolve Mungojerry issue - that synonyms were interfering with counterfax, causing erroneous coppicing.
+   *
+   * ie Q sentence "The woman saw a doctor.", let's flip gender value of doctor, see if we get different A sentence
+   * (and that should be YES, ie "lekarz" vs "lekarka", so anno should be kept)
+   *
+   * But "woman"/"lady" synonym meant sometimes Q sentence came back different "The lady saw a doctor."
+   * or "The person saw a doctor." because of hypernym "person"
+   * and these both trigger coppicing, ie the anno is removed, because when it was flipped the Q sentence apparently came back different.
+   *
+   * So to avoid this, counterfaxing must not use synonyms, ie if Q sentence used "woman" then only counterfax with "woman" not "lady".
+   * BUT we do want to counterfax "woman" to "man" or "person", so we can't just say "^eng-npe-000-woman" with caret.
+   *
+   * So below filter, where if Q chunk is "woman" then we exclude "lady" but not other stem-siblings (lObjs of same serial number)
+   * because remember, "man","woman","lady","person" are all same lObj stem.
+   */
+
+  consol.logSpecial(
+    8,
+    `\nahps stCh.demandedLObjs: Let's see which lObjs pass the test against (demanded) lObj id from Q chunk.`,
+    stCh.demandedLObjs.map((l) => l.id)
+  );
 
   return lObjs.filter((l) => {
-    consol.logSpecial(8, "\n Trying for", l.id);
-
     return stCh.demandedLObjs.some((demandedLObj) => {
-      consol.logSpecial(8, "             against demanded:", demandedLObj.id);
       if (allLangUtils.compareLObjStems(l.id, `^${demandedLObj.id}`)) {
-        consol.logSpecial(8, "ahps Yes by caret");
+        consol.logSpecial(8, `ahps1 "${l.id}" YES because same exact id.`);
         return true;
       }
 
+      // Gender of stem-sibling (same lObj serial number) is the same, so discard it.
+      // ie if Q chunk is "woman", then discard "lady" (same gender as "woman") but not "man" or "person".
       if (demandedLObj.gender === l.gender) {
-        consol.logSpecial(8, "ahps No 1a");
+        consol.logSpecial(
+          8,
+          `ahps2 "${l.id}" NO because is stem-sibling with same gender.`
+        );
         return false;
       }
 
+      /**
+       * I'm surprised that ahps3 condition is not needed.
+       * I thought "osoba"/"ludzie" synonyms would cause Mungojerry issue too.
+       * And wouldn't be filtered out by ahps2 because are not same gender ("osoba" f, "ludzie" m1).
+       */
       // if (demandedLObj.semanticGender === l.semanticGender) {
-      //   consol.logSpecial(8, "ahps No 1b");
+      // consol.logSpecial(
+      //   8,
+      //   `ahps3 "${l.id}" NO because is stem-sibling with same semanticGender.`
+      // );
       //   return false;
       // }
 
+      // If Q is not hypernym, eg "woman" then discard hypernyms, eg "person".
       if (
         !lfUtils.checkHyper(demandedLObj, [HY.HY]) &&
         lfUtils.checkHyper(l, [HY.HY])
       ) {
-        consol.logSpecial(8, "ahps No 2a");
+        consol.logSpecial(
+          8,
+          `ahps4 "${l.id}" NO because one's a hypernym and the other's not.`
+        );
         return false;
       }
 
+      // If Q is hypernym, eg "person" then discard non-hypernyms, eg "woman".
       if (
         lfUtils.checkHyper(demandedLObj, [HY.HY]) &&
         !lfUtils.checkHyper(l, [HY.HY])
       ) {
-        consol.logSpecial(8, "ahps No 2b");
+        consol.logSpecial(
+          8,
+          `ahps5 "${l.id}" NO due to one's a hypernym and the other's not.`
+        );
         return false;
       }
 
+      // Otherwise, return all stem-siblings (same lObj serial number) of Q chunk.
       if (allLangUtils.compareLObjStems(l.id, demandedLObj.id, true)) {
-        consol.logSpecial(8, "ahps5 Yes by stem");
+        consol.logSpecial(8, `ahps6 "${l.id}" YES because is stem-sibling.`);
         return true;
       }
+
+      consol.logSpecial(8, `ahps7 "${l.id}" NO because no condition matched.`);
     });
   });
 };
