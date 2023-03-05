@@ -7,7 +7,8 @@ const uUtils = require("../utils/universalUtils.js");
 const consol = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const { it } = require("mocha");
 const testingUtils = require("../utils/secondOrder/testingUtils.js");
-const { runPaletteTest, promiseAllMultiplier, checkProportions } = testingUtils;
+const { runPaletteTest, runPaletteTestMultiple, checkProportions } =
+  testingUtils;
 
 const dummy72a = [
   {
@@ -340,18 +341,15 @@ describe("/api", function () {
       );
     });
     it("#pal27-02c GET 200 YES: Poleng. I was a good person - singular/plural equal proportion.", () => {
-      return Promise.all(
-        promiseAllMultiplier(50, () => {
-          return runPaletteTest(
-            "POL",
-            "ENG",
-            "124b I was a good person",
-            [],
-            {},
-            1,
-            true
-          );
-        })
+      return runPaletteTestMultiple(
+        50,
+        "POL",
+        "ENG",
+        "124b I was a good person",
+        [],
+        {},
+        1,
+        true
       ).then((allQuestionSentences) => {
         checkProportions(allQuestionSentences, [
           [
@@ -449,10 +447,15 @@ describe("/api", function () {
 
   describe("/palette - Stage 26-iv: Spanish basic. HypernymyProportion adjustment but just for mother/father/parent.", () => {
     it("#pal26-04a GET 200 YES: Polspa. Red mother (Vypernym).", () => {
-      return Promise.all(
-        promiseAllMultiplier(250, () => {
-          return runPaletteTest("POL", "SPA", "dummy72c", [], {}, 1, true);
-        })
+      return runPaletteTestMultiple(
+        250,
+        "POL",
+        "SPA",
+        "dummy72c",
+        [],
+        {},
+        1,
+        true
       ).then((allQuestionSentences) => {
         checkProportions(allQuestionSentences, [
           ["matka", ["Czerwona matka."], 0.265, 0.35],
@@ -466,10 +469,15 @@ describe("/api", function () {
       });
     });
     it("#pal26-04b GET 200 YES: Poleng. Red mother (Vypernym).", () => {
-      return Promise.all(
-        promiseAllMultiplier(250, () => {
-          return runPaletteTest("POL", "ENG", "dummy72c", [], {}, 1, true);
-        })
+      return runPaletteTestMultiple(
+        250,
+        "POL",
+        "ENG",
+        "dummy72c",
+        [],
+        {},
+        1,
+        true
       ).then((allQuestionSentences) => {
         checkProportions(allQuestionSentences, [
           ["matka", ["Czerwona matka."], 0.265, 0.35],
@@ -483,10 +491,15 @@ describe("/api", function () {
       });
     });
     it("#pal26-04c GET 200 YES: Spapol. Red mother (Vypernym).", () => {
-      return Promise.all(
-        promiseAllMultiplier(250, () => {
-          return runPaletteTest("SPA", "POL", "dummy72c", [], {}, 1, true);
-        })
+      return runPaletteTestMultiple(
+        250,
+        "SPA",
+        "POL",
+        "dummy72c",
+        [],
+        {},
+        1,
+        true
       ).then((allQuestionSentences) => {
         checkProportions(allQuestionSentences, [
           ["madre", ["Roja madre."], 0.3, 0.55],
@@ -498,10 +511,15 @@ describe("/api", function () {
       });
     });
     it("#pal26-04d GET 200 YES: Spaeng. Red mother (Vypernym).", () => {
-      return Promise.all(
-        promiseAllMultiplier(250, () => {
-          return runPaletteTest("SPA", "ENG", "dummy72c", [], {}, 1, true);
-        })
+      runPaletteTestMultiple(
+        250,
+        "SPA",
+        "ENG",
+        "dummy72c",
+        [],
+        {},
+        1,
+        true
       ).then((allQuestionSentences) => {
         checkProportions(allQuestionSentences, [
           ["madre", ["Roja madre."], 0.3, 0.55],
@@ -513,10 +531,15 @@ describe("/api", function () {
       });
     });
     it("#pal26-04e GET 200 YES: Engpol. Red mother (Vypernym).", () => {
-      return Promise.all(
-        promiseAllMultiplier(250, () => {
-          return runPaletteTest("ENG", "POL", "dummy72c", [], {}, 1, true);
-        })
+      return runPaletteTestMultiple(
+        250,
+        "ENG",
+        "POL",
+        "dummy72c",
+        [],
+        {},
+        1,
+        true
       ).then((allQuestionSentences) => {
         checkProportions(allQuestionSentences, [
           ["mother", ["Red mother."], 0.265, 0.35],
@@ -530,10 +553,15 @@ describe("/api", function () {
       });
     });
     it("#pal26-04f GET 200 YES: Engspa. Red mother (Vypernym).", () => {
-      return Promise.all(
-        promiseAllMultiplier(250, () => {
-          return runPaletteTest("ENG", "SPA", "dummy72c", [], {}, 1, true);
-        })
+      return runPaletteTestMultiple(
+        250,
+        "ENG",
+        "SPA",
+        "dummy72c",
+        [],
+        {},
+        1,
+        true
       ).then((allQuestionSentences) => {
         checkProportions(allQuestionSentences, [
           ["mother", ["Red mother."], 0.265, 0.35],
