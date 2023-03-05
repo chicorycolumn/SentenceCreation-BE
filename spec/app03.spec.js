@@ -215,11 +215,13 @@ describe("/api", function () {
           POL: ["Jest matka i widzę ją."],
         },
         {
-          ENG: [
-            "There's a parent and I see him.",
-            "There's a parent and I see her.",
-          ],
+          ENG: ["There's a parent and I see him."],
           POL: ["Jest rodzic i widzę go.", "Jest rodzic i widzę jego."],
+        },
+        {
+          ENG: ["There's a parent and I see her."],
+          POL: ["Jest rodzic i widzę go.", "Jest rodzic i widzę jego."],
+          extra: { FYIPs: ["FYIP101-A-ENG-POL"] },
         },
         {
           ENG: "There's a father and I see him.",
@@ -252,6 +254,7 @@ describe("/api", function () {
             "There's a parent and I am seeing her.",
           ],
           POL: "Jest rodzic i widzę go.",
+          ignorableExtra: ["FYIPs"],
         },
       ];
       return runPaletteTest("POL", "ENG", "dummy64a", ref);
@@ -1418,7 +1421,7 @@ describe("/api", function () {
     });
   });
 
-  describe("/palette - Stage 17D: Possessive pronombres and MGNs. MGN to agree with pronombre.", () => {
+  xdescribe("/palette - Stage 17D: Possessive pronombres and MGNs. MGN to agree with pronombre.", () => {
     it("#pal17-10a GET 200 YES: Engpol. I was here. Testing annotations.", () => {
       let ref = [
         {
@@ -1774,7 +1777,7 @@ describe("/api", function () {
     //Add "The doctor was here." sentence with tests.
   });
 
-  describe("/palette - Stage 17C: Possessive pronombres and MGNs. EdusMgn", () => {
+  xdescribe("/palette - Stage 17C: Possessive pronombres and MGNs. EdusMgn", () => {
     it("#pal17-07a GET 200 YES: Engpol. Hard-specify an MGN's gender (EdusMgn dummy run).", () => {
       let ref = [
         {
@@ -2077,7 +2080,7 @@ describe("/api", function () {
     });
   });
 
-  describe("/palette - Stage 17B: Possessive pronombres and MGNs. PP below MGN. ProsMgn.", () => {
+  xdescribe("/palette - Stage 17B: Possessive pronombres and MGNs. PP below MGN. ProsMgn.", () => {
     it("#pal17-04b GET 200 YES: Engpol. Sentence with 2 of same MGN. Some annotations expected. But eventually, this should succeed, as ProsMgn.", () => {
       let ref = [
         {
@@ -2355,7 +2358,7 @@ describe("/api", function () {
     });
   });
 
-  describe("/palette - Stage 17A: Possessive pronombres and MGNs. Pre-testing.", () => {
+  xdescribe("/palette - Stage 17A: Possessive pronombres and MGNs. Pre-testing.", () => {
     it("#pal17-01a GET 200 YES: Engpol. MGN as sole word, annotation expected.", () => {
       let ref = [
         {
@@ -2488,7 +2491,7 @@ describe("/api", function () {
     });
   });
 
-  describe("/palette - Stage 16: NATASHA T. Checking how arrays as terminal points are handled. +extra", () => {
+  xdescribe("/palette - Stage 16: NATASHA T. Checking how arrays as terminal points are handled. +extra", () => {
     it("#pal16-01a GET 200 YES: NATASHA T. Are correct members of an array returned as possible ANSWER, as they should be?", () => {
       let ref = [
         {

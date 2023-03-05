@@ -48,6 +48,13 @@ exports.finishAndSend = (
 
   refs.forEach((ref) => {
     if (ref.responseObject) {
+      if (ref.responseObject.FYIPs) {
+        if (!combinedResponseObj.FYIPs) {
+          combinedResponseObj.FYIPs = [];
+        }
+        combinedResponseObj.FYIPs.push(...ref.responseObject.FYIPs);
+      }
+
       combinedResponseObj[ref.mode + "SentenceArr"] =
         ref.responseObject.finalSentenceArr || [];
 
@@ -80,8 +87,8 @@ exports.returnNullQuestionResponseObj = (
   let nullQuestionResponseObj = scUtils.giveFinalSentences(
     questionSentenceData,
     multipleMode,
-    questionLanguage,
-    answerLanguage
+    { questionLanguage, answerLanguage },
+    true
   );
   return frUtils.finishAndSend(nullQuestionResponseObj, null);
 };

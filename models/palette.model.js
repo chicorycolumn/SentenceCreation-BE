@@ -396,15 +396,15 @@ exports.fetchPalette = (req) => {
         answerResponseObj = scUtils.giveFinalSentences(
           answerSentenceData,
           multipleMode,
-          answerLanguage,
-          null
+          { questionLanguage, answerLanguage },
+          false
         );
       } else {
         let subsequentAnswerResponseObj = scUtils.giveFinalSentences(
           answerSentenceData,
           multipleMode,
-          answerLanguage,
-          null
+          { questionLanguage, answerLanguage },
+          false
         );
 
         subsequentAnswerResponseObj.finalSentenceArr.forEach(
@@ -453,8 +453,8 @@ exports.fetchPalette = (req) => {
   questionResponseObj = scUtils.giveFinalSentences(
     questionSentenceData,
     false,
-    questionLanguage,
-    answerLanguage,
+    { questionLanguage, answerLanguage },
+    true,
     answerSentenceData,
     questionSentenceFormula,
     req.body,
@@ -468,15 +468,15 @@ exports.fetchPalette = (req) => {
       answerResponseObj = scUtils.giveFinalSentences(
         answerSentenceData,
         true,
-        answerLanguage,
-        null
+        { questionLanguage, answerLanguage },
+        false
       );
     } else {
       let subsequentAnswerResponseObj = scUtils.giveFinalSentences(
         answerSentenceData,
         true,
-        answerLanguage,
-        null
+        { questionLanguage, answerLanguage },
+        false
       );
 
       subsequentAnswerResponseObj.finalSentenceArr.forEach((finalSentence) => {

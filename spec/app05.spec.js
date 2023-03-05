@@ -210,7 +210,12 @@ const dummy73b = [
 const _124bRefPolEng = [
   {
     ENG: ["I was/i a good person."],
-    POL: ["Ja byłam dobrą osobą.", "Ja byłem dobrą osobą."],
+    POL: ["Ja byłam dobrą osobą."],
+  },
+  {
+    ENG: ["I was/i a good person."],
+    POL: ["Ja byłem dobrą osobą."],
+    extra: { FYIPs: ["FYIP101-A-POL-ENG"] },
   },
   {
     ENG: ["We were/ good people."],
@@ -228,6 +233,7 @@ const _124bRefEngPol = [
   {
     ENG: ["I (male) was a good person."],
     POL: ["Ja byłem dobrą osobą."],
+    extra: { FYIPs: ["FYIP101-A-ENG-POL"] },
   },
   {
     ENG: ["We (males) were good people.", "We (mixed) were good people."],
@@ -241,7 +247,12 @@ const _124bRefEngPol = [
 const _124cRefPolEng = [
   {
     ENG: ["I was/i a good person."],
-    POL: ["Ja byłam dobrą osobą.", "Ja byłem dobrą osobą."],
+    POL: ["Ja byłam dobrą osobą."],
+  },
+  {
+    ENG: ["I was/i a good person."],
+    POL: ["Ja byłem dobrą osobą."],
+    extra: { FYIPs: ["FYIP101-A-POL-ENG"] },
   },
   {
     ENG: ["We were/ good people."],
@@ -275,6 +286,7 @@ const _124cRefEngPol = [
   {
     ENG: ["I (male) was a good person."],
     POL: ["Ja byłem dobrą osobą."],
+    extra: { FYIPs: ["FYIP101-A-ENG-POL"] },
   },
   {
     ENG: ["We (males) were good people.", "We (mixed) were good people."],
@@ -301,7 +313,13 @@ const _124cRefEngPol = [
     POL: ["My byłyśmy dobrymi kobietami."],
   },
 ];
-const dummy74 = [
+const dummy74Poleng = [
+  {
+    ENG: ["One red person."],
+    POL: ["Jedna czerwona osoba."],
+  },
+];
+const dummy74Engpol = [
   {
     ENG: ["One red person."],
     POL: ["Jedna czerwona osoba."],
@@ -371,10 +389,10 @@ describe("/api", function () {
       });
     });
     it("#pal27-02d GET 200 YES: Engpol. 'person' singular does not translate to 'ludzie'.", () => {
-      return runPaletteTest("ENG", "POL", "dummy74", dummy74);
+      return runPaletteTest("ENG", "POL", "dummy74", dummy74Poleng);
     });
     it("#pal27-02dd GET 200 YES: Engpol. Counterpart of #pal27-02d but not really necessary.", () => {
-      return runPaletteTest("POL", "ENG", "dummy74", dummy74);
+      return runPaletteTest("POL", "ENG", "dummy74", dummy74Engpol);
     });
     it("#pal27-02e GET 200 YES: Poleng. I was a good person - masculine I should still be dobrą osobą.", () => {
       return runPaletteTest(

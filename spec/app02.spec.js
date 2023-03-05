@@ -1842,6 +1842,7 @@ describe("/api", function () {
         {
           ENG: "My parent gave me a book.",
           POL: ["Mój rodzic dał mi książkę.", "Mój rodzic dał mnie książkę."],
+          ignorableExtra: ["FYIPs"],
         },
         {
           ENG: "My father gave me a book.",
@@ -1854,6 +1855,7 @@ describe("/api", function () {
         {
           ENG: "Our parent gave us a book.",
           POL: ["Nasz rodzic dał nam książkę."],
+          ignorableExtra: ["FYIPs"],
         },
         {
           ENG: "Our father gave us a book.",
@@ -2065,6 +2067,7 @@ describe("/api", function () {
             POL: [
               "Mój rodzic dał mi/mnie jego książkę.", // I know this looks weird but it is correct. See Issue 205 in Hypernymy documentation.
             ],
+            extra: { FYIPs: ["FYIP101-A-ENG-POL"] },
           },
           {
             ENG: "My parents gave me their book.",
@@ -2136,6 +2139,7 @@ describe("/api", function () {
               "My parent had given me her book.",
               "My parent has given me her book.",
             ],
+            ignorableExtra: ["FYIPs"],
           },
           {
             POL: "Nasz rodzic dał nam jego książkę.",
@@ -2148,6 +2152,7 @@ describe("/api", function () {
               "Our parent had given us her book.",
               "Our parent has given us her book.",
             ],
+            ignorableExtra: ["FYIPs"],
           },
           {
             POL: "Moi rodzice dali mi ich książkę.",
@@ -2292,6 +2297,7 @@ describe("/api", function () {
               "Moje dziecko dało mi jego książkę.", // I know this looks weird but it is correct. See Issue 205 in Hypernymy documentation.
               "Moje dziecko dało mnie jego książkę.",
             ],
+            extra: { FYIPs: ["FYIP101-A-ENG-POL"] },
           },
           {
             ENG: "My children gave me their book.",
@@ -2336,6 +2342,7 @@ describe("/api", function () {
           {
             ENG: "Our child gave us her book.",
             POL: ["Nasze dziecko dało nam jego książkę."],
+            extra: { FYIPs: ["FYIP101-A-ENG-POL"] },
           },
           {
             ENG: "Our children gave us their book.",
@@ -2390,6 +2397,7 @@ describe("/api", function () {
               "My baby had given me its book.",
               "My baby has given me its book.",
             ],
+            extra: { FYIPs: ["FYIP101-A-POL-ENG"] },
           },
           {
             POL: "Nasze dziecko dało nam jego książkę.",
@@ -2414,6 +2422,7 @@ describe("/api", function () {
               "Our baby had given us its book.",
               "Our baby has given us its book.",
             ],
+            extra: { FYIPs: ["FYIP101-A-POL-ENG"] },
           },
           {
             POL: "Moje dzieci dały mi ich książkę.",
@@ -2514,15 +2523,27 @@ describe("/api", function () {
         "113c my child gave me his book",
         [
           {
-            ENG: [
-              "My baby gave me his book.",
-              "My baby gave me her book.",
-              "My baby gave me its book.",
-            ],
+            ENG: ["My baby gave me his book."],
             POL: [
               "Moje dziecko dało mi jego książkę.",
               "Moje dziecko dało mnie jego książkę.",
             ],
+          },
+          {
+            ENG: ["My baby gave me its book."],
+            POL: [
+              "Moje dziecko dało mi jego książkę.",
+              "Moje dziecko dało mnie jego książkę.",
+            ],
+            ignorableExtra: ["FYIPs"],
+          },
+          {
+            ENG: ["My baby gave me her book."],
+            POL: [
+              "Moje dziecko dało mi jego książkę.",
+              "Moje dziecko dało mnie jego książkę.",
+            ],
+            extra: { FYIPs: ["FYIP101-A-ENG-POL"] },
           },
           {
             ENG: ["My babies gave me their book."],

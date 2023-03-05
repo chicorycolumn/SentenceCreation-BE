@@ -10,6 +10,7 @@ const refObj = require("./reference/referenceObjects.js");
 const refFxn = require("./reference/referenceFunctions.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 const nexusUtils = require("./secondOrder/nexusUtils.js");
+const apiUtils = require("./secondOrder/apiUtils.js");
 const { HY } = refObj;
 
 exports.getWordsAndFormulas = (currentLanguage, wordsOnly) => {
@@ -803,14 +804,17 @@ exports.processSentenceFormula = (
 exports.giveFinalSentences = (
   sentenceData,
   multipleMode,
-  currentLanguage,
-  answerLanguage,
+  languagesObj,
+  isQuestion,
   answerSentenceData,
   questionSentenceFormula,
   reqBody,
   answerSelectedWordsSetsHaveChanged,
   runsRecord
 ) => {
+  let { questionLanguage, answerLanguage } = languagesObj;
+  let currentLanguage = isQuestion ? questionLanguage : answerLanguage;
+
   let {
     answerOutputArrays,
     questionOutputArr,
@@ -855,12 +859,13 @@ exports.giveFinalSentences = (
   }
 
   let finalSentenceArr = [];
+  let fyipLabels = [];
 
   if (!multipleMode) {
-    if (answerLanguage) {
+    if (isQuestion) {
       aaUtils.firstStageEvaluateAnnotations(
         questionOutputArr,
-        { answerLanguage, questionLanguage: currentLanguage },
+        languagesObj,
         answerSentenceData,
         questionSentenceFormula,
         reqBody,
@@ -875,7 +880,7 @@ exports.giveFinalSentences = (
       questionOutputArr,
       sentenceFormula,
       multipleMode,
-      currentLanguage,
+      questionLanguage,
       answerLanguage
     );
 
@@ -892,6 +897,14 @@ exports.giveFinalSentences = (
         null
       );
 
+      let additionalFyipLabels = scUtils.evaluateFYIPs(
+        outputArr,
+        questionLanguage,
+        answerLanguage,
+        "A"
+      );
+      fyipLabels.push(...additionalFyipLabels);
+
       finalSentences.forEach((finalSentence) => {
         finalSentenceArr.push(finalSentence);
       });
@@ -902,7 +915,77 @@ exports.giveFinalSentences = (
     finalSentenceArr,
   };
 
+  if (fyipLabels.length) {
+    fyipLabels = Array.from(new Set(fyipLabels));
+    let FYIPs = fyipLabels.map((fyipLabel) => {
+      let FYIP = apiUtils.getFYIP(fyipLabel);
+      FYIP.label = fyipLabel;
+      return FYIP;
+    });
+
+    let filteredFYIPs = [];
+    FYIPs.forEach((FYIP) => {
+      if (
+        FYIP.label.split("-")[1] === "Q" &&
+        FYIPs.some((f) => f.label.split("-")[0] === FYIP.label.split("-")[0])
+      ) {
+        return;
+      }
+      filteredFYIPs.push(FYIP);
+    });
+
+    responseObj.FYIPs = filteredFYIPs;
+  }
   return responseObj;
+};
+
+exports.evaluateFYIPs = (outputArr, questionLang, answerLang, label) => {
+  return outputArr
+    .map((ou) => {
+      if (
+        //I've put only singular here because I don't want FYIP101 for "Osoby zobaczyły" or "Ludzie zobaczyli"
+        ou.structureChunk.number &&
+        ou.structureChunk.number[0] === "singular" &&
+        ou.structureChunk.semanticGender &&
+        ((ou.structureChunk.gender.length === 1 &&
+          ou.structureChunk.gender[0] !==
+            ou.structureChunk.semanticGender[0]) ||
+          (ou.structureChunk.gender.length > 1 &&
+            !ou.structureChunk.gender.includes(
+              ou.structureChunk.semanticGender[0]
+            ))) &&
+        !(
+          answerLang === "POL" &&
+          ou.structureChunk.semanticGender[0] === "m1" &&
+          ou.structureChunk.gender[0] === "n"
+        )
+      ) {
+        let headOutputUnit = otUtils.getHeadOutputUnit(
+          ou.structureChunk,
+          outputArr
+        );
+        let depUnits = outputArr.filter((o) =>
+          refObj.agreementTraits
+            .map((agreementTrait) => o.structureChunk[agreementTrait])
+            .includes(ou.structureChunk.chunkId)
+        );
+        if (
+          (depUnits.length &&
+            depUnits.some((depUnit) =>
+              ["npe", "pro"].includes(
+                gpUtils.getWordtypeShorthandStCh(depUnit.structureChunk)
+              )
+            )) ||
+          (headOutputUnit &&
+            ["npe", "pro"].includes(
+              gpUtils.getWordtypeShorthandStCh(headOutputUnit.structureChunk)
+            ))
+        ) {
+          return `FYIP101-${label}-${questionLang}-${answerLang}`;
+        }
+      }
+    })
+    .filter((x) => x);
 };
 
 exports.buildSentenceString = (

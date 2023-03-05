@@ -127,7 +127,7 @@ exports.runPaletteTest = (
     .expect(200)
     .then((res) => {
       if (!skipConsoleLog) {
-        consol.logTestOutputSolely("\n\n", res.body);
+        consol.logTestOutputSolely("\n\nHere's res.body:", res.body);
       }
 
       if (!answerLanguage) {
@@ -953,7 +953,7 @@ exports.checkTranslationsOfGivenRef = (
 ) => {
   let testActivated = false;
   if (!alreadyLogged) {
-    consol.logTestOutputSolely("\n\n", res.body);
+    consol.logTestOutputSolely("\n\nIt's res.body:", res.body);
   }
   if (res.body.runsRecord) {
     consol.logTestOutputSolely(
@@ -985,6 +985,12 @@ exports.checkTranslationsOfGivenRef = (
     let expandedRefItem = {};
     expandedRefItem[questionLanguage] = refItemQuestionSentences;
     expandedRefItem[answerLanguage] = refItemAnswerSentences;
+
+    Object.keys(refItem).forEach((k) => {
+      if (![questionLanguage, answerLanguage].includes(k)) {
+        expandedRefItem[k] = refItem[k];
+      }
+    });
 
     return expandedRefItem;
   });
@@ -1023,6 +1029,8 @@ exports.checkTranslationsOfGivenRef = (
     );
   }
 
+  let dataToOnlyAppearWhenExplicitlyExpected = ["FYIPs"];
+
   questionSentenceArr.forEach((actualQuestionSentence, index) => {
     let expectedQuestionSentences = ref.map(
       (refItem) => refItem[questionLanguage]
@@ -1038,6 +1046,29 @@ exports.checkTranslationsOfGivenRef = (
       ) {
         expect(answerSentenceArr).to.have.members(refItem[answerLanguage]);
         testActivated = true;
+
+        if (refItem.extra) {
+          Object.keys(refItem.extra).forEach((k) => {
+            if (k === "FYIPs") {
+              expect(res.body["FYIPs"]).to.exist;
+              expect(res.body["FYIPs"].map((FYIP) => FYIP.label)).to.eql(
+                refItem.extra.FYIPs
+              );
+              return;
+            }
+            expect(res.body[k].to.eql[refItem.extra[k]]);
+          });
+        }
+
+        expect(
+          Object.keys(res.body).filter(
+            (k) =>
+              dataToOnlyAppearWhenExplicitlyExpected.includes(k) &&
+              (!refItem.ignorableExtra ||
+                !refItem.ignorableExtra.includes(k)) &&
+              (!refItem.extra || !Object.keys(refItem.extra).includes(k))
+          )
+        ).to.have.length(0);
       }
     });
   });
