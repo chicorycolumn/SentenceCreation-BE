@@ -68,13 +68,18 @@ exports.checkProportions = (res, ref, strictAboutAnnotations) => {
     }
   });
 
+  const printOutput = (printout, tag) => {
+    if (Object.keys(printout).length) {
+      Object.keys(printout).forEach((k) => {
+        let v = printout[k];
+        consol.logTestOutputSolely(tag, k, " ", v);
+      });
+    }
+  };
+
   consol.logTestOutputSolely("\ncheckProportions:");
-  if (Object.keys(printoutBad).length) {
-    consol.logTestOutputSolely("🥵:", printoutBad, "\n");
-  }
-  if (Object.keys(printoutGood).length) {
-    consol.logTestOutputSolely("😀:", printoutGood, "\n");
-  }
+  printOutput(printoutBad, "🥵");
+  printOutput(printoutGood, "😀");
 
   Object.keys(rec).forEach((name) => {
     let { actual, upperBound, lowerBound } = rec[name];
@@ -89,6 +94,14 @@ exports.promiseAllMultiplier = (iterations = 10, callback) => {
     res.push(callback());
   }
   return res;
+};
+
+exports.runPaletteTestMultiple = (iterations = 10, ...args) => {
+  return Promise.all(
+    testingUtils.promiseAllMultiplier(iterations, () => {
+      return testingUtils.runPaletteTest(...args);
+    })
+  );
 };
 
 exports.runPaletteTest = (

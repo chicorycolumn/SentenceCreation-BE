@@ -8,7 +8,8 @@ const consol = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const { it } = require("mocha");
 const testingUtils = require("../utils/secondOrder/testingUtils.js");
 const { generalTranslatedSentencesRef } = testingUtils;
-const { runPaletteTest, promiseAllMultiplier, checkProportions } = testingUtils;
+const { runPaletteTest, runPaletteTestMultiple, checkProportions } =
+  testingUtils;
 
 // MGN:            Multi-gender noun. Eg doctor in ENG can be either male or female.
 // ProsMgn:        "My doctor and her book." Connected pronombre reveals gender of MGN. Doesn't need an annotation for doctor as clearly must be lekarka.
@@ -1303,20 +1304,17 @@ describe("/api", function () {
         });
     });
     it("#pal06-06 GET 200 YES: Battery RSWAT Poleng. Ensure genderProportion masc and fem randomly selected at ~50/50 rate, despite there being thrice as many masculine genders as feminine.", () => {
-      return Promise.all(
-        promiseAllMultiplier(100, () => {
-          return runPaletteTest(
-            "POL",
-            "ENG",
-            "dummy31",
-            [],
-            { devSaysOmitStChValidation: true },
-            1,
-            true,
-            true,
-            true
-          );
-        })
+      return runPaletteTestMultiple(
+        100,
+        "POL",
+        "ENG",
+        "dummy31",
+        [],
+        { devSaysOmitStChValidation: true },
+        1,
+        true,
+        true,
+        true
       ).then((allQuestionSentences) => {
         checkProportions(allQuestionSentences, [
           ["♂ masculine", ["Pisałem."], 0.5],
@@ -1325,18 +1323,15 @@ describe("/api", function () {
       });
     });
     it("#pal06-06 GET 200 YES: Battery RSWAT Poleng. Ensure genderProportion masc and fem randomly selected at ~50/50 rate, despite there being thrice as many masculine genders as feminine.", () => {
-      return Promise.all(
-        promiseAllMultiplier(100, () => {
-          return runPaletteTest(
-            "POL",
-            "ENG",
-            "dummy31",
-            [],
-            { devSaysOmitStChValidation: true },
-            1,
-            true
-          );
-        })
+      return runPaletteTestMultiple(
+        100,
+        "POL",
+        "ENG",
+        "dummy31",
+        [],
+        { devSaysOmitStChValidation: true },
+        1,
+        true
       ).then((allQuestionSentences) => {
         checkProportions(allQuestionSentences, [
           ["♂ masculine", ["Pisałem."], 0.5],
