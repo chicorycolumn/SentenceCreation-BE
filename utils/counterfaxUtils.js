@@ -1225,7 +1225,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
               and the counterfactual ANSWER selected words came back SAME as original answer selected words.\n
               This means that this trait has no impact, even if we flip it, so annotation is not needed. \n
               ⭕ Deleting annotation "${annoTraitKey}" = "${questionOutputUnit.structureChunk.annotations[annoTraitKey]}" on "${questionOutputUnit.structureChunk.chunkId}".` +
-              ⭕ Deleting annotation "${annoTraitKey}" = "${questionOutputUnit.structureChunk.annotations[annoTraitKey]}" on "${questionOutputUnit.structureChunk.chunkId}".` +
             "[0m",
           {
             originalAnswerPseudoSentences: originalAnswerPseudoSentenceObjs.map(
