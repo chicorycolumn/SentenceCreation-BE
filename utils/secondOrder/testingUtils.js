@@ -14,9 +14,16 @@ exports.checkProportions = (res, ref, strictAboutAnnotations) => {
 
   ref.forEach((refArr) => {
     let name = refArr[0];
-    let values = refArr[1];
+    let valuesRaw = refArr[1];
     let target = refArr[2];
     let variance = refArr[3] || 0.22;
+
+    let values = [];
+    valuesRaw.forEach((value) => {
+      let expandedValues = exports.expandTestShorthands(value);
+      values.push(...expandedValues);
+    });
+    values = Array.from(new Set(values));
 
     let upperBound = target + target * variance;
     let lowerBound = target - target * variance;
@@ -63,10 +70,10 @@ exports.checkProportions = (res, ref, strictAboutAnnotations) => {
 
   consol.logTestOutputSolely("\ncheckProportions:");
   if (Object.keys(printoutBad).length) {
-    consol.logTestOutputSolely("🥵 BAD:", printoutBad, "\n");
+    consol.logTestOutputSolely("🥵:", printoutBad, "\n");
   }
   if (Object.keys(printoutGood).length) {
-    consol.logTestOutputSolely("😀 GOOD:", printoutGood, "\n");
+    consol.logTestOutputSolely("😀:", printoutGood, "\n");
   }
 
   Object.keys(rec).forEach((name) => {
@@ -1033,7 +1040,12 @@ exports.expandTestShorthands = (arr) => {
   }
 
   const ref = {
+    "osobami/ludźmi": ["osobami", "ludźmi"],
+    "osoby/ludzie": ["osoby", "ludzie"],
+    "woman/lady": ["woman", "lady"],
+    "women/ladies": ["women", "ladies"],
     "mi/mnie": ["mi", "mnie"],
+    "cie/ciebie": ["cię", "ciebie"],
     "was/": ["was", "has been", "had been", "was being"],
     "was/i": ["was", "have been", "had been", "was being"],
     "were/": ["were", "have been", "had been", "were being"],
@@ -1055,16 +1067,18 @@ exports.expandTestShorthands = (arr) => {
       let arr = a.split(" ");
       let superArr = [];
       let shorthanders = [];
-      let reg = /[a-zA-Z\/]/;
+      let reg = /^[\p{L}\/]*$/u;
       arr.forEach((el, index) => {
         if (el.includes("/")) {
           let trimmedEl = el
             .split("")
-            .filter((char) => {
-              return reg.test(char);
-            })
+            .filter((char) => reg.test(char))
             .join("");
-          let shorthand = { el: trimmedEl, index };
+
+          let capitalCase = trimmedEl[0].toUpperCase() === trimmedEl[0];
+          trimmedEl = trimmedEl.toLowerCase();
+
+          let shorthand = { el: trimmedEl, index, capitalCase };
           if (!reg.test(el[el.length - 1])) {
             shorthand.lastChar = el[el.length - 1];
           }
@@ -1080,9 +1094,14 @@ exports.expandTestShorthands = (arr) => {
         throw `vfkl expandTestingShorthands "${shorthander.el}" not a recognised shorthand.`;
       }
       ref[shorthander.el].forEach((longhand) => {
+        let longhanded = `${longhand}${shorthander.lastChar || ""}`;
+        if (shorthander.capitalCase) {
+          longhanded = longhanded[0].toUpperCase() + longhanded.slice(1);
+        }
+
         let newArr = [
           ...arr.slice(0, shorthander.index),
-          `${longhand}${shorthander.lastChar || ""}`,
+          longhanded,
           ...arr.slice(shorthander.index + 1),
         ];
         superArr.push(newArr.join(" "));
