@@ -61,26 +61,35 @@ exports.wordsBank = {
         },
       },
     },
-    // { // Uncomment this and deal with how affect #pal27-02
-    //   //selectors
-    //   lemma: "ludzie",
-    //   id: "pol-npe-011-ludzie-£",
-    //   gender: "m1",
-    //   semanticGender: "_PersonalGenders",
-    //   //notes
-    //   tantumPlurale: true,
-    //   //inflections
-    //   inflections: {
-    //     plural: {
-    //       nom: "ludzie",
-    //       gen: "ludzi",
-    //       dat: "ludziom",
-    //       acc: "ludzi",
-    //       ins: "ludźmi",
-    //       loc: "ludziach",
-    //     },
-    //   },
-    // },
+    {
+      //selectors
+      lemma: "ludzie",
+      id: "pol-npe-011-ludzie-£",
+      gender: "m1",
+      semanticGender: "_PersonalGenders",
+      //notes
+      lacking: true,
+      /**
+       * When I say "tantumPlurale", it means words which can refer to only one thing.
+       *
+       * So "drwi" is "tantumPlurale", because it can mean "door" as well as "doors".
+       * But "ludzie" is NOT a "tantumPlurale", because it can't mean "person", it only means "people".
+       *
+       * So "ludzie" is just a "lacking" lObj, ie it is missing its singular inflections,
+       * while "drwi" is both "lacking" and "tantumPlurale".
+       *  */
+      //inflections
+      inflections: {
+        plural: {
+          nom: "ludzie",
+          gen: "ludzi",
+          dat: "ludziom",
+          acc: "ludzi",
+          ins: "ludźmi",
+          loc: "ludziach",
+        },
+      },
+    },
     {
       //selectors
       lemma: "mężczyzna",

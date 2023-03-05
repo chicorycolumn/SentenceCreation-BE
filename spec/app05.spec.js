@@ -208,22 +208,15 @@ const dummy73b = [
 ];
 const _124bRefPolEng = [
   {
-    ENG: [
-      "I was a good person.",
-      "I was being a good person.",
-      "I have been a good person.",
-      "I had been a good person.",
-    ],
+    ENG: ["I was/i a good person."],
     POL: ["Ja byłam dobrą osobą.", "Ja byłem dobrą osobą."],
   },
   {
-    ENG: [
-      "We were good people.",
-      "We were being good people.",
-      "We have been good people.",
-      "We had been good people.",
+    ENG: ["We were/ good people."],
+    POL: [
+      "My byłyśmy dobrymi osobami/ludźmi.",
+      "My byliśmy dobrymi osobami/ludźmi.",
     ],
-    POL: ["My byłyśmy dobrymi osobami.", "My byliśmy dobrymi osobami."],
   },
 ];
 const _124bRefEngPol = [
@@ -237,11 +230,11 @@ const _124bRefEngPol = [
   },
   {
     ENG: ["We (males) were good people.", "We (mixed) were good people."],
-    POL: ["My byliśmy dobrymi osobami."],
+    POL: ["My byliśmy dobrymi osobami/ludźmi."],
   },
   {
     ENG: ["We (females) were good people."],
-    POL: ["My byłyśmy dobrymi osobami."],
+    POL: ["My byłyśmy dobrymi osobami/ludźmi."],
   },
 ];
 const _124cRefPolEng = [
@@ -251,7 +244,10 @@ const _124cRefPolEng = [
   },
   {
     ENG: ["We were/ good people."],
-    POL: ["My byłyśmy dobrymi osobami.", "My byliśmy dobrymi osobami."],
+    POL: [
+      "My byłyśmy dobrymi osobami/ludźmi.",
+      "My byliśmy dobrymi osobami/ludźmi.",
+    ],
   },
   {
     ENG: ["I was/i a good man."],
@@ -281,11 +277,11 @@ const _124cRefEngPol = [
   },
   {
     ENG: ["We (males) were good people.", "We (mixed) were good people."],
-    POL: ["My byliśmy dobrymi osobami."],
+    POL: ["My byliśmy dobrymi osobami/ludźmi."],
   },
   {
     ENG: ["We (females) were good people."],
-    POL: ["My byłyśmy dobrymi osobami."],
+    POL: ["My byłyśmy dobrymi osobami/ludźmi."],
   },
   {
     ENG: ["I was a good man."],
@@ -302,6 +298,12 @@ const _124cRefEngPol = [
   {
     ENG: ["We were good women/ladies."],
     POL: ["My byłyśmy dobrymi kobietami."],
+  },
+];
+const dummy74 = [
+  {
+    ENG: ["One red person."],
+    POL: ["Jedna czerwona osoba."],
   },
 ];
 
@@ -353,19 +355,28 @@ describe("/api", function () {
       ).then((allQuestionSentences) => {
         checkProportions(allQuestionSentences, [
           [
-            "plural",
+            "singular",
             ["Ja byłam dobrą osobą.", "Ja byłem dobrą osobą."],
             0.5,
             0.35,
           ],
           [
-            "singular",
-            ["My byłyśmy dobrymi osobami.", "My byliśmy dobrymi osobami."],
+            "plural",
+            [
+              "My byłyśmy dobrymi osobami/ludźmi.",
+              "My byliśmy dobrymi osobami/ludźmi.",
+            ],
             0.5,
             0.35,
           ],
         ]);
       });
+    });
+    it("#pal27-02d GET 200 YES: Engpol. 'person' singular does not translate to 'ludzie'.", () => {
+      return runPaletteTest("ENG", "POL", "dummy74", dummy74);
+    });
+    it("#pal27-02dd GET 200 YES: Engpol. Counterpart of #pal27-02d but not really necessary.", () => {
+      return runPaletteTest("POL", "ENG", "dummy74", dummy74);
     });
     it("#pal27-02e GET 200 YES: Poleng. I was a good person - masculine I should still be dobrą osobą.", () => {
       return runPaletteTest(

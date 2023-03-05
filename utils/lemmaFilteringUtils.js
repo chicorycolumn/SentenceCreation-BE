@@ -2066,20 +2066,25 @@ exports.filterByDemandedLObjs = (stCh, lObjs) => {
     return stCh.demandedLObjs.some((demandedLObj) => {
       consol.logSpecial(8, "             against demanded:", demandedLObj.id);
       if (allLangUtils.compareLObjStems(l.id, `^${demandedLObj.id}`)) {
-        consol.logSpecial(8, "ahps1 yes");
+        consol.logSpecial(8, "ahps Yes by caret");
         return true;
       }
 
       if (demandedLObj.gender === l.gender) {
-        consol.logSpecial(8, "ahps2 no");
+        consol.logSpecial(8, "ahps No 1a");
         return false;
       }
+
+      // if (demandedLObj.semanticGender === l.semanticGender) {
+      //   consol.logSpecial(8, "ahps No 1b");
+      //   return false;
+      // }
 
       if (
         !lfUtils.checkHyper(demandedLObj, [HY.HY]) &&
         lfUtils.checkHyper(l, [HY.HY])
       ) {
-        consol.logSpecial(8, "ahps3 no");
+        consol.logSpecial(8, "ahps No 2a");
         return false;
       }
 
@@ -2087,12 +2092,12 @@ exports.filterByDemandedLObjs = (stCh, lObjs) => {
         lfUtils.checkHyper(demandedLObj, [HY.HY]) &&
         !lfUtils.checkHyper(l, [HY.HY])
       ) {
-        consol.logSpecial(8, "ahps4 no");
+        consol.logSpecial(8, "ahps No 2b");
         return false;
       }
 
       if (allLangUtils.compareLObjStems(l.id, demandedLObj.id, true)) {
-        consol.logSpecial(8, "ahps5 yes");
+        consol.logSpecial(8, "ahps5 Yes by stem");
         return true;
       }
     });

@@ -2017,11 +2017,11 @@ describe("/api", function () {
             "My doctors (males) were people.",
             "My doctors (mixed) were people.",
           ],
-          POL: ["Moi lekarze byli osobami."],
+          POL: ["Moi lekarze byli osobami/ludźmi."],
         },
         {
           ENG: "My doctors (females) were people.",
-          POL: ["Moje lekarki były osobami."],
+          POL: ["Moje lekarki były osobami/ludźmi."],
         },
         //
         {
@@ -2061,7 +2061,10 @@ describe("/api", function () {
           ENG: ["My doctors were/ men."],
         },
         {
-          POL: ["Moje lekarki były osobami.", "Moi lekarze byli osobami."],
+          POL: [
+            "Moje lekarki były osobami/ludźmi.",
+            "Moi lekarze byli osobami/ludźmi.",
+          ],
           ENG: ["My doctors were/ people."],
         },
       ];

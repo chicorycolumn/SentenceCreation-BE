@@ -114,6 +114,7 @@ describe("/educator/sandbox - Testing API.", () => {
           "Czerwony mężczyzna.",
           "Czerwona osoba.",
           "Czerwone osoby.",
+          "Czerwoni ludzie.",
         ],
       }
     );

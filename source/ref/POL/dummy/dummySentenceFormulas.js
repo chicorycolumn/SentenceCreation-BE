@@ -2780,4 +2780,30 @@ exports.dummySentenceFormulasBank = [
     primaryOrders: [["adj-1", "npe-1"]],
     additionalOrders: [],
   },
+  {
+    sentenceFormulaSymbol: "dummy74",
+    sentenceFormulaId: "POL-dummy74",
+    equivalents: {
+      ENG: ["ENG-dummy74"],
+      POL: ["POL-dummy74"],
+    },
+    sentenceStructure: [
+      {
+        chunkId: "fix-1",
+        chunkValue: "jedna",
+      },
+      {
+        chunkId: "adj-1",
+        agreeWith: "npe-1",
+        specificIds: ["pol-adj-011-czerwony"],
+      },
+      {
+        chunkId: "npe-1",
+        specificIds: ["^pol-npe-011-osoba-£"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [["fix-1", "adj-1", "npe-1"]],
+    additionalOrders: [],
+  },
 ];

@@ -1727,11 +1727,11 @@ describe("/api", function () {
       let ref = [
         {
           ENG: "People saw you (singular).",
-          POL: ["Osoby zobaczyły cie/ciebie."],
+          POL: ["Osoby zobaczyły cie/ciebie.", "Ludzie zobaczyli cie/ciebie."],
         },
         {
           ENG: "People saw you (plural).",
-          POL: ["Osoby zobaczyły was."],
+          POL: ["Osoby zobaczyły was.", "Ludzie zobaczyli was."],
         },
         {
           ENG: "Men saw you (singular).",
