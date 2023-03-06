@@ -843,11 +843,6 @@ exports.updateStructureChunk = (
   isSecondRound,
   isCounterfax
 ) => {
-  uUtils.validateArrayQuasiEmpty(
-    outputUnit.structureChunk.semanticGender,
-    "from updateStructureChunk 1"
-  );
-
   let shouldConsoleLog = true;
 
   if (shouldConsoleLog) {
@@ -865,11 +860,6 @@ exports.updateStructureChunk = (
 
   lfUtils.updateStChByInflections(outputUnit, currentLanguage);
 
-  uUtils.validateArrayQuasiEmpty(
-    outputUnit.structureChunk.semanticGender,
-    "from updateStructureChunk 2"
-  );
-
   if (shouldConsoleLog) {
     consol.log(
       "xppx updateStructureChunk AFTER UB-Inf but BEFORE UB-Tag-Sel, structureChunk is:",
@@ -882,11 +872,6 @@ exports.updateStructureChunk = (
     currentLanguage,
     isSecondRound,
     isCounterfax
-  );
-
-  uUtils.validateArrayQuasiEmpty(
-    outputUnit.structureChunk.semanticGender,
-    "from updateStructureChunk 3"
   );
 
   //Vito2: Changes stCh.
@@ -904,11 +889,6 @@ exports.updateStructureChunk = (
     );
     consol.log(" ");
   }
-
-  uUtils.validateArrayQuasiEmpty(
-    outputUnit.structureChunk.semanticGender,
-    "from updateStructureChunk 4"
-  );
 };
 
 exports.updateStChByAndTagsAndSelectors = (
@@ -929,11 +909,6 @@ exports.updateStChByAndTagsAndSelectors = (
         isSecondRound ? "SECOND/LATER" : "FIRST"
       } round.` +
       "[0m"
-  );
-
-  uUtils.validateArrayQuasiEmpty(
-    structureChunk.semanticGender,
-    "updateStChByAndTagsAndSelectors 1"
   );
 
   consol.log(
@@ -990,13 +965,8 @@ exports.updateStChByAndTagsAndSelectors = (
     if (isCounterfax && structureChunk.semanticGender) {
       consol.logSpecial(
         8,
-        "----------\n",
-        "----------\n",
-        "thaa------isCounterfax so leaving stCh semanticGender as\n",
-        "----------\n",
-        structureChunk.semanticGender,
-        "\n----------\n",
-        "----------"
+        "thaa------isCounterfax so leaving stCh semanticGender as",
+        structureChunk.semanticGender
       );
       doneSelectors.push("semanticGender");
     } else {
@@ -1163,11 +1133,6 @@ exports.updateStChByAndTagsAndSelectors = (
     }
   }
 
-  uUtils.validateArrayQuasiEmpty(
-    outputUnit.structureChunk.semanticGender,
-    "updateStChByAndTagsAndSelectors 2"
-  );
-
   //STEP ZERO: Decisive Decant
   //Remove gender traitValues on stCh if drillPath doesn't include the traitKey 'gender' (ie is infinitive or a participle, say).
   //But if lObj is MGN, don't do this.
@@ -1182,11 +1147,6 @@ exports.updateStChByAndTagsAndSelectors = (
   ) {
     structureChunk.gender = [];
   }
-
-  uUtils.validateArrayQuasiEmpty(
-    outputUnit.structureChunk.semanticGender,
-    "updateStChByAndTagsAndSelectors 3"
-  );
 
   //STEP ONE: Update stCh gender with that of lObj, handling meta trait values too.
   // For all lexical traitKeys, if the lObj has a meta trait value eg {aspect: "_imOnly"} or {gender: "_PersonalGenders"}.
@@ -1242,11 +1202,6 @@ exports.updateStChByAndTagsAndSelectors = (
     }
   });
 
-  uUtils.validateArrayQuasiEmpty(
-    outputUnit.structureChunk.semanticGender,
-    "updateStChByAndTagsAndSelectors 4"
-  );
-
   if (selectedLemmaObject.gender && !doneSelectors.includes("gender")) {
     //If lObj has non-meta-gender, then update stCh with lObj gender.
     consol.log(
@@ -1255,11 +1210,6 @@ exports.updateStChByAndTagsAndSelectors = (
     structureChunk.gender = [selectedLemmaObject.gender];
     doneSelectors.push("gender");
   }
-
-  uUtils.validateArrayQuasiEmpty(
-    outputUnit.structureChunk.semanticGender,
-    "updateStChByAndTagsAndSelectors 5"
-  );
 
   let selectedLemmaObjectTags = nexusUtils.getPapers(selectedLemmaObject);
 
@@ -1277,11 +1227,6 @@ exports.updateStChByAndTagsAndSelectors = (
 
     structureChunk.andTags = selectedLemmaObjectTags.slice(0);
   }
-
-  uUtils.validateArrayQuasiEmpty(
-    outputUnit.structureChunk.semanticGender,
-    "updateStChByAndTagsAndSelectors 6"
-  );
 
   //STEP THREE: For all remaining selectors, update the stCh with traitValues from lObj.
   let selectors =
@@ -1313,11 +1258,6 @@ exports.updateStChByAndTagsAndSelectors = (
     );
   }
 
-  uUtils.validateArrayQuasiEmpty(
-    outputUnit.structureChunk.semanticGender,
-    "updateStChByAndTagsAndSelectors 7"
-  );
-
   //STEP FOUR: Selectors that must be handled specially.
 
   if (
@@ -1333,11 +1273,6 @@ exports.updateStChByAndTagsAndSelectors = (
     structureChunk
   );
   consol.log("[1;35m " + `/updateStChByAndTagsAndSelectors` + "[0m");
-
-  uUtils.validateArrayQuasiEmpty(
-    outputUnit.structureChunk.semanticGender,
-    "updateStChByAndTagsAndSelectors 8"
-  );
 };
 
 exports.updateStChByInflections = (outputUnit, currentLanguage) => {

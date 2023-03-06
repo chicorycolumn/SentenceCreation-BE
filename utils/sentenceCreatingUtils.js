@@ -244,11 +244,6 @@ exports.selectDependentChunkWordsAndAddToOutputArray = (
     }
   );
 
-  uUtils.validateQuasiEmptyOutputUnitSemanticGender(
-    explodedOutputArraysWithHeads,
-    "processSentenceFormula explodedwithheads 1"
-  );
-
   if (headChunks.length && !filteredExplodedOutputArraysWithHeads.length) {
     consol.log(
       "[1;31m \n" +
@@ -383,11 +378,6 @@ exports.processSentenceFormula = (
         errorInSentenceCreation,
       };
     } else {
-      uUtils.validateQuasiEmptyOutputUnitSemanticGender(
-        [allPossOutputUnits_head],
-        "processSentenceFormula headChunks 1"
-      );
-
       headOutputUnitArrays.push(allPossOutputUnits_head);
     }
   });
@@ -404,11 +394,6 @@ exports.processSentenceFormula = (
 
   let explodedOutputArraysWithHeads = uUtils.copyWithoutReference(
     uUtils.arrayExploder(headOutputUnitArrays)
-  );
-
-  uUtils.validateQuasiEmptyOutputUnitSemanticGender(
-    headOutputUnitArrays,
-    "processSentenceFormula headChunks 2"
   );
 
   let potentialNullResultObject = {
@@ -738,11 +723,6 @@ exports.processSentenceFormula = (
       if (gpUtils.getWordtypeStCh(outputUnit.structureChunk) === "fixed") {
         return;
       }
-
-      uUtils.validateArrayQuasiEmpty(
-        outputUnit.structureChunk.semanticGender,
-        "processSentenceFormula grandOutputArray 1"
-      );
 
       lfUtils.updateStructureChunk(
         outputUnit,

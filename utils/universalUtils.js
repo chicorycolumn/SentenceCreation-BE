@@ -391,21 +391,3 @@ exports.flatten = (arr) => {
 exports.round = (num) => {
   return Math.round(num * 1000) / 1000;
 };
-
-exports.validateArrayQuasiEmpty = (arr, label) => {
-  if (arr && arr.length && arr.includes(undefined)) {
-    console.log("-->", arr);
-    consol.throw(`moaa ${label} Have printed quasi empty array --> above.`);
-  }
-};
-
-exports.validateQuasiEmptyOutputUnitSemanticGender = (
-  outputUnitArrays,
-  label
-) => {
-  outputUnitArrays.forEach((houa) => {
-    houa.forEach((ou) => {
-      exports.validateArrayQuasiEmpty(ou.structureChunk.semanticGender, label);
-    });
-  });
-};
