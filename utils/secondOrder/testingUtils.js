@@ -1029,8 +1029,6 @@ exports.checkTranslationsOfGivenRef = (
     );
   }
 
-  let dataToOnlyAppearWhenExplicitlyExpected = ["FYIPs"];
-
   questionSentenceArr.forEach((actualQuestionSentence, index) => {
     let expectedQuestionSentences = ref.map(
       (refItem) => refItem[questionLanguage]
@@ -1048,39 +1046,28 @@ exports.checkTranslationsOfGivenRef = (
         testActivated = true;
 
         if (refItem.extra) {
-          Object.keys(refItem.extra).forEach((k) => {
-            if (k === "FYIPs") {
-              expect(res.body["FYIPs"]).to.exist;
-              expect(res.body["FYIPs"].map((FYIP) => FYIP.label).sort()).to.eql(
-                refItem.extra.FYIPs.sort()
-              );
-              return;
-            }
-            expect(res.body[k].to.eql[refItem.extra[k]]);
-          });
+          testingUtils.testAllSubValues(refItem.extra, res.body);
         }
 
         expect(
           Object.keys(res.body).filter((k) => {
-            if (!dataToOnlyAppearWhenExplicitlyExpected.includes(k)) {
-              return false;
-            }
-
-            if (refItem.optionalExtra) {
-              Object.keys(refItem.optionalExtra).forEach((k) => {
-                if (k === "FYIPs" && res.body.FYIPs) {
-                  expect(
-                    res.body["FYIPs"].map((FYIP) => FYIP.label).sort()
-                  ).to.eql(refItem.optionalExtra.FYIPs.sort());
+            if (
+              testingUtils.dataToOnlyAppearWhenExplicitlyExpected.includes(k)
+            ) {
+              if (refItem.optionalExtra) {
+                testingUtils.testAllSubValues(
+                  refItem.optionalExtra,
+                  res.body,
+                  true
+                );
+                if (Object.keys(refItem.optionalExtra).includes(k)) {
+                  return false;
                 }
-              });
-              if (Object.keys(refItem.optionalExtra).includes(k)) {
-                return false;
               }
-            }
 
-            if (refItem.extra && !Object.keys(refItem.extra).includes(k)) {
-              return true;
+              if (!refItem.extra || !Object.keys(refItem.extra).includes(k)) {
+                return true;
+              }
             }
           })
         ).to.have.length(0);
@@ -1177,3 +1164,38 @@ exports.expandTestShorthands = (arr) => {
     }
   }
 };
+
+exports.testAllSubValues = (ref, resBody, allowToBeAbsentOnRes) => {
+  Object.keys(ref).forEach((k) => {
+    testingUtils.testByDatatype(ref, k, resBody, allowToBeAbsentOnRes);
+  });
+};
+
+exports.testByDatatype = (ref, key, resBody, allowToBeAbsentOnRes) => {
+  if (allowToBeAbsentOnRes && !resBody[key]) {
+    return;
+  }
+  if (key === "FYIPs") {
+    expect(resBody[key]).to.exist;
+    expect(resBody[key].map((FYIP) => FYIP.label)).to.eql(ref[key]);
+    return;
+  }
+  if (Array.isArray(ref[key])) {
+    expect(resBody[key]).to.exist;
+    expect(resBody[key]).to.eql(ref[key]);
+    return;
+  }
+  if (uUtils.isKeyValueTypeObject(ref[key])) {
+    expect(resBody[key]).to.exist;
+    Object.keys(ref[key]).forEach((k) => {
+      let v = ref[key][k];
+      expect(resBody[key][k]).to.exist;
+      expect(resBody[key][k]).to.eql(v);
+    });
+    return;
+  }
+  expect(resBody[key]).to.exist;
+  expect(resBody[key]).to.eql(ref[key]);
+};
+
+exports.dataToOnlyAppearWhenExplicitlyExpected = ["FYIPs"];
