@@ -96,24 +96,29 @@ exports.getLObjIdStem = (id) => {
   return id.split("-").slice(0, 3).join("-");
 };
 
-exports.compareLObjStems = (id1, id2) => {
-  let res;
-  [
-    [id1, id2],
-    [id2, id1],
-  ].forEach((ids) => {
-    if (res) {
-      return;
+exports.compareLObjStems = (id1, id2, ignoreSpecificity) => {
+  if (ignoreSpecificity) {
+    if (id1[0] === "^") {
+      id1 = id1.slice(1);
     }
-    let [idA, idB] = ids;
-    if (idA[0] === "^") {
-      res = idA.slice(1) === idB;
+    if (id2[0] === "^") {
+      id2 = id2.slice(1);
     }
-  });
+  }
 
-  return (
-    res || allLangUtils.getLObjIdStem(id1) === allLangUtils.getLObjIdStem(id2)
-  );
+  if (id1[0] === "^" && id2[0] === "^") {
+    return id1 === id2;
+  }
+
+  if (id1[0] === "^") {
+    return id1.slice(1) === id2;
+  }
+
+  if (id2[0] === "^") {
+    return id2.slice(1) === id1;
+  }
+
+  return allLangUtils.getLObjIdStem(id1) === allLangUtils.getLObjIdStem(id2);
 };
 
 exports.translateAnnoTraitValue = (

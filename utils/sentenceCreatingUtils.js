@@ -1181,8 +1181,6 @@ exports.conformAnswerStructureToQuestionStructure = (
         "outputUnit.structureChunk.gender": outputUnit.structureChunk.gender,
         "outputUnit.structureChunk.semanticGender":
           outputUnit.structureChunk.semanticGender,
-        "outputUnit.structureChunk.hypernymy":
-          outputUnit.structureChunk.hypernymy,
       });
     });
     consol.logSpecial(
@@ -1548,7 +1546,6 @@ exports.inheritFromHeadToDependentChunk = (
     consol.log(
       `kwwm inheritFromHeadToDependentChunk: "${headChunk.chunkId}" to "${dependentChunk.chunkId}". traitKey "${traitKey}".`
     );
-    //Hard change.
     if (
       headChunk[traitKey] &&
       !(
@@ -1557,7 +1554,6 @@ exports.inheritFromHeadToDependentChunk = (
       )
     ) {
       let traitValueArr = headChunk[traitKey].slice(0);
-
       dependentChunk[traitKey] = traitValueArr;
     }
   });
