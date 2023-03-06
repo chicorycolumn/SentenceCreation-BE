@@ -246,17 +246,6 @@ exports.adjustVirilityOfStructureChunk = (
     structureChunk
   );
 
-  // if (
-  //   !justOneGenderValue &&
-  //   isPreProcessing &&
-  //   ["nounCommon","nounPerson"].includes(gpUtils.getWordtypeStCh(structureChunk)) &&
-  //   structureChunk.number &&
-  //   structureChunk.number.includes("plural")
-  // ) {
-  //   // Because m -> plural -> virile and then trying to select Ojciec, which isn't virile, it's m, so will ERR later.
-  //   return;
-  // }
-
   let { gender, number } = structureChunk;
 
   if (!justOneGenderValue && !number) {

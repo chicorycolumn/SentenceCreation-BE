@@ -185,125 +185,94 @@ exports.removeAnnotationsByVypernym = (
     malePersonsInThisLanguageHaveWhatGender[languagesObj.questionLanguage];
 
   questionOutputArr.forEach((questionOutputUnit) => {
+    let qStCh = questionOutputUnit.structureChunk;
     if (
-      gpUtils.getWordtypeStCh(questionOutputUnit.structureChunk) === "fixed"
+      gpUtils.getWordtypeStCh(qStCh) !== "fixed" &&
+      lfUtils.checkHyper(questionOutputUnit.selectedLemmaObject, [HY.VY]) &&
+      qStCh.annotations &&
+      Object.keys(qStCh.annotations).includes("semanticGender")
     ) {
-      return;
-    }
-
-    lfUtils.checkMatchHyper(
-      questionOutputUnit.structureChunk,
-      questionOutputUnit.selectedLemmaObject
-    );
-
-    if (lfUtils.checkHyper(questionOutputUnit.selectedLemmaObject, [HY.VY])) {
       if (
-        Object.keys(questionOutputUnit.structureChunk.annotations).includes(
-          "semanticGender"
+        ![malePersonGender, "virile"].includes(
+          qStCh.annotations["semanticGender"]
+        ) &&
+        !(
+          qStCh.virilityDetail &&
+          qStCh.virilityDetail.length &&
+          ["males!", "male!"].includes(structureChunk.virilityDetail[0])
         )
       ) {
-        consol.logSpecial(3, "hafj", questionOutputUnit.structureChunk.chunkId);
-        if (
-          ![malePersonGender, "virile"].includes(
-            questionOutputUnit.structureChunk.annotations["semanticGender"]
-          ) &&
-          !(
-            structureChunk.virilityDetail &&
-            structureChunk.virilityDetail.length &&
-            ["males!", "male!"].includes(structureChunk.virilityDetail[0])
-          )
-        ) {
-          consol.throw(
-            `fbds "${questionOutputUnit.structureChunk.chunkId}" Expected semanticGender anno to be m or virile but was ${questionOutputUnit.structureChunk.annotations["semanticGender"]}`
+        consol.throw(
+          `fbds "${qStCh.chunkId}" Expected semanticGender anno to be m or virile but was ${qStCh.annotations["semanticGender"]}`
+        );
+      }
+
+      if (qStCh.gender.length !== 1) {
+        consol.throw(
+          `tdid Expected gender to have 1 value on "${qStCh.chunkId}"`
+        );
+      }
+
+      let cond1 = answerSentenceData.answerOutputArrays.every(
+        (answerOutputArray) => {
+          let answerOutputUnit = answerOutputArray.find(
+            (unit) => unit.structureChunk.chunkId === qStCh.chunkId
+          );
+          return (
+            gpUtils.lObjIsMGN(answerOutputUnit.selectedLemmaObject) &&
+            !answerOutputUnit.structureChunk.virilityDetail === "mixed"
           );
         }
+      );
 
-        if (questionOutputUnit.structureChunk.gender.length !== 1) {
-          consol.throw(
-            `tdid Expected gender to have 1 value on "${questionOutputUnit.structureChunk.chunkId}"`
+      let cond2 =
+        qStCh.gender[0] === malePersonGender &&
+        !qStCh.virilityDetail &&
+        ["males!", "male!"].includes(qStCh.virilityDetail[0]);
+
+      let cond3 =
+        qStCh.virilityDetail &&
+        ["males", "male"].includes(qStCh.virilityDetail[0]);
+
+      let cond4 = answerSentenceData.answerOutputArrays.every(
+        (answerOutputArray) => {
+          let answerOutputUnit = answerOutputArray.find(
+            (unit) => unit.structureChunk.chunkId === qStCh.chunkId
           );
+          return lfUtils.checkHyper(answerOutputUnit.selectedLemmaObject, [
+            HY.VY,
+          ]);
         }
+      );
 
+      let cond5 = answerSentenceData.answerOutputArrays.every(
+        (answerOutputArray) => {
+          let answerOutputUnit = answerOutputArray.find(
+            (unit) => unit.structureChunk.chunkId === qStCh.chunkId
+          );
+          return !lfUtils.checkHyper(answerOutputUnit.selectedLemmaObject, [
+            HY.VY,
+            HY.HY,
+            HY.VO,
+            HY.HO,
+          ]);
+        }
+      );
+
+      if (cond1 || cond2 || cond3 || cond4 || cond5) {
         consol.logSpecial(
           3,
-          `hafl`,
-          questionOutputUnit.structureChunk,
-          answerSentenceData
+          { cond1, cond2, cond3, cond4, cond5 },
+          `hafm removeAnnotationsByVypernym "${qStCh.chunkId}" ⭕ Deleting annotation semanticGender which was "${qStCh.annotations["semanticGender"]}".`
         );
 
-        let cond1 = answerSentenceData.answerOutputArrays.every(
-          (answerOutputArray) => {
-            let answerOutputUnit = answerOutputArray.find(
-              (unit) =>
-                unit.structureChunk.chunkId ===
-                questionOutputUnit.structureChunk.chunkId
-            );
-            return (
-              gpUtils.lObjIsMGN(answerOutputUnit.selectedLemmaObject) &&
-              !answerOutputUnit.structureChunk.virilityDetail === "mixed"
-            );
-          }
+        delete qStCh.annotations["semanticGender"];
+      } else {
+        consol.logSpecial(
+          3,
+          { cond1, cond2, cond3, cond4, cond5 },
+          `hafn removeAnnotationsByVypernym "${qStCh.chunkId}" 🉑 DID NOT DELETE ANNOTATION semanticGender which was "${qStCh.annotations["semanticGender"]}".`
         );
-
-        let cond4 = answerSentenceData.answerOutputArrays.every(
-          (answerOutputArray) => {
-            let answerOutputUnit = answerOutputArray.find(
-              (unit) =>
-                unit.structureChunk.chunkId ===
-                questionOutputUnit.structureChunk.chunkId
-            );
-            return lfUtils.checkHyper(answerOutputUnit.selectedLemmaObject, [
-              HY.VY,
-            ]);
-          }
-        );
-
-        let cond5 = answerSentenceData.answerOutputArrays.every(
-          (answerOutputArray) => {
-            let answerOutputUnit = answerOutputArray.find(
-              (unit) =>
-                unit.structureChunk.chunkId ===
-                questionOutputUnit.structureChunk.chunkId
-            );
-            return !lfUtils.checkHyper(answerOutputUnit.selectedLemmaObject, [
-              HY.VY,
-              HY.HY,
-              HY.VO,
-              HY.HO,
-            ]);
-          }
-        );
-
-        let cond2 =
-          questionOutputUnit.structureChunk.gender[0] === malePersonGender &&
-          !questionOutputUnit.structureChunk.virilityDetail &&
-          ["males!", "male!"].includes(
-            questionOutputUnit.structureChunk.virilityDetail[0]
-          );
-
-        let cond3 =
-          questionOutputUnit.structureChunk.virilityDetail &&
-          ["males", "male"].includes(
-            questionOutputUnit.structureChunk.virilityDetail[0]
-          );
-
-        if (cond1 || cond2 || cond3 || cond4 || cond5) {
-          consol.logSpecial(
-            3,
-            { cond1, cond2, cond3, cond4, cond5 },
-            `hafm removeAnnotationsByVypernym "${questionOutputUnit.structureChunk.chunkId}" Deleting annotation semanticGender which was "${questionOutputUnit.structureChunk.annotations["semanticGender"]}".`
-          );
-
-          delete questionOutputUnit.structureChunk.annotations[
-            "semanticGender"
-          ];
-        } else {
-          consol.logSpecial(
-            3,
-            { cond1, cond2, cond3, cond4, cond5 },
-            `hafn removeAnnotationsByVypernym "${questionOutputUnit.structureChunk.chunkId}" DID NOT DELETE ANNOTATION semanticGender which was "${questionOutputUnit.structureChunk.annotations["semanticGender"]}".`
-          );
-        }
       }
     }
   });

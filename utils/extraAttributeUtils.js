@@ -13,47 +13,66 @@ const eaUtils = require("./extraAttributeUtils.js");
 exports.evaluateFYIPs = (outputArr, questionLang, answerLang, label) => {
   return outputArr
     .map((ou) => {
+      if (!ou.structureChunk.semanticGender) {
+        return;
+      }
+
       if (
-        //I've put only singular here because I don't want FYIP101 for "Osoby zobaczyły" or "Ludzie zobaczyli"
-        ou.structureChunk.number &&
-        ou.structureChunk.number[0] === "singular" &&
-        ou.structureChunk.semanticGender &&
-        ((ou.structureChunk.gender.length === 1 &&
-          ou.structureChunk.gender[0] !==
-            ou.structureChunk.semanticGender[0]) ||
-          (ou.structureChunk.gender.length > 1 &&
-            !ou.structureChunk.gender.includes(
-              ou.structureChunk.semanticGender[0]
-            ))) &&
+        !ou.structureChunk.number ||
+        ou.structureChunk.number[0] !== "singular"
+      ) {
+        // Don't want FYIP101 for "Osoby zobaczyły" or "Ludzie zobaczyli", but this may change.
+        return;
+      }
+
+      if (
         !(
-          answerLang === "POL" &&
-          ou.structureChunk.semanticGender[0] === "m1" &&
-          ou.structureChunk.gender[0] === "n"
+          ou.structureChunk.gender.length === 1 &&
+          ou.structureChunk.gender[0] !== ou.structureChunk.semanticGender[0]
+        ) &&
+        !(
+          ou.structureChunk.gender.length > 1 &&
+          !ou.structureChunk.gender.includes(
+            ou.structureChunk.semanticGender[0]
+          )
         )
       ) {
-        let headOutputUnit = otUtils.getHeadOutputUnit(
-          ou.structureChunk,
-          outputArr
-        );
-        let depUnits = outputArr.filter((o) =>
-          refObj.agreementTraits
-            .map((agreementTrait) => o.structureChunk[agreementTrait])
-            .includes(ou.structureChunk.chunkId)
-        );
-        if (
-          (depUnits.length &&
-            depUnits.some((depUnit) =>
-              ["npe", "pro"].includes(
-                gpUtils.getWordtypeShorthandStCh(depUnit.structureChunk)
-              )
-            )) ||
-          (headOutputUnit &&
+        // Looking for gender and semanticGender mismatch.
+        return;
+      }
+
+      if (
+        answerLang === "POL" &&
+        ou.structureChunk.semanticGender[0] === "m1" &&
+        ou.structureChunk.gender[0] === "n"
+      ) {
+        // Don't need FYIP101 for "dziecko" with male semanticGender.
+        return;
+      }
+
+      let headOutputUnit = otUtils.getHeadOutputUnit(
+        ou.structureChunk,
+        outputArr
+      );
+      let depUnits = outputArr.filter((o) =>
+        refObj.agreementTraits
+          .map((agreementTrait) => o.structureChunk[agreementTrait])
+          .includes(ou.structureChunk.chunkId)
+      );
+
+      if (
+        (depUnits.length &&
+          depUnits.some((depUnit) =>
             ["npe", "pro"].includes(
-              gpUtils.getWordtypeShorthandStCh(headOutputUnit.structureChunk)
-            ))
-        ) {
-          return `FYIP101-${label}-${questionLang}-${answerLang}`;
-        }
+              gpUtils.getWordtypeShorthandStCh(depUnit.structureChunk)
+            )
+          )) ||
+        (headOutputUnit &&
+          ["npe", "pro"].includes(
+            gpUtils.getWordtypeShorthandStCh(headOutputUnit.structureChunk)
+          ))
+      ) {
+        return `FYIP101-${label}-${questionLang}-${answerLang}`;
       }
     })
     .filter((x) => x);

@@ -932,8 +932,6 @@ exports.updateStChByAndTagsAndSelectors = (
   //lObj rodzic so gender "m1" and semanticGender "_PersonalGenders"
   //but if I didn't step in here, stCh would end up with gender "m1" which is wrong.
 
-  lfUtils.checkMatchHyper(structureChunk, selectedLemmaObject);
-
   if (lfUtils.checkHyper(selectedLemmaObject, [HY.VY])) {
     if (structureChunk.number.length !== 1) {
       consol.throw(`xtal`);
@@ -1483,8 +1481,6 @@ exports.filterBySelector_inner = (
 
   if (answerMode && questionChunk) {
     if (questionSelectedLemmaObject) {
-      lfUtils.checkMatchHyper(questionChunk, questionSelectedLemmaObject);
-
       if (lfUtils.checkHyper(questionSelectedLemmaObject, [HY.HY])) {
         let hypernymsAndMGNs = lemmaObjectArr.filter(
           (l) =>
@@ -1596,10 +1592,6 @@ exports.filterBySelector_inner = (
         "[0m",
       requirementArray
     );
-
-    if (questionSelectedLemmaObject) {
-      lfUtils.checkMatchHyper(questionChunk, questionSelectedLemmaObject);
-    }
 
     return lemmaObjectArr.filter((lObj) => {
       if (

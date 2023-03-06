@@ -618,6 +618,8 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
             if (originalSitSelectedLObj) {
               stCh.originalSitSelectedLObj = originalSitSelectedLObj;
+            } else {
+              consol.throw(`scdw No selectedLObj found for "${stCh.chunkId}"?`);
             }
           }
 
