@@ -1175,26 +1175,26 @@ exports.testByDatatype = (ref, key, resBody, allowToBeAbsentOnRes) => {
   if (allowToBeAbsentOnRes && !resBody[key]) {
     return;
   }
+
+  expect(resBody).to.include.key(key);
+
   if (key === "FYIPs") {
-    expect(resBody[key]).to.exist;
     expect(resBody[key].map((FYIP) => FYIP.label)).to.eql(ref[key]);
     return;
   }
   if (Array.isArray(ref[key])) {
-    expect(resBody[key]).to.exist;
     expect(resBody[key]).to.eql(ref[key]);
     return;
   }
   if (uUtils.isKeyValueTypeObject(ref[key])) {
-    expect(resBody[key]).to.exist;
     Object.keys(ref[key]).forEach((k) => {
       let v = ref[key][k];
-      expect(resBody[key][k]).to.exist;
+      expect(resBody[key]).to.include.key(k);
       expect(resBody[key][k]).to.eql(v);
     });
     return;
   }
-  expect(resBody[key]).to.exist;
+
   expect(resBody[key]).to.eql(ref[key]);
 };
 
