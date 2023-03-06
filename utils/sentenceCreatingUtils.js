@@ -872,6 +872,8 @@ exports.giveFinalSentences = (
         answerSelectedWordsSetsHaveChanged,
         runsRecord
       );
+    } else {
+      consol.throw("3248");
     }
 
     // consol.log("jfuc questionOutputArr", questionOutputArr);
