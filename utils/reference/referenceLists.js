@@ -164,7 +164,7 @@ exports.metaTraitValues = {
       _PersonalPluralGenders: ["virile", "nonvirile"],
 
       _NonpersonalGenders: ["n", "nonvirile"],
-      _NonpersonalSingularGenders: ["n"], // In ENG, nonpersons cannot be m or f. I realise pet animals yes... but these will always be "it" in this app, see FYIP101.
+      _NonpersonalSingularGenders: ["n"], // In ENG nonpersons cannot be m or f. I realise pet animals sometimes, but these will always be "it" in this app, see FYIP102.
       _NonpersonalPluralGenders: ["nonvirile"],
 
       _SingularGendersExcludingNeuter: ["m", "f"],
@@ -327,7 +327,7 @@ exports.lemmaObjectTraitKeys = {
       nounCommon: ["number", "gcase"],
       nounPerson: ["number", "gcase"],
       adjective: ["form", "number", "gender"],
-      verb: ["form", "tense", "gender", "person", "number"], // "gender" will be _Genders for in all tenses except pastParticiple ie hechas, escritos.
+      verb: ["form", "tense", "gender", "person", "number"], // "gender" will be _Genders in all tenses except pastParticiple ie hechas, escritos.
       pronombre: ["form", "person", "number", "gender", "gcase"],
       article: ["form", "number", "gender"],
       preposition: ["form"],
@@ -509,7 +509,6 @@ exports.structureChunkTraits = {
     dontSpecifyOnThisChunk: { expectedTypeOnStCh: "boolean" },
     originalSitSelectedLObj: {
       expectedTypeOnStCh: "keyValueObject",
-      ultimatelyMultipleTraitValuesOkay: true,
     },
     specificIds: {
       expectedTypeOnStCh: "array",
@@ -590,8 +589,8 @@ exports.structureChunkTraits = {
       expectedTypeOnStCh: "array",
       compatibleWordtypes: ["nounPerson"],
       possibleTraitValuesPerWordtype: {
-        nounPerson: ["mixed", "males", " males ", "male", " male "], //The ones with spaces either side are stronger.
-        // So "males" could come out with no clarifier, but " males " will have clarifier that it is men only.
+        nounPerson: ["mixed", "males", "males!", "male", "male!"],
+        // The "!" is stronger, so "males" could come out with no clarifier, but "males!" will have clarifier that it is men only.
       },
     },
     semanticGender: {

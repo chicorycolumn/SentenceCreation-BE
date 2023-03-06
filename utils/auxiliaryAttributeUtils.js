@@ -210,7 +210,7 @@ exports.removeAnnotationsByVypernym = (
           !(
             structureChunk.virilityDetail &&
             structureChunk.virilityDetail.length &&
-            [" males ", " male "].includes(structureChunk.virilityDetail[0])
+            ["males!", "male!"].includes(structureChunk.virilityDetail[0])
           )
         ) {
           consol.throw(
@@ -277,7 +277,7 @@ exports.removeAnnotationsByVypernym = (
         let cond2 =
           questionOutputUnit.structureChunk.gender[0] === malePersonGender &&
           !questionOutputUnit.structureChunk.virilityDetail &&
-          [" males ", " male "].includes(
+          ["males!", "male!"].includes(
             questionOutputUnit.structureChunk.virilityDetail[0]
           );
 

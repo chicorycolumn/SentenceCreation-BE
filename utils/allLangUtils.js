@@ -141,7 +141,10 @@ exports.translateAnnoTraitValue = (
       structureChunk.virilityDetail &&
       structureChunk.virilityDetail.length
     ) {
-      let plainspeakAnno = structureChunk.virilityDetail[0].trim();
+      let plainspeakAnno =
+        structureChunk.virilityDetail[0].slice(-1) === "!"
+          ? structureChunk.virilityDetail[0].slice(0, -1)
+          : structureChunk.virilityDetail[0];
 
       consol.logSpecial(
         8,

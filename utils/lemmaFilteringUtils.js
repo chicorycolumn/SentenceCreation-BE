@@ -940,8 +940,8 @@ exports.updateStChByAndTagsAndSelectors = (
     }
 
     let vRef = {
-      singular: ["male", " male "],
-      plural: ["mixed", "males", " males "],
+      singular: ["male", "male!"],
+      plural: ["mixed", "males", "males!"],
     };
 
     Object.keys(vRef).forEach((numberTraitValue) => {
@@ -1518,7 +1518,7 @@ exports.filterBySelector_inner = (
       if (
         answerMode &&
         questionChunk.virilityDetail &&
-        [" males ", " male "].includes(questionChunk.virilityDetail[0])
+        ["males!", "male!"].includes(questionChunk.virilityDetail[0])
       ) {
         lemmaObjectArr = lemmaObjectArr.filter(
           (l) => !lfUtils.checkHyper(l, [HY.HY])
