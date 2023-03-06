@@ -80,14 +80,14 @@ exports.returnNullQuestionResponseObj = (
   let nullQuestionResponseObj = scUtils.giveFinalSentences(
     questionSentenceData,
     multipleMode,
-    questionLanguage,
-    answerLanguage
+    { questionLanguage, answerLanguage },
+    true
   );
   return frUtils.finishAndSend(nullQuestionResponseObj, null);
 };
 
 exports.createOutputUnit = (
-  etiquette,
+  dependenceType,
   errorInSentenceCreation,
   errorInDrilling,
   selectedWord,
@@ -113,7 +113,7 @@ exports.createOutputUnit = (
   }
 
   let resultingOutputUnit = {
-    etiquette,
+    dependenceType,
     selectedLemmaObject,
     selectedWord,
     drillPath,

@@ -112,7 +112,7 @@ exports.getMaterialsCopies = (
 };
 
 exports.selectDependentChunkWordsAndAddToOutputArray = (
-  etiquette,
+  dependenceTypeToUpdate,
   explodedOutputArraysWithHeads,
   grandOutputArray,
   headChunks,
@@ -138,7 +138,7 @@ exports.selectDependentChunkWordsAndAddToOutputArray = (
           return;
         }
 
-        if (headOutputUnit.etiquette === etiquette) {
+        if (headOutputUnit.dependenceType === dependenceTypeToUpdate) {
           // Now we update the head structure chunks with the details from their respective selectedWords.
           lfUtils.updateStructureChunk(
             headOutputUnit,
@@ -374,14 +374,14 @@ exports.processSentenceFormula = (
   };
 
   const _selectDependentChunkWordsAndAddToOutputArray = (
-    etiquette,
+    dependenceTypeToUpdate,
     explodedOutputArraysWithHeads,
     grandOutputArray,
     headChunks,
     dependentChunks
   ) => {
     return scUtils.selectDependentChunkWordsAndAddToOutputArray(
-      etiquette,
+      dependenceTypeToUpdate,
       explodedOutputArraysWithHeads,
       grandOutputArray,
       headChunks,
@@ -740,14 +740,17 @@ exports.processSentenceFormula = (
 exports.giveFinalSentences = (
   sentenceData,
   multipleMode,
-  currentLanguage,
-  answerLanguage,
+  languagesObj,
+  isQuestion,
   answerSentenceData,
   questionSentenceFormula,
   reqBody,
   answerSelectedWordsSetsHaveChanged,
   runsRecord
 ) => {
+  let { questionLanguage, answerLanguage } = languagesObj;
+  let currentLanguage = isQuestion ? questionLanguage : answerLanguage;
+
   let {
     answerOutputArrays,
     questionOutputArr,
@@ -794,16 +797,18 @@ exports.giveFinalSentences = (
   let finalSentenceArr = [];
 
   if (!multipleMode) {
-    if (answerLanguage) {
+    if (isQuestion) {
       aaUtils.firstStageEvaluateAnnotations(
         questionOutputArr,
-        { answerLanguage, questionLanguage: currentLanguage },
+        languagesObj,
         answerSentenceData,
         questionSentenceFormula,
         reqBody,
         answerSelectedWordsSetsHaveChanged,
         runsRecord
       );
+    } else {
+      consol.throw("3248");
     }
 
     // consol.log("jfuc questionOutputArr", questionOutputArr);
@@ -812,7 +817,7 @@ exports.giveFinalSentences = (
       questionOutputArr,
       sentenceFormula,
       multipleMode,
-      currentLanguage,
+      questionLanguage,
       answerLanguage
     );
 
@@ -1558,10 +1563,6 @@ exports.inheritFromHeadToDependentChunk = (
   });
 
   consol.log(
-    "ttez At the end of inheritFromHeadToDependentChunk, we must again a'djustVirility, which we also did in allLangUtils.preprocessStructureChunks earlier."
-  );
-
-  consol.log(
     "wdim inheritFromHeadToDependentChunk: dependentChunk AFTERWARDS of inheritFromHeadToDependentChunk: ",
     dependentChunk
   );
@@ -1624,12 +1625,12 @@ exports.sortStructureChunks = (
     (chunk) => !doneIds.includes(chunk.chunkId)
   );
 
-  consol.log("fafo sortStructureChunks END", {
-    headChunks,
-    dependentHeadChunks,
-    dependentChunks,
-    PHDChunks,
-    otherChunks,
+  consol.logSpecial(1, `\nfafo sortStructureChunks`, {
+    headChunks: headChunks.map((stCh) => stCh.chunkId),
+    dependentHeadChunks: dependentHeadChunks.map((stCh) => stCh.chunkId),
+    dependentChunks: dependentChunks.map((stCh) => stCh.chunkId),
+    PHDChunks: PHDChunks.map((stCh) => stCh.chunkId),
+    otherChunks: otherChunks.map((stCh) => stCh.chunkId),
   });
 
   let res = {

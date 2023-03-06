@@ -4,7 +4,7 @@ const consol = require("../../utils/zerothOrder/consoleLoggingUtils.js");
 const gpUtils = require("../generalPurposeUtils.js");
 const uUtils = require("../universalUtils.js");
 
-exports.getNexusLemmaObject = (lObj, env = "ref") => {
+exports.getNexusLemmaObjects = (lObj, env = "ref") => {
   let lang = gpUtils.getLanguageFromLemmaObject(lObj);
 
   const nexusWordsBank =
@@ -21,13 +21,13 @@ exports.getNexusLemmaObject = (lObj, env = "ref") => {
   if (resArr.length > 1) {
     consol.logSpecial(
       9,
-      `dlma getNexusLemmaObject for ${lang} ${lObj.id} found ${resArr.length} nexus lObjs, usually only 1.`
+      `dlma getNexusLemmaObjects for ${lang} ${lObj.id} found ${resArr.length} nexus lObjs, usually only 1.`
     );
   }
 
   if (!resArr.length) {
     consol.throw(
-      `dlmb getNexusLemmaObject for ${lang} ${lObj.id} found 0 ${resArr.length} nexus lObjs.`
+      `dlmb getNexusLemmaObjects for ${lang} ${lObj.id} found 0 ${resArr.length} nexus lObjs.`
     );
   }
 
@@ -35,7 +35,7 @@ exports.getNexusLemmaObject = (lObj, env = "ref") => {
 };
 
 exports.accumulateThisKeyFromLObjs = (lObj, env, key) => {
-  let fetchedLObjs = exports.getNexusLemmaObject(lObj, env);
+  let fetchedLObjs = exports.getNexusLemmaObjects(lObj, env);
 
   let typeOfValue = uUtils.typeof(fetchedLObjs[0][key]);
 

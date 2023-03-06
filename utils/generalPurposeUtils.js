@@ -469,9 +469,28 @@ exports.traitValueIsMeta = (traitValue, chunk, traitKey) => {
     traitValue = chunk[traitKey];
   }
 
-  if (Array.isArray(traitValue) && traitValue.length === 1) {
+  if (Array.isArray(traitValue)) {
+    if (traitValue.length !== 1) {
+      consol.throw("kngh");
+    }
     traitValue = traitValue[0];
   }
 
   return traitValue[0] === "_";
+};
+
+exports.checkNoDuplicateChunks = (
+  label = "yggf",
+  obj,
+  isOutputArray,
+  returnBool
+) => {
+  let stChs = isOutputArray ? obj.map((ou) => ou.structureChunk) : obj;
+  let ids = stChs.map((stCh) => stCh.chunkId);
+  if (Array.from(new Set(ids)).length !== ids.length) {
+    if (returnBool) {
+      return true;
+    }
+    consol.throw(`${label} Contains duplicates: [${ids.join(", ")}]`);
+  }
 };

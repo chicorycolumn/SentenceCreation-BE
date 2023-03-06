@@ -54,7 +54,7 @@ exports.checkDecisiveDecant = (questionSentenceData, questionLanguage) => {
           structureChunk
         );
         consol.throw(
-          `#ERR oyxp checkDecisiveDecant. traitKey: "${traitKey}" and traitValue: "${traitValue}"`
+          `#ERR oyxp checkDecisiveDecant. traitKey: "${traitKey}" not in traitsAllowedToHaveMultipleValues, was given traitValue: "${traitValue}"`
         );
       }
     });

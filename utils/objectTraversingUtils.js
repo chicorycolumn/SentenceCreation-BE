@@ -8,7 +8,7 @@ const otUtils = require("./objectTraversingUtils.js");
 const allLangUtils = require("./allLangUtils.js");
 
 exports.findMatchingLemmaObjectThenWord = (
-  etiquette,
+  dependenceType,
   useDummyWords,
   structureChunk,
   words,
@@ -37,7 +37,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
     return [
       {
-        etiquette,
+        dependenceType,
         selectedWord: structureChunk.chunkValue,
         structureChunk,
       },
@@ -435,7 +435,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
       selectedWordArr.forEach((selectedWord) => {
         let outputUnit = frUtils.createOutputUnit(
-          etiquette,
+          dependenceType,
           errorInSentenceCreation,
           null,
           selectedWord,
@@ -590,7 +590,7 @@ exports.findMatchingLemmaObjectThenWord = (
                 selectedWord.processOnlyAtEnd)
             ) {
               let outputUnit = frUtils.createOutputUnit(
-                etiquette,
+                dependenceType,
                 errorInSentenceCreation,
                 errorInDrilling,
                 selectedWord,
@@ -607,7 +607,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
               allWords.forEach((word) => {
                 let outputUnit = frUtils.createOutputUnit(
-                  etiquette,
+                  dependenceType,
                   errorInSentenceCreation,
                   errorInDrilling,
                   word,
@@ -822,7 +822,7 @@ exports.findMatchingLemmaObjectThenWord = (
         selectedWord = uUtils.selectRandom(additionalWords);
       }
       let outputUnit = frUtils.createOutputUnit(
-        etiquette,
+        dependenceType,
         errorInSentenceCreation,
         errorInDrilling,
         selectedWord,
@@ -1421,4 +1421,8 @@ exports.doesThisInflectionKeyHoldUniqueInflectionValueInLObj = (
   );
 
   return itIsUnique;
+};
+
+exports.getHeadOutputUnit = (stCh, outputArr) => {
+  return outputArr.find((ou) => ou.structureChunk.chunkId === stCh.agreeWith);
 };

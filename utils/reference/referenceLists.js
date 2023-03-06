@@ -914,11 +914,11 @@ exports.defaultTraitValues = {
     person: ["1per", "2per", "3per"],
     /** Have decided not to have default values for gender or number.
      *
-     *  Was tempted {number: [singular]} but when number key left blank wo do want it to choose from both singular and plural.
+     *  Was tempted {number: [singular]}
+     *  but instead, when number key left blank we do want it to choose from both singular and plural.
      *
-     *  Was tempted {gender: [m, f]} to avoid "Kim ona jest?" from randomly selecting "ono".
-     *  So instead the educator would always remember to check all then uncheck n for pronombre chunk in sentences like these,
-     *  but I have a better solution - an "isPerson" key on stCh which strips out n from gender array.
+     *  Was tempted {gender: [m, f]} to avoid "Kim ona jest?" from randomly selecting "ono"
+     *  but instead, the isPerson key on stCh allows educator to strip out "n" from default-all gender array.
      */
   },
   nounCommon: { gcase: ["nom"] },

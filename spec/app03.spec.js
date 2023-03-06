@@ -1757,7 +1757,6 @@ describe("/api", function () {
         pleaseDontSpecify: true,
       });
     });
-    //Add "The doctor was here." sentence with tests.
   });
 
   describe("/palette - Stage 17C: Possessive pronombres and MGNs. EdusMgn", () => {

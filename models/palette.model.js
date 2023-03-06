@@ -174,20 +174,15 @@ exports.fetchPalette = (req) => {
     console.log(
       "[1;35m " +
         "{{{ cjae-fetchPalette just before midpoint. Let's see the selectedWordss" +
-        "[0m"
-    );
-
-    console.log(
-      "odej-fetchPalette questionSentenceData.questionOutputArr.map((outputUnit) => outputUnit.selectedWord)",
+        "[0m",
+      "\n odej-fetchPalette questionSentenceData.questionOutputArr.map((outputUnit) => outputUnit.selectedWord)",
       questionSentenceData.questionOutputArr.map(
         (outputUnit) => outputUnit.selectedWord
-      )
+      ),
+      "\n",
+      "[1;35m " + "}}}" + "[0m"
     );
-
-    console.log("[1;35m " + "}}}" + "[0m");
-
     consol.logAestheticBorder(4);
-
     consol.throw("Midpoint cease.");
   }
 
@@ -401,15 +396,15 @@ exports.fetchPalette = (req) => {
         answerResponseObj = scUtils.giveFinalSentences(
           answerSentenceData,
           multipleMode,
-          answerLanguage,
-          null
+          { questionLanguage, answerLanguage },
+          false
         );
       } else {
         let subsequentAnswerResponseObj = scUtils.giveFinalSentences(
           answerSentenceData,
           multipleMode,
-          answerLanguage,
-          null
+          { questionLanguage, answerLanguage },
+          false
         );
 
         subsequentAnswerResponseObj.finalSentenceArr.forEach(
@@ -458,8 +453,8 @@ exports.fetchPalette = (req) => {
   questionResponseObj = scUtils.giveFinalSentences(
     questionSentenceData,
     false,
-    questionLanguage,
-    answerLanguage,
+    { questionLanguage, answerLanguage },
+    true,
     answerSentenceData,
     questionSentenceFormula,
     req.body,
@@ -473,15 +468,15 @@ exports.fetchPalette = (req) => {
       answerResponseObj = scUtils.giveFinalSentences(
         answerSentenceData,
         true,
-        answerLanguage,
-        null
+        { questionLanguage, answerLanguage },
+        false
       );
     } else {
       let subsequentAnswerResponseObj = scUtils.giveFinalSentences(
         answerSentenceData,
         true,
-        answerLanguage,
-        null
+        { questionLanguage, answerLanguage },
+        false
       );
 
       subsequentAnswerResponseObj.finalSentenceArr.forEach((finalSentence) => {

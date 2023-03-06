@@ -127,7 +127,7 @@ exports.runPaletteTest = (
     .expect(200)
     .then((res) => {
       if (!skipConsoleLog) {
-        consol.logTestOutputSolely("\n\n", res.body);
+        consol.logTestOutputSolely("\n\nHere's res.body:", res.body);
       }
 
       if (!answerLanguage) {
@@ -953,7 +953,7 @@ exports.checkTranslationsOfGivenRef = (
 ) => {
   let testActivated = false;
   if (!alreadyLogged) {
-    consol.logTestOutputSolely("\n\n", res.body);
+    consol.logTestOutputSolely("\n\nIt's res.body:", res.body);
   }
   if (res.body.runsRecord) {
     consol.logTestOutputSolely(
@@ -985,6 +985,12 @@ exports.checkTranslationsOfGivenRef = (
     let expandedRefItem = {};
     expandedRefItem[questionLanguage] = refItemQuestionSentences;
     expandedRefItem[answerLanguage] = refItemAnswerSentences;
+
+    Object.keys(refItem).forEach((k) => {
+      if (![questionLanguage, answerLanguage].includes(k)) {
+        expandedRefItem[k] = refItem[k];
+      }
+    });
 
     return expandedRefItem;
   });
@@ -1038,6 +1044,33 @@ exports.checkTranslationsOfGivenRef = (
       ) {
         expect(answerSentenceArr).to.have.members(refItem[answerLanguage]);
         testActivated = true;
+
+        if (refItem.extra) {
+          testingUtils.testAllSubValues(refItem.extra, res.body);
+        }
+
+        expect(
+          Object.keys(res.body).filter((k) => {
+            if (
+              testingUtils.dataToOnlyAppearWhenExplicitlyExpected.includes(k)
+            ) {
+              if (refItem.optionalExtra) {
+                testingUtils.testAllSubValues(
+                  refItem.optionalExtra,
+                  res.body,
+                  true
+                );
+                if (Object.keys(refItem.optionalExtra).includes(k)) {
+                  return false;
+                }
+              }
+
+              if (!refItem.extra || !Object.keys(refItem.extra).includes(k)) {
+                return true;
+              }
+            }
+          })
+        ).to.have.length(0);
       }
     });
   });
@@ -1131,3 +1164,34 @@ exports.expandTestShorthands = (arr) => {
     }
   }
 };
+
+exports.testAllSubValues = (ref, resBody, allowToBeAbsentOnRes) => {
+  Object.keys(ref).forEach((k) => {
+    testingUtils.testByDatatype(ref, k, resBody, allowToBeAbsentOnRes);
+  });
+};
+
+exports.testByDatatype = (ref, key, resBody, allowToBeAbsentOnRes) => {
+  if (allowToBeAbsentOnRes && !resBody[key]) {
+    return;
+  }
+
+  expect(resBody).to.include.key(key);
+
+  if (Array.isArray(ref[key])) {
+    expect(resBody[key]).to.eql(ref[key]);
+    return;
+  }
+  if (uUtils.isKeyValueTypeObject(ref[key])) {
+    Object.keys(ref[key]).forEach((k) => {
+      let v = ref[key][k];
+      expect(resBody[key]).to.include.key(k);
+      expect(resBody[key][k]).to.eql(v);
+    });
+    return;
+  }
+
+  expect(resBody[key]).to.eql(ref[key]);
+};
+
+exports.dataToOnlyAppearWhenExplicitlyExpected = [];
