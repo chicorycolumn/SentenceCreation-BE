@@ -507,8 +507,8 @@ exports.structureChunkTraits = {
     //   ultimatelyMultipleTraitValuesOkay: true,
     // },
     dontSpecifyOnThisChunk: { expectedTypeOnStCh: "boolean" },
-    demandedLObjs: {
-      expectedTypeOnStCh: "array",
+    originalSitSelectedLObj: {
+      expectedTypeOnStCh: "keyValueObject",
       ultimatelyMultipleTraitValuesOkay: true,
     },
     specificIds: {

@@ -269,8 +269,8 @@ exports.selectRandLObj = (lObjs, stCh, lang) => {
     consol.throw("iwba");
   }
 
-  if (stCh.demandedLObjs && stCh.demandedLObjs.length) {
-    let matches = lfUtils.filterByDemandedLObjs(stCh, lObjs);
+  if (stCh.originalSitSelectedLObj) {
+    let matches = lfUtils.filterByDemandedLObj(stCh, lObjs);
     let res = uUtils.selectRandom(matches);
 
     consol.logSpecial(
@@ -283,15 +283,11 @@ exports.selectRandLObj = (lObjs, stCh, lang) => {
 
     if (!res) {
       consol.throw(
-        `ktrm ${lang} "${
-          stCh.chunkId
-        }" selectRandLObj failed to find lObj from arr (-->above) via --stCh.demandedLObjs-- [${stCh.demandedLObjs
-          .map((l) => l.id)
-          .join(", ")}].`
+        `ktrm ${lang} "${stCh.chunkId}" selectRandLObj failed to find lObj from arr (-->above) via --stCh.originalSitSelectedLObj-- [${stCh.originalSitSelectedLObj.id}].`
       );
     }
 
-    return _returnLObj(res, stCh, "demandedLObjs");
+    return _returnLObj(res, stCh, "originalSitSelectedLObj");
   }
 
   if (
@@ -2057,7 +2053,7 @@ exports.checkMatchHyper = (s, l) => {
   });
 };
 
-exports.filterByDemandedLObjs = (stCh, lObjs) => {
+exports.filterByDemandedLObj = (stCh, lObjs) => {
   /**Added to resolve Mungojerry issue - that synonyms were interfering with counterfax, causing erroneous coppicing.
    *
    * ie Q sentence "The woman saw a doctor.", let's flip gender value of doctor, see if we get different A sentence
@@ -2076,71 +2072,71 @@ exports.filterByDemandedLObjs = (stCh, lObjs) => {
 
   consol.logSpecial(
     8,
-    `\nahps stCh.demandedLObjs: Let's see which lObjs pass the test against (demanded) lObj id from Q chunk.`,
-    stCh.demandedLObjs.map((l) => l.id)
+    `\nahps stCh.originalSitSelectedLObj: Let's see which lObjs pass the test against (demanded) lObj id from Q chunk.`,
+    stCh.originalSitSelectedLObj.id
   );
 
+  let { originalSitSelectedLObj } = stCh;
+
   return lObjs.filter((l) => {
-    return stCh.demandedLObjs.some((demandedLObj) => {
-      if (allLangUtils.compareLObjStems(l.id, `^${demandedLObj.id}`)) {
-        consol.logSpecial(8, `ahps1 "${l.id}" YES because same exact id.`);
-        return true;
-      }
+    if (allLangUtils.compareLObjStems(l.id, `^${originalSitSelectedLObj.id}`)) {
+      consol.logSpecial(8, `ahps1 "${l.id}" YES because same exact id.`);
+      return true;
+    }
 
-      // Gender of stem-sibling (same lObj serial number) is the same, so discard it.
-      // ie if Q chunk is "woman", then discard "lady" (same gender as "woman") but not "man" or "person".
-      if (demandedLObj.gender === l.gender) {
-        consol.logSpecial(
-          8,
-          `ahps2 "${l.id}" NO because is stem-sibling with same gender.`
-        );
-        return false;
-      }
+    // Gender of stem-sibling (same lObj serial number) is the same, so discard it.
+    // ie if Q chunk is "woman", then discard "lady" (same gender as "woman") but not "man" or "person".
+    if (originalSitSelectedLObj.gender === l.gender) {
+      consol.logSpecial(
+        8,
+        `ahps2 "${l.id}" NO because is stem-sibling with same gender.`
+      );
+      return false;
+    }
 
-      /**
-       * I'm surprised that ahps3 condition is not needed.
-       * I thought "osoba"/"ludzie" synonyms would cause Mungojerry issue too.
-       * And wouldn't be filtered out by ahps2 because are not same gender ("osoba" f, "ludzie" m1).
-       */
-      // if (demandedLObj.semanticGender === l.semanticGender) {
-      // consol.logSpecial(
-      //   8,
-      //   `ahps3 "${l.id}" NO because is stem-sibling with same semanticGender.`
-      // );
-      //   return false;
-      // }
+    /**
+     * I'm surprised that ahps3 condition is not needed.
+     * I thought "osoba"/"ludzie" synonyms would cause Mungojerry issue too.
+     * And wouldn't be filtered out by ahps2 because are not same gender ("osoba" f, "ludzie" m1).
+     */
+    // if (originalSitSelectedLObj.semanticGender === l.semanticGender) {
+    // consol.logSpecial(
+    //   8,
+    //   `ahps3 "${l.id}" NO because is stem-sibling with same semanticGender.`
+    // );
+    //   return false;
+    // }
 
-      // If Q is not hypernym, eg "woman" then discard hypernyms, eg "person".
-      if (
-        !lfUtils.checkHyper(demandedLObj, [HY.HY]) &&
-        lfUtils.checkHyper(l, [HY.HY])
-      ) {
-        consol.logSpecial(
-          8,
-          `ahps4 "${l.id}" NO because one's a hypernym and the other's not.`
-        );
-        return false;
-      }
+    // If Q is not hypernym, eg "woman" then discard hypernyms, eg "person".
+    if (
+      !lfUtils.checkHyper(originalSitSelectedLObj, [HY.HY]) &&
+      lfUtils.checkHyper(l, [HY.HY])
+    ) {
+      consol.logSpecial(
+        8,
+        `ahps4 "${l.id}" NO because one's a hypernym and the other's not.`
+      );
+      return false;
+    }
 
-      // If Q is hypernym, eg "person" then discard non-hypernyms, eg "woman".
-      if (
-        lfUtils.checkHyper(demandedLObj, [HY.HY]) &&
-        !lfUtils.checkHyper(l, [HY.HY])
-      ) {
-        consol.logSpecial(
-          8,
-          `ahps5 "${l.id}" NO due to one's a hypernym and the other's not.`
-        );
-        return false;
-      }
+    // If Q is hypernym, eg "person" then discard non-hypernyms, eg "woman".
+    if (
+      lfUtils.checkHyper(originalSitSelectedLObj, [HY.HY]) &&
+      !lfUtils.checkHyper(l, [HY.HY])
+    ) {
+      consol.logSpecial(
+        8,
+        `ahps5 "${l.id}" NO due to one's a hypernym and the other's not.`
+      );
+      return false;
+    }
 
-      // Otherwise, return all stem-siblings (same lObj serial number) of Q chunk.
-      if (allLangUtils.compareLObjStems(l.id, demandedLObj.id, true)) {
-        consol.logSpecial(8, `ahps6 "${l.id}" YES because is stem-sibling.`);
-        return true;
-      }
+    // Otherwise, return all stem-siblings (same lObj serial number) of Q chunk.
+    if (allLangUtils.compareLObjStems(l.id, originalSitSelectedLObj.id, true)) {
+      consol.logSpecial(8, `ahps6 "${l.id}" YES because is stem-sibling.`);
+      return true;
+    }
 
-      consol.logSpecial(8, `ahps7 "${l.id}" NO because no condition matched.`);
-    });
+    consol.logSpecial(8, `ahps7 "${l.id}" NO because no condition matched.`);
   });
 };

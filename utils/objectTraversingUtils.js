@@ -75,12 +75,10 @@ exports.findMatchingLemmaObjectThenWord = (
 
       let matchesLengthSnap = matches.length;
 
-      if (structureChunk.demandedLObjs) {
-        matches = lfUtils.filterByDemandedLObjs(structureChunk, matches);
+      if (structureChunk.originalSitSelectedLObj) {
+        matches = lfUtils.filterByDemandedLObj(structureChunk, matches);
         if (matchesLengthSnap && !matches.length) {
-          consol.throw(
-            "alro " + structureChunk.demandedLObjs.map((l) => l.id).join(", ")
-          );
+          consol.throw("alro " + structureChunk.originalSitSelectedLObj.id);
         }
       }
     }

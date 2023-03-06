@@ -1755,9 +1755,9 @@ exports.conformAnswerStructureToQuestionStructure = (
       consol.logSpecial(8, {
         "answerStCh.chunkId": answerStCh.chunkId,
         "answerStCh.specificIds": answerStCh.specificIds,
-        "answerStCh.demandedLObjs": answerStCh.demandedLObjs
-          ? answerStCh.demandedLObjs.map((l) => l.id)
-          : [],
+        "answerStCh.originalSitSelectedLObj": answerStCh.originalSitSelectedLObj
+          ? answerStCh.originalSitSelectedLObj.id
+          : null,
         "answerStCh.gender": answerStCh.gender,
         "answerStCh.semanticGender": answerStCh.semanticGender,
       });

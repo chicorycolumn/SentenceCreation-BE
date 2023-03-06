@@ -606,18 +606,18 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
       counterfactualQuestionSentenceFormula.sentenceStructure.forEach(
         (stCh) => {
-          if (stCh.demandedLObjs && stCh.demandedLObjs.length) {
+          if (stCh.originalSitSelectedLObj) {
             consol.throw(
-              "igtc Wasn't expecting demandedLObjs to be populated yet."
+              "igtc Wasn't expecting originalSitSelectedLObj to be populated yet."
             );
           }
           if (gpUtils.getWordtypeStCh(stCh) !== "fixed") {
-            let demandedLObj = questionOutputArr.find(
+            let originalSitSelectedLObj = questionOutputArr.find(
               (ou) => ou.structureChunk.chunkId === stCh.chunkId
             ).selectedLemmaObject;
 
-            if (demandedLObj) {
-              stCh.demandedLObjs = [demandedLObj];
+            if (originalSitSelectedLObj) {
+              stCh.originalSitSelectedLObj = originalSitSelectedLObj;
             }
           }
 
