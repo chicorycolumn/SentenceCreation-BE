@@ -97,27 +97,28 @@ exports.getLObjIdStem = (id) => {
 };
 
 exports.compareLObjStems = (id1, id2, ignoreSpecificity) => {
-  let res;
-  [
-    [id1, id2],
-    [id2, id1],
-  ].forEach((ids) => {
-    if (res) {
-      return;
+  if (ignoreSpecificity) {
+    if (id1[0] === "^") {
+      id1 = id1.slice(1);
     }
-    let [idA, idB] = ids;
-    if (idA[0] === "^") {
-      if (!ignoreSpecificity) {
-        res = idA.slice(1) === idB;
-      } else {
-        idA = idA.slice(1);
-      }
+    if (id2[0] === "^") {
+      id2 = id2.slice(1);
     }
-  });
+  }
 
-  return (
-    res || allLangUtils.getLObjIdStem(id1) === allLangUtils.getLObjIdStem(id2)
-  );
+  if (id1[0] === "^" && id2[0] === "^") {
+    return id1 === id2;
+  }
+
+  if (id1[0] === "^") {
+    return id1.slice(1) === id2;
+  }
+
+  if (id2[0] === "^") {
+    return id2.slice(1) === id1;
+  }
+
+  return allLangUtils.getLObjIdStem(id1) === allLangUtils.getLObjIdStem(id2);
 };
 
 exports.translateAnnoTraitValue = (

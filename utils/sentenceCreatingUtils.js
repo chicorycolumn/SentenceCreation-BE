@@ -305,7 +305,7 @@ exports.processSentenceFormula = (
 
   //STEP ONE: Select HEAD words and add to result array.
   let { headChunks, dependentHeadChunks, dependentChunks, otherChunks } =
-    scUtils.sortStructureChunks(sentenceStructure, false, currentLanguage);
+    scUtils.sortStructureChunks(sentenceStructure, currentLanguage);
 
   let headOutputUnitArrays = [];
 
@@ -755,7 +755,6 @@ exports.processSentenceFormula = (
     //Decanting otherChunks if they have multiple traitValues.
     let { otherChunks } = scUtils.sortStructureChunks(
       outputArray.map((outputUnit) => outputUnit.structureChunk),
-      false,
       `${currentLanguage}-other`
     );
     otherChunks.forEach((otherChunk) => {
@@ -1954,8 +1953,8 @@ exports.inheritFromHeadToDependentChunk = (
 
 exports.sortStructureChunks = (
   sentenceStructure,
-  separateDependentsAndPHDs,
-  label
+  label,
+  separateDependentsAndPHDs
 ) => {
   let headIds = Array.from(
     new Set(sentenceStructure.map((chunk) => chunk.agreeWith).filter((x) => x))

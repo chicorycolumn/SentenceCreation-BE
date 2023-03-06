@@ -696,7 +696,7 @@ exports.sortAnswerAndQuestionStructureChunks = (
   let responseObj = {};
 
   let { headChunks, dependentChunks, otherChunks } =
-    scUtils.sortStructureChunks(answerSentenceStructure, false, "answer");
+    scUtils.sortStructureChunks(answerSentenceStructure, "answer");
 
   responseObj.answerHeadChunks = headChunks;
   responseObj.answerDependentChunks = dependentChunks;
@@ -704,7 +704,7 @@ exports.sortAnswerAndQuestionStructureChunks = (
 
   if (true) {
     let { headChunks, dependentChunks, otherChunks } =
-      scUtils.sortStructureChunks(questionSentenceStructure, false, "question");
+      scUtils.sortStructureChunks(questionSentenceStructure, "question");
 
     responseObj.questionHeadChunks = headChunks;
     responseObj.questionDependentChunks = dependentChunks;
