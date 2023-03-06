@@ -254,7 +254,7 @@ describe("/api", function () {
             "There's a parent and I am seeing her.",
           ],
           POL: "Jest rodzic i widzę go.",
-          ignorableExtra: ["FYIPs"],
+          optionalExtra: { FYIPs: ["FYIP101-A-POL-ENG"] },
         },
       ];
       return runPaletteTest("POL", "ENG", "dummy64a", ref);

@@ -1842,7 +1842,7 @@ describe("/api", function () {
         {
           ENG: "My parent gave me a book.",
           POL: ["Mój rodzic dał mi książkę.", "Mój rodzic dał mnie książkę."],
-          ignorableExtra: ["FYIPs"],
+          optionalExtra: { FYIPs: ["FYIP101-A-ENG-POL"] },
         },
         {
           ENG: "My father gave me a book.",
@@ -1855,7 +1855,7 @@ describe("/api", function () {
         {
           ENG: "Our parent gave us a book.",
           POL: ["Nasz rodzic dał nam książkę."],
-          ignorableExtra: ["FYIPs"],
+          optionalExtra: { FYIPs: ["FYIP101-A-ENG-POL"] },
         },
         {
           ENG: "Our father gave us a book.",
@@ -2139,7 +2139,7 @@ describe("/api", function () {
               "My parent had given me her book.",
               "My parent has given me her book.",
             ],
-            ignorableExtra: ["FYIPs"],
+            optionalExtra: { FYIPs: ["FYIP101-A-POL-ENG"] },
           },
           {
             POL: "Nasz rodzic dał nam jego książkę.",
@@ -2152,7 +2152,7 @@ describe("/api", function () {
               "Our parent had given us her book.",
               "Our parent has given us her book.",
             ],
-            ignorableExtra: ["FYIPs"],
+            optionalExtra: { FYIPs: ["FYIP101-A-POL-ENG"] },
           },
           {
             POL: "Moi rodzice dali mi ich książkę.",
@@ -2535,7 +2535,7 @@ describe("/api", function () {
               "Moje dziecko dało mi jego książkę.",
               "Moje dziecko dało mnie jego książkę.",
             ],
-            ignorableExtra: ["FYIPs"],
+            optionalExtra: { FYIPs: ["FYIP101-A-ENG-POL"] },
           },
           {
             ENG: ["My baby gave me her book."],

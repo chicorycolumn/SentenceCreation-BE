@@ -1051,8 +1051,8 @@ exports.checkTranslationsOfGivenRef = (
           Object.keys(refItem.extra).forEach((k) => {
             if (k === "FYIPs") {
               expect(res.body["FYIPs"]).to.exist;
-              expect(res.body["FYIPs"].map((FYIP) => FYIP.label)).to.eql(
-                refItem.extra.FYIPs
+              expect(res.body["FYIPs"].map((FYIP) => FYIP.label).sort()).to.eql(
+                refItem.extra.FYIPs.sort()
               );
               return;
             }
@@ -1061,13 +1061,28 @@ exports.checkTranslationsOfGivenRef = (
         }
 
         expect(
-          Object.keys(res.body).filter(
-            (k) =>
-              dataToOnlyAppearWhenExplicitlyExpected.includes(k) &&
-              (!refItem.ignorableExtra ||
-                !refItem.ignorableExtra.includes(k)) &&
-              (!refItem.extra || !Object.keys(refItem.extra).includes(k))
-          )
+          Object.keys(res.body).filter((k) => {
+            if (!dataToOnlyAppearWhenExplicitlyExpected.includes(k)) {
+              return false;
+            }
+
+            if (refItem.optionalExtra) {
+              Object.keys(refItem.optionalExtra).forEach((k) => {
+                if (k === "FYIPs" && res.body.FYIPs) {
+                  expect(
+                    res.body["FYIPs"].map((FYIP) => FYIP.label).sort()
+                  ).to.eql(refItem.optionalExtra.FYIPs.sort());
+                }
+              });
+              if (Object.keys(refItem.optionalExtra).includes(k)) {
+                return false;
+              }
+            }
+
+            if (refItem.extra && !Object.keys(refItem.extra).includes(k)) {
+              return true;
+            }
+          })
         ).to.have.length(0);
       }
     });
