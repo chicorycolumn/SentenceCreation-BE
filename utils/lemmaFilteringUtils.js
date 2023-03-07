@@ -16,11 +16,8 @@ exports.selectRandLObj = (lObjs, stCh, lang) => {
   const _returnLObj = (lObj, stCh, label) => {
     consol.logSpecial(
       8,
-      `.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.\n`,
-      `selectRandLObj (via ${label}) selected "${lObj.id}"\n`,
-      `"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"`
+      `\nrmbb selectRandLObj (via ${label}) selected "${lObj.id}"\n`
     );
-
     return lObj;
   };
 
