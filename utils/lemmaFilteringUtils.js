@@ -10,9 +10,7 @@ const allLangUtils = require("./allLangUtils.js");
 const { HY } = refObj;
 
 exports.checkHyper = (lObj, expectedTypes) => {
-  if (
-    !expectedTypes.every((str) => Object.keys(HY).some((k) => HY[k] === str))
-  ) {
+  if (expectedTypes.some((str) => !Object.values(HY).includes(str))) {
     consol.throw(
       'tyoe Wrong expectedTypes: ["' + expectedTypes.join('","') + '"]'
     );
@@ -66,20 +64,7 @@ exports.getLObjAndSiblings = (
   qLObj,
   stChGender
 ) => {
-  let logHint = qLObj
-    ? "qLObj is present so presume invoked by conformAnswerStructureToQuestionStructure"
-    : "qLObj is null so presume invoked by findMatchingLemmaObjectThenWord";
-
-  const log = (...args) => {
-    if (ids.some((id) => gpUtils.getWordtypeShorthandLObj({ id }) === "npe")) {
-      // consol.logSpecial(7, ...args);
-    }
-  };
-  log("");
-  if (qLObj) {
-    log("[1;36m " + qLObj.id + "[0m");
-  }
-  log(label, blockHypernyms, "Looking for", ids);
+  consol.logSpecial(7, "litd", label, blockHypernyms, "Looking for", ids);
 
   let additionalRes = [];
 
@@ -102,7 +87,7 @@ exports.getLObjAndSiblings = (
         let lObjCopy = uUtils.copyWithoutReference(lObj);
         lObjCopy.id = lObjCopy.id + "¢";
         additionalRes.push(lObjCopy);
-        log("---------BOSCH OVERRIDE", lObjCopy.id);
+        consol.logSpecial(7, "Adding ¢", lObjCopy.id);
         return false;
       }
 
@@ -114,45 +99,52 @@ exports.getLObjAndSiblings = (
       //   [HY.HY, HY.VY].includes(lfUtils.assessHypernymy(qLObj)) !==
       //     [HY.HY, HY.VY].includes(lfUtils.assessHypernymy(lObj))
       // ) {
-      //   log("Chuck-red ", lObj.id);
+      //   consol.logSpecial(7,"Chuck-red ", lObj.id);
       //   return false;
       // }
 
-      // All of these clauses are not currently used, because blockHypernyms is only invoked as false.
-      if (
-        blockHypernyms &&
-        !lfUtils.checkHyper({ id: specificId }, [HY.HY, HY.VY, HY.AofQVY]) &&
-        lfUtils.checkHyper(lObj, [HY.HY, HY.VY])
-      ) {
-        log("Chuck-yellow ", lObj.id);
-        return false;
-      }
+      // All these clauses not currently used, as blockHypernyms only invoked as false.
+      if (blockHypernyms) {
+        consol.throw(
+          "Ah interesting, we are now invoking with blockHypernyms so can start using clauses below."
+        );
+        if (
+          !lfUtils.checkHyper({ id: specificId }, [HY.HY, HY.VY, HY.AofQVY]) &&
+          lfUtils.checkHyper(lObj, [HY.HY, HY.VY])
+        ) {
+          consol.logSpecial(7, "Chuck-yellow ", lObj.id);
+          return false;
+        }
 
-      if (
-        blockHypernyms &&
-        lfUtils.checkHyper({ id: specificId }, [HY.HY]) &&
-        !lfUtils.checkHyper(lObj, [HY.HY])
-      ) {
-        log("Chuck-green ", lObj.id, "because of", specificId);
-        return false;
-      }
+        if (
+          lfUtils.checkHyper({ id: specificId }, [HY.HY]) &&
+          !lfUtils.checkHyper(lObj, [HY.HY])
+        ) {
+          consol.logSpecial(
+            7,
+            "Chuck-green ",
+            lObj.id,
+            "because of",
+            specificId
+          );
+          return false;
+        }
 
-      if (
-        blockHypernyms &&
-        lfUtils.checkHyper({ id: specificId }, HY.AofQVY) &&
-        lfUtils.checkHyper(lObj, [HY.HY, HY.VY])
-      ) {
-        log("Yessir-brown ", lObj.id, "because of", specificId);
-        return true;
-      }
+        if (
+          lfUtils.checkHyper({ id: specificId }, HY.AofQVY) &&
+          lfUtils.checkHyper(lObj, [HY.HY, HY.VY])
+        ) {
+          consol.logSpecial(7, "Yes-black ", lObj.id, "because of", specificId);
+          return true;
+        }
 
-      if (
-        blockHypernyms &&
-        !lfUtils.checkHyper({ id: specificId }, [HY.VY]) &&
-        lfUtils.checkHyper(lObj, [HY.VY])
-      ) {
-        log("Chuck-blue ", lObj.id);
-        return false;
+        if (
+          !lfUtils.checkHyper({ id: specificId }, [HY.VY]) &&
+          lfUtils.checkHyper(lObj, [HY.VY])
+        ) {
+          consol.logSpecial(7, "Chuck-blue ", lObj.id);
+          return false;
+        }
       }
 
       return true;
@@ -165,10 +157,11 @@ exports.getLObjAndSiblings = (
         consol.throw(`akdp ${l.id} in both additionalRes and res.`);
       }
     });
-    res = [...res, ...additionalRes];
+    res.push(...additionalRes);
   }
 
-  log(
+  consol.logSpecial(
+    7,
     label,
     blockHypernyms,
     "Got",
@@ -178,11 +171,40 @@ exports.getLObjAndSiblings = (
   if (!res || !res.length) {
     console.log(">>", ids);
     consol.throw(
-      `epma getLObjAndSiblings found no matches for ids printed >> above.\n${logHint}`
+      `epma getLObjAndSiblings found no matches for ids printed >> above.`
     );
   }
 
   return res;
+};
+
+exports.getHypernymyProportionAdjustedTV = (stCh, lObj) => {
+  if (stCh.number.length > 1) {
+    if (
+      stCh.number.length > 2 ||
+      !["singular", "plural"].every((tv) => stCh.number.includes(tv))
+    ) {
+      consol.throw("dlvu");
+    }
+    if (lfUtils.checkHyper(lObj, [HY.HY])) {
+      return uUtils.selectRandom([
+        "singular",
+        "plural",
+        "plural",
+        "plural",
+        "plural",
+      ]);
+    }
+    if (lfUtils.checkHyper(lObj, [HY.HO, HY.VO])) {
+      return uUtils.selectRandom([
+        "singular",
+        "singular",
+        "singular",
+        "singular",
+        "plural",
+      ]);
+    }
+  }
 };
 
 exports.adjustHypernymyProportions = (hypernymy, outputUnits) => {
@@ -190,6 +212,8 @@ exports.adjustHypernymyProportions = (hypernymy, outputUnits) => {
 
   if ([HY.HY].includes(hypernymy)) {
     outputUnits.forEach((unit) => {
+      proportionAdjustedOutputUnits.push(unit);
+
       if (
         unit.drillPath.some(
           (drillPathUnit) =>
@@ -200,12 +224,12 @@ exports.adjustHypernymyProportions = (hypernymy, outputUnits) => {
         proportionAdjustedOutputUnits.push(unit);
         proportionAdjustedOutputUnits.push(unit);
         proportionAdjustedOutputUnits.push(unit);
-      } else {
-        proportionAdjustedOutputUnits.push(unit);
       }
     });
   } else if ([HY.HO, HY.VO].includes(hypernymy)) {
     outputUnits.forEach((unit) => {
+      proportionAdjustedOutputUnits.push(unit);
+
       if (
         unit.drillPath.some(
           (drillPathUnit) =>
@@ -215,8 +239,6 @@ exports.adjustHypernymyProportions = (hypernymy, outputUnits) => {
         proportionAdjustedOutputUnits.push(unit);
         proportionAdjustedOutputUnits.push(unit);
         proportionAdjustedOutputUnits.push(unit);
-        proportionAdjustedOutputUnits.push(unit);
-      } else {
         proportionAdjustedOutputUnits.push(unit);
       }
     });
@@ -244,20 +266,15 @@ exports.selectRandLObj = (lObjs, stCh, lang) => {
   const _returnLObj = (lObj, stCh, label) => {
     consol.logSpecial(
       8,
-      `.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.\n`,
-      `selectRandLObj (via ${label}) selected "${lObj.id}"\n`,
-      `"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"-,-"-.-"`
+      `\nrmbb selectRandLObj (via ${label}) selected "${lObj.id}"\n`
     );
-
     return lObj;
   };
 
-  if (!lObjs.length) {
-    if (!res) {
-      consol.throw(
-        `ktrl ${lang} "${stCh.chunkId}" selectRandLObj failed to find lObj as input lObj array empty.`
-      );
-    }
+  if (!lObjs.length && !res) {
+    consol.throw(
+      `ktrl ${lang} "${stCh.chunkId}" selectRandLObj failed to find lObj as input lObj array empty.`
+    );
   }
 
   if (
@@ -290,60 +307,7 @@ exports.selectRandLObj = (lObjs, stCh, lang) => {
     return _returnLObj(res, stCh, "originalSitSelectedLObj");
   }
 
-  if (
-    ["npe", "nco"].includes(gpUtils.getWordtypeShorthandStCh(stCh)) &&
-    stCh.number &&
-    stCh.number.length &&
-    !(
-      stCh.number.includes("singular") &&
-      stCh.number.includes("plural") &&
-      stCh.number.length === 2
-    )
-  ) {
-    let lObjIds = [];
-
-    lObjs.forEach((lObj) => {
-      let hypernymy = lfUtils.assessHypernymy(lObj);
-
-      if (stCh.number.includes("plural") && stCh.number.length === 1) {
-        if ([HY.HY].includes(hypernymy)) {
-          lObjIds.push(lObj.id);
-          lObjIds.push(lObj.id);
-          lObjIds.push(lObj.id);
-          lObjIds.push(lObj.id);
-        } else {
-          lObjIds.push(lObj.id);
-        }
-      } else if (stCh.number.includes("singular") && stCh.number.length === 1) {
-        if ([HY.HO, HY.VO].includes(hypernymy)) {
-          lObjIds.push(lObj.id);
-          lObjIds.push(lObj.id);
-          lObjIds.push(lObj.id);
-          lObjIds.push(lObj.id);
-        } else {
-          lObjIds.push(lObj.id);
-        }
-      } else {
-        consol.throw("iwbb");
-      }
-    });
-
-    let chosenId = uUtils.selectRandom(lObjIds);
-
-    let res = lObjs.find((lObj) => lObj.id === chosenId); //This is correct, that it directly compares IDs.
-
-    if (!res) {
-      consol.throw(
-        `ktrn ${lang} "${stCh.chunkId}" selectRandLObj failed to find lObj via --hyper vyper hypo vypo logic--.`
-      );
-    }
-
-    return _returnLObj(res, stCh, "hyper vyper hypo vypo logic");
-  }
-
-  let res = uUtils.selectRandom(lObjs);
-
-  return _returnLObj(res, stCh, "simple path");
+  return _returnLObj(uUtils.selectRandom(lObjs), stCh, "simple path");
 };
 
 exports.selectRandTraitValue = (
@@ -352,39 +316,19 @@ exports.selectRandTraitValue = (
   traitKey,
   traitValues = stCh[traitKey]
 ) => {
-  if (traitKey === "number") {
-    if (stCh[traitKey].length > 1) {
-      if (
-        stCh[traitKey].length > 2 ||
-        !["singular", "plural"].every((tv) => stCh[traitKey].includes(tv))
-      ) {
-        consol.throw("dlvu");
-      }
-      if (lfUtils.checkHyper(lObj, [HY.HY])) {
-        stCh[traitKey] = [
-          uUtils.selectRandom([
-            "singular",
-            "plural",
-            "plural",
-            "plural",
-            "plural",
-          ]),
-        ];
-        return;
-      }
-      if (lfUtils.checkHyper(lObj, [HY.HO, HY.VO])) {
-        stCh[traitKey] = [
-          uUtils.selectRandom([
-            "singular",
-            "singular",
-            "singular",
-            "singular",
-            "plural",
-          ]),
-        ];
-        return;
-      }
+  if (
+    traitKey === "number" &&
+    lfUtils.checkHyper(lObj, [HY.HY, HY.HO, HY.VO]) &&
+    nexusUtils
+      .getNexusLemmaObjects(lObj)
+      .some((nlobj) => nlobj.requiresHypernymyProportionAdjust)
+  ) {
+    let numberTraitValue = lfUtils.getHypernymyProportionAdjustedTV(stCh, lObj);
+    if (!numberTraitValue) {
+      consol.throw("diwm");
     }
+    stCh[traitKey] = [numberTraitValue];
+    return;
   }
 
   stCh[traitKey] = [uUtils.selectRandom(traitValues)];
@@ -926,210 +870,19 @@ exports.updateStChByAndTagsAndSelectors = (
   let doneSelectors = [];
 
   //STEP MINUS ONE
-  //Specially handle stCh's where lObj has a semanticGender
-  //because for example
-  //stCh gender currently ["f"]
-  //lObj rodzic so gender "m1" and semanticGender "_PersonalGenders"
-  //but if I didn't step in here, stCh would end up with gender "m1" which is wrong.
+  // Specially handle stCh's where lObj has a semanticGender.
+  // eg stCh gender ["f"], and lObj "rodzic" which has gender "m1" and semanticGender "_PersonalGenders"
+  // but if I didn't step in here, stCh would end up with gender "m1" which is wrong.
 
-  if (lfUtils.checkHyper(selectedLemmaObject, [HY.VY])) {
-    if (structureChunk.number.length !== 1) {
-      consol.throw(`xtal`);
-    }
-
-    let vRef = {
-      singular: ["male", "male!"],
-      plural: ["mixed", "males", "males!"],
-    };
-
-    Object.keys(vRef).forEach((numberTraitValue) => {
-      let virilityDetails = vRef[numberTraitValue];
-
-      if (
-        structureChunk.number[0] === numberTraitValue &&
-        (!structureChunk.virilityDetail ||
-          !structureChunk.virilityDetail.length)
-      ) {
-        structureChunk.virilityDetail = [uUtils.selectRandom(virilityDetails)];
-        consol.logSpecial(
-          8,
-          `ykkt ${currentLanguage} "${structureChunk.chunkId}" Setting virilityDetail to "${structureChunk.virilityDetail}"`
-        );
-      }
-    });
-  }
-
-  if (selectedLemmaObject.semanticGender) {
-    if (isCounterfax && structureChunk.semanticGender) {
-      consol.logSpecial(
-        8,
-        "thaa------isCounterfax so leaving stCh semanticGender as",
-        structureChunk.semanticGender
-      );
-      doneSelectors.push("semanticGender");
-    } else {
-      consol.logSpecial(
-        8,
-        `thaa`,
-        `structureChunk.semanticGender`,
-        structureChunk.semanticGender,
-        `structureChunk.gender`,
-        structureChunk.gender,
-        `htaa selectedLemmaObject.semanticGender`,
-        selectedLemmaObject.semanticGender
-      );
-
-      let numberValue = outputUnit.drillPath.find(
-        (drillPathUnit) => drillPathUnit[0] === "number"
-      )[1];
-
-      let numberAdjustedGenderValues = [];
-
-      let virilityRefByNumber =
-        refObj.virilityConversionRef[currentLanguage][numberValue];
-
-      const _accumulateGenderValues = (
-        stCh,
-        genderTraitKey,
-        numberAdjustedGenderValues
-      ) => {
-        if (!stCh[genderTraitKey] || !stCh[genderTraitKey].length) {
-          consol.logSpecial(8, "SPEW", genderTraitKey);
-          return numberAdjustedGenderValues;
-        }
-
-        stCh[genderTraitKey].forEach((genderValue) => {
-          let additionalNumberAdjustedGenderValues =
-            virilityRefByNumber[genderValue];
-
-          numberAdjustedGenderValues = [
-            ...numberAdjustedGenderValues,
-            ...additionalNumberAdjustedGenderValues,
-          ];
-
-          if (numberAdjustedGenderValues.includes(undefined)) {
-            consol.throw(`syep`);
-          }
-
-          if (additionalNumberAdjustedGenderValues.includes(undefined)) {
-            consol.throw(`syeq`);
-          }
-        });
-
-        return numberAdjustedGenderValues;
-      };
-
-      let isNounPerson =
-        gpUtils.getWordtypeShorthandStCh(structureChunk) === "npe";
-
-      if (
-        (isNounPerson && !isSecondRound) ||
-        (isNounPerson && !structureChunk.semanticGender) ||
-        !isNounPerson
-      ) {
-        numberAdjustedGenderValues = _accumulateGenderValues(
-          structureChunk,
-          "gender",
-          numberAdjustedGenderValues
-        );
-      }
-
-      numberAdjustedGenderValues = _accumulateGenderValues(
-        structureChunk,
-        "semanticGender",
-        numberAdjustedGenderValues
-      );
-
-      consol.logSpecial(
-        8,
-        structureChunk.chunkId,
-        `htab numberAdjustedGenderValues`,
-        numberAdjustedGenderValues
-      );
-
-      if (!numberAdjustedGenderValues.length) {
-        throw "nmol !numberAdjustedGenderValues.length in updateStChByAndTagsAndSelectors";
-      }
-
-      if (this.checkHyper(selectedLemmaObject, [HY.VY])) {
-        //Garibaldi adjustment, Neon approach, vypernyms issue 205
-        numberAdjustedGenderValues = allLangUtils.standardiseGenders(
-          currentLanguage,
-          numberAdjustedGenderValues,
-          "_VypernymGenders"
-        );
-      }
-
-      consol.logSpecial(
-        8,
-        `htad numberAdjustedGenderValues after nixing "f" if vypernym.`,
-        numberAdjustedGenderValues
-      );
-
-      numberAdjustedGenderValues = Array.from(
-        new Set(
-          allLangUtils.enforceIsPerson(null, false, numberAdjustedGenderValues)
-        )
-      );
-
-      consol.logSpecial(
-        8,
-        `htae numberAdjustedGenderValues after enforcing isPerson.`,
-        numberAdjustedGenderValues
-      );
-
-      numberAdjustedGenderValues = allLangUtils.standardiseGenders(
-        currentLanguage,
-        numberAdjustedGenderValues
-      );
-
-      consol.logSpecial(
-        8,
-        `htaf numberAdjustedGenderValues after nixing "m" for Polish (should be "m1").`,
-        numberAdjustedGenderValues
-      );
-
-      if (isSecondRound && numberAdjustedGenderValues.length > 1) {
-        let oneValue = uUtils.selectRandom(numberAdjustedGenderValues);
-        console.log(
-          `htah Expected length 1 for "${
-            outputUnit.selectedLemmaObject.lemma
-          }" but got: ${
-            numberAdjustedGenderValues.length
-          } [${numberAdjustedGenderValues.join(
-            ", "
-          )}] so have randomly selected "${oneValue}".`
-        );
-
-        numberAdjustedGenderValues = [oneValue];
-      }
-
-      if (!numberAdjustedGenderValues.length) {
-        consol.throw("apbh");
-      }
-
-      numberAdjustedGenderValues = [
-        uUtils.selectRandom(numberAdjustedGenderValues),
-      ];
-
-      consol.logSpecial(
-        8,
-        `htai numberAdjustedGenderValues after SELECTRANDOM`,
-        numberAdjustedGenderValues
-      );
-
-      if (structureChunk.semanticGender) {
-        consol.logSpecial(
-          8,
-          "[1;36m " +
-            `htaj ${currentLanguage} ${structureChunk.chunkId}, stCh.semanticGender was ${structureChunk.semanticGender} is now ${numberAdjustedGenderValues}.` +
-            "[0m"
-        );
-      }
-      structureChunk.semanticGender = numberAdjustedGenderValues; //Set semanticGender in Question.
-      doneSelectors.push("semanticGender");
-    }
-  }
+  lfUtils.updateStChSemanticGenderAndVirilityDetail(
+    selectedLemmaObject,
+    structureChunk,
+    currentLanguage,
+    isCounterfax,
+    doneSelectors,
+    outputUnit,
+    isSecondRound
+  );
 
   //STEP ZERO: Decisive Decant
   //Remove gender traitValues on stCh if drillPath doesn't include the traitKey 'gender' (ie is infinitive or a participle, say).
@@ -1177,9 +930,8 @@ exports.updateStChByAndTagsAndSelectors = (
         metaTrait,
       });
 
-      let refAdjustedTraitKey = ["semanticGender"].includes(traitKey)
-        ? "gender"
-        : traitKey;
+      let refAdjustedTraitKey =
+        traitKey === "semanticGender" ? "gender" : traitKey;
 
       let metaTraitConverted =
         refObj.metaTraitValues[currentLanguage][refAdjustedTraitKey][metaTrait];
@@ -1454,6 +1206,9 @@ exports.filterBySelector_inner = (
     lemmaObjectArr.map((l) => l.id)
   );
 
+  //
+  // Get materials.
+  //
   let questionChunk;
   let questionSelectedLemmaObject;
   if (answerMode) {
@@ -1479,84 +1234,91 @@ exports.filterBySelector_inner = (
     }
   }
 
-  if (answerMode && questionChunk) {
-    if (questionSelectedLemmaObject) {
-      if (lfUtils.checkHyper(questionSelectedLemmaObject, [HY.HY])) {
-        let hypernymsAndMGNs = lemmaObjectArr.filter(
-          (l) =>
-            this.checkHyper(l, [HY.HY]) ||
-            ["_Genders", "_PersonalGenders"].includes(l.gender)
-          // || ["_Genders", "_PersonalGenders"].includes(l.semanticGender)
-        );
+  //
+  // Deal with hypernyms.
+  //
 
-        if (hypernymsAndMGNs.length) {
-          consol.logSpecial(
-            8,
-            `\netpz ${currentLanguage} ${
-              answerMode ? "answerMode" : "questionMode"
-            } Big override right at the start of filterBySelector_inner for stCh "${
-              structureChunk.chunkId
-            }" because Q chunk is hypernym so I will return hypernyms/MGNs for A chunks.`,
-            hypernymsAndMGNs.map((l) => l.id)
-          );
-          return hypernymsAndMGNs;
-        }
+  if (answerMode && questionChunk) {
+    //
+    // Return now with hypernyms and MGNs if qChunk is hypernym.
+    //
+    if (
+      questionSelectedLemmaObject &&
+      lfUtils.checkHyper(questionSelectedLemmaObject, [HY.HY])
+    ) {
+      let hypernymsAndMGNs = lemmaObjectArr.filter(
+        (l) =>
+          this.checkHyper(l, [HY.HY]) ||
+          ["_Genders", "_PersonalGenders"].includes(l.gender)
+        // || ["_Genders", "_PersonalGenders"].includes(l.semanticGender)
+      );
+
+      if (hypernymsAndMGNs.length) {
+        consol.logSpecial(
+          8,
+          `\netpz ${currentLanguage} ${
+            answerMode ? "answerMode" : "questionMode"
+          } Big override right at the start of filterBySelector_inner for stCh "${
+            structureChunk.chunkId
+          }" because Q chunk is hypernym so I will return hypernyms/MGNs for A chunks.`,
+          hypernymsAndMGNs.map((l) => l.id)
+        );
+        return hypernymsAndMGNs;
       }
     }
 
+    //
     // Garibaldi part 3
-    if (true) {
-      let checkMapForConsoleLogging = lemmaObjectArr
-        .map((l) => l.id)
-        .join(", ");
+    //
 
-      //section A
-      if (
-        answerMode &&
-        questionChunk.virilityDetail &&
-        ["males!", "male!"].includes(questionChunk.virilityDetail[0])
-      ) {
-        lemmaObjectArr = lemmaObjectArr.filter(
-          (l) => !lfUtils.checkHyper(l, [HY.HY])
-        );
-      }
+    // section A
+    let checkString1 = lemmaObjectArr.map((l) => l.id).join(", ");
+    if (
+      answerMode &&
+      questionChunk.virilityDetail &&
+      ["males!", "male!"].includes(questionChunk.virilityDetail[0])
+    ) {
+      lemmaObjectArr = lemmaObjectArr.filter(
+        (l) => !lfUtils.checkHyper(l, [HY.HY])
+      );
+    }
 
-      // section B
-      if (
-        answerMode &&
-        questionChunk.virilityDetail &&
-        questionChunk.virilityDetail[0] === "mixed"
-      ) {
-        lemmaObjectArr = lemmaObjectArr.filter(
-          (l) =>
-            lfUtils.checkHyper(l, [HY.HY, HY.VY]) || //Garibaldi could be a pain point, perhaps should only be hy here.
-            l.gender !==
-              refObj.malePersonsInThisLanguageHaveWhatGender[currentLanguage]
-        );
-      }
+    // section B
+    if (
+      answerMode &&
+      questionChunk.virilityDetail &&
+      questionChunk.virilityDetail[0] === "mixed"
+    ) {
+      lemmaObjectArr = lemmaObjectArr.filter(
+        (l) =>
+          lfUtils.checkHyper(l, [HY.HY, HY.VY]) || //Garibaldi could be a pain point, perhaps should only be HY.HY here.
+          l.gender !==
+            refObj.malePersonsInThisLanguageHaveWhatGender[currentLanguage]
+      );
+    }
 
-      let checkMapForConsoleLogging2 = lemmaObjectArr
-        .map((l) => l.id)
-        .join(", ");
-      if (checkMapForConsoleLogging !== checkMapForConsoleLogging2) {
-        consol.logSpecial(
-          8,
-          `sswl Adjusted lemmaObjectArr re virilityDetail "${questionChunk.virilityDetail}" so is now`,
-          lemmaObjectArr.map((l) => l.id)
-        );
-      }
-      if (!lemmaObjectArr.length) {
-        console.log(
-          "[1;31m " +
-            `sswm ${currentLanguage} ${structureChunk.chunkId} ${
-              answerMode ? "answerMode" : "questionMode"
-            } No lObjs found in filterBySelector_inner` +
-            "[0m"
-        );
-      }
+    let checkString2 = lemmaObjectArr.map((l) => l.id).join(", ");
+
+    if (checkString1 !== checkString2) {
+      consol.logSpecial(
+        8,
+        `sswl Adjusted lemmaObjectArr re virilityDetail "${questionChunk.virilityDetail}" so was [${checkString1}] but is now [${checkString2}].`
+      );
+    }
+    if (!lemmaObjectArr.length) {
+      console.log(
+        "[1;31m " +
+          `sswm ${currentLanguage} ${structureChunk.chunkId} ${
+            answerMode ? "answerMode" : "questionMode"
+          } No lObjs found in filterBySelector_inner` +
+          "[0m"
+      );
     }
   }
 
+  //
+  // Adjust in case of semanticGender.
+  //
   let requirementArray = structureChunk[traitKey] || [];
 
   if (traitKey === "gender" && structureChunk.semanticGender) {
@@ -1579,7 +1341,9 @@ exports.filterBySelector_inner = (
 
   consol.log("wdet filterBySelector_inner. requirementArray", requirementArray);
 
-  //And finally, do said filter.
+  //
+  // Finally, do the filter.
+  //
   if (requirementArray.length) {
     consol.logSpecial(
       8,
@@ -1601,18 +1365,22 @@ exports.filterBySelector_inner = (
         lfUtils.checkHyper(lObj, [HY.HY])
       ) {
         //Garibaldi part 2
-        consol.logSpecial(8, `mbtt Kicking out ${lObj.id}`);
+        consol.logSpecial(8, `mbtt Kicking out "${lObj.id}"`);
         return false;
       }
 
       let lObjSelectorValues = [lObj[traitKey]].slice(0);
 
-      //ADJUST VIRILITY OF LOBJ VALUES
+      //
+      // Adjust virility of lObj values.
+      //
+
       //Vito3: Does not change stCh.
       //Filtering lObjs by selector (eg "gender", "aspect").
       //Say lObj has gender "f", but reqArr has "nonvirile" - lObj wouldn't pass the filter, but it should.
       //So add virility values to temporary lObjSelectorValues variable that stands for selectors on the lObj.
       //Now lObj stand-in has genders "f" and "nonvirile" also, so passes filter.
+
       if (traitKey === "gender") {
         structureChunk.number.forEach((numberKey) => {
           let extraVirilityConvertedValues =
@@ -1672,9 +1440,7 @@ exports.filterBySelector_inner = (
                 `diof I am to translate this meta value "${lObjSelectorValue}" for "${currentLanguage}" traitKey "${traitKey}" but no such translation ref?`
               );
             }
-
             let translatedMetaValues = metaTraitValueRef[lObjSelectorValue];
-
             additional = [...additional, ...translatedMetaValues];
           }
         });
@@ -1965,16 +1731,18 @@ exports.traverseAndRecordInflections = (
   });
 };
 
-exports.checkMatchHyper = (s, l) => {
+exports.checkMatchHyper = (stCh, lObj) => {
   Object.values(HY).forEach((h) => {
-    if (lfUtils.checkHyper(l, [h])) {
-      if (s.hypernymy && !s.hypernymy[0] === h) {
-        consol.throw(`cmha mismatch lObj has "${h}" but not stCh.`);
+    if (lfUtils.checkHyper(lObj, [h])) {
+      if (stCh.hypernymy && !stCh.hypernymy[0] === h) {
+        consol.throw(`cmha lObj ${lObj.id} has "${h}" but stCh doesn't.`);
       }
     }
-    if (s.hypernymy && s.hypernymy[0] === h) {
-      if (!lfUtils.checkHyper(l, [h])) {
-        consol.throw(`cmhb mismatch stCh has "${h}" but not lObj.`);
+    if (stCh.hypernymy && stCh.hypernymy[0] === h) {
+      if (!lfUtils.checkHyper(lObj, [h])) {
+        consol.throw(
+          `cmhb stCh "${stCh.chunkId}" has "${h}" but lObj doesn't.`
+        );
       }
     }
   });
@@ -2022,7 +1790,7 @@ exports.filterByDemandedLObj = (stCh, lObjs) => {
     }
 
     /**
-     * I'm surprised that ahps3 condition is not needed.
+     * I'm surprised this condition is not needed.
      * I thought "osoba"/"ludzie" synonyms would cause Mungojerry issue too.
      * And wouldn't be filtered out by ahps2 because are not same gender ("osoba" f, "ludzie" m1).
      */
@@ -2053,7 +1821,7 @@ exports.filterByDemandedLObj = (stCh, lObjs) => {
     ) {
       consol.logSpecial(
         8,
-        `ahps5 "${l.id}" NO due to one's a hypernym and the other's not.`
+        `ahps5 "${l.id}" NO as one's a hypernym and the other's not.`
       );
       return false;
     }
@@ -2066,4 +1834,216 @@ exports.filterByDemandedLObj = (stCh, lObjs) => {
 
     consol.logSpecial(8, `ahps7 "${l.id}" NO because no condition matched.`);
   });
+};
+
+exports.updateStChSemanticGenderAndVirilityDetail = (
+  selectedLemmaObject,
+  structureChunk,
+  currentLanguage,
+  isCounterfax,
+  doneSelectors,
+  outputUnit,
+  isSecondRound
+) => {
+  if (lfUtils.checkHyper(selectedLemmaObject, [HY.VY])) {
+    if (structureChunk.number.length !== 1) {
+      consol.throw(`xtal`);
+    }
+
+    let vRef = {
+      singular: ["male", "male!"],
+      plural: ["mixed", "males", "males!"],
+    };
+
+    Object.keys(vRef).forEach((numberTraitValue) => {
+      let virilityDetails = vRef[numberTraitValue];
+
+      if (
+        structureChunk.number[0] === numberTraitValue &&
+        (!structureChunk.virilityDetail ||
+          !structureChunk.virilityDetail.length)
+      ) {
+        structureChunk.virilityDetail = [uUtils.selectRandom(virilityDetails)];
+        consol.logSpecial(
+          8,
+          `ykkt ${currentLanguage} "${structureChunk.chunkId}" Setting virilityDetail to "${structureChunk.virilityDetail}"`
+        );
+      }
+    });
+  }
+
+  if (selectedLemmaObject.semanticGender) {
+    if (isCounterfax && structureChunk.semanticGender) {
+      consol.logSpecial(
+        8,
+        "thaa------isCounterfax so leaving stCh semanticGender as",
+        structureChunk.semanticGender
+      );
+      doneSelectors.push("semanticGender");
+    } else {
+      consol.logSpecial(
+        8,
+        `thaa`,
+        `structureChunk.semanticGender`,
+        structureChunk.semanticGender,
+        `structureChunk.gender`,
+        structureChunk.gender,
+        `htaa selectedLemmaObject.semanticGender`,
+        selectedLemmaObject.semanticGender
+      );
+
+      let numberValue = outputUnit.drillPath.find(
+        (drillPathUnit) => drillPathUnit[0] === "number"
+      )[1];
+
+      let numberAdjustedGenderValues = [];
+
+      let virilityRefByNumber =
+        refObj.virilityConversionRef[currentLanguage][numberValue];
+
+      const _accumulateGenderValues = (
+        stCh,
+        genderTraitKey,
+        numberAdjustedGenderValues
+      ) => {
+        if (!stCh[genderTraitKey] || !stCh[genderTraitKey].length) {
+          consol.logSpecial(8, "hsay", genderTraitKey);
+          return numberAdjustedGenderValues;
+        }
+
+        stCh[genderTraitKey].forEach((genderValue) => {
+          let additionalNumberAdjustedGenderValues =
+            virilityRefByNumber[genderValue];
+
+          numberAdjustedGenderValues = [
+            ...numberAdjustedGenderValues,
+            ...additionalNumberAdjustedGenderValues,
+          ];
+
+          if (
+            numberAdjustedGenderValues.includes(undefined) ||
+            additionalNumberAdjustedGenderValues.includes(undefined)
+          ) {
+            console.log({
+              numberAdjustedGenderValues,
+              additionalNumberAdjustedGenderValues,
+            });
+            consol.throw(`syep`);
+          }
+        });
+
+        return numberAdjustedGenderValues;
+      };
+
+      let isNounPerson =
+        gpUtils.getWordtypeShorthandStCh(structureChunk) === "npe";
+
+      if (
+        (isNounPerson && !isSecondRound) ||
+        (isNounPerson && !structureChunk.semanticGender) ||
+        !isNounPerson
+      ) {
+        numberAdjustedGenderValues = _accumulateGenderValues(
+          structureChunk,
+          "gender",
+          numberAdjustedGenderValues
+        );
+      }
+
+      numberAdjustedGenderValues = _accumulateGenderValues(
+        structureChunk,
+        "semanticGender",
+        numberAdjustedGenderValues
+      );
+
+      consol.logSpecial(
+        8,
+        structureChunk.chunkId,
+        `htab numberAdjustedGenderValues`,
+        numberAdjustedGenderValues
+      );
+
+      if (!numberAdjustedGenderValues.length) {
+        throw "nmol !numberAdjustedGenderValues.length in updateStChByAndTagsAndSelectors";
+      }
+
+      if (this.checkHyper(selectedLemmaObject, [HY.VY])) {
+        //Garibaldi adjustment, Neon approach, vypernyms issue 205
+        numberAdjustedGenderValues = allLangUtils.standardiseGenders(
+          currentLanguage,
+          numberAdjustedGenderValues,
+          "_VypernymGenders"
+        );
+      }
+
+      consol.logSpecial(
+        8,
+        `htad numberAdjustedGenderValues after nixing "f" if vypernym.`,
+        numberAdjustedGenderValues
+      );
+
+      numberAdjustedGenderValues = Array.from(
+        new Set(
+          allLangUtils.enforceIsPerson(null, false, numberAdjustedGenderValues)
+        )
+      );
+
+      consol.logSpecial(
+        8,
+        `htae numberAdjustedGenderValues after enforcing isPerson.`,
+        numberAdjustedGenderValues
+      );
+
+      numberAdjustedGenderValues = allLangUtils.standardiseGenders(
+        currentLanguage,
+        numberAdjustedGenderValues
+      );
+
+      consol.logSpecial(
+        8,
+        `htaf numberAdjustedGenderValues after nixing "m" for Polish (should be "m1").`,
+        numberAdjustedGenderValues
+      );
+
+      if (isSecondRound && numberAdjustedGenderValues.length > 1) {
+        let oneValue = uUtils.selectRandom(numberAdjustedGenderValues);
+        console.log(
+          `htah Expected length 1 for "${
+            outputUnit.selectedLemmaObject.lemma
+          }" but got: ${
+            numberAdjustedGenderValues.length
+          } [${numberAdjustedGenderValues.join(
+            ", "
+          )}] so have randomly selected "${oneValue}".`
+        );
+
+        numberAdjustedGenderValues = [oneValue];
+      }
+
+      if (!numberAdjustedGenderValues.length) {
+        consol.throw("apbh");
+      }
+
+      numberAdjustedGenderValues = [
+        uUtils.selectRandom(numberAdjustedGenderValues),
+      ];
+
+      consol.logSpecial(
+        8,
+        `htai numberAdjustedGenderValues after SELECTRANDOM`,
+        numberAdjustedGenderValues
+      );
+
+      if (structureChunk.semanticGender) {
+        consol.logSpecial(
+          8,
+          "[1;36m " +
+            `htaj ${currentLanguage} ${structureChunk.chunkId}, stCh.semanticGender was ${structureChunk.semanticGender} is now ${numberAdjustedGenderValues}.` +
+            "[0m"
+        );
+      }
+      structureChunk.semanticGender = numberAdjustedGenderValues; //Set semanticGender in Question.
+      doneSelectors.push("semanticGender");
+    }
+  }
 };
