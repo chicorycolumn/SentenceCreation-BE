@@ -1118,9 +1118,7 @@ exports.padOutRequirementArrWithMetaTraitValuesIfNecessary = (
 ) => {
   let requirementArr = requirementArrs[traitKey] || [];
 
-  let refAdjustedTraitKey = ["semanticGender"].includes(traitKey)
-    ? "gender"
-    : traitKey;
+  let refAdjustedTraitKey = traitKey === "semanticGender" ? "gender" : traitKey;
 
   let metaTraitValueRef =
     refObj.metaTraitValues[currentLanguage][refAdjustedTraitKey];
@@ -1332,9 +1330,7 @@ exports.filterBySelector_inner = (
     }
   }
 
-  let refAdjustedTraitKey = ["semanticGender"].includes(traitKey)
-    ? "gender"
-    : traitKey;
+  let refAdjustedTraitKey = traitKey === "semanticGender" ? "gender" : traitKey;
 
   let metaTraitValueRef =
     refObj.metaTraitValues[currentLanguage][refAdjustedTraitKey];

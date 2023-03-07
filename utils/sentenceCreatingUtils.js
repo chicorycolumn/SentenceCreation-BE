@@ -1459,17 +1459,19 @@ exports.conformAnswerStructureToQuestionStructure = (
     //       nexusUtils.getPapers(answerLemmaObject)
     //     )
     // );
-    /**I think this clause is not needed.
-     * It's here to prevent mistaken translating, eg
-     * qLobj is "wysoki" with tags "personaldescription"
-     * so we only want that to translate here to A "tall", not "high".
-     * So we were thinking you enforce here that translated must have same tags
-     * so "tall" has the same tags, whereas "high" doesn't have "personaldescription" tag.
-     * But... this shouldn't be an issue,
-     * because "tall" and "high" are two separate lobjs, and more importantly,
-     * "wysoki" and "wysoki" are two separate lobjs. They have different tags, Freq, translations.
+    /**
+     * Above clause was to prevent mistranslation, eg if qlobj "wysoki" with tags "personaldescription"
+     * we'd only want that to translate to "tall", not "high".
+     *
+     * So we were thinking to enforce here that translated must have same tags
+     * so "tall" has the same tags, but "high" doesn't have "personaldescription" tag.
+     *
+     * But... this shouldn't be an issue, because "tall" and "high" are two separate lobjs,
+     * and more importantly "wysoki" and "wysoki" are two separate lobjs with different tags, freq, translations.
+     *
      * The only thing they have in common is their lemma and their inflections obj.
      * They are two different lobjs, with different ids.
+     *
      * So "wysoki dziewczyna" would not translate to "high woman",
      * because "wysoki" in this sentence is the lobj with id "pol-adj-400-wysoki(person)"
      * which only appears in the nexuslobj with "eng-tall",
@@ -1478,10 +1480,7 @@ exports.conformAnswerStructureToQuestionStructure = (
      *
      * Are there cases where this would be false, though?
      * Yes. "dziecko" is a translation of "child" and "baby", but those two could conceivably have different tags.
-     * Sure, they're be mostly the same "concrete","person"
-     * but "baby" might have the tag "childbirth","medical" whereas "child" doesn't.
-     *
-     * So yes, I think to nix this clause.
+     * They'd be mostly the same ["concrete","person"] but "baby" might have ["childbirth","medical"] which "child" doesn't.
      */
 
     if (matchesLengthSnapshot && !matchingAnswerLemmaObjects.length) {
@@ -1537,30 +1536,6 @@ exports.conformAnswerStructureToQuestionStructure = (
         answerLanguage
       );
     }
-
-    // scUtils.enforceMaxLObjStems(matchingAnswerLemmaObjects, 1);
-    // let answerStructureChunkGenderCopy =
-    //   answerStructureChunk.gender && answerStructureChunk.gender.slice();
-    // let matchingAnswerLemmaObjectsCopy = matchingAnswerLemmaObjects.map(
-    //   (l) => l.id
-    // );
-
-    // if (
-    //   matchingAnswerLemmaObjects.some((l) => l.gender === "_VypernymGenders")
-    // ) {
-    //   let allLObjsForThisIdStem = nexusUtils.getTraductions(
-    //     matchingAnswerLemmaObjects[0],
-    //     answerLanguage,
-    //     true,
-    //     true
-    //   );
-    //   let nonFeminineLObjs = allLObjsForThisIdStem.filter(
-    //     (l) => l.gender !== "f"
-    //   );
-    //   answerStructureChunk.d emandedIds = nonFeminineLObjs.map(
-    //     (lObj) => lObj.id
-    //   );
-    // }
 
     refObj.lemmaObjectTraitKeys[
       answerLanguage
@@ -1830,8 +1805,7 @@ exports.inheritFromHeadToDependentChunk = (
   // Hypernymy Fine Tuning 1 (HFT1)
   //Treat gender & semanticGender separately, in special cases.
 
-  //NOTE: Originally the cond below was only [HY.HY], but I believe it should include HY.VY.
-  //But if errors arise re vypernyms, try reverting this.
+  //NOTE: Cond below was originally [HY.HY] but I thought should include HY.VY. But if vypernym errors arise, try reverting.
   if (
     lfUtils.checkHyper(headSelectedLemmaObject, [HY.HY, HY.VY]) &&
     inheritableInflectionKeys.includes("gender")
@@ -1891,13 +1865,9 @@ exports.inheritFromHeadToDependentChunk = (
       }
     }
 
-    /** HFT1b
-     * If depChunk is npe (and headChunk is hypernym).
-     *
-     * For a sentence like "My parent(head) is a woman(dep)."
-     * don't transfer "rodzic" gender m1 to "woman"
-     * instead just "rodzic" semanticGender f to "woman"
-     */
+    // HFT1b
+    // If depChunk is npe (and headChunk is hypernym) - "My parent(head) is a woman(dep)."
+    // don't transfer "rodzic" gender m1 to "woman", just semanticGender f.
     if (gpUtils.getWordtypeShorthandStCh(dependentChunk) === "npe") {
       dependentChunk.gender = headChunk.semanticGender.slice();
       dependentChunk.semanticGender = headChunk.semanticGender.slice();

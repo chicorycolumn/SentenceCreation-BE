@@ -1297,11 +1297,8 @@ exports.switchMetaTraitValueForAWorkableConvertedTraitValue = (
       "[0m"
   );
 
-  let refAdjustedInflectionCategory = ["semanticGender"].includes(
-    inflectionCategory
-  )
-    ? "gender"
-    : inflectionCategory;
+  let refAdjustedInflectionCategory =
+    inflectionCategory === "semanticGender" ? "gender" : inflectionCategory;
 
   let convertedMetaTraitValues = refObj.metaTraitValues[currentLanguage][
     refAdjustedInflectionCategory
