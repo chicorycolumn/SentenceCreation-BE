@@ -2097,6 +2097,7 @@ describe("/api", function () {
           {
             ENG: "Our parent gave us her book.",
             POL: ["Nasz rodzic dał nam jego książkę."],
+            extra: { FYIPs: ["FYIP101-A-ENG-POL"] },
           },
           {
             ENG: "Our parents gave us their book.",
