@@ -1068,11 +1068,11 @@ exports.coverBothGendersForPossessivesOfHypernyms = (
     gpUtils.getWordtypeStCh(structureChunk) === "pronombre" &&
     structureChunk.agreeWith
   ) {
-    if (!structureChunk.gcase) {
-      consol.throw(`gibp`);
-    }
-    if (structureChunk.gcase.length !== 1) {
-      consol.throw(`gibq`);
+    if (!structureChunk.gcase || structureChunk.gcase.length !== 1) {
+      console.log(">>", structureChunk.gcase);
+      consol.throw(
+        `gibp structureChunk.gcase not have exactly 1 member, see >> above.`
+      );
     }
 
     if (
@@ -1091,10 +1091,8 @@ exports.coverBothGendersForPossessivesOfHypernyms = (
         headOutputUnit &&
         lfUtils.checkHyper(headOutputUnit.selectedLemmaObject, [
           HY.HY,
-          HY.VY,
+          HY.VY, // Originally cond only [HY.HY]. If errors arise re vypernyms, try deleting line HY.VY here.
         ]) &&
-        //NOTE: Originally the cond above was only [HY.HY], but I believe it should include HY.VY.
-        //But if errors arise re vypernyms, try reverting this.
         firstNumberDrillPathUnit &&
         firstNumberDrillPathUnit[1] === "singular"
       ) {
@@ -1214,10 +1212,11 @@ exports.selectWordVersions = (
   //STEP 0 part B: Transfer annos between chunks if asked to.
   orderedOutputArr.forEach((depOutputUnit, outputUnitIndex) => {
     if (depOutputUnit.structureChunk.giveMeTheseClarifiersOfMyHeadChunk) {
-      let headOutputUnit = orderedOutputArr.find(
-        (ou) =>
-          ou.structureChunk.chunkId === depOutputUnit.structureChunk.agreeWith
+      let headOutputUnit = otUtils.getHeadOutputUnit(
+        depOutputUnit.structureChunk,
+        orderedOutputArr
       );
+
       if (!headOutputUnit) {
         consol.throw(
           `wihb Tried to transfer annos but no headChunk for ${depOutputUnit.structureChunk.chunkId}'s agreeWith: "${depOutputUnit.structureChunk.agreeWith}".`
@@ -1435,8 +1434,8 @@ exports.conformAnswerStructureToQuestionStructure = (
 
     let source = words[gpUtils.getWordtypeShorthandStCh(answerStructureChunk)];
     source = source.filter(
-      //Resolve issue of multipleWordtype allohoms.
       (lObj) =>
+        //Resolve issue of multipleWordtype allohoms.
         gpUtils.getWordtypeLObj(lObj) ===
         gpUtils.getWordtypeStCh(questionStructureChunk)
     );
@@ -1821,8 +1820,8 @@ exports.inheritFromHeadToDependentChunk = (
      * So altogether:   "SHE was a parent, I see HER and HER car."   translates to   "BYŁA rodzicem, widze GO i JEGO auto."
      */
     if (
-      !gpUtils.traitValueIsMeta(headSelectedLemmaObject.gender) &&
-      gpUtils.getWordtypeShorthandStCh(dependentChunk) === "pro"
+      gpUtils.getWordtypeShorthandStCh(dependentChunk) === "pro" &&
+      !gpUtils.traitValueIsMeta(headSelectedLemmaObject.gender) // ie This is a gendered language.
     ) {
       if (
         dependentChunk.specificIds.some(
@@ -1840,8 +1839,7 @@ exports.inheritFromHeadToDependentChunk = (
         dependentChunk.gender = headChunk.gender.slice();
 
         doneTraitKeys.push("gender", "semanticGender");
-      }
-      if (
+      } else if (
         dependentChunk.specificIds.some((id) => id.split("-")[2] === "PERSONAL")
       ) {
         if (dependentChunk.specificIds.length > 1) {
@@ -1863,12 +1861,10 @@ exports.inheritFromHeadToDependentChunk = (
 
         doneTraitKeys.push("gender", "semanticGender");
       }
-    }
-
-    // HFT1b
-    // If depChunk is npe (and headChunk is hypernym) - "My parent(head) is a woman(dep)."
-    // don't transfer "rodzic" gender m1 to "woman", just semanticGender f.
-    if (gpUtils.getWordtypeShorthandStCh(dependentChunk) === "npe") {
+    } else if (gpUtils.getWordtypeShorthandStCh(dependentChunk) === "npe") {
+      // HFT1b
+      // If depChunk is npe (and headChunk is hypernym) - "My parent(head) is a woman(dep)."
+      // don't transfer "rodzic" gender m1 to "woman", just semanticGender f.
       dependentChunk.gender = headChunk.semanticGender.slice();
       dependentChunk.semanticGender = headChunk.semanticGender.slice();
 
