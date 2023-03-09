@@ -8,6 +8,7 @@ const refObj = require("./reference/referenceObjects.js");
 const refFxn = require("./reference/referenceFunctions.js");
 const palette = require("../models/palette.model.js");
 const allLangUtils = require("./allLangUtils.js");
+const { HY } = refObj;
 
 exports.explodeCounterfaxSituations = (sits) => {
   consol.logSpecial(8, "START explodeCounterfaxSituations");
@@ -208,7 +209,7 @@ exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
           )
         );
 
-        ["gender"].forEach((genderTraitKey) => {
+        ["gender", "semanticGender"].forEach((genderTraitKey) => {
           if (annoTraitKey === genderTraitKey) {
             let tempObj = {
               gender: counterfactualTraitValuesForThisTraitKey,
@@ -225,6 +226,14 @@ exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
               // which would mean we don't want to enforce isPerson ie removing "n" from gender counterfaxes.
             );
             counterfactualTraitValuesForThisTraitKey = tempObj.gender;
+
+            if (genderTraitKey === "semanticGender") {
+              counterfactualTraitValuesForThisTraitKey =
+                allLangUtils.standardiseGenders(
+                  questionLanguage,
+                  counterfactualTraitValuesForThisTraitKey
+                );
+            }
           }
         });
 
@@ -447,7 +456,27 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
             return;
           }
 
-          ["gender"].forEach((genderTraitKey) => {
+          ["semanticGender"].forEach((genderTraitKey) => {
+            //Garibaldi part 2
+            if (
+              [HY.VY].includes(stChToCounterfax.hypernymy) &&
+              assignment.traitKey === genderTraitKey &&
+              ["f", "nonvirile"].includes(assignment.traitValue)
+            ) {
+              consol.logSpecial(
+                3,
+                `kcap Dropping current counterfax sit: "${counterfactualSitSchematic.cfLabel}" ie not send to fetchPalette, 
+                as vypernym cannot have counterfaxed ${genderTraitKey} [${stChToCounterfax[genderTraitKey][0]}].`
+              );
+              shouldDrop = true;
+            }
+          });
+
+          if (shouldDrop) {
+            return;
+          }
+
+          ["gender", "semanticGender"].forEach((genderTraitKey) => {
             if (
               assignment.traitKey === genderTraitKey &&
               stChToCounterfax.number &&
@@ -492,6 +521,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         );
 
         allLangUtils.adjustVirilityOfStructureChunk(
+          //Decided not to put semanticGender loop into this fxn too.
           questionLanguage,
           stChToCounterfax,
           true,
@@ -576,6 +606,23 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
       counterfactualQuestionSentenceFormula.sentenceStructure.forEach(
         (stCh) => {
+          if (stCh.originalSitSelectedLObj) {
+            consol.throw(
+              "igtc Wasn't expecting originalSitSelectedLObj to be populated yet."
+            );
+          }
+          if (gpUtils.getWordtypeStCh(stCh) !== "fixed") {
+            let originalSitSelectedLObj = questionOutputArr.find(
+              (ou) => ou.structureChunk.chunkId === stCh.chunkId
+            ).selectedLemmaObject;
+
+            if (originalSitSelectedLObj) {
+              stCh.originalSitSelectedLObj = originalSitSelectedLObj;
+            } else {
+              consol.throw(`scdw No selectedLObj found for "${stCh.chunkId}"?`);
+            }
+          }
+
           delete stCh.annotations;
         }
       );
@@ -644,7 +691,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
   if (!allCounterfactualResults.length) {
     console.log("[1;31m " + "fbms allCounterfactualResults was empty." + "[0m");
-    consol.throw("fbms allCounterfactualResults was empty.");
+    // consol.throw("fbms allCounterfactualResults was empty.");
     return;
   }
 
@@ -677,6 +724,12 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       }
 
       let genderTraitKeys = ["gender"];
+      if (
+        gpUtils.getWordtypeShorthandStCh({ chunkId: chunkIdToExamine }) ===
+        "npe"
+      ) {
+        genderTraitKeys.push("semanticGender");
+      }
 
       genderTraitKeys.forEach((genderTraitKey) => {
         if (bool) {
@@ -686,7 +739,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         if (traitKey === genderTraitKey) {
           let virilityRefWithMetas = uUtils.combineTwoKeyValueObjectsCarefully(
             refObj.virilityConversionRef[questionLanguage].matches,
-            refObj.metaTraitValues[questionLanguage].gender
+            refObj.metaTraitValues[questionLanguage].gender // Yes, .gender is intentional.
           );
 
           bool = virilityRefWithMetas[traitValue1].includes(traitValue2);

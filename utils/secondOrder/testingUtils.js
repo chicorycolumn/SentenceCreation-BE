@@ -1178,6 +1178,10 @@ exports.testByDatatype = (ref, key, resBody, allowToBeAbsentOnRes) => {
 
   expect(resBody).to.include.key(key);
 
+  if (key === "FYIPs") {
+    expect(resBody[key].map((FYIP) => FYIP.label)).to.eql(ref[key]);
+    return;
+  }
   if (Array.isArray(ref[key])) {
     expect(resBody[key]).to.eql(ref[key]);
     return;
@@ -1194,4 +1198,4 @@ exports.testByDatatype = (ref, key, resBody, allowToBeAbsentOnRes) => {
   expect(resBody[key]).to.eql(ref[key]);
 };
 
-exports.dataToOnlyAppearWhenExplicitlyExpected = [];
+exports.dataToOnlyAppearWhenExplicitlyExpected = ["FYIPs"];

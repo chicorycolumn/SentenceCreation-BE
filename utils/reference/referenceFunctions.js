@@ -55,7 +55,7 @@ exports.isTraitCompatibleLObj = (trait, lObj, currentLanguage) => {
 };
 
 exports.duplicateTraitKeys = (obj) => {
-  let duplications = {};
+  let duplications = { gender: ["semanticGender"] };
 
   Object.keys(duplications).forEach((duplicatorSource) => {
     duplications[duplicatorSource].forEach((duplicatorTarget) => {
@@ -302,6 +302,10 @@ exports.giveAdjustedTraitValue = (
   traitKey,
   traitValue
 ) => {
+  if (traitKey === "semanticGender") {
+    traitKey = "gender";
+  }
+
   if (
     refObj.traitValueTranslation[questionLanguage] &&
     refObj.traitValueTranslation[questionLanguage][answerLanguage]

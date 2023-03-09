@@ -560,6 +560,36 @@ describe("/api", function () {
           ENG: "The woman has written.",
           POL: ["Kobieta napisała.", "Kobieta pisała."],
         },
+
+        {
+          ENG: ["The man wrote.", "The man had written."],
+          POL: ["Mężczyzna napisał."],
+        },
+        { ENG: "The man was writing.", POL: ["Mężczyzna pisał."] },
+        {
+          ENG: "The man has written.",
+          POL: ["Mężczyzna napisał.", "Mężczyzna pisał."],
+        },
+
+        {
+          ENG: ["The person wrote.", "The person had written."],
+          POL: ["Osoba napisała."],
+        },
+        { ENG: "The person was writing.", POL: ["Osoba pisała."] },
+        {
+          ENG: "The person has written.",
+          POL: ["Osoba napisała.", "Osoba pisała."],
+        },
+
+        {
+          ENG: ["The lady wrote.", "The lady had written."],
+          POL: ["Kobieta napisała."],
+        },
+        { ENG: "The lady was writing.", POL: ["Kobieta pisała."] },
+        {
+          ENG: "The lady has written.",
+          POL: ["Kobieta napisała.", "Kobieta pisała."],
+        },
       ];
       return runPaletteTest("ENG", "POL", "dummy47", ref, {});
     });
@@ -1167,6 +1197,44 @@ describe("/api", function () {
           ENG: ["Mother gave us mirrors.", "Mother gave mirrors to us."],
           POL: ["Matka dała nam zwierciadła.", "Matka dała nam lustra."],
         },
+        {
+          ENG: ["Parent gave me apples.", "Parent gave apples to me."],
+          POL: ["Rodzic dał mi jabłka.", "Rodzic dał mnie jabłka."],
+        },
+        {
+          ENG: ["Parent gave me books.", "Parent gave books to me."],
+          POL: ["Rodzic dał mi książki.", "Rodzic dał mnie książki."],
+        },
+        {
+          ENG: ["Parent gave me onions.", "Parent gave onions to me."],
+          POL: ["Rodzic dał mi cebule.", "Rodzic dał mnie cebule."],
+        },
+        {
+          ENG: ["Parent gave me mirrors.", "Parent gave mirrors to me."],
+          POL: [
+            "Rodzic dał mi zwierciadła.",
+            "Rodzic dał mi lustra.",
+
+            "Rodzic dał mnie zwierciadła.",
+            "Rodzic dał mnie lustra.",
+          ],
+        },
+        {
+          ENG: ["Parent gave us apples.", "Parent gave apples to us."],
+          POL: ["Rodzic dał nam jabłka."],
+        },
+        {
+          ENG: ["Parent gave us books.", "Parent gave books to us."],
+          POL: ["Rodzic dał nam książki."],
+        },
+        {
+          ENG: ["Parent gave us onions.", "Parent gave onions to us."],
+          POL: ["Rodzic dał nam cebule."],
+        },
+        {
+          ENG: ["Parent gave us mirrors.", "Parent gave mirrors to us."],
+          POL: ["Rodzic dał nam zwierciadła.", "Rodzic dał nam lustra."],
+        },
       ];
       return runPaletteTest(
         "ENG",
@@ -1354,6 +1422,94 @@ describe("/api", function () {
             "Mother has given mirrors to us.",
           ],
         },
+        {
+          POL: "Rodzic dał mi jabłka.",
+          ENG: [
+            "Parent gave me apples.",
+            "Parent had given me apples.",
+            "Parent has given me apples.",
+            "Parent gave apples to me.",
+            "Parent had given apples to me.",
+            "Parent has given apples to me.",
+          ],
+        },
+        {
+          POL: "Rodzic dał mi książki.",
+          ENG: [
+            "Parent gave me books.",
+            "Parent had given me books.",
+            "Parent has given me books.",
+            "Parent gave books to me.",
+            "Parent had given books to me.",
+            "Parent has given books to me.",
+          ],
+        },
+        {
+          POL: "Rodzic dał mi cebule.",
+          ENG: [
+            "Parent gave me onions.",
+            "Parent had given me onions.",
+            "Parent has given me onions.",
+            "Parent gave onions to me.",
+            "Parent had given onions to me.",
+            "Parent has given onions to me.",
+          ],
+        },
+        {
+          POL: ["Rodzic dał mi zwierciadła.", "Rodzic dał mi lustra."],
+          ENG: [
+            "Parent gave me mirrors.",
+            "Parent had given me mirrors.",
+            "Parent has given me mirrors.",
+            "Parent gave mirrors to me.",
+            "Parent had given mirrors to me.",
+            "Parent has given mirrors to me.",
+          ],
+        },
+        {
+          POL: "Rodzic dał nam jabłka.",
+          ENG: [
+            "Parent gave us apples.",
+            "Parent had given us apples.",
+            "Parent has given us apples.",
+            "Parent gave apples to us.",
+            "Parent had given apples to us.",
+            "Parent has given apples to us.",
+          ],
+        },
+        {
+          POL: "Rodzic dał nam książki.",
+          ENG: [
+            "Parent gave us books.",
+            "Parent had given us books.",
+            "Parent has given us books.",
+            "Parent gave books to us.",
+            "Parent had given books to us.",
+            "Parent has given books to us.",
+          ],
+        },
+        {
+          POL: "Rodzic dał nam cebule.",
+          ENG: [
+            "Parent gave us onions.",
+            "Parent had given us onions.",
+            "Parent has given us onions.",
+            "Parent gave onions to us.",
+            "Parent had given onions to us.",
+            "Parent has given onions to us.",
+          ],
+        },
+        {
+          POL: ["Rodzic dał nam zwierciadła.", "Rodzic dał nam lustra."],
+          ENG: [
+            "Parent gave us mirrors.",
+            "Parent had given us mirrors.",
+            "Parent has given us mirrors.",
+            "Parent gave mirrors to us.",
+            "Parent had given mirrors to us.",
+            "Parent has given mirrors to us.",
+          ],
+        },
       ];
       return runPaletteTest(
         "POL",
@@ -1493,6 +1649,70 @@ describe("/api", function () {
             "Mother has given us one mirror.",
           ],
         },
+        {
+          POL: "Rodzic dał mi jabłko.",
+          ENG: [
+            "Parent gave me one apple.",
+            "Parent had given me one apple.",
+            "Parent has given me one apple.",
+          ],
+        },
+        {
+          POL: "Rodzic dał mi książkę.",
+          ENG: [
+            "Parent gave me one book.",
+            "Parent had given me one book.",
+            "Parent has given me one book.",
+          ],
+        },
+        {
+          POL: "Rodzic dał mi cebulę.",
+          ENG: [
+            "Parent gave me one onion.",
+            "Parent had given me one onion.",
+            "Parent has given me one onion.",
+          ],
+        },
+        {
+          POL: ["Rodzic dał mi zwierciadło.", "Rodzic dał mi lustro."],
+          ENG: [
+            "Parent gave me one mirror.",
+            "Parent had given me one mirror.",
+            "Parent has given me one mirror.",
+          ],
+        },
+        {
+          POL: "Rodzic dał nam jabłko.",
+          ENG: [
+            "Parent gave us one apple.",
+            "Parent had given us one apple.",
+            "Parent has given us one apple.",
+          ],
+        },
+        {
+          POL: "Rodzic dał nam książkę.",
+          ENG: [
+            "Parent gave us one book.",
+            "Parent had given us one book.",
+            "Parent has given us one book.",
+          ],
+        },
+        {
+          POL: "Rodzic dał nam cebulę.",
+          ENG: [
+            "Parent gave us one onion.",
+            "Parent had given us one onion.",
+            "Parent has given us one onion.",
+          ],
+        },
+        {
+          POL: ["Rodzic dał nam zwierciadło.", "Rodzic dał nam lustro."],
+          ENG: [
+            "Parent gave us one mirror.",
+            "Parent had given us one mirror.",
+            "Parent has given us one mirror.",
+          ],
+        },
       ];
       return runPaletteTest(
         "POL",
@@ -1503,13 +1723,30 @@ describe("/api", function () {
       );
     });
     it("#pal13B-04a GET 200 YES: Engpol. Another more interesting sentence with Pronombres. Terminal object used.", () => {
+      // Was affected by Mungojerry issue, now resolved.
       let ref = [
         {
-          ENG: "Women saw you (singular).",
-          POL: ["Kobiety zobaczyły cię.", "Kobiety zobaczyły ciebie."],
+          ENG: "People saw you (singular).",
+          POL: ["Osoby zobaczyły cie/ciebie.", "Ludzie zobaczyli cie/ciebie."],
         },
         {
-          ENG: "Women saw you (plural).",
+          ENG: "People saw you (plural).",
+          POL: ["Osoby zobaczyły was.", "Ludzie zobaczyli was."],
+        },
+        {
+          ENG: "Men saw you (singular).",
+          POL: ["Mężczyźni zobaczyli cie/ciebie."],
+        },
+        {
+          ENG: "Men saw you (plural).",
+          POL: ["Mężczyźni zobaczyli was."],
+        },
+        {
+          ENG: ["Women/Ladies saw you (singular)."],
+          POL: ["Kobiety zobaczyły cie/ciebie."],
+        },
+        {
+          ENG: ["Women/Ladies saw you (plural)."],
           POL: ["Kobiety zobaczyły was."],
         },
       ];
@@ -1603,12 +1840,22 @@ describe("/api", function () {
     it("#pal14A-02a GET 200 YES: Engpol. My father gave me a book.", () => {
       let ref = [
         {
+          ENG: "My parent gave me a book.",
+          POL: ["Mój rodzic dał mi książkę.", "Mój rodzic dał mnie książkę."],
+          optionalExtra: { FYIPs: ["FYIP101-A-ENG-POL"] },
+        },
+        {
           ENG: "My father gave me a book.",
           POL: ["Mój ojciec dał mi książkę.", "Mój ojciec dał mnie książkę."],
         },
         {
           ENG: "My mother gave me a book.",
           POL: ["Moja matka dała mi książkę.", "Moja matka dała mnie książkę."],
+        },
+        {
+          ENG: "Our parent gave us a book.",
+          POL: ["Nasz rodzic dał nam książkę."],
+          optionalExtra: { FYIPs: ["FYIP101-A-ENG-POL"] },
         },
         {
           ENG: "Our father gave us a book.",
@@ -1630,6 +1877,14 @@ describe("/api", function () {
     it("#pal14A-02b GET 200 YES: Poleng. My father gave me a book.", () => {
       let ref = [
         {
+          POL: "Mój rodzic dał mi książkę.",
+          ENG: [
+            "My parent gave me a book.",
+            "My parent had given me a book.",
+            "My parent has given me a book.",
+          ],
+        },
+        {
           POL: "Mój ojciec dał mi książkę.",
           ENG: [
             "My father gave me a book.",
@@ -1643,6 +1898,14 @@ describe("/api", function () {
             "My mother gave me a book.",
             "My mother had given me a book.",
             "My mother has given me a book.",
+          ],
+        },
+        {
+          POL: "Nasz rodzic dał nam książkę.",
+          ENG: [
+            "Our parent gave us a book.",
+            "Our parent had given us a book.",
+            "Our parent has given us a book.",
           ],
         },
         {
@@ -1670,149 +1933,7 @@ describe("/api", function () {
         {}
       );
     });
-    it("#pal14A-03a GET 200 YES: POL only. My father gave me his book.", () => {
-      return runPaletteTest("POL", null, "113a my father gave me his book", [
-        "Mój ojciec dał mi jego książkę.",
-        "Moja matka dała mi jej książkę.",
-        "Nasz ojciec dał nam jego książkę.",
-        "Nasza matka dała nam jej książkę.",
-        "Moi ojcowie dali mi ich książkę.",
-        "Moje matki dały mi ich książkę.",
-        "Nasi ojcowie dali nam ich książkę.",
-        "Nasze matki dały nam ich książkę.",
-      ]);
-    });
-    it("#pal14A-03b GET 200 YES: ENG only. My father gave me his book.", () => {
-      return runPaletteTest("ENG", null, "113a my father gave me his book", [
-        "My father gave me his book.",
-        "My mother gave me her book.",
-        "Our father gave us his book.",
-        "Our mother gave us her book.",
-        "My fathers gave me their book.",
-        "My mothers gave me their book.",
-        "Our fathers gave us their book.",
-        "Our mothers gave us their book.",
-      ]);
-    });
-    it("#pal14A-03c GET 200 YES: Engpol. My father gave me his book.", () => {
-      let ref = [
-        {
-          ENG: "My father gave me his book.",
-          POL: ["Mój ojciec dał mi/mnie jego książkę."],
-        },
-        {
-          ENG: "My mother gave me her book.",
-          POL: ["Moja matka dała mi/mnie jej książkę."],
-        },
-        {
-          ENG: "My fathers gave me their book.",
-          POL: ["Moi ojcowie dali mi/mnie ich książkę."],
-        },
-        {
-          ENG: "My mothers gave me their book.",
-          POL: ["Moje matki dały mi/mnie ich książkę."],
-        },
-        {
-          ENG: "Our father gave us his book.",
-          POL: ["Nasz ojciec dał nam jego książkę."],
-        },
-        {
-          ENG: "Our mother gave us her book.",
-          POL: ["Nasza matka dała nam jej książkę."],
-        },
-        {
-          ENG: "Our fathers gave us their book.",
-          POL: ["Nasi ojcowie dali nam ich książkę."],
-        },
-        {
-          ENG: "Our mothers gave us their book.",
-          POL: ["Nasze matki dały nam ich książkę."],
-        },
-      ];
-      return runPaletteTest(
-        "ENG",
-        "POL",
-        "113a my father gave me his book",
-        ref,
-        {}
-      );
-    });
-    it("#pal14A-03d GET 200 YES: Poleng. My father gave me his book.", () => {
-      let ref = [
-        {
-          POL: "Mój ojciec dał mi jego książkę.",
-          ENG: [
-            "My father gave me his book.",
-            "My father had given me his book.",
-            "My father has given me his book.",
-          ],
-        },
-        {
-          POL: "Moja matka dała mi jej książkę.",
-          ENG: [
-            "My mother gave me her book.",
-            "My mother had given me her book.",
-            "My mother has given me her book.",
-          ],
-        },
-        {
-          POL: "Nasz ojciec dał nam jego książkę.",
-          ENG: [
-            "Our father gave us his book.",
-            "Our father had given us his book.",
-            "Our father has given us his book.",
-          ],
-        },
-        {
-          POL: "Nasza matka dała nam jej książkę.",
-          ENG: [
-            "Our mother gave us her book.",
-            "Our mother had given us her book.",
-            "Our mother has given us her book.",
-          ],
-        },
-        {
-          POL: "Moi ojcowie dali mi ich książkę.",
-          ENG: [
-            "My fathers gave me their book.",
-            "My fathers had given me their book.",
-            "My fathers have given me their book.",
-          ],
-        },
-        {
-          POL: "Moje matki dały mi ich książkę.",
-          ENG: [
-            "My mothers gave me their book.",
-            "My mothers had given me their book.",
-            "My mothers have given me their book.",
-          ],
-        },
-        {
-          POL: "Nasi ojcowie dali nam ich książkę.",
-          ENG: [
-            "Our fathers gave us their book.",
-            "Our fathers had given us their book.",
-            "Our fathers have given us their book.",
-          ],
-        },
-        {
-          POL: "Nasze matki dały nam ich książkę.",
-          ENG: [
-            "Our mothers gave us their book.",
-            "Our mothers had given us their book.",
-            "Our mothers have given us their book.",
-          ],
-        },
-      ];
-      return runPaletteTest(
-        "POL",
-        "ENG",
-        "113a my father gave me his book",
-        ref,
-        {}
-      );
-    });
-    it("#pal14A-04a GET 200 YES: Engpol. The doctor gave me her book. Gender annotation is added when there's no AOC, because pronombre is 'their' so doesn't reveal gender. However in singular, the pronombres 'her' and 'his' reveal the gender (are AOCs) so no gender annotation.", () => {
+    it("#pal14A-03a GET 200 YES: Engpol. The doctor gave me her book. Gender annotation is added when there's no AOC, because pronombre is 'their' so doesn't reveal gender. However in singular, the pronombres 'her' and 'his' reveal the gender (are AOCs) so no gender annotation.", () => {
       let ref = [
         {
           ENG: "The doctor gave me her book.",
@@ -1851,7 +1972,7 @@ describe("/api", function () {
         {}
       );
     });
-    it("#pal14A-04b GET 200 YES: Engpol. (not allowed to be unspecified, should be identical result to previous test). The doctor gave me her book.", () => {
+    it("#pal14A-03b GET 200 YES: Engpol. (not allowed to be unspecified, should be identical result to previous test). The doctor gave me her book.", () => {
       let ref = [
         {
           // ENG: "The doctor (female) gave me her book.",
@@ -1887,6 +2008,554 @@ describe("/api", function () {
       return runPaletteTest("ENG", "POL", "114 doctor gave me her book", ref, {
         pleaseDontSpecify: true,
       });
+    });
+  });
+
+  describe("/palette - Stage 14B: Possessive pronombres re Hypernymy.", () => {
+    it("#pal14B-01a GET 200 YES: POL only. My father gave me his book.", () => {
+      return runPaletteTest("POL", null, "113a my father gave me his book", [
+        "Mój ojciec dał mi jego książkę.",
+        "Nasz ojciec dał nam jego książkę.",
+        "Moi ojcowie dali mi ich książkę.",
+        "Nasi ojcowie dali nam ich książkę.",
+
+        "Mój rodzic dał mi jego książkę.",
+        // "Rodzic dał mi JEJ książkę.". absent because even when parent is a woman,
+        // the sentence is still "Rodzic dał mi JEGO książkę."
+        "Nasz rodzic dał nam jego książkę.",
+        "Moi rodzice dali mi ich książkę.",
+        "Nasi rodzice dali nam ich książkę.",
+
+        "Moja matka dała mi jej książkę.",
+        "Nasza matka dała nam jej książkę.",
+        "Moje matki dały mi ich książkę.",
+        "Nasze matki dały nam ich książkę.",
+      ]);
+    });
+    it("#pal14B-01b GET 200 YES: ENG only. My father gave me his book.", () => {
+      return runPaletteTest("ENG", null, "113a my father gave me his book", [
+        "My father gave me his book.",
+        "Our father gave us his book.",
+        "My fathers gave me their book.",
+        "Our fathers gave us their book.",
+
+        "My parent gave me his book.",
+        "Our parent gave us his book.",
+        "My parent gave me her book.",
+        "Our parent gave us her book.",
+        "My parents gave me their book.",
+        "Our parents gave us their book.",
+
+        "My mother gave me her book.",
+        "Our mother gave us her book.",
+        "My mothers gave me their book.",
+        "Our mothers gave us their book.",
+      ]);
+    });
+    it("#pal14B-01c GET 200 YES: Engpol. My father gave me his book.", () => {
+      return runPaletteTest(
+        "ENG",
+        "POL",
+        "113a my father gave me his book",
+        [
+          {
+            ENG: "My parent gave me his book.",
+            POL: ["Mój rodzic dał mi/mnie jego książkę."],
+          },
+          {
+            ENG: "My parent gave me her book.",
+            POL: [
+              "Mój rodzic dał mi/mnie jego książkę.", // I know this looks weird but it is correct. See Issue 205 in Hypernymy documentation.
+            ],
+            extra: { FYIPs: ["FYIP101-A-ENG-POL"] },
+          },
+          {
+            ENG: "My parents gave me their book.",
+            POL: ["Moi rodzice dali mi/mnie ich książkę."],
+          },
+          {
+            ENG: "My father gave me his book.",
+            POL: ["Mój ojciec dał mi/mnie jego książkę."],
+          },
+          {
+            ENG: "My fathers gave me their book.",
+            POL: ["Moi ojcowie dali mi/mnie ich książkę."],
+          },
+          {
+            ENG: "My mother gave me her book.",
+            POL: ["Moja matka dała mi/mnie jej książkę."],
+          },
+          {
+            ENG: "My mothers gave me their book.",
+            POL: ["Moje matki dały mi/mnie ich książkę."],
+          },
+          //////////////
+          {
+            ENG: "Our parent gave us his book.",
+            POL: ["Nasz rodzic dał nam jego książkę."],
+          },
+          {
+            ENG: "Our parent gave us her book.",
+            POL: ["Nasz rodzic dał nam jego książkę."],
+            extra: { FYIPs: ["FYIP101-A-ENG-POL"] },
+          },
+          {
+            ENG: "Our parents gave us their book.",
+            POL: ["Nasi rodzice dali nam ich książkę."],
+          },
+          {
+            ENG: "Our father gave us his book.",
+            POL: ["Nasz ojciec dał nam jego książkę."],
+          },
+          {
+            ENG: "Our fathers gave us their book.",
+            POL: ["Nasi ojcowie dali nam ich książkę."],
+          },
+          {
+            ENG: "Our mother gave us her book.",
+            POL: ["Nasza matka dała nam jej książkę."],
+          },
+          {
+            ENG: "Our mothers gave us their book.",
+            POL: ["Nasze matki dały nam ich książkę."],
+          },
+        ],
+        {}
+      );
+    });
+    it("#pal14B-01d GET 200 YES: Poleng. My father gave me his book.", () => {
+      return runPaletteTest(
+        "POL",
+        "ENG",
+        "113a my father gave me his book",
+        [
+          {
+            POL: "Mój rodzic dał mi jego książkę.",
+            ENG: [
+              "My parent gave me his book.",
+              "My parent had given me his book.",
+              "My parent has given me his book.",
+
+              "My parent gave me her book.",
+              "My parent had given me her book.",
+              "My parent has given me her book.",
+            ],
+            optionalExtra: { FYIPs: ["FYIP101-A-POL-ENG"] },
+          },
+          {
+            POL: "Nasz rodzic dał nam jego książkę.",
+            ENG: [
+              "Our parent gave us his book.",
+              "Our parent had given us his book.",
+              "Our parent has given us his book.",
+
+              "Our parent gave us her book.",
+              "Our parent had given us her book.",
+              "Our parent has given us her book.",
+            ],
+            optionalExtra: { FYIPs: ["FYIP101-A-POL-ENG"] },
+          },
+          {
+            POL: "Moi rodzice dali mi ich książkę.",
+            ENG: [
+              "My parents gave me their book.",
+              "My parents had given me their book.",
+              "My parents have given me their book.",
+            ],
+          },
+          {
+            POL: "Nasi rodzice dali nam ich książkę.",
+            ENG: [
+              "Our parents gave us their book.",
+              "Our parents had given us their book.",
+              "Our parents have given us their book.",
+            ],
+          },
+          {
+            POL: "Mój ojciec dał mi jego książkę.",
+            ENG: [
+              "My father gave me his book.",
+              "My father had given me his book.",
+              "My father has given me his book.",
+            ],
+          },
+          {
+            POL: "Nasz ojciec dał nam jego książkę.",
+            ENG: [
+              "Our father gave us his book.",
+              "Our father had given us his book.",
+              "Our father has given us his book.",
+            ],
+          },
+          {
+            POL: "Moi ojcowie dali mi ich książkę.",
+            ENG: [
+              "My fathers gave me their book.",
+              "My fathers had given me their book.",
+              "My fathers have given me their book.",
+            ],
+          },
+          {
+            POL: "Nasi ojcowie dali nam ich książkę.",
+            ENG: [
+              "Our fathers gave us their book.",
+              "Our fathers had given us their book.",
+              "Our fathers have given us their book.",
+            ],
+          },
+          {
+            POL: "Moja matka dała mi jej książkę.",
+            ENG: [
+              "My mother gave me her book.",
+              "My mother had given me her book.",
+              "My mother has given me her book.",
+            ],
+          },
+          {
+            POL: "Nasza matka dała nam jej książkę.",
+            ENG: [
+              "Our mother gave us her book.",
+              "Our mother had given us her book.",
+              "Our mother has given us her book.",
+            ],
+          },
+          {
+            POL: "Moje matki dały mi ich książkę.",
+            ENG: [
+              "My mothers gave me their book.",
+              "My mothers had given me their book.",
+              "My mothers have given me their book.",
+            ],
+          },
+          {
+            POL: "Nasze matki dały nam ich książkę.",
+            ENG: [
+              "Our mothers gave us their book.",
+              "Our mothers had given us their book.",
+              "Our mothers have given us their book.",
+            ],
+          },
+        ],
+        {}
+      );
+    });
+    it("#pal14B-02a GET 200 YES: POL only. My boy gave me his book.", () => {
+      return runPaletteTest("POL", null, "113b my child gave me his book", [
+        "Mój chłopiec dał mi jego książkę.",
+        "Nasz chłopiec dał nam jego książkę.",
+        "Moi chłopcy dali mi ich książkę.",
+        "Nasi chłopcy dali nam ich książkę.",
+
+        "Moje dziecko dało mi jego książkę.",
+        // "Rodzic dał mi JEJ książkę.". absent because even when child is a woman,
+        // the sentence is still "Rodzic dał mi JEGO książkę."
+        "Nasze dziecko dało nam jego książkę.",
+        "Moje dzieci dały mi ich książkę.",
+        "Nasze dzieci dały nam ich książkę.",
+
+        "Moja dziewczyna dała mi jej książkę.",
+        "Nasza dziewczyna dała nam jej książkę.",
+        "Moje dziewczyny dały mi ich książkę.",
+        "Nasze dziewczyny dały nam ich książkę.",
+      ]);
+    });
+    it("#pal14B-02b GET 200 YES: ENG only. My boy gave me his book.", () => {
+      return runPaletteTest("ENG", null, "113b my child gave me his book", [
+        "My boy gave me his book.",
+        "Our boy gave us his book.",
+        "My boys gave me their book.",
+        "Our boys gave us their book.",
+
+        "My child gave me his book.",
+        "Our child gave us his book.",
+        "My child gave me her book.",
+        "Our child gave us her book.",
+        "My children gave me their book.",
+        "Our children gave us their book.",
+
+        "My girl gave me her book.",
+        "Our girl gave us her book.",
+        "My girls gave me their book.",
+        "Our girls gave us their book.",
+      ]);
+    });
+    it("#pal14B-02c GET 200 YES: Engpol. My boy gave me his book.", () => {
+      return runPaletteTest(
+        "ENG",
+        "POL",
+        "113b my child gave me his book",
+        [
+          {
+            ENG: "My child gave me his book.",
+            POL: [
+              "Moje dziecko dało mi jego książkę.",
+              "Moje dziecko dało mnie jego książkę.",
+            ],
+          },
+          {
+            ENG: "My child gave me her book.",
+            POL: [
+              "Moje dziecko dało mi jego książkę.", // I know this looks weird but it is correct. See Issue 205 in Hypernymy documentation.
+              "Moje dziecko dało mnie jego książkę.",
+            ],
+            extra: { FYIPs: ["FYIP101-A-ENG-POL"] },
+          },
+          {
+            ENG: "My children gave me their book.",
+            POL: [
+              "Moje dzieci dały mi ich książkę.",
+              "Moje dzieci dały mnie ich książkę.",
+            ],
+          },
+          {
+            ENG: "My boy gave me his book.",
+            POL: [
+              "Mój chłopiec dał mi jego książkę.",
+              "Mój chłopiec dał mnie jego książkę.",
+            ],
+          },
+          {
+            ENG: "My boys gave me their book.",
+            POL: [
+              "Moi chłopcy dali mi ich książkę.",
+              "Moi chłopcy dali mnie ich książkę.",
+            ],
+          },
+          {
+            ENG: "My girl gave me her book.",
+            POL: [
+              "Moja dziewczyna dała mi jej książkę.",
+              "Moja dziewczyna dała mnie jej książkę.",
+            ],
+          },
+          {
+            ENG: "My girls gave me their book.",
+            POL: [
+              "Moje dziewczyny dały mi ich książkę.",
+              "Moje dziewczyny dały mnie ich książkę.",
+            ],
+          },
+          //////////////
+          {
+            ENG: "Our child gave us his book.",
+            POL: ["Nasze dziecko dało nam jego książkę."],
+          },
+          {
+            ENG: "Our child gave us her book.",
+            POL: ["Nasze dziecko dało nam jego książkę."],
+            extra: { FYIPs: ["FYIP101-A-ENG-POL"] },
+          },
+          {
+            ENG: "Our children gave us their book.",
+            POL: ["Nasze dzieci dały nam ich książkę."],
+          },
+          {
+            ENG: "Our boy gave us his book.",
+            POL: ["Nasz chłopiec dał nam jego książkę."],
+          },
+          {
+            ENG: "Our boys gave us their book.",
+            POL: ["Nasi chłopcy dali nam ich książkę."],
+          },
+          {
+            ENG: "Our girl gave us her book.",
+            POL: ["Nasza dziewczyna dała nam jej książkę."],
+          },
+          {
+            ENG: "Our girls gave us their book.",
+            POL: ["Nasze dziewczyny dały nam ich książkę."],
+          },
+        ],
+        {}
+      );
+    });
+    it("#pal14B-02d GET 200 YES: Poleng. My boy gave me his book.", () => {
+      return runPaletteTest(
+        "POL",
+        "ENG",
+        "113b my child gave me his book",
+        [
+          {
+            POL: "Moje dziecko dało mi jego książkę.",
+            ENG: [
+              "My child gave me his book.",
+              "My child had given me his book.",
+              "My child has given me his book.",
+
+              "My child gave me her book.",
+              "My child had given me her book.",
+              "My child has given me her book.",
+
+              "My baby gave me her book.",
+              "My baby had given me her book.",
+              "My baby has given me her book.",
+
+              "My baby gave me his book.",
+              "My baby had given me his book.",
+              "My baby has given me his book.",
+
+              "My baby gave me its book.",
+              "My baby had given me its book.",
+              "My baby has given me its book.",
+            ],
+            extra: { FYIPs: ["FYIP101-A-POL-ENG"] },
+          },
+          {
+            POL: "Nasze dziecko dało nam jego książkę.",
+            ENG: [
+              "Our child gave us his book.",
+              "Our child had given us his book.",
+              "Our child has given us his book.",
+
+              "Our child gave us her book.",
+              "Our child had given us her book.",
+              "Our child has given us her book.",
+
+              "Our baby gave us her book.",
+              "Our baby had given us her book.",
+              "Our baby has given us her book.",
+
+              "Our baby gave us his book.",
+              "Our baby had given us his book.",
+              "Our baby has given us his book.",
+
+              "Our baby gave us its book.",
+              "Our baby had given us its book.",
+              "Our baby has given us its book.",
+            ],
+            extra: { FYIPs: ["FYIP101-A-POL-ENG"] },
+          },
+          {
+            POL: "Moje dzieci dały mi ich książkę.",
+            ENG: [
+              "My children gave me their book.",
+              "My children had given me their book.",
+              "My children have given me their book.",
+
+              "My babies gave me their book.",
+              "My babies had given me their book.",
+              "My babies have given me their book.",
+            ],
+          },
+          {
+            POL: "Nasze dzieci dały nam ich książkę.",
+            ENG: [
+              "Our children gave us their book.",
+              "Our children had given us their book.",
+              "Our children have given us their book.",
+
+              "Our babies gave us their book.",
+              "Our babies had given us their book.",
+              "Our babies have given us their book.",
+            ],
+          },
+          {
+            POL: "Mój chłopiec dał mi jego książkę.",
+            ENG: [
+              "My boy gave me his book.",
+              "My boy had given me his book.",
+              "My boy has given me his book.",
+            ],
+          },
+          {
+            POL: "Nasz chłopiec dał nam jego książkę.",
+            ENG: [
+              "Our boy gave us his book.",
+              "Our boy had given us his book.",
+              "Our boy has given us his book.",
+            ],
+          },
+          {
+            POL: "Moi chłopcy dali mi ich książkę.",
+            ENG: [
+              "My boys gave me their book.",
+              "My boys had given me their book.",
+              "My boys have given me their book.",
+            ],
+          },
+          {
+            POL: "Nasi chłopcy dali nam ich książkę.",
+            ENG: [
+              "Our boys gave us their book.",
+              "Our boys had given us their book.",
+              "Our boys have given us their book.",
+            ],
+          },
+          {
+            POL: "Moja dziewczyna dała mi jej książkę.",
+            ENG: [
+              "My girl gave me her book.",
+              "My girl had given me her book.",
+              "My girl has given me her book.",
+            ],
+          },
+          {
+            POL: "Nasza dziewczyna dała nam jej książkę.",
+            ENG: [
+              "Our girl gave us her book.",
+              "Our girl had given us her book.",
+              "Our girl has given us her book.",
+            ],
+          },
+          {
+            POL: "Moje dziewczyny dały mi ich książkę.",
+            ENG: [
+              "My girls gave me their book.",
+              "My girls had given me their book.",
+              "My girls have given me their book.",
+            ],
+          },
+          {
+            POL: "Nasze dziewczyny dały nam ich książkę.",
+            ENG: [
+              "Our girls gave us their book.",
+              "Our girls had given us their book.",
+              "Our girls have given us their book.",
+            ],
+          },
+        ],
+        {}
+      );
+    });
+    it("#pal14B-02e GET 200 YES: Engpol. My baby gave me his book.", () => {
+      return runPaletteTest(
+        "ENG",
+        "POL",
+        "113c my child gave me his book",
+        [
+          {
+            ENG: ["My baby gave me his book."],
+            POL: [
+              "Moje dziecko dało mi jego książkę.",
+              "Moje dziecko dało mnie jego książkę.",
+            ],
+          },
+          {
+            ENG: ["My baby gave me its book."],
+            POL: [
+              "Moje dziecko dało mi jego książkę.",
+              "Moje dziecko dało mnie jego książkę.",
+            ],
+            optionalExtra: { FYIPs: ["FYIP101-A-ENG-POL"] },
+          },
+          {
+            ENG: ["My baby gave me her book."],
+            POL: [
+              "Moje dziecko dało mi jego książkę.",
+              "Moje dziecko dało mnie jego książkę.",
+            ],
+            extra: { FYIPs: ["FYIP101-A-ENG-POL"] },
+          },
+          {
+            ENG: ["My babies gave me their book."],
+            POL: [
+              "Moje dzieci dały mi ich książkę.",
+              "Moje dzieci dały mnie ich książkę.",
+            ],
+          },
+        ],
+        {}
+      );
     });
   });
 

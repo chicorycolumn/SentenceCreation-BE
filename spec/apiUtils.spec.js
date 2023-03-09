@@ -59,6 +59,12 @@ describe("/educator/sandbox - Testing API.", () => {
           "Kobieta jest.",
           "Kobieta była.",
           "Kobieta będzie.",
+          "Mężczyzna był.",
+          "Mężczyzna będzie.",
+          "Mężczyzna jest.",
+          "Osoba była.",
+          "Osoba będzie.",
+          "Osoba jest.",
         ],
       }
     );
@@ -100,6 +106,15 @@ describe("/educator/sandbox - Testing API.", () => {
           "Czerwone kobiety.",
           "Czerwony chłopiec.",
           "Czerwoni chłopcy.",
+          "Czerwona dziewczyna.",
+          "Czerwone dziewczyny.",
+          "Czerwone dziecko.",
+          "Czerwone dzieci.",
+          "Czerwoni mężczyźni.",
+          "Czerwony mężczyzna.",
+          "Czerwona osoba.",
+          "Czerwone osoby.",
+          "Czerwoni ludzie.",
         ],
       }
     );
@@ -133,10 +148,18 @@ describe("/educator/sandbox - Testing API.", () => {
         questionSentenceArr: [
           "Woman.",
           "Women.",
-          "Boy.",
-          "Boys.",
           "Lady.",
           "Ladies.",
+          "Man.",
+          "Men.",
+          "Person.",
+          "People.",
+          "Boy.",
+          "Boys.",
+          "Girl.",
+          "Girls.",
+          "Child.",
+          "Children.",
         ],
       }
     );

@@ -349,12 +349,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal03-02c GET 200 YES: Returns a sentence where adjective agrees with noun in virile or nonvirile plural.", () => {
-      return runPaletteTest("POL", null, "red girls", [
-        "Czerwoni chłopcy.",
-        "Czerwoni chłopacy.",
-        "Czerwoni chłopaki.",
-        "Czerwone kobiety.",
-      ]);
+      return runPaletteTest("POL", null, "red girls", ["Czerwone kobiety."]);
     });
   });
 
@@ -500,6 +495,11 @@ describe("/api", function () {
     it("#pal04-05a GET 200 YES: Conjugate verb (as virile or nonvirile) to agree with noun in plural.", () => {
       return runPaletteTest("POL", null, "girls were reading", [
         "Kobiety czytały.",
+        "Dzieci czytały.",
+        "Dziewczyny czytały.",
+        "Osoby czytały.",
+        "Ludzie czytali.",
+        "Mężczyźni czytali.",
         "Chłopcy czytali.",
         "Chłopaki czytali.",
         "Chłopacy czytali.",
@@ -559,163 +559,57 @@ describe("/api", function () {
     it("#pal05-01a GET 200 YES: Returns a sentence in present.", () => {
       return runPaletteTest("POL", null, "girl has red apple", [
         "Kobieta ma czerwone jabłko.",
-        "Chłopiec ma czerwone jabłko.",
-        "Chłopak ma czerwone jabłko.",
-
         "Kobieta ma czerwone jabłka.",
-        "Chłopiec ma czerwone jabłka.",
-        "Chłopak ma czerwone jabłka.",
-
         "Kobiety mają czerwone jabłko.",
-        "Chłopcy mają czerwone jabłko.",
-        "Chłopacy mają czerwone jabłko.",
-        "Chłopaki mają czerwone jabłko.",
-
         "Kobiety mają czerwone jabłka.",
-        "Chłopcy mają czerwone jabłka.",
-        "Chłopacy mają czerwone jabłka.",
-        "Chłopaki mają czerwone jabłka.",
-
         "Kobieta ma czerwoną cebulę.",
-        "Chłopiec ma czerwoną cebulę.",
-        "Chłopak ma czerwoną cebulę.",
-
         "Kobieta ma czerwone cebule.",
-        "Chłopiec ma czerwone cebule.",
-        "Chłopak ma czerwone cebule.",
-
         "Kobiety mają czerwoną cebulę.",
-        "Chłopcy mają czerwoną cebulę.",
-        "Chłopacy mają czerwoną cebulę.",
-        "Chłopaki mają czerwoną cebulę.",
-
         "Kobiety mają czerwone cebule.",
-        "Chłopcy mają czerwone cebule.",
-        "Chłopacy mają czerwone cebule.",
-        "Chłopaki mają czerwone cebule.",
       ]);
     });
     it("#pal05-01b GET 200 YES: Returns a negative sentence in past.", () => {
       return runPaletteTest("POL", null, "girl didn't have red apple", [
         "Kobieta nie miała czerwonego jabłka.",
-        "Chłopiec nie miał czerwonego jabłka.",
-        "Chłopak nie miał czerwonego jabłka.",
-
         "Kobieta nie miała czerwonych jabłek.",
-        "Chłopiec nie miał czerwonych jabłek.",
-        "Chłopak nie miał czerwonych jabłek.",
-
         "Kobiety nie miały czerwonego jabłka.",
-        "Chłopcy nie mieli czerwonego jabłka.",
-        "Chłopacy nie mieli czerwonego jabłka.",
-        "Chłopaki nie mieli czerwonego jabłka.",
-
         "Kobiety nie miały czerwonych jabłek.",
-        "Chłopcy nie mieli czerwonych jabłek.",
-        "Chłopacy nie mieli czerwonych jabłek.",
-        "Chłopaki nie mieli czerwonych jabłek.",
-
         "Kobieta nie miała czerwonej cebuli.",
-        "Chłopiec nie miał czerwonej cebuli.",
-        "Chłopak nie miał czerwonej cebuli.",
-
         "Kobieta nie miała czerwonych cebul.",
-        "Chłopiec nie miał czerwonych cebul.",
-        "Chłopak nie miał czerwonych cebul.",
-
         "Kobiety nie miały czerwonej cebuli.",
-        "Chłopcy nie mieli czerwonej cebuli.",
-        "Chłopacy nie mieli czerwonej cebuli.",
-        "Chłopaki nie mieli czerwonej cebuli.",
-
         "Kobiety nie miały czerwonych cebul.",
-        "Chłopcy nie mieli czerwonych cebul.",
-        "Chłopacy nie mieli czerwonych cebul.",
-        "Chłopaki nie mieli czerwonych cebul.",
       ]);
     });
     it("#pal05-01c GET 200 YES: Returns a negative sentence in past.", () => {
       return runPaletteTest("POL", null, "red girl didn't have red apple", [
         "Czerwona kobieta nie miała czerwonego jabłka.",
-        "Czerwony chłopiec nie miał czerwonego jabłka.",
-        "Czerwony chłopak nie miał czerwonego jabłka.",
-
         "Czerwona kobieta nie miała czerwonych jabłek.",
-        "Czerwony chłopiec nie miał czerwonych jabłek.",
-        "Czerwony chłopak nie miał czerwonych jabłek.",
-
         "Czerwone kobiety nie miały czerwonego jabłka.",
-        "Czerwoni chłopcy nie mieli czerwonego jabłka.",
-        "Czerwoni chłopacy nie mieli czerwonego jabłka.",
-        "Czerwoni chłopaki nie mieli czerwonego jabłka.",
-
         "Czerwone kobiety nie miały czerwonych jabłek.",
-        "Czerwoni chłopcy nie mieli czerwonych jabłek.",
-        "Czerwoni chłopacy nie mieli czerwonych jabłek.",
-        "Czerwoni chłopaki nie mieli czerwonych jabłek.",
-
         "Czerwona kobieta nie miała czerwonej cebuli.",
-        "Czerwony chłopiec nie miał czerwonej cebuli.",
-        "Czerwony chłopak nie miał czerwonej cebuli.",
-
         "Czerwona kobieta nie miała czerwonych cebul.",
-        "Czerwony chłopiec nie miał czerwonych cebul.",
-        "Czerwony chłopak nie miał czerwonych cebul.",
-
         "Czerwone kobiety nie miały czerwonej cebuli.",
-        "Czerwoni chłopcy nie mieli czerwonej cebuli.",
-        "Czerwoni chłopacy nie mieli czerwonej cebuli.",
-        "Czerwoni chłopaki nie mieli czerwonej cebuli.",
-
         "Czerwone kobiety nie miały czerwonych cebul.",
-        "Czerwoni chłopcy nie mieli czerwonych cebul.",
-        "Czerwoni chłopacy nie mieli czerwonych cebul.",
-        "Czerwoni chłopaki nie mieli czerwonych cebul.",
       ]);
     });
     it("#pal05-02a GET 200 YES: Returns a sentence when selected by tenseDescription.", () => {
       return runPaletteTest("POL", null, "girl reads present im", [
         "Kobieta czyta.",
-        "Chłopiec czyta.",
-        "Chłopak czyta.",
-
         "Kobiety czytają.",
-        "Chłopcy czytają.",
-        "Chłopacy czytają.",
-        "Chłopaki czytają.",
       ]);
     });
     it("#pal05-02b GET 200 YES: Returns a sentence when selected by tenseDescription.", () => {
       return runPaletteTest("POL", null, "girl reads past pf", [
         "Kobieta przeczytała.",
-        "Chłopiec przeczytał.",
-        "Chłopak przeczytał.",
-
         "Kobiety przeczytały.",
-        "Chłopcy przeczytali.",
-        "Chłopacy przeczytali.",
-        "Chłopaki przeczytali.",
       ]);
     });
     it("#pal05-02c GET 200 YES: Returns a sentence when selected by tenseDescription.", () => {
       return runPaletteTest("POL", null, "girl reads future im", [
         "Kobieta będzie czytała.",
-        "Chłopiec będzie czytał.",
-        "Chłopak będzie czytał.",
-
         "Kobiety będą czytały.",
-        "Chłopcy będą czytali.",
-        "Chłopacy będą czytali.",
-        "Chłopaki będą czytali.",
-
         "Kobieta będzie czytać.",
-        "Chłopiec będzie czytać.",
-        "Chłopak będzie czytać.",
-
         "Kobiety będą czytać.",
-        "Chłopcy będą czytać.",
-        "Chłopacy będą czytać.",
-        "Chłopaki będą czytać.",
       ]);
     });
     it("#pal05-03a GET 200 YES: Allow specification of multiple radically different tenseDescriptions, without unwanted cross pollination.", () => {
@@ -804,14 +698,6 @@ describe("/api", function () {
                     "The ladies are reading.",
                   ],
                 },
-                {
-                  POL: "Chłopiec czyta.",
-                  ENG: ["The boy reads.", "The boy is reading."],
-                },
-                {
-                  POL: "Chłopcy czytają.",
-                  ENG: ["The boys read.", "The boys are reading."],
-                },
               ],
             },
           };
@@ -866,24 +752,6 @@ describe("/api", function () {
                     "The ladies are reading quickly.",
                     "Quickly the ladies read.",
                     "Quickly the ladies are reading.",
-                  ],
-                },
-                {
-                  POL: "Chłopiec szybko czyta.",
-                  ENG: [
-                    "The boy reads quickly.",
-                    "The boy is reading quickly.",
-                    "Quickly the boy reads.",
-                    "Quickly the boy is reading.",
-                  ],
-                },
-                {
-                  POL: "Chłopcy szybko czytają.",
-                  ENG: [
-                    "The boys read quickly.",
-                    "The boys are reading quickly.",
-                    "Quickly the boys read.",
-                    "Quickly the boys are reading.",
                   ],
                 },
               ],

@@ -136,6 +136,24 @@ exports.translateAnnoTraitValue = (
     //gender: Removed vito5 in branch step-V-virility-tidying-and-overhaul-aka-vito, as seems obviated by vito2b.
     let adjustedAnnotation = annotationToPlainspeakRef.gender[annoTraitValue];
 
+    if (
+      ["gender", "semanticGender"].includes(annoTraitKey) &&
+      structureChunk.virilityDetail &&
+      structureChunk.virilityDetail.length
+    ) {
+      let plainspeakAnno =
+        structureChunk.virilityDetail[0].slice(-1) === "!"
+          ? structureChunk.virilityDetail[0].slice(0, -1)
+          : structureChunk.virilityDetail[0];
+
+      consol.logSpecial(
+        8,
+        `pwmi "${structureChunk.chunkId}" Setting plainspeakAnno to "${plainspeakAnno}".`
+      );
+
+      return plainspeakAnno;
+    }
+
     let plainspeakAnno =
       typeof adjustedAnnotation === "string"
         ? adjustedAnnotation
@@ -155,6 +173,18 @@ exports.translateAnnoTraitValue = (
   );
 
   return annoTraitValue;
+};
+
+exports.standardiseGenders = (lang, traitValues, metagender) => {
+  if (!metagender) {
+    metagender = "_Genders";
+  }
+
+  //Fix for POL issue where counterfax sits were being generated using ["m","m1","f","virile","nonvirile"]
+  //The "m" is unnecessary and causes checkthrow "knmo" later down the line.
+  return traitValues.filter((tv) =>
+    refObj.metaTraitValues[lang].gender[metagender].includes(tv)
+  );
 };
 
 exports.collapseMasculineGenders = (lang, stCh) => {

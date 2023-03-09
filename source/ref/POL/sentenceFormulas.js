@@ -164,7 +164,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-
+        specificIds: ["^pol-npe-011-kobieta"],
         number: ["plural"],
         gender: [],
       },
@@ -207,7 +207,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-
+        specificIds: ["^pol-npe-011-kobieta"],
         number: ["singular", "plural"],
         gender: ["f"],
       },
@@ -292,6 +292,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
+        specificIds: ["^pol-npe-011-kobieta"],
       },
       {
         chunkId: "ver-1",
@@ -323,6 +324,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
+        specificIds: ["^pol-npe-011-kobieta"],
       },
       { chunkId: "fix-1", chunkValue: "nie" },
       {
@@ -363,6 +365,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
+        specificIds: ["^pol-npe-011-kobieta"],
       },
       { chunkId: "fix-1", chunkValue: "nie" },
       {
@@ -397,6 +400,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
+        specificIds: ["^pol-npe-011-kobieta"],
       },
       {
         chunkId: "ver-1",
@@ -416,6 +420,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
+        specificIds: ["^pol-npe-011-kobieta"],
       },
       {
         chunkId: "ver-1",
@@ -435,6 +440,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
+        specificIds: ["^pol-npe-011-kobieta"],
       },
       {
         chunkId: "ver-1",
@@ -454,6 +460,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
+        specificIds: ["pol-npe-011-kobieta"],
 
         number: [],
         gender: ["f"],
@@ -477,7 +484,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-
+        specificIds: ["^pol-npe-011-kobieta"],
         number: ["singular", "plural"],
       },
       {
@@ -498,7 +505,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-
+        specificIds: ["^pol-npe-011-kobieta"],
         number: ["singular", "plural"],
       },
       {
@@ -793,7 +800,7 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "npe-1",
-        specificIds: ["pol-npe-011-kobieta"],
+        specificIds: ["^pol-npe-011-kobieta"],
       },
       {
         chunkId: "ver-1",
@@ -971,7 +978,6 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1",
         andTags: ["family"],
-
         number: ["singular"],
       },
       {
@@ -1017,6 +1023,127 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "npe-1-Father",
         andTags: ["family"],
+      },
+      {
+        chunkId: "ver-1-Gave",
+        agreeWith: "npe-1-Father",
+        specificIds: ["pol-ver-016-dać"],
+        tenseDescription: ["past pf"],
+      },
+      {
+        chunkId: "pro-3-Us",
+        agreeWith: "pro-1-invisible-We",
+        gcase: ["dat"],
+        formulaImportantTraitKeys: ["gcase"],
+        specificIds: ["pol-pro-PERSONAL"],
+      },
+      {
+        chunkId: "pro-4-His",
+        form: ["determiner"],
+        specificIds: ["pol-pro-POSSESSIVE"],
+        agreeWith: "npe-1-Father",
+        agreeWith2: "nco-2-Book",
+      },
+      {
+        chunkId: "nco-2-Book",
+        specificIds: ["pol-nco-016-książka"],
+        gcase: ["acc"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [
+      [
+        "pro-2-Our",
+        "npe-1-Father",
+        "ver-1-Gave",
+        "pro-3-Us",
+        "pro-4-His",
+        "nco-2-Book",
+      ],
+    ],
+    additionalOrders: [],
+  },
+  {
+    sentenceFormulaSymbol: "113b my child gave me his book",
+    sentenceFormulaId: "POL-00-113b",
+    equivalents: { ENG: ["ENG-00-113b"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-invisible-We",
+        specificIds: ["pol-pro-PERSONAL"],
+        person: ["1per"],
+      },
+      {
+        chunkId: "pro-2-Our",
+        form: ["determiner"],
+        specificIds: ["pol-pro-POSSESSIVE"],
+        agreeWith: "pro-1-invisible-We",
+        agreeWith2: "npe-1-Father",
+      },
+      {
+        chunkId: "npe-1-Father",
+        specificIds: ["pol-npe-012-chłop/dziew/dziecko"],
+      },
+      {
+        chunkId: "ver-1-Gave",
+        agreeWith: "npe-1-Father",
+        specificIds: ["pol-ver-016-dać"],
+        tenseDescription: ["past pf"],
+      },
+      {
+        chunkId: "pro-3-Us",
+        agreeWith: "pro-1-invisible-We",
+        gcase: ["dat"],
+        formulaImportantTraitKeys: ["gcase"],
+        specificIds: ["pol-pro-PERSONAL"],
+      },
+      {
+        chunkId: "pro-4-His",
+        form: ["determiner"],
+        specificIds: ["pol-pro-POSSESSIVE"],
+        agreeWith: "npe-1-Father",
+        agreeWith2: "nco-2-Book",
+      },
+      {
+        chunkId: "nco-2-Book",
+        specificIds: ["pol-nco-016-książka"],
+        gcase: ["acc"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [
+      [
+        "pro-2-Our",
+        "npe-1-Father",
+        "ver-1-Gave",
+        "pro-3-Us",
+        "pro-4-His",
+        "nco-2-Book",
+      ],
+    ],
+    additionalOrders: [],
+  },
+  {
+    sentenceFormulaSymbol: "113c my child gave me his book",
+    sentenceFormulaId: "POL-00-113c",
+    equivalents: { ENG: ["ENG-00-113c"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-invisible-We",
+        specificIds: ["pol-pro-PERSONAL"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "pro-2-Our",
+        form: ["determiner"],
+        specificIds: ["pol-pro-POSSESSIVE"],
+        agreeWith: "pro-1-invisible-We",
+        agreeWith2: "npe-1-Father",
+      },
+      {
+        chunkId: "npe-1-Father",
+        specificIds: ["pol-npe-012-chłop/dziew/dziecko"],
       },
       {
         chunkId: "ver-1-Gave",
@@ -1167,9 +1294,9 @@ exports.sentenceFormulasBank = [
     ],
   },
   {
-    sentenceFormulaSymbol: "116 My doctor was a woman",
-    sentenceFormulaId: "POL-116",
-    equivalents: { ENG: ["ENG-116"] },
+    sentenceFormulaSymbol: "116b My doctor was a woman specifically",
+    sentenceFormulaId: "POL-116b",
+    equivalents: { ENG: ["ENG-116b"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1202,8 +1329,48 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-2-woman",
+        agreeWith: "npe-1-doctor",
         gcase: ["ins"],
+        formulaImportantTraitKeys: ["gcase"],
         number: ["singular"],
+        specificIds: ["^pol-npe-011-kobieta"],
+      },
+    ],
+    primaryOrders: [["pro-2-my", "npe-1-doctor", "ver-1-was", "npe-2-woman"]],
+  },
+  {
+    sentenceFormulaSymbol: "116c My doctor was a woman/man/person",
+    sentenceFormulaId: "POL-116c",
+    equivalents: { ENG: ["ENG-116c"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificIds: ["pol-pro-PERSONAL"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "pro-2-my",
+        form: ["determiner"],
+        specificIds: ["pol-pro-POSSESSIVE"],
+        agreeWith: "pro-1-I",
+        agreeWith2: "npe-1-doctor",
+      },
+      {
+        chunkId: "npe-1-doctor",
+        specificIds: ["pol-npe-015-lekarz"],
+      },
+      {
+        chunkId: "ver-1-was",
+        agreeWith: "npe-1-doctor",
+        specificIds: ["pol-ver-011-być"],
+        tenseDescription: ["past pf"],
+      },
+      {
+        chunkId: "npe-2-woman",
+        agreeWith: "npe-1-doctor",
+        gcase: ["ins"],
+        formulaImportantTraitKeys: ["gcase"],
         specificIds: ["pol-npe-011-kobieta"],
       },
     ],
@@ -1275,16 +1442,17 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-2-woman",
-
+        agreeWith: "npe-1-doctor",
         gcase: ["ins"],
+        formulaImportantTraitKeys: ["gcase"],
         number: ["singular"],
-        specificIds: ["pol-npe-011-kobieta"],
+        specificIds: ["^pol-npe-011-kobieta"],
       },
     ],
     primaryOrders: [["pro-2-my", "npe-1-doctor", "ver-1-was", "npe-2-woman"]],
   },
   {
-    sentenceFormulaSymbol: "116a My doctor's doctor was a woman",
+    sentenceFormulaSymbol: "116a My doctor's doctor was a woman specifically",
     sentenceFormulaId: "POL-116a",
     equivalents: { ENG: ["ENG-116a"] },
     sentenceStructure: [
@@ -1303,7 +1471,6 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-1-doctor's",
-
         number: ["singular"],
         specificIds: ["pol-npe-015-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
@@ -1311,7 +1478,6 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-2-doctor",
-
         number: ["singular"],
         specificIds: ["pol-npe-015-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
@@ -1326,10 +1492,10 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-3-woman",
-
+        agreeWith: "npe-2-doctor",
         gcase: ["ins"],
-        number: ["singular"],
-        specificIds: ["pol-npe-011-kobieta"],
+        formulaImportantTraitKeys: ["gcase"],
+        specificIds: ["^pol-npe-011-kobieta"],
       },
     ],
     primaryOrders: [
@@ -1633,7 +1799,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-1-woman",
-        specificIds: ["pol-npe-011-kobieta"],
+        specificIds: ["^pol-npe-011-kobieta"],
       },
       {
         chunkId: "ver-1-see",
@@ -1790,5 +1956,73 @@ exports.sentenceFormulasBank = [
       },
     ],
     primaryOrders: [["ver-1-am", "adj-1-good", "npe-1-person"]],
+  },
+  {
+    sentenceFormulaSymbol: "124b I was a good person",
+    sentenceFormulaId: "POL-124b",
+    equivalents: { ENG: ["ENG-124b"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificIds: ["pol-pro-PERSONAL"],
+        person: ["1per"],
+        agreeWith: "npe-1-person",
+        gcase: ["nom"],
+        formulaImportantTraitKeys: ["gcase"],
+        giveMeTheseClarifiersOfMyHeadChunk: ["gender", "number"],
+      },
+      {
+        chunkId: "ver-1-am",
+        specificIds: ["pol-ver-011-być"],
+        agreeWith: "pro-1-I",
+        tenseDescription: ["past im"],
+      },
+      {
+        chunkId: "adj-1-good",
+        specificIds: ["pol-adj-010-dobry"],
+        agreeWith: "npe-1-person",
+      },
+      {
+        chunkId: "npe-1-person",
+        specificIds: ["^pol-npe-011-osoba-£"],
+        gcase: ["ins"],
+        formulaImportantTraitKeys: ["gcase"],
+      },
+    ],
+    primaryOrders: [["pro-1-I", "ver-1-am", "adj-1-good", "npe-1-person"]],
+  },
+  {
+    sentenceFormulaSymbol: "124c I was a good man/woman/person",
+    sentenceFormulaId: "POL-124c",
+    equivalents: { ENG: ["ENG-124c"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificIds: ["pol-pro-PERSONAL"],
+        person: ["1per"],
+        agreeWith: "npe-1-person",
+        gcase: ["nom"],
+        formulaImportantTraitKeys: ["gcase"],
+        giveMeTheseClarifiersOfMyHeadChunk: ["gender", "number"],
+      },
+      {
+        chunkId: "ver-1-am",
+        specificIds: ["pol-ver-011-być"],
+        agreeWith: "pro-1-I",
+        tenseDescription: ["past im"],
+      },
+      {
+        chunkId: "adj-1-good",
+        specificIds: ["pol-adj-010-dobry"],
+        agreeWith: "npe-1-person",
+      },
+      {
+        chunkId: "npe-1-person",
+        specificIds: ["pol-npe-011-osoba-£"],
+        gcase: ["ins"],
+        formulaImportantTraitKeys: ["gcase"],
+      },
+    ],
+    primaryOrders: [["pro-1-I", "ver-1-am", "adj-1-good", "npe-1-person"]],
   },
 ];

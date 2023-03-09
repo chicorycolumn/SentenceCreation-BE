@@ -10,6 +10,8 @@ const refObj = require("./reference/referenceObjects.js");
 const refFxn = require("./reference/referenceFunctions.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 const nexusUtils = require("./secondOrder/nexusUtils.js");
+const eaUtils = require("./extraAttributeUtils.js");
+const { HY } = refObj;
 
 exports.getWordsAndFormulas = (currentLanguage, wordsOnly) => {
   let envir = "ref";
@@ -199,13 +201,40 @@ exports.selectDependentChunkWordsAndAddToOutputArray = (
               );
 
               thisHeadOutputArrayIsDeleted = true; // effectively deleting this headOutputArray.
-            } else {
-              uUtils.addToArrayAtKey(
-                headOutputUnit,
-                "possibleDependentOutputArrays",
-                allPossOutputUnits_dependent
-              );
+              return;
             }
+
+            if (headOutputUnit.possibleDependentOutputArrays) {
+              let arraysOfAlreadyChunkIds =
+                headOutputUnit.possibleDependentOutputArrays.map((arr) =>
+                  arr.map((ou) => ou.structureChunk.chunkId)
+                );
+              let proposedAddition = allPossOutputUnits_dependent.map(
+                (ou) => ou.structureChunk.chunkId
+              );
+              if (
+                arraysOfAlreadyChunkIds.some((arr) =>
+                  proposedAddition.some((chunkId) => arr.includes(chunkId))
+                )
+              ) {
+                console.log(
+                  "rhne I refuse the proposal to add allPossOutputUnits_dependent",
+                  proposedAddition,
+                  `to possibleDependentOutputArrays for headChunk "${headOutputUnit.structureChunk.chunkId}"`,
+                  arraysOfAlreadyChunkIds
+                );
+                consol.throw(
+                  `rhne Duplication of possibleDependentOutputArrays for headChunk "${headOutputUnit.structureChunk.chunkId}", see above.`
+                );
+                return;
+              }
+            }
+
+            uUtils.addToArrayAtKey(
+              headOutputUnit,
+              "possibleDependentOutputArrays",
+              allPossOutputUnits_dependent
+            );
           });
         }
       });
@@ -374,18 +403,18 @@ exports.processSentenceFormula = (
   };
 
   const _selectDependentChunkWordsAndAddToOutputArray = (
-    dependenceTypeToUpdate,
-    explodedOutputArraysWithHeads,
-    grandOutputArray,
-    headChunks,
-    dependentChunks
+    _dependenceTypeToUpdate,
+    _explodedOutputArraysWithHeads,
+    _grandOutputArray,
+    _headChunks,
+    _dependentChunks
   ) => {
     return scUtils.selectDependentChunkWordsAndAddToOutputArray(
-      dependenceTypeToUpdate,
-      explodedOutputArraysWithHeads,
-      grandOutputArray,
-      headChunks,
-      dependentChunks,
+      _dependenceTypeToUpdate,
+      _explodedOutputArraysWithHeads,
+      _grandOutputArray,
+      _headChunks,
+      _dependentChunks,
       currentLanguage,
       isCounterfax,
       useDummyWords,
@@ -403,6 +432,7 @@ exports.processSentenceFormula = (
   if (dependentHeadChunks.length) {
     // If there are head chunks that agreeWith other head chunks, do these first.
     let halfwayGrandOutputArray = [];
+
     _selectDependentChunkWordsAndAddToOutputArray(
       "head",
       explodedOutputArraysWithHeads,
@@ -412,15 +442,29 @@ exports.processSentenceFormula = (
     );
 
     // Now that all head chunks are done, do the dependentChunks.
+
+    halfwayGrandOutputArray = uUtils.copyWithoutReference(
+      halfwayGrandOutputArray
+    );
+
+    halfwayGrandOutputArray.forEach((oua) => {
+      oua.forEach((ou) => {
+        if (ou.dependenceType === "dependent") {
+          ou.dependenceType = "dependentHead";
+        }
+      });
+    });
+
     _selectDependentChunkWordsAndAddToOutputArray(
-      "dependent",
+      "dependentHead",
       halfwayGrandOutputArray,
       grandOutputArray,
-      [...headChunks, dependentHeadChunks],
+      [...headChunks, ...dependentHeadChunks],
       dependentChunks
     );
   } else {
     // There are no head chunks which depend on other head chunk, so just do depependentChunks as normal.
+
     _selectDependentChunkWordsAndAddToOutputArray(
       "head",
       explodedOutputArraysWithHeads,
@@ -676,9 +720,7 @@ exports.processSentenceFormula = (
 
   grandOutputArray.forEach((outputArray, outputArrayIndex) => {
     outputArray.forEach((outputUnit) => {
-      let { structureChunk } = outputUnit;
-
-      if (gpUtils.getWordtypeStCh(structureChunk) === "fixed") {
+      if (gpUtils.getWordtypeStCh(outputUnit.structureChunk) === "fixed") {
         return;
       }
 
@@ -796,6 +838,7 @@ exports.giveFinalSentences = (
   }
 
   let finalSentenceArr = [];
+  let fyipLabels = [];
 
   if (!multipleMode) {
     if (isQuestion) {
@@ -835,6 +878,14 @@ exports.giveFinalSentences = (
         null
       );
 
+      let additionalFyipLabels = eaUtils.evaluateFYIPs(
+        outputArr,
+        questionLanguage,
+        answerLanguage,
+        "A"
+      );
+      fyipLabels.push(...additionalFyipLabels);
+
       finalSentences.forEach((finalSentence) => {
         finalSentenceArr.push(finalSentence);
       });
@@ -845,6 +896,9 @@ exports.giveFinalSentences = (
     finalSentenceArr,
   };
 
+  if (fyipLabels.length) {
+    responseObj.FYIPs = eaUtils.filterDownFYIPs(fyipLabels);
+  }
   return responseObj;
 };
 
@@ -987,6 +1041,82 @@ exports.buildSentenceString = (
   return producedSentences;
 };
 
+exports.coverBothGendersForPossessivesOfHypernyms = (
+  multipleMode,
+  structureChunk,
+  orderedOutputArr,
+  drillPath,
+  selectedLemmaObject
+) => {
+  /** Hypernymy Fine Tuning 2 (HFT2)
+   *
+   * Run this fxn only for depChunks which are a) POSSESSIVE pronombres or b) !NOM PERSONAL pronombres.
+   *
+   * PERSONAL and gcase !NOM because we want
+   * "Jest rodzic i widziałem GO." for both semanticGenders of rodzic. (GO is acc PERSONAL pronombre)
+   *
+   * POSSESSIVE because we want
+   * "Rodzic dał mi JEGO lustro." for both semanticGenders of rodzic. (JEGO is POSSESSIVE pronombre)
+   *
+   * But we DON'T WANT
+   * "ON jest rodzicem." for semanticGender f. (ON/ONA is nom PERSONAL pronombre)
+   *
+   * So that's why we're not running this fxn for all pronouns.
+   */
+  if (
+    multipleMode &&
+    gpUtils.getWordtypeStCh(structureChunk) === "pronombre" &&
+    structureChunk.agreeWith
+  ) {
+    if (!structureChunk.gcase || structureChunk.gcase.length !== 1) {
+      console.log(">>", structureChunk.gcase);
+      consol.throw(
+        `gibp structureChunk.gcase not have exactly 1 member, see >> above.`
+      );
+    }
+
+    if (
+      selectedLemmaObject.lemma === "$POSSESSIVE" ||
+      (selectedLemmaObject.lemma === "$PERSONAL" &&
+        structureChunk.gcase[0] !== "nom")
+    ) {
+      let headOutputUnit = otUtils.getHeadOutputUnit(
+        structureChunk,
+        orderedOutputArr
+      );
+      let firstNumberDrillPathUnit = drillPath.find(
+        (dpu) => dpu[0] === "number"
+      );
+      if (
+        headOutputUnit &&
+        lfUtils.checkHyper(headOutputUnit.selectedLemmaObject, [
+          HY.HY,
+          HY.VY, // Originally cond only [HY.HY]. If errors arise re vypernyms, try deleting line HY.VY here.
+        ]) &&
+        firstNumberDrillPathUnit &&
+        firstNumberDrillPathUnit[1] === "singular"
+      ) {
+        let drillPathGenderFlipped = uUtils.copyWithoutReference(drillPath);
+        let firstGenderDrillPathUnit = drillPathGenderFlipped.find(
+          (dpu) => dpu[0] === "gender"
+        );
+        firstGenderDrillPathUnit[1] =
+          firstGenderDrillPathUnit[1] === "f" ? "m" : "f";
+
+        let res = uUtils.copyWithoutReference(selectedLemmaObject).inflections;
+        drillPathGenderFlipped.forEach((drillPathUnit) => {
+          res = res[drillPathUnit[1]];
+          if (!res) {
+            consol.throw("ndln");
+          }
+        });
+
+        return res;
+      }
+    }
+  }
+};
+
 exports.selectWordVersions = (
   orderedOutputArr,
   currentLanguage,
@@ -996,7 +1126,7 @@ exports.selectWordVersions = (
   let selectedWordsArr = [];
   const langUtils = require(`../source/all/${currentLanguage}/langUtils.js`);
 
-  //STEP 0: If in Q mode, bring annos in from skeleton units.
+  //STEP 0 part A: If in Q mode, bring annos in from skeleton units.
   if (!multipleMode) {
     orderedOutputArr.forEach((outputUnit, outputUnitIndex) => {
       if (outputUnit.isSkeleton) {
@@ -1079,6 +1209,43 @@ exports.selectWordVersions = (
     });
   }
 
+  //STEP 0 part B: Transfer annos between chunks if asked to.
+  orderedOutputArr.forEach((depOutputUnit, outputUnitIndex) => {
+    if (depOutputUnit.structureChunk.giveMeTheseClarifiersOfMyHeadChunk) {
+      let headOutputUnit = otUtils.getHeadOutputUnit(
+        depOutputUnit.structureChunk,
+        orderedOutputArr
+      );
+
+      if (!headOutputUnit) {
+        consol.throw(
+          `wihb Tried to transfer annos but no headChunk for ${depOutputUnit.structureChunk.chunkId}'s agreeWith: "${depOutputUnit.structureChunk.agreeWith}".`
+        );
+      }
+
+      if (headOutputUnit.firstStageAnnotationsObj) {
+        if (!depOutputUnit.firstStageAnnotationsObj) {
+          depOutputUnit.firstStageAnnotationsObj = {};
+        }
+
+        depOutputUnit.structureChunk.giveMeTheseClarifiersOfMyHeadChunk.forEach(
+          (annoKey) => {
+            let annoValue = headOutputUnit.firstStageAnnotationsObj[annoKey];
+            if (annoValue) {
+              if (depOutputUnit.firstStageAnnotationsObj[annoKey]) {
+                consol.throw(
+                  `wihc Tried to transfer "${annoKey}" anno from ${headOutputUnit.structureChunk.chunkId} to ${depOutputUnit.structureChunk.chunkId} but it already had that anno.`
+                );
+              }
+              depOutputUnit.firstStageAnnotationsObj[annoKey] = annoValue;
+              delete headOutputUnit.firstStageAnnotationsObj[annoKey];
+            }
+          }
+        );
+      }
+    }
+  });
+
   //STEP 1: Select and push.
 
   orderedOutputArr.forEach((outputUnit, index) => {
@@ -1108,6 +1275,30 @@ exports.selectWordVersions = (
     }
 
     if (typeof selectedWord === "string") {
+      // For possessives of hypernyms we want answer to accept both genders, eg:
+      // Q POL "Rodzic dał nam jego lustro." should give
+      // A ENG ["Parent gave me HIS mirror.", "Parent gave me HER mirror."]
+      // So if a gender flipped word is generated, then it is indeed a possessive of a hypernym, so we add it.
+      let genderFlippedSelectedWord =
+        scUtils.coverBothGendersForPossessivesOfHypernyms(
+          multipleMode,
+          structureChunk,
+          orderedOutputArr,
+          drillPath,
+          selectedLemmaObject,
+          selectedWordsArr,
+          firstStageAnnotationsObj
+        );
+      if (genderFlippedSelectedWord) {
+        frUtils.pushSelectedWordToArray(
+          "array",
+          [selectedWord, genderFlippedSelectedWord],
+          selectedWordsArr,
+          firstStageAnnotationsObj,
+          structureChunk
+        );
+        return;
+      }
       frUtils.pushSelectedWordToArray(
         "string",
         selectedWord,
@@ -1242,24 +1433,54 @@ exports.conformAnswerStructureToQuestionStructure = (
     );
 
     let source = words[gpUtils.getWordtypeShorthandStCh(answerStructureChunk)];
-
-    matchingAnswerLemmaObjects = source.filter(
+    source = source.filter(
       (lObj) =>
-        lObjsToSearch.includes(lObj.id) &&
         //Resolve issue of multipleWordtype allohoms.
         gpUtils.getWordtypeLObj(lObj) ===
-          gpUtils.getWordtypeStCh(questionStructureChunk)
+        gpUtils.getWordtypeStCh(questionStructureChunk)
+    );
+
+    matchingAnswerLemmaObjects = lfUtils.getLObjAndSiblings(
+      source,
+      lObjsToSearch,
+      false,
+      "conformAtoQ",
+      questionSelectedLemmaObject
     );
 
     let matchesLengthSnapshot = matchingAnswerLemmaObjects.length;
 
-    matchingAnswerLemmaObjects = matchingAnswerLemmaObjects.filter(
-      (answerLemmaObject) =>
-        uUtils.areTwoFlatArraysEqual(
-          nexusUtils.getPapers(questionSelectedLemmaObject),
-          nexusUtils.getPapers(answerLemmaObject)
-        )
-    );
+    // "traductions by papers"
+    // matchingAnswerLemmaObjects = matchingAnswerLemmaObjects.filter(
+    //   (answerLemmaObject) =>
+    //     uUtils.areTwoFlatArraysEqual(
+    //       nexusUtils.getPapers(questionSelectedLemmaObject),
+    //       nexusUtils.getPapers(answerLemmaObject)
+    //     )
+    // );
+    /**
+     * Above clause was to prevent mistranslation, eg if qlobj "wysoki" with tags "personaldescription"
+     * we'd only want that to translate to "tall", not "high".
+     *
+     * So we were thinking to enforce here that translated must have same tags
+     * so "tall" has the same tags, but "high" doesn't have "personaldescription" tag.
+     *
+     * But... this shouldn't be an issue, because "tall" and "high" are two separate lobjs,
+     * and more importantly "wysoki" and "wysoki" are two separate lobjs with different tags, freq, translations.
+     *
+     * The only thing they have in common is their lemma and their inflections obj.
+     * They are two different lobjs, with different ids.
+     *
+     * So "wysoki dziewczyna" would not translate to "high woman",
+     * because "wysoki" in this sentence is the lobj with id "pol-adj-400-wysoki(person)"
+     * which only appears in the nexuslobj with "eng-tall",
+     * whereas "eng-high" is in the nexuslobj with "pol-adj-401-wysoki(dimension)".
+     * So we don't need this check.
+     *
+     * Are there cases where this would be false, though?
+     * Yes. "dziecko" is a translation of "child" and "baby", but those two could conceivably have different tags.
+     * They'd be mostly the same ["concrete","person"] but "baby" might have ["childbirth","medical"] which "child" doesn't.
+     */
 
     if (matchesLengthSnapshot && !matchingAnswerLemmaObjects.length) {
       consol.log(
@@ -1277,8 +1498,22 @@ exports.conformAnswerStructureToQuestionStructure = (
     }
 
     //...and then for both pronombres and all other wordtypes, we get the ID and set it.
-    answerStructureChunk.specificIds = matchingAnswerLemmaObjects.map(
-      (lObj) => lObj.id
+    //Ensure prefix characters are kept, ie "^pol-000-dziecko" doesn't lose caret.
+    let specificIdsForAnswer = [];
+    matchingAnswerLemmaObjects
+      .map((lObj) => lObj.id)
+      .forEach((id) => {
+        let soughtIds = lObjsToSearch.filter((soughtId) =>
+          allLangUtils.compareLObjStems(soughtId, id)
+        );
+        if (soughtIds.length) {
+          specificIdsForAnswer.push(...soughtIds);
+        } else {
+          specificIdsForAnswer.push(id);
+        }
+      });
+    answerStructureChunk.specificIds = Array.from(
+      new Set(specificIdsForAnswer)
     );
 
     //Do actually transfer gender, for person nouns.
@@ -1287,6 +1522,15 @@ exports.conformAnswerStructureToQuestionStructure = (
         questionStructureChunk,
         answerStructureChunk,
         "gender",
+        questionLanguage,
+        answerLanguage
+      );
+
+      //Set semanticGender in Answer
+      scUtils.addTraitToAnswerChunkWithAdjustment(
+        questionStructureChunk,
+        answerStructureChunk,
+        "semanticGender",
         questionLanguage,
         answerLanguage
       );
@@ -1443,6 +1687,17 @@ exports.conformAnswerStructureToQuestionStructure = (
       answerLanguage,
       "stCh"
     );
+
+    ["gender", "semanticGender"].forEach((genderTraitKey) => {
+      if (answerStructureChunk[genderTraitKey]) {
+        allLangUtils.enforceIsPerson(
+          answerStructureChunk,
+          true,
+          null,
+          genderTraitKey
+        );
+      }
+    });
   });
 
   if ("logging") {
@@ -1454,10 +1709,11 @@ exports.conformAnswerStructureToQuestionStructure = (
       consol.logSpecial(8, {
         "answerStCh.chunkId": answerStCh.chunkId,
         "answerStCh.specificIds": answerStCh.specificIds,
-        "answerStCh.demandedIds": answerStCh.demandedIds,
+        "answerStCh.originalSitSelectedLObj": answerStCh.originalSitSelectedLObj
+          ? answerStCh.originalSitSelectedLObj.id
+          : null,
         "answerStCh.gender": answerStCh.gender,
         "answerStCh.semanticGender": answerStCh.semanticGender,
-        "answerStCh.hypernymy": answerStCh.hypernymy,
       });
     });
     consol.logSpecial(
@@ -1543,7 +1799,83 @@ exports.inheritFromHeadToDependentChunk = (
     ...hybridSelectors,
   ];
 
+  let doneTraitKeys = [];
+
+  // Hypernymy Fine Tuning 1 (HFT1)
+  //Treat gender & semanticGender separately, in special cases.
+
+  //NOTE: Cond below was originally [HY.HY] but I thought should include HY.VY. But if vypernym errors arise, try reverting.
+  if (
+    lfUtils.checkHyper(headSelectedLemmaObject, [HY.HY, HY.VY]) &&
+    inheritableInflectionKeys.includes("gender")
+  ) {
+    /** HFT1a
+     * If headChunk is Hypernym,   depChunk is personal pronombre,   and we are in a Gendered Language.
+     *
+     * So headChunk "rodzic"   *semanticGender* f      transfers to  NOM  depChunk          *gender*    so "Ja byłam".
+     *
+     * So headChunk "rodzic"   *gender*        m1      transfers to  ~NOM depChunk          *gender*    so "go".
+     * So headChunk "rodzic"   *gender*        m1      transfers to  possessive depChunk    *gender*    so "go".
+     *
+     * So altogether:   "SHE was a parent, I see HER and HER car."   translates to   "BYŁA rodzicem, widze GO i JEGO auto."
+     */
+    if (
+      gpUtils.getWordtypeShorthandStCh(dependentChunk) === "pro" &&
+      !gpUtils.traitValueIsMeta(headSelectedLemmaObject.gender) // ie This is a gendered language.
+    ) {
+      if (
+        dependentChunk.specificIds.some(
+          (id) => id.split("-")[2] === "POSSESSIVE"
+        )
+      ) {
+        if (dependentChunk.specificIds.length > 1) {
+          consol.throw(
+            `smce More than one specificId even though specificId array includes "pro-POSSESSIVE"? [${dependentChunk.specificIds.join(
+              ","
+            )}]`
+          );
+        }
+        dependentChunk.semanticGender = headChunk.semanticGender.slice();
+        dependentChunk.gender = headChunk.gender.slice();
+
+        doneTraitKeys.push("gender", "semanticGender");
+      } else if (
+        dependentChunk.specificIds.some((id) => id.split("-")[2] === "PERSONAL")
+      ) {
+        if (dependentChunk.specificIds.length > 1) {
+          consol.throw(
+            `smce More than one specificId even though specificId array includes "pro-PERSONAL"? [${dependentChunk.specificIds.join(
+              ","
+            )}]`
+          );
+        }
+        if (dependentChunk.gcase.length > 1) {
+          consol.throw(`smcf More than one gcase?`);
+        }
+
+        dependentChunk.semanticGender = headChunk.semanticGender.slice();
+        dependentChunk.gender =
+          dependentChunk.gcase[0] === "nom"
+            ? headChunk.semanticGender.slice()
+            : headChunk.gender.slice();
+
+        doneTraitKeys.push("gender", "semanticGender");
+      }
+    } else if (gpUtils.getWordtypeShorthandStCh(dependentChunk) === "npe") {
+      // HFT1b
+      // If depChunk is npe (and headChunk is hypernym) - "My parent(head) is a woman(dep)."
+      // don't transfer "rodzic" gender m1 to "woman", just semanticGender f.
+      dependentChunk.gender = headChunk.semanticGender.slice();
+      dependentChunk.semanticGender = headChunk.semanticGender.slice();
+
+      doneTraitKeys.push("gender", "semanticGender");
+    }
+  }
+
   inheritableInflectionKeys.forEach((traitKey) => {
+    if (doneTraitKeys.includes(traitKey)) {
+      return;
+    }
     consol.log(
       `kwwm inheritFromHeadToDependentChunk: "${headChunk.chunkId}" to "${dependentChunk.chunkId}". traitKey "${traitKey}".`
     );

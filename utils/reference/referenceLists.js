@@ -1,5 +1,13 @@
 exports.tantumTypes = ["tantumPlurale", "tantumSingulare"];
 
+exports.HY = {
+  VY: "vypernym", // virile hypernyms eg "padre" means both "parent" and "father"
+  VO: "vyponym", // "madre" is including in meaning of "padre"
+  HY: "hypernym", // "parent" is non gender specific
+  HO: "hyponym", // "mother" and "father" are included in meaning of "parent"
+  AofQVY: "answerChunkOfAQuestionChunkVypernym",
+};
+
 exports.incompatibleTraitsRef = {
   POL: {
     //If we're examining gender traitKey.
@@ -56,6 +64,7 @@ exports.metaCorrectionRef = {
           _PersonalGenders: "_PersonalSingularGenders",
           _PersonalSingularGenders: "_PersonalSingularGenders",
           _PersonalPluralGenders: false,
+          _VypernymGenders: "m",
         },
       },
       {
@@ -67,6 +76,7 @@ exports.metaCorrectionRef = {
           _PersonalGenders: "_PersonalPluralGenders",
           _PersonalSingularGenders: false,
           _PersonalPluralGenders: "_PersonalPluralGenders",
+          _VypernymGenders: "virile", //Garibaldi says this not "_PersonalPluralGenders"
         },
       },
     ],
@@ -82,6 +92,7 @@ exports.metaCorrectionRef = {
           _PersonalGenders: "_PersonalSingularGenders",
           _PersonalSingularGenders: "_PersonalSingularGenders",
           _PersonalPluralGenders: false,
+          _VypernymGenders: "m",
         },
       },
       {
@@ -93,6 +104,7 @@ exports.metaCorrectionRef = {
           _PersonalGenders: "_PersonalPluralGenders",
           _PersonalSingularGenders: false,
           _PersonalPluralGenders: "_PersonalPluralGenders",
+          _VypernymGenders: "virile", //Garibaldi says this not "_PersonalPluralGenders"
         },
       },
     ],
@@ -109,6 +121,7 @@ exports.metaCorrectionRef = {
           _PersonalGenders: "_PersonalSingularGenders",
           _PersonalSingularGenders: "_PersonalSingularGenders",
           _PersonalPluralGenders: false,
+          _VypernymGenders: "m1",
         },
       },
       {
@@ -121,6 +134,7 @@ exports.metaCorrectionRef = {
           _PersonalGenders: "_PersonalPluralGenders",
           _PersonalSingularGenders: false,
           _PersonalPluralGenders: "_PersonalPluralGenders",
+          _VypernymGenders: "virile", //Garibaldi says this not "_PersonalPluralGenders"
         },
       },
     ],
@@ -150,12 +164,12 @@ exports.metaTraitValues = {
       _PersonalPluralGenders: ["virile", "nonvirile"],
 
       _NonpersonalGenders: ["n", "nonvirile"],
-      // _NonpersonalSingularGenders: ["n"],
-      _NonpersonalSingularGenders: ["m", "f", "n"], //Beta Is that right?
+      _NonpersonalSingularGenders: ["n"], // In ENG nonpersons cannot be m or f. I realise pet animals sometimes, but these will always be "it" in this app, see FYIP102.
       _NonpersonalPluralGenders: ["nonvirile"],
 
       _SingularGendersExcludingNeuter: ["m", "f"],
       _MasculineSingularGenders: ["m"],
+      _VypernymGenders: ["m", "virile"], //Garibaldi says not include "nonvirile"
     },
   },
   SPA: {
@@ -179,12 +193,13 @@ exports.metaTraitValues = {
       _PersonalSingularGenders: ["m", "f"],
       _PersonalPluralGenders: ["virile", "nonvirile"],
 
-      _NonpersonalGenders: ["m", "f", "nonvirile"], //beta is that right?
+      _NonpersonalGenders: ["m", "f", "nonvirile"],
       _NonpersonalSingularGenders: ["m", "f"],
       _NonpersonalPluralGenders: ["nonvirile"],
 
       _SingularGendersExcludingNeuter: ["m", "f"],
       _MasculineSingularGenders: ["m"],
+      _VypernymGenders: ["m", "virile"], //Garibaldi says not include "nonvirile"
     },
   },
   POL: {
@@ -204,6 +219,7 @@ exports.metaTraitValues = {
     form: { _pronombreAndDeterminer: ["pronombre", "determiner"] },
     gender: {
       _Genders: [
+        // Don't put "m" here.
         "m1",
         "m2",
         "m3",
@@ -233,6 +249,10 @@ exports.metaTraitValues = {
 
       _SingularGendersExcludingNeuter: ["m1", "m2", "m3", "f", "f", "f"],
       _MasculineSingularGenders: ["m1", "m2", "m3"],
+      _VypernymGenders: [
+        "m1",
+        "virile", //Garibaldi says not include "nonvirile"
+      ],
     },
   },
 };
@@ -271,13 +291,19 @@ exports.lemmaObjectTraitKeys = {
         "aspect",
         "tenseDescription",
       ],
-      pronombre: ["person", "number", "gender", "gcase"],
+      pronombre: ["person", "number", "gender", "semanticGender", "gcase"],
     },
     allowableTransfersFromQuestionStructure: {
       nounCommon: ["number"],
-      nounPerson: ["number"],
-      adjective: ["form", "number", "gender"],
-      verb: ["tenseDescription", "person", "number", "gender"],
+      nounPerson: ["number", "semanticGender", "virilityDetail"],
+      adjective: ["form", "number", "gender", "semanticGender"],
+      verb: [
+        "tenseDescription",
+        "person",
+        "number",
+        "gender",
+        "semanticGender",
+      ],
       pronombre: ["person", "number", "gender"],
       preposition: [],
     },
@@ -301,7 +327,7 @@ exports.lemmaObjectTraitKeys = {
       nounCommon: ["number", "gcase"],
       nounPerson: ["number", "gcase"],
       adjective: ["form", "number", "gender"],
-      verb: ["form", "tense", "gender", "person", "number"], // "gender" will be _Genders for in all tenses except pastParticiple ie hechas, escritos.
+      verb: ["form", "tense", "gender", "person", "number"], // "gender" will be _Genders in all tenses except pastParticiple ie hechas, escritos.
       pronombre: ["form", "person", "number", "gender", "gcase"],
       article: ["form", "number", "gender"],
       preposition: ["form"],
@@ -317,15 +343,21 @@ exports.lemmaObjectTraitKeys = {
         "gender", // Los libros son escritos. --> "libros" gives gender and number to "escritos"
         // "tenseDescription" // epsilon add this, and to ENG too?
       ],
-      pronombre: ["person", "number", "gender", "gcase"],
+      pronombre: ["person", "number", "gender", "semanticGender", "gcase"],
       article: ["number", "gender"],
     },
     allowableTransfersFromQuestionStructure: {
       nounCommon: ["number"],
-      nounPerson: ["number"],
-      adjective: ["form", "number", "gender"],
-      verb: ["tenseDescription", "person", "number", "gender"],
-      pronombre: ["form", "person", "number", "gender"],
+      nounPerson: ["number", "semanticGender", "virilityDetail"],
+      adjective: ["form", "number", "gender", "semanticGender"],
+      verb: [
+        "tenseDescription",
+        "person",
+        "number",
+        "gender",
+        "semanticGender",
+      ],
+      pronombre: ["form", "person", "number", "gender", "semanticGender"],
       article: [],
       preposition: [],
     },
@@ -359,15 +391,21 @@ exports.lemmaObjectTraitKeys = {
       nounPerson: ["number", "gcase", "gender"],
       adjective: [],
       verb: ["tense", "person", "number"],
-      pronombre: ["person", "number", "gender", "gcase"],
+      pronombre: ["person", "number", "gender", "semanticGender", "gcase"],
       article: ["number"],
     },
     allowableTransfersFromQuestionStructure: {
       nounCommon: ["number"],
-      nounPerson: ["number"],
+      nounPerson: ["number", "semanticGender", "virilityDetail"],
       adjective: ["form"],
-      verb: ["tenseDescription", "person", "number", "gender"],
-      pronombre: ["form", "person", "number", "gender"],
+      verb: [
+        "tenseDescription",
+        "person",
+        "number",
+        "gender",
+        "semanticGender",
+      ],
+      pronombre: ["form", "person", "number", "gender", "semanticGender"],
       article: [],
       preposition: [],
     },
@@ -469,6 +507,9 @@ exports.structureChunkTraits = {
     //   ultimatelyMultipleTraitValuesOkay: true,
     // },
     dontSpecifyOnThisChunk: { expectedTypeOnStCh: "boolean" },
+    originalSitSelectedLObj: {
+      expectedTypeOnStCh: "keyValueObject",
+    },
     specificIds: {
       expectedTypeOnStCh: "array",
       ultimatelyMultipleTraitValuesOkay: true,
@@ -536,6 +577,32 @@ exports.structureChunkTraits = {
     isPerson: {
       expectedTypeOnStCh: "boolean",
       compatibleWordtypes: ["pronombre"],
+    },
+    hypernymy: {
+      expectedTypeOnStCh: "string",
+      compatibleWordtypes: ["nounPerson"],
+      possibleTraitValuesPerWordtype: {
+        nounPerson: [Object.values(exports.HY)],
+      },
+    },
+    virilityDetail: {
+      expectedTypeOnStCh: "array",
+      compatibleWordtypes: ["nounPerson"],
+      possibleTraitValuesPerWordtype: {
+        nounPerson: ["mixed", "males", "males!", "male", "male!"],
+        // The "!" is stronger, so "males" could come out with no clarifier, but "males!" will have clarifier that it is men only.
+      },
+    },
+    semanticGender: {
+      expectedTypeOnStCh: "array",
+      compatibleWordtypes: ["nounPerson"],
+      possibleTraitValuesPerWordtype: {
+        nounPerson: ["m", "m1", "m2", "m3", "f", "virile", "nonvirile"],
+      },
+    },
+    giveMeTheseClarifiersOfMyHeadChunk: {
+      expectedTypeOnStCh: "array",
+      ultimatelyMultipleTraitValuesOkay: true,
     },
   },
   POL: {

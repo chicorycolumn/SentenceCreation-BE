@@ -2,6 +2,7 @@ const uUtils = require("./universalUtils.js");
 const consol = require("./zerothOrder/consoleLoggingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 const refFxn = require("./reference/referenceFunctions.js");
+const { assessHypernymy } = require("./lemmaFilteringUtils.js");
 
 exports.collectAllValuesFromKeyOnObjectsInNestedArrayOfObjects = (
   nestedArrOfObjects,
@@ -143,6 +144,13 @@ exports.updateSentenceStructureWithNewStructureChunksFromOutputUnits = (
     sentenceStructure[indexOfStChToChange] = uUtils.copyWithoutReference(
       unit.structureChunk
     );
+
+    if (exports.getWordtypeStCh(unit.structureChunk) !== "fixed") {
+      let hypernymy = assessHypernymy(unit.selectedLemmaObject);
+      if (hypernymy) {
+        sentenceStructure[indexOfStChToChange].hypernymy = hypernymy;
+      }
+    }
   });
 };
 

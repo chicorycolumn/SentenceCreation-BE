@@ -9,6 +9,10 @@ const refFxn = require("./reference/referenceFunctions.js");
 const aaUtils = require("./auxiliaryAttributeUtils.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
 const allLangUtils = require("./allLangUtils.js");
+const { HY } = refObj;
+const {
+  malePersonsInThisLanguageHaveWhatGender,
+} = require("./reference/referenceLists.js");
 
 exports.firstStageEvaluateAnnotations = (
   questionOutputArr,
@@ -46,6 +50,13 @@ exports.firstStageEvaluateAnnotations = (
   );
 
   aaUtils.removeAnnotationsByAOCs(
+    questionOutputArr,
+    languagesObj,
+    answerSentenceData
+  );
+
+  // Garibaldi part 3
+  aaUtils.removeAnnotationsByVypernym(
     questionOutputArr,
     languagesObj,
     answerSentenceData
@@ -163,6 +174,108 @@ exports.getDepUnits = (
       (unit) =>
         gpUtils.getWordtypeStCh(unit.structureChunk) === allDependentWordtype
     );
+};
+
+exports.removeAnnotationsByVypernym = (
+  questionOutputArr,
+  languagesObj,
+  answerSentenceData
+) => {
+  let malePersonGender =
+    malePersonsInThisLanguageHaveWhatGender[languagesObj.questionLanguage];
+
+  questionOutputArr.forEach((questionOutputUnit) => {
+    let qStCh = questionOutputUnit.structureChunk;
+    if (
+      gpUtils.getWordtypeStCh(qStCh) !== "fixed" &&
+      lfUtils.checkHyper(questionOutputUnit.selectedLemmaObject, [HY.VY]) &&
+      qStCh.annotations &&
+      Object.keys(qStCh.annotations).includes("semanticGender")
+    ) {
+      if (
+        ![malePersonGender, "virile"].includes(
+          qStCh.annotations["semanticGender"]
+        ) &&
+        !(
+          qStCh.virilityDetail &&
+          qStCh.virilityDetail.length &&
+          ["males!", "male!"].includes(structureChunk.virilityDetail[0])
+        )
+      ) {
+        consol.throw(
+          `fbds "${qStCh.chunkId}" Expected semanticGender anno to be m or virile but was ${qStCh.annotations["semanticGender"]}`
+        );
+      }
+
+      if (qStCh.gender.length !== 1) {
+        consol.throw(
+          `tdid Expected gender to have 1 value on "${qStCh.chunkId}"`
+        );
+      }
+
+      let cond1 = answerSentenceData.answerOutputArrays.every(
+        (answerOutputArray) => {
+          let answerOutputUnit = answerOutputArray.find(
+            (unit) => unit.structureChunk.chunkId === qStCh.chunkId
+          );
+          return (
+            gpUtils.lObjIsMGN(answerOutputUnit.selectedLemmaObject) &&
+            !answerOutputUnit.structureChunk.virilityDetail === "mixed"
+          );
+        }
+      );
+
+      let cond2 =
+        qStCh.gender[0] === malePersonGender &&
+        !qStCh.virilityDetail &&
+        ["males!", "male!"].includes(qStCh.virilityDetail[0]);
+
+      let cond3 =
+        qStCh.virilityDetail &&
+        ["males", "male"].includes(qStCh.virilityDetail[0]);
+
+      let cond4 = answerSentenceData.answerOutputArrays.every(
+        (answerOutputArray) => {
+          let answerOutputUnit = answerOutputArray.find(
+            (unit) => unit.structureChunk.chunkId === qStCh.chunkId
+          );
+          return lfUtils.checkHyper(answerOutputUnit.selectedLemmaObject, [
+            HY.VY,
+          ]);
+        }
+      );
+
+      let cond5 = answerSentenceData.answerOutputArrays.every(
+        (answerOutputArray) => {
+          let answerOutputUnit = answerOutputArray.find(
+            (unit) => unit.structureChunk.chunkId === qStCh.chunkId
+          );
+          return !lfUtils.checkHyper(answerOutputUnit.selectedLemmaObject, [
+            HY.VY,
+            HY.HY,
+            HY.VO,
+            HY.HO,
+          ]);
+        }
+      );
+
+      if (cond1 || cond2 || cond3 || cond4 || cond5) {
+        consol.logSpecial(
+          3,
+          { cond1, cond2, cond3, cond4, cond5 },
+          `hafm removeAnnotationsByVypernym "${qStCh.chunkId}" ⭕ Deleting annotation semanticGender which was "${qStCh.annotations["semanticGender"]}".`
+        );
+
+        delete qStCh.annotations["semanticGender"];
+      } else {
+        consol.logSpecial(
+          3,
+          { cond1, cond2, cond3, cond4, cond5 },
+          `hafn removeAnnotationsByVypernym "${qStCh.chunkId}" 🉑 DID NOT DELETE ANNOTATION semanticGender which was "${qStCh.annotations["semanticGender"]}".`
+        );
+      }
+    }
+  });
 };
 
 exports.removeAnnotationsByAOCs = (
@@ -542,6 +655,7 @@ exports.addSpecifiersToMGNs = (questionSentenceData, languagesObj) => {
   };
 
   _addSpecifiersToMGNs(questionUnitsToSpecify, metaGenders, "gender");
+  _addSpecifiersToMGNs(questionUnitsToSpecify, metaGenders, "semanticGender");
 };
 
 exports.sortAnswerAndQuestionStructureChunks = (

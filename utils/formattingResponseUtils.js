@@ -48,6 +48,13 @@ exports.finishAndSend = (
 
   refs.forEach((ref) => {
     if (ref.responseObject) {
+      if (ref.responseObject.FYIPs) {
+        if (!combinedResponseObj.FYIPs) {
+          combinedResponseObj.FYIPs = [];
+        }
+        combinedResponseObj.FYIPs.push(...ref.responseObject.FYIPs);
+      }
+
       combinedResponseObj[ref.mode + "SentenceArr"] =
         ref.responseObject.finalSentenceArr || [];
 

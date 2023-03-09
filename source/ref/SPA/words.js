@@ -25,8 +25,9 @@ exports.wordsBank = {
     {
       //selectors
       lemma: "padre",
-      id: "spa-npe-002-padre",
+      id: "spa-npe-002-padre-€",
       gender: "m",
+      semanticGender: "_VypernymGenders",
       //notes
 
       //inflections
@@ -38,6 +39,123 @@ exports.wordsBank = {
         plural: {
           nom: "padres",
           gen: "de los padres",
+        },
+      },
+    },
+    {
+      //selectors
+      lemma: "chica",
+      id: "spa-npe-003-chica",
+      gender: "f",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "chica",
+          gen: "de la chica",
+        },
+        plural: {
+          nom: "chica",
+          gen: "de las chicas",
+        },
+      },
+    },
+    {
+      //selectors
+      lemma: "chico",
+      id: "spa-npe-003-chico-€",
+      gender: "m",
+      semanticGender: "_VypernymGenders",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "chico",
+          gen: "del chico",
+        },
+        plural: {
+          nom: "chicos",
+          gen: "de los chicos",
+        },
+      },
+    },
+    {
+      //selectors
+      lemma: "niña",
+      id: "spa-npe-004-niña",
+      gender: "f",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "niña",
+          gen: "de la niña",
+        },
+        plural: {
+          nom: "niñas",
+          gen: "de las niñas",
+        },
+      },
+    },
+    {
+      //selectors
+      lemma: "niño",
+      id: "spa-npe-004-niño-€",
+      gender: "m",
+      semanticGender: "_VypernymGenders",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "niño",
+          gen: "del niño",
+        },
+        plural: {
+          nom: "niños",
+          gen: "de los niños",
+        },
+      },
+    },
+    {
+      //selectors
+      lemma: "medico",
+      id: "spa-npe-001-medico-€",
+      gender: "m",
+      semanticGender: "_VypernymGenders",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "medico",
+          gen: "del medico",
+        },
+        plural: {
+          nom: "medicos",
+          gen: "de los medicos",
+        },
+      },
+    },
+    {
+      //selectors
+      lemma: "medica",
+      id: "spa-npe-001-medica",
+      gender: "f",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "medica",
+          gen: "de la medica",
+        },
+        plural: {
+          nom: "medicas",
+          gen: "de las medicas",
         },
       },
     },
@@ -68,6 +186,29 @@ exports.wordsBank = {
         comparative: false,
         superlative: false,
         adverb: false,
+      },
+    },
+    {
+      //selectors
+      lemma: "bueno",
+      id: "spa-adj-002-bueno",
+      //notes
+
+      //inflections
+      inflections: {
+        simple: {
+          singular: {
+            m: "bueno", //Gamma, before nouns this is "buen" so need terminus obj here.
+            f: "buena",
+          },
+          plural: {
+            virile: "buenos",
+            nonvirile: "buenas",
+          },
+        },
+        comparative: "mejor",
+        superlative: true, // Gamma programmatically build this once gender is known.
+        adverb: "bien",
       },
     },
   ],

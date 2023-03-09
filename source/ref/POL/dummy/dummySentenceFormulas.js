@@ -433,11 +433,9 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "npe-1",
-
         andTags: ["personTest1"],
-
+        specificIds: ["^pol-npe-011-kobieta"],
         number: ["singular", "plural"],
-        gender: ["f"],
       },
       {
         chunkId: "ver-1",
@@ -455,9 +453,8 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "npe-1",
-
         andTags: ["personTest1"],
-
+        specificIds: ["^pol-npe-011-kobieta"],
         number: ["singular", "plural"],
         gender: ["f"],
       },
@@ -1499,8 +1496,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "npe-1",
-
-        specificIds: ["pol-npe-011-kobieta"],
+        specificIds: ["^pol-npe-011-kobieta"],
         number: ["singular"],
       },
       {
@@ -1852,8 +1848,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "npe-1",
-
-        specificIds: ["pol-npe-011-kobieta"],
+        specificIds: ["^pol-npe-011-kobieta"],
         number: ["singular"],
       },
     ],
@@ -2225,7 +2220,7 @@ exports.dummySentenceFormulasBank = [
       },
       {
         chunkId: "npe-1-Woman",
-        specificIds: ["pol-npe-011-kobieta", "pol-npe-012-chłopiec"],
+        specificIds: ["pol-npe-013-parentarooni"],
         number: ["singular"],
       },
       { chunkId: "fix-2-And", chunkValue: "i" },
@@ -2347,9 +2342,9 @@ exports.dummySentenceFormulasBank = [
       {
         chunkId: "nco-1-Rats",
         specificIds: [
-          "pol-nco-001-szczur",
-          "pol-npe-011-kobieta",
-          "pol-npe-012-chłopiec",
+          "^pol-nco-001-szczur",
+          "^pol-npe-011-kobieta",
+          "^pol-npe-012-chłopiec",
         ],
         number: ["plural"],
       },
@@ -2672,6 +2667,143 @@ exports.dummySentenceFormulasBank = [
       },
     ],
     primaryOrders: [["fix-1-W", "adj-1-Small", "nco-1-Hole"]],
+    additionalOrders: [],
+  },
+  {
+    sentenceFormulaSymbol: "dummy72a",
+    sentenceFormulaId: "POL-dummy72a",
+    equivalents: {
+      ENG: ["ENG-dummy72a"],
+      POL: ["POL-dummy72a"],
+      SPA: ["SPA-dummy72a"],
+    },
+    sentenceStructure: [
+      {
+        chunkId: "nco-1",
+        specificIds: ["pol-nco-012-cebula", "pol-nco-011-niedźwiedź"],
+      },
+      {
+        chunkId: "adj-1",
+        agreeWith: "nco-1",
+        specificIds: ["pol-adj-011-czerwony"],
+      },
+    ],
+    primaryOrders: [["adj-1", "nco-1"]],
+    additionalOrders: [],
+  },
+  {
+    sentenceFormulaSymbol: "dummy72b",
+    sentenceFormulaId: "POL-dummy72b",
+    equivalents: {
+      ENG: ["ENG-dummy72b"],
+      POL: ["POL-dummy72b"],
+      SPA: ["SPA-dummy72b"],
+    },
+    sentenceStructure: [
+      {
+        chunkId: "npe-1",
+        specificIds: ["pol-npe-015-lekarz"],
+      },
+      {
+        chunkId: "adj-1",
+        agreeWith: "npe-1",
+        specificIds: ["pol-adj-011-czerwony"],
+      },
+    ],
+    primaryOrders: [["adj-1", "npe-1"]],
+    additionalOrders: [],
+  },
+  {
+    sentenceFormulaSymbol: "dummy72c",
+    sentenceFormulaId: "POL-dummy72c",
+    equivalents: {
+      ENG: ["ENG-dummy72c"],
+      POL: ["POL-dummy72c"],
+      SPA: ["SPA-dummy72c"],
+    },
+    sentenceStructure: [
+      {
+        chunkId: "npe-1",
+        specificIds: ["pol-npe-013-parentaroonie"],
+      },
+      {
+        chunkId: "adj-1",
+        agreeWith: "npe-1",
+        specificIds: ["pol-adj-011-czerwony"],
+      },
+    ],
+    primaryOrders: [["adj-1", "npe-1"]],
+    additionalOrders: [],
+  },
+  {
+    sentenceFormulaSymbol: "dummy73a",
+    sentenceFormulaId: "POL-dummy73a",
+    equivalents: {
+      ENG: ["ENG-dummy73a"],
+      POL: ["POL-dummy73a"],
+      SPA: ["SPA-dummy73a"],
+    },
+    sentenceStructure: [
+      {
+        chunkId: "npe-1",
+        specificIds: ["^pol-npe-012-dziecko-£"],
+      },
+      {
+        chunkId: "adj-1",
+        agreeWith: "npe-1",
+        specificIds: ["pol-adj-011-czerwony"],
+      },
+    ],
+    primaryOrders: [["adj-1", "npe-1"]],
+    additionalOrders: [],
+  },
+  {
+    sentenceFormulaSymbol: "dummy73b",
+    sentenceFormulaId: "POL-dummy73b",
+    equivalents: {
+      ENG: ["ENG-dummy73b"],
+      POL: ["POL-dummy73b"],
+      SPA: ["SPA-dummy73b"],
+    },
+    sentenceStructure: [
+      {
+        chunkId: "npe-1",
+        specificIds: ["pol-npe-012-boy"],
+        gender: ["f"],
+      },
+      {
+        chunkId: "adj-1",
+        agreeWith: "npe-1",
+        specificIds: ["pol-adj-011-czerwony"],
+      },
+    ],
+    primaryOrders: [["adj-1", "npe-1"]],
+    additionalOrders: [],
+  },
+  {
+    sentenceFormulaSymbol: "dummy74",
+    sentenceFormulaId: "POL-dummy74",
+    equivalents: {
+      ENG: ["ENG-dummy74"],
+      POL: ["POL-dummy74"],
+    },
+    sentenceStructure: [
+      {
+        chunkId: "fix-1",
+        chunkValue: "jedna",
+      },
+      {
+        chunkId: "adj-1",
+        agreeWith: "npe-1",
+        specificIds: ["pol-adj-011-czerwony"],
+      },
+      {
+        chunkId: "npe-1",
+        specificIds: ["^pol-npe-011-osoba-£"],
+        number: ["singular"],
+      },
+    ],
+    primaryOrders: [["fix-1", "adj-1", "npe-1"]],
     additionalOrders: [],
   },
 ];

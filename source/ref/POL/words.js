@@ -35,6 +35,90 @@ exports.wordsBank = {
     },
     {
       //selectors
+      lemma: "osoba",
+      id: "pol-npe-011-osoba-£",
+      gender: "f",
+      semanticGender: "_PersonalGenders",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "osoba",
+          gen: "osoby",
+          dat: "osobie",
+          acc: "osobę",
+          ins: "osobą",
+          loc: "osobie",
+        },
+        plural: {
+          nom: "osoby",
+          gen: "osób",
+          dat: "osobom",
+          acc: "osoby",
+          ins: "osobami",
+          loc: "osobach",
+        },
+      },
+    },
+    {
+      //selectors
+      lemma: "ludzie",
+      id: "pol-npe-011-ludzie-£",
+      gender: "m1",
+      semanticGender: "_PersonalGenders",
+      //notes
+      lacking: true,
+      /**
+       * When I say "tantumPlurale", it means words which can refer to only one thing.
+       *
+       * So "drwi" is "tantumPlurale", because it can mean "door" as well as "doors".
+       * But "ludzie" is NOT a "tantumPlurale", because it can't mean "person", it only means "people".
+       *
+       * So "ludzie" is just a "lacking" lObj, ie it is missing its singular inflections,
+       * while "drwi" is both "lacking" and "tantumPlurale".
+       *  */
+      //inflections
+      inflections: {
+        plural: {
+          nom: "ludzie",
+          gen: "ludzi",
+          dat: "ludziom",
+          acc: "ludzi",
+          ins: "ludźmi",
+          loc: "ludziach",
+        },
+      },
+    },
+    {
+      //selectors
+      lemma: "mężczyzna",
+      id: "pol-npe-011-mężczyzna",
+      gender: "m1",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "mężczyzna",
+          gen: "mężczyzny",
+          dat: "mężczyźnie",
+          acc: "mężczyznę",
+          ins: "mężczyzną",
+          loc: "mężczyźnie",
+        },
+        plural: {
+          nom: "mężczyźni",
+          gen: "mężczyzn",
+          dat: "mężczyznom",
+          acc: "mężczyzn",
+          ins: "mężczyznami",
+          loc: "mężczyznach",
+        },
+      },
+    },
+    {
+      //selectors
       lemma: "ojciec",
       id: "pol-npe-013-ojciec",
       gender: "m1",
@@ -63,7 +147,7 @@ exports.wordsBank = {
     {
       //selectors
       lemma: "matka",
-      id: "pol-npe-014-matka",
+      id: "pol-npe-013-matka",
       gender: "f",
       //notes
 
@@ -84,6 +168,34 @@ exports.wordsBank = {
           acc: "matki",
           ins: "matkami",
           loc: "matkach",
+        },
+      },
+    },
+    {
+      //selectors
+      lemma: "rodzic",
+      id: "pol-npe-013-rodzic-£",
+      gender: "m1",
+      semanticGender: "_PersonalGenders",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "rodzic",
+          gen: "rodzica",
+          dat: "rodzicowi",
+          acc: "rodzica",
+          ins: "rodzicem",
+          loc: "rodzicu",
+        },
+        plural: {
+          nom: "rodzice",
+          gen: "rodziców",
+          dat: "rodzicom",
+          acc: "rodziców",
+          ins: "rodzicami",
+          loc: "rodzicach",
         },
       },
     },
@@ -150,9 +262,65 @@ exports.wordsBank = {
     },
     {
       //selectors
+      lemma: "dziewczyna",
+      id: "pol-npe-012-dziewczyna",
+      gender: "f",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "dziewczyna",
+          gen: "dziewczyny",
+          dat: "dziewczynie",
+          acc: "dziewczynę",
+          ins: "dziewczyną",
+          loc: "dziewczynie",
+        },
+        plural: {
+          nom: "dziewczyny",
+          gen: "dziewczyn",
+          dat: "dziewczynom",
+          acc: "dziewczyny",
+          ins: "dziewczynami",
+          loc: "dziewczynach",
+        },
+      },
+    },
+    {
+      //selectors
+      lemma: "dziecko",
+      id: "pol-npe-012-dziecko-£",
+      gender: "n",
+      semanticGender: "_PersonalGenders",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "dziecko",
+          gen: "dziecka",
+          dat: "dziecku",
+          acc: "dziecko",
+          ins: "dzieckiem",
+          loc: "dziecku",
+        },
+        plural: {
+          nom: "dzieci",
+          gen: "dzieci",
+          dat: "dzieciom",
+          acc: "dzieci",
+          ins: "dziećmi",
+          loc: "dzieciach",
+        },
+      },
+    },
+    {
+      //selectors
       lemma: "lekarz",
-      id: "pol-npe-015-lekarz",
+      id: "pol-npe-015-lekarz-€",
       gender: "m1",
+      semanticGender: "_VypernymGenders",
       //notes
 
       //inflections
@@ -1819,6 +1987,81 @@ exports.wordsBank = {
   adj: [
     {
       //selectors
+      lemma: "dobry",
+      id: "pol-adj-010-dobry",
+      //notes
+
+      //inflections
+      inflections: {
+        simple: {
+          singular: {
+            m1: {
+              nom: "dobry",
+              gen: "dobrego",
+              dat: "dobremu",
+              acc: "dobrego",
+              ins: "dobrym",
+              loc: "dobrym",
+            },
+            m3: {
+              nom: "dobry",
+              gen: "dobrego",
+              dat: "dobremu",
+              acc: "dobry",
+              ins: "dobrym",
+              loc: "dobrym",
+            },
+            f: {
+              nom: "dobra",
+              gen: "dobrej",
+              dat: "dobrej",
+              acc: "dobrą",
+              ins: "dobrą",
+              loc: "dobrej",
+            },
+            n: {
+              nom: "dobre",
+              gen: "dobrego",
+              dat: "dobremu",
+              acc: "dobre",
+              ins: "dobrym",
+              loc: "dobrym",
+            },
+          },
+          plural: {
+            virile: {
+              nom: "dobrzy",
+              gen: "dobrych",
+              dat: "dobrym",
+              acc: "dobrych",
+              ins: "dobrymi",
+              loc: "dobrych",
+            },
+            nonvirile: {
+              nom: "dobre",
+              gen: "dobrych",
+              dat: "dobrym",
+              acc: "dobre",
+              ins: "dobrymi",
+              loc: "dobrych",
+            },
+          },
+        },
+        comparative: {
+          isTerminus: true,
+          normal: ["lepszy"],
+          isRegular: true,
+        },
+        superlative: {
+          isTerminus: true,
+          normal: ["najlepszy"],
+          isRegular: true,
+        },
+        adverb: "dobrze",
+      },
+    },
+    {
+      //selectors
       lemma: "czerwony",
       id: "pol-adj-011-czerwony",
       //notes
@@ -2054,7 +2297,7 @@ exports.wordsBank = {
                   isTerminus: true,
                   processOnlyAtEnd: true,
                   unstressed: ["mi"],
-                  stressed: ["mnie"], //Beta, be aware of this.
+                  stressed: ["mnie"],
                 },
                 acc: "mnie",
                 ins: "mną",

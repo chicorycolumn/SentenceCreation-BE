@@ -62,11 +62,25 @@ exports.findMatchingLemmaObjectThenWord = (
     if (useDummyWords) {
       matches = source.filter((l) => structureChunk.specificIds.includes(l.id));
     } else {
-      matches = source.filter((lObj) => {
-        return structureChunk.specificIds.some((specificId) =>
-          allLangUtils.compareLObjStems(lObj.id, specificId)
-        );
-      });
+      let blockHypernymsIfAnswerMode = !!questionLanguage;
+
+      matches = lfUtils.getLObjAndSiblings(
+        source,
+        structureChunk.specificIds,
+        false, // blockHypernymsIfAnswerMode,
+        "findMatching",
+        null,
+        structureChunk.gender
+      );
+
+      let matchesLengthSnap = matches.length;
+
+      if (structureChunk.originalSitSelectedLObj) {
+        matches = lfUtils.filterByDemandedLObj(structureChunk, matches);
+        if (matchesLengthSnap && !matches.length) {
+          consol.throw("alro " + structureChunk.originalSitSelectedLObj.id);
+        }
+      }
     }
 
     consol.log(
@@ -1283,8 +1297,10 @@ exports.switchMetaTraitValueForAWorkableConvertedTraitValue = (
       "[0m"
   );
 
+  let refAdjustedInflectionCategory =
+    inflectionCategory === "semanticGender" ? "gender" : inflectionCategory;
   let convertedMetaTraitValues = refObj.metaTraitValues[currentLanguage][
-    inflectionCategory
+    refAdjustedInflectionCategory
   ][inflectionKey].filter(
     (convertedMetaTraitValue) => source[convertedMetaTraitValue]
   );
@@ -1357,6 +1373,10 @@ exports.doesThisInflectionKeyHoldUniqueInflectionValueInLObj = (
   chosenInflectionCategory,
   drillPath
 ) => {
+  if (chosenInflectionCategory === "semanticGender") {
+    return false;
+  }
+
   let inflectionChain =
     refObj.lemmaObjectTraitKeys[gpUtils.getLanguageFromLemmaObject(lObj)]
       .inflectionChains[gpUtils.getWordtypeLObj(lObj)];

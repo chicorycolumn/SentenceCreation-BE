@@ -7,8 +7,261 @@ const refFxn = require("./reference/referenceFunctions.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
 const nexusUtils = require("../utils/secondOrder/nexusUtils.js");
 const allLangUtils = require("./allLangUtils.js");
+const { HY } = refObj;
+
+exports.checkHyper = (lObj, expectedTypes) => {
+  if (expectedTypes.some((str) => !Object.values(HY).includes(str))) {
+    consol.throw(
+      'tyoe Wrong expectedTypes: ["' + expectedTypes.join('","') + '"]'
+    );
+  }
+  return expectedTypes.includes(lfUtils.assessHypernymy(lObj));
+};
+
+exports.assessHypernymy = (lObj) => {
+  let lang = gpUtils.getLanguageFromLemmaObject(lObj);
+  if (lang === "DUMMY") {
+    return;
+  }
+
+  function _isHypernym(lObj) {
+    return lObj.id.split("-").length > 4 && lObj.id.split("-")[4].includes("£");
+  }
+  function _isVypernym(lObj) {
+    return lObj.id.split("-").length > 4 && lObj.id.split("-")[4].includes("€");
+  }
+  function _isAnswerChunkOfAQuestionChunkVypernym(lObj) {
+    return lObj.id.split("-").length > 4 && lObj.id.split("-")[4].includes("¢");
+  }
+
+  if (_isAnswerChunkOfAQuestionChunkVypernym(lObj)) {
+    return HY.AofQVY;
+  } // Higher priority, ie a lobj with id "...£" which has become "...£¢" when this very fxn was run for Question Mode,
+  // should in Answer Mode be returned as this type (¢), not hypernym type (£).
+
+  if (_isHypernym(lObj)) {
+    return HY.HY;
+  }
+  if (_isVypernym(lObj)) {
+    return HY.VY;
+  }
+
+  let traductions = nexusUtils.getTraductions(lObj, lang, true);
+
+  if (traductions.some((id) => _isHypernym({ id }))) {
+    return HY.HO;
+  }
+  if (traductions.some((id) => _isVypernym({ id }))) {
+    return HY.VO;
+  }
+};
+
+exports.getLObjAndSiblings = (
+  source,
+  ids,
+  blockHypernyms,
+  label,
+  qLObj,
+  stChGender
+) => {
+  consol.logSpecial(7, "litd", label, blockHypernyms, "Looking for", ids);
+
+  let additionalRes = [];
+
+  let res = source.filter((lObj) => {
+    let cease;
+    return ids.some((specificId) => {
+      if (cease) {
+        return false;
+      }
+
+      if (!allLangUtils.compareLObjStems(lObj.id, specificId)) {
+        return false;
+      }
+
+      if (
+        qLObj &&
+        lfUtils.checkHyper(qLObj, [HY.VY]) &&
+        lfUtils.checkHyper(lObj, [HY.VY, HY.HY])
+      ) {
+        let lObjCopy = uUtils.copyWithoutReference(lObj);
+        lObjCopy.id = lObjCopy.id + "¢";
+        additionalRes.push(lObjCopy);
+        consol.logSpecial(7, "Adding ¢", lObjCopy.id);
+        return false;
+      }
+
+      // Nixed to allow Dziecko£ to translate as Baby.
+      // if (
+      //   qLObj &&
+      //   ![HY.VY].includes(lfUtils.assessHypernymy(lObj)) &&
+      //   ![HY.VY].includes(lfUtils.assessHypernymy(qLObj)) &&
+      //   [HY.HY, HY.VY].includes(lfUtils.assessHypernymy(qLObj)) !==
+      //     [HY.HY, HY.VY].includes(lfUtils.assessHypernymy(lObj))
+      // ) {
+      //   consol.logSpecial(7,"Chuck-red ", lObj.id);
+      //   return false;
+      // }
+
+      // All these clauses not currently used, as blockHypernyms only invoked as false.
+      if (blockHypernyms) {
+        consol.throw(
+          "Ah interesting, we are now invoking with blockHypernyms so can start using clauses below."
+        );
+        if (
+          !lfUtils.checkHyper({ id: specificId }, [HY.HY, HY.VY, HY.AofQVY]) &&
+          lfUtils.checkHyper(lObj, [HY.HY, HY.VY])
+        ) {
+          consol.logSpecial(7, "Chuck-yellow ", lObj.id);
+          return false;
+        }
+
+        if (
+          lfUtils.checkHyper({ id: specificId }, [HY.HY]) &&
+          !lfUtils.checkHyper(lObj, [HY.HY])
+        ) {
+          consol.logSpecial(
+            7,
+            "Chuck-green ",
+            lObj.id,
+            "because of",
+            specificId
+          );
+          return false;
+        }
+
+        if (
+          lfUtils.checkHyper({ id: specificId }, HY.AofQVY) &&
+          lfUtils.checkHyper(lObj, [HY.HY, HY.VY])
+        ) {
+          consol.logSpecial(7, "Yes-black ", lObj.id, "because of", specificId);
+          return true;
+        }
+
+        if (
+          !lfUtils.checkHyper({ id: specificId }, [HY.VY]) &&
+          lfUtils.checkHyper(lObj, [HY.VY])
+        ) {
+          consol.logSpecial(7, "Chuck-blue ", lObj.id);
+          return false;
+        }
+      }
+
+      return true;
+    });
+  });
+
+  if (additionalRes.length) {
+    additionalRes.forEach((additionalLObj) => {
+      if (res.some((l) => l.id === additionalLObj.id)) {
+        consol.throw(`akdp ${l.id} in both additionalRes and res.`);
+      }
+    });
+    res.push(...additionalRes);
+  }
+
+  if (!res || !res.length) {
+    console.log(">>", ids);
+    consol.throw(
+      `epma getLObjAndSiblings found no matches for ids printed >> above.`
+    );
+  }
+
+  consol.logSpecial(
+    7,
+    label,
+    blockHypernyms,
+    "epmb Got",
+    res.map((l) => l.id)
+  );
+
+  return res;
+};
+
+exports.adjustHypernymyProportionTraitValues = (stCh, lObj) => {
+  if (stCh.number.length > 1) {
+    if (
+      stCh.number.length > 2 ||
+      !["singular", "plural"].every((tv) => stCh.number.includes(tv))
+    ) {
+      consol.throw("dlvu");
+    }
+    if (lfUtils.checkHyper(lObj, [HY.HY])) {
+      return uUtils.selectRandom([
+        "singular",
+        "plural",
+        "plural",
+        "plural",
+        "plural",
+      ]);
+    }
+    if (lfUtils.checkHyper(lObj, [HY.HO, HY.VO])) {
+      return uUtils.selectRandom([
+        "singular",
+        "singular",
+        "singular",
+        "singular",
+        "plural",
+      ]);
+    }
+  }
+};
+
+exports.adjustHypernymyProportionOutputUnits = (hypernymy, outputUnits) => {
+  let proportionAdjustedOutputUnits = [];
+
+  if ([HY.HY].includes(hypernymy)) {
+    outputUnits.forEach((unit) => {
+      proportionAdjustedOutputUnits.push(unit);
+
+      if (
+        unit.drillPath.some(
+          (drillPathUnit) =>
+            drillPathUnit[0] === "number" && drillPathUnit[1] === "plural"
+        )
+      ) {
+        proportionAdjustedOutputUnits.push(unit);
+        proportionAdjustedOutputUnits.push(unit);
+        proportionAdjustedOutputUnits.push(unit);
+        proportionAdjustedOutputUnits.push(unit);
+      }
+    });
+  } else if ([HY.HO, HY.VO].includes(hypernymy)) {
+    outputUnits.forEach((unit) => {
+      proportionAdjustedOutputUnits.push(unit);
+
+      if (
+        unit.drillPath.some(
+          (drillPathUnit) =>
+            drillPathUnit[0] === "number" && drillPathUnit[1] === "singular"
+        )
+      ) {
+        proportionAdjustedOutputUnits.push(unit);
+        proportionAdjustedOutputUnits.push(unit);
+        proportionAdjustedOutputUnits.push(unit);
+        proportionAdjustedOutputUnits.push(unit);
+      }
+    });
+  }
+
+  return proportionAdjustedOutputUnits;
+};
 
 exports.selectRandOutputUnit = (lObj, stCh, outputUnits) => {
+  let hypernymy = lfUtils.assessHypernymy(lObj);
+
+  if (
+    [HY.HY, HY.HO, HY.VO].includes(hypernymy) &&
+    nexusUtils
+      .getNexusLemmaObjects(lObj)
+      .some((nlobj) => nlobj.requiresHypernymyProportionAdjust)
+  ) {
+    outputUnits = lfUtils.adjustHypernymyProportionOutputUnits(
+      hypernymy,
+      outputUnits
+    );
+  }
+
   return uUtils.selectRandom(outputUnits);
 };
 
@@ -21,17 +274,43 @@ exports.selectRandLObj = (lObjs, stCh, lang) => {
     return lObj;
   };
 
-  if (!lObjs.length) {
-    if (!res) {
-      consol.throw(
-        `ktrl ${lang} "${stCh.chunkId}" selectRandLObj failed to find lObj as input lObj array empty.`
-      );
-    }
+  if (!lObjs.length && !res) {
+    consol.throw(
+      `ktrl ${lang} "${stCh.chunkId}" selectRandLObj failed to find lObj as input lObj array empty.`
+    );
   }
 
-  let res = uUtils.selectRandom(lObjs);
+  if (
+    stCh.number &&
+    stCh.number.includes("singular") &&
+    stCh.number.includes("plural") &&
+    stCh.number.length > 2
+  ) {
+    consol.throw("iwba");
+  }
 
-  return _returnLObj(res, stCh, "simple path");
+  if (stCh.originalSitSelectedLObj) {
+    let matches = lfUtils.filterByDemandedLObj(stCh, lObjs);
+    let res = uUtils.selectRandom(matches);
+
+    consol.logSpecial(
+      8,
+      "byeh selectRandLObj There were",
+      lObjs.length,
+      "lObjs to choose from:",
+      lObjs.map((l) => l.id)
+    );
+
+    if (!res) {
+      consol.throw(
+        `ktrm ${lang} "${stCh.chunkId}" selectRandLObj failed to find lObj from arr (-->above) via --stCh.originalSitSelectedLObj-- [${stCh.originalSitSelectedLObj.id}].`
+      );
+    }
+
+    return _returnLObj(res, stCh, "originalSitSelectedLObj");
+  }
+
+  return _returnLObj(uUtils.selectRandom(lObjs), stCh, "simple path");
 };
 
 exports.selectRandTraitValue = (
@@ -40,6 +319,24 @@ exports.selectRandTraitValue = (
   traitKey,
   traitValues = stCh[traitKey]
 ) => {
+  if (
+    traitKey === "number" &&
+    lfUtils.checkHyper(lObj, [HY.HY, HY.HO, HY.VO]) &&
+    nexusUtils
+      .getNexusLemmaObjects(lObj)
+      .some((nlobj) => nlobj.requiresHypernymyProportionAdjust)
+  ) {
+    let numberTraitValue = lfUtils.adjustHypernymyProportionTraitValues(
+      stCh,
+      lObj
+    );
+    if (!numberTraitValue) {
+      consol.throw("diwm");
+    }
+    stCh[traitKey] = [numberTraitValue];
+    return;
+  }
+
   stCh[traitKey] = [uUtils.selectRandom(traitValues)];
 };
 
@@ -578,12 +875,28 @@ exports.updateStChByAndTagsAndSelectors = (
 
   let doneSelectors = [];
 
+  //STEP MINUS ONE
+  // Specially handle stCh's where lObj has a semanticGender.
+  // eg stCh gender ["f"], and lObj "rodzic" which has gender "m1" and semanticGender "_PersonalGenders"
+  // but if I didn't step in here, stCh would end up with gender "m1" which is wrong.
+
+  lfUtils.updateStChSemanticGenderAndVirilityDetail(
+    selectedLemmaObject,
+    structureChunk,
+    currentLanguage,
+    isCounterfax,
+    doneSelectors,
+    outputUnit,
+    isSecondRound
+  );
+
   //STEP ZERO: Decisive Decant
   //Remove gender traitValues on stCh if drillPath doesn't include the traitKey 'gender' (ie is infinitive or a participle, say).
   //But if lObj is MGN, don't do this.
   let lemmaObjectIsMGN = gpUtils.traitValueIsMeta(selectedLemmaObject.gender);
 
   if (
+    !doneSelectors.includes("gender") &&
     !lemmaObjectIsMGN &&
     drillPath &&
     !drillPath.map((arr) => arr[0]).includes("gender") &&
@@ -623,8 +936,11 @@ exports.updateStChByAndTagsAndSelectors = (
         metaTrait,
       });
 
+      let refAdjustedTraitKey =
+        traitKey === "semanticGender" ? "gender" : traitKey;
+
       let metaTraitConverted =
-        refObj.metaTraitValues[currentLanguage][traitKey][metaTrait];
+        refObj.metaTraitValues[currentLanguage][refAdjustedTraitKey][metaTrait];
 
       if (structureChunk[traitKey] && structureChunk[traitKey].length) {
         structureChunk[traitKey] = structureChunk[traitKey].filter(
@@ -807,7 +1123,10 @@ exports.padOutRequirementArrWithMetaTraitValuesIfNecessary = (
   currentLanguage
 ) => {
   let requirementArr = requirementArrs[traitKey] || [];
-  let metaTraitValueRef = refObj.metaTraitValues[currentLanguage][traitKey];
+
+  let refAdjustedTraitKey = traitKey === "semanticGender" ? "gender" : traitKey;
+  let metaTraitValueRef =
+    refObj.metaTraitValues[currentLanguage][refAdjustedTraitKey];
 
   consol.log(
     "[1;35m " +
@@ -880,24 +1199,151 @@ exports.filterBySelector_inner = (
   answerMode,
   questionOutputArr
 ) => {
-  consol.log(
-    "wdwe filterBySelector_inner START. structureChunk",
-    structureChunk
+  consol.logSpecial(
+    8,
+    `etpa ${currentLanguage} ${structureChunk.chunkId} ${
+      answerMode ? "answerMode" : "questionMode"
+    } filterBySelector_inner START. structureChunk`,
+    structureChunk,
+    "and possible lObjs are:",
+    lemmaObjectArr.map((l) => l.id)
   );
 
-  // let requirementArray =
-  //   lfUtils.padOutRequirementArrWithMetaTraitValuesIfNecessary(
-  //     structureChunk,
-  //     traitKey,
-  //     currentLanguage
-  //   );
+  //
+  // Get materials.
+  //
+  let questionChunk;
+  let questionSelectedLemmaObject;
+  if (answerMode) {
+    let ou = questionOutputArr.find(
+      (ou) => ou.structureChunk.chunkId === structureChunk.chunkId
+    );
+    if (ou) {
+      questionChunk = ou.structureChunk;
+      questionSelectedLemmaObject = ou.selectedLemmaObject;
+
+      if (
+        !questionSelectedLemmaObject &&
+        gpUtils.getWordtypeStCh(questionChunk) !== "fixed"
+      ) {
+        consol.throw("bdwo answer mode but no questionSelectedLemmaObject?");
+      }
+    } else {
+      console.log(
+        "[1;31m " +
+          `slmr No questionChunk for answerChunk "${structureChunk.chunkId}".` +
+          "[0m"
+      );
+    }
+  }
+
+  //
+  // Deal with hypernyms.
+  //
+
+  if (answerMode && questionChunk) {
+    //
+    // Return now with hypernyms and MGNs if qChunk is hypernym.
+    //
+    if (
+      questionSelectedLemmaObject &&
+      lfUtils.checkHyper(questionSelectedLemmaObject, [HY.HY])
+    ) {
+      let hypernymsAndMGNs = lemmaObjectArr.filter(
+        (l) =>
+          this.checkHyper(l, [HY.HY]) ||
+          ["_Genders", "_PersonalGenders"].includes(l.gender)
+        // || ["_Genders", "_PersonalGenders"].includes(l.semanticGender)
+      );
+
+      if (hypernymsAndMGNs.length) {
+        consol.logSpecial(
+          8,
+          `\netpz ${currentLanguage} ${
+            answerMode ? "answerMode" : "questionMode"
+          } Big override right at the start of filterBySelector_inner for stCh "${
+            structureChunk.chunkId
+          }" because Q chunk is hypernym so I will return hypernyms/MGNs for A chunks.`,
+          hypernymsAndMGNs.map((l) => l.id)
+        );
+        return hypernymsAndMGNs;
+      }
+    }
+
+    //
+    // Garibaldi part 3
+    //
+
+    // section A
+    let checkString1 = lemmaObjectArr.map((l) => l.id).join(", ");
+    if (
+      answerMode &&
+      questionChunk.virilityDetail &&
+      ["males!", "male!"].includes(questionChunk.virilityDetail[0])
+    ) {
+      lemmaObjectArr = lemmaObjectArr.filter(
+        (l) => !lfUtils.checkHyper(l, [HY.HY])
+      );
+    }
+
+    // section B
+    if (
+      answerMode &&
+      questionChunk.virilityDetail &&
+      questionChunk.virilityDetail[0] === "mixed"
+    ) {
+      lemmaObjectArr = lemmaObjectArr.filter(
+        (l) =>
+          lfUtils.checkHyper(l, [HY.HY, HY.VY]) || //Garibaldi could be a pain point, perhaps should only be HY.HY here.
+          l.gender !==
+            refObj.malePersonsInThisLanguageHaveWhatGender[currentLanguage]
+      );
+    }
+
+    let checkString2 = lemmaObjectArr.map((l) => l.id).join(", ");
+
+    if (checkString1 !== checkString2) {
+      consol.logSpecial(
+        8,
+        `sswl Adjusted lemmaObjectArr re virilityDetail "${questionChunk.virilityDetail}" so was [${checkString1}] but is now [${checkString2}].`
+      );
+    }
+    if (!lemmaObjectArr.length) {
+      console.log(
+        "[1;31m " +
+          `sswm ${currentLanguage} ${structureChunk.chunkId} ${
+            answerMode ? "answerMode" : "questionMode"
+          } No lObjs found in filterBySelector_inner` +
+          "[0m"
+      );
+    }
+  }
+
+  //
+  // Adjust in case of semanticGender.
+  //
   let requirementArray = structureChunk[traitKey] || [];
 
-  let metaTraitValueRef = refObj.metaTraitValues[currentLanguage][traitKey];
+  if (traitKey === "gender" && structureChunk.semanticGender) {
+    if (answerMode) {
+      requirementArray = [...structureChunk.semanticGender];
+    } else {
+      requirementArray = [
+        ...requirementArray,
+        ...structureChunk.semanticGender,
+      ];
+    }
+  }
+
+  let refAdjustedTraitKey = traitKey === "semanticGender" ? "gender" : traitKey;
+  let metaTraitValueRef =
+    refObj.metaTraitValues[currentLanguage][refAdjustedTraitKey];
 
   consol.log("wdet filterBySelector_inner. requirementArray", requirementArray);
 
-  //And finally, do said filter.
+  //
+  // Finally, do the filter.
+  //
   if (requirementArray.length) {
     consol.logSpecial(
       8,
@@ -912,14 +1358,29 @@ exports.filterBySelector_inner = (
     );
 
     return lemmaObjectArr.filter((lObj) => {
+      if (
+        answerMode &&
+        questionSelectedLemmaObject &&
+        lfUtils.checkHyper(questionSelectedLemmaObject, [HY.HO, HY.VO]) &&
+        lfUtils.checkHyper(lObj, [HY.HY])
+      ) {
+        //Garibaldi part 2
+        consol.logSpecial(8, `mbtt Kicking out "${lObj.id}"`);
+        return false;
+      }
+
       let lObjSelectorValues = [lObj[traitKey]].slice(0);
 
-      //ADJUST VIRILITY OF LOBJ VALUES
+      //
+      // Adjust virility of lObj values.
+      //
+
       //Vito3: Does not change stCh.
       //Filtering lObjs by selector (eg "gender", "aspect").
       //Say lObj has gender "f", but reqArr has "nonvirile" - lObj wouldn't pass the filter, but it should.
       //So add virility values to temporary lObjSelectorValues variable that stands for selectors on the lObj.
       //Now lObj stand-in has genders "f" and "nonvirile" also, so passes filter.
+
       if (traitKey === "gender") {
         structureChunk.number.forEach((numberKey) => {
           let extraVirilityConvertedValues =
@@ -945,27 +1406,49 @@ exports.filterBySelector_inner = (
             ];
           }
         });
+
+        // Neon Approach to Vypernyms issue 205:
+        if (lObj.semanticGender) {
+          lObjSelectorValues.push(lObj.semanticGender);
+        }
       }
 
       //ADJUST META OF LOBJ VALUES
       //stCh could have gender "m", but that would fail to select lObj ENG doctor with gender "_PersonalGenders".
       //So add the translations of the lObj's metagender to its lObjSelectorValues arr.
-      lObjSelectorValues.forEach((lObjSelectorValue) => {
-        if (gpUtils.traitValueIsMeta(lObjSelectorValue)) {
-          if (!metaTraitValueRef) {
-            consol.throw(
-              `diof I am to translate this meta value "${lObjSelectorValue}" for "${currentLanguage}" traitKey "${traitKey}" but no such translation ref?`
-            );
+
+      consol.logSpecial(
+        8,
+        `etpc "${lObj.id}" lObjSelectorValues is`,
+        lObjSelectorValues
+      );
+
+      if (
+        // Garibaldi Condition for finishing up Neon Approach to vypernyms issue 205.
+        !answerMode &&
+        this.checkHyper(lObj, [HY.VY])
+      ) {
+        lObjSelectorValues = lObjSelectorValues.filter(
+          (tv) => !gpUtils.traitValueIsMeta(tv)
+        );
+      } else {
+        let additional = [];
+        lObjSelectorValues.forEach((lObjSelectorValue) => {
+          if (gpUtils.traitValueIsMeta(lObjSelectorValue)) {
+            if (!metaTraitValueRef) {
+              consol.throw(
+                `diof I am to translate this meta value "${lObjSelectorValue}" for "${currentLanguage}" traitKey "${traitKey}" but no such translation ref?`
+              );
+            }
+            let translatedMetaValues = metaTraitValueRef[lObjSelectorValue];
+            additional = [...additional, ...translatedMetaValues];
           }
-
-          let translatedMetaValues = metaTraitValueRef[lObjSelectorValue];
-
-          lObjSelectorValues = [...lObjSelectorValues, ...translatedMetaValues];
-        }
-      });
-
-      consol.log(
-        "wdev filterBySelector_inner lObjSelectorValues after adjustments for virility if applicable, and for meta",
+        });
+        lObjSelectorValues = [...lObjSelectorValues, ...additional];
+      }
+      consol.logSpecial(
+        8,
+        `etpd but after unpacking/deleting meta is`,
         lObjSelectorValues
       );
 
@@ -1246,4 +1729,320 @@ exports.traverseAndRecordInflections = (
       );
     }
   });
+};
+
+exports.checkMatchHyper = (stCh, lObj) => {
+  Object.values(HY).forEach((h) => {
+    if (lfUtils.checkHyper(lObj, [h])) {
+      if (stCh.hypernymy && !stCh.hypernymy[0] === h) {
+        consol.throw(`cmha lObj ${lObj.id} has "${h}" but stCh doesn't.`);
+      }
+    }
+    if (stCh.hypernymy && stCh.hypernymy[0] === h) {
+      if (!lfUtils.checkHyper(lObj, [h])) {
+        consol.throw(
+          `cmhb stCh "${stCh.chunkId}" has "${h}" but lObj doesn't.`
+        );
+      }
+    }
+  });
+};
+
+exports.filterByDemandedLObj = (stCh, lObjs) => {
+  /**Added to resolve Mungojerry issue - that synonyms were interfering with counterfax, causing erroneous coppicing.
+   *
+   * ie Q sentence "The woman saw a doctor.", let's flip gender value of doctor, see if we get different A sentence
+   * (and that should be YES, ie "lekarz" vs "lekarka", so anno should be kept)
+   *
+   * But "woman"/"lady" synonym meant sometimes Q sentence came back different "The lady saw a doctor."
+   * or "The person saw a doctor." because of hypernym "person"
+   * and these both trigger coppicing, ie the anno is removed, because when it was flipped the Q sentence apparently came back different.
+   *
+   * So to avoid this, counterfaxing must not use synonyms, ie if Q sentence used "woman" then only counterfax with "woman" not "lady".
+   * BUT we do want to counterfax "woman" to "man" or "person", so we can't just say "^eng-npe-000-woman" with caret.
+   *
+   * So below filter, where if Q chunk is "woman" then we exclude "lady" but not other stem-siblings (lObjs of same serial number)
+   * because remember, "man","woman","lady","person" are all same lObj stem.
+   */
+
+  consol.logSpecial(
+    8,
+    `\nahps stCh.originalSitSelectedLObj: Let's see which lObjs pass the test against (demanded) lObj id from Q chunk.`,
+    stCh.originalSitSelectedLObj.id
+  );
+
+  let { originalSitSelectedLObj } = stCh;
+
+  return lObjs.filter((l) => {
+    if (allLangUtils.compareLObjStems(l.id, `^${originalSitSelectedLObj.id}`)) {
+      consol.logSpecial(8, `ahps1 "${l.id}" YES because same exact id.`);
+      return true;
+    }
+
+    // Gender of stem-sibling (same lObj serial number) is the same, so discard it.
+    // ie if Q chunk is "woman", then discard "lady" (same gender as "woman") but not "man" or "person".
+    if (originalSitSelectedLObj.gender === l.gender) {
+      consol.logSpecial(
+        8,
+        `ahps2 "${l.id}" NO because is stem-sibling with same gender.`
+      );
+      return false;
+    }
+
+    /**
+     * I'm surprised this condition is not needed.
+     * I thought "osoba"/"ludzie" synonyms would cause Mungojerry issue too.
+     * And wouldn't be filtered out by ahps2 because are not same gender ("osoba" f, "ludzie" m1).
+     */
+    // if (originalSitSelectedLObj.semanticGender === l.semanticGender) {
+    // consol.logSpecial(
+    //   8,
+    //   `ahps3 "${l.id}" NO because is stem-sibling with same semanticGender.`
+    // );
+    //   return false;
+    // }
+
+    // If Q is not hypernym, eg "woman" then discard hypernyms, eg "person".
+    if (
+      !lfUtils.checkHyper(originalSitSelectedLObj, [HY.HY]) &&
+      lfUtils.checkHyper(l, [HY.HY])
+    ) {
+      consol.logSpecial(
+        8,
+        `ahps4 "${l.id}" NO because one's a hypernym and the other's not.`
+      );
+      return false;
+    }
+
+    // If Q is hypernym, eg "person" then discard non-hypernyms, eg "woman".
+    if (
+      lfUtils.checkHyper(originalSitSelectedLObj, [HY.HY]) &&
+      !lfUtils.checkHyper(l, [HY.HY])
+    ) {
+      consol.logSpecial(
+        8,
+        `ahps5 "${l.id}" NO as one's a hypernym and the other's not.`
+      );
+      return false;
+    }
+
+    // Otherwise, return all stem-siblings (same lObj serial number) of Q chunk.
+    if (allLangUtils.compareLObjStems(l.id, originalSitSelectedLObj.id, true)) {
+      consol.logSpecial(8, `ahps6 "${l.id}" YES because is stem-sibling.`);
+      return true;
+    }
+
+    consol.logSpecial(8, `ahps7 "${l.id}" NO because no condition matched.`);
+  });
+};
+
+exports.updateStChSemanticGenderAndVirilityDetail = (
+  selectedLemmaObject,
+  structureChunk,
+  currentLanguage,
+  isCounterfax,
+  doneSelectors,
+  outputUnit,
+  isSecondRound
+) => {
+  if (lfUtils.checkHyper(selectedLemmaObject, [HY.VY])) {
+    if (structureChunk.number.length !== 1) {
+      consol.throw(`xtal`);
+    }
+
+    let vRef = {
+      singular: ["male", "male!"],
+      plural: ["mixed", "males", "males!"],
+    };
+
+    Object.keys(vRef).forEach((numberTraitValue) => {
+      let virilityDetails = vRef[numberTraitValue];
+
+      if (
+        structureChunk.number[0] === numberTraitValue &&
+        (!structureChunk.virilityDetail ||
+          !structureChunk.virilityDetail.length)
+      ) {
+        structureChunk.virilityDetail = [uUtils.selectRandom(virilityDetails)];
+        consol.logSpecial(
+          8,
+          `ykkt ${currentLanguage} "${structureChunk.chunkId}" Setting virilityDetail to "${structureChunk.virilityDetail}"`
+        );
+      }
+    });
+  }
+
+  if (selectedLemmaObject.semanticGender) {
+    if (isCounterfax && structureChunk.semanticGender) {
+      consol.logSpecial(
+        8,
+        "thaa------isCounterfax so leaving stCh semanticGender as",
+        structureChunk.semanticGender
+      );
+      doneSelectors.push("semanticGender");
+    } else {
+      consol.logSpecial(
+        8,
+        `thaa`,
+        `structureChunk.semanticGender`,
+        structureChunk.semanticGender,
+        `structureChunk.gender`,
+        structureChunk.gender,
+        `htaa selectedLemmaObject.semanticGender`,
+        selectedLemmaObject.semanticGender
+      );
+
+      let numberValue = outputUnit.drillPath.find(
+        (drillPathUnit) => drillPathUnit[0] === "number"
+      )[1];
+
+      let numberAdjustedGenderValues = [];
+
+      let virilityRefByNumber =
+        refObj.virilityConversionRef[currentLanguage][numberValue];
+
+      let isNounPerson =
+        gpUtils.getWordtypeShorthandStCh(structureChunk) === "npe";
+
+      if (
+        (isNounPerson && !isSecondRound) ||
+        (isNounPerson && !structureChunk.semanticGender) ||
+        !isNounPerson
+      ) {
+        numberAdjustedGenderValues = lfUtils.accumulateNumberAdjustedGender(
+          structureChunk,
+          "gender",
+          numberAdjustedGenderValues,
+          virilityRefByNumber
+        );
+      }
+
+      numberAdjustedGenderValues = lfUtils.accumulateNumberAdjustedGender(
+        structureChunk,
+        "semanticGender",
+        numberAdjustedGenderValues,
+        virilityRefByNumber
+      );
+
+      consol.logSpecial(
+        8,
+        structureChunk.chunkId,
+        `htab numberAdjustedGenderValues`,
+        numberAdjustedGenderValues
+      );
+
+      if (!numberAdjustedGenderValues.length) {
+        throw "nmol !numberAdjustedGenderValues.length in updateStChByAndTagsAndSelectors";
+      }
+
+      if (this.checkHyper(selectedLemmaObject, [HY.VY])) {
+        //Garibaldi adjustment, Neon approach, vypernyms issue 205
+        numberAdjustedGenderValues = allLangUtils.standardiseGenders(
+          currentLanguage,
+          numberAdjustedGenderValues,
+          "_VypernymGenders"
+        );
+      }
+
+      consol.logSpecial(
+        8,
+        `htad numberAdjustedGenderValues after nixing "f" if vypernym.`,
+        numberAdjustedGenderValues
+      );
+
+      numberAdjustedGenderValues = Array.from(
+        new Set(
+          allLangUtils.enforceIsPerson(null, false, numberAdjustedGenderValues)
+        )
+      );
+
+      consol.logSpecial(
+        8,
+        `htae numberAdjustedGenderValues after enforcing isPerson.`,
+        numberAdjustedGenderValues
+      );
+
+      numberAdjustedGenderValues = allLangUtils.standardiseGenders(
+        currentLanguage,
+        numberAdjustedGenderValues
+      );
+
+      consol.logSpecial(
+        8,
+        `htaf numberAdjustedGenderValues after nixing "m" for Polish (should be "m1").`,
+        numberAdjustedGenderValues
+      );
+
+      if (isSecondRound && numberAdjustedGenderValues.length > 1) {
+        let oneValue = uUtils.selectRandom(numberAdjustedGenderValues);
+        console.log(
+          `htah Expected length 1 for "${
+            outputUnit.selectedLemmaObject.lemma
+          }" but got: ${
+            numberAdjustedGenderValues.length
+          } [${numberAdjustedGenderValues.join(
+            ", "
+          )}] so have randomly selected "${oneValue}".`
+        );
+
+        numberAdjustedGenderValues = [oneValue];
+      }
+
+      if (!numberAdjustedGenderValues.length) {
+        consol.throw("apbh");
+      }
+
+      numberAdjustedGenderValues = [
+        uUtils.selectRandom(numberAdjustedGenderValues),
+      ];
+
+      consol.logSpecial(
+        8,
+        `htai numberAdjustedGenderValues after SELECTRANDOM`,
+        numberAdjustedGenderValues
+      );
+
+      if (structureChunk.semanticGender) {
+        consol.logSpecial(
+          8,
+          "[1;36m " +
+            `htaj ${currentLanguage} ${structureChunk.chunkId}, stCh.semanticGender was ${structureChunk.semanticGender} is now ${numberAdjustedGenderValues}.` +
+            "[0m"
+        );
+      }
+      structureChunk.semanticGender = numberAdjustedGenderValues; //Set semanticGender in Question.
+      doneSelectors.push("semanticGender");
+    }
+  }
+};
+
+exports.accumulateNumberAdjustedGender = (
+  stCh,
+  genderTraitKey,
+  numberAdjustedGenderValues,
+  virilityRefByNumber
+) => {
+  if (!stCh[genderTraitKey] || !stCh[genderTraitKey].length) {
+    consol.logSpecial(8, "hsay", genderTraitKey);
+    return numberAdjustedGenderValues;
+  }
+
+  stCh[genderTraitKey].forEach((genderValue) => {
+    let additionalNumberAdjustedGenderValues = virilityRefByNumber[genderValue];
+
+    numberAdjustedGenderValues.push(...additionalNumberAdjustedGenderValues);
+
+    if (
+      numberAdjustedGenderValues.some((el) => !el) ||
+      additionalNumberAdjustedGenderValues.some((el) => !el)
+    ) {
+      console.log({
+        numberAdjustedGenderValues,
+        additionalNumberAdjustedGenderValues,
+      });
+      consol.throw(`syep`);
+    }
+  });
+
+  return numberAdjustedGenderValues;
 };

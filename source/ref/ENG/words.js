@@ -25,6 +25,82 @@ exports.wordsBank = {
     },
     {
       //selectors
+      lemma: "man",
+      id: "eng-npe-001-man",
+      gender: "m",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "man",
+          gen: "man's",
+        },
+        plural: {
+          nom: "men",
+          gen: "men's",
+        },
+      },
+    },
+    {
+      //selectors
+      lemma: "person",
+      id: "eng-npe-001-person-£",
+      gender: "_PersonalGenders",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "person",
+          gen: "person's",
+        },
+        plural: {
+          nom: "people",
+          gen: "people's",
+        },
+      },
+    },
+    {
+      //selectors
+      lemma: "child",
+      id: "eng-npe-002-child-£",
+      gender: "_PersonalGenders",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "child",
+          gen: "child's",
+        },
+        plural: {
+          nom: "children",
+          gen: "children's",
+        },
+      },
+    },
+    {
+      //selectors
+      lemma: "baby",
+      id: "eng-npe-009-baby",
+      gender: "_Genders", // Because baby can be neuter "Your baby is crying, is IT hungry?"
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "baby",
+          gen: "baby's",
+        },
+        plural: {
+          nom: "babies",
+          gen: "babies'",
+        },
+      },
+    },
+    {
+      //selectors
       lemma: "boy",
       id: "eng-npe-002-boy",
       gender: "m",
@@ -39,6 +115,25 @@ exports.wordsBank = {
         plural: {
           nom: "boys",
           gen: "boys'",
+        },
+      },
+    },
+    {
+      //selectors
+      lemma: "girl",
+      id: "eng-npe-002-girl",
+      gender: "f",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "girl",
+          gen: "girl's",
+        },
+        plural: {
+          nom: "girls",
+          gen: "girls'",
         },
       },
     },
@@ -64,7 +159,7 @@ exports.wordsBank = {
     {
       //selectors
       lemma: "mother",
-      id: "eng-npe-004-mother",
+      id: "eng-npe-003-mother",
       gender: "f",
       //notes
 
@@ -96,6 +191,25 @@ exports.wordsBank = {
         plural: {
           nom: "doctors",
           gen: "doctors'",
+        },
+      },
+    },
+    {
+      //selectors
+      lemma: "parent",
+      id: "eng-npe-003-parent-£",
+      gender: "_PersonalGenders",
+      //notes
+
+      //inflections
+      inflections: {
+        singular: {
+          nom: "parent",
+          gen: "parent's",
+        },
+        plural: {
+          nom: "parents",
+          gen: "parents'",
         },
       },
     },
@@ -561,6 +675,20 @@ exports.wordsBank = {
         simple: "blue",
         comparative: "bluer",
         superlative: "bluest",
+      },
+    },
+    {
+      //selectors
+      lemma: "good",
+      id: "eng-adj-004-good",
+      //notes
+
+      //inflections
+      inflections: {
+        simple: "good",
+        comparative: "better",
+        superlative: "best",
+        adverb: "well",
       },
     },
   ],
