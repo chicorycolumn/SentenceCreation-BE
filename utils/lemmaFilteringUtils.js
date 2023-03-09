@@ -1901,40 +1901,6 @@ exports.updateStChSemanticGenderAndVirilityDetail = (
       let virilityRefByNumber =
         refObj.virilityConversionRef[currentLanguage][numberValue];
 
-      const _accumulateGenderValues = (
-        stCh,
-        genderTraitKey,
-        numberAdjustedGenderValues
-      ) => {
-        if (!stCh[genderTraitKey] || !stCh[genderTraitKey].length) {
-          consol.logSpecial(8, "hsay", genderTraitKey);
-          return numberAdjustedGenderValues;
-        }
-
-        stCh[genderTraitKey].forEach((genderValue) => {
-          let additionalNumberAdjustedGenderValues =
-            virilityRefByNumber[genderValue];
-
-          numberAdjustedGenderValues = [
-            ...numberAdjustedGenderValues,
-            ...additionalNumberAdjustedGenderValues,
-          ];
-
-          if (
-            numberAdjustedGenderValues.includes(undefined) ||
-            additionalNumberAdjustedGenderValues.includes(undefined)
-          ) {
-            console.log({
-              numberAdjustedGenderValues,
-              additionalNumberAdjustedGenderValues,
-            });
-            consol.throw(`syep`);
-          }
-        });
-
-        return numberAdjustedGenderValues;
-      };
-
       let isNounPerson =
         gpUtils.getWordtypeShorthandStCh(structureChunk) === "npe";
 
@@ -1943,17 +1909,19 @@ exports.updateStChSemanticGenderAndVirilityDetail = (
         (isNounPerson && !structureChunk.semanticGender) ||
         !isNounPerson
       ) {
-        numberAdjustedGenderValues = _accumulateGenderValues(
+        numberAdjustedGenderValues = lfUtils.accumulateNumberAdjustedGender(
           structureChunk,
           "gender",
-          numberAdjustedGenderValues
+          numberAdjustedGenderValues,
+          virilityRefByNumber
         );
       }
 
-      numberAdjustedGenderValues = _accumulateGenderValues(
+      numberAdjustedGenderValues = lfUtils.accumulateNumberAdjustedGender(
         structureChunk,
         "semanticGender",
-        numberAdjustedGenderValues
+        numberAdjustedGenderValues,
+        virilityRefByNumber
       );
 
       consol.logSpecial(
@@ -2046,4 +2014,35 @@ exports.updateStChSemanticGenderAndVirilityDetail = (
       doneSelectors.push("semanticGender");
     }
   }
+};
+
+exports.accumulateNumberAdjustedGender = (
+  stCh,
+  genderTraitKey,
+  numberAdjustedGenderValues,
+  virilityRefByNumber
+) => {
+  if (!stCh[genderTraitKey] || !stCh[genderTraitKey].length) {
+    consol.logSpecial(8, "hsay", genderTraitKey);
+    return numberAdjustedGenderValues;
+  }
+
+  stCh[genderTraitKey].forEach((genderValue) => {
+    let additionalNumberAdjustedGenderValues = virilityRefByNumber[genderValue];
+
+    numberAdjustedGenderValues.push(...additionalNumberAdjustedGenderValues);
+
+    if (
+      numberAdjustedGenderValues.some((el) => !el) ||
+      additionalNumberAdjustedGenderValues.some((el) => !el)
+    ) {
+      console.log({
+        numberAdjustedGenderValues,
+        additionalNumberAdjustedGenderValues,
+      });
+      consol.throw(`syep`);
+    }
+  });
+
+  return numberAdjustedGenderValues;
 };
