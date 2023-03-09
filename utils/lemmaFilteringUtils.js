@@ -160,14 +160,6 @@ exports.getLObjAndSiblings = (
     res.push(...additionalRes);
   }
 
-  consol.logSpecial(
-    7,
-    label,
-    blockHypernyms,
-    "Got",
-    res.map((l) => l.id)
-  );
-
   if (!res || !res.length) {
     console.log(">>", ids);
     consol.throw(
@@ -175,10 +167,18 @@ exports.getLObjAndSiblings = (
     );
   }
 
+  consol.logSpecial(
+    7,
+    label,
+    blockHypernyms,
+    "epmb Got",
+    res.map((l) => l.id)
+  );
+
   return res;
 };
 
-exports.getHypernymyProportionAdjustedTV = (stCh, lObj) => {
+exports.adjustHypernymyProportionTraitValues = (stCh, lObj) => {
   if (stCh.number.length > 1) {
     if (
       stCh.number.length > 2 ||
@@ -207,7 +207,7 @@ exports.getHypernymyProportionAdjustedTV = (stCh, lObj) => {
   }
 };
 
-exports.adjustHypernymyProportions = (hypernymy, outputUnits) => {
+exports.adjustHypernymyProportionOutputUnits = (hypernymy, outputUnits) => {
   let proportionAdjustedOutputUnits = [];
 
   if ([HY.HY].includes(hypernymy)) {
@@ -256,7 +256,10 @@ exports.selectRandOutputUnit = (lObj, stCh, outputUnits) => {
       .getNexusLemmaObjects(lObj)
       .some((nlobj) => nlobj.requiresHypernymyProportionAdjust)
   ) {
-    outputUnits = lfUtils.adjustHypernymyProportions(hypernymy, outputUnits);
+    outputUnits = lfUtils.adjustHypernymyProportionOutputUnits(
+      hypernymy,
+      outputUnits
+    );
   }
 
   return uUtils.selectRandom(outputUnits);
@@ -323,7 +326,10 @@ exports.selectRandTraitValue = (
       .getNexusLemmaObjects(lObj)
       .some((nlobj) => nlobj.requiresHypernymyProportionAdjust)
   ) {
-    let numberTraitValue = lfUtils.getHypernymyProportionAdjustedTV(stCh, lObj);
+    let numberTraitValue = lfUtils.adjustHypernymyProportionTraitValues(
+      stCh,
+      lObj
+    );
     if (!numberTraitValue) {
       consol.throw("diwm");
     }
@@ -1119,7 +1125,6 @@ exports.padOutRequirementArrWithMetaTraitValuesIfNecessary = (
   let requirementArr = requirementArrs[traitKey] || [];
 
   let refAdjustedTraitKey = traitKey === "semanticGender" ? "gender" : traitKey;
-
   let metaTraitValueRef =
     refObj.metaTraitValues[currentLanguage][refAdjustedTraitKey];
 
@@ -1331,7 +1336,6 @@ exports.filterBySelector_inner = (
   }
 
   let refAdjustedTraitKey = traitKey === "semanticGender" ? "gender" : traitKey;
-
   let metaTraitValueRef =
     refObj.metaTraitValues[currentLanguage][refAdjustedTraitKey];
 

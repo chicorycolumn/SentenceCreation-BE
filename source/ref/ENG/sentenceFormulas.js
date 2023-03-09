@@ -1522,7 +1522,6 @@ exports.sentenceFormulasBank = [
         chunkId: "pro-1-I",
         specificIds: ["eng-pro-PERSONAL"],
         person: ["3per"],
-        number: ["singular"],
       },
       {
         chunkId: "ver-1-am",
