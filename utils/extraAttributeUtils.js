@@ -50,15 +50,8 @@ exports.evaluateFYIPs = (outputArr, questionLang, answerLang, label) => {
         return;
       }
 
-      let headOutputUnit = otUtils.getHeadOutputUnit(
-        ou.structureChunk,
-        outputArr
-      );
-      let depUnits = outputArr.filter((o) =>
-        refObj.agreementTraits
-          .map((agreementTrait) => o.structureChunk[agreementTrait])
-          .includes(ou.structureChunk.chunkId)
-      );
+      let headOutputUnit = otUtils.getHeadUnit(ou.structureChunk, outputArr);
+      let depUnits = otUtils.getDepUnits(outputArr, ou.structureChunk.chunkId);
 
       if (
         (depUnits.length &&

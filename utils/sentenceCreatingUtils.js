@@ -1080,7 +1080,7 @@ exports.coverBothGendersForPossessivesOfHypernyms = (
       (selectedLemmaObject.lemma === "$PERSONAL" &&
         structureChunk.gcase[0] !== "nom")
     ) {
-      let headOutputUnit = otUtils.getHeadOutputUnit(
+      let headOutputUnit = otUtils.getHeadUnit(
         structureChunk,
         orderedOutputArr
       );
@@ -1212,7 +1212,7 @@ exports.selectWordVersions = (
   //STEP 0 part B: Transfer annos between chunks if asked to.
   orderedOutputArr.forEach((depOutputUnit, outputUnitIndex) => {
     if (depOutputUnit.structureChunk.giveMeTheseClarifiersOfMyHeadChunk) {
-      let headOutputUnit = otUtils.getHeadOutputUnit(
+      let headOutputUnit = otUtils.getHeadUnit(
         depOutputUnit.structureChunk,
         orderedOutputArr
       );
@@ -1433,12 +1433,6 @@ exports.conformAnswerStructureToQuestionStructure = (
     );
 
     let source = words[gpUtils.getWordtypeShorthandStCh(answerStructureChunk)];
-    source = source.filter(
-      (lObj) =>
-        //Resolve issue of multipleWordtype allohoms.
-        gpUtils.getWordtypeLObj(lObj) ===
-        gpUtils.getWordtypeStCh(questionStructureChunk)
-    );
 
     matchingAnswerLemmaObjects = lfUtils.getLObjAndSiblings(
       source,

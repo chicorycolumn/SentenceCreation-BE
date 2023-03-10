@@ -158,24 +158,6 @@ exports.convertAnnotationsToPlainspeak = (questionOutputUnit, languagesObj) => {
   return result;
 };
 
-exports.getDepUnits = (
-  questionOutputArr,
-  headChunkId,
-  agreementTraits,
-  allDependentWordtype
-) => {
-  return questionOutputArr
-    .filter((unit) =>
-      agreementTraits.some(
-        (agreeKey) => unit.structureChunk[agreeKey] === headChunkId
-      )
-    )
-    .filter(
-      (unit) =>
-        gpUtils.getWordtypeStCh(unit.structureChunk) === allDependentWordtype
-    );
-};
-
 exports.removeAnnotationsByVypernym = (
   questionOutputArr,
   languagesObj,
@@ -312,11 +294,11 @@ exports.removeAnnotationsByAOCs = (
     ) {
       let headChunkId = questionOutputUnit.structureChunk.chunkId;
 
-      const loadedGetDepUnits = (agreementTraitsArg) => {
-        return aaUtils.getDepUnits(
+      const loadedGetDepUnits = (_agreementTraits) => {
+        return otUtils.getDepUnits(
           questionOutputArr,
           headChunkId,
-          agreementTraitsArg,
+          _agreementTraits,
           allDependentWordtype
         );
       };
@@ -453,9 +435,7 @@ exports.removeAnnotationsByRef = (
 
     let headChunk =
       stCh.agreeWith &&
-      questionOutputArr.find(
-        (outputUnit) => outputUnit.structureChunk.chunkId === stCh.agreeWith
-      ).structureChunk;
+      otUtils.getHeadUnit(stCh, questionOutputArr).structureChunk;
 
     let stChs = headChunk ? [stCh, headChunk] : [stCh];
 
@@ -528,8 +508,9 @@ exports.trimAnnoIfGenderRevealedByGenderedNoun = (
     Object.keys(structureChunk.annotations).includes("gender") &&
     structureChunk.agreeWith
   ) {
-    let headOutputUnit = questionSentenceData.questionOutputArr.find(
-      (unit) => unit.structureChunk.chunkId === structureChunk.agreeWith
+    let headOutputUnit = otUtils.getHeadUnit(
+      structureChunk,
+      questionSentenceData.questionOutputArr
     );
 
     let headChunk = headOutputUnit.structureChunk;

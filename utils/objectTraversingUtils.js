@@ -1443,6 +1443,34 @@ exports.doesThisInflectionKeyHoldUniqueInflectionValueInLObj = (
   return itIsUnique;
 };
 
-exports.getHeadOutputUnit = (stCh, outputArr) => {
+exports.getHeadUnit = (stCh, outputArr) => {
   return outputArr.find((ou) => ou.structureChunk.chunkId === stCh.agreeWith);
+};
+
+exports.getDepUnits = (
+  outputArr,
+  headChunkId,
+  agreementTraits,
+  depWordtype
+) => {
+  if (!agreementTraits) {
+    agreementTraits = refObj.agreementTraits;
+  }
+  if (!headChunkId) {
+    consol.throw("spwo");
+  }
+
+  let res = outputArr.filter((unit) =>
+    agreementTraits.some(
+      (agreeKey) => unit.structureChunk[agreeKey] === headChunkId
+    )
+  );
+
+  if (depWordtype) {
+    res = res.filter(
+      (unit) => gpUtils.getWordtypeStCh(unit.structureChunk) === depWordtype
+    );
+  }
+
+  return res;
 };

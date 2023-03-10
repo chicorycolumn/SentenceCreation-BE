@@ -526,19 +526,20 @@ exports.structureChunkTraits = {
     merelyPreferredChoicesForQuestionSentence: {
       expectedTypeOnStCh: "array",
     },
-    // wordtype: {
-    //   expectedTypeOnStCh: "string",
-    //   possibleTraitValues: [
-    //     "nounPerson","nounCommon",
-    //     "adjective",
-    //     "verb",
-    //     "adverb",
-    //     "pronombre",
-    //     "preposition",
-    //     "article",
-    //     "fixed",
-    //   ],
-    // },
+    wordtype: {
+      expectedTypeOnStCh: "string",
+      possibleTraitValues: [
+        "nounPerson",
+        "nounCommon",
+        "adjective",
+        "verb",
+        "adverb",
+        "pronombre",
+        "preposition",
+        "article",
+        "fixed",
+      ],
+    },
     agreeWith: {
       expectedTypeOnStCh: "string",
       mustBeExistingChunkId: true,
