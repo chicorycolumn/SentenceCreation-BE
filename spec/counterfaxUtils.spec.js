@@ -1025,7 +1025,6 @@ xdescribe("explodeCounterfaxSituations", () => {
       },
     ];
     const actual = cfUtils.explodeCounterfaxSituations(input);
-    delete actual.cfLabels;
     actual.forEach((sit) => {
       delete sit.cfLabel;
     });
@@ -1126,7 +1125,6 @@ xdescribe("explodeCounterfaxSituations", () => {
       },
     ];
     const actual = cfUtils.explodeCounterfaxSituations(input);
-    delete actual.cfLabels;
     actual.forEach((sit) => {
       delete sit.cfLabel;
     });

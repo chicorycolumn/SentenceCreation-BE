@@ -71,11 +71,9 @@ exports.explodeCounterfaxSituations = (sits) => {
 
   _explodeBetweenChunks(explodedWithinEachChunk, chunkIds);
 
-  explodedBetweenChunks.cfLabels = [];
   explodedBetweenChunks.forEach((sit) => {
     let cfLabel = cfUtils.makeCfLabelFromSitSchematic(sit);
     sit.cfLabel = cfLabel;
-    explodedBetweenChunks.cfLabels.push(cfLabel);
   });
 
   return explodedBetweenChunks;
@@ -372,6 +370,8 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
   //In fact, we should modify the counterfax sit schematics directly when virility adjustments are made, including remaking the label.
   //Then we'n compare the lables, rather that making a new record object and putting it in recordOfCounterfaxedStChsForEachCF.
 
+  let cfLabelsSentToPalette = [];
+
   explodedCounterfaxSituationsSchematics.forEach(
     (counterfactualSitSchematic, index) => {
       if (!index) {
@@ -663,16 +663,42 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         );
 
         runsRecord.push(body.counterfactualSitSchematic.cfLabel);
+        cfLabelsSentToPalette.push(body.counterfactualSitSchematic.cfLabel);
         palette.fetchPalette({ body });
       });
     }
   );
 
-  if ("logging") {
+  if (!allCounterfactualResults.length) {
+    let headOUForLogging = questionOutputArrObj.arr.find(
+      (ou) => ou.dependenceType === "head"
+    );
+    if (
+      !headOUForLogging ||
+      !lfUtils.checkHyper(headOUForLogging.selectedLemmaObject, [HY.VY])
+    ) {
+      /**
+       * If the headChunk being counterfaxed is a vypernym then I expect that we get 0 allCounterfactualResults here,
+       * because "padre" gender "m" original can't counterfax to any other gender,
+       * "virile" rejected because number "singular"
+       * "f and "nonvirile" rejected because this is vypernym so necessarily male.
+       * So all cf sits rejected by kfaq.
+       *
+       * Thus don't throw here if it was a vypernym. Otherwise, throw so we investigate why we are getting 0 here.
+       */
+      console.log(
+        ">>",
+        explodedCounterfaxSituationsSchematics.map((sit) => sit.cfLabel)
+      );
+      consol.throw(
+        `fbms 0 cf results from explodedCounterfaxSituationsSchematics (see >> above). Likely because ${cfLabelsSentToPalette.length} were sent to palette, otherwise rejected by conditions above. Do logSpecial3 to see why.`
+      );
+    }
+    return;
+  } else {
     consol.logSpecial(
       3,
-      "\nkcax allCounterfactualResults.length: ",
-      allCounterfactualResults.length
+      `\nkcax Got ${allCounterfactualResults.length} allCounterfactualResults: `
     );
     allCounterfactualResults.forEach((cfRes) => {
       consol.logSpecial(
@@ -683,16 +709,10 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         ),
         cfRes.answerSentenceData.answerOutputArrays.map((oarray) =>
           oarray.map((ou) => ou.selectedWord)
-        )
+        ),
+        "\n"
       );
     });
-    consol.logSpecial(3, "\n");
-  }
-
-  if (!allCounterfactualResults.length) {
-    console.log("[1;31m " + "fbms allCounterfactualResults was empty." + "[0m");
-    // consol.throw("fbms allCounterfactualResults was empty.");
-    return;
   }
 
   function findCFResultsWhenAllOtherThingsBeingEqual(
