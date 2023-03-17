@@ -666,7 +666,7 @@ exports.wordsBank = {
     },
     {
       //selectors
-      lemma: "niebieski",
+      lemma: "blue",
       id: "eng-adj-003-blue",
       //notes
 

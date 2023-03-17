@@ -604,6 +604,16 @@ exports.structureChunkTraits = {
     giveMeTheseClarifiersOfMyHeadChunk: {
       expectedTypeOnStCh: "array",
       ultimatelyMultipleTraitValuesOkay: true,
+      possibleTraitValues: [
+        "number",
+        "gender",
+        "gcase",
+        "form",
+        "person",
+        "aspect",
+        "tense",
+        "tenseDescription",
+      ],
     },
   },
   POL: {
