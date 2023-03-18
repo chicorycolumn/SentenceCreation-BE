@@ -1014,3 +1014,9 @@ exports.agreementTraits = [
 ];
 
 exports.punctuation = ["!", "?", ".", ",", ":", ";", "..."];
+
+exports.acceptedLanguages = {
+  ENG: "English",
+  POL: "Polish",
+  SPA: "Spanish",
+};

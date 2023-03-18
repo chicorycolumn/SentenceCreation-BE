@@ -168,3 +168,12 @@ exports.validateSentenceFormula = (sentenceFormula, lang) => {
     );
   }
 };
+
+exports.validateLang = (langCode, label) => {
+  if (!Object.keys(refObj.acceptedLanguages).includes(langCode)) {
+    consol.throw(
+      `lmgt${label} Not an accepted language code:`,
+      questionLanguage
+    );
+  }
+};

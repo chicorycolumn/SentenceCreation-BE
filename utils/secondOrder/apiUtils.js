@@ -19,6 +19,8 @@ const refFxn = require("../reference/referenceFunctions.js");
 exports.getWordsByCriteria = (currentLanguage, criteriaFromHTTP) => {
   let envir = "ref";
 
+  ivUtils.validateLang(currentLanguage, 10);
+
   const {
     wordsBank,
   } = require(`../../source/${envir}/${currentLanguage}/words.js`);
@@ -92,6 +94,8 @@ exports.getTagsAndTopics = (currentLanguage) => {
 exports.getBlankStChForThisWordtype = (lang, wordtypeLonghand) => {
   // console.log("hmwo", { lang, wordtypeLonghand });
 
+  ivUtils.validateLang(lang, 11);
+
   let stChTraits = refFxn.getStructureChunkTraits(lang);
   Object.keys(stChTraits).forEach((traitKey) => {
     // If this traitKey is entirely invalid for this wordtype, remove it. eg tenseDescription for adjectives.
@@ -133,6 +137,8 @@ exports.getBlankStChForThisWordtype = (lang, wordtypeLonghand) => {
 };
 
 exports.getStChsForLemma = (lang, lemma) => {
+  ivUtils.validateLang(currentLanguage, 12);
+
   let lObjs = apiUtils.getLObjsForLemma(lang, lemma);
 
   return lObjs.map((lObj) => {
@@ -227,6 +233,8 @@ exports.getStChsForLemma = (lang, lemma) => {
 };
 
 exports.getLObjsForLemma = (lang, lemma) => {
+  ivUtils.validateLang(currentLanguage, 13);
+
   matches = [];
   let { wordsBank } = scUtils.getWordsAndFormulas(lang, true);
   Object.keys(wordsBank).forEach((wordtypeShorthand) => {
