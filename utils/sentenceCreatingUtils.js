@@ -13,8 +13,22 @@ const nexusUtils = require("./secondOrder/nexusUtils.js");
 const eaUtils = require("./extraAttributeUtils.js");
 const { HY } = refObj;
 
-exports.getWordsAndFormulas = (currentLanguage, wordsOnly) => {
-  let envir = "ref";
+exports.getWordsAndFormulas = (
+  currentLanguage,
+  wordsOnly,
+  formulasOnly,
+  envir
+) => {
+  if (!envir) {
+    envir = "ref";
+  }
+
+  if (formulasOnly) {
+    const {
+      sentenceFormulasBank,
+    } = require(`../source/${envir}/${currentLanguage}/sentenceFormulas.js`);
+    return { sentenceFormulasBank };
+  }
 
   const {
     wordsBank,
@@ -27,9 +41,11 @@ exports.getWordsAndFormulas = (currentLanguage, wordsOnly) => {
   const {
     dummyWordsBank,
   } = require(`../source/${envir}/${currentLanguage}/dummy/dummyWords.js`);
+
   const {
     sentenceFormulasBank,
   } = require(`../source/${envir}/${currentLanguage}/sentenceFormulas.js`);
+
   const {
     dummySentenceFormulasBank,
   } = require(`../source/${envir}/${currentLanguage}/dummy/dummySentenceFormulas.js`);

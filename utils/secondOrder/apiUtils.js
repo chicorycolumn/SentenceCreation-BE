@@ -16,6 +16,67 @@ const nexusUtils = require("../../utils/secondOrder/nexusUtils.js");
 const allLangUtils = require("../../utils/allLangUtils.js");
 const refFxn = require("../reference/referenceFunctions.js");
 
+exports.getSentenceFormulas = (
+  questionSentenceFormulaId,
+  answerLanguage,
+  env
+) => {
+  if (!env) {
+    env = "ref";
+  }
+
+  let questionLanguage = questionSentenceFormulaId.split("-")[0];
+  ivUtils.validateLang(questionLanguage, 14);
+  ivUtils.validateLang(answerLanguage, 15);
+
+  let questionSentenceFormulasBank = scUtils.getWordsAndFormulas(
+    questionLanguage,
+    false,
+    true,
+    env
+  ).sentenceFormulasBank;
+
+  const getFormulaById = (bank, id, label) => {
+    let formulas = bank.filter((el) => el.sentenceFormulaId === id);
+    if (formulas.length !== 1) {
+      consol.throw(
+        `ygbz ${label} found ${formulas.length} but expected 1 for id: ${id}`
+      );
+    }
+
+    return formulas[0];
+  };
+
+  let questionSentenceFormula = getFormulaById(
+    questionSentenceFormulasBank,
+    questionSentenceFormulaId,
+    "question"
+  );
+
+  let answerSentenceFormulaIds =
+    questionSentenceFormula.equivalents[answerLanguage];
+
+  let answerSentenceFormulasBank = scUtils.getWordsAndFormulas(
+    answerLanguage,
+    false,
+    true,
+    env
+  ).sentenceFormulasBank;
+
+  let answerSentenceFormulas = answerSentenceFormulaIds.map(
+    (answerSentenceFormulaId) =>
+      getFormulaById(
+        answerSentenceFormulasBank,
+        answerSentenceFormulaId,
+        "answer"
+      )
+  );
+
+  let res = { questionSentenceFormula, answerSentenceFormulas };
+
+  return res;
+};
+
 exports.getWordsByCriteria = (currentLanguage, criteriaFromHTTP) => {
   let envir = "ref";
 
@@ -137,7 +198,7 @@ exports.getBlankStChForThisWordtype = (lang, wordtypeLonghand) => {
 };
 
 exports.getStChsForLemma = (lang, lemma) => {
-  ivUtils.validateLang(currentLanguage, 12);
+  ivUtils.validateLang(lang, 12);
 
   let lObjs = apiUtils.getLObjsForLemma(lang, lemma);
 
@@ -233,7 +294,7 @@ exports.getStChsForLemma = (lang, lemma) => {
 };
 
 exports.getLObjsForLemma = (lang, lemma) => {
-  ivUtils.validateLang(currentLanguage, 13);
+  ivUtils.validateLang(lang, 13);
 
   matches = [];
   let { wordsBank } = scUtils.getWordsAndFormulas(lang, true);
