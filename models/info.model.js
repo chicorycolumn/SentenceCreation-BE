@@ -22,7 +22,7 @@ exports.fetchInfo = (req) => {
   };
 
   if (infoType == "lObjs") {
-    responseObject.info = apiUtils.getStChsForLemma(
+    responseObject.info = apiUtils.getEnChsForLemma(
       lang,
       req.query.lemma.toLowerCase()
     );

@@ -152,7 +152,10 @@ exports.getTagsAndTopics = (currentLanguage) => {
   return { allTags, allTopics };
 };
 
-exports.getBlankStChForThisWordtype = (lang, wordtypeLonghand) => {
+exports.getBlankEnhancedStructureChunkForThisWordtype = (
+  lang,
+  wordtypeLonghand
+) => {
   // console.log("hmwo", { lang, wordtypeLonghand });
 
   ivUtils.validateLang(lang, 11);
@@ -197,7 +200,7 @@ exports.getBlankStChForThisWordtype = (lang, wordtypeLonghand) => {
   return stChTraits;
 };
 
-exports.getStChsForLemma = (lang, lemma) => {
+exports.getEnChsForLemma = (lang, lemma) => {
   ivUtils.validateLang(lang, 12);
 
   let lObjs = apiUtils.getLObjsForLemma(lang, lemma);
@@ -207,7 +210,10 @@ exports.getStChsForLemma = (lang, lemma) => {
     let wordtypeLonghand =
       refFxn.translateWordtypeShorthandLonghand(wordtypeShorthand);
 
-    let stCh = apiUtils.getBlankStChForThisWordtype(lang, wordtypeLonghand);
+    let enCh = apiUtils.getBlankEnhancedStructureChunkForThisWordtype(
+      lang,
+      wordtypeLonghand
+    );
     let routes = otUtils.giveRoutesAndTerminalValuesFromObject(lObj, true);
     routes.forEach((routeObj) => {
       if (routeObj.terminalValue === lemma) {
@@ -215,8 +221,8 @@ exports.getStChsForLemma = (lang, lemma) => {
           let traitValue = routeObj.describedRoute[traitKey];
 
           if (
-            stCh[traitKey].compatibleWordtypes &&
-            !stCh[traitKey].compatibleWordtypes.includes(wordtypeLonghand)
+            enCh[traitKey].compatibleWordtypes &&
+            !enCh[traitKey].compatibleWordtypes.includes(wordtypeLonghand)
           ) {
             consol.log(
               `tbaa Error: Wordtype ${wordtypeLonghand} not compatible with ${traitKey}=${traitValue} even though that's what I gleaned using giveRoutesAndTerminalValuesFromObject.`
@@ -225,8 +231,8 @@ exports.getStChsForLemma = (lang, lemma) => {
           }
 
           if (
-            stCh[traitKey].possibleTraitValues &&
-            !stCh[traitKey].possibleTraitValues.includes(traitValue)
+            enCh[traitKey].possibleTraitValues &&
+            !enCh[traitKey].possibleTraitValues.includes(traitValue)
           ) {
             consol.log(
               `pomi Error: traitValue ${traitValue} not compatible with ${traitKey} even though that's what I gleaned using giveRoutesAndTerminalValuesFromObject.`
@@ -234,21 +240,21 @@ exports.getStChsForLemma = (lang, lemma) => {
             return;
           }
 
-          if (stCh[traitKey].expectedTypeOnStCh === "array") {
-            stCh[traitKey].traitValue = [traitValue];
-          } else if (stCh[traitKey].expectedTypeOnStCh === "string") {
-            stCh[traitKey].traitValue = traitValue;
+          if (enCh[traitKey].expectedTypeOnStCh === "array") {
+            enCh[traitKey].traitValue = [traitValue];
+          } else if (enCh[traitKey].expectedTypeOnStCh === "string") {
+            enCh[traitKey].traitValue = traitValue;
           }
         });
       }
     });
 
-    if (stCh.gender) {
-      stCh.gender.traitValue = Array.from(new Set(stCh.gender.traitValue));
+    if (enCh.gender) {
+      enCh.gender.traitValue = Array.from(new Set(enCh.gender.traitValue));
     }
 
-    Object.keys(stCh).forEach((traitKey) => {
-      let traitObject = stCh[traitKey];
+    Object.keys(enCh).forEach((traitKey) => {
+      let traitObject = enCh[traitKey];
       if (
         traitObject.expectedTypeOnStCh === "array" &&
         !traitObject.traitValue
@@ -262,17 +268,17 @@ exports.getStChsForLemma = (lang, lemma) => {
       consol.log("[1;31m " + `taof ${lObj.id} has no tags.` + "[0m");
       theTags = [];
     }
-    stCh.andTags.traitValue = theTags;
+    enCh.andTags.traitValue = theTags;
 
     if (lObj.allohomInfo) {
-      stCh.allohomInfo = lObj.allohomInfo;
+      enCh.allohomInfo = lObj.allohomInfo;
     }
 
-    stCh.wordtype = gpUtils.getWordtypeShorthandLObj(lObj);
-    stCh.id = lObj.id;
-    stCh.lemma = lObj.lemma;
+    enCh.wordtype = gpUtils.getWordtypeShorthandLObj(lObj);
+    enCh.id = lObj.id;
+    enCh.lemma = lObj.lemma;
 
-    stCh._info = {};
+    enCh._info = {};
 
     [
       "inheritableInflectionKeys",
@@ -280,16 +286,16 @@ exports.getStChsForLemma = (lang, lemma) => {
     ].forEach((infoKey) => {
       let info =
         refObj.lemmaObjectTraitKeys[lang][infoKey][
-          refFxn.translateWordtypeShorthandLonghand(stCh.wordtype)
+          refFxn.translateWordtypeShorthandLonghand(enCh.wordtype)
         ];
       if (!info) {
         //devlogging
-        consol.throw("stmo Error fetching auxiliary info for stCh via API.");
+        consol.throw("stmo Error fetching auxiliary info for enCh via API.");
       }
-      stCh._info[infoKey] = info;
+      enCh._info[infoKey] = info;
     });
 
-    return stCh;
+    return enCh;
   });
 };
 

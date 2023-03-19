@@ -8,7 +8,7 @@ const consol = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const { it } = require("mocha");
 const testingUtils = require("../utils/secondOrder/testingUtils.js");
 
-const { getStChsForLemma } = require("../utils/secondOrder/apiUtils.js");
+const { getEnChsForLemma } = require("../utils/secondOrder/apiUtils.js");
 
 const runApiTest1 = (req, expected) => {
   return request(app)
@@ -166,9 +166,9 @@ describe("/educator/sandbox - Testing API.", () => {
   });
 });
 
-xdescribe("getStChsForLemma", () => {
+xdescribe("getEnChsForLemma", () => {
   it("1", () => {
-    const actual = getStChsForLemma("POL", "kobieta");
+    const actual = getEnChsForLemma("POL", "kobieta");
     console.log(actual);
     // expect(actual).to.eql(expected);
   });
