@@ -16,16 +16,12 @@ const nexusUtils = require("../../utils/secondOrder/nexusUtils.js");
 const allLangUtils = require("../../utils/allLangUtils.js");
 const refFxn = require("../reference/referenceFunctions.js");
 
-exports.getSentenceFormulas = (
-  questionSentenceFormulaId,
-  answerLanguage,
-  env
-) => {
+exports.getSentenceFormulas = (questionFormulaId, answerLanguage, env) => {
   if (!env) {
     env = "ref";
   }
 
-  let questionLanguage = questionSentenceFormulaId.split("-")[0];
+  let questionLanguage = gpUtils.getLanguageFromFormulaId(questionFormulaId);
   ivUtils.validateLang(questionLanguage, 14);
   ivUtils.validateLang(answerLanguage, 15);
 
@@ -49,7 +45,7 @@ exports.getSentenceFormulas = (
 
   let questionSentenceFormula = getFormulaById(
     questionSentenceFormulasBank,
-    questionSentenceFormulaId,
+    questionFormulaId,
     "question"
   );
 
@@ -198,6 +194,24 @@ exports.getBlankEnhancedStructureChunkForThisWordtype = (
     }
   });
   return stChTraits;
+};
+
+exports.getEnChForStCh = (lang, stCh) => {
+  ivUtils.validateLang(lang, 16);
+  let wordtypeLonghand = gpUtils.getWordtypeStCh(stCh);
+
+  let enCh = apiUtils.getBlankEnhancedStructureChunkForThisWordtype(
+    lang,
+    wordtypeLonghand
+  );
+
+  Object.keys(enCh).forEach((traitKey) => {
+    if (stCh[traitKey] && stCh[traitKey].length) {
+      enCh[traitKey].traitValue = stCh[traitKey];
+    }
+  });
+
+  return enCh;
 };
 
 exports.getEnChsForLemma = (lang, lemma) => {

@@ -346,6 +346,10 @@ exports.fillOutWashburneRefObj = (
   });
 };
 
+exports.getLanguageFromFormulaId = (id) => {
+  return id.split("-")[0];
+};
+
 exports.getLanguageFromLemmaObject = (lObj) => {
   return lObj.id.split("-")[0].toUpperCase();
 };

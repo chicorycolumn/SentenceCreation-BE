@@ -12,15 +12,38 @@ const apiUtils = require("../utils/secondOrder/apiUtils.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 
 exports.fetchFormulas = (req) => {
-  let { id, lang, env } = req.query;
+  let { id, env } = req.query;
+  let answerLang = req.query.lang;
+  let questionLang = gpUtils.getLanguageFromFormulaId(id);
 
-  console.log("tnae", { id, lang, env });
+  ivUtils.validateLang(questionLang, 17);
+  ivUtils.validateLang(answerLang, 18);
+
+  console.log("tnae", { id, answerLang, env });
 
   if (!env) {
     env = "ref";
   }
 
-  let responseObject = apiUtils.getSentenceFormulas(id, lang, env);
+  let { questionSentenceFormula, answerSentenceFormulas } =
+    apiUtils.getSentenceFormulas(id, answerLang, env);
+
+  questionSentenceFormula.sentenceStructure =
+    questionSentenceFormula.sentenceStructure.map((stCh) =>
+      apiUtils.getEnChForStCh(questionLang, stCh)
+    );
+
+  answerSentenceFormulas.forEach((answerSentenceFormula) => {
+    answerSentenceFormula.sentenceStructure =
+      answerSentenceFormula.sentenceStructure.map((stCh) =>
+        apiUtils.getEnChForStCh(answerLang, stCh)
+      );
+  });
+
+  let responseObject = {
+    questionSentenceFormula,
+    answerSentenceFormulas,
+  };
 
   return Promise.all([responseObject]).then((array) => {
     return array[0];
