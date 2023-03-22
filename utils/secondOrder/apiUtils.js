@@ -70,7 +70,7 @@ exports.getSentenceFormulas = (questionFormulaId, answerLanguage, env) => {
 
   let res = { questionSentenceFormula, answerSentenceFormulas };
 
-  return res;
+  return uUtils.copyWithoutReference(res);
 };
 
 exports.getWordsByCriteria = (currentLanguage, criteriaFromHTTP) => {
@@ -157,61 +157,152 @@ exports.getBlankEnhancedStructureChunkForThisWordtype = (
   ivUtils.validateLang(lang, 11);
 
   let stChTraits = refFxn.getStructureChunkTraits(lang);
+  let unwantedTraitKeys = [];
+
   Object.keys(stChTraits).forEach((traitKey) => {
-    // If this traitKey is entirely invalid for this wordtype, remove it. eg tenseDescription for adjectives.
     if (
-      stChTraits[traitKey].compatibleWordtypes &&
-      !stChTraits[traitKey].compatibleWordtypes.includes(wordtypeLonghand)
+      (stChTraits[traitKey].compatibleWordtypes &&
+        !stChTraits[traitKey].compatibleWordtypes.includes(wordtypeLonghand)) ||
+      apiUtils.backendOnlyTraits.includes(traitKey)
     ) {
-      delete stChTraits[traitKey];
+      unwantedTraitKeys.push(traitKey);
+      return;
     }
     // Add acceptable values for this traitKey per this wordtype. eg form has acceptable value "determiner" for article, but not for adjective.
-    else {
-      if (stChTraits[traitKey].possibleTraitValuesPerWordtype) {
-        if (
-          Object.keys(
-            stChTraits[traitKey].possibleTraitValuesPerWordtype
-          ).includes(wordtypeLonghand)
-        ) {
-          stChTraits[traitKey].possibleTraitValues =
-            stChTraits[traitKey].possibleTraitValuesPerWordtype[
-              wordtypeLonghand
-            ];
-        } else {
-          console.log(
-            "clhb",
-            Object.keys(stChTraits[traitKey].possibleTraitValuesPerWordtype),
-            "does not include",
-            wordtypeLonghand
-          );
-        }
-      }
-      if (stChTraits[traitKey].possibleTraitValues) {
-        stChTraits[traitKey].possibleTraitValues = Array.from(
-          new Set(stChTraits[traitKey].possibleTraitValues)
+    if (stChTraits[traitKey].possibleTraitValuesPerWordtype) {
+      if (
+        Object.keys(
+          stChTraits[traitKey].possibleTraitValuesPerWordtype
+        ).includes(wordtypeLonghand)
+      ) {
+        stChTraits[traitKey].possibleTraitValues =
+          stChTraits[traitKey].possibleTraitValuesPerWordtype[wordtypeLonghand];
+      } else {
+        console.log(
+          "clhb",
+          Object.keys(stChTraits[traitKey].possibleTraitValuesPerWordtype),
+          "does not include",
+          wordtypeLonghand
         );
       }
     }
+    if (stChTraits[traitKey].possibleTraitValues) {
+      stChTraits[traitKey].possibleTraitValues = Array.from(
+        new Set(stChTraits[traitKey].possibleTraitValues)
+      );
+    }
   });
+
+  unwantedTraitKeys.forEach((unwantedTraitKey) => {
+    delete stChTraits[unwantedTraitKey];
+  });
+
+  Object.keys(stChTraits).forEach((traitKey) => {
+    let traitObject = stChTraits[traitKey];
+    if (traitObject.expectedTypeOnStCh === "array" && !traitObject.traitValue) {
+      traitObject.traitValue = [];
+    }
+  });
+
   return stChTraits;
 };
 
-exports.getEnChForStCh = (lang, stCh) => {
+exports.getFormulaItem = (lang, wordtypeLonghand, stCh) => {
   ivUtils.validateLang(lang, 16);
-  let wordtypeLonghand = gpUtils.getWordtypeStCh(stCh);
 
   let enCh = apiUtils.getBlankEnhancedStructureChunkForThisWordtype(
     lang,
     wordtypeLonghand
   );
 
-  Object.keys(enCh).forEach((traitKey) => {
-    if (stCh[traitKey] && stCh[traitKey].length) {
-      enCh[traitKey].traitValue = stCh[traitKey];
+  if (stCh) {
+    Object.keys(enCh).forEach((traitKey) => {
+      if (stCh[traitKey] && stCh[traitKey].length) {
+        enCh[traitKey].traitValue = stCh[traitKey];
+      }
+    });
+  }
+
+  // 2b. Gather booleans
+  apiUtils.gatherBooleanTraitsForFE(enCh);
+
+  let formulaItem = {
+    structureChunk: enCh,
+    formulaItemId: uUtils.getRandomNumberString(10),
+    guideword: enCh.chunkId.traitValue.split("-").slice(-1)[0],
+  };
+
+  return formulaItem;
+};
+
+exports.backendOnlyTraits = [
+  "allohomInfo",
+  "hiddenTraits",
+  "PHD_type",
+  "hypernymy",
+  "semanticGender",
+  "virilityDetail",
+  "originalSitSelectedLObj",
+];
+
+exports.frontendifyFormula = (lang, formula) => {
+  // 1. Orders
+  formula.orders = [];
+
+  if (formula.primaryOrders) {
+    formula.orders.push(
+      ...formula.primaryOrders.map((order) => {
+        return { order, isPrimary: true };
+      })
+    );
+  }
+
+  if (formula.additionalOrders) {
+    formula.orders.push(
+      ...formula.additionalOrders.map((order) => {
+        return { order };
+      })
+    );
+  }
+
+  delete formula.primaryOrders;
+  delete formula.additionalOrders;
+
+  formula.sentenceStructure = formula.sentenceStructure.map((stCh) => {
+    // 2a. stCh to enCh
+
+    let fItem = apiUtils.getFormulaItem(
+      lang,
+      gpUtils.getWordtypeStCh(stCh),
+      stCh
+      // 2b. Gather booleans
+    );
+
+    return fItem;
+  });
+};
+
+exports.gatherBooleanTraitsForFE = (stCh) => {
+  let booleanTraits = {
+    expectedTypeOnStCh: "array",
+    possibleTraitValues: [],
+    traitValue: [],
+  };
+
+  Object.keys(stCh).forEach((traitKey) => {
+    if (
+      typeof stCh[traitKey] === "object" &&
+      stCh[traitKey].expectedTypeOnStCh === "boolean"
+    ) {
+      booleanTraits.possibleTraitValues.push(traitKey);
+      if (stCh[traitKey].traitValue) {
+        booleanTraits.traitValue.push(traitKey);
+      }
+      delete stCh[traitKey];
     }
   });
 
-  return enCh;
+  stCh.booleanTraits = booleanTraits;
 };
 
 exports.getEnChsForLemma = (lang, lemma) => {
@@ -219,7 +310,7 @@ exports.getEnChsForLemma = (lang, lemma) => {
 
   let lObjs = apiUtils.getLObjsForLemma(lang, lemma);
 
-  return lObjs.map((lObj) => {
+  let enChs = lObjs.map((lObj) => {
     let wordtypeShorthand = gpUtils.getWordtypeShorthandLObj(lObj);
     let wordtypeLonghand =
       refFxn.translateWordtypeShorthandLonghand(wordtypeShorthand);
@@ -228,7 +319,9 @@ exports.getEnChsForLemma = (lang, lemma) => {
       lang,
       wordtypeLonghand
     );
+
     let routes = otUtils.giveRoutesAndTerminalValuesFromObject(lObj, true);
+
     routes.forEach((routeObj) => {
       if (routeObj.terminalValue === lemma) {
         Object.keys(routeObj.describedRoute).forEach((traitKey) => {
@@ -267,16 +360,6 @@ exports.getEnChsForLemma = (lang, lemma) => {
       enCh.gender.traitValue = Array.from(new Set(enCh.gender.traitValue));
     }
 
-    Object.keys(enCh).forEach((traitKey) => {
-      let traitObject = enCh[traitKey];
-      if (
-        traitObject.expectedTypeOnStCh === "array" &&
-        !traitObject.traitValue
-      ) {
-        traitObject.traitValue = [];
-      }
-    });
-
     let theTags = nexusUtils.getPapers(lObj);
     if (!theTags) {
       consol.log("[1;31m " + `taof ${lObj.id} has no tags.` + "[0m");
@@ -284,33 +367,34 @@ exports.getEnChsForLemma = (lang, lemma) => {
     }
     enCh.andTags.traitValue = theTags;
 
-    if (lObj.allohomInfo) {
-      enCh.allohomInfo = lObj.allohomInfo;
-    }
+    let wordtype = gpUtils.getWordtypeShorthandLObj(lObj);
 
-    enCh.wordtype = gpUtils.getWordtypeShorthandLObj(lObj);
-    enCh.id = lObj.id;
+    enCh.id = lObj.id; //alpha so what's this about?
     enCh.lemma = lObj.lemma;
-
     enCh._info = {};
+    enCh._info.allohomInfo = lObj.allohomInfo;
 
     [
       "inheritableInflectionKeys",
       "allowableTransfersFromQuestionStructure",
-    ].forEach((infoKey) => {
-      let info =
-        refObj.lemmaObjectTraitKeys[lang][infoKey][
-          refFxn.translateWordtypeShorthandLonghand(enCh.wordtype)
+    ].forEach((datumKey) => {
+      let datum =
+        refObj.lemmaObjectTraitKeys[lang][datumKey][
+          refFxn.translateWordtypeShorthandLonghand(wordtype)
         ];
-      if (!info) {
+      if (!datum) {
         //devlogging
-        consol.throw("stmo Error fetching auxiliary info for enCh via API.");
+        consol.throw(
+          `stmo Error fetching auxiliary info for enCh "${enCh.chunkId.traitValue}" via API.`
+        );
       }
-      enCh._info[infoKey] = info;
+      enCh._info[datumKey] = datum;
     });
 
     return enCh;
   });
+
+  return enChs;
 };
 
 exports.getLObjsForLemma = (lang, lemma) => {

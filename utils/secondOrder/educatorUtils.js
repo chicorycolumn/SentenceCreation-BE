@@ -102,13 +102,8 @@ exports.findHomographs = (envir, currentLanguage, homographType, ignore) => {
   Object.keys(wordsBank).forEach((wordsetKey) => {
     let wordset = wordsBank[wordsetKey];
     let wordtype = wordsetKey.slice(0, 3);
-    let stCh = { wordtype, chunkId: `${wordtype}-900` };
 
-    langUtils.expandLemmaObjects(
-      wordset,
-      gpUtils.getWordtypeStCh(stCh),
-      currentLanguage
-    );
+    langUtils.expandLemmaObjects(wordset, wordtype, currentLanguage);
 
     wordset.forEach((lObj) => {
       let terminalValuesAndPathsArr =

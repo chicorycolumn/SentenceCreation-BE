@@ -1,5 +1,6 @@
 const { fetchPalette } = require("../models/palette.model");
 const uUtils = require("../utils/universalUtils");
+const refObj = require("../utils/reference/referenceObjects.js");
 
 exports.getErrors = (responseObj) => {
   let errors = {};
@@ -67,6 +68,12 @@ exports.getSentencesAsQuestionOnly = (req, res, next) => {
   sentenceFormula.sentenceFormulaSymbol = numberString;
   sentenceFormula.sentenceFormulaId = `${questionLanguage}-${numberString}`;
   sentenceFormula.equivalents = {};
+
+  if (requestingSingleWordOnly) {
+    sentenceFormula.sentenceStructure.forEach((stCh) =>
+      refObj.agreementTraits.forEach((agreeKey) => delete stCh[agreeKey])
+    );
+  }
 
   let data = {
     body: {

@@ -521,6 +521,28 @@ exports.sentenceFormulasBank = [
     additionalOrders: [],
   },
   {
+    sentenceFormulaSymbol: "101c girl is reading",
+    sentenceFormulaId: "POL-00-101c",
+    equivalents: { ENG: ["ENG-00-101c"] },
+    sentenceStructure: [
+      {
+        chunkId: "npe-1-kobieta",
+        andTags: ["personTest1"],
+        specificIds: ["^pol-npe-011-kobieta"],
+        number: ["singular", "plural"],
+      },
+      {
+        chunkId: "ver-1-czyta",
+        agreeWith: "npe-1-kobieta",
+        tenseDescription: ["present im"],
+        person: ["3per"],
+        andTags: ["basic2"],
+      },
+    ],
+    primaryOrders: [["npe-1-kobieta", "ver-1-czyta"]],
+    additionalOrders: [["ver-1-czyta", "npe-1-kobieta"]],
+  },
+  {
     sentenceFormulaSymbol: "102a I'll read (pf fut)",
     sentenceFormulaId: "POL-00-102a",
     equivalents: { ENG: ["ENG-00-102a"] },

@@ -1,7 +1,7 @@
 const educatorRouter = require("express").Router();
 const {
   getTags,
-  getInfo,
+  getChunks,
   getWordsByCriteria,
   getFormulas,
 } = require("../controllers/info.controller");
@@ -11,10 +11,10 @@ const {
 const { handle405s } = require("../errors/errors");
 
 educatorRouter.route("/tags*").get(getTags).all(handle405s);
-educatorRouter.route("/info*").get(getInfo).all(handle405s);
+educatorRouter.route("/chunks*").get(getChunks).all(handle405s);
 educatorRouter.route("/formulas*").get(getFormulas).all(handle405s);
 educatorRouter
-  .route("/sandbox*")
+  .route("/sentences*")
   .put(getSentencesAsQuestionOnly)
   .all(handle405s);
 

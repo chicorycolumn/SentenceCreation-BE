@@ -69,6 +69,29 @@ exports.sentenceFormulasBank = [
     additionalOrders: [["fix-2", "fix-1", "npe-1", "ver-1"]],
   },
   {
+    sentenceFormulaSymbol: "101c girl is reading",
+    sentenceFormulaId: "ENG-00-101c",
+    equivalents: { POL: ["POL-00-101c"] },
+    sentenceStructure: [
+      { chunkId: "fix-1-the", chunkValue: "the" },
+      {
+        chunkId: "npe-1-woman",
+        andTags: ["personTest1"],
+        specificIds: ["^eng-npe-001-woman"],
+        number: ["singular", "plural"],
+        gender: [],
+      },
+      {
+        chunkId: "ver-1-reads",
+        agreeWith: "npe-1-woman",
+        person: ["3per"],
+        andTags: ["basic2"],
+      },
+    ],
+    primaryOrders: [["fix-1-the", "npe-1-woman", "ver-1-reads"]],
+    additionalOrders: [],
+  },
+  {
     sentenceFormulaSymbol: "102a I'll read (pf fut)",
     sentenceFormulaId: "ENG-00-102a",
     equivalents: { POL: ["POL-00-102a"] },

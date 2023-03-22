@@ -12,25 +12,12 @@ const refObj = require("../utils/reference/referenceObjects.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 const refFxn = require("../utils/reference/referenceFunctions.js");
 
-exports.fetchInfo = (req) => {
-  let { lang, infoType } = req.query;
+exports.fetchChunks = (req) => {
+  let { lang, lemma } = req.query;
 
-  let responseObject = {
-    info: infoType
-      ? `Info type "${infoType}" requested not recognised.`
-      : "No info type was specified.",
-  };
+  let responseObject = {};
 
-  if (infoType == "lObjs") {
-    responseObject.info = apiUtils.getEnChsForLemma(
-      lang,
-      req.query.lemma.toLowerCase()
-    );
-  }
-
-  if (infoType == "structureWordtype") {
-    responseObject.info = refFxn.getStructureChunkTraits(lang);
-  }
+  responseObject.info = apiUtils.getEnChsForLemma(lang, lemma.toLowerCase());
 
   return Promise.all([responseObject]).then((array) => {
     return array[0];

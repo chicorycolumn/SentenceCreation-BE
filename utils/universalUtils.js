@@ -391,3 +391,9 @@ exports.flatten = (arr) => {
 exports.round = (num) => {
   return Math.round(num * 1000) / 1000;
 };
+
+exports.getRandomNumberString = (len) => {
+  return Math.random()
+    .toString()
+    .slice(2, len + 2);
+};

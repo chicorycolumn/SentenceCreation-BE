@@ -28,16 +28,10 @@ exports.fetchFormulas = (req) => {
   let { questionSentenceFormula, answerSentenceFormulas } =
     apiUtils.getSentenceFormulas(id, answerLang, env);
 
-  questionSentenceFormula.sentenceStructure =
-    questionSentenceFormula.sentenceStructure.map((stCh) =>
-      apiUtils.getEnChForStCh(questionLang, stCh)
-    );
+  apiUtils.frontendifyFormula(questionLang, questionSentenceFormula);
 
   answerSentenceFormulas.forEach((answerSentenceFormula) => {
-    answerSentenceFormula.sentenceStructure =
-      answerSentenceFormula.sentenceStructure.map((stCh) =>
-        apiUtils.getEnChForStCh(answerLang, stCh)
-      );
+    apiUtils.frontendifyFormula(answerLang, answerSentenceFormula);
   });
 
   let responseObject = {

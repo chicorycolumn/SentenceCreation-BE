@@ -1,9 +1,9 @@
 const { fetchTags, fetchWordsByCriteria } = require("../models/tags.model");
-const { fetchInfo } = require("../models/info.model");
+const { fetchChunks } = require("../models/chunks.model");
 const { fetchFormulas } = require("../models/formulas.model");
 
-exports.getInfo = (req, res, next) => {
-  fetchInfo(req)
+exports.getChunks = (req, res, next) => {
+  fetchChunks(req)
     .then((responseObj) => {
       if (responseObj.info) {
         res.status(200).send(responseObj);

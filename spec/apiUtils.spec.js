@@ -23,7 +23,7 @@ const runApiTest1 = (req, expected) => {
     });
 };
 
-describe("/educator/sandbox - Testing API.", () => {
+describe("/educator/sentences - Testing API.", () => {
   it("#san03 GET 200 YES: Deduplicating specially treated imOnly verbs like 'być'.", () => {
     const questionLanguage = "POL";
 
