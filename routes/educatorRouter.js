@@ -7,7 +7,7 @@ const {
 } = require("../controllers/info.controller");
 const {
   getSentencesAsQuestionOnly,
-} = require("../controllers/sandbox.controller");
+} = require("../controllers/sentences.controller");
 const { handle405s } = require("../errors/errors");
 
 educatorRouter.route("/tags*").get(getTags).all(handle405s);
