@@ -594,7 +594,8 @@ exports.sentenceFormulasBank = [
     equivalents: { POL: ["POL-00-113"] },
     sentenceStructure: [
       {
-        chunkId: "pro-1-invisible",
+        chunkId: "pro-1-I",
+
         specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
       },
@@ -602,7 +603,7 @@ exports.sentenceFormulasBank = [
         chunkId: "pro-2",
         form: ["determiner"],
         specificIds: ["eng-pro-POSSESSIVE"],
-        agreeWith: "pro-1-invisible",
+        agreeWith: "pro-1-I",
         agreeWith2: "npe-1",
       },
       {
@@ -618,7 +619,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "pro-3",
-        agreeWith: "pro-1-invisible",
+        agreeWith: "pro-1-I",
         gcase: ["dat"],
         formulaImportantTraitKeys: ["gcase"],
         specificIds: ["eng-pro-PERSONAL"],
@@ -640,7 +641,8 @@ exports.sentenceFormulasBank = [
     equivalents: { POL: ["POL-00-113a"] },
     sentenceStructure: [
       {
-        chunkId: "pro-1-invisible-We",
+        chunkId: "pro-1-We",
+
         specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
       },
@@ -648,7 +650,7 @@ exports.sentenceFormulasBank = [
         chunkId: "pro-2-Our",
         form: ["determiner"],
         specificIds: ["eng-pro-POSSESSIVE"],
-        agreeWith: "pro-1-invisible-We",
+        agreeWith: "pro-1-We",
       },
       {
         chunkId: "npe-1-Father",
@@ -662,7 +664,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "pro-3-Us",
-        agreeWith: "pro-1-invisible-We",
+        agreeWith: "pro-1-We",
         gcase: ["dat"],
         formulaImportantTraitKeys: ["gcase"],
         specificIds: ["eng-pro-PERSONAL"],
@@ -698,7 +700,8 @@ exports.sentenceFormulasBank = [
     equivalents: { POL: ["POL-00-113b"] },
     sentenceStructure: [
       {
-        chunkId: "pro-1-invisible-We",
+        chunkId: "pro-1-We",
+
         specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
       },
@@ -706,7 +709,7 @@ exports.sentenceFormulasBank = [
         chunkId: "pro-2-Our",
         form: ["determiner"],
         specificIds: ["eng-pro-POSSESSIVE"],
-        agreeWith: "pro-1-invisible-We",
+        agreeWith: "pro-1-We",
       },
       {
         chunkId: "npe-1-Father",
@@ -720,7 +723,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "pro-3-Us",
-        agreeWith: "pro-1-invisible-We",
+        agreeWith: "pro-1-We",
         gcase: ["dat"],
         formulaImportantTraitKeys: ["gcase"],
         specificIds: ["eng-pro-PERSONAL"],
@@ -756,7 +759,8 @@ exports.sentenceFormulasBank = [
     equivalents: { POL: ["POL-00-113c"] },
     sentenceStructure: [
       {
-        chunkId: "pro-1-invisible-We",
+        chunkId: "pro-1-We",
+
         specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
@@ -765,7 +769,7 @@ exports.sentenceFormulasBank = [
         chunkId: "pro-2-Our",
         form: ["determiner"],
         specificIds: ["eng-pro-POSSESSIVE"],
-        agreeWith: "pro-1-invisible-We",
+        agreeWith: "pro-1-We",
       },
       {
         chunkId: "npe-1-Father",
@@ -779,7 +783,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "pro-3-Us",
-        agreeWith: "pro-1-invisible-We",
+        agreeWith: "pro-1-We",
         gcase: ["dat"],
         formulaImportantTraitKeys: ["gcase"],
         specificIds: ["eng-pro-PERSONAL"],
@@ -817,7 +821,8 @@ exports.sentenceFormulasBank = [
       { chunkId: "fix-1a", chunkValue: "the" },
       { chunkId: "fix-1b", chunkValue: "a" },
       {
-        chunkId: "pro-1-invisible-I",
+        chunkId: "pro-1-I",
+
         specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
@@ -834,7 +839,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "pro-2-Me",
-        agreeWith: "pro-1-invisible-I",
+        agreeWith: "pro-1-I",
         gcase: ["dat"],
         formulaImportantTraitKeys: ["gcase"],
         specificIds: ["eng-pro-PERSONAL"],
@@ -1276,7 +1281,8 @@ exports.sentenceFormulasBank = [
     equivalents: { POL: ["POL-118"] },
     sentenceStructure: [
       {
-        chunkId: "pro-0-I-invisible",
+        chunkId: "pro-0-I",
+
         specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
@@ -1285,7 +1291,7 @@ exports.sentenceFormulasBank = [
         chunkId: "pro-1-my",
         form: ["determiner"],
         specificIds: ["eng-pro-POSSESSIVE"],
-        agreeWith: "pro-0-I-invisible",
+        agreeWith: "pro-0-I",
       },
       {
         chunkId: "npe-1-doctor",
@@ -1318,7 +1324,8 @@ exports.sentenceFormulasBank = [
     equivalents: { POL: ["POL-118a"] },
     sentenceStructure: [
       {
-        chunkId: "pro-0-I-invisible",
+        chunkId: "pro-0-I",
+
         specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
@@ -1327,7 +1334,7 @@ exports.sentenceFormulasBank = [
         chunkId: "pro-1-my",
         form: ["determiner"],
         specificIds: ["eng-pro-POSSESSIVE"],
-        agreeWith: "pro-0-I-invisible",
+        agreeWith: "pro-0-I",
       },
       {
         chunkId: "npe-1-doctor",
@@ -1340,7 +1347,7 @@ exports.sentenceFormulasBank = [
         chunkId: "pro-2-my",
         form: ["determiner"],
         specificIds: ["eng-pro-POSSESSIVE"],
-        agreeWith: "pro-0-I-invisible",
+        agreeWith: "pro-0-I",
       },
       {
         chunkId: "nco-2-book",
@@ -1359,7 +1366,8 @@ exports.sentenceFormulasBank = [
     equivalents: { POL: ["POL-118b"] },
     sentenceStructure: [
       {
-        chunkId: "pro-0-I-invisible",
+        chunkId: "pro-0-I",
+
         specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
@@ -1368,7 +1376,7 @@ exports.sentenceFormulasBank = [
         chunkId: "pro-1-my",
         form: ["determiner"],
         specificIds: ["eng-pro-POSSESSIVE"],
-        agreeWith: "pro-0-I-invisible",
+        agreeWith: "pro-0-I",
       },
       {
         chunkId: "npe-1-doctor",
@@ -1385,7 +1393,8 @@ exports.sentenceFormulasBank = [
     equivalents: { POL: ["POL-118c"] },
     sentenceStructure: [
       {
-        chunkId: "pro-0-I-invisible",
+        chunkId: "pro-0-I",
+
         specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
@@ -1394,7 +1403,7 @@ exports.sentenceFormulasBank = [
         chunkId: "pro-1-my",
         form: ["determiner"],
         specificIds: ["eng-pro-POSSESSIVE"],
-        agreeWith: "pro-0-I-invisible",
+        agreeWith: "pro-0-I",
       },
       {
         chunkId: "nco-1-onion",
@@ -1410,7 +1419,8 @@ exports.sentenceFormulasBank = [
     equivalents: { POL: ["POL-119"] },
     sentenceStructure: [
       {
-        chunkId: "pro-0-I-invisible",
+        chunkId: "pro-0-I",
+
         specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
@@ -1432,7 +1442,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "pro-1-me",
         specificIds: ["eng-pro-PERSONAL"],
-        agreeWith: "pro-0-I-invisible",
+        agreeWith: "pro-0-I",
         gcase: ["acc"],
         formulaImportantTraitKeys: ["gcase"],
       },
@@ -1445,7 +1455,8 @@ exports.sentenceFormulasBank = [
     equivalents: { POL: ["POL-120"] },
     sentenceStructure: [
       {
-        chunkId: "pro-0-I-invisible",
+        chunkId: "pro-0-I",
+
         specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
@@ -1468,7 +1479,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "pro-1-me",
         specificIds: ["eng-pro-PERSONAL"],
-        agreeWith: "pro-0-I-invisible",
+        agreeWith: "pro-0-I",
         gcase: ["acc"],
         formulaImportantTraitKeys: ["gcase"],
       },

@@ -223,13 +223,15 @@ exports.getFormulaItem = (lang, wordtypeLonghand, stCh) => {
     });
   }
 
+  let guideword = enCh.chunkId.traitValue.split("-").slice(-1)[0];
+
   // 2b. Gather booleans
   apiUtils.gatherBooleanTraitsForFE(enCh);
 
   let formulaItem = {
     structureChunk: enCh,
     formulaItemId: uUtils.getRandomNumberString(10),
-    guideword: enCh.chunkId.traitValue.split("-").slice(-1)[0],
+    guideword,
   };
 
   return formulaItem;
@@ -270,13 +272,21 @@ exports.frontendifyFormula = (lang, formula) => {
 
   formula.sentenceStructure = formula.sentenceStructure.map((stCh) => {
     // 2a. stCh to enCh
-
     let fItem = apiUtils.getFormulaItem(
       lang,
       gpUtils.getWordtypeStCh(stCh),
       stCh
       // 2b. Gather booleans
     );
+
+    // 2c. Add isGhostChunk key
+    if (
+      !formula.orders.some((orderObj) =>
+        orderObj.order.includes(fItem.structureChunk.chunkId.traitValue)
+      )
+    ) {
+      fItem.structureChunk.isGhostChunk = true;
+    }
 
     return fItem;
   });
@@ -414,4 +424,23 @@ exports.getLObjsForLemma = (lang, lemma) => {
     });
   });
   return matches;
+};
+
+exports.getAestheticGuideword = (formulaObject, chunk) => {
+  let guideword = chunk.chunkId.split("-").slice(-1);
+
+  // If chunk is ghost then aesthetically modify guideword, just for display in formulaId selector on FE.
+  let isGhostChunk;
+  let orders = [];
+  if (formulaObject.primaryOrders) {
+    orders.push(...formulaObject.primaryOrders);
+  }
+  if (formulaObject.additionalOrders) {
+    orders.push(...formulaObject.additionalOrders);
+  }
+  if (orders.length) {
+    isGhostChunk = !orders.some((order) => order.includes(chunk.chunkId));
+
+    return isGhostChunk ? `[${guideword}]` : guideword;
+  }
 };
