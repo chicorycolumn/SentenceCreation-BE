@@ -352,7 +352,8 @@ exports.getEnChsForLemma = (lang, lemma) => {
             !enCh[traitKey].possibleTraitValues.includes(traitValue)
           ) {
             consol.log(
-              `pomi Error: traitValue ${traitValue} not compatible with ${traitKey} even though that's what I gleaned using giveRoutesAndTerminalValuesFromObject.`
+              routeObj,
+              `pmio Error: For lObj "${lObj.id}" I fetched RoutesAndTerminalValuesFromObject. From routeObj printed above I found that traitValue "${traitValue}" not compatible with "${traitKey}" even though that's what I gleaned using giveRoutesAndTerminalValuesFromObject.`
             );
             return;
           }

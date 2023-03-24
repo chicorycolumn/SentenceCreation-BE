@@ -44,8 +44,7 @@ exports.sentenceFormulasBank = [
     additionalOrders: [],
   },
   {
-    sentenceFormulaSymbol:
-      "101b girl *reads quickly IT WON'T MATTER THAT THIS sentenceFormulaSymbol IS DIFFERENT FROM ITS POL COUNTERPART",
+    sentenceFormulaSymbol: "101b girl *reads quickly XYZ", // Doesn't matter that this sentenceFormulaSymbol is different from its POL counterpart.
     sentenceFormulaId: "ENG-00-101b",
     equivalents: { POL: ["POL-00-101b"] },
     sentenceStructure: [
