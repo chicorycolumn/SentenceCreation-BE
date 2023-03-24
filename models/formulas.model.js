@@ -75,7 +75,11 @@ exports.fetchFormulaIds = (req) => {
       guidewordSentence =
         guidewordSentence[0].toUpperCase() + guidewordSentence.slice(1) + ".";
 
-      return [formulaObject.sentenceFormulaId, guidewordSentence];
+      return [
+        formulaObject.sentenceFormulaId,
+        guidewordSentence,
+        formulaObject.sentenceFormulaSymbol,
+      ];
     });
 
   let responseObject = {
