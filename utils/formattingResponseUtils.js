@@ -8,7 +8,7 @@ exports.sendResponseForSingleWord = (questionSentenceData) => {
   let arr = questionSentenceData.arrayOfOutputArrays.map((arr) => {
     return {
       selectedWord: arr.map((obj) => obj.selectedWord).join(" "),
-      lObjID: arr.map((obj) => obj.selectedLemmaObject.id).join(" "),
+      lObjId: arr.map((obj) => obj.selectedLemmaObject.id).join(" "),
     };
   });
 

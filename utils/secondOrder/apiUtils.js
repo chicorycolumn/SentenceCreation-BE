@@ -381,6 +381,7 @@ exports.getEnChsForLemma = (lang, lemma) => {
     let wordtype = gpUtils.getWordtypeShorthandLObj(lObj);
 
     enCh.id = lObj.id; //alpha so what's this about?
+    enCh.lObjId = lObj.id; //alpha so what's this about?
     enCh.lemma = lObj.lemma;
     enCh._info = {};
     enCh._info.allohomInfo = lObj.allohomInfo;
@@ -401,6 +402,10 @@ exports.getEnChsForLemma = (lang, lemma) => {
       }
       enCh._info[datumKey] = datum;
     });
+
+    if (wordtype === "pro") {
+      enCh.specificIds.traitValue = [lObj.id];
+    }
 
     return enCh;
   });
