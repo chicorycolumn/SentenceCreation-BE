@@ -43,3 +43,45 @@ exports.fetchFormulas = (req) => {
     return array[0];
   });
 };
+
+exports.fetchFormulaIds = (req) => {
+  let { lang1, lang2, env } = req.query;
+
+  ivUtils.validateLang(lang1, 19);
+  ivUtils.validateLang(lang2, 20);
+
+  if (!env) {
+    env = "ref";
+  }
+
+  let formulasBank = scUtils.getWordsAndFormulas(
+    lang1,
+    false,
+    true,
+    env
+  ).sentenceFormulasBank;
+
+  let formulaIds = formulasBank
+    .filter(
+      (formulaObject) =>
+        formulaObject.equivalents &&
+        formulaObject.equivalents[lang2] &&
+        formulaObject.equivalents[lang2].length
+    )
+    .map((formulaObject) => {
+      let guidewords = formulaObject.sentenceStructure
+        .map((chunk) => chunk.chunkId.split("-").slice(-1))
+        .join(" ");
+      guidewords = guidewords[0].toUpperCase() + guidewords.slice(1) + ".";
+
+      return [formulaObject.sentenceFormulaId, guidewords];
+    });
+
+  let responseObject = {
+    formulaIds,
+  };
+
+  return Promise.all([responseObject]).then((array) => {
+    return array[0];
+  });
+};

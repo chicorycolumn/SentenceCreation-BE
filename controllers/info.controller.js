@@ -1,6 +1,6 @@
 const { fetchTags, fetchWordsByCriteria } = require("../models/tags.model");
 const { fetchChunks } = require("../models/chunks.model");
-const { fetchFormulas } = require("../models/formulas.model");
+const { fetchFormulas, fetchFormulaIds } = require("../models/formulas.model");
 
 exports.getChunks = (req, res, next) => {
   fetchChunks(req)
@@ -28,6 +28,14 @@ exports.getTags = (req, res, next) => {
 
 exports.getFormulas = (req, res, next) => {
   fetchFormulas(req)
+    .then((responseObj) => {
+      res.status(200).send(responseObj);
+    })
+    .catch((err) => next(err));
+};
+
+exports.getFormulaIds = (req, res, next) => {
+  fetchFormulaIds(req)
     .then((responseObj) => {
       res.status(200).send(responseObj);
     })

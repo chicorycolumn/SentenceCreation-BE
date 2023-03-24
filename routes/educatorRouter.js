@@ -4,6 +4,7 @@ const {
   getChunks,
   getWordsByCriteria,
   getFormulas,
+  getFormulaIds,
 } = require("../controllers/info.controller");
 const {
   getSentencesAsQuestionOnly,
@@ -13,6 +14,7 @@ const { handle405s } = require("../errors/errors");
 educatorRouter.route("/tags*").get(getTags).all(handle405s);
 educatorRouter.route("/chunks*").get(getChunks).all(handle405s);
 educatorRouter.route("/formulas*").get(getFormulas).all(handle405s);
+educatorRouter.route("/formulaids*").get(getFormulaIds).all(handle405s);
 educatorRouter
   .route("/sentences*")
   .put(getSentencesAsQuestionOnly)
