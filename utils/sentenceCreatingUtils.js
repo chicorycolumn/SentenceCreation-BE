@@ -736,7 +736,7 @@ exports.processSentenceFormula = (
 
   grandOutputArray.forEach((outputArray, outputArrayIndex) => {
     outputArray.forEach((outputUnit) => {
-      if (gpUtils.getWordtypeStCh(outputUnit.structureChunk) === "fixed") {
+      if (gpUtils.getWordtypeStCh(outputUnit.structureChunk) === "fix") {
         return;
       }
 
@@ -1077,11 +1077,11 @@ exports.coverBothGendersForPossessivesOfHypernyms = (
    * But we DON'T WANT
    * "ON jest rodzicem." for semanticGender f. (ON/ONA is nom PERSONAL pronombre)
    *
-   * So that's why we're not running this fxn for all pronouns.
+   * So that's why we're not running this fxn for all pronombres.
    */
   if (
     multipleMode &&
-    gpUtils.getWordtypeStCh(structureChunk) === "pronombre" &&
+    gpUtils.getWordtypeStCh(structureChunk) === "pro" &&
     structureChunk.agreeWith
   ) {
     if (!structureChunk.gcase || structureChunk.gcase.length !== 1) {
@@ -1382,7 +1382,7 @@ exports.conformAnswerStructureToQuestionStructure = (
       consol.logSpecial(8, {
         "outputUnit.selectedWord": outputUnit.selectedWord,
         "outputUnit.selectedLemmaObject.id": `${
-          gpUtils.getWordtypeStCh(outputUnit.structureChunk) === "fixed"
+          gpUtils.getWordtypeStCh(outputUnit.structureChunk) === "fix"
             ? "FIXED"
             : outputUnit.selectedLemmaObject.id
         }`,
@@ -1412,7 +1412,7 @@ exports.conformAnswerStructureToQuestionStructure = (
     //
     let questionStructureChunk = questionOutputArrItem.structureChunk;
 
-    if (gpUtils.getWordtypeStCh(questionStructureChunk) === "fixed") {
+    if (gpUtils.getWordtypeStCh(questionStructureChunk) === "fix") {
       return;
     }
 
@@ -1448,7 +1448,7 @@ exports.conformAnswerStructureToQuestionStructure = (
       false
     );
 
-    let source = words[gpUtils.getWordtypeShorthandStCh(answerStructureChunk)];
+    let source = words[gpUtils.getWordtypeStCh(answerStructureChunk)];
 
     matchingAnswerLemmaObjects = lfUtils.getLObjAndSiblings(
       source,
@@ -1830,7 +1830,7 @@ exports.inheritFromHeadToDependentChunk = (
      * So altogether:   "SHE was a parent, I see HER and HER car."   translates to   "BYŁA rodzicem, widze GO i JEGO auto."
      */
     if (
-      gpUtils.getWordtypeShorthandStCh(dependentChunk) === "pro" &&
+      gpUtils.getWordtypeStCh(dependentChunk) === "pro" &&
       !gpUtils.traitValueIsMeta(headSelectedLemmaObject.gender) // ie This is a gendered language.
     ) {
       if (
@@ -1871,7 +1871,7 @@ exports.inheritFromHeadToDependentChunk = (
 
         doneTraitKeys.push("gender", "semanticGender");
       }
-    } else if (gpUtils.getWordtypeShorthandStCh(dependentChunk) === "npe") {
+    } else if (gpUtils.getWordtypeStCh(dependentChunk) === "npe") {
       // HFT1b
       // If depChunk is npe (and headChunk is hypernym) - "My parent(head) is a woman(dep)."
       // don't transfer "rodzic" gender m1 to "woman", just semanticGender f.

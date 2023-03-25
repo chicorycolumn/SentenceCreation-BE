@@ -38,8 +38,8 @@ exports.tweakStructureChunks = (matches, structureChunk, currentLanguage) => {
   let metagenderRef = refObj.metaTraitValues[currentLanguage].gender;
 
   matches.forEach((lObj) => {
-    if (gpUtils.getWordtypeLObj(lObj) === "pronombre") {
-      if (gpUtils.getWordtypeStCh(structureChunk) !== "pronombre") {
+    if (gpUtils.getWordtypeLObj(lObj) === "pro") {
+      if (gpUtils.getWordtypeStCh(structureChunk) !== "pro") {
         consol.throw(
           "#ERR hcio expandLemmaObjects. lObj and stCh wordtypes don't match."
         );
@@ -475,7 +475,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   const metaTraitValuesRef = refObj.metaTraitValues[currentLanguage];
 
   sentenceStructure.forEach((structureChunk) => {
-    if (gpUtils.getWordtypeStCh(structureChunk) === "fixed") {
+    if (gpUtils.getWordtypeStCh(structureChunk) === "fix") {
       return;
     }
 
@@ -505,7 +505,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
               uUtils.selectRandom(defaultTraitValuesRef[wordtype][traitKey]),
             ];
 
-            if (traitKey === "person" && wordtype === "pronombre") {
+            if (traitKey === "person" && wordtype === "pro") {
               allLangUtils.enforceThirdPersonAgreeWith(structureChunk);
             }
           }
@@ -524,7 +524,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
       );
     }
 
-    if (gpUtils.getWordtypeStCh(structureChunk) === "pronombre") {
+    if (gpUtils.getWordtypeStCh(structureChunk) === "pro") {
       allLangUtils.enforceThirdPersonAgreeWith(structureChunk, true);
 
       if (!structureChunk.gender || !structureChunk.gender.length) {
@@ -550,7 +550,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
       allLangUtils.enforceIsPerson(structureChunk);
     }
 
-    if (gpUtils.getWordtypeStCh(structureChunk) === "verb") {
+    if (gpUtils.getWordtypeStCh(structureChunk) === "ver") {
       if (structureChunk.form && structureChunk.form.includes("verbal")) {
         if (
           (!structureChunk.tenseDescription ||
@@ -577,7 +577,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
 
         if (
           !haveAdjusted &&
-          gpUtils.getWordtypeAgree(structureChunk) === "pronombre"
+          gpUtils.getWordtypeAgree(structureChunk) === "pro"
         ) {
           let headChunk = (structureChunk.person = sentenceStructure.find(
             (potentialHeadChunk) => {

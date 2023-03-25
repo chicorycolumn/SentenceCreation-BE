@@ -145,7 +145,7 @@ exports.updateSentenceStructureWithNewStructureChunksFromOutputUnits = (
       unit.structureChunk
     );
 
-    if (exports.getWordtypeStCh(unit.structureChunk) !== "fixed") {
+    if (exports.getWordtypeStCh(unit.structureChunk) !== "fix") {
       let hypernymy = assessHypernymy(unit.selectedLemmaObject);
       if (hypernymy) {
         sentenceStructure[indexOfStChToChange].hypernymy = hypernymy;
@@ -368,38 +368,23 @@ exports.stChIsPerson = (stCh, strict) => {
 };
 
 exports.lObjIsNounPerson = (lObj) => {
-  return ["nounPerson"].includes(this.getWordtypeLObj(lObj));
+  return ["npe"].includes(this.getWordtypeLObj(lObj));
 };
 
 exports.stChIsNounPerson = (stCh) => {
-  return ["nounPerson"].includes(this.getWordtypeStCh(stCh, true));
-};
-
-exports.getWordtypeShorthandLObj = (lObj) => {
-  return lObj.id.split("-")[1];
-};
-
-exports.getWordtypeShorthandStCh = (stCh) => {
-  return stCh.chunkId.split("-")[0];
+  return ["npe"].includes(this.getWordtypeStCh(stCh, true));
 };
 
 exports.getWordtypeLObj = (lObj) => {
-  return refFxn.translateWordtypeShorthandLonghand(
-    this.getWordtypeShorthandLObj(lObj),
-    lObj.id
-  );
+  return lObj.id.split("-")[1];
 };
 
 exports.getWordtypeStCh = (stCh) => {
-  return refFxn.translateWordtypeShorthandLonghand(
-    this.getWordtypeShorthandStCh(stCh),
-    stCh.chunkId
-  );
+  return stCh.chunkId.split("-")[0];
 };
 
 exports.getWordtypeAgree = (structureChunk, agreeKey = "agreeWith") => {
-  let wordtypeShorthand = structureChunk[agreeKey].split("-")[0];
-  return refFxn.translateWordtypeShorthandLonghand(wordtypeShorthand);
+  return structureChunk[agreeKey].split("-")[0];
 };
 
 exports.isTraitKeyFilledOutOnChunk = (chunk, traitKey) => {

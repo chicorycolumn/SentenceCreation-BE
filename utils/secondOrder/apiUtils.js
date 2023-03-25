@@ -220,9 +220,8 @@ exports.getEnChsForLemma = (lang, lemma) => {
   let lObjs = apiUtils.getLObjsForLemma(lang, lemma);
 
   return lObjs.map((lObj) => {
-    let wordtypeShorthand = gpUtils.getWordtypeShorthandLObj(lObj);
-    let wordtypeLonghand =
-      refFxn.translateWordtypeShorthandLonghand(wordtypeShorthand);
+    let wordtypeShorthand = gpUtils.getWordtypeLObj(lObj);
+    let wordtypeLonghand = wordtypeShorthand;
 
     let enCh = apiUtils.getBlankEnhancedStructureChunkForThisWordtype(
       lang,
@@ -288,7 +287,7 @@ exports.getEnChsForLemma = (lang, lemma) => {
       enCh.allohomInfo = lObj.allohomInfo;
     }
 
-    enCh.wordtype = gpUtils.getWordtypeShorthandLObj(lObj);
+    enCh.wordtype = gpUtils.getWordtypeLObj(lObj);
     enCh.id = lObj.id;
     enCh.lemma = lObj.lemma;
 
@@ -298,10 +297,7 @@ exports.getEnChsForLemma = (lang, lemma) => {
       "inheritableInflectionKeys",
       "allowableTransfersFromQuestionStructure",
     ].forEach((infoKey) => {
-      let info =
-        refObj.lemmaObjectTraitKeys[lang][infoKey][
-          refFxn.translateWordtypeShorthandLonghand(enCh.wordtype)
-        ];
+      let info = refObj.lemmaObjectTraitKeys[lang][infoKey][enCh.wordtype];
       if (!info) {
         //devlogging
         consol.throw("stmo Error fetching auxiliary info for enCh via API.");

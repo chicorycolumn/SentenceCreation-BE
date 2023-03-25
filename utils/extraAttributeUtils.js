@@ -57,12 +57,12 @@ exports.evaluateFYIPs = (outputArr, questionLang, answerLang, label) => {
         (depUnits.length &&
           depUnits.some((depUnit) =>
             ["npe", "pro"].includes(
-              gpUtils.getWordtypeShorthandStCh(depUnit.structureChunk)
+              gpUtils.getWordtypeStCh(depUnit.structureChunk)
             )
           )) ||
         (headOutputUnit &&
           ["npe", "pro"].includes(
-            gpUtils.getWordtypeShorthandStCh(headOutputUnit.structureChunk)
+            gpUtils.getWordtypeStCh(headOutputUnit.structureChunk)
           ))
       ) {
         return `FYIP101-${label}-${questionLang}-${answerLang}`;

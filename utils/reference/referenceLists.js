@@ -260,30 +260,30 @@ exports.metaTraitValues = {
 exports.lemmaObjectTraitKeys = {
   POL: {
     selectors: {
-      nounCommon: ["gender"],
-      nounPerson: ["gender"],
-      verb: ["aspect"],
+      nco: ["gender"],
+      npe: ["gender"],
+      ver: ["aspect"],
     },
     hybridSelectors: {
-      verb: ["tenseDescription"],
+      ver: ["tenseDescription"],
     },
     inflectionChains: {
-      nounCommon: ["number", "gcase"],
-      nounPerson: ["number", "gcase"],
-      adjective: ["form", "number", "gender", "gcase"],
-      verb: ["form", "tense", "person", "number", "gender"],
-      pronombre: ["form", "person", "number", "gender", "gcase"],
+      nco: ["number", "gcase"],
+      npe: ["number", "gcase"],
+      adj: ["form", "number", "gender", "gcase"],
+      ver: ["form", "tense", "person", "number", "gender"],
+      pro: ["form", "person", "number", "gender", "gcase"],
       //MASSACHEUSETTS
       // pronombrePERSONAL: ["form", "person", "number", "gender", "gcase"],
       // pronombrePOSSESSIVE: ["form", "person", "number", "gender", "number", "gender", "gcase"],
-      // article: NONE
-      preposition: ["form"],
+      // art: NONE
+      pre: ["form"],
     },
     inheritableInflectionKeys: {
-      nounCommon: ["number", "gcase"],
-      nounPerson: ["number", "gcase", "gender"],
-      adjective: ["number", "gender", "gcase"],
-      verb: [
+      nco: ["number", "gcase"],
+      npe: ["number", "gcase", "gender"],
+      adj: ["number", "gender", "gcase"],
+      ver: [
         "tense",
         "person",
         "number",
@@ -291,130 +291,112 @@ exports.lemmaObjectTraitKeys = {
         "aspect",
         "tenseDescription",
       ],
-      pronombre: ["person", "number", "gender", "semanticGender", "gcase"],
+      pro: ["person", "number", "gender", "semanticGender", "gcase"],
     },
     allowableTransfersFromQuestionStructure: {
-      nounCommon: ["number"],
-      nounPerson: ["number", "semanticGender", "virilityDetail"],
-      adjective: ["form", "number", "gender", "semanticGender"],
-      verb: [
-        "tenseDescription",
-        "person",
-        "number",
-        "gender",
-        "semanticGender",
-      ],
-      pronombre: ["person", "number", "gender"],
-      preposition: [],
+      nco: ["number"],
+      npe: ["number", "semanticGender", "virilityDetail"],
+      adj: ["form", "number", "gender", "semanticGender"],
+      ver: ["tenseDescription", "person", "number", "gender", "semanticGender"],
+      pro: ["person", "number", "gender"],
+      pre: [],
     },
     allowableExtraClarifiersInSingleWordSentences: {
-      nounCommon: ["gcase"],
-      nounPerson: ["gcase"],
-      adjective: [],
-      verb: [],
-      pronombre: [],
+      nco: ["gcase"],
+      npe: ["gcase"],
+      adj: [],
+      ver: [],
+      pro: [],
     },
   },
   SPA: {
     selectors: {
-      nounCommon: ["gender"],
-      nounPerson: ["gender"],
+      nco: ["gender"],
+      npe: ["gender"],
     },
     hybridSelectors: {
-      verb: ["tenseDescription"],
+      ver: ["tenseDescription"],
     },
     inflectionChains: {
-      nounCommon: ["number", "gcase"],
-      nounPerson: ["number", "gcase"],
-      adjective: ["form", "number", "gender"],
-      verb: ["form", "tense", "gender", "person", "number"], // "gender" will be _Genders in all tenses except pastParticiple ie hechas, escritos.
-      pronombre: ["form", "person", "number", "gender", "gcase"],
-      article: ["form", "number", "gender"],
-      preposition: ["form"],
+      nco: ["number", "gcase"],
+      npe: ["number", "gcase"],
+      adj: ["form", "number", "gender"],
+      ver: ["form", "tense", "gender", "person", "number"], // "gender" will be _Genders in all tenses except pastParticiple ie hechas, escritos.
+      pro: ["form", "person", "number", "gender", "gcase"],
+      art: ["form", "number", "gender"],
+      pre: ["form"],
     },
     inheritableInflectionKeys: {
-      nounCommon: ["number", "gcase"],
-      nounPerson: ["number", "gcase", "gender"],
-      adjective: ["number", "gender"],
-      verb: [
+      nco: ["number", "gcase"],
+      npe: ["number", "gcase", "gender"],
+      adj: ["number", "gender"],
+      ver: [
         "tense",
         "person",
         "number",
         "gender", // Los libros son escritos. --> "libros" gives gender and number to "escritos"
         // "tenseDescription" // epsilon add this, and to ENG too?
       ],
-      pronombre: ["person", "number", "gender", "semanticGender", "gcase"],
-      article: ["number", "gender"],
+      pro: ["person", "number", "gender", "semanticGender", "gcase"],
+      art: ["number", "gender"],
     },
     allowableTransfersFromQuestionStructure: {
-      nounCommon: ["number"],
-      nounPerson: ["number", "semanticGender", "virilityDetail"],
-      adjective: ["form", "number", "gender", "semanticGender"],
-      verb: [
-        "tenseDescription",
-        "person",
-        "number",
-        "gender",
-        "semanticGender",
-      ],
-      pronombre: ["form", "person", "number", "gender", "semanticGender"],
-      article: [],
-      preposition: [],
+      nco: ["number"],
+      npe: ["number", "semanticGender", "virilityDetail"],
+      adj: ["form", "number", "gender", "semanticGender"],
+      ver: ["tenseDescription", "person", "number", "gender", "semanticGender"],
+      pro: ["form", "person", "number", "gender", "semanticGender"],
+      art: [],
+      pre: [],
     },
     allowableExtraClarifiersInSingleWordSentences: {
-      nounCommon: [],
-      nounPerson: [],
-      adjective: [],
-      verb: [],
-      pronombre: [],
+      nco: [],
+      npe: [],
+      adj: [],
+      ver: [],
+      pro: [],
     },
   },
   ENG: {
     selectors: {
-      nounCommon: ["gender"],
-      nounPerson: ["gender"],
+      nco: ["gender"],
+      npe: ["gender"],
     },
     hybridSelectors: {
-      verb: ["tenseDescription"],
+      ver: ["tenseDescription"],
     },
     inflectionChains: {
-      nounCommon: ["number", "gcase"],
-      nounPerson: ["number", "gcase"],
-      adjective: ["form"],
-      verb: ["form", "tense", "person", "number"],
-      pronombre: ["form", "person", "number", "gender", "gcase"],
-      article: ["form", "number"],
-      preposition: ["form"],
+      nco: ["number", "gcase"],
+      npe: ["number", "gcase"],
+      adj: ["form"],
+      ver: ["form", "tense", "person", "number"],
+      pro: ["form", "person", "number", "gender", "gcase"],
+      art: ["form", "number"],
+      pre: ["form"],
     },
     inheritableInflectionKeys: {
-      nounCommon: ["number", "gcase"],
-      nounPerson: ["number", "gcase", "gender"],
-      adjective: [],
-      verb: ["tense", "person", "number"],
-      pronombre: ["person", "number", "gender", "semanticGender", "gcase"],
-      article: ["number"],
+      nco: ["number", "gcase"],
+      npe: ["number", "gcase", "gender"],
+      adj: [],
+      ver: ["tense", "person", "number"],
+      pro: ["person", "number", "gender", "semanticGender", "gcase"],
+      art: ["number"],
     },
     allowableTransfersFromQuestionStructure: {
-      nounCommon: ["number"],
-      nounPerson: ["number", "semanticGender", "virilityDetail"],
-      adjective: ["form"],
-      verb: [
-        "tenseDescription",
-        "person",
-        "number",
-        "gender",
-        "semanticGender",
-      ],
-      pronombre: ["form", "person", "number", "gender", "semanticGender"],
-      article: [],
-      preposition: [],
+      nco: ["number"],
+      npe: ["number", "semanticGender", "virilityDetail"],
+      adj: ["form"],
+      ver: ["tenseDescription", "person", "number", "gender", "semanticGender"],
+      pro: ["form", "person", "number", "gender", "semanticGender"],
+      art: [],
+      pre: [],
     },
     allowableExtraClarifiersInSingleWordSentences: {
-      nounCommon: [],
-      nounPerson: [],
-      adjective: [],
-      verb: [],
-      pronombre: [],
+      nco: [],
+      npe: [],
+      adj: [],
+      ver: [],
+      pro: [],
     },
   },
 };
@@ -529,15 +511,15 @@ exports.structureChunkTraits = {
     wordtype: {
       expectedTypeOnStCh: "string",
       possibleTraitValues: [
-        "nounPerson",
-        "nounCommon",
-        "adjective",
-        "verb",
-        "adverb",
-        "pronombre",
-        "preposition",
-        "article",
-        "fixed",
+        "npe",
+        "nco",
+        "adj",
+        "ver",
+        "adv",
+        "pro",
+        "pre",
+        "art",
+        "fix",
       ],
     },
     agreeWith: {
@@ -547,7 +529,7 @@ exports.structureChunkTraits = {
     agreeWith2: {
       expectedTypeOnStCh: "string",
       mustBeExistingChunkId: true,
-      compatibleWordtypes: ["pronombre"],
+      compatibleWordtypes: ["pro"],
     },
     PHD_type: {
       expectedTypeOnStCh: "string",
@@ -555,17 +537,17 @@ exports.structureChunkTraits = {
     postHocAgreeWithPrimary: {
       expectedTypeOnStCh: "string",
       mustBeExistingChunkId: true,
-      compatibleWordtypes: ["pronombre"],
+      compatibleWordtypes: ["pro"],
     },
     postHocAgreeWithSecondary: {
       expectedTypeOnStCh: "string",
       mustBeExistingChunkId: true,
-      compatibleWordtypes: ["pronombre"],
+      compatibleWordtypes: ["pro"],
     },
     postHocAgreeWithTertiary: {
       expectedTypeOnStCh: "string",
       mustBeExistingChunkId: true,
-      compatibleWordtypes: ["pronombre"],
+      compatibleWordtypes: ["pro"],
     },
     // connectedTo: {
     //   expectedTypeOnStCh: "string",
@@ -573,32 +555,32 @@ exports.structureChunkTraits = {
     // },
     chunkValue: {
       expectedTypeOnStCh: "string",
-      compatibleWordtypes: ["fixed"],
+      compatibleWordtypes: ["fix"],
     },
     isPerson: {
       expectedTypeOnStCh: "boolean",
-      compatibleWordtypes: ["pronombre"],
+      compatibleWordtypes: ["pro"],
     },
     hypernymy: {
       expectedTypeOnStCh: "string",
-      compatibleWordtypes: ["nounPerson"],
+      compatibleWordtypes: ["npe"],
       possibleTraitValuesPerWordtype: {
-        nounPerson: [Object.values(exports.HY)],
+        npe: [Object.values(exports.HY)],
       },
     },
     virilityDetail: {
       expectedTypeOnStCh: "array",
-      compatibleWordtypes: ["nounPerson"],
+      compatibleWordtypes: ["npe"],
       possibleTraitValuesPerWordtype: {
-        nounPerson: ["mixed", "males", "males!", "male", "male!"],
+        npe: ["mixed", "males", "males!", "male", "male!"],
         // The "!" is stronger, so "males" could come out with no clarifier, but "males!" will have clarifier that it is men only.
       },
     },
     semanticGender: {
       expectedTypeOnStCh: "array",
-      compatibleWordtypes: ["nounPerson"],
+      compatibleWordtypes: ["npe"],
       possibleTraitValuesPerWordtype: {
-        nounPerson: ["m", "m1", "m2", "m3", "f", "virile", "nonvirile"],
+        npe: ["m", "m1", "m2", "m3", "f", "virile", "nonvirile"],
       },
     },
     giveMeTheseClarifiersOfMyHeadChunk: {
@@ -625,11 +607,11 @@ exports.structureChunkTraits = {
     form: {
       expectedTypeOnStCh: "array",
       isLexical: true,
-      compatibleWordtypes: ["adjective", "pronombre", "verb", "preposition"],
+      compatibleWordtypes: ["adj", "pro", "ver", "pre"],
       possibleTraitValuesPerWordtype: {
-        adjective: ["simple", "comparative", "superlative", "adverb"],
-        pronombre: ["pronombre", "_pronombreAndDeterminer", "determiner"],
-        verb: [
+        adj: ["simple", "comparative", "superlative", "adverb"],
+        pro: ["pronombre", "_pronombreAndDeterminer", "determiner"],
+        ver: [
           "verbal",
           "infinitive",
           "contemporaryAdverbial",
@@ -638,7 +620,7 @@ exports.structureChunkTraits = {
           "anteriorAdverbial",
           "verbalNoun",
         ],
-        preposition: ["onlyForm"],
+        pre: ["onlyForm"],
       },
     },
     //
@@ -648,32 +630,26 @@ exports.structureChunkTraits = {
     //
     tenseDescription: {
       isLexical: true,
-      compatibleWordtypes: ["verb"],
+      compatibleWordtypes: ["ver"],
       expectedTypeOnStCh: "array",
       possibleTraitValues: this._tenseDescriptions["POL"],
     },
     blockedTenseDescriptions: {
       expectedTypeOnStCh: "array",
-      compatibleWordtypes: ["verb"],
+      compatibleWordtypes: ["ver"],
       ultimatelyMultipleTraitValuesOkay: true,
       needsNoValidation: true,
       possibleTraitValues: this._tenseDescriptions["POL"],
     },
     person: {
       isLexical: true,
-      compatibleWordtypes: ["nounPerson", "nounCommon", "verb", "pronombre"],
+      compatibleWordtypes: ["npe", "nco", "ver", "pro"],
       expectedTypeOnStCh: "array",
       possibleTraitValues: ["1per", "2per", "3per", "impersonal"],
     },
     gender: {
       isLexical: true,
-      compatibleWordtypes: [
-        "nounPerson",
-        "nounCommon",
-        "verb",
-        "adjective",
-        "pronombre",
-      ],
+      compatibleWordtypes: ["npe", "nco", "ver", "adj", "pro"],
       expectedTypeOnStCh: "array",
       possibleTraitValues: [
         "m",
@@ -688,36 +664,25 @@ exports.structureChunkTraits = {
     },
     number: {
       isLexical: true,
-      compatibleWordtypes: [
-        "nounPerson",
-        "nounCommon",
-        "verb",
-        "adjective",
-        "pronombre",
-      ],
+      compatibleWordtypes: ["npe", "nco", "ver", "adj", "pro"],
       expectedTypeOnStCh: "array",
       possibleTraitValues: ["singular", "plural"],
     },
     gcase: {
       isLexical: true,
-      compatibleWordtypes: [
-        "nounPerson",
-        "nounCommon",
-        "adjective",
-        "pronombre",
-      ],
+      compatibleWordtypes: ["npe", "nco", "adj", "pro"],
       expectedTypeOnStCh: "array",
       possibleTraitValues: ["nom", "gen", "dat", "acc", "ins", "loc"],
     },
     aspect: {
       isLexical: true,
-      compatibleWordtypes: ["verb"],
+      compatibleWordtypes: ["ver"],
       expectedTypeOnStCh: "array",
       possibleTraitValues: ["imperfective", "perfective", "_imOnly"],
     },
     tense: {
       isLexical: true,
-      compatibleWordtypes: ["verb"],
+      compatibleWordtypes: ["ver"],
       expectedTypeOnStCh: "array",
       possibleTraitValues: [
         "past",
@@ -737,19 +702,13 @@ exports.structureChunkTraits = {
     form: {
       expectedTypeOnStCh: "array",
       isLexical: true,
-      compatibleWordtypes: [
-        "adjective",
-        "pronombre",
-        "article",
-        "verb",
-        "preposition",
-      ],
+      compatibleWordtypes: ["adj", "pro", "art", "ver", "pre"],
       possibleTraitValuesPerWordtype: {
-        adjective: ["simple", "comparative", "superlative", "adverb"],
-        pronombre: ["pronombre", "_pronombreAndDeterminer", "determiner"],
-        article: ["definite", "indefinite"],
-        verb: ["verbal", "infinitive", "pastParticiple", "gerund"],
-        preposition: ["onlyForm"],
+        adj: ["simple", "comparative", "superlative", "adverb"],
+        pro: ["pronombre", "_pronombreAndDeterminer", "determiner"],
+        art: ["definite", "indefinite"],
+        ver: ["verbal", "infinitive", "pastParticiple", "gerund"],
+        pre: ["onlyForm"],
       },
     },
     //
@@ -759,57 +718,50 @@ exports.structureChunkTraits = {
     //
     tenseDescription: {
       isLexical: true,
-      compatibleWordtypes: ["verb"],
+      compatibleWordtypes: ["ver"],
       expectedTypeOnStCh: "array",
       possibleTraitValues: this._tenseDescriptions["SPA"],
     },
     blockedTenseDescriptions: {
       expectedTypeOnStCh: "array",
-      compatibleWordtypes: ["verb"],
+      compatibleWordtypes: ["ver"],
       ultimatelyMultipleTraitValuesOkay: true,
       needsNoValidation: true,
       possibleTraitValues: this._tenseDescriptions["SPA"],
     },
     person: {
       isLexical: true,
-      compatibleWordtypes: ["nounPerson", "nounCommon", "verb", "pronombre"],
+      compatibleWordtypes: ["npe", "nco", "ver", "pro"],
       expectedTypeOnStCh: "array",
       possibleTraitValues: ["1per", "2per", "3per", "impersonal"],
     },
     gender: {
       isLexical: true,
       compatibleWordtypes: [
-        "nounPerson",
-        "nounCommon",
-        "verb", // Las tortas estan hechas. --> "tortas" gives gender and number to "hechas".
-        "adjective",
-        "pronombre",
+        "npe",
+        "nco",
+        "ver", // Las tortas estan hechas. --> "tortas" gives gender and number to "hechas".
+        "adj",
+        "pro",
       ],
       expectedTypeOnStCh: "array",
       possibleTraitValues: ["m", "f", "virile", "nonvirile"],
     },
     number: {
       isLexical: true,
-      compatibleWordtypes: [
-        "nounPerson",
-        "nounCommon",
-        "verb",
-        "pronombre",
-        "adjective",
-        "article",
-      ],
+      compatibleWordtypes: ["npe", "nco", "ver", "pro", "adj", "art"],
       expectedTypeOnStCh: "array",
       possibleTraitValues: ["singular", "plural"],
     },
     gcase: {
       isLexical: true,
-      compatibleWordtypes: ["nounPerson", "nounCommon", "pronombre"],
+      compatibleWordtypes: ["npe", "nco", "pro"],
       expectedTypeOnStCh: "array",
       possibleTraitValues: ["nom", "gen", "dat", "acc"],
     },
     tense: {
       isLexical: true,
-      compatibleWordtypes: ["verb"],
+      compatibleWordtypes: ["ver"],
       expectedTypeOnStCh: "array",
       possibleTraitValues: [
         "past",
@@ -829,19 +781,13 @@ exports.structureChunkTraits = {
     form: {
       expectedTypeOnStCh: "array",
       isLexical: true,
-      compatibleWordtypes: [
-        "adjective",
-        "pronombre",
-        "article",
-        "verb",
-        "preposition",
-      ],
+      compatibleWordtypes: ["adj", "pro", "art", "ver", "pre"],
       possibleTraitValuesPerWordtype: {
-        adjective: ["simple", "comparative", "superlative", "adverb"],
-        pronombre: ["pronombre", "_pronombreAndDeterminer", "determiner"],
-        article: ["definite", "indefinite"],
-        verb: ["verbal", "infinitive", "v2", "v3", "thirdPS", "gerund"],
-        preposition: ["onlyForm"],
+        adj: ["simple", "comparative", "superlative", "adverb"],
+        pro: ["pronombre", "_pronombreAndDeterminer", "determiner"],
+        art: ["definite", "indefinite"],
+        ver: ["verbal", "infinitive", "v2", "v3", "thirdPS", "gerund"],
+        pre: ["onlyForm"],
       },
     },
     //
@@ -851,50 +797,44 @@ exports.structureChunkTraits = {
     //
     tenseDescription: {
       isLexical: true,
-      compatibleWordtypes: ["verb"],
+      compatibleWordtypes: ["ver"],
       expectedTypeOnStCh: "array",
       possibleTraitValues: this._tenseDescriptions["ENG"],
     },
     blockedTenseDescriptions: {
       expectedTypeOnStCh: "array",
-      compatibleWordtypes: ["verb"],
+      compatibleWordtypes: ["ver"],
       ultimatelyMultipleTraitValuesOkay: true,
       needsNoValidation: true,
       possibleTraitValues: this._tenseDescriptions["ENG"],
     },
     person: {
       isLexical: true,
-      compatibleWordtypes: ["nounPerson", "nounCommon", "verb", "pronombre"],
+      compatibleWordtypes: ["npe", "nco", "ver", "pro"],
       expectedTypeOnStCh: "array",
       possibleTraitValues: ["1per", "2per", "3per"],
     },
     gender: {
       isLexical: true,
-      compatibleWordtypes: ["nounPerson", "nounCommon", "pronombre"],
+      compatibleWordtypes: ["npe", "nco", "pro"],
       expectedTypeOnStCh: "array",
       possibleTraitValues: ["m", "f", "n", "virile", "nonvirile"],
     },
     number: {
       isLexical: true,
-      compatibleWordtypes: [
-        "nounPerson",
-        "nounCommon",
-        "verb",
-        "pronombre",
-        "article",
-      ],
+      compatibleWordtypes: ["npe", "nco", "ver", "pro", "art"],
       expectedTypeOnStCh: "array",
       possibleTraitValues: ["singular", "plural"],
     },
     gcase: {
       isLexical: true,
-      compatibleWordtypes: ["nounPerson", "nounCommon", "pronombre"],
+      compatibleWordtypes: ["npe", "nco", "pro"],
       expectedTypeOnStCh: "array",
       possibleTraitValues: ["nom", "gen", "dat", "acc"],
     },
     tense: {
       isLexical: true,
-      compatibleWordtypes: ["verb"],
+      compatibleWordtypes: ["ver"],
       expectedTypeOnStCh: "array",
       possibleTraitValues: [
         "past",
@@ -909,7 +849,7 @@ exports.structureChunkTraits = {
 
 exports.uninflectedForms = {
   POL: {
-    verb: [
+    ver: [
       "contemporaryAdverbial",
       "anteriorAdverbial",
       // "activeAdjectival", Would need to be conjugated as an adjective.
@@ -917,17 +857,17 @@ exports.uninflectedForms = {
     ],
   },
   ENG: {
-    verb: [],
+    ver: [],
   },
   SPA: {
-    verb: [],
+    ver: [],
   },
 };
 
 exports.adhocInflectionCategorys = {
   POL: {},
   SPA: {},
-  ENG: { verb: ["tenseDescription"] }, // epsilon what is this for?
+  ENG: { ver: ["tenseDescription"] }, // epsilon what is this for?
   // But Polish doesn't have tenseDesc as an adhoc category?
 };
 
@@ -935,7 +875,7 @@ exports.adhocForms = {
   SPA: {},
   POL: {},
   ENG: {
-    verb: [
+    ver: [
       // epsilon these are english?
       "contemporaryAdverbial",
       "anteriorAdverbial",
@@ -973,20 +913,20 @@ exports.collapsibleMasculineGenders = {
 };
 
 exports.wordtypeShorthandTranslation = {
-  nco: "nounCommon",
-  npe: "nounPerson",
-  ver: "verb",
-  adj: "adjective",
-  adv: "adverb",
-  pro: "pronombre",
-  art: "article",
-  pre: "preposition",
-  fix: "fixed",
+  nco: "nco",
+  npe: "npe",
+  ver: "ver",
+  adj: "adj",
+  adv: "adv",
+  pro: "pro",
+  art: "art",
+  pre: "pre",
+  fix: "fix",
 };
 
 exports.defaultTraitValues = {
-  adjective: { form: ["simple"] },
-  pronombre: {
+  adj: { form: ["simple"] },
+  pro: {
     form: ["pronombre"],
     gcase: ["nom"],
     person: ["1per", "2per", "3per"],
@@ -999,10 +939,10 @@ exports.defaultTraitValues = {
      *  but instead, the isPerson key on stCh allows educator to strip out "n" from default-all gender array.
      */
   },
-  nounCommon: { gcase: ["nom"] },
-  nounPerson: { gcase: ["nom"] },
-  verb: { form: ["verbal"] },
-  preposition: { form: ["onlyForm"] },
+  nco: { gcase: ["nom"] },
+  npe: { gcase: ["nom"] },
+  ver: { form: ["verbal"] },
+  pre: { form: ["onlyForm"] },
 };
 
 exports.agreementTraits = [

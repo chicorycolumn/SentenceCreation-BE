@@ -582,7 +582,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "the" },
       {
-        chunkId: "npe-1", // It being nounPerson aborts addSpecifiers, instead leaving gender to be inherited from 'kobieta' lObj in translation.
+        chunkId: "npe-1", // It being npe aborts addSpecifiers, instead leaving gender to be inherited from 'kobieta' lObj in translation.
         specificIds: ["eng-npe-001-woman"],
         number: ["singular"],
       },
