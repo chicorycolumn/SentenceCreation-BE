@@ -4,12 +4,8 @@ const consol = require("../zerothOrder/consoleLoggingUtils.js");
 const refObj = require("./referenceObjects.js");
 const refFxn = require("./referenceFunctions.js");
 
-exports.getBaseWordtype = (wordtypeLonghand) => {
-  let reg = /\w+(?=[A-Z])/;
-  return (
-    (wordtypeLonghand.match(reg) && wordtypeLonghand.match(reg)[0]) ||
-    wordtypeLonghand
-  );
+exports.getBaseWordtype = (wordtype) => {
+  return ["nco", "npe"].includes(wordtype) ? "nou" : wordtype;
 };
 
 exports.isTraitCompatibleStCh = (trait, stCh, currentLanguage) => {

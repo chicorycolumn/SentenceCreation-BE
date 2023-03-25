@@ -93,9 +93,9 @@ exports.getWordsByCriteria = (currentLanguage, criteriaFromHTTP) => {
 
   // console.log("nyfs getWordsByCriteria invoked with:", criteria);
 
-  Object.keys(wordsBank).forEach((wordtypeShorthand) => {
-    resObj[wordtypeShorthand] = [];
-    let wordSet = wordsBank[wordtypeShorthand];
+  Object.keys(wordsBank).forEach((wordtype) => {
+    resObj[wordtype] = [];
+    let wordSet = wordsBank[wordtype];
     wordSet.forEach((lObj) => {
       if (
         Object.keys(criteria).every((critKey) => {
@@ -120,7 +120,7 @@ exports.getWordsByCriteria = (currentLanguage, criteriaFromHTTP) => {
           }
         })
       ) {
-        resObj[wordtypeShorthand].push({
+        resObj[wordtype].push({
           lemma: lObj.lemma,
           id: lObj.id,
           tags: nexusUtils.getPapers(lObj),
@@ -148,11 +148,8 @@ exports.getTagsAndTopics = (currentLanguage) => {
   return { allTags, allTopics };
 };
 
-exports.getBlankEnhancedStructureChunkForThisWordtype = (
-  lang,
-  wordtypeLonghand
-) => {
-  // console.log("hmwo", { lang, wordtypeLonghand });
+exports.getBlankEnhancedStructureChunkForThisWordtype = (lang, wordtype) => {
+  // console.log("hmwo", { lang, wordtype });
 
   ivUtils.validateLang(lang, 11);
 
@@ -161,7 +158,7 @@ exports.getBlankEnhancedStructureChunkForThisWordtype = (
     // If this traitKey is entirely invalid for this wordtype, remove it. eg tenseDescription for adjectives.
     if (
       stChTraits[traitKey].compatibleWordtypes &&
-      !stChTraits[traitKey].compatibleWordtypes.includes(wordtypeLonghand)
+      !stChTraits[traitKey].compatibleWordtypes.includes(wordtype)
     ) {
       delete stChTraits[traitKey];
     }
@@ -171,18 +168,16 @@ exports.getBlankEnhancedStructureChunkForThisWordtype = (
         if (
           Object.keys(
             stChTraits[traitKey].possibleTraitValuesPerWordtype
-          ).includes(wordtypeLonghand)
+          ).includes(wordtype)
         ) {
           stChTraits[traitKey].possibleTraitValues =
-            stChTraits[traitKey].possibleTraitValuesPerWordtype[
-              wordtypeLonghand
-            ];
+            stChTraits[traitKey].possibleTraitValuesPerWordtype[wordtype];
         } else {
           console.log(
             "clhb",
             Object.keys(stChTraits[traitKey].possibleTraitValuesPerWordtype),
             "does not include",
-            wordtypeLonghand
+            wordtype
           );
         }
       }
@@ -198,11 +193,11 @@ exports.getBlankEnhancedStructureChunkForThisWordtype = (
 
 exports.getEnChForStCh = (lang, stCh) => {
   ivUtils.validateLang(lang, 16);
-  let wordtypeLonghand = gpUtils.getWordtypeStCh(stCh);
+  let wordtype = gpUtils.getWordtypeStCh(stCh);
 
   let enCh = apiUtils.getBlankEnhancedStructureChunkForThisWordtype(
     lang,
-    wordtypeLonghand
+    wordtype
   );
 
   Object.keys(enCh).forEach((traitKey) => {
@@ -220,12 +215,11 @@ exports.getEnChsForLemma = (lang, lemma) => {
   let lObjs = apiUtils.getLObjsForLemma(lang, lemma);
 
   return lObjs.map((lObj) => {
-    let wordtypeShorthand = gpUtils.getWordtypeLObj(lObj);
-    let wordtypeLonghand = wordtypeShorthand;
+    let wordtype = gpUtils.getWordtypeLObj(lObj);
 
     let enCh = apiUtils.getBlankEnhancedStructureChunkForThisWordtype(
       lang,
-      wordtypeLonghand
+      wordtype
     );
     let routes = otUtils.giveRoutesAndTerminalValuesFromObject(lObj, true);
     routes.forEach((routeObj) => {
@@ -235,10 +229,10 @@ exports.getEnChsForLemma = (lang, lemma) => {
 
           if (
             enCh[traitKey].compatibleWordtypes &&
-            !enCh[traitKey].compatibleWordtypes.includes(wordtypeLonghand)
+            !enCh[traitKey].compatibleWordtypes.includes(wordtype)
           ) {
             consol.log(
-              `tbaa Error: Wordtype ${wordtypeLonghand} not compatible with ${traitKey}=${traitValue} even though that's what I gleaned using giveRoutesAndTerminalValuesFromObject.`
+              `tbaa Error: Wordtype ${wordtype} not compatible with ${traitKey}=${traitValue} even though that's what I gleaned using giveRoutesAndTerminalValuesFromObject.`
             );
             return;
           }
@@ -314,8 +308,8 @@ exports.getLObjsForLemma = (lang, lemma) => {
 
   matches = [];
   let { wordsBank } = scUtils.getWordsAndFormulas(lang, true);
-  Object.keys(wordsBank).forEach((wordtypeShorthand) => {
-    wordSet = wordsBank[wordtypeShorthand];
+  Object.keys(wordsBank).forEach((wordtype) => {
+    wordSet = wordsBank[wordtype];
     wordSet.forEach((lObj) => {
       if (
         lObj.lemma === lemma ||

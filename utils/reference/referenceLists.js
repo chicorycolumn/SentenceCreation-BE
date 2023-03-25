@@ -886,7 +886,7 @@ exports.adhocForms = {
   },
 };
 
-exports.getNounGenderTraitValues = (wordtypeShorthand) => {
+exports.getNounGenderTraitValues = (wordtype) => {
   ref = {
     nco: "_NonpersonalSingularGenders",
     npe: "_PersonalSingularGenders",
@@ -899,7 +899,7 @@ exports.getNounGenderTraitValues = (wordtypeShorthand) => {
     fix: "_NonpersonalSingularGenders",
   };
 
-  return ref[wordtypeShorthand];
+  return ref[wordtype];
 };
 
 exports.malePersonsInThisLanguageHaveWhatGender = {
@@ -912,16 +912,16 @@ exports.collapsibleMasculineGenders = {
   POL: { singular: { m: ["m1", "m2", "m3"] } },
 };
 
-exports.wordtypeShorthandTranslation = {
-  nco: "nco",
-  npe: "npe",
-  ver: "ver",
-  adj: "adj",
-  adv: "adv",
-  pro: "pro",
-  art: "art",
-  pre: "pre",
-  fix: "fix",
+exports.wordtypes = {
+  nco: "common noun",
+  npe: "person noun",
+  ver: "verb",
+  adj: "adjective",
+  adv: "adverb",
+  pro: "pronombre",
+  art: "article",
+  pre: "preposition",
+  fix: "fixed",
 };
 
 exports.defaultTraitValues = {
