@@ -159,7 +159,7 @@ exports.getBlankEnhancedStructureChunkForThisWordtype = (lang, wordtype) => {
   Object.keys(stChTraits).forEach((traitKey) => {
     if (
       (stChTraits[traitKey].compatibleWordtypes &&
-        !stChTraits[traitKey].compatibleWordtypes.includes(wordtypeLonghand)) ||
+        !stChTraits[traitKey].compatibleWordtypes.includes(wordtype)) ||
       apiUtils.backendOnlyTraits.includes(traitKey)
     ) {
       unwantedTraitKeys.push(traitKey);
@@ -170,16 +170,16 @@ exports.getBlankEnhancedStructureChunkForThisWordtype = (lang, wordtype) => {
       if (
         Object.keys(
           stChTraits[traitKey].possibleTraitValuesPerWordtype
-        ).includes(wordtypeLonghand)
+        ).includes(wordtype)
       ) {
         stChTraits[traitKey].possibleTraitValues =
-          stChTraits[traitKey].possibleTraitValuesPerWordtype[wordtypeLonghand];
+          stChTraits[traitKey].possibleTraitValuesPerWordtype[wordtype];
       } else {
         console.log(
           "clhb",
           Object.keys(stChTraits[traitKey].possibleTraitValuesPerWordtype),
           "does not include",
-          wordtypeLonghand
+          wordtype
         );
       }
     }
@@ -204,9 +204,8 @@ exports.getBlankEnhancedStructureChunkForThisWordtype = (lang, wordtype) => {
   return stChTraits;
 };
 
-exports.getFormulaItem = (lang, wordtypeLonghand, stCh) => {
+exports.getFormulaItem = (lang, wordtype, stCh) => {
   ivUtils.validateLang(lang, 16);
-  let wordtype = gpUtils.getWordtypeStCh(stCh);
 
   let enCh = apiUtils.getBlankEnhancedStructureChunkForThisWordtype(
     lang,
@@ -319,9 +318,7 @@ exports.getEnChsForLemma = (lang, lemma) => {
   let lObjs = apiUtils.getLObjsForLemma(lang, lemma);
 
   let enChs = lObjs.map((lObj) => {
-    let wordtypeShorthand = gpUtils.getWordtypeShorthandLObj(lObj);
-    let wordtypeLonghand =
-      refFxn.translateWordtypeShorthandLonghand(wordtypeShorthand);
+    let wordtype = gpUtils.getWordtypeLObj(lObj);
 
     let enCh = apiUtils.getBlankEnhancedStructureChunkForThisWordtype(
       lang,
@@ -376,8 +373,6 @@ exports.getEnChsForLemma = (lang, lemma) => {
     }
     enCh.andTags.traitValue = theTags;
 
-    let wordtype = gpUtils.getWordtypeShorthandLObj(lObj);
-
     enCh.id = lObj.id; //alpha so what's this about?
     enCh.lObjId = lObj.id; //alpha so what's this about?
     enCh.lemma = lObj.lemma;
@@ -388,10 +383,7 @@ exports.getEnChsForLemma = (lang, lemma) => {
       "inheritableInflectionKeys",
       "allowableTransfersFromQuestionStructure",
     ].forEach((datumKey) => {
-      let datum =
-        refObj.lemmaObjectTraitKeys[lang][datumKey][
-          refFxn.translateWordtypeShorthandLonghand(wordtype)
-        ];
+      let datum = refObj.lemmaObjectTraitKeys[lang][datumKey][wordtype];
       if (!datum) {
         //devlogging
         consol.throw(
