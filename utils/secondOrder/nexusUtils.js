@@ -10,9 +10,9 @@ exports.getNexusLemmaObjects = (lObj, env = "ref") => {
   const nexusWordsBank =
     require(`../../source/${env}/NEXUS/words.js`).wordsBank;
 
-  const wordtypeShorthand = gpUtils.getWordtypeShorthandLObj(lObj);
+  const wordtype = gpUtils.getWordtypeLObj(lObj);
 
-  let resArr = nexusWordsBank[wordtypeShorthand].filter((lemmaObject) =>
+  let resArr = nexusWordsBank[wordtype].filter((lemmaObject) =>
     lemmaObject.traductions[lang].some((el) =>
       allLangUtils.compareLObjStems(el, lObj.id)
     )
@@ -106,7 +106,7 @@ exports.getTraductions = (
 
   if (getAllIds) {
     const { wordsBank } = require(`../../source/${env}/${targetlang}/words.js`);
-    let bank = wordsBank[gpUtils.getWordtypeShorthandLObj(lObj)];
+    let bank = wordsBank[gpUtils.getWordtypeLObj(lObj)];
 
     let resArr = [];
 

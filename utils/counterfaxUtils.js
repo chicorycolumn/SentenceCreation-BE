@@ -611,7 +611,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
               "igtc Wasn't expecting originalSitSelectedLObj to be populated yet."
             );
           }
-          if (gpUtils.getWordtypeStCh(stCh) !== "fixed") {
+          if (gpUtils.getWordtypeStCh(stCh) !== "fix") {
             let originalSitSelectedLObj = questionOutputArr.find(
               (ou) => ou.structureChunk.chunkId === stCh.chunkId
             ).selectedLemmaObject;
@@ -744,10 +744,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       }
 
       let genderTraitKeys = ["gender"];
-      if (
-        gpUtils.getWordtypeShorthandStCh({ chunkId: chunkIdToExamine }) ===
-        "npe"
-      ) {
+      if (gpUtils.getWordtypeStCh({ chunkId: chunkIdToExamine }) === "npe") {
         genderTraitKeys.push("semanticGender");
       }
 

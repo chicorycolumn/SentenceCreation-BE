@@ -1,7 +1,7 @@
 exports.conditionsToBlockAnnotations = [
   {
     questionLangs: ["ENG"],
-    wordtypes: ["verb"],
+    wordtypes: ["ver"],
     annotations: ["tenseDescription"],
     stChConditions: [
       //If QUESTIONlang {{ENG}}, for {{verbs}}, block the {{tenseDesc}} anno
@@ -15,7 +15,7 @@ exports.conditionsToBlockAnnotations = [
   },
   {
     questionLangs: [], // This means it applies to all langs.
-    wordtypes: ["pronombre"],
+    wordtypes: ["pro"],
     annotations: ["gender", "number", "person"],
     lObjConditions: [
       {
@@ -27,7 +27,7 @@ exports.conditionsToBlockAnnotations = [
 
 // exports.conditionsOnWhichToBlockAnnotationsUNUSED = {
 //   POL: {
-//     noun: {
+//     nou: {
 //       //Here it's answerChunk {{POL}} {{nouns}}, as the nouns are what'll be clarified for their verbs.
 //       gender: [
 //         //If ANSWERlang {{POL}},
@@ -48,7 +48,7 @@ exports.conditionsToBlockAnnotations = [
 //         },
 //       ],
 //     },
-//     pronombre: {
+//     pro: {
 //       gender: [
 //         {
 //           tenseDescription: [
@@ -70,7 +70,7 @@ exports.conditionsToBlockAnnotations = [
 //     },
 //   },
 //   ENG: {
-//     verb: {
+//     ver: {
 //       tenseDescription: [
 //         {
 //           tenseDescription: ["present simple"],
@@ -79,7 +79,7 @@ exports.conditionsToBlockAnnotations = [
 //         },
 //       ],
 //     },
-//     noun: {
+//     nou: {
 //       gender: [
 //         {
 //           person: ["1per", "2per"],
@@ -90,7 +90,7 @@ exports.conditionsToBlockAnnotations = [
 //         },
 //       ],
 //     },
-//     pronombre: {
+//     pro: {
 //       form: [
 //         {
 //           allConditions: true,
@@ -114,7 +114,7 @@ exports.postHocDependentChunkWordtypes = {
     {
       PHD_type: "POL possessive pronombre",
       conditions: {
-        wordtype: ["pronombre"],
+        wordtype: ["pro"],
         specificIds: ["pol-pro-POSSESSIVE"],
       },
       inflectionChains: {
@@ -127,7 +127,7 @@ exports.postHocDependentChunkWordtypes = {
     {
       PHD_type: "SPA possessive pronombre",
       conditions: {
-        wordtype: ["pronombre"],
+        wordtype: ["pro"],
         specificIds: ["spa-pro-POSSESSIVE"],
       },
       inflectionChains: {

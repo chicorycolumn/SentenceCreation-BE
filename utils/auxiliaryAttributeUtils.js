@@ -169,7 +169,7 @@ exports.removeAnnotationsByVypernym = (
   questionOutputArr.forEach((questionOutputUnit) => {
     let qStCh = questionOutputUnit.structureChunk;
     if (
-      gpUtils.getWordtypeStCh(qStCh) !== "fixed" &&
+      gpUtils.getWordtypeStCh(qStCh) !== "fix" &&
       lfUtils.checkHyper(questionOutputUnit.selectedLemmaObject, [HY.VY]) &&
       qStCh.annotations &&
       Object.keys(qStCh.annotations).includes("semanticGender")
@@ -281,14 +281,14 @@ exports.removeAnnotationsByAOCs = (
     //3. If the selectedWord in any of those units is unique between genders in its lemma object
     //   (eg "his" is unique as no other gender traitKey holds this inflectionValue, whereas "their" is not unique as two genders traitKeys hold it)
     //   then delete/block the gender annotation.
-    let allDependentWordtype = "pronombre";
+    let allDependentWordtype = "pro";
 
     if (uUtils.isEmpty(questionOutputUnit.structureChunk.annotations)) {
       return;
     }
 
     if (
-      ["nounCommon", "nounPerson"].includes(
+      ["nco", "npe"].includes(
         gpUtils.getWordtypeStCh(questionOutputUnit.structureChunk)
       )
     ) {
@@ -908,7 +908,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
     let { selectedLemmaObject, drillPath, structureChunk, selectedWord } =
       outputUnit;
 
-    if (gpUtils.getWordtypeStCh(structureChunk) === "fixed") {
+    if (gpUtils.getWordtypeStCh(structureChunk) === "fix") {
       return;
     }
 
@@ -1081,7 +1081,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
 
 exports.setPDSValues = (questionSentenceFormula, questionLanguage) => {
   //If PDS from req, then add PDS:true to each Q stCh.
-  //Unless stCh has wordtype nounPerson and is headNoun of pronombre stCh. 'The doctor gave me his book.' must specify MGN doctor.
+  //Unless stCh has wordtype npe and is headNoun of pronombre stCh. 'The doctor gave me his book.' must specify MGN doctor.
   //
   //But if qChunk.gender holds all the poss gender traitValues for this lang>wordtype (bearing in mind if isPerson)
   //then do allow it to be qChunk.dontSpecifyOnThisChunk = true.
@@ -1093,7 +1093,7 @@ exports.setPDSValues = (questionSentenceFormula, questionLanguage) => {
       if (
         questionSentenceFormula.sentenceStructure.find(
           (potentialDepChunk) =>
-            gpUtils.getWordtypeStCh(potentialDepChunk) === "pronombre" &&
+            gpUtils.getWordtypeStCh(potentialDepChunk) === "pro" &&
             potentialDepChunk.agreeWith === qChunk.chunkId
         )
       ) {
@@ -1101,9 +1101,7 @@ exports.setPDSValues = (questionSentenceFormula, questionLanguage) => {
           qChunk.gender &&
           qChunk.gender.length &&
           refObj.metaTraitValues[questionLanguage].gender[
-            refObj.getNounGenderTraitValues(
-              gpUtils.getWordtypeShorthandStCh(qChunk)
-            )
+            refObj.getNounGenderTraitValues(gpUtils.getWordtypeStCh(qChunk))
           ].every((traitValue) => qChunk.gender.includes(traitValue))
         ) {
           qChunk.dontSpecifyOnThisChunk = true;
@@ -1115,9 +1113,7 @@ exports.setPDSValues = (questionSentenceFormula, questionLanguage) => {
           qChunk.gender &&
           qChunk.gender.length &&
           !refObj.metaTraitValues[questionLanguage].gender[
-            refObj.getNounGenderTraitValues(
-              gpUtils.getWordtypeShorthandStCh(qChunk)
-            )
+            refObj.getNounGenderTraitValues(gpUtils.getWordtypeStCh(qChunk))
           ].every((traitValue) => qChunk.gender.includes(traitValue))
         ) {
           qChunk.dontSpecifyOnThisChunk = false;

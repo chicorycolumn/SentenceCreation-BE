@@ -220,7 +220,7 @@ exports.selectWordVersions = (
   // >>> Indefinite Article
   // >>>
   if (
-    gpUtils.getWordtypeStCh(structureChunk) === "article" &&
+    gpUtils.getWordtypeStCh(structureChunk) === "art" &&
     structureChunk.form.includes("indefinite")
   ) {
     if (!subsequentOutputUnit) {
@@ -290,11 +290,7 @@ exports.selectWordVersions = (
 };
 
 exports.preprocessStructureChunks = (structureChunk) => {
-  if (
-    ["nounCommon", "nounPerson"].includes(
-      gpUtils.getWordtypeStCh(structureChunk)
-    )
-  ) {
+  if (["nco", "npe"].includes(gpUtils.getWordtypeStCh(structureChunk))) {
     if (structureChunk.gcase && structureChunk.gcase.length) {
       structureChunk.gcase = structureChunk.gcase.map((gcaseTraitValue) => {
         return ["nom", "gen"].includes(gcaseTraitValue)
@@ -331,7 +327,7 @@ exports.addLanguageParticularClarifiers = (
   lemmaObject
 ) => {
   if (
-    gpUtils.getWordtypeStCh(structureChunk) === "verb" &&
+    gpUtils.getWordtypeStCh(structureChunk) === "ver" &&
     structureChunk.form.includes("verbal")
   ) {
     //
@@ -455,7 +451,7 @@ exports.generateAdhocForms = (
 
   if (
     adhocInflectionCategory === "tenseDescription" &&
-    gpUtils.getWordtypeStCh(structureChunk) === "verb" &&
+    gpUtils.getWordtypeStCh(structureChunk) === "ver" &&
     structureChunk.form.includes("verbal")
   ) {
     if (

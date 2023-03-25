@@ -470,7 +470,7 @@ exports.filterWithin_PHD = (
     }
 
     if (
-      ["nounCommon", "nounPerson"].includes(
+      ["nco", "npe"].includes(
         gpUtils.getWordtypeAgree(PHDstructureChunk, postHocAgreeKey)
       )
     ) {
@@ -1224,7 +1224,7 @@ exports.filterBySelector_inner = (
 
       if (
         !questionSelectedLemmaObject &&
-        gpUtils.getWordtypeStCh(questionChunk) !== "fixed"
+        gpUtils.getWordtypeStCh(questionChunk) !== "fix"
       ) {
         consol.throw("bdwo answer mode but no questionSelectedLemmaObject?");
       }
@@ -1901,8 +1901,7 @@ exports.updateStChSemanticGenderAndVirilityDetail = (
       let virilityRefByNumber =
         refObj.virilityConversionRef[currentLanguage][numberValue];
 
-      let isNounPerson =
-        gpUtils.getWordtypeShorthandStCh(structureChunk) === "npe";
+      let isNounPerson = gpUtils.getWordtypeStCh(structureChunk) === "npe";
 
       if (
         (isNounPerson && !isSecondRound) ||

@@ -39,14 +39,13 @@ exports.selectWordVersions = (
   previousOutputUnit,
   multipleMode
 ) => {
-  if (gpUtils.getWordtypeLObj(selectedLemmaObject) === "pronombre") {
+  if (gpUtils.getWordtypeLObj(selectedLemmaObject) === "pro") {
     // >>>
     // >>> Pronombre: post-prepositional
     // >>>
     if (
       previousOutputUnit &&
-      gpUtils.getWordtypeLObj(previousOutputUnit.selectedLemmaObject) ===
-        "preposition"
+      gpUtils.getWordtypeLObj(previousOutputUnit.selectedLemmaObject) === "pre"
     ) {
       frUtils.pushSelectedWordToArray(
         "postPreposition",
@@ -76,7 +75,7 @@ exports.selectWordVersions = (
     }
   }
 
-  if (gpUtils.getWordtypeLObj(selectedLemmaObject) === "preposition") {
+  if (gpUtils.getWordtypeLObj(selectedLemmaObject) === "pre") {
     if (!subsequentOutputUnit) {
       consol.throw(
         "mcob selectWordVersions Shouldn't there be an outputUnit subsequent to this POL preposition?"
@@ -153,9 +152,9 @@ exports.expandLemmaObjects = (matches, stChWordtype, currentLanguage) => {
     );
   }
 
-  if (["verb"].includes(stChWordtype)) {
+  if (["ver"].includes(stChWordtype)) {
     matches.forEach((lObj) => exports.fillVerbInflections(lObj));
-  } else if (["adjective"].includes(stChWordtype)) {
+  } else if (["adj"].includes(stChWordtype)) {
     matches.forEach((lObj) => exports.copyInflectionsFromM1toM2(lObj));
   }
 
@@ -176,7 +175,7 @@ exports.addLanguageParticularClarifiers = () => {
 
 exports.adjustStructureChunksInIfPW = (structureChunk) => {
   if (
-    gpUtils.getWordtypeStCh(structureChunk) === "verb" &&
+    gpUtils.getWordtypeStCh(structureChunk) === "ver" &&
     structureChunk.tenseDescription &&
     structureChunk.tenseDescription.length
   ) {

@@ -370,9 +370,9 @@ xdescribe("findSynhomographs", () => {
       },
     ];
     const structureChunkArr = [
-      { wordtype: "nounCommon", chunkId: "nco-1" },
-      { wordtype: "nounCommon", chunkId: "nco-2" },
-      { wordtype: "nounCommon", chunkId: "nco-3" },
+      { wordtype: "nco", chunkId: "nco-1" },
+      { wordtype: "nco", chunkId: "nco-2" },
+      { wordtype: "nco", chunkId: "nco-3" },
     ];
 
     const expected = [];
@@ -434,9 +434,9 @@ xdescribe("findSynhomographs", () => {
     ];
 
     const structureChunkArr = [
-      { wordtype: "nounCommon", chunkId: "nco-1" },
-      { wordtype: "nounCommon", chunkId: "nco-2" },
-      { wordtype: "nounCommon", chunkId: "nco-3" },
+      { wordtype: "nco", chunkId: "nco-1" },
+      { wordtype: "nco", chunkId: "nco-2" },
+      { wordtype: "nco", chunkId: "nco-3" },
     ];
     const actual = [];
 
@@ -513,9 +513,9 @@ xdescribe("findSynhomographs", () => {
       },
     ];
     const structureChunkArr = [
-      { wordtype: "nounCommon", chunkId: "nco-1" },
-      { wordtype: "nounCommon", chunkId: "nco-2" },
-      { wordtype: "nounCommon", chunkId: "nco-3" },
+      { wordtype: "nco", chunkId: "nco-1" },
+      { wordtype: "nco", chunkId: "nco-2" },
+      { wordtype: "nco", chunkId: "nco-3" },
     ];
     const actual = [];
 
@@ -638,9 +638,9 @@ xdescribe("findSynhomographs", () => {
       },
     ];
     const structureChunkArr = [
-      { wordtype: "nounCommon", chunkId: "nco-1" },
-      { wordtype: "nounCommon", chunkId: "nco-2" },
-      { wordtype: "nounCommon", chunkId: "nco-3" },
+      { wordtype: "nco", chunkId: "nco-1" },
+      { wordtype: "nco", chunkId: "nco-2" },
+      { wordtype: "nco", chunkId: "nco-3" },
     ];
     const actual = [];
 

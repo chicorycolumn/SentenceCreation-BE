@@ -32,7 +32,7 @@ exports.findMatchingLemmaObjectThenWord = (
   let arrayOfAllPossibleOutputUnits = [];
 
   //STEP ONE: Fx-PW: Pathway for Fixed pieces.
-  if (gpUtils.getWordtypeStCh(structureChunk) === "fixed") {
+  if (gpUtils.getWordtypeStCh(structureChunk) === "fix") {
     consol.logPathwayTitle("##Fx-PW", structureChunk, multipleMode);
 
     return [
@@ -45,7 +45,7 @@ exports.findMatchingLemmaObjectThenWord = (
   }
 
   //STEP TWO: Filter lemmaObjects (by specificIds OR andTags and selectors).
-  let source = words[gpUtils.getWordtypeShorthandStCh(structureChunk)];
+  let source = words[gpUtils.getWordtypeStCh(structureChunk)];
 
   let shouldFilterBySelectors;
 

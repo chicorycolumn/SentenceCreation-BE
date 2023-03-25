@@ -404,27 +404,27 @@ describe("/api", function () {
         1
       );
     });
-    it("#pal10-02a Type 1 Allohomographs of MultipleWordtype: 'bear (noun)' Engpol. Expect clarifiers as requested allo-multi-clarifiers in structureChunk.", () => {
-      let ref = [{ ENG: "Bear (nounCommon).", POL: ["Niedźwiedź."] }];
+    it("#pal10-02a Type 1 Allohomographs of MultipleWordtype: 'bear (nco)' Engpol. Expect clarifiers as requested allo-multi-clarifiers in structureChunk.", () => {
+      let ref = [{ ENG: "Bear (nco).", POL: ["Niedźwiedź."] }];
       return runPaletteTest("ENG", "POL", "dummy45a", ref, {}, 1);
     });
-    it("#pal10-02b Type 1 Allohomographs of MultipleWordtype: 'bear (verb)' Engpol. Expect clarifiers as requested allo-multi-clarifiers in structureChunk.", () => {
-      let ref = [{ ENG: "Bear (verb).", POL: ["Znieść."] }];
+    it("#pal10-02b Type 1 Allohomographs of MultipleWordtype: 'bear (ver)' Engpol. Expect clarifiers as requested allo-multi-clarifiers in structureChunk.", () => {
+      let ref = [{ ENG: "Bear (ver).", POL: ["Znieść."] }];
       return runPaletteTest("ENG", "POL", "dummy45b", ref, {}, 1);
     });
-    it("#pal10-02c Type 1 Allohomographs of MultipleWordtype: 'bear (verb)' Engpol. Did NOT request allo-multi-clarifiers in structureChunk.", () => {
+    it("#pal10-02c Type 1 Allohomographs of MultipleWordtype: 'bear (ver)' Engpol. Did NOT request allo-multi-clarifiers in structureChunk.", () => {
       let ref = [{ ENG: "Bear.", POL: ["Znieść."] }];
       return runPaletteTest("ENG", "POL", "dummy45c", ref, {}, 1);
     });
-    it("#pal10-02d Type 1 Allohomographs of MultipleWordtype: 'bear (noun)' Poleng. No clarifiers.", () => {
+    it("#pal10-02d Type 1 Allohomographs of MultipleWordtype: 'bear (nco)' Poleng. No clarifiers.", () => {
       let ref = [{ POL: "Niedźwiedź.", ENG: ["Bear."] }];
       return runPaletteTest("POL", "ENG", "dummy45a", ref, {}, 1);
     });
-    it("#pal10-02e Type 1 Allohomographs of MultipleWordtype: 'bear (verb)' Poleng. No clarifiers.", () => {
+    it("#pal10-02e Type 1 Allohomographs of MultipleWordtype: 'bear (ver)' Poleng. No clarifiers.", () => {
       let ref = [{ POL: "Znieść.", ENG: ["Bear."] }];
       return runPaletteTest("POL", "ENG", "dummy45b", ref, {}, 1);
     });
-    it("#pal10-03a Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (noun)' Engpol. Textmoji Clarifier expected. Wordtype Clarifier not requested.", () => {
+    it("#pal10-03a Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (nco)' Engpol. Textmoji Clarifier expected. Wordtype Clarifier not requested.", () => {
       let ref = [
         { ENG: "Tie (⚽, score).", POL: ["Remis."] },
         { ENG: "Tie (👔, clothes).", POL: ["Krawat."] },
@@ -438,10 +438,10 @@ describe("/api", function () {
         1
       );
     });
-    it("#pal10-03b Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (noun)' Engpol. Textmoji Clarifier expected. Wordtype Clarifier requested so also expected.", () => {
+    it("#pal10-03b Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (nco)' Engpol. Textmoji Clarifier expected. Wordtype Clarifier requested so also expected.", () => {
       let ref = [
-        { ENG: "Tie (⚽, score, nounCommon).", POL: ["Remis."] },
-        { ENG: "Tie (👔, clothes, nounCommon).", POL: ["Krawat."] },
+        { ENG: "Tie (⚽, score, nco).", POL: ["Remis."] },
+        { ENG: "Tie (👔, clothes, nco).", POL: ["Krawat."] },
       ];
       return runPaletteTest(
         "ENG",
@@ -452,7 +452,7 @@ describe("/api", function () {
         1
       );
     });
-    it("#pal10-03c Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (verb)' Engpol. Textmoji Clarifier expected. Wordtype Clarifier not requested.", () => {
+    it("#pal10-03c Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (ver)' Engpol. Textmoji Clarifier expected. Wordtype Clarifier not requested.", () => {
       let ref = [{ ENG: "Tie (🧵, with string eg).", POL: ["Wiązać."] }];
       return runPaletteTest(
         "ENG",
@@ -463,8 +463,8 @@ describe("/api", function () {
         1
       );
     });
-    it("#pal10-03d Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (verb)' Engpol. Textmoji Clarifier expected. Wordtype Clarifier requested so also expected.", () => {
-      let ref = [{ ENG: "Tie (🧵, with string eg, verb).", POL: ["Wiązać."] }];
+    it("#pal10-03d Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (ver)' Engpol. Textmoji Clarifier expected. Wordtype Clarifier requested so also expected.", () => {
+      let ref = [{ ENG: "Tie (🧵, with string eg, ver).", POL: ["Wiązać."] }];
       return runPaletteTest(
         "ENG",
         "POL",
@@ -474,7 +474,7 @@ describe("/api", function () {
         1
       );
     });
-    it("#pal10-03e Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (noun)' Poleng. No clarifiers.", () => {
+    it("#pal10-03e Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (nco)' Poleng. No clarifiers.", () => {
       let ref = [{ POL: ["Remis.", "Krawat."], ENG: ["Tie."] }];
       return runPaletteTest(
         "POL",
@@ -485,7 +485,7 @@ describe("/api", function () {
         1
       );
     });
-    it("#pal10-03f Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (verb)' Poleng. No clarifiers.", () => {
+    it("#pal10-03f Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (ver)' Poleng. No clarifiers.", () => {
       let ref = [{ POL: "Wiązać.", ENG: ["Tie."] }];
       return runPaletteTest(
         "POL",

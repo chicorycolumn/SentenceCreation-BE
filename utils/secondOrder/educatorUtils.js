@@ -33,10 +33,10 @@ exports.checkOutputArrayForMissingUnits = (
 
 exports.getLemmaObjectsWithoutGivenSelectorKey = (
   wordsBank,
-  wordtypeShorthand,
+  wordtype,
   selectorKey
 ) => {
-  return wordsBank[wordtypeShorthand].filter((lObj) => !lObj[selectorKey]);
+  return wordsBank[wordtype].filter((lObj) => !lObj[selectorKey]);
 };
 
 exports.checkWords = (envir, currentLanguage) => {
