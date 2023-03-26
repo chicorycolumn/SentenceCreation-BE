@@ -148,9 +148,11 @@ exports.getTagsAndTopics = (currentLanguage) => {
   return { allTags, allTopics };
 };
 
-exports.getBlankEnhancedStructureChunkForThisWordtype = (lang, wordtype) => {
-  // console.log("hmwo", { lang, wordtype });
-
+exports.getBlankEnhancedStructureChunkForThisWordtype = (
+  lang,
+  wordtype,
+  existingStCh
+) => {
   ivUtils.validateLang(lang, 11);
 
   let stChTraits = refFxn.getStructureChunkTraits(lang);
@@ -201,6 +203,18 @@ exports.getBlankEnhancedStructureChunkForThisWordtype = (lang, wordtype) => {
     }
   });
 
+  // Frontendify-3: Optionally load values from existing stCh
+  if (existingStCh) {
+    Object.keys(stChTraits).forEach((traitKey) => {
+      if (existingStCh[traitKey] && existingStCh[traitKey].length) {
+        stChTraits[traitKey].traitValue = existingStCh[traitKey];
+      }
+    });
+  }
+
+  // Frontendify-2b: Gather booleans
+  apiUtils.gatherBooleanTraitsForFE(stChTraits);
+
   return stChTraits;
 };
 
@@ -209,29 +223,15 @@ exports.getFormulaItem = (lang, wordtype, stCh) => {
 
   let enCh = apiUtils.getBlankEnhancedStructureChunkForThisWordtype(
     lang,
-    wordtype
+    wordtype,
+    stCh
   );
 
-  if (stCh) {
-    Object.keys(enCh).forEach((traitKey) => {
-      if (stCh[traitKey] && stCh[traitKey].length) {
-        enCh[traitKey].traitValue = stCh[traitKey];
-      }
-    });
-  }
-
-  let guideword = enCh.chunkId.traitValue.split("-").slice(-1)[0];
-
-  // 2b. Gather booleans
-  apiUtils.gatherBooleanTraitsForFE(enCh);
-
-  let formulaItem = {
+  return {
     structureChunk: enCh,
     formulaItemId: uUtils.getRandomNumberString(10),
-    guideword,
+    guideword: enCh.chunkId.traitValue.split("-").slice(-1)[0],
   };
-
-  return formulaItem;
 };
 
 exports.backendOnlyTraits = [
@@ -245,7 +245,7 @@ exports.backendOnlyTraits = [
 ];
 
 exports.frontendifyFormula = (lang, formula) => {
-  // 1. Orders
+  // Frontendify-1: Orders
   formula.orders = [];
 
   if (formula.primaryOrders) {
@@ -268,15 +268,14 @@ exports.frontendifyFormula = (lang, formula) => {
   delete formula.additionalOrders;
 
   formula.sentenceStructure = formula.sentenceStructure.map((stCh) => {
-    // 2a. stCh to enCh
+    // Frontendify-2a: stCh to enCh
     let fItem = apiUtils.getFormulaItem(
       lang,
       gpUtils.getWordtypeStCh(stCh),
       stCh
-      // 2b. Gather booleans
     );
 
-    // 2c. Add isGhostChunk key
+    // Frontendify-2c: Add isGhostChunk key
     if (
       !formula.orders.some((orderObj) =>
         orderObj.order.includes(fItem.structureChunk.chunkId.traitValue)
@@ -373,8 +372,7 @@ exports.getEnChsForLemma = (lang, lemma) => {
     }
     enCh.andTags.traitValue = theTags;
 
-    enCh.id = lObj.id; //alpha so what's this about?
-    enCh.lObjId = lObj.id; //alpha so what's this about?
+    enCh.lObjId = lObj.id;
     enCh.lemma = lObj.lemma;
     enCh._info = {};
     enCh._info.allohomInfo = lObj.allohomInfo;
@@ -385,7 +383,6 @@ exports.getEnChsForLemma = (lang, lemma) => {
     ].forEach((datumKey) => {
       let datum = refObj.lemmaObjectTraitKeys[lang][datumKey][wordtype];
       if (!datum) {
-        //devlogging
         consol.throw(
           `stmo Error fetching auxiliary info for enCh "${enCh.chunkId.traitValue}" via API.`
         );
