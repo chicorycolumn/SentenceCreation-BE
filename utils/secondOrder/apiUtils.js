@@ -215,6 +215,23 @@ exports.getBlankEnhancedStructureChunkForThisWordtype = (
   // Frontendify-2b: Gather booleans
   apiUtils.gatherBooleanTraitsForFE(stChTraits);
 
+  // Frontendify-4: Add _info
+  stChTraits._info = {};
+  if (wordtype !== "fix") {
+    [
+      "inheritableInflectionKeys",
+      "allowableTransfersFromQuestionStructure",
+    ].forEach((datumKey) => {
+      let datum = refObj.lemmaObjectTraitKeys[lang][datumKey][wordtype];
+      if (!datum) {
+        consol.throw(
+          `stmo Error fetching auxiliary info "${datumKey}" for wordtype "${wordtype}" enCh "${stChTraits.chunkId.traitValue}".`
+        );
+      }
+      stChTraits._info[datumKey] = datum;
+    });
+  }
+
   return stChTraits;
 };
 
@@ -374,21 +391,8 @@ exports.getEnChsForLemma = (lang, lemma) => {
 
     enCh.lObjId = lObj.id;
     enCh.lemma = lObj.lemma;
-    enCh._info = {};
-    enCh._info.allohomInfo = lObj.allohomInfo;
 
-    [
-      "inheritableInflectionKeys",
-      "allowableTransfersFromQuestionStructure",
-    ].forEach((datumKey) => {
-      let datum = refObj.lemmaObjectTraitKeys[lang][datumKey][wordtype];
-      if (!datum) {
-        consol.throw(
-          `stmo Error fetching auxiliary info for enCh "${enCh.chunkId.traitValue}" via API.`
-        );
-      }
-      enCh._info[datumKey] = datum;
-    });
+    enCh._info.allohomInfo = lObj.allohomInfo;
 
     if (wordtype === "pro") {
       enCh.specificIds.traitValue = [lObj.id];
