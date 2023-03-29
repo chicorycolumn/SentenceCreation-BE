@@ -13,6 +13,43 @@ const { runPaletteTest, runPaletteTestMultiple, checkProportions } =
 describe("/api", function () {
   this.timeout(7000);
 
+  describe("/palette - Stage 28: Correct Polish grammar re gender.", () => {
+    it("#pal28-01a GET 200 YES: Engpol. Polish m2 nouns are not virile.", () => {
+      return runPaletteTest("ENG", "POL", "dummy75", [
+        {
+          ENG: ["Rats were red."],
+          POL: ["Szczury były czerwone."],
+        },
+        {
+          ENG: ["Rat was red."],
+          POL: ["Szczur był czerwony."],
+        },
+      ]);
+    });
+    it("#pal28-01b GET 200 YES: Poleng. Polish m2 nouns are not virile.", () => {
+      return runPaletteTest("POL", "ENG", "dummy75", [
+        {
+          ENG: [
+            "Rats were red.",
+            "Rats were being red.",
+            "Rats have been red.",
+            "Rats had been red.",
+          ],
+          POL: ["Szczury były czerwone."],
+        },
+        {
+          ENG: [
+            "Rat was red.",
+            "Rat was being red.",
+            "Rat has been red.",
+            "Rat had been red.",
+          ],
+          POL: ["Szczur był czerwony."],
+        },
+      ]);
+    });
+  });
+
   describe("/palette - Stage 27: Complex nexus connections.", () => {
     const dummy73a = [
       {
