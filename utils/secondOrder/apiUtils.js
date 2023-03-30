@@ -247,7 +247,8 @@ exports.getFormulaItem = (lang, wordtype, stCh) => {
   return {
     structureChunk: enCh,
     formulaItemId: uUtils.getRandomNumberString(10),
-    guideword: enCh.chunkId.traitValue.split("-").slice(-1)[0],
+    guideword: enCh.chunkId.traitValue.split("-").slice(-1)[0], // Usually in English. This is not the lemma. It's just the label word for this chunk.
+    demoWord: null, // This is a word in the actual language, which is a lemma value this chunk could realistically have.
   };
 };
 
@@ -390,7 +391,7 @@ exports.getEnChsForLemma = (lang, lemma) => {
     enCh.andTags.traitValue = theTags;
 
     enCh.lObjId = lObj.id;
-    enCh.lemma = lObj.lemma;
+    enCh.demoword = { traitValue: lObj.lemma };
 
     enCh._info.allohomInfo = lObj.allohomInfo;
 
