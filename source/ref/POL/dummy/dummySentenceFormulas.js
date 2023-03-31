@@ -2806,4 +2806,31 @@ exports.dummySentenceFormulasBank = [
     primaryOrders: [["fix-1", "adj-1", "npe-1"]],
     additionalOrders: [],
   },
+  {
+    sentenceFormulaSymbol: "dummy75",
+    sentenceFormulaId: "POL-dummy75",
+    equivalents: {
+      ENG: ["ENG-dummy75"],
+      POL: ["POL-dummy75"],
+    },
+    sentenceStructure: [
+      {
+        chunkId: "nco-1-rat",
+        specificIds: ["^pol-nco-001-szczur"],
+      },
+      {
+        chunkId: "ver-1-was",
+        agreeWith: "nco-1-rat",
+        specificIds: ["pol-ver-011-być"],
+        tenseDescription: ["past im"],
+      },
+      {
+        chunkId: "adj-1-red",
+        agreeWith: "nco-1-rat",
+        specificIds: ["pol-adj-011-czerwony"],
+      },
+    ],
+    primaryOrders: [["nco-1-rat", "ver-1-was", "adj-1-red"]],
+    additionalOrders: [],
+  },
 ];

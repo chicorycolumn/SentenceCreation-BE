@@ -2222,4 +2222,31 @@ exports.dummySentenceFormulasBank = [
     primaryOrders: [["fix-1", "adj-1", "npe-1"]],
     additionalOrders: [],
   },
+  {
+    sentenceFormulaSymbol: "dummy75",
+    sentenceFormulaId: "ENG-dummy75",
+    equivalents: {
+      ENG: ["ENG-dummy75"],
+      POL: ["POL-dummy75"],
+    },
+    sentenceStructure: [
+      {
+        chunkId: "nco-1-rat",
+        specificIds: ["^eng-nco-011-rat"],
+      },
+      {
+        chunkId: "ver-1-was",
+        agreeWith: "nco-1-rat",
+        specificIds: ["eng-ver-001-be"],
+        tenseDescription: ["past simple"],
+      },
+      {
+        chunkId: "adj-1-red",
+        agreeWith: "nco-1-rat",
+        specificIds: ["eng-adj-001-red"],
+      },
+    ],
+    primaryOrders: [["nco-1-rat", "ver-1-was", "adj-1-red"]],
+    additionalOrders: [],
+  },
 ];
