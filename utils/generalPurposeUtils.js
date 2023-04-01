@@ -380,7 +380,9 @@ exports.getWordtypeLObj = (lObj) => {
 };
 
 exports.getWordtypeStCh = (stCh) => {
-  return stCh.chunkId.split("-")[0];
+  return typeof stCh.chunkId === "string"
+    ? stCh.chunkId.split("-")[0]
+    : stCh.chunkId.traitValue.split("-")[0];
 };
 
 exports.getWordtypeAgree = (structureChunk, agreeKey = "agreeWith") => {
@@ -440,9 +442,11 @@ exports.terminusObjectNormalArray = (normalArr) => {
 exports.getWordsFromTerminusObject = (tObj, shouldGetAll) => {
   let allWords = [];
 
-  let pushKeys = shouldGetAll
-    ? ["normal", "additionalFrequent", "additionalInfrequent"]
-    : ["normal", "additionalFrequent"];
+  let pushKeys = ["normal", "additionalFrequent", "unstressed", "stressed"];
+
+  if (shouldGetAll) {
+    pushKeys.push("additionalInfrequent");
+  }
 
   pushKeys.forEach((pushKey) => {
     if (tObj[pushKey]) {
