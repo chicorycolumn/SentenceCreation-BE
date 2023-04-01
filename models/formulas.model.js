@@ -19,7 +19,7 @@ exports.fetchFormulas = (req) => {
   ivUtils.validateLang(questionLang, 17);
   ivUtils.validateLang(answerLang, 18);
 
-  console.log("tnae", { id, answerLang, env });
+  console.log("tnae fetchFormulas invoked with:", { id, answerLang, env });
 
   if (!env) {
     env = "ref";
@@ -30,9 +30,9 @@ exports.fetchFormulas = (req) => {
 
   apiUtils.frontendifyFormula(questionLang, questionSentenceFormula);
 
-  answerSentenceFormulas.forEach((answerSentenceFormula) => {
-    apiUtils.frontendifyFormula(answerLang, answerSentenceFormula);
-  });
+  answerSentenceFormulas.forEach((answerSentenceFormula) =>
+    apiUtils.frontendifyFormula(answerLang, answerSentenceFormula)
+  );
 
   let responseObject = {
     questionSentenceFormula,
@@ -70,7 +70,7 @@ exports.fetchFormulaIds = (req) => {
     )
     .map((formulaObject) => {
       let guidewordSentence = formulaObject.sentenceStructure
-        .map((chunk) => apiUtils.getAestheticGuideword(formulaObject, chunk))
+        .map((chunk) => apiUtils.getAestheticGuideword(chunk, formulaObject))
         .join(" ");
       guidewordSentence =
         guidewordSentence[0].toUpperCase() + guidewordSentence.slice(1) + ".";

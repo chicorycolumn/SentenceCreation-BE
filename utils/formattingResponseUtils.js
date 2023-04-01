@@ -3,11 +3,20 @@ const scUtils = require("./sentenceCreatingUtils.js");
 const uUtils = require("./universalUtils.js");
 const consol = require("./zerothOrder/consoleLoggingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
+const gpUtils = require("./generalPurposeUtils.js");
 
-exports.sendResponseForSingleWord = (questionSentenceData) => {
+exports.sendResponseForSingleWord = (returnDirectly, questionSentenceData) => {
   let arr = questionSentenceData.arrayOfOutputArrays.map((arr) => {
     return {
-      selectedWord: arr.map((obj) => obj.selectedWord).join(" "),
+      selectedWord: arr
+        .map((obj) => {
+          if (gpUtils.isTerminusObject(obj.selectedWord)) {
+            let allWords = gpUtils.getWordsFromTerminusObject(obj.selectedWord);
+            return allWords[0];
+          }
+          return obj.selectedWord;
+        })
+        .join(" "),
       lObjId: arr.map((obj) => obj.selectedLemmaObject.id).join(" "),
     };
   });
@@ -24,12 +33,13 @@ exports.sendResponseForSingleWord = (questionSentenceData) => {
     }
   });
 
-  return frUtils.finishAndSend({
+  return frUtils.finishAndSend(returnDirectly, {
     finalSentenceArr: deduplicatedArrForEducatorInterface,
   });
 };
 
 exports.finishAndSend = (
+  returnDirectly,
   questionResponseObj,
   answerResponseObj,
   runsRecord
@@ -73,12 +83,17 @@ exports.finishAndSend = (
     }
   });
 
+  if (returnDirectly) {
+    return combinedResponseObj;
+  }
+
   return Promise.all([combinedResponseObj]).then((array) => {
     return array[0];
   });
 };
 
 exports.returnNullQuestionResponseObj = (
+  returnDirectly,
   questionSentenceData,
   multipleMode,
   questionLanguage,
@@ -90,7 +105,7 @@ exports.returnNullQuestionResponseObj = (
     { questionLanguage, answerLanguage },
     true
   );
-  return frUtils.finishAndSend(nullQuestionResponseObj, null);
+  return frUtils.finishAndSend(returnDirectly, nullQuestionResponseObj, null);
 };
 
 exports.createOutputUnit = (

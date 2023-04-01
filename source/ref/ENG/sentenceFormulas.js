@@ -594,30 +594,29 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
-
         specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
       },
       {
-        chunkId: "pro-2",
+        chunkId: "pro-2-my",
         form: ["determiner"],
         specificIds: ["eng-pro-POSSESSIVE"],
         agreeWith: "pro-1-I",
-        agreeWith2: "npe-1",
+        agreeWith2: "npe-1-father",
       },
       {
-        chunkId: "npe-1",
+        chunkId: "npe-1-father",
         andTags: ["family"],
         number: ["singular"],
       },
       {
-        chunkId: "ver-1",
-        agreeWith: "npe-1",
+        chunkId: "ver-1-gave",
+        agreeWith: "npe-1-father",
         specificIds: ["eng-ver-006-give"],
         tenseDescription: ["past simple"],
       },
       {
-        chunkId: "pro-3",
+        chunkId: "pro-3-me",
         agreeWith: "pro-1-I",
         gcase: ["dat"],
         formulaImportantTraitKeys: ["gcase"],
@@ -625,13 +624,22 @@ exports.sentenceFormulasBank = [
       },
       { chunkId: "fix-1", chunkValue: "a" },
       {
-        chunkId: "nco-2",
+        chunkId: "nco-2-book",
         specificIds: ["eng-nco-006-book"],
         gcase: ["acc"],
         number: ["singular"],
       },
     ],
-    primaryOrders: [["pro-2", "npe-1", "ver-1", "pro-3", "fix-1", "nco-2"]],
+    primaryOrders: [
+      [
+        "pro-2-my",
+        "npe-1-father",
+        "ver-1-gave",
+        "pro-3-me",
+        "fix-1",
+        "nco-2-book",
+      ],
+    ],
     additionalOrders: [],
   },
   {
