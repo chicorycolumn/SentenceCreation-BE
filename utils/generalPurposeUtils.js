@@ -380,7 +380,9 @@ exports.getWordtypeLObj = (lObj) => {
 };
 
 exports.getWordtypeStCh = (stCh) => {
-  return stCh.chunkId.split("-")[0];
+  return typeof stCh.chunkId === "string"
+    ? stCh.chunkId.split("-")[0]
+    : stCh.chunkId.traitValue.split("-")[0];
 };
 
 exports.getWordtypeAgree = (structureChunk, agreeKey = "agreeWith") => {

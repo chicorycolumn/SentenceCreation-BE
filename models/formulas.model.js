@@ -70,7 +70,7 @@ exports.fetchFormulaIds = (req) => {
     )
     .map((formulaObject) => {
       let guidewordSentence = formulaObject.sentenceStructure
-        .map((chunk) => apiUtils.getAestheticGuideword(formulaObject, chunk))
+        .map((chunk) => apiUtils.getAestheticGuideword(chunk, formulaObject))
         .join(" ");
       guidewordSentence =
         guidewordSentence[0].toUpperCase() + guidewordSentence.slice(1) + ".";

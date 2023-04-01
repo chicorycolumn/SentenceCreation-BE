@@ -247,7 +247,7 @@ exports.getFormulaItem = (lang, wordtype, stCh) => {
   return {
     structureChunk: enCh,
     formulaItemId: uUtils.getRandomNumberString(10),
-    guideword: enCh.chunkId.traitValue.split("-").slice(-1)[0],
+    guideword: apiUtils.getAestheticGuideword(enCh),
   };
 };
 
@@ -303,6 +303,14 @@ exports.frontendifyFormula = (lang, formula) => {
 
     return fItem;
   });
+
+  // console.log(
+  //   formula.sentenceStructure.map((x) => [
+  //     x.structureChunk.chunkId,
+  //     x.guideword,
+  //   ])
+  // );
+  // throw "swde";
 };
 
 exports.gatherBooleanTraitsForFE = (stCh) => {
@@ -390,7 +398,6 @@ exports.getEnChsForLemma = (lang, lemma) => {
     enCh.andTags.traitValue = theTags;
 
     enCh.lObjId = lObj.id;
-    enCh.lemma = lObj.lemma;
 
     enCh._info.allohomInfo = lObj.allohomInfo;
 
@@ -423,21 +430,33 @@ exports.getLObjsForLemma = (lang, lemma) => {
   return matches;
 };
 
-exports.getAestheticGuideword = (formulaObject, chunk) => {
-  let guideword = chunk.chunkId.split("-").slice(-1);
+exports.getAestheticGuideword = (chunk, formulaObject) => {
+  let guideword =
+    typeof chunk.chunkId === "string"
+      ? chunk.chunkId.split("-").slice(-1)[0]
+      : chunk.chunkId.traitValue.split("-").slice(-1)[0];
 
-  // If chunk is ghost then aesthetically modify guideword, just for display in formulaId selector on FE.
-  let isGhostChunk;
-  let orders = [];
-  if (formulaObject.primaryOrders) {
-    orders.push(...formulaObject.primaryOrders);
+  if (/^\d+$/.test(guideword) && gpUtils.getWordtypeStCh(chunk) === "fix") {
+    guideword =
+      typeof chunk.chunkValue === "string"
+        ? chunk.chunkValue
+        : chunk.chunkValue.traitValue;
   }
-  if (formulaObject.additionalOrders) {
-    orders.push(...formulaObject.additionalOrders);
-  }
-  if (orders.length) {
-    isGhostChunk = !orders.some((order) => order.includes(chunk.chunkId));
 
-    return isGhostChunk ? `[${guideword}]` : guideword;
+  let isGhostChunk; // If chunk is ghost then aesthetically modify guideword, just for display in formulaId selector on FE.
+
+  if (formulaObject) {
+    let orders = [];
+    if (formulaObject.primaryOrders) {
+      orders.push(...formulaObject.primaryOrders);
+    }
+    if (formulaObject.additionalOrders) {
+      orders.push(...formulaObject.additionalOrders);
+    }
+    if (orders.length) {
+      isGhostChunk = !orders.some((order) => order.includes(chunk.chunkId));
+    }
   }
+
+  return isGhostChunk ? `[${guideword}]` : guideword;
 };
