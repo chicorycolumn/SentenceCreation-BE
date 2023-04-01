@@ -9,6 +9,7 @@ const { it } = require("mocha");
 const testingUtils = require("../utils/secondOrder/testingUtils.js");
 
 const { getEnChsForLemma } = require("../utils/secondOrder/apiUtils.js");
+const { fetchFormulas } = require("../models/formulas.model");
 
 const runApiTest1 = (req, expected) => {
   return request(app)
@@ -22,6 +23,52 @@ const runApiTest1 = (req, expected) => {
       );
     });
 };
+
+describe("/educator/formulas.", () => {
+  it("#san04a GET 200 YES: Check that numeric chunkIds are converted to guidewords.", () => {
+    let res = fetchFormulas({ query: { id: "POL-00-101b", lang: "ENG" } });
+    return res.then((res) => {
+      res.questionSentenceFormula =
+        res.questionSentenceFormula.sentenceStructure.map(
+          (fItem) => fItem.guideword
+        );
+      res.answerSentenceFormulas = res.answerSentenceFormulas.map((f) =>
+        f.sentenceStructure.map((fItem) => fItem.guideword)
+      );
+
+      let oldRes = {
+        questionSentenceFormula: ["1", "1", "szybko"],
+        answerSentenceFormulas: [["the", "1", "1", "quickly"]],
+      };
+
+      let desiredRes = {
+        questionSentenceFormula: ["kobieta", "czyta", "szybko"],
+        answerSentenceFormulas: [["the", "woman", "reads", "quickly"]],
+      };
+
+      expect(res).to.eql(desiredRes);
+    });
+  });
+  it("#san04b GET 200 YES: Check that numeric chunkIds are converted to guidewords.", () => {
+    let res = fetchFormulas({ query: { id: "POL-00-112", lang: "ENG" } });
+    return res.then((res) => {
+      res.questionSentenceFormula =
+        res.questionSentenceFormula.sentenceStructure.map(
+          (fItem) => fItem.guideword
+        );
+      res.answerSentenceFormulas = res.answerSentenceFormulas.map((f) =>
+        f.sentenceStructure.map((fItem) => fItem.guideword)
+      );
+
+      let desiredRes = {
+        questionSentenceFormula: ["ojciec", "dano", "mi", "cebule"],
+        answerSentenceFormulas: [["father", "gave", "me", "onions", "to"]],
+      };
+
+      expect(res).to.eql(desiredRes);
+    });
+  });
+});
 
 describe("/educator/sentences - Testing API.", () => {
   it("#san03 GET 200 YES: Deduplicating specially treated imOnly verbs like 'być'.", () => {

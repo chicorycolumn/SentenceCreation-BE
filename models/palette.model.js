@@ -29,6 +29,7 @@ exports.fetchPalette = (req) => {
     forceMultipleModeAndQuestionOnly,
     sentenceFormulaFromEducator,
     requestingSingleWordOnly,
+    returnDirectly,
   } = req.body;
 
   let multipleMode = !!forceMultipleModeAndQuestionOnly;
@@ -102,6 +103,7 @@ exports.fetchPalette = (req) => {
       return;
     } else {
       return frUtils.returnNullQuestionResponseObj(
+        returnDirectly,
         questionSentenceData,
         multipleMode,
         questionLanguage,
@@ -112,7 +114,10 @@ exports.fetchPalette = (req) => {
 
   if (forceMultipleModeAndQuestionOnly) {
     if (requestingSingleWordOnly) {
-      return frUtils.sendResponseForSingleWord(questionSentenceData);
+      return frUtils.sendResponseForSingleWord(
+        returnDirectly,
+        questionSentenceData
+      );
     } else {
       let arr = questionSentenceData.arrayOfOutputArrays.map((outputArray) => {
         let sentence = scUtils.buildSentenceString(
@@ -130,7 +135,7 @@ exports.fetchPalette = (req) => {
         new Set(uUtils.flatten(arr))
       );
 
-      return frUtils.finishAndSend({
+      return frUtils.finishAndSend(returnDirectly, {
         finalSentenceArr: deduplicatedArrForEducatorInterface,
       });
     }
@@ -488,6 +493,7 @@ exports.fetchPalette = (req) => {
   }
 
   return frUtils.finishAndSend(
+    returnDirectly,
     questionResponseObj,
     answerResponseObj,
     runsRecord

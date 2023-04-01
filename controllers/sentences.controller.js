@@ -1,6 +1,7 @@
 const { fetchPalette } = require("../models/palette.model");
 const uUtils = require("../utils/universalUtils");
 const refObj = require("../utils/reference/referenceObjects.js");
+const apiUtils = require("../utils/secondOrder/apiUtils");
 
 exports.getErrors = (responseObj) => {
   let errors = {};
@@ -60,29 +61,13 @@ exports.getErrors = (responseObj) => {
 
 exports.getSentencesAsQuestionOnly = (req, res, next) => {
   let questionLanguage = req.query.lang;
-
   let { sentenceFormula, requestingSingleWordOnly } = req.body;
 
-  let numberString = Date.now();
-
-  sentenceFormula.sentenceFormulaSymbol = numberString;
-  sentenceFormula.sentenceFormulaId = `${questionLanguage}-${numberString}`;
-  sentenceFormula.equivalents = {};
-
-  if (requestingSingleWordOnly) {
-    sentenceFormula.sentenceStructure.forEach((stCh) =>
-      refObj.agreementTraits.forEach((agreeKey) => delete stCh[agreeKey])
-    );
-  }
-
-  let data = {
-    body: {
-      sentenceFormulaFromEducator: sentenceFormula,
-      questionLanguage,
-      forceMultipleModeAndQuestionOnly: true,
-      requestingSingleWordOnly,
-    },
-  };
+  let data = apiUtils.prepareGetSentencesAsQuestionOnly(
+    questionLanguage,
+    sentenceFormula,
+    requestingSingleWordOnly
+  );
 
   fetchPalette(data)
     .then((responseObj) => {
