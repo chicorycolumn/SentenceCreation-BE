@@ -1935,6 +1935,16 @@ exports.sortStructureChunks = (
     return sentenceStructure.find((chunk) => chunk.chunkId === headId);
   });
 
+  if (headChunks.some((chunk) => !chunk)) {
+    consol.throw(
+      `dmau No headChunks found for some chunkId(s) from [${uniqueCombinedHeadIds.join(
+        ","
+      )}] where sentenceStructure contained [${sentenceStructure
+        .map((ch) => ch.chunkId)
+        .join(",")}]`
+    );
+  }
+
   let dependentChunks = sentenceStructure.filter(
     (structureChunk) =>
       structureChunk.agreeWith &&

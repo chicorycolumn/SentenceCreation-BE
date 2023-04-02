@@ -527,14 +527,15 @@ exports.prepareGetSentencesAsQuestionOnly = (
 ) => {
   let numberString = Date.now();
 
+  sentenceFormula = uUtils.copyWithoutReference(sentenceFormula);
+
   sentenceFormula.sentenceFormulaSymbol = numberString;
   sentenceFormula.sentenceFormulaId = `${questionLanguage}-${numberString}`;
   sentenceFormula.equivalents = {};
 
   if (requestingSingleWordOnly) {
-    sentenceFormula.sentenceStructure.forEach(
-      (stCh) =>
-        refObj.agreementTraits.forEach((agreeKey) => delete stCh[agreeKey]) //bug-317
+    sentenceFormula.sentenceStructure.forEach((stCh) =>
+      refObj.agreementTraits.forEach((agreeKey) => delete stCh[agreeKey])
     );
   }
 
