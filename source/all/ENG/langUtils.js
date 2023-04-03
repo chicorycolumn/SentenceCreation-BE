@@ -564,3 +564,5 @@ exports.generateAdhocForms = (
     return resArr;
   }
 };
+
+exports.convertTenseToTenseDescription = () => {};

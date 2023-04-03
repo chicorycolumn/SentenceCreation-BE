@@ -389,8 +389,10 @@ exports.gatherBooleanTraitsForFE = (stCh) => {
   stCh.booleanTraits = booleanTraits;
 };
 
-exports.getEnChsForLemma = (lang, lemma) => {
+exports.getEnChsForLemma = (lang, lemma, env = "ref") => {
   ivUtils.validateLang(lang, 12);
+
+  const langUtils = require(`../../source/all/${lang}/langUtils.js`);
 
   let lObjs = apiUtils.getLObjsForLemma(lang, lemma);
 
@@ -441,6 +443,11 @@ exports.getEnChsForLemma = (lang, lemma) => {
 
     if (enCh.gender) {
       enCh.gender.traitValue = Array.from(new Set(enCh.gender.traitValue));
+    }
+
+    if (gpUtils.getWordtypeLObj(lObj) === "ver") {
+      // Gather tense and aspect into tenseDesc (POL).
+      langUtils.convertTenseToTenseDescription(lang, enCh, lObj);
     }
 
     let theTags = nexusUtils.getPapers(lObj);

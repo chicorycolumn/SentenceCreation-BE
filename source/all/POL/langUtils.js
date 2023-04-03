@@ -210,8 +210,38 @@ exports.adjustTenseDescriptionsBeforeTranslating = (
   tenseDescriptions = Array.from(new Set(tenseDescriptions));
 };
 
+exports.convertTenseToTenseDescription = (lang, stCh, lObj) => {
+  let expectedValues = refObj._tenseDescriptions[lang];
+
+  if (!gpUtils.enChTraitIsEmpty(stCh.tenseDescription)) {
+    return;
+  }
+  if (gpUtils.enChTraitIsEmpty(stCh.tense)) {
+    return;
+  }
+  let tense = stCh.tense.traitValue[0];
+  let aspect;
+  if (!gpUtils.enChTraitIsEmpty(stCh.aspect)) {
+    aspect = stCh.aspect.traitValue[0];
+  } else {
+    aspect = lObj.aspect;
+    if (aspect === "_imOnly") {
+      aspect = "imperfective";
+    }
+  }
+  let tenseDescription = `${tense} ${refObj.aspectReference(aspect)}`;
+  if (expectedValues && !expectedValues.includes(tenseDescription)) {
+    console.log("havn Created invalid tenseDescription:", tenseDescription);
+    return;
+  }
+
+  stCh.aspect.traitValue = [];
+  stCh.tense.traitValue = [];
+  stCh.tenseDescription.traitValue = [tenseDescription];
+};
+
 exports.adjustTenseDescriptions = (structureChunk) => {
-  const aspectReference = { im: "imperfective", pf: "perfective" };
+  // Convert tenseDescription to aspect and tense
 
   let resultArr = [];
 
@@ -251,7 +281,7 @@ exports.adjustTenseDescriptions = (structureChunk) => {
     tenseDescArr.forEach((tenseDesc) => {
       let [tense, aspect] = tenseDesc.split(" ");
       structureChunkCopy.tense = [tense];
-      structureChunkCopy.aspect = [aspectReference[aspect]];
+      structureChunkCopy.aspect = [refObj.aspectReference(aspect)];
       structureChunkCopy.tenseDescription = [tenseDesc];
       resultArr.push(structureChunkCopy);
     });

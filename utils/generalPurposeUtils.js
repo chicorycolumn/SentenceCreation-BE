@@ -495,3 +495,10 @@ exports.checkNoDuplicateChunks = (
     consol.throw(`${label} Contains duplicates: [${ids.join(", ")}]`);
   }
 };
+
+exports.enChTraitIsEmpty = (enChTraitObject) => {
+  return (
+    uUtils.isEmpty(enChTraitObject) ||
+    uUtils.isEmpty(enChTraitObject.traitValue)
+  );
+};

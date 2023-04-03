@@ -13,11 +13,15 @@ const allLangUtils = require("../utils/allLangUtils.js");
 const refFxn = require("../utils/reference/referenceFunctions.js");
 
 exports.fetchChunks = (req) => {
-  let { lang, lemma } = req.query;
+  let { lang, lemma, env } = req.query;
 
   let responseObject = {};
 
-  responseObject.info = apiUtils.getEnChsForLemma(lang, lemma.toLowerCase());
+  if (!env) {
+    env = "ref";
+  }
+
+  responseObject.info = apiUtils.getEnChsForLemma(lang, lemma, env);
 
   return Promise.all([responseObject]).then((array) => {
     return array[0];

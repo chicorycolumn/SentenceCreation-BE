@@ -28,10 +28,10 @@ exports.fetchFormulas = (req) => {
   let { questionSentenceFormula, answerSentenceFormulas } =
     apiUtils.getSentenceFormulas(id, answerLang, env);
 
-  apiUtils.frontendifyFormula(questionLang, questionSentenceFormula);
+  apiUtils.frontendifyFormula(questionLang, questionSentenceFormula, env);
 
   answerSentenceFormulas.forEach((answerSentenceFormula) => {
-    apiUtils.frontendifyFormula(answerLang, answerSentenceFormula);
+    apiUtils.frontendifyFormula(answerLang, answerSentenceFormula, env);
   });
 
   let responseObject = {
