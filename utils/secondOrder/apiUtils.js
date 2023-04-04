@@ -304,11 +304,16 @@ exports.frontendifyFormula = (lang, formula) => {
         newGuideword = allWords[0];
       }
 
-      guideWordsToAdd.push({
+      let guideWordToAdd = {
         chunkId: stCh.chunkId,
-        newGuideword,
         newLObjId,
-      });
+      };
+
+      if (!guideword || /^\d+$/.test(guideword)) {
+        guideWordToAdd.newGuideword = newGuideword;
+      }
+
+      guideWordsToAdd.push(guideWordToAdd);
     }
   });
 

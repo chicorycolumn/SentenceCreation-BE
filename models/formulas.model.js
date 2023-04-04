@@ -69,15 +69,15 @@ exports.fetchFormulaIds = (req) => {
         formulaObject.equivalents[lang2].length
     )
     .map((formulaObject) => {
-      let guidewordSentence = formulaObject.sentenceStructure
+      let guideSentence = formulaObject.sentenceStructure
         .map((chunk) => apiUtils.getAestheticGuideword(chunk, formulaObject))
         .join(" ");
-      guidewordSentence =
-        guidewordSentence[0].toUpperCase() + guidewordSentence.slice(1) + ".";
+      guideSentence =
+        guideSentence[0].toUpperCase() + guideSentence.slice(1) + ".";
 
       return [
         formulaObject.sentenceFormulaId,
-        guidewordSentence,
+        guideSentence,
         formulaObject.sentenceFormulaSymbol,
       ];
     });
