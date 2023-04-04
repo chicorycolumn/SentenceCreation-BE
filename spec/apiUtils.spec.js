@@ -49,7 +49,7 @@ describe("/educator/formulas.", () => {
       expect(res).to.eql(desiredRes);
     });
   });
-  it.only("#san04b GET 200 YES: Check that numeric chunkIds are converted to guidewords.", () => {
+  it("#san04b GET 200 YES: Check that numeric chunkIds are converted to guidewords.", () => {
     let res = fetchFormulas({ query: { id: "POL-00-112", lang: "ENG" } });
     return res.then((res) => {
       res.questionSentenceFormula =
