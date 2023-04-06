@@ -470,6 +470,26 @@ exports.getEnChsForLemma = (lang, lemma, env = "ref") => {
       enCh.specificIds.traitValue = [lObj.id];
     }
 
+    // Frontendify 7. Special adjustments.
+
+    if (lang === "ENG") {
+      if (wordtype === "ver") {
+        if (enCh.form && enCh.form.traitValue.includes("thirdPS")) {
+          enCh.form.traitValue = enCh.form.traitValue.map((x) =>
+            x === "thirdPS" ? "verbal" : x
+          );
+          enCh.form.traitValue = Array.from(new Set(enCh.form.traitValue));
+
+          if (
+            enCh.tenseDescription &&
+            !enCh.tenseDescription.traitValue.length
+          ) {
+            enCh.tenseDescription.traitValue = ["present"];
+          }
+        }
+      }
+    }
+
     return enCh;
   });
 
