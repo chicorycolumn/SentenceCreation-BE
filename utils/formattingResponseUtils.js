@@ -97,6 +97,7 @@ exports.finishAndSend = (
 };
 
 exports.returnNullQuestionResponseObj = (
+  startTime,
   returnDirectly,
   questionSentenceData,
   multipleMode,
@@ -104,6 +105,7 @@ exports.returnNullQuestionResponseObj = (
   answerLanguage
 ) => {
   let nullQuestionResponseObj = scUtils.giveFinalSentences(
+    startTime,
     questionSentenceData,
     multipleMode,
     { questionLanguage, answerLanguage },

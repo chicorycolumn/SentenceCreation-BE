@@ -69,6 +69,8 @@ exports.getSentencesAsQuestionOnly = (req, res, next) => {
     requestingSingleWordOnly
   );
 
+  data.body.startTime = Date.now();
+
   fetchPalette(data)
     .then((responseObj) => {
       let status = 200;

@@ -300,6 +300,7 @@ exports.addFaxSituation2 = (
 };
 
 exports.removeAnnotationsByCounterfactualAnswerSentences = (
+  startTime,
   explodedCounterfaxSituationsSchematics,
   questionOutputArr,
   annotationsToCounterfaxAndTheirChunkIds,
@@ -628,6 +629,8 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       );
 
       let newReqBody = {
+        startTime,
+
         allCounterfactualResults,
         counterfactualQuestionSentenceFormula,
         counterfactualSitSchematic,

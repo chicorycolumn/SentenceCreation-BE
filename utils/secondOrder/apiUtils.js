@@ -288,6 +288,7 @@ exports.frontendifyFormula = (lang, formula) => {
       );
 
       data.body.returnDirectly = true;
+      data.body.startTime = Date.now();
 
       let fetchedSentence = fetchPalette(data);
 
