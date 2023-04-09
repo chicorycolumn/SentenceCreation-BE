@@ -449,11 +449,11 @@ exports.getAndPreprocessStructureAndFormula = (
 ) => {
   if (
     !multipleMode &&
-    sentenceFormula.primaryOrders &&
-    sentenceFormula.primaryOrders.length > 1
+    sentenceFormula.orders.primary &&
+    sentenceFormula.orders.primary.length > 1
   ) {
-    sentenceFormula.primaryOrders = [
-      uUtils.selectRandom(sentenceFormula.primaryOrders),
+    sentenceFormula.orders.primary = [
+      uUtils.selectRandom(sentenceFormula.orders.primary),
     ];
   }
 

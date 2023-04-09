@@ -56,18 +56,18 @@ exports.fetchFormulaIds = (req) => {
 
   let formulasBank = scUtils.getWordsAndFormulas(
     lang1,
+    env,
     false,
-    true,
-    env
+    true
   ).sentenceFormulasBank;
 
   let formulaIds = formulasBank
-    .filter(
-      (formulaObject) =>
-        formulaObject.equivalents &&
-        formulaObject.equivalents[lang2] &&
-        formulaObject.equivalents[lang2].length
-    )
+    // .filter(
+    //   (formulaObject) =>
+    //     formulaObject.equivalents &&
+    //     formulaObject.equivalents[lang2] &&
+    //     formulaObject.equivalents[lang2].length
+    // )
     .map((formulaObject) => {
       let guideSentence = formulaObject.sentenceStructure
         .map((chunk) => apiUtils.getAestheticGuideword(chunk, formulaObject))

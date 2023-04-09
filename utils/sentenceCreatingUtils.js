@@ -15,14 +15,10 @@ const { HY } = refObj;
 
 exports.getWordsAndFormulas = (
   currentLanguage,
+  envir = "ref",
   wordsOnly,
-  formulasOnly,
-  envir
+  formulasOnly
 ) => {
-  if (!envir) {
-    envir = "ref";
-  }
-
   if (formulasOnly) {
     const {
       sentenceFormulasBank,
@@ -59,6 +55,7 @@ exports.getWordsAndFormulas = (
 };
 
 exports.getMaterialsCopies = (
+  env = "ref",
   currentLanguage,
   sentenceFormulaId,
   sentenceFormulaSymbol,
@@ -73,7 +70,7 @@ exports.getMaterialsCopies = (
     dummyWordsBank,
     sentenceFormulasBank,
     dummySentenceFormulasBank,
-  } = scUtils.getWordsAndFormulas(currentLanguage, wordsOnly);
+  } = scUtils.getWordsAndFormulas(currentLanguage, env, wordsOnly);
 
   if (wordsOnly) {
     return { words: wordsBank, sentenceFormula: sentenceFormulaFromEducator };
@@ -81,7 +78,7 @@ exports.getMaterialsCopies = (
 
   let sentenceFormula;
   const langUtils = require(`../source/all/${currentLanguage}/langUtils.js`);
-  let defaultSentenceFormulaId = `${currentLanguage}-00-default`;
+  let defaultSentenceFormulaId = `${currentLanguage}-default`;
 
   let words = useDummy
     ? gpUtils.combineWordbanks(wordsBank, dummyWordsBank)
@@ -944,7 +941,10 @@ exports.buildSentenceString = (
   let producedSentences = [];
 
   // STEP 0: Get orders.
-  if (!sentenceFormula.primaryOrders || !sentenceFormula.primaryOrders.length) {
+  if (
+    !sentenceFormula.orders.primary ||
+    !sentenceFormula.orders.primary.length
+  ) {
     consol.log(
       "[1;31m " +
         `npqq buildSentenceString No primaryOrders were specified for "${sentenceFormula.sentenceFormulaSymbol}" with ID "${sentenceFormula.sentenceFormulaId}". Using default order that structureChunks were defined in.` +
@@ -955,11 +955,11 @@ exports.buildSentenceString = (
   } else {
     if (multipleMode) {
       let allOrders = [];
-      if (sentenceFormula.primaryOrders) {
-        allOrders = [...allOrders, ...sentenceFormula.primaryOrders];
+      if (sentenceFormula.orders.primary) {
+        allOrders = [...allOrders, ...sentenceFormula.orders.primary];
       }
-      if (sentenceFormula.additionalOrders) {
-        allOrders = [...allOrders, ...sentenceFormula.additionalOrders];
+      if (sentenceFormula.orders.additional) {
+        allOrders = [...allOrders, ...sentenceFormula.orders.additional];
       }
 
       allOrders.forEach((order) => {
@@ -983,7 +983,7 @@ exports.buildSentenceString = (
         outputArrays.push(orderedArr);
       });
     } else {
-      let order = uUtils.selectRandom(sentenceFormula.primaryOrders);
+      let order = uUtils.selectRandom(sentenceFormula.orders.primary);
 
       let orderedArr = [];
       order.forEach((chunkId) => {

@@ -11,6 +11,7 @@ const frUtils = require("../utils/formattingResponseUtils.js");
 const refObj = require("../utils/reference/referenceObjects.js");
 const refFxn = require("../utils/reference/referenceFunctions.js");
 const allLangUtils = require("../utils/allLangUtils.js");
+const nexusUtils = require("../utils/secondOrder/nexusUtils.js");
 
 exports.fetchPalette = (req) => {
   let {
@@ -33,6 +34,7 @@ exports.fetchPalette = (req) => {
     returnDirectly,
     startTime,
     timeLimit,
+    env = "ref",
   } = req.body;
 
   if (!startTime) {
@@ -71,6 +73,7 @@ exports.fetchPalette = (req) => {
   }
 
   let { sentenceFormula, words } = scUtils.getMaterialsCopies(
+    env,
     questionLanguage,
     sentenceFormulaId,
     sentenceFormulaSymbol,
@@ -236,8 +239,21 @@ exports.fetchPalette = (req) => {
   if (answerLanguage) {
     multipleMode = true;
 
-    let equivalents =
-      questionSentenceData.sentenceFormula.equivalents[answerLanguage];
+    let equivalents;
+    if (
+      questionSentenceData.sentenceFormula.equivalents &&
+      questionSentenceData.sentenceFormula.equivalents[answerLanguage]
+    ) {
+      // dummy formulas and dev environment formulas have equivalents on the sentence formula objects themselves, rather than properly in nexus.
+      equivalents =
+        questionSentenceData.sentenceFormula.equivalents[answerLanguage];
+    } else {
+      equivalents = nexusUtils.getEquivalents(
+        questionSentenceData.sentenceFormula.sentenceFormulaId,
+        answerLanguage,
+        env
+      );
+    }
 
     if (!equivalents || !equivalents.length) {
       throw "palette.model > I was asked to give equivalents, but the question sentence formula did not have any equivalents listed.";
@@ -354,6 +370,7 @@ exports.fetchPalette = (req) => {
 
     equivalents.forEach((equivalentSentenceFormulaId, index) => {
       let { sentenceFormula, words } = scUtils.getMaterialsCopies(
+        env,
         answerLanguage,
         equivalentSentenceFormulaId,
         questionSentenceData.sentenceFormulaSymbol,

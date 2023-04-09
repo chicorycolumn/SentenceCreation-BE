@@ -26,7 +26,7 @@ const runApiTest1 = (req, expected) => {
 
 describe("/educator/formulas.", () => {
   it("#san04a GET 200 YES: Check that numeric chunkIds are converted to guidewords.", () => {
-    let res = fetchFormulas({ query: { id: "POL-00-101b", lang: "ENG" } });
+    let res = fetchFormulas({ query: { id: "POL-101b", lang: "ENG" } });
     return res.then((res) => {
       res.questionSentenceFormula =
         res.questionSentenceFormula.sentenceStructure.map(
@@ -50,7 +50,7 @@ describe("/educator/formulas.", () => {
     });
   });
   it("#san04b GET 200 YES: Check that numeric chunkIds are converted to guidewords.", () => {
-    let res = fetchFormulas({ query: { id: "POL-00-112", lang: "ENG" } });
+    let res = fetchFormulas({ query: { id: "POL-112", lang: "ENG" } });
     return res.then((res) => {
       res.questionSentenceFormula =
         res.questionSentenceFormula.sentenceStructure.map(
@@ -92,7 +92,7 @@ describe("/educator/sentences - Testing API.", () => {
           number: ["singular"],
         },
       ],
-      primaryOrders: [["npe-1", "ver-1"]],
+      orders: { primary: [["npe-1", "ver-1"]] },
     };
 
     return runApiTest1(
@@ -138,7 +138,7 @@ describe("/educator/sentences - Testing API.", () => {
           gender: [],
         },
       ],
-      primaryOrders: [["adj-1", "npe-1"]],
+      orders: { primary: [["adj-1", "npe-1"]] },
     };
 
     return runApiTest1(
@@ -175,6 +175,7 @@ describe("/educator/sentences - Testing API.", () => {
       sentenceFormulaSymbol: numberString,
       sentenceFormulaId: `${questionLanguage}-${numberString}`,
       equivalents: {},
+      orders: {},
       sentenceStructure: [
         {
           chunkId: "npe-1",

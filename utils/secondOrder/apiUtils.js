@@ -28,9 +28,9 @@ exports.getSentenceFormulas = (questionFormulaId, answerLanguage, env) => {
 
   let questionSentenceFormulasBank = scUtils.getWordsAndFormulas(
     questionLanguage,
+    env,
     false,
-    true,
-    env
+    true
   ).sentenceFormulasBank;
 
   const getFormulaById = (bank, id, label) => {
@@ -50,14 +50,17 @@ exports.getSentenceFormulas = (questionFormulaId, answerLanguage, env) => {
     "question"
   );
 
-  let answerSentenceFormulaIds =
-    questionSentenceFormula.equivalents[answerLanguage];
+  let answerSentenceFormulaIds = nexusUtils.getEquivalents(
+    questionSentenceFormula.sentenceFormulaId,
+    answerLanguage,
+    env
+  );
 
   let answerSentenceFormulasBank = scUtils.getWordsAndFormulas(
     answerLanguage,
+    env,
     false,
-    true,
-    env
+    true
   ).sentenceFormulasBank;
 
   let answerSentenceFormulas = answerSentenceFormulaIds.map(
@@ -266,6 +269,28 @@ exports.backendOnlyTraits = [
   "originalSitSelectedLObj",
 ];
 
+exports.frontendifyOrders = (orders) => {
+  let newOrders = [];
+
+  if (orders.primary) {
+    newOrders.push(
+      ...orders.primary.map((order) => {
+        return { order, isPrimary: true };
+      })
+    );
+  }
+
+  if (orders.additional) {
+    newOrders.push(
+      ...orders.additional.map((order) => {
+        return { order };
+      })
+    );
+  }
+
+  return newOrders;
+};
+
 exports.frontendifyFormula = (lang, formula) => {
   // Frontendify-5: Fetch lObjId and guideword.
   let guideWordsToAdd = [];
@@ -319,26 +344,7 @@ exports.frontendifyFormula = (lang, formula) => {
   });
 
   // Frontendify-1: Orders
-  formula.orders = [];
-
-  if (formula.primaryOrders) {
-    formula.orders.push(
-      ...formula.primaryOrders.map((order) => {
-        return { order, isPrimary: true };
-      })
-    );
-  }
-
-  if (formula.additionalOrders) {
-    formula.orders.push(
-      ...formula.additionalOrders.map((order) => {
-        return { order };
-      })
-    );
-  }
-
-  delete formula.primaryOrders;
-  delete formula.additionalOrders;
+  formula.orders = exports.frontendifyOrders(formula.orders);
 
   formula.sentenceStructure = formula.sentenceStructure.map((stCh) => {
     // Frontendify-2a: stCh to enCh
@@ -400,7 +406,7 @@ exports.getEnChsForLemma = (lang, lemma, env = "ref") => {
 
   const langUtils = require(`../../source/all/${lang}/langUtils.js`);
 
-  let lObjs = apiUtils.getLObjsForLemma(lang, lemma);
+  let lObjs = apiUtils.getLObjsForLemma(lang, lemma, env);
 
   let enChs = lObjs.map((lObj) => {
     let wordtype = gpUtils.getWordtypeLObj(lObj);
@@ -497,11 +503,11 @@ exports.getEnChsForLemma = (lang, lemma, env = "ref") => {
   return enChs;
 };
 
-exports.getLObjsForLemma = (lang, lemma) => {
+exports.getLObjsForLemma = (lang, lemma, env = "ref") => {
   ivUtils.validateLang(lang, 13);
 
   matches = [];
-  let { wordsBank } = scUtils.getWordsAndFormulas(lang, true);
+  let { wordsBank } = scUtils.getWordsAndFormulas(lang, env, true);
   Object.keys(wordsBank).forEach((wordtype) => {
     wordSet = wordsBank[wordtype];
     wordSet.forEach((lObj) => {
@@ -539,11 +545,11 @@ exports.getAestheticGuideword = (chunk, formulaObject) => {
 
   if (formulaObject) {
     let orders = [];
-    if (formulaObject.primaryOrders) {
-      orders.push(...formulaObject.primaryOrders);
+    if (formulaObject.orders.primary) {
+      orders.push(...formulaObject.orders.primary);
     }
-    if (formulaObject.additionalOrders) {
-      orders.push(...formulaObject.additionalOrders);
+    if (formulaObject.orders.additional) {
+      orders.push(...formulaObject.orders.additional);
     }
     if (orders.length) {
       isGhostChunk = !orders.some((order) => order.includes(chunk.chunkId));
