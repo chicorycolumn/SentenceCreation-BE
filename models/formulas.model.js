@@ -10,6 +10,7 @@ const frUtils = require("../utils/formattingResponseUtils.js");
 const refObj = require("../utils/reference/referenceObjects.js");
 const apiUtils = require("../utils/secondOrder/apiUtils.js");
 const allLangUtils = require("../utils/allLangUtils.js");
+const nexusUtils = require("../utils/secondOrder/nexusUtils.js");
 
 exports.fetchFormulas = (req) => {
   let { id, env } = req.query;
@@ -62,12 +63,11 @@ exports.fetchFormulaIds = (req) => {
   ).sentenceFormulasBank;
 
   let formulaIds = formulasBank
-    // .filter(
-    //   (formulaObject) =>
-    //     formulaObject.equivalents &&
-    //     formulaObject.equivalents[lang2] &&
-    //     formulaObject.equivalents[lang2].length
-    // )
+    .filter(
+      (formulaObject) =>
+        nexusUtils.getEquivalents(formulaObject.sentenceFormulaId, lang2, env)
+          .length
+    )
     .map((formulaObject) => {
       let guideSentence = formulaObject.sentenceStructure
         .map((chunk) => apiUtils.getAestheticGuideword(chunk, formulaObject))
