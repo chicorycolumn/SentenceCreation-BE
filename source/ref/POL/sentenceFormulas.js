@@ -1,7 +1,7 @@
 exports.sentenceFormulasBank = [
   {
     sentenceFormulaSymbol: "girl eats apple",
-    sentenceFormulaId: "POL-00-default",
+    sentenceFormulaId: "POL-default",
     sentenceStructure: [
       {
         chunkId: "npe-1",
@@ -18,16 +18,15 @@ exports.sentenceFormulasBank = [
         gender: [],
       },
     ],
-    primaryOrders: [["npe-1", "fix-1", "nco-2"]],
+    orders: { primary: [["npe-1", "fix-1", "nco-2"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "girl is wearing shirt",
-    sentenceFormulaId: "POL-00-51",
+    sentenceFormulaId: "POL-51",
     sentenceStructure: [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-
         number: ["singular"],
         gender: [],
       },
@@ -40,27 +39,26 @@ exports.sentenceFormulasBank = [
         gender: [],
       },
     ],
-    primaryOrders: [["npe-1", "fix-1", "nco-2"]],
+    orders: { primary: [["npe-1", "fix-1", "nco-2"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "shirt is in wardrobe",
-    sentenceFormulaId: "POL-00-52",
+    sentenceFormulaId: "POL-52",
     sentenceStructure: [
       {
         chunkId: "nco-1",
         andTags: ["wearable"],
-
         number: ["singular"],
         blockedLemmaObjectTypes: ["tantumPlurale"],
         gender: [],
       },
       { chunkId: "fix-1", chunkValue: "jest w szafie" },
     ],
-    primaryOrders: [["nco-1", "fix-1"]],
+    orders: { primary: [["nco-1", "fix-1"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "I often wear shirt",
-    sentenceFormulaId: "POL-00-53",
+    sentenceFormulaId: "POL-53",
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "często noszę" },
       {
@@ -71,26 +69,25 @@ exports.sentenceFormulasBank = [
         gender: [],
       },
     ],
-    primaryOrders: [["fix-1", "nco-1"]],
+    orders: { primary: [["fix-1", "nco-1"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "boys are here",
-    sentenceFormulaId: "POL-00-54",
+    sentenceFormulaId: "POL-54",
     sentenceStructure: [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-
         number: ["plural"],
         gender: ["m1"],
       },
       { chunkId: "fix-1", chunkValue: "są tutaj" },
     ],
-    primaryOrders: [["npe-1", "fix-1"]],
+    orders: { primary: [["npe-1", "fix-1"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "red apple",
-    sentenceFormulaId: "POL-00-55",
+    sentenceFormulaId: "POL-55",
     sentenceStructure: [
       {
         chunkId: "adj-1",
@@ -101,17 +98,15 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "nco-1",
         andTags: ["edible"],
-
         number: ["singular"],
         gender: [],
       },
     ],
-    primaryOrders: [["adj-1", "nco-1"]],
-    additionalOrders: [],
+    orders: { primary: [["adj-1", "nco-1"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "red apples",
-    sentenceFormulaId: "POL-00-55a",
+    sentenceFormulaId: "POL-55a",
     sentenceStructure: [
       {
         chunkId: "adj-1",
@@ -122,17 +117,15 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "nco-1",
         andTags: ["edible"],
-
         number: ["plural"],
         gender: [],
       },
     ],
-    primaryOrders: [["adj-1", "nco-1"]],
-    additionalOrders: [],
+    orders: { primary: [["adj-1", "nco-1"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "red/blue apple",
-    sentenceFormulaId: "POL-00-55b",
+    sentenceFormulaId: "POL-55b",
     sentenceStructure: [
       {
         chunkId: "adj-1",
@@ -143,17 +136,15 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "nco-1",
         andTags: ["edible"],
-
         number: ["singular"],
         gender: [],
       },
     ],
-    primaryOrders: [["adj-1", "nco-1"]],
-    additionalOrders: [],
+    orders: { primary: [["adj-1", "nco-1"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "red girls",
-    sentenceFormulaId: "POL-00-56",
+    sentenceFormulaId: "POL-56",
     sentenceStructure: [
       {
         chunkId: "adj-1",
@@ -169,12 +160,11 @@ exports.sentenceFormulasBank = [
         gender: [],
       },
     ],
-    primaryOrders: [["adj-1", "npe-1"]],
-    additionalOrders: [],
+    orders: { primary: [["adj-1", "npe-1"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "I have apple",
-    sentenceFormulaId: "POL-00-57",
+    sentenceFormulaId: "POL-57",
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "mam" },
       {
@@ -185,11 +175,11 @@ exports.sentenceFormulasBank = [
         gender: [],
       },
     ],
-    primaryOrders: [["fix-1", "nco-1"]],
+    orders: { primary: [["fix-1", "nco-1"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "I am reading",
-    sentenceFormulaId: "POL-00-58",
+    sentenceFormulaId: "POL-58",
     sentenceStructure: [
       {
         chunkId: "ver-1",
@@ -198,11 +188,11 @@ exports.sentenceFormulasBank = [
         person: ["1per", "2per", "3per"],
       },
     ],
-    primaryOrders: [["ver-1"]],
+    orders: { primary: [["ver-1"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "girl is reading",
-    sentenceFormulaId: "POL-00-59",
+    sentenceFormulaId: "POL-59",
     sentenceStructure: [
       {
         chunkId: "npe-1",
@@ -219,16 +209,15 @@ exports.sentenceFormulasBank = [
         andTags: ["basic2"],
       },
     ],
-    primaryOrders: [["npe-1", "ver-1"]],
+    orders: { primary: [["npe-1", "ver-1"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "girls were reading",
-    sentenceFormulaId: "POL-00-60",
+    sentenceFormulaId: "POL-60",
     sentenceStructure: [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-
         number: ["plural"],
         gender: [],
       },
@@ -240,18 +229,17 @@ exports.sentenceFormulasBank = [
         andTags: ["basic2"],
       },
     ],
-    primaryOrders: [["npe-1", "ver-1"]],
+    orders: { primary: [["npe-1", "ver-1"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "* girl has red apple",
-    sentenceFormulaId: "POL-00-61-z",
+    sentenceFormulaId: "POL-61-z",
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "nie," },
       { chunkId: "fix-2", chunkValue: "chyba" },
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
-
         number: ["singular"],
       },
       {
@@ -274,20 +262,17 @@ exports.sentenceFormulasBank = [
         gcase: ["acc"],
         number: ["singular"],
       },
-      {
-        chunkId: "ver-2",
-        form: ["infinitive"],
-        andTags: [],
-      },
+      { chunkId: "ver-2", form: ["infinitive"], andTags: [] },
     ],
-    primaryOrders: [
-      ["fix-1", "fix-2", "npe-1", "ver-1", "adj-1", "nco-2", "ver-2"],
-    ],
-    additionalOrders: [],
+    orders: {
+      primary: [
+        ["fix-1", "fix-2", "npe-1", "ver-1", "adj-1", "nco-2", "ver-2"],
+      ],
+    },
   },
   {
     sentenceFormulaSymbol: "girl has red apple",
-    sentenceFormulaId: "POL-00-61",
+    sentenceFormulaId: "POL-61",
     sentenceStructure: [
       {
         chunkId: "npe-1",
@@ -308,18 +293,15 @@ exports.sentenceFormulasBank = [
         form: ["simple"],
         andTags: ["colour"],
       },
-      {
-        chunkId: "nco-2",
-        andTags: ["edible"],
-        gcase: ["acc"],
-      },
+      { chunkId: "nco-2", andTags: ["edible"], gcase: ["acc"] },
     ],
-    primaryOrders: [["npe-1", "ver-1", "adj-1", "nco-2"]],
-    additionalOrders: [],
+    orders: {
+      primary: [["npe-1", "ver-1", "adj-1", "nco-2"]],
+    },
   },
   {
     sentenceFormulaSymbol: "girl didn't have red apple",
-    sentenceFormulaId: "POL-00-61-neg1",
+    sentenceFormulaId: "POL-61-neg1",
     sentenceStructure: [
       {
         chunkId: "npe-1",
@@ -333,7 +315,6 @@ exports.sentenceFormulasBank = [
         tenseDescription: ["past im"],
         person: ["3per"],
         andTags: [],
-
         specificIds: ["pol-ver-012-mieć"],
       },
       {
@@ -342,19 +323,15 @@ exports.sentenceFormulasBank = [
         form: ["simple"],
         andTags: ["colour"],
       },
-      {
-        chunkId: "nco-2",
-        andTags: ["edible"],
-
-        gcase: ["gen"],
-      },
+      { chunkId: "nco-2", andTags: ["edible"], gcase: ["gen"] },
     ],
-    primaryOrders: [["npe-1", "fix-1", "ver-1", "adj-1", "nco-2"]],
-    additionalOrders: [],
+    orders: {
+      primary: [["npe-1", "fix-1", "ver-1", "adj-1", "nco-2"]],
+    },
   },
   {
     sentenceFormulaSymbol: "red girl didn't have red apple",
-    sentenceFormulaId: "POL-00-62-neg1",
+    sentenceFormulaId: "POL-62-neg1",
     sentenceStructure: [
       {
         chunkId: "adj-0",
@@ -374,7 +351,6 @@ exports.sentenceFormulasBank = [
         tenseDescription: ["past im"],
         person: ["3per"],
         andTags: [],
-
         specificIds: ["pol-ver-012-mieć"],
       },
       {
@@ -383,19 +359,15 @@ exports.sentenceFormulasBank = [
         form: ["simple"],
         andTags: ["colour"],
       },
-      {
-        chunkId: "nco-2",
-        andTags: ["edible"],
-
-        gcase: ["gen"],
-      },
+      { chunkId: "nco-2", andTags: ["edible"], gcase: ["gen"] },
     ],
-    primaryOrders: [["adj-0", "npe-1", "fix-1", "ver-1", "adj-1", "nco-2"]],
-    additionalOrders: [],
+    orders: {
+      primary: [["adj-0", "npe-1", "fix-1", "ver-1", "adj-1", "nco-2"]],
+    },
   },
   {
     sentenceFormulaSymbol: "girl reads present im",
-    sentenceFormulaId: "POL-00-63a",
+    sentenceFormulaId: "POL-63a",
     sentenceStructure: [
       {
         chunkId: "npe-1",
@@ -410,12 +382,11 @@ exports.sentenceFormulasBank = [
         tenseDescription: ["present im"],
       },
     ],
-    primaryOrders: [["npe-1", "ver-1"]],
-    additionalOrders: [],
+    orders: { primary: [["npe-1", "ver-1"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "girl reads past pf",
-    sentenceFormulaId: "POL-00-63b",
+    sentenceFormulaId: "POL-63b",
     sentenceStructure: [
       {
         chunkId: "npe-1",
@@ -430,12 +401,11 @@ exports.sentenceFormulasBank = [
         tenseDescription: ["past pf"],
       },
     ],
-    primaryOrders: [["npe-1", "ver-1"]],
-    additionalOrders: [],
+    orders: { primary: [["npe-1", "ver-1"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "girl reads future im",
-    sentenceFormulaId: "POL-00-63c",
+    sentenceFormulaId: "POL-63c",
     sentenceStructure: [
       {
         chunkId: "npe-1",
@@ -450,18 +420,16 @@ exports.sentenceFormulasBank = [
         tenseDescription: ["future im"],
       },
     ],
-    primaryOrders: [["npe-1", "ver-1"]],
-    additionalOrders: [],
+    orders: { primary: [["npe-1", "ver-1"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "girl reads f conditional im pf",
-    sentenceFormulaId: "POL-00-63d",
+    sentenceFormulaId: "POL-63d",
     sentenceStructure: [
       {
         chunkId: "npe-1",
         andTags: ["personTest1"],
         specificIds: ["pol-npe-011-kobieta"],
-
         number: [],
         gender: ["f"],
       },
@@ -473,13 +441,11 @@ exports.sentenceFormulasBank = [
         tenseDescription: ["conditional im", "conditional pf"],
       },
     ],
-    primaryOrders: [["npe-1", "ver-1"]],
-    additionalOrders: [],
+    orders: { primary: [["npe-1", "ver-1"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "101a girl is reading",
-    sentenceFormulaId: "POL-00-101a",
-    equivalents: { ENG: ["ENG-00-101a"] },
+    sentenceFormulaId: "POL-101a",
     sentenceStructure: [
       {
         chunkId: "npe-1",
@@ -495,12 +461,11 @@ exports.sentenceFormulasBank = [
         andTags: ["basic2"],
       },
     ],
-    primaryOrders: [["npe-1", "ver-1"]],
+    orders: { primary: [["npe-1", "ver-1"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "101b girl *reads quickly",
-    sentenceFormulaId: "POL-00-101b",
-    equivalents: { ENG: ["ENG-00-101b"] },
+    sentenceFormulaId: "POL-101b",
     sentenceStructure: [
       {
         chunkId: "npe-1",
@@ -517,13 +482,11 @@ exports.sentenceFormulasBank = [
       },
       { chunkId: "fix-1", chunkValue: "szybko" },
     ],
-    primaryOrders: [["npe-1", "fix-1", "ver-1"]],
-    additionalOrders: [],
+    orders: { primary: [["npe-1", "fix-1", "ver-1"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "102a I'll read (pf fut)",
-    sentenceFormulaId: "POL-00-102a",
-    equivalents: { ENG: ["ENG-00-102a"] },
+    sentenceFormulaId: "POL-102a",
     sentenceStructure: [
       {
         chunkId: "ver-1",
@@ -533,13 +496,11 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
       },
     ],
-    primaryOrders: [["ver-1"]],
-    additionalOrders: [],
+    orders: { primary: [["ver-1"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "I read *future 103a",
-    sentenceFormulaId: "POL-00-103a",
-    equivalents: { ENG: ["ENG-00-103a"] },
+    sentenceFormulaId: "POL-103a",
     sentenceStructure: [
       {
         chunkId: "ver-1",
@@ -549,13 +510,11 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
       },
     ],
-    primaryOrders: [["ver-1"]],
-    additionalOrders: [],
+    orders: { primary: [["ver-1"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "I read *future 103b",
-    sentenceFormulaId: "POL-00-103b",
-    equivalents: { ENG: ["ENG-00-103b"] },
+    sentenceFormulaId: "POL-103b",
     sentenceStructure: [
       {
         chunkId: "ver-1",
@@ -565,13 +524,11 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
       },
     ],
-    primaryOrders: [["ver-1"]],
-    additionalOrders: [],
+    orders: { primary: [["ver-1"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "I read *future 103c",
-    sentenceFormulaId: "POL-00-103c",
-    equivalents: { ENG: ["ENG-00-103c"] },
+    sentenceFormulaId: "POL-103c",
     sentenceStructure: [
       {
         chunkId: "ver-1",
@@ -581,13 +538,11 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
       },
     ],
-    primaryOrders: [["ver-1"]],
-    additionalOrders: [],
+    orders: { primary: [["ver-1"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "I read *future 104a",
-    sentenceFormulaId: "POL-00-104a",
-    equivalents: { ENG: ["ENG-00-104a"] },
+    sentenceFormulaId: "POL-104a",
     sentenceStructure: [
       {
         chunkId: "ver-1",
@@ -597,13 +552,11 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
       },
     ],
-    primaryOrders: [["ver-1"]],
-    additionalOrders: [],
+    orders: { primary: [["ver-1"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "I read *future 104b",
-    sentenceFormulaId: "POL-00-104b",
-    equivalents: { ENG: ["ENG-00-104b"] },
+    sentenceFormulaId: "POL-104b",
     sentenceStructure: [
       {
         chunkId: "ver-1",
@@ -613,13 +566,11 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
       },
     ],
-    primaryOrders: [["ver-1"]],
-    additionalOrders: [],
+    orders: { primary: [["ver-1"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "I was writing 105a",
-    sentenceFormulaId: "POL-00-105a",
-    equivalents: { ENG: ["ENG-00-105a"] },
+    sentenceFormulaId: "POL-105a",
     sentenceStructure: [
       {
         chunkId: "ver-1",
@@ -629,13 +580,11 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
       },
     ],
-    primaryOrders: [["ver-1"]],
-    additionalOrders: [],
+    orders: { primary: [["ver-1"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "first conditional 106a",
-    sentenceFormulaId: "POL-00-106a",
-    equivalents: { ENG: ["ENG-00-106a"] },
+    sentenceFormulaId: "POL-106a",
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "jeśli" },
       {
@@ -663,38 +612,28 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
       },
     ],
-    primaryOrders: [["fix-1", "ver-1", "nco-1", "fix-2", "fix-3", "ver-2"]],
-    additionalOrders: [],
+    orders: {
+      primary: [["fix-1", "ver-1", "nco-1", "fix-2", "fix-3", "ver-2"]],
+    },
   },
   {
     sentenceFormulaSymbol: "red door",
-    sentenceFormulaId: "POL-00-107",
-    equivalents: { ENG: ["ENG-00-107"] },
+    sentenceFormulaId: "POL-107",
     sentenceStructure: [
-      {
-        chunkId: "adj-1",
-        agreeWith: "nco-1",
-        andTags: ["colour"],
-      },
+      { chunkId: "adj-1", agreeWith: "nco-1", andTags: ["colour"] },
       {
         chunkId: "nco-1",
         specificIds: ["pol-nco-017-drzwi"],
-
         number: [],
       },
     ],
-    primaryOrders: [["adj-1", "nco-1"]],
-    additionalOrders: [],
+    orders: { primary: [["adj-1", "nco-1"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "108 singular I am",
-    sentenceFormulaId: "POL-00-108",
-    equivalents: { ENG: ["ENG-00-108"] },
+    sentenceFormulaId: "POL-108",
     sentenceStructure: [
-      {
-        chunkId: "pro-1",
-        specificIds: ["pol-pro-PERSONAL"],
-      },
+      { chunkId: "pro-1", specificIds: ["pol-pro-PERSONAL"] },
       {
         chunkId: "ver-1",
         agreeWith: "pro-1",
@@ -702,19 +641,14 @@ exports.sentenceFormulasBank = [
         tenseDescription: ["present im"],
       },
     ],
-    primaryOrders: [["pro-1", "ver-1"]],
-    additionalOrders: [["ver-1"]], //See how here we're showing the pronombre is optional.
+    orders: { primary: [["pro-1", "ver-1"]], additional: [["ver-1"]] },
+    //See how here we're showing the pronombre is optional.
   },
   {
     sentenceFormulaSymbol: "109 doc wrote p",
-    sentenceFormulaId: "POL-00-109",
-    equivalents: { ENG: ["ENG-00-109"] },
+    sentenceFormulaId: "POL-109",
     sentenceStructure: [
-      {
-        chunkId: "npe-1",
-        andTags: ["job"],
-        number: ["singular"],
-      },
+      { chunkId: "npe-1", andTags: ["job"], number: ["singular"] },
       {
         chunkId: "ver-1",
         agreeWith: "npe-1",
@@ -723,44 +657,28 @@ exports.sentenceFormulasBank = [
       },
       { chunkId: "fix-1", chunkValue: "receptę" },
     ],
-    primaryOrders: [["npe-1", "ver-1", "fix-1"]],
-    additionalOrders: [],
+    orders: { primary: [["npe-1", "ver-1", "fix-1"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "109a doc was writing p",
-    sentenceFormulaId: "POL-00-109a",
-    equivalents: { ENG: ["ENG-00-109a"] },
+    sentenceFormulaId: "POL-109a",
     sentenceStructure: [
-      {
-        chunkId: "npe-1",
-        andTags: ["job"],
-        number: ["singular"],
-      },
+      { chunkId: "npe-1", andTags: ["job"], number: ["singular"] },
       {
         chunkId: "ver-1",
         agreeWith: "npe-1",
         specificIds: ["pol-ver-015-pisać"],
         tenseDescription: ["past im"],
       },
-      {
-        chunkId: "fix-1",
-        chunkValue: "receptę",
-      },
+      { chunkId: "fix-1", chunkValue: "receptę" },
     ],
-    primaryOrders: [["npe-1", "ver-1", "fix-1"]],
-    additionalOrders: [],
+    orders: { primary: [["npe-1", "ver-1", "fix-1"]], additional: [] },
   },
-
   {
     sentenceFormulaSymbol: "109b docs wrote p",
-    sentenceFormulaId: "POL-00-109b",
-    equivalents: { ENG: ["ENG-00-109b"] },
+    sentenceFormulaId: "POL-109b",
     sentenceStructure: [
-      {
-        chunkId: "npe-1",
-        andTags: ["job"],
-        number: ["plural"],
-      },
+      { chunkId: "npe-1", andTags: ["job"], number: ["plural"] },
       {
         chunkId: "ver-1",
         agreeWith: "npe-1",
@@ -769,19 +687,13 @@ exports.sentenceFormulasBank = [
       },
       { chunkId: "fix-1", chunkValue: "receptę" },
     ],
-    primaryOrders: [["npe-1", "ver-1", "fix-1"]],
-    additionalOrders: [],
+    orders: { primary: [["npe-1", "ver-1", "fix-1"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "109c docs were writing p",
-    sentenceFormulaId: "POL-00-109c",
-    equivalents: { ENG: ["ENG-00-109c"] },
+    sentenceFormulaId: "POL-109c",
     sentenceStructure: [
-      {
-        chunkId: "npe-1",
-        andTags: ["job"],
-        number: ["plural"],
-      },
+      { chunkId: "npe-1", andTags: ["job"], number: ["plural"] },
       {
         chunkId: "ver-1",
         agreeWith: "npe-1",
@@ -790,18 +702,13 @@ exports.sentenceFormulasBank = [
       },
       { chunkId: "fix-1", chunkValue: "receptę" },
     ],
-    primaryOrders: [["npe-1", "ver-1", "fix-1"]],
-    additionalOrders: [],
+    orders: { primary: [["npe-1", "ver-1", "fix-1"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "110 the woman read me a book",
-    sentenceFormulaId: "POL-00-110",
-    equivalents: { ENG: ["ENG-00-110"] },
+    sentenceFormulaId: "POL-110",
     sentenceStructure: [
-      {
-        chunkId: "npe-1",
-        specificIds: ["^pol-npe-011-kobieta"],
-      },
+      { chunkId: "npe-1", specificIds: ["^pol-npe-011-kobieta"] },
       {
         chunkId: "ver-1",
         agreeWith: "npe-1",
@@ -821,13 +728,13 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
       },
     ],
-    primaryOrders: [["npe-1", "ver-1", "pro-1", "nco-2"]],
-    additionalOrders: [],
+    orders: {
+      primary: [["npe-1", "ver-1", "pro-1", "nco-2"]],
+    },
   },
   {
     sentenceFormulaSymbol: "111a I am",
-    sentenceFormulaId: "POL-00-111a",
-    equivalents: { ENG: ["ENG-00-111a"] },
+    sentenceFormulaId: "POL-111a",
     sentenceStructure: [
       {
         chunkId: "pro-1",
@@ -841,13 +748,11 @@ exports.sentenceFormulasBank = [
         tenseDescription: ["present im"],
       },
     ],
-    primaryOrders: [["ver-1"]],
-    additionalOrders: [["pro-1", "ver-1"]],
+    orders: { primary: [["ver-1"]], additional: [["pro-1", "ver-1"]] },
   },
   {
     sentenceFormulaSymbol: "111b I was",
-    sentenceFormulaId: "POL-00-111b",
-    equivalents: { ENG: ["ENG-00-111b"] },
+    sentenceFormulaId: "POL-111b",
     sentenceStructure: [
       {
         chunkId: "pro-1",
@@ -861,13 +766,11 @@ exports.sentenceFormulasBank = [
         tenseDescription: ["past im"],
       },
     ],
-    primaryOrders: [["ver-1"]],
-    additionalOrders: [["pro-1", "ver-1"]],
+    orders: { primary: [["ver-1"]], additional: [["pro-1", "ver-1"]] },
   },
   {
     sentenceFormulaSymbol: "111c you were",
-    sentenceFormulaId: "POL-00-111c",
-    equivalents: { ENG: ["ENG-00-111c"] },
+    sentenceFormulaId: "POL-111c",
     sentenceStructure: [
       {
         chunkId: "pro-1",
@@ -881,13 +784,11 @@ exports.sentenceFormulasBank = [
         tenseDescription: ["past im"],
       },
     ],
-    primaryOrders: [["ver-1"]],
-    additionalOrders: [["pro-1", "ver-1"]],
+    orders: { primary: [["ver-1"]], additional: [["pro-1", "ver-1"]] },
   },
   {
     sentenceFormulaSymbol: "112 familymember gave me things",
-    sentenceFormulaId: "POL-00-112",
-    equivalents: { ENG: ["ENG-00-112"] },
+    sentenceFormulaId: "POL-112",
     sentenceStructure: [
       {
         chunkId: "npe-1",
@@ -918,13 +819,13 @@ exports.sentenceFormulasBank = [
         number: ["plural"],
       },
     ],
-    primaryOrders: [["npe-1", "ver-1", "pro-1", "nco-2"]],
-    additionalOrders: [],
+    orders: {
+      primary: [["npe-1", "ver-1", "pro-1", "nco-2"]],
+    },
   },
   {
     sentenceFormulaSymbol: "112a familymember gave me thing",
-    sentenceFormulaId: "POL-00-112a",
-    equivalents: { ENG: ["ENG-00-112a"] },
+    sentenceFormulaId: "POL-112a",
     sentenceStructure: [
       {
         chunkId: "npe-1",
@@ -955,13 +856,13 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
       },
     ],
-    primaryOrders: [["npe-1", "ver-1", "pro-1", "nco-2"]],
-    additionalOrders: [],
+    orders: {
+      primary: [["npe-1", "ver-1", "pro-1", "nco-2"]],
+    },
   },
   {
     sentenceFormulaSymbol: "113 my father gave me a book",
-    sentenceFormulaId: "POL-00-113",
-    equivalents: { ENG: ["ENG-00-113"] },
+    sentenceFormulaId: "POL-113",
     sentenceStructure: [
       {
         chunkId: "pro-1-invisible",
@@ -1000,13 +901,13 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
       },
     ],
-    primaryOrders: [["pro-2", "npe-1", "ver-1", "pro-3", "nco-2"]],
-    additionalOrders: [],
+    orders: {
+      primary: [["pro-2", "npe-1", "ver-1", "pro-3", "nco-2"]],
+    },
   },
   {
     sentenceFormulaSymbol: "113a my father gave me his book",
-    sentenceFormulaId: "POL-00-113a",
-    equivalents: { ENG: ["ENG-00-113a"] },
+    sentenceFormulaId: "POL-113a",
     sentenceStructure: [
       {
         chunkId: "pro-1-invisible-We",
@@ -1020,10 +921,7 @@ exports.sentenceFormulasBank = [
         agreeWith: "pro-1-invisible-We",
         agreeWith2: "npe-1-Father",
       },
-      {
-        chunkId: "npe-1-Father",
-        andTags: ["family"],
-      },
+      { chunkId: "npe-1-Father", andTags: ["family"] },
       {
         chunkId: "ver-1-Gave",
         agreeWith: "npe-1-Father",
@@ -1051,22 +949,22 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
       },
     ],
-    primaryOrders: [
-      [
-        "pro-2-Our",
-        "npe-1-Father",
-        "ver-1-Gave",
-        "pro-3-Us",
-        "pro-4-His",
-        "nco-2-Book",
+    orders: {
+      primary: [
+        [
+          "pro-2-Our",
+          "npe-1-Father",
+          "ver-1-Gave",
+          "pro-3-Us",
+          "pro-4-His",
+          "nco-2-Book",
+        ],
       ],
-    ],
-    additionalOrders: [],
+    },
   },
   {
     sentenceFormulaSymbol: "113b my child gave me his book",
-    sentenceFormulaId: "POL-00-113b",
-    equivalents: { ENG: ["ENG-00-113b"] },
+    sentenceFormulaId: "POL-113b",
     sentenceStructure: [
       {
         chunkId: "pro-1-invisible-We",
@@ -1111,22 +1009,22 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
       },
     ],
-    primaryOrders: [
-      [
-        "pro-2-Our",
-        "npe-1-Father",
-        "ver-1-Gave",
-        "pro-3-Us",
-        "pro-4-His",
-        "nco-2-Book",
+    orders: {
+      primary: [
+        [
+          "pro-2-Our",
+          "npe-1-Father",
+          "ver-1-Gave",
+          "pro-3-Us",
+          "pro-4-His",
+          "nco-2-Book",
+        ],
       ],
-    ],
-    additionalOrders: [],
+    },
   },
   {
     sentenceFormulaSymbol: "113c my child gave me his book",
-    sentenceFormulaId: "POL-00-113c",
-    equivalents: { ENG: ["ENG-00-113c"] },
+    sentenceFormulaId: "POL-113c",
     sentenceStructure: [
       {
         chunkId: "pro-1-invisible-We",
@@ -1172,22 +1070,22 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
       },
     ],
-    primaryOrders: [
-      [
-        "pro-2-Our",
-        "npe-1-Father",
-        "ver-1-Gave",
-        "pro-3-Us",
-        "pro-4-His",
-        "nco-2-Book",
+    orders: {
+      primary: [
+        [
+          "pro-2-Our",
+          "npe-1-Father",
+          "ver-1-Gave",
+          "pro-3-Us",
+          "pro-4-His",
+          "nco-2-Book",
+        ],
       ],
-    ],
-    additionalOrders: [],
+    },
   },
   {
     sentenceFormulaSymbol: "114 doctor gave me her book",
-    sentenceFormulaId: "POL-00-114",
-    equivalents: { ENG: ["ENG-00-114"] },
+    sentenceFormulaId: "POL-114",
     sentenceStructure: [
       {
         chunkId: "pro-1-invisible-I",
@@ -1197,7 +1095,6 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-1-Doctor",
-
         specificIds: ["pol-npe-015-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
       },
@@ -1228,15 +1125,15 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
       },
     ],
-    primaryOrders: [
-      ["npe-1-Doctor", "ver-1-Gave", "pro-2-Me", "pro-3-Her", "nco-2-Book"],
-    ],
-    additionalOrders: [],
+    orders: {
+      primary: [
+        ["npe-1-Doctor", "ver-1-Gave", "pro-2-Me", "pro-3-Her", "nco-2-Book"],
+      ],
+    },
   },
   {
     sentenceFormulaSymbol: "115 I saw my doctor and her doctor",
     sentenceFormulaId: "POL-115",
-    equivalents: { ENG: ["ENG-115"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1259,7 +1156,6 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-1-doctor",
-
         number: ["singular"],
         specificIds: ["pol-npe-015-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
@@ -1275,28 +1171,28 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-2-doctor",
-
         number: ["singular"],
         specificIds: ["pol-npe-015-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
         gcase: ["acc"],
       },
     ],
-    primaryOrders: [
-      [
-        "ver-1-see",
-        "pro-2-my",
-        "npe-1-doctor",
-        "fix-1-and",
-        "pro-3-his",
-        "npe-2-doctor",
+    orders: {
+      primary: [
+        [
+          "ver-1-see",
+          "pro-2-my",
+          "npe-1-doctor",
+          "fix-1-and",
+          "pro-3-his",
+          "npe-2-doctor",
+        ],
       ],
-    ],
+    },
   },
   {
     sentenceFormulaSymbol: "116b My doctor was a woman specifically",
     sentenceFormulaId: "POL-116b",
-    equivalents: { ENG: ["ENG-116b"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1313,11 +1209,9 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-1-doctor",
-
         number: ["singular"],
         specificIds: ["pol-npe-015-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
-
         gender: ["f"],
         educatorBlocksAnnotationsForTheseTraitKeys: ["gender"], //Just for symmetry and so I know it doesn't break anything.
       },
@@ -1336,12 +1230,13 @@ exports.sentenceFormulasBank = [
         specificIds: ["^pol-npe-011-kobieta"],
       },
     ],
-    primaryOrders: [["pro-2-my", "npe-1-doctor", "ver-1-was", "npe-2-woman"]],
+    orders: {
+      primary: [["pro-2-my", "npe-1-doctor", "ver-1-was", "npe-2-woman"]],
+    },
   },
   {
     sentenceFormulaSymbol: "116c My doctor was a woman/man/person",
     sentenceFormulaId: "POL-116c",
-    equivalents: { ENG: ["ENG-116c"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1374,12 +1269,13 @@ exports.sentenceFormulasBank = [
         specificIds: ["pol-npe-011-kobieta"],
       },
     ],
-    primaryOrders: [["pro-2-my", "npe-1-doctor", "ver-1-was", "npe-2-woman"]],
+    orders: {
+      primary: [["pro-2-my", "npe-1-doctor", "ver-1-was", "npe-2-woman"]],
+    },
   },
   {
     sentenceFormulaSymbol: "116y My doctor",
     sentenceFormulaId: "POL-116y",
-    equivalents: { ENG: ["ENG-116y"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1396,20 +1292,17 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-1-doctor",
-
         number: ["singular"],
         specificIds: ["pol-npe-015-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
-
         gender: ["f"],
       },
     ],
-    primaryOrders: [["pro-2-my", "npe-1-doctor"]],
+    orders: { primary: [["pro-2-my", "npe-1-doctor"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "116x My doctor was a woman",
     sentenceFormulaId: "POL-116x",
-    equivalents: { ENG: ["ENG-116x"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1426,11 +1319,9 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-1-doctor",
-
         number: ["singular"],
         specificIds: ["pol-npe-015-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
-
         gender: ["f"],
         educatorBlocksAnnotationsForTheseTraitKeys: ["gender"], //Just for symmetry and so I know it doesn't break anything.
       },
@@ -1449,12 +1340,13 @@ exports.sentenceFormulasBank = [
         specificIds: ["^pol-npe-011-kobieta"],
       },
     ],
-    primaryOrders: [["pro-2-my", "npe-1-doctor", "ver-1-was", "npe-2-woman"]],
+    orders: {
+      primary: [["pro-2-my", "npe-1-doctor", "ver-1-was", "npe-2-woman"]],
+    },
   },
   {
     sentenceFormulaSymbol: "116a My doctor's doctor was a woman specifically",
     sentenceFormulaId: "POL-116a",
-    equivalents: { ENG: ["ENG-116a"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1498,20 +1390,21 @@ exports.sentenceFormulasBank = [
         specificIds: ["^pol-npe-011-kobieta"],
       },
     ],
-    primaryOrders: [
-      [
-        "npe-2-doctor",
-        "pro-2-my",
-        "npe-1-doctor's",
-        "ver-1-was",
-        "npe-3-woman",
+    orders: {
+      primary: [
+        [
+          "npe-2-doctor",
+          "pro-2-my",
+          "npe-1-doctor's",
+          "ver-1-was",
+          "npe-3-woman",
+        ],
       ],
-    ],
+    },
   },
   {
     sentenceFormulaSymbol: "117 I was a doctor",
     sentenceFormulaId: "POL-117",
-    equivalents: { ENG: ["ENG-117"], POL: ["POL-117"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1534,12 +1427,11 @@ exports.sentenceFormulasBank = [
         agreeWith: "pro-1-I",
       },
     ],
-    primaryOrders: [["ver-1-was", "npe-1-doctor"]],
+    orders: { primary: [["ver-1-was", "npe-1-doctor"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "117a I* was a doctor",
     sentenceFormulaId: "POL-117a",
-    equivalents: { ENG: ["ENG-117a"], POL: ["POL-117a"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1554,7 +1446,6 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-1-doctor",
-
         gcase: ["ins"],
         formulaImportantTraitKeys: ["gcase"],
         number: ["singular"],
@@ -1563,12 +1454,11 @@ exports.sentenceFormulasBank = [
         agreeWith: "pro-1-I",
       },
     ],
-    primaryOrders: [["ver-1-was", "npe-1-doctor"]],
+    orders: { primary: [["ver-1-was", "npe-1-doctor"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "117aa I** was a doctor",
     sentenceFormulaId: "POL-117aa",
-    equivalents: { ENG: ["ENG-117aa"], POL: ["POL-117aa"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1583,21 +1473,18 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-1-doctor",
-
         gcase: ["ins"],
         formulaImportantTraitKeys: ["gcase"],
-        // number: ["singular"],
         specificIds: ["pol-npe-015-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
         agreeWith: "pro-1-I",
       },
     ],
-    primaryOrders: [["ver-1-was", "npe-1-doctor"]],
+    orders: { primary: [["ver-1-was", "npe-1-doctor"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "117b I was here",
     sentenceFormulaId: "POL-117b",
-    equivalents: { ENG: ["ENG-117b"], POL: ["POL-117b"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1613,12 +1500,11 @@ exports.sentenceFormulasBank = [
       },
       { chunkId: "fix-1-here", chunkValue: "tutaj" },
     ],
-    primaryOrders: [["ver-1-was", "fix-1-here"]],
+    orders: { primary: [["ver-1-was", "fix-1-here"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "117c I am here",
     sentenceFormulaId: "POL-117c",
-    equivalents: { ENG: ["ENG-117c"], POL: ["POL-117c"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1634,12 +1520,11 @@ exports.sentenceFormulasBank = [
       },
       { chunkId: "fix-1-here", chunkValue: "tutaj" },
     ],
-    primaryOrders: [["ver-1-am", "fix-1-here"]],
+    orders: { primary: [["ver-1-am", "fix-1-here"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "118 My doctor and his book",
     sentenceFormulaId: "POL-118",
-    equivalents: { ENG: ["ENG-118"] },
     sentenceStructure: [
       {
         chunkId: "pro-0-I-invisible",
@@ -1656,11 +1541,9 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-1-doctor",
-
         number: ["singular"],
         specificIds: ["pol-npe-015-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
-
         educatorBlocksAnnotationsForTheseTraitKeys: ["gender", "number"],
       },
       { chunkId: "fix-1-and", chunkValue: "i" },
@@ -1673,19 +1556,19 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "nco-2-book",
-
         number: ["singular"],
         specificIds: ["pol-nco-016-książka"],
       },
     ],
-    primaryOrders: [
-      ["pro-1-my", "npe-1-doctor", "fix-1-and", "pro-2-his", "nco-2-book"],
-    ],
+    orders: {
+      primary: [
+        ["pro-1-my", "npe-1-doctor", "fix-1-and", "pro-2-his", "nco-2-book"],
+      ],
+    },
   },
   {
     sentenceFormulaSymbol: "118a My doctor and my book",
     sentenceFormulaId: "POL-118a",
-    equivalents: { ENG: ["ENG-118a"] },
     sentenceStructure: [
       {
         chunkId: "pro-0-I-invisible",
@@ -1702,7 +1585,6 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-1-doctor",
-
         number: ["singular"],
         specificIds: ["pol-npe-015-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
@@ -1717,19 +1599,19 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "nco-2-book",
-
         number: ["singular"],
         specificIds: ["pol-nco-016-książka"],
       },
     ],
-    primaryOrders: [
-      ["pro-1-my", "npe-1-doctor", "fix-1-and", "pro-2-my", "nco-2-book"],
-    ],
+    orders: {
+      primary: [
+        ["pro-1-my", "npe-1-doctor", "fix-1-and", "pro-2-my", "nco-2-book"],
+      ],
+    },
   },
   {
     sentenceFormulaSymbol: "118b My doctor",
     sentenceFormulaId: "POL-118b",
-    equivalents: { ENG: ["ENG-118b"] },
     sentenceStructure: [
       {
         chunkId: "pro-0-I-invisible",
@@ -1746,20 +1628,16 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "npe-1-doctor",
-
         number: ["singular"],
         specificIds: ["pol-npe-015-lekarz"],
         doNotUpdateSpecificIdsAsIsJustOneMGN: true,
-
-        // gender: ["f"],
       },
     ],
-    primaryOrders: [["pro-1-my", "npe-1-doctor"]],
+    orders: { primary: [["pro-1-my", "npe-1-doctor"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "118c My onion",
     sentenceFormulaId: "POL-118c",
-    equivalents: { ENG: ["ENG-118c"] },
     sentenceStructure: [
       {
         chunkId: "pro-0-I-invisible",
@@ -1776,20 +1654,15 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "nco-1-onion",
-        //
-        //
         number: ["singular"],
         specificIds: ["pol-nco-012-cebula"],
-        //
-        // gender: ["f"],
       },
     ],
-    primaryOrders: [["pro-1-my", "nco-1-onion"]],
+    orders: { primary: [["pro-1-my", "nco-1-onion"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "119 Woman saw me",
     sentenceFormulaId: "POL-119",
-    equivalents: { ENG: ["ENG-119"] },
     sentenceStructure: [
       {
         chunkId: "pro-0-I-invisible",
@@ -1815,12 +1688,13 @@ exports.sentenceFormulasBank = [
         formulaImportantTraitKeys: ["gcase"],
       },
     ],
-    primaryOrders: [["npe-1-woman", "pro-1-me", "ver-1-see"]],
+    orders: {
+      primary: [["npe-1-woman", "pro-1-me", "ver-1-see"]],
+    },
   },
   {
     sentenceFormulaSymbol: "120 Doctor saw me",
     sentenceFormulaId: "POL-120",
-    equivalents: { ENG: ["ENG-120"] },
     sentenceStructure: [
       {
         chunkId: "pro-0-I-invisible",
@@ -1847,12 +1721,13 @@ exports.sentenceFormulasBank = [
         formulaImportantTraitKeys: ["gcase"],
       },
     ],
-    primaryOrders: [["npe-1-doctor", "pro-1-me", "ver-1-see"]],
+    orders: {
+      primary: [["npe-1-doctor", "pro-1-me", "ver-1-see"]],
+    },
   },
   {
     sentenceFormulaSymbol: "121 I read* a book",
     sentenceFormulaId: "POL-121",
-    equivalents: { ENG: ["ENG-121"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1879,13 +1754,14 @@ exports.sentenceFormulasBank = [
         gcase: ["acc"],
       },
     ],
-    primaryOrders: [["ver-1-read", "nco-1-book"]],
-    // additionalOrders: [["pro-1-I", "ver-1-read", "nco-1-book"]],
+    orders: {
+      primary: [["ver-1-read", "nco-1-book"]],
+      // additional: [["pro-1-I", "ver-1-read", "nco-1-book"]],
+    },
   },
   {
     sentenceFormulaSymbol: "122 The doctor writes",
     sentenceFormulaId: "POL-122",
-    equivalents: { ENG: ["ENG-122"] },
     sentenceStructure: [
       {
         chunkId: "npe-1-doctor",
@@ -1898,12 +1774,11 @@ exports.sentenceFormulasBank = [
         tenseDescription: ["present im", "past pf"],
       },
     ],
-    primaryOrders: [["npe-1-doctor", "ver-1-write"]],
+    orders: { primary: [["npe-1-doctor", "ver-1-write"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "123 I am red",
     sentenceFormulaId: "POL-123",
-    equivalents: { ENG: ["ENG-123"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1922,13 +1797,14 @@ exports.sentenceFormulasBank = [
         agreeWith: "pro-1-I",
       },
     ],
-    primaryOrders: [["ver-1-am", "adj-1-red"]],
-    additionalOrders: [["pro-1-I", "ver-1-am", "adj-1-red"]],
+    orders: {
+      primary: [["ver-1-am", "adj-1-red"]],
+      additional: [["pro-1-I", "ver-1-am", "adj-1-red"]],
+    },
   },
   {
     sentenceFormulaSymbol: "124a I was a good doctor",
     sentenceFormulaId: "POL-124a",
-    equivalents: { ENG: ["ENG-124a"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1955,12 +1831,13 @@ exports.sentenceFormulasBank = [
         gcase: ["ins"],
       },
     ],
-    primaryOrders: [["ver-1-am", "adj-1-good", "npe-1-person"]],
+    orders: {
+      primary: [["ver-1-am", "adj-1-good", "npe-1-person"]],
+    },
   },
   {
     sentenceFormulaSymbol: "124b I was a good person",
     sentenceFormulaId: "POL-124b",
-    equivalents: { ENG: ["ENG-124b"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1989,12 +1866,13 @@ exports.sentenceFormulasBank = [
         formulaImportantTraitKeys: ["gcase"],
       },
     ],
-    primaryOrders: [["pro-1-I", "ver-1-am", "adj-1-good", "npe-1-person"]],
+    orders: {
+      primary: [["pro-1-I", "ver-1-am", "adj-1-good", "npe-1-person"]],
+    },
   },
   {
     sentenceFormulaSymbol: "124c I was a good man/woman/person",
     sentenceFormulaId: "POL-124c",
-    equivalents: { ENG: ["ENG-124c"] },
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -2023,6 +1901,8 @@ exports.sentenceFormulasBank = [
         formulaImportantTraitKeys: ["gcase"],
       },
     ],
-    primaryOrders: [["pro-1-I", "ver-1-am", "adj-1-good", "npe-1-person"]],
+    orders: {
+      primary: [["pro-1-I", "ver-1-am", "adj-1-good", "npe-1-person"]],
+    },
   },
 ];

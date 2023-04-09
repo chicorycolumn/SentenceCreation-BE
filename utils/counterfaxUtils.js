@@ -1005,20 +1005,20 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
     let originalAnswerPseudoSentenceObjs = cfUtils.makePseudoSentenceObjs(
       originalAnswerOutputArrObjs,
-      answerSentenceData.sentenceFormula.primaryOrders
+      answerSentenceData.sentenceFormula.orders.primary
     );
     let counterfactualAnswerPseudoSentenceObjs = cfUtils.makePseudoSentenceObjs(
       counterfactualAnswerOutputArrObjs,
-      answerSentenceData.sentenceFormula.primaryOrders
+      answerSentenceData.sentenceFormula.orders.primary
     );
     let originalQuestionPseudoSentenceObjs = cfUtils.makePseudoSentenceObjs(
       originalQuestionOutputArrObjs,
-      counterfaxedSentenceFormula.primaryOrders
+      counterfaxedSentenceFormula.orders.primary
     );
     let counterfactualQuestionPseudoSentenceObjs =
       cfUtils.makePseudoSentenceObjs(
         counterfactualQuestionOutputArrObjs,
-        counterfaxedSentenceFormula.primaryOrders
+        counterfaxedSentenceFormula.orders.primary
       );
 
     return {
@@ -1208,7 +1208,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
 exports.makePseudoSentenceObjs = (outputArrObjs, primaryOrders) => {
   //This doesn't do the full processing, ie 'a' --> 'an'
-  //but it does trim the list of selected words according to sentenceFormula.primaryOrders,
+  //but it does trim the list of selected words according to sentenceFormula.orders.primary,
   //ie "On czyta." and "Ona czyta." both become "Czyta.".
 
   let orderAdjustedOutputArrObjs = [];

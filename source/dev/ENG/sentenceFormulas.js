@@ -23,8 +23,7 @@ exports.sentenceFormulasBank = [
         andTags: ["basic2"],
       },
     ],
-    primaryOrders: [["fix-1", "npe-1", "ver-1"]],
-    additionalOrders: [],
+    orders: { primary: [["fix-1", "npe-1", "ver-1"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "symb1",
@@ -51,8 +50,10 @@ exports.sentenceFormulasBank = [
       },
       { chunkId: "fix-2", chunkValue: "quickly" },
     ],
-    primaryOrders: [["fix-1", "npe-1", "ver-1", "fix-2"]],
-    additionalOrders: [["fix-2", "fix-1", "npe-1", "ver-1"]],
+    orders: {
+      primary: [["fix-1", "npe-1", "ver-1", "fix-2"]],
+      additional: [["fix-2", "fix-1", "npe-1", "ver-1"]],
+    },
   },
   {
     sentenceFormulaSymbol: "102a I'll read (pf fut)",
@@ -68,15 +69,13 @@ exports.sentenceFormulasBank = [
         number: ["singular"],
       },
     ],
-    primaryOrders: [["fix-1", "ver-1"]],
-    additionalOrders: [],
+    orders: { primary: [["fix-1", "ver-1"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "102a I'll read",
     sentenceFormulaId: "ENG-90-902a",
     equivalents: { POL: ["POL-90-902a"] },
     sentenceStructure: [],
-    primaryOrders: [],
-    additionalOrders: [],
+    orders: { primary: [], additional: [] },
   },
 ];

@@ -27,9 +27,9 @@ exports.getSentenceFormulas = (questionFormulaId, answerLanguage, env) => {
 
   let questionSentenceFormulasBank = scUtils.getWordsAndFormulas(
     questionLanguage,
+    env,
     false,
-    true,
-    env
+    true
   ).sentenceFormulasBank;
 
   const getFormulaById = (bank, id, label) => {
@@ -54,9 +54,9 @@ exports.getSentenceFormulas = (questionFormulaId, answerLanguage, env) => {
 
   let answerSentenceFormulasBank = scUtils.getWordsAndFormulas(
     answerLanguage,
+    env,
     false,
-    true,
-    env
+    true
   ).sentenceFormulasBank;
 
   let answerSentenceFormulas = answerSentenceFormulaIds.map(
@@ -307,7 +307,7 @@ exports.getLObjsForLemma = (lang, lemma) => {
   ivUtils.validateLang(lang, 13);
 
   matches = [];
-  let { wordsBank } = scUtils.getWordsAndFormulas(lang, true);
+  let { wordsBank } = scUtils.getWordsAndFormulas(lang, env, true);
   Object.keys(wordsBank).forEach((wordtype) => {
     wordSet = wordsBank[wordtype];
     wordSet.forEach((lObj) => {

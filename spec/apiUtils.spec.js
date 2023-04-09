@@ -45,7 +45,7 @@ describe("/educator/sandbox - Testing API.", () => {
           number: ["singular"],
         },
       ],
-      primaryOrders: [["npe-1", "ver-1"]],
+      orders: { primary: [["npe-1", "ver-1"]] },
     };
 
     return runApiTest1(
@@ -91,7 +91,7 @@ describe("/educator/sandbox - Testing API.", () => {
           gender: [],
         },
       ],
-      primaryOrders: [["adj-1", "npe-1"]],
+      orders: { primary: [["adj-1", "npe-1"]] },
     };
 
     return runApiTest1(
@@ -128,6 +128,7 @@ describe("/educator/sandbox - Testing API.", () => {
       sentenceFormulaSymbol: numberString,
       sentenceFormulaId: `${questionLanguage}-${numberString}`,
       equivalents: {},
+      orders: {},
       sentenceStructure: [
         {
           chunkId: "npe-1",

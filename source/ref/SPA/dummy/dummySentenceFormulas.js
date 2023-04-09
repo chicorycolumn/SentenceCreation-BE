@@ -18,8 +18,7 @@ exports.dummySentenceFormulasBank = [
         specificIds: ["spa-adj-001-rojo"],
       },
     ],
-    primaryOrders: [["adj-1", "nco-1"]],
-    additionalOrders: [],
+    orders: { primary: [["adj-1", "nco-1"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "dummy72b",
@@ -40,8 +39,7 @@ exports.dummySentenceFormulasBank = [
         specificIds: ["spa-adj-001-rojo"],
       },
     ],
-    primaryOrders: [["adj-1", "npe-1"]],
-    additionalOrders: [],
+    orders: { primary: [["adj-1", "npe-1"]], additional: [] },
   },
   {
     sentenceFormulaSymbol: "dummy72c",
@@ -62,7 +60,6 @@ exports.dummySentenceFormulasBank = [
         specificIds: ["spa-adj-001-rojo"],
       },
     ],
-    primaryOrders: [["adj-1", "npe-1"]],
-    additionalOrders: [],
+    orders: { primary: [["adj-1", "npe-1"]], additional: [] },
   },
 ];

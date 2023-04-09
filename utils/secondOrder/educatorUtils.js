@@ -15,7 +15,7 @@ exports.checkOutputArrayForMissingUnits = (
     return;
   }
 
-  let primaryOrders = sentenceFormula.primaryOrders;
+  let primaryOrders = sentenceFormula.orders.primary;
   let outputChunkIds = outputArray.map((unit) => unit.structureChunk.chunkId);
 
   if (
