@@ -4,6 +4,25 @@ const consol = require("../../utils/zerothOrder/consoleLoggingUtils.js");
 const gpUtils = require("../generalPurposeUtils.js");
 const uUtils = require("../universalUtils.js");
 
+exports.getLanguagesOfEquivalents = (sentenceFormulaId, env = "ref") => {
+  let lang = sentenceFormulaId.split("-")[0];
+  const nexusSentenceFormulasBank =
+    require(`../../source/${env}/NEXUS/sentenceFormulas.js`).sentenceFormulas;
+  let nexusObjs = nexusSentenceFormulasBank.filter((nexusObj) =>
+    nexusObj.equivalents[lang].includes(sentenceFormulaId)
+  );
+  let res = [];
+  nexusObjs.forEach((nexusObj) => {
+    res.push(
+      ...Object.keys(nexusObj.equivalents)
+        .filter((k) => k !== lang)
+        .filter((k) => nexusObj.equivalents[k].length)
+    );
+  });
+  res = Array.from(new Set(res));
+  return res;
+};
+
 exports.getEquivalents = (sentenceFormulaId, answerLanguage, env = "ref") => {
   let lang = sentenceFormulaId.split("-")[0];
   const nexusSentenceFormulasBank =

@@ -62,25 +62,23 @@ exports.fetchFormulaIds = (req) => {
     true
   ).sentenceFormulasBank;
 
-  let formulaIds = formulasBank
-    .filter(
-      (formulaObject) =>
-        nexusUtils.getEquivalents(formulaObject.sentenceFormulaId, lang2, env)
-          .length
-    )
-    .map((formulaObject) => {
-      let guideSentence = formulaObject.sentenceStructure
-        .map((chunk) => apiUtils.getAestheticGuideword(chunk, formulaObject))
-        .join(" ");
-      guideSentence =
-        guideSentence[0].toUpperCase() + guideSentence.slice(1) + ".";
+  let formulaIds = formulasBank.map((formulaObject) => {
+    let guideSentence = formulaObject.sentenceStructure
+      .map((chunk) => apiUtils.getAestheticGuideword(chunk, formulaObject))
+      .join(" ");
+    guideSentence =
+      guideSentence[0].toUpperCase() + guideSentence.slice(1) + ".";
 
-      return [
+    return [
+      formulaObject.sentenceFormulaId,
+      guideSentence,
+      formulaObject.sentenceFormulaSymbol,
+      nexusUtils.getLanguagesOfEquivalents(
         formulaObject.sentenceFormulaId,
-        guideSentence,
-        formulaObject.sentenceFormulaSymbol,
-      ];
-    });
+        env
+      ),
+    ];
+  });
 
   let responseObject = {
     formulaIds,
