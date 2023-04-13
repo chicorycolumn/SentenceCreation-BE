@@ -7,15 +7,12 @@ exports.sentenceFormulasBank = [
         chunkId: "npe-1",
         andTags: ["personTest1"],
         number: ["singular"],
-        gender: [],
       },
       { chunkId: "fix-1", chunkValue: "je" },
       {
         chunkId: "nco-2",
         andTags: ["edible"],
         gcase: ["acc"],
-        number: [],
-        gender: [],
       },
     ],
     orders: { primary: [["npe-1", "fix-1", "nco-2"]], additional: [] },
@@ -28,15 +25,12 @@ exports.sentenceFormulasBank = [
         chunkId: "npe-1",
         andTags: ["personTest1"],
         number: ["singular"],
-        gender: [],
       },
       { chunkId: "fix-1", chunkValue: "ma na sobie" },
       {
         chunkId: "nco-2",
         andTags: ["wearable"],
         gcase: ["acc"],
-        number: [],
-        gender: [],
       },
     ],
     orders: { primary: [["npe-1", "fix-1", "nco-2"]], additional: [] },
@@ -50,7 +44,6 @@ exports.sentenceFormulasBank = [
         andTags: ["wearable"],
         number: ["singular"],
         blockedLemmaObjectTypes: ["tantumPlurale"],
-        gender: [],
       },
       { chunkId: "fix-1", chunkValue: "jest w szafie" },
     ],
@@ -66,7 +59,6 @@ exports.sentenceFormulasBank = [
         andTags: ["wearable"],
         gcase: ["acc"],
         number: ["singular", "plural"],
-        gender: [],
       },
     ],
     orders: { primary: [["fix-1", "nco-1"]], additional: [] },
@@ -99,7 +91,6 @@ exports.sentenceFormulasBank = [
         chunkId: "nco-1",
         andTags: ["edible"],
         number: ["singular"],
-        gender: [],
       },
     ],
     orders: { primary: [["adj-1", "nco-1"]], additional: [] },
@@ -118,7 +109,6 @@ exports.sentenceFormulasBank = [
         chunkId: "nco-1",
         andTags: ["edible"],
         number: ["plural"],
-        gender: [],
       },
     ],
     orders: { primary: [["adj-1", "nco-1"]], additional: [] },
@@ -137,7 +127,6 @@ exports.sentenceFormulasBank = [
         chunkId: "nco-1",
         andTags: ["edible"],
         number: ["singular"],
-        gender: [],
       },
     ],
     orders: { primary: [["adj-1", "nco-1"]], additional: [] },
@@ -157,7 +146,6 @@ exports.sentenceFormulasBank = [
         andTags: ["personTest1"],
         specificIds: ["^pol-npe-011-kobieta"],
         number: ["plural"],
-        gender: [],
       },
     ],
     orders: { primary: [["adj-1", "npe-1"]], additional: [] },
@@ -172,7 +160,6 @@ exports.sentenceFormulasBank = [
         andTags: ["edible"],
         gcase: ["acc"],
         number: ["singular"],
-        gender: [],
       },
     ],
     orders: { primary: [["fix-1", "nco-1"]], additional: [] },
@@ -219,7 +206,6 @@ exports.sentenceFormulasBank = [
         chunkId: "npe-1",
         andTags: ["personTest1"],
         number: ["plural"],
-        gender: [],
       },
       {
         chunkId: "ver-1",
@@ -247,7 +233,6 @@ exports.sentenceFormulasBank = [
         agreeWith: "npe-1",
         tenseDescription: ["present im"],
         person: ["3per"],
-        andTags: [],
         specificIds: ["pol-ver-012-mieć"],
       },
       {
@@ -262,7 +247,7 @@ exports.sentenceFormulasBank = [
         gcase: ["acc"],
         number: ["singular"],
       },
-      { chunkId: "ver-2", form: ["infinitive"], andTags: [] },
+      { chunkId: "ver-2", form: ["infinitive"] },
     ],
     orders: {
       primary: [
@@ -284,7 +269,6 @@ exports.sentenceFormulasBank = [
         agreeWith: "npe-1",
         tenseDescription: ["present im"],
         person: ["3per"],
-        andTags: [],
         specificIds: ["pol-ver-012-mieć"],
       },
       {
@@ -314,7 +298,6 @@ exports.sentenceFormulasBank = [
         agreeWith: "npe-1",
         tenseDescription: ["past im"],
         person: ["3per"],
-        andTags: [],
         specificIds: ["pol-ver-012-mieć"],
       },
       {
@@ -350,7 +333,6 @@ exports.sentenceFormulasBank = [
         agreeWith: "npe-1",
         tenseDescription: ["past im"],
         person: ["3per"],
-        andTags: [],
         specificIds: ["pol-ver-012-mieć"],
       },
       {
@@ -430,8 +412,6 @@ exports.sentenceFormulasBank = [
   //       chunkId: "npe-1",
   //       andTags: ["personTest1"],
   //       specificIds: ["pol-npe-011-kobieta"],
-
-  //       number: [],
   //       gender: ["f"],
   //     },
   //     {
@@ -606,7 +586,6 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         andTags: ["basic3"],
-        tenseDescription: [],
         person: ["1per"],
         number: ["singular"],
       },
@@ -649,7 +628,6 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "nco-1",
         specificIds: ["pol-nco-017-drzwi"],
-        number: [],
       },
     ],
     orders: { primary: [["adj-1", "nco-1"]], additional: [] },
@@ -939,7 +917,6 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1-We",
-
         specificIds: ["pol-pro-PERSONAL"],
         person: ["1per"],
       },
@@ -997,7 +974,6 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1-We",
-
         specificIds: ["pol-pro-PERSONAL"],
         person: ["1per"],
       },
@@ -1058,7 +1034,6 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1-We",
-
         specificIds: ["pol-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
@@ -1120,7 +1095,6 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
-
         specificIds: ["pol-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
@@ -1560,7 +1534,6 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-0-I",
-
         specificIds: ["pol-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
@@ -1605,7 +1578,6 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-0-I",
-
         specificIds: ["pol-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
@@ -1649,7 +1621,6 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-0-I",
-
         specificIds: ["pol-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
@@ -1676,7 +1647,6 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-0-I",
-
         specificIds: ["pol-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
@@ -1702,7 +1672,6 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-0-I",
-
         specificIds: ["pol-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
@@ -1735,7 +1704,6 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-0-I",
-
         specificIds: ["pol-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],

@@ -7,15 +7,12 @@ exports.sentenceFormulasBank = [
         chunkId: "npe-1",
         andTags: ["personTest3"],
         number: ["singular"],
-        gender: [],
       },
       { chunkId: "fix-1", chunkValue: "eats" },
       {
         chunkId: "nco-2",
         andTags: ["edible"],
         gcase: ["acc"],
-        number: [],
-        gender: [],
       },
     ],
     orders: { primary: [["npe-1", "fix-1", "nco-2"]], additional: [] },
@@ -30,7 +27,6 @@ exports.sentenceFormulasBank = [
         andTags: ["personTest1"],
         specificIds: ["^eng-npe-001-woman"],
         number: ["singular", "plural"],
-        gender: [],
       },
       {
         chunkId: "ver-1",
@@ -76,7 +72,6 @@ exports.sentenceFormulasBank = [
         andTags: ["personTest1"],
         specificIds: ["^eng-npe-001-woman"],
         number: ["singular", "plural"],
-        gender: [],
       },
       {
         chunkId: "ver-1-reads",
@@ -173,7 +168,6 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         andTags: ["basic3"],
-        tenseDescription: [],
         person: ["1per"],
         number: ["singular"],
       },
@@ -251,7 +245,6 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "nco-1",
         specificIds: ["eng-nco-007-door"],
-        number: [],
       },
     ],
     orders: { primary: [["adj-1", "nco-1"]], additional: [] },
@@ -589,7 +582,6 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1-We",
-
         specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
       },
@@ -645,7 +637,6 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1-We",
-
         specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
       },
@@ -704,7 +695,6 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-1-We",
-
         specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
@@ -763,7 +753,6 @@ exports.sentenceFormulasBank = [
       { chunkId: "fix-1b", chunkValue: "a" },
       {
         chunkId: "pro-1-I",
-
         specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
@@ -1228,7 +1217,6 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-0-I",
-
         specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
@@ -1270,7 +1258,6 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-0-I",
-
         specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
@@ -1311,7 +1298,6 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-0-I",
-
         specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
@@ -1336,7 +1322,6 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-0-I",
-
         specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
@@ -1361,7 +1346,6 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-0-I",
-
         specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
@@ -1392,7 +1376,6 @@ exports.sentenceFormulasBank = [
     sentenceStructure: [
       {
         chunkId: "pro-0-I",
-
         specificIds: ["eng-pro-PERSONAL"],
         person: ["1per"],
         number: ["singular"],
