@@ -210,7 +210,7 @@ exports.getBlankEnhancedStructureChunkForThisWordtype = (
   // Frontendify-3: Optionally load values from existing stCh
   if (existingStCh) {
     Object.keys(stChTraits).forEach((traitKey) => {
-      if (existingStCh[traitKey] && existingStCh[traitKey].length) {
+      if (existingStCh[traitKey] && !uUtils.isEmpty(existingStCh[traitKey])) {
         stChTraits[traitKey].traitValue = existingStCh[traitKey];
       }
     });
