@@ -502,7 +502,7 @@ exports.sentenceFormulasBank = [
   },
   {
     sentenceFormulaSymbol: "101c girl is reading",
-    sentenceFormulaId: "POL-00-101c",
+    sentenceFormulaId: "POL-101c",
     sentenceStructure: [
       {
         chunkId: "npe-1-woman",
