@@ -36,20 +36,6 @@ exports.sentenceFormulasBank = [
     orders: { primary: [["npe-1", "fix-1", "nco-2"]], additional: [] },
   },
   {
-    sentenceFormulaSymbol: "shirt is in wardrobe",
-    sentenceFormulaId: "POL-52",
-    sentenceStructure: [
-      {
-        chunkId: "nco-1",
-        andTags: ["wearable"],
-        number: ["singular"],
-        blockedLemmaObjectTypes: ["tantumPlurale"],
-      },
-      { chunkId: "fix-1", chunkValue: "jest w szafie" },
-    ],
-    orders: { primary: [["nco-1", "fix-1"]], additional: [] },
-  },
-  {
     sentenceFormulaSymbol: "I often wear shirt",
     sentenceFormulaId: "POL-53",
     sentenceStructure: [

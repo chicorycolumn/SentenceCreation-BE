@@ -296,6 +296,7 @@ describe("/api", function () {
           questionLanguage: "POL",
           sentenceFormulaSymbol: "shirt is in wardrobe",
           devSaysOmitStChValidation: true,
+          useDummy: true,
         })
         .expect(200)
         .then((res) => {

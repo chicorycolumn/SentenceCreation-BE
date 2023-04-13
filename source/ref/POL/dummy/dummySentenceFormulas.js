@@ -2576,4 +2576,18 @@ exports.dummySentenceFormulasBank = [
     ],
     orders: { primary: [["nco-1-rat", "ver-1-was", "adj-1-red"]] },
   },
+  {
+    sentenceFormulaSymbol: "shirt is in wardrobe",
+    sentenceFormulaId: "POL-52",
+    sentenceStructure: [
+      {
+        chunkId: "nco-1",
+        andTags: ["wearable"],
+        number: ["singular"],
+        blockedLemmaObjectTypes: ["tantumPlurale"],
+      },
+      { chunkId: "fix-1", chunkValue: "jest w szafie" },
+    ],
+    orders: { primary: [["nco-1", "fix-1"]], additional: [] },
+  },
 ];
