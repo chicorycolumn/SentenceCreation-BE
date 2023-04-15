@@ -337,7 +337,7 @@ exports.addLanguageParticularClarifiers = (
 
     //
     //Type 3 Synhomographs: Add clarifier for 2nd person singular vs plural. (Wasn't caught, as went through Ad-PW).
-    //Doesn't need to be done. Because all verbs will be tied to nouns or pronombres, even when such are invisible.
+    //Doesn't need to be done. Because all verbs will be tied to nouns or pronombres, even when such are ghost.
     //
 
     //
@@ -564,3 +564,5 @@ exports.generateAdhocForms = (
     return resArr;
   }
 };
+
+exports.convertTenseToTenseDescription = () => {};

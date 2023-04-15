@@ -1,6 +1,8 @@
 const { fetchPalette } = require("../models/palette.model");
 
 exports.getPalette = (req, res, next) => {
+  req.body.startTime = Date.now();
+
   fetchPalette(req)
     .then((responseObj) => {
       if (responseObj.questionSentence) {

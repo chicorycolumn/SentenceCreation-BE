@@ -15,6 +15,7 @@ const nexusUtils = require("../../utils/secondOrder/nexusUtils.js");
 
 const allLangUtils = require("../../utils/allLangUtils.js");
 const refFxn = require("../reference/referenceFunctions.js");
+const { fetchPalette } = require("../../models/palette.model.js");
 
 exports.getSentenceFormulas = (questionFormulaId, answerLanguage, env) => {
   if (!env) {
@@ -49,8 +50,11 @@ exports.getSentenceFormulas = (questionFormulaId, answerLanguage, env) => {
     "question"
   );
 
-  let answerSentenceFormulaIds =
-    questionSentenceFormula.equivalents[answerLanguage];
+  let answerSentenceFormulaIds = nexusUtils.getEquivalents(
+    questionSentenceFormula.sentenceFormulaId,
+    answerLanguage,
+    env
+  );
 
   let answerSentenceFormulasBank = scUtils.getWordsAndFormulas(
     answerLanguage,
@@ -70,7 +74,7 @@ exports.getSentenceFormulas = (questionFormulaId, answerLanguage, env) => {
 
   let res = { questionSentenceFormula, answerSentenceFormulas };
 
-  return res;
+  return uUtils.copyWithoutReference(res);
 };
 
 exports.getWordsByCriteria = (currentLanguage, criteriaFromHTTP) => {
@@ -148,80 +152,272 @@ exports.getTagsAndTopics = (currentLanguage) => {
   return { allTags, allTopics };
 };
 
-exports.getBlankEnhancedStructureChunkForThisWordtype = (lang, wordtype) => {
-  // console.log("hmwo", { lang, wordtype });
-
+exports.getBlankEnhancedStructureChunkForThisWordtype = (
+  lang,
+  wordtype,
+  existingStCh
+) => {
   ivUtils.validateLang(lang, 11);
 
   let stChTraits = refFxn.getStructureChunkTraits(lang);
+  let unwantedTraitKeys = [];
+
   Object.keys(stChTraits).forEach((traitKey) => {
-    // If this traitKey is entirely invalid for this wordtype, remove it. eg tenseDescription for adjectives.
     if (
-      stChTraits[traitKey].compatibleWordtypes &&
-      !stChTraits[traitKey].compatibleWordtypes.includes(wordtype)
+      (stChTraits[traitKey].compatibleWordtypes &&
+        !stChTraits[traitKey].compatibleWordtypes.includes(wordtype)) ||
+      apiUtils.backendOnlyTraits.includes(traitKey)
     ) {
-      delete stChTraits[traitKey];
+      unwantedTraitKeys.push(traitKey);
+      return;
     }
     // Add acceptable values for this traitKey per this wordtype. eg form has acceptable value "determiner" for article, but not for adjective.
-    else {
-      if (stChTraits[traitKey].possibleTraitValuesPerWordtype) {
-        if (
-          Object.keys(
-            stChTraits[traitKey].possibleTraitValuesPerWordtype
-          ).includes(wordtype)
-        ) {
-          stChTraits[traitKey].possibleTraitValues =
-            stChTraits[traitKey].possibleTraitValuesPerWordtype[wordtype];
-        } else {
-          console.log(
-            "clhb",
-            Object.keys(stChTraits[traitKey].possibleTraitValuesPerWordtype),
-            "does not include",
-            wordtype
-          );
-        }
-      }
-      if (stChTraits[traitKey].possibleTraitValues) {
-        stChTraits[traitKey].possibleTraitValues = Array.from(
-          new Set(stChTraits[traitKey].possibleTraitValues)
+    if (stChTraits[traitKey].possibleTraitValuesPerWordtype) {
+      if (
+        Object.keys(
+          stChTraits[traitKey].possibleTraitValuesPerWordtype
+        ).includes(wordtype)
+      ) {
+        stChTraits[traitKey].possibleTraitValues =
+          stChTraits[traitKey].possibleTraitValuesPerWordtype[wordtype];
+      } else {
+        console.log(
+          "clhb",
+          Object.keys(stChTraits[traitKey].possibleTraitValuesPerWordtype),
+          "does not include",
+          wordtype
         );
       }
     }
-  });
-  return stChTraits;
-};
-
-exports.getEnChForStCh = (lang, stCh) => {
-  ivUtils.validateLang(lang, 16);
-  let wordtype = gpUtils.getWordtypeStCh(stCh);
-
-  let enCh = apiUtils.getBlankEnhancedStructureChunkForThisWordtype(
-    lang,
-    wordtype
-  );
-
-  Object.keys(enCh).forEach((traitKey) => {
-    if (stCh[traitKey] && stCh[traitKey].length) {
-      enCh[traitKey].traitValue = stCh[traitKey];
+    if (stChTraits[traitKey].possibleTraitValues) {
+      stChTraits[traitKey].possibleTraitValues = Array.from(
+        new Set(stChTraits[traitKey].possibleTraitValues)
+      );
     }
   });
 
-  return enCh;
+  unwantedTraitKeys.forEach((unwantedTraitKey) => {
+    delete stChTraits[unwantedTraitKey];
+  });
+
+  Object.keys(stChTraits).forEach((traitKey) => {
+    let traitObject = stChTraits[traitKey];
+    if (traitObject.expectedTypeOnStCh === "array" && !traitObject.traitValue) {
+      traitObject.traitValue = [];
+    }
+  });
+
+  // Frontendify-3: Optionally load values from existing stCh
+  if (existingStCh) {
+    Object.keys(stChTraits).forEach((traitKey) => {
+      if (existingStCh[traitKey] && !uUtils.isEmpty(existingStCh[traitKey])) {
+        stChTraits[traitKey].traitValue = existingStCh[traitKey];
+      }
+    });
+  }
+
+  // Frontendify-2b: Gather booleans
+  apiUtils.gatherBooleanTraitsForFE(stChTraits);
+
+  // Frontendify-4: Add _info
+  stChTraits._info = {};
+  if (wordtype !== "fix") {
+    [
+      "inheritableInflectionKeys",
+      "allowableTransfersFromQuestionStructure",
+    ].forEach((datumKey) => {
+      let datum = refObj.lemmaObjectTraitKeys[lang][datumKey][wordtype];
+      if (!datum) {
+        consol.throw(
+          `stmo Error fetching auxiliary info "${datumKey}" for wordtype "${wordtype}" enCh "${stChTraits.chunkId.traitValue}".`
+        );
+      }
+      stChTraits._info[datumKey] = datum;
+    });
+  }
+
+  return stChTraits;
 };
 
-exports.getEnChsForLemma = (lang, lemma) => {
+exports.getFormulaItem = (lang, wordtype, stCh) => {
+  ivUtils.validateLang(lang, 16);
+
+  let enCh = apiUtils.getBlankEnhancedStructureChunkForThisWordtype(
+    lang,
+    wordtype,
+    stCh
+  );
+
+  if (enCh.specificIds && enCh.specificIds.traitValue.length) {
+    enCh.lObjId = enCh.specificIds.traitValue[0];
+  }
+
+  return {
+    structureChunk: enCh,
+    formulaItemId: uUtils.getRandomNumberString(10),
+    guideword: apiUtils.getAestheticGuideword(enCh),
+  };
+};
+
+exports.backendOnlyTraits = [
+  "allohomInfo",
+  "hiddenTraits",
+  "PHD_type",
+  "hypernymy",
+  "semanticGender",
+  "virilityDetail",
+  "originalSitSelectedLObj",
+];
+
+exports.frontendifyOrders = (orders) => {
+  let newOrders = [];
+
+  if (orders.primary) {
+    newOrders.push(
+      ...orders.primary.map((order) => {
+        return { order, isPrimary: true };
+      })
+    );
+  }
+
+  if (orders.additional) {
+    newOrders.push(
+      ...orders.additional.map((order) => {
+        return { order };
+      })
+    );
+  }
+
+  return newOrders;
+};
+
+exports.frontendifyFormula = (lang, formula) => {
+  // Frontendify-5: Fetch lObjId and guideword.
+  let guideWordsToAdd = [];
+  formula.sentenceStructure.forEach((stCh) => {
+    let guideword = stCh.chunkId.split("-").slice(-1)[0];
+
+    if (!guideword || /^\d+$/.test(guideword)) {
+      guideword = apiUtils.getAestheticGuideword(stCh);
+    }
+
+    if (
+      !guideword ||
+      /^\d+$/.test(guideword) ||
+      !(stCh.specificIds && stCh.specificIds.length)
+    ) {
+      let data = apiUtils.prepareGetSentencesAsQuestionOnly(
+        lang,
+        { sentenceStructure: [stCh] },
+        true
+      );
+
+      data.body.returnDirectly = true;
+      data.body.startTime = Date.now();
+
+      let fetchedSentence = fetchPalette(data);
+
+      let newGuideword = fetchedSentence.questionSentenceArr.length
+        ? fetchedSentence.questionSentenceArr[0].selectedWord
+        : null;
+
+      let newLObjId = fetchedSentence.questionSentenceArr.length
+        ? fetchedSentence.questionSentenceArr[0].lObjId
+        : null;
+
+      if (gpUtils.isTerminusObject(newGuideword)) {
+        let allWords = gpUtils.getWordsFromTerminusObject(newGuideword);
+        newGuideword = allWords[0];
+      }
+
+      let guideWordToAdd = {
+        chunkId: stCh.chunkId,
+        newLObjId,
+      };
+
+      if (!guideword || /^\d+$/.test(guideword)) {
+        guideWordToAdd.newGuideword = newGuideword;
+      }
+
+      guideWordsToAdd.push(guideWordToAdd);
+    }
+  });
+
+  // Frontendify-1: Orders
+  formula.orders = exports.frontendifyOrders(formula.orders);
+
+  formula.sentenceStructure = formula.sentenceStructure.map((stCh) => {
+    // Frontendify-2a: stCh to enCh
+    let fItem = apiUtils.getFormulaItem(
+      lang,
+      gpUtils.getWordtypeStCh(stCh),
+      stCh
+    );
+
+    // Frontendify-2c: Add isGhostChunk key
+    if (
+      !formula.orders.some((orderObj) =>
+        orderObj.order.includes(fItem.structureChunk.chunkId.traitValue)
+      )
+    ) {
+      fItem.structureChunk.isGhostChunk = true;
+    }
+
+    guideWordsToAdd.forEach((guideWordToAdd) => {
+      if (guideWordToAdd.chunkId === fItem.structureChunk.chunkId.traitValue) {
+        if (guideWordToAdd.newGuideword) {
+          fItem.guideword = guideWordToAdd.newGuideword;
+        }
+        if (guideWordToAdd.newLObjId) {
+          fItem.structureChunk.lObjId = guideWordToAdd.newLObjId;
+        }
+      }
+    });
+
+    return fItem;
+  });
+};
+
+exports.gatherBooleanTraitsForFE = (stCh) => {
+  let booleanTraits = {
+    expectedTypeOnStCh: "array",
+    possibleTraitValues: [],
+    traitValue: [],
+  };
+
+  Object.keys(stCh).forEach((traitKey) => {
+    if (
+      typeof stCh[traitKey] === "object" &&
+      stCh[traitKey].expectedTypeOnStCh === "boolean"
+    ) {
+      booleanTraits.possibleTraitValues.push(traitKey);
+      if (stCh[traitKey].traitValue) {
+        booleanTraits.traitValue.push(traitKey);
+      }
+      delete stCh[traitKey];
+    }
+  });
+
+  stCh.booleanTraits = booleanTraits;
+};
+
+exports.getEnChsForLemma = (lang, lemma, env = "ref") => {
   ivUtils.validateLang(lang, 12);
 
-  let lObjs = apiUtils.getLObjsForLemma(lang, lemma);
+  const langUtils = require(`../../source/all/${lang}/langUtils.js`);
 
-  return lObjs.map((lObj) => {
+  let lObjs = apiUtils.getLObjsForLemma(lang, lemma, env);
+
+  let enChs = lObjs.map((lObj) => {
     let wordtype = gpUtils.getWordtypeLObj(lObj);
 
     let enCh = apiUtils.getBlankEnhancedStructureChunkForThisWordtype(
       lang,
       wordtype
     );
+
     let routes = otUtils.giveRoutesAndTerminalValuesFromObject(lObj, true);
+
     routes.forEach((routeObj) => {
       if (routeObj.terminalValue === lemma) {
         Object.keys(routeObj.describedRoute).forEach((traitKey) => {
@@ -242,7 +438,8 @@ exports.getEnChsForLemma = (lang, lemma) => {
             !enCh[traitKey].possibleTraitValues.includes(traitValue)
           ) {
             consol.log(
-              `pomi Error: traitValue ${traitValue} not compatible with ${traitKey} even though that's what I gleaned using giveRoutesAndTerminalValuesFromObject.`
+              routeObj,
+              `pmio Error: For lObj "${lObj.id}" I fetched RoutesAndTerminalValuesFromObject. From routeObj printed above I found that traitValue "${traitValue}" not compatible with "${traitKey}" even though that's what I gleaned using giveRoutesAndTerminalValuesFromObject.`
             );
             return;
           }
@@ -260,15 +457,10 @@ exports.getEnChsForLemma = (lang, lemma) => {
       enCh.gender.traitValue = Array.from(new Set(enCh.gender.traitValue));
     }
 
-    Object.keys(enCh).forEach((traitKey) => {
-      let traitObject = enCh[traitKey];
-      if (
-        traitObject.expectedTypeOnStCh === "array" &&
-        !traitObject.traitValue
-      ) {
-        traitObject.traitValue = [];
-      }
-    });
+    if (gpUtils.getWordtypeLObj(lObj) === "ver") {
+      // Gather tense and aspect into tenseDesc (POL).
+      langUtils.convertTenseToTenseDescription(lang, enCh, lObj);
+    }
 
     let theTags = nexusUtils.getPapers(lObj);
     if (!theTags) {
@@ -277,33 +469,41 @@ exports.getEnChsForLemma = (lang, lemma) => {
     }
     enCh.andTags.traitValue = theTags;
 
-    if (lObj.allohomInfo) {
-      enCh.allohomInfo = lObj.allohomInfo;
+    enCh.lObjId = lObj.id;
+
+    enCh._info.allohomInfo = lObj.allohomInfo;
+
+    if (wordtype === "pro") {
+      enCh.specificIds.traitValue = [lObj.id]; // Pronombres must have specificId set, otherwise is too unrestricted when querying formula.
     }
 
-    enCh.wordtype = gpUtils.getWordtypeLObj(lObj);
-    enCh.id = lObj.id;
-    enCh.lemma = lObj.lemma;
+    // Frontendify 7. Special adjustments.
 
-    enCh._info = {};
+    if (lang === "ENG") {
+      if (wordtype === "ver") {
+        if (enCh.form && enCh.form.traitValue.includes("thirdPS")) {
+          enCh.form.traitValue = enCh.form.traitValue.map((x) =>
+            x === "thirdPS" ? "verbal" : x
+          );
+          enCh.form.traitValue = Array.from(new Set(enCh.form.traitValue));
 
-    [
-      "inheritableInflectionKeys",
-      "allowableTransfersFromQuestionStructure",
-    ].forEach((infoKey) => {
-      let info = refObj.lemmaObjectTraitKeys[lang][infoKey][enCh.wordtype];
-      if (!info) {
-        //devlogging
-        consol.throw("stmo Error fetching auxiliary info for enCh via API.");
+          if (
+            enCh.tenseDescription &&
+            !enCh.tenseDescription.traitValue.length
+          ) {
+            enCh.tenseDescription.traitValue = ["present"];
+          }
+        }
       }
-      enCh._info[infoKey] = info;
-    });
+    }
 
     return enCh;
   });
+
+  return enChs;
 };
 
-exports.getLObjsForLemma = (lang, lemma) => {
+exports.getLObjsForLemma = (lang, lemma, env = "ref") => {
   ivUtils.validateLang(lang, 13);
 
   matches = [];
@@ -320,4 +520,70 @@ exports.getLObjsForLemma = (lang, lemma) => {
     });
   });
   return matches;
+};
+
+exports.getAestheticGuideword = (chunk, formulaObject) => {
+  if (chunk.guideword && chunk.guideword.traitValue) {
+    let res = chunk.guideword.traitValue;
+    delete chunk.guideword;
+    return res;
+  }
+
+  let guideword =
+    typeof chunk.chunkId === "string"
+      ? chunk.chunkId.split("-").slice(-1)[0]
+      : chunk.chunkId.traitValue.split("-").slice(-1)[0];
+
+  if (/^\d+$/.test(guideword) && gpUtils.getWordtypeStCh(chunk) === "fix") {
+    guideword =
+      typeof chunk.chunkValue === "string"
+        ? chunk.chunkValue
+        : chunk.chunkValue.traitValue;
+  }
+
+  let isGhostChunk; // If chunk is ghost then aesthetically modify guideword, just for display in formulaId selector on FE.
+
+  if (formulaObject) {
+    let orders = [];
+    if (formulaObject.orders.primary) {
+      orders.push(...formulaObject.orders.primary);
+    }
+    if (formulaObject.orders.additional) {
+      orders.push(...formulaObject.orders.additional);
+    }
+    if (orders.length) {
+      isGhostChunk = !orders.some((order) => order.includes(chunk.chunkId));
+    }
+  }
+
+  return isGhostChunk ? `[${guideword}]` : guideword;
+};
+
+exports.prepareGetSentencesAsQuestionOnly = (
+  questionLanguage,
+  sentenceFormula,
+  requestingSingleWordOnly
+) => {
+  let numberString = Date.now();
+
+  sentenceFormula = uUtils.copyWithoutReference(sentenceFormula);
+
+  sentenceFormula.sentenceFormulaSymbol = numberString;
+  sentenceFormula.sentenceFormulaId = `${questionLanguage}-${numberString}`;
+  sentenceFormula.equivalents = {};
+
+  if (requestingSingleWordOnly) {
+    sentenceFormula.sentenceStructure.forEach((stCh) =>
+      refObj.agreementTraits.forEach((agreeKey) => delete stCh[agreeKey])
+    );
+  }
+
+  return {
+    body: {
+      sentenceFormulaFromEducator: sentenceFormula,
+      questionLanguage,
+      forceMultipleModeAndQuestionOnly: true,
+      requestingSingleWordOnly,
+    },
+  };
 };

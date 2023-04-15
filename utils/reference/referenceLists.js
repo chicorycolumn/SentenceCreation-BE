@@ -408,6 +408,8 @@ exports._tenseDescriptions = {
     "future im",
     "past pf",
     "future pf",
+    "imperative im",
+    "imperative pf",
     // "imperative",
     // "negative imperative",
     // "conditional im",
@@ -959,4 +961,19 @@ exports.acceptedLanguages = {
   ENG: "English",
   POL: "Polish",
   SPA: "Spanish",
+};
+
+exports.aspectReference = (str) => {
+  const ref = { im: "imperfective", pf: "perfective" };
+  if (ref[str]) {
+    return ref[str];
+  }
+  let res;
+  Object.keys(ref).forEach((k) => {
+    let v = ref[k];
+    if (v === str) {
+      res = k;
+    }
+  });
+  return res;
 };

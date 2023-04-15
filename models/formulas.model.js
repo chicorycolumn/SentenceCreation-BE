@@ -10,6 +10,7 @@ const frUtils = require("../utils/formattingResponseUtils.js");
 const refObj = require("../utils/reference/referenceObjects.js");
 const apiUtils = require("../utils/secondOrder/apiUtils.js");
 const allLangUtils = require("../utils/allLangUtils.js");
+const nexusUtils = require("../utils/secondOrder/nexusUtils.js");
 
 exports.fetchFormulas = (req) => {
   let { id, env } = req.query;
@@ -19,7 +20,7 @@ exports.fetchFormulas = (req) => {
   ivUtils.validateLang(questionLang, 17);
   ivUtils.validateLang(answerLang, 18);
 
-  console.log("tnae", { id, answerLang, env });
+  console.log("tnae fetchFormulas invoked with:", { id, answerLang, env });
 
   if (!env) {
     env = "ref";
@@ -28,21 +29,59 @@ exports.fetchFormulas = (req) => {
   let { questionSentenceFormula, answerSentenceFormulas } =
     apiUtils.getSentenceFormulas(id, answerLang, env);
 
-  questionSentenceFormula.sentenceStructure =
-    questionSentenceFormula.sentenceStructure.map((stCh) =>
-      apiUtils.getEnChForStCh(questionLang, stCh)
-    );
+  apiUtils.frontendifyFormula(questionLang, questionSentenceFormula, env);
 
   answerSentenceFormulas.forEach((answerSentenceFormula) => {
-    answerSentenceFormula.sentenceStructure =
-      answerSentenceFormula.sentenceStructure.map((stCh) =>
-        apiUtils.getEnChForStCh(answerLang, stCh)
-      );
+    apiUtils.frontendifyFormula(answerLang, answerSentenceFormula, env);
   });
 
   let responseObject = {
     questionSentenceFormula,
     answerSentenceFormulas,
+  };
+
+  return Promise.all([responseObject]).then((array) => {
+    return array[0];
+  });
+};
+
+exports.fetchFormulaIds = (req) => {
+  let { lang1, lang2, env } = req.query;
+
+  ivUtils.validateLang(lang1, 19);
+  ivUtils.validateLang(lang2, 20);
+
+  if (!env) {
+    env = "ref";
+  }
+
+  let formulasBank = scUtils.getWordsAndFormulas(
+    lang1,
+    env,
+    false,
+    true
+  ).sentenceFormulasBank;
+
+  let formulaIds = formulasBank.map((formulaObject) => {
+    let guideSentence = formulaObject.sentenceStructure
+      .map((chunk) => apiUtils.getAestheticGuideword(chunk, formulaObject))
+      .join(" ");
+    guideSentence =
+      guideSentence[0].toUpperCase() + guideSentence.slice(1) + ".";
+
+    return [
+      formulaObject.sentenceFormulaId,
+      guideSentence,
+      formulaObject.sentenceFormulaSymbol,
+      nexusUtils.getLanguagesOfEquivalents(
+        formulaObject.sentenceFormulaId,
+        env
+      ),
+    ];
+  });
+
+  let responseObject = {
+    formulaIds,
   };
 
   return Promise.all([responseObject]).then((array) => {

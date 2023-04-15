@@ -131,3 +131,5 @@ exports.adjustTenseDescriptionsBeforeTranslating = () => {};
 exports.adjustStructureChunksInIfPW = (structureChunk) => {};
 
 exports.adjustTenseDescriptions = () => {};
+
+exports.convertTenseToTenseDescription = () => {};

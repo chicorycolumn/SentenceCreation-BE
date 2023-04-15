@@ -731,6 +731,13 @@ exports.processSentenceFormula = (
   //If multipleMode then grandOutputArray is array of all possible arrays of outputUnit combinations,
   //else array of just one said possible array.
 
+  // If a too unlimited formula is passed in (eg no andTags) grandOutputArray.length
+  // can be in the thousands, causing logic below to run for too long.
+  let grandOutputArrayLimit = 100;
+  if (grandOutputArray.length > grandOutputArrayLimit) {
+    grandOutputArray = grandOutputArray.slice(0, grandOutputArrayLimit);
+  }
+
   grandOutputArray.forEach((outputArray, outputArrayIndex) => {
     outputArray.forEach((outputUnit) => {
       if (gpUtils.getWordtypeStCh(outputUnit.structureChunk) === "fix") {
@@ -794,6 +801,7 @@ exports.processSentenceFormula = (
 };
 
 exports.giveFinalSentences = (
+  startTime,
   sentenceData,
   multipleMode,
   languagesObj,
@@ -856,6 +864,7 @@ exports.giveFinalSentences = (
   if (!multipleMode) {
     if (isQuestion) {
       aaUtils.firstStageEvaluateAnnotations(
+        startTime,
         questionOutputArr,
         languagesObj,
         answerSentenceData,
@@ -1342,8 +1351,9 @@ exports.selectWordVersions = (
         return;
       }
     } else {
+      console.log(">>", outputUnit);
       consol.throw(
-        `#ERR oilf selectWordVersions. I expected either a string or a terminus object for this selectedWord but instead it is ${typeof selectedWord}.`
+        `#ERR oilf selectWordVersions. I expected either a string or a terminus object for this selectedWord but instead it is ${typeof selectedWord}. It came from >> outputUnit printed above.`
       );
     }
 
@@ -1933,6 +1943,16 @@ exports.sortStructureChunks = (
   headChunks = uniqueCombinedHeadIds.map((headId) => {
     return sentenceStructure.find((chunk) => chunk.chunkId === headId);
   });
+
+  if (headChunks.some((chunk) => !chunk)) {
+    consol.throw(
+      `dmau No headChunks found for some chunkId(s) from [${uniqueCombinedHeadIds.join(
+        ","
+      )}] where sentenceStructure contained [${sentenceStructure
+        .map((ch) => ch.chunkId)
+        .join(",")}]`
+    );
+  }
 
   let dependentChunks = sentenceStructure.filter(
     (structureChunk) =>

@@ -2,6 +2,7 @@ const gpUtils = require("../utils/generalPurposeUtils.js");
 const uUtils = require("../utils/universalUtils.js");
 const consol = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const edUtils = require("../utils/secondOrder/educatorUtils.js");
+const efUtils = require("../utils/secondOrder/efficiencyUtils.js");
 const scUtils = require("../utils/sentenceCreatingUtils.js");
 const aaUtils = require("../utils/auxiliaryAttributeUtils.js");
 const ivUtils = require("../utils/secondOrder/inputValidationUtils.js");
@@ -30,10 +31,46 @@ exports.fetchPalette = (req) => {
     forceMultipleModeAndQuestionOnly,
     sentenceFormulaFromEducator,
     requestingSingleWordOnly,
+    returnDirectly,
+    startTime,
+    timeLimit,
     env = "ref",
   } = req.body;
 
+  if (!startTime) {
+    throw "arkd You must set a startTime with Date.now() from outside fetchPalette before calling fetchPalette.";
+  }
+  let timeOutCheck;
+  if (!timeLimit) {
+    timeLimit = 5000;
+  }
+  const checkTimeout = efUtils.curryCheckTimeout(
+    startTime,
+    timeLimit,
+    (label) => {
+      return frUtils.returnNullQuestionResponseObj(
+        startTime,
+        returnDirectly,
+        {
+          errorInSentenceCreation: {
+            errorMessage: `Processing on BE took on too long, exceeded ${
+              timeLimit / 1000
+            } seconds, so was aborted. Label "${label}".`,
+          },
+        },
+        multipleMode,
+        questionLanguage,
+        answerLanguage
+      );
+    }
+  );
+
   let multipleMode = !!forceMultipleModeAndQuestionOnly;
+
+  timeOutCheck = checkTimeout("fp1");
+  if (timeOutCheck) {
+    return timeOutCheck;
+  }
 
   let { sentenceFormula, words } = scUtils.getMaterialsCopies(
     env,
@@ -88,6 +125,11 @@ exports.fetchPalette = (req) => {
     !!allCounterfactualResults
   );
 
+  timeOutCheck = checkTimeout("fp2");
+  if (timeOutCheck) {
+    return timeOutCheck;
+  }
+
   consol.log("smdv questionSentenceData", questionSentenceData);
 
   if (
@@ -105,6 +147,8 @@ exports.fetchPalette = (req) => {
       return;
     } else {
       return frUtils.returnNullQuestionResponseObj(
+        startTime,
+        returnDirectly,
         questionSentenceData,
         multipleMode,
         questionLanguage,
@@ -115,7 +159,10 @@ exports.fetchPalette = (req) => {
 
   if (forceMultipleModeAndQuestionOnly) {
     if (requestingSingleWordOnly) {
-      return frUtils.sendResponseForSingleWord(questionSentenceData);
+      return frUtils.sendResponseForSingleWord(
+        returnDirectly,
+        questionSentenceData
+      );
     } else {
       let arr = questionSentenceData.arrayOfOutputArrays.map((outputArray) => {
         let sentence = scUtils.buildSentenceString(
@@ -133,7 +180,7 @@ exports.fetchPalette = (req) => {
         new Set(uUtils.flatten(arr))
       );
 
-      return frUtils.finishAndSend({
+      return frUtils.finishAndSend(returnDirectly, {
         finalSentenceArr: deduplicatedArrForEducatorInterface,
       });
     }
@@ -253,11 +300,21 @@ exports.fetchPalette = (req) => {
       ])
     );
 
+    timeOutCheck = checkTimeout("fp3");
+    if (timeOutCheck) {
+      return timeOutCheck;
+    }
+
     ///////////////////////////////////////////////kp Clarifiers
     aaUtils.addClarifiers(questionSentenceData.questionOutputArr, {
       answerLanguage,
       questionLanguage,
     });
+
+    timeOutCheck = checkTimeout("fp4");
+    if (timeOutCheck) {
+      return timeOutCheck;
+    }
 
     consol.log(
       "[1;36m " +
@@ -365,6 +422,11 @@ exports.fetchPalette = (req) => {
         answerSentenceFormula.sentenceStructure
       );
 
+      timeOutCheck = checkTimeout("fp5");
+      if (timeOutCheck) {
+        return timeOutCheck;
+      }
+
       answerSentenceData = scUtils.processSentenceFormula(
         useDummyWords,
         {
@@ -377,6 +439,11 @@ exports.fetchPalette = (req) => {
         !!allCounterfactualResults,
         questionSentenceData.questionOutputArr
       );
+
+      timeOutCheck = checkTimeout("fp6");
+      if (timeOutCheck) {
+        return timeOutCheck;
+      }
 
       if ("check") {
         if (
@@ -411,6 +478,7 @@ exports.fetchPalette = (req) => {
 
       if (!answerResponseObj) {
         answerResponseObj = scUtils.giveFinalSentences(
+          startTime,
           answerSentenceData,
           multipleMode,
           { questionLanguage, answerLanguage },
@@ -418,6 +486,7 @@ exports.fetchPalette = (req) => {
         );
       } else {
         let subsequentAnswerResponseObj = scUtils.giveFinalSentences(
+          startTime,
           answerSentenceData,
           multipleMode,
           { questionLanguage, answerLanguage },
@@ -468,6 +537,7 @@ exports.fetchPalette = (req) => {
   //giveFinalSentences in question mode, will evaluate annotations, involving counterfaxing,
   //ie a nested set of calls to this fetchPalette fxn.
   questionResponseObj = scUtils.giveFinalSentences(
+    startTime,
     questionSentenceData,
     false,
     { questionLanguage, answerLanguage },
@@ -483,6 +553,7 @@ exports.fetchPalette = (req) => {
   if (answerSelectedWordsSetsHaveChanged.bool) {
     if (!answerResponseObj) {
       answerResponseObj = scUtils.giveFinalSentences(
+        startTime,
         answerSentenceData,
         true,
         { questionLanguage, answerLanguage },
@@ -490,6 +561,7 @@ exports.fetchPalette = (req) => {
       );
     } else {
       let subsequentAnswerResponseObj = scUtils.giveFinalSentences(
+        startTime,
         answerSentenceData,
         true,
         { questionLanguage, answerLanguage },
@@ -505,6 +577,7 @@ exports.fetchPalette = (req) => {
   }
 
   return frUtils.finishAndSend(
+    returnDirectly,
     questionResponseObj,
     answerResponseObj,
     runsRecord

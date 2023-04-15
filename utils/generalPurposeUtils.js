@@ -380,7 +380,9 @@ exports.getWordtypeLObj = (lObj) => {
 };
 
 exports.getWordtypeStCh = (stCh) => {
-  return stCh.chunkId.split("-")[0];
+  return typeof stCh.chunkId === "string"
+    ? stCh.chunkId.split("-")[0]
+    : stCh.chunkId.traitValue.split("-")[0];
 };
 
 exports.getWordtypeAgree = (structureChunk, agreeKey = "agreeWith") => {
@@ -437,16 +439,18 @@ exports.terminusObjectNormalArray = (normalArr) => {
   return { isTerminus: true, normal: normalArr };
 };
 
-exports.getWordsFromTerminusObject = (tObj, shouldGetAll) => {
+exports.getWordsFromTerminusObject = (terminusObj, shouldGetAll) => {
   let allWords = [];
 
-  let pushKeys = shouldGetAll
-    ? ["normal", "additionalFrequent", "additionalInfrequent"]
-    : ["normal", "additionalFrequent"];
+  let terminusKeys = ["normal", "additionalFrequent", "unstressed", "stressed"];
 
-  pushKeys.forEach((pushKey) => {
-    if (tObj[pushKey]) {
-      allWords = [...allWords, ...tObj[pushKey]];
+  if (shouldGetAll) {
+    terminusKeys.push("additionalInfrequent");
+  }
+
+  terminusKeys.forEach((terminusKey) => {
+    if (terminusObj[terminusKey]) {
+      allWords = [...allWords, ...terminusObj[terminusKey]];
     }
   });
 
@@ -490,4 +494,11 @@ exports.checkNoDuplicateChunks = (
     }
     consol.throw(`${label} Contains duplicates: [${ids.join(", ")}]`);
   }
+};
+
+exports.enChTraitIsEmpty = (enChTraitObject) => {
+  return (
+    uUtils.isEmpty(enChTraitObject) ||
+    uUtils.isEmpty(enChTraitObject.traitValue)
+  );
 };

@@ -15,6 +15,7 @@ const {
 } = require("./reference/referenceLists.js");
 
 exports.firstStageEvaluateAnnotations = (
+  startTime,
   questionOutputArr,
   languagesObj,
   answerSentenceData,
@@ -100,6 +101,7 @@ exports.firstStageEvaluateAnnotations = (
       cfUtils.explodeCounterfaxSituations(counterfaxSituations);
 
     cfUtils.removeAnnotationsByCounterfactualAnswerSentences(
+      startTime,
       explodedCounterfaxSituationsSchematics,
       questionOutputArr,
       annotationsToCounterfaxAndTheirChunkIds,
