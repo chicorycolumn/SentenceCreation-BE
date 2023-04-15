@@ -36,11 +36,6 @@ describe("/educator/formulas.", () => {
         f.sentenceStructure.map((fItem) => fItem.guideword)
       );
 
-      let oldRes = {
-        questionSentenceFormula: ["1", "1", "szybko"],
-        answerSentenceFormulas: [["the", "1", "1", "quickly"]],
-      };
-
       let desiredRes = {
         questionSentenceFormula: ["kobieta", "czyta", "szybko"],
         answerSentenceFormulas: [["the", "woman", "reads", "quickly"]],

@@ -474,7 +474,7 @@ exports.getEnChsForLemma = (lang, lemma, env = "ref") => {
     enCh._info.allohomInfo = lObj.allohomInfo;
 
     if (wordtype === "pro") {
-      enCh.specificIds.traitValue = [lObj.id];
+      enCh.specificIds.traitValue = [lObj.id]; // Pronombres must have specificId set, otherwise is too unrestricted when querying formula.
     }
 
     // Frontendify 7. Special adjustments.

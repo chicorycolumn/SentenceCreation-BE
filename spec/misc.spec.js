@@ -10,7 +10,7 @@ xdescribe("Check FE does not mutate BE sentenceFormulas: ENG ref.", () => {
   let BEs =
     require(`../source/${env}/${lang}/sentenceFormulas.js`).sentenceFormulasBank;
 
-  let beenThroughFEs = [];
+  let beenThroughFEs = []; // Copypaste these yourself from Save Formula button in FE printing to console.
 
   beenThroughFEs.forEach((beenThroughFE, index) => {
     let BE = BEs.find(
@@ -37,7 +37,7 @@ xdescribe("Check FE does not mutate BE sentenceFormulas: POL ref.", () => {
   let BEs =
     require(`../source/${env}/${lang}/sentenceFormulas.js`).sentenceFormulasBank;
 
-  let beenThroughFEs = [];
+  let beenThroughFEs = []; // Copypaste these yourself from Save Formula button in FE printing to console.
 
   beenThroughFEs.forEach((beenThroughFE, index) => {
     let BE = BEs.find(

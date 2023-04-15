@@ -439,18 +439,18 @@ exports.terminusObjectNormalArray = (normalArr) => {
   return { isTerminus: true, normal: normalArr };
 };
 
-exports.getWordsFromTerminusObject = (tObj, shouldGetAll) => {
+exports.getWordsFromTerminusObject = (terminusObj, shouldGetAll) => {
   let allWords = [];
 
-  let pushKeys = ["normal", "additionalFrequent", "unstressed", "stressed"];
+  let terminusKeys = ["normal", "additionalFrequent", "unstressed", "stressed"];
 
   if (shouldGetAll) {
-    pushKeys.push("additionalInfrequent");
+    terminusKeys.push("additionalInfrequent");
   }
 
-  pushKeys.forEach((pushKey) => {
-    if (tObj[pushKey]) {
-      allWords = [...allWords, ...tObj[pushKey]];
+  terminusKeys.forEach((terminusKey) => {
+    if (terminusObj[terminusKey]) {
+      allWords = [...allWords, ...terminusObj[terminusKey]];
     }
   });
 
