@@ -3,13 +3,6 @@ const gpUtils = require("../utils/generalPurposeUtils.js");
 const uUtils = require("../utils/universalUtils.js");
 const cfUtils = require("../utils/counterfaxUtils.js");
 
-const {
-  copyWithoutReference,
-  arrayExploder,
-  checkEachSequentialPairing,
-  areTwoObjectsEqual,
-} = require("../utils/universalUtils.js");
-
 xdescribe("listCounterfaxSituations", () => {
   it("Two annotations on one, and one on the other.", () => {
     let questionOutputArray = [
