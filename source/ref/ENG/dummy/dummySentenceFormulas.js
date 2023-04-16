@@ -891,9 +891,9 @@ exports.dummySentenceFormulasBank = [
     orders: { primary: [["pro-1", "ver-1"]], additional: [] },
   },
   {
-    sentenceFormulaSymbol: "dummy53c-2 you are (pres)",
-    sentenceFormulaId: "ENG-dummy53c-2",
-    equivalents: { POL: ["POL-dummy53c-2"] },
+    sentenceFormulaSymbol: "dummy53ca you are (pres)",
+    sentenceFormulaId: "ENG-dummy53ca",
+    equivalents: { POL: ["POL-dummy53ca"] },
     sentenceStructure: [
       {
         chunkId: "pro-1",

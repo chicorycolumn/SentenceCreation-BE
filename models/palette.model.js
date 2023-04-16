@@ -16,7 +16,6 @@ const nexusUtils = require("../utils/secondOrder/nexusUtils.js");
 exports.fetchPalette = (req) => {
   let {
     sentenceFormulaId,
-    sentenceFormulaSymbol,
     useDummy,
     useDummyWords,
     questionLanguage,
@@ -76,7 +75,6 @@ exports.fetchPalette = (req) => {
     env,
     questionLanguage,
     sentenceFormulaId,
-    sentenceFormulaSymbol,
     useDummy,
     sentenceFormulaFromEducator
   );
@@ -373,7 +371,6 @@ exports.fetchPalette = (req) => {
         env,
         answerLanguage,
         equivalentSentenceFormulaId,
-        questionSentenceData.sentenceFormulaSymbol,
         useDummy
       );
 

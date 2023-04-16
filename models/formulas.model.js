@@ -72,7 +72,6 @@ exports.fetchFormulaIds = (req) => {
     return [
       formulaObject.sentenceFormulaId,
       guideSentence,
-      formulaObject.sentenceFormulaSymbol,
       nexusUtils.getLanguagesOfEquivalents(
         formulaObject.sentenceFormulaId,
         env

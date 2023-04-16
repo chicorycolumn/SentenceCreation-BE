@@ -21,7 +21,6 @@ xdescribe("Check FE does not mutate BE sentenceFormulas: ENG ref.", () => {
       expect(true).to.equal(false);
     }
 
-    delete BE.sentenceFormulaSymbol;
     if (!BE.orders.additional || !BE.orders.additional.length) {
       BE.orders.additional = [];
     }
@@ -48,7 +47,6 @@ xdescribe("Check FE does not mutate BE sentenceFormulas: POL ref.", () => {
       expect(true).to.equal(false);
     }
 
-    delete BE.sentenceFormulaSymbol;
     if (!BE.orders.additional || !BE.orders.additional.length) {
       BE.orders.additional = [];
     }

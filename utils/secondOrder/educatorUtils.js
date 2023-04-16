@@ -258,7 +258,6 @@ exports.checkSentenceFormulaIds = (envir, currentLanguage) => {
 
   let schematic = sentenceFormulasBank.map((senFor) => [
     senFor.sentenceFormulaId,
-    senFor.sentenceFormulaSymbol,
   ]);
 
   function findDuplicates(index) {

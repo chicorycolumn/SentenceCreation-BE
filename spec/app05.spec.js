@@ -92,7 +92,7 @@ describe("/api", function () {
       return runPaletteTest("ENG", "POL", "dummy73b", dummy73b);
     });
     it("#pal27-02a GET 200 YES: Poleng. I was a good person - masculine I should still be dobrą osobą.", () => {
-      return runPaletteTest("POL", "ENG", "124b I was a good person", [
+      return runPaletteTest("POL", "ENG", "124b", [
         {
           ENG: ["I was/i a good person."],
           POL: ["Ja byłam dobrą osobą."],
@@ -112,7 +112,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal27-02b GET 200 YES: Engpol. I was a good person - masculine I should still be dobrą osobą.", () => {
-      return runPaletteTest("ENG", "POL", "124b I was a good person", [
+      return runPaletteTest("ENG", "POL", "124b", [
         {
           ENG: ["I (female) was a good person."],
           POL: ["Ja byłam dobrą osobą."],
@@ -137,7 +137,7 @@ describe("/api", function () {
         50,
         "POL",
         "ENG",
-        "124b I was a good person",
+        "124b",
         [],
         {},
         1,
@@ -179,90 +179,77 @@ describe("/api", function () {
       ]);
     });
     it("#pal27-02e GET 200 YES: Poleng. I was a good person - masculine I should still be dobrą osobą.", () => {
-      return runPaletteTest(
-        "POL",
-        "ENG",
-        "124c I was a good man/woman/person",
-        [
-          {
-            ENG: ["I was/i a good person."],
-            POL: ["Ja byłam dobrą osobą."],
-          },
-          {
-            ENG: ["I was/i a good person."],
-            POL: ["Ja byłem dobrą osobą."],
-            extra: { FYIPs: ["FYIP101-A-POL-ENG"] },
-          },
-          {
-            ENG: ["We were/ good people."],
-            POL: [
-              "My byłyśmy dobrymi osobami/ludźmi.",
-              "My byliśmy dobrymi osobami/ludźmi.",
-            ],
-          },
-          {
-            ENG: ["I was/i a good man."],
-            POL: ["Ja byłem dobrym mężczyzną."],
-          },
-          {
-            ENG: ["We were/ good men."],
-            POL: ["My byliśmy dobrymi mężczyznami."],
-          },
-          {
-            ENG: ["I was/i a good woman/lady."],
-            POL: ["Ja byłam dobrą kobietą."],
-          },
-          {
-            ENG: ["We were/ good women/ladies."],
-            POL: ["My byłyśmy dobrymi kobietami."],
-          },
-        ]
-      );
+      return runPaletteTest("POL", "ENG", "124c", [
+        {
+          ENG: ["I was/i a good person."],
+          POL: ["Ja byłam dobrą osobą."],
+        },
+        {
+          ENG: ["I was/i a good person."],
+          POL: ["Ja byłem dobrą osobą."],
+          extra: { FYIPs: ["FYIP101-A-POL-ENG"] },
+        },
+        {
+          ENG: ["We were/ good people."],
+          POL: [
+            "My byłyśmy dobrymi osobami/ludźmi.",
+            "My byliśmy dobrymi osobami/ludźmi.",
+          ],
+        },
+        {
+          ENG: ["I was/i a good man."],
+          POL: ["Ja byłem dobrym mężczyzną."],
+        },
+        {
+          ENG: ["We were/ good men."],
+          POL: ["My byliśmy dobrymi mężczyznami."],
+        },
+        {
+          ENG: ["I was/i a good woman/lady."],
+          POL: ["Ja byłam dobrą kobietą."],
+        },
+        {
+          ENG: ["We were/ good women/ladies."],
+          POL: ["My byłyśmy dobrymi kobietami."],
+        },
+      ]);
     });
     it("#pal27-02f GET 200 YES: Engpol. I was a good person - masculine I should still be dobrą osobą.", () => {
-      return runPaletteTest(
-        "ENG",
-        "POL",
-        "124c I was a good man/woman/person",
-        [
-          {
-            ENG: ["I (female) was a good person."],
-            POL: ["Ja byłam dobrą osobą."],
-          },
-          {
-            ENG: ["I (male) was a good person."],
-            POL: ["Ja byłem dobrą osobą."],
-            extra: { FYIPs: ["FYIP101-A-ENG-POL"] },
-          },
-          {
-            ENG: [
-              "We (males) were good people.",
-              "We (mixed) were good people.",
-            ],
-            POL: ["My byliśmy dobrymi osobami/ludźmi."],
-          },
-          {
-            ENG: ["We (females) were good people."],
-            POL: ["My byłyśmy dobrymi osobami/ludźmi."],
-          },
-          {
-            ENG: ["I was a good man."],
-            POL: ["Ja byłem dobrym mężczyzną."],
-          },
-          {
-            ENG: ["We were good men."],
-            POL: ["My byliśmy dobrymi mężczyznami."],
-          },
-          {
-            ENG: ["I was a good woman/lady."],
-            POL: ["Ja byłam dobrą kobietą."],
-          },
-          {
-            ENG: ["We were good women/ladies."],
-            POL: ["My byłyśmy dobrymi kobietami."],
-          },
-        ]
-      );
+      return runPaletteTest("ENG", "POL", "124c", [
+        {
+          ENG: ["I (female) was a good person."],
+          POL: ["Ja byłam dobrą osobą."],
+        },
+        {
+          ENG: ["I (male) was a good person."],
+          POL: ["Ja byłem dobrą osobą."],
+          extra: { FYIPs: ["FYIP101-A-ENG-POL"] },
+        },
+        {
+          ENG: ["We (males) were good people.", "We (mixed) were good people."],
+          POL: ["My byliśmy dobrymi osobami/ludźmi."],
+        },
+        {
+          ENG: ["We (females) were good people."],
+          POL: ["My byłyśmy dobrymi osobami/ludźmi."],
+        },
+        {
+          ENG: ["I was a good man."],
+          POL: ["Ja byłem dobrym mężczyzną."],
+        },
+        {
+          ENG: ["We were good men."],
+          POL: ["My byliśmy dobrymi mężczyznami."],
+        },
+        {
+          ENG: ["I was a good woman/lady."],
+          POL: ["Ja byłam dobrą kobietą."],
+        },
+        {
+          ENG: ["We were good women/ladies."],
+          POL: ["My byłyśmy dobrymi kobietami."],
+        },
+      ]);
     });
   });
 

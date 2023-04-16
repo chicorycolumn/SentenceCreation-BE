@@ -457,14 +457,12 @@ exports.getAndPreprocessStructureAndFormula = (
     ];
   }
 
-  let { sentenceFormulaId, sentenceFormulaSymbol, sentenceStructure } =
-    sentenceFormula;
+  let { sentenceFormulaId, sentenceStructure } = sentenceFormula;
 
   allLangUtils.preprocessStructureChunks(sentenceStructure, currentLanguage);
 
   return {
     sentenceFormulaId,
-    sentenceFormulaSymbol,
     sentenceStructure,
   };
 };

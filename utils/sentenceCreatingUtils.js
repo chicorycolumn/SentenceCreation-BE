@@ -58,7 +58,6 @@ exports.getMaterialsCopies = (
   env = "ref",
   currentLanguage,
   sentenceFormulaId,
-  sentenceFormulaSymbol,
   useDummy,
   sentenceFormulaFromEducator
 ) => {
@@ -98,26 +97,14 @@ exports.getMaterialsCopies = (
         `#ERR quky sc:getMaterialsCopies. No sentenceFormula for this sentenceFormulaId "${sentenceFormulaId}".`
       );
     }
-
-    sentenceFormulaSymbol = sentenceFormula.sentenceFormulaSymbol;
-  } else if (sentenceFormulaSymbol) {
-    sentenceFormula = sentenceFormulas.find(
-      (senFor) => senFor.sentenceFormulaSymbol === sentenceFormulaSymbol
-    );
   } else {
     sentenceFormula = sentenceFormulas.find(
       (senFor) => senFor.sentenceFormulaId === defaultSentenceFormulaId
     );
-
-    sentenceFormulaSymbol = sentenceFormula.sentenceFormulaSymbol;
   }
 
   if (!sentenceFormula) {
-    consol.throw(
-      `pcco No sentence formula found for "${
-        sentenceFormulaSymbol || sentenceFormulaId
-      }"`
-    );
+    consol.throw(`pcco No sentence formula found for "${sentenceFormulaId}"`);
   }
 
   return {
@@ -304,7 +291,7 @@ exports.processSentenceFormula = (
   let grandOutputArray = [];
 
   //STEP ZERO: Get and preprocess sentence structure.
-  let { sentenceFormulaId, sentenceFormulaSymbol, sentenceStructure } =
+  let { sentenceFormulaId, sentenceStructure } =
     allLangUtils.getAndPreprocessStructureAndFormula(
       sentenceFormula,
       currentLanguage,
@@ -387,7 +374,6 @@ exports.processSentenceFormula = (
         arrayOfOutputArrays: null,
         sentenceFormula,
         sentenceFormulaId,
-        sentenceFormulaSymbol,
         errorInSentenceCreation,
       };
     } else {
@@ -412,7 +398,6 @@ exports.processSentenceFormula = (
   let potentialNullResultObject = {
     sentenceFormula,
     sentenceFormulaId,
-    sentenceFormulaSymbol,
   };
 
   const _selectDependentChunkWordsAndAddToOutputArray = (
@@ -633,7 +618,6 @@ exports.processSentenceFormula = (
       arrayOfOutputArrays: null,
       sentenceFormula,
       sentenceFormulaId,
-      sentenceFormulaSymbol,
       errorInSentenceCreation,
     };
     return nullResultObj;
@@ -698,7 +682,6 @@ exports.processSentenceFormula = (
         arrayOfOutputArrays: null,
         sentenceFormula,
         sentenceFormulaId,
-        sentenceFormulaSymbol,
         errorInSentenceCreation,
       };
     }
@@ -795,7 +778,6 @@ exports.processSentenceFormula = (
     arrayOfOutputArrays: grandOutputArray,
     sentenceFormula,
     sentenceFormulaId,
-    sentenceFormulaSymbol,
     errorInSentenceCreation,
   };
 };
@@ -947,7 +929,7 @@ exports.buildSentenceString = (
   ) {
     consol.log(
       "[1;31m " +
-        `npqq buildSentenceString No primaryOrders were specified for "${sentenceFormula.sentenceFormulaSymbol}" with ID "${sentenceFormula.sentenceFormulaId}". Using default order that structureChunks were defined in.` +
+        `npqq buildSentenceString No primaryOrders were specified for "${sentenceFormula.sentenceFormulaId}". Using default order that structureChunks were defined in.` +
         "[0m"
     );
     consol.log("kfzo buildSentenceString c13 gonna push unorderedArr Clause 0");

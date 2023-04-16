@@ -510,7 +510,7 @@ describe("/api", function () {
           POL: ["Lekarka pisała receptę."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "109a doc was writing p", ref, {});
+      return runPaletteTest("ENG", "POL", "109a", ref, {});
     });
     it("#pal11A-01b GET 200 YES: SPECIFIER EXPECTED Multi Gender Noun PLURAL. Engpol.", () => {
       let ref = [
@@ -527,7 +527,7 @@ describe("/api", function () {
           POL: ["Lekarki pisały receptę."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "109c docs were writing p", ref, {});
+      return runPaletteTest("ENG", "POL", "109c", ref, {});
     });
     it("#pal11A-02a GET 200 YES: NO SPECIFIER EVEN WHEN ASKED FOR. Pronombre I/WE. {pres im} needs no gender. Engpol.", () => {
       let ref = [
@@ -535,7 +535,7 @@ describe("/api", function () {
         { ENG: "We are.", POL: ["Jesteśmy.", "My jesteśmy."] },
       ];
 
-      return runPaletteTest("ENG", "POL", "111a I am", ref, {});
+      return runPaletteTest("ENG", "POL", "111a", ref, {});
     });
     it("#pal11A-02b GET 200 YES: SPECIFIER EXPECTED. Pronombre I/WE. {past im} does indeed need gender. Engpol.", () => {
       let ref = [
@@ -547,7 +547,7 @@ describe("/api", function () {
         },
         { ENG: "We (females) were.", POL: ["Byłyśmy.", "My byłyśmy."] },
       ];
-      return runPaletteTest("ENG", "POL", "111b I was", ref, {});
+      return runPaletteTest("ENG", "POL", "111b", ref, {});
     });
     it("#pal11A-03a GET 200 YES: NO SPECIFIER EVEN WHEN ASKED FOR if noun already has gender.", () => {
       let ref = [
@@ -612,7 +612,7 @@ describe("/api", function () {
           POL: ["Byłyśmy.", "My byłyśmy."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "111b I was", ref, {});
+      return runPaletteTest("ENG", "POL", "111b", ref, {});
     });
     it("#pal11A-05a GET 200 YES: Gives clarifiers and specifiers. Pronombre YOU. Engpol.", () => {
       let ref = [
@@ -633,7 +633,7 @@ describe("/api", function () {
           POL: ["Byłyście.", "Wy byłyście."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "111c you were", ref, {});
+      return runPaletteTest("ENG", "POL", "111c", ref, {});
     });
   });
 
@@ -649,7 +649,7 @@ describe("/api", function () {
           ],
         },
       ];
-      return runPaletteTest("POL", "ENG", "109 doc wrote p", ref, {});
+      return runPaletteTest("POL", "ENG", "109", ref, {});
     });
     it("#pal11B-01b GET 200 YES: Poleng. CHOOSE ONE. Plural. male or female versions of same person.", () => {
       let ref = [
@@ -662,7 +662,7 @@ describe("/api", function () {
           ],
         },
       ];
-      return runPaletteTest("POL", "ENG", "109b docs wrote p", ref, {});
+      return runPaletteTest("POL", "ENG", "109b", ref, {});
     });
     it("#pal11B-01c GET 200 YES: Poleng. AGNOSTIC has no effect. Singular. male or female versions of same person.", () => {
       let ref = [
@@ -675,7 +675,7 @@ describe("/api", function () {
           ],
         },
       ];
-      return runPaletteTest("POL", "ENG", "109 doc wrote p", ref, {
+      return runPaletteTest("POL", "ENG", "109", ref, {
         pleaseDontSpecify: true,
       });
     });
@@ -690,7 +690,7 @@ describe("/api", function () {
           ],
         },
       ];
-      return runPaletteTest("POL", "ENG", "109b docs wrote p", ref, {
+      return runPaletteTest("POL", "ENG", "109b", ref, {
         pleaseDontSpecify: true,
       });
     });
@@ -705,7 +705,7 @@ describe("/api", function () {
           POL: ["Lekarka pisała receptę."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "109a doc was writing p", ref, {});
+      return runPaletteTest("ENG", "POL", "109a", ref, {});
     });
     it("#pal11B-02b GET 200 YES: Engpol. CHOOSE ONE. Plural. male or female versions of same person.", () => {
       let ref = [
@@ -721,7 +721,7 @@ describe("/api", function () {
           POL: ["Lekarze pisali receptę."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "109c docs were writing p", ref, {});
+      return runPaletteTest("ENG", "POL", "109c", ref, {});
     });
     it("#pal11B-02c GET 200 YES: Engpol. AGNOSTIC. Singular. male or female versions of same person.", () => {
       let ref = [
@@ -730,7 +730,7 @@ describe("/api", function () {
           POL: ["Lekarz pisał receptę.", "Lekarka pisała receptę."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "109a doc was writing p", ref, {
+      return runPaletteTest("ENG", "POL", "109a", ref, {
         pleaseDontSpecify: true,
       });
     });
@@ -741,7 +741,7 @@ describe("/api", function () {
           POL: ["Lekarze pisali receptę.", "Lekarki pisały receptę."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "109c docs were writing p", ref, {
+      return runPaletteTest("ENG", "POL", "109c", ref, {
         pleaseDontSpecify: true,
       });
     });
@@ -776,7 +776,7 @@ describe("/api", function () {
 
   xdescribe("/palette - Stage 12: Conditionals.", () => {
     it("#pal12-01a (04-01c) GET 200 YES: CONDITIONAL Returns a sentence with a single verb, with tense and number specified.", () => {
-      return runPaletteTest("POL", null, "dummy13a conditional plural", [
+      return runPaletteTest("POL", null, "dummy13a", [
         "Czytano by.",
         "Czytalibyśmy.",
         "Czytałybyśmy.",
@@ -787,7 +787,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal12-02a (05-02d) GET 200 YES: CONDITIONAL Returns a sentence when selected by one from multiple tenseDescriptions.", () => {
-      return runPaletteTest("POL", null, "girl reads f conditional im pf", [
+      return runPaletteTest("POL", null, "63d", [
         "Kobieta czytałaby.",
         "Kobiety czytałyby.",
         "Kobieta przeczytałaby.",
@@ -812,7 +812,7 @@ describe("/api", function () {
           ENG: ["If you write (female) a book , I will research it."],
         },
       ];
-      return runPaletteTest("POL", "ENG", "first conditional 106a", ref, {});
+      return runPaletteTest("POL", "ENG", "106a", ref, {});
     });
     it("#pal12-03b GET 200 YES: RSWAT for First Conditional ENG->POL.", () => {
       let ref = [
@@ -832,7 +832,7 @@ describe("/api", function () {
           POL: ["Jeśli będziesz pisała książkę , ją zbadam."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "first conditional 106a", ref, {});
+      return runPaletteTest("ENG", "POL", "106a", ref, {});
     });
   });
 
@@ -997,7 +997,7 @@ describe("/api", function () {
         { ENG: "She is.", POL: ["Jest.", "Ona jest."] },
         { ENG: "It is.", POL: ["Jest.", "Ono jest."] },
       ];
-      return runPaletteTest("ENG", "POL", "108 singular I am", ref, {});
+      return runPaletteTest("ENG", "POL", "108", ref, {});
     });
   });
 
@@ -1008,14 +1008,14 @@ describe("/api", function () {
         { ENG: "I am.", POL: ["Jestem.", "Ja jestem."] },
         { ENG: "We are.", POL: ["Jesteśmy.", "My jesteśmy."] },
       ];
-      return runPaletteTest("ENG", "POL", "111a I am", ref, {});
+      return runPaletteTest("ENG", "POL", "111a", ref, {});
     });
     it("#pal13B-01b GET 200 YES: Specifiers requested but should not appear. Engpol. I am.", () => {
       let ref = [
         { ENG: "I am.", POL: ["Jestem.", "Ja jestem."] },
         { ENG: "We are.", POL: ["Jesteśmy.", "My jesteśmy."] },
       ];
-      return runPaletteTest("ENG", "POL", "111a I am", ref, {});
+      return runPaletteTest("ENG", "POL", "111a", ref, {});
     });
     it("#pal13B-02a GET 200 YES: Engpol. A more interesting sentence with Pronombres.", () => {
       let ref = [
@@ -1049,13 +1049,7 @@ describe("/api", function () {
         },
       ];
 
-      return runPaletteTest(
-        "ENG",
-        "POL",
-        "110 the woman read me a book",
-        ref,
-        {}
-      );
+      return runPaletteTest("ENG", "POL", "110", ref, {});
     });
     it("#pal13B-02b GET 200 YES: Poleng. A more interesting sentence with Pronombres.", () => {
       let ref = [
@@ -1112,13 +1106,7 @@ describe("/api", function () {
           POL: "Kobiety czytały nam książkę.",
         },
       ];
-      return runPaletteTest(
-        "POL",
-        "ENG",
-        "110 the woman read me a book",
-        ref,
-        {}
-      );
+      return runPaletteTest("POL", "ENG", "110", ref, {});
     });
     it("#pal13B-03a GET 200 YES: Engpol. Another more interesting sentence with Pronombres.", () => {
       let ref = [
@@ -1236,13 +1224,7 @@ describe("/api", function () {
           POL: ["Rodzic dał nam zwierciadła.", "Rodzic dał nam lustra."],
         },
       ];
-      return runPaletteTest(
-        "ENG",
-        "POL",
-        "112 familymember gave me things",
-        ref,
-        {}
-      );
+      return runPaletteTest("ENG", "POL", "112", ref, {});
     });
     it("#pal13B-03b GET 200 YES: Poleng. Another more interesting sentence with Pronombres.", () => {
       let ref = [
@@ -1511,13 +1493,7 @@ describe("/api", function () {
           ],
         },
       ];
-      return runPaletteTest(
-        "POL",
-        "ENG",
-        "112 familymember gave me things",
-        ref,
-        {}
-      );
+      return runPaletteTest("POL", "ENG", "112", ref, {});
     });
     it("#pal13B-03c GET 200 YES: Poleng. Another more interesting sentence with Pronombres.", () => {
       let ref = [
@@ -1714,13 +1690,7 @@ describe("/api", function () {
           ],
         },
       ];
-      return runPaletteTest(
-        "POL",
-        "ENG",
-        "112a familymember gave me thing",
-        ref,
-        {}
-      );
+      return runPaletteTest("POL", "ENG", "112a", ref, {});
     });
     it("#pal13B-04a GET 200 YES: Engpol. Another more interesting sentence with Pronombres. Terminal object used.", () => {
       // Was affected by Mungojerry issue, now resolved.
@@ -1866,13 +1836,7 @@ describe("/api", function () {
           POL: ["Nasza matka dała nam książkę."],
         },
       ];
-      return runPaletteTest(
-        "ENG",
-        "POL",
-        "113 my father gave me a book",
-        ref,
-        {}
-      );
+      return runPaletteTest("ENG", "POL", "113", ref, {});
     });
     it("#pal14A-02b GET 200 YES: Poleng. My father gave me a book.", () => {
       let ref = [
@@ -1925,13 +1889,7 @@ describe("/api", function () {
           ],
         },
       ];
-      return runPaletteTest(
-        "POL",
-        "ENG",
-        "113 my father gave me a book",
-        ref,
-        {}
-      );
+      return runPaletteTest("POL", "ENG", "113", ref, {});
     });
     it("#pal14A-03a GET 200 YES: Engpol. The doctor gave me her book. Gender annotation is added when there's no AOC, because pronombre is 'their' so doesn't reveal gender. However in singular, the pronombres 'her' and 'his' reveal the gender (are AOCs) so no gender annotation.", () => {
       let ref = [
@@ -1964,13 +1922,7 @@ describe("/api", function () {
           ],
         },
       ];
-      return runPaletteTest(
-        "ENG",
-        "POL",
-        "114 doctor gave me her book",
-        ref,
-        {}
-      );
+      return runPaletteTest("ENG", "POL", "114", ref, {});
     });
     it("#pal14A-03b GET 200 YES: Engpol. (not allowed to be unspecified, should be identical result to previous test). The doctor gave me her book.", () => {
       let ref = [
@@ -2005,7 +1957,7 @@ describe("/api", function () {
           ],
         },
       ];
-      return runPaletteTest("ENG", "POL", "114 doctor gave me her book", ref, {
+      return runPaletteTest("ENG", "POL", "114", ref, {
         pleaseDontSpecify: true,
       });
     });
@@ -2013,7 +1965,7 @@ describe("/api", function () {
 
   describe("/palette - Stage 14B: Possessive pronombres re Hypernymy.", () => {
     it("#pal14B-01a GET 200 YES: POL only. My father gave me his book.", () => {
-      return runPaletteTest("POL", null, "113a my father gave me his book", [
+      return runPaletteTest("POL", null, "113a", [
         "Mój ojciec dał mi jego książkę.",
         "Nasz ojciec dał nam jego książkę.",
         "Moi ojcowie dali mi ich książkę.",
@@ -2033,7 +1985,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal14B-01b GET 200 YES: ENG only. My father gave me his book.", () => {
-      return runPaletteTest("ENG", null, "113a my father gave me his book", [
+      return runPaletteTest("ENG", null, "113a", [
         "My father gave me his book.",
         "Our father gave us his book.",
         "My fathers gave me their book.",
@@ -2056,7 +2008,7 @@ describe("/api", function () {
       return runPaletteTest(
         "ENG",
         "POL",
-        "113a my father gave me his book",
+        "113a",
         [
           {
             ENG: "My parent gave me his book.",
@@ -2127,7 +2079,7 @@ describe("/api", function () {
       return runPaletteTest(
         "POL",
         "ENG",
-        "113a my father gave me his book",
+        "113a",
         [
           {
             POL: "Mój rodzic dał mi jego książkę.",
@@ -2240,7 +2192,7 @@ describe("/api", function () {
       );
     });
     it("#pal14B-02a GET 200 YES: POL only. My boy gave me his book.", () => {
-      return runPaletteTest("POL", null, "113b my child gave me his book", [
+      return runPaletteTest("POL", null, "113b", [
         "Mój chłopiec dał mi jego książkę.",
         "Nasz chłopiec dał nam jego książkę.",
         "Moi chłopcy dali mi ich książkę.",
@@ -2260,7 +2212,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal14B-02b GET 200 YES: ENG only. My boy gave me his book.", () => {
-      return runPaletteTest("ENG", null, "113b my child gave me his book", [
+      return runPaletteTest("ENG", null, "113b", [
         "My boy gave me his book.",
         "Our boy gave us his book.",
         "My boys gave me their book.",
@@ -2283,7 +2235,7 @@ describe("/api", function () {
       return runPaletteTest(
         "ENG",
         "POL",
-        "113b my child gave me his book",
+        "113b",
         [
           {
             ENG: "My child gave me his book.",
@@ -2373,7 +2325,7 @@ describe("/api", function () {
       return runPaletteTest(
         "POL",
         "ENG",
-        "113b my child gave me his book",
+        "113b",
         [
           {
             POL: "Moje dziecko dało mi jego książkę.",
@@ -2521,7 +2473,7 @@ describe("/api", function () {
       return runPaletteTest(
         "ENG",
         "POL",
-        "113c my child gave me his book",
+        "113c",
         [
           {
             ENG: ["My baby gave me his book."],
@@ -2818,13 +2770,20 @@ function checkSentenceTranslations(
 function runPaletteTest2(
   questionLanguage,
   answerLanguage,
-  sentenceFormulaSymbol,
+  sentenceFormulaId,
   args,
   word,
   alex = [],
   tran,
-  useDummy = sentenceFormulaSymbol.includes("dummy")
+  useDummy = sentenceFormulaId.includes("dummy")
 ) {
+  if (
+    sentenceFormulaId.startsWith("dummy") ||
+    /\d/.test(sentenceFormulaId[0])
+  ) {
+    sentenceFormulaId = questionLanguage + "-" + sentenceFormulaId;
+  }
+
   word = word + questionLanguage;
 
   return request(app)
@@ -2833,7 +2792,7 @@ function runPaletteTest2(
       useDummy,
       questionLanguage,
       answerLanguage,
-      sentenceFormulaSymbol,
+      sentenceFormulaId,
       ...args,
     })
     .expect(200)

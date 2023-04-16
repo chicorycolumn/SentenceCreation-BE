@@ -567,8 +567,6 @@ exports.prepareGetSentencesAsQuestionOnly = (
   let numberString = Date.now();
 
   sentenceFormula = uUtils.copyWithoutReference(sentenceFormula);
-
-  sentenceFormula.sentenceFormulaSymbol = numberString;
   sentenceFormula.sentenceFormulaId = `${questionLanguage}-${numberString}`;
   sentenceFormula.equivalents = {};
 

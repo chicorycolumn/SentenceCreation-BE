@@ -231,7 +231,7 @@ exports.dummySentenceFormulasBank = [
   },
   {
     sentenceFormulaSymbol: "dummy13a conditional plural",
-    sentenceFormulaId: "POL-dummy",
+    sentenceFormulaId: "POL-dummy13a",
     sentenceStructure: [
       {
         chunkId: "ver-1",
@@ -1453,9 +1453,9 @@ exports.dummySentenceFormulasBank = [
     orders: { primary: [["ver-1"]] },
   },
   {
-    sentenceFormulaSymbol: "dummy53c-2 you are (pres)",
-    sentenceFormulaId: "POL-dummy53c-2",
-    equivalents: { ENG: ["ENG-dummy53c-2"] },
+    sentenceFormulaSymbol: "dummy53ca you are (pres)",
+    sentenceFormulaId: "POL-dummy53ca",
+    equivalents: { ENG: ["ENG-dummy53ca"] },
     sentenceStructure: [
       {
         chunkId: "pro-1",

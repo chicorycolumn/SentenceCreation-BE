@@ -152,7 +152,7 @@ describe("/api", function () {
 
   describe("/palette - Stage 25: Two levels of dependent chunks.", () => {
     it("#pal25-01a GET 200 YES: Poleng. I was a good doctor.", () => {
-      return runPaletteTest("POL", "ENG", "124a I was a good doctor", [
+      return runPaletteTest("POL", "ENG", "124a", [
         {
           ENG: [
             "I was being a red doctor.",
@@ -177,7 +177,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal25-01b GET 200 YES: Engpol. I was a good doctor.", () => {
-      return runPaletteTest("ENG", "POL", "124a I was a good doctor", [
+      return runPaletteTest("ENG", "POL", "124a", [
         {
           ENG: ["I was a red doctor (male)."],
           POL: ["Byłem czerwonym lekarzem."],

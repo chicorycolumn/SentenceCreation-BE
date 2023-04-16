@@ -637,8 +637,6 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
 
         sentenceFormulaId:
           counterfactualQuestionSentenceFormula.sentenceFormulaId,
-        sentenceFormulaSymbol:
-          counterfactualQuestionSentenceFormula.sentenceFormulaSymbol,
 
         useDummy: reqBody.useDummy,
         questionLanguage: reqBody.questionLanguage,

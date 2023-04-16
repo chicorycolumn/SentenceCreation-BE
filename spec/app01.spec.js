@@ -234,7 +234,7 @@ describe("/api", function () {
         });
     });
     it("#pal01-04a GET 200 YES: Checking in console logs whether structureChunks have indeed been updated with the traitValues for eg number, gender, gcase of the finally selected word they structure for.", () => {
-      return runPaletteTest("POL", null, "I have apple");
+      return runPaletteTest("POL", null, "57");
     });
     it("#pal01-05a GET 200 YES: Check order of words in final sentence, based on one specified order.", () => {
       return runPaletteTest("POL", null, "dummy09", [
@@ -250,10 +250,10 @@ describe("/api", function () {
       ]);
     });
     it("#pal01-06a GET 200 YES: Filter by specified lemma.", () => {
-      return runPaletteTest("POL", null, "dummy I have APPLE", ["Mam jabłko."]);
+      return runPaletteTest("POL", null, "dummy11a", ["Mam jabłko."]);
     });
     it("#pal01-06b GET 200 YES: Filter by a selection of multiple specified lemmas.", () => {
-      return runPaletteTest("POL", null, "dummy I have APPLE/SHIRT", [
+      return runPaletteTest("POL", null, "dummy11b", [
         "Mam jabłka.",
         "Mam majtki.",
       ]);
@@ -278,7 +278,7 @@ describe("/api", function () {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceFormulaSymbol: "girl is wearing shirt",
+          sentenceFormulaId: "POL-51",
         })
         .expect(200)
         .then((res) => {
@@ -294,7 +294,7 @@ describe("/api", function () {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceFormulaSymbol: "shirt is in wardrobe",
+          sentenceFormulaId: "POL-52",
           devSaysOmitStChValidation: true,
           useDummy: true,
         })
@@ -312,7 +312,7 @@ describe("/api", function () {
         .get("/api/palette")
         .send({
           questionLanguage: "POL",
-          sentenceFormulaSymbol: "I often wear shirt",
+          sentenceFormulaId: "POL-53",
         })
         .expect(200)
         .then((res) => {
@@ -324,13 +324,13 @@ describe("/api", function () {
         });
     });
     it("#pal02-02a GET 200 YES: Returns a sentence where end of inflection chain could be array.", () => {
-      return runPaletteTest("POL", null, "boys are here");
+      return runPaletteTest("POL", null, "54");
     });
   });
 
   describe("/palette - Stage 3: Adjectives", () => {
     it("#pal03-01a GET 200 YES: Returns a sentence where adjective agrees with noun in singular. Filtered by orTags.", () => {
-      return runPaletteTest("POL", null, "red/blue apple", [
+      return runPaletteTest("POL", null, "55b", [
         "Czerwona cebula.",
         "Czerwone jabłko.",
         "Niebieska cebula.",
@@ -338,25 +338,25 @@ describe("/api", function () {
       ]);
     });
     it("#pal03-02a GET 200 YES: Returns a sentence where adjective agrees with noun in singular. Filtered by andTags.", () => {
-      return runPaletteTest("POL", null, "red apple", [
+      return runPaletteTest("POL", null, "55", [
         "Czerwona cebula.",
         "Czerwone jabłko.",
       ]);
     });
     it("#pal03-02b GET 200 YES: Returns a sentence where adjective agrees with noun in nonvirile plural.", () => {
-      return runPaletteTest("POL", null, "red apples", [
+      return runPaletteTest("POL", null, "55a", [
         "Czerwone cebule.",
         "Czerwone jabłka.",
       ]);
     });
     it("#pal03-02c GET 200 YES: Returns a sentence where adjective agrees with noun in virile or nonvirile plural.", () => {
-      return runPaletteTest("POL", null, "red girls", ["Czerwone kobiety."]);
+      return runPaletteTest("POL", null, "56", ["Czerwone kobiety."]);
     });
   });
 
   describe("/palette - Stage 4: Verbs", () => {
     it("#pal04-01a GET 200 YES: Returns a sentence with a single verb, in present.", () => {
-      return runPaletteTest("POL", null, "I am reading", [
+      return runPaletteTest("POL", null, "58", [
         "Czytam.",
         "Czytasz.",
         "Czyta.",
@@ -366,7 +366,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal04-01b GET 200 YES: Returns a sentence with a single verb, with person specified.", () => {
-      return runPaletteTest("POL", null, "dummy12a 2per", [
+      return runPaletteTest("POL", null, "dummy12a", [
         "Czytasz.",
         "Czytacie.",
         "Czytałeś.",
@@ -390,16 +390,13 @@ describe("/api", function () {
       ]);
     });
     it("#pal04-01d GET 200 YES: Returns a sentence with a single verb, with tense number and gender specified.", () => {
-      return runPaletteTest("POL", null, "dummy13b present 2per f", [
-        "Czytasz.",
-        "Czytacie.",
-      ]);
+      return runPaletteTest("POL", null, "dummy13b", ["Czytasz.", "Czytacie."]);
     });
     it("#pal04-01e GET 200 YES: Returns a sentence with a single verb in infinitive.", () => {
-      return runPaletteTest("POL", null, "dummy14 infinitive", ["Czytać."]);
+      return runPaletteTest("POL", null, "dummy14", ["Czytać."]);
     });
     it("#pal04-01f GET 200 YES: Returns a sentence with a single verb in impersonal.", () => {
-      return runPaletteTest("POL", null, "dummy15 impersonal", [
+      return runPaletteTest("POL", null, "dummy15", [
         "Czyta się.",
         "Czytano.",
         "Będzie czytać się.",
@@ -407,7 +404,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal04-01g GET 200 YES: Returns a sentence with a single verb in impersonal, even when plural is specified (returns just those impersonals that have plural use).", () => {
-      return runPaletteTest("POL", null, "dummy15a impersonal plural", [
+      return runPaletteTest("POL", null, "dummy15a", [
         "Czytano.",
         "Czytano by.",
         "Będzie czytać się.",
@@ -415,56 +412,35 @@ describe("/api", function () {
       ]);
     });
     it("#pal04-01h GET 200 YES: Returns a sentence with a single verb in impersonal, even when plural is specified (returns just those impersonals that have plural use).", () => {
-      return runPaletteTest("POL", null, "dummy15b impersonal plural", [
+      return runPaletteTest("POL", null, "dummy15b", [
         "Przeczyta się.",
         "Przeczytano.",
         "Przeczytano by.",
       ]);
     });
     it("#pal04-02a GET 200 YES: Returns a sentence with a verb's contemporaryAdverbial participle.", () => {
-      return runPaletteTest("POL", null, "dummy16 contemporaryAdverbial", [
-        "Czytając.",
-      ]);
+      return runPaletteTest("POL", null, "dummy16", ["Czytając."]);
     });
     it("#pal04-02b GET 200 YES: Returns a sentence with a verb's contemporaryAdverbial participle, ignoring gender.", () => {
-      return runPaletteTest(
-        "POL",
-        null,
-        "dummy17 contemporaryAdverbial female",
-        ["Czytając."]
-      );
+      return runPaletteTest("POL", null, "dummy17", ["Czytając."]);
     });
     it("#pal04-02c GET 200 YES: Returns a sentence with a verb's contemporaryAdverbial participle, ignoring gender and person.", () => {
-      return runPaletteTest(
-        "POL",
-        null,
-        "dummy18 contemporaryAdverbial n virile 2per",
-        ["Czytając."]
-      );
+      return runPaletteTest("POL", null, "dummy18", ["Czytając."]);
     });
     it("#pal04-02d GET 200 YES: Returns a sentence with a verb's anteriorAdverbial participle.", () => {
-      return runPaletteTest("POL", null, "dummy16a anteriorAdverbial", [
-        "Przeczytawszy.",
-      ]);
+      return runPaletteTest("POL", null, "dummy16a", ["Przeczytawszy."]);
     });
     it("#pal04-02e GET 200 YES: Returns a sentence with a verb's anteriorAdverbial participle, ignoring gender.", () => {
-      return runPaletteTest("POL", null, "dummy17a anteriorAdverbial female", [
-        "Przeczytawszy.",
-      ]);
+      return runPaletteTest("POL", null, "dummy17a", ["Przeczytawszy."]);
     });
     it("#pal04-02f GET 200 YES: Returns a sentence with a verb's anteriorAdverbial participle, ignoring gender and person.", () => {
-      return runPaletteTest(
-        "POL",
-        null,
-        "dummy18a anteriorAdverbial n virile 2per",
-        ["Przeczytawszy."]
-      );
+      return runPaletteTest("POL", null, "dummy18a", ["Przeczytawszy."]);
     });
     it("#pal04-03a GET 200 YES: Returns a sentence with a single verb's verbalNoun.", () => {
-      return runPaletteTest("POL", null, "dummy21 verbalNoun", ["Czytanie."]);
+      return runPaletteTest("POL", null, "dummy21", ["Czytanie."]);
     });
     it("#pal04-04a GET 200 YES: Returns verb in virile when one gender option is given.", () => {
-      return runPaletteTest("POL", null, "dummy23a past/cond 1per plural m1", [
+      return runPaletteTest("POL", null, "dummy23a", [
         "Czytaliśmy.",
         "Czytaliście.",
         "Czytali.",
@@ -474,7 +450,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal04-04b GET 200 YES: Returns verb in nonvirile when one gender option is given.", () => {
-      return runPaletteTest("POL", null, "dummy23b past/cond 1per plural m2", [
+      return runPaletteTest("POL", null, "dummy23b", [
         "Czytałyśmy.",
         "Czytałyście.",
         "Czytały.",
@@ -484,7 +460,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal04-04c GET 200 YES: Returns verb in nonvirile when two gender options are given.", () => {
-      return runPaletteTest("POL", null, "dummy23c past/cond 1per plural f/n", [
+      return runPaletteTest("POL", null, "dummy23c", [
         "Czytałyśmy.",
         "Czytałyście.",
         "Czytały.",
@@ -494,7 +470,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal04-05a GET 200 YES: Conjugate verb (as virile or nonvirile) to agree with noun in plural.", () => {
-      return runPaletteTest("POL", null, "girls were reading", [
+      return runPaletteTest("POL", null, "60", [
         "Kobiety czytały.",
         "Dzieci czytały.",
         "Dziewczyny czytały.",
@@ -507,36 +483,34 @@ describe("/api", function () {
       ]);
     });
     it("#pal04-05b GET 200 YES: Conjugate verb to agree with noun in singular or plural.", () => {
-      return runPaletteTest("POL", null, "girl is reading", [
+      return runPaletteTest("POL", null, "59", [
         "Kobieta czyta.",
         "Kobiety czytają.",
       ]);
     });
     it("#pal04-06a GET 200 YES: Select a verb by the Aspect selector.", () => {
-      return runPaletteTest("POL", null, "dummy20a girl is reading im", [
+      return runPaletteTest("POL", null, "dummy20a", [
         "Kobieta czyta.",
         "Kobiety czytają.",
       ]);
     });
     it("#pal04-06b GET 200 YES: Select a verb by the Aspect selector.", () => {
-      return runPaletteTest("POL", null, "dummy20b girl will read pf", [
+      return runPaletteTest("POL", null, "dummy20b", [
         "Kobieta przeczyta.",
         "Kobiety przeczytają.",
       ]);
     });
     it("#pal04-07a GET 200 YES: Make two verbs agree.", () => {
-      return runPaletteTest("POL", null, "dummy24a I read and research", [
-        "Czytam i badam.",
-      ]);
+      return runPaletteTest("POL", null, "dummy24a", ["Czytam i badam."]);
     });
     it("#pal04-07b GET 200 YES: Make two verbs agree when there is a choice of person.", () => {
-      return runPaletteTest("POL", null, "dummy24b I/you read and research", [
+      return runPaletteTest("POL", null, "dummy24b", [
         "Czytam i badam.",
         "Czytasz i badasz.",
       ]);
     });
     it("#pal04-07c GET 200 YES: Make two verbs agree when there is a choice of person, gender, and number.", () => {
-      return runPaletteTest("POL", null, "dummy24c read and research", [
+      return runPaletteTest("POL", null, "dummy24c", [
         "Czytam i badam.",
         "Czytasz i badasz.",
 
@@ -558,7 +532,7 @@ describe("/api", function () {
 
   describe("/palette - Stage 5: Generate rich sentences (nouns adjectives and verbs).", () => {
     it("#pal05-01a GET 200 YES: Returns a sentence in present.", () => {
-      return runPaletteTest("POL", null, "girl has red apple", [
+      return runPaletteTest("POL", null, "61", [
         "Kobieta ma czerwone jabłko.",
         "Kobieta ma czerwone jabłka.",
         "Kobiety mają czerwone jabłko.",
@@ -570,7 +544,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal05-01b GET 200 YES: Returns a negative sentence in past.", () => {
-      return runPaletteTest("POL", null, "girl didn't have red apple", [
+      return runPaletteTest("POL", null, "61b", [
         "Kobieta nie miała czerwonego jabłka.",
         "Kobieta nie miała czerwonych jabłek.",
         "Kobiety nie miały czerwonego jabłka.",
@@ -582,7 +556,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal05-01c GET 200 YES: Returns a negative sentence in past.", () => {
-      return runPaletteTest("POL", null, "red girl didn't have red apple", [
+      return runPaletteTest("POL", null, "62b", [
         "Czerwona kobieta nie miała czerwonego jabłka.",
         "Czerwona kobieta nie miała czerwonych jabłek.",
         "Czerwone kobiety nie miały czerwonego jabłka.",
@@ -594,19 +568,19 @@ describe("/api", function () {
       ]);
     });
     it("#pal05-02a GET 200 YES: Returns a sentence when selected by tenseDescription.", () => {
-      return runPaletteTest("POL", null, "girl reads present im", [
+      return runPaletteTest("POL", null, "63a", [
         "Kobieta czyta.",
         "Kobiety czytają.",
       ]);
     });
     it("#pal05-02b GET 200 YES: Returns a sentence when selected by tenseDescription.", () => {
-      return runPaletteTest("POL", null, "girl reads past pf", [
+      return runPaletteTest("POL", null, "63b", [
         "Kobieta przeczytała.",
         "Kobiety przeczytały.",
       ]);
     });
     it("#pal05-02c GET 200 YES: Returns a sentence when selected by tenseDescription.", () => {
-      return runPaletteTest("POL", null, "girl reads future im", [
+      return runPaletteTest("POL", null, "63c", [
         "Kobieta będzie czytała.",
         "Kobiety będą czytały.",
         "Kobieta będzie czytać.",
@@ -674,7 +648,7 @@ describe("/api", function () {
         .send({
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "101a girl is reading",
+          sentenceFormulaId: "POL-101a",
         })
         .expect(200)
         .then((res) => {
@@ -722,7 +696,7 @@ describe("/api", function () {
         .send({
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "101b girl *reads quickly",
+          sentenceFormulaId: "POL-101b",
         })
         .expect(200)
         .then((res) => {
@@ -779,7 +753,7 @@ describe("/api", function () {
           questionLanguage,
           answerLanguage,
           useDummy: true,
-          sentenceFormulaSymbol: "dummy25a good day",
+          sentenceFormulaId: "POL-dummy25a",
         })
         .expect(200)
         .then((res) => {
@@ -814,7 +788,7 @@ describe("/api", function () {
           questionLanguage,
           answerLanguage,
           useDummy: true,
-          sentenceFormulaSymbol: "dummy25a good day",
+          sentenceFormulaId: "ENG-dummy25a",
         })
         .expect(200)
         .then((res) => {
@@ -848,7 +822,7 @@ describe("/api", function () {
         .send({
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "102a I'll read (pf fut)",
+          sentenceFormulaId: "POL-102a",
         })
         .expect(200)
         .then((res) => {
@@ -870,7 +844,7 @@ describe("/api", function () {
         .send({
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "I read *future 103a",
+          sentenceFormulaId: "ENG-103a",
         })
         .expect(200)
         .then((res) => {
@@ -892,7 +866,7 @@ describe("/api", function () {
         .send({
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "I read *future 103b",
+          sentenceFormulaId: "ENG-103b",
         })
         .expect(200)
         .then((res) => {
@@ -914,7 +888,7 @@ describe("/api", function () {
         .send({
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "I read *future 103c",
+          sentenceFormulaId: "POL-103c",
         })
         .expect(200)
         .then((res) => {
@@ -937,7 +911,7 @@ describe("/api", function () {
           questionLanguage,
           answerLanguage,
           useDummy: true,
-          sentenceFormulaSymbol: "dummy30",
+          sentenceFormulaId: "ENG-dummy30",
         })
         .expect(200)
         .then((res) => {
@@ -968,7 +942,7 @@ describe("/api", function () {
           questionLanguage,
           answerLanguage,
           useDummy: true,
-          sentenceFormulaSymbol: "dummy30",
+          sentenceFormulaId: "POL-dummy30",
         })
         .expect(200)
         .then((res) => {
@@ -1002,7 +976,7 @@ describe("/api", function () {
         .send({
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "I read *future 104a",
+          sentenceFormulaId: "POL-104a",
         })
         .expect(200)
         .then((res) => {
@@ -1024,7 +998,7 @@ describe("/api", function () {
         .send({
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "I read *future 104a",
+          sentenceFormulaId: "ENG-104a",
         })
         .expect(200)
         .then((res) => {
@@ -1046,7 +1020,7 @@ describe("/api", function () {
         .send({
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "I read *future 104b",
+          sentenceFormulaId: "POL-104b",
         })
         .expect(200)
         .then((res) => {
@@ -1068,7 +1042,7 @@ describe("/api", function () {
         .send({
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "I read *future 104b",
+          sentenceFormulaId: "ENG-104b",
         })
         .expect(200)
         .then((res) => {
@@ -1091,7 +1065,7 @@ describe("/api", function () {
           questionLanguage,
           answerLanguage,
           useDummy: true,
-          sentenceFormulaSymbol: "dummy28",
+          sentenceFormulaId: "POL-dummy28",
         })
         .expect(200)
         .then((res) => {
@@ -1114,7 +1088,7 @@ describe("/api", function () {
           questionLanguage,
           answerLanguage,
           useDummy: true,
-          sentenceFormulaSymbol: "dummy28",
+          sentenceFormulaId: "ENG-dummy28",
         })
         .expect(200)
         .then((res) => {
@@ -1137,7 +1111,7 @@ describe("/api", function () {
           questionLanguage,
           answerLanguage,
           useDummy: true,
-          sentenceFormulaSymbol: "dummy28a",
+          sentenceFormulaId: "POL-dummy28a",
         })
         .expect(200)
         .then((res) => {
@@ -1159,7 +1133,7 @@ describe("/api", function () {
         .send({
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "I was writing 105a",
+          sentenceFormulaId: "ENG-105a",
         })
         .expect(200)
         .then((res) => {
@@ -1244,7 +1218,7 @@ describe("/api", function () {
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy33b I am",
+          sentenceFormulaId: "POL-dummy33b",
         })
         .expect(200)
         .then((res) => {
@@ -1267,7 +1241,7 @@ describe("/api", function () {
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy33c you are",
+          sentenceFormulaId: "POL-dummy33c",
         })
         .expect(200)
         .then((res) => {
@@ -1290,7 +1264,7 @@ describe("/api", function () {
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy33d she is",
+          sentenceFormulaId: "POL-dummy33d",
         })
         .expect(200)
         .then((res) => {
@@ -1313,7 +1287,7 @@ describe("/api", function () {
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy33e we are",
+          sentenceFormulaId: "POL-dummy33e",
         })
         .expect(200)
         .then((res) => {
@@ -1336,7 +1310,7 @@ describe("/api", function () {
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy33f they are",
+          sentenceFormulaId: "POL-dummy33f",
         })
         .expect(200)
         .then((res) => {
@@ -1358,7 +1332,7 @@ describe("/api", function () {
         .send({
           useDummy: true,
           questionLanguage,
-          sentenceFormulaSymbol: "dummy33",
+          sentenceFormulaId: "ENG-dummy33",
         })
         .expect(200)
         .then((res) => {
@@ -1378,7 +1352,7 @@ describe("/api", function () {
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy33b I am",
+          sentenceFormulaId: "ENG-dummy33b",
         })
         .expect(200)
         .then((res) => {
@@ -1401,7 +1375,7 @@ describe("/api", function () {
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy33c you are",
+          sentenceFormulaId: "ENG-dummy33c",
         })
         .expect(200)
         .then((res) => {
@@ -1424,7 +1398,7 @@ describe("/api", function () {
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy33d she is",
+          sentenceFormulaId: "ENG-dummy33d",
         })
         .expect(200)
         .then((res) => {
@@ -1447,7 +1421,7 @@ describe("/api", function () {
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy33e we are",
+          sentenceFormulaId: "ENG-dummy33e",
         })
         .expect(200)
         .then((res) => {
@@ -1470,7 +1444,7 @@ describe("/api", function () {
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy33f they are",
+          sentenceFormulaId: "ENG-dummy33f",
         })
         .expect(200)
         .then((res) => {
@@ -1493,7 +1467,7 @@ describe("/api", function () {
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy33a",
+          sentenceFormulaId: "POL-dummy33a",
         })
         .expect(200)
         .then((res) => {
@@ -1532,7 +1506,7 @@ describe("/api", function () {
         .send({
           useDummy: true,
           questionLanguage,
-          sentenceFormulaSymbol: "dummy34c",
+          sentenceFormulaId: "ENG-dummy34c",
         })
         .expect(200)
         .then((res) => {
@@ -1552,7 +1526,7 @@ describe("/api", function () {
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy34a",
+          sentenceFormulaId: "POL-dummy34a",
         })
         .expect(200)
         .then((res) => {
@@ -1575,7 +1549,7 @@ describe("/api", function () {
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy34b",
+          sentenceFormulaId: "POL-dummy34b",
         })
         .expect(200)
         .then((res) => {
@@ -1598,7 +1572,7 @@ describe("/api", function () {
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy34d",
+          sentenceFormulaId: "POL-dummy34d",
         })
         .expect(200)
         .then((res) => {
@@ -1647,7 +1621,7 @@ describe("/api", function () {
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy53b I am",
+          sentenceFormulaId: "POL-dummy53b",
         })
         .expect(200)
         .then((res) => {
@@ -1670,7 +1644,7 @@ describe("/api", function () {
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy53c you are",
+          sentenceFormulaId: "POL-dummy53c",
         })
         .expect(200)
         .then((res) => {
@@ -1693,7 +1667,7 @@ describe("/api", function () {
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy53d she is",
+          sentenceFormulaId: "POL-dummy53d",
         })
         .expect(200)
         .then((res) => {
@@ -1716,7 +1690,7 @@ describe("/api", function () {
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy53e we are",
+          sentenceFormulaId: "POL-dummy53e",
         })
         .expect(200)
         .then((res) => {
@@ -1739,7 +1713,7 @@ describe("/api", function () {
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy53f they are",
+          sentenceFormulaId: "POL-dummy53f",
         })
         .expect(200)
         .then((res) => {
@@ -1761,7 +1735,7 @@ describe("/api", function () {
         .send({
           useDummy: true,
           questionLanguage,
-          sentenceFormulaSymbol: "dummy53",
+          sentenceFormulaId: "ENG-dummy53",
         })
         .expect(200)
         .then((res) => {
@@ -1781,7 +1755,7 @@ describe("/api", function () {
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy53b I am",
+          sentenceFormulaId: "ENG-dummy53b",
         })
         .expect(200)
         .then((res) => {
@@ -1804,7 +1778,7 @@ describe("/api", function () {
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy53c-2 you are (pres)",
+          sentenceFormulaId: "ENG-dummy53ca",
         })
         .expect(200)
         .then((res) => {
@@ -1827,7 +1801,7 @@ describe("/api", function () {
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy53d she is",
+          sentenceFormulaId: "ENG-dummy53d",
         })
         .expect(200)
         .then((res) => {
@@ -1850,7 +1824,7 @@ describe("/api", function () {
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy53e we are",
+          sentenceFormulaId: "ENG-dummy53e",
         })
         .expect(200)
         .then((res) => {
@@ -1873,7 +1847,7 @@ describe("/api", function () {
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy53f they are",
+          sentenceFormulaId: "ENG-dummy53f",
         })
         .expect(200)
         .then((res) => {
@@ -1896,7 +1870,7 @@ describe("/api", function () {
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy53a",
+          sentenceFormulaId: "POL-dummy53a",
         })
         .expect(200)
         .then((res) => {
@@ -1944,7 +1918,7 @@ describe("/api", function () {
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy54a",
+          sentenceFormulaId: "POL-dummy54a",
         })
         .expect(200)
         .then((res) => {
@@ -1969,7 +1943,7 @@ describe("/api", function () {
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy54b",
+          sentenceFormulaId: "POL-dummy54b",
         })
         .expect(200)
         .then((res) => {
@@ -1992,7 +1966,7 @@ describe("/api", function () {
           useDummy: true,
           questionLanguage,
           answerLanguage,
-          sentenceFormulaSymbol: "dummy54a they are",
+          sentenceFormulaId: "ENG-dummy54a",
         })
         .expect(200)
         .then((res) => {

@@ -107,21 +107,28 @@ exports.runPaletteTestMultiple = (iterations = 10, ...args) => {
 exports.runPaletteTest = (
   questionLanguage,
   answerLanguage,
-  sentenceFormulaSymbol,
+  sentenceFormulaId,
   expected,
   args = {},
   expectedLength,
   returnRes,
-  useDummy = sentenceFormulaSymbol.includes("dummy"),
+  useDummy = sentenceFormulaId.includes("dummy"),
   skipConsoleLog
 ) => {
+  if (
+    sentenceFormulaId.startsWith("dummy") ||
+    /\d/.test(sentenceFormulaId[0])
+  ) {
+    sentenceFormulaId = questionLanguage + "-" + sentenceFormulaId;
+  }
+
   return request(app)
     .get("/api/palette")
     .send({
       questionLanguage,
       answerLanguage,
       useDummy,
-      sentenceFormulaSymbol,
+      sentenceFormulaId,
       ...args,
     })
     .expect(200)

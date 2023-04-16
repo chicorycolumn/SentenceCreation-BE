@@ -271,7 +271,7 @@ exports.sentenceFormulasBank = [
   },
   {
     sentenceFormulaSymbol: "girl didn't have red apple",
-    sentenceFormulaId: "POL-61-neg1",
+    sentenceFormulaId: "POL-61b",
     sentenceStructure: [
       {
         chunkId: "npe-1",
@@ -300,7 +300,7 @@ exports.sentenceFormulasBank = [
   },
   {
     sentenceFormulaSymbol: "red girl didn't have red apple",
-    sentenceFormulaId: "POL-62-neg1",
+    sentenceFormulaId: "POL-62b",
     sentenceStructure: [
       {
         chunkId: "adj-0",
@@ -392,7 +392,7 @@ exports.sentenceFormulasBank = [
   },
   // {
   //   sentenceFormulaSymbol: "girl reads f conditional im pf",
-  //   sentenceFormulaId: "POL-00-63d",
+  //   sentenceFormulaId: "POL-63d",
   //   sentenceStructure: [
   //     {
   //       chunkId: "npe-1",
