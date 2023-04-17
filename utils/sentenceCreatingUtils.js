@@ -723,7 +723,11 @@ exports.processSentenceFormula = (
 
   grandOutputArray.forEach((outputArray, outputArrayIndex) => {
     outputArray.forEach((outputUnit) => {
-      if (gpUtils.getWordtypeStCh(outputUnit.structureChunk) === "fix") {
+      if (
+        ["fix", "par"].includes(
+          gpUtils.getWordtypeStCh(outputUnit.structureChunk)
+        )
+      ) {
         return;
       }
 
@@ -1004,6 +1008,28 @@ exports.buildSentenceString = (
       });
     });
   }
+
+  // STEP X: Programmatic negatives, ie ENG "have been" + "not" should be "have not been"
+  outputArrays.forEach((outputArray) => {
+    if (currentLanguage === "ENG") {
+      let negativeParticleOutputUnits = outputArray.filter(
+        (ou) =>
+          ou.structureChunk.specificIds &&
+          ou.structureChunk.specificIds[0] === "eng-par-001-not"
+      );
+      negativeParticleOutputUnits.forEach((negativeParticleOutputUnit) => {
+        let headUnitOfNegParUnit = outputArray.find(
+          (ou) =>
+            ou.structureChunk.chunkId ===
+            negativeParticleOutputUnit.structureChunk.agreeWith
+        );
+        if (headUnitOfNegParUnit.selectedWord === "is being") {
+          headUnitOfNegParUnit.selectedWord === "is not being";
+          negativeParticleOutputUnit.selectedWord === "";
+        }
+      });
+    }
+  });
 
   // STEP 2: Select word versions for each.
   outputArrays.forEach((outputArr) => {
@@ -1404,7 +1430,9 @@ exports.conformAnswerStructureToQuestionStructure = (
     //
     let questionStructureChunk = questionOutputArrItem.structureChunk;
 
-    if (gpUtils.getWordtypeStCh(questionStructureChunk) === "fix") {
+    if (
+      ["fix", "par"].includes(gpUtils.getWordtypeStCh(questionStructureChunk))
+    ) {
       return;
     }
 

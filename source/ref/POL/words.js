@@ -3327,4 +3327,15 @@ exports.wordsBank = {
     },
   ],
   art: [],
+  par: [
+    {
+      //selectors
+      lemma: "nie",
+      id: "pol-par-001-nie",
+      //notes
+
+      //inflections
+      inflections: { onlyForm: "nie" },
+    },
+  ],
 };

@@ -221,7 +221,7 @@ exports.getBlankEnhancedStructureChunkForThisWordtype = (
 
   // Frontendify-4: Add _info
   stChTraits._info = {};
-  if (wordtype !== "fix") {
+  if (!["fix", "par"].includes(wordtype)) {
     [
       "inheritableInflectionKeys",
       "allowableTransfersFromQuestionStructure",

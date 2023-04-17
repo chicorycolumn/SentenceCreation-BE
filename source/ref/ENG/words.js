@@ -1047,4 +1047,15 @@ exports.wordsBank = {
       },
     },
   ],
+  par: [
+    {
+      //selectors
+      lemma: "not",
+      id: "eng-par-001-not",
+      //notes
+
+      //inflections
+      inflections: { onlyForm: "not" },
+    },
+  ],
 };

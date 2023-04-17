@@ -13,6 +13,25 @@ const { runPaletteTest, runPaletteTestMultiple, checkProportions } =
 describe("/api", function () {
   this.timeout(7000);
 
+  describe("/palette - Stage 29: Programmatic negatives.", () => {
+    it("#pal29-01a GET 200 YES: Engpol.", () => {
+      return runPaletteTest("ENG", "POL", "123a", [
+        {
+          ENG: ["He is not red."],
+          POL: ["Nie jest czerwony.", "On nie jest czerwony."],
+        },
+      ]);
+    });
+    it.only("#pal29-01b GET 200 YES: Poleng. Negative in ENG should move position relative to verb words.", () => {
+      return runPaletteTest("POL", "ENG", "123a", [
+        {
+          ENG: ["He is not red.", "He is not being red."],
+          POL: ["Nie jest czerwony.", "On nie jest czerwony."],
+        },
+      ]);
+    });
+  });
+
   describe("/palette - Stage 28: Correct Polish grammar re gender.", () => {
     it("#pal28-01a GET 200 YES: Engpol. Polish m2 nouns are not virile.", () => {
       return runPaletteTest("ENG", "POL", "dummy75", [

@@ -19,6 +19,10 @@ exports.checkHyper = (lObj, expectedTypes) => {
 };
 
 exports.assessHypernymy = (lObj) => {
+  if (gpUtils.getWordtypeLObj !== "npe") {
+    return;
+  }
+
   let lang = gpUtils.getLanguageFromLemmaObject(lObj);
   if (lang === "DUMMY") {
     return;
@@ -248,6 +252,10 @@ exports.adjustHypernymyProportionOutputUnits = (hypernymy, outputUnits) => {
 };
 
 exports.selectRandOutputUnit = (lObj, stCh, outputUnits) => {
+  if (outputUnits.length === 1) {
+    return outputUnits[0];
+  }
+
   let hypernymy = lfUtils.assessHypernymy(lObj);
 
   if (

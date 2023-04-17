@@ -612,7 +612,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
               "igtc Wasn't expecting originalSitSelectedLObj to be populated yet."
             );
           }
-          if (gpUtils.getWordtypeStCh(stCh) !== "fix") {
+          if (!["fix", "par"].includes(gpUtils.getWordtypeStCh(stCh))) {
             let originalSitSelectedLObj = questionOutputArr.find(
               (ou) => ou.structureChunk.chunkId === stCh.chunkId
             ).selectedLemmaObject;

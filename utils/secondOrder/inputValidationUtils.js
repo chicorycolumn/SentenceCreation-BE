@@ -38,7 +38,7 @@ exports.validateSentenceFormula = (sentenceFormula, lang) => {
       }
 
       if (
-        ["fix"].includes(gpUtils.getWordtypeStCh(structureChunk)) ||
+        ["fix", "par"].includes(gpUtils.getWordtypeStCh(structureChunk)) ||
         reference.needsNoValidation
       ) {
         return;

@@ -145,7 +145,9 @@ exports.updateSentenceStructureWithNewStructureChunksFromOutputUnits = (
       unit.structureChunk
     );
 
-    if (exports.getWordtypeStCh(unit.structureChunk) !== "fix") {
+    if (
+      !["fix", "par"].includes(exports.getWordtypeStCh(unit.structureChunk))
+    ) {
       let hypernymy = assessHypernymy(unit.selectedLemmaObject);
       if (hypernymy) {
         sentenceStructure[indexOfStChToChange].hypernymy = hypernymy;

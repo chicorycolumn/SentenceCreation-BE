@@ -278,6 +278,7 @@ exports.lemmaObjectTraitKeys = {
       // pronombrePOSSESSIVE: ["form", "person", "number", "gender", "number", "gender", "gcase"],
       // art: NONE
       pre: ["form"],
+      par: ["form"],
     },
     inheritableInflectionKeys: {
       nco: ["number", "gcase"],
@@ -292,6 +293,7 @@ exports.lemmaObjectTraitKeys = {
         "tenseDescription",
       ],
       pro: ["person", "number", "gender", "semanticGender", "gcase"],
+      par: [],
     },
     allowableTransfersFromQuestionStructure: {
       nco: ["number"],
@@ -325,6 +327,7 @@ exports.lemmaObjectTraitKeys = {
       pro: ["form", "person", "number", "gender", "gcase"],
       art: ["form", "number", "gender"],
       pre: ["form"],
+      par: ["form"],
     },
     inheritableInflectionKeys: {
       nco: ["number", "gcase"],
@@ -339,6 +342,7 @@ exports.lemmaObjectTraitKeys = {
       ],
       pro: ["person", "number", "gender", "semanticGender", "gcase"],
       art: ["number", "gender"],
+      par: [],
     },
     allowableTransfersFromQuestionStructure: {
       nco: ["number"],
@@ -373,6 +377,7 @@ exports.lemmaObjectTraitKeys = {
       pro: ["form", "person", "number", "gender", "gcase"],
       art: ["form", "number"],
       pre: ["form"],
+      par: ["form"],
     },
     inheritableInflectionKeys: {
       nco: ["number", "gcase"],
@@ -381,6 +386,7 @@ exports.lemmaObjectTraitKeys = {
       ver: ["tense", "person", "number"],
       pro: ["person", "number", "gender", "semanticGender", "gcase"],
       art: ["number"],
+      par: [],
     },
     allowableTransfersFromQuestionStructure: {
       nco: ["number"],
@@ -522,6 +528,7 @@ exports.structureChunkTraits = {
         "pre",
         "art",
         "fix",
+        "par",
       ],
     },
     agreeWith: {
@@ -623,6 +630,7 @@ exports.structureChunkTraits = {
           "verbalNoun",
         ],
         pre: ["onlyForm"],
+        par: ["onlyForm"],
       },
     },
     //
@@ -711,6 +719,7 @@ exports.structureChunkTraits = {
         art: ["definite", "indefinite"],
         ver: ["verbal", "infinitive", "pastParticiple", "gerund"],
         pre: ["onlyForm"],
+        par: ["onlyForm"],
       },
     },
     //
@@ -790,6 +799,7 @@ exports.structureChunkTraits = {
         art: ["definite", "indefinite"],
         ver: ["verbal", "infinitive", "v2", "v3", "thirdPS", "gerund"],
         pre: ["onlyForm"],
+        par: ["onlyForm"],
       },
     },
     //
@@ -945,6 +955,7 @@ exports.defaultTraitValues = {
   npe: { gcase: ["nom"] },
   ver: { form: ["verbal"] },
   pre: { form: ["onlyForm"] },
+  par: { form: ["onlyForm"] },
 };
 
 exports.agreementTraits = [

@@ -10,7 +10,9 @@ exports.checkDecisiveDecant = (questionSentenceData, questionLanguage) => {
   questionSentenceData.questionOutputArr.forEach((outputUnit, index) => {
     if (
       outputUnit.structureChunk.dontSpecifyOnThisChunk ||
-      gpUtils.getWordtypeStCh(outputUnit.structureChunk) === "fix"
+      ["fix", "par"].includes(
+        gpUtils.getWordtypeStCh(outputUnit.structureChunk)
+      )
     ) {
       return;
     }

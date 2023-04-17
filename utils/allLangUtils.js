@@ -473,7 +473,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   const metaTraitValuesRef = refObj.metaTraitValues[currentLanguage];
 
   sentenceStructure.forEach((structureChunk) => {
-    if (gpUtils.getWordtypeStCh(structureChunk) === "fix") {
+    if (["fix", "par"].includes(gpUtils.getWordtypeStCh(structureChunk))) {
       return;
     }
 

@@ -171,7 +171,7 @@ exports.removeAnnotationsByVypernym = (
   questionOutputArr.forEach((questionOutputUnit) => {
     let qStCh = questionOutputUnit.structureChunk;
     if (
-      gpUtils.getWordtypeStCh(qStCh) !== "fix" &&
+      !["fix", "par"].includes(gpUtils.getWordtypeStCh(qStCh)) &&
       lfUtils.checkHyper(questionOutputUnit.selectedLemmaObject, [HY.VY]) &&
       qStCh.annotations &&
       Object.keys(qStCh.annotations).includes("semanticGender")
@@ -910,7 +910,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
     let { selectedLemmaObject, drillPath, structureChunk, selectedWord } =
       outputUnit;
 
-    if (gpUtils.getWordtypeStCh(structureChunk) === "fix") {
+    if (["fix", "par"].includes(gpUtils.getWordtypeStCh(structureChunk))) {
       return;
     }
 
