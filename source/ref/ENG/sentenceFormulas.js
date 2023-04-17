@@ -1,6 +1,5 @@
 exports.sentenceFormulasBank = [
   {
-    sentenceFormulaSymbol: "girl eats apple",
     sentenceFormulaId: "ENG-default",
     sentenceStructure: [
       {
@@ -18,8 +17,7 @@ exports.sentenceFormulasBank = [
     orders: { primary: [["npe-1", "fix-1", "nco-2"]], additional: [] },
   },
   {
-    sentenceFormulaSymbol: "101a girl is reading",
-    sentenceFormulaId: "ENG-101a",
+    sentenceFormulaId: "ENG-101a", // 101a girl is reading
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "the" },
       {
@@ -38,7 +36,6 @@ exports.sentenceFormulasBank = [
     orders: { primary: [["fix-1", "npe-1", "ver-1"]], additional: [] },
   },
   {
-    sentenceFormulaSymbol: "101b girl *reads quickly XYZ", // Doesn't matter that this sentenceFormulaSymbol is different from its POL counterpart.
     sentenceFormulaId: "ENG-101b",
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "the" },
@@ -63,7 +60,6 @@ exports.sentenceFormulasBank = [
     },
   },
   {
-    sentenceFormulaSymbol: "101c girl is reading",
     sentenceFormulaId: "ENG-101c",
     sentenceStructure: [
       { chunkId: "fix-1-the", chunkValue: "the" },
@@ -86,7 +82,6 @@ exports.sentenceFormulasBank = [
     },
   },
   {
-    sentenceFormulaSymbol: "102a I'll read (pf fut)",
     sentenceFormulaId: "ENG-102a",
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "I" },
@@ -101,7 +96,6 @@ exports.sentenceFormulasBank = [
     orders: { primary: [["fix-1", "ver-1"]], additional: [] },
   },
   {
-    sentenceFormulaSymbol: "I read *future 103a",
     sentenceFormulaId: "ENG-103a",
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "I" },
@@ -116,7 +110,6 @@ exports.sentenceFormulasBank = [
     orders: { primary: [["fix-1", "ver-1"]], additional: [] },
   },
   {
-    sentenceFormulaSymbol: "I read *future 103b",
     sentenceFormulaId: "ENG-103b",
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "I" },
@@ -131,7 +124,6 @@ exports.sentenceFormulasBank = [
     orders: { primary: [["fix-1", "ver-1"]], additional: [] },
   },
   {
-    sentenceFormulaSymbol: "I read *future 103c",
     sentenceFormulaId: "ENG-103c",
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "I" },
@@ -146,7 +138,6 @@ exports.sentenceFormulasBank = [
     orders: { primary: [["fix-1", "ver-1"]], additional: [] },
   },
   {
-    sentenceFormulaSymbol: "I read *future 104a",
     sentenceFormulaId: "ENG-104a",
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "I" },
@@ -161,7 +152,6 @@ exports.sentenceFormulasBank = [
     orders: { primary: [["fix-1", "ver-1"]], additional: [] },
   },
   {
-    sentenceFormulaSymbol: "I read *future 104b",
     sentenceFormulaId: "ENG-104b",
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "I" },
@@ -175,7 +165,6 @@ exports.sentenceFormulasBank = [
     orders: { primary: [["fix-1", "ver-1"]], additional: [] },
   },
   {
-    sentenceFormulaSymbol: "I was writing 105a",
     sentenceFormulaId: "ENG-105a",
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "I" },
@@ -190,8 +179,7 @@ exports.sentenceFormulasBank = [
     orders: { primary: [["fix-1", "ver-1"]], additional: [] },
   },
   {
-    sentenceFormulaSymbol: "first conditional 106a",
-    sentenceFormulaId: "ENG-106a",
+    sentenceFormulaId: "ENG-106a", // first conditional 106a
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "if" },
       { chunkId: "fix-2", chunkValue: "you" },
@@ -238,7 +226,6 @@ exports.sentenceFormulasBank = [
     },
   },
   {
-    sentenceFormulaSymbol: "red door",
     sentenceFormulaId: "ENG-107",
     sentenceStructure: [
       { chunkId: "adj-1", agreeWith: "nco-1", andTags: ["colour"] },
@@ -250,7 +237,6 @@ exports.sentenceFormulasBank = [
     orders: { primary: [["adj-1", "nco-1"]], additional: [] },
   },
   {
-    sentenceFormulaSymbol: "red door singular",
     sentenceFormulaId: "ENG-107a",
     sentenceStructure: [
       { chunkId: "adj-1", agreeWith: "nco-1", andTags: ["colour"] },
@@ -263,7 +249,6 @@ exports.sentenceFormulasBank = [
     orders: { primary: [["adj-1", "nco-1"]], additional: [] },
   },
   {
-    sentenceFormulaSymbol: "108 singular I am",
     sentenceFormulaId: "ENG-108",
     sentenceStructure: [
       {
@@ -281,7 +266,6 @@ exports.sentenceFormulasBank = [
     orders: { primary: [["pro-1", "ver-1"]], additional: [] },
   },
   {
-    sentenceFormulaSymbol: "109 doc wrote p",
     sentenceFormulaId: "ENG-109",
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "the" },
@@ -300,8 +284,7 @@ exports.sentenceFormulasBank = [
     },
   },
   {
-    sentenceFormulaSymbol: "109a doc was writing p",
-    sentenceFormulaId: "ENG-109a",
+    sentenceFormulaId: "ENG-109a", // doc was writing p
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "the" },
       { chunkId: "npe-1", number: ["singular"], andTags: ["job"] },
@@ -319,8 +302,7 @@ exports.sentenceFormulasBank = [
     },
   },
   {
-    sentenceFormulaSymbol: "109b docs wrote p",
-    sentenceFormulaId: "ENG-109b",
+    sentenceFormulaId: "ENG-109b", // docs wrote p
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "the" },
       { chunkId: "npe-1", number: ["plural"], andTags: ["job"] },
@@ -338,8 +320,7 @@ exports.sentenceFormulasBank = [
     },
   },
   {
-    sentenceFormulaSymbol: "109c docs were writing p",
-    sentenceFormulaId: "ENG-109c",
+    sentenceFormulaId: "ENG-109c", // docs were writing p
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "the" },
       { chunkId: "npe-1", number: ["plural"], andTags: ["job"] },
@@ -357,7 +338,6 @@ exports.sentenceFormulasBank = [
     },
   },
   {
-    sentenceFormulaSymbol: "110 the woman read me a book",
     sentenceFormulaId: "ENG-110",
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "the" },
@@ -390,7 +370,6 @@ exports.sentenceFormulasBank = [
     },
   },
   {
-    sentenceFormulaSymbol: "111a I am",
     sentenceFormulaId: "ENG-111a",
     sentenceStructure: [
       {
@@ -408,7 +387,6 @@ exports.sentenceFormulasBank = [
     orders: { primary: [["pro-1", "ver-1"]], additional: [] },
   },
   {
-    sentenceFormulaSymbol: "111b I was",
     sentenceFormulaId: "ENG-111b",
     sentenceStructure: [
       {
@@ -426,7 +404,6 @@ exports.sentenceFormulasBank = [
     orders: { primary: [["pro-1", "ver-1"]], additional: [] },
   },
   {
-    sentenceFormulaSymbol: "111c you were",
     sentenceFormulaId: "ENG-111c",
     sentenceStructure: [
       {
@@ -444,8 +421,7 @@ exports.sentenceFormulasBank = [
     orders: { primary: [["pro-1", "ver-1"]], additional: [] },
   },
   {
-    sentenceFormulaSymbol: "112 familymember gave me things",
-    sentenceFormulaId: "ENG-112",
+    sentenceFormulaId: "ENG-112", // familymember gave me things
     sentenceStructure: [
       {
         chunkId: "npe-1",
@@ -482,8 +458,7 @@ exports.sentenceFormulasBank = [
     },
   },
   {
-    sentenceFormulaSymbol: "112a familymember gave me thing",
-    sentenceFormulaId: "ENG-112a",
+    sentenceFormulaId: "ENG-112a", // familymember gave me thing
     sentenceStructure: [
       {
         chunkId: "npe-1",
@@ -521,8 +496,7 @@ exports.sentenceFormulasBank = [
     },
   },
   {
-    sentenceFormulaSymbol: "113 my father gave me a book",
-    sentenceFormulaId: "ENG-113",
+    sentenceFormulaId: "ENG-113", // my father gave me a book
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -577,8 +551,7 @@ exports.sentenceFormulasBank = [
     },
   },
   {
-    sentenceFormulaSymbol: "113a my father gave me his book",
-    sentenceFormulaId: "ENG-113a",
+    sentenceFormulaId: "ENG-113a", // my father gave me his book
     sentenceStructure: [
       {
         chunkId: "pro-1-We",
@@ -632,8 +605,7 @@ exports.sentenceFormulasBank = [
     },
   },
   {
-    sentenceFormulaSymbol: "113b my child gave me his book",
-    sentenceFormulaId: "ENG-113b",
+    sentenceFormulaId: "ENG-113b", // my child gave me his book
     sentenceStructure: [
       {
         chunkId: "pro-1-We",
@@ -690,8 +662,7 @@ exports.sentenceFormulasBank = [
     },
   },
   {
-    sentenceFormulaSymbol: "113c my child gave me his book",
-    sentenceFormulaId: "ENG-113c",
+    sentenceFormulaId: "ENG-113c", // my child gave me his book
     sentenceStructure: [
       {
         chunkId: "pro-1-We",
@@ -746,8 +717,7 @@ exports.sentenceFormulasBank = [
     },
   },
   {
-    sentenceFormulaSymbol: "114 doctor gave me her book",
-    sentenceFormulaId: "ENG-114",
+    sentenceFormulaId: "ENG-114", // doctor gave me her book
     sentenceStructure: [
       { chunkId: "fix-1a", chunkValue: "the" },
       { chunkId: "fix-1b", chunkValue: "a" },
@@ -811,8 +781,7 @@ exports.sentenceFormulasBank = [
     },
   },
   {
-    sentenceFormulaSymbol: "115 I saw my doctor and her doctor",
-    sentenceFormulaId: "ENG-115",
+    sentenceFormulaId: "ENG-115", // I saw my doctor and her doctor
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -865,8 +834,7 @@ exports.sentenceFormulasBank = [
     },
   },
   {
-    sentenceFormulaSymbol: "116b My doctor was a woman specifically",
-    sentenceFormulaId: "ENG-116b",
+    sentenceFormulaId: "ENG-116b", // My doctor was a woman specifically
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -909,8 +877,7 @@ exports.sentenceFormulasBank = [
     },
   },
   {
-    sentenceFormulaSymbol: "116c My doctor was a woman/man/person",
-    sentenceFormulaId: "ENG-116c",
+    sentenceFormulaId: "ENG-116c", // My doctor was a woman/man/person
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -952,8 +919,7 @@ exports.sentenceFormulasBank = [
     },
   },
   {
-    sentenceFormulaSymbol: "116y My doctor",
-    sentenceFormulaId: "ENG-116y",
+    sentenceFormulaId: "ENG-116y", // My doctor
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -977,8 +943,7 @@ exports.sentenceFormulasBank = [
     orders: { primary: [["pro-2-my", "npe-1-doctor"]], additional: [] },
   },
   {
-    sentenceFormulaSymbol: "116x My doctor was a woman",
-    sentenceFormulaId: "ENG-116x",
+    sentenceFormulaId: "ENG-116x", // My doctor was a woman
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1021,8 +986,7 @@ exports.sentenceFormulasBank = [
     },
   },
   {
-    sentenceFormulaSymbol: "116a My doctor's doctor was a woman specifically",
-    sentenceFormulaId: "ENG-116a",
+    sentenceFormulaId: "ENG-116a", // My doctor's doctor was a woman specifically
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1076,8 +1040,7 @@ exports.sentenceFormulasBank = [
     },
   },
   {
-    sentenceFormulaSymbol: "117 I was a doctor",
-    sentenceFormulaId: "ENG-117",
+    sentenceFormulaId: "ENG-117", // I was a doctor
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1107,8 +1070,7 @@ exports.sentenceFormulasBank = [
     },
   },
   {
-    sentenceFormulaSymbol: "117a I* was a doctor",
-    sentenceFormulaId: "ENG-117a",
+    sentenceFormulaId: "ENG-117a", // I* was a doctor
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1138,8 +1100,7 @@ exports.sentenceFormulasBank = [
     },
   },
   {
-    sentenceFormulaSymbol: "117aa I** was a doctor",
-    sentenceFormulaId: "ENG-117aa",
+    sentenceFormulaId: "ENG-117aa", // 117aa I** was a doctor
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1168,7 +1129,6 @@ exports.sentenceFormulasBank = [
     },
   },
   {
-    sentenceFormulaSymbol: "117b I was here",
     sentenceFormulaId: "ENG-117b",
     sentenceStructure: [
       {
@@ -1190,7 +1150,6 @@ exports.sentenceFormulasBank = [
     },
   },
   {
-    sentenceFormulaSymbol: "117c I am here",
     sentenceFormulaId: "ENG-117c",
     sentenceStructure: [
       {
@@ -1212,8 +1171,7 @@ exports.sentenceFormulasBank = [
     },
   },
   {
-    sentenceFormulaSymbol: "118 My doctor and his book",
-    sentenceFormulaId: "ENG-118",
+    sentenceFormulaId: "ENG-118", // My doctor and his book
     sentenceStructure: [
       {
         chunkId: "pro-0-I",
@@ -1253,8 +1211,7 @@ exports.sentenceFormulasBank = [
     },
   },
   {
-    sentenceFormulaSymbol: "118a My doctor and my book",
-    sentenceFormulaId: "ENG-118a",
+    sentenceFormulaId: "ENG-118a", // My doctor and my book
     sentenceStructure: [
       {
         chunkId: "pro-0-I",
@@ -1293,7 +1250,6 @@ exports.sentenceFormulasBank = [
     },
   },
   {
-    sentenceFormulaSymbol: "118b My doctor",
     sentenceFormulaId: "ENG-118b",
     sentenceStructure: [
       {
@@ -1317,7 +1273,6 @@ exports.sentenceFormulasBank = [
     orders: { primary: [["pro-1-my", "npe-1-doctor"]], additional: [] },
   },
   {
-    sentenceFormulaSymbol: "118c My onion",
     sentenceFormulaId: "ENG-118c",
     sentenceStructure: [
       {
@@ -1341,7 +1296,6 @@ exports.sentenceFormulasBank = [
     orders: { primary: [["pro-1-my", "nco-1-onion"]], additional: [] },
   },
   {
-    sentenceFormulaSymbol: "119 Woman saw me",
     sentenceFormulaId: "ENG-119",
     sentenceStructure: [
       {
@@ -1371,7 +1325,6 @@ exports.sentenceFormulasBank = [
     },
   },
   {
-    sentenceFormulaSymbol: "120 Doctor saw me",
     sentenceFormulaId: "ENG-120",
     sentenceStructure: [
       {
@@ -1405,7 +1358,6 @@ exports.sentenceFormulasBank = [
     },
   },
   {
-    sentenceFormulaSymbol: "121 I read* a book",
     sentenceFormulaId: "ENG-121",
     sentenceStructure: [
       {
@@ -1444,7 +1396,6 @@ exports.sentenceFormulasBank = [
     },
   },
   {
-    sentenceFormulaSymbol: "122 The doctor writes",
     sentenceFormulaId: "ENG-122",
     sentenceStructure: [
       {
@@ -1468,7 +1419,6 @@ exports.sentenceFormulasBank = [
     },
   },
   {
-    sentenceFormulaSymbol: "123 I am red",
     sentenceFormulaId: "ENG-123",
     sentenceStructure: [
       {
@@ -1493,8 +1443,7 @@ exports.sentenceFormulasBank = [
     },
   },
   {
-    sentenceFormulaSymbol: "124a I was a good doctor",
-    sentenceFormulaId: "ENG-124a",
+    sentenceFormulaId: "ENG-124a", // I was a good doctor
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1531,8 +1480,7 @@ exports.sentenceFormulasBank = [
     },
   },
   {
-    sentenceFormulaSymbol: "124b I was a good person",
-    sentenceFormulaId: "ENG-124b",
+    sentenceFormulaId: "ENG-124b", // I was a good person
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1569,8 +1517,7 @@ exports.sentenceFormulasBank = [
     },
   },
   {
-    sentenceFormulaSymbol: "124c I was a good man/woman/person",
-    sentenceFormulaId: "ENG-124c",
+    sentenceFormulaId: "ENG-124c", // I was a good man/woman/person
     sentenceStructure: [
       {
         chunkId: "pro-1-I",

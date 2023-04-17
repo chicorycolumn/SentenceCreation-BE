@@ -1,6 +1,5 @@
 exports.sentenceFormulasBank = [
   {
-    sentenceFormulaSymbol: "symb1",
     sentenceFormulaId: "ENG-90-901a",
     equivalents: { POL: ["POL-90-901a"] },
     sentenceStructure: [
@@ -26,7 +25,6 @@ exports.sentenceFormulasBank = [
     orders: { primary: [["fix-1", "npe-1", "ver-1"]], additional: [] },
   },
   {
-    sentenceFormulaSymbol: "symb1",
     sentenceFormulaId: "ENG-90-901b",
     equivalents: { POL: ["POL-90-901b"] },
     sentenceStructure: [
@@ -56,8 +54,7 @@ exports.sentenceFormulasBank = [
     },
   },
   {
-    sentenceFormulaSymbol: "102a I'll read (pf fut)",
-    sentenceFormulaId: "ENG-90-902a",
+    sentenceFormulaId: "ENG-90-902a", // I'll read (pf fut)
     equivalents: { POL: ["POL-90-902a"] },
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "I" },
@@ -72,8 +69,7 @@ exports.sentenceFormulasBank = [
     orders: { primary: [["fix-1", "ver-1"]], additional: [] },
   },
   {
-    sentenceFormulaSymbol: "102a I'll read",
-    sentenceFormulaId: "ENG-90-902a",
+    sentenceFormulaId: "ENG-90-902a", // I'll read
     equivalents: { POL: ["POL-90-902a"] },
     sentenceStructure: [],
     orders: { primary: [], additional: [] },

@@ -276,9 +276,8 @@ exports.checkSentenceFormulaIds = (envir, currentLanguage) => {
   }
 
   let duplicateIds = findDuplicates(0);
-  let duplicateSymbols = findDuplicates(1);
 
-  return { schematic, duplicateIds, duplicateSymbols };
+  return { schematic, duplicateIds };
 };
 
 exports.getWordsBank = (currentLanguage, envir = "ref") => {
