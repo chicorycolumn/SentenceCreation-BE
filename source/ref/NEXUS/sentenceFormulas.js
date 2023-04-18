@@ -319,7 +319,55 @@ exports.sentenceFormulas = [
   },
   {
     key: "SF-0054",
-    equivalents: { ENG: ["ENG-123a"], POL: ["POL-123a"], SPA: [] },
+    equivalents: { ENG: ["ENG-123aa"], POL: ["POL-123aa"], SPA: [] },
+    topics: [],
+    difficulty: 0,
+  },
+  {
+    key: "SF-0055",
+    equivalents: {
+      ENG: ["ENG-123ab", "ENG-123da", "ENG-123db"],
+      POL: ["POL-123ab"],
+      SPA: [],
+    },
+    topics: [],
+    difficulty: 0,
+  },
+  {
+    key: "SF-0056",
+    equivalents: { ENG: ["ENG-123ba"], POL: ["POL-123ba"], SPA: [] },
+    topics: [],
+    difficulty: 0,
+  },
+  {
+    key: "SF-0057",
+    equivalents: {
+      ENG: ["ENG-123bb", "ENG-123ea", "ENG-123eb"],
+      POL: ["POL-123bb"],
+      SPA: [],
+    },
+    topics: [],
+    difficulty: 0,
+  },
+  {
+    key: "SF-0058",
+    equivalents: { ENG: ["ENG-123ca"], POL: ["POL-123ca"], SPA: [] },
+    topics: [],
+    difficulty: 0,
+  },
+  {
+    key: "SF-0058",
+    equivalents: {
+      ENG: ["ENG-123cb", "ENG-123fa", "ENG-123fb"],
+      POL: ["POL-123cb"],
+      SPA: [],
+    },
+    topics: [],
+    difficulty: 0,
+  },
+  {
+    key: "SF-0059",
+    equivalents: { ENG: ["ENG-123aaa"], POL: ["POL-123aaa"], SPA: [] },
     topics: [],
     difficulty: 0,
   },

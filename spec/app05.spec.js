@@ -14,21 +14,199 @@ describe("/api", function () {
   this.timeout(7000);
 
   describe("/palette - Stage 29: Programmatic negatives.", () => {
-    it("#pal29-01a GET 200 YES: Engpol.", () => {
-      return runPaletteTest("ENG", "POL", "123a", [
-        {
-          ENG: ["He is not red."],
-          POL: ["Nie jest czerwony.", "On nie jest czerwony."],
-        },
-      ]);
+    describe("#pal29-01 Negative Be (simple).", () => {
+      it("#pal29-01a GET 200 YES: Engpol.", () => {
+        return runPaletteTest("ENG", "POL", "123aa", [
+          {
+            ENG: ["He is not red."],
+            POL: ["Nie jest czerwony.", "On nie jest czerwony."],
+          },
+        ]);
+      });
+      it("#pal29-01b GET 200 YES: Poleng. Negative in ENG should move position relative to verb words.", () => {
+        return runPaletteTest("POL", "ENG", "123aa", [
+          {
+            POL: ["Nie jest czerwony.", "On nie jest czerwony."],
+            ENG: ["He is not red.", "He is not being red."],
+          },
+        ]);
+      });
+      it("#pal29-01a(i) GET 200 YES: Engpol.", () => {
+        return runPaletteTest("ENG", "POL", "123aaa", [
+          {
+            ENG: ["He is not here."],
+            POL: ["Nie jest tutaj.", "On nie jest tutaj."],
+          },
+        ]);
+      });
+      it("#pal29-01b(ii) GET 200 YES: Poleng. Negative in ENG should move position relative to verb words.", () => {
+        return runPaletteTest("POL", "ENG", "123aaa", [
+          {
+            POL: ["Nie jest (male) tutaj.", "On nie jest tutaj."],
+            ENG: ["He is not here.", "He is not being here."],
+          },
+        ]);
+      });
+      it("#pal29-01c GET 200 YES: Engpol.", () => {
+        return runPaletteTest("ENG", "POL", "123ab", [
+          {
+            ENG: ["He was not red."],
+            POL: ["Nie był czerwony.", "On nie był czerwony."],
+          },
+        ]);
+      });
+      it("#pal29-01d GET 200 YES: Poleng. Negative in ENG should move position relative to verb words.", () => {
+        return runPaletteTest("POL", "ENG", "123ab", [
+          {
+            POL: ["Nie był czerwony.", "On nie był czerwony."],
+            ENG: [
+              "He was not red.",
+              "He was not being red.",
+              "He has not been red.",
+              "He had not been red.",
+            ],
+          },
+        ]);
+      });
     });
-    it("#pal29-01b GET 200 YES: Poleng. Negative in ENG should move position relative to verb words.", () => {
-      return runPaletteTest("POL", "ENG", "123a", [
-        {
-          ENG: ["He is not red.", "He is not being red."],
-          POL: ["Nie jest czerwony.", "On nie jest czerwony."],
-        },
-      ]);
+    describe("#pal29-02 Negative Have (simple).", () => {
+      it("#pal29-02a GET 200 YES: Engpol.", () => {
+        return runPaletteTest("ENG", "POL", "123ba", [
+          {
+            ENG: ["He does not have apples."],
+            POL: ["Nie ma jabłek.", "On nie ma jabłek."],
+          },
+        ]);
+      });
+      it("#pal29-02b GET 200 YES: Poleng. Negative in ENG should move position relative to verb words.", () => {
+        return runPaletteTest("POL", "ENG", "123ba", [
+          {
+            POL: ["Nie ma (male) jabłek.", "On nie ma jabłek."],
+            ENG: [
+              "He does not have apples.",
+              "He is not having apples.", // alpha but to remove this stative error.
+            ],
+          },
+        ]);
+      });
+      it("#pal29-02c GET 200 YES: Engpol.", () => {
+        return runPaletteTest("ENG", "POL", "123bb", [
+          {
+            ENG: ["He did not have apples."],
+            POL: ["Nie miał jabłek.", "On nie miał jabłek."],
+          },
+        ]);
+      });
+      it("#pal29-02d GET 200 YES: Poleng. Negative in ENG should move position relative to verb words.", () => {
+        return runPaletteTest("POL", "ENG", "123bb", [
+          {
+            POL: ["Nie miał jabłek.", "On nie miał jabłek."],
+            ENG: [
+              "He did not have apples.",
+              "He was not having apples.", // alpha but to remove this stative error.
+              "He has not had apples.",
+              "He had not had apples.",
+            ],
+          },
+        ]);
+      });
+    });
+    describe("#pal29-03 Negative Write (simple).", () => {
+      it("#pal29-03a GET 200 YES: Engpol.", () => {
+        return runPaletteTest("ENG", "POL", "123ca", [
+          {
+            ENG: ["He does not write."],
+            POL: ["Nie pisze.", "On nie pisze."],
+          },
+        ]);
+      });
+      it("#pal29-03b GET 200 YES: Poleng. Negative in ENG should move position relative to verb words.", () => {
+        return runPaletteTest("POL", "ENG", "123ca", [
+          {
+            POL: ["Nie pisze (male).", "On nie pisze."],
+            ENG: ["He does not write.", "He is not writing."],
+          },
+        ]);
+      });
+      it("#pal29-03c GET 200 YES: Engpol.", () => {
+        return runPaletteTest("ENG", "POL", "123cb", [
+          {
+            ENG: ["He did not write."],
+            POL: ["Nie napisał.", "On nie napisał."],
+          },
+        ]);
+      });
+      it("#pal29-03d GET 200 YES: Poleng. Negative in ENG should move position relative to verb words.", () => {
+        return runPaletteTest("POL", "ENG", "123cb", [
+          {
+            POL: ["Nie napisał.", "On nie napisał."],
+            ENG: [
+              "He did not write.",
+              "He has not written.",
+              "He had not written.",
+            ],
+          },
+        ]);
+      });
+    });
+    describe("#pal29-04 Negative Be (perfect).", () => {
+      it("#pal29-04a GET 200 YES: Engpol.", () => {
+        return runPaletteTest("ENG", "POL", "123da", [
+          {
+            ENG: ["He has not been red."],
+            POL: ["Nie był czerwony.", "On nie był czerwony."],
+          },
+        ]);
+      });
+      it("#pal29-04c GET 200 YES: Engpol.", () => {
+        return runPaletteTest("ENG", "POL", "123db", [
+          {
+            ENG: ["He had not been red."],
+            POL: ["Nie był czerwony.", "On nie był czerwony."],
+          },
+        ]);
+      });
+    });
+    describe("#pal29-05 Negative Have (perfect).", () => {
+      it("#pal29-05a GET 200 YES: Engpol.", () => {
+        return runPaletteTest("ENG", "POL", "123ea", [
+          {
+            ENG: ["He has not had apples."],
+            POL: ["Nie miał jabłek.", "On nie miał jabłek."],
+          },
+        ]);
+      });
+      it("#pal29-05c GET 200 YES: Engpol.", () => {
+        return runPaletteTest("ENG", "POL", "123eb", [
+          {
+            ENG: ["He had not had apples."],
+            POL: ["Nie miał jabłek.", "On nie miał jabłek."],
+          },
+        ]);
+      });
+    });
+    describe("#pal29-06 Negative Write (perfect).", () => {
+      it("#pal29-06a GET 200 YES: Engpol.", () => {
+        return runPaletteTest("ENG", "POL", "123fa", [
+          {
+            ENG: ["He has not written."],
+            POL: [
+              "Nie napisał.",
+              "On nie napisał.",
+              "Nie pisał.",
+              "On nie pisał.",
+            ],
+          },
+        ]);
+      });
+      it("#pal29-06c GET 200 YES: Engpol.", () => {
+        return runPaletteTest("ENG", "POL", "123fb", [
+          {
+            ENG: ["He had not written."],
+            POL: ["Nie napisał.", "On nie napisał."],
+          },
+        ]);
+      });
     });
   });
 

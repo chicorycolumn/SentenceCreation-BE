@@ -55,6 +55,19 @@ const haveNot = {
   future: ["will not have", "will have not"],
   conditional: ["would not have", "would have not"],
 };
+const doo = {
+  past: "did",
+  present: { main: "do", "3PS": "does" },
+  future: "will do",
+  conditional: "would do",
+};
+const dooNot = {
+  past: "did not",
+  present: { main: "do not", "3PS": "does not" },
+  future: "will not do",
+  conditional: "would not do",
+};
+
 let inflectionRef = {
   person: ["1per", "2per", "3per"],
   number: ["singular", "plural"],
@@ -156,37 +169,55 @@ const _fetchTenseDescriptionAdhocForms = (
   tenseDescriptionTraitKeyForRefObj = dataToUpdateWith.tenseDescription
 ) => {
   let { infinitive, v2, v3, thirdPS, gerund } = lObj.inflections;
-  let { person, number, tenseDescription, negative } = dataToUpdateWith; //These are used in engTenseDescriptionRef
+  let { person, number, tenseDescription, negative } = dataToUpdateWith; //These are used in tenseDescRef
   let tenseDescriptionTraitKeyForStructureChunk =
     dataToUpdateWith.tenseDescription;
 
-  //This does have to be defined in here.
-  let beRef = negative ? beNot : be;
-  let haveRef = negative ? haveNot : have;
-
-  const engTenseDescriptionRef = {
+  const tenseDescRefPositive = {
     "past simple": [v2],
-    "past continuous": [beRef["past"][person][number] + " " + gerund],
-    "past perfect": [haveRef["past"] + " " + v3],
+    "past continuous": [be["past"][person][number] + " " + gerund],
+    "past perfect": [have["past"] + " " + v3],
     "present simple 3PS": [thirdPS],
     "present simple": [infinitive],
-    "present continuous": [beRef["present"][person][number] + " " + gerund],
-    "present perfect": [haveRef["present"][person][number] + " " + v3],
+    "present continuous": [be["present"][person][number] + " " + gerund],
+    "present perfect": [have["present"][person][number] + " " + v3],
     "future simple": ["will" + " " + infinitive],
     "future compound": [
-      beRef["present"][person][number] + " " + "going to" + " " + infinitive,
+      be["present"][person][number] + " " + "going to" + " " + infinitive,
     ],
-    "future continuous": [beRef["future"] + " " + gerund],
+    "future continuous": [be["future"] + " " + gerund],
     "future compound continuous": [
-      beRef["present"][person][number] + " " + "going to be" + " " + gerund,
+      be["present"][person][number] + " " + "going to be" + " " + gerund,
     ],
-    "future perfect": [haveRef["future"] + " " + v3],
+    "future perfect": [have["future"] + " " + v3],
     // conditional: ["would" + " " + infinitive],
     "conditional simple": ["would" + " " + infinitive],
-    "conditional continuous": [beRef["conditional"] + " " + gerund],
-    "conditional perfect": [haveRef["conditional"] + " " + v3],
+    "conditional continuous": [be["conditional"] + " " + gerund],
+    "conditional perfect": [have["conditional"] + " " + v3],
     imperative: [infinitive],
-    "negative imperative": ["don't" + " " + infinitive],
+  };
+  const tenseDescRefNegative = {
+    "past simple": [dooNot["past"] + " " + infinitive],
+    "past continuous": [beNot["past"][person][number] + " " + gerund],
+    "past perfect": [haveNot["past"] + " " + v3],
+    "present simple 3PS": [dooNot["present"]["3PS"] + " " + infinitive],
+    "present simple": [dooNot["present"]["main"] + " " + infinitive],
+    "present continuous": [beNot["present"][person][number] + " " + gerund],
+    "present perfect": [haveNot["present"][person][number] + " " + v3],
+    "future simple": ["will not" + " " + infinitive],
+    "future compound": [
+      beNot["present"][person][number] + " " + "going to" + " " + infinitive,
+    ],
+    "future continuous": [beNot["future"] + " " + gerund],
+    "future compound continuous": [
+      beNot["present"][person][number] + " " + "going to be" + " " + gerund,
+    ],
+    "future perfect": [haveNot["future"] + " " + v3],
+    // conditional: ["would not" + " " + infinitive],
+    "conditional simple": ["would not" + " " + infinitive],
+    "conditional continuous": [beNot["conditional"] + " " + gerund],
+    "conditional perfect": [haveNot["conditional"] + " " + v3],
+    imperative: ["do not " + infinitive],
   };
   const subsequentTenseDescRef = {
     "cond0 condition": ["present simple"],
@@ -204,6 +235,8 @@ const _fetchTenseDescriptionAdhocForms = (
     "cond3 outcome": ["conditional perfect"],
   };
 
+  let tenseDescRef = negative ? tenseDescRefNegative : tenseDescRefPositive;
+
   Object.keys(subsequentTenseDescRef).forEach((tenseDescInflectionKey) => {
     let convertedTenseDescInflectionKeys =
       subsequentTenseDescRef[tenseDescInflectionKey];
@@ -211,7 +244,7 @@ const _fetchTenseDescriptionAdhocForms = (
     let tenseDescInflectionValues = [];
     convertedTenseDescInflectionKeys.forEach(
       (convertedTenseDescInflectionKey) => {
-        engTenseDescriptionRef[convertedTenseDescInflectionKey].forEach(
+        tenseDescRef[convertedTenseDescInflectionKey].forEach(
           (tenseDescInflectionValue) => {
             tenseDescInflectionValues.push(tenseDescInflectionValue);
           }
@@ -219,14 +252,14 @@ const _fetchTenseDescriptionAdhocForms = (
       }
     );
 
-    engTenseDescriptionRef[tenseDescInflectionKey] = tenseDescInflectionValues;
+    tenseDescRef[tenseDescInflectionKey] = tenseDescInflectionValues;
   });
 
   _addToResArrAdhocForms(
     resArr,
     "tenseDescription",
     tenseDescriptionTraitKeyForStructureChunk,
-    engTenseDescriptionRef[tenseDescriptionTraitKeyForRefObj],
+    tenseDescRef[tenseDescriptionTraitKeyForRefObj],
     structureChunk,
     dataToUpdateWith
   );

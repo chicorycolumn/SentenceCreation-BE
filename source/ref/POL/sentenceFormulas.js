@@ -1727,7 +1727,7 @@ exports.sentenceFormulasBank = [
     },
   },
   {
-    sentenceFormulaId: "POL-123a",
+    sentenceFormulaId: "POL-123aa",
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1752,6 +1752,165 @@ exports.sentenceFormulasBank = [
     orders: {
       primary: [["ver-1-am", "adj-1-red"]],
       additional: [["pro-1-I", "ver-1-am", "adj-1-red"]],
+    },
+  },
+  {
+    sentenceFormulaId: "POL-123aaa",
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificIds: ["pol-pro-PERSONAL"],
+        person: ["3per"],
+        gender: ["m1"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-am",
+        specificIds: ["pol-ver-011-być"],
+        agreeWith: "pro-1-I",
+        tenseDescription: ["present im"],
+        negative: true,
+      },
+      {
+        chunkId: "fix-1-here",
+        chunkValue: "tutaj",
+      },
+    ],
+    orders: {
+      primary: [["ver-1-am", "fix-1-here"]],
+      additional: [["pro-1-I", "ver-1-am", "fix-1-here"]],
+    },
+  },
+  {
+    sentenceFormulaId: "POL-123ab",
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificIds: ["pol-pro-PERSONAL"],
+        person: ["3per"],
+        gender: ["m1"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-am",
+        specificIds: ["pol-ver-011-być"],
+        agreeWith: "pro-1-I",
+        tenseDescription: ["past im"],
+        negative: true,
+      },
+      {
+        chunkId: "adj-1-red",
+        specificIds: ["pol-adj-011-czerwony"],
+        agreeWith: "pro-1-I",
+      },
+    ],
+    orders: {
+      primary: [["ver-1-am", "adj-1-red"]],
+      additional: [["pro-1-I", "ver-1-am", "adj-1-red"]],
+    },
+  },
+  {
+    sentenceFormulaId: "POL-123ba",
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificIds: ["pol-pro-PERSONAL"],
+        person: ["3per"],
+        gender: ["m1"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-am",
+        specificIds: ["pol-ver-012-mieć"],
+        agreeWith: "pro-1-I",
+        tenseDescription: ["present im"],
+        negative: true,
+      },
+      {
+        chunkId: "nco-1-apple",
+        specificIds: ["pol-nco-014-jabłko"],
+        number: ["plural"],
+        gcase: ["gen"],
+      },
+    ],
+    orders: {
+      primary: [["ver-1-am", "nco-1-apple"]],
+      additional: [["pro-1-I", "ver-1-am", "nco-1-apple"]],
+    },
+  },
+  {
+    sentenceFormulaId: "POL-123bb",
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificIds: ["pol-pro-PERSONAL"],
+        person: ["3per"],
+        gender: ["m1"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-am",
+        specificIds: ["pol-ver-012-mieć"],
+        agreeWith: "pro-1-I",
+        tenseDescription: ["past im"],
+        negative: true,
+      },
+      {
+        chunkId: "nco-1-apple",
+        specificIds: ["pol-nco-014-jabłko"],
+        number: ["plural"],
+        gcase: ["gen"],
+      },
+    ],
+    orders: {
+      primary: [["ver-1-am", "nco-1-apple"]],
+      additional: [["pro-1-I", "ver-1-am", "nco-1-apple"]],
+    },
+  },
+  {
+    sentenceFormulaId: "POL-123ca",
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificIds: ["pol-pro-PERSONAL"],
+        person: ["3per"],
+        gender: ["m1"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-am",
+        specificIds: ["pol-ver-015-pisać"],
+        agreeWith: "pro-1-I",
+        tenseDescription: ["present im"],
+        negative: true,
+      },
+    ],
+    orders: {
+      primary: [["ver-1-am"]],
+      additional: [["pro-1-I", "ver-1-am"]],
+    },
+  },
+  {
+    sentenceFormulaId: "POL-123cb",
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificIds: ["pol-pro-PERSONAL"],
+        person: ["3per"],
+        gender: ["m1"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-am",
+        specificIds: ["pol-ver-015-pisać"],
+        agreeWith: "pro-1-I",
+        tenseDescription: ["past pf"],
+        negative: true,
+      },
+    ],
+    orders: {
+      primary: [["ver-1-am"]],
+      additional: [["pro-1-I", "ver-1-am"]],
     },
   },
   {

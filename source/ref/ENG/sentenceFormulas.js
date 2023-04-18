@@ -1443,7 +1443,7 @@ exports.sentenceFormulasBank = [
     },
   },
   {
-    sentenceFormulaId: "ENG-123a",
+    sentenceFormulaId: "ENG-123aa",
     sentenceStructure: [
       {
         chunkId: "pro-1-I",
@@ -1467,6 +1467,310 @@ exports.sentenceFormulasBank = [
     ],
     orders: {
       primary: [["pro-1-I", "ver-1-am", "adj-1-red"]],
+    },
+  },
+  {
+    sentenceFormulaId: "ENG-123aaa",
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificIds: ["eng-pro-PERSONAL"],
+        gender: ["m"],
+        person: ["3per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-am",
+        specificIds: ["eng-ver-001-be"],
+        agreeWith: "pro-1-I",
+        tenseDescription: ["present simple"],
+        negative: true,
+      },
+      {
+        chunkId: "fix-1-here",
+        chunkValue: "here",
+      },
+    ],
+    orders: {
+      primary: [["pro-1-I", "ver-1-am", "fix-1-here"]],
+    },
+  },
+  {
+    sentenceFormulaId: "ENG-123ab",
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificIds: ["eng-pro-PERSONAL"],
+        gender: ["m"],
+        person: ["3per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-am",
+        specificIds: ["eng-ver-001-be"],
+        agreeWith: "pro-1-I",
+        tenseDescription: ["past simple"],
+        negative: true,
+      },
+      {
+        chunkId: "adj-1-red",
+        specificIds: ["eng-adj-001-red"],
+        agreeWith: "pro-1-I",
+      },
+    ],
+    orders: {
+      primary: [["pro-1-I", "ver-1-am", "adj-1-red"]],
+    },
+  },
+  {
+    sentenceFormulaId: "ENG-123ba",
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificIds: ["eng-pro-PERSONAL"],
+        gender: ["m"],
+        person: ["3per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-am",
+        specificIds: ["eng-ver-002-have"],
+        agreeWith: "pro-1-I",
+        tenseDescription: ["present simple"],
+        negative: true,
+      },
+      {
+        chunkId: "nco-1-apple",
+        specificIds: ["eng-nco-004-apple"],
+        number: ["plural"],
+      },
+    ],
+    orders: {
+      primary: [["pro-1-I", "ver-1-am", "nco-1-apple"]],
+    },
+  },
+  {
+    sentenceFormulaId: "ENG-123bb",
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificIds: ["eng-pro-PERSONAL"],
+        gender: ["m"],
+        person: ["3per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-am",
+        specificIds: ["eng-ver-002-have"],
+        agreeWith: "pro-1-I",
+        tenseDescription: ["past simple"],
+        negative: true,
+      },
+      {
+        chunkId: "nco-1-apple",
+        specificIds: ["eng-nco-004-apple"],
+        number: ["plural"],
+      },
+    ],
+    orders: {
+      primary: [["pro-1-I", "ver-1-am", "nco-1-apple"]],
+    },
+  },
+  {
+    sentenceFormulaId: "ENG-123ca",
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificIds: ["eng-pro-PERSONAL"],
+        gender: ["m"],
+        person: ["3per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-am",
+        specificIds: ["eng-ver-005-write"],
+        agreeWith: "pro-1-I",
+        tenseDescription: ["present simple"],
+        negative: true,
+      },
+    ],
+    orders: {
+      primary: [["pro-1-I", "ver-1-am"]],
+    },
+  },
+  {
+    sentenceFormulaId: "ENG-123cb",
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificIds: ["eng-pro-PERSONAL"],
+        gender: ["m"],
+        person: ["3per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-am",
+        specificIds: ["eng-ver-005-write"],
+        agreeWith: "pro-1-I",
+        tenseDescription: ["past simple"],
+        negative: true,
+      },
+    ],
+    orders: {
+      primary: [["pro-1-I", "ver-1-am"]],
+    },
+  },
+
+  {
+    sentenceFormulaId: "ENG-123da",
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificIds: ["eng-pro-PERSONAL"],
+        gender: ["m"],
+        person: ["3per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-am",
+        specificIds: ["eng-ver-001-be"],
+        agreeWith: "pro-1-I",
+        tenseDescription: ["present perfect"],
+        negative: true,
+      },
+      {
+        chunkId: "adj-1-red",
+        specificIds: ["eng-adj-001-red"],
+        agreeWith: "pro-1-I",
+      },
+    ],
+    orders: {
+      primary: [["pro-1-I", "ver-1-am", "adj-1-red"]],
+    },
+  },
+  {
+    sentenceFormulaId: "ENG-123db",
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificIds: ["eng-pro-PERSONAL"],
+        gender: ["m"],
+        person: ["3per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-am",
+        specificIds: ["eng-ver-001-be"],
+        agreeWith: "pro-1-I",
+        tenseDescription: ["past perfect"],
+        negative: true,
+      },
+      {
+        chunkId: "adj-1-red",
+        specificIds: ["eng-adj-001-red"],
+        agreeWith: "pro-1-I",
+      },
+    ],
+    orders: {
+      primary: [["pro-1-I", "ver-1-am", "adj-1-red"]],
+    },
+  },
+  {
+    sentenceFormulaId: "ENG-123ea",
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificIds: ["eng-pro-PERSONAL"],
+        gender: ["m"],
+        person: ["3per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-am",
+        specificIds: ["eng-ver-002-have"],
+        agreeWith: "pro-1-I",
+        tenseDescription: ["present perfect"],
+        negative: true,
+      },
+      {
+        chunkId: "nco-1-apple",
+        specificIds: ["eng-nco-004-apple"],
+        number: ["plural"],
+      },
+    ],
+    orders: {
+      primary: [["pro-1-I", "ver-1-am", "nco-1-apple"]],
+    },
+  },
+  {
+    sentenceFormulaId: "ENG-123eb",
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificIds: ["eng-pro-PERSONAL"],
+        gender: ["m"],
+        person: ["3per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-am",
+        specificIds: ["eng-ver-002-have"],
+        agreeWith: "pro-1-I",
+        tenseDescription: ["past perfect"],
+        negative: true,
+      },
+      {
+        chunkId: "nco-1-apple",
+        specificIds: ["eng-nco-004-apple"],
+        number: ["plural"],
+      },
+    ],
+    orders: {
+      primary: [["pro-1-I", "ver-1-am", "nco-1-apple"]],
+    },
+  },
+  {
+    sentenceFormulaId: "ENG-123fa",
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificIds: ["eng-pro-PERSONAL"],
+        gender: ["m"],
+        person: ["3per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-am",
+        specificIds: ["eng-ver-005-write"],
+        agreeWith: "pro-1-I",
+        tenseDescription: ["present perfect"],
+        negative: true,
+      },
+    ],
+    orders: {
+      primary: [["pro-1-I", "ver-1-am"]],
+    },
+  },
+  {
+    sentenceFormulaId: "ENG-123fb",
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificIds: ["eng-pro-PERSONAL"],
+        gender: ["m"],
+        person: ["3per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-am",
+        specificIds: ["eng-ver-005-write"],
+        agreeWith: "pro-1-I",
+        tenseDescription: ["past perfect"],
+        negative: true,
+      },
+    ],
+    orders: {
+      primary: [["pro-1-I", "ver-1-am"]],
     },
   },
   {
