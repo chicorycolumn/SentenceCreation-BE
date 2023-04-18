@@ -1273,6 +1273,15 @@ exports.selectWordVersions = (
       firstStageAnnotationsObj,
     } = outputUnit;
 
+    if (currentLanguage === "POL") {
+      if (
+        gpUtils.getWordtypeStCh(structureChunk) === "ver" &&
+        structureChunk.negative
+      ) {
+        selectedWord = "nie " + selectedWord;
+      }
+    }
+
     if (shouldConsoleLog) {
       consol.log("[1;33m " + `nilu selectWordVersions----------------` + "[0m");
       consol.log("[1;33m " + `selectedWord` + "[0m", selectedWord);

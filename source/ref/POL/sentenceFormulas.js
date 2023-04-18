@@ -1727,6 +1727,34 @@ exports.sentenceFormulasBank = [
     },
   },
   {
+    sentenceFormulaId: "POL-123a",
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificIds: ["pol-pro-PERSONAL"],
+        person: ["3per"],
+        gender: ["m1"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-am",
+        specificIds: ["pol-ver-011-być"],
+        agreeWith: "pro-1-I",
+        tenseDescription: ["present im"],
+        negative: true,
+      },
+      {
+        chunkId: "adj-1-red",
+        specificIds: ["pol-adj-011-czerwony"],
+        agreeWith: "pro-1-I",
+      },
+    ],
+    orders: {
+      primary: [["ver-1-am", "adj-1-red"]],
+      additional: [["pro-1-I", "ver-1-am", "adj-1-red"]],
+    },
+  },
+  {
     sentenceFormulaId: "POL-124a", // I was a good doctor
     sentenceStructure: [
       {

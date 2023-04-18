@@ -207,7 +207,8 @@ exports.listCounterfaxSituations = (questionOutputArr, languagesObj) => {
           )
         );
 
-        ["gender", "semanticGender"].forEach((genderTraitKey) => {
+        let genderKeyArr = ["gender", "semanticGender"];
+        genderKeyArr.forEach((genderTraitKey) => {
           if (annoTraitKey === genderTraitKey) {
             let tempObj = {
               gender: counterfactualTraitValuesForThisTraitKey,

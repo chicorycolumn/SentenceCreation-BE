@@ -599,6 +599,11 @@ exports.structureChunkTraits = {
         "tenseDescription",
       ],
     },
+    negative: {
+      expectedTypeOnStCh: "boolean",
+      compatibleWordtypes: ["ver"],
+      // isLexical: true,
+    },
   },
   POL: {
     //

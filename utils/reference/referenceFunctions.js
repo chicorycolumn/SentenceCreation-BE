@@ -80,6 +80,11 @@ exports.assignDefaultTraitValuesOrPossibleTraitValues = (
       traitKey,
       alsoUseStChTraitsFromAll
     );
+  consol.logSpecial(
+    1,
+    `kmrb assignDefaultTraitValuesOrPossibleTraitValues Now "${stCh.chunkId}"'s "${traitKey}" is`,
+    defaultTraitValuesOrPossibleTraitValues
+  );
   stCh[traitKey] = defaultTraitValuesOrPossibleTraitValues;
 };
 

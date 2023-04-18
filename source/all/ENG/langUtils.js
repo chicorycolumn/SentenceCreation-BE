@@ -21,6 +21,20 @@ const be = {
   future: "will be",
   conditional: "would be",
 };
+const beNot = {
+  past: {
+    "1per": { singular: "was not", plural: "were not" },
+    "2per": { singular: "were not", plural: "were not" },
+    "3per": { singular: "was not", plural: "were not" },
+  },
+  present: {
+    "1per": { singular: "am not", plural: "are not" },
+    "2per": { singular: "are not", plural: "are not" },
+    "3per": { singular: "is not", plural: "are not" },
+  },
+  future: "will not be",
+  conditional: "would not be",
+};
 const have = {
   past: "had",
   present: {
@@ -30,6 +44,16 @@ const have = {
   },
   future: "will have",
   conditional: "would have",
+};
+const haveNot = {
+  past: "had not",
+  present: {
+    "1per": { singular: "have not", plural: "have not" },
+    "2per": { singular: "have not", plural: "have not" },
+    "3per": { singular: "has not", plural: "have not" },
+  },
+  future: ["will not have", "will have not"],
+  conditional: ["would not have", "would have not"],
 };
 let inflectionRef = {
   person: ["1per", "2per", "3per"],
@@ -75,12 +99,13 @@ const _addToResArrAdhocForms = (
   if (dataToUpdateWith) {
     Object.keys(dataToUpdateWith).forEach((traitKey) => {
       let traitValue = dataToUpdateWith[traitKey];
-
-      lfUtils.updateStructureChunkByAdhocOnly(
-        structureChunkCopy,
-        traitKey,
-        traitValue
-      );
+      if (traitValue) {
+        lfUtils.updateStructureChunkByAdhocOnly(
+          structureChunkCopy,
+          traitKey,
+          traitValue
+        );
+      }
     });
   } else {
     //If I am given no dataToUpdateWith, then I assume you want me to select random
@@ -131,32 +156,35 @@ const _fetchTenseDescriptionAdhocForms = (
   tenseDescriptionTraitKeyForRefObj = dataToUpdateWith.tenseDescription
 ) => {
   let { infinitive, v2, v3, thirdPS, gerund } = lObj.inflections;
-  let { person, number, tenseDescription } = dataToUpdateWith; //These are used in engTenseDescriptionRef
+  let { person, number, tenseDescription, negative } = dataToUpdateWith; //These are used in engTenseDescriptionRef
   let tenseDescriptionTraitKeyForStructureChunk =
     dataToUpdateWith.tenseDescription;
 
   //This does have to be defined in here.
+  let beRef = negative ? beNot : be;
+  let haveRef = negative ? haveNot : have;
+
   const engTenseDescriptionRef = {
     "past simple": [v2],
-    "past continuous": [be["past"][person][number] + " " + gerund],
-    "past perfect": [have["past"] + " " + v3],
+    "past continuous": [beRef["past"][person][number] + " " + gerund],
+    "past perfect": [haveRef["past"] + " " + v3],
     "present simple 3PS": [thirdPS],
     "present simple": [infinitive],
-    "present continuous": [be["present"][person][number] + " " + gerund],
-    "present perfect": [have["present"][person][number] + " " + v3],
+    "present continuous": [beRef["present"][person][number] + " " + gerund],
+    "present perfect": [haveRef["present"][person][number] + " " + v3],
     "future simple": ["will" + " " + infinitive],
     "future compound": [
-      be["present"][person][number] + " " + "going to" + " " + infinitive,
+      beRef["present"][person][number] + " " + "going to" + " " + infinitive,
     ],
-    "future continuous": [be.future + " " + gerund],
+    "future continuous": [beRef["future"] + " " + gerund],
     "future compound continuous": [
-      be["present"][person][number] + " " + "going to be" + " " + gerund,
+      beRef["present"][person][number] + " " + "going to be" + " " + gerund,
     ],
-    "future perfect": [have.future + " " + v3],
+    "future perfect": [haveRef["future"] + " " + v3],
     // conditional: ["would" + " " + infinitive],
     "conditional simple": ["would" + " " + infinitive],
-    "conditional continuous": [be.conditional + " " + gerund],
-    "conditional perfect": [have.conditional + " " + v3],
+    "conditional continuous": [beRef["conditional"] + " " + gerund],
+    "conditional perfect": [haveRef["conditional"] + " " + v3],
     imperative: [infinitive],
     "negative imperative": ["don't" + " " + infinitive],
   };
@@ -493,6 +521,8 @@ exports.generateAdhocForms = (
       tenseDescriptionArr,
     });
 
+    let negative = structureChunk.negative;
+
     structureChunk.person.forEach((person) => {
       structureChunk.number.forEach((number) => {
         tenseDescriptionArr.forEach((tenseDescription) => {
@@ -500,6 +530,7 @@ exports.generateAdhocForms = (
             person,
             number,
             tenseDescription,
+            negative,
           };
 
           if (
@@ -520,16 +551,18 @@ exports.generateAdhocForms = (
 
             let tense = tenseDescription.split(" ")[0];
 
+            let beRef = negative ? beNot : be;
+
             consol.log(
               "wmcp generateAdhocForms giving _addToResArrAdhocForms this selectedWordArr",
-              [be[tense][person][number]]
+              [beRef[tense][person][number]]
             );
 
             _addToResArrAdhocForms(
               resArr,
               "tenseDescription",
               tenseDescription,
-              [be[tense][person][number]],
+              [beRef[tense][person][number]],
               structureChunk,
               dataToUpdateWith
             );
