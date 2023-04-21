@@ -1146,7 +1146,7 @@ describe("/api", function () {
           );
         });
     });
-    it("#pal06-06 GET 200 YES: Battery RSWAT Poleng. Ensure genderProportion masc and fem randomly selected at ~50/50 rate, despite there being thrice as many masculine genders as feminine.", () => {
+    it("#pal06-06a GET 200 YES: Battery RSWAT Poleng. Ensure genderProportion masc and fem randomly selected at ~50/50 rate, despite there being thrice as many masculine genders as feminine.", () => {
       return runPaletteTestMultiple(
         100,
         "POL",
@@ -1165,7 +1165,7 @@ describe("/api", function () {
         ]);
       });
     });
-    it("#pal06-06 GET 200 YES: Battery RSWAT Poleng. Ensure genderProportion masc and fem randomly selected at ~50/50 rate, despite there being thrice as many masculine genders as feminine.", () => {
+    it("#pal06-06b GET 200 YES: Battery RSWAT Poleng. Ensure genderProportion masc and fem randomly selected at ~50/50 rate, despite there being thrice as many masculine genders as feminine.", () => {
       return runPaletteTestMultiple(
         100,
         "POL",
@@ -1903,8 +1903,6 @@ describe("/api", function () {
     it("#pal08-03c GET 200 YES: Conjugate ENG 'have' future, it SHOULD give fut cont.", () => {
       return runPaletteTest("ENG", null, "dummy54c", [
         "I will have.",
-        "I will be having.",
-        "I am going to be having.",
         "I will have had.",
       ]);
     });

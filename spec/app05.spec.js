@@ -82,10 +82,15 @@ describe("/api", function () {
         return runPaletteTest("POL", "ENG", "123ba", [
           {
             POL: ["Nie ma (male) jabłek.", "On nie ma jabłek."],
-            ENG: [
-              "He does not have apples.",
-              "He is not having apples.", // alpha but to remove this stative error.
-            ],
+            ENG: ["He does not have apples."],
+          },
+        ]);
+      });
+      it("#pal29-02b(ii) GET 200 YES: Poleng. stativeOverrideFalse.", () => {
+        return runPaletteTest("POL", "ENG", "123baa", [
+          {
+            POL: ["Nie ma (male) jabłek.", "On nie ma jabłek."],
+            ENG: ["He does not have apples.", "He is not having apples."],
           },
         ]);
       });
@@ -103,7 +108,6 @@ describe("/api", function () {
             POL: ["Nie miał jabłek.", "On nie miał jabłek."],
             ENG: [
               "He did not have apples.",
-              "He was not having apples.", // alpha but to remove this stative error.
               "He has not had apples.",
               "He had not had apples.",
             ],
@@ -125,6 +129,14 @@ describe("/api", function () {
           {
             POL: ["Nie pisze (male).", "On nie pisze."],
             ENG: ["He does not write.", "He is not writing."],
+          },
+        ]);
+      });
+      it("#pal29-03b(ii) GET 200 YES: Poleng. stativeOverrideTrue.", () => {
+        return runPaletteTest("POL", "ENG", "123caa", [
+          {
+            POL: ["Nie pisze (male).", "On nie pisze."],
+            ENG: ["He does not write."],
           },
         ]);
       });

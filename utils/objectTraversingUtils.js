@@ -229,7 +229,7 @@ exports.findMatchingLemmaObjectThenWord = (
     }
   }
 
-  //    (Ad-PW-I): Pathway for Adhoc INFLECTIONS.
+  //    (Ad-PW-I): Pathway for Adhoc INFLECTIONS. eg ENG tenseDescription
   if (
     Object.keys(adhocInflectionRef).includes(
       gpUtils.getWordtypeStCh(structureChunk)
@@ -547,6 +547,11 @@ exports.findMatchingLemmaObjectThenWord = (
           selectedLemmaObject
         );
 
+        allLangUtils.removeContinuousTenseDescFromStative(
+          selectedLemmaObject,
+          structureChunk
+        );
+
         allLangUtils.addHiddenNumberToTantumStChs(
           selectedLemmaObject,
           structureChunk
@@ -641,6 +646,11 @@ exports.findMatchingLemmaObjectThenWord = (
         matchesCopy,
         structureChunk,
         currentLanguage
+      );
+
+      allLangUtils.removeContinuousTenseDescFromStative(
+        selectedLemmaObject,
+        structureChunk
       );
 
       allLangUtils.addHiddenNumberToTantumStChs(

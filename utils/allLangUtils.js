@@ -59,6 +59,32 @@ exports.tweakStructureChunks = (matches, structureChunk, currentLanguage) => {
   });
 };
 
+exports.removeContinuousTenseDescFromStative = (lObj, stCh) => {
+  const _isUnwantedStative = (lObj, stCh, tenseDesc) => {
+    if (
+      tenseDesc.includes("continuous") &&
+      (stCh.stativeOverrideTrue ||
+        (lfUtils.isStative(lObj) && !stCh.stativeOverrideFalse))
+    ) {
+      return true;
+    }
+  };
+
+  if (!stCh.tenseDescription || !stCh.tenseDescription.length) {
+    return;
+  }
+
+  let unwantedTenseDescArr = stCh.tenseDescription.filter((td) =>
+    _isUnwantedStative(lObj, stCh, td)
+  );
+
+  if (unwantedTenseDescArr.length) {
+    stCh.tenseDescription = stCh.tenseDescription.filter(
+      (td) => !unwantedTenseDescArr.includes(td)
+    );
+  }
+};
+
 exports.enforceThirdPersonAgreeWith = (stCh, onlyIfUnpopulated) => {
   if (
     ["agreeWith", "postHocAgreeWithPrimary"].some(

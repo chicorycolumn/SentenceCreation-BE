@@ -1771,19 +1771,19 @@ describe("/api", function () {
     it("#pal14A-01d GET 200 YES: Poleng. I have my onion.", () => {
       let ref = [
         {
-          ENG: ["I have my onion.", "I am having my onion."],
+          ENG: ["I have my onion."],
           POL: "Ja mam moją cebulę.",
         },
         {
-          ENG: ["We have our onion.", "We are having our onion."],
+          ENG: ["We have our onion."],
           POL: "My mamy naszą cebulę.",
         },
         {
-          ENG: ["I have my onions.", "I am having my onions."],
+          ENG: ["I have my onions."],
           POL: "Ja mam moje cebule.",
         },
         {
-          ENG: ["We have our onions.", "We are having our onions."],
+          ENG: ["We have our onions."],
           POL: "My mamy nasze cebule.",
         },
       ];

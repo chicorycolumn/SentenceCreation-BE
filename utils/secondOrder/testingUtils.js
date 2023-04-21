@@ -172,29 +172,29 @@ exports.generalTranslatedSentencesRef = {
   },
   have_withClarifiers_QlangPOL: {
     "POL->ENG": [
-      { POL: "Masz.", ENG: ["You have.", "You are having."] },
-      { POL: "Macie.", ENG: ["You have.", "You are having."] },
+      { POL: "Masz.", ENG: ["You have."] },
+      { POL: "Macie.", ENG: ["You have."] },
     ],
   },
   have_withPronombres_withClarifiers_QlangPOL: {
     "POL->ENG": [
-      { POL: "Masz.", ENG: ["You have.", "You are having."] },
-      { POL: "Macie.", ENG: ["You have.", "You are having."] },
+      { POL: "Masz.", ENG: ["You have."] },
+      { POL: "Macie.", ENG: ["You have."] },
       {
         POL: "Miałeś.",
-        ENG: ["You had.", "You were having.", "You have had.", "You had had."],
+        ENG: ["You had.", "You have had.", "You had had."],
       },
       {
         POL: "Miałaś.",
-        ENG: ["You had.", "You were having.", "You have had.", "You had had."],
+        ENG: ["You had.", "You have had.", "You had had."],
       },
       {
         POL: "Miałyście.",
-        ENG: ["You had.", "You were having.", "You have had.", "You had had."],
+        ENG: ["You had.", "You have had.", "You had had."],
       },
       {
         POL: "Mieliście.",
-        ENG: ["You had.", "You were having.", "You have had.", "You had had."],
+        ENG: ["You had.", "You have had.", "You had had."],
       },
     ],
   },
@@ -202,17 +202,17 @@ exports.generalTranslatedSentencesRef = {
     "POL->ENG": [
       {
         POL: "Masz.",
-        ENG: ["You (singular) have.", "You (singular) are having."],
+        ENG: ["You (singular) have."],
       },
       {
         POL: "Macie.",
-        ENG: ["You (plural) have.", "You (plural) are having."],
+        ENG: ["You (plural) have."],
       },
       {
         POL: "Miałeś.",
         ENG: [
           "You (singular) had.",
-          "You (singular) were having.",
+
           "You (singular) have had.",
           "You (singular) had had.",
         ],
@@ -221,7 +221,7 @@ exports.generalTranslatedSentencesRef = {
         POL: "Miałaś.",
         ENG: [
           "You (singular) had.",
-          "You (singular) were having.",
+
           "You (singular) have had.",
           "You (singular) had had.",
         ],
@@ -230,7 +230,7 @@ exports.generalTranslatedSentencesRef = {
         POL: "Miałyście.",
         ENG: [
           "You (plural) had.",
-          "You (plural) were having.",
+
           "You (plural) have had.",
           "You (plural) had had.",
         ],
@@ -239,7 +239,7 @@ exports.generalTranslatedSentencesRef = {
         POL: "Mieliście.",
         ENG: [
           "You (plural) had.",
-          "You (plural) were having.",
+
           "You (plural) have had.",
           "You (plural) had had.",
         ],
@@ -250,92 +250,70 @@ exports.generalTranslatedSentencesRef = {
     "POL->ENG": [
       {
         POL: "Będę miał.",
-        ENG: [
-          "I will have.",
-          "I am going to have.",
-          "I will have had.",
-          "I will be having.",
-          "I am going to be having.",
-        ],
+        ENG: ["I will have.", "I am going to have.", "I will have had."],
       },
       {
         POL: "Będę mieć.",
-        ENG: [
-          "I will have.",
-          "I am going to have.",
-          "I will have had.",
-          "I will be having.",
-          "I am going to be having.",
-        ],
+        ENG: ["I will have.", "I am going to have.", "I will have had."],
       },
 
-      { POL: "Mam.", ENG: ["I have.", "I am having."] },
-      { POL: "Masz.", ENG: ["You have.", "You are having."] },
-      { POL: "Ma.", ENG: ["She has.", "She is having."] },
-      { POL: "Mamy.", ENG: ["We have.", "We are having."] },
-      { POL: "Macie.", ENG: ["You have.", "You are having."] },
-      { POL: "Mają.", ENG: ["They have.", "They are having."] },
+      { POL: "Mam.", ENG: ["I have."] },
+      { POL: "Masz.", ENG: ["You have."] },
+      { POL: "Ma.", ENG: ["She has."] },
+      { POL: "Mamy.", ENG: ["We have."] },
+      { POL: "Macie.", ENG: ["You have."] },
+      { POL: "Mają.", ENG: ["They have."] },
       {
         POL: "Miałem.",
-        ENG: ["I had.", "I was having.", "I have had.", "I had had."],
+        ENG: ["I had.", "I have had.", "I had had."],
       },
       {
         POL: "Miałam.",
-        ENG: ["I had.", "I was having.", "I have had.", "I had had."],
+        ENG: ["I had.", "I have had.", "I had had."],
       },
       {
         POL: "Miałeś.",
-        ENG: ["You had.", "You were having.", "You have had.", "You had had."],
+        ENG: ["You had.", "You have had.", "You had had."],
       },
       {
         POL: "Miałaś.",
-        ENG: ["You had.", "You were having.", "You have had.", "You had had."],
+        ENG: ["You had.", "You have had.", "You had had."],
       },
       {
         POL: "Miał.",
-        ENG: ["He had.", "He was having.", "He has had.", "He had had."],
+        ENG: ["He had.", "He has had.", "He had had."],
       },
       {
         POL: "Miała.",
-        ENG: ["She had.", "She was having.", "She has had.", "She had had."],
+        ENG: ["She had.", "She has had.", "She had had."],
       },
       {
         POL: "Miało.",
-        ENG: ["It had.", "It was having.", "It has had.", "It had had."],
+        ENG: ["It had.", "It has had.", "It had had."],
       },
       {
         POL: "Miałyśmy.",
-        ENG: ["We had.", "We were having.", "We have had.", "We had had."],
+        ENG: ["We had.", "We have had.", "We had had."],
       },
       {
         POL: "Mieliśmy.",
-        ENG: ["We had.", "We were having.", "We have had.", "We had had."],
+        ENG: ["We had.", "We have had.", "We had had."],
       },
       {
         POL: "Miałyście.",
-        ENG: ["You had.", "You were having.", "You have had.", "You had had."],
+        ENG: ["You had.", "You have had.", "You had had."],
       },
       {
         POL: "Mieliście.",
-        ENG: ["You had.", "You were having.", "You have had.", "You had had."],
+        ENG: ["You had.", "You have had.", "You had had."],
       },
       {
         POL: "Miały.",
-        ENG: [
-          "They had.",
-          "They were having.",
-          "They have had.",
-          "They had had.",
-        ],
+        ENG: ["They had.", "They have had.", "They had had."],
       },
       {
         POL: "Mieli.",
-        ENG: [
-          "They had.",
-          "They were having.",
-          "They have had.",
-          "They had had.",
-        ],
+        ENG: ["They had.", "They have had.", "They had had."],
       },
     ],
   },
@@ -345,48 +323,48 @@ exports.generalTranslatedSentencesRef = {
       //POL: present im
       // ENG: Present Simple
       // ENG: Present Continuous
-      { POL: "Mam.", ENG: ["Have.", "Am having."] },
-      { POL: "Masz.", ENG: ["Have.", "Are having."] },
-      { POL: "Ma.", ENG: ["Has.", "Is having."] },
-      { POL: "Mamy.", ENG: ["Have.", "Are having."] },
-      { POL: "Macie.", ENG: ["Have.", "Are having."] },
-      { POL: "Mają.", ENG: ["Have.", "Are having."] },
-      { POL: "Miałem.", ENG: ["Had.", "Was having.", "Have had.", "Had had."] },
-      { POL: "Miałam.", ENG: ["Had.", "Was having.", "Have had.", "Had had."] },
+      { POL: "Mam.", ENG: ["Have."] },
+      { POL: "Masz.", ENG: ["Have."] },
+      { POL: "Ma.", ENG: ["Has."] },
+      { POL: "Mamy.", ENG: ["Have."] },
+      { POL: "Macie.", ENG: ["Have."] },
+      { POL: "Mają.", ENG: ["Have."] },
+      { POL: "Miałem.", ENG: ["Had.", "Have had.", "Had had."] },
+      { POL: "Miałam.", ENG: ["Had.", "Have had.", "Had had."] },
       {
         POL: "Miałeś.",
-        ENG: ["Had.", "Were having.", "Have had.", "Had had."],
+        ENG: ["Had.", "Have had.", "Had had."],
       },
       {
         POL: "Miałaś.",
-        ENG: ["Had.", "Were having.", "Have had.", "Had had."],
+        ENG: ["Had.", "Have had.", "Had had."],
       },
-      { POL: "Miał.", ENG: ["Had.", "Was having.", "Have had.", "Had had."] },
-      { POL: "Miała.", ENG: ["Had.", "Was having.", "Have had.", "Had had."] },
-      { POL: "Miało.", ENG: ["Had.", "Was having.", "Have had.", "Had had."] },
+      { POL: "Miał.", ENG: ["Had.", "Have had.", "Had had."] },
+      { POL: "Miała.", ENG: ["Had.", "Have had.", "Had had."] },
+      { POL: "Miało.", ENG: ["Had.", "Have had.", "Had had."] },
       {
         POL: "Miałyśmy.",
-        ENG: ["Had.", "Were having.", "Have had.", "Had had."],
+        ENG: ["Had.", "Have had.", "Had had."],
       },
       {
         POL: "Mieliśmy.",
-        ENG: ["Had.", "Were having.", "Have had.", "Had had."],
+        ENG: ["Had.", "Have had.", "Had had."],
       },
       {
         POL: "Miałyście.",
-        ENG: ["Had.", "Were having.", "Have had.", "Had had."],
+        ENG: ["Had.", "Have had.", "Had had."],
       },
       {
         POL: "Mieliście.",
-        ENG: ["Had.", "Were having.", "Have had.", "Had had."],
+        ENG: ["Had.", "Have had.", "Had had."],
       },
       {
         POL: "Miały.",
-        ENG: ["Had.", "Were having.", "Have had.", "Had had."],
+        ENG: ["Had.", "Have had.", "Had had."],
       },
       {
         POL: "Mieli.",
-        ENG: ["Had.", "Were having.", "Have had.", "Had had."],
+        ENG: ["Had.", "Have had.", "Had had."],
       },
     ],
   },

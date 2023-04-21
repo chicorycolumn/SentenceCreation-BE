@@ -341,6 +341,12 @@ exports.sentenceFormulas = [
   },
   {
     key: "SF-0057",
+    equivalents: { ENG: ["ENG-123baa"], POL: ["POL-123baa"], SPA: [] },
+    topics: [],
+    difficulty: 0,
+  },
+  {
+    key: "SF-0058",
     equivalents: {
       ENG: ["ENG-123bb", "ENG-123ea", "ENG-123eb"],
       POL: ["POL-123bb"],
@@ -350,13 +356,19 @@ exports.sentenceFormulas = [
     difficulty: 0,
   },
   {
-    key: "SF-0058",
+    key: "SF-0059",
     equivalents: { ENG: ["ENG-123ca"], POL: ["POL-123ca"], SPA: [] },
     topics: [],
     difficulty: 0,
   },
   {
-    key: "SF-0058",
+    key: "SF-0060",
+    equivalents: { ENG: ["ENG-123caa"], POL: ["POL-123caa"], SPA: [] },
+    topics: [],
+    difficulty: 0,
+  },
+  {
+    key: "SF-0061",
     equivalents: {
       ENG: ["ENG-123cb", "ENG-123fa", "ENG-123fb"],
       POL: ["POL-123cb"],
@@ -366,7 +378,7 @@ exports.sentenceFormulas = [
     difficulty: 0,
   },
   {
-    key: "SF-0059",
+    key: "SF-0062",
     equivalents: { ENG: ["ENG-123aaa"], POL: ["POL-123aaa"], SPA: [] },
     topics: [],
     difficulty: 0,
