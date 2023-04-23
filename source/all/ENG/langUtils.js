@@ -52,8 +52,8 @@ const haveNot = {
     "2per": { singular: "have not", plural: "have not" },
     "3per": { singular: "has not", plural: "have not" },
   },
-  future: ["will not have", "will have not"],
-  conditional: ["would not have", "would have not"],
+  future: ["will not have", "will have not"], // Added special handling in haveNotRef given this is array.
+  conditional: ["would not have", "would have not"], // Added special handling in haveNotRef given this is array.
 };
 const doo = {
   past: "did",
@@ -212,11 +212,11 @@ const _fetchTenseDescriptionAdhocForms = (
     "future compound continuous": [
       beNot["present"][person][number] + " " + "going to be" + " " + gerund,
     ],
-    "future perfect": [haveNot["future"] + " " + v3],
+    "future perfect": haveNot["future"].map((x) => x + " " + v3),
     // conditional: ["would not" + " " + infinitive],
     "conditional simple": ["would not" + " " + infinitive],
     "conditional continuous": [beNot["conditional"] + " " + gerund],
-    "conditional perfect": [haveNot["conditional"] + " " + v3],
+    "conditional perfect": haveNot["conditional"].map((x) => x + " " + v3),
     imperative: ["do not " + infinitive],
   };
   const subsequentTenseDescRef = {
@@ -627,7 +627,20 @@ exports.generateAdhocForms = (
         });
       });
     });
-    return resArr;
+    let expandedResArr = [];
+
+    resArr.forEach((resArrItem) => {
+      if (resArrItem.selectedWordArr.length > 1) {
+        resArrItem.selectedWordArr.forEach((selectedWord) => {
+          let copyResArrItem = uUtils.copyWithoutReference(resArrItem);
+          copyResArrItem.selectedWordArr = [selectedWord];
+          expandedResArr.push(copyResArrItem);
+        });
+      } else {
+        expandedResArr.push(resArrItem);
+      }
+    });
+    return expandedResArr;
   }
 };
 

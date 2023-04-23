@@ -1914,6 +1914,92 @@ exports.sentenceFormulasBank = [
     },
   },
   {
+    sentenceFormulaId: "POL-123g",
+    sentenceStructure: [
+      {
+        form: ["pronombre"],
+        person: ["1per"],
+        number: ["singular"],
+        specificIds: ["pol-pro-PERSONAL"],
+        chunkId: "pro-0-ja",
+      },
+      {
+        form: ["determiner"],
+        specificIds: ["pol-pro-POSSESSIVE"],
+        chunkId: "pro-1-my",
+        agreeWith: "pro-0-ja",
+        agreeWith2: "nco-1-onion",
+      },
+      {
+        number: ["singular"],
+        gcase: ["nom"],
+        specificIds: ["pol-nco-012-cebula"],
+        chunkId: "nco-1-onion",
+      },
+      {
+        negative: true,
+        tenseDescription: ["future im"],
+        specificIds: ["pol-ver-011-być"],
+        chunkId: "ver-1-is",
+        agreeWith: "nco-1-onion",
+      },
+      {
+        gcase: ["ins"],
+        formulaImportantTraitKeys: ["gcase"],
+        specificIds: ["pol-adj-011-czerwony"],
+        chunkId: "adj-1-blue",
+        agreeWith: "nco-1-onion",
+      },
+    ],
+    orders: {
+      primary: [["pro-1-my", "nco-1-onion", "ver-1-is", "adj-1-blue"]],
+      additional: [],
+    },
+  },
+  {
+    sentenceFormulaId: "POL-123h",
+    sentenceStructure: [
+      {
+        form: ["pronombre"],
+        person: ["1per"],
+        number: ["singular"],
+        specificIds: ["pol-pro-PERSONAL"],
+        chunkId: "pro-0-ja",
+      },
+      {
+        form: ["determiner"],
+        specificIds: ["pol-pro-POSSESSIVE"],
+        chunkId: "pro-1-my",
+        agreeWith: "pro-0-ja",
+        agreeWith2: "nco-1-onion",
+      },
+      {
+        number: ["singular"],
+        gcase: ["nom"],
+        specificIds: ["pol-nco-012-cebula"],
+        chunkId: "nco-1-onion",
+      },
+      {
+        negative: true,
+        tenseDescription: ["future im"],
+        specificIds: ["pol-ver-011-być"],
+        chunkId: "ver-1-is",
+        agreeWith: "nco-1-onion",
+      },
+      {
+        gcase: ["ins"],
+        formulaImportantTraitKeys: ["gcase"],
+        specificIds: ["pol-adj-011-czerwony"],
+        chunkId: "adj-1-blue",
+        agreeWith: "nco-1-onion",
+      },
+    ],
+    orders: {
+      primary: [["pro-1-my", "nco-1-onion", "ver-1-is", "adj-1-blue"]],
+      additional: [],
+    },
+  },
+  {
     sentenceFormulaId: "POL-124a", // I was a good doctor
     sentenceStructure: [
       {

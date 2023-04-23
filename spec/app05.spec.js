@@ -208,6 +208,40 @@ describe("/api", function () {
         ]);
       });
     });
+    describe("#pal29-07 Negative Be (future).", () => {
+      it.only("#pal29-07a GET 200 YES: Engpol.", () => {
+        return runPaletteTest("ENG", "POL", "123g", [
+          {
+            ENG: ["My onion will not be red."],
+            POL: ["Moja cebula nie będzie czerwoną."],
+          },
+        ]);
+      });
+      it("#pal29-07b GET 200 YES: Poleng.", () => {
+        return runPaletteTest("POL", "ENG", "123g", [
+          {
+            POL: ["Moja cebula nie będzie czerwoną."],
+            ENG: [
+              "My onion will not be red.",
+              "My onion will not have been red.",
+              "My onion will have not been red.",
+              "My onion is not going to be red.",
+            ],
+          },
+        ]);
+      });
+      it("#pal29-07c GET 200 YES: Engpol.", () => {
+        return runPaletteTest("ENG", "POL", "123h", [
+          {
+            ENG: [
+              "My onion will not have been red.",
+              "My onion will have not been red.",
+            ],
+            POL: ["Moja cebula nie będzie czerwoną."],
+          },
+        ]);
+      });
+    });
   });
 
   describe("/palette - Stage 28: Correct Polish grammar re gender.", () => {
