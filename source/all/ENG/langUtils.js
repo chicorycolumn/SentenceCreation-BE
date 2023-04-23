@@ -52,8 +52,8 @@ const haveNot = {
     "2per": { singular: "have not", plural: "have not" },
     "3per": { singular: "has not", plural: "have not" },
   },
-  future: ["will not have", "will have not"],
-  conditional: ["would not have", "would have not"],
+  future: ["will not have", "will have not"], // Added special handling in haveNotRef given this is array.
+  conditional: ["would not have", "would have not"], // Added special handling in haveNotRef given this is array.
 };
 const doo = {
   past: "did",
@@ -103,21 +103,13 @@ const _addToResArrAdhocForms = (
 
   let structureChunkCopy = uUtils.copyWithoutReference(structureChunk);
 
-  lfUtils.updateStructureChunkByAdhocOnly(
-    structureChunkCopy,
-    adhocTraitKey,
-    adhocValue
-  );
+  structureChunkCopy[adhocTraitKey] = [adhocValue];
 
   if (dataToUpdateWith) {
-    Object.keys(dataToUpdateWith).forEach((traitKey) => {
-      let traitValue = dataToUpdateWith[traitKey];
+    Object.keys(dataToUpdateWith.array).forEach((traitKey) => {
+      let traitValue = dataToUpdateWith.array[traitKey];
       if (traitValue) {
-        lfUtils.updateStructureChunkByAdhocOnly(
-          structureChunkCopy,
-          traitKey,
-          traitValue
-        );
+        structureChunkCopy[traitKey] = [traitValue];
       }
     });
   } else {
@@ -166,12 +158,13 @@ const _fetchTenseDescriptionAdhocForms = (
   lObj,
   dataToUpdateWith,
   structureChunk,
-  tenseDescriptionTraitKeyForRefObj = dataToUpdateWith.tenseDescription
+  tenseDescriptionTraitKeyForRefObj = dataToUpdateWith.array.tenseDescription
 ) => {
   let { infinitive, v2, v3, thirdPS, gerund } = lObj.inflections;
-  let { person, number, tenseDescription, negative } = dataToUpdateWith; //These are used in tenseDescRef
+  let { person, number, tenseDescription } = dataToUpdateWith.array; //These are used in tenseDescRef
+  let { negative } = dataToUpdateWith.bool; //These are used in tenseDescRef
   let tenseDescriptionTraitKeyForStructureChunk =
-    dataToUpdateWith.tenseDescription;
+    dataToUpdateWith.array.tenseDescription;
 
   const tenseDescRefPositive = {
     "past simple": [v2],
@@ -212,11 +205,11 @@ const _fetchTenseDescriptionAdhocForms = (
     "future compound continuous": [
       beNot["present"][person][number] + " " + "going to be" + " " + gerund,
     ],
-    "future perfect": [haveNot["future"] + " " + v3],
+    "future perfect": haveNot["future"].map((x) => x + " " + v3),
     // conditional: ["would not" + " " + infinitive],
     "conditional simple": ["would not" + " " + infinitive],
     "conditional continuous": [beNot["conditional"] + " " + gerund],
-    "conditional perfect": [haveNot["conditional"] + " " + v3],
+    "conditional perfect": haveNot["conditional"].map((x) => x + " " + v3),
     imperative: ["do not " + infinitive],
   };
   const subsequentTenseDescRef = {
@@ -522,13 +515,13 @@ exports.generateAdhocForms = (
       !structureChunk.tenseDescription ||
       !structureChunk.tenseDescription.length
     ) {
-      throw "This shouldn't have happened.";
+      throw `ERR kmlg: Cannot generateAdhocForms tenseDescription for "${structureChunk.chunkId}" when it has no tenseDescription value.`;
     }
 
     Object.keys(inflectionRef).forEach((inflectionCategory) => {
       let inflectionKeys = inflectionRef[inflectionCategory].slice(0);
       if (
-        !Array.isArray(structureChunk[inflectionCategory]) ||
+        !structureChunk[inflectionCategory] ||
         !structureChunk[inflectionCategory].length
       ) {
         structureChunk[inflectionCategory] = inflectionKeys;
@@ -577,10 +570,8 @@ exports.generateAdhocForms = (
           }
 
           let dataToUpdateWith = {
-            person,
-            number,
-            tenseDescription,
-            negative,
+            array: { person, number, tenseDescription },
+            bool: { negative },
           };
 
           if (
@@ -608,34 +599,45 @@ exports.generateAdhocForms = (
               dataToUpdateWith
             );
             return;
+          } else if (
+            ["present simple", "cond0 condition", "cond0 outcome"].includes(
+              tenseDescription
+            ) &&
+            person === "3per" &&
+            number === "singular"
+          ) {
+            _fetchTenseDescriptionAdhocForms(
+              resArr,
+              lObj,
+              dataToUpdateWith,
+              structureChunk,
+              `${tenseDescription} 3PS`
+            );
           } else {
-            if (
-              ["present simple", "cond0 condition", "cond0 outcome"].includes(
-                tenseDescription
-              ) &&
-              person === "3per" &&
-              number === "singular"
-            ) {
-              _fetchTenseDescriptionAdhocForms(
-                resArr,
-                lObj,
-                dataToUpdateWith,
-                structureChunk,
-                `${tenseDescription} 3PS`
-              );
-            } else {
-              _fetchTenseDescriptionAdhocForms(
-                resArr,
-                lObj,
-                dataToUpdateWith,
-                structureChunk
-              );
-            }
+            _fetchTenseDescriptionAdhocForms(
+              resArr,
+              lObj,
+              dataToUpdateWith,
+              structureChunk
+            );
           }
         });
       });
     });
-    return resArr;
+    let expandedResArr = [];
+
+    resArr.forEach((resArrItem) => {
+      if (resArrItem.selectedWordArr.length > 1) {
+        resArrItem.selectedWordArr.forEach((selectedWord) => {
+          let copyResArrItem = uUtils.copyWithoutReference(resArrItem);
+          copyResArrItem.selectedWordArr = [selectedWord];
+          expandedResArr.push(copyResArrItem);
+        });
+      } else {
+        expandedResArr.push(resArrItem);
+      }
+    });
+    return expandedResArr;
   }
 };
 

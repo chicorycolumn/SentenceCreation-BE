@@ -87,9 +87,9 @@ exports.validateSentenceFormula = (sentenceFormula, lang) => {
           structureChunk
         );
         consol.throw(
-          `#ERR kchk "${lang}" validateSentenceFormula. stCh "${chunkId}": Expected "${expectedTypeOnStCh}" as "${traitKey}" traitValue but got "${uUtils.typeof(
+          `#ERR kchk "${lang}" validateSentenceFormula. : Expected the value of traitKey "${traitKey}" on stCh "${chunkId}" to be type ${expectedTypeOnStCh} but got type ${uUtils.typeof(
             traitValue
-          )}"`
+          )}.`
         );
       }
 

@@ -783,14 +783,6 @@ exports.filterWithinSelectedLemmaObject = (
   return outputUnitsWithDrillPaths;
 };
 
-exports.updateStructureChunkByAdhocOnly = (
-  structureChunk,
-  traitKey,
-  traitValue
-) => {
-  structureChunk[traitKey] = [traitValue];
-};
-
 exports.updateStructureChunk = (
   outputUnit,
   currentLanguage,

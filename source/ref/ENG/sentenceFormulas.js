@@ -1825,6 +1825,74 @@ exports.sentenceFormulasBank = [
     },
   },
   {
+    sentenceFormulaId: "ENG-123g",
+    sentenceStructure: [
+      {
+        form: ["determiner"],
+        specificIds: ["eng-pro-POSSESSIVE"],
+        chunkId: "pro-1-my",
+        person: ["1per"],
+        number: ["singular"],
+      },
+      {
+        gcase: ["nom"],
+        specificIds: ["eng-nco-002-onion"],
+        chunkId: "nco-1-onion",
+        number: ["singular"],
+      },
+      {
+        negative: true,
+        tenseDescription: ["future simple"],
+        specificIds: ["eng-ver-001-be"],
+        chunkId: "ver-1-is",
+        agreeWith: "nco-1-onion",
+      },
+      {
+        specificIds: ["eng-adj-001-red"],
+        chunkId: "adj-1-blue",
+        agreeWith: "nco-1-onion",
+      },
+    ],
+    orders: {
+      primary: [["pro-1-my", "nco-1-onion", "ver-1-is", "adj-1-blue"]],
+      additional: [],
+    },
+  },
+  {
+    sentenceFormulaId: "ENG-123h",
+    sentenceStructure: [
+      {
+        form: ["determiner"],
+        specificIds: ["eng-pro-POSSESSIVE"],
+        chunkId: "pro-1-my",
+        person: ["1per"],
+        number: ["singular"],
+      },
+      {
+        gcase: ["nom"],
+        specificIds: ["eng-nco-002-onion"],
+        chunkId: "nco-1-onion",
+        number: ["singular"],
+      },
+      {
+        negative: true,
+        tenseDescription: ["future perfect"],
+        specificIds: ["eng-ver-001-be"],
+        chunkId: "ver-1-is",
+        agreeWith: "nco-1-onion",
+      },
+      {
+        specificIds: ["eng-adj-001-red"],
+        chunkId: "adj-1-blue",
+        agreeWith: "nco-1-onion",
+      },
+    ],
+    orders: {
+      primary: [["pro-1-my", "nco-1-onion", "ver-1-is", "adj-1-blue"]],
+      additional: [],
+    },
+  },
+  {
     sentenceFormulaId: "ENG-124a", // I was a good doctor
     sentenceStructure: [
       {
