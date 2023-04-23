@@ -317,12 +317,6 @@ exports.frontendifyFormula = (lang, formula) => {
 
       let fetchedSentence = fetchPalette(data);
 
-      // console.log("");
-      // console.log("");
-      // console.log(123, fetchedSentence);
-      // console.log("");
-      // console.log("");
-
       let newGuideword = fetchedSentence.questionSentenceArr.length
         ? fetchedSentence.questionSentenceArr[0].selectedWord
         : null;
