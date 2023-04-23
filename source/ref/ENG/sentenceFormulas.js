@@ -1550,6 +1550,34 @@ exports.sentenceFormulasBank = [
     },
   },
   {
+    sentenceFormulaId: "ENG-123baa",
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificIds: ["eng-pro-PERSONAL"],
+        gender: ["m"],
+        person: ["3per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-am",
+        specificIds: ["eng-ver-002-have"],
+        agreeWith: "pro-1-I",
+        tenseDescription: ["present simple"],
+        negative: true,
+        stativeOverrideFalse: true,
+      },
+      {
+        chunkId: "nco-1-apple",
+        specificIds: ["eng-nco-004-apple"],
+        number: ["plural"],
+      },
+    ],
+    orders: {
+      primary: [["pro-1-I", "ver-1-am", "nco-1-apple"]],
+    },
+  },
+  {
     sentenceFormulaId: "ENG-123bb",
     sentenceStructure: [
       {
@@ -1592,6 +1620,29 @@ exports.sentenceFormulasBank = [
         agreeWith: "pro-1-I",
         tenseDescription: ["present simple"],
         negative: true,
+      },
+    ],
+    orders: {
+      primary: [["pro-1-I", "ver-1-am"]],
+    },
+  },
+  {
+    sentenceFormulaId: "ENG-123caa",
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificIds: ["eng-pro-PERSONAL"],
+        gender: ["m"],
+        person: ["3per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-am",
+        specificIds: ["eng-ver-005-write"],
+        agreeWith: "pro-1-I",
+        tenseDescription: ["present simple"],
+        negative: true,
+        stativeOverrideTrue: true,
       },
     ],
     orders: {

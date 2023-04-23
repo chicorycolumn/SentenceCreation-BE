@@ -132,7 +132,6 @@ describe("/api", function () {
             "I see a rat, it was small.",
             "I see a rat, it had been small.",
             "I see a rat, it has been small.",
-            "I see a rat, it was being small.",
           ],
           POL: ["Widzę szczura, był mały."],
         },
@@ -155,7 +154,6 @@ describe("/api", function () {
       return runPaletteTest("POL", "ENG", "124a", [
         {
           ENG: [
-            "I was being a red doctor.",
             "I have been a red doctor.",
             "I was a red doctor.",
             "I had been a red doctor.",
@@ -164,7 +162,6 @@ describe("/api", function () {
         },
         {
           ENG: [
-            "We were being red doctors.",
             "We have been red doctors.",
             "We were red doctors.",
             "We had been red doctors.",

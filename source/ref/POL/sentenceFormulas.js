@@ -1839,6 +1839,35 @@ exports.sentenceFormulasBank = [
     },
   },
   {
+    sentenceFormulaId: "POL-123baa",
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificIds: ["pol-pro-PERSONAL"],
+        person: ["3per"],
+        gender: ["m1"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-am",
+        specificIds: ["pol-ver-012-mieć"],
+        agreeWith: "pro-1-I",
+        tenseDescription: ["present im"],
+        negative: true,
+      },
+      {
+        chunkId: "nco-1-apple",
+        specificIds: ["pol-nco-014-jabłko"],
+        number: ["plural"],
+        gcase: ["gen"],
+      },
+    ],
+    orders: {
+      primary: [["ver-1-am", "nco-1-apple"]],
+      additional: [["pro-1-I", "ver-1-am", "nco-1-apple"]],
+    },
+  },
+  {
     sentenceFormulaId: "POL-123bb",
     sentenceStructure: [
       {
@@ -1869,6 +1898,29 @@ exports.sentenceFormulasBank = [
   },
   {
     sentenceFormulaId: "POL-123ca",
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificIds: ["pol-pro-PERSONAL"],
+        person: ["3per"],
+        gender: ["m1"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-am",
+        specificIds: ["pol-ver-015-pisać"],
+        agreeWith: "pro-1-I",
+        tenseDescription: ["present im"],
+        negative: true,
+      },
+    ],
+    orders: {
+      primary: [["ver-1-am"]],
+      additional: [["pro-1-I", "ver-1-am"]],
+    },
+  },
+  {
+    sentenceFormulaId: "POL-123caa",
     sentenceStructure: [
       {
         chunkId: "pro-1-I",

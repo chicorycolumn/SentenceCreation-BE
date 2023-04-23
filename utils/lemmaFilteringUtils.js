@@ -9,6 +9,10 @@ const nexusUtils = require("../utils/secondOrder/nexusUtils.js");
 const allLangUtils = require("./allLangUtils.js");
 const { HY } = refObj;
 
+exports.isStative = (lObj) => {
+  return lObj.id.split("-").slice(-1)[0].includes("ß");
+};
+
 exports.checkHyper = (lObj, expectedTypes) => {
   if (expectedTypes.some((str) => !Object.values(HY).includes(str))) {
     consol.throw(

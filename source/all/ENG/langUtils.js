@@ -510,11 +510,14 @@ exports.generateAdhocForms = (
     return resArr;
   }
 
-  if (
-    adhocInflectionCategory === "tenseDescription" &&
-    gpUtils.getWordtypeStCh(structureChunk) === "ver" &&
-    structureChunk.form.includes("verbal")
-  ) {
+  if (adhocInflectionCategory === "tenseDescription") {
+    if (
+      gpUtils.getWordtypeStCh(structureChunk) !== "ver" ||
+      !structureChunk.form.includes("verbal")
+    ) {
+      return;
+    }
+
     if (
       !structureChunk.tenseDescription ||
       !structureChunk.tenseDescription.length
@@ -546,6 +549,11 @@ exports.generateAdhocForms = (
       }
     });
 
+    let mockStCh = uUtils.copyWithoutReference(structureChunk);
+    mockStCh.tenseDescription = tenseDescriptionArr;
+    allLangUtils.removeContinuousTenseDescFromStative(lObj, mockStCh);
+    tenseDescriptionArr = mockStCh.tenseDescription;
+
     consol.log("cesb tenseDescriptionArr", tenseDescriptionArr);
 
     consol.log("jpvb", {
@@ -559,13 +567,6 @@ exports.generateAdhocForms = (
     structureChunk.person.forEach((person) => {
       structureChunk.number.forEach((number) => {
         tenseDescriptionArr.forEach((tenseDescription) => {
-          let dataToUpdateWith = {
-            person,
-            number,
-            tenseDescription,
-            negative,
-          };
-
           if (
             lObj.lemma === "be" &&
             ["future continuous", "future compound continuous"].includes(
@@ -574,6 +575,13 @@ exports.generateAdhocForms = (
           ) {
             return;
           }
+
+          let dataToUpdateWith = {
+            person,
+            number,
+            tenseDescription,
+            negative,
+          };
 
           if (
             lObj.lemma === "be" &&

@@ -27,7 +27,7 @@ describe("/api", function () {
         return runPaletteTest("POL", "ENG", "123aa", [
           {
             POL: ["Nie jest czerwony.", "On nie jest czerwony."],
-            ENG: ["He is not red.", "He is not being red."],
+            ENG: ["He is not red."],
           },
         ]);
       });
@@ -43,7 +43,7 @@ describe("/api", function () {
         return runPaletteTest("POL", "ENG", "123aaa", [
           {
             POL: ["Nie jest (male) tutaj.", "On nie jest tutaj."],
-            ENG: ["He is not here.", "He is not being here."],
+            ENG: ["He is not here."],
           },
         ]);
       });
@@ -61,7 +61,7 @@ describe("/api", function () {
             POL: ["Nie był czerwony.", "On nie był czerwony."],
             ENG: [
               "He was not red.",
-              "He was not being red.",
+
               "He has not been red.",
               "He had not been red.",
             ],
@@ -82,10 +82,15 @@ describe("/api", function () {
         return runPaletteTest("POL", "ENG", "123ba", [
           {
             POL: ["Nie ma (male) jabłek.", "On nie ma jabłek."],
-            ENG: [
-              "He does not have apples.",
-              "He is not having apples.", // alpha but to remove this stative error.
-            ],
+            ENG: ["He does not have apples."],
+          },
+        ]);
+      });
+      it("#pal29-02b(ii) GET 200 YES: Poleng. stativeOverrideFalse.", () => {
+        return runPaletteTest("POL", "ENG", "123baa", [
+          {
+            POL: ["Nie ma (male) jabłek.", "On nie ma jabłek."],
+            ENG: ["He does not have apples.", "He is not having apples."],
           },
         ]);
       });
@@ -103,7 +108,6 @@ describe("/api", function () {
             POL: ["Nie miał jabłek.", "On nie miał jabłek."],
             ENG: [
               "He did not have apples.",
-              "He was not having apples.", // alpha but to remove this stative error.
               "He has not had apples.",
               "He had not had apples.",
             ],
@@ -125,6 +129,14 @@ describe("/api", function () {
           {
             POL: ["Nie pisze (male).", "On nie pisze."],
             ENG: ["He does not write.", "He is not writing."],
+          },
+        ]);
+      });
+      it("#pal29-03b(ii) GET 200 YES: Poleng. stativeOverrideTrue.", () => {
+        return runPaletteTest("POL", "ENG", "123caa", [
+          {
+            POL: ["Nie pisze (male).", "On nie pisze."],
+            ENG: ["He does not write."],
           },
         ]);
       });
@@ -226,21 +238,11 @@ describe("/api", function () {
     it("#pal28-01b GET 200 YES: Poleng. Polish m2 nouns are not virile.", () => {
       return runPaletteTest("POL", "ENG", "dummy75", [
         {
-          ENG: [
-            "Rats were red.",
-            "Rats were being red.",
-            "Rats have been red.",
-            "Rats had been red.",
-          ],
+          ENG: ["Rats were red.", "Rats have been red.", "Rats had been red."],
           POL: ["Szczury były czerwone."],
         },
         {
-          ENG: [
-            "Rat was red.",
-            "Rat was being red.",
-            "Rat has been red.",
-            "Rat had been red.",
-          ],
+          ENG: ["Rat was red.", "Rat has been red.", "Rat had been red."],
           POL: ["Szczur był czerwony."],
         },
       ]);

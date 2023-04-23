@@ -851,6 +851,14 @@ exports.structureChunkTraits = {
         "imperative",
       ],
     },
+    stativeOverrideTrue: {
+      compatibleWordtypes: ["ver"],
+      expectedTypeOnStCh: "boolean",
+    },
+    stativeOverrideFalse: {
+      compatibleWordtypes: ["ver"],
+      expectedTypeOnStCh: "boolean",
+    },
   },
 };
 
@@ -874,8 +882,7 @@ exports.uninflectedForms = {
 exports.adhocInflectionCategorys = {
   POL: {},
   SPA: {},
-  ENG: { ver: ["tenseDescription"] }, // epsilon what is this for?
-  // But Polish doesn't have tenseDesc as an adhoc category?
+  ENG: { ver: ["tenseDescription"] }, // ENG tenseDesc are created programmatically from ENG langUtils in "(Ad-PW-I): Pathway for Adhoc INFLECTIONS".
 };
 
 exports.adhocForms = {
