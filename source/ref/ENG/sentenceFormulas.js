@@ -259,7 +259,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "pro-1",
-        specificIds: ["eng-ver-001-be"],
+        specificIds: ["eng-ver-001-be-ß"],
         tenseDescription: ["present simple"],
       },
     ],
@@ -380,7 +380,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "pro-1",
-        specificIds: ["eng-ver-001-be"],
+        specificIds: ["eng-ver-001-be-ß"],
         tenseDescription: ["present simple"],
       },
     ],
@@ -397,7 +397,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "pro-1",
-        specificIds: ["eng-ver-001-be"],
+        specificIds: ["eng-ver-001-be-ß"],
         tenseDescription: ["past simple"],
       },
     ],
@@ -414,7 +414,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1",
         agreeWith: "pro-1",
-        specificIds: ["eng-ver-001-be"],
+        specificIds: ["eng-ver-001-be-ß"],
         tenseDescription: ["past simple"],
       },
     ],
@@ -792,7 +792,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1-see",
         agreeWith: "pro-1-I",
-        specificIds: ["eng-ver-008-see"],
+        specificIds: ["eng-ver-008-see-ß"],
         tenseDescription: ["past simple"],
       },
       {
@@ -859,7 +859,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1-was",
         agreeWith: "npe-1-doctor",
-        specificIds: ["eng-ver-001-be"],
+        specificIds: ["eng-ver-001-be-ß"],
         tenseDescription: ["past simple"],
       },
       { chunkId: "fix-1-a", chunkValue: "a" },
@@ -898,7 +898,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1-was",
         agreeWith: "npe-1-doctor",
-        specificIds: ["eng-ver-001-be"],
+        specificIds: ["eng-ver-001-be-ß"],
         tenseDescription: ["past simple"],
       },
       {
@@ -968,7 +968,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1-was",
         agreeWith: "npe-1-doctor",
-        specificIds: ["eng-ver-001-be"],
+        specificIds: ["eng-ver-001-be-ß"],
         tenseDescription: ["past simple"],
       },
       { chunkId: "fix-1-a", chunkValue: "a" },
@@ -1016,7 +1016,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1-was",
         agreeWith: "npe-2-doctor",
-        specificIds: ["eng-ver-001-be"],
+        specificIds: ["eng-ver-001-be-ß"],
         tenseDescription: ["past simple"],
       },
       { chunkId: "fix-1-a", chunkValue: "a" },
@@ -1051,7 +1051,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1-was",
         agreeWith: "pro-1-I",
-        specificIds: ["eng-ver-001-be"],
+        specificIds: ["eng-ver-001-be-ß"],
         tenseDescription: ["past simple"],
       },
       {
@@ -1080,7 +1080,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1-was",
         agreeWith: "pro-1-I",
-        specificIds: ["eng-ver-001-be"],
+        specificIds: ["eng-ver-001-be-ß"],
         tenseDescription: ["past simple"],
       },
       {
@@ -1110,7 +1110,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1-was",
         agreeWith: "pro-1-I",
-        specificIds: ["eng-ver-001-be"],
+        specificIds: ["eng-ver-001-be-ß"],
         tenseDescription: ["past simple"],
       },
       {
@@ -1140,7 +1140,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1-was",
         agreeWith: "pro-1-I",
-        specificIds: ["eng-ver-001-be"],
+        specificIds: ["eng-ver-001-be-ß"],
         tenseDescription: ["past simple"],
       },
       { chunkId: "fix-1-here", chunkValue: "here" },
@@ -1161,7 +1161,7 @@ exports.sentenceFormulasBank = [
       {
         chunkId: "ver-1-am",
         agreeWith: "pro-1-I",
-        specificIds: ["eng-ver-001-be"],
+        specificIds: ["eng-ver-001-be-ß"],
         tenseDescription: ["present simple"],
       },
       { chunkId: "fix-1-here", chunkValue: "here" },
@@ -1308,7 +1308,7 @@ exports.sentenceFormulasBank = [
       { chunkId: "npe-1-woman", specificIds: ["^eng-npe-001-woman"] },
       {
         chunkId: "ver-1-see",
-        specificIds: ["eng-ver-008-see"],
+        specificIds: ["eng-ver-008-see-ß"],
         agreeWith: "npe-1-woman",
         tenseDescription: ["past simple"],
       },
@@ -1341,7 +1341,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "ver-1-see",
-        specificIds: ["eng-ver-008-see"],
+        specificIds: ["eng-ver-008-see-ß"],
         agreeWith: "npe-1-doctor",
         tenseDescription: ["past simple"],
       },
@@ -1428,7 +1428,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "ver-1-am",
-        specificIds: ["eng-ver-001-be"],
+        specificIds: ["eng-ver-001-be-ß"],
         agreeWith: "pro-1-I",
         tenseDescription: ["present simple"],
       },
@@ -1454,7 +1454,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "ver-1-am",
-        specificIds: ["eng-ver-001-be"],
+        specificIds: ["eng-ver-001-be-ß"],
         agreeWith: "pro-1-I",
         tenseDescription: ["present simple"],
         negative: true,
@@ -1481,7 +1481,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "ver-1-am",
-        specificIds: ["eng-ver-001-be"],
+        specificIds: ["eng-ver-001-be-ß"],
         agreeWith: "pro-1-I",
         tenseDescription: ["present simple"],
         negative: true,
@@ -1507,7 +1507,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "ver-1-am",
-        specificIds: ["eng-ver-001-be"],
+        specificIds: ["eng-ver-001-be-ß"],
         agreeWith: "pro-1-I",
         tenseDescription: ["past simple"],
         negative: true,
@@ -1534,7 +1534,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "ver-1-am",
-        specificIds: ["eng-ver-002-have"],
+        specificIds: ["eng-ver-002-have-ß"],
         agreeWith: "pro-1-I",
         tenseDescription: ["present simple"],
         negative: true,
@@ -1561,7 +1561,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "ver-1-am",
-        specificIds: ["eng-ver-002-have"],
+        specificIds: ["eng-ver-002-have-ß"],
         agreeWith: "pro-1-I",
         tenseDescription: ["present simple"],
         negative: true,
@@ -1589,7 +1589,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "ver-1-am",
-        specificIds: ["eng-ver-002-have"],
+        specificIds: ["eng-ver-002-have-ß"],
         agreeWith: "pro-1-I",
         tenseDescription: ["past simple"],
         negative: true,
@@ -1684,7 +1684,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "ver-1-am",
-        specificIds: ["eng-ver-001-be"],
+        specificIds: ["eng-ver-001-be-ß"],
         agreeWith: "pro-1-I",
         tenseDescription: ["present perfect"],
         negative: true,
@@ -1711,7 +1711,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "ver-1-am",
-        specificIds: ["eng-ver-001-be"],
+        specificIds: ["eng-ver-001-be-ß"],
         agreeWith: "pro-1-I",
         tenseDescription: ["past perfect"],
         negative: true,
@@ -1738,7 +1738,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "ver-1-am",
-        specificIds: ["eng-ver-002-have"],
+        specificIds: ["eng-ver-002-have-ß"],
         agreeWith: "pro-1-I",
         tenseDescription: ["present perfect"],
         negative: true,
@@ -1765,7 +1765,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "ver-1-am",
-        specificIds: ["eng-ver-002-have"],
+        specificIds: ["eng-ver-002-have-ß"],
         agreeWith: "pro-1-I",
         tenseDescription: ["past perfect"],
         negative: true,
@@ -1843,7 +1843,7 @@ exports.sentenceFormulasBank = [
       {
         negative: true,
         tenseDescription: ["future simple"],
-        specificIds: ["eng-ver-001-be"],
+        specificIds: ["eng-ver-001-be-ß"],
         chunkId: "ver-1-is",
         agreeWith: "nco-1-onion",
       },
@@ -1877,7 +1877,7 @@ exports.sentenceFormulasBank = [
       {
         negative: true,
         tenseDescription: ["future perfect"],
-        specificIds: ["eng-ver-001-be"],
+        specificIds: ["eng-ver-001-be-ß"],
         chunkId: "ver-1-is",
         agreeWith: "nco-1-onion",
       },
@@ -1904,7 +1904,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "ver-1-am",
-        specificIds: ["eng-ver-001-be"],
+        specificIds: ["eng-ver-001-be-ß"],
         agreeWith: "pro-1-I",
         tenseDescription: ["past simple"],
       },
@@ -1941,7 +1941,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "ver-1-am",
-        specificIds: ["eng-ver-001-be"],
+        specificIds: ["eng-ver-001-be-ß"],
         agreeWith: "pro-1-I",
         tenseDescription: ["past simple"],
       },
@@ -1978,7 +1978,7 @@ exports.sentenceFormulasBank = [
       },
       {
         chunkId: "ver-1-am",
-        specificIds: ["eng-ver-001-be"],
+        specificIds: ["eng-ver-001-be-ß"],
         agreeWith: "pro-1-I",
         tenseDescription: ["past simple"],
       },
