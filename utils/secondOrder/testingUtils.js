@@ -374,6 +374,12 @@ exports.generalTranslatedSentencesRef = {
       { POL: "Jesteście.", ENG: ["You (plural) are."] },
     ],
   },
+  be_withClarifiers_QlangPOL: {
+    "POL->ENG": [
+      { POL: "Jesteś.", ENG: ["You are."] },
+      { POL: "Jesteście.", ENG: ["You are."] },
+    ],
+  },
   be_withPronombres_withClarifiers_QlangPOL: {
     "POL->ENG": [
       { POL: "Jesteś.", ENG: ["You are."] },
