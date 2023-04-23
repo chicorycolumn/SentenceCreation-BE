@@ -56,8 +56,8 @@ describe("/educator/formulas.", () => {
       );
 
       let desiredRes = {
-        questionSentenceFormula: ["ojciec", "dano", "mi", "cebule"],
-        answerSentenceFormulas: [["father", "gave", "me", "onions", "to"]],
+        questionSentenceFormula: ["ojciec", "dać", "mi", "jabłko"],
+        answerSentenceFormulas: [["father", "give", "me", "book", "to"]],
       };
 
       expect(res).to.eql(desiredRes);

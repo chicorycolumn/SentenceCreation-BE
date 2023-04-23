@@ -192,43 +192,6 @@ exports.sentenceFormulasBank = [
     orders: { primary: [["npe-1", "ver-1"]], additional: [] },
   },
   {
-    sentenceFormulaId: "POL-61-z",
-    sentenceStructure: [
-      { chunkId: "fix-1", chunkValue: "nie," },
-      { chunkId: "fix-2", chunkValue: "chyba" },
-      {
-        chunkId: "npe-1",
-        andTags: ["personTest1"],
-        number: ["singular"],
-      },
-      {
-        chunkId: "ver-1",
-        agreeWith: "npe-1",
-        tenseDescription: ["present im"],
-        person: ["3per"],
-        specificIds: ["pol-ver-012-mieć"],
-      },
-      {
-        chunkId: "adj-1",
-        agreeWith: "nco-2",
-        form: ["simple"],
-        andTags: ["colour"],
-      },
-      {
-        chunkId: "nco-2",
-        andTags: ["edible"],
-        gcase: ["acc"],
-        number: ["singular"],
-      },
-      { chunkId: "ver-2", form: ["infinitive"] },
-    ],
-    orders: {
-      primary: [
-        ["fix-1", "fix-2", "npe-1", "ver-1", "adj-1", "nco-2", "ver-2"],
-      ],
-    },
-  },
-  {
     sentenceFormulaId: "POL-61",
     sentenceStructure: [
       {

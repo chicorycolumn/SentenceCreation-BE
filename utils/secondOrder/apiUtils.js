@@ -301,11 +301,7 @@ exports.frontendifyFormula = (lang, formula) => {
       guideword = apiUtils.getAestheticGuideword(stCh);
     }
 
-    if (
-      !guideword ||
-      /^\d+$/.test(guideword) ||
-      !(stCh.specificIds && stCh.specificIds.length)
-    ) {
+    if (!guideword || /^\d+$/.test(guideword)) {
       let data = apiUtils.prepareGetSentencesAsQuestionOnly(
         lang,
         { sentenceStructure: [stCh] },
@@ -534,11 +530,21 @@ exports.getAestheticGuideword = (chunk, formulaObject) => {
       ? chunk.chunkId.split("-").slice(-1)[0]
       : chunk.chunkId.traitValue.split("-").slice(-1)[0];
 
-  if (/^\d+$/.test(guideword) && gpUtils.getWordtypeStCh(chunk) === "fix") {
-    guideword =
-      typeof chunk.chunkValue === "string"
-        ? chunk.chunkValue
-        : chunk.chunkValue.traitValue;
+  if (/^\d+$/.test(guideword)) {
+    if (gpUtils.getWordtypeStCh(chunk) === "fix") {
+      guideword =
+        typeof chunk.chunkValue === "string"
+          ? chunk.chunkValue
+          : chunk.chunkValue.traitValue;
+    } else if (
+      chunk.specificIds &&
+      chunk.specificIds.traitValue &&
+      chunk.specificIds.traitValue.length
+    ) {
+      guideword = chunk.specificIds.traitValue[0].split("-")[3];
+    } else if (chunk.specificIds && chunk.specificIds.length) {
+      guideword = chunk.specificIds[0].split("-")[3];
+    }
   }
 
   let isGhostChunk; // If chunk is ghost then aesthetically modify guideword, just for display in formulaId selector on FE.
