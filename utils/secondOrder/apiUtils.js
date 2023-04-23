@@ -493,6 +493,35 @@ exports.getEnChsForLemma = (lang, lemma, env = "ref") => {
       }
     }
 
+    // Final adjustments, removing metavalues if possible, see refObj.preferredInitialChoicesForEnChs.
+    Object.keys(refObj.preferredInitialChoicesForEnChs).forEach((wordtype_) => {
+      if (wordtype === wordtype_) {
+        Object.keys(refObj.preferredInitialChoicesForEnChs[wordtype]).forEach(
+          (traitKey) => {
+            if (
+              enCh[traitKey] &&
+              enCh[traitKey].traitValue &&
+              enCh[traitKey].traitValue.length
+            ) {
+              let preferredTVsRef =
+                refObj.preferredInitialChoicesForEnChs[wordtype][traitKey];
+
+              if (
+                Object.keys(preferredTVsRef).some((nonpreferredTV) =>
+                  enCh[traitKey].traitValue.includes(nonpreferredTV)
+                )
+              ) {
+                let preferredTVs = enCh[traitKey].traitValue.map(
+                  (tv) => preferredTVsRef[tv] || tv
+                );
+                enCh[traitKey].traitValue = Array.from(new Set(preferredTVs));
+              }
+            }
+          }
+        );
+      }
+    });
+
     return enCh;
   });
 

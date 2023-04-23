@@ -989,3 +989,7 @@ exports.aspectReference = (str) => {
   });
   return res;
 };
+
+exports.preferredInitialChoicesForEnChs = {
+  pro: { form: { _pronombreAndDeterminer: "determiner" } },
+};
