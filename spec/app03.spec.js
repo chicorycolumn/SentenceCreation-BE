@@ -233,25 +233,17 @@ describe("/api", function () {
     it("#pal19-01c GET 200 YES: Poleng. 'There's a woman and I see her.'", () => {
       let ref = [
         {
-          ENG: [
-            "There's a mother and I see her.",
-            "There's a mother and I am seeing her.",
-          ],
+          ENG: ["There's a mother and I see her."],
           POL: "Jest matka i widzę ją.",
         },
         {
-          ENG: [
-            "There's a father and I see him.",
-            "There's a father and I am seeing him.",
-          ],
+          ENG: ["There's a father and I see him."],
           POL: "Jest ojciec i widzę go.",
         },
         {
           ENG: [
             "There's a parent and I see him.",
-            "There's a parent and I am seeing him.",
             "There's a parent and I see her.",
-            "There's a parent and I am seeing her.",
           ],
           POL: "Jest rodzic i widzę go.",
           optionalExtra: { FYIPs: ["FYIP101-A-POL-ENG"] },
@@ -279,24 +271,15 @@ describe("/api", function () {
     it("#pal19-02c GET 200 YES: Poleng. 'There's an apple and I see it.'", () => {
       let ref = [
         {
-          ENG: [
-            "There's an apple and I see it.",
-            "There's an apple and I am seeing it.",
-          ],
+          ENG: ["There's an apple and I see it."],
           POL: "Jest jabłko i widzę je.",
         },
         {
-          ENG: [
-            "There's an onion and I see it.",
-            "There's an onion and I am seeing it.",
-          ],
+          ENG: ["There's an onion and I see it."],
           POL: "Jest cebula i widzę ją.",
         },
         {
-          ENG: [
-            "There's a tomato and I see it.",
-            "There's a tomato and I am seeing it.",
-          ],
+          ENG: ["There's a tomato and I see it."],
           POL: "Jest pomidor i widzę go.",
         },
       ];
@@ -316,11 +299,8 @@ describe("/api", function () {
         {
           ENG: [
             "There's a rat and I see it.",
-            "There's a rat and I am seeing it.",
             "There's a rat and I see him.",
-            "There's a rat and I am seeing him.",
             "There's a rat and I see her.",
-            "There's a rat and I am seeing her.",
           ],
           POL: "Jest szczur i widzę go.",
         },
@@ -896,7 +876,7 @@ describe("/api", function () {
     it("#pal18-05c GET 200 YES: Poleng. 'We see them.'", () => {
       let ref = [
         {
-          ENG: ["We see them.", "We are seeing them."],
+          ENG: ["We see them."],
           POL: ["Widzimy ich.", "Widzimy je."],
         },
       ];
@@ -905,7 +885,7 @@ describe("/api", function () {
     it("#pal18-05d GET 200 YES: Poleng. 'We see them.' PDS should have no effect.", () => {
       let ref = [
         {
-          ENG: ["We see them.", "We are seeing them."],
+          ENG: ["We see them."],
           POL: ["Widzimy ich.", "Widzimy je."],
         },
       ];
@@ -1336,23 +1316,23 @@ describe("/api", function () {
     it("#pal18-09c GET 200 YES: Poleng. 'They are red.'", () => {
       let ref = [
         {
-          ENG: ["He is red.", "He is being red."],
+          ENG: ["He is red."],
           POL: "Jest czerwony.",
         },
         {
-          ENG: ["She is red.", "She is being red."],
+          ENG: ["She is red."],
           POL: "Jest czerwona.",
         },
         {
-          ENG: ["It is red.", "It is being red."],
+          ENG: ["It is red."],
           POL: "Jest czerwone.",
         },
         {
-          ENG: ["They are red.", "They are being red."],
+          ENG: ["They are red."],
           POL: "Są czerwoni.",
         },
         {
-          ENG: ["They are red.", "They are being red."],
+          ENG: ["They are red."],
           POL: "Są czerwone.",
         },
       ];
@@ -1361,23 +1341,23 @@ describe("/api", function () {
     it("#pal18-09d GET 200 YES: Poleng. 'They are red.' PDS", () => {
       let ref = [
         {
-          ENG: ["He is red.", "He is being red."],
+          ENG: ["He is red."],
           POL: "Jest czerwony.",
         },
         {
-          ENG: ["She is red.", "She is being red."],
+          ENG: ["She is red."],
           POL: "Jest czerwona.",
         },
         {
-          ENG: ["It is red.", "It is being red."],
+          ENG: ["It is red."],
           POL: "Jest czerwone.",
         },
         {
-          ENG: ["They are red.", "They are being red."],
+          ENG: ["They are red."],
           POL: "Są czerwoni.",
         },
         {
-          ENG: ["They are red.", "They are being red."],
+          ENG: ["They are red."],
           POL: "Są czerwone.",
         },
       ];
@@ -1405,15 +1385,15 @@ describe("/api", function () {
     it("#pal18-09y GET 200 YES: Poleng. 'Rats are red.' Pluralised m2 should be nonvirile", () => {
       let ref = [
         {
-          ENG: ["Rats are red.", "Rats are being red."],
+          ENG: ["Rats are red."],
           POL: ["Szczury są czerwone."],
         },
         {
-          ENG: ["Boys are red.", "Boys are being red."],
+          ENG: ["Boys are red."],
           POL: ["Chłopcy są czerwoni."],
         },
         {
-          ENG: ["Women are red.", "Women are being red."],
+          ENG: ["Women are red."],
           POL: ["Kobiety są czerwone."],
         },
       ];
@@ -1449,12 +1429,7 @@ describe("/api", function () {
     it("#pal17-10c GET 200 YES: Poleng. I was here. Testing annotations.", () => {
       let ref = [
         {
-          ENG: [
-            "I was here.",
-            "I had been here.",
-            "I have been here.",
-            "I was being here.",
-          ],
+          ENG: ["I was here.", "I had been here.", "I have been here."],
           POL: ["Byłem tutaj.", "Byłam tutaj."],
         },
       ];
@@ -1463,12 +1438,7 @@ describe("/api", function () {
     it("#pal17-10d GET 200 YES: Poleng. I was here. Testing annotations. pleaseDontSpecify but with no effect expected.", () => {
       let ref = [
         {
-          ENG: [
-            "I was here.",
-            "I had been here.",
-            "I have been here.",
-            "I was being here.",
-          ],
+          ENG: ["I was here.", "I had been here.", "I have been here."],
           POL: ["Byłem tutaj.", "Byłam tutaj."],
         },
       ];
@@ -1499,7 +1469,7 @@ describe("/api", function () {
     it("#pal17-10g GET 200 YES: Poleng. I am here. Testing annotations.", () => {
       let ref = [
         {
-          ENG: ["I am here.", "I am being here."],
+          ENG: ["I am here."],
           POL: "Jestem tutaj.",
         },
       ];
@@ -1508,7 +1478,7 @@ describe("/api", function () {
     it("#pal17-10h GET 200 YES: Poleng. I am here. Testing annotations. pleaseDontSpecify but with no effect expected.", () => {
       let ref = [
         {
-          ENG: ["I am here.", "I am being here."],
+          ENG: ["I am here."],
           POL: "Jestem tutaj.",
         },
       ];
@@ -1547,7 +1517,6 @@ describe("/api", function () {
             "I was a doctor.",
             "I had been a doctor.",
             "I have been a doctor.",
-            "I was being a doctor.",
           ],
           POL: ["Byłem lekarzem.", "Byłam lekarką."],
         },
@@ -1561,7 +1530,6 @@ describe("/api", function () {
             "I was a doctor.",
             "I had been a doctor.",
             "I have been a doctor.",
-            "I was being a doctor.",
           ],
           POL: ["Byłem lekarzem.", "Byłam lekarką."],
         },
@@ -1613,7 +1581,6 @@ describe("/api", function () {
             "I was a doctor.",
             "I had been a doctor.",
             "I have been a doctor.",
-            "I was being a doctor.",
           ],
           POL: "Byłem lekarzem.",
         },
@@ -1622,7 +1589,6 @@ describe("/api", function () {
             "I was a doctor.",
             "I had been a doctor.",
             "I have been a doctor.",
-            "I was being a doctor.",
           ],
           POL: "Byłam lekarką.",
         },
@@ -1631,7 +1597,6 @@ describe("/api", function () {
             "We were doctors.",
             "We had been doctors.",
             "We have been doctors.",
-            "We were being doctors.",
           ],
           POL: ["Byłyśmy lekarkami.", "Byliśmy lekarzami."],
         },
@@ -1645,7 +1610,6 @@ describe("/api", function () {
             "I was a doctor.",
             "I had been a doctor.",
             "I have been a doctor.",
-            "I was being a doctor.",
           ],
           POL: "Byłem lekarzem.",
         },
@@ -1654,7 +1618,6 @@ describe("/api", function () {
             "I was a doctor.",
             "I had been a doctor.",
             "I have been a doctor.",
-            "I was being a doctor.",
           ],
           POL: "Byłam lekarką.",
         },
@@ -1663,7 +1626,6 @@ describe("/api", function () {
             "We were doctors.",
             "We had been doctors.",
             "We have been doctors.",
-            "We were being doctors.",
           ],
           POL: ["Byłyśmy lekarkami.", "Byliśmy lekarzami."],
         },
@@ -1715,7 +1677,6 @@ describe("/api", function () {
             "I was a doctor.",
             "I had been a doctor.",
             "I have been a doctor.",
-            "I was being a doctor.",
           ],
           POL: "Byłem lekarzem.",
         },
@@ -1724,7 +1685,6 @@ describe("/api", function () {
             "I was a doctor.",
             "I had been a doctor.",
             "I have been a doctor.",
-            "I was being a doctor.",
           ],
           POL: "Byłam lekarką.",
         },
@@ -1733,7 +1693,6 @@ describe("/api", function () {
             "We were doctors.",
             "We had been doctors.",
             "We have been doctors.",
-            "We were being doctors.",
           ],
           POL: ["Byłyśmy lekarkami.", "Byliśmy lekarzami."],
         },
@@ -1747,7 +1706,6 @@ describe("/api", function () {
             "I was a doctor.",
             "I had been a doctor.",
             "I have been a doctor.",
-            "I was being a doctor.",
           ],
           POL: "Byłem lekarzem.",
         },
@@ -1756,7 +1714,6 @@ describe("/api", function () {
             "I was a doctor.",
             "I had been a doctor.",
             "I have been a doctor.",
-            "I was being a doctor.",
           ],
           POL: "Byłam lekarką.",
         },
@@ -1765,7 +1722,6 @@ describe("/api", function () {
             "We were doctors.",
             "We had been doctors.",
             "We have been doctors.",
-            "We were being doctors.",
           ],
           POL: ["Byłyśmy lekarkami.", "Byliśmy lekarzami."],
         },
@@ -1848,11 +1804,10 @@ describe("/api", function () {
             "My doctor was a woman.",
             "My doctor had been a woman.",
             "My doctor has been a woman.",
-            "My doctor was being a woman.",
+
             "My doctor was a lady.",
             "My doctor had been a lady.",
             "My doctor has been a lady.",
-            "My doctor was being a lady.",
           ],
           POL: "Moja lekarka była kobietą.",
         },
@@ -1866,11 +1821,10 @@ describe("/api", function () {
             "My doctor was a woman.",
             "My doctor had been a woman.",
             "My doctor has been a woman.",
-            "My doctor was being a woman.",
+
             "My doctor was a lady.",
             "My doctor had been a lady.",
             "My doctor has been a lady.",
-            "My doctor was being a lady.",
           ],
           POL: "Moja lekarka była kobietą.",
         },
@@ -1914,11 +1868,10 @@ describe("/api", function () {
             "My doctor's doctor was a woman.",
             "My doctor's doctor had been a woman.",
             "My doctor's doctor has been a woman.",
-            "My doctor's doctor was being a woman.",
+
             "My doctor's doctor was a lady.",
             "My doctor's doctor had been a lady.",
             "My doctor's doctor has been a lady.",
-            "My doctor's doctor was being a lady.",
           ],
           POL: [
             "Lekarka mojego lekarza była kobietą.",
@@ -1935,11 +1888,10 @@ describe("/api", function () {
             "My doctor's doctor was a woman.",
             "My doctor's doctor had been a woman.",
             "My doctor's doctor has been a woman.",
-            "My doctor's doctor was being a woman.",
+
             "My doctor's doctor was a lady.",
             "My doctor's doctor had been a lady.",
             "My doctor's doctor has been a lady.",
-            "My doctor's doctor was being a lady.",
           ],
           POL: [
             "Lekarka mojego lekarza była kobietą.",

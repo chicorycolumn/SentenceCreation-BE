@@ -505,8 +505,7 @@ exports.wordsBank = {
     {
       //selectors
       lemma: "be",
-      id: "eng-ver-001-be",
-      // id: "eng-ver-001-be-ß",
+      id: "eng-ver-001-be-ß",
       //notes
 
       //inflections
@@ -622,8 +621,7 @@ exports.wordsBank = {
     {
       //selectors
       lemma: "see",
-      id: "eng-ver-008-see",
-      // id: "eng-ver-008-see-ß",
+      id: "eng-ver-008-see-ß",
       //notes
 
       //inflections

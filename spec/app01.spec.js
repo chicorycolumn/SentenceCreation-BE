@@ -1254,6 +1254,29 @@ describe("/api", function () {
           );
         });
     });
+    it("#pal07-01c(ii) GET 200 YES: RSWAT Poleng 'be' - stative set as false.", () => {
+      const questionLanguage = "POL";
+      const answerLanguage = "ENG";
+
+      return request(app)
+        .get("/api/palette")
+        .send({
+          useDummy: true,
+          questionLanguage,
+          answerLanguage,
+          sentenceFormulaId: "POL-dummy33ca",
+        })
+        .expect(200)
+        .then((res) => {
+          checkSentenceTranslations(
+            res,
+            questionLanguage,
+            answerLanguage,
+            "be_withPronombres_withClarifiers_QlangPOL_notStative",
+            []
+          );
+        });
+    });
     it("#pal07-01d GET 200 YES: RSWAT Poleng 'be' - past im/pf (Type 2 Allohomograph), pres pf - She.", () => {
       const questionLanguage = "POL";
       const answerLanguage = "ENG";

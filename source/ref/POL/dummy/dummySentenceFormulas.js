@@ -758,6 +758,25 @@ exports.dummySentenceFormulasBank = [
     orders: { primary: [["ver-1"]] },
   },
   {
+    sentenceFormulaId: "POL-dummy33ca",
+    equivalents: { ENG: ["ENG-dummy33ca"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1",
+        specificIds: ["pol-pro-PERSONAL"],
+        person: ["2per"],
+      },
+      {
+        chunkId: "ver-1",
+        agreeWith: "pro-1",
+        specificIds: ["pol-ver-011-być"],
+        tenseDescription: ["present im", "past pf"],
+        number: [],
+      },
+    ],
+    orders: { primary: [["ver-1"]] },
+  },
+  {
     sentenceFormulaId: "POL-dummy33d",
     equivalents: { ENG: ["ENG-dummy33d"] },
     sentenceStructure: [

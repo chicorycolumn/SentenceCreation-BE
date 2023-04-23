@@ -223,7 +223,7 @@ describe("/api", function () {
     it("#pal09-04a-i (pal09-02a Engpol, two clarifiers potentially expected.)", () => {
       let ref = [
         {
-          ENG: ["I see.", "I am seeing."],
+          ENG: ["I see."],
           POL: ["Widzę.", "Ja widzę."],
         },
       ];
@@ -262,7 +262,7 @@ describe("/api", function () {
     it("#pal09-04a-iv (pal09-02a Engpol PDS, two clarifiers potentially expected.)", () => {
       let ref = [
         {
-          ENG: ["I see.", "I am seeing."],
+          ENG: ["I see."],
           POL: ["Widzę.", "Ja widzę."],
         },
       ];
@@ -309,7 +309,7 @@ describe("/api", function () {
     it("#pal09-04b-i (pal09-02a Poleng, two clarifiers potentially expected.)", () => {
       let ref = [
         {
-          ENG: ["I see.", "I am seeing."],
+          ENG: ["I see."],
           POL: "Widzę.",
         },
       ];
@@ -340,7 +340,7 @@ describe("/api", function () {
     it("#pal09-04b-iv (pal09-02a Poleng PDS, two clarifiers potentially expected.)", () => {
       let ref = [
         {
-          ENG: ["I see.", "I am seeing."],
+          ENG: ["I see."],
           POL: "Widzę.",
         },
       ];

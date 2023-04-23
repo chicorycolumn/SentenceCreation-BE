@@ -180,6 +180,26 @@ exports.dummySentenceFormulasBank = [
     orders: { primary: [["pro-1", "ver-1"]], additional: [] },
   },
   {
+    sentenceFormulaId: "ENG-dummy33ca",
+    equivalents: { POL: ["POL-dummy33c"] },
+    sentenceStructure: [
+      {
+        chunkId: "pro-1",
+        specificIds: ["eng-pro-PERSONAL"],
+        person: ["2per"],
+      },
+      {
+        chunkId: "ver-1",
+        agreeWith: "pro-1",
+        specificIds: ["eng-ver-001-be"],
+        tenseDescription: ["present simple", "past simple"],
+        stativeOverrideFalse: true,
+        number: [],
+      },
+    ],
+    orders: { primary: [["pro-1", "ver-1"]], additional: [] },
+  },
+  {
     sentenceFormulaId: "ENG-dummy33d",
     equivalents: { POL: ["POL-dummy33d"] },
     sentenceStructure: [
@@ -540,7 +560,7 @@ exports.dummySentenceFormulasBank = [
     sentenceStructure: [
       { chunkId: "fix-1", chunkValue: "the" },
       {
-        chunkId: "npe-1", // It being npe aborts addSpecifiers, instead leaving gender to be inherited from 'kobieta' lObj in translation.
+        chunkId: "npe-1", // Because is "npe" it aborts addSpecifiers, instead leaving gender to be inherited from 'kobieta' lObj in translation.
         specificIds: ["eng-npe-001-woman"],
         number: ["singular"],
       },
