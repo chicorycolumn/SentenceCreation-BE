@@ -993,3 +993,96 @@ exports.aspectReference = (str) => {
 exports.preferredInitialChoicesForEnChs = {
   pro: { form: { _pronombreAndDeterminer: "determiner" } },
 };
+
+exports.contractions = {
+  ENG: {
+    mandatory: {
+      "can not": "cannot",
+      "can not": "can't",
+    },
+    optional: {
+      "is not": "isn't",
+      "are not": "aren't",
+
+      "was not": "wasn't",
+      "were not": "weren't",
+
+      "have not": "haven't",
+      "has not": "hasn't",
+      "had not": "hadn't",
+
+      "do not": "don't",
+      "did not": "didn't",
+
+      "will not": "won't",
+      "would not": "wouldn't",
+      "should not": "shouldn't",
+      "must not": "mustn't",
+      "could not": "couldn't",
+    },
+    onlyIfFollowedByWord: {
+      // "I am here." not "But I am."
+      "I am": "I'm",
+      "you are": "you're",
+      "he is": "he's",
+      "she is": "she's",
+      "it is": "it's",
+      "we are": "we're",
+      "they are": "they're",
+
+      // "I will write." not "But I will."
+      "I will": "I'll",
+      "you will": "you'll",
+      "he will": "he'll",
+      "she will": "she'll",
+      "it will": "it'll",
+      "we will": "we'll",
+      "they will": "they'll",
+
+      // "I would write." not "But I would."
+      "I would": "I'd",
+      "you would": "you'd",
+      "he would": "he'd",
+      "she would": "she'd",
+      "it would": "it'd",
+      "we would": "we'd",
+      "they would": "they'd",
+
+      // "There is a dog." not "Five is all there is."
+      "there is": "there's",
+      "that is": "that's",
+      "here is": "here's",
+      "who is": "who's",
+      "what is": "what's",
+      "when is": "when's",
+      "where is": "where's",
+      "why is": "why's",
+      "how is": "how's",
+
+      // "I have seen." not "But I have."
+      // And only if auxiliary, which is covered by auxiliary marker below.
+      "I ªhave": "I've",
+      "you ªhave": "you've",
+      "he ªhas": "he's",
+      "she ªhas": "she's",
+      "it ªhas": "it's",
+      "we ªhave": "we've",
+      "they ªhave": "they've",
+
+      // "I had seen." not "But I had."
+      // And only if auxiliary, which is covered by auxiliary marker below.
+      "I ªhad": "I'd",
+      "you ªhad": "you'd",
+      "he ªhad": "he'd",
+      "she ªhad": "she'd",
+      "it ªhad": "it'd",
+      "we ªhad": "we'd",
+      "they ªhad": "they'd",
+    },
+  },
+};
+
+exports.selectedWordMarkers = {
+  "¤": "foo¤ Block this word from being used in contraction.",
+  ª: "ªfoo This verb is an auxiliary verb.",
+};

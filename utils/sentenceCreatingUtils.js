@@ -1025,27 +1025,37 @@ exports.buildSentenceString = (
     }
 
     arrOfFinalSelectedWordsArr.forEach((finalSelectedWordsArr) => {
-      let producedSentence = finalSelectedWordsArr[0];
-      finalSelectedWordsArr.slice(1).forEach((str) => {
-        if (refObj.punctuation.includes(str)) {
-          producedSentence += str;
-        } else {
-          producedSentence += ` ${str}`;
-        }
-      });
-      if (
-        !refObj.punctuation.includes(
-          finalSelectedWordsArr[finalSelectedWordsArr.length - 1]
-        )
-      ) {
-        producedSentence += ".";
-      }
-
-      producedSentences.push(uUtils.capitaliseFirst(producedSentence));
+      let producedSentence = scUtils.getProducedSentence(finalSelectedWordsArr);
+      producedSentences.push(producedSentence);
     });
   });
 
   return producedSentences;
+};
+
+exports.getProducedSentence = (finalSelectedWordsArr) => {
+  let producedSentence = finalSelectedWordsArr[0];
+  finalSelectedWordsArr.slice(1).forEach((str) => {
+    if (refObj.punctuation.includes(str)) {
+      producedSentence += str;
+    } else {
+      producedSentence += ` ${str}`;
+    }
+  });
+  if (
+    !refObj.punctuation.includes(
+      finalSelectedWordsArr[finalSelectedWordsArr.length - 1]
+    )
+  ) {
+    producedSentence += ".";
+  }
+
+  producedSentence = producedSentence
+    .split("")
+    .filter((char) => !Object.keys(refObj.selectedWordMarkers).includes(char))
+    .join("");
+
+  return uUtils.capitaliseFirst(producedSentence);
 };
 
 exports.coverBothGendersForPossessivesOfHypernyms = (
