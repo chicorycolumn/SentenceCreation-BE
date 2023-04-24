@@ -115,6 +115,7 @@ exports.returnNullQuestionResponseObj = (
 };
 
 exports.createOutputUnit = (
+  currentLanguage,
   dependenceType,
   errorInSentenceCreation,
   errorInDrilling,
@@ -125,6 +126,15 @@ exports.createOutputUnit = (
   drillPathSecondary,
   drillPathTertiary
 ) => {
+  if (currentLanguage === "POL") {
+    if (
+      gpUtils.getWordtypeStCh(structureChunk) === "ver" &&
+      structureChunk.negative
+    ) {
+      selectedWord = "nie " + selectedWord;
+    }
+  }
+
   if (errorInDrilling || !selectedWord) {
     consol.log(
       `acsm, Returning false because ${

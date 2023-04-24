@@ -449,6 +449,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
       selectedWordArr.forEach((selectedWord) => {
         let outputUnit = frUtils.createOutputUnit(
+          currentLanguage,
           dependenceType,
           errorInSentenceCreation,
           null,
@@ -609,6 +610,7 @@ exports.findMatchingLemmaObjectThenWord = (
                 selectedWord.processOnlyAtEnd)
             ) {
               let outputUnit = frUtils.createOutputUnit(
+                currentLanguage,
                 dependenceType,
                 errorInSentenceCreation,
                 errorInDrilling,
@@ -626,6 +628,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
               allWords.forEach((word) => {
                 let outputUnit = frUtils.createOutputUnit(
+                  currentLanguage,
                   dependenceType,
                   errorInSentenceCreation,
                   errorInDrilling,
@@ -846,6 +849,7 @@ exports.findMatchingLemmaObjectThenWord = (
         selectedWord = uUtils.selectRandom(additionalWords);
       }
       let outputUnit = frUtils.createOutputUnit(
+        currentLanguage,
         dependenceType,
         errorInSentenceCreation,
         errorInDrilling,
