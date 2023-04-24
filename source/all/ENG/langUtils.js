@@ -7,65 +7,65 @@ const consol = require("../../../utils/zerothOrder/consoleLoggingUtils.js");
 const refObj = require("../../../utils/reference/referenceObjects.js");
 const allLangUtils = require("../../../utils/allLangUtils.js");
 
-const be = {
+const _be = {
   past: {
-    "1per": { singular: "was", plural: "were" },
-    "2per": { singular: "were", plural: "were" },
-    "3per": { singular: "was", plural: "were" },
+    "1per": { singular: "ªwas", plural: "ªwere" },
+    "2per": { singular: "ªwere", plural: "ªwere" },
+    "3per": { singular: "ªwas", plural: "ªwere" },
   },
   present: {
-    "1per": { singular: "am", plural: "are" },
-    "2per": { singular: "are", plural: "are" },
-    "3per": { singular: "is", plural: "are" },
+    "1per": { singular: "ªam", plural: "ªare" },
+    "2per": { singular: "ªare", plural: "ªare" },
+    "3per": { singular: "ªis", plural: "ªare" },
   },
-  future: "will be",
-  conditional: "would be",
+  future: "will ªbe",
+  conditional: "would ªbe",
 };
-const beNot = {
+const _beNot = {
   past: {
-    "1per": { singular: "was not", plural: "were not" },
-    "2per": { singular: "were not", plural: "were not" },
-    "3per": { singular: "was not", plural: "were not" },
+    "1per": { singular: "ªwas not", plural: "ªwere not" },
+    "2per": { singular: "ªwere not", plural: "ªwere not" },
+    "3per": { singular: "ªwas not", plural: "ªwere not" },
   },
   present: {
-    "1per": { singular: "am not", plural: "are not" },
-    "2per": { singular: "are not", plural: "are not" },
-    "3per": { singular: "is not", plural: "are not" },
+    "1per": { singular: "ªam not", plural: "ªare not" },
+    "2per": { singular: "ªare not", plural: "ªare not" },
+    "3per": { singular: "ªis not", plural: "ªare not" },
   },
-  future: "will not be",
-  conditional: "would not be",
+  future: "will not ªbe",
+  conditional: "would not ªbe",
 };
-const have = {
-  past: "had",
+const _have = {
+  past: "ªhad",
   present: {
-    "1per": { singular: "have", plural: "have" },
-    "2per": { singular: "have", plural: "have" },
-    "3per": { singular: "has", plural: "have" },
+    "1per": { singular: "ªhave", plural: "ªhave" },
+    "2per": { singular: "ªhave", plural: "ªhave" },
+    "3per": { singular: "ªhas", plural: "ªhave" },
   },
-  future: "will have",
-  conditional: "would have",
+  future: "will ªhave",
+  conditional: "would ªhave",
 };
-const haveNot = {
-  past: "had not",
+const _haveNot = {
+  past: "ªhad not",
   present: {
-    "1per": { singular: "have not", plural: "have not" },
-    "2per": { singular: "have not", plural: "have not" },
-    "3per": { singular: "has not", plural: "have not" },
+    "1per": { singular: "ªhave not", plural: "ªhave not" },
+    "2per": { singular: "ªhave not", plural: "ªhave not" },
+    "3per": { singular: "ªhas not", plural: "ªhave not" },
   },
-  future: ["will not have", "will have not"], // Added special handling in haveNotRef given this is array.
-  conditional: ["would not have", "would have not"], // Added special handling in haveNotRef given this is array.
+  future: ["will not ªhave", "will ªhave¤ not"], // Added special handling in haveNotRef given this is array.
+  conditional: ["would not ªhave", "would ªhave¤ not"], // Added special handling in haveNotRef given this is array.
 };
-const doo = {
-  past: "did",
-  present: { main: "do", "3PS": "does" },
-  future: "will do",
-  conditional: "would do",
+const _do = {
+  past: "ªdid",
+  present: { main: "ªdo", "3PS": "ªdoes" },
+  future: "will ªdo",
+  conditional: "would ªdo",
 };
-const dooNot = {
-  past: "did not",
-  present: { main: "do not", "3PS": "does not" },
-  future: "will not do",
-  conditional: "would not do",
+const _doNot = {
+  past: "ªdid not",
+  present: { main: "ªdo not", "3PS": "ªdoes not" },
+  future: "will not ªdo",
+  conditional: "would not ªdo",
 };
 
 let inflectionRef = {
@@ -168,48 +168,48 @@ const _fetchTenseDescriptionAdhocForms = (
 
   const tenseDescRefPositive = {
     "past simple": [v2],
-    "past continuous": [be["past"][person][number] + " " + gerund],
-    "past perfect": [have["past"] + " " + v3],
+    "past continuous": [_be["past"][person][number] + " " + gerund],
+    "past perfect": [_have["past"] + " " + v3],
     "present simple 3PS": [thirdPS],
     "present simple": [infinitive],
-    "present continuous": [be["present"][person][number] + " " + gerund],
-    "present perfect": [have["present"][person][number] + " " + v3],
+    "present continuous": [_be["present"][person][number] + " " + gerund],
+    "present perfect": [_have["present"][person][number] + " " + v3],
     "future simple": ["will" + " " + infinitive],
     "future compound": [
-      be["present"][person][number] + " " + "going to" + " " + infinitive,
+      _be["present"][person][number] + " " + "going to" + " " + infinitive,
     ],
-    "future continuous": [be["future"] + " " + gerund],
+    "future continuous": [_be["future"] + " " + gerund],
     "future compound continuous": [
-      be["present"][person][number] + " " + "going to be" + " " + gerund,
+      _be["present"][person][number] + " " + "going to be" + " " + gerund,
     ],
-    "future perfect": [have["future"] + " " + v3],
+    "future perfect": [_have["future"] + " " + v3],
     // conditional: ["would" + " " + infinitive],
     "conditional simple": ["would" + " " + infinitive],
-    "conditional continuous": [be["conditional"] + " " + gerund],
-    "conditional perfect": [have["conditional"] + " " + v3],
+    "conditional continuous": [_be["conditional"] + " " + gerund],
+    "conditional perfect": [_have["conditional"] + " " + v3],
     imperative: [infinitive],
   };
   const tenseDescRefNegative = {
-    "past simple": [dooNot["past"] + " " + infinitive],
-    "past continuous": [beNot["past"][person][number] + " " + gerund],
-    "past perfect": [haveNot["past"] + " " + v3],
-    "present simple 3PS": [dooNot["present"]["3PS"] + " " + infinitive],
-    "present simple": [dooNot["present"]["main"] + " " + infinitive],
-    "present continuous": [beNot["present"][person][number] + " " + gerund],
-    "present perfect": [haveNot["present"][person][number] + " " + v3],
+    "past simple": [_doNot["past"] + " " + infinitive],
+    "past continuous": [_beNot["past"][person][number] + " " + gerund],
+    "past perfect": [_haveNot["past"] + " " + v3],
+    "present simple 3PS": [_doNot["present"]["3PS"] + " " + infinitive],
+    "present simple": [_doNot["present"]["main"] + " " + infinitive],
+    "present continuous": [_beNot["present"][person][number] + " " + gerund],
+    "present perfect": [_haveNot["present"][person][number] + " " + v3],
     "future simple": ["will not" + " " + infinitive],
     "future compound": [
-      beNot["present"][person][number] + " " + "going to" + " " + infinitive,
+      _beNot["present"][person][number] + " " + "going to" + " " + infinitive,
     ],
-    "future continuous": [beNot["future"] + " " + gerund],
+    "future continuous": [_beNot["future"] + " " + gerund],
     "future compound continuous": [
-      beNot["present"][person][number] + " " + "going to be" + " " + gerund,
+      _beNot["present"][person][number] + " " + "going to be" + " " + gerund,
     ],
-    "future perfect": haveNot["future"].map((x) => x + " " + v3),
+    "future perfect": _haveNot["future"].map((x) => x + " " + v3),
     // conditional: ["would not" + " " + infinitive],
     "conditional simple": ["would not" + " " + infinitive],
-    "conditional continuous": [beNot["conditional"] + " " + gerund],
-    "conditional perfect": haveNot["conditional"].map((x) => x + " " + v3),
+    "conditional continuous": [_beNot["conditional"] + " " + gerund],
+    "conditional perfect": _haveNot["conditional"].map((x) => x + " " + v3),
     imperative: ["do not " + infinitive],
   };
   const subsequentTenseDescRef = {
@@ -583,18 +583,22 @@ exports.generateAdhocForms = (
 
             let tense = tenseDescription.split(" ")[0];
 
-            let beRef = negative ? beNot : be;
+            let beRef = negative ? _beNot : _be;
+
+            let wordFromRef = [
+              exports.stripAuxiliaryMarker(beRef[tense][person][number]),
+            ];
 
             consol.log(
               "wmcp generateAdhocForms giving _addToResArrAdhocForms this selectedWordArr",
-              [beRef[tense][person][number]]
+              wordFromRef
             );
 
             _addToResArrAdhocForms(
               resArr,
               "tenseDescription",
               tenseDescription,
-              [beRef[tense][person][number]],
+              wordFromRef,
               structureChunk,
               dataToUpdateWith
             );
@@ -642,3 +646,10 @@ exports.generateAdhocForms = (
 };
 
 exports.convertTenseToTenseDescription = () => {};
+
+exports.stripAuxiliaryMarker = (str) => {
+  return str
+    .split("")
+    .filter((x) => x !== "ª")
+    .join("");
+};
