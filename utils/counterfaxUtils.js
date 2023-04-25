@@ -646,6 +646,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
         devSaysThrowAtMidpoint: reqBody.devSaysThrowAtMidpoint,
         devSaysOmitStChValidation: reqBody.devSaysOmitStChValidation,
         devSaysThrowAfterAnnoSalvo: reqBody.devSaysThrowAfterAnnoSalvo,
+        formattingOptions: reqBody.formattingOptions,
       };
 
       let newReqBodys = [newReqBody];

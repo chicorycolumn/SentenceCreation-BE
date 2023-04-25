@@ -4,6 +4,7 @@ const uUtils = require("../utils/universalUtils.js");
 const {
   combineAndExplodeTwoSuperArrays,
   areTwoArraysContainingArraysContainingOnlyStringsAndKeyValueObjectsEqual,
+  explodeContractions,
 } = require("../utils/generalPurposeUtils.js");
 
 const {
@@ -1501,7 +1502,49 @@ xdescribe("checkEachSequentialPairing", () => {
   });
 });
 
-xdescribe("arrayExploder", () => {
+xdescribe("explodeContractions", () => {
+  it("Explode two of the same contraction.", () => {
+    let actual = explodeContractions("ENG", "He's what he's seen.");
+
+    const expected = [
+      "he is what he is seen",
+      "he is what he has seen",
+      "he has what he is seen",
+      "he has what he has seen",
+    ];
+
+    expect(actual).to.eql(expected);
+  });
+  it("Explode several different contractions.", () => {
+    let actual = explodeContractions(
+      "ENG",
+      "He's what you'd seen when they're what you'd thought he's been but isn't."
+    );
+
+    const expected = [
+      "he is what you would seen when they are what you would thought he is been but is not",
+      "he is what you would seen when they are what you would thought he has been but is not",
+      "he is what you would seen when they are what you had thought he is been but is not",
+      "he is what you would seen when they are what you had thought he has been but is not",
+      "he is what you had seen when they are what you would thought he is been but is not",
+      "he is what you had seen when they are what you would thought he has been but is not",
+      "he is what you had seen when they are what you had thought he is been but is not",
+      "he is what you had seen when they are what you had thought he has been but is not",
+      "he has what you would seen when they are what you would thought he is been but is not",
+      "he has what you would seen when they are what you would thought he has been but is not",
+      "he has what you would seen when they are what you had thought he is been but is not",
+      "he has what you would seen when they are what you had thought he has been but is not",
+      "he has what you had seen when they are what you would thought he is been but is not",
+      "he has what you had seen when they are what you would thought he has been but is not",
+      "he has what you had seen when they are what you had thought he is been but is not",
+      "he has what you had seen when they are what you had thought he has been but is not",
+    ];
+
+    expect(actual).to.eql(expected);
+  });
+});
+
+describe("arrayExploder", () => {
   it("Returns empty array when given empty array.", () => {
     const input = [];
     const expected = [];

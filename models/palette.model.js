@@ -34,6 +34,7 @@ exports.fetchPalette = (req) => {
     startTime,
     timeLimit,
     env = "ref",
+    formattingOptions = {},
   } = req.body;
 
   if (!startTime) {
@@ -48,6 +49,7 @@ exports.fetchPalette = (req) => {
     timeLimit,
     (label) => {
       return frUtils.returnNullQuestionResponseObj(
+        formattingOptions,
         startTime,
         returnDirectly,
         {
@@ -145,6 +147,7 @@ exports.fetchPalette = (req) => {
       return;
     } else {
       return frUtils.returnNullQuestionResponseObj(
+        formattingOptions,
         startTime,
         returnDirectly,
         questionSentenceData,
@@ -168,7 +171,8 @@ exports.fetchPalette = (req) => {
           sentenceFormula,
           multipleMode,
           questionLanguage,
-          answerLanguage
+          answerLanguage,
+          formattingOptions
         );
 
         return sentence;
@@ -475,6 +479,7 @@ exports.fetchPalette = (req) => {
 
       if (!answerResponseObj) {
         answerResponseObj = scUtils.giveFinalSentences(
+          formattingOptions,
           startTime,
           answerSentenceData,
           multipleMode,
@@ -483,6 +488,7 @@ exports.fetchPalette = (req) => {
         );
       } else {
         let subsequentAnswerResponseObj = scUtils.giveFinalSentences(
+          formattingOptions,
           startTime,
           answerSentenceData,
           multipleMode,
@@ -534,6 +540,7 @@ exports.fetchPalette = (req) => {
   //giveFinalSentences in question mode, will evaluate annotations, involving counterfaxing,
   //ie a nested set of calls to this fetchPalette fxn.
   questionResponseObj = scUtils.giveFinalSentences(
+    formattingOptions,
     startTime,
     questionSentenceData,
     false,
@@ -550,6 +557,7 @@ exports.fetchPalette = (req) => {
   if (answerSelectedWordsSetsHaveChanged.bool) {
     if (!answerResponseObj) {
       answerResponseObj = scUtils.giveFinalSentences(
+        formattingOptions,
         startTime,
         answerSentenceData,
         true,
@@ -558,6 +566,7 @@ exports.fetchPalette = (req) => {
       );
     } else {
       let subsequentAnswerResponseObj = scUtils.giveFinalSentences(
+        formattingOptions,
         startTime,
         answerSentenceData,
         true,

@@ -4,7 +4,7 @@ const { expect } = require("chai");
 const consol = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const { it } = require("mocha");
 const testingUtils = require("../utils/secondOrder/testingUtils.js");
-const { runPaletteTest } = testingUtils;
+const { runPaletteTest1 } = testingUtils;
 
 describe("/api", function () {
   this.timeout(7000);
@@ -41,7 +41,7 @@ describe("/api", function () {
           POL: ["Kim ja jestem?", "Kim jestem?"],
         },
       ];
-      return runPaletteTest("POL", "ENG", "dummy70a", ref);
+      return runPaletteTest1("POL", "ENG", "dummy70a", ref);
     });
   });
 
@@ -53,7 +53,7 @@ describe("/api", function () {
           POL: ["Mała dziura.", "Mały otwór."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "dummy71a", ref, {
+      return runPaletteTest1("ENG", "POL", "dummy71a", ref, {
         useDummyWords: true,
       });
     });
@@ -64,7 +64,7 @@ describe("/api", function () {
           POL: ["Mała dziura."],
         },
       ];
-      return runPaletteTest("POL", "ENG", "dummy71a", ref, {
+      return runPaletteTest1("POL", "ENG", "dummy71a", ref, {
         useDummyWords: true,
       });
     });
@@ -75,7 +75,7 @@ describe("/api", function () {
           POL: ["W małej dziurze.", "W małym otworze."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "dummy71b", ref, {
+      return runPaletteTest1("ENG", "POL", "dummy71b", ref, {
         useDummyWords: true,
       });
     });
@@ -86,7 +86,7 @@ describe("/api", function () {
           POL: ["W małej dziurze."],
         },
       ];
-      return runPaletteTest("POL", "ENG", "dummy71b", ref, {
+      return runPaletteTest1("POL", "ENG", "dummy71b", ref, {
         useDummyWords: true,
       });
     });
@@ -102,7 +102,7 @@ describe("/api", function () {
           ],
         },
       ];
-      return runPaletteTest("ENG", "POL", "dummy71c", ref, {
+      return runPaletteTest1("ENG", "POL", "dummy71c", ref, {
         useDummyWords: true,
       });
     });
@@ -118,7 +118,7 @@ describe("/api", function () {
           POL: ["W małej dziurze."],
         },
       ];
-      return runPaletteTest("POL", "ENG", "dummy71c", ref, {
+      return runPaletteTest1("POL", "ENG", "dummy71c", ref, {
         useDummyWords: true,
       });
     });
@@ -136,7 +136,7 @@ describe("/api", function () {
           POL: ["Widzę szczura, był mały."],
         },
       ];
-      return runPaletteTest("POL", "ENG", "dummy67b", ref);
+      return runPaletteTest1("POL", "ENG", "dummy67b", ref);
     });
     it("#pal24-01b GET 200 YES: Engpol. I saw a rat, it was small.", () => {
       let ref = [
@@ -145,13 +145,13 @@ describe("/api", function () {
           POL: ["Widzę szczura, był mały."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "dummy67b", ref);
+      return runPaletteTest1("ENG", "POL", "dummy67b", ref);
     });
   });
 
   describe("/palette - Stage 25: Two levels of dependent chunks.", () => {
     it("#pal25-01a GET 200 YES: Poleng. I was a good doctor.", () => {
-      return runPaletteTest("POL", "ENG", "124a", [
+      return runPaletteTest1("POL", "ENG", "124a", [
         {
           ENG: [
             "I have been a red doctor.",
@@ -174,7 +174,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal25-01b GET 200 YES: Engpol. I was a good doctor.", () => {
-      return runPaletteTest("ENG", "POL", "124a", [
+      return runPaletteTest1("ENG", "POL", "124a", [
         {
           ENG: ["I was a red doctor (male)."],
           POL: ["Byłem czerwonym lekarzem."],

@@ -8,7 +8,7 @@ const consol = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const { it } = require("mocha");
 const testingUtils = require("../utils/secondOrder/testingUtils.js");
 const { generalTranslatedSentencesRef } = testingUtils;
-const { runPaletteTest, runPaletteTestMultiple, checkProportions } =
+const { runPaletteTest1, runPaletteTest1Multiple, checkProportions } =
   testingUtils;
 
 // MGN:            Multi-gender noun. Eg doctor in ENG can be either male or female.
@@ -66,6 +66,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           questionLanguage: "POL",
         })
         .expect(200)
@@ -78,6 +79,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           questionLanguage: "ENG",
         })
         .expect(200)
@@ -90,6 +92,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           questionLanguage: "POL",
           sentenceFormulaId: "POL-dummy01",
           useDummy: true,
@@ -108,6 +111,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           questionLanguage: "POL",
           sentenceFormulaId: "POL-dummy02",
           devSaysOmitStChValidation: true,
@@ -127,6 +131,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           questionLanguage: "POL",
           sentenceFormulaId: "POL-dummy03",
           useDummy: true,
@@ -145,6 +150,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           questionLanguage: "POL",
           sentenceFormulaId: "POL-dummy04",
           useDummy: true,
@@ -163,6 +169,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           questionLanguage: "POL",
           sentenceFormulaId: "POL-dummy05",
           useDummy: true,
@@ -177,6 +184,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           questionLanguage: "POL",
           sentenceFormulaId: "POL-dummy06",
           useDummy: true,
@@ -191,6 +199,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           questionLanguage: "POL",
           sentenceFormulaId: "POL-dummy07",
           useDummy: true,
@@ -209,6 +218,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           questionLanguage: "POL",
           sentenceFormulaId: "POL-dummy08",
           useDummy: true,
@@ -223,6 +233,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           questionLanguage: "POL",
           sentenceFormulaId: "POL-dummy19",
           useDummy: true,
@@ -234,15 +245,15 @@ describe("/api", function () {
         });
     });
     it("#pal01-04a GET 200 YES: Checking in console logs whether structureChunks have indeed been updated with the traitValues for eg number, gender, gcase of the finally selected word they structure for.", () => {
-      return runPaletteTest("POL", null, "57");
+      return runPaletteTest1("POL", null, "57");
     });
     it("#pal01-05a GET 200 YES: Check order of words in final sentence, based on one specified order.", () => {
-      return runPaletteTest("POL", null, "dummy09", [
+      return runPaletteTest1("POL", null, "dummy09", [
         "Foobar-A foobar-C foobar-B.",
       ]);
     });
     it("#pal01-05b GET 200 YES: Check order of words in final sentence, based on multiple specified orders.", () => {
-      return runPaletteTest("POL", null, "dummy10", [
+      return runPaletteTest1("POL", null, "dummy10", [
         "Foobar-A foobar-B foobar-C.",
         "Foobar-A foobar-C foobar-B.",
         "Foobar-B foobar-A foobar-C.",
@@ -250,10 +261,10 @@ describe("/api", function () {
       ]);
     });
     it("#pal01-06a GET 200 YES: Filter by specified lemma.", () => {
-      return runPaletteTest("POL", null, "dummy11a", ["Mam jabłko."]);
+      return runPaletteTest1("POL", null, "dummy11a", ["Mam jabłko."]);
     });
     it("#pal01-06b GET 200 YES: Filter by a selection of multiple specified lemmas.", () => {
-      return runPaletteTest("POL", null, "dummy11b", [
+      return runPaletteTest1("POL", null, "dummy11b", [
         "Mam jabłka.",
         "Mam majtki.",
       ]);
@@ -277,6 +288,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           questionLanguage: "POL",
           sentenceFormulaId: "POL-51",
         })
@@ -293,6 +305,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           questionLanguage: "POL",
           sentenceFormulaId: "POL-52",
           devSaysOmitStChValidation: true,
@@ -311,6 +324,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           questionLanguage: "POL",
           sentenceFormulaId: "POL-53",
         })
@@ -324,13 +338,13 @@ describe("/api", function () {
         });
     });
     it("#pal02-02a GET 200 YES: Returns a sentence where end of inflection chain could be array.", () => {
-      return runPaletteTest("POL", null, "54");
+      return runPaletteTest1("POL", null, "54");
     });
   });
 
   describe("/palette - Stage 3: Adjectives", () => {
     it("#pal03-01a GET 200 YES: Returns a sentence where adjective agrees with noun in singular. Filtered by orTags.", () => {
-      return runPaletteTest("POL", null, "55b", [
+      return runPaletteTest1("POL", null, "55b", [
         "Czerwona cebula.",
         "Czerwone jabłko.",
         "Niebieska cebula.",
@@ -338,25 +352,25 @@ describe("/api", function () {
       ]);
     });
     it("#pal03-02a GET 200 YES: Returns a sentence where adjective agrees with noun in singular. Filtered by andTags.", () => {
-      return runPaletteTest("POL", null, "55", [
+      return runPaletteTest1("POL", null, "55", [
         "Czerwona cebula.",
         "Czerwone jabłko.",
       ]);
     });
     it("#pal03-02b GET 200 YES: Returns a sentence where adjective agrees with noun in nonvirile plural.", () => {
-      return runPaletteTest("POL", null, "55a", [
+      return runPaletteTest1("POL", null, "55a", [
         "Czerwone cebule.",
         "Czerwone jabłka.",
       ]);
     });
     it("#pal03-02c GET 200 YES: Returns a sentence where adjective agrees with noun in virile or nonvirile plural.", () => {
-      return runPaletteTest("POL", null, "56", ["Czerwone kobiety."]);
+      return runPaletteTest1("POL", null, "56", ["Czerwone kobiety."]);
     });
   });
 
   describe("/palette - Stage 4: Verbs", () => {
     it("#pal04-01a GET 200 YES: Returns a sentence with a single verb, in present.", () => {
-      return runPaletteTest("POL", null, "58", [
+      return runPaletteTest1("POL", null, "58", [
         "Czytam.",
         "Czytasz.",
         "Czyta.",
@@ -366,7 +380,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal04-01b GET 200 YES: Returns a sentence with a single verb, with person specified.", () => {
-      return runPaletteTest("POL", null, "dummy12a", [
+      return runPaletteTest1("POL", null, "dummy12a", [
         "Czytasz.",
         "Czytacie.",
         "Czytałeś.",
@@ -390,13 +404,16 @@ describe("/api", function () {
       ]);
     });
     it("#pal04-01d GET 200 YES: Returns a sentence with a single verb, with tense number and gender specified.", () => {
-      return runPaletteTest("POL", null, "dummy13b", ["Czytasz.", "Czytacie."]);
+      return runPaletteTest1("POL", null, "dummy13b", [
+        "Czytasz.",
+        "Czytacie.",
+      ]);
     });
     it("#pal04-01e GET 200 YES: Returns a sentence with a single verb in infinitive.", () => {
-      return runPaletteTest("POL", null, "dummy14", ["Czytać."]);
+      return runPaletteTest1("POL", null, "dummy14", ["Czytać."]);
     });
     it("#pal04-01f GET 200 YES: Returns a sentence with a single verb in impersonal.", () => {
-      return runPaletteTest("POL", null, "dummy15", [
+      return runPaletteTest1("POL", null, "dummy15", [
         "Czyta się.",
         "Czytano.",
         "Będzie czytać się.",
@@ -404,7 +421,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal04-01g GET 200 YES: Returns a sentence with a single verb in impersonal, even when plural is specified (returns just those impersonals that have plural use).", () => {
-      return runPaletteTest("POL", null, "dummy15a", [
+      return runPaletteTest1("POL", null, "dummy15a", [
         "Czytano.",
         "Czytano by.",
         "Będzie czytać się.",
@@ -412,35 +429,35 @@ describe("/api", function () {
       ]);
     });
     it("#pal04-01h GET 200 YES: Returns a sentence with a single verb in impersonal, even when plural is specified (returns just those impersonals that have plural use).", () => {
-      return runPaletteTest("POL", null, "dummy15b", [
+      return runPaletteTest1("POL", null, "dummy15b", [
         "Przeczyta się.",
         "Przeczytano.",
         "Przeczytano by.",
       ]);
     });
     it("#pal04-02a GET 200 YES: Returns a sentence with a verb's contemporaryAdverbial participle.", () => {
-      return runPaletteTest("POL", null, "dummy16", ["Czytając."]);
+      return runPaletteTest1("POL", null, "dummy16", ["Czytając."]);
     });
     it("#pal04-02b GET 200 YES: Returns a sentence with a verb's contemporaryAdverbial participle, ignoring gender.", () => {
-      return runPaletteTest("POL", null, "dummy17", ["Czytając."]);
+      return runPaletteTest1("POL", null, "dummy17", ["Czytając."]);
     });
     it("#pal04-02c GET 200 YES: Returns a sentence with a verb's contemporaryAdverbial participle, ignoring gender and person.", () => {
-      return runPaletteTest("POL", null, "dummy18", ["Czytając."]);
+      return runPaletteTest1("POL", null, "dummy18", ["Czytając."]);
     });
     it("#pal04-02d GET 200 YES: Returns a sentence with a verb's anteriorAdverbial participle.", () => {
-      return runPaletteTest("POL", null, "dummy16a", ["Przeczytawszy."]);
+      return runPaletteTest1("POL", null, "dummy16a", ["Przeczytawszy."]);
     });
     it("#pal04-02e GET 200 YES: Returns a sentence with a verb's anteriorAdverbial participle, ignoring gender.", () => {
-      return runPaletteTest("POL", null, "dummy17a", ["Przeczytawszy."]);
+      return runPaletteTest1("POL", null, "dummy17a", ["Przeczytawszy."]);
     });
     it("#pal04-02f GET 200 YES: Returns a sentence with a verb's anteriorAdverbial participle, ignoring gender and person.", () => {
-      return runPaletteTest("POL", null, "dummy18a", ["Przeczytawszy."]);
+      return runPaletteTest1("POL", null, "dummy18a", ["Przeczytawszy."]);
     });
     it("#pal04-03a GET 200 YES: Returns a sentence with a single verb's verbalNoun.", () => {
-      return runPaletteTest("POL", null, "dummy21", ["Czytanie."]);
+      return runPaletteTest1("POL", null, "dummy21", ["Czytanie."]);
     });
     it("#pal04-04a GET 200 YES: Returns verb in virile when one gender option is given.", () => {
-      return runPaletteTest("POL", null, "dummy23a", [
+      return runPaletteTest1("POL", null, "dummy23a", [
         "Czytaliśmy.",
         "Czytaliście.",
         "Czytali.",
@@ -450,7 +467,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal04-04b GET 200 YES: Returns verb in nonvirile when one gender option is given.", () => {
-      return runPaletteTest("POL", null, "dummy23b", [
+      return runPaletteTest1("POL", null, "dummy23b", [
         "Czytałyśmy.",
         "Czytałyście.",
         "Czytały.",
@@ -460,7 +477,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal04-04c GET 200 YES: Returns verb in nonvirile when two gender options are given.", () => {
-      return runPaletteTest("POL", null, "dummy23c", [
+      return runPaletteTest1("POL", null, "dummy23c", [
         "Czytałyśmy.",
         "Czytałyście.",
         "Czytały.",
@@ -470,7 +487,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal04-05a GET 200 YES: Conjugate verb (as virile or nonvirile) to agree with noun in plural.", () => {
-      return runPaletteTest("POL", null, "60", [
+      return runPaletteTest1("POL", null, "60", [
         "Kobiety czytały.",
         "Dzieci czytały.",
         "Dziewczyny czytały.",
@@ -483,34 +500,34 @@ describe("/api", function () {
       ]);
     });
     it("#pal04-05b GET 200 YES: Conjugate verb to agree with noun in singular or plural.", () => {
-      return runPaletteTest("POL", null, "59", [
+      return runPaletteTest1("POL", null, "59", [
         "Kobieta czyta.",
         "Kobiety czytają.",
       ]);
     });
     it("#pal04-06a GET 200 YES: Select a verb by the Aspect selector.", () => {
-      return runPaletteTest("POL", null, "dummy20a", [
+      return runPaletteTest1("POL", null, "dummy20a", [
         "Kobieta czyta.",
         "Kobiety czytają.",
       ]);
     });
     it("#pal04-06b GET 200 YES: Select a verb by the Aspect selector.", () => {
-      return runPaletteTest("POL", null, "dummy20b", [
+      return runPaletteTest1("POL", null, "dummy20b", [
         "Kobieta przeczyta.",
         "Kobiety przeczytają.",
       ]);
     });
     it("#pal04-07a GET 200 YES: Make two verbs agree.", () => {
-      return runPaletteTest("POL", null, "dummy24a", ["Czytam i badam."]);
+      return runPaletteTest1("POL", null, "dummy24a", ["Czytam i badam."]);
     });
     it("#pal04-07b GET 200 YES: Make two verbs agree when there is a choice of person.", () => {
-      return runPaletteTest("POL", null, "dummy24b", [
+      return runPaletteTest1("POL", null, "dummy24b", [
         "Czytam i badam.",
         "Czytasz i badasz.",
       ]);
     });
     it("#pal04-07c GET 200 YES: Make two verbs agree when there is a choice of person, gender, and number.", () => {
-      return runPaletteTest("POL", null, "dummy24c", [
+      return runPaletteTest1("POL", null, "dummy24c", [
         "Czytam i badam.",
         "Czytasz i badasz.",
 
@@ -532,7 +549,7 @@ describe("/api", function () {
 
   describe("/palette - Stage 5: Generate rich sentences (nouns adjectives and verbs).", () => {
     it("#pal05-01a GET 200 YES: Returns a sentence in present.", () => {
-      return runPaletteTest("POL", null, "61", [
+      return runPaletteTest1("POL", null, "61", [
         "Kobieta ma czerwone jabłko.",
         "Kobieta ma czerwone jabłka.",
         "Kobiety mają czerwone jabłko.",
@@ -544,7 +561,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal05-01b GET 200 YES: Returns a negative sentence in past.", () => {
-      return runPaletteTest("POL", null, "61b", [
+      return runPaletteTest1("POL", null, "61b", [
         "Kobieta nie miała czerwonego jabłka.",
         "Kobieta nie miała czerwonych jabłek.",
         "Kobiety nie miały czerwonego jabłka.",
@@ -556,7 +573,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal05-01c GET 200 YES: Returns a negative sentence in past.", () => {
-      return runPaletteTest("POL", null, "62b", [
+      return runPaletteTest1("POL", null, "62b", [
         "Czerwona kobieta nie miała czerwonego jabłka.",
         "Czerwona kobieta nie miała czerwonych jabłek.",
         "Czerwone kobiety nie miały czerwonego jabłka.",
@@ -568,19 +585,19 @@ describe("/api", function () {
       ]);
     });
     it("#pal05-02a GET 200 YES: Returns a sentence when selected by tenseDescription.", () => {
-      return runPaletteTest("POL", null, "63a", [
+      return runPaletteTest1("POL", null, "63a", [
         "Kobieta czyta.",
         "Kobiety czytają.",
       ]);
     });
     it("#pal05-02b GET 200 YES: Returns a sentence when selected by tenseDescription.", () => {
-      return runPaletteTest("POL", null, "63b", [
+      return runPaletteTest1("POL", null, "63b", [
         "Kobieta przeczytała.",
         "Kobiety przeczytały.",
       ]);
     });
     it("#pal05-02c GET 200 YES: Returns a sentence when selected by tenseDescription.", () => {
-      return runPaletteTest("POL", null, "63c", [
+      return runPaletteTest1("POL", null, "63c", [
         "Kobieta będzie czytała.",
         "Kobiety będą czytały.",
         "Kobieta będzie czytać.",
@@ -588,7 +605,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal05-03a GET 200 YES: Allow specification of multiple radically different tenseDescriptions, without unwanted cross pollination.", () => {
-      return runPaletteTest("POL", null, "dummy26", [
+      return runPaletteTest1("POL", null, "dummy26", [
         "Czytałam.",
         "Przeczytam.",
       ]);
@@ -603,7 +620,7 @@ describe("/api", function () {
         },
         { ENG: ["I was reading.", "I have read."], POL: ["Czytałam."] },
       ];
-      return runPaletteTest("POL", "ENG", "dummy26", ref);
+      return runPaletteTest1("POL", "ENG", "dummy26", ref);
     });
     it("#pal05-03c GET 200 YES: Allow specification of multiple radically different tenseDescriptions, and then translate them. Engpol. Works for tenseDescription.", () => {
       //If "Będę pisał." or ERROR are returned, it's because the unwanted cross pollination is happening.
@@ -617,7 +634,7 @@ describe("/api", function () {
           ENG: ["I will write.", "I will have written."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "dummy27", ref);
+      return runPaletteTest1("ENG", "POL", "dummy27", ref);
     });
     it("#pal05-03d GET 200 YES: Allow specification of multiple radically different tenseDescriptions, and then translate them. Engpol. Works for tenseDescription and gender.", () => {
       //If "Będę czytała." or "Przeczytałam." are returned, it's because the unwanted cross pollination is happening.
@@ -631,10 +648,10 @@ describe("/api", function () {
           ENG: ["I will read.", "I will have read."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "dummy26", ref);
+      return runPaletteTest1("ENG", "POL", "dummy26", ref);
     });
     it("#pal05-04a GET 200 YES: It's okay to specify gender: f and number: plural, even though gender will technically be nonvirile. The f gender gets converted to nonvirile gender before drillPath, so the each drillPath does indeed come out correct.", () => {
-      return runPaletteTest("POL", null, "dummy32", ["Czytają."]);
+      return runPaletteTest1("POL", null, "dummy32", ["Czytają."]);
     });
   });
 
@@ -646,6 +663,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           questionLanguage,
           answerLanguage,
           sentenceFormulaId: "POL-101a",
@@ -694,6 +712,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           questionLanguage,
           answerLanguage,
           sentenceFormulaId: "POL-101b",
@@ -750,6 +769,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           questionLanguage,
           answerLanguage,
           useDummy: true,
@@ -785,6 +805,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           questionLanguage,
           answerLanguage,
           useDummy: true,
@@ -820,6 +841,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           questionLanguage,
           answerLanguage,
           sentenceFormulaId: "POL-102a",
@@ -842,6 +864,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           questionLanguage,
           answerLanguage,
           sentenceFormulaId: "ENG-103a",
@@ -864,6 +887,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           questionLanguage,
           answerLanguage,
           sentenceFormulaId: "ENG-103b",
@@ -886,6 +910,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           questionLanguage,
           answerLanguage,
           sentenceFormulaId: "POL-103c",
@@ -908,6 +933,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           questionLanguage,
           answerLanguage,
           useDummy: true,
@@ -939,6 +965,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           questionLanguage,
           answerLanguage,
           useDummy: true,
@@ -974,6 +1001,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           questionLanguage,
           answerLanguage,
           sentenceFormulaId: "POL-104a",
@@ -996,6 +1024,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           questionLanguage,
           answerLanguage,
           sentenceFormulaId: "ENG-104a",
@@ -1018,6 +1047,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           questionLanguage,
           answerLanguage,
           sentenceFormulaId: "POL-104b",
@@ -1040,6 +1070,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           questionLanguage,
           answerLanguage,
           sentenceFormulaId: "ENG-104b",
@@ -1062,6 +1093,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           questionLanguage,
           answerLanguage,
           useDummy: true,
@@ -1085,6 +1117,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           questionLanguage,
           answerLanguage,
           useDummy: true,
@@ -1108,6 +1141,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           questionLanguage,
           answerLanguage,
           useDummy: true,
@@ -1131,6 +1165,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           questionLanguage,
           answerLanguage,
           sentenceFormulaId: "ENG-105a",
@@ -1147,7 +1182,7 @@ describe("/api", function () {
         });
     });
     it("#pal06-06a GET 200 YES: Battery RSWAT Poleng. Ensure genderProportion masc and fem randomly selected at ~50/50 rate, despite there being thrice as many masculine genders as feminine.", () => {
-      return runPaletteTestMultiple(
+      return runPaletteTest1Multiple(
         100,
         "POL",
         "ENG",
@@ -1166,7 +1201,7 @@ describe("/api", function () {
       });
     });
     it("#pal06-06b GET 200 YES: Battery RSWAT Poleng. Ensure genderProportion masc and fem randomly selected at ~50/50 rate, despite there being thrice as many masculine genders as feminine.", () => {
-      return runPaletteTestMultiple(
+      return runPaletteTest1Multiple(
         100,
         "POL",
         "ENG",
@@ -1186,7 +1221,7 @@ describe("/api", function () {
 
   describe("/palette - Stage 7: 'Be' ENG <-> POL.", () => {
     it("#pal07-01a GET 200 YES: Conjugate POL be correctly without translations.", () => {
-      return runPaletteTest("POL", null, "dummy33", [
+      return runPaletteTest1("POL", null, "dummy33", [
         "Jestem.",
         "Jesteś.",
         "Jest.",
@@ -1215,6 +1250,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -1238,6 +1274,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -1261,6 +1298,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -1284,6 +1322,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -1307,6 +1346,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -1330,6 +1370,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -1353,6 +1394,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           useDummy: true,
           questionLanguage,
           sentenceFormulaId: "ENG-dummy33",
@@ -1372,6 +1414,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -1395,6 +1438,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -1418,6 +1462,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -1441,6 +1486,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -1464,6 +1510,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -1487,6 +1534,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -1504,7 +1552,7 @@ describe("/api", function () {
         });
     });
     it("#pal07-03b GET 200 YES: Conjugate POL 'be' past pf, (should be treated as im and pf both). This related to Operation Ripplemin where we removed preprocessLemmaObjectsMinor which in POL adjusted imperfectiveOnly to have a duplicate lObj with aspect perfective, but instead we have solved this with a meta trait value for aspect for eg być and mieć.", () => {
-      return runPaletteTest("POL", null, "dummy34", [
+      return runPaletteTest1("POL", null, "dummy34", [
         "Byłem.",
         "Byłam.",
         "Byłeś.",
@@ -1527,6 +1575,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           useDummy: true,
           questionLanguage,
           sentenceFormulaId: "ENG-dummy34c",
@@ -1546,6 +1595,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -1569,6 +1619,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -1592,6 +1643,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -1612,7 +1664,7 @@ describe("/api", function () {
 
   describe("/palette - Stage 8: 'Have' ENG <-> POL.", () => {
     it("#pal08-01a GET 200 YES: Conjugate POL have correctly without translations.", () => {
-      return runPaletteTest("POL", null, "dummy53", [
+      return runPaletteTest1("POL", null, "dummy53", [
         "Mam.",
         "Masz.",
         "Ma.",
@@ -1641,6 +1693,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -1664,6 +1717,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -1687,6 +1741,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -1710,6 +1765,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -1733,6 +1789,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -1756,6 +1813,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           useDummy: true,
           questionLanguage,
           sentenceFormulaId: "ENG-dummy53",
@@ -1775,6 +1833,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -1798,6 +1857,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -1821,6 +1881,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -1844,6 +1905,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -1867,6 +1929,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -1890,6 +1953,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -1907,7 +1971,7 @@ describe("/api", function () {
         });
     });
     it("#pal08-03b GET 200 YES: Conjugate POL 'have' past pf, (should be treated as im and pf both).", () => {
-      return runPaletteTest("POL", null, "dummy54", [
+      return runPaletteTest1("POL", null, "dummy54", [
         "Miałem.",
         "Miałam.",
         "Miałeś.",
@@ -1924,7 +1988,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal08-03c GET 200 YES: Conjugate ENG 'have' future, it SHOULD give fut cont.", () => {
-      return runPaletteTest("ENG", null, "dummy54c", [
+      return runPaletteTest1("ENG", null, "dummy54c", [
         "I will have.",
         "I will have had.",
       ]);
@@ -1936,6 +2000,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -1961,6 +2026,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           useDummy: true,
           questionLanguage,
           answerLanguage,
@@ -1984,6 +2050,7 @@ describe("/api", function () {
       return request(app)
         .get("/api/palette")
         .send({
+          formattingOptions: { suppressContractions: true },
           useDummy: true,
           questionLanguage,
           answerLanguage,

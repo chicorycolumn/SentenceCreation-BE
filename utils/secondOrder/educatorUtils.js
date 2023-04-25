@@ -3,6 +3,7 @@ const uUtils = require(".././universalUtils.js");
 const consol = require(".././zerothOrder/consoleLoggingUtils.js");
 const otUtils = require(".././objectTraversingUtils.js");
 const educatorUtils = require("./educatorUtils.js");
+const refObj = require(".././reference/referenceObjects.js");
 
 exports.checkOutputArrayForMissingUnits = (
   sentenceFormula,
@@ -292,4 +293,34 @@ exports.getSentenceFormulasBank = (currentLanguage, envir) => {
     sentenceFormulasBank,
   } = require(`../../source/${envir}/${currentLanguage}/sentenceFormulas.js`);
   return sentenceFormulasBank;
+};
+
+exports.reverseContractions = (lang) => {
+  let rev = {};
+  Object.values(refObj.contractions[lang]).forEach((contractionsSet) => {
+    Object.keys(contractionsSet).forEach((v) => {
+      let k = contractionsSet[v];
+      k = k
+        .split("")
+        .filter((char) => !["ª", "¤"].includes(char))
+        .join("")
+        .toLowerCase();
+      v = v
+        .split("")
+        .filter((char) => !["ª", "¤"].includes(char))
+        .join("")
+        .toLowerCase();
+      if (!rev[k]) {
+        rev[k] = [v];
+      } else {
+        if (!rev[k].includes(v)) {
+          rev[k].push(v);
+        }
+      }
+    });
+  });
+
+  let res = {};
+  res[lang] = rev;
+  console.log(res);
 };

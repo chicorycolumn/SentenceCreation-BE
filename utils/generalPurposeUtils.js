@@ -502,3 +502,28 @@ exports.enChTraitIsEmpty = (enChTraitObject) => {
     uUtils.isEmpty(enChTraitObject.traitValue)
   );
 };
+
+exports.explodeContractions = (lang, sentenceString) => {
+  let ref = refObj.contractionsReverse[lang];
+
+  sentenceString = sentenceString.toLowerCase();
+  if (sentenceString.endsWith(".")) {
+    sentenceString = sentenceString.slice(0, -1);
+  }
+
+  let split = sentenceString.split(" ");
+
+  let superArray = [];
+
+  split.forEach((word) => {
+    if (Object.keys(ref).includes(word)) {
+      superArray.push(ref[word].slice(0));
+    } else {
+      superArray.push([word]);
+    }
+  });
+
+  let exploded = uUtils.arrayExploder(superArray);
+
+  return exploded.map((arr) => arr.join(" "));
+};

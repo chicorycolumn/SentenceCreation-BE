@@ -3,9 +3,16 @@ const {
   checkLemmaObjectIds,
   checkSentenceFormulaIds,
   checkWords,
+  reverseContractions,
 } = require("../utils/secondOrder/educatorUtils.js");
 const { expect } = require("chai");
 const consol = require("./../utils/zerothOrder/consoleLoggingUtils.js");
+
+xdescribe("Create contractionsReverse ref.", () => {
+  it("ENG", () => {
+    reverseContractions("ENG");
+  });
+});
 
 xdescribe("findHomographs", () => {
   it("#edu1.1 Gives all synhomograph lemma objects in one language.", () => {

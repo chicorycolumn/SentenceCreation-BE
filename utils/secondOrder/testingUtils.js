@@ -96,15 +96,49 @@ exports.promiseAllMultiplier = (iterations = 10, callback) => {
   return res;
 };
 
-exports.runPaletteTestMultiple = (iterations = 10, ...args) => {
+exports.runPaletteTest1Multiple = (iterations = 10, ...args) => {
   return Promise.all(
     testingUtils.promiseAllMultiplier(iterations, () => {
-      return testingUtils.runPaletteTest(...args);
+      return testingUtils.runPaletteTest1(...args);
     })
   );
 };
 
-exports.runPaletteTest = (
+exports.runPaletteTest1 = (...argumentos) => {
+  // Used for all tests created prior to implementation of logic for:
+  // - contractions ("I am" to "I'm")
+
+  if (argumentos[4]) {
+    if (!Object.keys(argumentos[4]).includes("formattingOptions")) {
+      argumentos[4].formattingOptions = { suppressContractions: true };
+    } else {
+      if (
+        !Object.keys(argumentos[4].formattingOptions).includes(
+          "suppressContractions"
+        )
+      ) {
+        argumentos[4].formattingOptions.suppressContractions = true;
+      }
+    }
+  } else {
+    argumentos[4] = { formattingOptions: { suppressContractions: true } };
+  }
+  return testingUtils._runPaletteTest(...argumentos);
+};
+
+exports.runPaletteTest2Multiple = (iterations = 10, ...args) => {
+  return Promise.all(
+    testingUtils.promiseAllMultiplier(iterations, () => {
+      return testingUtils.runPaletteTest2(...args);
+    })
+  );
+};
+
+exports.runPaletteTest2 = (...argumentos) => {
+  return testingUtils._runPaletteTest(...argumentos);
+};
+
+exports._runPaletteTest = (
   questionLanguage,
   answerLanguage,
   sentenceFormulaId,

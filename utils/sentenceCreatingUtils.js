@@ -783,6 +783,7 @@ exports.processSentenceFormula = (
 };
 
 exports.giveFinalSentences = (
+  formattingOptions,
   startTime,
   sentenceData,
   multipleMode,
@@ -866,7 +867,8 @@ exports.giveFinalSentences = (
       sentenceFormula,
       multipleMode,
       questionLanguage,
-      answerLanguage
+      answerLanguage,
+      formattingOptions
     );
 
     finalSentences.forEach((finalSentence) => {
@@ -879,7 +881,8 @@ exports.giveFinalSentences = (
         sentenceFormula,
         multipleMode,
         currentLanguage,
-        null
+        null,
+        formattingOptions
       );
 
       let additionalFyipLabels = eaUtils.evaluateFYIPs(
@@ -911,7 +914,8 @@ exports.buildSentenceString = (
   sentenceFormula,
   multipleMode,
   currentLanguage,
-  answerLanguage
+  answerLanguage,
+  formattingOptions
 ) => {
   consol.log("[1;35m " + "cghk buildSentenceString" + "[0m");
   consol.log(
@@ -1025,27 +1029,98 @@ exports.buildSentenceString = (
     }
 
     arrOfFinalSelectedWordsArr.forEach((finalSelectedWordsArr) => {
-      let producedSentence = finalSelectedWordsArr[0];
-      finalSelectedWordsArr.slice(1).forEach((str) => {
-        if (refObj.punctuation.includes(str)) {
-          producedSentence += str;
-        } else {
-          producedSentence += ` ${str}`;
-        }
-      });
-      if (
-        !refObj.punctuation.includes(
-          finalSelectedWordsArr[finalSelectedWordsArr.length - 1]
-        )
-      ) {
-        producedSentence += ".";
-      }
-
-      producedSentences.push(uUtils.capitaliseFirst(producedSentence));
+      let producedSentence = scUtils.getProducedSentence(
+        finalSelectedWordsArr,
+        currentLanguage,
+        !multipleMode,
+        formattingOptions
+      );
+      producedSentences.push(producedSentence);
     });
   });
 
   return producedSentences;
+};
+
+exports.addContractions = (sentence, lang) => {
+  const _addContractions = (s, ref, probability, ifFollowedByWord) => {
+    let targets = Object.keys(ref);
+    uUtils.shuffle(targets);
+    targets.forEach((target) => {
+      let replacement = ref[target];
+
+      let reg = ifFollowedByWord
+        ? new RegExp(`${target}(?!\\p{L})(?=\\s\\p{L})`, "gu") // Match "he is" from "he is here." but not from "look where he is."
+        : new RegExp(`${target}(?!\\p{L})(?!-)(?!')`, "gu"); // Provided is not followed by a letter, dash, or apostrophe. Avoid picking up "he is" from "he isn't here."
+      let matchIndexes = [];
+      while ((match = reg.exec(s)) !== null) {
+        matchIndexes.push(match.index);
+      }
+
+      let indexUpper = 0;
+
+      matchIndexes.forEach((matchIndex) => {
+        if (Math.random() > probability) {
+          return;
+        }
+        let A = s.slice(0, matchIndex + indexUpper);
+        let B = s.slice(matchIndex + target.length + indexUpper);
+
+        s = A + `«${target}»` + B;
+        indexUpper += 2;
+      });
+
+      let newReg = RegExp(`«${target}»`, "g");
+      s = s.replace(newReg, replacement);
+    });
+
+    return s;
+  };
+
+  let ref = refObj.contractions[lang];
+
+  sentence = _addContractions(sentence, ref.mandatory, 1);
+  sentence = _addContractions(sentence, ref.optional, 0.5);
+  sentence = _addContractions(sentence, ref.ifFollowedByWord, 0.5, true);
+
+  return sentence;
+};
+
+exports.getProducedSentence = (
+  finalSelectedWordsArr,
+  currentLanguage,
+  isQuestionMode,
+  formattingOptions
+) => {
+  let producedSentence = finalSelectedWordsArr[0];
+  finalSelectedWordsArr.slice(1).forEach((str) => {
+    if (refObj.punctuation.includes(str)) {
+      producedSentence += str;
+    } else {
+      producedSentence += ` ${str}`;
+    }
+  });
+  if (
+    !refObj.punctuation.includes(
+      finalSelectedWordsArr[finalSelectedWordsArr.length - 1]
+    )
+  ) {
+    producedSentence += ".";
+  }
+
+  producedSentence = producedSentence
+    .split("")
+    .filter((char) => !Object.keys(refObj.selectedWordMarkers).includes(char))
+    .join("");
+
+  if (isQuestionMode && !formattingOptions.suppressContractions) {
+    producedSentence = scUtils.addContractions(
+      producedSentence,
+      currentLanguage
+    );
+  }
+
+  return uUtils.capitaliseFirst(producedSentence);
 };
 
 exports.coverBothGendersForPossessivesOfHypernyms = (

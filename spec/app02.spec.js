@@ -6,7 +6,7 @@ const consol = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const { it } = require("mocha");
 const testingUtils = require("../utils/secondOrder/testingUtils.js");
 const { generalTranslatedSentencesRef } = testingUtils;
-const { runPaletteTest } = testingUtils;
+const { runPaletteTest1 } = testingUtils;
 
 // MGN:            Multi-gender noun. Eg doctor in ENG can be either male or female.
 // ProsMgn:        "My doctor and her book." Connected pronombre reveals gender of MGN. Doesn't need an annotation for doctor as clearly must be lekarka.
@@ -27,7 +27,7 @@ describe("/api", function () {
 
   describe("/palette - Stage 9: Synhomographs (adding Clarifiers).", () => {
     it("#pal09-01a (Type 1 Synhomographs. If-PW: clarify Inflections) 'sheep': Engpol. Expect clarifiers.", () => {
-      return runPaletteTest2(
+      return runPaletteTestBespoke(
         "ENG",
         "POL",
         "dummy36",
@@ -37,7 +37,7 @@ describe("/api", function () {
       );
     });
     it("#pal09-01b 'sheep': Poleng. No clarifiers.", () => {
-      return runPaletteTest2(
+      return runPaletteTestBespoke(
         "POL",
         "ENG",
         "dummy36",
@@ -47,7 +47,7 @@ describe("/api", function () {
       );
     });
     it("#pal09-01c (Type 1 Synhomographs. If-PW: clarify Inflections) 'sheep': Engpol. Expect clarifiers. PDS makes it agnostic between singular and plural.", () => {
-      return runPaletteTest2(
+      return runPaletteTestBespoke(
         "ENG",
         "POL",
         "dummy36",
@@ -57,7 +57,7 @@ describe("/api", function () {
       );
     });
     it("#pal09-01d 'sheep': Poleng. No clarifiers. PDS should have no effect.", () => {
-      return runPaletteTest2(
+      return runPaletteTestBespoke(
         "POL",
         "ENG",
         "dummy36",
@@ -67,7 +67,7 @@ describe("/api", function () {
       );
     });
     it("#pal09-01e (Type 1 Synhomographs. If-PW: clarify Inflections) 'Sheep are* here.': Engpol. Expect clarifiers.", () => {
-      return runPaletteTest2(
+      return runPaletteTestBespoke(
         "ENG",
         "POL",
         "dummy36a",
@@ -76,7 +76,7 @@ describe("/api", function () {
       );
     });
     it("#pal09-01f 'Sheep are* here.': Poleng. No clarifiers.", () => {
-      return runPaletteTest2(
+      return runPaletteTestBespoke(
         "POL",
         "ENG",
         "dummy36a",
@@ -85,7 +85,7 @@ describe("/api", function () {
       );
     });
     it("#pal09-01g (Type 1 Synhomographs. If-PW: clarify Inflections) 'Sheep are* here.': Engpol. Expect clarifiers. PDS makes it agnostic between singular and plural.", () => {
-      return runPaletteTest2(
+      return runPaletteTestBespoke(
         "ENG",
         "POL",
         "dummy36a",
@@ -94,7 +94,7 @@ describe("/api", function () {
       );
     });
     it("#pal09-01h 'Sheep are* here.': Poleng. No clarifiers. PDS should have no effect.", () => {
-      return runPaletteTest2(
+      return runPaletteTestBespoke(
         "POL",
         "ENG",
         "dummy36a",
@@ -113,10 +113,10 @@ describe("/api", function () {
           POL: ["Owce.", "Owce są."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "dummy36b", ref);
+      return runPaletteTest1("ENG", "POL", "dummy36b", ref);
     });
     it("#pal09-02a (Type 2 Synhomographs. Ad-PW: clarify Inflections (tenseDescription)) 'read': Engpol. Expect clarifiers.", () => {
-      return runPaletteTest2(
+      return runPaletteTestBespoke(
         "ENG",
         "POL",
         "dummy38",
@@ -126,7 +126,7 @@ describe("/api", function () {
       );
     });
     it("#pal09-02b (Ad-PW: clarify Inflections (tenseDescription)) 'read': Poleng. No clarifiers.", () => {
-      return runPaletteTest2(
+      return runPaletteTestBespoke(
         "POL",
         "ENG",
         "dummy38",
@@ -136,7 +136,7 @@ describe("/api", function () {
       );
     });
     it("#pal09-03a (Type 3 Synhomographs. Ad-PW: clarify Inflections) 'write': Engpol. Expect clarifiers.", () => {
-      return runPaletteTest2(
+      return runPaletteTestBespoke(
         "ENG",
         "POL",
         "dummy40",
@@ -146,7 +146,7 @@ describe("/api", function () {
       );
     });
     it("#pal09-03b (Ad-PW: clarify Inflections) 'write': Poleng. No clarifiers.", () => {
-      return runPaletteTest2(
+      return runPaletteTestBespoke(
         "POL",
         "ENG",
         "dummy40",
@@ -156,7 +156,7 @@ describe("/api", function () {
       );
     });
     it("#pal09-03c (Type 3 Synhomographs. Ad-PW: clarify Inflections) 'write': Engpol. Expect clarifiers.", () => {
-      return runPaletteTest2(
+      return runPaletteTestBespoke(
         "ENG",
         "POL",
         "dummy41",
@@ -165,7 +165,7 @@ describe("/api", function () {
       );
     });
     it("#pal09-03d (Ad-PW: clarify Inflections) 'write': Poleng. No clarifiers.", () => {
-      return runPaletteTest2(
+      return runPaletteTestBespoke(
         "POL",
         "ENG",
         "dummy41",
@@ -175,7 +175,7 @@ describe("/api", function () {
       );
     });
     it("#pal09-03e (Type 3 Synhomographs. Ad-PW: clarify Inflections) 'write': Engpol. Expect clarifiers.", () => {
-      return runPaletteTest2(
+      return runPaletteTestBespoke(
         "ENG",
         "POL",
         "dummy42",
@@ -184,7 +184,7 @@ describe("/api", function () {
       );
     });
     it("#pal09-03f (Ad-PW: clarify Inflections) 'write': Poleng. No clarifiers.", () => {
-      return runPaletteTest2(
+      return runPaletteTestBespoke(
         "POL",
         "ENG",
         "dummy42",
@@ -201,7 +201,7 @@ describe("/api", function () {
       );
     });
     it("#pal09-03g (Type 3 Synhomographs. Ad-PW: clarify Inflections) 'be': Engpol. Expect clarifiers.", () => {
-      return runPaletteTest2(
+      return runPaletteTestBespoke(
         "ENG",
         "POL",
         "dummy39",
@@ -211,7 +211,7 @@ describe("/api", function () {
       );
     });
     it("#pal09-03h (Ad-PW: clarify Inflections) 'be': Poleng. No clarifiers.", () => {
-      return runPaletteTest2(
+      return runPaletteTestBespoke(
         "POL",
         "ENG",
         "dummy39",
@@ -227,7 +227,7 @@ describe("/api", function () {
           POL: ["Widzę.", "Ja widzę."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "dummy60", ref);
+      return runPaletteTest1("ENG", "POL", "dummy60", ref);
     });
     it("#pal09-04a-ii (pal09-02a Engpol, two clarifiers potentially expected.)", () => {
       let ref = [
@@ -240,7 +240,7 @@ describe("/api", function () {
           POL: ["Zobaczyłam.", "Ja zobaczyłam."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "dummy60a", ref);
+      return runPaletteTest1("ENG", "POL", "dummy60a", ref);
     });
     it("#pal09-04a-iii (pal09-02a Engpol, two clarifiers potentially expected.)", () => {
       let ref = [
@@ -257,7 +257,7 @@ describe("/api", function () {
           POL: ["Czytam.", "Ja czytam."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "dummy60b", ref);
+      return runPaletteTest1("ENG", "POL", "dummy60b", ref);
     });
     it("#pal09-04a-iv (pal09-02a Engpol PDS, two clarifiers potentially expected.)", () => {
       let ref = [
@@ -266,7 +266,7 @@ describe("/api", function () {
           POL: ["Widzę.", "Ja widzę."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "dummy60", ref, {
+      return runPaletteTest1("ENG", "POL", "dummy60", ref, {
         pleaseDontSpecify: true,
       });
     });
@@ -282,7 +282,7 @@ describe("/api", function () {
           ],
         },
       ];
-      return runPaletteTest("ENG", "POL", "dummy60a", ref, {
+      return runPaletteTest1("ENG", "POL", "dummy60a", ref, {
         pleaseDontSpecify: true,
       });
     });
@@ -302,7 +302,7 @@ describe("/api", function () {
           POL: ["Czytam.", "Ja czytam."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "dummy60b", ref, {
+      return runPaletteTest1("ENG", "POL", "dummy60b", ref, {
         pleaseDontSpecify: true,
       });
     });
@@ -313,7 +313,7 @@ describe("/api", function () {
           POL: "Widzę.",
         },
       ];
-      return runPaletteTest("POL", "ENG", "dummy60", ref);
+      return runPaletteTest1("POL", "ENG", "dummy60", ref);
     });
     it("#pal09-04b-ii (pal09-02a Poleng, two clarifiers potentially expected.)", () => {
       let ref = [
@@ -322,7 +322,7 @@ describe("/api", function () {
           POL: ["Zobaczyłem.", "Zobaczyłam."],
         },
       ];
-      return runPaletteTest("POL", "ENG", "dummy60a", ref);
+      return runPaletteTest1("POL", "ENG", "dummy60a", ref);
     });
     it("#pal09-04b-iii (pal09-02a Poleng, two clarifiers potentially expected.)", () => {
       let ref = [
@@ -335,7 +335,7 @@ describe("/api", function () {
           POL: "Czytam.",
         },
       ];
-      return runPaletteTest("POL", "ENG", "dummy60b", ref);
+      return runPaletteTest1("POL", "ENG", "dummy60b", ref);
     });
     it("#pal09-04b-iv (pal09-02a Poleng PDS, two clarifiers potentially expected.)", () => {
       let ref = [
@@ -344,7 +344,7 @@ describe("/api", function () {
           POL: "Widzę.",
         },
       ];
-      return runPaletteTest("POL", "ENG", "dummy60", ref, {
+      return runPaletteTest1("POL", "ENG", "dummy60", ref, {
         pleaseDontSpecify: true,
       });
     });
@@ -355,7 +355,7 @@ describe("/api", function () {
           POL: ["Zobaczyłem.", "Zobaczyłam."],
         },
       ];
-      return runPaletteTest("POL", "ENG", "dummy60a", ref, {
+      return runPaletteTest1("POL", "ENG", "dummy60a", ref, {
         pleaseDontSpecify: true,
       });
     });
@@ -370,7 +370,7 @@ describe("/api", function () {
           POL: "Czytam.",
         },
       ];
-      return runPaletteTest("POL", "ENG", "dummy60b", ref, {
+      return runPaletteTest1("POL", "ENG", "dummy60b", ref, {
         pleaseDontSpecify: true,
       });
     });
@@ -382,7 +382,7 @@ describe("/api", function () {
         { ENG: "A small nut (🥜, food).", POL: ["Mały orzech."] },
         { ENG: "A small nut (🔩, metal).", POL: ["Mała nakrętka."] },
       ];
-      return runPaletteTest(
+      return runPaletteTest1(
         "ENG",
         "POL",
         "dummy43",
@@ -395,7 +395,7 @@ describe("/api", function () {
       let ref = [
         { POL: ["Mały orzech.", "Mała nakrętka."], ENG: ["A small nut."] },
       ];
-      return runPaletteTest(
+      return runPaletteTest1(
         "POL",
         "ENG",
         "dummy43",
@@ -406,30 +406,30 @@ describe("/api", function () {
     });
     it("#pal10-02a Type 1 Allohomographs of MultipleWordtype: 'bear (nco)' Engpol. Expect clarifiers as requested allo-multi-clarifiers in structureChunk.", () => {
       let ref = [{ ENG: "Bear (nco).", POL: ["Niedźwiedź."] }];
-      return runPaletteTest("ENG", "POL", "dummy45a", ref, {}, 1);
+      return runPaletteTest1("ENG", "POL", "dummy45a", ref, {}, 1);
     });
     it("#pal10-02b Type 1 Allohomographs of MultipleWordtype: 'bear (ver)' Engpol. Expect clarifiers as requested allo-multi-clarifiers in structureChunk.", () => {
       let ref = [{ ENG: "Bear (ver).", POL: ["Znieść."] }];
-      return runPaletteTest("ENG", "POL", "dummy45b", ref, {}, 1);
+      return runPaletteTest1("ENG", "POL", "dummy45b", ref, {}, 1);
     });
     it("#pal10-02c Type 1 Allohomographs of MultipleWordtype: 'bear (ver)' Engpol. Did NOT request allo-multi-clarifiers in structureChunk.", () => {
       let ref = [{ ENG: "Bear.", POL: ["Znieść."] }];
-      return runPaletteTest("ENG", "POL", "dummy45c", ref, {}, 1);
+      return runPaletteTest1("ENG", "POL", "dummy45c", ref, {}, 1);
     });
     it("#pal10-02d Type 1 Allohomographs of MultipleWordtype: 'bear (nco)' Poleng. No clarifiers.", () => {
       let ref = [{ POL: "Niedźwiedź.", ENG: ["Bear."] }];
-      return runPaletteTest("POL", "ENG", "dummy45a", ref, {}, 1);
+      return runPaletteTest1("POL", "ENG", "dummy45a", ref, {}, 1);
     });
     it("#pal10-02e Type 1 Allohomographs of MultipleWordtype: 'bear (ver)' Poleng. No clarifiers.", () => {
       let ref = [{ POL: "Znieść.", ENG: ["Bear."] }];
-      return runPaletteTest("POL", "ENG", "dummy45b", ref, {}, 1);
+      return runPaletteTest1("POL", "ENG", "dummy45b", ref, {}, 1);
     });
     it("#pal10-03a Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (nco)' Engpol. Textmoji Clarifier expected. Wordtype Clarifier not requested.", () => {
       let ref = [
         { ENG: "Tie (⚽, score).", POL: ["Remis."] },
         { ENG: "Tie (👔, clothes).", POL: ["Krawat."] },
       ];
-      return runPaletteTest(
+      return runPaletteTest1(
         "ENG",
         "POL",
         "dummy46a",
@@ -443,7 +443,7 @@ describe("/api", function () {
         { ENG: "Tie (⚽, score, nco).", POL: ["Remis."] },
         { ENG: "Tie (👔, clothes, nco).", POL: ["Krawat."] },
       ];
-      return runPaletteTest(
+      return runPaletteTest1(
         "ENG",
         "POL",
         "dummy46b",
@@ -454,7 +454,7 @@ describe("/api", function () {
     });
     it("#pal10-03c Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (ver)' Engpol. Textmoji Clarifier expected. Wordtype Clarifier not requested.", () => {
       let ref = [{ ENG: "Tie (🧵, with string eg).", POL: ["Wiązać."] }];
-      return runPaletteTest(
+      return runPaletteTest1(
         "ENG",
         "POL",
         "dummy46c",
@@ -465,7 +465,7 @@ describe("/api", function () {
     });
     it("#pal10-03d Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (ver)' Engpol. Textmoji Clarifier expected. Wordtype Clarifier requested so also expected.", () => {
       let ref = [{ ENG: "Tie (🧵, with string eg, ver).", POL: ["Wiązać."] }];
-      return runPaletteTest(
+      return runPaletteTest1(
         "ENG",
         "POL",
         "dummy46d",
@@ -476,7 +476,7 @@ describe("/api", function () {
     });
     it("#pal10-03e Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (nco)' Poleng. No clarifiers.", () => {
       let ref = [{ POL: ["Remis.", "Krawat."], ENG: ["Tie."] }];
-      return runPaletteTest(
+      return runPaletteTest1(
         "POL",
         "ENG",
         "dummy46a",
@@ -487,7 +487,7 @@ describe("/api", function () {
     });
     it("#pal10-03f Type 1 Allohomographs of MultipleWordtype AND SingleWordtype: 'tie (ver)' Poleng. No clarifiers.", () => {
       let ref = [{ POL: "Wiązać.", ENG: ["Tie."] }];
-      return runPaletteTest(
+      return runPaletteTest1(
         "POL",
         "ENG",
         "dummy46c",
@@ -510,7 +510,7 @@ describe("/api", function () {
           POL: ["Lekarka pisała receptę."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "109a", ref, {});
+      return runPaletteTest1("ENG", "POL", "109a", ref, {});
     });
     it("#pal11A-01b GET 200 YES: SPECIFIER EXPECTED Multi Gender Noun PLURAL. Engpol.", () => {
       let ref = [
@@ -527,7 +527,7 @@ describe("/api", function () {
           POL: ["Lekarki pisały receptę."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "109c", ref, {});
+      return runPaletteTest1("ENG", "POL", "109c", ref, {});
     });
     it("#pal11A-02a GET 200 YES: NO SPECIFIER EVEN WHEN ASKED FOR. Pronombre I/WE. {pres im} needs no gender. Engpol.", () => {
       let ref = [
@@ -535,7 +535,7 @@ describe("/api", function () {
         { ENG: "We are.", POL: ["Jesteśmy.", "My jesteśmy."] },
       ];
 
-      return runPaletteTest("ENG", "POL", "111a", ref, {});
+      return runPaletteTest1("ENG", "POL", "111a", ref, {});
     });
     it("#pal11A-02b GET 200 YES: SPECIFIER EXPECTED. Pronombre I/WE. {past im} does indeed need gender. Engpol.", () => {
       let ref = [
@@ -547,7 +547,7 @@ describe("/api", function () {
         },
         { ENG: "We (females) were.", POL: ["Byłyśmy.", "My byłyśmy."] },
       ];
-      return runPaletteTest("ENG", "POL", "111b", ref, {});
+      return runPaletteTest1("ENG", "POL", "111b", ref, {});
     });
     it("#pal11A-03a GET 200 YES: NO SPECIFIER EVEN WHEN ASKED FOR if noun already has gender.", () => {
       let ref = [
@@ -591,7 +591,7 @@ describe("/api", function () {
           POL: ["Kobieta napisała.", "Kobieta pisała."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "dummy47", ref, {});
+      return runPaletteTest1("ENG", "POL", "dummy47", ref, {});
     });
     it("#pal11A-04a GET 200 YES: GIVE MULTIPLE ANSWER OPTIONS WHEN SPECIFIERS NOT REQUESTED. Pronombre I/WE. {past im} does indeed need gender. Engpol.", () => {
       let ref = [
@@ -612,7 +612,7 @@ describe("/api", function () {
           POL: ["Byłyśmy.", "My byłyśmy."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "111b", ref, {});
+      return runPaletteTest1("ENG", "POL", "111b", ref, {});
     });
     it("#pal11A-05a GET 200 YES: Gives clarifiers and specifiers. Pronombre YOU. Engpol.", () => {
       let ref = [
@@ -633,7 +633,7 @@ describe("/api", function () {
           POL: ["Byłyście.", "Wy byłyście."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "111c", ref, {});
+      return runPaletteTest1("ENG", "POL", "111c", ref, {});
     });
   });
 
@@ -649,7 +649,7 @@ describe("/api", function () {
           ],
         },
       ];
-      return runPaletteTest("POL", "ENG", "109", ref, {});
+      return runPaletteTest1("POL", "ENG", "109", ref, {});
     });
     it("#pal11B-01b GET 200 YES: Poleng. CHOOSE ONE. Plural. male or female versions of same person.", () => {
       let ref = [
@@ -662,7 +662,7 @@ describe("/api", function () {
           ],
         },
       ];
-      return runPaletteTest("POL", "ENG", "109b", ref, {});
+      return runPaletteTest1("POL", "ENG", "109b", ref, {});
     });
     it("#pal11B-01c GET 200 YES: Poleng. AGNOSTIC has no effect. Singular. male or female versions of same person.", () => {
       let ref = [
@@ -675,7 +675,7 @@ describe("/api", function () {
           ],
         },
       ];
-      return runPaletteTest("POL", "ENG", "109", ref, {
+      return runPaletteTest1("POL", "ENG", "109", ref, {
         pleaseDontSpecify: true,
       });
     });
@@ -690,7 +690,7 @@ describe("/api", function () {
           ],
         },
       ];
-      return runPaletteTest("POL", "ENG", "109b", ref, {
+      return runPaletteTest1("POL", "ENG", "109b", ref, {
         pleaseDontSpecify: true,
       });
     });
@@ -705,7 +705,7 @@ describe("/api", function () {
           POL: ["Lekarka pisała receptę."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "109a", ref, {});
+      return runPaletteTest1("ENG", "POL", "109a", ref, {});
     });
     it("#pal11B-02b GET 200 YES: Engpol. CHOOSE ONE. Plural. male or female versions of same person.", () => {
       let ref = [
@@ -721,7 +721,7 @@ describe("/api", function () {
           POL: ["Lekarze pisali receptę."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "109c", ref, {});
+      return runPaletteTest1("ENG", "POL", "109c", ref, {});
     });
     it("#pal11B-02c GET 200 YES: Engpol. AGNOSTIC. Singular. male or female versions of same person.", () => {
       let ref = [
@@ -730,7 +730,7 @@ describe("/api", function () {
           POL: ["Lekarz pisał receptę.", "Lekarka pisała receptę."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "109a", ref, {
+      return runPaletteTest1("ENG", "POL", "109a", ref, {
         pleaseDontSpecify: true,
       });
     });
@@ -741,7 +741,7 @@ describe("/api", function () {
           POL: ["Lekarze pisali receptę.", "Lekarki pisały receptę."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "109c", ref, {
+      return runPaletteTest1("ENG", "POL", "109c", ref, {
         pleaseDontSpecify: true,
       });
     });
@@ -752,7 +752,7 @@ describe("/api", function () {
           POL: ["Napisałem.", "Ja napisałem.", "Napisałam.", "Ja napisałam."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "dummy49c", ref, {
+      return runPaletteTest1("ENG", "POL", "dummy49c", ref, {
         pleaseDontSpecify: true,
       });
     });
@@ -768,7 +768,7 @@ describe("/api", function () {
           ],
         },
       ];
-      return runPaletteTest("ENG", "POL", "dummy49d", ref, {
+      return runPaletteTest1("ENG", "POL", "dummy49d", ref, {
         pleaseDontSpecify: true,
       });
     });
@@ -776,7 +776,7 @@ describe("/api", function () {
 
   xdescribe("/palette - Stage 12: Conditionals.", () => {
     it("#pal12-01a (04-01c) GET 200 YES: CONDITIONAL Returns a sentence with a single verb, with tense and number specified.", () => {
-      return runPaletteTest("POL", null, "dummy13a", [
+      return runPaletteTest1("POL", null, "dummy13a", [
         "Czytano by.",
         "Czytalibyśmy.",
         "Czytałybyśmy.",
@@ -787,7 +787,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal12-02a (05-02d) GET 200 YES: CONDITIONAL Returns a sentence when selected by one from multiple tenseDescriptions.", () => {
-      return runPaletteTest("POL", null, "63d", [
+      return runPaletteTest1("POL", null, "63d", [
         "Kobieta czytałaby.",
         "Kobiety czytałyby.",
         "Kobieta przeczytałaby.",
@@ -812,7 +812,7 @@ describe("/api", function () {
           ENG: ["If you write (female) a book , I will research it."],
         },
       ];
-      return runPaletteTest("POL", "ENG", "106a", ref, {});
+      return runPaletteTest1("POL", "ENG", "106a", ref, {});
     });
     it("#pal12-03b GET 200 YES: RSWAT for First Conditional ENG->POL.", () => {
       let ref = [
@@ -832,16 +832,16 @@ describe("/api", function () {
           POL: ["Jeśli będziesz pisała książkę , ją zbadam."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "106a", ref, {});
+      return runPaletteTest1("ENG", "POL", "106a", ref, {});
     });
   });
 
   describe("/palette - Stage 13A: Pronombres and other Multi Gender Nouns: Basic tests.", () => {
     it("#pal13A-01a GET 200 YES: Give a pronombre in ENG.", () => {
-      return runPaletteTest("ENG", null, "dummy48a", ["I."]);
+      return runPaletteTest1("ENG", null, "dummy48a", ["I."]);
     });
     it("#pal13A-01b GET 200 YES: Give a pronombre in POL.", () => {
-      return runPaletteTest("POL", null, "dummy48a", ["Ja."]);
+      return runPaletteTest1("POL", null, "dummy48a", ["Ja."]);
     });
     it("#pal13A-01c GET 200 YES: Give a pronombre in Poleng.", () => {
       let ref = [
@@ -850,7 +850,7 @@ describe("/api", function () {
           ENG: ["I."],
         },
       ];
-      return runPaletteTest("POL", "ENG", "dummy48a", ref);
+      return runPaletteTest1("POL", "ENG", "dummy48a", ref);
     });
     it("#pal13A-01d GET 200 YES: Give a pronombre in Engpol.", () => {
       let ref = [
@@ -859,13 +859,13 @@ describe("/api", function () {
           ENG: ["I."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "dummy48a", ref);
+      return runPaletteTest1("ENG", "POL", "dummy48a", ref);
     });
     it("#pal13A-02a GET 200 YES: Engpol. Inherit from pronombre to verb (m sing).", () => {
       let ref = [
         { ENG: "I (male) wrote.", POL: ["Napisałem.", "Ja napisałem."] },
       ];
-      return runPaletteTest("ENG", "POL", "dummy49a", ref, {});
+      return runPaletteTest1("ENG", "POL", "dummy49a", ref, {});
     });
     it("#pal13A-02b GET 200 YES: Engpol. Inherit from pronombre to verb (nonvir plur).", () => {
       let ref = [
@@ -874,13 +874,13 @@ describe("/api", function () {
           POL: ["Napisałyśmy.", "My napisałyśmy."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "dummy49b", ref, {});
+      return runPaletteTest1("ENG", "POL", "dummy49b", ref, {});
     });
     it("#pal13A-02c GET 200 YES: Engpol. WITH SPECIFIERS Inherit from pronombre to verb (m sing).", () => {
       let ref = [
         { ENG: "I (male) wrote.", POL: ["Napisałem.", "Ja napisałem."] },
       ];
-      return runPaletteTest("ENG", "POL", "dummy49a", ref, {});
+      return runPaletteTest1("ENG", "POL", "dummy49a", ref, {});
     });
     it("#pal13A-02d GET 200 YES: Engpol. WITH SPECIFIERS Inherit from pronombre to verb (nonvir plur).", () => {
       let ref = [
@@ -890,7 +890,7 @@ describe("/api", function () {
         },
       ];
 
-      return runPaletteTest("ENG", "POL", "dummy49b", ref, {});
+      return runPaletteTest1("ENG", "POL", "dummy49b", ref, {});
     });
     it("#pal13A-04a GET 200 YES: Poleng. Inherit from pronombre to verb (m sing).", () => {
       let ref = [
@@ -899,7 +899,7 @@ describe("/api", function () {
           POL: ["Napisałem.", "Ja napisałem."],
         },
       ];
-      return runPaletteTest("POL", "ENG", "dummy49a", ref, {});
+      return runPaletteTest1("POL", "ENG", "dummy49a", ref, {});
     });
     it("#pal13A-04b GET 200 YES: Poleng. Inherit from pronombre to verb (nonvir plur).", () => {
       let ref = [
@@ -908,7 +908,7 @@ describe("/api", function () {
           POL: ["Napisałyśmy.", "My napisałyśmy."],
         },
       ];
-      return runPaletteTest("POL", "ENG", "dummy49b", ref, {});
+      return runPaletteTest1("POL", "ENG", "dummy49b", ref, {});
     });
     it("#pal13A-04c GET 200 YES: Poleng. NO CLARIFIERS Inherit from pronombre to verb (m sing).", () => {
       let ref = [
@@ -917,7 +917,7 @@ describe("/api", function () {
           POL: ["Napisałem.", "Ja napisałem."],
         },
       ];
-      return runPaletteTest("POL", "ENG", "dummy49a", ref, {});
+      return runPaletteTest1("POL", "ENG", "dummy49a", ref, {});
     });
     it("#pal13A-04d GET 200 YES: Poleng. NO CLARIFIERS Inherit from pronombre to verb (nonvir plur).", () => {
       let ref = [
@@ -926,7 +926,7 @@ describe("/api", function () {
           POL: ["Napisałyśmy.", "My napisałyśmy."],
         },
       ];
-      return runPaletteTest("POL", "ENG", "dummy49b", ref, {});
+      return runPaletteTest1("POL", "ENG", "dummy49b", ref, {});
     });
     it("#pal13A-05a GET 200 YES: Poleng. Inherit from pronombre to verb (m sing).", () => {
       let ref = [
@@ -935,7 +935,7 @@ describe("/api", function () {
           POL: ["Napisałem.", "Ja napisałem.", "Napisałam.", "Ja napisałam."],
         },
       ];
-      return runPaletteTest("POL", "ENG", "dummy49c", ref, {});
+      return runPaletteTest1("POL", "ENG", "dummy49c", ref, {});
     });
     it("#pal13A-05b GET 200 YES: Poleng. Inherit from pronombre to verb (nonvir plur).", () => {
       let ref = [
@@ -949,7 +949,7 @@ describe("/api", function () {
           ],
         },
       ];
-      return runPaletteTest("POL", "ENG", "dummy49d", ref, {});
+      return runPaletteTest1("POL", "ENG", "dummy49d", ref, {});
     });
     it("#pal13A-05c GET 200 YES: Poleng. NO CLARIFIERS Inherit from pronombre to verb (m sing).", () => {
       let ref = [
@@ -958,7 +958,7 @@ describe("/api", function () {
           POL: ["Napisałem.", "Ja napisałem.", "Napisałam.", "Ja napisałam."],
         },
       ];
-      return runPaletteTest("POL", "ENG", "dummy49c", ref, {});
+      return runPaletteTest1("POL", "ENG", "dummy49c", ref, {});
     });
     it("#pal13A-05d GET 200 YES: Poleng. NO CLARIFIERS Inherit from pronombre to verb (nonvir plur).", () => {
       let ref = [
@@ -972,7 +972,7 @@ describe("/api", function () {
           ],
         },
       ];
-      return runPaletteTest("POL", "ENG", "dummy49b", ref, {});
+      return runPaletteTest1("POL", "ENG", "dummy49b", ref, {});
     });
     it("#pal13A-06a GET 200 YES: Engpol. No gender specified in stCh for MGN.", () => {
       let ref = [
@@ -985,7 +985,7 @@ describe("/api", function () {
           POL: ["Lekarz przeczytał.", "Lekarka przeczytała."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "dummy51a", ref, {
+      return runPaletteTest1("ENG", "POL", "dummy51a", ref, {
         pleaseDontSpecify: true,
       });
     });
@@ -997,7 +997,7 @@ describe("/api", function () {
         { ENG: "She is.", POL: ["Jest.", "Ona jest."] },
         { ENG: "It is.", POL: ["Jest.", "Ono jest."] },
       ];
-      return runPaletteTest("ENG", "POL", "108", ref, {});
+      return runPaletteTest1("ENG", "POL", "108", ref, {});
     });
   });
 
@@ -1008,14 +1008,14 @@ describe("/api", function () {
         { ENG: "I am.", POL: ["Jestem.", "Ja jestem."] },
         { ENG: "We are.", POL: ["Jesteśmy.", "My jesteśmy."] },
       ];
-      return runPaletteTest("ENG", "POL", "111a", ref, {});
+      return runPaletteTest1("ENG", "POL", "111a", ref, {});
     });
     it("#pal13B-01b GET 200 YES: Specifiers requested but should not appear. Engpol. I am.", () => {
       let ref = [
         { ENG: "I am.", POL: ["Jestem.", "Ja jestem."] },
         { ENG: "We are.", POL: ["Jesteśmy.", "My jesteśmy."] },
       ];
-      return runPaletteTest("ENG", "POL", "111a", ref, {});
+      return runPaletteTest1("ENG", "POL", "111a", ref, {});
     });
     it("#pal13B-02a GET 200 YES: Engpol. A more interesting sentence with Pronombres.", () => {
       let ref = [
@@ -1049,7 +1049,7 @@ describe("/api", function () {
         },
       ];
 
-      return runPaletteTest("ENG", "POL", "110", ref, {});
+      return runPaletteTest1("ENG", "POL", "110", ref, {});
     });
     it("#pal13B-02b GET 200 YES: Poleng. A more interesting sentence with Pronombres.", () => {
       let ref = [
@@ -1106,7 +1106,7 @@ describe("/api", function () {
           POL: "Kobiety czytały nam książkę.",
         },
       ];
-      return runPaletteTest("POL", "ENG", "110", ref, {});
+      return runPaletteTest1("POL", "ENG", "110", ref, {});
     });
     it("#pal13B-03a GET 200 YES: Engpol. Another more interesting sentence with Pronombres.", () => {
       let ref = [
@@ -1224,7 +1224,7 @@ describe("/api", function () {
           POL: ["Rodzic dał nam zwierciadła.", "Rodzic dał nam lustra."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "112", ref, {});
+      return runPaletteTest1("ENG", "POL", "112", ref, {});
     });
     it("#pal13B-03b GET 200 YES: Poleng. Another more interesting sentence with Pronombres.", () => {
       let ref = [
@@ -1493,7 +1493,7 @@ describe("/api", function () {
           ],
         },
       ];
-      return runPaletteTest("POL", "ENG", "112", ref, {});
+      return runPaletteTest1("POL", "ENG", "112", ref, {});
     });
     it("#pal13B-03c GET 200 YES: Poleng. Another more interesting sentence with Pronombres.", () => {
       let ref = [
@@ -1690,7 +1690,7 @@ describe("/api", function () {
           ],
         },
       ];
-      return runPaletteTest("POL", "ENG", "112a", ref, {});
+      return runPaletteTest1("POL", "ENG", "112a", ref, {});
     });
     it("#pal13B-04a GET 200 YES: Engpol. Another more interesting sentence with Pronombres. Terminal object used.", () => {
       // Was affected by Mungojerry issue, now resolved.
@@ -1720,7 +1720,7 @@ describe("/api", function () {
           POL: ["Kobiety zobaczyły was."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "dummy57", ref, {
+      return runPaletteTest1("ENG", "POL", "dummy57", ref, {
         devSaysOmitStChValidation: true,
       });
     });
@@ -1728,7 +1728,7 @@ describe("/api", function () {
 
   describe("/palette - Stage 14A: Possessive pronombres.", () => {
     it("#pal14A-01a GET 200 YES: POL only. I have my onion.", () => {
-      return runPaletteTest("POL", null, "dummy50a", [
+      return runPaletteTest1("POL", null, "dummy50a", [
         "Ja mam moją cebulę.",
         "My mamy naszą cebulę.",
         "Ja mam moje cebule.",
@@ -1740,7 +1740,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal14A-01b GET 200 YES: ENG only. I have my onion.", () => {
-      return runPaletteTest("ENG", null, "dummy50a", [
+      return runPaletteTest1("ENG", null, "dummy50a", [
         "I have my onion.",
         "I have my onions.",
         "We have our onion.",
@@ -1766,7 +1766,7 @@ describe("/api", function () {
           POL: ["My mamy nasze cebule.", "Mamy nasze cebule."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "dummy50a", ref, {});
+      return runPaletteTest1("ENG", "POL", "dummy50a", ref, {});
     });
     it("#pal14A-01d GET 200 YES: Poleng. I have my onion.", () => {
       let ref = [
@@ -1787,7 +1787,7 @@ describe("/api", function () {
           POL: "My mamy nasze cebule.",
         },
       ];
-      return runPaletteTest("POL", "ENG", "dummy50a", ref, {});
+      return runPaletteTest1("POL", "ENG", "dummy50a", ref, {});
     });
     it("#pal14A-01e GET 200 YES: Engpol. My onion.", () => {
       let ref = [
@@ -1796,7 +1796,7 @@ describe("/api", function () {
           POL: ["Moja cebula."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "dummy50b", ref, {});
+      return runPaletteTest1("ENG", "POL", "dummy50b", ref, {});
     });
     it("#pal14A-01f GET 200 YES: Poleng. My onion.", () => {
       let ref = [
@@ -1805,7 +1805,7 @@ describe("/api", function () {
           POL: "Moja cebula.",
         },
       ];
-      return runPaletteTest("POL", "ENG", "dummy50b", ref, {});
+      return runPaletteTest1("POL", "ENG", "dummy50b", ref, {});
     });
     it("#pal14A-02a GET 200 YES: Engpol. My father gave me a book.", () => {
       let ref = [
@@ -1836,7 +1836,7 @@ describe("/api", function () {
           POL: ["Nasza matka dała nam książkę."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "113", ref, {});
+      return runPaletteTest1("ENG", "POL", "113", ref, {});
     });
     it("#pal14A-02b GET 200 YES: Poleng. My father gave me a book.", () => {
       let ref = [
@@ -1889,7 +1889,7 @@ describe("/api", function () {
           ],
         },
       ];
-      return runPaletteTest("POL", "ENG", "113", ref, {});
+      return runPaletteTest1("POL", "ENG", "113", ref, {});
     });
     it("#pal14A-03a GET 200 YES: Engpol. The doctor gave me her book. Gender annotation is added when there's no AOC, because pronombre is 'their' so doesn't reveal gender. However in singular, the pronombres 'her' and 'his' reveal the gender (are AOCs) so no gender annotation.", () => {
       let ref = [
@@ -1922,7 +1922,7 @@ describe("/api", function () {
           ],
         },
       ];
-      return runPaletteTest("ENG", "POL", "114", ref, {});
+      return runPaletteTest1("ENG", "POL", "114", ref, {});
     });
     it("#pal14A-03b GET 200 YES: Engpol. (not allowed to be unspecified, should be identical result to previous test). The doctor gave me her book.", () => {
       let ref = [
@@ -1957,7 +1957,7 @@ describe("/api", function () {
           ],
         },
       ];
-      return runPaletteTest("ENG", "POL", "114", ref, {
+      return runPaletteTest1("ENG", "POL", "114", ref, {
         pleaseDontSpecify: true,
       });
     });
@@ -1965,7 +1965,7 @@ describe("/api", function () {
 
   describe("/palette - Stage 14B: Possessive pronombres re Hypernymy.", () => {
     it("#pal14B-01a GET 200 YES: POL only. My father gave me his book.", () => {
-      return runPaletteTest("POL", null, "113a", [
+      return runPaletteTest1("POL", null, "113a", [
         "Mój ojciec dał mi jego książkę.",
         "Nasz ojciec dał nam jego książkę.",
         "Moi ojcowie dali mi ich książkę.",
@@ -1985,7 +1985,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal14B-01b GET 200 YES: ENG only. My father gave me his book.", () => {
-      return runPaletteTest("ENG", null, "113a", [
+      return runPaletteTest1("ENG", null, "113a", [
         "My father gave me his book.",
         "Our father gave us his book.",
         "My fathers gave me their book.",
@@ -2005,7 +2005,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal14B-01c GET 200 YES: Engpol. My father gave me his book.", () => {
-      return runPaletteTest(
+      return runPaletteTest1(
         "ENG",
         "POL",
         "113a",
@@ -2076,7 +2076,7 @@ describe("/api", function () {
       );
     });
     it("#pal14B-01d GET 200 YES: Poleng. My father gave me his book.", () => {
-      return runPaletteTest(
+      return runPaletteTest1(
         "POL",
         "ENG",
         "113a",
@@ -2192,7 +2192,7 @@ describe("/api", function () {
       );
     });
     it("#pal14B-02a GET 200 YES: POL only. My boy gave me his book.", () => {
-      return runPaletteTest("POL", null, "113b", [
+      return runPaletteTest1("POL", null, "113b", [
         "Mój chłopiec dał mi jego książkę.",
         "Nasz chłopiec dał nam jego książkę.",
         "Moi chłopcy dali mi ich książkę.",
@@ -2212,7 +2212,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal14B-02b GET 200 YES: ENG only. My boy gave me his book.", () => {
-      return runPaletteTest("ENG", null, "113b", [
+      return runPaletteTest1("ENG", null, "113b", [
         "My boy gave me his book.",
         "Our boy gave us his book.",
         "My boys gave me their book.",
@@ -2232,7 +2232,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal14B-02c GET 200 YES: Engpol. My boy gave me his book.", () => {
-      return runPaletteTest(
+      return runPaletteTest1(
         "ENG",
         "POL",
         "113b",
@@ -2322,7 +2322,7 @@ describe("/api", function () {
       );
     });
     it("#pal14B-02d GET 200 YES: Poleng. My boy gave me his book.", () => {
-      return runPaletteTest(
+      return runPaletteTest1(
         "POL",
         "ENG",
         "113b",
@@ -2470,7 +2470,7 @@ describe("/api", function () {
       );
     });
     it("#pal14B-02e GET 200 YES: Engpol. My baby gave me his book.", () => {
-      return runPaletteTest(
+      return runPaletteTest1(
         "ENG",
         "POL",
         "113c",
@@ -2527,7 +2527,7 @@ describe("/api", function () {
           POL: "Jabłko.",
         },
       ];
-      return runPaletteTest("POL", "ENG", "dummy56", ref, {});
+      return runPaletteTest1("POL", "ENG", "dummy56", ref, {});
     });
     it("#pal15-01b GET 200 YES: Engpol. Indefinite article.", () => {
       let ref = [
@@ -2544,7 +2544,7 @@ describe("/api", function () {
           POL: ["Jabłko."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "dummy56", ref, {});
+      return runPaletteTest1("ENG", "POL", "dummy56", ref, {});
     });
     it("#pal15-02a GET 200 YES: Poleng. Either article.", () => {
       let ref = [
@@ -2553,7 +2553,7 @@ describe("/api", function () {
           POL: "Kobieta.",
         },
       ];
-      return runPaletteTest("POL", "ENG", "dummy56a", ref, {});
+      return runPaletteTest1("POL", "ENG", "dummy56a", ref, {});
     });
     it("#pal15-02b GET 200 YES: Engpol. Either article.", () => {
       let ref = [
@@ -2566,7 +2566,7 @@ describe("/api", function () {
           POL: ["Kobieta."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "dummy56a", ref, {});
+      return runPaletteTest1("ENG", "POL", "dummy56a", ref, {});
     });
     it("#pal15-03a GET 200 YES: Poleng. Preposition 'with'. SHEEP (checking clarifiers) Articles for singular. Checking POL protective preposition form.", () => {
       let ref = [
@@ -2575,7 +2575,7 @@ describe("/api", function () {
           POL: "Z owcą.",
         },
       ];
-      return runPaletteTest("POL", "ENG", "dummy55c", ref, {});
+      return runPaletteTest1("POL", "ENG", "dummy55c", ref, {});
     });
     it("#pal15-03b GET 200 YES: Engpol. Preposition 'with'. SHEEP (checking clarifiers) Articles for singular. Checking POL protective preposition form.", () => {
       let ref = [
@@ -2584,7 +2584,7 @@ describe("/api", function () {
           POL: ["Z owcą."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "dummy55c", ref, {});
+      return runPaletteTest1("ENG", "POL", "dummy55c", ref, {});
     });
     it("#pal15-03c GET 200 YES: Poleng. Preposition 'with'. SHEEP (checking clarifiers) Articles for plural.", () => {
       let ref = [
@@ -2593,7 +2593,7 @@ describe("/api", function () {
           POL: "Z owcami.",
         },
       ];
-      return runPaletteTest("POL", "ENG", "dummy55d", ref, {});
+      return runPaletteTest1("POL", "ENG", "dummy55d", ref, {});
     });
     it("#pal15-03d GET 200 YES: Engpol. Preposition 'with'. SHEEP (checking clarifiers) Articles for plural.", () => {
       let ref = [
@@ -2602,7 +2602,7 @@ describe("/api", function () {
           POL: ["Z owcami."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "dummy55d", ref, {});
+      return runPaletteTest1("ENG", "POL", "dummy55d", ref, {});
     });
     it("#pal15-04a GET 200 YES: Poleng. Preposition 'with'. Articles for singular. Checking POL protective preposition form.", () => {
       let ref = [
@@ -2619,7 +2619,7 @@ describe("/api", function () {
           POL: "Z niedźwiedziem.",
         },
       ];
-      return runPaletteTest("POL", "ENG", "dummy55a", ref, {});
+      return runPaletteTest1("POL", "ENG", "dummy55a", ref, {});
     });
     it("#pal15-04b GET 200 YES: Engpol. Preposition 'with'. Articles for singular. Checking POL protective preposition form.", () => {
       let ref = [
@@ -2636,7 +2636,7 @@ describe("/api", function () {
           POL: ["Z niedźwiedziem."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "dummy55a", ref, {});
+      return runPaletteTest1("ENG", "POL", "dummy55a", ref, {});
     });
     it("#pal15-04c GET 200 YES: Poleng. Preposition 'with'. Articles for plural.", () => {
       let ref = [
@@ -2653,7 +2653,7 @@ describe("/api", function () {
           POL: "Z niedźwiedziami.",
         },
       ];
-      return runPaletteTest("POL", "ENG", "dummy55b", ref, {});
+      return runPaletteTest1("POL", "ENG", "dummy55b", ref, {});
     });
     it("#pal15-04d GET 200 YES: Engpol. Preposition 'with'. Articles for plural.", () => {
       let ref = [
@@ -2670,7 +2670,7 @@ describe("/api", function () {
           POL: ["Z niedźwiedziami."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "dummy55b", ref, {});
+      return runPaletteTest1("ENG", "POL", "dummy55b", ref, {});
     });
     it("#pal15-04e GET 200 YES: Poleng. Preposition 'with'. Articles for singular. merelyPreferredChoicesForQuestionSentence", () => {
       let ref = [
@@ -2687,7 +2687,7 @@ describe("/api", function () {
           POL: "Z cebulą.",
         },
       ];
-      return runPaletteTest("POL", "ENG", "dummy55", ref, {});
+      return runPaletteTest1("POL", "ENG", "dummy55", ref, {});
     });
     it("#pal15-04f GET 200 YES: Engpol. Preposition 'with'. Articles for singular. merelyPreferredChoicesForQuestionSentence", () => {
       let ref = [
@@ -2704,7 +2704,7 @@ describe("/api", function () {
           POL: ["Z cebulą."],
         },
       ];
-      return runPaletteTest("ENG", "POL", "dummy55", ref, {});
+      return runPaletteTest1("ENG", "POL", "dummy55", ref, {});
     });
   });
 });
@@ -2767,7 +2767,7 @@ function checkSentenceTranslations(
   });
 }
 
-function runPaletteTest2(
+function runPaletteTestBespoke(
   questionLanguage,
   answerLanguage,
   sentenceFormulaId,

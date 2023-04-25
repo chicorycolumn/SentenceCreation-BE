@@ -7,24 +7,28 @@ const uUtils = require("../utils/universalUtils.js");
 const consol = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const { it } = require("mocha");
 const testingUtils = require("../utils/secondOrder/testingUtils.js");
-const { runPaletteTest, runPaletteTestMultiple, checkProportions } =
-  testingUtils;
+const {
+  runPaletteTest1,
+  runPaletteTest2,
+  runPaletteTest1Multiple,
+  checkProportions,
+} = testingUtils;
 
 describe("/api", function () {
   this.timeout(7000);
 
-  describe("/palette - Stage 29: Programmatic negatives.", () => {
+  describe("/palette - Stage 29: Programmatic negatives, and contractions.", () => {
     describe("#pal29-01 Negative Be (simple).", () => {
       it("#pal29-01a GET 200 YES: Engpol.", () => {
-        return runPaletteTest("ENG", "POL", "123aa", [
+        return runPaletteTest2("ENG", "POL", "123aa", [
           {
-            ENG: ["He is not red."],
+            ENG: ["He is not red.", "He's not red.", "He isn't red."],
             POL: ["Nie jest czerwony.", "On nie jest czerwony."],
           },
         ]);
       });
       it("#pal29-01b GET 200 YES: Poleng. Negative in ENG should move position relative to verb words.", () => {
-        return runPaletteTest("POL", "ENG", "123aa", [
+        return runPaletteTest2("POL", "ENG", "123aa", [
           {
             POL: ["Nie jest czerwony.", "On nie jest czerwony."],
             ENG: ["He is not red."],
@@ -32,15 +36,15 @@ describe("/api", function () {
         ]);
       });
       it("#pal29-01a(i) GET 200 YES: Engpol.", () => {
-        return runPaletteTest("ENG", "POL", "123aaa", [
+        return runPaletteTest2("ENG", "POL", "123aaa", [
           {
-            ENG: ["He is not here."],
+            ENG: ["He is not here.", "He's not here.", "He isn't here."],
             POL: ["Nie jest tutaj.", "On nie jest tutaj."],
           },
         ]);
       });
       it("#pal29-01b(ii) GET 200 YES: Poleng. Negative in ENG should move position relative to verb words.", () => {
-        return runPaletteTest("POL", "ENG", "123aaa", [
+        return runPaletteTest2("POL", "ENG", "123aaa", [
           {
             POL: ["Nie jest (male) tutaj.", "On nie jest tutaj."],
             ENG: ["He is not here."],
@@ -48,20 +52,19 @@ describe("/api", function () {
         ]);
       });
       it("#pal29-01c GET 200 YES: Engpol.", () => {
-        return runPaletteTest("ENG", "POL", "123ab", [
+        return runPaletteTest2("ENG", "POL", "123ab", [
           {
-            ENG: ["He was not red."],
+            ENG: ["He was not red.", "He wasn't red."],
             POL: ["Nie był czerwony.", "On nie był czerwony."],
           },
         ]);
       });
       it("#pal29-01d GET 200 YES: Poleng. Negative in ENG should move position relative to verb words.", () => {
-        return runPaletteTest("POL", "ENG", "123ab", [
+        return runPaletteTest2("POL", "ENG", "123ab", [
           {
             POL: ["Nie był czerwony.", "On nie był czerwony."],
             ENG: [
               "He was not red.",
-
               "He has not been red.",
               "He had not been red.",
             ],
@@ -71,15 +74,15 @@ describe("/api", function () {
     });
     describe("#pal29-02 Negative Have (simple).", () => {
       it("#pal29-02a GET 200 YES: Engpol.", () => {
-        return runPaletteTest("ENG", "POL", "123ba", [
+        return runPaletteTest2("ENG", "POL", "123ba", [
           {
-            ENG: ["He does not have apples."],
+            ENG: ["He does not have apples.", "He doesn't have apples."],
             POL: ["Nie ma jabłek.", "On nie ma jabłek."],
           },
         ]);
       });
       it("#pal29-02b GET 200 YES: Poleng. Negative in ENG should move position relative to verb words.", () => {
-        return runPaletteTest("POL", "ENG", "123ba", [
+        return runPaletteTest2("POL", "ENG", "123ba", [
           {
             POL: ["Nie ma (male) jabłek.", "On nie ma jabłek."],
             ENG: ["He does not have apples."],
@@ -87,7 +90,7 @@ describe("/api", function () {
         ]);
       });
       it("#pal29-02b(ii) GET 200 YES: Poleng. stativeOverrideFalse.", () => {
-        return runPaletteTest("POL", "ENG", "123baa", [
+        return runPaletteTest2("POL", "ENG", "123baa", [
           {
             POL: ["Nie ma (male) jabłek.", "On nie ma jabłek."],
             ENG: ["He does not have apples.", "He is not having apples."],
@@ -95,15 +98,15 @@ describe("/api", function () {
         ]);
       });
       it("#pal29-02c GET 200 YES: Engpol.", () => {
-        return runPaletteTest("ENG", "POL", "123bb", [
+        return runPaletteTest2("ENG", "POL", "123bb", [
           {
-            ENG: ["He did not have apples."],
+            ENG: ["He did not have apples.", "He didn't have apples."],
             POL: ["Nie miał jabłek.", "On nie miał jabłek."],
           },
         ]);
       });
       it("#pal29-02d GET 200 YES: Poleng. Negative in ENG should move position relative to verb words.", () => {
-        return runPaletteTest("POL", "ENG", "123bb", [
+        return runPaletteTest2("POL", "ENG", "123bb", [
           {
             POL: ["Nie miał jabłek.", "On nie miał jabłek."],
             ENG: [
@@ -117,15 +120,15 @@ describe("/api", function () {
     });
     describe("#pal29-03 Negative Write (simple).", () => {
       it("#pal29-03a GET 200 YES: Engpol.", () => {
-        return runPaletteTest("ENG", "POL", "123ca", [
+        return runPaletteTest2("ENG", "POL", "123ca", [
           {
-            ENG: ["He does not write."],
+            ENG: ["He does not write.", "He doesn't write."],
             POL: ["Nie pisze.", "On nie pisze."],
           },
         ]);
       });
       it("#pal29-03b GET 200 YES: Poleng. Negative in ENG should move position relative to verb words.", () => {
-        return runPaletteTest("POL", "ENG", "123ca", [
+        return runPaletteTest2("POL", "ENG", "123ca", [
           {
             POL: ["Nie pisze (male).", "On nie pisze."],
             ENG: ["He does not write.", "He is not writing."],
@@ -133,7 +136,7 @@ describe("/api", function () {
         ]);
       });
       it("#pal29-03b(ii) GET 200 YES: Poleng. stativeOverrideTrue.", () => {
-        return runPaletteTest("POL", "ENG", "123caa", [
+        return runPaletteTest2("POL", "ENG", "123caa", [
           {
             POL: ["Nie pisze (male).", "On nie pisze."],
             ENG: ["He does not write."],
@@ -141,15 +144,15 @@ describe("/api", function () {
         ]);
       });
       it("#pal29-03c GET 200 YES: Engpol.", () => {
-        return runPaletteTest("ENG", "POL", "123cb", [
+        return runPaletteTest2("ENG", "POL", "123cb", [
           {
-            ENG: ["He did not write."],
+            ENG: ["He did not write.", "He didn't write."],
             POL: ["Nie napisał.", "On nie napisał."],
           },
         ]);
       });
       it("#pal29-03d GET 200 YES: Poleng. Negative in ENG should move position relative to verb words.", () => {
-        return runPaletteTest("POL", "ENG", "123cb", [
+        return runPaletteTest2("POL", "ENG", "123cb", [
           {
             POL: ["Nie napisał.", "On nie napisał."],
             ENG: [
@@ -163,17 +166,17 @@ describe("/api", function () {
     });
     describe("#pal29-04 Negative Be (perfect).", () => {
       it("#pal29-04a GET 200 YES: Engpol.", () => {
-        return runPaletteTest("ENG", "POL", "123da", [
+        return runPaletteTest2("ENG", "POL", "123da", [
           {
-            ENG: ["He has not been red."],
+            ENG: ["He has not been red.", "He hasn't been red."],
             POL: ["Nie był czerwony.", "On nie był czerwony."],
           },
         ]);
       });
       it("#pal29-04c GET 200 YES: Engpol.", () => {
-        return runPaletteTest("ENG", "POL", "123db", [
+        return runPaletteTest2("ENG", "POL", "123db", [
           {
-            ENG: ["He had not been red."],
+            ENG: ["He had not been red.", "He hadn't been red."],
             POL: ["Nie był czerwony.", "On nie był czerwony."],
           },
         ]);
@@ -181,17 +184,17 @@ describe("/api", function () {
     });
     describe("#pal29-05 Negative Have (perfect).", () => {
       it("#pal29-05a GET 200 YES: Engpol.", () => {
-        return runPaletteTest("ENG", "POL", "123ea", [
+        return runPaletteTest2("ENG", "POL", "123ea", [
           {
-            ENG: ["He has not had apples."],
+            ENG: ["He has not had apples.", "He hasn't had apples."],
             POL: ["Nie miał jabłek.", "On nie miał jabłek."],
           },
         ]);
       });
       it("#pal29-05c GET 200 YES: Engpol.", () => {
-        return runPaletteTest("ENG", "POL", "123eb", [
+        return runPaletteTest2("ENG", "POL", "123eb", [
           {
-            ENG: ["He had not had apples."],
+            ENG: ["He had not had apples.", "He hadn't had apples."],
             POL: ["Nie miał jabłek.", "On nie miał jabłek."],
           },
         ]);
@@ -199,9 +202,9 @@ describe("/api", function () {
     });
     describe("#pal29-06 Negative Write (perfect).", () => {
       it("#pal29-06a GET 200 YES: Engpol.", () => {
-        return runPaletteTest("ENG", "POL", "123fa", [
+        return runPaletteTest2("ENG", "POL", "123fa", [
           {
-            ENG: ["He has not written."],
+            ENG: ["He has not written.", "He hasn't written."],
             POL: [
               "Nie napisał.",
               "On nie napisał.",
@@ -212,9 +215,9 @@ describe("/api", function () {
         ]);
       });
       it("#pal29-06c GET 200 YES: Engpol.", () => {
-        return runPaletteTest("ENG", "POL", "123fb", [
+        return runPaletteTest2("ENG", "POL", "123fb", [
           {
-            ENG: ["He had not written."],
+            ENG: ["He had not written.", "He hadn't written."],
             POL: ["Nie napisał.", "On nie napisał."],
           },
         ]);
@@ -222,15 +225,15 @@ describe("/api", function () {
     });
     describe("#pal29-07 Negative Be (future).", () => {
       it("#pal29-07a GET 200 YES: Engpol.", () => {
-        return runPaletteTest("ENG", "POL", "123g", [
+        return runPaletteTest2("ENG", "POL", "123g", [
           {
-            ENG: ["My onion will not be red."],
+            ENG: ["My onion will not be red.", "My onion won't be red."],
             POL: ["Moja cebula nie będzie czerwoną."],
           },
         ]);
       });
       it("#pal29-07b GET 200 YES: Poleng.", () => {
-        return runPaletteTest("POL", "ENG", "123g", [
+        return runPaletteTest2("POL", "ENG", "123g", [
           {
             POL: ["Moja cebula nie będzie czerwoną."],
             ENG: [
@@ -243,10 +246,11 @@ describe("/api", function () {
         ]);
       });
       it("#pal29-07c GET 200 YES: Engpol.", () => {
-        return runPaletteTest("ENG", "POL", "123h", [
+        return runPaletteTest2("ENG", "POL", "123h", [
           {
             ENG: [
               "My onion will not have been red.",
+              "My onion won't have been red.",
               "My onion will have not been red.",
             ],
             POL: ["Moja cebula nie będzie czerwoną."],
@@ -258,7 +262,7 @@ describe("/api", function () {
 
   describe("/palette - Stage 28: Correct Polish grammar re gender.", () => {
     it("#pal28-01a GET 200 YES: Engpol. Polish m2 nouns are not virile.", () => {
-      return runPaletteTest("ENG", "POL", "dummy75", [
+      return runPaletteTest1("ENG", "POL", "dummy75", [
         {
           ENG: ["Rats were red."],
           POL: ["Szczury były czerwone."],
@@ -270,7 +274,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal28-01b GET 200 YES: Poleng. Polish m2 nouns are not virile.", () => {
-      return runPaletteTest("POL", "ENG", "dummy75", [
+      return runPaletteTest1("POL", "ENG", "dummy75", [
         {
           ENG: ["Rats were red.", "Rats have been red.", "Rats had been red."],
           POL: ["Szczury były czerwone."],
@@ -295,10 +299,10 @@ describe("/api", function () {
       },
     ];
     it("#pal27-01a GET 200 YES: Poleng. Dziecko should translate as Child and also Baby.", () => {
-      return runPaletteTest("POL", "ENG", "dummy73a", dummy73a);
+      return runPaletteTest1("POL", "ENG", "dummy73a", dummy73a);
     });
     it("#pal27-01b GET 200 YES: Engpol. Dziecko should translate as Child and also Baby.", () => {
-      return runPaletteTest("ENG", "POL", "dummy73a", dummy73a);
+      return runPaletteTest1("ENG", "POL", "dummy73a", dummy73a);
     });
     const dummy73b = [
       {
@@ -319,13 +323,13 @@ describe("/api", function () {
       },
     ];
     it("#pal27-01c GET 200 YES: Poleng. Dziecko selectable by gender f.", () => {
-      return runPaletteTest("POL", "ENG", "dummy73b", dummy73b);
+      return runPaletteTest1("POL", "ENG", "dummy73b", dummy73b);
     });
     it("#pal27-01d GET 200 YES: Engpol. Dziecko selectable by gender f.", () => {
-      return runPaletteTest("ENG", "POL", "dummy73b", dummy73b);
+      return runPaletteTest1("ENG", "POL", "dummy73b", dummy73b);
     });
     it("#pal27-02a GET 200 YES: Poleng. I was a good person - masculine I should still be dobrą osobą.", () => {
-      return runPaletteTest("POL", "ENG", "124b", [
+      return runPaletteTest1("POL", "ENG", "124b", [
         {
           ENG: ["I was/i a good person."],
           POL: ["Ja byłam dobrą osobą."],
@@ -345,7 +349,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal27-02b GET 200 YES: Engpol. I was a good person - masculine I should still be dobrą osobą.", () => {
-      return runPaletteTest("ENG", "POL", "124b", [
+      return runPaletteTest1("ENG", "POL", "124b", [
         {
           ENG: ["I (female) was a good person."],
           POL: ["Ja byłam dobrą osobą."],
@@ -366,7 +370,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal27-02c GET 200 YES: Poleng. I was a good person - singular/plural equal proportion.", () => {
-      return runPaletteTestMultiple(
+      return runPaletteTest1Multiple(
         50,
         "POL",
         "ENG",
@@ -396,7 +400,7 @@ describe("/api", function () {
       });
     });
     it("#pal27-02d GET 200 YES: Engpol. 'person' singular does not translate to 'ludzie'.", () => {
-      return runPaletteTest("ENG", "POL", "dummy74", [
+      return runPaletteTest1("ENG", "POL", "dummy74", [
         {
           ENG: ["One red person."],
           POL: ["Jedna czerwona osoba."],
@@ -404,7 +408,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal27-02dd GET 200 YES: Engpol. Counterpart of #pal27-02d but not really necessary.", () => {
-      return runPaletteTest("POL", "ENG", "dummy74", [
+      return runPaletteTest1("POL", "ENG", "dummy74", [
         {
           ENG: ["One red person."],
           POL: ["Jedna czerwona osoba."],
@@ -412,7 +416,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal27-02e GET 200 YES: Poleng. I was a good person - masculine I should still be dobrą osobą.", () => {
-      return runPaletteTest("POL", "ENG", "124c", [
+      return runPaletteTest1("POL", "ENG", "124c", [
         {
           ENG: ["I was/i a good person."],
           POL: ["Ja byłam dobrą osobą."],
@@ -448,7 +452,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal27-02f GET 200 YES: Engpol. I was a good person - masculine I should still be dobrą osobą.", () => {
-      return runPaletteTest("ENG", "POL", "124c", [
+      return runPaletteTest1("ENG", "POL", "124c", [
         {
           ENG: ["I (female) was a good person."],
           POL: ["Ja byłam dobrą osobą."],
@@ -510,22 +514,22 @@ describe("/api", function () {
       },
     ];
     it("#pal26-01a GET 200 YES: Polspa. Red onion (NORMAL).", () => {
-      return runPaletteTest("POL", "SPA", "dummy72a", dummy72a);
+      return runPaletteTest1("POL", "SPA", "dummy72a", dummy72a);
     });
     it("#pal26-01b GET 200 YES: Spapol. Red onion (NORMAL).", () => {
-      return runPaletteTest("SPA", "POL", "dummy72a", dummy72a);
+      return runPaletteTest1("SPA", "POL", "dummy72a", dummy72a);
     });
     it("#pal26-01c GET 200 YES: Engspa. Red onion (NORMAL).", () => {
-      return runPaletteTest("ENG", "SPA", "dummy72a", dummy72a);
+      return runPaletteTest1("ENG", "SPA", "dummy72a", dummy72a);
     });
     it("#pal26-01d GET 200 YES: Spaeng. Red onion (NORMAL).", () => {
-      return runPaletteTest("SPA", "ENG", "dummy72a", dummy72a);
+      return runPaletteTest1("SPA", "ENG", "dummy72a", dummy72a);
     });
   });
 
   describe("/palette - Stage 26-ii: Spanish basic. Hypernyms and Vypernyms", () => {
     it("#pal26-02a GET 200 YES: Polspa. Red doctor (MGN).", () => {
-      return runPaletteTest("POL", "SPA", "dummy72b", [
+      return runPaletteTest1("POL", "SPA", "dummy72b", [
         {
           POL: ["Czerwony lekarz."],
           SPA: ["Rojo medico."],
@@ -553,7 +557,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal26-02b GET 200 YES: Spapol. Red doctor (MGN).", () => {
-      return runPaletteTest("SPA", "POL", "dummy72b", [
+      return runPaletteTest1("SPA", "POL", "dummy72b", [
         {
           POL: ["Czerwony lekarz."],
           SPA: ["Rojo medico."],
@@ -577,7 +581,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal26-02c GET 200 YES: Engspa. Red doctor (MGN).", () => {
-      return runPaletteTest("ENG", "SPA", "dummy72b", [
+      return runPaletteTest1("ENG", "SPA", "dummy72b", [
         {
           ENG: ["Red doctor (male)."],
           SPA: ["Rojo medico."],
@@ -601,7 +605,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal26-02d GET 200 YES: Spaeng. Red doctor (MGN).", () => {
-      return runPaletteTest("SPA", "ENG", "dummy72b", [
+      return runPaletteTest1("SPA", "ENG", "dummy72b", [
         {
           SPA: ["Rojo medico."],
           ENG: ["Red doctor."],
@@ -624,7 +628,7 @@ describe("/api", function () {
 
   describe("/palette - Stage 26-iii: Spanish basic. Hypernyms and Vypernyms", () => {
     it("#pal26-03a GET 200 YES: Polspa. Red mother (Vypernym).", () => {
-      return runPaletteTest("POL", "SPA", "dummy72c", [
+      return runPaletteTest1("POL", "SPA", "dummy72c", [
         { POL: ["Czerwona matka."], SPA: ["Roja madre."] },
         { POL: ["Czerwone matki."], SPA: ["Rojas madres."] },
         { POL: ["Czerwony ojciec."], SPA: ["Rojo padre."] },
@@ -637,7 +641,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal26-03b GET 200 YES: Spapol. Red mother (Vypernym).", () => {
-      return runPaletteTest("SPA", "POL", "dummy72c", [
+      return runPaletteTest1("SPA", "POL", "dummy72c", [
         { POL: ["Czerwona matka."], SPA: ["Roja madre."] },
         { POL: ["Czerwone matki."], SPA: ["Rojas madres."] },
         { POL: ["Czerwony ojciec.", "Czerwony rodzic."], SPA: ["Rojo padre."] },
@@ -651,7 +655,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal26-03c GET 200 YES: Engspa. Red mother (Vypernym).", () => {
-      return runPaletteTest("ENG", "SPA", "dummy72c", [
+      return runPaletteTest1("ENG", "SPA", "dummy72c", [
         { ENG: ["Red mother."], SPA: ["Roja madre."] },
         { ENG: ["Red mothers."], SPA: ["Rojas madres."] },
         { ENG: ["Red father."], SPA: ["Rojo padre."] },
@@ -664,7 +668,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal26-03d GET 200 YES: Spaeng. Red mother (Vypernym).", () => {
-      return runPaletteTest("SPA", "ENG", "dummy72c", [
+      return runPaletteTest1("SPA", "ENG", "dummy72c", [
         { ENG: ["Red mother."], SPA: ["Roja madre."] },
         { ENG: ["Red mothers."], SPA: ["Rojas madres."] },
         { ENG: ["Red father.", "Red parent."], SPA: ["Rojo padre."] },
@@ -675,7 +679,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal26-03e GET 200 YES: Enpol. Red mother (Vypernym).", () => {
-      return runPaletteTest("ENG", "POL", "dummy72c", [
+      return runPaletteTest1("ENG", "POL", "dummy72c", [
         { ENG: ["Red mother."], POL: ["Czerwona matka."] },
         { ENG: ["Red mothers."], POL: ["Czerwone matki."] },
         { ENG: ["Red father."], POL: ["Czerwony ojciec."] },
@@ -685,7 +689,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal26-03f GET 200 YES: Poleng. Red mother (Vypernym).", () => {
-      return runPaletteTest("POL", "ENG", "dummy72c", [
+      return runPaletteTest1("POL", "ENG", "dummy72c", [
         { ENG: ["Red mother."], POL: ["Czerwona matka."] },
         { ENG: ["Red mothers."], POL: ["Czerwone matki."] },
         { ENG: ["Red father."], POL: ["Czerwony ojciec."] },
@@ -698,7 +702,7 @@ describe("/api", function () {
 
   describe("/palette - Stage 26-iv: Spanish basic. HypernymyProportion adjustment but just for mother/father/parent.", () => {
     it("#pal26-04a GET 200 YES: Polspa. Red mother (Vypernym).", () => {
-      return runPaletteTestMultiple(
+      return runPaletteTest1Multiple(
         250,
         "POL",
         "SPA",
@@ -720,7 +724,7 @@ describe("/api", function () {
       });
     });
     it("#pal26-04b GET 200 YES: Poleng. Red mother (Vypernym).", () => {
-      return runPaletteTestMultiple(
+      return runPaletteTest1Multiple(
         250,
         "POL",
         "ENG",
@@ -742,7 +746,7 @@ describe("/api", function () {
       });
     });
     it("#pal26-04c GET 200 YES: Spapol. Red mother (Vypernym).", () => {
-      return runPaletteTestMultiple(
+      return runPaletteTest1Multiple(
         250,
         "SPA",
         "POL",
@@ -762,7 +766,7 @@ describe("/api", function () {
       });
     });
     it("#pal26-04d GET 200 YES: Spaeng. Red mother (Vypernym).", () => {
-      runPaletteTestMultiple(
+      runPaletteTest1Multiple(
         250,
         "SPA",
         "ENG",
@@ -782,7 +786,7 @@ describe("/api", function () {
       });
     });
     it("#pal26-04e GET 200 YES: Engpol. Red mother (Vypernym).", () => {
-      return runPaletteTestMultiple(
+      return runPaletteTest1Multiple(
         250,
         "ENG",
         "POL",
@@ -804,7 +808,7 @@ describe("/api", function () {
       });
     });
     it("#pal26-04f GET 200 YES: Engspa. Red mother (Vypernym).", () => {
-      return runPaletteTestMultiple(
+      return runPaletteTest1Multiple(
         250,
         "ENG",
         "SPA",
