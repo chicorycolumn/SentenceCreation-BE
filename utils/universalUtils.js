@@ -397,3 +397,7 @@ exports.getRandomNumberString = (len) => {
     .toString()
     .slice(2, len + 2);
 };
+
+exports.shuffle = (arr) => {
+  arr.sort(() => (Math.random() > 0.5 ? 1 : -1));
+};
