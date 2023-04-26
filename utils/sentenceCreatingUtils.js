@@ -1080,8 +1080,8 @@ exports.addContractions = (sentence, lang) => {
   let ref = refObj.contractions[lang];
 
   sentence = _addContractions(sentence, ref.mandatory, 1);
-  sentence = _addContractions(sentence, ref.optional, 0.5);
-  sentence = _addContractions(sentence, ref.ifFollowedByWord, 0.5, true);
+  sentence = _addContractions(sentence, ref.group1, 0.5);
+  sentence = _addContractions(sentence, ref.group2, 0.5, true);
 
   return sentence;
 };

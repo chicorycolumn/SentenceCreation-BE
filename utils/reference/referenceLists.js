@@ -995,14 +995,17 @@ exports.preferredInitialChoicesForEnChs = {
 };
 
 exports.contractions = {
-  SPA: { mandatory: {}, optional: {}, ifFollowedByWord: {} },
-  POL: { mandatory: {}, optional: {}, ifFollowedByWord: {} },
+  SPA: { mandatory: {}, group1: {}, group2: {} },
+  POL: { mandatory: {}, group1: {}, group2: {} },
   ENG: {
     mandatory: {
       "can not": "cannot",
       "can not": "can't",
     },
-    optional: {
+    group1: {
+      // Yes, even if ending a sentence: "I wasn't here.", "But I wasn't." both fine.
+      // Mandatory if sentence is a question: "Aren't you here?" but never "Are not you here?", "Won't you come?", "Couldn't you hear it?", "Isn't it nice?"
+
       "is not": "isn't",
       "are not": "aren't",
 
@@ -1022,7 +1025,9 @@ exports.contractions = {
       "must not": "mustn't",
       "could not": "couldn't",
     },
-    ifFollowedByWord: {
+    group2: {
+      // No, if ending a sentence (as in comments below).
+
       // "I am here." not "But I am."
       "I am": "I'm",
       "you are": "you're",
