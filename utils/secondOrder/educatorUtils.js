@@ -324,3 +324,26 @@ exports.reverseContractions = (lang) => {
   res[lang] = rev;
   console.log(res);
 };
+
+exports.markPlayerAnswer = (lang, correctArr, input) => {
+  input = uUtils.purifyString(input);
+
+  if (lang === "ENG") {
+    input = input.replace(/cannot/g, "can't");
+  }
+
+  correctArr = correctArr.map((s) => uUtils.purifyString(s));
+
+  let inputArr = gpUtils.explodeContractions(lang, input);
+
+  let bool = inputArr.some((inputEl) => correctArr.includes(inputEl));
+
+  if (!bool) {
+    console.log("Correct answer array:");
+    console.log(correctArr);
+    console.log("has no intersection with player answer array:");
+    console.log(inputArr);
+  }
+
+  return bool;
+};

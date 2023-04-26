@@ -401,3 +401,18 @@ exports.getRandomNumberString = (len) => {
 exports.shuffle = (arr) => {
   arr.sort(() => (Math.random() > 0.5 ? 1 : -1));
 };
+
+exports.removePunctuation = (s) => {
+  return s.replace(/\p{P}/gu, "");
+};
+
+exports.removePunctuationExceptApostrophe = (s) => {
+  return s
+    .split("")
+    .filter((char) => [" ", "'"].includes(char) || /\p{L}/gu.test(char))
+    .join("");
+};
+
+exports.purifyString = (s) => {
+  return exports.removePunctuationExceptApostrophe(s.trim().toLowerCase());
+};

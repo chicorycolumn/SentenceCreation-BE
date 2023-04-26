@@ -4,9 +4,140 @@ const {
   checkSentenceFormulaIds,
   checkWords,
   reverseContractions,
+  markPlayerAnswer,
 } = require("../utils/secondOrder/educatorUtils.js");
 const { expect } = require("chai");
 const consol = require("./../utils/zerothOrder/consoleLoggingUtils.js");
+
+describe("Mark player answer sentence.", () => {
+  describe("ENG", () => {
+    let lang = "ENG";
+
+    describe("1", () => {
+      let answerSentenceArray = ["The dog is blue.", "A dog is blue."];
+      it("1a", () => {
+        let playerWrote = "The dog is blue.";
+        let actual = markPlayerAnswer(lang, answerSentenceArray, playerWrote);
+        expect(actual).to.be.true;
+      });
+      it("1b", () => {
+        let playerWrote = "The dog is zlue.";
+        let actual = markPlayerAnswer(lang, answerSentenceArray, playerWrote);
+        expect(actual).to.be.false;
+      });
+    });
+
+    describe("2", () => {
+      let answerSentenceArray = ["He can't be here."];
+      it("2a", () => {
+        let playerWrote = "He can't be here.";
+        let actual = markPlayerAnswer(lang, answerSentenceArray, playerWrote);
+        expect(actual).to.be.true;
+      });
+      it("2b", () => {
+        let playerWrote = "He cannot be here.";
+        let actual = markPlayerAnswer(lang, answerSentenceArray, playerWrote);
+        expect(actual).to.be.true;
+      });
+      it("2c", () => {
+        let playerWrote = "He can not be here.";
+        let actual = markPlayerAnswer(lang, answerSentenceArray, playerWrote);
+        expect(actual).to.be.false;
+      });
+    });
+
+    describe("3", () => {
+      let answerSentenceArray = [
+        "He is what you had seen when they are what you had thought he has been but is not.",
+      ];
+      it("3a", () => {
+        let playerWrote =
+          "He's what you'd seen when they're what you'd thought he's been but isn't.";
+        let actual = markPlayerAnswer(lang, answerSentenceArray, playerWrote);
+        expect(actual).to.be.true;
+      });
+      it("3b", () => {
+        let playerWrote =
+          "He's what you had seen when they're what you'd thought he has been but isn't.";
+        let actual = markPlayerAnswer(lang, answerSentenceArray, playerWrote);
+        expect(actual).to.be.true;
+      });
+      it("3c", () => {
+        let playerWrote =
+          "He's what you would seen when they're what you'd thought he's been but isn't.";
+        let actual = markPlayerAnswer(lang, answerSentenceArray, playerWrote);
+        expect(actual).to.be.false;
+      });
+    });
+
+    describe("4", () => {
+      let answerSentenceArray = ["I am here."];
+      it("4a", () => {
+        let playerWrote = "i am here";
+        let actual = markPlayerAnswer(lang, answerSentenceArray, playerWrote);
+        expect(actual).to.be.true;
+      });
+      it("4b", () => {
+        let playerWrote = "i'm here";
+        let actual = markPlayerAnswer(lang, answerSentenceArray, playerWrote);
+        expect(actual).to.be.true;
+      });
+      it("4c", () => {
+        let playerWrote = "im here";
+        let actual = markPlayerAnswer(lang, answerSentenceArray, playerWrote);
+        expect(actual).to.be.false;
+      });
+    });
+
+    describe("5", () => {
+      let answerSentenceArray = [
+        "Can't you eat what he could not?",
+        "Can you not eat what he could not?",
+      ];
+      it("5a", () => {
+        let playerWrote = "can't you eat what he couldn't";
+        let actual = markPlayerAnswer(lang, answerSentenceArray, playerWrote);
+        expect(actual).to.be.true;
+      });
+      it("5b", () => {
+        let playerWrote = "can't you eat what he could not";
+        let actual = markPlayerAnswer(lang, answerSentenceArray, playerWrote);
+        expect(actual).to.be.true;
+      });
+      xit("5c", () => {
+        // We'll just have to accept that if the player writes "Cannot you eat that?" it will still be marked correct.
+        // At least the player will be shown the correct array, so will see the real correct answers.
+        let playerWrote = "cannot you eat what he could not";
+        let actual = markPlayerAnswer(lang, answerSentenceArray, playerWrote);
+        expect(actual).to.be.false;
+      });
+      it("5d", () => {
+        let playerWrote = "can you not eat what he couldn't";
+        let actual = markPlayerAnswer(lang, answerSentenceArray, playerWrote);
+        expect(actual).to.be.true;
+      });
+    });
+
+    describe("6", () => {
+      let answerSentenceArray = ["Won't you eat it?", "Will you not eat it?"];
+      it("6a", () => {
+        let playerWrote = "won't you eat it";
+        let actual = markPlayerAnswer(lang, answerSentenceArray, playerWrote);
+        expect(actual).to.be.true;
+      });
+      it("6b", () => {
+        let playerWrote = "will you not eat it";
+        let actual = markPlayerAnswer(lang, answerSentenceArray, playerWrote);
+        expect(actual).to.be.true;
+      });
+      it("6c", () => {
+        let playerWrote = "will not you eat it";
+        let actual = markPlayerAnswer(lang, answerSentenceArray, playerWrote);
+        expect(actual).to.be.false;
+      });
+    });
+  });
+});
 
 xdescribe("Create contractionsReverse ref.", () => {
   it("ENG", () => {
