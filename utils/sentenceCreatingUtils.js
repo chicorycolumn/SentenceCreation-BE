@@ -1108,17 +1108,17 @@ exports.getProducedSentence = (
     producedSentence += ".";
   }
 
-  producedSentence = producedSentence
-    .split("")
-    .filter((char) => !Object.keys(refObj.selectedWordMarkers).includes(char))
-    .join("");
-
   if (isQuestionMode && !formattingOptions.suppressContractions) {
     producedSentence = scUtils.addContractions(
       producedSentence,
       currentLanguage
     );
   }
+
+  producedSentence = producedSentence
+    .split("")
+    .filter((char) => !Object.keys(refObj.selectedWordMarkers).includes(char))
+    .join("");
 
   return uUtils.capitaliseFirst(producedSentence);
 };

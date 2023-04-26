@@ -168,7 +168,11 @@ describe("/api", function () {
       it("#pal29-04a GET 200 YES: Engpol.", () => {
         return runPaletteTest2("ENG", "POL", "123da", [
           {
-            ENG: ["He has not been red.", "He hasn't been red."],
+            ENG: [
+              "He has not been red.",
+              "He hasn't been red.",
+              "He's not been red.",
+            ],
             POL: ["Nie był czerwony.", "On nie był czerwony."],
           },
         ]);
@@ -176,7 +180,11 @@ describe("/api", function () {
       it("#pal29-04c GET 200 YES: Engpol.", () => {
         return runPaletteTest2("ENG", "POL", "123db", [
           {
-            ENG: ["He had not been red.", "He hadn't been red."],
+            ENG: [
+              "He had not been red.",
+              "He hadn't been red.",
+              "He'd not been red.",
+            ],
             POL: ["Nie był czerwony.", "On nie był czerwony."],
           },
         ]);
@@ -186,7 +194,11 @@ describe("/api", function () {
       it("#pal29-05a GET 200 YES: Engpol.", () => {
         return runPaletteTest2("ENG", "POL", "123ea", [
           {
-            ENG: ["He has not had apples.", "He hasn't had apples."],
+            ENG: [
+              "He has not had apples.",
+              "He hasn't had apples.",
+              "He's not had apples.",
+            ],
             POL: ["Nie miał jabłek.", "On nie miał jabłek."],
           },
         ]);
@@ -194,7 +206,11 @@ describe("/api", function () {
       it("#pal29-05c GET 200 YES: Engpol.", () => {
         return runPaletteTest2("ENG", "POL", "123eb", [
           {
-            ENG: ["He had not had apples.", "He hadn't had apples."],
+            ENG: [
+              "He had not had apples.",
+              "He hadn't had apples.",
+              "He'd not had apples.",
+            ],
             POL: ["Nie miał jabłek.", "On nie miał jabłek."],
           },
         ]);
@@ -204,7 +220,11 @@ describe("/api", function () {
       it("#pal29-06a GET 200 YES: Engpol.", () => {
         return runPaletteTest2("ENG", "POL", "123fa", [
           {
-            ENG: ["He has not written.", "He hasn't written."],
+            ENG: [
+              "He has not written.",
+              "He hasn't written.",
+              "He's not written.",
+            ],
             POL: [
               "Nie napisał.",
               "On nie napisał.",
@@ -217,7 +237,11 @@ describe("/api", function () {
       it("#pal29-06c GET 200 YES: Engpol.", () => {
         return runPaletteTest2("ENG", "POL", "123fb", [
           {
-            ENG: ["He had not written.", "He hadn't written."],
+            ENG: [
+              "He had not written.",
+              "He hadn't written.",
+              "He'd not written.",
+            ],
             POL: ["Nie napisał.", "On nie napisał."],
           },
         ]);
