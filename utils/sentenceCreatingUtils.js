@@ -1090,7 +1090,7 @@ exports.addContractions = (sentence, lang, getMostPermutations) => {
     ifFollowedByWord,
     getMostPermutations
   ) => {
-    let resArr = getMostPermutations ? [s] : [];
+    let resArr = getMostPermutations && probability !== 1 ? [s] : [];
 
     let targets = Object.keys(ref);
 
