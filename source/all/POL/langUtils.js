@@ -37,7 +37,7 @@ exports.selectWordVersions = (
   firstStageAnnotationsObj,
   selectedLemmaObject,
   previousOutputUnit,
-  multipleMode
+  maqModes
 ) => {
   if (gpUtils.getWordtypeLObj(selectedLemmaObject) === "pro") {
     // >>>
@@ -60,7 +60,7 @@ exports.selectWordVersions = (
       // >>> Pronombre: stressed or unstressed
       // >>>
 
-      let combinedSelectedWordsArr = multipleMode
+      let combinedSelectedWordsArr = maqModes.multipleMode
         ? [...selectedWord.unstressed, ...selectedWord.stressed]
         : [...selectedWord.unstressed];
 

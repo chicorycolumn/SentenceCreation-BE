@@ -92,7 +92,7 @@ describe("/educator/sentences - Testing API.", () => {
     return runApiTest1(
       {
         questionLanguage,
-        forceMultipleModeAndQuestionOnly: true,
+        forceMultipleAndQuestionOnly: true,
         sentenceFormulaFromEducator,
       },
       {
@@ -137,7 +137,7 @@ describe("/educator/sentences - Testing API.", () => {
     return runApiTest1(
       {
         questionLanguage,
-        forceMultipleModeAndQuestionOnly: true,
+        forceMultipleAndQuestionOnly: true,
         sentenceFormulaFromEducator,
       },
       {
@@ -181,7 +181,7 @@ describe("/educator/sentences - Testing API.", () => {
     return runApiTest1(
       {
         questionLanguage,
-        forceMultipleModeAndQuestionOnly: true,
+        forceMultipleAndQuestionOnly: true,
         sentenceFormulaFromEducator,
       },
       {

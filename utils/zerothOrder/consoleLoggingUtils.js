@@ -108,8 +108,8 @@ exports.logAestheticBorder = (reps) => {
   }
 };
 
-exports.logPathwayTitle = (etiquette, structureChunk, multipleMode) => {
-  if (multipleMode) {
+exports.logPathwayTitle = (etiquette, structureChunk, maqModes) => {
+  if (maqModes.multipleMode) {
     consol.logYellowWithBorder(`##${etiquette} ${structureChunk.chunkId}`);
   } else {
     consol.logBlueWithBorder(`##${etiquette} ${structureChunk.chunkId}`);

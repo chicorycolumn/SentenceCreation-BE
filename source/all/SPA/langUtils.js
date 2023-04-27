@@ -17,7 +17,7 @@ exports.selectWordVersions = (
   firstStageAnnotationsObj,
   selectedLemmaObject,
   previousOutputUnit,
-  multipleMode
+  maqModes
 ) => {
   // >>>
   // >>> Indefinite Article

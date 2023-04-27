@@ -16,11 +16,10 @@ exports.findMatchingLemmaObjectThenWord = (
   currentLanguage,
   questionLanguage,
   questionOutputArr,
-  multipleModes,
+  maqModes,
   outputArray,
   isPHD
 ) => {
-  let { multipleMode, forceMultipleModeAndQuestionOnly } = multipleModes;
   consol.log(
     "[1;33m " +
       `ligw ot:findMatchingLemmaObjectThenWord for stCh: "${structureChunk.chunkId}"` +
@@ -33,7 +32,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
   //STEP ONE: Fx-PW: Pathway for Fixed pieces.
   if (gpUtils.getWordtypeStCh(structureChunk) === "fix") {
-    consol.logPathwayTitle("##Fx-PW", structureChunk, multipleMode);
+    consol.logPathwayTitle("##Fx-PW", structureChunk, maqModes);
 
     return [
       {
@@ -166,9 +165,9 @@ exports.findMatchingLemmaObjectThenWord = (
       )
     )
   ) {
-    consol.logPathwayTitle("##Ad-PW-F", structureChunk, multipleMode);
+    consol.logPathwayTitle("##Ad-PW-F", structureChunk, maqModes);
 
-    if (multipleMode) {
+    if (maqModes.multipleMode) {
       matches.forEach((selectedLemmaObject) => {
         let adhocArr = langUtils.generateAdhocForms(
           "form",
@@ -243,9 +242,9 @@ exports.findMatchingLemmaObjectThenWord = (
         structureChunk[adhocInflectionCategory] &&
         structureChunk[adhocInflectionCategory].length
       ) {
-        consol.logPathwayTitle("##Ad-PW-I", structureChunk, multipleMode);
+        consol.logPathwayTitle("##Ad-PW-I", structureChunk, maqModes);
 
-        if (multipleMode) {
+        if (maqModes.multipleMode) {
           matches.forEach((selectedLemmaObject) => {
             let adhocArr = langUtils.generateAdhocForms(
               adhocInflectionCategory,
@@ -328,9 +327,9 @@ exports.findMatchingLemmaObjectThenWord = (
           );
 
           if (requestedUninflectedForms.length) {
-            consol.logPathwayTitle("##Un-PW", structureChunk, multipleMode);
+            consol.logPathwayTitle("##Un-PW", structureChunk, maqModes);
 
-            if (multipleMode) {
+            if (maqModes.multipleMode) {
               requestedUninflectedForms.forEach((selectedUninflectedForm) => {
                 let matchesByUninflectedForm = matches.filter(
                   (lObj) => lObj.inflections[selectedUninflectedForm]
@@ -538,9 +537,9 @@ exports.findMatchingLemmaObjectThenWord = (
 
     //    STEP FOUR-B: Getting the inflected word.
 
-    consol.logPathwayTitle("##If-PW", structureChunk, multipleMode);
+    consol.logPathwayTitle("##If-PW", structureChunk, maqModes);
 
-    if (multipleMode) {
+    if (maqModes.multipleMode) {
       consol.log("iksf ot:findMatchingLemmaObjectThenWord");
       matchesCopy.forEach((selectedLemmaObject) => {
         consol.log(
@@ -574,7 +573,7 @@ exports.findMatchingLemmaObjectThenWord = (
           selectedLemmaObject,
           structureChunk,
           currentLanguage,
-          multipleMode,
+          maqModes,
           outputArray,
           isPHD
         );
@@ -711,7 +710,7 @@ exports.findMatchingLemmaObjectThenWord = (
           selectedLemmaObject,
           structureChunk,
           currentLanguage,
-          multipleMode,
+          maqModes,
           outputArray,
         });
         consol.log("- * - * - * - * - * - * -");
@@ -721,7 +720,7 @@ exports.findMatchingLemmaObjectThenWord = (
         selectedLemmaObject,
         structureChunk,
         currentLanguage,
-        multipleMode,
+        maqModes,
         outputArray,
         isPHD
       );
@@ -881,7 +880,7 @@ exports.findMatchingLemmaObjectThenWord = (
     return false;
   }
 
-  if (!multipleMode && arrayOfAllPossibleOutputUnits.length > 1) {
+  if (!maqModes.multipleMode && arrayOfAllPossibleOutputUnits.length > 1) {
     arrayOfAllPossibleOutputUnits = [
       uUtils.selectRandom(arrayOfAllPossibleOutputUnits), //delta Possible adjustment point.
     ];

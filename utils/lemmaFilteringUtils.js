@@ -365,14 +365,14 @@ exports.filterWithin_PHD = (
   lemmaObject,
   PHDstructureChunk,
   currentLanguage,
-  multipleMode,
+  maqModes,
   outputArray
 ) => {
   consol.log("pebb", {
     lemmaObject,
     PHDstructureChunk,
     currentLanguage,
-    multipleMode,
+    maqModes,
   });
 
   let drillPath = [];
@@ -399,7 +399,7 @@ exports.filterWithin_PHD = (
     lemmaObjectCopy,
     PHDstructureChunk,
     currentLanguage,
-    multipleMode,
+    maqModes,
     outputArray,
     PHD_type: PHDstructureChunk.PHD_type,
     postHocInflectionChains,
@@ -668,7 +668,7 @@ exports.filterWithinSelectedLemmaObject = (
   lemmaObject,
   structureChunk,
   currentLanguage,
-  multipleMode,
+  maqModes,
   outputArray,
   isPHD
 ) => {
@@ -693,7 +693,7 @@ exports.filterWithinSelectedLemmaObject = (
       lemmaObject,
       structureChunk,
       currentLanguage,
-      multipleMode,
+      maqModes,
       outputArray
     );
   }
@@ -749,7 +749,7 @@ exports.filterWithinSelectedLemmaObject = (
     outputUnitsWithDrillPaths,
     null,
     structureChunk,
-    multipleMode,
+    maqModes,
     currentLanguage,
     "filterWithin" //deletable
   );
@@ -1514,7 +1514,7 @@ exports.traverseAndRecordInflections = (
   outputUnitsWithDrillPaths,
   outputUnitsWithDrillPathsMini,
   structureChunk,
-  multipleMode,
+  maqModes,
   currentLanguage,
   consoleLogEtiquette
 ) => {
@@ -1658,7 +1658,7 @@ exports.traverseAndRecordInflections = (
 
       let wordsFromTerminusObject = gpUtils.getWordsFromTerminusObject(
         source[chosenInflectionKeyAdjusted],
-        multipleMode
+        maqModes
       );
 
       // consol.log("fxxb5");
@@ -1708,7 +1708,7 @@ exports.traverseAndRecordInflections = (
         outputUnitsWithDrillPaths,
         outputUnitsWithDrillPathsMini,
         structureChunk,
-        multipleMode,
+        maqModes,
         currentLanguage,
         "traverseAndRecordInflections" // deletable
       );

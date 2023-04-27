@@ -101,7 +101,7 @@ exports.returnNullQuestionResponseObj = (
   startTime,
   returnDirectly,
   questionSentenceData,
-  multipleMode,
+  maqModes,
   questionLanguage,
   answerLanguage
 ) => {
@@ -109,9 +109,8 @@ exports.returnNullQuestionResponseObj = (
     formattingOptions,
     startTime,
     questionSentenceData,
-    multipleMode,
-    { questionLanguage, answerLanguage },
-    true
+    maqModes,
+    { questionLanguage, answerLanguage }
   );
   return frUtils.finishAndSend(returnDirectly, nullQuestionResponseObj, null);
 };

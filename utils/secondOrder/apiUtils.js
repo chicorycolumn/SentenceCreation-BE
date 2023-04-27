@@ -617,7 +617,7 @@ exports.prepareGetSentencesAsQuestionOnly = (
     body: {
       sentenceFormulaFromEducator: sentenceFormula,
       questionLanguage,
-      forceMultipleModeAndQuestionOnly: true,
+      forceMultipleAndQuestionOnly: true,
       requestingSingleWordOnly,
     },
   };

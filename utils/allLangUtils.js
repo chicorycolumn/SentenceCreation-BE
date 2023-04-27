@@ -471,10 +471,10 @@ exports.setMerelyPreferredChoices = (structureChunk, currentLanguage) => {
 exports.getAndPreprocessStructureAndFormula = (
   sentenceFormula,
   currentLanguage,
-  multipleMode
+  maqModes
 ) => {
   if (
-    !multipleMode &&
+    !maqModes.multipleMode &&
     sentenceFormula.orders.primary &&
     sentenceFormula.orders.primary.length > 1
   ) {
