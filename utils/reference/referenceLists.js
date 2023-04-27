@@ -992,6 +992,7 @@ exports.aspectReference = (str) => {
 
 exports.preferredInitialChoicesForEnChs = {
   pro: { form: { _pronombreAndDeterminer: "determiner" } },
+  ver: { form: { ALL: "verbal" } },
 };
 
 exports.contractions = {

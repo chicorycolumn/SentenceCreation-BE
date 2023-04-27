@@ -515,6 +515,8 @@ exports.getEnChsForLemma = (lang, lemma, env = "ref") => {
                   (tv) => preferredTVsRef[tv] || tv
                 );
                 enCh[traitKey].traitValue = Array.from(new Set(preferredTVs));
+              } else if (Object.keys(preferredTVsRef).includes("ALL")) {
+                enCh[traitKey].traitValue = [preferredTVsRef["ALL"]];
               }
             }
           }
