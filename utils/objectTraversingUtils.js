@@ -16,11 +16,11 @@ exports.findMatchingLemmaObjectThenWord = (
   currentLanguage,
   questionLanguage,
   questionOutputArr,
-  multipleModes,
+  maqModes,
   outputArray,
   isPHD
 ) => {
-  let { multipleMode, forceMultipleModeAndQuestionOnly } = multipleModes;
+  let { multipleMode } = maqModes;
   consol.log(
     "[1;33m " +
       `ligw ot:findMatchingLemmaObjectThenWord for stCh: "${structureChunk.chunkId}"` +

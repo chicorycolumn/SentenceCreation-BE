@@ -17,6 +17,27 @@ const {
 describe("/api", function () {
   this.timeout(7000);
 
+  describe("/palette - Stage 30: Modal verbs, and contractions.", () => {
+    xdescribe("#pal30-01 Boolean on stCh to always use contraction.", () => {
+      it("#pal30-01a GET 200 YES: Engpol.", () => {
+        return runPaletteTest2("ENG", "POL", "125a", [
+          {
+            ENG: ["I will not read."],
+            POL: ["Nie będę czytać.", "Nie przeczytam."],
+          },
+        ]);
+      });
+      it("#pal30-01b GET 200 YES: Poleng.", () => {
+        return runPaletteTest2("POL", "ENG", "125a", [
+          {
+            POL: ["Nie będę czytać.", "Nie przeczytam."],
+            ENG: ["I will not read."],
+          },
+        ]);
+      });
+    });
+  });
+
   describe("/palette - Stage 29: Programmatic negatives, and contractions.", () => {
     describe("#pal29-01 Negative Be (simple).", () => {
       it("#pal29-01a GET 200 YES: Engpol.", () => {

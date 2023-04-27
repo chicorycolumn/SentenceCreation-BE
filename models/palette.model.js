@@ -37,6 +37,10 @@ exports.fetchPalette = (req) => {
     formattingOptions = {},
   } = req.body;
 
+  let multipleMode = !!forceMultipleModeAndQuestionOnly;
+  let isQuestion = true;
+  let maqModes = { multipleMode, isQuestion };
+
   if (!startTime) {
     throw "arkd You must set a startTime with Date.now() from outside fetchPalette before calling fetchPalette.";
   }
@@ -59,14 +63,12 @@ exports.fetchPalette = (req) => {
             } seconds, so was aborted. Label "${label}".`,
           },
         },
-        multipleMode,
+        maqModes,
         questionLanguage,
         answerLanguage
       );
     }
   );
-
-  let multipleMode = !!forceMultipleModeAndQuestionOnly;
 
   timeOutCheck = checkTimeout("fp1");
   if (timeOutCheck) {
@@ -121,7 +123,7 @@ exports.fetchPalette = (req) => {
     { currentLanguage: questionLanguage },
     questionSentenceFormula,
     words,
-    { multipleMode, forceMultipleModeAndQuestionOnly },
+    maqModes,
     !!allCounterfactualResults
   );
 
@@ -151,14 +153,31 @@ exports.fetchPalette = (req) => {
         startTime,
         returnDirectly,
         questionSentenceData,
-        multipleMode,
+        maqModes,
         questionLanguage,
         answerLanguage
       );
     }
   }
-
-  if (forceMultipleModeAndQuestionOnly) {
+  // console.log("aqsw");
+  // console.log("HHH");
+  // console.log("HHH");
+  // console.log("HHH");
+  // console.log("HHH");
+  // console.log("HHH");
+  // console.log("HHH");
+  // console.log("HHH");
+  // console.log("HHH");
+  // console.log("HHH");
+  // console.log("HHH");
+  // console.log("HHH");
+  // console.log("HHH");
+  // console.log("HHH");
+  // console.log("HHH");
+  // console.log("HHH");
+  // console.log("HHH");
+  // console.log("HHH");
+  if (isQuestion && multipleMode) {
     if (requestingSingleWordOnly) {
       return frUtils.sendResponseForSingleWord(
         returnDirectly,
@@ -169,7 +188,7 @@ exports.fetchPalette = (req) => {
         let sentence = scUtils.buildSentenceString(
           outputArray,
           sentenceFormula,
-          multipleMode,
+          maqModes,
           questionLanguage,
           answerLanguage,
           formattingOptions
@@ -178,7 +197,7 @@ exports.fetchPalette = (req) => {
         return sentence;
       });
 
-      deduplicatedArrForEducatorInterface = Array.from(
+      let deduplicatedArrForEducatorInterface = Array.from(
         new Set(uUtils.flatten(arr))
       );
 
@@ -240,6 +259,8 @@ exports.fetchPalette = (req) => {
 
   if (answerLanguage) {
     multipleMode = true;
+    isQuestion = false;
+    maqModes = { multipleMode, isQuestion };
 
     let equivalents;
     if (
@@ -436,7 +457,7 @@ exports.fetchPalette = (req) => {
         },
         answerSentenceFormula,
         words,
-        { multipleMode, forceMultipleModeAndQuestionOnly },
+        maqModes,
         !!allCounterfactualResults,
         questionSentenceData.questionOutputArr
       );
@@ -482,18 +503,16 @@ exports.fetchPalette = (req) => {
           formattingOptions,
           startTime,
           answerSentenceData,
-          multipleMode,
-          { questionLanguage, answerLanguage },
-          false
+          maqModes,
+          { questionLanguage, answerLanguage }
         );
       } else {
         let subsequentAnswerResponseObj = scUtils.giveFinalSentences(
           formattingOptions,
           startTime,
           answerSentenceData,
-          multipleMode,
-          { questionLanguage, answerLanguage },
-          false
+          maqModes,
+          { questionLanguage, answerLanguage }
         );
 
         subsequentAnswerResponseObj.finalSentenceArr.forEach(
@@ -539,13 +558,17 @@ exports.fetchPalette = (req) => {
 
   //giveFinalSentences in question mode, will evaluate annotations, involving counterfaxing,
   //ie a nested set of calls to this fetchPalette fxn.
+  let maqModesOverride = {
+    multipleMode: false,
+    isQuestion: true,
+  };
+
   questionResponseObj = scUtils.giveFinalSentences(
     formattingOptions,
     startTime,
     questionSentenceData,
-    false,
+    maqModesOverride,
     { questionLanguage, answerLanguage },
-    true,
     answerSentenceData,
     questionSentenceFormula,
     req.body,
@@ -560,18 +583,16 @@ exports.fetchPalette = (req) => {
         formattingOptions,
         startTime,
         answerSentenceData,
-        true,
-        { questionLanguage, answerLanguage },
-        false
+        maqModes,
+        { questionLanguage, answerLanguage }
       );
     } else {
       let subsequentAnswerResponseObj = scUtils.giveFinalSentences(
         formattingOptions,
         startTime,
         answerSentenceData,
-        true,
-        { questionLanguage, answerLanguage },
-        false
+        maqModes,
+        { questionLanguage, answerLanguage }
       );
 
       subsequentAnswerResponseObj.finalSentenceArr.forEach((finalSentence) => {
