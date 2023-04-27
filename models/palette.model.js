@@ -37,6 +37,9 @@ exports.fetchPalette = (req) => {
     formattingOptions = {},
   } = req.body;
 
+  let multipleMode = !!forceMultipleModeAndQuestionOnly;
+  let isQuestion = true;
+
   if (!startTime) {
     throw "arkd You must set a startTime with Date.now() from outside fetchPalette before calling fetchPalette.";
   }
@@ -59,14 +62,12 @@ exports.fetchPalette = (req) => {
             } seconds, so was aborted. Label "${label}".`,
           },
         },
-        multipleMode,
+        { multipleMode, forceMultipleModeAndQuestionOnly, isQuestion: true },
         questionLanguage,
         answerLanguage
       );
     }
   );
-
-  let multipleMode = !!forceMultipleModeAndQuestionOnly;
 
   timeOutCheck = checkTimeout("fp1");
   if (timeOutCheck) {
@@ -121,7 +122,7 @@ exports.fetchPalette = (req) => {
     { currentLanguage: questionLanguage },
     questionSentenceFormula,
     words,
-    { multipleMode, forceMultipleModeAndQuestionOnly },
+    { multipleMode, forceMultipleModeAndQuestionOnly, isQuestion },
     !!allCounterfactualResults
   );
 
@@ -151,13 +152,30 @@ exports.fetchPalette = (req) => {
         startTime,
         returnDirectly,
         questionSentenceData,
-        multipleMode,
+        { multipleMode, forceMultipleModeAndQuestionOnly, isQuestion: true },
         questionLanguage,
         answerLanguage
       );
     }
   }
-
+  // console.log("aqsw");
+  // console.log("HHH");
+  // console.log("HHH");
+  // console.log("HHH");
+  // console.log("HHH");
+  // console.log("HHH");
+  // console.log("HHH");
+  // console.log("HHH");
+  // console.log("HHH");
+  // console.log("HHH");
+  // console.log("HHH");
+  // console.log("HHH");
+  // console.log("HHH");
+  // console.log("HHH");
+  // console.log("HHH");
+  // console.log("HHH");
+  // console.log("HHH");
+  // console.log("HHH");
   if (forceMultipleModeAndQuestionOnly) {
     if (requestingSingleWordOnly) {
       return frUtils.sendResponseForSingleWord(
@@ -169,7 +187,7 @@ exports.fetchPalette = (req) => {
         let sentence = scUtils.buildSentenceString(
           outputArray,
           sentenceFormula,
-          multipleMode,
+          { multipleMode, forceMultipleModeAndQuestionOnly, isQuestion },
           questionLanguage,
           answerLanguage,
           formattingOptions
@@ -178,7 +196,7 @@ exports.fetchPalette = (req) => {
         return sentence;
       });
 
-      deduplicatedArrForEducatorInterface = Array.from(
+      let deduplicatedArrForEducatorInterface = Array.from(
         new Set(uUtils.flatten(arr))
       );
 
@@ -240,6 +258,7 @@ exports.fetchPalette = (req) => {
 
   if (answerLanguage) {
     multipleMode = true;
+    isQuestion = false || forceMultipleModeAndQuestionOnly;
 
     let equivalents;
     if (
@@ -436,7 +455,7 @@ exports.fetchPalette = (req) => {
         },
         answerSentenceFormula,
         words,
-        { multipleMode, forceMultipleModeAndQuestionOnly },
+        { multipleMode, forceMultipleModeAndQuestionOnly, isQuestion },
         !!allCounterfactualResults,
         questionSentenceData.questionOutputArr
       );
@@ -482,18 +501,16 @@ exports.fetchPalette = (req) => {
           formattingOptions,
           startTime,
           answerSentenceData,
-          multipleMode,
-          { questionLanguage, answerLanguage },
-          false
+          { multipleMode, forceMultipleModeAndQuestionOnly, isQuestion: false },
+          { questionLanguage, answerLanguage }
         );
       } else {
         let subsequentAnswerResponseObj = scUtils.giveFinalSentences(
           formattingOptions,
           startTime,
           answerSentenceData,
-          multipleMode,
-          { questionLanguage, answerLanguage },
-          false
+          { multipleMode, forceMultipleModeAndQuestionOnly, isQuestion: false },
+          { questionLanguage, answerLanguage }
         );
 
         subsequentAnswerResponseObj.finalSentenceArr.forEach(
@@ -543,9 +560,12 @@ exports.fetchPalette = (req) => {
     formattingOptions,
     startTime,
     questionSentenceData,
-    false,
+    {
+      multipleMode: false,
+      forceMultipleModeAndQuestionOnly: false,
+      isQuestion: true,
+    },
     { questionLanguage, answerLanguage },
-    true,
     answerSentenceData,
     questionSentenceFormula,
     req.body,
@@ -560,18 +580,24 @@ exports.fetchPalette = (req) => {
         formattingOptions,
         startTime,
         answerSentenceData,
-        true,
-        { questionLanguage, answerLanguage },
-        false
+        {
+          multipleMode: true,
+          forceMultipleModeAndQuestionOnly: false,
+          isQuestion: false,
+        },
+        { questionLanguage, answerLanguage }
       );
     } else {
       let subsequentAnswerResponseObj = scUtils.giveFinalSentences(
         formattingOptions,
         startTime,
         answerSentenceData,
-        true,
-        { questionLanguage, answerLanguage },
-        false
+        {
+          multipleMode: true,
+          forceMultipleModeAndQuestionOnly: false,
+          isQuestion: false,
+        },
+        { questionLanguage, answerLanguage }
       );
 
       subsequentAnswerResponseObj.finalSentenceArr.forEach((finalSentence) => {
