@@ -126,7 +126,7 @@ exports.selectDependentChunkWordsAndAddToOutputArray = (
   errorInSentenceCreation,
   previousQuestionLanguage,
   questionOutputArr,
-  multipleModes,
+  maqModes,
   potentialNullResultObject
 ) => {
   let filteredExplodedOutputArraysWithHeads = [];
@@ -185,7 +185,7 @@ exports.selectDependentChunkWordsAndAddToOutputArray = (
                 currentLanguage,
                 previousQuestionLanguage,
                 questionOutputArr,
-                multipleModes,
+                maqModes,
                 null
               );
 
@@ -278,11 +278,11 @@ exports.processSentenceFormula = (
   languagesObj,
   sentenceFormula,
   words,
-  multipleModes,
+  maqModes,
   isCounterfax,
   questionOutputArr
 ) => {
-  let { multipleMode, forceMultipleModeAndQuestionOnly } = multipleModes;
+  let { multipleMode } = maqModes;
 
   consol.log("hbbhey START processSentenceFormula");
   let { currentLanguage, previousQuestionLanguage } = languagesObj;
@@ -344,7 +344,7 @@ exports.processSentenceFormula = (
       currentLanguage,
       previousQuestionLanguage,
       questionOutputArr,
-      multipleModes,
+      maqModes,
       null
     );
 
@@ -420,7 +420,7 @@ exports.processSentenceFormula = (
       errorInSentenceCreation,
       previousQuestionLanguage,
       questionOutputArr,
-      multipleModes,
+      maqModes,
       potentialNullResultObject
     );
   };
@@ -518,7 +518,7 @@ exports.processSentenceFormula = (
         currentLanguage,
         previousQuestionLanguage,
         questionOutputArr,
-        multipleModes,
+        maqModes,
         outputArray,
         true
       );
@@ -652,7 +652,7 @@ exports.processSentenceFormula = (
       currentLanguage,
       previousQuestionLanguage,
       questionOutputArr,
-      multipleModes,
+      maqModes,
       null
     );
 
@@ -786,15 +786,15 @@ exports.giveFinalSentences = (
   formattingOptions,
   startTime,
   sentenceData,
-  multipleMode,
+  maqModes,
   languagesObj,
-  isQuestion,
   answerSentenceData,
   questionSentenceFormula,
   reqBody,
   answerSelectedWordsSetsHaveChanged,
   runsRecord
 ) => {
+  let { multipleMode, isQuestion } = maqModes;
   let { questionLanguage, answerLanguage } = languagesObj;
   let currentLanguage = isQuestion ? questionLanguage : answerLanguage;
 
@@ -865,7 +865,7 @@ exports.giveFinalSentences = (
     let finalSentences = scUtils.buildSentenceString(
       questionOutputArr,
       sentenceFormula,
-      multipleMode,
+      maqModes,
       questionLanguage,
       answerLanguage,
       formattingOptions
@@ -879,7 +879,7 @@ exports.giveFinalSentences = (
       let finalSentences = scUtils.buildSentenceString(
         outputArr,
         sentenceFormula,
-        multipleMode,
+        maqModes,
         currentLanguage,
         null,
         formattingOptions
@@ -912,7 +912,7 @@ exports.giveFinalSentences = (
 exports.buildSentenceString = (
   unorderedArr,
   sentenceFormula,
-  multipleMode,
+  maqModes,
   currentLanguage,
   answerLanguage,
   formattingOptions
@@ -923,6 +923,7 @@ exports.buildSentenceString = (
     unorderedArr.map((outputUnit) => outputUnit.selectedWord)
   );
 
+  let { multipleMode, isQuestion } = maqModes;
   let outputArrays = [];
   let producedSentences = [];
 
@@ -1029,22 +1030,29 @@ exports.buildSentenceString = (
     }
 
     arrOfFinalSelectedWordsArr.forEach((finalSelectedWordsArr) => {
-      let producedSentence = scUtils.getProducedSentence(
-        finalSelectedWordsArr,
-        currentLanguage,
-        !multipleMode,
-        formattingOptions
-      );
-      producedSentences.push(producedSentence);
+      let producedSentenceArrForOneSelectedWordsArr =
+        scUtils.getProducedSentence(
+          finalSelectedWordsArr,
+          currentLanguage,
+          maqModes,
+          formattingOptions
+        );
+      producedSentences.push(...producedSentenceArrForOneSelectedWordsArr);
     });
   });
 
   return producedSentences;
 };
 
-exports.addContractions = (sentence, lang) => {
-  const _addContractions = (s, ref, probability, ifFollowedByWord) => {
-    let targets = Object.keys(ref);
+exports.addContractions = (sentence, lang, coverAllOrMostPermutations) => {
+  const _getAndPushToRes = (
+    s,
+    resArr,
+    targets,
+    ref,
+    ifFollowedByWord,
+    probability
+  ) => {
     uUtils.shuffle(targets);
     targets.forEach((target) => {
       let replacement = ref[target];
@@ -1073,25 +1081,78 @@ exports.addContractions = (sentence, lang) => {
       let newReg = RegExp(`«${target}»`, "g");
       s = s.replace(newReg, replacement);
     });
+    resArr.push(s);
+  };
+  const _addContractionsForSentence = (
+    s,
+    ref,
+    probability,
+    ifFollowedByWord,
+    coverAllOrMostPermutations
+  ) => {
+    let resArr = coverAllOrMostPermutations ? [s] : [];
 
-    return s;
+    let targets = Object.keys(ref);
+
+    _getAndPushToRes(s, resArr, targets, ref, ifFollowedByWord, probability);
+
+    if (coverAllOrMostPermutations) {
+      _getAndPushToRes(s, resArr, targets, ref, ifFollowedByWord, probability);
+      _getAndPushToRes(s, resArr, targets, ref, ifFollowedByWord, probability);
+      _getAndPushToRes(s, resArr, targets, ref, ifFollowedByWord, probability);
+      _getAndPushToRes(s, resArr, targets, ref, ifFollowedByWord, probability);
+
+      _getAndPushToRes(s, resArr, targets, ref, ifFollowedByWord, 1);
+    }
+
+    return resArr;
+  };
+  const _addContractionsForSentenceArr = (arr, ...args) => {
+    let newArr = [];
+    arr.forEach((s) => {
+      let miniArr = _addContractionsForSentence(s, ...args);
+      newArr.push(...miniArr);
+    });
+    return newArr;
   };
 
   let ref = refObj.contractions[lang];
+  let sentences = [sentence];
 
-  sentence = _addContractions(sentence, ref.mandatory, 1);
-  sentence = _addContractions(sentence, ref.group1, 0.5);
-  sentence = _addContractions(sentence, ref.group2, 0.5, true);
+  sentences = _addContractionsForSentenceArr(
+    sentences,
+    ref.mandatory,
+    1,
+    false,
+    coverAllOrMostPermutations
+  );
 
-  return sentence;
+  sentences = _addContractionsForSentenceArr(
+    sentences,
+    ref.group1,
+    0.5,
+    false,
+    coverAllOrMostPermutations
+  );
+
+  sentences = _addContractionsForSentenceArr(
+    sentences,
+    ref.group2,
+    0.5,
+    true,
+    coverAllOrMostPermutations
+  );
+
+  return Array.from(new Set(sentences));
 };
 
 exports.getProducedSentence = (
   finalSelectedWordsArr,
   currentLanguage,
-  isQuestionMode,
+  maqModes,
   formattingOptions
 ) => {
+  let { multipleMode, isQuestion } = maqModes;
   let producedSentence = finalSelectedWordsArr[0];
   finalSelectedWordsArr.slice(1).forEach((str) => {
     if (refObj.punctuation.includes(str)) {
@@ -1108,19 +1169,53 @@ exports.getProducedSentence = (
     producedSentence += ".";
   }
 
-  if (isQuestionMode && !formattingOptions.suppressContractions) {
-    producedSentence = scUtils.addContractions(
-      producedSentence,
-      currentLanguage
-    );
+  let prodSentences = [producedSentence];
+
+  if (!formattingOptions.suppressContractions && isQuestion) {
+    // console.log("swde");
+    // console.log("OOO");
+    // console.log("OOO");
+    // console.log("OOO");
+    // console.log("OOO");
+    // console.log("OOO");
+    // console.log("OOO");
+    // console.log("OOO");
+    // console.log("OOO");
+    // console.log("OOO");
+    // console.log("OOO");
+    // console.log("OOO");
+    // console.log("OOO");
+    // console.log("OOO");
+    // console.log("OOO");
+    // console.log("OOO");
+    // console.log("OOO");
+    // console.log("OOO");
+
+    let prodSentencesWithContractionsArr = [];
+    prodSentences.forEach((prodSentence) => {
+      let prodSentenceMiniArr = scUtils.addContractions(
+        prodSentence,
+        currentLanguage,
+        isQuestion && multipleMode
+      );
+
+      prodSentencesWithContractionsArr.push(...prodSentenceMiniArr);
+    });
+    prodSentences = Array.from(new Set(prodSentencesWithContractionsArr));
   }
 
-  producedSentence = producedSentence
-    .split("")
-    .filter((char) => !Object.keys(refObj.selectedWordMarkers).includes(char))
-    .join("");
+  prodSentences = prodSentences.map((prodSentence) =>
+    uUtils.capitaliseFirst(
+      prodSentence
+        .split("")
+        .filter(
+          (char) => !Object.keys(refObj.selectedWordMarkers).includes(char)
+        )
+        .join("")
+    )
+  );
 
-  return uUtils.capitaliseFirst(producedSentence);
+  return prodSentences;
 };
 
 exports.coverBothGendersForPossessivesOfHypernyms = (
