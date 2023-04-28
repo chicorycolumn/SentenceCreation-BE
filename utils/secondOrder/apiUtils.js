@@ -239,7 +239,7 @@ exports.getBlankEnhancedStructureChunkForThisWordtype = (
   return stChTraits;
 };
 
-exports.getFormulaItem = (lang, wordtype, stCh) => {
+exports.getFemulaItem = (lang, wordtype, stCh) => {
   ivUtils.validateLang(lang, 16);
 
   let enCh = apiUtils.getBlankEnhancedStructureChunkForThisWordtype(
@@ -254,7 +254,7 @@ exports.getFormulaItem = (lang, wordtype, stCh) => {
 
   return {
     structureChunk: enCh,
-    formulaItemId: uUtils.getRandomNumberString(10),
+    femulaItemId: uUtils.getRandomNumberString(10),
     guideword: apiUtils.getAestheticGuideword(enCh),
   };
 };
@@ -344,7 +344,7 @@ exports.frontendifyFormula = (lang, formula) => {
 
   formula.sentenceStructure = formula.sentenceStructure.map((stCh) => {
     // Frontendify-2a: stCh to enCh
-    let fItem = apiUtils.getFormulaItem(
+    let fItem = apiUtils.getFemulaItem(
       lang,
       gpUtils.getWordtypeStCh(stCh),
       stCh
