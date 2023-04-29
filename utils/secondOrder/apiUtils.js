@@ -254,7 +254,7 @@ exports.getFemulaItem = (lang, wordtype, stCh) => {
 
   return {
     structureChunk: enCh,
-    femulaItemId: uUtils.getRandomNumberString(10),
+    femulaItemId: null,
     guideword: apiUtils.getAestheticGuideword(enCh),
   };
 };
@@ -371,6 +371,15 @@ exports.frontendifyFormula = (lang, formula) => {
     });
 
     return fItem;
+  });
+
+  // Add fItem IDs
+  let uniqueIdNumbers = uUtils.getUniqueNumberStrings(
+    10,
+    formula.sentenceStructure.length
+  );
+  formula.sentenceStructure.forEach((fItem, index) => {
+    fItem.femulaItemId = uniqueIdNumbers[index];
   });
 };
 
