@@ -61,6 +61,14 @@ exports.getMaterialsCopies = (
   useDummy,
   sentenceFormulaFromEducator
 ) => {
+  console.log("getMaterialsCopies", {
+    env,
+    currentLanguage,
+    sentenceFormulaId,
+    useDummy,
+    sentenceFormulaFromEducator,
+  });
+
   //STEP ZERO (A): Get necessary source materials.
   let wordsOnly = !!sentenceFormulaFromEducator;
 
