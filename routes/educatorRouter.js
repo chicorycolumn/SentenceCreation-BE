@@ -7,7 +7,7 @@ const {
   getFormulaIds,
 } = require("../controllers/info.controller");
 const {
-  getSentencesAsQuestionOnly,
+  getSentencesForEducator,
 } = require("../controllers/sentences.controller");
 const { handle405s } = require("../errors/errors");
 
@@ -17,7 +17,7 @@ educatorRouter.route("/formulas*").get(getFormulas).all(handle405s);
 educatorRouter.route("/formulaids*").get(getFormulaIds).all(handle405s);
 educatorRouter
   .route("/sentences*")
-  .put(getSentencesAsQuestionOnly)
+  .put(getSentencesForEducator)
   .all(handle405s);
 
 educatorRouter.route("/words*").get(getWordsByCriteria).all(handle405s);

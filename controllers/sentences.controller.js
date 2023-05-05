@@ -59,32 +59,73 @@ exports.getErrors = (responseObj) => {
   }
 };
 
-exports.getSentencesAsQuestionOnly = (req, res, next) => {
+exports.getSentencesForEducator = (req, res, next) => {
   let questionLanguage = req.query.lang;
-  let { sentenceFormula, requestingSingleWordOnly } = req.body;
-
-  let data = apiUtils.prepareGetSentencesAsQuestionOnly(
-    questionLanguage,
+  let answerLanguage = req.query.lang2;
+  let {
     sentenceFormula,
-    requestingSingleWordOnly
-  );
+    questionFormula,
+    answerFormula,
+    requestingSingleWordOnly,
+  } = req.body;
 
-  data.body.startTime = Date.now();
+  if (answerFormula) {
+    let data = apiUtils.prepareGetDualSentences(
+      questionLanguage,
+      answerLanguage,
+      questionFormula,
+      answerFormula,
+      requestingSingleWordOnly
+    );
 
-  fetchPalette(data)
-    .then((responseObj) => {
-      let status = 200;
-      let errors = exports.getErrors(responseObj);
-      let respo = { payload: responseObj.questionSentenceArr };
+    data.body.startTime = Date.now();
 
-      if (errors || !responseObj.questionSentenceArr) {
-        respo = {
-          messages: errors,
+    fetchPalette(data)
+      .then((responseObj) => {
+        let status = 200;
+        let errors = exports.getErrors(responseObj);
+
+        let respo = {
+          payload: {
+            questionSentenceArr: responseObj.questionSentenceArr,
+            answerSentenceArr: responseObj.answerSentenceArr,
+          },
         };
-        // status = 500;
-      }
 
-      res.status(status).send(respo);
-    })
-    .catch((err) => next(err));
+        if (errors || !responseObj.questionSentenceArr) {
+          respo = {
+            messages: errors,
+          };
+          // status = 500;
+        }
+
+        res.status(status).send(respo);
+      })
+      .catch((err) => next(err));
+  } else {
+    let data = apiUtils.prepareGetSentencesAsQuestionOnly(
+      questionLanguage,
+      sentenceFormula,
+      requestingSingleWordOnly
+    );
+
+    data.body.startTime = Date.now();
+
+    fetchPalette(data)
+      .then((responseObj) => {
+        let status = 200;
+        let errors = exports.getErrors(responseObj);
+        let respo = { payload: responseObj.questionSentenceArr };
+
+        if (errors || !responseObj.questionSentenceArr) {
+          respo = {
+            messages: errors,
+          };
+          // status = 500;
+        }
+
+        res.status(status).send(respo);
+      })
+      .catch((err) => next(err));
+  }
 };

@@ -253,6 +253,15 @@ exports.fetchPalette = (req) => {
       // dummy formulas and dev environment formulas have equivalents on the sentence formula objects themselves, rather than properly in nexus.
       equivalents =
         questionSentenceData.sentenceFormula.equivalents[answerLanguage];
+    } else if (
+      questionSentenceData.sentenceFormula.equivalentsFormulas &&
+      questionSentenceData.sentenceFormula.equivalentsFormulas[answerLanguage]
+    ) {
+      // equivalents supplied by educator in dual formula being built on FE.
+      equivalents =
+        questionSentenceData.sentenceFormula.equivalentsFormulas[
+          answerLanguage
+        ];
     } else {
       equivalents = nexusUtils.getEquivalents(
         questionSentenceData.sentenceFormula.sentenceFormulaId,
@@ -262,7 +271,7 @@ exports.fetchPalette = (req) => {
     }
 
     if (!equivalents || !equivalents.length) {
-      throw "palette.model > I was asked to give equivalents, but the question sentence formula did not have any equivalents listed.";
+      throw "lafw palette.model > I was asked to give equivalents, but the question sentence formula did not have any equivalents listed.";
     }
 
     consol.log(
@@ -374,12 +383,15 @@ exports.fetchPalette = (req) => {
       consol.throw("mhji devSaysThrowAfterAnnoSalvo");
     }
 
-    equivalents.forEach((equivalentSentenceFormulaId, index) => {
+    equivalents.forEach((formulaIdOrFormula, index) => {
       let { sentenceFormula, words } = scUtils.getMaterialsCopies(
         env,
         answerLanguage,
-        equivalentSentenceFormulaId,
-        useDummy
+        formulaIdOrFormula,
+        useDummy,
+        uUtils.isKeyValueTypeObject(formulaIdOrFormula)
+          ? formulaIdOrFormula
+          : null
       );
 
       let answerSentenceFormula = sentenceFormula;

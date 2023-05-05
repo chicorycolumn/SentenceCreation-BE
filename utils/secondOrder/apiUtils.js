@@ -631,3 +631,61 @@ exports.prepareGetSentencesAsQuestionOnly = (
     },
   };
 };
+
+exports.prepareGetDualSentences = (
+  questionLanguage,
+  answerLanguage,
+  questionFormula,
+  answerFormula,
+  requestingSingleWordOnly
+) => {
+  let numberString = Date.now();
+
+  questionFormula = apiUtils._makeFormula(
+    questionFormula,
+    questionLanguage,
+    numberString,
+    requestingSingleWordOnly
+  );
+
+  answerFormula = apiUtils._makeFormula(
+    answerFormula,
+    answerLanguage,
+    numberString,
+    requestingSingleWordOnly
+  );
+
+  questionFormula.equivalentsFormulas = {};
+  questionFormula.equivalentsFormulas[answerLanguage] = [answerFormula];
+
+  return {
+    body: {
+      sentenceFormulaFromEducator: questionFormula,
+      questionLanguage,
+      answerLanguage,
+      forceMultipleAndQuestionOnly: false,
+      requestingSingleWordOnly,
+    },
+  };
+};
+
+exports._makeFormula = (
+  formula,
+  lang,
+  numberString,
+  requestingSingleWordOnly
+) => {
+  formula = uUtils.copyWithoutReference(formula);
+
+  formula.sentenceFormulaId = `${lang}-${numberString}`;
+
+  formula.equivalents = {};
+
+  if (requestingSingleWordOnly) {
+    formula.sentenceStructure.forEach((stCh) =>
+      refObj.agreementTraits.forEach((agreeKey) => delete stCh[agreeKey])
+    );
+  }
+
+  return formula;
+};
