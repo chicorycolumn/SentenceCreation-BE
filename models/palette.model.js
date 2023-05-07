@@ -99,7 +99,11 @@ exports.fetchPalette = (req) => {
   //       Once it passes that, we know it's fine, so don't need to validate it every time down here.
   //       Although could be worth running this validation here during multipleMode.
   if (!devSaysOmitStChValidation) {
-    ivUtils.validateSentenceFormula(questionSentenceFormula, questionLanguage);
+    ivUtils.validateSentenceFormula(
+      questionSentenceFormula,
+      questionLanguage,
+      "question"
+    );
   }
 
   if (pleaseDontSpecify) {
@@ -400,7 +404,13 @@ exports.fetchPalette = (req) => {
       //       Once it passes that, we know it's fine, so don't need to validate it every time down here.
       //       Although could be worth running this validation here during multipleMode.
       if (!devSaysOmitStChValidation) {
-        ivUtils.validateSentenceFormula(answerSentenceFormula, answerLanguage);
+        ivUtils.validateSentenceFormula(
+          answerSentenceFormula,
+          answerLanguage,
+          counterfactualSitSchematic
+            ? counterfactualSitSchematic.cfLabel
+            : "answer"
+        );
       }
 
       if (index === 0) {

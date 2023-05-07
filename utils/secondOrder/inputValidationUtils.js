@@ -5,7 +5,7 @@ const ivUtils = require("./inputValidationUtils.js");
 const refObj = require("../reference/referenceObjects.js");
 const refFxn = require("../reference/referenceFunctions.js");
 
-exports.validateSentenceFormula = (sentenceFormula, lang) => {
+exports.validateSentenceFormula = (sentenceFormula, lang, label) => {
   let stChTraits = refFxn.getStructureChunkTraits(lang);
 
   let allChunkIds = sentenceFormula.sentenceStructure.map(

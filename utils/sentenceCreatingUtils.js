@@ -72,7 +72,10 @@ exports.getMaterialsCopies = (
   } = scUtils.getWordsAndFormulas(currentLanguage, env, wordsOnly);
 
   if (wordsOnly) {
-    return { words: wordsBank, sentenceFormula: sentenceFormulaFromEducator };
+    return {
+      words: wordsBank,
+      sentenceFormula: uUtils.copyWithoutReference(sentenceFormulaFromEducator),
+    };
   }
 
   let sentenceFormula;

@@ -1,5 +1,9 @@
 const consol = require("./consoleLoggingUtils.js");
 
+exports.logFull = (x) => {
+  console.log(require("util").inspect(x, { showHidden: false, depth: null }));
+};
+
 exports.log = (...args) => {
   if (
     process.argv.some((el) => el === "all") ||
