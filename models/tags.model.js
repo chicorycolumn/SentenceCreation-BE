@@ -11,8 +11,15 @@ const refObj = require("../utils/reference/referenceObjects.js");
 const apiUtils = require("../utils/secondOrder/apiUtils.js");
 const allLangUtils = require("../utils/allLangUtils.js");
 
+exports.fetchFormulaTopics = (req) => {
+  let responseObject = { topics: refObj.formulaTopics };
+
+  return Promise.all([responseObject]).then((array) => {
+    return array[0];
+  });
+};
+
 exports.fetchTags = (req) => {
-  console.log("mptl", req);
   let { lang } = req.query;
 
   let { allTags, allTopics } = apiUtils.getTagsAndTopics(lang);

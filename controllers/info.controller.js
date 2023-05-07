@@ -1,4 +1,8 @@
-const { fetchTags, fetchWordsByCriteria } = require("../models/tags.model");
+const {
+  fetchTags,
+  fetchWordsByCriteria,
+  fetchFormulaTopics,
+} = require("../models/tags.model");
 const { fetchChunks } = require("../models/chunks.model");
 const { fetchFormulas, fetchFormulaIds } = require("../models/formulas.model");
 
@@ -18,6 +22,18 @@ exports.getTags = (req, res, next) => {
   fetchTags(req)
     .then((responseObj) => {
       if (responseObj.tags) {
+        res.status(200).send(responseObj);
+      } else {
+        //Beta else what?
+      }
+    })
+    .catch((err) => next(err));
+};
+
+exports.getFormulaTopics = (req, res, next) => {
+  fetchFormulaTopics(req)
+    .then((responseObj) => {
+      if (responseObj.topics) {
         res.status(200).send(responseObj);
       } else {
         //Beta else what?

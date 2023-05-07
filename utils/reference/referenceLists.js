@@ -1200,3 +1200,13 @@ exports.selectedWordMarkers = {
   "¤": "foo¤ Block this word from being used in contraction.",
   ª: "ªfoo This verb is an auxiliary verb.",
 };
+
+exports.formulaTopics = [
+  "basics",
+  "science",
+  "school",
+  "entertainment",
+  "religion",
+  "sports",
+  "love",
+];
