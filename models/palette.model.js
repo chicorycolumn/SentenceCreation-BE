@@ -48,24 +48,49 @@ exports.fetchPalette = (req) => {
   if (!timeLimit) {
     timeLimit = 8000;
   }
+
+  const finishAndSendErrorMessages = (errorMessage, sentenceData, isAnswer) => {
+    if (errorMessage) {
+      if (Array.isArray(errorMessage)) {
+        errorMessage.forEach((e) => {
+          consol.logRedString(e);
+        });
+        errorMessage = errorMessage.join(",  ");
+      } else {
+        consol.logRedString(errorMessage);
+      }
+    }
+
+    if (!sentenceData) {
+      sentenceData = {
+        errorInSentenceCreation: {
+          errorMessage,
+        },
+      };
+    }
+
+    let lang1 = isAnswer ? answerLanguage : questionLanguage;
+    let lang2 = !isAnswer ? answerLanguage : questionLanguage;
+
+    return frUtils.returnNullQuestionResponseObj(
+      formattingOptions,
+      startTime,
+      returnDirectly,
+      sentenceData,
+      maqModes,
+      lang1,
+      lang2
+    );
+  };
+
   const checkTimeout = efUtils.curryCheckTimeout(
     startTime,
     timeLimit,
     (label) => {
-      return frUtils.returnNullQuestionResponseObj(
-        formattingOptions,
-        startTime,
-        returnDirectly,
-        {
-          errorInSentenceCreation: {
-            errorMessage: `Processing on BE took on too long, exceeded ${
-              timeLimit / 1000
-            } seconds, so was aborted. Label "${label}".`,
-          },
-        },
-        maqModes,
-        questionLanguage,
-        answerLanguage
+      return finishAndSendErrorMessages(
+        `Processing on BE took on too long, exceeded ${
+          timeLimit / 1000
+        } seconds, so was aborted. Label "${label}".`
       );
     }
   );
@@ -84,7 +109,7 @@ exports.fetchPalette = (req) => {
   );
 
   if (!words || !Object.keys(words).length) {
-    consol.throw("Error kpas: No words found.");
+    return finishAndSendErrorMessages("Error kpas: No words found.");
   }
 
   let answerResponseObj;
@@ -106,19 +131,7 @@ exports.fetchPalette = (req) => {
     );
 
     if (failedValidationMessages) {
-      return frUtils.returnNullQuestionResponseObj(
-        formattingOptions,
-        startTime,
-        returnDirectly,
-        {
-          errorInSentenceCreation: {
-            errorMessage: failedValidationMessages.join(",  "),
-          },
-        },
-        maqModes,
-        questionLanguage,
-        answerLanguage
-      );
+      return finishAndSendErrorMessages(failedValidationMessages);
     }
   }
 
@@ -168,15 +181,7 @@ exports.fetchPalette = (req) => {
     if (allCounterfactualResults) {
       return;
     } else {
-      return frUtils.returnNullQuestionResponseObj(
-        formattingOptions,
-        startTime,
-        returnDirectly,
-        questionSentenceData,
-        maqModes,
-        questionLanguage,
-        answerLanguage
-      );
+      return finishAndSendErrorMessages(null, questionSentenceData);
     }
   }
 
@@ -221,7 +226,7 @@ exports.fetchPalette = (req) => {
         "pipr-fetchPalette. questionSentenceData.arrayOfOutputArrays",
         questionSentenceData.arrayOfOutputArrays
       );
-      consol.throw(
+      return finishAndSendErrorMessages(
         "#ERR tbvr fetchPalette. questionSentenceData.arrayOfOutputArrays.length had length more than 1. It was " +
           questionSentenceData.arrayOfOutputArrays.length
       );
@@ -291,7 +296,9 @@ exports.fetchPalette = (req) => {
     }
 
     if (!equivalents || !equivalents.length) {
-      throw "lafw palette.model > I was asked to give equivalents, but the question sentence formula did not have any equivalents listed.";
+      return finishAndSendErrorMessages(
+        "lafw palette.model > I was asked to give equivalents, but the question sentence formula did not have any equivalents listed."
+      );
     }
 
     consol.log(
@@ -316,7 +323,7 @@ exports.fetchPalette = (req) => {
           traitValue.length > 1
         ) {
           consol.log(">>", unit);
-          consol.throw(
+          return finishAndSendErrorMessages(
             `oije. (>> unit above) questionLanguage=${questionLanguage} "${unit.structureChunk.chunkId}" with "${traitKey}" of "${traitValue}". This should have been streamlined down to one traitValue, eg in updateStCh fxn.`
           );
         }
@@ -428,7 +435,11 @@ exports.fetchPalette = (req) => {
             : "answer"
         );
         if (failedValidationMessages) {
-          throw 616;
+          return finishAndSendErrorMessages(
+            failedValidationMessages,
+            null,
+            true
+          );
         }
       }
 
@@ -548,7 +559,11 @@ exports.fetchPalette = (req) => {
     });
 
     if (!answerResponseObj) {
-      consol.throw("ennm answerResponseObj is falsy");
+      return finishAndSendErrorMessages(
+        "ennm answerResponseObj is falsy",
+        null,
+        true
+      );
     }
 
     scUtils.removeDuplicatesFromResponseObject(answerResponseObj);

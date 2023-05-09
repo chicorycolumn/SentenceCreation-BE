@@ -116,7 +116,7 @@ exports.logPathwayTitle = (etiquette, structureChunk, maqModes) => {
   if (maqModes.multipleMode) {
     consol.logYellowWithBorder(`##${etiquette} ${structureChunk.chunkId}`);
   } else {
-    consol.logBlueWithBorder(`##${etiquette} ${structureChunk.chunkId}`);
+    consol.logCyanWithBorder(`##${etiquette} ${structureChunk.chunkId}`);
   }
 };
 
@@ -146,7 +146,7 @@ exports.logYellowWithBorder = (text) => {
   consol.log(" ");
 };
 
-exports.logBlueWithBorder = (text) => {
+exports.logCyanWithBorder = (text) => {
   consol.log(" ");
   consol.log(
     "[1;36m " +
@@ -219,4 +219,68 @@ exports.logOutputUnitsWithDrillPaths = (number, outputUnitsWithDrillPaths) => {
     consol.log(" ");
     consol.log(" ");
   });
+};
+
+exports.logRedString = (s) => {
+  consol.log("[1;31m " + s + "[0m");
+};
+
+exports.logGreenString = (s) => {
+  consol.log("[1;32m " + s + "[0m");
+};
+
+exports.logYellowString = (s) => {
+  consol.log("[1;33m " + s + "[0m");
+};
+
+exports.logBlueString = (s) => {
+  consol.log("[1;34m " + s + "[0m");
+};
+
+exports.logPurpleString = (s) => {
+  consol.log("[1;35m " + s + "[0m");
+};
+
+exports.logCyanString = (s) => {
+  consol.log("[1;36m " + s + "[0m");
+};
+
+exports.logGreyString = (s) => {
+  consol.log("[1;37m " + s + "[0m");
+};
+
+exports.logBlackString = (s) => {
+  consol.log("[1;38m " + s + "[0m");
+};
+
+exports.logVeryRedString = (s) => {
+  consol.log("[1;40m " + s + "[0m");
+};
+
+exports.logVeryBlackString = (s) => {
+  consol.log("[1;41m " + s + "[0m");
+};
+
+exports.logVeryGreenString = (s) => {
+  consol.log("[1;42m " + s + "[0m");
+};
+
+exports.logVeryYellowString = (s) => {
+  consol.log("[1;43m " + s + "[0m");
+};
+
+exports.logVeryBlueString = (s) => {
+  consol.log("[1;44m " + s + "[0m");
+};
+
+exports.logVeryPurpleString = (s) => {
+  consol.log("[1;45m " + s + "[0m");
+};
+
+exports.logVeryCyanString = (s) => {
+  consol.log("[1;46m " + s + "[0m");
+};
+
+exports.logVeryGreyString = (s) => {
+  consol.log("[1;47m " + s + "[0m");
 };
