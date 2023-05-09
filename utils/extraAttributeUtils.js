@@ -1,4 +1,5 @@
 const gpUtils = require("./generalPurposeUtils.js");
+const idUtils = require("./identityUtils.js");
 const uUtils = require("./universalUtils.js");
 const consol = require("./zerothOrder/consoleLoggingUtils.js");
 const scUtils = require("./sentenceCreatingUtils.js");
@@ -57,12 +58,12 @@ exports.evaluateFYIPs = (outputArr, questionLang, answerLang, label) => {
         (depUnits.length &&
           depUnits.some((depUnit) =>
             ["npe", "pro"].includes(
-              gpUtils.getWordtypeStCh(depUnit.structureChunk)
+              idUtils.getWordtypeStCh(depUnit.structureChunk)
             )
           )) ||
         (headOutputUnit &&
           ["npe", "pro"].includes(
-            gpUtils.getWordtypeStCh(headOutputUnit.structureChunk)
+            idUtils.getWordtypeStCh(headOutputUnit.structureChunk)
           ))
       ) {
         return `FYIP101-${label}-${questionLang}-${answerLang}`;

@@ -1,4 +1,5 @@
 const gpUtils = require("./generalPurposeUtils.js");
+const idUtils = require("./identityUtils.js");
 const uUtils = require("./universalUtils.js");
 const consol = require("./zerothOrder/consoleLoggingUtils.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
@@ -31,7 +32,7 @@ exports.findMatchingLemmaObjectThenWord = (
   let arrayOfAllPossibleOutputUnits = [];
 
   //STEP ONE: Fx-PW: Pathway for Fixed pieces.
-  if (gpUtils.getWordtypeStCh(structureChunk) === "fix") {
+  if (idUtils.getWordtypeStCh(structureChunk) === "fix") {
     consol.logPathwayTitle("##Fx-PW", structureChunk, maqModes);
 
     return [
@@ -44,7 +45,7 @@ exports.findMatchingLemmaObjectThenWord = (
   }
 
   //STEP TWO: Filter lemmaObjects (by specificIds OR andTags and selectors).
-  let source = words[gpUtils.getWordtypeStCh(structureChunk)];
+  let source = words[idUtils.getWordtypeStCh(structureChunk)];
 
   let shouldFilterBySelectors;
 
@@ -141,7 +142,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
   langUtils.expandLemmaObjects(
     matches,
-    gpUtils.getWordtypeStCh(structureChunk),
+    idUtils.getWordtypeStCh(structureChunk),
     currentLanguage
   );
   allLangUtils.tweakStructureChunks(matches, structureChunk, currentLanguage);
@@ -157,10 +158,10 @@ exports.findMatchingLemmaObjectThenWord = (
     structureChunk.form &&
     structureChunk.form.length &&
     Object.keys(adhocFormRef).includes(
-      gpUtils.getWordtypeStCh(structureChunk)
+      idUtils.getWordtypeStCh(structureChunk)
     ) &&
     structureChunk.form.some((selectedForm) =>
-      adhocFormRef[gpUtils.getWordtypeStCh(structureChunk)].includes(
+      adhocFormRef[idUtils.getWordtypeStCh(structureChunk)].includes(
         selectedForm
       )
     )
@@ -231,11 +232,11 @@ exports.findMatchingLemmaObjectThenWord = (
   //    (Ad-PW-I): Pathway for Adhoc INFLECTIONS. eg ENG tenseDescription
   if (
     Object.keys(adhocInflectionRef).includes(
-      gpUtils.getWordtypeStCh(structureChunk)
+      idUtils.getWordtypeStCh(structureChunk)
     )
   ) {
     let adhocInflectionCategorys =
-      adhocInflectionRef[gpUtils.getWordtypeStCh(structureChunk)];
+      adhocInflectionRef[idUtils.getWordtypeStCh(structureChunk)];
 
     adhocInflectionCategorys.forEach((adhocInflectionCategory) => {
       if (
@@ -318,7 +319,7 @@ exports.findMatchingLemmaObjectThenWord = (
   if (structureChunk.form && structureChunk.form.length) {
     Object.keys(refObj.uninflectedForms[currentLanguage]).forEach(
       (wordtype) => {
-        if (gpUtils.getWordtypeStCh(structureChunk) === wordtype) {
+        if (idUtils.getWordtypeStCh(structureChunk) === wordtype) {
           let uninflectedInflectionKeys =
             refObj.uninflectedForms[currentLanguage][wordtype];
 
@@ -341,14 +342,14 @@ exports.findMatchingLemmaObjectThenWord = (
 
                   if (
                     typeof selectedWordArr === "string" ||
-                    (gpUtils.isTerminusObject(selectedWordArr) &&
+                    (idUtils.isTerminusObject(selectedWordArr) &&
                       selectedWordArr.processOnlyAtEnd)
                   ) {
                     selectedWordArr = [selectedWordArr];
                   }
 
                   if (
-                    gpUtils.isTerminusObject(selectedWordArr) &&
+                    idUtils.isTerminusObject(selectedWordArr) &&
                     !selectedWordArr.processOnlyAtEnd
                   ) {
                     consol.throw(
@@ -397,14 +398,14 @@ exports.findMatchingLemmaObjectThenWord = (
 
               if (
                 typeof selectedWordArr === "string" ||
-                (gpUtils.isTerminusObject(selectedWordArr) &&
+                (idUtils.isTerminusObject(selectedWordArr) &&
                   selectedWordArr.processOnlyAtEnd)
               ) {
                 selectedWordArr = [selectedWordArr];
               }
 
               if (
-                gpUtils.isTerminusObject(selectedWordArr) &&
+                idUtils.isTerminusObject(selectedWordArr) &&
                 !selectedWordArr.processOnlyAtEnd
               ) {
                 consol.throw(
@@ -589,13 +590,13 @@ exports.findMatchingLemmaObjectThenWord = (
                 consol.log("[1;33m " + `bufw findMatching Answer IS ARRAY` + "[0m");
                 consol.log(selectedWord);
                 consol.throw("bufw findMatching should not have been array.");
-              } else if (gpUtils.isTerminusObject(selectedWord)) {
+              } else if (idUtils.isTerminusObject(selectedWord)) {
                 consol.log("[1;33m " + `bufw findMatching Answer IS TOBJ` + "[0m");
               }
             }
 
             if (
-              gpUtils.isTerminusObject(selectedWord) &&
+              idUtils.isTerminusObject(selectedWord) &&
               !selectedWord.processOnlyAtEnd
             ) {
               consol.throw(
@@ -605,7 +606,7 @@ exports.findMatchingLemmaObjectThenWord = (
 
             if (
               typeof selectedWord === "string" ||
-              (gpUtils.isTerminusObject(selectedWord) &&
+              (idUtils.isTerminusObject(selectedWord) &&
                 selectedWord.processOnlyAtEnd)
             ) {
               let outputUnit = frUtils.createOutputUnit(
@@ -619,7 +620,7 @@ exports.findMatchingLemmaObjectThenWord = (
                 drillPath
               );
               arrayOfAllPossibleOutputUnits.push(outputUnit);
-            } else if (gpUtils.isTerminusObject(selectedWord)) {
+            } else if (idUtils.isTerminusObject(selectedWord)) {
               let allWords = gpUtils.getWordsFromTerminusObject(
                 selectedWord,
                 true
@@ -813,7 +814,7 @@ exports.findMatchingLemmaObjectThenWord = (
           consol.throw(
             "jxny ot:findMatchingLemmaObjectThenWord should not have been array."
           );
-        } else if (gpUtils.isTerminusObject(selectedItem)) {
+        } else if (idUtils.isTerminusObject(selectedItem)) {
           consol.log(
             "[1;33m " +
               `ozdj ot:findMatchingLemmaObjectThenWord findMatching Question IS TOBJ` +
@@ -824,12 +825,12 @@ exports.findMatchingLemmaObjectThenWord = (
 
       if (
         typeof selectedItem === "string" ||
-        (gpUtils.isTerminusObject(selectedItem) &&
+        (idUtils.isTerminusObject(selectedItem) &&
           selectedItem.processOnlyAtEnd)
       ) {
         selectedWord = selectedItem;
       } else if (
-        gpUtils.isTerminusObject(selectedItem) &&
+        idUtils.isTerminusObject(selectedItem) &&
         !selectedItem.processOnlyAtEnd
       ) {
         let additionalWords = selectedItem.normal.slice(0);
@@ -967,7 +968,7 @@ exports.extractNestedRoutes = (source) => {
     if (
       typeof source === "string" ||
       typeof source === "boolean" ||
-      gpUtils.isTerminusObject(source)
+      idUtils.isTerminusObject(source)
     ) {
       let arrCopy = arr.slice();
       arr.pop();
@@ -1093,8 +1094,8 @@ exports.giveRoutesAndTerminalValuesFromObject = (lObj, detailNestedRoutes) => {
 
   if (detailNestedRoutes) {
     let inflectionChainSpecification =
-      refObj.lemmaObjectTraitKeys[gpUtils.getLanguageFromLemmaObject(lObj)]
-        .inflectionChains[gpUtils.getWordtypeLObj(lObj)];
+      refObj.lemmaObjectTraitKeys[idUtils.getLanguageFromLemmaObject(lObj)]
+        .inflectionChains[idUtils.getWordtypeLObj(lObj)];
 
     resArr.forEach((routesObj) => {
       let describedRoute = {};
@@ -1124,7 +1125,7 @@ exports.giveInflectionValueFromObjectByRoute = (obj, route) => {
 exports.findSynhomographs = (lemmaObject, structureChunk, currentLanguage) => {
   let inflectionCategoryChain =
     refObj.lemmaObjectTraitKeys[currentLanguage].inflectionChains[
-      gpUtils.getWordtypeStCh(structureChunk)
+      idUtils.getWordtypeStCh(structureChunk)
     ];
 
   let routesAndTerminalValues =
@@ -1230,7 +1231,7 @@ exports.stripOutInflectionCategorys = (
 ) => {
   let allInflectionCategorysForThisWordtype =
     refObj.lemmaObjectTraitKeys[currentLanguage].inflectionChains[
-      gpUtils.getWordtypeStCh(structureChunk)
+      idUtils.getWordtypeStCh(structureChunk)
     ];
 
   allInflectionCategorysForThisWordtype
@@ -1391,8 +1392,8 @@ exports.doesThisInflectionKeyHoldUniqueInflectionValueInLObj = (
   }
 
   let inflectionChain =
-    refObj.lemmaObjectTraitKeys[gpUtils.getLanguageFromLemmaObject(lObj)]
-      .inflectionChains[gpUtils.getWordtypeLObj(lObj)];
+    refObj.lemmaObjectTraitKeys[idUtils.getLanguageFromLemmaObject(lObj)]
+      .inflectionChains[idUtils.getWordtypeLObj(lObj)];
 
   function getInflectionKeyFromDrillPath(inflectionCategory, drillPath) {
     let x = drillPath.find((arr) => arr[0] === inflectionCategory);
@@ -1481,7 +1482,7 @@ exports.getDepUnits = (
 
   if (depWordtype) {
     res = res.filter(
-      (unit) => gpUtils.getWordtypeStCh(unit.structureChunk) === depWordtype
+      (unit) => idUtils.getWordtypeStCh(unit.structureChunk) === depWordtype
     );
   }
 

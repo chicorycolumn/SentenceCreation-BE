@@ -2,6 +2,7 @@ const lfUtils = require("../../../utils/lemmaFilteringUtils.js");
 const otUtils = require("../../../utils/objectTraversingUtils.js");
 const frUtils = require("../../../utils/formattingResponseUtils.js");
 const gpUtils = require("../../../utils/generalPurposeUtils.js");
+const idUtils = require("../../../utils/identityUtils.js");
 const uUtils = require("../../../utils/universalUtils.js");
 const consol = require("../../../utils/zerothOrder/consoleLoggingUtils.js");
 const refObj = require("../../../utils/reference/referenceObjects.js");
@@ -23,7 +24,7 @@ exports.selectWordVersions = (
   // >>> Indefinite Article
   // >>>
   if (
-    gpUtils.getWordtypeStCh(structureChunk) === "art" &&
+    idUtils.getWordtypeStCh(structureChunk) === "art" &&
     structureChunk.form.includes("indefinite")
   ) {
     if (!subsequentOutputUnit) {
@@ -93,7 +94,7 @@ exports.selectWordVersions = (
 };
 
 exports.preprocessStructureChunks = (structureChunk) => {
-  if (["nco", "npe"].includes(gpUtils.getWordtypeStCh(structureChunk))) {
+  if (["nco", "npe"].includes(idUtils.getWordtypeStCh(structureChunk))) {
     if (structureChunk.gcase && structureChunk.gcase.length) {
       structureChunk.gcase = structureChunk.gcase.map((gcaseTraitValue) => {
         return ["nom", "gen"].includes(gcaseTraitValue)

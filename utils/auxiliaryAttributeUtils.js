@@ -1,4 +1,5 @@
 const gpUtils = require("./generalPurposeUtils.js");
+const idUtils = require("./identityUtils.js");
 const uUtils = require("./universalUtils.js");
 const consol = require("./zerothOrder/consoleLoggingUtils.js");
 const scUtils = require("./sentenceCreatingUtils.js");
@@ -171,7 +172,7 @@ exports.removeAnnotationsByVypernym = (
   questionOutputArr.forEach((questionOutputUnit) => {
     let qStCh = questionOutputUnit.structureChunk;
     if (
-      gpUtils.getWordtypeStCh(qStCh) !== "fix" &&
+      idUtils.getWordtypeStCh(qStCh) !== "fix" &&
       lfUtils.checkHyper(questionOutputUnit.selectedLemmaObject, [HY.VY]) &&
       qStCh.annotations &&
       Object.keys(qStCh.annotations).includes("semanticGender")
@@ -203,7 +204,7 @@ exports.removeAnnotationsByVypernym = (
             (unit) => unit.structureChunk.chunkId === qStCh.chunkId
           );
           return (
-            gpUtils.lObjIsMGN(answerOutputUnit.selectedLemmaObject) &&
+            idUtils.lObjIsMGN(answerOutputUnit.selectedLemmaObject) &&
             !answerOutputUnit.structureChunk.virilityDetail === "mixed"
           );
         }
@@ -291,7 +292,7 @@ exports.removeAnnotationsByAOCs = (
 
     if (
       ["nco", "npe"].includes(
-        gpUtils.getWordtypeStCh(questionOutputUnit.structureChunk)
+        idUtils.getWordtypeStCh(questionOutputUnit.structureChunk)
       )
     ) {
       let headChunkId = questionOutputUnit.structureChunk.chunkId;
@@ -455,7 +456,7 @@ exports.removeAnnotationsByRef = (
     conditionsToBlockAnnotations.forEach((condBlockAnnos) => {
       if (
         condBlockAnnos.wordtypes.some(
-          (wordtype) => gpUtils.getWordtypeStCh(stCh) === wordtype
+          (wordtype) => idUtils.getWordtypeStCh(stCh) === wordtype
         ) &&
         condBlockAnnos.annotations.some((traitKey) =>
           Object.keys(stCh.annotations).includes(traitKey)
@@ -532,7 +533,7 @@ exports.trimAnnoIfGenderRevealedByGenderedNoun = (
       );
     }
 
-    if (!(headLObj.gender && !gpUtils.traitValueIsMeta(headLObj.gender))) {
+    if (!(headLObj.gender && !idUtils.traitValueIsMeta(headLObj.gender))) {
       headChunk.annotations.gender = structureChunk.annotations.gender;
     }
     consol.logSpecial(
@@ -910,7 +911,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
     let { selectedLemmaObject, drillPath, structureChunk, selectedWord } =
       outputUnit;
 
-    if (gpUtils.getWordtypeStCh(structureChunk) === "fix") {
+    if (idUtils.getWordtypeStCh(structureChunk) === "fix") {
       return;
     }
 
@@ -951,7 +952,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
 
     if (allohomInfo && allohomInfo.multipleWordtype) {
       if (structureChunk.pleaseShowMultipleWordtypeAllohomClarifiers) {
-        let annoTraitValue = gpUtils.getWordtypeLObj(selectedLemmaObject);
+        let annoTraitValue = idUtils.getWordtypeLObj(selectedLemmaObject);
 
         consol.log(
           "wbvz addClarifiers------------------------------------------ADDED CLARIFIER in Step 1b",
@@ -981,7 +982,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
     let allowableClarifiers =
       refObj.lemmaObjectTraitKeys[answerLanguage]
         .allowableTransfersFromQuestionStructure[
-        gpUtils.getWordtypeStCh(structureChunk)
+        idUtils.getWordtypeStCh(structureChunk)
       ];
 
     if (!allowableClarifiers) {
@@ -990,7 +991,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
         allowableClarifiers,
         `because structureChunk=${
           structureChunk.chunkId
-        } answerLanguage=${answerLanguage}, stChWordtype=${gpUtils.getWordtypeStCh(
+        } answerLanguage=${answerLanguage}, stChWordtype=${idUtils.getWordtypeStCh(
           structureChunk
         )}.` + "[0m"
       );
@@ -1000,7 +1001,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
     let allowableExtraClarifiersInSingleWordSentences =
       refObj.lemmaObjectTraitKeys[answerLanguage]
         .allowableExtraClarifiersInSingleWordSentences[
-        gpUtils.getWordtypeStCh(structureChunk)
+        idUtils.getWordtypeStCh(structureChunk)
       ];
 
     consol.log("qjho addClarifiers", languagesObj, {
@@ -1046,7 +1047,7 @@ exports.addClarifiers = (arrayOfOutputUnits, languagesObj) => {
               if (inflectionCategory === "gender") {
                 if (
                   structureChunk[inflectionCategory].some((gender) =>
-                    gpUtils.traitValueIsMeta(gender)
+                    idUtils.traitValueIsMeta(gender)
                   )
                 ) {
                   return;
@@ -1089,13 +1090,13 @@ exports.setPDSValues = (questionSentenceFormula, questionLanguage) => {
   //then do allow it to be qChunk.dontSpecifyOnThisChunk = true.
 
   questionSentenceFormula.sentenceStructure.forEach((qChunk) => {
-    if (!gpUtils.stChIsNounPerson(qChunk)) {
+    if (!idUtils.stChIsNounPerson(qChunk)) {
       qChunk.dontSpecifyOnThisChunk = true;
     } else {
       if (
         questionSentenceFormula.sentenceStructure.find(
           (potentialDepChunk) =>
-            gpUtils.getWordtypeStCh(potentialDepChunk) === "pro" &&
+            idUtils.getWordtypeStCh(potentialDepChunk) === "pro" &&
             potentialDepChunk.agreeWith === qChunk.chunkId
         )
       ) {
@@ -1103,7 +1104,7 @@ exports.setPDSValues = (questionSentenceFormula, questionLanguage) => {
           qChunk.gender &&
           qChunk.gender.length &&
           refObj.metaTraitValues[questionLanguage].gender[
-            refObj.getNounGenderTraitValues(gpUtils.getWordtypeStCh(qChunk))
+            refObj.getNounGenderTraitValues(idUtils.getWordtypeStCh(qChunk))
           ].every((traitValue) => qChunk.gender.includes(traitValue))
         ) {
           qChunk.dontSpecifyOnThisChunk = true;
@@ -1115,7 +1116,7 @@ exports.setPDSValues = (questionSentenceFormula, questionLanguage) => {
           qChunk.gender &&
           qChunk.gender.length &&
           !refObj.metaTraitValues[questionLanguage].gender[
-            refObj.getNounGenderTraitValues(gpUtils.getWordtypeStCh(qChunk))
+            refObj.getNounGenderTraitValues(idUtils.getWordtypeStCh(qChunk))
           ].every((traitValue) => qChunk.gender.includes(traitValue))
         ) {
           qChunk.dontSpecifyOnThisChunk = false;

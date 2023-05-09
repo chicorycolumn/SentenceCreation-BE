@@ -1,4 +1,5 @@
 const gpUtils = require("../utils/generalPurposeUtils.js");
+const idUtils = require("../utils/identityUtils.js");
 const uUtils = require("../utils/universalUtils.js");
 const consol = require("../utils/zerothOrder/consoleLoggingUtils.js");
 const edUtils = require("../utils/secondOrder/educatorUtils.js");
@@ -15,7 +16,7 @@ const nexusUtils = require("../utils/secondOrder/nexusUtils.js");
 exports.fetchFormulas = (req) => {
   let { id, env } = req.query;
   let answerLang = req.query.lang;
-  let questionLang = gpUtils.getLanguageFromFormulaId(id);
+  let questionLang = idUtils.getLanguageFromFormulaId(id);
 
   ivUtils.validateLang(questionLang, 17);
   ivUtils.validateLang(answerLang, 18);

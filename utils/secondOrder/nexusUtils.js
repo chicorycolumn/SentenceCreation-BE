@@ -2,6 +2,7 @@ const { expect } = require("chai");
 const allLangUtils = require("../allLangUtils.js");
 const consol = require("../../utils/zerothOrder/consoleLoggingUtils.js");
 const gpUtils = require("../generalPurposeUtils.js");
+const idUtils = require("../identityUtils.js");
 const uUtils = require("../universalUtils.js");
 
 exports.getLanguagesOfEquivalents = (sentenceFormulaId, env = "ref") => {
@@ -39,12 +40,12 @@ exports.getEquivalents = (sentenceFormulaId, answerLanguage, env = "ref") => {
 };
 
 exports.getNexusLemmaObjects = (lObj, env = "ref") => {
-  let lang = gpUtils.getLanguageFromLemmaObject(lObj);
+  let lang = idUtils.getLanguageFromLemmaObject(lObj);
 
   const nexusWordsBank =
     require(`../../source/${env}/NEXUS/words.js`).wordsBank;
 
-  const wordtype = gpUtils.getWordtypeLObj(lObj);
+  const wordtype = idUtils.getWordtypeLObj(lObj);
 
   let resArr = nexusWordsBank[wordtype].filter((lemmaObject) =>
     lemmaObject.traductions[lang].some((el) =>
@@ -131,7 +132,7 @@ exports.getTraductions = (
     consol.throw("bcct Not possible.");
   }
   if (!targetlang) {
-    targetlang = gpUtils.getLanguageFromLemmaObject(lObj);
+    targetlang = idUtils.getLanguageFromLemmaObject(lObj);
   }
 
   let traductions =
@@ -140,7 +141,7 @@ exports.getTraductions = (
 
   if (getAllIds) {
     const { wordsBank } = require(`../../source/${env}/${targetlang}/words.js`);
-    let bank = wordsBank[gpUtils.getWordtypeLObj(lObj)];
+    let bank = wordsBank[idUtils.getWordtypeLObj(lObj)];
 
     let resArr = [];
 

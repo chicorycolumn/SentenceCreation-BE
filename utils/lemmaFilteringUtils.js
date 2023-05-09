@@ -1,4 +1,5 @@
 const gpUtils = require("./generalPurposeUtils.js");
+const idUtils = require("./identityUtils.js");
 const uUtils = require("./universalUtils.js");
 const consol = require("./zerothOrder/consoleLoggingUtils.js");
 const otUtils = require("./objectTraversingUtils.js");
@@ -23,7 +24,7 @@ exports.checkHyper = (lObj, expectedTypes) => {
 };
 
 exports.assessHypernymy = (lObj) => {
-  let lang = gpUtils.getLanguageFromLemmaObject(lObj);
+  let lang = idUtils.getLanguageFromLemmaObject(lObj);
   if (lang === "DUMMY") {
     return;
   }
@@ -391,7 +392,7 @@ exports.filterWithin_PHD = (
 
   langUtils.expandLemmaObjects(
     [lemmaObjectCopy],
-    gpUtils.getWordtypeStCh(PHDstructureChunk),
+    idUtils.getWordtypeStCh(PHDstructureChunk),
     currentLanguage
   );
 
@@ -475,7 +476,7 @@ exports.filterWithin_PHD = (
 
     if (
       ["nco", "npe"].includes(
-        gpUtils.getWordtypeAgree(PHDstructureChunk, postHocAgreeKey)
+        idUtils.getWordtypeAgree(PHDstructureChunk, postHocAgreeKey)
       )
     ) {
       let personArr = drillPathOfHead.find((arr) => arr[0] === "person");
@@ -535,7 +536,7 @@ exports.filterWithin_PHD = (
         (arr) => arr[0] === inflectionCategory
       )[1];
 
-      if (gpUtils.traitValueIsMeta(inflectionKey) && !source[inflectionKey]) {
+      if (idUtils.traitValueIsMeta(inflectionKey) && !source[inflectionKey]) {
         consol.logCyanWithBorder(
           "igyd Surprisingly s'witchMetaTraitValueForAWorkableConvertedTraitValue() is now used, though I would have expected by this point the lObjs have been expanded, ie the meta trait values inside their inflections object have been replaced, so odd that we reach this point now."
         );
@@ -616,10 +617,10 @@ exports.filterWithin_PHD = (
     consol.throw("apcu lf:filterWithin_PHD Oh no Natasha, array!");
   } else if (
     typeof source === "string" ||
-    (gpUtils.isTerminusObject(source) && source.processOnlyAtEnd)
+    (idUtils.isTerminusObject(source) && source.processOnlyAtEnd)
   ) {
     sourceArr.push(source);
-  } else if (gpUtils.isTerminusObject(source) && !source.processOnlyAtEnd) {
+  } else if (idUtils.isTerminusObject(source) && !source.processOnlyAtEnd) {
     consol.throw("svqe filterWithin_PHD Natasha, take action.");
   } else {
     consol.throw(
@@ -704,7 +705,7 @@ exports.filterWithinSelectedLemmaObject = (
 
   let inflectionChain =
     refObj.lemmaObjectTraitKeys[currentLanguage].inflectionChains[
-      gpUtils.getWordtypeStCh(structureChunk)
+      idUtils.getWordtypeStCh(structureChunk)
     ];
 
   let requirementArrs = [];
@@ -889,7 +890,7 @@ exports.updateStChByAndTagsAndSelectors = (
   //STEP ZERO: Decisive Decant
   //Remove gender traitValues on stCh if drillPath doesn't include the traitKey 'gender' (ie is infinitive or a participle, say).
   //But if lObj is MGN, don't do this.
-  let lemmaObjectIsMGN = gpUtils.traitValueIsMeta(selectedLemmaObject.gender);
+  let lemmaObjectIsMGN = idUtils.traitValueIsMeta(selectedLemmaObject.gender);
 
   if (
     !doneSelectors.includes("gender") &&
@@ -911,7 +912,7 @@ exports.updateStChByAndTagsAndSelectors = (
       return;
     }
 
-    if (gpUtils.traitValueIsMeta(selectedLemmaObject[traitKey])) {
+    if (idUtils.traitValueIsMeta(selectedLemmaObject[traitKey])) {
       //If lObj does have metaTrait, set stCh trait to converted traitValues or filter stCh's trait by them.
 
       consol.log(
@@ -983,7 +984,7 @@ exports.updateStChByAndTagsAndSelectors = (
   //STEP THREE: For all remaining selectors, update the stCh with traitValues from lObj.
   let selectors =
     refObj.lemmaObjectTraitKeys[currentLanguage].selectors[
-      gpUtils.getWordtypeStCh(structureChunk)
+      idUtils.getWordtypeStCh(structureChunk)
     ];
 
   consol.log("abyy updateStChByAndTagsAndSelectors", { doneSelectors });
@@ -992,7 +993,7 @@ exports.updateStChByAndTagsAndSelectors = (
     selectors
       .filter((selector) => !doneSelectors.includes(selector))
       .forEach((selector) => {
-        if (gpUtils.traitValueIsMeta(selectedLemmaObject[selector])) {
+        if (idUtils.traitValueIsMeta(selectedLemmaObject[selector])) {
           consol.throw(
             `oppb updateStChByAndTagsAndSelectors I wasn't expecting a metaTraitValue selector here. It should have been processed already, in step one, and then added to doneSelectors, which would have prevented it being used here. selectedLemmaObject[selector]:"${selectedLemmaObject[selector]}"`
           );
@@ -1003,7 +1004,7 @@ exports.updateStChByAndTagsAndSelectors = (
   } else {
     consol.log(
       "[1;31m " +
-        `vbob updateStChByAndTagsAndSelectors Just to note that refObj gave no selectors for currentLanguage "${currentLanguage}" and s'tructureChunk.wordtype "${gpUtils.getWordtypeStCh(
+        `vbob updateStChByAndTagsAndSelectors Just to note that refObj gave no selectors for currentLanguage "${currentLanguage}" and s'tructureChunk.wordtype "${idUtils.getWordtypeStCh(
           structureChunk
         )}"` +
         "[0m"
@@ -1052,7 +1053,7 @@ exports.updateStChByInflections = (outputUnit, currentLanguage) => {
 exports.filterOutLackingLemmaObjects = (sourceArr, stCh, currentLanguage) => {
   let inflectionChain =
     refObj.lemmaObjectTraitKeys[currentLanguage].inflectionChains[
-      gpUtils.getWordtypeStCh(stCh)
+      idUtils.getWordtypeStCh(stCh)
     ];
   let requirementArrs = inflectionChain.map((traitKey) => stCh[traitKey] || []);
 
@@ -1137,7 +1138,7 @@ exports.padOutRequirementArrWithMetaTraitValuesIfNecessary = (
   if (metaTraitValueRef) {
     requirementArr.forEach((traitValue) => {
       //If the reqArr has a metaTraitValue, all lObj with converted traitValues to pass filter.
-      if (gpUtils.traitValueIsMeta(traitValue)) {
+      if (idUtils.traitValueIsMeta(traitValue)) {
         let metaTraitValueConverted = metaTraitValueRef[traitValue];
 
         if (!metaTraitValueConverted) {
@@ -1220,7 +1221,7 @@ exports.filterBySelector_inner = (
 
       if (
         !questionSelectedLemmaObject &&
-        gpUtils.getWordtypeStCh(questionChunk) !== "fix"
+        idUtils.getWordtypeStCh(questionChunk) !== "fix"
       ) {
         consol.throw("bdwo answer mode but no questionSelectedLemmaObject?");
       }
@@ -1425,12 +1426,12 @@ exports.filterBySelector_inner = (
         this.checkHyper(lObj, [HY.VY])
       ) {
         lObjSelectorValues = lObjSelectorValues.filter(
-          (tv) => !gpUtils.traitValueIsMeta(tv)
+          (tv) => !idUtils.traitValueIsMeta(tv)
         );
       } else {
         let additional = [];
         lObjSelectorValues.forEach((lObjSelectorValue) => {
-          if (gpUtils.traitValueIsMeta(lObjSelectorValue)) {
+          if (idUtils.traitValueIsMeta(lObjSelectorValue)) {
             if (!metaTraitValueRef) {
               consol.throw(
                 `diof I am to translate this meta value "${lObjSelectorValue}" for "${currentLanguage}" traitKey "${traitKey}" but no such translation ref?`
@@ -1477,7 +1478,7 @@ exports.filterBySelectors = (
 ) => {
   let selectors =
     refObj.lemmaObjectTraitKeys[currentLanguage].selectors[
-      gpUtils.getWordtypeStCh(structureChunk)
+      idUtils.getWordtypeStCh(structureChunk)
     ];
 
   consol.log(
@@ -1574,7 +1575,7 @@ exports.traverseAndRecordInflections = (
     let chosenInflectionKeyAdjusted = chosenInflectionKey;
 
     if (
-      gpUtils.traitValueIsMeta(chosenInflectionKey) &&
+      idUtils.traitValueIsMeta(chosenInflectionKey) &&
       !source[chosenInflectionKey]
     ) {
       consol.logCyanWithBorder(
@@ -1599,7 +1600,7 @@ exports.traverseAndRecordInflections = (
 
     if (
       typeof source[chosenInflectionKeyAdjusted] === "string" ||
-      (gpUtils.isTerminusObject(source[chosenInflectionKeyAdjusted]) &&
+      (idUtils.isTerminusObject(source[chosenInflectionKeyAdjusted]) &&
         source[chosenInflectionKeyAdjusted].processOnlyAtEnd)
     ) {
       // consol.log("fxxb2");
@@ -1636,7 +1637,7 @@ exports.traverseAndRecordInflections = (
 
       return source[chosenInflectionKeyAdjusted];
     } else if (
-      gpUtils.isTerminusObject(source[chosenInflectionKeyAdjusted]) &&
+      idUtils.isTerminusObject(source[chosenInflectionKeyAdjusted]) &&
       !source[chosenInflectionKeyAdjusted].processOnlyAtEnd
     ) {
       // consol.log("fxxb4");
@@ -1897,7 +1898,7 @@ exports.updateStChSemanticGenderAndVirilityDetail = (
       let virilityRefByNumber =
         refObj.virilityConversionRef[currentLanguage][numberValue];
 
-      let isNounPerson = gpUtils.getWordtypeStCh(structureChunk) === "npe";
+      let isNounPerson = idUtils.getWordtypeStCh(structureChunk) === "npe";
 
       if (
         (isNounPerson && !isSecondRound) ||

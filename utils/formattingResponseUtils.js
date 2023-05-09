@@ -4,13 +4,14 @@ const uUtils = require("./universalUtils.js");
 const consol = require("./zerothOrder/consoleLoggingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 const gpUtils = require("./generalPurposeUtils.js");
+const idUtils = require("./identityUtils.js");
 
 exports.sendResponseForSingleWord = (returnDirectly, questionSentenceData) => {
   let arr = questionSentenceData.arrayOfOutputArrays.map((arr) => {
     return {
       selectedWord: arr
         .map((obj) => {
-          if (gpUtils.isTerminusObject(obj.selectedWord)) {
+          if (idUtils.isTerminusObject(obj.selectedWord)) {
             let allWords = gpUtils.getWordsFromTerminusObject(obj.selectedWord);
             return allWords[0];
           }
@@ -129,7 +130,7 @@ exports.createOutputUnit = (
 ) => {
   if (currentLanguage === "POL") {
     if (
-      gpUtils.getWordtypeStCh(structureChunk) === "ver" &&
+      idUtils.getWordtypeStCh(structureChunk) === "ver" &&
       structureChunk.negative
     ) {
       selectedWord = "nie " + selectedWord;

@@ -1,6 +1,7 @@
 const refObj = require("../utils/reference/referenceObjects.js");
 const refFxn = require("../utils/reference/referenceFunctions.js");
 const gpUtils = require("../utils/generalPurposeUtils.js");
+const idUtils = require("../utils/identityUtils.js");
 const uUtils = require("../utils/universalUtils.js");
 const lfUtils = require("../utils/lemmaFilteringUtils.js");
 const consol = require("../utils/zerothOrder/consoleLoggingUtils.js");
@@ -38,8 +39,8 @@ exports.tweakStructureChunks = (matches, structureChunk, currentLanguage) => {
   let metagenderRef = refObj.metaTraitValues[currentLanguage].gender;
 
   matches.forEach((lObj) => {
-    if (gpUtils.getWordtypeLObj(lObj) === "pro") {
-      if (gpUtils.getWordtypeStCh(structureChunk) !== "pro") {
+    if (idUtils.getWordtypeLObj(lObj) === "pro") {
+      if (idUtils.getWordtypeStCh(structureChunk) !== "pro") {
         consol.throw(
           "#ERR hcio expandLemmaObjects. lObj and stCh wordtypes don't match."
         );
@@ -113,7 +114,7 @@ exports.enforceIsPerson = (stCh, strict, arrOnly, genderTraitKey) => {
     return _enforceIsPerson(arrOnly);
   }
 
-  if (gpUtils.stChIsPerson(stCh, strict)) {
+  if (idUtils.stChIsPerson(stCh, strict)) {
     stCh[genderTraitKey] = _enforceIsPerson(stCh[genderTraitKey]);
   }
 };
@@ -384,7 +385,7 @@ exports.adjustVirilityOfStructureChunk = (
 
 exports.setPostHocAgreeKeys = (structureChunk, currentLanguage) => {
   if (refObj.postHocDependentChunkWordtypes[currentLanguage]) {
-    structureChunk["wordtype"] = gpUtils.getWordtypeStCh(structureChunk);
+    structureChunk["wordtype"] = idUtils.getWordtypeStCh(structureChunk);
 
     let PHD_type;
 
@@ -503,7 +504,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
   const metaTraitValuesRef = refObj.metaTraitValues[currentLanguage];
 
   sentenceStructure.forEach((structureChunk) => {
-    if (gpUtils.getWordtypeStCh(structureChunk) === "fix") {
+    if (idUtils.getWordtypeStCh(structureChunk) === "fix") {
       return;
     }
 
@@ -526,7 +527,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
     langUtils.preprocessStructureChunks(structureChunk);
 
     Object.keys(defaultTraitValuesRef).forEach((wordtype) => {
-      if (gpUtils.getWordtypeStCh(structureChunk) === wordtype) {
+      if (idUtils.getWordtypeStCh(structureChunk) === wordtype) {
         Object.keys(defaultTraitValuesRef[wordtype]).forEach((traitKey) => {
           if (!structureChunk[traitKey] || !structureChunk[traitKey].length) {
             structureChunk[traitKey] = [
@@ -552,7 +553,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
       );
     }
 
-    if (gpUtils.getWordtypeStCh(structureChunk) === "pro") {
+    if (idUtils.getWordtypeStCh(structureChunk) === "pro") {
       allLangUtils.enforceThirdPersonAgreeWith(structureChunk, true);
 
       if (!structureChunk.gender || !structureChunk.gender.length) {
@@ -578,7 +579,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
       allLangUtils.enforceIsPerson(structureChunk);
     }
 
-    if (gpUtils.getWordtypeStCh(structureChunk) === "ver") {
+    if (idUtils.getWordtypeStCh(structureChunk) === "ver") {
       if (structureChunk.form && structureChunk.form.includes("verbal")) {
         if (
           (!structureChunk.tenseDescription ||
@@ -605,7 +606,7 @@ exports.preprocessStructureChunks = (sentenceStructure, currentLanguage) => {
 
         if (
           !haveAdjusted &&
-          gpUtils.getWordtypeAgree(structureChunk) === "pro"
+          idUtils.getWordtypeAgree(structureChunk) === "pro"
         ) {
           let headChunk = (structureChunk.person = sentenceStructure.find(
             (potentialHeadChunk) => {
@@ -713,7 +714,7 @@ exports.decantMGNsBeforeFetchingOutputArray = (
   if ("check") {
     if (
       !selectedLemmaObject.gender ||
-      !gpUtils.traitValueIsMeta(selectedLemmaObject.gender)
+      !idUtils.traitValueIsMeta(selectedLemmaObject.gender)
     ) {
       return;
     }
@@ -753,7 +754,7 @@ exports.correctMGNsBeforeFetchingOutputArray = (
   if ("check") {
     if (
       !selectedLemmaObject.gender ||
-      !gpUtils.traitValueIsMeta(selectedLemmaObject.gender)
+      !idUtils.traitValueIsMeta(selectedLemmaObject.gender)
     ) {
       consol.log("neem");
       return;

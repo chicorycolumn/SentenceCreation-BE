@@ -1,4 +1,5 @@
 const gpUtils = require("./generalPurposeUtils.js");
+const idUtils = require("./identityUtils.js");
 const uUtils = require("./universalUtils.js");
 const consol = require("./zerothOrder/consoleLoggingUtils.js");
 const cfUtils = require("./counterfaxUtils.js");
@@ -613,7 +614,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
               "igtc Wasn't expecting originalSitSelectedLObj to be populated yet."
             );
           }
-          if (gpUtils.getWordtypeStCh(stCh) !== "fix") {
+          if (idUtils.getWordtypeStCh(stCh) !== "fix") {
             let originalSitSelectedLObj = questionOutputArr.find(
               (ou) => ou.structureChunk.chunkId === stCh.chunkId
             ).selectedLemmaObject;
@@ -748,7 +749,7 @@ exports.removeAnnotationsByCounterfactualAnswerSentences = (
       }
 
       let genderTraitKeys = ["gender"];
-      if (gpUtils.getWordtypeStCh({ chunkId: chunkIdToExamine }) === "npe") {
+      if (idUtils.getWordtypeStCh({ chunkId: chunkIdToExamine }) === "npe") {
         genderTraitKeys.push("semanticGender");
       }
 

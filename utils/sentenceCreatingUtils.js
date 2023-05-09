@@ -1,6 +1,7 @@
 const otUtils = require("./objectTraversingUtils.js");
 const uUtils = require("./universalUtils.js");
 const gpUtils = require("./generalPurposeUtils.js");
+const idUtils = require("./identityUtils.js");
 const consol = require("./zerothOrder/consoleLoggingUtils.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
 const frUtils = require("./formattingResponseUtils.js");
@@ -724,7 +725,7 @@ exports.processSentenceFormula = (
 
   grandOutputArray.forEach((outputArray, outputArrayIndex) => {
     outputArray.forEach((outputUnit) => {
-      if (gpUtils.getWordtypeStCh(outputUnit.structureChunk) === "fix") {
+      if (idUtils.getWordtypeStCh(outputUnit.structureChunk) === "fix") {
         return;
       }
 
@@ -1225,7 +1226,7 @@ exports.coverBothGendersForPossessivesOfHypernyms = (
    */
   if (
     maqModes.multipleMode &&
-    gpUtils.getWordtypeStCh(structureChunk) === "pro" &&
+    idUtils.getWordtypeStCh(structureChunk) === "pro" &&
     structureChunk.agreeWith
   ) {
     if (!structureChunk.gcase || structureChunk.gcase.length !== 1) {
@@ -1322,7 +1323,7 @@ exports.selectWordVersions = (orderedOutputArr, currentLanguage, maqModes) => {
                 refObj.lemmaObjectTraitKeys[
                   currentLanguage
                 ].inheritableInflectionKeys[
-                  gpUtils.getWordtypeStCh(depUnit.structureChunk)
+                  idUtils.getWordtypeStCh(depUnit.structureChunk)
                 ].includes(annoTraitKey)
               ) {
                 if (!depUnit.firstStageAnnotationsObj) {
@@ -1466,7 +1467,7 @@ exports.selectWordVersions = (orderedOutputArr, currentLanguage, maqModes) => {
     }
 
     //1B: If tObj, push to array via language specific selectWordVersions.
-    if (gpUtils.isTerminusObject(selectedWord)) {
+    if (idUtils.isTerminusObject(selectedWord)) {
       if (
         langUtils.selectWordVersions(
           structureChunk,
@@ -1523,7 +1524,7 @@ exports.conformAnswerStructureToQuestionStructure = (
       consol.logSpecial(8, {
         "outputUnit.selectedWord": outputUnit.selectedWord,
         "outputUnit.selectedLemmaObject.id": `${
-          gpUtils.getWordtypeStCh(outputUnit.structureChunk) === "fix"
+          idUtils.getWordtypeStCh(outputUnit.structureChunk) === "fix"
             ? "FIXED"
             : outputUnit.selectedLemmaObject.id
         }`,
@@ -1553,7 +1554,7 @@ exports.conformAnswerStructureToQuestionStructure = (
     //
     let questionStructureChunk = questionOutputArrItem.structureChunk;
 
-    if (gpUtils.getWordtypeStCh(questionStructureChunk) === "fix") {
+    if (idUtils.getWordtypeStCh(questionStructureChunk) === "fix") {
       return;
     }
 
@@ -1589,7 +1590,7 @@ exports.conformAnswerStructureToQuestionStructure = (
       false
     );
 
-    let source = words[gpUtils.getWordtypeStCh(answerStructureChunk)];
+    let source = words[idUtils.getWordtypeStCh(answerStructureChunk)];
 
     matchingAnswerLemmaObjects = lfUtils.getLObjAndSiblings(
       source,
@@ -1668,7 +1669,7 @@ exports.conformAnswerStructureToQuestionStructure = (
     );
 
     //Do actually transfer gender, for person nouns.
-    if (gpUtils.stChIsNounPerson(questionStructureChunk)) {
+    if (idUtils.stChIsNounPerson(questionStructureChunk)) {
       scUtils.addTraitToAnswerChunkWithAdjustment(
         questionStructureChunk,
         answerStructureChunk,
@@ -1690,7 +1691,7 @@ exports.conformAnswerStructureToQuestionStructure = (
     refObj.lemmaObjectTraitKeys[
       answerLanguage
     ].allowableTransfersFromQuestionStructure[
-      gpUtils.getWordtypeStCh(answerStructureChunk)
+      idUtils.getWordtypeStCh(answerStructureChunk)
     ].forEach((traitKey) => {
       //
       // STEP ONE: Update traits from list of allowable transfers.
@@ -1804,12 +1805,12 @@ exports.conformAnswerStructureToQuestionStructure = (
 
     let possibleInflectionCategorysOfQuestionLobjs =
       refObj.lemmaObjectTraitKeys[questionLanguage].inflectionChains[
-        gpUtils.getWordtypeStCh(answerStructureChunk)
+        idUtils.getWordtypeStCh(answerStructureChunk)
       ];
 
     let possibleInflectionCategorysOfAnswerLobjs =
       refObj.lemmaObjectTraitKeys[answerLanguage].inflectionChains[
-        gpUtils.getWordtypeStCh(answerStructureChunk)
+        idUtils.getWordtypeStCh(answerStructureChunk)
       ];
 
     let possibleInflectionCategorysOfAnswerLobjsButNotQuestionLobjs =
@@ -1937,12 +1938,12 @@ exports.inheritFromHeadToDependentChunk = (
 
   let normalinheritableInflectionKeys =
     refObj.lemmaObjectTraitKeys[currentLanguage].inheritableInflectionKeys[
-      gpUtils.getWordtypeStCh(dependentChunk)
+      idUtils.getWordtypeStCh(dependentChunk)
     ];
 
   let hybridSelectors =
     refObj.lemmaObjectTraitKeys[currentLanguage].hybridSelectors[
-      (gpUtils.getWordtypeStCh(dependentChunk), true)
+      (idUtils.getWordtypeStCh(dependentChunk), true)
     ] || [];
 
   let inheritableInflectionKeys = [
@@ -1971,8 +1972,8 @@ exports.inheritFromHeadToDependentChunk = (
      * So altogether:   "SHE was a parent, I see HER and HER car."   translates to   "BYŁA rodzicem, widze GO i JEGO auto."
      */
     if (
-      gpUtils.getWordtypeStCh(dependentChunk) === "pro" &&
-      !gpUtils.traitValueIsMeta(headSelectedLemmaObject.gender) // ie This is a gendered language.
+      idUtils.getWordtypeStCh(dependentChunk) === "pro" &&
+      !idUtils.traitValueIsMeta(headSelectedLemmaObject.gender) // ie This is a gendered language.
     ) {
       if (
         dependentChunk.specificIds.some(
@@ -2012,7 +2013,7 @@ exports.inheritFromHeadToDependentChunk = (
 
         doneTraitKeys.push("gender", "semanticGender");
       }
-    } else if (gpUtils.getWordtypeStCh(dependentChunk) === "npe") {
+    } else if (idUtils.getWordtypeStCh(dependentChunk) === "npe") {
       // HFT1b
       // If depChunk is npe (and headChunk is hypernym) - "My parent(head) is a woman(dep)."
       // don't transfer "rodzic" gender m1 to "woman", just semanticGender f.

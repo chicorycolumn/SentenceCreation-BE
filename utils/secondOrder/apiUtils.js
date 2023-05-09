@@ -1,4 +1,5 @@
 const gpUtils = require("../../utils/generalPurposeUtils.js");
+const idUtils = require("../../utils/identityUtils.js");
 const uUtils = require("../../utils/universalUtils.js");
 const consol = require("../../utils/zerothOrder/consoleLoggingUtils.js");
 const edUtils = require("../../utils/secondOrder/educatorUtils.js");
@@ -22,7 +23,7 @@ exports.getSentenceFormulas = (questionFormulaId, answerLanguage, env) => {
     env = "ref";
   }
 
-  let questionLanguage = gpUtils.getLanguageFromFormulaId(questionFormulaId);
+  let questionLanguage = idUtils.getLanguageFromFormulaId(questionFormulaId);
   ivUtils.validateLang(questionLanguage, 14);
   ivUtils.validateLang(answerLanguage, 15);
 
@@ -325,7 +326,7 @@ exports.frontendifyFormula = (lang, formula) => {
           )
         : null;
 
-      if (gpUtils.isTerminusObject(newGuideword)) {
+      if (idUtils.isTerminusObject(newGuideword)) {
         let allWords = gpUtils.getWordsFromTerminusObject(newGuideword);
         newGuideword = allWords[0];
       }
@@ -350,7 +351,7 @@ exports.frontendifyFormula = (lang, formula) => {
     // Frontendify-2a: stCh to enCh
     let fItem = apiUtils.getFemulaItem(
       lang,
-      gpUtils.getWordtypeStCh(stCh),
+      idUtils.getWordtypeStCh(stCh),
       stCh
     );
 
@@ -418,7 +419,7 @@ exports.getEnChsForLemma = (lang, lemma, env = "ref") => {
   let lObjs = apiUtils.getLObjsForLemma(lang, lemma, env);
 
   let enChs = lObjs.map((lObj) => {
-    let wordtype = gpUtils.getWordtypeLObj(lObj);
+    let wordtype = idUtils.getWordtypeLObj(lObj);
 
     let enCh = apiUtils.getBlankEnhancedStructureChunkForThisWordtype(
       lang,
@@ -466,7 +467,7 @@ exports.getEnChsForLemma = (lang, lemma, env = "ref") => {
       enCh.gender.traitValue = Array.from(new Set(enCh.gender.traitValue));
     }
 
-    if (gpUtils.getWordtypeLObj(lObj) === "ver") {
+    if (idUtils.getWordtypeLObj(lObj) === "ver") {
       // Gather tense and aspect into tenseDesc (POL).
       langUtils.convertTenseToTenseDescription(lang, enCh, lObj);
     }
@@ -575,7 +576,7 @@ exports.getAestheticGuideword = (chunk, formulaObject) => {
       : chunk.chunkId.traitValue.split("-").slice(-1)[0];
 
   if (/^\d+$/.test(guideword)) {
-    if (gpUtils.getWordtypeStCh(chunk) === "fix") {
+    if (idUtils.getWordtypeStCh(chunk) === "fix") {
       guideword =
         typeof chunk.chunkValue === "string"
           ? chunk.chunkValue

@@ -1,4 +1,5 @@
 const gpUtils = require("../generalPurposeUtils.js");
+const idUtils = require("../identityUtils.js");
 const uUtils = require("../universalUtils.js");
 const consol = require("../zerothOrder/consoleLoggingUtils.js");
 const ivUtils = require("./inputValidationUtils.js");
@@ -10,7 +11,7 @@ exports.checkDecisiveDecant = (questionSentenceData, questionLanguage) => {
   questionSentenceData.questionOutputArr.forEach((outputUnit, index) => {
     if (
       outputUnit.structureChunk.dontSpecifyOnThisChunk ||
-      gpUtils.getWordtypeStCh(outputUnit.structureChunk) === "fix"
+      idUtils.getWordtypeStCh(outputUnit.structureChunk) === "fix"
     ) {
       return;
     }

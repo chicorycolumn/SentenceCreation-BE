@@ -2,6 +2,7 @@ const lfUtils = require("../../../utils/lemmaFilteringUtils.js");
 const otUtils = require("../../../utils/objectTraversingUtils.js");
 const frUtils = require("../../../utils/formattingResponseUtils.js");
 const gpUtils = require("../../../utils/generalPurposeUtils.js");
+const idUtils = require("../../../utils/identityUtils.js");
 const uUtils = require("../../../utils/universalUtils.js");
 const consol = require("../../../utils/zerothOrder/consoleLoggingUtils.js");
 const refObj = require("../../../utils/reference/referenceObjects.js");
@@ -39,13 +40,13 @@ exports.selectWordVersions = (
   previousOutputUnit,
   maqModes
 ) => {
-  if (gpUtils.getWordtypeLObj(selectedLemmaObject) === "pro") {
+  if (idUtils.getWordtypeLObj(selectedLemmaObject) === "pro") {
     // >>>
     // >>> Pronombre: post-prepositional
     // >>>
     if (
       previousOutputUnit &&
-      gpUtils.getWordtypeLObj(previousOutputUnit.selectedLemmaObject) === "pre"
+      idUtils.getWordtypeLObj(previousOutputUnit.selectedLemmaObject) === "pre"
     ) {
       frUtils.pushSelectedWordToArray(
         "postPreposition",
@@ -75,7 +76,7 @@ exports.selectWordVersions = (
     }
   }
 
-  if (gpUtils.getWordtypeLObj(selectedLemmaObject) === "pre") {
+  if (idUtils.getWordtypeLObj(selectedLemmaObject) === "pre") {
     if (!subsequentOutputUnit) {
       consol.throw(
         "mcob selectWordVersions Shouldn't there be an outputUnit subsequent to this POL preposition?"
@@ -146,7 +147,7 @@ exports.preprocessStructureChunks = (structureChunk) => {
 };
 
 exports.expandLemmaObjects = (matches, stChWordtype, currentLanguage) => {
-  if (matches.length && gpUtils.getWordtypeLObj(matches[0]) !== stChWordtype) {
+  if (matches.length && idUtils.getWordtypeLObj(matches[0]) !== stChWordtype) {
     consol.throw(
       "#ERR wkpu POL:expandLemmaObjects. The wordtypes from stCh and lObjs didn't match."
     );
@@ -175,7 +176,7 @@ exports.addLanguageParticularClarifiers = () => {
 
 exports.adjustStructureChunksInIfPW = (structureChunk) => {
   if (
-    gpUtils.getWordtypeStCh(structureChunk) === "ver" &&
+    idUtils.getWordtypeStCh(structureChunk) === "ver" &&
     structureChunk.tenseDescription &&
     structureChunk.tenseDescription.length
   ) {

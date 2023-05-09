@@ -1,4 +1,5 @@
 const gpUtils = require("../generalPurposeUtils.js");
+const idUtils = require("../identityUtils.js");
 const uUtils = require("../universalUtils.js");
 const consol = require("../zerothOrder/consoleLoggingUtils.js");
 const refObj = require("./referenceObjects.js");
@@ -11,14 +12,14 @@ exports.getBaseWordtype = (wordtype) => {
 exports.isTraitCompatibleStCh = (trait, stCh, currentLanguage) => {
   const stChTraitsRef = refFxn.getStructureChunkTraits(currentLanguage);
   return stChTraitsRef[trait].compatibleWordtypes.includes(
-    gpUtils.getWordtypeStCh(stCh)
+    idUtils.getWordtypeStCh(stCh)
   );
 };
 
 exports.isTraitCompatibleLObj = (trait, lObj, currentLanguage) => {
   const stChTraitsRef = refFxn.getStructureChunkTraits(currentLanguage);
   return stChTraitsRef[trait].compatibleWordtypes.includes(
-    gpUtils.getWordtypeLObj(lObj)
+    idUtils.getWordtypeLObj(lObj)
   );
 };
 
@@ -71,7 +72,7 @@ exports.assignDefaultTraitValuesOrPossibleTraitValues = (
   traitKey,
   alsoUseStChTraitsFromAll
 ) => {
-  let wordtype = gpUtils.getWordtypeStCh(stCh);
+  let wordtype = idUtils.getWordtypeStCh(stCh);
 
   let defaultTraitValuesOrPossibleTraitValues =
     this.getDefaultTraitValuesOrPossibleTraitValues(
@@ -129,7 +130,7 @@ exports.removeIncompatibleTraitValues = (currentLanguage, structureChunk) => {
 
   //ACX3A: If npe or 1per then remove neuter from gender.
   if (
-    gpUtils.stChIsNounPerson(structureChunk) ||
+    idUtils.stChIsNounPerson(structureChunk) ||
     (structureChunk.person &&
       !structureChunk.person.filter((traitValue) => traitValue !== "1per")
         .length)
@@ -253,7 +254,7 @@ exports.validTraitKeysPerStructureChunkWordtype = (
 
   kindsOfKeyOnLObj.forEach((kindOfKeyOnLObj) => {
     let additionalValidTraitKeys =
-      traitsRef[kindOfKeyOnLObj][gpUtils.getWordtypeStCh(structureChunk)];
+      traitsRef[kindOfKeyOnLObj][idUtils.getWordtypeStCh(structureChunk)];
 
     if (additionalValidTraitKeys) {
       if (!Array.isArray(additionalValidTraitKeys)) {
