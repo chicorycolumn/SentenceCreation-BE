@@ -249,7 +249,9 @@ exports.getFemulaItem = (lang, wordtype, stCh) => {
   );
 
   if (enCh.specificIds && enCh.specificIds.traitValue.length) {
-    enCh.lObjId = enCh.specificIds.traitValue[0];
+    enCh.lObjId = allLangUtils.removeMarkersFromLObjId(
+      enCh.specificIds.traitValue[0]
+    );
   }
 
   return {
@@ -318,7 +320,9 @@ exports.frontendifyFormula = (lang, formula) => {
         : null;
 
       let newLObjId = fetchedSentence.questionSentenceArr.length
-        ? fetchedSentence.questionSentenceArr[0].lObjId
+        ? allLangUtils.removeMarkersFromLObjId(
+            fetchedSentence.questionSentenceArr[0].lObjId
+          )
         : null;
 
       if (gpUtils.isTerminusObject(newGuideword)) {

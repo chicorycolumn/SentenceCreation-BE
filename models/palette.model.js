@@ -46,7 +46,7 @@ exports.fetchPalette = (req) => {
   }
   let timeOutCheck;
   if (!timeLimit) {
-    timeLimit = 5000;
+    timeLimit = 8000;
   }
   const checkTimeout = efUtils.curryCheckTimeout(
     startTime,

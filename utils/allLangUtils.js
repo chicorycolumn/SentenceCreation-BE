@@ -118,18 +118,22 @@ exports.enforceIsPerson = (stCh, strict, arrOnly, genderTraitKey) => {
   }
 };
 
+exports.removeMarkersFromLObjId = (lObjId) => {
+  if (["^"].includes(lObjId[0])) {
+    lObjId = lObjId.slice(1);
+  }
+  return lObjId;
+};
+
 exports.getLObjIdStem = (id) => {
+  id = allLangUtils.removeMarkersFromLObjId(id);
   return id.split("-").slice(0, 3).join("-");
 };
 
 exports.compareLObjStems = (id1, id2, ignoreSpecificity) => {
   if (ignoreSpecificity) {
-    if (id1[0] === "^") {
-      id1 = id1.slice(1);
-    }
-    if (id2[0] === "^") {
-      id2 = id2.slice(1);
-    }
+    id1 = allLangUtils.removeMarkersFromLObjId(id1);
+    id2 = allLangUtils.removeMarkersFromLObjId(id2);
   }
 
   if (id1[0] === "^" && id2[0] === "^") {
