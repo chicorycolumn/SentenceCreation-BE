@@ -99,11 +99,27 @@ exports.fetchPalette = (req) => {
   //       Once it passes that, we know it's fine, so don't need to validate it every time down here.
   //       Although could be worth running this validation here during multipleMode.
   if (!devSaysOmitStChValidation) {
-    ivUtils.validateSentenceFormula(
+    let failedValidationMessages = ivUtils.validateSentenceFormula(
       questionSentenceFormula,
       questionLanguage,
       "question"
     );
+
+    if (failedValidationMessages) {
+      return frUtils.returnNullQuestionResponseObj(
+        formattingOptions,
+        startTime,
+        returnDirectly,
+        {
+          errorInSentenceCreation: {
+            errorMessage: failedValidationMessages.join(",  "),
+          },
+        },
+        maqModes,
+        questionLanguage,
+        answerLanguage
+      );
+    }
   }
 
   if (pleaseDontSpecify) {
@@ -404,13 +420,16 @@ exports.fetchPalette = (req) => {
       //       Once it passes that, we know it's fine, so don't need to validate it every time down here.
       //       Although could be worth running this validation here during multipleMode.
       if (!devSaysOmitStChValidation) {
-        ivUtils.validateSentenceFormula(
+        let failedValidationMessages = ivUtils.validateSentenceFormula(
           answerSentenceFormula,
           answerLanguage,
           counterfactualSitSchematic
             ? counterfactualSitSchematic.cfLabel
             : "answer"
         );
+        if (failedValidationMessages) {
+          throw 616;
+        }
       }
 
       if (index === 0) {

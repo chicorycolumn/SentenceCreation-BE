@@ -6,6 +6,8 @@ const refObj = require("../reference/referenceObjects.js");
 const refFxn = require("../reference/referenceFunctions.js");
 
 exports.validateSentenceFormula = (sentenceFormula, lang, label) => {
+  let failureMessages = [];
+
   let stChTraits = refFxn.getStructureChunkTraits(lang);
 
   let allChunkIds = sentenceFormula.sentenceStructure.map(
@@ -16,9 +18,39 @@ exports.validateSentenceFormula = (sentenceFormula, lang, label) => {
     let { chunkId } = structureChunk;
 
     if (!gpUtils.getWordtypeStCh(structureChunk)) {
-      consol.throw(
+      failureMessages.push(
         `#ERR esxo "${lang}" validateSentenceFormula. stCh "${chunkId}" has falsy wordtype.`
       );
+    }
+
+    let PHD_ref = refObj.postHocDependentChunkWordtypes[lang];
+    if (PHD_ref) {
+      PHD_ref.forEach((PHD_dataObj) => {
+        if (
+          PHD_dataObj.conditions.wordtype.includes(
+            gpUtils.getWordtypeStCh(structureChunk)
+          ) &&
+          structureChunk.specificIds &&
+          PHD_dataObj.conditions.specificIds.some((specificId) =>
+            structureChunk.specificIds.includes(specificId)
+          )
+        ) {
+          let requiredAgreeKeys = Object.keys(PHD_dataObj.inflectionChains);
+
+          if (
+            !requiredAgreeKeys.every(
+              (requiredAgreeKey) => structureChunk[requiredAgreeKey]
+            ) &&
+            ["agreeWith", "agreeWith2"].filter(
+              (agreeKey) => structureChunk[agreeKey]
+            ).length !== requiredAgreeKeys.length
+          ) {
+            failureMessages.push(
+              `#ERR ssmb "${lang}" validateSentenceFormula. stCh "${chunkId}" does not have all agreeKeys set.`
+            );
+          }
+        }
+      });
     }
 
     let structureChunkTraitsRef = refFxn.getStructureChunkTraits(lang);
@@ -31,7 +63,7 @@ exports.validateSentenceFormula = (sentenceFormula, lang, label) => {
       try {
         reference.needsNoValidation;
       } catch (err) {
-        consol.throw(
+        failureMessages.push(
           `\n\nmzod traitKey: "${traitKey}" not found on refObj.structureChunkTraits\n\n`,
           err
         );
@@ -52,7 +84,7 @@ exports.validateSentenceFormula = (sentenceFormula, lang, label) => {
           `fneu "${lang}" validateSentenceFormula structureChunk`,
           structureChunk
         );
-        consol.throw(
+        failureMessages.push(
           `#ERR fneu "${lang}" validateSentenceFormula. stCh "${chunkId}": traitKey "${traitKey}" not specified on reference object.`
         );
       }
@@ -68,7 +100,7 @@ exports.validateSentenceFormula = (sentenceFormula, lang, label) => {
           `wghd "${lang}" validateSentenceFormula structureChunk`,
           structureChunk
         );
-        consol.throw(
+        failureMessages.push(
           `#ERR wghd "${lang}" validateSentenceFormula. stCh "${chunkId}": traitKey "${traitKey}" not expected to be present on "${gpUtils.getWordtypeStCh(
             structureChunk
           )}".`
@@ -86,7 +118,7 @@ exports.validateSentenceFormula = (sentenceFormula, lang, label) => {
           `kchk "${lang}" validateSentenceFormula structureChunk`,
           structureChunk
         );
-        consol.throw(
+        failureMessages.push(
           `#ERR kchk "${lang}" validateSentenceFormula. : Expected the value of traitKey "${traitKey}" on stCh "${chunkId}" to be type ${expectedTypeOnStCh} but got type ${uUtils.typeof(
             traitValue
           )}.`
@@ -103,7 +135,7 @@ exports.validateSentenceFormula = (sentenceFormula, lang, label) => {
               `mkkf "${lang}" validateSentenceFormula structureChunk`,
               structureChunk
             );
-            consol.throw(
+            failureMessages.push(
               `#ERR mkkf "${lang}" validateSentenceFormula. stCh "${chunkId}": traitValue "${traitValue}" not listed as possible for wordtype "${gpUtils.getWordtypeStCh(
                 structureChunk
               )}".`
@@ -119,7 +151,7 @@ exports.validateSentenceFormula = (sentenceFormula, lang, label) => {
                 `timm "${lang}" validateSentenceFormula structureChunk`,
                 structureChunk
               );
-              consol.throw(
+              failureMessages.push(
                 `#ERR timm "${lang}" validateSentenceFormula. stCh "${chunkId}": traitValue arr included "${traitValueItem}" which was not listed as possible for wordtype "${gpUtils.getWordtypeStCh(
                   structureChunk
                 )}".`
@@ -136,13 +168,17 @@ exports.validateSentenceFormula = (sentenceFormula, lang, label) => {
             `cglp "${lang}" validateSentenceFormula structureChunk`,
             structureChunk
           );
-          consol.throw(
+          failureMessages.push(
             `#ERR cglp "${lang}" validateSentenceFormula. stCh "${chunkId}": traitValue "${traitValue}" should have been a chunkId existing in sentenceStructure.`
           );
         }
       }
     });
   });
+
+  if (failureMessages.length) {
+    return failureMessages;
+  }
 
   //5 Ensure agreeWith chains are no more than 3 members. ie Z can agree with Y which agrees with X, but no more levels allowed.
   let agreeRecords = sentenceFormula.sentenceStructure
@@ -163,9 +199,13 @@ exports.validateSentenceFormula = (sentenceFormula, lang, label) => {
 
   if (tripleAgreeRecords.length) {
     console.log(">>", tripleAgreeRecords);
-    consol.throw(
+    failureMessages.push(
       `shgs An agreeWith chain of more than 3 members (or a circular one?) was found, find in printout >> above.`
     );
+  }
+
+  if (failureMessages.length) {
+    return failureMessages;
   }
 };
 
