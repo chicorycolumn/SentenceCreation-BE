@@ -62,6 +62,10 @@ exports.getMaterialsCopies = (
   useDummy,
   sentenceFormulaFromEducator
 ) => {
+  if (!sentenceFormulaId) {
+    sentenceFormulaId = `${currentLanguage}-default`;
+  }
+
   //STEP ZERO (A): Get necessary source materials.
   let wordsOnly = !!sentenceFormulaFromEducator;
 
@@ -81,7 +85,6 @@ exports.getMaterialsCopies = (
 
   let sentenceFormula;
   const langUtils = require(`../source/all/${currentLanguage}/langUtils.js`);
-  let defaultSentenceFormulaId = `${currentLanguage}-default`;
 
   let words = useDummy
     ? gpUtils.combineWordbanks(wordsBank, dummyWordsBank)
@@ -91,24 +94,14 @@ exports.getMaterialsCopies = (
     ? dummySentenceFormulasBank
     : sentenceFormulasBank;
 
-  if (sentenceFormulaId) {
-    sentenceFormula = sentenceFormulas.find(
-      (senFor) => senFor.sentenceFormulaId === sentenceFormulaId
-    );
-
-    if (!sentenceFormula) {
-      consol.throw(
-        `#ERR quky sc:getMaterialsCopies. No sentenceFormula for this sentenceFormulaId "${sentenceFormulaId}".`
-      );
-    }
-  } else {
-    sentenceFormula = sentenceFormulas.find(
-      (senFor) => senFor.sentenceFormulaId === defaultSentenceFormulaId
-    );
-  }
+  sentenceFormula = sentenceFormulas.find(
+    (senFor) => senFor.sentenceFormulaId === sentenceFormulaId
+  );
 
   if (!sentenceFormula) {
-    consol.throw(`pcco No sentence formula found for "${sentenceFormulaId}"`);
+    consol.throw(
+      `#ERR quky sc:getMaterialsCopies. No sentenceFormula for this sentenceFormulaId "${sentenceFormulaId}".`
+    );
   }
 
   return {
