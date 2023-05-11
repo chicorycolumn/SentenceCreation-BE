@@ -1048,6 +1048,7 @@ exports.addContractions = (sentence, lang, getMostPermutations) => {
     targets,
     ref,
     ifFollowedByWord,
+    ifNotFollowedByTheWordNot,
     probability
   ) => {
     uUtils.shuffle(targets);
@@ -1057,8 +1058,21 @@ exports.addContractions = (sentence, lang, getMostPermutations) => {
       let reg = ifFollowedByWord
         ? new RegExp(`${target}(?!\\p{L})(?=\\s\\p{L})`, "gu") // Match "he is" from "he is here." but not from "look where he is."
         : new RegExp(`${target}(?!\\p{L})(?!-)(?!')`, "gu"); // Provided is not followed by a letter, dash, or apostrophe. Avoid picking up "he is" from "he isn't here."
+
+      let regForMatchIsFollowedByTheWordNot = new RegExp(
+        `^${target} not` // Don't turn "I will not" into "I'll not", but do turn into "I won't"
+      );
+
       let matchIndexes = [];
+
       while ((match = reg.exec(s)) !== null) {
+        if (ifNotFollowedByTheWordNot) {
+          let matchOnwards = s.slice(match.index);
+          if (regForMatchIsFollowedByTheWordNot.test(matchOnwards)) {
+            continue;
+          }
+        }
+
         matchIndexes.push(match.index);
       }
 
@@ -1085,21 +1099,70 @@ exports.addContractions = (sentence, lang, getMostPermutations) => {
     ref,
     probability,
     ifFollowedByWord,
+    ifNotFollowedByTheWordNot,
     getMostPermutations
   ) => {
     let resArr = getMostPermutations && probability !== 1 ? [s] : [];
 
     let targets = Object.keys(ref);
 
-    _getAndPushToRes(s, resArr, targets, ref, ifFollowedByWord, probability);
+    _getAndPushToRes(
+      s,
+      resArr,
+      targets,
+      ref,
+      ifFollowedByWord,
+      ifNotFollowedByTheWordNot,
+      probability
+    );
 
     if (getMostPermutations) {
-      _getAndPushToRes(s, resArr, targets, ref, ifFollowedByWord, probability);
-      _getAndPushToRes(s, resArr, targets, ref, ifFollowedByWord, probability);
-      _getAndPushToRes(s, resArr, targets, ref, ifFollowedByWord, probability);
-      _getAndPushToRes(s, resArr, targets, ref, ifFollowedByWord, probability);
+      _getAndPushToRes(
+        s,
+        resArr,
+        targets,
+        ref,
+        ifFollowedByWord,
+        ifNotFollowedByTheWordNot,
+        probability
+      );
+      _getAndPushToRes(
+        s,
+        resArr,
+        targets,
+        ref,
+        ifFollowedByWord,
+        ifNotFollowedByTheWordNot,
+        probability
+      );
+      _getAndPushToRes(
+        s,
+        resArr,
+        targets,
+        ref,
+        ifFollowedByWord,
+        ifNotFollowedByTheWordNot,
+        probability
+      );
+      _getAndPushToRes(
+        s,
+        resArr,
+        targets,
+        ref,
+        ifFollowedByWord,
+        ifNotFollowedByTheWordNot,
+        probability
+      );
 
-      _getAndPushToRes(s, resArr, targets, ref, ifFollowedByWord, 1);
+      _getAndPushToRes(
+        s,
+        resArr,
+        targets,
+        ref,
+        ifFollowedByWord,
+        ifNotFollowedByTheWordNot,
+        1
+      );
     }
 
     return resArr;
@@ -1121,6 +1184,7 @@ exports.addContractions = (sentence, lang, getMostPermutations) => {
     ref.mandatory,
     1,
     false,
+    false,
     getMostPermutations
   );
 
@@ -1129,6 +1193,7 @@ exports.addContractions = (sentence, lang, getMostPermutations) => {
     ref.group1,
     0.5,
     false,
+    false,
     getMostPermutations
   );
 
@@ -1136,6 +1201,16 @@ exports.addContractions = (sentence, lang, getMostPermutations) => {
     sentences,
     ref.group2,
     0.5,
+    true,
+    false,
+    getMostPermutations
+  );
+
+  sentences = _addContractionsForSentenceArr(
+    sentences,
+    ref.group3,
+    0.5,
+    true,
     true,
     getMostPermutations
   );

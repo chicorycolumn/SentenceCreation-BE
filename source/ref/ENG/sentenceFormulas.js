@@ -2003,4 +2003,25 @@ exports.sentenceFormulasBank = [
       ],
     },
   },
+  {
+    sentenceFormulaId: "ENG-125a",
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificIds: ["eng-pro-PERSONAL"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-read",
+        specificIds: ["eng-ver-003-read"],
+        agreeWith: "pro-1-I",
+        tenseDescription: ["future simple"],
+        negative: true,
+      },
+    ],
+    orders: {
+      primary: [["pro-1-I", "ver-1-read"]],
+    },
+  },
 ];

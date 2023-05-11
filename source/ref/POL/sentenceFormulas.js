@@ -2114,4 +2114,25 @@ exports.sentenceFormulasBank = [
       primary: [["pro-1-I", "ver-1-am", "adj-1-good", "npe-1-person"]],
     },
   },
+  {
+    sentenceFormulaId: "POL-125a",
+    sentenceStructure: [
+      {
+        chunkId: "pro-1-I",
+        specificIds: ["pol-pro-PERSONAL"],
+        person: ["1per"],
+        number: ["singular"],
+      },
+      {
+        chunkId: "ver-1-read",
+        specificIds: ["pol-ver-013-czytać"],
+        agreeWith: "pro-1-I",
+        tenseDescription: ["future pf"],
+        negative: true,
+      },
+    ],
+    orders: {
+      primary: [["ver-1-read"]],
+    },
+  },
 ];

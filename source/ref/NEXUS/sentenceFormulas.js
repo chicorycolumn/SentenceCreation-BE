@@ -395,4 +395,22 @@ exports.sentenceFormulas = [
     topics: [],
     difficulty: 0,
   },
+  {
+    key: "SF-0065",
+    equivalents: { ENG: ["ENG-125a"], POL: ["POL-125a"], SPA: [] },
+    topics: [],
+    difficulty: 0,
+  },
+  {
+    key: "SF-0066",
+    equivalents: { ENG: ["ENG-125b"], POL: ["POL-125b"], SPA: [] },
+    topics: [],
+    difficulty: 0,
+  },
+  {
+    key: "SF-0067",
+    equivalents: { ENG: ["ENG-125c"], POL: ["POL-125c"], SPA: [] },
+    topics: [],
+    difficulty: 0,
+  },
 ];

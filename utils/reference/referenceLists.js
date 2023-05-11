@@ -996,8 +996,8 @@ exports.preferredInitialChoicesForEnChs = {
 };
 
 exports.contractions = {
-  SPA: { mandatory: {}, group1: {}, group2: {} },
-  POL: { mandatory: {}, group1: {}, group2: {} },
+  SPA: { mandatory: {}, group1: {}, group2: {}, group3: {} },
+  POL: { mandatory: {}, group1: {}, group2: {}, group3: {} },
   ENG: {
     mandatory: {
       "can not": "cannot",
@@ -1029,7 +1029,7 @@ exports.contractions = {
     group2: {
       // No, if ending a sentence (as in comments below).
 
-      // "I am here." not "But I am."
+      // "I'm here." not "But I'm."
       "I am": "I'm",
       "you are": "you're",
       "he is": "he's",
@@ -1038,25 +1038,7 @@ exports.contractions = {
       "we are": "we're",
       "they are": "they're",
 
-      // "I will write." not "But I will."
-      "I will": "I'll",
-      "you will": "you'll",
-      "he will": "he'll",
-      "she will": "she'll",
-      "it will": "it'll",
-      "we will": "we'll",
-      "they will": "they'll",
-
-      // "I would write." not "But I would."
-      "I would": "I'd",
-      "you would": "you'd",
-      "he would": "he'd",
-      "she would": "she'd",
-      "it would": "it'd",
-      "we would": "we'd",
-      "they would": "they'd",
-
-      // "There is a dog." not "Five is all there is."
+      // "There's a dog." not "Five is all there's."
       "there is": "there's",
       "that is": "that's",
       "here is": "here's",
@@ -1066,6 +1048,49 @@ exports.contractions = {
       "where is": "where's",
       "why is": "why's",
       "how is": "how's",
+
+      // "I've seen." not "But I've."
+      // And only if auxiliary, which is covered by auxiliary marker below.
+      "I ªhave": "I've",
+      "you ªhave": "you've",
+      "he ªhas": "he's",
+      "she ªhas": "she's",
+      "it ªhas": "it's",
+      "we ªhave": "we've",
+      "they ªhave": "they've",
+
+      // "I'd seen." not "But I'd."
+      // And only if auxiliary, which is covered by auxiliary marker below.
+      "I ªhad": "I'd",
+      "you ªhad": "you'd",
+      "he ªhad": "he'd",
+      "she ªhad": "she'd",
+      "it ªhad": "it'd",
+      "we ªhad": "we'd",
+      "they ªhad": "they'd",
+    },
+    group3: {
+      //Like group 2, it's no if ending a sentence.
+      //But also no if followed by "not"
+      //"I will not" should become "I won't" but not "I'll not" in Q sentence. (In A sentence all permutations are allowed as we expand the contractions in the player's answer before marking.)
+
+      // "I'll write." not "But I'll."
+      "I will": "I'll",
+      "you will": "you'll",
+      "he will": "he'll",
+      "she will": "she'll",
+      "it will": "it'll",
+      "we will": "we'll",
+      "they will": "they'll",
+
+      // "I'd write." not "But I'd."
+      "I would": "I'd",
+      "you would": "you'd",
+      "he would": "he'd",
+      "she would": "she'd",
+      "it would": "it'd",
+      "we would": "we'd",
+      "they would": "they'd",
 
       "there had": "there'd",
       "that had": "that'd",
@@ -1096,26 +1121,6 @@ exports.contractions = {
       "where will": "where'll",
       "why will": "why'll",
       "how will": "how'll",
-
-      // "I have seen." not "But I have."
-      // And only if auxiliary, which is covered by auxiliary marker below.
-      "I ªhave": "I've",
-      "you ªhave": "you've",
-      "he ªhas": "he's",
-      "she ªhas": "she's",
-      "it ªhas": "it's",
-      "we ªhave": "we've",
-      "they ªhave": "they've",
-
-      // "I had seen." not "But I had."
-      // And only if auxiliary, which is covered by auxiliary marker below.
-      "I ªhad": "I'd",
-      "you ªhad": "you'd",
-      "he ªhad": "he'd",
-      "she ªhad": "she'd",
-      "it ªhad": "it'd",
-      "we ªhad": "we'd",
-      "they ªhad": "they'd",
     },
   },
 };
