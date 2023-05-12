@@ -18,71 +18,33 @@ describe("/api", function () {
   this.timeout(7000);
 
   xdescribe("/palette - Stage 30: Modal verbs, and contractions.", () => {
-    describe("#pal30-01 Boolean on stCh to always use contraction.", () => {
-      describe("No boolean.", () => {
-        it("#pal30-01a GET 200 YES: Engpol.", () => {
-          return runPaletteTest2("ENG", "POL", "125a", [
-            {
-              ENG: ["I will not read.", "I won't read."], // "I'll not" is correct but uncommon, so I want to accept it for A but never give as Q.
+    describe("#pal30-01 Will not.", () => {
+      it("#pal30-01a GET 200 YES: Engpol.", () => {
+        return runPaletteTest2("ENG", "POL", "125a", [
+          {
+            ENG: ["I will not read.", "I won't read."], // "I'll not" is correct but uncommon, so I want to accept it for A but never give as Q.
 
-              // Okay, it's already accepted for A because contractions get expanded, so if player types
-              // "I'll not" or "I won't" or "I will not" they all get verified as "I will not"
+            // Okay, it's already accepted for A because contractions get expanded, so if player types
+            // "I'll not" or "I won't" or "I will not" they all get verified as "I will not"
 
-              // As for the Q, I want to not generate "I'll not"
+            // As for the Q, I want to not generate "I'll not"
 
-              POL: ["Nie przeczytam."],
-            },
-          ]);
-        });
-        it("#pal30-01b GET 200 YES: Poleng.", () => {
-          return runPaletteTest2("POL", "ENG", "125a", [
-            {
-              POL: ["Nie przeczytam."],
-              ENG: [
-                "I will not read.",
-                "I am not going to read.",
-                "I will not have read.",
-                "I will have not read.",
-              ],
-            },
-          ]);
-        });
+            POL: ["Nie przeczytam."],
+          },
+        ]);
       });
-      describe("Boolean to always use contractions.", () => {
-        it("#pal30-01c GET 200 YES: Engpol.", () => {
-          return runPaletteTest2("ENG", "POL", "125b", [
-            {
-              ENG: ["I won't read."],
-              POL: ["Nie będę czytać.", "Nie przeczytam."],
-            },
-          ]);
-        });
-        it("#pal30-01d GET 200 YES: Poleng.", () => {
-          return runPaletteTest2("POL", "ENG", "125b", [
-            {
-              POL: ["Nie będę czytać.", "Nie przeczytam."],
-              ENG: ["I won't read."],
-            },
-          ]);
-        });
-      });
-      describe("Boolean to never use contractions.", () => {
-        it("#pal30-01c GET 200 YES: Engpol.", () => {
-          return runPaletteTest2("ENG", "POL", "125c", [
-            {
-              ENG: ["I will not read."],
-              POL: ["Nie będę czytać.", "Nie przeczytam."],
-            },
-          ]);
-        });
-        it("#pal30-01d GET 200 YES: Poleng.", () => {
-          return runPaletteTest2("POL", "ENG", "125c", [
-            {
-              POL: ["Nie będę czytać.", "Nie przeczytam."],
-              ENG: ["I will not read."],
-            },
-          ]);
-        });
+      it("#pal30-01b GET 200 YES: Poleng.", () => {
+        return runPaletteTest2("POL", "ENG", "125a", [
+          {
+            POL: ["Nie przeczytam."],
+            ENG: [
+              "I will not read.",
+              "I am not going to read.",
+              "I will not have read.",
+              "I will have not read.",
+            ],
+          },
+        ]);
       });
     });
   });
