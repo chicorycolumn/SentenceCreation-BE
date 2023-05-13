@@ -11,9 +11,6 @@ const aaUtils = require("./auxiliaryAttributeUtils.js");
 const lfUtils = require("./lemmaFilteringUtils.js");
 const allLangUtils = require("./allLangUtils.js");
 const { HY } = refObj;
-const {
-  malePersonsInThisLanguageHaveWhatGender,
-} = require("./reference/referenceLists.js");
 
 exports.firstStageEvaluateAnnotations = (
   startTime,
@@ -167,7 +164,9 @@ exports.removeAnnotationsByVypernym = (
   answerSentenceData
 ) => {
   let malePersonGender =
-    malePersonsInThisLanguageHaveWhatGender[languagesObj.questionLanguage];
+    refObj.malePersonsInThisLanguageHaveWhatGender[
+      languagesObj.questionLanguage
+    ];
 
   questionOutputArr.forEach((questionOutputUnit) => {
     let qStCh = questionOutputUnit.structureChunk;

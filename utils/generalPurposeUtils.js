@@ -3,7 +3,7 @@ const idUtils = require("./identityUtils.js");
 const consol = require("./zerothOrder/consoleLoggingUtils.js");
 const refObj = require("./reference/referenceObjects.js");
 const refFxn = require("./reference/referenceFunctions.js");
-const { assessHypernymy } = require("./lemmaFilteringUtils.js");
+const lfUtils = require("./lemmaFilteringUtils.js");
 
 exports.collectAllValuesFromKeyOnObjectsInNestedArrayOfObjects = (
   nestedArrOfObjects,
@@ -147,7 +147,7 @@ exports.updateSentenceStructureWithNewStructureChunksFromOutputUnits = (
     );
 
     if (idUtils.getWordtypeStCh(unit.structureChunk) !== "fix") {
-      let hypernymy = assessHypernymy(unit.selectedLemmaObject);
+      let hypernymy = lfUtils.assessHypernymy(unit.selectedLemmaObject);
       if (hypernymy) {
         sentenceStructure[indexOfStChToChange].hypernymy = hypernymy;
       }
