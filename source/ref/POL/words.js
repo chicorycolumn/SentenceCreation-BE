@@ -1,6 +1,3 @@
-//If you mark a traitKey true, or give it a traitValue      it will be filled out by fillVerbInflections fxn.
-//If you mark a traitKey false, or omit it                   it will not be.
-
 exports.wordsBank = {
   npe: [
     {
@@ -69,15 +66,7 @@ exports.wordsBank = {
       semanticGender: "_PersonalGenders",
       //notes
       lacking: true,
-      /**
-       * When I say "tantumPlurale", it means words which can refer to only one thing.
-       *
-       * So "drwi" is "tantumPlurale", because it can mean "door" as well as "doors".
-       * But "ludzie" is NOT a "tantumPlurale", because it can't mean "person", it only means "people".
-       *
-       * So "ludzie" is just a "lacking" lObj, ie it is missing its singular inflections,
-       * while "drwi" is both "lacking" and "tantumPlurale".
-       *  */
+
       //inflections
       inflections: {
         plural: {
@@ -199,40 +188,6 @@ exports.wordsBank = {
         },
       },
     },
-    // {
-    //   //links
-    //   translations: { ENG: ["boy", "boyfriend", "guy"] },
-    //   tags: ["animate", "personTest1", "concrete"],
-    //   //selectors
-    //   lemma: "chłopak",
-    //   id: "pol-npe-012",
-    //   gender: "m1",
-    //   //notes
-    //
-    //   //inflections
-    //   inflections: {
-    //     singular: {
-    //       nom: "chłopak",
-    //       gen: "chłopaka",
-    //       dat: "chłopakowi",
-    //       acc: "chłopaka",
-    //       ins: "chłopakiem",
-    //       loc: "chłopaku",
-    //     },
-    //     plural: {
-    //       nom: {
-    // isTerminus: true,
-    // normal: ["chłopacy"],
-    // additionalFrequent: ["chłopaki"],
-    //        },
-    //       gen: "chłopaków",
-    //       dat: "chłopakom",
-    //       acc: "chłopaków",
-    //       ins: "chłopakami",
-    //       loc: "chłopakach",
-    //     },
-    //   },
-    // },
     {
       //selectors
       lemma: "chłopiec",

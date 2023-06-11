@@ -1,9 +1,5 @@
 //Copied over on 27/12/2020
 
-const {
-  terminusObjectNormalArray,
-} = require("../../../utils/generalPurposeUtils");
-
 let npe = [
   {
     //links
@@ -497,7 +493,7 @@ let ver = [
       //     _Persons: { _Numbers: "would be" },
       //   },
       // },
-      v2: terminusObjectNormalArray(["was", "were"]),
+      v2: { isTerminus: true, normal: ["was", "were"] },
       v3: "been",
       thirdPS: "is",
       gerund: "being",

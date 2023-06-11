@@ -740,9 +740,6 @@ let adj = [
   },
 ];
 
-//If you mark a traitKey true, or give it a traitValue      it will be filled out by fillVerbInflections fxn.
-//If you mark a traitKey false, or omit it                   it will not be.
-
 let ver = [
   {
     //links

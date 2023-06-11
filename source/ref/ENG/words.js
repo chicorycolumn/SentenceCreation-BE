@@ -1,7 +1,3 @@
-const {
-  terminusObjectNormalArray,
-} = require("../../../utils/generalPurposeUtils");
-
 exports.wordsBank = {
   npe: [
     {
@@ -511,7 +507,7 @@ exports.wordsBank = {
       //inflections
       inflections: {
         infinitive: "be",
-        v2: terminusObjectNormalArray(["was", "were"]),
+        v2: { isTerminus: true, normal: ["was", "were"] },
         v3: "been",
         thirdPS: "is",
         gerund: "being",

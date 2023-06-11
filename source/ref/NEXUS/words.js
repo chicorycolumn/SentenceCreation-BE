@@ -1,7 +1,3 @@
-const {
-  terminusObjectNormalArray,
-} = require("../../../utils/generalPurposeUtils");
-
 // Create a checker fxn that makes sure eg eng-lady doesn't have an entry here,
 // because is already covered as a synonym in npe-0000-woman.
 

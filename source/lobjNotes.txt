@@ -1,0 +1,17 @@
+//If you mark a traitKey true, or give it a traitValue      it will be filled out by fillVerbInflections fxn.
+//If you mark a traitKey false, or omit it                   it will not be.
+
+      /**
+       * When I say "tantumPlurale", it means words which can refer to only one thing.
+       *
+       * So "drwi" is "tantumPlurale", because it can mean "door" as well as "doors".
+       * But "ludzie" is NOT a "tantumPlurale", because it can't mean "person", it only means "people".
+       *
+       * So "ludzie" is just a "lacking" lObj, ie it is missing its singular inflections,
+       * while "drwi" is both "lacking" and "tantumPlurale".
+       *  */
+
+ENG: baby: gender: "_Genders", // Because baby can be neuter "Your baby is crying, is IT hungry?"
+
+SPA: m: "bueno", //Gamma, before nouns this is "buen" so need terminus obj here.
+      superlative: true, // Gamma programmatically build this once gender is known.
