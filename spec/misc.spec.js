@@ -9,14 +9,12 @@ const {
 
 describe.only("Project Ophiucus: Bravo Wing: Task One.", () => {
   // Take lobjs from Old Way of storing them, and write as individual files with extra and inflections, plus skeletal lobjs arrays.
-  let e = "ref";
-  let l = "POL";
-
   let envs = ["dev", "ref"];
   let langs = ["POL", "ENG", "SPA"];
+
   envs.forEach((e) => {
     langs.forEach((l) => {
-      if (e === "dev" && lang === "SPA") {
+      if (e === "dev" && l === "SPA") {
         return;
       }
       splitLemmaObjectsAndWriteAsJson(e, l);

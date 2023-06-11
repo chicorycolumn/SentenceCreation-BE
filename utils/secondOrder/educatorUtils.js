@@ -352,7 +352,7 @@ exports.markPlayerAnswer = (lang, correctArr, input) => {
 exports.splitLemmaObjectsAndWriteAsJson = (e, l) => {
   fs.mkdirSync(`source/${e}/${l}/words`);
 
-  const { wordsBank } = require(`../source/${e}/${l}/words.js`);
+  const { wordsBank } = require(`../../source/${e}/${l}/words.js`);
 
   ["adj", "art", "nco", "npe", "pre", "pro", "ver"].forEach((wordtype) => {
     let words = wordsBank[wordtype];

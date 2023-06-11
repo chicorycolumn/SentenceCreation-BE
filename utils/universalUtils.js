@@ -1,3 +1,5 @@
+const fs = require("fs");
+
 exports.addListener = ($, element, eventName, handler) => {
   const add = () => {
     $(element)[eventName](handler);
