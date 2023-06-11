@@ -4,6 +4,7 @@ const consol = require(".././zerothOrder/consoleLoggingUtils.js");
 const otUtils = require(".././objectTraversingUtils.js");
 const educatorUtils = require("./educatorUtils.js");
 const refObj = require(".././reference/referenceObjects.js");
+const fs = require("fs");
 
 exports.checkOutputArrayForMissingUnits = (
   sentenceFormula,
@@ -346,4 +347,44 @@ exports.markPlayerAnswer = (lang, correctArr, input) => {
   }
 
   return bool;
+};
+
+exports.splitLemmaObjectsAndWriteAsJson = (e, l) => {
+  fs.mkdirSync(`source/${e}/${l}/words`);
+
+  const { wordsBank } = require(`../source/${e}/${l}/words.js`);
+
+  ["adj", "art", "nco", "npe", "pre", "pro", "ver"].forEach((wordtype) => {
+    let words = wordsBank[wordtype];
+    if (!words) {
+      return;
+    }
+
+    let skeletons = [];
+    let meats = [];
+
+    words.forEach((word) => {
+      let meat = {
+        inflections: word.inflections,
+      };
+      if (word.otherShapes) {
+        meat.extra = { otherShapes: word.otherShapes };
+      }
+      meats.push([word.id, meat]);
+
+      delete word.inflections;
+      delete word.otherShapes;
+
+      skeletons.push(word);
+    });
+
+    uUtils.writeJSON(`source/${e}/${l}/words/${wordtype}.json`, skeletons);
+    fs.mkdirSync(`source/${e}/${l}/words/${wordtype}`);
+    meats.forEach((meatArr) => {
+      uUtils.writeJSON(
+        `source/${e}/${l}/words/${wordtype}/${meatArr[0]}.json`,
+        meatArr[1]
+      );
+    });
+  });
 };
