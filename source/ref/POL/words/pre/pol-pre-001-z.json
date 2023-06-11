@@ -1,0 +1,18 @@
+{
+  "inflections": {
+    "onlyForm": {
+      "isTerminus": true,
+      "processOnlyAtEnd": true,
+      "nonprotective": [
+        "z"
+      ],
+      "protective": [
+        "ze"
+      ],
+      "protectIfSubsequentStartsWith": [
+        "mn",
+        "szcz"
+      ]
+    }
+  }
+}

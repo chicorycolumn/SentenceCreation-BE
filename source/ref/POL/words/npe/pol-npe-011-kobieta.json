@@ -1,0 +1,25 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "kobieta",
+      "gen": "kobiety",
+      "dat": "kobiecie",
+      "acc": "kobietę",
+      "ins": "kobietą",
+      "loc": "kobiecie"
+    },
+    "plural": {
+      "nom": "kobiety",
+      "gen": "kobiet",
+      "dat": "kobietom",
+      "acc": "kobiety",
+      "ins": "kobietami",
+      "loc": "kobietach"
+    }
+  },
+  "extra": {
+    "otherShapes": {
+      "diminutive": "kobietka"
+    }
+  }
+}

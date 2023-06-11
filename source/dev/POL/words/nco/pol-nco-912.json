@@ -1,0 +1,28 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "orzech",
+      "gen": "orzecha",
+      "dat": "orzechowi",
+      "acc": {
+        "isTerminus": true,
+        "normal": [
+          "orzech"
+        ],
+        "additionalFrequent": [
+          "orzecha"
+        ]
+      },
+      "ins": "orzechem",
+      "loc": "orzechu"
+    },
+    "plural": {
+      "nom": "orzechy",
+      "gen": "orzechów",
+      "dat": "orzechom",
+      "acc": "orzechy",
+      "ins": "orzechami",
+      "loc": "orzechach"
+    }
+  }
+}

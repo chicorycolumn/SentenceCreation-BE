@@ -1,0 +1,20 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "nakrętka",
+      "gen": "nakrętki",
+      "dat": "nakrętce",
+      "acc": "nakrętkę",
+      "ins": "nakrętką",
+      "loc": "nakrętce"
+    },
+    "plural": {
+      "nom": "nakrętki",
+      "gen": "nakrętek",
+      "dat": "nakrętkom",
+      "acc": "nakrętki",
+      "ins": "nakrętkami",
+      "loc": "nakrętkach"
+    }
+  }
+}

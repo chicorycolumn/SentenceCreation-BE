@@ -1,0 +1,92 @@
+[
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "red"
+      ],
+      "POL": [
+        "czerwony"
+      ]
+    },
+    "devHardcoded_tags": [
+      "colour"
+    ],
+    "lemma": "red",
+    "id": "eng-adj-901"
+  },
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "wibbly"
+      ],
+      "POL": [
+        "łybli"
+      ]
+    },
+    "devHardcoded_tags": [
+      "wibbly"
+    ],
+    "lemma": "wibbly",
+    "id": "eng-adj-900"
+  },
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "wobbly"
+      ],
+      "POL": [
+        "łobli"
+      ]
+    },
+    "devHardcoded_tags": [
+      "wobbly"
+    ],
+    "lemma": "wobbly",
+    "id": "eng-adj-901"
+  },
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "fast"
+      ],
+      "POL": [
+        "mocno"
+      ]
+    },
+    "devHardcoded_tags": [
+      "fitting"
+    ],
+    "lemma": "fast",
+    "id": "eng-adj-905"
+  },
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "fast"
+      ],
+      "POL": [
+        "szybki"
+      ]
+    },
+    "devHardcoded_tags": [
+      "speed"
+    ],
+    "lemma": "fast",
+    "id": "eng-adj-904"
+  },
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "small"
+      ],
+      "POL": [
+        "mały"
+      ]
+    },
+    "devHardcoded_tags": [
+      "size"
+    ],
+    "lemma": "small",
+    "id": "eng-adj-902"
+  }
+]

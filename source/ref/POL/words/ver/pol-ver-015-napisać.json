@@ -1,0 +1,86 @@
+{
+  "inflections": {
+    "infinitive": "napisać",
+    "verbal": {
+      "past": {
+        "impersonal": {
+          "singular": {
+            "_SingularGenders": "napisano"
+          },
+          "plural": {
+            "_PluralGenders": "napisano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "napisałem",
+            "f": "napisałam"
+          },
+          "plural": {
+            "virile": "napisaliśmy",
+            "nonvirile": "napisałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "napisałeś",
+            "f": "napisałaś"
+          },
+          "plural": {
+            "virile": "napisaliście",
+            "nonvirile": "napisałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "napisał",
+            "f": "napisała",
+            "n": "napisało"
+          },
+          "plural": {
+            "virile": "napisali",
+            "nonvirile": "napisały"
+          }
+        }
+      },
+      "future": {
+        "impersonal": {
+          "singular": true,
+          "plural": true
+        },
+        "1per": {
+          "singular": {
+            "_SingularGendersExcludingNeuter": "napiszę"
+          },
+          "plural": {
+            "_PluralGenders": "napiszemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "_SingularGendersExcludingNeuter": "napiszesz"
+          },
+          "plural": {
+            "_PluralGenders": "napiszecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "_SingularGenders": "napisze"
+          },
+          "plural": {
+            "_PluralGenders": "napiszą"
+          }
+        }
+      },
+      "present": false,
+      "conditional": true,
+      "imperative": "napisz"
+    },
+    "activeAdjectival": false,
+    "passiveAdjectival": "napisany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "napisawszy",
+    "verbalNoun": "napisanie"
+  }
+}

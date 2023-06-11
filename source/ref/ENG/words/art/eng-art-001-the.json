@@ -1,0 +1,21 @@
+{
+  "inflections": {
+    "definite": {
+      "singular": "the",
+      "plural": "the"
+    },
+    "indefinite": {
+      "singular": {
+        "isTerminus": true,
+        "processOnlyAtEnd": true,
+        "nonprotective": [
+          "a"
+        ],
+        "protective": [
+          "an"
+        ]
+      },
+      "plural": "∅"
+    }
+  }
+}

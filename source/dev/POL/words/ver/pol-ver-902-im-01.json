@@ -1,0 +1,86 @@
+{
+  "inflections": {
+    "infinitive": "czytać",
+    "verbal": {
+      "past": {
+        "impersonal": {
+          "singular": {
+            "_SingularGenders": "czytano"
+          },
+          "plural": {
+            "_PluralGenders": "czytano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "czytałem",
+            "f": "czytałam"
+          },
+          "plural": {
+            "virile": "czytaliśmy",
+            "nonvirile": "czytałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "czytałeś",
+            "f": "czytałaś"
+          },
+          "plural": {
+            "virile": "czytaliście",
+            "nonvirile": "czytałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "czytał",
+            "f": "czytała",
+            "n": "czytało"
+          },
+          "plural": {
+            "virile": "czytali",
+            "nonvirile": "czytały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": true,
+          "plural": true
+        },
+        "1per": {
+          "singular": {
+            "_SingularGendersExcludingNeuter": "czytam"
+          },
+          "plural": {
+            "_PluralGenders": "czytamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "_SingularGendersExcludingNeuter": "czytasz"
+          },
+          "plural": {
+            "_PluralGenders": "czytacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "_SingularGenders": "czyta"
+          },
+          "plural": {
+            "_PluralGenders": "czytają"
+          }
+        }
+      },
+      "future": true,
+      "conditional": true,
+      "imperative": "czytaj"
+    },
+    "activeAdjectival": "czytający",
+    "passiveAdjectival": "czytany",
+    "contemporaryAdverbial": "czytając",
+    "anteriorAdverbial": false,
+    "verbalNoun": "czytanie"
+  }
+}

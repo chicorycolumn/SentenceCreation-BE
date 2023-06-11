@@ -1,0 +1,46 @@
+[
+  {
+    "lemma": "madre",
+    "id": "spa-npe-002-madre",
+    "gender": "f"
+  },
+  {
+    "lemma": "padre",
+    "id": "spa-npe-002-padre-€",
+    "gender": "m",
+    "semanticGender": "_VypernymGenders"
+  },
+  {
+    "lemma": "chica",
+    "id": "spa-npe-003-chica",
+    "gender": "f"
+  },
+  {
+    "lemma": "chico",
+    "id": "spa-npe-003-chico-€",
+    "gender": "m",
+    "semanticGender": "_VypernymGenders"
+  },
+  {
+    "lemma": "niña",
+    "id": "spa-npe-004-niña",
+    "gender": "f"
+  },
+  {
+    "lemma": "niño",
+    "id": "spa-npe-004-niño-€",
+    "gender": "m",
+    "semanticGender": "_VypernymGenders"
+  },
+  {
+    "lemma": "medico",
+    "id": "spa-npe-001-medico-€",
+    "gender": "m",
+    "semanticGender": "_VypernymGenders"
+  },
+  {
+    "lemma": "medica",
+    "id": "spa-npe-001-medica",
+    "gender": "f"
+  }
+]

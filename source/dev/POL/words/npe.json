@@ -1,0 +1,33 @@
+[
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "woman",
+        "lady"
+      ]
+    },
+    "devHardcoded_tags": [
+      "animate",
+      "personTest1",
+      "concrete"
+    ],
+    "lemma": "kobieta",
+    "id": "pol-npe-901"
+  },
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "boy",
+        "little boy"
+      ]
+    },
+    "devHardcoded_tags": [
+      "animate",
+      "personTest1",
+      "concrete"
+    ],
+    "lemma": "chłopiec",
+    "id": "pol-npe-903",
+    "gender": "m1"
+  }
+]

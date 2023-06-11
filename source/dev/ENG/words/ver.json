@@ -1,0 +1,103 @@
+[
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "bear"
+      ],
+      "POL": [
+        "znieść"
+      ]
+    },
+    "devHardcoded_tags": [
+      "allohomTesting2",
+      "emotions"
+    ],
+    "allohomInfo": {
+      "multipleWordtype": true,
+      "text": "emotional verb",
+      "emoji": "😑"
+    },
+    "lemma": "bear",
+    "id": "eng-ver-906"
+  },
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "read"
+      ],
+      "POL": [
+        "czytać",
+        "przeczytać"
+      ]
+    },
+    "devHardcoded_tags": [
+      "basic2"
+    ],
+    "lemma": "read",
+    "id": "eng-ver-903"
+  },
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "write"
+      ],
+      "POL": [
+        "pisać",
+        "napisać"
+      ]
+    },
+    "devHardcoded_tags": [
+      "basic3"
+    ],
+    "lemma": "write",
+    "id": "eng-ver-905"
+  },
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "research"
+      ],
+      "POL": [
+        "badać",
+        "zbadać"
+      ]
+    },
+    "devHardcoded_tags": [
+      "science"
+    ],
+    "lemma": "research",
+    "id": "eng-ver-904"
+  },
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "have"
+      ],
+      "POL": [
+        "mieć"
+      ]
+    },
+    "devHardcoded_tags": [
+      "basic",
+      "possession"
+    ],
+    "lemma": "have",
+    "id": "eng-ver-902"
+  },
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "be"
+      ],
+      "POL": [
+        "być"
+      ]
+    },
+    "devHardcoded_tags": [
+      "basic",
+      "identity"
+    ],
+    "lemma": "be",
+    "id": "eng-ver-901"
+  }
+]

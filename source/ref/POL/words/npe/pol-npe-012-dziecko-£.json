@@ -1,0 +1,20 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dziecko",
+      "gen": "dziecka",
+      "dat": "dziecku",
+      "acc": "dziecko",
+      "ins": "dzieckiem",
+      "loc": "dziecku"
+    },
+    "plural": {
+      "nom": "dzieci",
+      "gen": "dzieci",
+      "dat": "dzieciom",
+      "acc": "dzieci",
+      "ins": "dziećmi",
+      "loc": "dzieciach"
+    }
+  }
+}

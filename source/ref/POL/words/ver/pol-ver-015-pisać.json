@@ -1,0 +1,86 @@
+{
+  "inflections": {
+    "infinitive": "pisać",
+    "verbal": {
+      "past": {
+        "impersonal": {
+          "singular": {
+            "_SingularGenders": "pisano"
+          },
+          "plural": {
+            "_PluralGenders": "pisano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "pisałem",
+            "f": "pisałam"
+          },
+          "plural": {
+            "virile": "pisaliśmy",
+            "nonvirile": "pisałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "pisałeś",
+            "f": "pisałaś"
+          },
+          "plural": {
+            "virile": "pisaliście",
+            "nonvirile": "pisałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "pisał",
+            "f": "pisała",
+            "n": "pisało"
+          },
+          "plural": {
+            "virile": "pisali",
+            "nonvirile": "pisały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": true,
+          "plural": true
+        },
+        "1per": {
+          "singular": {
+            "_SingularGendersExcludingNeuter": "piszę"
+          },
+          "plural": {
+            "_PluralGenders": "piszemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "_SingularGendersExcludingNeuter": "piszesz"
+          },
+          "plural": {
+            "_PluralGenders": "piszecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "_SingularGenders": "pisze"
+          },
+          "plural": {
+            "_PluralGenders": "piszą"
+          }
+        }
+      },
+      "future": true,
+      "conditional": true,
+      "imperative": "pisz"
+    },
+    "activeAdjectival": "piszący",
+    "passiveAdjectival": "pisany",
+    "contemporaryAdverbial": "pisząc",
+    "anteriorAdverbial": false,
+    "verbalNoun": "pisanie"
+  }
+}

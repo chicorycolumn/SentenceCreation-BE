@@ -1,0 +1,60 @@
+{
+  "inflections": {
+    "determiner": {
+      "1per": {
+        "singular": {
+          "_PersonalSingularGenders": "my"
+        },
+        "plural": {
+          "_PluralGenders": "our"
+        }
+      },
+      "2per": {
+        "singular": {
+          "_PersonalSingularGenders": "your"
+        },
+        "plural": {
+          "_PluralGenders": "your"
+        }
+      },
+      "3per": {
+        "singular": {
+          "m": "his",
+          "f": "her",
+          "n": "its"
+        },
+        "plural": {
+          "_PluralGenders": "their"
+        }
+      }
+    },
+    "pronombre": {
+      "1per": {
+        "singular": {
+          "_PersonalSingularGenders": "mine"
+        },
+        "plural": {
+          "_PluralGenders": "ours"
+        }
+      },
+      "2per": {
+        "singular": {
+          "_PersonalSingularGenders": "yours"
+        },
+        "plural": {
+          "_PluralGenders": "yours"
+        }
+      },
+      "3per": {
+        "singular": {
+          "m": "his",
+          "f": "hers",
+          "n": "its"
+        },
+        "plural": {
+          "_PluralGenders": "theirs"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "madre",
+      "gen": "de la madre"
+    },
+    "plural": {
+      "nom": "madres",
+      "gen": "de las madres"
+    }
+  }
+}

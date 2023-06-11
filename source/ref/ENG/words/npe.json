@@ -1,0 +1,72 @@
+[
+  {
+    "lemma": "woman",
+    "id": "eng-npe-001-woman",
+    "gender": "f"
+  },
+  {
+    "lemma": "man",
+    "id": "eng-npe-001-man",
+    "gender": "m"
+  },
+  {
+    "lemma": "person",
+    "id": "eng-npe-001-person-£",
+    "gender": "_PersonalGenders"
+  },
+  {
+    "lemma": "child",
+    "id": "eng-npe-002-child-£",
+    "gender": "_PersonalGenders"
+  },
+  {
+    "lemma": "baby",
+    "id": "eng-npe-009-baby",
+    "gender": "_Genders"
+  },
+  {
+    "lemma": "boy",
+    "id": "eng-npe-002-boy",
+    "gender": "m"
+  },
+  {
+    "lemma": "girl",
+    "id": "eng-npe-002-girl",
+    "gender": "f"
+  },
+  {
+    "lemma": "father",
+    "id": "eng-npe-003-father",
+    "gender": "m"
+  },
+  {
+    "lemma": "mother",
+    "id": "eng-npe-003-mother",
+    "gender": "f"
+  },
+  {
+    "lemma": "doctor",
+    "id": "eng-npe-005-doctor",
+    "gender": "_PersonalGenders"
+  },
+  {
+    "lemma": "parent",
+    "id": "eng-npe-003-parent-£",
+    "gender": "_PersonalGenders"
+  },
+  {
+    "lemma": "brother",
+    "id": "eng-npe-008-brother",
+    "gender": "m"
+  },
+  {
+    "lemma": "sister",
+    "id": "eng-npe-008-sister",
+    "gender": "f"
+  },
+  {
+    "lemma": "lady",
+    "id": "eng-npe-006-lady",
+    "gender": "f"
+  }
+]

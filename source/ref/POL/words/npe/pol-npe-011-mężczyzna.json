@@ -1,0 +1,20 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "mężczyzna",
+      "gen": "mężczyzny",
+      "dat": "mężczyźnie",
+      "acc": "mężczyznę",
+      "ins": "mężczyzną",
+      "loc": "mężczyźnie"
+    },
+    "plural": {
+      "nom": "mężczyźni",
+      "gen": "mężczyzn",
+      "dat": "mężczyznom",
+      "acc": "mężczyzn",
+      "ins": "mężczyznami",
+      "loc": "mężczyznach"
+    }
+  }
+}

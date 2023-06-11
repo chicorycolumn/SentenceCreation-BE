@@ -1,0 +1,17 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m": "rojo",
+        "f": "roja"
+      },
+      "plural": {
+        "virile": "rojos",
+        "nonvirile": "rojas"
+      }
+    },
+    "comparative": false,
+    "superlative": false,
+    "adverb": false
+  }
+}

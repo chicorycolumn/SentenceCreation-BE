@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "isTerminus": true,
+    "processOnlyAtEnd": true,
+    "nonprotective": [
+      "wob"
+    ],
+    "protective": [
+      "wobb"
+    ]
+  }
+}

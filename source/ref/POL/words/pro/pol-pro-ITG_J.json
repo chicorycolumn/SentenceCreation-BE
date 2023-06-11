@@ -1,0 +1,60 @@
+{
+  "inflections": {
+    "_pronombreAndDeterminer": {
+      "_Pers": {
+        "singular": {
+          "m1": {
+            "nom": "taki",
+            "gen": "takiego",
+            "dat": "takiemu",
+            "acc": "takiego",
+            "ins": "takim",
+            "loc": "takim"
+          },
+          "m3": {
+            "nom": "taki",
+            "gen": "takiego",
+            "dat": "takiemu",
+            "acc": "takiy",
+            "ins": "takim",
+            "loc": "takim"
+          },
+          "f": {
+            "nom": "taka",
+            "gen": "takiej",
+            "dat": "takiej",
+            "acc": "taką",
+            "ins": "taką",
+            "loc": "takiej"
+          },
+          "n": {
+            "nom": "takie",
+            "gen": "takiego",
+            "dat": "takiemu",
+            "acc": "takie",
+            "ins": "takim",
+            "loc": "takim"
+          }
+        },
+        "plural": {
+          "virile": {
+            "nom": "tacy",
+            "gen": "takich",
+            "dat": "takim",
+            "acc": "takich",
+            "ins": "takimi",
+            "loc": "takich"
+          },
+          "nonvirile": {
+            "nom": "takie",
+            "gen": "takich",
+            "dat": "takim",
+            "acc": "takie",
+            "ins": "takimi",
+            "loc": "takich"
+          }
+        }
+      }
+    }
+  }
+}

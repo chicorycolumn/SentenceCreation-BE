@@ -1,0 +1,360 @@
+{
+  "inflections": {
+    "_pronombreAndDeterminer": {
+      "1per": {
+        "singular": {
+          "_PersonalSingularGenders": {
+            "singular": {
+              "m1": {
+                "nom": "mój",
+                "gen": "mojego",
+                "dat": "mojemu",
+                "acc": "mojego",
+                "ins": "moim",
+                "loc": "moim"
+              },
+              "m2": {
+                "nom": "mój",
+                "gen": "mojego",
+                "dat": "mojemu",
+                "acc": "mojego",
+                "ins": "moim",
+                "loc": "moim"
+              },
+              "m3": {
+                "nom": "mój",
+                "gen": "mojego",
+                "dat": "mojemu",
+                "acc": "mój",
+                "ins": "moim",
+                "loc": "moim"
+              },
+              "n": {
+                "nom": "moje",
+                "gen": "mojego",
+                "dat": "mojemu",
+                "acc": "moje",
+                "ins": "moim",
+                "loc": "moim"
+              },
+              "f": {
+                "nom": "moja",
+                "gen": "mojej",
+                "dat": "mojej",
+                "acc": "moją",
+                "ins": "moją",
+                "loc": "mojej"
+              }
+            },
+            "plural": {
+              "virile": {
+                "nom": "moi",
+                "gen": "moich",
+                "dat": "moim",
+                "acc": "moich",
+                "ins": "moimi",
+                "loc": "moich"
+              },
+              "nonvirile": {
+                "nom": "moje",
+                "gen": "moich",
+                "dat": "moim",
+                "acc": "moje",
+                "ins": "moimi",
+                "loc": "moich"
+              }
+            }
+          }
+        },
+        "plural": {
+          "_PluralGenders": {
+            "singular": {
+              "m1": {
+                "nom": "nasz",
+                "gen": "naszego",
+                "dat": "naszemu",
+                "acc": "naszego",
+                "ins": "naszym",
+                "loc": "naszym"
+              },
+              "m2": {
+                "nom": "nasz",
+                "gen": "naszego",
+                "dat": "naszemu",
+                "acc": "naszego",
+                "ins": "naszym",
+                "loc": "naszym"
+              },
+              "m3": {
+                "nom": "nasz",
+                "gen": "naszego",
+                "dat": "naszemu",
+                "acc": "nasz",
+                "ins": "naszym",
+                "loc": "naszym"
+              },
+              "n": {
+                "nom": "nasze",
+                "gen": "naszego",
+                "dat": "naszemu",
+                "acc": "nasze",
+                "ins": "naszym",
+                "loc": "naszym"
+              },
+              "f": {
+                "nom": "nasza",
+                "gen": "naszej",
+                "dat": "naszej",
+                "acc": "naszą",
+                "ins": "naszą",
+                "loc": "naszej"
+              }
+            },
+            "plural": {
+              "virile": {
+                "nom": "nasi",
+                "gen": "naszych",
+                "dat": "naszym",
+                "acc": "naszych",
+                "ins": "naszymi",
+                "loc": "naszych"
+              },
+              "nonvirile": {
+                "nom": "nasze",
+                "gen": "naszych",
+                "dat": "naszym",
+                "acc": "nasze",
+                "ins": "naszymi",
+                "loc": "naszych"
+              }
+            }
+          }
+        }
+      },
+      "2per": {
+        "singular": {
+          "_PersonalSingularGenders": {
+            "singular": {
+              "m1": {
+                "nom": "twój",
+                "gen": "twojego",
+                "dat": "twojemu",
+                "acc": "twojego",
+                "ins": "twoim",
+                "loc": "twoim"
+              },
+              "m2": {
+                "nom": "twój",
+                "gen": "twojego",
+                "dat": "twojemu",
+                "acc": "twojego",
+                "ins": "twoim",
+                "loc": "twoim"
+              },
+              "m3": {
+                "nom": "twój",
+                "gen": "twojego",
+                "dat": "twojemu",
+                "acc": "twój",
+                "ins": "twoim",
+                "loc": "twoim"
+              },
+              "n": {
+                "nom": "twoje",
+                "gen": "twojego",
+                "dat": "twojemu",
+                "acc": "twoje",
+                "ins": "twoim",
+                "loc": "twoim"
+              },
+              "f": {
+                "nom": "twoja",
+                "gen": "twojej",
+                "dat": "twojej",
+                "acc": "twoją",
+                "ins": "twoją",
+                "loc": "twojej"
+              }
+            },
+            "plural": {
+              "virile": {
+                "nom": "twoi",
+                "gen": "twoich",
+                "dat": "twoim",
+                "acc": "twoich",
+                "ins": "twoimi",
+                "loc": "twoich"
+              },
+              "nonvirile": {
+                "nom": "twoje",
+                "gen": "twoich",
+                "dat": "twoim",
+                "acc": "twoje",
+                "ins": "twoimi",
+                "loc": "twoich"
+              }
+            }
+          }
+        },
+        "plural": {
+          "_PluralGenders": {
+            "singular": {
+              "m1": {
+                "nom": "wasz",
+                "gen": "waszego",
+                "dat": "waszemu",
+                "acc": "waszego",
+                "ins": "waszym",
+                "loc": "waszym"
+              },
+              "m2": {
+                "nom": "wasz",
+                "gen": "waszego",
+                "dat": "waszemu",
+                "acc": "waszego",
+                "ins": "waszym",
+                "loc": "waszym"
+              },
+              "m3": {
+                "nom": "wasz",
+                "gen": "waszego",
+                "dat": "waszemu",
+                "acc": "wasz",
+                "ins": "waszym",
+                "loc": "waszym"
+              },
+              "n": {
+                "nom": "wasze",
+                "gen": "waszego",
+                "dat": "waszemu",
+                "acc": "wasze",
+                "ins": "waszym",
+                "loc": "waszym"
+              },
+              "f": {
+                "nom": "wasza",
+                "gen": "waszej",
+                "dat": "waszej",
+                "acc": "waszą",
+                "ins": "waszą",
+                "loc": "waszej"
+              }
+            },
+            "plural": {
+              "virile": {
+                "nom": "wasi",
+                "gen": "waszych",
+                "dat": "waszym",
+                "acc": "waszych",
+                "ins": "waszymi",
+                "loc": "waszych"
+              },
+              "nonvirile": {
+                "nom": "wasze",
+                "gen": "waszych",
+                "dat": "waszym",
+                "acc": "wasze",
+                "ins": "waszymi",
+                "loc": "waszych"
+              }
+            }
+          }
+        }
+      },
+      "3per": {
+        "singular": {
+          "_MasculineSingularGenders": {
+            "singular": {
+              "_SingularGenders": {
+                "nom": "jego",
+                "gen": "jego",
+                "dat": "jego",
+                "acc": "jego",
+                "ins": "jego",
+                "loc": "jego"
+              }
+            },
+            "plural": {
+              "_PluralGenders": {
+                "nom": "jego",
+                "gen": "jego",
+                "dat": "jego",
+                "acc": "jego",
+                "ins": "jego",
+                "loc": "jego"
+              }
+            }
+          },
+          "f": {
+            "singular": {
+              "_SingularGenders": {
+                "nom": "jej",
+                "gen": "jej",
+                "dat": "jej",
+                "acc": "jej",
+                "ins": "jej",
+                "loc": "jej"
+              }
+            },
+            "plural": {
+              "_PluralGenders": {
+                "nom": "jej",
+                "gen": "jej",
+                "dat": "jej",
+                "acc": "jej",
+                "ins": "jej",
+                "loc": "jej"
+              }
+            }
+          },
+          "n": {
+            "singular": {
+              "_SingularGenders": {
+                "nom": "jego",
+                "gen": "jego",
+                "dat": "jego",
+                "acc": "jego",
+                "ins": "jego",
+                "loc": "jego"
+              }
+            },
+            "plural": {
+              "_PluralGenders": {
+                "nom": "jego",
+                "gen": "jego",
+                "dat": "jego",
+                "acc": "jego",
+                "ins": "jego",
+                "loc": "jego"
+              }
+            }
+          }
+        },
+        "plural": {
+          "_PluralGenders": {
+            "singular": {
+              "_SingularGenders": {
+                "nom": "ich",
+                "gen": "ich",
+                "dat": "ich",
+                "acc": "ich",
+                "ins": "ich",
+                "loc": "ich"
+              }
+            },
+            "plural": {
+              "_PluralGenders": {
+                "nom": "ich",
+                "gen": "ich",
+                "dat": "ich",
+                "acc": "ich",
+                "ins": "ich",
+                "loc": "ich"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

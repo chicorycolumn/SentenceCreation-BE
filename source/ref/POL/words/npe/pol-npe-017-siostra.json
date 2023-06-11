@@ -1,0 +1,20 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "siostra",
+      "gen": "siostry",
+      "dat": "siostrze",
+      "acc": "siostrę",
+      "ins": "siostrą",
+      "loc": "siostrze"
+    },
+    "plural": {
+      "nom": "siostry",
+      "gen": "sióstr",
+      "dat": "siostrom",
+      "acc": "siostry",
+      "ins": "siostrami",
+      "loc": "siostrach"
+    }
+  }
+}

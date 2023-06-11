@@ -1,0 +1,86 @@
+{
+  "inflections": {
+    "infinitive": "mieć",
+    "verbal": {
+      "past": {
+        "impersonal": {
+          "singular": {
+            "_SingularGenders": "miano"
+          },
+          "plural": {
+            "_PluralGenders": "miano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "miałem",
+            "f": "miałam"
+          },
+          "plural": {
+            "virile": "mieliśmy",
+            "nonvirile": "miałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "miałeś",
+            "f": "miałaś"
+          },
+          "plural": {
+            "virile": "mieliście",
+            "nonvirile": "miałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "miał",
+            "f": "miała",
+            "n": "miało"
+          },
+          "plural": {
+            "virile": "mieli",
+            "nonvirile": "miały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": true,
+          "plural": true
+        },
+        "1per": {
+          "singular": {
+            "_SingularGendersExcludingNeuter": "mam"
+          },
+          "plural": {
+            "_PluralGenders": "mamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "_SingularGendersExcludingNeuter": "masz"
+          },
+          "plural": {
+            "_PluralGenders": "macie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "_SingularGenders": "ma"
+          },
+          "plural": {
+            "_PluralGenders": "mają"
+          }
+        }
+      },
+      "future": true,
+      "conditional": true,
+      "imperative": "miej"
+    },
+    "activeAdjectival": "mający",
+    "passiveAdjectival": false,
+    "contemporaryAdverbial": "mając",
+    "anteriorAdverbial": false,
+    "verbalNoun": false
+  }
+}

@@ -1,0 +1,39 @@
+[
+  {
+    "lemma": "be",
+    "id": "eng-ver-001-be-ß"
+  },
+  {
+    "lemma": "have",
+    "id": "eng-ver-002-have-ß"
+  },
+  {
+    "lemma": "read",
+    "id": "eng-ver-003-read"
+  },
+  {
+    "lemma": "research",
+    "id": "eng-ver-004-research"
+  },
+  {
+    "lemma": "write",
+    "id": "eng-ver-005-write"
+  },
+  {
+    "lemma": "give",
+    "id": "eng-ver-006-give"
+  },
+  {
+    "allohomInfo": {
+      "multipleWordtype": true,
+      "text": "emotional verb",
+      "emoji": "😑"
+    },
+    "lemma": "bear",
+    "id": "eng-ver-007-bear"
+  },
+  {
+    "lemma": "see",
+    "id": "eng-ver-008-see-ß"
+  }
+]

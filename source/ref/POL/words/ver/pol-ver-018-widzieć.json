@@ -1,0 +1,86 @@
+{
+  "inflections": {
+    "infinitive": "widzieć",
+    "verbal": {
+      "past": {
+        "impersonal": {
+          "singular": {
+            "_SingularGenders": "widziano"
+          },
+          "plural": {
+            "_PluralGenders": "widziano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "widziałem",
+            "f": "widziałam"
+          },
+          "plural": {
+            "virile": "widzieliśmy",
+            "nonvirile": "widziałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "widziałeś",
+            "f": "widziałaś"
+          },
+          "plural": {
+            "virile": "widzieliście",
+            "nonvirile": "widziałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "widział",
+            "f": "widziała",
+            "n": "widziało"
+          },
+          "plural": {
+            "virile": "widzieli",
+            "nonvirile": "widziały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": true,
+          "plural": true
+        },
+        "1per": {
+          "singular": {
+            "_SingularGendersExcludingNeuter": "widzę"
+          },
+          "plural": {
+            "_PluralGenders": "widzimy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "_SingularGendersExcludingNeuter": "widzisz"
+          },
+          "plural": {
+            "_PluralGenders": "widzicie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "_SingularGenders": "widzi"
+          },
+          "plural": {
+            "_PluralGenders": "widzą"
+          }
+        }
+      },
+      "future": true,
+      "conditional": true,
+      "imperative": "widź"
+    },
+    "activeAdjectival": "\twidzący",
+    "passiveAdjectival": "widziany",
+    "contemporaryAdverbial": "widząc",
+    "anteriorAdverbial": false,
+    "verbalNoun": "widzenie"
+  }
+}

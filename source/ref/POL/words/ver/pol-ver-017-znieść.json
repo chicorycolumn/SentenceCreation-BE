@@ -1,0 +1,86 @@
+{
+  "inflections": {
+    "infinitive": "znieść",
+    "verbal": {
+      "past": {
+        "impersonal": {
+          "singular": {
+            "_SingularGenders": "zniesiono"
+          },
+          "plural": {
+            "_PluralGenders": "zniesiono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zniósłem",
+            "f": "zniosłam"
+          },
+          "plural": {
+            "virile": "znieśliśmy",
+            "nonvirile": "zniosłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zniósłeś",
+            "f": "zniosłaś"
+          },
+          "plural": {
+            "virile": "znieśliście",
+            "nonvirile": "zniosłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zniósł",
+            "f": "zniosła",
+            "n": "zniosło"
+          },
+          "plural": {
+            "virile": "znieśli",
+            "nonvirile": "zniosły"
+          }
+        }
+      },
+      "present": false,
+      "future": {
+        "impersonal": {
+          "singular": true,
+          "plural": true
+        },
+        "1per": {
+          "singular": {
+            "_SingularGendersExcludingNeuter": "zniosę"
+          },
+          "plural": {
+            "_PluralGenders": "zniesiemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "_SingularGendersExcludingNeuter": "zniesiesz"
+          },
+          "plural": {
+            "_PluralGenders": "zniesiecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "_SingularGenders": "zniesie"
+          },
+          "plural": {
+            "_PluralGenders": "zniosą"
+          }
+        }
+      },
+      "conditional": true,
+      "imperative": "znieś"
+    },
+    "activeAdjectival": false,
+    "passiveAdjectival": "zniesiony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zniósłszy",
+    "verbalNoun": "zniesienie"
+  }
+}

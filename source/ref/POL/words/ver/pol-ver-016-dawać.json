@@ -1,0 +1,86 @@
+{
+  "inflections": {
+    "infinitive": "dawać",
+    "verbal": {
+      "past": {
+        "impersonal": {
+          "singular": {
+            "_SingularGenders": "dawano"
+          },
+          "plural": {
+            "_PluralGenders": "dawano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "dawałem",
+            "f": "dawałam"
+          },
+          "plural": {
+            "virile": "dawaliśmy",
+            "nonvirile": "dawałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "dawałeś",
+            "f": "dawałaś"
+          },
+          "plural": {
+            "virile": "dawaliście",
+            "nonvirile": "dawałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "dawał",
+            "f": "dawała",
+            "n": "dawało"
+          },
+          "plural": {
+            "virile": "dawali",
+            "nonvirile": "dawały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": true,
+          "plural": true
+        },
+        "1per": {
+          "singular": {
+            "_SingularGendersExcludingNeuter": "daję"
+          },
+          "plural": {
+            "_PluralGenders": "dajemy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "_SingularGendersExcludingNeuter": "dajesz"
+          },
+          "plural": {
+            "_PluralGenders": "dajecie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "_SingularGenders": "daje"
+          },
+          "plural": {
+            "_PluralGenders": "dają"
+          }
+        }
+      },
+      "future": true,
+      "conditional": true,
+      "imperative": "dawaj"
+    },
+    "activeAdjectival": "dający",
+    "passiveAdjectival": "dawany",
+    "contemporaryAdverbial": "dając",
+    "anteriorAdverbial": false,
+    "verbalNoun": "dawanie"
+  }
+}

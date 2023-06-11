@@ -1,0 +1,179 @@
+[
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "bear"
+      ]
+    },
+    "devHardcoded_tags": [
+      "allohomTesting2",
+      "animal"
+    ],
+    "lemma": "niedźwiedź",
+    "id": "pol-nco-914",
+    "gender": "m2"
+  },
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "onion"
+      ]
+    },
+    "devHardcoded_tags": [
+      "inanimate",
+      "edible",
+      "holdable",
+      "concrete"
+    ],
+    "lemma": "cebula",
+    "id": "pol-nco-904",
+    "gender": "f"
+  },
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "apple"
+      ]
+    },
+    "devHardcoded_tags": [
+      "inanimate",
+      "edible",
+      "holdable",
+      "concrete"
+    ],
+    "lemma": "jabłko",
+    "id": "pol-nco-905",
+    "gender": "n"
+  },
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "mirror"
+      ]
+    },
+    "devHardcoded_tags": [
+      "inanimate",
+      "holdable",
+      "concrete"
+    ],
+    "lemma": "lustro",
+    "id": "pol-nco-906",
+    "gender": "n"
+  },
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "mirror"
+      ]
+    },
+    "devHardcoded_tags": [
+      "inanimate",
+      "holdable",
+      "concrete"
+    ],
+    "lemma": "zwierciadło",
+    "id": "pol-nco-907",
+    "gender": "n"
+  },
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "book"
+      ]
+    },
+    "devHardcoded_tags": [
+      "inanimate",
+      "holdable",
+      "concrete"
+    ],
+    "lemma": "książka",
+    "id": "pol-nco-909",
+    "gender": "f"
+  },
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "door"
+      ]
+    },
+    "devHardcoded_tags": [
+      "inanimate",
+      "house",
+      "concrete"
+    ],
+    "lemma": "drzwi",
+    "id": "pol-nco-910",
+    "gender": "nonvirile",
+    "lacking": true,
+    "tantumPlurale": true
+  },
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "underwear",
+        "pants",
+        "underpants",
+        "briefs",
+        "panties"
+      ]
+    },
+    "devHardcoded_tags": [
+      "inanimate",
+      "holdable",
+      "concrete",
+      "wearable"
+    ],
+    "lemma": "majtki",
+    "id": "pol-nco-908",
+    "gender": "nonvirile",
+    "lacking": true,
+    "tantumPlurale": true
+  },
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "sheep"
+      ],
+      "POL": [
+        "owca"
+      ]
+    },
+    "devHardcoded_tags": [
+      "concrete",
+      "animal",
+      "animate",
+      "farmyard"
+    ],
+    "lemma": "owca",
+    "id": "pol-nco-911",
+    "gender": "f"
+  },
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "nut"
+      ]
+    },
+    "devHardcoded_tags": [
+      "allohomTesting",
+      "edible2"
+    ],
+    "lemma": "orzech",
+    "id": "pol-nco-912",
+    "gender": "m3"
+  },
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "nut"
+      ]
+    },
+    "devHardcoded_tags": [
+      "allohomTesting",
+      "toolbox"
+    ],
+    "lemma": "nakrętka",
+    "id": "pol-nco-913",
+    "gender": "f"
+  }
+]

@@ -1,0 +1,86 @@
+{
+  "inflections": {
+    "infinitive": "zbadać",
+    "verbal": {
+      "past": {
+        "impersonal": {
+          "singular": {
+            "_SingularGenders": "zbadano"
+          },
+          "plural": {
+            "_PluralGenders": "zbadano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zbadałem",
+            "f": "zbadałam"
+          },
+          "plural": {
+            "virile": "zbadaliśmy",
+            "nonvirile": "zbadałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zbadałeś",
+            "f": "zbadałaś"
+          },
+          "plural": {
+            "virile": "zbadaliście",
+            "nonvirile": "zbadałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zbadał",
+            "f": "zbadała",
+            "n": "zbadało"
+          },
+          "plural": {
+            "virile": "zbadali",
+            "nonvirile": "zbadały"
+          }
+        }
+      },
+      "present": false,
+      "future": {
+        "impersonal": {
+          "singular": true,
+          "plural": true
+        },
+        "1per": {
+          "singular": {
+            "_SingularGendersExcludingNeuter": "zbadam"
+          },
+          "plural": {
+            "_PluralGenders": "zbadamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "_SingularGendersExcludingNeuter": "zbadasz"
+          },
+          "plural": {
+            "_PluralGenders": "zbadacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "_SingularGenders": "zbada"
+          },
+          "plural": {
+            "_PluralGenders": "zbadają"
+          }
+        }
+      },
+      "conditional": true,
+      "imperative": "zbadaj"
+    },
+    "activeAdjectival": false,
+    "passiveAdjectival": "zbadany",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zbadawszy",
+    "verbalNoun": "zbadanie"
+  }
+}

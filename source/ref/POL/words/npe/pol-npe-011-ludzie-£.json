@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "plural": {
+      "nom": "ludzie",
+      "gen": "ludzi",
+      "dat": "ludziom",
+      "acc": "ludzi",
+      "ins": "ludźmi",
+      "loc": "ludziach"
+    }
+  }
+}

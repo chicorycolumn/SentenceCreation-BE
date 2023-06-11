@@ -1,0 +1,22 @@
+{
+  "inflections": {
+    "pronombre": {
+      "_Pers": {
+        "_Numbers": {
+          "_Genders": {
+            "_Gcases": "dlaczego"
+          }
+        }
+      }
+    },
+    "determiner": {
+      "_Pers": {
+        "_Numbers": {
+          "_Genders": {
+            "_Gcases": "dlatego"
+          }
+        }
+      }
+    }
+  }
+}

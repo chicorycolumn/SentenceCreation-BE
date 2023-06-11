@@ -1,0 +1,20 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "książka",
+      "gen": "książki",
+      "dat": "książce",
+      "acc": "książkę",
+      "ins": "książką",
+      "loc": "książce"
+    },
+    "plural": {
+      "nom": "książki",
+      "gen": "książek",
+      "dat": "książkom",
+      "acc": "książki",
+      "ins": "książkami",
+      "loc": "książkach"
+    }
+  }
+}

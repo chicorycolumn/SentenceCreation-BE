@@ -1,0 +1,86 @@
+{
+  "inflections": {
+    "infinitive": "badać",
+    "verbal": {
+      "past": {
+        "impersonal": {
+          "singular": {
+            "_SingularGenders": "badano"
+          },
+          "plural": {
+            "_PluralGenders": "badano"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "badałem",
+            "f": "badałam"
+          },
+          "plural": {
+            "virile": "badaliśmy",
+            "nonvirile": "badałyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "badałeś",
+            "f": "badałaś"
+          },
+          "plural": {
+            "virile": "badaliście",
+            "nonvirile": "badałyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "badał",
+            "f": "badała",
+            "n": "badało"
+          },
+          "plural": {
+            "virile": "badali",
+            "nonvirile": "badały"
+          }
+        }
+      },
+      "present": {
+        "impersonal": {
+          "singular": true,
+          "plural": true
+        },
+        "1per": {
+          "singular": {
+            "_SingularGendersExcludingNeuter": "badam"
+          },
+          "plural": {
+            "_PluralGenders": "badamy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "_SingularGendersExcludingNeuter": "badasz"
+          },
+          "plural": {
+            "_PluralGenders": "badacie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "_SingularGenders": "bada"
+          },
+          "plural": {
+            "_PluralGenders": "badają"
+          }
+        }
+      },
+      "future": true,
+      "conditional": true,
+      "imperative": "badaj"
+    },
+    "activeAdjectival": "badający",
+    "passiveAdjectival": "badany",
+    "contemporaryAdverbial": "badając",
+    "anteriorAdverbial": false,
+    "verbalNoun": "badanie"
+  }
+}

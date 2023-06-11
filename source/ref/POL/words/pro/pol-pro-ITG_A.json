@@ -1,0 +1,28 @@
+{
+  "inflections": {
+    "_pronombreAndDeterminer": {
+      "_Pers": {
+        "singular": {
+          "_SingularGenders": {
+            "nom": "co",
+            "gen": "czego",
+            "dat": "czym",
+            "acc": "co",
+            "ins": "czym",
+            "loc": "czym"
+          }
+        },
+        "plural": {
+          "_PluralGenders": {
+            "nom": "co",
+            "gen": "czego",
+            "dat": "czym",
+            "acc": "co",
+            "ins": "czym",
+            "loc": "czym"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "inflections": {
+    "infinitive": "zobaczyć",
+    "verbal": {
+      "past": {
+        "impersonal": {
+          "singular": {
+            "_SingularGenders": "zobaczono"
+          },
+          "plural": {
+            "_PluralGenders": "zobaczono"
+          }
+        },
+        "1per": {
+          "singular": {
+            "m": "zobaczyłem",
+            "f": "zobaczyłam"
+          },
+          "plural": {
+            "virile": "zobaczyliśmy",
+            "nonvirile": "zobaczyłyśmy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "m": "zobaczyłeś",
+            "f": "zobaczyłaś"
+          },
+          "plural": {
+            "virile": "zobaczyliście",
+            "nonvirile": "zobaczyłyście"
+          }
+        },
+        "3per": {
+          "singular": {
+            "m": "zobaczył",
+            "f": "zobaczyła",
+            "n": "zobaczyło"
+          },
+          "plural": {
+            "virile": "zobaczyli",
+            "nonvirile": "zobaczyły"
+          }
+        }
+      },
+      "present": false,
+      "future": {
+        "impersonal": {
+          "singular": true,
+          "plural": true
+        },
+        "1per": {
+          "singular": {
+            "_SingularGendersExcludingNeuter": "zobaczę"
+          },
+          "plural": {
+            "_PluralGenders": "zobaczymy"
+          }
+        },
+        "2per": {
+          "singular": {
+            "_SingularGendersExcludingNeuter": "zobaczysz"
+          },
+          "plural": {
+            "_PluralGenders": "zobaczycie"
+          }
+        },
+        "3per": {
+          "singular": {
+            "_SingularGenders": "zobaczy"
+          },
+          "plural": {
+            "_PluralGenders": "zobaczą"
+          }
+        }
+      },
+      "conditional": true,
+      "imperative": "zobacz"
+    },
+    "activeAdjectival": false,
+    "passiveAdjectival": "zobaczony",
+    "contemporaryAdverbial": false,
+    "anteriorAdverbial": "zobaczywszy",
+    "verbalNoun": "zobaczenie"
+  }
+}

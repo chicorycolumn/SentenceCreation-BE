@@ -1,0 +1,46 @@
+[
+  {
+    "lemma": "$PERSONAL",
+    "id": "eng-pro-PERSONAL"
+  },
+  {
+    "lemma": "$ITG_A",
+    "id": "eng-pro-ITG_A"
+  },
+  {
+    "lemma": "$ITG_B",
+    "id": "eng-pro-ITG_B"
+  },
+  {
+    "lemma": "$ITG_C",
+    "id": "eng-pro-ITG_C"
+  },
+  {
+    "lemma": "$ITG_D",
+    "id": "eng-pro-ITG_D"
+  },
+  {
+    "lemma": "$ITG_E",
+    "id": "eng-pro-ITG_E"
+  },
+  {
+    "lemma": "$ITG_F",
+    "id": "eng-pro-ITG_F"
+  },
+  {
+    "lemma": "$ITG_G",
+    "id": "eng-pro-ITG_G"
+  },
+  {
+    "lemma": "$ITG_J",
+    "id": "eng-pro-ITG_J"
+  },
+  {
+    "lemma": "$ITG_K",
+    "id": "eng-pro-ITG_K"
+  },
+  {
+    "lemma": "$POSSESSIVE",
+    "id": "eng-pro-POSSESSIVE"
+  }
+]

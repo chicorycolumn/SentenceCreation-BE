@@ -1,0 +1,20 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "owca",
+      "gen": "owcy",
+      "dat": "owcy",
+      "acc": "owcę",
+      "ins": "owcą",
+      "loc": "owcy"
+    },
+    "plural": {
+      "nom": "owce",
+      "gen": "owiec",
+      "dat": "owcom",
+      "acc": "owce",
+      "ins": "owcami",
+      "loc": "owcach"
+    }
+  }
+}

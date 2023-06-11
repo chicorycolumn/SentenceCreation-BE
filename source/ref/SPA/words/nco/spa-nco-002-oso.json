@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "oso",
+      "gen": "del oso"
+    },
+    "plural": {
+      "nom": "osos",
+      "gen": "de los osos"
+    }
+  }
+}

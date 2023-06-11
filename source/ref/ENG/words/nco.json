@@ -1,0 +1,75 @@
+[
+  {
+    "allohomInfo": {
+      "multipleWordtype": true,
+      "text": "animal",
+      "emoji": "🐻"
+    },
+    "lemma": "bear",
+    "id": "eng-nco-001-bear",
+    "gender": "n"
+  },
+  {
+    "lemma": "onion",
+    "id": "eng-nco-002-onion",
+    "gender": "n"
+  },
+  {
+    "lemma": "tomato",
+    "id": "eng-nco-003-tomato",
+    "gender": "n"
+  },
+  {
+    "lemma": "apple",
+    "id": "eng-nco-004-apple",
+    "gender": "n"
+  },
+  {
+    "lemma": "mirror",
+    "id": "eng-nco-005-mirror",
+    "gender": "n"
+  },
+  {
+    "lemma": "book",
+    "id": "eng-nco-006-book",
+    "gender": "n"
+  },
+  {
+    "lemma": "door",
+    "id": "eng-nco-007-door",
+    "gender": "n"
+  },
+  {
+    "lemma": "sheep",
+    "id": "eng-nco-008-sheep",
+    "gender": "n"
+  },
+  {
+    "lemma": "dust",
+    "id": "eng-nco-009-dust",
+    "gender": "n",
+    "lacking": true,
+    "tantumSingulare": true
+  },
+  {
+    "lemma": "underwear",
+    "id": "eng-nco-010-underwear",
+    "gender": "n"
+  },
+  {
+    "lemma": "rat",
+    "id": "eng-nco-011-rat",
+    "gender": "n"
+  },
+  {
+    "lemma": "tweezers",
+    "id": "eng-nco-012-tweezers",
+    "gender": "n",
+    "lacking": true,
+    "tantumPlurale": true,
+    "tantumCountNoun": {
+      "singular": "pair",
+      "plural": "pairs"
+    }
+  }
+]

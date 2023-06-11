@@ -1,0 +1,180 @@
+[
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "onion"
+      ],
+      "POL": [
+        "cebula"
+      ]
+    },
+    "devHardcoded_tags": [
+      "inanimate",
+      "edible",
+      "holdable",
+      "concrete"
+    ],
+    "lemma": "onion",
+    "id": "eng-nco-902",
+    "gender": "n"
+  },
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "apple"
+      ],
+      "POL": [
+        "jabłko"
+      ]
+    },
+    "devHardcoded_tags": [
+      "inanimate",
+      "edible",
+      "holdable",
+      "concrete"
+    ],
+    "lemma": "apple",
+    "id": "eng-nco-902",
+    "gender": "n"
+  },
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "mirror"
+      ],
+      "POL": [
+        "lustro",
+        "zwierciadło"
+      ]
+    },
+    "devHardcoded_tags": [
+      "inanimate",
+      "holdable",
+      "concrete"
+    ],
+    "lemma": "mirror",
+    "id": "eng-nco-905",
+    "gender": "n"
+  },
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "book"
+      ],
+      "POL": [
+        "książka"
+      ]
+    },
+    "devHardcoded_tags": [
+      "inanimate",
+      "holdable",
+      "concrete"
+    ],
+    "lemma": "book",
+    "id": "eng-nco-906",
+    "gender": "n"
+  },
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "door"
+      ],
+      "POL": [
+        "drzwi"
+      ]
+    },
+    "devHardcoded_tags": [
+      "inanimate",
+      "holdable",
+      "concrete"
+    ],
+    "lemma": "door",
+    "id": "eng-nco-907",
+    "gender": "n"
+  },
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "sheep"
+      ],
+      "POL": [
+        "owca"
+      ]
+    },
+    "devHardcoded_tags": [
+      "animate",
+      "animal",
+      "farmyard",
+      "concrete"
+    ],
+    "lemma": "sheep",
+    "id": "eng-nco-908",
+    "gender": "n"
+  },
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "nut"
+      ],
+      "POL": [
+        "orzech"
+      ]
+    },
+    "devHardcoded_tags": [
+      "allohomTesting",
+      "edible2"
+    ],
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "food",
+      "emoji": "🥜"
+    },
+    "lemma": "nut",
+    "id": "eng-nco-909",
+    "gender": "n"
+  },
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "nut"
+      ],
+      "POL": [
+        "nakrętka"
+      ]
+    },
+    "devHardcoded_tags": [
+      "allohomTesting",
+      "toolbox"
+    ],
+    "allohomInfo": {
+      "singleWordtype": true,
+      "text": "metal",
+      "emoji": "🔩"
+    },
+    "lemma": "nut",
+    "id": "eng-nco-910",
+    "gender": "n"
+  },
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "bear"
+      ],
+      "POL": [
+        "niedźwiedź"
+      ]
+    },
+    "devHardcoded_tags": [
+      "allohomTesting2",
+      "animal"
+    ],
+    "allohomInfo": {
+      "multipleWordtype": true,
+      "text": "animal",
+      "emoji": "🐻"
+    },
+    "lemma": "bear",
+    "id": "eng-nco-901",
+    "gender": "n"
+  }
+]

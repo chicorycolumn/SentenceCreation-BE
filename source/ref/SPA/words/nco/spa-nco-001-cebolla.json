@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "cebolla",
+      "gen": "de la cebolla"
+    },
+    "plural": {
+      "nom": "cebollas",
+      "gen": "de las cebollas"
+    }
+  }
+}

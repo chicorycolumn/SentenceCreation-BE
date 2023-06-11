@@ -1,0 +1,28 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pomidor",
+      "gen": "pomidora",
+      "dat": "pomidorowi",
+      "acc": {
+        "isTerminus": true,
+        "normal": [
+          "pomidor"
+        ],
+        "additionalFrequent": [
+          "pomidora"
+        ]
+      },
+      "ins": "pomidorem",
+      "loc": "pomidorze"
+    },
+    "plural": {
+      "nom": "pomidory",
+      "gen": "pomidorów",
+      "dat": "pomidorom",
+      "acc": "pomidory",
+      "ins": "pomidorami",
+      "loc": "pomidorach"
+    }
+  }
+}

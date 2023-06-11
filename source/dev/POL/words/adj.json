@@ -1,0 +1,38 @@
+[
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "red"
+      ]
+    },
+    "devHardcoded_tags": [
+      "colour"
+    ],
+    "lemma": "czerwony",
+    "id": "pol-adj-901"
+  },
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "red"
+      ]
+    },
+    "devHardcoded_tags": [
+      "colour2"
+    ],
+    "lemma": "niebieski",
+    "id": "pol-adj-902"
+  },
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "small"
+      ]
+    },
+    "devHardcoded_tags": [
+      "size"
+    ],
+    "lemma": "mały",
+    "id": "pol-adj-903"
+  }
+]

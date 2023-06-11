@@ -1,0 +1,73 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "mały",
+          "gen": "małego",
+          "dat": "małemu",
+          "acc": "małego",
+          "ins": "małym",
+          "loc": "małym"
+        },
+        "m3": {
+          "nom": "mały",
+          "gen": "małego",
+          "dat": "małemu",
+          "acc": "mały",
+          "ins": "małym",
+          "loc": "małym"
+        },
+        "f": {
+          "nom": "mała",
+          "gen": "małej",
+          "dat": "małej",
+          "acc": "małą",
+          "ins": "małą",
+          "loc": "małej"
+        },
+        "n": {
+          "nom": "małe",
+          "gen": "małego",
+          "dat": "małemu",
+          "acc": "małe",
+          "ins": "małym",
+          "loc": "małym"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "mali",
+          "gen": "małych",
+          "dat": "małym",
+          "acc": "małych",
+          "ins": "małymi",
+          "loc": "małych"
+        },
+        "nonvirile": {
+          "nom": "małe",
+          "gen": "małych",
+          "dat": "małym",
+          "acc": "małe",
+          "ins": "małymi",
+          "loc": "małych"
+        }
+      }
+    },
+    "comparative": {
+      "isTerminus": true,
+      "normal": [
+        "mniejszy"
+      ],
+      "isRegular": true
+    },
+    "superlative": {
+      "isTerminus": true,
+      "normal": [
+        "najmniejszy"
+      ],
+      "isRegular": true
+    },
+    "adverb": "mało"
+  }
+}

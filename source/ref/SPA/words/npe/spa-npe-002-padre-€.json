@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "padre",
+      "gen": "del padre"
+    },
+    "plural": {
+      "nom": "padres",
+      "gen": "de los padres"
+    }
+  }
+}

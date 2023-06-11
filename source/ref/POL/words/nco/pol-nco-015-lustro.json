@@ -1,0 +1,20 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "lustro",
+      "gen": "lustra",
+      "dat": "lustru",
+      "acc": "lustro",
+      "ins": "lustrem",
+      "loc": "lustrze"
+    },
+    "plural": {
+      "nom": "lustra",
+      "gen": "luster",
+      "dat": "lustrom",
+      "acc": "lustra",
+      "ins": "lustrami",
+      "loc": "lustrach"
+    }
+  }
+}

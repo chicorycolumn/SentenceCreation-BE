@@ -1,0 +1,130 @@
+[
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "be"
+      ],
+      "POL": [
+        "być"
+      ]
+    },
+    "devHardcoded_tags": [
+      "basic",
+      "identity"
+    ],
+    "lemma": "być",
+    "id": "pol-ver-900-im-01",
+    "aspect": "imperfective",
+    "lacking": true,
+    "complete": true,
+    "imperfectiveOnly_unadjusted": true
+  },
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "have"
+      ]
+    },
+    "devHardcoded_tags": [
+      "basic",
+      "possession"
+    ],
+    "lemma": "mieć",
+    "id": "pol-ver-901-im-01",
+    "aspect": "imperfective",
+    "lacking": true,
+    "imperfectiveOnly_unadjusted": true
+  },
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "write"
+      ]
+    },
+    "devHardcoded_tags": [
+      "basic3"
+    ],
+    "lemma": "pisać",
+    "id": "pol-ver-904-im-01",
+    "aspect": "imperfective"
+  },
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "write"
+      ]
+    },
+    "devHardcoded_tags": [
+      "basic3"
+    ],
+    "lemma": "napisać",
+    "id": "pol-ver-904-pf-01",
+    "aspect": "perfective"
+  },
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "read"
+      ]
+    },
+    "devHardcoded_tags": [
+      "basic2"
+    ],
+    "lemma": "czytać",
+    "id": "pol-ver-902-im-01",
+    "aspect": "imperfective"
+  },
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "read"
+      ]
+    },
+    "devHardcoded_tags": [
+      "basic2"
+    ],
+    "lemma": "przeczytać",
+    "id": "pol-ver-902-pf-01",
+    "aspect": "perfective"
+  },
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "research"
+      ]
+    },
+    "devHardcoded_tags": [
+      "science"
+    ],
+    "lemma": "badać",
+    "id": "pol-ver-903-im-01",
+    "aspect": "imperfective"
+  },
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "research"
+      ]
+    },
+    "devHardcoded_tags": [
+      "science"
+    ],
+    "lemma": "zbadać",
+    "id": "pol-ver-903-pf-01",
+    "aspect": "perfective"
+  },
+  {
+    "devHardcoded_translations": {
+      "ENG": [
+        "bear"
+      ]
+    },
+    "devHardcoded_tags": [
+      "allohomTesting2",
+      "emotions"
+    ],
+    "lemma": "znieść",
+    "id": "pol-ver-905-pf-01",
+    "aspect": "perfective"
+  }
+]

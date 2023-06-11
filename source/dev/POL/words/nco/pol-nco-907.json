@@ -1,0 +1,20 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "zwierciadło",
+      "gen": "zwierciadła",
+      "dat": "zwierciadłu",
+      "acc": "zwierciadło",
+      "ins": "zwierciadłem",
+      "loc": "zwierciadle"
+    },
+    "plural": {
+      "nom": "zwierciadła",
+      "gen": "zwierciadeł",
+      "dat": "zwierciadłom",
+      "acc": "zwierciadła",
+      "ins": "zwierciadłami",
+      "loc": "zwierciadłach"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "inflections": {
+    "infinitive": "be",
+    "v2": {
+      "isTerminus": true,
+      "normal": [
+        "was",
+        "were"
+      ]
+    },
+    "v3": "been",
+    "thirdPS": "is",
+    "gerund": "being"
+  }
+}

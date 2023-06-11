@@ -1,0 +1,20 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "dziewczyna",
+      "gen": "dziewczyny",
+      "dat": "dziewczynie",
+      "acc": "dziewczynę",
+      "ins": "dziewczyną",
+      "loc": "dziewczynie"
+    },
+    "plural": {
+      "nom": "dziewczyny",
+      "gen": "dziewczyn",
+      "dat": "dziewczynom",
+      "acc": "dziewczyny",
+      "ins": "dziewczynami",
+      "loc": "dziewczynach"
+    }
+  }
+}

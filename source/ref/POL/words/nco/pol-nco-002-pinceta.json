@@ -1,0 +1,20 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "pinceta",
+      "gen": "pincety",
+      "dat": "pincecie",
+      "acc": "pincetę",
+      "ins": "pincetą",
+      "loc": "pincecie"
+    },
+    "plural": {
+      "nom": "pincety",
+      "gen": "pincet",
+      "dat": "pincetom",
+      "acc": "pincety",
+      "ins": "pincetami",
+      "loc": "pincetach"
+    }
+  }
+}

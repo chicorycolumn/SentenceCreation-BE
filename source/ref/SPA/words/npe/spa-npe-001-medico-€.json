@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "medico",
+      "gen": "del medico"
+    },
+    "plural": {
+      "nom": "medicos",
+      "gen": "de los medicos"
+    }
+  }
+}

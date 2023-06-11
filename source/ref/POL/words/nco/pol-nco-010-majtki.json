@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "plural": {
+      "nom": "majtki",
+      "gen": "majtek",
+      "dat": "majtkom",
+      "acc": "majtki",
+      "ins": "majtkami",
+      "loc": "majtkach"
+    }
+  }
+}

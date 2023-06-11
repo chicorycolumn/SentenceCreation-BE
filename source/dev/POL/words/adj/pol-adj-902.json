@@ -1,0 +1,73 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m1": {
+          "nom": "niebieski",
+          "gen": "niebieskiego",
+          "dat": "niebieskiemu",
+          "acc": "niebieskiego",
+          "ins": "niebieskim",
+          "loc": "niebieskim"
+        },
+        "m3": {
+          "nom": "niebieski",
+          "gen": "niebieskiego",
+          "dat": "niebieskiemu",
+          "acc": "niebieski",
+          "ins": "niebieskim",
+          "loc": "niebieskim"
+        },
+        "f": {
+          "nom": "niebieska",
+          "gen": "niebieskiej",
+          "dat": "niebieskiej",
+          "acc": "niebieską",
+          "ins": "niebieską",
+          "loc": "niebieskiej"
+        },
+        "n": {
+          "nom": "niebieskie",
+          "gen": "niebieskiego",
+          "dat": "niebieskiemu",
+          "acc": "niebieskie",
+          "ins": "niebieskim",
+          "loc": "niebieskim"
+        }
+      },
+      "plural": {
+        "virile": {
+          "nom": "niebiescy",
+          "gen": "niebieskich",
+          "dat": "niebieskim",
+          "acc": "niebieskich",
+          "ins": "niebieskimi",
+          "loc": "niebieskich"
+        },
+        "nonvirile": {
+          "nom": "niebieskie",
+          "gen": "niebieskich",
+          "dat": "niebieskim",
+          "acc": "niebieskie",
+          "ins": "niebieskimi",
+          "loc": "niebieskich"
+        }
+      }
+    },
+    "comparative": {
+      "isTerminus": true,
+      "normal": [
+        ""
+      ],
+      "isRegular": true
+    },
+    "superlative": {
+      "isTerminus": true,
+      "normal": [
+        ""
+      ],
+      "isRegular": true
+    },
+    "adverb": "niebiesko"
+  }
+}

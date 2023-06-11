@@ -1,0 +1,73 @@
+[
+  {
+    "lemma": "dawać",
+    "id": "pol-ver-016-dawać",
+    "aspect": "imperfective"
+  },
+  {
+    "lemma": "dać",
+    "id": "pol-ver-016-dać",
+    "aspect": "perfective"
+  },
+  {
+    "lemma": "być",
+    "id": "pol-ver-011-być",
+    "aspect": "_imOnly",
+    "lacking": true,
+    "complete": true,
+    "imperfectiveOnly_unadjusted": true
+  },
+  {
+    "lemma": "mieć",
+    "id": "pol-ver-012-mieć",
+    "aspect": "_imOnly",
+    "lacking": true,
+    "complete": false,
+    "imperfectiveOnly_unadjusted": true
+  },
+  {
+    "lemma": "pisać",
+    "id": "pol-ver-015-pisać",
+    "aspect": "imperfective"
+  },
+  {
+    "lemma": "napisać",
+    "id": "pol-ver-015-napisać",
+    "aspect": "perfective"
+  },
+  {
+    "lemma": "czytać",
+    "id": "pol-ver-013-czytać",
+    "aspect": "imperfective"
+  },
+  {
+    "lemma": "przeczytać",
+    "id": "pol-ver-013-przeczytać",
+    "aspect": "perfective"
+  },
+  {
+    "lemma": "badać",
+    "id": "pol-ver-014-badać",
+    "aspect": "imperfective"
+  },
+  {
+    "lemma": "zbadać",
+    "id": "pol-ver-014-zbadać",
+    "aspect": "perfective"
+  },
+  {
+    "lemma": "widzieć",
+    "id": "pol-ver-018-widzieć",
+    "aspect": "imperfective"
+  },
+  {
+    "lemma": "zobaczyć",
+    "id": "pol-ver-018-zobaczyć",
+    "aspect": "perfective"
+  },
+  {
+    "lemma": "znieść",
+    "id": "pol-ver-017-znieść",
+    "aspect": "perfective"
+  }
+]

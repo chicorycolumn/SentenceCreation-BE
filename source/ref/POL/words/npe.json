@@ -1,0 +1,78 @@
+[
+  {
+    "lemma": "kobieta",
+    "id": "pol-npe-011-kobieta",
+    "gender": "f"
+  },
+  {
+    "lemma": "osoba",
+    "id": "pol-npe-011-osoba-£",
+    "gender": "f",
+    "semanticGender": "_PersonalGenders"
+  },
+  {
+    "lemma": "ludzie",
+    "id": "pol-npe-011-ludzie-£",
+    "gender": "m1",
+    "semanticGender": "_PersonalGenders",
+    "lacking": true
+  },
+  {
+    "lemma": "mężczyzna",
+    "id": "pol-npe-011-mężczyzna",
+    "gender": "m1"
+  },
+  {
+    "lemma": "ojciec",
+    "id": "pol-npe-013-ojciec",
+    "gender": "m1"
+  },
+  {
+    "lemma": "matka",
+    "id": "pol-npe-013-matka",
+    "gender": "f"
+  },
+  {
+    "lemma": "rodzic",
+    "id": "pol-npe-013-rodzic-£",
+    "gender": "m1",
+    "semanticGender": "_PersonalGenders"
+  },
+  {
+    "lemma": "chłopiec",
+    "id": "pol-npe-012-chłopiec",
+    "gender": "m1"
+  },
+  {
+    "lemma": "dziewczyna",
+    "id": "pol-npe-012-dziewczyna",
+    "gender": "f"
+  },
+  {
+    "lemma": "dziecko",
+    "id": "pol-npe-012-dziecko-£",
+    "gender": "n",
+    "semanticGender": "_PersonalGenders"
+  },
+  {
+    "lemma": "lekarz",
+    "id": "pol-npe-015-lekarz-€",
+    "gender": "m1",
+    "semanticGender": "_VypernymGenders"
+  },
+  {
+    "lemma": "lekarka",
+    "id": "pol-npe-015-lekarka",
+    "gender": "f"
+  },
+  {
+    "lemma": "brat",
+    "id": "pol-npe-017-brat",
+    "gender": "m1"
+  },
+  {
+    "lemma": "siostra",
+    "id": "pol-npe-017-siostra",
+    "gender": "f"
+  }
+]

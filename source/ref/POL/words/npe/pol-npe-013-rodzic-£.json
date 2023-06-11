@@ -1,0 +1,20 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "rodzic",
+      "gen": "rodzica",
+      "dat": "rodzicowi",
+      "acc": "rodzica",
+      "ins": "rodzicem",
+      "loc": "rodzicu"
+    },
+    "plural": {
+      "nom": "rodzice",
+      "gen": "rodziców",
+      "dat": "rodzicom",
+      "acc": "rodziców",
+      "ins": "rodzicami",
+      "loc": "rodzicach"
+    }
+  }
+}

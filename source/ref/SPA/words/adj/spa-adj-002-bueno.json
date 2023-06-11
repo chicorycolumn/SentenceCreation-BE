@@ -1,0 +1,17 @@
+{
+  "inflections": {
+    "simple": {
+      "singular": {
+        "m": "bueno",
+        "f": "buena"
+      },
+      "plural": {
+        "virile": "buenos",
+        "nonvirile": "buenas"
+      }
+    },
+    "comparative": "mejor",
+    "superlative": true,
+    "adverb": "bien"
+  }
+}

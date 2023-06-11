@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "singular": {
+      "nom": "medica",
+      "gen": "de la medica"
+    },
+    "plural": {
+      "nom": "medicas",
+      "gen": "de las medicas"
+    }
+  }
+}

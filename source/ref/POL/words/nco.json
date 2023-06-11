@@ -1,0 +1,71 @@
+[
+  {
+    "lemma": "niedźwiedź",
+    "id": "pol-nco-011-niedźwiedź",
+    "gender": "m2"
+  },
+  {
+    "lemma": "cebula",
+    "id": "pol-nco-012-cebula",
+    "gender": "f"
+  },
+  {
+    "lemma": "jabłko",
+    "id": "pol-nco-014-jabłko",
+    "gender": "n"
+  },
+  {
+    "lemma": "pomidor",
+    "id": "pol-nco-013-pomidor",
+    "gender": "m2"
+  },
+  {
+    "lemma": "pył",
+    "id": "pol-nco-019-pył",
+    "gender": "m3"
+  },
+  {
+    "lemma": "lustro",
+    "id": "pol-nco-015-lustro",
+    "gender": "n"
+  },
+  {
+    "lemma": "zwierciadło",
+    "id": "pol-nco-004-zwierciadło",
+    "gender": "n"
+  },
+  {
+    "lemma": "książka",
+    "id": "pol-nco-016-książka",
+    "gender": "f"
+  },
+  {
+    "lemma": "drzwi",
+    "id": "pol-nco-017-drzwi",
+    "gender": "nonvirile",
+    "lacking": true,
+    "tantumPlurale": true
+  },
+  {
+    "lemma": "majtki",
+    "id": "pol-nco-010-majtki",
+    "gender": "nonvirile",
+    "lacking": true,
+    "tantumPlurale": true
+  },
+  {
+    "lemma": "owca",
+    "id": "pol-nco-018-owca",
+    "gender": "f"
+  },
+  {
+    "lemma": "szczur",
+    "id": "pol-nco-001-szczur",
+    "gender": "m2"
+  },
+  {
+    "lemma": "pinceta",
+    "id": "pol-nco-002-pinceta",
+    "gender": "f"
+  }
+]

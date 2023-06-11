@@ -1,0 +1,12 @@
+{
+  "inflections": {
+    "plural": {
+      "nom": "drzwi",
+      "gen": "drzwi",
+      "dat": "drzwiom",
+      "acc": "drzwi",
+      "ins": "drzwiami",
+      "loc": "drzwiach"
+    }
+  }
+}
