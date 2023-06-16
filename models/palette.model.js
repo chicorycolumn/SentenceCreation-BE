@@ -101,7 +101,7 @@ exports.fetchPalette = (req) => {
     return timeOutCheck;
   }
 
-  let { sentenceFormula, words } = scUtils.getMaterialsCopies(
+  let sentenceFormula = scUtils.getMaterialsCopies(
     env,
     questionLanguage,
     sentenceFormulaId,
@@ -412,15 +412,17 @@ exports.fetchPalette = (req) => {
     }
 
     equivalents.forEach((formulaIdOrFormula, index) => {
-      let { sentenceFormula, words } = scUtils.getMaterialsCopies(
-        env,
-        answerLanguage,
-        formulaIdOrFormula,
-        useDummy,
-        uUtils.isKeyValueTypeObject(formulaIdOrFormula)
-          ? formulaIdOrFormula
-          : null
-      );
+      let sentenceFormula;
+      if (uUtils.isKeyValueTypeObject(formulaIdOrFormula)) {
+        sentenceFormula = formulaIdOrFormula;
+      } else {
+        sentenceFormula = scUtils.getMaterialsCopies(
+          env,
+          answerLanguage,
+          formulaIdOrFormula,
+          useDummy
+        );
+      }
 
       let answerSentenceFormula = sentenceFormula;
 

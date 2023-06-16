@@ -27,11 +27,10 @@ exports.getSentenceFormulas = (questionFormulaId, answerLanguage, env) => {
   ivUtils.validateLang(questionLanguage, 14);
   ivUtils.validateLang(answerLanguage, 15);
 
-  let questionSentenceFormulasBank = scUtils.getWordsAndFormulas(
+  let questionSentenceFormulasBank = scUtils.grabFormulas(
     questionLanguage,
-    env,
     false,
-    true
+    env
   ).sentenceFormulasBank;
 
   const getFormulaById = (bank, id, label) => {
@@ -57,11 +56,10 @@ exports.getSentenceFormulas = (questionFormulaId, answerLanguage, env) => {
     env
   );
 
-  let answerSentenceFormulasBank = scUtils.getWordsAndFormulas(
+  let answerSentenceFormulasBank = scUtils.grabFormulas(
     answerLanguage,
-    env,
     false,
-    true
+    env
   ).sentenceFormulasBank;
 
   let answerSentenceFormulas = answerSentenceFormulaIds.map(
@@ -548,18 +546,28 @@ exports.getLObjsForLemma = (lang, lemma, env = "ref") => {
   ivUtils.validateLang(lang, 13);
 
   matches = [];
-  let { wordsBank } = scUtils.getWordsAndFormulas(lang, env, true);
-  Object.keys(wordsBank).forEach((wordtype) => {
-    wordSet = wordsBank[wordtype];
-    wordSet.forEach((lObj) => {
-      if (
-        lObj.lemma === lemma ||
-        uUtils.valueInObject(lObj.inflections, lemma)
-      ) {
-        matches.push(lObj);
-      }
+
+  const fs = require("fs");
+  let files = fs.readdirSync(`source/${env}/${lang}/words`);
+  files
+    .filter((file) => file.split(".")[1] === "json")
+    .forEach((file) => {
+      console.log({ file });
+      let { wordsBank } = scUtils.grabWordsByWordtype(
+        lang,
+        file.split(".")[0],
+        env
+      );
+      wordsBank.forEach((lObj) => {
+        if (
+          lObj.lemma === lemma ||
+          uUtils.valueInObject(scUtils.grabWordInflections(lObj.id, env), lemma)
+        ) {
+          matches.push(lObj);
+        }
+      });
     });
-  });
+
   return matches;
 };
 

@@ -14,45 +14,62 @@ const nexusUtils = require("./secondOrder/nexusUtils.js");
 const eaUtils = require("./extraAttributeUtils.js");
 const { HY } = refObj;
 
-exports.getWordsAndFormulas = (
-  currentLanguage,
-  envir = "ref",
-  wordsOnly,
-  formulasOnly
-) => {
-  if (formulasOnly) {
+exports.grabFormulas = (lang, useDummy, envir = "ref") => {
+  lang = lang.toUpperCase();
+
+  const {
+    sentenceFormulasBank,
+  } = require(`../source/${envir}/${lang}/sentenceFormulas.js`);
+
+  if (useDummy) {
     const {
-      sentenceFormulasBank,
-    } = require(`../source/${envir}/${currentLanguage}/sentenceFormulas.js`);
-    return { sentenceFormulasBank };
+      dummySentenceFormulasBank,
+    } = require(`../source/${envir}/${lang}/dummy/dummySentenceFormulas.js`);
+
+    return { sentenceFormulasBank, dummySentenceFormulasBank };
   }
 
+  return { sentenceFormulasBank };
+};
+
+exports.grabWordsByWordtype = (lang, wordtype, envir = "ref") => {
+  lang = lang.toUpperCase();
+  const data = require(`../source/${envir}/${lang}/words/${wordtype}.json`);
+  if (!data) {
+    console.log(
+      `rhob Failed to find lemma object data for for lang="${lang}" wordtype="${wordtype}" envir="${envir}"`
+    );
+  }
+  return { wordsBank: data };
+};
+
+exports.grabWordInflections = (lObjId, envir = "ref") => {
+  let data = scUtils._grabFurtherWordInfo(lObjId, envir);
+  return data.inflections;
+};
+
+exports.grabWordExtra = (lObjId, envir = "ref") => {
+  let data = scUtils._grabFurtherWordInfo(lObjId, envir);
+  return data.extra;
+};
+
+exports._grabFurtherWordInfo = (lObjId, envir = "ref") => {
+  let split = lObjId.split("-");
+  let lang = split[0].toUpperCase();
+  let wordtype = split[1];
+  const data = require(`../source/${envir}/${lang}/words/${wordtype}/${lObjId}.json`);
+  if (!data) {
+    console.log(`rhoc Failed to find lemma object data for for ${lObjId}`);
+  }
+  return data;
+};
+
+exports.getWordsOnly = (currentLanguage, envir = "ref") => {
   const {
     wordsBank,
   } = require(`../source/${envir}/${currentLanguage}/words.js`);
 
-  if (wordsOnly) {
-    return { wordsBank };
-  }
-
-  const {
-    dummyWordsBank,
-  } = require(`../source/${envir}/${currentLanguage}/dummy/dummyWords.js`);
-
-  const {
-    sentenceFormulasBank,
-  } = require(`../source/${envir}/${currentLanguage}/sentenceFormulas.js`);
-
-  const {
-    dummySentenceFormulasBank,
-  } = require(`../source/${envir}/${currentLanguage}/dummy/dummySentenceFormulas.js`);
-
-  return {
-    wordsBank,
-    dummyWordsBank,
-    sentenceFormulasBank,
-    dummySentenceFormulasBank,
-  };
+  return { wordsBank };
 };
 
 exports.getMaterialsCopies = (
@@ -62,29 +79,26 @@ exports.getMaterialsCopies = (
   useDummy,
   sentenceFormulaFromEducator
 ) => {
-  if (!sentenceFormulaId) {
-    sentenceFormulaId = `${currentLanguage}-default`;
-  }
+  const { wordsBank, dummyWordsBank } = scUtils.getWordsOnly(
+    currentLanguage,
+    env
+  );
 
-  //STEP ZERO (A): Get necessary source materials.
-  let wordsOnly = !!sentenceFormulaFromEducator;
-
-  const {
-    wordsBank,
-    dummyWordsBank,
-    sentenceFormulasBank,
-    dummySentenceFormulasBank,
-  } = scUtils.getWordsAndFormulas(currentLanguage, env, wordsOnly);
-
-  if (wordsOnly) {
+  if (sentenceFormulaFromEducator) {
     return {
       words: wordsBank,
       sentenceFormula: uUtils.copyWithoutReference(sentenceFormulaFromEducator),
     };
   }
 
+  if (!sentenceFormulaId) {
+    sentenceFormulaId = `${currentLanguage}-default`;
+  }
+
+  const { sentenceFormulasBank, dummySentenceFormulasBank } =
+    scUtils.grabFormulas(currentLanguage, useDummy, env);
+
   let sentenceFormula;
-  const langUtils = require(`../source/all/${currentLanguage}/langUtils.js`);
 
   let words = useDummy
     ? gpUtils.combineWordbanks(wordsBank, dummyWordsBank)
