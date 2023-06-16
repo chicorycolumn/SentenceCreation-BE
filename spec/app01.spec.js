@@ -28,16 +28,6 @@ describe("/api", function () {
   // after(() => {});
   // beforeEach(() => {});
 
-  let originalCopies = require("./originalCopies.js");
-
-  let langs = ["ENG", "POL"];
-
-  langs.forEach((lang) => {
-    originalCopies[lang] = uUtils.copyWithoutReference(
-      scUtils.getWordsAndFormulas(lang)
-    );
-  });
-
   describe("/", () => {
     it("#api-01 GET 200 Serves up endpoints", () => {
       return request(app)

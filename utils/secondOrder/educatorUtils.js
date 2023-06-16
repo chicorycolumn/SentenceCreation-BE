@@ -38,7 +38,7 @@ exports.getLemmaObjectsWithoutGivenSelectorKey = (
   wordtype,
   selectorKey
 ) => {
-  return wordsBank[wordtype].filter((lObj) => !lObj[selectorKey]);
+  return wordsBank[wordtype].filter((lObj) => !lObj[selectorKey]); //oph bravo to do
 };
 
 exports.checkWords = (envir, currentLanguage) => {

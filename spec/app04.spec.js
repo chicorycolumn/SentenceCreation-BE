@@ -174,6 +174,7 @@ describe("/api", function () {
       ]);
     });
     it("#pal25-01b GET 200 YES: Engpol. I was a good doctor.", () => {
+      // it.only("#pal25-01b GET 200 YES: Engpol. I was a good doctor.", () => {
       return runPaletteTest1("ENG", "POL", "124a", [
         {
           ENG: ["I was a red doctor (male)."],
