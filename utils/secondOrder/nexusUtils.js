@@ -141,7 +141,7 @@ exports.getTraductions = (
     exports.accumulateThisKeyFromLObjs(lObj, env, "traductions");
 
   if (getAllIds) {
-    let bank = gdUtils.grabWordsByWordtype(
+    let bank = gdUtils.grabLObjsByWordtype(
       targetlang,
       idUtils.getWordtypeLObj(lObj),
       env,
@@ -172,7 +172,7 @@ exports.checkAllLObjsArePresentInNexus = (env, lang) => {
 
   console.log("\n", "[1;35m " + `${env} ${lang}` + "[0m");
 
-  gdUtils.grabWordsFromAllWordtypes(
+  gdUtils.readAllLObjs(
     lang,
     env,
     false,
@@ -192,7 +192,7 @@ exports.checkAllLObjsArePresentInNexus = (env, lang) => {
     nexusWB.forEach((nex) => {
       nex.traductions[lang].forEach((trad) => {
         let boolHolder = [];
-        gdUtils.grabWordsFromAllWordtypes(
+        gdUtils.readAllLObjs(
           lang,
           env,
           false,
@@ -235,7 +235,7 @@ exports.checkAllLObjsArePresentInNexus = (env, lang) => {
     x.howManyTimesIsEachLObjIdPresentInNexusWordsBank[id] = res.length;
   };
 
-  gdUtils.grabWordsFromAllWordtypes(lang, env, false, x, lObjCallback);
+  gdUtils.readAllLObjs(lang, env, false, x, lObjCallback);
 
   let interestingTally = {};
   Object.keys(x.howManyTimesIsEachLObjIdPresentInNexusWordsBank).forEach(

@@ -102,7 +102,7 @@ exports.fetchPalette = (req) => {
     return timeOutCheck;
   }
 
-  let sentenceFormula = gdUtils.grabFormulaCopy(
+  let sentenceFormula = gdUtils.grabFormula(
     env,
     questionLanguage,
     sentenceFormulaId,
@@ -414,7 +414,7 @@ exports.fetchPalette = (req) => {
       if (uUtils.isKeyValueTypeObject(formulaIdOrFormula)) {
         sentenceFormula = formulaIdOrFormula;
       } else {
-        sentenceFormula = gdUtils.grabFormulaCopy(
+        sentenceFormula = gdUtils.grabFormula(
           env,
           answerLanguage,
           formulaIdOrFormula,

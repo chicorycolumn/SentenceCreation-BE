@@ -41,7 +41,7 @@ exports.getLemmaObjectsWithoutGivenSelectorKey = (
   wordtype,
   selectorKey
 ) => {
-  let words = gdUtils.grabWordsByWordtype(
+  let words = gdUtils.grabLObjsByWordtype(
     currentLanguage,
     wordtype,
     envir,
@@ -110,7 +110,7 @@ exports.findHomographs = (envir, currentLanguage, homographType, ignore) => {
     langUtils.expandLemmaObjects(wordsBank, wordtype, currentLanguage);
 
     wordsBank.forEach((lObj) => {
-      gdUtils.addWordInflections(lObj, envir);
+      gdUtils.addInflections(lObj, envir);
 
       let terminalValuesAndPathsArr =
         otUtils.giveRoutesAndTerminalValuesFromObject(lObj);
@@ -122,7 +122,7 @@ exports.findHomographs = (envir, currentLanguage, homographType, ignore) => {
     });
   };
 
-  gdUtils.grabWordsFromAllWordtypes(
+  gdUtils.readAllLObjs(
     currentLanguage,
     envir,
     false,
@@ -202,7 +202,7 @@ exports.findHomographs = (envir, currentLanguage, homographType, ignore) => {
     ) {
       let isEveryAllohomAlreadyClarified = firstStepsOfRoute.every(
         (lemmaObjectId) => {
-          let lemmaObject = gdUtils.grabLemmaObjectById(lemmaObjectId, envir);
+          let lemmaObject = gdUtils.grabLObjById(lemmaObjectId, envir);
 
           if (!lemmaObject) {
             throw (
@@ -243,14 +243,7 @@ exports.checkLemmaObjectIds = (envir, currentLanguage) => {
     res.push(...wordsBank.map((lObj) => [lObj.id, lObj.lemma]));
   };
 
-  grabWordsFromAllWordtypes(
-    currentLanguage,
-    envir,
-    false,
-    schematic,
-    null,
-    wordsetCallback
-  );
+  readAllLObjs(currentLanguage, envir, false, schematic, null, wordsetCallback);
 
   let tempArr = [];
   let duplicateIds = [];

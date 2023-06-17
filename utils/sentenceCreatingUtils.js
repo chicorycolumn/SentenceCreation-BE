@@ -1571,7 +1571,7 @@ exports.conformAnswerStructureToQuestionStructure = (
       false
     );
 
-    let source = gdUtils.grabWordsByWordtype(
+    let source = gdUtils.grabLObjsByWordtype(
       answerLanguage,
       idUtils.getWordtypeStCh(answerStructureChunk),
       env,

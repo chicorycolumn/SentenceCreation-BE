@@ -124,13 +124,7 @@ exports.getWordsByCriteria = (currentLanguage, criteriaFromHTTP) => {
     }
   };
 
-  gdUtils.grabWordsFromAllWordtypes(
-    currentLanguage,
-    envir,
-    false,
-    resObj,
-    lObjCallback
-  );
+  gdUtils.readAllLObjs(currentLanguage, envir, false, resObj, lObjCallback);
 
   return resObj;
 };
@@ -548,13 +542,13 @@ exports.getLObjsForLemma = (lang, lemma, env = "ref") => {
   const lObjCallback = (lObj, res) => {
     if (
       lObj.lemma === lemma ||
-      uUtils.valueInObject(gdUtils.grabWordInflections(lObj.id, env), lemma)
+      uUtils.valueInObject(gdUtils.grabInflections(lObj.id, env), lemma)
     ) {
       res.push(lObj);
     }
   };
 
-  gdUtils.grabWordsFromAllWordtypes(lang, env, false, matches, lObjCallback);
+  gdUtils.readAllLObjs(lang, env, false, matches, lObjCallback);
 
   return matches;
 };

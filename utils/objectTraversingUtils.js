@@ -47,7 +47,7 @@ exports.findMatchingLemmaObjectThenWord = (
   }
 
   //STEP TWO: Filter lemmaObjects (by specificIds OR andTags and selectors).
-  let source = gdUtils.grabWordsByWordtype(
+  let source = gdUtils.grabLObjsByWordtype(
     currentLanguage,
     idUtils.getWordtypeStCh(structureChunk),
     env,
@@ -148,7 +148,7 @@ exports.findMatchingLemmaObjectThenWord = (
   }
 
   matches.forEach((lObj) => {
-    gdUtils.addWordInflections(lObj, env);
+    gdUtils.addInflections(lObj, env);
   });
 
   langUtils.expandLemmaObjects(
